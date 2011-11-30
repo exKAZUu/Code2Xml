@@ -1,0 +1,47 @@
+cp -R bin/Release/ParserScripts ../OpenCodeCoverageFramework/lib
+cp bin/Release/Antlr3.Runtime.* ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Core.dll ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Core.pdb ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Languages.C.dll ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Languages.C.pdb ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Languages.CSharp.dll ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Languages.CSharp.pdb ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Languages.Java.dll ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Languages.Java.pdb ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Languages.JavaScript.dll ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Languages.JavaScript.pdb ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Languages.Lua.dll ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Languages.Lua.pdb ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Languages.Python2.dll ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Languages.Python2.pdb ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Languages.Python3.dll ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Languages.Python3.pdb ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Languages.Ruby18.dll ../OpenCodeCoverageFramework/lib
+cp bin/Release/Code2Xml.Languages.Ruby18.pdb ../OpenCodeCoverageFramework/lib
+cp bin/Release/IronRuby.* ../OpenCodeCoverageFramework/lib
+cp bin/Release/Microsoft.* ../OpenCodeCoverageFramework/lib
+cp bin/Release/Paraiba.* ../OpenCodeCoverageFramework/lib
+
+cp -R bin/Release/ParserScripts ../Unicoen/lib
+cp bin/Release/Antlr3.Runtime.* ../Unicoen/lib
+cp bin/Release/Code2Xml.Core.dll ../Unicoen/lib
+cp bin/Release/Code2Xml.Core.pdb ../Unicoen/lib
+cp bin/Release/Code2Xml.Languages.C.dll ../Unicoen/lib
+cp bin/Release/Code2Xml.Languages.C.pdb ../Unicoen/lib
+cp bin/Release/Code2Xml.Languages.CSharp.dll ../Unicoen/lib
+cp bin/Release/Code2Xml.Languages.CSharp.pdb ../Unicoen/lib
+cp bin/Release/Code2Xml.Languages.Java.dll ../Unicoen/lib
+cp bin/Release/Code2Xml.Languages.Java.pdb ../Unicoen/lib
+cp bin/Release/Code2Xml.Languages.JavaScript.dll ../Unicoen/lib
+cp bin/Release/Code2Xml.Languages.JavaScript.pdb ../Unicoen/lib
+cp bin/Release/Code2Xml.Languages.Lua.dll ../Unicoen/lib
+cp bin/Release/Code2Xml.Languages.Lua.pdb ../Unicoen/lib
+cp bin/Release/Code2Xml.Languages.Python2.dll ../Unicoen/lib
+cp bin/Release/Code2Xml.Languages.Python2.pdb ../Unicoen/lib
+cp bin/Release/Code2Xml.Languages.Python3.dll ../Unicoen/lib
+cp bin/Release/Code2Xml.Languages.Python3.pdb ../Unicoen/lib
+cp bin/Release/Code2Xml.Languages.Ruby18.dll ../Unicoen/lib
+cp bin/Release/Code2Xml.Languages.Ruby18.pdb ../Unicoen/lib
+cp bin/Release/IronRuby.* ../Unicoen/lib
+cp bin/Release/Microsoft.* ../Unicoen/lib
+cp bin/Release/Paraiba.* ../Unicoen/lib
