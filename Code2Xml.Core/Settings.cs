@@ -19,6 +19,11 @@ namespace Code2Xml.Core {
 			if (subKeyName == null)
 				return null;
 			var pathKey = versionKey.OpenSubKey(subKeyName + @"\InstallPath");
+			if (pathKey == null) {
+				var path = Path.Combine("C:",
+						"Python" + subKeyName.Replace(".", "") + "Python.exe");
+				return File.Exists(path) ? path : null;
+			}
 			var dirPath = pathKey.GetValue(null) as string;
 			if (dirPath == null)
 				return null;
