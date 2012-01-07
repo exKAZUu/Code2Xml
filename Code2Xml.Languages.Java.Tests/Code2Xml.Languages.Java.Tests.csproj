@@ -34,6 +34,10 @@
     <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>..\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Code2Xml.Core, Version=1.0.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Code2Xml.Core.1.0.0.10\lib\net40\Code2Xml.Core.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll</HintPath>
@@ -62,10 +66,6 @@
     <ProjectReference Include="..\Code2Xml.Core.Tests\Code2Xml.Core.Tests.csproj">
       <Project>{F4035613-FAA1-419C-880C-EE60DDA08783}</Project>
       <Name>Code2Xml.Core.Tests</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Code2Xml.Core\Code2Xml.Core.csproj">
-      <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>
-      <Name>Code2Xml.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\Code2Xml.Languages.Java\Code2Xml.Languages.Java.csproj">
       <Project>{341BDD4B-B758-4E15-8C13-E30268F8E758}</Project>
