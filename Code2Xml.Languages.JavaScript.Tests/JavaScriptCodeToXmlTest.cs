@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using Antlr.Runtime;
-using Code2Xml.Core.Tests;
 using Code2Xml.Languages.JavaScript.CodeToXmls;
 using NUnit.Framework;
 

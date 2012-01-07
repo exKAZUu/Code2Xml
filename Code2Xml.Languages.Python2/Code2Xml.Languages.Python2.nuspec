@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Code2Xml.Languages.Python2</id>
-    <version>1.0.0.10</version>
+    <version>1.0.0.11</version>
     <title>Code2Xml.Languages.Python2</title>
     <authors>Kazunori Sakamoto</authors>
     <owners>Kazunori Sakamoto</owners>
@@ -13,5 +13,8 @@
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright (C) Kazunori Sakamoto 2011-2012</copyright>
     <tags>Library Parser XML Python Python2 Programming Language</tags>
+    <dependencies>
+      <dependency id="Code2Xml.Core" version="1.0.0.13" />
+    </dependencies>
   </metadata>
 </package>

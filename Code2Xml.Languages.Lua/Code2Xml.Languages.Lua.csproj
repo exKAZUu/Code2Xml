@@ -58,19 +58,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
-      <HintPath>..\lib\Antlr3.Runtime.dll</HintPath>
+      <HintPath>..\packages\Code2Xml.Core.1.0.0.13\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Code2Xml.Core, Version=1.0.0.10, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Code2Xml.Core, Version=1.0.0.12, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Code2Xml.Core.1.0.0.10\lib\net40\Code2Xml.Core.dll</HintPath>
+      <HintPath>..\packages\Code2Xml.Core.1.0.0.13\lib\Code2Xml.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
