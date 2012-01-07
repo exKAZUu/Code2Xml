@@ -20,16 +20,31 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.CSharp", "Code2Xml.Languages.CSharp\Code2Xml.Languages.CSharp.csproj", "{BDD5DC39-4CE8-4684-B66A-E9454B4BCFF1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.JavaScript", "Code2Xml.Languages.JavaScript\Code2Xml.Languages.JavaScript.csproj", "{51B4FB06-4315-4CBD-BCB3-1E933A895107}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B} = {BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Python2", "Code2Xml.Languages.Python2\Code2Xml.Languages.Python2.csproj", "{D7557D95-520B-476D-8AF9-FC1ECC4A7298}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B} = {BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Python3", "Code2Xml.Languages.Python3\Code2Xml.Languages.Python3.csproj", "{D416DB7C-F4F0-4F71-8332-673076B7EB2B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B} = {BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Tests", "Code2Xml.Languages.Tests\Code2Xml.Languages.Tests.csproj", "{86952E9C-1B69-4AAE-A3AA-087B09527EAF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Ruby18", "Code2Xml.Languages.Ruby18\Code2Xml.Languages.Ruby18.csproj", "{3DFDAB7B-6602-46D5-BDFB-4E647D21B46A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B} = {BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Lua", "Code2Xml.Languages.Lua\Code2Xml.Languages.Lua.csproj", "{5116FC1B-B9CF-4BF5-B8C1-E84441E9CB4C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B} = {BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Java.Tests", "Code2Xml.Languages.Java.Tests\Code2Xml.Languages.Java.Tests.csproj", "{0235AEAD-B280-48CA-BBEF-F085D482BEC8}"
 EndProject

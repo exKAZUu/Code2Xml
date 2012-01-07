@@ -19,9 +19,12 @@
 using NUnit.Framework;
 
 namespace Code2Xml.AntlrHelper.Tests {
+    /// <summary>
+    /// A test suite for <see cref="LexerModifier"/>.
+    /// </summary>
     public class LexerModifierTest {
         [Test]
-        public void JavaコードをCSharpコードに変換できる() {
+        public void ConvertJavaIntoCSharp() {
             const string code =
                     "       skip();";
             const string expected =

@@ -2,8 +2,12 @@ mkdir nuspec
 copy *.nuspec nuspec /y
 cd nuspec
 mkdir lib
-copy ..\bin\Release\Antlr3.Runtime.* lib\
-copy ..\bin\Release\Code2Xml.Core.* lib\
+mkdir content
+mkdir content\ParserScripts
+copy ..\bin\Release\*.dll lib\
+copy ..\bin\Release\*.pdb lib\
+del lib\Paraiba.*
+xcopy ..\bin\Release\ParserScripts content\ParserScripts /c /e /y
 del *.nupkg
 FOR %%f IN (*.nuspec) DO (
 	nuget pack %%f

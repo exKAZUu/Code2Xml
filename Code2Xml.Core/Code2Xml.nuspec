@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Code2Xml.Languages.Python3</id>
-    <version>1.0.0.11</version>
-    <title>Code2Xml.Languages.Python3</title>
+    <id>Code2Xml</id>
+    <version>1.0.1.15</version>
+    <title>Code2Xml</title>
     <authors>Kazunori Sakamoto</authors>
     <owners>Kazunori Sakamoto</owners>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>http://code.google.com/p/code2xml/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Code2Xml.Languages.Python3 is a Python 3.x parser library interconverts source code and xml files with Code2Xml.</description>
+    <description>Code2Xml is a parser library that interconverts source code and xml files supporting multiple programming languages.</description>
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright (C) Kazunori Sakamoto 2011-2012</copyright>
-    <tags>Library Parser XML Python Python3 Programming Language</tags>
+    <tags>Library Parser XML Programming Language</tags>
     <dependencies>
-      <dependency id="Code2Xml.Core" version="1.0.0.13" />
+      <dependency id="Paraiba.Experiment" version="1.0.0.11" />
     </dependencies>
   </metadata>
 </package>
