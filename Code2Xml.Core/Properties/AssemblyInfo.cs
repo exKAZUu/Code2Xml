@@ -23,14 +23,14 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("Code2Xml")]
+[assembly: AssemblyTitle("Code2Xml.Core")]
 [assembly:
         AssemblyDescription(
                 "Code2Xml is a parser library that interconverts source code and xml files supporting multiple programming languages."
                 )]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Kazunori Sakamoto")]
-[assembly: AssemblyProduct("Code2Xml")]
+[assembly: AssemblyProduct("Code2Xml.Core")]
 [assembly: AssemblyCopyright("Copyright © Kazunori Sakamoto 2011-2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
