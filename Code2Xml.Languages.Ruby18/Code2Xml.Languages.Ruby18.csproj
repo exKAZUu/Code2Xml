@@ -97,6 +97,7 @@
       <HintPath>..\lib\IronRuby.Libraries.Yaml.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Dynamic, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\Microsoft.Dynamic.dll</HintPath>
@@ -124,64 +125,33 @@
     <Compile Include="CodeToXmls\NodeInserter.cs" />
     <Compile Include="CodeToXmls\Ruby18CodeToXml.cs" />
     <Compile Include="CodeToXmls\RubyElements.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="XmlToCodes\Ruby18XmlToCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ParserScripts\IronRubyParser\composite_sexp_processor.rb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\gauntlet_rubyparser.rb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\parser.rb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\racc\parser.rb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\ruby2ruby.rb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\ruby2ruby_README.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\ruby_lexer.rb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\ruby_parser.rb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\ruby_parser_extras.rb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\ruby_parser_README.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\sexp.rb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\SexpProcessor_README.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\sexp_processor.rb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\sjis.rb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\stringio.rb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\strscan.rb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\unique.rb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ParserScripts\IronRubyParser\zkcount_08a2.rb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="ParserScripts\IronRubyParser\composite_sexp_processor.rb" />
+    <Content Include="ParserScripts\IronRubyParser\gauntlet_rubyparser.rb" />
+    <Content Include="ParserScripts\IronRubyParser\parser.rb" />
+    <Content Include="ParserScripts\IronRubyParser\racc\parser.rb" />
+    <Content Include="ParserScripts\IronRubyParser\ruby2ruby.rb" />
+    <Content Include="ParserScripts\IronRubyParser\ruby2ruby_README.txt" />
+    <Content Include="ParserScripts\IronRubyParser\ruby_lexer.rb" />
+    <Content Include="ParserScripts\IronRubyParser\ruby_parser.rb" />
+    <Content Include="ParserScripts\IronRubyParser\ruby_parser_extras.rb" />
+    <Content Include="ParserScripts\IronRubyParser\ruby_parser_README.txt" />
+    <Content Include="ParserScripts\IronRubyParser\sexp.rb" />
+    <Content Include="ParserScripts\IronRubyParser\SexpProcessor_README.txt" />
+    <Content Include="ParserScripts\IronRubyParser\sexp_processor.rb" />
+    <Content Include="ParserScripts\IronRubyParser\sjis.rb" />
+    <Content Include="ParserScripts\IronRubyParser\stringio.rb" />
+    <Content Include="ParserScripts\IronRubyParser\strscan.rb" />
+    <Content Include="ParserScripts\IronRubyParser\unique.rb" />
+    <Content Include="ParserScripts\IronRubyParser\zkcount_08a2.rb" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Code2Xml.Core\Code2Xml.Core.csproj">
@@ -191,6 +161,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

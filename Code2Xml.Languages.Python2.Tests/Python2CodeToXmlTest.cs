@@ -16,22 +16,18 @@
 
 #endregion
 
+using Code2Xml.Core.Tests;
+using Code2Xml.Languages.Python2.CodeToXmls;
 using NUnit.Framework;
 
-namespace Code2Xml.AntlrHelper.Tests {
-    /// <summary>
-    ///   A test suite for <see cref="LexerModifier" /> .
-    /// </summary>
-    public class LexerModifierTest {
+namespace Code2Xml.Languages.Python2.Tests {
+    [TestFixture]
+    public class Python2CodeToXmlTest {
         [Test]
-        public void ConvertJavaIntoCSharp() {
-            const string code =
-                    "       skip();";
-            const string expected =
-                    "       Skip();";
-            Assert.That(
-                    LexerModifier.ModifyFromJavaToCSharp(code),
-                    Is.EqualTo(expected));
+        public void コードを解析できる() {
+            var path = Fixture.GetInputPath(
+                    "Python2", "Block1.py");
+            Python2CodeToXml.Instance.GenerateFromFile(path, true);
         }
     }
 }

@@ -23,15 +23,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("Code2Xml.Languages.CSharp")]
-[assembly:
-        AssemblyDescription(
-                "Code2Xml.Languages.CSharp is a C# parser library interconverts source code and xml files with Code2Xml."
-                )]
+[assembly: AssemblyTitle("Code2Xml.Languages.Python2.Tests")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Kazunori Sakamoto")]
-[assembly: AssemblyProduct("Code2Xml.Languages.CSharp")]
-[assembly: AssemblyCopyright("Copyright © Kazunori Sakamoto 2011-2012")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Code2Xml.Languages.Python2.Tests")]
+[assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -43,7 +40,7 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly: Guid("d4620bcd-3a43-4bb5-83a9-35b1bb30f721")]
+[assembly: Guid("9a2aef54-7d77-4ace-a183-f7b4d502db5c")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -56,5 +53,5 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("1.1.0.16")]
-[assembly: AssemblyFileVersion("1.1.0.16")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

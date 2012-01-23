@@ -56,6 +56,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{82BBD351
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Languages", "Languages", "{56DC2A40-779D-453E-A9BE-3E3484EC5706}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Python2.Tests", "Code2Xml.Languages.Python2.Tests\Code2Xml.Languages.Python2.Tests.csproj", "{92979554-5CFA-4179-8DC4-E396D72BB59C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -236,6 +238,16 @@ Global
 		{3B838978-4274-4156-8E87-A2C67A0E353A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{3B838978-4274-4156-8E87-A2C67A0E353A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3B838978-4274-4156-8E87-A2C67A0E353A}.Release|x86.ActiveCfg = Release|Any CPU
+		{92979554-5CFA-4179-8DC4-E396D72BB59C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92979554-5CFA-4179-8DC4-E396D72BB59C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92979554-5CFA-4179-8DC4-E396D72BB59C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{92979554-5CFA-4179-8DC4-E396D72BB59C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{92979554-5CFA-4179-8DC4-E396D72BB59C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{92979554-5CFA-4179-8DC4-E396D72BB59C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92979554-5CFA-4179-8DC4-E396D72BB59C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92979554-5CFA-4179-8DC4-E396D72BB59C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{92979554-5CFA-4179-8DC4-E396D72BB59C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{92979554-5CFA-4179-8DC4-E396D72BB59C}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -258,5 +270,6 @@ Global
 		{0235AEAD-B280-48CA-BBEF-F085D482BEC8} = {56DC2A40-779D-453E-A9BE-3E3484EC5706}
 		{3B838978-4274-4156-8E87-A2C67A0E353A} = {56DC2A40-779D-453E-A9BE-3E3484EC5706}
 		{D6F3F025-CC01-4BA3-A9D7-9609B4198A6B} = {56DC2A40-779D-453E-A9BE-3E3484EC5706}
+		{92979554-5CFA-4179-8DC4-E396D72BB59C} = {56DC2A40-779D-453E-A9BE-3E3484EC5706}
 	EndGlobalSection
 EndGlobal

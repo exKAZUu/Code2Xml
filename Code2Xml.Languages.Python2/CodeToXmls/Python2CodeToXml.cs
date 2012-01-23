@@ -16,18 +16,25 @@
 
 #endregion
 
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
+using System.IO;
 using Code2Xml.Core;
 using Code2Xml.Core.CodeToXmls;
+using Code2Xml.Core.Resources;
+using Code2Xml.Languages.Python2.Properties;
 
 namespace Code2Xml.Languages.Python2.CodeToXmls {
     [Export(typeof(CodeToXml))]
     public class Python2CodeToXml : ExternalCodeToXml {
         private static Python2CodeToXml _instance;
 
+        private static readonly string DirectoryPath = Path.Combine(
+                "ParserScripts", "Python2");
+
         private static readonly string[] PrivateArguments = new[] {
-                "ParserScripts/Python2/ast2xml.py",
+                Path.Combine(DirectoryPath, "ast2xml.py"),
         };
 
         private readonly string _processorPath;
@@ -37,6 +44,10 @@ namespace Code2Xml.Languages.Python2.CodeToXmls {
 
         public Python2CodeToXml(string processorPath) {
             _processorPath = processorPath;
+
+            ResourceManager.WriteResourceFiles(
+                    DirectoryPath,
+                    new[] { Tuple.Create("ast2xml.py", Resources.ast2xml) });
         }
 
         public static Python2CodeToXml Instance {

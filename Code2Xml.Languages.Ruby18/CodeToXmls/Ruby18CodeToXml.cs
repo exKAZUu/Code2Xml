@@ -16,18 +16,67 @@
 
 #endregion
 
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using Code2Xml.Core.CodeToXmls;
+using Code2Xml.Core.Resources;
+using Code2Xml.Languages.Ruby18.Properties;
 
 namespace Code2Xml.Languages.Ruby18.CodeToXmls {
     [Export(typeof(CodeToXml))]
     public class Ruby18CodeToXml : CodeToXml {
+        private static readonly string DirectoryPath = Path.Combine(
+                "ParserScripts", "IronRubyParser");
+
         private static Ruby18CodeToXml _instance;
-        private Ruby18CodeToXml() {}
+
+        private Ruby18CodeToXml() {
+            ResourceManager.WriteResourceFiles(
+                    DirectoryPath,
+                    new[] {
+                            Tuple.Create(
+                                    Path.Combine("racc", "parser.py"),
+                                    Resources.racc_parser),
+                            Tuple.Create(
+                                    "composite_sexp_processor.rb",
+                                    Resources.composite_sexp_processor),
+                            Tuple.Create(
+                                    "gauntlet_rubyparser.rb",
+                                    Resources.gauntlet_rubyparser),
+                            Tuple.Create("parser.rb", Resources.parser),
+                            Tuple.Create("ruby_lexer.rb", Resources.ruby_lexer),
+                            Tuple.Create(
+                                    "ruby_parser.rb", Resources.ruby_parser),
+                            Tuple.Create(
+                                    "ruby_parser_extras.rb",
+                                    Resources.ruby_parser_extras),
+                            Tuple.Create(
+                                    "ruby_parser_README.txt",
+                                    Resources.ruby_parser_README),
+                            Tuple.Create("ruby2ruby.rb", Resources.ruby2ruby),
+                            Tuple.Create(
+                                    "ruby2ruby_README.txt",
+                                    Resources.ruby2ruby_README),
+                            Tuple.Create("sexp.rb", Resources.sexp),
+                            Tuple.Create(
+                                    "sexp_processor.rb",
+                                    Resources.sexp_processor),
+                            Tuple.Create(
+                                    "SexpProcessor_README.txt",
+                                    Resources.SexpProcessor_README)
+                            ,
+                            Tuple.Create("sjis.rb", Resources.sjis),
+                            Tuple.Create("stringio.rb", Resources.stringio),
+                            Tuple.Create("strscan.rb", Resources.strscan),
+                            Tuple.Create("unique.rb", Resources.unique),
+                            Tuple.Create(
+                                    "zkcount_08a2.rb", Resources.zkcount_08a2),
+                    });
+        }
 
         public static Ruby18CodeToXml Instance {
             get { return _instance ?? (_instance = new Ruby18CodeToXml()); }
