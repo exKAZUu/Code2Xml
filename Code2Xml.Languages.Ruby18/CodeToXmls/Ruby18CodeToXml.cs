@@ -39,7 +39,7 @@ namespace Code2Xml.Languages.Ruby18.CodeToXmls {
                     DirectoryPath,
                     new[] {
                             Tuple.Create(
-                                    Path.Combine("racc", "parser.py"),
+                                    Path.Combine("racc", "parser.rb"),
                                     Resources.racc_parser),
                             Tuple.Create(
                                     "composite_sexp_processor.rb",
