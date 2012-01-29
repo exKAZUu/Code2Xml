@@ -40,19 +40,19 @@ options {
 }
 
 scope Symbols {
-	Set types; // only track types in order to get parser working
+    Set types; // only track types in order to get parser working
 }
 
 @members {
-	boolean isTypeName(String name) {
-		for (int i = Symbols_stack.size()-1; i>=0; i--) {
-			Symbols_scope scope = (Symbols_scope)Symbols_stack.get(i);
-			if ( scope.types.contains(name) ) {
-				return true;
-			}
-		}
-		return false;
-	}
+    boolean isTypeName(String name) {
+        for (int i = Symbols_stack.size()-1; i>=0; i--) {
+            Symbols_scope scope = (Symbols_scope)Symbols_stack.get(i);
+            if ( scope.types.contains(name) ) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
 translation_unit
@@ -60,8 +60,8 @@ scope Symbols; // entire file is a scope
 @init {
   $Symbols::types = new HashSet();
 }
-	: external_declaration+
-	;
+    : external_declaration+
+    ;
 
 /** Either a function definition or any other kind of C decl/def.
  *  The LL(*) analysis algorithm fails to deal with this due to
@@ -79,20 +79,20 @@ scope Symbols; // entire file is a scope
  */
 external_declaration
 options {k=1;}
-	: ( declaration_specifiers? declarator declaration* '{' )=> function_definition
-	| declaration
-	;
+    : ( declaration_specifiers? declarator declaration* '{' )=> function_definition
+    | declaration
+    ;
 
 function_definition
 scope Symbols; // put parameters and locals into same scope for now
 @init {
   $Symbols::types = new HashSet();
 }
-	:	declaration_specifiers? declarator
-		(	declaration+ compound_statement	// K&R style
-		|	compound_statement				// ANSI style
-		)
-	;
+    :	declaration_specifiers? declarator
+        (	declaration+ compound_statement	// K&R style
+        |	compound_statement				// ANSI style
+        )
+    ;
 
 declaration
 scope {
@@ -101,47 +101,47 @@ scope {
 @init {
   $declaration::isTypedef = false;
 }
-	: 'typedef' declaration_specifiers? {$declaration::isTypedef=true;}
-	  init_declarator_list ';' // special case, looking for typedef	
-	| declaration_specifiers init_declarator_list? ';'
-	;
+    : 'typedef' declaration_specifiers? {$declaration::isTypedef=true;}
+      init_declarator_list ';' // special case, looking for typedef	
+    | declaration_specifiers init_declarator_list? ';'
+    ;
 
 declaration_specifiers
-	:   (   storage_class_specifier
-		|   type_specifier
+    :   (   storage_class_specifier
+        |   type_specifier
         |   type_qualifier
         )+
-	;
+    ;
 
 init_declarator_list
-	: init_declarator (',' init_declarator)*
-	;
+    : init_declarator (',' init_declarator)*
+    ;
 
 init_declarator
-	: declarator ('=' initializer)?
-	;
+    : declarator ('=' initializer)?
+    ;
 
 storage_class_specifier
-	: 'extern'
-	| 'static'
-	| 'auto'
-	| 'register'
-	;
+    : 'extern'
+    | 'static'
+    | 'auto'
+    | 'register'
+    ;
 
 type_specifier
-	: 'void'
-	| 'char'
-	| 'short'
-	| 'int'
-	| 'long'
-	| 'float'
-	| 'double'
-	| 'signed'
-	| 'unsigned'
-	| struct_or_union_specifier
-	| enum_specifier
-	| type_id
-	;
+    : 'void'
+    | 'char'
+    | 'short'
+    | 'int'
+    | 'long'
+    | 'float'
+    | 'double'
+    | 'signed'
+    | 'unsigned'
+    | struct_or_union_specifier
+    | enum_specifier
+    | type_id
+    ;
 
 type_id
     :   {isTypeName(input.LT(1).getText())}? IDENTIFIER
@@ -154,163 +154,163 @@ scope Symbols; // structs are scopes
 @init {
   $Symbols::types = new HashSet();
 }
-	: struct_or_union IDENTIFIER? '{' struct_declaration_list '}'
-	| struct_or_union IDENTIFIER
-	;
+    : struct_or_union IDENTIFIER? '{' struct_declaration_list '}'
+    | struct_or_union IDENTIFIER
+    ;
 
 struct_or_union
-	: 'struct'
-	| 'union'
-	;
+    : 'struct'
+    | 'union'
+    ;
 
 struct_declaration_list
-	: struct_declaration+
-	;
+    : struct_declaration+
+    ;
 
 struct_declaration
-	: specifier_qualifier_list struct_declarator_list ';'
-	;
+    : specifier_qualifier_list struct_declarator_list ';'
+    ;
 
 specifier_qualifier_list
-	: ( type_qualifier | type_specifier )+
-	;
+    : ( type_qualifier | type_specifier )+
+    ;
 
 struct_declarator_list
-	: struct_declarator (',' struct_declarator)*
-	;
+    : struct_declarator (',' struct_declarator)*
+    ;
 
 struct_declarator
-	: declarator (':' constant_expression)?
-	| ':' constant_expression
-	;
+    : declarator (':' constant_expression)?
+    | ':' constant_expression
+    ;
 
 enum_specifier
 options {k=3;}
-	: 'enum' '{' enumerator_list '}'
-	| 'enum' IDENTIFIER '{' enumerator_list '}'
-	| 'enum' IDENTIFIER
-	;
+    : 'enum' '{' enumerator_list '}'
+    | 'enum' IDENTIFIER '{' enumerator_list '}'
+    | 'enum' IDENTIFIER
+    ;
 
 enumerator_list
-	: enumerator (',' enumerator)*
-	;
+    : enumerator (',' enumerator)*
+    ;
 
 enumerator
-	: IDENTIFIER ('=' constant_expression)?
-	;
+    : IDENTIFIER ('=' constant_expression)?
+    ;
 
 type_qualifier
-	: 'const'
-	| 'volatile'
-	;
+    : 'const'
+    | 'volatile'
+    ;
 
 declarator
-	: pointer? direct_declarator
-	| pointer
-	;
+    : pointer? direct_declarator
+    | pointer
+    ;
 
 direct_declarator
-	:   (	IDENTIFIER
-			{
-			if ($declaration.size()>0&&$declaration::isTypedef) {
-				$Symbols::types.add($IDENTIFIER.text);
-				System.out.println("define type "+$IDENTIFIER.text);
-			}
-			}
-		|	'(' declarator ')'
-		)
+    :   (	IDENTIFIER
+            {
+            if ($declaration.size()>0&&$declaration::isTypedef) {
+                $Symbols::types.add($IDENTIFIER.text);
+                System.out.println("define type "+$IDENTIFIER.text);
+            }
+            }
+        |	'(' declarator ')'
+        )
         declarator_suffix*
-	;
+    ;
 
 declarator_suffix
-	:   '[' constant_expression ']'
+    :   '[' constant_expression ']'
     |   '[' ']'
     |   '(' parameter_type_list ')'
     |   '(' identifier_list ')'
     |   '(' ')'
-	;
+    ;
 
 pointer
-	: '*' type_qualifier+ pointer?
-	| '*' pointer
-	| '*'
-	;
+    : '*' type_qualifier+ pointer?
+    | '*' pointer
+    | '*'
+    ;
 
 parameter_type_list
-	: parameter_list (',' '...')?
-	;
+    : parameter_list (',' '...')?
+    ;
 
 parameter_list
-	: parameter_declaration (',' parameter_declaration)*
-	;
+    : parameter_declaration (',' parameter_declaration)*
+    ;
 
 parameter_declaration
-	: declaration_specifiers (declarator|abstract_declarator)*
-	;
+    : declaration_specifiers (declarator|abstract_declarator)*
+    ;
 
 identifier_list
-	: IDENTIFIER (',' IDENTIFIER)*
-	;
+    : IDENTIFIER (',' IDENTIFIER)*
+    ;
 
 type_name
-	: specifier_qualifier_list abstract_declarator?
-	;
+    : specifier_qualifier_list abstract_declarator?
+    ;
 
 abstract_declarator
-	: pointer direct_abstract_declarator?
-	| direct_abstract_declarator
-	;
+    : pointer direct_abstract_declarator?
+    | direct_abstract_declarator
+    ;
 
 direct_abstract_declarator
-	:	( '(' abstract_declarator ')' | abstract_declarator_suffix ) abstract_declarator_suffix*
-	;
+    :	( '(' abstract_declarator ')' | abstract_declarator_suffix ) abstract_declarator_suffix*
+    ;
 
 abstract_declarator_suffix
-	:	'[' ']'
-	|	'[' constant_expression ']'
-	|	'(' ')'
-	|	'(' parameter_type_list ')'
-	;
-	
+    :	'[' ']'
+    |	'[' constant_expression ']'
+    |	'(' ')'
+    |	'(' parameter_type_list ')'
+    ;
+    
 initializer
-	: assignment_expression
-	| '{' initializer_list ','? '}'
-	;
+    : assignment_expression
+    | '{' initializer_list ','? '}'
+    ;
 
 initializer_list
-	: initializer (',' initializer)*
-	;
+    : initializer (',' initializer)*
+    ;
 
 // E x p r e s s i o n s
 
 argument_expression_list
-	:   assignment_expression (',' assignment_expression)*
-	;
+    :   assignment_expression (',' assignment_expression)*
+    ;
 
 additive_expression
-	: (multiplicative_expression) ('+' multiplicative_expression | '-' multiplicative_expression)*
-	;
+    : (multiplicative_expression) ('+' multiplicative_expression | '-' multiplicative_expression)*
+    ;
 
 multiplicative_expression
-	: (cast_expression) ('*' cast_expression | '/' cast_expression | '%' cast_expression)*
-	;
+    : (cast_expression) ('*' cast_expression | '/' cast_expression | '%' cast_expression)*
+    ;
 
 cast_expression
-	: '(' type_name ')' cast_expression
-	| unary_expression
-	;
+    : '(' type_name ')' cast_expression
+    | unary_expression
+    ;
 
 unary_expression
-	: postfix_expression
-	| '++' unary_expression
-	| '--' unary_expression
-	| unary_operator cast_expression
-	| 'sizeof' unary_expression
-	| 'sizeof' '(' type_name ')'
-	;
+    : postfix_expression
+    | '++' unary_expression
+    | '--' unary_expression
+    | unary_operator cast_expression
+    | 'sizeof' unary_expression
+    | 'sizeof' '(' type_name ')'
+    ;
 
 postfix_expression
-	:   primary_expression
+    :   primary_expression
         (   '[' expression ']'
         |   '(' ')'
         |   '(' argument_expression_list ')'
@@ -319,22 +319,22 @@ postfix_expression
         |   '++'
         |   '--'
         )*
-	;
+    ;
 
 unary_operator
-	: '&'
-	| '*'
-	| '+'
-	| '-'
-	| '~'
-	| '!'
-	;
+    : '&'
+    | '*'
+    | '+'
+    | '-'
+    | '~'
+    | '!'
+    ;
 
 primary_expression
-	: IDENTIFIER
-	| constant
-	| '(' expression ')'
-	;
+    : IDENTIFIER
+    | constant
+    | '(' expression ')'
+    ;
 
 constant
     :   hex_literal
@@ -346,161 +346,161 @@ constant
     ;
 
 hex_literal
-	:	HEX_LITERAL
-	;
+    :	HEX_LITERAL
+    ;
 
 octal_literal
-	:	OCTAL_LITERAL
-	;
+    :	OCTAL_LITERAL
+    ;
 
 decimal_literal
-	:	DECIMAL_LITERAL
-	;
+    :	DECIMAL_LITERAL
+    ;
 
 character_literal
-	:	CHARACTER_LITERAL
-	;
+    :	CHARACTER_LITERAL
+    ;
 
 string_literal
-	:	STRING_LITERAL
-	;
+    :	STRING_LITERAL
+    ;
 
 floating_point_literal
-	:	FLOATING_POINT_LITERAL
-	;
+    :	FLOATING_POINT_LITERAL
+    ;
 
 /////
 
 expression
-	: assignment_expression (',' assignment_expression)*
-	;
+    : assignment_expression (',' assignment_expression)*
+    ;
 
 constant_expression
-	: conditional_expression
-	;
+    : conditional_expression
+    ;
 
 assignment_expression
-	: lvalue assignment_operator assignment_expression
-	| conditional_expression
-	;
-	
+    : lvalue assignment_operator assignment_expression
+    | conditional_expression
+    ;
+    
 lvalue
-	:	unary_expression
-	;
+    :	unary_expression
+    ;
 
 assignment_operator
-	: '='
-	| '*='
-	| '/='
-	| '%='
-	| '+='
-	| '-='
-	| '<<='
-	| '>>='
-	| '&='
-	| '^='
-	| '|='
-	;
+    : '='
+    | '*='
+    | '/='
+    | '%='
+    | '+='
+    | '-='
+    | '<<='
+    | '>>='
+    | '&='
+    | '^='
+    | '|='
+    ;
 
 conditional_expression
-	: logical_or_expression ('?' expression ':' conditional_expression)?
-	;
+    : logical_or_expression ('?' expression ':' conditional_expression)?
+    ;
 
 logical_or_expression
-	: logical_and_expression ('||' logical_and_expression)*
-	;
+    : logical_and_expression ('||' logical_and_expression)*
+    ;
 
 logical_and_expression
-	: inclusive_or_expression ('&&' inclusive_or_expression)*
-	;
+    : inclusive_or_expression ('&&' inclusive_or_expression)*
+    ;
 
 inclusive_or_expression
-	: exclusive_or_expression ('|' exclusive_or_expression)*
-	;
+    : exclusive_or_expression ('|' exclusive_or_expression)*
+    ;
 
 exclusive_or_expression
-	: and_expression ('^' and_expression)*
-	;
+    : and_expression ('^' and_expression)*
+    ;
 
 and_expression
-	: equality_expression ('&' equality_expression)*
-	;
+    : equality_expression ('&' equality_expression)*
+    ;
 equality_expression
-	: relational_expression (('=='|'!=') relational_expression)*
-	;
+    : relational_expression (('=='|'!=') relational_expression)*
+    ;
 
 relational_expression
-	: shift_expression (('<'|'>'|'<='|'>=') shift_expression)*
-	;
+    : shift_expression (('<'|'>'|'<='|'>=') shift_expression)*
+    ;
 
 shift_expression
-	: additive_expression (('<<'|'>>') additive_expression)*
-	;
+    : additive_expression (('<<'|'>>') additive_expression)*
+    ;
 
 // S t a t e m e n t s
 
 statement
-	: labeled_statement
-	| compound_statement
-	| expression_statement
-	| selection_statement
-	| iteration_statement
-	| jump_statement
-	;
+    : labeled_statement
+    | compound_statement
+    | expression_statement
+    | selection_statement
+    | iteration_statement
+    | jump_statement
+    ;
 
 labeled_statement
-	: IDENTIFIER ':' statement
-	| 'case' constant_expression ':' statement
-	| 'default' ':' statement
-	;
+    : IDENTIFIER ':' statement
+    | 'case' constant_expression ':' statement
+    | 'default' ':' statement
+    ;
 
 compound_statement
 scope Symbols; // blocks have a scope of symbols
 @init {
   $Symbols::types = new HashSet();
 }
-	: '{' declaration* statement_list? '}'
-	;
+    : '{' declaration* statement_list? '}'
+    ;
 
 statement_list
-	: statement+
-	;
+    : statement+
+    ;
 
 expression_statement
-	: ';'
-	| expression ';'
-	;
+    : ';'
+    | expression ';'
+    ;
 
 selection_statement
-	: 'if' '(' expression ')' statement (options {k=1; backtrack=false;}:'else' statement)?
-	| 'switch' '(' expression ')' statement
-	;
+    : 'if' '(' expression ')' statement (options {k=1; backtrack=false;}:'else' statement)?
+    | 'switch' '(' expression ')' statement
+    ;
 
 iteration_statement
-	: 'while' '(' expression ')' statement
-	| 'do' statement 'while' '(' expression ')' ';'
-	| 'for' '(' expression_statement expression_statement expression? ')' statement
-	;
+    : 'while' '(' expression ')' statement
+    | 'do' statement 'while' '(' expression ')' ';'
+    | 'for' '(' expression_statement expression_statement expression? ')' statement
+    ;
 
 jump_statement
-	: 'goto' IDENTIFIER ';'
-	| 'continue' ';'
-	| 'break' ';'
-	| 'return' ';'
-	| 'return' expression ';'
-	;
+    : 'goto' IDENTIFIER ';'
+    | 'continue' ';'
+    | 'break' ';'
+    | 'return' ';'
+    | 'return' expression ';'
+    ;
 
 IDENTIFIER
-	:	LETTER (LETTER|'0'..'9')*
-	;
-	
+    :	LETTER (LETTER|'0'..'9')*
+    ;
+    
 fragment
 LETTER
-	:	'$'
-	|	'A'..'Z'
-	|	'a'..'z'
-	|	'_'
-	;
+    :	'$'
+    |	'A'..'Z'
+    |	'a'..'z'
+    |	'_'
+    ;
 
 CHARACTER_LITERAL
     :   '\'' ( EscapeSequence | ~('\''|'\\') ) '\''
@@ -521,16 +521,16 @@ HexDigit : ('0'..'9'|'a'..'f'|'A'..'F') ;
 
 fragment
 IntegerTypeSuffix
-	:	('u'|'U')? ('l'|'L')
-	|	('u'|'U')  ('l'|'L')?
-	;
+    :	('u'|'U')? ('l'|'L')
+    |	('u'|'U')  ('l'|'L')?
+    ;
 
 FLOATING_POINT_LITERAL
     :   ('0'..'9')+ '.' ('0'..'9')* Exponent? FloatTypeSuffix?
     |   '.' ('0'..'9')+ Exponent? FloatTypeSuffix?
     |   ('0'..'9')+ Exponent FloatTypeSuffix?
     |   ('0'..'9')+ Exponent? FloatTypeSuffix
-	;
+    ;
 
 fragment
 Exponent : ('e'|'E') ('+'|'-')? ('0'..'9')+ ;

@@ -19,6 +19,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Antlr.Runtime;
+using Antlr.Runtime.Misc;
 
 namespace Code2Xml.Core.Antlr {
     public class Set : HashSet<object> {}
@@ -42,11 +43,11 @@ namespace Code2Xml.Core.Antlr {
     }
 
     public static class ExtensionForParser {
-        public static T get<T>(this Stack<T> stack, int i) {
-            return stack.ElementAt(i);
+        public static T get<T>(this IList<T> stack, int i) {
+            return stack[i];
         }
 
-        public static int size<T>(this Stack<T> stack) {
+        public static int size<T>(this IList<T> stack) {
             return stack.Count;
         }
 

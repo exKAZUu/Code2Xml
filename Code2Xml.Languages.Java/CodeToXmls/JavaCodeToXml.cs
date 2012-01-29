@@ -34,7 +34,7 @@ namespace Code2Xml.Languages.Java.CodeToXmls {
             get { return _instance ?? (_instance = new JavaCodeToXml()); }
         }
 
-        protected override Func<JavaParser, XParserRuleReturnScope>
+        protected override Func<JavaParser, XAstParserRuleReturnScope>
             DefaultParseFunc {
             get { return parser => parser.compilationUnit(); }
         }

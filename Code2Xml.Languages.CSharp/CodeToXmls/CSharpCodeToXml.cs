@@ -46,7 +46,7 @@ namespace Code2Xml.Languages.CSharp.CodeToXmls {
             }
         }
 
-        protected override Func<csParser, XParserRuleReturnScope>
+        protected override Func<csParser, XAstParserRuleReturnScope>
             DefaultParseFunc {
             get { return parser => parser.compilation_unit(); }
         }

@@ -46,7 +46,7 @@ namespace Code2Xml.Languages.C.CodeToXmls {
             }
         }
 
-        protected override Func<CParser, XParserRuleReturnScope>
+        protected override Func<CParser, XAstParserRuleReturnScope>
             DefaultParseFunc {
             get { return parser => parser.translation_unit(); }
         }

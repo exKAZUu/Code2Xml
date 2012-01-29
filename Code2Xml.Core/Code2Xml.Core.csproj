@@ -101,7 +101,7 @@
     <Compile Include="Antlr\ThrowableXmlTreeAdaptor.cs" />
     <Compile Include="Antlr\ExtensionForParser.cs" />
     <Compile Include="Antlr\XmlTreeAdaptor.cs" />
-    <Compile Include="Antlr\XParserRuleReturnScope.cs" />
+    <Compile Include="Antlr\XAstParserRuleReturnScope.cs" />
     <Compile Include="Antlr\XToken.cs" />
     <Compile Include="Resources\ResourceManager.cs" />
     <Compile Include="XmlToCodes\XmlToCodeBase.cs" />

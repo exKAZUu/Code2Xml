@@ -29,7 +29,7 @@ namespace Code2Xml.Core.CodeToXmls {
             where TParser : Parser, IAntlrParser {
         protected bool CanThrowParseError { get; set; }
 
-        protected abstract Func<TParser, XParserRuleReturnScope>
+        protected abstract Func<TParser, XAstParserRuleReturnScope>
             DefaultParseFunc { get; }
 
         protected abstract ITokenSource CreateTokenSource(ICharStream stream);
@@ -38,7 +38,7 @@ namespace Code2Xml.Core.CodeToXmls {
 
         private XElement Generate(
                 ICharStream stream,
-                Func<TParser, XParserRuleReturnScope> parseFunc,
+                Func<TParser, XAstParserRuleReturnScope> parseFunc,
                 bool throwingParseError
                 ) {
             var lex = CreateTokenSource(stream);
@@ -58,7 +58,7 @@ namespace Code2Xml.Core.CodeToXmls {
             return Generate(
                     stream,
                     p =>
-                    (XParserRuleReturnScope)
+                    (XAstParserRuleReturnScope)
                     p.GetType().GetMethod(nodeName).Invoke(p, null),
                     throwingParseError);
         }
@@ -81,7 +81,7 @@ namespace Code2Xml.Core.CodeToXmls {
 
         public XElement Generate(
                 string code,
-                Func<TParser, XParserRuleReturnScope> parseAction,
+                Func<TParser, XAstParserRuleReturnScope> parseAction,
                 bool throwingParseError) {
             Contract.Requires<ArgumentNullException>(code != null);
             Contract.Requires<ArgumentNullException>(parseAction != null);
@@ -92,7 +92,7 @@ namespace Code2Xml.Core.CodeToXmls {
 
         public XElement Generate(
                 string code,
-                Func<TParser, XParserRuleReturnScope> parseAction) {
+                Func<TParser, XAstParserRuleReturnScope> parseAction) {
             Contract.Requires<ArgumentNullException>(code != null);
             Contract.Requires<ArgumentNullException>(parseAction != null);
             Contract.Ensures(Contract.Result<XElement>() != null);

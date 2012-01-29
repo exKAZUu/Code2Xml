@@ -288,7 +288,7 @@ options {
     backtrack=true;
     memoize=true;
     output=AST;
-    language=CSharp2;
+    language=CSharp3;
 }
 
 /********************************************************************************************
@@ -1230,40 +1230,40 @@ arguments
     ;
 
 intLiteral
-	: INTLITERAL
-	;
+    : INTLITERAL
+    ;
 
 longLiteral
-	: LONGLITERAL
-	;
+    : LONGLITERAL
+    ;
 
 floatLiteral
-	: FLOATLITERAL
-	;
+    : FLOATLITERAL
+    ;
 
 doubleLiteral
-	: DOUBLELITERAL
-	;
+    : DOUBLELITERAL
+    ;
 
 charLiteral
-	: CHARLITERAL
-	;
+    : CHARLITERAL
+    ;
 
 stringLiteral
-	: STRINGLITERAL
-	;
+    : STRINGLITERAL
+    ;
 
 trueLiteral
-	: TRUE
-	;
+    : TRUE
+    ;
 
 falseLiteral
-	: FALSE
-	;
+    : FALSE
+    ;
 
 nullLiteral
-	: NULL
-	;
+    : NULL
+    ;
 
 literal 
     :   intLiteral

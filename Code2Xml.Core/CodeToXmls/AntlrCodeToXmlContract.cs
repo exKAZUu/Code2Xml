@@ -26,11 +26,11 @@ namespace Code2Xml.Core.CodeToXmls {
     internal abstract class AntlrCodeToXmlContract<TParser>
             : AntlrCodeToXml<TParser>
             where TParser : Parser, IAntlrParser {
-        protected override Func<TParser, XParserRuleReturnScope>
+        protected override Func<TParser, XAstParserRuleReturnScope>
             DefaultParseFunc {
             get {
                 Contract.Ensures(
-                        Contract.Result<Func<TParser, XParserRuleReturnScope>>() !=
+                        Contract.Result<Func<TParser, XAstParserRuleReturnScope>>() !=
                         null);
                 throw new NotImplementedException();
             }

@@ -46,7 +46,7 @@ namespace Code2Xml.Languages.Lua.CodeToXmls {
             }
         }
 
-        protected override Func<LuaParser, XParserRuleReturnScope>
+        protected override Func<LuaParser, XAstParserRuleReturnScope>
             DefaultParseFunc {
             get { return parser => parser.chunk(); }
         }

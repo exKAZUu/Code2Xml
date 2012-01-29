@@ -15,9 +15,9 @@
 grammar Lua;
 
 options {
-	output=AST;
-	backtrack=true;
-	language=CSharp2;
+    output=AST;
+    backtrack=true;
+    language=CSharp3;
 }
 
 chunk : (stat (';')?)* (laststat (';')?)?;
@@ -25,16 +25,16 @@ chunk : (stat (';')?)* (laststat (';')?)?;
 block : chunk;
 
 stat :  varlist1 '=' explist1 | 
-	functioncall | 
-	'do' block 'end' | 
-	'while' exp 'do' block 'end' | 
-	'repeat' block 'until' exp | 
-	'if' exp 'then' block ('elseif' exp 'then' block)* ('else' block)? 'end' | 
-	'for' NAME '=' exp ',' exp (',' exp)? 'do' block 'end' | 
-	'for' namelist 'in' explist1 'do' block 'end' | 
-	'function' funcname funcbody | 
-	'local' 'function' NAME funcbody | 
-	'local' namelist ('=' explist1)? ;
+    functioncall | 
+    'do' block 'end' | 
+    'while' exp 'do' block 'end' | 
+    'repeat' block 'until' exp | 
+    'if' exp 'then' block ('elseif' exp 'then' block)* ('else' block)? 'end' | 
+    'for' NAME '=' exp ',' exp (',' exp)? 'do' block 'end' | 
+    'for' namelist 'in' explist1 'do' block 'end' | 
+    'function' funcname funcbody | 
+    'local' 'function' NAME funcbody | 
+    'local' namelist ('=' explist1)? ;
 
 laststat : 'return' (explist1)? | 'break';
 
@@ -86,8 +86,8 @@ field : '[' exp ']' '=' exp | NAME '=' exp | exp;
 fieldsep : ',' | ';';
 
 binop : '+' | '-' | '*' | '/' | '^' | '%' | '..' | 
-		 '<' | '<=' | '>' | '>=' | '==' | '~=' | 
-		 'and' | 'or';
+         '<' | '<=' | '>' | '>=' | '==' | '~=' | 
+         'and' | 'or';
 
 unop : '-' | 'not' | '#';
 
@@ -99,7 +99,7 @@ lua_string	: NORMALSTRING | CHARSTRING | LONGSTRING;
 // LEXER
 
 NAME	:('a'..'z'|'A'..'Z'|'_')(options{greedy=true;}:	'a'..'z'|'A'..'Z'|'_'|'0'..'9')*
-	;
+    ;
 
 INT	: ('0'..'9')+;
 
@@ -109,7 +109,7 @@ EXP	: (INT| FLOAT) ('E'|'e') ('-')? INT;
 
 HEX	:'0x' ('0'..'9'| 'a'..'f')+ ;
 
-	
+    
 
 NORMALSTRING
     :  '"' ( EscapeSequence | ~('\\'|'"') )* '"' 
@@ -120,8 +120,8 @@ CHARSTRING
    ;
 
 LONGSTRING
-	:	'['('=')*'[' ( EscapeSequence | ~('\\'|']') )* ']'('=')*']'
-	;
+    :	'['('=')*'[' ( EscapeSequence | ~('\\'|']') )* ']'('=')*']'
+    ;
 
 fragment
 EscapeSequence
@@ -159,4 +159,4 @@ WS  :  (' '|'\t'|'\u000C') {skip();}
     ;
     
 NEWLINE	: ('\r')? '\n' {skip();}
-	;
+    ;

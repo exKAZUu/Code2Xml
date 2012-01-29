@@ -34,7 +34,7 @@ namespace Code2Xml.Languages.JavaScript.CodeToXmls {
             get { return _instance ?? (_instance = new JavaScriptCodeToXml()); }
         }
 
-        protected override Func<JavaScriptParser, XParserRuleReturnScope>
+        protected override Func<JavaScriptParser, XAstParserRuleReturnScope>
             DefaultParseFunc {
             get { return parser => parser.program(); }
         }

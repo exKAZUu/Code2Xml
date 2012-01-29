@@ -23,7 +23,7 @@ using Antlr.Runtime.Tree;
 
 namespace Code2Xml.Core.Antlr {
     public class XmlTreeAdaptor : CommonTreeAdaptor {
-        public object Create(IToken payload, XParserRuleReturnScope parent) {
+        public object Create(IToken payload, XAstParserRuleReturnScope parent) {
             Contract.Requires(parent != null);
             if (payload != null) {
                 var xtoken = payload as XToken;
@@ -38,8 +38,8 @@ namespace Code2Xml.Core.Antlr {
         }
 
         public void AddChild(
-                object t, object child, XParserRuleReturnScope target,
-                XParserRuleReturnScope parent) {
+                object t, object child, XAstParserRuleReturnScope target,
+                XAstParserRuleReturnScope parent) {
             Contract.Requires(parent != null);
             parent.Element.Add(target.Element);
             base.AddChild(t, child);
