@@ -40,7 +40,7 @@ namespace Code2Xml.Languages.Python3.CodeToXmls {
         private readonly string _processorPath;
 
         public Python3CodeToXml()
-                : this(Settings.GetPythonInstallPath("3.") ?? "python") {}
+                : this(ParserUtil.GetPythonInstallPath("3.") ?? "python") {}
 
         public Python3CodeToXml(string processorPath) {
             _processorPath = processorPath;

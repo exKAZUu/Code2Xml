@@ -16,6 +16,7 @@
 
 #endregion
 
+using System.Linq;
 using Code2Xml.Languages.JavaScript.CodeToXmls;
 using NUnit.Framework;
 
@@ -23,7 +24,14 @@ namespace Code2Xml.Languages.JavaScript.Tests {
     [TestFixture]
     public class JavaScriptCodeToXmlTest {
         [Test]
-        public void functionをパースできる() {
+        public void ParseComment() {
+            var e = JavaScriptCodeToXml.Instance.Generate(
+                    @"function(name) { /*aaa*/ } // bbb");
+        	Assert.That(e.Descendants("Comment").Count(), Is.EqualTo(2));
+        }
+
+        [Test]
+        public void ParseFunction() {
             JavaScriptCodeToXml.Instance.Generate(
                     @"function(name) { this.name = name; }");
         }

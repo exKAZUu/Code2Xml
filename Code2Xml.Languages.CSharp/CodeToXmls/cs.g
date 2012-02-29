@@ -8,13 +8,14 @@ options {
 
 @lexer::header       
 {
+    using System;
     using System.Collections.Generic;
     using Debug = System.Diagnostics.Debug;
 }
 
 @lexer::members {
     // Preprocessor Data Structures - see lexer section below and PreProcessor.cs
-    protected Dictionary<string,string> MacroDefines = new Dictionary<string,string>();	
+    public Dictionary<string,string> MacroDefines = new Dictionary<string,string>();	
     protected Stack<bool> Processing = new Stack<bool>();
 
     // Uggh, lexer rules don't return values, so use a stack to return values.
@@ -1078,15 +1079,15 @@ TS:
     { Skip(); } ;
 DOC_LINE_COMMENT
     : 	('///' ~('\n'|'\r')*  ('\r' | '\n')+)
-    { Skip(); } ;
+    { $channel=Hidden; } ;
 LINE_COMMENT
     :	('//' ~('\n'|'\r')*  ('\r' | '\n')+)
-    { Skip(); } ;
+    { $channel=Hidden; } ;
 COMMENT:
    '/*'
    (options {greedy=false;} : . )* 
    '*/'
-    { Skip(); } ;
+    { $channel=Hidden; } ;
 STRINGLITERAL
     :
     '"' (EscapeSequence | ~('"' | '\\'))* '"' ;

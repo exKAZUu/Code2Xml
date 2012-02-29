@@ -5,7 +5,6 @@ mkdir lib
 copy ..\Code2Xml.Core\bin\Release\*.dll lib\
 copy ..\Code2Xml.Core\bin\Release\*.pdb lib\
 del lib\Paraiba.*
-del *.nupkg
 FOR %%f IN (*.nuspec) DO (
 	nuget pack %%f
 )

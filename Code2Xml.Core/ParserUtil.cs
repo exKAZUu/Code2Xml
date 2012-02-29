@@ -21,7 +21,7 @@ using System.Linq;
 using Microsoft.Win32;
 
 namespace Code2Xml.Core {
-    public static class Settings {
+    public static class ParserUtil {
         public static string GetPythonInstallPath(string versionPrefix) {
             const string name = @"SOFTWARE\Python\PythonCore";
             var versionKey = Registry.CurrentUser.OpenSubKey(name) ??

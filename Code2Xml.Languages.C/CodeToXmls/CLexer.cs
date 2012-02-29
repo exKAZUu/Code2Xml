@@ -9,7 +9,7 @@ using Code2Xml.Core.Antlr;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 C.g 2012-01-29 22:30:59
+// $ANTLR 3.4 C.g 2012-03-01 00:25:16
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -4672,7 +4672,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			}
 
 			DebugLocation(559, 38);
-			_channel=Hidden;
+			Skip();
 
 			}
 
@@ -4977,7 +4977,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			DebugLocation(572, 31);
 			Match('\n'); 
 			DebugLocation(572, 36);
-			_channel=Hidden;
+			Skip();
 
 			}
 

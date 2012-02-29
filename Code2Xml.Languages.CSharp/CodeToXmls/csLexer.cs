@@ -10,7 +10,7 @@ using Code2Xml.Core.Antlr;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 cs.g 2012-01-29 22:40:42
+// $ANTLR 3.4 cs.g 2012-03-01 00:31:21
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -236,7 +236,7 @@ public partial class csLexer : Antlr.Runtime.Lexer
 	public const int WS=60;
 
 	    // Preprocessor Data Structures - see lexer section below and PreProcessor.cs
-	    protected Dictionary<string,string> MacroDefines = new Dictionary<string,string>();	
+	    public Dictionary<string,string> MacroDefines = new Dictionary<string,string>();	
 	    protected Stack<bool> Processing = new Stack<bool>();
 
 	    // Uggh, lexer rules don't return values, so use a stack to return values.
@@ -6139,7 +6139,7 @@ public partial class csLexer : Antlr.Runtime.Lexer
 			}
 
 			DebugLocation(1081, 5);
-			 Skip(); 
+			 _channel=Hidden; 
 
 			}
 
@@ -6269,7 +6269,7 @@ public partial class csLexer : Antlr.Runtime.Lexer
 			}
 
 			DebugLocation(1084, 5);
-			 Skip(); 
+			 _channel=Hidden; 
 
 			}
 
@@ -6363,7 +6363,7 @@ public partial class csLexer : Antlr.Runtime.Lexer
 			Match("*/"); 
 
 			DebugLocation(1089, 5);
-			 Skip(); 
+			 _channel=Hidden; 
 
 			}
 

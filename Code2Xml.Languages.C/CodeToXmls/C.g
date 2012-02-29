@@ -556,7 +556,7 @@ UnicodeEscape
     :   '\\' 'u' HexDigit HexDigit HexDigit HexDigit
     ;
 
-WS  :  (' '|'\r'|'\t'|'\u000C'|'\n') {$channel=HIDDEN;}
+WS  :  (' '|'\r'|'\t'|'\u000C'|'\n') {Skip();}
     ;
 
 COMMENT
@@ -569,5 +569,5 @@ LINE_COMMENT
 
 // ignore #line info for now
 LINE_COMMAND 
-    : '#' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
+    : '#' ~('\n'|'\r')* '\r'? '\n' {Skip();}
     ;

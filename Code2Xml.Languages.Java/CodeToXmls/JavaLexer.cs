@@ -9,7 +9,7 @@ using Code2Xml.Core.Antlr;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 Java.g 2012-01-29 22:42:04
+// $ANTLR 3.4 Java.g 2012-03-01 00:37:00
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -2091,7 +2091,7 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 			                if(isJavaDoc==true){
 			                    _channel=Hidden;
 			                }else{
-			                    Skip();
+			                    _channel=Hidden;
 			                }
 			            
 
@@ -2251,7 +2251,7 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 
 				DebugLocation(1468, 13);
 
-				                Skip();
+				                _channel=Hidden;
 				            
 
 				}
@@ -2304,7 +2304,7 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 
 				DebugLocation(1472, 13);
 
-				                Skip();
+				                _channel=Hidden;
 				            
 
 				}

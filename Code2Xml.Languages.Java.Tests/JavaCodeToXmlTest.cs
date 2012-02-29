@@ -17,6 +17,7 @@
 #endregion
 
 using System.IO;
+using System.Linq;
 using Antlr.Runtime;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.Java.CodeToXmls;
@@ -38,6 +39,13 @@ namespace Code2Xml.Languages.Java.Tests {
         [Test, ExpectedException(typeof(MismatchedTokenException))]
         public void 不正なユニコード文字の入ったコードをパースできない() {
             JavaCodeToXml.Instance.GenerateFromFile(InputPath, true);
+        }
+
+        [Test]
+        public void ParseComment() {
+            var e = JavaCodeToXml.Instance.Generate(
+                    @"public class A { /*aaa*/ } // bbb");
+        	Assert.That(e.Descendants("Comment").Count(), Is.EqualTo(2));
         }
     }
 }

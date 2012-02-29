@@ -1458,7 +1458,7 @@ COMMENT
                 if(isJavaDoc==true){
                     $channel=HIDDEN;
                 }else{
-                    skip();
+                    $channel=HIDDEN;
                 }
             }
     ;
@@ -1466,11 +1466,11 @@ COMMENT
 LINE_COMMENT
     :   '//' ~('\n'|'\r')*  ('\r\n' | '\r' | '\n') 
             {
-                skip();
+                $channel=HIDDEN;
             }
     |   '//' ~('\n'|'\r')*     // a line comment could appear at the end of the file without CR/LF
             {
-                skip();
+                $channel=HIDDEN;
             }
     ;   
         

@@ -147,13 +147,12 @@ HexDigit : ('0'..'9'|'a'..'f'|'A'..'F') ;
 
 
 COMMENT
-    :   '--[[' ( options {greedy=false;} : . )* ']]' {skip();}
+    :   '--[[' ( options {greedy=false;} : . )* ']]' {$channel=Hidden;}
     ;
     
 LINE_COMMENT
-    : '--' ~('\n'|'\r')* '\r'? '\n' {skip();}
-    ;
-    
+    : '--' ~('\n'|'\r')* '\r'? '\n' {$channel=Hidden;}
+    ;    
     
 WS  :  (' '|'\t'|'\u000C') {skip();}
     ;

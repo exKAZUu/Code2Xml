@@ -10,7 +10,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 Lua.g 2012-01-29 22:43:40
+// $ANTLR 3.4 Lua.g 2012-03-01 00:37:57
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -197,7 +197,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 					// Lua.g:23:10: stat ( ';' )?
 					{
 					DebugLocation(23, 10);
-					PushFollow(Follow._stat_in_chunk37);
+					PushFollow(Follow._stat_in_chunk46);
 					stat1=stat();
 					PopFollow();
 					if (state.failed) return retval;
@@ -221,7 +221,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 						// Lua.g:23:16: ';'
 						{
 						DebugLocation(23, 16);
-						char_literal2=(IToken)Match(input,33,Follow._33_in_chunk40); if (state.failed) return retval;
+						char_literal2=(IToken)Match(input,33,Follow._33_in_chunk49); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 						char_literal2_tree = (object)adaptor.Create(char_literal2, retval);
 						adaptor.AddChild(root_0, char_literal2_tree);
@@ -266,7 +266,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:23:25: laststat ( ';' )?
 				{
 				DebugLocation(23, 25);
-				PushFollow(Follow._laststat_in_chunk47);
+				PushFollow(Follow._laststat_in_chunk56);
 				laststat3=laststat();
 				PopFollow();
 				if (state.failed) return retval;
@@ -290,7 +290,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 					// Lua.g:23:35: ';'
 					{
 					DebugLocation(23, 35);
-					char_literal4=(IToken)Match(input,33,Follow._33_in_chunk50); if (state.failed) return retval;
+					char_literal4=(IToken)Match(input,33,Follow._33_in_chunk59); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal4_tree = (object)adaptor.Create(char_literal4, retval);
 					adaptor.AddChild(root_0, char_literal4_tree);
@@ -368,7 +368,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(25, 9);
-			PushFollow(Follow._chunk_in_block62);
+			PushFollow(Follow._chunk_in_block71);
 			chunk5=chunk();
 			PopFollow();
 			if (state.failed) return retval;
@@ -508,7 +508,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 		object string_literal58_tree = default(object);
 		object char_literal60_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "stat");
-		DebugLocation(27, 34);
+		DebugLocation(27, 37);
 		try
 		{
 			// Lua.g:27:6: ( varlist1 '=' explist1 | functioncall | 'do' block 'end' | 'while' exp 'do' block 'end' | 'repeat' block 'until' exp | 'if' exp 'then' block ( 'elseif' exp 'then' block )* ( 'else' block )? 'end' | 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end' | 'for' namelist 'in' explist1 'do' block 'end' | 'function' funcname funcbody | 'local' 'function' NAME funcbody | 'local' namelist ( '=' explist1 )? )
@@ -644,19 +644,19 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(27, 9);
-				PushFollow(Follow._varlist1_in_stat71);
+				PushFollow(Follow._varlist1_in_stat80);
 				varlist16=varlist1();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, varlist16.Tree, varlist16, retval);
 				DebugLocation(27, 18);
-				char_literal7=(IToken)Match(input,36,Follow._36_in_stat73); if (state.failed) return retval;
+				char_literal7=(IToken)Match(input,36,Follow._36_in_stat82); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal7_tree = (object)adaptor.Create(char_literal7, retval);
 				adaptor.AddChild(root_0, char_literal7_tree);
 				}
 				DebugLocation(27, 22);
-				PushFollow(Follow._explist1_in_stat75);
+				PushFollow(Follow._explist1_in_stat84);
 				explist18=explist1();
 				PopFollow();
 				if (state.failed) return retval;
@@ -666,12 +666,12 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Lua.g:28:2: functioncall
+				// Lua.g:28:5: functioncall
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(28, 2);
-				PushFollow(Follow._functioncall_in_stat81);
+				DebugLocation(28, 5);
+				PushFollow(Follow._functioncall_in_stat93);
 				functioncall9=functioncall();
 				PopFollow();
 				if (state.failed) return retval;
@@ -681,24 +681,24 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// Lua.g:29:2: 'do' block 'end'
+				// Lua.g:29:5: 'do' block 'end'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(29, 2);
-				string_literal10=(IToken)Match(input,45,Follow._45_in_stat87); if (state.failed) return retval;
+				DebugLocation(29, 5);
+				string_literal10=(IToken)Match(input,45,Follow._45_in_stat102); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal10_tree = (object)adaptor.Create(string_literal10, retval);
 				adaptor.AddChild(root_0, string_literal10_tree);
 				}
-				DebugLocation(29, 7);
-				PushFollow(Follow._block_in_stat89);
+				DebugLocation(29, 10);
+				PushFollow(Follow._block_in_stat104);
 				block11=block();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, block11.Tree, block11, retval);
-				DebugLocation(29, 13);
-				string_literal12=(IToken)Match(input,48,Follow._48_in_stat91); if (state.failed) return retval;
+				DebugLocation(29, 16);
+				string_literal12=(IToken)Match(input,48,Follow._48_in_stat106); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal12_tree = (object)adaptor.Create(string_literal12, retval);
 				adaptor.AddChild(root_0, string_literal12_tree);
@@ -708,36 +708,36 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// Lua.g:30:2: 'while' exp 'do' block 'end'
+				// Lua.g:30:5: 'while' exp 'do' block 'end'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(30, 2);
-				string_literal13=(IToken)Match(input,63,Follow._63_in_stat97); if (state.failed) return retval;
+				DebugLocation(30, 5);
+				string_literal13=(IToken)Match(input,63,Follow._63_in_stat115); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal13_tree = (object)adaptor.Create(string_literal13, retval);
 				adaptor.AddChild(root_0, string_literal13_tree);
 				}
-				DebugLocation(30, 10);
-				PushFollow(Follow._exp_in_stat99);
+				DebugLocation(30, 13);
+				PushFollow(Follow._exp_in_stat117);
 				exp14=exp();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, exp14.Tree, exp14, retval);
-				DebugLocation(30, 14);
-				string_literal15=(IToken)Match(input,45,Follow._45_in_stat101); if (state.failed) return retval;
+				DebugLocation(30, 17);
+				string_literal15=(IToken)Match(input,45,Follow._45_in_stat119); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal15_tree = (object)adaptor.Create(string_literal15, retval);
 				adaptor.AddChild(root_0, string_literal15_tree);
 				}
-				DebugLocation(30, 19);
-				PushFollow(Follow._block_in_stat103);
+				DebugLocation(30, 22);
+				PushFollow(Follow._block_in_stat121);
 				block16=block();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, block16.Tree, block16, retval);
-				DebugLocation(30, 25);
-				string_literal17=(IToken)Match(input,48,Follow._48_in_stat105); if (state.failed) return retval;
+				DebugLocation(30, 28);
+				string_literal17=(IToken)Match(input,48,Follow._48_in_stat123); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal17_tree = (object)adaptor.Create(string_literal17, retval);
 				adaptor.AddChild(root_0, string_literal17_tree);
@@ -747,30 +747,30 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// Lua.g:31:2: 'repeat' block 'until' exp
+				// Lua.g:31:5: 'repeat' block 'until' exp
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(31, 2);
-				string_literal18=(IToken)Match(input,58,Follow._58_in_stat111); if (state.failed) return retval;
+				DebugLocation(31, 5);
+				string_literal18=(IToken)Match(input,58,Follow._58_in_stat132); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal18_tree = (object)adaptor.Create(string_literal18, retval);
 				adaptor.AddChild(root_0, string_literal18_tree);
 				}
-				DebugLocation(31, 11);
-				PushFollow(Follow._block_in_stat113);
+				DebugLocation(31, 14);
+				PushFollow(Follow._block_in_stat134);
 				block19=block();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, block19.Tree, block19, retval);
-				DebugLocation(31, 17);
-				string_literal20=(IToken)Match(input,62,Follow._62_in_stat115); if (state.failed) return retval;
+				DebugLocation(31, 20);
+				string_literal20=(IToken)Match(input,62,Follow._62_in_stat136); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal20_tree = (object)adaptor.Create(string_literal20, retval);
 				adaptor.AddChild(root_0, string_literal20_tree);
 				}
-				DebugLocation(31, 25);
-				PushFollow(Follow._exp_in_stat117);
+				DebugLocation(31, 28);
+				PushFollow(Follow._exp_in_stat138);
 				exp21=exp();
 				PopFollow();
 				if (state.failed) return retval;
@@ -780,36 +780,36 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// Lua.g:32:2: 'if' exp 'then' block ( 'elseif' exp 'then' block )* ( 'else' block )? 'end'
+				// Lua.g:32:5: 'if' exp 'then' block ( 'elseif' exp 'then' block )* ( 'else' block )? 'end'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(32, 2);
-				string_literal22=(IToken)Match(input,52,Follow._52_in_stat123); if (state.failed) return retval;
+				DebugLocation(32, 5);
+				string_literal22=(IToken)Match(input,52,Follow._52_in_stat147); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal22_tree = (object)adaptor.Create(string_literal22, retval);
 				adaptor.AddChild(root_0, string_literal22_tree);
 				}
-				DebugLocation(32, 7);
-				PushFollow(Follow._exp_in_stat125);
+				DebugLocation(32, 10);
+				PushFollow(Follow._exp_in_stat149);
 				exp23=exp();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, exp23.Tree, exp23, retval);
-				DebugLocation(32, 11);
-				string_literal24=(IToken)Match(input,60,Follow._60_in_stat127); if (state.failed) return retval;
+				DebugLocation(32, 14);
+				string_literal24=(IToken)Match(input,60,Follow._60_in_stat151); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal24_tree = (object)adaptor.Create(string_literal24, retval);
 				adaptor.AddChild(root_0, string_literal24_tree);
 				}
-				DebugLocation(32, 18);
-				PushFollow(Follow._block_in_stat129);
+				DebugLocation(32, 21);
+				PushFollow(Follow._block_in_stat153);
 				block25=block();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, block25.Tree, block25, retval);
-				DebugLocation(32, 24);
-				// Lua.g:32:24: ( 'elseif' exp 'then' block )*
+				DebugLocation(32, 27);
+				// Lua.g:32:27: ( 'elseif' exp 'then' block )*
 				try { DebugEnterSubRule(5);
 				while (true)
 				{
@@ -828,28 +828,28 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Lua.g:32:25: 'elseif' exp 'then' block
+						// Lua.g:32:28: 'elseif' exp 'then' block
 						{
-						DebugLocation(32, 25);
-						string_literal26=(IToken)Match(input,47,Follow._47_in_stat132); if (state.failed) return retval;
+						DebugLocation(32, 28);
+						string_literal26=(IToken)Match(input,47,Follow._47_in_stat156); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 						string_literal26_tree = (object)adaptor.Create(string_literal26, retval);
 						adaptor.AddChild(root_0, string_literal26_tree);
 						}
-						DebugLocation(32, 34);
-						PushFollow(Follow._exp_in_stat134);
+						DebugLocation(32, 37);
+						PushFollow(Follow._exp_in_stat158);
 						exp27=exp();
 						PopFollow();
 						if (state.failed) return retval;
 						if (state.backtracking == 0) adaptor.AddChild(root_0, exp27.Tree, exp27, retval);
-						DebugLocation(32, 38);
-						string_literal28=(IToken)Match(input,60,Follow._60_in_stat136); if (state.failed) return retval;
+						DebugLocation(32, 41);
+						string_literal28=(IToken)Match(input,60,Follow._60_in_stat160); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 						string_literal28_tree = (object)adaptor.Create(string_literal28, retval);
 						adaptor.AddChild(root_0, string_literal28_tree);
 						}
-						DebugLocation(32, 45);
-						PushFollow(Follow._block_in_stat138);
+						DebugLocation(32, 48);
+						PushFollow(Follow._block_in_stat162);
 						block29=block();
 						PopFollow();
 						if (state.failed) return retval;
@@ -868,8 +868,8 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 
 				} finally { DebugExitSubRule(5); }
 
-				DebugLocation(32, 53);
-				// Lua.g:32:53: ( 'else' block )?
+				DebugLocation(32, 56);
+				// Lua.g:32:56: ( 'else' block )?
 				int alt6=2;
 				try { DebugEnterSubRule(6);
 				try { DebugEnterDecision(6, false);
@@ -884,16 +884,16 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Lua.g:32:54: 'else' block
+					// Lua.g:32:57: 'else' block
 					{
-					DebugLocation(32, 54);
-					string_literal30=(IToken)Match(input,46,Follow._46_in_stat143); if (state.failed) return retval;
+					DebugLocation(32, 57);
+					string_literal30=(IToken)Match(input,46,Follow._46_in_stat167); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal30_tree = (object)adaptor.Create(string_literal30, retval);
 					adaptor.AddChild(root_0, string_literal30_tree);
 					}
-					DebugLocation(32, 61);
-					PushFollow(Follow._block_in_stat145);
+					DebugLocation(32, 64);
+					PushFollow(Follow._block_in_stat169);
 					block31=block();
 					PopFollow();
 					if (state.failed) return retval;
@@ -905,8 +905,8 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				}
 				} finally { DebugExitSubRule(6); }
 
-				DebugLocation(32, 69);
-				string_literal32=(IToken)Match(input,48,Follow._48_in_stat149); if (state.failed) return retval;
+				DebugLocation(32, 72);
+				string_literal32=(IToken)Match(input,48,Follow._48_in_stat173); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal32_tree = (object)adaptor.Create(string_literal32, retval);
 				adaptor.AddChild(root_0, string_literal32_tree);
@@ -916,48 +916,48 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// Lua.g:33:2: 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end'
+				// Lua.g:33:5: 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(33, 2);
-				string_literal33=(IToken)Match(input,50,Follow._50_in_stat155); if (state.failed) return retval;
+				DebugLocation(33, 5);
+				string_literal33=(IToken)Match(input,50,Follow._50_in_stat182); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal33_tree = (object)adaptor.Create(string_literal33, retval);
 				adaptor.AddChild(root_0, string_literal33_tree);
 				}
-				DebugLocation(33, 8);
-				NAME34=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_stat157), "NAME"); if (state.failed) return retval;
+				DebugLocation(33, 11);
+				NAME34=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_stat184), "NAME"); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				NAME34_tree = (object)adaptor.Create(NAME34, retval);
 				adaptor.AddChild(root_0, NAME34_tree);
 				}
-				DebugLocation(33, 13);
-				char_literal35=(IToken)Match(input,36,Follow._36_in_stat159); if (state.failed) return retval;
+				DebugLocation(33, 16);
+				char_literal35=(IToken)Match(input,36,Follow._36_in_stat186); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal35_tree = (object)adaptor.Create(char_literal35, retval);
 				adaptor.AddChild(root_0, char_literal35_tree);
 				}
-				DebugLocation(33, 17);
-				PushFollow(Follow._exp_in_stat161);
+				DebugLocation(33, 20);
+				PushFollow(Follow._exp_in_stat188);
 				exp36=exp();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, exp36.Tree, exp36, retval);
-				DebugLocation(33, 21);
-				char_literal37=(IToken)Match(input,26,Follow._26_in_stat163); if (state.failed) return retval;
+				DebugLocation(33, 24);
+				char_literal37=(IToken)Match(input,26,Follow._26_in_stat190); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal37_tree = (object)adaptor.Create(char_literal37, retval);
 				adaptor.AddChild(root_0, char_literal37_tree);
 				}
-				DebugLocation(33, 25);
-				PushFollow(Follow._exp_in_stat165);
+				DebugLocation(33, 28);
+				PushFollow(Follow._exp_in_stat192);
 				exp38=exp();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, exp38.Tree, exp38, retval);
-				DebugLocation(33, 29);
-				// Lua.g:33:29: ( ',' exp )?
+				DebugLocation(33, 32);
+				// Lua.g:33:32: ( ',' exp )?
 				int alt7=2;
 				try { DebugEnterSubRule(7);
 				try { DebugEnterDecision(7, false);
@@ -972,16 +972,16 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Lua.g:33:30: ',' exp
+					// Lua.g:33:33: ',' exp
 					{
-					DebugLocation(33, 30);
-					char_literal39=(IToken)Match(input,26,Follow._26_in_stat168); if (state.failed) return retval;
+					DebugLocation(33, 33);
+					char_literal39=(IToken)Match(input,26,Follow._26_in_stat195); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal39_tree = (object)adaptor.Create(char_literal39, retval);
 					adaptor.AddChild(root_0, char_literal39_tree);
 					}
-					DebugLocation(33, 34);
-					PushFollow(Follow._exp_in_stat170);
+					DebugLocation(33, 37);
+					PushFollow(Follow._exp_in_stat197);
 					exp40=exp();
 					PopFollow();
 					if (state.failed) return retval;
@@ -993,20 +993,20 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				}
 				} finally { DebugExitSubRule(7); }
 
-				DebugLocation(33, 40);
-				string_literal41=(IToken)Match(input,45,Follow._45_in_stat174); if (state.failed) return retval;
+				DebugLocation(33, 43);
+				string_literal41=(IToken)Match(input,45,Follow._45_in_stat201); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal41_tree = (object)adaptor.Create(string_literal41, retval);
 				adaptor.AddChild(root_0, string_literal41_tree);
 				}
-				DebugLocation(33, 45);
-				PushFollow(Follow._block_in_stat176);
+				DebugLocation(33, 48);
+				PushFollow(Follow._block_in_stat203);
 				block42=block();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, block42.Tree, block42, retval);
-				DebugLocation(33, 51);
-				string_literal43=(IToken)Match(input,48,Follow._48_in_stat178); if (state.failed) return retval;
+				DebugLocation(33, 54);
+				string_literal43=(IToken)Match(input,48,Follow._48_in_stat205); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal43_tree = (object)adaptor.Create(string_literal43, retval);
 				adaptor.AddChild(root_0, string_literal43_tree);
@@ -1016,48 +1016,48 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// Lua.g:34:2: 'for' namelist 'in' explist1 'do' block 'end'
+				// Lua.g:34:5: 'for' namelist 'in' explist1 'do' block 'end'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(34, 2);
-				string_literal44=(IToken)Match(input,50,Follow._50_in_stat184); if (state.failed) return retval;
+				DebugLocation(34, 5);
+				string_literal44=(IToken)Match(input,50,Follow._50_in_stat214); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal44_tree = (object)adaptor.Create(string_literal44, retval);
 				adaptor.AddChild(root_0, string_literal44_tree);
 				}
-				DebugLocation(34, 8);
-				PushFollow(Follow._namelist_in_stat186);
+				DebugLocation(34, 11);
+				PushFollow(Follow._namelist_in_stat216);
 				namelist45=namelist();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, namelist45.Tree, namelist45, retval);
-				DebugLocation(34, 17);
-				string_literal46=(IToken)Match(input,53,Follow._53_in_stat188); if (state.failed) return retval;
+				DebugLocation(34, 20);
+				string_literal46=(IToken)Match(input,53,Follow._53_in_stat218); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal46_tree = (object)adaptor.Create(string_literal46, retval);
 				adaptor.AddChild(root_0, string_literal46_tree);
 				}
-				DebugLocation(34, 22);
-				PushFollow(Follow._explist1_in_stat190);
+				DebugLocation(34, 25);
+				PushFollow(Follow._explist1_in_stat220);
 				explist147=explist1();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, explist147.Tree, explist147, retval);
-				DebugLocation(34, 31);
-				string_literal48=(IToken)Match(input,45,Follow._45_in_stat192); if (state.failed) return retval;
+				DebugLocation(34, 34);
+				string_literal48=(IToken)Match(input,45,Follow._45_in_stat222); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal48_tree = (object)adaptor.Create(string_literal48, retval);
 				adaptor.AddChild(root_0, string_literal48_tree);
 				}
-				DebugLocation(34, 36);
-				PushFollow(Follow._block_in_stat194);
+				DebugLocation(34, 39);
+				PushFollow(Follow._block_in_stat224);
 				block49=block();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, block49.Tree, block49, retval);
-				DebugLocation(34, 42);
-				string_literal50=(IToken)Match(input,48,Follow._48_in_stat196); if (state.failed) return retval;
+				DebugLocation(34, 45);
+				string_literal50=(IToken)Match(input,48,Follow._48_in_stat226); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal50_tree = (object)adaptor.Create(string_literal50, retval);
 				adaptor.AddChild(root_0, string_literal50_tree);
@@ -1067,24 +1067,24 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				break;
 			case 9:
 				DebugEnterAlt(9);
-				// Lua.g:35:2: 'function' funcname funcbody
+				// Lua.g:35:5: 'function' funcname funcbody
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(35, 2);
-				string_literal51=(IToken)Match(input,51,Follow._51_in_stat202); if (state.failed) return retval;
+				DebugLocation(35, 5);
+				string_literal51=(IToken)Match(input,51,Follow._51_in_stat235); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal51_tree = (object)adaptor.Create(string_literal51, retval);
 				adaptor.AddChild(root_0, string_literal51_tree);
 				}
-				DebugLocation(35, 13);
-				PushFollow(Follow._funcname_in_stat204);
+				DebugLocation(35, 16);
+				PushFollow(Follow._funcname_in_stat237);
 				funcname52=funcname();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, funcname52.Tree, funcname52, retval);
-				DebugLocation(35, 22);
-				PushFollow(Follow._funcbody_in_stat206);
+				DebugLocation(35, 25);
+				PushFollow(Follow._funcbody_in_stat239);
 				funcbody53=funcbody();
 				PopFollow();
 				if (state.failed) return retval;
@@ -1094,30 +1094,30 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				break;
 			case 10:
 				DebugEnterAlt(10);
-				// Lua.g:36:2: 'local' 'function' NAME funcbody
+				// Lua.g:36:5: 'local' 'function' NAME funcbody
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(36, 2);
-				string_literal54=(IToken)Match(input,54,Follow._54_in_stat212); if (state.failed) return retval;
+				DebugLocation(36, 5);
+				string_literal54=(IToken)Match(input,54,Follow._54_in_stat248); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal54_tree = (object)adaptor.Create(string_literal54, retval);
 				adaptor.AddChild(root_0, string_literal54_tree);
 				}
-				DebugLocation(36, 10);
-				string_literal55=(IToken)Match(input,51,Follow._51_in_stat214); if (state.failed) return retval;
+				DebugLocation(36, 13);
+				string_literal55=(IToken)Match(input,51,Follow._51_in_stat250); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal55_tree = (object)adaptor.Create(string_literal55, retval);
 				adaptor.AddChild(root_0, string_literal55_tree);
 				}
-				DebugLocation(36, 21);
-				NAME56=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_stat216), "NAME"); if (state.failed) return retval;
+				DebugLocation(36, 24);
+				NAME56=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_stat252), "NAME"); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				NAME56_tree = (object)adaptor.Create(NAME56, retval);
 				adaptor.AddChild(root_0, NAME56_tree);
 				}
-				DebugLocation(36, 26);
-				PushFollow(Follow._funcbody_in_stat218);
+				DebugLocation(36, 29);
+				PushFollow(Follow._funcbody_in_stat254);
 				funcbody57=funcbody();
 				PopFollow();
 				if (state.failed) return retval;
@@ -1127,24 +1127,24 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				break;
 			case 11:
 				DebugEnterAlt(11);
-				// Lua.g:37:2: 'local' namelist ( '=' explist1 )?
+				// Lua.g:37:5: 'local' namelist ( '=' explist1 )?
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(37, 2);
-				string_literal58=(IToken)Match(input,54,Follow._54_in_stat224); if (state.failed) return retval;
+				DebugLocation(37, 5);
+				string_literal58=(IToken)Match(input,54,Follow._54_in_stat263); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal58_tree = (object)adaptor.Create(string_literal58, retval);
 				adaptor.AddChild(root_0, string_literal58_tree);
 				}
-				DebugLocation(37, 10);
-				PushFollow(Follow._namelist_in_stat226);
+				DebugLocation(37, 13);
+				PushFollow(Follow._namelist_in_stat265);
 				namelist59=namelist();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, namelist59.Tree, namelist59, retval);
-				DebugLocation(37, 19);
-				// Lua.g:37:19: ( '=' explist1 )?
+				DebugLocation(37, 22);
+				// Lua.g:37:22: ( '=' explist1 )?
 				int alt8=2;
 				try { DebugEnterSubRule(8);
 				try { DebugEnterDecision(8, false);
@@ -1159,16 +1159,16 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Lua.g:37:20: '=' explist1
+					// Lua.g:37:23: '=' explist1
 					{
-					DebugLocation(37, 20);
-					char_literal60=(IToken)Match(input,36,Follow._36_in_stat229); if (state.failed) return retval;
+					DebugLocation(37, 23);
+					char_literal60=(IToken)Match(input,36,Follow._36_in_stat268); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal60_tree = (object)adaptor.Create(char_literal60, retval);
 					adaptor.AddChild(root_0, char_literal60_tree);
 					}
-					DebugLocation(37, 24);
-					PushFollow(Follow._explist1_in_stat231);
+					DebugLocation(37, 27);
+					PushFollow(Follow._explist1_in_stat270);
 					explist161=explist1();
 					PopFollow();
 					if (state.failed) return retval;
@@ -1205,7 +1205,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			LeaveRule("stat", 3);
 			LeaveRule_stat();
 		}
-		DebugLocation(37, 34);
+		DebugLocation(37, 37);
 		} finally { DebugExitRule(GrammarFileName, "stat"); }
 		return retval;
 
@@ -1268,7 +1268,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(39, 12);
-				string_literal62=(IToken)Match(input,59,Follow._59_in_laststat242); if (state.failed) return retval;
+				string_literal62=(IToken)Match(input,59,Follow._59_in_laststat281); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal62_tree = (object)adaptor.Create(string_literal62, retval);
 				adaptor.AddChild(root_0, string_literal62_tree);
@@ -1292,7 +1292,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 					// Lua.g:39:22: explist1
 					{
 					DebugLocation(39, 22);
-					PushFollow(Follow._explist1_in_laststat245);
+					PushFollow(Follow._explist1_in_laststat284);
 					explist163=explist1();
 					PopFollow();
 					if (state.failed) return retval;
@@ -1314,7 +1314,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(39, 35);
-				string_literal64=(IToken)Match(input,44,Follow._44_in_laststat251); if (state.failed) return retval;
+				string_literal64=(IToken)Match(input,44,Follow._44_in_laststat290); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal64_tree = (object)adaptor.Create(string_literal64, retval);
 				adaptor.AddChild(root_0, string_literal64_tree);
@@ -1389,7 +1389,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(41, 12);
-			NAME65=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_funcname259), "NAME"); if (state.failed) return retval;
+			NAME65=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_funcname298), "NAME"); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			NAME65_tree = (object)adaptor.Create(NAME65, retval);
 			adaptor.AddChild(root_0, NAME65_tree);
@@ -1417,13 +1417,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 					// Lua.g:41:18: '.' NAME
 					{
 					DebugLocation(41, 18);
-					char_literal66=(IToken)Match(input,28,Follow._28_in_funcname262); if (state.failed) return retval;
+					char_literal66=(IToken)Match(input,28,Follow._28_in_funcname301); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal66_tree = (object)adaptor.Create(char_literal66, retval);
 					adaptor.AddChild(root_0, char_literal66_tree);
 					}
 					DebugLocation(41, 22);
-					NAME67=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_funcname264), "NAME"); if (state.failed) return retval;
+					NAME67=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_funcname303), "NAME"); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					NAME67_tree = (object)adaptor.Create(NAME67, retval);
 					adaptor.AddChild(root_0, NAME67_tree);
@@ -1461,13 +1461,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:41:30: ':' NAME
 				{
 				DebugLocation(41, 30);
-				char_literal68=(IToken)Match(input,32,Follow._32_in_funcname269); if (state.failed) return retval;
+				char_literal68=(IToken)Match(input,32,Follow._32_in_funcname308); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal68_tree = (object)adaptor.Create(char_literal68, retval);
 				adaptor.AddChild(root_0, char_literal68_tree);
 				}
 				DebugLocation(41, 34);
-				NAME69=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_funcname271), "NAME"); if (state.failed) return retval;
+				NAME69=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_funcname310), "NAME"); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				NAME69_tree = (object)adaptor.Create(NAME69, retval);
 				adaptor.AddChild(root_0, NAME69_tree);
@@ -1541,7 +1541,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(43, 12);
-			PushFollow(Follow._var_in_varlist1282);
+			PushFollow(Follow._var_in_varlist1321);
 			var70=var();
 			PopFollow();
 			if (state.failed) return retval;
@@ -1569,13 +1569,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 					// Lua.g:43:17: ',' var
 					{
 					DebugLocation(43, 17);
-					char_literal71=(IToken)Match(input,26,Follow._26_in_varlist1285); if (state.failed) return retval;
+					char_literal71=(IToken)Match(input,26,Follow._26_in_varlist1324); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal71_tree = (object)adaptor.Create(char_literal71, retval);
 					adaptor.AddChild(root_0, char_literal71_tree);
 					}
 					DebugLocation(43, 21);
-					PushFollow(Follow._var_in_varlist1287);
+					PushFollow(Follow._var_in_varlist1326);
 					var72=var();
 					PopFollow();
 					if (state.failed) return retval;
@@ -1658,7 +1658,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(46, 12);
-			NAME73=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_namelist298), "NAME"); if (state.failed) return retval;
+			NAME73=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_namelist337), "NAME"); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			NAME73_tree = (object)adaptor.Create(NAME73, retval);
 			adaptor.AddChild(root_0, NAME73_tree);
@@ -1693,13 +1693,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 					// Lua.g:46:18: ',' NAME
 					{
 					DebugLocation(46, 18);
-					char_literal74=(IToken)Match(input,26,Follow._26_in_namelist301); if (state.failed) return retval;
+					char_literal74=(IToken)Match(input,26,Follow._26_in_namelist340); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal74_tree = (object)adaptor.Create(char_literal74, retval);
 					adaptor.AddChild(root_0, char_literal74_tree);
 					}
 					DebugLocation(46, 22);
-					NAME75=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_namelist303), "NAME"); if (state.failed) return retval;
+					NAME75=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_namelist342), "NAME"); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					NAME75_tree = (object)adaptor.Create(NAME75, retval);
 					adaptor.AddChild(root_0, NAME75_tree);
@@ -1937,13 +1937,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 					// Lua.g:48:13: exp ','
 					{
 					DebugLocation(48, 13);
-					PushFollow(Follow._exp_in_explist1314);
+					PushFollow(Follow._exp_in_explist1353);
 					exp76=exp();
 					PopFollow();
 					if (state.failed) return retval;
 					if (state.backtracking == 0) adaptor.AddChild(root_0, exp76.Tree, exp76, retval);
 					DebugLocation(48, 17);
-					char_literal77=(IToken)Match(input,26,Follow._26_in_explist1316); if (state.failed) return retval;
+					char_literal77=(IToken)Match(input,26,Follow._26_in_explist1355); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal77_tree = (object)adaptor.Create(char_literal77, retval);
 					adaptor.AddChild(root_0, char_literal77_tree);
@@ -1963,7 +1963,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			} finally { DebugExitSubRule(16); }
 
 			DebugLocation(48, 23);
-			PushFollow(Follow._exp_in_explist1320);
+			PushFollow(Follow._exp_in_explist1359);
 			exp78=exp();
 			PopFollow();
 			if (state.failed) return retval;
@@ -2124,7 +2124,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:50:9: 'nil'
 				{
 				DebugLocation(50, 9);
-				string_literal79=(IToken)Match(input,55,Follow._55_in_exp330); if (state.failed) return retval;
+				string_literal79=(IToken)Match(input,55,Follow._55_in_exp369); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal79_tree = (object)adaptor.Create(string_literal79, retval);
 				adaptor.AddChild(root_0, string_literal79_tree);
@@ -2137,7 +2137,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:50:17: 'false'
 				{
 				DebugLocation(50, 17);
-				string_literal80=(IToken)Match(input,49,Follow._49_in_exp334); if (state.failed) return retval;
+				string_literal80=(IToken)Match(input,49,Follow._49_in_exp373); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal80_tree = (object)adaptor.Create(string_literal80, retval);
 				adaptor.AddChild(root_0, string_literal80_tree);
@@ -2150,7 +2150,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:50:27: 'true'
 				{
 				DebugLocation(50, 27);
-				string_literal81=(IToken)Match(input,61,Follow._61_in_exp338); if (state.failed) return retval;
+				string_literal81=(IToken)Match(input,61,Follow._61_in_exp377); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal81_tree = (object)adaptor.Create(string_literal81, retval);
 				adaptor.AddChild(root_0, string_literal81_tree);
@@ -2163,7 +2163,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:50:36: lua_number
 				{
 				DebugLocation(50, 36);
-				PushFollow(Follow._lua_number_in_exp342);
+				PushFollow(Follow._lua_number_in_exp381);
 				lua_number82=lua_number();
 				PopFollow();
 				if (state.failed) return retval;
@@ -2176,7 +2176,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:50:49: lua_string
 				{
 				DebugLocation(50, 49);
-				PushFollow(Follow._lua_string_in_exp346);
+				PushFollow(Follow._lua_string_in_exp385);
 				lua_string83=lua_string();
 				PopFollow();
 				if (state.failed) return retval;
@@ -2189,7 +2189,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:50:62: '...'
 				{
 				DebugLocation(50, 62);
-				string_literal84=(IToken)Match(input,30,Follow._30_in_exp350); if (state.failed) return retval;
+				string_literal84=(IToken)Match(input,30,Follow._30_in_exp389); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal84_tree = (object)adaptor.Create(string_literal84, retval);
 				adaptor.AddChild(root_0, string_literal84_tree);
@@ -2202,7 +2202,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:50:70: function
 				{
 				DebugLocation(50, 70);
-				PushFollow(Follow._function_in_exp354);
+				PushFollow(Follow._function_in_exp393);
 				function85=function();
 				PopFollow();
 				if (state.failed) return retval;
@@ -2215,7 +2215,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:50:81: prefixexp
 				{
 				DebugLocation(50, 81);
-				PushFollow(Follow._prefixexp_in_exp358);
+				PushFollow(Follow._prefixexp_in_exp397);
 				prefixexp86=prefixexp();
 				PopFollow();
 				if (state.failed) return retval;
@@ -2228,7 +2228,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:50:93: tableconstructor
 				{
 				DebugLocation(50, 93);
-				PushFollow(Follow._tableconstructor_in_exp362);
+				PushFollow(Follow._tableconstructor_in_exp401);
 				tableconstructor87=tableconstructor();
 				PopFollow();
 				if (state.failed) return retval;
@@ -2241,13 +2241,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:50:112: unop exp
 				{
 				DebugLocation(50, 112);
-				PushFollow(Follow._unop_in_exp366);
+				PushFollow(Follow._unop_in_exp405);
 				unop88=unop();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, unop88.Tree, unop88, retval);
 				DebugLocation(50, 117);
-				PushFollow(Follow._exp_in_exp368);
+				PushFollow(Follow._exp_in_exp407);
 				exp89=exp();
 				PopFollow();
 				if (state.failed) return retval;
@@ -2289,13 +2289,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 					// Lua.g:50:123: binop exp
 					{
 					DebugLocation(50, 123);
-					PushFollow(Follow._binop_in_exp372);
+					PushFollow(Follow._binop_in_exp411);
 					binop90=binop();
 					PopFollow();
 					if (state.failed) return retval;
 					if (state.backtracking == 0) adaptor.AddChild(root_0, binop90.Tree, binop90, retval);
 					DebugLocation(50, 129);
-					PushFollow(Follow._exp_in_exp374);
+					PushFollow(Follow._exp_in_exp413);
 					exp91=exp();
 					PopFollow();
 					if (state.failed) return retval;
@@ -2410,7 +2410,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:52:7: NAME
 				{
 				DebugLocation(52, 7);
-				NAME92=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_var385), "NAME"); if (state.failed) return retval;
+				NAME92=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_var424), "NAME"); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				NAME92_tree = (object)adaptor.Create(NAME92, retval);
 				adaptor.AddChild(root_0, NAME92_tree);
@@ -2423,25 +2423,25 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:52:14: '(' exp ')' varSuffix
 				{
 				DebugLocation(52, 14);
-				char_literal93=(IToken)Match(input,22,Follow._22_in_var389); if (state.failed) return retval;
+				char_literal93=(IToken)Match(input,22,Follow._22_in_var428); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal93_tree = (object)adaptor.Create(char_literal93, retval);
 				adaptor.AddChild(root_0, char_literal93_tree);
 				}
 				DebugLocation(52, 18);
-				PushFollow(Follow._exp_in_var391);
+				PushFollow(Follow._exp_in_var430);
 				exp94=exp();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, exp94.Tree, exp94, retval);
 				DebugLocation(52, 22);
-				char_literal95=(IToken)Match(input,23,Follow._23_in_var393); if (state.failed) return retval;
+				char_literal95=(IToken)Match(input,23,Follow._23_in_var432); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal95_tree = (object)adaptor.Create(char_literal95, retval);
 				adaptor.AddChild(root_0, char_literal95_tree);
 				}
 				DebugLocation(52, 26);
-				PushFollow(Follow._varSuffix_in_var395);
+				PushFollow(Follow._varSuffix_in_var434);
 				varSuffix96=varSuffix();
 				PopFollow();
 				if (state.failed) return retval;
@@ -2528,7 +2528,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 					// Lua.g:52:37: varSuffix
 					{
 					DebugLocation(52, 37);
-					PushFollow(Follow._varSuffix_in_var398);
+					PushFollow(Follow._varSuffix_in_var437);
 					varSuffix97=varSuffix();
 					PopFollow();
 					if (state.failed) return retval;
@@ -2607,7 +2607,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(54, 12);
-			PushFollow(Follow._varOrExp_in_prefixexp406);
+			PushFollow(Follow._varOrExp_in_prefixexp445);
 			varOrExp98=varOrExp();
 			PopFollow();
 			if (state.failed) return retval;
@@ -2646,7 +2646,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 					// Lua.g:54:21: nameAndArgs
 					{
 					DebugLocation(54, 21);
-					PushFollow(Follow._nameAndArgs_in_prefixexp408);
+					PushFollow(Follow._nameAndArgs_in_prefixexp447);
 					nameAndArgs99=nameAndArgs();
 					PopFollow();
 					if (state.failed) return retval;
@@ -2725,7 +2725,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(56, 15);
-			PushFollow(Follow._varOrExp_in_functioncall416);
+			PushFollow(Follow._varOrExp_in_functioncall455);
 			varOrExp100=varOrExp();
 			PopFollow();
 			if (state.failed) return retval;
@@ -2765,7 +2765,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 					// Lua.g:56:24: nameAndArgs
 					{
 					DebugLocation(56, 24);
-					PushFollow(Follow._nameAndArgs_in_functioncall418);
+					PushFollow(Follow._nameAndArgs_in_functioncall457);
 					nameAndArgs101=nameAndArgs();
 					PopFollow();
 					if (state.failed) return retval;
@@ -2893,7 +2893,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(66, 11);
-				PushFollow(Follow._var_in_varOrExp429);
+				PushFollow(Follow._var_in_varOrExp468);
 				var102=var();
 				PopFollow();
 				if (state.failed) return retval;
@@ -2908,19 +2908,19 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(66, 17);
-				char_literal103=(IToken)Match(input,22,Follow._22_in_varOrExp433); if (state.failed) return retval;
+				char_literal103=(IToken)Match(input,22,Follow._22_in_varOrExp472); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal103_tree = (object)adaptor.Create(char_literal103, retval);
 				adaptor.AddChild(root_0, char_literal103_tree);
 				}
 				DebugLocation(66, 21);
-				PushFollow(Follow._exp_in_varOrExp435);
+				PushFollow(Follow._exp_in_varOrExp474);
 				exp104=exp();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, exp104.Tree, exp104, retval);
 				DebugLocation(66, 25);
-				char_literal105=(IToken)Match(input,23,Follow._23_in_varOrExp437); if (state.failed) return retval;
+				char_literal105=(IToken)Match(input,23,Follow._23_in_varOrExp476); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal105_tree = (object)adaptor.Create(char_literal105, retval);
 				adaptor.AddChild(root_0, char_literal105_tree);
@@ -3008,13 +3008,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:68:15: ':' NAME
 				{
 				DebugLocation(68, 15);
-				char_literal106=(IToken)Match(input,32,Follow._32_in_nameAndArgs445); if (state.failed) return retval;
+				char_literal106=(IToken)Match(input,32,Follow._32_in_nameAndArgs484); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal106_tree = (object)adaptor.Create(char_literal106, retval);
 				adaptor.AddChild(root_0, char_literal106_tree);
 				}
 				DebugLocation(68, 19);
-				NAME107=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_nameAndArgs447), "NAME"); if (state.failed) return retval;
+				NAME107=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_nameAndArgs486), "NAME"); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				NAME107_tree = (object)adaptor.Create(NAME107, retval);
 				adaptor.AddChild(root_0, NAME107_tree);
@@ -3027,7 +3027,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			} finally { DebugExitSubRule(24); }
 
 			DebugLocation(68, 26);
-			PushFollow(Follow._args_in_nameAndArgs451);
+			PushFollow(Follow._args_in_nameAndArgs490);
 			args108=args();
 			PopFollow();
 			if (state.failed) return retval;
@@ -3122,7 +3122,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 					// Lua.g:70:12: nameAndArgs
 					{
 					DebugLocation(70, 12);
-					PushFollow(Follow._nameAndArgs_in_varSuffix458);
+					PushFollow(Follow._nameAndArgs_in_varSuffix497);
 					nameAndArgs109=nameAndArgs();
 					PopFollow();
 					if (state.failed) return retval;
@@ -3171,19 +3171,19 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:70:26: '[' exp ']'
 				{
 				DebugLocation(70, 26);
-				char_literal110=(IToken)Match(input,40,Follow._40_in_varSuffix462); if (state.failed) return retval;
+				char_literal110=(IToken)Match(input,40,Follow._40_in_varSuffix501); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal110_tree = (object)adaptor.Create(char_literal110, retval);
 				adaptor.AddChild(root_0, char_literal110_tree);
 				}
 				DebugLocation(70, 30);
-				PushFollow(Follow._exp_in_varSuffix464);
+				PushFollow(Follow._exp_in_varSuffix503);
 				exp111=exp();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, exp111.Tree, exp111, retval);
 				DebugLocation(70, 34);
-				char_literal112=(IToken)Match(input,41,Follow._41_in_varSuffix466); if (state.failed) return retval;
+				char_literal112=(IToken)Match(input,41,Follow._41_in_varSuffix505); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal112_tree = (object)adaptor.Create(char_literal112, retval);
 				adaptor.AddChild(root_0, char_literal112_tree);
@@ -3196,13 +3196,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:70:40: '.' NAME
 				{
 				DebugLocation(70, 40);
-				char_literal113=(IToken)Match(input,28,Follow._28_in_varSuffix470); if (state.failed) return retval;
+				char_literal113=(IToken)Match(input,28,Follow._28_in_varSuffix509); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal113_tree = (object)adaptor.Create(char_literal113, retval);
 				adaptor.AddChild(root_0, char_literal113_tree);
 				}
 				DebugLocation(70, 44);
-				NAME114=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_varSuffix472), "NAME"); if (state.failed) return retval;
+				NAME114=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_varSuffix511), "NAME"); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				NAME114_tree = (object)adaptor.Create(NAME114, retval);
 				adaptor.AddChild(root_0, NAME114_tree);
@@ -3313,7 +3313,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(72, 9);
-				char_literal115=(IToken)Match(input,22,Follow._22_in_args482); if (state.failed) return retval;
+				char_literal115=(IToken)Match(input,22,Follow._22_in_args521); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal115_tree = (object)adaptor.Create(char_literal115, retval);
 				adaptor.AddChild(root_0, char_literal115_tree);
@@ -3337,7 +3337,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 					// Lua.g:72:14: explist1
 					{
 					DebugLocation(72, 14);
-					PushFollow(Follow._explist1_in_args485);
+					PushFollow(Follow._explist1_in_args524);
 					explist1116=explist1();
 					PopFollow();
 					if (state.failed) return retval;
@@ -3350,7 +3350,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				} finally { DebugExitSubRule(27); }
 
 				DebugLocation(72, 25);
-				char_literal117=(IToken)Match(input,23,Follow._23_in_args489); if (state.failed) return retval;
+				char_literal117=(IToken)Match(input,23,Follow._23_in_args528); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal117_tree = (object)adaptor.Create(char_literal117, retval);
 				adaptor.AddChild(root_0, char_literal117_tree);
@@ -3365,7 +3365,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(72, 31);
-				PushFollow(Follow._tableconstructor_in_args493);
+				PushFollow(Follow._tableconstructor_in_args532);
 				tableconstructor118=tableconstructor();
 				PopFollow();
 				if (state.failed) return retval;
@@ -3380,7 +3380,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(72, 50);
-				PushFollow(Follow._lua_string_in_args497);
+				PushFollow(Follow._lua_string_in_args536);
 				lua_string119=lua_string();
 				PopFollow();
 				if (state.failed) return retval;
@@ -3448,13 +3448,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(74, 12);
-			string_literal120=(IToken)Match(input,51,Follow._51_in_function506); if (state.failed) return retval;
+			string_literal120=(IToken)Match(input,51,Follow._51_in_function545); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal120_tree = (object)adaptor.Create(string_literal120, retval);
 			adaptor.AddChild(root_0, string_literal120_tree);
 			}
 			DebugLocation(74, 23);
-			PushFollow(Follow._funcbody_in_function508);
+			PushFollow(Follow._funcbody_in_function547);
 			funcbody121=funcbody();
 			PopFollow();
 			if (state.failed) return retval;
@@ -3525,7 +3525,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(76, 12);
-			char_literal122=(IToken)Match(input,22,Follow._22_in_funcbody516); if (state.failed) return retval;
+			char_literal122=(IToken)Match(input,22,Follow._22_in_funcbody555); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal122_tree = (object)adaptor.Create(char_literal122, retval);
 			adaptor.AddChild(root_0, char_literal122_tree);
@@ -3549,7 +3549,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:76:17: parlist1
 				{
 				DebugLocation(76, 17);
-				PushFollow(Follow._parlist1_in_funcbody519);
+				PushFollow(Follow._parlist1_in_funcbody558);
 				parlist1123=parlist1();
 				PopFollow();
 				if (state.failed) return retval;
@@ -3562,19 +3562,19 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			} finally { DebugExitSubRule(29); }
 
 			DebugLocation(76, 28);
-			char_literal124=(IToken)Match(input,23,Follow._23_in_funcbody523); if (state.failed) return retval;
+			char_literal124=(IToken)Match(input,23,Follow._23_in_funcbody562); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal124_tree = (object)adaptor.Create(char_literal124, retval);
 			adaptor.AddChild(root_0, char_literal124_tree);
 			}
 			DebugLocation(76, 32);
-			PushFollow(Follow._block_in_funcbody525);
+			PushFollow(Follow._block_in_funcbody564);
 			block125=block();
 			PopFollow();
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, block125.Tree, block125, retval);
 			DebugLocation(76, 38);
-			string_literal126=(IToken)Match(input,48,Follow._48_in_funcbody527); if (state.failed) return retval;
+			string_literal126=(IToken)Match(input,48,Follow._48_in_funcbody566); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal126_tree = (object)adaptor.Create(string_literal126, retval);
 			adaptor.AddChild(root_0, string_literal126_tree);
@@ -3667,7 +3667,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(78, 12);
-				PushFollow(Follow._namelist_in_parlist1535);
+				PushFollow(Follow._namelist_in_parlist1574);
 				namelist127=namelist();
 				PopFollow();
 				if (state.failed) return retval;
@@ -3691,13 +3691,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 					// Lua.g:78:22: ',' '...'
 					{
 					DebugLocation(78, 22);
-					char_literal128=(IToken)Match(input,26,Follow._26_in_parlist1538); if (state.failed) return retval;
+					char_literal128=(IToken)Match(input,26,Follow._26_in_parlist1577); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal128_tree = (object)adaptor.Create(char_literal128, retval);
 					adaptor.AddChild(root_0, char_literal128_tree);
 					}
 					DebugLocation(78, 26);
-					string_literal129=(IToken)Match(input,30,Follow._30_in_parlist1540); if (state.failed) return retval;
+					string_literal129=(IToken)Match(input,30,Follow._30_in_parlist1579); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal129_tree = (object)adaptor.Create(string_literal129, retval);
 					adaptor.AddChild(root_0, string_literal129_tree);
@@ -3719,7 +3719,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(78, 36);
-				string_literal130=(IToken)Match(input,30,Follow._30_in_parlist1546); if (state.failed) return retval;
+				string_literal130=(IToken)Match(input,30,Follow._30_in_parlist1585); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal130_tree = (object)adaptor.Create(string_literal130, retval);
 				adaptor.AddChild(root_0, string_literal130_tree);
@@ -3789,7 +3789,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(80, 20);
-			char_literal131=(IToken)Match(input,64,Follow._64_in_tableconstructor554); if (state.failed) return retval;
+			char_literal131=(IToken)Match(input,64,Follow._64_in_tableconstructor593); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal131_tree = (object)adaptor.Create(char_literal131, retval);
 			adaptor.AddChild(root_0, char_literal131_tree);
@@ -3813,7 +3813,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:80:25: fieldlist
 				{
 				DebugLocation(80, 25);
-				PushFollow(Follow._fieldlist_in_tableconstructor557);
+				PushFollow(Follow._fieldlist_in_tableconstructor596);
 				fieldlist132=fieldlist();
 				PopFollow();
 				if (state.failed) return retval;
@@ -3826,7 +3826,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			} finally { DebugExitSubRule(32); }
 
 			DebugLocation(80, 37);
-			char_literal133=(IToken)Match(input,65,Follow._65_in_tableconstructor561); if (state.failed) return retval;
+			char_literal133=(IToken)Match(input,65,Follow._65_in_tableconstructor600); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal133_tree = (object)adaptor.Create(char_literal133, retval);
 			adaptor.AddChild(root_0, char_literal133_tree);
@@ -3893,7 +3893,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(82, 13);
-			PushFollow(Follow._field_in_fieldlist569);
+			PushFollow(Follow._field_in_fieldlist608);
 			field134=field();
 			PopFollow();
 			if (state.failed) return retval;
@@ -3928,13 +3928,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 					// Lua.g:82:20: fieldsep field
 					{
 					DebugLocation(82, 20);
-					PushFollow(Follow._fieldsep_in_fieldlist572);
+					PushFollow(Follow._fieldsep_in_fieldlist611);
 					fieldsep135=fieldsep();
 					PopFollow();
 					if (state.failed) return retval;
 					if (state.backtracking == 0) adaptor.AddChild(root_0, fieldsep135.Tree, fieldsep135, retval);
 					DebugLocation(82, 29);
-					PushFollow(Follow._field_in_fieldlist574);
+					PushFollow(Follow._field_in_fieldlist613);
 					field136=field();
 					PopFollow();
 					if (state.failed) return retval;
@@ -3972,7 +3972,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				// Lua.g:82:38: fieldsep
 				{
 				DebugLocation(82, 38);
-				PushFollow(Follow._fieldsep_in_fieldlist579);
+				PushFollow(Follow._fieldsep_in_fieldlist618);
 				fieldsep137=fieldsep();
 				PopFollow();
 				if (state.failed) return retval;
@@ -4120,31 +4120,31 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(84, 9);
-				char_literal138=(IToken)Match(input,40,Follow._40_in_field589); if (state.failed) return retval;
+				char_literal138=(IToken)Match(input,40,Follow._40_in_field628); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal138_tree = (object)adaptor.Create(char_literal138, retval);
 				adaptor.AddChild(root_0, char_literal138_tree);
 				}
 				DebugLocation(84, 13);
-				PushFollow(Follow._exp_in_field591);
+				PushFollow(Follow._exp_in_field630);
 				exp139=exp();
 				PopFollow();
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, exp139.Tree, exp139, retval);
 				DebugLocation(84, 17);
-				char_literal140=(IToken)Match(input,41,Follow._41_in_field593); if (state.failed) return retval;
+				char_literal140=(IToken)Match(input,41,Follow._41_in_field632); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal140_tree = (object)adaptor.Create(char_literal140, retval);
 				adaptor.AddChild(root_0, char_literal140_tree);
 				}
 				DebugLocation(84, 21);
-				char_literal141=(IToken)Match(input,36,Follow._36_in_field595); if (state.failed) return retval;
+				char_literal141=(IToken)Match(input,36,Follow._36_in_field634); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal141_tree = (object)adaptor.Create(char_literal141, retval);
 				adaptor.AddChild(root_0, char_literal141_tree);
 				}
 				DebugLocation(84, 25);
-				PushFollow(Follow._exp_in_field597);
+				PushFollow(Follow._exp_in_field636);
 				exp142=exp();
 				PopFollow();
 				if (state.failed) return retval;
@@ -4159,19 +4159,19 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(84, 31);
-				NAME143=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_field601), "NAME"); if (state.failed) return retval;
+				NAME143=(IToken)new XToken((IToken)Match(input,NAME,Follow._NAME_in_field640), "NAME"); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				NAME143_tree = (object)adaptor.Create(NAME143, retval);
 				adaptor.AddChild(root_0, NAME143_tree);
 				}
 				DebugLocation(84, 36);
-				char_literal144=(IToken)Match(input,36,Follow._36_in_field603); if (state.failed) return retval;
+				char_literal144=(IToken)Match(input,36,Follow._36_in_field642); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal144_tree = (object)adaptor.Create(char_literal144, retval);
 				adaptor.AddChild(root_0, char_literal144_tree);
 				}
 				DebugLocation(84, 40);
-				PushFollow(Follow._exp_in_field605);
+				PushFollow(Follow._exp_in_field644);
 				exp145=exp();
 				PopFollow();
 				if (state.failed) return retval;
@@ -4186,7 +4186,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(84, 46);
-				PushFollow(Follow._exp_in_field609);
+				PushFollow(Follow._exp_in_field648);
 				exp146=exp();
 				PopFollow();
 				if (state.failed) return retval;
@@ -4319,7 +4319,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object set148_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "binop");
-		DebugLocation(88, 15);
+		DebugLocation(88, 21);
 		try
 		{
 			// Lua.g:88:7: ( '+' | '-' | '*' | '/' | '^' | '%' | '..' | '<' | '<=' | '>' | '>=' | '==' | '~=' | 'and' | 'or' )
@@ -4368,7 +4368,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			LeaveRule("binop", 24);
 			LeaveRule_binop();
 		}
-		DebugLocation(90, 15);
+		DebugLocation(90, 21);
 		} finally { DebugExitRule(GrammarFileName, "binop"); }
 		return retval;
 
@@ -4619,14 +4619,14 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			// Lua.g:27:9: varlist1 '=' explist1
 			{
 			DebugLocation(27, 9);
-			PushFollow(Follow._varlist1_in_synpred5_Lua71);
+			PushFollow(Follow._varlist1_in_synpred5_Lua80);
 			varlist1();
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(27, 18);
-			Match(input,36,Follow._36_in_synpred5_Lua73); if (state.failed) return;
+			Match(input,36,Follow._36_in_synpred5_Lua82); if (state.failed) return;
 			DebugLocation(27, 22);
-			PushFollow(Follow._explist1_in_synpred5_Lua75);
+			PushFollow(Follow._explist1_in_synpred5_Lua84);
 			explist1();
 			PopFollow();
 			if (state.failed) return;
@@ -4654,12 +4654,12 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 		var retval = new XAstParserRuleReturnScope("synpred6_Lua_fragment");
 		try
 		{
-			// Lua.g:28:2: ( functioncall )
+			// Lua.g:28:5: ( functioncall )
 			DebugEnterAlt(1);
-			// Lua.g:28:2: functioncall
+			// Lua.g:28:5: functioncall
 			{
-			DebugLocation(28, 2);
-			PushFollow(Follow._functioncall_in_synpred6_Lua81);
+			DebugLocation(28, 5);
+			PushFollow(Follow._functioncall_in_synpred6_Lua93);
 			functioncall();
 			PopFollow();
 			if (state.failed) return;
@@ -4687,30 +4687,30 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 		var retval = new XAstParserRuleReturnScope("synpred14_Lua_fragment");
 		try
 		{
-			// Lua.g:33:2: ( 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end' )
+			// Lua.g:33:5: ( 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end' )
 			DebugEnterAlt(1);
-			// Lua.g:33:2: 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end'
+			// Lua.g:33:5: 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end'
 			{
-			DebugLocation(33, 2);
-			Match(input,50,Follow._50_in_synpred14_Lua155); if (state.failed) return;
-			DebugLocation(33, 8);
-			new XToken((IToken)Match(input,NAME,Follow._NAME_in_synpred14_Lua157), "NAME"); if (state.failed) return;
-			DebugLocation(33, 13);
-			Match(input,36,Follow._36_in_synpred14_Lua159); if (state.failed) return;
-			DebugLocation(33, 17);
-			PushFollow(Follow._exp_in_synpred14_Lua161);
+			DebugLocation(33, 5);
+			Match(input,50,Follow._50_in_synpred14_Lua182); if (state.failed) return;
+			DebugLocation(33, 11);
+			new XToken((IToken)Match(input,NAME,Follow._NAME_in_synpred14_Lua184), "NAME"); if (state.failed) return;
+			DebugLocation(33, 16);
+			Match(input,36,Follow._36_in_synpred14_Lua186); if (state.failed) return;
+			DebugLocation(33, 20);
+			PushFollow(Follow._exp_in_synpred14_Lua188);
 			exp();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(33, 21);
-			Match(input,26,Follow._26_in_synpred14_Lua163); if (state.failed) return;
-			DebugLocation(33, 25);
-			PushFollow(Follow._exp_in_synpred14_Lua165);
+			DebugLocation(33, 24);
+			Match(input,26,Follow._26_in_synpred14_Lua190); if (state.failed) return;
+			DebugLocation(33, 28);
+			PushFollow(Follow._exp_in_synpred14_Lua192);
 			exp();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(33, 29);
-			// Lua.g:33:29: ( ',' exp )?
+			DebugLocation(33, 32);
+			// Lua.g:33:32: ( ',' exp )?
 			int alt40=2;
 			try { DebugEnterSubRule(40);
 			try { DebugEnterDecision(40, false);
@@ -4725,12 +4725,12 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Lua.g:33:30: ',' exp
+				// Lua.g:33:33: ',' exp
 				{
-				DebugLocation(33, 30);
-				Match(input,26,Follow._26_in_synpred14_Lua168); if (state.failed) return;
-				DebugLocation(33, 34);
-				PushFollow(Follow._exp_in_synpred14_Lua170);
+				DebugLocation(33, 33);
+				Match(input,26,Follow._26_in_synpred14_Lua195); if (state.failed) return;
+				DebugLocation(33, 37);
+				PushFollow(Follow._exp_in_synpred14_Lua197);
 				exp();
 				PopFollow();
 				if (state.failed) return;
@@ -4741,15 +4741,15 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			}
 			} finally { DebugExitSubRule(40); }
 
-			DebugLocation(33, 40);
-			Match(input,45,Follow._45_in_synpred14_Lua174); if (state.failed) return;
-			DebugLocation(33, 45);
-			PushFollow(Follow._block_in_synpred14_Lua176);
+			DebugLocation(33, 43);
+			Match(input,45,Follow._45_in_synpred14_Lua201); if (state.failed) return;
+			DebugLocation(33, 48);
+			PushFollow(Follow._block_in_synpred14_Lua203);
 			block();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(33, 51);
-			Match(input,48,Follow._48_in_synpred14_Lua178); if (state.failed) return;
+			DebugLocation(33, 54);
+			Match(input,48,Follow._48_in_synpred14_Lua205); if (state.failed) return;
 
 			}
 
@@ -4774,33 +4774,33 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 		var retval = new XAstParserRuleReturnScope("synpred15_Lua_fragment");
 		try
 		{
-			// Lua.g:34:2: ( 'for' namelist 'in' explist1 'do' block 'end' )
+			// Lua.g:34:5: ( 'for' namelist 'in' explist1 'do' block 'end' )
 			DebugEnterAlt(1);
-			// Lua.g:34:2: 'for' namelist 'in' explist1 'do' block 'end'
+			// Lua.g:34:5: 'for' namelist 'in' explist1 'do' block 'end'
 			{
-			DebugLocation(34, 2);
-			Match(input,50,Follow._50_in_synpred15_Lua184); if (state.failed) return;
-			DebugLocation(34, 8);
-			PushFollow(Follow._namelist_in_synpred15_Lua186);
+			DebugLocation(34, 5);
+			Match(input,50,Follow._50_in_synpred15_Lua214); if (state.failed) return;
+			DebugLocation(34, 11);
+			PushFollow(Follow._namelist_in_synpred15_Lua216);
 			namelist();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(34, 17);
-			Match(input,53,Follow._53_in_synpred15_Lua188); if (state.failed) return;
-			DebugLocation(34, 22);
-			PushFollow(Follow._explist1_in_synpred15_Lua190);
+			DebugLocation(34, 20);
+			Match(input,53,Follow._53_in_synpred15_Lua218); if (state.failed) return;
+			DebugLocation(34, 25);
+			PushFollow(Follow._explist1_in_synpred15_Lua220);
 			explist1();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(34, 31);
-			Match(input,45,Follow._45_in_synpred15_Lua192); if (state.failed) return;
-			DebugLocation(34, 36);
-			PushFollow(Follow._block_in_synpred15_Lua194);
+			DebugLocation(34, 34);
+			Match(input,45,Follow._45_in_synpred15_Lua222); if (state.failed) return;
+			DebugLocation(34, 39);
+			PushFollow(Follow._block_in_synpred15_Lua224);
 			block();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(34, 42);
-			Match(input,48,Follow._48_in_synpred15_Lua196); if (state.failed) return;
+			DebugLocation(34, 45);
+			Match(input,48,Follow._48_in_synpred15_Lua226); if (state.failed) return;
 
 			}
 
@@ -4825,18 +4825,18 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 		var retval = new XAstParserRuleReturnScope("synpred17_Lua_fragment");
 		try
 		{
-			// Lua.g:36:2: ( 'local' 'function' NAME funcbody )
+			// Lua.g:36:5: ( 'local' 'function' NAME funcbody )
 			DebugEnterAlt(1);
-			// Lua.g:36:2: 'local' 'function' NAME funcbody
+			// Lua.g:36:5: 'local' 'function' NAME funcbody
 			{
-			DebugLocation(36, 2);
-			Match(input,54,Follow._54_in_synpred17_Lua212); if (state.failed) return;
-			DebugLocation(36, 10);
-			Match(input,51,Follow._51_in_synpred17_Lua214); if (state.failed) return;
-			DebugLocation(36, 21);
-			new XToken((IToken)Match(input,NAME,Follow._NAME_in_synpred17_Lua216), "NAME"); if (state.failed) return;
-			DebugLocation(36, 26);
-			PushFollow(Follow._funcbody_in_synpred17_Lua218);
+			DebugLocation(36, 5);
+			Match(input,54,Follow._54_in_synpred17_Lua248); if (state.failed) return;
+			DebugLocation(36, 13);
+			Match(input,51,Follow._51_in_synpred17_Lua250); if (state.failed) return;
+			DebugLocation(36, 24);
+			new XToken((IToken)Match(input,NAME,Follow._NAME_in_synpred17_Lua252), "NAME"); if (state.failed) return;
+			DebugLocation(36, 29);
+			PushFollow(Follow._funcbody_in_synpred17_Lua254);
 			funcbody();
 			PopFollow();
 			if (state.failed) return;
@@ -4869,12 +4869,12 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			// Lua.g:48:13: exp ','
 			{
 			DebugLocation(48, 13);
-			PushFollow(Follow._exp_in_synpred25_Lua314);
+			PushFollow(Follow._exp_in_synpred25_Lua353);
 			exp();
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(48, 17);
-			Match(input,26,Follow._26_in_synpred25_Lua316); if (state.failed) return;
+			Match(input,26,Follow._26_in_synpred25_Lua355); if (state.failed) return;
 
 			}
 
@@ -4904,12 +4904,12 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			// Lua.g:50:123: binop exp
 			{
 			DebugLocation(50, 123);
-			PushFollow(Follow._binop_in_synpred35_Lua372);
+			PushFollow(Follow._binop_in_synpred35_Lua411);
 			binop();
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(50, 129);
-			PushFollow(Follow._exp_in_synpred35_Lua374);
+			PushFollow(Follow._exp_in_synpred35_Lua413);
 			exp();
 			PopFollow();
 			if (state.failed) return;
@@ -4942,7 +4942,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			// Lua.g:52:37: varSuffix
 			{
 			DebugLocation(52, 37);
-			PushFollow(Follow._varSuffix_in_synpred37_Lua398);
+			PushFollow(Follow._varSuffix_in_synpred37_Lua437);
 			varSuffix();
 			PopFollow();
 			if (state.failed) return;
@@ -4975,7 +4975,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			// Lua.g:54:21: nameAndArgs
 			{
 			DebugLocation(54, 21);
-			PushFollow(Follow._nameAndArgs_in_synpred38_Lua408);
+			PushFollow(Follow._nameAndArgs_in_synpred38_Lua447);
 			nameAndArgs();
 			PopFollow();
 			if (state.failed) return;
@@ -5008,7 +5008,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			// Lua.g:56:24: nameAndArgs
 			{
 			DebugLocation(56, 24);
-			PushFollow(Follow._nameAndArgs_in_synpred39_Lua418);
+			PushFollow(Follow._nameAndArgs_in_synpred39_Lua457);
 			nameAndArgs();
 			PopFollow();
 			if (state.failed) return;
@@ -5041,7 +5041,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 			// Lua.g:66:11: var
 			{
 			DebugLocation(66, 11);
-			PushFollow(Follow._var_in_synpred40_Lua429);
+			PushFollow(Follow._var_in_synpred40_Lua468);
 			var();
 			PopFollow();
 			if (state.failed) return;
@@ -5087,186 +5087,186 @@ public partial class LuaParser : Antlr.Runtime.Parser, IAntlrParser
 	#region Follow sets
 	private static class Follow
 	{
-		public static readonly BitSet _stat_in_chunk37 = new BitSet(new ulong[]{0x8C5C300200404002UL});
-		public static readonly BitSet _33_in_chunk40 = new BitSet(new ulong[]{0x8C5C300000404002UL});
-		public static readonly BitSet _laststat_in_chunk47 = new BitSet(new ulong[]{0x200000002UL});
-		public static readonly BitSet _33_in_chunk50 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _chunk_in_block62 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _varlist1_in_stat71 = new BitSet(new ulong[]{0x1000000000UL});
-		public static readonly BitSet _36_in_stat73 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _explist1_in_stat75 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _functioncall_in_stat81 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _45_in_stat87 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_stat89 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_stat91 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _63_in_stat97 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_stat99 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _45_in_stat101 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_stat103 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_stat105 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _58_in_stat111 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_stat113 = new BitSet(new ulong[]{0x4000000000000000UL});
-		public static readonly BitSet _62_in_stat115 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_stat117 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _52_in_stat123 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_stat125 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_stat127 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_stat129 = new BitSet(new ulong[]{0x1C00000000000UL});
-		public static readonly BitSet _47_in_stat132 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_stat134 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_stat136 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_stat138 = new BitSet(new ulong[]{0x1C00000000000UL});
-		public static readonly BitSet _46_in_stat143 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_stat145 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_stat149 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _50_in_stat155 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_stat157 = new BitSet(new ulong[]{0x1000000000UL});
-		public static readonly BitSet _36_in_stat159 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_stat161 = new BitSet(new ulong[]{0x4000000UL});
-		public static readonly BitSet _26_in_stat163 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_stat165 = new BitSet(new ulong[]{0x200004000000UL});
-		public static readonly BitSet _26_in_stat168 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_stat170 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _45_in_stat174 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_stat176 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_stat178 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _50_in_stat184 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _namelist_in_stat186 = new BitSet(new ulong[]{0x20000000000000UL});
-		public static readonly BitSet _53_in_stat188 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _explist1_in_stat190 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _45_in_stat192 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_stat194 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_stat196 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _51_in_stat202 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _funcname_in_stat204 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _funcbody_in_stat206 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _54_in_stat212 = new BitSet(new ulong[]{0x8000000000000UL});
-		public static readonly BitSet _51_in_stat214 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_stat216 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _funcbody_in_stat218 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _54_in_stat224 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _namelist_in_stat226 = new BitSet(new ulong[]{0x1000000002UL});
-		public static readonly BitSet _36_in_stat229 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _explist1_in_stat231 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _59_in_laststat242 = new BitSet(new ulong[]{0x218A000048516B52UL,0x1UL});
-		public static readonly BitSet _explist1_in_laststat245 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _44_in_laststat251 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NAME_in_funcname259 = new BitSet(new ulong[]{0x110000002UL});
-		public static readonly BitSet _28_in_funcname262 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_funcname264 = new BitSet(new ulong[]{0x110000002UL});
-		public static readonly BitSet _32_in_funcname269 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_funcname271 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _var_in_varlist1282 = new BitSet(new ulong[]{0x4000002UL});
-		public static readonly BitSet _26_in_varlist1285 = new BitSet(new ulong[]{0x404000UL});
-		public static readonly BitSet _var_in_varlist1287 = new BitSet(new ulong[]{0x4000002UL});
-		public static readonly BitSet _NAME_in_namelist298 = new BitSet(new ulong[]{0x4000002UL});
-		public static readonly BitSet _26_in_namelist301 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_namelist303 = new BitSet(new ulong[]{0x4000002UL});
-		public static readonly BitSet _exp_in_explist1314 = new BitSet(new ulong[]{0x4000000UL});
-		public static readonly BitSet _26_in_explist1316 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_explist1320 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _55_in_exp330 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _49_in_exp334 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _61_in_exp338 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _lua_number_in_exp342 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _lua_string_in_exp346 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _30_in_exp350 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _function_in_exp354 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _prefixexp_in_exp358 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _tableconstructor_in_exp362 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _unop_in_exp366 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_exp368 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _binop_in_exp372 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_exp374 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _NAME_in_var385 = new BitSet(new ulong[]{0x10110412012UL,0x1UL});
-		public static readonly BitSet _22_in_var389 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_var391 = new BitSet(new ulong[]{0x800000UL});
-		public static readonly BitSet _23_in_var393 = new BitSet(new ulong[]{0x10110412010UL,0x1UL});
-		public static readonly BitSet _varSuffix_in_var395 = new BitSet(new ulong[]{0x10110412012UL,0x1UL});
-		public static readonly BitSet _varSuffix_in_var398 = new BitSet(new ulong[]{0x10110412012UL,0x1UL});
-		public static readonly BitSet _varOrExp_in_prefixexp406 = new BitSet(new ulong[]{0x100412012UL,0x1UL});
-		public static readonly BitSet _nameAndArgs_in_prefixexp408 = new BitSet(new ulong[]{0x100412012UL,0x1UL});
-		public static readonly BitSet _varOrExp_in_functioncall416 = new BitSet(new ulong[]{0x100412010UL,0x1UL});
-		public static readonly BitSet _nameAndArgs_in_functioncall418 = new BitSet(new ulong[]{0x100412012UL,0x1UL});
-		public static readonly BitSet _var_in_varOrExp429 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _22_in_varOrExp433 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_varOrExp435 = new BitSet(new ulong[]{0x800000UL});
-		public static readonly BitSet _23_in_varOrExp437 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _32_in_nameAndArgs445 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_nameAndArgs447 = new BitSet(new ulong[]{0x412010UL,0x1UL});
-		public static readonly BitSet _args_in_nameAndArgs451 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _nameAndArgs_in_varSuffix458 = new BitSet(new ulong[]{0x10110412010UL,0x1UL});
-		public static readonly BitSet _40_in_varSuffix462 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_varSuffix464 = new BitSet(new ulong[]{0x20000000000UL});
-		public static readonly BitSet _41_in_varSuffix466 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _28_in_varSuffix470 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_varSuffix472 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _22_in_args482 = new BitSet(new ulong[]{0x218A000048D16B50UL,0x1UL});
-		public static readonly BitSet _explist1_in_args485 = new BitSet(new ulong[]{0x800000UL});
-		public static readonly BitSet _23_in_args489 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _tableconstructor_in_args493 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _lua_string_in_args497 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _51_in_function506 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _funcbody_in_function508 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _22_in_funcbody516 = new BitSet(new ulong[]{0x40804000UL});
-		public static readonly BitSet _parlist1_in_funcbody519 = new BitSet(new ulong[]{0x800000UL});
-		public static readonly BitSet _23_in_funcbody523 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_funcbody525 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_funcbody527 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _namelist_in_parlist1535 = new BitSet(new ulong[]{0x4000002UL});
-		public static readonly BitSet _26_in_parlist1538 = new BitSet(new ulong[]{0x40000000UL});
-		public static readonly BitSet _30_in_parlist1540 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _30_in_parlist1546 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _64_in_tableconstructor554 = new BitSet(new ulong[]{0x218A010048516B50UL,0x3UL});
-		public static readonly BitSet _fieldlist_in_tableconstructor557 = new BitSet(new ulong[]{0x0UL,0x2UL});
-		public static readonly BitSet _65_in_tableconstructor561 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _field_in_fieldlist569 = new BitSet(new ulong[]{0x204000002UL});
-		public static readonly BitSet _fieldsep_in_fieldlist572 = new BitSet(new ulong[]{0x218A010048516B50UL,0x1UL});
-		public static readonly BitSet _field_in_fieldlist574 = new BitSet(new ulong[]{0x204000002UL});
-		public static readonly BitSet _fieldsep_in_fieldlist579 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _40_in_field589 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_field591 = new BitSet(new ulong[]{0x20000000000UL});
-		public static readonly BitSet _41_in_field593 = new BitSet(new ulong[]{0x1000000000UL});
-		public static readonly BitSet _36_in_field595 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_field597 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NAME_in_field601 = new BitSet(new ulong[]{0x1000000000UL});
-		public static readonly BitSet _36_in_field603 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_field605 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _exp_in_field609 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _varlist1_in_synpred5_Lua71 = new BitSet(new ulong[]{0x1000000000UL});
-		public static readonly BitSet _36_in_synpred5_Lua73 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _explist1_in_synpred5_Lua75 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _functioncall_in_synpred6_Lua81 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _50_in_synpred14_Lua155 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_synpred14_Lua157 = new BitSet(new ulong[]{0x1000000000UL});
-		public static readonly BitSet _36_in_synpred14_Lua159 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_synpred14_Lua161 = new BitSet(new ulong[]{0x4000000UL});
-		public static readonly BitSet _26_in_synpred14_Lua163 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_synpred14_Lua165 = new BitSet(new ulong[]{0x200004000000UL});
-		public static readonly BitSet _26_in_synpred14_Lua168 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_synpred14_Lua170 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _45_in_synpred14_Lua174 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_synpred14_Lua176 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_synpred14_Lua178 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _50_in_synpred15_Lua184 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _namelist_in_synpred15_Lua186 = new BitSet(new ulong[]{0x20000000000000UL});
-		public static readonly BitSet _53_in_synpred15_Lua188 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _explist1_in_synpred15_Lua190 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _45_in_synpred15_Lua192 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_synpred15_Lua194 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_synpred15_Lua196 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _54_in_synpred17_Lua212 = new BitSet(new ulong[]{0x8000000000000UL});
-		public static readonly BitSet _51_in_synpred17_Lua214 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_synpred17_Lua216 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _funcbody_in_synpred17_Lua218 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _exp_in_synpred25_Lua314 = new BitSet(new ulong[]{0x4000000UL});
-		public static readonly BitSet _26_in_synpred25_Lua316 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _binop_in_synpred35_Lua372 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_synpred35_Lua374 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _varSuffix_in_synpred37_Lua398 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _nameAndArgs_in_synpred38_Lua408 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _nameAndArgs_in_synpred39_Lua418 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _var_in_synpred40_Lua429 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _stat_in_chunk46 = new BitSet(new ulong[]{0x8C5C300200404002UL});
+		public static readonly BitSet _33_in_chunk49 = new BitSet(new ulong[]{0x8C5C300000404002UL});
+		public static readonly BitSet _laststat_in_chunk56 = new BitSet(new ulong[]{0x200000002UL});
+		public static readonly BitSet _33_in_chunk59 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _chunk_in_block71 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _varlist1_in_stat80 = new BitSet(new ulong[]{0x1000000000UL});
+		public static readonly BitSet _36_in_stat82 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _explist1_in_stat84 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _functioncall_in_stat93 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _45_in_stat102 = new BitSet(new ulong[]{0x8C5C300000404000UL});
+		public static readonly BitSet _block_in_stat104 = new BitSet(new ulong[]{0x1000000000000UL});
+		public static readonly BitSet _48_in_stat106 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _63_in_stat115 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_stat117 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _45_in_stat119 = new BitSet(new ulong[]{0x8C5C300000404000UL});
+		public static readonly BitSet _block_in_stat121 = new BitSet(new ulong[]{0x1000000000000UL});
+		public static readonly BitSet _48_in_stat123 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _58_in_stat132 = new BitSet(new ulong[]{0x8C5C300000404000UL});
+		public static readonly BitSet _block_in_stat134 = new BitSet(new ulong[]{0x4000000000000000UL});
+		public static readonly BitSet _62_in_stat136 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_stat138 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _52_in_stat147 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_stat149 = new BitSet(new ulong[]{0x1000000000000000UL});
+		public static readonly BitSet _60_in_stat151 = new BitSet(new ulong[]{0x8C5C300000404000UL});
+		public static readonly BitSet _block_in_stat153 = new BitSet(new ulong[]{0x1C00000000000UL});
+		public static readonly BitSet _47_in_stat156 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_stat158 = new BitSet(new ulong[]{0x1000000000000000UL});
+		public static readonly BitSet _60_in_stat160 = new BitSet(new ulong[]{0x8C5C300000404000UL});
+		public static readonly BitSet _block_in_stat162 = new BitSet(new ulong[]{0x1C00000000000UL});
+		public static readonly BitSet _46_in_stat167 = new BitSet(new ulong[]{0x8C5C300000404000UL});
+		public static readonly BitSet _block_in_stat169 = new BitSet(new ulong[]{0x1000000000000UL});
+		public static readonly BitSet _48_in_stat173 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _50_in_stat182 = new BitSet(new ulong[]{0x4000UL});
+		public static readonly BitSet _NAME_in_stat184 = new BitSet(new ulong[]{0x1000000000UL});
+		public static readonly BitSet _36_in_stat186 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_stat188 = new BitSet(new ulong[]{0x4000000UL});
+		public static readonly BitSet _26_in_stat190 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_stat192 = new BitSet(new ulong[]{0x200004000000UL});
+		public static readonly BitSet _26_in_stat195 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_stat197 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _45_in_stat201 = new BitSet(new ulong[]{0x8C5C300000404000UL});
+		public static readonly BitSet _block_in_stat203 = new BitSet(new ulong[]{0x1000000000000UL});
+		public static readonly BitSet _48_in_stat205 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _50_in_stat214 = new BitSet(new ulong[]{0x4000UL});
+		public static readonly BitSet _namelist_in_stat216 = new BitSet(new ulong[]{0x20000000000000UL});
+		public static readonly BitSet _53_in_stat218 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _explist1_in_stat220 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _45_in_stat222 = new BitSet(new ulong[]{0x8C5C300000404000UL});
+		public static readonly BitSet _block_in_stat224 = new BitSet(new ulong[]{0x1000000000000UL});
+		public static readonly BitSet _48_in_stat226 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _51_in_stat235 = new BitSet(new ulong[]{0x4000UL});
+		public static readonly BitSet _funcname_in_stat237 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _funcbody_in_stat239 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _54_in_stat248 = new BitSet(new ulong[]{0x8000000000000UL});
+		public static readonly BitSet _51_in_stat250 = new BitSet(new ulong[]{0x4000UL});
+		public static readonly BitSet _NAME_in_stat252 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _funcbody_in_stat254 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _54_in_stat263 = new BitSet(new ulong[]{0x4000UL});
+		public static readonly BitSet _namelist_in_stat265 = new BitSet(new ulong[]{0x1000000002UL});
+		public static readonly BitSet _36_in_stat268 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _explist1_in_stat270 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _59_in_laststat281 = new BitSet(new ulong[]{0x218A000048516B52UL,0x1UL});
+		public static readonly BitSet _explist1_in_laststat284 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _44_in_laststat290 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NAME_in_funcname298 = new BitSet(new ulong[]{0x110000002UL});
+		public static readonly BitSet _28_in_funcname301 = new BitSet(new ulong[]{0x4000UL});
+		public static readonly BitSet _NAME_in_funcname303 = new BitSet(new ulong[]{0x110000002UL});
+		public static readonly BitSet _32_in_funcname308 = new BitSet(new ulong[]{0x4000UL});
+		public static readonly BitSet _NAME_in_funcname310 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _var_in_varlist1321 = new BitSet(new ulong[]{0x4000002UL});
+		public static readonly BitSet _26_in_varlist1324 = new BitSet(new ulong[]{0x404000UL});
+		public static readonly BitSet _var_in_varlist1326 = new BitSet(new ulong[]{0x4000002UL});
+		public static readonly BitSet _NAME_in_namelist337 = new BitSet(new ulong[]{0x4000002UL});
+		public static readonly BitSet _26_in_namelist340 = new BitSet(new ulong[]{0x4000UL});
+		public static readonly BitSet _NAME_in_namelist342 = new BitSet(new ulong[]{0x4000002UL});
+		public static readonly BitSet _exp_in_explist1353 = new BitSet(new ulong[]{0x4000000UL});
+		public static readonly BitSet _26_in_explist1355 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_explist1359 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _55_in_exp369 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
+		public static readonly BitSet _49_in_exp373 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
+		public static readonly BitSet _61_in_exp377 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
+		public static readonly BitSet _lua_number_in_exp381 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
+		public static readonly BitSet _lua_string_in_exp385 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
+		public static readonly BitSet _30_in_exp389 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
+		public static readonly BitSet _function_in_exp393 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
+		public static readonly BitSet _prefixexp_in_exp397 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
+		public static readonly BitSet _tableconstructor_in_exp401 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
+		public static readonly BitSet _unop_in_exp405 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_exp407 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
+		public static readonly BitSet _binop_in_exp411 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_exp413 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
+		public static readonly BitSet _NAME_in_var424 = new BitSet(new ulong[]{0x10110412012UL,0x1UL});
+		public static readonly BitSet _22_in_var428 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_var430 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _23_in_var432 = new BitSet(new ulong[]{0x10110412010UL,0x1UL});
+		public static readonly BitSet _varSuffix_in_var434 = new BitSet(new ulong[]{0x10110412012UL,0x1UL});
+		public static readonly BitSet _varSuffix_in_var437 = new BitSet(new ulong[]{0x10110412012UL,0x1UL});
+		public static readonly BitSet _varOrExp_in_prefixexp445 = new BitSet(new ulong[]{0x100412012UL,0x1UL});
+		public static readonly BitSet _nameAndArgs_in_prefixexp447 = new BitSet(new ulong[]{0x100412012UL,0x1UL});
+		public static readonly BitSet _varOrExp_in_functioncall455 = new BitSet(new ulong[]{0x100412010UL,0x1UL});
+		public static readonly BitSet _nameAndArgs_in_functioncall457 = new BitSet(new ulong[]{0x100412012UL,0x1UL});
+		public static readonly BitSet _var_in_varOrExp468 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _22_in_varOrExp472 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_varOrExp474 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _23_in_varOrExp476 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _32_in_nameAndArgs484 = new BitSet(new ulong[]{0x4000UL});
+		public static readonly BitSet _NAME_in_nameAndArgs486 = new BitSet(new ulong[]{0x412010UL,0x1UL});
+		public static readonly BitSet _args_in_nameAndArgs490 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _nameAndArgs_in_varSuffix497 = new BitSet(new ulong[]{0x10110412010UL,0x1UL});
+		public static readonly BitSet _40_in_varSuffix501 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_varSuffix503 = new BitSet(new ulong[]{0x20000000000UL});
+		public static readonly BitSet _41_in_varSuffix505 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _28_in_varSuffix509 = new BitSet(new ulong[]{0x4000UL});
+		public static readonly BitSet _NAME_in_varSuffix511 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _22_in_args521 = new BitSet(new ulong[]{0x218A000048D16B50UL,0x1UL});
+		public static readonly BitSet _explist1_in_args524 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _23_in_args528 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _tableconstructor_in_args532 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _lua_string_in_args536 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _51_in_function545 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _funcbody_in_function547 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _22_in_funcbody555 = new BitSet(new ulong[]{0x40804000UL});
+		public static readonly BitSet _parlist1_in_funcbody558 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _23_in_funcbody562 = new BitSet(new ulong[]{0x8C5C300000404000UL});
+		public static readonly BitSet _block_in_funcbody564 = new BitSet(new ulong[]{0x1000000000000UL});
+		public static readonly BitSet _48_in_funcbody566 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _namelist_in_parlist1574 = new BitSet(new ulong[]{0x4000002UL});
+		public static readonly BitSet _26_in_parlist1577 = new BitSet(new ulong[]{0x40000000UL});
+		public static readonly BitSet _30_in_parlist1579 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _30_in_parlist1585 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _64_in_tableconstructor593 = new BitSet(new ulong[]{0x218A010048516B50UL,0x3UL});
+		public static readonly BitSet _fieldlist_in_tableconstructor596 = new BitSet(new ulong[]{0x0UL,0x2UL});
+		public static readonly BitSet _65_in_tableconstructor600 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _field_in_fieldlist608 = new BitSet(new ulong[]{0x204000002UL});
+		public static readonly BitSet _fieldsep_in_fieldlist611 = new BitSet(new ulong[]{0x218A010048516B50UL,0x1UL});
+		public static readonly BitSet _field_in_fieldlist613 = new BitSet(new ulong[]{0x204000002UL});
+		public static readonly BitSet _fieldsep_in_fieldlist618 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _40_in_field628 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_field630 = new BitSet(new ulong[]{0x20000000000UL});
+		public static readonly BitSet _41_in_field632 = new BitSet(new ulong[]{0x1000000000UL});
+		public static readonly BitSet _36_in_field634 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_field636 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NAME_in_field640 = new BitSet(new ulong[]{0x1000000000UL});
+		public static readonly BitSet _36_in_field642 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_field644 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _exp_in_field648 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _varlist1_in_synpred5_Lua80 = new BitSet(new ulong[]{0x1000000000UL});
+		public static readonly BitSet _36_in_synpred5_Lua82 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _explist1_in_synpred5_Lua84 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _functioncall_in_synpred6_Lua93 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _50_in_synpred14_Lua182 = new BitSet(new ulong[]{0x4000UL});
+		public static readonly BitSet _NAME_in_synpred14_Lua184 = new BitSet(new ulong[]{0x1000000000UL});
+		public static readonly BitSet _36_in_synpred14_Lua186 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_synpred14_Lua188 = new BitSet(new ulong[]{0x4000000UL});
+		public static readonly BitSet _26_in_synpred14_Lua190 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_synpred14_Lua192 = new BitSet(new ulong[]{0x200004000000UL});
+		public static readonly BitSet _26_in_synpred14_Lua195 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_synpred14_Lua197 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _45_in_synpred14_Lua201 = new BitSet(new ulong[]{0x8C5C300000404000UL});
+		public static readonly BitSet _block_in_synpred14_Lua203 = new BitSet(new ulong[]{0x1000000000000UL});
+		public static readonly BitSet _48_in_synpred14_Lua205 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _50_in_synpred15_Lua214 = new BitSet(new ulong[]{0x4000UL});
+		public static readonly BitSet _namelist_in_synpred15_Lua216 = new BitSet(new ulong[]{0x20000000000000UL});
+		public static readonly BitSet _53_in_synpred15_Lua218 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _explist1_in_synpred15_Lua220 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _45_in_synpred15_Lua222 = new BitSet(new ulong[]{0x8C5C300000404000UL});
+		public static readonly BitSet _block_in_synpred15_Lua224 = new BitSet(new ulong[]{0x1000000000000UL});
+		public static readonly BitSet _48_in_synpred15_Lua226 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _54_in_synpred17_Lua248 = new BitSet(new ulong[]{0x8000000000000UL});
+		public static readonly BitSet _51_in_synpred17_Lua250 = new BitSet(new ulong[]{0x4000UL});
+		public static readonly BitSet _NAME_in_synpred17_Lua252 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _funcbody_in_synpred17_Lua254 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _exp_in_synpred25_Lua353 = new BitSet(new ulong[]{0x4000000UL});
+		public static readonly BitSet _26_in_synpred25_Lua355 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _binop_in_synpred35_Lua411 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
+		public static readonly BitSet _exp_in_synpred35_Lua413 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _varSuffix_in_synpred37_Lua437 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _nameAndArgs_in_synpred38_Lua447 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _nameAndArgs_in_synpred39_Lua457 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _var_in_synpred40_Lua468 = new BitSet(new ulong[]{0x2UL});
 	}
 	#endregion Follow sets
 }

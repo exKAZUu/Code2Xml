@@ -9,7 +9,7 @@ using Code2Xml.Core.Antlr;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 Lua.g 2012-01-29 22:43:40
+// $ANTLR 3.4 Lua.g 2012-03-01 00:37:59
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -2482,14 +2482,14 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		{
 			int _type = LONGSTRING;
 			int _channel = DefaultTokenChannel;
-			// Lua.g:123:2: ( '[' ( '=' )* '[' ( EscapeSequence |~ ( '\\\\' | ']' ) )* ']' ( '=' )* ']' )
+			// Lua.g:123:5: ( '[' ( '=' )* '[' ( EscapeSequence |~ ( '\\\\' | ']' ) )* ']' ( '=' )* ']' )
 			DebugEnterAlt(1);
-			// Lua.g:123:4: '[' ( '=' )* '[' ( EscapeSequence |~ ( '\\\\' | ']' ) )* ']' ( '=' )* ']'
+			// Lua.g:123:7: '[' ( '=' )* '[' ( EscapeSequence |~ ( '\\\\' | ']' ) )* ']' ( '=' )* ']'
 			{
-			DebugLocation(123, 4);
-			Match('['); 
 			DebugLocation(123, 7);
-			// Lua.g:123:7: ( '=' )*
+			Match('['); 
+			DebugLocation(123, 10);
+			// Lua.g:123:10: ( '=' )*
 			try { DebugEnterSubRule(8);
 			while (true)
 			{
@@ -2508,9 +2508,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Lua.g:123:8: '='
+					// Lua.g:123:11: '='
 					{
-					DebugLocation(123, 8);
+					DebugLocation(123, 11);
 					Match('='); 
 
 					}
@@ -2526,10 +2526,10 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(8); }
 
-			DebugLocation(123, 13);
+			DebugLocation(123, 16);
 			Match('['); 
-			DebugLocation(123, 17);
-			// Lua.g:123:17: ( EscapeSequence |~ ( '\\\\' | ']' ) )*
+			DebugLocation(123, 20);
+			// Lua.g:123:20: ( EscapeSequence |~ ( '\\\\' | ']' ) )*
 			try { DebugEnterSubRule(9);
 			while (true)
 			{
@@ -2552,18 +2552,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Lua.g:123:19: EscapeSequence
+					// Lua.g:123:22: EscapeSequence
 					{
-					DebugLocation(123, 19);
+					DebugLocation(123, 22);
 					mEscapeSequence(); 
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// Lua.g:123:36: ~ ( '\\\\' | ']' )
+					// Lua.g:123:39: ~ ( '\\\\' | ']' )
 					{
-					DebugLocation(123, 36);
+					DebugLocation(123, 39);
 					input.Consume();
 
 
@@ -2580,10 +2580,10 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(9); }
 
-			DebugLocation(123, 51);
-			Match(']'); 
 			DebugLocation(123, 54);
-			// Lua.g:123:54: ( '=' )*
+			Match(']'); 
+			DebugLocation(123, 57);
+			// Lua.g:123:57: ( '=' )*
 			try { DebugEnterSubRule(10);
 			while (true)
 			{
@@ -2602,9 +2602,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Lua.g:123:55: '='
+					// Lua.g:123:58: '='
 					{
-					DebugLocation(123, 55);
+					DebugLocation(123, 58);
 					Match('='); 
 
 					}
@@ -2620,7 +2620,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(10); }
 
-			DebugLocation(123, 60);
+			DebugLocation(123, 63);
 			Match(']'); 
 
 			}
@@ -3037,7 +3037,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			Match("]]"); 
 
 			DebugLocation(150, 54);
-			Skip();
+			_channel=Hidden;
 
 			}
 
@@ -3143,7 +3143,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			DebugLocation(154, 32);
 			Match('\n'); 
 			DebugLocation(154, 37);
-			Skip();
+			_channel=Hidden;
 
 			}
 
@@ -3173,11 +3173,11 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		{
 			int _type = WS;
 			int _channel = DefaultTokenChannel;
-			// Lua.g:158:5: ( ( ' ' | '\\t' | '\\u000C' ) )
+			// Lua.g:157:5: ( ( ' ' | '\\t' | '\\u000C' ) )
 			DebugEnterAlt(1);
-			// Lua.g:158:8: ( ' ' | '\\t' | '\\u000C' )
+			// Lua.g:157:8: ( ' ' | '\\t' | '\\u000C' )
 			{
-			DebugLocation(158, 8);
+			DebugLocation(157, 8);
 			if (input.LA(1)=='\t'||input.LA(1)=='\f'||input.LA(1)==' ')
 			{
 				input.Consume();
@@ -3190,7 +3190,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(158, 28);
+			DebugLocation(157, 28);
 			Skip();
 
 			}
@@ -3221,12 +3221,12 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		{
 			int _type = NEWLINE;
 			int _channel = DefaultTokenChannel;
-			// Lua.g:161:9: ( ( '\\r' )? '\\n' )
+			// Lua.g:160:9: ( ( '\\r' )? '\\n' )
 			DebugEnterAlt(1);
-			// Lua.g:161:11: ( '\\r' )? '\\n'
+			// Lua.g:160:11: ( '\\r' )? '\\n'
 			{
-			DebugLocation(161, 11);
-			// Lua.g:161:11: ( '\\r' )?
+			DebugLocation(160, 11);
+			// Lua.g:160:11: ( '\\r' )?
 			int alt16=2;
 			try { DebugEnterSubRule(16);
 			try { DebugEnterDecision(16, false);
@@ -3241,9 +3241,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Lua.g:161:12: '\\r'
+				// Lua.g:160:12: '\\r'
 				{
-				DebugLocation(161, 12);
+				DebugLocation(160, 12);
 				Match('\r'); 
 
 				}
@@ -3252,9 +3252,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(16); }
 
-			DebugLocation(161, 19);
+			DebugLocation(160, 19);
 			Match('\n'); 
-			DebugLocation(161, 24);
+			DebugLocation(160, 24);
 			Skip();
 
 			}
