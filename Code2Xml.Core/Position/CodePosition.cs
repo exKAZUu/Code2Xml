@@ -1,0 +1,117 @@
+﻿#region License
+
+// Copyright (C) 2011-2012 Kazunori Sakamoto
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+#endregion
+
+using System;
+using System.Diagnostics.Contracts;
+using System.IO;
+
+namespace Code2Xml.Core.Position {
+	[Serializable]
+	public struct CodePosition : IEquatable<CodePosition> {
+		public int EndLine;
+		public int EndPos;
+		public int StartLine;
+		public int StartPos;
+
+		public CodePosition(int startLine, int endLine, int startPos, int endPos) {
+			Contract.Requires(startLine <= endLine);
+			StartLine = startLine;
+			StartPos = startPos;
+			EndLine = endLine;
+			EndPos = endPos;
+		}
+
+		public string Line {
+			get { return StartLine + " - " + EndLine; }
+		}
+
+		public string Position {
+			get { return StartPos + " - " + EndPos; }
+		}
+
+		public string SmartLine {
+			get {
+				return StartLine == EndLine
+				       		? StartLine.ToString() : (StartLine + " - " + EndLine);
+			}
+		}
+
+		public string SmartPosition {
+			get {
+				return StartPos == EndPos
+				       		? StartPos.ToString() : (StartPos + " - " + EndPos);
+			}
+		}
+
+		#region IEquatable<CodePosition> Members
+
+		public bool Equals(CodePosition other) {
+			return other.EndLine == EndLine && other.EndPos == EndPos &&
+			       other.StartLine == StartLine && other.StartPos == StartPos;
+		}
+
+		#endregion
+
+		public override bool Equals(object obj) {
+			if (ReferenceEquals(null, obj)) {
+				return false;
+			}
+			if (obj.GetType() != typeof(CodePosition)) {
+				return false;
+			}
+			return Equals((CodePosition)obj);
+		}
+
+		public override int GetHashCode() {
+			unchecked {
+				int result = EndLine;
+				result = (result * 397) ^ EndPos;
+				result = (result * 397) ^ StartLine;
+				result = (result * 397) ^ StartPos;
+				return result;
+			}
+		}
+
+		public static bool operator ==(CodePosition left, CodePosition right) {
+			return left.Equals(right);
+		}
+
+		public static bool operator !=(CodePosition left, CodePosition right) {
+			return !left.Equals(right);
+		}
+
+		public override string ToString() {
+			return "Line: " + SmartLine + ", Pos: " + SmartPosition;
+		}
+
+		public static CodePosition Read(BinaryReader reader) {
+			var startLine = reader.ReadInt32();
+			var endLine = reader.ReadInt32();
+			var startPos = reader.ReadInt32();
+			var endPos = reader.ReadInt32();
+			return new CodePosition(startLine, endLine, startPos, endPos);
+		}
+
+		public void Write(BinaryWriter writer) {
+			writer.Write(StartLine);
+			writer.Write(EndLine);
+			writer.Write(StartPos);
+			writer.Write(EndPos);
+		}
+	}
+}

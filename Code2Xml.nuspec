@@ -10,7 +10,7 @@
     <projectUrl>http://code.google.com/p/code2xml/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Code2Xml is a parser library that interconverts source code and xml files supporting multiple programming languages.</description>
-    <releaseNotes>Initial release.</releaseNotes>
+    <releaseNotes>Add support for comments. Store code position more precisely.</releaseNotes>
     <copyright>Copyright (C) Kazunori Sakamoto 2011-2012</copyright>
     <tags>Library Parser XML Programming Language</tags>
     <dependencies>
