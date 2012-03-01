@@ -21,21 +21,21 @@ using System.Collections.Generic;
 using System.IO;
 
 namespace Code2Xml.Core.Resources {
-    public static class ResourceManager {
-        public static void WriteResourceFiles(
-                string directoryPath,
-                IEnumerable<Tuple<string, byte[]>> resources) {
-            foreach (var resource in resources) {
-                var path = Path.Combine(directoryPath, resource.Item1);
-                var fileInfo = new FileInfo(path);
-                if (fileInfo.Exists && fileInfo.Length == resource.Item2.Length) {
-                    continue;
-                }
-                Directory.CreateDirectory(Path.GetDirectoryName(path));
-                using (var outStream = new FileStream(path, FileMode.Create)) {
-                    outStream.Write(resource.Item2, 0, resource.Item2.Length);
-                }
-            }
-        }
-    }
+	public static class ResourceManager {
+		public static void WriteResourceFiles(
+				string directoryPath,
+				IEnumerable<Tuple<string, byte[]>> resources) {
+			foreach (var resource in resources) {
+				var path = Path.Combine(directoryPath, resource.Item1);
+				var fileInfo = new FileInfo(path);
+				if (fileInfo.Exists && fileInfo.Length == resource.Item2.Length) {
+					continue;
+				}
+				Directory.CreateDirectory(Path.GetDirectoryName(path));
+				using (var outStream = new FileStream(path, FileMode.Create)) {
+					outStream.Write(resource.Item2, 0, resource.Item2.Length);
+				}
+			}
+		}
+	}
 }

@@ -23,15 +23,23 @@ using Antlr.Runtime.Tree;
 
 namespace Code2Xml.Core.Antlr {
 	public class XmlTreeAdaptor : CommonTreeAdaptor {
+		public CommonTokenStream TokenStream { get; set; }
+
 		public object Create(IToken payload, XAstParserRuleReturnScope parent) {
 			Contract.Requires(parent != null);
 			if (payload != null) {
 				var xtoken = payload as XToken;
 				var name = xtoken != null ? xtoken.Name : "TOKEN";
 				var element = new XElement(name, payload.Text);
-				element.SetAttributeValue(Constants.StartLineAttributeName, payload.Line);
+
+				element.SetAttributeValue(Code2XmlConstants.StartLineName, payload.Line);
 				element.SetAttributeValue(
-						Constants.StartPosAttributeName, payload.CharPositionInLine);
+						Code2XmlConstants.StartPositionName, payload.CharPositionInLine);
+
+				//var endToken = TokenStream.Get(payload.TokenIndex + 1);
+				//element.SetAttributeValue(Code2XmlConstants.EndLineName, endToken.Line);
+				//element.SetAttributeValue(
+				//        Code2XmlConstants.EndPositionName, endToken.CharPositionInLine);
 				parent.Element.Add(element);
 			}
 			return Create(payload);

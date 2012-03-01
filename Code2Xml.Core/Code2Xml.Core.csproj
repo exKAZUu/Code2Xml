@@ -103,7 +103,9 @@
     <Compile Include="Antlr\XmlTreeAdaptor.cs" />
     <Compile Include="Antlr\XAstParserRuleReturnScope.cs" />
     <Compile Include="Antlr\XToken.cs" />
-    <Compile Include="Constants.cs" />
+    <Compile Include="Code2XmlConstants.cs" />
+    <Compile Include="Position\CodePosition.cs" />
+    <Compile Include="Position\CodePositionAnalyzer.cs" />
     <Compile Include="Resources\ResourceManager.cs" />
     <Compile Include="XmlToCodes\XmlToCodeBase.cs" />
     <Compile Include="CodeToXmls\AntlrCodeToXml.cs" />

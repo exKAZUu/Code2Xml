@@ -48,6 +48,7 @@ namespace Code2Xml.Core.CodeToXmls {
 			if (throwingParseError) {
 				parser.TreeAdaptor = new ThrowableXmlTreeAdaptor();
 			}
+			parser.TreeAdaptor.TokenStream = tokens;
 
 			// Launch parsing
 			var element = parseFunc(parser).Element;
@@ -55,11 +56,15 @@ namespace Code2Xml.Core.CodeToXmls {
 			for (int i = 0; i < tokens.Count; i++) {
 				var t = tokens.Get(i);
 				if (t.Channel == TokenChannels.Hidden) {
-					var comment = new XElement(Constants.CommentNodeName);
-					comment.SetAttributeValue(Constants.StartLineAttributeName, t.Line);
-					comment.SetAttributeValue(
-							Constants.StartPosAttributeName, t.CharPositionInLine);
+					var comment = new XElement(Code2XmlConstants.CommentName);
 					comment.Value = t.Text;
+					comment.SetAttributeValue(Code2XmlConstants.StartLineName, t.Line);
+					comment.SetAttributeValue(
+							Code2XmlConstants.StartPositionName, t.CharPositionInLine);
+					//var t2 = tokens.Get(i + 1);
+					//comment.SetAttributeValue(Code2XmlConstants.EndLineName, t2.Line);
+					//comment.SetAttributeValue(
+					//        Code2XmlConstants.EndPositionName, t2.CharPositionInLine);
 					element.Add(comment);
 				}
 			}

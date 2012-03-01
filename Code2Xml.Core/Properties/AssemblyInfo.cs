@@ -25,9 +25,9 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("Code2Xml.Core")]
 [assembly:
-        AssemblyDescription(
-                "Code2Xml is a parser library that interconverts source code and xml files supporting multiple programming languages."
-                )]
+		AssemblyDescription(
+				"Code2Xml is a parser library that interconverts source code and xml files supporting multiple programming languages."
+				)]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Kazunori Sakamoto")]
 [assembly: AssemblyProduct("Code2Xml.Core")]
@@ -56,5 +56,5 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("1.3.0.59")]
-[assembly: AssemblyFileVersion("1.3.0.59")]
+[assembly: AssemblyVersion("1.3.3.72")]
+[assembly: AssemblyFileVersion("1.3.3.72")]

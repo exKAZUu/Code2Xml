@@ -46,6 +46,8 @@ public partial class JavaScriptLexer {
             case HexIntegerLiteral:
             case StringLiteral:
                 // member access ending 
+            case RBRACE:
+                // function definition ending
             case RBRACK:
                 // function call or nested expression ending
             case RPAREN:
