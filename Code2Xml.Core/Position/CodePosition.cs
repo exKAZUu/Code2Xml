@@ -24,45 +24,45 @@ namespace Code2Xml.Core.Position {
 	[Serializable]
 	public struct CodePosition : IEquatable<CodePosition> {
 		public int EndLine;
-		public int EndPos;
+		public int EndPosition;
 		public int StartLine;
-		public int StartPos;
+		public int StartPosition;
 
-		public CodePosition(int startLine, int endLine, int startPos, int endPos) {
+		public CodePosition(int startLine, int endLine, int startPosition, int endPosition) {
 			Contract.Requires(startLine <= endLine);
 			StartLine = startLine;
-			StartPos = startPos;
+			StartPosition = startPosition;
 			EndLine = endLine;
-			EndPos = endPos;
+			EndPosition = endPosition;
 		}
 
-		public string Line {
+		public string LineString {
 			get { return StartLine + " - " + EndLine; }
 		}
 
-		public string Position {
-			get { return StartPos + " - " + EndPos; }
+		public string PositionString {
+			get { return StartPosition + " - " + EndPosition; }
 		}
 
-		public string SmartLine {
+		public string SmartLineString {
 			get {
 				return StartLine == EndLine
 				       		? StartLine.ToString() : (StartLine + " - " + EndLine);
 			}
 		}
 
-		public string SmartPosition {
+		public string SmartPositionString {
 			get {
-				return StartPos == EndPos
-				       		? StartPos.ToString() : (StartPos + " - " + EndPos);
+				return StartPosition == EndPosition
+				       		? StartPosition.ToString() : (StartPosition + " - " + EndPosition);
 			}
 		}
 
 		#region IEquatable<CodePosition> Members
 
 		public bool Equals(CodePosition other) {
-			return other.EndLine == EndLine && other.EndPos == EndPos &&
-			       other.StartLine == StartLine && other.StartPos == StartPos;
+			return other.EndLine == EndLine && other.EndPosition == EndPosition &&
+			       other.StartLine == StartLine && other.StartPosition == StartPosition;
 		}
 
 		#endregion
@@ -80,9 +80,9 @@ namespace Code2Xml.Core.Position {
 		public override int GetHashCode() {
 			unchecked {
 				int result = EndLine;
-				result = (result * 397) ^ EndPos;
+				result = (result * 397) ^ EndPosition;
 				result = (result * 397) ^ StartLine;
-				result = (result * 397) ^ StartPos;
+				result = (result * 397) ^ StartPosition;
 				return result;
 			}
 		}
@@ -96,7 +96,7 @@ namespace Code2Xml.Core.Position {
 		}
 
 		public override string ToString() {
-			return "Line: " + SmartLine + ", Pos: " + SmartPosition;
+			return "Line: " + SmartLineString + ", Pos: " + SmartPositionString;
 		}
 
 		public static CodePosition Read(BinaryReader reader) {
@@ -110,8 +110,8 @@ namespace Code2Xml.Core.Position {
 		public void Write(BinaryWriter writer) {
 			writer.Write(StartLine);
 			writer.Write(EndLine);
-			writer.Write(StartPos);
-			writer.Write(EndPos);
+			writer.Write(StartPosition);
+			writer.Write(EndPosition);
 		}
 	}
 }

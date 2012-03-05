@@ -34,8 +34,8 @@ c*/");
 			var pos = CodePositionAnalyzer.Create(e.Descendants("Comment").Last());
 			Assert.That(pos.StartLine, Is.EqualTo(2));
 			Assert.That(pos.EndLine, Is.EqualTo(3));
-			Assert.That(pos.StartPos, Is.EqualTo(0));
-			Assert.That(pos.EndPos, Is.EqualTo(3));
+			Assert.That(pos.StartPosition, Is.EqualTo(0));
+			Assert.That(pos.EndPosition, Is.EqualTo(3));
 		}
 
 		[Test]

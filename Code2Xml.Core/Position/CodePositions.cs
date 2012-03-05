@@ -21,18 +21,16 @@ using System.Linq;
 using System.Xml.Linq;
 
 namespace Code2Xml.Core.Position {
-	public static class CodePositionAnalyzer {
-		public static CodePosition Create(XElement element) {
-			return CreatePrivate(
-					element.DescendantsAndSelf());
+	public static class CodePositions {
+		public static CodePosition New(XElement element) {
+			return NewPrivate(element.DescendantsAndSelf());
 		}
 
-		public static CodePosition Create(IEnumerable<XElement> elements) {
-			return CreatePrivate(
-					elements.DescendantsAndSelf());
+		public static CodePosition New(IEnumerable<XElement> elements) {
+			return NewPrivate(elements.DescendantsAndSelf());
 		}
 
-		private static CodePosition CreatePrivate(
+		private static CodePosition NewPrivate(
 				IEnumerable<XElement> descendants) {
 			int startLine = 0, startPos = 0;
 			var first =
