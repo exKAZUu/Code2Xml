@@ -30,7 +30,11 @@ namespace Code2Xml.Languages.Ruby18.XmlToCodes {
         private readonly ReadOnlyCollection<string> _supportedExtensions =
                 new ReadOnlyCollection<string>(new[] { ".rb" });
 
-        private Ruby18XmlToCode() {}
+    	private readonly IronRubyParser _parser;
+
+        private Ruby18XmlToCode() {
+        	_parser = new IronRubyParser();
+        }
 
         public static Ruby18XmlToCode Instance {
             get { return _instance ?? (_instance = new Ruby18XmlToCode()); }
@@ -45,7 +49,7 @@ namespace Code2Xml.Languages.Ruby18.XmlToCodes {
         }
 
         public override string Generate(XElement root) {
-            return IronRubyParser.ParseXml(root);
+            return _parser.ParseXml(root);
         }
     }
 }

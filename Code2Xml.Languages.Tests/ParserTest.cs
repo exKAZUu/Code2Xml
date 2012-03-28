@@ -44,7 +44,7 @@ namespace Code2Xml.Languages.Tests {
 						"Ruby18",
 						//"Ruby19",
 				};
-				return names
+				var tt = names
 						.SelectMany(
 								name =>
 								Directory.EnumerateFiles(
@@ -64,7 +64,9 @@ namespace Code2Xml.Languages.Tests {
 												o =>
 												o.GetType().Name
 												== p.Name + "XmlToCode")))
-						.Where(t => t.Arguments[2] != null);
+						.Where(t => t.Arguments[2] != null)
+						.ToList();
+				return tt;
 			}
 		}
 
