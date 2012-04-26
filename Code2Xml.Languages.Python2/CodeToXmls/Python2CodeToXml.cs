@@ -16,58 +16,56 @@
 
 #endregion
 
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.IO;
 using Code2Xml.Core;
 using Code2Xml.Core.CodeToXmls;
-using Code2Xml.Core.Resources;
 using Code2Xml.Languages.Python2.Properties;
+using Paraiba.IO;
 
 namespace Code2Xml.Languages.Python2.CodeToXmls {
-    [Export(typeof(CodeToXml))]
-    public class Python2CodeToXml : ExternalCodeToXml {
-        private static Python2CodeToXml _instance;
+	[Export(typeof(CodeToXml))]
+	public class Python2CodeToXml : ExternalCodeToXml {
+		private static Python2CodeToXml _instance;
 
-        private static readonly string DirectoryPath = Path.Combine(
-                "ParserScripts", "Python2");
+		private static readonly string DirectoryPath = Path.Combine(
+				"ParserScripts", "Python2");
 
-        private static readonly string[] PrivateArguments = new[] {
-                Path.Combine(DirectoryPath, "ast2xml.py"),
-        };
+		private static readonly string[] PrivateArguments = new[] {
+				Path.Combine(DirectoryPath, "ast2xml.py"),
+		};
 
-        private readonly string _processorPath;
+		private readonly string _processorPath;
 
-        public Python2CodeToXml()
-                : this(ParserUtil.GetPythonInstallPath("2.") ?? "python") {}
+		public Python2CodeToXml()
+				: this(ParserUtil.GetPythonInstallPath("2.") ?? "python") {}
 
-        public Python2CodeToXml(string processorPath) {
-            _processorPath = processorPath;
+		public Python2CodeToXml(string processorPath) {
+			_processorPath = processorPath;
 
-            ResourceManager.WriteResourceFiles(
-                    DirectoryPath,
-                    new[] { Tuple.Create("ast2xml.py", Resources.ast2xml) });
-        }
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "ast2xml.py"), Resources.ast2xml);
+		}
 
-        public static Python2CodeToXml Instance {
-            get { return _instance ?? (_instance = new Python2CodeToXml()); }
-        }
+		public static Python2CodeToXml Instance {
+			get { return _instance ?? (_instance = new Python2CodeToXml()); }
+		}
 
-        protected override string ProcessorPath {
-            get { return _processorPath; }
-        }
+		protected override string ProcessorPath {
+			get { return _processorPath; }
+		}
 
-        protected override string[] Arguments {
-            get { return PrivateArguments; }
-        }
+		protected override string[] Arguments {
+			get { return PrivateArguments; }
+		}
 
-        public override string ParserName {
-            get { return "Python2"; }
-        }
+		public override string ParserName {
+			get { return "Python2"; }
+		}
 
-        public override IEnumerable<string> TargetExtensions {
-            get { return new[] { ".py" }; }
-        }
-    }
+		public override IEnumerable<string> TargetExtensions {
+			get { return new[] { ".py" }; }
+		}
+	}
 }

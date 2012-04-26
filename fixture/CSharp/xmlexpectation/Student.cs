@@ -2,43 +2,49 @@
   <namespace_body>
     <namespace_member_declarations>
       <namespace_member_declaration>
+        <modifiers>
+          <modifier>
+            <TOKEN startline="1" startpos="0">public</TOKEN>
+          </modifier>
+        </modifiers>
         <type_declaration>
           <class_declaration>
-            <class_modifiers>
-              <class_modifier>
-                <TOKEN startline="1" startpos="0">public</TOKEN>
-              </class_modifier>
-            </class_modifiers>
             <TOKEN startline="1" startpos="7">class</TOKEN>
-            <identifier>
-              <IDENTIFIER startline="1" startpos="13">Student</IDENTIFIER>
-            </identifier>
+            <type_or_generic>
+              <identifier>
+                <IDENTIFIER startline="1" startpos="13">Student</IDENTIFIER>
+              </identifier>
+            </type_or_generic>
             <class_body>
               <TOKEN startline="1" startpos="21">{</TOKEN>
               <class_member_declarations>
                 <class_member_declaration>
-                  <field_declaration>
-                    <field_modifiers>
-                      <field_modifier>
-                        <TOKEN startline="2" startpos="1">private</TOKEN>
-                      </field_modifier>
-                    </field_modifiers>
-                    <type>
-                      <type_name>
-                        <namespace_or_type_name>
+                  <modifiers>
+                    <modifier>
+                      <TOKEN startline="2" startpos="1">private</TOKEN>
+                    </modifier>
+                  </modifiers>
+                  <type>
+                    <type_name>
+                      <namespace_or_type_name>
+                        <type_or_generic>
                           <identifier>
                             <IDENTIFIER startline="2" startpos="9">String</IDENTIFIER>
                           </identifier>
-                        </namespace_or_type_name>
-                      </type_name>
-                    </type>
+                        </type_or_generic>
+                      </namespace_or_type_name>
+                    </type_name>
+                  </type>
+                  <field_declaration>
                     <variable_declarators>
                       <variable_declarator>
                         <type_name>
                           <namespace_or_type_name>
-                            <identifier>
-                              <IDENTIFIER startline="2" startpos="16">_name</IDENTIFIER>
-                            </identifier>
+                            <type_or_generic>
+                              <identifier>
+                                <IDENTIFIER startline="2" startpos="16">_name</IDENTIFIER>
+                              </identifier>
+                            </type_or_generic>
                           </namespace_or_type_name>
                         </type_name>
                       </variable_declarator>
@@ -47,12 +53,12 @@
                   </field_declaration>
                 </class_member_declaration>
                 <class_member_declaration>
+                  <modifiers>
+                    <modifier>
+                      <TOKEN startline="4" startpos="1">public</TOKEN>
+                    </modifier>
+                  </modifiers>
                   <constructor_declaration>
-                    <constructor_modifiers>
-                      <constructor_modifier>
-                        <TOKEN startline="4" startpos="1">public</TOKEN>
-                      </constructor_modifier>
-                    </constructor_modifiers>
                     <constructor_declarator>
                       <identifier>
                         <IDENTIFIER startline="4" startpos="8">Student</IDENTIFIER>
@@ -64,9 +70,11 @@
                             <type>
                               <type_name>
                                 <namespace_or_type_name>
-                                  <identifier>
-                                    <IDENTIFIER startline="4" startpos="16">String</IDENTIFIER>
-                                  </identifier>
+                                  <type_or_generic>
+                                    <identifier>
+                                      <IDENTIFIER startline="4" startpos="16">String</IDENTIFIER>
+                                    </identifier>
+                                  </type_or_generic>
                                 </namespace_or_type_name>
                               </type_name>
                             </type>
@@ -153,24 +161,24 @@
                   </constructor_declaration>
                 </class_member_declaration>
                 <class_member_declaration>
+                  <modifiers>
+                    <modifier>
+                      <TOKEN startline="8" startpos="1">public</TOKEN>
+                    </modifier>
+                  </modifiers>
+                  <type>
+                    <type_name>
+                      <namespace_or_type_name>
+                        <type_or_generic>
+                          <identifier>
+                            <IDENTIFIER startline="8" startpos="8">String</IDENTIFIER>
+                          </identifier>
+                        </type_or_generic>
+                      </namespace_or_type_name>
+                    </type_name>
+                  </type>
                   <method_declaration>
                     <method_header>
-                      <method_modifiers>
-                        <method_modifier>
-                          <TOKEN startline="8" startpos="1">public</TOKEN>
-                        </method_modifier>
-                      </method_modifiers>
-                      <return_type>
-                        <type>
-                          <type_name>
-                            <namespace_or_type_name>
-                              <identifier>
-                                <IDENTIFIER startline="8" startpos="8">String</IDENTIFIER>
-                              </identifier>
-                            </namespace_or_type_name>
-                          </type_name>
-                        </type>
-                      </return_type>
                       <member_name>
                         <qid>
                           <qid_start>
@@ -243,19 +251,17 @@
                   </method_declaration>
                 </class_member_declaration>
                 <class_member_declaration>
+                  <modifiers>
+                    <modifier>
+                      <TOKEN startline="12" startpos="1">public</TOKEN>
+                    </modifier>
+                    <modifier>
+                      <TOKEN startline="12" startpos="8">static</TOKEN>
+                    </modifier>
+                  </modifiers>
+                  <TOKEN startline="12" startpos="15">void</TOKEN>
                   <method_declaration>
                     <method_header>
-                      <method_modifiers>
-                        <method_modifier>
-                          <TOKEN startline="12" startpos="1">public</TOKEN>
-                        </method_modifier>
-                        <method_modifier>
-                          <TOKEN startline="12" startpos="8">static</TOKEN>
-                        </method_modifier>
-                      </method_modifiers>
-                      <return_type>
-                        <TOKEN startline="12" startpos="15">void</TOKEN>
-                      </return_type>
                       <member_name>
                         <qid>
                           <qid_start>
@@ -272,9 +278,11 @@
                             <type>
                               <type_name>
                                 <namespace_or_type_name>
-                                  <identifier>
-                                    <IDENTIFIER startline="12" startpos="25">String</IDENTIFIER>
-                                  </identifier>
+                                  <type_or_generic>
+                                    <identifier>
+                                      <IDENTIFIER startline="12" startpos="25">String</IDENTIFIER>
+                                    </identifier>
+                                  </type_or_generic>
                                 </namespace_or_type_name>
                               </type_name>
                               <rank_specifiers>
@@ -303,9 +311,11 @@
                                   <type>
                                     <type_name>
                                       <namespace_or_type_name>
-                                        <identifier>
-                                          <IDENTIFIER startline="13" startpos="2">Student</IDENTIFIER>
-                                        </identifier>
+                                        <type_or_generic>
+                                          <identifier>
+                                            <IDENTIFIER startline="13" startpos="2">Student</IDENTIFIER>
+                                          </identifier>
+                                        </type_or_generic>
                                       </namespace_or_type_name>
                                     </type_name>
                                     <rank_specifiers>
@@ -341,17 +351,17 @@
                                                                     <primary_or_array_creation_expression>
                                                                       <array_creation_expression>
                                                                         <TOKEN startline="13" startpos="23">new</TOKEN>
-                                                                        <non_array_type>
-                                                                          <type>
-                                                                            <type_name>
-                                                                              <namespace_or_type_name>
+                                                                        <type>
+                                                                          <type_name>
+                                                                            <namespace_or_type_name>
+                                                                              <type_or_generic>
                                                                                 <identifier>
                                                                                   <IDENTIFIER startline="13" startpos="27">Student</IDENTIFIER>
                                                                                 </identifier>
-                                                                              </namespace_or_type_name>
-                                                                            </type_name>
-                                                                          </type>
-                                                                        </non_array_type>
+                                                                              </type_or_generic>
+                                                                            </namespace_or_type_name>
+                                                                          </type_name>
+                                                                        </type>
                                                                         <TOKEN startline="13" startpos="34">[</TOKEN>
                                                                         <expression_list>
                                                                           <expression>
@@ -434,7 +444,7 @@
                                           </primary_expression_start>
                                           <primary_expression_part>
                                             <brackets_or_arguments>
-                                              <bracket_expression>
+                                              <brackets>
                                                 <TOKEN startline="14" startpos="10">[</TOKEN>
                                                 <expression_list>
                                                   <expression>
@@ -478,7 +488,7 @@
                                                   </expression>
                                                 </expression_list>
                                                 <TOKEN startline="14" startpos="12">]</TOKEN>
-                                              </bracket_expression>
+                                              </brackets>
                                             </brackets_or_arguments>
                                           </primary_expression_part>
                                         </primary_expression>
@@ -504,67 +514,67 @@
                                                                 <unary_expression>
                                                                   <primary_or_array_creation_expression>
                                                                     <primary_expression>
-                                                                      <primary_expression_start>
-                                                                        <object_creation_expression>
-                                                                          <TOKEN startline="14" startpos="16">new</TOKEN>
-                                                                          <type>
-                                                                            <type_name>
-                                                                              <namespace_or_type_name>
+                                                                      <TOKEN startline="14" startpos="16">new</TOKEN>
+                                                                      <object_creation_expression>
+                                                                        <type>
+                                                                          <type_name>
+                                                                            <namespace_or_type_name>
+                                                                              <type_or_generic>
                                                                                 <identifier>
                                                                                   <IDENTIFIER startline="14" startpos="20">Student</IDENTIFIER>
                                                                                 </identifier>
-                                                                              </namespace_or_type_name>
-                                                                            </type_name>
-                                                                          </type>
-                                                                          <TOKEN startline="14" startpos="27">(</TOKEN>
-                                                                          <argument_list>
-                                                                            <argument>
-                                                                              <argument_value>
-                                                                                <expression>
-                                                                                  <non_assignment_expression>
-                                                                                    <conditional_expression>
-                                                                                      <null_coalescing_expression>
-                                                                                        <conditional_or_expression>
-                                                                                          <conditional_and_expression>
-                                                                                            <inclusive_or_expression>
-                                                                                              <exclusive_or_expression>
-                                                                                                <and_expression>
-                                                                                                  <equality_expression>
-                                                                                                    <relational_expression>
-                                                                                                      <shift_expression>
-                                                                                                        <additive_expression>
-                                                                                                          <multiplicative_expression>
-                                                                                                            <unary_expression>
-                                                                                                              <primary_or_array_creation_expression>
-                                                                                                                <primary_expression>
-                                                                                                                  <primary_expression_start>
-                                                                                                                    <literal>
-                                                                                                                      <TOKEN startline="14" startpos="28">"Tom"</TOKEN>
-                                                                                                                    </literal>
-                                                                                                                  </primary_expression_start>
-                                                                                                                </primary_expression>
-                                                                                                              </primary_or_array_creation_expression>
-                                                                                                            </unary_expression>
-                                                                                                          </multiplicative_expression>
-                                                                                                        </additive_expression>
-                                                                                                      </shift_expression>
-                                                                                                    </relational_expression>
-                                                                                                  </equality_expression>
-                                                                                                </and_expression>
-                                                                                              </exclusive_or_expression>
-                                                                                            </inclusive_or_expression>
-                                                                                          </conditional_and_expression>
-                                                                                        </conditional_or_expression>
-                                                                                      </null_coalescing_expression>
-                                                                                    </conditional_expression>
-                                                                                  </non_assignment_expression>
-                                                                                </expression>
-                                                                              </argument_value>
-                                                                            </argument>
-                                                                          </argument_list>
-                                                                          <RPAREN startline="14" startpos="33">)</RPAREN>
-                                                                        </object_creation_expression>
-                                                                      </primary_expression_start>
+                                                                              </type_or_generic>
+                                                                            </namespace_or_type_name>
+                                                                          </type_name>
+                                                                        </type>
+                                                                        <TOKEN startline="14" startpos="27">(</TOKEN>
+                                                                        <argument_list>
+                                                                          <argument>
+                                                                            <argument_value>
+                                                                              <expression>
+                                                                                <non_assignment_expression>
+                                                                                  <conditional_expression>
+                                                                                    <null_coalescing_expression>
+                                                                                      <conditional_or_expression>
+                                                                                        <conditional_and_expression>
+                                                                                          <inclusive_or_expression>
+                                                                                            <exclusive_or_expression>
+                                                                                              <and_expression>
+                                                                                                <equality_expression>
+                                                                                                  <relational_expression>
+                                                                                                    <shift_expression>
+                                                                                                      <additive_expression>
+                                                                                                        <multiplicative_expression>
+                                                                                                          <unary_expression>
+                                                                                                            <primary_or_array_creation_expression>
+                                                                                                              <primary_expression>
+                                                                                                                <primary_expression_start>
+                                                                                                                  <literal>
+                                                                                                                    <TOKEN startline="14" startpos="28">"Tom"</TOKEN>
+                                                                                                                  </literal>
+                                                                                                                </primary_expression_start>
+                                                                                                              </primary_expression>
+                                                                                                            </primary_or_array_creation_expression>
+                                                                                                          </unary_expression>
+                                                                                                        </multiplicative_expression>
+                                                                                                      </additive_expression>
+                                                                                                    </shift_expression>
+                                                                                                  </relational_expression>
+                                                                                                </equality_expression>
+                                                                                              </and_expression>
+                                                                                            </exclusive_or_expression>
+                                                                                          </inclusive_or_expression>
+                                                                                        </conditional_and_expression>
+                                                                                      </conditional_or_expression>
+                                                                                    </null_coalescing_expression>
+                                                                                  </conditional_expression>
+                                                                                </non_assignment_expression>
+                                                                              </expression>
+                                                                            </argument_value>
+                                                                          </argument>
+                                                                        </argument_list>
+                                                                        <RPAREN startline="14" startpos="33">)</RPAREN>
+                                                                      </object_creation_expression>
                                                                     </primary_expression>
                                                                   </primary_or_array_creation_expression>
                                                                 </unary_expression>
@@ -603,7 +613,7 @@
                                           </primary_expression_start>
                                           <primary_expression_part>
                                             <brackets_or_arguments>
-                                              <bracket_expression>
+                                              <brackets>
                                                 <TOKEN startline="15" startpos="10">[</TOKEN>
                                                 <expression_list>
                                                   <expression>
@@ -647,7 +657,7 @@
                                                   </expression>
                                                 </expression_list>
                                                 <TOKEN startline="15" startpos="12">]</TOKEN>
-                                              </bracket_expression>
+                                              </brackets>
                                             </brackets_or_arguments>
                                           </primary_expression_part>
                                         </primary_expression>
@@ -673,67 +683,67 @@
                                                                 <unary_expression>
                                                                   <primary_or_array_creation_expression>
                                                                     <primary_expression>
-                                                                      <primary_expression_start>
-                                                                        <object_creation_expression>
-                                                                          <TOKEN startline="15" startpos="16">new</TOKEN>
-                                                                          <type>
-                                                                            <type_name>
-                                                                              <namespace_or_type_name>
+                                                                      <TOKEN startline="15" startpos="16">new</TOKEN>
+                                                                      <object_creation_expression>
+                                                                        <type>
+                                                                          <type_name>
+                                                                            <namespace_or_type_name>
+                                                                              <type_or_generic>
                                                                                 <identifier>
                                                                                   <IDENTIFIER startline="15" startpos="20">Student</IDENTIFIER>
                                                                                 </identifier>
-                                                                              </namespace_or_type_name>
-                                                                            </type_name>
-                                                                          </type>
-                                                                          <TOKEN startline="15" startpos="27">(</TOKEN>
-                                                                          <argument_list>
-                                                                            <argument>
-                                                                              <argument_value>
-                                                                                <expression>
-                                                                                  <non_assignment_expression>
-                                                                                    <conditional_expression>
-                                                                                      <null_coalescing_expression>
-                                                                                        <conditional_or_expression>
-                                                                                          <conditional_and_expression>
-                                                                                            <inclusive_or_expression>
-                                                                                              <exclusive_or_expression>
-                                                                                                <and_expression>
-                                                                                                  <equality_expression>
-                                                                                                    <relational_expression>
-                                                                                                      <shift_expression>
-                                                                                                        <additive_expression>
-                                                                                                          <multiplicative_expression>
-                                                                                                            <unary_expression>
-                                                                                                              <primary_or_array_creation_expression>
-                                                                                                                <primary_expression>
-                                                                                                                  <primary_expression_start>
-                                                                                                                    <literal>
-                                                                                                                      <TOKEN startline="15" startpos="28">"Anna"</TOKEN>
-                                                                                                                    </literal>
-                                                                                                                  </primary_expression_start>
-                                                                                                                </primary_expression>
-                                                                                                              </primary_or_array_creation_expression>
-                                                                                                            </unary_expression>
-                                                                                                          </multiplicative_expression>
-                                                                                                        </additive_expression>
-                                                                                                      </shift_expression>
-                                                                                                    </relational_expression>
-                                                                                                  </equality_expression>
-                                                                                                </and_expression>
-                                                                                              </exclusive_or_expression>
-                                                                                            </inclusive_or_expression>
-                                                                                          </conditional_and_expression>
-                                                                                        </conditional_or_expression>
-                                                                                      </null_coalescing_expression>
-                                                                                    </conditional_expression>
-                                                                                  </non_assignment_expression>
-                                                                                </expression>
-                                                                              </argument_value>
-                                                                            </argument>
-                                                                          </argument_list>
-                                                                          <RPAREN startline="15" startpos="34">)</RPAREN>
-                                                                        </object_creation_expression>
-                                                                      </primary_expression_start>
+                                                                              </type_or_generic>
+                                                                            </namespace_or_type_name>
+                                                                          </type_name>
+                                                                        </type>
+                                                                        <TOKEN startline="15" startpos="27">(</TOKEN>
+                                                                        <argument_list>
+                                                                          <argument>
+                                                                            <argument_value>
+                                                                              <expression>
+                                                                                <non_assignment_expression>
+                                                                                  <conditional_expression>
+                                                                                    <null_coalescing_expression>
+                                                                                      <conditional_or_expression>
+                                                                                        <conditional_and_expression>
+                                                                                          <inclusive_or_expression>
+                                                                                            <exclusive_or_expression>
+                                                                                              <and_expression>
+                                                                                                <equality_expression>
+                                                                                                  <relational_expression>
+                                                                                                    <shift_expression>
+                                                                                                      <additive_expression>
+                                                                                                        <multiplicative_expression>
+                                                                                                          <unary_expression>
+                                                                                                            <primary_or_array_creation_expression>
+                                                                                                              <primary_expression>
+                                                                                                                <primary_expression_start>
+                                                                                                                  <literal>
+                                                                                                                    <TOKEN startline="15" startpos="28">"Anna"</TOKEN>
+                                                                                                                  </literal>
+                                                                                                                </primary_expression_start>
+                                                                                                              </primary_expression>
+                                                                                                            </primary_or_array_creation_expression>
+                                                                                                          </unary_expression>
+                                                                                                        </multiplicative_expression>
+                                                                                                      </additive_expression>
+                                                                                                    </shift_expression>
+                                                                                                  </relational_expression>
+                                                                                                </equality_expression>
+                                                                                              </and_expression>
+                                                                                            </exclusive_or_expression>
+                                                                                          </inclusive_or_expression>
+                                                                                        </conditional_and_expression>
+                                                                                      </conditional_or_expression>
+                                                                                    </null_coalescing_expression>
+                                                                                  </conditional_expression>
+                                                                                </non_assignment_expression>
+                                                                              </expression>
+                                                                            </argument_value>
+                                                                          </argument>
+                                                                        </argument_list>
+                                                                        <RPAREN startline="15" startpos="34">)</RPAREN>
+                                                                      </object_creation_expression>
                                                                     </primary_expression>
                                                                   </primary_or_array_creation_expression>
                                                                 </unary_expression>
@@ -889,18 +899,48 @@
                                   <for_iterator>
                                     <statement_expression_list>
                                       <statement_expression>
-                                        <unary_expression>
-                                          <primary_or_array_creation_expression>
-                                            <primary_expression>
-                                              <primary_expression_start>
-                                                <identifier>
-                                                  <IDENTIFIER startline="17" startpos="25">i</IDENTIFIER>
-                                                </identifier>
-                                              </primary_expression_start>
-                                            </primary_expression>
-                                          </primary_or_array_creation_expression>
-                                          <TOKEN startline="17" startpos="26">++</TOKEN>
-                                        </unary_expression>
+                                        <expression>
+                                          <non_assignment_expression>
+                                            <conditional_expression>
+                                              <null_coalescing_expression>
+                                                <conditional_or_expression>
+                                                  <conditional_and_expression>
+                                                    <inclusive_or_expression>
+                                                      <exclusive_or_expression>
+                                                        <and_expression>
+                                                          <equality_expression>
+                                                            <relational_expression>
+                                                              <shift_expression>
+                                                                <additive_expression>
+                                                                  <multiplicative_expression>
+                                                                    <unary_expression>
+                                                                      <primary_or_array_creation_expression>
+                                                                        <primary_expression>
+                                                                          <primary_expression_start>
+                                                                            <identifier>
+                                                                              <IDENTIFIER startline="17" startpos="25">i</IDENTIFIER>
+                                                                            </identifier>
+                                                                          </primary_expression_start>
+                                                                          <primary_expression_part>
+                                                                            <TOKEN startline="17" startpos="26">++</TOKEN>
+                                                                          </primary_expression_part>
+                                                                        </primary_expression>
+                                                                      </primary_or_array_creation_expression>
+                                                                    </unary_expression>
+                                                                  </multiplicative_expression>
+                                                                </additive_expression>
+                                                              </shift_expression>
+                                                            </relational_expression>
+                                                          </equality_expression>
+                                                        </and_expression>
+                                                      </exclusive_or_expression>
+                                                    </inclusive_or_expression>
+                                                  </conditional_and_expression>
+                                                </conditional_or_expression>
+                                              </null_coalescing_expression>
+                                            </conditional_expression>
+                                          </non_assignment_expression>
+                                        </expression>
                                       </statement_expression>
                                     </statement_expression_list>
                                   </for_iterator>
@@ -965,7 +1005,7 @@
                                                                                                                               </primary_expression_start>
                                                                                                                               <primary_expression_part>
                                                                                                                                 <brackets_or_arguments>
-                                                                                                                                  <bracket_expression>
+                                                                                                                                  <brackets>
                                                                                                                                     <TOKEN startline="18" startpos="17">[</TOKEN>
                                                                                                                                     <expression_list>
                                                                                                                                       <expression>
@@ -1009,7 +1049,7 @@
                                                                                                                                       </expression>
                                                                                                                                     </expression_list>
                                                                                                                                     <TOKEN startline="18" startpos="19">]</TOKEN>
-                                                                                                                                  </bracket_expression>
+                                                                                                                                  </brackets>
                                                                                                                                 </brackets_or_arguments>
                                                                                                                               </primary_expression_part>
                                                                                                                               <primary_expression_part>
@@ -1017,10 +1057,14 @@
                                                                                                                                   <access_operator>
                                                                                                                                     <TOKEN startline="18" startpos="20">.</TOKEN>
                                                                                                                                   </access_operator>
-                                                                                                                                  <identifier>
-                                                                                                                                    <IDENTIFIER startline="18" startpos="21">getName</IDENTIFIER>
-                                                                                                                                  </identifier>
+                                                                                                                                  <type_or_generic>
+                                                                                                                                    <identifier>
+                                                                                                                                      <IDENTIFIER startline="18" startpos="21">getName</IDENTIFIER>
+                                                                                                                                    </identifier>
+                                                                                                                                  </type_or_generic>
                                                                                                                                 </access_identifier>
+                                                                                                                              </primary_expression_part>
+                                                                                                                              <primary_expression_part>
                                                                                                                                 <brackets_or_arguments>
                                                                                                                                   <arguments>
                                                                                                                                     <TOKEN startline="18" startpos="28">(</TOKEN>
@@ -1091,9 +1135,11 @@
                                     <type>
                                       <type_name>
                                         <namespace_or_type_name>
-                                          <identifier>
-                                            <IDENTIFIER startline="20" startpos="11">Student</IDENTIFIER>
-                                          </identifier>
+                                          <type_or_generic>
+                                            <identifier>
+                                              <IDENTIFIER startline="20" startpos="11">Student</IDENTIFIER>
+                                            </identifier>
+                                          </type_or_generic>
                                         </namespace_or_type_name>
                                       </type_name>
                                     </type>
@@ -1205,10 +1251,14 @@
                                                                                                                                   <access_operator>
                                                                                                                                     <TOKEN startline="21" startpos="16">.</TOKEN>
                                                                                                                                   </access_operator>
-                                                                                                                                  <identifier>
-                                                                                                                                    <IDENTIFIER startline="21" startpos="17">getName</IDENTIFIER>
-                                                                                                                                  </identifier>
+                                                                                                                                  <type_or_generic>
+                                                                                                                                    <identifier>
+                                                                                                                                      <IDENTIFIER startline="21" startpos="17">getName</IDENTIFIER>
+                                                                                                                                    </identifier>
+                                                                                                                                  </type_or_generic>
                                                                                                                                 </access_identifier>
+                                                                                                                              </primary_expression_part>
+                                                                                                                              <primary_expression_part>
                                                                                                                                 <brackets_or_arguments>
                                                                                                                                   <arguments>
                                                                                                                                     <TOKEN startline="21" startpos="24">(</TOKEN>

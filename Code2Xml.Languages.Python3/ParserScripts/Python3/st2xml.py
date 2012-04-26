@@ -18,9 +18,7 @@ def print_st2(tuple, depth, lastline):
 		print ('  ' * depth + '</' + element_name + '>')
 	else:
 		element_name = token.tok_name[id]
-		print ('  ' * depth + '<' + element_name + ' startline="' + str(lastline) + '" endline="' + str(tuple[2]) + '">' + cgi.escape(tuple[1]) + '</' + element_name + '>')
-		lastline = tuple[2]
-		if element_name == 'NEWLINE': lastline += 1
+		print ('  ' * depth + '<' + element_name + ' startline="' + str(tuple[2]) + '">' + cgi.escape(tuple[1]) + '</' + element_name + '>')
 	return lastline
 
 ast = suite(sys.stdin.read())

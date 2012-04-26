@@ -37,7 +37,7 @@ namespace Code2Xml.Core.CodeToXmls {
 			get {
 				Contract.Ensures(Contract.Result<IEnumerable<string>>() != null);
 				Contract.Ensures(
-						Contract.Result<IEnumerable<string>>().Count() > 0);
+						Contract.Result<IEnumerable<string>>().Any());
 				throw new NotImplementedException();
 			}
 		}

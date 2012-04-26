@@ -16,15 +16,12 @@
 
 #endregion
 
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using Code2Xml.Core.CodeToXmls;
-using Code2Xml.Core.Resources;
-using Code2Xml.Languages.Ruby18.Properties;
 
 namespace Code2Xml.Languages.Ruby18.CodeToXmls {
 	[Export(typeof(CodeToXml))]
@@ -63,8 +60,8 @@ namespace Code2Xml.Languages.Ruby18.CodeToXmls {
 							return node;
 						}
 						return node.Name.LocalName != "nil"
-									   ? new XElement("block", node)
-									   : new XElement("block");
+						       		? new XElement("block", node)
+						       		: new XElement("block");
 					});
 
 			NodeInserter.InsertAfter(

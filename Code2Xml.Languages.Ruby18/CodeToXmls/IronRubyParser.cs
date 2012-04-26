@@ -19,9 +19,9 @@
 using System;
 using System.IO;
 using System.Xml.Linq;
-using Code2Xml.Core.Resources;
 using Code2Xml.Languages.Ruby18.Properties;
 using IronRuby;
+using Paraiba.IO;
 using Paraiba.Text;
 
 namespace Code2Xml.Languages.Ruby18.CodeToXmls {
@@ -33,47 +33,48 @@ namespace Code2Xml.Languages.Ruby18.CodeToXmls {
 		private readonly Func<XElement, string> ParseXmlFunc;
 
 		public IronRubyParser() {
-			ResourceManager.WriteResourceFiles(
-					DirectoryPath,
-					new[] {
-							Tuple.Create(
-									Path.Combine("racc", "parser.rb"),
-									Resources.racc_parser),
-							Tuple.Create(
-									"composite_sexp_processor.rb",
-									Resources.composite_sexp_processor),
-							Tuple.Create(
-									"gauntlet_rubyparser.rb",
-									Resources.gauntlet_rubyparser),
-							Tuple.Create("parser.rb", Resources.parser),
-							Tuple.Create("ruby_lexer.rb", Resources.ruby_lexer),
-							Tuple.Create(
-									"ruby_parser.rb", Resources.ruby_parser),
-							Tuple.Create(
-									"ruby_parser_extras.rb",
-									Resources.ruby_parser_extras),
-							Tuple.Create(
-									"ruby_parser_README.txt",
-									Resources.ruby_parser_README),
-							Tuple.Create("ruby2ruby.rb", Resources.ruby2ruby),
-							Tuple.Create(
-									"ruby2ruby_README.txt",
-									Resources.ruby2ruby_README),
-							Tuple.Create("sexp.rb", Resources.sexp),
-							Tuple.Create(
-									"sexp_processor.rb",
-									Resources.sexp_processor),
-							Tuple.Create(
-									"SexpProcessor_README.txt",
-									Resources.SexpProcessor_README)
-							,
-							Tuple.Create("sjis.rb", Resources.sjis),
-							Tuple.Create("stringio.rb", Resources.stringio),
-							Tuple.Create("strscan.rb", Resources.strscan),
-							Tuple.Create("unique.rb", Resources.unique),
-							Tuple.Create(
-									"zkcount_08a2.rb", Resources.zkcount_08a2),
-					});
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "racc", "parser.rb"), Resources.racc_parser);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "composite_sexp_processor.rb"),
+					Resources.composite_sexp_processor);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "gauntlet_rubyparser.rb"),
+					Resources.gauntlet_rubyparser);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "parser.rb"), Resources.parser);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "ruby_lexer.rb"), Resources.ruby_lexer);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "ruby_parser.rb"), Resources.ruby_parser);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "ruby_parser_extras.rb"),
+					Resources.ruby_parser_extras);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "ruby_parser_README.txt"),
+					Resources.ruby_parser_README);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "ruby2ruby.rb"), Resources.ruby2ruby);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "ruby2ruby_README.txt"),
+					Resources.ruby2ruby_README);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "sexp.rb"), Resources.sexp);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "sexp_processor.rb"), Resources.sexp_processor);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "SexpProcessor_README.txt"),
+					Resources.SexpProcessor_README);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "sjis.rb"), Resources.sjis);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "stringio.rb"), Resources.stringio);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "strscan.rb"), Resources.strscan);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "unique.rb"), Resources.unique);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "zkcount_08a2.rb"), Resources.zkcount_08a2);
 
 			var engine = Ruby.CreateEngine();
 			// ir.exe.config を参照のこと

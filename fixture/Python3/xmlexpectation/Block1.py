@@ -18,7 +18,7 @@
                                   <factor>
                                     <power>
                                       <atom>
-                                        <NAME startline="1" endline="1">i</NAME>
+                                        <NAME startline="1">i</NAME>
                                       </atom>
                                     </power>
                                   </factor>
@@ -34,7 +34,7 @@
               </or_test>
             </test>
           </testlist_star_expr>
-          <EQUAL startline="1" endline="1">=</EQUAL>
+          <EQUAL startline="1">=</EQUAL>
           <testlist_star_expr>
             <test>
               <or_test>
@@ -50,7 +50,7 @@
                                   <factor>
                                     <power>
                                       <atom>
-                                        <NUMBER startline="1" endline="1">0</NUMBER>
+                                        <NUMBER startline="1">0</NUMBER>
                                       </atom>
                                     </power>
                                   </factor>
@@ -68,13 +68,13 @@
           </testlist_star_expr>
         </expr_stmt>
       </small_stmt>
-      <NEWLINE startline="1" endline="1"></NEWLINE>
+      <NEWLINE startline="1"></NEWLINE>
     </simple_stmt>
   </stmt>
   <stmt>
     <compound_stmt>
       <if_stmt>
-        <NAME startline="2" endline="2">if</NAME>
+        <NAME startline="2">if</NAME>
         <test>
           <or_test>
             <and_test>
@@ -89,7 +89,7 @@
                               <factor>
                                 <power>
                                   <atom>
-                                    <NAME startline="2" endline="2">i</NAME>
+                                    <NAME startline="2">i</NAME>
                                   </atom>
                                 </power>
                               </factor>
@@ -100,7 +100,7 @@
                     </xor_expr>
                   </expr>
                   <comp_op>
-                    <EQEQUAL startline="2" endline="2">==</EQEQUAL>
+                    <EQEQUAL startline="2">==</EQEQUAL>
                   </comp_op>
                   <expr>
                     <xor_expr>
@@ -111,7 +111,7 @@
                               <factor>
                                 <power>
                                   <atom>
-                                    <NUMBER startline="2" endline="2">0</NUMBER>
+                                    <NUMBER startline="2">0</NUMBER>
                                   </atom>
                                 </power>
                               </factor>
@@ -126,7 +126,7 @@
             </and_test>
           </or_test>
         </test>
-        <COLON startline="2" endline="2">:</COLON>
+        <COLON startline="2">:</COLON>
         <suite>
           <simple_stmt>
             <small_stmt>
@@ -146,10 +146,10 @@
                                         <factor>
                                           <power>
                                             <atom>
-                                              <NAME startline="2" endline="2">print</NAME>
+                                              <NAME startline="2">print</NAME>
                                             </atom>
                                             <trailer>
-                                              <LPAR startline="2" endline="2">(</LPAR>
+                                              <LPAR startline="2">(</LPAR>
                                               <arglist>
                                                 <argument>
                                                   <test>
@@ -166,7 +166,7 @@
                                                                         <factor>
                                                                           <power>
                                                                             <atom>
-                                                                              <STRING startline="2" endline="2">"test"</STRING>
+                                                                              <STRING startline="2">"test"</STRING>
                                                                             </atom>
                                                                           </power>
                                                                         </factor>
@@ -183,7 +183,7 @@
                                                   </test>
                                                 </argument>
                                               </arglist>
-                                              <RPAR startline="2" endline="2">)</RPAR>
+                                              <RPAR startline="2">)</RPAR>
                                             </trailer>
                                           </power>
                                         </factor>
@@ -201,7 +201,7 @@
                 </testlist_star_expr>
               </expr_stmt>
             </small_stmt>
-            <NEWLINE startline="2" endline="2"></NEWLINE>
+            <NEWLINE startline="2"></NEWLINE>
           </simple_stmt>
         </suite>
       </if_stmt>
@@ -210,7 +210,7 @@
   <stmt>
     <compound_stmt>
       <while_stmt>
-        <NAME startline="3" endline="3">while</NAME>
+        <NAME startline="3">while</NAME>
         <test>
           <or_test>
             <and_test>
@@ -225,7 +225,7 @@
                               <factor>
                                 <power>
                                   <atom>
-                                    <NAME startline="3" endline="3">i</NAME>
+                                    <NAME startline="3">i</NAME>
                                   </atom>
                                 </power>
                               </factor>
@@ -236,7 +236,7 @@
                     </xor_expr>
                   </expr>
                   <comp_op>
-                    <NOTEQUAL startline="3" endline="3">!=</NOTEQUAL>
+                    <NOTEQUAL startline="3">!=</NOTEQUAL>
                   </comp_op>
                   <expr>
                     <xor_expr>
@@ -247,7 +247,7 @@
                               <factor>
                                 <power>
                                   <atom>
-                                    <NUMBER startline="3" endline="3">0</NUMBER>
+                                    <NUMBER startline="3">0</NUMBER>
                                   </atom>
                                 </power>
                               </factor>
@@ -262,7 +262,7 @@
             </and_test>
           </or_test>
         </test>
-        <COLON startline="3" endline="3">:</COLON>
+        <COLON startline="3">:</COLON>
         <suite>
           <simple_stmt>
             <small_stmt>
@@ -282,10 +282,10 @@
                                         <factor>
                                           <power>
                                             <atom>
-                                              <NAME startline="3" endline="3">print</NAME>
+                                              <NAME startline="3">print</NAME>
                                             </atom>
                                             <trailer>
-                                              <LPAR startline="3" endline="3">(</LPAR>
+                                              <LPAR startline="3">(</LPAR>
                                               <arglist>
                                                 <argument>
                                                   <test>
@@ -302,7 +302,7 @@
                                                                         <factor>
                                                                           <power>
                                                                             <atom>
-                                                                              <STRING startline="3" endline="3">"test"</STRING>
+                                                                              <STRING startline="3">"test"</STRING>
                                                                             </atom>
                                                                           </power>
                                                                         </factor>
@@ -319,7 +319,7 @@
                                                   </test>
                                                 </argument>
                                               </arglist>
-                                              <RPAR startline="3" endline="3">)</RPAR>
+                                              <RPAR startline="3">)</RPAR>
                                             </trailer>
                                           </power>
                                         </factor>
@@ -337,7 +337,7 @@
                 </testlist_star_expr>
               </expr_stmt>
             </small_stmt>
-            <NEWLINE startline="3" endline="3"></NEWLINE>
+            <NEWLINE startline="3"></NEWLINE>
           </simple_stmt>
         </suite>
       </while_stmt>
@@ -346,7 +346,7 @@
   <stmt>
     <compound_stmt>
       <for_stmt>
-        <NAME startline="4" endline="4">for</NAME>
+        <NAME startline="4">for</NAME>
         <exprlist>
           <expr>
             <xor_expr>
@@ -357,7 +357,7 @@
                       <factor>
                         <power>
                           <atom>
-                            <NAME startline="4" endline="4">x</NAME>
+                            <NAME startline="4">x</NAME>
                           </atom>
                         </power>
                       </factor>
@@ -368,7 +368,7 @@
             </xor_expr>
           </expr>
         </exprlist>
-        <NAME startline="4" endline="4">in</NAME>
+        <NAME startline="4">in</NAME>
         <testlist>
           <test>
             <or_test>
@@ -384,7 +384,7 @@
                                 <factor>
                                   <power>
                                     <atom>
-                                      <LSQB startline="4" endline="4">[</LSQB>
+                                      <LSQB startline="4">[</LSQB>
                                       <testlist_comp>
                                         <test>
                                           <or_test>
@@ -400,7 +400,7 @@
                                                               <factor>
                                                                 <power>
                                                                   <atom>
-                                                                    <NUMBER startline="4" endline="4">0</NUMBER>
+                                                                    <NUMBER startline="4">0</NUMBER>
                                                                   </atom>
                                                                 </power>
                                                               </factor>
@@ -416,7 +416,7 @@
                                           </or_test>
                                         </test>
                                       </testlist_comp>
-                                      <RSQB startline="4" endline="4">]</RSQB>
+                                      <RSQB startline="4">]</RSQB>
                                     </atom>
                                   </power>
                                 </factor>
@@ -432,7 +432,7 @@
             </or_test>
           </test>
         </testlist>
-        <COLON startline="4" endline="4">:</COLON>
+        <COLON startline="4">:</COLON>
         <suite>
           <simple_stmt>
             <small_stmt>
@@ -452,10 +452,10 @@
                                         <factor>
                                           <power>
                                             <atom>
-                                              <NAME startline="4" endline="4">print</NAME>
+                                              <NAME startline="4">print</NAME>
                                             </atom>
                                             <trailer>
-                                              <LPAR startline="4" endline="4">(</LPAR>
+                                              <LPAR startline="4">(</LPAR>
                                               <arglist>
                                                 <argument>
                                                   <test>
@@ -472,7 +472,7 @@
                                                                         <factor>
                                                                           <power>
                                                                             <atom>
-                                                                              <STRING startline="4" endline="4">"test"</STRING>
+                                                                              <STRING startline="4">"test"</STRING>
                                                                             </atom>
                                                                           </power>
                                                                         </factor>
@@ -489,7 +489,7 @@
                                                   </test>
                                                 </argument>
                                               </arglist>
-                                              <RPAR startline="4" endline="4">)</RPAR>
+                                              <RPAR startline="4">)</RPAR>
                                             </trailer>
                                           </power>
                                         </factor>
@@ -507,7 +507,7 @@
                 </testlist_star_expr>
               </expr_stmt>
             </small_stmt>
-            <NEWLINE startline="4" endline="4"></NEWLINE>
+            <NEWLINE startline="4"></NEWLINE>
           </simple_stmt>
         </suite>
       </for_stmt>
@@ -516,7 +516,7 @@
   <stmt>
     <compound_stmt>
       <if_stmt>
-        <NAME startline="5" endline="6">if</NAME>
+        <NAME startline="6">if</NAME>
         <test>
           <or_test>
             <and_test>
@@ -531,7 +531,7 @@
                               <factor>
                                 <power>
                                   <atom>
-                                    <NAME startline="6" endline="6">i</NAME>
+                                    <NAME startline="6">i</NAME>
                                   </atom>
                                 </power>
                               </factor>
@@ -542,7 +542,7 @@
                     </xor_expr>
                   </expr>
                   <comp_op>
-                    <EQEQUAL startline="6" endline="6">==</EQEQUAL>
+                    <EQEQUAL startline="6">==</EQEQUAL>
                   </comp_op>
                   <expr>
                     <xor_expr>
@@ -553,7 +553,7 @@
                               <factor>
                                 <power>
                                   <atom>
-                                    <NUMBER startline="6" endline="6">0</NUMBER>
+                                    <NUMBER startline="6">0</NUMBER>
                                   </atom>
                                 </power>
                               </factor>
@@ -568,10 +568,10 @@
             </and_test>
           </or_test>
         </test>
-        <COLON startline="6" endline="6">:</COLON>
+        <COLON startline="6">:</COLON>
         <suite>
-          <NEWLINE startline="6" endline="6"></NEWLINE>
-          <INDENT startline="7" endline="7"></INDENT>
+          <NEWLINE startline="6"></NEWLINE>
+          <INDENT startline="7"></INDENT>
           <stmt>
             <simple_stmt>
               <small_stmt>
@@ -591,10 +591,10 @@
                                           <factor>
                                             <power>
                                               <atom>
-                                                <NAME startline="7" endline="7">print</NAME>
+                                                <NAME startline="7">print</NAME>
                                               </atom>
                                               <trailer>
-                                                <LPAR startline="7" endline="7">(</LPAR>
+                                                <LPAR startline="7">(</LPAR>
                                                 <arglist>
                                                   <argument>
                                                     <test>
@@ -611,7 +611,7 @@
                                                                           <factor>
                                                                             <power>
                                                                               <atom>
-                                                                                <STRING startline="7" endline="7">"test"</STRING>
+                                                                                <STRING startline="7">"test"</STRING>
                                                                               </atom>
                                                                             </power>
                                                                           </factor>
@@ -628,7 +628,7 @@
                                                     </test>
                                                   </argument>
                                                 </arglist>
-                                                <RPAR startline="7" endline="7">)</RPAR>
+                                                <RPAR startline="7">)</RPAR>
                                               </trailer>
                                             </power>
                                           </factor>
@@ -646,10 +646,10 @@
                   </testlist_star_expr>
                 </expr_stmt>
               </small_stmt>
-              <NEWLINE startline="7" endline="7"></NEWLINE>
+              <NEWLINE startline="7"></NEWLINE>
             </simple_stmt>
           </stmt>
-          <DEDENT startline="8" endline="8"></DEDENT>
+          <DEDENT startline="8"></DEDENT>
         </suite>
       </if_stmt>
     </compound_stmt>
@@ -657,7 +657,7 @@
   <stmt>
     <compound_stmt>
       <while_stmt>
-        <NAME startline="8" endline="8">while</NAME>
+        <NAME startline="8">while</NAME>
         <test>
           <or_test>
             <and_test>
@@ -672,7 +672,7 @@
                               <factor>
                                 <power>
                                   <atom>
-                                    <NAME startline="8" endline="8">i</NAME>
+                                    <NAME startline="8">i</NAME>
                                   </atom>
                                 </power>
                               </factor>
@@ -683,7 +683,7 @@
                     </xor_expr>
                   </expr>
                   <comp_op>
-                    <NOTEQUAL startline="8" endline="8">!=</NOTEQUAL>
+                    <NOTEQUAL startline="8">!=</NOTEQUAL>
                   </comp_op>
                   <expr>
                     <xor_expr>
@@ -694,7 +694,7 @@
                               <factor>
                                 <power>
                                   <atom>
-                                    <NUMBER startline="8" endline="8">0</NUMBER>
+                                    <NUMBER startline="8">0</NUMBER>
                                   </atom>
                                 </power>
                               </factor>
@@ -709,10 +709,10 @@
             </and_test>
           </or_test>
         </test>
-        <COLON startline="8" endline="8">:</COLON>
+        <COLON startline="8">:</COLON>
         <suite>
-          <NEWLINE startline="8" endline="8"></NEWLINE>
-          <INDENT startline="9" endline="9"></INDENT>
+          <NEWLINE startline="8"></NEWLINE>
+          <INDENT startline="9"></INDENT>
           <stmt>
             <simple_stmt>
               <small_stmt>
@@ -732,10 +732,10 @@
                                           <factor>
                                             <power>
                                               <atom>
-                                                <NAME startline="9" endline="9">print</NAME>
+                                                <NAME startline="9">print</NAME>
                                               </atom>
                                               <trailer>
-                                                <LPAR startline="9" endline="9">(</LPAR>
+                                                <LPAR startline="9">(</LPAR>
                                                 <arglist>
                                                   <argument>
                                                     <test>
@@ -752,7 +752,7 @@
                                                                           <factor>
                                                                             <power>
                                                                               <atom>
-                                                                                <STRING startline="9" endline="9">"test"</STRING>
+                                                                                <STRING startline="9">"test"</STRING>
                                                                               </atom>
                                                                             </power>
                                                                           </factor>
@@ -769,7 +769,7 @@
                                                     </test>
                                                   </argument>
                                                 </arglist>
-                                                <RPAR startline="9" endline="9">)</RPAR>
+                                                <RPAR startline="9">)</RPAR>
                                               </trailer>
                                             </power>
                                           </factor>
@@ -787,10 +787,10 @@
                   </testlist_star_expr>
                 </expr_stmt>
               </small_stmt>
-              <NEWLINE startline="9" endline="9"></NEWLINE>
+              <NEWLINE startline="9"></NEWLINE>
             </simple_stmt>
           </stmt>
-          <DEDENT startline="10" endline="10"></DEDENT>
+          <DEDENT startline="10"></DEDENT>
         </suite>
       </while_stmt>
     </compound_stmt>
@@ -798,7 +798,7 @@
   <stmt>
     <compound_stmt>
       <for_stmt>
-        <NAME startline="10" endline="10">for</NAME>
+        <NAME startline="10">for</NAME>
         <exprlist>
           <expr>
             <xor_expr>
@@ -809,7 +809,7 @@
                       <factor>
                         <power>
                           <atom>
-                            <NAME startline="10" endline="10">x</NAME>
+                            <NAME startline="10">x</NAME>
                           </atom>
                         </power>
                       </factor>
@@ -820,7 +820,7 @@
             </xor_expr>
           </expr>
         </exprlist>
-        <NAME startline="10" endline="10">in</NAME>
+        <NAME startline="10">in</NAME>
         <testlist>
           <test>
             <or_test>
@@ -836,7 +836,7 @@
                                 <factor>
                                   <power>
                                     <atom>
-                                      <LSQB startline="10" endline="10">[</LSQB>
+                                      <LSQB startline="10">[</LSQB>
                                       <testlist_comp>
                                         <test>
                                           <or_test>
@@ -852,7 +852,7 @@
                                                               <factor>
                                                                 <power>
                                                                   <atom>
-                                                                    <NUMBER startline="10" endline="10">0</NUMBER>
+                                                                    <NUMBER startline="10">0</NUMBER>
                                                                   </atom>
                                                                 </power>
                                                               </factor>
@@ -868,7 +868,7 @@
                                           </or_test>
                                         </test>
                                       </testlist_comp>
-                                      <RSQB startline="10" endline="10">]</RSQB>
+                                      <RSQB startline="10">]</RSQB>
                                     </atom>
                                   </power>
                                 </factor>
@@ -884,10 +884,10 @@
             </or_test>
           </test>
         </testlist>
-        <COLON startline="10" endline="10">:</COLON>
+        <COLON startline="10">:</COLON>
         <suite>
-          <NEWLINE startline="10" endline="10"></NEWLINE>
-          <INDENT startline="11" endline="11"></INDENT>
+          <NEWLINE startline="10"></NEWLINE>
+          <INDENT startline="11"></INDENT>
           <stmt>
             <simple_stmt>
               <small_stmt>
@@ -907,10 +907,10 @@
                                           <factor>
                                             <power>
                                               <atom>
-                                                <NAME startline="11" endline="11">print</NAME>
+                                                <NAME startline="11">print</NAME>
                                               </atom>
                                               <trailer>
-                                                <LPAR startline="11" endline="11">(</LPAR>
+                                                <LPAR startline="11">(</LPAR>
                                                 <arglist>
                                                   <argument>
                                                     <test>
@@ -927,7 +927,7 @@
                                                                           <factor>
                                                                             <power>
                                                                               <atom>
-                                                                                <STRING startline="11" endline="11">"test"</STRING>
+                                                                                <STRING startline="11">"test"</STRING>
                                                                               </atom>
                                                                             </power>
                                                                           </factor>
@@ -944,7 +944,7 @@
                                                     </test>
                                                   </argument>
                                                 </arglist>
-                                                <RPAR startline="11" endline="11">)</RPAR>
+                                                <RPAR startline="11">)</RPAR>
                                               </trailer>
                                             </power>
                                           </factor>
@@ -962,14 +962,14 @@
                   </testlist_star_expr>
                 </expr_stmt>
               </small_stmt>
-              <NEWLINE startline="11" endline="11"></NEWLINE>
+              <NEWLINE startline="11"></NEWLINE>
             </simple_stmt>
           </stmt>
-          <DEDENT startline="12" endline="12"></DEDENT>
+          <DEDENT startline="11"></DEDENT>
         </suite>
       </for_stmt>
     </compound_stmt>
   </stmt>
-  <NEWLINE startline="12" endline="12"></NEWLINE>
-  <ENDMARKER startline="13" endline="12"></ENDMARKER>
+  <NEWLINE startline="11"></NEWLINE>
+  <ENDMARKER startline="11"></ENDMARKER>
 </file_input>

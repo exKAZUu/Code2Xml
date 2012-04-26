@@ -88,12 +88,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Paraiba">
-      <HintPath>..\packages\Paraiba.1.0.1.21\lib\net40\Paraiba.dll</HintPath>
-    </Reference>
-    <Reference Include="Paraiba.Experiment, Version=1.0.1.14, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Paraiba, Version=1.0.1.28, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Paraiba.Experiment.1.0.1.14\lib\net40\Paraiba.Experiment.dll</HintPath>
+      <HintPath>..\packages\Paraiba.1.0.1.28\lib\net40\Paraiba.dll</HintPath>
+    </Reference>
+    <Reference Include="Paraiba.Experiment, Version=1.0.1.15, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Paraiba.Experiment.1.0.1.15\lib\net40\Paraiba.Experiment.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -112,7 +113,6 @@
     <Compile Include="Code2XmlConstants.cs" />
     <Compile Include="Position\CodePosition.cs" />
     <Compile Include="Position\CodePositions.cs" />
-    <Compile Include="Resources\ResourceManager.cs" />
     <Compile Include="XmlToCodes\XmlToCodeBase.cs" />
     <Compile Include="CodeToXmls\AntlrCodeToXml.cs" />
     <Compile Include="CodeToXmls\AntlrCodeToXmlContract.cs" />

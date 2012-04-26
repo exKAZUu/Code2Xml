@@ -40,13 +40,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NUnit.2.6.0.12054\lib\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="Paraiba, Version=1.0.1.21, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Paraiba, Version=1.0.1.28, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Paraiba.1.0.1.21\lib\net40\Paraiba.dll</HintPath>
+      <HintPath>..\packages\Paraiba.1.0.1.28\lib\net40\Paraiba.dll</HintPath>
     </Reference>
-    <Reference Include="Paraiba.Experiment, Version=1.0.1.14, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Paraiba.Experiment, Version=1.0.1.15, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Paraiba.Experiment.1.0.1.14\lib\net40\Paraiba.Experiment.dll</HintPath>
+      <HintPath>..\packages\Paraiba.Experiment.1.0.1.15\lib\net40\Paraiba.Experiment.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
