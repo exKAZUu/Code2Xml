@@ -24,6 +24,11 @@ using Antlr.Runtime.Tree;
 namespace Code2Xml.Core.Antlr {
 	public class XmlTreeAdaptor : CommonTreeAdaptor {
 		public CommonTokenStream TokenStream { get; set; }
+		public bool EnablePosition { get; set; }
+
+		public XmlTreeAdaptor() {
+			EnablePosition = true;
+		}
 
 		public object Create(IToken payload, XAstParserRuleReturnScope parent) {
 			Contract.Requires(parent != null);
@@ -32,9 +37,11 @@ namespace Code2Xml.Core.Antlr {
 				var name = xtoken != null ? xtoken.Name : "TOKEN";
 				var element = new XElement(name, payload.Text);
 
-				element.SetAttributeValue(Code2XmlConstants.StartLineName, payload.Line);
-				element.SetAttributeValue(
-						Code2XmlConstants.StartPositionName, payload.CharPositionInLine);
+				if (EnablePosition) {
+					element.SetAttributeValue(Code2XmlConstants.StartLineName, payload.Line);
+					element.SetAttributeValue(
+							Code2XmlConstants.StartPositionName, payload.CharPositionInLine);
+				}
 
 				//var endToken = TokenStream.Get(payload.TokenIndex + 1);
 				//element.SetAttributeValue(Code2XmlConstants.EndLineName, endToken.Line);

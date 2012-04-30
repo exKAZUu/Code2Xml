@@ -71,7 +71,7 @@ namespace Code2Xml.Core.Antlr {
 			if (code.StartsWith(leftToken)) {
 				return node;
 			}
-			var newNode = codeToXml.Generate(
+			var newNode = codeToXml.GenerateWithoutPosition(
 					leftToken + code + rightToken,
 					node.Name.LocalName);
 
@@ -79,9 +79,6 @@ namespace Code2Xml.Core.Antlr {
 					.Where(e => e.Name.LocalName.All(char.IsUpper));
 			var newTokenNodes = newNode.Descendants()
 					.Where(e => e.Name.LocalName.All(char.IsUpper));
-
-			newTokenNodes.First().RemoveAttributes();
-			newTokenNodes.Last().RemoveAttributes();
 
 			foreach (var t in oldTokenNodes.Zip(newTokenNodes.Skip(1))) {
 				foreach (var attribute in t.Item1.Attributes()) {

@@ -45,6 +45,8 @@ namespace Code2Xml.Core.Position {
 				if (startPosAttr != null) {
 					int.TryParse(startPosAttr.Value, out startPos);
 				}
+			} else {
+				return new CodePosition(-1, -1, -1, -1);
 			}
 
 			int endLine = 0, endPos = 0;

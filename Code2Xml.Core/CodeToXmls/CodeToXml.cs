@@ -41,8 +41,7 @@ namespace Code2Xml.Core.CodeToXmls {
 
 		public XElement GenerateFromFile(string path, bool throwingParseError) {
 			Contract.Requires(path != null);
-			// TODO: fix encoding
-			return GenerateFromFile(path, XEncoding.SJIS, throwingParseError);
+			return Generate(GuessEncoding.ReadAllText(path), throwingParseError);
 		}
 
 		public abstract XElement Generate(
