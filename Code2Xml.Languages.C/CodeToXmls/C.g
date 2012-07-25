@@ -152,10 +152,12 @@ gcc_qualifier                   // for gcc
 	;
 
 attribute_value                 // for gcc
-	: ( 'alias' | '__alias__' ) '(' string_literal ')'
+	: c '(' string_literal ')'
+	| ( 'alias' | '__alias__') '(' string_literal ')'
 	| ( 'aligned' | '__aligned__' ) '(' octal_literal ')'
 	| ( 'alloc_size' | '__alloc_size__' ) '(' octal_literal (',' octal_literal)* ')'
 	| ( 'always_inline' | '__always_inline__' )
+	| ( 'gnu_inline' | '__gnu_inline__' )
 	| ( 'target' | '__target__' ) '(' string_literal ')'
 	;
 
