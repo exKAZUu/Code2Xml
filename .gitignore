@@ -36,3 +36,4 @@ download
 nuspec
 /Experiments/AntlrSurvey/lib
 packages
+*~
