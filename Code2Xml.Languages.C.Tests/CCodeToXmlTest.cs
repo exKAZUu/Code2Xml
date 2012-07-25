@@ -57,6 +57,20 @@ namespace Code2Xml.Languages.C.Tests {
                     "C", "Block1.c");
             CCodeToXml.Instance.GenerateFromFile(path, true);
         }
+        [Test]
+        public void ParseMersenne()
+        {
+            var path = Fixture.GetInputPath(
+                    "C", "mersenne.c");
+            CCodeToXml.Instance.GenerateFromFile(path, true);
+        }
+        [Test]
+        public void ParseMulti()
+        {
+            var path = Fixture.GetInputPath(
+                    "C", "multi.h");
+            CCodeToXml.Instance.GenerateFromFile(path, true);
+        }
 
     }
 }
