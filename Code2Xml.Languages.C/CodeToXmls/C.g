@@ -146,7 +146,9 @@ type_specifier
 
 gcc_qualifier                   // for gcc
 	: '__builtin_va_list'
+	| '__inline'
 	| '__attribute__' '(' '(' attribute_value (',' attribute_value)* ')' ')'
+	| '__inline__'
 	;
 
 attribute_value                 // for gcc
