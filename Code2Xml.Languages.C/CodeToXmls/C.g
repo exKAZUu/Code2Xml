@@ -110,6 +110,7 @@ declaration_specifiers
 	:   (   storage_class_specifier
 		|   type_specifier
 		|   type_qualifier
+		|   gcc_qualifier
 		)+
 	;
 
@@ -138,10 +139,22 @@ type_specifier
 	| 'double'
 	| 'signed'
 	| 'unsigned'
-	| '__builtin_va_list'  // for gcc
 	| struct_or_union_specifier
 	| enum_specifier
 	| type_id
+	;
+
+gcc_qualifier                   // for gcc
+	: '__builtin_va_list'
+	| '__attribute__' '(' '(' attribute_value (',' attribute_value)* ')' ')'
+	;
+
+attribute_value                 // for gcc
+	: ( 'alias' | '__alias__' ) '(' string_literal ')'
+	| ( 'aligned' | '__aligned__' ) '(' octal_literal ')'
+	| ( 'alloc_size' | '__alloc_size__' ) '(' octal_literal (',' octal_literal)* ')'
+	| ( 'always_inline' | '__always_inline__' )
+	| ( 'target' | '__target__' ) '(' string_literal ')'
 	;
 
 type_id
