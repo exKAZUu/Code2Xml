@@ -46,7 +46,7 @@ namespace Code2Xml.Languages.C.Tests {
         public void ParseDoubleUnderScore()
         {
             var path = Fixture.GetInputPath(
-                    "C", "quicksort_p_sub2.c");
+                    "C", "DoubleUnderScore.c");
             CCodeToXml.Instance.GenerateFromFile(path, true);
         }
         
