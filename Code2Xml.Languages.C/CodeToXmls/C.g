@@ -101,7 +101,7 @@ scope {
 @init {
   $declaration::isTypedef = false;
 }
-	: 'typedef' declaration_specifiers? {$declaration::isTypedef=true;}
+	: '__extension__'? 'typedef' declaration_specifiers? {$declaration::isTypedef=true;}  // for gcc
 	  init_declarator_list ';' // special case, looking for typedef	
 	| declaration_specifiers init_declarator_list? ';'
 	;
@@ -138,7 +138,7 @@ type_specifier
 	| 'double'
 	| 'signed'
 	| 'unsigned'
-	| '__builtin_va_list'
+	| '__builtin_va_list'  // for gcc
 	| struct_or_union_specifier
 	| enum_specifier
 	| type_id
@@ -203,6 +203,7 @@ enumerator
 type_qualifier
 	: 'const'
 	| 'volatile'
+	| '__extension__'  // for gcc
 	;
 
 declarator
