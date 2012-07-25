@@ -16,68 +16,56 @@
 
 #endregion
 
-using System.IO;
-using System.Linq;
-using Antlr.Runtime;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.C.CodeToXmls;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.C.Tests {
-    [TestFixture]
-    public class CCodeToXmlTest {
-        /*
-        [Test]
-        public void ParseQuicksortp()
-        {
-            var path = Fixture.GetInputPath(
-                    "C", "quicksort_p1.c");
-            CCodeToXml.Instance.GenerateFromFile(path, true);
-        }*/
+	[TestFixture]
+	public class CCodeToXmlTest {
+		/*
+		[Test]
+		public void ParseQuicksortp()
+		{
+			var path = Fixture.GetInputPath(
+					"C", "quicksort_p1.c");
+			CCodeToXml.Instance.GenerateFromFile(path, true);
+		}*/
 
-        [Test]
-        public void ParseQuicksortpSub()
-        {
-            var path = Fixture.GetInputPath(
-                    "C", "quicksort_p_sub.c");
-            CCodeToXml.Instance.GenerateFromFile(path, true);
-        }
-        [Test]
-        public void ParseDoubleUnderScore()
-        {
-            var path = Fixture.GetInputPath(
-                    "C", "DoubleUnderScore.c");
-            CCodeToXml.Instance.GenerateFromFile(path, true);
-        }
-        
-        [Test]
-        public void ParseMulmv()
-        {
-            var path = Fixture.GetInputPath(
-                    "C", "mul_mv.c");
-            CCodeToXml.Instance.GenerateFromFile(path, true);
-        }
-        [Test]
-        public void ParseBlock1()
-        {
-            var path = Fixture.GetInputPath(
-                    "C", "Block1.c");
-            CCodeToXml.Instance.GenerateFromFile(path, true);
-        }
-        [Test]
-        public void ParseMersenne()
-        {
-            var path = Fixture.GetInputPath(
-                    "C", "mersenne.c");
-            CCodeToXml.Instance.GenerateFromFile(path, true);
-        }
-        [Test]
-        public void ParseMulti()
-        {
-            var path = Fixture.GetInputPath(
-                    "C", "multi.h");
-            CCodeToXml.Instance.GenerateFromFile(path, true);
-        }
+		[Test]
+		public void ParseQuicksortpSub() {
+			var path = Fixture.GetInputPath("C", "quicksort_p_sub.c");
+			CCodeToXml.Instance.GenerateFromFile(path, true);
+		}
 
-    }
+		[Test]
+		public void ParseDoubleUnderScore() {
+			var path = Fixture.GetInputPath("C", "DoubleUnderScore.c");
+			CCodeToXml.Instance.GenerateFromFile(path, true);
+		}
+
+		[Test]
+		public void ParseMulmv() {
+			var path = Fixture.GetInputPath("C", "mul_mv.c");
+			CCodeToXml.Instance.GenerateFromFile(path, true);
+		}
+
+		[Test]
+		public void ParseBlock1() {
+			var path = Fixture.GetInputPath("C", "Block1.c");
+			CCodeToXml.Instance.GenerateFromFile(path, true);
+		}
+
+		[Test]
+		public void ParseMersenne() {
+			var path = Fixture.GetInputPath("C", "mersenne.c");
+			CCodeToXml.Instance.GenerateFromFile(path, true);
+		}
+
+		[Test]
+		public void ParseMulti() {
+			var path = Fixture.GetInputPath("C", "multi.h");
+			CCodeToXml.Instance.GenerateFromFile(path, true);
+		}
+	}
 }
