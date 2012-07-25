@@ -31,7 +31,7 @@ namespace Code2Xml.Languages.C.Tests {
         public void ParseQuicksortp()
         {
             var path = Fixture.GetInputPath(
-                    "C", "quicksort_p.c");
+                    "C", "quicksort_p1.c");
             CCodeToXml.Instance.GenerateFromFile(path, true);
         }*/
 
