@@ -10,7 +10,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 C.g 2012-07-25 15:58:38
+// $ANTLR 3.4 C.g 2012-07-31 10:18:48
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -66,7 +66,7 @@ July 2006
 public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "CHARACTER_LITERAL", "COMMENT", "DECIMAL_LITERAL", "EscapeSequence", "Exponent", "FLOATING_POINT_LITERAL", "FloatTypeSuffix", "HEX_LITERAL", "HexDigit", "IDENTIFIER", "IntegerTypeSuffix", "LETTER", "LINE_COMMAND", "LINE_COMMENT", "OCTAL_LITERAL", "OctalEscape", "STRING_LITERAL", "UnicodeEscape", "WS", "'!'", "'!='", "'%'", "'%='", "'&&'", "'&'", "'&='", "'('", "')'", "'*'", "'*='", "'+'", "'++'", "'+='", "','", "'-'", "'--'", "'-='", "'->'", "'.'", "'...'", "'/'", "'/='", "':'", "';'", "'<'", "'<<'", "'<<='", "'<='", "'='", "'=='", "'>'", "'>='", "'>>'", "'>>='", "'?'", "'['", "']'", "'^'", "'^='", "'__builtin_va_list'", "'__extension__'", "'auto'", "'break'", "'case'", "'char'", "'const'", "'continue'", "'default'", "'do'", "'double'", "'else'", "'enum'", "'extern'", "'float'", "'for'", "'goto'", "'if'", "'int'", "'long'", "'register'", "'return'", "'short'", "'signed'", "'sizeof'", "'static'", "'struct'", "'switch'", "'typedef'", "'union'", "'unsigned'", "'void'", "'volatile'", "'while'", "'{'", "'|'", "'|='", "'||'", "'}'", "'~'"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "CHARACTER_LITERAL", "COMMENT", "DECIMAL_LITERAL", "EscapeSequence", "Exponent", "FLOATING_POINT_LITERAL", "FloatTypeSuffix", "HEX_LITERAL", "HexDigit", "IDENTIFIER", "IntegerTypeSuffix", "LETTER", "LINE_COMMAND", "LINE_COMMENT", "OCTAL_LITERAL", "OctalEscape", "STRING_LITERAL", "UnicodeEscape", "WS", "'!'", "'!='", "'%'", "'%='", "'&&'", "'&'", "'&='", "'('", "')'", "'*'", "'*='", "'+'", "'++'", "'+='", "','", "'-'", "'--'", "'-='", "'->'", "'.'", "'...'", "'/'", "'/='", "':'", "';'", "'<'", "'<<'", "'<<='", "'<='", "'='", "'=='", "'>'", "'>='", "'>>'", "'>>='", "'?'", "'['", "']'", "'^'", "'^='", "'__attribute__'", "'__builtin_va_list'", "'__extension__'", "'__inline'", "'__inline__'", "'auto'", "'break'", "'case'", "'char'", "'const'", "'continue'", "'default'", "'do'", "'double'", "'else'", "'enum'", "'extern'", "'float'", "'for'", "'goto'", "'if'", "'int'", "'long'", "'register'", "'return'", "'short'", "'signed'", "'sizeof'", "'static'", "'struct'", "'switch'", "'typedef'", "'union'", "'unsigned'", "'void'", "'volatile'", "'while'", "'{'", "'|'", "'|='", "'||'", "'}'", "'~'"
 	};
 	public const int EOF=-1;
 	public const int T__23=23;
@@ -149,6 +149,9 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	public const int T__100=100;
 	public const int T__101=101;
 	public const int T__102=102;
+	public const int T__103=103;
+	public const int T__104=104;
+	public const int T__105=105;
 	public const int CHARACTER_LITERAL=4;
 	public const int COMMENT=5;
 	public const int DECIMAL_LITERAL=6;
@@ -187,7 +190,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	public CParser(ITokenStream input, RecognizerSharedState state)
 		: base(input, state)
 	{
-		this.state.ruleMemo = new System.Collections.Generic.Dictionary<int, int>[222+1];
+		this.state.ruleMemo = new System.Collections.Generic.Dictionary<int, int>[230+1];
 
 
 		XmlTreeAdaptor treeAdaptor = default(XmlTreeAdaptor);
@@ -279,7 +282,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				try { DebugEnterDecision(1, false);
 				int LA1_0 = input.LA(1);
 
-				if ((LA1_0==IDENTIFIER||LA1_0==30||LA1_0==32||(LA1_0>=63 && LA1_0<=65)||(LA1_0>=68 && LA1_0<=69)||LA1_0==73||(LA1_0>=75 && LA1_0<=77)||(LA1_0>=81 && LA1_0<=83)||(LA1_0>=85 && LA1_0<=86)||(LA1_0>=88 && LA1_0<=89)||(LA1_0>=91 && LA1_0<=95)))
+				if ((LA1_0==IDENTIFIER||LA1_0==30||LA1_0==32||(LA1_0>=63 && LA1_0<=68)||(LA1_0>=71 && LA1_0<=72)||LA1_0==76||(LA1_0>=78 && LA1_0<=80)||(LA1_0>=84 && LA1_0<=86)||(LA1_0>=88 && LA1_0<=89)||(LA1_0>=91 && LA1_0<=92)||(LA1_0>=94 && LA1_0<=98)))
 				{
 					alt1 = 1;
 				}
@@ -383,7 +386,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			try { DebugEnterDecision(2, false);
 			int LA2_0 = input.LA(1);
 
-			if ((LA2_0==65||LA2_0==76||LA2_0==83||LA2_0==88))
+			if ((LA2_0==68||LA2_0==79||LA2_0==86||LA2_0==91))
 			{
 				int LA2_1 = input.LA(2);
 
@@ -403,7 +406,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					throw nvae;
 				}
 			}
-			else if ((LA2_0==94))
+			else if ((LA2_0==97))
 			{
 				int LA2_2 = input.LA(2);
 
@@ -423,7 +426,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					throw nvae;
 				}
 			}
-			else if ((LA2_0==68))
+			else if ((LA2_0==71))
 			{
 				int LA2_3 = input.LA(2);
 
@@ -443,7 +446,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					throw nvae;
 				}
 			}
-			else if ((LA2_0==85))
+			else if ((LA2_0==88))
 			{
 				int LA2_4 = input.LA(2);
 
@@ -463,7 +466,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					throw nvae;
 				}
 			}
-			else if ((LA2_0==81))
+			else if ((LA2_0==84))
 			{
 				int LA2_5 = input.LA(2);
 
@@ -483,7 +486,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					throw nvae;
 				}
 			}
-			else if ((LA2_0==82))
+			else if ((LA2_0==85))
 			{
 				int LA2_6 = input.LA(2);
 
@@ -503,7 +506,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					throw nvae;
 				}
 			}
-			else if ((LA2_0==77))
+			else if ((LA2_0==80))
 			{
 				int LA2_7 = input.LA(2);
 
@@ -523,7 +526,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					throw nvae;
 				}
 			}
-			else if ((LA2_0==73))
+			else if ((LA2_0==76))
 			{
 				int LA2_8 = input.LA(2);
 
@@ -543,7 +546,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					throw nvae;
 				}
 			}
-			else if ((LA2_0==86))
+			else if ((LA2_0==89))
 			{
 				int LA2_9 = input.LA(2);
 
@@ -563,7 +566,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					throw nvae;
 				}
 			}
-			else if ((LA2_0==93))
+			else if ((LA2_0==96))
 			{
 				int LA2_10 = input.LA(2);
 
@@ -583,7 +586,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					throw nvae;
 				}
 			}
-			else if ((LA2_0==63))
+			else if ((LA2_0==92||LA2_0==95))
 			{
 				int LA2_11 = input.LA(2);
 
@@ -603,7 +606,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					throw nvae;
 				}
 			}
-			else if ((LA2_0==89||LA2_0==92))
+			else if ((LA2_0==78))
 			{
 				int LA2_12 = input.LA(2);
 
@@ -623,7 +626,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					throw nvae;
 				}
 			}
-			else if ((LA2_0==75))
+			else if ((LA2_0==IDENTIFIER))
 			{
 				int LA2_13 = input.LA(2);
 
@@ -631,7 +634,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				{
 					alt2 = 1;
 				}
-				else if ((true))
+				else if (((isTypeName(input.LT(1).getText()))))
 				{
 					alt2 = 2;
 				}
@@ -643,7 +646,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					throw nvae;
 				}
 			}
-			else if ((LA2_0==IDENTIFIER))
+			else if ((LA2_0==65))
 			{
 				int LA2_14 = input.LA(2);
 
@@ -651,7 +654,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				{
 					alt2 = 1;
 				}
-				else if (((isTypeName(input.LT(1).getText()))))
+				else if ((true))
 				{
 					alt2 = 2;
 				}
@@ -683,15 +686,47 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					throw nvae;
 				}
 			}
-			else if ((LA2_0==32) && (EvaluatePredicate(synpred4_C_fragment)))
+			else if ((LA2_0==66))
 			{
-				alt2 = 1;
+				int LA2_16 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred4_C_fragment)))
+				{
+					alt2 = 1;
+				}
+				else if ((true))
+				{
+					alt2 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 2, 16, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
 			}
-			else if ((LA2_0==30) && (EvaluatePredicate(synpred4_C_fragment)))
+			else if ((LA2_0==63))
 			{
-				alt2 = 1;
+				int LA2_17 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred4_C_fragment)))
+				{
+					alt2 = 1;
+				}
+				else if ((true))
+				{
+					alt2 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 2, 17, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
 			}
-			else if ((LA2_0==69||LA2_0==95))
+			else if ((LA2_0==67))
 			{
 				int LA2_18 = input.LA(2);
 
@@ -711,7 +746,35 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					throw nvae;
 				}
 			}
-			else if ((LA2_0==91))
+			else if ((LA2_0==32) && (EvaluatePredicate(synpred4_C_fragment)))
+			{
+				alt2 = 1;
+			}
+			else if ((LA2_0==30) && (EvaluatePredicate(synpred4_C_fragment)))
+			{
+				alt2 = 1;
+			}
+			else if ((LA2_0==72||LA2_0==98))
+			{
+				int LA2_21 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred4_C_fragment)))
+				{
+					alt2 = 1;
+				}
+				else if ((true))
+				{
+					alt2 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 2, 21, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+			else if ((LA2_0==94))
 			{
 				alt2 = 2;
 			}
@@ -833,7 +896,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			try { DebugEnterDecision(3, false);
 			int LA3_0 = input.LA(1);
 
-			if (((LA3_0>=63 && LA3_0<=65)||(LA3_0>=68 && LA3_0<=69)||LA3_0==73||(LA3_0>=75 && LA3_0<=77)||(LA3_0>=81 && LA3_0<=83)||(LA3_0>=85 && LA3_0<=86)||(LA3_0>=88 && LA3_0<=89)||(LA3_0>=92 && LA3_0<=95)))
+			if (((LA3_0>=63 && LA3_0<=68)||(LA3_0>=71 && LA3_0<=72)||LA3_0==76||(LA3_0>=78 && LA3_0<=80)||(LA3_0>=84 && LA3_0<=86)||(LA3_0>=88 && LA3_0<=89)||(LA3_0>=91 && LA3_0<=92)||(LA3_0>=95 && LA3_0<=98)))
 			{
 				alt3 = 1;
 			}
@@ -848,7 +911,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					break;
 				case IDENTIFIER:
 					{
-					int LA3_19 = input.LA(3);
+					int LA3_22 = input.LA(3);
 
 					if ((((EvaluatePredicate(synpred5_C_fragment)&&EvaluatePredicate(synpred5_C_fragment))&&(isTypeName(input.LT(1).getText())))))
 					{
@@ -858,39 +921,6 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					break;
 				case 30:
 					{
-					int LA3_20 = input.LA(3);
-
-					if ((((EvaluatePredicate(synpred5_C_fragment)&&EvaluatePredicate(synpred5_C_fragment))&&(isTypeName(input.LT(1).getText())))))
-					{
-						alt3 = 1;
-					}
-					}
-					break;
-				case 65:
-				case 76:
-				case 83:
-				case 88:
-					{
-					int LA3_21 = input.LA(3);
-
-					if ((((EvaluatePredicate(synpred5_C_fragment)&&EvaluatePredicate(synpred5_C_fragment))&&(isTypeName(input.LT(1).getText())))))
-					{
-						alt3 = 1;
-					}
-					}
-					break;
-				case 94:
-					{
-					int LA3_22 = input.LA(3);
-
-					if ((((EvaluatePredicate(synpred5_C_fragment)&&EvaluatePredicate(synpred5_C_fragment))&&(isTypeName(input.LT(1).getText())))))
-					{
-						alt3 = 1;
-					}
-					}
-					break;
-				case 68:
-					{
 					int LA3_23 = input.LA(3);
 
 					if ((((EvaluatePredicate(synpred5_C_fragment)&&EvaluatePredicate(synpred5_C_fragment))&&(isTypeName(input.LT(1).getText())))))
@@ -899,7 +929,10 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					}
 					}
 					break;
-				case 85:
+				case 68:
+				case 79:
+				case 86:
+				case 91:
 					{
 					int LA3_24 = input.LA(3);
 
@@ -909,7 +942,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					}
 					}
 					break;
-				case 81:
+				case 97:
 					{
 					int LA3_25 = input.LA(3);
 
@@ -919,7 +952,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					}
 					}
 					break;
-				case 82:
+				case 71:
 					{
 					int LA3_26 = input.LA(3);
 
@@ -929,7 +962,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					}
 					}
 					break;
-				case 77:
+				case 88:
 					{
 					int LA3_27 = input.LA(3);
 
@@ -939,7 +972,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					}
 					}
 					break;
-				case 73:
+				case 84:
 					{
 					int LA3_28 = input.LA(3);
 
@@ -949,7 +982,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					}
 					}
 					break;
-				case 86:
+				case 85:
 					{
 					int LA3_29 = input.LA(3);
 
@@ -959,7 +992,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					}
 					}
 					break;
-				case 93:
+				case 80:
 					{
 					int LA3_30 = input.LA(3);
 
@@ -969,7 +1002,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					}
 					}
 					break;
-				case 63:
+				case 76:
 					{
 					int LA3_31 = input.LA(3);
 
@@ -980,7 +1013,6 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					}
 					break;
 				case 89:
-				case 92:
 					{
 					int LA3_32 = input.LA(3);
 
@@ -990,7 +1022,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					}
 					}
 					break;
-				case 75:
+				case 96:
 					{
 					int LA3_33 = input.LA(3);
 
@@ -1000,7 +1032,8 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					}
 					}
 					break;
-				case 64:
+				case 92:
+				case 95:
 					{
 					int LA3_34 = input.LA(3);
 
@@ -1010,10 +1043,70 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					}
 					}
 					break;
-				case 69:
-				case 95:
+				case 78:
+					{
+					int LA3_35 = input.LA(3);
+
+					if ((((EvaluatePredicate(synpred5_C_fragment)&&EvaluatePredicate(synpred5_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+					{
+						alt3 = 1;
+					}
+					}
+					break;
+				case 65:
 					{
 					int LA3_36 = input.LA(3);
+
+					if ((((EvaluatePredicate(synpred5_C_fragment)&&EvaluatePredicate(synpred5_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+					{
+						alt3 = 1;
+					}
+					}
+					break;
+				case 64:
+					{
+					int LA3_37 = input.LA(3);
+
+					if ((((EvaluatePredicate(synpred5_C_fragment)&&EvaluatePredicate(synpred5_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+					{
+						alt3 = 1;
+					}
+					}
+					break;
+				case 66:
+					{
+					int LA3_38 = input.LA(3);
+
+					if ((((EvaluatePredicate(synpred5_C_fragment)&&EvaluatePredicate(synpred5_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+					{
+						alt3 = 1;
+					}
+					}
+					break;
+				case 63:
+					{
+					int LA3_39 = input.LA(3);
+
+					if ((((EvaluatePredicate(synpred5_C_fragment)&&EvaluatePredicate(synpred5_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+					{
+						alt3 = 1;
+					}
+					}
+					break;
+				case 67:
+					{
+					int LA3_40 = input.LA(3);
+
+					if ((((EvaluatePredicate(synpred5_C_fragment)&&EvaluatePredicate(synpred5_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+					{
+						alt3 = 1;
+					}
+					}
+					break;
+				case 72:
+				case 98:
+					{
+					int LA3_42 = input.LA(3);
 
 					if ((((EvaluatePredicate(synpred5_C_fragment)&&EvaluatePredicate(synpred5_C_fragment))&&(isTypeName(input.LT(1).getText())))))
 					{
@@ -1057,11 +1150,11 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			try { DebugEnterDecision(5, false);
 			int LA5_0 = input.LA(1);
 
-			if ((LA5_0==IDENTIFIER||(LA5_0>=63 && LA5_0<=65)||(LA5_0>=68 && LA5_0<=69)||LA5_0==73||(LA5_0>=75 && LA5_0<=77)||(LA5_0>=81 && LA5_0<=83)||(LA5_0>=85 && LA5_0<=86)||(LA5_0>=88 && LA5_0<=89)||(LA5_0>=91 && LA5_0<=95)))
+			if ((LA5_0==IDENTIFIER||(LA5_0>=63 && LA5_0<=68)||(LA5_0>=71 && LA5_0<=72)||LA5_0==76||(LA5_0>=78 && LA5_0<=80)||(LA5_0>=84 && LA5_0<=86)||(LA5_0>=88 && LA5_0<=89)||(LA5_0>=91 && LA5_0<=92)||(LA5_0>=94 && LA5_0<=98)))
 			{
 				alt5 = 1;
 			}
-			else if ((LA5_0==97))
+			else if ((LA5_0==100))
 			{
 				alt5 = 2;
 			}
@@ -1089,7 +1182,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					try { DebugEnterDecision(4, false);
 					int LA4_0 = input.LA(1);
 
-					if ((LA4_0==IDENTIFIER||(LA4_0>=63 && LA4_0<=65)||(LA4_0>=68 && LA4_0<=69)||LA4_0==73||(LA4_0>=75 && LA4_0<=77)||(LA4_0>=81 && LA4_0<=83)||(LA4_0>=85 && LA4_0<=86)||(LA4_0>=88 && LA4_0<=89)||(LA4_0>=91 && LA4_0<=95)))
+					if ((LA4_0==IDENTIFIER||(LA4_0>=63 && LA4_0<=68)||(LA4_0>=71 && LA4_0<=72)||LA4_0==76||(LA4_0>=78 && LA4_0<=80)||(LA4_0>=84 && LA4_0<=86)||(LA4_0>=88 && LA4_0<=89)||(LA4_0>=91 && LA4_0<=92)||(LA4_0>=94 && LA4_0<=98)))
 					{
 						alt4 = 1;
 					}
@@ -1244,15 +1337,15 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			try { DebugEnterDecision(9, false);
 			switch (input.LA(1))
 			{
-			case 64:
+			case 65:
 				{
 				int LA9_1 = input.LA(2);
 
-				if ((LA9_1==91))
+				if ((LA9_1==94))
 				{
 					alt9 = 1;
 				}
-				else if ((LA9_1==IDENTIFIER||LA9_1==30||LA9_1==32||LA9_1==47||(LA9_1>=63 && LA9_1<=65)||(LA9_1>=68 && LA9_1<=69)||LA9_1==73||(LA9_1>=75 && LA9_1<=77)||(LA9_1>=81 && LA9_1<=83)||(LA9_1>=85 && LA9_1<=86)||(LA9_1>=88 && LA9_1<=89)||(LA9_1>=92 && LA9_1<=95)))
+				else if ((LA9_1==IDENTIFIER||LA9_1==30||LA9_1==32||LA9_1==47||(LA9_1>=63 && LA9_1<=68)||(LA9_1>=71 && LA9_1<=72)||LA9_1==76||(LA9_1>=78 && LA9_1<=80)||(LA9_1>=84 && LA9_1<=86)||(LA9_1>=88 && LA9_1<=89)||(LA9_1>=91 && LA9_1<=92)||(LA9_1>=95 && LA9_1<=98)))
 				{
 					alt9 = 2;
 				}
@@ -1265,31 +1358,34 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				}
 				}
 				break;
-			case 91:
+			case 94:
 				{
 				alt9 = 1;
 				}
 				break;
 			case IDENTIFIER:
 			case 63:
-			case 65:
+			case 64:
+			case 66:
+			case 67:
 			case 68:
-			case 69:
-			case 73:
-			case 75:
+			case 71:
+			case 72:
 			case 76:
-			case 77:
-			case 81:
-			case 82:
-			case 83:
+			case 78:
+			case 79:
+			case 80:
+			case 84:
 			case 85:
 			case 86:
 			case 88:
 			case 89:
+			case 91:
 			case 92:
-			case 93:
-			case 94:
 			case 95:
+			case 96:
+			case 97:
+			case 98:
 				{
 				alt9 = 2;
 				}
@@ -1319,7 +1415,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				try { DebugEnterDecision(6, false);
 				int LA6_0 = input.LA(1);
 
-				if ((LA6_0==64))
+				if ((LA6_0==65))
 				{
 					alt6 = 1;
 				}
@@ -1331,7 +1427,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					// C.g:104:4: '__extension__'
 					{
 					DebugLocation(104, 4);
-					string_literal9=(IToken)Match(input,64,Follow._64_in_declaration181); if (state.failed) return retval;
+					string_literal9=(IToken)Match(input,65,Follow._65_in_declaration181); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal9_tree = (object)adaptor.Create(string_literal9, retval);
 					adaptor.AddChild(root_0, string_literal9_tree);
@@ -1344,7 +1440,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				} finally { DebugExitSubRule(6); }
 
 				DebugLocation(104, 21);
-				string_literal10=(IToken)Match(input,91,Follow._91_in_declaration184); if (state.failed) return retval;
+				string_literal10=(IToken)Match(input,94,Follow._94_in_declaration184); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal10_tree = (object)adaptor.Create(string_literal10, retval);
 				adaptor.AddChild(root_0, string_literal10_tree);
@@ -1356,21 +1452,21 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				try { DebugEnterDecision(7, false);
 				int LA7_0 = input.LA(1);
 
-				if (((LA7_0>=63 && LA7_0<=65)||(LA7_0>=68 && LA7_0<=69)||LA7_0==73||(LA7_0>=75 && LA7_0<=77)||(LA7_0>=81 && LA7_0<=83)||(LA7_0>=85 && LA7_0<=86)||(LA7_0>=88 && LA7_0<=89)||(LA7_0>=92 && LA7_0<=95)))
+				if (((LA7_0>=63 && LA7_0<=68)||(LA7_0>=71 && LA7_0<=72)||LA7_0==76||(LA7_0>=78 && LA7_0<=80)||(LA7_0>=84 && LA7_0<=86)||(LA7_0>=88 && LA7_0<=89)||(LA7_0>=91 && LA7_0<=92)||(LA7_0>=95 && LA7_0<=98)))
 				{
 					alt7 = 1;
 				}
 				else if ((LA7_0==IDENTIFIER))
 				{
-					int LA7_14 = input.LA(2);
+					int LA7_13 = input.LA(2);
 
-					if ((LA7_14==IDENTIFIER||LA7_14==32||(LA7_14>=63 && LA7_14<=65)||(LA7_14>=68 && LA7_14<=69)||LA7_14==73||(LA7_14>=75 && LA7_14<=77)||(LA7_14>=81 && LA7_14<=83)||(LA7_14>=85 && LA7_14<=86)||(LA7_14>=88 && LA7_14<=89)||(LA7_14>=92 && LA7_14<=95)))
+					if ((LA7_13==IDENTIFIER||LA7_13==32||(LA7_13>=63 && LA7_13<=68)||(LA7_13>=71 && LA7_13<=72)||LA7_13==76||(LA7_13>=78 && LA7_13<=80)||(LA7_13>=84 && LA7_13<=86)||(LA7_13>=88 && LA7_13<=89)||(LA7_13>=91 && LA7_13<=92)||(LA7_13>=95 && LA7_13<=98)))
 					{
 						alt7 = 1;
 					}
-					else if ((LA7_14==30))
+					else if ((LA7_13==30))
 					{
-						int LA7_20 = input.LA(3);
+						int LA7_23 = input.LA(3);
 
 						if ((((EvaluatePredicate(synpred9_C_fragment)&&EvaluatePredicate(synpred9_C_fragment))&&(isTypeName(input.LT(1).getText())))))
 						{
@@ -1506,7 +1602,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_declaration_specifiers();
 
 	// $ANTLR start "declaration_specifiers"
-	// C.g:109:1: declaration_specifiers : ( storage_class_specifier | type_specifier | type_qualifier )+ ;
+	// C.g:109:1: declaration_specifiers : ( storage_class_specifier | type_specifier | type_qualifier | gcc_qualifier )+ ;
 	[GrammarRule("declaration_specifiers")]
 	public XAstParserRuleReturnScope declaration_specifiers()
 	{
@@ -1522,6 +1618,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		XAstParserRuleReturnScope storage_class_specifier17 = default(XAstParserRuleReturnScope);
 		XAstParserRuleReturnScope type_specifier18 = default(XAstParserRuleReturnScope);
 		XAstParserRuleReturnScope type_qualifier19 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope gcc_qualifier20 = default(XAstParserRuleReturnScope);
 
 		try { DebugEnterRule(GrammarFileName, "declaration_specifiers");
 		DebugLocation(109, 1);
@@ -1529,19 +1626,19 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 5)) { return retval; }
 
-			// C.g:110:2: ( ( storage_class_specifier | type_specifier | type_qualifier )+ )
+			// C.g:110:2: ( ( storage_class_specifier | type_specifier | type_qualifier | gcc_qualifier )+ )
 			DebugEnterAlt(1);
-			// C.g:110:6: ( storage_class_specifier | type_specifier | type_qualifier )+
+			// C.g:110:6: ( storage_class_specifier | type_specifier | type_qualifier | gcc_qualifier )+
 			{
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(110, 6);
-			// C.g:110:6: ( storage_class_specifier | type_specifier | type_qualifier )+
+			// C.g:110:6: ( storage_class_specifier | type_specifier | type_qualifier | gcc_qualifier )+
 			int cnt10=0;
 			try { DebugEnterSubRule(10);
 			while (true)
 			{
-				int alt10=4;
+				int alt10=5;
 				try { DebugEnterDecision(10, false);
 				switch (input.LA(1))
 				{
@@ -1557,36 +1654,43 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 					}
 					break;
-				case 65:
-				case 76:
-				case 83:
-				case 88:
+				case 68:
+				case 79:
+				case 86:
+				case 91:
 					{
 					alt10 = 1;
 					}
 					break;
-				case 63:
-				case 68:
-				case 73:
-				case 75:
-				case 77:
-				case 81:
-				case 82:
+				case 71:
+				case 76:
+				case 78:
+				case 80:
+				case 84:
 				case 85:
-				case 86:
+				case 88:
 				case 89:
 				case 92:
-				case 93:
-				case 94:
+				case 95:
+				case 96:
+				case 97:
 					{
 					alt10 = 2;
 					}
 					break;
-				case 64:
-				case 69:
-				case 95:
+				case 65:
+				case 72:
+				case 98:
 					{
 					alt10 = 3;
+					}
+					break;
+				case 63:
+				case 64:
+				case 66:
+				case 67:
+					{
+					alt10 = 4;
 					}
 					break;
 				}
@@ -1633,6 +1737,19 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 					}
 					break;
+				case 4:
+					DebugEnterAlt(4);
+					// C.g:113:7: gcc_qualifier
+					{
+					DebugLocation(113, 7);
+					PushFollow(Follow._gcc_qualifier_in_declaration_specifiers250);
+					gcc_qualifier20=gcc_qualifier();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, gcc_qualifier20.Tree, gcc_qualifier20, retval);
+
+					}
+					break;
 
 				default:
 					if (cnt10 >= 1)
@@ -1675,7 +1792,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			if (state.backtracking > 0) { Memoize(input, 5, declaration_specifiers_StartIndex); }
 
 		}
-		DebugLocation(114, 1);
+		DebugLocation(115, 1);
 		} finally { DebugExitRule(GrammarFileName, "declaration_specifiers"); }
 		return retval;
 
@@ -1686,7 +1803,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_init_declarator_list();
 
 	// $ANTLR start "init_declarator_list"
-	// C.g:116:1: init_declarator_list : init_declarator ( ',' init_declarator )* ;
+	// C.g:117:1: init_declarator_list : init_declarator ( ',' init_declarator )* ;
 	[GrammarRule("init_declarator_list")]
 	public XAstParserRuleReturnScope init_declarator_list()
 	{
@@ -1699,31 +1816,31 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken char_literal21 = default(IToken);
-		XAstParserRuleReturnScope init_declarator20 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope init_declarator22 = default(XAstParserRuleReturnScope);
+		IToken char_literal22 = default(IToken);
+		XAstParserRuleReturnScope init_declarator21 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope init_declarator23 = default(XAstParserRuleReturnScope);
 
-		object char_literal21_tree = default(object);
+		object char_literal22_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "init_declarator_list");
-		DebugLocation(116, 1);
+		DebugLocation(117, 1);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 6)) { return retval; }
 
-			// C.g:117:2: ( init_declarator ( ',' init_declarator )* )
+			// C.g:118:2: ( init_declarator ( ',' init_declarator )* )
 			DebugEnterAlt(1);
-			// C.g:117:4: init_declarator ( ',' init_declarator )*
+			// C.g:118:4: init_declarator ( ',' init_declarator )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(117, 4);
-			PushFollow(Follow._init_declarator_in_init_declarator_list258);
-			init_declarator20=init_declarator();
+			DebugLocation(118, 4);
+			PushFollow(Follow._init_declarator_in_init_declarator_list266);
+			init_declarator21=init_declarator();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, init_declarator20.Tree, init_declarator20, retval);
-			DebugLocation(117, 20);
-			// C.g:117:20: ( ',' init_declarator )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, init_declarator21.Tree, init_declarator21, retval);
+			DebugLocation(118, 20);
+			// C.g:118:20: ( ',' init_declarator )*
 			try { DebugEnterSubRule(11);
 			while (true)
 			{
@@ -1742,20 +1859,20 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:117:21: ',' init_declarator
+					// C.g:118:21: ',' init_declarator
 					{
-					DebugLocation(117, 21);
-					char_literal21=(IToken)Match(input,37,Follow._37_in_init_declarator_list261); if (state.failed) return retval;
+					DebugLocation(118, 21);
+					char_literal22=(IToken)Match(input,37,Follow._37_in_init_declarator_list269); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal21_tree = (object)adaptor.Create(char_literal21, retval);
-					adaptor.AddChild(root_0, char_literal21_tree);
+					char_literal22_tree = (object)adaptor.Create(char_literal22, retval);
+					adaptor.AddChild(root_0, char_literal22_tree);
 					}
-					DebugLocation(117, 25);
-					PushFollow(Follow._init_declarator_in_init_declarator_list263);
-					init_declarator22=init_declarator();
+					DebugLocation(118, 25);
+					PushFollow(Follow._init_declarator_in_init_declarator_list271);
+					init_declarator23=init_declarator();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, init_declarator22.Tree, init_declarator22, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, init_declarator23.Tree, init_declarator23, retval);
 
 					}
 					break;
@@ -1795,7 +1912,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			if (state.backtracking > 0) { Memoize(input, 6, init_declarator_list_StartIndex); }
 
 		}
-		DebugLocation(118, 1);
+		DebugLocation(119, 1);
 		} finally { DebugExitRule(GrammarFileName, "init_declarator_list"); }
 		return retval;
 
@@ -1806,7 +1923,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_init_declarator();
 
 	// $ANTLR start "init_declarator"
-	// C.g:120:1: init_declarator : declarator ( '=' initializer )? ;
+	// C.g:121:1: init_declarator : declarator ( '=' initializer )? ;
 	[GrammarRule("init_declarator")]
 	public XAstParserRuleReturnScope init_declarator()
 	{
@@ -1819,31 +1936,31 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken char_literal24 = default(IToken);
-		XAstParserRuleReturnScope declarator23 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope initializer25 = default(XAstParserRuleReturnScope);
+		IToken char_literal25 = default(IToken);
+		XAstParserRuleReturnScope declarator24 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope initializer26 = default(XAstParserRuleReturnScope);
 
-		object char_literal24_tree = default(object);
+		object char_literal25_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "init_declarator");
-		DebugLocation(120, 1);
+		DebugLocation(121, 1);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 7)) { return retval; }
 
-			// C.g:121:2: ( declarator ( '=' initializer )? )
+			// C.g:122:2: ( declarator ( '=' initializer )? )
 			DebugEnterAlt(1);
-			// C.g:121:4: declarator ( '=' initializer )?
+			// C.g:122:4: declarator ( '=' initializer )?
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(121, 4);
-			PushFollow(Follow._declarator_in_init_declarator276);
-			declarator23=declarator();
+			DebugLocation(122, 4);
+			PushFollow(Follow._declarator_in_init_declarator284);
+			declarator24=declarator();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, declarator23.Tree, declarator23, retval);
-			DebugLocation(121, 15);
-			// C.g:121:15: ( '=' initializer )?
+			if (state.backtracking == 0) adaptor.AddChild(root_0, declarator24.Tree, declarator24, retval);
+			DebugLocation(122, 15);
+			// C.g:122:15: ( '=' initializer )?
 			int alt12=2;
 			try { DebugEnterSubRule(12);
 			try { DebugEnterDecision(12, false);
@@ -1858,20 +1975,20 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:121:16: '=' initializer
+				// C.g:122:16: '=' initializer
 				{
-				DebugLocation(121, 16);
-				char_literal24=(IToken)Match(input,52,Follow._52_in_init_declarator279); if (state.failed) return retval;
+				DebugLocation(122, 16);
+				char_literal25=(IToken)Match(input,52,Follow._52_in_init_declarator287); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal24_tree = (object)adaptor.Create(char_literal24, retval);
-				adaptor.AddChild(root_0, char_literal24_tree);
+				char_literal25_tree = (object)adaptor.Create(char_literal25, retval);
+				adaptor.AddChild(root_0, char_literal25_tree);
 				}
-				DebugLocation(121, 20);
-				PushFollow(Follow._initializer_in_init_declarator281);
-				initializer25=initializer();
+				DebugLocation(122, 20);
+				PushFollow(Follow._initializer_in_init_declarator289);
+				initializer26=initializer();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, initializer25.Tree, initializer25, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, initializer26.Tree, initializer26, retval);
 
 				}
 				break;
@@ -1904,7 +2021,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			if (state.backtracking > 0) { Memoize(input, 7, init_declarator_StartIndex); }
 
 		}
-		DebugLocation(122, 1);
+		DebugLocation(123, 1);
 		} finally { DebugExitRule(GrammarFileName, "init_declarator"); }
 		return retval;
 
@@ -1915,7 +2032,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_storage_class_specifier();
 
 	// $ANTLR start "storage_class_specifier"
-	// C.g:124:1: storage_class_specifier : ( 'extern' | 'static' | 'auto' | 'register' );
+	// C.g:125:1: storage_class_specifier : ( 'extern' | 'static' | 'auto' | 'register' );
 	[GrammarRule("storage_class_specifier")]
 	public XAstParserRuleReturnScope storage_class_specifier()
 	{
@@ -1928,28 +2045,28 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken set26 = default(IToken);
+		IToken set27 = default(IToken);
 
-		object set26_tree = default(object);
+		object set27_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "storage_class_specifier");
-		DebugLocation(124, 1);
+		DebugLocation(125, 1);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 8)) { return retval; }
 
-			// C.g:125:2: ( 'extern' | 'static' | 'auto' | 'register' )
+			// C.g:126:2: ( 'extern' | 'static' | 'auto' | 'register' )
 			DebugEnterAlt(1);
 			// C.g:
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(125, 2);
+			DebugLocation(126, 2);
 
-			set26=(IToken)input.LT(1);
-			if (input.LA(1)==65||input.LA(1)==76||input.LA(1)==83||input.LA(1)==88)
+			set27=(IToken)input.LT(1);
+			if (input.LA(1)==68||input.LA(1)==79||input.LA(1)==86||input.LA(1)==91)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set26, retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set27, retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -1985,7 +2102,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			if (state.backtracking > 0) { Memoize(input, 8, storage_class_specifier_StartIndex); }
 
 		}
-		DebugLocation(129, 1);
+		DebugLocation(130, 1);
 		} finally { DebugExitRule(GrammarFileName, "storage_class_specifier"); }
 		return retval;
 
@@ -1996,7 +2113,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_type_specifier();
 
 	// $ANTLR start "type_specifier"
-	// C.g:131:1: type_specifier : ( 'void' | 'char' | 'short' | 'int' | 'long' | 'float' | 'double' | 'signed' | 'unsigned' | '__builtin_va_list' | struct_or_union_specifier | enum_specifier | type_id );
+	// C.g:132:1: type_specifier : ( 'void' | 'char' | 'short' | 'int' | 'long' | 'float' | 'double' | 'signed' | 'unsigned' | struct_or_union_specifier | enum_specifier | type_id );
 	[GrammarRule("type_specifier")]
 	public XAstParserRuleReturnScope type_specifier()
 	{
@@ -2009,7 +2126,6 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken string_literal27 = default(IToken);
 		IToken string_literal28 = default(IToken);
 		IToken string_literal29 = default(IToken);
 		IToken string_literal30 = default(IToken);
@@ -2023,7 +2139,6 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		XAstParserRuleReturnScope enum_specifier38 = default(XAstParserRuleReturnScope);
 		XAstParserRuleReturnScope type_id39 = default(XAstParserRuleReturnScope);
 
-		object string_literal27_tree = default(object);
 		object string_literal28_tree = default(object);
 		object string_literal29_tree = default(object);
 		object string_literal30_tree = default(object);
@@ -2034,80 +2149,75 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		object string_literal35_tree = default(object);
 		object string_literal36_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "type_specifier");
-		DebugLocation(131, 1);
+		DebugLocation(132, 1);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 9)) { return retval; }
 
-			// C.g:132:2: ( 'void' | 'char' | 'short' | 'int' | 'long' | 'float' | 'double' | 'signed' | 'unsigned' | '__builtin_va_list' | struct_or_union_specifier | enum_specifier | type_id )
-			int alt13=13;
+			// C.g:133:2: ( 'void' | 'char' | 'short' | 'int' | 'long' | 'float' | 'double' | 'signed' | 'unsigned' | struct_or_union_specifier | enum_specifier | type_id )
+			int alt13=12;
 			try { DebugEnterDecision(13, false);
 			switch (input.LA(1))
 			{
-			case 94:
+			case 97:
 				{
 				alt13 = 1;
 				}
 				break;
-			case 68:
+			case 71:
 				{
 				alt13 = 2;
 				}
 				break;
-			case 85:
+			case 88:
 				{
 				alt13 = 3;
 				}
 				break;
-			case 81:
+			case 84:
 				{
 				alt13 = 4;
 				}
 				break;
-			case 82:
+			case 85:
 				{
 				alt13 = 5;
 				}
 				break;
-			case 77:
+			case 80:
 				{
 				alt13 = 6;
 				}
 				break;
-			case 73:
+			case 76:
 				{
 				alt13 = 7;
 				}
 				break;
-			case 86:
+			case 89:
 				{
 				alt13 = 8;
 				}
 				break;
-			case 93:
+			case 96:
 				{
 				alt13 = 9;
 				}
 				break;
-			case 63:
+			case 92:
+			case 95:
 				{
 				alt13 = 10;
 				}
 				break;
-			case 89:
-			case 92:
+			case 78:
 				{
 				alt13 = 11;
 				}
 				break;
-			case 75:
-				{
-				alt13 = 12;
-				}
-				break;
 			case IDENTIFIER:
 				{
-				alt13 = 13;
+				alt13 = 12;
 				}
 				break;
 			default:
@@ -2124,27 +2234,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:132:4: 'void'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(132, 4);
-				string_literal27=(IToken)Match(input,94,Follow._94_in_type_specifier320); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal27_tree = (object)adaptor.Create(string_literal27, retval);
-				adaptor.AddChild(root_0, string_literal27_tree);
-				}
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C.g:133:4: 'char'
+				// C.g:133:4: 'void'
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(133, 4);
-				string_literal28=(IToken)Match(input,68,Follow._68_in_type_specifier325); if (state.failed) return retval;
+				string_literal28=(IToken)Match(input,97,Follow._97_in_type_specifier328); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal28_tree = (object)adaptor.Create(string_literal28, retval);
 				adaptor.AddChild(root_0, string_literal28_tree);
@@ -2152,14 +2247,14 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 				}
 				break;
-			case 3:
-				DebugEnterAlt(3);
-				// C.g:134:4: 'short'
+			case 2:
+				DebugEnterAlt(2);
+				// C.g:134:4: 'char'
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(134, 4);
-				string_literal29=(IToken)Match(input,85,Follow._85_in_type_specifier330); if (state.failed) return retval;
+				string_literal29=(IToken)Match(input,71,Follow._71_in_type_specifier333); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal29_tree = (object)adaptor.Create(string_literal29, retval);
 				adaptor.AddChild(root_0, string_literal29_tree);
@@ -2167,14 +2262,14 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 				}
 				break;
-			case 4:
-				DebugEnterAlt(4);
-				// C.g:135:4: 'int'
+			case 3:
+				DebugEnterAlt(3);
+				// C.g:135:4: 'short'
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(135, 4);
-				string_literal30=(IToken)Match(input,81,Follow._81_in_type_specifier335); if (state.failed) return retval;
+				string_literal30=(IToken)Match(input,88,Follow._88_in_type_specifier338); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal30_tree = (object)adaptor.Create(string_literal30, retval);
 				adaptor.AddChild(root_0, string_literal30_tree);
@@ -2182,14 +2277,14 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 				}
 				break;
-			case 5:
-				DebugEnterAlt(5);
-				// C.g:136:4: 'long'
+			case 4:
+				DebugEnterAlt(4);
+				// C.g:136:4: 'int'
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(136, 4);
-				string_literal31=(IToken)Match(input,82,Follow._82_in_type_specifier340); if (state.failed) return retval;
+				string_literal31=(IToken)Match(input,84,Follow._84_in_type_specifier343); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal31_tree = (object)adaptor.Create(string_literal31, retval);
 				adaptor.AddChild(root_0, string_literal31_tree);
@@ -2197,14 +2292,14 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 				}
 				break;
-			case 6:
-				DebugEnterAlt(6);
-				// C.g:137:4: 'float'
+			case 5:
+				DebugEnterAlt(5);
+				// C.g:137:4: 'long'
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(137, 4);
-				string_literal32=(IToken)Match(input,77,Follow._77_in_type_specifier345); if (state.failed) return retval;
+				string_literal32=(IToken)Match(input,85,Follow._85_in_type_specifier348); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal32_tree = (object)adaptor.Create(string_literal32, retval);
 				adaptor.AddChild(root_0, string_literal32_tree);
@@ -2212,14 +2307,14 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 				}
 				break;
-			case 7:
-				DebugEnterAlt(7);
-				// C.g:138:4: 'double'
+			case 6:
+				DebugEnterAlt(6);
+				// C.g:138:4: 'float'
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(138, 4);
-				string_literal33=(IToken)Match(input,73,Follow._73_in_type_specifier350); if (state.failed) return retval;
+				string_literal33=(IToken)Match(input,80,Follow._80_in_type_specifier353); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal33_tree = (object)adaptor.Create(string_literal33, retval);
 				adaptor.AddChild(root_0, string_literal33_tree);
@@ -2227,14 +2322,14 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 				}
 				break;
-			case 8:
-				DebugEnterAlt(8);
-				// C.g:139:4: 'signed'
+			case 7:
+				DebugEnterAlt(7);
+				// C.g:139:4: 'double'
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(139, 4);
-				string_literal34=(IToken)Match(input,86,Follow._86_in_type_specifier355); if (state.failed) return retval;
+				string_literal34=(IToken)Match(input,76,Follow._76_in_type_specifier358); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal34_tree = (object)adaptor.Create(string_literal34, retval);
 				adaptor.AddChild(root_0, string_literal34_tree);
@@ -2242,14 +2337,14 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 				}
 				break;
-			case 9:
-				DebugEnterAlt(9);
-				// C.g:140:4: 'unsigned'
+			case 8:
+				DebugEnterAlt(8);
+				// C.g:140:4: 'signed'
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(140, 4);
-				string_literal35=(IToken)Match(input,93,Follow._93_in_type_specifier360); if (state.failed) return retval;
+				string_literal35=(IToken)Match(input,89,Follow._89_in_type_specifier363); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal35_tree = (object)adaptor.Create(string_literal35, retval);
 				adaptor.AddChild(root_0, string_literal35_tree);
@@ -2257,14 +2352,14 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 				}
 				break;
-			case 10:
-				DebugEnterAlt(10);
-				// C.g:141:4: '__builtin_va_list'
+			case 9:
+				DebugEnterAlt(9);
+				// C.g:141:4: 'unsigned'
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(141, 4);
-				string_literal36=(IToken)Match(input,63,Follow._63_in_type_specifier365); if (state.failed) return retval;
+				string_literal36=(IToken)Match(input,96,Follow._96_in_type_specifier368); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal36_tree = (object)adaptor.Create(string_literal36, retval);
 				adaptor.AddChild(root_0, string_literal36_tree);
@@ -2272,14 +2367,14 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 				}
 				break;
-			case 11:
-				DebugEnterAlt(11);
+			case 10:
+				DebugEnterAlt(10);
 				// C.g:142:4: struct_or_union_specifier
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(142, 4);
-				PushFollow(Follow._struct_or_union_specifier_in_type_specifier372);
+				PushFollow(Follow._struct_or_union_specifier_in_type_specifier373);
 				struct_or_union_specifier37=struct_or_union_specifier();
 				PopFollow();
 				if (state.failed) return retval;
@@ -2287,14 +2382,14 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 				}
 				break;
-			case 12:
-				DebugEnterAlt(12);
+			case 11:
+				DebugEnterAlt(11);
 				// C.g:143:4: enum_specifier
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(143, 4);
-				PushFollow(Follow._enum_specifier_in_type_specifier377);
+				PushFollow(Follow._enum_specifier_in_type_specifier378);
 				enum_specifier38=enum_specifier();
 				PopFollow();
 				if (state.failed) return retval;
@@ -2302,14 +2397,14 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 				}
 				break;
-			case 13:
-				DebugEnterAlt(13);
+			case 12:
+				DebugEnterAlt(12);
 				// C.g:144:4: type_id
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(144, 4);
-				PushFollow(Follow._type_id_in_type_specifier382);
+				PushFollow(Follow._type_id_in_type_specifier383);
 				type_id39=type_id();
 				PopFollow();
 				if (state.failed) return retval;
@@ -2348,16 +2443,435 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	}
 	// $ANTLR end "type_specifier"
 
+	partial void EnterRule_gcc_qualifier();
+	partial void LeaveRule_gcc_qualifier();
+
+	// $ANTLR start "gcc_qualifier"
+	// C.g:147:1: gcc_qualifier : ( '__builtin_va_list' | '__inline' | '__attribute__' '(' '(' attribute_value ( ',' attribute_value )* ')' ')' | '__inline__' );
+	[GrammarRule("gcc_qualifier")]
+	public XAstParserRuleReturnScope gcc_qualifier()
+	{
+		EnterRule_gcc_qualifier();
+		EnterRule("gcc_qualifier", 10);
+		var retval = new XAstParserRuleReturnScope("gcc_qualifier");
+		
+		retval.Start = (IToken)input.LT(1);
+		int gcc_qualifier_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken string_literal40 = default(IToken);
+		IToken string_literal41 = default(IToken);
+		IToken string_literal42 = default(IToken);
+		IToken char_literal43 = default(IToken);
+		IToken char_literal44 = default(IToken);
+		IToken char_literal46 = default(IToken);
+		IToken char_literal48 = default(IToken);
+		IToken char_literal49 = default(IToken);
+		IToken string_literal50 = default(IToken);
+		XAstParserRuleReturnScope attribute_value45 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope attribute_value47 = default(XAstParserRuleReturnScope);
+
+		object string_literal40_tree = default(object);
+		object string_literal41_tree = default(object);
+		object string_literal42_tree = default(object);
+		object char_literal43_tree = default(object);
+		object char_literal44_tree = default(object);
+		object char_literal46_tree = default(object);
+		object char_literal48_tree = default(object);
+		object char_literal49_tree = default(object);
+		object string_literal50_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "gcc_qualifier");
+		DebugLocation(147, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 10)) { return retval; }
+
+			// C.g:148:2: ( '__builtin_va_list' | '__inline' | '__attribute__' '(' '(' attribute_value ( ',' attribute_value )* ')' ')' | '__inline__' )
+			int alt15=4;
+			try { DebugEnterDecision(15, false);
+			switch (input.LA(1))
+			{
+			case 64:
+				{
+				alt15 = 1;
+				}
+				break;
+			case 66:
+				{
+				alt15 = 2;
+				}
+				break;
+			case 63:
+				{
+				alt15 = 3;
+				}
+				break;
+			case 67:
+				{
+				alt15 = 4;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 15, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(15); }
+			switch (alt15)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C.g:148:4: '__builtin_va_list'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(148, 4);
+				string_literal40=(IToken)Match(input,64,Follow._64_in_gcc_qualifier413); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal40_tree = (object)adaptor.Create(string_literal40, retval);
+				adaptor.AddChild(root_0, string_literal40_tree);
+				}
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C.g:149:4: '__inline'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(149, 4);
+				string_literal41=(IToken)Match(input,66,Follow._66_in_gcc_qualifier418); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal41_tree = (object)adaptor.Create(string_literal41, retval);
+				adaptor.AddChild(root_0, string_literal41_tree);
+				}
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// C.g:150:4: '__attribute__' '(' '(' attribute_value ( ',' attribute_value )* ')' ')'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(150, 4);
+				string_literal42=(IToken)Match(input,63,Follow._63_in_gcc_qualifier423); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal42_tree = (object)adaptor.Create(string_literal42, retval);
+				adaptor.AddChild(root_0, string_literal42_tree);
+				}
+				DebugLocation(150, 20);
+				char_literal43=(IToken)Match(input,30,Follow._30_in_gcc_qualifier425); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal43_tree = (object)adaptor.Create(char_literal43, retval);
+				adaptor.AddChild(root_0, char_literal43_tree);
+				}
+				DebugLocation(150, 24);
+				char_literal44=(IToken)Match(input,30,Follow._30_in_gcc_qualifier427); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal44_tree = (object)adaptor.Create(char_literal44, retval);
+				adaptor.AddChild(root_0, char_literal44_tree);
+				}
+				DebugLocation(150, 28);
+				PushFollow(Follow._attribute_value_in_gcc_qualifier429);
+				attribute_value45=attribute_value();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, attribute_value45.Tree, attribute_value45, retval);
+				DebugLocation(150, 44);
+				// C.g:150:44: ( ',' attribute_value )*
+				try { DebugEnterSubRule(14);
+				while (true)
+				{
+					int alt14=2;
+					try { DebugEnterDecision(14, false);
+					int LA14_0 = input.LA(1);
+
+					if ((LA14_0==37))
+					{
+						alt14 = 1;
+					}
+
+
+					} finally { DebugExitDecision(14); }
+					switch ( alt14 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C.g:150:45: ',' attribute_value
+						{
+						DebugLocation(150, 45);
+						char_literal46=(IToken)Match(input,37,Follow._37_in_gcc_qualifier432); if (state.failed) return retval;
+						if (state.backtracking == 0) {
+						char_literal46_tree = (object)adaptor.Create(char_literal46, retval);
+						adaptor.AddChild(root_0, char_literal46_tree);
+						}
+						DebugLocation(150, 49);
+						PushFollow(Follow._attribute_value_in_gcc_qualifier434);
+						attribute_value47=attribute_value();
+						PopFollow();
+						if (state.failed) return retval;
+						if (state.backtracking == 0) adaptor.AddChild(root_0, attribute_value47.Tree, attribute_value47, retval);
+
+						}
+						break;
+
+					default:
+						goto loop14;
+					}
+				}
+
+				loop14:
+					;
+
+				} finally { DebugExitSubRule(14); }
+
+				DebugLocation(150, 67);
+				char_literal48=(IToken)Match(input,31,Follow._31_in_gcc_qualifier438); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal48_tree = (object)adaptor.Create(char_literal48, retval);
+				adaptor.AddChild(root_0, char_literal48_tree);
+				}
+				DebugLocation(150, 71);
+				char_literal49=(IToken)Match(input,31,Follow._31_in_gcc_qualifier440); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal49_tree = (object)adaptor.Create(char_literal49, retval);
+				adaptor.AddChild(root_0, char_literal49_tree);
+				}
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// C.g:151:4: '__inline__'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(151, 4);
+				string_literal50=(IToken)Match(input,67,Follow._67_in_gcc_qualifier445); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal50_tree = (object)adaptor.Create(string_literal50, retval);
+				adaptor.AddChild(root_0, string_literal50_tree);
+				}
+
+				}
+				break;
+
+			}
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("gcc_qualifier", 10);
+			LeaveRule("gcc_qualifier", 10);
+			LeaveRule_gcc_qualifier();
+			if (state.backtracking > 0) { Memoize(input, 10, gcc_qualifier_StartIndex); }
+
+		}
+		DebugLocation(152, 1);
+		} finally { DebugExitRule(GrammarFileName, "gcc_qualifier"); }
+		return retval;
+
+	}
+	// $ANTLR end "gcc_qualifier"
+
+	partial void EnterRule_attribute_value();
+	partial void LeaveRule_attribute_value();
+
+	// $ANTLR start "attribute_value"
+	// C.g:154:1: attribute_value : IDENTIFIER ( '(' constant ( ',' constant )* ')' )? ;
+	[GrammarRule("attribute_value")]
+	public XAstParserRuleReturnScope attribute_value()
+	{
+		EnterRule_attribute_value();
+		EnterRule("attribute_value", 11);
+		var retval = new XAstParserRuleReturnScope("attribute_value");
+		
+		retval.Start = (IToken)input.LT(1);
+		int attribute_value_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken IDENTIFIER51 = default(IToken);
+		IToken char_literal52 = default(IToken);
+		IToken char_literal54 = default(IToken);
+		IToken char_literal56 = default(IToken);
+		XAstParserRuleReturnScope constant53 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope constant55 = default(XAstParserRuleReturnScope);
+
+		object IDENTIFIER51_tree = default(object);
+		object char_literal52_tree = default(object);
+		object char_literal54_tree = default(object);
+		object char_literal56_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "attribute_value");
+		DebugLocation(154, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 11)) { return retval; }
+
+			// C.g:155:2: ( IDENTIFIER ( '(' constant ( ',' constant )* ')' )? )
+			DebugEnterAlt(1);
+			// C.g:155:4: IDENTIFIER ( '(' constant ( ',' constant )* ')' )?
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(155, 4);
+			IDENTIFIER51=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_attribute_value473), "IDENTIFIER"); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			IDENTIFIER51_tree = (object)adaptor.Create(IDENTIFIER51, retval);
+			adaptor.AddChild(root_0, IDENTIFIER51_tree);
+			}
+			DebugLocation(155, 15);
+			// C.g:155:15: ( '(' constant ( ',' constant )* ')' )?
+			int alt17=2;
+			try { DebugEnterSubRule(17);
+			try { DebugEnterDecision(17, false);
+			int LA17_0 = input.LA(1);
+
+			if ((LA17_0==30))
+			{
+				alt17 = 1;
+			}
+			} finally { DebugExitDecision(17); }
+			switch (alt17)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C.g:155:17: '(' constant ( ',' constant )* ')'
+				{
+				DebugLocation(155, 17);
+				char_literal52=(IToken)Match(input,30,Follow._30_in_attribute_value477); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal52_tree = (object)adaptor.Create(char_literal52, retval);
+				adaptor.AddChild(root_0, char_literal52_tree);
+				}
+				DebugLocation(155, 21);
+				PushFollow(Follow._constant_in_attribute_value479);
+				constant53=constant();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, constant53.Tree, constant53, retval);
+				DebugLocation(155, 30);
+				// C.g:155:30: ( ',' constant )*
+				try { DebugEnterSubRule(16);
+				while (true)
+				{
+					int alt16=2;
+					try { DebugEnterDecision(16, false);
+					int LA16_0 = input.LA(1);
+
+					if ((LA16_0==37))
+					{
+						alt16 = 1;
+					}
+
+
+					} finally { DebugExitDecision(16); }
+					switch ( alt16 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C.g:155:31: ',' constant
+						{
+						DebugLocation(155, 31);
+						char_literal54=(IToken)Match(input,37,Follow._37_in_attribute_value482); if (state.failed) return retval;
+						if (state.backtracking == 0) {
+						char_literal54_tree = (object)adaptor.Create(char_literal54, retval);
+						adaptor.AddChild(root_0, char_literal54_tree);
+						}
+						DebugLocation(155, 35);
+						PushFollow(Follow._constant_in_attribute_value484);
+						constant55=constant();
+						PopFollow();
+						if (state.failed) return retval;
+						if (state.backtracking == 0) adaptor.AddChild(root_0, constant55.Tree, constant55, retval);
+
+						}
+						break;
+
+					default:
+						goto loop16;
+					}
+				}
+
+				loop16:
+					;
+
+				} finally { DebugExitSubRule(16); }
+
+				DebugLocation(155, 46);
+				char_literal56=(IToken)Match(input,31,Follow._31_in_attribute_value488); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal56_tree = (object)adaptor.Create(char_literal56, retval);
+				adaptor.AddChild(root_0, char_literal56_tree);
+				}
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(17); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("attribute_value", 11);
+			LeaveRule("attribute_value", 11);
+			LeaveRule_attribute_value();
+			if (state.backtracking > 0) { Memoize(input, 11, attribute_value_StartIndex); }
+
+		}
+		DebugLocation(156, 1);
+		} finally { DebugExitRule(GrammarFileName, "attribute_value"); }
+		return retval;
+
+	}
+	// $ANTLR end "attribute_value"
+
 	partial void EnterRule_type_id();
 	partial void LeaveRule_type_id();
 
 	// $ANTLR start "type_id"
-	// C.g:147:1: type_id :{...}? IDENTIFIER ;
+	// C.g:158:1: type_id :{...}? IDENTIFIER ;
 	[GrammarRule("type_id")]
 	public XAstParserRuleReturnScope type_id()
 	{
 		EnterRule_type_id();
-		EnterRule("type_id", 10);
+		EnterRule("type_id", 12);
 		var retval = new XAstParserRuleReturnScope("type_id");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -2365,32 +2879,32 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken IDENTIFIER40 = default(IToken);
+		IToken IDENTIFIER57 = default(IToken);
 
-		object IDENTIFIER40_tree = default(object);
+		object IDENTIFIER57_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "type_id");
-		DebugLocation(147, 1);
+		DebugLocation(158, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 10)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 12)) { return retval; }
 
-			// C.g:148:2: ({...}? IDENTIFIER )
+			// C.g:159:2: ({...}? IDENTIFIER )
 			DebugEnterAlt(1);
-			// C.g:148:6: {...}? IDENTIFIER
+			// C.g:159:6: {...}? IDENTIFIER
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(148, 6);
+			DebugLocation(159, 6);
 			if (!((isTypeName(input.LT(1).getText()))))
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
 				throw new FailedPredicateException(input, "type_id", "isTypeName(input.LT(1).getText())");
 			}
-			DebugLocation(148, 43);
-			IDENTIFIER40=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_type_id397), "IDENTIFIER"); if (state.failed) return retval;
+			DebugLocation(159, 43);
+			IDENTIFIER57=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_type_id506), "IDENTIFIER"); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			IDENTIFIER40_tree = (object)adaptor.Create(IDENTIFIER40, retval);
-			adaptor.AddChild(root_0, IDENTIFIER40_tree);
+			IDENTIFIER57_tree = (object)adaptor.Create(IDENTIFIER57, retval);
+			adaptor.AddChild(root_0, IDENTIFIER57_tree);
 			}
 
 			}
@@ -2411,13 +2925,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("type_id", 10);
-			LeaveRule("type_id", 10);
+			TraceOut("type_id", 12);
+			LeaveRule("type_id", 12);
 			LeaveRule_type_id();
-			if (state.backtracking > 0) { Memoize(input, 10, type_id_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 12, type_id_StartIndex); }
 
 		}
-		DebugLocation(150, 1);
+		DebugLocation(161, 1);
 		} finally { DebugExitRule(GrammarFileName, "type_id"); }
 		return retval;
 
@@ -2428,12 +2942,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_struct_or_union_specifier();
 
 	// $ANTLR start "struct_or_union_specifier"
-	// C.g:152:1: struct_or_union_specifier options {k=3; } : ( struct_or_union ( IDENTIFIER )? '{' struct_declaration_list '}' | struct_or_union IDENTIFIER );
+	// C.g:163:1: struct_or_union_specifier options {k=3; } : ( struct_or_union ( IDENTIFIER )? '{' struct_declaration_list '}' | struct_or_union IDENTIFIER );
 	[GrammarRule("struct_or_union_specifier")]
 	public XAstParserRuleReturnScope struct_or_union_specifier()
 	{
 		EnterRule_struct_or_union_specifier();
-		EnterRule("struct_or_union_specifier", 11);
+		EnterRule("struct_or_union_specifier", 13);
 		var retval = new XAstParserRuleReturnScope("struct_or_union_specifier");
 		Symbols_stack.Push(new Symbols_scope(this));Symbols_scopeInit(Symbols_stack.Peek());
 
@@ -2443,64 +2957,64 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken IDENTIFIER42 = default(IToken);
-		IToken char_literal43 = default(IToken);
-		IToken char_literal45 = default(IToken);
-		IToken IDENTIFIER47 = default(IToken);
-		XAstParserRuleReturnScope struct_or_union41 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope struct_declaration_list44 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope struct_or_union46 = default(XAstParserRuleReturnScope);
+		IToken IDENTIFIER59 = default(IToken);
+		IToken char_literal60 = default(IToken);
+		IToken char_literal62 = default(IToken);
+		IToken IDENTIFIER64 = default(IToken);
+		XAstParserRuleReturnScope struct_or_union58 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope struct_declaration_list61 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope struct_or_union63 = default(XAstParserRuleReturnScope);
 
-		object IDENTIFIER42_tree = default(object);
-		object char_literal43_tree = default(object);
-		object char_literal45_tree = default(object);
-		object IDENTIFIER47_tree = default(object);
+		object IDENTIFIER59_tree = default(object);
+		object char_literal60_tree = default(object);
+		object char_literal62_tree = default(object);
+		object IDENTIFIER64_tree = default(object);
 
 		  Symbols_stack.Peek().types =  new HashSet<string>();
 
 		try { DebugEnterRule(GrammarFileName, "struct_or_union_specifier");
-		DebugLocation(152, 1);
+		DebugLocation(163, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 11)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 13)) { return retval; }
 
-			// C.g:158:2: ( struct_or_union ( IDENTIFIER )? '{' struct_declaration_list '}' | struct_or_union IDENTIFIER )
-			int alt15=2;
-			try { DebugEnterDecision(15, false);
-			int LA15_0 = input.LA(1);
+			// C.g:169:2: ( struct_or_union ( IDENTIFIER )? '{' struct_declaration_list '}' | struct_or_union IDENTIFIER )
+			int alt19=2;
+			try { DebugEnterDecision(19, false);
+			int LA19_0 = input.LA(1);
 
-			if ((LA15_0==89||LA15_0==92))
+			if ((LA19_0==92||LA19_0==95))
 			{
-				int LA15_1 = input.LA(2);
+				int LA19_1 = input.LA(2);
 
-				if ((LA15_1==IDENTIFIER))
+				if ((LA19_1==IDENTIFIER))
 				{
-					int LA15_2 = input.LA(3);
+					int LA19_2 = input.LA(3);
 
-					if ((LA15_2==97))
+					if ((LA19_2==100))
 					{
-						alt15 = 1;
+						alt19 = 1;
 					}
-					else if ((LA15_2==EOF||LA15_2==IDENTIFIER||(LA15_2>=30 && LA15_2<=32)||LA15_2==37||(LA15_2>=46 && LA15_2<=47)||LA15_2==59||(LA15_2>=63 && LA15_2<=65)||(LA15_2>=68 && LA15_2<=69)||LA15_2==73||(LA15_2>=75 && LA15_2<=77)||(LA15_2>=81 && LA15_2<=83)||(LA15_2>=85 && LA15_2<=86)||(LA15_2>=88 && LA15_2<=89)||(LA15_2>=92 && LA15_2<=95)))
+					else if ((LA19_2==EOF||LA19_2==IDENTIFIER||(LA19_2>=30 && LA19_2<=32)||LA19_2==37||(LA19_2>=46 && LA19_2<=47)||LA19_2==59||(LA19_2>=63 && LA19_2<=68)||(LA19_2>=71 && LA19_2<=72)||LA19_2==76||(LA19_2>=78 && LA19_2<=80)||(LA19_2>=84 && LA19_2<=86)||(LA19_2>=88 && LA19_2<=89)||(LA19_2>=91 && LA19_2<=92)||(LA19_2>=95 && LA19_2<=98)))
 					{
-						alt15 = 2;
+						alt19 = 2;
 					}
 					else
 					{
 						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 15, 2, input);
+						NoViableAltException nvae = new NoViableAltException("", 19, 2, input);
 						DebugRecognitionException(nvae);
 						throw nvae;
 					}
 				}
-				else if ((LA15_1==97))
+				else if ((LA19_1==100))
 				{
-					alt15 = 1;
+					alt19 = 1;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 15, 1, input);
+					NoViableAltException nvae = new NoViableAltException("", 19, 1, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -2508,94 +3022,94 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 15, 0, input);
+				NoViableAltException nvae = new NoViableAltException("", 19, 0, input);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(15); }
-			switch (alt15)
+			} finally { DebugExitDecision(19); }
+			switch (alt19)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:158:4: struct_or_union ( IDENTIFIER )? '{' struct_declaration_list '}'
+				// C.g:169:4: struct_or_union ( IDENTIFIER )? '{' struct_declaration_list '}'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(158, 4);
-				PushFollow(Follow._struct_or_union_in_struct_or_union_specifier427);
-				struct_or_union41=struct_or_union();
+				DebugLocation(169, 4);
+				PushFollow(Follow._struct_or_union_in_struct_or_union_specifier536);
+				struct_or_union58=struct_or_union();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, struct_or_union41.Tree, struct_or_union41, retval);
-				DebugLocation(158, 20);
-				// C.g:158:20: ( IDENTIFIER )?
-				int alt14=2;
-				try { DebugEnterSubRule(14);
-				try { DebugEnterDecision(14, false);
-				int LA14_0 = input.LA(1);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, struct_or_union58.Tree, struct_or_union58, retval);
+				DebugLocation(169, 20);
+				// C.g:169:20: ( IDENTIFIER )?
+				int alt18=2;
+				try { DebugEnterSubRule(18);
+				try { DebugEnterDecision(18, false);
+				int LA18_0 = input.LA(1);
 
-				if ((LA14_0==IDENTIFIER))
+				if ((LA18_0==IDENTIFIER))
 				{
-					alt14 = 1;
+					alt18 = 1;
 				}
-				} finally { DebugExitDecision(14); }
-				switch (alt14)
+				} finally { DebugExitDecision(18); }
+				switch (alt18)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:158:20: IDENTIFIER
+					// C.g:169:20: IDENTIFIER
 					{
-					DebugLocation(158, 20);
-					IDENTIFIER42=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_struct_or_union_specifier429), "IDENTIFIER"); if (state.failed) return retval;
+					DebugLocation(169, 20);
+					IDENTIFIER59=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_struct_or_union_specifier538), "IDENTIFIER"); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					IDENTIFIER42_tree = (object)adaptor.Create(IDENTIFIER42, retval);
-					adaptor.AddChild(root_0, IDENTIFIER42_tree);
+					IDENTIFIER59_tree = (object)adaptor.Create(IDENTIFIER59, retval);
+					adaptor.AddChild(root_0, IDENTIFIER59_tree);
 					}
 
 					}
 					break;
 
 				}
-				} finally { DebugExitSubRule(14); }
+				} finally { DebugExitSubRule(18); }
 
-				DebugLocation(158, 32);
-				char_literal43=(IToken)Match(input,97,Follow._97_in_struct_or_union_specifier432); if (state.failed) return retval;
+				DebugLocation(169, 32);
+				char_literal60=(IToken)Match(input,100,Follow._100_in_struct_or_union_specifier541); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal43_tree = (object)adaptor.Create(char_literal43, retval);
-				adaptor.AddChild(root_0, char_literal43_tree);
+				char_literal60_tree = (object)adaptor.Create(char_literal60, retval);
+				adaptor.AddChild(root_0, char_literal60_tree);
 				}
-				DebugLocation(158, 36);
-				PushFollow(Follow._struct_declaration_list_in_struct_or_union_specifier434);
-				struct_declaration_list44=struct_declaration_list();
+				DebugLocation(169, 36);
+				PushFollow(Follow._struct_declaration_list_in_struct_or_union_specifier543);
+				struct_declaration_list61=struct_declaration_list();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, struct_declaration_list44.Tree, struct_declaration_list44, retval);
-				DebugLocation(158, 60);
-				char_literal45=(IToken)Match(input,101,Follow._101_in_struct_or_union_specifier436); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, struct_declaration_list61.Tree, struct_declaration_list61, retval);
+				DebugLocation(169, 60);
+				char_literal62=(IToken)Match(input,104,Follow._104_in_struct_or_union_specifier545); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal45_tree = (object)adaptor.Create(char_literal45, retval);
-				adaptor.AddChild(root_0, char_literal45_tree);
+				char_literal62_tree = (object)adaptor.Create(char_literal62, retval);
+				adaptor.AddChild(root_0, char_literal62_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C.g:159:4: struct_or_union IDENTIFIER
+				// C.g:170:4: struct_or_union IDENTIFIER
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(159, 4);
-				PushFollow(Follow._struct_or_union_in_struct_or_union_specifier441);
-				struct_or_union46=struct_or_union();
+				DebugLocation(170, 4);
+				PushFollow(Follow._struct_or_union_in_struct_or_union_specifier550);
+				struct_or_union63=struct_or_union();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, struct_or_union46.Tree, struct_or_union46, retval);
-				DebugLocation(159, 20);
-				IDENTIFIER47=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_struct_or_union_specifier443), "IDENTIFIER"); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, struct_or_union63.Tree, struct_or_union63, retval);
+				DebugLocation(170, 20);
+				IDENTIFIER64=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_struct_or_union_specifier552), "IDENTIFIER"); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				IDENTIFIER47_tree = (object)adaptor.Create(IDENTIFIER47, retval);
-				adaptor.AddChild(root_0, IDENTIFIER47_tree);
+				IDENTIFIER64_tree = (object)adaptor.Create(IDENTIFIER64, retval);
+				adaptor.AddChild(root_0, IDENTIFIER64_tree);
 				}
 
 				}
@@ -2618,15 +3132,15 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("struct_or_union_specifier", 11);
-			LeaveRule("struct_or_union_specifier", 11);
+			TraceOut("struct_or_union_specifier", 13);
+			LeaveRule("struct_or_union_specifier", 13);
 			LeaveRule_struct_or_union_specifier();
-			if (state.backtracking > 0) { Memoize(input, 11, struct_or_union_specifier_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 13, struct_or_union_specifier_StartIndex); }
 
 			Symbols_scopeAfter(Symbols_stack.Peek());Symbols_stack.Pop();
 
 		}
-		DebugLocation(160, 1);
+		DebugLocation(171, 1);
 		} finally { DebugExitRule(GrammarFileName, "struct_or_union_specifier"); }
 		return retval;
 
@@ -2637,12 +3151,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_struct_or_union();
 
 	// $ANTLR start "struct_or_union"
-	// C.g:162:1: struct_or_union : ( 'struct' | 'union' );
+	// C.g:173:1: struct_or_union : ( 'struct' | 'union' );
 	[GrammarRule("struct_or_union")]
 	public XAstParserRuleReturnScope struct_or_union()
 	{
 		EnterRule_struct_or_union();
-		EnterRule("struct_or_union", 12);
+		EnterRule("struct_or_union", 14);
 		var retval = new XAstParserRuleReturnScope("struct_or_union");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -2650,28 +3164,28 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken set48 = default(IToken);
+		IToken set65 = default(IToken);
 
-		object set48_tree = default(object);
+		object set65_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "struct_or_union");
-		DebugLocation(162, 1);
+		DebugLocation(173, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 12)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 14)) { return retval; }
 
-			// C.g:163:2: ( 'struct' | 'union' )
+			// C.g:174:2: ( 'struct' | 'union' )
 			DebugEnterAlt(1);
 			// C.g:
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(163, 2);
+			DebugLocation(174, 2);
 
-			set48=(IToken)input.LT(1);
-			if (input.LA(1)==89||input.LA(1)==92)
+			set65=(IToken)input.LT(1);
+			if (input.LA(1)==92||input.LA(1)==95)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set48, retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set65, retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -2701,13 +3215,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("struct_or_union", 12);
-			LeaveRule("struct_or_union", 12);
+			TraceOut("struct_or_union", 14);
+			LeaveRule("struct_or_union", 14);
 			LeaveRule_struct_or_union();
-			if (state.backtracking > 0) { Memoize(input, 12, struct_or_union_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 14, struct_or_union_StartIndex); }
 
 		}
-		DebugLocation(165, 1);
+		DebugLocation(176, 1);
 		} finally { DebugExitRule(GrammarFileName, "struct_or_union"); }
 		return retval;
 
@@ -2718,12 +3232,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_struct_declaration_list();
 
 	// $ANTLR start "struct_declaration_list"
-	// C.g:167:1: struct_declaration_list : ( struct_declaration )+ ;
+	// C.g:178:1: struct_declaration_list : ( struct_declaration )+ ;
 	[GrammarRule("struct_declaration_list")]
 	public XAstParserRuleReturnScope struct_declaration_list()
 	{
 		EnterRule_struct_declaration_list();
-		EnterRule("struct_declaration_list", 13);
+		EnterRule("struct_declaration_list", 15);
 		var retval = new XAstParserRuleReturnScope("struct_declaration_list");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -2731,68 +3245,68 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		XAstParserRuleReturnScope struct_declaration49 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope struct_declaration66 = default(XAstParserRuleReturnScope);
 
 		try { DebugEnterRule(GrammarFileName, "struct_declaration_list");
-		DebugLocation(167, 1);
+		DebugLocation(178, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 13)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 15)) { return retval; }
 
-			// C.g:168:2: ( ( struct_declaration )+ )
+			// C.g:179:2: ( ( struct_declaration )+ )
 			DebugEnterAlt(1);
-			// C.g:168:4: ( struct_declaration )+
+			// C.g:179:4: ( struct_declaration )+
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(168, 4);
-			// C.g:168:4: ( struct_declaration )+
-			int cnt16=0;
-			try { DebugEnterSubRule(16);
+			DebugLocation(179, 4);
+			// C.g:179:4: ( struct_declaration )+
+			int cnt20=0;
+			try { DebugEnterSubRule(20);
 			while (true)
 			{
-				int alt16=2;
-				try { DebugEnterDecision(16, false);
-				int LA16_0 = input.LA(1);
+				int alt20=2;
+				try { DebugEnterDecision(20, false);
+				int LA20_0 = input.LA(1);
 
-				if ((LA16_0==IDENTIFIER||(LA16_0>=63 && LA16_0<=64)||(LA16_0>=68 && LA16_0<=69)||LA16_0==73||LA16_0==75||LA16_0==77||(LA16_0>=81 && LA16_0<=82)||(LA16_0>=85 && LA16_0<=86)||LA16_0==89||(LA16_0>=92 && LA16_0<=95)))
+				if ((LA20_0==IDENTIFIER||LA20_0==65||(LA20_0>=71 && LA20_0<=72)||LA20_0==76||LA20_0==78||LA20_0==80||(LA20_0>=84 && LA20_0<=85)||(LA20_0>=88 && LA20_0<=89)||LA20_0==92||(LA20_0>=95 && LA20_0<=98)))
 				{
-					alt16 = 1;
+					alt20 = 1;
 				}
 
 
-				} finally { DebugExitDecision(16); }
-				switch (alt16)
+				} finally { DebugExitDecision(20); }
+				switch (alt20)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:168:4: struct_declaration
+					// C.g:179:4: struct_declaration
 					{
-					DebugLocation(168, 4);
-					PushFollow(Follow._struct_declaration_in_struct_declaration_list470);
-					struct_declaration49=struct_declaration();
+					DebugLocation(179, 4);
+					PushFollow(Follow._struct_declaration_in_struct_declaration_list579);
+					struct_declaration66=struct_declaration();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, struct_declaration49.Tree, struct_declaration49, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, struct_declaration66.Tree, struct_declaration66, retval);
 
 					}
 					break;
 
 				default:
-					if (cnt16 >= 1)
-						goto loop16;
+					if (cnt20 >= 1)
+						goto loop20;
 
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					EarlyExitException eee16 = new EarlyExitException( 16, input );
-					DebugRecognitionException(eee16);
-					throw eee16;
+					EarlyExitException eee20 = new EarlyExitException( 20, input );
+					DebugRecognitionException(eee20);
+					throw eee20;
 				}
-				cnt16++;
+				cnt20++;
 			}
-			loop16:
+			loop20:
 				;
 
-			} finally { DebugExitSubRule(16); }
+			} finally { DebugExitSubRule(20); }
 
 
 			}
@@ -2813,13 +3327,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("struct_declaration_list", 13);
-			LeaveRule("struct_declaration_list", 13);
+			TraceOut("struct_declaration_list", 15);
+			LeaveRule("struct_declaration_list", 15);
 			LeaveRule_struct_declaration_list();
-			if (state.backtracking > 0) { Memoize(input, 13, struct_declaration_list_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 15, struct_declaration_list_StartIndex); }
 
 		}
-		DebugLocation(169, 1);
+		DebugLocation(180, 1);
 		} finally { DebugExitRule(GrammarFileName, "struct_declaration_list"); }
 		return retval;
 
@@ -2830,12 +3344,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_struct_declaration();
 
 	// $ANTLR start "struct_declaration"
-	// C.g:171:1: struct_declaration : specifier_qualifier_list struct_declarator_list ';' ;
+	// C.g:182:1: struct_declaration : specifier_qualifier_list struct_declarator_list ';' ;
 	[GrammarRule("struct_declaration")]
 	public XAstParserRuleReturnScope struct_declaration()
 	{
 		EnterRule_struct_declaration();
-		EnterRule("struct_declaration", 14);
+		EnterRule("struct_declaration", 16);
 		var retval = new XAstParserRuleReturnScope("struct_declaration");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -2843,40 +3357,40 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken char_literal52 = default(IToken);
-		XAstParserRuleReturnScope specifier_qualifier_list50 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope struct_declarator_list51 = default(XAstParserRuleReturnScope);
+		IToken char_literal69 = default(IToken);
+		XAstParserRuleReturnScope specifier_qualifier_list67 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope struct_declarator_list68 = default(XAstParserRuleReturnScope);
 
-		object char_literal52_tree = default(object);
+		object char_literal69_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "struct_declaration");
-		DebugLocation(171, 1);
+		DebugLocation(182, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 14)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 16)) { return retval; }
 
-			// C.g:172:2: ( specifier_qualifier_list struct_declarator_list ';' )
+			// C.g:183:2: ( specifier_qualifier_list struct_declarator_list ';' )
 			DebugEnterAlt(1);
-			// C.g:172:4: specifier_qualifier_list struct_declarator_list ';'
+			// C.g:183:4: specifier_qualifier_list struct_declarator_list ';'
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(172, 4);
-			PushFollow(Follow._specifier_qualifier_list_in_struct_declaration482);
-			specifier_qualifier_list50=specifier_qualifier_list();
+			DebugLocation(183, 4);
+			PushFollow(Follow._specifier_qualifier_list_in_struct_declaration591);
+			specifier_qualifier_list67=specifier_qualifier_list();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, specifier_qualifier_list50.Tree, specifier_qualifier_list50, retval);
-			DebugLocation(172, 29);
-			PushFollow(Follow._struct_declarator_list_in_struct_declaration484);
-			struct_declarator_list51=struct_declarator_list();
+			if (state.backtracking == 0) adaptor.AddChild(root_0, specifier_qualifier_list67.Tree, specifier_qualifier_list67, retval);
+			DebugLocation(183, 29);
+			PushFollow(Follow._struct_declarator_list_in_struct_declaration593);
+			struct_declarator_list68=struct_declarator_list();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, struct_declarator_list51.Tree, struct_declarator_list51, retval);
-			DebugLocation(172, 52);
-			char_literal52=(IToken)Match(input,47,Follow._47_in_struct_declaration486); if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, struct_declarator_list68.Tree, struct_declarator_list68, retval);
+			DebugLocation(183, 52);
+			char_literal69=(IToken)Match(input,47,Follow._47_in_struct_declaration595); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal52_tree = (object)adaptor.Create(char_literal52, retval);
-			adaptor.AddChild(root_0, char_literal52_tree);
+			char_literal69_tree = (object)adaptor.Create(char_literal69, retval);
+			adaptor.AddChild(root_0, char_literal69_tree);
 			}
 
 			}
@@ -2897,13 +3411,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("struct_declaration", 14);
-			LeaveRule("struct_declaration", 14);
+			TraceOut("struct_declaration", 16);
+			LeaveRule("struct_declaration", 16);
 			LeaveRule_struct_declaration();
-			if (state.backtracking > 0) { Memoize(input, 14, struct_declaration_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 16, struct_declaration_StartIndex); }
 
 		}
-		DebugLocation(173, 1);
+		DebugLocation(184, 1);
 		} finally { DebugExitRule(GrammarFileName, "struct_declaration"); }
 		return retval;
 
@@ -2914,12 +3428,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_specifier_qualifier_list();
 
 	// $ANTLR start "specifier_qualifier_list"
-	// C.g:175:1: specifier_qualifier_list : ( type_qualifier | type_specifier )+ ;
+	// C.g:186:1: specifier_qualifier_list : ( type_qualifier | type_specifier )+ ;
 	[GrammarRule("specifier_qualifier_list")]
 	public XAstParserRuleReturnScope specifier_qualifier_list()
 	{
 		EnterRule_specifier_qualifier_list();
-		EnterRule("specifier_qualifier_list", 15);
+		EnterRule("specifier_qualifier_list", 17);
 		var retval = new XAstParserRuleReturnScope("specifier_qualifier_list");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -2927,29 +3441,29 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		XAstParserRuleReturnScope type_qualifier53 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope type_specifier54 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope type_qualifier70 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope type_specifier71 = default(XAstParserRuleReturnScope);
 
 		try { DebugEnterRule(GrammarFileName, "specifier_qualifier_list");
-		DebugLocation(175, 1);
+		DebugLocation(186, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 15)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 17)) { return retval; }
 
-			// C.g:176:2: ( ( type_qualifier | type_specifier )+ )
+			// C.g:187:2: ( ( type_qualifier | type_specifier )+ )
 			DebugEnterAlt(1);
-			// C.g:176:4: ( type_qualifier | type_specifier )+
+			// C.g:187:4: ( type_qualifier | type_specifier )+
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(176, 4);
-			// C.g:176:4: ( type_qualifier | type_specifier )+
-			int cnt17=0;
-			try { DebugEnterSubRule(17);
+			DebugLocation(187, 4);
+			// C.g:187:4: ( type_qualifier | type_specifier )+
+			int cnt21=0;
+			try { DebugEnterSubRule(21);
 			while (true)
 			{
-				int alt17=3;
-				try { DebugEnterDecision(17, false);
+				int alt21=3;
+				try { DebugEnterDecision(21, false);
 				switch (input.LA(1))
 				{
 				case IDENTIFIER:
@@ -2958,11 +3472,11 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					{
 					case 59:
 						{
-						int LA17_20 = input.LA(3);
+						int LA21_19 = input.LA(3);
 
-						if ((((EvaluatePredicate(synpred37_C_fragment)&&EvaluatePredicate(synpred37_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+						if (((((isTypeName(input.LT(1).getText()))&&(isTypeName(input.LT(1).getText())))&&EvaluatePredicate(synpred43_C_fragment))))
 						{
-							alt17 = 2;
+							alt21 = 2;
 						}
 
 
@@ -2970,11 +3484,11 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 						break;
 					case 30:
 						{
-						int LA17_21 = input.LA(3);
+						int LA21_20 = input.LA(3);
 
-						if ((((EvaluatePredicate(synpred37_C_fragment)&&EvaluatePredicate(synpred37_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+						if (((((isTypeName(input.LT(1).getText()))&&(isTypeName(input.LT(1).getText())))&&EvaluatePredicate(synpred43_C_fragment))))
 						{
-							alt17 = 2;
+							alt21 = 2;
 						}
 
 
@@ -2982,11 +3496,11 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 						break;
 					case 46:
 						{
-						int LA17_22 = input.LA(3);
+						int LA21_21 = input.LA(3);
 
-						if ((((EvaluatePredicate(synpred37_C_fragment)&&EvaluatePredicate(synpred37_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+						if (((((isTypeName(input.LT(1).getText()))&&(isTypeName(input.LT(1).getText())))&&EvaluatePredicate(synpred43_C_fragment))))
 						{
-							alt17 = 2;
+							alt21 = 2;
 						}
 
 
@@ -2995,101 +3509,99 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					case IDENTIFIER:
 					case 31:
 					case 32:
-					case 63:
-					case 64:
-					case 68:
-					case 69:
-					case 73:
-					case 75:
-					case 77:
-					case 81:
-					case 82:
+					case 65:
+					case 71:
+					case 72:
+					case 76:
+					case 78:
+					case 80:
+					case 84:
 					case 85:
-					case 86:
+					case 88:
 					case 89:
 					case 92:
-					case 93:
-					case 94:
 					case 95:
+					case 96:
+					case 97:
+					case 98:
 						{
-						alt17 = 2;
+						alt21 = 2;
 						}
 						break;
 					}
 
 					}
 					break;
-				case 64:
-				case 69:
-				case 95:
+				case 65:
+				case 72:
+				case 98:
 					{
-					alt17 = 1;
+					alt21 = 1;
 					}
 					break;
-				case 63:
-				case 68:
-				case 73:
-				case 75:
-				case 77:
-				case 81:
-				case 82:
+				case 71:
+				case 76:
+				case 78:
+				case 80:
+				case 84:
 				case 85:
-				case 86:
+				case 88:
 				case 89:
 				case 92:
-				case 93:
-				case 94:
+				case 95:
+				case 96:
+				case 97:
 					{
-					alt17 = 2;
+					alt21 = 2;
 					}
 					break;
 				}
 
-				} finally { DebugExitDecision(17); }
-				switch (alt17)
+				} finally { DebugExitDecision(21); }
+				switch (alt21)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:176:6: type_qualifier
+					// C.g:187:6: type_qualifier
 					{
-					DebugLocation(176, 6);
-					PushFollow(Follow._type_qualifier_in_specifier_qualifier_list499);
-					type_qualifier53=type_qualifier();
+					DebugLocation(187, 6);
+					PushFollow(Follow._type_qualifier_in_specifier_qualifier_list608);
+					type_qualifier70=type_qualifier();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, type_qualifier53.Tree, type_qualifier53, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, type_qualifier70.Tree, type_qualifier70, retval);
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C.g:176:23: type_specifier
+					// C.g:187:23: type_specifier
 					{
-					DebugLocation(176, 23);
-					PushFollow(Follow._type_specifier_in_specifier_qualifier_list503);
-					type_specifier54=type_specifier();
+					DebugLocation(187, 23);
+					PushFollow(Follow._type_specifier_in_specifier_qualifier_list612);
+					type_specifier71=type_specifier();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, type_specifier54.Tree, type_specifier54, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, type_specifier71.Tree, type_specifier71, retval);
 
 					}
 					break;
 
 				default:
-					if (cnt17 >= 1)
-						goto loop17;
+					if (cnt21 >= 1)
+						goto loop21;
 
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					EarlyExitException eee17 = new EarlyExitException( 17, input );
-					DebugRecognitionException(eee17);
-					throw eee17;
+					EarlyExitException eee21 = new EarlyExitException( 21, input );
+					DebugRecognitionException(eee21);
+					throw eee21;
 				}
-				cnt17++;
+				cnt21++;
 			}
-			loop17:
+			loop21:
 				;
 
-			} finally { DebugExitSubRule(17); }
+			} finally { DebugExitSubRule(21); }
 
 
 			}
@@ -3110,13 +3622,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("specifier_qualifier_list", 15);
-			LeaveRule("specifier_qualifier_list", 15);
+			TraceOut("specifier_qualifier_list", 17);
+			LeaveRule("specifier_qualifier_list", 17);
 			LeaveRule_specifier_qualifier_list();
-			if (state.backtracking > 0) { Memoize(input, 15, specifier_qualifier_list_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 17, specifier_qualifier_list_StartIndex); }
 
 		}
-		DebugLocation(177, 1);
+		DebugLocation(188, 1);
 		} finally { DebugExitRule(GrammarFileName, "specifier_qualifier_list"); }
 		return retval;
 
@@ -3127,12 +3639,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_struct_declarator_list();
 
 	// $ANTLR start "struct_declarator_list"
-	// C.g:179:1: struct_declarator_list : struct_declarator ( ',' struct_declarator )* ;
+	// C.g:190:1: struct_declarator_list : struct_declarator ( ',' struct_declarator )* ;
 	[GrammarRule("struct_declarator_list")]
 	public XAstParserRuleReturnScope struct_declarator_list()
 	{
 		EnterRule_struct_declarator_list();
-		EnterRule("struct_declarator_list", 16);
+		EnterRule("struct_declarator_list", 18);
 		var retval = new XAstParserRuleReturnScope("struct_declarator_list");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -3140,528 +3652,31 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken char_literal56 = default(IToken);
-		XAstParserRuleReturnScope struct_declarator55 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope struct_declarator57 = default(XAstParserRuleReturnScope);
+		IToken char_literal73 = default(IToken);
+		XAstParserRuleReturnScope struct_declarator72 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope struct_declarator74 = default(XAstParserRuleReturnScope);
 
-		object char_literal56_tree = default(object);
+		object char_literal73_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "struct_declarator_list");
-		DebugLocation(179, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 16)) { return retval; }
-
-			// C.g:180:2: ( struct_declarator ( ',' struct_declarator )* )
-			DebugEnterAlt(1);
-			// C.g:180:4: struct_declarator ( ',' struct_declarator )*
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(180, 4);
-			PushFollow(Follow._struct_declarator_in_struct_declarator_list517);
-			struct_declarator55=struct_declarator();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, struct_declarator55.Tree, struct_declarator55, retval);
-			DebugLocation(180, 22);
-			// C.g:180:22: ( ',' struct_declarator )*
-			try { DebugEnterSubRule(18);
-			while (true)
-			{
-				int alt18=2;
-				try { DebugEnterDecision(18, false);
-				int LA18_0 = input.LA(1);
-
-				if ((LA18_0==37))
-				{
-					alt18 = 1;
-				}
-
-
-				} finally { DebugExitDecision(18); }
-				switch ( alt18 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C.g:180:23: ',' struct_declarator
-					{
-					DebugLocation(180, 23);
-					char_literal56=(IToken)Match(input,37,Follow._37_in_struct_declarator_list520); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal56_tree = (object)adaptor.Create(char_literal56, retval);
-					adaptor.AddChild(root_0, char_literal56_tree);
-					}
-					DebugLocation(180, 27);
-					PushFollow(Follow._struct_declarator_in_struct_declarator_list522);
-					struct_declarator57=struct_declarator();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, struct_declarator57.Tree, struct_declarator57, retval);
-
-					}
-					break;
-
-				default:
-					goto loop18;
-				}
-			}
-
-			loop18:
-				;
-
-			} finally { DebugExitSubRule(18); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("struct_declarator_list", 16);
-			LeaveRule("struct_declarator_list", 16);
-			LeaveRule_struct_declarator_list();
-			if (state.backtracking > 0) { Memoize(input, 16, struct_declarator_list_StartIndex); }
-
-		}
-		DebugLocation(181, 1);
-		} finally { DebugExitRule(GrammarFileName, "struct_declarator_list"); }
-		return retval;
-
-	}
-	// $ANTLR end "struct_declarator_list"
-
-	partial void EnterRule_struct_declarator();
-	partial void LeaveRule_struct_declarator();
-
-	// $ANTLR start "struct_declarator"
-	// C.g:183:1: struct_declarator : ( declarator ( ':' constant_expression )? | ':' constant_expression );
-	[GrammarRule("struct_declarator")]
-	public XAstParserRuleReturnScope struct_declarator()
-	{
-		EnterRule_struct_declarator();
-		EnterRule("struct_declarator", 17);
-		var retval = new XAstParserRuleReturnScope("struct_declarator");
-		
-		retval.Start = (IToken)input.LT(1);
-		int struct_declarator_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken char_literal59 = default(IToken);
-		IToken char_literal61 = default(IToken);
-		XAstParserRuleReturnScope declarator58 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope constant_expression60 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope constant_expression62 = default(XAstParserRuleReturnScope);
-
-		object char_literal59_tree = default(object);
-		object char_literal61_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "struct_declarator");
-		DebugLocation(183, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 17)) { return retval; }
-
-			// C.g:184:2: ( declarator ( ':' constant_expression )? | ':' constant_expression )
-			int alt20=2;
-			try { DebugEnterDecision(20, false);
-			int LA20_0 = input.LA(1);
-
-			if ((LA20_0==IDENTIFIER||LA20_0==30||LA20_0==32))
-			{
-				alt20 = 1;
-			}
-			else if ((LA20_0==46))
-			{
-				alt20 = 2;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 20, 0, input);
-				DebugRecognitionException(nvae);
-				throw nvae;
-			}
-			} finally { DebugExitDecision(20); }
-			switch (alt20)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C.g:184:4: declarator ( ':' constant_expression )?
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(184, 4);
-				PushFollow(Follow._declarator_in_struct_declarator535);
-				declarator58=declarator();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, declarator58.Tree, declarator58, retval);
-				DebugLocation(184, 15);
-				// C.g:184:15: ( ':' constant_expression )?
-				int alt19=2;
-				try { DebugEnterSubRule(19);
-				try { DebugEnterDecision(19, false);
-				int LA19_0 = input.LA(1);
-
-				if ((LA19_0==46))
-				{
-					alt19 = 1;
-				}
-				} finally { DebugExitDecision(19); }
-				switch (alt19)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C.g:184:16: ':' constant_expression
-					{
-					DebugLocation(184, 16);
-					char_literal59=(IToken)Match(input,46,Follow._46_in_struct_declarator538); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal59_tree = (object)adaptor.Create(char_literal59, retval);
-					adaptor.AddChild(root_0, char_literal59_tree);
-					}
-					DebugLocation(184, 20);
-					PushFollow(Follow._constant_expression_in_struct_declarator540);
-					constant_expression60=constant_expression();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression60.Tree, constant_expression60, retval);
-
-					}
-					break;
-
-				}
-				} finally { DebugExitSubRule(19); }
-
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C.g:185:4: ':' constant_expression
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(185, 4);
-				char_literal61=(IToken)Match(input,46,Follow._46_in_struct_declarator547); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal61_tree = (object)adaptor.Create(char_literal61, retval);
-				adaptor.AddChild(root_0, char_literal61_tree);
-				}
-				DebugLocation(185, 8);
-				PushFollow(Follow._constant_expression_in_struct_declarator549);
-				constant_expression62=constant_expression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression62.Tree, constant_expression62, retval);
-
-				}
-				break;
-
-			}
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("struct_declarator", 17);
-			LeaveRule("struct_declarator", 17);
-			LeaveRule_struct_declarator();
-			if (state.backtracking > 0) { Memoize(input, 17, struct_declarator_StartIndex); }
-
-		}
-		DebugLocation(186, 1);
-		} finally { DebugExitRule(GrammarFileName, "struct_declarator"); }
-		return retval;
-
-	}
-	// $ANTLR end "struct_declarator"
-
-	partial void EnterRule_enum_specifier();
-	partial void LeaveRule_enum_specifier();
-
-	// $ANTLR start "enum_specifier"
-	// C.g:188:1: enum_specifier options {k=3; } : ( 'enum' '{' enumerator_list '}' | 'enum' IDENTIFIER '{' enumerator_list '}' | 'enum' IDENTIFIER );
-	[GrammarRule("enum_specifier")]
-	public XAstParserRuleReturnScope enum_specifier()
-	{
-		EnterRule_enum_specifier();
-		EnterRule("enum_specifier", 18);
-		var retval = new XAstParserRuleReturnScope("enum_specifier");
-		
-		retval.Start = (IToken)input.LT(1);
-		int enum_specifier_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken string_literal63 = default(IToken);
-		IToken char_literal64 = default(IToken);
-		IToken char_literal66 = default(IToken);
-		IToken string_literal67 = default(IToken);
-		IToken IDENTIFIER68 = default(IToken);
-		IToken char_literal69 = default(IToken);
-		IToken char_literal71 = default(IToken);
-		IToken string_literal72 = default(IToken);
-		IToken IDENTIFIER73 = default(IToken);
-		XAstParserRuleReturnScope enumerator_list65 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope enumerator_list70 = default(XAstParserRuleReturnScope);
-
-		object string_literal63_tree = default(object);
-		object char_literal64_tree = default(object);
-		object char_literal66_tree = default(object);
-		object string_literal67_tree = default(object);
-		object IDENTIFIER68_tree = default(object);
-		object char_literal69_tree = default(object);
-		object char_literal71_tree = default(object);
-		object string_literal72_tree = default(object);
-		object IDENTIFIER73_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "enum_specifier");
-		DebugLocation(188, 1);
+		DebugLocation(190, 1);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 18)) { return retval; }
 
-			// C.g:190:2: ( 'enum' '{' enumerator_list '}' | 'enum' IDENTIFIER '{' enumerator_list '}' | 'enum' IDENTIFIER )
-			int alt21=3;
-			try { DebugEnterDecision(21, false);
-			int LA21_0 = input.LA(1);
-
-			if ((LA21_0==75))
-			{
-				int LA21_1 = input.LA(2);
-
-				if ((LA21_1==97))
-				{
-					alt21 = 1;
-				}
-				else if ((LA21_1==IDENTIFIER))
-				{
-					int LA21_3 = input.LA(3);
-
-					if ((LA21_3==97))
-					{
-						alt21 = 2;
-					}
-					else if ((LA21_3==EOF||LA21_3==IDENTIFIER||(LA21_3>=30 && LA21_3<=32)||LA21_3==37||(LA21_3>=46 && LA21_3<=47)||LA21_3==59||(LA21_3>=63 && LA21_3<=65)||(LA21_3>=68 && LA21_3<=69)||LA21_3==73||(LA21_3>=75 && LA21_3<=77)||(LA21_3>=81 && LA21_3<=83)||(LA21_3>=85 && LA21_3<=86)||(LA21_3>=88 && LA21_3<=89)||(LA21_3>=92 && LA21_3<=95)))
-					{
-						alt21 = 3;
-					}
-					else
-					{
-						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 21, 3, input);
-						DebugRecognitionException(nvae);
-						throw nvae;
-					}
-				}
-				else
-				{
-					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 21, 1, input);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 21, 0, input);
-				DebugRecognitionException(nvae);
-				throw nvae;
-			}
-			} finally { DebugExitDecision(21); }
-			switch (alt21)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C.g:190:4: 'enum' '{' enumerator_list '}'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(190, 4);
-				string_literal63=(IToken)Match(input,75,Follow._75_in_enum_specifier567); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal63_tree = (object)adaptor.Create(string_literal63, retval);
-				adaptor.AddChild(root_0, string_literal63_tree);
-				}
-				DebugLocation(190, 11);
-				char_literal64=(IToken)Match(input,97,Follow._97_in_enum_specifier569); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal64_tree = (object)adaptor.Create(char_literal64, retval);
-				adaptor.AddChild(root_0, char_literal64_tree);
-				}
-				DebugLocation(190, 15);
-				PushFollow(Follow._enumerator_list_in_enum_specifier571);
-				enumerator_list65=enumerator_list();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, enumerator_list65.Tree, enumerator_list65, retval);
-				DebugLocation(190, 31);
-				char_literal66=(IToken)Match(input,101,Follow._101_in_enum_specifier573); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal66_tree = (object)adaptor.Create(char_literal66, retval);
-				adaptor.AddChild(root_0, char_literal66_tree);
-				}
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C.g:191:4: 'enum' IDENTIFIER '{' enumerator_list '}'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(191, 4);
-				string_literal67=(IToken)Match(input,75,Follow._75_in_enum_specifier578); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal67_tree = (object)adaptor.Create(string_literal67, retval);
-				adaptor.AddChild(root_0, string_literal67_tree);
-				}
-				DebugLocation(191, 11);
-				IDENTIFIER68=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_enum_specifier580), "IDENTIFIER"); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				IDENTIFIER68_tree = (object)adaptor.Create(IDENTIFIER68, retval);
-				adaptor.AddChild(root_0, IDENTIFIER68_tree);
-				}
-				DebugLocation(191, 22);
-				char_literal69=(IToken)Match(input,97,Follow._97_in_enum_specifier582); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal69_tree = (object)adaptor.Create(char_literal69, retval);
-				adaptor.AddChild(root_0, char_literal69_tree);
-				}
-				DebugLocation(191, 26);
-				PushFollow(Follow._enumerator_list_in_enum_specifier584);
-				enumerator_list70=enumerator_list();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, enumerator_list70.Tree, enumerator_list70, retval);
-				DebugLocation(191, 42);
-				char_literal71=(IToken)Match(input,101,Follow._101_in_enum_specifier586); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal71_tree = (object)adaptor.Create(char_literal71, retval);
-				adaptor.AddChild(root_0, char_literal71_tree);
-				}
-
-				}
-				break;
-			case 3:
-				DebugEnterAlt(3);
-				// C.g:192:4: 'enum' IDENTIFIER
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(192, 4);
-				string_literal72=(IToken)Match(input,75,Follow._75_in_enum_specifier591); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal72_tree = (object)adaptor.Create(string_literal72, retval);
-				adaptor.AddChild(root_0, string_literal72_tree);
-				}
-				DebugLocation(192, 11);
-				IDENTIFIER73=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_enum_specifier593), "IDENTIFIER"); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				IDENTIFIER73_tree = (object)adaptor.Create(IDENTIFIER73, retval);
-				adaptor.AddChild(root_0, IDENTIFIER73_tree);
-				}
-
-				}
-				break;
-
-			}
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("enum_specifier", 18);
-			LeaveRule("enum_specifier", 18);
-			LeaveRule_enum_specifier();
-			if (state.backtracking > 0) { Memoize(input, 18, enum_specifier_StartIndex); }
-
-		}
-		DebugLocation(193, 1);
-		} finally { DebugExitRule(GrammarFileName, "enum_specifier"); }
-		return retval;
-
-	}
-	// $ANTLR end "enum_specifier"
-
-	partial void EnterRule_enumerator_list();
-	partial void LeaveRule_enumerator_list();
-
-	// $ANTLR start "enumerator_list"
-	// C.g:195:1: enumerator_list : enumerator ( ',' enumerator )* ;
-	[GrammarRule("enumerator_list")]
-	public XAstParserRuleReturnScope enumerator_list()
-	{
-		EnterRule_enumerator_list();
-		EnterRule("enumerator_list", 19);
-		var retval = new XAstParserRuleReturnScope("enumerator_list");
-		
-		retval.Start = (IToken)input.LT(1);
-		int enumerator_list_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken char_literal75 = default(IToken);
-		XAstParserRuleReturnScope enumerator74 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope enumerator76 = default(XAstParserRuleReturnScope);
-
-		object char_literal75_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "enumerator_list");
-		DebugLocation(195, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 19)) { return retval; }
-
-			// C.g:196:2: ( enumerator ( ',' enumerator )* )
+			// C.g:191:2: ( struct_declarator ( ',' struct_declarator )* )
 			DebugEnterAlt(1);
-			// C.g:196:4: enumerator ( ',' enumerator )*
+			// C.g:191:4: struct_declarator ( ',' struct_declarator )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(196, 4);
-			PushFollow(Follow._enumerator_in_enumerator_list604);
-			enumerator74=enumerator();
+			DebugLocation(191, 4);
+			PushFollow(Follow._struct_declarator_in_struct_declarator_list626);
+			struct_declarator72=struct_declarator();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, enumerator74.Tree, enumerator74, retval);
-			DebugLocation(196, 15);
-			// C.g:196:15: ( ',' enumerator )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, struct_declarator72.Tree, struct_declarator72, retval);
+			DebugLocation(191, 22);
+			// C.g:191:22: ( ',' struct_declarator )*
 			try { DebugEnterSubRule(22);
 			while (true)
 			{
@@ -3680,20 +3695,20 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:196:16: ',' enumerator
+					// C.g:191:23: ',' struct_declarator
 					{
-					DebugLocation(196, 16);
-					char_literal75=(IToken)Match(input,37,Follow._37_in_enumerator_list607); if (state.failed) return retval;
+					DebugLocation(191, 23);
+					char_literal73=(IToken)Match(input,37,Follow._37_in_struct_declarator_list629); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal75_tree = (object)adaptor.Create(char_literal75, retval);
-					adaptor.AddChild(root_0, char_literal75_tree);
+					char_literal73_tree = (object)adaptor.Create(char_literal73, retval);
+					adaptor.AddChild(root_0, char_literal73_tree);
 					}
-					DebugLocation(196, 20);
-					PushFollow(Follow._enumerator_in_enumerator_list609);
-					enumerator76=enumerator();
+					DebugLocation(191, 27);
+					PushFollow(Follow._struct_declarator_in_struct_declarator_list631);
+					struct_declarator74=struct_declarator();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, enumerator76.Tree, enumerator76, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, struct_declarator74.Tree, struct_declarator74, retval);
 
 					}
 					break;
@@ -3727,86 +3742,139 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("enumerator_list", 19);
-			LeaveRule("enumerator_list", 19);
-			LeaveRule_enumerator_list();
-			if (state.backtracking > 0) { Memoize(input, 19, enumerator_list_StartIndex); }
+			TraceOut("struct_declarator_list", 18);
+			LeaveRule("struct_declarator_list", 18);
+			LeaveRule_struct_declarator_list();
+			if (state.backtracking > 0) { Memoize(input, 18, struct_declarator_list_StartIndex); }
 
 		}
-		DebugLocation(197, 1);
-		} finally { DebugExitRule(GrammarFileName, "enumerator_list"); }
+		DebugLocation(192, 1);
+		} finally { DebugExitRule(GrammarFileName, "struct_declarator_list"); }
 		return retval;
 
 	}
-	// $ANTLR end "enumerator_list"
+	// $ANTLR end "struct_declarator_list"
 
-	partial void EnterRule_enumerator();
-	partial void LeaveRule_enumerator();
+	partial void EnterRule_struct_declarator();
+	partial void LeaveRule_struct_declarator();
 
-	// $ANTLR start "enumerator"
-	// C.g:199:1: enumerator : IDENTIFIER ( '=' constant_expression )? ;
-	[GrammarRule("enumerator")]
-	public XAstParserRuleReturnScope enumerator()
+	// $ANTLR start "struct_declarator"
+	// C.g:194:1: struct_declarator : ( declarator ( ':' constant_expression )? | ':' constant_expression );
+	[GrammarRule("struct_declarator")]
+	public XAstParserRuleReturnScope struct_declarator()
 	{
-		EnterRule_enumerator();
-		EnterRule("enumerator", 20);
-		var retval = new XAstParserRuleReturnScope("enumerator");
+		EnterRule_struct_declarator();
+		EnterRule("struct_declarator", 19);
+		var retval = new XAstParserRuleReturnScope("struct_declarator");
 		
 		retval.Start = (IToken)input.LT(1);
-		int enumerator_StartIndex = input.Index;
+		int struct_declarator_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken IDENTIFIER77 = default(IToken);
+		IToken char_literal76 = default(IToken);
 		IToken char_literal78 = default(IToken);
+		XAstParserRuleReturnScope declarator75 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope constant_expression77 = default(XAstParserRuleReturnScope);
 		XAstParserRuleReturnScope constant_expression79 = default(XAstParserRuleReturnScope);
 
-		object IDENTIFIER77_tree = default(object);
+		object char_literal76_tree = default(object);
 		object char_literal78_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "enumerator");
-		DebugLocation(199, 1);
+		try { DebugEnterRule(GrammarFileName, "struct_declarator");
+		DebugLocation(194, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 20)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 19)) { return retval; }
 
-			// C.g:200:2: ( IDENTIFIER ( '=' constant_expression )? )
-			DebugEnterAlt(1);
-			// C.g:200:4: IDENTIFIER ( '=' constant_expression )?
+			// C.g:195:2: ( declarator ( ':' constant_expression )? | ':' constant_expression )
+			int alt24=2;
+			try { DebugEnterDecision(24, false);
+			int LA24_0 = input.LA(1);
+
+			if ((LA24_0==IDENTIFIER||LA24_0==30||LA24_0==32))
 			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(200, 4);
-			IDENTIFIER77=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_enumerator622), "IDENTIFIER"); if (state.failed) return retval;
-			if (state.backtracking == 0) {
-			IDENTIFIER77_tree = (object)adaptor.Create(IDENTIFIER77, retval);
-			adaptor.AddChild(root_0, IDENTIFIER77_tree);
+				alt24 = 1;
 			}
-			DebugLocation(200, 15);
-			// C.g:200:15: ( '=' constant_expression )?
-			int alt23=2;
-			try { DebugEnterSubRule(23);
-			try { DebugEnterDecision(23, false);
-			int LA23_0 = input.LA(1);
-
-			if ((LA23_0==52))
+			else if ((LA24_0==46))
 			{
-				alt23 = 1;
+				alt24 = 2;
 			}
-			} finally { DebugExitDecision(23); }
-			switch (alt23)
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return retval;}
+				NoViableAltException nvae = new NoViableAltException("", 24, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(24); }
+			switch (alt24)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:200:16: '=' constant_expression
+				// C.g:195:4: declarator ( ':' constant_expression )?
 				{
-				DebugLocation(200, 16);
-				char_literal78=(IToken)Match(input,52,Follow._52_in_enumerator625); if (state.failed) return retval;
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(195, 4);
+				PushFollow(Follow._declarator_in_struct_declarator644);
+				declarator75=declarator();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, declarator75.Tree, declarator75, retval);
+				DebugLocation(195, 15);
+				// C.g:195:15: ( ':' constant_expression )?
+				int alt23=2;
+				try { DebugEnterSubRule(23);
+				try { DebugEnterDecision(23, false);
+				int LA23_0 = input.LA(1);
+
+				if ((LA23_0==46))
+				{
+					alt23 = 1;
+				}
+				} finally { DebugExitDecision(23); }
+				switch (alt23)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C.g:195:16: ':' constant_expression
+					{
+					DebugLocation(195, 16);
+					char_literal76=(IToken)Match(input,46,Follow._46_in_struct_declarator647); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal76_tree = (object)adaptor.Create(char_literal76, retval);
+					adaptor.AddChild(root_0, char_literal76_tree);
+					}
+					DebugLocation(195, 20);
+					PushFollow(Follow._constant_expression_in_struct_declarator649);
+					constant_expression77=constant_expression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression77.Tree, constant_expression77, retval);
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(23); }
+
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C.g:196:4: ':' constant_expression
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(196, 4);
+				char_literal78=(IToken)Match(input,46,Follow._46_in_struct_declarator656); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal78_tree = (object)adaptor.Create(char_literal78, retval);
 				adaptor.AddChild(root_0, char_literal78_tree);
 				}
-				DebugLocation(200, 20);
-				PushFollow(Follow._constant_expression_in_enumerator627);
+				DebugLocation(196, 8);
+				PushFollow(Follow._constant_expression_in_struct_declarator658);
 				constant_expression79=constant_expression();
 				PopFollow();
 				if (state.failed) return retval;
@@ -3816,7 +3884,341 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				break;
 
 			}
-			} finally { DebugExitSubRule(23); }
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("struct_declarator", 19);
+			LeaveRule("struct_declarator", 19);
+			LeaveRule_struct_declarator();
+			if (state.backtracking > 0) { Memoize(input, 19, struct_declarator_StartIndex); }
+
+		}
+		DebugLocation(197, 1);
+		} finally { DebugExitRule(GrammarFileName, "struct_declarator"); }
+		return retval;
+
+	}
+	// $ANTLR end "struct_declarator"
+
+	partial void EnterRule_enum_specifier();
+	partial void LeaveRule_enum_specifier();
+
+	// $ANTLR start "enum_specifier"
+	// C.g:199:1: enum_specifier options {k=3; } : ( 'enum' '{' enumerator_list '}' | 'enum' IDENTIFIER '{' enumerator_list '}' | 'enum' IDENTIFIER );
+	[GrammarRule("enum_specifier")]
+	public XAstParserRuleReturnScope enum_specifier()
+	{
+		EnterRule_enum_specifier();
+		EnterRule("enum_specifier", 20);
+		var retval = new XAstParserRuleReturnScope("enum_specifier");
+		
+		retval.Start = (IToken)input.LT(1);
+		int enum_specifier_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken string_literal80 = default(IToken);
+		IToken char_literal81 = default(IToken);
+		IToken char_literal83 = default(IToken);
+		IToken string_literal84 = default(IToken);
+		IToken IDENTIFIER85 = default(IToken);
+		IToken char_literal86 = default(IToken);
+		IToken char_literal88 = default(IToken);
+		IToken string_literal89 = default(IToken);
+		IToken IDENTIFIER90 = default(IToken);
+		XAstParserRuleReturnScope enumerator_list82 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope enumerator_list87 = default(XAstParserRuleReturnScope);
+
+		object string_literal80_tree = default(object);
+		object char_literal81_tree = default(object);
+		object char_literal83_tree = default(object);
+		object string_literal84_tree = default(object);
+		object IDENTIFIER85_tree = default(object);
+		object char_literal86_tree = default(object);
+		object char_literal88_tree = default(object);
+		object string_literal89_tree = default(object);
+		object IDENTIFIER90_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "enum_specifier");
+		DebugLocation(199, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 20)) { return retval; }
+
+			// C.g:201:2: ( 'enum' '{' enumerator_list '}' | 'enum' IDENTIFIER '{' enumerator_list '}' | 'enum' IDENTIFIER )
+			int alt25=3;
+			try { DebugEnterDecision(25, false);
+			int LA25_0 = input.LA(1);
+
+			if ((LA25_0==78))
+			{
+				int LA25_1 = input.LA(2);
+
+				if ((LA25_1==100))
+				{
+					alt25 = 1;
+				}
+				else if ((LA25_1==IDENTIFIER))
+				{
+					int LA25_3 = input.LA(3);
+
+					if ((LA25_3==100))
+					{
+						alt25 = 2;
+					}
+					else if ((LA25_3==EOF||LA25_3==IDENTIFIER||(LA25_3>=30 && LA25_3<=32)||LA25_3==37||(LA25_3>=46 && LA25_3<=47)||LA25_3==59||(LA25_3>=63 && LA25_3<=68)||(LA25_3>=71 && LA25_3<=72)||LA25_3==76||(LA25_3>=78 && LA25_3<=80)||(LA25_3>=84 && LA25_3<=86)||(LA25_3>=88 && LA25_3<=89)||(LA25_3>=91 && LA25_3<=92)||(LA25_3>=95 && LA25_3<=98)))
+					{
+						alt25 = 3;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return retval;}
+						NoViableAltException nvae = new NoViableAltException("", 25, 3, input);
+						DebugRecognitionException(nvae);
+						throw nvae;
+					}
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 25, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return retval;}
+				NoViableAltException nvae = new NoViableAltException("", 25, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(25); }
+			switch (alt25)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C.g:201:4: 'enum' '{' enumerator_list '}'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(201, 4);
+				string_literal80=(IToken)Match(input,78,Follow._78_in_enum_specifier676); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal80_tree = (object)adaptor.Create(string_literal80, retval);
+				adaptor.AddChild(root_0, string_literal80_tree);
+				}
+				DebugLocation(201, 11);
+				char_literal81=(IToken)Match(input,100,Follow._100_in_enum_specifier678); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal81_tree = (object)adaptor.Create(char_literal81, retval);
+				adaptor.AddChild(root_0, char_literal81_tree);
+				}
+				DebugLocation(201, 15);
+				PushFollow(Follow._enumerator_list_in_enum_specifier680);
+				enumerator_list82=enumerator_list();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, enumerator_list82.Tree, enumerator_list82, retval);
+				DebugLocation(201, 31);
+				char_literal83=(IToken)Match(input,104,Follow._104_in_enum_specifier682); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal83_tree = (object)adaptor.Create(char_literal83, retval);
+				adaptor.AddChild(root_0, char_literal83_tree);
+				}
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C.g:202:4: 'enum' IDENTIFIER '{' enumerator_list '}'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(202, 4);
+				string_literal84=(IToken)Match(input,78,Follow._78_in_enum_specifier687); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal84_tree = (object)adaptor.Create(string_literal84, retval);
+				adaptor.AddChild(root_0, string_literal84_tree);
+				}
+				DebugLocation(202, 11);
+				IDENTIFIER85=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_enum_specifier689), "IDENTIFIER"); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				IDENTIFIER85_tree = (object)adaptor.Create(IDENTIFIER85, retval);
+				adaptor.AddChild(root_0, IDENTIFIER85_tree);
+				}
+				DebugLocation(202, 22);
+				char_literal86=(IToken)Match(input,100,Follow._100_in_enum_specifier691); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal86_tree = (object)adaptor.Create(char_literal86, retval);
+				adaptor.AddChild(root_0, char_literal86_tree);
+				}
+				DebugLocation(202, 26);
+				PushFollow(Follow._enumerator_list_in_enum_specifier693);
+				enumerator_list87=enumerator_list();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, enumerator_list87.Tree, enumerator_list87, retval);
+				DebugLocation(202, 42);
+				char_literal88=(IToken)Match(input,104,Follow._104_in_enum_specifier695); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal88_tree = (object)adaptor.Create(char_literal88, retval);
+				adaptor.AddChild(root_0, char_literal88_tree);
+				}
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// C.g:203:4: 'enum' IDENTIFIER
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(203, 4);
+				string_literal89=(IToken)Match(input,78,Follow._78_in_enum_specifier700); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal89_tree = (object)adaptor.Create(string_literal89, retval);
+				adaptor.AddChild(root_0, string_literal89_tree);
+				}
+				DebugLocation(203, 11);
+				IDENTIFIER90=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_enum_specifier702), "IDENTIFIER"); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				IDENTIFIER90_tree = (object)adaptor.Create(IDENTIFIER90, retval);
+				adaptor.AddChild(root_0, IDENTIFIER90_tree);
+				}
+
+				}
+				break;
+
+			}
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("enum_specifier", 20);
+			LeaveRule("enum_specifier", 20);
+			LeaveRule_enum_specifier();
+			if (state.backtracking > 0) { Memoize(input, 20, enum_specifier_StartIndex); }
+
+		}
+		DebugLocation(204, 1);
+		} finally { DebugExitRule(GrammarFileName, "enum_specifier"); }
+		return retval;
+
+	}
+	// $ANTLR end "enum_specifier"
+
+	partial void EnterRule_enumerator_list();
+	partial void LeaveRule_enumerator_list();
+
+	// $ANTLR start "enumerator_list"
+	// C.g:206:1: enumerator_list : enumerator ( ',' enumerator )* ;
+	[GrammarRule("enumerator_list")]
+	public XAstParserRuleReturnScope enumerator_list()
+	{
+		EnterRule_enumerator_list();
+		EnterRule("enumerator_list", 21);
+		var retval = new XAstParserRuleReturnScope("enumerator_list");
+		
+		retval.Start = (IToken)input.LT(1);
+		int enumerator_list_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken char_literal92 = default(IToken);
+		XAstParserRuleReturnScope enumerator91 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope enumerator93 = default(XAstParserRuleReturnScope);
+
+		object char_literal92_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "enumerator_list");
+		DebugLocation(206, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 21)) { return retval; }
+
+			// C.g:207:2: ( enumerator ( ',' enumerator )* )
+			DebugEnterAlt(1);
+			// C.g:207:4: enumerator ( ',' enumerator )*
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(207, 4);
+			PushFollow(Follow._enumerator_in_enumerator_list713);
+			enumerator91=enumerator();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, enumerator91.Tree, enumerator91, retval);
+			DebugLocation(207, 15);
+			// C.g:207:15: ( ',' enumerator )*
+			try { DebugEnterSubRule(26);
+			while (true)
+			{
+				int alt26=2;
+				try { DebugEnterDecision(26, false);
+				int LA26_0 = input.LA(1);
+
+				if ((LA26_0==37))
+				{
+					alt26 = 1;
+				}
+
+
+				} finally { DebugExitDecision(26); }
+				switch ( alt26 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C.g:207:16: ',' enumerator
+					{
+					DebugLocation(207, 16);
+					char_literal92=(IToken)Match(input,37,Follow._37_in_enumerator_list716); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal92_tree = (object)adaptor.Create(char_literal92, retval);
+					adaptor.AddChild(root_0, char_literal92_tree);
+					}
+					DebugLocation(207, 20);
+					PushFollow(Follow._enumerator_in_enumerator_list718);
+					enumerator93=enumerator();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, enumerator93.Tree, enumerator93, retval);
+
+					}
+					break;
+
+				default:
+					goto loop26;
+				}
+			}
+
+			loop26:
+				;
+
+			} finally { DebugExitSubRule(26); }
 
 
 			}
@@ -3837,13 +4239,123 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("enumerator", 20);
-			LeaveRule("enumerator", 20);
-			LeaveRule_enumerator();
-			if (state.backtracking > 0) { Memoize(input, 20, enumerator_StartIndex); }
+			TraceOut("enumerator_list", 21);
+			LeaveRule("enumerator_list", 21);
+			LeaveRule_enumerator_list();
+			if (state.backtracking > 0) { Memoize(input, 21, enumerator_list_StartIndex); }
 
 		}
-		DebugLocation(201, 1);
+		DebugLocation(208, 1);
+		} finally { DebugExitRule(GrammarFileName, "enumerator_list"); }
+		return retval;
+
+	}
+	// $ANTLR end "enumerator_list"
+
+	partial void EnterRule_enumerator();
+	partial void LeaveRule_enumerator();
+
+	// $ANTLR start "enumerator"
+	// C.g:210:1: enumerator : IDENTIFIER ( '=' constant_expression )? ;
+	[GrammarRule("enumerator")]
+	public XAstParserRuleReturnScope enumerator()
+	{
+		EnterRule_enumerator();
+		EnterRule("enumerator", 22);
+		var retval = new XAstParserRuleReturnScope("enumerator");
+		
+		retval.Start = (IToken)input.LT(1);
+		int enumerator_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken IDENTIFIER94 = default(IToken);
+		IToken char_literal95 = default(IToken);
+		XAstParserRuleReturnScope constant_expression96 = default(XAstParserRuleReturnScope);
+
+		object IDENTIFIER94_tree = default(object);
+		object char_literal95_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "enumerator");
+		DebugLocation(210, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 22)) { return retval; }
+
+			// C.g:211:2: ( IDENTIFIER ( '=' constant_expression )? )
+			DebugEnterAlt(1);
+			// C.g:211:4: IDENTIFIER ( '=' constant_expression )?
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(211, 4);
+			IDENTIFIER94=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_enumerator731), "IDENTIFIER"); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			IDENTIFIER94_tree = (object)adaptor.Create(IDENTIFIER94, retval);
+			adaptor.AddChild(root_0, IDENTIFIER94_tree);
+			}
+			DebugLocation(211, 15);
+			// C.g:211:15: ( '=' constant_expression )?
+			int alt27=2;
+			try { DebugEnterSubRule(27);
+			try { DebugEnterDecision(27, false);
+			int LA27_0 = input.LA(1);
+
+			if ((LA27_0==52))
+			{
+				alt27 = 1;
+			}
+			} finally { DebugExitDecision(27); }
+			switch (alt27)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C.g:211:16: '=' constant_expression
+				{
+				DebugLocation(211, 16);
+				char_literal95=(IToken)Match(input,52,Follow._52_in_enumerator734); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal95_tree = (object)adaptor.Create(char_literal95, retval);
+				adaptor.AddChild(root_0, char_literal95_tree);
+				}
+				DebugLocation(211, 20);
+				PushFollow(Follow._constant_expression_in_enumerator736);
+				constant_expression96=constant_expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression96.Tree, constant_expression96, retval);
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(27); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("enumerator", 22);
+			LeaveRule("enumerator", 22);
+			LeaveRule_enumerator();
+			if (state.backtracking > 0) { Memoize(input, 22, enumerator_StartIndex); }
+
+		}
+		DebugLocation(212, 1);
 		} finally { DebugExitRule(GrammarFileName, "enumerator"); }
 		return retval;
 
@@ -3854,12 +4366,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_type_qualifier();
 
 	// $ANTLR start "type_qualifier"
-	// C.g:203:1: type_qualifier : ( 'const' | 'volatile' | '__extension__' );
+	// C.g:214:1: type_qualifier : ( 'const' | 'volatile' | '__extension__' );
 	[GrammarRule("type_qualifier")]
 	public XAstParserRuleReturnScope type_qualifier()
 	{
 		EnterRule_type_qualifier();
-		EnterRule("type_qualifier", 21);
+		EnterRule("type_qualifier", 23);
 		var retval = new XAstParserRuleReturnScope("type_qualifier");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -3867,28 +4379,28 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken set80 = default(IToken);
+		IToken set97 = default(IToken);
 
-		object set80_tree = default(object);
+		object set97_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "type_qualifier");
-		DebugLocation(203, 1);
+		DebugLocation(214, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 21)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 23)) { return retval; }
 
-			// C.g:204:2: ( 'const' | 'volatile' | '__extension__' )
+			// C.g:215:2: ( 'const' | 'volatile' | '__extension__' )
 			DebugEnterAlt(1);
 			// C.g:
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(204, 2);
+			DebugLocation(215, 2);
 
-			set80=(IToken)input.LT(1);
-			if (input.LA(1)==64||input.LA(1)==69||input.LA(1)==95)
+			set97=(IToken)input.LT(1);
+			if (input.LA(1)==65||input.LA(1)==72||input.LA(1)==98)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set80, retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set97, retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -3918,13 +4430,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("type_qualifier", 21);
-			LeaveRule("type_qualifier", 21);
+			TraceOut("type_qualifier", 23);
+			LeaveRule("type_qualifier", 23);
 			LeaveRule_type_qualifier();
-			if (state.backtracking > 0) { Memoize(input, 21, type_qualifier_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 23, type_qualifier_StartIndex); }
 
 		}
-		DebugLocation(207, 1);
+		DebugLocation(218, 1);
 		} finally { DebugExitRule(GrammarFileName, "type_qualifier"); }
 		return retval;
 
@@ -3935,12 +4447,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_declarator();
 
 	// $ANTLR start "declarator"
-	// C.g:209:1: declarator : ( ( pointer )? direct_declarator | pointer );
+	// C.g:220:1: declarator : ( ( pointer )? direct_declarator | pointer );
 	[GrammarRule("declarator")]
 	public XAstParserRuleReturnScope declarator()
 	{
 		EnterRule_declarator();
-		EnterRule("declarator", 22);
+		EnterRule("declarator", 24);
 		var retval = new XAstParserRuleReturnScope("declarator");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -3948,113 +4460,113 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		XAstParserRuleReturnScope pointer81 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope direct_declarator82 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope pointer83 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope pointer98 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope direct_declarator99 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope pointer100 = default(XAstParserRuleReturnScope);
 
 		try { DebugEnterRule(GrammarFileName, "declarator");
-		DebugLocation(209, 1);
+		DebugLocation(220, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 22)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 24)) { return retval; }
 
-			// C.g:210:2: ( ( pointer )? direct_declarator | pointer )
-			int alt25=2;
-			try { DebugEnterDecision(25, false);
-			int LA25_0 = input.LA(1);
+			// C.g:221:2: ( ( pointer )? direct_declarator | pointer )
+			int alt29=2;
+			try { DebugEnterDecision(29, false);
+			int LA29_0 = input.LA(1);
 
-			if ((LA25_0==32))
+			if ((LA29_0==32))
 			{
-				int LA25_1 = input.LA(2);
+				int LA29_1 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred48_C_fragment)))
+				if ((EvaluatePredicate(synpred54_C_fragment)))
 				{
-					alt25 = 1;
+					alt29 = 1;
 				}
 				else if ((true))
 				{
-					alt25 = 2;
+					alt29 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 25, 1, input);
+					NoViableAltException nvae = new NoViableAltException("", 29, 1, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
-			else if ((LA25_0==IDENTIFIER||LA25_0==30))
+			else if ((LA29_0==IDENTIFIER||LA29_0==30))
 			{
-				alt25 = 1;
+				alt29 = 1;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 25, 0, input);
+				NoViableAltException nvae = new NoViableAltException("", 29, 0, input);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(25); }
-			switch (alt25)
+			} finally { DebugExitDecision(29); }
+			switch (alt29)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:210:4: ( pointer )? direct_declarator
+				// C.g:221:4: ( pointer )? direct_declarator
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(210, 4);
-				// C.g:210:4: ( pointer )?
-				int alt24=2;
-				try { DebugEnterSubRule(24);
-				try { DebugEnterDecision(24, false);
-				int LA24_0 = input.LA(1);
+				DebugLocation(221, 4);
+				// C.g:221:4: ( pointer )?
+				int alt28=2;
+				try { DebugEnterSubRule(28);
+				try { DebugEnterDecision(28, false);
+				int LA28_0 = input.LA(1);
 
-				if ((LA24_0==32))
+				if ((LA28_0==32))
 				{
-					alt24 = 1;
+					alt28 = 1;
 				}
-				} finally { DebugExitDecision(24); }
-				switch (alt24)
+				} finally { DebugExitDecision(28); }
+				switch (alt28)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:210:4: pointer
+					// C.g:221:4: pointer
 					{
-					DebugLocation(210, 4);
-					PushFollow(Follow._pointer_in_declarator663);
-					pointer81=pointer();
+					DebugLocation(221, 4);
+					PushFollow(Follow._pointer_in_declarator772);
+					pointer98=pointer();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, pointer81.Tree, pointer81, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, pointer98.Tree, pointer98, retval);
 
 					}
 					break;
 
 				}
-				} finally { DebugExitSubRule(24); }
+				} finally { DebugExitSubRule(28); }
 
-				DebugLocation(210, 13);
-				PushFollow(Follow._direct_declarator_in_declarator666);
-				direct_declarator82=direct_declarator();
+				DebugLocation(221, 13);
+				PushFollow(Follow._direct_declarator_in_declarator775);
+				direct_declarator99=direct_declarator();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, direct_declarator82.Tree, direct_declarator82, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, direct_declarator99.Tree, direct_declarator99, retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C.g:211:4: pointer
+				// C.g:222:4: pointer
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(211, 4);
-				PushFollow(Follow._pointer_in_declarator671);
-				pointer83=pointer();
+				DebugLocation(222, 4);
+				PushFollow(Follow._pointer_in_declarator780);
+				pointer100=pointer();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, pointer83.Tree, pointer83, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, pointer100.Tree, pointer100, retval);
 
 				}
 				break;
@@ -4076,13 +4588,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("declarator", 22);
-			LeaveRule("declarator", 22);
+			TraceOut("declarator", 24);
+			LeaveRule("declarator", 24);
 			LeaveRule_declarator();
-			if (state.backtracking > 0) { Memoize(input, 22, declarator_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 24, declarator_StartIndex); }
 
 		}
-		DebugLocation(212, 1);
+		DebugLocation(223, 1);
 		} finally { DebugExitRule(GrammarFileName, "declarator"); }
 		return retval;
 
@@ -4093,12 +4605,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_direct_declarator();
 
 	// $ANTLR start "direct_declarator"
-	// C.g:214:1: direct_declarator : ( IDENTIFIER | '(' declarator ')' ) ( declarator_suffix )* ;
+	// C.g:225:1: direct_declarator : ( IDENTIFIER | '(' declarator ')' ) ( declarator_suffix )* ;
 	[GrammarRule("direct_declarator")]
 	public XAstParserRuleReturnScope direct_declarator()
 	{
 		EnterRule_direct_declarator();
-		EnterRule("direct_declarator", 23);
+		EnterRule("direct_declarator", 25);
 		var retval = new XAstParserRuleReturnScope("direct_declarator");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -4106,68 +4618,68 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken IDENTIFIER84 = default(IToken);
-		IToken char_literal85 = default(IToken);
-		IToken char_literal87 = default(IToken);
-		XAstParserRuleReturnScope declarator86 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope declarator_suffix88 = default(XAstParserRuleReturnScope);
+		IToken IDENTIFIER101 = default(IToken);
+		IToken char_literal102 = default(IToken);
+		IToken char_literal104 = default(IToken);
+		XAstParserRuleReturnScope declarator103 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope declarator_suffix105 = default(XAstParserRuleReturnScope);
 
-		object IDENTIFIER84_tree = default(object);
-		object char_literal85_tree = default(object);
-		object char_literal87_tree = default(object);
+		object IDENTIFIER101_tree = default(object);
+		object char_literal102_tree = default(object);
+		object char_literal104_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "direct_declarator");
-		DebugLocation(214, 1);
+		DebugLocation(225, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 23)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 25)) { return retval; }
 
-			// C.g:215:2: ( ( IDENTIFIER | '(' declarator ')' ) ( declarator_suffix )* )
+			// C.g:226:2: ( ( IDENTIFIER | '(' declarator ')' ) ( declarator_suffix )* )
 			DebugEnterAlt(1);
-			// C.g:215:6: ( IDENTIFIER | '(' declarator ')' ) ( declarator_suffix )*
+			// C.g:226:6: ( IDENTIFIER | '(' declarator ')' ) ( declarator_suffix )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(215, 6);
-			// C.g:215:6: ( IDENTIFIER | '(' declarator ')' )
-			int alt26=2;
-			try { DebugEnterSubRule(26);
-			try { DebugEnterDecision(26, false);
-			int LA26_0 = input.LA(1);
+			DebugLocation(226, 6);
+			// C.g:226:6: ( IDENTIFIER | '(' declarator ')' )
+			int alt30=2;
+			try { DebugEnterSubRule(30);
+			try { DebugEnterDecision(30, false);
+			int LA30_0 = input.LA(1);
 
-			if ((LA26_0==IDENTIFIER))
+			if ((LA30_0==IDENTIFIER))
 			{
-				alt26 = 1;
+				alt30 = 1;
 			}
-			else if ((LA26_0==30))
+			else if ((LA30_0==30))
 			{
-				alt26 = 2;
+				alt30 = 2;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 26, 0, input);
+				NoViableAltException nvae = new NoViableAltException("", 30, 0, input);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(26); }
-			switch (alt26)
+			} finally { DebugExitDecision(30); }
+			switch (alt30)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:215:8: IDENTIFIER
+				// C.g:226:8: IDENTIFIER
 				{
-				DebugLocation(215, 8);
-				IDENTIFIER84=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_direct_declarator686), "IDENTIFIER"); if (state.failed) return retval;
+				DebugLocation(226, 8);
+				IDENTIFIER101=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_direct_declarator795), "IDENTIFIER"); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				IDENTIFIER84_tree = (object)adaptor.Create(IDENTIFIER84, retval);
-				adaptor.AddChild(root_0, IDENTIFIER84_tree);
+				IDENTIFIER101_tree = (object)adaptor.Create(IDENTIFIER101, retval);
+				adaptor.AddChild(root_0, IDENTIFIER101_tree);
 				}
-				DebugLocation(216, 4);
+				DebugLocation(227, 4);
 				if (state.backtracking == 0)
 				{
 
 								if (declaration_stack.size()>0&&declaration_stack.Peek().isTypedef) {
-									Symbols_stack.Peek().types.add((IDENTIFIER84!=null?IDENTIFIER84.Text:null));
+									Symbols_stack.Peek().types.add((IDENTIFIER101!=null?IDENTIFIER101.Text:null));
 									
 								}
 								
@@ -4177,75 +4689,75 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C.g:222:5: '(' declarator ')'
+				// C.g:233:5: '(' declarator ')'
 				{
-				DebugLocation(222, 5);
-				char_literal85=(IToken)Match(input,30,Follow._30_in_direct_declarator697); if (state.failed) return retval;
+				DebugLocation(233, 5);
+				char_literal102=(IToken)Match(input,30,Follow._30_in_direct_declarator806); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal85_tree = (object)adaptor.Create(char_literal85, retval);
-				adaptor.AddChild(root_0, char_literal85_tree);
+				char_literal102_tree = (object)adaptor.Create(char_literal102, retval);
+				adaptor.AddChild(root_0, char_literal102_tree);
 				}
-				DebugLocation(222, 9);
-				PushFollow(Follow._declarator_in_direct_declarator699);
-				declarator86=declarator();
+				DebugLocation(233, 9);
+				PushFollow(Follow._declarator_in_direct_declarator808);
+				declarator103=declarator();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, declarator86.Tree, declarator86, retval);
-				DebugLocation(222, 20);
-				char_literal87=(IToken)Match(input,31,Follow._31_in_direct_declarator701); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, declarator103.Tree, declarator103, retval);
+				DebugLocation(233, 20);
+				char_literal104=(IToken)Match(input,31,Follow._31_in_direct_declarator810); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal87_tree = (object)adaptor.Create(char_literal87, retval);
-				adaptor.AddChild(root_0, char_literal87_tree);
+				char_literal104_tree = (object)adaptor.Create(char_literal104, retval);
+				adaptor.AddChild(root_0, char_literal104_tree);
 				}
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(26); }
+			} finally { DebugExitSubRule(30); }
 
-			DebugLocation(224, 3);
-			// C.g:224:3: ( declarator_suffix )*
-			try { DebugEnterSubRule(27);
+			DebugLocation(235, 3);
+			// C.g:235:3: ( declarator_suffix )*
+			try { DebugEnterSubRule(31);
 			while (true)
 			{
-				int alt27=2;
-				try { DebugEnterDecision(27, false);
+				int alt31=2;
+				try { DebugEnterDecision(31, false);
 				try
 				{
-					alt27 = dfa27.Predict(input);
+					alt31 = dfa31.Predict(input);
 				}
 				catch (NoViableAltException nvae)
 				{
 					DebugRecognitionException(nvae);
 					throw;
 				}
-				} finally { DebugExitDecision(27); }
-				switch ( alt27 )
+				} finally { DebugExitDecision(31); }
+				switch ( alt31 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:224:3: declarator_suffix
+					// C.g:235:3: declarator_suffix
 					{
-					DebugLocation(224, 3);
-					PushFollow(Follow._declarator_suffix_in_direct_declarator709);
-					declarator_suffix88=declarator_suffix();
+					DebugLocation(235, 3);
+					PushFollow(Follow._declarator_suffix_in_direct_declarator818);
+					declarator_suffix105=declarator_suffix();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, declarator_suffix88.Tree, declarator_suffix88, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, declarator_suffix105.Tree, declarator_suffix105, retval);
 
 					}
 					break;
 
 				default:
-					goto loop27;
+					goto loop31;
 				}
 			}
 
-			loop27:
+			loop31:
 				;
 
-			} finally { DebugExitSubRule(27); }
+			} finally { DebugExitSubRule(31); }
 
 
 			}
@@ -4266,13 +4778,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("direct_declarator", 23);
-			LeaveRule("direct_declarator", 23);
+			TraceOut("direct_declarator", 25);
+			LeaveRule("direct_declarator", 25);
 			LeaveRule_direct_declarator();
-			if (state.backtracking > 0) { Memoize(input, 23, direct_declarator_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 25, direct_declarator_StartIndex); }
 
 		}
-		DebugLocation(225, 1);
+		DebugLocation(236, 1);
 		} finally { DebugExitRule(GrammarFileName, "direct_declarator"); }
 		return retval;
 
@@ -4283,12 +4795,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_declarator_suffix();
 
 	// $ANTLR start "declarator_suffix"
-	// C.g:227:1: declarator_suffix : ( '[' constant_expression ']' | '[' ']' | '(' parameter_type_list ')' | '(' identifier_list ')' | '(' ')' );
+	// C.g:238:1: declarator_suffix : ( '[' constant_expression ']' | '[' ']' | '(' parameter_type_list ')' | '(' identifier_list ')' | '(' ')' );
 	[GrammarRule("declarator_suffix")]
 	public XAstParserRuleReturnScope declarator_suffix()
 	{
 		EnterRule_declarator_suffix();
-		EnterRule("declarator_suffix", 24);
+		EnterRule("declarator_suffix", 26);
 		var retval = new XAstParserRuleReturnScope("declarator_suffix");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -4296,110 +4808,113 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken char_literal89 = default(IToken);
-		IToken char_literal91 = default(IToken);
-		IToken char_literal92 = default(IToken);
-		IToken char_literal93 = default(IToken);
-		IToken char_literal94 = default(IToken);
-		IToken char_literal96 = default(IToken);
-		IToken char_literal97 = default(IToken);
-		IToken char_literal99 = default(IToken);
-		IToken char_literal100 = default(IToken);
-		IToken char_literal101 = default(IToken);
-		XAstParserRuleReturnScope constant_expression90 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope parameter_type_list95 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope identifier_list98 = default(XAstParserRuleReturnScope);
+		IToken char_literal106 = default(IToken);
+		IToken char_literal108 = default(IToken);
+		IToken char_literal109 = default(IToken);
+		IToken char_literal110 = default(IToken);
+		IToken char_literal111 = default(IToken);
+		IToken char_literal113 = default(IToken);
+		IToken char_literal114 = default(IToken);
+		IToken char_literal116 = default(IToken);
+		IToken char_literal117 = default(IToken);
+		IToken char_literal118 = default(IToken);
+		XAstParserRuleReturnScope constant_expression107 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope parameter_type_list112 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope identifier_list115 = default(XAstParserRuleReturnScope);
 
-		object char_literal89_tree = default(object);
-		object char_literal91_tree = default(object);
-		object char_literal92_tree = default(object);
-		object char_literal93_tree = default(object);
-		object char_literal94_tree = default(object);
-		object char_literal96_tree = default(object);
-		object char_literal97_tree = default(object);
-		object char_literal99_tree = default(object);
-		object char_literal100_tree = default(object);
-		object char_literal101_tree = default(object);
+		object char_literal106_tree = default(object);
+		object char_literal108_tree = default(object);
+		object char_literal109_tree = default(object);
+		object char_literal110_tree = default(object);
+		object char_literal111_tree = default(object);
+		object char_literal113_tree = default(object);
+		object char_literal114_tree = default(object);
+		object char_literal116_tree = default(object);
+		object char_literal117_tree = default(object);
+		object char_literal118_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "declarator_suffix");
-		DebugLocation(227, 1);
+		DebugLocation(238, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 24)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 26)) { return retval; }
 
-			// C.g:228:2: ( '[' constant_expression ']' | '[' ']' | '(' parameter_type_list ')' | '(' identifier_list ')' | '(' ')' )
-			int alt28=5;
-			try { DebugEnterDecision(28, false);
-			int LA28_0 = input.LA(1);
+			// C.g:239:2: ( '[' constant_expression ']' | '[' ']' | '(' parameter_type_list ')' | '(' identifier_list ')' | '(' ')' )
+			int alt32=5;
+			try { DebugEnterDecision(32, false);
+			int LA32_0 = input.LA(1);
 
-			if ((LA28_0==59))
+			if ((LA32_0==59))
 			{
-				int LA28_1 = input.LA(2);
+				int LA32_1 = input.LA(2);
 
-				if ((LA28_1==60))
+				if ((LA32_1==60))
 				{
-					alt28 = 2;
+					alt32 = 2;
 				}
-				else if ((LA28_1==CHARACTER_LITERAL||LA28_1==DECIMAL_LITERAL||LA28_1==FLOATING_POINT_LITERAL||LA28_1==HEX_LITERAL||LA28_1==IDENTIFIER||LA28_1==OCTAL_LITERAL||LA28_1==STRING_LITERAL||LA28_1==23||LA28_1==28||LA28_1==30||LA28_1==32||(LA28_1>=34 && LA28_1<=35)||(LA28_1>=38 && LA28_1<=39)||LA28_1==87||LA28_1==102))
+				else if ((LA32_1==CHARACTER_LITERAL||LA32_1==DECIMAL_LITERAL||LA32_1==FLOATING_POINT_LITERAL||LA32_1==HEX_LITERAL||LA32_1==IDENTIFIER||LA32_1==OCTAL_LITERAL||LA32_1==STRING_LITERAL||LA32_1==23||LA32_1==28||LA32_1==30||LA32_1==32||(LA32_1>=34 && LA32_1<=35)||(LA32_1>=38 && LA32_1<=39)||LA32_1==90||LA32_1==105))
 				{
-					alt28 = 1;
+					alt32 = 1;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 28, 1, input);
+					NoViableAltException nvae = new NoViableAltException("", 32, 1, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
-			else if ((LA28_0==30))
+			else if ((LA32_0==30))
 			{
 				switch (input.LA(2))
 				{
 				case 31:
 					{
-					alt28 = 5;
+					alt32 = 5;
 					}
 					break;
 				case 63:
 				case 64:
 				case 65:
+				case 66:
+				case 67:
 				case 68:
-				case 69:
-				case 73:
-				case 75:
+				case 71:
+				case 72:
 				case 76:
-				case 77:
-				case 81:
-				case 82:
-				case 83:
+				case 78:
+				case 79:
+				case 80:
+				case 84:
 				case 85:
 				case 86:
 				case 88:
 				case 89:
+				case 91:
 				case 92:
-				case 93:
-				case 94:
 				case 95:
+				case 96:
+				case 97:
+				case 98:
 					{
-					alt28 = 3;
+					alt32 = 3;
 					}
 					break;
 				case IDENTIFIER:
 					{
-					int LA28_30 = input.LA(3);
+					int LA32_29 = input.LA(3);
 
-					if ((EvaluatePredicate(synpred53_C_fragment)))
+					if ((EvaluatePredicate(synpred59_C_fragment)))
 					{
-						alt28 = 3;
+						alt32 = 3;
 					}
-					else if ((EvaluatePredicate(synpred54_C_fragment)))
+					else if ((EvaluatePredicate(synpred60_C_fragment)))
 					{
-						alt28 = 4;
+						alt32 = 4;
 					}
 					else
 					{
 						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 28, 30, input);
+						NoViableAltException nvae = new NoViableAltException("", 32, 29, input);
 						DebugRecognitionException(nvae);
 						throw nvae;
 					}
@@ -4408,7 +4923,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				default:
 					{
 						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 28, 2, input);
+						NoViableAltException nvae = new NoViableAltException("", 32, 2, input);
 						DebugRecognitionException(nvae);
 						throw nvae;
 					}
@@ -4418,132 +4933,132 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 28, 0, input);
+				NoViableAltException nvae = new NoViableAltException("", 32, 0, input);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(28); }
-			switch (alt28)
+			} finally { DebugExitDecision(32); }
+			switch (alt32)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:228:6: '[' constant_expression ']'
+				// C.g:239:6: '[' constant_expression ']'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(228, 6);
-				char_literal89=(IToken)Match(input,59,Follow._59_in_declarator_suffix723); if (state.failed) return retval;
+				DebugLocation(239, 6);
+				char_literal106=(IToken)Match(input,59,Follow._59_in_declarator_suffix832); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal89_tree = (object)adaptor.Create(char_literal89, retval);
-				adaptor.AddChild(root_0, char_literal89_tree);
+				char_literal106_tree = (object)adaptor.Create(char_literal106, retval);
+				adaptor.AddChild(root_0, char_literal106_tree);
 				}
-				DebugLocation(228, 10);
-				PushFollow(Follow._constant_expression_in_declarator_suffix725);
-				constant_expression90=constant_expression();
+				DebugLocation(239, 10);
+				PushFollow(Follow._constant_expression_in_declarator_suffix834);
+				constant_expression107=constant_expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression90.Tree, constant_expression90, retval);
-				DebugLocation(228, 30);
-				char_literal91=(IToken)Match(input,60,Follow._60_in_declarator_suffix727); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression107.Tree, constant_expression107, retval);
+				DebugLocation(239, 30);
+				char_literal108=(IToken)Match(input,60,Follow._60_in_declarator_suffix836); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal91_tree = (object)adaptor.Create(char_literal91, retval);
-				adaptor.AddChild(root_0, char_literal91_tree);
+				char_literal108_tree = (object)adaptor.Create(char_literal108, retval);
+				adaptor.AddChild(root_0, char_literal108_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C.g:229:6: '[' ']'
+				// C.g:240:6: '[' ']'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(229, 6);
-				char_literal92=(IToken)Match(input,59,Follow._59_in_declarator_suffix734); if (state.failed) return retval;
+				DebugLocation(240, 6);
+				char_literal109=(IToken)Match(input,59,Follow._59_in_declarator_suffix843); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal92_tree = (object)adaptor.Create(char_literal92, retval);
-				adaptor.AddChild(root_0, char_literal92_tree);
+				char_literal109_tree = (object)adaptor.Create(char_literal109, retval);
+				adaptor.AddChild(root_0, char_literal109_tree);
 				}
-				DebugLocation(229, 10);
-				char_literal93=(IToken)Match(input,60,Follow._60_in_declarator_suffix736); if (state.failed) return retval;
+				DebugLocation(240, 10);
+				char_literal110=(IToken)Match(input,60,Follow._60_in_declarator_suffix845); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal93_tree = (object)adaptor.Create(char_literal93, retval);
-				adaptor.AddChild(root_0, char_literal93_tree);
+				char_literal110_tree = (object)adaptor.Create(char_literal110, retval);
+				adaptor.AddChild(root_0, char_literal110_tree);
 				}
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C.g:230:6: '(' parameter_type_list ')'
+				// C.g:241:6: '(' parameter_type_list ')'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(230, 6);
-				char_literal94=(IToken)Match(input,30,Follow._30_in_declarator_suffix743); if (state.failed) return retval;
+				DebugLocation(241, 6);
+				char_literal111=(IToken)Match(input,30,Follow._30_in_declarator_suffix852); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal94_tree = (object)adaptor.Create(char_literal94, retval);
-				adaptor.AddChild(root_0, char_literal94_tree);
+				char_literal111_tree = (object)adaptor.Create(char_literal111, retval);
+				adaptor.AddChild(root_0, char_literal111_tree);
 				}
-				DebugLocation(230, 10);
-				PushFollow(Follow._parameter_type_list_in_declarator_suffix745);
-				parameter_type_list95=parameter_type_list();
+				DebugLocation(241, 10);
+				PushFollow(Follow._parameter_type_list_in_declarator_suffix854);
+				parameter_type_list112=parameter_type_list();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, parameter_type_list95.Tree, parameter_type_list95, retval);
-				DebugLocation(230, 30);
-				char_literal96=(IToken)Match(input,31,Follow._31_in_declarator_suffix747); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, parameter_type_list112.Tree, parameter_type_list112, retval);
+				DebugLocation(241, 30);
+				char_literal113=(IToken)Match(input,31,Follow._31_in_declarator_suffix856); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal96_tree = (object)adaptor.Create(char_literal96, retval);
-				adaptor.AddChild(root_0, char_literal96_tree);
+				char_literal113_tree = (object)adaptor.Create(char_literal113, retval);
+				adaptor.AddChild(root_0, char_literal113_tree);
 				}
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C.g:231:6: '(' identifier_list ')'
+				// C.g:242:6: '(' identifier_list ')'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(231, 6);
-				char_literal97=(IToken)Match(input,30,Follow._30_in_declarator_suffix754); if (state.failed) return retval;
+				DebugLocation(242, 6);
+				char_literal114=(IToken)Match(input,30,Follow._30_in_declarator_suffix863); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal97_tree = (object)adaptor.Create(char_literal97, retval);
-				adaptor.AddChild(root_0, char_literal97_tree);
+				char_literal114_tree = (object)adaptor.Create(char_literal114, retval);
+				adaptor.AddChild(root_0, char_literal114_tree);
 				}
-				DebugLocation(231, 10);
-				PushFollow(Follow._identifier_list_in_declarator_suffix756);
-				identifier_list98=identifier_list();
+				DebugLocation(242, 10);
+				PushFollow(Follow._identifier_list_in_declarator_suffix865);
+				identifier_list115=identifier_list();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, identifier_list98.Tree, identifier_list98, retval);
-				DebugLocation(231, 26);
-				char_literal99=(IToken)Match(input,31,Follow._31_in_declarator_suffix758); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, identifier_list115.Tree, identifier_list115, retval);
+				DebugLocation(242, 26);
+				char_literal116=(IToken)Match(input,31,Follow._31_in_declarator_suffix867); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal99_tree = (object)adaptor.Create(char_literal99, retval);
-				adaptor.AddChild(root_0, char_literal99_tree);
+				char_literal116_tree = (object)adaptor.Create(char_literal116, retval);
+				adaptor.AddChild(root_0, char_literal116_tree);
 				}
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C.g:232:6: '(' ')'
+				// C.g:243:6: '(' ')'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(232, 6);
-				char_literal100=(IToken)Match(input,30,Follow._30_in_declarator_suffix765); if (state.failed) return retval;
+				DebugLocation(243, 6);
+				char_literal117=(IToken)Match(input,30,Follow._30_in_declarator_suffix874); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal100_tree = (object)adaptor.Create(char_literal100, retval);
-				adaptor.AddChild(root_0, char_literal100_tree);
+				char_literal117_tree = (object)adaptor.Create(char_literal117, retval);
+				adaptor.AddChild(root_0, char_literal117_tree);
 				}
-				DebugLocation(232, 10);
-				char_literal101=(IToken)Match(input,31,Follow._31_in_declarator_suffix767); if (state.failed) return retval;
+				DebugLocation(243, 10);
+				char_literal118=(IToken)Match(input,31,Follow._31_in_declarator_suffix876); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal101_tree = (object)adaptor.Create(char_literal101, retval);
-				adaptor.AddChild(root_0, char_literal101_tree);
+				char_literal118_tree = (object)adaptor.Create(char_literal118, retval);
+				adaptor.AddChild(root_0, char_literal118_tree);
 				}
 
 				}
@@ -4566,13 +5081,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("declarator_suffix", 24);
-			LeaveRule("declarator_suffix", 24);
+			TraceOut("declarator_suffix", 26);
+			LeaveRule("declarator_suffix", 26);
 			LeaveRule_declarator_suffix();
-			if (state.backtracking > 0) { Memoize(input, 24, declarator_suffix_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 26, declarator_suffix_StartIndex); }
 
 		}
-		DebugLocation(233, 1);
+		DebugLocation(244, 1);
 		} finally { DebugExitRule(GrammarFileName, "declarator_suffix"); }
 		return retval;
 
@@ -4583,12 +5098,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_pointer();
 
 	// $ANTLR start "pointer"
-	// C.g:235:1: pointer : ( '*' ( type_qualifier )+ ( pointer )? | '*' pointer | '*' );
+	// C.g:246:1: pointer : ( '*' ( type_qualifier )+ ( pointer )? | '*' pointer | '*' );
 	[GrammarRule("pointer")]
 	public XAstParserRuleReturnScope pointer()
 	{
 		EnterRule_pointer();
-		EnterRule("pointer", 25);
+		EnterRule("pointer", 27);
 		var retval = new XAstParserRuleReturnScope("pointer");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -4596,47 +5111,47 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken char_literal102 = default(IToken);
-		IToken char_literal105 = default(IToken);
-		IToken char_literal107 = default(IToken);
-		XAstParserRuleReturnScope type_qualifier103 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope pointer104 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope pointer106 = default(XAstParserRuleReturnScope);
+		IToken char_literal119 = default(IToken);
+		IToken char_literal122 = default(IToken);
+		IToken char_literal124 = default(IToken);
+		XAstParserRuleReturnScope type_qualifier120 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope pointer121 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope pointer123 = default(XAstParserRuleReturnScope);
 
-		object char_literal102_tree = default(object);
-		object char_literal105_tree = default(object);
-		object char_literal107_tree = default(object);
+		object char_literal119_tree = default(object);
+		object char_literal122_tree = default(object);
+		object char_literal124_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "pointer");
-		DebugLocation(235, 1);
+		DebugLocation(246, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 25)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 27)) { return retval; }
 
-			// C.g:236:2: ( '*' ( type_qualifier )+ ( pointer )? | '*' pointer | '*' )
-			int alt31=3;
-			try { DebugEnterDecision(31, false);
-			int LA31_0 = input.LA(1);
+			// C.g:247:2: ( '*' ( type_qualifier )+ ( pointer )? | '*' pointer | '*' )
+			int alt35=3;
+			try { DebugEnterDecision(35, false);
+			int LA35_0 = input.LA(1);
 
-			if ((LA31_0==32))
+			if ((LA35_0==32))
 			{
 				switch (input.LA(2))
 				{
-				case 64:
+				case 65:
 					{
-					int LA31_2 = input.LA(3);
+					int LA35_2 = input.LA(3);
 
-					if ((EvaluatePredicate(synpred57_C_fragment)))
+					if ((EvaluatePredicate(synpred63_C_fragment)))
 					{
-						alt31 = 1;
+						alt35 = 1;
 					}
 					else if ((true))
 					{
-						alt31 = 3;
+						alt35 = 3;
 					}
 					else
 					{
 						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 31, 2, input);
+						NoViableAltException nvae = new NoViableAltException("", 35, 2, input);
 						DebugRecognitionException(nvae);
 						throw nvae;
 					}
@@ -4644,20 +5159,20 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					break;
 				case 32:
 					{
-					int LA31_3 = input.LA(3);
+					int LA35_3 = input.LA(3);
 
-					if ((EvaluatePredicate(synpred58_C_fragment)))
+					if ((EvaluatePredicate(synpred64_C_fragment)))
 					{
-						alt31 = 2;
+						alt35 = 2;
 					}
 					else if ((true))
 					{
-						alt31 = 3;
+						alt35 = 3;
 					}
 					else
 					{
 						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 31, 3, input);
+						NoViableAltException nvae = new NoViableAltException("", 35, 3, input);
 						DebugRecognitionException(nvae);
 						throw nvae;
 					}
@@ -4673,45 +5188,48 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				case 52:
 				case 59:
 				case 63:
-				case 65:
+				case 64:
+				case 66:
+				case 67:
 				case 68:
-				case 73:
-				case 75:
+				case 71:
 				case 76:
-				case 77:
-				case 81:
-				case 82:
-				case 83:
+				case 78:
+				case 79:
+				case 80:
+				case 84:
 				case 85:
 				case 86:
 				case 88:
 				case 89:
 				case 91:
 				case 92:
-				case 93:
 				case 94:
+				case 95:
+				case 96:
 				case 97:
+				case 100:
 					{
-					alt31 = 3;
+					alt35 = 3;
 					}
 					break;
-				case 69:
-				case 95:
+				case 72:
+				case 98:
 					{
-					int LA31_6 = input.LA(3);
+					int LA35_6 = input.LA(3);
 
-					if ((EvaluatePredicate(synpred57_C_fragment)))
+					if ((EvaluatePredicate(synpred63_C_fragment)))
 					{
-						alt31 = 1;
+						alt35 = 1;
 					}
 					else if ((true))
 					{
-						alt31 = 3;
+						alt35 = 3;
 					}
 					else
 					{
 						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 31, 6, input);
+						NoViableAltException nvae = new NoViableAltException("", 35, 6, input);
 						DebugRecognitionException(nvae);
 						throw nvae;
 					}
@@ -4720,7 +5238,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				default:
 					{
 						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 31, 1, input);
+						NoViableAltException nvae = new NoViableAltException("", 35, 1, input);
 						DebugRecognitionException(nvae);
 						throw nvae;
 					}
@@ -4730,146 +5248,144 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 31, 0, input);
+				NoViableAltException nvae = new NoViableAltException("", 35, 0, input);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(31); }
-			switch (alt31)
+			} finally { DebugExitDecision(35); }
+			switch (alt35)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:236:4: '*' ( type_qualifier )+ ( pointer )?
+				// C.g:247:4: '*' ( type_qualifier )+ ( pointer )?
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(236, 4);
-				char_literal102=(IToken)Match(input,32,Follow._32_in_pointer778); if (state.failed) return retval;
+				DebugLocation(247, 4);
+				char_literal119=(IToken)Match(input,32,Follow._32_in_pointer887); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal102_tree = (object)adaptor.Create(char_literal102, retval);
-				adaptor.AddChild(root_0, char_literal102_tree);
+				char_literal119_tree = (object)adaptor.Create(char_literal119, retval);
+				adaptor.AddChild(root_0, char_literal119_tree);
 				}
-				DebugLocation(236, 8);
-				// C.g:236:8: ( type_qualifier )+
-				int cnt29=0;
-				try { DebugEnterSubRule(29);
+				DebugLocation(247, 8);
+				// C.g:247:8: ( type_qualifier )+
+				int cnt33=0;
+				try { DebugEnterSubRule(33);
 				while (true)
 				{
-					int alt29=2;
-					try { DebugEnterDecision(29, false);
+					int alt33=2;
+					try { DebugEnterDecision(33, false);
 					try
 					{
-						alt29 = dfa29.Predict(input);
+						alt33 = dfa33.Predict(input);
 					}
 					catch (NoViableAltException nvae)
 					{
 						DebugRecognitionException(nvae);
 						throw;
 					}
-					} finally { DebugExitDecision(29); }
-					switch (alt29)
+					} finally { DebugExitDecision(33); }
+					switch (alt33)
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C.g:236:8: type_qualifier
+						// C.g:247:8: type_qualifier
 						{
-						DebugLocation(236, 8);
-						PushFollow(Follow._type_qualifier_in_pointer780);
-						type_qualifier103=type_qualifier();
+						DebugLocation(247, 8);
+						PushFollow(Follow._type_qualifier_in_pointer889);
+						type_qualifier120=type_qualifier();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, type_qualifier103.Tree, type_qualifier103, retval);
+						if (state.backtracking == 0) adaptor.AddChild(root_0, type_qualifier120.Tree, type_qualifier120, retval);
 
 						}
 						break;
 
 					default:
-						if (cnt29 >= 1)
-							goto loop29;
+						if (cnt33 >= 1)
+							goto loop33;
 
 						if (state.backtracking>0) {state.failed=true; return retval;}
-						EarlyExitException eee29 = new EarlyExitException( 29, input );
-						DebugRecognitionException(eee29);
-						throw eee29;
+						EarlyExitException eee33 = new EarlyExitException( 33, input );
+						DebugRecognitionException(eee33);
+						throw eee33;
 					}
-					cnt29++;
+					cnt33++;
 				}
-				loop29:
+				loop33:
 					;
 
-				} finally { DebugExitSubRule(29); }
+				} finally { DebugExitSubRule(33); }
 
-				DebugLocation(236, 24);
-				// C.g:236:24: ( pointer )?
-				int alt30=2;
-				try { DebugEnterSubRule(30);
-				try { DebugEnterDecision(30, false);
-				int LA30_0 = input.LA(1);
-
-				if ((LA30_0==32))
+				DebugLocation(247, 24);
+				// C.g:247:24: ( pointer )?
+				int alt34=2;
+				try { DebugEnterSubRule(34);
+				try { DebugEnterDecision(34, false);
+				try
 				{
-					int LA30_1 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred56_C_fragment)))
-					{
-						alt30 = 1;
-					}
+					alt34 = dfa34.Predict(input);
 				}
-				} finally { DebugExitDecision(30); }
-				switch (alt30)
+				catch (NoViableAltException nvae)
+				{
+					DebugRecognitionException(nvae);
+					throw;
+				}
+				} finally { DebugExitDecision(34); }
+				switch (alt34)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:236:24: pointer
+					// C.g:247:24: pointer
 					{
-					DebugLocation(236, 24);
-					PushFollow(Follow._pointer_in_pointer783);
-					pointer104=pointer();
+					DebugLocation(247, 24);
+					PushFollow(Follow._pointer_in_pointer892);
+					pointer121=pointer();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, pointer104.Tree, pointer104, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, pointer121.Tree, pointer121, retval);
 
 					}
 					break;
 
 				}
-				} finally { DebugExitSubRule(30); }
+				} finally { DebugExitSubRule(34); }
 
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C.g:237:4: '*' pointer
+				// C.g:248:4: '*' pointer
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(237, 4);
-				char_literal105=(IToken)Match(input,32,Follow._32_in_pointer789); if (state.failed) return retval;
+				DebugLocation(248, 4);
+				char_literal122=(IToken)Match(input,32,Follow._32_in_pointer898); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal105_tree = (object)adaptor.Create(char_literal105, retval);
-				adaptor.AddChild(root_0, char_literal105_tree);
+				char_literal122_tree = (object)adaptor.Create(char_literal122, retval);
+				adaptor.AddChild(root_0, char_literal122_tree);
 				}
-				DebugLocation(237, 8);
-				PushFollow(Follow._pointer_in_pointer791);
-				pointer106=pointer();
+				DebugLocation(248, 8);
+				PushFollow(Follow._pointer_in_pointer900);
+				pointer123=pointer();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, pointer106.Tree, pointer106, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, pointer123.Tree, pointer123, retval);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C.g:238:4: '*'
+				// C.g:249:4: '*'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(238, 4);
-				char_literal107=(IToken)Match(input,32,Follow._32_in_pointer796); if (state.failed) return retval;
+				DebugLocation(249, 4);
+				char_literal124=(IToken)Match(input,32,Follow._32_in_pointer905); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal107_tree = (object)adaptor.Create(char_literal107, retval);
-				adaptor.AddChild(root_0, char_literal107_tree);
+				char_literal124_tree = (object)adaptor.Create(char_literal124, retval);
+				adaptor.AddChild(root_0, char_literal124_tree);
 				}
 
 				}
@@ -4892,13 +5408,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("pointer", 25);
-			LeaveRule("pointer", 25);
+			TraceOut("pointer", 27);
+			LeaveRule("pointer", 27);
 			LeaveRule_pointer();
-			if (state.backtracking > 0) { Memoize(input, 25, pointer_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 27, pointer_StartIndex); }
 
 		}
-		DebugLocation(239, 1);
+		DebugLocation(250, 1);
 		} finally { DebugExitRule(GrammarFileName, "pointer"); }
 		return retval;
 
@@ -4909,12 +5425,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_parameter_type_list();
 
 	// $ANTLR start "parameter_type_list"
-	// C.g:241:1: parameter_type_list : parameter_list ( ',' '...' )? ;
+	// C.g:252:1: parameter_type_list : parameter_list ( ',' '...' )? ;
 	[GrammarRule("parameter_type_list")]
 	public XAstParserRuleReturnScope parameter_type_list()
 	{
 		EnterRule_parameter_type_list();
-		EnterRule("parameter_type_list", 26);
+		EnterRule("parameter_type_list", 28);
 		var retval = new XAstParserRuleReturnScope("parameter_type_list");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -4922,624 +5438,38 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken char_literal109 = default(IToken);
-		IToken string_literal110 = default(IToken);
-		XAstParserRuleReturnScope parameter_list108 = default(XAstParserRuleReturnScope);
+		IToken char_literal126 = default(IToken);
+		IToken string_literal127 = default(IToken);
+		XAstParserRuleReturnScope parameter_list125 = default(XAstParserRuleReturnScope);
 
-		object char_literal109_tree = default(object);
-		object string_literal110_tree = default(object);
+		object char_literal126_tree = default(object);
+		object string_literal127_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "parameter_type_list");
-		DebugLocation(241, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 26)) { return retval; }
-
-			// C.g:242:2: ( parameter_list ( ',' '...' )? )
-			DebugEnterAlt(1);
-			// C.g:242:4: parameter_list ( ',' '...' )?
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(242, 4);
-			PushFollow(Follow._parameter_list_in_parameter_type_list807);
-			parameter_list108=parameter_list();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, parameter_list108.Tree, parameter_list108, retval);
-			DebugLocation(242, 19);
-			// C.g:242:19: ( ',' '...' )?
-			int alt32=2;
-			try { DebugEnterSubRule(32);
-			try { DebugEnterDecision(32, false);
-			int LA32_0 = input.LA(1);
-
-			if ((LA32_0==37))
-			{
-				alt32 = 1;
-			}
-			} finally { DebugExitDecision(32); }
-			switch (alt32)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C.g:242:20: ',' '...'
-				{
-				DebugLocation(242, 20);
-				char_literal109=(IToken)Match(input,37,Follow._37_in_parameter_type_list810); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal109_tree = (object)adaptor.Create(char_literal109, retval);
-				adaptor.AddChild(root_0, char_literal109_tree);
-				}
-				DebugLocation(242, 24);
-				string_literal110=(IToken)Match(input,43,Follow._43_in_parameter_type_list812); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal110_tree = (object)adaptor.Create(string_literal110, retval);
-				adaptor.AddChild(root_0, string_literal110_tree);
-				}
-
-				}
-				break;
-
-			}
-			} finally { DebugExitSubRule(32); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("parameter_type_list", 26);
-			LeaveRule("parameter_type_list", 26);
-			LeaveRule_parameter_type_list();
-			if (state.backtracking > 0) { Memoize(input, 26, parameter_type_list_StartIndex); }
-
-		}
-		DebugLocation(243, 1);
-		} finally { DebugExitRule(GrammarFileName, "parameter_type_list"); }
-		return retval;
-
-	}
-	// $ANTLR end "parameter_type_list"
-
-	partial void EnterRule_parameter_list();
-	partial void LeaveRule_parameter_list();
-
-	// $ANTLR start "parameter_list"
-	// C.g:245:1: parameter_list : parameter_declaration ( ',' parameter_declaration )* ;
-	[GrammarRule("parameter_list")]
-	public XAstParserRuleReturnScope parameter_list()
-	{
-		EnterRule_parameter_list();
-		EnterRule("parameter_list", 27);
-		var retval = new XAstParserRuleReturnScope("parameter_list");
-		
-		retval.Start = (IToken)input.LT(1);
-		int parameter_list_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken char_literal112 = default(IToken);
-		XAstParserRuleReturnScope parameter_declaration111 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope parameter_declaration113 = default(XAstParserRuleReturnScope);
-
-		object char_literal112_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "parameter_list");
-		DebugLocation(245, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 27)) { return retval; }
-
-			// C.g:246:2: ( parameter_declaration ( ',' parameter_declaration )* )
-			DebugEnterAlt(1);
-			// C.g:246:4: parameter_declaration ( ',' parameter_declaration )*
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(246, 4);
-			PushFollow(Follow._parameter_declaration_in_parameter_list825);
-			parameter_declaration111=parameter_declaration();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, parameter_declaration111.Tree, parameter_declaration111, retval);
-			DebugLocation(246, 26);
-			// C.g:246:26: ( ',' parameter_declaration )*
-			try { DebugEnterSubRule(33);
-			while (true)
-			{
-				int alt33=2;
-				try { DebugEnterDecision(33, false);
-				int LA33_0 = input.LA(1);
-
-				if ((LA33_0==37))
-				{
-					int LA33_1 = input.LA(2);
-
-					if ((LA33_1==IDENTIFIER||(LA33_1>=63 && LA33_1<=65)||(LA33_1>=68 && LA33_1<=69)||LA33_1==73||(LA33_1>=75 && LA33_1<=77)||(LA33_1>=81 && LA33_1<=83)||(LA33_1>=85 && LA33_1<=86)||(LA33_1>=88 && LA33_1<=89)||(LA33_1>=92 && LA33_1<=95)))
-					{
-						alt33 = 1;
-					}
-
-
-				}
-
-
-				} finally { DebugExitDecision(33); }
-				switch ( alt33 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C.g:246:27: ',' parameter_declaration
-					{
-					DebugLocation(246, 27);
-					char_literal112=(IToken)Match(input,37,Follow._37_in_parameter_list828); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal112_tree = (object)adaptor.Create(char_literal112, retval);
-					adaptor.AddChild(root_0, char_literal112_tree);
-					}
-					DebugLocation(246, 31);
-					PushFollow(Follow._parameter_declaration_in_parameter_list830);
-					parameter_declaration113=parameter_declaration();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, parameter_declaration113.Tree, parameter_declaration113, retval);
-
-					}
-					break;
-
-				default:
-					goto loop33;
-				}
-			}
-
-			loop33:
-				;
-
-			} finally { DebugExitSubRule(33); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("parameter_list", 27);
-			LeaveRule("parameter_list", 27);
-			LeaveRule_parameter_list();
-			if (state.backtracking > 0) { Memoize(input, 27, parameter_list_StartIndex); }
-
-		}
-		DebugLocation(247, 1);
-		} finally { DebugExitRule(GrammarFileName, "parameter_list"); }
-		return retval;
-
-	}
-	// $ANTLR end "parameter_list"
-
-	partial void EnterRule_parameter_declaration();
-	partial void LeaveRule_parameter_declaration();
-
-	// $ANTLR start "parameter_declaration"
-	// C.g:249:1: parameter_declaration : declaration_specifiers ( declarator | abstract_declarator )* ;
-	[GrammarRule("parameter_declaration")]
-	public XAstParserRuleReturnScope parameter_declaration()
-	{
-		EnterRule_parameter_declaration();
-		EnterRule("parameter_declaration", 28);
-		var retval = new XAstParserRuleReturnScope("parameter_declaration");
-		
-		retval.Start = (IToken)input.LT(1);
-		int parameter_declaration_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		XAstParserRuleReturnScope declaration_specifiers114 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope declarator115 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope abstract_declarator116 = default(XAstParserRuleReturnScope);
-
-		try { DebugEnterRule(GrammarFileName, "parameter_declaration");
-		DebugLocation(249, 1);
+		DebugLocation(252, 1);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 28)) { return retval; }
 
-			// C.g:250:2: ( declaration_specifiers ( declarator | abstract_declarator )* )
+			// C.g:253:2: ( parameter_list ( ',' '...' )? )
 			DebugEnterAlt(1);
-			// C.g:250:4: declaration_specifiers ( declarator | abstract_declarator )*
+			// C.g:253:4: parameter_list ( ',' '...' )?
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(250, 4);
-			PushFollow(Follow._declaration_specifiers_in_parameter_declaration843);
-			declaration_specifiers114=declaration_specifiers();
+			DebugLocation(253, 4);
+			PushFollow(Follow._parameter_list_in_parameter_type_list916);
+			parameter_list125=parameter_list();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, declaration_specifiers114.Tree, declaration_specifiers114, retval);
-			DebugLocation(250, 27);
-			// C.g:250:27: ( declarator | abstract_declarator )*
-			try { DebugEnterSubRule(34);
-			while (true)
-			{
-				int alt34=3;
-				try { DebugEnterDecision(34, false);
-				switch (input.LA(1))
-				{
-				case 32:
-					{
-					int LA34_4 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred61_C_fragment)))
-					{
-						alt34 = 1;
-					}
-					else if ((EvaluatePredicate(synpred62_C_fragment)))
-					{
-						alt34 = 2;
-					}
-
-
-					}
-					break;
-				case IDENTIFIER:
-					{
-					alt34 = 1;
-					}
-					break;
-				case 30:
-					{
-					switch (input.LA(2))
-					{
-					case 31:
-					case 59:
-					case 63:
-					case 64:
-					case 65:
-					case 68:
-					case 69:
-					case 73:
-					case 75:
-					case 76:
-					case 77:
-					case 81:
-					case 82:
-					case 83:
-					case 85:
-					case 86:
-					case 88:
-					case 89:
-					case 92:
-					case 93:
-					case 94:
-					case 95:
-						{
-						alt34 = 2;
-						}
-						break;
-					case 32:
-						{
-						int LA34_17 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred61_C_fragment)))
-						{
-							alt34 = 1;
-						}
-						else if ((EvaluatePredicate(synpred62_C_fragment)))
-						{
-							alt34 = 2;
-						}
-
-
-						}
-						break;
-					case IDENTIFIER:
-						{
-						int LA34_18 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred61_C_fragment)))
-						{
-							alt34 = 1;
-						}
-						else if ((EvaluatePredicate(synpred62_C_fragment)))
-						{
-							alt34 = 2;
-						}
-
-
-						}
-						break;
-					case 30:
-						{
-						int LA34_19 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred61_C_fragment)))
-						{
-							alt34 = 1;
-						}
-						else if ((EvaluatePredicate(synpred62_C_fragment)))
-						{
-							alt34 = 2;
-						}
-
-
-						}
-						break;
-					}
-
-					}
-					break;
-				case 59:
-					{
-					alt34 = 2;
-					}
-					break;
-				}
-
-				} finally { DebugExitDecision(34); }
-				switch ( alt34 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C.g:250:28: declarator
-					{
-					DebugLocation(250, 28);
-					PushFollow(Follow._declarator_in_parameter_declaration846);
-					declarator115=declarator();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, declarator115.Tree, declarator115, retval);
-
-					}
-					break;
-				case 2:
-					DebugEnterAlt(2);
-					// C.g:250:39: abstract_declarator
-					{
-					DebugLocation(250, 39);
-					PushFollow(Follow._abstract_declarator_in_parameter_declaration848);
-					abstract_declarator116=abstract_declarator();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, abstract_declarator116.Tree, abstract_declarator116, retval);
-
-					}
-					break;
-
-				default:
-					goto loop34;
-				}
-			}
-
-			loop34:
-				;
-
-			} finally { DebugExitSubRule(34); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("parameter_declaration", 28);
-			LeaveRule("parameter_declaration", 28);
-			LeaveRule_parameter_declaration();
-			if (state.backtracking > 0) { Memoize(input, 28, parameter_declaration_StartIndex); }
-
-		}
-		DebugLocation(251, 1);
-		} finally { DebugExitRule(GrammarFileName, "parameter_declaration"); }
-		return retval;
-
-	}
-	// $ANTLR end "parameter_declaration"
-
-	partial void EnterRule_identifier_list();
-	partial void LeaveRule_identifier_list();
-
-	// $ANTLR start "identifier_list"
-	// C.g:253:1: identifier_list : IDENTIFIER ( ',' IDENTIFIER )* ;
-	[GrammarRule("identifier_list")]
-	public XAstParserRuleReturnScope identifier_list()
-	{
-		EnterRule_identifier_list();
-		EnterRule("identifier_list", 29);
-		var retval = new XAstParserRuleReturnScope("identifier_list");
-		
-		retval.Start = (IToken)input.LT(1);
-		int identifier_list_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken IDENTIFIER117 = default(IToken);
-		IToken char_literal118 = default(IToken);
-		IToken IDENTIFIER119 = default(IToken);
-
-		object IDENTIFIER117_tree = default(object);
-		object char_literal118_tree = default(object);
-		object IDENTIFIER119_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "identifier_list");
-		DebugLocation(253, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 29)) { return retval; }
-
-			// C.g:254:2: ( IDENTIFIER ( ',' IDENTIFIER )* )
-			DebugEnterAlt(1);
-			// C.g:254:4: IDENTIFIER ( ',' IDENTIFIER )*
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(254, 4);
-			IDENTIFIER117=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_identifier_list861), "IDENTIFIER"); if (state.failed) return retval;
-			if (state.backtracking == 0) {
-			IDENTIFIER117_tree = (object)adaptor.Create(IDENTIFIER117, retval);
-			adaptor.AddChild(root_0, IDENTIFIER117_tree);
-			}
-			DebugLocation(254, 15);
-			// C.g:254:15: ( ',' IDENTIFIER )*
-			try { DebugEnterSubRule(35);
-			while (true)
-			{
-				int alt35=2;
-				try { DebugEnterDecision(35, false);
-				int LA35_0 = input.LA(1);
-
-				if ((LA35_0==37))
-				{
-					alt35 = 1;
-				}
-
-
-				} finally { DebugExitDecision(35); }
-				switch ( alt35 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C.g:254:16: ',' IDENTIFIER
-					{
-					DebugLocation(254, 16);
-					char_literal118=(IToken)Match(input,37,Follow._37_in_identifier_list864); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal118_tree = (object)adaptor.Create(char_literal118, retval);
-					adaptor.AddChild(root_0, char_literal118_tree);
-					}
-					DebugLocation(254, 20);
-					IDENTIFIER119=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_identifier_list866), "IDENTIFIER"); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					IDENTIFIER119_tree = (object)adaptor.Create(IDENTIFIER119, retval);
-					adaptor.AddChild(root_0, IDENTIFIER119_tree);
-					}
-
-					}
-					break;
-
-				default:
-					goto loop35;
-				}
-			}
-
-			loop35:
-				;
-
-			} finally { DebugExitSubRule(35); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("identifier_list", 29);
-			LeaveRule("identifier_list", 29);
-			LeaveRule_identifier_list();
-			if (state.backtracking > 0) { Memoize(input, 29, identifier_list_StartIndex); }
-
-		}
-		DebugLocation(255, 1);
-		} finally { DebugExitRule(GrammarFileName, "identifier_list"); }
-		return retval;
-
-	}
-	// $ANTLR end "identifier_list"
-
-	partial void EnterRule_type_name();
-	partial void LeaveRule_type_name();
-
-	// $ANTLR start "type_name"
-	// C.g:257:1: type_name : specifier_qualifier_list ( abstract_declarator )? ;
-	[GrammarRule("type_name")]
-	public XAstParserRuleReturnScope type_name()
-	{
-		EnterRule_type_name();
-		EnterRule("type_name", 30);
-		var retval = new XAstParserRuleReturnScope("type_name");
-		
-		retval.Start = (IToken)input.LT(1);
-		int type_name_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		XAstParserRuleReturnScope specifier_qualifier_list120 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope abstract_declarator121 = default(XAstParserRuleReturnScope);
-
-		try { DebugEnterRule(GrammarFileName, "type_name");
-		DebugLocation(257, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 30)) { return retval; }
-
-			// C.g:258:2: ( specifier_qualifier_list ( abstract_declarator )? )
-			DebugEnterAlt(1);
-			// C.g:258:4: specifier_qualifier_list ( abstract_declarator )?
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(258, 4);
-			PushFollow(Follow._specifier_qualifier_list_in_type_name879);
-			specifier_qualifier_list120=specifier_qualifier_list();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, specifier_qualifier_list120.Tree, specifier_qualifier_list120, retval);
-			DebugLocation(258, 29);
-			// C.g:258:29: ( abstract_declarator )?
+			if (state.backtracking == 0) adaptor.AddChild(root_0, parameter_list125.Tree, parameter_list125, retval);
+			DebugLocation(253, 19);
+			// C.g:253:19: ( ',' '...' )?
 			int alt36=2;
 			try { DebugEnterSubRule(36);
 			try { DebugEnterDecision(36, false);
 			int LA36_0 = input.LA(1);
 
-			if ((LA36_0==30||LA36_0==32||LA36_0==59))
+			if ((LA36_0==37))
 			{
 				alt36 = 1;
 			}
@@ -5548,14 +5478,20 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:258:29: abstract_declarator
+				// C.g:253:20: ',' '...'
 				{
-				DebugLocation(258, 29);
-				PushFollow(Follow._abstract_declarator_in_type_name881);
-				abstract_declarator121=abstract_declarator();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, abstract_declarator121.Tree, abstract_declarator121, retval);
+				DebugLocation(253, 20);
+				char_literal126=(IToken)Match(input,37,Follow._37_in_parameter_type_list919); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal126_tree = (object)adaptor.Create(char_literal126, retval);
+				adaptor.AddChild(root_0, char_literal126_tree);
+				}
+				DebugLocation(253, 24);
+				string_literal127=(IToken)Match(input,43,Follow._43_in_parameter_type_list921); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal127_tree = (object)adaptor.Create(string_literal127, retval);
+				adaptor.AddChild(root_0, string_literal127_tree);
+				}
 
 				}
 				break;
@@ -5582,473 +5518,117 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("type_name", 30);
-			LeaveRule("type_name", 30);
-			LeaveRule_type_name();
-			if (state.backtracking > 0) { Memoize(input, 30, type_name_StartIndex); }
+			TraceOut("parameter_type_list", 28);
+			LeaveRule("parameter_type_list", 28);
+			LeaveRule_parameter_type_list();
+			if (state.backtracking > 0) { Memoize(input, 28, parameter_type_list_StartIndex); }
 
 		}
-		DebugLocation(259, 1);
-		} finally { DebugExitRule(GrammarFileName, "type_name"); }
+		DebugLocation(254, 1);
+		} finally { DebugExitRule(GrammarFileName, "parameter_type_list"); }
 		return retval;
 
 	}
-	// $ANTLR end "type_name"
+	// $ANTLR end "parameter_type_list"
 
-	partial void EnterRule_abstract_declarator();
-	partial void LeaveRule_abstract_declarator();
+	partial void EnterRule_parameter_list();
+	partial void LeaveRule_parameter_list();
 
-	// $ANTLR start "abstract_declarator"
-	// C.g:261:1: abstract_declarator : ( pointer ( direct_abstract_declarator )? | direct_abstract_declarator );
-	[GrammarRule("abstract_declarator")]
-	public XAstParserRuleReturnScope abstract_declarator()
+	// $ANTLR start "parameter_list"
+	// C.g:256:1: parameter_list : parameter_declaration ( ',' parameter_declaration )* ;
+	[GrammarRule("parameter_list")]
+	public XAstParserRuleReturnScope parameter_list()
 	{
-		EnterRule_abstract_declarator();
-		EnterRule("abstract_declarator", 31);
-		var retval = new XAstParserRuleReturnScope("abstract_declarator");
+		EnterRule_parameter_list();
+		EnterRule("parameter_list", 29);
+		var retval = new XAstParserRuleReturnScope("parameter_list");
 		
 		retval.Start = (IToken)input.LT(1);
-		int abstract_declarator_StartIndex = input.Index;
+		int parameter_list_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		XAstParserRuleReturnScope pointer122 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope direct_abstract_declarator123 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope direct_abstract_declarator124 = default(XAstParserRuleReturnScope);
+		IToken char_literal129 = default(IToken);
+		XAstParserRuleReturnScope parameter_declaration128 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope parameter_declaration130 = default(XAstParserRuleReturnScope);
 
-		try { DebugEnterRule(GrammarFileName, "abstract_declarator");
-		DebugLocation(261, 1);
+		object char_literal129_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "parameter_list");
+		DebugLocation(256, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 31)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 29)) { return retval; }
 
-			// C.g:262:2: ( pointer ( direct_abstract_declarator )? | direct_abstract_declarator )
-			int alt38=2;
-			try { DebugEnterDecision(38, false);
-			int LA38_0 = input.LA(1);
+			// C.g:257:2: ( parameter_declaration ( ',' parameter_declaration )* )
+			DebugEnterAlt(1);
+			// C.g:257:4: parameter_declaration ( ',' parameter_declaration )*
+			{
+			root_0 = (object)adaptor.Nil();
 
-			if ((LA38_0==32))
+			DebugLocation(257, 4);
+			PushFollow(Follow._parameter_declaration_in_parameter_list934);
+			parameter_declaration128=parameter_declaration();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, parameter_declaration128.Tree, parameter_declaration128, retval);
+			DebugLocation(257, 26);
+			// C.g:257:26: ( ',' parameter_declaration )*
+			try { DebugEnterSubRule(37);
+			while (true)
 			{
-				alt38 = 1;
-			}
-			else if ((LA38_0==30||LA38_0==59))
-			{
-				alt38 = 2;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 38, 0, input);
-				DebugRecognitionException(nvae);
-				throw nvae;
-			}
-			} finally { DebugExitDecision(38); }
-			switch (alt38)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C.g:262:4: pointer ( direct_abstract_declarator )?
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(262, 4);
-				PushFollow(Follow._pointer_in_abstract_declarator893);
-				pointer122=pointer();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, pointer122.Tree, pointer122, retval);
-				DebugLocation(262, 12);
-				// C.g:262:12: ( direct_abstract_declarator )?
 				int alt37=2;
-				try { DebugEnterSubRule(37);
 				try { DebugEnterDecision(37, false);
 				int LA37_0 = input.LA(1);
 
-				if ((LA37_0==30))
+				if ((LA37_0==37))
 				{
-					switch (input.LA(2))
+					int LA37_1 = input.LA(2);
+
+					if ((LA37_1==IDENTIFIER||(LA37_1>=63 && LA37_1<=68)||(LA37_1>=71 && LA37_1<=72)||LA37_1==76||(LA37_1>=78 && LA37_1<=80)||(LA37_1>=84 && LA37_1<=86)||(LA37_1>=88 && LA37_1<=89)||(LA37_1>=91 && LA37_1<=92)||(LA37_1>=95 && LA37_1<=98)))
 					{
-					case 31:
-						{
-						int LA37_8 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 32:
-						{
-						int LA37_9 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 30:
-						{
-						int LA37_10 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 59:
-						{
-						int LA37_11 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 65:
-					case 76:
-					case 83:
-					case 88:
-						{
-						int LA37_12 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 94:
-						{
-						int LA37_13 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 68:
-						{
-						int LA37_14 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 85:
-						{
-						int LA37_15 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 81:
-						{
-						int LA37_16 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 82:
-						{
-						int LA37_17 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 77:
-						{
-						int LA37_18 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 73:
-						{
-						int LA37_19 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 86:
-						{
-						int LA37_20 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 93:
-						{
-						int LA37_21 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 63:
-						{
-						int LA37_22 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 89:
-					case 92:
-						{
-						int LA37_23 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 75:
-						{
-						int LA37_24 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case IDENTIFIER:
-						{
-						int LA37_25 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 64:
-					case 69:
-					case 95:
-						{
-						int LA37_26 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
+						alt37 = 1;
 					}
 
-				}
-				else if ((LA37_0==59))
-				{
-					switch (input.LA(2))
-					{
-					case 60:
-						{
-						int LA37_27 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 30:
-						{
-						int LA37_28 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case IDENTIFIER:
-						{
-						int LA37_29 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case HEX_LITERAL:
-						{
-						int LA37_30 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case OCTAL_LITERAL:
-						{
-						int LA37_31 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case DECIMAL_LITERAL:
-						{
-						int LA37_32 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case CHARACTER_LITERAL:
-						{
-						int LA37_33 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case STRING_LITERAL:
-						{
-						int LA37_34 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case FLOATING_POINT_LITERAL:
-						{
-						int LA37_35 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 35:
-						{
-						int LA37_36 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 39:
-						{
-						int LA37_37 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 23:
-					case 28:
-					case 32:
-					case 34:
-					case 38:
-					case 102:
-						{
-						int LA37_38 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					case 87:
-						{
-						int LA37_39 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred65_C_fragment)))
-						{
-							alt37 = 1;
-						}
-						}
-						break;
-					}
 
 				}
+
+
 				} finally { DebugExitDecision(37); }
-				switch (alt37)
+				switch ( alt37 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:262:12: direct_abstract_declarator
+					// C.g:257:27: ',' parameter_declaration
 					{
-					DebugLocation(262, 12);
-					PushFollow(Follow._direct_abstract_declarator_in_abstract_declarator895);
-					direct_abstract_declarator123=direct_abstract_declarator();
+					DebugLocation(257, 27);
+					char_literal129=(IToken)Match(input,37,Follow._37_in_parameter_list937); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal129_tree = (object)adaptor.Create(char_literal129, retval);
+					adaptor.AddChild(root_0, char_literal129_tree);
+					}
+					DebugLocation(257, 31);
+					PushFollow(Follow._parameter_declaration_in_parameter_list939);
+					parameter_declaration130=parameter_declaration();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, direct_abstract_declarator123.Tree, direct_abstract_declarator123, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, parameter_declaration130.Tree, parameter_declaration130, retval);
 
 					}
 					break;
 
+				default:
+					goto loop37;
 				}
-				} finally { DebugExitSubRule(37); }
+			}
 
+			loop37:
+				;
 
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C.g:263:4: direct_abstract_declarator
-				{
-				root_0 = (object)adaptor.Nil();
+			} finally { DebugExitSubRule(37); }
 
-				DebugLocation(263, 4);
-				PushFollow(Follow._direct_abstract_declarator_in_abstract_declarator901);
-				direct_abstract_declarator124=direct_abstract_declarator();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, direct_abstract_declarator124.Tree, direct_abstract_declarator124, retval);
-
-				}
-				break;
 
 			}
+
 			retval.Stop = (IToken)input.LT(-1);
 
 			if (state.backtracking == 0) {
@@ -6065,159 +5645,132 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("abstract_declarator", 31);
-			LeaveRule("abstract_declarator", 31);
-			LeaveRule_abstract_declarator();
-			if (state.backtracking > 0) { Memoize(input, 31, abstract_declarator_StartIndex); }
+			TraceOut("parameter_list", 29);
+			LeaveRule("parameter_list", 29);
+			LeaveRule_parameter_list();
+			if (state.backtracking > 0) { Memoize(input, 29, parameter_list_StartIndex); }
 
 		}
-		DebugLocation(264, 1);
-		} finally { DebugExitRule(GrammarFileName, "abstract_declarator"); }
+		DebugLocation(258, 1);
+		} finally { DebugExitRule(GrammarFileName, "parameter_list"); }
 		return retval;
 
 	}
-	// $ANTLR end "abstract_declarator"
+	// $ANTLR end "parameter_list"
 
-	partial void EnterRule_direct_abstract_declarator();
-	partial void LeaveRule_direct_abstract_declarator();
+	partial void EnterRule_parameter_declaration();
+	partial void LeaveRule_parameter_declaration();
 
-	// $ANTLR start "direct_abstract_declarator"
-	// C.g:266:1: direct_abstract_declarator : ( '(' abstract_declarator ')' | abstract_declarator_suffix ) ( abstract_declarator_suffix )* ;
-	[GrammarRule("direct_abstract_declarator")]
-	public XAstParserRuleReturnScope direct_abstract_declarator()
+	// $ANTLR start "parameter_declaration"
+	// C.g:260:1: parameter_declaration : declaration_specifiers ( declarator | abstract_declarator )* ;
+	[GrammarRule("parameter_declaration")]
+	public XAstParserRuleReturnScope parameter_declaration()
 	{
-		EnterRule_direct_abstract_declarator();
-		EnterRule("direct_abstract_declarator", 32);
-		var retval = new XAstParserRuleReturnScope("direct_abstract_declarator");
+		EnterRule_parameter_declaration();
+		EnterRule("parameter_declaration", 30);
+		var retval = new XAstParserRuleReturnScope("parameter_declaration");
 		
 		retval.Start = (IToken)input.LT(1);
-		int direct_abstract_declarator_StartIndex = input.Index;
+		int parameter_declaration_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal125 = default(IToken);
-		IToken char_literal127 = default(IToken);
-		XAstParserRuleReturnScope abstract_declarator126 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope abstract_declarator_suffix128 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope abstract_declarator_suffix129 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope declaration_specifiers131 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope declarator132 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope abstract_declarator133 = default(XAstParserRuleReturnScope);
 
-		object char_literal125_tree = default(object);
-		object char_literal127_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "direct_abstract_declarator");
-		DebugLocation(266, 1);
+		try { DebugEnterRule(GrammarFileName, "parameter_declaration");
+		DebugLocation(260, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 32)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 30)) { return retval; }
 
-			// C.g:267:2: ( ( '(' abstract_declarator ')' | abstract_declarator_suffix ) ( abstract_declarator_suffix )* )
+			// C.g:261:2: ( declaration_specifiers ( declarator | abstract_declarator )* )
 			DebugEnterAlt(1);
-			// C.g:267:4: ( '(' abstract_declarator ')' | abstract_declarator_suffix ) ( abstract_declarator_suffix )*
+			// C.g:261:4: declaration_specifiers ( declarator | abstract_declarator )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(267, 4);
-			// C.g:267:4: ( '(' abstract_declarator ')' | abstract_declarator_suffix )
-			int alt39=2;
-			try { DebugEnterSubRule(39);
-			try { DebugEnterDecision(39, false);
-			int LA39_0 = input.LA(1);
-
-			if ((LA39_0==30))
-			{
-				int LA39_1 = input.LA(2);
-
-				if ((LA39_1==IDENTIFIER||LA39_1==31||(LA39_1>=63 && LA39_1<=65)||(LA39_1>=68 && LA39_1<=69)||LA39_1==73||(LA39_1>=75 && LA39_1<=77)||(LA39_1>=81 && LA39_1<=83)||(LA39_1>=85 && LA39_1<=86)||(LA39_1>=88 && LA39_1<=89)||(LA39_1>=92 && LA39_1<=95)))
-				{
-					alt39 = 2;
-				}
-				else if ((LA39_1==30||LA39_1==32||LA39_1==59))
-				{
-					alt39 = 1;
-				}
-				else
-				{
-					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 39, 1, input);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
-			}
-			else if ((LA39_0==59))
-			{
-				alt39 = 2;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 39, 0, input);
-				DebugRecognitionException(nvae);
-				throw nvae;
-			}
-			} finally { DebugExitDecision(39); }
-			switch (alt39)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C.g:267:6: '(' abstract_declarator ')'
-				{
-				DebugLocation(267, 6);
-				char_literal125=(IToken)Match(input,30,Follow._30_in_direct_abstract_declarator914); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal125_tree = (object)adaptor.Create(char_literal125, retval);
-				adaptor.AddChild(root_0, char_literal125_tree);
-				}
-				DebugLocation(267, 10);
-				PushFollow(Follow._abstract_declarator_in_direct_abstract_declarator916);
-				abstract_declarator126=abstract_declarator();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, abstract_declarator126.Tree, abstract_declarator126, retval);
-				DebugLocation(267, 30);
-				char_literal127=(IToken)Match(input,31,Follow._31_in_direct_abstract_declarator918); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal127_tree = (object)adaptor.Create(char_literal127, retval);
-				adaptor.AddChild(root_0, char_literal127_tree);
-				}
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C.g:267:36: abstract_declarator_suffix
-				{
-				DebugLocation(267, 36);
-				PushFollow(Follow._abstract_declarator_suffix_in_direct_abstract_declarator922);
-				abstract_declarator_suffix128=abstract_declarator_suffix();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, abstract_declarator_suffix128.Tree, abstract_declarator_suffix128, retval);
-
-				}
-				break;
-
-			}
-			} finally { DebugExitSubRule(39); }
-
-			DebugLocation(267, 65);
-			// C.g:267:65: ( abstract_declarator_suffix )*
-			try { DebugEnterSubRule(40);
+			DebugLocation(261, 4);
+			PushFollow(Follow._declaration_specifiers_in_parameter_declaration952);
+			declaration_specifiers131=declaration_specifiers();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, declaration_specifiers131.Tree, declaration_specifiers131, retval);
+			DebugLocation(261, 27);
+			// C.g:261:27: ( declarator | abstract_declarator )*
+			try { DebugEnterSubRule(38);
 			while (true)
 			{
-				int alt40=2;
-				try { DebugEnterDecision(40, false);
-				int LA40_0 = input.LA(1);
-
-				if ((LA40_0==30))
+				int alt38=3;
+				try { DebugEnterDecision(38, false);
+				switch (input.LA(1))
 				{
+				case 32:
+					{
+					int LA38_4 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred67_C_fragment)))
+					{
+						alt38 = 1;
+					}
+					else if ((EvaluatePredicate(synpred68_C_fragment)))
+					{
+						alt38 = 2;
+					}
+
+
+					}
+					break;
+				case IDENTIFIER:
+					{
+					alt38 = 1;
+					}
+					break;
+				case 30:
+					{
 					switch (input.LA(2))
 					{
 					case 31:
+					case 59:
+					case 63:
+					case 64:
+					case 65:
+					case 66:
+					case 67:
+					case 68:
+					case 71:
+					case 72:
+					case 76:
+					case 78:
+					case 79:
+					case 80:
+					case 84:
+					case 85:
+					case 86:
+					case 88:
+					case 89:
+					case 91:
+					case 92:
+					case 95:
+					case 96:
+					case 97:
+					case 98:
 						{
-						int LA40_8 = input.LA(3);
+						alt38 = 2;
+						}
+						break;
+					case 32:
+						{
+						int LA38_17 = input.LA(3);
 
-						if ((EvaluatePredicate(synpred68_C_fragment)))
+						if ((EvaluatePredicate(synpred67_C_fragment)))
 						{
-							alt40 = 1;
+							alt38 = 1;
+						}
+						else if ((EvaluatePredicate(synpred68_C_fragment)))
+						{
+							alt38 = 2;
 						}
 
 
@@ -6225,204 +5778,15 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 						break;
 					case IDENTIFIER:
 						{
-						int LA40_10 = input.LA(3);
+						int LA38_18 = input.LA(3);
 
-						if ((EvaluatePredicate(synpred68_C_fragment)))
+						if ((EvaluatePredicate(synpred67_C_fragment)))
 						{
-							alt40 = 1;
+							alt38 = 1;
 						}
-
-
-						}
-						break;
-					case 65:
-					case 76:
-					case 83:
-					case 88:
+						else if ((EvaluatePredicate(synpred68_C_fragment)))
 						{
-						int LA40_13 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 94:
-						{
-						int LA40_14 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 68:
-						{
-						int LA40_15 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 85:
-						{
-						int LA40_16 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 81:
-						{
-						int LA40_17 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 82:
-						{
-						int LA40_18 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 77:
-						{
-						int LA40_19 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 73:
-						{
-						int LA40_20 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 86:
-						{
-						int LA40_21 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 93:
-						{
-						int LA40_22 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 63:
-						{
-						int LA40_23 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 89:
-					case 92:
-						{
-						int LA40_24 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 75:
-						{
-						int LA40_25 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 64:
-					case 69:
-					case 95:
-						{
-						int LA40_26 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					}
-
-				}
-				else if ((LA40_0==59))
-				{
-					switch (input.LA(2))
-					{
-					case 60:
-						{
-						int LA40_27 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
+							alt38 = 2;
 						}
 
 
@@ -6430,148 +5794,15 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 						break;
 					case 30:
 						{
-						int LA40_28 = input.LA(3);
+						int LA38_19 = input.LA(3);
 
-						if ((EvaluatePredicate(synpred68_C_fragment)))
+						if ((EvaluatePredicate(synpred67_C_fragment)))
 						{
-							alt40 = 1;
+							alt38 = 1;
 						}
-
-
-						}
-						break;
-					case IDENTIFIER:
+						else if ((EvaluatePredicate(synpred68_C_fragment)))
 						{
-						int LA40_29 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case HEX_LITERAL:
-						{
-						int LA40_30 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case OCTAL_LITERAL:
-						{
-						int LA40_31 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case DECIMAL_LITERAL:
-						{
-						int LA40_32 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case CHARACTER_LITERAL:
-						{
-						int LA40_33 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case STRING_LITERAL:
-						{
-						int LA40_34 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case FLOATING_POINT_LITERAL:
-						{
-						int LA40_35 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 35:
-						{
-						int LA40_36 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 39:
-						{
-						int LA40_37 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 23:
-					case 28:
-					case 32:
-					case 34:
-					case 38:
-					case 102:
-						{
-						int LA40_38 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
-						}
-
-
-						}
-						break;
-					case 87:
-						{
-						int LA40_39 = input.LA(3);
-
-						if ((EvaluatePredicate(synpred68_C_fragment)))
-						{
-							alt40 = 1;
+							alt38 = 2;
 						}
 
 
@@ -6579,34 +5810,276 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 						break;
 					}
 
+					}
+					break;
+				case 59:
+					{
+					alt38 = 2;
+					}
+					break;
 				}
 
-
-				} finally { DebugExitDecision(40); }
-				switch ( alt40 )
+				} finally { DebugExitDecision(38); }
+				switch ( alt38 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:267:65: abstract_declarator_suffix
+					// C.g:261:28: declarator
 					{
-					DebugLocation(267, 65);
-					PushFollow(Follow._abstract_declarator_suffix_in_direct_abstract_declarator926);
-					abstract_declarator_suffix129=abstract_declarator_suffix();
+					DebugLocation(261, 28);
+					PushFollow(Follow._declarator_in_parameter_declaration955);
+					declarator132=declarator();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, abstract_declarator_suffix129.Tree, abstract_declarator_suffix129, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, declarator132.Tree, declarator132, retval);
+
+					}
+					break;
+				case 2:
+					DebugEnterAlt(2);
+					// C.g:261:39: abstract_declarator
+					{
+					DebugLocation(261, 39);
+					PushFollow(Follow._abstract_declarator_in_parameter_declaration957);
+					abstract_declarator133=abstract_declarator();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, abstract_declarator133.Tree, abstract_declarator133, retval);
 
 					}
 					break;
 
 				default:
-					goto loop40;
+					goto loop38;
 				}
 			}
 
-			loop40:
+			loop38:
 				;
 
+			} finally { DebugExitSubRule(38); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("parameter_declaration", 30);
+			LeaveRule("parameter_declaration", 30);
+			LeaveRule_parameter_declaration();
+			if (state.backtracking > 0) { Memoize(input, 30, parameter_declaration_StartIndex); }
+
+		}
+		DebugLocation(262, 1);
+		} finally { DebugExitRule(GrammarFileName, "parameter_declaration"); }
+		return retval;
+
+	}
+	// $ANTLR end "parameter_declaration"
+
+	partial void EnterRule_identifier_list();
+	partial void LeaveRule_identifier_list();
+
+	// $ANTLR start "identifier_list"
+	// C.g:264:1: identifier_list : IDENTIFIER ( ',' IDENTIFIER )* ;
+	[GrammarRule("identifier_list")]
+	public XAstParserRuleReturnScope identifier_list()
+	{
+		EnterRule_identifier_list();
+		EnterRule("identifier_list", 31);
+		var retval = new XAstParserRuleReturnScope("identifier_list");
+		
+		retval.Start = (IToken)input.LT(1);
+		int identifier_list_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken IDENTIFIER134 = default(IToken);
+		IToken char_literal135 = default(IToken);
+		IToken IDENTIFIER136 = default(IToken);
+
+		object IDENTIFIER134_tree = default(object);
+		object char_literal135_tree = default(object);
+		object IDENTIFIER136_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "identifier_list");
+		DebugLocation(264, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 31)) { return retval; }
+
+			// C.g:265:2: ( IDENTIFIER ( ',' IDENTIFIER )* )
+			DebugEnterAlt(1);
+			// C.g:265:4: IDENTIFIER ( ',' IDENTIFIER )*
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(265, 4);
+			IDENTIFIER134=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_identifier_list970), "IDENTIFIER"); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			IDENTIFIER134_tree = (object)adaptor.Create(IDENTIFIER134, retval);
+			adaptor.AddChild(root_0, IDENTIFIER134_tree);
+			}
+			DebugLocation(265, 15);
+			// C.g:265:15: ( ',' IDENTIFIER )*
+			try { DebugEnterSubRule(39);
+			while (true)
+			{
+				int alt39=2;
+				try { DebugEnterDecision(39, false);
+				int LA39_0 = input.LA(1);
+
+				if ((LA39_0==37))
+				{
+					alt39 = 1;
+				}
+
+
+				} finally { DebugExitDecision(39); }
+				switch ( alt39 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C.g:265:16: ',' IDENTIFIER
+					{
+					DebugLocation(265, 16);
+					char_literal135=(IToken)Match(input,37,Follow._37_in_identifier_list973); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal135_tree = (object)adaptor.Create(char_literal135, retval);
+					adaptor.AddChild(root_0, char_literal135_tree);
+					}
+					DebugLocation(265, 20);
+					IDENTIFIER136=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_identifier_list975), "IDENTIFIER"); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					IDENTIFIER136_tree = (object)adaptor.Create(IDENTIFIER136, retval);
+					adaptor.AddChild(root_0, IDENTIFIER136_tree);
+					}
+
+					}
+					break;
+
+				default:
+					goto loop39;
+				}
+			}
+
+			loop39:
+				;
+
+			} finally { DebugExitSubRule(39); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("identifier_list", 31);
+			LeaveRule("identifier_list", 31);
+			LeaveRule_identifier_list();
+			if (state.backtracking > 0) { Memoize(input, 31, identifier_list_StartIndex); }
+
+		}
+		DebugLocation(266, 1);
+		} finally { DebugExitRule(GrammarFileName, "identifier_list"); }
+		return retval;
+
+	}
+	// $ANTLR end "identifier_list"
+
+	partial void EnterRule_type_name();
+	partial void LeaveRule_type_name();
+
+	// $ANTLR start "type_name"
+	// C.g:268:1: type_name : specifier_qualifier_list ( abstract_declarator )? ;
+	[GrammarRule("type_name")]
+	public XAstParserRuleReturnScope type_name()
+	{
+		EnterRule_type_name();
+		EnterRule("type_name", 32);
+		var retval = new XAstParserRuleReturnScope("type_name");
+		
+		retval.Start = (IToken)input.LT(1);
+		int type_name_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		XAstParserRuleReturnScope specifier_qualifier_list137 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope abstract_declarator138 = default(XAstParserRuleReturnScope);
+
+		try { DebugEnterRule(GrammarFileName, "type_name");
+		DebugLocation(268, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 32)) { return retval; }
+
+			// C.g:269:2: ( specifier_qualifier_list ( abstract_declarator )? )
+			DebugEnterAlt(1);
+			// C.g:269:4: specifier_qualifier_list ( abstract_declarator )?
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(269, 4);
+			PushFollow(Follow._specifier_qualifier_list_in_type_name988);
+			specifier_qualifier_list137=specifier_qualifier_list();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, specifier_qualifier_list137.Tree, specifier_qualifier_list137, retval);
+			DebugLocation(269, 29);
+			// C.g:269:29: ( abstract_declarator )?
+			int alt40=2;
+			try { DebugEnterSubRule(40);
+			try { DebugEnterDecision(40, false);
+			int LA40_0 = input.LA(1);
+
+			if ((LA40_0==30||LA40_0==32||LA40_0==59))
+			{
+				alt40 = 1;
+			}
+			} finally { DebugExitDecision(40); }
+			switch (alt40)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C.g:269:29: abstract_declarator
+				{
+				DebugLocation(269, 29);
+				PushFollow(Follow._abstract_declarator_in_type_name990);
+				abstract_declarator138=abstract_declarator();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, abstract_declarator138.Tree, abstract_declarator138, retval);
+
+				}
+				break;
+
+			}
 			} finally { DebugExitSubRule(40); }
 
 
@@ -6628,209 +6101,498 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("direct_abstract_declarator", 32);
-			LeaveRule("direct_abstract_declarator", 32);
-			LeaveRule_direct_abstract_declarator();
-			if (state.backtracking > 0) { Memoize(input, 32, direct_abstract_declarator_StartIndex); }
+			TraceOut("type_name", 32);
+			LeaveRule("type_name", 32);
+			LeaveRule_type_name();
+			if (state.backtracking > 0) { Memoize(input, 32, type_name_StartIndex); }
 
 		}
-		DebugLocation(268, 1);
-		} finally { DebugExitRule(GrammarFileName, "direct_abstract_declarator"); }
+		DebugLocation(270, 1);
+		} finally { DebugExitRule(GrammarFileName, "type_name"); }
 		return retval;
 
 	}
-	// $ANTLR end "direct_abstract_declarator"
+	// $ANTLR end "type_name"
 
-	partial void EnterRule_abstract_declarator_suffix();
-	partial void LeaveRule_abstract_declarator_suffix();
+	partial void EnterRule_abstract_declarator();
+	partial void LeaveRule_abstract_declarator();
 
-	// $ANTLR start "abstract_declarator_suffix"
-	// C.g:270:1: abstract_declarator_suffix : ( '[' ']' | '[' constant_expression ']' | '(' ')' | '(' parameter_type_list ')' );
-	[GrammarRule("abstract_declarator_suffix")]
-	public XAstParserRuleReturnScope abstract_declarator_suffix()
+	// $ANTLR start "abstract_declarator"
+	// C.g:272:1: abstract_declarator : ( pointer ( direct_abstract_declarator )? | direct_abstract_declarator );
+	[GrammarRule("abstract_declarator")]
+	public XAstParserRuleReturnScope abstract_declarator()
 	{
-		EnterRule_abstract_declarator_suffix();
-		EnterRule("abstract_declarator_suffix", 33);
-		var retval = new XAstParserRuleReturnScope("abstract_declarator_suffix");
+		EnterRule_abstract_declarator();
+		EnterRule("abstract_declarator", 33);
+		var retval = new XAstParserRuleReturnScope("abstract_declarator");
 		
 		retval.Start = (IToken)input.LT(1);
-		int abstract_declarator_suffix_StartIndex = input.Index;
+		int abstract_declarator_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal130 = default(IToken);
-		IToken char_literal131 = default(IToken);
-		IToken char_literal132 = default(IToken);
-		IToken char_literal134 = default(IToken);
-		IToken char_literal135 = default(IToken);
-		IToken char_literal136 = default(IToken);
-		IToken char_literal137 = default(IToken);
-		IToken char_literal139 = default(IToken);
-		XAstParserRuleReturnScope constant_expression133 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope parameter_type_list138 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope pointer139 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope direct_abstract_declarator140 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope direct_abstract_declarator141 = default(XAstParserRuleReturnScope);
 
-		object char_literal130_tree = default(object);
-		object char_literal131_tree = default(object);
-		object char_literal132_tree = default(object);
-		object char_literal134_tree = default(object);
-		object char_literal135_tree = default(object);
-		object char_literal136_tree = default(object);
-		object char_literal137_tree = default(object);
-		object char_literal139_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "abstract_declarator_suffix");
-		DebugLocation(270, 1);
+		try { DebugEnterRule(GrammarFileName, "abstract_declarator");
+		DebugLocation(272, 1);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 33)) { return retval; }
 
-			// C.g:271:2: ( '[' ']' | '[' constant_expression ']' | '(' ')' | '(' parameter_type_list ')' )
-			int alt41=4;
-			try { DebugEnterDecision(41, false);
-			int LA41_0 = input.LA(1);
+			// C.g:273:2: ( pointer ( direct_abstract_declarator )? | direct_abstract_declarator )
+			int alt42=2;
+			try { DebugEnterDecision(42, false);
+			int LA42_0 = input.LA(1);
 
-			if ((LA41_0==59))
+			if ((LA42_0==32))
 			{
-				int LA41_1 = input.LA(2);
-
-				if ((LA41_1==60))
-				{
-					alt41 = 1;
-				}
-				else if ((LA41_1==CHARACTER_LITERAL||LA41_1==DECIMAL_LITERAL||LA41_1==FLOATING_POINT_LITERAL||LA41_1==HEX_LITERAL||LA41_1==IDENTIFIER||LA41_1==OCTAL_LITERAL||LA41_1==STRING_LITERAL||LA41_1==23||LA41_1==28||LA41_1==30||LA41_1==32||(LA41_1>=34 && LA41_1<=35)||(LA41_1>=38 && LA41_1<=39)||LA41_1==87||LA41_1==102))
-				{
-					alt41 = 2;
-				}
-				else
-				{
-					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 41, 1, input);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
+				alt42 = 1;
 			}
-			else if ((LA41_0==30))
+			else if ((LA42_0==30||LA42_0==59))
 			{
-				int LA41_2 = input.LA(2);
-
-				if ((LA41_2==31))
-				{
-					alt41 = 3;
-				}
-				else if ((LA41_2==IDENTIFIER||(LA41_2>=63 && LA41_2<=65)||(LA41_2>=68 && LA41_2<=69)||LA41_2==73||(LA41_2>=75 && LA41_2<=77)||(LA41_2>=81 && LA41_2<=83)||(LA41_2>=85 && LA41_2<=86)||(LA41_2>=88 && LA41_2<=89)||(LA41_2>=92 && LA41_2<=95)))
-				{
-					alt41 = 4;
-				}
-				else
-				{
-					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 41, 2, input);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
+				alt42 = 2;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 41, 0, input);
+				NoViableAltException nvae = new NoViableAltException("", 42, 0, input);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(41); }
-			switch (alt41)
+			} finally { DebugExitDecision(42); }
+			switch (alt42)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:271:4: '[' ']'
+				// C.g:273:4: pointer ( direct_abstract_declarator )?
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(271, 4);
-				char_literal130=(IToken)Match(input,59,Follow._59_in_abstract_declarator_suffix938); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal130_tree = (object)adaptor.Create(char_literal130, retval);
-				adaptor.AddChild(root_0, char_literal130_tree);
+				DebugLocation(273, 4);
+				PushFollow(Follow._pointer_in_abstract_declarator1002);
+				pointer139=pointer();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, pointer139.Tree, pointer139, retval);
+				DebugLocation(273, 12);
+				// C.g:273:12: ( direct_abstract_declarator )?
+				int alt41=2;
+				try { DebugEnterSubRule(41);
+				try { DebugEnterDecision(41, false);
+				int LA41_0 = input.LA(1);
+
+				if ((LA41_0==30))
+				{
+					switch (input.LA(2))
+					{
+					case 31:
+						{
+						int LA41_8 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 32:
+						{
+						int LA41_9 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 30:
+						{
+						int LA41_10 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 59:
+						{
+						int LA41_11 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 68:
+					case 79:
+					case 86:
+					case 91:
+						{
+						int LA41_12 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 97:
+						{
+						int LA41_13 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 71:
+						{
+						int LA41_14 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 88:
+						{
+						int LA41_15 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 84:
+						{
+						int LA41_16 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 85:
+						{
+						int LA41_17 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 80:
+						{
+						int LA41_18 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 76:
+						{
+						int LA41_19 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 89:
+						{
+						int LA41_20 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 96:
+						{
+						int LA41_21 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 92:
+					case 95:
+						{
+						int LA41_22 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 78:
+						{
+						int LA41_23 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case IDENTIFIER:
+						{
+						int LA41_24 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 65:
+					case 72:
+					case 98:
+						{
+						int LA41_25 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 64:
+						{
+						int LA41_26 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 66:
+						{
+						int LA41_27 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 63:
+						{
+						int LA41_28 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 67:
+						{
+						int LA41_29 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					}
+
 				}
-				DebugLocation(271, 8);
-				char_literal131=(IToken)Match(input,60,Follow._60_in_abstract_declarator_suffix940); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal131_tree = (object)adaptor.Create(char_literal131, retval);
-				adaptor.AddChild(root_0, char_literal131_tree);
+				else if ((LA41_0==59))
+				{
+					switch (input.LA(2))
+					{
+					case 60:
+						{
+						int LA41_30 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 30:
+						{
+						int LA41_31 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case IDENTIFIER:
+						{
+						int LA41_32 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case HEX_LITERAL:
+						{
+						int LA41_33 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case OCTAL_LITERAL:
+						{
+						int LA41_34 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case DECIMAL_LITERAL:
+						{
+						int LA41_35 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case CHARACTER_LITERAL:
+						{
+						int LA41_36 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case STRING_LITERAL:
+						{
+						int LA41_37 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case FLOATING_POINT_LITERAL:
+						{
+						int LA41_38 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 35:
+						{
+						int LA41_39 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 39:
+						{
+						int LA41_40 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 23:
+					case 28:
+					case 32:
+					case 34:
+					case 38:
+					case 105:
+						{
+						int LA41_41 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					case 90:
+						{
+						int LA41_42 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred71_C_fragment)))
+						{
+							alt41 = 1;
+						}
+						}
+						break;
+					}
+
 				}
+				} finally { DebugExitDecision(41); }
+				switch (alt41)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C.g:273:12: direct_abstract_declarator
+					{
+					DebugLocation(273, 12);
+					PushFollow(Follow._direct_abstract_declarator_in_abstract_declarator1004);
+					direct_abstract_declarator140=direct_abstract_declarator();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, direct_abstract_declarator140.Tree, direct_abstract_declarator140, retval);
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(41); }
+
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C.g:272:4: '[' constant_expression ']'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(272, 4);
-				char_literal132=(IToken)Match(input,59,Follow._59_in_abstract_declarator_suffix945); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal132_tree = (object)adaptor.Create(char_literal132, retval);
-				adaptor.AddChild(root_0, char_literal132_tree);
-				}
-				DebugLocation(272, 8);
-				PushFollow(Follow._constant_expression_in_abstract_declarator_suffix947);
-				constant_expression133=constant_expression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression133.Tree, constant_expression133, retval);
-				DebugLocation(272, 28);
-				char_literal134=(IToken)Match(input,60,Follow._60_in_abstract_declarator_suffix949); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal134_tree = (object)adaptor.Create(char_literal134, retval);
-				adaptor.AddChild(root_0, char_literal134_tree);
-				}
-
-				}
-				break;
-			case 3:
-				DebugEnterAlt(3);
-				// C.g:273:4: '(' ')'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(273, 4);
-				char_literal135=(IToken)Match(input,30,Follow._30_in_abstract_declarator_suffix954); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal135_tree = (object)adaptor.Create(char_literal135, retval);
-				adaptor.AddChild(root_0, char_literal135_tree);
-				}
-				DebugLocation(273, 8);
-				char_literal136=(IToken)Match(input,31,Follow._31_in_abstract_declarator_suffix956); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal136_tree = (object)adaptor.Create(char_literal136, retval);
-				adaptor.AddChild(root_0, char_literal136_tree);
-				}
-
-				}
-				break;
-			case 4:
-				DebugEnterAlt(4);
-				// C.g:274:4: '(' parameter_type_list ')'
+				// C.g:274:4: direct_abstract_declarator
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(274, 4);
-				char_literal137=(IToken)Match(input,30,Follow._30_in_abstract_declarator_suffix961); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal137_tree = (object)adaptor.Create(char_literal137, retval);
-				adaptor.AddChild(root_0, char_literal137_tree);
-				}
-				DebugLocation(274, 8);
-				PushFollow(Follow._parameter_type_list_in_abstract_declarator_suffix963);
-				parameter_type_list138=parameter_type_list();
+				PushFollow(Follow._direct_abstract_declarator_in_abstract_declarator1010);
+				direct_abstract_declarator141=direct_abstract_declarator();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, parameter_type_list138.Tree, parameter_type_list138, retval);
-				DebugLocation(274, 28);
-				char_literal139=(IToken)Match(input,31,Follow._31_in_abstract_declarator_suffix965); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal139_tree = (object)adaptor.Create(char_literal139, retval);
-				adaptor.AddChild(root_0, char_literal139_tree);
-				}
+				if (state.backtracking == 0) adaptor.AddChild(root_0, direct_abstract_declarator141.Tree, direct_abstract_declarator141, retval);
 
 				}
 				break;
@@ -6852,61 +6614,84 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("abstract_declarator_suffix", 33);
-			LeaveRule("abstract_declarator_suffix", 33);
-			LeaveRule_abstract_declarator_suffix();
-			if (state.backtracking > 0) { Memoize(input, 33, abstract_declarator_suffix_StartIndex); }
+			TraceOut("abstract_declarator", 33);
+			LeaveRule("abstract_declarator", 33);
+			LeaveRule_abstract_declarator();
+			if (state.backtracking > 0) { Memoize(input, 33, abstract_declarator_StartIndex); }
 
 		}
 		DebugLocation(275, 1);
-		} finally { DebugExitRule(GrammarFileName, "abstract_declarator_suffix"); }
+		} finally { DebugExitRule(GrammarFileName, "abstract_declarator"); }
 		return retval;
 
 	}
-	// $ANTLR end "abstract_declarator_suffix"
+	// $ANTLR end "abstract_declarator"
 
-	partial void EnterRule_initializer();
-	partial void LeaveRule_initializer();
+	partial void EnterRule_direct_abstract_declarator();
+	partial void LeaveRule_direct_abstract_declarator();
 
-	// $ANTLR start "initializer"
-	// C.g:277:1: initializer : ( assignment_expression | '{' initializer_list ( ',' )? '}' );
-	[GrammarRule("initializer")]
-	public XAstParserRuleReturnScope initializer()
+	// $ANTLR start "direct_abstract_declarator"
+	// C.g:277:1: direct_abstract_declarator : ( '(' abstract_declarator ')' | abstract_declarator_suffix ) ( abstract_declarator_suffix )* ;
+	[GrammarRule("direct_abstract_declarator")]
+	public XAstParserRuleReturnScope direct_abstract_declarator()
 	{
-		EnterRule_initializer();
-		EnterRule("initializer", 34);
-		var retval = new XAstParserRuleReturnScope("initializer");
+		EnterRule_direct_abstract_declarator();
+		EnterRule("direct_abstract_declarator", 34);
+		var retval = new XAstParserRuleReturnScope("direct_abstract_declarator");
 		
 		retval.Start = (IToken)input.LT(1);
-		int initializer_StartIndex = input.Index;
+		int direct_abstract_declarator_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal141 = default(IToken);
-		IToken char_literal143 = default(IToken);
+		IToken char_literal142 = default(IToken);
 		IToken char_literal144 = default(IToken);
-		XAstParserRuleReturnScope assignment_expression140 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope initializer_list142 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope abstract_declarator143 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope abstract_declarator_suffix145 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope abstract_declarator_suffix146 = default(XAstParserRuleReturnScope);
 
-		object char_literal141_tree = default(object);
-		object char_literal143_tree = default(object);
+		object char_literal142_tree = default(object);
 		object char_literal144_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "initializer");
+		try { DebugEnterRule(GrammarFileName, "direct_abstract_declarator");
 		DebugLocation(277, 1);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 34)) { return retval; }
 
-			// C.g:278:2: ( assignment_expression | '{' initializer_list ( ',' )? '}' )
+			// C.g:278:2: ( ( '(' abstract_declarator ')' | abstract_declarator_suffix ) ( abstract_declarator_suffix )* )
+			DebugEnterAlt(1);
+			// C.g:278:4: ( '(' abstract_declarator ')' | abstract_declarator_suffix ) ( abstract_declarator_suffix )*
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(278, 4);
+			// C.g:278:4: ( '(' abstract_declarator ')' | abstract_declarator_suffix )
 			int alt43=2;
+			try { DebugEnterSubRule(43);
 			try { DebugEnterDecision(43, false);
 			int LA43_0 = input.LA(1);
 
-			if ((LA43_0==CHARACTER_LITERAL||LA43_0==DECIMAL_LITERAL||LA43_0==FLOATING_POINT_LITERAL||LA43_0==HEX_LITERAL||LA43_0==IDENTIFIER||LA43_0==OCTAL_LITERAL||LA43_0==STRING_LITERAL||LA43_0==23||LA43_0==28||LA43_0==30||LA43_0==32||(LA43_0>=34 && LA43_0<=35)||(LA43_0>=38 && LA43_0<=39)||LA43_0==87||LA43_0==102))
+			if ((LA43_0==30))
 			{
-				alt43 = 1;
+				int LA43_1 = input.LA(2);
+
+				if ((LA43_1==IDENTIFIER||LA43_1==31||(LA43_1>=63 && LA43_1<=68)||(LA43_1>=71 && LA43_1<=72)||LA43_1==76||(LA43_1>=78 && LA43_1<=80)||(LA43_1>=84 && LA43_1<=86)||(LA43_1>=88 && LA43_1<=89)||(LA43_1>=91 && LA43_1<=92)||(LA43_1>=95 && LA43_1<=98)))
+				{
+					alt43 = 2;
+				}
+				else if ((LA43_1==30||LA43_1==32||LA43_1==59))
+				{
+					alt43 = 1;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 43, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
 			}
-			else if ((LA43_0==97))
+			else if ((LA43_0==59))
 			{
 				alt43 = 2;
 			}
@@ -6922,70 +6707,22 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:278:4: assignment_expression
+				// C.g:278:6: '(' abstract_declarator ')'
 				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(278, 4);
-				PushFollow(Follow._assignment_expression_in_initializer977);
-				assignment_expression140=assignment_expression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, assignment_expression140.Tree, assignment_expression140, retval);
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C.g:279:4: '{' initializer_list ( ',' )? '}'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(279, 4);
-				char_literal141=(IToken)Match(input,97,Follow._97_in_initializer982); if (state.failed) return retval;
+				DebugLocation(278, 6);
+				char_literal142=(IToken)Match(input,30,Follow._30_in_direct_abstract_declarator1023); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal141_tree = (object)adaptor.Create(char_literal141, retval);
-				adaptor.AddChild(root_0, char_literal141_tree);
+				char_literal142_tree = (object)adaptor.Create(char_literal142, retval);
+				adaptor.AddChild(root_0, char_literal142_tree);
 				}
-				DebugLocation(279, 8);
-				PushFollow(Follow._initializer_list_in_initializer984);
-				initializer_list142=initializer_list();
+				DebugLocation(278, 10);
+				PushFollow(Follow._abstract_declarator_in_direct_abstract_declarator1025);
+				abstract_declarator143=abstract_declarator();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, initializer_list142.Tree, initializer_list142, retval);
-				DebugLocation(279, 25);
-				// C.g:279:25: ( ',' )?
-				int alt42=2;
-				try { DebugEnterSubRule(42);
-				try { DebugEnterDecision(42, false);
-				int LA42_0 = input.LA(1);
-
-				if ((LA42_0==37))
-				{
-					alt42 = 1;
-				}
-				} finally { DebugExitDecision(42); }
-				switch (alt42)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C.g:279:25: ','
-					{
-					DebugLocation(279, 25);
-					char_literal143=(IToken)Match(input,37,Follow._37_in_initializer986); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal143_tree = (object)adaptor.Create(char_literal143, retval);
-					adaptor.AddChild(root_0, char_literal143_tree);
-					}
-
-					}
-					break;
-
-				}
-				} finally { DebugExitSubRule(42); }
-
-				DebugLocation(279, 30);
-				char_literal144=(IToken)Match(input,101,Follow._101_in_initializer989); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, abstract_declarator143.Tree, abstract_declarator143, retval);
+				DebugLocation(278, 30);
+				char_literal144=(IToken)Match(input,31,Follow._31_in_direct_abstract_declarator1027); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal144_tree = (object)adaptor.Create(char_literal144, retval);
 				adaptor.AddChild(root_0, char_literal144_tree);
@@ -6993,79 +6730,25 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 				}
 				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C.g:278:36: abstract_declarator_suffix
+				{
+				DebugLocation(278, 36);
+				PushFollow(Follow._abstract_declarator_suffix_in_direct_abstract_declarator1031);
+				abstract_declarator_suffix145=abstract_declarator_suffix();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, abstract_declarator_suffix145.Tree, abstract_declarator_suffix145, retval);
+
+				}
+				break;
 
 			}
-			retval.Stop = (IToken)input.LT(-1);
+			} finally { DebugExitSubRule(43); }
 
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("initializer", 34);
-			LeaveRule("initializer", 34);
-			LeaveRule_initializer();
-			if (state.backtracking > 0) { Memoize(input, 34, initializer_StartIndex); }
-
-		}
-		DebugLocation(280, 1);
-		} finally { DebugExitRule(GrammarFileName, "initializer"); }
-		return retval;
-
-	}
-	// $ANTLR end "initializer"
-
-	partial void EnterRule_initializer_list();
-	partial void LeaveRule_initializer_list();
-
-	// $ANTLR start "initializer_list"
-	// C.g:282:1: initializer_list : initializer ( ',' initializer )* ;
-	[GrammarRule("initializer_list")]
-	public XAstParserRuleReturnScope initializer_list()
-	{
-		EnterRule_initializer_list();
-		EnterRule("initializer_list", 35);
-		var retval = new XAstParserRuleReturnScope("initializer_list");
-		
-		retval.Start = (IToken)input.LT(1);
-		int initializer_list_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken char_literal146 = default(IToken);
-		XAstParserRuleReturnScope initializer145 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope initializer147 = default(XAstParserRuleReturnScope);
-
-		object char_literal146_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "initializer_list");
-		DebugLocation(282, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 35)) { return retval; }
-
-			// C.g:283:2: ( initializer ( ',' initializer )* )
-			DebugEnterAlt(1);
-			// C.g:283:4: initializer ( ',' initializer )*
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(283, 4);
-			PushFollow(Follow._initializer_in_initializer_list1000);
-			initializer145=initializer();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, initializer145.Tree, initializer145, retval);
-			DebugLocation(283, 16);
-			// C.g:283:16: ( ',' initializer )*
+			DebugLocation(278, 65);
+			// C.g:278:65: ( abstract_declarator_suffix )*
 			try { DebugEnterSubRule(44);
 			while (true)
 			{
@@ -7073,15 +6756,413 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				try { DebugEnterDecision(44, false);
 				int LA44_0 = input.LA(1);
 
-				if ((LA44_0==37))
+				if ((LA44_0==30))
 				{
-					int LA44_1 = input.LA(2);
-
-					if ((LA44_1==CHARACTER_LITERAL||LA44_1==DECIMAL_LITERAL||LA44_1==FLOATING_POINT_LITERAL||LA44_1==HEX_LITERAL||LA44_1==IDENTIFIER||LA44_1==OCTAL_LITERAL||LA44_1==STRING_LITERAL||LA44_1==23||LA44_1==28||LA44_1==30||LA44_1==32||(LA44_1>=34 && LA44_1<=35)||(LA44_1>=38 && LA44_1<=39)||LA44_1==87||LA44_1==97||LA44_1==102))
+					switch (input.LA(2))
 					{
-						alt44 = 1;
+					case 31:
+						{
+						int LA44_8 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case IDENTIFIER:
+						{
+						int LA44_10 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 68:
+					case 79:
+					case 86:
+					case 91:
+						{
+						int LA44_13 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 97:
+						{
+						int LA44_14 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 71:
+						{
+						int LA44_15 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 88:
+						{
+						int LA44_16 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 84:
+						{
+						int LA44_17 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 85:
+						{
+						int LA44_18 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 80:
+						{
+						int LA44_19 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 76:
+						{
+						int LA44_20 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 89:
+						{
+						int LA44_21 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 96:
+						{
+						int LA44_22 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 92:
+					case 95:
+						{
+						int LA44_23 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 78:
+						{
+						int LA44_24 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 65:
+					case 72:
+					case 98:
+						{
+						int LA44_25 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 64:
+						{
+						int LA44_26 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 66:
+						{
+						int LA44_27 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 63:
+						{
+						int LA44_28 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 67:
+						{
+						int LA44_29 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
 					}
 
+				}
+				else if ((LA44_0==59))
+				{
+					switch (input.LA(2))
+					{
+					case 60:
+						{
+						int LA44_30 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 30:
+						{
+						int LA44_31 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case IDENTIFIER:
+						{
+						int LA44_32 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case HEX_LITERAL:
+						{
+						int LA44_33 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case OCTAL_LITERAL:
+						{
+						int LA44_34 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case DECIMAL_LITERAL:
+						{
+						int LA44_35 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case CHARACTER_LITERAL:
+						{
+						int LA44_36 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case STRING_LITERAL:
+						{
+						int LA44_37 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case FLOATING_POINT_LITERAL:
+						{
+						int LA44_38 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 35:
+						{
+						int LA44_39 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 39:
+						{
+						int LA44_40 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 23:
+					case 28:
+					case 32:
+					case 34:
+					case 38:
+					case 105:
+						{
+						int LA44_41 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					case 90:
+						{
+						int LA44_42 = input.LA(3);
+
+						if ((EvaluatePredicate(synpred74_C_fragment)))
+						{
+							alt44 = 1;
+						}
+
+
+						}
+						break;
+					}
 
 				}
 
@@ -7091,20 +7172,14 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:283:17: ',' initializer
+					// C.g:278:65: abstract_declarator_suffix
 					{
-					DebugLocation(283, 17);
-					char_literal146=(IToken)Match(input,37,Follow._37_in_initializer_list1003); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal146_tree = (object)adaptor.Create(char_literal146, retval);
-					adaptor.AddChild(root_0, char_literal146_tree);
-					}
-					DebugLocation(283, 21);
-					PushFollow(Follow._initializer_in_initializer_list1005);
-					initializer147=initializer();
+					DebugLocation(278, 65);
+					PushFollow(Follow._abstract_declarator_suffix_in_direct_abstract_declarator1035);
+					abstract_declarator_suffix146=abstract_declarator_suffix();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, initializer147.Tree, initializer147, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, abstract_declarator_suffix146.Tree, abstract_declarator_suffix146, retval);
 
 					}
 					break;
@@ -7138,13 +7213,523 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("initializer_list", 35);
-			LeaveRule("initializer_list", 35);
-			LeaveRule_initializer_list();
-			if (state.backtracking > 0) { Memoize(input, 35, initializer_list_StartIndex); }
+			TraceOut("direct_abstract_declarator", 34);
+			LeaveRule("direct_abstract_declarator", 34);
+			LeaveRule_direct_abstract_declarator();
+			if (state.backtracking > 0) { Memoize(input, 34, direct_abstract_declarator_StartIndex); }
 
 		}
-		DebugLocation(284, 1);
+		DebugLocation(279, 1);
+		} finally { DebugExitRule(GrammarFileName, "direct_abstract_declarator"); }
+		return retval;
+
+	}
+	// $ANTLR end "direct_abstract_declarator"
+
+	partial void EnterRule_abstract_declarator_suffix();
+	partial void LeaveRule_abstract_declarator_suffix();
+
+	// $ANTLR start "abstract_declarator_suffix"
+	// C.g:281:1: abstract_declarator_suffix : ( '[' ']' | '[' constant_expression ']' | '(' ')' | '(' parameter_type_list ')' );
+	[GrammarRule("abstract_declarator_suffix")]
+	public XAstParserRuleReturnScope abstract_declarator_suffix()
+	{
+		EnterRule_abstract_declarator_suffix();
+		EnterRule("abstract_declarator_suffix", 35);
+		var retval = new XAstParserRuleReturnScope("abstract_declarator_suffix");
+		
+		retval.Start = (IToken)input.LT(1);
+		int abstract_declarator_suffix_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken char_literal147 = default(IToken);
+		IToken char_literal148 = default(IToken);
+		IToken char_literal149 = default(IToken);
+		IToken char_literal151 = default(IToken);
+		IToken char_literal152 = default(IToken);
+		IToken char_literal153 = default(IToken);
+		IToken char_literal154 = default(IToken);
+		IToken char_literal156 = default(IToken);
+		XAstParserRuleReturnScope constant_expression150 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope parameter_type_list155 = default(XAstParserRuleReturnScope);
+
+		object char_literal147_tree = default(object);
+		object char_literal148_tree = default(object);
+		object char_literal149_tree = default(object);
+		object char_literal151_tree = default(object);
+		object char_literal152_tree = default(object);
+		object char_literal153_tree = default(object);
+		object char_literal154_tree = default(object);
+		object char_literal156_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "abstract_declarator_suffix");
+		DebugLocation(281, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 35)) { return retval; }
+
+			// C.g:282:2: ( '[' ']' | '[' constant_expression ']' | '(' ')' | '(' parameter_type_list ')' )
+			int alt45=4;
+			try { DebugEnterDecision(45, false);
+			int LA45_0 = input.LA(1);
+
+			if ((LA45_0==59))
+			{
+				int LA45_1 = input.LA(2);
+
+				if ((LA45_1==60))
+				{
+					alt45 = 1;
+				}
+				else if ((LA45_1==CHARACTER_LITERAL||LA45_1==DECIMAL_LITERAL||LA45_1==FLOATING_POINT_LITERAL||LA45_1==HEX_LITERAL||LA45_1==IDENTIFIER||LA45_1==OCTAL_LITERAL||LA45_1==STRING_LITERAL||LA45_1==23||LA45_1==28||LA45_1==30||LA45_1==32||(LA45_1>=34 && LA45_1<=35)||(LA45_1>=38 && LA45_1<=39)||LA45_1==90||LA45_1==105))
+				{
+					alt45 = 2;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 45, 1, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+			else if ((LA45_0==30))
+			{
+				int LA45_2 = input.LA(2);
+
+				if ((LA45_2==31))
+				{
+					alt45 = 3;
+				}
+				else if ((LA45_2==IDENTIFIER||(LA45_2>=63 && LA45_2<=68)||(LA45_2>=71 && LA45_2<=72)||LA45_2==76||(LA45_2>=78 && LA45_2<=80)||(LA45_2>=84 && LA45_2<=86)||(LA45_2>=88 && LA45_2<=89)||(LA45_2>=91 && LA45_2<=92)||(LA45_2>=95 && LA45_2<=98)))
+				{
+					alt45 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 45, 2, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return retval;}
+				NoViableAltException nvae = new NoViableAltException("", 45, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(45); }
+			switch (alt45)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C.g:282:4: '[' ']'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(282, 4);
+				char_literal147=(IToken)Match(input,59,Follow._59_in_abstract_declarator_suffix1047); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal147_tree = (object)adaptor.Create(char_literal147, retval);
+				adaptor.AddChild(root_0, char_literal147_tree);
+				}
+				DebugLocation(282, 8);
+				char_literal148=(IToken)Match(input,60,Follow._60_in_abstract_declarator_suffix1049); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal148_tree = (object)adaptor.Create(char_literal148, retval);
+				adaptor.AddChild(root_0, char_literal148_tree);
+				}
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C.g:283:4: '[' constant_expression ']'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(283, 4);
+				char_literal149=(IToken)Match(input,59,Follow._59_in_abstract_declarator_suffix1054); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal149_tree = (object)adaptor.Create(char_literal149, retval);
+				adaptor.AddChild(root_0, char_literal149_tree);
+				}
+				DebugLocation(283, 8);
+				PushFollow(Follow._constant_expression_in_abstract_declarator_suffix1056);
+				constant_expression150=constant_expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression150.Tree, constant_expression150, retval);
+				DebugLocation(283, 28);
+				char_literal151=(IToken)Match(input,60,Follow._60_in_abstract_declarator_suffix1058); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal151_tree = (object)adaptor.Create(char_literal151, retval);
+				adaptor.AddChild(root_0, char_literal151_tree);
+				}
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// C.g:284:4: '(' ')'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(284, 4);
+				char_literal152=(IToken)Match(input,30,Follow._30_in_abstract_declarator_suffix1063); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal152_tree = (object)adaptor.Create(char_literal152, retval);
+				adaptor.AddChild(root_0, char_literal152_tree);
+				}
+				DebugLocation(284, 8);
+				char_literal153=(IToken)Match(input,31,Follow._31_in_abstract_declarator_suffix1065); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal153_tree = (object)adaptor.Create(char_literal153, retval);
+				adaptor.AddChild(root_0, char_literal153_tree);
+				}
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// C.g:285:4: '(' parameter_type_list ')'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(285, 4);
+				char_literal154=(IToken)Match(input,30,Follow._30_in_abstract_declarator_suffix1070); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal154_tree = (object)adaptor.Create(char_literal154, retval);
+				adaptor.AddChild(root_0, char_literal154_tree);
+				}
+				DebugLocation(285, 8);
+				PushFollow(Follow._parameter_type_list_in_abstract_declarator_suffix1072);
+				parameter_type_list155=parameter_type_list();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, parameter_type_list155.Tree, parameter_type_list155, retval);
+				DebugLocation(285, 28);
+				char_literal156=(IToken)Match(input,31,Follow._31_in_abstract_declarator_suffix1074); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal156_tree = (object)adaptor.Create(char_literal156, retval);
+				adaptor.AddChild(root_0, char_literal156_tree);
+				}
+
+				}
+				break;
+
+			}
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("abstract_declarator_suffix", 35);
+			LeaveRule("abstract_declarator_suffix", 35);
+			LeaveRule_abstract_declarator_suffix();
+			if (state.backtracking > 0) { Memoize(input, 35, abstract_declarator_suffix_StartIndex); }
+
+		}
+		DebugLocation(286, 1);
+		} finally { DebugExitRule(GrammarFileName, "abstract_declarator_suffix"); }
+		return retval;
+
+	}
+	// $ANTLR end "abstract_declarator_suffix"
+
+	partial void EnterRule_initializer();
+	partial void LeaveRule_initializer();
+
+	// $ANTLR start "initializer"
+	// C.g:288:1: initializer : ( assignment_expression | '{' initializer_list ( ',' )? '}' );
+	[GrammarRule("initializer")]
+	public XAstParserRuleReturnScope initializer()
+	{
+		EnterRule_initializer();
+		EnterRule("initializer", 36);
+		var retval = new XAstParserRuleReturnScope("initializer");
+		
+		retval.Start = (IToken)input.LT(1);
+		int initializer_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken char_literal158 = default(IToken);
+		IToken char_literal160 = default(IToken);
+		IToken char_literal161 = default(IToken);
+		XAstParserRuleReturnScope assignment_expression157 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope initializer_list159 = default(XAstParserRuleReturnScope);
+
+		object char_literal158_tree = default(object);
+		object char_literal160_tree = default(object);
+		object char_literal161_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "initializer");
+		DebugLocation(288, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 36)) { return retval; }
+
+			// C.g:289:2: ( assignment_expression | '{' initializer_list ( ',' )? '}' )
+			int alt47=2;
+			try { DebugEnterDecision(47, false);
+			int LA47_0 = input.LA(1);
+
+			if ((LA47_0==CHARACTER_LITERAL||LA47_0==DECIMAL_LITERAL||LA47_0==FLOATING_POINT_LITERAL||LA47_0==HEX_LITERAL||LA47_0==IDENTIFIER||LA47_0==OCTAL_LITERAL||LA47_0==STRING_LITERAL||LA47_0==23||LA47_0==28||LA47_0==30||LA47_0==32||(LA47_0>=34 && LA47_0<=35)||(LA47_0>=38 && LA47_0<=39)||LA47_0==90||LA47_0==105))
+			{
+				alt47 = 1;
+			}
+			else if ((LA47_0==100))
+			{
+				alt47 = 2;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return retval;}
+				NoViableAltException nvae = new NoViableAltException("", 47, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(47); }
+			switch (alt47)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C.g:289:4: assignment_expression
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(289, 4);
+				PushFollow(Follow._assignment_expression_in_initializer1086);
+				assignment_expression157=assignment_expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, assignment_expression157.Tree, assignment_expression157, retval);
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C.g:290:4: '{' initializer_list ( ',' )? '}'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(290, 4);
+				char_literal158=(IToken)Match(input,100,Follow._100_in_initializer1091); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal158_tree = (object)adaptor.Create(char_literal158, retval);
+				adaptor.AddChild(root_0, char_literal158_tree);
+				}
+				DebugLocation(290, 8);
+				PushFollow(Follow._initializer_list_in_initializer1093);
+				initializer_list159=initializer_list();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, initializer_list159.Tree, initializer_list159, retval);
+				DebugLocation(290, 25);
+				// C.g:290:25: ( ',' )?
+				int alt46=2;
+				try { DebugEnterSubRule(46);
+				try { DebugEnterDecision(46, false);
+				int LA46_0 = input.LA(1);
+
+				if ((LA46_0==37))
+				{
+					alt46 = 1;
+				}
+				} finally { DebugExitDecision(46); }
+				switch (alt46)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C.g:290:25: ','
+					{
+					DebugLocation(290, 25);
+					char_literal160=(IToken)Match(input,37,Follow._37_in_initializer1095); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal160_tree = (object)adaptor.Create(char_literal160, retval);
+					adaptor.AddChild(root_0, char_literal160_tree);
+					}
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(46); }
+
+				DebugLocation(290, 30);
+				char_literal161=(IToken)Match(input,104,Follow._104_in_initializer1098); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal161_tree = (object)adaptor.Create(char_literal161, retval);
+				adaptor.AddChild(root_0, char_literal161_tree);
+				}
+
+				}
+				break;
+
+			}
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("initializer", 36);
+			LeaveRule("initializer", 36);
+			LeaveRule_initializer();
+			if (state.backtracking > 0) { Memoize(input, 36, initializer_StartIndex); }
+
+		}
+		DebugLocation(291, 1);
+		} finally { DebugExitRule(GrammarFileName, "initializer"); }
+		return retval;
+
+	}
+	// $ANTLR end "initializer"
+
+	partial void EnterRule_initializer_list();
+	partial void LeaveRule_initializer_list();
+
+	// $ANTLR start "initializer_list"
+	// C.g:293:1: initializer_list : initializer ( ',' initializer )* ;
+	[GrammarRule("initializer_list")]
+	public XAstParserRuleReturnScope initializer_list()
+	{
+		EnterRule_initializer_list();
+		EnterRule("initializer_list", 37);
+		var retval = new XAstParserRuleReturnScope("initializer_list");
+		
+		retval.Start = (IToken)input.LT(1);
+		int initializer_list_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken char_literal163 = default(IToken);
+		XAstParserRuleReturnScope initializer162 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope initializer164 = default(XAstParserRuleReturnScope);
+
+		object char_literal163_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "initializer_list");
+		DebugLocation(293, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 37)) { return retval; }
+
+			// C.g:294:2: ( initializer ( ',' initializer )* )
+			DebugEnterAlt(1);
+			// C.g:294:4: initializer ( ',' initializer )*
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(294, 4);
+			PushFollow(Follow._initializer_in_initializer_list1109);
+			initializer162=initializer();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, initializer162.Tree, initializer162, retval);
+			DebugLocation(294, 16);
+			// C.g:294:16: ( ',' initializer )*
+			try { DebugEnterSubRule(48);
+			while (true)
+			{
+				int alt48=2;
+				try { DebugEnterDecision(48, false);
+				int LA48_0 = input.LA(1);
+
+				if ((LA48_0==37))
+				{
+					int LA48_1 = input.LA(2);
+
+					if ((LA48_1==CHARACTER_LITERAL||LA48_1==DECIMAL_LITERAL||LA48_1==FLOATING_POINT_LITERAL||LA48_1==HEX_LITERAL||LA48_1==IDENTIFIER||LA48_1==OCTAL_LITERAL||LA48_1==STRING_LITERAL||LA48_1==23||LA48_1==28||LA48_1==30||LA48_1==32||(LA48_1>=34 && LA48_1<=35)||(LA48_1>=38 && LA48_1<=39)||LA48_1==90||LA48_1==100||LA48_1==105))
+					{
+						alt48 = 1;
+					}
+
+
+				}
+
+
+				} finally { DebugExitDecision(48); }
+				switch ( alt48 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C.g:294:17: ',' initializer
+					{
+					DebugLocation(294, 17);
+					char_literal163=(IToken)Match(input,37,Follow._37_in_initializer_list1112); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal163_tree = (object)adaptor.Create(char_literal163, retval);
+					adaptor.AddChild(root_0, char_literal163_tree);
+					}
+					DebugLocation(294, 21);
+					PushFollow(Follow._initializer_in_initializer_list1114);
+					initializer164=initializer();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, initializer164.Tree, initializer164, retval);
+
+					}
+					break;
+
+				default:
+					goto loop48;
+				}
+			}
+
+			loop48:
+				;
+
+			} finally { DebugExitSubRule(48); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("initializer_list", 37);
+			LeaveRule("initializer_list", 37);
+			LeaveRule_initializer_list();
+			if (state.backtracking > 0) { Memoize(input, 37, initializer_list_StartIndex); }
+
+		}
+		DebugLocation(295, 1);
 		} finally { DebugExitRule(GrammarFileName, "initializer_list"); }
 		return retval;
 
@@ -7155,12 +7740,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_argument_expression_list();
 
 	// $ANTLR start "argument_expression_list"
-	// C.g:288:1: argument_expression_list : assignment_expression ( ',' assignment_expression )* ;
+	// C.g:299:1: argument_expression_list : assignment_expression ( ',' assignment_expression )* ;
 	[GrammarRule("argument_expression_list")]
 	public XAstParserRuleReturnScope argument_expression_list()
 	{
 		EnterRule_argument_expression_list();
-		EnterRule("argument_expression_list", 36);
+		EnterRule("argument_expression_list", 38);
 		var retval = new XAstParserRuleReturnScope("argument_expression_list");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -7168,76 +7753,76 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken char_literal149 = default(IToken);
-		XAstParserRuleReturnScope assignment_expression148 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope assignment_expression150 = default(XAstParserRuleReturnScope);
+		IToken char_literal166 = default(IToken);
+		XAstParserRuleReturnScope assignment_expression165 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope assignment_expression167 = default(XAstParserRuleReturnScope);
 
-		object char_literal149_tree = default(object);
+		object char_literal166_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "argument_expression_list");
-		DebugLocation(288, 1);
+		DebugLocation(299, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 36)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 38)) { return retval; }
 
-			// C.g:289:2: ( assignment_expression ( ',' assignment_expression )* )
+			// C.g:300:2: ( assignment_expression ( ',' assignment_expression )* )
 			DebugEnterAlt(1);
-			// C.g:289:6: assignment_expression ( ',' assignment_expression )*
+			// C.g:300:6: assignment_expression ( ',' assignment_expression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(289, 6);
-			PushFollow(Follow._assignment_expression_in_argument_expression_list1022);
-			assignment_expression148=assignment_expression();
+			DebugLocation(300, 6);
+			PushFollow(Follow._assignment_expression_in_argument_expression_list1131);
+			assignment_expression165=assignment_expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, assignment_expression148.Tree, assignment_expression148, retval);
-			DebugLocation(289, 28);
-			// C.g:289:28: ( ',' assignment_expression )*
-			try { DebugEnterSubRule(45);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, assignment_expression165.Tree, assignment_expression165, retval);
+			DebugLocation(300, 28);
+			// C.g:300:28: ( ',' assignment_expression )*
+			try { DebugEnterSubRule(49);
 			while (true)
 			{
-				int alt45=2;
-				try { DebugEnterDecision(45, false);
-				int LA45_0 = input.LA(1);
+				int alt49=2;
+				try { DebugEnterDecision(49, false);
+				int LA49_0 = input.LA(1);
 
-				if ((LA45_0==37))
+				if ((LA49_0==37))
 				{
-					alt45 = 1;
+					alt49 = 1;
 				}
 
 
-				} finally { DebugExitDecision(45); }
-				switch ( alt45 )
+				} finally { DebugExitDecision(49); }
+				switch ( alt49 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:289:29: ',' assignment_expression
+					// C.g:300:29: ',' assignment_expression
 					{
-					DebugLocation(289, 29);
-					char_literal149=(IToken)Match(input,37,Follow._37_in_argument_expression_list1025); if (state.failed) return retval;
+					DebugLocation(300, 29);
+					char_literal166=(IToken)Match(input,37,Follow._37_in_argument_expression_list1134); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal149_tree = (object)adaptor.Create(char_literal149, retval);
-					adaptor.AddChild(root_0, char_literal149_tree);
+					char_literal166_tree = (object)adaptor.Create(char_literal166, retval);
+					adaptor.AddChild(root_0, char_literal166_tree);
 					}
-					DebugLocation(289, 33);
-					PushFollow(Follow._assignment_expression_in_argument_expression_list1027);
-					assignment_expression150=assignment_expression();
+					DebugLocation(300, 33);
+					PushFollow(Follow._assignment_expression_in_argument_expression_list1136);
+					assignment_expression167=assignment_expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, assignment_expression150.Tree, assignment_expression150, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, assignment_expression167.Tree, assignment_expression167, retval);
 
 					}
 					break;
 
 				default:
-					goto loop45;
+					goto loop49;
 				}
 			}
 
-			loop45:
+			loop49:
 				;
 
-			} finally { DebugExitSubRule(45); }
+			} finally { DebugExitSubRule(49); }
 
 
 			}
@@ -7258,13 +7843,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("argument_expression_list", 36);
-			LeaveRule("argument_expression_list", 36);
+			TraceOut("argument_expression_list", 38);
+			LeaveRule("argument_expression_list", 38);
 			LeaveRule_argument_expression_list();
-			if (state.backtracking > 0) { Memoize(input, 36, argument_expression_list_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 38, argument_expression_list_StartIndex); }
 
 		}
-		DebugLocation(290, 1);
+		DebugLocation(301, 1);
 		} finally { DebugExitRule(GrammarFileName, "argument_expression_list"); }
 		return retval;
 
@@ -7275,12 +7860,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_additive_expression();
 
 	// $ANTLR start "additive_expression"
-	// C.g:292:1: additive_expression : ( multiplicative_expression ) ( '+' multiplicative_expression | '-' multiplicative_expression )* ;
+	// C.g:303:1: additive_expression : ( multiplicative_expression ) ( '+' multiplicative_expression | '-' multiplicative_expression )* ;
 	[GrammarRule("additive_expression")]
 	public XAstParserRuleReturnScope additive_expression()
 	{
 		EnterRule_additive_expression();
-		EnterRule("additive_expression", 37);
+		EnterRule("additive_expression", 39);
 		var retval = new XAstParserRuleReturnScope("additive_expression");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -7288,1070 +7873,97 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken char_literal152 = default(IToken);
-		IToken char_literal154 = default(IToken);
-		XAstParserRuleReturnScope multiplicative_expression151 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope multiplicative_expression153 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope multiplicative_expression155 = default(XAstParserRuleReturnScope);
+		IToken char_literal169 = default(IToken);
+		IToken char_literal171 = default(IToken);
+		XAstParserRuleReturnScope multiplicative_expression168 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope multiplicative_expression170 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope multiplicative_expression172 = default(XAstParserRuleReturnScope);
 
-		object char_literal152_tree = default(object);
-		object char_literal154_tree = default(object);
+		object char_literal169_tree = default(object);
+		object char_literal171_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "additive_expression");
-		DebugLocation(292, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 37)) { return retval; }
-
-			// C.g:293:2: ( ( multiplicative_expression ) ( '+' multiplicative_expression | '-' multiplicative_expression )* )
-			DebugEnterAlt(1);
-			// C.g:293:4: ( multiplicative_expression ) ( '+' multiplicative_expression | '-' multiplicative_expression )*
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(293, 4);
-			// C.g:293:4: ( multiplicative_expression )
-			DebugEnterAlt(1);
-			// C.g:293:5: multiplicative_expression
-			{
-			DebugLocation(293, 5);
-			PushFollow(Follow._multiplicative_expression_in_additive_expression1041);
-			multiplicative_expression151=multiplicative_expression();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, multiplicative_expression151.Tree, multiplicative_expression151, retval);
-
-			}
-
-			DebugLocation(293, 32);
-			// C.g:293:32: ( '+' multiplicative_expression | '-' multiplicative_expression )*
-			try { DebugEnterSubRule(46);
-			while (true)
-			{
-				int alt46=3;
-				try { DebugEnterDecision(46, false);
-				int LA46_0 = input.LA(1);
-
-				if ((LA46_0==34))
-				{
-					alt46 = 1;
-				}
-				else if ((LA46_0==38))
-				{
-					alt46 = 2;
-				}
-
-
-				} finally { DebugExitDecision(46); }
-				switch ( alt46 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C.g:293:33: '+' multiplicative_expression
-					{
-					DebugLocation(293, 33);
-					char_literal152=(IToken)Match(input,34,Follow._34_in_additive_expression1045); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal152_tree = (object)adaptor.Create(char_literal152, retval);
-					adaptor.AddChild(root_0, char_literal152_tree);
-					}
-					DebugLocation(293, 37);
-					PushFollow(Follow._multiplicative_expression_in_additive_expression1047);
-					multiplicative_expression153=multiplicative_expression();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, multiplicative_expression153.Tree, multiplicative_expression153, retval);
-
-					}
-					break;
-				case 2:
-					DebugEnterAlt(2);
-					// C.g:293:65: '-' multiplicative_expression
-					{
-					DebugLocation(293, 65);
-					char_literal154=(IToken)Match(input,38,Follow._38_in_additive_expression1051); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal154_tree = (object)adaptor.Create(char_literal154, retval);
-					adaptor.AddChild(root_0, char_literal154_tree);
-					}
-					DebugLocation(293, 69);
-					PushFollow(Follow._multiplicative_expression_in_additive_expression1053);
-					multiplicative_expression155=multiplicative_expression();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, multiplicative_expression155.Tree, multiplicative_expression155, retval);
-
-					}
-					break;
-
-				default:
-					goto loop46;
-				}
-			}
-
-			loop46:
-				;
-
-			} finally { DebugExitSubRule(46); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("additive_expression", 37);
-			LeaveRule("additive_expression", 37);
-			LeaveRule_additive_expression();
-			if (state.backtracking > 0) { Memoize(input, 37, additive_expression_StartIndex); }
-
-		}
-		DebugLocation(294, 1);
-		} finally { DebugExitRule(GrammarFileName, "additive_expression"); }
-		return retval;
-
-	}
-	// $ANTLR end "additive_expression"
-
-	partial void EnterRule_multiplicative_expression();
-	partial void LeaveRule_multiplicative_expression();
-
-	// $ANTLR start "multiplicative_expression"
-	// C.g:296:1: multiplicative_expression : ( cast_expression ) ( '*' cast_expression | '/' cast_expression | '%' cast_expression )* ;
-	[GrammarRule("multiplicative_expression")]
-	public XAstParserRuleReturnScope multiplicative_expression()
-	{
-		EnterRule_multiplicative_expression();
-		EnterRule("multiplicative_expression", 38);
-		var retval = new XAstParserRuleReturnScope("multiplicative_expression");
-		
-		retval.Start = (IToken)input.LT(1);
-		int multiplicative_expression_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken char_literal157 = default(IToken);
-		IToken char_literal159 = default(IToken);
-		IToken char_literal161 = default(IToken);
-		XAstParserRuleReturnScope cast_expression156 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope cast_expression158 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope cast_expression160 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope cast_expression162 = default(XAstParserRuleReturnScope);
-
-		object char_literal157_tree = default(object);
-		object char_literal159_tree = default(object);
-		object char_literal161_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "multiplicative_expression");
-		DebugLocation(296, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 38)) { return retval; }
-
-			// C.g:297:2: ( ( cast_expression ) ( '*' cast_expression | '/' cast_expression | '%' cast_expression )* )
-			DebugEnterAlt(1);
-			// C.g:297:4: ( cast_expression ) ( '*' cast_expression | '/' cast_expression | '%' cast_expression )*
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(297, 4);
-			// C.g:297:4: ( cast_expression )
-			DebugEnterAlt(1);
-			// C.g:297:5: cast_expression
-			{
-			DebugLocation(297, 5);
-			PushFollow(Follow._cast_expression_in_multiplicative_expression1067);
-			cast_expression156=cast_expression();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, cast_expression156.Tree, cast_expression156, retval);
-
-			}
-
-			DebugLocation(297, 22);
-			// C.g:297:22: ( '*' cast_expression | '/' cast_expression | '%' cast_expression )*
-			try { DebugEnterSubRule(47);
-			while (true)
-			{
-				int alt47=4;
-				try { DebugEnterDecision(47, false);
-				switch (input.LA(1))
-				{
-				case 32:
-					{
-					alt47 = 1;
-					}
-					break;
-				case 44:
-					{
-					alt47 = 2;
-					}
-					break;
-				case 25:
-					{
-					alt47 = 3;
-					}
-					break;
-				}
-
-				} finally { DebugExitDecision(47); }
-				switch ( alt47 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C.g:297:23: '*' cast_expression
-					{
-					DebugLocation(297, 23);
-					char_literal157=(IToken)Match(input,32,Follow._32_in_multiplicative_expression1071); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal157_tree = (object)adaptor.Create(char_literal157, retval);
-					adaptor.AddChild(root_0, char_literal157_tree);
-					}
-					DebugLocation(297, 27);
-					PushFollow(Follow._cast_expression_in_multiplicative_expression1073);
-					cast_expression158=cast_expression();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, cast_expression158.Tree, cast_expression158, retval);
-
-					}
-					break;
-				case 2:
-					DebugEnterAlt(2);
-					// C.g:297:45: '/' cast_expression
-					{
-					DebugLocation(297, 45);
-					char_literal159=(IToken)Match(input,44,Follow._44_in_multiplicative_expression1077); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal159_tree = (object)adaptor.Create(char_literal159, retval);
-					adaptor.AddChild(root_0, char_literal159_tree);
-					}
-					DebugLocation(297, 49);
-					PushFollow(Follow._cast_expression_in_multiplicative_expression1079);
-					cast_expression160=cast_expression();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, cast_expression160.Tree, cast_expression160, retval);
-
-					}
-					break;
-				case 3:
-					DebugEnterAlt(3);
-					// C.g:297:67: '%' cast_expression
-					{
-					DebugLocation(297, 67);
-					char_literal161=(IToken)Match(input,25,Follow._25_in_multiplicative_expression1083); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal161_tree = (object)adaptor.Create(char_literal161, retval);
-					adaptor.AddChild(root_0, char_literal161_tree);
-					}
-					DebugLocation(297, 71);
-					PushFollow(Follow._cast_expression_in_multiplicative_expression1085);
-					cast_expression162=cast_expression();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, cast_expression162.Tree, cast_expression162, retval);
-
-					}
-					break;
-
-				default:
-					goto loop47;
-				}
-			}
-
-			loop47:
-				;
-
-			} finally { DebugExitSubRule(47); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("multiplicative_expression", 38);
-			LeaveRule("multiplicative_expression", 38);
-			LeaveRule_multiplicative_expression();
-			if (state.backtracking > 0) { Memoize(input, 38, multiplicative_expression_StartIndex); }
-
-		}
-		DebugLocation(298, 1);
-		} finally { DebugExitRule(GrammarFileName, "multiplicative_expression"); }
-		return retval;
-
-	}
-	// $ANTLR end "multiplicative_expression"
-
-	partial void EnterRule_cast_expression();
-	partial void LeaveRule_cast_expression();
-
-	// $ANTLR start "cast_expression"
-	// C.g:300:1: cast_expression : ( '(' type_name ')' cast_expression | unary_expression );
-	[GrammarRule("cast_expression")]
-	public XAstParserRuleReturnScope cast_expression()
-	{
-		EnterRule_cast_expression();
-		EnterRule("cast_expression", 39);
-		var retval = new XAstParserRuleReturnScope("cast_expression");
-		
-		retval.Start = (IToken)input.LT(1);
-		int cast_expression_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken char_literal163 = default(IToken);
-		IToken char_literal165 = default(IToken);
-		XAstParserRuleReturnScope type_name164 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope cast_expression166 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope unary_expression167 = default(XAstParserRuleReturnScope);
-
-		object char_literal163_tree = default(object);
-		object char_literal165_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "cast_expression");
-		DebugLocation(300, 1);
+		DebugLocation(303, 1);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 39)) { return retval; }
 
-			// C.g:301:2: ( '(' type_name ')' cast_expression | unary_expression )
-			int alt48=2;
-			try { DebugEnterDecision(48, false);
-			int LA48_0 = input.LA(1);
-
-			if ((LA48_0==30))
-			{
-				switch (input.LA(2))
-				{
-				case 63:
-				case 64:
-				case 68:
-				case 69:
-				case 73:
-				case 75:
-				case 77:
-				case 81:
-				case 82:
-				case 85:
-				case 86:
-				case 89:
-				case 92:
-				case 93:
-				case 94:
-				case 95:
-					{
-					alt48 = 1;
-					}
-					break;
-				case IDENTIFIER:
-					{
-					int LA48_26 = input.LA(3);
-
-					if ((EvaluatePredicate(synpred81_C_fragment)))
-					{
-						alt48 = 1;
-					}
-					else if ((true))
-					{
-						alt48 = 2;
-					}
-					else
-					{
-						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 48, 26, input);
-						DebugRecognitionException(nvae);
-						throw nvae;
-					}
-					}
-					break;
-				case CHARACTER_LITERAL:
-				case DECIMAL_LITERAL:
-				case FLOATING_POINT_LITERAL:
-				case HEX_LITERAL:
-				case OCTAL_LITERAL:
-				case STRING_LITERAL:
-				case 23:
-				case 28:
-				case 30:
-				case 32:
-				case 34:
-				case 35:
-				case 38:
-				case 39:
-				case 87:
-				case 102:
-					{
-					alt48 = 2;
-					}
-					break;
-				default:
-					{
-						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 48, 1, input);
-						DebugRecognitionException(nvae);
-						throw nvae;
-					}
-				}
-
-			}
-			else if ((LA48_0==CHARACTER_LITERAL||LA48_0==DECIMAL_LITERAL||LA48_0==FLOATING_POINT_LITERAL||LA48_0==HEX_LITERAL||LA48_0==IDENTIFIER||LA48_0==OCTAL_LITERAL||LA48_0==STRING_LITERAL||LA48_0==23||LA48_0==28||LA48_0==32||(LA48_0>=34 && LA48_0<=35)||(LA48_0>=38 && LA48_0<=39)||LA48_0==87||LA48_0==102))
-			{
-				alt48 = 2;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 48, 0, input);
-				DebugRecognitionException(nvae);
-				throw nvae;
-			}
-			} finally { DebugExitDecision(48); }
-			switch (alt48)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C.g:301:4: '(' type_name ')' cast_expression
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(301, 4);
-				char_literal163=(IToken)Match(input,30,Follow._30_in_cast_expression1098); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal163_tree = (object)adaptor.Create(char_literal163, retval);
-				adaptor.AddChild(root_0, char_literal163_tree);
-				}
-				DebugLocation(301, 8);
-				PushFollow(Follow._type_name_in_cast_expression1100);
-				type_name164=type_name();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, type_name164.Tree, type_name164, retval);
-				DebugLocation(301, 18);
-				char_literal165=(IToken)Match(input,31,Follow._31_in_cast_expression1102); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal165_tree = (object)adaptor.Create(char_literal165, retval);
-				adaptor.AddChild(root_0, char_literal165_tree);
-				}
-				DebugLocation(301, 22);
-				PushFollow(Follow._cast_expression_in_cast_expression1104);
-				cast_expression166=cast_expression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, cast_expression166.Tree, cast_expression166, retval);
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C.g:302:4: unary_expression
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(302, 4);
-				PushFollow(Follow._unary_expression_in_cast_expression1109);
-				unary_expression167=unary_expression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unary_expression167.Tree, unary_expression167, retval);
-
-				}
-				break;
-
-			}
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("cast_expression", 39);
-			LeaveRule("cast_expression", 39);
-			LeaveRule_cast_expression();
-			if (state.backtracking > 0) { Memoize(input, 39, cast_expression_StartIndex); }
-
-		}
-		DebugLocation(303, 1);
-		} finally { DebugExitRule(GrammarFileName, "cast_expression"); }
-		return retval;
-
-	}
-	// $ANTLR end "cast_expression"
-
-	partial void EnterRule_unary_expression();
-	partial void LeaveRule_unary_expression();
-
-	// $ANTLR start "unary_expression"
-	// C.g:305:1: unary_expression : ( postfix_expression | '++' unary_expression | '--' unary_expression | unary_operator cast_expression | 'sizeof' unary_expression | 'sizeof' '(' type_name ')' );
-	[GrammarRule("unary_expression")]
-	public XAstParserRuleReturnScope unary_expression()
-	{
-		EnterRule_unary_expression();
-		EnterRule("unary_expression", 40);
-		var retval = new XAstParserRuleReturnScope("unary_expression");
-		
-		retval.Start = (IToken)input.LT(1);
-		int unary_expression_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken string_literal169 = default(IToken);
-		IToken string_literal171 = default(IToken);
-		IToken string_literal175 = default(IToken);
-		IToken string_literal177 = default(IToken);
-		IToken char_literal178 = default(IToken);
-		IToken char_literal180 = default(IToken);
-		XAstParserRuleReturnScope postfix_expression168 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope unary_expression170 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope unary_expression172 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope unary_operator173 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope cast_expression174 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope unary_expression176 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope type_name179 = default(XAstParserRuleReturnScope);
-
-		object string_literal169_tree = default(object);
-		object string_literal171_tree = default(object);
-		object string_literal175_tree = default(object);
-		object string_literal177_tree = default(object);
-		object char_literal178_tree = default(object);
-		object char_literal180_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "unary_expression");
-		DebugLocation(305, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 40)) { return retval; }
-
-			// C.g:306:2: ( postfix_expression | '++' unary_expression | '--' unary_expression | unary_operator cast_expression | 'sizeof' unary_expression | 'sizeof' '(' type_name ')' )
-			int alt49=6;
-			try { DebugEnterDecision(49, false);
-			switch (input.LA(1))
-			{
-			case CHARACTER_LITERAL:
-			case DECIMAL_LITERAL:
-			case FLOATING_POINT_LITERAL:
-			case HEX_LITERAL:
-			case IDENTIFIER:
-			case OCTAL_LITERAL:
-			case STRING_LITERAL:
-			case 30:
-				{
-				alt49 = 1;
-				}
-				break;
-			case 35:
-				{
-				alt49 = 2;
-				}
-				break;
-			case 39:
-				{
-				alt49 = 3;
-				}
-				break;
-			case 23:
-			case 28:
-			case 32:
-			case 34:
-			case 38:
-			case 102:
-				{
-				alt49 = 4;
-				}
-				break;
-			case 87:
-				{
-				int LA49_12 = input.LA(2);
-
-				if ((LA49_12==30))
-				{
-					int LA49_13 = input.LA(3);
-
-					if ((EvaluatePredicate(synpred86_C_fragment)))
-					{
-						alt49 = 5;
-					}
-					else if ((true))
-					{
-						alt49 = 6;
-					}
-					else
-					{
-						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 49, 13, input);
-						DebugRecognitionException(nvae);
-						throw nvae;
-					}
-				}
-				else if ((LA49_12==CHARACTER_LITERAL||LA49_12==DECIMAL_LITERAL||LA49_12==FLOATING_POINT_LITERAL||LA49_12==HEX_LITERAL||LA49_12==IDENTIFIER||LA49_12==OCTAL_LITERAL||LA49_12==STRING_LITERAL||LA49_12==23||LA49_12==28||LA49_12==32||(LA49_12>=34 && LA49_12<=35)||(LA49_12>=38 && LA49_12<=39)||LA49_12==87||LA49_12==102))
-				{
-					alt49 = 5;
-				}
-				else
-				{
-					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 49, 12, input);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
-				}
-				break;
-			default:
-				{
-					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 49, 0, input);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
-			}
-
-			} finally { DebugExitDecision(49); }
-			switch (alt49)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C.g:306:4: postfix_expression
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(306, 4);
-				PushFollow(Follow._postfix_expression_in_unary_expression1120);
-				postfix_expression168=postfix_expression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, postfix_expression168.Tree, postfix_expression168, retval);
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C.g:307:4: '++' unary_expression
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(307, 4);
-				string_literal169=(IToken)Match(input,35,Follow._35_in_unary_expression1125); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal169_tree = (object)adaptor.Create(string_literal169, retval);
-				adaptor.AddChild(root_0, string_literal169_tree);
-				}
-				DebugLocation(307, 9);
-				PushFollow(Follow._unary_expression_in_unary_expression1127);
-				unary_expression170=unary_expression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unary_expression170.Tree, unary_expression170, retval);
-
-				}
-				break;
-			case 3:
-				DebugEnterAlt(3);
-				// C.g:308:4: '--' unary_expression
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(308, 4);
-				string_literal171=(IToken)Match(input,39,Follow._39_in_unary_expression1132); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal171_tree = (object)adaptor.Create(string_literal171, retval);
-				adaptor.AddChild(root_0, string_literal171_tree);
-				}
-				DebugLocation(308, 9);
-				PushFollow(Follow._unary_expression_in_unary_expression1134);
-				unary_expression172=unary_expression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unary_expression172.Tree, unary_expression172, retval);
-
-				}
-				break;
-			case 4:
-				DebugEnterAlt(4);
-				// C.g:309:4: unary_operator cast_expression
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(309, 4);
-				PushFollow(Follow._unary_operator_in_unary_expression1139);
-				unary_operator173=unary_operator();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unary_operator173.Tree, unary_operator173, retval);
-				DebugLocation(309, 19);
-				PushFollow(Follow._cast_expression_in_unary_expression1141);
-				cast_expression174=cast_expression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, cast_expression174.Tree, cast_expression174, retval);
-
-				}
-				break;
-			case 5:
-				DebugEnterAlt(5);
-				// C.g:310:4: 'sizeof' unary_expression
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(310, 4);
-				string_literal175=(IToken)Match(input,87,Follow._87_in_unary_expression1146); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal175_tree = (object)adaptor.Create(string_literal175, retval);
-				adaptor.AddChild(root_0, string_literal175_tree);
-				}
-				DebugLocation(310, 13);
-				PushFollow(Follow._unary_expression_in_unary_expression1148);
-				unary_expression176=unary_expression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unary_expression176.Tree, unary_expression176, retval);
-
-				}
-				break;
-			case 6:
-				DebugEnterAlt(6);
-				// C.g:311:4: 'sizeof' '(' type_name ')'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(311, 4);
-				string_literal177=(IToken)Match(input,87,Follow._87_in_unary_expression1153); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal177_tree = (object)adaptor.Create(string_literal177, retval);
-				adaptor.AddChild(root_0, string_literal177_tree);
-				}
-				DebugLocation(311, 13);
-				char_literal178=(IToken)Match(input,30,Follow._30_in_unary_expression1155); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal178_tree = (object)adaptor.Create(char_literal178, retval);
-				adaptor.AddChild(root_0, char_literal178_tree);
-				}
-				DebugLocation(311, 17);
-				PushFollow(Follow._type_name_in_unary_expression1157);
-				type_name179=type_name();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, type_name179.Tree, type_name179, retval);
-				DebugLocation(311, 27);
-				char_literal180=(IToken)Match(input,31,Follow._31_in_unary_expression1159); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal180_tree = (object)adaptor.Create(char_literal180, retval);
-				adaptor.AddChild(root_0, char_literal180_tree);
-				}
-
-				}
-				break;
-
-			}
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("unary_expression", 40);
-			LeaveRule("unary_expression", 40);
-			LeaveRule_unary_expression();
-			if (state.backtracking > 0) { Memoize(input, 40, unary_expression_StartIndex); }
-
-		}
-		DebugLocation(312, 1);
-		} finally { DebugExitRule(GrammarFileName, "unary_expression"); }
-		return retval;
-
-	}
-	// $ANTLR end "unary_expression"
-
-	partial void EnterRule_postfix_expression();
-	partial void LeaveRule_postfix_expression();
-
-	// $ANTLR start "postfix_expression"
-	// C.g:314:1: postfix_expression : primary_expression ( '[' expression ']' | '(' ')' | '(' argument_expression_list ')' | '.' IDENTIFIER | '->' IDENTIFIER | '++' | '--' )* ;
-	[GrammarRule("postfix_expression")]
-	public XAstParserRuleReturnScope postfix_expression()
-	{
-		EnterRule_postfix_expression();
-		EnterRule("postfix_expression", 41);
-		var retval = new XAstParserRuleReturnScope("postfix_expression");
-		
-		retval.Start = (IToken)input.LT(1);
-		int postfix_expression_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken char_literal182 = default(IToken);
-		IToken char_literal184 = default(IToken);
-		IToken char_literal185 = default(IToken);
-		IToken char_literal186 = default(IToken);
-		IToken char_literal187 = default(IToken);
-		IToken char_literal189 = default(IToken);
-		IToken char_literal190 = default(IToken);
-		IToken IDENTIFIER191 = default(IToken);
-		IToken string_literal192 = default(IToken);
-		IToken IDENTIFIER193 = default(IToken);
-		IToken string_literal194 = default(IToken);
-		IToken string_literal195 = default(IToken);
-		XAstParserRuleReturnScope primary_expression181 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope expression183 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope argument_expression_list188 = default(XAstParserRuleReturnScope);
-
-		object char_literal182_tree = default(object);
-		object char_literal184_tree = default(object);
-		object char_literal185_tree = default(object);
-		object char_literal186_tree = default(object);
-		object char_literal187_tree = default(object);
-		object char_literal189_tree = default(object);
-		object char_literal190_tree = default(object);
-		object IDENTIFIER191_tree = default(object);
-		object string_literal192_tree = default(object);
-		object IDENTIFIER193_tree = default(object);
-		object string_literal194_tree = default(object);
-		object string_literal195_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "postfix_expression");
-		DebugLocation(314, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 41)) { return retval; }
-
-			// C.g:315:2: ( primary_expression ( '[' expression ']' | '(' ')' | '(' argument_expression_list ')' | '.' IDENTIFIER | '->' IDENTIFIER | '++' | '--' )* )
+			// C.g:304:2: ( ( multiplicative_expression ) ( '+' multiplicative_expression | '-' multiplicative_expression )* )
 			DebugEnterAlt(1);
-			// C.g:315:6: primary_expression ( '[' expression ']' | '(' ')' | '(' argument_expression_list ')' | '.' IDENTIFIER | '->' IDENTIFIER | '++' | '--' )*
+			// C.g:304:4: ( multiplicative_expression ) ( '+' multiplicative_expression | '-' multiplicative_expression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(315, 6);
-			PushFollow(Follow._primary_expression_in_postfix_expression1172);
-			primary_expression181=primary_expression();
+			DebugLocation(304, 4);
+			// C.g:304:4: ( multiplicative_expression )
+			DebugEnterAlt(1);
+			// C.g:304:5: multiplicative_expression
+			{
+			DebugLocation(304, 5);
+			PushFollow(Follow._multiplicative_expression_in_additive_expression1150);
+			multiplicative_expression168=multiplicative_expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, primary_expression181.Tree, primary_expression181, retval);
-			DebugLocation(316, 3);
-			// C.g:316:3: ( '[' expression ']' | '(' ')' | '(' argument_expression_list ')' | '.' IDENTIFIER | '->' IDENTIFIER | '++' | '--' )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, multiplicative_expression168.Tree, multiplicative_expression168, retval);
+
+			}
+
+			DebugLocation(304, 32);
+			// C.g:304:32: ( '+' multiplicative_expression | '-' multiplicative_expression )*
 			try { DebugEnterSubRule(50);
 			while (true)
 			{
-				int alt50=8;
+				int alt50=3;
 				try { DebugEnterDecision(50, false);
-				switch (input.LA(1))
+				int LA50_0 = input.LA(1);
+
+				if ((LA50_0==34))
 				{
-				case 59:
-					{
 					alt50 = 1;
-					}
-					break;
-				case 30:
-					{
-					int LA50_24 = input.LA(2);
-
-					if ((LA50_24==31))
-					{
-						alt50 = 2;
-					}
-					else if ((LA50_24==CHARACTER_LITERAL||LA50_24==DECIMAL_LITERAL||LA50_24==FLOATING_POINT_LITERAL||LA50_24==HEX_LITERAL||LA50_24==IDENTIFIER||LA50_24==OCTAL_LITERAL||LA50_24==STRING_LITERAL||LA50_24==23||LA50_24==28||LA50_24==30||LA50_24==32||(LA50_24>=34 && LA50_24<=35)||(LA50_24>=38 && LA50_24<=39)||LA50_24==87||LA50_24==102))
-					{
-						alt50 = 3;
-					}
-
-
-					}
-					break;
-				case 42:
-					{
-					alt50 = 4;
-					}
-					break;
-				case 41:
-					{
-					alt50 = 5;
-					}
-					break;
-				case 35:
-					{
-					alt50 = 6;
-					}
-					break;
-				case 39:
-					{
-					alt50 = 7;
-					}
-					break;
 				}
+				else if ((LA50_0==38))
+				{
+					alt50 = 2;
+				}
+
 
 				} finally { DebugExitDecision(50); }
 				switch ( alt50 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:316:7: '[' expression ']'
+					// C.g:304:33: '+' multiplicative_expression
 					{
-					DebugLocation(316, 7);
-					char_literal182=(IToken)Match(input,59,Follow._59_in_postfix_expression1180); if (state.failed) return retval;
+					DebugLocation(304, 33);
+					char_literal169=(IToken)Match(input,34,Follow._34_in_additive_expression1154); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal182_tree = (object)adaptor.Create(char_literal182, retval);
-					adaptor.AddChild(root_0, char_literal182_tree);
+					char_literal169_tree = (object)adaptor.Create(char_literal169, retval);
+					adaptor.AddChild(root_0, char_literal169_tree);
 					}
-					DebugLocation(316, 11);
-					PushFollow(Follow._expression_in_postfix_expression1182);
-					expression183=expression();
+					DebugLocation(304, 37);
+					PushFollow(Follow._multiplicative_expression_in_additive_expression1156);
+					multiplicative_expression170=multiplicative_expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, expression183.Tree, expression183, retval);
-					DebugLocation(316, 22);
-					char_literal184=(IToken)Match(input,60,Follow._60_in_postfix_expression1184); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal184_tree = (object)adaptor.Create(char_literal184, retval);
-					adaptor.AddChild(root_0, char_literal184_tree);
-					}
+					if (state.backtracking == 0) adaptor.AddChild(root_0, multiplicative_expression170.Tree, multiplicative_expression170, retval);
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C.g:317:7: '(' ')'
+					// C.g:304:65: '-' multiplicative_expression
 					{
-					DebugLocation(317, 7);
-					char_literal185=(IToken)Match(input,30,Follow._30_in_postfix_expression1192); if (state.failed) return retval;
+					DebugLocation(304, 65);
+					char_literal171=(IToken)Match(input,38,Follow._38_in_additive_expression1160); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal185_tree = (object)adaptor.Create(char_literal185, retval);
-					adaptor.AddChild(root_0, char_literal185_tree);
+					char_literal171_tree = (object)adaptor.Create(char_literal171, retval);
+					adaptor.AddChild(root_0, char_literal171_tree);
 					}
-					DebugLocation(317, 11);
-					char_literal186=(IToken)Match(input,31,Follow._31_in_postfix_expression1194); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal186_tree = (object)adaptor.Create(char_literal186, retval);
-					adaptor.AddChild(root_0, char_literal186_tree);
-					}
-
-					}
-					break;
-				case 3:
-					DebugEnterAlt(3);
-					// C.g:318:7: '(' argument_expression_list ')'
-					{
-					DebugLocation(318, 7);
-					char_literal187=(IToken)Match(input,30,Follow._30_in_postfix_expression1202); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal187_tree = (object)adaptor.Create(char_literal187, retval);
-					adaptor.AddChild(root_0, char_literal187_tree);
-					}
-					DebugLocation(318, 11);
-					PushFollow(Follow._argument_expression_list_in_postfix_expression1204);
-					argument_expression_list188=argument_expression_list();
+					DebugLocation(304, 69);
+					PushFollow(Follow._multiplicative_expression_in_additive_expression1162);
+					multiplicative_expression172=multiplicative_expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, argument_expression_list188.Tree, argument_expression_list188, retval);
-					DebugLocation(318, 36);
-					char_literal189=(IToken)Match(input,31,Follow._31_in_postfix_expression1206); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal189_tree = (object)adaptor.Create(char_literal189, retval);
-					adaptor.AddChild(root_0, char_literal189_tree);
-					}
-
-					}
-					break;
-				case 4:
-					DebugEnterAlt(4);
-					// C.g:319:7: '.' IDENTIFIER
-					{
-					DebugLocation(319, 7);
-					char_literal190=(IToken)Match(input,42,Follow._42_in_postfix_expression1214); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal190_tree = (object)adaptor.Create(char_literal190, retval);
-					adaptor.AddChild(root_0, char_literal190_tree);
-					}
-					DebugLocation(319, 11);
-					IDENTIFIER191=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_postfix_expression1216), "IDENTIFIER"); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					IDENTIFIER191_tree = (object)adaptor.Create(IDENTIFIER191, retval);
-					adaptor.AddChild(root_0, IDENTIFIER191_tree);
-					}
-
-					}
-					break;
-				case 5:
-					DebugEnterAlt(5);
-					// C.g:320:7: '->' IDENTIFIER
-					{
-					DebugLocation(320, 7);
-					string_literal192=(IToken)Match(input,41,Follow._41_in_postfix_expression1224); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					string_literal192_tree = (object)adaptor.Create(string_literal192, retval);
-					adaptor.AddChild(root_0, string_literal192_tree);
-					}
-					DebugLocation(320, 12);
-					IDENTIFIER193=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_postfix_expression1226), "IDENTIFIER"); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					IDENTIFIER193_tree = (object)adaptor.Create(IDENTIFIER193, retval);
-					adaptor.AddChild(root_0, IDENTIFIER193_tree);
-					}
-
-					}
-					break;
-				case 6:
-					DebugEnterAlt(6);
-					// C.g:321:7: '++'
-					{
-					DebugLocation(321, 7);
-					string_literal194=(IToken)Match(input,35,Follow._35_in_postfix_expression1234); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					string_literal194_tree = (object)adaptor.Create(string_literal194, retval);
-					adaptor.AddChild(root_0, string_literal194_tree);
-					}
-
-					}
-					break;
-				case 7:
-					DebugEnterAlt(7);
-					// C.g:322:7: '--'
-					{
-					DebugLocation(322, 7);
-					string_literal195=(IToken)Match(input,39,Follow._39_in_postfix_expression1242); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					string_literal195_tree = (object)adaptor.Create(string_literal195, retval);
-					adaptor.AddChild(root_0, string_literal195_tree);
-					}
+					if (state.backtracking == 0) adaptor.AddChild(root_0, multiplicative_expression172.Tree, multiplicative_expression172, retval);
 
 					}
 					break;
@@ -8385,13 +7997,985 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("postfix_expression", 41);
-			LeaveRule("postfix_expression", 41);
-			LeaveRule_postfix_expression();
-			if (state.backtracking > 0) { Memoize(input, 41, postfix_expression_StartIndex); }
+			TraceOut("additive_expression", 39);
+			LeaveRule("additive_expression", 39);
+			LeaveRule_additive_expression();
+			if (state.backtracking > 0) { Memoize(input, 39, additive_expression_StartIndex); }
 
 		}
-		DebugLocation(324, 1);
+		DebugLocation(305, 1);
+		} finally { DebugExitRule(GrammarFileName, "additive_expression"); }
+		return retval;
+
+	}
+	// $ANTLR end "additive_expression"
+
+	partial void EnterRule_multiplicative_expression();
+	partial void LeaveRule_multiplicative_expression();
+
+	// $ANTLR start "multiplicative_expression"
+	// C.g:307:1: multiplicative_expression : ( cast_expression ) ( '*' cast_expression | '/' cast_expression | '%' cast_expression )* ;
+	[GrammarRule("multiplicative_expression")]
+	public XAstParserRuleReturnScope multiplicative_expression()
+	{
+		EnterRule_multiplicative_expression();
+		EnterRule("multiplicative_expression", 40);
+		var retval = new XAstParserRuleReturnScope("multiplicative_expression");
+		
+		retval.Start = (IToken)input.LT(1);
+		int multiplicative_expression_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken char_literal174 = default(IToken);
+		IToken char_literal176 = default(IToken);
+		IToken char_literal178 = default(IToken);
+		XAstParserRuleReturnScope cast_expression173 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope cast_expression175 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope cast_expression177 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope cast_expression179 = default(XAstParserRuleReturnScope);
+
+		object char_literal174_tree = default(object);
+		object char_literal176_tree = default(object);
+		object char_literal178_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "multiplicative_expression");
+		DebugLocation(307, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 40)) { return retval; }
+
+			// C.g:308:2: ( ( cast_expression ) ( '*' cast_expression | '/' cast_expression | '%' cast_expression )* )
+			DebugEnterAlt(1);
+			// C.g:308:4: ( cast_expression ) ( '*' cast_expression | '/' cast_expression | '%' cast_expression )*
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(308, 4);
+			// C.g:308:4: ( cast_expression )
+			DebugEnterAlt(1);
+			// C.g:308:5: cast_expression
+			{
+			DebugLocation(308, 5);
+			PushFollow(Follow._cast_expression_in_multiplicative_expression1176);
+			cast_expression173=cast_expression();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, cast_expression173.Tree, cast_expression173, retval);
+
+			}
+
+			DebugLocation(308, 22);
+			// C.g:308:22: ( '*' cast_expression | '/' cast_expression | '%' cast_expression )*
+			try { DebugEnterSubRule(51);
+			while (true)
+			{
+				int alt51=4;
+				try { DebugEnterDecision(51, false);
+				switch (input.LA(1))
+				{
+				case 32:
+					{
+					alt51 = 1;
+					}
+					break;
+				case 44:
+					{
+					alt51 = 2;
+					}
+					break;
+				case 25:
+					{
+					alt51 = 3;
+					}
+					break;
+				}
+
+				} finally { DebugExitDecision(51); }
+				switch ( alt51 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C.g:308:23: '*' cast_expression
+					{
+					DebugLocation(308, 23);
+					char_literal174=(IToken)Match(input,32,Follow._32_in_multiplicative_expression1180); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal174_tree = (object)adaptor.Create(char_literal174, retval);
+					adaptor.AddChild(root_0, char_literal174_tree);
+					}
+					DebugLocation(308, 27);
+					PushFollow(Follow._cast_expression_in_multiplicative_expression1182);
+					cast_expression175=cast_expression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, cast_expression175.Tree, cast_expression175, retval);
+
+					}
+					break;
+				case 2:
+					DebugEnterAlt(2);
+					// C.g:308:45: '/' cast_expression
+					{
+					DebugLocation(308, 45);
+					char_literal176=(IToken)Match(input,44,Follow._44_in_multiplicative_expression1186); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal176_tree = (object)adaptor.Create(char_literal176, retval);
+					adaptor.AddChild(root_0, char_literal176_tree);
+					}
+					DebugLocation(308, 49);
+					PushFollow(Follow._cast_expression_in_multiplicative_expression1188);
+					cast_expression177=cast_expression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, cast_expression177.Tree, cast_expression177, retval);
+
+					}
+					break;
+				case 3:
+					DebugEnterAlt(3);
+					// C.g:308:67: '%' cast_expression
+					{
+					DebugLocation(308, 67);
+					char_literal178=(IToken)Match(input,25,Follow._25_in_multiplicative_expression1192); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal178_tree = (object)adaptor.Create(char_literal178, retval);
+					adaptor.AddChild(root_0, char_literal178_tree);
+					}
+					DebugLocation(308, 71);
+					PushFollow(Follow._cast_expression_in_multiplicative_expression1194);
+					cast_expression179=cast_expression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, cast_expression179.Tree, cast_expression179, retval);
+
+					}
+					break;
+
+				default:
+					goto loop51;
+				}
+			}
+
+			loop51:
+				;
+
+			} finally { DebugExitSubRule(51); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("multiplicative_expression", 40);
+			LeaveRule("multiplicative_expression", 40);
+			LeaveRule_multiplicative_expression();
+			if (state.backtracking > 0) { Memoize(input, 40, multiplicative_expression_StartIndex); }
+
+		}
+		DebugLocation(309, 1);
+		} finally { DebugExitRule(GrammarFileName, "multiplicative_expression"); }
+		return retval;
+
+	}
+	// $ANTLR end "multiplicative_expression"
+
+	partial void EnterRule_cast_expression();
+	partial void LeaveRule_cast_expression();
+
+	// $ANTLR start "cast_expression"
+	// C.g:311:1: cast_expression : ( '(' type_name ')' cast_expression | unary_expression );
+	[GrammarRule("cast_expression")]
+	public XAstParserRuleReturnScope cast_expression()
+	{
+		EnterRule_cast_expression();
+		EnterRule("cast_expression", 41);
+		var retval = new XAstParserRuleReturnScope("cast_expression");
+		
+		retval.Start = (IToken)input.LT(1);
+		int cast_expression_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken char_literal180 = default(IToken);
+		IToken char_literal182 = default(IToken);
+		XAstParserRuleReturnScope type_name181 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope cast_expression183 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope unary_expression184 = default(XAstParserRuleReturnScope);
+
+		object char_literal180_tree = default(object);
+		object char_literal182_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "cast_expression");
+		DebugLocation(311, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 41)) { return retval; }
+
+			// C.g:312:2: ( '(' type_name ')' cast_expression | unary_expression )
+			int alt52=2;
+			try { DebugEnterDecision(52, false);
+			int LA52_0 = input.LA(1);
+
+			if ((LA52_0==30))
+			{
+				switch (input.LA(2))
+				{
+				case 65:
+				case 71:
+				case 72:
+				case 76:
+				case 78:
+				case 80:
+				case 84:
+				case 85:
+				case 88:
+				case 89:
+				case 92:
+				case 95:
+				case 96:
+				case 97:
+				case 98:
+					{
+					alt52 = 1;
+					}
+					break;
+				case IDENTIFIER:
+					{
+					int LA52_25 = input.LA(3);
+
+					if ((EvaluatePredicate(synpred87_C_fragment)))
+					{
+						alt52 = 1;
+					}
+					else if ((true))
+					{
+						alt52 = 2;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return retval;}
+						NoViableAltException nvae = new NoViableAltException("", 52, 25, input);
+						DebugRecognitionException(nvae);
+						throw nvae;
+					}
+					}
+					break;
+				case CHARACTER_LITERAL:
+				case DECIMAL_LITERAL:
+				case FLOATING_POINT_LITERAL:
+				case HEX_LITERAL:
+				case OCTAL_LITERAL:
+				case STRING_LITERAL:
+				case 23:
+				case 28:
+				case 30:
+				case 32:
+				case 34:
+				case 35:
+				case 38:
+				case 39:
+				case 90:
+				case 105:
+					{
+					alt52 = 2;
+					}
+					break;
+				default:
+					{
+						if (state.backtracking>0) {state.failed=true; return retval;}
+						NoViableAltException nvae = new NoViableAltException("", 52, 1, input);
+						DebugRecognitionException(nvae);
+						throw nvae;
+					}
+				}
+
+			}
+			else if ((LA52_0==CHARACTER_LITERAL||LA52_0==DECIMAL_LITERAL||LA52_0==FLOATING_POINT_LITERAL||LA52_0==HEX_LITERAL||LA52_0==IDENTIFIER||LA52_0==OCTAL_LITERAL||LA52_0==STRING_LITERAL||LA52_0==23||LA52_0==28||LA52_0==32||(LA52_0>=34 && LA52_0<=35)||(LA52_0>=38 && LA52_0<=39)||LA52_0==90||LA52_0==105))
+			{
+				alt52 = 2;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return retval;}
+				NoViableAltException nvae = new NoViableAltException("", 52, 0, input);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(52); }
+			switch (alt52)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C.g:312:4: '(' type_name ')' cast_expression
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(312, 4);
+				char_literal180=(IToken)Match(input,30,Follow._30_in_cast_expression1207); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal180_tree = (object)adaptor.Create(char_literal180, retval);
+				adaptor.AddChild(root_0, char_literal180_tree);
+				}
+				DebugLocation(312, 8);
+				PushFollow(Follow._type_name_in_cast_expression1209);
+				type_name181=type_name();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, type_name181.Tree, type_name181, retval);
+				DebugLocation(312, 18);
+				char_literal182=(IToken)Match(input,31,Follow._31_in_cast_expression1211); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal182_tree = (object)adaptor.Create(char_literal182, retval);
+				adaptor.AddChild(root_0, char_literal182_tree);
+				}
+				DebugLocation(312, 22);
+				PushFollow(Follow._cast_expression_in_cast_expression1213);
+				cast_expression183=cast_expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, cast_expression183.Tree, cast_expression183, retval);
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C.g:313:4: unary_expression
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(313, 4);
+				PushFollow(Follow._unary_expression_in_cast_expression1218);
+				unary_expression184=unary_expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unary_expression184.Tree, unary_expression184, retval);
+
+				}
+				break;
+
+			}
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("cast_expression", 41);
+			LeaveRule("cast_expression", 41);
+			LeaveRule_cast_expression();
+			if (state.backtracking > 0) { Memoize(input, 41, cast_expression_StartIndex); }
+
+		}
+		DebugLocation(314, 1);
+		} finally { DebugExitRule(GrammarFileName, "cast_expression"); }
+		return retval;
+
+	}
+	// $ANTLR end "cast_expression"
+
+	partial void EnterRule_unary_expression();
+	partial void LeaveRule_unary_expression();
+
+	// $ANTLR start "unary_expression"
+	// C.g:316:1: unary_expression : ( postfix_expression | '++' unary_expression | '--' unary_expression | unary_operator cast_expression | 'sizeof' unary_expression | 'sizeof' '(' type_name ')' );
+	[GrammarRule("unary_expression")]
+	public XAstParserRuleReturnScope unary_expression()
+	{
+		EnterRule_unary_expression();
+		EnterRule("unary_expression", 42);
+		var retval = new XAstParserRuleReturnScope("unary_expression");
+		
+		retval.Start = (IToken)input.LT(1);
+		int unary_expression_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken string_literal186 = default(IToken);
+		IToken string_literal188 = default(IToken);
+		IToken string_literal192 = default(IToken);
+		IToken string_literal194 = default(IToken);
+		IToken char_literal195 = default(IToken);
+		IToken char_literal197 = default(IToken);
+		XAstParserRuleReturnScope postfix_expression185 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope unary_expression187 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope unary_expression189 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope unary_operator190 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope cast_expression191 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope unary_expression193 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope type_name196 = default(XAstParserRuleReturnScope);
+
+		object string_literal186_tree = default(object);
+		object string_literal188_tree = default(object);
+		object string_literal192_tree = default(object);
+		object string_literal194_tree = default(object);
+		object char_literal195_tree = default(object);
+		object char_literal197_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "unary_expression");
+		DebugLocation(316, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 42)) { return retval; }
+
+			// C.g:317:2: ( postfix_expression | '++' unary_expression | '--' unary_expression | unary_operator cast_expression | 'sizeof' unary_expression | 'sizeof' '(' type_name ')' )
+			int alt53=6;
+			try { DebugEnterDecision(53, false);
+			switch (input.LA(1))
+			{
+			case CHARACTER_LITERAL:
+			case DECIMAL_LITERAL:
+			case FLOATING_POINT_LITERAL:
+			case HEX_LITERAL:
+			case IDENTIFIER:
+			case OCTAL_LITERAL:
+			case STRING_LITERAL:
+			case 30:
+				{
+				alt53 = 1;
+				}
+				break;
+			case 35:
+				{
+				alt53 = 2;
+				}
+				break;
+			case 39:
+				{
+				alt53 = 3;
+				}
+				break;
+			case 23:
+			case 28:
+			case 32:
+			case 34:
+			case 38:
+			case 105:
+				{
+				alt53 = 4;
+				}
+				break;
+			case 90:
+				{
+				int LA53_12 = input.LA(2);
+
+				if ((LA53_12==30))
+				{
+					int LA53_13 = input.LA(3);
+
+					if ((EvaluatePredicate(synpred92_C_fragment)))
+					{
+						alt53 = 5;
+					}
+					else if ((true))
+					{
+						alt53 = 6;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return retval;}
+						NoViableAltException nvae = new NoViableAltException("", 53, 13, input);
+						DebugRecognitionException(nvae);
+						throw nvae;
+					}
+				}
+				else if ((LA53_12==CHARACTER_LITERAL||LA53_12==DECIMAL_LITERAL||LA53_12==FLOATING_POINT_LITERAL||LA53_12==HEX_LITERAL||LA53_12==IDENTIFIER||LA53_12==OCTAL_LITERAL||LA53_12==STRING_LITERAL||LA53_12==23||LA53_12==28||LA53_12==32||(LA53_12>=34 && LA53_12<=35)||(LA53_12>=38 && LA53_12<=39)||LA53_12==90||LA53_12==105))
+				{
+					alt53 = 5;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 12, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 53, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+
+			} finally { DebugExitDecision(53); }
+			switch (alt53)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C.g:317:4: postfix_expression
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(317, 4);
+				PushFollow(Follow._postfix_expression_in_unary_expression1229);
+				postfix_expression185=postfix_expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, postfix_expression185.Tree, postfix_expression185, retval);
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C.g:318:4: '++' unary_expression
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(318, 4);
+				string_literal186=(IToken)Match(input,35,Follow._35_in_unary_expression1234); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal186_tree = (object)adaptor.Create(string_literal186, retval);
+				adaptor.AddChild(root_0, string_literal186_tree);
+				}
+				DebugLocation(318, 9);
+				PushFollow(Follow._unary_expression_in_unary_expression1236);
+				unary_expression187=unary_expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unary_expression187.Tree, unary_expression187, retval);
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// C.g:319:4: '--' unary_expression
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(319, 4);
+				string_literal188=(IToken)Match(input,39,Follow._39_in_unary_expression1241); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal188_tree = (object)adaptor.Create(string_literal188, retval);
+				adaptor.AddChild(root_0, string_literal188_tree);
+				}
+				DebugLocation(319, 9);
+				PushFollow(Follow._unary_expression_in_unary_expression1243);
+				unary_expression189=unary_expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unary_expression189.Tree, unary_expression189, retval);
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// C.g:320:4: unary_operator cast_expression
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(320, 4);
+				PushFollow(Follow._unary_operator_in_unary_expression1248);
+				unary_operator190=unary_operator();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unary_operator190.Tree, unary_operator190, retval);
+				DebugLocation(320, 19);
+				PushFollow(Follow._cast_expression_in_unary_expression1250);
+				cast_expression191=cast_expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, cast_expression191.Tree, cast_expression191, retval);
+
+				}
+				break;
+			case 5:
+				DebugEnterAlt(5);
+				// C.g:321:4: 'sizeof' unary_expression
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(321, 4);
+				string_literal192=(IToken)Match(input,90,Follow._90_in_unary_expression1255); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal192_tree = (object)adaptor.Create(string_literal192, retval);
+				adaptor.AddChild(root_0, string_literal192_tree);
+				}
+				DebugLocation(321, 13);
+				PushFollow(Follow._unary_expression_in_unary_expression1257);
+				unary_expression193=unary_expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unary_expression193.Tree, unary_expression193, retval);
+
+				}
+				break;
+			case 6:
+				DebugEnterAlt(6);
+				// C.g:322:4: 'sizeof' '(' type_name ')'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(322, 4);
+				string_literal194=(IToken)Match(input,90,Follow._90_in_unary_expression1262); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal194_tree = (object)adaptor.Create(string_literal194, retval);
+				adaptor.AddChild(root_0, string_literal194_tree);
+				}
+				DebugLocation(322, 13);
+				char_literal195=(IToken)Match(input,30,Follow._30_in_unary_expression1264); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal195_tree = (object)adaptor.Create(char_literal195, retval);
+				adaptor.AddChild(root_0, char_literal195_tree);
+				}
+				DebugLocation(322, 17);
+				PushFollow(Follow._type_name_in_unary_expression1266);
+				type_name196=type_name();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, type_name196.Tree, type_name196, retval);
+				DebugLocation(322, 27);
+				char_literal197=(IToken)Match(input,31,Follow._31_in_unary_expression1268); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal197_tree = (object)adaptor.Create(char_literal197, retval);
+				adaptor.AddChild(root_0, char_literal197_tree);
+				}
+
+				}
+				break;
+
+			}
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("unary_expression", 42);
+			LeaveRule("unary_expression", 42);
+			LeaveRule_unary_expression();
+			if (state.backtracking > 0) { Memoize(input, 42, unary_expression_StartIndex); }
+
+		}
+		DebugLocation(323, 1);
+		} finally { DebugExitRule(GrammarFileName, "unary_expression"); }
+		return retval;
+
+	}
+	// $ANTLR end "unary_expression"
+
+	partial void EnterRule_postfix_expression();
+	partial void LeaveRule_postfix_expression();
+
+	// $ANTLR start "postfix_expression"
+	// C.g:325:1: postfix_expression : primary_expression ( '[' expression ']' | '(' ')' | '(' argument_expression_list ')' | '.' IDENTIFIER | '->' IDENTIFIER | '++' | '--' )* ;
+	[GrammarRule("postfix_expression")]
+	public XAstParserRuleReturnScope postfix_expression()
+	{
+		EnterRule_postfix_expression();
+		EnterRule("postfix_expression", 43);
+		var retval = new XAstParserRuleReturnScope("postfix_expression");
+		
+		retval.Start = (IToken)input.LT(1);
+		int postfix_expression_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken char_literal199 = default(IToken);
+		IToken char_literal201 = default(IToken);
+		IToken char_literal202 = default(IToken);
+		IToken char_literal203 = default(IToken);
+		IToken char_literal204 = default(IToken);
+		IToken char_literal206 = default(IToken);
+		IToken char_literal207 = default(IToken);
+		IToken IDENTIFIER208 = default(IToken);
+		IToken string_literal209 = default(IToken);
+		IToken IDENTIFIER210 = default(IToken);
+		IToken string_literal211 = default(IToken);
+		IToken string_literal212 = default(IToken);
+		XAstParserRuleReturnScope primary_expression198 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope expression200 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope argument_expression_list205 = default(XAstParserRuleReturnScope);
+
+		object char_literal199_tree = default(object);
+		object char_literal201_tree = default(object);
+		object char_literal202_tree = default(object);
+		object char_literal203_tree = default(object);
+		object char_literal204_tree = default(object);
+		object char_literal206_tree = default(object);
+		object char_literal207_tree = default(object);
+		object IDENTIFIER208_tree = default(object);
+		object string_literal209_tree = default(object);
+		object IDENTIFIER210_tree = default(object);
+		object string_literal211_tree = default(object);
+		object string_literal212_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "postfix_expression");
+		DebugLocation(325, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 43)) { return retval; }
+
+			// C.g:326:2: ( primary_expression ( '[' expression ']' | '(' ')' | '(' argument_expression_list ')' | '.' IDENTIFIER | '->' IDENTIFIER | '++' | '--' )* )
+			DebugEnterAlt(1);
+			// C.g:326:6: primary_expression ( '[' expression ']' | '(' ')' | '(' argument_expression_list ')' | '.' IDENTIFIER | '->' IDENTIFIER | '++' | '--' )*
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(326, 6);
+			PushFollow(Follow._primary_expression_in_postfix_expression1281);
+			primary_expression198=primary_expression();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, primary_expression198.Tree, primary_expression198, retval);
+			DebugLocation(327, 3);
+			// C.g:327:3: ( '[' expression ']' | '(' ')' | '(' argument_expression_list ')' | '.' IDENTIFIER | '->' IDENTIFIER | '++' | '--' )*
+			try { DebugEnterSubRule(54);
+			while (true)
+			{
+				int alt54=8;
+				try { DebugEnterDecision(54, false);
+				switch (input.LA(1))
+				{
+				case 59:
+					{
+					alt54 = 1;
+					}
+					break;
+				case 30:
+					{
+					int LA54_24 = input.LA(2);
+
+					if ((LA54_24==31))
+					{
+						alt54 = 2;
+					}
+					else if ((LA54_24==CHARACTER_LITERAL||LA54_24==DECIMAL_LITERAL||LA54_24==FLOATING_POINT_LITERAL||LA54_24==HEX_LITERAL||LA54_24==IDENTIFIER||LA54_24==OCTAL_LITERAL||LA54_24==STRING_LITERAL||LA54_24==23||LA54_24==28||LA54_24==30||LA54_24==32||(LA54_24>=34 && LA54_24<=35)||(LA54_24>=38 && LA54_24<=39)||LA54_24==90||LA54_24==105))
+					{
+						alt54 = 3;
+					}
+
+
+					}
+					break;
+				case 42:
+					{
+					alt54 = 4;
+					}
+					break;
+				case 41:
+					{
+					alt54 = 5;
+					}
+					break;
+				case 35:
+					{
+					alt54 = 6;
+					}
+					break;
+				case 39:
+					{
+					alt54 = 7;
+					}
+					break;
+				}
+
+				} finally { DebugExitDecision(54); }
+				switch ( alt54 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C.g:327:7: '[' expression ']'
+					{
+					DebugLocation(327, 7);
+					char_literal199=(IToken)Match(input,59,Follow._59_in_postfix_expression1289); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal199_tree = (object)adaptor.Create(char_literal199, retval);
+					adaptor.AddChild(root_0, char_literal199_tree);
+					}
+					DebugLocation(327, 11);
+					PushFollow(Follow._expression_in_postfix_expression1291);
+					expression200=expression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, expression200.Tree, expression200, retval);
+					DebugLocation(327, 22);
+					char_literal201=(IToken)Match(input,60,Follow._60_in_postfix_expression1293); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal201_tree = (object)adaptor.Create(char_literal201, retval);
+					adaptor.AddChild(root_0, char_literal201_tree);
+					}
+
+					}
+					break;
+				case 2:
+					DebugEnterAlt(2);
+					// C.g:328:7: '(' ')'
+					{
+					DebugLocation(328, 7);
+					char_literal202=(IToken)Match(input,30,Follow._30_in_postfix_expression1301); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal202_tree = (object)adaptor.Create(char_literal202, retval);
+					adaptor.AddChild(root_0, char_literal202_tree);
+					}
+					DebugLocation(328, 11);
+					char_literal203=(IToken)Match(input,31,Follow._31_in_postfix_expression1303); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal203_tree = (object)adaptor.Create(char_literal203, retval);
+					adaptor.AddChild(root_0, char_literal203_tree);
+					}
+
+					}
+					break;
+				case 3:
+					DebugEnterAlt(3);
+					// C.g:329:7: '(' argument_expression_list ')'
+					{
+					DebugLocation(329, 7);
+					char_literal204=(IToken)Match(input,30,Follow._30_in_postfix_expression1311); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal204_tree = (object)adaptor.Create(char_literal204, retval);
+					adaptor.AddChild(root_0, char_literal204_tree);
+					}
+					DebugLocation(329, 11);
+					PushFollow(Follow._argument_expression_list_in_postfix_expression1313);
+					argument_expression_list205=argument_expression_list();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, argument_expression_list205.Tree, argument_expression_list205, retval);
+					DebugLocation(329, 36);
+					char_literal206=(IToken)Match(input,31,Follow._31_in_postfix_expression1315); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal206_tree = (object)adaptor.Create(char_literal206, retval);
+					adaptor.AddChild(root_0, char_literal206_tree);
+					}
+
+					}
+					break;
+				case 4:
+					DebugEnterAlt(4);
+					// C.g:330:7: '.' IDENTIFIER
+					{
+					DebugLocation(330, 7);
+					char_literal207=(IToken)Match(input,42,Follow._42_in_postfix_expression1323); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal207_tree = (object)adaptor.Create(char_literal207, retval);
+					adaptor.AddChild(root_0, char_literal207_tree);
+					}
+					DebugLocation(330, 11);
+					IDENTIFIER208=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_postfix_expression1325), "IDENTIFIER"); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					IDENTIFIER208_tree = (object)adaptor.Create(IDENTIFIER208, retval);
+					adaptor.AddChild(root_0, IDENTIFIER208_tree);
+					}
+
+					}
+					break;
+				case 5:
+					DebugEnterAlt(5);
+					// C.g:331:7: '->' IDENTIFIER
+					{
+					DebugLocation(331, 7);
+					string_literal209=(IToken)Match(input,41,Follow._41_in_postfix_expression1333); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					string_literal209_tree = (object)adaptor.Create(string_literal209, retval);
+					adaptor.AddChild(root_0, string_literal209_tree);
+					}
+					DebugLocation(331, 12);
+					IDENTIFIER210=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_postfix_expression1335), "IDENTIFIER"); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					IDENTIFIER210_tree = (object)adaptor.Create(IDENTIFIER210, retval);
+					adaptor.AddChild(root_0, IDENTIFIER210_tree);
+					}
+
+					}
+					break;
+				case 6:
+					DebugEnterAlt(6);
+					// C.g:332:7: '++'
+					{
+					DebugLocation(332, 7);
+					string_literal211=(IToken)Match(input,35,Follow._35_in_postfix_expression1343); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					string_literal211_tree = (object)adaptor.Create(string_literal211, retval);
+					adaptor.AddChild(root_0, string_literal211_tree);
+					}
+
+					}
+					break;
+				case 7:
+					DebugEnterAlt(7);
+					// C.g:333:7: '--'
+					{
+					DebugLocation(333, 7);
+					string_literal212=(IToken)Match(input,39,Follow._39_in_postfix_expression1351); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					string_literal212_tree = (object)adaptor.Create(string_literal212, retval);
+					adaptor.AddChild(root_0, string_literal212_tree);
+					}
+
+					}
+					break;
+
+				default:
+					goto loop54;
+				}
+			}
+
+			loop54:
+				;
+
+			} finally { DebugExitSubRule(54); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("postfix_expression", 43);
+			LeaveRule("postfix_expression", 43);
+			LeaveRule_postfix_expression();
+			if (state.backtracking > 0) { Memoize(input, 43, postfix_expression_StartIndex); }
+
+		}
+		DebugLocation(335, 1);
 		} finally { DebugExitRule(GrammarFileName, "postfix_expression"); }
 		return retval;
 
@@ -8402,12 +8986,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_unary_operator();
 
 	// $ANTLR start "unary_operator"
-	// C.g:326:1: unary_operator : ( '&' | '*' | '+' | '-' | '~' | '!' );
+	// C.g:337:1: unary_operator : ( '&' | '*' | '+' | '-' | '~' | '!' );
 	[GrammarRule("unary_operator")]
 	public XAstParserRuleReturnScope unary_operator()
 	{
 		EnterRule_unary_operator();
-		EnterRule("unary_operator", 42);
+		EnterRule("unary_operator", 44);
 		var retval = new XAstParserRuleReturnScope("unary_operator");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -8415,28 +8999,28 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken set196 = default(IToken);
+		IToken set213 = default(IToken);
 
-		object set196_tree = default(object);
+		object set213_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "unary_operator");
-		DebugLocation(326, 1);
+		DebugLocation(337, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 42)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 44)) { return retval; }
 
-			// C.g:327:2: ( '&' | '*' | '+' | '-' | '~' | '!' )
+			// C.g:338:2: ( '&' | '*' | '+' | '-' | '~' | '!' )
 			DebugEnterAlt(1);
 			// C.g:
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(327, 2);
+			DebugLocation(338, 2);
 
-			set196=(IToken)input.LT(1);
-			if (input.LA(1)==23||input.LA(1)==28||input.LA(1)==32||input.LA(1)==34||input.LA(1)==38||input.LA(1)==102)
+			set213=(IToken)input.LT(1);
+			if (input.LA(1)==23||input.LA(1)==28||input.LA(1)==32||input.LA(1)==34||input.LA(1)==38||input.LA(1)==105)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set196, retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set213, retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -8466,13 +9050,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("unary_operator", 42);
-			LeaveRule("unary_operator", 42);
+			TraceOut("unary_operator", 44);
+			LeaveRule("unary_operator", 44);
 			LeaveRule_unary_operator();
-			if (state.backtracking > 0) { Memoize(input, 42, unary_operator_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 44, unary_operator_StartIndex); }
 
 		}
-		DebugLocation(333, 1);
+		DebugLocation(344, 1);
 		} finally { DebugExitRule(GrammarFileName, "unary_operator"); }
 		return retval;
 
@@ -8483,12 +9067,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_primary_expression();
 
 	// $ANTLR start "primary_expression"
-	// C.g:335:1: primary_expression : ( IDENTIFIER | constant | '(' expression ')' );
+	// C.g:346:1: primary_expression : ( IDENTIFIER | constant | '(' expression ')' );
 	[GrammarRule("primary_expression")]
 	public XAstParserRuleReturnScope primary_expression()
 	{
 		EnterRule_primary_expression();
-		EnterRule("primary_expression", 43);
+		EnterRule("primary_expression", 45);
 		var retval = new XAstParserRuleReturnScope("primary_expression");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -8496,29 +9080,29 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken IDENTIFIER197 = default(IToken);
-		IToken char_literal199 = default(IToken);
-		IToken char_literal201 = default(IToken);
-		XAstParserRuleReturnScope constant198 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope expression200 = default(XAstParserRuleReturnScope);
+		IToken IDENTIFIER214 = default(IToken);
+		IToken char_literal216 = default(IToken);
+		IToken char_literal218 = default(IToken);
+		XAstParserRuleReturnScope constant215 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope expression217 = default(XAstParserRuleReturnScope);
 
-		object IDENTIFIER197_tree = default(object);
-		object char_literal199_tree = default(object);
-		object char_literal201_tree = default(object);
+		object IDENTIFIER214_tree = default(object);
+		object char_literal216_tree = default(object);
+		object char_literal218_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "primary_expression");
-		DebugLocation(335, 1);
+		DebugLocation(346, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 43)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 45)) { return retval; }
 
-			// C.g:336:2: ( IDENTIFIER | constant | '(' expression ')' )
-			int alt51=3;
-			try { DebugEnterDecision(51, false);
+			// C.g:347:2: ( IDENTIFIER | constant | '(' expression ')' )
+			int alt55=3;
+			try { DebugEnterDecision(55, false);
 			switch (input.LA(1))
 			{
 			case IDENTIFIER:
 				{
-				alt51 = 1;
+				alt55 = 1;
 				}
 				break;
 			case CHARACTER_LITERAL:
@@ -8528,79 +9112,79 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			case OCTAL_LITERAL:
 			case STRING_LITERAL:
 				{
-				alt51 = 2;
+				alt55 = 2;
 				}
 				break;
 			case 30:
 				{
-				alt51 = 3;
+				alt55 = 3;
 				}
 				break;
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 51, 0, input);
+					NoViableAltException nvae = new NoViableAltException("", 55, 0, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(51); }
-			switch (alt51)
+			} finally { DebugExitDecision(55); }
+			switch (alt55)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:336:4: IDENTIFIER
+				// C.g:347:4: IDENTIFIER
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(336, 4);
-				IDENTIFIER197=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_primary_expression1294), "IDENTIFIER"); if (state.failed) return retval;
+				DebugLocation(347, 4);
+				IDENTIFIER214=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_primary_expression1403), "IDENTIFIER"); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				IDENTIFIER197_tree = (object)adaptor.Create(IDENTIFIER197, retval);
-				adaptor.AddChild(root_0, IDENTIFIER197_tree);
+				IDENTIFIER214_tree = (object)adaptor.Create(IDENTIFIER214, retval);
+				adaptor.AddChild(root_0, IDENTIFIER214_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C.g:337:4: constant
+				// C.g:348:4: constant
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(337, 4);
-				PushFollow(Follow._constant_in_primary_expression1299);
-				constant198=constant();
+				DebugLocation(348, 4);
+				PushFollow(Follow._constant_in_primary_expression1408);
+				constant215=constant();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, constant198.Tree, constant198, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, constant215.Tree, constant215, retval);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C.g:338:4: '(' expression ')'
+				// C.g:349:4: '(' expression ')'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(338, 4);
-				char_literal199=(IToken)Match(input,30,Follow._30_in_primary_expression1304); if (state.failed) return retval;
+				DebugLocation(349, 4);
+				char_literal216=(IToken)Match(input,30,Follow._30_in_primary_expression1413); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal199_tree = (object)adaptor.Create(char_literal199, retval);
-				adaptor.AddChild(root_0, char_literal199_tree);
+				char_literal216_tree = (object)adaptor.Create(char_literal216, retval);
+				adaptor.AddChild(root_0, char_literal216_tree);
 				}
-				DebugLocation(338, 8);
-				PushFollow(Follow._expression_in_primary_expression1306);
-				expression200=expression();
+				DebugLocation(349, 8);
+				PushFollow(Follow._expression_in_primary_expression1415);
+				expression217=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression200.Tree, expression200, retval);
-				DebugLocation(338, 19);
-				char_literal201=(IToken)Match(input,31,Follow._31_in_primary_expression1308); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression217.Tree, expression217, retval);
+				DebugLocation(349, 19);
+				char_literal218=(IToken)Match(input,31,Follow._31_in_primary_expression1417); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal201_tree = (object)adaptor.Create(char_literal201, retval);
-				adaptor.AddChild(root_0, char_literal201_tree);
+				char_literal218_tree = (object)adaptor.Create(char_literal218, retval);
+				adaptor.AddChild(root_0, char_literal218_tree);
 				}
 
 				}
@@ -8623,13 +9207,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("primary_expression", 43);
-			LeaveRule("primary_expression", 43);
+			TraceOut("primary_expression", 45);
+			LeaveRule("primary_expression", 45);
 			LeaveRule_primary_expression();
-			if (state.backtracking > 0) { Memoize(input, 43, primary_expression_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 45, primary_expression_StartIndex); }
 
 		}
-		DebugLocation(339, 1);
+		DebugLocation(350, 1);
 		} finally { DebugExitRule(GrammarFileName, "primary_expression"); }
 		return retval;
 
@@ -8640,12 +9224,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_constant();
 
 	// $ANTLR start "constant"
-	// C.g:341:1: constant : ( hex_literal | octal_literal | decimal_literal | character_literal | string_literal | floating_point_literal );
+	// C.g:352:1: constant : ( hex_literal | octal_literal | decimal_literal | character_literal | string_literal | floating_point_literal );
 	[GrammarRule("constant")]
 	public XAstParserRuleReturnScope constant()
 	{
 		EnterRule_constant();
-		EnterRule("constant", 44);
+		EnterRule("constant", 46);
 		var retval = new XAstParserRuleReturnScope("constant");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -8653,153 +9237,153 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		XAstParserRuleReturnScope hex_literal202 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope octal_literal203 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope decimal_literal204 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope character_literal205 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope string_literal206 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope floating_point_literal207 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope hex_literal219 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope octal_literal220 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope decimal_literal221 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope character_literal222 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope string_literal223 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope floating_point_literal224 = default(XAstParserRuleReturnScope);
 
 		try { DebugEnterRule(GrammarFileName, "constant");
-		DebugLocation(341, 1);
+		DebugLocation(352, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 44)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 46)) { return retval; }
 
-			// C.g:342:2: ( hex_literal | octal_literal | decimal_literal | character_literal | string_literal | floating_point_literal )
-			int alt52=6;
-			try { DebugEnterDecision(52, false);
+			// C.g:353:2: ( hex_literal | octal_literal | decimal_literal | character_literal | string_literal | floating_point_literal )
+			int alt56=6;
+			try { DebugEnterDecision(56, false);
 			switch (input.LA(1))
 			{
 			case HEX_LITERAL:
 				{
-				alt52 = 1;
+				alt56 = 1;
 				}
 				break;
 			case OCTAL_LITERAL:
 				{
-				alt52 = 2;
+				alt56 = 2;
 				}
 				break;
 			case DECIMAL_LITERAL:
 				{
-				alt52 = 3;
+				alt56 = 3;
 				}
 				break;
 			case CHARACTER_LITERAL:
 				{
-				alt52 = 4;
+				alt56 = 4;
 				}
 				break;
 			case STRING_LITERAL:
 				{
-				alt52 = 5;
+				alt56 = 5;
 				}
 				break;
 			case FLOATING_POINT_LITERAL:
 				{
-				alt52 = 6;
+				alt56 = 6;
 				}
 				break;
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 52, 0, input);
+					NoViableAltException nvae = new NoViableAltException("", 56, 0, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(52); }
-			switch (alt52)
+			} finally { DebugExitDecision(56); }
+			switch (alt56)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:342:6: hex_literal
+				// C.g:353:6: hex_literal
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(342, 6);
-				PushFollow(Follow._hex_literal_in_constant1321);
-				hex_literal202=hex_literal();
+				DebugLocation(353, 6);
+				PushFollow(Follow._hex_literal_in_constant1430);
+				hex_literal219=hex_literal();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, hex_literal202.Tree, hex_literal202, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, hex_literal219.Tree, hex_literal219, retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C.g:343:6: octal_literal
+				// C.g:354:6: octal_literal
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(343, 6);
-				PushFollow(Follow._octal_literal_in_constant1328);
-				octal_literal203=octal_literal();
+				DebugLocation(354, 6);
+				PushFollow(Follow._octal_literal_in_constant1437);
+				octal_literal220=octal_literal();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, octal_literal203.Tree, octal_literal203, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, octal_literal220.Tree, octal_literal220, retval);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C.g:344:6: decimal_literal
+				// C.g:355:6: decimal_literal
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(344, 6);
-				PushFollow(Follow._decimal_literal_in_constant1335);
-				decimal_literal204=decimal_literal();
+				DebugLocation(355, 6);
+				PushFollow(Follow._decimal_literal_in_constant1444);
+				decimal_literal221=decimal_literal();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, decimal_literal204.Tree, decimal_literal204, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, decimal_literal221.Tree, decimal_literal221, retval);
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C.g:345:6: character_literal
+				// C.g:356:6: character_literal
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(345, 6);
-				PushFollow(Follow._character_literal_in_constant1342);
-				character_literal205=character_literal();
+				DebugLocation(356, 6);
+				PushFollow(Follow._character_literal_in_constant1451);
+				character_literal222=character_literal();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, character_literal205.Tree, character_literal205, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, character_literal222.Tree, character_literal222, retval);
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C.g:346:6: string_literal
+				// C.g:357:6: string_literal
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(346, 6);
-				PushFollow(Follow._string_literal_in_constant1349);
-				string_literal206=string_literal();
+				DebugLocation(357, 6);
+				PushFollow(Follow._string_literal_in_constant1458);
+				string_literal223=string_literal();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, string_literal206.Tree, string_literal206, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, string_literal223.Tree, string_literal223, retval);
 
 				}
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C.g:347:6: floating_point_literal
+				// C.g:358:6: floating_point_literal
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(347, 6);
-				PushFollow(Follow._floating_point_literal_in_constant1356);
-				floating_point_literal207=floating_point_literal();
+				DebugLocation(358, 6);
+				PushFollow(Follow._floating_point_literal_in_constant1465);
+				floating_point_literal224=floating_point_literal();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, floating_point_literal207.Tree, floating_point_literal207, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, floating_point_literal224.Tree, floating_point_literal224, retval);
 
 				}
 				break;
@@ -8821,13 +9405,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("constant", 44);
-			LeaveRule("constant", 44);
+			TraceOut("constant", 46);
+			LeaveRule("constant", 46);
 			LeaveRule_constant();
-			if (state.backtracking > 0) { Memoize(input, 44, constant_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 46, constant_StartIndex); }
 
 		}
-		DebugLocation(348, 1);
+		DebugLocation(359, 1);
 		} finally { DebugExitRule(GrammarFileName, "constant"); }
 		return retval;
 
@@ -8838,12 +9422,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_hex_literal();
 
 	// $ANTLR start "hex_literal"
-	// C.g:350:1: hex_literal : HEX_LITERAL ;
+	// C.g:361:1: hex_literal : HEX_LITERAL ;
 	[GrammarRule("hex_literal")]
 	public XAstParserRuleReturnScope hex_literal()
 	{
 		EnterRule_hex_literal();
-		EnterRule("hex_literal", 45);
+		EnterRule("hex_literal", 47);
 		var retval = new XAstParserRuleReturnScope("hex_literal");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -8851,26 +9435,26 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken HEX_LITERAL208 = default(IToken);
+		IToken HEX_LITERAL225 = default(IToken);
 
-		object HEX_LITERAL208_tree = default(object);
+		object HEX_LITERAL225_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "hex_literal");
-		DebugLocation(350, 1);
+		DebugLocation(361, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 45)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 47)) { return retval; }
 
-			// C.g:351:2: ( HEX_LITERAL )
+			// C.g:362:2: ( HEX_LITERAL )
 			DebugEnterAlt(1);
-			// C.g:351:4: HEX_LITERAL
+			// C.g:362:4: HEX_LITERAL
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(351, 4);
-			HEX_LITERAL208=(IToken)new XToken((IToken)Match(input,HEX_LITERAL,Follow._HEX_LITERAL_in_hex_literal1367), "HEX_LITERAL"); if (state.failed) return retval;
+			DebugLocation(362, 4);
+			HEX_LITERAL225=(IToken)new XToken((IToken)Match(input,HEX_LITERAL,Follow._HEX_LITERAL_in_hex_literal1476), "HEX_LITERAL"); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			HEX_LITERAL208_tree = (object)adaptor.Create(HEX_LITERAL208, retval);
-			adaptor.AddChild(root_0, HEX_LITERAL208_tree);
+			HEX_LITERAL225_tree = (object)adaptor.Create(HEX_LITERAL225, retval);
+			adaptor.AddChild(root_0, HEX_LITERAL225_tree);
 			}
 
 			}
@@ -8891,13 +9475,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("hex_literal", 45);
-			LeaveRule("hex_literal", 45);
+			TraceOut("hex_literal", 47);
+			LeaveRule("hex_literal", 47);
 			LeaveRule_hex_literal();
-			if (state.backtracking > 0) { Memoize(input, 45, hex_literal_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 47, hex_literal_StartIndex); }
 
 		}
-		DebugLocation(352, 1);
+		DebugLocation(363, 1);
 		} finally { DebugExitRule(GrammarFileName, "hex_literal"); }
 		return retval;
 
@@ -8908,12 +9492,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_octal_literal();
 
 	// $ANTLR start "octal_literal"
-	// C.g:354:1: octal_literal : OCTAL_LITERAL ;
+	// C.g:365:1: octal_literal : OCTAL_LITERAL ;
 	[GrammarRule("octal_literal")]
 	public XAstParserRuleReturnScope octal_literal()
 	{
 		EnterRule_octal_literal();
-		EnterRule("octal_literal", 46);
+		EnterRule("octal_literal", 48);
 		var retval = new XAstParserRuleReturnScope("octal_literal");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -8921,26 +9505,26 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken OCTAL_LITERAL209 = default(IToken);
+		IToken OCTAL_LITERAL226 = default(IToken);
 
-		object OCTAL_LITERAL209_tree = default(object);
+		object OCTAL_LITERAL226_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "octal_literal");
-		DebugLocation(354, 1);
+		DebugLocation(365, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 46)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 48)) { return retval; }
 
-			// C.g:355:2: ( OCTAL_LITERAL )
+			// C.g:366:2: ( OCTAL_LITERAL )
 			DebugEnterAlt(1);
-			// C.g:355:4: OCTAL_LITERAL
+			// C.g:366:4: OCTAL_LITERAL
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(355, 4);
-			OCTAL_LITERAL209=(IToken)new XToken((IToken)Match(input,OCTAL_LITERAL,Follow._OCTAL_LITERAL_in_octal_literal1378), "OCTAL_LITERAL"); if (state.failed) return retval;
+			DebugLocation(366, 4);
+			OCTAL_LITERAL226=(IToken)new XToken((IToken)Match(input,OCTAL_LITERAL,Follow._OCTAL_LITERAL_in_octal_literal1487), "OCTAL_LITERAL"); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			OCTAL_LITERAL209_tree = (object)adaptor.Create(OCTAL_LITERAL209, retval);
-			adaptor.AddChild(root_0, OCTAL_LITERAL209_tree);
+			OCTAL_LITERAL226_tree = (object)adaptor.Create(OCTAL_LITERAL226, retval);
+			adaptor.AddChild(root_0, OCTAL_LITERAL226_tree);
 			}
 
 			}
@@ -8961,13 +9545,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("octal_literal", 46);
-			LeaveRule("octal_literal", 46);
+			TraceOut("octal_literal", 48);
+			LeaveRule("octal_literal", 48);
 			LeaveRule_octal_literal();
-			if (state.backtracking > 0) { Memoize(input, 46, octal_literal_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 48, octal_literal_StartIndex); }
 
 		}
-		DebugLocation(356, 1);
+		DebugLocation(367, 1);
 		} finally { DebugExitRule(GrammarFileName, "octal_literal"); }
 		return retval;
 
@@ -8978,12 +9562,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_decimal_literal();
 
 	// $ANTLR start "decimal_literal"
-	// C.g:358:1: decimal_literal : DECIMAL_LITERAL ;
+	// C.g:369:1: decimal_literal : DECIMAL_LITERAL ;
 	[GrammarRule("decimal_literal")]
 	public XAstParserRuleReturnScope decimal_literal()
 	{
 		EnterRule_decimal_literal();
-		EnterRule("decimal_literal", 47);
+		EnterRule("decimal_literal", 49);
 		var retval = new XAstParserRuleReturnScope("decimal_literal");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -8991,26 +9575,26 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken DECIMAL_LITERAL210 = default(IToken);
+		IToken DECIMAL_LITERAL227 = default(IToken);
 
-		object DECIMAL_LITERAL210_tree = default(object);
+		object DECIMAL_LITERAL227_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "decimal_literal");
-		DebugLocation(358, 1);
+		DebugLocation(369, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 47)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 49)) { return retval; }
 
-			// C.g:359:2: ( DECIMAL_LITERAL )
+			// C.g:370:2: ( DECIMAL_LITERAL )
 			DebugEnterAlt(1);
-			// C.g:359:4: DECIMAL_LITERAL
+			// C.g:370:4: DECIMAL_LITERAL
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(359, 4);
-			DECIMAL_LITERAL210=(IToken)new XToken((IToken)Match(input,DECIMAL_LITERAL,Follow._DECIMAL_LITERAL_in_decimal_literal1389), "DECIMAL_LITERAL"); if (state.failed) return retval;
+			DebugLocation(370, 4);
+			DECIMAL_LITERAL227=(IToken)new XToken((IToken)Match(input,DECIMAL_LITERAL,Follow._DECIMAL_LITERAL_in_decimal_literal1498), "DECIMAL_LITERAL"); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			DECIMAL_LITERAL210_tree = (object)adaptor.Create(DECIMAL_LITERAL210, retval);
-			adaptor.AddChild(root_0, DECIMAL_LITERAL210_tree);
+			DECIMAL_LITERAL227_tree = (object)adaptor.Create(DECIMAL_LITERAL227, retval);
+			adaptor.AddChild(root_0, DECIMAL_LITERAL227_tree);
 			}
 
 			}
@@ -9031,13 +9615,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("decimal_literal", 47);
-			LeaveRule("decimal_literal", 47);
+			TraceOut("decimal_literal", 49);
+			LeaveRule("decimal_literal", 49);
 			LeaveRule_decimal_literal();
-			if (state.backtracking > 0) { Memoize(input, 47, decimal_literal_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 49, decimal_literal_StartIndex); }
 
 		}
-		DebugLocation(360, 1);
+		DebugLocation(371, 1);
 		} finally { DebugExitRule(GrammarFileName, "decimal_literal"); }
 		return retval;
 
@@ -9048,12 +9632,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_character_literal();
 
 	// $ANTLR start "character_literal"
-	// C.g:362:1: character_literal : CHARACTER_LITERAL ;
+	// C.g:373:1: character_literal : CHARACTER_LITERAL ;
 	[GrammarRule("character_literal")]
 	public XAstParserRuleReturnScope character_literal()
 	{
 		EnterRule_character_literal();
-		EnterRule("character_literal", 48);
+		EnterRule("character_literal", 50);
 		var retval = new XAstParserRuleReturnScope("character_literal");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -9061,26 +9645,26 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken CHARACTER_LITERAL211 = default(IToken);
+		IToken CHARACTER_LITERAL228 = default(IToken);
 
-		object CHARACTER_LITERAL211_tree = default(object);
+		object CHARACTER_LITERAL228_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "character_literal");
-		DebugLocation(362, 1);
+		DebugLocation(373, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 48)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 50)) { return retval; }
 
-			// C.g:363:2: ( CHARACTER_LITERAL )
+			// C.g:374:2: ( CHARACTER_LITERAL )
 			DebugEnterAlt(1);
-			// C.g:363:4: CHARACTER_LITERAL
+			// C.g:374:4: CHARACTER_LITERAL
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(363, 4);
-			CHARACTER_LITERAL211=(IToken)new XToken((IToken)Match(input,CHARACTER_LITERAL,Follow._CHARACTER_LITERAL_in_character_literal1400), "CHARACTER_LITERAL"); if (state.failed) return retval;
+			DebugLocation(374, 4);
+			CHARACTER_LITERAL228=(IToken)new XToken((IToken)Match(input,CHARACTER_LITERAL,Follow._CHARACTER_LITERAL_in_character_literal1509), "CHARACTER_LITERAL"); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			CHARACTER_LITERAL211_tree = (object)adaptor.Create(CHARACTER_LITERAL211, retval);
-			adaptor.AddChild(root_0, CHARACTER_LITERAL211_tree);
+			CHARACTER_LITERAL228_tree = (object)adaptor.Create(CHARACTER_LITERAL228, retval);
+			adaptor.AddChild(root_0, CHARACTER_LITERAL228_tree);
 			}
 
 			}
@@ -9101,13 +9685,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("character_literal", 48);
-			LeaveRule("character_literal", 48);
+			TraceOut("character_literal", 50);
+			LeaveRule("character_literal", 50);
 			LeaveRule_character_literal();
-			if (state.backtracking > 0) { Memoize(input, 48, character_literal_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 50, character_literal_StartIndex); }
 
 		}
-		DebugLocation(364, 1);
+		DebugLocation(375, 1);
 		} finally { DebugExitRule(GrammarFileName, "character_literal"); }
 		return retval;
 
@@ -9118,12 +9702,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_string_literal();
 
 	// $ANTLR start "string_literal"
-	// C.g:366:1: string_literal : STRING_LITERAL ;
+	// C.g:377:1: string_literal : STRING_LITERAL ;
 	[GrammarRule("string_literal")]
 	public XAstParserRuleReturnScope string_literal()
 	{
 		EnterRule_string_literal();
-		EnterRule("string_literal", 49);
+		EnterRule("string_literal", 51);
 		var retval = new XAstParserRuleReturnScope("string_literal");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -9131,26 +9715,26 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken STRING_LITERAL212 = default(IToken);
+		IToken STRING_LITERAL229 = default(IToken);
 
-		object STRING_LITERAL212_tree = default(object);
+		object STRING_LITERAL229_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "string_literal");
-		DebugLocation(366, 1);
+		DebugLocation(377, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 49)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 51)) { return retval; }
 
-			// C.g:367:2: ( STRING_LITERAL )
+			// C.g:378:2: ( STRING_LITERAL )
 			DebugEnterAlt(1);
-			// C.g:367:4: STRING_LITERAL
+			// C.g:378:4: STRING_LITERAL
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(367, 4);
-			STRING_LITERAL212=(IToken)new XToken((IToken)Match(input,STRING_LITERAL,Follow._STRING_LITERAL_in_string_literal1411), "STRING_LITERAL"); if (state.failed) return retval;
+			DebugLocation(378, 4);
+			STRING_LITERAL229=(IToken)new XToken((IToken)Match(input,STRING_LITERAL,Follow._STRING_LITERAL_in_string_literal1520), "STRING_LITERAL"); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			STRING_LITERAL212_tree = (object)adaptor.Create(STRING_LITERAL212, retval);
-			adaptor.AddChild(root_0, STRING_LITERAL212_tree);
+			STRING_LITERAL229_tree = (object)adaptor.Create(STRING_LITERAL229, retval);
+			adaptor.AddChild(root_0, STRING_LITERAL229_tree);
 			}
 
 			}
@@ -9171,13 +9755,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("string_literal", 49);
-			LeaveRule("string_literal", 49);
+			TraceOut("string_literal", 51);
+			LeaveRule("string_literal", 51);
 			LeaveRule_string_literal();
-			if (state.backtracking > 0) { Memoize(input, 49, string_literal_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 51, string_literal_StartIndex); }
 
 		}
-		DebugLocation(368, 1);
+		DebugLocation(379, 1);
 		} finally { DebugExitRule(GrammarFileName, "string_literal"); }
 		return retval;
 
@@ -9188,12 +9772,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_floating_point_literal();
 
 	// $ANTLR start "floating_point_literal"
-	// C.g:370:1: floating_point_literal : FLOATING_POINT_LITERAL ;
+	// C.g:381:1: floating_point_literal : FLOATING_POINT_LITERAL ;
 	[GrammarRule("floating_point_literal")]
 	public XAstParserRuleReturnScope floating_point_literal()
 	{
 		EnterRule_floating_point_literal();
-		EnterRule("floating_point_literal", 50);
+		EnterRule("floating_point_literal", 52);
 		var retval = new XAstParserRuleReturnScope("floating_point_literal");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -9201,26 +9785,26 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken FLOATING_POINT_LITERAL213 = default(IToken);
+		IToken FLOATING_POINT_LITERAL230 = default(IToken);
 
-		object FLOATING_POINT_LITERAL213_tree = default(object);
+		object FLOATING_POINT_LITERAL230_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "floating_point_literal");
-		DebugLocation(370, 1);
+		DebugLocation(381, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 50)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 52)) { return retval; }
 
-			// C.g:371:2: ( FLOATING_POINT_LITERAL )
+			// C.g:382:2: ( FLOATING_POINT_LITERAL )
 			DebugEnterAlt(1);
-			// C.g:371:4: FLOATING_POINT_LITERAL
+			// C.g:382:4: FLOATING_POINT_LITERAL
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(371, 4);
-			FLOATING_POINT_LITERAL213=(IToken)new XToken((IToken)Match(input,FLOATING_POINT_LITERAL,Follow._FLOATING_POINT_LITERAL_in_floating_point_literal1422), "FLOATING_POINT_LITERAL"); if (state.failed) return retval;
+			DebugLocation(382, 4);
+			FLOATING_POINT_LITERAL230=(IToken)new XToken((IToken)Match(input,FLOATING_POINT_LITERAL,Follow._FLOATING_POINT_LITERAL_in_floating_point_literal1531), "FLOATING_POINT_LITERAL"); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			FLOATING_POINT_LITERAL213_tree = (object)adaptor.Create(FLOATING_POINT_LITERAL213, retval);
-			adaptor.AddChild(root_0, FLOATING_POINT_LITERAL213_tree);
+			FLOATING_POINT_LITERAL230_tree = (object)adaptor.Create(FLOATING_POINT_LITERAL230, retval);
+			adaptor.AddChild(root_0, FLOATING_POINT_LITERAL230_tree);
 			}
 
 			}
@@ -9241,13 +9825,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("floating_point_literal", 50);
-			LeaveRule("floating_point_literal", 50);
+			TraceOut("floating_point_literal", 52);
+			LeaveRule("floating_point_literal", 52);
 			LeaveRule_floating_point_literal();
-			if (state.backtracking > 0) { Memoize(input, 50, floating_point_literal_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 52, floating_point_literal_StartIndex); }
 
 		}
-		DebugLocation(372, 1);
+		DebugLocation(383, 1);
 		} finally { DebugExitRule(GrammarFileName, "floating_point_literal"); }
 		return retval;
 
@@ -9258,12 +9842,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_expression();
 
 	// $ANTLR start "expression"
-	// C.g:376:1: expression : assignment_expression ( ',' assignment_expression )* ;
+	// C.g:387:1: expression : assignment_expression ( ',' assignment_expression )* ;
 	[GrammarRule("expression")]
 	public XAstParserRuleReturnScope expression()
 	{
 		EnterRule_expression();
-		EnterRule("expression", 51);
+		EnterRule("expression", 53);
 		var retval = new XAstParserRuleReturnScope("expression");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -9271,730 +9855,31 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken char_literal215 = default(IToken);
-		XAstParserRuleReturnScope assignment_expression214 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope assignment_expression216 = default(XAstParserRuleReturnScope);
+		IToken char_literal232 = default(IToken);
+		XAstParserRuleReturnScope assignment_expression231 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope assignment_expression233 = default(XAstParserRuleReturnScope);
 
-		object char_literal215_tree = default(object);
+		object char_literal232_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "expression");
-		DebugLocation(376, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 51)) { return retval; }
-
-			// C.g:377:2: ( assignment_expression ( ',' assignment_expression )* )
-			DebugEnterAlt(1);
-			// C.g:377:4: assignment_expression ( ',' assignment_expression )*
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(377, 4);
-			PushFollow(Follow._assignment_expression_in_expression1435);
-			assignment_expression214=assignment_expression();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, assignment_expression214.Tree, assignment_expression214, retval);
-			DebugLocation(377, 26);
-			// C.g:377:26: ( ',' assignment_expression )*
-			try { DebugEnterSubRule(53);
-			while (true)
-			{
-				int alt53=2;
-				try { DebugEnterDecision(53, false);
-				int LA53_0 = input.LA(1);
-
-				if ((LA53_0==37))
-				{
-					alt53 = 1;
-				}
-
-
-				} finally { DebugExitDecision(53); }
-				switch ( alt53 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C.g:377:27: ',' assignment_expression
-					{
-					DebugLocation(377, 27);
-					char_literal215=(IToken)Match(input,37,Follow._37_in_expression1438); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal215_tree = (object)adaptor.Create(char_literal215, retval);
-					adaptor.AddChild(root_0, char_literal215_tree);
-					}
-					DebugLocation(377, 31);
-					PushFollow(Follow._assignment_expression_in_expression1440);
-					assignment_expression216=assignment_expression();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, assignment_expression216.Tree, assignment_expression216, retval);
-
-					}
-					break;
-
-				default:
-					goto loop53;
-				}
-			}
-
-			loop53:
-				;
-
-			} finally { DebugExitSubRule(53); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("expression", 51);
-			LeaveRule("expression", 51);
-			LeaveRule_expression();
-			if (state.backtracking > 0) { Memoize(input, 51, expression_StartIndex); }
-
-		}
-		DebugLocation(378, 1);
-		} finally { DebugExitRule(GrammarFileName, "expression"); }
-		return retval;
-
-	}
-	// $ANTLR end "expression"
-
-	partial void EnterRule_constant_expression();
-	partial void LeaveRule_constant_expression();
-
-	// $ANTLR start "constant_expression"
-	// C.g:380:1: constant_expression : conditional_expression ;
-	[GrammarRule("constant_expression")]
-	public XAstParserRuleReturnScope constant_expression()
-	{
-		EnterRule_constant_expression();
-		EnterRule("constant_expression", 52);
-		var retval = new XAstParserRuleReturnScope("constant_expression");
-		
-		retval.Start = (IToken)input.LT(1);
-		int constant_expression_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		XAstParserRuleReturnScope conditional_expression217 = default(XAstParserRuleReturnScope);
-
-		try { DebugEnterRule(GrammarFileName, "constant_expression");
-		DebugLocation(380, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 52)) { return retval; }
-
-			// C.g:381:2: ( conditional_expression )
-			DebugEnterAlt(1);
-			// C.g:381:4: conditional_expression
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(381, 4);
-			PushFollow(Follow._conditional_expression_in_constant_expression1453);
-			conditional_expression217=conditional_expression();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, conditional_expression217.Tree, conditional_expression217, retval);
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("constant_expression", 52);
-			LeaveRule("constant_expression", 52);
-			LeaveRule_constant_expression();
-			if (state.backtracking > 0) { Memoize(input, 52, constant_expression_StartIndex); }
-
-		}
-		DebugLocation(382, 1);
-		} finally { DebugExitRule(GrammarFileName, "constant_expression"); }
-		return retval;
-
-	}
-	// $ANTLR end "constant_expression"
-
-	partial void EnterRule_assignment_expression();
-	partial void LeaveRule_assignment_expression();
-
-	// $ANTLR start "assignment_expression"
-	// C.g:384:1: assignment_expression : ( lvalue assignment_operator assignment_expression | conditional_expression );
-	[GrammarRule("assignment_expression")]
-	public XAstParserRuleReturnScope assignment_expression()
-	{
-		EnterRule_assignment_expression();
-		EnterRule("assignment_expression", 53);
-		var retval = new XAstParserRuleReturnScope("assignment_expression");
-		
-		retval.Start = (IToken)input.LT(1);
-		int assignment_expression_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		XAstParserRuleReturnScope lvalue218 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope assignment_operator219 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope assignment_expression220 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope conditional_expression221 = default(XAstParserRuleReturnScope);
-
-		try { DebugEnterRule(GrammarFileName, "assignment_expression");
-		DebugLocation(384, 1);
+		DebugLocation(387, 1);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 53)) { return retval; }
 
-			// C.g:385:2: ( lvalue assignment_operator assignment_expression | conditional_expression )
-			int alt54=2;
-			try { DebugEnterDecision(54, false);
-			try
-			{
-				alt54 = dfa54.Predict(input);
-			}
-			catch (NoViableAltException nvae)
-			{
-				DebugRecognitionException(nvae);
-				throw;
-			}
-			} finally { DebugExitDecision(54); }
-			switch (alt54)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C.g:385:4: lvalue assignment_operator assignment_expression
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(385, 4);
-				PushFollow(Follow._lvalue_in_assignment_expression1464);
-				lvalue218=lvalue();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, lvalue218.Tree, lvalue218, retval);
-				DebugLocation(385, 11);
-				PushFollow(Follow._assignment_operator_in_assignment_expression1466);
-				assignment_operator219=assignment_operator();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, assignment_operator219.Tree, assignment_operator219, retval);
-				DebugLocation(385, 31);
-				PushFollow(Follow._assignment_expression_in_assignment_expression1468);
-				assignment_expression220=assignment_expression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, assignment_expression220.Tree, assignment_expression220, retval);
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C.g:386:4: conditional_expression
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(386, 4);
-				PushFollow(Follow._conditional_expression_in_assignment_expression1473);
-				conditional_expression221=conditional_expression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, conditional_expression221.Tree, conditional_expression221, retval);
-
-				}
-				break;
-
-			}
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("assignment_expression", 53);
-			LeaveRule("assignment_expression", 53);
-			LeaveRule_assignment_expression();
-			if (state.backtracking > 0) { Memoize(input, 53, assignment_expression_StartIndex); }
-
-		}
-		DebugLocation(387, 1);
-		} finally { DebugExitRule(GrammarFileName, "assignment_expression"); }
-		return retval;
-
-	}
-	// $ANTLR end "assignment_expression"
-
-	partial void EnterRule_lvalue();
-	partial void LeaveRule_lvalue();
-
-	// $ANTLR start "lvalue"
-	// C.g:389:1: lvalue : unary_expression ;
-	[GrammarRule("lvalue")]
-	public XAstParserRuleReturnScope lvalue()
-	{
-		EnterRule_lvalue();
-		EnterRule("lvalue", 54);
-		var retval = new XAstParserRuleReturnScope("lvalue");
-		
-		retval.Start = (IToken)input.LT(1);
-		int lvalue_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		XAstParserRuleReturnScope unary_expression222 = default(XAstParserRuleReturnScope);
-
-		try { DebugEnterRule(GrammarFileName, "lvalue");
-		DebugLocation(389, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 54)) { return retval; }
-
-			// C.g:390:2: ( unary_expression )
+			// C.g:388:2: ( assignment_expression ( ',' assignment_expression )* )
 			DebugEnterAlt(1);
-			// C.g:390:4: unary_expression
+			// C.g:388:4: assignment_expression ( ',' assignment_expression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(390, 4);
-			PushFollow(Follow._unary_expression_in_lvalue1485);
-			unary_expression222=unary_expression();
+			DebugLocation(388, 4);
+			PushFollow(Follow._assignment_expression_in_expression1544);
+			assignment_expression231=assignment_expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, unary_expression222.Tree, unary_expression222, retval);
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("lvalue", 54);
-			LeaveRule("lvalue", 54);
-			LeaveRule_lvalue();
-			if (state.backtracking > 0) { Memoize(input, 54, lvalue_StartIndex); }
-
-		}
-		DebugLocation(391, 1);
-		} finally { DebugExitRule(GrammarFileName, "lvalue"); }
-		return retval;
-
-	}
-	// $ANTLR end "lvalue"
-
-	partial void EnterRule_assignment_operator();
-	partial void LeaveRule_assignment_operator();
-
-	// $ANTLR start "assignment_operator"
-	// C.g:393:1: assignment_operator : ( '=' | '*=' | '/=' | '%=' | '+=' | '-=' | '<<=' | '>>=' | '&=' | '^=' | '|=' );
-	[GrammarRule("assignment_operator")]
-	public XAstParserRuleReturnScope assignment_operator()
-	{
-		EnterRule_assignment_operator();
-		EnterRule("assignment_operator", 55);
-		var retval = new XAstParserRuleReturnScope("assignment_operator");
-		
-		retval.Start = (IToken)input.LT(1);
-		int assignment_operator_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken set223 = default(IToken);
-
-		object set223_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "assignment_operator");
-		DebugLocation(393, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 55)) { return retval; }
-
-			// C.g:394:2: ( '=' | '*=' | '/=' | '%=' | '+=' | '-=' | '<<=' | '>>=' | '&=' | '^=' | '|=' )
-			DebugEnterAlt(1);
-			// C.g:
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(394, 2);
-
-			set223=(IToken)input.LT(1);
-			if (input.LA(1)==26||input.LA(1)==29||input.LA(1)==33||input.LA(1)==36||input.LA(1)==40||input.LA(1)==45||input.LA(1)==50||input.LA(1)==52||input.LA(1)==57||input.LA(1)==62||input.LA(1)==99)
-			{
-				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set223, retval));
-				state.errorRecovery=false;state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return retval;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				throw mse;
-			}
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("assignment_operator", 55);
-			LeaveRule("assignment_operator", 55);
-			LeaveRule_assignment_operator();
-			if (state.backtracking > 0) { Memoize(input, 55, assignment_operator_StartIndex); }
-
-		}
-		DebugLocation(405, 1);
-		} finally { DebugExitRule(GrammarFileName, "assignment_operator"); }
-		return retval;
-
-	}
-	// $ANTLR end "assignment_operator"
-
-	partial void EnterRule_conditional_expression();
-	partial void LeaveRule_conditional_expression();
-
-	// $ANTLR start "conditional_expression"
-	// C.g:407:1: conditional_expression : logical_or_expression ( '?' expression ':' conditional_expression )? ;
-	[GrammarRule("conditional_expression")]
-	public XAstParserRuleReturnScope conditional_expression()
-	{
-		EnterRule_conditional_expression();
-		EnterRule("conditional_expression", 56);
-		var retval = new XAstParserRuleReturnScope("conditional_expression");
-		
-		retval.Start = (IToken)input.LT(1);
-		int conditional_expression_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken char_literal225 = default(IToken);
-		IToken char_literal227 = default(IToken);
-		XAstParserRuleReturnScope logical_or_expression224 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope expression226 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope conditional_expression228 = default(XAstParserRuleReturnScope);
-
-		object char_literal225_tree = default(object);
-		object char_literal227_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "conditional_expression");
-		DebugLocation(407, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 56)) { return retval; }
-
-			// C.g:408:2: ( logical_or_expression ( '?' expression ':' conditional_expression )? )
-			DebugEnterAlt(1);
-			// C.g:408:4: logical_or_expression ( '?' expression ':' conditional_expression )?
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(408, 4);
-			PushFollow(Follow._logical_or_expression_in_conditional_expression1557);
-			logical_or_expression224=logical_or_expression();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, logical_or_expression224.Tree, logical_or_expression224, retval);
-			DebugLocation(408, 26);
-			// C.g:408:26: ( '?' expression ':' conditional_expression )?
-			int alt55=2;
-			try { DebugEnterSubRule(55);
-			try { DebugEnterDecision(55, false);
-			int LA55_0 = input.LA(1);
-
-			if ((LA55_0==58))
-			{
-				alt55 = 1;
-			}
-			} finally { DebugExitDecision(55); }
-			switch (alt55)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C.g:408:27: '?' expression ':' conditional_expression
-				{
-				DebugLocation(408, 27);
-				char_literal225=(IToken)Match(input,58,Follow._58_in_conditional_expression1560); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal225_tree = (object)adaptor.Create(char_literal225, retval);
-				adaptor.AddChild(root_0, char_literal225_tree);
-				}
-				DebugLocation(408, 31);
-				PushFollow(Follow._expression_in_conditional_expression1562);
-				expression226=expression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression226.Tree, expression226, retval);
-				DebugLocation(408, 42);
-				char_literal227=(IToken)Match(input,46,Follow._46_in_conditional_expression1564); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal227_tree = (object)adaptor.Create(char_literal227, retval);
-				adaptor.AddChild(root_0, char_literal227_tree);
-				}
-				DebugLocation(408, 46);
-				PushFollow(Follow._conditional_expression_in_conditional_expression1566);
-				conditional_expression228=conditional_expression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, conditional_expression228.Tree, conditional_expression228, retval);
-
-				}
-				break;
-
-			}
-			} finally { DebugExitSubRule(55); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("conditional_expression", 56);
-			LeaveRule("conditional_expression", 56);
-			LeaveRule_conditional_expression();
-			if (state.backtracking > 0) { Memoize(input, 56, conditional_expression_StartIndex); }
-
-		}
-		DebugLocation(409, 1);
-		} finally { DebugExitRule(GrammarFileName, "conditional_expression"); }
-		return retval;
-
-	}
-	// $ANTLR end "conditional_expression"
-
-	partial void EnterRule_logical_or_expression();
-	partial void LeaveRule_logical_or_expression();
-
-	// $ANTLR start "logical_or_expression"
-	// C.g:411:1: logical_or_expression : logical_and_expression ( '||' logical_and_expression )* ;
-	[GrammarRule("logical_or_expression")]
-	public XAstParserRuleReturnScope logical_or_expression()
-	{
-		EnterRule_logical_or_expression();
-		EnterRule("logical_or_expression", 57);
-		var retval = new XAstParserRuleReturnScope("logical_or_expression");
-		
-		retval.Start = (IToken)input.LT(1);
-		int logical_or_expression_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken string_literal230 = default(IToken);
-		XAstParserRuleReturnScope logical_and_expression229 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope logical_and_expression231 = default(XAstParserRuleReturnScope);
-
-		object string_literal230_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "logical_or_expression");
-		DebugLocation(411, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 57)) { return retval; }
-
-			// C.g:412:2: ( logical_and_expression ( '||' logical_and_expression )* )
-			DebugEnterAlt(1);
-			// C.g:412:4: logical_and_expression ( '||' logical_and_expression )*
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(412, 4);
-			PushFollow(Follow._logical_and_expression_in_logical_or_expression1579);
-			logical_and_expression229=logical_and_expression();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, logical_and_expression229.Tree, logical_and_expression229, retval);
-			DebugLocation(412, 27);
-			// C.g:412:27: ( '||' logical_and_expression )*
-			try { DebugEnterSubRule(56);
-			while (true)
-			{
-				int alt56=2;
-				try { DebugEnterDecision(56, false);
-				int LA56_0 = input.LA(1);
-
-				if ((LA56_0==100))
-				{
-					alt56 = 1;
-				}
-
-
-				} finally { DebugExitDecision(56); }
-				switch ( alt56 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C.g:412:28: '||' logical_and_expression
-					{
-					DebugLocation(412, 28);
-					string_literal230=(IToken)Match(input,100,Follow._100_in_logical_or_expression1582); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					string_literal230_tree = (object)adaptor.Create(string_literal230, retval);
-					adaptor.AddChild(root_0, string_literal230_tree);
-					}
-					DebugLocation(412, 33);
-					PushFollow(Follow._logical_and_expression_in_logical_or_expression1584);
-					logical_and_expression231=logical_and_expression();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, logical_and_expression231.Tree, logical_and_expression231, retval);
-
-					}
-					break;
-
-				default:
-					goto loop56;
-				}
-			}
-
-			loop56:
-				;
-
-			} finally { DebugExitSubRule(56); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("logical_or_expression", 57);
-			LeaveRule("logical_or_expression", 57);
-			LeaveRule_logical_or_expression();
-			if (state.backtracking > 0) { Memoize(input, 57, logical_or_expression_StartIndex); }
-
-		}
-		DebugLocation(413, 1);
-		} finally { DebugExitRule(GrammarFileName, "logical_or_expression"); }
-		return retval;
-
-	}
-	// $ANTLR end "logical_or_expression"
-
-	partial void EnterRule_logical_and_expression();
-	partial void LeaveRule_logical_and_expression();
-
-	// $ANTLR start "logical_and_expression"
-	// C.g:415:1: logical_and_expression : inclusive_or_expression ( '&&' inclusive_or_expression )* ;
-	[GrammarRule("logical_and_expression")]
-	public XAstParserRuleReturnScope logical_and_expression()
-	{
-		EnterRule_logical_and_expression();
-		EnterRule("logical_and_expression", 58);
-		var retval = new XAstParserRuleReturnScope("logical_and_expression");
-		
-		retval.Start = (IToken)input.LT(1);
-		int logical_and_expression_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken string_literal233 = default(IToken);
-		XAstParserRuleReturnScope inclusive_or_expression232 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope inclusive_or_expression234 = default(XAstParserRuleReturnScope);
-
-		object string_literal233_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "logical_and_expression");
-		DebugLocation(415, 1);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 58)) { return retval; }
-
-			// C.g:416:2: ( inclusive_or_expression ( '&&' inclusive_or_expression )* )
-			DebugEnterAlt(1);
-			// C.g:416:4: inclusive_or_expression ( '&&' inclusive_or_expression )*
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(416, 4);
-			PushFollow(Follow._inclusive_or_expression_in_logical_and_expression1597);
-			inclusive_or_expression232=inclusive_or_expression();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, inclusive_or_expression232.Tree, inclusive_or_expression232, retval);
-			DebugLocation(416, 28);
-			// C.g:416:28: ( '&&' inclusive_or_expression )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, assignment_expression231.Tree, assignment_expression231, retval);
+			DebugLocation(388, 26);
+			// C.g:388:26: ( ',' assignment_expression )*
 			try { DebugEnterSubRule(57);
 			while (true)
 			{
@@ -10002,7 +9887,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				try { DebugEnterDecision(57, false);
 				int LA57_0 = input.LA(1);
 
-				if ((LA57_0==27))
+				if ((LA57_0==37))
 				{
 					alt57 = 1;
 				}
@@ -10013,20 +9898,20 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:416:29: '&&' inclusive_or_expression
+					// C.g:388:27: ',' assignment_expression
 					{
-					DebugLocation(416, 29);
-					string_literal233=(IToken)Match(input,27,Follow._27_in_logical_and_expression1600); if (state.failed) return retval;
+					DebugLocation(388, 27);
+					char_literal232=(IToken)Match(input,37,Follow._37_in_expression1547); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					string_literal233_tree = (object)adaptor.Create(string_literal233, retval);
-					adaptor.AddChild(root_0, string_literal233_tree);
+					char_literal232_tree = (object)adaptor.Create(char_literal232, retval);
+					adaptor.AddChild(root_0, char_literal232_tree);
 					}
-					DebugLocation(416, 34);
-					PushFollow(Follow._inclusive_or_expression_in_logical_and_expression1602);
-					inclusive_or_expression234=inclusive_or_expression();
+					DebugLocation(388, 31);
+					PushFollow(Follow._assignment_expression_in_expression1549);
+					assignment_expression233=assignment_expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, inclusive_or_expression234.Tree, inclusive_or_expression234, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, assignment_expression233.Tree, assignment_expression233, retval);
 
 					}
 					break;
@@ -10060,106 +9945,321 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("logical_and_expression", 58);
-			LeaveRule("logical_and_expression", 58);
-			LeaveRule_logical_and_expression();
-			if (state.backtracking > 0) { Memoize(input, 58, logical_and_expression_StartIndex); }
+			TraceOut("expression", 53);
+			LeaveRule("expression", 53);
+			LeaveRule_expression();
+			if (state.backtracking > 0) { Memoize(input, 53, expression_StartIndex); }
 
 		}
-		DebugLocation(417, 1);
-		} finally { DebugExitRule(GrammarFileName, "logical_and_expression"); }
+		DebugLocation(389, 1);
+		} finally { DebugExitRule(GrammarFileName, "expression"); }
 		return retval;
 
 	}
-	// $ANTLR end "logical_and_expression"
+	// $ANTLR end "expression"
 
-	partial void EnterRule_inclusive_or_expression();
-	partial void LeaveRule_inclusive_or_expression();
+	partial void EnterRule_constant_expression();
+	partial void LeaveRule_constant_expression();
 
-	// $ANTLR start "inclusive_or_expression"
-	// C.g:419:1: inclusive_or_expression : exclusive_or_expression ( '|' exclusive_or_expression )* ;
-	[GrammarRule("inclusive_or_expression")]
-	public XAstParserRuleReturnScope inclusive_or_expression()
+	// $ANTLR start "constant_expression"
+	// C.g:391:1: constant_expression : conditional_expression ;
+	[GrammarRule("constant_expression")]
+	public XAstParserRuleReturnScope constant_expression()
 	{
-		EnterRule_inclusive_or_expression();
-		EnterRule("inclusive_or_expression", 59);
-		var retval = new XAstParserRuleReturnScope("inclusive_or_expression");
+		EnterRule_constant_expression();
+		EnterRule("constant_expression", 54);
+		var retval = new XAstParserRuleReturnScope("constant_expression");
 		
 		retval.Start = (IToken)input.LT(1);
-		int inclusive_or_expression_StartIndex = input.Index;
+		int constant_expression_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal236 = default(IToken);
-		XAstParserRuleReturnScope exclusive_or_expression235 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope exclusive_or_expression237 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope conditional_expression234 = default(XAstParserRuleReturnScope);
 
-		object char_literal236_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "inclusive_or_expression");
-		DebugLocation(419, 1);
+		try { DebugEnterRule(GrammarFileName, "constant_expression");
+		DebugLocation(391, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 59)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 54)) { return retval; }
 
-			// C.g:420:2: ( exclusive_or_expression ( '|' exclusive_or_expression )* )
+			// C.g:392:2: ( conditional_expression )
 			DebugEnterAlt(1);
-			// C.g:420:4: exclusive_or_expression ( '|' exclusive_or_expression )*
+			// C.g:392:4: conditional_expression
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(420, 4);
-			PushFollow(Follow._exclusive_or_expression_in_inclusive_or_expression1615);
-			exclusive_or_expression235=exclusive_or_expression();
+			DebugLocation(392, 4);
+			PushFollow(Follow._conditional_expression_in_constant_expression1562);
+			conditional_expression234=conditional_expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, exclusive_or_expression235.Tree, exclusive_or_expression235, retval);
-			DebugLocation(420, 28);
-			// C.g:420:28: ( '|' exclusive_or_expression )*
-			try { DebugEnterSubRule(58);
-			while (true)
-			{
-				int alt58=2;
-				try { DebugEnterDecision(58, false);
-				int LA58_0 = input.LA(1);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, conditional_expression234.Tree, conditional_expression234, retval);
 
-				if ((LA58_0==98))
-				{
-					alt58 = 1;
-				}
-
-
-				} finally { DebugExitDecision(58); }
-				switch ( alt58 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C.g:420:29: '|' exclusive_or_expression
-					{
-					DebugLocation(420, 29);
-					char_literal236=(IToken)Match(input,98,Follow._98_in_inclusive_or_expression1618); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal236_tree = (object)adaptor.Create(char_literal236, retval);
-					adaptor.AddChild(root_0, char_literal236_tree);
-					}
-					DebugLocation(420, 33);
-					PushFollow(Follow._exclusive_or_expression_in_inclusive_or_expression1620);
-					exclusive_or_expression237=exclusive_or_expression();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, exclusive_or_expression237.Tree, exclusive_or_expression237, retval);
-
-					}
-					break;
-
-				default:
-					goto loop58;
-				}
 			}
 
-			loop58:
-				;
+			retval.Stop = (IToken)input.LT(-1);
 
-			} finally { DebugExitSubRule(58); }
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("constant_expression", 54);
+			LeaveRule("constant_expression", 54);
+			LeaveRule_constant_expression();
+			if (state.backtracking > 0) { Memoize(input, 54, constant_expression_StartIndex); }
+
+		}
+		DebugLocation(393, 1);
+		} finally { DebugExitRule(GrammarFileName, "constant_expression"); }
+		return retval;
+
+	}
+	// $ANTLR end "constant_expression"
+
+	partial void EnterRule_assignment_expression();
+	partial void LeaveRule_assignment_expression();
+
+	// $ANTLR start "assignment_expression"
+	// C.g:395:1: assignment_expression : ( lvalue assignment_operator assignment_expression | conditional_expression );
+	[GrammarRule("assignment_expression")]
+	public XAstParserRuleReturnScope assignment_expression()
+	{
+		EnterRule_assignment_expression();
+		EnterRule("assignment_expression", 55);
+		var retval = new XAstParserRuleReturnScope("assignment_expression");
+		
+		retval.Start = (IToken)input.LT(1);
+		int assignment_expression_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		XAstParserRuleReturnScope lvalue235 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope assignment_operator236 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope assignment_expression237 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope conditional_expression238 = default(XAstParserRuleReturnScope);
+
+		try { DebugEnterRule(GrammarFileName, "assignment_expression");
+		DebugLocation(395, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 55)) { return retval; }
+
+			// C.g:396:2: ( lvalue assignment_operator assignment_expression | conditional_expression )
+			int alt58=2;
+			try { DebugEnterDecision(58, false);
+			try
+			{
+				alt58 = dfa58.Predict(input);
+			}
+			catch (NoViableAltException nvae)
+			{
+				DebugRecognitionException(nvae);
+				throw;
+			}
+			} finally { DebugExitDecision(58); }
+			switch (alt58)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C.g:396:4: lvalue assignment_operator assignment_expression
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(396, 4);
+				PushFollow(Follow._lvalue_in_assignment_expression1573);
+				lvalue235=lvalue();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, lvalue235.Tree, lvalue235, retval);
+				DebugLocation(396, 11);
+				PushFollow(Follow._assignment_operator_in_assignment_expression1575);
+				assignment_operator236=assignment_operator();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, assignment_operator236.Tree, assignment_operator236, retval);
+				DebugLocation(396, 31);
+				PushFollow(Follow._assignment_expression_in_assignment_expression1577);
+				assignment_expression237=assignment_expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, assignment_expression237.Tree, assignment_expression237, retval);
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C.g:397:4: conditional_expression
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(397, 4);
+				PushFollow(Follow._conditional_expression_in_assignment_expression1582);
+				conditional_expression238=conditional_expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, conditional_expression238.Tree, conditional_expression238, retval);
+
+				}
+				break;
+
+			}
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("assignment_expression", 55);
+			LeaveRule("assignment_expression", 55);
+			LeaveRule_assignment_expression();
+			if (state.backtracking > 0) { Memoize(input, 55, assignment_expression_StartIndex); }
+
+		}
+		DebugLocation(398, 1);
+		} finally { DebugExitRule(GrammarFileName, "assignment_expression"); }
+		return retval;
+
+	}
+	// $ANTLR end "assignment_expression"
+
+	partial void EnterRule_lvalue();
+	partial void LeaveRule_lvalue();
+
+	// $ANTLR start "lvalue"
+	// C.g:400:1: lvalue : unary_expression ;
+	[GrammarRule("lvalue")]
+	public XAstParserRuleReturnScope lvalue()
+	{
+		EnterRule_lvalue();
+		EnterRule("lvalue", 56);
+		var retval = new XAstParserRuleReturnScope("lvalue");
+		
+		retval.Start = (IToken)input.LT(1);
+		int lvalue_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		XAstParserRuleReturnScope unary_expression239 = default(XAstParserRuleReturnScope);
+
+		try { DebugEnterRule(GrammarFileName, "lvalue");
+		DebugLocation(400, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 56)) { return retval; }
+
+			// C.g:401:2: ( unary_expression )
+			DebugEnterAlt(1);
+			// C.g:401:4: unary_expression
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(401, 4);
+			PushFollow(Follow._unary_expression_in_lvalue1594);
+			unary_expression239=unary_expression();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, unary_expression239.Tree, unary_expression239, retval);
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("lvalue", 56);
+			LeaveRule("lvalue", 56);
+			LeaveRule_lvalue();
+			if (state.backtracking > 0) { Memoize(input, 56, lvalue_StartIndex); }
+
+		}
+		DebugLocation(402, 1);
+		} finally { DebugExitRule(GrammarFileName, "lvalue"); }
+		return retval;
+
+	}
+	// $ANTLR end "lvalue"
+
+	partial void EnterRule_assignment_operator();
+	partial void LeaveRule_assignment_operator();
+
+	// $ANTLR start "assignment_operator"
+	// C.g:404:1: assignment_operator : ( '=' | '*=' | '/=' | '%=' | '+=' | '-=' | '<<=' | '>>=' | '&=' | '^=' | '|=' );
+	[GrammarRule("assignment_operator")]
+	public XAstParserRuleReturnScope assignment_operator()
+	{
+		EnterRule_assignment_operator();
+		EnterRule("assignment_operator", 57);
+		var retval = new XAstParserRuleReturnScope("assignment_operator");
+		
+		retval.Start = (IToken)input.LT(1);
+		int assignment_operator_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken set240 = default(IToken);
+
+		object set240_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "assignment_operator");
+		DebugLocation(404, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 57)) { return retval; }
+
+			// C.g:405:2: ( '=' | '*=' | '/=' | '%=' | '+=' | '-=' | '<<=' | '>>=' | '&=' | '^=' | '|=' )
+			DebugEnterAlt(1);
+			// C.g:
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(405, 2);
+
+			set240=(IToken)input.LT(1);
+			if (input.LA(1)==26||input.LA(1)==29||input.LA(1)==33||input.LA(1)==36||input.LA(1)==40||input.LA(1)==45||input.LA(1)==50||input.LA(1)==52||input.LA(1)==57||input.LA(1)==62||input.LA(1)==102)
+			{
+				input.Consume();
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set240, retval));
+				state.errorRecovery=false;state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return retval;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				throw mse;
+			}
 
 
 			}
@@ -10180,105 +10280,109 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("inclusive_or_expression", 59);
-			LeaveRule("inclusive_or_expression", 59);
-			LeaveRule_inclusive_or_expression();
-			if (state.backtracking > 0) { Memoize(input, 59, inclusive_or_expression_StartIndex); }
+			TraceOut("assignment_operator", 57);
+			LeaveRule("assignment_operator", 57);
+			LeaveRule_assignment_operator();
+			if (state.backtracking > 0) { Memoize(input, 57, assignment_operator_StartIndex); }
 
 		}
-		DebugLocation(421, 1);
-		} finally { DebugExitRule(GrammarFileName, "inclusive_or_expression"); }
+		DebugLocation(416, 1);
+		} finally { DebugExitRule(GrammarFileName, "assignment_operator"); }
 		return retval;
 
 	}
-	// $ANTLR end "inclusive_or_expression"
+	// $ANTLR end "assignment_operator"
 
-	partial void EnterRule_exclusive_or_expression();
-	partial void LeaveRule_exclusive_or_expression();
+	partial void EnterRule_conditional_expression();
+	partial void LeaveRule_conditional_expression();
 
-	// $ANTLR start "exclusive_or_expression"
-	// C.g:423:1: exclusive_or_expression : and_expression ( '^' and_expression )* ;
-	[GrammarRule("exclusive_or_expression")]
-	public XAstParserRuleReturnScope exclusive_or_expression()
+	// $ANTLR start "conditional_expression"
+	// C.g:418:1: conditional_expression : logical_or_expression ( '?' expression ':' conditional_expression )? ;
+	[GrammarRule("conditional_expression")]
+	public XAstParserRuleReturnScope conditional_expression()
 	{
-		EnterRule_exclusive_or_expression();
-		EnterRule("exclusive_or_expression", 60);
-		var retval = new XAstParserRuleReturnScope("exclusive_or_expression");
+		EnterRule_conditional_expression();
+		EnterRule("conditional_expression", 58);
+		var retval = new XAstParserRuleReturnScope("conditional_expression");
 		
 		retval.Start = (IToken)input.LT(1);
-		int exclusive_or_expression_StartIndex = input.Index;
+		int conditional_expression_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal239 = default(IToken);
-		XAstParserRuleReturnScope and_expression238 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope and_expression240 = default(XAstParserRuleReturnScope);
+		IToken char_literal242 = default(IToken);
+		IToken char_literal244 = default(IToken);
+		XAstParserRuleReturnScope logical_or_expression241 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope expression243 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope conditional_expression245 = default(XAstParserRuleReturnScope);
 
-		object char_literal239_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "exclusive_or_expression");
-		DebugLocation(423, 1);
+		object char_literal242_tree = default(object);
+		object char_literal244_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "conditional_expression");
+		DebugLocation(418, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 60)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 58)) { return retval; }
 
-			// C.g:424:2: ( and_expression ( '^' and_expression )* )
+			// C.g:419:2: ( logical_or_expression ( '?' expression ':' conditional_expression )? )
 			DebugEnterAlt(1);
-			// C.g:424:4: and_expression ( '^' and_expression )*
+			// C.g:419:4: logical_or_expression ( '?' expression ':' conditional_expression )?
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(424, 4);
-			PushFollow(Follow._and_expression_in_exclusive_or_expression1633);
-			and_expression238=and_expression();
+			DebugLocation(419, 4);
+			PushFollow(Follow._logical_or_expression_in_conditional_expression1666);
+			logical_or_expression241=logical_or_expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, and_expression238.Tree, and_expression238, retval);
-			DebugLocation(424, 19);
-			// C.g:424:19: ( '^' and_expression )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, logical_or_expression241.Tree, logical_or_expression241, retval);
+			DebugLocation(419, 26);
+			// C.g:419:26: ( '?' expression ':' conditional_expression )?
+			int alt59=2;
 			try { DebugEnterSubRule(59);
-			while (true)
+			try { DebugEnterDecision(59, false);
+			int LA59_0 = input.LA(1);
+
+			if ((LA59_0==58))
 			{
-				int alt59=2;
-				try { DebugEnterDecision(59, false);
-				int LA59_0 = input.LA(1);
-
-				if ((LA59_0==61))
-				{
-					alt59 = 1;
-				}
-
-
-				} finally { DebugExitDecision(59); }
-				switch ( alt59 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C.g:424:20: '^' and_expression
-					{
-					DebugLocation(424, 20);
-					char_literal239=(IToken)Match(input,61,Follow._61_in_exclusive_or_expression1636); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal239_tree = (object)adaptor.Create(char_literal239, retval);
-					adaptor.AddChild(root_0, char_literal239_tree);
-					}
-					DebugLocation(424, 24);
-					PushFollow(Follow._and_expression_in_exclusive_or_expression1638);
-					and_expression240=and_expression();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, and_expression240.Tree, and_expression240, retval);
-
-					}
-					break;
-
-				default:
-					goto loop59;
-				}
+				alt59 = 1;
 			}
+			} finally { DebugExitDecision(59); }
+			switch (alt59)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C.g:419:27: '?' expression ':' conditional_expression
+				{
+				DebugLocation(419, 27);
+				char_literal242=(IToken)Match(input,58,Follow._58_in_conditional_expression1669); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal242_tree = (object)adaptor.Create(char_literal242, retval);
+				adaptor.AddChild(root_0, char_literal242_tree);
+				}
+				DebugLocation(419, 31);
+				PushFollow(Follow._expression_in_conditional_expression1671);
+				expression243=expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression243.Tree, expression243, retval);
+				DebugLocation(419, 42);
+				char_literal244=(IToken)Match(input,46,Follow._46_in_conditional_expression1673); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal244_tree = (object)adaptor.Create(char_literal244, retval);
+				adaptor.AddChild(root_0, char_literal244_tree);
+				}
+				DebugLocation(419, 46);
+				PushFollow(Follow._conditional_expression_in_conditional_expression1675);
+				conditional_expression245=conditional_expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, conditional_expression245.Tree, conditional_expression245, retval);
 
-			loop59:
-				;
+				}
+				break;
 
+			}
 			} finally { DebugExitSubRule(59); }
 
 
@@ -10300,61 +10404,61 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("exclusive_or_expression", 60);
-			LeaveRule("exclusive_or_expression", 60);
-			LeaveRule_exclusive_or_expression();
-			if (state.backtracking > 0) { Memoize(input, 60, exclusive_or_expression_StartIndex); }
+			TraceOut("conditional_expression", 58);
+			LeaveRule("conditional_expression", 58);
+			LeaveRule_conditional_expression();
+			if (state.backtracking > 0) { Memoize(input, 58, conditional_expression_StartIndex); }
 
 		}
-		DebugLocation(425, 1);
-		} finally { DebugExitRule(GrammarFileName, "exclusive_or_expression"); }
+		DebugLocation(420, 1);
+		} finally { DebugExitRule(GrammarFileName, "conditional_expression"); }
 		return retval;
 
 	}
-	// $ANTLR end "exclusive_or_expression"
+	// $ANTLR end "conditional_expression"
 
-	partial void EnterRule_and_expression();
-	partial void LeaveRule_and_expression();
+	partial void EnterRule_logical_or_expression();
+	partial void LeaveRule_logical_or_expression();
 
-	// $ANTLR start "and_expression"
-	// C.g:427:1: and_expression : equality_expression ( '&' equality_expression )* ;
-	[GrammarRule("and_expression")]
-	public XAstParserRuleReturnScope and_expression()
+	// $ANTLR start "logical_or_expression"
+	// C.g:422:1: logical_or_expression : logical_and_expression ( '||' logical_and_expression )* ;
+	[GrammarRule("logical_or_expression")]
+	public XAstParserRuleReturnScope logical_or_expression()
 	{
-		EnterRule_and_expression();
-		EnterRule("and_expression", 61);
-		var retval = new XAstParserRuleReturnScope("and_expression");
+		EnterRule_logical_or_expression();
+		EnterRule("logical_or_expression", 59);
+		var retval = new XAstParserRuleReturnScope("logical_or_expression");
 		
 		retval.Start = (IToken)input.LT(1);
-		int and_expression_StartIndex = input.Index;
+		int logical_or_expression_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal242 = default(IToken);
-		XAstParserRuleReturnScope equality_expression241 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope equality_expression243 = default(XAstParserRuleReturnScope);
+		IToken string_literal247 = default(IToken);
+		XAstParserRuleReturnScope logical_and_expression246 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope logical_and_expression248 = default(XAstParserRuleReturnScope);
 
-		object char_literal242_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "and_expression");
-		DebugLocation(427, 1);
+		object string_literal247_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "logical_or_expression");
+		DebugLocation(422, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 61)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 59)) { return retval; }
 
-			// C.g:428:2: ( equality_expression ( '&' equality_expression )* )
+			// C.g:423:2: ( logical_and_expression ( '||' logical_and_expression )* )
 			DebugEnterAlt(1);
-			// C.g:428:4: equality_expression ( '&' equality_expression )*
+			// C.g:423:4: logical_and_expression ( '||' logical_and_expression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(428, 4);
-			PushFollow(Follow._equality_expression_in_and_expression1651);
-			equality_expression241=equality_expression();
+			DebugLocation(423, 4);
+			PushFollow(Follow._logical_and_expression_in_logical_or_expression1688);
+			logical_and_expression246=logical_and_expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, equality_expression241.Tree, equality_expression241, retval);
-			DebugLocation(428, 24);
-			// C.g:428:24: ( '&' equality_expression )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, logical_and_expression246.Tree, logical_and_expression246, retval);
+			DebugLocation(423, 27);
+			// C.g:423:27: ( '||' logical_and_expression )*
 			try { DebugEnterSubRule(60);
 			while (true)
 			{
@@ -10362,7 +10466,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				try { DebugEnterDecision(60, false);
 				int LA60_0 = input.LA(1);
 
-				if ((LA60_0==28))
+				if ((LA60_0==103))
 				{
 					alt60 = 1;
 				}
@@ -10373,20 +10477,20 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:428:25: '&' equality_expression
+					// C.g:423:28: '||' logical_and_expression
 					{
-					DebugLocation(428, 25);
-					char_literal242=(IToken)Match(input,28,Follow._28_in_and_expression1654); if (state.failed) return retval;
+					DebugLocation(423, 28);
+					string_literal247=(IToken)Match(input,103,Follow._103_in_logical_or_expression1691); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal242_tree = (object)adaptor.Create(char_literal242, retval);
-					adaptor.AddChild(root_0, char_literal242_tree);
+					string_literal247_tree = (object)adaptor.Create(string_literal247, retval);
+					adaptor.AddChild(root_0, string_literal247_tree);
 					}
-					DebugLocation(428, 29);
-					PushFollow(Follow._equality_expression_in_and_expression1656);
-					equality_expression243=equality_expression();
+					DebugLocation(423, 33);
+					PushFollow(Follow._logical_and_expression_in_logical_or_expression1693);
+					logical_and_expression248=logical_and_expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, equality_expression243.Tree, equality_expression243, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, logical_and_expression248.Tree, logical_and_expression248, retval);
 
 					}
 					break;
@@ -10420,61 +10524,61 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("and_expression", 61);
-			LeaveRule("and_expression", 61);
-			LeaveRule_and_expression();
-			if (state.backtracking > 0) { Memoize(input, 61, and_expression_StartIndex); }
+			TraceOut("logical_or_expression", 59);
+			LeaveRule("logical_or_expression", 59);
+			LeaveRule_logical_or_expression();
+			if (state.backtracking > 0) { Memoize(input, 59, logical_or_expression_StartIndex); }
 
 		}
-		DebugLocation(429, 1);
-		} finally { DebugExitRule(GrammarFileName, "and_expression"); }
+		DebugLocation(424, 1);
+		} finally { DebugExitRule(GrammarFileName, "logical_or_expression"); }
 		return retval;
 
 	}
-	// $ANTLR end "and_expression"
+	// $ANTLR end "logical_or_expression"
 
-	partial void EnterRule_equality_expression();
-	partial void LeaveRule_equality_expression();
+	partial void EnterRule_logical_and_expression();
+	partial void LeaveRule_logical_and_expression();
 
-	// $ANTLR start "equality_expression"
-	// C.g:430:1: equality_expression : relational_expression ( ( '==' | '!=' ) relational_expression )* ;
-	[GrammarRule("equality_expression")]
-	public XAstParserRuleReturnScope equality_expression()
+	// $ANTLR start "logical_and_expression"
+	// C.g:426:1: logical_and_expression : inclusive_or_expression ( '&&' inclusive_or_expression )* ;
+	[GrammarRule("logical_and_expression")]
+	public XAstParserRuleReturnScope logical_and_expression()
 	{
-		EnterRule_equality_expression();
-		EnterRule("equality_expression", 62);
-		var retval = new XAstParserRuleReturnScope("equality_expression");
+		EnterRule_logical_and_expression();
+		EnterRule("logical_and_expression", 60);
+		var retval = new XAstParserRuleReturnScope("logical_and_expression");
 		
 		retval.Start = (IToken)input.LT(1);
-		int equality_expression_StartIndex = input.Index;
+		int logical_and_expression_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken set245 = default(IToken);
-		XAstParserRuleReturnScope relational_expression244 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope relational_expression246 = default(XAstParserRuleReturnScope);
+		IToken string_literal250 = default(IToken);
+		XAstParserRuleReturnScope inclusive_or_expression249 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope inclusive_or_expression251 = default(XAstParserRuleReturnScope);
 
-		object set245_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "equality_expression");
-		DebugLocation(430, 1);
+		object string_literal250_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "logical_and_expression");
+		DebugLocation(426, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 62)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 60)) { return retval; }
 
-			// C.g:431:2: ( relational_expression ( ( '==' | '!=' ) relational_expression )* )
+			// C.g:427:2: ( inclusive_or_expression ( '&&' inclusive_or_expression )* )
 			DebugEnterAlt(1);
-			// C.g:431:4: relational_expression ( ( '==' | '!=' ) relational_expression )*
+			// C.g:427:4: inclusive_or_expression ( '&&' inclusive_or_expression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(431, 4);
-			PushFollow(Follow._relational_expression_in_equality_expression1668);
-			relational_expression244=relational_expression();
+			DebugLocation(427, 4);
+			PushFollow(Follow._inclusive_or_expression_in_logical_and_expression1706);
+			inclusive_or_expression249=inclusive_or_expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, relational_expression244.Tree, relational_expression244, retval);
-			DebugLocation(431, 26);
-			// C.g:431:26: ( ( '==' | '!=' ) relational_expression )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, inclusive_or_expression249.Tree, inclusive_or_expression249, retval);
+			DebugLocation(427, 28);
+			// C.g:427:28: ( '&&' inclusive_or_expression )*
 			try { DebugEnterSubRule(61);
 			while (true)
 			{
@@ -10482,7 +10586,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				try { DebugEnterDecision(61, false);
 				int LA61_0 = input.LA(1);
 
-				if ((LA61_0==24||LA61_0==53))
+				if ((LA61_0==27))
 				{
 					alt61 = 1;
 				}
@@ -10493,31 +10597,20 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:431:27: ( '==' | '!=' ) relational_expression
+					// C.g:427:29: '&&' inclusive_or_expression
 					{
-					DebugLocation(431, 27);
-
-					set245=(IToken)input.LT(1);
-					if (input.LA(1)==24||input.LA(1)==53)
-					{
-						input.Consume();
-						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set245, retval));
-						state.errorRecovery=false;state.failed=false;
+					DebugLocation(427, 29);
+					string_literal250=(IToken)Match(input,27,Follow._27_in_logical_and_expression1709); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					string_literal250_tree = (object)adaptor.Create(string_literal250, retval);
+					adaptor.AddChild(root_0, string_literal250_tree);
 					}
-					else
-					{
-						if (state.backtracking>0) {state.failed=true; return retval;}
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						DebugRecognitionException(mse);
-						throw mse;
-					}
-
-					DebugLocation(431, 39);
-					PushFollow(Follow._relational_expression_in_equality_expression1677);
-					relational_expression246=relational_expression();
+					DebugLocation(427, 34);
+					PushFollow(Follow._inclusive_or_expression_in_logical_and_expression1711);
+					inclusive_or_expression251=inclusive_or_expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, relational_expression246.Tree, relational_expression246, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, inclusive_or_expression251.Tree, inclusive_or_expression251, retval);
 
 					}
 					break;
@@ -10551,61 +10644,61 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("equality_expression", 62);
-			LeaveRule("equality_expression", 62);
-			LeaveRule_equality_expression();
-			if (state.backtracking > 0) { Memoize(input, 62, equality_expression_StartIndex); }
+			TraceOut("logical_and_expression", 60);
+			LeaveRule("logical_and_expression", 60);
+			LeaveRule_logical_and_expression();
+			if (state.backtracking > 0) { Memoize(input, 60, logical_and_expression_StartIndex); }
 
 		}
-		DebugLocation(432, 1);
-		} finally { DebugExitRule(GrammarFileName, "equality_expression"); }
+		DebugLocation(428, 1);
+		} finally { DebugExitRule(GrammarFileName, "logical_and_expression"); }
 		return retval;
 
 	}
-	// $ANTLR end "equality_expression"
+	// $ANTLR end "logical_and_expression"
 
-	partial void EnterRule_relational_expression();
-	partial void LeaveRule_relational_expression();
+	partial void EnterRule_inclusive_or_expression();
+	partial void LeaveRule_inclusive_or_expression();
 
-	// $ANTLR start "relational_expression"
-	// C.g:434:1: relational_expression : shift_expression ( ( '<' | '>' | '<=' | '>=' ) shift_expression )* ;
-	[GrammarRule("relational_expression")]
-	public XAstParserRuleReturnScope relational_expression()
+	// $ANTLR start "inclusive_or_expression"
+	// C.g:430:1: inclusive_or_expression : exclusive_or_expression ( '|' exclusive_or_expression )* ;
+	[GrammarRule("inclusive_or_expression")]
+	public XAstParserRuleReturnScope inclusive_or_expression()
 	{
-		EnterRule_relational_expression();
-		EnterRule("relational_expression", 63);
-		var retval = new XAstParserRuleReturnScope("relational_expression");
+		EnterRule_inclusive_or_expression();
+		EnterRule("inclusive_or_expression", 61);
+		var retval = new XAstParserRuleReturnScope("inclusive_or_expression");
 		
 		retval.Start = (IToken)input.LT(1);
-		int relational_expression_StartIndex = input.Index;
+		int inclusive_or_expression_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken set248 = default(IToken);
-		XAstParserRuleReturnScope shift_expression247 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope shift_expression249 = default(XAstParserRuleReturnScope);
+		IToken char_literal253 = default(IToken);
+		XAstParserRuleReturnScope exclusive_or_expression252 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope exclusive_or_expression254 = default(XAstParserRuleReturnScope);
 
-		object set248_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "relational_expression");
-		DebugLocation(434, 1);
+		object char_literal253_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "inclusive_or_expression");
+		DebugLocation(430, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 63)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 61)) { return retval; }
 
-			// C.g:435:2: ( shift_expression ( ( '<' | '>' | '<=' | '>=' ) shift_expression )* )
+			// C.g:431:2: ( exclusive_or_expression ( '|' exclusive_or_expression )* )
 			DebugEnterAlt(1);
-			// C.g:435:4: shift_expression ( ( '<' | '>' | '<=' | '>=' ) shift_expression )*
+			// C.g:431:4: exclusive_or_expression ( '|' exclusive_or_expression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(435, 4);
-			PushFollow(Follow._shift_expression_in_relational_expression1690);
-			shift_expression247=shift_expression();
+			DebugLocation(431, 4);
+			PushFollow(Follow._exclusive_or_expression_in_inclusive_or_expression1724);
+			exclusive_or_expression252=exclusive_or_expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, shift_expression247.Tree, shift_expression247, retval);
-			DebugLocation(435, 21);
-			// C.g:435:21: ( ( '<' | '>' | '<=' | '>=' ) shift_expression )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, exclusive_or_expression252.Tree, exclusive_or_expression252, retval);
+			DebugLocation(431, 28);
+			// C.g:431:28: ( '|' exclusive_or_expression )*
 			try { DebugEnterSubRule(62);
 			while (true)
 			{
@@ -10613,7 +10706,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				try { DebugEnterDecision(62, false);
 				int LA62_0 = input.LA(1);
 
-				if ((LA62_0==48||LA62_0==51||(LA62_0>=54 && LA62_0<=55)))
+				if ((LA62_0==101))
 				{
 					alt62 = 1;
 				}
@@ -10624,31 +10717,20 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:435:22: ( '<' | '>' | '<=' | '>=' ) shift_expression
+					// C.g:431:29: '|' exclusive_or_expression
 					{
-					DebugLocation(435, 22);
-
-					set248=(IToken)input.LT(1);
-					if (input.LA(1)==48||input.LA(1)==51||(input.LA(1)>=54 && input.LA(1)<=55))
-					{
-						input.Consume();
-						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set248, retval));
-						state.errorRecovery=false;state.failed=false;
+					DebugLocation(431, 29);
+					char_literal253=(IToken)Match(input,101,Follow._101_in_inclusive_or_expression1727); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal253_tree = (object)adaptor.Create(char_literal253, retval);
+					adaptor.AddChild(root_0, char_literal253_tree);
 					}
-					else
-					{
-						if (state.backtracking>0) {state.failed=true; return retval;}
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						DebugRecognitionException(mse);
-						throw mse;
-					}
-
-					DebugLocation(435, 42);
-					PushFollow(Follow._shift_expression_in_relational_expression1703);
-					shift_expression249=shift_expression();
+					DebugLocation(431, 33);
+					PushFollow(Follow._exclusive_or_expression_in_inclusive_or_expression1729);
+					exclusive_or_expression254=exclusive_or_expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, shift_expression249.Tree, shift_expression249, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, exclusive_or_expression254.Tree, exclusive_or_expression254, retval);
 
 					}
 					break;
@@ -10682,61 +10764,61 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("relational_expression", 63);
-			LeaveRule("relational_expression", 63);
-			LeaveRule_relational_expression();
-			if (state.backtracking > 0) { Memoize(input, 63, relational_expression_StartIndex); }
+			TraceOut("inclusive_or_expression", 61);
+			LeaveRule("inclusive_or_expression", 61);
+			LeaveRule_inclusive_or_expression();
+			if (state.backtracking > 0) { Memoize(input, 61, inclusive_or_expression_StartIndex); }
 
 		}
-		DebugLocation(436, 1);
-		} finally { DebugExitRule(GrammarFileName, "relational_expression"); }
+		DebugLocation(432, 1);
+		} finally { DebugExitRule(GrammarFileName, "inclusive_or_expression"); }
 		return retval;
 
 	}
-	// $ANTLR end "relational_expression"
+	// $ANTLR end "inclusive_or_expression"
 
-	partial void EnterRule_shift_expression();
-	partial void LeaveRule_shift_expression();
+	partial void EnterRule_exclusive_or_expression();
+	partial void LeaveRule_exclusive_or_expression();
 
-	// $ANTLR start "shift_expression"
-	// C.g:438:1: shift_expression : additive_expression ( ( '<<' | '>>' ) additive_expression )* ;
-	[GrammarRule("shift_expression")]
-	public XAstParserRuleReturnScope shift_expression()
+	// $ANTLR start "exclusive_or_expression"
+	// C.g:434:1: exclusive_or_expression : and_expression ( '^' and_expression )* ;
+	[GrammarRule("exclusive_or_expression")]
+	public XAstParserRuleReturnScope exclusive_or_expression()
 	{
-		EnterRule_shift_expression();
-		EnterRule("shift_expression", 64);
-		var retval = new XAstParserRuleReturnScope("shift_expression");
+		EnterRule_exclusive_or_expression();
+		EnterRule("exclusive_or_expression", 62);
+		var retval = new XAstParserRuleReturnScope("exclusive_or_expression");
 		
 		retval.Start = (IToken)input.LT(1);
-		int shift_expression_StartIndex = input.Index;
+		int exclusive_or_expression_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken set251 = default(IToken);
-		XAstParserRuleReturnScope additive_expression250 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope additive_expression252 = default(XAstParserRuleReturnScope);
+		IToken char_literal256 = default(IToken);
+		XAstParserRuleReturnScope and_expression255 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope and_expression257 = default(XAstParserRuleReturnScope);
 
-		object set251_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "shift_expression");
-		DebugLocation(438, 1);
+		object char_literal256_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "exclusive_or_expression");
+		DebugLocation(434, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 64)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 62)) { return retval; }
 
-			// C.g:439:2: ( additive_expression ( ( '<<' | '>>' ) additive_expression )* )
+			// C.g:435:2: ( and_expression ( '^' and_expression )* )
 			DebugEnterAlt(1);
-			// C.g:439:4: additive_expression ( ( '<<' | '>>' ) additive_expression )*
+			// C.g:435:4: and_expression ( '^' and_expression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(439, 4);
-			PushFollow(Follow._additive_expression_in_shift_expression1716);
-			additive_expression250=additive_expression();
+			DebugLocation(435, 4);
+			PushFollow(Follow._and_expression_in_exclusive_or_expression1742);
+			and_expression255=and_expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, additive_expression250.Tree, additive_expression250, retval);
-			DebugLocation(439, 24);
-			// C.g:439:24: ( ( '<<' | '>>' ) additive_expression )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, and_expression255.Tree, and_expression255, retval);
+			DebugLocation(435, 19);
+			// C.g:435:19: ( '^' and_expression )*
 			try { DebugEnterSubRule(63);
 			while (true)
 			{
@@ -10744,7 +10826,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				try { DebugEnterDecision(63, false);
 				int LA63_0 = input.LA(1);
 
-				if ((LA63_0==49||LA63_0==56))
+				if ((LA63_0==61))
 				{
 					alt63 = 1;
 				}
@@ -10755,31 +10837,20 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:439:25: ( '<<' | '>>' ) additive_expression
+					// C.g:435:20: '^' and_expression
 					{
-					DebugLocation(439, 25);
-
-					set251=(IToken)input.LT(1);
-					if (input.LA(1)==49||input.LA(1)==56)
-					{
-						input.Consume();
-						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set251, retval));
-						state.errorRecovery=false;state.failed=false;
+					DebugLocation(435, 20);
+					char_literal256=(IToken)Match(input,61,Follow._61_in_exclusive_or_expression1745); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal256_tree = (object)adaptor.Create(char_literal256, retval);
+					adaptor.AddChild(root_0, char_literal256_tree);
 					}
-					else
-					{
-						if (state.backtracking>0) {state.failed=true; return retval;}
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						DebugRecognitionException(mse);
-						throw mse;
-					}
-
-					DebugLocation(439, 37);
-					PushFollow(Follow._additive_expression_in_shift_expression1725);
-					additive_expression252=additive_expression();
+					DebugLocation(435, 24);
+					PushFollow(Follow._and_expression_in_exclusive_or_expression1747);
+					and_expression257=and_expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, additive_expression252.Tree, additive_expression252, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, and_expression257.Tree, and_expression257, retval);
 
 					}
 					break;
@@ -10813,13 +10884,526 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("shift_expression", 64);
-			LeaveRule("shift_expression", 64);
-			LeaveRule_shift_expression();
-			if (state.backtracking > 0) { Memoize(input, 64, shift_expression_StartIndex); }
+			TraceOut("exclusive_or_expression", 62);
+			LeaveRule("exclusive_or_expression", 62);
+			LeaveRule_exclusive_or_expression();
+			if (state.backtracking > 0) { Memoize(input, 62, exclusive_or_expression_StartIndex); }
+
+		}
+		DebugLocation(436, 1);
+		} finally { DebugExitRule(GrammarFileName, "exclusive_or_expression"); }
+		return retval;
+
+	}
+	// $ANTLR end "exclusive_or_expression"
+
+	partial void EnterRule_and_expression();
+	partial void LeaveRule_and_expression();
+
+	// $ANTLR start "and_expression"
+	// C.g:438:1: and_expression : equality_expression ( '&' equality_expression )* ;
+	[GrammarRule("and_expression")]
+	public XAstParserRuleReturnScope and_expression()
+	{
+		EnterRule_and_expression();
+		EnterRule("and_expression", 63);
+		var retval = new XAstParserRuleReturnScope("and_expression");
+		
+		retval.Start = (IToken)input.LT(1);
+		int and_expression_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken char_literal259 = default(IToken);
+		XAstParserRuleReturnScope equality_expression258 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope equality_expression260 = default(XAstParserRuleReturnScope);
+
+		object char_literal259_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "and_expression");
+		DebugLocation(438, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 63)) { return retval; }
+
+			// C.g:439:2: ( equality_expression ( '&' equality_expression )* )
+			DebugEnterAlt(1);
+			// C.g:439:4: equality_expression ( '&' equality_expression )*
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(439, 4);
+			PushFollow(Follow._equality_expression_in_and_expression1760);
+			equality_expression258=equality_expression();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, equality_expression258.Tree, equality_expression258, retval);
+			DebugLocation(439, 24);
+			// C.g:439:24: ( '&' equality_expression )*
+			try { DebugEnterSubRule(64);
+			while (true)
+			{
+				int alt64=2;
+				try { DebugEnterDecision(64, false);
+				int LA64_0 = input.LA(1);
+
+				if ((LA64_0==28))
+				{
+					alt64 = 1;
+				}
+
+
+				} finally { DebugExitDecision(64); }
+				switch ( alt64 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C.g:439:25: '&' equality_expression
+					{
+					DebugLocation(439, 25);
+					char_literal259=(IToken)Match(input,28,Follow._28_in_and_expression1763); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal259_tree = (object)adaptor.Create(char_literal259, retval);
+					adaptor.AddChild(root_0, char_literal259_tree);
+					}
+					DebugLocation(439, 29);
+					PushFollow(Follow._equality_expression_in_and_expression1765);
+					equality_expression260=equality_expression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, equality_expression260.Tree, equality_expression260, retval);
+
+					}
+					break;
+
+				default:
+					goto loop64;
+				}
+			}
+
+			loop64:
+				;
+
+			} finally { DebugExitSubRule(64); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("and_expression", 63);
+			LeaveRule("and_expression", 63);
+			LeaveRule_and_expression();
+			if (state.backtracking > 0) { Memoize(input, 63, and_expression_StartIndex); }
 
 		}
 		DebugLocation(440, 1);
+		} finally { DebugExitRule(GrammarFileName, "and_expression"); }
+		return retval;
+
+	}
+	// $ANTLR end "and_expression"
+
+	partial void EnterRule_equality_expression();
+	partial void LeaveRule_equality_expression();
+
+	// $ANTLR start "equality_expression"
+	// C.g:441:1: equality_expression : relational_expression ( ( '==' | '!=' ) relational_expression )* ;
+	[GrammarRule("equality_expression")]
+	public XAstParserRuleReturnScope equality_expression()
+	{
+		EnterRule_equality_expression();
+		EnterRule("equality_expression", 64);
+		var retval = new XAstParserRuleReturnScope("equality_expression");
+		
+		retval.Start = (IToken)input.LT(1);
+		int equality_expression_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken set262 = default(IToken);
+		XAstParserRuleReturnScope relational_expression261 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope relational_expression263 = default(XAstParserRuleReturnScope);
+
+		object set262_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "equality_expression");
+		DebugLocation(441, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 64)) { return retval; }
+
+			// C.g:442:2: ( relational_expression ( ( '==' | '!=' ) relational_expression )* )
+			DebugEnterAlt(1);
+			// C.g:442:4: relational_expression ( ( '==' | '!=' ) relational_expression )*
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(442, 4);
+			PushFollow(Follow._relational_expression_in_equality_expression1777);
+			relational_expression261=relational_expression();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, relational_expression261.Tree, relational_expression261, retval);
+			DebugLocation(442, 26);
+			// C.g:442:26: ( ( '==' | '!=' ) relational_expression )*
+			try { DebugEnterSubRule(65);
+			while (true)
+			{
+				int alt65=2;
+				try { DebugEnterDecision(65, false);
+				int LA65_0 = input.LA(1);
+
+				if ((LA65_0==24||LA65_0==53))
+				{
+					alt65 = 1;
+				}
+
+
+				} finally { DebugExitDecision(65); }
+				switch ( alt65 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C.g:442:27: ( '==' | '!=' ) relational_expression
+					{
+					DebugLocation(442, 27);
+
+					set262=(IToken)input.LT(1);
+					if (input.LA(1)==24||input.LA(1)==53)
+					{
+						input.Consume();
+						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set262, retval));
+						state.errorRecovery=false;state.failed=false;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return retval;}
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(442, 39);
+					PushFollow(Follow._relational_expression_in_equality_expression1786);
+					relational_expression263=relational_expression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, relational_expression263.Tree, relational_expression263, retval);
+
+					}
+					break;
+
+				default:
+					goto loop65;
+				}
+			}
+
+			loop65:
+				;
+
+			} finally { DebugExitSubRule(65); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("equality_expression", 64);
+			LeaveRule("equality_expression", 64);
+			LeaveRule_equality_expression();
+			if (state.backtracking > 0) { Memoize(input, 64, equality_expression_StartIndex); }
+
+		}
+		DebugLocation(443, 1);
+		} finally { DebugExitRule(GrammarFileName, "equality_expression"); }
+		return retval;
+
+	}
+	// $ANTLR end "equality_expression"
+
+	partial void EnterRule_relational_expression();
+	partial void LeaveRule_relational_expression();
+
+	// $ANTLR start "relational_expression"
+	// C.g:445:1: relational_expression : shift_expression ( ( '<' | '>' | '<=' | '>=' ) shift_expression )* ;
+	[GrammarRule("relational_expression")]
+	public XAstParserRuleReturnScope relational_expression()
+	{
+		EnterRule_relational_expression();
+		EnterRule("relational_expression", 65);
+		var retval = new XAstParserRuleReturnScope("relational_expression");
+		
+		retval.Start = (IToken)input.LT(1);
+		int relational_expression_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken set265 = default(IToken);
+		XAstParserRuleReturnScope shift_expression264 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope shift_expression266 = default(XAstParserRuleReturnScope);
+
+		object set265_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "relational_expression");
+		DebugLocation(445, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 65)) { return retval; }
+
+			// C.g:446:2: ( shift_expression ( ( '<' | '>' | '<=' | '>=' ) shift_expression )* )
+			DebugEnterAlt(1);
+			// C.g:446:4: shift_expression ( ( '<' | '>' | '<=' | '>=' ) shift_expression )*
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(446, 4);
+			PushFollow(Follow._shift_expression_in_relational_expression1799);
+			shift_expression264=shift_expression();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, shift_expression264.Tree, shift_expression264, retval);
+			DebugLocation(446, 21);
+			// C.g:446:21: ( ( '<' | '>' | '<=' | '>=' ) shift_expression )*
+			try { DebugEnterSubRule(66);
+			while (true)
+			{
+				int alt66=2;
+				try { DebugEnterDecision(66, false);
+				int LA66_0 = input.LA(1);
+
+				if ((LA66_0==48||LA66_0==51||(LA66_0>=54 && LA66_0<=55)))
+				{
+					alt66 = 1;
+				}
+
+
+				} finally { DebugExitDecision(66); }
+				switch ( alt66 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C.g:446:22: ( '<' | '>' | '<=' | '>=' ) shift_expression
+					{
+					DebugLocation(446, 22);
+
+					set265=(IToken)input.LT(1);
+					if (input.LA(1)==48||input.LA(1)==51||(input.LA(1)>=54 && input.LA(1)<=55))
+					{
+						input.Consume();
+						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set265, retval));
+						state.errorRecovery=false;state.failed=false;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return retval;}
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(446, 42);
+					PushFollow(Follow._shift_expression_in_relational_expression1812);
+					shift_expression266=shift_expression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, shift_expression266.Tree, shift_expression266, retval);
+
+					}
+					break;
+
+				default:
+					goto loop66;
+				}
+			}
+
+			loop66:
+				;
+
+			} finally { DebugExitSubRule(66); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("relational_expression", 65);
+			LeaveRule("relational_expression", 65);
+			LeaveRule_relational_expression();
+			if (state.backtracking > 0) { Memoize(input, 65, relational_expression_StartIndex); }
+
+		}
+		DebugLocation(447, 1);
+		} finally { DebugExitRule(GrammarFileName, "relational_expression"); }
+		return retval;
+
+	}
+	// $ANTLR end "relational_expression"
+
+	partial void EnterRule_shift_expression();
+	partial void LeaveRule_shift_expression();
+
+	// $ANTLR start "shift_expression"
+	// C.g:449:1: shift_expression : additive_expression ( ( '<<' | '>>' ) additive_expression )* ;
+	[GrammarRule("shift_expression")]
+	public XAstParserRuleReturnScope shift_expression()
+	{
+		EnterRule_shift_expression();
+		EnterRule("shift_expression", 66);
+		var retval = new XAstParserRuleReturnScope("shift_expression");
+		
+		retval.Start = (IToken)input.LT(1);
+		int shift_expression_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken set268 = default(IToken);
+		XAstParserRuleReturnScope additive_expression267 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope additive_expression269 = default(XAstParserRuleReturnScope);
+
+		object set268_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "shift_expression");
+		DebugLocation(449, 1);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 66)) { return retval; }
+
+			// C.g:450:2: ( additive_expression ( ( '<<' | '>>' ) additive_expression )* )
+			DebugEnterAlt(1);
+			// C.g:450:4: additive_expression ( ( '<<' | '>>' ) additive_expression )*
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(450, 4);
+			PushFollow(Follow._additive_expression_in_shift_expression1825);
+			additive_expression267=additive_expression();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, additive_expression267.Tree, additive_expression267, retval);
+			DebugLocation(450, 24);
+			// C.g:450:24: ( ( '<<' | '>>' ) additive_expression )*
+			try { DebugEnterSubRule(67);
+			while (true)
+			{
+				int alt67=2;
+				try { DebugEnterDecision(67, false);
+				int LA67_0 = input.LA(1);
+
+				if ((LA67_0==49||LA67_0==56))
+				{
+					alt67 = 1;
+				}
+
+
+				} finally { DebugExitDecision(67); }
+				switch ( alt67 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C.g:450:25: ( '<<' | '>>' ) additive_expression
+					{
+					DebugLocation(450, 25);
+
+					set268=(IToken)input.LT(1);
+					if (input.LA(1)==49||input.LA(1)==56)
+					{
+						input.Consume();
+						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set268, retval));
+						state.errorRecovery=false;state.failed=false;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return retval;}
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(450, 37);
+					PushFollow(Follow._additive_expression_in_shift_expression1834);
+					additive_expression269=additive_expression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, additive_expression269.Tree, additive_expression269, retval);
+
+					}
+					break;
+
+				default:
+					goto loop67;
+				}
+			}
+
+			loop67:
+				;
+
+			} finally { DebugExitSubRule(67); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("shift_expression", 66);
+			LeaveRule("shift_expression", 66);
+			LeaveRule_shift_expression();
+			if (state.backtracking > 0) { Memoize(input, 66, shift_expression_StartIndex); }
+
+		}
+		DebugLocation(451, 1);
 		} finally { DebugExitRule(GrammarFileName, "shift_expression"); }
 		return retval;
 
@@ -10830,12 +11414,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_statement();
 
 	// $ANTLR start "statement"
-	// C.g:444:1: statement : ( labeled_statement | compound_statement | expression_statement | selection_statement | iteration_statement | jump_statement );
+	// C.g:455:1: statement : ( labeled_statement | compound_statement | expression_statement | selection_statement | iteration_statement | jump_statement );
 	[GrammarRule("statement")]
 	public XAstParserRuleReturnScope statement()
 	{
 		EnterRule_statement();
-		EnterRule("statement", 65);
+		EnterRule("statement", 67);
 		var retval = new XAstParserRuleReturnScope("statement");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -10843,54 +11427,54 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		XAstParserRuleReturnScope labeled_statement253 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope compound_statement254 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope expression_statement255 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope selection_statement256 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope iteration_statement257 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope jump_statement258 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope labeled_statement270 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope compound_statement271 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope expression_statement272 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope selection_statement273 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope iteration_statement274 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope jump_statement275 = default(XAstParserRuleReturnScope);
 
 		try { DebugEnterRule(GrammarFileName, "statement");
-		DebugLocation(444, 1);
+		DebugLocation(455, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 65)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 67)) { return retval; }
 
-			// C.g:445:2: ( labeled_statement | compound_statement | expression_statement | selection_statement | iteration_statement | jump_statement )
-			int alt64=6;
-			try { DebugEnterDecision(64, false);
+			// C.g:456:2: ( labeled_statement | compound_statement | expression_statement | selection_statement | iteration_statement | jump_statement )
+			int alt68=6;
+			try { DebugEnterDecision(68, false);
 			switch (input.LA(1))
 			{
 			case IDENTIFIER:
 				{
-				int LA64_1 = input.LA(2);
+				int LA68_1 = input.LA(2);
 
-				if ((LA64_1==46))
+				if ((LA68_1==46))
 				{
-					alt64 = 1;
+					alt68 = 1;
 				}
-				else if (((LA64_1>=24 && LA64_1<=30)||(LA64_1>=32 && LA64_1<=42)||(LA64_1>=44 && LA64_1<=45)||(LA64_1>=47 && LA64_1<=59)||(LA64_1>=61 && LA64_1<=62)||(LA64_1>=98 && LA64_1<=100)))
+				else if (((LA68_1>=24 && LA68_1<=30)||(LA68_1>=32 && LA68_1<=42)||(LA68_1>=44 && LA68_1<=45)||(LA68_1>=47 && LA68_1<=59)||(LA68_1>=61 && LA68_1<=62)||(LA68_1>=101 && LA68_1<=103)))
 				{
-					alt64 = 3;
+					alt68 = 3;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 64, 1, input);
+					NoViableAltException nvae = new NoViableAltException("", 68, 1, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 				}
 				break;
-			case 67:
-			case 71:
+			case 70:
+			case 74:
 				{
-				alt64 = 1;
+				alt68 = 1;
 				}
 				break;
-			case 97:
+			case 100:
 				{
-				alt64 = 2;
+				alt68 = 2;
 				}
 				break;
 			case CHARACTER_LITERAL:
@@ -10908,132 +11492,132 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			case 38:
 			case 39:
 			case 47:
-			case 87:
-			case 102:
-				{
-				alt64 = 3;
-				}
-				break;
-			case 80:
 			case 90:
+			case 105:
 				{
-				alt64 = 4;
+				alt68 = 3;
 				}
 				break;
-			case 72:
-			case 78:
-			case 96:
+			case 83:
+			case 93:
 				{
-				alt64 = 5;
+				alt68 = 4;
 				}
 				break;
-			case 66:
-			case 70:
-			case 79:
-			case 84:
+			case 75:
+			case 81:
+			case 99:
 				{
-				alt64 = 6;
+				alt68 = 5;
+				}
+				break;
+			case 69:
+			case 73:
+			case 82:
+			case 87:
+				{
+				alt68 = 6;
 				}
 				break;
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 64, 0, input);
+					NoViableAltException nvae = new NoViableAltException("", 68, 0, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(64); }
-			switch (alt64)
+			} finally { DebugExitDecision(68); }
+			switch (alt68)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:445:4: labeled_statement
+				// C.g:456:4: labeled_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(445, 4);
-				PushFollow(Follow._labeled_statement_in_statement1740);
-				labeled_statement253=labeled_statement();
+				DebugLocation(456, 4);
+				PushFollow(Follow._labeled_statement_in_statement1849);
+				labeled_statement270=labeled_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, labeled_statement253.Tree, labeled_statement253, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, labeled_statement270.Tree, labeled_statement270, retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C.g:446:4: compound_statement
+				// C.g:457:4: compound_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(446, 4);
-				PushFollow(Follow._compound_statement_in_statement1745);
-				compound_statement254=compound_statement();
+				DebugLocation(457, 4);
+				PushFollow(Follow._compound_statement_in_statement1854);
+				compound_statement271=compound_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, compound_statement254.Tree, compound_statement254, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, compound_statement271.Tree, compound_statement271, retval);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C.g:447:4: expression_statement
+				// C.g:458:4: expression_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(447, 4);
-				PushFollow(Follow._expression_statement_in_statement1750);
-				expression_statement255=expression_statement();
+				DebugLocation(458, 4);
+				PushFollow(Follow._expression_statement_in_statement1859);
+				expression_statement272=expression_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression_statement255.Tree, expression_statement255, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression_statement272.Tree, expression_statement272, retval);
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C.g:448:4: selection_statement
+				// C.g:459:4: selection_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(448, 4);
-				PushFollow(Follow._selection_statement_in_statement1755);
-				selection_statement256=selection_statement();
+				DebugLocation(459, 4);
+				PushFollow(Follow._selection_statement_in_statement1864);
+				selection_statement273=selection_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, selection_statement256.Tree, selection_statement256, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, selection_statement273.Tree, selection_statement273, retval);
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C.g:449:4: iteration_statement
+				// C.g:460:4: iteration_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(449, 4);
-				PushFollow(Follow._iteration_statement_in_statement1760);
-				iteration_statement257=iteration_statement();
+				DebugLocation(460, 4);
+				PushFollow(Follow._iteration_statement_in_statement1869);
+				iteration_statement274=iteration_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, iteration_statement257.Tree, iteration_statement257, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, iteration_statement274.Tree, iteration_statement274, retval);
 
 				}
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C.g:450:4: jump_statement
+				// C.g:461:4: jump_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(450, 4);
-				PushFollow(Follow._jump_statement_in_statement1765);
-				jump_statement258=jump_statement();
+				DebugLocation(461, 4);
+				PushFollow(Follow._jump_statement_in_statement1874);
+				jump_statement275=jump_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, jump_statement258.Tree, jump_statement258, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, jump_statement275.Tree, jump_statement275, retval);
 
 				}
 				break;
@@ -11055,13 +11639,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("statement", 65);
-			LeaveRule("statement", 65);
+			TraceOut("statement", 67);
+			LeaveRule("statement", 67);
 			LeaveRule_statement();
-			if (state.backtracking > 0) { Memoize(input, 65, statement_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 67, statement_StartIndex); }
 
 		}
-		DebugLocation(451, 1);
+		DebugLocation(462, 1);
 		} finally { DebugExitRule(GrammarFileName, "statement"); }
 		return retval;
 
@@ -11072,12 +11656,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_labeled_statement();
 
 	// $ANTLR start "labeled_statement"
-	// C.g:453:1: labeled_statement : ( IDENTIFIER ':' statement | 'case' constant_expression ':' statement | 'default' ':' statement );
+	// C.g:464:1: labeled_statement : ( IDENTIFIER ':' statement | 'case' constant_expression ':' statement | 'default' ':' statement );
 	[GrammarRule("labeled_statement")]
 	public XAstParserRuleReturnScope labeled_statement()
 	{
 		EnterRule_labeled_statement();
-		EnterRule("labeled_statement", 66);
+		EnterRule("labeled_statement", 68);
 		var retval = new XAstParserRuleReturnScope("labeled_statement");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -11085,145 +11669,145 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken IDENTIFIER259 = default(IToken);
-		IToken char_literal260 = default(IToken);
-		IToken string_literal262 = default(IToken);
-		IToken char_literal264 = default(IToken);
-		IToken string_literal266 = default(IToken);
-		IToken char_literal267 = default(IToken);
-		XAstParserRuleReturnScope statement261 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope constant_expression263 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope statement265 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope statement268 = default(XAstParserRuleReturnScope);
+		IToken IDENTIFIER276 = default(IToken);
+		IToken char_literal277 = default(IToken);
+		IToken string_literal279 = default(IToken);
+		IToken char_literal281 = default(IToken);
+		IToken string_literal283 = default(IToken);
+		IToken char_literal284 = default(IToken);
+		XAstParserRuleReturnScope statement278 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope constant_expression280 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope statement282 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope statement285 = default(XAstParserRuleReturnScope);
 
-		object IDENTIFIER259_tree = default(object);
-		object char_literal260_tree = default(object);
-		object string_literal262_tree = default(object);
-		object char_literal264_tree = default(object);
-		object string_literal266_tree = default(object);
-		object char_literal267_tree = default(object);
+		object IDENTIFIER276_tree = default(object);
+		object char_literal277_tree = default(object);
+		object string_literal279_tree = default(object);
+		object char_literal281_tree = default(object);
+		object string_literal283_tree = default(object);
+		object char_literal284_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "labeled_statement");
-		DebugLocation(453, 1);
+		DebugLocation(464, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 66)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 68)) { return retval; }
 
-			// C.g:454:2: ( IDENTIFIER ':' statement | 'case' constant_expression ':' statement | 'default' ':' statement )
-			int alt65=3;
-			try { DebugEnterDecision(65, false);
+			// C.g:465:2: ( IDENTIFIER ':' statement | 'case' constant_expression ':' statement | 'default' ':' statement )
+			int alt69=3;
+			try { DebugEnterDecision(69, false);
 			switch (input.LA(1))
 			{
 			case IDENTIFIER:
 				{
-				alt65 = 1;
+				alt69 = 1;
 				}
 				break;
-			case 67:
+			case 70:
 				{
-				alt65 = 2;
+				alt69 = 2;
 				}
 				break;
-			case 71:
+			case 74:
 				{
-				alt65 = 3;
+				alt69 = 3;
 				}
 				break;
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 65, 0, input);
+					NoViableAltException nvae = new NoViableAltException("", 69, 0, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(65); }
-			switch (alt65)
+			} finally { DebugExitDecision(69); }
+			switch (alt69)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:454:4: IDENTIFIER ':' statement
+				// C.g:465:4: IDENTIFIER ':' statement
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(454, 4);
-				IDENTIFIER259=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_labeled_statement1776), "IDENTIFIER"); if (state.failed) return retval;
+				DebugLocation(465, 4);
+				IDENTIFIER276=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_labeled_statement1885), "IDENTIFIER"); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				IDENTIFIER259_tree = (object)adaptor.Create(IDENTIFIER259, retval);
-				adaptor.AddChild(root_0, IDENTIFIER259_tree);
+				IDENTIFIER276_tree = (object)adaptor.Create(IDENTIFIER276, retval);
+				adaptor.AddChild(root_0, IDENTIFIER276_tree);
 				}
-				DebugLocation(454, 15);
-				char_literal260=(IToken)Match(input,46,Follow._46_in_labeled_statement1778); if (state.failed) return retval;
+				DebugLocation(465, 15);
+				char_literal277=(IToken)Match(input,46,Follow._46_in_labeled_statement1887); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal260_tree = (object)adaptor.Create(char_literal260, retval);
-				adaptor.AddChild(root_0, char_literal260_tree);
+				char_literal277_tree = (object)adaptor.Create(char_literal277, retval);
+				adaptor.AddChild(root_0, char_literal277_tree);
 				}
-				DebugLocation(454, 19);
-				PushFollow(Follow._statement_in_labeled_statement1780);
-				statement261=statement();
+				DebugLocation(465, 19);
+				PushFollow(Follow._statement_in_labeled_statement1889);
+				statement278=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement261.Tree, statement261, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement278.Tree, statement278, retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C.g:455:4: 'case' constant_expression ':' statement
+				// C.g:466:4: 'case' constant_expression ':' statement
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(455, 4);
-				string_literal262=(IToken)Match(input,67,Follow._67_in_labeled_statement1785); if (state.failed) return retval;
+				DebugLocation(466, 4);
+				string_literal279=(IToken)Match(input,70,Follow._70_in_labeled_statement1894); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal262_tree = (object)adaptor.Create(string_literal262, retval);
-				adaptor.AddChild(root_0, string_literal262_tree);
+				string_literal279_tree = (object)adaptor.Create(string_literal279, retval);
+				adaptor.AddChild(root_0, string_literal279_tree);
 				}
-				DebugLocation(455, 11);
-				PushFollow(Follow._constant_expression_in_labeled_statement1787);
-				constant_expression263=constant_expression();
+				DebugLocation(466, 11);
+				PushFollow(Follow._constant_expression_in_labeled_statement1896);
+				constant_expression280=constant_expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression263.Tree, constant_expression263, retval);
-				DebugLocation(455, 31);
-				char_literal264=(IToken)Match(input,46,Follow._46_in_labeled_statement1789); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression280.Tree, constant_expression280, retval);
+				DebugLocation(466, 31);
+				char_literal281=(IToken)Match(input,46,Follow._46_in_labeled_statement1898); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal264_tree = (object)adaptor.Create(char_literal264, retval);
-				adaptor.AddChild(root_0, char_literal264_tree);
+				char_literal281_tree = (object)adaptor.Create(char_literal281, retval);
+				adaptor.AddChild(root_0, char_literal281_tree);
 				}
-				DebugLocation(455, 35);
-				PushFollow(Follow._statement_in_labeled_statement1791);
-				statement265=statement();
+				DebugLocation(466, 35);
+				PushFollow(Follow._statement_in_labeled_statement1900);
+				statement282=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement265.Tree, statement265, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement282.Tree, statement282, retval);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C.g:456:4: 'default' ':' statement
+				// C.g:467:4: 'default' ':' statement
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(456, 4);
-				string_literal266=(IToken)Match(input,71,Follow._71_in_labeled_statement1796); if (state.failed) return retval;
+				DebugLocation(467, 4);
+				string_literal283=(IToken)Match(input,74,Follow._74_in_labeled_statement1905); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal266_tree = (object)adaptor.Create(string_literal266, retval);
-				adaptor.AddChild(root_0, string_literal266_tree);
+				string_literal283_tree = (object)adaptor.Create(string_literal283, retval);
+				adaptor.AddChild(root_0, string_literal283_tree);
 				}
-				DebugLocation(456, 14);
-				char_literal267=(IToken)Match(input,46,Follow._46_in_labeled_statement1798); if (state.failed) return retval;
+				DebugLocation(467, 14);
+				char_literal284=(IToken)Match(input,46,Follow._46_in_labeled_statement1907); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal267_tree = (object)adaptor.Create(char_literal267, retval);
-				adaptor.AddChild(root_0, char_literal267_tree);
+				char_literal284_tree = (object)adaptor.Create(char_literal284, retval);
+				adaptor.AddChild(root_0, char_literal284_tree);
 				}
-				DebugLocation(456, 18);
-				PushFollow(Follow._statement_in_labeled_statement1800);
-				statement268=statement();
+				DebugLocation(467, 18);
+				PushFollow(Follow._statement_in_labeled_statement1909);
+				statement285=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement268.Tree, statement268, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement285.Tree, statement285, retval);
 
 				}
 				break;
@@ -11245,13 +11829,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("labeled_statement", 66);
-			LeaveRule("labeled_statement", 66);
+			TraceOut("labeled_statement", 68);
+			LeaveRule("labeled_statement", 68);
 			LeaveRule_labeled_statement();
-			if (state.backtracking > 0) { Memoize(input, 66, labeled_statement_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 68, labeled_statement_StartIndex); }
 
 		}
-		DebugLocation(457, 1);
+		DebugLocation(468, 1);
 		} finally { DebugExitRule(GrammarFileName, "labeled_statement"); }
 		return retval;
 
@@ -11262,12 +11846,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_compound_statement();
 
 	// $ANTLR start "compound_statement"
-	// C.g:459:1: compound_statement : '{' ( declaration )* ( statement_list )? '}' ;
+	// C.g:470:1: compound_statement : '{' ( declaration )* ( statement_list )? '}' ;
 	[GrammarRule("compound_statement")]
 	public XAstParserRuleReturnScope compound_statement()
 	{
 		EnterRule_compound_statement();
-		EnterRule("compound_statement", 67);
+		EnterRule("compound_statement", 69);
 		var retval = new XAstParserRuleReturnScope("compound_statement");
 		Symbols_stack.Push(new Symbols_scope(this));Symbols_scopeInit(Symbols_stack.Peek());
 
@@ -11277,113 +11861,113 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken char_literal269 = default(IToken);
-		IToken char_literal272 = default(IToken);
-		XAstParserRuleReturnScope declaration270 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope statement_list271 = default(XAstParserRuleReturnScope);
+		IToken char_literal286 = default(IToken);
+		IToken char_literal289 = default(IToken);
+		XAstParserRuleReturnScope declaration287 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope statement_list288 = default(XAstParserRuleReturnScope);
 
-		object char_literal269_tree = default(object);
-		object char_literal272_tree = default(object);
+		object char_literal286_tree = default(object);
+		object char_literal289_tree = default(object);
 
 		  Symbols_stack.Peek().types =  new HashSet<string>();
 
 		try { DebugEnterRule(GrammarFileName, "compound_statement");
-		DebugLocation(459, 1);
+		DebugLocation(470, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 67)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 69)) { return retval; }
 
-			// C.g:464:2: ( '{' ( declaration )* ( statement_list )? '}' )
+			// C.g:475:2: ( '{' ( declaration )* ( statement_list )? '}' )
 			DebugEnterAlt(1);
-			// C.g:464:4: '{' ( declaration )* ( statement_list )? '}'
+			// C.g:475:4: '{' ( declaration )* ( statement_list )? '}'
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(464, 4);
-			char_literal269=(IToken)Match(input,97,Follow._97_in_compound_statement1822); if (state.failed) return retval;
+			DebugLocation(475, 4);
+			char_literal286=(IToken)Match(input,100,Follow._100_in_compound_statement1931); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal269_tree = (object)adaptor.Create(char_literal269, retval);
-			adaptor.AddChild(root_0, char_literal269_tree);
+			char_literal286_tree = (object)adaptor.Create(char_literal286, retval);
+			adaptor.AddChild(root_0, char_literal286_tree);
 			}
-			DebugLocation(464, 8);
-			// C.g:464:8: ( declaration )*
-			try { DebugEnterSubRule(66);
+			DebugLocation(475, 8);
+			// C.g:475:8: ( declaration )*
+			try { DebugEnterSubRule(70);
 			while (true)
 			{
-				int alt66=2;
-				try { DebugEnterDecision(66, false);
+				int alt70=2;
+				try { DebugEnterDecision(70, false);
 				try
 				{
-					alt66 = dfa66.Predict(input);
+					alt70 = dfa70.Predict(input);
 				}
 				catch (NoViableAltException nvae)
 				{
 					DebugRecognitionException(nvae);
 					throw;
 				}
-				} finally { DebugExitDecision(66); }
-				switch ( alt66 )
+				} finally { DebugExitDecision(70); }
+				switch ( alt70 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:464:8: declaration
+					// C.g:475:8: declaration
 					{
-					DebugLocation(464, 8);
-					PushFollow(Follow._declaration_in_compound_statement1824);
-					declaration270=declaration();
+					DebugLocation(475, 8);
+					PushFollow(Follow._declaration_in_compound_statement1933);
+					declaration287=declaration();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, declaration270.Tree, declaration270, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, declaration287.Tree, declaration287, retval);
 
 					}
 					break;
 
 				default:
-					goto loop66;
+					goto loop70;
 				}
 			}
 
-			loop66:
+			loop70:
 				;
 
-			} finally { DebugExitSubRule(66); }
+			} finally { DebugExitSubRule(70); }
 
-			DebugLocation(464, 21);
-			// C.g:464:21: ( statement_list )?
-			int alt67=2;
-			try { DebugEnterSubRule(67);
-			try { DebugEnterDecision(67, false);
-			int LA67_0 = input.LA(1);
+			DebugLocation(475, 21);
+			// C.g:475:21: ( statement_list )?
+			int alt71=2;
+			try { DebugEnterSubRule(71);
+			try { DebugEnterDecision(71, false);
+			int LA71_0 = input.LA(1);
 
-			if ((LA67_0==CHARACTER_LITERAL||LA67_0==DECIMAL_LITERAL||LA67_0==FLOATING_POINT_LITERAL||LA67_0==HEX_LITERAL||LA67_0==IDENTIFIER||LA67_0==OCTAL_LITERAL||LA67_0==STRING_LITERAL||LA67_0==23||LA67_0==28||LA67_0==30||LA67_0==32||(LA67_0>=34 && LA67_0<=35)||(LA67_0>=38 && LA67_0<=39)||LA67_0==47||(LA67_0>=66 && LA67_0<=67)||(LA67_0>=70 && LA67_0<=72)||(LA67_0>=78 && LA67_0<=80)||LA67_0==84||LA67_0==87||LA67_0==90||(LA67_0>=96 && LA67_0<=97)||LA67_0==102))
+			if ((LA71_0==CHARACTER_LITERAL||LA71_0==DECIMAL_LITERAL||LA71_0==FLOATING_POINT_LITERAL||LA71_0==HEX_LITERAL||LA71_0==IDENTIFIER||LA71_0==OCTAL_LITERAL||LA71_0==STRING_LITERAL||LA71_0==23||LA71_0==28||LA71_0==30||LA71_0==32||(LA71_0>=34 && LA71_0<=35)||(LA71_0>=38 && LA71_0<=39)||LA71_0==47||(LA71_0>=69 && LA71_0<=70)||(LA71_0>=73 && LA71_0<=75)||(LA71_0>=81 && LA71_0<=83)||LA71_0==87||LA71_0==90||LA71_0==93||(LA71_0>=99 && LA71_0<=100)||LA71_0==105))
 			{
-				alt67 = 1;
+				alt71 = 1;
 			}
-			} finally { DebugExitDecision(67); }
-			switch (alt67)
+			} finally { DebugExitDecision(71); }
+			switch (alt71)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:464:21: statement_list
+				// C.g:475:21: statement_list
 				{
-				DebugLocation(464, 21);
-				PushFollow(Follow._statement_list_in_compound_statement1827);
-				statement_list271=statement_list();
+				DebugLocation(475, 21);
+				PushFollow(Follow._statement_list_in_compound_statement1936);
+				statement_list288=statement_list();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement_list271.Tree, statement_list271, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement_list288.Tree, statement_list288, retval);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(67); }
+			} finally { DebugExitSubRule(71); }
 
-			DebugLocation(464, 37);
-			char_literal272=(IToken)Match(input,101,Follow._101_in_compound_statement1830); if (state.failed) return retval;
+			DebugLocation(475, 37);
+			char_literal289=(IToken)Match(input,104,Follow._104_in_compound_statement1939); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal272_tree = (object)adaptor.Create(char_literal272, retval);
-			adaptor.AddChild(root_0, char_literal272_tree);
+			char_literal289_tree = (object)adaptor.Create(char_literal289, retval);
+			adaptor.AddChild(root_0, char_literal289_tree);
 			}
 
 			}
@@ -11404,15 +11988,15 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("compound_statement", 67);
-			LeaveRule("compound_statement", 67);
+			TraceOut("compound_statement", 69);
+			LeaveRule("compound_statement", 69);
 			LeaveRule_compound_statement();
-			if (state.backtracking > 0) { Memoize(input, 67, compound_statement_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 69, compound_statement_StartIndex); }
 
 			Symbols_scopeAfter(Symbols_stack.Peek());Symbols_stack.Pop();
 
 		}
-		DebugLocation(465, 1);
+		DebugLocation(476, 1);
 		} finally { DebugExitRule(GrammarFileName, "compound_statement"); }
 		return retval;
 
@@ -11423,12 +12007,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_statement_list();
 
 	// $ANTLR start "statement_list"
-	// C.g:467:1: statement_list : ( statement )+ ;
+	// C.g:478:1: statement_list : ( statement )+ ;
 	[GrammarRule("statement_list")]
 	public XAstParserRuleReturnScope statement_list()
 	{
 		EnterRule_statement_list();
-		EnterRule("statement_list", 68);
+		EnterRule("statement_list", 70);
 		var retval = new XAstParserRuleReturnScope("statement_list");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -11436,68 +12020,68 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		XAstParserRuleReturnScope statement273 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope statement290 = default(XAstParserRuleReturnScope);
 
 		try { DebugEnterRule(GrammarFileName, "statement_list");
-		DebugLocation(467, 1);
+		DebugLocation(478, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 68)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 70)) { return retval; }
 
-			// C.g:468:2: ( ( statement )+ )
+			// C.g:479:2: ( ( statement )+ )
 			DebugEnterAlt(1);
-			// C.g:468:4: ( statement )+
+			// C.g:479:4: ( statement )+
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(468, 4);
-			// C.g:468:4: ( statement )+
-			int cnt68=0;
-			try { DebugEnterSubRule(68);
+			DebugLocation(479, 4);
+			// C.g:479:4: ( statement )+
+			int cnt72=0;
+			try { DebugEnterSubRule(72);
 			while (true)
 			{
-				int alt68=2;
-				try { DebugEnterDecision(68, false);
-				int LA68_0 = input.LA(1);
+				int alt72=2;
+				try { DebugEnterDecision(72, false);
+				int LA72_0 = input.LA(1);
 
-				if ((LA68_0==CHARACTER_LITERAL||LA68_0==DECIMAL_LITERAL||LA68_0==FLOATING_POINT_LITERAL||LA68_0==HEX_LITERAL||LA68_0==IDENTIFIER||LA68_0==OCTAL_LITERAL||LA68_0==STRING_LITERAL||LA68_0==23||LA68_0==28||LA68_0==30||LA68_0==32||(LA68_0>=34 && LA68_0<=35)||(LA68_0>=38 && LA68_0<=39)||LA68_0==47||(LA68_0>=66 && LA68_0<=67)||(LA68_0>=70 && LA68_0<=72)||(LA68_0>=78 && LA68_0<=80)||LA68_0==84||LA68_0==87||LA68_0==90||(LA68_0>=96 && LA68_0<=97)||LA68_0==102))
+				if ((LA72_0==CHARACTER_LITERAL||LA72_0==DECIMAL_LITERAL||LA72_0==FLOATING_POINT_LITERAL||LA72_0==HEX_LITERAL||LA72_0==IDENTIFIER||LA72_0==OCTAL_LITERAL||LA72_0==STRING_LITERAL||LA72_0==23||LA72_0==28||LA72_0==30||LA72_0==32||(LA72_0>=34 && LA72_0<=35)||(LA72_0>=38 && LA72_0<=39)||LA72_0==47||(LA72_0>=69 && LA72_0<=70)||(LA72_0>=73 && LA72_0<=75)||(LA72_0>=81 && LA72_0<=83)||LA72_0==87||LA72_0==90||LA72_0==93||(LA72_0>=99 && LA72_0<=100)||LA72_0==105))
 				{
-					alt68 = 1;
+					alt72 = 1;
 				}
 
 
-				} finally { DebugExitDecision(68); }
-				switch (alt68)
+				} finally { DebugExitDecision(72); }
+				switch (alt72)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:468:4: statement
+					// C.g:479:4: statement
 					{
-					DebugLocation(468, 4);
-					PushFollow(Follow._statement_in_statement_list1841);
-					statement273=statement();
+					DebugLocation(479, 4);
+					PushFollow(Follow._statement_in_statement_list1950);
+					statement290=statement();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, statement273.Tree, statement273, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, statement290.Tree, statement290, retval);
 
 					}
 					break;
 
 				default:
-					if (cnt68 >= 1)
-						goto loop68;
+					if (cnt72 >= 1)
+						goto loop72;
 
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					EarlyExitException eee68 = new EarlyExitException( 68, input );
-					DebugRecognitionException(eee68);
-					throw eee68;
+					EarlyExitException eee72 = new EarlyExitException( 72, input );
+					DebugRecognitionException(eee72);
+					throw eee72;
 				}
-				cnt68++;
+				cnt72++;
 			}
-			loop68:
+			loop72:
 				;
 
-			} finally { DebugExitSubRule(68); }
+			} finally { DebugExitSubRule(72); }
 
 
 			}
@@ -11518,13 +12102,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("statement_list", 68);
-			LeaveRule("statement_list", 68);
+			TraceOut("statement_list", 70);
+			LeaveRule("statement_list", 70);
 			LeaveRule_statement_list();
-			if (state.backtracking > 0) { Memoize(input, 68, statement_list_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 70, statement_list_StartIndex); }
 
 		}
-		DebugLocation(469, 1);
+		DebugLocation(480, 1);
 		} finally { DebugExitRule(GrammarFileName, "statement_list"); }
 		return retval;
 
@@ -11535,12 +12119,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_expression_statement();
 
 	// $ANTLR start "expression_statement"
-	// C.g:471:1: expression_statement : ( ';' | expression ';' );
+	// C.g:482:1: expression_statement : ( ';' | expression ';' );
 	[GrammarRule("expression_statement")]
 	public XAstParserRuleReturnScope expression_statement()
 	{
 		EnterRule_expression_statement();
-		EnterRule("expression_statement", 69);
+		EnterRule("expression_statement", 71);
 		var retval = new XAstParserRuleReturnScope("expression_statement");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -11548,73 +12132,73 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken char_literal274 = default(IToken);
-		IToken char_literal276 = default(IToken);
-		XAstParserRuleReturnScope expression275 = default(XAstParserRuleReturnScope);
+		IToken char_literal291 = default(IToken);
+		IToken char_literal293 = default(IToken);
+		XAstParserRuleReturnScope expression292 = default(XAstParserRuleReturnScope);
 
-		object char_literal274_tree = default(object);
-		object char_literal276_tree = default(object);
+		object char_literal291_tree = default(object);
+		object char_literal293_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "expression_statement");
-		DebugLocation(471, 1);
+		DebugLocation(482, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 69)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 71)) { return retval; }
 
-			// C.g:472:2: ( ';' | expression ';' )
-			int alt69=2;
-			try { DebugEnterDecision(69, false);
-			int LA69_0 = input.LA(1);
+			// C.g:483:2: ( ';' | expression ';' )
+			int alt73=2;
+			try { DebugEnterDecision(73, false);
+			int LA73_0 = input.LA(1);
 
-			if ((LA69_0==47))
+			if ((LA73_0==47))
 			{
-				alt69 = 1;
+				alt73 = 1;
 			}
-			else if ((LA69_0==CHARACTER_LITERAL||LA69_0==DECIMAL_LITERAL||LA69_0==FLOATING_POINT_LITERAL||LA69_0==HEX_LITERAL||LA69_0==IDENTIFIER||LA69_0==OCTAL_LITERAL||LA69_0==STRING_LITERAL||LA69_0==23||LA69_0==28||LA69_0==30||LA69_0==32||(LA69_0>=34 && LA69_0<=35)||(LA69_0>=38 && LA69_0<=39)||LA69_0==87||LA69_0==102))
+			else if ((LA73_0==CHARACTER_LITERAL||LA73_0==DECIMAL_LITERAL||LA73_0==FLOATING_POINT_LITERAL||LA73_0==HEX_LITERAL||LA73_0==IDENTIFIER||LA73_0==OCTAL_LITERAL||LA73_0==STRING_LITERAL||LA73_0==23||LA73_0==28||LA73_0==30||LA73_0==32||(LA73_0>=34 && LA73_0<=35)||(LA73_0>=38 && LA73_0<=39)||LA73_0==90||LA73_0==105))
 			{
-				alt69 = 2;
+				alt73 = 2;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 69, 0, input);
+				NoViableAltException nvae = new NoViableAltException("", 73, 0, input);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(69); }
-			switch (alt69)
+			} finally { DebugExitDecision(73); }
+			switch (alt73)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:472:4: ';'
+				// C.g:483:4: ';'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(472, 4);
-				char_literal274=(IToken)Match(input,47,Follow._47_in_expression_statement1853); if (state.failed) return retval;
+				DebugLocation(483, 4);
+				char_literal291=(IToken)Match(input,47,Follow._47_in_expression_statement1962); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal274_tree = (object)adaptor.Create(char_literal274, retval);
-				adaptor.AddChild(root_0, char_literal274_tree);
+				char_literal291_tree = (object)adaptor.Create(char_literal291, retval);
+				adaptor.AddChild(root_0, char_literal291_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C.g:473:4: expression ';'
+				// C.g:484:4: expression ';'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(473, 4);
-				PushFollow(Follow._expression_in_expression_statement1858);
-				expression275=expression();
+				DebugLocation(484, 4);
+				PushFollow(Follow._expression_in_expression_statement1967);
+				expression292=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression275.Tree, expression275, retval);
-				DebugLocation(473, 15);
-				char_literal276=(IToken)Match(input,47,Follow._47_in_expression_statement1860); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression292.Tree, expression292, retval);
+				DebugLocation(484, 15);
+				char_literal293=(IToken)Match(input,47,Follow._47_in_expression_statement1969); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal276_tree = (object)adaptor.Create(char_literal276, retval);
-				adaptor.AddChild(root_0, char_literal276_tree);
+				char_literal293_tree = (object)adaptor.Create(char_literal293, retval);
+				adaptor.AddChild(root_0, char_literal293_tree);
 				}
 
 				}
@@ -11637,13 +12221,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("expression_statement", 69);
-			LeaveRule("expression_statement", 69);
+			TraceOut("expression_statement", 71);
+			LeaveRule("expression_statement", 71);
 			LeaveRule_expression_statement();
-			if (state.backtracking > 0) { Memoize(input, 69, expression_statement_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 71, expression_statement_StartIndex); }
 
 		}
-		DebugLocation(474, 1);
+		DebugLocation(485, 1);
 		} finally { DebugExitRule(GrammarFileName, "expression_statement"); }
 		return retval;
 
@@ -11654,12 +12238,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_selection_statement();
 
 	// $ANTLR start "selection_statement"
-	// C.g:476:1: selection_statement : ( 'if' '(' expression ')' statement ( options {k=1; backtrack=false; } : 'else' statement )? | 'switch' '(' expression ')' statement );
+	// C.g:487:1: selection_statement : ( 'if' '(' expression ')' statement ( options {k=1; backtrack=false; } : 'else' statement )? | 'switch' '(' expression ')' statement );
 	[GrammarRule("selection_statement")]
 	public XAstParserRuleReturnScope selection_statement()
 	{
 		EnterRule_selection_statement();
-		EnterRule("selection_statement", 70);
+		EnterRule("selection_statement", 72);
 		var retval = new XAstParserRuleReturnScope("selection_statement");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -11667,172 +12251,172 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken string_literal277 = default(IToken);
-		IToken char_literal278 = default(IToken);
-		IToken char_literal280 = default(IToken);
-		IToken string_literal282 = default(IToken);
-		IToken string_literal284 = default(IToken);
-		IToken char_literal285 = default(IToken);
-		IToken char_literal287 = default(IToken);
-		XAstParserRuleReturnScope expression279 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope statement281 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope statement283 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope expression286 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope statement288 = default(XAstParserRuleReturnScope);
+		IToken string_literal294 = default(IToken);
+		IToken char_literal295 = default(IToken);
+		IToken char_literal297 = default(IToken);
+		IToken string_literal299 = default(IToken);
+		IToken string_literal301 = default(IToken);
+		IToken char_literal302 = default(IToken);
+		IToken char_literal304 = default(IToken);
+		XAstParserRuleReturnScope expression296 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope statement298 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope statement300 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope expression303 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope statement305 = default(XAstParserRuleReturnScope);
 
-		object string_literal277_tree = default(object);
-		object char_literal278_tree = default(object);
-		object char_literal280_tree = default(object);
-		object string_literal282_tree = default(object);
-		object string_literal284_tree = default(object);
-		object char_literal285_tree = default(object);
-		object char_literal287_tree = default(object);
+		object string_literal294_tree = default(object);
+		object char_literal295_tree = default(object);
+		object char_literal297_tree = default(object);
+		object string_literal299_tree = default(object);
+		object string_literal301_tree = default(object);
+		object char_literal302_tree = default(object);
+		object char_literal304_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "selection_statement");
-		DebugLocation(476, 1);
+		DebugLocation(487, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 70)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 72)) { return retval; }
 
-			// C.g:477:2: ( 'if' '(' expression ')' statement ( options {k=1; backtrack=false; } : 'else' statement )? | 'switch' '(' expression ')' statement )
-			int alt71=2;
-			try { DebugEnterDecision(71, false);
-			int LA71_0 = input.LA(1);
+			// C.g:488:2: ( 'if' '(' expression ')' statement ( options {k=1; backtrack=false; } : 'else' statement )? | 'switch' '(' expression ')' statement )
+			int alt75=2;
+			try { DebugEnterDecision(75, false);
+			int LA75_0 = input.LA(1);
 
-			if ((LA71_0==80))
+			if ((LA75_0==83))
 			{
-				alt71 = 1;
+				alt75 = 1;
 			}
-			else if ((LA71_0==90))
+			else if ((LA75_0==93))
 			{
-				alt71 = 2;
+				alt75 = 2;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 71, 0, input);
+				NoViableAltException nvae = new NoViableAltException("", 75, 0, input);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(71); }
-			switch (alt71)
+			} finally { DebugExitDecision(75); }
+			switch (alt75)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:477:4: 'if' '(' expression ')' statement ( options {k=1; backtrack=false; } : 'else' statement )?
+				// C.g:488:4: 'if' '(' expression ')' statement ( options {k=1; backtrack=false; } : 'else' statement )?
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(477, 4);
-				string_literal277=(IToken)Match(input,80,Follow._80_in_selection_statement1871); if (state.failed) return retval;
+				DebugLocation(488, 4);
+				string_literal294=(IToken)Match(input,83,Follow._83_in_selection_statement1980); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal277_tree = (object)adaptor.Create(string_literal277, retval);
-				adaptor.AddChild(root_0, string_literal277_tree);
+				string_literal294_tree = (object)adaptor.Create(string_literal294, retval);
+				adaptor.AddChild(root_0, string_literal294_tree);
 				}
-				DebugLocation(477, 9);
-				char_literal278=(IToken)Match(input,30,Follow._30_in_selection_statement1873); if (state.failed) return retval;
+				DebugLocation(488, 9);
+				char_literal295=(IToken)Match(input,30,Follow._30_in_selection_statement1982); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal278_tree = (object)adaptor.Create(char_literal278, retval);
-				adaptor.AddChild(root_0, char_literal278_tree);
+				char_literal295_tree = (object)adaptor.Create(char_literal295, retval);
+				adaptor.AddChild(root_0, char_literal295_tree);
 				}
-				DebugLocation(477, 13);
-				PushFollow(Follow._expression_in_selection_statement1875);
-				expression279=expression();
+				DebugLocation(488, 13);
+				PushFollow(Follow._expression_in_selection_statement1984);
+				expression296=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression279.Tree, expression279, retval);
-				DebugLocation(477, 24);
-				char_literal280=(IToken)Match(input,31,Follow._31_in_selection_statement1877); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression296.Tree, expression296, retval);
+				DebugLocation(488, 24);
+				char_literal297=(IToken)Match(input,31,Follow._31_in_selection_statement1986); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal280_tree = (object)adaptor.Create(char_literal280, retval);
-				adaptor.AddChild(root_0, char_literal280_tree);
+				char_literal297_tree = (object)adaptor.Create(char_literal297, retval);
+				adaptor.AddChild(root_0, char_literal297_tree);
 				}
-				DebugLocation(477, 28);
-				PushFollow(Follow._statement_in_selection_statement1879);
-				statement281=statement();
+				DebugLocation(488, 28);
+				PushFollow(Follow._statement_in_selection_statement1988);
+				statement298=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement281.Tree, statement281, retval);
-				DebugLocation(477, 38);
-				// C.g:477:38: ( options {k=1; backtrack=false; } : 'else' statement )?
-				int alt70=2;
-				try { DebugEnterSubRule(70);
-				try { DebugEnterDecision(70, false);
-				int LA70_0 = input.LA(1);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement298.Tree, statement298, retval);
+				DebugLocation(488, 38);
+				// C.g:488:38: ( options {k=1; backtrack=false; } : 'else' statement )?
+				int alt74=2;
+				try { DebugEnterSubRule(74);
+				try { DebugEnterDecision(74, false);
+				int LA74_0 = input.LA(1);
 
-				if ((LA70_0==74))
+				if ((LA74_0==77))
 				{
-					int LA70_1 = input.LA(2);
+					int LA74_1 = input.LA(2);
 
 					if ((true))
 					{
-						alt70 = 1;
+						alt74 = 1;
 					}
 				}
-				} finally { DebugExitDecision(70); }
-				switch (alt70)
+				} finally { DebugExitDecision(74); }
+				switch (alt74)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:477:71: 'else' statement
+					// C.g:488:71: 'else' statement
 					{
-					DebugLocation(477, 71);
-					string_literal282=(IToken)Match(input,74,Follow._74_in_selection_statement1894); if (state.failed) return retval;
+					DebugLocation(488, 71);
+					string_literal299=(IToken)Match(input,77,Follow._77_in_selection_statement2003); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					string_literal282_tree = (object)adaptor.Create(string_literal282, retval);
-					adaptor.AddChild(root_0, string_literal282_tree);
+					string_literal299_tree = (object)adaptor.Create(string_literal299, retval);
+					adaptor.AddChild(root_0, string_literal299_tree);
 					}
-					DebugLocation(477, 78);
-					PushFollow(Follow._statement_in_selection_statement1896);
-					statement283=statement();
+					DebugLocation(488, 78);
+					PushFollow(Follow._statement_in_selection_statement2005);
+					statement300=statement();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, statement283.Tree, statement283, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, statement300.Tree, statement300, retval);
 
 					}
 					break;
 
 				}
-				} finally { DebugExitSubRule(70); }
+				} finally { DebugExitSubRule(74); }
 
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C.g:478:4: 'switch' '(' expression ')' statement
+				// C.g:489:4: 'switch' '(' expression ')' statement
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(478, 4);
-				string_literal284=(IToken)Match(input,90,Follow._90_in_selection_statement1903); if (state.failed) return retval;
+				DebugLocation(489, 4);
+				string_literal301=(IToken)Match(input,93,Follow._93_in_selection_statement2012); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal284_tree = (object)adaptor.Create(string_literal284, retval);
-				adaptor.AddChild(root_0, string_literal284_tree);
+				string_literal301_tree = (object)adaptor.Create(string_literal301, retval);
+				adaptor.AddChild(root_0, string_literal301_tree);
 				}
-				DebugLocation(478, 13);
-				char_literal285=(IToken)Match(input,30,Follow._30_in_selection_statement1905); if (state.failed) return retval;
+				DebugLocation(489, 13);
+				char_literal302=(IToken)Match(input,30,Follow._30_in_selection_statement2014); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal285_tree = (object)adaptor.Create(char_literal285, retval);
-				adaptor.AddChild(root_0, char_literal285_tree);
+				char_literal302_tree = (object)adaptor.Create(char_literal302, retval);
+				adaptor.AddChild(root_0, char_literal302_tree);
 				}
-				DebugLocation(478, 17);
-				PushFollow(Follow._expression_in_selection_statement1907);
-				expression286=expression();
+				DebugLocation(489, 17);
+				PushFollow(Follow._expression_in_selection_statement2016);
+				expression303=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression286.Tree, expression286, retval);
-				DebugLocation(478, 28);
-				char_literal287=(IToken)Match(input,31,Follow._31_in_selection_statement1909); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression303.Tree, expression303, retval);
+				DebugLocation(489, 28);
+				char_literal304=(IToken)Match(input,31,Follow._31_in_selection_statement2018); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal287_tree = (object)adaptor.Create(char_literal287, retval);
-				adaptor.AddChild(root_0, char_literal287_tree);
+				char_literal304_tree = (object)adaptor.Create(char_literal304, retval);
+				adaptor.AddChild(root_0, char_literal304_tree);
 				}
-				DebugLocation(478, 32);
-				PushFollow(Follow._statement_in_selection_statement1911);
-				statement288=statement();
+				DebugLocation(489, 32);
+				PushFollow(Follow._statement_in_selection_statement2020);
+				statement305=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement288.Tree, statement288, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement305.Tree, statement305, retval);
 
 				}
 				break;
@@ -11854,13 +12438,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("selection_statement", 70);
-			LeaveRule("selection_statement", 70);
+			TraceOut("selection_statement", 72);
+			LeaveRule("selection_statement", 72);
 			LeaveRule_selection_statement();
-			if (state.backtracking > 0) { Memoize(input, 70, selection_statement_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 72, selection_statement_StartIndex); }
 
 		}
-		DebugLocation(479, 1);
+		DebugLocation(490, 1);
 		} finally { DebugExitRule(GrammarFileName, "selection_statement"); }
 		return retval;
 
@@ -11871,12 +12455,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_iteration_statement();
 
 	// $ANTLR start "iteration_statement"
-	// C.g:481:1: iteration_statement : ( 'while' '(' expression ')' statement | 'do' statement 'while' '(' expression ')' ';' | 'for' '(' expression_statement expression_statement ( expression )? ')' statement );
+	// C.g:492:1: iteration_statement : ( 'while' '(' expression ')' statement | 'do' statement 'while' '(' expression ')' ';' | 'for' '(' expression_statement expression_statement ( expression )? ')' statement );
 	[GrammarRule("iteration_statement")]
 	public XAstParserRuleReturnScope iteration_statement()
 	{
 		EnterRule_iteration_statement();
-		EnterRule("iteration_statement", 71);
+		EnterRule("iteration_statement", 73);
 		var retval = new XAstParserRuleReturnScope("iteration_statement");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -11884,238 +12468,238 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken string_literal289 = default(IToken);
-		IToken char_literal290 = default(IToken);
-		IToken char_literal292 = default(IToken);
-		IToken string_literal294 = default(IToken);
-		IToken string_literal296 = default(IToken);
-		IToken char_literal297 = default(IToken);
-		IToken char_literal299 = default(IToken);
-		IToken char_literal300 = default(IToken);
-		IToken string_literal301 = default(IToken);
-		IToken char_literal302 = default(IToken);
-		IToken char_literal306 = default(IToken);
-		XAstParserRuleReturnScope expression291 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope statement293 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope statement295 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope expression298 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope expression_statement303 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope expression_statement304 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope expression305 = default(XAstParserRuleReturnScope);
-		XAstParserRuleReturnScope statement307 = default(XAstParserRuleReturnScope);
+		IToken string_literal306 = default(IToken);
+		IToken char_literal307 = default(IToken);
+		IToken char_literal309 = default(IToken);
+		IToken string_literal311 = default(IToken);
+		IToken string_literal313 = default(IToken);
+		IToken char_literal314 = default(IToken);
+		IToken char_literal316 = default(IToken);
+		IToken char_literal317 = default(IToken);
+		IToken string_literal318 = default(IToken);
+		IToken char_literal319 = default(IToken);
+		IToken char_literal323 = default(IToken);
+		XAstParserRuleReturnScope expression308 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope statement310 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope statement312 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope expression315 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope expression_statement320 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope expression_statement321 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope expression322 = default(XAstParserRuleReturnScope);
+		XAstParserRuleReturnScope statement324 = default(XAstParserRuleReturnScope);
 
-		object string_literal289_tree = default(object);
-		object char_literal290_tree = default(object);
-		object char_literal292_tree = default(object);
-		object string_literal294_tree = default(object);
-		object string_literal296_tree = default(object);
-		object char_literal297_tree = default(object);
-		object char_literal299_tree = default(object);
-		object char_literal300_tree = default(object);
-		object string_literal301_tree = default(object);
-		object char_literal302_tree = default(object);
-		object char_literal306_tree = default(object);
+		object string_literal306_tree = default(object);
+		object char_literal307_tree = default(object);
+		object char_literal309_tree = default(object);
+		object string_literal311_tree = default(object);
+		object string_literal313_tree = default(object);
+		object char_literal314_tree = default(object);
+		object char_literal316_tree = default(object);
+		object char_literal317_tree = default(object);
+		object string_literal318_tree = default(object);
+		object char_literal319_tree = default(object);
+		object char_literal323_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "iteration_statement");
-		DebugLocation(481, 1);
+		DebugLocation(492, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 71)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 73)) { return retval; }
 
-			// C.g:482:2: ( 'while' '(' expression ')' statement | 'do' statement 'while' '(' expression ')' ';' | 'for' '(' expression_statement expression_statement ( expression )? ')' statement )
-			int alt73=3;
-			try { DebugEnterDecision(73, false);
+			// C.g:493:2: ( 'while' '(' expression ')' statement | 'do' statement 'while' '(' expression ')' ';' | 'for' '(' expression_statement expression_statement ( expression )? ')' statement )
+			int alt77=3;
+			try { DebugEnterDecision(77, false);
 			switch (input.LA(1))
 			{
-			case 96:
+			case 99:
 				{
-				alt73 = 1;
+				alt77 = 1;
 				}
 				break;
-			case 72:
+			case 75:
 				{
-				alt73 = 2;
+				alt77 = 2;
 				}
 				break;
-			case 78:
+			case 81:
 				{
-				alt73 = 3;
+				alt77 = 3;
 				}
 				break;
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 73, 0, input);
+					NoViableAltException nvae = new NoViableAltException("", 77, 0, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(73); }
-			switch (alt73)
+			} finally { DebugExitDecision(77); }
+			switch (alt77)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:482:4: 'while' '(' expression ')' statement
+				// C.g:493:4: 'while' '(' expression ')' statement
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(482, 4);
-				string_literal289=(IToken)Match(input,96,Follow._96_in_iteration_statement1922); if (state.failed) return retval;
+				DebugLocation(493, 4);
+				string_literal306=(IToken)Match(input,99,Follow._99_in_iteration_statement2031); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal289_tree = (object)adaptor.Create(string_literal289, retval);
-				adaptor.AddChild(root_0, string_literal289_tree);
+				string_literal306_tree = (object)adaptor.Create(string_literal306, retval);
+				adaptor.AddChild(root_0, string_literal306_tree);
 				}
-				DebugLocation(482, 12);
-				char_literal290=(IToken)Match(input,30,Follow._30_in_iteration_statement1924); if (state.failed) return retval;
+				DebugLocation(493, 12);
+				char_literal307=(IToken)Match(input,30,Follow._30_in_iteration_statement2033); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal290_tree = (object)adaptor.Create(char_literal290, retval);
-				adaptor.AddChild(root_0, char_literal290_tree);
+				char_literal307_tree = (object)adaptor.Create(char_literal307, retval);
+				adaptor.AddChild(root_0, char_literal307_tree);
 				}
-				DebugLocation(482, 16);
-				PushFollow(Follow._expression_in_iteration_statement1926);
-				expression291=expression();
+				DebugLocation(493, 16);
+				PushFollow(Follow._expression_in_iteration_statement2035);
+				expression308=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression291.Tree, expression291, retval);
-				DebugLocation(482, 27);
-				char_literal292=(IToken)Match(input,31,Follow._31_in_iteration_statement1928); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression308.Tree, expression308, retval);
+				DebugLocation(493, 27);
+				char_literal309=(IToken)Match(input,31,Follow._31_in_iteration_statement2037); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal292_tree = (object)adaptor.Create(char_literal292, retval);
-				adaptor.AddChild(root_0, char_literal292_tree);
+				char_literal309_tree = (object)adaptor.Create(char_literal309, retval);
+				adaptor.AddChild(root_0, char_literal309_tree);
 				}
-				DebugLocation(482, 31);
-				PushFollow(Follow._statement_in_iteration_statement1930);
-				statement293=statement();
+				DebugLocation(493, 31);
+				PushFollow(Follow._statement_in_iteration_statement2039);
+				statement310=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement293.Tree, statement293, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement310.Tree, statement310, retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C.g:483:4: 'do' statement 'while' '(' expression ')' ';'
+				// C.g:494:4: 'do' statement 'while' '(' expression ')' ';'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(483, 4);
-				string_literal294=(IToken)Match(input,72,Follow._72_in_iteration_statement1935); if (state.failed) return retval;
+				DebugLocation(494, 4);
+				string_literal311=(IToken)Match(input,75,Follow._75_in_iteration_statement2044); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal294_tree = (object)adaptor.Create(string_literal294, retval);
-				adaptor.AddChild(root_0, string_literal294_tree);
+				string_literal311_tree = (object)adaptor.Create(string_literal311, retval);
+				adaptor.AddChild(root_0, string_literal311_tree);
 				}
-				DebugLocation(483, 9);
-				PushFollow(Follow._statement_in_iteration_statement1937);
-				statement295=statement();
+				DebugLocation(494, 9);
+				PushFollow(Follow._statement_in_iteration_statement2046);
+				statement312=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement295.Tree, statement295, retval);
-				DebugLocation(483, 19);
-				string_literal296=(IToken)Match(input,96,Follow._96_in_iteration_statement1939); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement312.Tree, statement312, retval);
+				DebugLocation(494, 19);
+				string_literal313=(IToken)Match(input,99,Follow._99_in_iteration_statement2048); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal296_tree = (object)adaptor.Create(string_literal296, retval);
-				adaptor.AddChild(root_0, string_literal296_tree);
+				string_literal313_tree = (object)adaptor.Create(string_literal313, retval);
+				adaptor.AddChild(root_0, string_literal313_tree);
 				}
-				DebugLocation(483, 27);
-				char_literal297=(IToken)Match(input,30,Follow._30_in_iteration_statement1941); if (state.failed) return retval;
+				DebugLocation(494, 27);
+				char_literal314=(IToken)Match(input,30,Follow._30_in_iteration_statement2050); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal297_tree = (object)adaptor.Create(char_literal297, retval);
-				adaptor.AddChild(root_0, char_literal297_tree);
+				char_literal314_tree = (object)adaptor.Create(char_literal314, retval);
+				adaptor.AddChild(root_0, char_literal314_tree);
 				}
-				DebugLocation(483, 31);
-				PushFollow(Follow._expression_in_iteration_statement1943);
-				expression298=expression();
+				DebugLocation(494, 31);
+				PushFollow(Follow._expression_in_iteration_statement2052);
+				expression315=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression298.Tree, expression298, retval);
-				DebugLocation(483, 42);
-				char_literal299=(IToken)Match(input,31,Follow._31_in_iteration_statement1945); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression315.Tree, expression315, retval);
+				DebugLocation(494, 42);
+				char_literal316=(IToken)Match(input,31,Follow._31_in_iteration_statement2054); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal299_tree = (object)adaptor.Create(char_literal299, retval);
-				adaptor.AddChild(root_0, char_literal299_tree);
+				char_literal316_tree = (object)adaptor.Create(char_literal316, retval);
+				adaptor.AddChild(root_0, char_literal316_tree);
 				}
-				DebugLocation(483, 46);
-				char_literal300=(IToken)Match(input,47,Follow._47_in_iteration_statement1947); if (state.failed) return retval;
+				DebugLocation(494, 46);
+				char_literal317=(IToken)Match(input,47,Follow._47_in_iteration_statement2056); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal300_tree = (object)adaptor.Create(char_literal300, retval);
-				adaptor.AddChild(root_0, char_literal300_tree);
+				char_literal317_tree = (object)adaptor.Create(char_literal317, retval);
+				adaptor.AddChild(root_0, char_literal317_tree);
 				}
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C.g:484:4: 'for' '(' expression_statement expression_statement ( expression )? ')' statement
+				// C.g:495:4: 'for' '(' expression_statement expression_statement ( expression )? ')' statement
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(484, 4);
-				string_literal301=(IToken)Match(input,78,Follow._78_in_iteration_statement1952); if (state.failed) return retval;
+				DebugLocation(495, 4);
+				string_literal318=(IToken)Match(input,81,Follow._81_in_iteration_statement2061); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal301_tree = (object)adaptor.Create(string_literal301, retval);
-				adaptor.AddChild(root_0, string_literal301_tree);
+				string_literal318_tree = (object)adaptor.Create(string_literal318, retval);
+				adaptor.AddChild(root_0, string_literal318_tree);
 				}
-				DebugLocation(484, 10);
-				char_literal302=(IToken)Match(input,30,Follow._30_in_iteration_statement1954); if (state.failed) return retval;
+				DebugLocation(495, 10);
+				char_literal319=(IToken)Match(input,30,Follow._30_in_iteration_statement2063); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal302_tree = (object)adaptor.Create(char_literal302, retval);
-				adaptor.AddChild(root_0, char_literal302_tree);
+				char_literal319_tree = (object)adaptor.Create(char_literal319, retval);
+				adaptor.AddChild(root_0, char_literal319_tree);
 				}
-				DebugLocation(484, 14);
-				PushFollow(Follow._expression_statement_in_iteration_statement1956);
-				expression_statement303=expression_statement();
+				DebugLocation(495, 14);
+				PushFollow(Follow._expression_statement_in_iteration_statement2065);
+				expression_statement320=expression_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression_statement303.Tree, expression_statement303, retval);
-				DebugLocation(484, 35);
-				PushFollow(Follow._expression_statement_in_iteration_statement1958);
-				expression_statement304=expression_statement();
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression_statement320.Tree, expression_statement320, retval);
+				DebugLocation(495, 35);
+				PushFollow(Follow._expression_statement_in_iteration_statement2067);
+				expression_statement321=expression_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression_statement304.Tree, expression_statement304, retval);
-				DebugLocation(484, 56);
-				// C.g:484:56: ( expression )?
-				int alt72=2;
-				try { DebugEnterSubRule(72);
-				try { DebugEnterDecision(72, false);
-				int LA72_0 = input.LA(1);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression_statement321.Tree, expression_statement321, retval);
+				DebugLocation(495, 56);
+				// C.g:495:56: ( expression )?
+				int alt76=2;
+				try { DebugEnterSubRule(76);
+				try { DebugEnterDecision(76, false);
+				int LA76_0 = input.LA(1);
 
-				if ((LA72_0==CHARACTER_LITERAL||LA72_0==DECIMAL_LITERAL||LA72_0==FLOATING_POINT_LITERAL||LA72_0==HEX_LITERAL||LA72_0==IDENTIFIER||LA72_0==OCTAL_LITERAL||LA72_0==STRING_LITERAL||LA72_0==23||LA72_0==28||LA72_0==30||LA72_0==32||(LA72_0>=34 && LA72_0<=35)||(LA72_0>=38 && LA72_0<=39)||LA72_0==87||LA72_0==102))
+				if ((LA76_0==CHARACTER_LITERAL||LA76_0==DECIMAL_LITERAL||LA76_0==FLOATING_POINT_LITERAL||LA76_0==HEX_LITERAL||LA76_0==IDENTIFIER||LA76_0==OCTAL_LITERAL||LA76_0==STRING_LITERAL||LA76_0==23||LA76_0==28||LA76_0==30||LA76_0==32||(LA76_0>=34 && LA76_0<=35)||(LA76_0>=38 && LA76_0<=39)||LA76_0==90||LA76_0==105))
 				{
-					alt72 = 1;
+					alt76 = 1;
 				}
-				} finally { DebugExitDecision(72); }
-				switch (alt72)
+				} finally { DebugExitDecision(76); }
+				switch (alt76)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C.g:484:56: expression
+					// C.g:495:56: expression
 					{
-					DebugLocation(484, 56);
-					PushFollow(Follow._expression_in_iteration_statement1960);
-					expression305=expression();
+					DebugLocation(495, 56);
+					PushFollow(Follow._expression_in_iteration_statement2069);
+					expression322=expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, expression305.Tree, expression305, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, expression322.Tree, expression322, retval);
 
 					}
 					break;
 
 				}
-				} finally { DebugExitSubRule(72); }
+				} finally { DebugExitSubRule(76); }
 
-				DebugLocation(484, 68);
-				char_literal306=(IToken)Match(input,31,Follow._31_in_iteration_statement1963); if (state.failed) return retval;
+				DebugLocation(495, 68);
+				char_literal323=(IToken)Match(input,31,Follow._31_in_iteration_statement2072); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal306_tree = (object)adaptor.Create(char_literal306, retval);
-				adaptor.AddChild(root_0, char_literal306_tree);
+				char_literal323_tree = (object)adaptor.Create(char_literal323, retval);
+				adaptor.AddChild(root_0, char_literal323_tree);
 				}
-				DebugLocation(484, 72);
-				PushFollow(Follow._statement_in_iteration_statement1965);
-				statement307=statement();
+				DebugLocation(495, 72);
+				PushFollow(Follow._statement_in_iteration_statement2074);
+				statement324=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement307.Tree, statement307, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement324.Tree, statement324, retval);
 
 				}
 				break;
@@ -12137,13 +12721,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("iteration_statement", 71);
-			LeaveRule("iteration_statement", 71);
+			TraceOut("iteration_statement", 73);
+			LeaveRule("iteration_statement", 73);
 			LeaveRule_iteration_statement();
-			if (state.backtracking > 0) { Memoize(input, 71, iteration_statement_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 73, iteration_statement_StartIndex); }
 
 		}
-		DebugLocation(485, 1);
+		DebugLocation(496, 1);
 		} finally { DebugExitRule(GrammarFileName, "iteration_statement"); }
 		return retval;
 
@@ -12154,12 +12738,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	partial void LeaveRule_jump_statement();
 
 	// $ANTLR start "jump_statement"
-	// C.g:487:1: jump_statement : ( 'goto' IDENTIFIER ';' | 'continue' ';' | 'break' ';' | 'return' ';' | 'return' expression ';' );
+	// C.g:498:1: jump_statement : ( 'goto' IDENTIFIER ';' | 'continue' ';' | 'break' ';' | 'return' ';' | 'return' expression ';' );
 	[GrammarRule("jump_statement")]
 	public XAstParserRuleReturnScope jump_statement()
 	{
 		EnterRule_jump_statement();
-		EnterRule("jump_statement", 72);
+		EnterRule("jump_statement", 74);
 		var retval = new XAstParserRuleReturnScope("jump_statement");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -12167,72 +12751,72 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 		object root_0 = default(object);
 
-		IToken string_literal308 = default(IToken);
-		IToken IDENTIFIER309 = default(IToken);
-		IToken char_literal310 = default(IToken);
-		IToken string_literal311 = default(IToken);
-		IToken char_literal312 = default(IToken);
-		IToken string_literal313 = default(IToken);
-		IToken char_literal314 = default(IToken);
-		IToken string_literal315 = default(IToken);
-		IToken char_literal316 = default(IToken);
-		IToken string_literal317 = default(IToken);
-		IToken char_literal319 = default(IToken);
-		XAstParserRuleReturnScope expression318 = default(XAstParserRuleReturnScope);
+		IToken string_literal325 = default(IToken);
+		IToken IDENTIFIER326 = default(IToken);
+		IToken char_literal327 = default(IToken);
+		IToken string_literal328 = default(IToken);
+		IToken char_literal329 = default(IToken);
+		IToken string_literal330 = default(IToken);
+		IToken char_literal331 = default(IToken);
+		IToken string_literal332 = default(IToken);
+		IToken char_literal333 = default(IToken);
+		IToken string_literal334 = default(IToken);
+		IToken char_literal336 = default(IToken);
+		XAstParserRuleReturnScope expression335 = default(XAstParserRuleReturnScope);
 
-		object string_literal308_tree = default(object);
-		object IDENTIFIER309_tree = default(object);
-		object char_literal310_tree = default(object);
-		object string_literal311_tree = default(object);
-		object char_literal312_tree = default(object);
-		object string_literal313_tree = default(object);
-		object char_literal314_tree = default(object);
-		object string_literal315_tree = default(object);
-		object char_literal316_tree = default(object);
-		object string_literal317_tree = default(object);
-		object char_literal319_tree = default(object);
+		object string_literal325_tree = default(object);
+		object IDENTIFIER326_tree = default(object);
+		object char_literal327_tree = default(object);
+		object string_literal328_tree = default(object);
+		object char_literal329_tree = default(object);
+		object string_literal330_tree = default(object);
+		object char_literal331_tree = default(object);
+		object string_literal332_tree = default(object);
+		object char_literal333_tree = default(object);
+		object string_literal334_tree = default(object);
+		object char_literal336_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "jump_statement");
-		DebugLocation(487, 1);
+		DebugLocation(498, 1);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 72)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 74)) { return retval; }
 
-			// C.g:488:2: ( 'goto' IDENTIFIER ';' | 'continue' ';' | 'break' ';' | 'return' ';' | 'return' expression ';' )
-			int alt74=5;
-			try { DebugEnterDecision(74, false);
+			// C.g:499:2: ( 'goto' IDENTIFIER ';' | 'continue' ';' | 'break' ';' | 'return' ';' | 'return' expression ';' )
+			int alt78=5;
+			try { DebugEnterDecision(78, false);
 			switch (input.LA(1))
 			{
-			case 79:
+			case 82:
 				{
-				alt74 = 1;
+				alt78 = 1;
 				}
 				break;
-			case 70:
+			case 73:
 				{
-				alt74 = 2;
+				alt78 = 2;
 				}
 				break;
-			case 66:
+			case 69:
 				{
-				alt74 = 3;
+				alt78 = 3;
 				}
 				break;
-			case 84:
+			case 87:
 				{
-				int LA74_4 = input.LA(2);
+				int LA78_4 = input.LA(2);
 
-				if ((LA74_4==47))
+				if ((LA78_4==47))
 				{
-					alt74 = 4;
+					alt78 = 4;
 				}
-				else if ((LA74_4==CHARACTER_LITERAL||LA74_4==DECIMAL_LITERAL||LA74_4==FLOATING_POINT_LITERAL||LA74_4==HEX_LITERAL||LA74_4==IDENTIFIER||LA74_4==OCTAL_LITERAL||LA74_4==STRING_LITERAL||LA74_4==23||LA74_4==28||LA74_4==30||LA74_4==32||(LA74_4>=34 && LA74_4<=35)||(LA74_4>=38 && LA74_4<=39)||LA74_4==87||LA74_4==102))
+				else if ((LA78_4==CHARACTER_LITERAL||LA78_4==DECIMAL_LITERAL||LA78_4==FLOATING_POINT_LITERAL||LA78_4==HEX_LITERAL||LA78_4==IDENTIFIER||LA78_4==OCTAL_LITERAL||LA78_4==STRING_LITERAL||LA78_4==23||LA78_4==28||LA78_4==30||LA78_4==32||(LA78_4>=34 && LA78_4<=35)||(LA78_4>=38 && LA78_4<=39)||LA78_4==90||LA78_4==105))
 				{
-					alt74 = 5;
+					alt78 = 5;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 74, 4, input);
+					NoViableAltException nvae = new NoViableAltException("", 78, 4, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -12241,128 +12825,128 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 74, 0, input);
+					NoViableAltException nvae = new NoViableAltException("", 78, 0, input);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(74); }
-			switch (alt74)
+			} finally { DebugExitDecision(78); }
+			switch (alt78)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:488:4: 'goto' IDENTIFIER ';'
+				// C.g:499:4: 'goto' IDENTIFIER ';'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(488, 4);
-				string_literal308=(IToken)Match(input,79,Follow._79_in_jump_statement1976); if (state.failed) return retval;
+				DebugLocation(499, 4);
+				string_literal325=(IToken)Match(input,82,Follow._82_in_jump_statement2085); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal308_tree = (object)adaptor.Create(string_literal308, retval);
-				adaptor.AddChild(root_0, string_literal308_tree);
+				string_literal325_tree = (object)adaptor.Create(string_literal325, retval);
+				adaptor.AddChild(root_0, string_literal325_tree);
 				}
-				DebugLocation(488, 11);
-				IDENTIFIER309=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_jump_statement1978), "IDENTIFIER"); if (state.failed) return retval;
+				DebugLocation(499, 11);
+				IDENTIFIER326=(IToken)new XToken((IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_jump_statement2087), "IDENTIFIER"); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				IDENTIFIER309_tree = (object)adaptor.Create(IDENTIFIER309, retval);
-				adaptor.AddChild(root_0, IDENTIFIER309_tree);
+				IDENTIFIER326_tree = (object)adaptor.Create(IDENTIFIER326, retval);
+				adaptor.AddChild(root_0, IDENTIFIER326_tree);
 				}
-				DebugLocation(488, 22);
-				char_literal310=(IToken)Match(input,47,Follow._47_in_jump_statement1980); if (state.failed) return retval;
+				DebugLocation(499, 22);
+				char_literal327=(IToken)Match(input,47,Follow._47_in_jump_statement2089); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal310_tree = (object)adaptor.Create(char_literal310, retval);
-				adaptor.AddChild(root_0, char_literal310_tree);
+				char_literal327_tree = (object)adaptor.Create(char_literal327, retval);
+				adaptor.AddChild(root_0, char_literal327_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C.g:489:4: 'continue' ';'
+				// C.g:500:4: 'continue' ';'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(489, 4);
-				string_literal311=(IToken)Match(input,70,Follow._70_in_jump_statement1985); if (state.failed) return retval;
+				DebugLocation(500, 4);
+				string_literal328=(IToken)Match(input,73,Follow._73_in_jump_statement2094); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal311_tree = (object)adaptor.Create(string_literal311, retval);
-				adaptor.AddChild(root_0, string_literal311_tree);
+				string_literal328_tree = (object)adaptor.Create(string_literal328, retval);
+				adaptor.AddChild(root_0, string_literal328_tree);
 				}
-				DebugLocation(489, 15);
-				char_literal312=(IToken)Match(input,47,Follow._47_in_jump_statement1987); if (state.failed) return retval;
+				DebugLocation(500, 15);
+				char_literal329=(IToken)Match(input,47,Follow._47_in_jump_statement2096); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal312_tree = (object)adaptor.Create(char_literal312, retval);
-				adaptor.AddChild(root_0, char_literal312_tree);
+				char_literal329_tree = (object)adaptor.Create(char_literal329, retval);
+				adaptor.AddChild(root_0, char_literal329_tree);
 				}
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C.g:490:4: 'break' ';'
+				// C.g:501:4: 'break' ';'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(490, 4);
-				string_literal313=(IToken)Match(input,66,Follow._66_in_jump_statement1992); if (state.failed) return retval;
+				DebugLocation(501, 4);
+				string_literal330=(IToken)Match(input,69,Follow._69_in_jump_statement2101); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal313_tree = (object)adaptor.Create(string_literal313, retval);
-				adaptor.AddChild(root_0, string_literal313_tree);
+				string_literal330_tree = (object)adaptor.Create(string_literal330, retval);
+				adaptor.AddChild(root_0, string_literal330_tree);
 				}
-				DebugLocation(490, 12);
-				char_literal314=(IToken)Match(input,47,Follow._47_in_jump_statement1994); if (state.failed) return retval;
+				DebugLocation(501, 12);
+				char_literal331=(IToken)Match(input,47,Follow._47_in_jump_statement2103); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal314_tree = (object)adaptor.Create(char_literal314, retval);
-				adaptor.AddChild(root_0, char_literal314_tree);
+				char_literal331_tree = (object)adaptor.Create(char_literal331, retval);
+				adaptor.AddChild(root_0, char_literal331_tree);
 				}
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C.g:491:4: 'return' ';'
+				// C.g:502:4: 'return' ';'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(491, 4);
-				string_literal315=(IToken)Match(input,84,Follow._84_in_jump_statement1999); if (state.failed) return retval;
+				DebugLocation(502, 4);
+				string_literal332=(IToken)Match(input,87,Follow._87_in_jump_statement2108); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal315_tree = (object)adaptor.Create(string_literal315, retval);
-				adaptor.AddChild(root_0, string_literal315_tree);
+				string_literal332_tree = (object)adaptor.Create(string_literal332, retval);
+				adaptor.AddChild(root_0, string_literal332_tree);
 				}
-				DebugLocation(491, 13);
-				char_literal316=(IToken)Match(input,47,Follow._47_in_jump_statement2001); if (state.failed) return retval;
+				DebugLocation(502, 13);
+				char_literal333=(IToken)Match(input,47,Follow._47_in_jump_statement2110); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal316_tree = (object)adaptor.Create(char_literal316, retval);
-				adaptor.AddChild(root_0, char_literal316_tree);
+				char_literal333_tree = (object)adaptor.Create(char_literal333, retval);
+				adaptor.AddChild(root_0, char_literal333_tree);
 				}
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C.g:492:4: 'return' expression ';'
+				// C.g:503:4: 'return' expression ';'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(492, 4);
-				string_literal317=(IToken)Match(input,84,Follow._84_in_jump_statement2006); if (state.failed) return retval;
+				DebugLocation(503, 4);
+				string_literal334=(IToken)Match(input,87,Follow._87_in_jump_statement2115); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal317_tree = (object)adaptor.Create(string_literal317, retval);
-				adaptor.AddChild(root_0, string_literal317_tree);
+				string_literal334_tree = (object)adaptor.Create(string_literal334, retval);
+				adaptor.AddChild(root_0, string_literal334_tree);
 				}
-				DebugLocation(492, 13);
-				PushFollow(Follow._expression_in_jump_statement2008);
-				expression318=expression();
+				DebugLocation(503, 13);
+				PushFollow(Follow._expression_in_jump_statement2117);
+				expression335=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression318.Tree, expression318, retval);
-				DebugLocation(492, 24);
-				char_literal319=(IToken)Match(input,47,Follow._47_in_jump_statement2010); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression335.Tree, expression335, retval);
+				DebugLocation(503, 24);
+				char_literal336=(IToken)Match(input,47,Follow._47_in_jump_statement2119); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal319_tree = (object)adaptor.Create(char_literal319, retval);
-				adaptor.AddChild(root_0, char_literal319_tree);
+				char_literal336_tree = (object)adaptor.Create(char_literal336, retval);
+				adaptor.AddChild(root_0, char_literal336_tree);
 				}
 
 				}
@@ -12385,13 +12969,13 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("jump_statement", 72);
-			LeaveRule("jump_statement", 72);
+			TraceOut("jump_statement", 74);
+			LeaveRule("jump_statement", 74);
 			LeaveRule_jump_statement();
-			if (state.backtracking > 0) { Memoize(input, 72, jump_statement_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 74, jump_statement_StartIndex); }
 
 		}
-		DebugLocation(493, 1);
+		DebugLocation(504, 1);
 		} finally { DebugExitRule(GrammarFileName, "jump_statement"); }
 		return retval;
 
@@ -12405,7 +12989,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	public void synpred2_C_fragment()
 	{
 		EnterRule_synpred2_C_fragment();
-		EnterRule("synpred2_C_fragment", 74);
+		EnterRule("synpred2_C_fragment", 76);
 		var retval = new XAstParserRuleReturnScope("synpred2_C_fragment");
 		try
 		{
@@ -12424,8 +13008,8 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("synpred2_C_fragment", 74);
-			LeaveRule("synpred2_C_fragment", 74);
+			TraceOut("synpred2_C_fragment", 76);
+			LeaveRule("synpred2_C_fragment", 76);
 			LeaveRule_synpred2_C_fragment();
 		}
 	}
@@ -12438,7 +13022,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	public void synpred4_C_fragment()
 	{
 		EnterRule_synpred4_C_fragment();
-		EnterRule("synpred4_C_fragment", 76);
+		EnterRule("synpred4_C_fragment", 78);
 		var retval = new XAstParserRuleReturnScope("synpred4_C_fragment");
 		try
 		{
@@ -12448,204 +13032,234 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			{
 			DebugLocation(82, 6);
 			// C.g:82:6: ( declaration_specifiers )?
-			int alt75=2;
-			try { DebugEnterSubRule(75);
-			try { DebugEnterDecision(75, false);
-			int LA75_0 = input.LA(1);
+			int alt79=2;
+			try { DebugEnterSubRule(79);
+			try { DebugEnterDecision(79, false);
+			int LA79_0 = input.LA(1);
 
-			if (((LA75_0>=63 && LA75_0<=65)||(LA75_0>=68 && LA75_0<=69)||LA75_0==73||(LA75_0>=75 && LA75_0<=77)||(LA75_0>=81 && LA75_0<=83)||(LA75_0>=85 && LA75_0<=86)||(LA75_0>=88 && LA75_0<=89)||(LA75_0>=92 && LA75_0<=95)))
+			if (((LA79_0>=63 && LA79_0<=68)||(LA79_0>=71 && LA79_0<=72)||LA79_0==76||(LA79_0>=78 && LA79_0<=80)||(LA79_0>=84 && LA79_0<=86)||(LA79_0>=88 && LA79_0<=89)||(LA79_0>=91 && LA79_0<=92)||(LA79_0>=95 && LA79_0<=98)))
 			{
-				alt75 = 1;
+				alt79 = 1;
 			}
-			else if ((LA75_0==IDENTIFIER))
+			else if ((LA79_0==IDENTIFIER))
 			{
 				switch (input.LA(2))
 				{
 				case 32:
 					{
-					alt75 = 1;
+					alt79 = 1;
 					}
 					break;
 				case IDENTIFIER:
 					{
-					int LA75_19 = input.LA(3);
+					int LA79_22 = input.LA(3);
 
 					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
 					{
-						alt75 = 1;
+						alt79 = 1;
 					}
 					}
 					break;
 				case 30:
 					{
-					int LA75_20 = input.LA(3);
+					int LA79_23 = input.LA(3);
 
 					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
 					{
-						alt75 = 1;
-					}
-					}
-					break;
-				case 65:
-				case 76:
-				case 83:
-				case 88:
-					{
-					int LA75_21 = input.LA(3);
-
-					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
-					{
-						alt75 = 1;
-					}
-					}
-					break;
-				case 94:
-					{
-					int LA75_22 = input.LA(3);
-
-					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
-					{
-						alt75 = 1;
+						alt79 = 1;
 					}
 					}
 					break;
 				case 68:
+				case 79:
+				case 86:
+				case 91:
 					{
-					int LA75_23 = input.LA(3);
+					int LA79_24 = input.LA(3);
 
 					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
 					{
-						alt75 = 1;
+						alt79 = 1;
+					}
+					}
+					break;
+				case 97:
+					{
+					int LA79_25 = input.LA(3);
+
+					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+					{
+						alt79 = 1;
+					}
+					}
+					break;
+				case 71:
+					{
+					int LA79_26 = input.LA(3);
+
+					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+					{
+						alt79 = 1;
+					}
+					}
+					break;
+				case 88:
+					{
+					int LA79_27 = input.LA(3);
+
+					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+					{
+						alt79 = 1;
+					}
+					}
+					break;
+				case 84:
+					{
+					int LA79_28 = input.LA(3);
+
+					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+					{
+						alt79 = 1;
 					}
 					}
 					break;
 				case 85:
 					{
-					int LA75_24 = input.LA(3);
+					int LA79_29 = input.LA(3);
 
 					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
 					{
-						alt75 = 1;
+						alt79 = 1;
 					}
 					}
 					break;
-				case 81:
+				case 80:
 					{
-					int LA75_25 = input.LA(3);
+					int LA79_30 = input.LA(3);
 
 					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
 					{
-						alt75 = 1;
+						alt79 = 1;
 					}
 					}
 					break;
-				case 82:
+				case 76:
 					{
-					int LA75_26 = input.LA(3);
+					int LA79_31 = input.LA(3);
 
 					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
 					{
-						alt75 = 1;
-					}
-					}
-					break;
-				case 77:
-					{
-					int LA75_27 = input.LA(3);
-
-					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
-					{
-						alt75 = 1;
-					}
-					}
-					break;
-				case 73:
-					{
-					int LA75_28 = input.LA(3);
-
-					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
-					{
-						alt75 = 1;
-					}
-					}
-					break;
-				case 86:
-					{
-					int LA75_29 = input.LA(3);
-
-					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
-					{
-						alt75 = 1;
-					}
-					}
-					break;
-				case 93:
-					{
-					int LA75_30 = input.LA(3);
-
-					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
-					{
-						alt75 = 1;
-					}
-					}
-					break;
-				case 63:
-					{
-					int LA75_31 = input.LA(3);
-
-					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
-					{
-						alt75 = 1;
+						alt79 = 1;
 					}
 					}
 					break;
 				case 89:
-				case 92:
 					{
-					int LA75_32 = input.LA(3);
+					int LA79_32 = input.LA(3);
 
 					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
 					{
-						alt75 = 1;
+						alt79 = 1;
 					}
 					}
 					break;
-				case 75:
+				case 96:
 					{
-					int LA75_33 = input.LA(3);
+					int LA79_33 = input.LA(3);
 
 					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
 					{
-						alt75 = 1;
+						alt79 = 1;
+					}
+					}
+					break;
+				case 92:
+				case 95:
+					{
+					int LA79_34 = input.LA(3);
+
+					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+					{
+						alt79 = 1;
+					}
+					}
+					break;
+				case 78:
+					{
+					int LA79_35 = input.LA(3);
+
+					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+					{
+						alt79 = 1;
+					}
+					}
+					break;
+				case 65:
+					{
+					int LA79_36 = input.LA(3);
+
+					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+					{
+						alt79 = 1;
 					}
 					}
 					break;
 				case 64:
 					{
-					int LA75_34 = input.LA(3);
+					int LA79_37 = input.LA(3);
 
 					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
 					{
-						alt75 = 1;
+						alt79 = 1;
 					}
 					}
 					break;
-				case 69:
-				case 95:
+				case 66:
 					{
-					int LA75_36 = input.LA(3);
+					int LA79_38 = input.LA(3);
 
 					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
 					{
-						alt75 = 1;
+						alt79 = 1;
+					}
+					}
+					break;
+				case 63:
+					{
+					int LA79_39 = input.LA(3);
+
+					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+					{
+						alt79 = 1;
+					}
+					}
+					break;
+				case 67:
+					{
+					int LA79_40 = input.LA(3);
+
+					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+					{
+						alt79 = 1;
+					}
+					}
+					break;
+				case 72:
+				case 98:
+					{
+					int LA79_42 = input.LA(3);
+
+					if ((((EvaluatePredicate(synpred2_C_fragment)&&EvaluatePredicate(synpred2_C_fragment))&&(isTypeName(input.LT(1).getText())))))
+					{
+						alt79 = 1;
 					}
 					}
 					break;
 				}
 
 			}
-			} finally { DebugExitDecision(75); }
-			switch (alt75)
+			} finally { DebugExitDecision(79); }
+			switch (alt79)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -12661,7 +13275,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				break;
 
 			}
-			} finally { DebugExitSubRule(75); }
+			} finally { DebugExitSubRule(79); }
 
 			DebugLocation(82, 30);
 			PushFollow(Follow._declarator_in_synpred4_C97);
@@ -12670,21 +13284,21 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 			if (state.failed) return;
 			DebugLocation(82, 41);
 			// C.g:82:41: ( declaration )*
-			try { DebugEnterSubRule(76);
+			try { DebugEnterSubRule(80);
 			while (true)
 			{
-				int alt76=2;
-				try { DebugEnterDecision(76, false);
-				int LA76_0 = input.LA(1);
+				int alt80=2;
+				try { DebugEnterDecision(80, false);
+				int LA80_0 = input.LA(1);
 
-				if ((LA76_0==IDENTIFIER||(LA76_0>=63 && LA76_0<=65)||(LA76_0>=68 && LA76_0<=69)||LA76_0==73||(LA76_0>=75 && LA76_0<=77)||(LA76_0>=81 && LA76_0<=83)||(LA76_0>=85 && LA76_0<=86)||(LA76_0>=88 && LA76_0<=89)||(LA76_0>=91 && LA76_0<=95)))
+				if ((LA80_0==IDENTIFIER||(LA80_0>=63 && LA80_0<=68)||(LA80_0>=71 && LA80_0<=72)||LA80_0==76||(LA80_0>=78 && LA80_0<=80)||(LA80_0>=84 && LA80_0<=86)||(LA80_0>=88 && LA80_0<=89)||(LA80_0>=91 && LA80_0<=92)||(LA80_0>=94 && LA80_0<=98)))
 				{
-					alt76 = 1;
+					alt80 = 1;
 				}
 
 
-				} finally { DebugExitDecision(76); }
-				switch ( alt76 )
+				} finally { DebugExitDecision(80); }
+				switch ( alt80 )
 				{
 				case 1:
 					DebugEnterAlt(1);
@@ -12700,25 +13314,25 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 					break;
 
 				default:
-					goto loop76;
+					goto loop80;
 				}
 			}
 
-			loop76:
+			loop80:
 				;
 
-			} finally { DebugExitSubRule(76); }
+			} finally { DebugExitSubRule(80); }
 
 			DebugLocation(82, 54);
-			Match(input,97,Follow._97_in_synpred4_C102); if (state.failed) return;
+			Match(input,100,Follow._100_in_synpred4_C102); if (state.failed) return;
 
 			}
 
 		}
 		finally
 		{
-			TraceOut("synpred4_C_fragment", 76);
-			LeaveRule("synpred4_C_fragment", 76);
+			TraceOut("synpred4_C_fragment", 78);
+			LeaveRule("synpred4_C_fragment", 78);
 			LeaveRule_synpred4_C_fragment();
 		}
 	}
@@ -12731,7 +13345,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	public void synpred5_C_fragment()
 	{
 		EnterRule_synpred5_C_fragment();
-		EnterRule("synpred5_C_fragment", 77);
+		EnterRule("synpred5_C_fragment", 79);
 		var retval = new XAstParserRuleReturnScope("synpred5_C_fragment");
 		try
 		{
@@ -12750,8 +13364,8 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("synpred5_C_fragment", 77);
-			LeaveRule("synpred5_C_fragment", 77);
+			TraceOut("synpred5_C_fragment", 79);
+			LeaveRule("synpred5_C_fragment", 79);
 			LeaveRule_synpred5_C_fragment();
 		}
 	}
@@ -12764,7 +13378,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	public void synpred9_C_fragment()
 	{
 		EnterRule_synpred9_C_fragment();
-		EnterRule("synpred9_C_fragment", 81);
+		EnterRule("synpred9_C_fragment", 83);
 		var retval = new XAstParserRuleReturnScope("synpred9_C_fragment");
 		try
 		{
@@ -12783,8 +13397,8 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("synpred9_C_fragment", 81);
-			LeaveRule("synpred9_C_fragment", 81);
+			TraceOut("synpred9_C_fragment", 83);
+			LeaveRule("synpred9_C_fragment", 83);
 			LeaveRule_synpred9_C_fragment();
 		}
 	}
@@ -12797,7 +13411,7 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	public void synpred13_C_fragment()
 	{
 		EnterRule_synpred13_C_fragment();
-		EnterRule("synpred13_C_fragment", 85);
+		EnterRule("synpred13_C_fragment", 87);
 		var retval = new XAstParserRuleReturnScope("synpred13_C_fragment");
 		try
 		{
@@ -12816,30 +13430,30 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("synpred13_C_fragment", 85);
-			LeaveRule("synpred13_C_fragment", 85);
+			TraceOut("synpred13_C_fragment", 87);
+			LeaveRule("synpred13_C_fragment", 87);
 			LeaveRule_synpred13_C_fragment();
 		}
 	}
 	// $ANTLR end synpred13_C
 
-	partial void EnterRule_synpred37_C_fragment();
-	partial void LeaveRule_synpred37_C_fragment();
+	partial void EnterRule_synpred43_C_fragment();
+	partial void LeaveRule_synpred43_C_fragment();
 
-	// $ANTLR start synpred37_C
-	public void synpred37_C_fragment()
+	// $ANTLR start synpred43_C
+	public void synpred43_C_fragment()
 	{
-		EnterRule_synpred37_C_fragment();
-		EnterRule("synpred37_C_fragment", 109);
-		var retval = new XAstParserRuleReturnScope("synpred37_C_fragment");
+		EnterRule_synpred43_C_fragment();
+		EnterRule("synpred43_C_fragment", 117);
+		var retval = new XAstParserRuleReturnScope("synpred43_C_fragment");
 		try
 		{
-			// C.g:176:23: ( type_specifier )
+			// C.g:187:23: ( type_specifier )
 			DebugEnterAlt(1);
-			// C.g:176:23: type_specifier
+			// C.g:187:23: type_specifier
 			{
-			DebugLocation(176, 23);
-			PushFollow(Follow._type_specifier_in_synpred37_C503);
+			DebugLocation(187, 23);
+			PushFollow(Follow._type_specifier_in_synpred43_C612);
 			type_specifier();
 			PopFollow();
 			if (state.failed) return;
@@ -12849,48 +13463,48 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("synpred37_C_fragment", 109);
-			LeaveRule("synpred37_C_fragment", 109);
-			LeaveRule_synpred37_C_fragment();
+			TraceOut("synpred43_C_fragment", 117);
+			LeaveRule("synpred43_C_fragment", 117);
+			LeaveRule_synpred43_C_fragment();
 		}
 	}
-	// $ANTLR end synpred37_C
+	// $ANTLR end synpred43_C
 
-	partial void EnterRule_synpred48_C_fragment();
-	partial void LeaveRule_synpred48_C_fragment();
+	partial void EnterRule_synpred54_C_fragment();
+	partial void LeaveRule_synpred54_C_fragment();
 
-	// $ANTLR start synpred48_C
-	public void synpred48_C_fragment()
+	// $ANTLR start synpred54_C
+	public void synpred54_C_fragment()
 	{
-		EnterRule_synpred48_C_fragment();
-		EnterRule("synpred48_C_fragment", 120);
-		var retval = new XAstParserRuleReturnScope("synpred48_C_fragment");
+		EnterRule_synpred54_C_fragment();
+		EnterRule("synpred54_C_fragment", 128);
+		var retval = new XAstParserRuleReturnScope("synpred54_C_fragment");
 		try
 		{
-			// C.g:210:4: ( ( pointer )? direct_declarator )
+			// C.g:221:4: ( ( pointer )? direct_declarator )
 			DebugEnterAlt(1);
-			// C.g:210:4: ( pointer )? direct_declarator
+			// C.g:221:4: ( pointer )? direct_declarator
 			{
-			DebugLocation(210, 4);
-			// C.g:210:4: ( pointer )?
-			int alt82=2;
-			try { DebugEnterSubRule(82);
-			try { DebugEnterDecision(82, false);
-			int LA82_0 = input.LA(1);
+			DebugLocation(221, 4);
+			// C.g:221:4: ( pointer )?
+			int alt88=2;
+			try { DebugEnterSubRule(88);
+			try { DebugEnterDecision(88, false);
+			int LA88_0 = input.LA(1);
 
-			if ((LA82_0==32))
+			if ((LA88_0==32))
 			{
-				alt82 = 1;
+				alt88 = 1;
 			}
-			} finally { DebugExitDecision(82); }
-			switch (alt82)
+			} finally { DebugExitDecision(88); }
+			switch (alt88)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C.g:210:4: pointer
+				// C.g:221:4: pointer
 				{
-				DebugLocation(210, 4);
-				PushFollow(Follow._pointer_in_synpred48_C663);
+				DebugLocation(221, 4);
+				PushFollow(Follow._pointer_in_synpred54_C772);
 				pointer();
 				PopFollow();
 				if (state.failed) return;
@@ -12899,10 +13513,10 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				break;
 
 			}
-			} finally { DebugExitSubRule(82); }
+			} finally { DebugExitSubRule(88); }
 
-			DebugLocation(210, 13);
-			PushFollow(Follow._direct_declarator_in_synpred48_C666);
+			DebugLocation(221, 13);
+			PushFollow(Follow._direct_declarator_in_synpred54_C775);
 			direct_declarator();
 			PopFollow();
 			if (state.failed) return;
@@ -12912,30 +13526,30 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("synpred48_C_fragment", 120);
-			LeaveRule("synpred48_C_fragment", 120);
-			LeaveRule_synpred48_C_fragment();
+			TraceOut("synpred54_C_fragment", 128);
+			LeaveRule("synpred54_C_fragment", 128);
+			LeaveRule_synpred54_C_fragment();
 		}
 	}
-	// $ANTLR end synpred48_C
+	// $ANTLR end synpred54_C
 
-	partial void EnterRule_synpred50_C_fragment();
-	partial void LeaveRule_synpred50_C_fragment();
+	partial void EnterRule_synpred56_C_fragment();
+	partial void LeaveRule_synpred56_C_fragment();
 
-	// $ANTLR start synpred50_C
-	public void synpred50_C_fragment()
+	// $ANTLR start synpred56_C
+	public void synpred56_C_fragment()
 	{
-		EnterRule_synpred50_C_fragment();
-		EnterRule("synpred50_C_fragment", 122);
-		var retval = new XAstParserRuleReturnScope("synpred50_C_fragment");
+		EnterRule_synpred56_C_fragment();
+		EnterRule("synpred56_C_fragment", 130);
+		var retval = new XAstParserRuleReturnScope("synpred56_C_fragment");
 		try
 		{
-			// C.g:224:3: ( declarator_suffix )
+			// C.g:235:3: ( declarator_suffix )
 			DebugEnterAlt(1);
-			// C.g:224:3: declarator_suffix
+			// C.g:235:3: declarator_suffix
 			{
-			DebugLocation(224, 3);
-			PushFollow(Follow._declarator_suffix_in_synpred50_C709);
+			DebugLocation(235, 3);
+			PushFollow(Follow._declarator_suffix_in_synpred56_C818);
 			declarator_suffix();
 			PopFollow();
 			if (state.failed) return;
@@ -12945,104 +13559,104 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("synpred50_C_fragment", 122);
-			LeaveRule("synpred50_C_fragment", 122);
-			LeaveRule_synpred50_C_fragment();
+			TraceOut("synpred56_C_fragment", 130);
+			LeaveRule("synpred56_C_fragment", 130);
+			LeaveRule_synpred56_C_fragment();
 		}
 	}
-	// $ANTLR end synpred50_C
+	// $ANTLR end synpred56_C
 
-	partial void EnterRule_synpred53_C_fragment();
-	partial void LeaveRule_synpred53_C_fragment();
+	partial void EnterRule_synpred59_C_fragment();
+	partial void LeaveRule_synpred59_C_fragment();
 
-	// $ANTLR start synpred53_C
-	public void synpred53_C_fragment()
+	// $ANTLR start synpred59_C
+	public void synpred59_C_fragment()
 	{
-		EnterRule_synpred53_C_fragment();
-		EnterRule("synpred53_C_fragment", 125);
-		var retval = new XAstParserRuleReturnScope("synpred53_C_fragment");
+		EnterRule_synpred59_C_fragment();
+		EnterRule("synpred59_C_fragment", 133);
+		var retval = new XAstParserRuleReturnScope("synpred59_C_fragment");
 		try
 		{
-			// C.g:230:6: ( '(' parameter_type_list ')' )
+			// C.g:241:6: ( '(' parameter_type_list ')' )
 			DebugEnterAlt(1);
-			// C.g:230:6: '(' parameter_type_list ')'
+			// C.g:241:6: '(' parameter_type_list ')'
 			{
-			DebugLocation(230, 6);
-			Match(input,30,Follow._30_in_synpred53_C743); if (state.failed) return;
-			DebugLocation(230, 10);
-			PushFollow(Follow._parameter_type_list_in_synpred53_C745);
+			DebugLocation(241, 6);
+			Match(input,30,Follow._30_in_synpred59_C852); if (state.failed) return;
+			DebugLocation(241, 10);
+			PushFollow(Follow._parameter_type_list_in_synpred59_C854);
 			parameter_type_list();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(230, 30);
-			Match(input,31,Follow._31_in_synpred53_C747); if (state.failed) return;
+			DebugLocation(241, 30);
+			Match(input,31,Follow._31_in_synpred59_C856); if (state.failed) return;
 
 			}
 
 		}
 		finally
 		{
-			TraceOut("synpred53_C_fragment", 125);
-			LeaveRule("synpred53_C_fragment", 125);
-			LeaveRule_synpred53_C_fragment();
+			TraceOut("synpred59_C_fragment", 133);
+			LeaveRule("synpred59_C_fragment", 133);
+			LeaveRule_synpred59_C_fragment();
 		}
 	}
-	// $ANTLR end synpred53_C
+	// $ANTLR end synpred59_C
 
-	partial void EnterRule_synpred54_C_fragment();
-	partial void LeaveRule_synpred54_C_fragment();
+	partial void EnterRule_synpred60_C_fragment();
+	partial void LeaveRule_synpred60_C_fragment();
 
-	// $ANTLR start synpred54_C
-	public void synpred54_C_fragment()
+	// $ANTLR start synpred60_C
+	public void synpred60_C_fragment()
 	{
-		EnterRule_synpred54_C_fragment();
-		EnterRule("synpred54_C_fragment", 126);
-		var retval = new XAstParserRuleReturnScope("synpred54_C_fragment");
+		EnterRule_synpred60_C_fragment();
+		EnterRule("synpred60_C_fragment", 134);
+		var retval = new XAstParserRuleReturnScope("synpred60_C_fragment");
 		try
 		{
-			// C.g:231:6: ( '(' identifier_list ')' )
+			// C.g:242:6: ( '(' identifier_list ')' )
 			DebugEnterAlt(1);
-			// C.g:231:6: '(' identifier_list ')'
+			// C.g:242:6: '(' identifier_list ')'
 			{
-			DebugLocation(231, 6);
-			Match(input,30,Follow._30_in_synpred54_C754); if (state.failed) return;
-			DebugLocation(231, 10);
-			PushFollow(Follow._identifier_list_in_synpred54_C756);
+			DebugLocation(242, 6);
+			Match(input,30,Follow._30_in_synpred60_C863); if (state.failed) return;
+			DebugLocation(242, 10);
+			PushFollow(Follow._identifier_list_in_synpred60_C865);
 			identifier_list();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(231, 26);
-			Match(input,31,Follow._31_in_synpred54_C758); if (state.failed) return;
+			DebugLocation(242, 26);
+			Match(input,31,Follow._31_in_synpred60_C867); if (state.failed) return;
 
 			}
 
 		}
 		finally
 		{
-			TraceOut("synpred54_C_fragment", 126);
-			LeaveRule("synpred54_C_fragment", 126);
-			LeaveRule_synpred54_C_fragment();
+			TraceOut("synpred60_C_fragment", 134);
+			LeaveRule("synpred60_C_fragment", 134);
+			LeaveRule_synpred60_C_fragment();
 		}
 	}
-	// $ANTLR end synpred54_C
+	// $ANTLR end synpred60_C
 
-	partial void EnterRule_synpred55_C_fragment();
-	partial void LeaveRule_synpred55_C_fragment();
+	partial void EnterRule_synpred61_C_fragment();
+	partial void LeaveRule_synpred61_C_fragment();
 
-	// $ANTLR start synpred55_C
-	public void synpred55_C_fragment()
+	// $ANTLR start synpred61_C
+	public void synpred61_C_fragment()
 	{
-		EnterRule_synpred55_C_fragment();
-		EnterRule("synpred55_C_fragment", 127);
-		var retval = new XAstParserRuleReturnScope("synpred55_C_fragment");
+		EnterRule_synpred61_C_fragment();
+		EnterRule("synpred61_C_fragment", 135);
+		var retval = new XAstParserRuleReturnScope("synpred61_C_fragment");
 		try
 		{
-			// C.g:236:8: ( type_qualifier )
+			// C.g:247:8: ( type_qualifier )
 			DebugEnterAlt(1);
-			// C.g:236:8: type_qualifier
+			// C.g:247:8: type_qualifier
 			{
-			DebugLocation(236, 8);
-			PushFollow(Follow._type_qualifier_in_synpred55_C780);
+			DebugLocation(247, 8);
+			PushFollow(Follow._type_qualifier_in_synpred61_C889);
 			type_qualifier();
 			PopFollow();
 			if (state.failed) return;
@@ -13052,217 +13666,8 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("synpred55_C_fragment", 127);
-			LeaveRule("synpred55_C_fragment", 127);
-			LeaveRule_synpred55_C_fragment();
-		}
-	}
-	// $ANTLR end synpred55_C
-
-	partial void EnterRule_synpred56_C_fragment();
-	partial void LeaveRule_synpred56_C_fragment();
-
-	// $ANTLR start synpred56_C
-	public void synpred56_C_fragment()
-	{
-		EnterRule_synpred56_C_fragment();
-		EnterRule("synpred56_C_fragment", 128);
-		var retval = new XAstParserRuleReturnScope("synpred56_C_fragment");
-		try
-		{
-			// C.g:236:24: ( pointer )
-			DebugEnterAlt(1);
-			// C.g:236:24: pointer
-			{
-			DebugLocation(236, 24);
-			PushFollow(Follow._pointer_in_synpred56_C783);
-			pointer();
-			PopFollow();
-			if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred56_C_fragment", 128);
-			LeaveRule("synpred56_C_fragment", 128);
-			LeaveRule_synpred56_C_fragment();
-		}
-	}
-	// $ANTLR end synpred56_C
-
-	partial void EnterRule_synpred57_C_fragment();
-	partial void LeaveRule_synpred57_C_fragment();
-
-	// $ANTLR start synpred57_C
-	public void synpred57_C_fragment()
-	{
-		EnterRule_synpred57_C_fragment();
-		EnterRule("synpred57_C_fragment", 129);
-		var retval = new XAstParserRuleReturnScope("synpred57_C_fragment");
-		try
-		{
-			// C.g:236:4: ( '*' ( type_qualifier )+ ( pointer )? )
-			DebugEnterAlt(1);
-			// C.g:236:4: '*' ( type_qualifier )+ ( pointer )?
-			{
-			DebugLocation(236, 4);
-			Match(input,32,Follow._32_in_synpred57_C778); if (state.failed) return;
-			DebugLocation(236, 8);
-			// C.g:236:8: ( type_qualifier )+
-			int cnt83=0;
-			try { DebugEnterSubRule(83);
-			while (true)
-			{
-				int alt83=2;
-				try { DebugEnterDecision(83, false);
-				int LA83_0 = input.LA(1);
-
-				if ((LA83_0==64||LA83_0==69||LA83_0==95))
-				{
-					alt83 = 1;
-				}
-
-
-				} finally { DebugExitDecision(83); }
-				switch (alt83)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C.g:236:8: type_qualifier
-					{
-					DebugLocation(236, 8);
-					PushFollow(Follow._type_qualifier_in_synpred57_C780);
-					type_qualifier();
-					PopFollow();
-					if (state.failed) return;
-
-					}
-					break;
-
-				default:
-					if (cnt83 >= 1)
-						goto loop83;
-
-					if (state.backtracking>0) {state.failed=true; return;}
-					EarlyExitException eee83 = new EarlyExitException( 83, input );
-					DebugRecognitionException(eee83);
-					throw eee83;
-				}
-				cnt83++;
-			}
-			loop83:
-				;
-
-			} finally { DebugExitSubRule(83); }
-
-			DebugLocation(236, 24);
-			// C.g:236:24: ( pointer )?
-			int alt84=2;
-			try { DebugEnterSubRule(84);
-			try { DebugEnterDecision(84, false);
-			int LA84_0 = input.LA(1);
-
-			if ((LA84_0==32))
-			{
-				alt84 = 1;
-			}
-			} finally { DebugExitDecision(84); }
-			switch (alt84)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C.g:236:24: pointer
-				{
-				DebugLocation(236, 24);
-				PushFollow(Follow._pointer_in_synpred57_C783);
-				pointer();
-				PopFollow();
-				if (state.failed) return;
-
-				}
-				break;
-
-			}
-			} finally { DebugExitSubRule(84); }
-
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred57_C_fragment", 129);
-			LeaveRule("synpred57_C_fragment", 129);
-			LeaveRule_synpred57_C_fragment();
-		}
-	}
-	// $ANTLR end synpred57_C
-
-	partial void EnterRule_synpred58_C_fragment();
-	partial void LeaveRule_synpred58_C_fragment();
-
-	// $ANTLR start synpred58_C
-	public void synpred58_C_fragment()
-	{
-		EnterRule_synpred58_C_fragment();
-		EnterRule("synpred58_C_fragment", 130);
-		var retval = new XAstParserRuleReturnScope("synpred58_C_fragment");
-		try
-		{
-			// C.g:237:4: ( '*' pointer )
-			DebugEnterAlt(1);
-			// C.g:237:4: '*' pointer
-			{
-			DebugLocation(237, 4);
-			Match(input,32,Follow._32_in_synpred58_C789); if (state.failed) return;
-			DebugLocation(237, 8);
-			PushFollow(Follow._pointer_in_synpred58_C791);
-			pointer();
-			PopFollow();
-			if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred58_C_fragment", 130);
-			LeaveRule("synpred58_C_fragment", 130);
-			LeaveRule_synpred58_C_fragment();
-		}
-	}
-	// $ANTLR end synpred58_C
-
-	partial void EnterRule_synpred61_C_fragment();
-	partial void LeaveRule_synpred61_C_fragment();
-
-	// $ANTLR start synpred61_C
-	public void synpred61_C_fragment()
-	{
-		EnterRule_synpred61_C_fragment();
-		EnterRule("synpred61_C_fragment", 133);
-		var retval = new XAstParserRuleReturnScope("synpred61_C_fragment");
-		try
-		{
-			// C.g:250:28: ( declarator )
-			DebugEnterAlt(1);
-			// C.g:250:28: declarator
-			{
-			DebugLocation(250, 28);
-			PushFollow(Follow._declarator_in_synpred61_C846);
-			declarator();
-			PopFollow();
-			if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred61_C_fragment", 133);
-			LeaveRule("synpred61_C_fragment", 133);
+			TraceOut("synpred61_C_fragment", 135);
+			LeaveRule("synpred61_C_fragment", 135);
 			LeaveRule_synpred61_C_fragment();
 		}
 	}
@@ -13275,16 +13680,225 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	public void synpred62_C_fragment()
 	{
 		EnterRule_synpred62_C_fragment();
-		EnterRule("synpred62_C_fragment", 134);
+		EnterRule("synpred62_C_fragment", 136);
 		var retval = new XAstParserRuleReturnScope("synpred62_C_fragment");
 		try
 		{
-			// C.g:250:39: ( abstract_declarator )
+			// C.g:247:24: ( pointer )
 			DebugEnterAlt(1);
-			// C.g:250:39: abstract_declarator
+			// C.g:247:24: pointer
 			{
-			DebugLocation(250, 39);
-			PushFollow(Follow._abstract_declarator_in_synpred62_C848);
+			DebugLocation(247, 24);
+			PushFollow(Follow._pointer_in_synpred62_C892);
+			pointer();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred62_C_fragment", 136);
+			LeaveRule("synpred62_C_fragment", 136);
+			LeaveRule_synpred62_C_fragment();
+		}
+	}
+	// $ANTLR end synpred62_C
+
+	partial void EnterRule_synpred63_C_fragment();
+	partial void LeaveRule_synpred63_C_fragment();
+
+	// $ANTLR start synpred63_C
+	public void synpred63_C_fragment()
+	{
+		EnterRule_synpred63_C_fragment();
+		EnterRule("synpred63_C_fragment", 137);
+		var retval = new XAstParserRuleReturnScope("synpred63_C_fragment");
+		try
+		{
+			// C.g:247:4: ( '*' ( type_qualifier )+ ( pointer )? )
+			DebugEnterAlt(1);
+			// C.g:247:4: '*' ( type_qualifier )+ ( pointer )?
+			{
+			DebugLocation(247, 4);
+			Match(input,32,Follow._32_in_synpred63_C887); if (state.failed) return;
+			DebugLocation(247, 8);
+			// C.g:247:8: ( type_qualifier )+
+			int cnt89=0;
+			try { DebugEnterSubRule(89);
+			while (true)
+			{
+				int alt89=2;
+				try { DebugEnterDecision(89, false);
+				int LA89_0 = input.LA(1);
+
+				if ((LA89_0==65||LA89_0==72||LA89_0==98))
+				{
+					alt89 = 1;
+				}
+
+
+				} finally { DebugExitDecision(89); }
+				switch (alt89)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C.g:247:8: type_qualifier
+					{
+					DebugLocation(247, 8);
+					PushFollow(Follow._type_qualifier_in_synpred63_C889);
+					type_qualifier();
+					PopFollow();
+					if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					if (cnt89 >= 1)
+						goto loop89;
+
+					if (state.backtracking>0) {state.failed=true; return;}
+					EarlyExitException eee89 = new EarlyExitException( 89, input );
+					DebugRecognitionException(eee89);
+					throw eee89;
+				}
+				cnt89++;
+			}
+			loop89:
+				;
+
+			} finally { DebugExitSubRule(89); }
+
+			DebugLocation(247, 24);
+			// C.g:247:24: ( pointer )?
+			int alt90=2;
+			try { DebugEnterSubRule(90);
+			try { DebugEnterDecision(90, false);
+			int LA90_0 = input.LA(1);
+
+			if ((LA90_0==32))
+			{
+				alt90 = 1;
+			}
+			} finally { DebugExitDecision(90); }
+			switch (alt90)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C.g:247:24: pointer
+				{
+				DebugLocation(247, 24);
+				PushFollow(Follow._pointer_in_synpred63_C892);
+				pointer();
+				PopFollow();
+				if (state.failed) return;
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(90); }
+
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred63_C_fragment", 137);
+			LeaveRule("synpred63_C_fragment", 137);
+			LeaveRule_synpred63_C_fragment();
+		}
+	}
+	// $ANTLR end synpred63_C
+
+	partial void EnterRule_synpred64_C_fragment();
+	partial void LeaveRule_synpred64_C_fragment();
+
+	// $ANTLR start synpred64_C
+	public void synpred64_C_fragment()
+	{
+		EnterRule_synpred64_C_fragment();
+		EnterRule("synpred64_C_fragment", 138);
+		var retval = new XAstParserRuleReturnScope("synpred64_C_fragment");
+		try
+		{
+			// C.g:248:4: ( '*' pointer )
+			DebugEnterAlt(1);
+			// C.g:248:4: '*' pointer
+			{
+			DebugLocation(248, 4);
+			Match(input,32,Follow._32_in_synpred64_C898); if (state.failed) return;
+			DebugLocation(248, 8);
+			PushFollow(Follow._pointer_in_synpred64_C900);
+			pointer();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred64_C_fragment", 138);
+			LeaveRule("synpred64_C_fragment", 138);
+			LeaveRule_synpred64_C_fragment();
+		}
+	}
+	// $ANTLR end synpred64_C
+
+	partial void EnterRule_synpred67_C_fragment();
+	partial void LeaveRule_synpred67_C_fragment();
+
+	// $ANTLR start synpred67_C
+	public void synpred67_C_fragment()
+	{
+		EnterRule_synpred67_C_fragment();
+		EnterRule("synpred67_C_fragment", 141);
+		var retval = new XAstParserRuleReturnScope("synpred67_C_fragment");
+		try
+		{
+			// C.g:261:28: ( declarator )
+			DebugEnterAlt(1);
+			// C.g:261:28: declarator
+			{
+			DebugLocation(261, 28);
+			PushFollow(Follow._declarator_in_synpred67_C955);
+			declarator();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred67_C_fragment", 141);
+			LeaveRule("synpred67_C_fragment", 141);
+			LeaveRule_synpred67_C_fragment();
+		}
+	}
+	// $ANTLR end synpred67_C
+
+	partial void EnterRule_synpred68_C_fragment();
+	partial void LeaveRule_synpred68_C_fragment();
+
+	// $ANTLR start synpred68_C
+	public void synpred68_C_fragment()
+	{
+		EnterRule_synpred68_C_fragment();
+		EnterRule("synpred68_C_fragment", 142);
+		var retval = new XAstParserRuleReturnScope("synpred68_C_fragment");
+		try
+		{
+			// C.g:261:39: ( abstract_declarator )
+			DebugEnterAlt(1);
+			// C.g:261:39: abstract_declarator
+			{
+			DebugLocation(261, 39);
+			PushFollow(Follow._abstract_declarator_in_synpred68_C957);
 			abstract_declarator();
 			PopFollow();
 			if (state.failed) return;
@@ -13294,30 +13908,30 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("synpred62_C_fragment", 134);
-			LeaveRule("synpred62_C_fragment", 134);
-			LeaveRule_synpred62_C_fragment();
+			TraceOut("synpred68_C_fragment", 142);
+			LeaveRule("synpred68_C_fragment", 142);
+			LeaveRule_synpred68_C_fragment();
 		}
 	}
-	// $ANTLR end synpred62_C
+	// $ANTLR end synpred68_C
 
-	partial void EnterRule_synpred65_C_fragment();
-	partial void LeaveRule_synpred65_C_fragment();
+	partial void EnterRule_synpred71_C_fragment();
+	partial void LeaveRule_synpred71_C_fragment();
 
-	// $ANTLR start synpred65_C
-	public void synpred65_C_fragment()
+	// $ANTLR start synpred71_C
+	public void synpred71_C_fragment()
 	{
-		EnterRule_synpred65_C_fragment();
-		EnterRule("synpred65_C_fragment", 137);
-		var retval = new XAstParserRuleReturnScope("synpred65_C_fragment");
+		EnterRule_synpred71_C_fragment();
+		EnterRule("synpred71_C_fragment", 145);
+		var retval = new XAstParserRuleReturnScope("synpred71_C_fragment");
 		try
 		{
-			// C.g:262:12: ( direct_abstract_declarator )
+			// C.g:273:12: ( direct_abstract_declarator )
 			DebugEnterAlt(1);
-			// C.g:262:12: direct_abstract_declarator
+			// C.g:273:12: direct_abstract_declarator
 			{
-			DebugLocation(262, 12);
-			PushFollow(Follow._direct_abstract_declarator_in_synpred65_C895);
+			DebugLocation(273, 12);
+			PushFollow(Follow._direct_abstract_declarator_in_synpred71_C1004);
 			direct_abstract_declarator();
 			PopFollow();
 			if (state.failed) return;
@@ -13327,30 +13941,30 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("synpred65_C_fragment", 137);
-			LeaveRule("synpred65_C_fragment", 137);
-			LeaveRule_synpred65_C_fragment();
+			TraceOut("synpred71_C_fragment", 145);
+			LeaveRule("synpred71_C_fragment", 145);
+			LeaveRule_synpred71_C_fragment();
 		}
 	}
-	// $ANTLR end synpred65_C
+	// $ANTLR end synpred71_C
 
-	partial void EnterRule_synpred68_C_fragment();
-	partial void LeaveRule_synpred68_C_fragment();
+	partial void EnterRule_synpred74_C_fragment();
+	partial void LeaveRule_synpred74_C_fragment();
 
-	// $ANTLR start synpred68_C
-	public void synpred68_C_fragment()
+	// $ANTLR start synpred74_C
+	public void synpred74_C_fragment()
 	{
-		EnterRule_synpred68_C_fragment();
-		EnterRule("synpred68_C_fragment", 140);
-		var retval = new XAstParserRuleReturnScope("synpred68_C_fragment");
+		EnterRule_synpred74_C_fragment();
+		EnterRule("synpred74_C_fragment", 148);
+		var retval = new XAstParserRuleReturnScope("synpred74_C_fragment");
 		try
 		{
-			// C.g:267:65: ( abstract_declarator_suffix )
+			// C.g:278:65: ( abstract_declarator_suffix )
 			DebugEnterAlt(1);
-			// C.g:267:65: abstract_declarator_suffix
+			// C.g:278:65: abstract_declarator_suffix
 			{
-			DebugLocation(267, 65);
-			PushFollow(Follow._abstract_declarator_suffix_in_synpred68_C926);
+			DebugLocation(278, 65);
+			PushFollow(Follow._abstract_declarator_suffix_in_synpred74_C1035);
 			abstract_declarator_suffix();
 			PopFollow();
 			if (state.failed) return;
@@ -13360,39 +13974,39 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("synpred68_C_fragment", 140);
-			LeaveRule("synpred68_C_fragment", 140);
-			LeaveRule_synpred68_C_fragment();
+			TraceOut("synpred74_C_fragment", 148);
+			LeaveRule("synpred74_C_fragment", 148);
+			LeaveRule_synpred74_C_fragment();
 		}
 	}
-	// $ANTLR end synpred68_C
+	// $ANTLR end synpred74_C
 
-	partial void EnterRule_synpred81_C_fragment();
-	partial void LeaveRule_synpred81_C_fragment();
+	partial void EnterRule_synpred87_C_fragment();
+	partial void LeaveRule_synpred87_C_fragment();
 
-	// $ANTLR start synpred81_C
-	public void synpred81_C_fragment()
+	// $ANTLR start synpred87_C
+	public void synpred87_C_fragment()
 	{
-		EnterRule_synpred81_C_fragment();
-		EnterRule("synpred81_C_fragment", 153);
-		var retval = new XAstParserRuleReturnScope("synpred81_C_fragment");
+		EnterRule_synpred87_C_fragment();
+		EnterRule("synpred87_C_fragment", 161);
+		var retval = new XAstParserRuleReturnScope("synpred87_C_fragment");
 		try
 		{
-			// C.g:301:4: ( '(' type_name ')' cast_expression )
+			// C.g:312:4: ( '(' type_name ')' cast_expression )
 			DebugEnterAlt(1);
-			// C.g:301:4: '(' type_name ')' cast_expression
+			// C.g:312:4: '(' type_name ')' cast_expression
 			{
-			DebugLocation(301, 4);
-			Match(input,30,Follow._30_in_synpred81_C1098); if (state.failed) return;
-			DebugLocation(301, 8);
-			PushFollow(Follow._type_name_in_synpred81_C1100);
+			DebugLocation(312, 4);
+			Match(input,30,Follow._30_in_synpred87_C1207); if (state.failed) return;
+			DebugLocation(312, 8);
+			PushFollow(Follow._type_name_in_synpred87_C1209);
 			type_name();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(301, 18);
-			Match(input,31,Follow._31_in_synpred81_C1102); if (state.failed) return;
-			DebugLocation(301, 22);
-			PushFollow(Follow._cast_expression_in_synpred81_C1104);
+			DebugLocation(312, 18);
+			Match(input,31,Follow._31_in_synpred87_C1211); if (state.failed) return;
+			DebugLocation(312, 22);
+			PushFollow(Follow._cast_expression_in_synpred87_C1213);
 			cast_expression();
 			PopFollow();
 			if (state.failed) return;
@@ -13402,32 +14016,32 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("synpred81_C_fragment", 153);
-			LeaveRule("synpred81_C_fragment", 153);
-			LeaveRule_synpred81_C_fragment();
+			TraceOut("synpred87_C_fragment", 161);
+			LeaveRule("synpred87_C_fragment", 161);
+			LeaveRule_synpred87_C_fragment();
 		}
 	}
-	// $ANTLR end synpred81_C
+	// $ANTLR end synpred87_C
 
-	partial void EnterRule_synpred86_C_fragment();
-	partial void LeaveRule_synpred86_C_fragment();
+	partial void EnterRule_synpred92_C_fragment();
+	partial void LeaveRule_synpred92_C_fragment();
 
-	// $ANTLR start synpred86_C
-	public void synpred86_C_fragment()
+	// $ANTLR start synpred92_C
+	public void synpred92_C_fragment()
 	{
-		EnterRule_synpred86_C_fragment();
-		EnterRule("synpred86_C_fragment", 158);
-		var retval = new XAstParserRuleReturnScope("synpred86_C_fragment");
+		EnterRule_synpred92_C_fragment();
+		EnterRule("synpred92_C_fragment", 166);
+		var retval = new XAstParserRuleReturnScope("synpred92_C_fragment");
 		try
 		{
-			// C.g:310:4: ( 'sizeof' unary_expression )
+			// C.g:321:4: ( 'sizeof' unary_expression )
 			DebugEnterAlt(1);
-			// C.g:310:4: 'sizeof' unary_expression
+			// C.g:321:4: 'sizeof' unary_expression
 			{
-			DebugLocation(310, 4);
-			Match(input,87,Follow._87_in_synpred86_C1146); if (state.failed) return;
-			DebugLocation(310, 13);
-			PushFollow(Follow._unary_expression_in_synpred86_C1148);
+			DebugLocation(321, 4);
+			Match(input,90,Follow._90_in_synpred92_C1255); if (state.failed) return;
+			DebugLocation(321, 13);
+			PushFollow(Follow._unary_expression_in_synpred92_C1257);
 			unary_expression();
 			PopFollow();
 			if (state.failed) return;
@@ -13437,40 +14051,40 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("synpred86_C_fragment", 158);
-			LeaveRule("synpred86_C_fragment", 158);
-			LeaveRule_synpred86_C_fragment();
+			TraceOut("synpred92_C_fragment", 166);
+			LeaveRule("synpred92_C_fragment", 166);
+			LeaveRule_synpred92_C_fragment();
 		}
 	}
-	// $ANTLR end synpred86_C
+	// $ANTLR end synpred92_C
 
-	partial void EnterRule_synpred107_C_fragment();
-	partial void LeaveRule_synpred107_C_fragment();
+	partial void EnterRule_synpred113_C_fragment();
+	partial void LeaveRule_synpred113_C_fragment();
 
-	// $ANTLR start synpred107_C
-	public void synpred107_C_fragment()
+	// $ANTLR start synpred113_C
+	public void synpred113_C_fragment()
 	{
-		EnterRule_synpred107_C_fragment();
-		EnterRule("synpred107_C_fragment", 179);
-		var retval = new XAstParserRuleReturnScope("synpred107_C_fragment");
+		EnterRule_synpred113_C_fragment();
+		EnterRule("synpred113_C_fragment", 187);
+		var retval = new XAstParserRuleReturnScope("synpred113_C_fragment");
 		try
 		{
-			// C.g:385:4: ( lvalue assignment_operator assignment_expression )
+			// C.g:396:4: ( lvalue assignment_operator assignment_expression )
 			DebugEnterAlt(1);
-			// C.g:385:4: lvalue assignment_operator assignment_expression
+			// C.g:396:4: lvalue assignment_operator assignment_expression
 			{
-			DebugLocation(385, 4);
-			PushFollow(Follow._lvalue_in_synpred107_C1464);
+			DebugLocation(396, 4);
+			PushFollow(Follow._lvalue_in_synpred113_C1573);
 			lvalue();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(385, 11);
-			PushFollow(Follow._assignment_operator_in_synpred107_C1466);
+			DebugLocation(396, 11);
+			PushFollow(Follow._assignment_operator_in_synpred113_C1575);
 			assignment_operator();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(385, 31);
-			PushFollow(Follow._assignment_expression_in_synpred107_C1468);
+			DebugLocation(396, 31);
+			PushFollow(Follow._assignment_expression_in_synpred113_C1577);
 			assignment_expression();
 			PopFollow();
 			if (state.failed) return;
@@ -13480,30 +14094,30 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("synpred107_C_fragment", 179);
-			LeaveRule("synpred107_C_fragment", 179);
-			LeaveRule_synpred107_C_fragment();
+			TraceOut("synpred113_C_fragment", 187);
+			LeaveRule("synpred113_C_fragment", 187);
+			LeaveRule_synpred113_C_fragment();
 		}
 	}
-	// $ANTLR end synpred107_C
+	// $ANTLR end synpred113_C
 
-	partial void EnterRule_synpred139_C_fragment();
-	partial void LeaveRule_synpred139_C_fragment();
+	partial void EnterRule_synpred145_C_fragment();
+	partial void LeaveRule_synpred145_C_fragment();
 
-	// $ANTLR start synpred139_C
-	public void synpred139_C_fragment()
+	// $ANTLR start synpred145_C
+	public void synpred145_C_fragment()
 	{
-		EnterRule_synpred139_C_fragment();
-		EnterRule("synpred139_C_fragment", 211);
-		var retval = new XAstParserRuleReturnScope("synpred139_C_fragment");
+		EnterRule_synpred145_C_fragment();
+		EnterRule("synpred145_C_fragment", 219);
+		var retval = new XAstParserRuleReturnScope("synpred145_C_fragment");
 		try
 		{
-			// C.g:464:8: ( declaration )
+			// C.g:475:8: ( declaration )
 			DebugEnterAlt(1);
-			// C.g:464:8: declaration
+			// C.g:475:8: declaration
 			{
-			DebugLocation(464, 8);
-			PushFollow(Follow._declaration_in_synpred139_C1824);
+			DebugLocation(475, 8);
+			PushFollow(Follow._declaration_in_synpred145_C1933);
 			declaration();
 			PopFollow();
 			if (state.failed) return;
@@ -13513,12 +14127,12 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 		finally
 		{
-			TraceOut("synpred139_C_fragment", 211);
-			LeaveRule("synpred139_C_fragment", 211);
-			LeaveRule_synpred139_C_fragment();
+			TraceOut("synpred145_C_fragment", 219);
+			LeaveRule("synpred145_C_fragment", 219);
+			LeaveRule_synpred145_C_fragment();
 		}
 	}
-	// $ANTLR end synpred139_C
+	// $ANTLR end synpred145_C
 	#endregion Rules
 
 	#region Synpreds
@@ -13547,43 +14161,45 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 
 
 	#region DFA
-	private DFA27 dfa27;
-	private DFA29 dfa29;
-	private DFA54 dfa54;
-	private DFA66 dfa66;
+	private DFA31 dfa31;
+	private DFA33 dfa33;
+	private DFA34 dfa34;
+	private DFA58 dfa58;
+	private DFA70 dfa70;
 
 	protected override void InitDFAs()
 	{
 		base.InitDFAs();
-		dfa27 = new DFA27( this, SpecialStateTransition27 );
-		dfa29 = new DFA29( this, SpecialStateTransition29 );
-		dfa54 = new DFA54( this, SpecialStateTransition54 );
-		dfa66 = new DFA66( this, SpecialStateTransition66 );
+		dfa31 = new DFA31( this, SpecialStateTransition31 );
+		dfa33 = new DFA33( this, SpecialStateTransition33 );
+		dfa34 = new DFA34( this, SpecialStateTransition34 );
+		dfa58 = new DFA58( this, SpecialStateTransition58 );
+		dfa70 = new DFA70( this, SpecialStateTransition70 );
 	}
 
-	private class DFA27 : DFA
+	private class DFA31 : DFA
 	{
-		private const string DFA27_eotS =
-			"\x3D\xFFFF";
-		private const string DFA27_eofS =
-			"\x1\x1\x3C\xFFFF";
-		private const string DFA27_minS =
-			"\x1\xD\x19\xFFFF\x1\xD\x1\x4\x1\x0\x1\xFFFF\x1\x0\x2\xFFFF\x1B\x0\x1"+
+		private const string DFA31_eotS =
+			"\x43\xFFFF";
+		private const string DFA31_eofS =
+			"\x1\x1\x42\xFFFF";
+		private const string DFA31_minS =
+			"\x1\xD\x1C\xFFFF\x1\xD\x1\x4\x1\x0\x1\xFFFF\x1\x0\x2\xFFFF\x1E\x0\x1"+
 			"\xFFFF";
-		private const string DFA27_maxS =
-			"\x1\x61\x19\xFFFF\x1\x5F\x1\x66\x1\x0\x1\xFFFF\x1\x0\x2\xFFFF\x1B\x0"+
+		private const string DFA31_maxS =
+			"\x1\x64\x1C\xFFFF\x1\x62\x1\x69\x1\x0\x1\xFFFF\x1\x0\x2\xFFFF\x1E\x0"+
 			"\x1\xFFFF";
-		private const string DFA27_acceptS =
-			"\x1\xFFFF\x1\x2\x3A\xFFFF\x1\x1";
-		private const string DFA27_specialS =
-			"\x1C\xFFFF\x1\x0\x1\xFFFF\x1\x1\x2\xFFFF\x1\x2\x1\x3\x1\x4\x1\x5\x1\x6"+
+		private const string DFA31_acceptS =
+			"\x1\xFFFF\x1\x2\x40\xFFFF\x1\x1";
+		private const string DFA31_specialS =
+			"\x1F\xFFFF\x1\x0\x1\xFFFF\x1\x1\x2\xFFFF\x1\x2\x1\x3\x1\x4\x1\x5\x1\x6"+
 			"\x1\x7\x1\x8\x1\x9\x1\xA\x1\xB\x1\xC\x1\xD\x1\xE\x1\xF\x1\x10\x1\x11"+
 			"\x1\x12\x1\x13\x1\x14\x1\x15\x1\x16\x1\x17\x1\x18\x1\x19\x1\x1A\x1\x1B"+
-			"\x1\x1C\x1\xFFFF}>";
-		private static readonly string[] DFA27_transitionS =
+			"\x1\x1C\x1\x1D\x1\x1E\x1\x1F\x1\xFFFF}>";
+		private static readonly string[] DFA31_transitionS =
 			{
-				"\x1\x1\x10\xFFFF\x1\x1A\x2\x1\x4\xFFFF\x1\x1\x8\xFFFF\x2\x1\x4\xFFFF"+
-				"\x1\x1\x6\xFFFF\x1\x1B\x3\xFFFF\x3\x1\x2\xFFFF\x2\x1\x3\xFFFF\x1\x1"+
+				"\x1\x1\x10\xFFFF\x1\x1D\x2\x1\x4\xFFFF\x1\x1\x8\xFFFF\x2\x1\x4\xFFFF"+
+				"\x1\x1\x6\xFFFF\x1\x1E\x3\xFFFF\x6\x1\x2\xFFFF\x2\x1\x3\xFFFF\x1\x1"+
 				"\x1\xFFFF\x3\x1\x3\xFFFF\x3\x1\x1\xFFFF\x2\x1\x1\xFFFF\x2\x1\x1\xFFFF"+
 				"\x5\x1\x1\xFFFF\x1\x1",
 				"",
@@ -13611,19 +14227,26 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				"",
 				"",
 				"",
-				"\x1\x1E\x10\xFFFF\x1\x1\x1\x1C\x1\x1\x1A\xFFFF\x1\x1\x3\xFFFF\x1\x2B"+
-				"\x1\x2E\x1\x21\x2\xFFFF\x1\x23\x1\x2E\x3\xFFFF\x1\x28\x1\xFFFF\x1\x2D"+
-				"\x1\x21\x1\x27\x3\xFFFF\x1\x25\x1\x26\x1\x21\x1\xFFFF\x1\x24\x1\x29"+
-				"\x1\xFFFF\x1\x21\x1\x2C\x2\xFFFF\x1\x2C\x1\x2A\x1\x22\x1\x2E",
-				"\x1\x35\x1\xFFFF\x1\x34\x2\xFFFF\x1\x37\x1\xFFFF\x1\x32\x1\xFFFF\x1"+
-				"\x31\x4\xFFFF\x1\x33\x1\xFFFF\x1\x36\x2\xFFFF\x1\x3A\x4\xFFFF\x1\x3A"+
-				"\x1\xFFFF\x1\x30\x1\xFFFF\x1\x3A\x1\xFFFF\x1\x3A\x1\x38\x2\xFFFF\x1"+
-				"\x3A\x1\x39\x14\xFFFF\x1\x2F\x1A\xFFFF\x1\x3B\xE\xFFFF\x1\x3A",
+				"",
+				"",
+				"",
+				"\x1\x21\x10\xFFFF\x1\x1\x1\x1F\x1\x1\x1A\xFFFF\x1\x1\x3\xFFFF\x1\x33"+
+				"\x1\x31\x1\x30\x1\x32\x1\x34\x1\x24\x2\xFFFF\x1\x26\x1\x30\x3\xFFFF"+
+				"\x1\x2B\x1\xFFFF\x1\x2F\x1\x24\x1\x2A\x3\xFFFF\x1\x28\x1\x29\x1\x24"+
+				"\x1\xFFFF\x1\x27\x1\x2C\x1\xFFFF\x1\x24\x1\x2E\x2\xFFFF\x1\x2E\x1\x2D"+
+				"\x1\x25\x1\x30",
+				"\x1\x3B\x1\xFFFF\x1\x3A\x2\xFFFF\x1\x3D\x1\xFFFF\x1\x38\x1\xFFFF\x1"+
+				"\x37\x4\xFFFF\x1\x39\x1\xFFFF\x1\x3C\x2\xFFFF\x1\x40\x4\xFFFF\x1\x40"+
+				"\x1\xFFFF\x1\x36\x1\xFFFF\x1\x40\x1\xFFFF\x1\x40\x1\x3E\x2\xFFFF\x1"+
+				"\x40\x1\x3F\x14\xFFFF\x1\x35\x1D\xFFFF\x1\x41\xE\xFFFF\x1\x40",
 				"\x1\xFFFF",
 				"",
 				"\x1\xFFFF",
 				"",
 				"",
+				"\x1\xFFFF",
+				"\x1\xFFFF",
+				"\x1\xFFFF",
 				"\x1\xFFFF",
 				"\x1\xFFFF",
 				"\x1\xFFFF",
@@ -13654,39 +14277,39 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				""
 			};
 
-		private static readonly short[] DFA27_eot = DFA.UnpackEncodedString(DFA27_eotS);
-		private static readonly short[] DFA27_eof = DFA.UnpackEncodedString(DFA27_eofS);
-		private static readonly char[] DFA27_min = DFA.UnpackEncodedStringToUnsignedChars(DFA27_minS);
-		private static readonly char[] DFA27_max = DFA.UnpackEncodedStringToUnsignedChars(DFA27_maxS);
-		private static readonly short[] DFA27_accept = DFA.UnpackEncodedString(DFA27_acceptS);
-		private static readonly short[] DFA27_special = DFA.UnpackEncodedString(DFA27_specialS);
-		private static readonly short[][] DFA27_transition;
+		private static readonly short[] DFA31_eot = DFA.UnpackEncodedString(DFA31_eotS);
+		private static readonly short[] DFA31_eof = DFA.UnpackEncodedString(DFA31_eofS);
+		private static readonly char[] DFA31_min = DFA.UnpackEncodedStringToUnsignedChars(DFA31_minS);
+		private static readonly char[] DFA31_max = DFA.UnpackEncodedStringToUnsignedChars(DFA31_maxS);
+		private static readonly short[] DFA31_accept = DFA.UnpackEncodedString(DFA31_acceptS);
+		private static readonly short[] DFA31_special = DFA.UnpackEncodedString(DFA31_specialS);
+		private static readonly short[][] DFA31_transition;
 
-		static DFA27()
+		static DFA31()
 		{
-			int numStates = DFA27_transitionS.Length;
-			DFA27_transition = new short[numStates][];
+			int numStates = DFA31_transitionS.Length;
+			DFA31_transition = new short[numStates][];
 			for ( int i=0; i < numStates; i++ )
 			{
-				DFA27_transition[i] = DFA.UnpackEncodedString(DFA27_transitionS[i]);
+				DFA31_transition[i] = DFA.UnpackEncodedString(DFA31_transitionS[i]);
 			}
 		}
 
-		public DFA27( BaseRecognizer recognizer, SpecialStateTransitionHandler specialStateTransition )
+		public DFA31( BaseRecognizer recognizer, SpecialStateTransitionHandler specialStateTransition )
 			: base(specialStateTransition)
 		{
 			this.recognizer = recognizer;
-			this.decisionNumber = 27;
-			this.eot = DFA27_eot;
-			this.eof = DFA27_eof;
-			this.min = DFA27_min;
-			this.max = DFA27_max;
-			this.accept = DFA27_accept;
-			this.special = DFA27_special;
-			this.transition = DFA27_transition;
+			this.decisionNumber = 31;
+			this.eot = DFA31_eot;
+			this.eof = DFA31_eof;
+			this.min = DFA31_min;
+			this.max = DFA31_max;
+			this.accept = DFA31_accept;
+			this.special = DFA31_special;
+			this.transition = DFA31_transition;
 		}
 
-		public override string Description { get { return "()* loopback of 224:3: ( declarator_suffix )*"; } }
+		public override string Description { get { return "()* loopback of 235:3: ( declarator_suffix )*"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -13694,501 +14317,549 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 	}
 
-	private int SpecialStateTransition27(DFA dfa, int s, IIntStream _input)
+	private int SpecialStateTransition31(DFA dfa, int s, IIntStream _input)
 	{
 		ITokenStream input = (ITokenStream)_input;
 		int _s = s;
 		switch (s)
 		{
 			case 0:
-				int LA27_28 = input.LA(1);
+				int LA31_31 = input.LA(1);
 
 
-				int index27_28 = input.Index;
+				int index31_31 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_28);
+				input.Seek(index31_31);
 				if (s >= 0) return s;
 				break;
 
 			case 1:
-				int LA27_30 = input.LA(1);
+				int LA31_33 = input.LA(1);
 
 
-				int index27_30 = input.Index;
+				int index31_33 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_30);
+				input.Seek(index31_33);
 				if (s >= 0) return s;
 				break;
 
 			case 2:
-				int LA27_33 = input.LA(1);
+				int LA31_36 = input.LA(1);
 
 
-				int index27_33 = input.Index;
+				int index31_36 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_33);
+				input.Seek(index31_36);
 				if (s >= 0) return s;
 				break;
 
 			case 3:
-				int LA27_34 = input.LA(1);
+				int LA31_37 = input.LA(1);
 
 
-				int index27_34 = input.Index;
+				int index31_37 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_34);
+				input.Seek(index31_37);
 				if (s >= 0) return s;
 				break;
 
 			case 4:
-				int LA27_35 = input.LA(1);
+				int LA31_38 = input.LA(1);
 
 
-				int index27_35 = input.Index;
+				int index31_38 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_35);
+				input.Seek(index31_38);
 				if (s >= 0) return s;
 				break;
 
 			case 5:
-				int LA27_36 = input.LA(1);
+				int LA31_39 = input.LA(1);
 
 
-				int index27_36 = input.Index;
+				int index31_39 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_36);
+				input.Seek(index31_39);
 				if (s >= 0) return s;
 				break;
 
 			case 6:
-				int LA27_37 = input.LA(1);
+				int LA31_40 = input.LA(1);
 
 
-				int index27_37 = input.Index;
+				int index31_40 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_37);
+				input.Seek(index31_40);
 				if (s >= 0) return s;
 				break;
 
 			case 7:
-				int LA27_38 = input.LA(1);
+				int LA31_41 = input.LA(1);
 
 
-				int index27_38 = input.Index;
+				int index31_41 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_38);
+				input.Seek(index31_41);
 				if (s >= 0) return s;
 				break;
 
 			case 8:
-				int LA27_39 = input.LA(1);
+				int LA31_42 = input.LA(1);
 
 
-				int index27_39 = input.Index;
+				int index31_42 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_39);
+				input.Seek(index31_42);
 				if (s >= 0) return s;
 				break;
 
 			case 9:
-				int LA27_40 = input.LA(1);
+				int LA31_43 = input.LA(1);
 
 
-				int index27_40 = input.Index;
+				int index31_43 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_40);
+				input.Seek(index31_43);
 				if (s >= 0) return s;
 				break;
 
 			case 10:
-				int LA27_41 = input.LA(1);
+				int LA31_44 = input.LA(1);
 
 
-				int index27_41 = input.Index;
+				int index31_44 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_41);
+				input.Seek(index31_44);
 				if (s >= 0) return s;
 				break;
 
 			case 11:
-				int LA27_42 = input.LA(1);
+				int LA31_45 = input.LA(1);
 
 
-				int index27_42 = input.Index;
+				int index31_45 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_42);
+				input.Seek(index31_45);
 				if (s >= 0) return s;
 				break;
 
 			case 12:
-				int LA27_43 = input.LA(1);
+				int LA31_46 = input.LA(1);
 
 
-				int index27_43 = input.Index;
+				int index31_46 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_43);
+				input.Seek(index31_46);
 				if (s >= 0) return s;
 				break;
 
 			case 13:
-				int LA27_44 = input.LA(1);
+				int LA31_47 = input.LA(1);
 
 
-				int index27_44 = input.Index;
+				int index31_47 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_44);
+				input.Seek(index31_47);
 				if (s >= 0) return s;
 				break;
 
 			case 14:
-				int LA27_45 = input.LA(1);
+				int LA31_48 = input.LA(1);
 
 
-				int index27_45 = input.Index;
+				int index31_48 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_45);
+				input.Seek(index31_48);
 				if (s >= 0) return s;
 				break;
 
 			case 15:
-				int LA27_46 = input.LA(1);
+				int LA31_49 = input.LA(1);
 
 
-				int index27_46 = input.Index;
+				int index31_49 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_46);
+				input.Seek(index31_49);
 				if (s >= 0) return s;
 				break;
 
 			case 16:
-				int LA27_47 = input.LA(1);
+				int LA31_50 = input.LA(1);
 
 
-				int index27_47 = input.Index;
+				int index31_50 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_47);
+				input.Seek(index31_50);
 				if (s >= 0) return s;
 				break;
 
 			case 17:
-				int LA27_48 = input.LA(1);
+				int LA31_51 = input.LA(1);
 
 
-				int index27_48 = input.Index;
+				int index31_51 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_48);
+				input.Seek(index31_51);
 				if (s >= 0) return s;
 				break;
 
 			case 18:
-				int LA27_49 = input.LA(1);
+				int LA31_52 = input.LA(1);
 
 
-				int index27_49 = input.Index;
+				int index31_52 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_49);
+				input.Seek(index31_52);
 				if (s >= 0) return s;
 				break;
 
 			case 19:
-				int LA27_50 = input.LA(1);
+				int LA31_53 = input.LA(1);
 
 
-				int index27_50 = input.Index;
+				int index31_53 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_50);
+				input.Seek(index31_53);
 				if (s >= 0) return s;
 				break;
 
 			case 20:
-				int LA27_51 = input.LA(1);
+				int LA31_54 = input.LA(1);
 
 
-				int index27_51 = input.Index;
+				int index31_54 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_51);
+				input.Seek(index31_54);
 				if (s >= 0) return s;
 				break;
 
 			case 21:
-				int LA27_52 = input.LA(1);
+				int LA31_55 = input.LA(1);
 
 
-				int index27_52 = input.Index;
+				int index31_55 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_52);
+				input.Seek(index31_55);
 				if (s >= 0) return s;
 				break;
 
 			case 22:
-				int LA27_53 = input.LA(1);
+				int LA31_56 = input.LA(1);
 
 
-				int index27_53 = input.Index;
+				int index31_56 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_53);
+				input.Seek(index31_56);
 				if (s >= 0) return s;
 				break;
 
 			case 23:
-				int LA27_54 = input.LA(1);
+				int LA31_57 = input.LA(1);
 
 
-				int index27_54 = input.Index;
+				int index31_57 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_54);
+				input.Seek(index31_57);
 				if (s >= 0) return s;
 				break;
 
 			case 24:
-				int LA27_55 = input.LA(1);
+				int LA31_58 = input.LA(1);
 
 
-				int index27_55 = input.Index;
+				int index31_58 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_55);
+				input.Seek(index31_58);
 				if (s >= 0) return s;
 				break;
 
 			case 25:
-				int LA27_56 = input.LA(1);
+				int LA31_59 = input.LA(1);
 
 
-				int index27_56 = input.Index;
+				int index31_59 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_56);
+				input.Seek(index31_59);
 				if (s >= 0) return s;
 				break;
 
 			case 26:
-				int LA27_57 = input.LA(1);
+				int LA31_60 = input.LA(1);
 
 
-				int index27_57 = input.Index;
+				int index31_60 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_57);
+				input.Seek(index31_60);
 				if (s >= 0) return s;
 				break;
 
 			case 27:
-				int LA27_58 = input.LA(1);
+				int LA31_61 = input.LA(1);
 
 
-				int index27_58 = input.Index;
+				int index31_61 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_58);
+				input.Seek(index31_61);
 				if (s >= 0) return s;
 				break;
 
 			case 28:
-				int LA27_59 = input.LA(1);
+				int LA31_62 = input.LA(1);
 
 
-				int index27_59 = input.Index;
+				int index31_62 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred50_C_fragment))) {s = 60;}
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index27_59);
+				input.Seek(index31_62);
+				if (s >= 0) return s;
+				break;
+
+			case 29:
+				int LA31_63 = input.LA(1);
+
+
+				int index31_63 = input.Index;
+				input.Rewind();
+				s = -1;
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
+
+				else if ((true)) {s = 1;}
+
+
+				input.Seek(index31_63);
+				if (s >= 0) return s;
+				break;
+
+			case 30:
+				int LA31_64 = input.LA(1);
+
+
+				int index31_64 = input.Index;
+				input.Rewind();
+				s = -1;
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
+
+				else if ((true)) {s = 1;}
+
+
+				input.Seek(index31_64);
+				if (s >= 0) return s;
+				break;
+
+			case 31:
+				int LA31_65 = input.LA(1);
+
+
+				int index31_65 = input.Index;
+				input.Rewind();
+				s = -1;
+				if ((EvaluatePredicate(synpred56_C_fragment))) {s = 66;}
+
+				else if ((true)) {s = 1;}
+
+
+				input.Seek(index31_65);
 				if (s >= 0) return s;
 				break;
 		}
 		if (state.backtracking > 0) {state.failed=true; return -1;}
-		NoViableAltException nvae = new NoViableAltException(dfa.Description, 27, _s, input);
+		NoViableAltException nvae = new NoViableAltException(dfa.Description, 31, _s, input);
 		dfa.Error(nvae);
 		throw nvae;
 	}
-	private class DFA29 : DFA
+	private class DFA33 : DFA
 	{
-		private const string DFA29_eotS =
-			"\x53\xFFFF";
-		private const string DFA29_eofS =
-			"\x1\x1\x52\xFFFF";
-		private const string DFA29_minS =
-			"\x1\xD\x3\xFFFF\x1\x0\xE\xFFFF\x1\x0\x3F\xFFFF";
-		private const string DFA29_maxS =
-			"\x1\x61\x3\xFFFF\x1\x0\xE\xFFFF\x1\x0\x3F\xFFFF";
-		private const string DFA29_acceptS =
-			"\x1\xFFFF\x1\x2\x35\xFFFF\x1\x1\x1B\xFFFF";
-		private const string DFA29_specialS =
-			"\x4\xFFFF\x1\x0\xE\xFFFF\x1\x1\x3F\xFFFF}>";
-		private static readonly string[] DFA29_transitionS =
+		private const string DFA33_eotS =
+			"\x5C\xFFFF";
+		private const string DFA33_eofS =
+			"\x1\x1\x5B\xFFFF";
+		private const string DFA33_minS =
+			"\x1\xD\x3\xFFFF\x1\x0\xD\xFFFF\x1\x0\x49\xFFFF";
+		private const string DFA33_maxS =
+			"\x1\x64\x3\xFFFF\x1\x0\xD\xFFFF\x1\x0\x49\xFFFF";
+		private const string DFA33_acceptS =
+			"\x1\xFFFF\x1\x2\x3B\xFFFF\x1\x1\x1E\xFFFF";
+		private const string DFA33_specialS =
+			"\x4\xFFFF\x1\x0\xD\xFFFF\x1\x1\x49\xFFFF}>";
+		private static readonly string[] DFA33_transitionS =
 			{
 				"\x1\x1\x10\xFFFF\x3\x1\x4\xFFFF\x1\x1\x8\xFFFF\x2\x1\x4\xFFFF\x1\x1"+
-				"\x6\xFFFF\x1\x1\x3\xFFFF\x1\x1\x1\x4\x1\x1\x2\xFFFF\x1\x1\x1\x13\x3"+
+				"\x6\xFFFF\x1\x1\x3\xFFFF\x2\x1\x1\x4\x3\x1\x2\xFFFF\x1\x1\x1\x12\x3"+
 				"\xFFFF\x1\x1\x1\xFFFF\x3\x1\x3\xFFFF\x3\x1\x1\xFFFF\x2\x1\x1\xFFFF\x2"+
-				"\x1\x1\xFFFF\x4\x1\x1\x13\x1\xFFFF\x1\x1",
+				"\x1\x1\xFFFF\x4\x1\x1\x12\x1\xFFFF\x1\x1",
 				"",
 				"",
 				"",
@@ -14206,8 +14877,17 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				"",
 				"",
 				"",
-				"",
 				"\x1\xFFFF",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
 				"",
 				"",
 				"",
@@ -14273,39 +14953,39 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				""
 			};
 
-		private static readonly short[] DFA29_eot = DFA.UnpackEncodedString(DFA29_eotS);
-		private static readonly short[] DFA29_eof = DFA.UnpackEncodedString(DFA29_eofS);
-		private static readonly char[] DFA29_min = DFA.UnpackEncodedStringToUnsignedChars(DFA29_minS);
-		private static readonly char[] DFA29_max = DFA.UnpackEncodedStringToUnsignedChars(DFA29_maxS);
-		private static readonly short[] DFA29_accept = DFA.UnpackEncodedString(DFA29_acceptS);
-		private static readonly short[] DFA29_special = DFA.UnpackEncodedString(DFA29_specialS);
-		private static readonly short[][] DFA29_transition;
+		private static readonly short[] DFA33_eot = DFA.UnpackEncodedString(DFA33_eotS);
+		private static readonly short[] DFA33_eof = DFA.UnpackEncodedString(DFA33_eofS);
+		private static readonly char[] DFA33_min = DFA.UnpackEncodedStringToUnsignedChars(DFA33_minS);
+		private static readonly char[] DFA33_max = DFA.UnpackEncodedStringToUnsignedChars(DFA33_maxS);
+		private static readonly short[] DFA33_accept = DFA.UnpackEncodedString(DFA33_acceptS);
+		private static readonly short[] DFA33_special = DFA.UnpackEncodedString(DFA33_specialS);
+		private static readonly short[][] DFA33_transition;
 
-		static DFA29()
+		static DFA33()
 		{
-			int numStates = DFA29_transitionS.Length;
-			DFA29_transition = new short[numStates][];
+			int numStates = DFA33_transitionS.Length;
+			DFA33_transition = new short[numStates][];
 			for ( int i=0; i < numStates; i++ )
 			{
-				DFA29_transition[i] = DFA.UnpackEncodedString(DFA29_transitionS[i]);
+				DFA33_transition[i] = DFA.UnpackEncodedString(DFA33_transitionS[i]);
 			}
 		}
 
-		public DFA29( BaseRecognizer recognizer, SpecialStateTransitionHandler specialStateTransition )
+		public DFA33( BaseRecognizer recognizer, SpecialStateTransitionHandler specialStateTransition )
 			: base(specialStateTransition)
 		{
 			this.recognizer = recognizer;
-			this.decisionNumber = 29;
-			this.eot = DFA29_eot;
-			this.eof = DFA29_eof;
-			this.min = DFA29_min;
-			this.max = DFA29_max;
-			this.accept = DFA29_accept;
-			this.special = DFA29_special;
-			this.transition = DFA29_transition;
+			this.decisionNumber = 33;
+			this.eot = DFA33_eot;
+			this.eof = DFA33_eof;
+			this.min = DFA33_min;
+			this.max = DFA33_max;
+			this.accept = DFA33_accept;
+			this.special = DFA33_special;
+			this.transition = DFA33_transition;
 		}
 
-		public override string Description { get { return "()+ loopback of 236:8: ( type_qualifier )+"; } }
+		public override string Description { get { return "()+ loopback of 247:8: ( type_qualifier )+"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -14313,134 +14993,284 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 	}
 
-	private int SpecialStateTransition29(DFA dfa, int s, IIntStream _input)
+	private int SpecialStateTransition33(DFA dfa, int s, IIntStream _input)
 	{
 		ITokenStream input = (ITokenStream)_input;
 		int _s = s;
 		switch (s)
 		{
 			case 0:
-				int LA29_4 = input.LA(1);
+				int LA33_4 = input.LA(1);
 
 
-				int index29_4 = input.Index;
+				int index33_4 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred55_C_fragment))) {s = 55;}
+				if ((EvaluatePredicate(synpred61_C_fragment))) {s = 61;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index29_4);
+				input.Seek(index33_4);
 				if (s >= 0) return s;
 				break;
 
 			case 1:
-				int LA29_19 = input.LA(1);
+				int LA33_18 = input.LA(1);
 
 
-				int index29_19 = input.Index;
+				int index33_18 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred55_C_fragment))) {s = 55;}
+				if ((EvaluatePredicate(synpred61_C_fragment))) {s = 61;}
 
 				else if ((true)) {s = 1;}
 
 
-				input.Seek(index29_19);
+				input.Seek(index33_18);
 				if (s >= 0) return s;
 				break;
 		}
 		if (state.backtracking > 0) {state.failed=true; return -1;}
-		NoViableAltException nvae = new NoViableAltException(dfa.Description, 29, _s, input);
+		NoViableAltException nvae = new NoViableAltException(dfa.Description, 33, _s, input);
 		dfa.Error(nvae);
 		throw nvae;
 	}
-	private class DFA54 : DFA
+	private class DFA34 : DFA
 	{
-		private const string DFA54_eotS =
-			"\x11A\xFFFF";
-		private const string DFA54_eofS =
-			"\x1\xFFFF\x7\x14\x112\xFFFF";
-		private const string DFA54_minS =
+		private const string DFA34_eotS =
+			"\x3E\xFFFF";
+		private const string DFA34_eofS =
+			"\x1\x2\x3D\xFFFF";
+		private const string DFA34_minS =
+			"\x1\xD\x1\x0\x3C\xFFFF";
+		private const string DFA34_maxS =
+			"\x1\x64\x1\x0\x3C\xFFFF";
+		private const string DFA34_acceptS =
+			"\x2\xFFFF\x1\x2\x3A\xFFFF\x1\x1";
+		private const string DFA34_specialS =
+			"\x1\xFFFF\x1\x0\x3C\xFFFF}>";
+		private static readonly string[] DFA34_transitionS =
+			{
+				"\x1\x2\x10\xFFFF\x2\x2\x1\x1\x4\xFFFF\x1\x2\x8\xFFFF\x2\x2\x4\xFFFF"+
+				"\x1\x2\x6\xFFFF\x1\x2\x3\xFFFF\x6\x2\x2\xFFFF\x2\x2\x3\xFFFF\x1\x2\x1"+
+				"\xFFFF\x3\x2\x3\xFFFF\x3\x2\x1\xFFFF\x2\x2\x1\xFFFF\x2\x2\x1\xFFFF\x5"+
+				"\x2\x1\xFFFF\x1\x2",
+				"\x1\xFFFF",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				""
+			};
+
+		private static readonly short[] DFA34_eot = DFA.UnpackEncodedString(DFA34_eotS);
+		private static readonly short[] DFA34_eof = DFA.UnpackEncodedString(DFA34_eofS);
+		private static readonly char[] DFA34_min = DFA.UnpackEncodedStringToUnsignedChars(DFA34_minS);
+		private static readonly char[] DFA34_max = DFA.UnpackEncodedStringToUnsignedChars(DFA34_maxS);
+		private static readonly short[] DFA34_accept = DFA.UnpackEncodedString(DFA34_acceptS);
+		private static readonly short[] DFA34_special = DFA.UnpackEncodedString(DFA34_specialS);
+		private static readonly short[][] DFA34_transition;
+
+		static DFA34()
+		{
+			int numStates = DFA34_transitionS.Length;
+			DFA34_transition = new short[numStates][];
+			for ( int i=0; i < numStates; i++ )
+			{
+				DFA34_transition[i] = DFA.UnpackEncodedString(DFA34_transitionS[i]);
+			}
+		}
+
+		public DFA34( BaseRecognizer recognizer, SpecialStateTransitionHandler specialStateTransition )
+			: base(specialStateTransition)
+		{
+			this.recognizer = recognizer;
+			this.decisionNumber = 34;
+			this.eot = DFA34_eot;
+			this.eof = DFA34_eof;
+			this.min = DFA34_min;
+			this.max = DFA34_max;
+			this.accept = DFA34_accept;
+			this.special = DFA34_special;
+			this.transition = DFA34_transition;
+		}
+
+		public override string Description { get { return "247:24: ( pointer )?"; } }
+
+		public override void Error(NoViableAltException nvae)
+		{
+			DebugRecognitionException(nvae);
+		}
+	}
+
+	private int SpecialStateTransition34(DFA dfa, int s, IIntStream _input)
+	{
+		ITokenStream input = (ITokenStream)_input;
+		int _s = s;
+		switch (s)
+		{
+			case 0:
+				int LA34_1 = input.LA(1);
+
+
+				int index34_1 = input.Index;
+				input.Rewind();
+				s = -1;
+				if ((EvaluatePredicate(synpred62_C_fragment))) {s = 61;}
+
+				else if ((true)) {s = 2;}
+
+
+				input.Seek(index34_1);
+				if (s >= 0) return s;
+				break;
+		}
+		if (state.backtracking > 0) {state.failed=true; return -1;}
+		NoViableAltException nvae = new NoViableAltException(dfa.Description, 34, _s, input);
+		dfa.Error(nvae);
+		throw nvae;
+	}
+	private class DFA58 : DFA
+	{
+		private const string DFA58_eotS =
+			"\x119\xFFFF";
+		private const string DFA58_eofS =
+			"\x1\xFFFF\x7\x14\x111\xFFFF";
+		private const string DFA58_minS =
 			"\x1\x4\x7\x18\x5\x4\x6\x0\x16\xFFFF\x6\x0\x16\xFFFF\x6\x0\x16\xFFFF\x6"+
-			"\x0\x16\xFFFF\x6\x0\x16\xFFFF\x6\x0\x16\xFFFF\x6\x0\x16\xFFFF\xC\x0\xD"+
+			"\x0\x16\xFFFF\x6\x0\x16\xFFFF\x6\x0\x16\xFFFF\x6\x0\x16\xFFFF\xC\x0\xC"+
 			"\xFFFF\x30\x0";
-		private const string DFA54_maxS =
-			"\x1\x66\x7\x65\x5\x66\x6\x0\x16\xFFFF\x6\x0\x16\xFFFF\x6\x0\x16\xFFFF"+
+		private const string DFA58_maxS =
+			"\x1\x69\x7\x68\x5\x69\x6\x0\x16\xFFFF\x6\x0\x16\xFFFF\x6\x0\x16\xFFFF"+
 			"\x6\x0\x16\xFFFF\x6\x0\x16\xFFFF\x6\x0\x16\xFFFF\x6\x0\x16\xFFFF\xC\x0"+
-			"\xD\xFFFF\x30\x0";
-		private const string DFA54_acceptS =
-			"\x13\xFFFF\x1\x1\x1\x2\x105\xFFFF";
-		private const string DFA54_specialS =
+			"\xC\xFFFF\x30\x0";
+		private const string DFA58_acceptS =
+			"\x13\xFFFF\x1\x1\x1\x2\x104\xFFFF";
+		private const string DFA58_specialS =
 			"\xD\xFFFF\x1\x0\x1\x1\x1\x2\x1\x3\x1\x4\x1\x5\x16\xFFFF\x1\x6\x1\x7\x1"+
 			"\x8\x1\x9\x1\xA\x1\xB\x16\xFFFF\x1\xC\x1\xD\x1\xE\x1\xF\x1\x10\x1\x11"+
 			"\x16\xFFFF\x1\x12\x1\x13\x1\x14\x1\x15\x1\x16\x1\x17\x16\xFFFF\x1\x18"+
 			"\x1\x19\x1\x1A\x1\x1B\x1\x1C\x1\x1D\x16\xFFFF\x1\x1E\x1\x1F\x1\x20\x1"+
 			"\x21\x1\x22\x1\x23\x16\xFFFF\x1\x24\x1\x25\x1\x26\x1\x27\x1\x28\x1\x29"+
 			"\x16\xFFFF\x1\x2A\x1\x2B\x1\x2C\x1\x2D\x1\x2E\x1\x2F\x1\x30\x1\x31\x1"+
-			"\x32\x1\x33\x1\x34\x1\x35\xD\xFFFF\x1\x36\x1\x37\x1\x38\x1\x39\x1\x3A"+
+			"\x32\x1\x33\x1\x34\x1\x35\xC\xFFFF\x1\x36\x1\x37\x1\x38\x1\x39\x1\x3A"+
 			"\x1\x3B\x1\x3C\x1\x3D\x1\x3E\x1\x3F\x1\x40\x1\x41\x1\x42\x1\x43\x1\x44"+
 			"\x1\x45\x1\x46\x1\x47\x1\x48\x1\x49\x1\x4A\x1\x4B\x1\x4C\x1\x4D\x1\x4E"+
 			"\x1\x4F\x1\x50\x1\x51\x1\x52\x1\x53\x1\x54\x1\x55\x1\x56\x1\x57\x1\x58"+
 			"\x1\x59\x1\x5A\x1\x5B\x1\x5C\x1\x5D\x1\x5E\x1\x5F\x1\x60\x1\x61\x1\x62"+
 			"\x1\x63\x1\x64\x1\x65}>";
-		private static readonly string[] DFA54_transitionS =
+		private static readonly string[] DFA58_transitionS =
 			{
 				"\x1\x5\x1\xFFFF\x1\x4\x2\xFFFF\x1\x7\x1\xFFFF\x1\x2\x1\xFFFF\x1\x1\x4"+
 				"\xFFFF\x1\x3\x1\xFFFF\x1\x6\x2\xFFFF\x1\xB\x4\xFFFF\x1\xB\x1\xFFFF\x1"+
-				"\x8\x1\xFFFF\x1\xB\x1\xFFFF\x1\xB\x1\x9\x2\xFFFF\x1\xB\x1\xA\x2F\xFFFF"+
+				"\x8\x1\xFFFF\x1\xB\x1\xFFFF\x1\xB\x1\x9\x2\xFFFF\x1\xB\x1\xA\x32\xFFFF"+
 				"\x1\xC\xE\xFFFF\x1\xB",
 				"\x2\x14\x1\x13\x2\x14\x1\x13\x1\xE\x2\x14\x1\x13\x1\x14\x1\x11\x1\x13"+
 				"\x2\x14\x1\x12\x1\x13\x1\x10\x1\xF\x1\xFFFF\x1\x14\x1\x13\x4\x14\x1"+
-				"\x13\x1\x14\x1\x13\x4\x14\x1\x13\x1\x14\x1\xD\x2\x14\x1\x13\x23\xFFFF"+
+				"\x13\x1\x14\x1\x13\x4\x14\x1\x13\x1\x14\x1\xD\x2\x14\x1\x13\x26\xFFFF"+
 				"\x1\x14\x1\x13\x2\x14",
 				"\x2\x14\x1\x13\x2\x14\x1\x13\x1\x2A\x2\x14\x1\x13\x1\x14\x1\x2D\x1"+
 				"\x13\x2\x14\x1\x2E\x1\x13\x1\x2C\x1\x2B\x1\xFFFF\x1\x14\x1\x13\x4\x14"+
-				"\x1\x13\x1\x14\x1\x13\x4\x14\x1\x13\x1\x14\x1\x29\x2\x14\x1\x13\x23"+
+				"\x1\x13\x1\x14\x1\x13\x4\x14\x1\x13\x1\x14\x1\x29\x2\x14\x1\x13\x26"+
 				"\xFFFF\x1\x14\x1\x13\x2\x14",
 				"\x2\x14\x1\x13\x2\x14\x1\x13\x1\x46\x2\x14\x1\x13\x1\x14\x1\x49\x1"+
 				"\x13\x2\x14\x1\x4A\x1\x13\x1\x48\x1\x47\x1\xFFFF\x1\x14\x1\x13\x4\x14"+
-				"\x1\x13\x1\x14\x1\x13\x4\x14\x1\x13\x1\x14\x1\x45\x2\x14\x1\x13\x23"+
+				"\x1\x13\x1\x14\x1\x13\x4\x14\x1\x13\x1\x14\x1\x45\x2\x14\x1\x13\x26"+
 				"\xFFFF\x1\x14\x1\x13\x2\x14",
 				"\x2\x14\x1\x13\x2\x14\x1\x13\x1\x62\x2\x14\x1\x13\x1\x14\x1\x65\x1"+
 				"\x13\x2\x14\x1\x66\x1\x13\x1\x64\x1\x63\x1\xFFFF\x1\x14\x1\x13\x4\x14"+
-				"\x1\x13\x1\x14\x1\x13\x4\x14\x1\x13\x1\x14\x1\x61\x2\x14\x1\x13\x23"+
+				"\x1\x13\x1\x14\x1\x13\x4\x14\x1\x13\x1\x14\x1\x61\x2\x14\x1\x13\x26"+
 				"\xFFFF\x1\x14\x1\x13\x2\x14",
 				"\x2\x14\x1\x13\x2\x14\x1\x13\x1\x7E\x2\x14\x1\x13\x1\x14\x1\x81\x1"+
 				"\x13\x2\x14\x1\x82\x1\x13\x1\x80\x1\x7F\x1\xFFFF\x1\x14\x1\x13\x4\x14"+
-				"\x1\x13\x1\x14\x1\x13\x4\x14\x1\x13\x1\x14\x1\x7D\x2\x14\x1\x13\x23"+
+				"\x1\x13\x1\x14\x1\x13\x4\x14\x1\x13\x1\x14\x1\x7D\x2\x14\x1\x13\x26"+
 				"\xFFFF\x1\x14\x1\x13\x2\x14",
 				"\x2\x14\x1\x13\x2\x14\x1\x13\x1\x9A\x2\x14\x1\x13\x1\x14\x1\x9D\x1"+
 				"\x13\x2\x14\x1\x9E\x1\x13\x1\x9C\x1\x9B\x1\xFFFF\x1\x14\x1\x13\x4\x14"+
-				"\x1\x13\x1\x14\x1\x13\x4\x14\x1\x13\x1\x14\x1\x99\x2\x14\x1\x13\x23"+
+				"\x1\x13\x1\x14\x1\x13\x4\x14\x1\x13\x1\x14\x1\x99\x2\x14\x1\x13\x26"+
 				"\xFFFF\x1\x14\x1\x13\x2\x14",
 				"\x2\x14\x1\x13\x2\x14\x1\x13\x1\xB6\x2\x14\x1\x13\x1\x14\x1\xB9\x1"+
 				"\x13\x2\x14\x1\xBA\x1\x13\x1\xB8\x1\xB7\x1\xFFFF\x1\x14\x1\x13\x4\x14"+
-				"\x1\x13\x1\x14\x1\x13\x4\x14\x1\x13\x1\x14\x1\xB5\x2\x14\x1\x13\x23"+
+				"\x1\x13\x1\x14\x1\x13\x4\x14\x1\x13\x1\x14\x1\xB5\x2\x14\x1\x13\x26"+
 				"\xFFFF\x1\x14\x1\x13\x2\x14",
 				"\x1\xD5\x1\xFFFF\x1\xD4\x2\xFFFF\x1\xD7\x1\xFFFF\x1\xD2\x1\xFFFF\x1"+
 				"\xD1\x4\xFFFF\x1\xD3\x1\xFFFF\x1\xD6\x2\xFFFF\x1\xDB\x4\xFFFF\x1\xDB"+
 				"\x1\xFFFF\x1\xD8\x1\xFFFF\x1\xDB\x1\xFFFF\x1\xDB\x1\xD9\x2\xFFFF\x1"+
-				"\xDB\x1\xDA\x17\xFFFF\x2\x14\x3\xFFFF\x2\x14\x3\xFFFF\x1\x14\x1\xFFFF"+
+				"\xDB\x1\xDA\x19\xFFFF\x1\x14\x5\xFFFF\x2\x14\x3\xFFFF\x1\x14\x1\xFFFF"+
 				"\x1\x14\x1\xFFFF\x1\x14\x3\xFFFF\x2\x14\x2\xFFFF\x2\x14\x1\xDC\x1\xFFFF"+
 				"\x1\x14\x2\xFFFF\x4\x14\x6\xFFFF\x1\xDB",
-				"\x1\xEE\x1\xFFFF\x1\xED\x2\xFFFF\x1\xF0\x1\xFFFF\x1\xEB\x1\xFFFF\x1"+
-				"\xEA\x4\xFFFF\x1\xEC\x1\xFFFF\x1\xEF\x2\xFFFF\x1\xF4\x4\xFFFF\x1\xF4"+
-				"\x1\xFFFF\x1\xF1\x1\xFFFF\x1\xF4\x1\xFFFF\x1\xF4\x1\xF2\x2\xFFFF\x1"+
-				"\xF4\x1\xF3\x2F\xFFFF\x1\xF5\xE\xFFFF\x1\xF4",
-				"\x1\xFA\x1\xFFFF\x1\xF9\x2\xFFFF\x1\xFC\x1\xFFFF\x1\xF7\x1\xFFFF\x1"+
-				"\xF6\x4\xFFFF\x1\xF8\x1\xFFFF\x1\xFB\x2\xFFFF\x1\x100\x4\xFFFF\x1\x100"+
-				"\x1\xFFFF\x1\xFD\x1\xFFFF\x1\x100\x1\xFFFF\x1\x100\x1\xFE\x2\xFFFF\x1"+
-				"\x100\x1\xFF\x2F\xFFFF\x1\x101\xE\xFFFF\x1\x100",
-				"\x1\x107\x1\xFFFF\x1\x106\x2\xFFFF\x1\x109\x1\xFFFF\x1\x104\x1\xFFFF"+
-				"\x1\x103\x4\xFFFF\x1\x105\x1\xFFFF\x1\x108\x2\xFFFF\x1\x10C\x4\xFFFF"+
-				"\x1\x10C\x1\xFFFF\x1\x102\x1\xFFFF\x1\x10C\x1\xFFFF\x1\x10C\x1\x10A"+
-				"\x2\xFFFF\x1\x10C\x1\x10B\x2F\xFFFF\x1\x10D\xE\xFFFF\x1\x10C",
-				"\x1\x113\x1\xFFFF\x1\x112\x2\xFFFF\x1\x115\x1\xFFFF\x1\x110\x1\xFFFF"+
-				"\x1\x10F\x4\xFFFF\x1\x111\x1\xFFFF\x1\x114\x2\xFFFF\x1\x118\x4\xFFFF"+
-				"\x1\x118\x1\xFFFF\x1\x10E\x1\xFFFF\x1\x118\x1\xFFFF\x1\x118\x1\x116"+
-				"\x2\xFFFF\x1\x118\x1\x117\x2F\xFFFF\x1\x119\xE\xFFFF\x1\x118",
+				"\x1\xED\x1\xFFFF\x1\xEC\x2\xFFFF\x1\xEF\x1\xFFFF\x1\xEA\x1\xFFFF\x1"+
+				"\xE9\x4\xFFFF\x1\xEB\x1\xFFFF\x1\xEE\x2\xFFFF\x1\xF3\x4\xFFFF\x1\xF3"+
+				"\x1\xFFFF\x1\xF0\x1\xFFFF\x1\xF3\x1\xFFFF\x1\xF3\x1\xF1\x2\xFFFF\x1"+
+				"\xF3\x1\xF2\x32\xFFFF\x1\xF4\xE\xFFFF\x1\xF3",
+				"\x1\xF9\x1\xFFFF\x1\xF8\x2\xFFFF\x1\xFB\x1\xFFFF\x1\xF6\x1\xFFFF\x1"+
+				"\xF5\x4\xFFFF\x1\xF7\x1\xFFFF\x1\xFA\x2\xFFFF\x1\xFF\x4\xFFFF\x1\xFF"+
+				"\x1\xFFFF\x1\xFC\x1\xFFFF\x1\xFF\x1\xFFFF\x1\xFF\x1\xFD\x2\xFFFF\x1"+
+				"\xFF\x1\xFE\x32\xFFFF\x1\x100\xE\xFFFF\x1\xFF",
+				"\x1\x106\x1\xFFFF\x1\x105\x2\xFFFF\x1\x108\x1\xFFFF\x1\x103\x1\xFFFF"+
+				"\x1\x102\x4\xFFFF\x1\x104\x1\xFFFF\x1\x107\x2\xFFFF\x1\x10B\x4\xFFFF"+
+				"\x1\x10B\x1\xFFFF\x1\x101\x1\xFFFF\x1\x10B\x1\xFFFF\x1\x10B\x1\x109"+
+				"\x2\xFFFF\x1\x10B\x1\x10A\x32\xFFFF\x1\x10C\xE\xFFFF\x1\x10B",
+				"\x1\x112\x1\xFFFF\x1\x111\x2\xFFFF\x1\x114\x1\xFFFF\x1\x10F\x1\xFFFF"+
+				"\x1\x10E\x4\xFFFF\x1\x110\x1\xFFFF\x1\x113\x2\xFFFF\x1\x117\x4\xFFFF"+
+				"\x1\x117\x1\xFFFF\x1\x10D\x1\xFFFF\x1\x117\x1\xFFFF\x1\x117\x1\x115"+
+				"\x2\xFFFF\x1\x117\x1\x116\x32\xFFFF\x1\x118\xE\xFFFF\x1\x117",
 				"\x1\xFFFF",
 				"\x1\xFFFF",
 				"\x1\xFFFF",
@@ -14649,7 +15479,6 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				"\x1\xFFFF",
 				"\x1\xFFFF",
 				"\x1\xFFFF",
-				"",
 				"",
 				"",
 				"",
@@ -14712,39 +15541,39 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				"\x1\xFFFF"
 			};
 
-		private static readonly short[] DFA54_eot = DFA.UnpackEncodedString(DFA54_eotS);
-		private static readonly short[] DFA54_eof = DFA.UnpackEncodedString(DFA54_eofS);
-		private static readonly char[] DFA54_min = DFA.UnpackEncodedStringToUnsignedChars(DFA54_minS);
-		private static readonly char[] DFA54_max = DFA.UnpackEncodedStringToUnsignedChars(DFA54_maxS);
-		private static readonly short[] DFA54_accept = DFA.UnpackEncodedString(DFA54_acceptS);
-		private static readonly short[] DFA54_special = DFA.UnpackEncodedString(DFA54_specialS);
-		private static readonly short[][] DFA54_transition;
+		private static readonly short[] DFA58_eot = DFA.UnpackEncodedString(DFA58_eotS);
+		private static readonly short[] DFA58_eof = DFA.UnpackEncodedString(DFA58_eofS);
+		private static readonly char[] DFA58_min = DFA.UnpackEncodedStringToUnsignedChars(DFA58_minS);
+		private static readonly char[] DFA58_max = DFA.UnpackEncodedStringToUnsignedChars(DFA58_maxS);
+		private static readonly short[] DFA58_accept = DFA.UnpackEncodedString(DFA58_acceptS);
+		private static readonly short[] DFA58_special = DFA.UnpackEncodedString(DFA58_specialS);
+		private static readonly short[][] DFA58_transition;
 
-		static DFA54()
+		static DFA58()
 		{
-			int numStates = DFA54_transitionS.Length;
-			DFA54_transition = new short[numStates][];
+			int numStates = DFA58_transitionS.Length;
+			DFA58_transition = new short[numStates][];
 			for ( int i=0; i < numStates; i++ )
 			{
-				DFA54_transition[i] = DFA.UnpackEncodedString(DFA54_transitionS[i]);
+				DFA58_transition[i] = DFA.UnpackEncodedString(DFA58_transitionS[i]);
 			}
 		}
 
-		public DFA54( BaseRecognizer recognizer, SpecialStateTransitionHandler specialStateTransition )
+		public DFA58( BaseRecognizer recognizer, SpecialStateTransitionHandler specialStateTransition )
 			: base(specialStateTransition)
 		{
 			this.recognizer = recognizer;
-			this.decisionNumber = 54;
-			this.eot = DFA54_eot;
-			this.eof = DFA54_eof;
-			this.min = DFA54_min;
-			this.max = DFA54_max;
-			this.accept = DFA54_accept;
-			this.special = DFA54_special;
-			this.transition = DFA54_transition;
+			this.decisionNumber = 58;
+			this.eot = DFA58_eot;
+			this.eof = DFA58_eof;
+			this.min = DFA58_min;
+			this.max = DFA58_max;
+			this.accept = DFA58_accept;
+			this.special = DFA58_special;
+			this.transition = DFA58_transition;
 		}
 
-		public override string Description { get { return "384:1: assignment_expression : ( lvalue assignment_operator assignment_expression | conditional_expression );"; } }
+		public override string Description { get { return "395:1: assignment_expression : ( lvalue assignment_operator assignment_expression | conditional_expression );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -14752,1672 +15581,1672 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 	}
 
-	private int SpecialStateTransition54(DFA dfa, int s, IIntStream _input)
+	private int SpecialStateTransition58(DFA dfa, int s, IIntStream _input)
 	{
 		ITokenStream input = (ITokenStream)_input;
 		int _s = s;
 		switch (s)
 		{
 			case 0:
-				int LA54_13 = input.LA(1);
+				int LA58_13 = input.LA(1);
 
 
-				int index54_13 = input.Index;
+				int index58_13 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_13);
+				input.Seek(index58_13);
 				if (s >= 0) return s;
 				break;
 
 			case 1:
-				int LA54_14 = input.LA(1);
+				int LA58_14 = input.LA(1);
 
 
-				int index54_14 = input.Index;
+				int index58_14 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_14);
+				input.Seek(index58_14);
 				if (s >= 0) return s;
 				break;
 
 			case 2:
-				int LA54_15 = input.LA(1);
+				int LA58_15 = input.LA(1);
 
 
-				int index54_15 = input.Index;
+				int index58_15 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_15);
+				input.Seek(index58_15);
 				if (s >= 0) return s;
 				break;
 
 			case 3:
-				int LA54_16 = input.LA(1);
+				int LA58_16 = input.LA(1);
 
 
-				int index54_16 = input.Index;
+				int index58_16 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_16);
+				input.Seek(index58_16);
 				if (s >= 0) return s;
 				break;
 
 			case 4:
-				int LA54_17 = input.LA(1);
+				int LA58_17 = input.LA(1);
 
 
-				int index54_17 = input.Index;
+				int index58_17 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_17);
+				input.Seek(index58_17);
 				if (s >= 0) return s;
 				break;
 
 			case 5:
-				int LA54_18 = input.LA(1);
+				int LA58_18 = input.LA(1);
 
 
-				int index54_18 = input.Index;
+				int index58_18 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_18);
+				input.Seek(index58_18);
 				if (s >= 0) return s;
 				break;
 
 			case 6:
-				int LA54_41 = input.LA(1);
+				int LA58_41 = input.LA(1);
 
 
-				int index54_41 = input.Index;
+				int index58_41 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_41);
+				input.Seek(index58_41);
 				if (s >= 0) return s;
 				break;
 
 			case 7:
-				int LA54_42 = input.LA(1);
+				int LA58_42 = input.LA(1);
 
 
-				int index54_42 = input.Index;
+				int index58_42 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_42);
+				input.Seek(index58_42);
 				if (s >= 0) return s;
 				break;
 
 			case 8:
-				int LA54_43 = input.LA(1);
+				int LA58_43 = input.LA(1);
 
 
-				int index54_43 = input.Index;
+				int index58_43 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_43);
+				input.Seek(index58_43);
 				if (s >= 0) return s;
 				break;
 
 			case 9:
-				int LA54_44 = input.LA(1);
+				int LA58_44 = input.LA(1);
 
 
-				int index54_44 = input.Index;
+				int index58_44 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_44);
+				input.Seek(index58_44);
 				if (s >= 0) return s;
 				break;
 
 			case 10:
-				int LA54_45 = input.LA(1);
+				int LA58_45 = input.LA(1);
 
 
-				int index54_45 = input.Index;
+				int index58_45 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_45);
+				input.Seek(index58_45);
 				if (s >= 0) return s;
 				break;
 
 			case 11:
-				int LA54_46 = input.LA(1);
+				int LA58_46 = input.LA(1);
 
 
-				int index54_46 = input.Index;
+				int index58_46 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_46);
+				input.Seek(index58_46);
 				if (s >= 0) return s;
 				break;
 
 			case 12:
-				int LA54_69 = input.LA(1);
+				int LA58_69 = input.LA(1);
 
 
-				int index54_69 = input.Index;
+				int index58_69 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_69);
+				input.Seek(index58_69);
 				if (s >= 0) return s;
 				break;
 
 			case 13:
-				int LA54_70 = input.LA(1);
+				int LA58_70 = input.LA(1);
 
 
-				int index54_70 = input.Index;
+				int index58_70 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_70);
+				input.Seek(index58_70);
 				if (s >= 0) return s;
 				break;
 
 			case 14:
-				int LA54_71 = input.LA(1);
+				int LA58_71 = input.LA(1);
 
 
-				int index54_71 = input.Index;
+				int index58_71 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_71);
+				input.Seek(index58_71);
 				if (s >= 0) return s;
 				break;
 
 			case 15:
-				int LA54_72 = input.LA(1);
+				int LA58_72 = input.LA(1);
 
 
-				int index54_72 = input.Index;
+				int index58_72 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_72);
+				input.Seek(index58_72);
 				if (s >= 0) return s;
 				break;
 
 			case 16:
-				int LA54_73 = input.LA(1);
+				int LA58_73 = input.LA(1);
 
 
-				int index54_73 = input.Index;
+				int index58_73 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_73);
+				input.Seek(index58_73);
 				if (s >= 0) return s;
 				break;
 
 			case 17:
-				int LA54_74 = input.LA(1);
+				int LA58_74 = input.LA(1);
 
 
-				int index54_74 = input.Index;
+				int index58_74 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_74);
+				input.Seek(index58_74);
 				if (s >= 0) return s;
 				break;
 
 			case 18:
-				int LA54_97 = input.LA(1);
+				int LA58_97 = input.LA(1);
 
 
-				int index54_97 = input.Index;
+				int index58_97 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_97);
+				input.Seek(index58_97);
 				if (s >= 0) return s;
 				break;
 
 			case 19:
-				int LA54_98 = input.LA(1);
+				int LA58_98 = input.LA(1);
 
 
-				int index54_98 = input.Index;
+				int index58_98 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_98);
+				input.Seek(index58_98);
 				if (s >= 0) return s;
 				break;
 
 			case 20:
-				int LA54_99 = input.LA(1);
+				int LA58_99 = input.LA(1);
 
 
-				int index54_99 = input.Index;
+				int index58_99 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_99);
+				input.Seek(index58_99);
 				if (s >= 0) return s;
 				break;
 
 			case 21:
-				int LA54_100 = input.LA(1);
+				int LA58_100 = input.LA(1);
 
 
-				int index54_100 = input.Index;
+				int index58_100 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_100);
+				input.Seek(index58_100);
 				if (s >= 0) return s;
 				break;
 
 			case 22:
-				int LA54_101 = input.LA(1);
+				int LA58_101 = input.LA(1);
 
 
-				int index54_101 = input.Index;
+				int index58_101 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_101);
+				input.Seek(index58_101);
 				if (s >= 0) return s;
 				break;
 
 			case 23:
-				int LA54_102 = input.LA(1);
+				int LA58_102 = input.LA(1);
 
 
-				int index54_102 = input.Index;
+				int index58_102 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_102);
+				input.Seek(index58_102);
 				if (s >= 0) return s;
 				break;
 
 			case 24:
-				int LA54_125 = input.LA(1);
+				int LA58_125 = input.LA(1);
 
 
-				int index54_125 = input.Index;
+				int index58_125 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_125);
+				input.Seek(index58_125);
 				if (s >= 0) return s;
 				break;
 
 			case 25:
-				int LA54_126 = input.LA(1);
+				int LA58_126 = input.LA(1);
 
 
-				int index54_126 = input.Index;
+				int index58_126 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_126);
+				input.Seek(index58_126);
 				if (s >= 0) return s;
 				break;
 
 			case 26:
-				int LA54_127 = input.LA(1);
+				int LA58_127 = input.LA(1);
 
 
-				int index54_127 = input.Index;
+				int index58_127 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_127);
+				input.Seek(index58_127);
 				if (s >= 0) return s;
 				break;
 
 			case 27:
-				int LA54_128 = input.LA(1);
+				int LA58_128 = input.LA(1);
 
 
-				int index54_128 = input.Index;
+				int index58_128 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_128);
+				input.Seek(index58_128);
 				if (s >= 0) return s;
 				break;
 
 			case 28:
-				int LA54_129 = input.LA(1);
+				int LA58_129 = input.LA(1);
 
 
-				int index54_129 = input.Index;
+				int index58_129 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_129);
+				input.Seek(index58_129);
 				if (s >= 0) return s;
 				break;
 
 			case 29:
-				int LA54_130 = input.LA(1);
+				int LA58_130 = input.LA(1);
 
 
-				int index54_130 = input.Index;
+				int index58_130 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_130);
+				input.Seek(index58_130);
 				if (s >= 0) return s;
 				break;
 
 			case 30:
-				int LA54_153 = input.LA(1);
+				int LA58_153 = input.LA(1);
 
 
-				int index54_153 = input.Index;
+				int index58_153 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_153);
+				input.Seek(index58_153);
 				if (s >= 0) return s;
 				break;
 
 			case 31:
-				int LA54_154 = input.LA(1);
+				int LA58_154 = input.LA(1);
 
 
-				int index54_154 = input.Index;
+				int index58_154 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_154);
+				input.Seek(index58_154);
 				if (s >= 0) return s;
 				break;
 
 			case 32:
-				int LA54_155 = input.LA(1);
+				int LA58_155 = input.LA(1);
 
 
-				int index54_155 = input.Index;
+				int index58_155 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_155);
+				input.Seek(index58_155);
 				if (s >= 0) return s;
 				break;
 
 			case 33:
-				int LA54_156 = input.LA(1);
+				int LA58_156 = input.LA(1);
 
 
-				int index54_156 = input.Index;
+				int index58_156 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_156);
+				input.Seek(index58_156);
 				if (s >= 0) return s;
 				break;
 
 			case 34:
-				int LA54_157 = input.LA(1);
+				int LA58_157 = input.LA(1);
 
 
-				int index54_157 = input.Index;
+				int index58_157 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_157);
+				input.Seek(index58_157);
 				if (s >= 0) return s;
 				break;
 
 			case 35:
-				int LA54_158 = input.LA(1);
+				int LA58_158 = input.LA(1);
 
 
-				int index54_158 = input.Index;
+				int index58_158 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_158);
+				input.Seek(index58_158);
 				if (s >= 0) return s;
 				break;
 
 			case 36:
-				int LA54_181 = input.LA(1);
+				int LA58_181 = input.LA(1);
 
 
-				int index54_181 = input.Index;
+				int index58_181 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_181);
+				input.Seek(index58_181);
 				if (s >= 0) return s;
 				break;
 
 			case 37:
-				int LA54_182 = input.LA(1);
+				int LA58_182 = input.LA(1);
 
 
-				int index54_182 = input.Index;
+				int index58_182 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_182);
+				input.Seek(index58_182);
 				if (s >= 0) return s;
 				break;
 
 			case 38:
-				int LA54_183 = input.LA(1);
+				int LA58_183 = input.LA(1);
 
 
-				int index54_183 = input.Index;
+				int index58_183 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_183);
+				input.Seek(index58_183);
 				if (s >= 0) return s;
 				break;
 
 			case 39:
-				int LA54_184 = input.LA(1);
+				int LA58_184 = input.LA(1);
 
 
-				int index54_184 = input.Index;
+				int index58_184 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_184);
+				input.Seek(index58_184);
 				if (s >= 0) return s;
 				break;
 
 			case 40:
-				int LA54_185 = input.LA(1);
+				int LA58_185 = input.LA(1);
 
 
-				int index54_185 = input.Index;
+				int index58_185 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_185);
+				input.Seek(index58_185);
 				if (s >= 0) return s;
 				break;
 
 			case 41:
-				int LA54_186 = input.LA(1);
+				int LA58_186 = input.LA(1);
 
 
-				int index54_186 = input.Index;
+				int index58_186 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_186);
+				input.Seek(index58_186);
 				if (s >= 0) return s;
 				break;
 
 			case 42:
-				int LA54_209 = input.LA(1);
+				int LA58_209 = input.LA(1);
 
 
-				int index54_209 = input.Index;
+				int index58_209 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_209);
+				input.Seek(index58_209);
 				if (s >= 0) return s;
 				break;
 
 			case 43:
-				int LA54_210 = input.LA(1);
+				int LA58_210 = input.LA(1);
 
 
-				int index54_210 = input.Index;
+				int index58_210 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_210);
+				input.Seek(index58_210);
 				if (s >= 0) return s;
 				break;
 
 			case 44:
-				int LA54_211 = input.LA(1);
+				int LA58_211 = input.LA(1);
 
 
-				int index54_211 = input.Index;
+				int index58_211 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_211);
+				input.Seek(index58_211);
 				if (s >= 0) return s;
 				break;
 
 			case 45:
-				int LA54_212 = input.LA(1);
+				int LA58_212 = input.LA(1);
 
 
-				int index54_212 = input.Index;
+				int index58_212 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_212);
+				input.Seek(index58_212);
 				if (s >= 0) return s;
 				break;
 
 			case 46:
-				int LA54_213 = input.LA(1);
+				int LA58_213 = input.LA(1);
 
 
-				int index54_213 = input.Index;
+				int index58_213 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_213);
+				input.Seek(index58_213);
 				if (s >= 0) return s;
 				break;
 
 			case 47:
-				int LA54_214 = input.LA(1);
+				int LA58_214 = input.LA(1);
 
 
-				int index54_214 = input.Index;
+				int index58_214 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_214);
+				input.Seek(index58_214);
 				if (s >= 0) return s;
 				break;
 
 			case 48:
-				int LA54_215 = input.LA(1);
+				int LA58_215 = input.LA(1);
 
 
-				int index54_215 = input.Index;
+				int index58_215 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_215);
+				input.Seek(index58_215);
 				if (s >= 0) return s;
 				break;
 
 			case 49:
-				int LA54_216 = input.LA(1);
+				int LA58_216 = input.LA(1);
 
 
-				int index54_216 = input.Index;
+				int index58_216 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_216);
+				input.Seek(index58_216);
 				if (s >= 0) return s;
 				break;
 
 			case 50:
-				int LA54_217 = input.LA(1);
+				int LA58_217 = input.LA(1);
 
 
-				int index54_217 = input.Index;
+				int index58_217 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_217);
+				input.Seek(index58_217);
 				if (s >= 0) return s;
 				break;
 
 			case 51:
-				int LA54_218 = input.LA(1);
+				int LA58_218 = input.LA(1);
 
 
-				int index54_218 = input.Index;
+				int index58_218 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_218);
+				input.Seek(index58_218);
 				if (s >= 0) return s;
 				break;
 
 			case 52:
-				int LA54_219 = input.LA(1);
+				int LA58_219 = input.LA(1);
 
 
-				int index54_219 = input.Index;
+				int index58_219 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_219);
+				input.Seek(index58_219);
 				if (s >= 0) return s;
 				break;
 
 			case 53:
-				int LA54_220 = input.LA(1);
+				int LA58_220 = input.LA(1);
 
 
-				int index54_220 = input.Index;
+				int index58_220 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_220);
+				input.Seek(index58_220);
 				if (s >= 0) return s;
 				break;
 
 			case 54:
-				int LA54_234 = input.LA(1);
+				int LA58_233 = input.LA(1);
 
 
-				int index54_234 = input.Index;
+				int index58_233 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_234);
+				input.Seek(index58_233);
 				if (s >= 0) return s;
 				break;
 
 			case 55:
-				int LA54_235 = input.LA(1);
+				int LA58_234 = input.LA(1);
 
 
-				int index54_235 = input.Index;
+				int index58_234 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_235);
+				input.Seek(index58_234);
 				if (s >= 0) return s;
 				break;
 
 			case 56:
-				int LA54_236 = input.LA(1);
+				int LA58_235 = input.LA(1);
 
 
-				int index54_236 = input.Index;
+				int index58_235 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_236);
+				input.Seek(index58_235);
 				if (s >= 0) return s;
 				break;
 
 			case 57:
-				int LA54_237 = input.LA(1);
+				int LA58_236 = input.LA(1);
 
 
-				int index54_237 = input.Index;
+				int index58_236 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_237);
+				input.Seek(index58_236);
 				if (s >= 0) return s;
 				break;
 
 			case 58:
-				int LA54_238 = input.LA(1);
+				int LA58_237 = input.LA(1);
 
 
-				int index54_238 = input.Index;
+				int index58_237 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_238);
+				input.Seek(index58_237);
 				if (s >= 0) return s;
 				break;
 
 			case 59:
-				int LA54_239 = input.LA(1);
+				int LA58_238 = input.LA(1);
 
 
-				int index54_239 = input.Index;
+				int index58_238 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_239);
+				input.Seek(index58_238);
 				if (s >= 0) return s;
 				break;
 
 			case 60:
-				int LA54_240 = input.LA(1);
+				int LA58_239 = input.LA(1);
 
 
-				int index54_240 = input.Index;
+				int index58_239 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_240);
+				input.Seek(index58_239);
 				if (s >= 0) return s;
 				break;
 
 			case 61:
-				int LA54_241 = input.LA(1);
+				int LA58_240 = input.LA(1);
 
 
-				int index54_241 = input.Index;
+				int index58_240 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_241);
+				input.Seek(index58_240);
 				if (s >= 0) return s;
 				break;
 
 			case 62:
-				int LA54_242 = input.LA(1);
+				int LA58_241 = input.LA(1);
 
 
-				int index54_242 = input.Index;
+				int index58_241 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_242);
+				input.Seek(index58_241);
 				if (s >= 0) return s;
 				break;
 
 			case 63:
-				int LA54_243 = input.LA(1);
+				int LA58_242 = input.LA(1);
 
 
-				int index54_243 = input.Index;
+				int index58_242 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_243);
+				input.Seek(index58_242);
 				if (s >= 0) return s;
 				break;
 
 			case 64:
-				int LA54_244 = input.LA(1);
+				int LA58_243 = input.LA(1);
 
 
-				int index54_244 = input.Index;
+				int index58_243 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_244);
+				input.Seek(index58_243);
 				if (s >= 0) return s;
 				break;
 
 			case 65:
-				int LA54_245 = input.LA(1);
+				int LA58_244 = input.LA(1);
 
 
-				int index54_245 = input.Index;
+				int index58_244 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_245);
+				input.Seek(index58_244);
 				if (s >= 0) return s;
 				break;
 
 			case 66:
-				int LA54_246 = input.LA(1);
+				int LA58_245 = input.LA(1);
 
 
-				int index54_246 = input.Index;
+				int index58_245 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_246);
+				input.Seek(index58_245);
 				if (s >= 0) return s;
 				break;
 
 			case 67:
-				int LA54_247 = input.LA(1);
+				int LA58_246 = input.LA(1);
 
 
-				int index54_247 = input.Index;
+				int index58_246 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_247);
+				input.Seek(index58_246);
 				if (s >= 0) return s;
 				break;
 
 			case 68:
-				int LA54_248 = input.LA(1);
+				int LA58_247 = input.LA(1);
 
 
-				int index54_248 = input.Index;
+				int index58_247 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_248);
+				input.Seek(index58_247);
 				if (s >= 0) return s;
 				break;
 
 			case 69:
-				int LA54_249 = input.LA(1);
+				int LA58_248 = input.LA(1);
 
 
-				int index54_249 = input.Index;
+				int index58_248 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_249);
+				input.Seek(index58_248);
 				if (s >= 0) return s;
 				break;
 
 			case 70:
-				int LA54_250 = input.LA(1);
+				int LA58_249 = input.LA(1);
 
 
-				int index54_250 = input.Index;
+				int index58_249 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_250);
+				input.Seek(index58_249);
 				if (s >= 0) return s;
 				break;
 
 			case 71:
-				int LA54_251 = input.LA(1);
+				int LA58_250 = input.LA(1);
 
 
-				int index54_251 = input.Index;
+				int index58_250 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_251);
+				input.Seek(index58_250);
 				if (s >= 0) return s;
 				break;
 
 			case 72:
-				int LA54_252 = input.LA(1);
+				int LA58_251 = input.LA(1);
 
 
-				int index54_252 = input.Index;
+				int index58_251 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_252);
+				input.Seek(index58_251);
 				if (s >= 0) return s;
 				break;
 
 			case 73:
-				int LA54_253 = input.LA(1);
+				int LA58_252 = input.LA(1);
 
 
-				int index54_253 = input.Index;
+				int index58_252 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_253);
+				input.Seek(index58_252);
 				if (s >= 0) return s;
 				break;
 
 			case 74:
-				int LA54_254 = input.LA(1);
+				int LA58_253 = input.LA(1);
 
 
-				int index54_254 = input.Index;
+				int index58_253 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_254);
+				input.Seek(index58_253);
 				if (s >= 0) return s;
 				break;
 
 			case 75:
-				int LA54_255 = input.LA(1);
+				int LA58_254 = input.LA(1);
 
 
-				int index54_255 = input.Index;
+				int index58_254 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_255);
+				input.Seek(index58_254);
 				if (s >= 0) return s;
 				break;
 
 			case 76:
-				int LA54_256 = input.LA(1);
+				int LA58_255 = input.LA(1);
 
 
-				int index54_256 = input.Index;
+				int index58_255 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_256);
+				input.Seek(index58_255);
 				if (s >= 0) return s;
 				break;
 
 			case 77:
-				int LA54_257 = input.LA(1);
+				int LA58_256 = input.LA(1);
 
 
-				int index54_257 = input.Index;
+				int index58_256 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_257);
+				input.Seek(index58_256);
 				if (s >= 0) return s;
 				break;
 
 			case 78:
-				int LA54_258 = input.LA(1);
+				int LA58_257 = input.LA(1);
 
 
-				int index54_258 = input.Index;
+				int index58_257 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_258);
+				input.Seek(index58_257);
 				if (s >= 0) return s;
 				break;
 
 			case 79:
-				int LA54_259 = input.LA(1);
+				int LA58_258 = input.LA(1);
 
 
-				int index54_259 = input.Index;
+				int index58_258 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_259);
+				input.Seek(index58_258);
 				if (s >= 0) return s;
 				break;
 
 			case 80:
-				int LA54_260 = input.LA(1);
+				int LA58_259 = input.LA(1);
 
 
-				int index54_260 = input.Index;
+				int index58_259 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_260);
+				input.Seek(index58_259);
 				if (s >= 0) return s;
 				break;
 
 			case 81:
-				int LA54_261 = input.LA(1);
+				int LA58_260 = input.LA(1);
 
 
-				int index54_261 = input.Index;
+				int index58_260 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_261);
+				input.Seek(index58_260);
 				if (s >= 0) return s;
 				break;
 
 			case 82:
-				int LA54_262 = input.LA(1);
+				int LA58_261 = input.LA(1);
 
 
-				int index54_262 = input.Index;
+				int index58_261 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_262);
+				input.Seek(index58_261);
 				if (s >= 0) return s;
 				break;
 
 			case 83:
-				int LA54_263 = input.LA(1);
+				int LA58_262 = input.LA(1);
 
 
-				int index54_263 = input.Index;
+				int index58_262 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_263);
+				input.Seek(index58_262);
 				if (s >= 0) return s;
 				break;
 
 			case 84:
-				int LA54_264 = input.LA(1);
+				int LA58_263 = input.LA(1);
 
 
-				int index54_264 = input.Index;
+				int index58_263 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_264);
+				input.Seek(index58_263);
 				if (s >= 0) return s;
 				break;
 
 			case 85:
-				int LA54_265 = input.LA(1);
+				int LA58_264 = input.LA(1);
 
 
-				int index54_265 = input.Index;
+				int index58_264 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_265);
+				input.Seek(index58_264);
 				if (s >= 0) return s;
 				break;
 
 			case 86:
-				int LA54_266 = input.LA(1);
+				int LA58_265 = input.LA(1);
 
 
-				int index54_266 = input.Index;
+				int index58_265 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_266);
+				input.Seek(index58_265);
 				if (s >= 0) return s;
 				break;
 
 			case 87:
-				int LA54_267 = input.LA(1);
+				int LA58_266 = input.LA(1);
 
 
-				int index54_267 = input.Index;
+				int index58_266 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_267);
+				input.Seek(index58_266);
 				if (s >= 0) return s;
 				break;
 
 			case 88:
-				int LA54_268 = input.LA(1);
+				int LA58_267 = input.LA(1);
 
 
-				int index54_268 = input.Index;
+				int index58_267 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_268);
+				input.Seek(index58_267);
 				if (s >= 0) return s;
 				break;
 
 			case 89:
-				int LA54_269 = input.LA(1);
+				int LA58_268 = input.LA(1);
 
 
-				int index54_269 = input.Index;
+				int index58_268 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_269);
+				input.Seek(index58_268);
 				if (s >= 0) return s;
 				break;
 
 			case 90:
-				int LA54_270 = input.LA(1);
+				int LA58_269 = input.LA(1);
 
 
-				int index54_270 = input.Index;
+				int index58_269 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_270);
+				input.Seek(index58_269);
 				if (s >= 0) return s;
 				break;
 
 			case 91:
-				int LA54_271 = input.LA(1);
+				int LA58_270 = input.LA(1);
 
 
-				int index54_271 = input.Index;
+				int index58_270 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_271);
+				input.Seek(index58_270);
 				if (s >= 0) return s;
 				break;
 
 			case 92:
-				int LA54_272 = input.LA(1);
+				int LA58_271 = input.LA(1);
 
 
-				int index54_272 = input.Index;
+				int index58_271 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_272);
+				input.Seek(index58_271);
 				if (s >= 0) return s;
 				break;
 
 			case 93:
-				int LA54_273 = input.LA(1);
+				int LA58_272 = input.LA(1);
 
 
-				int index54_273 = input.Index;
+				int index58_272 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_273);
+				input.Seek(index58_272);
 				if (s >= 0) return s;
 				break;
 
 			case 94:
-				int LA54_274 = input.LA(1);
+				int LA58_273 = input.LA(1);
 
 
-				int index54_274 = input.Index;
+				int index58_273 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_274);
+				input.Seek(index58_273);
 				if (s >= 0) return s;
 				break;
 
 			case 95:
-				int LA54_275 = input.LA(1);
+				int LA58_274 = input.LA(1);
 
 
-				int index54_275 = input.Index;
+				int index58_274 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_275);
+				input.Seek(index58_274);
 				if (s >= 0) return s;
 				break;
 
 			case 96:
-				int LA54_276 = input.LA(1);
+				int LA58_275 = input.LA(1);
 
 
-				int index54_276 = input.Index;
+				int index58_275 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_276);
+				input.Seek(index58_275);
 				if (s >= 0) return s;
 				break;
 
 			case 97:
-				int LA54_277 = input.LA(1);
+				int LA58_276 = input.LA(1);
 
 
-				int index54_277 = input.Index;
+				int index58_276 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_277);
+				input.Seek(index58_276);
 				if (s >= 0) return s;
 				break;
 
 			case 98:
-				int LA54_278 = input.LA(1);
+				int LA58_277 = input.LA(1);
 
 
-				int index54_278 = input.Index;
+				int index58_277 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_278);
+				input.Seek(index58_277);
 				if (s >= 0) return s;
 				break;
 
 			case 99:
-				int LA54_279 = input.LA(1);
+				int LA58_278 = input.LA(1);
 
 
-				int index54_279 = input.Index;
+				int index58_278 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_279);
+				input.Seek(index58_278);
 				if (s >= 0) return s;
 				break;
 
 			case 100:
-				int LA54_280 = input.LA(1);
+				int LA58_279 = input.LA(1);
 
 
-				int index54_280 = input.Index;
+				int index58_279 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_280);
+				input.Seek(index58_279);
 				if (s >= 0) return s;
 				break;
 
 			case 101:
-				int LA54_281 = input.LA(1);
+				int LA58_280 = input.LA(1);
 
 
-				int index54_281 = input.Index;
+				int index58_280 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((EvaluatePredicate(synpred107_C_fragment))) {s = 19;}
+				if ((EvaluatePredicate(synpred113_C_fragment))) {s = 19;}
 
 				else if ((true)) {s = 20;}
 
 
-				input.Seek(index54_281);
+				input.Seek(index58_280);
 				if (s >= 0) return s;
 				break;
 		}
 		if (state.backtracking > 0) {state.failed=true; return -1;}
-		NoViableAltException nvae = new NoViableAltException(dfa.Description, 54, _s, input);
+		NoViableAltException nvae = new NoViableAltException(dfa.Description, 58, _s, input);
 		dfa.Error(nvae);
 		throw nvae;
 	}
-	private class DFA66 : DFA
+	private class DFA70 : DFA
 	{
-		private const string DFA66_eotS =
-			"\x52\xFFFF";
-		private const string DFA66_eofS =
-			"\x52\xFFFF";
-		private const string DFA66_minS =
-			"\x1\x4\x1\xD\x2B\xFFFF\x1\x0\x5\xFFFF\x1\x0\xE\xFFFF\x1\x0\xF\xFFFF";
-		private const string DFA66_maxS =
-			"\x1\x66\x1\x64\x2B\xFFFF\x1\x0\x5\xFFFF\x1\x0\xE\xFFFF\x1\x0\xF\xFFFF";
-		private const string DFA66_acceptS =
-			"\x2\xFFFF\x1\x2\x18\xFFFF\x1\x1\x36\xFFFF";
-		private const string DFA66_specialS =
-			"\x2D\xFFFF\x1\x0\x5\xFFFF\x1\x1\xE\xFFFF\x1\x2\xF\xFFFF}>";
-		private static readonly string[] DFA66_transitionS =
+		private const string DFA70_eotS =
+			"\x58\xFFFF";
+		private const string DFA70_eofS =
+			"\x58\xFFFF";
+		private const string DFA70_minS =
+			"\x1\x4\x1\xD\x2E\xFFFF\x1\x0\x5\xFFFF\x1\x0\xE\xFFFF\x1\x0\x12\xFFFF";
+		private const string DFA70_maxS =
+			"\x1\x69\x1\x67\x2E\xFFFF\x1\x0\x5\xFFFF\x1\x0\xE\xFFFF\x1\x0\x12\xFFFF";
+		private const string DFA70_acceptS =
+			"\x2\xFFFF\x1\x2\x18\xFFFF\x1\x1\x3C\xFFFF";
+		private const string DFA70_specialS =
+			"\x30\xFFFF\x1\x0\x5\xFFFF\x1\x1\xE\xFFFF\x1\x2\x12\xFFFF}>";
+		private static readonly string[] DFA70_transitionS =
 			{
 				"\x1\x2\x1\xFFFF\x1\x2\x2\xFFFF\x1\x2\x1\xFFFF\x1\x2\x1\xFFFF\x1\x1\x4"+
 				"\xFFFF\x1\x2\x1\xFFFF\x1\x2\x2\xFFFF\x1\x2\x4\xFFFF\x1\x2\x1\xFFFF\x1"+
 				"\x2\x1\xFFFF\x1\x2\x1\xFFFF\x2\x2\x2\xFFFF\x2\x2\x7\xFFFF\x1\x2\xF\xFFFF"+
-				"\x3\x1B\x2\x2\x2\x1B\x3\x2\x1\x1B\x1\xFFFF\x3\x1B\x3\x2\x3\x1B\x1\x2"+
+				"\x6\x1B\x2\x2\x2\x1B\x3\x2\x1\x1B\x1\xFFFF\x3\x1B\x3\x2\x3\x1B\x1\x2"+
 				"\x2\x1B\x1\x2\x2\x1B\x1\x2\x5\x1B\x2\x2\x3\xFFFF\x2\x2",
-				"\x1\x1B\xA\xFFFF\x6\x2\x1\x2D\x1\xFFFF\x1\x33\xA\x2\x1\xFFFF\x3\x2"+
-				"\x1\x42\xC\x2\x1\xFFFF\x2\x2\x3\x1B\x2\xFFFF\x2\x1B\x3\xFFFF\x1\x1B"+
+				"\x1\x1B\xA\xFFFF\x6\x2\x1\x30\x1\xFFFF\x1\x36\xA\x2\x1\xFFFF\x3\x2"+
+				"\x1\x45\xC\x2\x1\xFFFF\x2\x2\x6\x1B\x2\xFFFF\x2\x1B\x3\xFFFF\x1\x1B"+
 				"\x1\xFFFF\x3\x1B\x3\xFFFF\x3\x1B\x1\xFFFF\x2\x1B\x1\xFFFF\x2\x1B\x2"+
 				"\xFFFF\x4\x1B\x2\xFFFF\x3\x2",
 				"",
@@ -16463,18 +17292,21 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				"",
 				"",
 				"",
+				"",
+				"",
+				"",
+				"\x1\xFFFF",
+				"",
+				"",
+				"",
+				"",
+				"",
 				"\x1\xFFFF",
 				"",
 				"",
 				"",
 				"",
 				"",
-				"\x1\xFFFF",
-				"",
-				"",
-				"",
-				"",
-				"",
 				"",
 				"",
 				"",
@@ -16485,6 +17317,9 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				"",
 				"",
 				"\x1\xFFFF",
+				"",
+				"",
+				"",
 				"",
 				"",
 				"",
@@ -16502,39 +17337,39 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 				""
 			};
 
-		private static readonly short[] DFA66_eot = DFA.UnpackEncodedString(DFA66_eotS);
-		private static readonly short[] DFA66_eof = DFA.UnpackEncodedString(DFA66_eofS);
-		private static readonly char[] DFA66_min = DFA.UnpackEncodedStringToUnsignedChars(DFA66_minS);
-		private static readonly char[] DFA66_max = DFA.UnpackEncodedStringToUnsignedChars(DFA66_maxS);
-		private static readonly short[] DFA66_accept = DFA.UnpackEncodedString(DFA66_acceptS);
-		private static readonly short[] DFA66_special = DFA.UnpackEncodedString(DFA66_specialS);
-		private static readonly short[][] DFA66_transition;
+		private static readonly short[] DFA70_eot = DFA.UnpackEncodedString(DFA70_eotS);
+		private static readonly short[] DFA70_eof = DFA.UnpackEncodedString(DFA70_eofS);
+		private static readonly char[] DFA70_min = DFA.UnpackEncodedStringToUnsignedChars(DFA70_minS);
+		private static readonly char[] DFA70_max = DFA.UnpackEncodedStringToUnsignedChars(DFA70_maxS);
+		private static readonly short[] DFA70_accept = DFA.UnpackEncodedString(DFA70_acceptS);
+		private static readonly short[] DFA70_special = DFA.UnpackEncodedString(DFA70_specialS);
+		private static readonly short[][] DFA70_transition;
 
-		static DFA66()
+		static DFA70()
 		{
-			int numStates = DFA66_transitionS.Length;
-			DFA66_transition = new short[numStates][];
+			int numStates = DFA70_transitionS.Length;
+			DFA70_transition = new short[numStates][];
 			for ( int i=0; i < numStates; i++ )
 			{
-				DFA66_transition[i] = DFA.UnpackEncodedString(DFA66_transitionS[i]);
+				DFA70_transition[i] = DFA.UnpackEncodedString(DFA70_transitionS[i]);
 			}
 		}
 
-		public DFA66( BaseRecognizer recognizer, SpecialStateTransitionHandler specialStateTransition )
+		public DFA70( BaseRecognizer recognizer, SpecialStateTransitionHandler specialStateTransition )
 			: base(specialStateTransition)
 		{
 			this.recognizer = recognizer;
-			this.decisionNumber = 66;
-			this.eot = DFA66_eot;
-			this.eof = DFA66_eof;
-			this.min = DFA66_min;
-			this.max = DFA66_max;
-			this.accept = DFA66_accept;
-			this.special = DFA66_special;
-			this.transition = DFA66_transition;
+			this.decisionNumber = 70;
+			this.eot = DFA70_eot;
+			this.eof = DFA70_eof;
+			this.min = DFA70_min;
+			this.max = DFA70_max;
+			this.accept = DFA70_accept;
+			this.special = DFA70_special;
+			this.transition = DFA70_transition;
 		}
 
-		public override string Description { get { return "()* loopback of 464:8: ( declaration )*"; } }
+		public override string Description { get { return "()* loopback of 475:8: ( declaration )*"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -16542,62 +17377,62 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 		}
 	}
 
-	private int SpecialStateTransition66(DFA dfa, int s, IIntStream _input)
+	private int SpecialStateTransition70(DFA dfa, int s, IIntStream _input)
 	{
 		ITokenStream input = (ITokenStream)_input;
 		int _s = s;
 		switch (s)
 		{
 			case 0:
-				int LA66_45 = input.LA(1);
+				int LA70_48 = input.LA(1);
 
 
-				int index66_45 = input.Index;
+				int index70_48 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((((EvaluatePredicate(synpred139_C_fragment)&&EvaluatePredicate(synpred139_C_fragment))&&(isTypeName(input.LT(1).getText()))))) {s = 27;}
+				if ((((EvaluatePredicate(synpred145_C_fragment)&&EvaluatePredicate(synpred145_C_fragment))&&(isTypeName(input.LT(1).getText()))))) {s = 27;}
 
 				else if ((true)) {s = 2;}
 
 
-				input.Seek(index66_45);
+				input.Seek(index70_48);
 				if (s >= 0) return s;
 				break;
 
 			case 1:
-				int LA66_51 = input.LA(1);
+				int LA70_54 = input.LA(1);
 
 
-				int index66_51 = input.Index;
+				int index70_54 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((((EvaluatePredicate(synpred139_C_fragment)&&EvaluatePredicate(synpred139_C_fragment))&&(isTypeName(input.LT(1).getText()))))) {s = 27;}
+				if ((((EvaluatePredicate(synpred145_C_fragment)&&EvaluatePredicate(synpred145_C_fragment))&&(isTypeName(input.LT(1).getText()))))) {s = 27;}
 
 				else if ((true)) {s = 2;}
 
 
-				input.Seek(index66_51);
+				input.Seek(index70_54);
 				if (s >= 0) return s;
 				break;
 
 			case 2:
-				int LA66_66 = input.LA(1);
+				int LA70_69 = input.LA(1);
 
 
-				int index66_66 = input.Index;
+				int index70_69 = input.Index;
 				input.Rewind();
 				s = -1;
-				if ((((EvaluatePredicate(synpred139_C_fragment)&&EvaluatePredicate(synpred139_C_fragment))&&(isTypeName(input.LT(1).getText()))))) {s = 27;}
+				if ((((EvaluatePredicate(synpred145_C_fragment)&&EvaluatePredicate(synpred145_C_fragment))&&(isTypeName(input.LT(1).getText()))))) {s = 27;}
 
 				else if ((true)) {s = 2;}
 
 
-				input.Seek(index66_66);
+				input.Seek(index70_69);
 				if (s >= 0) return s;
 				break;
 		}
 		if (state.backtracking > 0) {state.failed=true; return -1;}
-		NoViableAltException nvae = new NoViableAltException(dfa.Description, 66, _s, input);
+		NoViableAltException nvae = new NoViableAltException(dfa.Description, 70, _s, input);
 		dfa.Error(nvae);
 		throw nvae;
 	}
@@ -16607,359 +17442,376 @@ public partial class CParser : Antlr.Runtime.Parser, IAntlrParser
 	#region Follow sets
 	private static class Follow
 	{
-		public static readonly BitSet _external_declaration_in_translation_unit71 = new BitSet(new ulong[]{0x8000000140002002UL,0xFB6E3A33UL});
+		public static readonly BitSet _external_declaration_in_translation_unit71 = new BitSet(new ulong[]{0x8000000140002002UL,0x7DB71D19FUL});
 		public static readonly BitSet _function_definition_in_external_declaration107 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _declaration_in_external_declaration112 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _declaration_specifiers_in_function_definition134 = new BitSet(new ulong[]{0x140002000UL});
-		public static readonly BitSet _declarator_in_function_definition137 = new BitSet(new ulong[]{0x8000000000002000UL,0x2FB6E3A33UL});
-		public static readonly BitSet _declaration_in_function_definition143 = new BitSet(new ulong[]{0x8000000000002000UL,0x2FB6E3A33UL});
+		public static readonly BitSet _declarator_in_function_definition137 = new BitSet(new ulong[]{0x8000000000002000UL,0x17DB71D19FUL});
+		public static readonly BitSet _declaration_in_function_definition143 = new BitSet(new ulong[]{0x8000000000002000UL,0x17DB71D19FUL});
 		public static readonly BitSet _compound_statement_in_function_definition146 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _compound_statement_in_function_definition153 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _64_in_declaration181 = new BitSet(new ulong[]{0x0UL,0x8000000UL});
-		public static readonly BitSet _91_in_declaration184 = new BitSet(new ulong[]{0x8000000140002000UL,0xF36E3A33UL});
+		public static readonly BitSet _65_in_declaration181 = new BitSet(new ulong[]{0x0UL,0x40000000UL});
+		public static readonly BitSet _94_in_declaration184 = new BitSet(new ulong[]{0x8000000140002000UL,0x79B71D19FUL});
 		public static readonly BitSet _declaration_specifiers_in_declaration186 = new BitSet(new ulong[]{0x140002000UL});
 		public static readonly BitSet _init_declarator_list_in_declaration196 = new BitSet(new ulong[]{0x800000000000UL});
 		public static readonly BitSet _47_in_declaration198 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _declaration_specifiers_in_declaration204 = new BitSet(new ulong[]{0x800140002000UL});
 		public static readonly BitSet _init_declarator_list_in_declaration206 = new BitSet(new ulong[]{0x800000000000UL});
 		public static readonly BitSet _47_in_declaration209 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _storage_class_specifier_in_declaration_specifiers226 = new BitSet(new ulong[]{0x8000000000002002UL,0xF36E3A33UL});
-		public static readonly BitSet _type_specifier_in_declaration_specifiers234 = new BitSet(new ulong[]{0x8000000000002002UL,0xF36E3A33UL});
-		public static readonly BitSet _type_qualifier_in_declaration_specifiers242 = new BitSet(new ulong[]{0x8000000000002002UL,0xF36E3A33UL});
-		public static readonly BitSet _init_declarator_in_init_declarator_list258 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _37_in_init_declarator_list261 = new BitSet(new ulong[]{0x140002000UL});
-		public static readonly BitSet _init_declarator_in_init_declarator_list263 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _declarator_in_init_declarator276 = new BitSet(new ulong[]{0x10000000000002UL});
-		public static readonly BitSet _52_in_init_declarator279 = new BitSet(new ulong[]{0xCD50942A50UL,0x4200800000UL});
-		public static readonly BitSet _initializer_in_init_declarator281 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _94_in_type_specifier320 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _68_in_type_specifier325 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _85_in_type_specifier330 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _81_in_type_specifier335 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _82_in_type_specifier340 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _77_in_type_specifier345 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _73_in_type_specifier350 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _86_in_type_specifier355 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _93_in_type_specifier360 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _63_in_type_specifier365 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _struct_or_union_specifier_in_type_specifier372 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _enum_specifier_in_type_specifier377 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _type_id_in_type_specifier382 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENTIFIER_in_type_id397 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _struct_or_union_in_struct_or_union_specifier427 = new BitSet(new ulong[]{0x2000UL,0x200000000UL});
-		public static readonly BitSet _IDENTIFIER_in_struct_or_union_specifier429 = new BitSet(new ulong[]{0x0UL,0x200000000UL});
-		public static readonly BitSet _97_in_struct_or_union_specifier432 = new BitSet(new ulong[]{0x8000000000002000UL,0xF2662A31UL});
-		public static readonly BitSet _struct_declaration_list_in_struct_or_union_specifier434 = new BitSet(new ulong[]{0x0UL,0x2000000000UL});
-		public static readonly BitSet _101_in_struct_or_union_specifier436 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _struct_or_union_in_struct_or_union_specifier441 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _IDENTIFIER_in_struct_or_union_specifier443 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _struct_declaration_in_struct_declaration_list470 = new BitSet(new ulong[]{0x8000000000002002UL,0xF2662A31UL});
-		public static readonly BitSet _specifier_qualifier_list_in_struct_declaration482 = new BitSet(new ulong[]{0x400140002000UL});
-		public static readonly BitSet _struct_declarator_list_in_struct_declaration484 = new BitSet(new ulong[]{0x800000000000UL});
-		public static readonly BitSet _47_in_struct_declaration486 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _type_qualifier_in_specifier_qualifier_list499 = new BitSet(new ulong[]{0x8000000000002002UL,0xF2662A31UL});
-		public static readonly BitSet _type_specifier_in_specifier_qualifier_list503 = new BitSet(new ulong[]{0x8000000000002002UL,0xF2662A31UL});
-		public static readonly BitSet _struct_declarator_in_struct_declarator_list517 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _37_in_struct_declarator_list520 = new BitSet(new ulong[]{0x400140002000UL});
-		public static readonly BitSet _struct_declarator_in_struct_declarator_list522 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _declarator_in_struct_declarator535 = new BitSet(new ulong[]{0x400000000002UL});
-		public static readonly BitSet _46_in_struct_declarator538 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _constant_expression_in_struct_declarator540 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _46_in_struct_declarator547 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _constant_expression_in_struct_declarator549 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _75_in_enum_specifier567 = new BitSet(new ulong[]{0x0UL,0x200000000UL});
-		public static readonly BitSet _97_in_enum_specifier569 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _enumerator_list_in_enum_specifier571 = new BitSet(new ulong[]{0x0UL,0x2000000000UL});
-		public static readonly BitSet _101_in_enum_specifier573 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _75_in_enum_specifier578 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _IDENTIFIER_in_enum_specifier580 = new BitSet(new ulong[]{0x0UL,0x200000000UL});
-		public static readonly BitSet _97_in_enum_specifier582 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _enumerator_list_in_enum_specifier584 = new BitSet(new ulong[]{0x0UL,0x2000000000UL});
-		public static readonly BitSet _101_in_enum_specifier586 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _75_in_enum_specifier591 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _IDENTIFIER_in_enum_specifier593 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _enumerator_in_enumerator_list604 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _37_in_enumerator_list607 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _enumerator_in_enumerator_list609 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _IDENTIFIER_in_enumerator622 = new BitSet(new ulong[]{0x10000000000002UL});
-		public static readonly BitSet _52_in_enumerator625 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _constant_expression_in_enumerator627 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _pointer_in_declarator663 = new BitSet(new ulong[]{0x40002000UL});
-		public static readonly BitSet _direct_declarator_in_declarator666 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _pointer_in_declarator671 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENTIFIER_in_direct_declarator686 = new BitSet(new ulong[]{0x800000040000002UL});
-		public static readonly BitSet _30_in_direct_declarator697 = new BitSet(new ulong[]{0x140002000UL});
-		public static readonly BitSet _declarator_in_direct_declarator699 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_direct_declarator701 = new BitSet(new ulong[]{0x800000040000002UL});
-		public static readonly BitSet _declarator_suffix_in_direct_declarator709 = new BitSet(new ulong[]{0x800000040000002UL});
-		public static readonly BitSet _59_in_declarator_suffix723 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _constant_expression_in_declarator_suffix725 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_declarator_suffix727 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _59_in_declarator_suffix734 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_declarator_suffix736 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _30_in_declarator_suffix743 = new BitSet(new ulong[]{0x8000000000002000UL,0xF36E3A33UL});
-		public static readonly BitSet _parameter_type_list_in_declarator_suffix745 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_declarator_suffix747 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _30_in_declarator_suffix754 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _identifier_list_in_declarator_suffix756 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_declarator_suffix758 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _30_in_declarator_suffix765 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_declarator_suffix767 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _32_in_pointer778 = new BitSet(new ulong[]{0x0UL,0x80000021UL});
-		public static readonly BitSet _type_qualifier_in_pointer780 = new BitSet(new ulong[]{0x100000002UL,0x80000021UL});
-		public static readonly BitSet _pointer_in_pointer783 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _32_in_pointer789 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _pointer_in_pointer791 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _32_in_pointer796 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _parameter_list_in_parameter_type_list807 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _37_in_parameter_type_list810 = new BitSet(new ulong[]{0x80000000000UL});
-		public static readonly BitSet _43_in_parameter_type_list812 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _parameter_declaration_in_parameter_list825 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _37_in_parameter_list828 = new BitSet(new ulong[]{0x8000000000002000UL,0xF36E3A33UL});
-		public static readonly BitSet _parameter_declaration_in_parameter_list830 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _declaration_specifiers_in_parameter_declaration843 = new BitSet(new ulong[]{0x800000140002002UL});
-		public static readonly BitSet _declarator_in_parameter_declaration846 = new BitSet(new ulong[]{0x800000140002002UL});
-		public static readonly BitSet _abstract_declarator_in_parameter_declaration848 = new BitSet(new ulong[]{0x800000140002002UL});
-		public static readonly BitSet _IDENTIFIER_in_identifier_list861 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _37_in_identifier_list864 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _IDENTIFIER_in_identifier_list866 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _specifier_qualifier_list_in_type_name879 = new BitSet(new ulong[]{0x800000140000002UL});
-		public static readonly BitSet _abstract_declarator_in_type_name881 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _pointer_in_abstract_declarator893 = new BitSet(new ulong[]{0x800000040000002UL});
-		public static readonly BitSet _direct_abstract_declarator_in_abstract_declarator895 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _direct_abstract_declarator_in_abstract_declarator901 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _30_in_direct_abstract_declarator914 = new BitSet(new ulong[]{0x800000140000000UL});
-		public static readonly BitSet _abstract_declarator_in_direct_abstract_declarator916 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_direct_abstract_declarator918 = new BitSet(new ulong[]{0x800000040000002UL});
-		public static readonly BitSet _abstract_declarator_suffix_in_direct_abstract_declarator922 = new BitSet(new ulong[]{0x800000040000002UL});
-		public static readonly BitSet _abstract_declarator_suffix_in_direct_abstract_declarator926 = new BitSet(new ulong[]{0x800000040000002UL});
-		public static readonly BitSet _59_in_abstract_declarator_suffix938 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_abstract_declarator_suffix940 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _59_in_abstract_declarator_suffix945 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _constant_expression_in_abstract_declarator_suffix947 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_abstract_declarator_suffix949 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _30_in_abstract_declarator_suffix954 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_abstract_declarator_suffix956 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _30_in_abstract_declarator_suffix961 = new BitSet(new ulong[]{0x8000000000002000UL,0xF36E3A33UL});
-		public static readonly BitSet _parameter_type_list_in_abstract_declarator_suffix963 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_abstract_declarator_suffix965 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _assignment_expression_in_initializer977 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _97_in_initializer982 = new BitSet(new ulong[]{0xCD50942A50UL,0x4200800000UL});
-		public static readonly BitSet _initializer_list_in_initializer984 = new BitSet(new ulong[]{0x2000000000UL,0x2000000000UL});
-		public static readonly BitSet _37_in_initializer986 = new BitSet(new ulong[]{0x0UL,0x2000000000UL});
-		public static readonly BitSet _101_in_initializer989 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _initializer_in_initializer_list1000 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _37_in_initializer_list1003 = new BitSet(new ulong[]{0xCD50942A50UL,0x4200800000UL});
-		public static readonly BitSet _initializer_in_initializer_list1005 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _assignment_expression_in_argument_expression_list1022 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _37_in_argument_expression_list1025 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _assignment_expression_in_argument_expression_list1027 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _multiplicative_expression_in_additive_expression1041 = new BitSet(new ulong[]{0x4400000002UL});
-		public static readonly BitSet _34_in_additive_expression1045 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _multiplicative_expression_in_additive_expression1047 = new BitSet(new ulong[]{0x4400000002UL});
-		public static readonly BitSet _38_in_additive_expression1051 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _multiplicative_expression_in_additive_expression1053 = new BitSet(new ulong[]{0x4400000002UL});
-		public static readonly BitSet _cast_expression_in_multiplicative_expression1067 = new BitSet(new ulong[]{0x100102000002UL});
-		public static readonly BitSet _32_in_multiplicative_expression1071 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _cast_expression_in_multiplicative_expression1073 = new BitSet(new ulong[]{0x100102000002UL});
-		public static readonly BitSet _44_in_multiplicative_expression1077 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _cast_expression_in_multiplicative_expression1079 = new BitSet(new ulong[]{0x100102000002UL});
-		public static readonly BitSet _25_in_multiplicative_expression1083 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _cast_expression_in_multiplicative_expression1085 = new BitSet(new ulong[]{0x100102000002UL});
-		public static readonly BitSet _30_in_cast_expression1098 = new BitSet(new ulong[]{0x8000000000002000UL,0xF2662A31UL});
-		public static readonly BitSet _type_name_in_cast_expression1100 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_cast_expression1102 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _cast_expression_in_cast_expression1104 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _unary_expression_in_cast_expression1109 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _postfix_expression_in_unary_expression1120 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _35_in_unary_expression1125 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _unary_expression_in_unary_expression1127 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _39_in_unary_expression1132 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _unary_expression_in_unary_expression1134 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _unary_operator_in_unary_expression1139 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _cast_expression_in_unary_expression1141 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _87_in_unary_expression1146 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _unary_expression_in_unary_expression1148 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _87_in_unary_expression1153 = new BitSet(new ulong[]{0x40000000UL});
-		public static readonly BitSet _30_in_unary_expression1155 = new BitSet(new ulong[]{0x8000000000002000UL,0xF2662A31UL});
-		public static readonly BitSet _type_name_in_unary_expression1157 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_unary_expression1159 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primary_expression_in_postfix_expression1172 = new BitSet(new ulong[]{0x800068840000002UL});
-		public static readonly BitSet _59_in_postfix_expression1180 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _expression_in_postfix_expression1182 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_postfix_expression1184 = new BitSet(new ulong[]{0x800068840000002UL});
-		public static readonly BitSet _30_in_postfix_expression1192 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_postfix_expression1194 = new BitSet(new ulong[]{0x800068840000002UL});
-		public static readonly BitSet _30_in_postfix_expression1202 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _argument_expression_list_in_postfix_expression1204 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_postfix_expression1206 = new BitSet(new ulong[]{0x800068840000002UL});
-		public static readonly BitSet _42_in_postfix_expression1214 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _IDENTIFIER_in_postfix_expression1216 = new BitSet(new ulong[]{0x800068840000002UL});
-		public static readonly BitSet _41_in_postfix_expression1224 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _IDENTIFIER_in_postfix_expression1226 = new BitSet(new ulong[]{0x800068840000002UL});
-		public static readonly BitSet _35_in_postfix_expression1234 = new BitSet(new ulong[]{0x800068840000002UL});
-		public static readonly BitSet _39_in_postfix_expression1242 = new BitSet(new ulong[]{0x800068840000002UL});
-		public static readonly BitSet _IDENTIFIER_in_primary_expression1294 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _constant_in_primary_expression1299 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _30_in_primary_expression1304 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _expression_in_primary_expression1306 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_primary_expression1308 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _hex_literal_in_constant1321 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _octal_literal_in_constant1328 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _decimal_literal_in_constant1335 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _character_literal_in_constant1342 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _string_literal_in_constant1349 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _floating_point_literal_in_constant1356 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _HEX_LITERAL_in_hex_literal1367 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _OCTAL_LITERAL_in_octal_literal1378 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DECIMAL_LITERAL_in_decimal_literal1389 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _CHARACTER_LITERAL_in_character_literal1400 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _STRING_LITERAL_in_string_literal1411 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _FLOATING_POINT_LITERAL_in_floating_point_literal1422 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _assignment_expression_in_expression1435 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _37_in_expression1438 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _assignment_expression_in_expression1440 = new BitSet(new ulong[]{0x2000000002UL});
-		public static readonly BitSet _conditional_expression_in_constant_expression1453 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _lvalue_in_assignment_expression1464 = new BitSet(new ulong[]{0x4214211224000000UL,0x800000000UL});
-		public static readonly BitSet _assignment_operator_in_assignment_expression1466 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _assignment_expression_in_assignment_expression1468 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _conditional_expression_in_assignment_expression1473 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _unary_expression_in_lvalue1485 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _logical_or_expression_in_conditional_expression1557 = new BitSet(new ulong[]{0x400000000000002UL});
-		public static readonly BitSet _58_in_conditional_expression1560 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _expression_in_conditional_expression1562 = new BitSet(new ulong[]{0x400000000000UL});
-		public static readonly BitSet _46_in_conditional_expression1564 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _conditional_expression_in_conditional_expression1566 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _logical_and_expression_in_logical_or_expression1579 = new BitSet(new ulong[]{0x2UL,0x1000000000UL});
-		public static readonly BitSet _100_in_logical_or_expression1582 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _logical_and_expression_in_logical_or_expression1584 = new BitSet(new ulong[]{0x2UL,0x1000000000UL});
-		public static readonly BitSet _inclusive_or_expression_in_logical_and_expression1597 = new BitSet(new ulong[]{0x8000002UL});
-		public static readonly BitSet _27_in_logical_and_expression1600 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _inclusive_or_expression_in_logical_and_expression1602 = new BitSet(new ulong[]{0x8000002UL});
-		public static readonly BitSet _exclusive_or_expression_in_inclusive_or_expression1615 = new BitSet(new ulong[]{0x2UL,0x400000000UL});
-		public static readonly BitSet _98_in_inclusive_or_expression1618 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _exclusive_or_expression_in_inclusive_or_expression1620 = new BitSet(new ulong[]{0x2UL,0x400000000UL});
-		public static readonly BitSet _and_expression_in_exclusive_or_expression1633 = new BitSet(new ulong[]{0x2000000000000002UL});
-		public static readonly BitSet _61_in_exclusive_or_expression1636 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _and_expression_in_exclusive_or_expression1638 = new BitSet(new ulong[]{0x2000000000000002UL});
-		public static readonly BitSet _equality_expression_in_and_expression1651 = new BitSet(new ulong[]{0x10000002UL});
-		public static readonly BitSet _28_in_and_expression1654 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _equality_expression_in_and_expression1656 = new BitSet(new ulong[]{0x10000002UL});
-		public static readonly BitSet _relational_expression_in_equality_expression1668 = new BitSet(new ulong[]{0x20000001000002UL});
-		public static readonly BitSet _set_in_equality_expression1671 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _relational_expression_in_equality_expression1677 = new BitSet(new ulong[]{0x20000001000002UL});
-		public static readonly BitSet _shift_expression_in_relational_expression1690 = new BitSet(new ulong[]{0xC9000000000002UL});
-		public static readonly BitSet _set_in_relational_expression1693 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _shift_expression_in_relational_expression1703 = new BitSet(new ulong[]{0xC9000000000002UL});
-		public static readonly BitSet _additive_expression_in_shift_expression1716 = new BitSet(new ulong[]{0x102000000000002UL});
-		public static readonly BitSet _set_in_shift_expression1719 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _additive_expression_in_shift_expression1725 = new BitSet(new ulong[]{0x102000000000002UL});
-		public static readonly BitSet _labeled_statement_in_statement1740 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _compound_statement_in_statement1745 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_statement_in_statement1750 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _selection_statement_in_statement1755 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _iteration_statement_in_statement1760 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _jump_statement_in_statement1765 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENTIFIER_in_labeled_statement1776 = new BitSet(new ulong[]{0x400000000000UL});
-		public static readonly BitSet _46_in_labeled_statement1778 = new BitSet(new ulong[]{0x80CD50942A50UL,0x430491C1CCUL});
-		public static readonly BitSet _statement_in_labeled_statement1780 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _67_in_labeled_statement1785 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _constant_expression_in_labeled_statement1787 = new BitSet(new ulong[]{0x400000000000UL});
-		public static readonly BitSet _46_in_labeled_statement1789 = new BitSet(new ulong[]{0x80CD50942A50UL,0x430491C1CCUL});
-		public static readonly BitSet _statement_in_labeled_statement1791 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _71_in_labeled_statement1796 = new BitSet(new ulong[]{0x400000000000UL});
-		public static readonly BitSet _46_in_labeled_statement1798 = new BitSet(new ulong[]{0x80CD50942A50UL,0x430491C1CCUL});
-		public static readonly BitSet _statement_in_labeled_statement1800 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _97_in_compound_statement1822 = new BitSet(new ulong[]{0x800080CD50942A50UL,0x63FFFFFBFFUL});
-		public static readonly BitSet _declaration_in_compound_statement1824 = new BitSet(new ulong[]{0x800080CD50942A50UL,0x63FFFFFBFFUL});
-		public static readonly BitSet _statement_list_in_compound_statement1827 = new BitSet(new ulong[]{0x0UL,0x2000000000UL});
-		public static readonly BitSet _101_in_compound_statement1830 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _statement_in_statement_list1841 = new BitSet(new ulong[]{0x80CD50942A52UL,0x430491C1CCUL});
-		public static readonly BitSet _47_in_expression_statement1853 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_expression_statement1858 = new BitSet(new ulong[]{0x800000000000UL});
-		public static readonly BitSet _47_in_expression_statement1860 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _80_in_selection_statement1871 = new BitSet(new ulong[]{0x40000000UL});
-		public static readonly BitSet _30_in_selection_statement1873 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _expression_in_selection_statement1875 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_selection_statement1877 = new BitSet(new ulong[]{0x80CD50942A50UL,0x430491C1CCUL});
-		public static readonly BitSet _statement_in_selection_statement1879 = new BitSet(new ulong[]{0x2UL,0x400UL});
-		public static readonly BitSet _74_in_selection_statement1894 = new BitSet(new ulong[]{0x80CD50942A50UL,0x430491C1CCUL});
-		public static readonly BitSet _statement_in_selection_statement1896 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _90_in_selection_statement1903 = new BitSet(new ulong[]{0x40000000UL});
-		public static readonly BitSet _30_in_selection_statement1905 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _expression_in_selection_statement1907 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_selection_statement1909 = new BitSet(new ulong[]{0x80CD50942A50UL,0x430491C1CCUL});
-		public static readonly BitSet _statement_in_selection_statement1911 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _96_in_iteration_statement1922 = new BitSet(new ulong[]{0x40000000UL});
-		public static readonly BitSet _30_in_iteration_statement1924 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _expression_in_iteration_statement1926 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_iteration_statement1928 = new BitSet(new ulong[]{0x80CD50942A50UL,0x430491C1CCUL});
-		public static readonly BitSet _statement_in_iteration_statement1930 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _72_in_iteration_statement1935 = new BitSet(new ulong[]{0x80CD50942A50UL,0x430491C1CCUL});
-		public static readonly BitSet _statement_in_iteration_statement1937 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
-		public static readonly BitSet _96_in_iteration_statement1939 = new BitSet(new ulong[]{0x40000000UL});
-		public static readonly BitSet _30_in_iteration_statement1941 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _expression_in_iteration_statement1943 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_iteration_statement1945 = new BitSet(new ulong[]{0x800000000000UL});
-		public static readonly BitSet _47_in_iteration_statement1947 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _78_in_iteration_statement1952 = new BitSet(new ulong[]{0x40000000UL});
-		public static readonly BitSet _30_in_iteration_statement1954 = new BitSet(new ulong[]{0x80CD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _expression_statement_in_iteration_statement1956 = new BitSet(new ulong[]{0x80CD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _expression_statement_in_iteration_statement1958 = new BitSet(new ulong[]{0xCDD0942A50UL,0x4000800000UL});
-		public static readonly BitSet _expression_in_iteration_statement1960 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_iteration_statement1963 = new BitSet(new ulong[]{0x80CD50942A50UL,0x430491C1CCUL});
-		public static readonly BitSet _statement_in_iteration_statement1965 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _79_in_jump_statement1976 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _IDENTIFIER_in_jump_statement1978 = new BitSet(new ulong[]{0x800000000000UL});
-		public static readonly BitSet _47_in_jump_statement1980 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _70_in_jump_statement1985 = new BitSet(new ulong[]{0x800000000000UL});
-		public static readonly BitSet _47_in_jump_statement1987 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _66_in_jump_statement1992 = new BitSet(new ulong[]{0x800000000000UL});
-		public static readonly BitSet _47_in_jump_statement1994 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _84_in_jump_statement1999 = new BitSet(new ulong[]{0x800000000000UL});
-		public static readonly BitSet _47_in_jump_statement2001 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _84_in_jump_statement2006 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _expression_in_jump_statement2008 = new BitSet(new ulong[]{0x800000000000UL});
-		public static readonly BitSet _47_in_jump_statement2010 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _storage_class_specifier_in_declaration_specifiers226 = new BitSet(new ulong[]{0x8000000000002002UL,0x79B71D19FUL});
+		public static readonly BitSet _type_specifier_in_declaration_specifiers234 = new BitSet(new ulong[]{0x8000000000002002UL,0x79B71D19FUL});
+		public static readonly BitSet _type_qualifier_in_declaration_specifiers242 = new BitSet(new ulong[]{0x8000000000002002UL,0x79B71D19FUL});
+		public static readonly BitSet _gcc_qualifier_in_declaration_specifiers250 = new BitSet(new ulong[]{0x8000000000002002UL,0x79B71D19FUL});
+		public static readonly BitSet _init_declarator_in_init_declarator_list266 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _37_in_init_declarator_list269 = new BitSet(new ulong[]{0x140002000UL});
+		public static readonly BitSet _init_declarator_in_init_declarator_list271 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _declarator_in_init_declarator284 = new BitSet(new ulong[]{0x10000000000002UL});
+		public static readonly BitSet _52_in_init_declarator287 = new BitSet(new ulong[]{0xCD50942A50UL,0x21004000000UL});
+		public static readonly BitSet _initializer_in_init_declarator289 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _97_in_type_specifier328 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _71_in_type_specifier333 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _88_in_type_specifier338 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _84_in_type_specifier343 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _85_in_type_specifier348 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _80_in_type_specifier353 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _76_in_type_specifier358 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _89_in_type_specifier363 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _96_in_type_specifier368 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _struct_or_union_specifier_in_type_specifier373 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _enum_specifier_in_type_specifier378 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _type_id_in_type_specifier383 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _64_in_gcc_qualifier413 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _66_in_gcc_qualifier418 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _63_in_gcc_qualifier423 = new BitSet(new ulong[]{0x40000000UL});
+		public static readonly BitSet _30_in_gcc_qualifier425 = new BitSet(new ulong[]{0x40000000UL});
+		public static readonly BitSet _30_in_gcc_qualifier427 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _attribute_value_in_gcc_qualifier429 = new BitSet(new ulong[]{0x2080000000UL});
+		public static readonly BitSet _37_in_gcc_qualifier432 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _attribute_value_in_gcc_qualifier434 = new BitSet(new ulong[]{0x2080000000UL});
+		public static readonly BitSet _31_in_gcc_qualifier438 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_gcc_qualifier440 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _67_in_gcc_qualifier445 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENTIFIER_in_attribute_value473 = new BitSet(new ulong[]{0x40000002UL});
+		public static readonly BitSet _30_in_attribute_value477 = new BitSet(new ulong[]{0x140A50UL});
+		public static readonly BitSet _constant_in_attribute_value479 = new BitSet(new ulong[]{0x2080000000UL});
+		public static readonly BitSet _37_in_attribute_value482 = new BitSet(new ulong[]{0x140A50UL});
+		public static readonly BitSet _constant_in_attribute_value484 = new BitSet(new ulong[]{0x2080000000UL});
+		public static readonly BitSet _31_in_attribute_value488 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENTIFIER_in_type_id506 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _struct_or_union_in_struct_or_union_specifier536 = new BitSet(new ulong[]{0x2000UL,0x1000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_struct_or_union_specifier538 = new BitSet(new ulong[]{0x0UL,0x1000000000UL});
+		public static readonly BitSet _100_in_struct_or_union_specifier541 = new BitSet(new ulong[]{0x2000UL,0x793315182UL});
+		public static readonly BitSet _struct_declaration_list_in_struct_or_union_specifier543 = new BitSet(new ulong[]{0x0UL,0x10000000000UL});
+		public static readonly BitSet _104_in_struct_or_union_specifier545 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _struct_or_union_in_struct_or_union_specifier550 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _IDENTIFIER_in_struct_or_union_specifier552 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _struct_declaration_in_struct_declaration_list579 = new BitSet(new ulong[]{0x2002UL,0x793315182UL});
+		public static readonly BitSet _specifier_qualifier_list_in_struct_declaration591 = new BitSet(new ulong[]{0x400140002000UL});
+		public static readonly BitSet _struct_declarator_list_in_struct_declaration593 = new BitSet(new ulong[]{0x800000000000UL});
+		public static readonly BitSet _47_in_struct_declaration595 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _type_qualifier_in_specifier_qualifier_list608 = new BitSet(new ulong[]{0x2002UL,0x793315182UL});
+		public static readonly BitSet _type_specifier_in_specifier_qualifier_list612 = new BitSet(new ulong[]{0x2002UL,0x793315182UL});
+		public static readonly BitSet _struct_declarator_in_struct_declarator_list626 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _37_in_struct_declarator_list629 = new BitSet(new ulong[]{0x400140002000UL});
+		public static readonly BitSet _struct_declarator_in_struct_declarator_list631 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _declarator_in_struct_declarator644 = new BitSet(new ulong[]{0x400000000002UL});
+		public static readonly BitSet _46_in_struct_declarator647 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _constant_expression_in_struct_declarator649 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _46_in_struct_declarator656 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _constant_expression_in_struct_declarator658 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _78_in_enum_specifier676 = new BitSet(new ulong[]{0x0UL,0x1000000000UL});
+		public static readonly BitSet _100_in_enum_specifier678 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _enumerator_list_in_enum_specifier680 = new BitSet(new ulong[]{0x0UL,0x10000000000UL});
+		public static readonly BitSet _104_in_enum_specifier682 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _78_in_enum_specifier687 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _IDENTIFIER_in_enum_specifier689 = new BitSet(new ulong[]{0x0UL,0x1000000000UL});
+		public static readonly BitSet _100_in_enum_specifier691 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _enumerator_list_in_enum_specifier693 = new BitSet(new ulong[]{0x0UL,0x10000000000UL});
+		public static readonly BitSet _104_in_enum_specifier695 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _78_in_enum_specifier700 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _IDENTIFIER_in_enum_specifier702 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _enumerator_in_enumerator_list713 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _37_in_enumerator_list716 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _enumerator_in_enumerator_list718 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _IDENTIFIER_in_enumerator731 = new BitSet(new ulong[]{0x10000000000002UL});
+		public static readonly BitSet _52_in_enumerator734 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _constant_expression_in_enumerator736 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _pointer_in_declarator772 = new BitSet(new ulong[]{0x40002000UL});
+		public static readonly BitSet _direct_declarator_in_declarator775 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _pointer_in_declarator780 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENTIFIER_in_direct_declarator795 = new BitSet(new ulong[]{0x800000040000002UL});
+		public static readonly BitSet _30_in_direct_declarator806 = new BitSet(new ulong[]{0x140002000UL});
+		public static readonly BitSet _declarator_in_direct_declarator808 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_direct_declarator810 = new BitSet(new ulong[]{0x800000040000002UL});
+		public static readonly BitSet _declarator_suffix_in_direct_declarator818 = new BitSet(new ulong[]{0x800000040000002UL});
+		public static readonly BitSet _59_in_declarator_suffix832 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _constant_expression_in_declarator_suffix834 = new BitSet(new ulong[]{0x1000000000000000UL});
+		public static readonly BitSet _60_in_declarator_suffix836 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _59_in_declarator_suffix843 = new BitSet(new ulong[]{0x1000000000000000UL});
+		public static readonly BitSet _60_in_declarator_suffix845 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _30_in_declarator_suffix852 = new BitSet(new ulong[]{0x8000000000002000UL,0x79B71D19FUL});
+		public static readonly BitSet _parameter_type_list_in_declarator_suffix854 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_declarator_suffix856 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _30_in_declarator_suffix863 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _identifier_list_in_declarator_suffix865 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_declarator_suffix867 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _30_in_declarator_suffix874 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_declarator_suffix876 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _32_in_pointer887 = new BitSet(new ulong[]{0x0UL,0x400000102UL});
+		public static readonly BitSet _type_qualifier_in_pointer889 = new BitSet(new ulong[]{0x100000002UL,0x400000102UL});
+		public static readonly BitSet _pointer_in_pointer892 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _32_in_pointer898 = new BitSet(new ulong[]{0x100000000UL});
+		public static readonly BitSet _pointer_in_pointer900 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _32_in_pointer905 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _parameter_list_in_parameter_type_list916 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _37_in_parameter_type_list919 = new BitSet(new ulong[]{0x80000000000UL});
+		public static readonly BitSet _43_in_parameter_type_list921 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _parameter_declaration_in_parameter_list934 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _37_in_parameter_list937 = new BitSet(new ulong[]{0x8000000000002000UL,0x79B71D19FUL});
+		public static readonly BitSet _parameter_declaration_in_parameter_list939 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _declaration_specifiers_in_parameter_declaration952 = new BitSet(new ulong[]{0x800000140002002UL});
+		public static readonly BitSet _declarator_in_parameter_declaration955 = new BitSet(new ulong[]{0x800000140002002UL});
+		public static readonly BitSet _abstract_declarator_in_parameter_declaration957 = new BitSet(new ulong[]{0x800000140002002UL});
+		public static readonly BitSet _IDENTIFIER_in_identifier_list970 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _37_in_identifier_list973 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _IDENTIFIER_in_identifier_list975 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _specifier_qualifier_list_in_type_name988 = new BitSet(new ulong[]{0x800000140000002UL});
+		public static readonly BitSet _abstract_declarator_in_type_name990 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _pointer_in_abstract_declarator1002 = new BitSet(new ulong[]{0x800000040000002UL});
+		public static readonly BitSet _direct_abstract_declarator_in_abstract_declarator1004 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _direct_abstract_declarator_in_abstract_declarator1010 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _30_in_direct_abstract_declarator1023 = new BitSet(new ulong[]{0x800000140000000UL});
+		public static readonly BitSet _abstract_declarator_in_direct_abstract_declarator1025 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_direct_abstract_declarator1027 = new BitSet(new ulong[]{0x800000040000002UL});
+		public static readonly BitSet _abstract_declarator_suffix_in_direct_abstract_declarator1031 = new BitSet(new ulong[]{0x800000040000002UL});
+		public static readonly BitSet _abstract_declarator_suffix_in_direct_abstract_declarator1035 = new BitSet(new ulong[]{0x800000040000002UL});
+		public static readonly BitSet _59_in_abstract_declarator_suffix1047 = new BitSet(new ulong[]{0x1000000000000000UL});
+		public static readonly BitSet _60_in_abstract_declarator_suffix1049 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _59_in_abstract_declarator_suffix1054 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _constant_expression_in_abstract_declarator_suffix1056 = new BitSet(new ulong[]{0x1000000000000000UL});
+		public static readonly BitSet _60_in_abstract_declarator_suffix1058 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _30_in_abstract_declarator_suffix1063 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_abstract_declarator_suffix1065 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _30_in_abstract_declarator_suffix1070 = new BitSet(new ulong[]{0x8000000000002000UL,0x79B71D19FUL});
+		public static readonly BitSet _parameter_type_list_in_abstract_declarator_suffix1072 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_abstract_declarator_suffix1074 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _assignment_expression_in_initializer1086 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _100_in_initializer1091 = new BitSet(new ulong[]{0xCD50942A50UL,0x21004000000UL});
+		public static readonly BitSet _initializer_list_in_initializer1093 = new BitSet(new ulong[]{0x2000000000UL,0x10000000000UL});
+		public static readonly BitSet _37_in_initializer1095 = new BitSet(new ulong[]{0x0UL,0x10000000000UL});
+		public static readonly BitSet _104_in_initializer1098 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _initializer_in_initializer_list1109 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _37_in_initializer_list1112 = new BitSet(new ulong[]{0xCD50942A50UL,0x21004000000UL});
+		public static readonly BitSet _initializer_in_initializer_list1114 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _assignment_expression_in_argument_expression_list1131 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _37_in_argument_expression_list1134 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _assignment_expression_in_argument_expression_list1136 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _multiplicative_expression_in_additive_expression1150 = new BitSet(new ulong[]{0x4400000002UL});
+		public static readonly BitSet _34_in_additive_expression1154 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _multiplicative_expression_in_additive_expression1156 = new BitSet(new ulong[]{0x4400000002UL});
+		public static readonly BitSet _38_in_additive_expression1160 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _multiplicative_expression_in_additive_expression1162 = new BitSet(new ulong[]{0x4400000002UL});
+		public static readonly BitSet _cast_expression_in_multiplicative_expression1176 = new BitSet(new ulong[]{0x100102000002UL});
+		public static readonly BitSet _32_in_multiplicative_expression1180 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _cast_expression_in_multiplicative_expression1182 = new BitSet(new ulong[]{0x100102000002UL});
+		public static readonly BitSet _44_in_multiplicative_expression1186 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _cast_expression_in_multiplicative_expression1188 = new BitSet(new ulong[]{0x100102000002UL});
+		public static readonly BitSet _25_in_multiplicative_expression1192 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _cast_expression_in_multiplicative_expression1194 = new BitSet(new ulong[]{0x100102000002UL});
+		public static readonly BitSet _30_in_cast_expression1207 = new BitSet(new ulong[]{0x2000UL,0x793315182UL});
+		public static readonly BitSet _type_name_in_cast_expression1209 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_cast_expression1211 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _cast_expression_in_cast_expression1213 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _unary_expression_in_cast_expression1218 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _postfix_expression_in_unary_expression1229 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _35_in_unary_expression1234 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _unary_expression_in_unary_expression1236 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _39_in_unary_expression1241 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _unary_expression_in_unary_expression1243 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _unary_operator_in_unary_expression1248 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _cast_expression_in_unary_expression1250 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _90_in_unary_expression1255 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _unary_expression_in_unary_expression1257 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _90_in_unary_expression1262 = new BitSet(new ulong[]{0x40000000UL});
+		public static readonly BitSet _30_in_unary_expression1264 = new BitSet(new ulong[]{0x2000UL,0x793315182UL});
+		public static readonly BitSet _type_name_in_unary_expression1266 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_unary_expression1268 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _primary_expression_in_postfix_expression1281 = new BitSet(new ulong[]{0x800068840000002UL});
+		public static readonly BitSet _59_in_postfix_expression1289 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _expression_in_postfix_expression1291 = new BitSet(new ulong[]{0x1000000000000000UL});
+		public static readonly BitSet _60_in_postfix_expression1293 = new BitSet(new ulong[]{0x800068840000002UL});
+		public static readonly BitSet _30_in_postfix_expression1301 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_postfix_expression1303 = new BitSet(new ulong[]{0x800068840000002UL});
+		public static readonly BitSet _30_in_postfix_expression1311 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _argument_expression_list_in_postfix_expression1313 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_postfix_expression1315 = new BitSet(new ulong[]{0x800068840000002UL});
+		public static readonly BitSet _42_in_postfix_expression1323 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _IDENTIFIER_in_postfix_expression1325 = new BitSet(new ulong[]{0x800068840000002UL});
+		public static readonly BitSet _41_in_postfix_expression1333 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _IDENTIFIER_in_postfix_expression1335 = new BitSet(new ulong[]{0x800068840000002UL});
+		public static readonly BitSet _35_in_postfix_expression1343 = new BitSet(new ulong[]{0x800068840000002UL});
+		public static readonly BitSet _39_in_postfix_expression1351 = new BitSet(new ulong[]{0x800068840000002UL});
+		public static readonly BitSet _IDENTIFIER_in_primary_expression1403 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _constant_in_primary_expression1408 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _30_in_primary_expression1413 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _expression_in_primary_expression1415 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_primary_expression1417 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _hex_literal_in_constant1430 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _octal_literal_in_constant1437 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _decimal_literal_in_constant1444 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _character_literal_in_constant1451 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _string_literal_in_constant1458 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _floating_point_literal_in_constant1465 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _HEX_LITERAL_in_hex_literal1476 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _OCTAL_LITERAL_in_octal_literal1487 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DECIMAL_LITERAL_in_decimal_literal1498 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _CHARACTER_LITERAL_in_character_literal1509 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _STRING_LITERAL_in_string_literal1520 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _FLOATING_POINT_LITERAL_in_floating_point_literal1531 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _assignment_expression_in_expression1544 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _37_in_expression1547 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _assignment_expression_in_expression1549 = new BitSet(new ulong[]{0x2000000002UL});
+		public static readonly BitSet _conditional_expression_in_constant_expression1562 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _lvalue_in_assignment_expression1573 = new BitSet(new ulong[]{0x4214211224000000UL,0x4000000000UL});
+		public static readonly BitSet _assignment_operator_in_assignment_expression1575 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _assignment_expression_in_assignment_expression1577 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _conditional_expression_in_assignment_expression1582 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _unary_expression_in_lvalue1594 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _logical_or_expression_in_conditional_expression1666 = new BitSet(new ulong[]{0x400000000000002UL});
+		public static readonly BitSet _58_in_conditional_expression1669 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _expression_in_conditional_expression1671 = new BitSet(new ulong[]{0x400000000000UL});
+		public static readonly BitSet _46_in_conditional_expression1673 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _conditional_expression_in_conditional_expression1675 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _logical_and_expression_in_logical_or_expression1688 = new BitSet(new ulong[]{0x2UL,0x8000000000UL});
+		public static readonly BitSet _103_in_logical_or_expression1691 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _logical_and_expression_in_logical_or_expression1693 = new BitSet(new ulong[]{0x2UL,0x8000000000UL});
+		public static readonly BitSet _inclusive_or_expression_in_logical_and_expression1706 = new BitSet(new ulong[]{0x8000002UL});
+		public static readonly BitSet _27_in_logical_and_expression1709 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _inclusive_or_expression_in_logical_and_expression1711 = new BitSet(new ulong[]{0x8000002UL});
+		public static readonly BitSet _exclusive_or_expression_in_inclusive_or_expression1724 = new BitSet(new ulong[]{0x2UL,0x2000000000UL});
+		public static readonly BitSet _101_in_inclusive_or_expression1727 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _exclusive_or_expression_in_inclusive_or_expression1729 = new BitSet(new ulong[]{0x2UL,0x2000000000UL});
+		public static readonly BitSet _and_expression_in_exclusive_or_expression1742 = new BitSet(new ulong[]{0x2000000000000002UL});
+		public static readonly BitSet _61_in_exclusive_or_expression1745 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _and_expression_in_exclusive_or_expression1747 = new BitSet(new ulong[]{0x2000000000000002UL});
+		public static readonly BitSet _equality_expression_in_and_expression1760 = new BitSet(new ulong[]{0x10000002UL});
+		public static readonly BitSet _28_in_and_expression1763 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _equality_expression_in_and_expression1765 = new BitSet(new ulong[]{0x10000002UL});
+		public static readonly BitSet _relational_expression_in_equality_expression1777 = new BitSet(new ulong[]{0x20000001000002UL});
+		public static readonly BitSet _set_in_equality_expression1780 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _relational_expression_in_equality_expression1786 = new BitSet(new ulong[]{0x20000001000002UL});
+		public static readonly BitSet _shift_expression_in_relational_expression1799 = new BitSet(new ulong[]{0xC9000000000002UL});
+		public static readonly BitSet _set_in_relational_expression1802 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _shift_expression_in_relational_expression1812 = new BitSet(new ulong[]{0xC9000000000002UL});
+		public static readonly BitSet _additive_expression_in_shift_expression1825 = new BitSet(new ulong[]{0x102000000000002UL});
+		public static readonly BitSet _set_in_shift_expression1828 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _additive_expression_in_shift_expression1834 = new BitSet(new ulong[]{0x102000000000002UL});
+		public static readonly BitSet _labeled_statement_in_statement1849 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _compound_statement_in_statement1854 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_statement_in_statement1859 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _selection_statement_in_statement1864 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _iteration_statement_in_statement1869 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _jump_statement_in_statement1874 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENTIFIER_in_labeled_statement1885 = new BitSet(new ulong[]{0x400000000000UL});
+		public static readonly BitSet _46_in_labeled_statement1887 = new BitSet(new ulong[]{0x80CD50942A50UL,0x218248E0E60UL});
+		public static readonly BitSet _statement_in_labeled_statement1889 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _70_in_labeled_statement1894 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _constant_expression_in_labeled_statement1896 = new BitSet(new ulong[]{0x400000000000UL});
+		public static readonly BitSet _46_in_labeled_statement1898 = new BitSet(new ulong[]{0x80CD50942A50UL,0x218248E0E60UL});
+		public static readonly BitSet _statement_in_labeled_statement1900 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _74_in_labeled_statement1905 = new BitSet(new ulong[]{0x400000000000UL});
+		public static readonly BitSet _46_in_labeled_statement1907 = new BitSet(new ulong[]{0x80CD50942A50UL,0x218248E0E60UL});
+		public static readonly BitSet _statement_in_labeled_statement1909 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _100_in_compound_statement1931 = new BitSet(new ulong[]{0x800080CD50942A50UL,0x31FFFFFDFFFUL});
+		public static readonly BitSet _declaration_in_compound_statement1933 = new BitSet(new ulong[]{0x800080CD50942A50UL,0x31FFFFFDFFFUL});
+		public static readonly BitSet _statement_list_in_compound_statement1936 = new BitSet(new ulong[]{0x0UL,0x10000000000UL});
+		public static readonly BitSet _104_in_compound_statement1939 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _statement_in_statement_list1950 = new BitSet(new ulong[]{0x80CD50942A52UL,0x218248E0E60UL});
+		public static readonly BitSet _47_in_expression_statement1962 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_in_expression_statement1967 = new BitSet(new ulong[]{0x800000000000UL});
+		public static readonly BitSet _47_in_expression_statement1969 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _83_in_selection_statement1980 = new BitSet(new ulong[]{0x40000000UL});
+		public static readonly BitSet _30_in_selection_statement1982 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _expression_in_selection_statement1984 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_selection_statement1986 = new BitSet(new ulong[]{0x80CD50942A50UL,0x218248E0E60UL});
+		public static readonly BitSet _statement_in_selection_statement1988 = new BitSet(new ulong[]{0x2UL,0x2000UL});
+		public static readonly BitSet _77_in_selection_statement2003 = new BitSet(new ulong[]{0x80CD50942A50UL,0x218248E0E60UL});
+		public static readonly BitSet _statement_in_selection_statement2005 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _93_in_selection_statement2012 = new BitSet(new ulong[]{0x40000000UL});
+		public static readonly BitSet _30_in_selection_statement2014 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _expression_in_selection_statement2016 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_selection_statement2018 = new BitSet(new ulong[]{0x80CD50942A50UL,0x218248E0E60UL});
+		public static readonly BitSet _statement_in_selection_statement2020 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _99_in_iteration_statement2031 = new BitSet(new ulong[]{0x40000000UL});
+		public static readonly BitSet _30_in_iteration_statement2033 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _expression_in_iteration_statement2035 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_iteration_statement2037 = new BitSet(new ulong[]{0x80CD50942A50UL,0x218248E0E60UL});
+		public static readonly BitSet _statement_in_iteration_statement2039 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _75_in_iteration_statement2044 = new BitSet(new ulong[]{0x80CD50942A50UL,0x218248E0E60UL});
+		public static readonly BitSet _statement_in_iteration_statement2046 = new BitSet(new ulong[]{0x0UL,0x800000000UL});
+		public static readonly BitSet _99_in_iteration_statement2048 = new BitSet(new ulong[]{0x40000000UL});
+		public static readonly BitSet _30_in_iteration_statement2050 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _expression_in_iteration_statement2052 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_iteration_statement2054 = new BitSet(new ulong[]{0x800000000000UL});
+		public static readonly BitSet _47_in_iteration_statement2056 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _81_in_iteration_statement2061 = new BitSet(new ulong[]{0x40000000UL});
+		public static readonly BitSet _30_in_iteration_statement2063 = new BitSet(new ulong[]{0x80CD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _expression_statement_in_iteration_statement2065 = new BitSet(new ulong[]{0x80CD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _expression_statement_in_iteration_statement2067 = new BitSet(new ulong[]{0xCDD0942A50UL,0x20004000000UL});
+		public static readonly BitSet _expression_in_iteration_statement2069 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_iteration_statement2072 = new BitSet(new ulong[]{0x80CD50942A50UL,0x218248E0E60UL});
+		public static readonly BitSet _statement_in_iteration_statement2074 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _82_in_jump_statement2085 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _IDENTIFIER_in_jump_statement2087 = new BitSet(new ulong[]{0x800000000000UL});
+		public static readonly BitSet _47_in_jump_statement2089 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _73_in_jump_statement2094 = new BitSet(new ulong[]{0x800000000000UL});
+		public static readonly BitSet _47_in_jump_statement2096 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _69_in_jump_statement2101 = new BitSet(new ulong[]{0x800000000000UL});
+		public static readonly BitSet _47_in_jump_statement2103 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _87_in_jump_statement2108 = new BitSet(new ulong[]{0x800000000000UL});
+		public static readonly BitSet _47_in_jump_statement2110 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _87_in_jump_statement2115 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _expression_in_jump_statement2117 = new BitSet(new ulong[]{0x800000000000UL});
+		public static readonly BitSet _47_in_jump_statement2119 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _declaration_specifiers_in_synpred2_C94 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _declaration_specifiers_in_synpred4_C94 = new BitSet(new ulong[]{0x140002000UL});
-		public static readonly BitSet _declarator_in_synpred4_C97 = new BitSet(new ulong[]{0x8000000000002000UL,0x2FB6E3A33UL});
-		public static readonly BitSet _declaration_in_synpred4_C99 = new BitSet(new ulong[]{0x8000000000002000UL,0x2FB6E3A33UL});
-		public static readonly BitSet _97_in_synpred4_C102 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _declarator_in_synpred4_C97 = new BitSet(new ulong[]{0x8000000000002000UL,0x17DB71D19FUL});
+		public static readonly BitSet _declaration_in_synpred4_C99 = new BitSet(new ulong[]{0x8000000000002000UL,0x17DB71D19FUL});
+		public static readonly BitSet _100_in_synpred4_C102 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _declaration_specifiers_in_synpred5_C134 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _declaration_specifiers_in_synpred9_C186 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _type_specifier_in_synpred13_C234 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _type_specifier_in_synpred37_C503 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _pointer_in_synpred48_C663 = new BitSet(new ulong[]{0x40002000UL});
-		public static readonly BitSet _direct_declarator_in_synpred48_C666 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _declarator_suffix_in_synpred50_C709 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _30_in_synpred53_C743 = new BitSet(new ulong[]{0x8000000000002000UL,0xF36E3A33UL});
-		public static readonly BitSet _parameter_type_list_in_synpred53_C745 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_synpred53_C747 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _30_in_synpred54_C754 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _identifier_list_in_synpred54_C756 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_synpred54_C758 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _type_qualifier_in_synpred55_C780 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _pointer_in_synpred56_C783 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _32_in_synpred57_C778 = new BitSet(new ulong[]{0x0UL,0x80000021UL});
-		public static readonly BitSet _type_qualifier_in_synpred57_C780 = new BitSet(new ulong[]{0x100000002UL,0x80000021UL});
-		public static readonly BitSet _pointer_in_synpred57_C783 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _32_in_synpred58_C789 = new BitSet(new ulong[]{0x100000000UL});
-		public static readonly BitSet _pointer_in_synpred58_C791 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _declarator_in_synpred61_C846 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _abstract_declarator_in_synpred62_C848 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _direct_abstract_declarator_in_synpred65_C895 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _abstract_declarator_suffix_in_synpred68_C926 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _30_in_synpred81_C1098 = new BitSet(new ulong[]{0x8000000000002000UL,0xF2662A31UL});
-		public static readonly BitSet _type_name_in_synpred81_C1100 = new BitSet(new ulong[]{0x80000000UL});
-		public static readonly BitSet _31_in_synpred81_C1102 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _cast_expression_in_synpred81_C1104 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _87_in_synpred86_C1146 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _unary_expression_in_synpred86_C1148 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _lvalue_in_synpred107_C1464 = new BitSet(new ulong[]{0x4214211224000000UL,0x800000000UL});
-		public static readonly BitSet _assignment_operator_in_synpred107_C1466 = new BitSet(new ulong[]{0xCD50942A50UL,0x4000800000UL});
-		public static readonly BitSet _assignment_expression_in_synpred107_C1468 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _declaration_in_synpred139_C1824 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _type_specifier_in_synpred43_C612 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _pointer_in_synpred54_C772 = new BitSet(new ulong[]{0x40002000UL});
+		public static readonly BitSet _direct_declarator_in_synpred54_C775 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _declarator_suffix_in_synpred56_C818 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _30_in_synpred59_C852 = new BitSet(new ulong[]{0x8000000000002000UL,0x79B71D19FUL});
+		public static readonly BitSet _parameter_type_list_in_synpred59_C854 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_synpred59_C856 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _30_in_synpred60_C863 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _identifier_list_in_synpred60_C865 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_synpred60_C867 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _type_qualifier_in_synpred61_C889 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _pointer_in_synpred62_C892 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _32_in_synpred63_C887 = new BitSet(new ulong[]{0x0UL,0x400000102UL});
+		public static readonly BitSet _type_qualifier_in_synpred63_C889 = new BitSet(new ulong[]{0x100000002UL,0x400000102UL});
+		public static readonly BitSet _pointer_in_synpred63_C892 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _32_in_synpred64_C898 = new BitSet(new ulong[]{0x100000000UL});
+		public static readonly BitSet _pointer_in_synpred64_C900 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _declarator_in_synpred67_C955 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _abstract_declarator_in_synpred68_C957 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _direct_abstract_declarator_in_synpred71_C1004 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _abstract_declarator_suffix_in_synpred74_C1035 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _30_in_synpred87_C1207 = new BitSet(new ulong[]{0x2000UL,0x793315182UL});
+		public static readonly BitSet _type_name_in_synpred87_C1209 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_synpred87_C1211 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _cast_expression_in_synpred87_C1213 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _90_in_synpred92_C1255 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _unary_expression_in_synpred92_C1257 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _lvalue_in_synpred113_C1573 = new BitSet(new ulong[]{0x4214211224000000UL,0x4000000000UL});
+		public static readonly BitSet _assignment_operator_in_synpred113_C1575 = new BitSet(new ulong[]{0xCD50942A50UL,0x20004000000UL});
+		public static readonly BitSet _assignment_expression_in_synpred113_C1577 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _declaration_in_synpred145_C1933 = new BitSet(new ulong[]{0x2UL});
 	}
 	#endregion Follow sets
 }

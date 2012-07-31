@@ -43,36 +43,36 @@ namespace Code2Xml.Languages.C.Tests {
 			var path = Fixture.GetInputPath("C", "DoubleUnderScore.c");
 			CCodeToXml.Instance.GenerateFromFile(path, true);
 		}
-        [Test]
-        public void ParseAttribute01()
-        {
-            var path = Fixture.GetInputPath("C", "Atteribute01.c");
-            CCodeToXml.Instance.GenerateFromFile(path, true);
-        }
-        [Test]
-        public void ParseNonAtte()
-        {
-            var path = Fixture.GetInputPath("C", "nonAtte.c");
-            CCodeToXml.Instance.GenerateFromFile(path, true);
-        }
-        [Test]
-        public void ParseNonAtte02()
-        {
-            var path = Fixture.GetInputPath("C", "nonAtte02.c");
-            CCodeToXml.Instance.GenerateFromFile(path, true);
-        }
-        [Test]
-        public void ParseNonAtteInline()
-        {
-            var path = Fixture.GetInputPath("C", "nonAtteInline.c");
-            CCodeToXml.Instance.GenerateFromFile(path, true);
-        }
-        [Test]
-        public void Parselonglong()
-        {
-            var path = Fixture.GetInputPath("C", "longlong.c");
-            CCodeToXml.Instance.GenerateFromFile(path, true);
-        }
+		[Test]
+		public void ParseAttribute01()
+		{
+			var path = Fixture.GetInputPath("C", "Atteribute01.c");
+			CCodeToXml.Instance.GenerateFromFile(path, true);
+		}
+		[Test]
+		public void ParseNonAtte()
+		{
+			var path = Fixture.GetInputPath("C", "nonAtte.c");
+			CCodeToXml.Instance.GenerateFromFile(path, true);
+		}
+		[Test]
+		public void ParseNonAtte02()
+		{
+			var path = Fixture.GetInputPath("C", "nonAtte02.c");
+			CCodeToXml.Instance.GenerateFromFile(path, true);
+		}
+		[Test]
+		public void ParseNonAtteInline()
+		{
+			var path = Fixture.GetInputPath("C", "nonAtteInline.c");
+			CCodeToXml.Instance.GenerateFromFile(path, true);
+		}
+		[Test]
+		public void Parselonglong()
+		{
+			var path = Fixture.GetInputPath("C", "longlong.c");
+			CCodeToXml.Instance.GenerateFromFile(path, true);
+		}
 
 
 

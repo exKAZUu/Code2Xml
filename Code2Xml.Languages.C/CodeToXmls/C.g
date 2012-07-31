@@ -101,7 +101,7 @@ scope {
 @init {
   $declaration::isTypedef = false;
 }
-	: '__extension__'? 'typedef' declaration_specifiers? {$declaration::isTypedef=true;}  // for gcc
+	: gcc_extension_specifier? 'typedef' declaration_specifiers? {$declaration::isTypedef=true;}  // for gcc
 	  init_declarator_list ';' // special case, looking for typedef	
 	| declaration_specifiers init_declarator_list? ';'
 	;
@@ -110,7 +110,8 @@ declaration_specifiers
 	:   (   storage_class_specifier
 		|   type_specifier
 		|   type_qualifier
-		|   gcc_qualifier
+		|   function_specifier
+		|   gcc_declaration_specifier
 		)+
 	;
 
@@ -142,23 +143,7 @@ type_specifier
 	| struct_or_union_specifier
 	| enum_specifier
 	| type_id
-	;
-
-gcc_qualifier                   // for gcc
-	: '__builtin_va_list'
-	| '__inline'
-	| '__attribute__' '(' '(' attribute_value (',' attribute_value)* ')' ')'
-	| '__inline__'
-	;
-
-attribute_value                 // for gcc
-	: c '(' string_literal ')'
-	| ( 'alias' | '__alias__') '(' string_literal ')'
-	| ( 'aligned' | '__aligned__' ) '(' octal_literal ')'
-	| ( 'alloc_size' | '__alloc_size__' ) '(' octal_literal (',' octal_literal)* ')'
-	| ( 'always_inline' | '__always_inline__' )
-	| ( 'gnu_inline' | '__gnu_inline__' )
-	| ( 'target' | '__target__' ) '(' string_literal ')'
+	| gcc_typeof
 	;
 
 type_id
@@ -172,8 +157,8 @@ scope Symbols; // structs are scopes
 @init {
   $Symbols::types = new HashSet<string>();
 }
-	: struct_or_union IDENTIFIER? '{' struct_declaration_list '}'
-	| struct_or_union IDENTIFIER
+	: struct_or_union gcc_attribute* IDENTIFIER? '{' struct_declaration_list '}'
+	| struct_or_union gcc_attribute* IDENTIFIER
 	;
 
 struct_or_union
@@ -187,10 +172,11 @@ struct_declaration_list
 
 struct_declaration
 	: specifier_qualifier_list struct_declarator_list ';'
+	| ';' // for gcc
 	;
 
 specifier_qualifier_list
-	: ( type_qualifier | type_specifier )+
+	: ( type_qualifier | type_specifier | gcc_declaration_specifier)+
 	;
 
 struct_declarator_list
@@ -220,7 +206,8 @@ enumerator
 type_qualifier
 	: 'const'
 	| 'volatile'
-	| '__extension__'  // for gcc
+	| 'restrict'
+	| '__restrict__'  // for gcc
 	;
 
 declarator
@@ -236,7 +223,7 @@ direct_declarator
 				System.out.println("define type "+$IDENTIFIER.text);
 			}
 			}
-		|	'(' declarator ')'
+		|	'(' gcc_attribute_list? declarator ')'
 		)
 		declarator_suffix*
 	;
@@ -249,10 +236,8 @@ declarator_suffix
 	|   '(' ')'
 	;
 
-pointer
-	: '*' type_qualifier+ pointer?
-	| '*' pointer
-	| '*'
+pointer		// for gcc
+	: ('*' (type_qualifier | gcc_attribute)*)+
 	;
 
 parameter_type_list
@@ -276,19 +261,18 @@ type_name
 	;
 
 abstract_declarator
-	: pointer direct_abstract_declarator?
-	| direct_abstract_declarator
+	: pointer
+	| pointer? direct_abstract_declarator gcc_attribute*
 	;
 
 direct_abstract_declarator
-	:	( '(' abstract_declarator ')' | abstract_declarator_suffix ) abstract_declarator_suffix*
+	: ( '(' gcc_attribute* abstract_declarator ')' | abstract_declarator_suffix ) abstract_declarator_suffix*
 	;
 
 abstract_declarator_suffix
-	:	'[' ']'
-	|	'[' constant_expression ']'
-	|	'(' ')'
-	|	'(' parameter_type_list ')'
+	:	'[' gcc_array_type_modifier* constant_expression? ']'
+	|	'[' gcc_array_type_modifier* '*' ']'
+	|	'(' parameter_type_list? ')'
 	;
 	
 initializer
@@ -338,6 +322,8 @@ postfix_expression
 		|   '++'
 		|   '--'
 		)*
+	| gcc_builtin_va_arg
+	| gcc_builtin_offsetof
 	;
 
 unary_operator
@@ -353,6 +339,7 @@ primary_expression
 	: IDENTIFIER
 	| constant
 	| '(' expression ')'
+	| gcc_statement_expression
 	;
 
 constant
@@ -508,6 +495,81 @@ jump_statement
 	| 'return' ';'
 	| 'return' expression ';'
 	;
+
+// -------------------------------- start gcc extension --------------------------------
+
+gcc_function_specifier
+	: 'inline'
+	| '__inline__'
+	| '__inline'
+	| '__builtin_va_list'
+	;
+
+gcc_extension_specifier
+	: '__extension__'
+	;
+
+gcc_declaration_specifier
+	: gcc_attribute
+	| gcc_extension_specifier
+	;
+
+gcc_attribute_list
+	: gcc_attribute+
+	;
+
+gcc_attribute
+	: '__attribute__' '(' '(' gcc_attribute_parameter_list ')' ')'
+	;
+
+gcc_attribute_parameter_list
+	: gcc_attribute_parameter (',' gcc_attribute_parameter)*
+	;
+
+gcc_attribute_parameter
+	: gcc_attribute_name
+	| gcc_attribute_name ( '(' (assignment_expression (',' assignment_expression)*)? ')' )?
+	;
+
+gcc_attribute_name
+	: IDENTIFIER
+	| storage_class_specifier
+	| type_specifier
+	| type_qualifier
+	| function_specifier
+	;
+
+gcc_statement_expression
+	: "(" compound_statement ")"
+	;
+
+gcc_array_type_modifier_list
+	: gcc_array_type_modifier+
+	;
+
+gcc_array_type_modifier
+	: type_qualifier
+	| gcc_attribute
+	;
+
+gcc_builtin_va_arg
+	: '__builtin_va_arg' '(' assignment_expression ',' type_name ')'
+	;
+
+gcc_typeof
+	: 'typeof' '(' ( type_name | assignment_expression ) ')'
+	;
+
+gcc_builtin_offsetof
+	: '__builtin_offsetof' '(' type_name ',' offsetof_member_designator ')'
+	;
+	 
+offsetof_member_designator
+	: identifier
+	| offsetof_member_designator '.' identifier
+	| offsetof_member_designator '[' expr ']'
+	;
+// --------------------------------- end gcc extension ---------------------------------
 
 IDENTIFIER
 	:	LETTER (LETTER|'0'..'9')*
