@@ -40,7 +40,8 @@ options {
 }
 
 scope Symbols {
-	HashSet<string> types; // only track types in order to get parser working
+	// only track types in order to get parser working
+	HashSet<string> types; 
 }
 
 @members {
@@ -110,7 +111,7 @@ declaration_specifiers
 	:   (   storage_class_specifier
 		|   type_specifier
 		|   type_qualifier
-		|   function_specifier
+		|   gcc_function_specifier
 		|   gcc_declaration_specifier
 		)+
 	;
@@ -157,8 +158,8 @@ scope Symbols; // structs are scopes
 @init {
   $Symbols::types = new HashSet<string>();
 }
-	: struct_or_union gcc_attribute* IDENTIFIER? '{' struct_declaration_list '}'
-	| struct_or_union gcc_attribute* IDENTIFIER
+	: struct_or_union gcc_attribute_list? IDENTIFIER? '{' struct_declaration_list '}'
+	| struct_or_union gcc_attribute_list? IDENTIFIER
 	;
 
 struct_or_union
@@ -184,15 +185,14 @@ struct_declarator_list
 	;
 
 struct_declarator
-	: declarator (':' constant_expression)?
-	| ':' constant_expression
+	: declarator
+	| declarator? ':' constant_expression gcc_attribute_list?
 	;
 
 enum_specifier
-options {k=3;}
-	: 'enum' '{' enumerator_list '}'
-	| 'enum' IDENTIFIER '{' enumerator_list '}'
-	| 'enum' IDENTIFIER
+options {k=4;}
+	: 'enum' gcc_attribute_list? IDENTIFIER? '{' enumerator_list '}'
+	| 'enum' gcc_attribute_list? IDENTIFIER
 	;
 
 enumerator_list
@@ -206,12 +206,12 @@ enumerator
 type_qualifier
 	: 'const'
 	| 'volatile'
-	| 'restrict'
+	| 'restrict'      // for gcc
 	| '__restrict__'  // for gcc
 	;
 
 declarator
-	: pointer? direct_declarator
+	: pointer? direct_declarator gcc_attribute_list?
 	| pointer
 	;
 
@@ -262,11 +262,11 @@ type_name
 
 abstract_declarator
 	: pointer
-	| pointer? direct_abstract_declarator gcc_attribute*
+	| pointer? direct_abstract_declarator gcc_attribute_list?
 	;
 
 direct_abstract_declarator
-	: ( '(' gcc_attribute* abstract_declarator ')' | abstract_declarator_suffix ) abstract_declarator_suffix*
+	: ( '(' gcc_attribute_list? abstract_declarator ')' | abstract_declarator_suffix ) abstract_declarator_suffix*
 	;
 
 abstract_declarator_suffix
@@ -310,6 +310,10 @@ unary_expression
 	| unary_operator cast_expression
 	| 'sizeof' unary_expression
 	| 'sizeof' '(' type_name ')'
+	// gcc extension
+	| '__alignof__' unary_expression
+	| '__alignof__' '(' type_name ')'
+	| gcc_extension_specifier cast_expression
 	;
 
 postfix_expression
@@ -410,6 +414,8 @@ assignment_operator
 
 conditional_expression
 	: logical_or_expression ('?' expression ':' conditional_expression)?
+	// gcc extension
+	| logical_or_expression '?' ':' conditional_expression
 	;
 
 logical_or_expression
@@ -536,11 +542,11 @@ gcc_attribute_name
 	| storage_class_specifier
 	| type_specifier
 	| type_qualifier
-	| function_specifier
+	| gcc_function_specifier
 	;
 
 gcc_statement_expression
-	: "(" compound_statement ")"
+	: '(' compound_statement ')'
 	;
 
 gcc_array_type_modifier_list
@@ -565,9 +571,7 @@ gcc_builtin_offsetof
 	;
 	 
 offsetof_member_designator
-	: identifier
-	| offsetof_member_designator '.' identifier
-	| offsetof_member_designator '[' expr ']'
+	: IDENTIFIER ('.' IDENTIFIER | '[' expression ']')*
 	;
 // --------------------------------- end gcc extension ---------------------------------
 
@@ -604,6 +608,7 @@ fragment
 IntegerTypeSuffix
 	:	('u'|'U')? ('l'|'L')
 	|	('u'|'U')  ('l'|'L')?
+	|	('u'|'U')? ('l'|'L') ('l'|'L')
 	;
 
 FLOATING_POINT_LITERAL
