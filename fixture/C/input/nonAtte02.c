@@ -1,3 +1,6 @@
+typedef unsigned long __dev32_t;
+typedef __dev32_t dev_t;
+
 static __inline unsigned short
 bswap_16 (unsigned short __x)
 {
