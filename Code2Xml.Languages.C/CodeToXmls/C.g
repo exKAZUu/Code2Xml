@@ -534,7 +534,7 @@ gcc_attribute_parameter_list
 
 gcc_attribute_parameter
 	: gcc_attribute_name
-	| gcc_attribute_name ( '(' (assignment_expression (',' assignment_expression)*)? ')' )?
+	| gcc_attribute_name '(' (assignment_expression (',' assignment_expression)*)? ')'
 	;
 
 gcc_attribute_name
