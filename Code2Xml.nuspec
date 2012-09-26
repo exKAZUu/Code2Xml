@@ -14,7 +14,7 @@
     <copyright>Copyright (C) Kazunori Sakamoto 2011-2012</copyright>
     <tags>Library Parser XML Programming Language</tags>
     <dependencies>
-      <dependency id="Paraiba.Experiment" version="1.0.1.15" />
+      <dependency id="Paraiba.Experiment" version="1.0.2.34" />
     </dependencies>
   </metadata>
 </package>
