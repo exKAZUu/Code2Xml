@@ -30,7 +30,7 @@ namespace Code2Xml.Languages.Java.Tests {
                 Path.Combine(Fixture.GetFailedInputPath("Java"), "Unicode.java");
 
         [Test]
-        public void Hudsonのソースコードをパースできない() {
+        public void Hudsonのソースコードをパースできる() {
             var path = Fixture.GetInputPath(
                     "Java", "FileSystemProvisioner.java");
             JavaCodeToXml.Instance.GenerateFromFile(path, true);

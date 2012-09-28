@@ -33,68 +33,20 @@ namespace Code2Xml.Languages.C.Tests {
 		}*/
 
 		[Test]
-		public void ParseQuicksortpSub() {
-			var path = Fixture.GetInputPath("C", "quicksort_p_sub.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseDoubleUnderScore() {
-			var path = Fixture.GetInputPath("C", "DoubleUnderScore.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseAttribute() {
-			var path = Fixture.GetInputPath("C", "Attribute.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseNonAtte() {
-			var path = Fixture.GetInputPath("C", "nonAtte.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseNonAtte02() {
-			var path = Fixture.GetInputPath("C", "nonAtte02.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseNonAtteInline() {
-			var path = Fixture.GetInputPath("C", "nonAtteInline.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void Parselonglong() {
-			var path = Fixture.GetInputPath("C", "longlong.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseMulmv() {
-			var path = Fixture.GetInputPath("C", "mul_mv.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseBlock1() {
-			var path = Fixture.GetInputPath("C", "Block1.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseMersenne() {
-			var path = Fixture.GetInputPath("C", "mersenne.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseMulti() {
-			var path = Fixture.GetInputPath("C", "multi.h");
+		[TestCase("quicksort_p.c")]
+		[TestCase("bubblesort_p.c")]
+		[TestCase("DoubleUnderScore.c")]
+		[TestCase("Attribute.c")]
+		[TestCase("nonAtte.c")]
+		[TestCase("nonAtte02.c")]
+		[TestCase("nonAtteInline.c")]
+		[TestCase("longlong.c")]
+		[TestCase("mul_mv.c")]
+		[TestCase("mersenne.c")]
+		[TestCase("Block1.c")]
+		[TestCase("multi.h")]
+		public void Parse(string fileName) {
+			var path = Fixture.GetInputPath("C", fileName);
 			CCodeToXml.Instance.GenerateFromFile(path, true);
 		}
 
