@@ -32,6 +32,19 @@ namespace Code2Xml.Languages.C.Tests {
 			CCodeToXml.Instance.GenerateFromFile(path, true);
 		}*/
 
+        [Test]
+        public void ParseKleeInserted() {
+            var path = Fixture.GetInputPath("C", "get_sign.c");
+            CCodeToXml.Instance.GenerateFromFile(path, true);
+        }
+
+        [Test]
+        public void ParseKleeInserted2()
+        {
+            var path = Fixture.GetInputPath("C", "get_sign_2.c");
+            CCodeToXml.Instance.GenerateFromFile(path, true);
+        }
+
 		[Test]
 		public void ParseQuicksortpSub() {
 			var path = Fixture.GetInputPath("C", "quicksort_p_sub.c");
