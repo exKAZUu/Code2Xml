@@ -206,6 +206,7 @@ enumerator
 type_qualifier
     : 'const'
     | 'volatile'
+    | '__const'      // for gcc
     | 'restrict'      // for gcc
     | '__volatile__'  // for gcc
     | '__restrict__'  // for gcc
@@ -473,11 +474,11 @@ scope Symbols; // blocks have a scope of symbols
 @init {
   $Symbols::types = new HashSet<string>();
 }
-    : '{' declaration* statement_list? '}'
+    : '{' block_item* '}'
     ;
 
-statement_list
-    : statement+
+block_item
+    : declaration | statement
     ;
 
 expression_statement
@@ -549,10 +550,10 @@ gcc_attribute_name
 
 gcc_asm_statement :   gcc_asm_expression ';' ;
 
-gcc_asm_expression :   '__asm__'
+gcc_asm_expression :   ( '__asm__' | 'asm' )
                        ( type_qualifier )?
                        '('
-                       expression
+                       expression expression?
                          (
                           ':' ( gcc_asm_operand ( ',' gcc_asm_operand )* )?
                             (
