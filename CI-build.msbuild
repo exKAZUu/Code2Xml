@@ -22,7 +22,7 @@
     <CreateItem Include="$(ClassLibraryOutputDirectory)/*.Tests.dll">
       <Output TaskParameter="Include" ItemName="TestAssembly" />
     </CreateItem>
-    <Exec Condition=" ('$(OS)' != 'Windows_NT') " Command="mono $(NUnitPath)/nunit-console.exe @(TestAssembly)" />
-    <Exec Condition=" ('$(OS)' == 'Windows_NT') " Command="$(NUnitPath)/nunit-console.exe @(TestAssembly)" />
+    <Exec Condition=" ('$(OS)' != 'Windows_NT') " Command="mono $(NUnitPath)/nunit-console.exe @(TestAssembly, ' ')" />
+    <Exec Condition=" ('$(OS)' == 'Windows_NT') " Command="$(NUnitPath)/nunit-console.exe @(TestAssembly, ' ')" />
   </Target>
 </Project>
