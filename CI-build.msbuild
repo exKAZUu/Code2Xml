@@ -4,11 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
     <ClassLibraryOutputDirectory>bin/$(Configuration)</ClassLibraryOutputDirectory>
     <NUnitPath>packages/NUnit.Runners.2.6.1/tools</NUnitPath>
-    <MSBuildCommunityTasksPath>.</MSBuildCommunityTasksPath>
   </PropertyGroup>
-
-  <!-- Import the MSBuild Tasks -->
-  <Import Project="$(MSBuildCommunityTasksPath)/Build/MSBuild.Community.Tasks.targets" />
 
   <Target Name="Clean">
     <Exec Condition=" ('$(OS)' != 'Windows_NT') " Command=" rm -r -f $(ClassLibraryOutputDirectory) " />
@@ -26,7 +22,7 @@
     <CreateItem Include="$(ClassLibraryOutputDirectory)/*.Tests.dll">
       <Output TaskParameter="Include" ItemName="TestAssembly" />
     </CreateItem>
-    <Exec Condition=" ('$(OS)' != 'Windows_NT') " Command="mono packages/NUnit.Runners.2.6.1/tools/nunit-console.exe @(TestAssembly)" />
-    <Exec Condition=" ('$(OS)' == 'Windows_NT') " Command="packages/NUnit.Runners.2.6.1/tools/nunit-console.exe @(TestAssembly)" />
+    <Exec Condition=" ('$(OS)' != 'Windows_NT') " Command="mono $(NUnitPath)/nunit-console.exe @(TestAssembly)" />
+    <Exec Condition=" ('$(OS)' == 'Windows_NT') " Command="$(NUnitPath)/nunit-console.exe @(TestAssembly)" />
   </Target>
 </Project>
