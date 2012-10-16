@@ -33,7 +33,7 @@
       </declarator>
       <compound_statement>
         <TOKEN startline="1" startpos="15">{</TOKEN>
-        <statement_list>
+        <block_item>
           <statement>
             <selection_statement>
               <TOKEN startline="2" startpos="1">if</TOKEN>
@@ -97,7 +97,7 @@
               <statement>
                 <compound_statement>
                   <TOKEN startline="2" startpos="11">{</TOKEN>
-                  <statement_list>
+                  <block_item>
                     <statement>
                       <jump_statement>
                         <TOKEN startline="3" startpos="2">return</TOKEN>
@@ -143,7 +143,7 @@
                         <TOKEN startline="3" startpos="10">;</TOKEN>
                       </jump_statement>
                     </statement>
-                  </statement_list>
+                  </block_item>
                   <TOKEN startline="4" startpos="1">}</TOKEN>
                 </compound_statement>
               </statement>
@@ -151,7 +151,7 @@
               <statement>
                 <compound_statement>
                   <TOKEN startline="5" startpos="5">{</TOKEN>
-                  <statement_list>
+                  <block_item>
                     <statement>
                       <jump_statement>
                         <TOKEN startline="6" startpos="2">return</TOKEN>
@@ -256,13 +256,13 @@
                         <TOKEN startline="6" startpos="24">;</TOKEN>
                       </jump_statement>
                     </statement>
-                  </statement_list>
+                  </block_item>
                   <TOKEN startline="7" startpos="1">}</TOKEN>
                 </compound_statement>
               </statement>
             </selection_statement>
           </statement>
-        </statement_list>
+        </block_item>
         <TOKEN startline="8" startpos="0">}</TOKEN>
       </compound_statement>
     </function_definition>

@@ -48,7 +48,7 @@ namespace Code2Xml.Languages.Tests {
 						.SelectMany(
 								name =>
 								Directory.EnumerateFiles(
-										Fixture.GetInputPath(name))
+										Fixture.GetInputPath(name), "*", SearchOption.AllDirectories)
 										.Select(
 												path =>
 												new { Name = name, Path = path }))

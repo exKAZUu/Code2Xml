@@ -51,7 +51,7 @@
       </declarator>
       <compound_statement>
         <TOKEN startline="3" startpos="0">{</TOKEN>
-        <statement_list>
+        <block_item>
           <statement>
             <jump_statement>
               <TOKEN startline="4" startpos="2">return</TOKEN>
@@ -376,7 +376,7 @@
               <TOKEN startline="4" startpos="95">;</TOKEN>
             </jump_statement>
           </statement>
-        </statement_list>
+        </block_item>
         <TOKEN startline="5" startpos="0">}</TOKEN>
       </compound_statement>
     </function_definition>

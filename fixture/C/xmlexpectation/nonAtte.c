@@ -6162,7 +6162,7 @@
       </declarator>
       <compound_statement>
         <TOKEN startline="428" startpos="0">{</TOKEN>
-        <statement_list>
+        <block_item>
           <statement>
             <jump_statement>
               <TOKEN startline="429" startpos="2">return</TOKEN>
@@ -6336,7 +6336,7 @@
               <TOKEN startline="429" startpos="32">;</TOKEN>
             </jump_statement>
           </statement>
-        </statement_list>
+        </block_item>
         <TOKEN startline="430" startpos="0">}</TOKEN>
       </compound_statement>
     </function_definition>
@@ -6387,7 +6387,7 @@
       </declarator>
       <compound_statement>
         <TOKEN startline="434" startpos="0">{</TOKEN>
-        <statement_list>
+        <block_item>
           <statement>
             <jump_statement>
               <TOKEN startline="435" startpos="2">return</TOKEN>
@@ -6659,7 +6659,7 @@
               <TOKEN startline="435" startpos="65">;</TOKEN>
             </jump_statement>
           </statement>
-        </statement_list>
+        </block_item>
         <TOKEN startline="436" startpos="0">}</TOKEN>
       </compound_statement>
     </function_definition>
@@ -6716,7 +6716,7 @@
       </declarator>
       <compound_statement>
         <TOKEN startline="440" startpos="0">{</TOKEN>
-        <statement_list>
+        <block_item>
           <statement>
             <jump_statement>
               <TOKEN startline="441" startpos="2">return</TOKEN>
@@ -7041,7 +7041,7 @@
               <TOKEN startline="441" startpos="95">;</TOKEN>
             </jump_statement>
           </statement>
-        </statement_list>
+        </block_item>
         <TOKEN startline="442" startpos="0">}</TOKEN>
       </compound_statement>
     </function_definition>
@@ -8716,7 +8716,7 @@
       </declarator>
       <compound_statement>
         <TOKEN startline="542" startpos="0">{</TOKEN>
-        <statement_list>
+        <block_item>
           <statement>
             <jump_statement>
               <TOKEN startline="543" startpos="1">return</TOKEN>
@@ -8919,7 +8919,7 @@
               <TOKEN startline="543" startpos="37">;</TOKEN>
             </jump_statement>
           </statement>
-        </statement_list>
+        </block_item>
         <TOKEN startline="544" startpos="0">}</TOKEN>
       </compound_statement>
     </function_definition>
@@ -8982,7 +8982,7 @@
       </declarator>
       <compound_statement>
         <TOKEN startline="548" startpos="0">{</TOKEN>
-        <statement_list>
+        <block_item>
           <statement>
             <jump_statement>
               <TOKEN startline="549" startpos="1">return</TOKEN>
@@ -9131,7 +9131,7 @@
               <TOKEN startline="549" startpos="29">;</TOKEN>
             </jump_statement>
           </statement>
-        </statement_list>
+        </block_item>
         <TOKEN startline="550" startpos="0">}</TOKEN>
       </compound_statement>
     </function_definition>
@@ -9207,7 +9207,7 @@
       </declarator>
       <compound_statement>
         <TOKEN startline="554" startpos="0">{</TOKEN>
-        <statement_list>
+        <block_item>
           <statement>
             <jump_statement>
               <TOKEN startline="555" startpos="1">return</TOKEN>
@@ -9495,7 +9495,7 @@
               <TOKEN startline="555" startpos="42">;</TOKEN>
             </jump_statement>
           </statement>
-        </statement_list>
+        </block_item>
         <TOKEN startline="556" startpos="0">}</TOKEN>
       </compound_statement>
     </function_definition>
