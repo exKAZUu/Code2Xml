@@ -71,7 +71,7 @@ namespace Code2Xml.Languages.Tests {
 		}
 
 		[Test, TestCaseSource("TestCases")]
-		public void パース結果が変化していない(
+		public void Parse(
 				string lang, string path, CodeToXml codeToXml,
 				XmlToCode xmlToCode) {
 			var expPath = Fixture.GetXmlExpectationPath(
@@ -83,7 +83,7 @@ namespace Code2Xml.Languages.Tests {
 		}
 
 		[Test, TestCaseSource("TestCases")]
-		public void パース結果をファイルに出力できる(
+		public void WriteConvertedXml(
 				string lang, string path, CodeToXml codeToXml,
 				XmlToCode xmlToCode) {
 			var outPath = Fixture.GetOutputFilePath(
@@ -96,7 +96,7 @@ namespace Code2Xml.Languages.Tests {
 		}
 
 		[Test, TestCaseSource("TestCases")]
-		public void 構文木生成とコード生成を二回繰り返してもコードが変化しない(
+		public void InterConvertCodeAndXml(
 				string lang, string path,
 				CodeToXml codeToXml,
 				XmlToCode xmlToCode) {

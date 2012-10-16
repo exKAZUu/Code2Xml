@@ -71,7 +71,7 @@ namespace Code2Xml.Console.Tests {
         }
 
         [Test]
-        public void コードを生成できる() {
+        public void ConvertXmlToCode() {
             var names = new[] { "Block1.c", "Block2.c", "Block3.c" };
             var filePaths = names
                     .Select(n => Fixture.GetInputPath(CLanguageName, n));
@@ -104,7 +104,7 @@ namespace Code2Xml.Console.Tests {
         }
 
         [Test, TestCaseSource("TestCases")]
-        public void パースできる(string filePath, string option, CodeToXml codeToXml) {
+        public void Parse(string filePath, string option, CodeToXml codeToXml) {
             using (var output = new StringWriter()) {
                 System.Console.SetOut(output);
 
@@ -117,7 +117,7 @@ namespace Code2Xml.Console.Tests {
         }
 
         [Test]
-        public void パース結果をディレクトリに出力できる() {
+        public void WriteGeneratedXmlInDirectory() {
             var names = new[] { "Block1.c", "Block2.c", "Block3.c" };
             var filePaths = names
                     .Select(n => Fixture.GetInputPath(CLanguageName, n));
@@ -140,7 +140,7 @@ namespace Code2Xml.Console.Tests {
         }
 
         [Test]
-        public void パース結果をファイルに出力できる() {
+        public void WriteGeneratedXmlAsFile() {
             var names = new[] { "Block1.c", "Block2.c", "Block3.c" };
             var filePaths = names
                     .Select(n => Fixture.GetInputPath(CLanguageName, n));
@@ -165,7 +165,7 @@ namespace Code2Xml.Console.Tests {
         }
 
         [Test]
-        public void パース結果を指定ディレクトリに出力できる() {
+        public void WriteGeneratedXmlInSpecifiedDirectory() {
             var names = new[] { "Block1.c", "Block2.c", "Block3.c" };
             var filePaths = names
                     .Select(n => Fixture.GetInputPath(CLanguageName, n));
