@@ -103,7 +103,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="CodeToXmls\C.g" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Code2Xml.Core\Code2Xml.Core.csproj">

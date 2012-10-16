@@ -78,7 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="CodeToXmls\Lua.g" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Code2Xml.Core\Code2Xml.Core.csproj">

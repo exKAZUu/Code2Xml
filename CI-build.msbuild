@@ -26,6 +26,7 @@
     <CreateItem Include="$(ClassLibraryOutputDirectory)/*.Tests.dll">
       <Output TaskParameter="Include" ItemName="TestAssembly" />
     </CreateItem>
-    <NUnit Assemblies="@(TestAssembly)" ToolPath="$(NUnitPath)" />
+    <Exec Condition=" ('$(OS)' != 'Windows_NT') " Command="mono packages/NUnit.Runners.2.6.1/tools/nunit-console.exe @(TestAssembly)" />
+    <Exec Condition=" ('$(OS)' == 'Windows_NT') " Command="packages/NUnit.Runners.2.6.1/tools/nunit-console.exe @(TestAssembly)" />
   </Target>
 </Project>
