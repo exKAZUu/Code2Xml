@@ -5,6 +5,7 @@ language: c
       
 # Make sure mono is installed
 install:
+ - export EnableNuGetPackageRestore=true
  - sudo apt-get install mono-devel mono-gmcs
 
 # Run the Build script
