@@ -34,7 +34,6 @@ target
 *.docstates
 *.dotCover
 nuspec
-packages
 
 output
 download
