@@ -45,7 +45,7 @@ namespace Code2Xml.Languages.Ruby18.Tests {
 
 			var scope = engine.CreateScope();
 			var source =
-					engine.CreateScriptSourceFromFile("test.rb");
+					engine.CreateScriptSourceFromFile(Path.Combine(DirectoryPath, "test.rb"));
 			source.Execute(scope);
 		}
 	}
