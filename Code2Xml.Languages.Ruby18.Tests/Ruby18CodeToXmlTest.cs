@@ -27,9 +27,10 @@ namespace Code2Xml.Languages.Ruby18.Tests {
 	public class Ruby18CodeToXmlTest {
 		[Test]
 		public void コードを解析できる() {
-			var path = Fixture.GetInputPath(
-					"Ruby18", "block.rb");
-			Ruby18CodeToXml.Instance.GenerateFromFile(path, true);
+			Ruby18CodeToXml.Instance.Generate("a = 1");
+			//var path = Fixture.GetInputPath(
+			//        "Ruby18", "block.rb");
+			//Ruby18CodeToXml.Instance.GenerateFromFile(path, true);
 		}
 
 		[Test]
