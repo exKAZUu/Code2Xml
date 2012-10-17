@@ -16,8 +16,10 @@
 
 #endregion
 
+using System.IO;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.Ruby18.CodeToXmls;
+using IronRuby;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.Ruby18.Tests {
@@ -28,6 +30,23 @@ namespace Code2Xml.Languages.Ruby18.Tests {
 			var path = Fixture.GetInputPath(
 					"Ruby18", "block.rb");
 			Ruby18CodeToXml.Instance.GenerateFromFile(path, true);
+		}
+
+		[Test]
+		public void InvokeRubyScript() {
+			var DirectoryPath = Path.Combine(
+					"ParserScripts", "IronRubyParser");
+			var engine = Ruby.CreateEngine();
+			// ir.exe.config を参照のこと
+			engine.SetSearchPaths(
+					new[] {
+							DirectoryPath,
+					});
+
+			var scope = engine.CreateScope();
+			var source =
+					engine.CreateScriptSourceFromFile("test.rb");
+			source.Execute(scope);
 		}
 	}
 }

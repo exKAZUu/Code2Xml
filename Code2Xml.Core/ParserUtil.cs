@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using System.IO;
 using System.Linq;
 using Microsoft.Win32;
@@ -23,6 +24,11 @@ using Microsoft.Win32;
 namespace Code2Xml.Core {
 	public static class ParserUtil {
 		public static string GetPythonInstallPath(string versionPrefix) {
+			// Check whether running OS is Unix/Linux
+			int p = (int) Environment.OSVersion.Platform;
+			if ((p == 4) || (p == 6) || (p == 128)) {
+				return null;
+			}
 			const string name = @"SOFTWARE\Python\PythonCore";
 			var versionKey = Registry.CurrentUser.OpenSubKey(name) ??
 			                 Registry.LocalMachine.OpenSubKey(name);
