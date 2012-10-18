@@ -1,0 +1,24 @@
+# Travis-CI Build
+# see travis-ci.org for details
+
+language: c
+      
+# Make sure mono is installed
+install:
+ - sudo apt-get install mono-devel mono-gmcs
+
+# Run the Build script
+script:
+ - git submodule update --init
+
+# Run Tests
+after_script:
+ - xbuild CI-build.msbuild /t:Test
+
+# Notify development list when needed
+notifications:
+ recipients:
+   - exkazuu@gmail.com
+ email:
+   on_success: change
+   on_failure: always

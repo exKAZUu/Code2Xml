@@ -16,6 +16,7 @@
 
 #endregion
 
+using System.IO;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.C.CodeToXmls;
 using NUnit.Framework;
@@ -23,91 +24,37 @@ using NUnit.Framework;
 namespace Code2Xml.Languages.C.Tests {
 	[TestFixture]
 	public class CCodeToXmlTest {
-		/*
 		[Test]
-		public void ParseQuicksortp()
-		{
-			var path = Fixture.GetInputPath(
-					"C", "quicksort_p1.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}*/
-
-		[Test]
-		public void ParseQuicksortpSub() {
-			var path = Fixture.GetInputPath("C", "quicksort_p_sub.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseDoubleUnderScore() {
-			var path = Fixture.GetInputPath("C", "DoubleUnderScore.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseAttribute() {
-			var path = Fixture.GetInputPath("C", "Attribute.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseNonAtte() {
-			var path = Fixture.GetInputPath("C", "nonAtte.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseNonAtte02() {
-			var path = Fixture.GetInputPath("C", "nonAtte02.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseNonAtteInline() {
-			var path = Fixture.GetInputPath("C", "nonAtteInline.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void Parselonglong() {
-			var path = Fixture.GetInputPath("C", "longlong.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseMulmv() {
-			var path = Fixture.GetInputPath("C", "mul_mv.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseBlock1() {
-			var path = Fixture.GetInputPath("C", "Block1.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseMersenne() {
-			var path = Fixture.GetInputPath("C", "mersenne.c");
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
-
-		[Test]
-		public void ParseMulti() {
-			var path = Fixture.GetInputPath("C", "multi.h");
+		[TestCase("preprocessed/bubblesort.c")]
+		[TestCase("preprocessed/get_sign.c")]
+		[TestCase("preprocessed/quicksort.c")]
+		[TestCase("DoubleUnderScore.c")]
+		[TestCase("Attribute.c")]
+		[TestCase("nonAtte.c")]
+		[TestCase("nonAtte02.c")]
+		[TestCase("nonAtteInline.c")]
+		[TestCase("longlong.c")]
+		[TestCase("mul_mv.c")]
+		[TestCase("mersenne.c")]
+		[TestCase("Block1.c")]
+		[TestCase("multi.h")]
+		public void Parse(string filePath) {
+			var paths = filePath.Split(
+					Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
+			var path = Fixture.GetInputPath("C", paths);
 			CCodeToXml.Instance.GenerateFromFile(path, true);
 		}
 
 		[Test]
 		public void ParseWrongCode() {
 			var xml = CCodeToXml.Instance.Generate(
-@"
+					@"
 int main() {
 	printf()
 	return 0;
 }
 ",
-				false);
+					false);
 		}
 	}
 }

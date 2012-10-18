@@ -28,764 +28,772 @@
       </declarator>
       <compound_statement>
         <TOKEN startline="5" startpos="0">{</TOKEN>
-        <declaration>
-          <declaration_specifiers>
-            <type_specifier>
-              <TOKEN startline="6" startpos="4">int</TOKEN>
-            </type_specifier>
-          </declaration_specifiers>
-          <init_declarator_list>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="6" startpos="8">i</IDENTIFIER>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-            <TOKEN startline="6" startpos="9">,</TOKEN>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="6" startpos="11">j</IDENTIFIER>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-          </init_declarator_list>
-          <TOKEN startline="6" startpos="12">;</TOKEN>
-        </declaration>
-        <declaration>
-          <declaration_specifiers>
-            <type_specifier>
-              <TOKEN startline="7" startpos="4">double</TOKEN>
-            </type_specifier>
-          </declaration_specifiers>
-          <init_declarator_list>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="7" startpos="11">x</IDENTIFIER>
-                  <declarator_suffix>
-                    <TOKEN startline="7" startpos="12">[</TOKEN>
-                    <constant_expression>
-                      <conditional_expression>
-                        <logical_or_expression>
-                          <logical_and_expression>
-                            <inclusive_or_expression>
-                              <exclusive_or_expression>
-                                <and_expression>
-                                  <equality_expression>
-                                    <relational_expression>
-                                      <shift_expression>
-                                        <additive_expression>
-                                          <multiplicative_expression>
-                                            <cast_expression>
-                                              <unary_expression>
-                                                <postfix_expression>
-                                                  <primary_expression>
-                                                    <constant>
-                                                      <decimal_literal>
-                                                        <DECIMAL_LITERAL startline="7" startpos="13">3</DECIMAL_LITERAL>
-                                                      </decimal_literal>
-                                                    </constant>
-                                                  </primary_expression>
-                                                </postfix_expression>
-                                              </unary_expression>
-                                            </cast_expression>
-                                          </multiplicative_expression>
-                                        </additive_expression>
-                                      </shift_expression>
-                                    </relational_expression>
-                                  </equality_expression>
-                                </and_expression>
-                              </exclusive_or_expression>
-                            </inclusive_or_expression>
-                          </logical_and_expression>
-                        </logical_or_expression>
-                      </conditional_expression>
-                    </constant_expression>
-                    <TOKEN startline="7" startpos="14">]</TOKEN>
-                  </declarator_suffix>
-                </direct_declarator>
-              </declarator>
-              <TOKEN startline="7" startpos="16">=</TOKEN>
-              <initializer>
-                <TOKEN startline="7" startpos="18">{</TOKEN>
-                <initializer_list>
-                  <initializer>
-                    <assignment_expression>
-                      <conditional_expression>
-                        <logical_or_expression>
-                          <logical_and_expression>
-                            <inclusive_or_expression>
-                              <exclusive_or_expression>
-                                <and_expression>
-                                  <equality_expression>
-                                    <relational_expression>
-                                      <shift_expression>
-                                        <additive_expression>
-                                          <multiplicative_expression>
-                                            <cast_expression>
-                                              <unary_expression>
-                                                <unary_operator>
-                                                  <TOKEN startline="7" startpos="19">-</TOKEN>
-                                                </unary_operator>
-                                                <cast_expression>
-                                                  <unary_expression>
-                                                    <postfix_expression>
-                                                      <primary_expression>
-                                                        <constant>
-                                                          <floating_point_literal>
-                                                            <FLOATING_POINT_LITERAL startline="7" startpos="20">33.0</FLOATING_POINT_LITERAL>
-                                                          </floating_point_literal>
-                                                        </constant>
-                                                      </primary_expression>
-                                                    </postfix_expression>
-                                                  </unary_expression>
-                                                </cast_expression>
-                                              </unary_expression>
-                                            </cast_expression>
-                                          </multiplicative_expression>
-                                        </additive_expression>
-                                      </shift_expression>
-                                    </relational_expression>
-                                  </equality_expression>
-                                </and_expression>
-                              </exclusive_or_expression>
-                            </inclusive_or_expression>
-                          </logical_and_expression>
-                        </logical_or_expression>
-                      </conditional_expression>
-                    </assignment_expression>
-                  </initializer>
-                  <TOKEN startline="7" startpos="24">,</TOKEN>
-                  <initializer>
-                    <assignment_expression>
-                      <conditional_expression>
-                        <logical_or_expression>
-                          <logical_and_expression>
-                            <inclusive_or_expression>
-                              <exclusive_or_expression>
-                                <and_expression>
-                                  <equality_expression>
-                                    <relational_expression>
-                                      <shift_expression>
-                                        <additive_expression>
-                                          <multiplicative_expression>
-                                            <cast_expression>
-                                              <unary_expression>
-                                                <postfix_expression>
-                                                  <primary_expression>
-                                                    <constant>
-                                                      <floating_point_literal>
-                                                        <FLOATING_POINT_LITERAL startline="7" startpos="26">9.0</FLOATING_POINT_LITERAL>
-                                                      </floating_point_literal>
-                                                    </constant>
-                                                  </primary_expression>
-                                                </postfix_expression>
-                                              </unary_expression>
-                                            </cast_expression>
-                                          </multiplicative_expression>
-                                        </additive_expression>
-                                      </shift_expression>
-                                    </relational_expression>
-                                  </equality_expression>
-                                </and_expression>
-                              </exclusive_or_expression>
-                            </inclusive_or_expression>
-                          </logical_and_expression>
-                        </logical_or_expression>
-                      </conditional_expression>
-                    </assignment_expression>
-                  </initializer>
-                  <TOKEN startline="7" startpos="29">,</TOKEN>
-                  <initializer>
-                    <assignment_expression>
-                      <conditional_expression>
-                        <logical_or_expression>
-                          <logical_and_expression>
-                            <inclusive_or_expression>
-                              <exclusive_or_expression>
-                                <and_expression>
-                                  <equality_expression>
-                                    <relational_expression>
-                                      <shift_expression>
-                                        <additive_expression>
-                                          <multiplicative_expression>
-                                            <cast_expression>
-                                              <unary_expression>
-                                                <postfix_expression>
-                                                  <primary_expression>
-                                                    <constant>
-                                                      <floating_point_literal>
-                                                        <FLOATING_POINT_LITERAL startline="7" startpos="31">6.0</FLOATING_POINT_LITERAL>
-                                                      </floating_point_literal>
-                                                    </constant>
-                                                  </primary_expression>
-                                                </postfix_expression>
-                                              </unary_expression>
-                                            </cast_expression>
-                                          </multiplicative_expression>
-                                        </additive_expression>
-                                      </shift_expression>
-                                    </relational_expression>
-                                  </equality_expression>
-                                </and_expression>
-                              </exclusive_or_expression>
-                            </inclusive_or_expression>
-                          </logical_and_expression>
-                        </logical_or_expression>
-                      </conditional_expression>
-                    </assignment_expression>
-                  </initializer>
-                </initializer_list>
-                <TOKEN startline="7" startpos="34">}</TOKEN>
-              </initializer>
-            </init_declarator>
-          </init_declarator_list>
-          <TOKEN startline="7" startpos="35">;</TOKEN>
-        </declaration>
-        <declaration>
-          <declaration_specifiers>
-            <type_specifier>
-              <TOKEN startline="8" startpos="4">double</TOKEN>
-            </type_specifier>
-          </declaration_specifiers>
-          <init_declarator_list>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="8" startpos="11">a</IDENTIFIER>
-                  <declarator_suffix>
-                    <TOKEN startline="8" startpos="12">[</TOKEN>
-                    <constant_expression>
-                      <conditional_expression>
-                        <logical_or_expression>
-                          <logical_and_expression>
-                            <inclusive_or_expression>
-                              <exclusive_or_expression>
-                                <and_expression>
-                                  <equality_expression>
-                                    <relational_expression>
-                                      <shift_expression>
-                                        <additive_expression>
-                                          <multiplicative_expression>
-                                            <cast_expression>
-                                              <unary_expression>
-                                                <postfix_expression>
-                                                  <primary_expression>
-                                                    <constant>
-                                                      <decimal_literal>
-                                                        <DECIMAL_LITERAL startline="8" startpos="13">3</DECIMAL_LITERAL>
-                                                      </decimal_literal>
-                                                    </constant>
-                                                  </primary_expression>
-                                                </postfix_expression>
-                                              </unary_expression>
-                                            </cast_expression>
-                                          </multiplicative_expression>
-                                        </additive_expression>
-                                      </shift_expression>
-                                    </relational_expression>
-                                  </equality_expression>
-                                </and_expression>
-                              </exclusive_or_expression>
-                            </inclusive_or_expression>
-                          </logical_and_expression>
-                        </logical_or_expression>
-                      </conditional_expression>
-                    </constant_expression>
-                    <TOKEN startline="8" startpos="14">]</TOKEN>
-                  </declarator_suffix>
-                  <declarator_suffix>
-                    <TOKEN startline="8" startpos="15">[</TOKEN>
-                    <constant_expression>
-                      <conditional_expression>
-                        <logical_or_expression>
-                          <logical_and_expression>
-                            <inclusive_or_expression>
-                              <exclusive_or_expression>
-                                <and_expression>
-                                  <equality_expression>
-                                    <relational_expression>
-                                      <shift_expression>
-                                        <additive_expression>
-                                          <multiplicative_expression>
-                                            <cast_expression>
-                                              <unary_expression>
-                                                <postfix_expression>
-                                                  <primary_expression>
-                                                    <constant>
-                                                      <decimal_literal>
-                                                        <DECIMAL_LITERAL startline="8" startpos="16">3</DECIMAL_LITERAL>
-                                                      </decimal_literal>
-                                                    </constant>
-                                                  </primary_expression>
-                                                </postfix_expression>
-                                              </unary_expression>
-                                            </cast_expression>
-                                          </multiplicative_expression>
-                                        </additive_expression>
-                                      </shift_expression>
-                                    </relational_expression>
-                                  </equality_expression>
-                                </and_expression>
-                              </exclusive_or_expression>
-                            </inclusive_or_expression>
-                          </logical_and_expression>
-                        </logical_or_expression>
-                      </conditional_expression>
-                    </constant_expression>
-                    <TOKEN startline="8" startpos="17">]</TOKEN>
-                  </declarator_suffix>
-                </direct_declarator>
-              </declarator>
-              <TOKEN startline="8" startpos="19">=</TOKEN>
-              <initializer>
-                <TOKEN startline="8" startpos="21">{</TOKEN>
-                <initializer_list>
-                  <initializer>
-                    <TOKEN startline="8" startpos="22">{</TOKEN>
-                    <initializer_list>
-                      <initializer>
-                        <assignment_expression>
-                          <conditional_expression>
-                            <logical_or_expression>
-                              <logical_and_expression>
-                                <inclusive_or_expression>
-                                  <exclusive_or_expression>
-                                    <and_expression>
-                                      <equality_expression>
-                                        <relational_expression>
-                                          <shift_expression>
-                                            <additive_expression>
-                                              <multiplicative_expression>
-                                                <cast_expression>
-                                                  <unary_expression>
-                                                    <postfix_expression>
-                                                      <primary_expression>
-                                                        <constant>
-                                                          <floating_point_literal>
-                                                            <FLOATING_POINT_LITERAL startline="8" startpos="23">2.0</FLOATING_POINT_LITERAL>
-                                                          </floating_point_literal>
-                                                        </constant>
-                                                      </primary_expression>
-                                                    </postfix_expression>
-                                                  </unary_expression>
-                                                </cast_expression>
-                                              </multiplicative_expression>
-                                            </additive_expression>
-                                          </shift_expression>
-                                        </relational_expression>
-                                      </equality_expression>
-                                    </and_expression>
-                                  </exclusive_or_expression>
-                                </inclusive_or_expression>
-                              </logical_and_expression>
-                            </logical_or_expression>
-                          </conditional_expression>
-                        </assignment_expression>
-                      </initializer>
-                      <TOKEN startline="8" startpos="26">,</TOKEN>
-                      <initializer>
-                        <assignment_expression>
-                          <conditional_expression>
-                            <logical_or_expression>
-                              <logical_and_expression>
-                                <inclusive_or_expression>
-                                  <exclusive_or_expression>
-                                    <and_expression>
-                                      <equality_expression>
-                                        <relational_expression>
-                                          <shift_expression>
-                                            <additive_expression>
-                                              <multiplicative_expression>
-                                                <cast_expression>
-                                                  <unary_expression>
-                                                    <postfix_expression>
-                                                      <primary_expression>
-                                                        <constant>
-                                                          <floating_point_literal>
-                                                            <FLOATING_POINT_LITERAL startline="8" startpos="28">4.0</FLOATING_POINT_LITERAL>
-                                                          </floating_point_literal>
-                                                        </constant>
-                                                      </primary_expression>
-                                                    </postfix_expression>
-                                                  </unary_expression>
-                                                </cast_expression>
-                                              </multiplicative_expression>
-                                            </additive_expression>
-                                          </shift_expression>
-                                        </relational_expression>
-                                      </equality_expression>
-                                    </and_expression>
-                                  </exclusive_or_expression>
-                                </inclusive_or_expression>
-                              </logical_and_expression>
-                            </logical_or_expression>
-                          </conditional_expression>
-                        </assignment_expression>
-                      </initializer>
-                      <TOKEN startline="8" startpos="31">,</TOKEN>
-                      <initializer>
-                        <assignment_expression>
-                          <conditional_expression>
-                            <logical_or_expression>
-                              <logical_and_expression>
-                                <inclusive_or_expression>
-                                  <exclusive_or_expression>
-                                    <and_expression>
-                                      <equality_expression>
-                                        <relational_expression>
-                                          <shift_expression>
-                                            <additive_expression>
-                                              <multiplicative_expression>
-                                                <cast_expression>
-                                                  <unary_expression>
-                                                    <postfix_expression>
-                                                      <primary_expression>
-                                                        <constant>
-                                                          <floating_point_literal>
-                                                            <FLOATING_POINT_LITERAL startline="8" startpos="33">6.0</FLOATING_POINT_LITERAL>
-                                                          </floating_point_literal>
-                                                        </constant>
-                                                      </primary_expression>
-                                                    </postfix_expression>
-                                                  </unary_expression>
-                                                </cast_expression>
-                                              </multiplicative_expression>
-                                            </additive_expression>
-                                          </shift_expression>
-                                        </relational_expression>
-                                      </equality_expression>
-                                    </and_expression>
-                                  </exclusive_or_expression>
-                                </inclusive_or_expression>
-                              </logical_and_expression>
-                            </logical_or_expression>
-                          </conditional_expression>
-                        </assignment_expression>
-                      </initializer>
-                    </initializer_list>
-                    <TOKEN startline="8" startpos="36">}</TOKEN>
-                  </initializer>
-                  <TOKEN startline="8" startpos="37">,</TOKEN>
-                  <initializer>
-                    <TOKEN startline="9" startpos="22">{</TOKEN>
-                    <initializer_list>
-                      <initializer>
-                        <assignment_expression>
-                          <conditional_expression>
-                            <logical_or_expression>
-                              <logical_and_expression>
-                                <inclusive_or_expression>
-                                  <exclusive_or_expression>
-                                    <and_expression>
-                                      <equality_expression>
-                                        <relational_expression>
-                                          <shift_expression>
-                                            <additive_expression>
-                                              <multiplicative_expression>
-                                                <cast_expression>
-                                                  <unary_expression>
-                                                    <postfix_expression>
-                                                      <primary_expression>
-                                                        <constant>
-                                                          <floating_point_literal>
-                                                            <FLOATING_POINT_LITERAL startline="9" startpos="23">3.0</FLOATING_POINT_LITERAL>
-                                                          </floating_point_literal>
-                                                        </constant>
-                                                      </primary_expression>
-                                                    </postfix_expression>
-                                                  </unary_expression>
-                                                </cast_expression>
-                                              </multiplicative_expression>
-                                            </additive_expression>
-                                          </shift_expression>
-                                        </relational_expression>
-                                      </equality_expression>
-                                    </and_expression>
-                                  </exclusive_or_expression>
-                                </inclusive_or_expression>
-                              </logical_and_expression>
-                            </logical_or_expression>
-                          </conditional_expression>
-                        </assignment_expression>
-                      </initializer>
-                      <TOKEN startline="9" startpos="26">,</TOKEN>
-                      <initializer>
-                        <assignment_expression>
-                          <conditional_expression>
-                            <logical_or_expression>
-                              <logical_and_expression>
-                                <inclusive_or_expression>
-                                  <exclusive_or_expression>
-                                    <and_expression>
-                                      <equality_expression>
-                                        <relational_expression>
-                                          <shift_expression>
-                                            <additive_expression>
-                                              <multiplicative_expression>
-                                                <cast_expression>
-                                                  <unary_expression>
-                                                    <postfix_expression>
-                                                      <primary_expression>
-                                                        <constant>
-                                                          <floating_point_literal>
-                                                            <FLOATING_POINT_LITERAL startline="9" startpos="28">8.0</FLOATING_POINT_LITERAL>
-                                                          </floating_point_literal>
-                                                        </constant>
-                                                      </primary_expression>
-                                                    </postfix_expression>
-                                                  </unary_expression>
-                                                </cast_expression>
-                                              </multiplicative_expression>
-                                            </additive_expression>
-                                          </shift_expression>
-                                        </relational_expression>
-                                      </equality_expression>
-                                    </and_expression>
-                                  </exclusive_or_expression>
-                                </inclusive_or_expression>
-                              </logical_and_expression>
-                            </logical_or_expression>
-                          </conditional_expression>
-                        </assignment_expression>
-                      </initializer>
-                      <TOKEN startline="9" startpos="31">,</TOKEN>
-                      <initializer>
-                        <assignment_expression>
-                          <conditional_expression>
-                            <logical_or_expression>
-                              <logical_and_expression>
-                                <inclusive_or_expression>
-                                  <exclusive_or_expression>
-                                    <and_expression>
-                                      <equality_expression>
-                                        <relational_expression>
-                                          <shift_expression>
-                                            <additive_expression>
-                                              <multiplicative_expression>
-                                                <cast_expression>
-                                                  <unary_expression>
-                                                    <postfix_expression>
-                                                      <primary_expression>
-                                                        <constant>
-                                                          <floating_point_literal>
-                                                            <FLOATING_POINT_LITERAL startline="9" startpos="33">7.0</FLOATING_POINT_LITERAL>
-                                                          </floating_point_literal>
-                                                        </constant>
-                                                      </primary_expression>
-                                                    </postfix_expression>
-                                                  </unary_expression>
-                                                </cast_expression>
-                                              </multiplicative_expression>
-                                            </additive_expression>
-                                          </shift_expression>
-                                        </relational_expression>
-                                      </equality_expression>
-                                    </and_expression>
-                                  </exclusive_or_expression>
-                                </inclusive_or_expression>
-                              </logical_and_expression>
-                            </logical_or_expression>
-                          </conditional_expression>
-                        </assignment_expression>
-                      </initializer>
-                    </initializer_list>
-                    <TOKEN startline="9" startpos="36">}</TOKEN>
-                  </initializer>
-                  <TOKEN startline="9" startpos="37">,</TOKEN>
-                  <initializer>
-                    <TOKEN startline="10" startpos="22">{</TOKEN>
-                    <initializer_list>
-                      <initializer>
-                        <assignment_expression>
-                          <conditional_expression>
-                            <logical_or_expression>
-                              <logical_and_expression>
-                                <inclusive_or_expression>
-                                  <exclusive_or_expression>
-                                    <and_expression>
-                                      <equality_expression>
-                                        <relational_expression>
-                                          <shift_expression>
-                                            <additive_expression>
-                                              <multiplicative_expression>
-                                                <cast_expression>
-                                                  <unary_expression>
-                                                    <postfix_expression>
-                                                      <primary_expression>
-                                                        <constant>
-                                                          <floating_point_literal>
-                                                            <FLOATING_POINT_LITERAL startline="10" startpos="23">5.0</FLOATING_POINT_LITERAL>
-                                                          </floating_point_literal>
-                                                        </constant>
-                                                      </primary_expression>
-                                                    </postfix_expression>
-                                                  </unary_expression>
-                                                </cast_expression>
-                                              </multiplicative_expression>
-                                            </additive_expression>
-                                          </shift_expression>
-                                        </relational_expression>
-                                      </equality_expression>
-                                    </and_expression>
-                                  </exclusive_or_expression>
-                                </inclusive_or_expression>
-                              </logical_and_expression>
-                            </logical_or_expression>
-                          </conditional_expression>
-                        </assignment_expression>
-                      </initializer>
-                      <TOKEN startline="10" startpos="26">,</TOKEN>
-                      <initializer>
-                        <assignment_expression>
-                          <conditional_expression>
-                            <logical_or_expression>
-                              <logical_and_expression>
-                                <inclusive_or_expression>
-                                  <exclusive_or_expression>
-                                    <and_expression>
-                                      <equality_expression>
-                                        <relational_expression>
-                                          <shift_expression>
-                                            <additive_expression>
-                                              <multiplicative_expression>
-                                                <cast_expression>
-                                                  <unary_expression>
-                                                    <postfix_expression>
-                                                      <primary_expression>
-                                                        <constant>
-                                                          <floating_point_literal>
-                                                            <FLOATING_POINT_LITERAL startline="10" startpos="28">7.0</FLOATING_POINT_LITERAL>
-                                                          </floating_point_literal>
-                                                        </constant>
-                                                      </primary_expression>
-                                                    </postfix_expression>
-                                                  </unary_expression>
-                                                </cast_expression>
-                                              </multiplicative_expression>
-                                            </additive_expression>
-                                          </shift_expression>
-                                        </relational_expression>
-                                      </equality_expression>
-                                    </and_expression>
-                                  </exclusive_or_expression>
-                                </inclusive_or_expression>
-                              </logical_and_expression>
-                            </logical_or_expression>
-                          </conditional_expression>
-                        </assignment_expression>
-                      </initializer>
-                      <TOKEN startline="10" startpos="31">,</TOKEN>
-                      <initializer>
-                        <assignment_expression>
-                          <conditional_expression>
-                            <logical_or_expression>
-                              <logical_and_expression>
-                                <inclusive_or_expression>
-                                  <exclusive_or_expression>
-                                    <and_expression>
-                                      <equality_expression>
-                                        <relational_expression>
-                                          <shift_expression>
-                                            <additive_expression>
-                                              <multiplicative_expression>
-                                                <cast_expression>
-                                                  <unary_expression>
-                                                    <postfix_expression>
-                                                      <primary_expression>
-                                                        <constant>
-                                                          <floating_point_literal>
-                                                            <FLOATING_POINT_LITERAL startline="10" startpos="33">12345678901234567890.0</FLOATING_POINT_LITERAL>
-                                                          </floating_point_literal>
-                                                        </constant>
-                                                      </primary_expression>
-                                                    </postfix_expression>
-                                                  </unary_expression>
-                                                </cast_expression>
-                                              </multiplicative_expression>
-                                            </additive_expression>
-                                          </shift_expression>
-                                        </relational_expression>
-                                      </equality_expression>
-                                    </and_expression>
-                                  </exclusive_or_expression>
-                                </inclusive_or_expression>
-                              </logical_and_expression>
-                            </logical_or_expression>
-                          </conditional_expression>
-                        </assignment_expression>
-                      </initializer>
-                    </initializer_list>
-                    <TOKEN startline="10" startpos="55">}</TOKEN>
-                  </initializer>
-                </initializer_list>
-                <TOKEN startline="10" startpos="56">}</TOKEN>
-              </initializer>
-            </init_declarator>
-          </init_declarator_list>
-          <TOKEN startline="10" startpos="57">;</TOKEN>
-        </declaration>
-        <declaration>
-          <declaration_specifiers>
-            <type_specifier>
-              <TOKEN startline="11" startpos="4">double</TOKEN>
-            </type_specifier>
-          </declaration_specifiers>
-          <init_declarator_list>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="11" startpos="11">y</IDENTIFIER>
-                  <declarator_suffix>
-                    <TOKEN startline="11" startpos="12">[</TOKEN>
-                    <constant_expression>
-                      <conditional_expression>
-                        <logical_or_expression>
-                          <logical_and_expression>
-                            <inclusive_or_expression>
-                              <exclusive_or_expression>
-                                <and_expression>
-                                  <equality_expression>
-                                    <relational_expression>
-                                      <shift_expression>
-                                        <additive_expression>
-                                          <multiplicative_expression>
-                                            <cast_expression>
-                                              <unary_expression>
-                                                <postfix_expression>
-                                                  <primary_expression>
-                                                    <constant>
-                                                      <decimal_literal>
-                                                        <DECIMAL_LITERAL startline="11" startpos="13">3</DECIMAL_LITERAL>
-                                                      </decimal_literal>
-                                                    </constant>
-                                                  </primary_expression>
-                                                </postfix_expression>
-                                              </unary_expression>
-                                            </cast_expression>
-                                          </multiplicative_expression>
-                                        </additive_expression>
-                                      </shift_expression>
-                                    </relational_expression>
-                                  </equality_expression>
-                                </and_expression>
-                              </exclusive_or_expression>
-                            </inclusive_or_expression>
-                          </logical_and_expression>
-                        </logical_or_expression>
-                      </conditional_expression>
-                    </constant_expression>
-                    <TOKEN startline="11" startpos="14">]</TOKEN>
-                  </declarator_suffix>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-          </init_declarator_list>
-          <TOKEN startline="11" startpos="15">;</TOKEN>
-        </declaration>
-        <statement_list>
+        <block_item>
+          <declaration>
+            <declaration_specifiers>
+              <type_specifier>
+                <TOKEN startline="6" startpos="4">int</TOKEN>
+              </type_specifier>
+            </declaration_specifiers>
+            <init_declarator_list>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="6" startpos="8">i</IDENTIFIER>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+              <TOKEN startline="6" startpos="9">,</TOKEN>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="6" startpos="11">j</IDENTIFIER>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+            </init_declarator_list>
+            <TOKEN startline="6" startpos="12">;</TOKEN>
+          </declaration>
+        </block_item>
+        <block_item>
+          <declaration>
+            <declaration_specifiers>
+              <type_specifier>
+                <TOKEN startline="7" startpos="4">double</TOKEN>
+              </type_specifier>
+            </declaration_specifiers>
+            <init_declarator_list>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="7" startpos="11">x</IDENTIFIER>
+                    <declarator_suffix>
+                      <TOKEN startline="7" startpos="12">[</TOKEN>
+                      <constant_expression>
+                        <conditional_expression>
+                          <logical_or_expression>
+                            <logical_and_expression>
+                              <inclusive_or_expression>
+                                <exclusive_or_expression>
+                                  <and_expression>
+                                    <equality_expression>
+                                      <relational_expression>
+                                        <shift_expression>
+                                          <additive_expression>
+                                            <multiplicative_expression>
+                                              <cast_expression>
+                                                <unary_expression>
+                                                  <postfix_expression>
+                                                    <primary_expression>
+                                                      <constant>
+                                                        <decimal_literal>
+                                                          <DECIMAL_LITERAL startline="7" startpos="13">3</DECIMAL_LITERAL>
+                                                        </decimal_literal>
+                                                      </constant>
+                                                    </primary_expression>
+                                                  </postfix_expression>
+                                                </unary_expression>
+                                              </cast_expression>
+                                            </multiplicative_expression>
+                                          </additive_expression>
+                                        </shift_expression>
+                                      </relational_expression>
+                                    </equality_expression>
+                                  </and_expression>
+                                </exclusive_or_expression>
+                              </inclusive_or_expression>
+                            </logical_and_expression>
+                          </logical_or_expression>
+                        </conditional_expression>
+                      </constant_expression>
+                      <TOKEN startline="7" startpos="14">]</TOKEN>
+                    </declarator_suffix>
+                  </direct_declarator>
+                </declarator>
+                <TOKEN startline="7" startpos="16">=</TOKEN>
+                <initializer>
+                  <TOKEN startline="7" startpos="18">{</TOKEN>
+                  <initializer_list>
+                    <initializer>
+                      <assignment_expression>
+                        <conditional_expression>
+                          <logical_or_expression>
+                            <logical_and_expression>
+                              <inclusive_or_expression>
+                                <exclusive_or_expression>
+                                  <and_expression>
+                                    <equality_expression>
+                                      <relational_expression>
+                                        <shift_expression>
+                                          <additive_expression>
+                                            <multiplicative_expression>
+                                              <cast_expression>
+                                                <unary_expression>
+                                                  <unary_operator>
+                                                    <TOKEN startline="7" startpos="19">-</TOKEN>
+                                                  </unary_operator>
+                                                  <cast_expression>
+                                                    <unary_expression>
+                                                      <postfix_expression>
+                                                        <primary_expression>
+                                                          <constant>
+                                                            <floating_point_literal>
+                                                              <FLOATING_POINT_LITERAL startline="7" startpos="20">33.0</FLOATING_POINT_LITERAL>
+                                                            </floating_point_literal>
+                                                          </constant>
+                                                        </primary_expression>
+                                                      </postfix_expression>
+                                                    </unary_expression>
+                                                  </cast_expression>
+                                                </unary_expression>
+                                              </cast_expression>
+                                            </multiplicative_expression>
+                                          </additive_expression>
+                                        </shift_expression>
+                                      </relational_expression>
+                                    </equality_expression>
+                                  </and_expression>
+                                </exclusive_or_expression>
+                              </inclusive_or_expression>
+                            </logical_and_expression>
+                          </logical_or_expression>
+                        </conditional_expression>
+                      </assignment_expression>
+                    </initializer>
+                    <TOKEN startline="7" startpos="24">,</TOKEN>
+                    <initializer>
+                      <assignment_expression>
+                        <conditional_expression>
+                          <logical_or_expression>
+                            <logical_and_expression>
+                              <inclusive_or_expression>
+                                <exclusive_or_expression>
+                                  <and_expression>
+                                    <equality_expression>
+                                      <relational_expression>
+                                        <shift_expression>
+                                          <additive_expression>
+                                            <multiplicative_expression>
+                                              <cast_expression>
+                                                <unary_expression>
+                                                  <postfix_expression>
+                                                    <primary_expression>
+                                                      <constant>
+                                                        <floating_point_literal>
+                                                          <FLOATING_POINT_LITERAL startline="7" startpos="26">9.0</FLOATING_POINT_LITERAL>
+                                                        </floating_point_literal>
+                                                      </constant>
+                                                    </primary_expression>
+                                                  </postfix_expression>
+                                                </unary_expression>
+                                              </cast_expression>
+                                            </multiplicative_expression>
+                                          </additive_expression>
+                                        </shift_expression>
+                                      </relational_expression>
+                                    </equality_expression>
+                                  </and_expression>
+                                </exclusive_or_expression>
+                              </inclusive_or_expression>
+                            </logical_and_expression>
+                          </logical_or_expression>
+                        </conditional_expression>
+                      </assignment_expression>
+                    </initializer>
+                    <TOKEN startline="7" startpos="29">,</TOKEN>
+                    <initializer>
+                      <assignment_expression>
+                        <conditional_expression>
+                          <logical_or_expression>
+                            <logical_and_expression>
+                              <inclusive_or_expression>
+                                <exclusive_or_expression>
+                                  <and_expression>
+                                    <equality_expression>
+                                      <relational_expression>
+                                        <shift_expression>
+                                          <additive_expression>
+                                            <multiplicative_expression>
+                                              <cast_expression>
+                                                <unary_expression>
+                                                  <postfix_expression>
+                                                    <primary_expression>
+                                                      <constant>
+                                                        <floating_point_literal>
+                                                          <FLOATING_POINT_LITERAL startline="7" startpos="31">6.0</FLOATING_POINT_LITERAL>
+                                                        </floating_point_literal>
+                                                      </constant>
+                                                    </primary_expression>
+                                                  </postfix_expression>
+                                                </unary_expression>
+                                              </cast_expression>
+                                            </multiplicative_expression>
+                                          </additive_expression>
+                                        </shift_expression>
+                                      </relational_expression>
+                                    </equality_expression>
+                                  </and_expression>
+                                </exclusive_or_expression>
+                              </inclusive_or_expression>
+                            </logical_and_expression>
+                          </logical_or_expression>
+                        </conditional_expression>
+                      </assignment_expression>
+                    </initializer>
+                  </initializer_list>
+                  <TOKEN startline="7" startpos="34">}</TOKEN>
+                </initializer>
+              </init_declarator>
+            </init_declarator_list>
+            <TOKEN startline="7" startpos="35">;</TOKEN>
+          </declaration>
+        </block_item>
+        <block_item>
+          <declaration>
+            <declaration_specifiers>
+              <type_specifier>
+                <TOKEN startline="8" startpos="4">double</TOKEN>
+              </type_specifier>
+            </declaration_specifiers>
+            <init_declarator_list>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="8" startpos="11">a</IDENTIFIER>
+                    <declarator_suffix>
+                      <TOKEN startline="8" startpos="12">[</TOKEN>
+                      <constant_expression>
+                        <conditional_expression>
+                          <logical_or_expression>
+                            <logical_and_expression>
+                              <inclusive_or_expression>
+                                <exclusive_or_expression>
+                                  <and_expression>
+                                    <equality_expression>
+                                      <relational_expression>
+                                        <shift_expression>
+                                          <additive_expression>
+                                            <multiplicative_expression>
+                                              <cast_expression>
+                                                <unary_expression>
+                                                  <postfix_expression>
+                                                    <primary_expression>
+                                                      <constant>
+                                                        <decimal_literal>
+                                                          <DECIMAL_LITERAL startline="8" startpos="13">3</DECIMAL_LITERAL>
+                                                        </decimal_literal>
+                                                      </constant>
+                                                    </primary_expression>
+                                                  </postfix_expression>
+                                                </unary_expression>
+                                              </cast_expression>
+                                            </multiplicative_expression>
+                                          </additive_expression>
+                                        </shift_expression>
+                                      </relational_expression>
+                                    </equality_expression>
+                                  </and_expression>
+                                </exclusive_or_expression>
+                              </inclusive_or_expression>
+                            </logical_and_expression>
+                          </logical_or_expression>
+                        </conditional_expression>
+                      </constant_expression>
+                      <TOKEN startline="8" startpos="14">]</TOKEN>
+                    </declarator_suffix>
+                    <declarator_suffix>
+                      <TOKEN startline="8" startpos="15">[</TOKEN>
+                      <constant_expression>
+                        <conditional_expression>
+                          <logical_or_expression>
+                            <logical_and_expression>
+                              <inclusive_or_expression>
+                                <exclusive_or_expression>
+                                  <and_expression>
+                                    <equality_expression>
+                                      <relational_expression>
+                                        <shift_expression>
+                                          <additive_expression>
+                                            <multiplicative_expression>
+                                              <cast_expression>
+                                                <unary_expression>
+                                                  <postfix_expression>
+                                                    <primary_expression>
+                                                      <constant>
+                                                        <decimal_literal>
+                                                          <DECIMAL_LITERAL startline="8" startpos="16">3</DECIMAL_LITERAL>
+                                                        </decimal_literal>
+                                                      </constant>
+                                                    </primary_expression>
+                                                  </postfix_expression>
+                                                </unary_expression>
+                                              </cast_expression>
+                                            </multiplicative_expression>
+                                          </additive_expression>
+                                        </shift_expression>
+                                      </relational_expression>
+                                    </equality_expression>
+                                  </and_expression>
+                                </exclusive_or_expression>
+                              </inclusive_or_expression>
+                            </logical_and_expression>
+                          </logical_or_expression>
+                        </conditional_expression>
+                      </constant_expression>
+                      <TOKEN startline="8" startpos="17">]</TOKEN>
+                    </declarator_suffix>
+                  </direct_declarator>
+                </declarator>
+                <TOKEN startline="8" startpos="19">=</TOKEN>
+                <initializer>
+                  <TOKEN startline="8" startpos="21">{</TOKEN>
+                  <initializer_list>
+                    <initializer>
+                      <TOKEN startline="8" startpos="22">{</TOKEN>
+                      <initializer_list>
+                        <initializer>
+                          <assignment_expression>
+                            <conditional_expression>
+                              <logical_or_expression>
+                                <logical_and_expression>
+                                  <inclusive_or_expression>
+                                    <exclusive_or_expression>
+                                      <and_expression>
+                                        <equality_expression>
+                                          <relational_expression>
+                                            <shift_expression>
+                                              <additive_expression>
+                                                <multiplicative_expression>
+                                                  <cast_expression>
+                                                    <unary_expression>
+                                                      <postfix_expression>
+                                                        <primary_expression>
+                                                          <constant>
+                                                            <floating_point_literal>
+                                                              <FLOATING_POINT_LITERAL startline="8" startpos="23">2.0</FLOATING_POINT_LITERAL>
+                                                            </floating_point_literal>
+                                                          </constant>
+                                                        </primary_expression>
+                                                      </postfix_expression>
+                                                    </unary_expression>
+                                                  </cast_expression>
+                                                </multiplicative_expression>
+                                              </additive_expression>
+                                            </shift_expression>
+                                          </relational_expression>
+                                        </equality_expression>
+                                      </and_expression>
+                                    </exclusive_or_expression>
+                                  </inclusive_or_expression>
+                                </logical_and_expression>
+                              </logical_or_expression>
+                            </conditional_expression>
+                          </assignment_expression>
+                        </initializer>
+                        <TOKEN startline="8" startpos="26">,</TOKEN>
+                        <initializer>
+                          <assignment_expression>
+                            <conditional_expression>
+                              <logical_or_expression>
+                                <logical_and_expression>
+                                  <inclusive_or_expression>
+                                    <exclusive_or_expression>
+                                      <and_expression>
+                                        <equality_expression>
+                                          <relational_expression>
+                                            <shift_expression>
+                                              <additive_expression>
+                                                <multiplicative_expression>
+                                                  <cast_expression>
+                                                    <unary_expression>
+                                                      <postfix_expression>
+                                                        <primary_expression>
+                                                          <constant>
+                                                            <floating_point_literal>
+                                                              <FLOATING_POINT_LITERAL startline="8" startpos="28">4.0</FLOATING_POINT_LITERAL>
+                                                            </floating_point_literal>
+                                                          </constant>
+                                                        </primary_expression>
+                                                      </postfix_expression>
+                                                    </unary_expression>
+                                                  </cast_expression>
+                                                </multiplicative_expression>
+                                              </additive_expression>
+                                            </shift_expression>
+                                          </relational_expression>
+                                        </equality_expression>
+                                      </and_expression>
+                                    </exclusive_or_expression>
+                                  </inclusive_or_expression>
+                                </logical_and_expression>
+                              </logical_or_expression>
+                            </conditional_expression>
+                          </assignment_expression>
+                        </initializer>
+                        <TOKEN startline="8" startpos="31">,</TOKEN>
+                        <initializer>
+                          <assignment_expression>
+                            <conditional_expression>
+                              <logical_or_expression>
+                                <logical_and_expression>
+                                  <inclusive_or_expression>
+                                    <exclusive_or_expression>
+                                      <and_expression>
+                                        <equality_expression>
+                                          <relational_expression>
+                                            <shift_expression>
+                                              <additive_expression>
+                                                <multiplicative_expression>
+                                                  <cast_expression>
+                                                    <unary_expression>
+                                                      <postfix_expression>
+                                                        <primary_expression>
+                                                          <constant>
+                                                            <floating_point_literal>
+                                                              <FLOATING_POINT_LITERAL startline="8" startpos="33">6.0</FLOATING_POINT_LITERAL>
+                                                            </floating_point_literal>
+                                                          </constant>
+                                                        </primary_expression>
+                                                      </postfix_expression>
+                                                    </unary_expression>
+                                                  </cast_expression>
+                                                </multiplicative_expression>
+                                              </additive_expression>
+                                            </shift_expression>
+                                          </relational_expression>
+                                        </equality_expression>
+                                      </and_expression>
+                                    </exclusive_or_expression>
+                                  </inclusive_or_expression>
+                                </logical_and_expression>
+                              </logical_or_expression>
+                            </conditional_expression>
+                          </assignment_expression>
+                        </initializer>
+                      </initializer_list>
+                      <TOKEN startline="8" startpos="36">}</TOKEN>
+                    </initializer>
+                    <TOKEN startline="8" startpos="37">,</TOKEN>
+                    <initializer>
+                      <TOKEN startline="9" startpos="22">{</TOKEN>
+                      <initializer_list>
+                        <initializer>
+                          <assignment_expression>
+                            <conditional_expression>
+                              <logical_or_expression>
+                                <logical_and_expression>
+                                  <inclusive_or_expression>
+                                    <exclusive_or_expression>
+                                      <and_expression>
+                                        <equality_expression>
+                                          <relational_expression>
+                                            <shift_expression>
+                                              <additive_expression>
+                                                <multiplicative_expression>
+                                                  <cast_expression>
+                                                    <unary_expression>
+                                                      <postfix_expression>
+                                                        <primary_expression>
+                                                          <constant>
+                                                            <floating_point_literal>
+                                                              <FLOATING_POINT_LITERAL startline="9" startpos="23">3.0</FLOATING_POINT_LITERAL>
+                                                            </floating_point_literal>
+                                                          </constant>
+                                                        </primary_expression>
+                                                      </postfix_expression>
+                                                    </unary_expression>
+                                                  </cast_expression>
+                                                </multiplicative_expression>
+                                              </additive_expression>
+                                            </shift_expression>
+                                          </relational_expression>
+                                        </equality_expression>
+                                      </and_expression>
+                                    </exclusive_or_expression>
+                                  </inclusive_or_expression>
+                                </logical_and_expression>
+                              </logical_or_expression>
+                            </conditional_expression>
+                          </assignment_expression>
+                        </initializer>
+                        <TOKEN startline="9" startpos="26">,</TOKEN>
+                        <initializer>
+                          <assignment_expression>
+                            <conditional_expression>
+                              <logical_or_expression>
+                                <logical_and_expression>
+                                  <inclusive_or_expression>
+                                    <exclusive_or_expression>
+                                      <and_expression>
+                                        <equality_expression>
+                                          <relational_expression>
+                                            <shift_expression>
+                                              <additive_expression>
+                                                <multiplicative_expression>
+                                                  <cast_expression>
+                                                    <unary_expression>
+                                                      <postfix_expression>
+                                                        <primary_expression>
+                                                          <constant>
+                                                            <floating_point_literal>
+                                                              <FLOATING_POINT_LITERAL startline="9" startpos="28">8.0</FLOATING_POINT_LITERAL>
+                                                            </floating_point_literal>
+                                                          </constant>
+                                                        </primary_expression>
+                                                      </postfix_expression>
+                                                    </unary_expression>
+                                                  </cast_expression>
+                                                </multiplicative_expression>
+                                              </additive_expression>
+                                            </shift_expression>
+                                          </relational_expression>
+                                        </equality_expression>
+                                      </and_expression>
+                                    </exclusive_or_expression>
+                                  </inclusive_or_expression>
+                                </logical_and_expression>
+                              </logical_or_expression>
+                            </conditional_expression>
+                          </assignment_expression>
+                        </initializer>
+                        <TOKEN startline="9" startpos="31">,</TOKEN>
+                        <initializer>
+                          <assignment_expression>
+                            <conditional_expression>
+                              <logical_or_expression>
+                                <logical_and_expression>
+                                  <inclusive_or_expression>
+                                    <exclusive_or_expression>
+                                      <and_expression>
+                                        <equality_expression>
+                                          <relational_expression>
+                                            <shift_expression>
+                                              <additive_expression>
+                                                <multiplicative_expression>
+                                                  <cast_expression>
+                                                    <unary_expression>
+                                                      <postfix_expression>
+                                                        <primary_expression>
+                                                          <constant>
+                                                            <floating_point_literal>
+                                                              <FLOATING_POINT_LITERAL startline="9" startpos="33">7.0</FLOATING_POINT_LITERAL>
+                                                            </floating_point_literal>
+                                                          </constant>
+                                                        </primary_expression>
+                                                      </postfix_expression>
+                                                    </unary_expression>
+                                                  </cast_expression>
+                                                </multiplicative_expression>
+                                              </additive_expression>
+                                            </shift_expression>
+                                          </relational_expression>
+                                        </equality_expression>
+                                      </and_expression>
+                                    </exclusive_or_expression>
+                                  </inclusive_or_expression>
+                                </logical_and_expression>
+                              </logical_or_expression>
+                            </conditional_expression>
+                          </assignment_expression>
+                        </initializer>
+                      </initializer_list>
+                      <TOKEN startline="9" startpos="36">}</TOKEN>
+                    </initializer>
+                    <TOKEN startline="9" startpos="37">,</TOKEN>
+                    <initializer>
+                      <TOKEN startline="10" startpos="22">{</TOKEN>
+                      <initializer_list>
+                        <initializer>
+                          <assignment_expression>
+                            <conditional_expression>
+                              <logical_or_expression>
+                                <logical_and_expression>
+                                  <inclusive_or_expression>
+                                    <exclusive_or_expression>
+                                      <and_expression>
+                                        <equality_expression>
+                                          <relational_expression>
+                                            <shift_expression>
+                                              <additive_expression>
+                                                <multiplicative_expression>
+                                                  <cast_expression>
+                                                    <unary_expression>
+                                                      <postfix_expression>
+                                                        <primary_expression>
+                                                          <constant>
+                                                            <floating_point_literal>
+                                                              <FLOATING_POINT_LITERAL startline="10" startpos="23">5.0</FLOATING_POINT_LITERAL>
+                                                            </floating_point_literal>
+                                                          </constant>
+                                                        </primary_expression>
+                                                      </postfix_expression>
+                                                    </unary_expression>
+                                                  </cast_expression>
+                                                </multiplicative_expression>
+                                              </additive_expression>
+                                            </shift_expression>
+                                          </relational_expression>
+                                        </equality_expression>
+                                      </and_expression>
+                                    </exclusive_or_expression>
+                                  </inclusive_or_expression>
+                                </logical_and_expression>
+                              </logical_or_expression>
+                            </conditional_expression>
+                          </assignment_expression>
+                        </initializer>
+                        <TOKEN startline="10" startpos="26">,</TOKEN>
+                        <initializer>
+                          <assignment_expression>
+                            <conditional_expression>
+                              <logical_or_expression>
+                                <logical_and_expression>
+                                  <inclusive_or_expression>
+                                    <exclusive_or_expression>
+                                      <and_expression>
+                                        <equality_expression>
+                                          <relational_expression>
+                                            <shift_expression>
+                                              <additive_expression>
+                                                <multiplicative_expression>
+                                                  <cast_expression>
+                                                    <unary_expression>
+                                                      <postfix_expression>
+                                                        <primary_expression>
+                                                          <constant>
+                                                            <floating_point_literal>
+                                                              <FLOATING_POINT_LITERAL startline="10" startpos="28">7.0</FLOATING_POINT_LITERAL>
+                                                            </floating_point_literal>
+                                                          </constant>
+                                                        </primary_expression>
+                                                      </postfix_expression>
+                                                    </unary_expression>
+                                                  </cast_expression>
+                                                </multiplicative_expression>
+                                              </additive_expression>
+                                            </shift_expression>
+                                          </relational_expression>
+                                        </equality_expression>
+                                      </and_expression>
+                                    </exclusive_or_expression>
+                                  </inclusive_or_expression>
+                                </logical_and_expression>
+                              </logical_or_expression>
+                            </conditional_expression>
+                          </assignment_expression>
+                        </initializer>
+                        <TOKEN startline="10" startpos="31">,</TOKEN>
+                        <initializer>
+                          <assignment_expression>
+                            <conditional_expression>
+                              <logical_or_expression>
+                                <logical_and_expression>
+                                  <inclusive_or_expression>
+                                    <exclusive_or_expression>
+                                      <and_expression>
+                                        <equality_expression>
+                                          <relational_expression>
+                                            <shift_expression>
+                                              <additive_expression>
+                                                <multiplicative_expression>
+                                                  <cast_expression>
+                                                    <unary_expression>
+                                                      <postfix_expression>
+                                                        <primary_expression>
+                                                          <constant>
+                                                            <floating_point_literal>
+                                                              <FLOATING_POINT_LITERAL startline="10" startpos="33">12345678901234567890.0</FLOATING_POINT_LITERAL>
+                                                            </floating_point_literal>
+                                                          </constant>
+                                                        </primary_expression>
+                                                      </postfix_expression>
+                                                    </unary_expression>
+                                                  </cast_expression>
+                                                </multiplicative_expression>
+                                              </additive_expression>
+                                            </shift_expression>
+                                          </relational_expression>
+                                        </equality_expression>
+                                      </and_expression>
+                                    </exclusive_or_expression>
+                                  </inclusive_or_expression>
+                                </logical_and_expression>
+                              </logical_or_expression>
+                            </conditional_expression>
+                          </assignment_expression>
+                        </initializer>
+                      </initializer_list>
+                      <TOKEN startline="10" startpos="55">}</TOKEN>
+                    </initializer>
+                  </initializer_list>
+                  <TOKEN startline="10" startpos="56">}</TOKEN>
+                </initializer>
+              </init_declarator>
+            </init_declarator_list>
+            <TOKEN startline="10" startpos="57">;</TOKEN>
+          </declaration>
+        </block_item>
+        <block_item>
+          <declaration>
+            <declaration_specifiers>
+              <type_specifier>
+                <TOKEN startline="11" startpos="4">double</TOKEN>
+              </type_specifier>
+            </declaration_specifiers>
+            <init_declarator_list>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="11" startpos="11">y</IDENTIFIER>
+                    <declarator_suffix>
+                      <TOKEN startline="11" startpos="12">[</TOKEN>
+                      <constant_expression>
+                        <conditional_expression>
+                          <logical_or_expression>
+                            <logical_and_expression>
+                              <inclusive_or_expression>
+                                <exclusive_or_expression>
+                                  <and_expression>
+                                    <equality_expression>
+                                      <relational_expression>
+                                        <shift_expression>
+                                          <additive_expression>
+                                            <multiplicative_expression>
+                                              <cast_expression>
+                                                <unary_expression>
+                                                  <postfix_expression>
+                                                    <primary_expression>
+                                                      <constant>
+                                                        <decimal_literal>
+                                                          <DECIMAL_LITERAL startline="11" startpos="13">3</DECIMAL_LITERAL>
+                                                        </decimal_literal>
+                                                      </constant>
+                                                    </primary_expression>
+                                                  </postfix_expression>
+                                                </unary_expression>
+                                              </cast_expression>
+                                            </multiplicative_expression>
+                                          </additive_expression>
+                                        </shift_expression>
+                                      </relational_expression>
+                                    </equality_expression>
+                                  </and_expression>
+                                </exclusive_or_expression>
+                              </inclusive_or_expression>
+                            </logical_and_expression>
+                          </logical_or_expression>
+                        </conditional_expression>
+                      </constant_expression>
+                      <TOKEN startline="11" startpos="14">]</TOKEN>
+                    </declarator_suffix>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+            </init_declarator_list>
+            <TOKEN startline="11" startpos="15">;</TOKEN>
+          </declaration>
+        </block_item>
+        <block_item>
           <statement>
             <expression_statement>
               <expression>
@@ -867,6 +875,8 @@
               <TOKEN startline="15" startpos="20">;</TOKEN>
             </expression_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <iteration_statement>
               <TOKEN startline="16" startpos="4">for</TOKEN>
@@ -1025,7 +1035,7 @@
               <statement>
                 <compound_statement>
                   <TOKEN startline="16" startpos="24">{</TOKEN>
-                  <statement_list>
+                  <block_item>
                     <statement>
                       <expression_statement>
                         <expression>
@@ -1178,12 +1188,14 @@
                         <TOKEN startline="17" startpos="31">;</TOKEN>
                       </expression_statement>
                     </statement>
-                  </statement_list>
+                  </block_item>
                   <TOKEN startline="18" startpos="4">}</TOKEN>
                 </compound_statement>
               </statement>
             </iteration_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <expression_statement>
               <expression>
@@ -1265,6 +1277,8 @@
               <TOKEN startline="20" startpos="20">;</TOKEN>
             </expression_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <iteration_statement>
               <TOKEN startline="21" startpos="4">for</TOKEN>
@@ -1423,7 +1437,7 @@
               <statement>
                 <compound_statement>
                   <TOKEN startline="21" startpos="24">{</TOKEN>
-                  <statement_list>
+                  <block_item>
                     <statement>
                       <iteration_statement>
                         <TOKEN startline="22" startpos="8">for</TOKEN>
@@ -1582,7 +1596,7 @@
                         <statement>
                           <compound_statement>
                             <TOKEN startline="22" startpos="28">{</TOKEN>
-                            <statement_list>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -1772,12 +1786,14 @@
                                   <TOKEN startline="23" startpos="37">;</TOKEN>
                                 </expression_statement>
                               </statement>
-                            </statement_list>
+                            </block_item>
                             <TOKEN startline="24" startpos="8">}</TOKEN>
                           </compound_statement>
                         </statement>
                       </iteration_statement>
                     </statement>
+                  </block_item>
+                  <block_item>
                     <statement>
                       <expression_statement>
                         <expression>
@@ -1859,12 +1875,14 @@
                         <TOKEN startline="25" startpos="20">;</TOKEN>
                       </expression_statement>
                     </statement>
-                  </statement_list>
+                  </block_item>
                   <TOKEN startline="26" startpos="4">}</TOKEN>
                 </compound_statement>
               </statement>
             </iteration_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <iteration_statement>
               <TOKEN startline="30" startpos="4">for</TOKEN>
@@ -2023,7 +2041,7 @@
               <statement>
                 <compound_statement>
                   <TOKEN startline="30" startpos="22">{</TOKEN>
-                  <statement_list>
+                  <block_item>
                     <statement>
                       <expression_statement>
                         <expression>
@@ -2119,6 +2137,8 @@
                         <TOKEN startline="31" startpos="18">;</TOKEN>
                       </expression_statement>
                     </statement>
+                  </block_item>
+                  <block_item>
                     <statement>
                       <iteration_statement>
                         <TOKEN startline="32" startpos="8">for</TOKEN>
@@ -2277,7 +2297,7 @@
                         <statement>
                           <compound_statement>
                             <TOKEN startline="32" startpos="26">{</TOKEN>
-                            <statement_list>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -2490,18 +2510,20 @@
                                   <TOKEN startline="33" startpos="32">;</TOKEN>
                                 </expression_statement>
                               </statement>
-                            </statement_list>
+                            </block_item>
                             <TOKEN startline="34" startpos="8">}</TOKEN>
                           </compound_statement>
                         </statement>
                       </iteration_statement>
                     </statement>
-                  </statement_list>
+                  </block_item>
                   <TOKEN startline="35" startpos="4">}</TOKEN>
                 </compound_statement>
               </statement>
             </iteration_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <expression_statement>
               <expression>
@@ -2583,6 +2605,8 @@
               <TOKEN startline="39" startpos="22">;</TOKEN>
             </expression_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <iteration_statement>
               <TOKEN startline="40" startpos="4">for</TOKEN>
@@ -2741,7 +2765,7 @@
               <statement>
                 <compound_statement>
                   <TOKEN startline="40" startpos="22">{</TOKEN>
-                  <statement_list>
+                  <block_item>
                     <statement>
                       <expression_statement>
                         <expression>
@@ -2894,12 +2918,14 @@
                         <TOKEN startline="41" startpos="31">;</TOKEN>
                       </expression_statement>
                     </statement>
-                  </statement_list>
+                  </block_item>
                   <TOKEN startline="42" startpos="4">}</TOKEN>
                 </compound_statement>
               </statement>
             </iteration_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <jump_statement>
               <TOKEN startline="45" startpos="4">return</TOKEN>
@@ -2945,7 +2971,7 @@
               <TOKEN startline="45" startpos="12">;</TOKEN>
             </jump_statement>
           </statement>
-        </statement_list>
+        </block_item>
         <TOKEN startline="46" startpos="0">}</TOKEN>
       </compound_statement>
     </function_definition>

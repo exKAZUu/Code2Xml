@@ -14,6 +14,7 @@
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Code2Xml\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <MSBuildCommunityTasksPath>$(SolutionDir)\Build</MSBuildCommunityTasksPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

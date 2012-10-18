@@ -95,376 +95,382 @@
       </declarator>
       <compound_statement>
         <TOKEN startline="12" startpos="11">{</TOKEN>
-        <declaration>
-          <declaration_specifiers>
-            <type_specifier>
-              <TOKEN startline="13" startpos="4">unsigned</TOKEN>
-            </type_specifier>
-          </declaration_specifiers>
-          <init_declarator_list>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="13" startpos="13">Mersenne</IDENTIFIER>
-                  <declarator_suffix>
-                    <TOKEN startline="13" startpos="21">[</TOKEN>
-                    <constant_expression>
-                      <conditional_expression>
-                        <logical_or_expression>
-                          <logical_and_expression>
-                            <inclusive_or_expression>
-                              <exclusive_or_expression>
-                                <and_expression>
-                                  <equality_expression>
-                                    <relational_expression>
-                                      <shift_expression>
-                                        <additive_expression>
-                                          <multiplicative_expression>
-                                            <cast_expression>
-                                              <unary_expression>
-                                                <postfix_expression>
-                                                  <primary_expression>
-                                                    <constant>
-                                                      <decimal_literal>
-                                                        <DECIMAL_LITERAL startline="13" startpos="22">500</DECIMAL_LITERAL>
-                                                      </decimal_literal>
-                                                    </constant>
-                                                  </primary_expression>
-                                                </postfix_expression>
-                                              </unary_expression>
-                                            </cast_expression>
-                                          </multiplicative_expression>
-                                        </additive_expression>
-                                      </shift_expression>
-                                    </relational_expression>
-                                  </equality_expression>
-                                </and_expression>
-                              </exclusive_or_expression>
-                            </inclusive_or_expression>
-                          </logical_and_expression>
-                        </logical_or_expression>
-                      </conditional_expression>
-                    </constant_expression>
-                    <TOKEN startline="13" startpos="25">]</TOKEN>
-                  </declarator_suffix>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-            <TOKEN startline="13" startpos="26">,</TOKEN>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="13" startpos="28">S</IDENTIFIER>
-                  <declarator_suffix>
-                    <TOKEN startline="13" startpos="29">[</TOKEN>
-                    <constant_expression>
-                      <conditional_expression>
-                        <logical_or_expression>
-                          <logical_and_expression>
-                            <inclusive_or_expression>
-                              <exclusive_or_expression>
-                                <and_expression>
-                                  <equality_expression>
-                                    <relational_expression>
-                                      <shift_expression>
-                                        <additive_expression>
-                                          <multiplicative_expression>
-                                            <cast_expression>
-                                              <unary_expression>
-                                                <postfix_expression>
-                                                  <primary_expression>
-                                                    <constant>
-                                                      <decimal_literal>
-                                                        <DECIMAL_LITERAL startline="13" startpos="30">500</DECIMAL_LITERAL>
-                                                      </decimal_literal>
-                                                    </constant>
-                                                  </primary_expression>
-                                                </postfix_expression>
-                                              </unary_expression>
-                                            </cast_expression>
-                                          </multiplicative_expression>
-                                        </additive_expression>
-                                      </shift_expression>
-                                    </relational_expression>
-                                  </equality_expression>
-                                </and_expression>
-                              </exclusive_or_expression>
-                            </inclusive_or_expression>
-                          </logical_and_expression>
-                        </logical_or_expression>
-                      </conditional_expression>
-                    </constant_expression>
-                    <TOKEN startline="13" startpos="33">]</TOKEN>
-                  </declarator_suffix>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-            <TOKEN startline="13" startpos="34">,</TOKEN>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="13" startpos="36">T</IDENTIFIER>
-                  <declarator_suffix>
-                    <TOKEN startline="13" startpos="37">[</TOKEN>
-                    <constant_expression>
-                      <conditional_expression>
-                        <logical_or_expression>
-                          <logical_and_expression>
-                            <inclusive_or_expression>
-                              <exclusive_or_expression>
-                                <and_expression>
-                                  <equality_expression>
-                                    <relational_expression>
-                                      <shift_expression>
-                                        <additive_expression>
-                                          <multiplicative_expression>
-                                            <cast_expression>
-                                              <unary_expression>
-                                                <postfix_expression>
-                                                  <primary_expression>
-                                                    <constant>
-                                                      <decimal_literal>
-                                                        <DECIMAL_LITERAL startline="13" startpos="38">500</DECIMAL_LITERAL>
-                                                      </decimal_literal>
-                                                    </constant>
-                                                  </primary_expression>
-                                                </postfix_expression>
-                                              </unary_expression>
-                                            </cast_expression>
-                                          </multiplicative_expression>
-                                        </additive_expression>
-                                      </shift_expression>
-                                    </relational_expression>
-                                  </equality_expression>
-                                </and_expression>
-                              </exclusive_or_expression>
-                            </inclusive_or_expression>
-                          </logical_and_expression>
-                        </logical_or_expression>
-                      </conditional_expression>
-                    </constant_expression>
-                    <TOKEN startline="13" startpos="41">]</TOKEN>
-                  </declarator_suffix>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-            <TOKEN startline="13" startpos="42">,</TOKEN>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="13" startpos="44">quot</IDENTIFIER>
-                  <declarator_suffix>
-                    <TOKEN startline="13" startpos="48">[</TOKEN>
-                    <constant_expression>
-                      <conditional_expression>
-                        <logical_or_expression>
-                          <logical_and_expression>
-                            <inclusive_or_expression>
-                              <exclusive_or_expression>
-                                <and_expression>
-                                  <equality_expression>
-                                    <relational_expression>
-                                      <shift_expression>
-                                        <additive_expression>
-                                          <multiplicative_expression>
-                                            <cast_expression>
-                                              <unary_expression>
-                                                <postfix_expression>
-                                                  <primary_expression>
-                                                    <constant>
-                                                      <decimal_literal>
-                                                        <DECIMAL_LITERAL startline="13" startpos="49">500</DECIMAL_LITERAL>
-                                                      </decimal_literal>
-                                                    </constant>
-                                                  </primary_expression>
-                                                </postfix_expression>
-                                              </unary_expression>
-                                            </cast_expression>
-                                          </multiplicative_expression>
-                                        </additive_expression>
-                                      </shift_expression>
-                                    </relational_expression>
-                                  </equality_expression>
-                                </and_expression>
-                              </exclusive_or_expression>
-                            </inclusive_or_expression>
-                          </logical_and_expression>
-                        </logical_or_expression>
-                      </conditional_expression>
-                    </constant_expression>
-                    <TOKEN startline="13" startpos="52">]</TOKEN>
-                  </declarator_suffix>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-            <TOKEN startline="13" startpos="53">,</TOKEN>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="13" startpos="55">res</IDENTIFIER>
-                  <declarator_suffix>
-                    <TOKEN startline="13" startpos="58">[</TOKEN>
-                    <constant_expression>
-                      <conditional_expression>
-                        <logical_or_expression>
-                          <logical_and_expression>
-                            <inclusive_or_expression>
-                              <exclusive_or_expression>
-                                <and_expression>
-                                  <equality_expression>
-                                    <relational_expression>
-                                      <shift_expression>
-                                        <additive_expression>
-                                          <multiplicative_expression>
-                                            <cast_expression>
-                                              <unary_expression>
-                                                <postfix_expression>
-                                                  <primary_expression>
-                                                    <constant>
-                                                      <decimal_literal>
-                                                        <DECIMAL_LITERAL startline="13" startpos="59">500</DECIMAL_LITERAL>
-                                                      </decimal_literal>
-                                                    </constant>
-                                                  </primary_expression>
-                                                </postfix_expression>
-                                              </unary_expression>
-                                            </cast_expression>
-                                          </multiplicative_expression>
-                                        </additive_expression>
-                                      </shift_expression>
-                                    </relational_expression>
-                                  </equality_expression>
-                                </and_expression>
-                              </exclusive_or_expression>
-                            </inclusive_or_expression>
-                          </logical_and_expression>
-                        </logical_or_expression>
-                      </conditional_expression>
-                    </constant_expression>
-                    <TOKEN startline="13" startpos="62">]</TOKEN>
-                  </declarator_suffix>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-          </init_declarator_list>
-          <TOKEN startline="13" startpos="63">;</TOKEN>
-        </declaration>
-        <declaration>
-          <declaration_specifiers>
-            <type_specifier>
-              <TOKEN startline="14" startpos="4">int</TOKEN>
-            </type_specifier>
-          </declaration_specifiers>
-          <init_declarator_list>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="14" startpos="8">a</IDENTIFIER>
-                  <declarator_suffix>
-                    <TOKEN startline="14" startpos="9">[</TOKEN>
-                    <constant_expression>
-                      <conditional_expression>
-                        <logical_or_expression>
-                          <logical_and_expression>
-                            <inclusive_or_expression>
-                              <exclusive_or_expression>
-                                <and_expression>
-                                  <equality_expression>
-                                    <relational_expression>
-                                      <shift_expression>
-                                        <additive_expression>
-                                          <multiplicative_expression>
-                                            <cast_expression>
-                                              <unary_expression>
-                                                <postfix_expression>
-                                                  <primary_expression>
-                                                    <constant>
-                                                      <decimal_literal>
-                                                        <DECIMAL_LITERAL startline="14" startpos="10">500</DECIMAL_LITERAL>
-                                                      </decimal_literal>
-                                                    </constant>
-                                                  </primary_expression>
-                                                </postfix_expression>
-                                              </unary_expression>
-                                            </cast_expression>
-                                          </multiplicative_expression>
-                                        </additive_expression>
-                                      </shift_expression>
-                                    </relational_expression>
-                                  </equality_expression>
-                                </and_expression>
-                              </exclusive_or_expression>
-                            </inclusive_or_expression>
-                          </logical_and_expression>
-                        </logical_or_expression>
-                      </conditional_expression>
-                    </constant_expression>
-                    <TOKEN startline="14" startpos="13">]</TOKEN>
-                  </declarator_suffix>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-          </init_declarator_list>
-          <TOKEN startline="14" startpos="14">;</TOKEN>
-        </declaration>
-        <declaration>
-          <declaration_specifiers>
-            <type_specifier>
-              <TOKEN startline="15" startpos="4">int</TOKEN>
-            </type_specifier>
-          </declaration_specifiers>
-          <init_declarator_list>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="15" startpos="8">p</IDENTIFIER>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-            <TOKEN startline="15" startpos="9">,</TOKEN>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="15" startpos="11">j</IDENTIFIER>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-            <TOKEN startline="15" startpos="12">,</TOKEN>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="15" startpos="14">k</IDENTIFIER>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-            <TOKEN startline="15" startpos="15">,</TOKEN>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="15" startpos="17">t</IDENTIFIER>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-            <TOKEN startline="15" startpos="18">,</TOKEN>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="15" startpos="20">d</IDENTIFIER>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-            <TOKEN startline="15" startpos="21">,</TOKEN>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="15" startpos="23">r</IDENTIFIER>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-          </init_declarator_list>
-          <TOKEN startline="15" startpos="24">;</TOKEN>
-        </declaration>
-        <statement_list>
+        <block_item>
+          <declaration>
+            <declaration_specifiers>
+              <type_specifier>
+                <TOKEN startline="13" startpos="4">unsigned</TOKEN>
+              </type_specifier>
+            </declaration_specifiers>
+            <init_declarator_list>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="13" startpos="13">Mersenne</IDENTIFIER>
+                    <declarator_suffix>
+                      <TOKEN startline="13" startpos="21">[</TOKEN>
+                      <constant_expression>
+                        <conditional_expression>
+                          <logical_or_expression>
+                            <logical_and_expression>
+                              <inclusive_or_expression>
+                                <exclusive_or_expression>
+                                  <and_expression>
+                                    <equality_expression>
+                                      <relational_expression>
+                                        <shift_expression>
+                                          <additive_expression>
+                                            <multiplicative_expression>
+                                              <cast_expression>
+                                                <unary_expression>
+                                                  <postfix_expression>
+                                                    <primary_expression>
+                                                      <constant>
+                                                        <decimal_literal>
+                                                          <DECIMAL_LITERAL startline="13" startpos="22">500</DECIMAL_LITERAL>
+                                                        </decimal_literal>
+                                                      </constant>
+                                                    </primary_expression>
+                                                  </postfix_expression>
+                                                </unary_expression>
+                                              </cast_expression>
+                                            </multiplicative_expression>
+                                          </additive_expression>
+                                        </shift_expression>
+                                      </relational_expression>
+                                    </equality_expression>
+                                  </and_expression>
+                                </exclusive_or_expression>
+                              </inclusive_or_expression>
+                            </logical_and_expression>
+                          </logical_or_expression>
+                        </conditional_expression>
+                      </constant_expression>
+                      <TOKEN startline="13" startpos="25">]</TOKEN>
+                    </declarator_suffix>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+              <TOKEN startline="13" startpos="26">,</TOKEN>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="13" startpos="28">S</IDENTIFIER>
+                    <declarator_suffix>
+                      <TOKEN startline="13" startpos="29">[</TOKEN>
+                      <constant_expression>
+                        <conditional_expression>
+                          <logical_or_expression>
+                            <logical_and_expression>
+                              <inclusive_or_expression>
+                                <exclusive_or_expression>
+                                  <and_expression>
+                                    <equality_expression>
+                                      <relational_expression>
+                                        <shift_expression>
+                                          <additive_expression>
+                                            <multiplicative_expression>
+                                              <cast_expression>
+                                                <unary_expression>
+                                                  <postfix_expression>
+                                                    <primary_expression>
+                                                      <constant>
+                                                        <decimal_literal>
+                                                          <DECIMAL_LITERAL startline="13" startpos="30">500</DECIMAL_LITERAL>
+                                                        </decimal_literal>
+                                                      </constant>
+                                                    </primary_expression>
+                                                  </postfix_expression>
+                                                </unary_expression>
+                                              </cast_expression>
+                                            </multiplicative_expression>
+                                          </additive_expression>
+                                        </shift_expression>
+                                      </relational_expression>
+                                    </equality_expression>
+                                  </and_expression>
+                                </exclusive_or_expression>
+                              </inclusive_or_expression>
+                            </logical_and_expression>
+                          </logical_or_expression>
+                        </conditional_expression>
+                      </constant_expression>
+                      <TOKEN startline="13" startpos="33">]</TOKEN>
+                    </declarator_suffix>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+              <TOKEN startline="13" startpos="34">,</TOKEN>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="13" startpos="36">T</IDENTIFIER>
+                    <declarator_suffix>
+                      <TOKEN startline="13" startpos="37">[</TOKEN>
+                      <constant_expression>
+                        <conditional_expression>
+                          <logical_or_expression>
+                            <logical_and_expression>
+                              <inclusive_or_expression>
+                                <exclusive_or_expression>
+                                  <and_expression>
+                                    <equality_expression>
+                                      <relational_expression>
+                                        <shift_expression>
+                                          <additive_expression>
+                                            <multiplicative_expression>
+                                              <cast_expression>
+                                                <unary_expression>
+                                                  <postfix_expression>
+                                                    <primary_expression>
+                                                      <constant>
+                                                        <decimal_literal>
+                                                          <DECIMAL_LITERAL startline="13" startpos="38">500</DECIMAL_LITERAL>
+                                                        </decimal_literal>
+                                                      </constant>
+                                                    </primary_expression>
+                                                  </postfix_expression>
+                                                </unary_expression>
+                                              </cast_expression>
+                                            </multiplicative_expression>
+                                          </additive_expression>
+                                        </shift_expression>
+                                      </relational_expression>
+                                    </equality_expression>
+                                  </and_expression>
+                                </exclusive_or_expression>
+                              </inclusive_or_expression>
+                            </logical_and_expression>
+                          </logical_or_expression>
+                        </conditional_expression>
+                      </constant_expression>
+                      <TOKEN startline="13" startpos="41">]</TOKEN>
+                    </declarator_suffix>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+              <TOKEN startline="13" startpos="42">,</TOKEN>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="13" startpos="44">quot</IDENTIFIER>
+                    <declarator_suffix>
+                      <TOKEN startline="13" startpos="48">[</TOKEN>
+                      <constant_expression>
+                        <conditional_expression>
+                          <logical_or_expression>
+                            <logical_and_expression>
+                              <inclusive_or_expression>
+                                <exclusive_or_expression>
+                                  <and_expression>
+                                    <equality_expression>
+                                      <relational_expression>
+                                        <shift_expression>
+                                          <additive_expression>
+                                            <multiplicative_expression>
+                                              <cast_expression>
+                                                <unary_expression>
+                                                  <postfix_expression>
+                                                    <primary_expression>
+                                                      <constant>
+                                                        <decimal_literal>
+                                                          <DECIMAL_LITERAL startline="13" startpos="49">500</DECIMAL_LITERAL>
+                                                        </decimal_literal>
+                                                      </constant>
+                                                    </primary_expression>
+                                                  </postfix_expression>
+                                                </unary_expression>
+                                              </cast_expression>
+                                            </multiplicative_expression>
+                                          </additive_expression>
+                                        </shift_expression>
+                                      </relational_expression>
+                                    </equality_expression>
+                                  </and_expression>
+                                </exclusive_or_expression>
+                              </inclusive_or_expression>
+                            </logical_and_expression>
+                          </logical_or_expression>
+                        </conditional_expression>
+                      </constant_expression>
+                      <TOKEN startline="13" startpos="52">]</TOKEN>
+                    </declarator_suffix>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+              <TOKEN startline="13" startpos="53">,</TOKEN>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="13" startpos="55">res</IDENTIFIER>
+                    <declarator_suffix>
+                      <TOKEN startline="13" startpos="58">[</TOKEN>
+                      <constant_expression>
+                        <conditional_expression>
+                          <logical_or_expression>
+                            <logical_and_expression>
+                              <inclusive_or_expression>
+                                <exclusive_or_expression>
+                                  <and_expression>
+                                    <equality_expression>
+                                      <relational_expression>
+                                        <shift_expression>
+                                          <additive_expression>
+                                            <multiplicative_expression>
+                                              <cast_expression>
+                                                <unary_expression>
+                                                  <postfix_expression>
+                                                    <primary_expression>
+                                                      <constant>
+                                                        <decimal_literal>
+                                                          <DECIMAL_LITERAL startline="13" startpos="59">500</DECIMAL_LITERAL>
+                                                        </decimal_literal>
+                                                      </constant>
+                                                    </primary_expression>
+                                                  </postfix_expression>
+                                                </unary_expression>
+                                              </cast_expression>
+                                            </multiplicative_expression>
+                                          </additive_expression>
+                                        </shift_expression>
+                                      </relational_expression>
+                                    </equality_expression>
+                                  </and_expression>
+                                </exclusive_or_expression>
+                              </inclusive_or_expression>
+                            </logical_and_expression>
+                          </logical_or_expression>
+                        </conditional_expression>
+                      </constant_expression>
+                      <TOKEN startline="13" startpos="62">]</TOKEN>
+                    </declarator_suffix>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+            </init_declarator_list>
+            <TOKEN startline="13" startpos="63">;</TOKEN>
+          </declaration>
+        </block_item>
+        <block_item>
+          <declaration>
+            <declaration_specifiers>
+              <type_specifier>
+                <TOKEN startline="14" startpos="4">int</TOKEN>
+              </type_specifier>
+            </declaration_specifiers>
+            <init_declarator_list>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="14" startpos="8">a</IDENTIFIER>
+                    <declarator_suffix>
+                      <TOKEN startline="14" startpos="9">[</TOKEN>
+                      <constant_expression>
+                        <conditional_expression>
+                          <logical_or_expression>
+                            <logical_and_expression>
+                              <inclusive_or_expression>
+                                <exclusive_or_expression>
+                                  <and_expression>
+                                    <equality_expression>
+                                      <relational_expression>
+                                        <shift_expression>
+                                          <additive_expression>
+                                            <multiplicative_expression>
+                                              <cast_expression>
+                                                <unary_expression>
+                                                  <postfix_expression>
+                                                    <primary_expression>
+                                                      <constant>
+                                                        <decimal_literal>
+                                                          <DECIMAL_LITERAL startline="14" startpos="10">500</DECIMAL_LITERAL>
+                                                        </decimal_literal>
+                                                      </constant>
+                                                    </primary_expression>
+                                                  </postfix_expression>
+                                                </unary_expression>
+                                              </cast_expression>
+                                            </multiplicative_expression>
+                                          </additive_expression>
+                                        </shift_expression>
+                                      </relational_expression>
+                                    </equality_expression>
+                                  </and_expression>
+                                </exclusive_or_expression>
+                              </inclusive_or_expression>
+                            </logical_and_expression>
+                          </logical_or_expression>
+                        </conditional_expression>
+                      </constant_expression>
+                      <TOKEN startline="14" startpos="13">]</TOKEN>
+                    </declarator_suffix>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+            </init_declarator_list>
+            <TOKEN startline="14" startpos="14">;</TOKEN>
+          </declaration>
+        </block_item>
+        <block_item>
+          <declaration>
+            <declaration_specifiers>
+              <type_specifier>
+                <TOKEN startline="15" startpos="4">int</TOKEN>
+              </type_specifier>
+            </declaration_specifiers>
+            <init_declarator_list>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="15" startpos="8">p</IDENTIFIER>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+              <TOKEN startline="15" startpos="9">,</TOKEN>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="15" startpos="11">j</IDENTIFIER>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+              <TOKEN startline="15" startpos="12">,</TOKEN>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="15" startpos="14">k</IDENTIFIER>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+              <TOKEN startline="15" startpos="15">,</TOKEN>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="15" startpos="17">t</IDENTIFIER>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+              <TOKEN startline="15" startpos="18">,</TOKEN>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="15" startpos="20">d</IDENTIFIER>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+              <TOKEN startline="15" startpos="21">,</TOKEN>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="15" startpos="23">r</IDENTIFIER>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+            </init_declarator_list>
+            <TOKEN startline="15" startpos="24">;</TOKEN>
+          </declaration>
+        </block_item>
+        <block_item>
           <statement>
             <expression_statement>
               <expression>
@@ -523,6 +529,8 @@
               <TOKEN startline="17" startpos="9">;</TOKEN>
             </expression_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <iteration_statement>
               <TOKEN startline="19" startpos="4">while</TOKEN>
@@ -586,7 +594,7 @@
               <statement>
                 <compound_statement>
                   <TOKEN startline="19" startpos="17">{</TOKEN>
-                  <statement_list>
+                  <block_item>
                     <statement>
                       <expression_statement>
                         <expression>
@@ -664,6 +672,8 @@
                         <TOKEN startline="21" startpos="28">;</TOKEN>
                       </expression_statement>
                     </statement>
+                  </block_item>
+                  <block_item>
                     <statement>
                       <expression_statement>
                         <expression>
@@ -763,6 +773,8 @@
                         <TOKEN startline="22" startpos="23">;</TOKEN>
                       </expression_statement>
                     </statement>
+                  </block_item>
+                  <block_item>
                     <statement>
                       <expression_statement>
                         <expression>
@@ -874,6 +886,8 @@
                         <TOKEN startline="23" startpos="34">;</TOKEN>
                       </expression_statement>
                     </statement>
+                  </block_item>
+                  <block_item>
                     <statement>
                       <expression_statement>
                         <expression>
@@ -951,6 +965,8 @@
                         <TOKEN startline="24" startpos="21">;</TOKEN>
                       </expression_statement>
                     </statement>
+                  </block_item>
+                  <block_item>
                     <statement>
                       <expression_statement>
                         <expression>
@@ -1050,6 +1066,8 @@
                         <TOKEN startline="25" startpos="16">;</TOKEN>
                       </expression_statement>
                     </statement>
+                  </block_item>
+                  <block_item>
                     <statement>
                       <expression_statement>
                         <expression>
@@ -1161,6 +1179,8 @@
                         <TOKEN startline="26" startpos="24">;</TOKEN>
                       </expression_statement>
                     </statement>
+                  </block_item>
+                  <block_item>
                     <statement>
                       <expression_statement>
                         <expression>
@@ -1276,6 +1296,8 @@
                         <TOKEN startline="28" startpos="31">;</TOKEN>
                       </expression_statement>
                     </statement>
+                  </block_item>
+                  <block_item>
                     <statement>
                       <expression_statement>
                         <expression>
@@ -1353,6 +1375,8 @@
                         <TOKEN startline="31" startpos="21">;</TOKEN>
                       </expression_statement>
                     </statement>
+                  </block_item>
+                  <block_item>
                     <statement>
                       <expression_statement>
                         <expression>
@@ -1452,6 +1476,8 @@
                         <TOKEN startline="32" startpos="16">;</TOKEN>
                       </expression_statement>
                     </statement>
+                  </block_item>
+                  <block_item>
                     <statement>
                       <iteration_statement>
                         <TOKEN startline="34" startpos="8">for</TOKEN>
@@ -1622,7 +1648,7 @@
                         <statement>
                           <compound_statement>
                             <TOKEN startline="34" startpos="30">{</TOKEN>
-                            <statement_list>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -1734,6 +1760,8 @@
                                   <TOKEN startline="36" startpos="22">;</TOKEN>
                                 </expression_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -1845,6 +1873,8 @@
                                   <TOKEN startline="37" startpos="25">;</TOKEN>
                                 </expression_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -1922,6 +1952,8 @@
                                   <TOKEN startline="39" startpos="25">;</TOKEN>
                                 </expression_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -2021,6 +2053,8 @@
                                   <TOKEN startline="40" startpos="20">;</TOKEN>
                                 </expression_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -2132,6 +2166,8 @@
                                   <TOKEN startline="41" startpos="21">;</TOKEN>
                                 </expression_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -2311,6 +2347,8 @@
                                   <TOKEN startline="44" startpos="43">;</TOKEN>
                                 </expression_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <selection_statement>
                                   <TOKEN startline="45" startpos="12">if</TOKEN>
@@ -2515,7 +2553,7 @@
                                   <statement>
                                     <compound_statement>
                                       <TOKEN startline="45" startpos="52">{</TOKEN>
-                                      <statement_list>
+                                      <block_item>
                                         <statement>
                                           <expression_statement>
                                             <expression>
@@ -2597,18 +2635,22 @@
                                             <TOKEN startline="46" startpos="47">;</TOKEN>
                                           </expression_statement>
                                         </statement>
+                                      </block_item>
+                                      <block_item>
                                         <statement>
                                           <jump_statement>
                                             <TOKEN startline="47" startpos="20">return</TOKEN>
                                             <TOKEN startline="47" startpos="26">;</TOKEN>
                                           </jump_statement>
                                         </statement>
-                                      </statement_list>
+                                      </block_item>
                                       <TOKEN startline="48" startpos="12">}</TOKEN>
                                     </compound_statement>
                                   </statement>
                                 </selection_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -2720,6 +2762,8 @@
                                   <TOKEN startline="52" startpos="21">;</TOKEN>
                                 </expression_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -2831,6 +2875,8 @@
                                   <TOKEN startline="53" startpos="32">;</TOKEN>
                                 </expression_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -2899,6 +2945,8 @@
                                   <TOKEN startline="55" startpos="20">;</TOKEN>
                                 </expression_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -2979,6 +3027,8 @@
                                   <TOKEN startline="56" startpos="24">;</TOKEN>
                                 </expression_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -3070,6 +3120,8 @@
                                   <TOKEN startline="57" startpos="25">;</TOKEN>
                                 </expression_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <iteration_statement>
                                   <TOKEN startline="58" startpos="12">for</TOKEN>
@@ -3220,7 +3272,7 @@
                                   <statement>
                                     <compound_statement>
                                       <TOKEN startline="58" startpos="32">{</TOKEN>
-                                      <statement_list>
+                                      <block_item>
                                         <statement>
                                           <expression_statement>
                                             <expression>
@@ -3316,12 +3368,14 @@
                                             <TOKEN startline="59" startpos="24">;</TOKEN>
                                           </expression_statement>
                                         </statement>
-                                      </statement_list>
+                                      </block_item>
                                       <TOKEN startline="60" startpos="12">}</TOKEN>
                                     </compound_statement>
                                   </statement>
                                 </iteration_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -3618,6 +3672,8 @@
                                   <TOKEN startline="61" startpos="41">;</TOKEN>
                                 </expression_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -3729,6 +3785,8 @@
                                   <TOKEN startline="62" startpos="21">;</TOKEN>
                                 </expression_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -3854,6 +3912,8 @@
                                   <TOKEN startline="63" startpos="36">;</TOKEN>
                                 </expression_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <selection_statement>
                                   <TOKEN startline="64" startpos="12">if</TOKEN>
@@ -3969,7 +4029,7 @@
                                   <statement>
                                     <compound_statement>
                                       <TOKEN startline="64" startpos="28">{</TOKEN>
-                                      <statement_list>
+                                      <block_item>
                                         <statement>
                                           <expression_statement>
                                             <expression>
@@ -4081,12 +4141,14 @@
                                             <TOKEN startline="65" startpos="32">;</TOKEN>
                                           </expression_statement>
                                         </statement>
-                                      </statement_list>
+                                      </block_item>
                                       <TOKEN startline="66" startpos="12">}</TOKEN>
                                     </compound_statement>
                                   </statement>
                                 </selection_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <expression_statement>
                                   <expression>
@@ -4212,6 +4274,8 @@
                                   <TOKEN startline="69" startpos="31">;</TOKEN>
                                 </expression_statement>
                               </statement>
+                            </block_item>
+                            <block_item>
                               <statement>
                                 <selection_statement>
                                   <TOKEN startline="70" startpos="12">if</TOKEN>
@@ -4277,7 +4341,7 @@
                                   <statement>
                                     <compound_statement>
                                       <TOKEN startline="70" startpos="21">{</TOKEN>
-                                      <statement_list>
+                                      <block_item>
                                         <statement>
                                           <expression_statement>
                                             <expression>
@@ -4359,24 +4423,28 @@
                                             <TOKEN startline="71" startpos="46">;</TOKEN>
                                           </expression_statement>
                                         </statement>
+                                      </block_item>
+                                      <block_item>
                                         <statement>
                                           <jump_statement>
                                             <TOKEN startline="72" startpos="16">return</TOKEN>
                                             <TOKEN startline="72" startpos="22">;</TOKEN>
                                           </jump_statement>
                                         </statement>
-                                      </statement_list>
+                                      </block_item>
                                       <TOKEN startline="73" startpos="12">}</TOKEN>
                                     </compound_statement>
                                   </statement>
                                 </selection_statement>
                               </statement>
-                            </statement_list>
+                            </block_item>
                             <TOKEN startline="77" startpos="8">}</TOKEN>
                           </compound_statement>
                         </statement>
                       </iteration_statement>
                     </statement>
+                  </block_item>
+                  <block_item>
                     <statement>
                       <selection_statement>
                         <TOKEN startline="78" startpos="8">if</TOKEN>
@@ -4593,6 +4661,8 @@
                         </statement>
                       </selection_statement>
                     </statement>
+                  </block_item>
+                  <block_item>
                     <statement>
                       <expression_statement>
                         <expression>
@@ -4663,6 +4733,8 @@
                         <TOKEN startline="80" startpos="15">;</TOKEN>
                       </expression_statement>
                     </statement>
+                  </block_item>
+                  <block_item>
                     <statement>
                       <expression_statement>
                         <expression>
@@ -4754,13 +4826,13 @@
                         <TOKEN startline="81" startpos="24">;</TOKEN>
                       </expression_statement>
                     </statement>
-                  </statement_list>
+                  </block_item>
                   <TOKEN startline="82" startpos="4">}</TOKEN>
                 </compound_statement>
               </statement>
             </iteration_statement>
           </statement>
-        </statement_list>
+        </block_item>
         <TOKEN startline="83" startpos="0">}</TOKEN>
       </compound_statement>
     </function_definition>
@@ -4799,7 +4871,7 @@
       </declarator>
       <compound_statement>
         <TOKEN startline="85" startpos="20">{</TOKEN>
-        <statement_list>
+        <block_item>
           <statement>
             <selection_statement>
               <TOKEN startline="86" startpos="4">if</TOKEN>
@@ -4920,6 +4992,8 @@
               </statement>
             </selection_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <selection_statement>
               <TOKEN startline="87" startpos="4">if</TOKEN>
@@ -5039,6 +5113,8 @@
               </statement>
             </selection_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <iteration_statement>
               <TOKEN startline="89" startpos="4">while</TOKEN>
@@ -5204,6 +5280,8 @@
               </statement>
             </iteration_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <jump_statement>
               <TOKEN startline="90" startpos="4">return</TOKEN>
@@ -5245,7 +5323,7 @@
               <TOKEN startline="90" startpos="12">;</TOKEN>
             </jump_statement>
           </statement>
-        </statement_list>
+        </block_item>
         <TOKEN startline="91" startpos="0">}</TOKEN>
       </compound_statement>
     </function_definition>
@@ -5284,32 +5362,34 @@
       </declarator>
       <compound_statement>
         <TOKEN startline="93" startpos="18">{</TOKEN>
-        <declaration>
-          <declaration_specifiers>
-            <type_specifier>
-              <TOKEN startline="94" startpos="4">int</TOKEN>
-            </type_specifier>
-          </declaration_specifiers>
-          <init_declarator_list>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="94" startpos="8">s</IDENTIFIER>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-            <TOKEN startline="94" startpos="9">,</TOKEN>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="94" startpos="10">i</IDENTIFIER>
-                </direct_declarator>
-              </declarator>
-            </init_declarator>
-          </init_declarator_list>
-          <TOKEN startline="94" startpos="11">;</TOKEN>
-        </declaration>
-        <statement_list>
+        <block_item>
+          <declaration>
+            <declaration_specifiers>
+              <type_specifier>
+                <TOKEN startline="94" startpos="4">int</TOKEN>
+              </type_specifier>
+            </declaration_specifiers>
+            <init_declarator_list>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="94" startpos="8">s</IDENTIFIER>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+              <TOKEN startline="94" startpos="9">,</TOKEN>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="94" startpos="10">i</IDENTIFIER>
+                  </direct_declarator>
+                </declarator>
+              </init_declarator>
+            </init_declarator_list>
+            <TOKEN startline="94" startpos="11">;</TOKEN>
+          </declaration>
+        </block_item>
+        <block_item>
           <statement>
             <selection_statement>
               <TOKEN startline="95" startpos="4">if</TOKEN>
@@ -5433,6 +5513,8 @@
               </statement>
             </selection_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <expression_statement>
               <expression>
@@ -5535,6 +5617,8 @@
               <TOKEN startline="96" startpos="21">;</TOKEN>
             </expression_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <expression_statement>
               <expression>
@@ -5593,6 +5677,8 @@
               <TOKEN startline="97" startpos="9">;</TOKEN>
             </expression_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <iteration_statement>
               <TOKEN startline="98" startpos="4">while</TOKEN>
@@ -5652,7 +5738,7 @@
               <statement>
                 <compound_statement>
                   <TOKEN startline="98" startpos="17">{</TOKEN>
-                  <statement_list>
+                  <block_item>
                     <statement>
                       <selection_statement>
                         <TOKEN startline="99" startpos="8">if</TOKEN>
@@ -5768,6 +5854,8 @@
                         </statement>
                       </selection_statement>
                     </statement>
+                  </block_item>
+                  <block_item>
                     <statement>
                       <expression_statement>
                         <expression>
@@ -5838,12 +5926,14 @@
                         <TOKEN startline="100" startpos="15">;</TOKEN>
                       </expression_statement>
                     </statement>
-                  </statement_list>
+                  </block_item>
                   <TOKEN startline="101" startpos="4">}</TOKEN>
                 </compound_statement>
               </statement>
             </iteration_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <jump_statement>
               <TOKEN startline="102" startpos="4">return</TOKEN>
@@ -5885,7 +5975,7 @@
               <TOKEN startline="102" startpos="12">;</TOKEN>
             </jump_statement>
           </statement>
-        </statement_list>
+        </block_item>
         <TOKEN startline="103" startpos="0">}</TOKEN>
       </compound_statement>
     </function_definition>

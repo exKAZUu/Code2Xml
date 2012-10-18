@@ -33,7 +33,7 @@
       </declarator>
       <compound_statement>
         <TOKEN startline="1" startpos="20">{</TOKEN>
-        <statement_list>
+        <block_item>
           <statement>
             <selection_statement>
               <TOKEN startline="2" startpos="1">if</TOKEN>
@@ -103,7 +103,7 @@
               </statement>
             </selection_statement>
           </statement>
-        </statement_list>
+        </block_item>
         <TOKEN startline="3" startpos="0">}</TOKEN>
       </compound_statement>
     </function_definition>

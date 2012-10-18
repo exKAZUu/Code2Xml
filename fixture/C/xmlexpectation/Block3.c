@@ -17,64 +17,66 @@
       </declarator>
       <compound_statement>
         <TOKEN startline="3" startpos="11">{</TOKEN>
-        <declaration>
-          <declaration_specifiers>
-            <type_specifier>
-              <TOKEN startline="4" startpos="1">int</TOKEN>
-            </type_specifier>
-          </declaration_specifiers>
-          <init_declarator_list>
-            <init_declarator>
-              <declarator>
-                <direct_declarator>
-                  <IDENTIFIER startline="4" startpos="5">i</IDENTIFIER>
-                </direct_declarator>
-              </declarator>
-              <TOKEN startline="4" startpos="7">=</TOKEN>
-              <initializer>
-                <assignment_expression>
-                  <conditional_expression>
-                    <logical_or_expression>
-                      <logical_and_expression>
-                        <inclusive_or_expression>
-                          <exclusive_or_expression>
-                            <and_expression>
-                              <equality_expression>
-                                <relational_expression>
-                                  <shift_expression>
-                                    <additive_expression>
-                                      <multiplicative_expression>
-                                        <cast_expression>
-                                          <unary_expression>
-                                            <postfix_expression>
-                                              <primary_expression>
-                                                <constant>
-                                                  <decimal_literal>
-                                                    <DECIMAL_LITERAL startline="4" startpos="9">0</DECIMAL_LITERAL>
-                                                  </decimal_literal>
-                                                </constant>
-                                              </primary_expression>
-                                            </postfix_expression>
-                                          </unary_expression>
-                                        </cast_expression>
-                                      </multiplicative_expression>
-                                    </additive_expression>
-                                  </shift_expression>
-                                </relational_expression>
-                              </equality_expression>
-                            </and_expression>
-                          </exclusive_or_expression>
-                        </inclusive_or_expression>
-                      </logical_and_expression>
-                    </logical_or_expression>
-                  </conditional_expression>
-                </assignment_expression>
-              </initializer>
-            </init_declarator>
-          </init_declarator_list>
-          <TOKEN startline="4" startpos="10">;</TOKEN>
-        </declaration>
-        <statement_list>
+        <block_item>
+          <declaration>
+            <declaration_specifiers>
+              <type_specifier>
+                <TOKEN startline="4" startpos="1">int</TOKEN>
+              </type_specifier>
+            </declaration_specifiers>
+            <init_declarator_list>
+              <init_declarator>
+                <declarator>
+                  <direct_declarator>
+                    <IDENTIFIER startline="4" startpos="5">i</IDENTIFIER>
+                  </direct_declarator>
+                </declarator>
+                <TOKEN startline="4" startpos="7">=</TOKEN>
+                <initializer>
+                  <assignment_expression>
+                    <conditional_expression>
+                      <logical_or_expression>
+                        <logical_and_expression>
+                          <inclusive_or_expression>
+                            <exclusive_or_expression>
+                              <and_expression>
+                                <equality_expression>
+                                  <relational_expression>
+                                    <shift_expression>
+                                      <additive_expression>
+                                        <multiplicative_expression>
+                                          <cast_expression>
+                                            <unary_expression>
+                                              <postfix_expression>
+                                                <primary_expression>
+                                                  <constant>
+                                                    <decimal_literal>
+                                                      <DECIMAL_LITERAL startline="4" startpos="9">0</DECIMAL_LITERAL>
+                                                    </decimal_literal>
+                                                  </constant>
+                                                </primary_expression>
+                                              </postfix_expression>
+                                            </unary_expression>
+                                          </cast_expression>
+                                        </multiplicative_expression>
+                                      </additive_expression>
+                                    </shift_expression>
+                                  </relational_expression>
+                                </equality_expression>
+                              </and_expression>
+                            </exclusive_or_expression>
+                          </inclusive_or_expression>
+                        </logical_and_expression>
+                      </logical_or_expression>
+                    </conditional_expression>
+                  </assignment_expression>
+                </initializer>
+              </init_declarator>
+            </init_declarator_list>
+            <TOKEN startline="4" startpos="10">;</TOKEN>
+          </declaration>
+        </block_item>
+        <block_item>
           <statement>
             <selection_statement>
               <TOKEN startline="6" startpos="1">if</TOKEN>
@@ -144,6 +146,8 @@
               </statement>
             </selection_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <selection_statement>
               <TOKEN startline="8" startpos="1">switch</TOKEN>
@@ -191,6 +195,8 @@
               </statement>
             </selection_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <iteration_statement>
               <TOKEN startline="10" startpos="1">while</TOKEN>
@@ -260,6 +266,8 @@
               </statement>
             </iteration_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <iteration_statement>
               <TOKEN startline="12" startpos="1">do</TOKEN>
@@ -331,6 +339,8 @@
               <TOKEN startline="12" startpos="20">;</TOKEN>
             </iteration_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <iteration_statement>
               <TOKEN startline="14" startpos="1">for</TOKEN>
@@ -493,6 +503,8 @@
               </statement>
             </iteration_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <selection_statement>
               <TOKEN startline="16" startpos="1">if</TOKEN>
@@ -563,6 +575,8 @@
               </statement>
             </selection_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <selection_statement>
               <TOKEN startline="18" startpos="1">switch</TOKEN>
@@ -611,6 +625,8 @@
               </statement>
             </selection_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <iteration_statement>
               <TOKEN startline="20" startpos="1">while</TOKEN>
@@ -681,6 +697,8 @@
               </statement>
             </iteration_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <iteration_statement>
               <TOKEN startline="22" startpos="1">do</TOKEN>
@@ -753,6 +771,8 @@
               <TOKEN startline="22" startpos="21">;</TOKEN>
             </iteration_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <iteration_statement>
               <TOKEN startline="24" startpos="1">for</TOKEN>
@@ -916,6 +936,8 @@
               </statement>
             </iteration_statement>
           </statement>
+        </block_item>
+        <block_item>
           <statement>
             <jump_statement>
               <TOKEN startline="26" startpos="1">return</TOKEN>
@@ -961,7 +983,7 @@
               <TOKEN startline="26" startpos="9">;</TOKEN>
             </jump_statement>
           </statement>
-        </statement_list>
+        </block_item>
         <TOKEN startline="27" startpos="0">}</TOKEN>
       </compound_statement>
     </function_definition>
