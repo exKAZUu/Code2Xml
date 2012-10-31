@@ -95,10 +95,6 @@
       <Project>{D416DB7C-F4F0-4F71-8332-673076B7EB2B}</Project>
       <Name>Code2Xml.Languages.Python3</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Code2Xml.Languages.Ruby18\Code2Xml.Languages.Ruby18.csproj">
-      <Project>{3DFDAB7B-6602-46D5-BDFB-4E647D21B46A}</Project>
-      <Name>Code2Xml.Languages.Ruby18</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

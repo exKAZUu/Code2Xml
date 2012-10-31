@@ -35,13 +35,13 @@ namespace Code2Xml.Languages.Tests {
 				var names = new[] {
 						"C",
 						"CSharp",
-						"IronRuby",
+						//"IronRuby",
 						"Java",
 						"JavaScript",
 						"Lua",
 						"Python2",
 						"Python3",
-						"Ruby18",
+						//"Ruby18",
 						//"Ruby19",
 				};
 				var tt = names
