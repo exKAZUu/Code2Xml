@@ -21,6 +21,9 @@ using System.Diagnostics.Contracts;
 using System.IO;
 
 namespace Code2Xml.Core.Position {
+	/// <summary>
+	/// A data class which represents a position of a element in sour code with start/end  line/position(column).
+	/// </summary>
 	[Serializable]
 	public struct CodePosition : IEquatable<CodePosition> {
 		public int EndLine;
@@ -36,14 +39,25 @@ namespace Code2Xml.Core.Position {
 			EndPosition = endPosition;
 		}
 
+		/// <summary>
+		/// Returns the string representation of the line numbers with "StartLine - EndLine"
+		/// </summary>
 		public string LineString {
 			get { return StartLine + " - " + EndLine; }
 		}
 
+		/// <summary>
+		/// Returns the string representation of the position (column) numbers with "StartPosition - EndPosition"
+		/// </summary>
 		public string PositionString {
 			get { return StartPosition + " - " + EndPosition; }
 		}
 
+		/// <summary>
+		/// Returns the smart string representation of the line numbers
+		/// with "StartLine - EndLine" when StartLine != EndLine
+		/// with just "StartLine" when StartLine == EndLine
+		/// </summary>
 		public string SmartLineString {
 			get {
 				return StartLine == EndLine
@@ -51,6 +65,11 @@ namespace Code2Xml.Core.Position {
 			}
 		}
 
+		/// <summary>
+		/// Returns the smart string representation of the position (column) numbers
+		/// with "StartPosition - EndPosition" when StartPosition != EndPosition
+		/// with just "StartPosition" when StartPosition == EndPosition
+		/// </summary>
 		public string SmartPositionString {
 			get {
 				return StartPosition == EndPosition
