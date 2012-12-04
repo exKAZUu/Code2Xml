@@ -891,6 +891,7 @@ trystatement
         |   catches
         |   'finally' block
         )
+    |   tryWithResourcesStatement
      ;
 
 catches 
@@ -905,9 +906,50 @@ catchClause
     ;
 
 formalParameter 
-    :   variableModifiers type IDENTIFIER
+    :   variableModifiers catchType IDENTIFIER
         ('[' ']'
         )*
+    |   catchType IDENTIFIER
+        ('[' ']'
+        )*
+    ;
+
+catchType
+    :   type
+        ('|' type
+        )*
+    ;
+
+tryWithResourcesStatement
+    :    'try' resourceSpecification
+         (   block catches 'finally' block
+         |   block 'filly' block
+         |   block catches
+         |   block
+         )
+    ;
+
+resourceSpecification
+    :    '(' resources
+          (  ';' ')'
+          |   ')'
+          )
+    ;
+
+resources
+    :    resource
+    |    resource 
+         (   ';' resource
+         )*
+    ;
+
+resource
+    :    (   variableModifiers type IDENTIFIER
+         |   type IDENTIFIER
+         )
+         (   '[' ']'
+         )*
+         '=' expression 
     ;
 
 forstatement 
