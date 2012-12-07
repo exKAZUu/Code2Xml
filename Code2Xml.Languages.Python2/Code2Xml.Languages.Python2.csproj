@@ -15,7 +15,6 @@
     <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
-    <MSBuildCommunityTasksPath>$(SolutionDir)\Build</MSBuildCommunityTasksPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -86,10 +85,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Paraiba">
-      <HintPath>..\packages\Paraiba.1.0.3.58\lib\net40\Paraiba.dll</HintPath>
+      <HintPath>..\packages\Paraiba.1.0.5.66\lib\net40\Paraiba.dll</HintPath>
     </Reference>
     <Reference Include="Paraiba.Experiment">
-      <HintPath>..\packages\Paraiba.Experiment.1.0.2.34\lib\net40\Paraiba.Experiment.dll</HintPath>
+      <HintPath>..\packages\Paraiba.Experiment.1.0.2.39\lib\net40\Paraiba.Experiment.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />

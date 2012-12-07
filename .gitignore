@@ -28,12 +28,13 @@ _ReSharper*/
 *.sdf
 ipch/
 target
+*~
 *.swp
 
-.nuget
 *.docstates
 *.dotCover
 nuspec
+packages
 
 output
 download

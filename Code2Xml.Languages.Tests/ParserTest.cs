@@ -24,6 +24,8 @@ using Code2Xml.Core.Plugins;
 using Code2Xml.Core.Tests;
 using Code2Xml.Core.XmlToCodes;
 using NUnit.Framework;
+using Paraiba.Core;
+using Paraiba.IO;
 using Paraiba.Text;
 using Paraiba.Xml;
 
@@ -46,24 +48,15 @@ namespace Code2Xml.Languages.Tests {
 				};
 				var tt = names
 						.SelectMany(
-								name =>
-								Directory.EnumerateFiles(
+								name => Directory.EnumerateFiles(
 										Fixture.GetInputPath(name), "*", SearchOption.AllDirectories)
-										.Select(
-												path =>
-												new { Name = name, Path = path }))
+										.Select(path => new { Name = name, Path = path }))
 						.Select(
-								p =>
-								new TestCaseData(
-										p.Name, p.Path,
-										PluginManager.CodeToXmls.FirstOrDefault(
-												o =>
-												o.GetType().Name
-												== p.Name + "CodeToXml"),
+								p => new TestCaseData(
+										p.Name, p.Path, PluginManager.CodeToXmls.FirstOrDefault(
+												o => o.GetType().Name == p.Name + "CodeToXml"),
 										PluginManager.XmlToCodes.FirstOrDefault(
-												o =>
-												o.GetType().Name
-												== p.Name + "XmlToCode")))
+												o => o.GetType().Name == p.Name + "XmlToCode")))
 						.Where(t => t.Arguments[2] != null)
 						.ToList();
 				return tt;
@@ -71,35 +64,31 @@ namespace Code2Xml.Languages.Tests {
 		}
 
 		[Test, TestCaseSource("TestCases")]
-		public void Parse(
-				string lang, string path, CodeToXml codeToXml,
-				XmlToCode xmlToCode) {
-			var expPath = Fixture.GetXmlExpectationPath(
-					lang, Path.GetFileName(path));
-			var r = codeToXml.GenerateFromFile(path, true);
+		public void Parse(string lang, string path, CodeToXml codeToXml, XmlToCode xmlToCode) {
+			var relativePath = XPath.GetRelativePath(path, Fixture.GetInputPath(lang));
+			var expPath = Fixture.GetXmlExpectationPath(lang, relativePath);
+			var r = codeToXml.GenerateFromFile(path, true)
+				.ToString()
+				.ReplaceNewlinesForWindows();
 			using (var reader = new StreamReader(expPath, XEncoding.SJIS)) {
-				Assert.That(r.ToString(), Is.EqualTo(reader.ReadToEnd()));
+				Assert.That(r, Is.EqualTo(reader.ReadToEnd().ReplaceNewlinesForWindows()));
 			}
 		}
 
 		[Test, TestCaseSource("TestCases")]
-		public void WriteConvertedXml(
-				string lang, string path, CodeToXml codeToXml,
-				XmlToCode xmlToCode) {
-			var outPath = Fixture.GetOutputFilePath(
-					lang, Path.GetFileName(path));
+		public void WriteConvertedXml(string lang, string path, CodeToXml codeToXml, XmlToCode xmlToCode) {
+			var relativePath = XPath.GetRelativePath(path, Fixture.GetInputPath(lang));
+			var outPath = Fixture.GetOutputFilePath(lang, relativePath);
+			Directory.CreateDirectory(Path.GetDirectoryName(outPath));
 			var r = codeToXml.GenerateFromFile(path, true);
-			using (var writer = new StreamWriter(outPath, false, XEncoding.SJIS)
-					) {
+			using (var writer = new StreamWriter(outPath, false, XEncoding.SJIS) ) {
 				writer.Write(r.ToString());
 			}
 		}
 
 		[Test, TestCaseSource("TestCases")]
 		public void InterConvertCodeAndXml(
-				string lang, string path,
-				CodeToXml codeToXml,
-				XmlToCode xmlToCode) {
+				string lang, string path, CodeToXml codeToXml, XmlToCode xmlToCode) {
 			var r1 = codeToXml.GenerateFromFile(path, true);
 			var c1 = xmlToCode.Generate(r1);
 			var r2 = codeToXml.Generate(c1, true);

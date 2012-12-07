@@ -1,0 +1,903 @@
+<compilationUnit>
+  <packageDeclaration>
+    <PACKAGE startline="1" startpos="0">package</PACKAGE>
+    <qualifiedName>
+      <IDENTIFIER startline="1" startpos="8">stringSwitch</IDENTIFIER>
+    </qualifiedName>
+    <SEMI startline="1" startpos="20">;</SEMI>
+  </packageDeclaration>
+  <typeDeclaration>
+    <classOrInterfaceDeclaration>
+      <classDeclaration>
+        <normalClassDeclaration>
+          <modifiers>
+            <PUBLIC startline="3" startpos="0">public</PUBLIC>
+          </modifiers>
+          <CLASS startline="3" startpos="7">class</CLASS>
+          <IDENTIFIER startline="3" startpos="13">StringInSwitchStatements</IDENTIFIER>
+          <classBody>
+            <LBRACE startline="3" startpos="38">{</LBRACE>
+            <classBodyDeclaration>
+              <memberDecl>
+                <methodDeclaration>
+                  <modifiers>
+                    <PUBLIC startline="4" startpos="3">public</PUBLIC>
+                  </modifiers>
+                  <type>
+                    <classOrInterfaceType>
+                      <IDENTIFIER startline="4" startpos="10">String</IDENTIFIER>
+                    </classOrInterfaceType>
+                  </type>
+                  <IDENTIFIER startline="4" startpos="17">getTypeOfDayWithSwitchStatement</IDENTIFIER>
+                  <formalParameters>
+                    <LPAREN startline="4" startpos="48">(</LPAREN>
+                    <formalParameterDecls>
+                      <normalParameterDecl>
+                        <variableModifiers />
+                        <type>
+                          <classOrInterfaceType>
+                            <IDENTIFIER startline="4" startpos="49">String</IDENTIFIER>
+                          </classOrInterfaceType>
+                        </type>
+                        <IDENTIFIER startline="4" startpos="56">dayOfWeekArg</IDENTIFIER>
+                      </normalParameterDecl>
+                    </formalParameterDecls>
+                    <RPAREN startline="4" startpos="68">)</RPAREN>
+                  </formalParameters>
+                  <block>
+                    <LBRACE startline="4" startpos="70">{</LBRACE>
+                    <blockStatement>
+                      <localVariableDeclarationStatement>
+                        <localVariableDeclaration>
+                          <variableModifiers />
+                          <type>
+                            <classOrInterfaceType>
+                              <IDENTIFIER startline="5" startpos="8">String</IDENTIFIER>
+                            </classOrInterfaceType>
+                          </type>
+                          <variableDeclarator>
+                            <IDENTIFIER startline="5" startpos="15">typeOfDay</IDENTIFIER>
+                          </variableDeclarator>
+                        </localVariableDeclaration>
+                        <SEMI startline="5" startpos="24">;</SEMI>
+                      </localVariableDeclarationStatement>
+                    </blockStatement>
+                    <blockStatement>
+                      <statement>
+                        <SWITCH startline="6" startpos="8">switch</SWITCH>
+                        <parExpression>
+                          <LPAREN startline="6" startpos="15">(</LPAREN>
+                          <expression>
+                            <conditionalExpression>
+                              <conditionalOrExpression>
+                                <conditionalAndExpression>
+                                  <inclusiveOrExpression>
+                                    <exclusiveOrExpression>
+                                      <andExpression>
+                                        <equalityExpression>
+                                          <instanceOfExpression>
+                                            <relationalExpression>
+                                              <shiftExpression>
+                                                <additiveExpression>
+                                                  <multiplicativeExpression>
+                                                    <unaryExpression>
+                                                      <unaryExpressionNotPlusMinus>
+                                                        <primary>
+                                                          <IDENTIFIER startline="6" startpos="16">dayOfWeekArg</IDENTIFIER>
+                                                        </primary>
+                                                      </unaryExpressionNotPlusMinus>
+                                                    </unaryExpression>
+                                                  </multiplicativeExpression>
+                                                </additiveExpression>
+                                              </shiftExpression>
+                                            </relationalExpression>
+                                          </instanceOfExpression>
+                                        </equalityExpression>
+                                      </andExpression>
+                                    </exclusiveOrExpression>
+                                  </inclusiveOrExpression>
+                                </conditionalAndExpression>
+                              </conditionalOrExpression>
+                            </conditionalExpression>
+                          </expression>
+                          <RPAREN startline="6" startpos="28">)</RPAREN>
+                        </parExpression>
+                        <LBRACE startline="6" startpos="30">{</LBRACE>
+                        <switchBlockStatementGroups>
+                          <switchBlockStatementGroup>
+                            <switchLabel>
+                              <CASE startline="7" startpos="12">case</CASE>
+                              <expression>
+                                <conditionalExpression>
+                                  <conditionalOrExpression>
+                                    <conditionalAndExpression>
+                                      <inclusiveOrExpression>
+                                        <exclusiveOrExpression>
+                                          <andExpression>
+                                            <equalityExpression>
+                                              <instanceOfExpression>
+                                                <relationalExpression>
+                                                  <shiftExpression>
+                                                    <additiveExpression>
+                                                      <multiplicativeExpression>
+                                                        <unaryExpression>
+                                                          <unaryExpressionNotPlusMinus>
+                                                            <primary>
+                                                              <literal>
+                                                                <stringLiteral>
+                                                                  <STRINGLITERAL startline="7" startpos="17">"Monday"</STRINGLITERAL>
+                                                                </stringLiteral>
+                                                              </literal>
+                                                            </primary>
+                                                          </unaryExpressionNotPlusMinus>
+                                                        </unaryExpression>
+                                                      </multiplicativeExpression>
+                                                    </additiveExpression>
+                                                  </shiftExpression>
+                                                </relationalExpression>
+                                              </instanceOfExpression>
+                                            </equalityExpression>
+                                          </andExpression>
+                                        </exclusiveOrExpression>
+                                      </inclusiveOrExpression>
+                                    </conditionalAndExpression>
+                                  </conditionalOrExpression>
+                                </conditionalExpression>
+                              </expression>
+                              <COLON startline="7" startpos="25">:</COLON>
+                            </switchLabel>
+                            <blockStatement>
+                              <statement>
+                                <expression>
+                                  <conditionalExpression>
+                                    <conditionalOrExpression>
+                                      <conditionalAndExpression>
+                                        <inclusiveOrExpression>
+                                          <exclusiveOrExpression>
+                                            <andExpression>
+                                              <equalityExpression>
+                                                <instanceOfExpression>
+                                                  <relationalExpression>
+                                                    <shiftExpression>
+                                                      <additiveExpression>
+                                                        <multiplicativeExpression>
+                                                          <unaryExpression>
+                                                            <unaryExpressionNotPlusMinus>
+                                                              <primary>
+                                                                <IDENTIFIER startline="8" startpos="16">typeOfDay</IDENTIFIER>
+                                                              </primary>
+                                                            </unaryExpressionNotPlusMinus>
+                                                          </unaryExpression>
+                                                        </multiplicativeExpression>
+                                                      </additiveExpression>
+                                                    </shiftExpression>
+                                                  </relationalExpression>
+                                                </instanceOfExpression>
+                                              </equalityExpression>
+                                            </andExpression>
+                                          </exclusiveOrExpression>
+                                        </inclusiveOrExpression>
+                                      </conditionalAndExpression>
+                                    </conditionalOrExpression>
+                                  </conditionalExpression>
+                                  <assignmentOperator>
+                                    <EQ startline="8" startpos="26">=</EQ>
+                                  </assignmentOperator>
+                                  <expression>
+                                    <conditionalExpression>
+                                      <conditionalOrExpression>
+                                        <conditionalAndExpression>
+                                          <inclusiveOrExpression>
+                                            <exclusiveOrExpression>
+                                              <andExpression>
+                                                <equalityExpression>
+                                                  <instanceOfExpression>
+                                                    <relationalExpression>
+                                                      <shiftExpression>
+                                                        <additiveExpression>
+                                                          <multiplicativeExpression>
+                                                            <unaryExpression>
+                                                              <unaryExpressionNotPlusMinus>
+                                                                <primary>
+                                                                  <literal>
+                                                                    <stringLiteral>
+                                                                      <STRINGLITERAL startline="8" startpos="28">"Start of work week"</STRINGLITERAL>
+                                                                    </stringLiteral>
+                                                                  </literal>
+                                                                </primary>
+                                                              </unaryExpressionNotPlusMinus>
+                                                            </unaryExpression>
+                                                          </multiplicativeExpression>
+                                                        </additiveExpression>
+                                                      </shiftExpression>
+                                                    </relationalExpression>
+                                                  </instanceOfExpression>
+                                                </equalityExpression>
+                                              </andExpression>
+                                            </exclusiveOrExpression>
+                                          </inclusiveOrExpression>
+                                        </conditionalAndExpression>
+                                      </conditionalOrExpression>
+                                    </conditionalExpression>
+                                  </expression>
+                                </expression>
+                                <SEMI startline="8" startpos="48">;</SEMI>
+                              </statement>
+                            </blockStatement>
+                            <blockStatement>
+                              <statement>
+                                <BREAK startline="9" startpos="16">break</BREAK>
+                                <SEMI startline="9" startpos="21">;</SEMI>
+                              </statement>
+                            </blockStatement>
+                          </switchBlockStatementGroup>
+                          <switchBlockStatementGroup>
+                            <switchLabel>
+                              <CASE startline="10" startpos="12">case</CASE>
+                              <expression>
+                                <conditionalExpression>
+                                  <conditionalOrExpression>
+                                    <conditionalAndExpression>
+                                      <inclusiveOrExpression>
+                                        <exclusiveOrExpression>
+                                          <andExpression>
+                                            <equalityExpression>
+                                              <instanceOfExpression>
+                                                <relationalExpression>
+                                                  <shiftExpression>
+                                                    <additiveExpression>
+                                                      <multiplicativeExpression>
+                                                        <unaryExpression>
+                                                          <unaryExpressionNotPlusMinus>
+                                                            <primary>
+                                                              <literal>
+                                                                <stringLiteral>
+                                                                  <STRINGLITERAL startline="10" startpos="17">"Tuesday"</STRINGLITERAL>
+                                                                </stringLiteral>
+                                                              </literal>
+                                                            </primary>
+                                                          </unaryExpressionNotPlusMinus>
+                                                        </unaryExpression>
+                                                      </multiplicativeExpression>
+                                                    </additiveExpression>
+                                                  </shiftExpression>
+                                                </relationalExpression>
+                                              </instanceOfExpression>
+                                            </equalityExpression>
+                                          </andExpression>
+                                        </exclusiveOrExpression>
+                                      </inclusiveOrExpression>
+                                    </conditionalAndExpression>
+                                  </conditionalOrExpression>
+                                </conditionalExpression>
+                              </expression>
+                              <COLON startline="10" startpos="26">:</COLON>
+                            </switchLabel>
+                          </switchBlockStatementGroup>
+                          <switchBlockStatementGroup>
+                            <switchLabel>
+                              <CASE startline="11" startpos="12">case</CASE>
+                              <expression>
+                                <conditionalExpression>
+                                  <conditionalOrExpression>
+                                    <conditionalAndExpression>
+                                      <inclusiveOrExpression>
+                                        <exclusiveOrExpression>
+                                          <andExpression>
+                                            <equalityExpression>
+                                              <instanceOfExpression>
+                                                <relationalExpression>
+                                                  <shiftExpression>
+                                                    <additiveExpression>
+                                                      <multiplicativeExpression>
+                                                        <unaryExpression>
+                                                          <unaryExpressionNotPlusMinus>
+                                                            <primary>
+                                                              <literal>
+                                                                <stringLiteral>
+                                                                  <STRINGLITERAL startline="11" startpos="17">"Wednesday"</STRINGLITERAL>
+                                                                </stringLiteral>
+                                                              </literal>
+                                                            </primary>
+                                                          </unaryExpressionNotPlusMinus>
+                                                        </unaryExpression>
+                                                      </multiplicativeExpression>
+                                                    </additiveExpression>
+                                                  </shiftExpression>
+                                                </relationalExpression>
+                                              </instanceOfExpression>
+                                            </equalityExpression>
+                                          </andExpression>
+                                        </exclusiveOrExpression>
+                                      </inclusiveOrExpression>
+                                    </conditionalAndExpression>
+                                  </conditionalOrExpression>
+                                </conditionalExpression>
+                              </expression>
+                              <COLON startline="11" startpos="28">:</COLON>
+                            </switchLabel>
+                          </switchBlockStatementGroup>
+                          <switchBlockStatementGroup>
+                            <switchLabel>
+                              <CASE startline="12" startpos="12">case</CASE>
+                              <expression>
+                                <conditionalExpression>
+                                  <conditionalOrExpression>
+                                    <conditionalAndExpression>
+                                      <inclusiveOrExpression>
+                                        <exclusiveOrExpression>
+                                          <andExpression>
+                                            <equalityExpression>
+                                              <instanceOfExpression>
+                                                <relationalExpression>
+                                                  <shiftExpression>
+                                                    <additiveExpression>
+                                                      <multiplicativeExpression>
+                                                        <unaryExpression>
+                                                          <unaryExpressionNotPlusMinus>
+                                                            <primary>
+                                                              <literal>
+                                                                <stringLiteral>
+                                                                  <STRINGLITERAL startline="12" startpos="17">"Thursday"</STRINGLITERAL>
+                                                                </stringLiteral>
+                                                              </literal>
+                                                            </primary>
+                                                          </unaryExpressionNotPlusMinus>
+                                                        </unaryExpression>
+                                                      </multiplicativeExpression>
+                                                    </additiveExpression>
+                                                  </shiftExpression>
+                                                </relationalExpression>
+                                              </instanceOfExpression>
+                                            </equalityExpression>
+                                          </andExpression>
+                                        </exclusiveOrExpression>
+                                      </inclusiveOrExpression>
+                                    </conditionalAndExpression>
+                                  </conditionalOrExpression>
+                                </conditionalExpression>
+                              </expression>
+                              <COLON startline="12" startpos="27">:</COLON>
+                            </switchLabel>
+                            <blockStatement>
+                              <statement>
+                                <expression>
+                                  <conditionalExpression>
+                                    <conditionalOrExpression>
+                                      <conditionalAndExpression>
+                                        <inclusiveOrExpression>
+                                          <exclusiveOrExpression>
+                                            <andExpression>
+                                              <equalityExpression>
+                                                <instanceOfExpression>
+                                                  <relationalExpression>
+                                                    <shiftExpression>
+                                                      <additiveExpression>
+                                                        <multiplicativeExpression>
+                                                          <unaryExpression>
+                                                            <unaryExpressionNotPlusMinus>
+                                                              <primary>
+                                                                <IDENTIFIER startline="13" startpos="16">typeOfDay</IDENTIFIER>
+                                                              </primary>
+                                                            </unaryExpressionNotPlusMinus>
+                                                          </unaryExpression>
+                                                        </multiplicativeExpression>
+                                                      </additiveExpression>
+                                                    </shiftExpression>
+                                                  </relationalExpression>
+                                                </instanceOfExpression>
+                                              </equalityExpression>
+                                            </andExpression>
+                                          </exclusiveOrExpression>
+                                        </inclusiveOrExpression>
+                                      </conditionalAndExpression>
+                                    </conditionalOrExpression>
+                                  </conditionalExpression>
+                                  <assignmentOperator>
+                                    <EQ startline="13" startpos="26">=</EQ>
+                                  </assignmentOperator>
+                                  <expression>
+                                    <conditionalExpression>
+                                      <conditionalOrExpression>
+                                        <conditionalAndExpression>
+                                          <inclusiveOrExpression>
+                                            <exclusiveOrExpression>
+                                              <andExpression>
+                                                <equalityExpression>
+                                                  <instanceOfExpression>
+                                                    <relationalExpression>
+                                                      <shiftExpression>
+                                                        <additiveExpression>
+                                                          <multiplicativeExpression>
+                                                            <unaryExpression>
+                                                              <unaryExpressionNotPlusMinus>
+                                                                <primary>
+                                                                  <literal>
+                                                                    <stringLiteral>
+                                                                      <STRINGLITERAL startline="13" startpos="28">"Midweek"</STRINGLITERAL>
+                                                                    </stringLiteral>
+                                                                  </literal>
+                                                                </primary>
+                                                              </unaryExpressionNotPlusMinus>
+                                                            </unaryExpression>
+                                                          </multiplicativeExpression>
+                                                        </additiveExpression>
+                                                      </shiftExpression>
+                                                    </relationalExpression>
+                                                  </instanceOfExpression>
+                                                </equalityExpression>
+                                              </andExpression>
+                                            </exclusiveOrExpression>
+                                          </inclusiveOrExpression>
+                                        </conditionalAndExpression>
+                                      </conditionalOrExpression>
+                                    </conditionalExpression>
+                                  </expression>
+                                </expression>
+                                <SEMI startline="13" startpos="37">;</SEMI>
+                              </statement>
+                            </blockStatement>
+                            <blockStatement>
+                              <statement>
+                                <BREAK startline="14" startpos="16">break</BREAK>
+                                <SEMI startline="14" startpos="21">;</SEMI>
+                              </statement>
+                            </blockStatement>
+                          </switchBlockStatementGroup>
+                          <switchBlockStatementGroup>
+                            <switchLabel>
+                              <CASE startline="15" startpos="12">case</CASE>
+                              <expression>
+                                <conditionalExpression>
+                                  <conditionalOrExpression>
+                                    <conditionalAndExpression>
+                                      <inclusiveOrExpression>
+                                        <exclusiveOrExpression>
+                                          <andExpression>
+                                            <equalityExpression>
+                                              <instanceOfExpression>
+                                                <relationalExpression>
+                                                  <shiftExpression>
+                                                    <additiveExpression>
+                                                      <multiplicativeExpression>
+                                                        <unaryExpression>
+                                                          <unaryExpressionNotPlusMinus>
+                                                            <primary>
+                                                              <literal>
+                                                                <stringLiteral>
+                                                                  <STRINGLITERAL startline="15" startpos="17">"Friday"</STRINGLITERAL>
+                                                                </stringLiteral>
+                                                              </literal>
+                                                            </primary>
+                                                          </unaryExpressionNotPlusMinus>
+                                                        </unaryExpression>
+                                                      </multiplicativeExpression>
+                                                    </additiveExpression>
+                                                  </shiftExpression>
+                                                </relationalExpression>
+                                              </instanceOfExpression>
+                                            </equalityExpression>
+                                          </andExpression>
+                                        </exclusiveOrExpression>
+                                      </inclusiveOrExpression>
+                                    </conditionalAndExpression>
+                                  </conditionalOrExpression>
+                                </conditionalExpression>
+                              </expression>
+                              <COLON startline="15" startpos="25">:</COLON>
+                            </switchLabel>
+                            <blockStatement>
+                              <statement>
+                                <expression>
+                                  <conditionalExpression>
+                                    <conditionalOrExpression>
+                                      <conditionalAndExpression>
+                                        <inclusiveOrExpression>
+                                          <exclusiveOrExpression>
+                                            <andExpression>
+                                              <equalityExpression>
+                                                <instanceOfExpression>
+                                                  <relationalExpression>
+                                                    <shiftExpression>
+                                                      <additiveExpression>
+                                                        <multiplicativeExpression>
+                                                          <unaryExpression>
+                                                            <unaryExpressionNotPlusMinus>
+                                                              <primary>
+                                                                <IDENTIFIER startline="16" startpos="16">typeOfDay</IDENTIFIER>
+                                                              </primary>
+                                                            </unaryExpressionNotPlusMinus>
+                                                          </unaryExpression>
+                                                        </multiplicativeExpression>
+                                                      </additiveExpression>
+                                                    </shiftExpression>
+                                                  </relationalExpression>
+                                                </instanceOfExpression>
+                                              </equalityExpression>
+                                            </andExpression>
+                                          </exclusiveOrExpression>
+                                        </inclusiveOrExpression>
+                                      </conditionalAndExpression>
+                                    </conditionalOrExpression>
+                                  </conditionalExpression>
+                                  <assignmentOperator>
+                                    <EQ startline="16" startpos="26">=</EQ>
+                                  </assignmentOperator>
+                                  <expression>
+                                    <conditionalExpression>
+                                      <conditionalOrExpression>
+                                        <conditionalAndExpression>
+                                          <inclusiveOrExpression>
+                                            <exclusiveOrExpression>
+                                              <andExpression>
+                                                <equalityExpression>
+                                                  <instanceOfExpression>
+                                                    <relationalExpression>
+                                                      <shiftExpression>
+                                                        <additiveExpression>
+                                                          <multiplicativeExpression>
+                                                            <unaryExpression>
+                                                              <unaryExpressionNotPlusMinus>
+                                                                <primary>
+                                                                  <literal>
+                                                                    <stringLiteral>
+                                                                      <STRINGLITERAL startline="16" startpos="28">"End of work week"</STRINGLITERAL>
+                                                                    </stringLiteral>
+                                                                  </literal>
+                                                                </primary>
+                                                              </unaryExpressionNotPlusMinus>
+                                                            </unaryExpression>
+                                                          </multiplicativeExpression>
+                                                        </additiveExpression>
+                                                      </shiftExpression>
+                                                    </relationalExpression>
+                                                  </instanceOfExpression>
+                                                </equalityExpression>
+                                              </andExpression>
+                                            </exclusiveOrExpression>
+                                          </inclusiveOrExpression>
+                                        </conditionalAndExpression>
+                                      </conditionalOrExpression>
+                                    </conditionalExpression>
+                                  </expression>
+                                </expression>
+                                <SEMI startline="16" startpos="46">;</SEMI>
+                              </statement>
+                            </blockStatement>
+                            <blockStatement>
+                              <statement>
+                                <BREAK startline="17" startpos="16">break</BREAK>
+                                <SEMI startline="17" startpos="21">;</SEMI>
+                              </statement>
+                            </blockStatement>
+                          </switchBlockStatementGroup>
+                          <switchBlockStatementGroup>
+                            <switchLabel>
+                              <CASE startline="18" startpos="12">case</CASE>
+                              <expression>
+                                <conditionalExpression>
+                                  <conditionalOrExpression>
+                                    <conditionalAndExpression>
+                                      <inclusiveOrExpression>
+                                        <exclusiveOrExpression>
+                                          <andExpression>
+                                            <equalityExpression>
+                                              <instanceOfExpression>
+                                                <relationalExpression>
+                                                  <shiftExpression>
+                                                    <additiveExpression>
+                                                      <multiplicativeExpression>
+                                                        <unaryExpression>
+                                                          <unaryExpressionNotPlusMinus>
+                                                            <primary>
+                                                              <literal>
+                                                                <stringLiteral>
+                                                                  <STRINGLITERAL startline="18" startpos="17">"Saturday"</STRINGLITERAL>
+                                                                </stringLiteral>
+                                                              </literal>
+                                                            </primary>
+                                                          </unaryExpressionNotPlusMinus>
+                                                        </unaryExpression>
+                                                      </multiplicativeExpression>
+                                                    </additiveExpression>
+                                                  </shiftExpression>
+                                                </relationalExpression>
+                                              </instanceOfExpression>
+                                            </equalityExpression>
+                                          </andExpression>
+                                        </exclusiveOrExpression>
+                                      </inclusiveOrExpression>
+                                    </conditionalAndExpression>
+                                  </conditionalOrExpression>
+                                </conditionalExpression>
+                              </expression>
+                              <COLON startline="18" startpos="27">:</COLON>
+                            </switchLabel>
+                          </switchBlockStatementGroup>
+                          <switchBlockStatementGroup>
+                            <switchLabel>
+                              <CASE startline="19" startpos="12">case</CASE>
+                              <expression>
+                                <conditionalExpression>
+                                  <conditionalOrExpression>
+                                    <conditionalAndExpression>
+                                      <inclusiveOrExpression>
+                                        <exclusiveOrExpression>
+                                          <andExpression>
+                                            <equalityExpression>
+                                              <instanceOfExpression>
+                                                <relationalExpression>
+                                                  <shiftExpression>
+                                                    <additiveExpression>
+                                                      <multiplicativeExpression>
+                                                        <unaryExpression>
+                                                          <unaryExpressionNotPlusMinus>
+                                                            <primary>
+                                                              <literal>
+                                                                <stringLiteral>
+                                                                  <STRINGLITERAL startline="19" startpos="17">"Sunday"</STRINGLITERAL>
+                                                                </stringLiteral>
+                                                              </literal>
+                                                            </primary>
+                                                          </unaryExpressionNotPlusMinus>
+                                                        </unaryExpression>
+                                                      </multiplicativeExpression>
+                                                    </additiveExpression>
+                                                  </shiftExpression>
+                                                </relationalExpression>
+                                              </instanceOfExpression>
+                                            </equalityExpression>
+                                          </andExpression>
+                                        </exclusiveOrExpression>
+                                      </inclusiveOrExpression>
+                                    </conditionalAndExpression>
+                                  </conditionalOrExpression>
+                                </conditionalExpression>
+                              </expression>
+                              <COLON startline="19" startpos="25">:</COLON>
+                            </switchLabel>
+                            <blockStatement>
+                              <statement>
+                                <expression>
+                                  <conditionalExpression>
+                                    <conditionalOrExpression>
+                                      <conditionalAndExpression>
+                                        <inclusiveOrExpression>
+                                          <exclusiveOrExpression>
+                                            <andExpression>
+                                              <equalityExpression>
+                                                <instanceOfExpression>
+                                                  <relationalExpression>
+                                                    <shiftExpression>
+                                                      <additiveExpression>
+                                                        <multiplicativeExpression>
+                                                          <unaryExpression>
+                                                            <unaryExpressionNotPlusMinus>
+                                                              <primary>
+                                                                <IDENTIFIER startline="20" startpos="16">typeOfDay</IDENTIFIER>
+                                                              </primary>
+                                                            </unaryExpressionNotPlusMinus>
+                                                          </unaryExpression>
+                                                        </multiplicativeExpression>
+                                                      </additiveExpression>
+                                                    </shiftExpression>
+                                                  </relationalExpression>
+                                                </instanceOfExpression>
+                                              </equalityExpression>
+                                            </andExpression>
+                                          </exclusiveOrExpression>
+                                        </inclusiveOrExpression>
+                                      </conditionalAndExpression>
+                                    </conditionalOrExpression>
+                                  </conditionalExpression>
+                                  <assignmentOperator>
+                                    <EQ startline="20" startpos="26">=</EQ>
+                                  </assignmentOperator>
+                                  <expression>
+                                    <conditionalExpression>
+                                      <conditionalOrExpression>
+                                        <conditionalAndExpression>
+                                          <inclusiveOrExpression>
+                                            <exclusiveOrExpression>
+                                              <andExpression>
+                                                <equalityExpression>
+                                                  <instanceOfExpression>
+                                                    <relationalExpression>
+                                                      <shiftExpression>
+                                                        <additiveExpression>
+                                                          <multiplicativeExpression>
+                                                            <unaryExpression>
+                                                              <unaryExpressionNotPlusMinus>
+                                                                <primary>
+                                                                  <literal>
+                                                                    <stringLiteral>
+                                                                      <STRINGLITERAL startline="20" startpos="28">"Weekend"</STRINGLITERAL>
+                                                                    </stringLiteral>
+                                                                  </literal>
+                                                                </primary>
+                                                              </unaryExpressionNotPlusMinus>
+                                                            </unaryExpression>
+                                                          </multiplicativeExpression>
+                                                        </additiveExpression>
+                                                      </shiftExpression>
+                                                    </relationalExpression>
+                                                  </instanceOfExpression>
+                                                </equalityExpression>
+                                              </andExpression>
+                                            </exclusiveOrExpression>
+                                          </inclusiveOrExpression>
+                                        </conditionalAndExpression>
+                                      </conditionalOrExpression>
+                                    </conditionalExpression>
+                                  </expression>
+                                </expression>
+                                <SEMI startline="20" startpos="37">;</SEMI>
+                              </statement>
+                            </blockStatement>
+                            <blockStatement>
+                              <statement>
+                                <BREAK startline="21" startpos="16">break</BREAK>
+                                <SEMI startline="21" startpos="21">;</SEMI>
+                              </statement>
+                            </blockStatement>
+                          </switchBlockStatementGroup>
+                          <switchBlockStatementGroup>
+                            <switchLabel>
+                              <DEFAULT startline="22" startpos="12">default</DEFAULT>
+                              <COLON startline="22" startpos="19">:</COLON>
+                            </switchLabel>
+                            <blockStatement>
+                              <statement>
+                                <THROW startline="23" startpos="16">throw</THROW>
+                                <expression>
+                                  <conditionalExpression>
+                                    <conditionalOrExpression>
+                                      <conditionalAndExpression>
+                                        <inclusiveOrExpression>
+                                          <exclusiveOrExpression>
+                                            <andExpression>
+                                              <equalityExpression>
+                                                <instanceOfExpression>
+                                                  <relationalExpression>
+                                                    <shiftExpression>
+                                                      <additiveExpression>
+                                                        <multiplicativeExpression>
+                                                          <unaryExpression>
+                                                            <unaryExpressionNotPlusMinus>
+                                                              <primary>
+                                                                <creator>
+                                                                  <NEW startline="23" startpos="22">new</NEW>
+                                                                  <classOrInterfaceType>
+                                                                    <IDENTIFIER startline="23" startpos="26">IllegalArgumentException</IDENTIFIER>
+                                                                  </classOrInterfaceType>
+                                                                  <classCreatorRest>
+                                                                    <arguments>
+                                                                      <LPAREN startline="23" startpos="50">(</LPAREN>
+                                                                      <expressionList>
+                                                                        <expression>
+                                                                          <conditionalExpression>
+                                                                            <conditionalOrExpression>
+                                                                              <conditionalAndExpression>
+                                                                                <inclusiveOrExpression>
+                                                                                  <exclusiveOrExpression>
+                                                                                    <andExpression>
+                                                                                      <equalityExpression>
+                                                                                        <instanceOfExpression>
+                                                                                          <relationalExpression>
+                                                                                            <shiftExpression>
+                                                                                              <additiveExpression>
+                                                                                                <multiplicativeExpression>
+                                                                                                  <unaryExpression>
+                                                                                                    <unaryExpressionNotPlusMinus>
+                                                                                                      <primary>
+                                                                                                        <literal>
+                                                                                                          <stringLiteral>
+                                                                                                            <STRINGLITERAL startline="23" startpos="51">"Invalid day of the week: "</STRINGLITERAL>
+                                                                                                          </stringLiteral>
+                                                                                                        </literal>
+                                                                                                      </primary>
+                                                                                                    </unaryExpressionNotPlusMinus>
+                                                                                                  </unaryExpression>
+                                                                                                </multiplicativeExpression>
+                                                                                                <TOKEN startline="23" startpos="79">+</TOKEN>
+                                                                                                <multiplicativeExpression>
+                                                                                                  <unaryExpression>
+                                                                                                    <unaryExpressionNotPlusMinus>
+                                                                                                      <primary>
+                                                                                                        <IDENTIFIER startline="23" startpos="81">dayOfWeekArg</IDENTIFIER>
+                                                                                                      </primary>
+                                                                                                    </unaryExpressionNotPlusMinus>
+                                                                                                  </unaryExpression>
+                                                                                                </multiplicativeExpression>
+                                                                                              </additiveExpression>
+                                                                                            </shiftExpression>
+                                                                                          </relationalExpression>
+                                                                                        </instanceOfExpression>
+                                                                                      </equalityExpression>
+                                                                                    </andExpression>
+                                                                                  </exclusiveOrExpression>
+                                                                                </inclusiveOrExpression>
+                                                                              </conditionalAndExpression>
+                                                                            </conditionalOrExpression>
+                                                                          </conditionalExpression>
+                                                                        </expression>
+                                                                      </expressionList>
+                                                                      <RPAREN startline="23" startpos="93">)</RPAREN>
+                                                                    </arguments>
+                                                                  </classCreatorRest>
+                                                                </creator>
+                                                              </primary>
+                                                            </unaryExpressionNotPlusMinus>
+                                                          </unaryExpression>
+                                                        </multiplicativeExpression>
+                                                      </additiveExpression>
+                                                    </shiftExpression>
+                                                  </relationalExpression>
+                                                </instanceOfExpression>
+                                              </equalityExpression>
+                                            </andExpression>
+                                          </exclusiveOrExpression>
+                                        </inclusiveOrExpression>
+                                      </conditionalAndExpression>
+                                    </conditionalOrExpression>
+                                  </conditionalExpression>
+                                </expression>
+                                <SEMI startline="23" startpos="94">;</SEMI>
+                              </statement>
+                            </blockStatement>
+                          </switchBlockStatementGroup>
+                        </switchBlockStatementGroups>
+                        <RBRACE startline="24" startpos="8">}</RBRACE>
+                      </statement>
+                    </blockStatement>
+                    <blockStatement>
+                      <statement>
+                        <RETURN startline="25" startpos="8">return</RETURN>
+                        <expression>
+                          <conditionalExpression>
+                            <conditionalOrExpression>
+                              <conditionalAndExpression>
+                                <inclusiveOrExpression>
+                                  <exclusiveOrExpression>
+                                    <andExpression>
+                                      <equalityExpression>
+                                        <instanceOfExpression>
+                                          <relationalExpression>
+                                            <shiftExpression>
+                                              <additiveExpression>
+                                                <multiplicativeExpression>
+                                                  <unaryExpression>
+                                                    <unaryExpressionNotPlusMinus>
+                                                      <primary>
+                                                        <IDENTIFIER startline="25" startpos="15">typeOfDay</IDENTIFIER>
+                                                      </primary>
+                                                    </unaryExpressionNotPlusMinus>
+                                                  </unaryExpression>
+                                                </multiplicativeExpression>
+                                              </additiveExpression>
+                                            </shiftExpression>
+                                          </relationalExpression>
+                                        </instanceOfExpression>
+                                      </equalityExpression>
+                                    </andExpression>
+                                  </exclusiveOrExpression>
+                                </inclusiveOrExpression>
+                              </conditionalAndExpression>
+                            </conditionalOrExpression>
+                          </conditionalExpression>
+                        </expression>
+                        <SEMI startline="25" startpos="24">;</SEMI>
+                      </statement>
+                    </blockStatement>
+                    <RBRACE startline="26" startpos="3">}</RBRACE>
+                  </block>
+                </methodDeclaration>
+              </memberDecl>
+            </classBodyDeclaration>
+            <RBRACE startline="27" startpos="0">}</RBRACE>
+          </classBody>
+        </normalClassDeclaration>
+      </classDeclaration>
+    </classOrInterfaceDeclaration>
+  </typeDeclaration>
+</compilationUnit>

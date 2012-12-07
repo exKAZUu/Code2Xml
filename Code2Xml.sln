@@ -55,12 +55,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Python2.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.C.Tests", "Code2Xml.Languages.C.Tests\Code2Xml.Languages.C.Tests.csproj", "{CA643ED8-5C46-4593-913F-CD73F9CD0D43}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BFBFF41B-0665-4F23-A567-EFC64621D6E9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{540FD119-BEBB-438D-9C0B-13CCB9174718}"
 	ProjectSection(SolutionItems) = preProject
+		.nuget\Microsoft.Build.dll = .nuget\Microsoft.Build.dll
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
-		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
 Global
