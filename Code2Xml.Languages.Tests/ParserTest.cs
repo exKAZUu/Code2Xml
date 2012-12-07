@@ -24,6 +24,7 @@ using Code2Xml.Core.Plugins;
 using Code2Xml.Core.Tests;
 using Code2Xml.Core.XmlToCodes;
 using NUnit.Framework;
+using Paraiba.Core;
 using Paraiba.IO;
 using Paraiba.Text;
 using Paraiba.Xml;
@@ -66,9 +67,11 @@ namespace Code2Xml.Languages.Tests {
 		public void Parse(string lang, string path, CodeToXml codeToXml, XmlToCode xmlToCode) {
 			var relativePath = XPath.GetRelativePath(path, Fixture.GetInputPath(lang));
 			var expPath = Fixture.GetXmlExpectationPath(lang, relativePath);
-			var r = codeToXml.GenerateFromFile(path, true);
+			var r = codeToXml.GenerateFromFile(path, true)
+				.ToString()
+				.ReplaceNewlinesForWindows();
 			using (var reader = new StreamReader(expPath, XEncoding.SJIS)) {
-				Assert.That(r.ToString(), Is.EqualTo(reader.ReadToEnd()));
+				Assert.That(r, Is.EqualTo(reader.ReadToEnd().ReplaceNewlinesForWindows()));
 			}
 		}
 
