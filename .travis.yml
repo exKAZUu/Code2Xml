@@ -6,6 +6,7 @@ language: c
 # Make sure mono is installed
 install:
  - sudo apt-get install mono-devel mono-gmcs
+ - mozroots --import --sync
 
 # Run the Build script
 script:
