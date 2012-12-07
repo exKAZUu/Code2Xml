@@ -24,7 +24,7 @@ using Paraiba.Core;
 
 namespace Code2Xml.Core {
 	public static class ParserUtils {
-		private static string TryGetPythonPathFromRegistry(string versionPrefix) {
+		private static string TryGetPythonPathFromRegistry(int version) {
 			var names = new[] {
 					@"SOFTWARE\Python\PythonCore",
 					@"SOFTWARE\Wow6432Node\Python\PythonCore",
@@ -36,7 +36,7 @@ namespace Code2Xml.Core {
 					continue;
 				}
 				var subKeyName = versionKey.GetSubKeyNames()
-						.Where(s => s.StartsWith(versionPrefix))
+						.Where(s => s.StartsWith(version.ToString()))
 						.OrderByDescending(
 								s => s.Split('.')
 										.Aggregate(
@@ -66,10 +66,10 @@ namespace Code2Xml.Core {
 			return null;
 		}
 
-		public static string GetPythonPath(string versionPrefix) {
+		public static string GetPythonPath(int version) {
 			// Check whether running OS is Unix/Linux
 			if (!ParaibaEnvironment.OnMono()) {
-				var path = TryGetPythonPathFromRegistry(versionPrefix);
+				var path = TryGetPythonPathFromRegistry(version);
 				if (path != null) {
 					return path;
 				}
@@ -79,7 +79,7 @@ namespace Code2Xml.Core {
 						EnvironmentVariableTarget.Process) ?? "";
 				var dirPaths = new[] { @"C:", @"D:" }.Concat(pathVariable.Split(';'));
 				foreach (var dirPath in dirPaths) {
-					var pythonDirPath = Directory.EnumerateDirectories(dirPath, "Python" + versionPrefix + "*")
+					var pythonDirPath = Directory.EnumerateDirectories(dirPath, "Python" + version + "*")
 							.OrderByDescending(f => f)
 							.FirstOrDefault();
 					if (pythonDirPath != null) {
@@ -87,7 +87,7 @@ namespace Code2Xml.Core {
 					}
 				}
 			} else {
-				var pythonNames = new[] { "python" + versionPrefix, "python" };
+				var pythonNames = new[] { "python" + version, "python" };
 				foreach (var pythonName in pythonNames) {
 					var pathVariable = Environment.GetEnvironmentVariable(
 							"PATH",

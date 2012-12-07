@@ -39,7 +39,7 @@ namespace Code2Xml.Languages.Python3.CodeToXmls {
 		private readonly string _processorPath;
 
 		public Python3CodeToXml()
-				: this(ParserUtils.GetPythonPath("3.") ?? "python3") {}
+				: this(ParserUtils.GetPythonPath(3) ?? "python3") {}
 
 		public Python3CodeToXml(string processorPath) {
 			_processorPath = processorPath;
