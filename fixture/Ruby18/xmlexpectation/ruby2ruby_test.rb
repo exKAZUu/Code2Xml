@@ -11,23 +11,17 @@
         <Symbol>i</Symbol>
       </lvar>
       <Symbol>==</Symbol>
-      <arglist startline="2">
-        <lit startline="2">
-          <Fixnum>0</Fixnum>
-        </lit>
-      </arglist>
+      <lit startline="2">
+        <Fixnum>0</Fixnum>
+      </lit>
     </call>
-    <block>
-      <call startline="3">
-        <nil />
-        <Symbol>p</Symbol>
-        <arglist startline="3">
-          <lvar startline="3">
-            <Symbol>i</Symbol>
-          </lvar>
-        </arglist>
-      </call>
-    </block>
-    <block />
+    <call startline="3">
+      <nil />
+      <Symbol>p</Symbol>
+      <lvar startline="3">
+        <Symbol>i</Symbol>
+      </lvar>
+    </call>
+    <nil />
   </if>
 </block>

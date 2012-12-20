@@ -11,24 +11,18 @@
         <Symbol>i</Symbol>
       </lvar>
       <Symbol>==</Symbol>
-      <arglist startline="3">
-        <lit startline="3">
-          <Fixnum>0</Fixnum>
-        </lit>
-      </arglist>
+      <lit startline="3">
+        <Fixnum>0</Fixnum>
+      </lit>
     </call>
-    <block>
-      <call startline="3">
-        <nil />
-        <Symbol>p</Symbol>
-        <arglist startline="3">
-          <str startline="3">
-            <String>test</String>
-          </str>
-        </arglist>
-      </call>
-    </block>
-    <block />
+    <call startline="3">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="3">
+        <String>test</String>
+      </str>
+    </call>
+    <nil />
   </if>
   <if startline="4">
     <call startline="4">
@@ -36,27 +30,21 @@
         <Symbol>i</Symbol>
       </lvar>
       <Symbol>==</Symbol>
-      <arglist startline="4">
-        <lit startline="4">
-          <Fixnum>0</Fixnum>
-        </lit>
-      </arglist>
+      <lit startline="4">
+        <Fixnum>0</Fixnum>
+      </lit>
     </call>
-    <block>
-      <call startline="4">
-        <nil />
-        <Symbol>p</Symbol>
-        <arglist startline="4">
-          <str startline="4">
-            <String>test</String>
-          </str>
-        </arglist>
-      </call>
-    </block>
-    <block />
+    <call startline="4">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="4">
+        <String>test</String>
+      </str>
+    </call>
+    <nil />
   </if>
-  <case startline="7">
-    <lvar startline="7">
+  <case startline="6">
+    <lvar startline="6">
       <Symbol>i</Symbol>
     </lvar>
     <when startline="7">
@@ -65,14 +53,12 @@
           <Fixnum>0</Fixnum>
         </lit>
       </array>
-      <call startline="9">
+      <call startline="8">
         <nil />
         <Symbol>p</Symbol>
-        <arglist startline="9">
-          <str startline="8">
-            <String>test</String>
-          </str>
-        </arglist>
+        <str startline="8">
+          <String>test</String>
+        </str>
       </call>
     </when>
     <nil />
@@ -83,23 +69,17 @@
         <Symbol>i</Symbol>
       </lvar>
       <Symbol>==</Symbol>
-      <arglist startline="11">
-        <lit startline="11">
-          <Fixnum>0</Fixnum>
-        </lit>
-      </arglist>
+      <lit startline="11">
+        <Fixnum>0</Fixnum>
+      </lit>
     </call>
-    <block>
-      <call startline="11">
-        <nil />
-        <Symbol>p</Symbol>
-        <arglist startline="11">
-          <str startline="11">
-            <String>test</String>
-          </str>
-        </arglist>
-      </call>
-    </block>
+    <call startline="11">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="11">
+        <String>test</String>
+      </str>
+    </call>
     <TrueClass>true</TrueClass>
   </until>
   <until startline="12">
@@ -108,162 +88,122 @@
         <Symbol>i</Symbol>
       </lvar>
       <Symbol>==</Symbol>
-      <arglist startline="12">
-        <lit startline="12">
-          <Fixnum>0</Fixnum>
-        </lit>
-      </arglist>
+      <lit startline="12">
+        <Fixnum>0</Fixnum>
+      </lit>
     </call>
-    <block>
-      <call startline="12">
-        <nil />
-        <Symbol>p</Symbol>
-        <arglist startline="12">
-          <str startline="12">
-            <String>test</String>
-          </str>
-        </arglist>
-      </call>
-    </block>
+    <call startline="12">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="12">
+        <String>test</String>
+      </str>
+    </call>
     <TrueClass>true</TrueClass>
   </until>
   <for startline="13">
-    <array startline="13" />
+    <array startline="13"></array>
     <lasgn startline="13">
       <Symbol>y</Symbol>
     </lasgn>
-    <block>
-      <call startline="13">
-        <nil />
-        <Symbol>p</Symbol>
-        <arglist startline="13">
-          <str startline="13">
-            <String>test</String>
-          </str>
-        </arglist>
-      </call>
-    </block>
+    <call startline="13">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="13">
+        <String>test</String>
+      </str>
+    </call>
   </for>
   <iter startline="14">
     <call startline="14">
       <nil />
       <Symbol>loop</Symbol>
-      <arglist startline="14" />
     </call>
-    <nil />
-    <block>
-      <call startline="14">
-        <nil />
-        <Symbol>p</Symbol>
-        <arglist startline="14">
-          <str startline="14">
-            <String>test</String>
-          </str>
-        </arglist>
-      </call>
-    </block>
+    <args startline="14"></args>
+    <call startline="14">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="14">
+        <String>test</String>
+      </str>
+    </call>
   </iter>
   <iter startline="15">
     <call startline="15">
       <nil />
       <Symbol>loop</Symbol>
-      <arglist startline="15" />
     </call>
-    <nil />
-    <block>
-      <call startline="15">
-        <nil />
-        <Symbol>p</Symbol>
-        <arglist startline="15">
-          <str startline="15">
-            <String>test</String>
-          </str>
-        </arglist>
-      </call>
-    </block>
+    <args startline="15"></args>
+    <call startline="15">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="15">
+        <String>test</String>
+      </str>
+    </call>
   </iter>
   <iter startline="16">
     <call startline="16">
-      <array startline="16" />
+      <array startline="16"></array>
       <Symbol>each</Symbol>
-      <arglist startline="16" />
     </call>
-    <lasgn startline="16">
+    <args startline="16">
       <Symbol>b</Symbol>
-    </lasgn>
-    <block>
-      <call startline="16">
-        <nil />
-        <Symbol>p</Symbol>
-        <arglist startline="16">
-          <str startline="16">
-            <String>test</String>
-          </str>
-        </arglist>
-      </call>
-    </block>
+    </args>
+    <call startline="16">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="16">
+        <String>test</String>
+      </str>
+    </call>
   </iter>
   <iter startline="17">
     <call startline="17">
-      <array startline="17" />
+      <array startline="17"></array>
       <Symbol>each</Symbol>
-      <arglist startline="17" />
     </call>
-    <lasgn startline="17">
+    <args startline="17">
       <Symbol>b</Symbol>
-    </lasgn>
-    <block>
-      <call startline="17">
-        <nil />
-        <Symbol>p</Symbol>
-        <arglist startline="17">
-          <str startline="17">
-            <String>test</String>
-          </str>
-        </arglist>
-      </call>
-    </block>
+    </args>
+    <call startline="17">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="17">
+        <String>test</String>
+      </str>
+    </call>
   </iter>
   <iter startline="18">
     <call startline="18">
       <nil />
       <Symbol>lambda</Symbol>
-      <arglist startline="18" />
     </call>
-    <lasgn startline="18">
+    <args startline="18">
       <Symbol>x</Symbol>
-    </lasgn>
-    <block>
-      <call startline="18">
-        <nil />
-        <Symbol>p</Symbol>
-        <arglist startline="18">
-          <str startline="18">
-            <String>test</String>
-          </str>
-        </arglist>
-      </call>
-    </block>
+    </args>
+    <call startline="18">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="18">
+        <String>test</String>
+      </str>
+    </call>
   </iter>
   <iter startline="19">
     <call startline="19">
       <nil />
       <Symbol>lambda</Symbol>
-      <arglist startline="19" />
     </call>
-    <lasgn startline="19">
+    <args startline="19">
       <Symbol>x</Symbol>
-    </lasgn>
-    <block>
-      <call startline="19">
-        <nil />
-        <Symbol>p</Symbol>
-        <arglist startline="19">
-          <str startline="19">
-            <String>test</String>
-          </str>
-        </arglist>
-      </call>
-    </block>
+    </args>
+    <call startline="19">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="19">
+        <String>test</String>
+      </str>
+    </call>
   </iter>
 </block>

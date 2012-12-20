@@ -38,8 +38,7 @@ namespace Code2Xml.Core.CodeToXmls {
 			}
 		}
 
-		public override XElement Generate(
-				TextReader reader, bool throwingParseError) {
+		public override XElement Generate(TextReader reader, bool throwingParseError) {
 			var info = new ProcessStartInfo {
 					FileName = ProcessorPath,
 					Arguments = Arguments.JoinString(" "),

@@ -1,9 +1,7 @@
 <call startline="1">
   <nil />
   <Symbol>p</Symbol>
-  <arglist startline="1">
-    <str startline="1">
-      <String>日本語ソン可表</String>
-    </str>
-  </arglist>
+  <str startline="1">
+    <String>ﾂ禿ｺﾂ本ﾂ古ｪﾂソﾂδ督嘉つ表</String>
+  </str>
 </call>

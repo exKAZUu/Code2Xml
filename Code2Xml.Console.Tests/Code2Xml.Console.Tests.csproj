@@ -55,6 +55,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Code2Xml.Console\Code2Xml.Console.csproj">
       <Project>{5C40DA45-ACB3-4FC4-8CD4-E9053D4081D2}</Project>
       <Name>Code2Xml.Console</Name>
@@ -67,13 +70,10 @@
       <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>
       <Name>Code2Xml.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Code2Xml.Languages.C\Code2Xml.Languages.C.csproj">
+    <ProjectReference Include="..\Code2Xml.Languages\C\Code2Xml.Languages.C.csproj">
       <Project>{D6F3F025-CC01-4BA3-A9D7-9609B4198A6B}</Project>
       <Name>Code2Xml.Languages.C</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

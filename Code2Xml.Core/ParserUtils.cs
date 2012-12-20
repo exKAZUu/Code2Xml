@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2009-2012 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,6 +19,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Microsoft.Win32;
 using Paraiba.Core;
 
@@ -69,35 +70,84 @@ namespace Code2Xml.Core {
 		public static string GetPythonPath(int version) {
 			// Check whether running OS is Unix/Linux
 			if (!ParaibaEnvironment.OnMono()) {
-				var path = TryGetPythonPathFromRegistry(version);
-				if (path != null) {
-					return path;
+				{
+					var path = TryGetPythonPathFromRegistry(version);
+					if (path != null) {
+						return path;
+					}
 				}
 
 				var pathVariable = Environment.GetEnvironmentVariable(
 						"Path",
 						EnvironmentVariableTarget.Process) ?? "";
-				var dirPaths = new[] { @"C:", @"D:" }.Concat(pathVariable.Split(';'));
+				return new[] { @"C:", @"D:" }
+						.SelectMany(dirPath => Directory.EnumerateDirectories(dirPath, "Python" + version + "*"))
+						.Concat(pathVariable.Split(';'))
+						.Select(dirPath => Path.Combine(dirPath, "python.exe"))
+						.Where(File.Exists)
+						.OrderByDescending(
+								dirPath => {
+									var match = Regex.Match(dirPath, @"python(\d*)", RegexOptions.IgnoreCase);
+									var number = 0;
+									if (match.Success) {
+										number = int.Parse(match.Groups[1].Value);
+									}
+									return number;
+								})
+						.FirstOrDefault();
+			}
+			var names = new[] { "python" + version, "python" };
+			foreach (var name in names) {
+				var pathVariable = Environment.GetEnvironmentVariable(
+						"PATH",
+						EnvironmentVariableTarget.Process) ?? "";
+				var dirPaths = new[] { @"/usr/bin", @"/usr/local/bin" }
+						.Concat(pathVariable.Split(':'));
 				foreach (var dirPath in dirPaths) {
-					var pythonDirPath = Directory.EnumerateDirectories(dirPath, "Python" + version + "*")
-							.OrderByDescending(f => f)
-							.FirstOrDefault();
-					if (pythonDirPath != null) {
-						return Path.Combine(pythonDirPath, "python.exe");
+					var path = Path.Combine(dirPath, name);
+					if (File.Exists(path)) {
+						return path;
 					}
 				}
-			} else {
-				var pythonNames = new[] { "python" + version, "python" };
-				foreach (var pythonName in pythonNames) {
-					var pathVariable = Environment.GetEnvironmentVariable(
-							"PATH",
-							EnvironmentVariableTarget.Process) ?? "";
-					var dirPaths = new[] { @"/usr/bin", @"/usr/local/bin" }.Concat(pathVariable.Split(':'));
-					foreach (var dirPath in dirPaths) {
-						var path = Path.Combine(dirPath, pythonName);
-						if (File.Exists(path)) {
-							return path;
-						}
+			}
+			return null;
+		}
+
+		public static string GetRubyPath(int version) {
+			// Check whether running OS is Unix/Linux
+			if (!ParaibaEnvironment.OnMono()) {
+				var pathVariable = Environment.GetEnvironmentVariable(
+						"Path",
+						EnvironmentVariableTarget.Process) ?? "";
+				return new[] { @"C:", @"D:" }
+						.SelectMany(
+								dirPath => Directory.EnumerateDirectories(dirPath, "Ruby" + version + "*")
+										.Select(p => Path.Combine(p, "bin", "ruby.exe")))
+						.Concat(pathVariable.Split(';'))
+						.Select(dirPath => Path.Combine(dirPath, "ruby.exe"))
+						.Where(File.Exists)
+						.OrderByDescending(
+								dirPath => {
+									var match = Regex.Match(dirPath, @"ruby(\d*)", RegexOptions.IgnoreCase);
+									var number = 0;
+									if (match.Success) {
+										number = int.Parse(match.Groups[1].Value);
+									}
+									return number;
+								})
+						.FirstOrDefault();
+			}
+			var names = new[] { "ruby" + version, "ruby" };
+			foreach (var name in names) {
+				var pathVariable = Environment.GetEnvironmentVariable(
+						"PATH",
+						EnvironmentVariableTarget.Process) ?? "";
+				var dirPaths = new[] { @"/usr/bin", @"/usr/local/bin" }
+						.Concat(pathVariable.Split(':'));
+				foreach (var dirPath in dirPaths) {
+					var path = Path.Combine(dirPath, name);
+					if (File.Exists(path)) {
+						return path;
 					}
 				}
 			}
