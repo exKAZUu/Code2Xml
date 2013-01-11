@@ -38,6 +38,18 @@ namespace Code2Xml.Languages.C.Tests {
 		[TestCase("mersenne.c")]
 		[TestCase("Block1.c")]
 		[TestCase("multi.h")]
+        [TestCase("get_sign.e.c")]
+        [TestCase("get_sign.e5180.c")]
+        [TestCase("get_sign.e5199.c")]
+        [TestCase("get_sign.e5199b.c")]
+        [TestCase("get_sign.eb.c")]
+        [TestCase("get_sign.eb8834.c")]
+        [TestCase("get_sign.eb8834b.c")]
+        [TestCase("get_sign.ec.c")]
+        [TestCase("get_sign.ec9013.c")]
+        [TestCase("get_sign.ec9013b.c")]
+        [TestCase("get_sign.ed.c")]
+        [TestCase("get_sign.ed2.c")]
 		public void Parse(string filePath) {
 			var paths = filePath.Split(
 					Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
