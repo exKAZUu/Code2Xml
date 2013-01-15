@@ -68,5 +68,57 @@ int main() {
 ",
 					false);
 		}
-	}
+
+        [Test]
+        public void ParseTypedefFunc()
+        {
+            var xml = CCodeToXml.Instance.Generate(
+                    @"
+typedef int f(long argl, long argl2);
+
+struct st {
+	long argl2;
+};
+",
+                    true);
+        }
+
+        [Test]
+        public void ParseTypedefStruct() {
+            var xml = CCodeToXml.Instance.Generate(
+                    @"
+typedef struct localeinfo_struct {
+  int xxxx;
+} _locale_tstruct,*_locale_t;
+_locale_t locale;
+",
+                    true);
+            
+        }
+
+        [Test]
+        public void ParseTypedefStruct2() {
+            var xml = CCodeToXml.Instance.Generate(
+                    @"
+typedef int (xxx)(const int *cipher);
+struct private_key_st {
+    int cipher;
+};
+",
+                    true);
+        }
+
+        [Test]
+        public void ParseTypedef()
+        {
+            var xml = CCodeToXml.Instance.Generate(
+                    @"
+typedef void *AAAA(unsigned long);
+AAAA *cb;
+",
+                    true);
+        }
+    }
+
+
 }
