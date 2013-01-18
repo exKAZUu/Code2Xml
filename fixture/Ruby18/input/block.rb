@@ -1,4 +1,6 @@
 i = 0
+;
+;
 
 p i if i == 0
 if i == 0 then p 'c'; p 'c'; end

@@ -5,53 +5,6 @@
       <Fixnum>0</Fixnum>
     </lit>
   </lasgn>
-  <if startline="3">
-    <call startline="3">
-      <lvar startline="3">
-        <Symbol>i</Symbol>
-      </lvar>
-      <Symbol>==</Symbol>
-      <lit startline="3">
-        <Fixnum>0</Fixnum>
-      </lit>
-    </call>
-    <call startline="3">
-      <nil />
-      <Symbol>p</Symbol>
-      <lvar startline="3">
-        <Symbol>i</Symbol>
-      </lvar>
-    </call>
-    <nil />
-  </if>
-  <if startline="4">
-    <call startline="4">
-      <lvar startline="4">
-        <Symbol>i</Symbol>
-      </lvar>
-      <Symbol>==</Symbol>
-      <lit startline="4">
-        <Fixnum>0</Fixnum>
-      </lit>
-    </call>
-    <block startline="4">
-      <call startline="4">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="4">
-          <String>c</String>
-        </str>
-      </call>
-      <call startline="4">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="4">
-          <String>c</String>
-        </str>
-      </call>
-    </block>
-    <nil />
-  </if>
   <if startline="5">
     <call startline="5">
       <lvar startline="5">
@@ -65,9 +18,9 @@
     <call startline="5">
       <nil />
       <Symbol>p</Symbol>
-      <str startline="5">
-        <String>c</String>
-      </str>
+      <lvar startline="5">
+        <Symbol>i</Symbol>
+      </lvar>
     </call>
     <nil />
   </if>
@@ -81,7 +34,22 @@
         <Fixnum>0</Fixnum>
       </lit>
     </call>
-    <nil />
+    <block startline="6">
+      <call startline="6">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="6">
+          <String>c</String>
+        </str>
+      </call>
+      <call startline="6">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="6">
+          <String>c</String>
+        </str>
+      </call>
+    </block>
     <nil />
   </if>
   <if startline="7">
@@ -94,22 +62,13 @@
         <Fixnum>0</Fixnum>
       </lit>
     </call>
-    <block startline="7">
-      <call startline="7">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="7">
-          <String>c</String>
-        </str>
-      </call>
-      <call startline="7">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="7">
-          <String>c</String>
-        </str>
-      </call>
-    </block>
+    <call startline="7">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="7">
+        <String>c</String>
+      </str>
+    </call>
     <nil />
   </if>
   <if startline="8">
@@ -122,13 +81,7 @@
         <Fixnum>0</Fixnum>
       </lit>
     </call>
-    <call startline="8">
-      <nil />
-      <Symbol>p</Symbol>
-      <str startline="8">
-        <String>c</String>
-      </str>
-    </call>
+    <nil />
     <nil />
   </if>
   <if startline="9">
@@ -141,7 +94,22 @@
         <Fixnum>0</Fixnum>
       </lit>
     </call>
-    <nil />
+    <block startline="9">
+      <call startline="9">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="9">
+          <String>c</String>
+        </str>
+      </call>
+      <call startline="9">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="9">
+          <String>c</String>
+        </str>
+      </call>
+    </block>
     <nil />
   </if>
   <if startline="10">
@@ -151,6 +119,25 @@
       </lvar>
       <Symbol>==</Symbol>
       <lit startline="10">
+        <Fixnum>0</Fixnum>
+      </lit>
+    </call>
+    <call startline="10">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="10">
+        <String>c</String>
+      </str>
+    </call>
+    <nil />
+  </if>
+  <if startline="11">
+    <call startline="11">
+      <lvar startline="11">
+        <Symbol>i</Symbol>
+      </lvar>
+      <Symbol>==</Symbol>
+      <lit startline="11">
         <Fixnum>0</Fixnum>
       </lit>
     </call>
@@ -170,24 +157,37 @@
     <nil />
     <nil />
   </if>
-  <if startline="15">
-    <call startline="15">
-      <lvar startline="15">
+  <if startline="14">
+    <call startline="14">
+      <lvar startline="14">
         <Symbol>i</Symbol>
       </lvar>
       <Symbol>==</Symbol>
-      <lit startline="15">
+      <lit startline="14">
         <Fixnum>0</Fixnum>
       </lit>
     </call>
     <nil />
-    <if startline="17">
-      <call startline="16">
-        <lvar startline="16">
+    <nil />
+  </if>
+  <if startline="17">
+    <call startline="17">
+      <lvar startline="17">
+        <Symbol>i</Symbol>
+      </lvar>
+      <Symbol>==</Symbol>
+      <lit startline="17">
+        <Fixnum>0</Fixnum>
+      </lit>
+    </call>
+    <nil />
+    <if startline="19">
+      <call startline="18">
+        <lvar startline="18">
           <Symbol>i</Symbol>
         </lvar>
         <Symbol>==</Symbol>
-        <lit startline="16">
+        <lit startline="18">
           <Fixnum>0</Fixnum>
         </lit>
       </call>
@@ -195,77 +195,30 @@
       <nil />
     </if>
   </if>
-  <if startline="18">
-    <call startline="18">
-      <lvar startline="18">
+  <if startline="20">
+    <call startline="20">
+      <lvar startline="20">
         <Symbol>i</Symbol>
       </lvar>
       <Symbol>==</Symbol>
-      <lit startline="18">
+      <lit startline="20">
         <Fixnum>0</Fixnum>
       </lit>
     </call>
     <nil />
-    <if startline="21">
-      <call startline="19">
-        <lvar startline="19">
+    <if startline="23">
+      <call startline="21">
+        <lvar startline="21">
           <Symbol>i</Symbol>
         </lvar>
         <Symbol>==</Symbol>
-        <lit startline="19">
+        <lit startline="21">
           <Fixnum>0</Fixnum>
         </lit>
       </call>
       <nil />
       <nil />
     </if>
-  </if>
-  <if startline="24">
-    <call startline="24">
-      <lvar startline="24">
-        <Symbol>i</Symbol>
-      </lvar>
-      <Symbol>==</Symbol>
-      <lit startline="24">
-        <Fixnum>0</Fixnum>
-      </lit>
-    </call>
-    <nil />
-    <call startline="24">
-      <nil />
-      <Symbol>p</Symbol>
-      <lvar startline="24">
-        <Symbol>i</Symbol>
-      </lvar>
-    </call>
-  </if>
-  <if startline="25">
-    <call startline="25">
-      <lvar startline="25">
-        <Symbol>i</Symbol>
-      </lvar>
-      <Symbol>==</Symbol>
-      <lit startline="25">
-        <Fixnum>0</Fixnum>
-      </lit>
-    </call>
-    <block startline="25">
-      <call startline="25">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="25">
-          <String>c</String>
-        </str>
-      </call>
-      <call startline="25">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="25">
-          <String>c</String>
-        </str>
-      </call>
-    </block>
-    <nil />
   </if>
   <if startline="26">
     <call startline="26">
@@ -277,14 +230,14 @@
         <Fixnum>0</Fixnum>
       </lit>
     </call>
+    <nil />
     <call startline="26">
       <nil />
       <Symbol>p</Symbol>
-      <str startline="26">
-        <String>c</String>
-      </str>
+      <lvar startline="26">
+        <Symbol>i</Symbol>
+      </lvar>
     </call>
-    <nil />
   </if>
   <if startline="27">
     <call startline="27">
@@ -296,7 +249,22 @@
         <Fixnum>0</Fixnum>
       </lit>
     </call>
-    <nil />
+    <block startline="27">
+      <call startline="27">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="27">
+          <String>c</String>
+        </str>
+      </call>
+      <call startline="27">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="27">
+          <String>c</String>
+        </str>
+      </call>
+    </block>
     <nil />
   </if>
   <if startline="28">
@@ -309,22 +277,13 @@
         <Fixnum>0</Fixnum>
       </lit>
     </call>
-    <block startline="28">
-      <call startline="28">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="28">
-          <String>c</String>
-        </str>
-      </call>
-      <call startline="28">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="28">
-          <String>c</String>
-        </str>
-      </call>
-    </block>
+    <call startline="28">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="28">
+        <String>c</String>
+      </str>
+    </call>
     <nil />
   </if>
   <if startline="29">
@@ -337,13 +296,7 @@
         <Fixnum>0</Fixnum>
       </lit>
     </call>
-    <call startline="29">
-      <nil />
-      <Symbol>p</Symbol>
-      <str startline="29">
-        <String>c</String>
-      </str>
-    </call>
+    <nil />
     <nil />
   </if>
   <if startline="30">
@@ -356,16 +309,50 @@
         <Fixnum>0</Fixnum>
       </lit>
     </call>
-    <nil />
+    <block startline="30">
+      <call startline="30">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="30">
+          <String>c</String>
+        </str>
+      </call>
+      <call startline="30">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="30">
+          <String>c</String>
+        </str>
+      </call>
+    </block>
     <nil />
   </if>
-  <if startline="32">
+  <if startline="31">
     <call startline="31">
       <lvar startline="31">
         <Symbol>i</Symbol>
       </lvar>
       <Symbol>==</Symbol>
       <lit startline="31">
+        <Fixnum>0</Fixnum>
+      </lit>
+    </call>
+    <call startline="31">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="31">
+        <String>c</String>
+      </str>
+    </call>
+    <nil />
+  </if>
+  <if startline="32">
+    <call startline="32">
+      <lvar startline="32">
+        <Symbol>i</Symbol>
+      </lvar>
+      <Symbol>==</Symbol>
+      <lit startline="32">
         <Fixnum>0</Fixnum>
       </lit>
     </call>
@@ -385,33 +372,46 @@
     <nil />
     <nil />
   </if>
-  <case startline="37">
-    <lvar startline="37">
+  <if startline="36">
+    <call startline="35">
+      <lvar startline="35">
+        <Symbol>i</Symbol>
+      </lvar>
+      <Symbol>==</Symbol>
+      <lit startline="35">
+        <Fixnum>0</Fixnum>
+      </lit>
+    </call>
+    <nil />
+    <nil />
+  </if>
+  <case startline="39">
+    <lvar startline="39">
       <Symbol>i</Symbol>
     </lvar>
-    <when startline="38">
-      <array startline="39">
-        <lit startline="38">
+    <when startline="40">
+      <array startline="41">
+        <lit startline="40">
           <Fixnum>1</Fixnum>
         </lit>
       </array>
-      <call startline="39">
+      <call startline="41">
         <nil />
         <Symbol>p</Symbol>
-        <str startline="39">
+        <str startline="41">
           <String>1</String>
         </str>
       </call>
     </when>
     <nil />
   </case>
-  <case startline="42">
-    <lvar startline="42">
+  <case startline="44">
+    <lvar startline="44">
       <Symbol>i</Symbol>
     </lvar>
-    <when startline="43">
-      <array startline="44">
-        <lit startline="43">
+    <when startline="45">
+      <array startline="46">
+        <lit startline="45">
           <Fixnum>1</Fixnum>
         </lit>
       </array>
@@ -419,28 +419,14 @@
     </when>
     <nil />
   </case>
-  <case startline="46">
-    <lvar startline="46">
+  <case startline="48">
+    <lvar startline="48">
       <Symbol>i</Symbol>
     </lvar>
-    <when startline="47">
-      <array startline="48">
-        <lit startline="47">
-          <Fixnum>1</Fixnum>
-        </lit>
-      </array>
-      <call startline="48">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="48">
-          <String>1</String>
-        </str>
-      </call>
-    </when>
     <when startline="49">
       <array startline="50">
         <lit startline="49">
-          <Fixnum>2</Fixnum>
+          <Fixnum>1</Fixnum>
         </lit>
       </array>
       <call startline="50">
@@ -451,85 +437,99 @@
         </str>
       </call>
     </when>
-    <nil />
-  </case>
-  <case startline="53">
-    <lvar startline="53">
-      <Symbol>i</Symbol>
-    </lvar>
-    <when startline="54">
-      <array startline="55">
-        <lit startline="54">
-          <Fixnum>1</Fixnum>
-        </lit>
-      </array>
-      <nil />
-    </when>
-    <when startline="55">
-      <array startline="56">
-        <lit startline="55">
+    <when startline="51">
+      <array startline="52">
+        <lit startline="51">
           <Fixnum>2</Fixnum>
         </lit>
       </array>
-      <nil />
-    </when>
-    <nil />
-  </case>
-  <case startline="58">
-    <lvar startline="58">
-      <Symbol>i</Symbol>
-    </lvar>
-    <when startline="59">
-      <array startline="60">
-        <lit startline="59">
-          <Fixnum>1</Fixnum>
-        </lit>
-      </array>
-      <call startline="60">
+      <call startline="52">
         <nil />
         <Symbol>p</Symbol>
-        <str startline="60">
+        <str startline="52">
           <String>1</String>
         </str>
       </call>
     </when>
+    <nil />
+  </case>
+  <case startline="55">
+    <lvar startline="55">
+      <Symbol>i</Symbol>
+    </lvar>
+    <when startline="56">
+      <array startline="57">
+        <lit startline="56">
+          <Fixnum>1</Fixnum>
+        </lit>
+      </array>
+      <nil />
+    </when>
+    <when startline="57">
+      <array startline="58">
+        <lit startline="57">
+          <Fixnum>2</Fixnum>
+        </lit>
+      </array>
+      <nil />
+    </when>
+    <nil />
+  </case>
+  <case startline="60">
+    <lvar startline="60">
+      <Symbol>i</Symbol>
+    </lvar>
     <when startline="61">
       <array startline="62">
         <lit startline="61">
-          <Fixnum>2</Fixnum>
+          <Fixnum>1</Fixnum>
         </lit>
       </array>
       <call startline="62">
         <nil />
         <Symbol>p</Symbol>
         <str startline="62">
+          <String>1</String>
+        </str>
+      </call>
+    </when>
+    <when startline="63">
+      <array startline="64">
+        <lit startline="63">
+          <Fixnum>2</Fixnum>
+        </lit>
+      </array>
+      <call startline="64">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="64">
           <String>2</String>
         </str>
       </call>
     </when>
-    <call startline="64">
+    <call startline="66">
       <nil />
       <Symbol>p</Symbol>
-      <str startline="64">
+      <str startline="66">
         <String>else</String>
       </str>
     </call>
   </case>
-  <case startline="67">
-    <lvar startline="67">
+  <case startline="69">
+    <lvar startline="69">
       <Symbol>i</Symbol>
     </lvar>
-    <when startline="68">
-      <array startline="69">
-        <lit startline="68">
+    <when startline="70">
+      <array startline="71">
+        <lit startline="70">
           <Fixnum>1</Fixnum>
         </lit>
       </array>
       <nil />
     </when>
-    <when startline="69">
-      <array startline="70">
-        <lit startline="69">
+    <when startline="71">
+      <array startline="72">
+        <lit startline="71">
           <Fixnum>2</Fixnum>
         </lit>
       </array>
@@ -537,28 +537,8 @@
     </when>
     <nil />
   </case>
-  <case startline="74">
+  <case startline="76">
     <nil />
-    <when startline="74">
-      <array startline="75">
-        <call startline="74">
-          <lvar startline="74">
-            <Symbol>i</Symbol>
-          </lvar>
-          <Symbol>==</Symbol>
-          <lit startline="74">
-            <Fixnum>1</Fixnum>
-          </lit>
-        </call>
-      </array>
-      <call startline="75">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="75">
-          <String>1</String>
-        </str>
-      </call>
-    </when>
     <when startline="76">
       <array startline="77">
         <call startline="76">
@@ -567,7 +547,7 @@
           </lvar>
           <Symbol>==</Symbol>
           <lit startline="76">
-            <Fixnum>2</Fixnum>
+            <Fixnum>1</Fixnum>
           </lit>
         </call>
       </array>
@@ -575,136 +555,109 @@
         <nil />
         <Symbol>p</Symbol>
         <str startline="77">
-          <String>2</String>
-        </str>
-      </call>
-    </when>
-    <call startline="79">
-      <nil />
-      <Symbol>p</Symbol>
-      <str startline="79">
-        <String>else</String>
-      </str>
-    </call>
-  </case>
-  <case startline="83">
-    <nil />
-    <when startline="83">
-      <array startline="83">
-        <call startline="83">
-          <lvar startline="83">
-            <Symbol>i</Symbol>
-          </lvar>
-          <Symbol>==</Symbol>
-          <lit startline="83">
-            <Fixnum>1</Fixnum>
-          </lit>
-        </call>
-      </array>
-      <call startline="83">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="83">
           <String>1</String>
         </str>
       </call>
     </when>
-    <when startline="84">
-      <array startline="84">
-        <call startline="84">
-          <lvar startline="84">
+    <when startline="78">
+      <array startline="79">
+        <call startline="78">
+          <lvar startline="78">
             <Symbol>i</Symbol>
           </lvar>
           <Symbol>==</Symbol>
-          <lit startline="84">
+          <lit startline="78">
             <Fixnum>2</Fixnum>
           </lit>
         </call>
       </array>
-      <call startline="84">
+      <call startline="79">
         <nil />
         <Symbol>p</Symbol>
-        <str startline="84">
+        <str startline="79">
           <String>2</String>
         </str>
       </call>
     </when>
-    <call startline="85">
+    <call startline="81">
       <nil />
       <Symbol>p</Symbol>
-      <str startline="85">
+      <str startline="81">
         <String>else</String>
       </str>
     </call>
   </case>
-  <call startline="91">
+  <case startline="85">
+    <nil />
+    <when startline="85">
+      <array startline="85">
+        <call startline="85">
+          <lvar startline="85">
+            <Symbol>i</Symbol>
+          </lvar>
+          <Symbol>==</Symbol>
+          <lit startline="85">
+            <Fixnum>1</Fixnum>
+          </lit>
+        </call>
+      </array>
+      <call startline="85">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="85">
+          <String>1</String>
+        </str>
+      </call>
+    </when>
+    <when startline="86">
+      <array startline="86">
+        <call startline="86">
+          <lvar startline="86">
+            <Symbol>i</Symbol>
+          </lvar>
+          <Symbol>==</Symbol>
+          <lit startline="86">
+            <Fixnum>2</Fixnum>
+          </lit>
+        </call>
+      </array>
+      <call startline="86">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="86">
+          <String>2</String>
+        </str>
+      </call>
+    </when>
+    <call startline="87">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="87">
+        <String>else</String>
+      </str>
+    </call>
+  </case>
+  <call startline="93">
     <nil />
     <Symbol>p</Symbol>
-    <if startline="91">
-      <call startline="88">
-        <lvar startline="88">
+    <if startline="93">
+      <call startline="90">
+        <lvar startline="90">
           <Symbol>i</Symbol>
         </lvar>
         <Symbol>==</Symbol>
-        <lit startline="88">
+        <lit startline="90">
           <Fixnum>0</Fixnum>
         </lit>
       </call>
-      <str startline="88">
+      <str startline="90">
         <String>0</String>
       </str>
-      <str startline="88">
+      <str startline="90">
         <String>1</String>
       </str>
     </if>
   </call>
-  <until startline="91">
-    <call startline="91">
-      <lvar startline="91">
-        <Symbol>i</Symbol>
-      </lvar>
-      <Symbol>==</Symbol>
-      <lit startline="91">
-        <Fixnum>0</Fixnum>
-      </lit>
-    </call>
-    <block startline="91">
-      <call startline="91">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="91">
-          <String>c</String>
-        </str>
-      </call>
-      <call startline="91">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="91">
-          <String>c</String>
-        </str>
-      </call>
-    </block>
-    <TrueClass>true</TrueClass>
-  </until>
-  <until startline="92">
-    <call startline="92">
-      <lvar startline="92">
-        <Symbol>i</Symbol>
-      </lvar>
-      <Symbol>==</Symbol>
-      <lit startline="92">
-        <Fixnum>0</Fixnum>
-      </lit>
-    </call>
-    <call startline="92">
-      <nil />
-      <Symbol>p</Symbol>
-      <str startline="92">
-        <String>c</String>
-      </str>
-    </call>
-    <TrueClass>true</TrueClass>
-  </until>
   <until startline="93">
     <call startline="93">
       <lvar startline="93">
@@ -715,7 +668,22 @@
         <Fixnum>0</Fixnum>
       </lit>
     </call>
-    <nil />
+    <block startline="93">
+      <call startline="93">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="93">
+          <String>c</String>
+        </str>
+      </call>
+      <call startline="93">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="93">
+          <String>c</String>
+        </str>
+      </call>
+    </block>
     <TrueClass>true</TrueClass>
   </until>
   <until startline="94">
@@ -750,7 +718,7 @@
     <nil />
     <TrueClass>true</TrueClass>
   </until>
-  <until startline="97">
+  <until startline="96">
     <call startline="96">
       <lvar startline="96">
         <Symbol>i</Symbol>
@@ -760,54 +728,39 @@
         <Fixnum>0</Fixnum>
       </lit>
     </call>
-    <nil />
-    <TrueClass>true</TrueClass>
-  </until>
-  <until startline="100">
-    <call startline="100">
-      <lvar startline="100">
-        <Symbol>i</Symbol>
-      </lvar>
-      <Symbol>==</Symbol>
-      <lit startline="100">
-        <Fixnum>0</Fixnum>
-      </lit>
-    </call>
-    <block startline="100">
-      <call startline="100">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="100">
-          <String>c</String>
-        </str>
-      </call>
-      <call startline="100">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="100">
-          <String>c</String>
-        </str>
-      </call>
-    </block>
-    <TrueClass>true</TrueClass>
-  </until>
-  <until startline="101">
-    <call startline="101">
-      <lvar startline="101">
-        <Symbol>i</Symbol>
-      </lvar>
-      <Symbol>==</Symbol>
-      <lit startline="101">
-        <Fixnum>0</Fixnum>
-      </lit>
-    </call>
-    <call startline="101">
+    <call startline="96">
       <nil />
       <Symbol>p</Symbol>
-      <str startline="101">
+      <str startline="96">
         <String>c</String>
       </str>
     </call>
+    <TrueClass>true</TrueClass>
+  </until>
+  <until startline="97">
+    <call startline="97">
+      <lvar startline="97">
+        <Symbol>i</Symbol>
+      </lvar>
+      <Symbol>==</Symbol>
+      <lit startline="97">
+        <Fixnum>0</Fixnum>
+      </lit>
+    </call>
+    <nil />
+    <TrueClass>true</TrueClass>
+  </until>
+  <until startline="99">
+    <call startline="98">
+      <lvar startline="98">
+        <Symbol>i</Symbol>
+      </lvar>
+      <Symbol>==</Symbol>
+      <lit startline="98">
+        <Fixnum>0</Fixnum>
+      </lit>
+    </call>
+    <nil />
     <TrueClass>true</TrueClass>
   </until>
   <until startline="102">
@@ -820,7 +773,22 @@
         <Fixnum>0</Fixnum>
       </lit>
     </call>
-    <nil />
+    <block startline="102">
+      <call startline="102">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="102">
+          <String>c</String>
+        </str>
+      </call>
+      <call startline="102">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="102">
+          <String>c</String>
+        </str>
+      </call>
+    </block>
     <TrueClass>true</TrueClass>
   </until>
   <until startline="103">
@@ -865,49 +833,62 @@
         <Fixnum>0</Fixnum>
       </lit>
     </call>
-    <nil />
-    <TrueClass>true</TrueClass>
-  </until>
-  <for startline="109">
-    <array startline="109"></array>
-    <lasgn startline="109">
-      <Symbol>y</Symbol>
-    </lasgn>
-    <block startline="109">
-      <call startline="109">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="109">
-          <String>c</String>
-        </str>
-      </call>
-      <call startline="109">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="109">
-          <String>c</String>
-        </str>
-      </call>
-    </block>
-  </for>
-  <for startline="110">
-    <array startline="110"></array>
-    <lasgn startline="110">
-      <Symbol>y</Symbol>
-    </lasgn>
-    <call startline="110">
+    <call startline="105">
       <nil />
       <Symbol>p</Symbol>
-      <str startline="110">
+      <str startline="105">
         <String>c</String>
       </str>
     </call>
-  </for>
+    <TrueClass>true</TrueClass>
+  </until>
+  <until startline="106">
+    <call startline="106">
+      <lvar startline="106">
+        <Symbol>i</Symbol>
+      </lvar>
+      <Symbol>==</Symbol>
+      <lit startline="106">
+        <Fixnum>0</Fixnum>
+      </lit>
+    </call>
+    <nil />
+    <TrueClass>true</TrueClass>
+  </until>
+  <until startline="107">
+    <call startline="107">
+      <lvar startline="107">
+        <Symbol>i</Symbol>
+      </lvar>
+      <Symbol>==</Symbol>
+      <lit startline="107">
+        <Fixnum>0</Fixnum>
+      </lit>
+    </call>
+    <nil />
+    <TrueClass>true</TrueClass>
+  </until>
   <for startline="111">
     <array startline="111"></array>
     <lasgn startline="111">
       <Symbol>y</Symbol>
     </lasgn>
+    <block startline="111">
+      <call startline="111">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="111">
+          <String>c</String>
+        </str>
+      </call>
+      <call startline="111">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="111">
+          <String>c</String>
+        </str>
+      </call>
+    </block>
   </for>
   <for startline="112">
     <array startline="112"></array>
@@ -933,63 +914,61 @@
     <lasgn startline="114">
       <Symbol>y</Symbol>
     </lasgn>
-    <call startline="115">
+    <call startline="114">
       <nil />
       <Symbol>p</Symbol>
-      <str startline="115">
+      <str startline="114">
         <String>c</String>
       </str>
     </call>
   </for>
-  <for startline="117">
-    <array startline="117"></array>
-    <lasgn startline="117">
+  <for startline="115">
+    <array startline="115"></array>
+    <lasgn startline="115">
       <Symbol>y</Symbol>
     </lasgn>
   </for>
-  <iter startline="121">
-    <call startline="121">
-      <nil />
-      <Symbol>loop</Symbol>
-    </call>
-    <args startline="121"></args>
-    <block startline="121">
-      <call startline="121">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="121">
-          <String>c</String>
-        </str>
-      </call>
-      <call startline="121">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="121">
-          <String>c</String>
-        </str>
-      </call>
-    </block>
-  </iter>
-  <iter startline="122">
-    <call startline="122">
-      <nil />
-      <Symbol>loop</Symbol>
-    </call>
-    <args startline="122"></args>
-    <call startline="122">
+  <for startline="116">
+    <array startline="116"></array>
+    <lasgn startline="116">
+      <Symbol>y</Symbol>
+    </lasgn>
+    <call startline="117">
       <nil />
       <Symbol>p</Symbol>
-      <str startline="122">
+      <str startline="117">
         <String>c</String>
       </str>
     </call>
-  </iter>
+  </for>
+  <for startline="119">
+    <array startline="119"></array>
+    <lasgn startline="119">
+      <Symbol>y</Symbol>
+    </lasgn>
+  </for>
   <iter startline="123">
     <call startline="123">
       <nil />
       <Symbol>loop</Symbol>
     </call>
     <args startline="123"></args>
+    <block startline="123">
+      <call startline="123">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="123">
+          <String>c</String>
+        </str>
+      </call>
+      <call startline="123">
+        <nil />
+        <Symbol>p</Symbol>
+        <str startline="123">
+          <String>c</String>
+        </str>
+      </call>
+    </block>
   </iter>
   <iter startline="124">
     <call startline="124">
@@ -997,22 +976,13 @@
       <Symbol>loop</Symbol>
     </call>
     <args startline="124"></args>
-    <block startline="124">
-      <call startline="124">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="124">
-          <String>c</String>
-        </str>
-      </call>
-      <call startline="124">
-        <nil />
-        <Symbol>p</Symbol>
-        <str startline="124">
-          <String>c</String>
-        </str>
-      </call>
-    </block>
+    <call startline="124">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="124">
+        <String>c</String>
+      </str>
+    </call>
   </iter>
   <iter startline="125">
     <call startline="125">
@@ -1020,13 +990,6 @@
       <Symbol>loop</Symbol>
     </call>
     <args startline="125"></args>
-    <call startline="125">
-      <nil />
-      <Symbol>p</Symbol>
-      <str startline="125">
-        <String>c</String>
-      </str>
-    </call>
   </iter>
   <iter startline="126">
     <call startline="126">
@@ -1034,82 +997,78 @@
       <Symbol>loop</Symbol>
     </call>
     <args startline="126"></args>
-  </iter>
-  <defn startline="129">
-    <Symbol>a</Symbol>
-    <args startline="129"></args>
-    <call startline="129">
-      <nil />
-      <Symbol>p</Symbol>
-      <str startline="129">
-        <String>c</String>
-      </str>
-    </call>
-    <call startline="129">
-      <nil />
-      <Symbol>p</Symbol>
-      <str startline="129">
-        <String>c</String>
-      </str>
-    </call>
-  </defn>
-  <defn startline="130">
-    <Symbol>a</Symbol>
-    <args startline="130"></args>
-    <call startline="130">
-      <nil />
-      <Symbol>p</Symbol>
-      <str startline="130">
-        <String>c</String>
-      </str>
-    </call>
-  </defn>
-  <defn startline="131">
-    <Symbol>a</Symbol>
-    <args startline="131"></args>
-    <nil startline="131"></nil>
-  </defn>
-  <iter startline="134">
-    <call startline="134">
-      <array startline="134"></array>
-      <Symbol>each</Symbol>
-    </call>
-    <args startline="134">
-      <Symbol>b</Symbol>
-    </args>
-    <block startline="134">
-      <call startline="134">
+    <block startline="126">
+      <call startline="126">
         <nil />
         <Symbol>p</Symbol>
-        <lvar startline="134">
-          <Symbol>b</Symbol>
-        </lvar>
+        <str startline="126">
+          <String>c</String>
+        </str>
       </call>
-      <call startline="134">
+      <call startline="126">
         <nil />
         <Symbol>p</Symbol>
-        <lvar startline="134">
-          <Symbol>b</Symbol>
-        </lvar>
+        <str startline="126">
+          <String>c</String>
+        </str>
       </call>
     </block>
   </iter>
-  <iter startline="135">
-    <call startline="135">
-      <array startline="135"></array>
-      <Symbol>each</Symbol>
+  <iter startline="127">
+    <call startline="127">
+      <nil />
+      <Symbol>loop</Symbol>
     </call>
-    <args startline="135">
-      <Symbol>b</Symbol>
-    </args>
-    <call startline="135">
+    <args startline="127"></args>
+    <call startline="127">
       <nil />
       <Symbol>p</Symbol>
-      <lvar startline="135">
-        <Symbol>b</Symbol>
-      </lvar>
+      <str startline="127">
+        <String>c</String>
+      </str>
     </call>
   </iter>
+  <iter startline="128">
+    <call startline="128">
+      <nil />
+      <Symbol>loop</Symbol>
+    </call>
+    <args startline="128"></args>
+  </iter>
+  <defn startline="131">
+    <Symbol>a</Symbol>
+    <args startline="131"></args>
+    <call startline="131">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="131">
+        <String>c</String>
+      </str>
+    </call>
+    <call startline="131">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="131">
+        <String>c</String>
+      </str>
+    </call>
+  </defn>
+  <defn startline="132">
+    <Symbol>a</Symbol>
+    <args startline="132"></args>
+    <call startline="132">
+      <nil />
+      <Symbol>p</Symbol>
+      <str startline="132">
+        <String>c</String>
+      </str>
+    </call>
+  </defn>
+  <defn startline="133">
+    <Symbol>a</Symbol>
+    <args startline="133"></args>
+    <nil startline="133"></nil>
+  </defn>
   <iter startline="136">
     <call startline="136">
       <array startline="136"></array>
@@ -1118,13 +1077,38 @@
     <args startline="136">
       <Symbol>b</Symbol>
     </args>
+    <block startline="136">
+      <call startline="136">
+        <nil />
+        <Symbol>p</Symbol>
+        <lvar startline="136">
+          <Symbol>b</Symbol>
+        </lvar>
+      </call>
+      <call startline="136">
+        <nil />
+        <Symbol>p</Symbol>
+        <lvar startline="136">
+          <Symbol>b</Symbol>
+        </lvar>
+      </call>
+    </block>
   </iter>
   <iter startline="137">
     <call startline="137">
       <array startline="137"></array>
       <Symbol>each</Symbol>
     </call>
-    <args startline="137"></args>
+    <args startline="137">
+      <Symbol>b</Symbol>
+    </args>
+    <call startline="137">
+      <nil />
+      <Symbol>p</Symbol>
+      <lvar startline="137">
+        <Symbol>b</Symbol>
+      </lvar>
+    </call>
   </iter>
   <iter startline="138">
     <call startline="138">
@@ -1134,58 +1118,45 @@
     <args startline="138">
       <Symbol>b</Symbol>
     </args>
-    <call startline="138">
-      <nil />
-      <Symbol>p</Symbol>
-      <lvar startline="138">
-        <Symbol>b</Symbol>
-      </lvar>
-    </call>
   </iter>
   <iter startline="139">
     <call startline="139">
       <array startline="139"></array>
       <Symbol>each</Symbol>
     </call>
-    <args startline="139">
-      <Symbol>b</Symbol>
-    </args>
+    <args startline="139"></args>
   </iter>
   <iter startline="140">
     <call startline="140">
       <array startline="140"></array>
       <Symbol>each</Symbol>
     </call>
-    <args startline="140"></args>
-  </iter>
-  <iter startline="143">
-    <call startline="143">
-      <nil />
-      <Symbol>lambda</Symbol>
-    </call>
-    <args startline="143">
-      <Symbol>x</Symbol>
-      <Symbol>y</Symbol>
+    <args startline="140">
+      <Symbol>b</Symbol>
     </args>
-    <call startline="143">
-      <lvar startline="143">
-        <Symbol>x</Symbol>
-      </lvar>
-      <Symbol>+</Symbol>
-      <lvar startline="143">
-        <Symbol>y</Symbol>
+    <call startline="140">
+      <nil />
+      <Symbol>p</Symbol>
+      <lvar startline="140">
+        <Symbol>b</Symbol>
       </lvar>
     </call>
   </iter>
-  <iter startline="144">
-    <call startline="144">
-      <nil />
-      <Symbol>lambda</Symbol>
+  <iter startline="141">
+    <call startline="141">
+      <array startline="141"></array>
+      <Symbol>each</Symbol>
     </call>
-    <args startline="144">
-      <Symbol>x</Symbol>
-      <Symbol>y</Symbol>
+    <args startline="141">
+      <Symbol>b</Symbol>
     </args>
+  </iter>
+  <iter startline="142">
+    <call startline="142">
+      <array startline="142"></array>
+      <Symbol>each</Symbol>
+    </call>
+    <args startline="142"></args>
   </iter>
   <iter startline="145">
     <call startline="145">
@@ -1194,15 +1165,16 @@
     </call>
     <args startline="145">
       <Symbol>x</Symbol>
+      <Symbol>y</Symbol>
     </args>
     <call startline="145">
       <lvar startline="145">
         <Symbol>x</Symbol>
       </lvar>
       <Symbol>+</Symbol>
-      <lit startline="145">
-        <Fixnum>1</Fixnum>
-      </lit>
+      <lvar startline="145">
+        <Symbol>y</Symbol>
+      </lvar>
     </call>
   </iter>
   <iter startline="146">
@@ -1212,6 +1184,7 @@
     </call>
     <args startline="146">
       <Symbol>x</Symbol>
+      <Symbol>y</Symbol>
     </args>
   </iter>
   <iter startline="147">
@@ -1219,7 +1192,18 @@
       <nil />
       <Symbol>lambda</Symbol>
     </call>
-    <args startline="147"></args>
+    <args startline="147">
+      <Symbol>x</Symbol>
+    </args>
+    <call startline="147">
+      <lvar startline="147">
+        <Symbol>x</Symbol>
+      </lvar>
+      <Symbol>+</Symbol>
+      <lit startline="147">
+        <Fixnum>1</Fixnum>
+      </lit>
+    </call>
   </iter>
   <iter startline="148">
     <call startline="148">
@@ -1229,34 +1213,50 @@
     <args startline="148">
       <Symbol>x</Symbol>
     </args>
-    <call startline="148">
-      <nil />
-      <Symbol>p</Symbol>
-      <call startline="148">
-        <lvar startline="148">
-          <Symbol>x</Symbol>
-        </lvar>
-        <Symbol>+</Symbol>
-        <lit startline="148">
-          <Fixnum>1</Fixnum>
-        </lit>
-      </call>
-    </call>
   </iter>
   <iter startline="149">
     <call startline="149">
       <nil />
       <Symbol>lambda</Symbol>
     </call>
-    <args startline="149">
-      <Symbol>x</Symbol>
-    </args>
+    <args startline="149"></args>
   </iter>
   <iter startline="150">
     <call startline="150">
       <nil />
       <Symbol>lambda</Symbol>
     </call>
-    <args startline="150"></args>
+    <args startline="150">
+      <Symbol>x</Symbol>
+    </args>
+    <call startline="150">
+      <nil />
+      <Symbol>p</Symbol>
+      <call startline="150">
+        <lvar startline="150">
+          <Symbol>x</Symbol>
+        </lvar>
+        <Symbol>+</Symbol>
+        <lit startline="150">
+          <Fixnum>1</Fixnum>
+        </lit>
+      </call>
+    </call>
+  </iter>
+  <iter startline="151">
+    <call startline="151">
+      <nil />
+      <Symbol>lambda</Symbol>
+    </call>
+    <args startline="151">
+      <Symbol>x</Symbol>
+    </args>
+  </iter>
+  <iter startline="152">
+    <call startline="152">
+      <nil />
+      <Symbol>lambda</Symbol>
+    </call>
+    <args startline="152"></args>
   </iter>
 </block>
