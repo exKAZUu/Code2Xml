@@ -102,7 +102,7 @@ scope {
 @init {
   $declaration::isTypedef = false;
 }
-    : gcc_extension_specifier? 'typedef' declaration_specifiers? {$declaration::isTypedef=true;}  // for gcc
+    : gcc_extension_specifier? 'typedef' declaration_specifiers? { $declaration::isTypedef = true; }  // for gcc
       init_declarator_list ';' // special case, looking for typedef	
     | declaration_specifiers init_declarator_list? ';'
     ;
@@ -206,10 +206,13 @@ enumerator
 type_qualifier
     : 'const'
     | 'volatile'
-    | '__const'      // for gcc
-    | 'restrict'      // for gcc
-    | '__volatile__'  // for gcc
-    | '__restrict__'  // for gcc
+    | 'restrict'		// for gcc
+    | '__const'			// for gcc
+    | '__volatile'		// for gcc
+    | '__restrict'		// for gcc
+    | '__const__'		// for gcc
+    | '__volatile__'	// for gcc
+    | '__restrict__'	// for gcc
     ;
 
 declarator
@@ -220,9 +223,9 @@ declarator
 direct_declarator
     :   (	IDENTIFIER
             {
-            if ($declaration.size()>0&&$declaration::isTypedef) {
+            if ($declaration.size() > 0 && $declaration::isTypedef) {
                 $Symbols::types.add($IDENTIFIER.text);
-                System.out.println("define type "+$IDENTIFIER.text);
+                //Console.WriteLine("define type "+$IDENTIFIER.text);
             }
             }
         |	'(' gcc_attribute_list? declarator ')'

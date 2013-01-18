@@ -38,6 +38,20 @@ namespace Code2Xml.Languages.C.Tests {
 		[TestCase("mersenne.c")]
 		[TestCase("Block1.c")]
 		[TestCase("multi.h")]
+        [TestCase("get_sign.e.c")]
+        [TestCase("get_sign.e5180.c")]
+        [TestCase("get_sign.e5199.c")]
+        [TestCase("get_sign.e5199b.c")]
+        [TestCase("get_sign.eb.c")]
+        [TestCase("get_sign.eb8834.c")]
+        [TestCase("get_sign.eb8834b.c")]
+        [TestCase("get_sign.ec.c")]
+        [TestCase("get_sign.ec9013.c")]
+        [TestCase("get_sign.ec9013b.c")]
+        [TestCase("get_sign.ed.c")]
+        [TestCase("get_sign.ed2.c")]
+        [TestCase("get_sign(gcc).c")]
+       
 		public void Parse(string filePath) {
 			var paths = filePath.Split(
 					Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
@@ -56,5 +70,57 @@ int main() {
 ",
 					false);
 		}
-	}
+
+        [Test]
+        public void ParseTypedefFunc()
+        {
+            var xml = CCodeToXml.Instance.Generate(
+                    @"
+typedef int f(long argl, long argl2);
+
+struct st {
+	long argl2;
+};
+",
+                    true);
+        }
+
+        [Test]
+        public void ParseTypedefStruct() {
+            var xml = CCodeToXml.Instance.Generate(
+                    @"
+typedef struct localeinfo_struct {
+  int xxxx;
+} _locale_tstruct,*_locale_t;
+_locale_t locale;
+",
+                    true);
+            
+        }
+
+        [Test]
+        public void ParseTypedefStruct2() {
+            var xml = CCodeToXml.Instance.Generate(
+                    @"
+typedef int (xxx)(const int *cipher);
+struct private_key_st {
+    int cipher;
+};
+",
+                    true);
+        }
+
+        [Test]
+        public void ParseTypedef()
+        {
+            var xml = CCodeToXml.Instance.Generate(
+                    @"
+typedef void *AAAA(unsigned long);
+AAAA *cb;
+",
+                    true);
+        }
+    }
+
+
 }
