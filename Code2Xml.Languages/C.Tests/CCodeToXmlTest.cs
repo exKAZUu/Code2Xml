@@ -50,6 +50,8 @@ namespace Code2Xml.Languages.C.Tests {
         [TestCase("get_sign.ec9013b.c")]
         [TestCase("get_sign.ed.c")]
         [TestCase("get_sign.ed2.c")]
+        [TestCase("get_sign(gcc).c")]
+       
 		public void Parse(string filePath) {
 			var paths = filePath.Split(
 					Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
