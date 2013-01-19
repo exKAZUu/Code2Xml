@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2009-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,6 +24,15 @@ using System.Xml.Linq;
 using Paraiba.Text;
 
 namespace Code2Xml.Core.CodeToXmls {
+	public abstract class CodeToXml<TCodeToXml> : CodeToXml
+			where TCodeToXml : CodeToXml, new() {
+		private static TCodeToXml _instance;
+
+		public static TCodeToXml Instance {
+			get { return (_instance = _instance ?? new TCodeToXml()); }
+		}
+	}
+
 	[ContractClass(typeof(CodeToXmlContract))]
 	public abstract class CodeToXml {
 		public const bool DefaultThrowingParseError = false;
