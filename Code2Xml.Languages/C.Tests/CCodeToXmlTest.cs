@@ -25,7 +25,6 @@ namespace Code2Xml.Languages.C.Tests {
 	[TestFixture]
 	public class CCodeToXmlTest {
 		[Test]
-		[TestCase("preprocessed/get_sign.c")]
 		[TestCase("preprocessed/get_sign(gcc).c")]
 		[TestCase("preprocessed/bubblesort.c")]
 		[TestCase("preprocessed/quicksort.c")]
