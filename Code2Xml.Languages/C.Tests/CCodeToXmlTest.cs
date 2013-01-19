@@ -39,6 +39,8 @@ namespace Code2Xml.Languages.C.Tests {
 		[TestCase("Block1.c")]
 		[TestCase("multi.h")]
 		[TestCase("get_sign(gcc).c")]
+        [TestCase("get_signe.c")]
+
 		public void Parse(string filePath) {
 			var paths = filePath.Split(
 					Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
