@@ -25,8 +25,9 @@ namespace Code2Xml.Languages.C.Tests {
 	[TestFixture]
 	public class CCodeToXmlTest {
 		[Test]
-		[TestCase("preprocessed/bubblesort.c")]
 		[TestCase("preprocessed/get_sign.c")]
+		[TestCase("preprocessed/get_sign(gcc).c")]
+		[TestCase("preprocessed/bubblesort.c")]
 		[TestCase("preprocessed/quicksort.c")]
 		[TestCase("preprocessed/nonAtte.c")]
 		[TestCase("preprocessed/nonAtte02.c")]
@@ -38,9 +39,6 @@ namespace Code2Xml.Languages.C.Tests {
 		[TestCase("mersenne.c")]
 		[TestCase("Block1.c")]
 		[TestCase("multi.h")]
-		[TestCase("get_sign(gcc).c")]
-        [TestCase("get_signe.c")]
-
 		public void Parse(string filePath) {
 			var paths = filePath.Split(
 					Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
