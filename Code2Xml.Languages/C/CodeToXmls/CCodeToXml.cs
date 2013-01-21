@@ -27,23 +27,11 @@ namespace Code2Xml.Languages.C.CodeToXmls {
     [Export(typeof(CodeToXml))]
     public class CCodeToXml : AntlrCodeToXml<CParser> {
         private static CCodeToXml _instance;
-        private static CCodeToXml _throwableInstance;
 
         private CCodeToXml() {}
 
-        private CCodeToXml(bool canThrowParseError) {
-            CanThrowParseError = canThrowParseError;
-        }
-
         public static CCodeToXml Instance {
             get { return _instance ?? (_instance = new CCodeToXml()); }
-        }
-
-        public static CCodeToXml ThrowableInstance {
-            get {
-                return _throwableInstance
-                       ?? (_throwableInstance = new CCodeToXml(true));
-            }
         }
 
         protected override Func<CParser, XAstParserRuleReturnScope>

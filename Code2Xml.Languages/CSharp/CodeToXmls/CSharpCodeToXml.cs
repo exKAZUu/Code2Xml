@@ -27,26 +27,15 @@ namespace Code2Xml.Languages.CSharp.CodeToXmls {
 	[Export(typeof(CodeToXml))]
 	public class CSharpCodeToXml : AntlrCodeToXml<csParser> {
 		private static CSharpCodeToXml _instance;
-		private static CSharpCodeToXml _throwableInstance;
 
 		public Dictionary<string, string> MacroDefines { get; set; }
 
-		private CSharpCodeToXml() : this(false) {}
-
-		private CSharpCodeToXml(bool canThrowParseError) {
-			CanThrowParseError = canThrowParseError;
+		private CSharpCodeToXml() {
 			MacroDefines = new Dictionary<string, string>();
 		}
 
 		public static CSharpCodeToXml Instance {
 			get { return _instance ?? (_instance = new CSharpCodeToXml()); }
-		}
-
-		public static CSharpCodeToXml ThrowableInstance {
-			get {
-				return _throwableInstance
-				       ?? (_throwableInstance = new CSharpCodeToXml(true));
-			}
 		}
 
 		protected override Func<csParser, XAstParserRuleReturnScope>

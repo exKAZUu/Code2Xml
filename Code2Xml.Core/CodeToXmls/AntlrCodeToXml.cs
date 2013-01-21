@@ -27,8 +27,6 @@ namespace Code2Xml.Core.CodeToXmls {
 	[ContractClass(typeof(AntlrCodeToXmlContract<>))]
 	public abstract class AntlrCodeToXml<TParser> : CodeToXml
 			where TParser : Parser, IAntlrParser {
-		protected bool CanThrowParseError { get; set; }
-
 		protected abstract Func<TParser, XAstParserRuleReturnScope>
 			DefaultParseFunc { get; }
 
