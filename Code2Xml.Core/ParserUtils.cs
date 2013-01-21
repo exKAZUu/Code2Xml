@@ -81,13 +81,14 @@ namespace Code2Xml.Core {
 						"Path",
 						EnvironmentVariableTarget.Process) ?? "";
 				return new[] { @"C:", @"D:" }
+                        .Where(Directory.Exists)
 						.SelectMany(dirPath => Directory.EnumerateDirectories(dirPath, "Python" + version + "*"))
 						.Concat(pathVariable.Split(';'))
 						.Select(dirPath => Path.Combine(dirPath, "python.exe"))
 						.Where(File.Exists)
 						.OrderByDescending(
-								dirPath => {
-									var match = Regex.Match(dirPath, @"python(\d*)", RegexOptions.IgnoreCase);
+								filePath => {
+									var match = Regex.Match(filePath, @"python(\d*)", RegexOptions.IgnoreCase);
 									var number = 0;
 									if (match.Success) {
 										number = int.Parse(match.Groups[1].Value);
@@ -120,15 +121,16 @@ namespace Code2Xml.Core {
 						"Path",
 						EnvironmentVariableTarget.Process) ?? "";
 				return new[] { @"C:", @"D:" }
-						.SelectMany(
+                        .Where(Directory.Exists)
+                        .SelectMany(
 								dirPath => Directory.EnumerateDirectories(dirPath, "Ruby" + version + "*")
 										.Select(p => Path.Combine(p, "bin", "ruby.exe")))
 						.Concat(pathVariable.Split(';'))
 						.Select(dirPath => Path.Combine(dirPath, "ruby.exe"))
 						.Where(File.Exists)
 						.OrderByDescending(
-								dirPath => {
-									var match = Regex.Match(dirPath, @"ruby(\d*)", RegexOptions.IgnoreCase);
+								filePath => {
+									var match = Regex.Match(filePath, @"ruby(\d*)", RegexOptions.IgnoreCase);
 									var number = 0;
 									if (match.Success) {
 										number = int.Parse(match.Groups[1].Value);
