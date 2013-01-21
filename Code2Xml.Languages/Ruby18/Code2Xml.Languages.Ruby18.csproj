@@ -74,7 +74,20 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ParserScripts\Ruby18\composite_sexp_processor.rb" />
+    <Content Include="ParserScripts\Ruby18\gauntlet_rubyparser.rb" />
+    <Content Include="ParserScripts\Ruby18\pt_testcase.rb" />
+    <Content Include="ParserScripts\Ruby18\README_ruby_parser.txt" />
+    <Content Include="ParserScripts\Ruby18\README_sexp_processor.txt" />
+    <Content Include="ParserScripts\Ruby18\ruby18_parser.rb" />
+    <Content Include="ParserScripts\Ruby18\ruby19_parser.rb" />
     <Content Include="ParserScripts\Ruby18\ruby2xml.rb" />
+    <Content Include="ParserScripts\Ruby18\ruby_lexer.rb" />
+    <Content Include="ParserScripts\Ruby18\ruby_parser.rb" />
+    <Content Include="ParserScripts\Ruby18\ruby_parser_extras.rb" />
+    <Content Include="ParserScripts\Ruby18\sexp.rb" />
+    <Content Include="ParserScripts\Ruby18\sexp_processor.rb" />
+    <Content Include="ParserScripts\Ruby18\unique.rb" />
     <Content Include="ParserScripts\Ruby18\xml2ruby.rb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

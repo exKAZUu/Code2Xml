@@ -1,3 +1,4 @@
+$LOAD_PATH.push('.')
 require 'ruby2ruby'
 require 'rexml/document'
 

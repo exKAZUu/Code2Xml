@@ -63,9 +63,139 @@ namespace Code2Xml.Languages.Ruby19.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] composite_sexp_processor {
+            get {
+                object obj = ResourceManager.GetObject("composite_sexp_processor", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] gauntlet_rubyparser {
+            get {
+                object obj = ResourceManager.GetObject("gauntlet_rubyparser", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] pt_testcase {
+            get {
+                object obj = ResourceManager.GetObject("pt_testcase", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] README_ruby_parser {
+            get {
+                object obj = ResourceManager.GetObject("README_ruby_parser", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] README_sexp_processor {
+            get {
+                object obj = ResourceManager.GetObject("README_sexp_processor", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ruby_lexer {
+            get {
+                object obj = ResourceManager.GetObject("ruby_lexer", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ruby_parser {
+            get {
+                object obj = ResourceManager.GetObject("ruby_parser", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ruby_parser_extras {
+            get {
+                object obj = ResourceManager.GetObject("ruby_parser_extras", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ruby18_parser {
+            get {
+                object obj = ResourceManager.GetObject("ruby18_parser", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ruby19_parser {
+            get {
+                object obj = ResourceManager.GetObject("ruby19_parser", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] ruby2xml {
             get {
                 object obj = ResourceManager.GetObject("ruby2xml", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] sexp {
+            get {
+                object obj = ResourceManager.GetObject("sexp", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] sexp_processor {
+            get {
+                object obj = ResourceManager.GetObject("sexp_processor", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] unique {
+            get {
+                object obj = ResourceManager.GetObject("unique", resourceCulture);
                 return ((byte[])(obj));
             }
         }

@@ -69,6 +69,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Ruby19",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.SrcML", "Code2Xml.Languages\SrcML\Code2Xml.Languages.SrcML.csproj", "{AED25DB1-BD61-48EA-9BA7-C8F27CDD4064}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Ruby18.Tests", "Code2Xml.Languages\Ruby18.Tests\Code2Xml.Languages.Ruby18.Tests.csproj", "{5C354420-8291-427B-92AD-3E57CA10C0F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -289,6 +291,16 @@ Global
 		{AED25DB1-BD61-48EA-9BA7-C8F27CDD4064}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{AED25DB1-BD61-48EA-9BA7-C8F27CDD4064}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{AED25DB1-BD61-48EA-9BA7-C8F27CDD4064}.Release|x86.ActiveCfg = Release|Any CPU
+		{5C354420-8291-427B-92AD-3E57CA10C0F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C354420-8291-427B-92AD-3E57CA10C0F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C354420-8291-427B-92AD-3E57CA10C0F6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5C354420-8291-427B-92AD-3E57CA10C0F6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5C354420-8291-427B-92AD-3E57CA10C0F6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5C354420-8291-427B-92AD-3E57CA10C0F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C354420-8291-427B-92AD-3E57CA10C0F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C354420-8291-427B-92AD-3E57CA10C0F6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5C354420-8291-427B-92AD-3E57CA10C0F6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5C354420-8291-427B-92AD-3E57CA10C0F6}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -315,5 +327,6 @@ Global
 		{1C794EFE-D229-4A08-B17B-490FAB04F0B2} = {56DC2A40-779D-453E-A9BE-3E3484EC5706}
 		{600462F3-1631-4461-92CE-29091E35F77E} = {56DC2A40-779D-453E-A9BE-3E3484EC5706}
 		{AED25DB1-BD61-48EA-9BA7-C8F27CDD4064} = {56DC2A40-779D-453E-A9BE-3E3484EC5706}
+		{5C354420-8291-427B-92AD-3E57CA10C0F6} = {56DC2A40-779D-453E-A9BE-3E3484EC5706}
 	EndGlobalSection
 EndGlobal

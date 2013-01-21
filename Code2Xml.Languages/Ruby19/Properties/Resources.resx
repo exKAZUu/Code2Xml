@@ -118,8 +118,47 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="composite_sexp_processor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby19\composite_sexp_processor.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gauntlet_rubyparser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby19\gauntlet_rubyparser.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pt_testcase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby19\pt_testcase.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="README_ruby_parser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby19\README_ruby_parser.txt;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="README_sexp_processor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby19\README_sexp_processor.txt;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ruby18_parser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby19\ruby18_parser.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ruby19_parser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby19\ruby19_parser.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="ruby2xml" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ParserScripts\Ruby19\ruby2xml.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ruby_lexer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby19\ruby_lexer.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ruby_parser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby19\ruby_parser.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ruby_parser_extras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby19\ruby_parser_extras.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="sexp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby19\sexp.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="sexp_processor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby19\sexp_processor.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="unique" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby19\unique.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="xml2ruby" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ParserScripts\Ruby19\xml2ruby.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

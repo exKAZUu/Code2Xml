@@ -45,6 +45,32 @@ namespace Code2Xml.Languages.Ruby19.CodeToXmls {
 			_processorPath = processorPath;
 
 			ParaibaFile.WriteIfDifferentSize(PrivateArguments[0], Resources.ruby2xml);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(
+							DirectoryPath,
+							"composite_sexp_processor.rb"), Resources.composite_sexp_processor);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "gauntlet_rubyparser.rb"), Resources.gauntlet_rubyparser);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "pt_testcase.rb"), Resources.pt_testcase);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "README_ruby_parser.txt"), Resources.README_ruby_parser);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "README_sexp_processor.txt"), Resources.README_sexp_processor);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "ruby_lexer.rb"), Resources.ruby_lexer);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "ruby_parser.rb"), Resources.ruby_parser);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "ruby_parser_extras.rb"), Resources.ruby_parser_extras);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "ruby18_parser.rb"), Resources.ruby18_parser);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "ruby19_parser.rb"), Resources.ruby19_parser);
+			ParaibaFile.WriteIfDifferentSize(Path.Combine(DirectoryPath, "sexp.rb"), Resources.sexp);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "sexp_processor.rb"), Resources.sexp_processor);
+			ParaibaFile.WriteIfDifferentSize(Path.Combine(DirectoryPath, "unique.rb"), Resources.unique);
 		}
 
 		public static Ruby19CodeToXml Instance {

@@ -1,3 +1,4 @@
+$LOAD_PATH.push('.')
 require 'ruby_parser'
 
 def traverse(exp)

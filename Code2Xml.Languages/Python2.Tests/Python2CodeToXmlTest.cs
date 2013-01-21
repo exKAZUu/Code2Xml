@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2009-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,13 +21,12 @@ using Code2Xml.Languages.Python2.CodeToXmls;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.Python2.Tests {
-    [TestFixture]
-    public class Python2CodeToXmlTest {
-        [Test]
-        public void コードを解析できる() {
-            var path = Fixture.GetInputPath(
-                    "Python2", "Block1.py");
-            Python2CodeToXml.Instance.GenerateFromFile(path, true);
-        }
-    }
+	[TestFixture]
+	public class Python2CodeToXmlTest {
+		[Test]
+		public void コードを解析できる() {
+			var path = Fixture.GetInputPath("Python2", "Block1.py");
+			Python2CodeToXml.Instance.GenerateFromFile(path, true);
+		}
+	}
 }
