@@ -1,4 +1,4 @@
-$LOAD_PATH.push('.')
+$LOAD_PATH.push('ParserScripts/Ruby19')
 require 'ruby_parser'
 
 def traverse(exp)
