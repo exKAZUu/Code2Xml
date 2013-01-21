@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="ParserScripts\Ruby18\ruby2ruby.rb" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">
@@ -77,6 +78,7 @@
     <Content Include="ParserScripts\Ruby18\composite_sexp_processor.rb" />
     <Content Include="ParserScripts\Ruby18\gauntlet_rubyparser.rb" />
     <Content Include="ParserScripts\Ruby18\pt_testcase.rb" />
+    <Content Include="ParserScripts\Ruby18\README_ruby2ruby.txt" />
     <Content Include="ParserScripts\Ruby18\README_ruby_parser.txt" />
     <Content Include="ParserScripts\Ruby18\README_sexp_processor.txt" />
     <Content Include="ParserScripts\Ruby18\ruby18_parser.rb" />

@@ -103,6 +103,16 @@ namespace Code2Xml.Languages.Ruby19.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] README_ruby2ruby {
+            get {
+                object obj = ResourceManager.GetObject("README_ruby2ruby", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] README_sexp_processor {
             get {
                 object obj = ResourceManager.GetObject("README_sexp_processor", resourceCulture);
@@ -156,6 +166,16 @@ namespace Code2Xml.Languages.Ruby19.Properties {
         internal static byte[] ruby19_parser {
             get {
                 object obj = ResourceManager.GetObject("ruby19_parser", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ruby2ruby {
+            get {
+                object obj = ResourceManager.GetObject("ruby2ruby", resourceCulture);
                 return ((byte[])(obj));
             }
         }

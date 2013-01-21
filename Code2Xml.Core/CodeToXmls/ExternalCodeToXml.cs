@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.IO;
@@ -45,10 +46,15 @@ namespace Code2Xml.Core.CodeToXmls {
 					CreateNoWindow = true,
 					RedirectStandardInput = true,
 					RedirectStandardOutput = true,
+                    RedirectStandardError = true,
 					UseShellExecute = false,
 					WorkingDirectory = WorkingDirectory,
 			};
-			using (var p = Process.Start(info)) {
+            Debug.WriteLine(ProcessorPath);
+            Debug.WriteLine(Arguments.JoinString(" "));
+            Debug.WriteLine(Environment.CurrentDirectory);
+            using (var p = Process.Start(info))
+            {
 				p.StandardInput.WriteFromStream(reader);
 				p.StandardInput.Close();
 				var xml = p.StandardOutput.ReadToEnd();
@@ -61,6 +67,7 @@ namespace Code2Xml.Core.CodeToXmls {
 					}
 					buf.Append(c);
 				}
+                Debug.WriteLine(p.StandardError.ReadToEnd());
 				return XDocument.Parse(buf.ToString()).Root;
 			}
 		}

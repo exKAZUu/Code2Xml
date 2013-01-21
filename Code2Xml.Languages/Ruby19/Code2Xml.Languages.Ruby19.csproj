@@ -60,11 +60,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="ParserScripts\Ruby19\ruby2ruby.rb" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ParserScripts\Ruby19\composite_sexp_processor.rb" />
     <Content Include="ParserScripts\Ruby19\gauntlet_rubyparser.rb" />
     <Content Include="ParserScripts\Ruby19\pt_testcase.rb" />
+    <Content Include="ParserScripts\Ruby19\README_ruby2ruby.txt" />
     <Content Include="ParserScripts\Ruby19\README_ruby_parser.txt" />
     <Content Include="ParserScripts\Ruby19\README_sexp_processor.txt" />
     <Content Include="ParserScripts\Ruby19\ruby18_parser.rb" />

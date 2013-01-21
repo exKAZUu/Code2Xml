@@ -163,4 +163,10 @@
   <data name="xml2ruby" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ParserScripts\Ruby18\xml2ruby.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="README_ruby2ruby" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby18\README_ruby2ruby.txt;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ruby2ruby" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby18\ruby2ruby.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
