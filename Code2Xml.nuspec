@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Code2Xml</id>
-    <version>1.5.3.40</version>
+    <version>1.5.4.43</version>
     <title>Code2Xml</title>
     <authors>Kazunori Sakamoto</authors>
     <owners>Kazunori Sakamoto</owners>
@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Code2Xml is a parser library that interconverts source code and xml files supporting multiple programming languages.</description>
     <releaseNotes>Enhance C parser for supporting the GCC entension grammar.</releaseNotes>
-    <copyright>Copyright (C) Kazunori Sakamoto 2011-2012</copyright>
+    <copyright>Copyright (C) Kazunori Sakamoto 2011-2013</copyright>
     <tags>Library Parser XML Programming Language</tags>
     <dependencies>
       <dependency id="Paraiba.Experiment" version="1.0.2.34" />
