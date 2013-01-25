@@ -12,8 +12,8 @@
   </Target>
 
   <Target Name="Build" DependsOnTargets="Clean">
-    <Exec Condition=" ('$(OS)' != 'Windows_NT') " Command="sh nuget.sh" />
-    <Exec Condition=" ('$(OS)' == 'Windows_NT') " Command="nuget.bat" />
+    <Exec Condition=" ('$(OS)' != 'Windows_NT') " Command="sh nuget_install.sh" />
+    <Exec Condition=" ('$(OS)' == 'Windows_NT') " Command="nuget_install.bat" />
     <MSBuild
       Projects="Code2Xml.sln"
       Targets="Build"
