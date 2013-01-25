@@ -35,6 +35,7 @@ namespace Code2Xml.Languages.C.Tests {
 		[TestCase("preprocessed/get_sign3.c")]
 		[TestCase("preprocessed/get_sign3.1864.c")]
 		[TestCase("preprocessed/get_sign3.pass.c")]
+        [TestCase("preprocessed/get_sign4.c")]
 		[TestCase("DoubleUnderScore.c")]
 		[TestCase("longlong.c")]
 		[TestCase("mul_mv.c")]
