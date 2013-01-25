@@ -69,7 +69,7 @@ namespace Code2Xml.Core {
 
 		public static string GetPythonPath(int version) {
 			// Check whether running OS is Unix/Linux
-			if (!ParaibaEnvironment.OnMono()) {
+			if (!ParaibaEnvironment.OnUnixLike()) {
 				{
 					var path = TryGetPythonPathFromRegistry(version);
 					if (path != null) {
@@ -81,7 +81,7 @@ namespace Code2Xml.Core {
 						"Path",
 						EnvironmentVariableTarget.Process) ?? "";
 				return new[] { @"C:", @"D:" }
-                        .Where(Directory.Exists)
+						.Where(Directory.Exists)
 						.SelectMany(dirPath => Directory.EnumerateDirectories(dirPath, "Python" + version + "*"))
 						.Concat(pathVariable.Split(';'))
 						.Select(dirPath => Path.Combine(dirPath, "python.exe"))
@@ -116,13 +116,13 @@ namespace Code2Xml.Core {
 
 		public static string GetRubyPath(int version) {
 			// Check whether running OS is Unix/Linux
-			if (!ParaibaEnvironment.OnMono()) {
+			if (!ParaibaEnvironment.OnUnixLike()) {
 				var pathVariable = Environment.GetEnvironmentVariable(
 						"Path",
 						EnvironmentVariableTarget.Process) ?? "";
 				return new[] { @"C:", @"D:" }
-                        .Where(Directory.Exists)
-                        .SelectMany(
+						.Where(Directory.Exists)
+						.SelectMany(
 								dirPath => Directory.EnumerateDirectories(dirPath, "Ruby" + version + "*")
 										.Select(p => Path.Combine(p, "bin", "ruby.exe")))
 						.Concat(pathVariable.Split(';'))

@@ -67,7 +67,7 @@ namespace Code2Xml.Languages.Tests {
 
 		[Test, TestCaseSource("TestCases")]
 		public void Parse(string lang, string path, CodeToXml codeToXml, XmlToCode xmlToCode) {
-			var relativePath = XPath.GetRelativePath(path, Fixture.GetInputPath(lang));
+			var relativePath = ParaibaPath.GetRelativePath(path, Fixture.GetInputPath(lang));
 			var expPath = Fixture.GetXmlExpectationPath(lang, relativePath);
 			var r = codeToXml.GenerateFromFile(path, true)
 				.ToString()
@@ -79,7 +79,7 @@ namespace Code2Xml.Languages.Tests {
 
 		[Test, TestCaseSource("TestCases")]
 		public void WriteConvertedXml(string lang, string path, CodeToXml codeToXml, XmlToCode xmlToCode) {
-			var relativePath = XPath.GetRelativePath(path, Fixture.GetInputPath(lang));
+			var relativePath = ParaibaPath.GetRelativePath(path, Fixture.GetInputPath(lang));
 			var outPath = Fixture.GetOutputFilePath(lang, relativePath);
 			Directory.CreateDirectory(Path.GetDirectoryName(outPath));
 			var r = codeToXml.GenerateFromFile(path, true);
