@@ -46,6 +46,7 @@ namespace Code2Xml.Languages.Tests {
 						"Ruby18",
 						"Ruby19",
 						"SrcMLForC",
+						"SrcMLForCpp",
 				};
 				var tt = names
 						.SelectMany(

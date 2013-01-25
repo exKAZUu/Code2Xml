@@ -1,9 +1,0 @@
-washizaki-lab@washizaki-lab:~/work/klee/examples/Release$ mono Occf.exe ins -r get -l klee -t get/klee-last get/getsrc/get_signe3.c
-line 1873:1 no viable alternative at input '.'
-line 1873:2 no viable alternative at input 'x'
-line 1895:9 missing ';' at '('
-line 1895:20 extraneous input '"/hoge.log"' expecting ')'
-line 1:21 missing ';' at 'input'
-wrote:/home/washizaki-lab/work/klee/examples/Release/get/getsrc/get_signe3.c
-washizaki-lab@washizaki-lab:~/work/klee/examples/Release$ 
-

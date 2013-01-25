@@ -145,6 +145,10 @@
       <Project>{600462F3-1631-4461-92CE-29091E35F77E}</Project>
       <Name>Code2Xml.Languages.Ruby19</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Code2Xml.Languages\SrcML\Code2Xml.Languages.SrcML.csproj">
+      <Project>{AED25DB1-BD61-48EA-9BA7-C8F27CDD4064}</Project>
+      <Name>Code2Xml.Languages.SrcML</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
