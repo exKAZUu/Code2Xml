@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,54 +22,54 @@ using System.Xml.Linq;
 using Code2Xml.Core.XmlToCodes;
 
 namespace Code2Xml.Languages.Java.XmlToCodes {
-    [Export(typeof(XmlToCode))]
-    public class JavaXmlToCode : XmlToCodeBase {
-        private static JavaXmlToCode _instance;
+	[Export(typeof(XmlToCode))]
+	public class JavaXmlToCode : XmlToCodeBase {
+		private static JavaXmlToCode _instance;
 
-        private readonly ReadOnlyCollection<string> _supportedExtensions =
-                new ReadOnlyCollection<string>(new[] { ".java" });
+		private readonly ReadOnlyCollection<string> _supportedExtensions =
+				new ReadOnlyCollection<string>(new[] { ".java" });
 
-        private JavaXmlToCode() {}
+		private JavaXmlToCode() {}
 
-        public static JavaXmlToCode Instance {
-            get { return _instance ?? (_instance = new JavaXmlToCode()); }
-        }
+		public static JavaXmlToCode Instance {
+			get { return _instance ?? (_instance = new JavaXmlToCode()); }
+		}
 
-        public override string ParserName {
-            get { return "Java6"; }
-        }
+		public override string ParserName {
+			get { return "Java6"; }
+		}
 
-        public override ReadOnlyCollection<string> SupportedExtensions {
-            get { return _supportedExtensions; }
-        }
+		public override ReadOnlyCollection<string> SupportedExtensions {
+			get { return _supportedExtensions; }
+		}
 
-        protected override bool TreatTerminalSymbol(XElement element) {
-            switch (element.Value) {
-            case "<":
-            case ">":
-            case "=":
-                WriteWordWithoutWhiteSpace(element.Value);
-                break;
+		protected override bool TreatTerminalSymbol(XElement element) {
+			switch (element.Value) {
+			case "<":
+			case ">":
+			case "=":
+				WriteWordWithoutWhiteSpace(element.Value);
+				break;
 
-            case ";":
-                WriteLine(";");
-                break;
+			case ";":
+				WriteLine(";");
+				break;
 
-            case "{":
-                WriteLine("{");
-                Depth++;
-                break;
+			case "{":
+				WriteLine("{");
+				Depth++;
+				break;
 
-            case "}":
-                Depth--;
-                WriteLine("}");
-                break;
+			case "}":
+				Depth--;
+				WriteLine("}");
+				break;
 
-            default:
-                return false;
-            }
+			default:
+				return false;
+			}
 
-            return true;
-        }
-    }
+			return true;
+		}
+	}
 }

@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -62,9 +62,10 @@ if (declaration_stack.size()>0&&((declaration_scope)declaration_stack.Peek()).is
 			const string expected =
 					@"
 						string_literal29=(IToken)Match(input,34,FOLLOW_34_in_type_specifier357); if (state.failed) return retval;
-				IDENTIFIER38=(IToken)new XToken((IToken)Match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type_id415), " +
-					"\"IDENTIFIER\"" +
-					@"); if (state.failed) return retval;
+				IDENTIFIER38=(IToken)new XToken((IToken)Match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type_id415), "
+							+
+							"\"IDENTIFIER\"" +
+							@"); if (state.failed) return retval;
 {string_literal17_tree = (object)adaptor.Create(string_literal17, retval);";
 			Assert.That(
 					ParserModifier.ModifyForTerminalNode(code),
@@ -142,8 +143,8 @@ if (declaration_stack.size()>0&&((declaration_scope)declaration_stack.Peek()).is
 		public void XAstParserRuleReturnScopeの生成() {
 			const string code =
 					@"TraceIn(" + "\"prog\""
-					+
-					@", 2);
+							+
+							@", 2);
 					Symbols_stack.Push(new Symbols_scope(this));Symbols_scopeInit(Symbols_stack.Peek());
 					AstParserRuleReturnScope<object, IToken> retval = new AstParserRuleReturnScope<object, IToken>();";
 			const string expected =

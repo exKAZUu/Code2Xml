@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -76,8 +76,8 @@ namespace Code2Xml.Core.Plugins {
 			return CodeToXmls
 					.FirstOrDefault(
 							ast => ast.TargetExtensions
-							       		.Select(e => e.ToLower())
-							       		.Contains(lowerExt));
+									.Select(e => e.ToLower())
+									.Contains(lowerExt));
 		}
 
 		public static XmlToCode GetXmlToCodeByName(string name) {
@@ -85,10 +85,10 @@ namespace Code2Xml.Core.Plugins {
 			return XmlToCodes
 					.Where(
 							code =>
-							code.ParserName.ToLower().Contains(lowerName))
+									code.ParserName.ToLower().Contains(lowerName))
 					.MinElementOrDefault(
 							code =>
-							Math.Abs(code.ParserName.Length - name.Length));
+									Math.Abs(code.ParserName.Length - name.Length));
 		}
 
 		public static XmlToCode GetXmlToCodeByExtension(string ext) {

@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ namespace Code2Xml.Languages.C.Tests {
 		[TestCase("preprocessed/get_sign3.c")]
 		[TestCase("preprocessed/get_sign3.1864.c")]
 		[TestCase("preprocessed/get_sign3.pass.c")]
-        [TestCase("preprocessed/get_sign4.c")]
+		[TestCase("preprocessed/get_sign4.c")]
 		[TestCase("DoubleUnderScore.c")]
 		[TestCase("longlong.c")]
 		[TestCase("mul_mv.c")]
@@ -62,8 +62,7 @@ int main() {
 		}
 
 		[Test]
-		public void ParseTypedefFunc()
-		{
+		public void ParseTypedefFunc() {
 			var xml = CCodeToXml.Instance.Generate(
 					@"
 typedef int f(long argl, long argl2);
@@ -85,7 +84,6 @@ typedef struct localeinfo_struct {
 _locale_t locale;
 ",
 					true);
-			
 		}
 
 		[Test]
@@ -101,8 +99,7 @@ struct private_key_st {
 		}
 
 		[Test]
-		public void ParseTypedef()
-		{
+		public void ParseTypedef() {
 			var xml = CCodeToXml.Instance.Generate(
 					@"
 typedef void *AAAA(unsigned long);
@@ -111,6 +108,4 @@ AAAA *cb;
 					true);
 		}
 	}
-
-
 }

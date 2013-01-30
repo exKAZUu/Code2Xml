@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -70,8 +70,8 @@ namespace Code2Xml.Languages.Tests {
 			var relativePath = ParaibaPath.GetRelativePath(path, Fixture.GetInputPath(lang));
 			var expPath = Fixture.GetXmlExpectationPath(lang, relativePath);
 			var r = codeToXml.GenerateFromFile(path, true)
-				.ToString()
-				.ReplaceNewlinesForWindows();
+					.ToString()
+					.ReplaceNewlinesForWindows();
 			using (var reader = new StreamReader(expPath, XEncoding.SJIS)) {
 				Assert.That(r, Is.EqualTo(reader.ReadToEnd().ReplaceNewlinesForWindows()));
 			}
@@ -83,7 +83,7 @@ namespace Code2Xml.Languages.Tests {
 			var outPath = Fixture.GetOutputFilePath(lang, relativePath);
 			Directory.CreateDirectory(Path.GetDirectoryName(outPath));
 			var r = codeToXml.GenerateFromFile(path, true);
-			using (var writer = new StreamWriter(outPath, false, XEncoding.SJIS) ) {
+			using (var writer = new StreamWriter(outPath, false, XEncoding.SJIS)) {
 				writer.Write(r.ToString());
 			}
 		}

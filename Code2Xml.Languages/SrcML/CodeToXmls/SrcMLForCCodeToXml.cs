@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.IO;
-using Code2Xml.Core;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Languages.SrcML.Properties;
 using Paraiba.IO;
@@ -29,14 +28,14 @@ namespace Code2Xml.Languages.SrcML.CodeToXmls {
 	public class SrcMLForCCodeToXml : ExternalCodeToXml {
 		private static SrcMLForCCodeToXml _instance;
 
-		private static readonly string DirectoryPath = 
-			Path.Combine( "ParserScripts", "SrcML");
+		private static readonly string DirectoryPath =
+				Path.Combine("ParserScripts", "SrcML");
 
-		private static readonly string PrivateProcessorPath = 
-			Path.Combine(DirectoryPath, "src2srcml.exe");
+		private static readonly string PrivateProcessorPath =
+				Path.Combine(DirectoryPath, "src2srcml.exe");
 
-		private static readonly string[] PrivateArguments = 
-			new[] { "-l", "C" };
+		private static readonly string[] PrivateArguments =
+				new[] { "-l", "C" };
 
 		public static SrcMLForCCodeToXml Instance {
 			get { return _instance ?? (_instance = new SrcMLForCCodeToXml()); }

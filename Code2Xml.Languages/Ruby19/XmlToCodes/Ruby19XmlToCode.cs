@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -56,24 +56,24 @@ namespace Code2Xml.Languages.Ruby19.XmlToCodes {
 			_processorPath = processorPath;
 
 			ParaibaFile.WriteIfDifferentSize(PrivateArguments[0], Resources.xml2ruby);
-            ParaibaFile.WriteIfDifferentSize(
-                    Path.Combine(DirectoryPath, "ruby2ruby.rb"), Resources.ruby2ruby);
-            ParaibaFile.WriteIfDifferentSize(
-                    Path.Combine(DirectoryPath, "composite_sexp_processor.rb"),
-                    Resources.composite_sexp_processor);
-            ParaibaFile.WriteIfDifferentSize(
-                    Path.Combine(DirectoryPath, "pt_testcase.rb"), Resources.pt_testcase);
-            ParaibaFile.WriteIfDifferentSize(
-                    Path.Combine(DirectoryPath, "README_ruby2ruby.txt"), Resources.README_ruby2ruby);
-            ParaibaFile.WriteIfDifferentSize(
-                    Path.Combine(DirectoryPath, "README_sexp_processor.txt"),
-                    Resources.README_sexp_processor);
-            ParaibaFile.WriteIfDifferentSize(Path.Combine(DirectoryPath, "sexp.rb"), Resources.sexp);
-            ParaibaFile.WriteIfDifferentSize(
-                    Path.Combine(DirectoryPath, "sexp_processor.rb"), Resources.sexp_processor);
-            ParaibaFile.WriteIfDifferentSize(
-                    Path.Combine(DirectoryPath, "unique.rb"), Resources.unique);
-        }
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "ruby2ruby.rb"), Resources.ruby2ruby);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "composite_sexp_processor.rb"),
+					Resources.composite_sexp_processor);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "pt_testcase.rb"), Resources.pt_testcase);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "README_ruby2ruby.txt"), Resources.README_ruby2ruby);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "README_sexp_processor.txt"),
+					Resources.README_sexp_processor);
+			ParaibaFile.WriteIfDifferentSize(Path.Combine(DirectoryPath, "sexp.rb"), Resources.sexp);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "sexp_processor.rb"), Resources.sexp_processor);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "unique.rb"), Resources.unique);
+		}
 
 		public static Ruby19XmlToCode Instance {
 			get { return _instance ?? (_instance = new Ruby19XmlToCode()); }

@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,35 +24,35 @@ using Code2Xml.Core.Antlr;
 using Code2Xml.Core.CodeToXmls;
 
 namespace Code2Xml.Languages.C.CodeToXmls {
-    [Export(typeof(CodeToXml))]
-    public class CCodeToXml : AntlrCodeToXml<CParser> {
-        private static CCodeToXml _instance;
+	[Export(typeof(CodeToXml))]
+	public class CCodeToXml : AntlrCodeToXml<CParser> {
+		private static CCodeToXml _instance;
 
-        private CCodeToXml() {}
+		private CCodeToXml() {}
 
-        public static CCodeToXml Instance {
-            get { return _instance ?? (_instance = new CCodeToXml()); }
-        }
+		public static CCodeToXml Instance {
+			get { return _instance ?? (_instance = new CCodeToXml()); }
+		}
 
-        protected override Func<CParser, XAstParserRuleReturnScope>
-            DefaultParseFunc {
-            get { return parser => parser.translation_unit(); }
-        }
+		protected override Func<CParser, XAstParserRuleReturnScope>
+			DefaultParseFunc {
+			get { return parser => parser.translation_unit(); }
+		}
 
-        public override string ParserName {
-            get { return "C"; }
-        }
+		public override string ParserName {
+			get { return "C"; }
+		}
 
-        public override IEnumerable<string> TargetExtensions {
-            get { return new[] { ".c" }; }
-        }
+		public override IEnumerable<string> TargetExtensions {
+			get { return new[] { ".c" }; }
+		}
 
-        protected override ITokenSource CreateTokenSource(ICharStream stream) {
-            return new CLexer(stream);
-        }
+		protected override ITokenSource CreateTokenSource(ICharStream stream) {
+			return new CLexer(stream);
+		}
 
-        protected override CParser CreateParser(ITokenStream tokenStream) {
-            return new CParser(tokenStream);
-        }
-    }
+		protected override CParser CreateParser(ITokenStream tokenStream) {
+			return new CParser(tokenStream);
+		}
+	}
 }

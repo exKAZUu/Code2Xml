@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -61,7 +61,7 @@ namespace Code2Xml.Core.Position {
 		public string SmartLineString {
 			get {
 				return StartLine == EndLine
-				       		? StartLine.ToString() : (StartLine + " - " + EndLine);
+						? StartLine.ToString() : (StartLine + " - " + EndLine);
 			}
 		}
 
@@ -73,7 +73,7 @@ namespace Code2Xml.Core.Position {
 		public string SmartPositionString {
 			get {
 				return StartPosition == EndPosition
-				       		? StartPosition.ToString() : (StartPosition + " - " + EndPosition);
+						? StartPosition.ToString() : (StartPosition + " - " + EndPosition);
 			}
 		}
 
@@ -81,7 +81,7 @@ namespace Code2Xml.Core.Position {
 
 		public bool Equals(CodePosition other) {
 			return other.EndLine == EndLine && other.EndPosition == EndPosition &&
-			       other.StartLine == StartLine && other.StartPosition == StartPosition;
+					other.StartLine == StartLine && other.StartPosition == StartPosition;
 		}
 
 		#endregion

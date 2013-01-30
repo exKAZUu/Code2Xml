@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,48 +22,48 @@ using System.Xml.Linq;
 using Code2Xml.Core.XmlToCodes;
 
 namespace Code2Xml.Languages.Lua.XmlToCodes {
-    [Export(typeof(XmlToCode))]
-    public class LuaXmlToCode : XmlToCodeBase {
-        private static LuaXmlToCode _instance;
+	[Export(typeof(XmlToCode))]
+	public class LuaXmlToCode : XmlToCodeBase {
+		private static LuaXmlToCode _instance;
 
-        private readonly ReadOnlyCollection<string> _supportedExtensions =
-                new ReadOnlyCollection<string>(new[] { ".lua" });
+		private readonly ReadOnlyCollection<string> _supportedExtensions =
+				new ReadOnlyCollection<string>(new[] { ".lua" });
 
-        private LuaXmlToCode() {}
+		private LuaXmlToCode() {}
 
-        public static LuaXmlToCode Instance {
-            get { return _instance ?? (_instance = new LuaXmlToCode()); }
-        }
+		public static LuaXmlToCode Instance {
+			get { return _instance ?? (_instance = new LuaXmlToCode()); }
+		}
 
-        public override string ParserName {
-            get { return "Lua5.1"; }
-        }
+		public override string ParserName {
+			get { return "Lua5.1"; }
+		}
 
-        public override ReadOnlyCollection<string> SupportedExtensions {
-            get { return _supportedExtensions; }
-        }
+		public override ReadOnlyCollection<string> SupportedExtensions {
+			get { return _supportedExtensions; }
+		}
 
-        protected override bool TreatTerminalSymbol(XElement element) {
-            switch (element.Value) {
-            case ";":
-                WriteLine(";");
-                break;
+		protected override bool TreatTerminalSymbol(XElement element) {
+			switch (element.Value) {
+			case ";":
+				WriteLine(";");
+				break;
 
-            case "{":
-                WriteLine("{");
-                Depth++;
-                break;
+			case "{":
+				WriteLine("{");
+				Depth++;
+				break;
 
-            case "}":
-                Depth--;
-                WriteLine("}");
-                break;
+			case "}":
+				Depth--;
+				WriteLine("}");
+				break;
 
-            default:
-                return false;
-            }
+			default:
+				return false;
+			}
 
-            return true;
-        }
-    }
+			return true;
+		}
+	}
 }

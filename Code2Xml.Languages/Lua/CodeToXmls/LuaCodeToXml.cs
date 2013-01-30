@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,35 +24,35 @@ using Code2Xml.Core.Antlr;
 using Code2Xml.Core.CodeToXmls;
 
 namespace Code2Xml.Languages.Lua.CodeToXmls {
-    [Export(typeof(CodeToXml))]
-    public class LuaCodeToXml : AntlrCodeToXml<LuaParser> {
-        private static LuaCodeToXml _instance;
+	[Export(typeof(CodeToXml))]
+	public class LuaCodeToXml : AntlrCodeToXml<LuaParser> {
+		private static LuaCodeToXml _instance;
 
-        private LuaCodeToXml() {}
+		private LuaCodeToXml() {}
 
-        public static LuaCodeToXml Instance {
-            get { return _instance ?? (_instance = new LuaCodeToXml()); }
-        }
+		public static LuaCodeToXml Instance {
+			get { return _instance ?? (_instance = new LuaCodeToXml()); }
+		}
 
-        protected override Func<LuaParser, XAstParserRuleReturnScope>
-            DefaultParseFunc {
-            get { return parser => parser.chunk(); }
-        }
+		protected override Func<LuaParser, XAstParserRuleReturnScope>
+			DefaultParseFunc {
+			get { return parser => parser.chunk(); }
+		}
 
-        public override string ParserName {
-            get { return "Lua5.1"; }
-        }
+		public override string ParserName {
+			get { return "Lua5.1"; }
+		}
 
-        public override IEnumerable<string> TargetExtensions {
-            get { return new[] { ".lua" }; }
-        }
+		public override IEnumerable<string> TargetExtensions {
+			get { return new[] { ".lua" }; }
+		}
 
-        protected override ITokenSource CreateTokenSource(ICharStream stream) {
-            return new LuaLexer(stream);
-        }
+		protected override ITokenSource CreateTokenSource(ICharStream stream) {
+			return new LuaLexer(stream);
+		}
 
-        protected override LuaParser CreateParser(ITokenStream tokenStream) {
-            return new LuaParser(tokenStream);
-        }
-    }
+		protected override LuaParser CreateParser(ITokenStream tokenStream) {
+			return new LuaParser(tokenStream);
+		}
+	}
 }

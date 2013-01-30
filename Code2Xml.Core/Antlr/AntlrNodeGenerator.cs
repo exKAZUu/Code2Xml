@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -49,7 +49,7 @@ namespace Code2Xml.Core.Antlr {
 			Contract.Requires(leftToken != null);
 			Contract.Requires(rightToken != null);
 			Contract.Ensures(Contract.Result<XElement>() != null);
-			return GenerateBlock( node, codeToXml, DefaultXmlToCode.Instance, leftToken, rightToken);
+			return GenerateBlock(node, codeToXml, DefaultXmlToCode.Instance, leftToken, rightToken);
 		}
 
 		public static XElement GenerateBlock<T>(
@@ -69,7 +69,8 @@ namespace Code2Xml.Core.Antlr {
 			if (code.StartsWith(leftToken)) {
 				return node;
 			}
-			var newNode = codeToXml.GenerateWithoutPosition( leftToken + code + rightToken, node.Name.LocalName);
+			var newNode = codeToXml.GenerateWithoutPosition(
+					leftToken + code + rightToken, node.Name.LocalName);
 
 			var oldTokenNodes = node.Descendants()
 					.Where(e => e.Name.LocalName.All(char.IsUpper));

@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,35 +24,35 @@ using Code2Xml.Core.Antlr;
 using Code2Xml.Core.CodeToXmls;
 
 namespace Code2Xml.Languages.Java.CodeToXmls {
-    [Export(typeof(CodeToXml))]
-    public class JavaCodeToXml : AntlrCodeToXml<JavaParser> {
-        private static JavaCodeToXml _instance;
+	[Export(typeof(CodeToXml))]
+	public class JavaCodeToXml : AntlrCodeToXml<JavaParser> {
+		private static JavaCodeToXml _instance;
 
-        private JavaCodeToXml() {}
+		private JavaCodeToXml() {}
 
-        public static JavaCodeToXml Instance {
-            get { return _instance ?? (_instance = new JavaCodeToXml()); }
-        }
+		public static JavaCodeToXml Instance {
+			get { return _instance ?? (_instance = new JavaCodeToXml()); }
+		}
 
-        protected override Func<JavaParser, XAstParserRuleReturnScope>
-            DefaultParseFunc {
-            get { return parser => parser.compilationUnit(); }
-        }
+		protected override Func<JavaParser, XAstParserRuleReturnScope>
+			DefaultParseFunc {
+			get { return parser => parser.compilationUnit(); }
+		}
 
-        public override string ParserName {
-            get { return "Java6"; }
-        }
+		public override string ParserName {
+			get { return "Java6"; }
+		}
 
-        public override IEnumerable<string> TargetExtensions {
-            get { return new[] { ".java" }; }
-        }
+		public override IEnumerable<string> TargetExtensions {
+			get { return new[] { ".java" }; }
+		}
 
-        protected override ITokenSource CreateTokenSource(ICharStream stream) {
-            return new JavaLexer(stream);
-        }
+		protected override ITokenSource CreateTokenSource(ICharStream stream) {
+			return new JavaLexer(stream);
+		}
 
-        protected override JavaParser CreateParser(ITokenStream tokenStream) {
-            return new JavaParser(tokenStream);
-        }
-    }
+		protected override JavaParser CreateParser(ITokenStream tokenStream) {
+			return new JavaParser(tokenStream);
+		}
+	}
 }

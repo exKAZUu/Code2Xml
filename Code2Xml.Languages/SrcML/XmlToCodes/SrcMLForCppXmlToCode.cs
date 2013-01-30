@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2009-2012 Kazunori Sakamoto
+// Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -53,7 +53,10 @@ namespace Code2Xml.Languages.SrcML.XmlToCodes {
 		}
 
 		public override ReadOnlyCollection<string> SupportedExtensions {
-			get { return new ReadOnlyCollection<string>(new[] { ".cpp", ".cxx", ".c++", ".h", ".hpp", ".hxx", ".h++" }); }
+			get {
+				return
+						new ReadOnlyCollection<string>(new[] { ".cpp", ".cxx", ".c++", ".h", ".hpp", ".hxx", ".h++" });
+			}
 		}
 
 		public SrcMLForCppXmlToCode() {

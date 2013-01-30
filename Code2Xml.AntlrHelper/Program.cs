@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,17 +20,17 @@ using System.IO;
 using System.Linq;
 
 namespace Code2Xml.AntlrHelper {
-    internal class Program {
-        private static void Main(string[] args) {
-            foreach (var arg in args) {
-                var path = Path.GetFullPath(arg);
-                var dir = Directory.Exists(path)
-                                  ? path : Path.GetDirectoryName(path);
-                var parser = Directory.EnumerateFiles(dir, "*Parser.cs").First();
-                var lexer = Directory.EnumerateFiles(dir, "*Lexer.cs").First();
-                ParserModifier.Modify(parser);
-                LexerModifier.Modify(lexer);
-            }
-        }
-    }
+	internal class Program {
+		private static void Main(string[] args) {
+			foreach (var arg in args) {
+				var path = Path.GetFullPath(arg);
+				var dir = Directory.Exists(path)
+						? path : Path.GetDirectoryName(path);
+				var parser = Directory.EnumerateFiles(dir, "*Parser.cs").First();
+				var lexer = Directory.EnumerateFiles(dir, "*Lexer.cs").First();
+				ParserModifier.Modify(parser);
+				LexerModifier.Modify(lexer);
+			}
+		}
+	}
 }
