@@ -147,8 +147,8 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 	public const int WHILE=117;
 	public const int WS=118;
 
-    // delegates
-    // delegators
+	// delegates
+	// delegators
 
 	public JavaLexer()
 	{
@@ -2020,8 +2020,8 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 
 			DebugLocation(1482, 13);
 
-			                Skip();
-			            
+							Skip();
+						
 
 			}
 
@@ -2052,8 +2052,8 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 			int _type = COMMENT;
 			int _channel = DefaultTokenChannel;
 
-			            boolean isJavaDoc = false;
-			        
+						boolean isJavaDoc = false;
+					
 			// Java.g:1491:5: ( '/*' ( options {greedy=false; } : . )* '*/' )
 			DebugEnterAlt(1);
 			// Java.g:1491:9: '/*' ( options {greedy=false; } : . )* '*/'
@@ -2063,10 +2063,10 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 
 			DebugLocation(1492, 13);
 
-			                if((char)input.LA(1) == '*'){
-			                    isJavaDoc = true;
-			                }
-			            
+							if((char)input.LA(1) == '*'){
+								isJavaDoc = true;
+							}
+						
 			DebugLocation(1497, 9);
 			// Java.g:1497:9: ( options {greedy=false; } : . )*
 			try { DebugEnterSubRule(25);
@@ -2125,12 +2125,12 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 
 			DebugLocation(1499, 13);
 
-			                if(isJavaDoc==true){
-			                    _channel=Hidden;
-			                }else{
-			                    _channel=Hidden;
-			                }
-			            
+							if(isJavaDoc==true){
+								_channel=Hidden;
+							}else{
+								_channel=Hidden;
+							}
+						
 
 			}
 
@@ -2288,8 +2288,8 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 
 				DebugLocation(1510, 13);
 
-				                _channel=Hidden;
-				            
+								_channel=Hidden;
+							
 
 				}
 				break;
@@ -2341,8 +2341,8 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 
 				DebugLocation(1514, 13);
 
-				                _channel=Hidden;
-				            
+								_channel=Hidden;
+							
 
 				}
 				break;

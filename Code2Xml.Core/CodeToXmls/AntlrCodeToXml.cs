@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2012 Kazunori Sakamoto
+// Copyright (C) 2009-2013 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,8 +17,10 @@
 #endregion
 
 using System;
+using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.IO;
+using System.Linq;
 using System.Xml.Linq;
 using Antlr.Runtime;
 using Code2Xml.Core.Antlr;
@@ -61,10 +63,9 @@ namespace Code2Xml.Core.CodeToXmls {
 					comment.SetAttributeValue(Code2XmlConstants.StartLineName, t.Line);
 					comment.SetAttributeValue(
 							Code2XmlConstants.StartPositionName, t.CharPositionInLine);
-					//var t2 = tokens.Get(i + 1);
-					//comment.SetAttributeValue(Code2XmlConstants.EndLineName, t2.Line);
-					//comment.SetAttributeValue(
-					//        Code2XmlConstants.EndPositionName, t2.CharPositionInLine);
+					comment.SetAttributeValue(
+							Code2XmlConstants.EndLineName,
+							t.Line + comment.Value.TrimEnd().Count(ch => ch == '\n'));
 					element.Add(comment);
 				}
 			}
@@ -77,8 +78,8 @@ namespace Code2Xml.Core.CodeToXmls {
 			return Generate(
 					stream,
 					p =>
-					(XAstParserRuleReturnScope)
-					p.GetType().GetMethod(nodeName).Invoke(p, null),
+							(XAstParserRuleReturnScope)
+							p.GetType().GetMethod(nodeName).Invoke(p, null),
 					throwingParseError);
 		}
 
@@ -125,8 +126,8 @@ namespace Code2Xml.Core.CodeToXmls {
 			return Generate(
 					stream,
 					p =>
-					(XAstParserRuleReturnScope)
-					p.GetType().GetMethod(nodeName).Invoke(p, null),
+							(XAstParserRuleReturnScope)
+							p.GetType().GetMethod(nodeName).Invoke(p, null),
 					throwingParseError,
 					false);
 		}
@@ -181,5 +182,5 @@ namespace Code2Xml.Core.CodeToXmls {
 					new ANTLRStringStream(code), DefaultParseFunc,
 					throwingParseError);
 		}
-			}
+	}
 }

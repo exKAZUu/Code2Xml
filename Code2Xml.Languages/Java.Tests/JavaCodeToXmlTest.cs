@@ -19,33 +19,52 @@
 using System.IO;
 using System.Linq;
 using Antlr.Runtime;
+using Code2Xml.Core.Position;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.Java.CodeToXmls;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.Java.Tests {
-    [TestFixture]
-    public class JavaCodeToXmlTest {
-        private static readonly string InputPath =
-                Path.Combine(Fixture.GetFailedInputPath("Java"), "Unicode.java");
+	[TestFixture]
+	public class JavaCodeToXmlTest {
+		private static readonly string InputPath =
+				Path.Combine(Fixture.GetFailedInputPath("Java"), "Unicode.java");
 
-        [Test]
-        public void Hudsonのソースコードをパースできる() {
-            var path = Fixture.GetInputPath(
-                    "Java", "FileSystemProvisioner.java");
-            JavaCodeToXml.Instance.GenerateFromFile(path, true);
-        }
+		[Test]
+		public void Hudsonのソースコードをパースできる() {
+			var path = Fixture.GetInputPath(
+					"Java", "FileSystemProvisioner.java");
+			JavaCodeToXml.Instance.GenerateFromFile(path, true);
+		}
 
-        [Test, ExpectedException(typeof(MismatchedTokenException))]
-        public void 不正なユニコード文字の入ったコードをパースできない() {
-            JavaCodeToXml.Instance.GenerateFromFile(InputPath, true);
-        }
+		[Test, ExpectedException(typeof(MismatchedTokenException))]
+		public void 不正なユニコード文字の入ったコードをパースできない() {
+			JavaCodeToXml.Instance.GenerateFromFile(InputPath, true);
+		}
 
-        [Test]
-        public void ParseComment() {
-            var e = JavaCodeToXml.Instance.Generate(
-                    @"public class A { /*aaa*/ } // bbb");
-        	Assert.That(e.Descendants("Comment").Count(), Is.EqualTo(2));
-        }
-    }
+		[Test]
+		public void ParseComment() {
+			var e = JavaCodeToXml.Instance.Generate(
+					@"public class A { /*a
+aa*/
+/* aaa */
+// sss
+// bbb
+}");
+			var cs = e.Descendants("Comment").ToList();
+			var p1 = CodePositions.Create(cs[0]);
+			var p2 = CodePositions.Create(cs[1]);
+			var p3 = CodePositions.Create(cs[2]);
+			var p4 = CodePositions.Create(cs[3]);
+			Assert.That(cs.Count, Is.EqualTo(4));
+			Assert.That(p1.StartLine, Is.EqualTo(1));
+			Assert.That(p1.EndLine, Is.EqualTo(2));
+			Assert.That(p2.StartLine, Is.EqualTo(3));
+			Assert.That(p2.EndLine, Is.EqualTo(3));
+			Assert.That(p3.StartLine, Is.EqualTo(4));
+			Assert.That(p3.EndLine, Is.EqualTo(4));
+			Assert.That(p4.StartLine, Is.EqualTo(5));
+			Assert.That(p4.EndLine, Is.EqualTo(5));
+		}
+	}
 }

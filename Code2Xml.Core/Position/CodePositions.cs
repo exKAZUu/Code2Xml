@@ -22,11 +22,11 @@ using System.Xml.Linq;
 
 namespace Code2Xml.Core.Position {
 	public static class CodePositions {
-		public static CodePosition New(XElement element) {
+		public static CodePosition Create(XElement element) {
 			return NewPrivate(element.DescendantsAndSelf());
 		}
 
-		public static CodePosition New(IEnumerable<XElement> elements) {
+		public static CodePosition Create(IEnumerable<XElement> elements) {
 			return NewPrivate(elements.DescendantsAndSelf());
 		}
 
