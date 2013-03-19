@@ -1,4 +1,4 @@
-<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++">
+<unit language="C++">
   <function>
     <type>
       <name>int</name>

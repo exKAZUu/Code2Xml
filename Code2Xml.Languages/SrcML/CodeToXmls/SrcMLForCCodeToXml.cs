@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Diagnostics;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Languages.SrcML.Properties;
@@ -85,6 +86,11 @@ namespace Code2Xml.Languages.SrcML.CodeToXmls {
                 p.StandardInput.Close();
                 var xml = p.StandardOutput.ReadToEnd();
                 Debug.WriteLine(p.StandardError.ReadToEnd());
+                xml = Regex.Replace(
+                        xml, @"(xmlns:?[^=]*=[""][^""]*[""])", "",
+                        RegexOptions.IgnoreCase | RegexOptions.Multiline)
+                        .Replace("</cpp:", "</")
+                        .Replace("<cpp:", "<");
                 return XDocument.Parse(xml, LoadOptions.PreserveWhitespace).Root;
             }
         }

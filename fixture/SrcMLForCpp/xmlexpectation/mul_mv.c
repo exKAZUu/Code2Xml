@@ -1,5 +1,5 @@
-<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++">
-  <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;stdio.h&gt;</cpp:file></cpp:include>
+<unit language="C++">
+  <include>#<directive>include</directive> <file>&lt;stdio.h&gt;</file></include>
 
 
 <function><type><name>int</name></type> <name>main</name><parameter_list>(<param><decl><type><name>void</name></type></decl></param>)</parameter_list>

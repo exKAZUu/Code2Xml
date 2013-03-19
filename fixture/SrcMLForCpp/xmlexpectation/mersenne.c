@@ -1,11 +1,11 @@
-<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++">
-  <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;stdio.h&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;math.h&gt;</cpp:file></cpp:include>
+<unit language="C++">
+  <include>#<directive>include</directive> <file>&lt;stdio.h&gt;</file></include>
+<include>#<directive>include</directive> <file>&lt;math.h&gt;</file></include>
 
 <comment type="line">//#define N 500</comment>
 <comment type="line">//#define M 601</comment>
 <comment type="line">// log 16 =  1.204119982656</comment>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"multi.h"</cpp:file></cpp:include>
+<include>#<directive>include</directive> <file>"multi.h"</file></include>
 
 <function_decl><type><name>int</name></type> <name>NextPrime</name><parameter_list>(<param><decl><type><name>int</name></type> <name>n</name></decl></param>)</parameter_list>;</function_decl>
 <function_decl><type><name>int</name></type> <name>divisor</name><parameter_list>(<param><decl><type><name>int</name></type> <name>n</name></decl></param>)</parameter_list>;</function_decl>
