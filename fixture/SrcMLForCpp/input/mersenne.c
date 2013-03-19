@@ -23,7 +23,7 @@ void main(){
         LongLeftShift(Mersenne, p);
         Initialize(a);
         a[0] = 1;
-        Sub(Mersenne, a);       // Mersenne = 2 ‚Ì p æ - 1
+        Sub(Mersenne, a);
 
         printf("p = %d  \n", p); 
         // Display(Mersenne);
@@ -81,7 +81,7 @@ void main(){
         p = NextPrime(p);   
     }
 }
-// n ˆÈã‚ÌÅ¬‚Ì‘f” (>=3) ‚ğ•Ô‚·B
+
 int NextPrime(int n){
     if(n <3) n = 3;
     if(n%2 == 0 ) n++;
@@ -89,7 +89,7 @@ int NextPrime(int n){
     while(n > divisor(n))  n = n+2;
     return n;
 }
-// n ‚ÌÅ¬‚Ì³‚Ì–ñ” (>1) ‚ğ•Ô‚·B
+
 int divisor(int n){
     int s,i;
     if(n%2 == 0) return 2;
@@ -101,4 +101,3 @@ int divisor(int n){
     }
     return n;
 }
-

@@ -24,44 +24,44 @@ using Code2Xml.Languages.SrcML.Properties;
 using Paraiba.IO;
 
 namespace Code2Xml.Languages.SrcML.XmlToCodes {
-	[Export(typeof(XmlToCode))]
-	public class SrcMLForCppXmlToCode : ExternalXmlToCode {
-		private static SrcMLForCppXmlToCode _instance;
+    [Export(typeof(XmlToCode))]
+    public class SrcMLForCppXmlToCode : ExternalXmlToCode {
+        private static SrcMLForCppXmlToCode _instance;
 
-		private static readonly string DirectoryPath =
-				Path.Combine("ParserScripts", "SrcML");
+        private static readonly string DirectoryPath =
+                Path.Combine("ParserScripts", "SrcML");
 
-		private static readonly string PrivateProcessorPath =
-				Path.Combine(DirectoryPath, "srcml2src.exe");
+        private static readonly string PrivateProcessorPath =
+                Path.Combine(DirectoryPath, "srcml2src.exe");
 
-		private static readonly string[] PrivateArguments = new string[] { };
+        private static readonly string[] PrivateArguments = new string[] { };
 
-		public static SrcMLForCppXmlToCode Instance {
-			get { return _instance ?? (_instance = new SrcMLForCppXmlToCode()); }
-		}
+        public static SrcMLForCppXmlToCode Instance {
+            get { return _instance ?? (_instance = new SrcMLForCppXmlToCode()); }
+        }
 
-		public override string ParserName {
-			get { return "SrcMLForC"; }
-		}
+        public override string ParserName {
+            get { return "SrcMLForCpp"; }
+        }
 
-		protected override string ProcessorPath {
-			get { return PrivateProcessorPath; }
-		}
+        protected override string ProcessorPath {
+            get { return PrivateProcessorPath; }
+        }
 
-		protected override string[] Arguments {
-			get { return PrivateArguments; }
-		}
+        protected override string[] Arguments {
+            get { return PrivateArguments; }
+        }
 
-		public override ReadOnlyCollection<string> SupportedExtensions {
-			get {
-				return
-						new ReadOnlyCollection<string>(new[] { ".cpp", ".cxx", ".c++", ".h", ".hpp", ".hxx", ".h++" });
-			}
-		}
+        public override ReadOnlyCollection<string> SupportedExtensions {
+            get {
+                return new ReadOnlyCollection<string>(
+                        new[] { ".cpp", ".cxx", ".c++", ".h", ".hpp", ".hxx", ".h++" });
+            }
+        }
 
-		public SrcMLForCppXmlToCode() {
-			ParaibaFile.WriteIfDifferentSize(PrivateProcessorPath, Resources.srcml2src);
-			SrcMLFiles.DeployCommonFiles(DirectoryPath);
-		}
-	}
+        public SrcMLForCppXmlToCode() {
+            ParaibaFile.WriteIfDifferentSize(PrivateProcessorPath, Resources.srcml2src);
+            SrcMLFiles.DeployCommonFiles(DirectoryPath);
+        }
+    }
 }

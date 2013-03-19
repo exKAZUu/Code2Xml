@@ -16,50 +16,77 @@
 
 #endregion
 
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
+using System.Diagnostics;
 using System.IO;
+using System.Xml.Linq;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Languages.SrcML.Properties;
+using Paraiba.Core;
 using Paraiba.IO;
 
 namespace Code2Xml.Languages.SrcML.CodeToXmls {
-	[Export(typeof(CodeToXml))]
-	public class SrcMLForCppCodeToXml : ExternalCodeToXml {
-		private static SrcMLForCppCodeToXml _instance;
+    [Export(typeof(CodeToXml))]
+    public class SrcMLForCppCodeToXml : ExternalCodeToXml {
+        private static SrcMLForCppCodeToXml _instance;
 
-		private static readonly string DirectoryPath =
-				Path.Combine("ParserScripts", "SrcML");
+        private static readonly string DirectoryPath =
+                Path.Combine("ParserScripts", "SrcML");
 
-		private static readonly string PrivateProcessorPath =
-				Path.Combine(DirectoryPath, "src2srcml.exe");
+        private static readonly string PrivateProcessorPath =
+                Path.Combine(DirectoryPath, "src2srcml.exe");
 
-		private static readonly string[] PrivateArguments =
-				new[] { "-l", "C++" };
+        private static readonly string[] PrivateArguments =
+                new[] { "-l", "C++" };
 
-		public static SrcMLForCppCodeToXml Instance {
-			get { return _instance ?? (_instance = new SrcMLForCppCodeToXml()); }
-		}
+        public static SrcMLForCppCodeToXml Instance {
+            get { return _instance ?? (_instance = new SrcMLForCppCodeToXml()); }
+        }
 
-		public override string ParserName {
-			get { return "SrcMLForC++"; }
-		}
+        public override string ParserName {
+            get { return "SrcMLForC++"; }
+        }
 
-		public override IEnumerable<string> TargetExtensions {
-			get { return new[] { ".cpp", ".cxx", ".c++", ".h", ".hpp", ".hxx", ".h++" }; }
-		}
+        public override IEnumerable<string> TargetExtensions {
+            get { return new[] { ".cpp", ".cxx", ".c++", ".h", ".hpp", ".hxx", ".h++" }; }
+        }
 
-		protected override string ProcessorPath {
-			get { return PrivateProcessorPath; }
-		}
+        protected override string ProcessorPath {
+            get { return PrivateProcessorPath; }
+        }
 
-		protected override string[] Arguments {
-			get { return PrivateArguments; }
-		}
+        protected override string[] Arguments {
+            get { return PrivateArguments; }
+        }
 
-		public SrcMLForCppCodeToXml() {
-			ParaibaFile.WriteIfDifferentSize(PrivateProcessorPath, Resources.src2srcml);
-			SrcMLFiles.DeployCommonFiles(DirectoryPath);
-		}
-	}
+        public SrcMLForCppCodeToXml() {
+            ParaibaFile.WriteIfDifferentSize(PrivateProcessorPath, Resources.src2srcml);
+            SrcMLFiles.DeployCommonFiles(DirectoryPath);
+        }
+
+        public override XElement Generate(TextReader reader, bool throwingParseError) {
+            var info = new ProcessStartInfo {
+                    FileName = ProcessorPath,
+                    Arguments = Arguments.JoinString(" "),
+                    CreateNoWindow = true,
+                    RedirectStandardInput = true,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    UseShellExecute = false,
+                    WorkingDirectory = WorkingDirectory,
+            };
+            Debug.WriteLine(ProcessorPath);
+            Debug.WriteLine(Arguments.JoinString(" "));
+            Debug.WriteLine(Environment.CurrentDirectory);
+            using (var p = Process.Start(info)) {
+                p.StandardInput.WriteFromStream(reader);
+                p.StandardInput.Close();
+                var xml = p.StandardOutput.ReadToEnd();
+                Debug.WriteLine(p.StandardError.ReadToEnd());
+                return XDocument.Parse(xml, LoadOptions.PreserveWhitespace).Root;
+            }
+        }
+    }
 }
