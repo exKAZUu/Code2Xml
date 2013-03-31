@@ -2,35 +2,6 @@ $LOAD_PATH.push('ParserScripts/Ruby19')
 require 'ruby2ruby'
 require 'rexml/document'
 
-#class Ruby2Ruby
-  def process_block(exp)
-    #return [] if exp.empty?
-
-    result = []
-
-    exp << nil if exp.empty?
-    until exp.empty? do
-      code = exp.shift
-      if code.nil? or code.first == :nil then
-        result << 'nil'   # modified!
-      else
-        result << process(code)
-      end
-    end
-
-    result = result.join "\n"
-
-    result = case self.context[1]
-             when nil, :scope, :if, :iter, :resbody, :when, :while then
-               result + "\n"
-             else
-               "(#{result})"
-             end
-
-    return result
-  end
-#end
-
 def traverse_xml(elem)
   arr = Sexp.new(elem.name.to_sym)
   for e in elem.elements

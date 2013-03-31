@@ -20,7 +20,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Debug\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -60,7 +60,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\Release\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -127,7 +127,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="ParserScripts\Ruby18\ruby182xml.rb" />
     <None Include="ParserScripts\Ruby18\ruby2ruby.rb" />
+    <None Include="ParserScripts\Ruby18\xml2ruby18.rb" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">
@@ -150,14 +152,12 @@
     <Content Include="ParserScripts\Ruby18\README_sexp_processor.txt" />
     <Content Include="ParserScripts\Ruby18\ruby18_parser.rb" />
     <Content Include="ParserScripts\Ruby18\ruby19_parser.rb" />
-    <Content Include="ParserScripts\Ruby18\ruby2xml.rb" />
     <Content Include="ParserScripts\Ruby18\ruby_lexer.rb" />
     <Content Include="ParserScripts\Ruby18\ruby_parser.rb" />
     <Content Include="ParserScripts\Ruby18\ruby_parser_extras.rb" />
     <Content Include="ParserScripts\Ruby18\sexp.rb" />
     <Content Include="ParserScripts\Ruby18\sexp_processor.rb" />
     <Content Include="ParserScripts\Ruby18\unique.rb" />
-    <Content Include="ParserScripts\Ruby18\xml2ruby.rb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

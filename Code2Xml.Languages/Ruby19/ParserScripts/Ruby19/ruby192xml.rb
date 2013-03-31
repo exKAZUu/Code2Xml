@@ -1,4 +1,6 @@
-$LOAD_PATH.push('ParserScripts/Ruby18')
+# encoding: UTF-8
+
+$LOAD_PATH.push('ParserScripts/Ruby19')
 require 'ruby_parser'
 
 def traverse(exp)
@@ -15,11 +17,15 @@ def traverse(exp)
       v.gsub!("&", "&amp;")
       v.gsub!("<", "&lt;")
       v.gsub!(">", "&gt;")
+      v = v.codepoints.to_a.pack("C*")
       print "<#{t.class}>#{v}</#{t.class}>"
     end
   end
   print "</#{name}>"
 end
 
-s = Ruby18Parser.new.parse($stdin.read)
+STDIN.set_encoding("UTF-8", "UTF-8")
+STDOUT.set_encoding("ASCII-8BIT", "ASCII-8BIT")
+
+s = Ruby19Parser.new.parse(STDIN.read)
 print traverse(s)

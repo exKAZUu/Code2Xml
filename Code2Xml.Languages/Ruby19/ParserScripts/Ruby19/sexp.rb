@@ -1,4 +1,3 @@
-
 $TESTING ||= false # unless defined $TESTING
 
 ##
@@ -210,6 +209,11 @@ class Sexp < Array # ZenTest FULL
     find_node meth, delete
   end
 
+  def respond_to? msg, private = false # :nodoc:
+    # why do I need this? Because ruby 2.0 is broken. That's why.
+    super
+  end
+
   def pretty_print(q) # :nodoc:
     nnd = ')'
     nnd << ".line(#{line})" if line && ENV['VERBOSE']
@@ -233,6 +237,9 @@ class Sexp < Array # ZenTest FULL
     self[1..-1]
   end
 
+  alias :head :sexp_type
+  alias :rest :sexp_body
+
   ##
   # If run with debug, Sexp will raise if you shift on an empty
   # Sexp. Helps with debugging.
@@ -240,24 +247,22 @@ class Sexp < Array # ZenTest FULL
   def shift
     raise "I'm empty" if self.empty?
     super
-  end if $DEBUG or $TESTING
+  end if ($DEBUG or $TESTING) unless (defined?(RUBY_ENGINE) and RUBY_ENGINE == "maglev")
 
   ##
   # Returns the bare bones structure of the sexp.
   # s(:a, :b, s(:c, :d), :e) => s(:a, s(:c))
 
   def structure
-    result = self.class.new
     if Array === self.first then
-      raise "When does this happen? #{self.inspect}" # TODO: remove >= 4.2.0
-      result = self.first.structure
+      s(:bogus, *self).structure # TODO: remove >= 4.2.0
     else
-      result << self.first
-      self.grep(Sexp).each do |subexp|
-        result << subexp.structure
+      result = s(self.first)
+      self.each do |subexp|
+        result << subexp.structure if Sexp === subexp
       end
+      result
     end
-    result
   end
 
   ##
@@ -322,9 +327,8 @@ module SexpMatchSpecials
 end
 
 ##
-# This is just a stupid shortcut to make indentation much cleaner.
+# This is a very important shortcut to make using Sexps much more awesome.
 
 def s(*args)
   Sexp.new(*args)
 end
-

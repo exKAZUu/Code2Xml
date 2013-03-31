@@ -16,16 +16,12 @@
 
 #endregion
 
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
-using System.Xml.Linq;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Languages.SrcML.Properties;
-using Paraiba.Core;
 using Paraiba.IO;
 
 namespace Code2Xml.Languages.SrcML.CodeToXmls {
@@ -67,32 +63,14 @@ namespace Code2Xml.Languages.SrcML.CodeToXmls {
             SrcMLFiles.DeployCommonFiles(DirectoryPath);
         }
 
-        public override XElement Generate(TextReader reader, bool throwingParseError) {
-            var info = new ProcessStartInfo {
-                    FileName = ProcessorPath,
-                    Arguments = Arguments.JoinString(" "),
-                    CreateNoWindow = true,
-                    RedirectStandardInput = true,
-                    RedirectStandardOutput = true,
-                    RedirectStandardError = true,
-                    UseShellExecute = false,
-                    WorkingDirectory = WorkingDirectory,
-            };
-            Debug.WriteLine(ProcessorPath);
-            Debug.WriteLine(Arguments.JoinString(" "));
-            Debug.WriteLine(Environment.CurrentDirectory);
-            using (var p = Process.Start(info)) {
-                p.StandardInput.WriteFromStream(reader);
-                p.StandardInput.Close();
-                var xml = p.StandardOutput.ReadToEnd();
-                Debug.WriteLine(p.StandardError.ReadToEnd());
-                xml = Regex.Replace(
-                        xml, @"(xmlns:?[^=]*=[""][^""]*[""])", "",
-                        RegexOptions.IgnoreCase | RegexOptions.Multiline)
-                        .Replace("</cpp:", "</")
-                        .Replace("<cpp:", "<");
-                return XDocument.Parse(xml, LoadOptions.PreserveWhitespace).Root;
-            }
+        protected override string Normalize(string xml) {
+            xml = base.Normalize(xml);
+            xml = Regex.Replace(
+                    xml, @"(xmlns:?[^=]*=[""][^""]*[""])", "",
+                    RegexOptions.IgnoreCase | RegexOptions.Multiline)
+                    .Replace("</cpp:", "</")
+                    .Replace("<cpp:", "<");
+            return xml;
         }
     }
 }

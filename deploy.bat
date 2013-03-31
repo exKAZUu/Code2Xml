@@ -3,8 +3,8 @@ mkdir nuspec
 copy *.nuspec nuspec /y
 cd nuspec
 mkdir lib
-copy ..\Code2Xml.Console\bin\Release\*.dll lib\
-copy ..\Code2Xml.Console\bin\Release\*.pdb lib\
+copy ..\Code2Xml.Tools\Console\bin\Release\*.dll lib\
+copy ..\Code2Xml.Tools\Console\bin\Release\*.pdb lib\
 del lib\Paraiba.*
 FOR %%f IN (*.nuspec) DO (
 	nuget pack %%f

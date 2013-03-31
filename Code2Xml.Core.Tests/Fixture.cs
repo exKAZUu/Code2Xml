@@ -21,7 +21,7 @@ using System.Linq;
 
 namespace Code2Xml.Core.Tests {
 	public static class Fixture {
-		public static string FixturePath = Path.Combine("..", "..", "fixture");
+		public static string FixturePath = Path.Combine("..", "..", "..", "..", "fixture");
 		public static string ExpectationName = "expectation";
 		public static string InputName = "input";
 		public static string FailedInputName = "failed_input";

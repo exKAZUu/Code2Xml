@@ -33,7 +33,7 @@ namespace Code2Xml.Languages.Ruby18.XmlToCodes {
 				"ParserScripts", "Ruby18");
 
 		private static readonly string[] PrivateArguments = new[] {
-				Path.Combine(DirectoryPath, "xml2ruby.rb"),
+				Path.Combine(DirectoryPath, "xml2ruby18.rb"),
 		};
 
 		private readonly ReadOnlyCollection<string> _supportedExtensions =
@@ -55,7 +55,7 @@ namespace Code2Xml.Languages.Ruby18.XmlToCodes {
 		public Ruby18XmlToCode(string processorPath) {
 			_processorPath = processorPath;
 
-			ParaibaFile.WriteIfDifferentSize(PrivateArguments[0], Resources.xml2ruby);
+			ParaibaFile.WriteIfDifferentSize(PrivateArguments[0], Resources.xml2ruby18);
 			ParaibaFile.WriteIfDifferentSize(
 					Path.Combine(DirectoryPath, "ruby2ruby.rb"), Resources.ruby2ruby);
 			ParaibaFile.WriteIfDifferentSize(

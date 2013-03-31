@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.Ruby18.CodeToXmls;
 using NUnit.Framework;
@@ -23,9 +24,23 @@ using NUnit.Framework;
 namespace Code2Xml.Languages.Ruby18.Tests {
 	public class Ruby18CodeToXmlTest {
 		[Test]
-		public void コードを解析できる() {
+		public void CanParse() {
 			var path = Fixture.GetInputPath("Ruby18", "block.rb");
 			Ruby18CodeToXml.Instance.GenerateFromFile(path, true);
+		}
+
+		[Test]
+		public void CanParseJapanese() {
+			var xml = Ruby18CodeToXml.Instance.Generate(@"p 'あ'", true);
+            Console.WriteLine(xml);
+            Assert.That(xml.ToString(), Is.StringContaining("あ"));
+		}
+
+		[Test]
+		public void CanParseJapanese2() {
+			var xml = Ruby18CodeToXml.Instance.Generate(@"p = 'あ'", true);
+            Console.WriteLine(xml);
+            Assert.That(xml.ToString(), Is.StringContaining("あ"));
 		}
 	}
 }

@@ -24,7 +24,7 @@ class Regexp
 end
 
 class Ruby2Ruby < SexpProcessor
-  VERSION = '2.0.2'
+  VERSION = '2.0.3'
   LINE_LENGTH = 78
 
   BINARY = [:<=>, :==, :<, :>, :<=, :>=, :-, :+, :*, :/, :%, :<<, :>>, :**]
@@ -229,6 +229,8 @@ class Ruby2Ruby < SexpProcessor
       receiver ||= "self"
       rhs = args.pop
       "#{receiver}[#{args.join(', ')}] = #{rhs}"
+    when :"!" then
+      "(not #{receiver})"
     when :"-@" then
       "-#{receiver}"
     when :"+@" then

@@ -26,49 +26,58 @@ using Paraiba.Core;
 using Paraiba.IO;
 
 namespace Code2Xml.Core.CodeToXmls {
-	[ContractClass(typeof(ExternalCodeToXmlContract))]
-	public abstract class ExternalCodeToXml : CodeToXml {
-		protected abstract string ProcessorPath { get; }
+    [ContractClass(typeof(ExternalCodeToXmlContract))]
+    public abstract class ExternalCodeToXml : CodeToXml {
+        protected static readonly Encoding Encoding = new UTF8Encoding(false);
 
-		protected abstract string[] Arguments { get; }
+        protected abstract string ProcessorPath { get; }
 
-		protected virtual string WorkingDirectory {
-			get {
-				Contract.Ensures(Contract.Result<string>() != null);
-				return "";
-			}
-		}
+        protected abstract string[] Arguments { get; }
 
-		public override XElement Generate(TextReader reader, bool throwingParseError) {
-			var info = new ProcessStartInfo {
-					FileName = ProcessorPath,
-					Arguments = Arguments.JoinString(" "),
-					CreateNoWindow = true,
-					RedirectStandardInput = true,
-					RedirectStandardOutput = true,
-					RedirectStandardError = true,
-					UseShellExecute = false,
-					WorkingDirectory = WorkingDirectory,
-			};
-			Debug.WriteLine(ProcessorPath);
-			Debug.WriteLine(Arguments.JoinString(" "));
-			Debug.WriteLine(Environment.CurrentDirectory);
-			using (var p = Process.Start(info)) {
-				p.StandardInput.WriteFromStream(reader);
-				p.StandardInput.Close();
-				var xml = p.StandardOutput.ReadToEnd();
-				//TODO: 応急処置をやめる
-				var buf = new StringBuilder(xml.Length);
-				for (int i = 0; i < xml.Length; i++) {
-					var c = xml[i];
-					if (char.IsControl(c) && c != '\r' && c != '\n') {
-						c = ' ';
-					}
-					buf.Append(c);
-				}
-				Debug.WriteLine(p.StandardError.ReadToEnd());
-				return XDocument.Parse(buf.ToString()).Root;
-			}
-		}
-	}
+        protected virtual string WorkingDirectory {
+            get {
+                Contract.Ensures(Contract.Result<string>() != null);
+                return "";
+            }
+        }
+
+        public override XElement Generate(TextReader reader, bool throwingParseError) {
+            var info = new ProcessStartInfo {
+                    FileName = ProcessorPath,
+                    Arguments = Arguments.JoinString(" "),
+                    CreateNoWindow = true,
+                    RedirectStandardInput = true,
+                    RedirectStandardOutput = true,
+                    StandardOutputEncoding = Encoding,
+                    RedirectStandardError = true,
+                    UseShellExecute = false,
+                    WorkingDirectory = WorkingDirectory,
+            };
+            Debug.WriteLine(ProcessorPath);
+            Debug.WriteLine(Arguments.JoinString(" "));
+            Debug.WriteLine(Environment.CurrentDirectory);
+            using (var p = Process.Start(info)) {
+                using (var write = new StreamWriter(p.StandardInput.BaseStream, Encoding)) {
+                    write.WriteFromStream(reader);
+                }
+                var xmlStr = p.StandardOutput.ReadToEnd();
+                var normalizedXmlStr = Normalize(xmlStr);
+                Debug.WriteLine(p.StandardError.ReadToEnd());
+                return XDocument.Parse(normalizedXmlStr).Root;
+            }
+        }
+
+        protected virtual string Normalize(string xml) {
+            //TODO: 応急処置をやめる
+            var buf = new StringBuilder(xml.Length);
+            for (int i = 0; i < xml.Length; i++) {
+                var c = xml[i];
+                if (char.IsControl(c) && c != '\r' && c != '\n') {
+                    c = ' ';
+                }
+                buf.Append(c);
+            }
+            return buf.ToString();
+        }
+    }
 }

@@ -24,9 +24,15 @@ namespace Code2Xml.Languages.Python2.Tests {
 	[TestFixture]
 	public class Python2CodeToXmlTest {
 		[Test]
-		public void コードを解析できる() {
+		public void CanParse() {
 			var path = Fixture.GetInputPath("Python2", "Block1.py");
 			Python2CodeToXml.Instance.GenerateFromFile(path, true);
+		}
+
+		[Test]
+		public void CanParseJapanese() {
+			var xml = Python2CodeToXml.Instance.Generate(@"print('あ')", true);
+            Assert.That(xml.ToString(), Is.StringContaining("あ"));
 		}
 	}
 }

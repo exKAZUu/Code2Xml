@@ -33,7 +33,7 @@ namespace Code2Xml.Languages.Ruby19.CodeToXmls {
 				"ParserScripts", "Ruby19");
 
 		private static readonly string[] PrivateArguments = new[] {
-				Path.Combine(DirectoryPath, "ruby2xml.rb"),
+				Path.Combine(DirectoryPath, "ruby192xml.rb"),
 		};
 
 		private readonly string _processorPath;
@@ -44,7 +44,7 @@ namespace Code2Xml.Languages.Ruby19.CodeToXmls {
 		public Ruby19CodeToXml(string processorPath) {
 			_processorPath = processorPath;
 
-			ParaibaFile.WriteIfDifferentSize(PrivateArguments[0], Resources.ruby2xml);
+			ParaibaFile.WriteIfDifferentSize(PrivateArguments[0], Resources.ruby192xml);
 			ParaibaFile.WriteIfDifferentSize(
 					Path.Combine(
 							DirectoryPath,

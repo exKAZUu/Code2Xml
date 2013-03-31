@@ -24,7 +24,7 @@ using System.Xml.Linq;
 namespace Code2Xml.Core.XmlToCodes {
 	[ContractClass(typeof(XmlToCodeBaseContract))]
 	public abstract class XmlToCodeBase : XmlToCode {
-		private readonly StringBuilder _builder;
+	    protected readonly StringBuilder _builder;
 		private int _depth;
 		private bool _indented;
 

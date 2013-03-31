@@ -33,7 +33,7 @@ require 'sexp'
 
 class SexpProcessor
 
-  VERSION = '4.1.3'
+  VERSION = '4.2.0'
 
   ##
   # Automatically shifts off the Sexp type before handing the
@@ -386,6 +386,21 @@ class SexpProcessor
         raise "You went too far unextending env" if @env.empty?
       end
     end
+  end
+end
+
+##
+# A simple subclass of SexpProcessor that defines a pattern I commonly
+# use: non-mutative and strict process that return assorted values;
+# AKA, an interpreter.
+
+class SexpInterpreter < SexpProcessor
+  def initialize
+    super
+
+    self.expected        = Object
+    self.require_empty   = false
+    self.strict          = true
   end
 end
 

@@ -23,6 +23,12 @@ using Paraiba.Core;
 namespace Code2Xml.Console {
 	public class Program {
 		public static void Main(string[] args) {
+		    args = new[] {
+		            @"C:\Users\exKAZUu\Projects\Code2Xml\fixture\Lua\output\Block1.lua",
+		            "-code",
+		            "-Lua",
+		    };
+
 			string parserName = null;
 			string outputPath = null;
 			var outputType = OutputType.DefaultStream;

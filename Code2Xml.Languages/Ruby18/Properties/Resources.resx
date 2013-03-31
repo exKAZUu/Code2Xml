@@ -139,9 +139,6 @@
   <data name="ruby19_parser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ParserScripts\Ruby18\ruby19_parser.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ruby2xml" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ParserScripts\Ruby18\ruby2xml.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="ruby_lexer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ParserScripts\Ruby18\ruby_lexer.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -160,13 +157,16 @@
   <data name="unique" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ParserScripts\Ruby18\unique.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="xml2ruby" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ParserScripts\Ruby18\xml2ruby.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="README_ruby2ruby" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ParserScripts\Ruby18\README_ruby2ruby.txt;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ruby2ruby" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ParserScripts\Ruby18\ruby2ruby.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ruby182xml" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby18\ruby182xml.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="xml2ruby18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\ParserScripts\Ruby18\xml2ruby18.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

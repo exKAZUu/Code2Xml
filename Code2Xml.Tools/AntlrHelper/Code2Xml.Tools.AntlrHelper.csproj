@@ -5,17 +5,17 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5C40DA45-ACB3-4FC4-8CD4-E9053D4081D2}</ProjectGuid>
+    <ProjectGuid>{348EFA09-D22C-4F79-9738-BD82CB87FE7B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Code2Xml.Console</RootNamespace>
-    <AssemblyName>Code2Xml</AssemblyName>
+    <RootNamespace>Code2Xml.Tools.AntlrHelper</RootNamespace>
+    <AssemblyName>AntlrHelper</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
-    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,20 +37,6 @@
     <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
     <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
     <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
-    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
-    <CodeContractsShowSquigglies>False</CodeContractsShowSquigglies>
-    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
-    <CodeContractsEmitXMLDocs>True</CodeContractsEmitXMLDocs>
-    <CodeContractsCustomRewriterAssembly />
-    <CodeContractsCustomRewriterClass />
-    <CodeContractsLibPaths />
-    <CodeContractsExtraRewriteOptions />
-    <CodeContractsExtraAnalysisOptions />
-    <CodeContractsBaseLineFile />
-    <CodeContractsCacheAnalysisResults>False</CodeContractsCacheAnalysisResults>
-    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
-    <CodeContractsReferenceAssembly>DoNotBuild</CodeContractsReferenceAssembly>
-    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
     <CodeContractsInferRequires>False</CodeContractsInferRequires>
     <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
     <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
@@ -58,6 +44,20 @@
     <CodeContractsSuggestRequires>True</CodeContractsSuggestRequires>
     <CodeContractsSuggestEnsures>False</CodeContractsSuggestEnsures>
     <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>DoNotBuild</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -78,8 +78,15 @@
     <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
     <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
     <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsInferRequires>False</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestRequires>True</CodeContractsSuggestRequires>
+    <CodeContractsSuggestEnsures>False</CodeContractsSuggestEnsures>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
     <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
-    <CodeContractsShowSquigglies>False</CodeContractsShowSquigglies>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
     <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
     <CodeContractsEmitXMLDocs>True</CodeContractsEmitXMLDocs>
     <CodeContractsCustomRewriterAssembly />
@@ -88,83 +95,26 @@
     <CodeContractsExtraRewriteOptions />
     <CodeContractsExtraAnalysisOptions />
     <CodeContractsBaseLineFile />
-    <CodeContractsCacheAnalysisResults>False</CodeContractsCacheAnalysisResults>
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
     <CodeContractsRuntimeCheckingLevel>ReleaseRequires</CodeContractsRuntimeCheckingLevel>
     <CodeContractsReferenceAssembly>DoNotBuild</CodeContractsReferenceAssembly>
     <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
-    <CodeContractsInferRequires>False</CodeContractsInferRequires>
-    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
-    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
-    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
-    <CodeContractsSuggestRequires>True</CodeContractsSuggestRequires>
-    <CodeContractsSuggestEnsures>False</CodeContractsSuggestEnsures>
-    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Paraiba, Version=1.1.0.90, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Paraiba.1.1.0.90\lib\net40\Paraiba.dll</HintPath>
+    <Reference Include="Paraiba">
+      <HintPath>..\..\packages\Paraiba.1.1.0.90\lib\net40\Paraiba.dll</HintPath>
     </Reference>
-    <Reference Include="Paraiba.Experiment, Version=1.1.0.42, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Paraiba.Experiment.1.1.0.42\lib\net40\Paraiba.Experiment.dll</HintPath>
+    <Reference Include="Paraiba.Experiment">
+      <HintPath>..\..\packages\Paraiba.Experiment.1.1.0.42\lib\net40\Paraiba.Experiment.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OutputType.cs" />
-    <Compile Include="Parser.cs" />
+    <Compile Include="LexerModifier.cs" />
+    <Compile Include="ParserModifier.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Code2Xml.Core\Code2Xml.Core.csproj">
-      <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>
-      <Name>Code2Xml.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Code2Xml.Languages\CSharp\Code2Xml.Languages.CSharp.csproj">
-      <Project>{BDD5DC39-4CE8-4684-B66A-E9454B4BCFF1}</Project>
-      <Name>Code2Xml.Languages.CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Code2Xml.Languages\C\Code2Xml.Languages.C.csproj">
-      <Project>{D6F3F025-CC01-4BA3-A9D7-9609B4198A6B}</Project>
-      <Name>Code2Xml.Languages.C</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Code2Xml.Languages\JavaScript\Code2Xml.Languages.JavaScript.csproj">
-      <Project>{51B4FB06-4315-4CBD-BCB3-1E933A895107}</Project>
-      <Name>Code2Xml.Languages.JavaScript</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Code2Xml.Languages\Java\Code2Xml.Languages.Java.csproj">
-      <Project>{341BDD4B-B758-4E15-8C13-E30268F8E758}</Project>
-      <Name>Code2Xml.Languages.Java</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Code2Xml.Languages\Lua\Code2Xml.Languages.Lua.csproj">
-      <Project>{5116FC1B-B9CF-4BF5-B8C1-E84441E9CB4C}</Project>
-      <Name>Code2Xml.Languages.Lua</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Code2Xml.Languages\Python2\Code2Xml.Languages.Python2.csproj">
-      <Project>{D7557D95-520B-476D-8AF9-FC1ECC4A7298}</Project>
-      <Name>Code2Xml.Languages.Python2</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Code2Xml.Languages\Python3\Code2Xml.Languages.Python3.csproj">
-      <Project>{D416DB7C-F4F0-4F71-8332-673076B7EB2B}</Project>
-      <Name>Code2Xml.Languages.Python3</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Code2Xml.Languages\Ruby18\Code2Xml.Languages.Ruby18.csproj">
-      <Project>{1C794EFE-D229-4A08-B17B-490FAB04F0B2}</Project>
-      <Name>Code2Xml.Languages.Ruby18</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Code2Xml.Languages\Ruby19\Code2Xml.Languages.Ruby19.csproj">
-      <Project>{600462F3-1631-4461-92CE-29091E35F77E}</Project>
-      <Name>Code2Xml.Languages.Ruby19</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Code2Xml.Languages\SrcML\Code2Xml.Languages.SrcML.csproj">
-      <Project>{AED25DB1-BD61-48EA-9BA7-C8F27CDD4064}</Project>
-      <Name>Code2Xml.Languages.SrcML</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,13 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.AntlrHelper", "Code2Xml.AntlrHelper\Code2Xml.AntlrHelper.csproj", "{348EFA09-D22C-4F79-9738-BD82CB87FE7B}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.AntlrHelper", "Code2Xml.Tools\AntlrHelper\Code2Xml.Tools.AntlrHelper.csproj", "{348EFA09-D22C-4F79-9738-BD82CB87FE7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.AntlrHelper.Tests", "Code2Xml.AntlrHelper.Tests\Code2Xml.AntlrHelper.Tests.csproj", "{1CFB2D6F-4D1F-4D9F-9414-997CDFEA214B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.AntlrHelper.Tests", "Code2Xml.Tools\AntlrHelper.Tests\Code2Xml.Tools.AntlrHelper.Tests.csproj", "{1CFB2D6F-4D1F-4D9F-9414-997CDFEA214B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Console", "Code2Xml.Console\Code2Xml.Console.csproj", "{5C40DA45-ACB3-4FC4-8CD4-E9053D4081D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Console", "Code2Xml.Tools\Console\Code2Xml.Tools.Console.csproj", "{5C40DA45-ACB3-4FC4-8CD4-E9053D4081D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Console.Tests", "Code2Xml.Console.Tests\Code2Xml.Console.Tests.csproj", "{806FF729-C900-45C4-ADD8-09108915062E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Console.Tests", "Code2Xml.Tools\Console.Tests\Code2Xml.Tools.Console.Tests.csproj", "{806FF729-C900-45C4-ADD8-09108915062E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Core", "Code2Xml.Core\Code2Xml.Core.csproj", "{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}"
 EndProject
@@ -70,6 +70,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.SrcML", "Code2Xml.Languages\SrcML\Code2Xml.Languages.SrcML.csproj", "{AED25DB1-BD61-48EA-9BA7-C8F27CDD4064}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Ruby18.Tests", "Code2Xml.Languages\Ruby18.Tests\Code2Xml.Languages.Ruby18.Tests.csproj", "{5C354420-8291-427B-92AD-3E57CA10C0F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.SrcML.Tests", "Code2Xml.Languages\SrcML.Tests\Code2Xml.Languages.SrcML.Tests.csproj", "{7C4A765F-6207-4403-83BC-B0990572C377}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -301,6 +303,16 @@ Global
 		{5C354420-8291-427B-92AD-3E57CA10C0F6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{5C354420-8291-427B-92AD-3E57CA10C0F6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{5C354420-8291-427B-92AD-3E57CA10C0F6}.Release|x86.ActiveCfg = Release|Any CPU
+		{7C4A765F-6207-4403-83BC-B0990572C377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C4A765F-6207-4403-83BC-B0990572C377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C4A765F-6207-4403-83BC-B0990572C377}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7C4A765F-6207-4403-83BC-B0990572C377}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7C4A765F-6207-4403-83BC-B0990572C377}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7C4A765F-6207-4403-83BC-B0990572C377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C4A765F-6207-4403-83BC-B0990572C377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C4A765F-6207-4403-83BC-B0990572C377}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7C4A765F-6207-4403-83BC-B0990572C377}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7C4A765F-6207-4403-83BC-B0990572C377}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -328,5 +340,6 @@ Global
 		{600462F3-1631-4461-92CE-29091E35F77E} = {56DC2A40-779D-453E-A9BE-3E3484EC5706}
 		{AED25DB1-BD61-48EA-9BA7-C8F27CDD4064} = {56DC2A40-779D-453E-A9BE-3E3484EC5706}
 		{5C354420-8291-427B-92AD-3E57CA10C0F6} = {56DC2A40-779D-453E-A9BE-3E3484EC5706}
+		{7C4A765F-6207-4403-83BC-B0990572C377} = {56DC2A40-779D-453E-A9BE-3E3484EC5706}
 	EndGlobalSection
 EndGlobal
