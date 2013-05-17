@@ -21,7 +21,9 @@ using System.ComponentModel.Composition;
 using System.IO;
 using Code2Xml.Core;
 using Code2Xml.Core.CodeToXmls;
+using Code2Xml.Core.XmlToCodes;
 using Code2Xml.Languages.Ruby19.Properties;
+using Code2Xml.Languages.Ruby19.XmlToCodes;
 using Paraiba.IO;
 
 namespace Code2Xml.Languages.Ruby19.CodeToXmls {
@@ -91,6 +93,10 @@ namespace Code2Xml.Languages.Ruby19.CodeToXmls {
 
 		public override IEnumerable<string> TargetExtensions {
 			get { return new[] { ".rb" }; }
+		}
+
+		public override XmlToCode XmlToCode {
+			get { return Ruby19XmlToCode.Instance; }
 		}
 	}
 }

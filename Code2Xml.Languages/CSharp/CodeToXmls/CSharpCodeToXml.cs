@@ -22,6 +22,8 @@ using System.ComponentModel.Composition;
 using Antlr.Runtime;
 using Code2Xml.Core.Antlr;
 using Code2Xml.Core.CodeToXmls;
+using Code2Xml.Core.XmlToCodes;
+using Code2Xml.Languages.CSharp.XmlToCodes;
 
 namespace Code2Xml.Languages.CSharp.CodeToXmls {
 	[Export(typeof(CodeToXml))]
@@ -49,6 +51,10 @@ namespace Code2Xml.Languages.CSharp.CodeToXmls {
 
 		public override IEnumerable<string> TargetExtensions {
 			get { return new[] { ".cs" }; }
+		}
+
+		public override XmlToCode XmlToCode {
+			get { return CSharpXmlToCode.Instance; }
 		}
 
 		protected override ITokenSource CreateTokenSource(ICharStream stream) {

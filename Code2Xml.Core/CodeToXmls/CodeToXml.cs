@@ -21,6 +21,7 @@ using System.Diagnostics.Contracts;
 using System.IO;
 using System.Text;
 using System.Xml.Linq;
+using Code2Xml.Core.XmlToCodes;
 using Paraiba.Text;
 
 namespace Code2Xml.Core.CodeToXmls {
@@ -38,6 +39,7 @@ namespace Code2Xml.Core.CodeToXmls {
 		public const bool DefaultThrowingParseError = false;
 		public abstract string ParserName { get; }
 		public abstract IEnumerable<string> TargetExtensions { get; }
+		public abstract XmlToCode XmlToCode { get; }
 
 		public XElement GenerateFromFile(
 				string path, Encoding encoding,
