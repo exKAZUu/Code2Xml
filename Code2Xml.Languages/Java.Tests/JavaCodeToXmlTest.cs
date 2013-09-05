@@ -52,10 +52,10 @@ aa*/
 // bbb
 }");
 			var cs = e.Descendants("Comment").ToList();
-			var p1 = CodePositions.Create(cs[0]);
-			var p2 = CodePositions.Create(cs[1]);
-			var p3 = CodePositions.Create(cs[2]);
-			var p4 = CodePositions.Create(cs[3]);
+			var p1 = CodePosition.Analyze(cs[0]);
+			var p2 = CodePosition.Analyze(cs[1]);
+			var p3 = CodePosition.Analyze(cs[2]);
+			var p4 = CodePosition.Analyze(cs[3]);
 			Assert.That(cs.Count, Is.EqualTo(4));
 			Assert.That(p1.StartLine, Is.EqualTo(1));
 			Assert.That(p1.EndLine, Is.EqualTo(2));

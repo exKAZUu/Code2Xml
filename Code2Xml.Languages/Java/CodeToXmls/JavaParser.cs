@@ -140,7 +140,7 @@ using RewriteRuleITokenStream = Antlr.Runtime.Tree.RewriteRuleTokenStream;
  *          ambiguity, but if one uses appropriately greedy parsing it yields the
  *           parse that is closest to the meaning of the switch statement.
  *      Renamed "forVarControl" to "enhancedForControl" -- JLS language.
- *      Added semantic predicates to test for shift operations rather than other
+ *      Added semantic predicates to GetTokenStream for shift operations rather than other
  *          things.  Thus, for instance, the string "< <" will never be treated
  *          as a left-shift operator.
  *      In "creator" we rule out "nonWildcardTypeArguments" on arrayCreation,

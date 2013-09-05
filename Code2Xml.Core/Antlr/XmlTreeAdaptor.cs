@@ -41,12 +41,12 @@ namespace Code2Xml.Core.Antlr {
 					element.SetAttributeValue(Code2XmlConstants.StartLineName, payload.Line);
 					element.SetAttributeValue(
 							Code2XmlConstants.StartPositionName, payload.CharPositionInLine);
-				}
-
 				//var endToken = TokenStream.Get(payload.TokenIndex + 1);
 				//element.SetAttributeValue(Code2XmlConstants.EndLineName, endToken.Line);
 				//element.SetAttributeValue(
 				//        Code2XmlConstants.EndPositionName, endToken.CharPositionInLine);
+				}
+
 				parent.Element.Add(element);
 			}
 			return Create(payload);

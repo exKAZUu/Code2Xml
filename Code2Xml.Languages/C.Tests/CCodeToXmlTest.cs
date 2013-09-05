@@ -16,96 +16,112 @@
 
 #endregion
 
+using System;
 using System.IO;
+using Antlr.Runtime;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.C.CodeToXmls;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.C.Tests {
-	[TestFixture]
-	public class CCodeToXmlTest {
-		[Test]
-		[TestCase("preprocessed/get_sign(gcc).c")]
-		[TestCase("preprocessed/bubblesort.c")]
-		[TestCase("preprocessed/quicksort.c")]
-		[TestCase("preprocessed/nonAtte.c")]
-		[TestCase("preprocessed/nonAtte02.c")]
-		[TestCase("preprocessed/nonAtteInline.c")]
-		[TestCase("preprocessed/Attribute.c")]
-		[TestCase("preprocessed/get_sign3.c")]
-		[TestCase("preprocessed/get_sign3.1864.c")]
-		[TestCase("preprocessed/get_sign3.pass.c")]
-		[TestCase("preprocessed/get_sign4.c")]
-		[TestCase("DoubleUnderScore.c")]
-		[TestCase("longlong.c")]
-		[TestCase("mul_mv.c")]
-		[TestCase("mersenne.c")]
-		[TestCase("Block1.c")]
-		[TestCase("multi.h")]
-		public void Parse(string filePath) {
-			var paths = filePath.Split(
-					Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
-			var path = Fixture.GetInputPath("C", paths);
-			CCodeToXml.Instance.GenerateFromFile(path, true);
-		}
+    [TestFixture]
+    public class CCodeToXmlTest {
+        [Test]
+        [TestCase("preprocessed/get_sign(gcc).c")]
+        [TestCase("preprocessed/bubblesort.c")]
+        [TestCase("preprocessed/quicksort.c")]
+        [TestCase("preprocessed/nonAtte.c")]
+        [TestCase("preprocessed/nonAtte02.c")]
+        [TestCase("preprocessed/nonAtteInline.c")]
+        [TestCase("preprocessed/Attribute.c")]
+        [TestCase("preprocessed/get_sign3.c")]
+        [TestCase("preprocessed/get_sign3.1864.c")]
+        [TestCase("preprocessed/get_sign3.pass.c")]
+        [TestCase("preprocessed/get_sign4.c")]
+        [TestCase("DoubleUnderScore.c")]
+        [TestCase("longlong.c")]
+        [TestCase("mul_mv.c")]
+        [TestCase("mersenne.c")]
+        [TestCase("Block1.c")]
+        [TestCase("multi.h")]
+        public void Parse(string filePath) {
+            var paths = filePath.Split(
+                    Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
+            var path = Fixture.GetInputPath("C", paths);
+            CCodeToXml.Instance.GenerateFromFile(path, true);
+        }
 
-		[Test]
-		public void ParseWrongCode() {
-			var xml = CCodeToXml.Instance.Generate(
-					@"
+        [Test]
+        public void ParseWrongCode() {
+            var xml = CCodeToXml.Instance.Generate(
+                    @"
 int main() {
 	printf()
 	return 0;
 }
 ",
-					false);
-		}
+                    false);
+        }
 
-		[Test]
-		public void ParseTypedefFunc() {
-			var xml = CCodeToXml.Instance.Generate(
-					@"
+        [Test]
+        public void ParseTypedefFunc() {
+            var xml = CCodeToXml.Instance.Generate(
+                    @"
 typedef int f(long argl, long argl2);
 
 struct st {
 	long argl2;
 };
 ",
-					true);
-		}
+                    true);
+        }
 
-		[Test]
-		public void ParseTypedefStruct() {
-			var xml = CCodeToXml.Instance.Generate(
-					@"
+        [Test]
+        public void ParseTypedefStruct() {
+            var xml = CCodeToXml.Instance.Generate(
+                    @"
 typedef struct localeinfo_struct {
   int xxxx;
 } _locale_tstruct,*_locale_t;
 _locale_t locale;
 ",
-					true);
-		}
+                    true);
+        }
 
-		[Test]
-		public void ParseTypedefStruct2() {
-			var xml = CCodeToXml.Instance.Generate(
-					@"
+        [Test]
+        public void ParseTypedefStruct2() {
+            var xml = CCodeToXml.Instance.Generate(
+                    @"
 typedef int (xxx)(const int *cipher);
 struct private_key_st {
 	int cipher;
 };
 ",
-					true);
-		}
+                    true);
+        }
 
-		[Test]
-		public void ParseTypedef() {
-			var xml = CCodeToXml.Instance.Generate(
-					@"
-typedef void *AAAA(unsigned long);
-AAAA *cb;
-",
-					true);
-		}
-	}
+        [Test]
+        public void ParseTypedef() {
+            var xml = CCodeToXml.Instance.Generate(
+@"typedef void *AAAA(unsigned long);
+// aaa
+AAAA *cb;", true);
+        }
+
+        [Test]
+        public void GetTokens() {
+            var tokens = CCodeToXml.Instance.GetTokenStream(                  
+@"typedef void *AAAA(unsigned long);
+// aaa
+AAAA *cb;");
+            var list = tokens.GetTokens();
+            tokens.Fill();
+            foreach (var token in list) {
+                if (token.Channel == TokenChannels.Default) {
+                    Console.WriteLine(token.Text);
+                }
+            }
+            Assert.That(tokens.Count, Is.EqualTo(15));
+        }
+    }
 }

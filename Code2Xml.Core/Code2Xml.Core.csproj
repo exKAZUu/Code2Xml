@@ -126,7 +126,6 @@
     <Compile Include="Antlr\XToken.cs" />
     <Compile Include="Code2XmlConstants.cs" />
     <Compile Include="Position\CodePosition.cs" />
-    <Compile Include="Position\CodePositions.cs" />
     <Compile Include="XmlToCodes\XmlToCodeBase.cs" />
     <Compile Include="CodeToXmls\AntlrCodeToXml.cs" />
     <Compile Include="CodeToXmls\AntlrCodeToXmlContract.cs" />

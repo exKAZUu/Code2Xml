@@ -25,161 +25,170 @@ using Antlr.Runtime;
 using Code2Xml.Core.Antlr;
 
 namespace Code2Xml.Core.CodeToXmls {
-	[ContractClass(typeof(AntlrCodeToXmlContract<>))]
-	public abstract class AntlrCodeToXml<TParser> : CodeToXml
-			where TParser : Parser, IAntlrParser {
-		protected abstract Func<TParser, XAstParserRuleReturnScope>
-			DefaultParseFunc { get; }
+    [ContractClass(typeof(AntlrCodeToXmlContract<>))]
+    public abstract class AntlrCodeToXml<TParser> : CodeToXml
+            where TParser : Parser, IAntlrParser {
+        protected abstract Func<TParser, XAstParserRuleReturnScope>
+            DefaultParseFunc { get; }
 
-		protected abstract ITokenSource CreateTokenSource(ICharStream stream);
+        protected abstract ITokenSource CreateTokenSource(ICharStream stream);
 
-		protected abstract TParser CreateParser(ITokenStream tokenStream);
+        protected abstract TParser CreateParser(ITokenStream tokenStream);
 
-		private XElement Generate(
-				ICharStream stream,
-				Func<TParser, XAstParserRuleReturnScope> parseFunc,
-				bool throwingParseError,
-				bool enablePosition = true
-				) {
-			var lex = CreateTokenSource(stream);
-			var tokens = new CommonTokenStream(lex);
-			var parser = CreateParser(tokens);
-			parser.TraceDestination = Console.Error;
-			if (throwingParseError) {
-				parser.TreeAdaptor = new ThrowableXmlTreeAdaptor();
-			}
-			parser.TreeAdaptor.TokenStream = tokens;
-			parser.TreeAdaptor.EnablePosition = enablePosition;
+        private CommonTokenStream GetTokenStream(ICharStream stream) {
+            var lex = CreateTokenSource(stream);
+            return new CommonTokenStream(lex);
+        }
 
-			// Launch parsing
-			var element = parseFunc(parser).Element;
+        public CommonTokenStream GetTokenStream(string code) {
+            return GetTokenStream(new ANTLRStringStream(code));
+        }
 
-			for (int i = 0; i < tokens.Count; i++) {
-				var t = tokens.Get(i);
-				if (t.Channel == TokenChannels.Hidden) {
-					var comment = new XElement(Code2XmlConstants.CommentName);
-					comment.Value = t.Text;
-					comment.SetAttributeValue(Code2XmlConstants.StartLineName, t.Line);
-					comment.SetAttributeValue(
-							Code2XmlConstants.StartPositionName, t.CharPositionInLine);
-					comment.SetAttributeValue(
-							Code2XmlConstants.EndLineName,
-							t.Line + comment.Value.TrimEnd().Count(ch => ch == '\n'));
-					element.Add(comment);
-				}
-			}
+        private XElement Generate(
+                ICharStream stream,
+                Func<TParser, XAstParserRuleReturnScope> parseFunc,
+                bool throwingParseError,
+                bool enablePosition = true
+                ) {
+            var lex = CreateTokenSource(stream);
+            var tokens = new CommonTokenStream(lex);
+            var parser = CreateParser(tokens);
+            parser.TraceDestination = Console.Error;
+            if (throwingParseError) {
+                parser.TreeAdaptor = new ThrowableXmlTreeAdaptor();
+            }
+            parser.TreeAdaptor.TokenStream = tokens;
+            parser.TreeAdaptor.EnablePosition = enablePosition;
 
-			return element;
-		}
+            // Launch parsing
+            var element = parseFunc(parser).Element;
 
-		private XElement Generate(
-				ICharStream stream, string nodeName, bool throwingParseError) {
-			return Generate(
-					stream,
-					p =>
-							(XAstParserRuleReturnScope)
-							p.GetType().GetMethod(nodeName).Invoke(p, null),
-					throwingParseError);
-		}
+            for (int i = 0; i < tokens.Count; i++) {
+                var t = tokens.Get(i);
+                if (t.Channel == TokenChannels.Hidden) {
+                    var comment = new XElement(Code2XmlConstants.CommentName);
+                    comment.Value = t.Text;
+                    comment.SetAttributeValue(Code2XmlConstants.StartLineName, t.Line);
+                    comment.SetAttributeValue(
+                            Code2XmlConstants.StartPositionName, t.CharPositionInLine);
+                    comment.SetAttributeValue(
+                            Code2XmlConstants.EndLineName,
+                            t.Line + comment.Value.TrimEnd().Count(ch => ch == '\n'));
+                    element.Add(comment);
+                }
+            }
 
-		public XElement Generate(
-				string code, string nodeName, bool throwingParseError) {
-			Contract.Requires<ArgumentNullException>(code != null);
-			Contract.Requires<ArgumentNullException>(nodeName != null);
-			Contract.Ensures(Contract.Result<XElement>() != null);
-			return Generate(
-					new ANTLRStringStream(code), nodeName, throwingParseError);
-		}
+            return element;
+        }
 
-		public XElement Generate(string code, string nodeName) {
-			Contract.Requires<ArgumentNullException>(code != null);
-			Contract.Requires<ArgumentNullException>(nodeName != null);
-			Contract.Ensures(Contract.Result<XElement>() != null);
-			return Generate(code, nodeName, DefaultThrowingParseError);
-		}
+        private XElement Generate(
+                ICharStream stream, string nodeName, bool throwingParseError) {
+            return Generate(
+                    stream,
+                    p =>
+                            (XAstParserRuleReturnScope)
+                                    p.GetType().GetMethod(nodeName).Invoke(p, null),
+                    throwingParseError);
+        }
 
-		public XElement Generate(
-				string code,
-				Func<TParser, XAstParserRuleReturnScope> parseAction,
-				bool throwingParseError) {
-			Contract.Requires<ArgumentNullException>(code != null);
-			Contract.Requires<ArgumentNullException>(parseAction != null);
-			Contract.Ensures(Contract.Result<XElement>() != null);
-			return Generate(
-					new ANTLRStringStream(code), parseAction, throwingParseError);
-		}
+        public XElement Generate(
+                string code, string nodeName, bool throwingParseError) {
+            Contract.Requires<ArgumentNullException>(code != null);
+            Contract.Requires<ArgumentNullException>(nodeName != null);
+            Contract.Ensures(Contract.Result<XElement>() != null);
+            return Generate(
+                    new ANTLRStringStream(code), nodeName, throwingParseError);
+        }
 
-		public XElement Generate(
-				string code,
-				Func<TParser, XAstParserRuleReturnScope> parseAction) {
-			Contract.Requires<ArgumentNullException>(code != null);
-			Contract.Requires<ArgumentNullException>(parseAction != null);
-			Contract.Ensures(Contract.Result<XElement>() != null);
-			return Generate(
-					new ANTLRStringStream(code), parseAction,
-					DefaultThrowingParseError);
-		}
+        public XElement Generate(string code, string nodeName) {
+            Contract.Requires<ArgumentNullException>(code != null);
+            Contract.Requires<ArgumentNullException>(nodeName != null);
+            Contract.Ensures(Contract.Result<XElement>() != null);
+            return Generate(code, nodeName, DefaultThrowingParseError);
+        }
 
-		private XElement GenerateWithoutPosition(
-				ICharStream stream, string nodeName, bool throwingParseError) {
-			return Generate(
-					stream,
-					p =>
-							(XAstParserRuleReturnScope)
-							p.GetType().GetMethod(nodeName).Invoke(p, null),
-					throwingParseError,
-					false);
-		}
+        public XElement Generate(
+                string code,
+                Func<TParser, XAstParserRuleReturnScope> parseAction,
+                bool throwingParseError) {
+            Contract.Requires<ArgumentNullException>(code != null);
+            Contract.Requires<ArgumentNullException>(parseAction != null);
+            Contract.Ensures(Contract.Result<XElement>() != null);
+            return Generate(
+                    new ANTLRStringStream(code), parseAction, throwingParseError);
+        }
 
-		public XElement GenerateWithoutPosition(
-				string code, string nodeName, bool throwingParseError) {
-			Contract.Requires<ArgumentNullException>(code != null);
-			Contract.Requires<ArgumentNullException>(nodeName != null);
-			Contract.Ensures(Contract.Result<XElement>() != null);
-			return GenerateWithoutPosition(
-					new ANTLRStringStream(code), nodeName, throwingParseError);
-		}
+        public XElement Generate(
+                string code,
+                Func<TParser, XAstParserRuleReturnScope> parseAction) {
+            Contract.Requires<ArgumentNullException>(code != null);
+            Contract.Requires<ArgumentNullException>(parseAction != null);
+            Contract.Ensures(Contract.Result<XElement>() != null);
+            return Generate(
+                    new ANTLRStringStream(code), parseAction,
+                    DefaultThrowingParseError);
+        }
 
-		public XElement GenerateWithoutPosition(string code, string nodeName) {
-			Contract.Requires<ArgumentNullException>(code != null);
-			Contract.Requires<ArgumentNullException>(nodeName != null);
-			Contract.Ensures(Contract.Result<XElement>() != null);
-			return GenerateWithoutPosition(code, nodeName, DefaultThrowingParseError);
-		}
+        private XElement GenerateWithoutPosition(
+                ICharStream stream, string nodeName, bool throwingParseError) {
+            return Generate(
+                    stream,
+                    p =>
+                            (XAstParserRuleReturnScope)
+                                    p.GetType().GetMethod(nodeName).Invoke(p, null),
+                    throwingParseError,
+                    false);
+        }
 
-		public XElement GenerateWithoutPosition(
-				string code,
-				Func<TParser, XAstParserRuleReturnScope> parseAction,
-				bool throwingParseError) {
-			Contract.Requires<ArgumentNullException>(code != null);
-			Contract.Requires<ArgumentNullException>(parseAction != null);
-			Contract.Ensures(Contract.Result<XElement>() != null);
-			return Generate(
-					new ANTLRStringStream(code), parseAction, throwingParseError, false);
-		}
+        public XElement GenerateWithoutPosition(
+                string code, string nodeName, bool throwingParseError) {
+            Contract.Requires<ArgumentNullException>(code != null);
+            Contract.Requires<ArgumentNullException>(nodeName != null);
+            Contract.Ensures(Contract.Result<XElement>() != null);
+            return GenerateWithoutPosition(
+                    new ANTLRStringStream(code), nodeName, throwingParseError);
+        }
 
-		public XElement GenerateWithoutPosition(
-				string code,
-				Func<TParser, XAstParserRuleReturnScope> parseAction) {
-			Contract.Requires<ArgumentNullException>(code != null);
-			Contract.Requires<ArgumentNullException>(parseAction != null);
-			Contract.Ensures(Contract.Result<XElement>() != null);
-			return Generate(
-					new ANTLRStringStream(code), parseAction,
-					DefaultThrowingParseError, false);
-		}
+        public XElement GenerateWithoutPosition(string code, string nodeName) {
+            Contract.Requires<ArgumentNullException>(code != null);
+            Contract.Requires<ArgumentNullException>(nodeName != null);
+            Contract.Ensures(Contract.Result<XElement>() != null);
+            return GenerateWithoutPosition(code, nodeName, DefaultThrowingParseError);
+        }
 
-		public override XElement Generate(
-				TextReader reader, bool throwingParseError) {
-			return Generate(
-					new ANTLRReaderStream(reader), DefaultParseFunc,
-					throwingParseError);
-		}
+        public XElement GenerateWithoutPosition(
+                string code,
+                Func<TParser, XAstParserRuleReturnScope> parseAction,
+                bool throwingParseError) {
+            Contract.Requires<ArgumentNullException>(code != null);
+            Contract.Requires<ArgumentNullException>(parseAction != null);
+            Contract.Ensures(Contract.Result<XElement>() != null);
+            return Generate(
+                    new ANTLRStringStream(code), parseAction, throwingParseError, false);
+        }
 
-		public override XElement Generate(string code, bool throwingParseError) {
-			return Generate(
-					new ANTLRStringStream(code), DefaultParseFunc,
-					throwingParseError);
-		}
-	}
+        public XElement GenerateWithoutPosition(
+                string code,
+                Func<TParser, XAstParserRuleReturnScope> parseAction) {
+            Contract.Requires<ArgumentNullException>(code != null);
+            Contract.Requires<ArgumentNullException>(parseAction != null);
+            Contract.Ensures(Contract.Result<XElement>() != null);
+            return Generate(
+                    new ANTLRStringStream(code), parseAction,
+                    DefaultThrowingParseError, false);
+        }
+
+        public override XElement Generate(
+                TextReader reader, bool throwingParseError) {
+            return Generate(
+                    new ANTLRReaderStream(reader), DefaultParseFunc,
+                    throwingParseError);
+        }
+
+        public override XElement Generate(string code, bool throwingParseError) {
+            return Generate(
+                    new ANTLRStringStream(code), DefaultParseFunc,
+                    throwingParseError);
+        }
+    }
 }
