@@ -42,3 +42,6 @@ packages
 #Ignore generated or downloaded test files
 output
 download
+
+#Monodevelop
+test-results
