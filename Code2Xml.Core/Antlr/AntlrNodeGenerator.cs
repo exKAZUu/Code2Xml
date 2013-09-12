@@ -69,8 +69,8 @@ namespace Code2Xml.Core.Antlr {
 			if (code.StartsWith(leftToken)) {
 				return node;
 			}
-			var newNode = codeToXml.GenerateWithoutPosition(
-					leftToken + code + rightToken, node.Name.LocalName);
+			var newNode = codeToXml.Generate(
+					leftToken + code + rightToken, node.Name.LocalName, false, false);
 
 			var oldTokenNodes = node.Descendants()
 					.Where(e => e.Name.LocalName.All(char.IsUpper));

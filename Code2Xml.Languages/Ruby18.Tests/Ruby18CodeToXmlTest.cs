@@ -19,7 +19,9 @@
 using System;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.Ruby18.CodeToXmls;
+using Code2Xml.Languages.Ruby18.XmlToCodes;
 using NUnit.Framework;
+using Paraiba.Xml;
 
 namespace Code2Xml.Languages.Ruby18.Tests {
 	public class Ruby18CodeToXmlTest {
@@ -41,6 +43,19 @@ namespace Code2Xml.Languages.Ruby18.Tests {
 			var xml = Ruby18CodeToXml.Instance.Generate(@"p = 'あ'", true);
             Console.WriteLine(xml);
             Assert.That(xml.ToString(), Is.StringContaining("あ"));
+		}
+
+		[Test]
+		public void InterConvertJapanese() {
+			var r1 = Ruby18CodeToXml.Instance.Generate(@"p = 'あ'", true);
+			var c1 = Ruby18XmlToCode.Instance.Generate(r1);
+			var r2 = Ruby18CodeToXml.Instance.Generate(c1, true);
+			var c2 = Ruby18XmlToCode.Instance.Generate(r2);
+			var r3 = Ruby18CodeToXml.Instance.Generate(c2, true);
+			var c3 = Ruby18XmlToCode.Instance.Generate(r3);
+
+			Assert.IsTrue(XmlUtil.EqualsWithElementAndValue(r2, r3));
+			Assert.AreEqual(c2, c3);
 		}
 	}
 }

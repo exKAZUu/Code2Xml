@@ -16,13 +16,19 @@
 
 #endregion
 
+using System;
 using System.Diagnostics;
 using System.Diagnostics.Contracts;
+using System.IO;
+using System.Text;
 using System.Xml.Linq;
 using Paraiba.Core;
+using Paraiba.IO;
 
 namespace Code2Xml.Core.XmlToCodes {
 	public abstract class ExternalXmlToCode : XmlToCode {
+		protected static readonly Encoding Encoding = new UTF8Encoding(false);
+
 		protected abstract string ProcessorPath { get; }
 
 		protected abstract string[] Arguments { get; }
@@ -36,18 +42,27 @@ namespace Code2Xml.Core.XmlToCodes {
 
 		public override string Generate(XElement root) {
 			var info = new ProcessStartInfo {
-					FileName = ProcessorPath,
-					Arguments = Arguments.JoinString(" "),
-					CreateNoWindow = true,
-					RedirectStandardInput = true,
-					RedirectStandardOutput = true,
-					UseShellExecute = false,
-					WorkingDirectory = WorkingDirectory,
+				FileName = ProcessorPath,
+				Arguments = Arguments.JoinString(" "),
+				CreateNoWindow = true,
+				RedirectStandardInput = true,
+				RedirectStandardOutput = true,
+				StandardOutputEncoding = Encoding,
+				StandardErrorEncoding = Encoding,
+				RedirectStandardError = true,
+				UseShellExecute = false,
+				WorkingDirectory = WorkingDirectory,
 			};
+			Debug.WriteLine(ProcessorPath);
+			Debug.WriteLine(Arguments.JoinString(" "));
+			Debug.WriteLine(Environment.CurrentDirectory);
 			using (var p = Process.Start(info)) {
-				p.StandardInput.Write(root);
-				p.StandardInput.Close();
-				return p.StandardOutput.ReadToEnd();
+				using (var write = new StreamWriter(p.StandardInput.BaseStream, Encoding)) {
+					write.Write(root);
+				}
+				var code = p.StandardOutput.ReadToEnd();
+				Debug.WriteLine(p.StandardError.ReadToEnd());
+				return code;
 			}
 		}
 	}

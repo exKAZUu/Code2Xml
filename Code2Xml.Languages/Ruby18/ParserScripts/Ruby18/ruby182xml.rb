@@ -18,6 +18,7 @@ def traverse(exp)
       v.gsub!("<", "&lt;")
       v.gsub!(">", "&gt;")
       v = v.codepoints.to_a.pack("C*")
+      STDERR.puts(v)
       print "<#{t.class}>#{v}</#{t.class}>"
     end
   end
@@ -26,6 +27,7 @@ end
 
 STDIN.set_encoding("UTF-8", "UTF-8")
 STDOUT.set_encoding("ASCII-8BIT", "ASCII-8BIT")
+STDERR.set_encoding("ASCII-8BIT", "ASCII-8BIT")
 
 s = Ruby18Parser.new.parse(STDIN.read)
 print traverse(s)

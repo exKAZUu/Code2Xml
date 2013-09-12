@@ -41,17 +41,21 @@ namespace Code2Xml.Core.CodeToXmls {
 			}
 		}
 
-		public override XElement Generate(TextReader reader, bool throwingParseError) {
+		public override XElement Generate(
+				TextReader reader,
+				bool throwingParseError = DefaultThrowingParseError, bool enablePosition = DefaultEnablePosition) {
+			// TODO: Support throwingParseError and enablePosition
 			var info = new ProcessStartInfo {
-					FileName = ProcessorPath,
-					Arguments = Arguments.JoinString(" "),
-					CreateNoWindow = true,
-					RedirectStandardInput = true,
-					RedirectStandardOutput = true,
-					StandardOutputEncoding = Encoding,
-					RedirectStandardError = true,
-					UseShellExecute = false,
-					WorkingDirectory = WorkingDirectory,
+				FileName = ProcessorPath,
+				Arguments = Arguments.JoinString(" "),
+				CreateNoWindow = true,
+				RedirectStandardInput = true,
+				RedirectStandardOutput = true,
+				StandardOutputEncoding = Encoding,
+				StandardErrorEncoding = Encoding,
+				RedirectStandardError = true,
+				UseShellExecute = false,
+				WorkingDirectory = WorkingDirectory,
 			};
 			Debug.WriteLine(ProcessorPath);
 			Debug.WriteLine(Arguments.JoinString(" "));
@@ -68,7 +72,7 @@ namespace Code2Xml.Core.CodeToXmls {
 		}
 
 		protected virtual string Normalize(string xml) {
-			//TODO: 応急処置をやめる
+			// TODO: Deal with illegal characters more smartly
 			var buf = new StringBuilder(xml.Length);
 			for (int i = 0; i < xml.Length; i++) {
 				var c = xml[i];

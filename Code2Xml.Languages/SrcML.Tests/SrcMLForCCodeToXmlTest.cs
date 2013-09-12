@@ -11,7 +11,7 @@ namespace Code2Xml.Languages.SrcML.Tests
 {
     public class SrcMLForCCodeToXmlTest
     {
-		[Test]
+		[Test, Ignore]
 		public void CanParseJapanese() {
 			var xml = SrcMLForCCodeToXml.Instance.Generate(@"int あ;", true);
             Assert.That(xml.ToString(), Is.StringContaining("あ"));

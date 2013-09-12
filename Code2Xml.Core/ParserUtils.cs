@@ -27,12 +27,12 @@ namespace Code2Xml.Core {
 	public static class ParserUtils {
 		private static string TryGetPythonPathFromRegistry(int version) {
 			var names = new[] {
-					@"SOFTWARE\Python\PythonCore",
-					@"SOFTWARE\Wow6432Node\Python\PythonCore",
+				@"SOFTWARE\Python\PythonCore",
+				@"SOFTWARE\Wow6432Node\Python\PythonCore",
 			};
 			foreach (var name in names) {
 				var versionKey = Registry.CurrentUser.OpenSubKey(name) ??
-						Registry.LocalMachine.OpenSubKey(name);
+				                 Registry.LocalMachine.OpenSubKey(name);
 				if (versionKey == null) {
 					continue;
 				}
@@ -70,76 +70,51 @@ namespace Code2Xml.Core {
 		public static string GetPythonPath(int version) {
 			// Check whether running OS is Unix/Linux
 			if (!ParaibaEnvironment.OnUnixLike()) {
-				{
-					var path = TryGetPythonPathFromRegistry(version);
-					if (path != null) {
-						return path;
-					}
+				var path = TryGetPythonPathFromRegistry(version);
+				if (path != null) {
+					return path;
 				}
-
-				var pathVariable = Environment.GetEnvironmentVariable(
-						"Path",
-						EnvironmentVariableTarget.Process) ?? "";
-				return new[] { @"C:", @"D:" }
-						.Where(Directory.Exists)
-						.SelectMany(dirPath => Directory.EnumerateDirectories(dirPath, "Python" + version + "*"))
-						.Concat(pathVariable.Split(';'))
-						.Select(dirPath => Path.Combine(dirPath, "python.exe"))
-						.Where(File.Exists)
-						.OrderByDescending(
-								filePath => {
-									var match = Regex.Match(filePath, @"python(\d*)", RegexOptions.IgnoreCase);
-									var number = 0;
-									if (match.Success) {
-										number = int.Parse(match.Groups[1].Value);
-									}
-									return number;
-								})
-						.FirstOrDefault();
+				return FindOnWindows("python", version);
 			}
-			var names = new[] { "python" + version, "python" };
-			foreach (var name in names) {
-				var pathVariable = Environment.GetEnvironmentVariable(
-						"PATH",
-						EnvironmentVariableTarget.Process) ?? "";
-				var dirPaths = new[] { @"/usr/bin", @"/usr/local/bin" }
-						.Concat(pathVariable.Split(':'));
-				foreach (var dirPath in dirPaths) {
-					var path = Path.Combine(dirPath, name);
-					if (File.Exists(path)) {
-						return path;
-					}
-				}
-			}
-			return null;
+			return FindOnUnixLike("python", version);
 		}
 
 		public static string GetRubyPath(int version) {
 			// Check whether running OS is Unix/Linux
 			if (!ParaibaEnvironment.OnUnixLike()) {
-				var pathVariable = Environment.GetEnvironmentVariable(
-						"Path",
-						EnvironmentVariableTarget.Process) ?? "";
-				return new[] { @"C:", @"D:" }
-						.Where(Directory.Exists)
-						.SelectMany(
-								dirPath => Directory.EnumerateDirectories(dirPath, "Ruby" + version + "*")
-										.Select(p => Path.Combine(p, "bin", "ruby.exe")))
-						.Concat(pathVariable.Split(';'))
-						.Select(dirPath => Path.Combine(dirPath, "ruby.exe"))
-						.Where(File.Exists)
-						.OrderByDescending(
-								filePath => {
-									var match = Regex.Match(filePath, @"ruby(\d*)", RegexOptions.IgnoreCase);
-									var number = 0;
-									if (match.Success) {
-										number = int.Parse(match.Groups[1].Value);
-									}
-									return number;
-								})
-						.FirstOrDefault();
+				return FindOnWindows("ruby", version, "bin");
 			}
-			var names = new[] { "ruby" + version, "ruby" };
+			return FindOnUnixLike("ruby", version);
+		}
+
+		private static string FindOnWindows(
+				string dirName, int version, string cmdDirName = null, string cmdName = null) {
+			cmdName = (cmdName ?? dirName);
+			var pathVariable = Environment.GetEnvironmentVariable(
+					"Path",
+					EnvironmentVariableTarget.Process) ?? "";
+			return Directory.GetLogicalDrives()
+					.Where(Directory.Exists)
+					.SelectMany(
+							dirPath => Directory.EnumerateDirectories(dirPath, dirName + version + "*")
+									.Select(p => cmdDirName != null ? Path.Combine(p, cmdDirName) : p))
+					.Concat(pathVariable.Split(';'))
+					.Select(dirPath => Path.Combine(dirPath, cmdName + ".exe"))
+					.Where(File.Exists)
+					.OrderByDescending(
+							filePath => {
+								var match = Regex.Match(filePath, dirName + @"(\d*)", RegexOptions.IgnoreCase);
+								var number = 0;
+								if (match.Success) {
+									number = int.Parse(match.Groups[1].Value);
+								}
+								return number;
+							})
+					.FirstOrDefault();
+		}
+
+		private static string FindOnUnixLike(string cmdName, int version) {
+			var names = new[] { cmdName + version, cmdName, cmdName + ".exe" };
 			foreach (var name in names) {
 				var pathVariable = Environment.GetEnvironmentVariable(
 						"PATH",

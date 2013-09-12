@@ -43,7 +43,8 @@ namespace Code2Xml.Core.CodeToXmls {
 		}
 
 		public override XElement Generate(
-				TextReader reader, bool throwingParseError) {
+				TextReader reader,
+				bool throwingParseError = DefaultThrowingParseError, bool enablePosition = DefaultEnablePosition) {
 			Contract.Requires(reader != null);
 			throw new NotImplementedException();
 		}

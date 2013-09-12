@@ -37,52 +37,39 @@ namespace Code2Xml.Core.CodeToXmls {
 	[ContractClass(typeof(CodeToXmlContract))]
 	public abstract class CodeToXml {
 		public const bool DefaultThrowingParseError = false;
+		public const bool DefaultEnablePosition = true;
+
 		public abstract string ParserName { get; }
 		public abstract IEnumerable<string> TargetExtensions { get; }
 		public abstract XmlToCode XmlToCode { get; }
 
 		public XElement GenerateFromFile(
 				string path, Encoding encoding,
-				bool throwingParseError) {
+				bool throwingParseError = DefaultThrowingParseError, bool enablePosition = DefaultEnablePosition) {
 			Contract.Requires(path != null);
 			using (var reader = new StreamReader(path, encoding)) {
-				return Generate(reader, throwingParseError);
+				return Generate(reader, throwingParseError, enablePosition);
 			}
 		}
 
-		public XElement GenerateFromFile(string path, bool throwingParseError) {
+		public XElement GenerateFromFile(
+				string path,
+				bool throwingParseError = DefaultThrowingParseError, bool enablePosition = DefaultEnablePosition) {
 			Contract.Requires(path != null);
-			return Generate(GuessEncoding.ReadAllText(path), throwingParseError);
+			return Generate(GuessEncoding.ReadAllText(path), throwingParseError, enablePosition);
 		}
 
 		public abstract XElement Generate(
-				TextReader reader, bool throwingParseError);
+				TextReader reader,
+				bool throwingParseError = DefaultThrowingParseError, bool enablePosition = DefaultEnablePosition);
 
-		public virtual XElement Generate(string code, bool throwingParseError) {
+		public virtual XElement Generate(
+				string code,
+				bool throwingParseError = DefaultThrowingParseError, bool enablePosition = DefaultEnablePosition) {
 			Contract.Requires(code != null);
 			using (var reader = new StringReader(code)) {
-				return Generate(reader, throwingParseError);
+				return Generate(reader, throwingParseError, enablePosition);
 			}
-		}
-
-		public XElement GenerateFromFile(string path, Encoding encoding) {
-			Contract.Requires(path != null);
-			return GenerateFromFile(path, encoding, DefaultThrowingParseError);
-		}
-
-		public XElement GenerateFromFile(string path) {
-			Contract.Requires(path != null);
-			return GenerateFromFile(path, DefaultThrowingParseError);
-		}
-
-		public XElement Generate(TextReader reader) {
-			Contract.Requires(reader != null);
-			return Generate(reader, DefaultThrowingParseError);
-		}
-
-		public XElement Generate(string code) {
-			Contract.Requires(code != null);
-			return Generate(code, DefaultThrowingParseError);
 		}
 	}
 }
