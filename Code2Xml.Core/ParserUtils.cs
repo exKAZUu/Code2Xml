@@ -78,7 +78,8 @@ namespace Code2Xml.Core {
 				}
 				return FindOnWindows("python", version);
 			}
-			return FindOnUnixLike("python", version);
+			return FindOnUnixLike("python", version)
+				.FirstOrDefault ();
 		}
 
 		public static string GetRubyPath(int version) {
@@ -86,7 +87,9 @@ namespace Code2Xml.Core {
 			if (!ParaibaEnvironment.OnUnixLike()) {
 				return FindOnWindows("ruby", version, "bin");
 			}
-			return FindOnUnixLike("ruby", version);
+			return FindOnUnixLike("ruby", version)
+				.OrderByDescending (path => GetVersion (path, "-v"))
+				.FirstOrDefault ();
 		}
 
 		private static string FindOnWindows(
@@ -115,25 +118,18 @@ namespace Code2Xml.Core {
 					.FirstOrDefault();
 		}
 
-		private static string FindOnUnixLike(string cmdName, int version) {
+		private static IEnumerable<string> FindOnUnixLike(string cmdName, int version, params string[] arguments) {
 			var names = new[] { cmdName + version, cmdName, cmdName + ".exe" };
-			foreach (var name in names) {
-				var pathVariable = Environment.GetEnvironmentVariable(
-						"PATH",
-						EnvironmentVariableTarget.Process) ?? "";
-				var dirPaths = new[] { @"/usr/bin", @"/usr/local/bin" }
-						.Concat(pathVariable.Split(':'));
-				foreach (var dirPath in dirPaths) {
-					var path = Path.Combine(dirPath, name);
-					if (File.Exists(path)) {
-						return path;
-					}
-				}
-			}
-			return null;
+			var pathVariable = Environment.GetEnvironmentVariable(
+				"PATH",
+				EnvironmentVariableTarget.Process) ?? "";
+			return new[] { @"/usr/bin", @"/usr/local/bin" }
+					.Concat (pathVariable.Split (':'))
+					.SelectMany (dirPath => names.Select (name => Path.Combine (dirPath, name)))
+					.Where (path => File.Exists (path));
 		}
 
-		private static int GetVersion(string path, IEnumerable<string> arguments) {
+		private static string GetVersion(string path, params string[] arguments) {
 			var info = new ProcessStartInfo {
 				FileName = path,
 				Arguments = arguments.JoinString(" "),
@@ -143,8 +139,8 @@ namespace Code2Xml.Core {
 			};
 			using (var p = Process.Start(info)) {
 				var result = p.StandardOutput.ReadToEnd();
+				return result.Split (' ').FirstOrDefault (s => s.Contains (".")) ?? "";
 			}
-			return 0;
 		}
 	}
 }
