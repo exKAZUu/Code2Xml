@@ -47,3 +47,4 @@ download
 
 # Ignore MonoDevelop files
 test-results
+*.userprefs
