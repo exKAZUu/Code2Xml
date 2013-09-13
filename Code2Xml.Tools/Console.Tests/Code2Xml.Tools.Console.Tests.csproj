@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr3.Runtime">
-      <HintPath>..\..\lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
     </Reference>
@@ -49,6 +46,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ProgramTest.cs" />
@@ -60,7 +60,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Console\Code2Xml.Tools.Console.csproj">
       <Project>{5C40DA45-ACB3-4FC4-8CD4-E9053D4081D2}</Project>
-      <Name>Code2Xml.Console</Name>
+      <Name>Code2Xml.Tools.Console</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Code2Xml.Core.Tests\Code2Xml.Core.Tests.csproj">
       <Project>{F4035613-FAA1-419C-880C-EE60DDA08783}</Project>

@@ -17,6 +17,8 @@
 #endregion
 
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -129,6 +131,19 @@ namespace Code2Xml.Core {
 				}
 			}
 			return null;
+		}
+
+		private static int GetVersion(string path, IList<string> arguments) {
+			var info = new ProcessStartInfo {
+				FileName = path,
+				Arguments = arguments.JoinString(" "),
+				CreateNoWindow = true,
+				RedirectStandardOutput = true,
+				UseShellExecute = false,
+			};
+			using (var p = Process.Start(info)) {
+				var result = p.StandardOutput.ReadToEnd();
+			}
 		}
 	}
 }
