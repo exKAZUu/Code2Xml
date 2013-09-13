@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <ClassLibraryOutputDirectory>bin/$(Configuration)</ClassLibraryOutputDirectory>
-    <NUnitPath>packages/NUnit.Runners.2.6.2/tools</NUnitPath>
+    <NUnitPath>packages/NUnit.Runners.2.6.1/tools</NUnitPath>
   </PropertyGroup>
 
   <Target Name="Clean">

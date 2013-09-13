@@ -28,20 +28,22 @@ _ReSharper*/
 *.sdf
 ipch/
 target
+
+# Ignore vim files
 *~
 *.swp
 
-#Ignore generated files by Resharper like
+# Ignore Resharper files
 *.docstates
 *.dotCover
 
-#Ignore NuGet files
-nuspec
-packages
+# Ignore NuGet files
+nuspec/
+packages/
 
-#Ignore generated or downloaded test files
+# Ignore generated files for testing
 output
 download
 
-#Monodevelop
+# Ignore MonoDevelop files
 test-results

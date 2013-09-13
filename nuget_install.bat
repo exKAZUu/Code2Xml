@@ -1,5 +1,7 @@
 set MyDir=%~p0
-".nuget/NuGet.exe" install NUnit.Runners -Version 2.6.2 -o packages
+
+REM Should be use NUnit.Runners 2.6.1 for Mono on Travis-CI
+".nuget/NuGet.exe" install NUnit.Runners -Version 2.6.1 -o packages
 
 for /D %%d in (*) do (
     if exist %%d\packages.config (
