@@ -133,7 +133,7 @@ namespace Code2Xml.Core {
 			return null;
 		}
 
-		private static int GetVersion(string path, IList<string> arguments) {
+		private static int GetVersion(string path, IEnumerable<string> arguments) {
 			var info = new ProcessStartInfo {
 				FileName = path,
 				Arguments = arguments.JoinString(" "),
@@ -144,6 +144,7 @@ namespace Code2Xml.Core {
 			using (var p = Process.Start(info)) {
 				var result = p.StandardOutput.ReadToEnd();
 			}
+			return 0;
 		}
 	}
 }

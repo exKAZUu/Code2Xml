@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <ClassLibraryOutputDirectory>bin/$(Configuration)</ClassLibraryOutputDirectory>
-    <NUnitPath>packages/NUnit.Runners.2.6.1/tools</NUnitPath>
+    <NUnitPath>packages/NUnit.Runners.2.6.2/tools</NUnitPath>
   </PropertyGroup>
 
   <Target Name="Clean">
@@ -24,7 +24,7 @@
     <CreateItem Include="$(ClassLibraryOutputDirectory)/*.Tests.dll">
       <Output TaskParameter="Include" ItemName="TestAssembly" />
     </CreateItem>
-    <Exec Condition=" ('$(OS)' != 'Windows_NT') " Command="mono --runtime=v4.0.30319 $(NUnitPath)\nunit-console.exe @(TestAssembly, ' ')" />
-    <Exec Condition=" ('$(OS)' == 'Windows_NT') " Command="$(NUnitPath)\nunit-console.exe @(TestAssembly, ' ')" />
+    <Exec Condition=" ('$(OS)' != 'Windows_NT') " Command="mono --runtime=v4.0.30319 $(NUnitPath)/nunit-console.exe @(TestAssembly, ' ')" />
+    <Exec Condition=" ('$(OS)' == 'Windows_NT') " Command="$(NUnitPath)/nunit-console.exe @(TestAssembly, ' ')" />
   </Target>
 </Project>

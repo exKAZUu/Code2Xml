@@ -22,24 +22,23 @@ using Antlr.Runtime;
 using Code2Xml.Core.Position;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.Java.CodeToXmls;
+using Code2Xml.Languages.Java.XmlToCodes;
 using NUnit.Framework;
+using Paraiba.Xml;
 
 namespace Code2Xml.Languages.Java.Tests {
 	[TestFixture]
 	public class JavaCodeToXmlTest {
-		private static readonly string InputPath =
-				Path.Combine(Fixture.GetFailedInputPath("Java"), "Unicode.java");
-
 		[Test]
 		public void Hudsonのソースコードをパースできる() {
-			var path = Fixture.GetInputPath(
-					"Java", "FileSystemProvisioner.java");
+			var path = Fixture.GetInputPath("Java", "FileSystemProvisioner.java");
 			JavaCodeToXml.Instance.GenerateFromFile(path, true);
 		}
 
 		[Test, ExpectedException(typeof(MismatchedTokenException))]
 		public void 不正なユニコード文字の入ったコードをパースできない() {
-			JavaCodeToXml.Instance.GenerateFromFile(InputPath, true);
+			var path = Path.Combine(Fixture.GetFailedInputPath("Java"), "Unicode.java");
+			JavaCodeToXml.Instance.GenerateFromFile(path, true);
 		}
 
 		[Test]
@@ -65,6 +64,30 @@ aa*/
 			Assert.That(p3.EndLine, Is.EqualTo(4));
 			Assert.That(p4.StartLine, Is.EqualTo(5));
 			Assert.That(p4.EndLine, Is.EqualTo(5));
+		}
+
+		[Test]
+		public void InterConvertJapanese() {
+			var code = @"
+@Retention(RetentionPolicy.CLASS)
+@Target({
+    ElementType.ANNOTATION_TYPE,
+    ElementType.CONSTRUCTOR,
+    ElementType.FIELD,
+    ElementType.METHOD,
+    ElementType.TYPE})
+@Documented
+@GwtCompatible
+public @interface Beta {}";
+			var r1 = JavaCodeToXml.Instance.Generate(code, true);
+			var c1 = JavaXmlToCode.Instance.Generate(r1);
+			var r2 = JavaCodeToXml.Instance.Generate(c1, true);
+			var c2 = JavaXmlToCode.Instance.Generate(r2);
+			var r3 = JavaCodeToXml.Instance.Generate(c2, true);
+			var c3 = JavaXmlToCode.Instance.Generate(r3);
+
+			Assert.IsTrue(XmlUtil.EqualsWithElementAndValue(r2, r3));
+			Assert.AreEqual(c2, c3);
 		}
 	}
 }
