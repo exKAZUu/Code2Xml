@@ -7,6 +7,7 @@ require 'strscan'
 require 'ruby_lexer'
 require "timeout"
 
+# :stopdoc:
 # WHY do I have to do this?!?
 class Regexp
   ONCE = 0 unless defined? ONCE # FIX: remove this - it makes no sense
@@ -25,6 +26,7 @@ class Fixnum
     self
   end
 end unless "a"[0] == "a"
+# :startdoc:
 
 class RPStringScanner < StringScanner
 #   if ENV['TALLY'] then
@@ -97,7 +99,8 @@ class RPStringScanner < StringScanner
     alias :old_scan :scan
     def scan re
       s = old_scan re
-      d :scan => [s, caller.first] if s
+      where = caller.first.split(/:/).first(2).join(":")
+      d :scan => [s, where] if s
       s
     end
   end
@@ -108,10 +111,38 @@ class RPStringScanner < StringScanner
 end
 
 module RubyParserStuff
-  VERSION = '3.1.2' unless constants.include? "VERSION" # SIGH
+  VERSION = "3.2.2" unless constants.include? "VERSION" # SIGH
 
   attr_accessor :lexer, :in_def, :in_single, :file
   attr_reader :env, :comments
+
+  $good20 = []
+
+  %w[
+  ].map(&:to_i).each do |n|
+    $good20[n] = n
+  end
+
+  def debug20 n, v = nil, r = nil
+    raise "not yet #{n} #{v.inspect} => #{r.inspect}" unless $good20[n]
+  end
+
+  ruby19 = "".respond_to? :encoding
+
+  # Rhis is in sorted order of occurrence according to
+  # charlock_holmes against 500k files, with UTF_8 forced
+  # to the top.
+  #
+  # Overwrite this contstant if you need something different.
+  ENCODING_ORDER = [
+    Encoding::UTF_8, # moved to top to reflect default in 2.0
+    Encoding::ISO_8859_1,
+    Encoding::ISO_8859_2,
+    Encoding::ISO_8859_9,
+    Encoding::SHIFT_JIS,
+    Encoding::WINDOWS_1252,
+    Encoding::EUC_JP
+  ] if ruby19
 
   def syntax_error msg
     raise RubyParser::SyntaxError, msg
@@ -127,7 +158,7 @@ module RubyParserStuff
   end
 
   def arg_blk_pass node1, node2 # TODO: nuke
-    node1 = s(:arglist, node1) unless [:arglist, :array].include? node1.first
+    node1 = s(:arglist, node1) unless [:arglist, :call_args, :array, :args].include? node1.first
     node1 << node2 if node2
     node1
   end
@@ -144,12 +175,14 @@ module RubyParserStuff
       if sexp.size == 2 and sexp[1].sexp_type == :array then
         s(:masgn, *sexp[1][1..-1].map { |sub| clean_mlhs sub })
       else
+        debug20 5
         sexp
       end
     when :gasgn, :iasgn, :lasgn, :cvasgn then
       if sexp.size == 2 then
         sexp.last
       else
+        debug20 7
         sexp # optional value
       end
     else
@@ -180,6 +213,39 @@ module RubyParserStuff
     end
   end
 
+  def array_to_hash array
+    case array.sexp_type
+    when :kwsplat then
+      array
+    else
+      s(:hash, *array[1..-1])
+    end
+  end
+
+  def call_args args
+    result = s(:call_args)
+
+    args.each do |arg|
+      case arg
+      when Sexp then
+        case arg.sexp_type
+        when :array, :args, :call_args then # HACK? remove array at some point
+          result.concat arg[1..-1]
+        else
+          result << arg
+        end
+      when Symbol then
+        result << arg
+      when ",", nil then
+        # ignore
+      else
+        raise "unhandled: #{arg.inspect} in #{args.inspect}"
+      end
+    end
+
+    result
+  end
+
   def args args
     result = s(:args)
 
@@ -187,21 +253,27 @@ module RubyParserStuff
       case arg
       when Sexp then
         case arg.sexp_type
-        when :args, :block, :array then
+        when :args, :block, :array, :call_args then # HACK call_args mismatch
           result.concat arg[1..-1]
         when :block_arg then
           result << :"&#{arg.last}"
-        when :masgn then
+        when :shadow then
+          if Sexp === result.last and result.last.sexp_type == :shadow then
+            result.last << arg.last
+          else
+            result << arg
+          end
+        when :masgn, :block_pass, :hash then # HACK: remove. prolly call_args
           result << arg
         else
-          raise "unhandled: #{arg.inspect}"
+          raise "unhandled: #{arg.sexp_type} in #{args.inspect}"
         end
       when Symbol then
         result << arg
-      when ",", nil then
+      when ",", "|", ";", "(", ")", nil then
         # ignore
       else
-        raise "unhandled: #{arg.inspect}"
+        raise "unhandled: #{arg.inspect} in #{args.inspect}"
       end
     end
 
@@ -214,7 +286,7 @@ module RubyParserStuff
   end
 
   def assignable(lhs, value = nil)
-    id = lhs.to_sym
+    id = lhs.to_sym unless Sexp === lhs
     id = id.to_sym if Sexp === id
 
     raise "write a test 1" if id.to_s =~ /^(?:self|nil|true|false|__LINE__|__FILE__)$/
@@ -252,7 +324,7 @@ module RubyParserStuff
                end
              end
 
-    self.env[id] ||= :lvar
+    self.env[id] ||= :lvar unless result.sexp_type == :cdecl # HACK? cdecl
 
     result << value if value
 
@@ -262,11 +334,6 @@ module RubyParserStuff
   def block_append(head, tail)
     return head if tail.nil?
     return tail if head.nil?
-
-    case head[0]
-    when :lit, :str then
-      return tail
-    end
 
     line = [head.line, tail.line].compact.min
 
@@ -473,29 +540,34 @@ module RubyParserStuff
   end
 
   def new_body val
-    result = val[0]
+    body, resbody, elsebody, ensurebody = val
 
-    if val[1] then
+    result = body
+
+    if resbody then
       result = s(:rescue)
-      result << val[0] if val[0]
+      result << body if body
 
-      resbody = val[1]
+      res = resbody
 
-      while resbody do
-        result << resbody
-        resbody = resbody.resbody(true)
+      while res do
+        result << res
+        res = res.resbody(true)
       end
 
-      result << val[2] if val[2]
+      result << elsebody if elsebody
 
-      result.line = (val[0] || val[1]).line
-    elsif not val[2].nil? then
-      warning("else without rescue is useless")
-      result = block_append(result, val[2])
+      result.line = (body || resbody).line
     end
 
-    result = s(:ensure, result, val[3]).compact if val[3]
-    return result
+    if elsebody and not resbody then
+      warning("else without rescue is useless")
+      result = block_append(s(:begin, result), elsebody)
+    end
+
+    result = s(:ensure, result, ensurebody).compact if ensurebody
+
+    result
   end
 
   def argl x
@@ -524,7 +596,7 @@ module RubyParserStuff
     # TODO: need a test with f(&b) { } to produce warning
 
     args ||= s(:arglist)
-    args[0] = :arglist if args.first == :array
+    args[0] = :arglist if [:args, :array, :call_args].include? args.first
     args = s(:arglist, args) unless args.first == :arglist
 
     # HACK quick hack to make this work quickly... easy to clean up above
@@ -583,7 +655,7 @@ module RubyParserStuff
   end
 
   def new_defn val
-    (_, line), name, args, body = val[0], val[1], val[3], val[4]
+    (_, line), name, _, args, body, * = val
     body ||= s(:nil)
 
     result = s(:defn, name.to_sym, args)
@@ -844,8 +916,7 @@ module RubyParserStuff
 
     args ||= s(:arglist)
 
-    # TODO: I can prolly clean this up
-    args[0] = :arglist       if args.first == :array
+    args[0] = :arglist if [:call_args, :array].include?(args[0])
     args = s(:arglist, args) unless args.first == :arglist
 
     return s(:yield, *args[1..-1])
@@ -930,18 +1001,8 @@ module RubyParserStuff
   end
 
   def hack_encoding str, extra = nil
-    # this is in sorted order of occurrence according to
-    # charlock_holmes against 500k files
-    encodings = [
-                 extra,
-                 Encoding::ISO_8859_1,
-                 Encoding::UTF_8,
-                 Encoding::ISO_8859_2,
-                 Encoding::ISO_8859_9,
-                 Encoding::SHIFT_JIS,
-                 Encoding::WINDOWS_1252,
-                 Encoding::EUC_JP,
-                ].compact
+    encodings = ENCODING_ORDER.dup
+    encodings.unshift(extra) unless extra.nil?
 
     # terrible, horrible, no good, very bad, last ditch effort.
     encodings.each do |enc|
@@ -1013,7 +1074,9 @@ module RubyParserStuff
       raise SyntaxError, "block argument should not be given" if
         node[0] == :block_pass
 
+      node[0] = :array if node[0] == :call_args
       node = node.last if node[0] == :array && node.size == 2
+
       # HACK matz wraps ONE of the FOUR splats in a newline to
       # distinguish. I use paren for now. ugh
       node = s(:svalue, node) if node[0] == :splat and not node.paren
@@ -1131,6 +1194,8 @@ module RubyParserStuff
 
     WORDLIST18 = Hash[*wordlist.map { |o| [o.name, o] }.flatten]
     WORDLIST19 = Hash[*wordlist.map { |o| [o.name, o] }.flatten]
+
+    WORDLIST18.delete "__ENCODING__"
 
     %w[and case elsif for if in module or unless until when while].each do |k|
       WORDLIST19[k] = WORDLIST19[k].dup
@@ -1265,6 +1330,10 @@ module RubyParserStuff
   end
 end
 
+class Ruby20Parser < Racc::Parser
+  include RubyParserStuff
+end
+
 class Ruby19Parser < Racc::Parser
   include RubyParserStuff
 end
@@ -1284,12 +1353,17 @@ class RubyParser
   def initialize
     @p18 = Ruby18Parser.new
     @p19 = Ruby19Parser.new
+    @p20 = Ruby20Parser.new
   end
 
   def process(s, f = "(string)", t = 10) # parens for emacs *sigh*
-    @p19.process s, f, t
-  rescue Racc::ParseError
-    @p18.process s, f, t
+    @p20.process s, f, t
+  rescue Racc::ParseError, RubyParser::SyntaxError
+    begin
+      @p19.process s, f, t
+    rescue Racc::ParseError, RubyParser::SyntaxError
+      @p18.process s, f, t
+    end
   end
 
   alias :parse :process
@@ -1305,6 +1379,8 @@ class RubyParser
       Ruby18Parser.new
     when /^1\.9/ then
       Ruby19Parser.new
+    when /^2.0/ then
+      Ruby20Parser.new
     else
       raise "unrecognized RUBY_VERSION #{RUBY_VERSION}"
     end
@@ -1335,7 +1411,7 @@ class Sexp
   end
 
   def to_sym
-    raise "no"
+    raise "no: #{self.inspect}.to_sym is a bug"
     self.value.to_sym
   end
 

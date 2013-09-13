@@ -76,23 +76,25 @@ namespace Code2Xml.Core {
 				if (path != null) {
 					return path;
 				}
-				return FindOnWindows("python", version);
+				// TODO: Select the suitable version
+				return FindOnWindows("python", version)
+					.FirstOrDefault();
 			}
+			// TODO: Select the suitable version
 			return FindOnUnixLike("python", version)
-				.FirstOrDefault ();
+					.FirstOrDefault();
 		}
 
 		public static string GetRubyPath(int version) {
 			// Check whether running OS is Unix/Linux
-			if (!ParaibaEnvironment.OnUnixLike()) {
-				return FindOnWindows("ruby", version, "bin");
-			}
-			return FindOnUnixLike("ruby", version)
-				.OrderByDescending (path => GetVersion (path, "-v"))
-				.FirstOrDefault ();
+			var paths = ParaibaEnvironment.OnUnixLike()
+					? FindOnUnixLike("ruby", version) : FindOnWindows("ruby", version, "bin");
+			return paths
+					.OrderByDescending(path => GetVersion(path, "-v"))
+					.FirstOrDefault();
 		}
 
-		private static string FindOnWindows(
+		private static IEnumerable<string> FindOnWindows(
 				string dirName, int version, string cmdDirName = null, string cmdName = null) {
 			cmdName = (cmdName ?? dirName);
 			var pathVariable = Environment.GetEnvironmentVariable(
@@ -105,28 +107,19 @@ namespace Code2Xml.Core {
 									.Select(p => cmdDirName != null ? Path.Combine(p, cmdDirName) : p))
 					.Concat(pathVariable.Split(';'))
 					.Select(dirPath => Path.Combine(dirPath, cmdName + ".exe"))
-					.Where(File.Exists)
-					.OrderByDescending(
-							filePath => {
-								var match = Regex.Match(filePath, dirName + @"(\d*)", RegexOptions.IgnoreCase);
-								var number = 0;
-								if (match.Success) {
-									number = int.Parse(match.Groups[1].Value);
-								}
-								return number;
-							})
-					.FirstOrDefault();
+					.Where(File.Exists);
 		}
 
-		private static IEnumerable<string> FindOnUnixLike(string cmdName, int version, params string[] arguments) {
+		private static IEnumerable<string> FindOnUnixLike(
+				string cmdName, int version, params string[] arguments) {
 			var names = new[] { cmdName + version, cmdName, cmdName + ".exe" };
 			var pathVariable = Environment.GetEnvironmentVariable(
-				"PATH",
-				EnvironmentVariableTarget.Process) ?? "";
+					"PATH",
+					EnvironmentVariableTarget.Process) ?? "";
 			return new[] { @"/usr/bin", @"/usr/local/bin" }
-					.Concat (pathVariable.Split (':'))
-					.SelectMany (dirPath => names.Select (name => Path.Combine (dirPath, name)))
-					.Where (path => File.Exists (path));
+					.Concat(pathVariable.Split(':'))
+					.SelectMany(dirPath => names.Select(name => Path.Combine(dirPath, name)))
+					.Where(File.Exists);
 		}
 
 		private static string GetVersion(string path, params string[] arguments) {
@@ -139,7 +132,7 @@ namespace Code2Xml.Core {
 			};
 			using (var p = Process.Start(info)) {
 				var result = p.StandardOutput.ReadToEnd();
-				return result.Split (' ').FirstOrDefault (s => s.Contains (".")) ?? "";
+				return result.Split(' ').FirstOrDefault(s => s.Contains(".")) ?? "";
 			}
 		}
 	}

@@ -121,9 +121,6 @@
   <data name="composite_sexp_processor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ParserScripts\Ruby19\composite_sexp_processor.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="gauntlet_rubyparser" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\ParserScripts\Ruby19\gauntlet_rubyparser.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="pt_testcase" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ParserScripts\Ruby19\pt_testcase.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

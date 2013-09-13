@@ -52,8 +52,6 @@ namespace Code2Xml.Languages.Ruby19.CodeToXmls {
 							DirectoryPath,
 							"composite_sexp_processor.rb"), Resources.composite_sexp_processor);
 			ParaibaFile.WriteIfDifferentSize(
-					Path.Combine(DirectoryPath, "gauntlet_rubyparser.rb"), Resources.gauntlet_rubyparser);
-			ParaibaFile.WriteIfDifferentSize(
 					Path.Combine(DirectoryPath, "pt_testcase.rb"), Resources.pt_testcase);
 			ParaibaFile.WriteIfDifferentSize(
 					Path.Combine(DirectoryPath, "README_ruby_parser.txt"), Resources.README_ruby_parser);

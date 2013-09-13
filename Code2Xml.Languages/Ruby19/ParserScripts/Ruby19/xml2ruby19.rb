@@ -29,5 +29,7 @@ def terminal_node2array_element(elem)
   end
 end
 
-doc = REXML::Document.new($stdin)
+STDIN.set_encoding("UTF-8", "UTF-8")
+
+doc = REXML::Document.new(STDIN.read())
 print Ruby2Ruby.new.process(traverse_xml(doc.root))

@@ -32,7 +32,7 @@ class Examples
     RUBY_VERSION < "1.9"
 end
 
-class ParseTreeTestCase < MiniTest::Unit::TestCase
+class ParseTreeTestCase < Minitest::Test
   attr_accessor :processor # to be defined by subclass
 
   def setup
@@ -2684,6 +2684,11 @@ class ParseTreeTestCase < MiniTest::Unit::TestCase
             "Ruby"         => "class << self\n  42\nend",
             "ParseTree"    => s(:sclass, s(:self), s(:lit, 42)))
 
+  add_tests("sclass_multiple",
+            "Ruby"         => "class << self\n  x\n  y\nend",
+            "ParseTree"    => s(:sclass, s(:self),
+                                s(:call, nil, :x), s(:call, nil, :y)))
+
   add_tests("sclass_trailing_class",
             "Ruby"         => "class A\n  class << self\n    a\n  end\n  \n  class B\n  end\nend",
             "ParseTree"    => s(:class, :A, nil,
@@ -2862,11 +2867,6 @@ class ParseTreeTestCase < MiniTest::Unit::TestCase
                                     nil)),
                                 s(:lvar, :a)),
             "Ruby2Ruby"    => "a = b rescue nil if c\na\n") # OMG that's awesome
-
-  add_tests("structure_unused_literal_wwtt",
-            "Ruby"         => "\"prevent the above from infecting rdoc\"\n\nmodule Graffle\nend",
-            "ParseTree"    => s(:module, :Graffle),
-            "Ruby2Ruby"    => "module Graffle\nend")
 
   add_tests("super_0",
             "Ruby"         => "def x\n  super()\nend",

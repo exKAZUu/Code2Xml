@@ -11,6 +11,8 @@ class Ruby18Parser < Racc::Parser
 require "ruby_lexer"
 require "ruby_parser_extras"
 
+# :stopdoc:
+
 # Local Variables: **
 # racc-token-length-max:14 **
 # End: **
@@ -3161,8 +3163,7 @@ def _reduce_20(val, _values, result)
 end
 
 def _reduce_21(val, _values, result)
-                      result = new_iter s(:preexe), nil, val[3] # TODO: add test?
-                      result = nil # TODO: since it isn't supposed to go in the AST
+                      result = new_iter s(:preexe), nil, val[3]
                     
     result
 end
@@ -3201,13 +3202,13 @@ def _reduce_26(val, _values, result)
 end
 
 def _reduce_27(val, _values, result)
-                      result = s(:op_asgn, val[0], val[4], val[2], val[3])
+                      result = s(:op_asgn, val[0], val[4], val[2].to_sym, val[3].to_sym)
                     
     result
 end
 
 def _reduce_28(val, _values, result)
-                      result = s(:op_asgn, val[0], val[4], val[2], val[3])
+                      result = s(:op_asgn, val[0], val[4], val[2].to_sym, val[3].to_sym)
                     
     result
 end
@@ -3820,7 +3821,7 @@ end
 
 def _reduce_177(val, _values, result)
                       result = s(:op_asgn1, val[0], val[2], val[4].to_sym, val[5])
-                      val[2][0] = :arglist
+                      val[2][0] = :arglist if val[2]
                     
     result
 end
@@ -3838,7 +3839,7 @@ def _reduce_179(val, _values, result)
 end
 
 def _reduce_180(val, _values, result)
-                      result = s(:op_asgn, val[0], val[4], val[2], val[3])
+                      result = s(:op_asgn, val[0], val[4], val[2].to_sym, val[3].to_sym)
                     
     result
 end
@@ -4676,18 +4677,23 @@ def _reduce_317(val, _values, result)
 end
 
 def _reduce_318(val, _values, result)
+                      result = lexer.lineno, self.in_def
+
                       self.comments.push self.lexer.comments
                       self.in_def = true
                       self.env.extend
-                      result = lexer.lineno, lexer.src.beginning_of_line?
                     
     result
 end
 
 def _reduce_319(val, _values, result)
+                      line, in_def = val[2]
+
                       result = new_defn val
+                      result[2].line line
+
                       self.env.unextend
-                      self.in_def = false
+                      self.in_def = in_def
                       self.lexer.comments # we don't care about comments in the body
                     
     result
@@ -5247,6 +5253,7 @@ end
 
 def _reduce_419(val, _values, result)
                       result = lexer.lex_strterm
+
                       lexer.lex_strterm = nil
                       lexer.lex_state = :expr_beg
                     
@@ -5261,32 +5268,44 @@ def _reduce_420(val, _values, result)
 end
 
 def _reduce_421(val, _values, result)
-                      result = lexer.lex_strterm
+                      result = [lexer.lex_strterm, lexer.brace_nest, lexer.string_nest]
+
                       lexer.lex_strterm = nil
-                      lexer.lex_state = :expr_beg
+                      lexer.brace_nest  = 0
+                      lexer.string_nest = 0
+
                       lexer.cond.push false
                       lexer.cmdarg.push false
+
+                      lexer.lex_state   = :expr_beg
                     
     result
 end
 
 def _reduce_422(val, _values, result)
-                      lexer.lex_strterm = val[1]
+                      _, memo, stmt, _ = val
+
+                      lex_strterm, brace_nest, string_nest = memo
+
+                      lexer.lex_strterm = lex_strterm
+                      lexer.brace_nest  = brace_nest
+                      lexer.string_nest = string_nest
+
                       lexer.cond.lexpop
                       lexer.cmdarg.lexpop
 
-                      case val[2]
+                      case stmt
                       when Sexp then
-                        case val[2][0]
+                        case stmt[0]
                         when :str, :dstr, :evstr then
-                          result = val[2]
+                          result = stmt
                         else
-                          result = s(:evstr, val[2])
+                          result = s(:evstr, stmt)
                         end
                       when nil then
                         result = s(:evstr)
                       else
-                        raise "unknown rescue body: #{val[2].inspect}"
+                        raise "unknown string body: #{stmt.inspect}"
                       end
                     
     result
@@ -5341,7 +5360,7 @@ def _reduce_433(val, _values, result)
                       when :dstr then
                         result[0] = :dsym
                       when :str then
-                        result = s(:lit, result.last.intern)
+                        result = s(:lit, result.last.to_sym)
                       else
                         result = s(:dsym, "", result)
                       end
