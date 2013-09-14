@@ -128,6 +128,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="ParserScripts\Ruby18\ruby182xml.rb" />
+    <None Include="ParserScripts\Ruby18\ruby20_parser.rb" />
     <None Include="ParserScripts\Ruby18\ruby2ruby.rb" />
     <None Include="ParserScripts\Ruby18\xml2ruby18.rb" />
   </ItemGroup>
@@ -146,7 +147,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ParserScripts\Ruby18\composite_sexp_processor.rb" />
-    <Content Include="ParserScripts\Ruby18\gauntlet_rubyparser.rb" />
     <Content Include="ParserScripts\Ruby18\pt_testcase.rb" />
     <Content Include="ParserScripts\Ruby18\README_ruby2ruby.txt" />
     <Content Include="ParserScripts\Ruby18\README_ruby_parser.txt" />

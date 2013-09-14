@@ -21,13 +21,43 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
 using Microsoft.Win32;
 using Paraiba.Core;
+using Paraiba.Linq;
 
 namespace Code2Xml.Core {
 	public static class ParserUtils {
-		private static string TryGetPythonPathFromRegistry(int version) {
+		public static string GetPythonPath(params string[] versions) {
+			IEnumerable<string> paths;
+			// Check whether running OS is Unix/Linux
+			if (!ParaibaEnvironment.OnUnixLike()) {
+				var path = TryGetPythonPathFromRegistry(versions);
+				if (path != null) {
+					return path;
+				}
+				paths = FindOnWindows("python", versions);
+			} else {
+				paths = FindOnUnixLike("python", versions);
+			}
+			return paths.Select(path => Tuple.Create(path, GetVersion(path, "-v")))
+					.Where(t => versions.Any(version => t.Item2.Replace(".", "").StartsWith(version)))
+					.OrderByDescending(t => t.Item2)
+					.Select(t => t.Item1)
+					.FirstOrDefault();
+		}
+
+		public static string GetRubyPath(params string[] versions) {
+			// Check whether running OS is Unix/Linux
+			var paths = ParaibaEnvironment.OnUnixLike()
+					? FindOnUnixLike("ruby", versions) : FindOnWindows("ruby", versions, "bin");
+			return paths.OrderByDescending(path => GetVersion(path, "-v"))
+					.FirstOrDefault();
+		}
+
+		private static string TryGetPythonPathFromRegistry(IList<string> versions) {
+			if (versions.Count == 0) {
+				versions = new[] { "" };
+			}
 			var names = new[] {
 				@"SOFTWARE\Python\PythonCore",
 				@"SOFTWARE\Wow6432Node\Python\PythonCore",
@@ -39,13 +69,8 @@ namespace Code2Xml.Core {
 					continue;
 				}
 				var subKeyName = versionKey.GetSubKeyNames()
-						.Where(s => s.StartsWith(version.ToString()))
-						.OrderByDescending(
-								s => s.Split('.')
-										.Aggregate(
-												"",
-												(s1, s2) =>
-														s1 + s2.PadLeft(4, '0')))
+						.Where(s => versions.Any(s.StartsWith))
+						.OrderByDescending(s => s)
 						.FirstOrDefault();
 				if (subKeyName == null) {
 					continue;
@@ -69,33 +94,11 @@ namespace Code2Xml.Core {
 			return null;
 		}
 
-		public static string GetPythonPath(int version) {
-			// Check whether running OS is Unix/Linux
-			if (!ParaibaEnvironment.OnUnixLike()) {
-				var path = TryGetPythonPathFromRegistry(version);
-				if (path != null) {
-					return path;
-				}
-				// TODO: Select the suitable version
-				return FindOnWindows("python", version)
-					.FirstOrDefault();
-			}
-			// TODO: Select the suitable version
-			return FindOnUnixLike("python", version)
-					.FirstOrDefault();
-		}
-
-		public static string GetRubyPath(int version) {
-			// Check whether running OS is Unix/Linux
-			var paths = ParaibaEnvironment.OnUnixLike()
-					? FindOnUnixLike("ruby", version) : FindOnWindows("ruby", version, "bin");
-			return paths
-					.OrderByDescending(path => GetVersion(path, "-v"))
-					.FirstOrDefault();
-		}
-
 		private static IEnumerable<string> FindOnWindows(
-				string dirName, int version, string cmdDirName = null, string cmdName = null) {
+				string dirName, IList<string> versions, string cmdDirName = null, string cmdName = null) {
+			if (versions.Count == 0) {
+				versions = new[] { "" };
+			}
 			cmdName = (cmdName ?? dirName);
 			var pathVariable = Environment.GetEnvironmentVariable(
 					"Path",
@@ -103,21 +106,22 @@ namespace Code2Xml.Core {
 			return Directory.GetLogicalDrives()
 					.Where(Directory.Exists)
 					.SelectMany(
-							dirPath => Directory.EnumerateDirectories(dirPath, dirName + version + "*")
-									.Select(p => cmdDirName != null ? Path.Combine(p, cmdDirName) : p))
-					.Concat(pathVariable.Split(';'))
+							dirPath => versions.SelectMany(
+									version => Directory.EnumerateDirectories(dirPath, dirName + version + "*")
+											.Select(p => cmdDirName != null ? Path.Combine(p, cmdDirName) : p)))
+					.Concat(pathVariable.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries))
 					.Select(dirPath => Path.Combine(dirPath, cmdName + ".exe"))
 					.Where(File.Exists);
 		}
 
-		private static IEnumerable<string> FindOnUnixLike(
-				string cmdName, int version, params string[] arguments) {
-			var names = new[] { cmdName + version, cmdName, cmdName + ".exe" };
+		private static IEnumerable<string> FindOnUnixLike(string cmdName, IEnumerable<string> versions) {
+			var names = new[] { cmdName, cmdName + ".exe" }
+					.Concat(versions.Select(version => cmdName + version));
 			var pathVariable = Environment.GetEnvironmentVariable(
 					"PATH",
 					EnvironmentVariableTarget.Process) ?? "";
 			return new[] { @"/usr/bin", @"/usr/local/bin" }
-					.Concat(pathVariable.Split(':'))
+					.Concat(pathVariable.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries))
 					.SelectMany(dirPath => names.Select(name => Path.Combine(dirPath, name)))
 					.Where(File.Exists);
 		}

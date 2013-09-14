@@ -173,6 +173,16 @@ namespace Code2Xml.Languages.Ruby19.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] ruby20_parser {
+            get {
+                object obj = ResourceManager.GetObject("ruby20_parser", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] ruby2ruby {
             get {
                 object obj = ResourceManager.GetObject("ruby2ruby", resourceCulture);

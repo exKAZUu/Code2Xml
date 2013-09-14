@@ -41,7 +41,7 @@ namespace Code2Xml.Languages.Ruby19.CodeToXmls {
 		private readonly string _processorPath;
 
 		public Ruby19CodeToXml()
-				: this(ParserUtils.GetRubyPath(19) ?? "ruby") {}
+				: this(ParserUtils.GetRubyPath() ?? "ruby") {}
 
 		public Ruby19CodeToXml(string processorPath) {
 			_processorPath = processorPath;
@@ -67,6 +67,8 @@ namespace Code2Xml.Languages.Ruby19.CodeToXmls {
 					Path.Combine(DirectoryPath, "ruby18_parser.rb"), Resources.ruby18_parser);
 			ParaibaFile.WriteIfDifferentSize(
 					Path.Combine(DirectoryPath, "ruby19_parser.rb"), Resources.ruby19_parser);
+			ParaibaFile.WriteIfDifferentSize(
+					Path.Combine(DirectoryPath, "ruby20_parser.rb"), Resources.ruby20_parser);
 			ParaibaFile.WriteIfDifferentSize(Path.Combine(DirectoryPath, "sexp.rb"), Resources.sexp);
 			ParaibaFile.WriteIfDifferentSize(
 					Path.Combine(DirectoryPath, "sexp_processor.rb"), Resources.sexp_processor);

@@ -41,7 +41,7 @@ namespace Code2Xml.Languages.Python2.CodeToXmls {
 		private readonly string _processorPath;
 
 		public Python2CodeToXml()
-				: this(ParserUtils.GetPythonPath(2) ?? "python2") {}
+				: this(ParserUtils.GetPythonPath("2") ?? "python2") {}
 
 		public Python2CodeToXml(string processorPath) {
 			_processorPath = processorPath;

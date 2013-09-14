@@ -50,7 +50,7 @@ namespace Code2Xml.Languages.Ruby18.XmlToCodes {
 		}
 
 		public Ruby18XmlToCode()
-				: this(ParserUtils.GetRubyPath(19) ?? "ruby") {}
+				: this(ParserUtils.GetRubyPath() ?? "ruby") {}
 
 		public Ruby18XmlToCode(string processorPath) {
 			_processorPath = processorPath;
