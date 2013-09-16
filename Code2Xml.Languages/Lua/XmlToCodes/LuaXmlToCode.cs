@@ -68,7 +68,7 @@ namespace Code2Xml.Languages.Lua.XmlToCodes {
         public override string Generate(XElement root) {
             Initialize();
             WalkElementLua(root);
-            return _builder.ToString();
+            return Builder.ToString();
         }
 
         protected override bool TreatTerminalSymbol(XElement element) {

@@ -24,12 +24,14 @@ using System.Xml.Linq;
 namespace Code2Xml.Core.XmlToCodes {
 	[ContractClass(typeof(XmlToCodeBaseContract))]
 	public abstract class XmlToCodeBase : XmlToCode {
-	    protected readonly StringBuilder _builder;
+		private readonly string _newLine;
+		protected readonly StringBuilder Builder;
 		private int _depth;
 		private bool _indented;
 
-		protected XmlToCodeBase() {
-			_builder = new StringBuilder();
+		protected XmlToCodeBase(string newLine = "\n") {
+			_newLine = newLine;
+			Builder = new StringBuilder();
 		}
 
 		protected int Depth {
@@ -38,7 +40,7 @@ namespace Code2Xml.Core.XmlToCodes {
 		}
 
 		protected virtual void Initialize() {
-			_builder.Length = 0;
+			Builder.Length = 0;
 			_depth = 0;
 			_indented = false;
 		}
@@ -46,11 +48,11 @@ namespace Code2Xml.Core.XmlToCodes {
 		protected void WriteWord(string str) {
 			Contract.Requires(str != null);
 			if (_indented) {
-				_builder.Append(' ');
+				Builder.Append(' ');
 			} else {
 				WriteIndent();
 			}
-			_builder.Append(str);
+			Builder.Append(str);
 		}
 
 		protected void WriteWordWithoutWhiteSpace(string str) {
@@ -58,25 +60,25 @@ namespace Code2Xml.Core.XmlToCodes {
 			if (!_indented) {
 				WriteIndent();
 			}
-			_builder.Append(str);
+			Builder.Append(str);
 		}
 
 		protected void WriteIndent() {
 			for (int i = 0; i < _depth; i++) {
-				_builder.Append('\t');
+				Builder.Append('\t');
 			}
 			_indented = true;
 		}
 
 		protected void WriteLine() {
-			_builder.AppendLine();
+			Builder.Append(_newLine);
 			_indented = false;
 		}
 
 		protected void WriteLine(string str) {
 			Contract.Requires(str != null);
 			WriteWord(str);
-			_builder.AppendLine();
+			Builder.Append(_newLine);
 			_indented = false;
 		}
 
@@ -96,7 +98,7 @@ namespace Code2Xml.Core.XmlToCodes {
 		public override string Generate(XElement root) {
 			Initialize();
 			WalkElement(root);
-			return _builder.ToString();
+			return Builder.ToString();
 		}
 	}
 

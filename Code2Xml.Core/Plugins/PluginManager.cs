@@ -23,6 +23,7 @@ using System.ComponentModel.Composition.Hosting;
 using System.Linq;
 using System.Reflection;
 using Code2Xml.Core.CodeToXmls;
+using Code2Xml.Core.Processors;
 using Code2Xml.Core.XmlToCodes;
 using Paraiba.Linq;
 
@@ -33,6 +34,7 @@ namespace Code2Xml.Core.Plugins {
 #pragma warning disable 649
 		[ImportMany] private IEnumerable<CodeToXml> _codeToXmls;
 		[ImportMany] private IEnumerable<XmlToCode> _xmlToCodes;
+		[ImportMany] private IEnumerable<LanguageProcessor> _processors;
 #pragma warning restore 649
 
 		private PluginManager() {
@@ -60,6 +62,13 @@ namespace Code2Xml.Core.Plugins {
 			get {
 				return Instance._xmlToCodes
 						.OrderBy(c => c.ParserName);
+			}
+		}
+
+		public static IEnumerable<LanguageProcessor> Processors {
+			get {
+				return Instance._processors
+						.OrderBy(c => c.FullLanguageName);
 			}
 		}
 
@@ -96,6 +105,46 @@ namespace Code2Xml.Core.Plugins {
 			return XmlToCodes
 					.FirstOrDefault(
 							ast => ast.DefaultExtension.ToLower() == lowerExt);
+		}
+
+		/// <summary>
+		/// Gets a <c>LanguageProcessor</c> instance by the specified language name.
+		/// </summary>
+		/// <param name="name"></param>
+		/// <returns></returns>
+		public static LanguageProcessor GetProcessorByName(string name) {
+			var lowerName = name.ToLower();
+			return Processors
+					.Where(ast => ast.LanguageName.ToLower().Contains(lowerName))
+					.MinElementOrDefault(
+							ast => Math.Abs(ast.LanguageName.Length - name.Length));
+		}
+
+		/// <summary>
+		/// Gets a <c>LanguageProcessor</c> instance by the specified language full name including the language version.
+		/// </summary>
+		/// <param name="fullName"></param>
+		/// <returns></returns>
+		public static LanguageProcessor GetProcessorByFullName(string fullName) {
+			var lowerName = fullName.ToLower();
+			return Processors
+					.Where(ast => ast.FullLanguageName.ToLower().Contains(lowerName))
+					.MinElementOrDefault(
+							ast => Math.Abs(ast.FullLanguageName.Length - fullName.Length));
+		}
+
+		/// <summary>
+		/// Gets a <c>LanguageProcessor</c> instance by the specified file extension.
+		/// </summary>
+		/// <param name="extension"></param>
+		/// <returns></returns>
+		public static LanguageProcessor GetProcessorByExtension(string extension) {
+			var lowerExt = extension.ToLower();
+			return Processors
+					.FirstOrDefault(
+							ast => ast.SupportedExtensions
+									.Select(e => e.ToLower())
+									.Contains(lowerExt));
 		}
 	}
 }

@@ -30,13 +30,13 @@ namespace Code2Xml.Languages.Java.Tests {
 	[TestFixture]
 	public class JavaCodeToXmlTest {
 		[Test]
-		public void Hudsonのソースコードをパースできる() {
+		public void ParseSourceCodeOfHudson() {
 			var path = Fixture.GetInputPath("Java", "FileSystemProvisioner.java");
 			JavaCodeToXml.Instance.GenerateFromFile(path, true);
 		}
 
 		[Test, ExpectedException(typeof(MismatchedTokenException))]
-		public void 不正なユニコード文字の入ったコードをパースできない() {
+		public void ParseSourceCodeContainingIlligalUnicodeCharacters() {
 			var path = Path.Combine(Fixture.GetFailedInputPath("Java"), "Unicode.java");
 			JavaCodeToXml.Instance.GenerateFromFile(path, true);
 		}
@@ -67,7 +67,7 @@ aa*/
 		}
 
 		[Test]
-		public void InterConvertJapanese() {
+		public void InterConvertAnnotation() {
 			var code = @"
 @Retention(RetentionPolicy.CLASS)
 @Target({

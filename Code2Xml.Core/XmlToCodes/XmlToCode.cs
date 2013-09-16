@@ -56,10 +56,7 @@ namespace Code2Xml.Core.XmlToCodes {
 		public string GenerateFromFile(string fileName) {
 			Contract.Requires(fileName != null);
 			Contract.Ensures(Contract.Result<string>() != null);
-			// TODO: fix encoding
-			using (var stream = new StreamReader(fileName, XEncoding.SJIS)) {
-				return Generate(stream);
-			}
+			return GenerateFromText(GuessEncoding.ReadAllText(fileName));
 		}
 	}
 

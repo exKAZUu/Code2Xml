@@ -16,16 +16,17 @@
 
 #endregion
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
+using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
+using Code2Xml.Core;
 
-namespace Code2Xml.Languages.ANTLRv4 {
-	public class JavaVisitor : JavaBaseVisitor<object> {
-		private readonly string[] _parserRuleNames = JavaParser.ruleNames;
-		private readonly string[] _lexerRuleNames = JavaLexer.ruleNames;
+namespace Code2Xml.Languages.ANTLRv4.Core {
+	public class XElementBuildingVisitor : AbstractParseTreeVisitor<object> {
+		private readonly bool _throwingParseError;
+		private readonly string[] _parserRuleNames;
 		private readonly XElement _root = new XElement("root");
 		private readonly Stack<XElement> _elements;
 		private int _lastDepth;
@@ -34,15 +35,17 @@ namespace Code2Xml.Languages.ANTLRv4 {
 			get { return _root.Elements().First(); }
 		}
 
-		public JavaVisitor() {
+		public XElementBuildingVisitor(Parser parser, bool throwingParseError) {
+			_parserRuleNames = parser.RuleNames;
+			_throwingParseError = throwingParseError;
 			_elements = new Stack<XElement>(new[] { _root });
 		}
 
 		public override object VisitTerminal(ITerminalNode node) {
 			if (node.Symbol.Type > 0) {
-				var name = _lexerRuleNames[node.Symbol.Type - 1];
+				//var name = _lexerRuleNames[node.Symbol.Type - 1];
 				var value = node.Symbol.Text;
-				_elements.Peek().Add(new XElement(name, value));
+				_elements.Peek().Add(new XElement("TOKEN", value));
 			}
 			return base.VisitTerminal(node);
 		}
@@ -58,6 +61,13 @@ namespace Code2Xml.Languages.ANTLRv4 {
 			_lastDepth = node.RuleContext.Depth();
 			_elements.Push(element);
 			return base.VisitChildren(node);
+		}
+
+		public override object VisitErrorNode(IErrorNode node) {
+			if (_throwingParseError) {
+				throw new ParseException(node.ToStringTree());
+			}
+			return base.VisitErrorNode(node);
 		}
 	}
 }

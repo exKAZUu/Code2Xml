@@ -36,7 +36,14 @@
     <Reference Include="Antlr4.Runtime.v4.5">
       <HintPath>..\packages\Antlr4.Runtime.4.1.0-alpha003\lib\net45\Antlr4.Runtime.v4.5.dll</HintPath>
     </Reference>
+    <Reference Include="Paraiba">
+      <HintPath>..\packages\Paraiba.1.1.0.90\lib\net40\Paraiba.dll</HintPath>
+    </Reference>
+    <Reference Include="Paraiba.Experiment">
+      <HintPath>..\packages\Paraiba.Experiment.1.1.0.42\lib\net40\Paraiba.Experiment.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,30 +52,79 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LuaVisitor.cs" />
-    <Compile Include="Java.g4.cs">
+    <Compile Include="Processors\Clojure\Clojure.g4.lexer.cs" />
+    <Compile Include="Processors\Clojure\Clojure.g4.parser.cs" />
+    <Compile Include="Core\Antlr4Processor.cs" />
+    <Compile Include="Core\XElementBuildingListener.cs" />
+    <Compile Include="Processors\C\C.g4.lexer.cs" />
+    <Compile Include="Processors\C\C.g4.parser.cs" />
+    <Compile Include="Processors\Java\JavaProcessor.cs" />
+    <Compile Include="Core\XElementBuildingVisitor.cs" />
+    <Compile Include="Processors\Java\Java.g4.cs">
       <DependentUpon>Java.g4</DependentUpon>
     </Compile>
-    <Compile Include="JavaVisitor.cs" />
-    <Compile Include="Lua.g4.lexer.cs">
-      <DependentUpon>Lua.g4</DependentUpon>
+    <Compile Include="Processors\Lua\Lua.g4.lexer.cs" />
+    <Compile Include="Processors\Lua\Lua.g4.parser.cs" />
+    <Compile Include="Processors\Lua\LuaProcessor.cs" />
+    <Compile Include="Processors\ObjectiveC\ObjectiveC.g4.lexer.cs">
+      <DependentUpon>ObjectiveC.g4</DependentUpon>
     </Compile>
-    <Compile Include="Lua.g4.parser.cs">
-      <DependentUpon>Lua.g4</DependentUpon>
+    <Compile Include="Processors\ObjectiveC\ObjectiveC.g4.parser.cs">
+      <DependentUpon>ObjectiveC.g4</DependentUpon>
+    </Compile>
+    <Compile Include="Processors\R\R.g4.lexer.cs">
+      <DependentUpon>R.g4</DependentUpon>
+    </Compile>
+    <Compile Include="Processors\R\R.g4.parser.cs">
+      <DependentUpon>R.g4</DependentUpon>
+    </Compile>
+    <Compile Include="Processors\Verilog2001\Verilog2001.g4.lexer.cs">
+      <DependentUpon>Verilog2001.g4</DependentUpon>
+    </Compile>
+    <Compile Include="Processors\Verilog2001\Verilog2001.g4.parser.cs">
+      <DependentUpon>Verilog2001.g4</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Antlr4 Include="Java.g4">
+    <Antlr4 Include="Processors\Java\Java.g4">
       <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>Code2Xml.Languages.ANTLRv4</CustomToolNamespace>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.Java</CustomToolNamespace>
     </Antlr4>
-    <Antlr4 Include="Lua.g4">
+    <Antlr4 Include="Processors\Lua\Lua.g4">
       <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>Code2Xml.Languages.ANTLRv4</CustomToolNamespace>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.Lua</CustomToolNamespace>
+      <Visitor>True</Visitor>
+    </Antlr4>
+    <Antlr4 Include="Processors\C\C.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.C</CustomToolNamespace>
+    </Antlr4>
+    <Antlr4 Include="Processors\Clojure\Clojure.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.Clojure</CustomToolNamespace>
     </Antlr4>
     <None Include="packages.config" />
+    <Antlr4 Include="Processors\ObjectiveC\ObjectiveC.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.ObjectiveC</CustomToolNamespace>
+    </Antlr4>
+    <Antlr4 Include="Processors\R\R.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.R</CustomToolNamespace>
+    </Antlr4>
+    <Antlr4 Include="Processors\Verilog2001\Verilog2001.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.Verilog2001</CustomToolNamespace>
+    </Antlr4>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Code2Xml.Core\Code2Xml.Core.csproj">
+      <Project>{bccd95a9-7685-4b15-9da3-e48cc0bf499b}</Project>
+      <Name>Code2Xml.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <Import Project="..\packages\Antlr4.4.1.0-alpha003\build\Antlr4.targets" Condition="Exists('..\packages\Antlr4.4.1.0-alpha003\build\Antlr4.targets')" />

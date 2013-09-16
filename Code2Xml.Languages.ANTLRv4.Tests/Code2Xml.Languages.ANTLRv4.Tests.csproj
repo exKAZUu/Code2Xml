@@ -38,6 +38,10 @@
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="Paraiba, Version=1.1.0.90, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Paraiba.1.1.0.90\lib\net40\Paraiba.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,13 +51,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Processors\Java\JavaProcessorTest.cs" />
+    <Compile Include="XElementBuildingListenerTest.cs" />
+    <Compile Include="XElementBuildingVisitorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Code2Xml.Core\Code2Xml.Core.csproj">
+      <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>
+      <Name>Code2Xml.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Code2Xml.Languages.ANTLRv4\Code2Xml.Languages.ANTLRv4.csproj">
       <Project>{1de85da9-6ebf-49d1-8dda-75d9d25497f6}</Project>
       <Name>Code2Xml.Languages.ANTLRv4</Name>

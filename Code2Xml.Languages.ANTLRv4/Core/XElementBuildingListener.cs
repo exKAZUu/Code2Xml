@@ -16,48 +16,53 @@
 
 #endregion
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
+using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
+using Code2Xml.Core;
 
-namespace Code2Xml.Languages.ANTLRv4 {
-	public class LuaVisitor : LuaBaseVisitor<object> {
-		private readonly string[] _parserRuleNames = LuaParser.ruleNames;
-		private readonly string[] _lexerRuleNames = LuaLexer.ruleNames;
+namespace Code2Xml.Languages.ANTLRv4.Core {
+	public class XElementBuildingListener : IParseTreeListener {
+		private readonly bool _throwingParseError;
+		private readonly string[] _parserRuleNames;
 		private readonly XElement _root = new XElement("root");
 		private readonly Stack<XElement> _elements;
-		private int _lastDepth;
 
 		public XElement Root {
 			get { return _root.Elements().First(); }
 		}
 
-		public LuaVisitor() {
+		public XElementBuildingListener(Parser parser, bool throwingParseError) {
+			_parserRuleNames = parser.RuleNames;
+			_throwingParseError = throwingParseError;
 			_elements = new Stack<XElement>(new[] { _root });
 		}
 
-		public override object VisitTerminal(ITerminalNode node) {
+		public void VisitTerminal(ITerminalNode node) {
 			if (node.Symbol.Type > 0) {
-				var name = _lexerRuleNames[node.Symbol.Type - 1];
+				//var name = _lexerRuleNames[node.Symbol.Type - 1];
 				var value = node.Symbol.Text;
-				_elements.Peek().Add(new XElement(name, value));
+				_elements.Peek().Add(new XElement("TOKEN", value));
 			}
-			return base.VisitTerminal(node);
 		}
 
-		public override object VisitChildren(IRuleNode node) {
-			var name = _parserRuleNames[node.RuleContext.GetRuleIndex()];
-			var maxDepth = _lastDepth + 1;
-			for (int i = node.RuleContext.Depth(); i < maxDepth; i++) {
-				_elements.Pop();
+		public void VisitErrorNode(IErrorNode node) {
+			if (_throwingParseError) {
+				throw new ParseException(node.ToStringTree());
 			}
+		}
+
+		public void EnterEveryRule(ParserRuleContext ctx) {
+			var name = _parserRuleNames[ctx.GetRuleIndex()];
 			var element = new XElement(name);
 			_elements.Peek().Add(element);
-			_lastDepth = node.RuleContext.Depth();
 			_elements.Push(element);
-			return base.VisitChildren(node);
+		}
+
+		public void ExitEveryRule(ParserRuleContext ctx) {
+			_elements.Pop();
 		}
 	}
 }
