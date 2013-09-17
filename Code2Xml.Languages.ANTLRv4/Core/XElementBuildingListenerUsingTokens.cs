@@ -24,17 +24,20 @@ using Antlr4.Runtime.Tree;
 using Code2Xml.Core;
 
 namespace Code2Xml.Languages.ANTLRv4.Core {
-	public class XElementBuildingListener : IParseTreeListener {
+	public class XElementBuildingListenerUsingTokens : IParseTreeListener {
+		private readonly string[] _lexerTokenNames;
 		private readonly bool _throwingParseError;
 		private readonly string[] _parserRuleNames;
-		private readonly XElement _dummyRoot, _dummyNode;
+		private readonly XElement _dummyRoot;
 		private readonly Stack<XElement> _elements;
 		private readonly CommonTokenStream _stream;
 		private int _lastTokenIndex;
 		private XElement _lastElement;
+		private XElement _dummyNode;
 
-		public XElementBuildingListener(Parser parser, bool throwingParseError) {
+		public XElementBuildingListenerUsingTokens(Parser parser, Lexer lexer, bool throwingParseError) {
 			_parserRuleNames = parser.RuleNames;
+			_lexerTokenNames = lexer.TokenNames;
 			_throwingParseError = throwingParseError;
 			_stream = parser.InputStream as CommonTokenStream;
 			_dummyRoot = new XElement("root");
@@ -46,16 +49,22 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 
 		public XElement FinishParsing() {
 			var size = _stream.Size - 1; // Avoid writing "<EOF>"
-			var text = "";
 			for (int i = _lastTokenIndex + 1; i < size; i++) {
-				text += _stream.Get(i).Text;
+				var token = _stream.Get(i);
+				if (token.Channel == Lexer.Hidden) {
+					var name = _lexerTokenNames[token.Type];
+					_lastElement.Add(new XElement(name, token.Text));
+				} else {
+					_lastElement.Add(new XElement("TOKEN", token.Text));
+				}
 			}
-			_lastElement.Value += text;
 
 			var root = _dummyRoot.Elements().First();
-			var firstTokenNode = root.Descendants("TOKEN").FirstOrDefault();
-			if (firstTokenNode != null) {
-				firstTokenNode.Value = _dummyNode.Value + firstTokenNode.Value;
+			var firstTokensNode = root.Descendants("TOKENS").FirstOrDefault();
+			if (firstTokensNode != null) {
+				foreach (var element in _dummyNode.Elements().Reverse()) {
+					firstTokensNode.AddFirst(element);
+				}
 			}
 			return root;
 		}
@@ -63,15 +72,18 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 		public void VisitTerminal(ITerminalNode node) {
 			var symbol = node.Symbol;
 			if (symbol.Type > 0) {
-				//var name = _lexerRuleNames[node.Symbol.Type - 1];
-				var text = "";
 				var tokenIndex = symbol.TokenIndex;
 				for (int i = _lastTokenIndex + 1; i < tokenIndex; i++) {
-					text += _stream.Get(i).Text;
+					var token = _stream.Get(i);
+					if (token.Channel == Lexer.Hidden) {
+						var name = _lexerTokenNames[token.Type];
+						_lastElement.Add(new XElement(name, token.Text));
+					} else {
+						_lastElement.Add(new XElement("TOKEN", token.Text));
+					}
 				}
-				_lastElement.Value += text;
 				_lastTokenIndex = tokenIndex;
-				_lastElement = new XElement("TOKEN", symbol.Text);
+				_lastElement = new XElement("TOKENS", new XElement("TOKEN", symbol.Text));
 				_elements.Peek().Add(_lastElement);
 			}
 		}

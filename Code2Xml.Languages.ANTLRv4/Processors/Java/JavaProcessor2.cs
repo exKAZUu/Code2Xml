@@ -29,7 +29,7 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Java {
 	/// Represents a Java parser and a Java code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class JavaProcessor : Antlr4Processor {
+	public class JavaProcessor2 : Antlr4Processor {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
@@ -44,7 +44,7 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Java {
 			get { return "7"; }
 		}
 
-		public JavaProcessor() : base(".java") {}
+		public JavaProcessor2() : base(".java") {}
 
 		/// <summary>
 		/// Generates source code from the specified xml.
@@ -53,6 +53,10 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Java {
 		/// <returns></returns>
 		public override string GenerateCode(XElement root) {
 			var builder = new StringBuilder();
+			var hidden = root.Attribute("hidden");
+			if (hidden != null) {
+				builder.Append(hidden.Value);
+			}
 			GenerateCode(builder, root);
 			return builder.ToString();
 		}
@@ -64,6 +68,10 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Java {
 					GenerateCode(builder, e);
 				} else {
 					builder.Append(e.Value);
+					var hidden = e.Attribute("hidden");
+					if (hidden != null) {
+						builder.Append(hidden.Value);
+					}
 				}
 			}
 		}
@@ -74,7 +82,7 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Java {
 			var lexer = new JavaLexer(charStream);
 			var commonTokenStream = new CommonTokenStream(lexer);
 			var parser = new JavaParser(commonTokenStream);
-			var listener = new XElementBuildingListenerUsingTokens(parser, lexer, throwingParseError);
+			var listener = new XElementBuildingListenerUsingAttribute(parser, throwingParseError);
 			parser.AddParseListener(listener);
 			parser.compilationUnit();
 			return listener.FinishParsing();

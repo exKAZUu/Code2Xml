@@ -16,42 +16,101 @@
 
 #endregion
 
+using System;
+using System.Diagnostics;
+using System.IO;
+using Antlr4.Runtime;
 using Code2Xml.Languages.ANTLRv4.Processors.Java;
 using NUnit.Framework;
-using Paraiba.Core;
 
 namespace Code2Xml.Languages.ANTLRv4.Tests.Processors.Java {
 	[TestFixture]
 	public class JavaProcessorTest {
 		[Test]
 		public void Parse() {
-			var code = @"import javax.swing.*;
+			var code = @"//test
+import javax.swing.*;
  
 public class Hello extends JFrame {
-    Hello() {
+    Hello() /*test*/ {
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        pack();
+        pack(); // pack();
     }
  
     public static void main(String[] args) {
         new Hello().setVisible(true);
     }
-}";
+}
+";
 			var processor = new JavaProcessor();
 			var xml = processor.GenerateXml(code);
 			var code2 = processor.GenerateCode(xml);
-			Assert.That(code2.ReplaceNewlinesForWindows(),
-				Is.EqualTo(@"import javax . swing . * ;
-public class Hello extends JFrame {
-	Hello ( ) {
-		setDefaultCloseOperation ( WindowConstants . DISPOSE_ON_CLOSE ) ;
-		pack ( ) ;
-	}
-	public static void main ( String [ ] args ) {
-		new Hello ( ) . setVisible ( true ) ;
-	}
+			Assert.That(code2, Is.EqualTo(code));
+		}
+
+		[Test]
+		public void Parse2() {
+			var code = @"
+class Hello {
+    void main(String[] args) {
+		System.out.println((String)args[0x00]);
+    }
 }
-".ReplaceNewlinesForWindows()));
+";
+			var stream = new AntlrInputStream(code);
+			var lexer = new JavaLexer(stream);
+			var commonTokenStream = new CommonTokenStream(lexer);
+			var parser = new JavaParser(commonTokenStream);
+			parser.compilationUnit();
+
+			var processor = new JavaProcessor();
+			var xml = processor.GenerateXml(code);
+			var code2 = processor.GenerateCode(xml);
+			Assert.That(code2, Is.EqualTo(code));
+		}
+
+		[Test]
+		public void ParseJavaSource() {
+			var dirInfo = new DirectoryInfo(@"C:\Users\exKAZUu\Desktop\src");
+			if (!dirInfo.Exists) {
+				return;
+			}
+
+			var javaFiles = dirInfo.GetFiles("*.java", SearchOption.AllDirectories);
+			var processor = new JavaProcessor();
+			var stopwatch = new Stopwatch();
+			stopwatch.Start();
+			foreach (var javaFile in javaFiles) {
+				Console.WriteLine(javaFile);
+				var code = javaFile.OpenText().ReadToEnd();
+				var xml = processor.GenerateXml(code);
+				var code2 = processor.GenerateCode(xml);
+				Assert.That(code2, Is.EqualTo(code));
+			}
+			stopwatch.Stop();
+			Console.WriteLine(stopwatch.Elapsed);
+		}
+
+		[Test]
+		public void ParseJavaSourceWithAttribute() {
+			var dirInfo = new DirectoryInfo(@"C:\Users\exKAZUu\Desktop\src");
+			if (!dirInfo.Exists) {
+				return;
+			}
+
+			var javaFiles = dirInfo.GetFiles("*.java", SearchOption.AllDirectories);
+			var processor = new JavaProcessor2();
+			var stopwatch = new Stopwatch();
+			stopwatch.Start();
+			foreach (var javaFile in javaFiles) {
+				Console.WriteLine(javaFile);
+				var code = javaFile.OpenText().ReadToEnd();
+				var xml = processor.GenerateXml(code);
+				var code2 = processor.GenerateCode(xml);
+				Assert.That(code2, Is.EqualTo(code));
+			}
+			stopwatch.Stop();
+			Console.WriteLine(stopwatch.Elapsed);
 		}
 	}
 }

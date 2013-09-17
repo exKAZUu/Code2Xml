@@ -24,23 +24,22 @@ using Antlr4.Runtime.Tree;
 using Code2Xml.Core;
 
 namespace Code2Xml.Languages.ANTLRv4.Core {
-	public class XElementBuildingListener : IParseTreeListener {
+	public class XElementBuildingListenerUsingAttribute : IParseTreeListener {
 		private readonly bool _throwingParseError;
 		private readonly string[] _parserRuleNames;
-		private readonly XElement _dummyRoot, _dummyNode;
+		private readonly XElement _dummyRoot;
 		private readonly Stack<XElement> _elements;
 		private readonly CommonTokenStream _stream;
 		private int _lastTokenIndex;
 		private XElement _lastElement;
 
-		public XElementBuildingListener(Parser parser, bool throwingParseError) {
+		public XElementBuildingListenerUsingAttribute(Parser parser, bool throwingParseError) {
 			_parserRuleNames = parser.RuleNames;
 			_throwingParseError = throwingParseError;
 			_stream = parser.InputStream as CommonTokenStream;
 			_dummyRoot = new XElement("root");
-			_dummyNode = new XElement("dummy");
 			_elements = new Stack<XElement>(new[] { _dummyRoot });
-			_lastElement = _dummyNode;
+			_lastElement = _dummyRoot;
 			_lastTokenIndex = -1;
 		}
 
@@ -50,12 +49,12 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 			for (int i = _lastTokenIndex + 1; i < size; i++) {
 				text += _stream.Get(i).Text;
 			}
-			_lastElement.Value += text;
+			_lastElement.SetAttributeValue("hidden", text);
 
 			var root = _dummyRoot.Elements().First();
-			var firstTokenNode = root.Descendants("TOKEN").FirstOrDefault();
-			if (firstTokenNode != null) {
-				firstTokenNode.Value = _dummyNode.Value + firstTokenNode.Value;
+			var attr = _dummyRoot.Attribute("hidden");
+			if (attr != null) {
+				root.SetAttributeValue("hidden", attr.Value);
 			}
 			return root;
 		}
@@ -69,7 +68,7 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 				for (int i = _lastTokenIndex + 1; i < tokenIndex; i++) {
 					text += _stream.Get(i).Text;
 				}
-				_lastElement.Value += text;
+				_lastElement.SetAttributeValue("hidden", text);
 				_lastTokenIndex = tokenIndex;
 				_lastElement = new XElement("TOKEN", symbol.Text);
 				_elements.Peek().Add(_lastElement);

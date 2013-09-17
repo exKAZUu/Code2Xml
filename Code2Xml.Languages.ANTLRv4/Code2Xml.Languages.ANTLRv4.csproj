@@ -52,12 +52,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\XElementBuildingListenerUsingTokens.cs" />
+    <Compile Include="Core\XElementBuildingListenerUsingAttribute.cs" />
     <Compile Include="Processors\Clojure\Clojure.g4.lexer.cs" />
     <Compile Include="Processors\Clojure\Clojure.g4.parser.cs" />
     <Compile Include="Core\Antlr4Processor.cs" />
     <Compile Include="Core\XElementBuildingListener.cs" />
     <Compile Include="Processors\C\C.g4.lexer.cs" />
     <Compile Include="Processors\C\C.g4.parser.cs" />
+    <Compile Include="Processors\Java\JavaProcessor2.cs" />
     <Compile Include="Processors\Java\JavaProcessor.cs" />
     <Compile Include="Core\XElementBuildingVisitor.cs" />
     <Compile Include="Processors\Java\Java.g4.cs">

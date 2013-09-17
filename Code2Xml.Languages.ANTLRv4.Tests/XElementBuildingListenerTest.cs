@@ -44,7 +44,7 @@ int main(int argc, char **args) {
 			var listener = new XElementBuildingListener(parser, true);
 			parser.AddParseListener(listener);
 			parser.compilationUnit();
-			Console.WriteLine(listener.Root);
+			Console.WriteLine(listener.FinishParsing());
 		}
 
 		[Test]
@@ -56,7 +56,7 @@ int main(int argc, char **args) {
 			var listener = new XElementBuildingListener(parser, true);
 			parser.AddParseListener(listener);
 			parser.file();
-			Console.WriteLine(listener.Root);
+			Console.WriteLine(listener.FinishParsing());
 		}
 
 		[Test]
@@ -80,7 +80,7 @@ public class Hello extends JFrame {
 			var listener = new XElementBuildingListener(parser, true);
 			parser.AddParseListener(listener);
 			parser.compilationUnit();
-			Console.WriteLine(listener.Root);
+			Console.WriteLine(listener.FinishParsing());
 		}
 
 		[Test]
@@ -104,7 +104,7 @@ public class Hello extends JFrame {
 			var listener = new XElementBuildingListener(parser, true);
 			parser.AddParseListener(listener);
 			parser.chunk();
-			Console.WriteLine(listener.Root);
+			Console.WriteLine(listener.FinishParsing());
 		}
 
 		[Test]
@@ -124,7 +124,7 @@ public class Hello extends JFrame {
 			var listener = new XElementBuildingListener(parser, true);
 			parser.AddParseListener(listener);
 			parser.translation_unit();
-			Console.WriteLine(listener.Root);
+			Console.WriteLine(listener.FinishParsing());
 		}
 
 		[Test]
@@ -141,7 +141,7 @@ eval(z)
 			var listener = new XElementBuildingListener(parser, true);
 			parser.AddParseListener(listener);
 			parser.prog();
-			Console.WriteLine(listener.Root);
+			Console.WriteLine(listener.FinishParsing());
 		}
 
 		[Test]
@@ -180,7 +180,7 @@ endmodule
 			var listener = new XElementBuildingListener(parser, true);
 			parser.AddParseListener(listener);
 			parser.source_text();
-			Console.WriteLine(listener.Root);
+			Console.WriteLine(listener.FinishParsing());
 		}
 	}
 }
