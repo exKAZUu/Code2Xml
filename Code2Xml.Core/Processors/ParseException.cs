@@ -18,7 +18,7 @@
 
 using System;
 
-namespace Code2Xml.Core {
+namespace Code2Xml.Core.Processors {
 	public class ParseException : Exception {
 		public ParseException(string message) : base(message) {}
 	}

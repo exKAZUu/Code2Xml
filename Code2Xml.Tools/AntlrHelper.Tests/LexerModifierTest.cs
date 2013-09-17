@@ -18,7 +18,7 @@
 
 using NUnit.Framework;
 
-namespace Code2Xml.AntlrHelper.Tests {
+namespace Code2Xml.Tools.AntlrHelper.Tests {
 	/// <summary>
 	///   A test suite for <see cref="LexerModifier" /> .
 	/// </summary>

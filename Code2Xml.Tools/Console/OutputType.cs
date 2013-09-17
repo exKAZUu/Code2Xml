@@ -16,7 +16,7 @@
 
 #endregion
 
-namespace Code2Xml.Console {
+namespace Code2Xml.Tools.Console {
 	public enum OutputType {
 		DefaultStream,
 		File,

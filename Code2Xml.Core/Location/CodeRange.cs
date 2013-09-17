@@ -23,23 +23,39 @@ using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 
-namespace Code2Xml.Core.Position {
+namespace Code2Xml.Core.Location {
 	/// <summary>
-	/// A data class which represents a position of a element in sour code with start/end  line/position(column).
+	/// Represents a range in sour code with the specified *INCLUSIVE* start and end positions.
 	/// </summary>
 	[Serializable]
-	public struct CodePosition : IEquatable<CodePosition> {
-		public int EndLine;
-		public int EndPosition;
-		public int StartLine;
-		public int StartPosition;
+	public struct CodeRange : IEquatable<CodeRange> {
+		public CodeLocation StartLocation;
+		public CodeLocation EndLocation;
 
-		public CodePosition(int startLine, int endLine, int startPosition, int endPosition) {
-			Contract.Requires(startLine <= endLine);
-			StartLine = startLine;
-			StartPosition = startPosition;
-			EndLine = endLine;
-			EndPosition = endPosition;
+		public int StartLine {
+			get { return StartLocation.Line; }
+			set { StartLocation.Line = value; }
+		}
+
+		public int StartPosition {
+			get { return StartLocation.Position; }
+			set { StartLocation.Position = value; }
+		}
+
+		public int EndLine {
+			get { return EndLocation.Line; }
+			set { EndLocation.Line = value; }
+		}
+
+		public int EndPosition {
+			get { return EndLocation.Position; }
+			set { EndLocation.Position = value; }
+		}
+
+		public CodeRange(CodeLocation inclusiveStartLocation, CodeLocation inclusiveEndLocation) {
+			Contract.Requires(inclusiveStartLocation <= inclusiveEndLocation);
+			StartLocation = inclusiveStartLocation;
+			EndLocation = inclusiveEndLocation;
 		}
 
 		#region Members about the string representation
@@ -90,7 +106,7 @@ namespace Code2Xml.Core.Position {
 
 		#region Members about the equality
 
-		public bool Equals(CodePosition other) {
+		public bool Equals(CodeRange other) {
 			return other.EndLine == EndLine && other.EndPosition == EndPosition &&
 			       other.StartLine == StartLine && other.StartPosition == StartPosition;
 		}
@@ -99,10 +115,10 @@ namespace Code2Xml.Core.Position {
 			if (ReferenceEquals(null, obj)) {
 				return false;
 			}
-			if (obj.GetType() != typeof(CodePosition)) {
+			if (obj.GetType() != typeof(CodeRange)) {
 				return false;
 			}
-			return Equals((CodePosition)obj);
+			return Equals((CodeRange)obj);
 		}
 
 		public override int GetHashCode() {
@@ -115,11 +131,11 @@ namespace Code2Xml.Core.Position {
 			}
 		}
 
-		public static bool operator ==(CodePosition left, CodePosition right) {
+		public static bool operator ==(CodeRange left, CodeRange right) {
 			return left.Equals(right);
 		}
 
-		public static bool operator !=(CodePosition left, CodePosition right) {
+		public static bool operator !=(CodeRange left, CodeRange right) {
 			return !left.Equals(right);
 		}
 
@@ -127,12 +143,12 @@ namespace Code2Xml.Core.Position {
 
 		#region Members about the serialization
 
-		public static CodePosition Read(BinaryReader reader) {
+		public static CodeRange Read(BinaryReader reader) {
 			var startLine = reader.ReadInt32();
 			var endLine = reader.ReadInt32();
 			var startPos = reader.ReadInt32();
 			var endPos = reader.ReadInt32();
-			return new CodePosition(startLine, endLine, startPos, endPos);
+			return new CodeRange(new CodeLocation(startLine, startPos), new CodeLocation(endLine, endPos));
 		}
 
 		public void Write(BinaryWriter writer) {
@@ -145,36 +161,70 @@ namespace Code2Xml.Core.Position {
 		#endregion
 
 		/// <summary>
-		/// Returns whether the specified location (line and position) is included this CodePosition.
+		/// Returns whether the specified location (line and position) is included this CodeRange instance.
 		/// </summary>
-		/// <param name="line"></param>
-		/// <param name="pos"></param>
+		/// <param name="location"></param>
 		/// <returns></returns>
-		public bool Contains(int line, int pos) {
-			if (line < StartLine) {
+		public bool Contains(CodeLocation location) {
+			if (location.Line < StartLine) {
 				return false;
 			}
-			if (line == StartLine && pos < StartPosition) {
+			if (location.Line == StartLine && location.Position < StartPosition) {
 				return false;
 			}
-			if (EndLine < line) {
+			if (EndLine < location.Line) {
 				return false;
 			}
-			if (line == EndLine && EndPosition < pos) {
+			if (location.Line == EndLine && EndPosition < location.Position) {
 				return false;
 			}
 			return true;
 		}
 
-		public static CodePosition Analyze(XElement element) {
-			return AnalyzePrivate(element.DescendantsAndSelf());
+		/// <summary>
+		/// Returns whether the specified CodeRange instance is included by this CodeRange instance.
+		/// </summary>
+		/// <param name="other"></param>
+		/// <returns></returns>
+		public bool Contains(CodeRange other) {
+			return Contains(other.StartLocation) &&
+			       Contains(other.EndLocation);
 		}
 
-		public static CodePosition Analyze(IEnumerable<XElement> elements) {
-			return AnalyzePrivate(elements.DescendantsAndSelf());
+		/// <summary>
+		/// Returns whether the specified CodeRange instance is overlapped with this CodeRange instance.
+		/// </summary>
+		/// <param name="other"></param>
+		/// <returns></returns>
+		public bool Overlaps(CodeRange other) {
+			return Contains(other.StartLocation) ||
+			       Contains(other.EndLocation) ||
+			       other.Contains(StartLocation) ||
+			       other.Contains(EndLocation);
 		}
 
-		private static CodePosition AnalyzePrivate(IEnumerable<XElement> descendants) {
+		public XElement FindElement(XElement element) {
+			XElement lastElement = null;
+			foreach (var elem in element.DescendantsAndSelf()) {
+				var pos = Locate(elem);
+				if (pos.Contains(this)) {
+					lastElement = elem;
+				} else if (EndLocation <= pos.StartLocation) {
+					break;
+				}
+			}
+			return lastElement;
+		}
+
+		public static CodeRange Locate(XElement element) {
+			return LocatePrivate(element.DescendantsAndSelf());
+		}
+
+		public static CodeRange Locate(IEnumerable<XElement> elements) {
+			return LocatePrivate(elements.DescendantsAndSelf());
+		}
+
+		private static CodeRange LocatePrivate(IEnumerable<XElement> descendants) {
 			int startLine = 0, startPos = 0;
 			var first = descendants.FirstOrDefault(
 					e => e.Attribute(Code2XmlConstants.StartLineName) != null);
@@ -188,7 +238,7 @@ namespace Code2Xml.Core.Position {
 					int.TryParse(startPosAttr.Value, out startPos);
 				}
 			} else {
-				return new CodePosition(-1, -1, -1, -1);
+				return new CodeRange(new CodeLocation(-1, -1), new CodeLocation(-1, -1));
 			}
 
 			int endLine = 0, endPos = 0;
@@ -210,13 +260,13 @@ namespace Code2Xml.Core.Position {
 							last.Attribute(Code2XmlConstants.StartPositionName);
 					int value;
 					if (startPosAttr != null && int.TryParse(startPosAttr.Value, out value)) {
-						int index = last.Value.LastIndexOf('\n');
-						endPos = value + last.Value.Length - (index + 1);
+						int ignoredCount = last.Value.LastIndexOf('\n') + 1;
+						endPos = value + (last.Value.Length - 1) - ignoredCount;
 					}
 				}
 			}
 
-			return new CodePosition(startLine, endLine, startPos, endPos);
+			return new CodeRange(new CodeLocation(startLine, startPos), new CodeLocation(endLine, endPos));
 		}
 	}
 }

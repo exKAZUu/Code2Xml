@@ -19,7 +19,7 @@
 using System.IO;
 using System.Linq;
 using Antlr.Runtime;
-using Code2Xml.Core.Position;
+using Code2Xml.Core.Location;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.Java.CodeToXmls;
 using Code2Xml.Languages.Java.XmlToCodes;
@@ -51,10 +51,10 @@ aa*/
 // bbb
 }");
 			var cs = e.Descendants("Comment").ToList();
-			var p1 = CodePosition.Analyze(cs[0]);
-			var p2 = CodePosition.Analyze(cs[1]);
-			var p3 = CodePosition.Analyze(cs[2]);
-			var p4 = CodePosition.Analyze(cs[3]);
+			var p1 = CodeRange.Locate(cs[0]);
+			var p2 = CodeRange.Locate(cs[1]);
+			var p3 = CodeRange.Locate(cs[2]);
+			var p4 = CodeRange.Locate(cs[3]);
 			Assert.That(cs.Count, Is.EqualTo(4));
 			Assert.That(p1.StartLine, Is.EqualTo(1));
 			Assert.That(p1.EndLine, Is.EqualTo(2));

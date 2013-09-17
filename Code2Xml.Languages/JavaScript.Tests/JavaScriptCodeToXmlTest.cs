@@ -17,7 +17,7 @@
 #endregion
 
 using System.Linq;
-using Code2Xml.Core.Position;
+using Code2Xml.Core.Location;
 using Code2Xml.Languages.JavaScript.CodeToXmls;
 using NUnit.Framework;
 
@@ -31,7 +31,7 @@ namespace Code2Xml.Languages.JavaScript.Tests {
 /*
 c*/");
 			Assert.That(e.Descendants("Comment").Count(), Is.EqualTo(3));
-			var pos = CodePosition.Analyze(e.Descendants("Comment").Last());
+			var pos = CodeRange.Locate(e.Descendants("Comment").Last());
 			Assert.That(pos.StartLine, Is.EqualTo(2));
 			Assert.That(pos.EndLine, Is.EqualTo(3));
 			Assert.That(pos.StartPosition, Is.EqualTo(0));

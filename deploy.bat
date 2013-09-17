@@ -6,6 +6,7 @@ mkdir lib
 copy ..\Code2Xml.Tools\Console\bin\Release\*.dll lib\
 copy ..\Code2Xml.Tools\Console\bin\Release\*.pdb lib\
 del lib\Paraiba.*
+del lib\Antlr*
 FOR %%f IN (*.nuspec) DO (
 	nuget pack %%f
 )

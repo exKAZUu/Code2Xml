@@ -21,7 +21,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using Paraiba.Text;
 
-namespace Code2Xml.AntlrHelper {
+namespace Code2Xml.Tools.AntlrHelper {
 	public static class ParserModifier {
 		private static readonly Regex SystemOutRegex =
 				new Regex(@"System\.out\.println[^;]+;");

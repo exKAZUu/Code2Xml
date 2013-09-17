@@ -18,7 +18,7 @@
 
 using NUnit.Framework;
 
-namespace Code2Xml.AntlrHelper.Tests {
+namespace Code2Xml.Tools.AntlrHelper.Tests {
 	public class ParserModifierTest {
 		[Test]
 		public void JavaコードをCSharpコードに変換できる() {

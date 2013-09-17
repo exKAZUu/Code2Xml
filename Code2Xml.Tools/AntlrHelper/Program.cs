@@ -19,7 +19,7 @@
 using System.IO;
 using System.Linq;
 
-namespace Code2Xml.AntlrHelper {
+namespace Code2Xml.Tools.AntlrHelper {
 	internal class Program {
 		private static void Main(string[] args) {
 			foreach (var arg in args) {

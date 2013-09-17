@@ -21,6 +21,7 @@ using System.ComponentModel.Composition;
 using System.IO;
 using Code2Xml.Core;
 using Code2Xml.Core.CodeToXmls;
+using Code2Xml.Core.Processors;
 using Code2Xml.Core.XmlToCodes;
 using Code2Xml.Languages.Ruby19.Properties;
 using Code2Xml.Languages.Ruby19.XmlToCodes;
@@ -41,7 +42,7 @@ namespace Code2Xml.Languages.Ruby19.CodeToXmls {
 		private readonly string _processorPath;
 
 		public Ruby19CodeToXml()
-				: this(ParserUtils.GetRubyPath() ?? "ruby") {}
+				: this(ExternalProgramUtils.GetRubyPath() ?? "ruby") {}
 
 		public Ruby19CodeToXml(string processorPath) {
 			_processorPath = processorPath;

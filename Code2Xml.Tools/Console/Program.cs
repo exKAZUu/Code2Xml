@@ -20,7 +20,7 @@ using System.Collections.Generic;
 using System.IO;
 using Paraiba.Core;
 
-namespace Code2Xml.Console {
+namespace Code2Xml.Tools.Console {
 	public class Program {
 		public static void Main(string[] args) {
 			string parserName = null;

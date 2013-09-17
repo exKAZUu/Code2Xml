@@ -20,7 +20,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Code2Xml.Core.CodeToXmls;
-using Code2Xml.Core.Plugins;
+using Code2Xml.Core.Plugin;
 using Code2Xml.Core.Tests;
 using Code2Xml.Core.XmlToCodes;
 using NUnit.Framework;

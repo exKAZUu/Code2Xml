@@ -27,7 +27,7 @@ using Code2Xml.Core.Processors;
 using Code2Xml.Core.XmlToCodes;
 using Paraiba.Linq;
 
-namespace Code2Xml.Core.Plugins {
+namespace Code2Xml.Core.Plugin {
 	public class PluginManager {
 		private static PluginManager _instance;
 

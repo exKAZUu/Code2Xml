@@ -19,10 +19,10 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Code2Xml.Core.Plugins;
+using Code2Xml.Core.Plugin;
 using Paraiba.Text;
 
-namespace Code2Xml.Console {
+namespace Code2Xml.Tools.Console {
 	public static class Parser {
 		public static void ParseCodeToXml(
 				IEnumerable<string> filePaths,

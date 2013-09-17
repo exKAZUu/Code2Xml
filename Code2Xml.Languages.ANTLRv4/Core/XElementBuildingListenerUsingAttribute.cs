@@ -22,6 +22,7 @@ using System.Xml.Linq;
 using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
 using Code2Xml.Core;
+using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Languages.ANTLRv4.Core {
 	public class XElementBuildingListenerUsingAttribute : IParseTreeListener {

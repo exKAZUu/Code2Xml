@@ -21,7 +21,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Code2Xml.Core.CodeToXmls;
-using Code2Xml.Core.Plugins;
+using Code2Xml.Core.Plugin;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.C.CodeToXmls;
 using Code2Xml.Languages.C.XmlToCodes;
@@ -29,7 +29,7 @@ using NUnit.Framework;
 using Paraiba.Core;
 using Paraiba.Text;
 
-namespace Code2Xml.Console.Tests {
+namespace Code2Xml.Tools.Console.Tests {
 	[TestFixture]
 	public class ProgramTest {
 		private static string CLanguageName = "C";

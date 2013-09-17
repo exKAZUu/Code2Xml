@@ -21,6 +21,7 @@ using System.ComponentModel.Composition;
 using System.IO;
 using Code2Xml.Core;
 using Code2Xml.Core.CodeToXmls;
+using Code2Xml.Core.Processors;
 using Code2Xml.Core.XmlToCodes;
 using Code2Xml.Languages.Python2.Properties;
 using Code2Xml.Languages.Python2.XmlToCodes;
@@ -41,7 +42,7 @@ namespace Code2Xml.Languages.Python2.CodeToXmls {
 		private readonly string _processorPath;
 
 		public Python2CodeToXml()
-				: this(ParserUtils.GetPythonPath("2") ?? "python2") {}
+				: this(ExternalProgramUtils.GetPythonPath("2") ?? "python2") {}
 
 		public Python2CodeToXml(string processorPath) {
 			_processorPath = processorPath;

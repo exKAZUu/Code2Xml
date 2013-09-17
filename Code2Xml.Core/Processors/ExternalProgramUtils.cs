@@ -23,10 +23,9 @@ using System.IO;
 using System.Linq;
 using Microsoft.Win32;
 using Paraiba.Core;
-using Paraiba.Linq;
 
-namespace Code2Xml.Core {
-	public static class ParserUtils {
+namespace Code2Xml.Core.Processors {
+	public static class ExternalProgramUtils {
 		public static string GetPythonPath(params string[] versions) {
 			IEnumerable<string> paths;
 			// Check whether running OS is Unix/Linux

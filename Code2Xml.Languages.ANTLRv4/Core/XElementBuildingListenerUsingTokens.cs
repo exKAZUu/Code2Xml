@@ -22,6 +22,7 @@ using System.Xml.Linq;
 using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
 using Code2Xml.Core;
+using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Languages.ANTLRv4.Core {
 	public class XElementBuildingListenerUsingTokens : IParseTreeListener {
@@ -31,9 +32,9 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 		private readonly XElement _dummyRoot;
 		private readonly Stack<XElement> _elements;
 		private readonly CommonTokenStream _stream;
-		private int _lastTokenIndex;
+		private readonly XElement _dummyNode;
 		private XElement _lastElement;
-		private XElement _dummyNode;
+		private int _lastTokenIndex;
 
 		public XElementBuildingListenerUsingTokens(Parser parser, Lexer lexer, bool throwingParseError) {
 			_parserRuleNames = parser.RuleNames;

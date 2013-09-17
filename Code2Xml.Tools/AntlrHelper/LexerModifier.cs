@@ -20,7 +20,7 @@ using System.Diagnostics.Contracts;
 using System.IO;
 using Paraiba.Text;
 
-namespace Code2Xml.AntlrHelper {
+namespace Code2Xml.Tools.AntlrHelper {
 	public static class LexerModifier {
 		public static void Modify(string path) {
 			Contract.Requires(path != null);

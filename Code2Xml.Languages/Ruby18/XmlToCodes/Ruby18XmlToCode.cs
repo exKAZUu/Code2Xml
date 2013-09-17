@@ -20,6 +20,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
 using System.IO;
 using Code2Xml.Core;
+using Code2Xml.Core.Processors;
 using Code2Xml.Core.XmlToCodes;
 using Code2Xml.Languages.Ruby18.Properties;
 using Paraiba.IO;
@@ -50,7 +51,7 @@ namespace Code2Xml.Languages.Ruby18.XmlToCodes {
 		}
 
 		public Ruby18XmlToCode()
-				: this(ParserUtils.GetRubyPath() ?? "ruby") {}
+				: this(ExternalProgramUtils.GetRubyPath() ?? "ruby") {}
 
 		public Ruby18XmlToCode(string processorPath) {
 			_processorPath = processorPath;
