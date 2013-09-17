@@ -17,11 +17,13 @@
 #endregion
 
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
+using Paraiba.Core;
 
 namespace Code2Xml.Core.Location {
 	/// <summary>
@@ -203,7 +205,7 @@ namespace Code2Xml.Core.Location {
 			       other.Contains(EndLocation);
 		}
 
-		public XElement FindElement(XElement element) {
+		public XElement FindInnerElement(XElement element) {
 			XElement lastElement = null;
 			foreach (var elem in element.DescendantsAndSelf()) {
 				var pos = Locate(elem);
@@ -215,6 +217,67 @@ namespace Code2Xml.Core.Location {
 			}
 			return lastElement;
 		}
+
+		public XElement FindOuterElement(XElement element) {
+			var ret = FindInnerElement(element);
+			while (ret.Parent != null && ret.Parent.Elements().Count() == 1) {
+				ret = ret.Parent;
+			}
+			return ret;
+		}
+
+		#region Inter-Conversion between a CodeRange object and indicies
+
+		public void ConvertToIndicies(string code, out int inclusiveStart, out int exclusiveEnd) {
+			var headIndex = 0;
+			var i = 1;
+			for (; i < StartLine; i++) {
+				headIndex = code.IndexOf('\n', headIndex) + 1;
+			}
+			inclusiveStart = headIndex + StartPosition;
+			for (; i < EndLine; i++) {
+				headIndex = code.IndexOf('\n', headIndex) + 1;
+			}
+			exclusiveEnd = headIndex + EndPosition + 1;
+		}
+
+		public Tuple<int, int> ConvertToIndicies(string code) {
+			int inclusiveStart, exclusiveEnd;
+			ConvertToIndicies(code, out inclusiveStart, out exclusiveEnd);
+			return Tuple.Create(inclusiveStart, exclusiveEnd);
+		}
+
+		public static CodeRange ConvertFromIndicies(string code, ref int inclusiveStart, ref int exclusiveEnd) {
+			var beforeCode = code.Substring(0, inclusiveStart);
+			var targetCode = code.Substring(inclusiveStart, exclusiveEnd - inclusiveStart);
+			var beforeCount = beforeCode.Count(ch => ch == '\n');
+			var afterCount = targetCode.Count(ch => ch == '\n');
+			var headLineIndexOfBefore = beforeCode.LastIndexOf('\n') + 1;
+			var headLineIndexOfTarget = targetCode.LastIndexOf('\n') + 1;
+			if (headLineIndexOfTarget == 0) {
+				headLineIndexOfTarget = -(beforeCode.Length - headLineIndexOfBefore);
+			}
+			return new CodeRange(
+					new CodeLocation(beforeCount + 1,
+							beforeCode.Length - headLineIndexOfBefore),
+					new CodeLocation(beforeCount + afterCount + 1,
+							(targetCode.Length - 1) - headLineIndexOfTarget));
+		}
+
+		public static CodeRange ConvertFromIndiciesSkippingWhitespaces(
+				string code, ref int inclusiveStart, ref int exclusiveEnd) {
+			while (char.IsWhiteSpace(code[inclusiveStart])) {
+				inclusiveStart++;
+			}
+			while (char.IsWhiteSpace(code[exclusiveEnd - 1])) {
+				exclusiveEnd--;
+			}
+			return ConvertFromIndicies(code, ref inclusiveStart, ref exclusiveEnd);
+		}
+
+		#endregion
+
+		#region Locate a node of an AST
 
 		public static CodeRange Locate(XElement element) {
 			return LocatePrivate(element.DescendantsAndSelf());
@@ -268,5 +331,7 @@ namespace Code2Xml.Core.Location {
 
 			return new CodeRange(new CodeLocation(startLine, startPos), new CodeLocation(endLine, endPos));
 		}
+
+		#endregion
 	}
 }

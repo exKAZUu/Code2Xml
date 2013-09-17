@@ -88,7 +88,28 @@ public class Hello {
 }");
 			var elem = xml.Descendants("statement").First();
 			var pos = CodeRange.Locate(elem);
-			Assert.That(pos.FindElement(xml), Is.EqualTo(elem));
+			Assert.That(pos.FindInnerElement(xml), Is.EqualTo(elem));
+		}
+
+		[Test]
+		public void InterConvertCodeRangeAndIndicies() {
+			var code = @"
+public class Hello {
+	public static void main(String[] args) {
+		System.out.println(1);
+	}
+}";
+			var ast = JavaCodeToXml.Instance.Generate(code);
+			var elem = ast.DescendantsAndSelf("statement").First();
+			int inclusiveStart, exclusiveEnd;
+			int newInclusiveStart, newExclusiveEnd;
+			var range = CodeRange.Locate(elem);
+			range.ConvertToIndicies(code, out inclusiveStart, out exclusiveEnd);
+			var newRange = CodeRange.ConvertFromIndiciesSkippingWhitespaces(code, ref inclusiveStart, ref exclusiveEnd) ;
+			newRange.ConvertToIndicies(code, out newInclusiveStart, out newExclusiveEnd);
+			Assert.That(newRange, Is.EqualTo(range));
+			Assert.That(newInclusiveStart, Is.EqualTo(inclusiveStart));
+			Assert.That(newExclusiveEnd, Is.EqualTo(exclusiveEnd));
 		}
 	}
 }
