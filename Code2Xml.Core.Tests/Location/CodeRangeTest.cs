@@ -89,6 +89,7 @@ public class Hello {
 			var elem = xml.Descendants("statement").First();
 			var pos = CodeRange.Locate(elem);
 			Assert.That(pos.FindInnerElement(xml), Is.EqualTo(elem));
+			Assert.That(pos.FindOuterElement(xml), Is.EqualTo(elem.Parent));
 		}
 
 		[Test]

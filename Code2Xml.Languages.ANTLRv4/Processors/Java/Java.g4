@@ -40,6 +40,8 @@
  */
 grammar Java;
 
+tokens { IntegerLiteral }
+
 @parser::members
 {
 	protected const int EOF = Eof;
@@ -681,31 +683,20 @@ WHILE         : 'while';
 
 // ˜3.10.1 Integer Literals
 
-IntegerLiteral
-    :   DecimalIntegerLiteral
-    |   HexIntegerLiteral
-    |   OctalIntegerLiteral
-    |   BinaryIntegerLiteral
-    ;
-
-fragment
 DecimalIntegerLiteral
-    :   DecimalNumeral IntegerTypeSuffix?
+    :   DecimalNumeral IntegerTypeSuffix? -> type(IntegerLiteral)
     ;
 
-fragment
 HexIntegerLiteral
-    :   HexNumeral IntegerTypeSuffix?
+    :   HexNumeral IntegerTypeSuffix? -> type(IntegerLiteral)
     ;
 
-fragment
 OctalIntegerLiteral
-    :   OctalNumeral IntegerTypeSuffix?
+    :   OctalNumeral IntegerTypeSuffix? -> type(IntegerLiteral)
     ;
 
-fragment
 BinaryIntegerLiteral
-    :   BinaryNumeral IntegerTypeSuffix?
+    :   BinaryNumeral IntegerTypeSuffix? -> type(IntegerLiteral)
     ;
 
 fragment
