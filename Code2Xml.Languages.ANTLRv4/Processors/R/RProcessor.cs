@@ -24,38 +24,42 @@ using Antlr4.Runtime;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv4.Core;
 
-namespace Code2Xml.Languages.ANTLRv4.Processors.Java {
+namespace Code2Xml.Languages.ANTLRv4.Processors.R {
 	/// <summary>
-	/// Represents a Java parser and a Java code generator.
+	/// Represents a Lua parser and a Lua code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class JavaProcessor : Antlr4Processor {
+	public class RProcessor : Antlr4Processor {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
 		public override string LanguageName {
-			get { return "Java"; }
+			get { return "R"; }
 		}
 
 		/// <summary>
 		/// Gets the language version.
 		/// </summary>
 		public override string LanguageVersion {
-			get { return "7"; }
+			get { return "2"; }
 		}
 
-		public JavaProcessor() : base(".java") {}
+		public RProcessor() : base(".r", ".q") {}
 
 		protected override XElement GenerateXml(
 				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError,
 				bool enablePosition = DefaultEnablePosition) {
-			var lexer = new JavaLexer(charStream);
+			var lexer = new RLexer(charStream);
 			var commonTokenStream = new CommonTokenStream(lexer);
-			var parser = new JavaParser(commonTokenStream);
+			var filter = new RFilter(commonTokenStream);
+			filter.BuildParseTree = false;
+			filter.stream(); // call start rule: stream
+			commonTokenStream.Reset();
+			var parser = new RParser(commonTokenStream);
 			var listener = new Antlr4AstBuilder(parser, throwingParseError);
 			parser.BuildParseTree = false;
 			parser.AddParseListener(listener);
-			parser.compilationUnit();
+			parser.prog();
 			return listener.FinishParsing();
 		}
 	}

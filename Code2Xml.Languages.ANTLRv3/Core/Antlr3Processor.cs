@@ -20,12 +20,12 @@ using System.Diagnostics.Contracts;
 using System.IO;
 using System.Text;
 using System.Xml.Linq;
-using Antlr4.Runtime;
+using Antlr.Runtime;
 using Code2Xml.Core.Processors;
 
-namespace Code2Xml.Languages.ANTLRv4.Core {
-	public abstract class Antlr4Processor : LanguageProcessor {
-		protected Antlr4Processor(params string[] extensions) : base(extensions) {}
+namespace Code2Xml.Languages.ANTLRv3.Core {
+	public abstract class Antlr3Processor : LanguageProcessor {
+		protected Antlr3Processor(params string[] extensions) : base(extensions) {}
 
 		/// <summary>
 		/// Generates source code from the specified xml.
@@ -63,7 +63,7 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 		public override XElement GenerateXml(
 				string code, bool throwingParseError = DefaultThrowingParseError,
 				bool enablePosition = DefaultEnablePosition) {
-			return GenerateXml(new AntlrInputStream(code), throwingParseError, enablePosition);
+			return GenerateXml(new ANTLRStringStream(code), throwingParseError, enablePosition);
 		}
 
 		/// <summary>

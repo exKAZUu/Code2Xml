@@ -30,7 +30,7 @@ using NUnit.Framework;
 
 namespace Code2Xml.Languages.ANTLRv4.Tests {
 	[TestFixture]
-	public class XElementBuildingListenerTest {
+	public class Antlr4AstBuilderTest {
 		[Test]
 		public void ParseC() {
 			var inputStream = new AntlrInputStream(@"
@@ -41,7 +41,7 @@ int main(int argc, char **args) {
 			var lexer = new CLexer(inputStream);
 			var commonTokenStream = new CommonTokenStream(lexer);
 			var parser = new CParser(commonTokenStream);
-			var listener = new XElementBuildingListener(parser, true);
+			var listener = new Antlr4AstBuilder(parser, true);
 			parser.AddParseListener(listener);
 			parser.compilationUnit();
 			Console.WriteLine(listener.FinishParsing());
@@ -53,7 +53,7 @@ int main(int argc, char **args) {
 			var lexer = new ClojureLexer(inputStream);
 			var commonTokenStream = new CommonTokenStream(lexer);
 			var parser = new ClojureParser(commonTokenStream);
-			var listener = new XElementBuildingListener(parser, true);
+			var listener = new Antlr4AstBuilder(parser, true);
 			parser.AddParseListener(listener);
 			parser.file();
 			Console.WriteLine(listener.FinishParsing());
@@ -77,7 +77,7 @@ public class Hello extends JFrame {
 			var lexer = new JavaLexer(inputStream);
 			var commonTokenStream = new CommonTokenStream(lexer);
 			var parser = new JavaParser(commonTokenStream);
-			var listener = new XElementBuildingListener(parser, true);
+			var listener = new Antlr4AstBuilder(parser, true);
 			parser.AddParseListener(listener);
 			parser.compilationUnit();
 			Console.WriteLine(listener.FinishParsing());
@@ -101,7 +101,7 @@ public class Hello extends JFrame {
 			var lexer = new LuaLexer(inputStream);
 			var commonTokenStream = new CommonTokenStream(lexer);
 			var parser = new LuaParser(commonTokenStream);
-			var listener = new XElementBuildingListener(parser, true);
+			var listener = new Antlr4AstBuilder(parser, true);
 			parser.AddParseListener(listener);
 			parser.chunk();
 			Console.WriteLine(listener.FinishParsing());
@@ -121,7 +121,7 @@ public class Hello extends JFrame {
 			var lexer = new ObjectiveCLexer(inputStream);
 			var commonTokenStream = new CommonTokenStream(lexer);
 			var parser = new ObjectiveCParser(commonTokenStream);
-			var listener = new XElementBuildingListener(parser, true);
+			var listener = new Antlr4AstBuilder(parser, true);
 			parser.AddParseListener(listener);
 			parser.translation_unit();
 			Console.WriteLine(listener.FinishParsing());
@@ -138,7 +138,7 @@ eval(z)
 			var lexer = new RLexer(inputStream);
 			var commonTokenStream = new CommonTokenStream(lexer);
 			var parser = new RParser(commonTokenStream);
-			var listener = new XElementBuildingListener(parser, true);
+			var listener = new Antlr4AstBuilder(parser, true);
 			parser.AddParseListener(listener);
 			parser.prog();
 			Console.WriteLine(listener.FinishParsing());
@@ -177,7 +177,7 @@ endmodule
 			var lexer = new Verilog2001Lexer(inputStream);
 			var commonTokenStream = new CommonTokenStream(lexer);
 			var parser = new Verilog2001Parser(commonTokenStream);
-			var listener = new XElementBuildingListener(parser, true);
+			var listener = new Antlr4AstBuilder(parser, true);
 			parser.AddParseListener(listener);
 			parser.source_text();
 			Console.WriteLine(listener.FinishParsing());

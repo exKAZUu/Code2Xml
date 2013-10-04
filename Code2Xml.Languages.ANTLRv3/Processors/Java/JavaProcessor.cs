@@ -20,16 +20,16 @@ using System.ComponentModel.Composition;
 using System.Diagnostics.Contracts;
 using System.Text;
 using System.Xml.Linq;
-using Antlr4.Runtime;
+using Antlr.Runtime;
 using Code2Xml.Core.Processors;
-using Code2Xml.Languages.ANTLRv4.Core;
+using Code2Xml.Languages.ANTLRv3.Core;
 
-namespace Code2Xml.Languages.ANTLRv4.Processors.Java {
+namespace Code2Xml.Languages.ANTLRv3.Processors.Java {
 	/// <summary>
 	/// Represents a Java parser and a Java code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class JavaProcessor : Antlr4Processor {
+	public class JavaProcessor : Antlr3Processor {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
@@ -52,11 +52,11 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Java {
 			var lexer = new JavaLexer(charStream);
 			var commonTokenStream = new CommonTokenStream(lexer);
 			var parser = new JavaParser(commonTokenStream);
-			var listener = new Antlr4AstBuilder(parser, throwingParseError);
-			parser.BuildParseTree = false;
-			parser.AddParseListener(listener);
+			var builder = new Antlr3AstBuilder(commonTokenStream, true);
+			parser.TreeAdaptor = builder;
+			parser.AstBuilder = builder;
 			parser.compilationUnit();
-			return listener.FinishParsing();
+			return builder.FinishParsing();
 		}
 	}
 }

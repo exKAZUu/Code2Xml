@@ -1,4 +1,4 @@
-﻿/*
+/*
  [The "BSD licence"]
  Copyright (c) 2007-2008 Terence Parr
  All rights reserved.
@@ -284,16 +284,17 @@
 grammar Java;
 
 options {
-    language=CSharp3;
-    TokenLabelType=CommonToken;
-    output=AST;
-    ASTLabelType=CommonTree;
     backtrack=true;
     memoize=true;
+    output=AST;
+    language=CSharp3;
 }
 
-@lexer::namespace { Code2Xml.Languages.ANTLRv3 }
-@parser::namespace { Code2Xml.Languages.ANTLRv3 }
+@modifier { public }
+@ctorModifier { public }
+
+@lexer::namespace { Code2Xml.Languages.ANTLRv3.Processors.Java }
+@parser::namespace { Code2Xml.Languages.ANTLRv3.Processors.Java }
 
 @lexer::header { using Code2Xml.Core.Antlr; }
 @parser::header { using Code2Xml.Core.Antlr; }
@@ -305,7 +306,8 @@ options {
 /********************************************************************************************
                           Parser section
 *********************************************************************************************/
-           
+
+public
 compilationUnit 
     :   (   (annotations
             )?
@@ -902,6 +904,7 @@ trystatement
         |   catches
         |   'finally' block
         )
+    |   tryWithResourcesStatement
      ;
 
 catches 
@@ -916,9 +919,50 @@ catchClause
     ;
 
 formalParameter 
-    :   variableModifiers type IDENTIFIER
+    :   variableModifiers catchType IDENTIFIER
         ('[' ']'
         )*
+    |   catchType IDENTIFIER
+        ('[' ']'
+        )*
+    ;
+
+catchType
+    :   type
+        ('|' type
+        )*
+    ;
+
+tryWithResourcesStatement
+    :    'try' resourceSpecification
+         (   block catches 'finally' block
+         |   block 'filly' block
+         |   block catches
+         |   block
+         )
+    ;
+
+resourceSpecification
+    :    '(' resources
+          (  ';' ')'
+          |   ')'
+          )
+    ;
+
+resources
+    :    resource
+    |    resource 
+         (   ';' resource
+         )*
+    ;
+
+resource
+    :    (   variableModifiers type IDENTIFIER
+         |   type IDENTIFIER
+         )
+         (   '[' ']'
+         )*
+         '=' expression 
     ;
 
 forstatement 
@@ -1159,9 +1203,8 @@ identifierSuffix
 
 
 selector  
-    :   '.' IDENTIFIER
-        (arguments
-        )?
+    :   '.' IDENTIFIER arguments?
+    |   '.' nonWildcardTypeArguments IDENTIFIER arguments // fix to support "obj.method().<Object>method2()"
     |   '.' 'this'
     |   '.' 'super'
         superSuffix
@@ -1241,16 +1284,52 @@ arguments
         )? ')'
     ;
 
+intLiteral
+    : INTLITERAL
+    ;
+
+longLiteral
+    : LONGLITERAL
+    ;
+
+floatLiteral
+    : FLOATLITERAL
+    ;
+
+doubleLiteral
+    : DOUBLELITERAL
+    ;
+
+charLiteral
+    : CHARLITERAL
+    ;
+
+stringLiteral
+    : STRINGLITERAL
+    ;
+
+trueLiteral
+    : TRUE
+    ;
+
+falseLiteral
+    : FALSE
+    ;
+
+nullLiteral
+    : NULL
+    ;
+
 literal 
-    :   INTLITERAL
-    |   LONGLITERAL
-    |   FLOATLITERAL
-    |   DOUBLELITERAL
-    |   CHARLITERAL
-    |   STRINGLITERAL
-    |   TRUE
-    |   FALSE
-    |   NULL
+    :   intLiteral
+    |   longLiteral
+    |   floatLiteral
+    |   doubleLiteral
+    |   charLiteral
+    |   stringLiteral
+    |   trueLiteral
+    |   falseLiteral
+    |   nullLiteral
     ;
 
 /**
@@ -1401,6 +1480,7 @@ EscapeSequence
                  ('0'..'7') ('0'..'7') 
              |       
                  ('0'..'7')
+             |   'u' HexDigit HexDigit HexDigit HexDigit
              )          
 ;     
 

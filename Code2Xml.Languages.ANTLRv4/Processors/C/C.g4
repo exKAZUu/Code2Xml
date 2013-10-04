@@ -874,32 +874,32 @@ SChar
 
 LineDirective
     :   '#' Whitespace? DecimalConstant Whitespace? StringLiteral ~[\r\n]*
-        -> skip
+        -> channel(HIDDEN)
     ;
 
 PragmaDirective
     :   '#' Whitespace? 'pragma' Whitespace ~[\r\n]*
-        -> skip
+        -> channel(HIDDEN)
     ;
 
 Whitespace
     :   [ \t]+
-        -> skip
+        -> channel(HIDDEN)
     ;
 
 Newline
     :   (   '\r' '\n'?
         |   '\n'
         )
-        -> skip
+        -> channel(HIDDEN)
     ;
 
 BlockComment
     :   '/*' .*? '*/'
-        -> skip
+        -> channel(HIDDEN)
     ;
 
 LineComment
     :   '//' ~[\r\n]*
-        -> skip
+        -> channel(HIDDEN)
     ;

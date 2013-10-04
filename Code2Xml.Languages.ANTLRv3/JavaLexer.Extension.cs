@@ -23,7 +23,7 @@ namespace Code2Xml.Languages.ANTLRv3
 
 	    partial void LeaveRule(string ruleName, int ruleIndex) {
 		    if (--depth == 0) {
-			    Listener.VisitTerminalNode(Text, ruleIndex, state.channel);
+			    //Listener.VisitTerminalNode(Text, ruleIndex, state.channel);
 		    }
 		    Console.WriteLine("Levave: " + ruleName);
 	    }

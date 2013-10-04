@@ -20,43 +20,43 @@ using System.ComponentModel.Composition;
 using System.Diagnostics.Contracts;
 using System.Text;
 using System.Xml.Linq;
-using Antlr4.Runtime;
+using Antlr.Runtime;
 using Code2Xml.Core.Processors;
-using Code2Xml.Languages.ANTLRv4.Core;
+using Code2Xml.Languages.ANTLRv3.Core;
 
-namespace Code2Xml.Languages.ANTLRv4.Processors.Java {
+namespace Code2Xml.Languages.ANTLRv3.Processors.CSharp {
 	/// <summary>
-	/// Represents a Java parser and a Java code generator.
+	/// Represents a CSharp parser and a CSharp code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class JavaProcessor : Antlr4Processor {
+	public class CSharpProcessor : Antlr3Processor {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
 		public override string LanguageName {
-			get { return "Java"; }
+			get { return "CSharp"; }
 		}
 
 		/// <summary>
 		/// Gets the language version.
 		/// </summary>
 		public override string LanguageVersion {
-			get { return "7"; }
+			get { return "4"; }
 		}
 
-		public JavaProcessor() : base(".java") {}
+		public CSharpProcessor() : base(".cs") {}
 
 		protected override XElement GenerateXml(
 				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError,
 				bool enablePosition = DefaultEnablePosition) {
-			var lexer = new JavaLexer(charStream);
+			var lexer = new csLexer(charStream);
 			var commonTokenStream = new CommonTokenStream(lexer);
-			var parser = new JavaParser(commonTokenStream);
-			var listener = new Antlr4AstBuilder(parser, throwingParseError);
-			parser.BuildParseTree = false;
-			parser.AddParseListener(listener);
-			parser.compilationUnit();
-			return listener.FinishParsing();
+			var parser = new csParser(commonTokenStream);
+			var builder = new Antlr3AstBuilder(commonTokenStream, true);
+			parser.TreeAdaptor = builder;
+			parser.AstBuilder = builder;
+			parser.compilation_unit();
+			return builder.FinishParsing();
 		}
 	}
 }

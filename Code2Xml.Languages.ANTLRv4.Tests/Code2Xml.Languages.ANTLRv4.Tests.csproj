@@ -53,7 +53,6 @@
   <ItemGroup>
     <Compile Include="Processors\Java\JavaProcessorTest.cs" />
     <Compile Include="XElementBuildingListenerTest.cs" />
-    <Compile Include="XElementBuildingVisitorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

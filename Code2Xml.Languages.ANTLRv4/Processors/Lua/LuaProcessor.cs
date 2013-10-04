@@ -16,40 +16,35 @@
 
 #endregion
 
-using System;
-using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
+using System.Diagnostics.Contracts;
+using System.Text;
 using System.Xml.Linq;
 using Antlr4.Runtime;
 using Code2Xml.Core.Processors;
-using Code2Xml.Core.XmlToCodes;
 using Code2Xml.Languages.ANTLRv4.Core;
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.Lua {
+	/// <summary>
+	/// Represents a Lua parser and a Lua code generator.
+	/// </summary>
 	[Export(typeof(LanguageProcessor))]
 	public class LuaProcessor : Antlr4Processor {
+		/// <summary>
+		/// Gets the language name except for the version.
+		/// </summary>
 		public override string LanguageName {
 			get { return "Lua"; }
 		}
 
+		/// <summary>
+		/// Gets the language version.
+		/// </summary>
 		public override string LanguageVersion {
 			get { return "5.2"; }
 		}
 
-		private readonly LuaCodeGenerator _codeGenerator;
-
-		public LuaProcessor() : base(".lua") {
-			_codeGenerator = new LuaCodeGenerator();
-		}
-
-		/// <summary>
-		/// Generates source code from the specified xml.
-		/// </summary>
-		/// <param name="root"></param>
-		/// <returns></returns>
-		public override string GenerateCode(XElement root) {
-			return _codeGenerator.Generate(root);
-		}
+		public LuaProcessor() : base(".lua") {}
 
 		protected override XElement GenerateXml(
 				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError,
@@ -57,43 +52,11 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Lua {
 			var lexer = new LuaLexer(charStream);
 			var commonTokenStream = new CommonTokenStream(lexer);
 			var parser = new LuaParser(commonTokenStream);
-			var context = parser.chunk();
-			var visitor = new XElementBuildingVisitor(parser, throwingParseError);
-			visitor.Visit(context);
-			return visitor.Root;
-		}
-
-		private class LuaCodeGenerator : XmlToCodeBase {
-			public override string ParserName {
-				get { throw new NotImplementedException(); }
-			}
-
-			public override ReadOnlyCollection<string> SupportedExtensions {
-				get { throw new NotImplementedException(); }
-			}
-
-			protected override bool TreatTerminalSymbol(XElement element) {
-				switch (element.Value) {
-				case ";":
-					WriteLine(";");
-					break;
-
-				case "{":
-					WriteLine("{");
-					Depth++;
-					break;
-
-				case "}":
-					Depth--;
-					WriteLine("}");
-					break;
-
-				default:
-					return false;
-				}
-
-				return true;
-			}
+			var listener = new Antlr4AstBuilder(parser, throwingParseError);
+			parser.BuildParseTree = false;
+			parser.AddParseListener(listener);
+			parser.chunk();
+			return listener.FinishParsing();
 		}
 	}
 }

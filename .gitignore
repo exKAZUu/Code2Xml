@@ -48,3 +48,6 @@ download
 # Ignore MonoDevelop files
 test-results
 *.userprefs
+
+# Ignore ANTLR files
+*.tokens

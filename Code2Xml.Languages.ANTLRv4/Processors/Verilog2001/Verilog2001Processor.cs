@@ -24,67 +24,38 @@ using Antlr4.Runtime;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv4.Core;
 
-namespace Code2Xml.Languages.ANTLRv4.Processors.Java {
+namespace Code2Xml.Languages.ANTLRv4.Processors.Verilog2001 {
 	/// <summary>
-	/// Represents a Java parser and a Java code generator.
+	/// Represents a Lua parser and a Lua code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class JavaProcessor2 : Antlr4Processor {
+	public class Verilog2001Processor : Antlr4Processor {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
 		public override string LanguageName {
-			get { return "Java"; }
+			get { return "Verilog"; }
 		}
 
 		/// <summary>
 		/// Gets the language version.
 		/// </summary>
 		public override string LanguageVersion {
-			get { return "7"; }
+			get { return "2001"; }
 		}
 
-		public JavaProcessor2() : base(".java") {}
-
-		/// <summary>
-		/// Generates source code from the specified xml.
-		/// </summary>
-		/// <param name="root"></param>
-		/// <returns></returns>
-		public override string GenerateCode(XElement root) {
-			var builder = new StringBuilder();
-			var hidden = root.Attribute("hidden");
-			if (hidden != null) {
-				builder.Append(hidden.Value);
-			}
-			GenerateCode(builder, root);
-			return builder.ToString();
-		}
-
-		private void GenerateCode(StringBuilder builder, XContainer element) {
-			Contract.Requires(element != null);
-			foreach (var e in element.Elements()) {
-				if (e.HasElements) {
-					GenerateCode(builder, e);
-				} else {
-					builder.Append(e.Value);
-					var hidden = e.Attribute("hidden");
-					if (hidden != null) {
-						builder.Append(hidden.Value);
-					}
-				}
-			}
-		}
+		public Verilog2001Processor() : base(".v") {}
 
 		protected override XElement GenerateXml(
 				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError,
 				bool enablePosition = DefaultEnablePosition) {
-			var lexer = new JavaLexer(charStream);
+			var lexer = new Verilog2001Lexer(charStream);
 			var commonTokenStream = new CommonTokenStream(lexer);
-			var parser = new JavaParser(commonTokenStream);
-			var listener = new XElementBuildingListenerUsingAttribute(parser, throwingParseError);
+			var parser = new Verilog2001Parser(commonTokenStream);
+			var listener = new Antlr4AstBuilder(parser, throwingParseError);
+			parser.BuildParseTree = false;
 			parser.AddParseListener(listener);
-			parser.compilationUnit();
+			parser.source_text();
 			return listener.FinishParsing();
 		}
 	}

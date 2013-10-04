@@ -47,13 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JavaTest.cs" />
+    <Compile Include="JavaProcessorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Code2Xml.Core\Code2Xml.Core.csproj">
+      <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>
+      <Name>Code2Xml.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Code2Xml.Languages.ANTLRv3\Code2Xml.Languages.ANTLRv3.csproj">
       <Project>{942a56fd-13af-4ee6-a8d7-7ddf50374715}</Project>
       <Name>Code2Xml.Languages.ANTLRv3</Name>

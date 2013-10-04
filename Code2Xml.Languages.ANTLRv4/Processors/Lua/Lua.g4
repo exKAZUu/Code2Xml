@@ -52,7 +52,7 @@ grammar Lua;
 }
 
 chunk
-    : block
+    : block EOF
     ;
 
 block
@@ -280,9 +280,9 @@ LINE_COMMENT
     ;    
     
 WS  
-    : [ \t\u000C]+ -> skip
+    : [ \t\u000C]+ -> channel(HIDDEN)
     ;
     
 NEWLINE
-    : '\r'? '\n' -> skip
+    : '\r'? '\n' -> channel(HIDDEN)
     ;

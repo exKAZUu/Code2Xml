@@ -19,7 +19,6 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using Antlr4.Runtime;
 using Code2Xml.Languages.ANTLRv4.Processors.Java;
 using NUnit.Framework;
 
@@ -42,14 +41,11 @@ public class Hello extends JFrame {
     }
 }
 ";
-			var processor = new JavaProcessor();
-			var xml = processor.GenerateXml(code);
-			var code2 = processor.GenerateCode(xml);
-			Assert.That(code2, Is.EqualTo(code));
+			TestParsing(code);
 		}
 
 		[Test]
-		public void Parse2() {
+		public void ParseHexicalNumber() {
 			var code = @"
 class Hello {
     void main(String[] args) {
@@ -57,16 +53,17 @@ class Hello {
     }
 }
 ";
-			var stream = new AntlrInputStream(code);
-			var lexer = new JavaLexer(stream);
-			var commonTokenStream = new CommonTokenStream(lexer);
-			var parser = new JavaParser(commonTokenStream);
-			parser.compilationUnit();
+			TestParsing(code);
+		}
 
-			var processor = new JavaProcessor();
-			var xml = processor.GenerateXml(code);
-			var code2 = processor.GenerateCode(xml);
-			Assert.That(code2, Is.EqualTo(code));
+		[Test]
+		public void ParseGenericMethod() {
+			var code = @"
+class Main {
+  void test() { obj.method().<Object>method2(); }
+}";
+
+			TestParsing(code);
 		}
 
 		[Test]
@@ -91,26 +88,12 @@ class Hello {
 			Console.WriteLine(stopwatch.Elapsed);
 		}
 
-		[Test]
-		public void ParseJavaSourceWithAttribute() {
-			var dirInfo = new DirectoryInfo(@"C:\Users\exKAZUu\Desktop\src");
-			if (!dirInfo.Exists) {
-				return;
-			}
-
-			var javaFiles = dirInfo.GetFiles("*.java", SearchOption.AllDirectories);
-			var processor = new JavaProcessor2();
-			var stopwatch = new Stopwatch();
-			stopwatch.Start();
-			foreach (var javaFile in javaFiles) {
-				Console.WriteLine(javaFile);
-				var code = javaFile.OpenText().ReadToEnd();
-				var xml = processor.GenerateXml(code);
-				var code2 = processor.GenerateCode(xml);
-				Assert.That(code2, Is.EqualTo(code));
-			}
-			stopwatch.Stop();
-			Console.WriteLine(stopwatch.Elapsed);
+		private static void TestParsing(string code) {
+			var processor = new JavaProcessor();
+			var xml = processor.GenerateXml(code);
+			var code2 = processor.GenerateCode(xml);
+			Assert.That(code2, Is.EqualTo(code));
+			Console.WriteLine(xml);
 		}
 	}
 }

@@ -16,30 +16,12 @@
 
 #endregion
 
+using System;
 using System.Collections.Generic;
+using System.Text;
 using Antlr.Runtime;
 
 namespace Code2Xml.Core.Antlr {
-	public class Set : HashSet<object> {}
-
-	public class HashSet : Set {}
-
-	public struct boolean {
-		private readonly bool _value;
-
-		public boolean(bool value) {
-			_value = value;
-		}
-
-		public static implicit operator bool(boolean value) {
-			return value._value;
-		}
-
-		public static implicit operator boolean(bool value) {
-			return new boolean(value);
-		}
-	}
-
 	public static class ExtensionForParser {
 		public static T get<T>(this IList<T> stack, int i) {
 			return stack[i];
@@ -57,12 +39,72 @@ namespace Code2Xml.Core.Antlr {
 			return set.Contains(item);
 		}
 
+		public static void append(this StringBuilder builder, string str) {
+			builder.Append(str);
+		}
+
+		public static void append(this StringBuilder builder, char ch) {
+			builder.Append(ch);
+		}
+
+		public static string toString(this StringBuilder builder) {
+			return builder.ToString();
+		}
+
+		public static char charAt(this string str, int index) {
+			return str.charAt(index);
+		}
+
+		public static bool endsWith(this string str, string other) {
+			return str.EndsWith(other);
+		}
+
+		public static int length(this string str) {
+			return str.Length;
+		}
+
 		public static string getText(this IToken token) {
 			return token.Text;
 		}
 
 		public static void skip(this Lexer lexer) {
 			lexer.Skip();
+		}
+
+		public static int index(this ICharStream stream) {
+			return stream.Index;
+		}
+
+		public static int getLine(this ICharStream stream) {
+			return stream.Line;
+		}
+
+		public static int getCharPositionInLine(this ICharStream stream) {
+			return stream.CharPositionInLine;
+		}
+
+		public static void consume(this ICharStream stream) {
+			stream.Consume();
+		}
+	}
+
+	public class Set : HashSet<object> {}
+
+	public class HashSet : Set {}
+
+	public struct boolean {
+		private readonly bool _value;
+
+		public boolean(bool value) {
+			_value = value;
+		}
+
+		public static implicit operator bool(boolean value) {
+			return value._value;
+		}
+
+		public static implicit operator boolean(bool value) {
+			return new boolean(value);
 		}
 	}
 }

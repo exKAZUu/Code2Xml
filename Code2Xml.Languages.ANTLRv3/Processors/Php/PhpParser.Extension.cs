@@ -16,30 +16,18 @@
 
 #endregion
 
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Xml.Linq;
-using Antlr.Runtime;
-using Antlr.Runtime.Tree;
+using Code2Xml.Languages.ANTLRv3.Core;
 
-namespace Code2Xml.Languages.ANTLRv3 {
-	public partial class JavaParser {
-		public Antlr3Listener Listener {
-			get; set;
-		}
+namespace Code2Xml.Languages.ANTLRv3.Processors.Php {
+	public partial class PhpParser {
+		public Antlr3AstBuilder AstBuilder { get; set; }
 
 		partial void EnterRule(string ruleName, int ruleIndex) {
-			Listener.EnterNonTerminalNode(ruleName);
-			Console.WriteLine("Enter: " + ruleName);
+			AstBuilder.EnterNonTerminalNode(ruleName);
 		}
 
 		partial void LeaveRule(string ruleName, int ruleIndex) {
-			Listener.LeaveNonTerminalNode(ruleName);
-			Console.WriteLine("Leave: " + ruleName);
-		}
-
-		partial void CreateTreeAdaptor(ref ITreeAdaptor adaptor) {
+			AstBuilder.LeaveNonTerminalNode(ruleName);
 		}
 	}
 }

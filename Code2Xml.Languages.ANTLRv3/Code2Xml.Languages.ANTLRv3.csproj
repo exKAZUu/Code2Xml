@@ -36,6 +36,7 @@
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,19 +45,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JavaLexer.cs" />
-    <Compile Include="JavaParser.cs" />
-    <Compile Include="Antlr3Listener.cs" />
+    <Compile Include="Processors\CSharp\csLexer.cs" />
+    <Compile Include="Processors\CSharp\csParser.cs" />
+    <Compile Include="Processors\CSharp\csParser.Extension.cs" />
+    <Compile Include="Processors\CSharp\CSharpProcessor.cs" />
+    <Compile Include="Processors\JavaScript\JavaScriptParser.Extension.cs" />
+    <Compile Include="Processors\JavaScript\JavaScriptProcessor.cs" />
+    <Compile Include="Processors\JavaScript\JavaScriptLexer.Action.cs" />
+    <Compile Include="Processors\JavaScript\JavaScriptLexer.cs" />
+    <Compile Include="Processors\JavaScript\JavaScriptParser.cs" />
+    <Compile Include="Core\Antlr3AstBuilder.cs" />
+    <Compile Include="Core\Antlr3Processor.cs" />
+    <Compile Include="Processors\Java\JavaLexer.cs" />
+    <Compile Include="Processors\Java\JavaParser.cs" />
+    <Compile Include="Processors\Java\JavaParser.Extension.cs" />
+    <Compile Include="Processors\Java\JavaProcessor.cs" />
+    <Compile Include="Processors\Php\PhpParser.Extension.cs" />
+    <Compile Include="Processors\Php\PhpProcessor.cs" />
+    <Compile Include="Processors\Php\PhpLexer.cs" />
+    <Compile Include="Processors\Php\PhpParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Antlr3 Include="Java.g">
-      <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>Code2Xml.Languages.ANTLRv3</CustomToolNamespace>
-    </Antlr3>
-    <Compile Include="JavaParser.Extension.cs" />
-    <Compile Include="JavaLexer.Extension.cs" />
     <None Include="packages.config" />
+    <Antlr3 Include="Processors\CSharp\cs.g">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv3.Processors.CSharp</CustomToolNamespace>
+    </Antlr3>
+    <Antlr3 Include="Processors\Php\Php.g">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv3.Processors.Php</CustomToolNamespace>
+    </Antlr3>
+    <Antlr3 Include="Processors\JavaScript\JavaScript.g">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv3.Processors.JavaScript</CustomToolNamespace>
+    </Antlr3>
+    <Antlr3 Include="Processors\Java\Java.g">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv3.Processors.Java</CustomToolNamespace>
+    </Antlr3>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Code2Xml.Core\Code2Xml.Core.csproj">

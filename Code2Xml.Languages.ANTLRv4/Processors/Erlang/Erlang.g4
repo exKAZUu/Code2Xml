@@ -62,9 +62,9 @@ TokString : '"' ( '\\' (~'\\'|'\\') | ~[\\"] )* '"' ;
 // antlr4 would not accept spec as an Atom otherwise.
 AttrName : '-' ('spec' | 'callback') ;
 
-Comment : '%' ~[\r\n]* '\r'? '\n' -> skip ;
+Comment : '%' ~[\r\n]* '\r'? '\n' -> channel(HIDDEN) ;
 
-WS : [ \t\r\n]+ -> skip ;
+WS : [ \t\r\n]+ -> channel(HIDDEN) ;
 
 
 

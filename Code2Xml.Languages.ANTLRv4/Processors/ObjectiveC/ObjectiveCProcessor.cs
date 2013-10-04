@@ -24,38 +24,38 @@ using Antlr4.Runtime;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv4.Core;
 
-namespace Code2Xml.Languages.ANTLRv4.Processors.Java {
+namespace Code2Xml.Languages.ANTLRv4.Processors.ObjectiveC {
 	/// <summary>
-	/// Represents a Java parser and a Java code generator.
+	/// Represents a Lua parser and a Lua code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class JavaProcessor : Antlr4Processor {
+	public class ObjectiveCProcessor : Antlr4Processor {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
 		public override string LanguageName {
-			get { return "Java"; }
+			get { return "ObjectiveC"; }
 		}
 
 		/// <summary>
 		/// Gets the language version.
 		/// </summary>
 		public override string LanguageVersion {
-			get { return "7"; }
+			get { return "2"; }
 		}
 
-		public JavaProcessor() : base(".java") {}
+		public ObjectiveCProcessor() : base(".m", ".h") {}
 
 		protected override XElement GenerateXml(
 				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError,
 				bool enablePosition = DefaultEnablePosition) {
-			var lexer = new JavaLexer(charStream);
+			var lexer = new ObjectiveCLexer(charStream);
 			var commonTokenStream = new CommonTokenStream(lexer);
-			var parser = new JavaParser(commonTokenStream);
+			var parser = new ObjectiveCParser(commonTokenStream);
 			var listener = new Antlr4AstBuilder(parser, throwingParseError);
 			parser.BuildParseTree = false;
 			parser.AddParseListener(listener);
-			parser.compilationUnit();
+			parser.translation_unit();
 			return listener.FinishParsing();
 		}
 	}
