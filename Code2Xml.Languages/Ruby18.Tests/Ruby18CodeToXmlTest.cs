@@ -47,6 +47,8 @@ namespace Code2Xml.Languages.Ruby18.Tests {
 
 		[Test, Ignore]
 		public void CanParseJapanese3() {
+			// TODO: Currently, this test fails due to the bugs of ruby_parser
+			// https://github.com/seattlerb/ruby_parser/issues/133
 			var xml = Ruby18CodeToXml.Instance.Generate("p = \"\\u{3042}\"", true);
             Console.WriteLine(xml);
             Assert.That(xml.ToString(), Is.StringContaining("\\u{3042}"));
@@ -54,6 +56,8 @@ namespace Code2Xml.Languages.Ruby18.Tests {
 
 		[Test, Ignore]
 		public void InterConvertJapanese() {
+			// TODO: Currently, this test fails due to the bugs of ruby_parser
+			// https://github.com/seattlerb/ruby_parser/issues/133
 			var r1 = Ruby18CodeToXml.Instance.Generate(@"p = 'あ'", true);
 			var c1 = Ruby18XmlToCode.Instance.Generate(r1);
 			var r2 = Ruby18CodeToXml.Instance.Generate(c1, true);

@@ -283,7 +283,6 @@
   
 grammar Java;
 
-
 options {
     backtrack=true;
     memoize=true;
@@ -291,10 +290,14 @@ options {
     language=CSharp3;
 }
 
+@modifier { public }
+@ctorModifier { public }
+
 /********************************************************************************************
                           Parser section
 *********************************************************************************************/
-           
+
+public
 compilationUnit 
     :   (   (annotations
             )?

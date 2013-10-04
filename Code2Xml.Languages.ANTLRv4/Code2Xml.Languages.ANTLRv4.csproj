@@ -60,6 +60,12 @@
     <Compile Include="Core\XElementBuildingListener.cs" />
     <Compile Include="Processors\C\C.g4.lexer.cs" />
     <Compile Include="Processors\C\C.g4.parser.cs" />
+    <Compile Include="Processors\Erlang\Erlang.g4.lexer.cs">
+      <DependentUpon>Erlang.g4</DependentUpon>
+    </Compile>
+    <Compile Include="Processors\Erlang\Erlang.g4.parser.cs">
+      <DependentUpon>Erlang.g4</DependentUpon>
+    </Compile>
     <Compile Include="Processors\Java\JavaProcessor2.cs" />
     <Compile Include="Processors\Java\JavaProcessor.cs" />
     <Compile Include="Core\XElementBuildingVisitor.cs" />
@@ -120,6 +126,10 @@
     <Antlr4 Include="Processors\Java\JavaParser.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.Java</CustomToolNamespace>
+    </Antlr4>
+    <Antlr4 Include="Processors\Erlang\Erlang.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.Erlang</CustomToolNamespace>
     </Antlr4>
   </ItemGroup>
   <ItemGroup>
