@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\CustomizedAntlr3Parser.cs" />
     <Compile Include="Processors\CSharp\csLexer.cs" />
     <Compile Include="Processors\CSharp\csParser.cs" />
     <Compile Include="Processors\CSharp\csParser.Extension.cs" />
@@ -67,7 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <Antlr3 Include="Processors\CSharp\cs.g">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv3.Processors.CSharp</CustomToolNamespace>

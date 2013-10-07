@@ -17,9 +17,6 @@
 #endregion
 
 using System.ComponentModel.Composition;
-using System.Diagnostics.Contracts;
-using System.Text;
-using System.Xml.Linq;
 using Antlr.Runtime;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv3.Core;
@@ -29,7 +26,7 @@ namespace Code2Xml.Languages.ANTLRv3.Processors.Php {
 	/// Represents a Php parser and a Php code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class PhpProcessor : Antlr3Processor {
+	public class PhpProcessor : Antlr3Processor<PhpParser> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
@@ -46,17 +43,16 @@ namespace Code2Xml.Languages.ANTLRv3.Processors.Php {
 
 		public PhpProcessor() : base(".php") {}
 
-		protected override XElement GenerateXml(
-				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError,
-				bool enablePosition = DefaultEnablePosition) {
-			var lexer = new PhpLexer(charStream);
-			var commonTokenStream = new CommonTokenStream(lexer);
-			var parser = new PhpParser(commonTokenStream);
-			var builder = new Antlr3AstBuilder(commonTokenStream, true);
-			parser.TreeAdaptor = builder;
-			parser.AstBuilder = builder;
+		protected override ITokenSource CreateLexer(ICharStream stream) {
+			return new PhpLexer(stream);
+		}
+
+		protected override PhpParser CreateParser(ITokenStream stream) {
+			return new PhpParser(stream);
+		}
+
+		protected override void Parse(PhpParser parser) {
 			parser.prog();
-			return builder.FinishParsing();
 		}
 	}
 }

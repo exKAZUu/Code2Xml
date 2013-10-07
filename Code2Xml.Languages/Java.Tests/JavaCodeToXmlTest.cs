@@ -35,6 +35,18 @@ namespace Code2Xml.Languages.Java.Tests {
 			JavaCodeToXml.Instance.GenerateFromFile(path, true);
 		}
 
+		[Test]
+		public void ParseBrokenCodeIgnoringException() {
+			var code = @"class A {{ }";
+			JavaCodeToXml.Instance.Generate(code, false);
+		}
+
+		[Test, ExpectedException(typeof(MismatchedTokenException))]
+		public void ParseBrokenCode() {
+			var code = @"class A {{ }";
+			JavaCodeToXml.Instance.Generate(code, true);
+		}
+
 		[Test, ExpectedException(typeof(MismatchedTokenException))]
 		public void ParseSourceCodeContainingIlligalUnicodeCharacters() {
 			var path = Path.Combine(Fixture.GetFailedInputPath("Java"), "Unicode.java");

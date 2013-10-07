@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Text;
@@ -24,7 +25,8 @@ using Antlr.Runtime;
 using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Languages.ANTLRv3.Core {
-	public abstract class Antlr3Processor : LanguageProcessor {
+	public abstract class Antlr3Processor<TParser> : LanguageProcessor 
+		where TParser : ICustomizedAntlr3Parser {
 		protected Antlr3Processor(params string[] extensions) : base(extensions) {}
 
 		/// <summary>
@@ -49,21 +51,56 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 			}
 		}
 
-		protected abstract XElement GenerateXml(
-				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError,
-				bool enablePosition = DefaultEnablePosition);
+		/// <summary>
+		/// Creates and returns a lexer.
+		/// </summary>
+		/// <param name="stream"></param>
+		/// <returns></returns>
+		protected abstract ITokenSource CreateLexer(ICharStream stream);
+
+		/// <summary>
+		/// Creates and returns a parser.
+		/// </summary>
+		/// <param name="stream"></param>
+		/// <returns></returns>
+		protected abstract TParser CreateParser(ITokenStream stream);
+
+		/// <summary>
+		/// Parse source code already given.
+		/// </summary>
+		/// <param name="parser"></param>
+		protected abstract void Parse(TParser parser);
+
+		/// <summary>
+		/// Generates a xml from the specified char stream of the source code.
+		/// </summary>
+		/// <param name="charStream"></param>
+		/// <param name="throwingParseError"></param>
+		/// <returns></returns>
+		protected XElement GenerateXml(
+				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError) {
+			var lexer = CreateLexer(charStream);
+			var commonTokenStream = new CommonTokenStream(lexer);
+			var parser = CreateParser(commonTokenStream);
+			var builder = throwingParseError ?
+					new Antlr3AstBuilderWithReportingError(commonTokenStream) :
+					new Antlr3AstBuilder(commonTokenStream);
+			parser.TraceDestination = Console.Error;
+			parser.TreeAdaptor = builder;
+			parser.AstBuilder = builder;
+			Parse(parser);
+			return builder.FinishParsing();
+		}
 
 		/// <summary>
 		/// Generates a xml from the specified text of the source code.
 		/// </summary>
 		/// <param name="code"></param>
 		/// <param name="throwingParseError"></param>
-		/// <param name="enablePosition"></param>
 		/// <returns></returns>
 		public override XElement GenerateXml(
-				string code, bool throwingParseError = DefaultThrowingParseError,
-				bool enablePosition = DefaultEnablePosition) {
-			return GenerateXml(new ANTLRStringStream(code), throwingParseError, enablePosition);
+				string code, bool throwingParseError = DefaultThrowingParseError) {
+			return GenerateXml(new ANTLRStringStream(code), throwingParseError);
 		}
 
 		/// <summary>
@@ -71,12 +108,11 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 		/// </summary>
 		/// <param name="codeReader"></param>
 		/// <param name="throwingParseError"></param>
-		/// <param name="enablePosition"></param>
 		/// <returns></returns>
 		public override XElement GenerateXml(
-				TextReader codeReader, bool throwingParseError = DefaultThrowingParseError,
-				bool enablePosition = DefaultEnablePosition) {
-			return GenerateXml(codeReader.ReadToEnd(), throwingParseError, enablePosition);
+				TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
+			return GenerateXml(new ANTLRReaderStream(codeReader), throwingParseError);
 		}
+
 	}
 }

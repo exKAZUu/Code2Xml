@@ -19,7 +19,7 @@
 using Code2Xml.Languages.ANTLRv3.Core;
 
 namespace Code2Xml.Languages.ANTLRv3.Processors.CSharp {
-	public partial class csParser {
+	public partial class csParser : ICustomizedAntlr3Parser {
 		public Antlr3AstBuilder AstBuilder { get; set; }
 
 		partial void EnterRule(string ruleName, int ruleIndex) {

@@ -17,20 +17,16 @@
 #endregion
 
 using System.ComponentModel.Composition;
-using System.Diagnostics.Contracts;
-using System.Text;
-using System.Xml.Linq;
 using Antlr4.Runtime;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv4.Core;
-using Code2Xml.Languages.ANTLRv4.Processors.C;
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.Erlang {
 	/// <summary>
-	/// Represents a Java parser and a Java code generator.
+	/// Represents a Erlang parser and a Erlang code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class ErlangProcessor : Antlr4Processor {
+	public class ErlangProcessor : Antlr4Processor<ErlangParser> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
@@ -47,17 +43,16 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Erlang {
 
 		public ErlangProcessor() : base(".erl") {}
 
-		protected override XElement GenerateXml(
-				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError,
-				bool enablePosition = DefaultEnablePosition) {
-			var lexer = new ErlangLexer(charStream);
-			var commonTokenStream = new CommonTokenStream(lexer);
-			var parser = new ErlangParser(commonTokenStream);
-			var listener = new Antlr4AstBuilder(parser, throwingParseError);
-			parser.BuildParseTree = false;
-			parser.AddParseListener(listener);
+		protected override ITokenSource CreateLexer(ICharStream stream) {
+			return new ErlangLexer(stream);
+		}
+
+		protected override ErlangParser CreateParser(CommonTokenStream stream) {
+			return new ErlangParser(stream);
+		}
+
+		protected override void Parse(ErlangParser parser) {
 			parser.forms();
-			return listener.FinishParsing();
 		}
 	}
 }

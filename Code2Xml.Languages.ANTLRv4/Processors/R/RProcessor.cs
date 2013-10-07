@@ -17,19 +17,16 @@
 #endregion
 
 using System.ComponentModel.Composition;
-using System.Diagnostics.Contracts;
-using System.Text;
-using System.Xml.Linq;
 using Antlr4.Runtime;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv4.Core;
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.R {
 	/// <summary>
-	/// Represents a Lua parser and a Lua code generator.
+	/// Represents a R parser and a R code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class RProcessor : Antlr4Processor {
+	public class RProcessor : Antlr4Processor<RParser> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
@@ -46,21 +43,20 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.R {
 
 		public RProcessor() : base(".r", ".q") {}
 
-		protected override XElement GenerateXml(
-				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError,
-				bool enablePosition = DefaultEnablePosition) {
-			var lexer = new RLexer(charStream);
-			var commonTokenStream = new CommonTokenStream(lexer);
-			var filter = new RFilter(commonTokenStream);
+		protected override ITokenSource CreateLexer(ICharStream stream) {
+			return new RLexer(stream);
+		}
+
+		protected override RParser CreateParser(CommonTokenStream stream) {
+			var filter = new RFilter(stream);
 			filter.BuildParseTree = false;
 			filter.stream(); // call start rule: stream
-			commonTokenStream.Reset();
-			var parser = new RParser(commonTokenStream);
-			var listener = new Antlr4AstBuilder(parser, throwingParseError);
-			parser.BuildParseTree = false;
-			parser.AddParseListener(listener);
+			stream.Reset();
+			return new RParser(stream);
+		}
+
+		protected override void Parse(RParser parser) {
 			parser.prog();
-			return listener.FinishParsing();
 		}
 	}
 }

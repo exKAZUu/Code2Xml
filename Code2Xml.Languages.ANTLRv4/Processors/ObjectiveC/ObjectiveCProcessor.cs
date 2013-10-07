@@ -17,19 +17,16 @@
 #endregion
 
 using System.ComponentModel.Composition;
-using System.Diagnostics.Contracts;
-using System.Text;
-using System.Xml.Linq;
 using Antlr4.Runtime;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv4.Core;
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.ObjectiveC {
 	/// <summary>
-	/// Represents a Lua parser and a Lua code generator.
+	/// Represents a ObjectiveC parser and a ObjectiveC code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class ObjectiveCProcessor : Antlr4Processor {
+	public class ObjectiveCProcessor : Antlr4Processor<ObjectiveCParser> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
@@ -46,17 +43,16 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.ObjectiveC {
 
 		public ObjectiveCProcessor() : base(".m", ".h") {}
 
-		protected override XElement GenerateXml(
-				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError,
-				bool enablePosition = DefaultEnablePosition) {
-			var lexer = new ObjectiveCLexer(charStream);
-			var commonTokenStream = new CommonTokenStream(lexer);
-			var parser = new ObjectiveCParser(commonTokenStream);
-			var listener = new Antlr4AstBuilder(parser, throwingParseError);
-			parser.BuildParseTree = false;
-			parser.AddParseListener(listener);
+		protected override ITokenSource CreateLexer(ICharStream stream) {
+			return new ObjectiveCLexer(stream);
+		}
+
+		protected override ObjectiveCParser CreateParser(CommonTokenStream stream) {
+			return new ObjectiveCParser(stream);
+		}
+
+		protected override void Parse(ObjectiveCParser parser) {
 			parser.translation_unit();
-			return listener.FinishParsing();
 		}
 	}
 }

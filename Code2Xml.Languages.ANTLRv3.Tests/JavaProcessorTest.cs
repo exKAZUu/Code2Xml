@@ -17,52 +17,61 @@
 #endregion
 
 using System;
-//using Code2Xml.Languages.ANTLRv3.Processors.Java;
+using Antlr.Runtime;
+using Code2Xml.Languages.ANTLRv3.Processors.Java;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.ANTLRv3.Tests {
-//	[TestFixture]
-//	public class JavaProcessorTest {
-//		[Test]
-//		public void Parse() {
-//			var code = @"//test
-//import javax.swing.*;
-// 
-//public class Hello extends JFrame {
-//    Hello() /*test*/ {
-//        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-//        pack(); // pack();
-//    }
-// 
-//    public static void main(String[] args) {
-//        new Hello().setVisible(true);
-//    }
-//}
-//";
-//			TestParsing(code);
-//		}
+	[TestFixture]
+	public class JavaProcessorTest {
+		[Test]
+		public void Parse() {
+			var code = @"//test
+import javax.swing.*;
+ 
+public class Hello extends JFrame {
+    Hello() /*test*/ {
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        pack(); // pack();
+    }
+ 
+    public static void main(String[] args) {
+        new Hello().setVisible(true);
+    }
+}
+";
+			TestParsing(code);
+		}
 
-//		[Test]
-//		public void ParseGenericMethod() {
-//			var code = @"
-//class Main {
-//  void test() { obj.method().<Object>method2(); }
-//}";
-//			TestParsing(code);
-//		}
+		[Test]
+		public void ParseGenericMethod() {
+			var code = @"
+class Main {
+  void test() { obj.method().<Object>method2(); }
+}";
+			TestParsing(code);
+		}
 
-//		[Test]
-//		public void ParseUnicodeCharacter() {
-//			var code = @"obj.method().<Object>method2()";
-//			TestParsing(code);
-//		}
+		[Test]
+		public void ParseBrokenCodeIgnoringException() {
+			var code = @"class A {{ }";
+			var processor = new JavaProcessor();
+			processor.GenerateXml(code, false);
+		}
 
-//		private static void TestParsing(string code) {
-//			var processor = new CProcessor();
-//			var xml = processor.GenerateXml(code);
-//			var code2 = processor.GenerateCode(xml);
-//			Assert.That(code2, Is.EqualTo(code));
-//			Console.WriteLine(xml);
-//		}
-//	}
+		[Test, ExpectedException(typeof(MismatchedTokenException))]
+		public void ParseBrokenCode() {
+			var code = @"class A {{ }";
+			var processor = new JavaProcessor();
+			processor.GenerateXml(code, true);
+		}
+
+		private static void TestParsing(string code) {
+			var processor = new JavaProcessor();
+			var xml = processor.GenerateXml(code);
+			var code2 = processor.GenerateCode(xml);
+			Assert.That(code2, Is.EqualTo(code));
+			Console.WriteLine(xml);
+		}
+	}
 }

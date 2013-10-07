@@ -16,18 +16,13 @@
 
 #endregion
 
-using Code2Xml.Languages.ANTLRv3.Core;
+using System.IO;
+using Antlr.Runtime.Tree;
 
-namespace Code2Xml.Languages.ANTLRv3.Processors.JavaScript {
-	public partial class JavaScriptParser : ICustomizedAntlr3Parser {
-		public Antlr3AstBuilder AstBuilder { get; set; }
-
-		partial void EnterRule(string ruleName, int ruleIndex) {
-			AstBuilder.EnterNonTerminalNode(ruleName);
-		}
-
-		partial void LeaveRule(string ruleName, int ruleIndex) {
-			AstBuilder.LeaveNonTerminalNode(ruleName);
-		}
+namespace Code2Xml.Languages.ANTLRv3.Core {
+	public interface ICustomizedAntlr3Parser {
+		TextWriter TraceDestination { get; set; }
+ 		ITreeAdaptor TreeAdaptor { get; set; }
+		Antlr3AstBuilder AstBuilder { get; set; }
 	}
 }
