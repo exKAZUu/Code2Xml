@@ -52,11 +52,10 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Lua {
 			var lexer = new LuaLexer(charStream);
 			var commonTokenStream = new CommonTokenStream(lexer);
 			var parser = new LuaParser(commonTokenStream);
-			var listener = new Antlr4AstBuilder(parser, throwingParseError);
-			parser.BuildParseTree = false;
-			parser.AddParseListener(listener);
-			parser.chunk();
-			return listener.FinishParsing();
+			var visitor = new XElementBuildingVisitor(parser, throwingParseError);
+			var context = parser.chunk();
+			visitor.Visit(context);
+			return visitor.FinishParsing();
 		}
 	}
 }

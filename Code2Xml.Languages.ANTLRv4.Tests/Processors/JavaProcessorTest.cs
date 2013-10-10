@@ -19,10 +19,12 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using Antlr4.Runtime;
+using Code2Xml.Languages.ANTLRv4.Core;
 using Code2Xml.Languages.ANTLRv4.Processors.Java;
 using NUnit.Framework;
 
-namespace Code2Xml.Languages.ANTLRv4.Tests.Processors.Java {
+namespace Code2Xml.Languages.ANTLRv4.Tests.Processors {
 	[TestFixture]
 	public class JavaProcessorTest {
 		[Test]
@@ -88,9 +90,21 @@ class Main {
 			Console.WriteLine(stopwatch.Elapsed);
 		}
 
+		[Test]
+		public void Test() {
+			var inputStream = new AntlrInputStream("public /*aa*/ class Klass { }");
+			var javaLexer = new JavaLexer(inputStream);
+			var commonTokenStream = new CommonTokenStream(javaLexer);
+			var javaParser = new JavaParser(commonTokenStream);
+			var context = javaParser.compilationUnit();
+			var visitor = new XElementBuildingVisitor(javaParser, false);
+			visitor.Visit(context);
+			Console.WriteLine(visitor.FinishParsing());
+		}
+
 		private static void TestParsing(string code) {
 			var processor = new JavaProcessor();
-			var xml = processor.GenerateXml(code);
+			var xml = processor.GenerateXml(code, true);
 			var code2 = processor.GenerateCode(xml);
 			Assert.That(code2, Is.EqualTo(code));
 			Console.WriteLine(xml);

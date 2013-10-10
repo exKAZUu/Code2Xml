@@ -51,7 +51,8 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 			}
 
 			var root = _dummyRoot.Elements().First();
-			var firstTokensNode = root.Descendants("TOKENS").FirstOrDefault();
+			var firstTokensNode = root.Descendants("TOKENS").FirstOrDefault() ??
+			                      root.Descendants().LastOrDefault();
 			if (firstTokensNode != null) {
 				foreach (var element in _dummyNode.Elements().Reverse()) {
 					firstTokensNode.AddFirst(element);

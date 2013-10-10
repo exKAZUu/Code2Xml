@@ -201,15 +201,21 @@ NAME
     ;
 
 NORMALSTRING
-    :  '"' ( EscapeSequence | ~('\\'|'"') )* '"' 
+    : '"' ( EscapeSequence | ~('\\'|'"') )* '"' 
     ;
 
 CHARSTRING
-   :	'\'' ( EscapeSequence | ~('\''|'\\') )* '\''
-   ;
+    : '\'' ( EscapeSequence | ~('\''|'\\') )* '\''
+    ;
 
 LONGSTRING
-    :	'[' '='* '[' .*? ']' '='* ']'	// TODO: the numbers of '=' should be same
+    : '[' NESTED_STR ']'
+    ;
+
+fragment
+NESTED_STR
+    : '=' NESTED_STR '='
+    | '[' .*? ']'
     ;
 
 INT
@@ -221,54 +227,54 @@ HEX
     ;
 
 FLOAT
-    :   Digit+ '.' Digit* ExponentPart?
-    |   '.' Digit+ ExponentPart?
-    |   Digit+ ExponentPart
+    : Digit+ '.' Digit* ExponentPart?
+    | '.' Digit+ ExponentPart?
+    | Digit+ ExponentPart
     ;
 
 HEX_FLOAT
-    :   '0' [xX] HexDigit+ '.' HexDigit* HexExponentPart?
-    |   '0' [xX] '.' HexDigit+ HexExponentPart?
-    |   '0' [xX] HexDigit+ HexExponentPart
+    : '0' [xX] HexDigit+ '.' HexDigit* HexExponentPart?
+    | '0' [xX] '.' HexDigit+ HexExponentPart?
+    | '0' [xX] HexDigit+ HexExponentPart
     ;
 
 fragment
 ExponentPart
-    :   [eE] [+-]? Digit+
+    : [eE] [+-]? Digit+
     ;
 
 fragment
 HexExponentPart
-    :   [pP] [+-]? Digit+
+    : [pP] [+-]? Digit+
     ;
 
 fragment
 EscapeSequence
-    :   '\\' [abfnrtvz"'\\]
-    |   DecimalEscape
-    |   HexEscape
+    : '\\' [abfnrtvz"'\\]
+    | DecimalEscape
+    | HexEscape
     ;
     
 fragment
 DecimalEscape
-    :   '\\' Digit
-    |   '\\' Digit Digit
-    |   '\\' [0-2] Digit Digit
+    : '\\' Digit
+    | '\\' Digit Digit
+    | '\\' [0-2] Digit Digit
     ;
     
 fragment
 HexEscape
-    :   '\\' 'x' HexDigit HexDigit
+    : '\\' 'x' HexDigit HexDigit
     ;
 
 fragment
 Digit
-    :   [0-9]
+    : [0-9]
     ;
 
 fragment
 HexDigit
-    :   [0-9a-fA-F]
+    : [0-9a-fA-F]
     ;
 
 COMMENT
@@ -277,7 +283,7 @@ COMMENT
     
 LINE_COMMENT
     : '--' ~('\n'|'\r')* '\r'? '\n'-> channel(HIDDEN)
-    ;    
+    ;
     
 WS  
     : [ \t\u000C]+ -> channel(HIDDEN)

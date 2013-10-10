@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Antlr4AstBuilder.cs" />
+    <Compile Include="Core\XElementBuildingVisitor.cs" />
     <Compile Include="Processors\Clojure\Clojure.g4.lexer.cs" />
     <Compile Include="Processors\Clojure\Clojure.g4.parser.cs" />
     <Compile Include="Core\Antlr4Processor.cs" />
@@ -98,7 +99,8 @@
     <Antlr4 Include="Processors\Lua\Lua.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.Lua</CustomToolNamespace>
-      <Visitor>False</Visitor>
+      <Visitor>True</Visitor>
+      <Listener>True</Listener>
     </Antlr4>
     <Antlr4 Include="Processors\C\C.g4">
       <Generator>MSBuild:Compile</Generator>
