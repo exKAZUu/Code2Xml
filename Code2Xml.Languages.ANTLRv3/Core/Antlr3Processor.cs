@@ -69,7 +69,7 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 		/// Parse source code already given.
 		/// </summary>
 		/// <param name="parser"></param>
-		protected abstract void Parse(TParser parser);
+		protected abstract Antlr3AstNode Parse(TParser parser);
 
 		/// <summary>
 		/// Generates a xml from the specified char stream of the source code.
@@ -87,9 +87,8 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 					new Antlr3AstBuilder(commonTokenStream);
 			parser.TraceDestination = Console.Error;
 			parser.TreeAdaptor = builder;
-			parser.AstBuilder = builder;
-			Parse(parser);
-			return builder.FinishParsing();
+			var root = Parse(parser);
+			return builder.FinishParsing(root.Element);
 		}
 
 		/// <summary>

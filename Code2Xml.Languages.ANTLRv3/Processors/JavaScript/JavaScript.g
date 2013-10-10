@@ -33,13 +33,6 @@ tokens
 @lexer::namespace { Code2Xml.Languages.ANTLRv3.Processors.JavaScript }
 @parser::namespace { Code2Xml.Languages.ANTLRv3.Processors.JavaScript }
 
-@lexer::header { using Code2Xml.Core.Antlr; }
-@parser::header { using Code2Xml.Core.Antlr; }
-
-@lexer::members {
-	protected const int HIDDEN = Hidden;
-}
-
 statementEnd
     : ';'
     | LT

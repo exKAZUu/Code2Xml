@@ -16,18 +16,15 @@
 
 #endregion
 
-using Code2Xml.Languages.ANTLRv3.Core;
+using System.Xml.Linq;
+using Antlr.Runtime;
 
-namespace Code2Xml.Languages.ANTLRv3.Processors.JavaScript {
-	public partial class JavaScriptParser : ICustomizedAntlr3Parser {
-		public Antlr3AstBuilder AstBuilder { get; set; }
+namespace Code2Xml.Core.Antlr {
+	public class XAstParserRuleReturnScope : AstParserRuleReturnScope<object, IToken> {
+		public readonly XElement Element;
 
-		partial void EnterRule(string ruleName, int ruleIndex) {
-			AstBuilder.EnterNonTerminalNode(ruleName);
-		}
-
-		partial void LeaveRule(string ruleName, int ruleIndex) {
-			AstBuilder.LeaveNonTerminalNode(ruleName);
+		public XAstParserRuleReturnScope(string name) {
+			Element = new XElement(name);
 		}
 	}
 }

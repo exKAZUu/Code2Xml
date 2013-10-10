@@ -18,6 +18,7 @@
 
 using System;
 using Antlr.Runtime;
+using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv3.Processors.Java;
 using NUnit.Framework;
 
@@ -65,7 +66,7 @@ class Main {
 			processor.GenerateXml(code, false);
 		}
 
-		[Test, ExpectedException(typeof(MismatchedTokenException))]
+		[Test, ExpectedException(typeof(ParseException))]
 		public void ParseBrokenCode() {
 			var code = @"class A {{ }";
 			var processor = new JavaProcessor();

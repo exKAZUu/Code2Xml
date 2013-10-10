@@ -115,13 +115,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Antlr\AntlrNodeGenerator.cs" />
-    <Compile Include="Antlr\IAntlrParser.cs" />
-    <Compile Include="Antlr\ThrowableXmlTreeAdaptor.cs" />
-    <Compile Include="Antlr\ExtensionForParser.cs" />
-    <Compile Include="Antlr\XmlTreeAdaptor.cs" />
-    <Compile Include="Antlr\XAstParserRuleReturnScope.cs" />
-    <Compile Include="Antlr\XToken.cs" />
     <Compile Include="Code2XmlConstants.cs" />
     <Compile Include="Processors\ParseException.cs" />
     <Compile Include="Location\CodeLocation.cs" />
@@ -129,8 +122,6 @@
     <Compile Include="Processors\LanguageProcessor.cs" />
     <Compile Include="Location\CodeRange.cs" />
     <Compile Include="XmlToCodes\XmlToCodeBase.cs" />
-    <Compile Include="CodeToXmls\AntlrCodeToXml.cs" />
-    <Compile Include="CodeToXmls\AntlrCodeToXmlContract.cs" />
     <Compile Include="CodeToXmls\CodeToXmlContract.cs" />
     <Compile Include="CodeToXmls\CodeToXml.cs" />
     <Compile Include="CodeToXmls\ExternalCodeToXmlContract.cs" />

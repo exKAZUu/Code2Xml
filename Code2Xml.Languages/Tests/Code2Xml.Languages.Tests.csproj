@@ -63,26 +63,6 @@
       <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>
       <Name>Code2Xml.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CSharp\Code2Xml.Languages.CSharp.csproj">
-      <Project>{BDD5DC39-4CE8-4684-B66A-E9454B4BCFF1}</Project>
-      <Name>Code2Xml.Languages.CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\C\Code2Xml.Languages.C.csproj">
-      <Project>{D6F3F025-CC01-4BA3-A9D7-9609B4198A6B}</Project>
-      <Name>Code2Xml.Languages.C</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\JavaScript\Code2Xml.Languages.JavaScript.csproj">
-      <Project>{51B4FB06-4315-4CBD-BCB3-1E933A895107}</Project>
-      <Name>Code2Xml.Languages.JavaScript</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Java\Code2Xml.Languages.Java.csproj">
-      <Project>{341BDD4B-B758-4E15-8C13-E30268F8E758}</Project>
-      <Name>Code2Xml.Languages.Java</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Lua\Code2Xml.Languages.Lua.csproj">
-      <Project>{5116FC1B-B9CF-4BF5-B8C1-E84441E9CB4C}</Project>
-      <Name>Code2Xml.Languages.Lua</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Python2\Code2Xml.Languages.Python2.csproj">
       <Project>{D7557D95-520B-476D-8AF9-FC1ECC4A7298}</Project>
       <Name>Code2Xml.Languages.Python2</Name>

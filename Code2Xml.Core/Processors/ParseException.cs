@@ -20,6 +20,7 @@ using System;
 
 namespace Code2Xml.Core.Processors {
 	public class ParseException : Exception {
-		public ParseException(string message) : base(message) {}
+		public ParseException(Exception e) : base(e.Message, e) {}
+		public ParseException(string message, Exception e) : base(message, e) {}
 	}
 }

@@ -19,6 +19,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using Antlr4.Runtime;
 using Antlr4.Runtime.Misc;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv4.Processors.Lua;
@@ -37,7 +38,7 @@ namespace Code2Xml.Languages.ANTLRv4.Tests.Processors {
 			TestParsing("a = func()[1]");
 		}
 
-		[Test, ExpectedException(typeof(ParseCanceledException))]
+		[Test, ExpectedException(typeof(ParseException))]
 		public void ParseEscapeSequence() {
 			TestParsing(@"local expr = '/[^() ]*lib' .. libname .. '\.so[^() ]*'");
 		}
@@ -48,13 +49,37 @@ namespace Code2Xml.Languages.ANTLRv4.Tests.Processors {
 		}
 
 		[Test]
-		public void ParseCode() {
+		public void ParseLineComment() {
+			TestParsing(@"
+--
+print(1)
+");
+		}
+
+		[Test]
+		public void ParseLineCommentWithoutNewLines() {
 			TestParsing(@"--");
 		}
 
 		[Test]
+		public void ParseCodeWithComment() {
+			TestParsing(@"
+if true --[[xx]] then
+	print(1)
+end
+");
+		}
+
+		[Test]
+		public void ParseCodeWithComment2() {
+			TestParsing(@"
+if true then --[[VERBOSE]] print(1) end
+");
+		}
+
+		[Test]
 		public void ParseFiles() {
-			var dirInfo = new DirectoryInfo(@"C:\Users\exKAZUu\Downloads\lua");
+			var dirInfo = new DirectoryInfo(@"C:\Users\exKAZUu\Downloads\lua-5.2.2-tests (1).tarz");
 			if (!dirInfo.Exists) {
 				return;
 			}

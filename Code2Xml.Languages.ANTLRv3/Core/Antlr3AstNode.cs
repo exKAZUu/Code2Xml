@@ -19,13 +19,12 @@
 using System.Xml.Linq;
 using Antlr.Runtime;
 
-namespace Code2Xml.Core.Antlr {
-	public class XAstParserRuleReturnScope
-			: AstParserRuleReturnScope<object, IToken> {
-		public XAstParserRuleReturnScope(string name) {
+namespace Code2Xml.Languages.ANTLRv3.Core {
+	public class Antlr3AstNode : AstParserRuleReturnScope<object, IToken> {
+		public readonly XElement Element;
+
+		public Antlr3AstNode(string name) {
 			Element = new XElement(name);
 		}
-
-		public XElement Element { get; set; }
 	}
 }

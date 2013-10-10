@@ -21,6 +21,7 @@ using System.Diagnostics;
 using System.IO;
 using Antlr4.Runtime;
 using Antlr4.Runtime.Misc;
+using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv4.Core;
 using Code2Xml.Languages.ANTLRv4.Processors.Java;
 using NUnit.Framework;
@@ -76,7 +77,7 @@ class Main {
 			processor.GenerateXml(code, false);
 		}
 
-		[Test, ExpectedException(typeof(ParseCanceledException))]
+		[Test, ExpectedException(typeof(ParseException))]
 		public void ParseBrokenCode() {
 			var code = @"class A {{ }";
 			var processor = new JavaProcessor();

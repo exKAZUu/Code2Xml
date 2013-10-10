@@ -99,10 +99,6 @@
       <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>
       <Name>Code2Xml.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Java\Code2Xml.Languages.Java.csproj">
-      <Project>{341BDD4B-B758-4E15-8C13-E30268F8E758}</Project>
-      <Name>Code2Xml.Languages.Java</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

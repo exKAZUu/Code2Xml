@@ -51,8 +51,8 @@ namespace Code2Xml.Languages.ANTLRv3.Processors.Java {
 			return new JavaParser(stream);
 		}
 
-		protected override void Parse(JavaParser parser) {
-			parser.compilationUnit();
+		protected override Antlr3AstNode Parse(JavaParser parser) {
+			return parser.compilationUnit();
 		}
 	}
 }

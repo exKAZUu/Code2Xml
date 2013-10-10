@@ -13,16 +13,11 @@ options {
 @parser::namespace { Code2Xml.Languages.ANTLRv3.Processors.CSharp }
 
 @lexer::header {
-using Code2Xml.Core.Antlr;
 using System;
 using Debug = System.Diagnostics.Debug;
 }
 
-@parser::header { using Code2Xml.Core.Antlr; }
-
 @lexer::members {
-	protected const int HIDDEN = Hidden;
-
 	// Preprocessor Data Structures - see lexer section below and PreProcessor.cs
 	protected Dictionary<string,string> MacroDefines = new Dictionary<string,string>();	
 	protected Stack<bool> Processing = new Stack<bool>();

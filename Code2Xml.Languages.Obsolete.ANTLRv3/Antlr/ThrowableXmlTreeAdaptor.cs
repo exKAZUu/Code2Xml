@@ -1,4 +1,4 @@
-﻿#region License
+#region License
 
 // Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
@@ -16,18 +16,15 @@
 
 #endregion
 
-using Code2Xml.Languages.ANTLRv3.Core;
+using Antlr.Runtime;
+using Code2Xml.Core.Processors;
 
-namespace Code2Xml.Languages.ANTLRv3.Processors.Php {
-	public partial class PhpParser : ICustomizedAntlr3Parser {
-		public Antlr3AstBuilder AstBuilder { get; set; }
-
-		partial void EnterRule(string ruleName, int ruleIndex) {
-			AstBuilder.EnterNonTerminalNode(ruleName);
-		}
-
-		partial void LeaveRule(string ruleName, int ruleIndex) {
-			AstBuilder.LeaveNonTerminalNode(ruleName);
+namespace Code2Xml.Core.Antlr {
+	public class ThrowableXmlTreeAdaptor : XmlTreeAdaptor {
+		public override object ErrorNode(
+				ITokenStream input, IToken start, IToken stop,
+				RecognitionException e) {
+			throw new ParseException(e);
 		}
 	}
 }

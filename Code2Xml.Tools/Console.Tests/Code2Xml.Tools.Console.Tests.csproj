@@ -59,6 +59,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Code2Xml.Languages.Obsolete.ANTLRv3\Code2Xml.Languages.Obsolete.ANTLRv3.csproj">
+      <Project>{82a3e237-db4f-4a94-b805-cc6ce8f46e56}</Project>
+      <Name>Code2Xml.Languages.Obsolete.ANTLRv3</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Console\Code2Xml.Tools.Console.csproj">
       <Project>{5C40DA45-ACB3-4FC4-8CD4-E9053D4081D2}</Project>
       <Name>Code2Xml.Tools.Console</Name>
@@ -70,10 +74,6 @@
     <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">
       <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>
       <Name>Code2Xml.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Code2Xml.Languages\C\Code2Xml.Languages.C.csproj">
-      <Project>{D6F3F025-CC01-4BA3-A9D7-9609B4198A6B}</Project>
-      <Name>Code2Xml.Languages.C</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

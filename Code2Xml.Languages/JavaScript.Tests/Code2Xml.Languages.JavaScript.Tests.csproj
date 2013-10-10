@@ -54,10 +54,6 @@
       <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>
       <Name>Code2Xml.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\JavaScript\Code2Xml.Languages.JavaScript.csproj">
-      <Project>{51B4FB06-4315-4CBD-BCB3-1E933A895107}</Project>
-      <Name>Code2Xml.Languages.JavaScript</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

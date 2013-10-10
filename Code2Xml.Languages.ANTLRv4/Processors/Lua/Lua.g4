@@ -36,6 +36,8 @@ This grammar file derived from:
 
     Lua 5.1 grammar written by Nicolai Mainiero
     http://www.antlr3.org/grammar/1178608849736/Lua.g
+
+I tested my grammar with Test suite for Lua 5.2 (http://www.lua.org/tests/5.2/)
  */
 
 grammar Lua;
@@ -282,7 +284,7 @@ COMMENT
     ;
     
 LINE_COMMENT
-    : '--' ~('\n'|'\r')* '\r'? '\n'-> channel(HIDDEN)
+    : '--' '['? (~('['|'\n'|'\r') ~('\n'|'\r')*)? ('\n'|'\r')* -> channel(HIDDEN)
     ;
     
 WS  

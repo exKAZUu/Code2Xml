@@ -31,7 +31,7 @@ namespace Code2Xml.Tools.AntlrHelper {
 				code = ModifyFromJavaToCSharp(code);
 			}
 			using (var writer = new StreamWriter(path, false, XEncoding.SJIS)) {
-				writer.WriteLine("using Code2Xml.Core.Antlr;");
+				writer.WriteLine("using Code2Xml.Languages.ANTLRv3.Core;");
 				writer.Write(code);
 			}
 		}

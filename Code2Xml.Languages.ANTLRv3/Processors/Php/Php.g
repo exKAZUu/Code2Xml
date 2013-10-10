@@ -55,7 +55,7 @@ tokens{
     Function = 'function';
     Break = 'break';
     Continue = 'continue';
-    //Goto = 'goto';
+    Goto = 'goto';
     Return = 'return';
     Global = 'global';
     Static = 'static';
@@ -101,18 +101,15 @@ tokens{
 @parser::namespace { Code2Xml.Languages.ANTLRv3.Processors.Php }
 
 @lexer::header {
-    using Code2Xml.Core.Antlr;
     using System;
     using System.Text;
 }
-@parser::header { using Code2Xml.Core.Antlr; }
 
 @members{
     private bool expressionFollowsBodyString = false;
 }
 
 @lexer::members{
-    protected const int HIDDEN = Hidden;
     private bool allowShortOpenTag = false;
 
     // Handle the first token, which will always be a BodyString.
@@ -170,9 +167,9 @@ prog : statement*;
 statement
     : {expressionFollowsBodyString}?=> {expressionFollowsBodyString=false;} printExpr ';'!
     | ({expressionFollowsBodyString}?=>  {expressionFollowsBodyString=false;} printExpr? | simpleStatement?) BodyString {expressionFollowsBodyString = $BodyString.text.endsWith("<?=");}
-    | '{' statement '}' -> statement
+    | '{' statement '}'
     | bracketedBlock
-    //| UnquotedString Colon statement -> ^(Label UnquotedString statement)
+    | UnquotedString Colon statement
     | classDefinition
     | interfaceDefinition
     | complexStatement
@@ -180,11 +177,11 @@ statement
     ;
 
 printExpr
-    : expression -> ^(Echo expression)
+    : expression
     ;
 
 bracketedBlock
-    : '{' stmts=statement* '}' -> ^(Block $stmts)
+    : '{' stmts=statement* '}'
     ;
 
 interfaceDefinition
@@ -192,17 +189,14 @@ interfaceDefinition
         OpenCurlyBracket
         interfaceMember*
         CloseCurlyBracket
-        -> ^(Interface $interfaceName interfaceExtends? interfaceMember*)
     ;
 
 interfaceExtends
-    : Extends^ UnquotedString (Comma! UnquotedString)*
+    : Extends UnquotedString (Comma! UnquotedString)*
     ;
 interfaceMember
     : Const UnquotedString (Equals atom)? ';' 
-        -> ^(Const UnquotedString atom?)
     | fieldModifier* Function UnquotedString parametersDefinition ';'
-        -> ^(Method ^(Modifiers fieldModifier*) UnquotedString parametersDefinition)
     ;
 
 classDefinition
@@ -213,29 +207,22 @@ classDefinition
         OpenCurlyBracket
         classMember*
         CloseCurlyBracket 
-        -> ^(Class ^(Modifiers classModifier?) $className ^(Extends $extendsclass)? classImplements?
-            classMember*
-        )
     ;
     
 classImplements
-    :  Implements^ (UnquotedString (Comma! UnquotedString)*)
+    :  Implements (UnquotedString (Comma! UnquotedString)*)
     ;
 
 classMember
     : fieldModifier* Function UnquotedString parametersDefinition 
         (bracketedBlock | ';')
-        -> ^(Method ^(Modifiers fieldModifier*) UnquotedString parametersDefinition bracketedBlock?)
     | Var Dollar UnquotedString (Equals atom)? ';' 
-        -> ^(Var ^(Dollar UnquotedString) atom?) 
     | Const UnquotedString (Equals atom)? ';' 
-        -> ^(Const UnquotedString atom?)
     | fieldModifier* (Dollar UnquotedString) (Equals atom)? ';' 
-        -> ^(Field ^(Modifiers fieldModifier*) ^(Dollar UnquotedString) atom?)
     ;
 
 fieldDefinition
-    : Dollar UnquotedString (Equals atom)? ';'-> ^(Field ^(Dollar UnquotedString) atom?)
+    : Dollar UnquotedString (Equals atom)? ';'
     ;
     
 classModifier
@@ -248,43 +235,42 @@ fieldModifier
 
 complexStatement
     : If '(' ifCondition=expression ')' ifTrue=statement conditional?
-        -> ^('if' expression $ifTrue conditional?)
-    | For '(' forInit forCondition forUpdate ')' statement -> ^(For forInit forCondition forUpdate statement)
-    | Foreach '(' variable 'as' arrayEntry ')' statement -> ^(Foreach variable arrayEntry statement)
-    | While '(' whileCondition=expression? ')' statement -> ^(While $whileCondition statement)
-    | Do statement While '(' doCondition=expression ')' ';' -> ^(Do statement $doCondition)
-    | Switch '(' expression ')' '{'cases'}' -> ^(Switch expression cases)
+    | For '(' forInit forCondition forUpdate ')' statement
+    | Foreach '(' variable 'as' arrayEntry ')' statement
+    | While '(' whileCondition=expression? ')' statement
+    | Do statement While '(' doCondition=expression ')' ';'
+    | Switch '(' expression ')' '{'cases'}'
     | functionDefinition
     ;
 
 simpleStatement
-    : Echo^ commaList
-    | Global^ name (','! name)*
-    | Static^ variable Equals! atom
-    | Break^ Integer?
-    | Continue^ Integer?
-    //| Goto^ UnquotedString
-    | Return^ expression?
-    | RequireOperator^ expression
+    : Echo commaList
+    | Global name (','! name)*
+    | Static variable Equals! atom
+    | Break Integer?
+    | Continue Integer?
+    | Goto UnquotedString
+    | Return expression?
+    | RequireOperator expression
     | expression
     ;
 
 
 conditional
-    : ElseIf '(' ifCondition=expression ')' ifTrue=statement conditional? -> ^(If $ifCondition $ifTrue conditional?)
-    | Else statement -> statement
+    : ElseIf '(' ifCondition=expression ')' ifTrue=statement conditional?
+    | Else statement
     ;
 
 forInit
-    : commaList? ';' -> ^(ForInit commaList?)
+    : commaList? ';'
     ;
 
 forCondition
-    : commaList? ';' -> ^(ForCondition commaList?)
+    : commaList? ';'
     ;
     
 forUpdate
-    : commaList? -> ^(ForUpdate commaList?)
+    : commaList?
     ;
 
 cases 
@@ -292,29 +278,28 @@ cases
     ;
 
 casestatement
-    : Case^ expression ':'! statement*
+    : Case expression ':'! statement*
     ;
 
 defaultcase 
-    : (Default^ ':'! statement*)
+    : (Default ':'! statement*)
     ;
 
 functionDefinition
-    : Function UnquotedString parametersDefinition bracketedBlock -> 
-        ^(Function UnquotedString parametersDefinition bracketedBlock)
+    : Function UnquotedString parametersDefinition bracketedBlock
     ;
 
 parametersDefinition
-    : OpenRoundBracket (paramDef (Comma paramDef)*)? CloseRoundBracket -> ^(Params paramDef*) 
+    : OpenRoundBracket (paramDef (Comma paramDef)*)? CloseRoundBracket
     ;
 
 paramDef
-    : paramName (Equals^ atom)?
+    : paramName (Equals atom)?
     ;
 
 paramName
-    : Dollar^ UnquotedString
-    | Ampersand Dollar UnquotedString -> ^(Ampersand ^(Dollar UnquotedString))
+    : Dollar UnquotedString
+    | Ampersand Dollar UnquotedString
     ;
 
 commaList
@@ -326,93 +311,93 @@ expression
     ;
 
 weakLogicalOr
-    : weakLogicalXor (Or^ weakLogicalXor)*
+    : weakLogicalXor (Or weakLogicalXor)*
     ;
 
 weakLogicalXor
-    : weakLogicalAnd (Xor^ weakLogicalAnd)*
+    : weakLogicalAnd (Xor weakLogicalAnd)*
     ;
     
 weakLogicalAnd
-    : assignment (And^ assignment)*
+    : assignment (And assignment)*
     ;
 
 assignment
-    : listVariables ((Equals | AsignmentOperator)^ assignment) 
+    : listVariables ((Equals | AsignmentOperator) assignment) 
     | ternary
     ;
 
 listVariables
-    : List^ OpenRoundBracket! name (','! name)* CloseRoundBracket! 
+    : List OpenRoundBracket! name (','! name)* CloseRoundBracket! 
     | name
     ;
 
 ternary
-    : logicalOr QuestionMark expression Colon expression -> ^(IfExpression logicalOr expression*)
+    : logicalOr QuestionMark expression Colon expression
     | logicalOr
     ;
     
 logicalOr
-    : logicalAnd (LogicalOr^ logicalAnd)*
+    : logicalAnd (LogicalOr logicalAnd)*
     ;
 
 logicalAnd
-    : bitwiseOr (LogicalAnd^ bitwiseOr)*
+    : bitwiseOr (LogicalAnd bitwiseOr)*
     ;
     
 bitwiseOr
-    : bitWiseAnd (Pipe^ bitWiseAnd)*
+    : bitWiseAnd (Pipe bitWiseAnd)*
     ;
 
 bitWiseAnd
-    : equalityCheck (Ampersand^ equalityCheck)*
+    : equalityCheck (Ampersand equalityCheck)*
     ;
 
 equalityCheck
-    : comparisionCheck (EqualityOperator^ comparisionCheck)?
+    : comparisionCheck (EqualityOperator comparisionCheck)?
     ;
     
 comparisionCheck
-    : bitWiseShift (ComparisionOperator^ bitWiseShift)?
+    : bitWiseShift (ComparisionOperator bitWiseShift)?
     ;
 
 bitWiseShift
-    : addition (ShiftOperator^ addition)*
+    : addition (ShiftOperator addition)*
     ;
     
 addition
-    : multiplication ((Plus | Minus | Dot)^ multiplication)*
+    : multiplication ((Plus | Minus | Dot) multiplication)*
     ;
 
 multiplication
-    : logicalNot ((Asterisk | Forwardslash | Percent)^ logicalNot)*
+    : logicalNot ((Asterisk | Forwardslash | Percent) logicalNot)*
     ;
 
 logicalNot
-    : Bang^ logicalNot
+    : Bang logicalNot
     | instanceOf
     ;
 
 instanceOf
-    : negateOrCast (Instanceof^ negateOrCast)?
+    : negateOrCast (Instanceof negateOrCast)?
     ;
 
 negateOrCast
-    : (Tilde | Minus | SuppressWarnings)^ increment
-    | OpenRoundBracket PrimitiveType CloseRoundBracket increment -> ^(Cast PrimitiveType increment)
+    : (Tilde | Minus | SuppressWarnings) increment
+    | OpenRoundBracket PrimitiveType CloseRoundBracket increment
     | OpenRoundBracket! weakLogicalAnd CloseRoundBracket!
     | increment
     ;
 
 increment
-    : IncrementOperator name -> ^(Prefix IncrementOperator name)
-    | name IncrementOperator -> ^(Postfix IncrementOperator name)
+    : IncrementOperator name
+    | name IncrementOperator
     | newOrClone
     ;
 
 newOrClone
-    : New^ nameOrFunctionCall
-    | Clone^ name
+    : New nameOrFunctionCall
+    | Clone name
     | atomOrReference
     ;
 
@@ -422,7 +407,7 @@ atomOrReference
     ;
 
 arrayDeclaration
-    : Array OpenRoundBracket (arrayEntry (Comma arrayEntry)*)? CloseRoundBracket -> ^(Array arrayEntry*)
+    : Array OpenRoundBracket (arrayEntry (Comma arrayEntry)*)? CloseRoundBracket
     ;
 
 arrayEntry
@@ -430,7 +415,7 @@ arrayEntry
     ;
 
 keyValuePair
-    : (expression ArrayAssign expression) -> ^(ArrayAssign expression+)
+    : (expression ArrayAssign expression)
     ;
 
 atom: SingleQuotedString | DoubleQuotedString | HereDoc | Integer | Real | Boolean | arrayDeclaration
@@ -438,12 +423,12 @@ atom: SingleQuotedString | DoubleQuotedString | HereDoc | Integer | Real | Boole
 
 //Need to be smarter with references, they have their own tower of application.
 reference
-    : Ampersand^ nameOrFunctionCall
+    : Ampersand nameOrFunctionCall
     | nameOrFunctionCall
     ;
 
 nameOrFunctionCall
-    : name OpenRoundBracket (expression (Comma expression)*)? CloseRoundBracket -> ^(Apply name expression*)
+    : name OpenRoundBracket (expression (Comma expression)*)? CloseRoundBracket
     | name
     ;
 
@@ -453,17 +438,17 @@ name: staticMemberAccess
     ;
     
 staticMemberAccess
-    : UnquotedString '::'^ variable
+    : UnquotedString '::' variable
     ;
 
 memberAccess
     : variable 
-        ( OpenSquareBracket^ expression CloseSquareBracket!
-        | '->'^ UnquotedString)*
+        ( OpenSquareBracket expression CloseSquareBracket!
+        | '->' UnquotedString)*
     ;
     
 variable
-    : Dollar^ variable
+    : Dollar variable
     | UnquotedString
     ;
 

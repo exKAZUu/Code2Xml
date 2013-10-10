@@ -16,20 +16,42 @@
 
 #endregion
 
+using System;
+using System.Diagnostics;
 using System.IO;
-using System.Linq;
+using System.Text;
+using Paraiba.IO;
 
 namespace Code2Xml.Tools.AntlrHelper {
 	internal class Program {
 		private static void Main(string[] args) {
+			args = new[] { @"C:\Users\exKAZUu\Projects\Code2Xml\Code2Xml.Languages.ANTLRv3\Processors" };
 			foreach (var arg in args) {
 				var path = Path.GetFullPath(arg);
-				var dir = Directory.Exists(path)
-						? path : Path.GetDirectoryName(path);
-				var parser = Directory.EnumerateFiles(dir, "*Parser.cs").First();
-				var lexer = Directory.EnumerateFiles(dir, "*Lexer.cs").First();
-				ParserModifier.Modify(parser);
-				LexerModifier.Modify(lexer);
+				var dir = Directory.Exists(path) ? path : Path.GetDirectoryName(path);
+				foreach (var file in Directory.GetFiles(dir, "*.g", SearchOption.AllDirectories)) {
+					Console.WriteLine(file);
+					var info = new ProcessStartInfo {
+						FileName =
+							@"C:\Users\exKAZUu\Dropbox\Private\Tools\Development\ANTLR\antlr-dotnet-tool-3.5.0.2\Antlr3.exe",
+						Arguments = '"' + file + '"',
+						CreateNoWindow = true,
+						UseShellExecute = false,
+						WorkingDirectory = Path.GetDirectoryName(file),
+					};
+					using (var p = Process.Start(info)) {
+						p.WaitForExit();
+					}
+				}
+				foreach (var file in Directory.GetFiles(dir, "*.cs", SearchOption.AllDirectories)) {
+					if (file.EndsWith("Parser.cs")) {
+						Console.WriteLine(file);
+						ParserModifier.Modify(file);
+					} else if (file.EndsWith("Lexer.cs")) {
+						Console.WriteLine(file);
+						LexerModifier.Modify(file);
+					}
+				}
 			}
 		}
 	}

@@ -51,8 +51,8 @@ namespace Code2Xml.Languages.ANTLRv3.Processors.CSharp {
 			return new csParser(stream);
 		}
 
-		protected override void Parse(csParser parser) {
-			parser.compilation_unit();
+		protected override Antlr3AstNode Parse(csParser parser) {
+			return parser.compilation_unit();
 		}
 	}
 }

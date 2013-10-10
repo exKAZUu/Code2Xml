@@ -51,8 +51,8 @@ namespace Code2Xml.Languages.ANTLRv3.Processors.JavaScript {
 			return new JavaScriptParser(stream);
 		}
 
-		protected override void Parse(JavaScriptParser parser) {
-			parser.program();
+		protected override Antlr3AstNode Parse(JavaScriptParser parser) {
+			return parser.program();
 		}
 	}
 }

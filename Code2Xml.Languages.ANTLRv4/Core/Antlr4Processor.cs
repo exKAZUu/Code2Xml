@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Text;
@@ -77,7 +78,7 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 			var parser = CreateParser(commonTokenStream);
 			var builder = new Antlr4AstBuilder(parser);
 			if (throwingParseError) {
-				parser.ErrorHandler = new BailErrorStrategy();
+				parser.ErrorHandler = new MyBailErrorStrategy();
 			}
 			builder.Visit(Parse(parser));
 			return builder.FinishParsing();
@@ -104,5 +105,18 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 				TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
 			return GenerateXml(codeReader.ReadToEnd(), throwingParseError);
 		}
+	}
+
+	public class MyBailErrorStrategy : DefaultErrorStrategy {
+		public override void Recover(Parser recognizer, RecognitionException e) {
+			throw new ParseException(e);
+		}
+
+		public override IToken RecoverInline(Parser recognizer) {
+			var e = new InputMismatchException(recognizer);
+			throw new ParseException(recognizer.CurrentToken.ToString(), e);
+		}
+
+		public override void Sync(Parser recognizer) {}
 	}
 }

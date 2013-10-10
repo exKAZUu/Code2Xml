@@ -51,8 +51,8 @@ namespace Code2Xml.Languages.ANTLRv3.Processors.Php {
 			return new PhpParser(stream);
 		}
 
-		protected override void Parse(PhpParser parser) {
-			parser.prog();
+		protected override Antlr3AstNode Parse(PhpParser parser) {
+			return parser.prog();
 		}
 	}
 }

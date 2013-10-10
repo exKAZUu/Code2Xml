@@ -94,10 +94,6 @@
       <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>
       <Name>Code2Xml.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\C\Code2Xml.Languages.C.csproj">
-      <Project>{D6F3F025-CC01-4BA3-A9D7-9609B4198A6B}</Project>
-      <Name>Code2Xml.Languages.C</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

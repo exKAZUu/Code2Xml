@@ -16,18 +16,11 @@
 
 #endregion
 
-using Code2Xml.Languages.ANTLRv3.Core;
+using System.IO;
 
-namespace Code2Xml.Languages.ANTLRv3.Processors.Java {
-	public partial class JavaParser : ICustomizedAntlr3Parser {
-		public Antlr3AstBuilder AstBuilder { get; set; }
-
-		partial void EnterRule(string ruleName, int ruleIndex) {
-			AstBuilder.EnterNonTerminalNode(ruleName);
-		}
-
-		partial void LeaveRule(string ruleName, int ruleIndex) {
-			AstBuilder.LeaveNonTerminalNode(ruleName);
-		}
+namespace Code2Xml.Languages.ANTLRv3.Core {
+	public interface ICustomizedAntlr3Parser {
+		TextWriter TraceDestination { get; set; }
+		Antlr3AstBuilder TreeAdaptor { get; set; }
 	}
 }

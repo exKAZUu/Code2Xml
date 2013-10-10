@@ -32,9 +32,6 @@ namespace Code2Xml.Tools.AntlrHelper {
 		private static readonly Regex TerminalRegex =
 				new Regex(@"adaptor\.Create\(([^),]*)\)");
 
-		private static readonly Regex MatchRegex =
-				new Regex(@"Match\(input,([^\d][^,]*),[^)]*\)");
-
 		private static readonly Regex PrivateRegex =
 				new Regex(@"private ([^.]*Parser)");
 
@@ -48,19 +45,18 @@ namespace Code2Xml.Tools.AntlrHelper {
 			string code;
 			using (var reader = new StreamReader(path, XEncoding.SJIS)) {
 				code = reader.ReadToEnd();
-				code = ModifyInheritClass(code);
-				code = ModifyFromJavaToCSharp(code);
-				code = ModifyCommonTreeAdaptorRegex(code);
-				code = ModifyReturnScope(code);
-				code = ModifyForNonTerminalNode(code);
-				code = ModifyForTerminalNode(code);
-				code = ModifyAccessModifier(code);
-				code = ModifyTraceIn(code);
+				code = ModifyCommonTreeAdaptor(code);
+				code = ModifyParserRuleReturnScope(code);
 				code = ModifyAstParserRuleReturnScope(code);
+				code = ModifyAddChild(code);
+				code = ModifyCreate(code);
+				code = ModifyTraceIn(code);
+				code = ModifyInheritClass(code);
+				//code = ModifyFromJavaToCSharp(code);
+				//code = ModifyAccessModifier(code);
 			}
 			using (var writer = new StreamWriter(path, false, XEncoding.SJIS)) {
-				writer.WriteLine("using Code2Xml.Core.Antlr;");
-				writer.WriteLine("using System;");
+				writer.WriteLine("using Code2Xml.Languages.ANTLRv3.Core;");
 				writer.Write(code);
 			}
 		}
@@ -71,23 +67,31 @@ namespace Code2Xml.Tools.AntlrHelper {
 			return SystemOutRegex.Replace(code, "");
 		}
 
-		public static string ModifyCommonTreeAdaptorRegex(string code) {
+		public static string ModifyCommonTreeAdaptor(string code) {
 			Contract.Requires(code != null);
 
 			return code
-					.Replace("ITreeAdaptor", "XmlTreeAdaptor")
-					.Replace("CommonTreeAdaptor", "XmlTreeAdaptor");
+					.Replace("ITreeAdaptor", "Antlr3AstBuilder")
+					.Replace("CommonTreeAdaptor", "Antlr3AstBuilder");
 		}
 
-		public static string ModifyReturnScope(string code) {
+		public static string ModifyParserRuleReturnScope(string code) {
 			Contract.Requires(code != null);
 
 			return code.Replace(
 					": ParserRuleReturnScope<IToken>",
-					": XParserRuleReturnScope");
+					": Antlr3AstNode");
 		}
 
-		public static string ModifyForNonTerminalNode(string code) {
+		private static string ModifyAstParserRuleReturnScope(string code) {
+			Contract.Requires(code != null);
+
+			return code.Replace(
+					"AstParserRuleReturnScope<object, IToken>",
+					"Antlr3AstNode");
+		}
+
+		public static string ModifyAddChild(string code) {
 			Contract.Requires(code != null);
 
 			return NonTerminalRegex.Replace(
@@ -95,12 +99,23 @@ namespace Code2Xml.Tools.AntlrHelper {
 					@"adaptor.AddChild($1, $2.Tree, $2, retval)");
 		}
 
-		public static string ModifyForTerminalNode(string code) {
+		public static string ModifyCreate(string code) {
 			Contract.Requires(
 					!new Regex(@"adaptor\.Create\(([^)]*),").IsMatch(code));
 
-			code = MatchRegex.Replace(code, "new XToken((IToken)$0, \"$1\")");
 			return TerminalRegex.Replace(code, @"adaptor.Create($1, retval)");
+		}
+
+		public static string ModifyTraceIn(string code) {
+			Contract.Requires(code != null);
+			// TraceIn("typeParameters", 11);
+			// AstParserRuleReturnScope<object, IToken> retval = new AstParserRuleReturnScope<object, IToken>();
+			// =>
+			// var retval = new Antlr3AstNode($1);
+			return TraceInRegex.Replace(code, "var retval = new Antlr3AstNode($1)")
+							.Replace( "AstParserRuleReturnScope<object, IToken> retval = new AstParserRuleReturnScope<object, IToken>();",
+									"")
+							.Replace( "Antlr3AstNode retval = new Antlr3AstNode();", "");
 		}
 
 		public static string ModifyAccessModifier(string code) {
@@ -114,25 +129,7 @@ namespace Code2Xml.Tools.AntlrHelper {
 
 			return code.Replace(
 					" : Antlr.Runtime.Parser",
-					" : Antlr.Runtime.Parser, IAntlrParser");
-		}
-
-		public static string ModifyTraceIn(string code) {
-			Contract.Requires(code != null);
-
-			return
-					TraceInRegex.Replace(code, "var retval = new XAstParserRuleReturnScope($1)")
-							.Replace(
-									"AstParserRuleReturnScope<object, IToken> retval = new AstParserRuleReturnScope<object, IToken>();",
-									"");
-		}
-
-		private static string ModifyAstParserRuleReturnScope(string code) {
-			Contract.Requires(code != null);
-
-			return code.Replace(
-					"AstParserRuleReturnScope<object, IToken>",
-					"XAstParserRuleReturnScope");
+					" : Antlr.Runtime.Parser, ICustomizedAntlr3Parser");
 		}
 	}
 }

@@ -106,7 +106,8 @@ public class Hello {
 			int newInclusiveStart, newExclusiveEnd;
 			var range = CodeRange.Locate(elem);
 			range.ConvertToIndicies(code, out inclusiveStart, out exclusiveEnd);
-			var newRange = CodeRange.ConvertFromIndiciesSkippingWhitespaces(code, ref inclusiveStart, ref exclusiveEnd) ;
+			var newRange = CodeRange.ConvertFromIndiciesSkippingWhitespaces(
+					code, ref inclusiveStart, ref exclusiveEnd);
 			newRange.ConvertToIndicies(code, out newInclusiveStart, out newExclusiveEnd);
 			Assert.That(newRange, Is.EqualTo(range));
 			Assert.That(newInclusiveStart, Is.EqualTo(inclusiveStart));

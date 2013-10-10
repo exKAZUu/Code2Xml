@@ -296,13 +296,6 @@ options {
 @lexer::namespace { Code2Xml.Languages.ANTLRv3.Processors.Java }
 @parser::namespace { Code2Xml.Languages.ANTLRv3.Processors.Java }
 
-@lexer::header { using Code2Xml.Core.Antlr; }
-@parser::header { using Code2Xml.Core.Antlr; }
-
-@lexer::members {
-	protected const int HIDDEN = Hidden;
-}
-
 /********************************************************************************************
                           Parser section
 *********************************************************************************************/

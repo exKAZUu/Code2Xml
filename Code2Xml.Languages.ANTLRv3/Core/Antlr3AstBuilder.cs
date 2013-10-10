@@ -16,31 +16,30 @@
 
 #endregion
 
-using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 using Antlr.Runtime;
 using Antlr.Runtime.Tree;
 using Code2Xml.Core;
+using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Languages.ANTLRv3.Core {
 	public class Antlr3AstBuilder : CommonTreeAdaptor {
-		private readonly XElement _dummyRoot, _dummyNode;
-		private readonly Stack<XElement> _elements;
+		private readonly XElement _dummyNode;
 		private readonly CommonTokenStream _stream;
 		private int _nextTokenIndex;
 		private XElement _lastElement;
 
+		public Antlr3AstBuilder() {}
+
 		public Antlr3AstBuilder(CommonTokenStream stream) {
 			_stream = stream;
-			_dummyRoot = new XElement("root");
 			_dummyNode = new XElement("dummy");
-			_elements = new Stack<XElement>(new[] { _dummyRoot });
 			_lastElement = _dummyNode;
 			_nextTokenIndex = 0;
 		}
 
-		public XElement FinishParsing() {
+		public XElement FinishParsing(XElement root) {
 			var size = _stream.Count - 1; // Avoid writing "<EOF>"
 			for (int i = _nextTokenIndex; i < size; i++) {
 				var oldToken = _stream.Get(i);
@@ -48,7 +47,6 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 				_lastElement.Add(CreateTokenElement(name, oldToken));
 			}
 
-			var root = _dummyRoot.Elements().First();
 			var firstTokensNode = root.Descendants("TOKENS").FirstOrDefault() ??
 			                      root.Descendants().LastOrDefault();
 			if (firstTokensNode != null) {
@@ -59,17 +57,13 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 			return root;
 		}
 
-		public void EnterNonTerminalNode(string name) {
-			var element = new XElement(name);
-			_elements.Peek().Add(element);
-			_elements.Push(element);
+		public void AddChild(
+				object t, object child, Antlr3AstNode target, Antlr3AstNode parent) {
+			parent.Element.Add(target.Element);
+			base.AddChild(t, child);
 		}
 
-		public void LeaveNonTerminalNode(string name) {
-			_elements.Pop();
-		}
-
-		public override object Create(IToken token) {
+		public object Create(IToken token, Antlr3AstNode parent) {
 			if (token != null) {
 				var count = token.TokenIndex;
 				for (int i = _nextTokenIndex; i < count; i++) {
@@ -79,7 +73,7 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 				}
 				_nextTokenIndex = count + 1;
 				_lastElement = new XElement("TOKENS", CreateTokenElement("TOKEN", token));
-				_elements.Peek().Add(_lastElement);
+				parent.Element.Add(_lastElement);
 			}
 			return base.Create(token);
 		}
@@ -107,7 +101,7 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 
 		public override object ErrorNode(
 				ITokenStream input, IToken start, IToken stop, RecognitionException e) {
-			throw e;
+			throw new ParseException(e);
 		}
 	}
 }

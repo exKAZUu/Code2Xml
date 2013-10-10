@@ -48,7 +48,7 @@ if (declaration_stack.size()>0&&((declaration_scope)declaration_stack.Peek()).is
 			const string expected =
 					@"if ( state.backtracking == 0 ) adaptor.AddChild(root_0, leftHandSideExpression159.Tree, leftHandSideExpression159, retval);";
 			Assert.That(
-					ParserModifier.ModifyForNonTerminalNode(code),
+					ParserModifier.ModifyAddChild(code),
 					Is.EqualTo(expected));
 		}
 
@@ -68,7 +68,7 @@ if (declaration_stack.size()>0&&((declaration_scope)declaration_stack.Peek()).is
 							@"); if (state.failed) return retval;
 {string_literal17_tree = (object)adaptor.Create(string_literal17, retval);";
 			Assert.That(
-					ParserModifier.ModifyForTerminalNode(code),
+					ParserModifier.ModifyCreate(code),
 					Is.EqualTo(expected));
 		}
 
@@ -79,7 +79,7 @@ if (declaration_stack.size()>0&&((declaration_scope)declaration_stack.Peek()).is
 			const string expected =
 					@"    public class compilationUnit_return : XParserRuleReturnScope";
 			Assert.That(
-					ParserModifier.ModifyReturnScope(code), Is.EqualTo(expected));
+					ParserModifier.ModifyParserRuleReturnScope(code), Is.EqualTo(expected));
 		}
 
 		[Test]
@@ -107,7 +107,7 @@ if (declaration_stack.size()>0&&((declaration_scope)declaration_stack.Peek()).is
 		}
 	}";
 			Assert.That(
-					ParserModifier.ModifyCommonTreeAdaptorRegex(code),
+					ParserModifier.ModifyCommonTreeAdaptor(code),
 					Is.EqualTo(expected));
 		}
 
