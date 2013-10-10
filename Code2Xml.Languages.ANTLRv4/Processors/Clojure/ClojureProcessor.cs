@@ -51,8 +51,8 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Clojure {
 			return new ClojureParser(stream);
 		}
 
-		protected override void Parse(ClojureParser parser) {
-			parser.file();
+		protected override ParserRuleContext Parse(ClojureParser parser) {
+			return parser.file();
 		}
 	}
 }

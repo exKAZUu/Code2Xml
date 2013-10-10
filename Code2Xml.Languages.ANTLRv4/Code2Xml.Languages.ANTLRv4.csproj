@@ -53,7 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Antlr4AstBuilder.cs" />
-    <Compile Include="Core\XElementBuildingVisitor.cs" />
     <Compile Include="Processors\Clojure\Clojure.g4.lexer.cs" />
     <Compile Include="Processors\Clojure\Clojure.g4.parser.cs" />
     <Compile Include="Core\Antlr4Processor.cs" />
@@ -100,53 +99,62 @@
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.Lua</CustomToolNamespace>
       <Visitor>True</Visitor>
-      <Listener>True</Listener>
+      <Listener>False</Listener>
     </Antlr4>
     <Antlr4 Include="Processors\C\C.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.C</CustomToolNamespace>
-      <Visitor>False</Visitor>
+      <Visitor>True</Visitor>
+      <Listener>False</Listener>
     </Antlr4>
     <Antlr4 Include="Processors\Clojure\Clojure.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.Clojure</CustomToolNamespace>
-      <Visitor>False</Visitor>
+      <Visitor>True</Visitor>
+      <Listener>False</Listener>
     </Antlr4>
     <None Include="packages.config" />
     <Antlr4 Include="Processors\ObjectiveC\ObjectiveC.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.ObjectiveC</CustomToolNamespace>
-      <Visitor>False</Visitor>
+      <Visitor>True</Visitor>
+      <Listener>False</Listener>
     </Antlr4>
     <Antlr4 Include="Processors\R\R.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.R</CustomToolNamespace>
-      <Visitor>False</Visitor>
+      <Visitor>True</Visitor>
+      <Listener>False</Listener>
     </Antlr4>
     <Antlr4 Include="Processors\Verilog2001\Verilog2001.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.Verilog2001</CustomToolNamespace>
-      <Visitor>False</Visitor>
+      <Visitor>True</Visitor>
+      <Listener>False</Listener>
     </Antlr4>
     <Antlr4 Include="Processors\Java\JavaLexer.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.Java</CustomToolNamespace>
-      <Visitor>False</Visitor>
+      <Visitor>True</Visitor>
+      <Listener>False</Listener>
     </Antlr4>
     <Antlr4 Include="Processors\Java\JavaParser.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.Java</CustomToolNamespace>
-      <Visitor>False</Visitor>
+      <Visitor>True</Visitor>
+      <Listener>False</Listener>
     </Antlr4>
     <Antlr4 Include="Processors\Erlang\Erlang.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.Erlang</CustomToolNamespace>
-      <Visitor>False</Visitor>
+      <Visitor>True</Visitor>
+      <Listener>False</Listener>
     </Antlr4>
     <Antlr4 Include="Processors\R\RFilter.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.R</CustomToolNamespace>
       <Visitor>False</Visitor>
+      <Listener>False</Listener>
     </Antlr4>
   </ItemGroup>
   <ItemGroup>

@@ -55,8 +55,8 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.R {
 			return new RParser(stream);
 		}
 
-		protected override void Parse(RParser parser) {
-			parser.prog();
+		protected override ParserRuleContext Parse(RParser parser) {
+			return parser.prog();
 		}
 	}
 }

@@ -51,8 +51,8 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.ObjectiveC {
 			return new ObjectiveCParser(stream);
 		}
 
-		protected override void Parse(ObjectiveCParser parser) {
-			parser.translation_unit();
+		protected override ParserRuleContext Parse(ObjectiveCParser parser) {
+			return parser.translation_unit();
 		}
 	}
 }

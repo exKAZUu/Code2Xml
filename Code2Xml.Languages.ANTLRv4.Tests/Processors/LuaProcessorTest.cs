@@ -19,6 +19,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using Antlr4.Runtime.Misc;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv4.Processors.Lua;
 using NUnit.Framework;
@@ -36,7 +37,7 @@ namespace Code2Xml.Languages.ANTLRv4.Tests.Processors {
 			TestParsing("a = func()[1]");
 		}
 
-		[Test, ExpectedException(typeof(ParseException))]
+		[Test, ExpectedException(typeof(ParseCanceledException))]
 		public void ParseEscapeSequence() {
 			TestParsing(@"local expr = '/[^() ]*lib' .. libname .. '\.so[^() ]*'");
 		}

@@ -54,8 +54,8 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Lua {
 			return new LuaParser(stream);
 		}
 
-		protected override void Parse(LuaParser parser) {
-			parser.chunk();
+		protected override ParserRuleContext Parse(LuaParser parser) {
+			return parser.chunk();
 		}
 	}
 }

@@ -112,7 +112,7 @@ class Main {
 			var commonTokenStream = new CommonTokenStream(javaLexer);
 			var javaParser = new JavaParser(commonTokenStream);
 			var context = javaParser.compilationUnit();
-			var visitor = new XElementBuildingVisitor(javaParser, false);
+			var visitor = new Antlr4AstBuilder(javaParser);
 			visitor.Visit(context);
 			Console.WriteLine(visitor.FinishParsing());
 		}

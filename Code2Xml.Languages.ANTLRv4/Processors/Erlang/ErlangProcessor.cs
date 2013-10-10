@@ -51,8 +51,8 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Erlang {
 			return new ErlangParser(stream);
 		}
 
-		protected override void Parse(ErlangParser parser) {
-			parser.forms();
+		protected override ParserRuleContext Parse(ErlangParser parser) {
+			return parser.forms();
 		}
 	}
 }

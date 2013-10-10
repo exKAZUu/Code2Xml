@@ -24,7 +24,7 @@ using Antlr4.Runtime.Tree;
 using Code2Xml.Core;
 
 namespace Code2Xml.Languages.ANTLRv4.Core {
-	public class Antlr4AstBuilder : IParseTreeListener {
+	public class Antlr4AstBuilder : AbstractParseTreeVisitor<object> {
 		private readonly string[] _parserRuleNames;
 		private readonly XElement _dummyRoot;
 		private readonly Stack<XElement> _elements;
@@ -32,8 +32,9 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 		private readonly XElement _dummyNode;
 		private XElement _lastElement;
 		private int _lastTokenIndex;
+		private int _lastDepth;
 
-		public Antlr4AstBuilder(IRecognizer parser) {
+		public Antlr4AstBuilder(Parser parser) {
 			_parserRuleNames = parser.RuleNames;
 			_stream = (CommonTokenStream)parser.InputStream;
 			_dummyRoot = new XElement("root");
@@ -62,7 +63,7 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 			return root;
 		}
 
-		public void VisitTerminal(ITerminalNode node) {
+		public override object VisitTerminal(ITerminalNode node) {
 			var token = node.Symbol;
 			if (token.Type > 0) {
 				var tokenIndex = token.TokenIndex;
@@ -75,19 +76,20 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 				_lastElement = new XElement("TOKENS", CreateTokenElement("TOKEN", token));
 				_elements.Peek().Add(_lastElement);
 			}
+			return base.VisitTerminal(node);
 		}
 
-		public virtual void VisitErrorNode(IErrorNode node) {}
-
-		public void EnterEveryRule(ParserRuleContext ctx) {
-			var name = _parserRuleNames[ctx.GetRuleIndex()];
+		public override object VisitChildren(IRuleNode node) {
+			var name = _parserRuleNames[node.RuleContext.GetRuleIndex()];
+			var maxDepth = _lastDepth + 1;
+			for (int i = node.RuleContext.Depth(); i < maxDepth; i++) {
+				_elements.Pop();
+			}
 			var element = new XElement(name);
 			_elements.Peek().Add(element);
+			_lastDepth = node.RuleContext.Depth();
 			_elements.Push(element);
-		}
-
-		public void ExitEveryRule(ParserRuleContext ctx) {
-			_elements.Pop();
+			return base.VisitChildren(node);
 		}
 
 		private static XElement CreateTokenElement(string name, IToken token) {

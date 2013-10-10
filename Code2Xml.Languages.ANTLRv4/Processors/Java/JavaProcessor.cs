@@ -54,8 +54,8 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Java {
 			return new JavaParser(stream);
 		}
 
-		protected override void Parse(JavaParser parser) {
-			parser.compilationUnit();
+		protected override ParserRuleContext Parse(JavaParser parser) {
+			return parser.compilationUnit();
 		}
 	}
 }

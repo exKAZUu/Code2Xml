@@ -68,21 +68,19 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 		/// Parse source code already given.
 		/// </summary>
 		/// <param name="parser"></param>
-		protected abstract void Parse(TParser parser);
+		protected abstract ParserRuleContext Parse(TParser parser);
 
 		private XElement GenerateXml(
 				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError) {
 			var lexer = CreateLexer(charStream);
 			var commonTokenStream = new CommonTokenStream(lexer);
 			var parser = CreateParser(commonTokenStream);
-			var listener = new Antlr4AstBuilder(parser);
+			var builder = new Antlr4AstBuilder(parser);
 			if (throwingParseError) {
 				parser.ErrorHandler = new BailErrorStrategy();
 			}
-			parser.BuildParseTree = false;
-			parser.AddParseListener(listener);
-			Parse(parser);
-			return listener.FinishParsing();
+			builder.Visit(Parse(parser));
+			return builder.FinishParsing();
 		}
 
 		/// <summary>

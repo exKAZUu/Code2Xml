@@ -51,8 +51,8 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Verilog2001 {
 			return new Verilog2001Parser(stream);
 		}
 
-		protected override void Parse(Verilog2001Parser parser) {
-			parser.source_text();
+		protected override ParserRuleContext Parse(Verilog2001Parser parser) {
+			return parser.source_text();
 		}
 	}
 }

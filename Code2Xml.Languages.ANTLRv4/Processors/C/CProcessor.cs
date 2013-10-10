@@ -51,8 +51,8 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.C {
 			return new CParser(stream);
 		}
 
-		protected override void Parse(CParser parser) {
-			parser.compilationUnit();
+		protected override ParserRuleContext Parse(CParser parser) {
+			return parser.compilationUnit();
 		}
 	}
 }
