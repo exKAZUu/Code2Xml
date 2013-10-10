@@ -22,11 +22,9 @@ using System.Xml.Linq;
 using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
 using Code2Xml.Core;
-using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Languages.ANTLRv4.Core {
 	public class Antlr4AstBuilder : IParseTreeListener {
-		private readonly bool _throwingParseError;
 		private readonly string[] _parserRuleNames;
 		private readonly XElement _dummyRoot;
 		private readonly Stack<XElement> _elements;
@@ -35,9 +33,8 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 		private XElement _lastElement;
 		private int _lastTokenIndex;
 
-		public Antlr4AstBuilder(IRecognizer parser, bool throwingParseError) {
+		public Antlr4AstBuilder(IRecognizer parser) {
 			_parserRuleNames = parser.RuleNames;
-			_throwingParseError = throwingParseError;
 			_stream = (CommonTokenStream)parser.InputStream;
 			_dummyRoot = new XElement("root");
 			_dummyNode = new XElement("dummy");
@@ -80,11 +77,7 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 			}
 		}
 
-		public void VisitErrorNode(IErrorNode node) {
-			if (_throwingParseError) {
-				throw new ParseException(node.ToStringTree());
-			}
-		}
+		public virtual void VisitErrorNode(IErrorNode node) {}
 
 		public void EnterEveryRule(ParserRuleContext ctx) {
 			var name = _parserRuleNames[ctx.GetRuleIndex()];

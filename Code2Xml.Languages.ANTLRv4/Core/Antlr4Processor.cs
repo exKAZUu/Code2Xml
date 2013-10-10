@@ -24,7 +24,8 @@ using Antlr4.Runtime;
 using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Languages.ANTLRv4.Core {
-	public abstract class Antlr4Processor : LanguageProcessor {
+	public abstract class Antlr4Processor<TParser> : LanguageProcessor
+			where TParser : Parser {
 		protected Antlr4Processor(params string[] extensions) : base(extensions) {}
 
 		/// <summary>
@@ -49,21 +50,50 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 			}
 		}
 
-		protected abstract XElement GenerateXml(
-				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError,
-				bool enablePosition = DefaultEnablePosition);
+		/// <summary>
+		/// Creates and returns a lexer.
+		/// </summary>
+		/// <param name="stream"></param>
+		/// <returns></returns>
+		protected abstract ITokenSource CreateLexer(ICharStream stream);
+
+		/// <summary>
+		/// Creates and returns a parser.
+		/// </summary>
+		/// <param name="stream"></param>
+		/// <returns></returns>
+		protected abstract TParser CreateParser(CommonTokenStream stream);
+
+		/// <summary>
+		/// Parse source code already given.
+		/// </summary>
+		/// <param name="parser"></param>
+		protected abstract void Parse(TParser parser);
+
+		private XElement GenerateXml(
+				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError) {
+			var lexer = CreateLexer(charStream);
+			var commonTokenStream = new CommonTokenStream(lexer);
+			var parser = CreateParser(commonTokenStream);
+			var listener = new Antlr4AstBuilder(parser);
+			if (throwingParseError) {
+				parser.ErrorHandler = new BailErrorStrategy();
+			}
+			parser.BuildParseTree = false;
+			parser.AddParseListener(listener);
+			Parse(parser);
+			return listener.FinishParsing();
+		}
 
 		/// <summary>
 		/// Generates a xml from the specified text of the source code.
 		/// </summary>
 		/// <param name="code"></param>
 		/// <param name="throwingParseError"></param>
-		/// <param name="enablePosition"></param>
 		/// <returns></returns>
 		public override XElement GenerateXml(
-				string code, bool throwingParseError = DefaultThrowingParseError,
-				bool enablePosition = DefaultEnablePosition) {
-			return GenerateXml(new AntlrInputStream(code), throwingParseError, enablePosition);
+				string code, bool throwingParseError = DefaultThrowingParseError) {
+			return GenerateXml(new AntlrInputStream(code), throwingParseError);
 		}
 
 		/// <summary>
@@ -71,12 +101,10 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 		/// </summary>
 		/// <param name="codeReader"></param>
 		/// <param name="throwingParseError"></param>
-		/// <param name="enablePosition"></param>
 		/// <returns></returns>
 		public override XElement GenerateXml(
-				TextReader codeReader, bool throwingParseError = DefaultThrowingParseError,
-				bool enablePosition = DefaultEnablePosition) {
-			return GenerateXml(codeReader.ReadToEnd(), throwingParseError, enablePosition);
+				TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
+			return GenerateXml(codeReader.ReadToEnd(), throwingParseError);
 		}
 	}
 }

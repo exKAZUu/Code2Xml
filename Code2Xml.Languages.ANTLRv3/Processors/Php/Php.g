@@ -3,7 +3,7 @@
 grammar Php;
 
 options {
-backtrack = true; 
+    backtrack = true; 
     memoize = true;
     k=2;
     output = AST;

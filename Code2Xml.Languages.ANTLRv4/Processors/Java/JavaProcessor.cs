@@ -29,7 +29,7 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Java {
 	/// Represents a Java parser and a Java code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class JavaProcessor : Antlr4Processor {
+	public class JavaProcessor : Antlr4Processor<JavaParser> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
@@ -46,17 +46,16 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Java {
 
 		public JavaProcessor() : base(".java") {}
 
-		protected override XElement GenerateXml(
-				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError,
-				bool enablePosition = DefaultEnablePosition) {
-			var lexer = new JavaLexer(charStream);
-			var commonTokenStream = new CommonTokenStream(lexer);
-			var parser = new JavaParser(commonTokenStream);
-			var listener = new Antlr4AstBuilder(parser, throwingParseError);
-			parser.BuildParseTree = false;
-			parser.AddParseListener(listener);
+		protected override ITokenSource CreateLexer(ICharStream stream) {
+			return new JavaLexer(stream);
+		}
+
+		protected override JavaParser CreateParser(CommonTokenStream stream) {
+			return new JavaParser(stream);
+		}
+
+		protected override void Parse(JavaParser parser) {
 			parser.compilationUnit();
-			return listener.FinishParsing();
 		}
 	}
 }

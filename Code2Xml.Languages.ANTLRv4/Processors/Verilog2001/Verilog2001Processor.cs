@@ -17,19 +17,16 @@
 #endregion
 
 using System.ComponentModel.Composition;
-using System.Diagnostics.Contracts;
-using System.Text;
-using System.Xml.Linq;
 using Antlr4.Runtime;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv4.Core;
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.Verilog2001 {
 	/// <summary>
-	/// Represents a Lua parser and a Lua code generator.
+	/// Represents a Verilog2001 parser and a Verilog2001 code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class Verilog2001Processor : Antlr4Processor {
+	public class Verilog2001Processor : Antlr4Processor<Verilog2001Parser> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
@@ -46,17 +43,16 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Verilog2001 {
 
 		public Verilog2001Processor() : base(".v") {}
 
-		protected override XElement GenerateXml(
-				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError,
-				bool enablePosition = DefaultEnablePosition) {
-			var lexer = new Verilog2001Lexer(charStream);
-			var commonTokenStream = new CommonTokenStream(lexer);
-			var parser = new Verilog2001Parser(commonTokenStream);
-			var listener = new Antlr4AstBuilder(parser, throwingParseError);
-			parser.BuildParseTree = false;
-			parser.AddParseListener(listener);
+		protected override ITokenSource CreateLexer(ICharStream stream) {
+			return new Verilog2001Lexer(stream);
+		}
+
+		protected override Verilog2001Parser CreateParser(CommonTokenStream stream) {
+			return new Verilog2001Parser(stream);
+		}
+
+		protected override void Parse(Verilog2001Parser parser) {
 			parser.source_text();
-			return listener.FinishParsing();
 		}
 	}
 }

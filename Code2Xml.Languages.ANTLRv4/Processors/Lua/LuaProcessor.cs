@@ -29,7 +29,7 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Lua {
 	/// Represents a Lua parser and a Lua code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class LuaProcessor : Antlr4Processor {
+	public class LuaProcessor : Antlr4Processor<LuaParser> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
@@ -46,16 +46,16 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Lua {
 
 		public LuaProcessor() : base(".lua") {}
 
-		protected override XElement GenerateXml(
-				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError,
-				bool enablePosition = DefaultEnablePosition) {
-			var lexer = new LuaLexer(charStream);
-			var commonTokenStream = new CommonTokenStream(lexer);
-			var parser = new LuaParser(commonTokenStream);
-			var visitor = new XElementBuildingVisitor(parser, throwingParseError);
-			var context = parser.chunk();
-			visitor.Visit(context);
-			return visitor.FinishParsing();
+		protected override ITokenSource CreateLexer(ICharStream stream) {
+			return new LuaLexer(stream);
+		}
+
+		protected override LuaParser CreateParser(CommonTokenStream stream) {
+			return new LuaParser(stream);
+		}
+
+		protected override void Parse(LuaParser parser) {
+			parser.chunk();
 		}
 	}
 }

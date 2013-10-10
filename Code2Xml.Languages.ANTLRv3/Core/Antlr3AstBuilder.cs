@@ -25,16 +25,14 @@ using Code2Xml.Core;
 
 namespace Code2Xml.Languages.ANTLRv3.Core {
 	public class Antlr3AstBuilder : CommonTreeAdaptor {
-		private readonly bool _throwingParseError;
 		private readonly XElement _dummyRoot, _dummyNode;
 		private readonly Stack<XElement> _elements;
 		private readonly CommonTokenStream _stream;
 		private int _nextTokenIndex;
 		private XElement _lastElement;
 
-		public Antlr3AstBuilder(CommonTokenStream stream, bool throwingParseError) {
+		public Antlr3AstBuilder(CommonTokenStream stream) {
 			_stream = stream;
-			_throwingParseError = throwingParseError;
 			_dummyRoot = new XElement("root");
 			_dummyNode = new XElement("dummy");
 			_elements = new Stack<XElement>(new[] { _dummyRoot });
@@ -86,14 +84,6 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 			return base.Create(token);
 		}
 
-		public override object ErrorNode(
-				ITokenStream input, IToken start, IToken stop, RecognitionException e) {
-			if (_throwingParseError) {
-				throw e;
-			}
-			return base.ErrorNode(input, start, stop, e);
-		}
-
 		private static XElement CreateTokenElement(string name, IToken token) {
 			var text = token.Text;
 			var newLineCount = text.Count(ch => ch == '\n');
@@ -109,6 +99,15 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 							? token.CharPositionInLine + text.Length - 1
 							: text.Length - (text.LastIndexOf('\n') + 1) - 1);
 			return tokenElement;
+		}
+	}
+
+	public class Antlr3AstBuilderWithReportingError : Antlr3AstBuilder {
+		public Antlr3AstBuilderWithReportingError(CommonTokenStream stream) : base(stream) {}
+
+		public override object ErrorNode(
+				ITokenStream input, IToken start, IToken stop, RecognitionException e) {
+			throw e;
 		}
 	}
 }

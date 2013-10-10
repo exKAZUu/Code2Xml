@@ -133,22 +133,20 @@ namespace Code2Xml.Core.Processors {
 		/// </summary>
 		/// <param name="code"></param>
 		/// <param name="throwingParseError"></param>
-		/// <param name="enablePosition"></param>
 		/// <returns></returns>
 		public abstract XElement GenerateXml(
 				string code,
-				bool throwingParseError = DefaultThrowingParseError, bool enablePosition = DefaultEnablePosition);
+				bool throwingParseError = DefaultThrowingParseError);
 
 		/// <summary>
 		/// Generates a xml from the specified <c>TextReader</c> which reads the source code.
 		/// </summary>
 		/// <param name="codeReader"></param>
 		/// <param name="throwingParseError"></param>
-		/// <param name="enablePosition"></param>
 		/// <returns></returns>
 		public abstract XElement GenerateXml(
 				TextReader codeReader,
-				bool throwingParseError = DefaultThrowingParseError, bool enablePosition = DefaultEnablePosition);
+				bool throwingParseError = DefaultThrowingParseError);
 
 		/// <summary>
 		/// Generates a xml from the specified file of the source code and the specified encoding.
@@ -156,18 +154,17 @@ namespace Code2Xml.Core.Processors {
 		/// <param name="codeFile"></param>
 		/// <param name="encoding"></param>
 		/// <param name="throwingParseError"></param>
-		/// <param name="enablePosition"></param>
 		/// <returns></returns>
 		public XElement GenerateXml(
 				FileInfo codeFile, Encoding encoding = null,
-				bool throwingParseError = DefaultThrowingParseError, bool enablePosition = DefaultEnablePosition) {
+				bool throwingParseError = DefaultThrowingParseError) {
 			Contract.Requires(codeFile != null);
 			if (encoding == null) {
 				return GenerateXml(
-						GuessEncoding.ReadAllText(codeFile.FullName), throwingParseError, enablePosition);
+						GuessEncoding.ReadAllText(codeFile.FullName), throwingParseError);
 			}
 			using (var reader = new StreamReader(codeFile.FullName, encoding)) {
-				return GenerateXml(reader, throwingParseError, enablePosition);
+				return GenerateXml(reader, throwingParseError);
 			}
 		}
 

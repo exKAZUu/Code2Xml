@@ -20,6 +20,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using Antlr4.Runtime;
+using Antlr4.Runtime.Misc;
 using Code2Xml.Languages.ANTLRv4.Core;
 using Code2Xml.Languages.ANTLRv4.Processors.Java;
 using NUnit.Framework;
@@ -66,6 +67,20 @@ class Main {
 }";
 
 			TestParsing(code);
+		}
+
+		[Test]
+		public void ParseBrokenCodeIgnoringException() {
+			var code = @"class A {{ }";
+			var processor = new JavaProcessor();
+			processor.GenerateXml(code, false);
+		}
+
+		[Test, ExpectedException(typeof(ParseCanceledException))]
+		public void ParseBrokenCode() {
+			var code = @"class A {{ }";
+			var processor = new JavaProcessor();
+			processor.GenerateXml(code, true);
 		}
 
 		[Test]

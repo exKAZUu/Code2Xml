@@ -17,7 +17,7 @@
 #endregion
 
 using System;
-//using Code2Xml.Languages.ANTLRv3.Processors.Java;
+using Antlr.Runtime;
 using Code2Xml.Languages.ANTLRv3.Processors.Java;
 using NUnit.Framework;
 
@@ -56,6 +56,20 @@ class Main {
 		public void ParseUnicodeCharacter() {
 			var code = @"obj.method().<Object>method2()";
 			TestParsing(code);
+		}
+
+		[Test]
+		public void ParseBrokenCodeIgnoringException() {
+			var code = @"class A {{ }";
+			var processor = new JavaProcessor();
+			processor.GenerateXml(code, false);
+		}
+
+		[Test, ExpectedException(typeof(MismatchedTokenException))]
+		public void ParseBrokenCode() {
+			var code = @"class A {{ }";
+			var processor = new JavaProcessor();
+			processor.GenerateXml(code, true);
 		}
 
 		private static void TestParsing(string code) {

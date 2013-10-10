@@ -17,9 +17,6 @@
 #endregion
 
 using System.ComponentModel.Composition;
-using System.Diagnostics.Contracts;
-using System.Text;
-using System.Xml.Linq;
 using Antlr.Runtime;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv3.Core;
@@ -29,7 +26,7 @@ namespace Code2Xml.Languages.ANTLRv3.Processors.CSharp {
 	/// Represents a CSharp parser and a CSharp code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class CSharpProcessor : Antlr3Processor {
+	public class CSharpProcessor : Antlr3Processor<csParser> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
@@ -46,17 +43,16 @@ namespace Code2Xml.Languages.ANTLRv3.Processors.CSharp {
 
 		public CSharpProcessor() : base(".cs") {}
 
-		protected override XElement GenerateXml(
-				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError,
-				bool enablePosition = DefaultEnablePosition) {
-			var lexer = new csLexer(charStream);
-			var commonTokenStream = new CommonTokenStream(lexer);
-			var parser = new csParser(commonTokenStream);
-			var builder = new Antlr3AstBuilder(commonTokenStream, true);
-			parser.TreeAdaptor = builder;
-			parser.AstBuilder = builder;
+		protected override ITokenSource CreateLexer(ICharStream stream) {
+			return new csLexer(stream);
+		}
+
+		protected override csParser CreateParser(ITokenStream stream) {
+			return new csParser(stream);
+		}
+
+		protected override void Parse(csParser parser) {
 			parser.compilation_unit();
-			return builder.FinishParsing();
 		}
 	}
 }

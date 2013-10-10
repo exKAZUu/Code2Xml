@@ -17,19 +17,16 @@
 #endregion
 
 using System.ComponentModel.Composition;
-using System.Diagnostics.Contracts;
-using System.Text;
-using System.Xml.Linq;
 using Antlr4.Runtime;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv4.Core;
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.C {
 	/// <summary>
-	/// Represents a Java parser and a Java code generator.
+	/// Represents a C parser and a C code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class CProcessor : Antlr4Processor {
+	public class CProcessor : Antlr4Processor<CParser> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
@@ -46,17 +43,16 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.C {
 
 		public CProcessor() : base(".c", ".h") {}
 
-		protected override XElement GenerateXml(
-				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError,
-				bool enablePosition = DefaultEnablePosition) {
-			var lexer = new CLexer(charStream);
-			var commonTokenStream = new CommonTokenStream(lexer);
-			var parser = new CParser(commonTokenStream);
-			var listener = new Antlr4AstBuilder(parser, throwingParseError);
-			parser.BuildParseTree = false;
-			parser.AddParseListener(listener);
+		protected override ITokenSource CreateLexer(ICharStream stream) {
+			return new CLexer(stream);
+		}
+
+		protected override CParser CreateParser(CommonTokenStream stream) {
+			return new CParser(stream);
+		}
+
+		protected override void Parse(CParser parser) {
 			parser.compilationUnit();
-			return listener.FinishParsing();
 		}
 	}
 }
