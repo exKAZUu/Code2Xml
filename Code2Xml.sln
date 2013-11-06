@@ -29,23 +29,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{540FD1
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.ANTLRv4", "Code2Xml.Languages.ANTLRv4\Code2Xml.Languages.ANTLRv4.csproj", "{1DE85DA9-6EBF-49D1-8DDA-75D9D25497F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.ANTLRv4", "Code2Xml.Languages\ANTLRv4\Code2Xml.Languages.ANTLRv4.csproj", "{1DE85DA9-6EBF-49D1-8DDA-75D9D25497F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.ANTLRv4.Tests", "Code2Xml.Languages.ANTLRv4.Tests\Code2Xml.Languages.ANTLRv4.Tests.csproj", "{DC45440D-7784-429B-B57F-4A0B76980394}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.ANTLRv4.Tests", "Code2Xml.Languages\ANTLRv4.Tests\Code2Xml.Languages.ANTLRv4.Tests.csproj", "{DC45440D-7784-429B-B57F-4A0B76980394}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.ANTLRv3", "Code2Xml.Languages.ANTLRv3\Code2Xml.Languages.ANTLRv3.csproj", "{942A56FD-13AF-4EE6-A8D7-7DDF50374715}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.ANTLRv3", "Code2Xml.Languages\ANTLRv3\Code2Xml.Languages.ANTLRv3.csproj", "{942A56FD-13AF-4EE6-A8D7-7DDF50374715}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.ANTLRv3.Tests", "Code2Xml.Languages.ANTLRv3.Tests\Code2Xml.Languages.ANTLRv3.Tests.csproj", "{660EE975-CBE5-4C2C-B83B-CEC296FFE308}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.ANTLRv3.Tests", "Code2Xml.Languages\ANTLRv3.Tests\Code2Xml.Languages.ANTLRv3.Tests.csproj", "{660EE975-CBE5-4C2C-B83B-CEC296FFE308}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Obsolete.ANTLRv3", "Code2Xml.Languages.Obsolete.ANTLRv3\Code2Xml.Languages.Obsolete.ANTLRv3.csproj", "{82A3E237-DB4F-4A94-B805-CC6CE8F46E56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Obsolete.ANTLRv3", "Code2Xml.Languages\Obsolete.ANTLRv3\Code2Xml.Languages.Obsolete.ANTLRv3.csproj", "{82A3E237-DB4F-4A94-B805-CC6CE8F46E56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Obsolete.ANTLRv3.Tests", "Code2Xml.Languages.Obsolete.ANTLRv3.Tests\Code2Xml.Languages.Obsolete.ANTLRv3.Tests.csproj", "{18AC7E37-5F6D-48E8-B74E-4C4452F56711}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Obsolete.ANTLRv3.Tests", "Code2Xml.Languages\Obsolete.ANTLRv3.Tests\Code2Xml.Languages.Obsolete.ANTLRv3.Tests.csproj", "{18AC7E37-5F6D-48E8-B74E-4C4452F56711}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParserTests", "ParserTests\ParserTests\ParserTests.csproj", "{20510236-D8B1-4617-9352-4E6134F9AB67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Obsolete.Others", "Code2Xml.Languages.Obsolete.Others\Code2Xml.Languages.Obsolete.Others.csproj", "{8193F861-1CFC-4D5D-87B0-0DF80492F915}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Obsolete.Others", "Code2Xml.Languages\Obsolete.Others\Code2Xml.Languages.Obsolete.Others.csproj", "{8193F861-1CFC-4D5D-87B0-0DF80492F915}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Obsolete.Others.Tests", "Code2Xml.Languages.Obsolete.Others.Tests\Code2Xml.Languages.Obsolete.Others.Tests.csproj", "{1DB17E61-141A-4B3F-942C-3CF9C04ECA0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code2Xml.Languages.Obsolete.Others.Tests", "Code2Xml.Languages\Obsolete.Others.Tests\Code2Xml.Languages.Obsolete.Others.Tests.csproj", "{1DB17E61-141A-4B3F-942C-3CF9C04ECA0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

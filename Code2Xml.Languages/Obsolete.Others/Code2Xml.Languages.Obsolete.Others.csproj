@@ -34,10 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Paraiba">
-      <HintPath>..\packages\Paraiba.1.1.0.90\lib\net40\Paraiba.dll</HintPath>
+      <HintPath>..\..\packages\Paraiba.1.1.0.90\lib\net40\Paraiba.dll</HintPath>
     </Reference>
     <Reference Include="Paraiba.Experiment">
-      <HintPath>..\packages\Paraiba.Experiment.1.1.0.42\lib\net40\Paraiba.Experiment.dll</HintPath>
+      <HintPath>..\..\packages\Paraiba.Experiment.1.1.0.42\lib\net40\Paraiba.Experiment.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -112,7 +112,7 @@
     <None Include="ParserScripts\Ruby\xml2ruby19.rb" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Code2Xml.Core\Code2Xml.Core.csproj">
+    <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">
       <Project>{bccd95a9-7685-4b15-9da3-e48cc0bf499b}</Project>
       <Name>Code2Xml.Core</Name>
     </ProjectReference>

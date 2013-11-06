@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{18AC7E37-5F6D-48E8-B74E-4C4452F56711}</ProjectGuid>
+    <ProjectGuid>{DC45440D-7784-429B-B57F-4A0B76980394}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Code2Xml.Languages.Obsolete.ANTLRv3.Tests</RootNamespace>
-    <AssemblyName>Code2Xml.Languages.Obsolete.ANTLRv3.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>Code2Xml.Languages.ANTLRv4.Tests</RootNamespace>
+    <AssemblyName>Code2Xml.Languages.ANTLRv4.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,23 +32,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr3.Runtime">
-      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    <Reference Include="Antlr4.Runtime.v4.5">
+      <HintPath>..\..\packages\Antlr4.Runtime.4.1.0-alpha003\lib\net45\Antlr4.Runtime.v4.5.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Paraiba, Version=1.1.0.90, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="Paraiba">
       <HintPath>..\packages\Paraiba.1.1.0.90\lib\net40\Paraiba.dll</HintPath>
-    </Reference>
-    <Reference Include="Paraiba.Experiment">
-      <HintPath>..\packages\Paraiba.Experiment.1.1.0.42\lib\net40\Paraiba.Experiment.dll</HintPath>
-    </Reference>
-    <Reference Include="ParserTests">
-      <HintPath>..\ParserTests\ParserTests\bin\Debug\ParserTests.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,24 +54,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CCodeToXmlTest.cs" />
-    <Compile Include="JavaCodeToXmlTest.cs" />
-    <Compile Include="JavaScriptCodeToXmlTest.cs" />
+    <Compile Include="Processors\JavaProcessorTest.cs" />
+    <Compile Include="Processors\LuaProcessorTest.cs" />
+    <Compile Include="XElementBuildingListenerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Code2Xml.Core\Code2Xml.Core.csproj">
+    <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">
       <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>
       <Name>Code2Xml.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Code2Xml.Languages.Obsolete.ANTLRv3\Code2Xml.Languages.Obsolete.ANTLRv3.csproj">
-      <Project>{82A3E237-DB4F-4A94-B805-CC6CE8F46E56}</Project>
-      <Name>Code2Xml.Languages.Obsolete.ANTLRv3</Name>
+    <ProjectReference Include="..\ANTLRv4\Code2Xml.Languages.ANTLRv4.csproj">
+      <Project>{1de85da9-6ebf-49d1-8dda-75d9d25497f6}</Project>
+      <Name>Code2Xml.Languages.ANTLRv4</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
