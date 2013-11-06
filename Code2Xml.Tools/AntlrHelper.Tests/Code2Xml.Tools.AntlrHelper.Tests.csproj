@@ -66,8 +66,9 @@
     <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework">
-      <HintPath>..\..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -80,7 +81,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AntlrHelper\Code2Xml.Tools.AntlrHelper.csproj">
       <Project>{348EFA09-D22C-4F79-9738-BD82CB87FE7B}</Project>
-      <Name>Code2Xml.AntlrHelper</Name>
+      <Name>Code2Xml.Tools.AntlrHelper</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

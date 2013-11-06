@@ -20,11 +20,11 @@ using System.IO;
 using System.Linq;
 using Antlr.Runtime;
 using Code2Xml.Core.Location;
-using Code2Xml.Core.Tests;
 using Code2Xml.Languages.Java.CodeToXmls;
 using Code2Xml.Languages.Java.XmlToCodes;
 using NUnit.Framework;
 using Paraiba.Xml;
+using ParserTests;
 
 namespace Code2Xml.Languages.Obsolete.ANTLRv3.Tests {
 	[TestFixture]

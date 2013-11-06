@@ -21,13 +21,13 @@ using System.IO;
 using System.Linq;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Core.Plugin;
-using Code2Xml.Core.Tests;
 using Code2Xml.Core.XmlToCodes;
 using NUnit.Framework;
 using Paraiba.Core;
 using Paraiba.IO;
 using Paraiba.Text;
 using Paraiba.Xml;
+using ParserTests;
 
 namespace Code2Xml.Languages.Tests {
 	[TestFixture]
@@ -35,17 +35,17 @@ namespace Code2Xml.Languages.Tests {
 		private static IEnumerable<TestCaseData> TestCases {
 			get {
 				var names = new[] {
-						"C",
-						"CSharp",
-						"Java",
-						"JavaScript",
-						"Lua",
-						"Python2",
-						"Python3",
-						"Ruby18",
-						"Ruby19",
-						"SrcMLForC",
-						"SrcMLForCpp",
+					"C",
+					"CSharp",
+					"Java",
+					"JavaScript",
+					"Lua",
+					"Python2",
+					"Python3",
+					"Ruby18",
+					"Ruby19",
+					"SrcMLForC",
+					"SrcMLForCpp",
 				};
 				var tt = names
 						.SelectMany(

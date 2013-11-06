@@ -33,9 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework">
-      <HintPath>..\..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Paraiba, Version=1.1.0.90, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -55,33 +55,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Code2Xml.Core.Tests\Code2Xml.Core.Tests.csproj">
-      <Project>{F4035613-FAA1-419C-880C-EE60DDA08783}</Project>
-      <Name>Code2Xml.Core.Tests</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">
       <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>
       <Name>Code2Xml.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Python2\Code2Xml.Languages.Python2.csproj">
-      <Project>{D7557D95-520B-476D-8AF9-FC1ECC4A7298}</Project>
-      <Name>Code2Xml.Languages.Python2</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Python3\Code2Xml.Languages.Python3.csproj">
-      <Project>{D416DB7C-F4F0-4F71-8332-673076B7EB2B}</Project>
-      <Name>Code2Xml.Languages.Python3</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Ruby18\Code2Xml.Languages.Ruby18.csproj">
-      <Project>{1C794EFE-D229-4A08-B17B-490FAB04F0B2}</Project>
-      <Name>Code2Xml.Languages.Ruby18</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Ruby19\Code2Xml.Languages.Ruby19.csproj">
-      <Project>{600462F3-1631-4461-92CE-29091E35F77E}</Project>
-      <Name>Code2Xml.Languages.Ruby19</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SrcML\Code2Xml.Languages.SrcML.csproj">
-      <Project>{AED25DB1-BD61-48EA-9BA7-C8F27CDD4064}</Project>
-      <Name>Code2Xml.Languages.SrcML</Name>
+    <ProjectReference Include="..\..\ParserTests\ParserTests\ParserTests.csproj">
+      <Project>{20510236-d8b1-4617-9352-4e6134f9ab67}</Project>
+      <Name>ParserTests</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

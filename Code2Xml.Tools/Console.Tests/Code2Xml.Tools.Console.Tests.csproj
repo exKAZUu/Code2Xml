@@ -37,8 +37,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Paraiba">
       <HintPath>..\..\packages\Paraiba.1.1.0.90\lib\net40\Paraiba.dll</HintPath>
@@ -63,13 +64,13 @@
       <Project>{82a3e237-db4f-4a94-b805-cc6ce8f46e56}</Project>
       <Name>Code2Xml.Languages.Obsolete.ANTLRv3</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\ParserTests\ParserTests\ParserTests.csproj">
+      <Project>{20510236-d8b1-4617-9352-4e6134f9ab67}</Project>
+      <Name>ParserTests</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Console\Code2Xml.Tools.Console.csproj">
       <Project>{5C40DA45-ACB3-4FC4-8CD4-E9053D4081D2}</Project>
       <Name>Code2Xml.Tools.Console</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Code2Xml.Core.Tests\Code2Xml.Core.Tests.csproj">
-      <Project>{F4035613-FAA1-419C-880C-EE60DDA08783}</Project>
-      <Name>Code2Xml.Core.Tests</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">
       <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>

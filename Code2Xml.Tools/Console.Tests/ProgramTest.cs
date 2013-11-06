@@ -22,12 +22,12 @@ using System.IO;
 using System.Linq;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Core.Plugin;
-using Code2Xml.Core.Tests;
 using Code2Xml.Languages.C.CodeToXmls;
 using Code2Xml.Languages.C.XmlToCodes;
 using NUnit.Framework;
 using Paraiba.Core;
 using Paraiba.Text;
+using ParserTests;
 
 namespace Code2Xml.Tools.Console.Tests {
 	[TestFixture]
@@ -37,22 +37,22 @@ namespace Code2Xml.Tools.Console.Tests {
 		private static IEnumerable<TestCaseData> TestCases {
 			get {
 				var langs = new[] {
-						new { Name = "C", Opt = "-C" },
-						new { Name = "CSharp", Opt = "-C#" },
-						new { Name = "Java", Opt = "-Java" },
-						new { Name = "JavaScript", Opt = "-JavaScript" },
-						new { Name = "Lua", Opt = "-Lua" },
-						new { Name = "Python2", Opt = "-Python2" },
-						new { Name = "Python3", Opt = "-Python3" },
-						new { Name = "Ruby18", Opt = "-Ruby18" },
-						//new { Name = "Ruby19", Opt = "-Ruby19" },
+					new { Name = "C", Opt = "-C" },
+					new { Name = "CSharp", Opt = "-C#" },
+					new { Name = "Java", Opt = "-Java" },
+					new { Name = "JavaScript", Opt = "-JavaScript" },
+					new { Name = "Lua", Opt = "-Lua" },
+					new { Name = "Python2", Opt = "-Python2" },
+					new { Name = "Python3", Opt = "-Python3" },
+					new { Name = "Ruby18", Opt = "-Ruby18" },
+					//new { Name = "Ruby19", Opt = "-Ruby19" },
 				};
 				return langs
 						.SelectMany(
 								lang => Directory.EnumerateFiles(Fixture.GetInputPath(lang.Name)).Select(
 										path => new {
-												lang.Name, lang.Opt,
-												Path = path
+											lang.Name, lang.Opt,
+											Path = path
 										}))
 						.Select(
 								p => new TestCaseData(
