@@ -27,9 +27,9 @@ using Code2Xml.Core.Processors;
 using Code2Xml.Core.XmlToCodes;
 using Paraiba.Linq;
 
-namespace Code2Xml.Core.Plugin {
-	public class PluginManager {
-		private static PluginManager _instance;
+namespace Code2Xml.Core {
+	public class Code2XmlInstances {
+		private static Code2XmlInstances _instance;
 
 #pragma warning disable 649
 		[ImportMany] private IEnumerable<CodeToXml> _codeToXmls;
@@ -37,7 +37,7 @@ namespace Code2Xml.Core.Plugin {
 		[ImportMany] private IEnumerable<LanguageProcessor> _processors;
 #pragma warning restore 649
 
-		private PluginManager() {
+		private Code2XmlInstances() {
 			var catalog = new AggregateCatalog();
 			catalog.Catalogs.Add(
 					new AssemblyCatalog(Assembly.GetExecutingAssembly()));
@@ -47,8 +47,8 @@ namespace Code2Xml.Core.Plugin {
 			container.ComposeParts(this);
 		}
 
-		private static PluginManager Instance {
-			get { return _instance ?? (_instance = new PluginManager()); }
+		private static Code2XmlInstances Instance {
+			get { return _instance ?? (_instance = new Code2XmlInstances()); }
 		}
 
 		public static IEnumerable<CodeToXml> CodeToXmls {
@@ -117,7 +117,8 @@ namespace Code2Xml.Core.Plugin {
 			return Processors
 					.Where(ast => ast.LanguageName.ToLower().Contains(lowerName))
 					.MinElementOrDefault(
-							ast => Math.Abs(ast.LanguageName.Length - name.Length));
+							ast => Math.Abs(ast.LanguageName.Length - name.Length) * 100
+							       + ast.GetType().Name.Length);
 		}
 
 		/// <summary>
@@ -130,7 +131,8 @@ namespace Code2Xml.Core.Plugin {
 			return Processors
 					.Where(ast => ast.FullLanguageName.ToLower().Contains(lowerName))
 					.MinElementOrDefault(
-							ast => Math.Abs(ast.FullLanguageName.Length - fullName.Length));
+							ast => Math.Abs(ast.FullLanguageName.Length - fullName.Length) * 100
+							       + ast.GetType().Name.Length);
 		}
 
 		/// <summary>
@@ -141,10 +143,11 @@ namespace Code2Xml.Core.Plugin {
 		public static LanguageProcessor GetProcessorByExtension(string extension) {
 			var lowerExt = extension.ToLower();
 			return Processors
-					.FirstOrDefault(
+					.Where(
 							ast => ast.SupportedExtensions
 									.Select(e => e.ToLower())
-									.Contains(lowerExt));
+									.Contains(lowerExt))
+					.MinElementOrDefault(ast => ast.GetType().Name.Length);
 		}
 	}
 }

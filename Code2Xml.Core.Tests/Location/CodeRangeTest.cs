@@ -25,37 +25,32 @@ namespace Code2Xml.Core.Tests.Location {
 	[TestFixture]
 	public class CodeRangeTest {
 		[Test]
-		[TestCase(1, 1, false)]
-		[TestCase(1, 3, false)]
-		[TestCase(1, 5, true)]
-		[TestCase(1, 6, true)]
-		[TestCase(2, 0, true)]
-		[TestCase(2, 3, true)]
-		[TestCase(2, 4, false)]
-		public void ContainsCodeLocation(int line, int pos, bool contained) {
-			Assert.That(
-					new CodeRange(new CodeLocation(1, 5), new CodeLocation(2, 3))
-							.Contains(new CodeLocation(line, pos)), Is.EqualTo(contained));
+		[TestCase(1, 1, Result = false)]
+		[TestCase(1, 3, Result = false)]
+		[TestCase(1, 5, Result = true)]
+		[TestCase(1, 6, Result = true)]
+		[TestCase(2, 0, Result = true)]
+		[TestCase(2, 3, Result = true)]
+		[TestCase(2, 4, Result = false)]
+		public bool ContainsCodeLocation(int line, int pos) {
+			return new CodeRange(new CodeLocation(1, 5), new CodeLocation(2, 3))
+					.Contains(new CodeLocation(line, pos));
 		}
 
 		[Test]
-		[TestCase(1, 0, 1, 1, false)]
-		[TestCase(1, 0, 1, 5, false)]
-		[TestCase(1, 0, 1, 6, false)]
-		[TestCase(1, 5, 1, 6, true)]
-		[TestCase(1, 5, 2, 1, true)]
-		[TestCase(1, 5, 2, 3, true)]
-		[TestCase(1, 5, 2, 8, false)]
-		[TestCase(2, 7, 2, 8, false)]
-		public void ContainsCodePosition(
-				int startLine, int startPos, int endLine, int endPos, bool contained) {
-			Assert.That(
-					new CodeRange(new CodeLocation(1, 5), new CodeLocation(2, 3))
-							.Contains(
-									new CodeRange(
-											new CodeLocation(startLine, startPos),
-											new CodeLocation(endLine, endPos))),
-					Is.EqualTo(contained));
+		[TestCase(1, 0, 1, 1, Result = false)]
+		[TestCase(1, 0, 1, 5, Result = false)]
+		[TestCase(1, 0, 1, 6, Result = false)]
+		[TestCase(1, 5, 1, 6, Result = true)]
+		[TestCase(1, 5, 2, 1, Result = true)]
+		[TestCase(1, 5, 2, 3, Result = true)]
+		[TestCase(1, 5, 2, 8, Result = false)]
+		[TestCase(2, 7, 2, 8, Result = false)]
+		public bool ContainsCodePosition(int startLine, int startPos, int endLine, int endPos) {
+			var startLocation = new CodeLocation(startLine, startPos);
+			var endLocation = new CodeLocation(endLine, endPos);
+			return new CodeRange(new CodeLocation(1, 5), new CodeLocation(2, 3))
+					.Contains(new CodeRange(startLocation, endLocation));
 		}
 
 		[Test]
@@ -112,6 +107,17 @@ public class Hello {
 			Assert.That(newRange, Is.EqualTo(range));
 			Assert.That(newInclusiveStart, Is.EqualTo(inclusiveStart));
 			Assert.That(newExclusiveEnd, Is.EqualTo(exclusiveEnd));
+		}
+
+		[Test]
+		[TestCase(2, 2, "aaa\r\nbbb", 3, 2)]
+		[TestCase(2, 2, "aaa\r\n", 2, 6)]
+		[TestCase(2, 2, "aaa", 2, 4)]
+		public void CalculateInclusiveEndLocation(
+				int startLine, int startPos, string text, int endLine, int endPos) {
+			var startLocation = new CodeLocation(startLine, startPos);
+			var endLocation = CodeRange.CalculateInclusiveEndLocation(startLocation, text);
+			Assert.That(endLocation, Is.EqualTo(new CodeLocation(endLine, endPos)));
 		}
 	}
 }

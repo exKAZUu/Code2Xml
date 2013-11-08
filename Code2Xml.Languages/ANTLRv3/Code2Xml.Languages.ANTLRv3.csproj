@@ -51,8 +51,11 @@
     <Compile Include="Core\Antlr3AstNode.cs" />
     <Compile Include="Processors\CSharp\csLexer.cs" />
     <Compile Include="Processors\CSharp\csParser.cs" />
-    <Compile Include="Processors\CSharp\CSharpProcessor.cs" />
-    <Compile Include="Processors\JavaScript\JavaScriptProcessor.cs" />
+    <Compile Include="Processors\CSharp\CSharpProcessorUsingAntlr3.cs" />
+    <Compile Include="Processors\C\CLexer.cs" />
+    <Compile Include="Processors\C\CParser.cs" />
+    <Compile Include="Processors\C\CProcessorUsingAntlr3.cs" />
+    <Compile Include="Processors\JavaScript\JavaScriptProcessorUsingAntlr3.cs" />
     <Compile Include="Processors\JavaScript\JavaScriptLexer.Action.cs" />
     <Compile Include="Processors\JavaScript\JavaScriptLexer.cs" />
     <Compile Include="Processors\JavaScript\JavaScriptParser.cs" />
@@ -60,8 +63,11 @@
     <Compile Include="Core\Antlr3Processor.cs" />
     <Compile Include="Processors\Java\JavaLexer.cs" />
     <Compile Include="Processors\Java\JavaParser.cs" />
-    <Compile Include="Processors\Java\JavaProcessor.cs" />
-    <Compile Include="Processors\Php\PhpProcessor.cs" />
+    <Compile Include="Processors\Java\JavaProcessorUsingAntlr3.cs" />
+    <Compile Include="Processors\Lua\LuaLexer.cs" />
+    <Compile Include="Processors\Lua\LuaParser.cs" />
+    <Compile Include="Processors\Lua\LuaProcessorUsingAntlr3.cs" />
+    <Compile Include="Processors\Php\PhpProcessorUsingAntlr3.cs" />
     <Compile Include="Processors\Php\PhpLexer.cs" />
     <Compile Include="Processors\Php\PhpParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +98,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Antlr3 Include="Processors\C\C.g">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv3.Processors.C</CustomToolNamespace>
+    </Antlr3>
+    <AntlrTokens Include="Processors\C\C.tokens">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv3.Processors.C</CustomToolNamespace>
+    </AntlrTokens>
+    <Antlr3 Include="Processors\Lua\Lua.g">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv3.Processors.Lua</CustomToolNamespace>
+    </Antlr3>
+    <AntlrTokens Include="Processors\Lua\Lua.tokens">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv3.Processors.Lua</CustomToolNamespace>
+    </AntlrTokens>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

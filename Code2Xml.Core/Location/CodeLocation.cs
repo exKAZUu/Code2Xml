@@ -64,6 +64,10 @@ namespace Code2Xml.Core.Location {
 			}
 		}
 
+		public override string ToString() {
+			return string.Format("Line: {0}, Pos: {1}", Line, Position);
+		}
+
 		public static bool operator <(CodeLocation location1, CodeLocation location2) {
 			return location1.CompareTo(location2) < 0;
 		}

@@ -290,9 +290,6 @@ options {
     language=CSharp3;
 }
 
-@modifier { public }
-@ctorModifier { public }
-
 @lexer::namespace { Code2Xml.Languages.ANTLRv3.Processors.Java }
 @parser::namespace { Code2Xml.Languages.ANTLRv3.Processors.Java }
 
@@ -626,6 +623,18 @@ classOrInterfaceType
         )*
     ;
 
+
+classOrInterfaceTypeWithDiamond
+    :   IDENTIFIER
+        (typeArgumentsOrDiamond
+        )?
+        ('.' IDENTIFIER
+            (typeArgumentsOrDiamond
+            )?
+        )*
+    ;
+
+
 primitiveType  
     :   'boolean'
     |   'char'
@@ -637,11 +646,8 @@ primitiveType
     |   'double'
     ;
 
-typeArguments 
-    :   '<' typeArgument
-        (',' typeArgument
-        )* 
-        '>'
+typeArguments
+    :   '<' typeArgument (',' typeArgument)* '>'
     ;
 
 typeArgument 
@@ -1019,37 +1025,37 @@ conditionalExpression
         )?
     ;
 
-conditionalOrExpression 
+conditionalOrExpression
     :   conditionalAndExpression
         ('||' conditionalAndExpression
         )*
     ;
 
-conditionalAndExpression 
+conditionalAndExpression
     :   inclusiveOrExpression
         ('&&' inclusiveOrExpression
         )*
     ;
 
-inclusiveOrExpression 
+inclusiveOrExpression
     :   exclusiveOrExpression
         ('|' exclusiveOrExpression
         )*
     ;
 
-exclusiveOrExpression 
+exclusiveOrExpression
     :   andExpression
         ('^' andExpression
         )*
     ;
 
-andExpression 
+andExpression
     :   equalityExpression
         ('&' equalityExpression
         )*
     ;
 
-equalityExpression 
+equalityExpression
     :   instanceOfExpression
         (   
             (   '=='
@@ -1059,40 +1065,38 @@ equalityExpression
         )*
     ;
 
-instanceOfExpression 
+instanceOfExpression
     :   relationalExpression
         ('instanceof' type
         )?
     ;
 
-relationalExpression 
+relationalExpression
     :   shiftExpression
         (relationalOp shiftExpression
         )*
     ;
 
-relationalOp 
+relationalOp
     :    '<' '='
     |    '>' '='
     |   '<'
     |   '>'
     ;
 
-shiftExpression 
+shiftExpression
     :   additiveExpression
         (shiftOp additiveExpression
         )*
     ;
 
-
-shiftOp 
+shiftOp
     :    '<' '<'
     |    '>' '>' '>'
     |    '>' '>'
     ;
 
-
-additiveExpression 
+additiveExpression
     :   multiplicativeExpression
         (   
             (   '+'
@@ -1102,7 +1106,7 @@ additiveExpression
          )*
     ;
 
-multiplicativeExpression 
+multiplicativeExpression
     :
         unaryExpression
         (   
@@ -1118,7 +1122,7 @@ multiplicativeExpression
  * NOTE: for '+' and '-', if the next token is int or long interal, then it's not a unary expression.
  *       it's a literal with signed value. INTLTERAL AND LONG LITERAL are added here for this.
  */
-unaryExpression 
+unaryExpression
     :   '+'  unaryExpression
     |   '-' unaryExpression
     |   '++' unaryExpression
@@ -1126,7 +1130,7 @@ unaryExpression
     |   unaryExpressionNotPlusMinus
     ;
 
-unaryExpressionNotPlusMinus 
+unaryExpressionNotPlusMinus
     :   '~' unaryExpression
     |   '!' unaryExpression
     |   castExpression
@@ -1138,7 +1142,7 @@ unaryExpressionNotPlusMinus
         )?
     ;
 
-castExpression 
+castExpression
     :   '(' primitiveType ')' unaryExpression
     |   '(' type ')' unaryExpressionNotPlusMinus
     ;
@@ -1146,7 +1150,7 @@ castExpression
 /**
  * have to use scope here, parameter passing isn't well supported in antlr.
  */
-primary 
+primary
     :   parExpression            
     |   'this'
         ('.' IDENTIFIER
@@ -1168,9 +1172,8 @@ primary
         '.' 'class'
     |   'void' '.' 'class'
     ;
-    
 
-superSuffix  
+superSuffix
     :   arguments
     |   '.' (typeArguments
         )?
@@ -1179,8 +1182,7 @@ superSuffix
         )?
     ;
 
-
-identifierSuffix 
+identifierSuffix
     :   ('[' ']'
         )+
         '.' 'class'
@@ -1194,8 +1196,7 @@ identifierSuffix
     |   innerCreator
     ;
 
-
-selector  
+selector
     :   '.' IDENTIFIER arguments?
     |   '.' nonWildcardTypeArguments IDENTIFIER arguments // fix to support "obj.method().<Object>method2()"
     |   '.' 'this'
@@ -1205,13 +1206,13 @@ selector
     |   '[' expression ']'
     ;
 
-creator 
-    :   'new' nonWildcardTypeArguments classOrInterfaceType classCreatorRest
-    |   'new' classOrInterfaceType classCreatorRest
+creator
+    :   'new' nonWildcardTypeArguments classOrInterfaceTypeWithDiamond classCreatorRest
+    |   'new' classOrInterfaceTypeWithDiamond classCreatorRest
     |   arrayCreator
     ;
 
-arrayCreator 
+arrayCreator
     :   'new' createdName
         '[' ']'
         ('[' ']'
@@ -1228,12 +1229,12 @@ arrayCreator
         )*
     ;
 
-variableInitializer 
+variableInitializer
     :   arrayInitializer
     |   expression
     ;
 
-arrayInitializer 
+arrayInitializer
     :   '{' 
             (variableInitializer
                 (',' variableInitializer
@@ -1244,14 +1245,14 @@ arrayInitializer
     ;
 
 
-createdName 
-    :   classOrInterfaceType
+createdName
+    :   classOrInterfaceTypeWithDiamond
     |   primitiveType
     ;
 
-innerCreator  
+innerCreator
     :   '.' 'new'
-        (nonWildcardTypeArguments
+        (nonWildcardTypeArgumentsOrDiamond
         )?
         IDENTIFIER
         (typeArguments
@@ -1259,17 +1260,24 @@ innerCreator
         classCreatorRest
     ;
 
-
-classCreatorRest 
+classCreatorRest
     :   arguments
         (classBody
         )?
     ;
 
+nonWildcardTypeArguments
+    :   '<' typeList '>'
+    ;
 
-nonWildcardTypeArguments 
-    :   '<' typeList
-        '>'
+typeArgumentsOrDiamond
+    :   '<' '>'
+    |   typeArguments
+    ;
+
+nonWildcardTypeArgumentsOrDiamond
+    :   '<' '>'
+    |   nonWildcardTypeArguments
     ;
 
 arguments 
@@ -1380,46 +1388,137 @@ INTLITERAL
 fragment
 IntegerNumber
     :   '0' 
-    |   '1'..'9' ('0'..'9')*    
-    |   '0' ('0'..'7')+         
-    |   HexPrefix HexDigit+        
+    |   NonZeroDigit (Digits)?
+	|	NonZeroDigit Underscores Digits
+    |   OctalPrefix OctalDigits         
+    |   HexPrefix HexDigits
+	|	BinaryPrefix BinaryDigits        
     ;
+
+fragment
+NonZeroDigit
+	:	'1'..'9'
+	;
+
+fragment
+Digits
+	:	Digit
+	|	Digit (DigitOrUnderscore)* Digit
+	;
+
+fragment
+Digit
+	:	'0'
+	|	NonZeroDigit
+	;
+
+fragment
+DigitOrUnderscore
+	:	Digit
+	|	'_'
+	;
+
+fragment
+Underscores
+	:	'_'+
+	;
 
 fragment
 HexPrefix
     :   '0x' | '0X'
     ;
-        
+    
+fragment
+HexDigits
+	:	HexDigit
+	|	HexDigit (HexDigitOrUnderscore)* HexDigit
+	;	
+	    
 fragment
 HexDigit
     :   ('0'..'9'|'a'..'f'|'A'..'F')
     ;
 
 fragment
+HexDigitOrUnderscore
+	:	HexDigit
+	|	'_'
+	;
+
+fragment
+OctalPrefix
+	:	'0' OctalDigits
+	|	'0' Underscores OctalDigits
+	;
+
+fragment
+OctalDigits
+	:	OctalDigit
+	|	OctalDigit (OctalDigitOrUnderscore)* OctalDigit
+	;
+
+fragment
+OctalDigit
+	:	'0'..'7'
+	;
+
+fragment
+OctalDigitOrUnderscore
+	:	OctalDigit
+	|	'_'
+	;
+
+fragment
+BinaryPrefix
+	:	'0b' | '0B'
+	;
+
+fragment
+BinaryDigits
+	:	BinaryDigit
+	|	BinaryDigit (BinaryDigitOrUnderscore)* BinaryDigit
+	;
+
+fragment
+BinaryDigit
+	:	'0' | '1'
+	;
+
+fragment
+BinaryDigitOrUnderscore
+	:	BinaryDigit
+	|	'_'
+	;
+
+fragment
 LongSuffix
     :   'l' | 'L'
     ;
 
-
 fragment
 NonIntegerNumber
-    :   ('0' .. '9')+ '.' ('0' .. '9')* Exponent?  
-    |   '.' ( '0' .. '9' )+ Exponent?  
-    |   ('0' .. '9')+ Exponent  
-    |   ('0' .. '9')+ 
+    :   Digits '.' Digits? Exponent?  
+    |   '.' Digits Exponent?  
+    |   Digits Exponent  
+    |   Digits 
     |   
-        HexPrefix (HexDigit )* 
+        HexPrefix HexDigits
         (    () 
-        |    ('.' (HexDigit )* ) 
+        |    ('.' HexDigits? ) 
         ) 
         ( 'p' | 'P' ) 
         ( '+' | '-' )? 
-        ( '0' .. '9' )+
-        ;
+        Digits
+	|
+		HexPrefix '.' HexDigits
+		( 'p' | 'P' ) 
+        ( '+' | '-' )? 
+		Digits
+    ;
         
 fragment 
 Exponent    
-    :   ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ 
+    :   ( 'e' | 'E' ) ( '+' | '-' )? Digits
     ;
     
 fragment 
@@ -1503,7 +1602,11 @@ COMMENT
         (options {greedy=false;} : . )* 
         '*/'
             {
-                $channel=HIDDEN;
+                if(isJavaDoc==true){
+                    $channel=HIDDEN;
+                }else{
+                    $channel=HIDDEN;
+                }
             }
     ;
 

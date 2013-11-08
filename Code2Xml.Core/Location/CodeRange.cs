@@ -17,13 +17,11 @@
 #endregion
 
 using System;
-using System.CodeDom;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
-using Paraiba.Core;
 
 namespace Code2Xml.Core.Location {
 	/// <summary>
@@ -247,7 +245,8 @@ namespace Code2Xml.Core.Location {
 			return Tuple.Create(inclusiveStart, exclusiveEnd);
 		}
 
-		public static CodeRange ConvertFromIndicies(string code, ref int inclusiveStart, ref int exclusiveEnd) {
+		public static CodeRange ConvertFromIndicies(
+				string code, ref int inclusiveStart, ref int exclusiveEnd) {
 			var beforeCode = code.Substring(0, inclusiveStart);
 			var targetCode = code.Substring(inclusiveStart, exclusiveEnd - inclusiveStart);
 			var beforeCount = beforeCode.Count(ch => ch == '\n');
@@ -258,9 +257,11 @@ namespace Code2Xml.Core.Location {
 				headLineIndexOfTarget = -(beforeCode.Length - headLineIndexOfBefore);
 			}
 			return new CodeRange(
-					new CodeLocation(beforeCount + 1,
+					new CodeLocation(
+							beforeCount + 1,
 							beforeCode.Length - headLineIndexOfBefore),
-					new CodeLocation(beforeCount + afterCount + 1,
+					new CodeLocation(
+							beforeCount + afterCount + 1,
 							(targetCode.Length - 1) - headLineIndexOfTarget));
 		}
 
@@ -285,6 +286,38 @@ namespace Code2Xml.Core.Location {
 
 		public static CodeRange Locate(IEnumerable<XElement> elements) {
 			return LocatePrivate(elements.DescendantsAndSelf());
+		}
+
+		public static CodeLocation CalculateInclusiveEndLocation(CodeLocation startLocation, string text) {
+			var newLineCount = text.Count(ch => ch == '\n');
+			var lastNewLineIndex = text.LastIndexOf('\n');
+			var endLine = startLocation.Line + newLineCount;
+			var endPos = newLineCount == 0
+					? startLocation.Position + text.Length - 1
+					: text.Length - (lastNewLineIndex + 1) - 1;
+			if (endPos == -1) {
+				endLine--;
+				if (newLineCount - 1 <= 0) {
+					endPos = startLocation.Position + text.Length - 1;
+				} else {
+					var lastSecondNewLineIndex = text.Substring(0, lastNewLineIndex).LastIndexOf('\n');
+					endPos = lastNewLineIndex - lastSecondNewLineIndex - 1;
+				}
+			}
+			return new CodeLocation(endLine, endPos);
+		}
+
+		public static XElement SetLocationAttributes(XElement element, CodeLocation startLocation) {
+			var endLocation = CalculateInclusiveEndLocation(startLocation, element.Value);
+			element.SetAttributeValue(
+					Code2XmlConstants.StartLineName, startLocation.Line);
+			element.SetAttributeValue(
+					Code2XmlConstants.StartPositionName, startLocation.Position);
+			element.SetAttributeValue(
+					Code2XmlConstants.EndLineName, endLocation.Line);
+			element.SetAttributeValue(
+					Code2XmlConstants.EndPositionName, endLocation.Position);
+			return element;
 		}
 
 		private static CodeRange LocatePrivate(IEnumerable<XElement> descendants) {

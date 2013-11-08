@@ -6,9 +6,6 @@ options {
     language=CSharp3;
 }
 
-@modifier { public }
-@ctorModifier { public }
-
 @lexer::namespace { Code2Xml.Languages.ANTLRv3.Processors.CSharp }
 @parser::namespace { Code2Xml.Languages.ANTLRv3.Processors.CSharp }
 

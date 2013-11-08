@@ -21,38 +21,38 @@ using Antlr.Runtime;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv3.Core;
 
-namespace Code2Xml.Languages.ANTLRv3.Processors.JavaScript {
+namespace Code2Xml.Languages.ANTLRv3.Processors.CSharp {
 	/// <summary>
-	/// Represents a JavaScript parser and a JavaScript code generator.
+	/// Represents a CSharp parser and a CSharp code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class JavaScriptProcessor : Antlr3Processor<JavaScriptParser> {
+	public class CSharpProcessorUsingAntlr3 : Antlr3Processor<csParser> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
 		public override string LanguageName {
-			get { return "JavaScript"; }
+			get { return "CSharp"; }
 		}
 
 		/// <summary>
 		/// Gets the language version.
 		/// </summary>
 		public override string LanguageVersion {
-			get { return ""; }
+			get { return "4"; }
 		}
 
-		public JavaScriptProcessor() : base(".js") {}
+		public CSharpProcessorUsingAntlr3() : base(".cs") {}
 
 		protected override ITokenSource CreateLexer(ICharStream stream) {
-			return new JavaScriptLexer(stream);
+			return new csLexer(stream);
 		}
 
-		protected override JavaScriptParser CreateParser(ITokenStream stream) {
-			return new JavaScriptParser(stream);
+		protected override csParser CreateParser(ITokenStream stream) {
+			return new csParser(stream);
 		}
 
-		protected override Antlr3AstNode Parse(JavaScriptParser parser) {
-			return parser.program();
+		protected override Antlr3AstNode Parse(csParser parser) {
+			return parser.compilation_unit();
 		}
 	}
 }

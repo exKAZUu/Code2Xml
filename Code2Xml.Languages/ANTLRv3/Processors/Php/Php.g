@@ -94,9 +94,6 @@ tokens{
     Method;
 }
 
-@modifier { public }
-@ctorModifier { public }
-
 @lexer::namespace { Code2Xml.Languages.ANTLRv3.Processors.Php }
 @parser::namespace { Code2Xml.Languages.ANTLRv3.Processors.Php }
 

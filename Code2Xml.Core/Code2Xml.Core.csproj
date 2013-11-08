@@ -129,7 +129,7 @@
     <Compile Include="XmlToCodes\XmlToCode.cs" />
     <Compile Include="XmlToCodes\DefaultXmlToCode.cs" />
     <Compile Include="XmlToCodes\ExternalXmlToCode.cs" />
-    <Compile Include="Plugin\PluginManager.cs" />
+    <Compile Include="Code2XmlInstances.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Processors\ExternalProgramUtils.cs" />
   </ItemGroup>

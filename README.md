@@ -10,3 +10,9 @@ http://research.microsoft.com/en-us/projects/contracts/
 1. Right click the solution icon in the Solution Explorer.
 2. Click 'Enable NuGet Package Restore'.
 3. Build the solution.
+
+# How to use
+    var code = @"class Klass { List<String> l = new ArrayList<>(); }";
+    var processor = new JavaProcessor();
+    var xml = processor.GenerateXml(code, true);
+    Console.WriteLine(xml);

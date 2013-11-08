@@ -57,6 +57,7 @@ namespace Code2Xml.Tools.AntlrHelper {
 			}
 			using (var writer = new StreamWriter(path, false, XEncoding.SJIS)) {
 				writer.WriteLine("using Code2Xml.Languages.ANTLRv3.Core;");
+				writer.WriteLine("using System;");
 				writer.Write(code);
 			}
 		}

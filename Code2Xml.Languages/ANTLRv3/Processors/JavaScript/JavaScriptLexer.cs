@@ -9,7 +9,7 @@ using Code2Xml.Languages.ANTLRv3.Core;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g 2013-10-10 16:37:47
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g 2013-11-07 21:37:36
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -160,7 +160,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 		OnCreated();
 	}
-	public override string GrammarFileName { get { return "C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g"; } }
+	public override string GrammarFileName { get { return "C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g"; } }
 
 
 	partial void OnCreated();
@@ -181,9 +181,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = FALSE;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:9:7: ( 'false' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:9:7: ( 'false' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:9:9: 'false'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:9:9: 'false'
 			{
 			DebugLocation(9, 9);
 			Match("false"); if (state.failed) return;
@@ -217,9 +217,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = NULL;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:10:6: ( 'null' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:10:6: ( 'null' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:10:8: 'null'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:10:8: 'null'
 			{
 			DebugLocation(10, 8);
 			Match("null"); if (state.failed) return;
@@ -253,9 +253,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = RBRACE;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:11:8: ( '}' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:11:8: ( '}' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:11:10: '}'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:11:10: '}'
 			{
 			DebugLocation(11, 10);
 			Match('}'); if (state.failed) return;
@@ -288,9 +288,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = RBRACK;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:12:8: ( ']' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:12:8: ( ']' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:12:10: ']'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:12:10: ']'
 			{
 			DebugLocation(12, 10);
 			Match(']'); if (state.failed) return;
@@ -323,9 +323,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = RPAREN;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:13:8: ( ')' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:13:8: ( ')' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:13:10: ')'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:13:10: ')'
 			{
 			DebugLocation(13, 10);
 			Match(')'); if (state.failed) return;
@@ -358,9 +358,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = THIS;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:14:6: ( 'this' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:14:6: ( 'this' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:14:8: 'this'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:14:8: 'this'
 			{
 			DebugLocation(14, 8);
 			Match("this"); if (state.failed) return;
@@ -394,9 +394,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = TRUE;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:15:6: ( 'true' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:15:6: ( 'true' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:15:8: 'true'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:15:8: 'true'
 			{
 			DebugLocation(15, 8);
 			Match("true"); if (state.failed) return;
@@ -430,9 +430,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__43;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:16:7: ( '!' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:16:7: ( '!' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:16:9: '!'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:16:9: '!'
 			{
 			DebugLocation(16, 9);
 			Match('!'); if (state.failed) return;
@@ -465,9 +465,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__44;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:17:7: ( '!=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:17:7: ( '!=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:17:9: '!='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:17:9: '!='
 			{
 			DebugLocation(17, 9);
 			Match("!="); if (state.failed) return;
@@ -501,9 +501,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__45;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:18:7: ( '!==' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:18:7: ( '!==' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:18:9: '!=='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:18:9: '!=='
 			{
 			DebugLocation(18, 9);
 			Match("!=="); if (state.failed) return;
@@ -537,9 +537,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__46;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:19:7: ( '%' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:19:7: ( '%' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:19:9: '%'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:19:9: '%'
 			{
 			DebugLocation(19, 9);
 			Match('%'); if (state.failed) return;
@@ -572,9 +572,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__47;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:20:7: ( '%=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:20:7: ( '%=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:20:9: '%='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:20:9: '%='
 			{
 			DebugLocation(20, 9);
 			Match("%="); if (state.failed) return;
@@ -608,9 +608,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__48;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:21:7: ( '&&' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:21:7: ( '&&' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:21:9: '&&'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:21:9: '&&'
 			{
 			DebugLocation(21, 9);
 			Match("&&"); if (state.failed) return;
@@ -644,9 +644,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__49;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:22:7: ( '&' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:22:7: ( '&' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:22:9: '&'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:22:9: '&'
 			{
 			DebugLocation(22, 9);
 			Match('&'); if (state.failed) return;
@@ -679,9 +679,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__50;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:23:7: ( '&=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:23:7: ( '&=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:23:9: '&='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:23:9: '&='
 			{
 			DebugLocation(23, 9);
 			Match("&="); if (state.failed) return;
@@ -715,9 +715,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__51;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:24:7: ( '(' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:24:7: ( '(' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:24:9: '('
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:24:9: '('
 			{
 			DebugLocation(24, 9);
 			Match('('); if (state.failed) return;
@@ -750,9 +750,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__52;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:25:7: ( '*' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:25:7: ( '*' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:25:9: '*'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:25:9: '*'
 			{
 			DebugLocation(25, 9);
 			Match('*'); if (state.failed) return;
@@ -785,9 +785,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__53;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:26:7: ( '*=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:26:7: ( '*=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:26:9: '*='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:26:9: '*='
 			{
 			DebugLocation(26, 9);
 			Match("*="); if (state.failed) return;
@@ -821,9 +821,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__54;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:27:7: ( '+' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:27:7: ( '+' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:27:9: '+'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:27:9: '+'
 			{
 			DebugLocation(27, 9);
 			Match('+'); if (state.failed) return;
@@ -856,9 +856,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__55;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:28:7: ( '++' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:28:7: ( '++' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:28:9: '++'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:28:9: '++'
 			{
 			DebugLocation(28, 9);
 			Match("++"); if (state.failed) return;
@@ -892,9 +892,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__56;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:29:7: ( '+=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:29:7: ( '+=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:29:9: '+='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:29:9: '+='
 			{
 			DebugLocation(29, 9);
 			Match("+="); if (state.failed) return;
@@ -928,9 +928,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__57;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:30:7: ( ',' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:30:7: ( ',' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:30:9: ','
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:30:9: ','
 			{
 			DebugLocation(30, 9);
 			Match(','); if (state.failed) return;
@@ -963,9 +963,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__58;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:31:7: ( '-' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:31:7: ( '-' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:31:9: '-'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:31:9: '-'
 			{
 			DebugLocation(31, 9);
 			Match('-'); if (state.failed) return;
@@ -998,9 +998,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__59;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:32:7: ( '--' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:32:7: ( '--' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:32:9: '--'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:32:9: '--'
 			{
 			DebugLocation(32, 9);
 			Match("--"); if (state.failed) return;
@@ -1034,9 +1034,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__60;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:33:7: ( '-=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:33:7: ( '-=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:33:9: '-='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:33:9: '-='
 			{
 			DebugLocation(33, 9);
 			Match("-="); if (state.failed) return;
@@ -1070,9 +1070,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__61;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:34:7: ( '.' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:34:7: ( '.' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:34:9: '.'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:34:9: '.'
 			{
 			DebugLocation(34, 9);
 			Match('.'); if (state.failed) return;
@@ -1105,9 +1105,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__62;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:35:7: ( '/' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:35:7: ( '/' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:35:9: '/'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:35:9: '/'
 			{
 			DebugLocation(35, 9);
 			Match('/'); if (state.failed) return;
@@ -1140,9 +1140,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__63;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:36:7: ( '/=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:36:7: ( '/=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:36:9: '/='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:36:9: '/='
 			{
 			DebugLocation(36, 9);
 			Match("/="); if (state.failed) return;
@@ -1176,9 +1176,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__64;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:37:7: ( ':' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:37:7: ( ':' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:37:9: ':'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:37:9: ':'
 			{
 			DebugLocation(37, 9);
 			Match(':'); if (state.failed) return;
@@ -1211,9 +1211,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__65;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:38:7: ( ';' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:38:7: ( ';' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:38:9: ';'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:38:9: ';'
 			{
 			DebugLocation(38, 9);
 			Match(';'); if (state.failed) return;
@@ -1246,9 +1246,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__66;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:39:7: ( '<' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:39:7: ( '<' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:39:9: '<'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:39:9: '<'
 			{
 			DebugLocation(39, 9);
 			Match('<'); if (state.failed) return;
@@ -1281,9 +1281,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__67;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:40:7: ( '<<' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:40:7: ( '<<' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:40:9: '<<'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:40:9: '<<'
 			{
 			DebugLocation(40, 9);
 			Match("<<"); if (state.failed) return;
@@ -1317,9 +1317,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__68;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:41:7: ( '<<=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:41:7: ( '<<=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:41:9: '<<='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:41:9: '<<='
 			{
 			DebugLocation(41, 9);
 			Match("<<="); if (state.failed) return;
@@ -1353,9 +1353,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__69;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:42:7: ( '<=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:42:7: ( '<=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:42:9: '<='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:42:9: '<='
 			{
 			DebugLocation(42, 9);
 			Match("<="); if (state.failed) return;
@@ -1389,9 +1389,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__70;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:43:7: ( '=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:43:7: ( '=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:43:9: '='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:43:9: '='
 			{
 			DebugLocation(43, 9);
 			Match('='); if (state.failed) return;
@@ -1424,9 +1424,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__71;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:44:7: ( '==' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:44:7: ( '==' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:44:9: '=='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:44:9: '=='
 			{
 			DebugLocation(44, 9);
 			Match("=="); if (state.failed) return;
@@ -1460,9 +1460,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__72;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:45:7: ( '===' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:45:7: ( '===' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:45:9: '==='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:45:9: '==='
 			{
 			DebugLocation(45, 9);
 			Match("==="); if (state.failed) return;
@@ -1496,9 +1496,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__73;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:46:7: ( '>' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:46:7: ( '>' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:46:9: '>'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:46:9: '>'
 			{
 			DebugLocation(46, 9);
 			Match('>'); if (state.failed) return;
@@ -1531,9 +1531,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__74;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:47:7: ( '>=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:47:7: ( '>=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:47:9: '>='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:47:9: '>='
 			{
 			DebugLocation(47, 9);
 			Match(">="); if (state.failed) return;
@@ -1567,9 +1567,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__75;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:48:7: ( '>>' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:48:7: ( '>>' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:48:9: '>>'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:48:9: '>>'
 			{
 			DebugLocation(48, 9);
 			Match(">>"); if (state.failed) return;
@@ -1603,9 +1603,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__76;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:49:7: ( '>>=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:49:7: ( '>>=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:49:9: '>>='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:49:9: '>>='
 			{
 			DebugLocation(49, 9);
 			Match(">>="); if (state.failed) return;
@@ -1639,9 +1639,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__77;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:50:7: ( '>>>' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:50:7: ( '>>>' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:50:9: '>>>'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:50:9: '>>>'
 			{
 			DebugLocation(50, 9);
 			Match(">>>"); if (state.failed) return;
@@ -1675,9 +1675,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__78;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:51:7: ( '>>>=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:51:7: ( '>>>=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:51:9: '>>>='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:51:9: '>>>='
 			{
 			DebugLocation(51, 9);
 			Match(">>>="); if (state.failed) return;
@@ -1711,9 +1711,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__79;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:52:7: ( '?' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:52:7: ( '?' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:52:9: '?'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:52:9: '?'
 			{
 			DebugLocation(52, 9);
 			Match('?'); if (state.failed) return;
@@ -1746,9 +1746,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__80;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:53:7: ( '[' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:53:7: ( '[' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:53:9: '['
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:53:9: '['
 			{
 			DebugLocation(53, 9);
 			Match('['); if (state.failed) return;
@@ -1781,9 +1781,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__81;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:54:7: ( '^' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:54:7: ( '^' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:54:9: '^'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:54:9: '^'
 			{
 			DebugLocation(54, 9);
 			Match('^'); if (state.failed) return;
@@ -1816,9 +1816,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__82;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:55:7: ( '^=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:55:7: ( '^=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:55:9: '^='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:55:9: '^='
 			{
 			DebugLocation(55, 9);
 			Match("^="); if (state.failed) return;
@@ -1852,9 +1852,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__83;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:56:7: ( 'break' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:56:7: ( 'break' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:56:9: 'break'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:56:9: 'break'
 			{
 			DebugLocation(56, 9);
 			Match("break"); if (state.failed) return;
@@ -1888,9 +1888,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__84;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:57:7: ( 'case' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:57:7: ( 'case' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:57:9: 'case'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:57:9: 'case'
 			{
 			DebugLocation(57, 9);
 			Match("case"); if (state.failed) return;
@@ -1924,9 +1924,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__85;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:58:7: ( 'catch' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:58:7: ( 'catch' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:58:9: 'catch'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:58:9: 'catch'
 			{
 			DebugLocation(58, 9);
 			Match("catch"); if (state.failed) return;
@@ -1960,9 +1960,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__86;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:59:7: ( 'continue' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:59:7: ( 'continue' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:59:9: 'continue'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:59:9: 'continue'
 			{
 			DebugLocation(59, 9);
 			Match("continue"); if (state.failed) return;
@@ -1996,9 +1996,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__87;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:60:7: ( 'default' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:60:7: ( 'default' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:60:9: 'default'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:60:9: 'default'
 			{
 			DebugLocation(60, 9);
 			Match("default"); if (state.failed) return;
@@ -2032,9 +2032,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__88;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:61:7: ( 'delete' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:61:7: ( 'delete' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:61:9: 'delete'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:61:9: 'delete'
 			{
 			DebugLocation(61, 9);
 			Match("delete"); if (state.failed) return;
@@ -2068,9 +2068,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__89;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:62:7: ( 'do' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:62:7: ( 'do' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:62:9: 'do'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:62:9: 'do'
 			{
 			DebugLocation(62, 9);
 			Match("do"); if (state.failed) return;
@@ -2104,9 +2104,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__90;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:63:7: ( 'else' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:63:7: ( 'else' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:63:9: 'else'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:63:9: 'else'
 			{
 			DebugLocation(63, 9);
 			Match("else"); if (state.failed) return;
@@ -2140,9 +2140,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__91;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:64:7: ( 'finally' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:64:7: ( 'finally' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:64:9: 'finally'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:64:9: 'finally'
 			{
 			DebugLocation(64, 9);
 			Match("finally"); if (state.failed) return;
@@ -2176,9 +2176,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__92;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:65:7: ( 'for' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:65:7: ( 'for' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:65:9: 'for'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:65:9: 'for'
 			{
 			DebugLocation(65, 9);
 			Match("for"); if (state.failed) return;
@@ -2212,9 +2212,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__93;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:66:7: ( 'function' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:66:7: ( 'function' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:66:9: 'function'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:66:9: 'function'
 			{
 			DebugLocation(66, 9);
 			Match("function"); if (state.failed) return;
@@ -2248,9 +2248,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__94;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:67:7: ( 'if' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:67:7: ( 'if' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:67:9: 'if'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:67:9: 'if'
 			{
 			DebugLocation(67, 9);
 			Match("if"); if (state.failed) return;
@@ -2284,9 +2284,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__95;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:68:7: ( 'in' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:68:7: ( 'in' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:68:9: 'in'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:68:9: 'in'
 			{
 			DebugLocation(68, 9);
 			Match("in"); if (state.failed) return;
@@ -2320,9 +2320,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__96;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:69:7: ( 'instanceof' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:69:7: ( 'instanceof' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:69:9: 'instanceof'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:69:9: 'instanceof'
 			{
 			DebugLocation(69, 9);
 			Match("instanceof"); if (state.failed) return;
@@ -2356,9 +2356,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__97;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:70:7: ( 'new' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:70:7: ( 'new' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:70:9: 'new'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:70:9: 'new'
 			{
 			DebugLocation(70, 9);
 			Match("new"); if (state.failed) return;
@@ -2392,9 +2392,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__98;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:71:7: ( 'return' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:71:7: ( 'return' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:71:9: 'return'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:71:9: 'return'
 			{
 			DebugLocation(71, 9);
 			Match("return"); if (state.failed) return;
@@ -2428,9 +2428,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__99;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:72:7: ( 'switch' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:72:7: ( 'switch' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:72:9: 'switch'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:72:9: 'switch'
 			{
 			DebugLocation(72, 9);
 			Match("switch"); if (state.failed) return;
@@ -2464,9 +2464,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__100;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:73:8: ( 'throw' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:73:8: ( 'throw' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:73:10: 'throw'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:73:10: 'throw'
 			{
 			DebugLocation(73, 10);
 			Match("throw"); if (state.failed) return;
@@ -2500,9 +2500,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__101;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:74:8: ( 'try' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:74:8: ( 'try' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:74:10: 'try'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:74:10: 'try'
 			{
 			DebugLocation(74, 10);
 			Match("try"); if (state.failed) return;
@@ -2536,9 +2536,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__102;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:75:8: ( 'typeof' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:75:8: ( 'typeof' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:75:10: 'typeof'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:75:10: 'typeof'
 			{
 			DebugLocation(75, 10);
 			Match("typeof"); if (state.failed) return;
@@ -2572,9 +2572,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__103;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:76:8: ( 'var' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:76:8: ( 'var' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:76:10: 'var'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:76:10: 'var'
 			{
 			DebugLocation(76, 10);
 			Match("var"); if (state.failed) return;
@@ -2608,9 +2608,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__104;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:77:8: ( 'void' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:77:8: ( 'void' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:77:10: 'void'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:77:10: 'void'
 			{
 			DebugLocation(77, 10);
 			Match("void"); if (state.failed) return;
@@ -2644,9 +2644,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__105;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:78:8: ( 'while' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:78:8: ( 'while' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:78:10: 'while'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:78:10: 'while'
 			{
 			DebugLocation(78, 10);
 			Match("while"); if (state.failed) return;
@@ -2680,9 +2680,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__106;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:79:8: ( 'with' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:79:8: ( 'with' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:79:10: 'with'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:79:10: 'with'
 			{
 			DebugLocation(79, 10);
 			Match("with"); if (state.failed) return;
@@ -2716,9 +2716,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__107;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:80:8: ( '{' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:80:8: ( '{' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:80:10: '{'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:80:10: '{'
 			{
 			DebugLocation(80, 10);
 			Match('{'); if (state.failed) return;
@@ -2751,9 +2751,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__108;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:81:8: ( '|' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:81:8: ( '|' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:81:10: '|'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:81:10: '|'
 			{
 			DebugLocation(81, 10);
 			Match('|'); if (state.failed) return;
@@ -2786,9 +2786,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__109;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:82:8: ( '|=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:82:8: ( '|=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:82:10: '|='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:82:10: '|='
 			{
 			DebugLocation(82, 10);
 			Match("|="); if (state.failed) return;
@@ -2822,9 +2822,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__110;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:83:8: ( '||' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:83:8: ( '||' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:83:10: '||'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:83:10: '||'
 			{
 			DebugLocation(83, 10);
 			Match("||"); if (state.failed) return;
@@ -2858,9 +2858,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__111;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:84:8: ( '~' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:84:8: ( '~' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:84:10: '~'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:84:10: '~'
 			{
 			DebugLocation(84, 10);
 			Match('~'); if (state.failed) return;
@@ -2893,7 +2893,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = StringLiteral;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:429:5: ( '\"' ( DoubleStringCharacter )* '\"' | '\\'' ( SingleStringCharacter )* '\\'' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:426:5: ( '\"' ( DoubleStringCharacter )* '\"' | '\\'' ( SingleStringCharacter )* '\\'' )
 			int alt3=2;
 			try { DebugEnterDecision(3, false);
 			int LA3_1 = input.LA(1);
@@ -2918,12 +2918,12 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:429:7: '\"' ( DoubleStringCharacter )* '\"'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:426:7: '\"' ( DoubleStringCharacter )* '\"'
 				{
-				DebugLocation(429, 7);
+				DebugLocation(426, 7);
 				Match('\"'); if (state.failed) return;
-				DebugLocation(429, 11);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:429:11: ( DoubleStringCharacter )*
+				DebugLocation(426, 11);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:426:11: ( DoubleStringCharacter )*
 				try { DebugEnterSubRule(1);
 				while (true)
 				{
@@ -2942,9 +2942,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:429:11: DoubleStringCharacter
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:426:11: DoubleStringCharacter
 						{
-						DebugLocation(429, 11);
+						DebugLocation(426, 11);
 						mDoubleStringCharacter(); if (state.failed) return;
 
 						}
@@ -2960,19 +2960,19 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(1); }
 
-				DebugLocation(429, 34);
+				DebugLocation(426, 34);
 				Match('\"'); if (state.failed) return;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:430:7: '\\'' ( SingleStringCharacter )* '\\''
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:427:7: '\\'' ( SingleStringCharacter )* '\\''
 				{
-				DebugLocation(430, 7);
+				DebugLocation(427, 7);
 				Match('\''); if (state.failed) return;
-				DebugLocation(430, 12);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:430:12: ( SingleStringCharacter )*
+				DebugLocation(427, 12);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:427:12: ( SingleStringCharacter )*
 				try { DebugEnterSubRule(2);
 				while (true)
 				{
@@ -2991,9 +2991,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:430:12: SingleStringCharacter
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:427:12: SingleStringCharacter
 						{
-						DebugLocation(430, 12);
+						DebugLocation(427, 12);
 						mSingleStringCharacter(); if (state.failed) return;
 
 						}
@@ -3009,7 +3009,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(2); }
 
-				DebugLocation(430, 35);
+				DebugLocation(427, 35);
 				Match('\''); if (state.failed) return;
 
 				}
@@ -3040,13 +3040,13 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("ContinuousLineCharacter", 78);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:434:5: ( '\\\\' LT )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:431:5: ( '\\\\' LT )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:434:7: '\\\\' LT
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:431:7: '\\\\' LT
 			{
-			DebugLocation(434, 7);
+			DebugLocation(431, 7);
 			Match('\\'); if (state.failed) return;
-			DebugLocation(434, 12);
+			DebugLocation(431, 12);
 			mLT(); if (state.failed) return;
 
 			}
@@ -3073,7 +3073,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("DoubleStringCharacter", 79);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:438:5: (~ ( '\"' | '\\\\' | LT ) | '\\\\' EscapeSequence | ContinuousLineCharacter )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:435:5: (~ ( '\"' | '\\\\' | LT ) | '\\\\' EscapeSequence | ContinuousLineCharacter )
 			int alt4=3;
 			try { DebugEnterDecision(4, false);
 			int LA4_1 = input.LA(1);
@@ -3114,9 +3114,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:438:7: ~ ( '\"' | '\\\\' | LT )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:435:7: ~ ( '\"' | '\\\\' | LT )
 				{
-				DebugLocation(438, 7);
+				DebugLocation(435, 7);
 				input.Consume();
 				state.failed=false;
 
@@ -3124,20 +3124,20 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:439:7: '\\\\' EscapeSequence
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:436:7: '\\\\' EscapeSequence
 				{
-				DebugLocation(439, 7);
+				DebugLocation(436, 7);
 				Match('\\'); if (state.failed) return;
-				DebugLocation(439, 12);
+				DebugLocation(436, 12);
 				mEscapeSequence(); if (state.failed) return;
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:440:7: ContinuousLineCharacter
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:437:7: ContinuousLineCharacter
 				{
-				DebugLocation(440, 7);
+				DebugLocation(437, 7);
 				mContinuousLineCharacter(); if (state.failed) return;
 
 				}
@@ -3166,7 +3166,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("SingleStringCharacter", 80);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:444:5: (~ ( '\\'' | '\\\\' | LT ) | '\\\\' EscapeSequence | ContinuousLineCharacter )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:441:5: (~ ( '\\'' | '\\\\' | LT ) | '\\\\' EscapeSequence | ContinuousLineCharacter )
 			int alt5=3;
 			try { DebugEnterDecision(5, false);
 			int LA5_1 = input.LA(1);
@@ -3207,9 +3207,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:444:7: ~ ( '\\'' | '\\\\' | LT )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:441:7: ~ ( '\\'' | '\\\\' | LT )
 				{
-				DebugLocation(444, 7);
+				DebugLocation(441, 7);
 				input.Consume();
 				state.failed=false;
 
@@ -3217,20 +3217,20 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:445:7: '\\\\' EscapeSequence
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:442:7: '\\\\' EscapeSequence
 				{
-				DebugLocation(445, 7);
+				DebugLocation(442, 7);
 				Match('\\'); if (state.failed) return;
-				DebugLocation(445, 12);
+				DebugLocation(442, 12);
 				mEscapeSequence(); if (state.failed) return;
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:446:7: ContinuousLineCharacter
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:443:7: ContinuousLineCharacter
 				{
-				DebugLocation(446, 7);
+				DebugLocation(443, 7);
 				mContinuousLineCharacter(); if (state.failed) return;
 
 				}
@@ -3259,7 +3259,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("EscapeSequence", 81);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:450:5: ( CharacterEscapeSequence | '0' | HexEscapeSequence | UnicodeEscapeSequence )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:447:5: ( CharacterEscapeSequence | '0' | HexEscapeSequence | UnicodeEscapeSequence )
 			int alt6=4;
 			try { DebugEnterDecision(6, false);
 			int LA6_1 = input.LA(1);
@@ -3292,36 +3292,36 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:450:7: CharacterEscapeSequence
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:447:7: CharacterEscapeSequence
 				{
-				DebugLocation(450, 7);
+				DebugLocation(447, 7);
 				mCharacterEscapeSequence(); if (state.failed) return;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:451:7: '0'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:448:7: '0'
 				{
-				DebugLocation(451, 7);
+				DebugLocation(448, 7);
 				Match('0'); if (state.failed) return;
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:452:7: HexEscapeSequence
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:449:7: HexEscapeSequence
 				{
-				DebugLocation(452, 7);
+				DebugLocation(449, 7);
 				mHexEscapeSequence(); if (state.failed) return;
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:453:7: UnicodeEscapeSequence
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:450:7: UnicodeEscapeSequence
 				{
-				DebugLocation(453, 7);
+				DebugLocation(450, 7);
 				mUnicodeEscapeSequence(); if (state.failed) return;
 
 				}
@@ -3350,11 +3350,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("CharacterEscapeSequence", 82);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:457:5: ( SingleEscapeCharacter | NonEscapeCharacter )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:454:5: ( SingleEscapeCharacter | NonEscapeCharacter )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 			{
-			DebugLocation(457, 5);
+			DebugLocation(454, 5);
 			if ((input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='/')||(input.LA(1)>=':' && input.LA(1)<='t')||(input.LA(1)>='v' && input.LA(1)<='w')||(input.LA(1)>='y' && input.LA(1)<='\u2027')||(input.LA(1)>='\u202A' && input.LA(1)<='\uFFFF'))
 			{
 				input.Consume();
@@ -3394,11 +3394,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("NonEscapeCharacter", 83);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:462:5: (~ ( EscapeCharacter | LT ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:459:5: (~ ( EscapeCharacter | LT ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 			{
-			DebugLocation(462, 5);
+			DebugLocation(459, 5);
 			if ((input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='/')||(input.LA(1)>=':' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='a')||(input.LA(1)>='c' && input.LA(1)<='e')||(input.LA(1)>='g' && input.LA(1)<='m')||(input.LA(1)>='o' && input.LA(1)<='q')||input.LA(1)=='s'||input.LA(1)=='w'||(input.LA(1)>='y' && input.LA(1)<='\u2027')||(input.LA(1)>='\u202A' && input.LA(1)<='\uFFFF'))
 			{
 				input.Consume();
@@ -3438,11 +3438,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("SingleEscapeCharacter", 84);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:466:5: ( '\\'' | '\"' | '\\\\' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:463:5: ( '\\'' | '\"' | '\\\\' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 			{
-			DebugLocation(466, 5);
+			DebugLocation(463, 5);
 			if (input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t'||input.LA(1)=='v')
 			{
 				input.Consume();
@@ -3482,11 +3482,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("EscapeCharacter", 85);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:470:5: ( SingleEscapeCharacter | DecimalDigit | 'x' | 'u' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:467:5: ( SingleEscapeCharacter | DecimalDigit | 'x' | 'u' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 			{
-			DebugLocation(470, 5);
+			DebugLocation(467, 5);
 			if (input.LA(1)=='\"'||input.LA(1)=='\''||(input.LA(1)>='0' && input.LA(1)<='9')||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='v')||input.LA(1)=='x')
 			{
 				input.Consume();
@@ -3526,15 +3526,15 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("HexEscapeSequence", 86);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:477:5: ( 'x' HexDigit HexDigit )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:474:5: ( 'x' HexDigit HexDigit )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:477:7: 'x' HexDigit HexDigit
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:474:7: 'x' HexDigit HexDigit
 			{
-			DebugLocation(477, 7);
+			DebugLocation(474, 7);
 			Match('x'); if (state.failed) return;
-			DebugLocation(477, 11);
+			DebugLocation(474, 11);
 			mHexDigit(); if (state.failed) return;
-			DebugLocation(477, 20);
+			DebugLocation(474, 20);
 			mHexDigit(); if (state.failed) return;
 
 			}
@@ -3561,19 +3561,19 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("UnicodeEscapeSequence", 87);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:481:5: ( 'u' HexDigit HexDigit HexDigit HexDigit )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:478:5: ( 'u' HexDigit HexDigit HexDigit HexDigit )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:481:7: 'u' HexDigit HexDigit HexDigit HexDigit
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:478:7: 'u' HexDigit HexDigit HexDigit HexDigit
 			{
-			DebugLocation(481, 7);
+			DebugLocation(478, 7);
 			Match('u'); if (state.failed) return;
-			DebugLocation(481, 11);
+			DebugLocation(478, 11);
 			mHexDigit(); if (state.failed) return;
-			DebugLocation(481, 20);
+			DebugLocation(478, 20);
 			mHexDigit(); if (state.failed) return;
-			DebugLocation(481, 29);
+			DebugLocation(478, 29);
 			mHexDigit(); if (state.failed) return;
-			DebugLocation(481, 38);
+			DebugLocation(478, 38);
 			mHexDigit(); if (state.failed) return;
 
 			}
@@ -3602,7 +3602,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = NumericLiteral;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:485:5: ( DecimalLiteral | HexIntegerLiteral )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:482:5: ( DecimalLiteral | HexIntegerLiteral )
 			int alt7=2;
 			try { DebugEnterDecision(7, false);
 			int LA7_1 = input.LA(1);
@@ -3636,18 +3636,18 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:485:7: DecimalLiteral
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:482:7: DecimalLiteral
 				{
-				DebugLocation(485, 7);
+				DebugLocation(482, 7);
 				mDecimalLiteral(); if (state.failed) return;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:486:7: HexIntegerLiteral
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:483:7: HexIntegerLiteral
 				{
-				DebugLocation(486, 7);
+				DebugLocation(483, 7);
 				mHexIntegerLiteral(); if (state.failed) return;
 
 				}
@@ -3678,13 +3678,13 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("HexIntegerLiteral", 89);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:490:5: ( '0' ( 'x' | 'X' ) ( HexDigit )+ )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:487:5: ( '0' ( 'x' | 'X' ) ( HexDigit )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:490:7: '0' ( 'x' | 'X' ) ( HexDigit )+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:487:7: '0' ( 'x' | 'X' ) ( HexDigit )+
 			{
-			DebugLocation(490, 7);
+			DebugLocation(487, 7);
 			Match('0'); if (state.failed) return;
-			DebugLocation(490, 11);
+			DebugLocation(487, 11);
 			if (input.LA(1)=='X'||input.LA(1)=='x')
 			{
 				input.Consume();
@@ -3699,8 +3699,8 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(490, 23);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:490:23: ( HexDigit )+
+			DebugLocation(487, 23);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:487:23: ( HexDigit )+
 			int cnt8=0;
 			try { DebugEnterSubRule(8);
 			while (true)
@@ -3720,9 +3720,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 					{
-					DebugLocation(490, 23);
+					DebugLocation(487, 23);
 					input.Consume();
 					state.failed=false;
 
@@ -3770,11 +3770,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("HexDigit", 90);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:494:5: ( DecimalDigit | ( 'a' .. 'f' ) | ( 'A' .. 'F' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:491:5: ( DecimalDigit | ( 'a' .. 'f' ) | ( 'A' .. 'F' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 			{
-			DebugLocation(494, 5);
+			DebugLocation(491, 5);
 			if ((input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f'))
 			{
 				input.Consume();
@@ -3814,7 +3814,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("DecimalLiteral", 91);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:498:5: ( ( DecimalDigit )+ '.' ( DecimalDigit )* ( ExponentPart )? | ( '.' )? ( DecimalDigit )+ ( ExponentPart )? )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:495:5: ( ( DecimalDigit )+ '.' ( DecimalDigit )* ( ExponentPart )? | ( '.' )? ( DecimalDigit )+ ( ExponentPart )? )
 			int alt15=2;
 			try { DebugEnterDecision(15, false);
 			try
@@ -3831,10 +3831,10 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:498:7: ( DecimalDigit )+ '.' ( DecimalDigit )* ( ExponentPart )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:495:7: ( DecimalDigit )+ '.' ( DecimalDigit )* ( ExponentPart )?
 				{
-				DebugLocation(498, 7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:498:7: ( DecimalDigit )+
+				DebugLocation(495, 7);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:495:7: ( DecimalDigit )+
 				int cnt9=0;
 				try { DebugEnterSubRule(9);
 				while (true)
@@ -3854,9 +3854,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 						{
-						DebugLocation(498, 7);
+						DebugLocation(495, 7);
 						input.Consume();
 						state.failed=false;
 
@@ -3879,10 +3879,10 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(9); }
 
-				DebugLocation(498, 21);
+				DebugLocation(495, 21);
 				Match('.'); if (state.failed) return;
-				DebugLocation(498, 25);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:498:25: ( DecimalDigit )*
+				DebugLocation(495, 25);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:495:25: ( DecimalDigit )*
 				try { DebugEnterSubRule(10);
 				while (true)
 				{
@@ -3901,9 +3901,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 						{
-						DebugLocation(498, 25);
+						DebugLocation(495, 25);
 						input.Consume();
 						state.failed=false;
 
@@ -3920,8 +3920,8 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(10); }
 
-				DebugLocation(498, 39);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:498:39: ( ExponentPart )?
+				DebugLocation(495, 39);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:495:39: ( ExponentPart )?
 				int alt11=2;
 				try { DebugEnterSubRule(11);
 				try { DebugEnterDecision(11, false);
@@ -3936,9 +3936,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:498:39: ExponentPart
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:495:39: ExponentPart
 					{
-					DebugLocation(498, 39);
+					DebugLocation(495, 39);
 					mExponentPart(); if (state.failed) return;
 
 					}
@@ -3952,10 +3952,10 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:499:7: ( '.' )? ( DecimalDigit )+ ( ExponentPart )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:496:7: ( '.' )? ( DecimalDigit )+ ( ExponentPart )?
 				{
-				DebugLocation(499, 7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:499:7: ( '.' )?
+				DebugLocation(496, 7);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:496:7: ( '.' )?
 				int alt12=2;
 				try { DebugEnterSubRule(12);
 				try { DebugEnterDecision(12, false);
@@ -3970,9 +3970,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:499:7: '.'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:496:7: '.'
 					{
-					DebugLocation(499, 7);
+					DebugLocation(496, 7);
 					Match('.'); if (state.failed) return;
 
 					}
@@ -3981,8 +3981,8 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				}
 				} finally { DebugExitSubRule(12); }
 
-				DebugLocation(499, 12);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:499:12: ( DecimalDigit )+
+				DebugLocation(496, 12);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:496:12: ( DecimalDigit )+
 				int cnt13=0;
 				try { DebugEnterSubRule(13);
 				while (true)
@@ -4002,9 +4002,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 						{
-						DebugLocation(499, 12);
+						DebugLocation(496, 12);
 						input.Consume();
 						state.failed=false;
 
@@ -4027,8 +4027,8 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(13); }
 
-				DebugLocation(499, 26);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:499:26: ( ExponentPart )?
+				DebugLocation(496, 26);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:496:26: ( ExponentPart )?
 				int alt14=2;
 				try { DebugEnterSubRule(14);
 				try { DebugEnterDecision(14, false);
@@ -4043,9 +4043,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:499:26: ExponentPart
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:496:26: ExponentPart
 					{
-					DebugLocation(499, 26);
+					DebugLocation(496, 26);
 					mExponentPart(); if (state.failed) return;
 
 					}
@@ -4081,11 +4081,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("DecimalDigit", 92);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:503:5: ( ( '0' .. '9' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:500:5: ( ( '0' .. '9' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 			{
-			DebugLocation(503, 5);
+			DebugLocation(500, 5);
 			if ((input.LA(1)>='0' && input.LA(1)<='9'))
 			{
 				input.Consume();
@@ -4125,11 +4125,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("ExponentPart", 93);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:507:5: ( ( 'e' | 'E' ) ( '+' | '-' )? ( DecimalDigit )+ )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:504:5: ( ( 'e' | 'E' ) ( '+' | '-' )? ( DecimalDigit )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:507:7: ( 'e' | 'E' ) ( '+' | '-' )? ( DecimalDigit )+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:504:7: ( 'e' | 'E' ) ( '+' | '-' )? ( DecimalDigit )+
 			{
-			DebugLocation(507, 7);
+			DebugLocation(504, 7);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -4144,8 +4144,8 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(507, 19);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:507:19: ( '+' | '-' )?
+			DebugLocation(504, 19);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:504:19: ( '+' | '-' )?
 			int alt16=2;
 			try { DebugEnterSubRule(16);
 			try { DebugEnterDecision(16, false);
@@ -4160,9 +4160,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 				{
-				DebugLocation(507, 19);
+				DebugLocation(504, 19);
 				input.Consume();
 				state.failed=false;
 
@@ -4172,8 +4172,8 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(16); }
 
-			DebugLocation(507, 33);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:507:33: ( DecimalDigit )+
+			DebugLocation(504, 33);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:504:33: ( DecimalDigit )+
 			int cnt17=0;
 			try { DebugEnterSubRule(17);
 			while (true)
@@ -4193,9 +4193,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 					{
-					DebugLocation(507, 33);
+					DebugLocation(504, 33);
 					input.Consume();
 					state.failed=false;
 
@@ -4245,14 +4245,14 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Identifier;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:511:5: ( IdentifierStart ( IdentifierPart )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:508:5: ( IdentifierStart ( IdentifierPart )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:511:7: IdentifierStart ( IdentifierPart )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:508:7: IdentifierStart ( IdentifierPart )*
 			{
-			DebugLocation(511, 7);
+			DebugLocation(508, 7);
 			mIdentifierStart(); if (state.failed) return;
-			DebugLocation(511, 23);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:511:23: ( IdentifierPart )*
+			DebugLocation(508, 23);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:508:23: ( IdentifierPart )*
 			try { DebugEnterSubRule(18);
 			while (true)
 			{
@@ -4271,9 +4271,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:511:23: IdentifierPart
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:508:23: IdentifierPart
 					{
-					DebugLocation(511, 23);
+					DebugLocation(508, 23);
 					mIdentifierPart(); if (state.failed) return;
 
 					}
@@ -4316,7 +4316,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("IdentifierStart", 95);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:515:5: ( UnicodeLetter | '$' | '_' | '\\\\' UnicodeEscapeSequence )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:512:5: ( UnicodeLetter | '$' | '_' | '\\\\' UnicodeEscapeSequence )
 			int alt19=4;
 			try { DebugEnterDecision(19, false);
 			int LA19_1 = input.LA(1);
@@ -4349,38 +4349,38 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:515:7: UnicodeLetter
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:512:7: UnicodeLetter
 				{
-				DebugLocation(515, 7);
+				DebugLocation(512, 7);
 				mUnicodeLetter(); if (state.failed) return;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:516:7: '$'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:513:7: '$'
 				{
-				DebugLocation(516, 7);
+				DebugLocation(513, 7);
 				Match('$'); if (state.failed) return;
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:517:7: '_'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:514:7: '_'
 				{
-				DebugLocation(517, 7);
+				DebugLocation(514, 7);
 				Match('_'); if (state.failed) return;
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:518:11: '\\\\' UnicodeEscapeSequence
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:515:11: '\\\\' UnicodeEscapeSequence
 				{
-				DebugLocation(518, 11);
+				DebugLocation(515, 11);
 				Match('\\'); if (state.failed) return;
-				DebugLocation(518, 16);
+				DebugLocation(515, 16);
 				mUnicodeEscapeSequence(); if (state.failed) return;
 
 				}
@@ -4409,7 +4409,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("IdentifierPart", 96);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:522:5: ( ( IdentifierStart )=> IdentifierStart | UnicodeDigit | UnicodeConnectorPunctuation )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:519:5: ( ( IdentifierStart )=> IdentifierStart | UnicodeDigit | UnicodeConnectorPunctuation )
 			int alt20=3;
 			try { DebugEnterDecision(20, false);
 			int LA20_1 = input.LA(1);
@@ -4466,27 +4466,27 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:522:7: ( IdentifierStart )=> IdentifierStart
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:519:7: ( IdentifierStart )=> IdentifierStart
 				{
-				DebugLocation(522, 28);
+				DebugLocation(519, 28);
 				mIdentifierStart(); if (state.failed) return;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:523:7: UnicodeDigit
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:520:7: UnicodeDigit
 				{
-				DebugLocation(523, 7);
+				DebugLocation(520, 7);
 				mUnicodeDigit(); if (state.failed) return;
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:524:7: UnicodeConnectorPunctuation
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:521:7: UnicodeConnectorPunctuation
 				{
-				DebugLocation(524, 7);
+				DebugLocation(521, 7);
 				mUnicodeConnectorPunctuation(); if (state.failed) return;
 
 				}
@@ -4515,11 +4515,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("UnicodeLetter", 97);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:528:5: ( '\\u0041' .. '\\u005A' | '\\u0061' .. '\\u007A' | '\\u00AA' | '\\u00B5' | '\\u00BA' | '\\u00C0' .. '\\u00D6' | '\\u00D8' .. '\\u00F6' | '\\u00F8' .. '\\u021F' | '\\u0222' .. '\\u0233' | '\\u0250' .. '\\u02AD' | '\\u02B0' .. '\\u02B8' | '\\u02BB' .. '\\u02C1' | '\\u02D0' .. '\\u02D1' | '\\u02E0' .. '\\u02E4' | '\\u02EE' | '\\u037A' | '\\u0386' | '\\u0388' .. '\\u038A' | '\\u038C' | '\\u038E' .. '\\u03A1' | '\\u03A3' .. '\\u03CE' | '\\u03D0' .. '\\u03D7' | '\\u03DA' .. '\\u03F3' | '\\u0400' .. '\\u0481' | '\\u048C' .. '\\u04C4' | '\\u04C7' .. '\\u04C8' | '\\u04CB' .. '\\u04CC' | '\\u04D0' .. '\\u04F5' | '\\u04F8' .. '\\u04F9' | '\\u0531' .. '\\u0556' | '\\u0559' | '\\u0561' .. '\\u0587' | '\\u05D0' .. '\\u05EA' | '\\u05F0' .. '\\u05F2' | '\\u0621' .. '\\u063A' | '\\u0640' .. '\\u064A' | '\\u0671' .. '\\u06D3' | '\\u06D5' | '\\u06E5' .. '\\u06E6' | '\\u06FA' .. '\\u06FC' | '\\u0710' | '\\u0712' .. '\\u072C' | '\\u0780' .. '\\u07A5' | '\\u0905' .. '\\u0939' | '\\u093D' | '\\u0950' | '\\u0958' .. '\\u0961' | '\\u0985' .. '\\u098C' | '\\u098F' .. '\\u0990' | '\\u0993' .. '\\u09A8' | '\\u09AA' .. '\\u09B0' | '\\u09B2' | '\\u09B6' .. '\\u09B9' | '\\u09DC' .. '\\u09DD' | '\\u09DF' .. '\\u09E1' | '\\u09F0' .. '\\u09F1' | '\\u0A05' .. '\\u0A0A' | '\\u0A0F' .. '\\u0A10' | '\\u0A13' .. '\\u0A28' | '\\u0A2A' .. '\\u0A30' | '\\u0A32' .. '\\u0A33' | '\\u0A35' .. '\\u0A36' | '\\u0A38' .. '\\u0A39' | '\\u0A59' .. '\\u0A5C' | '\\u0A5E' | '\\u0A72' .. '\\u0A74' | '\\u0A85' .. '\\u0A8B' | '\\u0A8D' | '\\u0A8F' .. '\\u0A91' | '\\u0A93' .. '\\u0AA8' | '\\u0AAA' .. '\\u0AB0' | '\\u0AB2' .. '\\u0AB3' | '\\u0AB5' .. '\\u0AB9' | '\\u0ABD' | '\\u0AD0' | '\\u0AE0' | '\\u0B05' .. '\\u0B0C' | '\\u0B0F' .. '\\u0B10' | '\\u0B13' .. '\\u0B28' | '\\u0B2A' .. '\\u0B30' | '\\u0B32' .. '\\u0B33' | '\\u0B36' .. '\\u0B39' | '\\u0B3D' | '\\u0B5C' .. '\\u0B5D' | '\\u0B5F' .. '\\u0B61' | '\\u0B85' .. '\\u0B8A' | '\\u0B8E' .. '\\u0B90' | '\\u0B92' .. '\\u0B95' | '\\u0B99' .. '\\u0B9A' | '\\u0B9C' | '\\u0B9E' .. '\\u0B9F' | '\\u0BA3' .. '\\u0BA4' | '\\u0BA8' .. '\\u0BAA' | '\\u0BAE' .. '\\u0BB5' | '\\u0BB7' .. '\\u0BB9' | '\\u0C05' .. '\\u0C0C' | '\\u0C0E' .. '\\u0C10' | '\\u0C12' .. '\\u0C28' | '\\u0C2A' .. '\\u0C33' | '\\u0C35' .. '\\u0C39' | '\\u0C60' .. '\\u0C61' | '\\u0C85' .. '\\u0C8C' | '\\u0C8E' .. '\\u0C90' | '\\u0C92' .. '\\u0CA8' | '\\u0CAA' .. '\\u0CB3' | '\\u0CB5' .. '\\u0CB9' | '\\u0CDE' | '\\u0CE0' .. '\\u0CE1' | '\\u0D05' .. '\\u0D0C' | '\\u0D0E' .. '\\u0D10' | '\\u0D12' .. '\\u0D28' | '\\u0D2A' .. '\\u0D39' | '\\u0D60' .. '\\u0D61' | '\\u0D85' .. '\\u0D96' | '\\u0D9A' .. '\\u0DB1' | '\\u0DB3' .. '\\u0DBB' | '\\u0DBD' | '\\u0DC0' .. '\\u0DC6' | '\\u0E01' .. '\\u0E30' | '\\u0E32' .. '\\u0E33' | '\\u0E40' .. '\\u0E46' | '\\u0E81' .. '\\u0E82' | '\\u0E84' | '\\u0E87' .. '\\u0E88' | '\\u0E8A' | '\\u0E8D' | '\\u0E94' .. '\\u0E97' | '\\u0E99' .. '\\u0E9F' | '\\u0EA1' .. '\\u0EA3' | '\\u0EA5' | '\\u0EA7' | '\\u0EAA' .. '\\u0EAB' | '\\u0EAD' .. '\\u0EB0' | '\\u0EB2' .. '\\u0EB3' | '\\u0EBD' .. '\\u0EC4' | '\\u0EC6' | '\\u0EDC' .. '\\u0EDD' | '\\u0F00' | '\\u0F40' .. '\\u0F6A' | '\\u0F88' .. '\\u0F8B' | '\\u1000' .. '\\u1021' | '\\u1023' .. '\\u1027' | '\\u1029' .. '\\u102A' | '\\u1050' .. '\\u1055' | '\\u10A0' .. '\\u10C5' | '\\u10D0' .. '\\u10F6' | '\\u1100' .. '\\u1159' | '\\u115F' .. '\\u11A2' | '\\u11A8' .. '\\u11F9' | '\\u1200' .. '\\u1206' | '\\u1208' .. '\\u1246' | '\\u1248' | '\\u124A' .. '\\u124D' | '\\u1250' .. '\\u1256' | '\\u1258' | '\\u125A' .. '\\u125D' | '\\u1260' .. '\\u1286' | '\\u1288' | '\\u128A' .. '\\u128D' | '\\u1290' .. '\\u12AE' | '\\u12B0' | '\\u12B2' .. '\\u12B5' | '\\u12B8' .. '\\u12BE' | '\\u12C0' | '\\u12C2' .. '\\u12C5' | '\\u12C8' .. '\\u12CE' | '\\u12D0' .. '\\u12D6' | '\\u12D8' .. '\\u12EE' | '\\u12F0' .. '\\u130E' | '\\u1310' | '\\u1312' .. '\\u1315' | '\\u1318' .. '\\u131E' | '\\u1320' .. '\\u1346' | '\\u1348' .. '\\u135A' | '\\u13A0' .. '\\u13B0' | '\\u13B1' .. '\\u13F4' | '\\u1401' .. '\\u1676' | '\\u1681' .. '\\u169A' | '\\u16A0' .. '\\u16EA' | '\\u1780' .. '\\u17B3' | '\\u1820' .. '\\u1877' | '\\u1880' .. '\\u18A8' | '\\u1E00' .. '\\u1E9B' | '\\u1EA0' .. '\\u1EE0' | '\\u1EE1' .. '\\u1EF9' | '\\u1F00' .. '\\u1F15' | '\\u1F18' .. '\\u1F1D' | '\\u1F20' .. '\\u1F39' | '\\u1F3A' .. '\\u1F45' | '\\u1F48' .. '\\u1F4D' | '\\u1F50' .. '\\u1F57' | '\\u1F59' | '\\u1F5B' | '\\u1F5D' | '\\u1F5F' .. '\\u1F7D' | '\\u1F80' .. '\\u1FB4' | '\\u1FB6' .. '\\u1FBC' | '\\u1FBE' | '\\u1FC2' .. '\\u1FC4' | '\\u1FC6' .. '\\u1FCC' | '\\u1FD0' .. '\\u1FD3' | '\\u1FD6' .. '\\u1FDB' | '\\u1FE0' .. '\\u1FEC' | '\\u1FF2' .. '\\u1FF4' | '\\u1FF6' .. '\\u1FFC' | '\\u207F' | '\\u2102' | '\\u2107' | '\\u210A' .. '\\u2113' | '\\u2115' | '\\u2119' .. '\\u211D' | '\\u2124' | '\\u2126' | '\\u2128' | '\\u212A' .. '\\u212D' | '\\u212F' .. '\\u2131' | '\\u2133' .. '\\u2139' | '\\u2160' .. '\\u2183' | '\\u3005' .. '\\u3007' | '\\u3021' .. '\\u3029' | '\\u3031' .. '\\u3035' | '\\u3038' .. '\\u303A' | '\\u3041' .. '\\u3094' | '\\u309D' .. '\\u309E' | '\\u30A1' .. '\\u30FA' | '\\u30FC' .. '\\u30FE' | '\\u3105' .. '\\u312C' | '\\u3131' .. '\\u318E' | '\\u31A0' .. '\\u31B7' | '\\u3400' | '\\u4DB5' | '\\u4E00' | '\\u9FA5' | '\\uA000' .. '\\uA48C' | '\\uAC00' | '\\uD7A3' | '\\uF900' .. '\\uFA2D' | '\\uFB00' .. '\\uFB06' | '\\uFB13' .. '\\uFB17' | '\\uFB1D' | '\\uFB1F' .. '\\uFB28' | '\\uFB2A' .. '\\uFB36' | '\\uFB38' .. '\\uFB3C' | '\\uFB3E' | '\\uFB40' .. '\\uFB41' | '\\uFB43' .. '\\uFB44' | '\\uFB46' .. '\\uFBB1' | '\\uFBD3' .. '\\uFD3D' | '\\uFD50' .. '\\uFD8F' | '\\uFD92' .. '\\uFDC7' | '\\uFDF0' .. '\\uFDFB' | '\\uFE70' .. '\\uFE72' | '\\uFE74' | '\\uFE76' .. '\\uFEFC' | '\\uFF21' .. '\\uFF3A' | '\\uFF41' .. '\\uFF5A' | '\\uFF66' .. '\\uFFBE' | '\\uFFC2' .. '\\uFFC7' | '\\uFFCA' .. '\\uFFCF' | '\\uFFD2' .. '\\uFFD7' | '\\uFFDA' .. '\\uFFDC' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:525:5: ( '\\u0041' .. '\\u005A' | '\\u0061' .. '\\u007A' | '\\u00AA' | '\\u00B5' | '\\u00BA' | '\\u00C0' .. '\\u00D6' | '\\u00D8' .. '\\u00F6' | '\\u00F8' .. '\\u021F' | '\\u0222' .. '\\u0233' | '\\u0250' .. '\\u02AD' | '\\u02B0' .. '\\u02B8' | '\\u02BB' .. '\\u02C1' | '\\u02D0' .. '\\u02D1' | '\\u02E0' .. '\\u02E4' | '\\u02EE' | '\\u037A' | '\\u0386' | '\\u0388' .. '\\u038A' | '\\u038C' | '\\u038E' .. '\\u03A1' | '\\u03A3' .. '\\u03CE' | '\\u03D0' .. '\\u03D7' | '\\u03DA' .. '\\u03F3' | '\\u0400' .. '\\u0481' | '\\u048C' .. '\\u04C4' | '\\u04C7' .. '\\u04C8' | '\\u04CB' .. '\\u04CC' | '\\u04D0' .. '\\u04F5' | '\\u04F8' .. '\\u04F9' | '\\u0531' .. '\\u0556' | '\\u0559' | '\\u0561' .. '\\u0587' | '\\u05D0' .. '\\u05EA' | '\\u05F0' .. '\\u05F2' | '\\u0621' .. '\\u063A' | '\\u0640' .. '\\u064A' | '\\u0671' .. '\\u06D3' | '\\u06D5' | '\\u06E5' .. '\\u06E6' | '\\u06FA' .. '\\u06FC' | '\\u0710' | '\\u0712' .. '\\u072C' | '\\u0780' .. '\\u07A5' | '\\u0905' .. '\\u0939' | '\\u093D' | '\\u0950' | '\\u0958' .. '\\u0961' | '\\u0985' .. '\\u098C' | '\\u098F' .. '\\u0990' | '\\u0993' .. '\\u09A8' | '\\u09AA' .. '\\u09B0' | '\\u09B2' | '\\u09B6' .. '\\u09B9' | '\\u09DC' .. '\\u09DD' | '\\u09DF' .. '\\u09E1' | '\\u09F0' .. '\\u09F1' | '\\u0A05' .. '\\u0A0A' | '\\u0A0F' .. '\\u0A10' | '\\u0A13' .. '\\u0A28' | '\\u0A2A' .. '\\u0A30' | '\\u0A32' .. '\\u0A33' | '\\u0A35' .. '\\u0A36' | '\\u0A38' .. '\\u0A39' | '\\u0A59' .. '\\u0A5C' | '\\u0A5E' | '\\u0A72' .. '\\u0A74' | '\\u0A85' .. '\\u0A8B' | '\\u0A8D' | '\\u0A8F' .. '\\u0A91' | '\\u0A93' .. '\\u0AA8' | '\\u0AAA' .. '\\u0AB0' | '\\u0AB2' .. '\\u0AB3' | '\\u0AB5' .. '\\u0AB9' | '\\u0ABD' | '\\u0AD0' | '\\u0AE0' | '\\u0B05' .. '\\u0B0C' | '\\u0B0F' .. '\\u0B10' | '\\u0B13' .. '\\u0B28' | '\\u0B2A' .. '\\u0B30' | '\\u0B32' .. '\\u0B33' | '\\u0B36' .. '\\u0B39' | '\\u0B3D' | '\\u0B5C' .. '\\u0B5D' | '\\u0B5F' .. '\\u0B61' | '\\u0B85' .. '\\u0B8A' | '\\u0B8E' .. '\\u0B90' | '\\u0B92' .. '\\u0B95' | '\\u0B99' .. '\\u0B9A' | '\\u0B9C' | '\\u0B9E' .. '\\u0B9F' | '\\u0BA3' .. '\\u0BA4' | '\\u0BA8' .. '\\u0BAA' | '\\u0BAE' .. '\\u0BB5' | '\\u0BB7' .. '\\u0BB9' | '\\u0C05' .. '\\u0C0C' | '\\u0C0E' .. '\\u0C10' | '\\u0C12' .. '\\u0C28' | '\\u0C2A' .. '\\u0C33' | '\\u0C35' .. '\\u0C39' | '\\u0C60' .. '\\u0C61' | '\\u0C85' .. '\\u0C8C' | '\\u0C8E' .. '\\u0C90' | '\\u0C92' .. '\\u0CA8' | '\\u0CAA' .. '\\u0CB3' | '\\u0CB5' .. '\\u0CB9' | '\\u0CDE' | '\\u0CE0' .. '\\u0CE1' | '\\u0D05' .. '\\u0D0C' | '\\u0D0E' .. '\\u0D10' | '\\u0D12' .. '\\u0D28' | '\\u0D2A' .. '\\u0D39' | '\\u0D60' .. '\\u0D61' | '\\u0D85' .. '\\u0D96' | '\\u0D9A' .. '\\u0DB1' | '\\u0DB3' .. '\\u0DBB' | '\\u0DBD' | '\\u0DC0' .. '\\u0DC6' | '\\u0E01' .. '\\u0E30' | '\\u0E32' .. '\\u0E33' | '\\u0E40' .. '\\u0E46' | '\\u0E81' .. '\\u0E82' | '\\u0E84' | '\\u0E87' .. '\\u0E88' | '\\u0E8A' | '\\u0E8D' | '\\u0E94' .. '\\u0E97' | '\\u0E99' .. '\\u0E9F' | '\\u0EA1' .. '\\u0EA3' | '\\u0EA5' | '\\u0EA7' | '\\u0EAA' .. '\\u0EAB' | '\\u0EAD' .. '\\u0EB0' | '\\u0EB2' .. '\\u0EB3' | '\\u0EBD' .. '\\u0EC4' | '\\u0EC6' | '\\u0EDC' .. '\\u0EDD' | '\\u0F00' | '\\u0F40' .. '\\u0F6A' | '\\u0F88' .. '\\u0F8B' | '\\u1000' .. '\\u1021' | '\\u1023' .. '\\u1027' | '\\u1029' .. '\\u102A' | '\\u1050' .. '\\u1055' | '\\u10A0' .. '\\u10C5' | '\\u10D0' .. '\\u10F6' | '\\u1100' .. '\\u1159' | '\\u115F' .. '\\u11A2' | '\\u11A8' .. '\\u11F9' | '\\u1200' .. '\\u1206' | '\\u1208' .. '\\u1246' | '\\u1248' | '\\u124A' .. '\\u124D' | '\\u1250' .. '\\u1256' | '\\u1258' | '\\u125A' .. '\\u125D' | '\\u1260' .. '\\u1286' | '\\u1288' | '\\u128A' .. '\\u128D' | '\\u1290' .. '\\u12AE' | '\\u12B0' | '\\u12B2' .. '\\u12B5' | '\\u12B8' .. '\\u12BE' | '\\u12C0' | '\\u12C2' .. '\\u12C5' | '\\u12C8' .. '\\u12CE' | '\\u12D0' .. '\\u12D6' | '\\u12D8' .. '\\u12EE' | '\\u12F0' .. '\\u130E' | '\\u1310' | '\\u1312' .. '\\u1315' | '\\u1318' .. '\\u131E' | '\\u1320' .. '\\u1346' | '\\u1348' .. '\\u135A' | '\\u13A0' .. '\\u13B0' | '\\u13B1' .. '\\u13F4' | '\\u1401' .. '\\u1676' | '\\u1681' .. '\\u169A' | '\\u16A0' .. '\\u16EA' | '\\u1780' .. '\\u17B3' | '\\u1820' .. '\\u1877' | '\\u1880' .. '\\u18A8' | '\\u1E00' .. '\\u1E9B' | '\\u1EA0' .. '\\u1EE0' | '\\u1EE1' .. '\\u1EF9' | '\\u1F00' .. '\\u1F15' | '\\u1F18' .. '\\u1F1D' | '\\u1F20' .. '\\u1F39' | '\\u1F3A' .. '\\u1F45' | '\\u1F48' .. '\\u1F4D' | '\\u1F50' .. '\\u1F57' | '\\u1F59' | '\\u1F5B' | '\\u1F5D' | '\\u1F5F' .. '\\u1F7D' | '\\u1F80' .. '\\u1FB4' | '\\u1FB6' .. '\\u1FBC' | '\\u1FBE' | '\\u1FC2' .. '\\u1FC4' | '\\u1FC6' .. '\\u1FCC' | '\\u1FD0' .. '\\u1FD3' | '\\u1FD6' .. '\\u1FDB' | '\\u1FE0' .. '\\u1FEC' | '\\u1FF2' .. '\\u1FF4' | '\\u1FF6' .. '\\u1FFC' | '\\u207F' | '\\u2102' | '\\u2107' | '\\u210A' .. '\\u2113' | '\\u2115' | '\\u2119' .. '\\u211D' | '\\u2124' | '\\u2126' | '\\u2128' | '\\u212A' .. '\\u212D' | '\\u212F' .. '\\u2131' | '\\u2133' .. '\\u2139' | '\\u2160' .. '\\u2183' | '\\u3005' .. '\\u3007' | '\\u3021' .. '\\u3029' | '\\u3031' .. '\\u3035' | '\\u3038' .. '\\u303A' | '\\u3041' .. '\\u3094' | '\\u309D' .. '\\u309E' | '\\u30A1' .. '\\u30FA' | '\\u30FC' .. '\\u30FE' | '\\u3105' .. '\\u312C' | '\\u3131' .. '\\u318E' | '\\u31A0' .. '\\u31B7' | '\\u3400' | '\\u4DB5' | '\\u4E00' | '\\u9FA5' | '\\uA000' .. '\\uA48C' | '\\uAC00' | '\\uD7A3' | '\\uF900' .. '\\uFA2D' | '\\uFB00' .. '\\uFB06' | '\\uFB13' .. '\\uFB17' | '\\uFB1D' | '\\uFB1F' .. '\\uFB28' | '\\uFB2A' .. '\\uFB36' | '\\uFB38' .. '\\uFB3C' | '\\uFB3E' | '\\uFB40' .. '\\uFB41' | '\\uFB43' .. '\\uFB44' | '\\uFB46' .. '\\uFBB1' | '\\uFBD3' .. '\\uFD3D' | '\\uFD50' .. '\\uFD8F' | '\\uFD92' .. '\\uFDC7' | '\\uFDF0' .. '\\uFDFB' | '\\uFE70' .. '\\uFE72' | '\\uFE74' | '\\uFE76' .. '\\uFEFC' | '\\uFF21' .. '\\uFF3A' | '\\uFF41' .. '\\uFF5A' | '\\uFF66' .. '\\uFFBE' | '\\uFFC2' .. '\\uFFC7' | '\\uFFCA' .. '\\uFFCF' | '\\uFFD2' .. '\\uFFD7' | '\\uFFDA' .. '\\uFFDC' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 			{
-			DebugLocation(528, 5);
+			DebugLocation(525, 5);
 			if ((input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z')||input.LA(1)=='\u00AA'||input.LA(1)=='\u00B5'||input.LA(1)=='\u00BA'||(input.LA(1)>='\u00C0' && input.LA(1)<='\u00D6')||(input.LA(1)>='\u00D8' && input.LA(1)<='\u00F6')||(input.LA(1)>='\u00F8' && input.LA(1)<='\u021F')||(input.LA(1)>='\u0222' && input.LA(1)<='\u0233')||(input.LA(1)>='\u0250' && input.LA(1)<='\u02AD')||(input.LA(1)>='\u02B0' && input.LA(1)<='\u02B8')||(input.LA(1)>='\u02BB' && input.LA(1)<='\u02C1')||(input.LA(1)>='\u02D0' && input.LA(1)<='\u02D1')||(input.LA(1)>='\u02E0' && input.LA(1)<='\u02E4')||input.LA(1)=='\u02EE'||input.LA(1)=='\u037A'||input.LA(1)=='\u0386'||(input.LA(1)>='\u0388' && input.LA(1)<='\u038A')||input.LA(1)=='\u038C'||(input.LA(1)>='\u038E' && input.LA(1)<='\u03A1')||(input.LA(1)>='\u03A3' && input.LA(1)<='\u03CE')||(input.LA(1)>='\u03D0' && input.LA(1)<='\u03D7')||(input.LA(1)>='\u03DA' && input.LA(1)<='\u03F3')||(input.LA(1)>='\u0400' && input.LA(1)<='\u0481')||(input.LA(1)>='\u048C' && input.LA(1)<='\u04C4')||(input.LA(1)>='\u04C7' && input.LA(1)<='\u04C8')||(input.LA(1)>='\u04CB' && input.LA(1)<='\u04CC')||(input.LA(1)>='\u04D0' && input.LA(1)<='\u04F5')||(input.LA(1)>='\u04F8' && input.LA(1)<='\u04F9')||(input.LA(1)>='\u0531' && input.LA(1)<='\u0556')||input.LA(1)=='\u0559'||(input.LA(1)>='\u0561' && input.LA(1)<='\u0587')||(input.LA(1)>='\u05D0' && input.LA(1)<='\u05EA')||(input.LA(1)>='\u05F0' && input.LA(1)<='\u05F2')||(input.LA(1)>='\u0621' && input.LA(1)<='\u063A')||(input.LA(1)>='\u0640' && input.LA(1)<='\u064A')||(input.LA(1)>='\u0671' && input.LA(1)<='\u06D3')||input.LA(1)=='\u06D5'||(input.LA(1)>='\u06E5' && input.LA(1)<='\u06E6')||(input.LA(1)>='\u06FA' && input.LA(1)<='\u06FC')||input.LA(1)=='\u0710'||(input.LA(1)>='\u0712' && input.LA(1)<='\u072C')||(input.LA(1)>='\u0780' && input.LA(1)<='\u07A5')||(input.LA(1)>='\u0905' && input.LA(1)<='\u0939')||input.LA(1)=='\u093D'||input.LA(1)=='\u0950'||(input.LA(1)>='\u0958' && input.LA(1)<='\u0961')||(input.LA(1)>='\u0985' && input.LA(1)<='\u098C')||(input.LA(1)>='\u098F' && input.LA(1)<='\u0990')||(input.LA(1)>='\u0993' && input.LA(1)<='\u09A8')||(input.LA(1)>='\u09AA' && input.LA(1)<='\u09B0')||input.LA(1)=='\u09B2'||(input.LA(1)>='\u09B6' && input.LA(1)<='\u09B9')||(input.LA(1)>='\u09DC' && input.LA(1)<='\u09DD')||(input.LA(1)>='\u09DF' && input.LA(1)<='\u09E1')||(input.LA(1)>='\u09F0' && input.LA(1)<='\u09F1')||(input.LA(1)>='\u0A05' && input.LA(1)<='\u0A0A')||(input.LA(1)>='\u0A0F' && input.LA(1)<='\u0A10')||(input.LA(1)>='\u0A13' && input.LA(1)<='\u0A28')||(input.LA(1)>='\u0A2A' && input.LA(1)<='\u0A30')||(input.LA(1)>='\u0A32' && input.LA(1)<='\u0A33')||(input.LA(1)>='\u0A35' && input.LA(1)<='\u0A36')||(input.LA(1)>='\u0A38' && input.LA(1)<='\u0A39')||(input.LA(1)>='\u0A59' && input.LA(1)<='\u0A5C')||input.LA(1)=='\u0A5E'||(input.LA(1)>='\u0A72' && input.LA(1)<='\u0A74')||(input.LA(1)>='\u0A85' && input.LA(1)<='\u0A8B')||input.LA(1)=='\u0A8D'||(input.LA(1)>='\u0A8F' && input.LA(1)<='\u0A91')||(input.LA(1)>='\u0A93' && input.LA(1)<='\u0AA8')||(input.LA(1)>='\u0AAA' && input.LA(1)<='\u0AB0')||(input.LA(1)>='\u0AB2' && input.LA(1)<='\u0AB3')||(input.LA(1)>='\u0AB5' && input.LA(1)<='\u0AB9')||input.LA(1)=='\u0ABD'||input.LA(1)=='\u0AD0'||input.LA(1)=='\u0AE0'||(input.LA(1)>='\u0B05' && input.LA(1)<='\u0B0C')||(input.LA(1)>='\u0B0F' && input.LA(1)<='\u0B10')||(input.LA(1)>='\u0B13' && input.LA(1)<='\u0B28')||(input.LA(1)>='\u0B2A' && input.LA(1)<='\u0B30')||(input.LA(1)>='\u0B32' && input.LA(1)<='\u0B33')||(input.LA(1)>='\u0B36' && input.LA(1)<='\u0B39')||input.LA(1)=='\u0B3D'||(input.LA(1)>='\u0B5C' && input.LA(1)<='\u0B5D')||(input.LA(1)>='\u0B5F' && input.LA(1)<='\u0B61')||(input.LA(1)>='\u0B85' && input.LA(1)<='\u0B8A')||(input.LA(1)>='\u0B8E' && input.LA(1)<='\u0B90')||(input.LA(1)>='\u0B92' && input.LA(1)<='\u0B95')||(input.LA(1)>='\u0B99' && input.LA(1)<='\u0B9A')||input.LA(1)=='\u0B9C'||(input.LA(1)>='\u0B9E' && input.LA(1)<='\u0B9F')||(input.LA(1)>='\u0BA3' && input.LA(1)<='\u0BA4')||(input.LA(1)>='\u0BA8' && input.LA(1)<='\u0BAA')||(input.LA(1)>='\u0BAE' && input.LA(1)<='\u0BB5')||(input.LA(1)>='\u0BB7' && input.LA(1)<='\u0BB9')||(input.LA(1)>='\u0C05' && input.LA(1)<='\u0C0C')||(input.LA(1)>='\u0C0E' && input.LA(1)<='\u0C10')||(input.LA(1)>='\u0C12' && input.LA(1)<='\u0C28')||(input.LA(1)>='\u0C2A' && input.LA(1)<='\u0C33')||(input.LA(1)>='\u0C35' && input.LA(1)<='\u0C39')||(input.LA(1)>='\u0C60' && input.LA(1)<='\u0C61')||(input.LA(1)>='\u0C85' && input.LA(1)<='\u0C8C')||(input.LA(1)>='\u0C8E' && input.LA(1)<='\u0C90')||(input.LA(1)>='\u0C92' && input.LA(1)<='\u0CA8')||(input.LA(1)>='\u0CAA' && input.LA(1)<='\u0CB3')||(input.LA(1)>='\u0CB5' && input.LA(1)<='\u0CB9')||input.LA(1)=='\u0CDE'||(input.LA(1)>='\u0CE0' && input.LA(1)<='\u0CE1')||(input.LA(1)>='\u0D05' && input.LA(1)<='\u0D0C')||(input.LA(1)>='\u0D0E' && input.LA(1)<='\u0D10')||(input.LA(1)>='\u0D12' && input.LA(1)<='\u0D28')||(input.LA(1)>='\u0D2A' && input.LA(1)<='\u0D39')||(input.LA(1)>='\u0D60' && input.LA(1)<='\u0D61')||(input.LA(1)>='\u0D85' && input.LA(1)<='\u0D96')||(input.LA(1)>='\u0D9A' && input.LA(1)<='\u0DB1')||(input.LA(1)>='\u0DB3' && input.LA(1)<='\u0DBB')||input.LA(1)=='\u0DBD'||(input.LA(1)>='\u0DC0' && input.LA(1)<='\u0DC6')||(input.LA(1)>='\u0E01' && input.LA(1)<='\u0E30')||(input.LA(1)>='\u0E32' && input.LA(1)<='\u0E33')||(input.LA(1)>='\u0E40' && input.LA(1)<='\u0E46')||(input.LA(1)>='\u0E81' && input.LA(1)<='\u0E82')||input.LA(1)=='\u0E84'||(input.LA(1)>='\u0E87' && input.LA(1)<='\u0E88')||input.LA(1)=='\u0E8A'||input.LA(1)=='\u0E8D'||(input.LA(1)>='\u0E94' && input.LA(1)<='\u0E97')||(input.LA(1)>='\u0E99' && input.LA(1)<='\u0E9F')||(input.LA(1)>='\u0EA1' && input.LA(1)<='\u0EA3')||input.LA(1)=='\u0EA5'||input.LA(1)=='\u0EA7'||(input.LA(1)>='\u0EAA' && input.LA(1)<='\u0EAB')||(input.LA(1)>='\u0EAD' && input.LA(1)<='\u0EB0')||(input.LA(1)>='\u0EB2' && input.LA(1)<='\u0EB3')||(input.LA(1)>='\u0EBD' && input.LA(1)<='\u0EC4')||input.LA(1)=='\u0EC6'||(input.LA(1)>='\u0EDC' && input.LA(1)<='\u0EDD')||input.LA(1)=='\u0F00'||(input.LA(1)>='\u0F40' && input.LA(1)<='\u0F6A')||(input.LA(1)>='\u0F88' && input.LA(1)<='\u0F8B')||(input.LA(1)>='\u1000' && input.LA(1)<='\u1021')||(input.LA(1)>='\u1023' && input.LA(1)<='\u1027')||(input.LA(1)>='\u1029' && input.LA(1)<='\u102A')||(input.LA(1)>='\u1050' && input.LA(1)<='\u1055')||(input.LA(1)>='\u10A0' && input.LA(1)<='\u10C5')||(input.LA(1)>='\u10D0' && input.LA(1)<='\u10F6')||(input.LA(1)>='\u1100' && input.LA(1)<='\u1159')||(input.LA(1)>='\u115F' && input.LA(1)<='\u11A2')||(input.LA(1)>='\u11A8' && input.LA(1)<='\u11F9')||(input.LA(1)>='\u1200' && input.LA(1)<='\u1206')||(input.LA(1)>='\u1208' && input.LA(1)<='\u1246')||input.LA(1)=='\u1248'||(input.LA(1)>='\u124A' && input.LA(1)<='\u124D')||(input.LA(1)>='\u1250' && input.LA(1)<='\u1256')||input.LA(1)=='\u1258'||(input.LA(1)>='\u125A' && input.LA(1)<='\u125D')||(input.LA(1)>='\u1260' && input.LA(1)<='\u1286')||input.LA(1)=='\u1288'||(input.LA(1)>='\u128A' && input.LA(1)<='\u128D')||(input.LA(1)>='\u1290' && input.LA(1)<='\u12AE')||input.LA(1)=='\u12B0'||(input.LA(1)>='\u12B2' && input.LA(1)<='\u12B5')||(input.LA(1)>='\u12B8' && input.LA(1)<='\u12BE')||input.LA(1)=='\u12C0'||(input.LA(1)>='\u12C2' && input.LA(1)<='\u12C5')||(input.LA(1)>='\u12C8' && input.LA(1)<='\u12CE')||(input.LA(1)>='\u12D0' && input.LA(1)<='\u12D6')||(input.LA(1)>='\u12D8' && input.LA(1)<='\u12EE')||(input.LA(1)>='\u12F0' && input.LA(1)<='\u130E')||input.LA(1)=='\u1310'||(input.LA(1)>='\u1312' && input.LA(1)<='\u1315')||(input.LA(1)>='\u1318' && input.LA(1)<='\u131E')||(input.LA(1)>='\u1320' && input.LA(1)<='\u1346')||(input.LA(1)>='\u1348' && input.LA(1)<='\u135A')||(input.LA(1)>='\u13A0' && input.LA(1)<='\u13F4')||(input.LA(1)>='\u1401' && input.LA(1)<='\u1676')||(input.LA(1)>='\u1681' && input.LA(1)<='\u169A')||(input.LA(1)>='\u16A0' && input.LA(1)<='\u16EA')||(input.LA(1)>='\u1780' && input.LA(1)<='\u17B3')||(input.LA(1)>='\u1820' && input.LA(1)<='\u1877')||(input.LA(1)>='\u1880' && input.LA(1)<='\u18A8')||(input.LA(1)>='\u1E00' && input.LA(1)<='\u1E9B')||(input.LA(1)>='\u1EA0' && input.LA(1)<='\u1EF9')||(input.LA(1)>='\u1F00' && input.LA(1)<='\u1F15')||(input.LA(1)>='\u1F18' && input.LA(1)<='\u1F1D')||(input.LA(1)>='\u1F20' && input.LA(1)<='\u1F45')||(input.LA(1)>='\u1F48' && input.LA(1)<='\u1F4D')||(input.LA(1)>='\u1F50' && input.LA(1)<='\u1F57')||input.LA(1)=='\u1F59'||input.LA(1)=='\u1F5B'||input.LA(1)=='\u1F5D'||(input.LA(1)>='\u1F5F' && input.LA(1)<='\u1F7D')||(input.LA(1)>='\u1F80' && input.LA(1)<='\u1FB4')||(input.LA(1)>='\u1FB6' && input.LA(1)<='\u1FBC')||input.LA(1)=='\u1FBE'||(input.LA(1)>='\u1FC2' && input.LA(1)<='\u1FC4')||(input.LA(1)>='\u1FC6' && input.LA(1)<='\u1FCC')||(input.LA(1)>='\u1FD0' && input.LA(1)<='\u1FD3')||(input.LA(1)>='\u1FD6' && input.LA(1)<='\u1FDB')||(input.LA(1)>='\u1FE0' && input.LA(1)<='\u1FEC')||(input.LA(1)>='\u1FF2' && input.LA(1)<='\u1FF4')||(input.LA(1)>='\u1FF6' && input.LA(1)<='\u1FFC')||input.LA(1)=='\u207F'||input.LA(1)=='\u2102'||input.LA(1)=='\u2107'||(input.LA(1)>='\u210A' && input.LA(1)<='\u2113')||input.LA(1)=='\u2115'||(input.LA(1)>='\u2119' && input.LA(1)<='\u211D')||input.LA(1)=='\u2124'||input.LA(1)=='\u2126'||input.LA(1)=='\u2128'||(input.LA(1)>='\u212A' && input.LA(1)<='\u212D')||(input.LA(1)>='\u212F' && input.LA(1)<='\u2131')||(input.LA(1)>='\u2133' && input.LA(1)<='\u2139')||(input.LA(1)>='\u2160' && input.LA(1)<='\u2183')||(input.LA(1)>='\u3005' && input.LA(1)<='\u3007')||(input.LA(1)>='\u3021' && input.LA(1)<='\u3029')||(input.LA(1)>='\u3031' && input.LA(1)<='\u3035')||(input.LA(1)>='\u3038' && input.LA(1)<='\u303A')||(input.LA(1)>='\u3041' && input.LA(1)<='\u3094')||(input.LA(1)>='\u309D' && input.LA(1)<='\u309E')||(input.LA(1)>='\u30A1' && input.LA(1)<='\u30FA')||(input.LA(1)>='\u30FC' && input.LA(1)<='\u30FE')||(input.LA(1)>='\u3105' && input.LA(1)<='\u312C')||(input.LA(1)>='\u3131' && input.LA(1)<='\u318E')||(input.LA(1)>='\u31A0' && input.LA(1)<='\u31B7')||input.LA(1)=='\u3400'||input.LA(1)=='\u4DB5'||input.LA(1)=='\u4E00'||input.LA(1)=='\u9FA5'||(input.LA(1)>='\uA000' && input.LA(1)<='\uA48C')||input.LA(1)=='\uAC00'||input.LA(1)=='\uD7A3'||(input.LA(1)>='\uF900' && input.LA(1)<='\uFA2D')||(input.LA(1)>='\uFB00' && input.LA(1)<='\uFB06')||(input.LA(1)>='\uFB13' && input.LA(1)<='\uFB17')||input.LA(1)=='\uFB1D'||(input.LA(1)>='\uFB1F' && input.LA(1)<='\uFB28')||(input.LA(1)>='\uFB2A' && input.LA(1)<='\uFB36')||(input.LA(1)>='\uFB38' && input.LA(1)<='\uFB3C')||input.LA(1)=='\uFB3E'||(input.LA(1)>='\uFB40' && input.LA(1)<='\uFB41')||(input.LA(1)>='\uFB43' && input.LA(1)<='\uFB44')||(input.LA(1)>='\uFB46' && input.LA(1)<='\uFBB1')||(input.LA(1)>='\uFBD3' && input.LA(1)<='\uFD3D')||(input.LA(1)>='\uFD50' && input.LA(1)<='\uFD8F')||(input.LA(1)>='\uFD92' && input.LA(1)<='\uFDC7')||(input.LA(1)>='\uFDF0' && input.LA(1)<='\uFDFB')||(input.LA(1)>='\uFE70' && input.LA(1)<='\uFE72')||input.LA(1)=='\uFE74'||(input.LA(1)>='\uFE76' && input.LA(1)<='\uFEFC')||(input.LA(1)>='\uFF21' && input.LA(1)<='\uFF3A')||(input.LA(1)>='\uFF41' && input.LA(1)<='\uFF5A')||(input.LA(1)>='\uFF66' && input.LA(1)<='\uFFBE')||(input.LA(1)>='\uFFC2' && input.LA(1)<='\uFFC7')||(input.LA(1)>='\uFFCA' && input.LA(1)<='\uFFCF')||(input.LA(1)>='\uFFD2' && input.LA(1)<='\uFFD7')||(input.LA(1)>='\uFFDA' && input.LA(1)<='\uFFDC'))
 			{
 				input.Consume();
@@ -4559,11 +4559,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("UnicodeCombiningMark", 98);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:792:5: ( '\\u0300' .. '\\u034E' | '\\u0360' .. '\\u0362' | '\\u0483' .. '\\u0486' | '\\u0591' .. '\\u05A1' | '\\u05A3' .. '\\u05B9' | '\\u05BB' .. '\\u05BD' | '\\u05BF' | '\\u05C1' .. '\\u05C2' | '\\u05C4' | '\\u064B' .. '\\u0655' | '\\u0670' | '\\u06D6' .. '\\u06DC' | '\\u06DF' .. '\\u06E4' | '\\u06E7' .. '\\u06E8' | '\\u06EA' .. '\\u06ED' | '\\u0711' | '\\u0730' .. '\\u074A' | '\\u07A6' .. '\\u07B0' | '\\u0901' .. '\\u0903' | '\\u093C' | '\\u093E' .. '\\u094D' | '\\u0951' .. '\\u0954' | '\\u0962' .. '\\u0963' | '\\u0981' .. '\\u0983' | '\\u09BC' .. '\\u09C4' | '\\u09C7' .. '\\u09C8' | '\\u09CB' .. '\\u09CD' | '\\u09D7' | '\\u09E2' .. '\\u09E3' | '\\u0A02' | '\\u0A3C' | '\\u0A3E' .. '\\u0A42' | '\\u0A47' .. '\\u0A48' | '\\u0A4B' .. '\\u0A4D' | '\\u0A70' .. '\\u0A71' | '\\u0A81' .. '\\u0A83' | '\\u0ABC' | '\\u0ABE' .. '\\u0AC5' | '\\u0AC7' .. '\\u0AC9' | '\\u0ACB' .. '\\u0ACD' | '\\u0B01' .. '\\u0B03' | '\\u0B3C' | '\\u0B3E' .. '\\u0B43' | '\\u0B47' .. '\\u0B48' | '\\u0B4B' .. '\\u0B4D' | '\\u0B56' .. '\\u0B57' | '\\u0B82' .. '\\u0B83' | '\\u0BBE' .. '\\u0BC2' | '\\u0BC6' .. '\\u0BC8' | '\\u0BCA' .. '\\u0BCD' | '\\u0BD7' | '\\u0C01' .. '\\u0C03' | '\\u0C3E' .. '\\u0C44' | '\\u0C46' .. '\\u0C48' | '\\u0C4A' .. '\\u0C4D' | '\\u0C55' .. '\\u0C56' | '\\u0C82' .. '\\u0C83' | '\\u0CBE' .. '\\u0CC4' | '\\u0CC6' .. '\\u0CC8' | '\\u0CCA' .. '\\u0CCD' | '\\u0CD5' .. '\\u0CD6' | '\\u0D02' .. '\\u0D03' | '\\u0D3E' .. '\\u0D43' | '\\u0D46' .. '\\u0D48' | '\\u0D4A' .. '\\u0D4D' | '\\u0D57' | '\\u0D82' .. '\\u0D83' | '\\u0DCA' | '\\u0DCF' .. '\\u0DD4' | '\\u0DD6' | '\\u0DD8' .. '\\u0DDF' | '\\u0DF2' .. '\\u0DF3' | '\\u0E31' | '\\u0E34' .. '\\u0E3A' | '\\u0E47' .. '\\u0E4E' | '\\u0EB1' | '\\u0EB4' .. '\\u0EB9' | '\\u0EBB' .. '\\u0EBC' | '\\u0EC8' .. '\\u0ECD' | '\\u0F18' .. '\\u0F19' | '\\u0F35' | '\\u0F37' | '\\u0F39' | '\\u0F3E' .. '\\u0F3F' | '\\u0F71' .. '\\u0F84' | '\\u0F86' .. '\\u0F87' | '\\u0F90' .. '\\u0F97' | '\\u0F99' .. '\\u0FBC' | '\\u0FC6' | '\\u102C' .. '\\u1032' | '\\u1036' .. '\\u1039' | '\\u1056' .. '\\u1059' | '\\u17B4' .. '\\u17D3' | '\\u18A9' | '\\u20D0' .. '\\u20DC' | '\\u20E1' | '\\u302A' .. '\\u302F' | '\\u3099' .. '\\u309A' | '\\uFB1E' | '\\uFE20' .. '\\uFE23' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:789:5: ( '\\u0300' .. '\\u034E' | '\\u0360' .. '\\u0362' | '\\u0483' .. '\\u0486' | '\\u0591' .. '\\u05A1' | '\\u05A3' .. '\\u05B9' | '\\u05BB' .. '\\u05BD' | '\\u05BF' | '\\u05C1' .. '\\u05C2' | '\\u05C4' | '\\u064B' .. '\\u0655' | '\\u0670' | '\\u06D6' .. '\\u06DC' | '\\u06DF' .. '\\u06E4' | '\\u06E7' .. '\\u06E8' | '\\u06EA' .. '\\u06ED' | '\\u0711' | '\\u0730' .. '\\u074A' | '\\u07A6' .. '\\u07B0' | '\\u0901' .. '\\u0903' | '\\u093C' | '\\u093E' .. '\\u094D' | '\\u0951' .. '\\u0954' | '\\u0962' .. '\\u0963' | '\\u0981' .. '\\u0983' | '\\u09BC' .. '\\u09C4' | '\\u09C7' .. '\\u09C8' | '\\u09CB' .. '\\u09CD' | '\\u09D7' | '\\u09E2' .. '\\u09E3' | '\\u0A02' | '\\u0A3C' | '\\u0A3E' .. '\\u0A42' | '\\u0A47' .. '\\u0A48' | '\\u0A4B' .. '\\u0A4D' | '\\u0A70' .. '\\u0A71' | '\\u0A81' .. '\\u0A83' | '\\u0ABC' | '\\u0ABE' .. '\\u0AC5' | '\\u0AC7' .. '\\u0AC9' | '\\u0ACB' .. '\\u0ACD' | '\\u0B01' .. '\\u0B03' | '\\u0B3C' | '\\u0B3E' .. '\\u0B43' | '\\u0B47' .. '\\u0B48' | '\\u0B4B' .. '\\u0B4D' | '\\u0B56' .. '\\u0B57' | '\\u0B82' .. '\\u0B83' | '\\u0BBE' .. '\\u0BC2' | '\\u0BC6' .. '\\u0BC8' | '\\u0BCA' .. '\\u0BCD' | '\\u0BD7' | '\\u0C01' .. '\\u0C03' | '\\u0C3E' .. '\\u0C44' | '\\u0C46' .. '\\u0C48' | '\\u0C4A' .. '\\u0C4D' | '\\u0C55' .. '\\u0C56' | '\\u0C82' .. '\\u0C83' | '\\u0CBE' .. '\\u0CC4' | '\\u0CC6' .. '\\u0CC8' | '\\u0CCA' .. '\\u0CCD' | '\\u0CD5' .. '\\u0CD6' | '\\u0D02' .. '\\u0D03' | '\\u0D3E' .. '\\u0D43' | '\\u0D46' .. '\\u0D48' | '\\u0D4A' .. '\\u0D4D' | '\\u0D57' | '\\u0D82' .. '\\u0D83' | '\\u0DCA' | '\\u0DCF' .. '\\u0DD4' | '\\u0DD6' | '\\u0DD8' .. '\\u0DDF' | '\\u0DF2' .. '\\u0DF3' | '\\u0E31' | '\\u0E34' .. '\\u0E3A' | '\\u0E47' .. '\\u0E4E' | '\\u0EB1' | '\\u0EB4' .. '\\u0EB9' | '\\u0EBB' .. '\\u0EBC' | '\\u0EC8' .. '\\u0ECD' | '\\u0F18' .. '\\u0F19' | '\\u0F35' | '\\u0F37' | '\\u0F39' | '\\u0F3E' .. '\\u0F3F' | '\\u0F71' .. '\\u0F84' | '\\u0F86' .. '\\u0F87' | '\\u0F90' .. '\\u0F97' | '\\u0F99' .. '\\u0FBC' | '\\u0FC6' | '\\u102C' .. '\\u1032' | '\\u1036' .. '\\u1039' | '\\u1056' .. '\\u1059' | '\\u17B4' .. '\\u17D3' | '\\u18A9' | '\\u20D0' .. '\\u20DC' | '\\u20E1' | '\\u302A' .. '\\u302F' | '\\u3099' .. '\\u309A' | '\\uFB1E' | '\\uFE20' .. '\\uFE23' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 			{
-			DebugLocation(792, 5);
+			DebugLocation(789, 5);
 			if ((input.LA(1)>='\u0300' && input.LA(1)<='\u034E')||(input.LA(1)>='\u0360' && input.LA(1)<='\u0362')||(input.LA(1)>='\u0483' && input.LA(1)<='\u0486')||(input.LA(1)>='\u0591' && input.LA(1)<='\u05A1')||(input.LA(1)>='\u05A3' && input.LA(1)<='\u05B9')||(input.LA(1)>='\u05BB' && input.LA(1)<='\u05BD')||input.LA(1)=='\u05BF'||(input.LA(1)>='\u05C1' && input.LA(1)<='\u05C2')||input.LA(1)=='\u05C4'||(input.LA(1)>='\u064B' && input.LA(1)<='\u0655')||input.LA(1)=='\u0670'||(input.LA(1)>='\u06D6' && input.LA(1)<='\u06DC')||(input.LA(1)>='\u06DF' && input.LA(1)<='\u06E4')||(input.LA(1)>='\u06E7' && input.LA(1)<='\u06E8')||(input.LA(1)>='\u06EA' && input.LA(1)<='\u06ED')||input.LA(1)=='\u0711'||(input.LA(1)>='\u0730' && input.LA(1)<='\u074A')||(input.LA(1)>='\u07A6' && input.LA(1)<='\u07B0')||(input.LA(1)>='\u0901' && input.LA(1)<='\u0903')||input.LA(1)=='\u093C'||(input.LA(1)>='\u093E' && input.LA(1)<='\u094D')||(input.LA(1)>='\u0951' && input.LA(1)<='\u0954')||(input.LA(1)>='\u0962' && input.LA(1)<='\u0963')||(input.LA(1)>='\u0981' && input.LA(1)<='\u0983')||(input.LA(1)>='\u09BC' && input.LA(1)<='\u09C4')||(input.LA(1)>='\u09C7' && input.LA(1)<='\u09C8')||(input.LA(1)>='\u09CB' && input.LA(1)<='\u09CD')||input.LA(1)=='\u09D7'||(input.LA(1)>='\u09E2' && input.LA(1)<='\u09E3')||input.LA(1)=='\u0A02'||input.LA(1)=='\u0A3C'||(input.LA(1)>='\u0A3E' && input.LA(1)<='\u0A42')||(input.LA(1)>='\u0A47' && input.LA(1)<='\u0A48')||(input.LA(1)>='\u0A4B' && input.LA(1)<='\u0A4D')||(input.LA(1)>='\u0A70' && input.LA(1)<='\u0A71')||(input.LA(1)>='\u0A81' && input.LA(1)<='\u0A83')||input.LA(1)=='\u0ABC'||(input.LA(1)>='\u0ABE' && input.LA(1)<='\u0AC5')||(input.LA(1)>='\u0AC7' && input.LA(1)<='\u0AC9')||(input.LA(1)>='\u0ACB' && input.LA(1)<='\u0ACD')||(input.LA(1)>='\u0B01' && input.LA(1)<='\u0B03')||input.LA(1)=='\u0B3C'||(input.LA(1)>='\u0B3E' && input.LA(1)<='\u0B43')||(input.LA(1)>='\u0B47' && input.LA(1)<='\u0B48')||(input.LA(1)>='\u0B4B' && input.LA(1)<='\u0B4D')||(input.LA(1)>='\u0B56' && input.LA(1)<='\u0B57')||(input.LA(1)>='\u0B82' && input.LA(1)<='\u0B83')||(input.LA(1)>='\u0BBE' && input.LA(1)<='\u0BC2')||(input.LA(1)>='\u0BC6' && input.LA(1)<='\u0BC8')||(input.LA(1)>='\u0BCA' && input.LA(1)<='\u0BCD')||input.LA(1)=='\u0BD7'||(input.LA(1)>='\u0C01' && input.LA(1)<='\u0C03')||(input.LA(1)>='\u0C3E' && input.LA(1)<='\u0C44')||(input.LA(1)>='\u0C46' && input.LA(1)<='\u0C48')||(input.LA(1)>='\u0C4A' && input.LA(1)<='\u0C4D')||(input.LA(1)>='\u0C55' && input.LA(1)<='\u0C56')||(input.LA(1)>='\u0C82' && input.LA(1)<='\u0C83')||(input.LA(1)>='\u0CBE' && input.LA(1)<='\u0CC4')||(input.LA(1)>='\u0CC6' && input.LA(1)<='\u0CC8')||(input.LA(1)>='\u0CCA' && input.LA(1)<='\u0CCD')||(input.LA(1)>='\u0CD5' && input.LA(1)<='\u0CD6')||(input.LA(1)>='\u0D02' && input.LA(1)<='\u0D03')||(input.LA(1)>='\u0D3E' && input.LA(1)<='\u0D43')||(input.LA(1)>='\u0D46' && input.LA(1)<='\u0D48')||(input.LA(1)>='\u0D4A' && input.LA(1)<='\u0D4D')||input.LA(1)=='\u0D57'||(input.LA(1)>='\u0D82' && input.LA(1)<='\u0D83')||input.LA(1)=='\u0DCA'||(input.LA(1)>='\u0DCF' && input.LA(1)<='\u0DD4')||input.LA(1)=='\u0DD6'||(input.LA(1)>='\u0DD8' && input.LA(1)<='\u0DDF')||(input.LA(1)>='\u0DF2' && input.LA(1)<='\u0DF3')||input.LA(1)=='\u0E31'||(input.LA(1)>='\u0E34' && input.LA(1)<='\u0E3A')||(input.LA(1)>='\u0E47' && input.LA(1)<='\u0E4E')||input.LA(1)=='\u0EB1'||(input.LA(1)>='\u0EB4' && input.LA(1)<='\u0EB9')||(input.LA(1)>='\u0EBB' && input.LA(1)<='\u0EBC')||(input.LA(1)>='\u0EC8' && input.LA(1)<='\u0ECD')||(input.LA(1)>='\u0F18' && input.LA(1)<='\u0F19')||input.LA(1)=='\u0F35'||input.LA(1)=='\u0F37'||input.LA(1)=='\u0F39'||(input.LA(1)>='\u0F3E' && input.LA(1)<='\u0F3F')||(input.LA(1)>='\u0F71' && input.LA(1)<='\u0F84')||(input.LA(1)>='\u0F86' && input.LA(1)<='\u0F87')||(input.LA(1)>='\u0F90' && input.LA(1)<='\u0F97')||(input.LA(1)>='\u0F99' && input.LA(1)<='\u0FBC')||input.LA(1)=='\u0FC6'||(input.LA(1)>='\u102C' && input.LA(1)<='\u1032')||(input.LA(1)>='\u1036' && input.LA(1)<='\u1039')||(input.LA(1)>='\u1056' && input.LA(1)<='\u1059')||(input.LA(1)>='\u17B4' && input.LA(1)<='\u17D3')||input.LA(1)=='\u18A9'||(input.LA(1)>='\u20D0' && input.LA(1)<='\u20DC')||input.LA(1)=='\u20E1'||(input.LA(1)>='\u302A' && input.LA(1)<='\u302F')||(input.LA(1)>='\u3099' && input.LA(1)<='\u309A')||input.LA(1)=='\uFB1E'||(input.LA(1)>='\uFE20' && input.LA(1)<='\uFE23'))
 			{
 				input.Consume();
@@ -4603,11 +4603,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("UnicodeDigit", 99);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:895:5: ( '\\u0030' .. '\\u0039' | '\\u0660' .. '\\u0669' | '\\u06F0' .. '\\u06F9' | '\\u0966' .. '\\u096F' | '\\u09E6' .. '\\u09EF' | '\\u0A66' .. '\\u0A6F' | '\\u0AE6' .. '\\u0AEF' | '\\u0B66' .. '\\u0B6F' | '\\u0BE7' .. '\\u0BEF' | '\\u0C66' .. '\\u0C6F' | '\\u0CE6' .. '\\u0CEF' | '\\u0D66' .. '\\u0D6F' | '\\u0E50' .. '\\u0E59' | '\\u0ED0' .. '\\u0ED9' | '\\u0F20' .. '\\u0F29' | '\\u1040' .. '\\u1049' | '\\u1369' .. '\\u1371' | '\\u17E0' .. '\\u17E9' | '\\u1810' .. '\\u1819' | '\\uFF10' .. '\\uFF19' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:892:5: ( '\\u0030' .. '\\u0039' | '\\u0660' .. '\\u0669' | '\\u06F0' .. '\\u06F9' | '\\u0966' .. '\\u096F' | '\\u09E6' .. '\\u09EF' | '\\u0A66' .. '\\u0A6F' | '\\u0AE6' .. '\\u0AEF' | '\\u0B66' .. '\\u0B6F' | '\\u0BE7' .. '\\u0BEF' | '\\u0C66' .. '\\u0C6F' | '\\u0CE6' .. '\\u0CEF' | '\\u0D66' .. '\\u0D6F' | '\\u0E50' .. '\\u0E59' | '\\u0ED0' .. '\\u0ED9' | '\\u0F20' .. '\\u0F29' | '\\u1040' .. '\\u1049' | '\\u1369' .. '\\u1371' | '\\u17E0' .. '\\u17E9' | '\\u1810' .. '\\u1819' | '\\uFF10' .. '\\uFF19' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 			{
-			DebugLocation(895, 5);
+			DebugLocation(892, 5);
 			if ((input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='\u0660' && input.LA(1)<='\u0669')||(input.LA(1)>='\u06F0' && input.LA(1)<='\u06F9')||(input.LA(1)>='\u0966' && input.LA(1)<='\u096F')||(input.LA(1)>='\u09E6' && input.LA(1)<='\u09EF')||(input.LA(1)>='\u0A66' && input.LA(1)<='\u0A6F')||(input.LA(1)>='\u0AE6' && input.LA(1)<='\u0AEF')||(input.LA(1)>='\u0B66' && input.LA(1)<='\u0B6F')||(input.LA(1)>='\u0BE7' && input.LA(1)<='\u0BEF')||(input.LA(1)>='\u0C66' && input.LA(1)<='\u0C6F')||(input.LA(1)>='\u0CE6' && input.LA(1)<='\u0CEF')||(input.LA(1)>='\u0D66' && input.LA(1)<='\u0D6F')||(input.LA(1)>='\u0E50' && input.LA(1)<='\u0E59')||(input.LA(1)>='\u0ED0' && input.LA(1)<='\u0ED9')||(input.LA(1)>='\u0F20' && input.LA(1)<='\u0F29')||(input.LA(1)>='\u1040' && input.LA(1)<='\u1049')||(input.LA(1)>='\u1369' && input.LA(1)<='\u1371')||(input.LA(1)>='\u17E0' && input.LA(1)<='\u17E9')||(input.LA(1)>='\u1810' && input.LA(1)<='\u1819')||(input.LA(1)>='\uFF10' && input.LA(1)<='\uFF19'))
 			{
 				input.Consume();
@@ -4647,11 +4647,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("UnicodeConnectorPunctuation", 100);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:918:5: ( '\\u005F' | '\\u203F' .. '\\u2040' | '\\u30FB' | '\\uFE33' .. '\\uFE34' | '\\uFE4D' .. '\\uFE4F' | '\\uFF3F' | '\\uFF65' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:915:5: ( '\\u005F' | '\\u203F' .. '\\u2040' | '\\u30FB' | '\\uFE33' .. '\\uFE34' | '\\uFE4D' .. '\\uFE4F' | '\\uFF3F' | '\\uFF65' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 			{
-			DebugLocation(918, 5);
+			DebugLocation(915, 5);
 			if (input.LA(1)=='_'||(input.LA(1)>='\u203F' && input.LA(1)<='\u2040')||input.LA(1)=='\u30FB'||(input.LA(1)>='\uFE33' && input.LA(1)<='\uFE34')||(input.LA(1)>='\uFE4D' && input.LA(1)<='\uFE4F')||input.LA(1)=='\uFF3F'||input.LA(1)=='\uFF65')
 			{
 				input.Consume();
@@ -4693,15 +4693,15 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Comment;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:928:5: ( '/*' ( options {greedy=false; } : . )* '*/' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:925:5: ( '/*' ( options {greedy=false; } : . )* '*/' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:928:7: '/*' ( options {greedy=false; } : . )* '*/'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:925:7: '/*' ( options {greedy=false; } : . )* '*/'
 			{
-			DebugLocation(928, 7);
+			DebugLocation(925, 7);
 			Match("/*"); if (state.failed) return;
 
-			DebugLocation(928, 12);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:928:12: ( options {greedy=false; } : . )*
+			DebugLocation(925, 12);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:925:12: ( options {greedy=false; } : . )*
 			try { DebugEnterSubRule(21);
 			while (true)
 			{
@@ -4735,9 +4735,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:928:39: .
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:925:39: .
 					{
-					DebugLocation(928, 39);
+					DebugLocation(925, 39);
 					MatchAny(); if (state.failed) return;
 
 					}
@@ -4753,10 +4753,10 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(21); }
 
-			DebugLocation(928, 43);
+			DebugLocation(925, 43);
 			Match("*/"); if (state.failed) return;
 
-			DebugLocation(928, 48);
+			DebugLocation(925, 48);
 			if (state.backtracking == 0)
 			{
 				_channel=Hidden;
@@ -4790,15 +4790,15 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = LineComment;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:932:5: ( '//' (~ ( LT ) )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:929:5: ( '//' (~ ( LT ) )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:932:7: '//' (~ ( LT ) )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:929:7: '//' (~ ( LT ) )*
 			{
-			DebugLocation(932, 7);
+			DebugLocation(929, 7);
 			Match("//"); if (state.failed) return;
 
-			DebugLocation(932, 12);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:932:12: (~ ( LT ) )*
+			DebugLocation(929, 12);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:929:12: (~ ( LT ) )*
 			try { DebugEnterSubRule(22);
 			while (true)
 			{
@@ -4817,9 +4817,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 					{
-					DebugLocation(932, 12);
+					DebugLocation(929, 12);
 					input.Consume();
 					state.failed=false;
 
@@ -4836,7 +4836,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(22); }
 
-			DebugLocation(932, 19);
+			DebugLocation(929, 19);
 			if (state.backtracking == 0)
 			{
 				_channel=Hidden;
@@ -4870,11 +4870,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = LT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:936:5: ( '\\n' | '\\r' | '\\u2028' | '\\u2029' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:933:5: ( '\\n' | '\\r' | '\\u2028' | '\\u2029' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 			{
-			DebugLocation(936, 5);
+			DebugLocation(933, 5);
 			if (input.LA(1)=='\n'||input.LA(1)=='\r'||(input.LA(1)>='\u2028' && input.LA(1)<='\u2029'))
 			{
 				input.Consume();
@@ -4918,11 +4918,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = WhiteSpace;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:943:5: ( ( '\\t' | '\\v' | '\\f' | ' ' | '\\u00A0' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:940:5: ( ( '\\t' | '\\v' | '\\f' | ' ' | '\\u00A0' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:943:7: ( '\\t' | '\\v' | '\\f' | ' ' | '\\u00A0' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:940:7: ( '\\t' | '\\v' | '\\f' | ' ' | '\\u00A0' )
 			{
-			DebugLocation(943, 7);
+			DebugLocation(940, 7);
 			if (input.LA(1)=='\t'||input.LA(1)=='\f'||input.LA(1)==' '||input.LA(1)=='v'||input.LA(1)=='\u00A0')
 			{
 				input.Consume();
@@ -4937,7 +4937,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(943, 45);
+			DebugLocation(940, 45);
 			if (state.backtracking == 0)
 			{
 				Skip();
@@ -4969,7 +4969,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("RegularExpressionFirstChar", 105);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:951:5: (~ ( LT | '*' | '\\\\' | '/' | '[' ) | '\\\\' ~ LT )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:948:5: (~ ( LT | '*' | '\\\\' | '/' | '[' ) | '\\\\' ~ LT )
 			int alt23=2;
 			try { DebugEnterDecision(23, false);
 			int LA23_1 = input.LA(1);
@@ -4994,9 +4994,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:951:7: ~ ( LT | '*' | '\\\\' | '/' | '[' )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:948:7: ~ ( LT | '*' | '\\\\' | '/' | '[' )
 				{
-				DebugLocation(951, 7);
+				DebugLocation(948, 7);
 				input.Consume();
 				state.failed=false;
 
@@ -5004,11 +5004,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:952:7: '\\\\' ~ LT
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:949:7: '\\\\' ~ LT
 				{
-				DebugLocation(952, 7);
+				DebugLocation(949, 7);
 				Match('\\'); if (state.failed) return;
-				DebugLocation(952, 12);
+				DebugLocation(949, 12);
 				input.Consume();
 				state.failed=false;
 
@@ -5038,7 +5038,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("RegularExpressionChar", 106);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:956:5: (~ ( LT | '\\\\' | '/' | '[' ) | '\\\\' ~ LT )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:953:5: (~ ( LT | '\\\\' | '/' | '[' ) | '\\\\' ~ LT )
 			int alt24=2;
 			try { DebugEnterDecision(24, false);
 			int LA24_1 = input.LA(1);
@@ -5063,9 +5063,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:956:7: ~ ( LT | '\\\\' | '/' | '[' )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:953:7: ~ ( LT | '\\\\' | '/' | '[' )
 				{
-				DebugLocation(956, 7);
+				DebugLocation(953, 7);
 				input.Consume();
 				state.failed=false;
 
@@ -5073,11 +5073,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:957:7: '\\\\' ~ LT
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:954:7: '\\\\' ~ LT
 				{
-				DebugLocation(957, 7);
+				DebugLocation(954, 7);
 				Match('\\'); if (state.failed) return;
-				DebugLocation(957, 12);
+				DebugLocation(954, 12);
 				input.Consume();
 				state.failed=false;
 
@@ -5107,7 +5107,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("RegularExpressionInnerChar", 107);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:961:5: (~ ( LT | '\\\\' | ']' ) | '\\\\' ~ LT )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:958:5: (~ ( LT | '\\\\' | ']' ) | '\\\\' ~ LT )
 			int alt25=2;
 			try { DebugEnterDecision(25, false);
 			int LA25_1 = input.LA(1);
@@ -5132,9 +5132,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:961:7: ~ ( LT | '\\\\' | ']' )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:958:7: ~ ( LT | '\\\\' | ']' )
 				{
-				DebugLocation(961, 7);
+				DebugLocation(958, 7);
 				input.Consume();
 				state.failed=false;
 
@@ -5142,11 +5142,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:962:7: '\\\\' ~ LT
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:959:7: '\\\\' ~ LT
 				{
-				DebugLocation(962, 7);
+				DebugLocation(959, 7);
 				Match('\\'); if (state.failed) return;
-				DebugLocation(962, 12);
+				DebugLocation(959, 12);
 				input.Consume();
 				state.failed=false;
 
@@ -5178,18 +5178,18 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = RegularExpressionLiteral;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:966:5: ({...}? => ( '/' '/' ( IdentifierPart )* | '/' ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' ) ( RegularExpressionChar )* ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )* '/' ( IdentifierPart )* ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:963:5: ({...}? => ( '/' '/' ( IdentifierPart )* | '/' ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' ) ( RegularExpressionChar )* ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )* '/' ( IdentifierPart )* ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:966:7: {...}? => ( '/' '/' ( IdentifierPart )* | '/' ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' ) ( RegularExpressionChar )* ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )* '/' ( IdentifierPart )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:963:7: {...}? => ( '/' '/' ( IdentifierPart )* | '/' ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' ) ( RegularExpressionChar )* ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )* '/' ( IdentifierPart )* )
 			{
-			DebugLocation(966, 7);
+			DebugLocation(963, 7);
 			if (!(( AreRegularExpressionsEnabled )))
 			{
 				if (state.backtracking>0) {state.failed=true; return;}
 				throw new FailedPredicateException(input, "RegularExpressionLiteral", " AreRegularExpressionsEnabled ");
 			}
-			DebugLocation(967, 5);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:967:5: ( '/' '/' ( IdentifierPart )* | '/' ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' ) ( RegularExpressionChar )* ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )* '/' ( IdentifierPart )* )
+			DebugLocation(964, 5);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:964:5: ( '/' '/' ( IdentifierPart )* | '/' ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' ) ( RegularExpressionChar )* ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )* '/' ( IdentifierPart )* )
 			int alt34=2;
 			try { DebugEnterSubRule(34);
 			try { DebugEnterDecision(34, false);
@@ -5227,14 +5227,14 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:967:7: '/' '/' ( IdentifierPart )*
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:964:7: '/' '/' ( IdentifierPart )*
 				{
-				DebugLocation(967, 7);
+				DebugLocation(964, 7);
 				Match('/'); if (state.failed) return;
-				DebugLocation(967, 11);
+				DebugLocation(964, 11);
 				Match('/'); if (state.failed) return;
-				DebugLocation(967, 15);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:967:15: ( IdentifierPart )*
+				DebugLocation(964, 15);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:964:15: ( IdentifierPart )*
 				try { DebugEnterSubRule(26);
 				while (true)
 				{
@@ -5253,9 +5253,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:967:15: IdentifierPart
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:964:15: IdentifierPart
 						{
-						DebugLocation(967, 15);
+						DebugLocation(964, 15);
 						mIdentifierPart(); if (state.failed) return;
 
 						}
@@ -5276,12 +5276,12 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:968:7: '/' ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' ) ( RegularExpressionChar )* ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )* '/' ( IdentifierPart )*
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:965:7: '/' ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' ) ( RegularExpressionChar )* ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )* '/' ( IdentifierPart )*
 				{
-				DebugLocation(968, 7);
+				DebugLocation(965, 7);
 				Match('/'); if (state.failed) return;
-				DebugLocation(969, 7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:969:7: ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' )
+				DebugLocation(966, 7);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:966:7: ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' )
 				int alt28=2;
 				try { DebugEnterSubRule(28);
 				try { DebugEnterDecision(28, false);
@@ -5307,21 +5307,21 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:969:8: RegularExpressionFirstChar
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:966:8: RegularExpressionFirstChar
 					{
-					DebugLocation(969, 8);
+					DebugLocation(966, 8);
 					mRegularExpressionFirstChar(); if (state.failed) return;
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:969:37: '[' ( RegularExpressionInnerChar )* ']'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:966:37: '[' ( RegularExpressionInnerChar )* ']'
 					{
-					DebugLocation(969, 37);
+					DebugLocation(966, 37);
 					Match('['); if (state.failed) return;
-					DebugLocation(969, 41);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:969:41: ( RegularExpressionInnerChar )*
+					DebugLocation(966, 41);
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:966:41: ( RegularExpressionInnerChar )*
 					try { DebugEnterSubRule(27);
 					while (true)
 					{
@@ -5340,9 +5340,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 						{
 						case 1:
 							DebugEnterAlt(1);
-							// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:969:41: RegularExpressionInnerChar
+							// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:966:41: RegularExpressionInnerChar
 							{
-							DebugLocation(969, 41);
+							DebugLocation(966, 41);
 							mRegularExpressionInnerChar(); if (state.failed) return;
 
 							}
@@ -5358,7 +5358,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 					} finally { DebugExitSubRule(27); }
 
-					DebugLocation(969, 69);
+					DebugLocation(966, 69);
 					Match(']'); if (state.failed) return;
 
 					}
@@ -5367,8 +5367,8 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				}
 				} finally { DebugExitSubRule(28); }
 
-				DebugLocation(970, 7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:970:7: ( RegularExpressionChar )*
+				DebugLocation(967, 7);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:967:7: ( RegularExpressionChar )*
 				try { DebugEnterSubRule(29);
 				while (true)
 				{
@@ -5387,9 +5387,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:970:7: RegularExpressionChar
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:967:7: RegularExpressionChar
 						{
-						DebugLocation(970, 7);
+						DebugLocation(967, 7);
 						mRegularExpressionChar(); if (state.failed) return;
 
 						}
@@ -5405,8 +5405,8 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(29); }
 
-				DebugLocation(971, 7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:971:7: ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )*
+				DebugLocation(968, 7);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:968:7: ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )*
 				try { DebugEnterSubRule(32);
 				while (true)
 				{
@@ -5425,12 +5425,12 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:971:8: '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )*
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:968:8: '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )*
 						{
-						DebugLocation(971, 8);
+						DebugLocation(968, 8);
 						Match('['); if (state.failed) return;
-						DebugLocation(971, 12);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:971:12: ( RegularExpressionInnerChar )*
+						DebugLocation(968, 12);
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:968:12: ( RegularExpressionInnerChar )*
 						try { DebugEnterSubRule(30);
 						while (true)
 						{
@@ -5449,9 +5449,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 							{
 							case 1:
 								DebugEnterAlt(1);
-								// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:971:12: RegularExpressionInnerChar
+								// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:968:12: RegularExpressionInnerChar
 								{
-								DebugLocation(971, 12);
+								DebugLocation(968, 12);
 								mRegularExpressionInnerChar(); if (state.failed) return;
 
 								}
@@ -5467,10 +5467,10 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 						} finally { DebugExitSubRule(30); }
 
-						DebugLocation(971, 40);
+						DebugLocation(968, 40);
 						Match(']'); if (state.failed) return;
-						DebugLocation(971, 44);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:971:44: ( RegularExpressionChar )*
+						DebugLocation(968, 44);
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:968:44: ( RegularExpressionChar )*
 						try { DebugEnterSubRule(31);
 						while (true)
 						{
@@ -5489,9 +5489,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 							{
 							case 1:
 								DebugEnterAlt(1);
-								// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:971:44: RegularExpressionChar
+								// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:968:44: RegularExpressionChar
 								{
-								DebugLocation(971, 44);
+								DebugLocation(968, 44);
 								mRegularExpressionChar(); if (state.failed) return;
 
 								}
@@ -5521,10 +5521,10 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(32); }
 
-				DebugLocation(972, 7);
+				DebugLocation(969, 7);
 				Match('/'); if (state.failed) return;
-				DebugLocation(972, 11);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:972:11: ( IdentifierPart )*
+				DebugLocation(969, 11);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:969:11: ( IdentifierPart )*
 				try { DebugEnterSubRule(33);
 				while (true)
 				{
@@ -5543,9 +5543,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:972:11: IdentifierPart
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:969:11: IdentifierPart
 						{
-						DebugLocation(972, 11);
+						DebugLocation(969, 11);
 						mIdentifierPart(); if (state.failed) return;
 
 						}
@@ -5585,7 +5585,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 	public override void mTokens()
 	{
-		// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:8: ( FALSE | NULL | RBRACE | RBRACK | RPAREN | THIS | TRUE | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | StringLiteral | NumericLiteral | Identifier | Comment | LineComment | LT | WhiteSpace | RegularExpressionLiteral )
+		// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:8: ( FALSE | NULL | RBRACE | RBRACK | RPAREN | THIS | TRUE | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | StringLiteral | NumericLiteral | Identifier | Comment | LineComment | LT | WhiteSpace | RegularExpressionLiteral )
 		int alt35=84;
 		try { DebugEnterDecision(35, false);
 		try
@@ -5602,7 +5602,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 		case 1:
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:10: FALSE
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:10: FALSE
 			{
 			DebugLocation(1, 10);
 			mFALSE(); if (state.failed) return;
@@ -5611,7 +5611,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 2:
 			DebugEnterAlt(2);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:16: NULL
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:16: NULL
 			{
 			DebugLocation(1, 16);
 			mNULL(); if (state.failed) return;
@@ -5620,7 +5620,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 3:
 			DebugEnterAlt(3);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:21: RBRACE
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:21: RBRACE
 			{
 			DebugLocation(1, 21);
 			mRBRACE(); if (state.failed) return;
@@ -5629,7 +5629,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 4:
 			DebugEnterAlt(4);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:28: RBRACK
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:28: RBRACK
 			{
 			DebugLocation(1, 28);
 			mRBRACK(); if (state.failed) return;
@@ -5638,7 +5638,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 5:
 			DebugEnterAlt(5);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:35: RPAREN
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:35: RPAREN
 			{
 			DebugLocation(1, 35);
 			mRPAREN(); if (state.failed) return;
@@ -5647,7 +5647,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 6:
 			DebugEnterAlt(6);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:42: THIS
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:42: THIS
 			{
 			DebugLocation(1, 42);
 			mTHIS(); if (state.failed) return;
@@ -5656,7 +5656,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 7:
 			DebugEnterAlt(7);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:47: TRUE
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:47: TRUE
 			{
 			DebugLocation(1, 47);
 			mTRUE(); if (state.failed) return;
@@ -5665,7 +5665,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 8:
 			DebugEnterAlt(8);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:52: T__43
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:52: T__43
 			{
 			DebugLocation(1, 52);
 			mT__43(); if (state.failed) return;
@@ -5674,7 +5674,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 9:
 			DebugEnterAlt(9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:58: T__44
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:58: T__44
 			{
 			DebugLocation(1, 58);
 			mT__44(); if (state.failed) return;
@@ -5683,7 +5683,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 10:
 			DebugEnterAlt(10);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:64: T__45
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:64: T__45
 			{
 			DebugLocation(1, 64);
 			mT__45(); if (state.failed) return;
@@ -5692,7 +5692,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 11:
 			DebugEnterAlt(11);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:70: T__46
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:70: T__46
 			{
 			DebugLocation(1, 70);
 			mT__46(); if (state.failed) return;
@@ -5701,7 +5701,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 12:
 			DebugEnterAlt(12);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:76: T__47
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:76: T__47
 			{
 			DebugLocation(1, 76);
 			mT__47(); if (state.failed) return;
@@ -5710,7 +5710,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 13:
 			DebugEnterAlt(13);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:82: T__48
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:82: T__48
 			{
 			DebugLocation(1, 82);
 			mT__48(); if (state.failed) return;
@@ -5719,7 +5719,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 14:
 			DebugEnterAlt(14);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:88: T__49
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:88: T__49
 			{
 			DebugLocation(1, 88);
 			mT__49(); if (state.failed) return;
@@ -5728,7 +5728,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 15:
 			DebugEnterAlt(15);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:94: T__50
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:94: T__50
 			{
 			DebugLocation(1, 94);
 			mT__50(); if (state.failed) return;
@@ -5737,7 +5737,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 16:
 			DebugEnterAlt(16);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:100: T__51
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:100: T__51
 			{
 			DebugLocation(1, 100);
 			mT__51(); if (state.failed) return;
@@ -5746,7 +5746,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 17:
 			DebugEnterAlt(17);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:106: T__52
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:106: T__52
 			{
 			DebugLocation(1, 106);
 			mT__52(); if (state.failed) return;
@@ -5755,7 +5755,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 18:
 			DebugEnterAlt(18);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:112: T__53
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:112: T__53
 			{
 			DebugLocation(1, 112);
 			mT__53(); if (state.failed) return;
@@ -5764,7 +5764,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 19:
 			DebugEnterAlt(19);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:118: T__54
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:118: T__54
 			{
 			DebugLocation(1, 118);
 			mT__54(); if (state.failed) return;
@@ -5773,7 +5773,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 20:
 			DebugEnterAlt(20);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:124: T__55
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:124: T__55
 			{
 			DebugLocation(1, 124);
 			mT__55(); if (state.failed) return;
@@ -5782,7 +5782,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 21:
 			DebugEnterAlt(21);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:130: T__56
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:130: T__56
 			{
 			DebugLocation(1, 130);
 			mT__56(); if (state.failed) return;
@@ -5791,7 +5791,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 22:
 			DebugEnterAlt(22);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:136: T__57
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:136: T__57
 			{
 			DebugLocation(1, 136);
 			mT__57(); if (state.failed) return;
@@ -5800,7 +5800,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 23:
 			DebugEnterAlt(23);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:142: T__58
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:142: T__58
 			{
 			DebugLocation(1, 142);
 			mT__58(); if (state.failed) return;
@@ -5809,7 +5809,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 24:
 			DebugEnterAlt(24);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:148: T__59
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:148: T__59
 			{
 			DebugLocation(1, 148);
 			mT__59(); if (state.failed) return;
@@ -5818,7 +5818,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 25:
 			DebugEnterAlt(25);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:154: T__60
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:154: T__60
 			{
 			DebugLocation(1, 154);
 			mT__60(); if (state.failed) return;
@@ -5827,7 +5827,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 26:
 			DebugEnterAlt(26);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:160: T__61
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:160: T__61
 			{
 			DebugLocation(1, 160);
 			mT__61(); if (state.failed) return;
@@ -5836,7 +5836,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 27:
 			DebugEnterAlt(27);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:166: T__62
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:166: T__62
 			{
 			DebugLocation(1, 166);
 			mT__62(); if (state.failed) return;
@@ -5845,7 +5845,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 28:
 			DebugEnterAlt(28);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:172: T__63
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:172: T__63
 			{
 			DebugLocation(1, 172);
 			mT__63(); if (state.failed) return;
@@ -5854,7 +5854,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 29:
 			DebugEnterAlt(29);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:178: T__64
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:178: T__64
 			{
 			DebugLocation(1, 178);
 			mT__64(); if (state.failed) return;
@@ -5863,7 +5863,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 30:
 			DebugEnterAlt(30);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:184: T__65
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:184: T__65
 			{
 			DebugLocation(1, 184);
 			mT__65(); if (state.failed) return;
@@ -5872,7 +5872,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 31:
 			DebugEnterAlt(31);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:190: T__66
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:190: T__66
 			{
 			DebugLocation(1, 190);
 			mT__66(); if (state.failed) return;
@@ -5881,7 +5881,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 32:
 			DebugEnterAlt(32);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:196: T__67
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:196: T__67
 			{
 			DebugLocation(1, 196);
 			mT__67(); if (state.failed) return;
@@ -5890,7 +5890,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 33:
 			DebugEnterAlt(33);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:202: T__68
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:202: T__68
 			{
 			DebugLocation(1, 202);
 			mT__68(); if (state.failed) return;
@@ -5899,7 +5899,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 34:
 			DebugEnterAlt(34);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:208: T__69
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:208: T__69
 			{
 			DebugLocation(1, 208);
 			mT__69(); if (state.failed) return;
@@ -5908,7 +5908,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 35:
 			DebugEnterAlt(35);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:214: T__70
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:214: T__70
 			{
 			DebugLocation(1, 214);
 			mT__70(); if (state.failed) return;
@@ -5917,7 +5917,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 36:
 			DebugEnterAlt(36);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:220: T__71
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:220: T__71
 			{
 			DebugLocation(1, 220);
 			mT__71(); if (state.failed) return;
@@ -5926,7 +5926,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 37:
 			DebugEnterAlt(37);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:226: T__72
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:226: T__72
 			{
 			DebugLocation(1, 226);
 			mT__72(); if (state.failed) return;
@@ -5935,7 +5935,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 38:
 			DebugEnterAlt(38);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:232: T__73
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:232: T__73
 			{
 			DebugLocation(1, 232);
 			mT__73(); if (state.failed) return;
@@ -5944,7 +5944,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 39:
 			DebugEnterAlt(39);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:238: T__74
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:238: T__74
 			{
 			DebugLocation(1, 238);
 			mT__74(); if (state.failed) return;
@@ -5953,7 +5953,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 40:
 			DebugEnterAlt(40);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:244: T__75
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:244: T__75
 			{
 			DebugLocation(1, 244);
 			mT__75(); if (state.failed) return;
@@ -5962,7 +5962,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 41:
 			DebugEnterAlt(41);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:250: T__76
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:250: T__76
 			{
 			DebugLocation(1, 250);
 			mT__76(); if (state.failed) return;
@@ -5971,7 +5971,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 42:
 			DebugEnterAlt(42);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:256: T__77
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:256: T__77
 			{
 			DebugLocation(1, 256);
 			mT__77(); if (state.failed) return;
@@ -5980,7 +5980,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 43:
 			DebugEnterAlt(43);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:262: T__78
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:262: T__78
 			{
 			DebugLocation(1, 262);
 			mT__78(); if (state.failed) return;
@@ -5989,7 +5989,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 44:
 			DebugEnterAlt(44);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:268: T__79
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:268: T__79
 			{
 			DebugLocation(1, 268);
 			mT__79(); if (state.failed) return;
@@ -5998,7 +5998,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 45:
 			DebugEnterAlt(45);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:274: T__80
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:274: T__80
 			{
 			DebugLocation(1, 274);
 			mT__80(); if (state.failed) return;
@@ -6007,7 +6007,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 46:
 			DebugEnterAlt(46);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:280: T__81
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:280: T__81
 			{
 			DebugLocation(1, 280);
 			mT__81(); if (state.failed) return;
@@ -6016,7 +6016,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 47:
 			DebugEnterAlt(47);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:286: T__82
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:286: T__82
 			{
 			DebugLocation(1, 286);
 			mT__82(); if (state.failed) return;
@@ -6025,7 +6025,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 48:
 			DebugEnterAlt(48);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:292: T__83
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:292: T__83
 			{
 			DebugLocation(1, 292);
 			mT__83(); if (state.failed) return;
@@ -6034,7 +6034,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 49:
 			DebugEnterAlt(49);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:298: T__84
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:298: T__84
 			{
 			DebugLocation(1, 298);
 			mT__84(); if (state.failed) return;
@@ -6043,7 +6043,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 50:
 			DebugEnterAlt(50);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:304: T__85
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:304: T__85
 			{
 			DebugLocation(1, 304);
 			mT__85(); if (state.failed) return;
@@ -6052,7 +6052,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 51:
 			DebugEnterAlt(51);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:310: T__86
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:310: T__86
 			{
 			DebugLocation(1, 310);
 			mT__86(); if (state.failed) return;
@@ -6061,7 +6061,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 52:
 			DebugEnterAlt(52);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:316: T__87
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:316: T__87
 			{
 			DebugLocation(1, 316);
 			mT__87(); if (state.failed) return;
@@ -6070,7 +6070,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 53:
 			DebugEnterAlt(53);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:322: T__88
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:322: T__88
 			{
 			DebugLocation(1, 322);
 			mT__88(); if (state.failed) return;
@@ -6079,7 +6079,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 54:
 			DebugEnterAlt(54);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:328: T__89
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:328: T__89
 			{
 			DebugLocation(1, 328);
 			mT__89(); if (state.failed) return;
@@ -6088,7 +6088,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 55:
 			DebugEnterAlt(55);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:334: T__90
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:334: T__90
 			{
 			DebugLocation(1, 334);
 			mT__90(); if (state.failed) return;
@@ -6097,7 +6097,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 56:
 			DebugEnterAlt(56);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:340: T__91
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:340: T__91
 			{
 			DebugLocation(1, 340);
 			mT__91(); if (state.failed) return;
@@ -6106,7 +6106,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 57:
 			DebugEnterAlt(57);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:346: T__92
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:346: T__92
 			{
 			DebugLocation(1, 346);
 			mT__92(); if (state.failed) return;
@@ -6115,7 +6115,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 58:
 			DebugEnterAlt(58);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:352: T__93
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:352: T__93
 			{
 			DebugLocation(1, 352);
 			mT__93(); if (state.failed) return;
@@ -6124,7 +6124,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 59:
 			DebugEnterAlt(59);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:358: T__94
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:358: T__94
 			{
 			DebugLocation(1, 358);
 			mT__94(); if (state.failed) return;
@@ -6133,7 +6133,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 60:
 			DebugEnterAlt(60);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:364: T__95
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:364: T__95
 			{
 			DebugLocation(1, 364);
 			mT__95(); if (state.failed) return;
@@ -6142,7 +6142,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 61:
 			DebugEnterAlt(61);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:370: T__96
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:370: T__96
 			{
 			DebugLocation(1, 370);
 			mT__96(); if (state.failed) return;
@@ -6151,7 +6151,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 62:
 			DebugEnterAlt(62);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:376: T__97
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:376: T__97
 			{
 			DebugLocation(1, 376);
 			mT__97(); if (state.failed) return;
@@ -6160,7 +6160,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 63:
 			DebugEnterAlt(63);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:382: T__98
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:382: T__98
 			{
 			DebugLocation(1, 382);
 			mT__98(); if (state.failed) return;
@@ -6169,7 +6169,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 64:
 			DebugEnterAlt(64);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:388: T__99
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:388: T__99
 			{
 			DebugLocation(1, 388);
 			mT__99(); if (state.failed) return;
@@ -6178,7 +6178,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 65:
 			DebugEnterAlt(65);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:394: T__100
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:394: T__100
 			{
 			DebugLocation(1, 394);
 			mT__100(); if (state.failed) return;
@@ -6187,7 +6187,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 66:
 			DebugEnterAlt(66);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:401: T__101
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:401: T__101
 			{
 			DebugLocation(1, 401);
 			mT__101(); if (state.failed) return;
@@ -6196,7 +6196,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 67:
 			DebugEnterAlt(67);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:408: T__102
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:408: T__102
 			{
 			DebugLocation(1, 408);
 			mT__102(); if (state.failed) return;
@@ -6205,7 +6205,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 68:
 			DebugEnterAlt(68);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:415: T__103
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:415: T__103
 			{
 			DebugLocation(1, 415);
 			mT__103(); if (state.failed) return;
@@ -6214,7 +6214,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 69:
 			DebugEnterAlt(69);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:422: T__104
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:422: T__104
 			{
 			DebugLocation(1, 422);
 			mT__104(); if (state.failed) return;
@@ -6223,7 +6223,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 70:
 			DebugEnterAlt(70);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:429: T__105
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:429: T__105
 			{
 			DebugLocation(1, 429);
 			mT__105(); if (state.failed) return;
@@ -6232,7 +6232,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 71:
 			DebugEnterAlt(71);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:436: T__106
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:436: T__106
 			{
 			DebugLocation(1, 436);
 			mT__106(); if (state.failed) return;
@@ -6241,7 +6241,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 72:
 			DebugEnterAlt(72);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:443: T__107
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:443: T__107
 			{
 			DebugLocation(1, 443);
 			mT__107(); if (state.failed) return;
@@ -6250,7 +6250,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 73:
 			DebugEnterAlt(73);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:450: T__108
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:450: T__108
 			{
 			DebugLocation(1, 450);
 			mT__108(); if (state.failed) return;
@@ -6259,7 +6259,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 74:
 			DebugEnterAlt(74);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:457: T__109
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:457: T__109
 			{
 			DebugLocation(1, 457);
 			mT__109(); if (state.failed) return;
@@ -6268,7 +6268,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 75:
 			DebugEnterAlt(75);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:464: T__110
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:464: T__110
 			{
 			DebugLocation(1, 464);
 			mT__110(); if (state.failed) return;
@@ -6277,7 +6277,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 76:
 			DebugEnterAlt(76);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:471: T__111
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:471: T__111
 			{
 			DebugLocation(1, 471);
 			mT__111(); if (state.failed) return;
@@ -6286,7 +6286,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 77:
 			DebugEnterAlt(77);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:478: StringLiteral
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:478: StringLiteral
 			{
 			DebugLocation(1, 478);
 			mStringLiteral(); if (state.failed) return;
@@ -6295,7 +6295,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 78:
 			DebugEnterAlt(78);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:492: NumericLiteral
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:492: NumericLiteral
 			{
 			DebugLocation(1, 492);
 			mNumericLiteral(); if (state.failed) return;
@@ -6304,7 +6304,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 79:
 			DebugEnterAlt(79);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:507: Identifier
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:507: Identifier
 			{
 			DebugLocation(1, 507);
 			mIdentifier(); if (state.failed) return;
@@ -6313,7 +6313,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 80:
 			DebugEnterAlt(80);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:518: Comment
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:518: Comment
 			{
 			DebugLocation(1, 518);
 			mComment(); if (state.failed) return;
@@ -6322,7 +6322,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 81:
 			DebugEnterAlt(81);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:526: LineComment
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:526: LineComment
 			{
 			DebugLocation(1, 526);
 			mLineComment(); if (state.failed) return;
@@ -6331,7 +6331,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 82:
 			DebugEnterAlt(82);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:538: LT
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:538: LT
 			{
 			DebugLocation(1, 538);
 			mLT(); if (state.failed) return;
@@ -6340,7 +6340,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 83:
 			DebugEnterAlt(83);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:541: WhiteSpace
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:541: WhiteSpace
 			{
 			DebugLocation(1, 541);
 			mWhiteSpace(); if (state.failed) return;
@@ -6349,7 +6349,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 84:
 			DebugEnterAlt(84);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:552: RegularExpressionLiteral
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:552: RegularExpressionLiteral
 			{
 			DebugLocation(1, 552);
 			mRegularExpressionLiteral(); if (state.failed) return;
@@ -6372,11 +6372,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("synpred1_JavaScript_fragment", 110);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:522:7: ( IdentifierStart )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:519:7: ( IdentifierStart )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages.ANTLRv3\\Processors\\JavaScript\\JavaScript.g:522:8: IdentifierStart
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:519:8: IdentifierStart
 			{
-			DebugLocation(522, 8);
+			DebugLocation(519, 8);
 			mIdentifierStart(); if (state.failed) return;
 
 			}
@@ -6480,7 +6480,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			this.transition = DFA15_transition;
 		}
 
-		public override string Description { get { return "497:10: fragment DecimalLiteral : ( ( DecimalDigit )+ '.' ( DecimalDigit )* ( ExponentPart )? | ( '.' )? ( DecimalDigit )+ ( ExponentPart )? );"; } }
+		public override string Description { get { return "494:10: fragment DecimalLiteral : ( ( DecimalDigit )+ '.' ( DecimalDigit )* ( ExponentPart )? | ( '.' )? ( DecimalDigit )+ ( ExponentPart )? );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{

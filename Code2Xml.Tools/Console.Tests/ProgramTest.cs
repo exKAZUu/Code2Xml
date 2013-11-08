@@ -20,8 +20,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Code2Xml.Core;
 using Code2Xml.Core.CodeToXmls;
-using Code2Xml.Core.Plugin;
 using Code2Xml.Languages.C.CodeToXmls;
 using Code2Xml.Languages.C.XmlToCodes;
 using NUnit.Framework;
@@ -57,7 +57,7 @@ namespace Code2Xml.Tools.Console.Tests {
 						.Select(
 								p => new TestCaseData(
 										p.Path, p.Opt,
-										PluginManager.CodeToXmls.FirstOrDefault(
+										Code2XmlInstances.CodeToXmls.FirstOrDefault(
 												o => o.GetType().Name == p.Name + "CodeToXml")))
 						.Where(t => t.Arguments[2] != null);
 			}

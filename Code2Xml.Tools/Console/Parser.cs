@@ -19,7 +19,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Code2Xml.Core.Plugin;
+using Code2Xml.Core;
 using Paraiba.Text;
 
 namespace Code2Xml.Tools.Console {
@@ -32,9 +32,9 @@ namespace Code2Xml.Tools.Console {
 			foreach (var path in filePaths) {
 				var extension = Path.GetExtension(path);
 				var parser = parserName != null
-						? PluginManager.GetCodeToXmlByName(
+						? Code2XmlInstances.GetCodeToXmlByName(
 								parserName)
-						: PluginManager.GetCodeToXmlByExtension(
+						: Code2XmlInstances.GetCodeToXmlByExtension(
 								extension);
 				if (parser == null) {
 					continue;
@@ -49,7 +49,7 @@ namespace Code2Xml.Tools.Console {
 				IEnumerable<string> filePaths,
 				string parserName, OutputType isOutputFile,
 				string outputPath) {
-			var parser = PluginManager.GetXmlToCodeByName(parserName);
+			var parser = Code2XmlInstances.GetXmlToCodeByName(parserName);
 			var getOutPutFunc = GetGetOutputFunc(
 					isOutputFile, outputPath,
 					parser.DefaultExtension);

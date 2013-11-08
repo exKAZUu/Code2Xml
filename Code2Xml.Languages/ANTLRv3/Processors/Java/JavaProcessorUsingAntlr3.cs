@@ -21,38 +21,38 @@ using Antlr.Runtime;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv3.Core;
 
-namespace Code2Xml.Languages.ANTLRv3.Processors.Php {
+namespace Code2Xml.Languages.ANTLRv3.Processors.Java {
 	/// <summary>
-	/// Represents a Php parser and a Php code generator.
+	/// Represents a Java parser and a Java code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class PhpProcessor : Antlr3Processor<PhpParser> {
+	public class JavaProcessorUsingAntlr3 : Antlr3Processor<JavaParser> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
 		public override string LanguageName {
-			get { return "Php"; }
+			get { return "Java"; }
 		}
 
 		/// <summary>
 		/// Gets the language version.
 		/// </summary>
 		public override string LanguageVersion {
-			get { return "5.3"; }
+			get { return "7"; }
 		}
 
-		public PhpProcessor() : base(".php") {}
+		public JavaProcessorUsingAntlr3() : base(".java") {}
 
 		protected override ITokenSource CreateLexer(ICharStream stream) {
-			return new PhpLexer(stream);
+			return new JavaLexer(stream);
 		}
 
-		protected override PhpParser CreateParser(ITokenStream stream) {
-			return new PhpParser(stream);
+		protected override JavaParser CreateParser(ITokenStream stream) {
+			return new JavaParser(stream);
 		}
 
-		protected override Antlr3AstNode Parse(PhpParser parser) {
-			return parser.prog();
+		protected override Antlr3AstNode Parse(JavaParser parser) {
+			return parser.compilationUnit();
 		}
 	}
 }

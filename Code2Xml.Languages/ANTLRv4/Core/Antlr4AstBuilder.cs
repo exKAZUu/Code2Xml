@@ -22,6 +22,7 @@ using System.Xml.Linq;
 using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
 using Code2Xml.Core;
+using Code2Xml.Core.Location;
 
 namespace Code2Xml.Languages.ANTLRv4.Core {
 	public class Antlr4AstBuilder : AbstractParseTreeVisitor<object> {
@@ -93,20 +94,9 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 		}
 
 		private static XElement CreateTokenElement(string name, IToken token) {
-			var text = token.Text;
-			var newLineCount = text.Count(ch => ch == '\n');
-			var tokenElement = new XElement(name, text);
-			tokenElement.SetAttributeValue(
-					Code2XmlConstants.StartLineName, token.Line);
-			tokenElement.SetAttributeValue(
-					Code2XmlConstants.StartPositionName, token.Column);
-			tokenElement.SetAttributeValue(
-					Code2XmlConstants.EndLineName, token.Line + newLineCount);
-			tokenElement.SetAttributeValue(
-					Code2XmlConstants.EndPositionName, newLineCount == 0
-							? token.Column + text.Length - 1
-							: text.Length - (text.LastIndexOf('\n') + 1) - 1);
-			return tokenElement;
+			var tokenElement = new XElement(name, token.Text);
+			var startLocation = new CodeLocation(token.Line, token.Column);
+			return CodeRange.SetLocationAttributes(tokenElement, startLocation);
 		}
 	}
 }

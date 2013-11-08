@@ -21,6 +21,7 @@ using System.Xml.Linq;
 using Antlr.Runtime;
 using Antlr.Runtime.Tree;
 using Code2Xml.Core;
+using Code2Xml.Core.Location;
 using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Languages.ANTLRv3.Core {
@@ -79,20 +80,9 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 		}
 
 		private static XElement CreateTokenElement(string name, IToken token) {
-			var text = token.Text;
-			var newLineCount = text.Count(ch => ch == '\n');
-			var tokenElement = new XElement(name, text);
-			tokenElement.SetAttributeValue(
-					Code2XmlConstants.StartLineName, token.Line);
-			tokenElement.SetAttributeValue(
-					Code2XmlConstants.StartPositionName, token.CharPositionInLine);
-			tokenElement.SetAttributeValue(
-					Code2XmlConstants.EndLineName, token.Line + newLineCount);
-			tokenElement.SetAttributeValue(
-					Code2XmlConstants.EndPositionName, newLineCount == 0
-							? token.CharPositionInLine + text.Length - 1
-							: text.Length - (text.LastIndexOf('\n') + 1) - 1);
-			return tokenElement;
+			var tokenElement = new XElement(name, token.Text);
+			var startLocation = new CodeLocation(token.Line, token.CharPositionInLine);
+			return CodeRange.SetLocationAttributes(tokenElement, startLocation);
 		}
 	}
 

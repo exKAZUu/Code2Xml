@@ -62,19 +62,30 @@ class Main {
 		[Test]
 		public void ParseBrokenCodeIgnoringException() {
 			var code = @"class A {{ }";
-			var processor = new JavaProcessor();
+			var processor = new JavaProcessorUsingAntlr3();
 			processor.GenerateXml(code, false);
+		}
+
+		[Test]
+		public void ParseDiamond() {
+			var code = @"
+public class AlignedTuplePrinter {
+    List<String> columnLines = new ArrayList<>();
+}
+";
+			var processor = new JavaProcessorUsingAntlr3();
+			processor.GenerateXml(code, true);
 		}
 
 		[Test, ExpectedException(typeof(ParseException))]
 		public void ParseBrokenCode() {
 			var code = @"class A {{ }";
-			var processor = new JavaProcessor();
+			var processor = new JavaProcessorUsingAntlr3();
 			processor.GenerateXml(code, true);
 		}
 
 		private static void TestParsing(string code) {
-			var processor = new JavaProcessor();
+			var processor = new JavaProcessorUsingAntlr3();
 			var xml = processor.GenerateXml(code);
 			var code2 = processor.GenerateCode(xml);
 			Assert.That(code2, Is.EqualTo(code));

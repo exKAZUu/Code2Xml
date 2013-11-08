@@ -60,6 +60,22 @@
       <Project>{20510236-d8b1-4617-9352-4e6134f9ab67}</Project>
       <Name>ParserTests</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ANTLRv3\Code2Xml.Languages.ANTLRv3.csproj">
+      <Project>{942a56fd-13af-4ee6-a8d7-7ddf50374715}</Project>
+      <Name>Code2Xml.Languages.ANTLRv3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ANTLRv4\Code2Xml.Languages.ANTLRv4.csproj">
+      <Project>{1de85da9-6ebf-49d1-8dda-75d9d25497f6}</Project>
+      <Name>Code2Xml.Languages.ANTLRv4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Obsolete.ANTLRv3\Code2Xml.Languages.Obsolete.ANTLRv3.csproj">
+      <Project>{82a3e237-db4f-4a94-b805-cc6ce8f46e56}</Project>
+      <Name>Code2Xml.Languages.Obsolete.ANTLRv3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Obsolete.Others\Code2Xml.Languages.Obsolete.Others.csproj">
+      <Project>{8193f861-1cfc-4d5d-87b0-0df80492f915}</Project>
+      <Name>Code2Xml.Languages.Obsolete.Others</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

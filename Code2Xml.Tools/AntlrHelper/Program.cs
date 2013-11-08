@@ -25,15 +25,17 @@ using Paraiba.IO;
 namespace Code2Xml.Tools.AntlrHelper {
 	internal class Program {
 		private static void Main(string[] args) {
-			args = new[] { @"C:\Users\exKAZUu\Projects\Code2Xml\Code2Xml.Languages.ANTLRv3\Processors" };
+			if (args.Length == 0) {
+				Console.WriteLine("Please enter the path of the input directory");
+				args = new[] { Console.In.ReadLine() };
+			}
 			foreach (var arg in args) {
 				var path = Path.GetFullPath(arg);
 				var dir = Directory.Exists(path) ? path : Path.GetDirectoryName(path);
 				foreach (var file in Directory.GetFiles(dir, "*.g", SearchOption.AllDirectories)) {
 					Console.WriteLine(file);
 					var info = new ProcessStartInfo {
-						FileName =
-							@"C:\Users\exKAZUu\Dropbox\Private\Tools\Development\ANTLR\antlr-dotnet-tool-3.5.0.2\Antlr3.exe",
+						FileName = "Antlr3",
 						Arguments = '"' + file + '"',
 						CreateNoWindow = true,
 						UseShellExecute = false,

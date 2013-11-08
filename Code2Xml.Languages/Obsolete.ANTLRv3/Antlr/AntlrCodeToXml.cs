@@ -23,6 +23,7 @@ using System.Linq;
 using System.Xml.Linq;
 using Antlr.Runtime;
 using Code2Xml.Core.Antlr;
+using Code2Xml.Core.Location;
 
 namespace Code2Xml.Core.CodeToXmls {
 	[ContractClass(typeof(AntlrCodeToXmlContract<>))]
@@ -62,15 +63,9 @@ namespace Code2Xml.Core.CodeToXmls {
 			for (int i = 0; i < tokens.Count; i++) {
 				var t = tokens.Get(i);
 				if (t.Channel == TokenChannels.Hidden) {
-					var comment = new XElement(Code2XmlConstants.CommentName);
-					comment.Value = t.Text;
-					comment.SetAttributeValue(Code2XmlConstants.StartLineName, t.Line);
-					comment.SetAttributeValue(
-							Code2XmlConstants.StartPositionName, t.CharPositionInLine);
-					comment.SetAttributeValue(
-							Code2XmlConstants.EndLineName,
-							t.Line + comment.Value.TrimEnd().Count(ch => ch == '\n'));
-					element.Add(comment);
+					var comment = new XElement(Code2XmlConstants.CommentName, t.Text);
+					var startLocation = new CodeLocation(t.Line, t.CharPositionInLine);
+					element.Add(CodeRange.SetLocationAttributes(comment, startLocation));
 				}
 			}
 

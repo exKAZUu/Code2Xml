@@ -21,38 +21,38 @@ using Antlr.Runtime;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv3.Core;
 
-namespace Code2Xml.Languages.ANTLRv3.Processors.CSharp {
+namespace Code2Xml.Languages.ANTLRv3.Processors.Lua {
 	/// <summary>
-	/// Represents a CSharp parser and a CSharp code generator.
+	/// Represents a Lua parser and a Lua code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class CSharpProcessor : Antlr3Processor<csParser> {
+	public class LuaProcessorUsingAntlr3 : Antlr3Processor<LuaParser> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
 		public override string LanguageName {
-			get { return "CSharp"; }
+			get { return "Lua"; }
 		}
 
 		/// <summary>
 		/// Gets the language version.
 		/// </summary>
 		public override string LanguageVersion {
-			get { return "4"; }
+			get { return "5.1"; }
 		}
 
-		public CSharpProcessor() : base(".cs") {}
+		public LuaProcessorUsingAntlr3() : base(".lua") {}
 
 		protected override ITokenSource CreateLexer(ICharStream stream) {
-			return new csLexer(stream);
+			return new LuaLexer(stream);
 		}
 
-		protected override csParser CreateParser(ITokenStream stream) {
-			return new csParser(stream);
+		protected override LuaParser CreateParser(ITokenStream stream) {
+			return new LuaParser(stream);
 		}
 
-		protected override Antlr3AstNode Parse(csParser parser) {
-			return parser.compilation_unit();
+		protected override Antlr3AstNode Parse(LuaParser parser) {
+			return parser.chunk();
 		}
 	}
 }

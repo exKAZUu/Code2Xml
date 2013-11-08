@@ -27,9 +27,6 @@ tokens
     RBRACE		= '}' ;
 }
 
-@modifier { public }
-@ctorModifier { public }
-
 @lexer::namespace { Code2Xml.Languages.ANTLRv3.Processors.JavaScript }
 @parser::namespace { Code2Xml.Languages.ANTLRv3.Processors.JavaScript }
 

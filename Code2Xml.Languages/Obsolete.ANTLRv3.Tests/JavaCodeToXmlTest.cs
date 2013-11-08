@@ -20,6 +20,7 @@ using System.IO;
 using System.Linq;
 using Antlr.Runtime;
 using Code2Xml.Core.Location;
+using Code2Xml.Core.Processors;
 using Code2Xml.Languages.Java.CodeToXmls;
 using Code2Xml.Languages.Java.XmlToCodes;
 using NUnit.Framework;
@@ -35,19 +36,29 @@ namespace Code2Xml.Languages.Obsolete.ANTLRv3.Tests {
 			JavaCodeToXml.Instance.GenerateFromFile(path, true);
 		}
 
+		[Test, ExpectedException(typeof(ParseException))]
+		public void ParseDiamond() {
+			var code = @"
+public class AlignedTuplePrinter {
+    List<String> columnLines = new ArrayList<>();
+}
+";
+			JavaCodeToXml.Instance.Generate(code, true);
+		}
+
 		[Test]
 		public void ParseBrokenCodeIgnoringException() {
 			var code = @"class A {{ }";
 			JavaCodeToXml.Instance.Generate(code, false);
 		}
 
-		[Test, ExpectedException(typeof(MismatchedTokenException))]
+		[Test, ExpectedException(typeof(ParseException))]
 		public void ParseBrokenCode() {
 			var code = @"class A {{ }";
 			JavaCodeToXml.Instance.Generate(code, true);
 		}
 
-		[Test, ExpectedException(typeof(MismatchedTokenException))]
+		[Test, ExpectedException(typeof(ParseException))]
 		public void ParseSourceCodeContainingIlligalUnicodeCharacters() {
 			var path = Path.Combine(Fixture.GetFailedInputPath("Java"), "Unicode.java");
 			JavaCodeToXml.Instance.GenerateFromFile(path, true);

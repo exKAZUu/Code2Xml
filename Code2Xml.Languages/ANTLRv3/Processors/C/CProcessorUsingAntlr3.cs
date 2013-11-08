@@ -21,38 +21,38 @@ using Antlr.Runtime;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv3.Core;
 
-namespace Code2Xml.Languages.ANTLRv3.Processors.Java {
+namespace Code2Xml.Languages.ANTLRv3.Processors.C {
 	/// <summary>
-	/// Represents a Java parser and a Java code generator.
+	/// Represents a C parser and a C code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class JavaProcessor : Antlr3Processor<JavaParser> {
+	public class CProcessorUsingAntlr3 : Antlr3Processor<CParser> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>
 		public override string LanguageName {
-			get { return "Java"; }
+			get { return "C"; }
 		}
 
 		/// <summary>
 		/// Gets the language version.
 		/// </summary>
 		public override string LanguageVersion {
-			get { return "7"; }
+			get { return "11"; }
 		}
 
-		public JavaProcessor() : base(".java") {}
+		public CProcessorUsingAntlr3() : base(".c", ".h") {}
 
 		protected override ITokenSource CreateLexer(ICharStream stream) {
-			return new JavaLexer(stream);
+			return new CLexer(stream);
 		}
 
-		protected override JavaParser CreateParser(ITokenStream stream) {
-			return new JavaParser(stream);
+		protected override CParser CreateParser(ITokenStream stream) {
+			return new CParser(stream);
 		}
 
-		protected override Antlr3AstNode Parse(JavaParser parser) {
-			return parser.compilationUnit();
+		protected override Antlr3AstNode Parse(CParser parser) {
+			return parser.translation_unit();
 		}
 	}
 }
