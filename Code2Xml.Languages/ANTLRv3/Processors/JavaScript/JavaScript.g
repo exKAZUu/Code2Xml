@@ -937,7 +937,7 @@ LT
     ;
 
 WhiteSpace // Tab, vertical tab, form feed, space, non-breaking space and any other unicode "space separator".
-    : ('\t' | '\v' | '\f' | ' ' | '\u00A0')	{Skip();}
+    : ('\t' | '\v' | '\f' | ' ' | '\u00A0')	{$channel=Hidden;}
     ;
 
 // $>

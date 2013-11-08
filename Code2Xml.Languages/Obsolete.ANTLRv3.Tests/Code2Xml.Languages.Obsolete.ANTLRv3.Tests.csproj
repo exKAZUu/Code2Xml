@@ -71,6 +71,10 @@
       <Project>{20510236-d8b1-4617-9352-4e6134f9ab67}</Project>
       <Name>ParserTests</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ANTLRv3\Code2Xml.Languages.ANTLRv3.csproj">
+      <Project>{942a56fd-13af-4ee6-a8d7-7ddf50374715}</Project>
+      <Name>Code2Xml.Languages.ANTLRv3</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Obsolete.ANTLRv3\Code2Xml.Languages.Obsolete.ANTLRv3.csproj">
       <Project>{82A3E237-DB4F-4A94-B805-CC6CE8F46E56}</Project>
       <Name>Code2Xml.Languages.Obsolete.ANTLRv3</Name>

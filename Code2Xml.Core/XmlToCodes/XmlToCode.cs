@@ -53,6 +53,12 @@ namespace Code2Xml.Core.XmlToCodes {
 			return Generate(XDocument.Parse(text));
 		}
 
+		public string GenerateFromFile(FileInfo file) {
+			Contract.Requires(file != null);
+			Contract.Ensures(Contract.Result<string>() != null);
+			return GenerateFromFile(file.FullName);
+		}
+
 		public string GenerateFromFile(string fileName) {
 			Contract.Requires(fileName != null);
 			Contract.Ensures(Contract.Result<string>() != null);

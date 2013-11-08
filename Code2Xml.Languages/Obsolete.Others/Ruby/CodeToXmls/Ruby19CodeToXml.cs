@@ -16,7 +16,7 @@
 
 #endregion
 
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
 using System.IO;
 using Code2Xml.Core.CodeToXmls;
@@ -34,9 +34,12 @@ namespace Code2Xml.Languages.Ruby19.CodeToXmls {
 		private static readonly string DirectoryPath = Path.Combine(
 				"ParserScripts", "Ruby19");
 
-		private static readonly string[] PrivateArguments = new[] {
+		private static readonly string[] PrivateArguments = {
 			Path.Combine(DirectoryPath, "ruby192xml.rb"),
 		};
+
+		private readonly ReadOnlyCollection<string> _targetExtensions =
+				new ReadOnlyCollection<string>(new[] { ".rb" });
 
 		private readonly string _processorPath;
 
@@ -91,8 +94,8 @@ namespace Code2Xml.Languages.Ruby19.CodeToXmls {
 			get { return "Ruby19"; }
 		}
 
-		public override IEnumerable<string> TargetExtensions {
-			get { return new[] { ".rb" }; }
+		public override ReadOnlyCollection<string> TargetExtensions {
+			get { return _targetExtensions; }
 		}
 
 		public override XmlToCode XmlToCode {

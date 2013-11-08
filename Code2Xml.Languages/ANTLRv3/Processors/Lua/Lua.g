@@ -158,8 +158,8 @@ LINE_COMMENT
     : '--' ~('\n'|'\r')* '\r'? '\n' {$channel=Hidden;}
     ;    
     
-WS  :  (' '|'\t'|'\u000C') {skip();}
+WS  :  (' '|'\t'|'\u000C') {$channel=Hidden;}
     ;
     
-NEWLINE	: ('\r')? '\n' {skip();}
+NEWLINE	: ('\r')? '\n' {$channel=Hidden;}
     ;

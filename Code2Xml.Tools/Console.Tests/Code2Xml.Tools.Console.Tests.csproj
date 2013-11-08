@@ -60,6 +60,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Code2Xml.Languages\ANTLRv3\Code2Xml.Languages.ANTLRv3.csproj">
+      <Project>{942a56fd-13af-4ee6-a8d7-7ddf50374715}</Project>
+      <Name>Code2Xml.Languages.ANTLRv3</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Code2Xml.Languages\Obsolete.ANTLRv3\Code2Xml.Languages.Obsolete.ANTLRv3.csproj">
       <Project>{82a3e237-db4f-4a94-b805-cc6ce8f46e56}</Project>
       <Name>Code2Xml.Languages.Obsolete.ANTLRv3</Name>

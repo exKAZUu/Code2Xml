@@ -9,7 +9,7 @@ using Code2Xml.Languages.ANTLRv3.Core;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g 2013-11-07 21:37:38
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g 2013-11-08 19:16:49
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -3193,7 +3193,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			}
 
 			DebugLocation(161, 28);
-			Skip();
+			_channel=Hidden;
 
 			}
 
@@ -3257,7 +3257,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			DebugLocation(164, 19);
 			Match('\n'); 
 			DebugLocation(164, 24);
-			Skip();
+			_channel=Hidden;
 
 			}
 

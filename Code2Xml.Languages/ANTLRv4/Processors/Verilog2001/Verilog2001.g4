@@ -34,13 +34,15 @@
 
 grammar Verilog2001;
 
-@parser::members
-{
+@header {
+	using Code2Xml.Languages.ANTLRv4.Core;
+}
+
+@parser::members {
 	protected const int EOF = Eof;
 }
 
-@lexer::members
-{
+@lexer::members {
 	protected const int EOF = Eof;
 	protected const int HIDDEN = Hidden;
 }
@@ -82,7 +84,7 @@ config_rule_statement
 default_clause : 'default' ;
 inst_clause : 'instance' inst_name ;
 inst_name : topmodule_identifier ( '.' instance_identifier )* ;
-liblist_clause : 'liblist' ( ( library_identifier )* )? ;
+liblist_clause : 'liblist' library_identifier* ;
 cell_clause : 'cell' ( library_identifier '.' )? cell_identifier ;
 use_clause : 'use' ( library_identifier '.' )? cell_identifier ( ':config' )? ;
 
@@ -741,18 +743,18 @@ event_control :
 event_trigger : '->' hierarchical_event_identifier ';' ;
 
 event_expression :
-expression
-|
-hierarchical_identifier
-|
-'posedge' expression
-|
-'negedge' expression
-|
-event_expression 'or' event_expression
-|
-event_expression ',' event_expression
+  event_primary
+  ( 'or' event_primary
+  | ',' event_primary
+  )*
 ;
+
+event_primary
+    : ( expression
+      | 'posedge' expression
+      | 'negedge' expression
+      )
+    ;
 
 procedural_timing_control_statement : delay_or_event_control statement_or_null ;
 
@@ -1120,7 +1122,7 @@ function_call
     :   hierarchical_function_identifier attribute_instance*
         '(' (expression ( ',' expression )*)? ')'
     ;
-system_function_call : system_function_identifier ( (expression ( ',' expression )*)? )? ;
+system_function_call : system_function_identifier (expression ( ',' expression )*)? ;
 genvar_function_call : genvar_function_identifier attribute_instance*
                        '(' (constant_expression ( ',' constant_expression )*)? ')'
 ;
@@ -1158,13 +1160,15 @@ constant_expression
 dimension_constant_expression : constant_expression ;
 
 expression
-    :   (   unary_operator attribute_instance* primary
-        |   primary
-        |   String
-        )
-        (   binary_operator attribute_instance* expression
-        |   '?' attribute_instance* expression ':' expression
+    :   term
+        (   binary_operator attribute_instance* term
+        |   '?' attribute_instance* expression ':' term
         )*
+    ;
+
+term:   unary_operator attribute_instance* primary
+    |   primary
+    |   String
     ;
 
 lsb_constant_expression : constant_expression ;
@@ -1337,7 +1341,7 @@ String : '"' ( ~[\n\r] )* '"' ;
 // 9 General
 // 9.1 Attributes
 
-attribute_instance : '(*' attr_spec ( ',' attr_spec )* '*)' ;
+attribute_instance : '(' '*' attr_spec ( ',' attr_spec )* '*' ')' ;
 attr_spec : attr_name '=' constant_expression
 | attr_name
 ;
@@ -1365,7 +1369,7 @@ escaped_hierarchical_branch ( '.' simple_hierarchical_branch | '.' escaped_hiera
 
 Escaped_identifier
 	:	'\\' ~[ \r\t\n]*
-        {_input.La(1)!=' '&&_input.La(1)!='\t'&&_input.La(1)!='\t'&&_input.La(1)!='\n'}?
+        {_input.LA(1)!=' '&&_input.LA(1)!='\t'&&_input.LA(1)!='\t'&&_input.LA(1)!='\n'}?
     ;
 
 event_identifier : identifier ;
@@ -1421,11 +1425,13 @@ variable_identifier : identifier ;
 // 9.4 Identifier branches
 
 simple_hierarchical_branch :
-Simple_identifier ( '[' Decimal_number ']' )? ( ( '.' Simple_identifier ( '[' Decimal_number ']' )? )* )?
+	Simple_identifier ( '[' Decimal_number ']' )?
+ 	( '.' Simple_identifier ( '[' Decimal_number ']' )? )*
 ;
 
 escaped_hierarchical_branch :
-Escaped_identifier ( '[' Decimal_number ']' )? ( ( '.' Escaped_identifier ( '[' Decimal_number ']' )? )* )?
+	Escaped_identifier ( '[' Decimal_number ']' )?
+	( '.' Escaped_identifier ( '[' Decimal_number ']' )? )*
 ;
 
 // 9.5 White space

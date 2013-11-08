@@ -16,82 +16,17 @@
 
 #endregion
 
-using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
-using System.Diagnostics.Contracts;
-using System.Xml.Linq;
 using Code2Xml.Core.XmlToCodes;
+using Code2Xml.Languages.ANTLRv3.Processors.Lua;
 
 namespace Code2Xml.Languages.Lua.XmlToCodes {
-    [Export(typeof(XmlToCode))]
-    public class LuaXmlToCode : XmlToCodeBase {
-        private static LuaXmlToCode _instance;
+	[Export(typeof(XmlToCode))]
+	public class LuaXmlToCode : XmlToCodeUsingProcessor<LuaProcessorUsingAntlr3> {
+		private static LuaXmlToCode _instance;
 
-        private readonly ReadOnlyCollection<string> _supportedExtensions =
-                new ReadOnlyCollection<string>(new[] { ".lua" });
-
-        private LuaXmlToCode() {}
-
-        public static LuaXmlToCode Instance {
-            get { return _instance ?? (_instance = new LuaXmlToCode()); }
-        }
-
-        public override string ParserName {
-            get { return "Lua5.1"; }
-        }
-
-        public override ReadOnlyCollection<string> SupportedExtensions {
-            get { return _supportedExtensions; }
-        }
-
-        protected void WalkElementLua(XContainer element) {
-            Contract.Requires(element != null);
-            foreach (var e in element.Elements()) {
-                if (e.HasElements) {
-                    if (e.Name.LocalName == "block") {
-                        WriteLine();
-                        Depth++;
-                    }
-                    WalkElementLua(e);
-                    if (e.Name.LocalName == "block") {
-                        Depth--;
-                    }
-                    else if (e.Name.LocalName == "stat") {
-                        WriteLine();
-                    }
-                } else if (!TreatTerminalSymbol(e) && e.Value != string.Empty) {
-                    WriteWord(e.Value);
-                }
-            }
-        }
-
-        public override string Generate(XElement root) {
-            Initialize();
-            WalkElementLua(root);
-            return Builder.ToString();
-        }
-
-        protected override bool TreatTerminalSymbol(XElement element) {
-            switch (element.Value) {
-            case ";":
-                WriteLine(";");
-                break;
-
-            case "{":
-                WriteLine("{");
-                Depth++;
-                break;
-
-            case "}":
-                Depth--;
-                WriteLine("}");
-                break;
-
-            default:
-                return false;
-            }
-
-            return true;
-        }
-    }
+		public static LuaXmlToCode Instance {
+			get { return _instance ?? (_instance = new LuaXmlToCode()); }
+		}
+	}
 }

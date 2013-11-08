@@ -1074,22 +1074,22 @@ RPAREN: ')';
 
 WS:
     (' '  |  '\r'  |  '\t'  |  '\n'  ) 
-    { Skip(); } ;
+    { $channel=HIDDEN; } ;
 fragment
 TS:
     (' '  |  '\t'  ) 
-    { Skip(); } ;
+    { $channel=HIDDEN; } ;
 DOC_LINE_COMMENT
     : 	('///' ~('\n'|'\r')*  ('\r' | '\n')+)
-    { Skip(); } ;
+    { $channel=HIDDEN; } ;
 LINE_COMMENT
     :	('//' ~('\n'|'\r')*  ('\r' | '\n')+)
-    { Skip(); } ;
+    { $channel=HIDDEN; } ;
 COMMENT:
    '/*'
    (options {greedy=false;} : . )* 
    '*/'
-	{ Skip(); } ;
+    { $channel=HIDDEN; } ;
 STRINGLITERAL
 	:
 	'"' (EscapeSequence | ~('"' | '\\'))* '"' ;
@@ -1140,7 +1140,7 @@ IDENTIFIER:
 Pragma:
 	//	ignore everything after the pragma since the escape's in strings etc. are different
 	'#' ('pragma' | 'region' | 'endregion' | 'line' | 'warning' | 'error') ~('\n'|'\r')*  ('\r' | '\n')+
-    { Skip(); } ;
+    { $channel=HIDDEN; } ;
 PREPROCESSOR_DIRECTIVE:
 	| PP_CONDITIONAL;
 fragment
@@ -1215,7 +1215,7 @@ ELSE_TOKEN:
 					Processing.Push(false);
 			}
 		}
-		Skip();
+        $channel=HIDDEN;
 	} ;
 fragment
 ENDIF_TOKEN:
@@ -1223,7 +1223,7 @@ ENDIF_TOKEN:
 	{
 		if (Processing.Count > 0)
 			Processing.Pop();
-		Skip();
+        $channel=HIDDEN;
 	} ;
 	
 	

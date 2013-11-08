@@ -16,7 +16,7 @@
 
 #endregion
 
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
 using System.IO;
 using Code2Xml.Core.CodeToXmls;
@@ -34,9 +34,12 @@ namespace Code2Xml.Languages.Python2.CodeToXmls {
 		private static readonly string DirectoryPath = Path.Combine(
 				"ParserScripts", "Python2");
 
-		private static readonly string[] PrivateArguments = new[] {
+		private static readonly string[] PrivateArguments = {
 			Path.Combine(DirectoryPath, "ast2xml.py"),
 		};
+
+		private readonly ReadOnlyCollection<string> _targetExtensions =
+				new ReadOnlyCollection<string>(new[] { ".py" });
 
 		private readonly string _processorPath;
 
@@ -66,8 +69,8 @@ namespace Code2Xml.Languages.Python2.CodeToXmls {
 			get { return "Python2"; }
 		}
 
-		public override IEnumerable<string> TargetExtensions {
-			get { return new[] { ".py" }; }
+		public override ReadOnlyCollection<string> TargetExtensions {
+			get { return _targetExtensions; }
 		}
 
 		public override XmlToCode XmlToCode {

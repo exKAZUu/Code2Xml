@@ -16,49 +16,20 @@
 
 #endregion
 
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using Antlr.Runtime;
-using Code2Xml.Core.Antlr;
 using Code2Xml.Core.CodeToXmls;
-using Code2Xml.Core.XmlToCodes;
+using Code2Xml.Languages.ANTLRv3.Processors.Java;
 using Code2Xml.Languages.Java.XmlToCodes;
 
 namespace Code2Xml.Languages.Java.CodeToXmls {
 	[Export(typeof(CodeToXml))]
-	public class JavaCodeToXml : AntlrCodeToXml<JavaParser> {
+	public class JavaCodeToXml
+			: CodeToXmlUsingProcessor
+					<JavaProcessorUsingAntlr3, JavaXmlToCode, ANTLRv3.Processors.Java.JavaParser> {
 		private static JavaCodeToXml _instance;
-
-		private JavaCodeToXml() {}
 
 		public static JavaCodeToXml Instance {
 			get { return _instance ?? (_instance = new JavaCodeToXml()); }
-		}
-
-		protected override Func<JavaParser, XAstParserRuleReturnScope>
-			DefaultParseFunc {
-			get { return parser => parser.compilationUnit(); }
-		}
-
-		public override string ParserName {
-			get { return "Java6"; }
-		}
-
-		public override IEnumerable<string> TargetExtensions {
-			get { return new[] { ".java" }; }
-		}
-
-		public override XmlToCode XmlToCode {
-			get { return JavaXmlToCode.Instance; }
-		}
-
-		protected override ITokenSource CreateTokenSource(ICharStream stream) {
-			return new JavaLexer(stream);
-		}
-
-		protected override JavaParser CreateParser(ITokenStream tokenStream) {
-			return new JavaParser(tokenStream);
 		}
 	}
 }

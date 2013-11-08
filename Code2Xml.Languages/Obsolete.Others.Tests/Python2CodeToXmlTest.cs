@@ -25,7 +25,7 @@ namespace Code2Xml.Languages.Python2.Tests {
 	public class Python2CodeToXmlTest {
 		[Test]
 		public void CanParse() {
-			var path = Fixture.GetInputPath("Python2", "Block1.py");
+			var path = Fixture.GetInputCodePath("Python2", "Block1.py");
 			Python2CodeToXml.Instance.GenerateFromFile(path, true);
 		}
 

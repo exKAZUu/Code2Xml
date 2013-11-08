@@ -17,6 +17,7 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Text;
@@ -40,7 +41,7 @@ namespace Code2Xml.Core.CodeToXmls {
 		public const bool DefaultEnablePosition = true;
 
 		public abstract string ParserName { get; }
-		public abstract IEnumerable<string> TargetExtensions { get; }
+		public abstract ReadOnlyCollection<string> TargetExtensions { get; }
 		public abstract XmlToCode XmlToCode { get; }
 
 		public XElement GenerateFromFile(
@@ -57,6 +58,20 @@ namespace Code2Xml.Core.CodeToXmls {
 				bool throwingParseError = DefaultThrowingParseError, bool enablePosition = DefaultEnablePosition) {
 			Contract.Requires(path != null);
 			return Generate(GuessEncoding.ReadAllText(path), throwingParseError, enablePosition);
+		}
+
+		public XElement GenerateFromFile(
+				FileInfo file, Encoding encoding,
+				bool throwingParseError = DefaultThrowingParseError, bool enablePosition = DefaultEnablePosition) {
+			Contract.Requires(file != null);
+			return GenerateFromFile(file.FullName, encoding, throwingParseError, enablePosition);
+		}
+
+		public XElement GenerateFromFile(
+				FileInfo file,
+				bool throwingParseError = DefaultThrowingParseError, bool enablePosition = DefaultEnablePosition) {
+			Contract.Requires(file != null);
+			return GenerateFromFile(file.FullName, throwingParseError, enablePosition);
 		}
 
 		public abstract XElement Generate(

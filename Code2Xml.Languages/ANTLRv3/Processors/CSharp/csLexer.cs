@@ -9,7 +9,7 @@ using Code2Xml.Languages.ANTLRv3.Core;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g 2013-11-07 21:37:25
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g 2013-11-08 19:16:39
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -5966,7 +5966,7 @@ public partial class csLexer : Antlr.Runtime.Lexer
 			}
 
 			DebugLocation(1077, 5);
-			 Skip(); 
+			 _channel=Hidden; 
 
 			}
 
@@ -6012,7 +6012,7 @@ public partial class csLexer : Antlr.Runtime.Lexer
 			}
 
 			DebugLocation(1082, 5);
-			 Skip(); 
+			 _channel=Hidden; 
 
 			}
 
@@ -6140,7 +6140,7 @@ public partial class csLexer : Antlr.Runtime.Lexer
 			}
 
 			DebugLocation(1084, 5);
-			 Skip(); 
+			 _channel=Hidden; 
 
 			}
 
@@ -6270,7 +6270,7 @@ public partial class csLexer : Antlr.Runtime.Lexer
 			}
 
 			DebugLocation(1087, 5);
-			 Skip(); 
+			 _channel=Hidden; 
 
 			}
 
@@ -6363,8 +6363,8 @@ public partial class csLexer : Antlr.Runtime.Lexer
 			DebugLocation(1091, 4);
 			Match("*/"); 
 
-			DebugLocation(1092, 2);
-			 Skip(); 
+			DebugLocation(1092, 5);
+			 _channel=Hidden; 
 
 			}
 
@@ -6709,26 +6709,26 @@ public partial class csLexer : Antlr.Runtime.Lexer
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1117:2: dil= Decimal_integer_literal d= '.' s= GooBallIdentifier
 			{
 			DebugLocation(1117, 6);
-			int dilStart1560 = CharIndex;
-			int dilStartLine1560 = Line;
-			int dilStartCharPos1560 = CharPositionInLine;
+			int dilStart1563 = CharIndex;
+			int dilStartLine1563 = Line;
+			int dilStartCharPos1563 = CharPositionInLine;
 			mDecimal_integer_literal(); 
-			dil = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, dilStart1560, CharIndex-1);
-			dil.Line = dilStartLine1560;
-			dil.CharPositionInLine = dilStartCharPos1560;
+			dil = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, dilStart1563, CharIndex-1);
+			dil.Line = dilStartLine1563;
+			dil.CharPositionInLine = dilStartCharPos1563;
 			DebugLocation(1117, 34);
 
 			d = input.LA(1);
 
 			Match('.'); 
 			DebugLocation(1117, 41);
-			int sStart1570 = CharIndex;
-			int sStartLine1570 = Line;
-			int sStartCharPos1570 = CharPositionInLine;
+			int sStart1573 = CharIndex;
+			int sStartLine1573 = Line;
+			int sStartCharPos1573 = CharPositionInLine;
 			mGooBallIdentifier(); 
-			s = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, sStart1570, CharIndex-1);
-			s.Line = sStartLine1570;
-			s.CharPositionInLine = sStartCharPos1570;
+			s = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, sStart1573, CharIndex-1);
+			s.Line = sStartLine1573;
+			s.CharPositionInLine = sStartCharPos1573;
 
 			}
 
@@ -7495,7 +7495,7 @@ public partial class csLexer : Antlr.Runtime.Lexer
 			} finally { DebugExitSubRule(21); }
 
 			DebugLocation(1143, 5);
-			 Skip(); 
+			 _channel=Hidden; 
 
 			}
 
@@ -7923,13 +7923,13 @@ public partial class csLexer : Antlr.Runtime.Lexer
 			} finally { DebugExitSubRule(29); }
 
 			DebugLocation(1157, 31);
-			int ppeStart2008 = CharIndex;
-			int ppeStartLine2008 = Line;
-			int ppeStartCharPos2008 = CharPositionInLine;
+			int ppeStart2011 = CharIndex;
+			int ppeStartLine2011 = Line;
+			int ppeStartCharPos2011 = CharPositionInLine;
 			mPP_EXPRESSION(); 
-			ppe = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, ppeStart2008, CharIndex-1);
-			ppe.Line = ppeStartLine2008;
-			ppe.CharPositionInLine = ppeStartCharPos2008;
+			ppe = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, ppeStart2011, CharIndex-1);
+			ppe.Line = ppeStartLine2011;
+			ppe.CharPositionInLine = ppeStartCharPos2011;
 
 			}
 
@@ -8061,13 +8061,13 @@ public partial class csLexer : Antlr.Runtime.Lexer
 			} finally { DebugExitSubRule(31); }
 
 			DebugLocation(1168, 38);
-			int defineStart2043 = CharIndex;
-			int defineStartLine2043 = Line;
-			int defineStartCharPos2043 = CharPositionInLine;
+			int defineStart2046 = CharIndex;
+			int defineStartLine2046 = Line;
+			int defineStartCharPos2046 = CharPositionInLine;
 			mIDENTIFIER(); 
-			define = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, defineStart2043, CharIndex-1);
-			define.Line = defineStartLine2043;
-			define.CharPositionInLine = defineStartCharPos2043;
+			define = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, defineStart2046, CharIndex-1);
+			define.Line = defineStartLine2046;
+			define.CharPositionInLine = defineStartCharPos2046;
 			DebugLocation(1169, 2);
 
 					MacroDefines.Add(define.Text, "");
@@ -8191,13 +8191,13 @@ public partial class csLexer : Antlr.Runtime.Lexer
 			} finally { DebugExitSubRule(33); }
 
 			DebugLocation(1174, 37);
-			int defineStart2078 = CharIndex;
-			int defineStartLine2078 = Line;
-			int defineStartCharPos2078 = CharPositionInLine;
+			int defineStart2081 = CharIndex;
+			int defineStartLine2081 = Line;
+			int defineStartCharPos2081 = CharPositionInLine;
 			mIDENTIFIER(); 
-			define = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, defineStart2078, CharIndex-1);
-			define.Line = defineStartLine2078;
-			define.CharPositionInLine = defineStartCharPos2078;
+			define = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, defineStart2081, CharIndex-1);
+			define.Line = defineStartLine2081;
+			define.CharPositionInLine = defineStartCharPos2081;
 			DebugLocation(1175, 2);
 
 					if (MacroDefines.ContainsKey(define.Text))
@@ -8298,11 +8298,11 @@ public partial class csLexer : Antlr.Runtime.Lexer
 				DebugLocation(1181, 18);
 				int eStart = CharIndex;
 				Match("else"); 
-				int eStartLine2106 = Line;
-				int eStartCharPos2106 = CharPositionInLine;
+				int eStartLine2109 = Line;
+				int eStartCharPos2109 = CharPositionInLine;
 				e = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, eStart, CharIndex-1);
-				e.Line = eStartLine2106;
-				e.CharPositionInLine = eStartCharPos2106;
+				e.Line = eStartLine2109;
+				e.CharPositionInLine = eStartCharPos2109;
 
 				}
 				break;
@@ -8443,7 +8443,7 @@ public partial class csLexer : Antlr.Runtime.Lexer
 								Processing.Push(false);
 						}
 					}
-					Skip();
+			        _channel=Hidden;
 				
 
 			}
@@ -8483,7 +8483,7 @@ public partial class csLexer : Antlr.Runtime.Lexer
 
 					if (Processing.Count > 0)
 						Processing.Pop();
-					Skip();
+			        _channel=Hidden;
 				
 
 			}
@@ -9022,11 +9022,11 @@ public partial class csLexer : Antlr.Runtime.Lexer
 						DebugLocation(1244, 41);
 						int neStart = CharIndex;
 						Match("!="); 
-						int neStartLine2261 = Line;
-						int neStartCharPos2261 = CharPositionInLine;
+						int neStartLine2264 = Line;
+						int neStartCharPos2264 = CharPositionInLine;
 						ne = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, neStart, CharIndex-1);
-						ne.Line = neStartLine2261;
-						ne.CharPositionInLine = neStartCharPos2261;
+						ne.Line = neStartLine2264;
+						ne.CharPositionInLine = neStartCharPos2264;
 
 						}
 						break;
@@ -9186,13 +9186,13 @@ public partial class csLexer : Antlr.Runtime.Lexer
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1253:2: pe= PP_PRIMARY_EXPRESSION
 				{
 				DebugLocation(1253, 5);
-				int peStart2298 = CharIndex;
-				int peStartLine2298 = Line;
-				int peStartCharPos2298 = CharPositionInLine;
+				int peStart2301 = CharIndex;
+				int peStartLine2301 = Line;
+				int peStartCharPos2301 = CharPositionInLine;
 				mPP_PRIMARY_EXPRESSION(); 
-				pe = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, peStart2298, CharIndex-1);
-				pe.Line = peStartLine2298;
-				pe.CharPositionInLine = peStartCharPos2298;
+				pe = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, peStart2301, CharIndex-1);
+				pe.Line = peStartLine2301;
+				pe.CharPositionInLine = peStartCharPos2301;
 
 				}
 				break;
@@ -9241,13 +9241,13 @@ public partial class csLexer : Antlr.Runtime.Lexer
 				} finally { DebugExitSubRule(51); }
 
 				DebugLocation(1254, 19);
-				int ueStart2316 = CharIndex;
-				int ueStartLine2316 = Line;
-				int ueStartCharPos2316 = CharPositionInLine;
+				int ueStart2319 = CharIndex;
+				int ueStartLine2319 = Line;
+				int ueStartCharPos2319 = CharPositionInLine;
 				mPP_UNARY_EXPRESSION(); 
-				ue = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, ueStart2316, CharIndex-1);
-				ue.Line = ueStartLine2316;
-				ue.CharPositionInLine = ueStartCharPos2316;
+				ue = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, ueStart2319, CharIndex-1);
+				ue.Line = ueStartLine2319;
+				ue.CharPositionInLine = ueStartCharPos2319;
 				DebugLocation(1254, 42);
 				 Returns.Push(!Returns.Pop()); 
 
@@ -9306,13 +9306,13 @@ public partial class csLexer : Antlr.Runtime.Lexer
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1258:2: IDENTIFIER
 				{
 				DebugLocation(1258, 2);
-				int IDENTIFIER1Start2331 = CharIndex;
-				int IDENTIFIER1StartLine2331 = Line;
-				int IDENTIFIER1StartCharPos2331 = CharPositionInLine;
+				int IDENTIFIER1Start2334 = CharIndex;
+				int IDENTIFIER1StartLine2334 = Line;
+				int IDENTIFIER1StartCharPos2334 = CharPositionInLine;
 				mIDENTIFIER(); 
-				IDENTIFIER1 = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, IDENTIFIER1Start2331, CharIndex-1);
-				IDENTIFIER1.Line = IDENTIFIER1StartLine2331;
-				IDENTIFIER1.CharPositionInLine = IDENTIFIER1StartCharPos2331;
+				IDENTIFIER1 = new CommonToken(input, TokenTypes.Invalid, TokenChannels.Default, IDENTIFIER1Start2334, CharIndex-1);
+				IDENTIFIER1.Line = IDENTIFIER1StartLine2334;
+				IDENTIFIER1.CharPositionInLine = IDENTIFIER1StartCharPos2334;
 				DebugLocation(1259, 2);
 				 
 						Returns.Push(MacroDefines.ContainsKey(IDENTIFIER1.Text));

@@ -16,20 +16,28 @@
 
 #endregion
 
-using System.ComponentModel.Composition;
-using Code2Xml.Core.CodeToXmls;
-using Code2Xml.Languages.ANTLRv3.Processors.CSharp;
-using Code2Xml.Languages.CSharp.XmlToCodes;
+using Antlr4.Runtime;
 
-namespace Code2Xml.Languages.CSharp.CodeToXmls {
-	[Export(typeof(CodeToXml))]
-	public class CSharpCodeToXml
-			: CodeToXmlUsingProcessor
-					<CSharpProcessorUsingAntlr3, CSharpXmlToCode, ANTLRv3.Processors.CSharp.csParser> {
-		private static CSharpCodeToXml _instance;
+namespace Code2Xml.Languages.ANTLRv4.Core {
+	public static class Token {
+		public const int HIDDEN_CHANNEL = TokenConstants.HiddenChannel;
+	}
 
-		public static CSharpCodeToXml Instance {
-			get { return _instance ?? (_instance = new CSharpCodeToXml()); }
+	public static class Antlr4Extension {
+		public static int getType(this IToken token) {
+			return token.Type;
+		}
+
+		public static void setChannel(this IWritableToken token, int channel) {
+			token.Channel = channel;
+		}
+
+		public static int LA(this ICharStream stream, int i) {
+			return stream.La(i);
+		}
+
+		public static IToken LT(this ITokenStream stream, int k) {
+			return stream.Lt(k);
 		}
 	}
 }

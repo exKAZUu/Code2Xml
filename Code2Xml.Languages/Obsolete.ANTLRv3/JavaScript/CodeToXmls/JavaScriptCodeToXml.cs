@@ -16,50 +16,21 @@
 
 #endregion
 
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using Antlr.Runtime;
-using Code2Xml.Core.Antlr;
 using Code2Xml.Core.CodeToXmls;
-using Code2Xml.Core.XmlToCodes;
+using Code2Xml.Languages.ANTLRv3.Processors.JavaScript;
 using Code2Xml.Languages.JavaScript.XmlToCodes;
 
 namespace Code2Xml.Languages.JavaScript.CodeToXmls {
 	[Export(typeof(CodeToXml))]
-	public class JavaScriptCodeToXml : AntlrCodeToXml<JavaScriptParser> {
+	public class JavaScriptCodeToXml
+			: CodeToXmlUsingProcessor
+					<JavaScriptProcessorUsingAntlr3, JavaScriptXmlToCode,
+							ANTLRv3.Processors.JavaScript.JavaScriptParser> {
 		private static JavaScriptCodeToXml _instance;
-
-		private JavaScriptCodeToXml() {}
 
 		public static JavaScriptCodeToXml Instance {
 			get { return _instance ?? (_instance = new JavaScriptCodeToXml()); }
-		}
-
-		protected override Func<JavaScriptParser, XAstParserRuleReturnScope>
-			DefaultParseFunc {
-			get { return parser => parser.program(); }
-		}
-
-		public override string ParserName {
-			get { return "JavaScriptScript"; }
-		}
-
-		public override IEnumerable<string> TargetExtensions {
-			get { return new[] { ".js" }; }
-		}
-
-		public override XmlToCode XmlToCode {
-			get { return JavaScriptXmlToCode.Instance; }
-		}
-
-		protected override ITokenSource CreateTokenSource(ICharStream stream) {
-			return new JavaScriptLexer(stream);
-		}
-
-		protected override JavaScriptParser CreateParser(
-				ITokenStream tokenStream) {
-			return new JavaScriptParser(tokenStream);
 		}
 	}
 }

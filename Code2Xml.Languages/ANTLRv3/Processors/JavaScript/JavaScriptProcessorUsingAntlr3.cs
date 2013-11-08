@@ -26,7 +26,8 @@ namespace Code2Xml.Languages.ANTLRv3.Processors.JavaScript {
 	/// Represents a JavaScript parser and a JavaScript code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class JavaScriptProcessorUsingAntlr3 : Antlr3Processor<JavaScriptParser> {
+	public sealed class JavaScriptProcessorUsingAntlr3
+			: Antlr3Processor<JavaScriptParser, JavaScriptProcessorUsingAntlr3> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>

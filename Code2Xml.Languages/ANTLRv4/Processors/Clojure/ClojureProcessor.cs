@@ -26,7 +26,7 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Clojure {
 	/// Represents a Clojure parser and a Clojure code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class ClojureProcessor : Antlr4Processor<ClojureParser> {
+	public class ClojureProcessor : Antlr4Processor<ClojureParser, ClojureProcessor> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>

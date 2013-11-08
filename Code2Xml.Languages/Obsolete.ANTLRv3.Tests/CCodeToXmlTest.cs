@@ -47,7 +47,7 @@ namespace Code2Xml.Languages.Obsolete.ANTLRv3.Tests {
 		public void Parse(string filePath) {
 			var paths = filePath.Split(
 					Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
-			var path = Fixture.GetInputPath("C", paths);
+			var path = Fixture.GetInputCodePath("C", paths);
 			CCodeToXml.Instance.GenerateFromFile(path, true);
 		}
 
@@ -110,7 +110,7 @@ AAAA *cb;", true);
 
 		[Test]
 		public void GetTokens() {
-			var tokens = CCodeToXml.Instance.GetTokenStream(
+			var tokens = CCodeToXml.Instance.CreateTokenStream(
 					@"typedef void *AAAA(unsigned long);
 // aaa
 AAAA *cb;");

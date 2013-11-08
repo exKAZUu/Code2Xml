@@ -16,20 +16,24 @@
 
 #endregion
 
-using System.ComponentModel.Composition;
-using Code2Xml.Core.CodeToXmls;
-using Code2Xml.Languages.ANTLRv3.Processors.CSharp;
-using Code2Xml.Languages.CSharp.XmlToCodes;
+using Code2Xml.Languages.ANTLRv3.Core;
 
-namespace Code2Xml.Languages.CSharp.CodeToXmls {
-	[Export(typeof(CodeToXml))]
-	public class CSharpCodeToXml
-			: CodeToXmlUsingProcessor
-					<CSharpProcessorUsingAntlr3, CSharpXmlToCode, ANTLRv3.Processors.CSharp.csParser> {
-		private static CSharpCodeToXml _instance;
+namespace Code2Xml.Languages.ANTLRv3.Processors.C {
+	partial class CParser {
+		private bool changed;
 
-		public static CSharpCodeToXml Instance {
-			get { return _instance ?? (_instance = new CSharpCodeToXml()); }
+		partial void EnterRule_declarator_suffix() {
+			if (declaration_stack.size() > 0 && declaration_stack.Peek().isTypedef) {
+				declaration_stack.Peek().isTypedef = false;
+				changed = true;
+			}
+		}
+
+		partial void LeaveRule_declarator_suffix() {
+			if (changed) {
+				changed = false;
+				declaration_stack.Peek().isTypedef = true;
+			}
 		}
 	}
 }

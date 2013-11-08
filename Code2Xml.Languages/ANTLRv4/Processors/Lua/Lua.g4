@@ -38,17 +38,19 @@ This grammar file derived from:
     http://www.antlr3.org/grammar/1178608849736/Lua.g
 
 I tested my grammar with Test suite for Lua 5.2 (http://www.lua.org/tests/5.2/)
- */
+*/
 
 grammar Lua;
 
-@parser::members
-{
+@header {
+	using Code2Xml.Languages.ANTLRv4.Core;
+}
+
+@parser::members {
 	protected const int EOF = Eof;
 }
 
-@lexer::members
-{
+@lexer::members {
 	protected const int EOF = Eof;
 	protected const int HIDDEN = Hidden;
 }

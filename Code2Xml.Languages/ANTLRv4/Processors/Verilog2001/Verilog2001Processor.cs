@@ -26,7 +26,7 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Verilog2001 {
 	/// Represents a Verilog2001 parser and a Verilog2001 code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class Verilog2001Processor : Antlr4Processor<Verilog2001Parser> {
+	public class Verilog2001Processor : Antlr4Processor<Verilog2001Parser, Verilog2001Processor> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>

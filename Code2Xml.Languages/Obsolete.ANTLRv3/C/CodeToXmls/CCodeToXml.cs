@@ -16,49 +16,19 @@
 
 #endregion
 
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using Antlr.Runtime;
-using Code2Xml.Core.Antlr;
 using Code2Xml.Core.CodeToXmls;
-using Code2Xml.Core.XmlToCodes;
+using Code2Xml.Languages.ANTLRv3.Processors.C;
 using Code2Xml.Languages.C.XmlToCodes;
 
 namespace Code2Xml.Languages.C.CodeToXmls {
 	[Export(typeof(CodeToXml))]
-	public class CCodeToXml : AntlrCodeToXml<CParser> {
+	public class CCodeToXml
+			: CodeToXmlUsingProcessor<CProcessorUsingAntlr3, CXmlToCode, ANTLRv3.Processors.C.CParser> {
 		private static CCodeToXml _instance;
-
-		private CCodeToXml() {}
 
 		public static CCodeToXml Instance {
 			get { return _instance ?? (_instance = new CCodeToXml()); }
-		}
-
-		protected override Func<CParser, XAstParserRuleReturnScope>
-			DefaultParseFunc {
-			get { return parser => parser.translation_unit(); }
-		}
-
-		public override string ParserName {
-			get { return "C"; }
-		}
-
-		public override IEnumerable<string> TargetExtensions {
-			get { return new[] { ".c" }; }
-		}
-
-		public override XmlToCode XmlToCode {
-			get { return CXmlToCode.Instance; }
-		}
-
-		protected override ITokenSource CreateTokenSource(ICharStream stream) {
-			return new CLexer(stream);
-		}
-
-		protected override CParser CreateParser(ITokenStream tokenStream) {
-			return new CParser(tokenStream);
 		}
 	}
 }

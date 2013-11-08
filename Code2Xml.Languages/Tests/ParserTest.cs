@@ -44,13 +44,13 @@ namespace Code2Xml.Languages.Tests {
 					"Python3",
 					"Ruby18",
 					"Ruby19",
-					"SrcMLForC",
-					"SrcMLForCpp",
+					//"SrcMLForC",
+					//"SrcMLForCpp",
 				};
 				var tt = names
 						.SelectMany(
 								name => Directory.EnumerateFiles(
-										Fixture.GetInputPath(name), "*", SearchOption.AllDirectories)
+										Fixture.GetInputCodePath(name), "*", SearchOption.AllDirectories)
 										.Select(path => new { Name = name, Path = path }))
 						.Select(
 								p => new TestCaseData(
@@ -66,8 +66,8 @@ namespace Code2Xml.Languages.Tests {
 
 		[Test, TestCaseSource("TestCases")]
 		public void Parse(string lang, string path, CodeToXml codeToXml, XmlToCode xmlToCode) {
-			var relativePath = ParaibaPath.GetRelativePath(path, Fixture.GetInputPath(lang));
-			var expPath = Fixture.GetXmlExpectationPath(lang, relativePath);
+			var relativePath = ParaibaPath.GetRelativePath(path, Fixture.GetInputCodePath(lang));
+			var expPath = Fixture.GetExpectedXmlPath(lang, relativePath);
 			var r = codeToXml.GenerateFromFile(path, true)
 					.ToString()
 					.ReplaceNewlinesForWindows();
@@ -78,7 +78,7 @@ namespace Code2Xml.Languages.Tests {
 
 		[Test, TestCaseSource("TestCases")]
 		public void WriteConvertedXml(string lang, string path, CodeToXml codeToXml, XmlToCode xmlToCode) {
-			var relativePath = ParaibaPath.GetRelativePath(path, Fixture.GetInputPath(lang));
+			var relativePath = ParaibaPath.GetRelativePath(path, Fixture.GetInputCodePath(lang));
 			var outPath = Fixture.GetOutputFilePath(lang, relativePath);
 			Directory.CreateDirectory(Path.GetDirectoryName(outPath));
 			var r = codeToXml.GenerateFromFile(path, true);

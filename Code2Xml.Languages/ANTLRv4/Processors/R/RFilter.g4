@@ -34,6 +34,10 @@ parser grammar RFilter;
 
 options { tokenVocab=R; }
 
+@header {
+	using Code2Xml.Languages.ANTLRv4.Core;
+}
+
 @members {
 	protected int curlies = 0;
 	protected const int EOF = Eof;
@@ -42,7 +46,7 @@ options { tokenVocab=R; }
 // TODO: MAKE THIS GET ONE COMMAND ONLY
 stream : (elem|NL|';')* EOF ;
 
-eat :   (NL {((IWritableToken)$NL).Channel = TokenConstants.HiddenChannel;})+ ;
+eat :   (NL {((IWritableToken)$NL).setChannel(Token.HIDDEN_CHANNEL);})+ ;
 
 elem:   op eat?
     |   atom
@@ -75,8 +79,8 @@ elem:   op eat?
               else print(2)
             }
         */
-        var tok = _input.Lt(-2);
-        if (curlies>0&&tok.Type==NL) ((IWritableToken)tok).Channel = TokenConstants.HiddenChannel;
+        IWritableToken tok = (IWritableToken)_input.LT(-2);
+        if (curlies>0&&tok.getType()==NL) tok.setChannel(Token.HIDDEN_CHANNEL);
         }
     ;
 
@@ -86,5 +90,5 @@ atom:   'next' | 'break' | ID | STRING | HEX | INT | FLOAT | COMPLEX | 'NULL'
 
 op  :   '+'|'-'|'*'|'/'|'^'|'<'|'<='|'>='|'>'|'=='|'!='|'&'|'&&'|USER_OP|
         'repeat'|'in'|'?'|'!'|'='|':'|'~'|'$'|'@'|'<-'|'->'|'='|'::'|':::'|
-        ','|'...'
+        ','|'...'|'||'| '|'
     ;

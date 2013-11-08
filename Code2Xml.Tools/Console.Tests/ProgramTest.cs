@@ -49,7 +49,7 @@ namespace Code2Xml.Tools.Console.Tests {
 				};
 				return langs
 						.SelectMany(
-								lang => Directory.EnumerateFiles(Fixture.GetInputPath(lang.Name)).Select(
+								lang => Directory.EnumerateFiles(Fixture.GetInputCodePath(lang.Name)).Select(
 										path => new {
 											lang.Name, lang.Opt,
 											Path = path
@@ -67,7 +67,7 @@ namespace Code2Xml.Tools.Console.Tests {
 		public void ConvertXmlToCode() {
 			var names = new[] { "Block1.c", "Block2.c", "Block3.c" };
 			var filePaths = names
-					.Select(n => Fixture.GetInputPath(CLanguageName, n));
+					.Select(n => Fixture.GetInputCodePath(CLanguageName, n));
 			var outputPath = Fixture.GetOutputDirPath(CLanguageName);
 
 			Program.Main(filePaths.Concat(new[] { "-C", "-d", outputPath }).ToArray());
@@ -111,7 +111,7 @@ namespace Code2Xml.Tools.Console.Tests {
 		[Test]
 		public void WriteGeneratedXmlInDirectory() {
 			var names = new[] { "Block1.c", "Block2.c", "Block3.c" };
-			var filePaths = names.Select(n => Fixture.GetInputPath(CLanguageName, n));
+			var filePaths = names.Select(n => Fixture.GetInputCodePath(CLanguageName, n));
 
 			Program.Main(filePaths.Concat(new[] { "-C", "-d" }).ToArray());
 
@@ -134,7 +134,7 @@ namespace Code2Xml.Tools.Console.Tests {
 		[Test]
 		public void WriteGeneratedXmlAsFile() {
 			var names = new[] { "Block1.c", "Block2.c", "Block3.c" };
-			var filePaths = names.Select(n => Fixture.GetInputPath(CLanguageName, n));
+			var filePaths = names.Select(n => Fixture.GetInputCodePath(CLanguageName, n));
 			const string outputFilePath = "output.txt";
 
 			Program.Main(filePaths.Concat(new[] { "-C", "-f", outputFilePath }).ToArray());
@@ -154,7 +154,7 @@ namespace Code2Xml.Tools.Console.Tests {
 		[Test]
 		public void WriteGeneratedXmlInSpecifiedDirectory() {
 			var names = new[] { "Block1.c", "Block2.c", "Block3.c" };
-			var filePaths = names.Select(n => Fixture.GetInputPath(CLanguageName, n));
+			var filePaths = names.Select(n => Fixture.GetInputCodePath(CLanguageName, n));
 			var outputPath = Fixture.GetOutputDirPath(CLanguageName);
 
 			Program.Main(filePaths.Concat(new[] { "-C", "-d", outputPath }).ToArray());

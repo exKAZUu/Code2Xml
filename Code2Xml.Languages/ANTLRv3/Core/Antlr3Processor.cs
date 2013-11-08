@@ -25,8 +25,24 @@ using Antlr.Runtime;
 using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Languages.ANTLRv3.Core {
-	public abstract class Antlr3Processor<TParser> : LanguageProcessor 
-		where TParser : ICustomizedAntlr3Parser {
+	/// <summary>
+	/// Provides common code for processors using Antlr 3.
+	/// </summary>
+	/// <typeparam name="TParser"></typeparam>
+	/// <typeparam name="TProcessor"></typeparam>
+	public abstract class Antlr3Processor<TParser, TProcessor> : LanguageProcessor
+			where TParser : ICustomizedAntlr3Parser
+			where TProcessor : Antlr3Processor<TParser, TProcessor>, new() {
+		#region Singleton pattern
+
+		private static TProcessor _instance;
+
+		public static TProcessor Instance {
+			get { return _instance ?? (_instance = new TProcessor()); }
+		}
+
+		#endregion
+
 		protected Antlr3Processor(params string[] extensions) : base(extensions) {}
 
 		/// <summary>
@@ -72,6 +88,34 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 		protected abstract Antlr3AstNode Parse(TParser parser);
 
 		/// <summary>
+		/// Creates a token stream which provides tokenized code.
+		/// </summary>
+		/// <param name="stream"></param>
+		/// <returns></returns>
+		private CommonTokenStream CreateTokenStream(ICharStream stream) {
+			var lexer = CreateLexer(stream);
+			return new CommonTokenStream(lexer);
+		}
+
+		/// <summary>
+		/// Creates a token stream which provides tokenized code.
+		/// </summary>
+		/// <param name="code"></param>
+		/// <returns></returns>
+		public CommonTokenStream CreateTokenStream(string code) {
+			return CreateTokenStream(new ANTLRStringStream(code));
+		}
+
+		/// <summary>
+		/// Creates a token stream which provides tokenized code.
+		/// </summary>
+		/// <param name="reader"></param>
+		/// <returns></returns>
+		public CommonTokenStream CreateTokenStream(TextReader reader) {
+			return CreateTokenStream(new ANTLRReaderStream(reader));
+		}
+
+		/// <summary>
 		/// Generates a xml from the specified char stream of the source code.
 		/// </summary>
 		/// <param name="charStream"></param>
@@ -79,12 +123,11 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 		/// <returns></returns>
 		protected XElement GenerateXml(
 				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError) {
-			var lexer = CreateLexer(charStream);
-			var commonTokenStream = new CommonTokenStream(lexer);
-			var parser = CreateParser(commonTokenStream);
+			var tokenStream = CreateTokenStream(charStream);
+			var parser = CreateParser(tokenStream);
 			var builder = throwingParseError ?
-					new Antlr3AstBuilderWithReportingError(commonTokenStream) :
-					new Antlr3AstBuilder(commonTokenStream);
+					new Antlr3AstBuilderWithReportingError(tokenStream) :
+					new Antlr3AstBuilder(tokenStream);
 			parser.TraceDestination = Console.Error;
 			parser.TreeAdaptor = builder;
 			var root = Parse(parser);
@@ -112,6 +155,5 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 				TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
 			return GenerateXml(new ANTLRReaderStream(codeReader), throwingParseError);
 		}
-
 	}
 }

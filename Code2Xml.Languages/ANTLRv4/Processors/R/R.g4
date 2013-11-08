@@ -44,27 +44,27 @@ $ java TestR sample.R
 */
 grammar R;
 
-@parser::members
-{
+@parser::members {
 	protected const int EOF = Eof;
 }
 
-@lexer::members
-{
+@lexer::members {
 	protected const int EOF = Eof;
 	protected const int HIDDEN = Hidden;
 }
 
-prog:   (   expr_or_assign (';'|NL)
+prog:   (   expr (';'|NL)
         |   NL
         )*
         EOF
     ;
 
+/*
 expr_or_assign
     :   expr ('<-'|'='|'<<-') expr_or_assign
     |   expr
     ;
+*/
 
 expr:   expr '[[' sublist ']' ']'  // '[[' follows R's yacc grammar
     |   expr '[' sublist ']'
@@ -82,7 +82,7 @@ expr:   expr '[[' sublist ']' ']'  // '[[' follows R's yacc grammar
     |   expr ('|'|'||') expr
     |   '~' expr
     |   expr '~' expr
-    |   expr ('->'|'->>'|':=') expr
+    |   expr ('<-'|'<<-'|'='|'->'|'->>'|':=') expr
     |   'function' '(' formlist? ')' expr // define function
     |   expr '(' sublist ')'              // call function
     |   '{' exprlist '}' // compound statement
@@ -110,7 +110,7 @@ expr:   expr '[[' sublist ']' ']'  // '[[' follows R's yacc grammar
     ;
 
 exprlist
-    :   expr_or_assign ((';'|NL) expr_or_assign?)*
+    :   expr ((';'|NL) expr?)*
     |
     ;
 
@@ -158,10 +158,11 @@ COMPLEX
 STRING
     :   '"' ( ESC | ~[\\"] )*? '"'
     |   '\'' ( ESC | ~[\\'] )*? '\''
+    |   '`' ( ESC | ~[\\'] )*? '`'
     ;
 
 fragment
-ESC :   '\\' ([abtnfrv]|'"'|'\'')
+ESC :   '\\' [abtnfrv"'\\]
     |   UNICODE_ESCAPE
     |   HEX_ESCAPE
     |   OCTAL_ESCAPE
@@ -198,4 +199,4 @@ COMMENT :   '#' .*? '\r'? '\n' -> type(NL) ;
 // Match both UNIX and Windows newlines
 NL      :   '\r'? '\n' ;
 
-WS      :   [ \t]+ -> skip ;
+WS      :   [ \t\0x000c]+ -> channel(HIDDEN) ;

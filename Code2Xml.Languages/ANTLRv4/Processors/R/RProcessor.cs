@@ -26,7 +26,7 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.R {
 	/// Represents a R parser and a R code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class RProcessor : Antlr4Processor<RParser> {
+	public class RProcessor : Antlr4Processor<RParser, RProcessor> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>

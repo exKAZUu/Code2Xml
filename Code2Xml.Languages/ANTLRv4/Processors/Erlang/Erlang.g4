@@ -21,15 +21,18 @@
 // An ANTLR4 Grammar of Erlang R16B01 made by Pierre Fenoll from
 // https://github.com/erlang/otp/blob/maint/lib/stdlib/src/erl_parse.yrl
 
+
 grammar Erlang;
 
-@parser::members
-{
+@header {
+	using Code2Xml.Languages.ANTLRv4.Core;
+}
+
+@parser::members {
 	protected const int EOF = Eof;
 }
 
-@lexer::members
-{
+@lexer::members {
 	protected const int EOF = Eof;
 	protected const int HIDDEN = Hidden;
 }
@@ -397,3 +400,4 @@ ruleClauses : ruleClause (';' ruleClause)* ;
 ruleClause : tokAtom clauseArgs clauseGuard ruleBody ;
 
 ruleBody : ':-' lcExprs ;
+

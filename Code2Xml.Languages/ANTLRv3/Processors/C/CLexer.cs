@@ -9,7 +9,7 @@ using Code2Xml.Languages.ANTLRv3.Core;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g 2013-11-07 21:37:22
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g 2013-11-08 19:16:37
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -3657,14 +3657,14 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		{
 			int _type = IDENTIFIER;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:624:2: ( LETTER ( LETTER | '0' .. '9' )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:625:2: ( LETTER ( LETTER | '0' .. '9' )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:624:4: LETTER ( LETTER | '0' .. '9' )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:625:4: LETTER ( LETTER | '0' .. '9' )*
 			{
-			DebugLocation(624, 4);
+			DebugLocation(625, 4);
 			mLETTER(); 
-			DebugLocation(624, 11);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:624:11: ( LETTER | '0' .. '9' )*
+			DebugLocation(625, 11);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:625:11: ( LETTER | '0' .. '9' )*
 			try { DebugEnterSubRule(1);
 			while (true)
 			{
@@ -3685,7 +3685,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 					{
-					DebugLocation(624, 11);
+					DebugLocation(625, 11);
 					input.Consume();
 
 
@@ -3729,11 +3729,11 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		TraceIn("LETTER", 99);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:630:2: ( '$' | 'A' .. 'Z' | 'a' .. 'z' | '_' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:631:2: ( '$' | 'A' .. 'Z' | 'a' .. 'z' | '_' )
 			DebugEnterAlt(1);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 			{
-			DebugLocation(630, 2);
+			DebugLocation(631, 2);
 			if (input.LA(1)=='$'||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
@@ -3773,14 +3773,14 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		{
 			int _type = CHARACTER_LITERAL;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:636:2: ( '\\'' ( EscapeSequence |~ ( '\\'' | '\\\\' ) ) '\\'' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:637:2: ( '\\'' ( EscapeSequence |~ ( '\\'' | '\\\\' ) ) '\\'' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:636:6: '\\'' ( EscapeSequence |~ ( '\\'' | '\\\\' ) ) '\\''
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:637:6: '\\'' ( EscapeSequence |~ ( '\\'' | '\\\\' ) ) '\\''
 			{
-			DebugLocation(636, 6);
+			DebugLocation(637, 6);
 			Match('\''); 
-			DebugLocation(636, 11);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:636:11: ( EscapeSequence |~ ( '\\'' | '\\\\' ) )
+			DebugLocation(637, 11);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:637:11: ( EscapeSequence |~ ( '\\'' | '\\\\' ) )
 			int alt2=2;
 			try { DebugEnterSubRule(2);
 			try { DebugEnterDecision(2, false);
@@ -3805,18 +3805,18 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:636:13: EscapeSequence
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:637:13: EscapeSequence
 				{
-				DebugLocation(636, 13);
+				DebugLocation(637, 13);
 				mEscapeSequence(); 
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:636:30: ~ ( '\\'' | '\\\\' )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:637:30: ~ ( '\\'' | '\\\\' )
 				{
-				DebugLocation(636, 30);
+				DebugLocation(637, 30);
 				input.Consume();
 
 
@@ -3826,7 +3826,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(2); }
 
-			DebugLocation(636, 45);
+			DebugLocation(637, 45);
 			Match('\''); 
 
 			}
@@ -3857,14 +3857,14 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		{
 			int _type = STRING_LITERAL;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:640:2: ( '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:641:2: ( '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:640:5: '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:641:5: '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"'
 			{
-			DebugLocation(640, 5);
+			DebugLocation(641, 5);
 			Match('\"'); 
-			DebugLocation(640, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:640:9: ( EscapeSequence |~ ( '\\\\' | '\"' ) )*
+			DebugLocation(641, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:641:9: ( EscapeSequence |~ ( '\\\\' | '\"' ) )*
 			try { DebugEnterSubRule(3);
 			while (true)
 			{
@@ -3887,18 +3887,18 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:640:11: EscapeSequence
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:641:11: EscapeSequence
 					{
-					DebugLocation(640, 11);
+					DebugLocation(641, 11);
 					mEscapeSequence(); 
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:640:28: ~ ( '\\\\' | '\"' )
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:641:28: ~ ( '\\\\' | '\"' )
 					{
-					DebugLocation(640, 28);
+					DebugLocation(641, 28);
 					input.Consume();
 
 
@@ -3915,7 +3915,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(3); }
 
-			DebugLocation(640, 43);
+			DebugLocation(641, 43);
 			Match('\"'); 
 
 			}
@@ -3946,13 +3946,13 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		{
 			int _type = HEX_LITERAL;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:643:13: ( '0' ( 'x' | 'X' ) ( HexDigit )+ ( IntegerTypeSuffix )? )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:644:13: ( '0' ( 'x' | 'X' ) ( HexDigit )+ ( IntegerTypeSuffix )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:643:15: '0' ( 'x' | 'X' ) ( HexDigit )+ ( IntegerTypeSuffix )?
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:644:15: '0' ( 'x' | 'X' ) ( HexDigit )+ ( IntegerTypeSuffix )?
 			{
-			DebugLocation(643, 15);
+			DebugLocation(644, 15);
 			Match('0'); 
-			DebugLocation(643, 19);
+			DebugLocation(644, 19);
 			if (input.LA(1)=='X'||input.LA(1)=='x')
 			{
 				input.Consume();
@@ -3965,8 +3965,8 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(643, 29);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:643:29: ( HexDigit )+
+			DebugLocation(644, 29);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:644:29: ( HexDigit )+
 			int cnt4=0;
 			try { DebugEnterSubRule(4);
 			while (true)
@@ -3988,7 +3988,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 					{
-					DebugLocation(643, 29);
+					DebugLocation(644, 29);
 					input.Consume();
 
 
@@ -4010,8 +4010,8 @@ public partial class CLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(4); }
 
-			DebugLocation(643, 39);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:643:39: ( IntegerTypeSuffix )?
+			DebugLocation(644, 39);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:644:39: ( IntegerTypeSuffix )?
 			int alt5=2;
 			try { DebugEnterSubRule(5);
 			try { DebugEnterDecision(5, false);
@@ -4026,9 +4026,9 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:643:39: IntegerTypeSuffix
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:644:39: IntegerTypeSuffix
 				{
-				DebugLocation(643, 39);
+				DebugLocation(644, 39);
 				mIntegerTypeSuffix(); 
 
 				}
@@ -4066,12 +4066,12 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		{
 			int _type = DECIMAL_LITERAL;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:645:17: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( IntegerTypeSuffix )? )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:646:17: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( IntegerTypeSuffix )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:645:19: ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( IntegerTypeSuffix )?
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:646:19: ( '0' | '1' .. '9' ( '0' .. '9' )* ) ( IntegerTypeSuffix )?
 			{
-			DebugLocation(645, 19);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:645:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
+			DebugLocation(646, 19);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:646:19: ( '0' | '1' .. '9' ( '0' .. '9' )* )
 			int alt7=2;
 			try { DebugEnterSubRule(7);
 			try { DebugEnterDecision(7, false);
@@ -4096,21 +4096,21 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:645:20: '0'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:646:20: '0'
 				{
-				DebugLocation(645, 20);
+				DebugLocation(646, 20);
 				Match('0'); 
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:645:26: '1' .. '9' ( '0' .. '9' )*
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:646:26: '1' .. '9' ( '0' .. '9' )*
 				{
-				DebugLocation(645, 29);
+				DebugLocation(646, 29);
 				MatchRange('1','9'); 
-				DebugLocation(645, 38);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:645:38: ( '0' .. '9' )*
+				DebugLocation(646, 38);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:646:38: ( '0' .. '9' )*
 				try { DebugEnterSubRule(6);
 				while (true)
 				{
@@ -4131,7 +4131,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 						{
-						DebugLocation(645, 38);
+						DebugLocation(646, 38);
 						input.Consume();
 
 
@@ -4155,8 +4155,8 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(7); }
 
-			DebugLocation(645, 46);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:645:46: ( IntegerTypeSuffix )?
+			DebugLocation(646, 46);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:646:46: ( IntegerTypeSuffix )?
 			int alt8=2;
 			try { DebugEnterSubRule(8);
 			try { DebugEnterDecision(8, false);
@@ -4171,9 +4171,9 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:645:46: IntegerTypeSuffix
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:646:46: IntegerTypeSuffix
 				{
-				DebugLocation(645, 46);
+				DebugLocation(646, 46);
 				mIntegerTypeSuffix(); 
 
 				}
@@ -4211,14 +4211,14 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		{
 			int _type = OCTAL_LITERAL;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:647:15: ( '0' ( '0' .. '7' )+ ( IntegerTypeSuffix )? )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:648:15: ( '0' ( '0' .. '7' )+ ( IntegerTypeSuffix )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:647:17: '0' ( '0' .. '7' )+ ( IntegerTypeSuffix )?
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:648:17: '0' ( '0' .. '7' )+ ( IntegerTypeSuffix )?
 			{
-			DebugLocation(647, 17);
+			DebugLocation(648, 17);
 			Match('0'); 
-			DebugLocation(647, 21);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:647:21: ( '0' .. '7' )+
+			DebugLocation(648, 21);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:648:21: ( '0' .. '7' )+
 			int cnt9=0;
 			try { DebugEnterSubRule(9);
 			while (true)
@@ -4240,7 +4240,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 					{
-					DebugLocation(647, 21);
+					DebugLocation(648, 21);
 					input.Consume();
 
 
@@ -4262,8 +4262,8 @@ public partial class CLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(9); }
 
-			DebugLocation(647, 33);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:647:33: ( IntegerTypeSuffix )?
+			DebugLocation(648, 33);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:648:33: ( IntegerTypeSuffix )?
 			int alt10=2;
 			try { DebugEnterSubRule(10);
 			try { DebugEnterDecision(10, false);
@@ -4278,9 +4278,9 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:647:33: IntegerTypeSuffix
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:648:33: IntegerTypeSuffix
 				{
-				DebugLocation(647, 33);
+				DebugLocation(648, 33);
 				mIntegerTypeSuffix(); 
 
 				}
@@ -4316,11 +4316,11 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		TraceIn("HexDigit", 105);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:651:10: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:652:10: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
 			DebugEnterAlt(1);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 			{
-			DebugLocation(651, 10);
+			DebugLocation(652, 10);
 			if ((input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f'))
 			{
 				input.Consume();
@@ -4358,7 +4358,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		TraceIn("IntegerTypeSuffix", 106);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:655:2: ( ( 'u' | 'U' )? ( 'l' | 'L' ) | ( 'u' | 'U' ) ( 'l' | 'L' )? | ( 'u' | 'U' )? ( 'l' | 'L' ) ( 'l' | 'L' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:656:2: ( ( 'u' | 'U' )? ( 'l' | 'L' ) | ( 'u' | 'U' ) ( 'l' | 'L' )? | ( 'u' | 'U' )? ( 'l' | 'L' ) ( 'l' | 'L' ) )
 			int alt14=3;
 			try { DebugEnterDecision(14, false);
 			int LA14_1 = input.LA(1);
@@ -4409,10 +4409,10 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:655:4: ( 'u' | 'U' )? ( 'l' | 'L' )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:656:4: ( 'u' | 'U' )? ( 'l' | 'L' )
 				{
-				DebugLocation(655, 4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:655:4: ( 'u' | 'U' )?
+				DebugLocation(656, 4);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:656:4: ( 'u' | 'U' )?
 				int alt11=2;
 				try { DebugEnterSubRule(11);
 				try { DebugEnterDecision(11, false);
@@ -4429,7 +4429,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 					{
-					DebugLocation(655, 4);
+					DebugLocation(656, 4);
 					input.Consume();
 
 
@@ -4439,7 +4439,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				}
 				} finally { DebugExitSubRule(11); }
 
-				DebugLocation(655, 15);
+				DebugLocation(656, 15);
 				input.Consume();
 
 
@@ -4447,13 +4447,13 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:656:4: ( 'u' | 'U' ) ( 'l' | 'L' )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:657:4: ( 'u' | 'U' ) ( 'l' | 'L' )?
 				{
-				DebugLocation(656, 4);
+				DebugLocation(657, 4);
 				input.Consume();
 
-				DebugLocation(656, 15);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:656:15: ( 'l' | 'L' )?
+				DebugLocation(657, 15);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:657:15: ( 'l' | 'L' )?
 				int alt12=2;
 				try { DebugEnterSubRule(12);
 				try { DebugEnterDecision(12, false);
@@ -4470,7 +4470,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 					{
-					DebugLocation(656, 15);
+					DebugLocation(657, 15);
 					input.Consume();
 
 
@@ -4485,10 +4485,10 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:657:4: ( 'u' | 'U' )? ( 'l' | 'L' ) ( 'l' | 'L' )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:658:4: ( 'u' | 'U' )? ( 'l' | 'L' ) ( 'l' | 'L' )
 				{
-				DebugLocation(657, 4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:657:4: ( 'u' | 'U' )?
+				DebugLocation(658, 4);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:658:4: ( 'u' | 'U' )?
 				int alt13=2;
 				try { DebugEnterSubRule(13);
 				try { DebugEnterDecision(13, false);
@@ -4505,7 +4505,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 					{
-					DebugLocation(657, 4);
+					DebugLocation(658, 4);
 					input.Consume();
 
 
@@ -4515,10 +4515,10 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				}
 				} finally { DebugExitSubRule(13); }
 
-				DebugLocation(657, 15);
+				DebugLocation(658, 15);
 				input.Consume();
 
-				DebugLocation(657, 25);
+				DebugLocation(658, 25);
 				input.Consume();
 
 
@@ -4550,7 +4550,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		{
 			int _type = FLOATING_POINT_LITERAL;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:660:2: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )? | '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )? | ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )? | ( '0' .. '9' )+ ( Exponent )? FloatTypeSuffix )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:661:2: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )? | '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )? | ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )? | ( '0' .. '9' )+ ( Exponent )? FloatTypeSuffix )
 			int alt26=4;
 			try { DebugEnterDecision(26, false);
 			try
@@ -4567,10 +4567,10 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:660:6: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:661:6: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )?
 				{
-				DebugLocation(660, 6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:660:6: ( '0' .. '9' )+
+				DebugLocation(661, 6);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:661:6: ( '0' .. '9' )+
 				int cnt15=0;
 				try { DebugEnterSubRule(15);
 				while (true)
@@ -4592,7 +4592,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 						{
-						DebugLocation(660, 6);
+						DebugLocation(661, 6);
 						input.Consume();
 
 
@@ -4614,10 +4614,10 @@ public partial class CLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(15); }
 
-				DebugLocation(660, 18);
+				DebugLocation(661, 18);
 				Match('.'); 
-				DebugLocation(660, 22);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:660:22: ( '0' .. '9' )*
+				DebugLocation(661, 22);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:661:22: ( '0' .. '9' )*
 				try { DebugEnterSubRule(16);
 				while (true)
 				{
@@ -4638,7 +4638,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 						{
-						DebugLocation(660, 22);
+						DebugLocation(661, 22);
 						input.Consume();
 
 
@@ -4655,8 +4655,8 @@ public partial class CLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(16); }
 
-				DebugLocation(660, 34);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:660:34: ( Exponent )?
+				DebugLocation(661, 34);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:661:34: ( Exponent )?
 				int alt17=2;
 				try { DebugEnterSubRule(17);
 				try { DebugEnterDecision(17, false);
@@ -4671,9 +4671,9 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:660:34: Exponent
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:661:34: Exponent
 					{
-					DebugLocation(660, 34);
+					DebugLocation(661, 34);
 					mExponent(); 
 
 					}
@@ -4682,8 +4682,8 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				}
 				} finally { DebugExitSubRule(17); }
 
-				DebugLocation(660, 44);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:660:44: ( FloatTypeSuffix )?
+				DebugLocation(661, 44);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:661:44: ( FloatTypeSuffix )?
 				int alt18=2;
 				try { DebugEnterSubRule(18);
 				try { DebugEnterDecision(18, false);
@@ -4700,7 +4700,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 					{
-					DebugLocation(660, 44);
+					DebugLocation(661, 44);
 					input.Consume();
 
 
@@ -4715,12 +4715,12 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:661:6: '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:662:6: '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )?
 				{
-				DebugLocation(661, 6);
+				DebugLocation(662, 6);
 				Match('.'); 
-				DebugLocation(661, 10);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:661:10: ( '0' .. '9' )+
+				DebugLocation(662, 10);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:662:10: ( '0' .. '9' )+
 				int cnt19=0;
 				try { DebugEnterSubRule(19);
 				while (true)
@@ -4742,7 +4742,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 						{
-						DebugLocation(661, 10);
+						DebugLocation(662, 10);
 						input.Consume();
 
 
@@ -4764,8 +4764,8 @@ public partial class CLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(19); }
 
-				DebugLocation(661, 22);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:661:22: ( Exponent )?
+				DebugLocation(662, 22);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:662:22: ( Exponent )?
 				int alt20=2;
 				try { DebugEnterSubRule(20);
 				try { DebugEnterDecision(20, false);
@@ -4780,9 +4780,9 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:661:22: Exponent
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:662:22: Exponent
 					{
-					DebugLocation(661, 22);
+					DebugLocation(662, 22);
 					mExponent(); 
 
 					}
@@ -4791,8 +4791,8 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				}
 				} finally { DebugExitSubRule(20); }
 
-				DebugLocation(661, 32);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:661:32: ( FloatTypeSuffix )?
+				DebugLocation(662, 32);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:662:32: ( FloatTypeSuffix )?
 				int alt21=2;
 				try { DebugEnterSubRule(21);
 				try { DebugEnterDecision(21, false);
@@ -4809,7 +4809,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 					{
-					DebugLocation(661, 32);
+					DebugLocation(662, 32);
 					input.Consume();
 
 
@@ -4824,10 +4824,10 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:662:6: ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:663:6: ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )?
 				{
-				DebugLocation(662, 6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:662:6: ( '0' .. '9' )+
+				DebugLocation(663, 6);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:663:6: ( '0' .. '9' )+
 				int cnt22=0;
 				try { DebugEnterSubRule(22);
 				while (true)
@@ -4849,7 +4849,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 						{
-						DebugLocation(662, 6);
+						DebugLocation(663, 6);
 						input.Consume();
 
 
@@ -4871,10 +4871,10 @@ public partial class CLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(22); }
 
-				DebugLocation(662, 18);
+				DebugLocation(663, 18);
 				mExponent(); 
-				DebugLocation(662, 27);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:662:27: ( FloatTypeSuffix )?
+				DebugLocation(663, 27);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:663:27: ( FloatTypeSuffix )?
 				int alt23=2;
 				try { DebugEnterSubRule(23);
 				try { DebugEnterDecision(23, false);
@@ -4891,7 +4891,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 					{
-					DebugLocation(662, 27);
+					DebugLocation(663, 27);
 					input.Consume();
 
 
@@ -4906,10 +4906,10 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:663:6: ( '0' .. '9' )+ ( Exponent )? FloatTypeSuffix
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:664:6: ( '0' .. '9' )+ ( Exponent )? FloatTypeSuffix
 				{
-				DebugLocation(663, 6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:663:6: ( '0' .. '9' )+
+				DebugLocation(664, 6);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:664:6: ( '0' .. '9' )+
 				int cnt24=0;
 				try { DebugEnterSubRule(24);
 				while (true)
@@ -4931,7 +4931,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 						{
-						DebugLocation(663, 6);
+						DebugLocation(664, 6);
 						input.Consume();
 
 
@@ -4953,8 +4953,8 @@ public partial class CLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(24); }
 
-				DebugLocation(663, 18);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:663:18: ( Exponent )?
+				DebugLocation(664, 18);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:664:18: ( Exponent )?
 				int alt25=2;
 				try { DebugEnterSubRule(25);
 				try { DebugEnterDecision(25, false);
@@ -4969,9 +4969,9 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:663:18: Exponent
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:664:18: Exponent
 					{
-					DebugLocation(663, 18);
+					DebugLocation(664, 18);
 					mExponent(); 
 
 					}
@@ -4980,7 +4980,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				}
 				} finally { DebugExitSubRule(25); }
 
-				DebugLocation(663, 28);
+				DebugLocation(664, 28);
 				mFloatTypeSuffix(); 
 
 				}
@@ -5011,11 +5011,11 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		TraceIn("Exponent", 108);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:668:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:669:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:668:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:669:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
 			{
-			DebugLocation(668, 12);
+			DebugLocation(669, 12);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -5028,8 +5028,8 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(668, 22);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:668:22: ( '+' | '-' )?
+			DebugLocation(669, 22);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:669:22: ( '+' | '-' )?
 			int alt27=2;
 			try { DebugEnterSubRule(27);
 			try { DebugEnterDecision(27, false);
@@ -5046,7 +5046,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				DebugEnterAlt(1);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 				{
-				DebugLocation(668, 22);
+				DebugLocation(669, 22);
 				input.Consume();
 
 
@@ -5056,8 +5056,8 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(27); }
 
-			DebugLocation(668, 33);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:668:33: ( '0' .. '9' )+
+			DebugLocation(669, 33);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:669:33: ( '0' .. '9' )+
 			int cnt28=0;
 			try { DebugEnterSubRule(28);
 			while (true)
@@ -5079,7 +5079,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 					{
-					DebugLocation(668, 33);
+					DebugLocation(669, 33);
 					input.Consume();
 
 
@@ -5126,11 +5126,11 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		TraceIn("FloatTypeSuffix", 109);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:671:17: ( ( 'f' | 'F' | 'd' | 'D' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:672:17: ( ( 'f' | 'F' | 'd' | 'D' ) )
 			DebugEnterAlt(1);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 			{
-			DebugLocation(671, 17);
+			DebugLocation(672, 17);
 			if (input.LA(1)=='D'||input.LA(1)=='F'||input.LA(1)=='d'||input.LA(1)=='f')
 			{
 				input.Consume();
@@ -5168,7 +5168,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		TraceIn("EscapeSequence", 110);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:675:2: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | OctalEscape )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:676:2: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | OctalEscape )
 			int alt29=2;
 			try { DebugEnterDecision(29, false);
 			int LA29_1 = input.LA(1);
@@ -5203,11 +5203,11 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:675:6: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:676:6: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
 				{
-				DebugLocation(675, 6);
+				DebugLocation(676, 6);
 				Match('\\'); 
-				DebugLocation(675, 11);
+				DebugLocation(676, 11);
 				input.Consume();
 
 
@@ -5215,9 +5215,9 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:676:6: OctalEscape
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:677:6: OctalEscape
 				{
-				DebugLocation(676, 6);
+				DebugLocation(677, 6);
 				mOctalEscape(); 
 
 				}
@@ -5246,7 +5246,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		TraceIn("OctalEscape", 111);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:681:2: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:682:2: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
 			int alt30=3;
 			try { DebugEnterDecision(30, false);
 			int LA30_1 = input.LA(1);
@@ -5308,25 +5308,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:681:6: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
-				{
-				DebugLocation(681, 6);
-				Match('\\'); 
-				DebugLocation(681, 11);
-				input.Consume();
-
-				DebugLocation(681, 22);
-				input.Consume();
-
-				DebugLocation(681, 33);
-				input.Consume();
-
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:682:6: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:682:6: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
 				{
 				DebugLocation(682, 6);
 				Match('\\'); 
@@ -5336,16 +5318,34 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				DebugLocation(682, 22);
 				input.Consume();
 
+				DebugLocation(682, 33);
+				input.Consume();
+
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:683:6: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+				{
+				DebugLocation(683, 6);
+				Match('\\'); 
+				DebugLocation(683, 11);
+				input.Consume();
+
+				DebugLocation(683, 22);
+				input.Consume();
+
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:683:6: '\\\\' ( '0' .. '7' )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:684:6: '\\\\' ( '0' .. '7' )
 				{
-				DebugLocation(683, 6);
+				DebugLocation(684, 6);
 				Match('\\'); 
-				DebugLocation(683, 11);
+				DebugLocation(684, 11);
 				input.Consume();
 
 
@@ -5375,21 +5375,21 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		TraceIn("UnicodeEscape", 112);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:688:2: ( '\\\\' 'u' HexDigit HexDigit HexDigit HexDigit )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:689:2: ( '\\\\' 'u' HexDigit HexDigit HexDigit HexDigit )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:688:6: '\\\\' 'u' HexDigit HexDigit HexDigit HexDigit
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:689:6: '\\\\' 'u' HexDigit HexDigit HexDigit HexDigit
 			{
-			DebugLocation(688, 6);
+			DebugLocation(689, 6);
 			Match('\\'); 
-			DebugLocation(688, 11);
+			DebugLocation(689, 11);
 			Match('u'); 
-			DebugLocation(688, 15);
+			DebugLocation(689, 15);
 			mHexDigit(); 
-			DebugLocation(688, 24);
+			DebugLocation(689, 24);
 			mHexDigit(); 
-			DebugLocation(688, 33);
+			DebugLocation(689, 33);
 			mHexDigit(); 
-			DebugLocation(688, 42);
+			DebugLocation(689, 42);
 			mHexDigit(); 
 
 			}
@@ -5418,11 +5418,11 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		{
 			int _type = WS;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:690:5: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:691:5: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:690:8: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:691:8: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
 			{
-			DebugLocation(690, 8);
+			DebugLocation(691, 8);
 			if ((input.LA(1)>='\t' && input.LA(1)<='\n')||(input.LA(1)>='\f' && input.LA(1)<='\r')||input.LA(1)==' ')
 			{
 				input.Consume();
@@ -5435,8 +5435,8 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(690, 38);
-			Skip();
+			DebugLocation(691, 38);
+			_channel=Hidden;
 
 			}
 
@@ -5466,15 +5466,15 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		{
 			int _type = COMMENT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:694:2: ( '/*' ( options {greedy=false; } : . )* '*/' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:695:2: ( '/*' ( options {greedy=false; } : . )* '*/' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:694:6: '/*' ( options {greedy=false; } : . )* '*/'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:695:6: '/*' ( options {greedy=false; } : . )* '*/'
 			{
-			DebugLocation(694, 6);
+			DebugLocation(695, 6);
 			Match("/*"); 
 
-			DebugLocation(694, 11);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:694:11: ( options {greedy=false; } : . )*
+			DebugLocation(695, 11);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:695:11: ( options {greedy=false; } : . )*
 			try { DebugEnterSubRule(31);
 			while (true)
 			{
@@ -5508,9 +5508,9 @@ public partial class CLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:694:39: .
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:695:39: .
 					{
-					DebugLocation(694, 39);
+					DebugLocation(695, 39);
 					MatchAny(); 
 
 					}
@@ -5526,10 +5526,10 @@ public partial class CLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(31); }
 
-			DebugLocation(694, 44);
+			DebugLocation(695, 44);
 			Match("*/"); 
 
-			DebugLocation(694, 49);
+			DebugLocation(695, 49);
 			_channel=Hidden;
 
 			}
@@ -5560,15 +5560,15 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		{
 			int _type = LINE_COMMENT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:698:2: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:699:2: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:698:4: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:699:4: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 			{
-			DebugLocation(698, 4);
+			DebugLocation(699, 4);
 			Match("//"); 
 
-			DebugLocation(698, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:698:9: (~ ( '\\n' | '\\r' ) )*
+			DebugLocation(699, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:699:9: (~ ( '\\n' | '\\r' ) )*
 			try { DebugEnterSubRule(32);
 			while (true)
 			{
@@ -5589,7 +5589,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 					{
-					DebugLocation(698, 9);
+					DebugLocation(699, 9);
 					input.Consume();
 
 
@@ -5606,8 +5606,8 @@ public partial class CLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(32); }
 
-			DebugLocation(698, 23);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:698:23: ( '\\r' )?
+			DebugLocation(699, 23);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:699:23: ( '\\r' )?
 			int alt33=2;
 			try { DebugEnterSubRule(33);
 			try { DebugEnterDecision(33, false);
@@ -5622,9 +5622,9 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:698:23: '\\r'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:699:23: '\\r'
 				{
-				DebugLocation(698, 23);
+				DebugLocation(699, 23);
 				Match('\r'); 
 
 				}
@@ -5633,9 +5633,9 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(33); }
 
-			DebugLocation(698, 29);
+			DebugLocation(699, 29);
 			Match('\n'); 
-			DebugLocation(698, 34);
+			DebugLocation(699, 34);
 			_channel=Hidden;
 
 			}
@@ -5666,14 +5666,14 @@ public partial class CLexer : Antlr.Runtime.Lexer
 		{
 			int _type = LINE_COMMAND;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:703:2: ( '#' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:704:2: ( '#' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:703:4: '#' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:704:4: '#' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 			{
-			DebugLocation(703, 4);
+			DebugLocation(704, 4);
 			Match('#'); 
-			DebugLocation(703, 8);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:703:8: (~ ( '\\n' | '\\r' ) )*
+			DebugLocation(704, 8);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:704:8: (~ ( '\\n' | '\\r' ) )*
 			try { DebugEnterSubRule(34);
 			while (true)
 			{
@@ -5694,7 +5694,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:
 					{
-					DebugLocation(703, 8);
+					DebugLocation(704, 8);
 					input.Consume();
 
 
@@ -5711,8 +5711,8 @@ public partial class CLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(34); }
 
-			DebugLocation(703, 22);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:703:22: ( '\\r' )?
+			DebugLocation(704, 22);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:704:22: ( '\\r' )?
 			int alt35=2;
 			try { DebugEnterSubRule(35);
 			try { DebugEnterDecision(35, false);
@@ -5727,9 +5727,9 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:703:22: '\\r'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\C\\C.g:704:22: '\\r'
 				{
-				DebugLocation(703, 22);
+				DebugLocation(704, 22);
 				Match('\r'); 
 
 				}
@@ -5738,10 +5738,10 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(35); }
 
-			DebugLocation(703, 28);
+			DebugLocation(704, 28);
 			Match('\n'); 
-			DebugLocation(703, 33);
-			Skip();
+			DebugLocation(704, 33);
+			_channel=Hidden;
 
 			}
 
@@ -6823,7 +6823,7 @@ public partial class CLexer : Antlr.Runtime.Lexer
 			this.transition = DFA26_transition;
 		}
 
-		public override string Description { get { return "659:1: FLOATING_POINT_LITERAL : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )? | '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )? | ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )? | ( '0' .. '9' )+ ( Exponent )? FloatTypeSuffix );"; } }
+		public override string Description { get { return "660:1: FLOATING_POINT_LITERAL : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( Exponent )? ( FloatTypeSuffix )? | '.' ( '0' .. '9' )+ ( Exponent )? ( FloatTypeSuffix )? | ( '0' .. '9' )+ Exponent ( FloatTypeSuffix )? | ( '0' .. '9' )+ ( Exponent )? FloatTypeSuffix );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{

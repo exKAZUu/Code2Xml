@@ -16,49 +16,20 @@
 
 #endregion
 
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using Antlr.Runtime;
-using Code2Xml.Core.Antlr;
 using Code2Xml.Core.CodeToXmls;
-using Code2Xml.Core.XmlToCodes;
+using Code2Xml.Languages.ANTLRv3.Processors.Lua;
 using Code2Xml.Languages.Lua.XmlToCodes;
 
 namespace Code2Xml.Languages.Lua.CodeToXmls {
 	[Export(typeof(CodeToXml))]
-	public class LuaCodeToXml : AntlrCodeToXml<LuaParser> {
+	public class LuaCodeToXml
+			: CodeToXmlUsingProcessor
+					<LuaProcessorUsingAntlr3, LuaXmlToCode, ANTLRv3.Processors.Lua.LuaParser> {
 		private static LuaCodeToXml _instance;
-
-		private LuaCodeToXml() {}
 
 		public static LuaCodeToXml Instance {
 			get { return _instance ?? (_instance = new LuaCodeToXml()); }
-		}
-
-		protected override Func<LuaParser, XAstParserRuleReturnScope>
-			DefaultParseFunc {
-			get { return parser => parser.chunk(); }
-		}
-
-		public override string ParserName {
-			get { return "Lua5.1"; }
-		}
-
-		public override IEnumerable<string> TargetExtensions {
-			get { return new[] { ".lua" }; }
-		}
-
-		public override XmlToCode XmlToCode {
-			get { return LuaXmlToCode.Instance; }
-		}
-
-		protected override ITokenSource CreateTokenSource(ICharStream stream) {
-			return new LuaLexer(stream);
-		}
-
-		protected override LuaParser CreateParser(ITokenStream tokenStream) {
-			return new LuaParser(tokenStream);
 		}
 	}
 }

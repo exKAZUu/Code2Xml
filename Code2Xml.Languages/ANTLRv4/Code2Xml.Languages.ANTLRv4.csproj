@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Antlr4AstBuilder.cs" />
+    <Compile Include="Core\Antlr4Extensions.cs" />
     <Compile Include="Processors\Clojure\Clojure.g4.lexer.cs" />
     <Compile Include="Processors\Clojure\Clojure.g4.parser.cs" />
     <Compile Include="Core\Antlr4Processor.cs" />

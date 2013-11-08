@@ -203,9 +203,14 @@ namespace Code2Xml.Core.Location {
 			       other.Contains(EndLocation);
 		}
 
-		public XElement FindInnerElement(XElement element) {
+		/// <summary>
+		/// Find the most inner element which locates at the this range from the specified root.
+		/// </summary>
+		/// <param name="root"></param>
+		/// <returns></returns>
+		public XElement FindInnerElement(XElement root) {
 			XElement lastElement = null;
-			foreach (var elem in element.DescendantsAndSelf()) {
+			foreach (var elem in root.DescendantsAndSelf()) {
 				var pos = Locate(elem);
 				if (pos.Contains(this)) {
 					lastElement = elem;
@@ -216,8 +221,13 @@ namespace Code2Xml.Core.Location {
 			return lastElement;
 		}
 
-		public XElement FindOuterElement(XElement element) {
-			var ret = FindInnerElement(element);
+		/// <summary>
+		/// Find the most outer element which locates at the this range from the specified root.
+		/// </summary>
+		/// <param name="root"></param>
+		/// <returns></returns>
+		public XElement FindOuterElement(XElement root) {
+			var ret = FindInnerElement(root);
 			while (ret.Parent != null && ret.Parent.Elements().Count() == 1) {
 				ret = ret.Parent;
 			}
@@ -245,8 +255,7 @@ namespace Code2Xml.Core.Location {
 			return Tuple.Create(inclusiveStart, exclusiveEnd);
 		}
 
-		public static CodeRange ConvertFromIndicies(
-				string code, ref int inclusiveStart, ref int exclusiveEnd) {
+		public static CodeRange ConvertFromIndicies(string code, int inclusiveStart, int exclusiveEnd) {
 			var beforeCode = code.Substring(0, inclusiveStart);
 			var targetCode = code.Substring(inclusiveStart, exclusiveEnd - inclusiveStart);
 			var beforeCount = beforeCode.Count(ch => ch == '\n');
@@ -273,7 +282,7 @@ namespace Code2Xml.Core.Location {
 			while (char.IsWhiteSpace(code[exclusiveEnd - 1])) {
 				exclusiveEnd--;
 			}
-			return ConvertFromIndicies(code, ref inclusiveStart, ref exclusiveEnd);
+			return ConvertFromIndicies(code, inclusiveStart, exclusiveEnd);
 		}
 
 		#endregion

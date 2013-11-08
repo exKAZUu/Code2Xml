@@ -18,6 +18,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
@@ -33,7 +34,7 @@ namespace Code2Xml.Core.CodeToXmls {
 			}
 		}
 
-		public override IEnumerable<string> TargetExtensions {
+		public override ReadOnlyCollection<string> TargetExtensions {
 			get {
 				Contract.Ensures(Contract.Result<IEnumerable<string>>() != null);
 				Contract.Ensures(

@@ -17,8 +17,9 @@
 #endregion
 
 using System.Linq;
+using System.Xml.Linq;
 using Code2Xml.Core.Location;
-using Code2Xml.Languages.Java.CodeToXmls;
+using Code2Xml.Languages.ANTLRv3.Processors.Java;
 using NUnit.Framework;
 
 namespace Code2Xml.Core.Tests.Location {
@@ -75,7 +76,7 @@ namespace Code2Xml.Core.Tests.Location {
 
 		[Test]
 		public void FindElement() {
-			var xml = JavaCodeToXml.Instance.Generate(@"
+			var xml = JavaProcessorUsingAntlr3.Instance.GenerateXml(@"
 public class Hello {
 	public static void main(String[] args) {
 		System.out.println(1);
@@ -88,21 +89,40 @@ public class Hello {
 		}
 
 		[Test]
-		public void InterConvertCodeRangeAndIndicies() {
-			var code = @"
-public class Hello {
-	public static void main(String[] args) {
-		System.out.println(1);
-	}
-}";
-			var ast = JavaCodeToXml.Instance.Generate(code);
-			var elem = ast.DescendantsAndSelf("statement").First();
-			int inclusiveStart, exclusiveEnd;
-			int newInclusiveStart, newExclusiveEnd;
+		[TestCase(@"class Klass { void method() { System.out.println(1); } }")]
+		[TestCase(@"class Klass { void method() { System.out
+.println(1); } }")]
+		public void InterConvertCodeRangeAndIndicies(string code) {
+			var ast = JavaProcessorUsingAntlr3.Instance.GenerateXml(code);
+			foreach (var elem in ast.DescendantsAndSelf("statement")) {
+				int inclusiveStart, exclusiveEnd;
+				var range = ConvertRangeToIndicies(code, elem, out inclusiveStart, out exclusiveEnd);
+				ConvertIndiciesToRange(ast, code, inclusiveStart, exclusiveEnd, range);
+			}
+		}
+
+		private static CodeRange ConvertRangeToIndicies(
+				string code, XElement elem, out int inclusiveStart, out int exclusiveEnd) {
 			var range = CodeRange.Locate(elem);
 			range.ConvertToIndicies(code, out inclusiveStart, out exclusiveEnd);
-			var newRange = CodeRange.ConvertFromIndiciesSkippingWhitespaces(
-					code, ref inclusiveStart, ref exclusiveEnd);
+			Assert.That(
+					code.Substring(inclusiveStart, exclusiveEnd - inclusiveStart),
+					Is.EqualTo(elem.Value));
+			return range;
+		}
+
+		private static void ConvertIndiciesToRange(
+				XElement ast, string code, int inclusiveStart, int exclusiveEnd, CodeRange range) {
+			var newRange = CodeRange.ConvertFromIndicies(code, inclusiveStart, exclusiveEnd);
+			var newInclusiveStart = char.IsWhiteSpace(code[inclusiveStart - 1])
+					? inclusiveStart - 1 : inclusiveStart;
+			var newExclusiveEnd = char.IsWhiteSpace(code[exclusiveEnd])
+					? exclusiveEnd + 1 : exclusiveEnd;
+			var elem = CodeRange.ConvertFromIndiciesSkippingWhitespaces(
+					code, ref newInclusiveStart, ref newExclusiveEnd)
+					.FindInnerElement(ast);
+			Assert.That(CodeRange.Locate(elem), Is.EqualTo(newRange));
+
 			newRange.ConvertToIndicies(code, out newInclusiveStart, out newExclusiveEnd);
 			Assert.That(newRange, Is.EqualTo(range));
 			Assert.That(newInclusiveStart, Is.EqualTo(inclusiveStart));

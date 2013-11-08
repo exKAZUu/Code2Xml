@@ -16,7 +16,7 @@
 
 #endregion
 
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -37,8 +37,10 @@ namespace Code2Xml.Languages.SrcML.CodeToXmls {
 		private static readonly string PrivateProcessorPath =
 				Path.Combine(DirectoryPath, "src2srcml.exe");
 
-		private static readonly string[] PrivateArguments =
-				new[] { "-l", "C++" };
+		private static readonly string[] PrivateArguments = { "-l", "C++" };
+
+		private readonly ReadOnlyCollection<string> _targetExtensions =
+				new ReadOnlyCollection<string>(new[] { ".cpp", ".cxx", ".c++", ".h", ".hpp", ".hxx", ".h++" });
 
 		public static SrcMLForCppCodeToXml Instance {
 			get { return _instance ?? (_instance = new SrcMLForCppCodeToXml()); }
@@ -48,8 +50,8 @@ namespace Code2Xml.Languages.SrcML.CodeToXmls {
 			get { return "SrcMLForC++"; }
 		}
 
-		public override IEnumerable<string> TargetExtensions {
-			get { return new[] { ".cpp", ".cxx", ".c++", ".h", ".hpp", ".hxx", ".h++" }; }
+		public override ReadOnlyCollection<string> TargetExtensions {
+			get { return _targetExtensions; }
 		}
 
 		public override XmlToCode XmlToCode {

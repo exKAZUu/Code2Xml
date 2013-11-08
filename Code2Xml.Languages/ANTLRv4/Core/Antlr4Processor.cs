@@ -16,7 +16,6 @@
 
 #endregion
 
-using System;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Text;
@@ -25,8 +24,19 @@ using Antlr4.Runtime;
 using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Languages.ANTLRv4.Core {
-	public abstract class Antlr4Processor<TParser> : LanguageProcessor
-			where TParser : Parser {
+	public abstract class Antlr4Processor<TParser, TProcessor> : LanguageProcessor
+			where TParser : Parser
+			where TProcessor : Antlr4Processor<TParser, TProcessor>, new() {
+		#region Singleton pattern
+
+		private static TProcessor _instance;
+
+		public static TProcessor Instance {
+			get { return _instance ?? (_instance = new TProcessor()); }
+		}
+
+		#endregion
+
 		protected Antlr4Processor(params string[] extensions) : base(extensions) {}
 
 		/// <summary>

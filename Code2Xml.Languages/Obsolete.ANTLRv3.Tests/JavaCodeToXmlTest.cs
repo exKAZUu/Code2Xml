@@ -32,7 +32,7 @@ namespace Code2Xml.Languages.Obsolete.ANTLRv3.Tests {
 	public class JavaCodeToXmlTest {
 		[Test]
 		public void ParseSourceCodeOfHudson() {
-			var path = Fixture.GetInputPath("Java", "FileSystemProvisioner.java");
+			var path = Fixture.GetInputCodePath("Java", "FileSystemProvisioner.java");
 			JavaCodeToXml.Instance.GenerateFromFile(path, true);
 		}
 
