@@ -1,13 +1,4 @@
-using Code2Xml.Languages.ANTLRv3.Core;
-using System;
-using Code2Xml.Languages.ANTLRv3.Core;
-using System;
-using Code2Xml.Languages.ANTLRv3.Core;
-using Code2Xml.Languages.ANTLRv3.Core;
-using Code2Xml.Languages.ANTLRv3.Core;
-using Code2Xml.Languages.ANTLRv3.Core;
-using Code2Xml.Languages.ANTLRv3.Core;
-#region License
+﻿#region License
 
 // Copyright (C) 2011-2013 Kazunori Sakamoto
 // 
@@ -25,11 +16,20 @@ using Code2Xml.Languages.ANTLRv3.Core;
 
 #endregion
 
-using System.IO;
+using System;
+using Code2Xml.Core.Processors;
+using NUnit.Framework;
 
-namespace Code2Xml.Languages.ANTLRv3.Core {
-	public interface ICustomizedAntlr3Parser {
-		TextWriter TraceDestination { get; set; }
-		Antlr3AstBuilder TreeAdaptor { get; set; }
-	}
+namespace Code2Xml.Core.Tests {
+    public abstract class ProcessorTest {
+        protected abstract LanguageProcessor CreateProcessor();
+
+        protected void VerifyParsing(string code) {
+            var processor = CreateProcessor();
+            var xml = processor.GenerateXml(code);
+            var code2 = processor.GenerateCode(xml);
+            Assert.That(code2, Is.EqualTo(code));
+            Console.WriteLine(xml);
+        }
+    }
 }

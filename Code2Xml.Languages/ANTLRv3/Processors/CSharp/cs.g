@@ -1078,7 +1078,8 @@ WS:
 fragment
 TS:
     (' '  |  '\t'  ) 
-    { $channel=HIDDEN; } ;
+    { Skip(); } ;
+        
 DOC_LINE_COMMENT
     : 	('///' ~('\n'|'\r')*  ('\r' | '\n')+)
     { $channel=HIDDEN; } ;
@@ -1215,7 +1216,7 @@ ELSE_TOKEN:
 					Processing.Push(false);
 			}
 		}
-        $channel=HIDDEN;
+        Skip();
 	} ;
 fragment
 ENDIF_TOKEN:
@@ -1223,7 +1224,7 @@ ENDIF_TOKEN:
 	{
 		if (Processing.Count > 0)
 			Processing.Pop();
-        $channel=HIDDEN;
+        Skip();
 	} ;
 	
 	
