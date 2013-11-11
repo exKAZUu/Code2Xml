@@ -25,7 +25,7 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
     [TestFixture]
     public class CSharpProcessorTest : ProcessorTest {
         protected override LanguageProcessor CreateProcessor() {
-            return CSharpProcessorUsingAntlr3.Instance;
+            return new CSharpProcessorUsingAntlr3();
         }
 
         [Test]
@@ -35,9 +35,8 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
 void main() { /* comment */ } // comment2
 #endregion
 }")]
-        public void Parse(string code)
-        {
-            VerifyParsing(code);
+        public void Parse(string code) {
+            VerifyRestoring(code);
         }
     }
 }

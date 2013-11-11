@@ -22,37 +22,37 @@ using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv3.Core;
 
 namespace Code2Xml.Languages.ANTLRv3.Processors.Php {
-	/// <summary>
-	/// Represents a Php parser and a Php code generator.
-	/// </summary>
-	[Export(typeof(LanguageProcessor))]
-	public sealed class PhpProcessorUsingAntlr3 : Antlr3Processor<PhpParser, PhpProcessorUsingAntlr3> {
-		/// <summary>
-		/// Gets the language name except for the version.
-		/// </summary>
-		public override string LanguageName {
-			get { return "Php"; }
-		}
+    /// <summary>
+    /// Represents a Php parser and a Php code generator.
+    /// </summary>
+    [Export(typeof(LanguageProcessor))]
+    public class PhpProcessorUsingAntlr3 : ProcessorUsingAntlr3<PhpParser> {
+        /// <summary>
+        /// Gets the language name except for the version.
+        /// </summary>
+        public override string LanguageName {
+            get { return "Php"; }
+        }
 
-		/// <summary>
-		/// Gets the language version.
-		/// </summary>
-		public override string LanguageVersion {
-			get { return "5.3"; }
-		}
+        /// <summary>
+        /// Gets the language version.
+        /// </summary>
+        public override string LanguageVersion {
+            get { return "5.3"; }
+        }
 
-		public PhpProcessorUsingAntlr3() : base(".php") {}
+        public PhpProcessorUsingAntlr3() : base(".php") {}
 
-		protected override ITokenSource CreateLexer(ICharStream stream) {
-			return new PhpLexer(stream);
-		}
+        protected override ITokenSource CreateLexer(ICharStream stream) {
+            return new PhpLexer(stream);
+        }
 
-		protected override PhpParser CreateParser(ITokenStream stream) {
-			return new PhpParser(stream);
-		}
+        protected override PhpParser CreateParser(ITokenStream stream) {
+            return new PhpParser(stream);
+        }
 
-		protected override Antlr3AstNode Parse(PhpParser parser) {
-			return parser.prog();
-		}
-	}
+        protected override Antlr3AstNode Parse(PhpParser parser) {
+            return parser.prog();
+        }
+    }
 }

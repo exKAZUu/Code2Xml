@@ -76,7 +76,7 @@ namespace Code2Xml.Core.Tests.Location {
 
 		[Test]
 		public void FindElement() {
-			var xml = JavaProcessorUsingAntlr3.Instance.GenerateXml(@"
+			var xml = new JavaProcessorUsingAntlr3().GenerateXml(@"
 public class Hello {
 	public static void main(String[] args) {
 		System.out.println(1);
@@ -93,7 +93,7 @@ public class Hello {
 		[TestCase(@"class Klass { void method() { System.out
 .println(1); } }")]
 		public void InterConvertCodeRangeAndIndicies(string code) {
-			var ast = JavaProcessorUsingAntlr3.Instance.GenerateXml(code);
+            var ast = new JavaProcessorUsingAntlr3().GenerateXml(code);
 			foreach (var elem in ast.DescendantsAndSelf("statement")) {
 				int inclusiveStart, exclusiveEnd;
 				var range = ConvertRangeToIndicies(code, elem, out inclusiveStart, out exclusiveEnd);

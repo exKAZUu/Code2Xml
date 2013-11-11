@@ -29,7 +29,7 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Lua {
 	/// Represents a Lua parser and a Lua code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class LuaProcessor : Antlr4Processor<LuaParser, LuaProcessor> {
+	public class LuaProcessor : ProcessorUsingAntlr4<LuaParser> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>

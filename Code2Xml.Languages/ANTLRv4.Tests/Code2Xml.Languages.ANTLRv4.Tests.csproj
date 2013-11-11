@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Code2Xml.Languages.ANTLRv4.Tests</RootNamespace>
     <AssemblyName>Code2Xml.Languages.ANTLRv4.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -35,8 +35,8 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr4.Runtime.v4.5">
-      <HintPath>..\..\packages\Antlr4.Runtime.4.1.0-alpha003\lib\net45\Antlr4.Runtime.v4.5.dll</HintPath>
+    <Reference Include="Antlr4.Runtime.v4.0">
+      <HintPath>..\..\packages\Antlr4.Runtime.4.1.0-alpha003\lib\net40\Antlr4.Runtime.v4.0.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>

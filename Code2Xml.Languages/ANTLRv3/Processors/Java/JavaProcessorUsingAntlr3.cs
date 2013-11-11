@@ -22,38 +22,37 @@ using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv3.Core;
 
 namespace Code2Xml.Languages.ANTLRv3.Processors.Java {
-	/// <summary>
-	/// Represents a Java parser and a Java code generator.
-	/// </summary>
-	[Export(typeof(LanguageProcessor))]
-	public sealed class JavaProcessorUsingAntlr3
-			: Antlr3Processor<JavaParser, JavaProcessorUsingAntlr3> {
-		/// <summary>
-		/// Gets the language name except for the version.
-		/// </summary>
-		public override string LanguageName {
-			get { return "Java"; }
-		}
+    /// <summary>
+    /// Represents a Java parser and a Java code generator.
+    /// </summary>
+    [Export(typeof(LanguageProcessor))]
+    public class JavaProcessorUsingAntlr3 : ProcessorUsingAntlr3<JavaParser> {
+        /// <summary>
+        /// Gets the language name except for the version.
+        /// </summary>
+        public override string LanguageName {
+            get { return "Java"; }
+        }
 
-		/// <summary>
-		/// Gets the language version.
-		/// </summary>
-		public override string LanguageVersion {
-			get { return "7"; }
-		}
+        /// <summary>
+        /// Gets the language version.
+        /// </summary>
+        public override string LanguageVersion {
+            get { return "7"; }
+        }
 
-		public JavaProcessorUsingAntlr3() : base(".java") {}
+        public JavaProcessorUsingAntlr3() : base(".java") {}
 
-		protected override ITokenSource CreateLexer(ICharStream stream) {
-			return new JavaLexer(stream);
-		}
+        protected override ITokenSource CreateLexer(ICharStream stream) {
+            return new JavaLexer(stream);
+        }
 
-		protected override JavaParser CreateParser(ITokenStream stream) {
-			return new JavaParser(stream);
-		}
+        protected override JavaParser CreateParser(ITokenStream stream) {
+            return new JavaParser(stream);
+        }
 
-		protected override Antlr3AstNode Parse(JavaParser parser) {
-			return parser.compilationUnit();
-		}
-	}
+        protected override Antlr3AstNode Parse(JavaParser parser) {
+            return parser.compilationUnit();
+        }
+    }
 }

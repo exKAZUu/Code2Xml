@@ -11,7 +11,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Code2Xml.Languages.ANTLRv4</RootNamespace>
     <AssemblyName>Code2Xml.Languages.ANTLRv4</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -37,8 +37,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr4.Runtime.v4.5">
-      <HintPath>..\..\packages\Antlr4.Runtime.4.1.0-alpha003\lib\net45\Antlr4.Runtime.v4.5.dll</HintPath>
+    <Reference Include="Antlr4.Runtime.v4.0, Version=1.0.1.0, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Antlr4.Runtime.4.1.0-alpha003\lib\net40\Antlr4.Runtime.v4.0.dll</HintPath>
     </Reference>
     <Reference Include="Paraiba, Version=1.1.0.90, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -62,7 +63,7 @@
     <Compile Include="Core\Antlr4Extensions.cs" />
     <Compile Include="Processors\Clojure\Clojure.g4.lexer.cs" />
     <Compile Include="Processors\Clojure\Clojure.g4.parser.cs" />
-    <Compile Include="Core\Antlr4Processor.cs" />
+    <Compile Include="Core\ProcessorUsingAntlr4.cs" />
     <Compile Include="Processors\Clojure\ClojureProcessor.cs" />
     <Compile Include="Processors\C\C.g4.lexer.cs" />
     <Compile Include="Processors\C\C.g4.parser.cs" />

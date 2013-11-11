@@ -22,37 +22,37 @@ using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv3.Core;
 
 namespace Code2Xml.Languages.ANTLRv3.Processors.C {
-	/// <summary>
-	/// Represents a C parser and a C code generator.
-	/// </summary>
-	[Export(typeof(LanguageProcessor))]
-	public sealed class CProcessorUsingAntlr3 : Antlr3Processor<CParser, CProcessorUsingAntlr3> {
-		/// <summary>
-		/// Gets the language name except for the version.
-		/// </summary>
-		public override string LanguageName {
-			get { return "C"; }
-		}
+    /// <summary>
+    /// Represents a C parser and a C code generator.
+    /// </summary>
+    [Export(typeof(LanguageProcessor))]
+    public class CProcessorUsingAntlr3 : ProcessorUsingAntlr3<CParser> {
+        /// <summary>
+        /// Gets the language name except for the version.
+        /// </summary>
+        public override string LanguageName {
+            get { return "C"; }
+        }
 
-		/// <summary>
-		/// Gets the language version.
-		/// </summary>
-		public override string LanguageVersion {
-			get { return "11"; }
-		}
+        /// <summary>
+        /// Gets the language version.
+        /// </summary>
+        public override string LanguageVersion {
+            get { return "11"; }
+        }
 
-		public CProcessorUsingAntlr3() : base(".c", ".h") {}
+        public CProcessorUsingAntlr3() : base(".c", ".h") {}
 
-		protected override ITokenSource CreateLexer(ICharStream stream) {
-			return new CLexer(stream);
-		}
+        protected override ITokenSource CreateLexer(ICharStream stream) {
+            return new CLexer(stream);
+        }
 
-		protected override CParser CreateParser(ITokenStream stream) {
-			return new CParser(stream);
-		}
+        protected override CParser CreateParser(ITokenStream stream) {
+            return new CParser(stream);
+        }
 
-		protected override Antlr3AstNode Parse(CParser parser) {
-			return parser.translation_unit();
-		}
-	}
+        protected override Antlr3AstNode Parse(CParser parser) {
+            return parser.translation_unit();
+        }
+    }
 }

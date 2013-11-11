@@ -26,7 +26,7 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.ObjectiveC {
 	/// Represents a ObjectiveC parser and a ObjectiveC code generator.
 	/// </summary>
 	[Export(typeof(LanguageProcessor))]
-	public class ObjectiveCProcessor : Antlr4Processor<ObjectiveCParser, ObjectiveCProcessor> {
+	public class ObjectiveCProcessor : ProcessorUsingAntlr4<ObjectiveCParser> {
 		/// <summary>
 		/// Gets the language name except for the version.
 		/// </summary>

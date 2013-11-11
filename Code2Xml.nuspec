@@ -2,20 +2,20 @@
 <package >
   <metadata>
     <id>Code2Xml</id>
-    <version>1.8.3.70</version>
+    <version>2.0.0.74</version>
     <title>Code2Xml</title>
     <authors>Kazunori Sakamoto</authors>
     <owners>Kazunori Sakamoto</owners>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
-    <projectUrl>http://code.google.com/p/code2xml/</projectUrl>
+    <projectUrl>https://github.com/exKAZUu/Code2Xml/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Code2Xml is a parser library that interconverts source code and xml files supporting multiple programming languages.</description>
-    <releaseNotes>Enhance C parser for supporting the GCC entension grammar.</releaseNotes>
+    <description>Code2Xml is a parser collection that inter-converts source code and XML-based abstract syntax trees (ASTs) supporting multiple programming languages.</description>
+    <releaseNotes>Rewrite Code2Xml.</releaseNotes>
     <copyright>Copyright (C) Kazunori Sakamoto 2011-2013</copyright>
     <tags>Library Parser XML Programming Language</tags>
     <dependencies>
-      <dependency id="Paraiba.Experiment" version="1.1.0" />
-      <dependency id="Antlr" version="3.5.0" />
+      <dependency id="Paraiba.Experiment" />
+      <dependency id="Antlr" version="[3.5.0,3.6)" />
     </dependencies>
   </metadata>
 </package>

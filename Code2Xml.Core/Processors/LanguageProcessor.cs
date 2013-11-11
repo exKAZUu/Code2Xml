@@ -26,7 +26,7 @@ using Paraiba.Text;
 
 namespace Code2Xml.Core.Processors {
 	/// <summary>
-	/// Represents a language processor for inter-converting source code and a xml representing an abstract syntax tree.
+	/// Represents a programming language processor for inter-converting source code and a xml representing an abstract syntax tree.
 	/// </summary>
 	public abstract class LanguageProcessor {
 		public const bool DefaultThrowingParseError = false;

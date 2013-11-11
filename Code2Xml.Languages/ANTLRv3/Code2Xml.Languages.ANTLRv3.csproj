@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\CodeToXmlUsingAntlr3Processor.cs" />
     <Compile Include="Core\CodeToXmlUsingProcessor.cs" />
     <Compile Include="Core\ICustomizedAntlr3Parser.cs" />
     <Compile Include="Core\ExtensionForParser.cs" />
@@ -63,7 +64,7 @@
     <Compile Include="Processors\JavaScript\JavaScriptLexer.cs" />
     <Compile Include="Processors\JavaScript\JavaScriptParser.cs" />
     <Compile Include="Core\Antlr3AstBuilder.cs" />
-    <Compile Include="Core\Antlr3Processor.cs" />
+    <Compile Include="Core\ProcessorUsingAntlr3.cs" />
     <Compile Include="Processors\Java\JavaLexer.cs" />
     <Compile Include="Processors\Java\JavaParser.cs" />
     <Compile Include="Processors\Java\JavaProcessorUsingAntlr3.cs" />

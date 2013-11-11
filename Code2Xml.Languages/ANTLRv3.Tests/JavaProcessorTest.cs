@@ -16,18 +16,20 @@
 
 #endregion
 
-using System;
-using Antlr.Runtime;
 using Code2Xml.Core.Processors;
+using Code2Xml.Core.Tests;
 using Code2Xml.Languages.ANTLRv3.Processors.Java;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.ANTLRv3.Tests {
-	[TestFixture]
-	public class JavaProcessorTest {
-		[Test]
-		public void Parse() {
-			var code = @"//test
+    [TestFixture]
+    public class JavaProcessorTest : ProcessorTest {
+        protected override LanguageProcessor CreateProcessor() {
+            return new JavaProcessorUsingAntlr3();
+        }
+
+        [Test]
+        [TestCase(@"//test
 import javax.swing.*;
  
 public class Hello extends JFrame {
@@ -39,57 +41,33 @@ public class Hello extends JFrame {
     public static void main(String[] args) {
         new Hello().setVisible(true);
     }
-}
-";
-			TestParsing(code);
-		}
-
-		[Test]
-		public void ParseGenericMethod() {
-			var code = @"
-class Main {
+}")]
+        [TestCase(@"class Main {
   void test() { obj.method().<Object>method2(); }
-}";
-			TestParsing(code);
-		}
-
-		[Test]
-		public void ParseUnicodeCharacter() {
-			var code = @"obj.method().<Object>method2()";
-			TestParsing(code);
-		}
-
-		[Test]
-		public void ParseBrokenCodeIgnoringException() {
-			var code = @"class A {{ }";
-			var processor = new JavaProcessorUsingAntlr3();
-			processor.GenerateXml(code, false);
-		}
-
-		[Test]
-		public void ParseDiamond() {
-			var code = @"
-public class AlignedTuplePrinter {
+}")]
+        [TestCase(@"obj.method().<Object>method2()")]
+        [TestCase(@"class Main {
+  void test() { obj.method().<Object>method2(); }
+}")]
+        [TestCase(@"public class AlignedTuplePrinter {
     List<String> columnLines = new ArrayList<>();
-}
-";
-			var processor = new JavaProcessorUsingAntlr3();
-			processor.GenerateXml(code, true);
-		}
+}")]
+        public void Parse(string code) {
+            VerifyRestoring(code);
+        }
 
-		[Test, ExpectedException(typeof(ParseException))]
-		public void ParseBrokenCode() {
-			var code = @"class A {{ }";
-			var processor = new JavaProcessorUsingAntlr3();
-			processor.GenerateXml(code, true);
-		}
+        [Test]
+        public void ParseBrokenCodeIgnoringException() {
+            var code = @"class A {{ }";
+            var processor = new JavaProcessorUsingAntlr3();
+            processor.GenerateXml(code, false);
+        }
 
-		private static void TestParsing(string code) {
-			var processor = new JavaProcessorUsingAntlr3();
-			var xml = processor.GenerateXml(code);
-			var code2 = processor.GenerateCode(xml);
-			Assert.That(code2, Is.EqualTo(code));
-			Console.WriteLine(xml);
-		}
-	}
+        [Test, ExpectedException(typeof(ParseException))]
+        public void ParseBrokenCode() {
+            var code = @"class A {{ }";
+            var processor = new JavaProcessorUsingAntlr3();
+            processor.GenerateXml(code, true);
+        }
+    }
 }

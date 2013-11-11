@@ -52,71 +52,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Antlr\AntlrCodeToXml.cs" />
-    <Compile Include="Antlr\AntlrCodeToXmlContract.cs" />
-    <Compile Include="Antlr\AntlrNodeGenerator.cs" />
-    <Compile Include="Antlr\ExtensionForParser.cs" />
-    <Compile Include="Antlr\IAntlrParser.cs" />
-    <Compile Include="Antlr\ThrowableXmlTreeAdaptor.cs" />
-    <Compile Include="Antlr\XAstParserRuleReturnScope.cs" />
-    <Compile Include="Antlr\XmlTreeAdaptor.cs" />
-    <Compile Include="Antlr\XToken.cs" />
     <Compile Include="CSharp\CodeToXmls\CSharpCodeToXml.cs" />
-    <Compile Include="CSharp\CodeToXmls\csLexer.cs" />
-    <Compile Include="CSharp\CodeToXmls\csParser.cs" />
     <Compile Include="CSharp\XmlToCodes\CSharpXmlToCode.cs" />
     <Compile Include="C\CodeToXmls\CCodeToXml.cs" />
-    <Compile Include="C\CodeToXmls\CLexer.cs" />
-    <Compile Include="C\CodeToXmls\CParser.cs" />
-    <Compile Include="C\CodeToXmls\CParser.Extension.cs" />
     <Compile Include="C\XmlToCodes\CXmlToCode.cs" />
     <Compile Include="JavaScript\CodeToXmls\JavaScriptCodeToXml.cs" />
-    <Compile Include="JavaScript\CodeToXmls\JavaScriptLexer.Action.cs" />
-    <Compile Include="JavaScript\CodeToXmls\JavaScriptLexer.cs" />
-    <Compile Include="JavaScript\CodeToXmls\JavaScriptParser.cs" />
     <Compile Include="JavaScript\XmlToCodes\JavaScriptXmlToCode.cs" />
     <Compile Include="Java\CodeToXmls\JavaCodeToXml.cs" />
-    <Compile Include="Java\CodeToXmls\JavaLexer.cs" />
-    <Compile Include="Java\CodeToXmls\JavaParser.cs" />
     <Compile Include="Java\XmlToCodes\JavaXmlToCode.cs" />
     <Compile Include="Lua\CodeToXmls\LuaCodeToXml.cs" />
-    <Compile Include="Lua\CodeToXmls\LuaLexer.cs" />
-    <Compile Include="Lua\CodeToXmls\LuaParser.cs" />
     <Compile Include="Lua\XmlToCodes\LuaXmlToCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Antlr3 Include="Lua\CodeToXmls\Lua.g">
-      <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>Code2Xml.Languages.Obsolete.ANTLRv3.Lua.CodeToXmls</CustomToolNamespace>
-    </Antlr3>
-  </ItemGroup>
-  <ItemGroup>
-    <Antlr3 Include="JavaScript\CodeToXmls\JavaScript.g">
-      <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>Code2Xml.Languages.Obsolete.ANTLRv3.JavaScript.CodeToXmls</CustomToolNamespace>
-    </Antlr3>
-  </ItemGroup>
-  <ItemGroup>
-    <Antlr3 Include="Java\CodeToXmls\Java.g">
-      <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>Code2Xml.Languages.Obsolete.ANTLRv3.Java.CodeToXmls</CustomToolNamespace>
-    </Antlr3>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Antlr3 Include="CSharp\CodeToXmls\cs.g">
-      <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>Code2Xml.Languages.Obsolete.ANTLRv3.CSharp.CodeToXmls</CustomToolNamespace>
-    </Antlr3>
-  </ItemGroup>
-  <ItemGroup>
-    <Antlr3 Include="C\CodeToXmls\C.g">
-      <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>Code2Xml.Languages.Obsolete.ANTLRv3.C.CodeToXmls</CustomToolNamespace>
-    </Antlr3>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">

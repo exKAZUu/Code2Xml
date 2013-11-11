@@ -48,8 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Copy of SampleCodeToXml.cs" />
     <Compile Include="ParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleCodeToXml.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">
@@ -68,13 +70,13 @@
       <Project>{1de85da9-6ebf-49d1-8dda-75d9d25497f6}</Project>
       <Name>Code2Xml.Languages.ANTLRv4</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Obsolete.ANTLRv3\Code2Xml.Languages.Obsolete.ANTLRv3.csproj">
-      <Project>{82a3e237-db4f-4a94-b805-cc6ce8f46e56}</Project>
-      <Name>Code2Xml.Languages.Obsolete.ANTLRv3</Name>
+    <ProjectReference Include="..\ExternalProcessors\Code2Xml.Languages.ExternalProcessors.csproj">
+      <Project>{311ea4b7-dd3c-4945-9ae3-a86a3ede6a68}</Project>
+      <Name>Code2Xml.Languages.ExternalProcessors</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Obsolete.Others\Code2Xml.Languages.Obsolete.Others.csproj">
-      <Project>{8193f861-1cfc-4d5d-87b0-0df80492f915}</Project>
-      <Name>Code2Xml.Languages.Obsolete.Others</Name>
+    <ProjectReference Include="..\Obsolete\Code2Xml.Languages.Obsolete.csproj">
+      <Project>{d5dec839-57fb-408b-b162-d7a027379127}</Project>
+      <Name>Code2Xml.Languages.Obsolete</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
