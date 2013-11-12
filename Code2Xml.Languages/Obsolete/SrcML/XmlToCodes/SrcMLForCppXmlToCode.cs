@@ -22,7 +22,7 @@ using Code2Xml.Core.XmlToCodes;
 using Code2Xml.Languages.ANTLRv3.Core;
 using Code2Xml.Languages.ExternalProcessors.Processors.SrcML;
 
-namespace Code2Xml.Languages.SrcMLForCpp.XmlToCodes {
+namespace Code2Xml.Languages.SrcML.XmlToCodes {
 	/// <summary>
 	/// Please use <see cref="SrcMLForCppProcessor"/> class.
 	/// </summary>

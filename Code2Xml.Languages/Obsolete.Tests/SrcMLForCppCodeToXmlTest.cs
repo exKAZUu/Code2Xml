@@ -16,7 +16,7 @@
 
 #endregion
 
-using Code2Xml.Languages.SrcMLForCpp.CodeToXmls;
+using Code2Xml.Languages.SrcML.CodeToXmls;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.Obsolete.Tests {

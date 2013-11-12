@@ -933,35 +933,19 @@ catchType
     ;
 
 tryWithResourcesStatement
-    :    'try' resourceSpecification
-         (   block catches 'finally' block
-         |   block 'filly' block
-         |   block catches
-         |   block
-         )
+    :    'try' resourceSpecification block catches? ('finally' block)?
     ;
 
 resourceSpecification
-    :    '(' resources
-          (  ';' ')'
-          |   ')'
-          )
+    :    '(' resources ';'? ')'
     ;
 
 resources
-    :    resource
-    |    resource 
-         (   ';' resource
-         )*
+    :    resource  ( ';' resource )*
     ;
 
 resource
-    :    (   variableModifiers type IDENTIFIER
-         |   type IDENTIFIER
-         )
-         (   '[' ']'
-         )*
-         '=' expression 
+    :    variableModifiers? type IDENTIFIER ('[' ']')* '=' expression 
     ;
 
 forstatement 

@@ -21,9 +21,9 @@ using System.ComponentModel.Composition;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Languages.ANTLRv3.Core;
 using Code2Xml.Languages.ExternalProcessors.Processors.SrcML;
-using Code2Xml.Languages.SrcMLForCpp.XmlToCodes;
+using Code2Xml.Languages.SrcML.XmlToCodes;
 
-namespace Code2Xml.Languages.SrcMLForCpp.CodeToXmls {
+namespace Code2Xml.Languages.SrcML.CodeToXmls {
 	/// <summary>
 	/// Please use <see cref="SrcMLForCppProcessor"/> class.
 	/// </summary>

@@ -48,6 +48,15 @@ public class Hello extends JFrame {
 		[TestCase(@"public class AlignedTuplePrinter {
     List<String> columnLines = new ArrayList<>();
 }")]
+		[TestCase(@"class Klass { void main() {
+	try { } finally { }
+}}")]
+		[TestCase(@"class Klass { void main() {
+	try (Object obj = new Object()) { } finally { }
+}}")]
+		[TestCase(@"class Klass { void main() {
+	try (Object obj = new Object() ; Object obj = new Object()) { } finally { }
+}}")]
 		public void Parse(string code) {
 			VerifyRestoringCode(code);
 		}
