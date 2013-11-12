@@ -16,11 +16,16 @@
 
 #endregion
 
+using System;
 using System.ComponentModel.Composition;
 using Code2Xml.Core.XmlToCodes;
 using Code2Xml.Languages.ANTLRv3.Processors.C;
 
 namespace Code2Xml.Languages.C.XmlToCodes {
+	/// <summary>
+	/// Please use <see cref="CProcessorUsingAntlr3"/> class.
+	/// </summary>
+	[Obsolete]
 	[Export(typeof(XmlToCode))]
 	public class CXmlToCode : XmlToCodeUsingProcessor<CProcessorUsingAntlr3> {
 		private static CXmlToCode _instance;

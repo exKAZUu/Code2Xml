@@ -16,16 +16,21 @@
 
 #endregion
 
-using System.Collections.Generic;
+using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Text;
 using System.Xml.Linq;
+using Code2Xml.Core.Processors;
 using Code2Xml.Core.XmlToCodes;
 using Paraiba.Text;
 
 namespace Code2Xml.Core.CodeToXmls {
+	/// <summary>
+	/// Please use <see cref="Processor"/> class.
+	/// </summary>
+	[Obsolete]
 	public abstract class CodeToXml<TCodeToXml> : CodeToXml
 			where TCodeToXml : CodeToXml, new() {
 		private static TCodeToXml _instance;
@@ -35,6 +40,10 @@ namespace Code2Xml.Core.CodeToXmls {
 		}
 	}
 
+	/// <summary>
+	/// Please use <see cref="Processor"/> class.
+	/// </summary>
+	[Obsolete]
 	[ContractClass(typeof(CodeToXmlContract))]
 	public abstract class CodeToXml {
 		public const bool DefaultThrowingParseError = false;

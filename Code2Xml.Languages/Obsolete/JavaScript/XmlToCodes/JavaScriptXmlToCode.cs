@@ -16,11 +16,16 @@
 
 #endregion
 
+using System;
 using System.ComponentModel.Composition;
 using Code2Xml.Core.XmlToCodes;
 using Code2Xml.Languages.ANTLRv3.Processors.JavaScript;
 
 namespace Code2Xml.Languages.JavaScript.XmlToCodes {
+	/// <summary>
+	/// Please use <see cref="JavaScriptProcessorUsingAntlr3"/> class.
+	/// </summary>
+	[Obsolete]
 	[Export(typeof(XmlToCode))]
 	public class JavaScriptXmlToCode : XmlToCodeUsingProcessor<JavaScriptProcessorUsingAntlr3> {
 		private static JavaScriptXmlToCode _instance;

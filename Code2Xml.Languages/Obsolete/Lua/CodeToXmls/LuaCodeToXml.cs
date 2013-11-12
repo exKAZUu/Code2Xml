@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using System.ComponentModel.Composition;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Languages.ANTLRv3.Core;
@@ -23,13 +24,17 @@ using Code2Xml.Languages.ANTLRv3.Processors.Lua;
 using Code2Xml.Languages.Lua.XmlToCodes;
 
 namespace Code2Xml.Languages.Lua.CodeToXmls {
-    [Export(typeof(CodeToXml))]
-    public class LuaCodeToXml
-            : CodeToXmlUsingAntlr3Processor<LuaProcessorUsingAntlr3, LuaXmlToCode, LuaParser> {
-        private static LuaCodeToXml _instance;
+	/// <summary>
+	/// Please use <see cref="LuaProcessorUsingAntlr3"/> class.
+	/// </summary>
+	[Obsolete]
+	[Export(typeof(CodeToXml))]
+	public class LuaCodeToXml
+			: CodeToXmlUsingAntlr3Processor<LuaProcessorUsingAntlr3, LuaXmlToCode, LuaParser> {
+		private static LuaCodeToXml _instance;
 
-        public static LuaCodeToXml Instance {
-            get { return _instance ?? (_instance = new LuaCodeToXml()); }
-        }
-    }
+		public static LuaCodeToXml Instance {
+			get { return _instance ?? (_instance = new LuaCodeToXml()); }
+		}
+	}
 }

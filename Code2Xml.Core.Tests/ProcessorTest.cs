@@ -22,36 +22,36 @@ using NUnit.Framework;
 using Paraiba.Xml;
 
 namespace Code2Xml.Core.Tests {
-    public abstract class ProcessorTest {
-        protected abstract Processor CreateProcessor();
+	public abstract class ProcessorTest {
+		protected abstract Processor CreateProcessor();
 
-        protected void VerifyParsing(string code) {
-            var processor = CreateProcessor();
-            var xml = processor.GenerateXml(code);
+		protected void VerifyParsing(string code) {
+			var processor = CreateProcessor();
+			var xml = processor.GenerateXml(code);
 
-            Console.WriteLine(xml);
-        }
+			Console.WriteLine(xml);
+		}
 
-        protected void VerifyInterConverting(string code) {
-            var processor = CreateProcessor();
-            var r1 = processor.GenerateXml(code, true);
-            var c1 = processor.GenerateCode(r1);
-            var r2 = processor.GenerateXml(c1, true);
-            var c2 = processor.GenerateCode(r2);
-            var r3 = processor.GenerateXml(c2, true);
-            var c3 = processor.GenerateCode(r3);
+		protected void VerifyInterConverting(string code) {
+			var processor = CreateProcessor();
+			var r1 = processor.GenerateXml(code, true);
+			var c1 = processor.GenerateCode(r1);
+			var r2 = processor.GenerateXml(c1, true);
+			var c2 = processor.GenerateCode(r2);
+			var r3 = processor.GenerateXml(c2, true);
+			var c3 = processor.GenerateCode(r3);
 
-            Assert.IsTrue(XmlUtil.EqualsWithElementAndValue(r2, r3));
-            Assert.AreEqual(c2, c3);
-        }
+			Assert.IsTrue(XmlUtil.EqualsWithElementAndValue(r2, r3));
+			Assert.AreEqual(c2, c3);
+		}
 
-        protected void VerifyRestoring(string code) {
-            var processor = CreateProcessor();
-            var xml = processor.GenerateXml(code);
-            var code2 = processor.GenerateCode(xml);
+		protected void VerifyRestoring(string code) {
+			var processor = CreateProcessor();
+			var xml = processor.GenerateXml(code);
+			var code2 = processor.GenerateCode(xml);
 
-            Assert.That(code2, Is.EqualTo(code));
-            Console.WriteLine(xml);
-        }
-    }
+			Assert.That(code2, Is.EqualTo(code));
+			Console.WriteLine(xml);
+		}
+	}
 }

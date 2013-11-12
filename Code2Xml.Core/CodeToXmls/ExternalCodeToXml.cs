@@ -22,10 +22,15 @@ using System.Diagnostics.Contracts;
 using System.IO;
 using System.Text;
 using System.Xml.Linq;
+using Code2Xml.Core.Processors;
 using Paraiba.Core;
 using Paraiba.IO;
 
 namespace Code2Xml.Core.CodeToXmls {
+	/// <summary>
+	/// Please use <see cref="Processor"/> class.
+	/// </summary>
+	[Obsolete]
 	[ContractClass(typeof(ExternalCodeToXmlContract))]
 	public abstract class ExternalCodeToXml : CodeToXml {
 		protected static readonly Encoding Encoding = new UTF8Encoding(false);

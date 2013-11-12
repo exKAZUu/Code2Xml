@@ -18,6 +18,7 @@
 
 using System;
 using System.Diagnostics.Contracts;
+using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Core.CodeToXmls {
 	[ContractClassFor(typeof(ExternalCodeToXml))]

@@ -22,10 +22,14 @@ using System.Diagnostics.Contracts;
 using System.IO;
 using System.Text;
 using System.Xml.Linq;
+using Code2Xml.Core.Processors;
 using Paraiba.Core;
-using Paraiba.IO;
 
 namespace Code2Xml.Core.XmlToCodes {
+	/// <summary>
+	/// Please use <see cref="Processor"/> class.
+	/// </summary>
+	[Obsolete]
 	public abstract class ExternalXmlToCode : XmlToCode {
 		protected static readonly Encoding Encoding = new UTF8Encoding(false);
 

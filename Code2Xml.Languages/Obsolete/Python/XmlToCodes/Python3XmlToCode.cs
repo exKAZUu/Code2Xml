@@ -16,17 +16,22 @@
 
 #endregion
 
+using System;
 using System.ComponentModel.Composition;
 using Code2Xml.Core.XmlToCodes;
 using Code2Xml.Languages.ExternalProcessors.Processors.Python;
 
 namespace Code2Xml.Languages.Python3.XmlToCodes {
-    [Export(typeof(XmlToCode))]
-    public class Python3XmlToCode : XmlToCodeUsingProcessor<Python3Processor> {
-        private static Python3XmlToCode _instance;
+	/// <summary>
+	/// Please use <see cref="Python3Processor"/> class.
+	/// </summary>
+	[Obsolete]
+	[Export(typeof(XmlToCode))]
+	public class Python3XmlToCode : XmlToCodeUsingProcessor<Python3Processor> {
+		private static Python3XmlToCode _instance;
 
-        public static Python3XmlToCode Instance {
-            get { return _instance ?? (_instance = new Python3XmlToCode()); }
-        }
-    }
+		public static Python3XmlToCode Instance {
+			get { return _instance ?? (_instance = new Python3XmlToCode()); }
+		}
+	}
 }

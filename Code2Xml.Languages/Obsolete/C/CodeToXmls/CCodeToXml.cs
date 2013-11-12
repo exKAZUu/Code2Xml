@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using System.ComponentModel.Composition;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Languages.ANTLRv3.Core;
@@ -23,13 +24,17 @@ using Code2Xml.Languages.ANTLRv3.Processors.C;
 using Code2Xml.Languages.C.XmlToCodes;
 
 namespace Code2Xml.Languages.C.CodeToXmls {
-    [Export(typeof(CodeToXml))]
-    public class CCodeToXml
-            : CodeToXmlUsingAntlr3Processor<CProcessorUsingAntlr3, CXmlToCode, CParser> {
-        private static CCodeToXml _instance;
+	/// <summary>
+	/// Please use <see cref="CProcessorUsingAntlr3"/> class.
+	/// </summary>
+	[Obsolete]
+	[Export(typeof(CodeToXml))]
+	public class CCodeToXml
+			: CodeToXmlUsingAntlr3Processor<CProcessorUsingAntlr3, CXmlToCode, CParser> {
+		private static CCodeToXml _instance;
 
-        public static CCodeToXml Instance {
-            get { return _instance ?? (_instance = new CCodeToXml()); }
-        }
-    }
+		public static CCodeToXml Instance {
+			get { return _instance ?? (_instance = new CCodeToXml()); }
+		}
+	}
 }

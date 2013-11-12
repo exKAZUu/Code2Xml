@@ -16,11 +16,16 @@
 
 #endregion
 
+using System;
 using System.ComponentModel.Composition;
 using Code2Xml.Core.XmlToCodes;
 using Code2Xml.Languages.ANTLRv3.Processors.Java;
 
 namespace Code2Xml.Languages.Java.XmlToCodes {
+	/// <summary>
+	/// Please use <see cref="JavaProcessorUsingAntlr3"/> class.
+	/// </summary>
+	[Obsolete]
 	[Export(typeof(XmlToCode))]
 	public class JavaXmlToCode : XmlToCodeUsingProcessor<JavaProcessorUsingAntlr3> {
 		private static JavaXmlToCode _instance;

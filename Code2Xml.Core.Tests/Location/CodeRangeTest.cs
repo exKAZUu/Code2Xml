@@ -93,7 +93,7 @@ public class Hello {
 		[TestCase(@"class Klass { void method() { System.out
 .println(1); } }")]
 		public void InterConvertCodeRangeAndIndicies(string code) {
-            var ast = new JavaProcessorUsingAntlr3().GenerateXml(code);
+			var ast = new JavaProcessorUsingAntlr3().GenerateXml(code);
 			foreach (var elem in ast.DescendantsAndSelf("statement")) {
 				int inclusiveStart, exclusiveEnd;
 				var range = ConvertRangeToIndicies(code, elem, out inclusiveStart, out exclusiveEnd);

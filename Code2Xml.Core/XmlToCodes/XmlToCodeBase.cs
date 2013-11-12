@@ -20,8 +20,13 @@ using System;
 using System.Diagnostics.Contracts;
 using System.Text;
 using System.Xml.Linq;
+using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Core.XmlToCodes {
+	/// <summary>
+	/// Please use <see cref="Processor"/> class.
+	/// </summary>
+	[Obsolete]
 	[ContractClass(typeof(XmlToCodeBaseContract))]
 	public abstract class XmlToCodeBase : XmlToCode {
 		private readonly string _newLine;

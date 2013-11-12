@@ -16,17 +16,22 @@
 
 #endregion
 
+using System;
 using System.ComponentModel.Composition;
 using Code2Xml.Core.XmlToCodes;
 using Code2Xml.Languages.ExternalProcessors.Processors.Ruby;
 
 namespace Code2Xml.Languages.Ruby18.XmlToCodes {
-    [Export(typeof(XmlToCode))]
-    public class Ruby18XmlToCode : XmlToCodeUsingProcessor<Ruby18Processor> {
-        private static Ruby18XmlToCode _instance;
+	/// <summary>
+	/// Please use <see cref="Ruby18Processor"/> class.
+	/// </summary>
+	[Obsolete]
+	[Export(typeof(XmlToCode))]
+	public class Ruby18XmlToCode : XmlToCodeUsingProcessor<Ruby18Processor> {
+		private static Ruby18XmlToCode _instance;
 
-        public static Ruby18XmlToCode Instance {
-            get { return _instance ?? (_instance = new Ruby18XmlToCode()); }
-        }
-    }
+		public static Ruby18XmlToCode Instance {
+			get { return _instance ?? (_instance = new Ruby18XmlToCode()); }
+		}
+	}
 }

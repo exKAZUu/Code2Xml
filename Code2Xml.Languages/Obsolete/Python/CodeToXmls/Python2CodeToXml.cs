@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using System.ComponentModel.Composition;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Languages.ANTLRv3.Core;
@@ -23,12 +24,16 @@ using Code2Xml.Languages.ExternalProcessors.Processors.Python;
 using Code2Xml.Languages.Python2.XmlToCodes;
 
 namespace Code2Xml.Languages.Python2.CodeToXmls {
-    [Export(typeof(CodeToXml))]
-    public class Python2CodeToXml : CodeToXmlUsingProcessor<Python2Processor, Python2XmlToCode> {
-        private static Python2CodeToXml _instance;
+	/// <summary>
+	/// Please use <see cref="Python2Processor"/> class.
+	/// </summary>
+	[Obsolete]
+	[Export(typeof(CodeToXml))]
+	public class Python2CodeToXml : CodeToXmlUsingProcessor<Python2Processor, Python2XmlToCode> {
+		private static Python2CodeToXml _instance;
 
-        public static Python2CodeToXml Instance {
-            get { return _instance ?? (_instance = new Python2CodeToXml()); }
-        }
-    }
+		public static Python2CodeToXml Instance {
+			get { return _instance ?? (_instance = new Python2CodeToXml()); }
+		}
+	}
 }

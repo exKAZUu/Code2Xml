@@ -16,22 +16,14 @@
 
 #endregion
 
-using System;
-using System.ComponentModel.Composition;
-using Code2Xml.Core.XmlToCodes;
-using Code2Xml.Languages.ANTLRv3.Processors.Lua;
+using NUnit.Framework;
 
-namespace Code2Xml.Languages.Lua.XmlToCodes {
-	/// <summary>
-	/// Please use <see cref="LuaProcessorUsingAntlr3"/> class.
-	/// </summary>
-	[Obsolete]
-	[Export(typeof(XmlToCode))]
-	public class LuaXmlToCode : XmlToCodeUsingProcessor<LuaProcessorUsingAntlr3> {
-		private static LuaXmlToCode _instance;
-
-		public static LuaXmlToCode Instance {
-			get { return _instance ?? (_instance = new LuaXmlToCode()); }
+namespace Code2Xml.Objects.Tests {
+	[TestFixture]
+	public class ObjectsTest {
+		[Test]
+		public void TestProcessors() {
+			Processors.JavaUsingAntlr3.GenerateXml("class Klass {}");
 		}
 	}
 }

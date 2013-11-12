@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using System.ComponentModel.Composition;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Languages.ANTLRv3.Core;
@@ -23,6 +24,10 @@ using Code2Xml.Languages.ANTLRv3.Processors.Java;
 using Code2Xml.Languages.Java.XmlToCodes;
 
 namespace Code2Xml.Languages.Java.CodeToXmls {
+	/// <summary>
+	/// Please use <see cref="JavaProcessorUsingAntlr3"/> class.
+	/// </summary>
+	[Obsolete]
 	[Export(typeof(CodeToXml))]
 	public class JavaCodeToXml
 			: CodeToXmlUsingAntlr3Processor<JavaProcessorUsingAntlr3, JavaXmlToCode, JavaParser> {

@@ -19,8 +19,13 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Xml.Linq;
+using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Core.XmlToCodes {
+	/// <summary>
+	/// Please use <see cref="Processor"/> class.
+	/// </summary>
+	[Obsolete]
 	public class DefaultXmlToCode : XmlToCodeBase {
 		private static DefaultXmlToCode _instance;
 

@@ -23,12 +23,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("Code2Xml.Objects")]
+[assembly: AssemblyTitle("Code2Xml.Objects.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Code2Xml.Objects")]
-[assembly: AssemblyCopyright("Copyright ©  2013")]
+[assembly: AssemblyCompany("MouseComputer PC")]
+[assembly: AssemblyProduct("Code2Xml.Objects.Tests")]
+[assembly: AssemblyCopyright("Copyright © MouseComputer PC 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -40,7 +40,7 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly: Guid("bfbed9e8-1e62-4588-84ec-a4cc480ddd24")]
+[assembly: Guid("4a62098d-3a65-42c8-8c2e-89084e37aca9")]
 
 // Version information for an assembly consists of the following four values:
 //

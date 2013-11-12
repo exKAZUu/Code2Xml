@@ -16,17 +16,22 @@
 
 #endregion
 
+using System;
 using System.ComponentModel.Composition;
 using Code2Xml.Core.XmlToCodes;
 using Code2Xml.Languages.ExternalProcessors.Processors.SrcML;
 
 namespace Code2Xml.Languages.SrcMLForC.XmlToCodes {
-    [Export(typeof(XmlToCode))]
-    public class SrcMLForCXmlToCode : XmlToCodeUsingProcessor<SrcMLForCProcessor> {
-        private static SrcMLForCXmlToCode _instance;
+	/// <summary>
+	/// Please use <see cref="SrcMLForCProcessor"/> class.
+	/// </summary>
+	[Obsolete]
+	[Export(typeof(XmlToCode))]
+	public class SrcMLForCXmlToCode : XmlToCodeUsingProcessor<SrcMLForCProcessor> {
+		private static SrcMLForCXmlToCode _instance;
 
-        public static SrcMLForCXmlToCode Instance {
-            get { return _instance ?? (_instance = new SrcMLForCXmlToCode()); }
-        }
-    }
+		public static SrcMLForCXmlToCode Instance {
+			get { return _instance ?? (_instance = new SrcMLForCXmlToCode()); }
+		}
+	}
 }

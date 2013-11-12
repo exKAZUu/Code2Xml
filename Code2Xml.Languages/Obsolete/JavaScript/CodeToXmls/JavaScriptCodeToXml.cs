@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using System.ComponentModel.Composition;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Languages.ANTLRv3.Core;
@@ -23,14 +24,18 @@ using Code2Xml.Languages.ANTLRv3.Processors.JavaScript;
 using Code2Xml.Languages.JavaScript.XmlToCodes;
 
 namespace Code2Xml.Languages.JavaScript.CodeToXmls {
-    [Export(typeof(CodeToXml))]
-    public class JavaScriptCodeToXml
-            : CodeToXmlUsingAntlr3Processor
-                    <JavaScriptProcessorUsingAntlr3, JavaScriptXmlToCode, JavaScriptParser> {
-        private static JavaScriptCodeToXml _instance;
+	/// <summary>
+	/// Please use <see cref="JavaScriptProcessorUsingAntlr3"/> class.
+	/// </summary>
+	[Obsolete]
+	[Export(typeof(CodeToXml))]
+	public class JavaScriptCodeToXml
+			: CodeToXmlUsingAntlr3Processor
+					<JavaScriptProcessorUsingAntlr3, JavaScriptXmlToCode, JavaScriptParser> {
+		private static JavaScriptCodeToXml _instance;
 
-        public static JavaScriptCodeToXml Instance {
-            get { return _instance ?? (_instance = new JavaScriptCodeToXml()); }
-        }
-    }
+		public static JavaScriptCodeToXml Instance {
+			get { return _instance ?? (_instance = new JavaScriptCodeToXml()); }
+		}
+	}
 }

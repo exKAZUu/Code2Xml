@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using System.ComponentModel.Composition;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Languages.ANTLRv3.Core;
@@ -23,12 +24,16 @@ using Code2Xml.Languages.ExternalProcessors.Processors.Ruby;
 using Code2Xml.Languages.Ruby19.XmlToCodes;
 
 namespace Code2Xml.Languages.Ruby19.CodeToXmls {
-    [Export(typeof(CodeToXml))]
-    public class Ruby19CodeToXml : CodeToXmlUsingProcessor<Ruby19Processor, Ruby19XmlToCode> {
-        private static Ruby19CodeToXml _instance;
+	/// <summary>
+	/// Please use <see cref="Ruby19Processor"/> class.
+	/// </summary>
+	[Obsolete]
+	[Export(typeof(CodeToXml))]
+	public class Ruby19CodeToXml : CodeToXmlUsingProcessor<Ruby19Processor, Ruby19XmlToCode> {
+		private static Ruby19CodeToXml _instance;
 
-        public static Ruby19CodeToXml Instance {
-            get { return _instance ?? (_instance = new Ruby19CodeToXml()); }
-        }
-    }
+		public static Ruby19CodeToXml Instance {
+			get { return _instance ?? (_instance = new Ruby19CodeToXml()); }
+		}
+	}
 }

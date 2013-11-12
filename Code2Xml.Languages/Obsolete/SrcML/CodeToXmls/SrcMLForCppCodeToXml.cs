@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using System.ComponentModel.Composition;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Languages.ANTLRv3.Core;
@@ -23,13 +24,17 @@ using Code2Xml.Languages.ExternalProcessors.Processors.SrcML;
 using Code2Xml.Languages.SrcMLForC.XmlToCodes;
 
 namespace Code2Xml.Languages.SrcMLForC.CodeToXmls {
-    [Export(typeof(CodeToXml))]
-    public class SrcMLForCCodeToXml
-            : CodeToXmlUsingProcessor<SrcMLForCProcessor, SrcMLForCXmlToCode> {
-        private static SrcMLForCCodeToXml _instance;
+	/// <summary>
+	/// Please use <see cref="SrcMLForCProcessor"/> class.
+	/// </summary>
+	[Obsolete]
+	[Export(typeof(CodeToXml))]
+	public class SrcMLForCCodeToXml
+			: CodeToXmlUsingProcessor<SrcMLForCProcessor, SrcMLForCXmlToCode> {
+		private static SrcMLForCCodeToXml _instance;
 
-        public static SrcMLForCCodeToXml Instance {
-            get { return _instance ?? (_instance = new SrcMLForCCodeToXml()); }
-        }
-    }
+		public static SrcMLForCCodeToXml Instance {
+			get { return _instance ?? (_instance = new SrcMLForCCodeToXml()); }
+		}
+	}
 }

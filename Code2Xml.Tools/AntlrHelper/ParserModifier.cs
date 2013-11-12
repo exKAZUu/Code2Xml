@@ -114,9 +114,10 @@ namespace Code2Xml.Tools.AntlrHelper {
 			// =>
 			// var retval = new Antlr3AstNode($1);
 			return TraceInRegex.Replace(code, "var retval = new Antlr3AstNode($1)")
-							.Replace( "AstParserRuleReturnScope<object, IToken> retval = new AstParserRuleReturnScope<object, IToken>();",
-									"")
-							.Replace( "Antlr3AstNode retval = new Antlr3AstNode();", "");
+					.Replace(
+							"AstParserRuleReturnScope<object, IToken> retval = new AstParserRuleReturnScope<object, IToken>();",
+							"")
+					.Replace("Antlr3AstNode retval = new Antlr3AstNode();", "");
 		}
 
 		public static string ModifyAccessModifier(string code) {
