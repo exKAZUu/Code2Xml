@@ -20,10 +20,10 @@ So please use ```Processor``` and ```Processors``` classes.
 
 ## Structure
 - Code2Xml.Languages.ANTLRv3.dll  
-Provides processors for C, C#, Java, JavaScript, Lua, PHP.
+Provides ```Processor``` classes for C, C#, Java, JavaScript, Lua, PHP.
 
 - Code2Xml.Languages.ExternalProcessors.dll  
-Provides processors for Python and Ruby.
+Provides ```Processor``` classes for Python and Ruby.
 
 - Code2Xml.Languages.Obsolete.dll  
 Provides ```CodeToXml``` and ```XmlToCode``` classes, which are obsolete!
