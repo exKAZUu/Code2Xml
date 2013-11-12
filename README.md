@@ -26,7 +26,7 @@ Provides processors for C, C#, Java, JavaScript, Lua, PHP.
 Provides processors for Python and Ruby.
 
 - Code2Xml.Languages.Obsolete.dll  
-
+Provides ```CodeToXml``` and ```XmlToCode``` classes, which are obsolete!
 
 ## Sample code using ```Processor```
 ```C#
