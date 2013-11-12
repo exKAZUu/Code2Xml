@@ -10,7 +10,8 @@ http://research.microsoft.com/en-us/projects/contracts/
 * Ruby 2.x for parsing Ruby 1.8.x, 1.9.x and 2.0.x
 
 # How to build
-1. ```git submodule update --init```
+1. ```git submodule update --init``` at the root directory
+1. ```git submodule update --init``` at the ```ParserTests``` directory
 1. Open ```Code2Xml.sln```
 1. Right click the ```Code2Xml``` solution in Solution Explorer.
 1. Select ```Enable NuGet Package Restore```.
