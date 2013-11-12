@@ -22,16 +22,16 @@ using Code2Xml.Languages.ExternalProcessors.Processors.SrcML;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.ExternalProcessors.Tests {
-    [TestFixture]
-    public class SrcMLForCProcessorTest : ProcessorTest {
-        protected override Processor CreateProcessor() {
-            return new SrcMLForCProcessor();
-        }
+	[TestFixture]
+	public class SrcMLForCProcessorTest : ProcessorTest {
+		protected override Processor CreateProcessor() {
+			return new SrcMLForCProcessor();
+		}
 
-        [Test]
-        [TestCase(@"void main() {}")]
-        public void Parse(string code) {
-            VerifyParsing(code);
-        }
-    }
+		[Test]
+		[TestCase(@"void main() {}")]
+		public void Parse(string code) {
+			VerifyParsing(code);
+		}
+	}
 }

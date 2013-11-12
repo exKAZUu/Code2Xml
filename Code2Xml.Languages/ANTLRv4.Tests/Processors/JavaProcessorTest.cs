@@ -19,18 +19,20 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
+using System.Xml.Linq;
 using Antlr4.Runtime;
-using Antlr4.Runtime.Misc;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv4.Core;
 using Code2Xml.Languages.ANTLRv4.Processors.Java;
 using NUnit.Framework;
+using Paraiba.Xml.Linq;
 
 namespace Code2Xml.Languages.ANTLRv4.Tests.Processors {
 	[TestFixture]
 	public class JavaProcessorTest {
 		[Test]
-		public void Parse() {
+		public void ParseComments() {
 			var code = @"//test
 import javax.swing.*;
  
@@ -45,7 +47,10 @@ public class Hello extends JFrame {
     }
 }
 ";
-			TestParsing(code);
+			var xml = TestParsing(code);
+			var nComments = xml.Descendants()
+				.Count(e => e.Name() == "COMMENT" || e.Name() == "LINE_COMMENT");
+			Assert.That(nComments, Is.EqualTo(3));
 		}
 
 		[Test]
@@ -118,12 +123,13 @@ class Main {
 			Console.WriteLine(visitor.FinishParsing());
 		}
 
-		private static void TestParsing(string code) {
+		private static XElement TestParsing(string code) {
 			var processor = new JavaProcessor();
 			var xml = processor.GenerateXml(code, true);
 			var code2 = processor.GenerateCode(xml);
 			Assert.That(code2, Is.EqualTo(code));
 			Console.WriteLine(xml);
+			return xml;
 		}
 	}
 }

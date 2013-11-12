@@ -23,7 +23,7 @@ using Code2Xml.Languages.C.CodeToXmls;
 using NUnit.Framework;
 using ParserTests;
 
-namespace Code2Xml.Languages.Obsolete.ANTLRv3.Tests {
+namespace Code2Xml.Languages.Obsolete.Tests {
 	[TestFixture]
 	public class CCodeToXmlTest {
 		[Test]
@@ -121,7 +121,7 @@ AAAA *cb;");
 					Console.WriteLine(token.Text);
 				}
 			}
-			Assert.That(tokens.Count, Is.EqualTo(15));
+			Assert.That(tokens.Count, Is.EqualTo(21));
 		}
 	}
 }

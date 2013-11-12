@@ -19,8 +19,6 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using Antlr4.Runtime;
-using Antlr4.Runtime.Misc;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv4.Processors.Lua;
 using NUnit.Framework;

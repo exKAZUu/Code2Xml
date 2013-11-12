@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JavaScriptProcessorTest.cs" />
     <Compile Include="CSharpProcessorTest.cs" />
     <Compile Include="JavaProcessorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

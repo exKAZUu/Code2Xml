@@ -16,15 +16,31 @@
 
 #endregion
 
-using Code2Xml.Languages.SrcMLForC.CodeToXmls;
+using Code2Xml.Core.Processors;
+using Code2Xml.Core.Tests;
+using Code2Xml.Languages.ANTLRv3.Processors.JavaScript;
 using NUnit.Framework;
 
-namespace Code2Xml.Languages.Obsolete.Tests {
-	public class SrcMLForCCodeToXmlTest {
-		[Test, Ignore]
-		public void CanParseJapanese() {
-			var xml = SrcMLForCCodeToXml.Instance.Generate(@"int あ;", true);
-			Assert.That(xml.ToString(), Is.StringContaining("あ"));
+namespace Code2Xml.Languages.ANTLRv3.Tests {
+	[TestFixture]
+	public class JavaScriptProcessorTest : ProcessorTest {
+		protected override Processor CreateProcessor() {
+			return new JavaScriptProcessorUsingAntlr3();
+		}
+
+		[Test]
+		[TestCase(@"var i = 1;")]
+		[TestCase(@"function f() { return 1; }")]
+		public void Parse(string code) {
+			VerifyRestoringCode(code);
+		}
+
+		[Test]
+		[TestCase("Block1.js")]
+		[TestCase("Block2.js")]
+		[TestCase("Block3.js")]
+		public void ParseFile(string fileName) {
+			VerifyRestoringFile("JavaScript", fileName);
 		}
 	}
 }

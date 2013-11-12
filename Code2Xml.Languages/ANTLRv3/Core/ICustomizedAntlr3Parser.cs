@@ -3,6 +3,12 @@ using System;
 using Code2Xml.Languages.ANTLRv3.Core;
 using System;
 using Code2Xml.Languages.ANTLRv3.Core;
+using System;
+using Code2Xml.Languages.ANTLRv3.Core;
+using System;
+using Code2Xml.Languages.ANTLRv3.Core;
+using System;
+using Code2Xml.Languages.ANTLRv3.Core;
 using Code2Xml.Languages.ANTLRv3.Core;
 using Code2Xml.Languages.ANTLRv3.Core;
 using Code2Xml.Languages.ANTLRv3.Core;
@@ -31,5 +37,6 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 	public interface ICustomizedAntlr3Parser {
 		TextWriter TraceDestination { get; set; }
 		Antlr3AstBuilder TreeAdaptor { get; set; }
+		string[] TokenNames { get; }
 	}
 }

@@ -23,5 +23,7 @@ namespace Code2Xml.Core {
 		public const string StartPositionName = "startpos";
 		public const string EndLineName = "endline";
 		public const string EndPositionName = "endpos";
+		public const string TokenName = "TOKEN";
+		public const string TokenGroupName = "TOKENS";
 	}
 }

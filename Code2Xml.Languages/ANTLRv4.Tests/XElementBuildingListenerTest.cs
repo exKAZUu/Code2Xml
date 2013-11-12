@@ -21,6 +21,7 @@ using Antlr4.Runtime;
 using Code2Xml.Languages.ANTLRv4.Core;
 using Code2Xml.Languages.ANTLRv4.Processors.C;
 using Code2Xml.Languages.ANTLRv4.Processors.Clojure;
+using Code2Xml.Languages.ANTLRv4.Processors.Erlang;
 using Code2Xml.Languages.ANTLRv4.Processors.Java;
 using Code2Xml.Languages.ANTLRv4.Processors.Lua;
 using Code2Xml.Languages.ANTLRv4.Processors.ObjectiveC;
@@ -106,7 +107,7 @@ public class Hello extends JFrame {
 		[Test]
 		public void ParseObjectiveC() {
 			var inputStream = new AntlrInputStream(
-@"@interface MyObject : NSObject {
+					@"@interface MyObject : NSObject {
     int val;
     id obj;
 }

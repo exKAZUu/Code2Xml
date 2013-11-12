@@ -19,11 +19,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Code2Xml.Core;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Core.Plugin;
 using Code2Xml.Core.XmlToCodes;
-using Code2Xml.Objects;
 using NUnit.Framework;
 using Paraiba.Core;
 using Paraiba.IO;
@@ -56,36 +54,13 @@ namespace Code2Xml.Languages.Tests {
 										.Select(path => new { Name = name, Path = path }))
 						.Select(
 								p => new TestCaseData(
-                                        p.Name, p.Path, PluginManager.CodeToXmls.FirstOrDefault(
+										p.Name, p.Path, PluginManager.CodeToXmls.FirstOrDefault(
 												o => o.GetType().Name == p.Name + "CodeToXml"),
-                                        PluginManager.XmlToCodes.FirstOrDefault(
+										PluginManager.XmlToCodes.FirstOrDefault(
 												o => o.GetType().Name == p.Name + "XmlToCode")))
 						.Where(t => t.Arguments[2] != null)
 						.ToList();
 				return tt;
-			}
-		}
-
-		[Test, TestCaseSource("TestCases")]
-		public void Parse(string lang, string path, CodeToXml codeToXml, XmlToCode xmlToCode) {
-			var relativePath = ParaibaPath.GetRelativePath(path, Fixture.GetInputCodePath(lang));
-			var expPath = Fixture.GetExpectedXmlPath(lang, relativePath);
-			var r = codeToXml.GenerateFromFile(path, true)
-					.ToString()
-					.ReplaceNewlinesForWindows();
-			using (var reader = new StreamReader(expPath, XEncoding.SJIS)) {
-				Assert.That(r, Is.EqualTo(reader.ReadToEnd().ReplaceNewlinesForWindows()));
-			}
-		}
-
-		[Test, TestCaseSource("TestCases")]
-		public void WriteConvertedXml(string lang, string path, CodeToXml codeToXml, XmlToCode xmlToCode) {
-			var relativePath = ParaibaPath.GetRelativePath(path, Fixture.GetInputCodePath(lang));
-			var outPath = Fixture.GetOutputFilePath(lang, relativePath);
-			Directory.CreateDirectory(Path.GetDirectoryName(outPath));
-			var r = codeToXml.GenerateFromFile(path, true);
-			using (var writer = new StreamWriter(outPath, false, XEncoding.SJIS)) {
-				writer.Write(r.ToString());
 			}
 		}
 

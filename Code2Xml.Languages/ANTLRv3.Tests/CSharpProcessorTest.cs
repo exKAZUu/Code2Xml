@@ -22,21 +22,31 @@ using Code2Xml.Languages.ANTLRv3.Processors.CSharp;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.ANTLRv3.Tests {
-    [TestFixture]
-    public class CSharpProcessorTest : ProcessorTest {
-        protected override Processor CreateProcessor() {
-            return new CSharpProcessorUsingAntlr3();
-        }
+	[TestFixture]
+	public class CSharpProcessorTest : ProcessorTest {
+		protected override Processor CreateProcessor() {
+			return new CSharpProcessorUsingAntlr3();
+		}
 
-        [Test]
-        [TestCase("class Klass { void main() {} }")]
-        [TestCase(@"class Klass {
+		[Test]
+		[TestCase(@"class Klass { void main() {} }")]
+		[TestCase(@"class Klass {
 #region
 void main() { /* comment */ } // comment2
 #endregion
 }")]
-        public void Parse(string code) {
-            VerifyRestoring(code);
-        }
-    }
+		[TestCase(@"class Klass { void main() {
+	for (int i = 1; i < 2; i++) Console.WriteLine();
+} }")]
+		public void Parse(string code) {
+			VerifyRestoringCode(code);
+		}
+
+		[Test]
+		[TestCase("Block1.cs")]
+		[TestCase("Block2.cs")]
+		public void ParseFile(string fileName) {
+			VerifyRestoringFile("CSharp", fileName);
+		}
+	}
 }

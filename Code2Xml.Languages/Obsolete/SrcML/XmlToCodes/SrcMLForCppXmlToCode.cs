@@ -19,6 +19,7 @@
 using System;
 using System.ComponentModel.Composition;
 using Code2Xml.Core.XmlToCodes;
+using Code2Xml.Languages.ANTLRv3.Core;
 using Code2Xml.Languages.ExternalProcessors.Processors.SrcML;
 
 namespace Code2Xml.Languages.SrcMLForCpp.XmlToCodes {

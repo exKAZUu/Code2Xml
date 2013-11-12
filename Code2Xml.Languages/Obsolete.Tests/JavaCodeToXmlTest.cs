@@ -18,16 +18,16 @@
 
 using System.IO;
 using System.Linq;
-using Antlr.Runtime;
 using Code2Xml.Core.Location;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.Java.CodeToXmls;
 using Code2Xml.Languages.Java.XmlToCodes;
 using NUnit.Framework;
 using Paraiba.Xml;
+using Paraiba.Xml.Linq;
 using ParserTests;
 
-namespace Code2Xml.Languages.Obsolete.ANTLRv3.Tests {
+namespace Code2Xml.Languages.Obsolete.Tests {
 	[TestFixture]
 	public class JavaCodeToXmlTest {
 		[Test]
@@ -36,7 +36,7 @@ namespace Code2Xml.Languages.Obsolete.ANTLRv3.Tests {
 			JavaCodeToXml.Instance.GenerateFromFile(path, true);
 		}
 
-		[Test, ExpectedException(typeof(ParseException))]
+		[Test]
 		public void ParseDiamond() {
 			var code = @"
 public class AlignedTuplePrinter {
@@ -73,7 +73,9 @@ aa*/
 // sss
 // bbb
 }");
-			var cs = e.Descendants("Comment").ToList();
+			var cs = e.Descendants()
+					.Where(e2 => e2.Name() == "COMMENT" || e2.Name() == "LINE_COMMENT")
+					.ToList();
 			var p1 = CodeRange.Locate(cs[0]);
 			var p2 = CodeRange.Locate(cs[1]);
 			var p3 = CodeRange.Locate(cs[2]);

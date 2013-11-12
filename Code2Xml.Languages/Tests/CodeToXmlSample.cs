@@ -22,7 +22,6 @@ using Code2Xml.Languages.CSharp.CodeToXmls;
 using Code2Xml.Languages.CSharp.XmlToCodes;
 using Code2Xml.Languages.Java.CodeToXmls;
 using Code2Xml.Languages.Java.XmlToCodes;
-using Code2Xml.Objects;
 using NUnit.Framework;
 using ParserTests;
 

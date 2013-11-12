@@ -2,7 +2,7 @@
 
 # Requirements
 * NuGet
-Install NuGet with Extension Manager
+You can install NuGet Package Manager with Extension Manager.  
 * Code Contracts
 http://research.microsoft.com/en-us/projects/contracts/
 * Python 2.x for parsing Python 2.x
@@ -10,9 +10,11 @@ http://research.microsoft.com/en-us/projects/contracts/
 * Ruby 2.x for parsing Ruby 1.8.x, 1.9.x and 2.0.x
 
 # How to build
-1. Right click the solution icon in the Solution Explorer.
-2. Click 'Enable NuGet Package Restore'.
-3. Build the solution.
+1. ```git submodule update --init```
+1. Open ```Code2Xml.sln```
+1. Right click the ```Code2Xml``` solution in Solution Explorer.
+1. Select ```Enable NuGet Package Restore```.
+1. Build the solution.
 
 # How to use
 Note that ```Processor``` class is introduced instead of ```CodeToXml``` and ```XmlToCode``` classes.  

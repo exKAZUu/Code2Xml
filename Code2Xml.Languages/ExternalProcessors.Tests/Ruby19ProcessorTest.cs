@@ -22,17 +22,17 @@ using Code2Xml.Languages.ExternalProcessors.Processors.Ruby;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.ExternalProcessors.Tests {
-    [TestFixture]
-    public class Ruby19ProcessorTest : ProcessorTest {
-        protected override Processor CreateProcessor() {
-            return new Ruby19Processor();
-        }
+	[TestFixture]
+	public class Ruby19ProcessorTest : ProcessorTest {
+		protected override Processor CreateProcessor() {
+			return new Ruby19Processor();
+		}
 
-        [Test]
-        [TestCase("a = 1")]
-        [TestCase("a = 1\r\nb = 2\r\n")]
-        public void Parse(string code) {
-            VerifyRestoring(code);
-        }
-    }
+		[Test]
+		[TestCase("a = 1")]
+		[TestCase("a = 1\r\nb = 2\r\n")]
+		public void Parse(string code) {
+			VerifyRestoringCode(code);
+		}
+	}
 }

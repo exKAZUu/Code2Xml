@@ -34,9 +34,11 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 		private XElement _lastElement;
 		private int _lastTokenIndex;
 		private int _lastDepth;
+		private readonly string[] _tokenNames;
 
 		public Antlr4AstBuilder(Parser parser) {
 			_parserRuleNames = parser.RuleNames;
+			_tokenNames = parser.TokenNames;
 			_stream = (CommonTokenStream)parser.InputStream;
 			_dummyRoot = new XElement("root");
 			_dummyNode = new XElement("dummy");
@@ -46,15 +48,14 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 		}
 
 		public XElement FinishParsing() {
-			var size = _stream.Size - 1; // Avoid writing "<EOF>"
-			for (int i = _lastTokenIndex + 1; i < size; i++) {
-				var oldToken = _stream.Get(i);
-				var name = oldToken.Channel != Lexer.Hidden ? "TOKEN" : "HIDDEN";
-				_lastElement.Add(CreateTokenElement(name, oldToken));
+			var count = _stream.Size - 1; // Avoid writing "<EOF>"
+			while (_stream.Get(count - 1).Type < 0) {
+				count--;
 			}
+			GatherHiddenTokens(count);
 
 			var root = _dummyRoot.Elements().First();
-			var firstTokensNode = root.Descendants("TOKENS").FirstOrDefault() ??
+			var firstTokensNode = root.Descendants(Code2XmlConstants.TokenGroupName).FirstOrDefault() ??
 			                      root.Descendants().LastOrDefault();
 			if (firstTokensNode != null) {
 				foreach (var element in _dummyNode.Elements().Reverse()) {
@@ -67,17 +68,26 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 		public override object VisitTerminal(ITerminalNode node) {
 			var token = node.Symbol;
 			if (token.Type > 0) {
-				var tokenIndex = token.TokenIndex;
-				for (int i = _lastTokenIndex + 1; i < tokenIndex; i++) {
-					var oldToken = _stream.Get(i);
-					var name = oldToken.Channel != Lexer.Hidden ? "TOKEN" : "HIDDEN";
-					_lastElement.Add(CreateTokenElement(name, oldToken));
-				}
-				_lastTokenIndex = tokenIndex;
-				_lastElement = new XElement("TOKENS", CreateTokenElement("TOKEN", token));
+				var count = token.TokenIndex;
+				GatherHiddenTokens(count);
+
+				_lastTokenIndex = count;
+				_lastElement = new XElement(
+						Code2XmlConstants.TokenGroupName,
+						CreateTokenElement(Code2XmlConstants.TokenName, token));
 				_elements.Peek().Add(_lastElement);
 			}
 			return base.VisitTerminal(node);
+		}
+
+		private void GatherHiddenTokens(int count) {
+			for (int i = _lastTokenIndex + 1; i < count; i++) {
+				var oldToken = _stream.Get(i);
+				var name = oldToken.Channel != Lexer.Hidden
+						? Code2XmlConstants.TokenName
+						: _tokenNames[oldToken.Type];
+				_lastElement.Add(CreateTokenElement(name, oldToken));
+			}
 		}
 
 		public override object VisitChildren(IRuleNode node) {

@@ -20,8 +20,9 @@ using System.Linq;
 using Code2Xml.Core.Location;
 using Code2Xml.Languages.JavaScript.CodeToXmls;
 using NUnit.Framework;
+using Paraiba.Xml.Linq;
 
-namespace Code2Xml.Languages.Obsolete.ANTLRv3.Tests {
+namespace Code2Xml.Languages.Obsolete.Tests {
 	[TestFixture]
 	public class JavaScriptCodeToXmlTest {
 		[Test]
@@ -30,7 +31,9 @@ namespace Code2Xml.Languages.Obsolete.ANTLRv3.Tests {
 					@"function(name) { /*a*/ } //aa
 /*
 c*/");
-			Assert.That(e.Descendants("Comment").Count(), Is.EqualTo(3));
+			Assert.That(
+					e.Descendants().Count(e2 => e2.Name() == "Comment" || e2.Name() == "LineComment"),
+					Is.EqualTo(3));
 			var pos = CodeRange.Locate(e.Descendants("Comment").Last());
 			Assert.That(pos.StartLine, Is.EqualTo(2));
 			Assert.That(pos.EndLine, Is.EqualTo(3));

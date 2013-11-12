@@ -17,9 +17,11 @@
 #endregion
 
 using System;
+using System.IO;
 using Code2Xml.Core.Processors;
 using NUnit.Framework;
 using Paraiba.Xml;
+using ParserTests;
 
 namespace Code2Xml.Core.Tests {
 	public abstract class ProcessorTest {
@@ -45,13 +47,18 @@ namespace Code2Xml.Core.Tests {
 			Assert.AreEqual(c2, c3);
 		}
 
-		protected void VerifyRestoring(string code) {
+		protected void VerifyRestoringCode(string code) {
 			var processor = CreateProcessor();
-			var xml = processor.GenerateXml(code);
+			var xml = processor.GenerateXml(code, true);
 			var code2 = processor.GenerateCode(xml);
 
 			Assert.That(code2, Is.EqualTo(code));
 			Console.WriteLine(xml);
+		}
+
+		protected void VerifyRestoringFile(string langName, params string[] fileNames) {
+			var path = Fixture.GetInputCodePath(langName, fileNames);
+			VerifyRestoringCode(File.ReadAllText(path));
 		}
 	}
 }

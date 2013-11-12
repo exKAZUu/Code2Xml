@@ -62,10 +62,7 @@ if (declaration_stack.size()>0&&((declaration_scope)declaration_stack.Peek()).is
 			const string expected =
 					@"
 						string_literal29=(IToken)Match(input,34,FOLLOW_34_in_type_specifier357); if (state.failed) return retval;
-				IDENTIFIER38=(IToken)new XToken((IToken)Match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type_id415), "
-					+
-					"\"IDENTIFIER\"" +
-					@"); if (state.failed) return retval;
+				IDENTIFIER38=(IToken)Match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type_id415); if (state.failed) return retval;
 {string_literal17_tree = (object)adaptor.Create(string_literal17, retval);";
 			Assert.That(
 					ParserModifier.ModifyCreate(code),
@@ -77,7 +74,7 @@ if (declaration_stack.size()>0&&((declaration_scope)declaration_stack.Peek()).is
 			const string code =
 					@"    public class compilationUnit_return : ParserRuleReturnScope<IToken>";
 			const string expected =
-					@"    public class compilationUnit_return : XParserRuleReturnScope";
+					@"    public class compilationUnit_return : Antlr3AstNode";
 			Assert.That(
 					ParserModifier.ModifyParserRuleReturnScope(code), Is.EqualTo(expected));
 		}
@@ -97,9 +94,9 @@ if (declaration_stack.size()>0&&((declaration_scope)declaration_stack.Peek()).is
 	}";
 			const string expected =
 					@"
-	protected XmlTreeAdaptor adaptor = new XmlTreeAdaptor();
+	protected Antlr3AstBuilder adaptor = new Antlr3AstBuilder();
 
-	public XmlTreeAdaptor TreeAdaptor
+	public Antlr3AstBuilder TreeAdaptor
 	{
 		get { return this.adaptor; }
 		set {
@@ -148,7 +145,7 @@ if (declaration_stack.size()>0&&((declaration_scope)declaration_stack.Peek()).is
 					Symbols_stack.Push(new Symbols_scope(this));Symbols_scopeInit(Symbols_stack.Peek());
 					AstParserRuleReturnScope<object, IToken> retval = new AstParserRuleReturnScope<object, IToken>();";
 			const string expected =
-					"var retval = new XAstParserRuleReturnScope(\"prog\");" + @"
+					"var retval = new Antlr3AstNode(\"prog\");" + @"
 					Symbols_stack.Push(new Symbols_scope(this));Symbols_scopeInit(Symbols_stack.Peek());
 					";
 			Assert.That(

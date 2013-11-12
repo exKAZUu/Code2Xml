@@ -19,12 +19,12 @@
 using Code2Xml.Languages.SrcMLForCpp.CodeToXmls;
 using NUnit.Framework;
 
-namespace Code2Xml.Languages.SrcML.Tests {
-    public class SrcMLCodeToXmlTest {
-        [Test, Ignore]
-        public void CanParseJapanese() {
-            var xml = SrcMLForCppCodeToXml.Instance.Generate(@"int あ;", true);
-            Assert.That(xml.ToString(), Is.StringContaining("あ"));
-        }
-    }
+namespace Code2Xml.Languages.Obsolete.Tests {
+	public class SrcMLCodeToXmlTest {
+		[Test, Ignore]
+		public void CanParseJapanese() {
+			var xml = SrcMLForCppCodeToXml.Instance.Generate(@"int あ;", true);
+			Assert.That(xml.ToString(), Is.StringContaining("あ"));
+		}
+	}
 }

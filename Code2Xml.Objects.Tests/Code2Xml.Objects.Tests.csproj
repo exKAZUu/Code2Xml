@@ -60,6 +60,14 @@
       <Project>{942a56fd-13af-4ee6-a8d7-7ddf50374715}</Project>
       <Name>Code2Xml.Languages.ANTLRv3</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Code2Xml.Languages\ExternalProcessors\Code2Xml.Languages.ExternalProcessors.csproj">
+      <Project>{311ea4b7-dd3c-4945-9ae3-a86a3ede6a68}</Project>
+      <Name>Code2Xml.Languages.ExternalProcessors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Code2Xml.Languages\Obsolete\Code2Xml.Languages.Obsolete.csproj">
+      <Project>{d5dec839-57fb-408b-b162-d7a027379127}</Project>
+      <Name>Code2Xml.Languages.Obsolete</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Code2Xml.Objects\Code2Xml.Objects.csproj">
       <Project>{447b693b-b4d5-4b97-adf7-4f8546d9dd8e}</Project>
       <Name>Code2Xml.Objects</Name>

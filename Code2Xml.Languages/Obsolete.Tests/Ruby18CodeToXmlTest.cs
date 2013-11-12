@@ -23,7 +23,7 @@ using NUnit.Framework;
 using Paraiba.Xml;
 using ParserTests;
 
-namespace Code2Xml.Languages.Ruby18.Tests {
+namespace Code2Xml.Languages.Obsolete.Tests {
 	public class Ruby18CodeToXmlTest {
 		[Test]
 		public void CanParse() {

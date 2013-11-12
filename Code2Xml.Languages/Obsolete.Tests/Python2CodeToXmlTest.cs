@@ -20,7 +20,7 @@ using Code2Xml.Languages.Python2.CodeToXmls;
 using NUnit.Framework;
 using ParserTests;
 
-namespace Code2Xml.Languages.Python2.Tests {
+namespace Code2Xml.Languages.Obsolete.Tests {
 	[TestFixture]
 	public class Python2CodeToXmlTest {
 		[Test]

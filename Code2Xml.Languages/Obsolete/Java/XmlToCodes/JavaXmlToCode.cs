@@ -19,6 +19,7 @@
 using System;
 using System.ComponentModel.Composition;
 using Code2Xml.Core.XmlToCodes;
+using Code2Xml.Languages.ANTLRv3.Core;
 using Code2Xml.Languages.ANTLRv3.Processors.Java;
 
 namespace Code2Xml.Languages.Java.XmlToCodes {

@@ -130,7 +130,7 @@ primary_expression:
 
 primary_expression_start:
 	predefined_type            
-	| (identifier    '<') => identifier   generic_argument_list
+	| (identifier generic_argument_list) => identifier generic_argument_list
 	| identifier ('::'   identifier)?
 	| 'this' 
 	| 'base'

@@ -118,8 +118,8 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
             var tokenStream = CreateTokenStream(charStream);
             var parser = CreateParser(tokenStream);
             var builder = throwingParseError ?
-                    new Antlr3AstBuilderWithReportingError(tokenStream) :
-                    new Antlr3AstBuilder(tokenStream);
+                    new Antlr3AstBuilderWithReportingError(tokenStream, parser.TokenNames) :
+                    new Antlr3AstBuilder(tokenStream, parser.TokenNames);
             parser.TraceDestination = Console.Error;
             parser.TreeAdaptor = builder;
             var root = Parse(parser);

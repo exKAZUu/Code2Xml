@@ -133,6 +133,10 @@
       <Project>{942a56fd-13af-4ee6-a8d7-7ddf50374715}</Project>
       <Name>Code2Xml.Languages.ANTLRv3</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ParserTests\ParserTests\ParserTests.csproj">
+      <Project>{20510236-D8B1-4617-9352-4E6134F9AB67}</Project>
+      <Name>ParserTests</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

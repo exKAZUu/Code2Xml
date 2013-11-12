@@ -22,17 +22,17 @@ using Code2Xml.Languages.ExternalProcessors.Processors.Python;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.ExternalProcessors.Tests {
-    [TestFixture]
-    public class Python3ProcessorTest : ProcessorTest {
-        protected override Processor CreateProcessor() {
-            return new Python3Processor();
-        }
+	[TestFixture]
+	public class Python3ProcessorTest : ProcessorTest {
+		protected override Processor CreateProcessor() {
+			return new Python3Processor();
+		}
 
-        [Test]
-        [TestCase("a = 1\n\n")]
-        [TestCase("a = 1\nb = 2\n\n")]
-        public void Parse(string code) {
-            VerifyRestoring(code);
-        }
-    }
+		[Test]
+		[TestCase("a = 1\n\n")]
+		[TestCase("a = 1\nb = 2\n\n")]
+		public void Parse(string code) {
+			VerifyRestoringCode(code);
+		}
+	}
 }

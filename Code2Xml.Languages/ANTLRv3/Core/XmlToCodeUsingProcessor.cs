@@ -19,8 +19,9 @@
 using System.Collections.ObjectModel;
 using System.Xml.Linq;
 using Code2Xml.Core.Processors;
+using Code2Xml.Core.XmlToCodes;
 
-namespace Code2Xml.Core.XmlToCodes {
+namespace Code2Xml.Languages.ANTLRv3.Core {
 	public abstract class XmlToCodeUsingProcessor<TProcessor> : XmlToCode
 			where TProcessor : Processor, new() {
 		private readonly Processor _processor;
