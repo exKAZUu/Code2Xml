@@ -30,17 +30,15 @@ So please use ```Processor``` and ```Processors``` classes.
 	var code = Processors.JavaUsingAntlr3.GenerateCode(xml);
 	Assert.That(code, Is.EqualTo(originalCode));
 }
-
 [Test] public void ParseCSharpFile() {
-	var path = Fixture.GetInputCodePath("CSharp", "Student.cs");
+	var path = Fixture.GetInputCodePath("CSharp", "Student.cs"); // Get a path of a test file
 	// To read file, please pass a FileInfo instance
 	var xml = Processors.CSharpUsingAntlr3.GenerateXml(new FileInfo(path));
 	var code = Processors.CSharpUsingAntlr3.GenerateCode(xml);
 	Assert.That(code, Is.EqualTo(File.ReadAllText(path)));
 }
-
 [Test] public void ParseLuaFileUsingFilePath() {
-	var path = Fixture.GetInputCodePath("Lua", "Block1.lua");
+	var path = Fixture.GetInputCodePath("Lua", "Block1.lua"); // Get a path of a test file
 	// To read file, please pass a FileInfo instance
 	var processor = Processors.GetProcessorByPath(path);
 	var xml = processor.GenerateXml(new FileInfo(path));
@@ -51,25 +49,25 @@ So please use ```Processor``` and ```Processors``` classes.
 
 ## [Obsolete!] Sample code using ```CodeToXml``` and ```XmlToCode```
 ```C#
-	[Test] public void ParseJavaText() {
-		var originalCode = @"class Klass {}";
-		var xml = JavaCodeToXml.Instance.Generate(originalCode);
-		var code = JavaXmlToCode.Instance.Generate(xml);
-		Assert.That(code, Is.EqualTo(originalCode));
-	}
+[Test] public void ParseJavaText() {
+	var originalCode = @"class Klass {}";
+	var xml = JavaCodeToXml.Instance.Generate(originalCode);
+	var code = JavaXmlToCode.Instance.Generate(xml);
+	Assert.That(code, Is.EqualTo(originalCode));
+}
 
-	[Test] public void ParseCSharpFile() {
-		var path = Fixture.GetInputCodePath("CSharp", "Student.cs");
-		var xml = CSharpCodeToXml.Instance.GenerateFromFile(path);
-		var code = CSharpXmlToCode.Instance.Generate(xml);
-		Assert.That(code, Is.EqualTo(File.ReadAllText(path)));
-	}
+[Test] public void ParseCSharpFile() {
+	var path = Fixture.GetInputCodePath("CSharp", "Student.cs"); // Get a path of a test file
+	var xml = CSharpCodeToXml.Instance.GenerateFromFile(path);
+	var code = CSharpXmlToCode.Instance.Generate(xml);
+	Assert.That(code, Is.EqualTo(File.ReadAllText(path)));
+}
 
-	[Test] public void ParseLuaFileUsingFilePath() {
-		var path = Fixture.GetInputCodePath("Lua", "Block1.lua");
-		var codeToXml = PluginManager.GetCodeToXmlByPath(path);
-		var xml = codeToXml.GenerateFromFile(path);
-		var code = codeToXml.XmlToCode.Generate(xml);
-		Assert.That(code, Is.EqualTo(File.ReadAllText(path)));
-	}
+[Test] public void ParseLuaFileUsingFilePath() {
+	var path = Fixture.GetInputCodePath("Lua", "Block1.lua"); // Get a path of a test file
+	var codeToXml = PluginManager.GetCodeToXmlByPath(path);
+	var xml = codeToXml.GenerateFromFile(path);
+	var code = codeToXml.XmlToCode.Generate(xml);
+	Assert.That(code, Is.EqualTo(File.ReadAllText(path)));
+}
 ```
