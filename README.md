@@ -36,6 +36,7 @@ Provides ```CodeToXml``` and ```XmlToCode``` classes, which are obsolete!
 	var code = Processors.JavaUsingAntlr3.GenerateCode(xml);
 	Assert.That(code, Is.EqualTo(originalCode));
 }
+
 [Test] public void ParseCSharpFile() {
 	var path = Fixture.GetInputCodePath("CSharp", "Student.cs"); // Get a path of a test file
 	// To read file, please pass a FileInfo instance
@@ -43,6 +44,7 @@ Provides ```CodeToXml``` and ```XmlToCode``` classes, which are obsolete!
 	var code = Processors.CSharpUsingAntlr3.GenerateCode(xml);
 	Assert.That(code, Is.EqualTo(File.ReadAllText(path)));
 }
+
 [Test] public void ParseLuaFileUsingFilePath() {
 	var path = Fixture.GetInputCodePath("Lua", "Block1.lua"); // Get a path of a test file
 	// To read file, please pass a FileInfo instance
