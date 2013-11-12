@@ -5,6 +5,9 @@
 Install NuGet with Extension Manager
 * Code Contracts
 http://research.microsoft.com/en-us/projects/contracts/
+* Python 2.x for parsing Python 2.x
+* Python 3.x for parsing Python 3.x
+* Ruby 2.x for parsing Ruby 1.8.x, 1.9.x and 2.0.x
 
 # How to build
 1. Right click the solution icon in the Solution Explorer.
@@ -16,10 +19,13 @@ Note that ```Processor``` class is introduced instead of ```CodeToXml``` and ```
 So please use ```Processor``` and ```Processors``` classes.
 
 ## Structure
-	- Code2Xml.Languages.ANTLRv3.dll
-	- Code2Xml.Languages.ANTLRv4.dll
-	- Code2Xml.Languages.ExternalProcessors.dll
-	- Code2Xml.Languages.Obsolete.dll
+- Code2Xml.Languages.ANTLRv3.dll  
+Provides processors for C, C#, Java, JavaScript, Lua, PHP.
+
+- Code2Xml.Languages.ExternalProcessors.dll  
+Provides processors for Python and Ruby.
+
+- Code2Xml.Languages.Obsolete.dll  
 
 
 ## Sample code using ```Processor```
