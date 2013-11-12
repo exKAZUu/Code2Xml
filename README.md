@@ -49,7 +49,7 @@ So please use ```Processor``` and ```Processors``` classes.
 }
 ```
 
-## [Obsolete!] Sample code using ```CodeToXml``` and ```XmlToCode``` classes
+## [Obsolete!] Sample code using ```CodeToXml``` and ```XmlToCode```
 ```C#
 	[Test] public void ParseJavaText() {
 		var originalCode = @"class Klass {}";
