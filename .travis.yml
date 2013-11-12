@@ -4,8 +4,6 @@
 language: c
       
 install:
- # Set up git submodules
- - git submodule update --init
  # Install Mono comipler and runtime
  - sudo apt-get install mono-devel mono-gmcs
  # Set up certificatins for NuGet
