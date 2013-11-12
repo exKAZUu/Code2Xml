@@ -29,7 +29,7 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
     /// Provides common code for processors using Antlr 3.
     /// </summary>
     /// <typeparam name="TParser"></typeparam>
-    public abstract class ProcessorUsingAntlr3<TParser> : LanguageProcessor
+    public abstract class ProcessorUsingAntlr3<TParser> : Processor
             where TParser : ICustomizedAntlr3Parser {
         public bool ThrowingParseError { get; set; }
 

@@ -25,7 +25,7 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.Erlang {
 	/// <summary>
 	/// Represents a Erlang parser and a Erlang code generator.
 	/// </summary>
-	[Export(typeof(LanguageProcessor))]
+	[Export(typeof(Processor))]
 	public class ErlangProcessor : ProcessorUsingAntlr4<ErlangParser> {
 		/// <summary>
 		/// Gets the language name except for the version.

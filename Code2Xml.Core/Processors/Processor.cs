@@ -28,7 +28,7 @@ namespace Code2Xml.Core.Processors {
 	/// <summary>
 	/// Represents a programming language processor for inter-converting source code and a xml representing an abstract syntax tree.
 	/// </summary>
-	public abstract class LanguageProcessor {
+	public abstract class Processor {
 		public const bool DefaultThrowingParseError = false;
 		public const bool DefaultEnablePosition = true;
 
@@ -61,7 +61,7 @@ namespace Code2Xml.Core.Processors {
 			get { return SupportedExtensions[0]; }
 		}
 
-		protected LanguageProcessor(params string[] extensions) {
+		protected Processor(params string[] extensions) {
 			SupportedExtensions = extensions.ToList().AsReadOnly();
 		}
 

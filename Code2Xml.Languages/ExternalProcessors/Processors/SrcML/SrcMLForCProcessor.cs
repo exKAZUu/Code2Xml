@@ -26,7 +26,7 @@ namespace Code2Xml.Languages.ExternalProcessors.Processors.SrcML {
     /// <summary>
     /// Represents a C 99 processor using SrcML for inter-converting between source code and XML-based ASTs.
     /// </summary>
-    // [Export(typeof(LanguageProcessor))] // because this class is under experiment
+    // [Export(typeof(Processor))] // because this class is under experiment
     public class SrcMLForCProcessor : ProcessorUsingExternalProcessor {
         private static readonly string DirectoryPath = Path.Combine("ParserScripts", "SrcML");
 

@@ -24,7 +24,7 @@ using NUnit.Framework;
 namespace Code2Xml.Languages.ANTLRv3.Tests {
     [TestFixture]
     public class JavaProcessorTest : ProcessorTest {
-        protected override LanguageProcessor CreateProcessor() {
+        protected override Processor CreateProcessor() {
             return new JavaProcessorUsingAntlr3();
         }
 

@@ -27,7 +27,7 @@ namespace Code2Xml.Languages.ExternalProcessors.Processors.Ruby {
     /// <summary>
     /// Represents a Ruby 1.9.x processor for inter-converting between source code and XML-based ASTs.
     /// </summary>
-    [Export(typeof(LanguageProcessor))]
+    [Export(typeof(Processor))]
     public class Ruby19Processor : ProcessorUsingExternalProcessor {
         private static readonly string DirectoryPath = Path.Combine("ParserScripts", "Ruby");
 

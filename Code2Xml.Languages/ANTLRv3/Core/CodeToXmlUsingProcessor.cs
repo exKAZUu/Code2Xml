@@ -7,7 +7,7 @@ using Code2Xml.Core.XmlToCodes;
 
 namespace Code2Xml.Languages.ANTLRv3.Core {
     public abstract class CodeToXmlUsingProcessor<TProcessor, TXmlToCode> : CodeToXml
-            where TProcessor : LanguageProcessor, new()
+            where TProcessor : Processor, new()
             where TXmlToCode : XmlToCodeUsingProcessor<TProcessor>, new() {
         private readonly TProcessor _processor;
         private readonly TXmlToCode _xmlToCode;

@@ -24,7 +24,7 @@ using NUnit.Framework;
 namespace Code2Xml.Languages.ExternalProcessors.Tests {
     [TestFixture]
     public class Ruby19ProcessorTest : ProcessorTest {
-        protected override LanguageProcessor CreateProcessor() {
+        protected override Processor CreateProcessor() {
             return new Ruby19Processor();
         }
 

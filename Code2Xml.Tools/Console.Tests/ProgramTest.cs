@@ -24,6 +24,7 @@ using Code2Xml.Core;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Languages.C.CodeToXmls;
 using Code2Xml.Languages.C.XmlToCodes;
+using Code2Xml.Objects;
 using NUnit.Framework;
 using Paraiba.Core;
 using Paraiba.Text;
@@ -59,7 +60,7 @@ namespace Code2Xml.Tools.Console.Tests {
                         .Select(
                                 p => new TestCaseData(
                                         p.Path, p.Opt,
-                                        Code2XmlInstances.CodeToXmls.FirstOrDefault(
+                                        CodeToXmls.All.FirstOrDefault(
                                                 o => o.GetType().Name == p.Name + "CodeToXml")))
                         .Where(t => t.Arguments[2] != null);
             }

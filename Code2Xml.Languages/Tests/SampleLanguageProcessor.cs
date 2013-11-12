@@ -18,27 +18,32 @@
 
 using System.IO;
 using Code2Xml.Core;
+using Code2Xml.Languages.ANTLRv3.Processors.CSharp;
+using Code2Xml.Languages.ANTLRv3.Processors.Java;
 using Code2Xml.Languages.CSharp.CodeToXmls;
 using Code2Xml.Languages.CSharp.XmlToCodes;
 using Code2Xml.Languages.Java.CodeToXmls;
 using Code2Xml.Languages.Java.XmlToCodes;
+using Code2Xml.Objects;
 using NUnit.Framework;
 using ParserTests;
 
 namespace Code2Xml.Languages.Tests {
     [TestFixture]
-    public class SampleCodeToXml {
+    public class SampleLanguageProcessor {
         [Test]
         public void ParseJavaText() {
             var originalCode = @"class Klass {}";
-            var ast = JavaCodeToXml.Instance.Generate(originalCode);
-            var code = JavaXmlToCode.Instance.Generate(ast);
+            var processor = new JavaProcessorUsingAntlr3();
+            var ast = processor.GenerateXml(originalCode);
+            var code = processor.GenerateCode(ast);
             Assert.That(code, Is.EqualTo(originalCode));
         }
 
         [Test]
         public void ParseCSharpFile() {
             var path = Fixture.GetInputCodePath("CSharp", "Student.cs");
+            var processor = new CSharpProcessorUsingAntlr3();
             var ast = CSharpCodeToXml.Instance.GenerateFromFile(path);
             var code = CSharpXmlToCode.Instance.Generate(ast);
             Assert.That(code, Is.EqualTo(File.ReadAllText(path)));
@@ -47,7 +52,7 @@ namespace Code2Xml.Languages.Tests {
         [Test]
         public void ParseLuaFileUsingFilePath() {
             var path = Fixture.GetInputCodePath("Lua", "Block1.lua");
-            var codeToXml = Code2XmlInstances.GetCodeToXmlByPath(path);
+            var codeToXml = CodeToXmls.GetCodeToXmlByPath(path);
             var ast = codeToXml.GenerateFromFile(path);
             var code = codeToXml.XmlToCode.Generate(ast);
             Assert.That(code, Is.EqualTo(File.ReadAllText(path)));

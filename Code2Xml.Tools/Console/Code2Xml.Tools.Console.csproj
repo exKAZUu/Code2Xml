@@ -139,6 +139,10 @@
       <Project>{d5dec839-57fb-408b-b162-d7a027379127}</Project>
       <Name>Code2Xml.Languages.Obsolete</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Code2Xml.Objects\Code2Xml.Objects.csproj">
+      <Project>{447b693b-b4d5-4b97-adf7-4f8546d9dd8e}</Project>
+      <Name>Code2Xml.Objects</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

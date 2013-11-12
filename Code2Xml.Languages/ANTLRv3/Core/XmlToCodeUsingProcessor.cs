@@ -22,8 +22,8 @@ using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Core.XmlToCodes {
 	public abstract class XmlToCodeUsingProcessor<TProcessor> : XmlToCode
-			where TProcessor : LanguageProcessor, new() {
-		private readonly LanguageProcessor _processor;
+			where TProcessor : Processor, new() {
+		private readonly Processor _processor;
 
 		protected XmlToCodeUsingProcessor() {
 			_processor = new TProcessor();

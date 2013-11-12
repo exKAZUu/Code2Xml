@@ -23,7 +23,7 @@ using Paraiba.Xml;
 
 namespace Code2Xml.Core.Tests {
     public abstract class ProcessorTest {
-        protected abstract LanguageProcessor CreateProcessor();
+        protected abstract Processor CreateProcessor();
 
         protected void VerifyParsing(string code) {
             var processor = CreateProcessor();

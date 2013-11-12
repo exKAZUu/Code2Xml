@@ -28,7 +28,7 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
     /// Provides common code for processors using Antlr 4.
     /// </summary>
     /// <typeparam name="TParser"></typeparam>
-    public abstract class ProcessorUsingAntlr4<TParser> : LanguageProcessor
+    public abstract class ProcessorUsingAntlr4<TParser> : Processor
             where TParser : Parser {
         protected ProcessorUsingAntlr4(params string[] extensions) : base(extensions) {}
 

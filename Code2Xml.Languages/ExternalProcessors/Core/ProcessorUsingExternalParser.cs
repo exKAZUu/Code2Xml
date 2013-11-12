@@ -30,7 +30,7 @@ namespace Code2Xml.Languages.ExternalProcessors.Core {
     /// Provides functions to invoke external parsers.
     /// Note that this class does not help invoking external programs to generate code from xml.
     /// </summary>
-    public abstract class ProcessorUsingExternalParser : LanguageProcessor {
+    public abstract class ProcessorUsingExternalParser : Processor {
         protected static readonly Encoding Encoding = new UTF8Encoding(false);
 
         protected abstract string XmlGeneratorPath { get; }

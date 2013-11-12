@@ -29,7 +29,7 @@ namespace Code2Xml.Core.Processors {
 		private static LanguageProcessors _instance;
 
 #pragma warning disable 649
-		[ImportMany] private IEnumerable<LanguageProcessor> _processors;
+		[ImportMany] private IEnumerable<Processor> _processors;
 #pragma warning restore 649
 
 		private LanguageProcessors() {
@@ -46,7 +46,7 @@ namespace Code2Xml.Core.Processors {
 			get { return _instance ?? (_instance = new LanguageProcessors()); }
 		}
 
-		public static IEnumerable<LanguageProcessor> Processors {
+		public static IEnumerable<Processor> Processors {
 			get {
 				return Instance._processors
 						.OrderBy(c => c.FullLanguageName);
@@ -54,11 +54,11 @@ namespace Code2Xml.Core.Processors {
 		}
 
 		/// <summary>
-		/// Gets a <c>LanguageProcessor</c> instance by the specified language name.
+		/// Gets a <c>Processor</c> instance by the specified language name.
 		/// </summary>
 		/// <param name="name"></param>
 		/// <returns></returns>
-		public static LanguageProcessor GetProcessorByName(string name) {
+		public static Processor GetProcessorByName(string name) {
 			var lowerName = name.ToLower();
 			return Processors
 					.Where(ast => ast.LanguageName.ToLower().Contains(lowerName))
@@ -67,11 +67,11 @@ namespace Code2Xml.Core.Processors {
 		}
 
 		/// <summary>
-		/// Gets a <c>LanguageProcessor</c> instance by the specified language full name including the language version.
+		/// Gets a <c>Processor</c> instance by the specified language full name including the language version.
 		/// </summary>
 		/// <param name="fullName"></param>
 		/// <returns></returns>
-		public static LanguageProcessor GetProcessorByFullName(string fullName) {
+		public static Processor GetProcessorByFullName(string fullName) {
 			var lowerName = fullName.ToLower();
 			return Processors
 					.Where(ast => ast.FullLanguageName.ToLower().Contains(lowerName))
@@ -80,11 +80,11 @@ namespace Code2Xml.Core.Processors {
 		}
 
 		/// <summary>
-		/// Gets a <c>LanguageProcessor</c> instance by the specified file extension.
+		/// Gets a <c>Processor</c> instance by the specified file extension.
 		/// </summary>
 		/// <param name="extension"></param>
 		/// <returns></returns>
-		public static LanguageProcessor GetProcessorByExtension(string extension) {
+		public static Processor GetProcessorByExtension(string extension) {
 			var lowerExt = extension.ToLower();
 			return Processors
 					.FirstOrDefault(

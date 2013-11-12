@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{806FF729-C900-45C4-ADD8-09108915062E}</ProjectGuid>
+    <ProjectGuid>{447B693B-B4D5-4B97-ADF7-4F8546D9DD8E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Code2Xml.Tools.Console.Tests</RootNamespace>
-    <AssemblyName>Code2Xml.Tools.Console.Tests</AssemblyName>
+    <RootNamespace>Code2Xml.Objects</RootNamespace>
+    <AssemblyName>Code2Xml.Objects</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,60 +33,53 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Paraiba">
-      <HintPath>..\..\packages\Paraiba.1.1.0.90\lib\net40\Paraiba.dll</HintPath>
+      <HintPath>..\packages\Paraiba.1.1.0.90\lib\net40\Paraiba.dll</HintPath>
     </Reference>
     <Reference Include="Paraiba.Experiment">
-      <HintPath>..\..\packages\Paraiba.Experiment.1.1.0.42\lib\net40\Paraiba.Experiment.dll</HintPath>
+      <HintPath>..\packages\Paraiba.Experiment.1.1.0.42\lib\net40\Paraiba.Experiment.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProgramTest.cs" />
+    <Compile Include="CodeToXmls.cs" />
+    <Compile Include="Processors.cs" />
+    <Compile Include="XmlToCodes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Code2Xml.Core\Code2Xml.Core.csproj">
+      <Project>{bccd95a9-7685-4b15-9da3-e48cc0bf499b}</Project>
+      <Name>Code2Xml.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Code2Xml.Languages\ANTLRv3\Code2Xml.Languages.ANTLRv3.csproj">
+      <Project>{942a56fd-13af-4ee6-a8d7-7ddf50374715}</Project>
+      <Name>Code2Xml.Languages.ANTLRv3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Code2Xml.Languages\ExternalProcessors\Code2Xml.Languages.ExternalProcessors.csproj">
+      <Project>{311ea4b7-dd3c-4945-9ae3-a86a3ede6a68}</Project>
+      <Name>Code2Xml.Languages.ExternalProcessors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Code2Xml.Languages\Obsolete\Code2Xml.Languages.Obsolete.csproj">
+      <Project>{d5dec839-57fb-408b-b162-d7a027379127}</Project>
+      <Name>Code2Xml.Languages.Obsolete</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Code2Xml.Languages\ANTLRv3\Code2Xml.Languages.ANTLRv3.csproj">
-      <Project>{942a56fd-13af-4ee6-a8d7-7ddf50374715}</Project>
-      <Name>Code2Xml.Languages.ANTLRv3</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Code2Xml.Languages\Obsolete\Code2Xml.Languages.Obsolete.csproj">
-      <Project>{d5dec839-57fb-408b-b162-d7a027379127}</Project>
-      <Name>Code2Xml.Languages.Obsolete</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Code2Xml.Objects\Code2Xml.Objects.csproj">
-      <Project>{447b693b-b4d5-4b97-adf7-4f8546d9dd8e}</Project>
-      <Name>Code2Xml.Objects</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\ParserTests\ParserTests\ParserTests.csproj">
-      <Project>{20510236-d8b1-4617-9352-4e6134f9ab67}</Project>
-      <Name>ParserTests</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Console\Code2Xml.Tools.Console.csproj">
-      <Project>{5C40DA45-ACB3-4FC4-8CD4-E9053D4081D2}</Project>
-      <Name>Code2Xml.Tools.Console</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">
-      <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>
-      <Name>Code2Xml.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

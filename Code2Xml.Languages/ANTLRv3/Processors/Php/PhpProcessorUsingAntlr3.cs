@@ -25,7 +25,7 @@ namespace Code2Xml.Languages.ANTLRv3.Processors.Php {
     /// <summary>
     /// Represents a Php parser and a Php code generator.
     /// </summary>
-    [Export(typeof(LanguageProcessor))]
+    [Export(typeof(Processor))]
     public class PhpProcessorUsingAntlr3 : ProcessorUsingAntlr3<PhpParser> {
         /// <summary>
         /// Gets the language name except for the version.

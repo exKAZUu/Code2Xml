@@ -25,7 +25,7 @@ namespace Code2Xml.Languages.ANTLRv3.Processors.Java {
     /// <summary>
     /// Represents a Java parser and a Java code generator.
     /// </summary>
-    [Export(typeof(LanguageProcessor))]
+    [Export(typeof(Processor))]
     public class JavaProcessorUsingAntlr3 : ProcessorUsingAntlr3<JavaParser> {
         /// <summary>
         /// Gets the language name except for the version.

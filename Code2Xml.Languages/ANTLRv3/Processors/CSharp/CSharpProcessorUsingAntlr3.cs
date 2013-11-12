@@ -25,7 +25,7 @@ namespace Code2Xml.Languages.ANTLRv3.Processors.CSharp {
     /// <summary>
     /// Represents a CSharp parser and a CSharp code generator.
     /// </summary>
-    [Export(typeof(LanguageProcessor))]
+    [Export(typeof(Processor))]
     public class CSharpProcessorUsingAntlr3 : ProcessorUsingAntlr3<csParser> {
         /// <summary>
         /// Gets the language name except for the version.

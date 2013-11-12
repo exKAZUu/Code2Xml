@@ -25,7 +25,7 @@ namespace Code2Xml.Languages.ANTLRv4.Processors.C {
 	/// <summary>
 	/// Represents a C parser and a C code generator.
 	/// </summary>
-	[Export(typeof(LanguageProcessor))]
+	[Export(typeof(Processor))]
 	public class CProcessor : ProcessorUsingAntlr4<CParser> {
 		/// <summary>
 		/// Gets the language name except for the version.
