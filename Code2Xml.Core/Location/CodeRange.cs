@@ -22,6 +22,7 @@ using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
+using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Core.Location {
 	/// <summary>
@@ -316,8 +317,8 @@ namespace Code2Xml.Core.Location {
 			return new CodeLocation(endLine, endPos);
 		}
 
-		public static XElement SetLocationAttributes(XElement element, CodeLocation startLocation) {
-			var endLocation = CalculateInclusiveEndLocation(startLocation, element.Value);
+		public static XElement SetLocationAttributes(XElement element, string text, CodeLocation startLocation) {
+			var endLocation = CalculateInclusiveEndLocation(startLocation, text);
 			element.SetAttributeValue(
 					Code2XmlConstants.StartLineName, startLocation.Line);
 			element.SetAttributeValue(

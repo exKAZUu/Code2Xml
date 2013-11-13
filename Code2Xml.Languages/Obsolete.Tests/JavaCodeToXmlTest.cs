@@ -18,6 +18,7 @@
 
 using System.IO;
 using System.Linq;
+using Code2Xml.Core;
 using Code2Xml.Core.Location;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.Java.CodeToXmls;

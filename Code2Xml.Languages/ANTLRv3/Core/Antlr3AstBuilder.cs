@@ -72,7 +72,7 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 				_nextTokenIndex = count + 1;
 				_lastElement = new XElement(
 						Code2XmlConstants.TokenGroupName,
-						CreateTokenElement(Code2XmlConstants.TokenName, token));
+						CreateTokenElement(GetTokenName(token), token));
 				parent.Element.Add(_lastElement);
 			}
 			return base.Create(token);
@@ -81,17 +81,33 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 		private void GatherHiddenTokens(int count) {
 			for (int i = _nextTokenIndex; i < count; i++) {
 				var oldToken = _stream.Get(i);
-				var name = oldToken.Channel != Lexer.Hidden
-						? Code2XmlConstants.TokenName
-						: _tokenNames[oldToken.Type];
-				_lastElement.Add(CreateTokenElement(name, oldToken));
+				var tokenName = GetTokenName(oldToken);
+				var element = oldToken.Channel != Lexer.Hidden
+						? CreateTokenElement(tokenName, oldToken)
+						: CreateHiddenElement(tokenName, oldToken);
+				_lastElement.Add(element);
 			}
+		}
+
+		private string GetTokenName(IToken token) {
+			var tokenName = _tokenNames[token.Type];
+			if (!char.IsLetter(tokenName[0])) {
+				tokenName = Code2XmlConstants.TokenName;
+			}
+			return tokenName;
 		}
 
 		private static XElement CreateTokenElement(string name, IToken token) {
 			var tokenElement = new XElement(name, token.Text);
 			var startLocation = new CodeLocation(token.Line, token.CharPositionInLine);
-			return CodeRange.SetLocationAttributes(tokenElement, startLocation);
+			return CodeRange.SetLocationAttributes(tokenElement, token.Text, startLocation);
+		}
+
+		private static XElement CreateHiddenElement(string name, IToken token) {
+			var tokenElement = new XElement(name);
+			tokenElement.SetAttributeValue(Code2XmlConstants.HiddenName, token.Text);
+			var startLocation = new CodeLocation(token.Line, token.CharPositionInLine);
+			return CodeRange.SetLocationAttributes(tokenElement, token.Text, startLocation);
 		}
 	}
 

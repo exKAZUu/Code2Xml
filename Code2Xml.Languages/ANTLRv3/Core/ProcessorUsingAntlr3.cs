@@ -22,130 +22,132 @@ using System.IO;
 using System.Text;
 using System.Xml.Linq;
 using Antlr.Runtime;
+using Code2Xml.Core;
 using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Languages.ANTLRv3.Core {
-    /// <summary>
-    /// Provides common code for processors using Antlr 3.
-    /// </summary>
-    /// <typeparam name="TParser"></typeparam>
-    public abstract class ProcessorUsingAntlr3<TParser> : Processor
-            where TParser : ICustomizedAntlr3Parser {
-        public bool ThrowingParseError { get; set; }
+	/// <summary>
+	/// Provides common code for processors using Antlr 3.
+	/// </summary>
+	/// <typeparam name="TParser"></typeparam>
+	public abstract class ProcessorUsingAntlr3<TParser> : Processor
+			where TParser : ICustomizedAntlr3Parser {
+		public bool ThrowingParseError { get; set; }
 
-        protected ProcessorUsingAntlr3(params string[] extensions) : base(extensions) {
-            ThrowingParseError = false;
-        }
+		protected ProcessorUsingAntlr3(params string[] extensions) : base(extensions) {
+			ThrowingParseError = false;
+		}
 
-        /// <summary>
-        /// Generates source code from the specified xml.
-        /// </summary>
-        /// <param name="root"></param>
-        /// <returns></returns>
-        public override string GenerateCode(XElement root) {
-            var builder = new StringBuilder();
-            GenerateCode(builder, root);
-            return builder.ToString();
-        }
+		/// <summary>
+		/// Generates source code from the specified xml.
+		/// </summary>
+		/// <param name="root"></param>
+		/// <returns></returns>
+		public override string GenerateCode(XElement root) {
+			var builder = new StringBuilder();
+			GenerateCode(builder, root);
+			return builder.ToString();
+		}
 
-        private void GenerateCode(StringBuilder builder, XContainer element) {
-            Contract.Requires(element != null);
-            foreach (var e in element.Elements()) {
-                if (e.HasElements) {
-                    GenerateCode(builder, e);
-                } else {
-                    builder.Append(e.Value);
-                }
-            }
-        }
+		private void GenerateCode(StringBuilder builder, XContainer element) {
+			Contract.Requires(element != null);
+			foreach (var e in element.Elements()) {
+				if (e.HasElements) {
+					GenerateCode(builder, e);
+				} else {
+					var attr = e.Attribute(Code2XmlConstants.HiddenName);
+					builder.Append(attr == null ? e.Value : attr.Value);
+				}
+			}
+		}
 
-        /// <summary>
-        /// Creates and returns a lexer.
-        /// </summary>
-        /// <param name="stream"></param>
-        /// <returns></returns>
-        protected abstract ITokenSource CreateLexer(ICharStream stream);
+		/// <summary>
+		/// Creates and returns a lexer.
+		/// </summary>
+		/// <param name="stream"></param>
+		/// <returns></returns>
+		protected abstract ITokenSource CreateLexer(ICharStream stream);
 
-        /// <summary>
-        /// Creates and returns a parser.
-        /// </summary>
-        /// <param name="stream"></param>
-        /// <returns></returns>
-        protected abstract TParser CreateParser(ITokenStream stream);
+		/// <summary>
+		/// Creates and returns a parser.
+		/// </summary>
+		/// <param name="stream"></param>
+		/// <returns></returns>
+		protected abstract TParser CreateParser(ITokenStream stream);
 
-        /// <summary>
-        /// Parse source code already given.
-        /// </summary>
-        /// <param name="parser"></param>
-        protected abstract Antlr3AstNode Parse(TParser parser);
+		/// <summary>
+		/// Parse source code already given.
+		/// </summary>
+		/// <param name="parser"></param>
+		protected abstract Antlr3AstNode Parse(TParser parser);
 
-        /// <summary>
-        /// Creates a token stream which provides tokenized code.
-        /// </summary>
-        /// <param name="stream"></param>
-        /// <returns></returns>
-        private CommonTokenStream CreateTokenStream(ICharStream stream) {
-            var lexer = CreateLexer(stream);
-            return new CommonTokenStream(lexer);
-        }
+		/// <summary>
+		/// Creates a token stream which provides tokenized code.
+		/// </summary>
+		/// <param name="stream"></param>
+		/// <returns></returns>
+		private CommonTokenStream CreateTokenStream(ICharStream stream) {
+			var lexer = CreateLexer(stream);
+			return new CommonTokenStream(lexer);
+		}
 
-        /// <summary>
-        /// Creates a token stream which provides tokenized code.
-        /// </summary>
-        /// <param name="code"></param>
-        /// <returns></returns>
-        public CommonTokenStream CreateTokenStream(string code) {
-            return CreateTokenStream(new ANTLRStringStream(code));
-        }
+		/// <summary>
+		/// Creates a token stream which provides tokenized code.
+		/// </summary>
+		/// <param name="code"></param>
+		/// <returns></returns>
+		public CommonTokenStream CreateTokenStream(string code) {
+			return CreateTokenStream(new ANTLRStringStream(code));
+		}
 
-        /// <summary>
-        /// Creates a token stream which provides tokenized code.
-        /// </summary>
-        /// <param name="reader"></param>
-        /// <returns></returns>
-        public CommonTokenStream CreateTokenStream(TextReader reader) {
-            return CreateTokenStream(new ANTLRReaderStream(reader));
-        }
+		/// <summary>
+		/// Creates a token stream which provides tokenized code.
+		/// </summary>
+		/// <param name="reader"></param>
+		/// <returns></returns>
+		public CommonTokenStream CreateTokenStream(TextReader reader) {
+			return CreateTokenStream(new ANTLRReaderStream(reader));
+		}
 
-        /// <summary>
-        /// Generates a xml from the specified char stream of the source code.
-        /// </summary>
-        /// <param name="charStream"></param>
-        /// <param name="throwingParseError"></param>
-        /// <returns></returns>
-        protected XElement GenerateXml(
-                ICharStream charStream, bool throwingParseError = DefaultThrowingParseError) {
-            var tokenStream = CreateTokenStream(charStream);
-            var parser = CreateParser(tokenStream);
-            var builder = throwingParseError ?
-                    new Antlr3AstBuilderWithReportingError(tokenStream, parser.TokenNames) :
-                    new Antlr3AstBuilder(tokenStream, parser.TokenNames);
-            parser.TraceDestination = Console.Error;
-            parser.TreeAdaptor = builder;
-            var root = Parse(parser);
-            return builder.FinishParsing(root.Element);
-        }
+		/// <summary>
+		/// Generates a xml from the specified char stream of the source code.
+		/// </summary>
+		/// <param name="charStream"></param>
+		/// <param name="throwingParseError"></param>
+		/// <returns></returns>
+		protected XElement GenerateXml(
+				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError) {
+			var tokenStream = CreateTokenStream(charStream);
+			var parser = CreateParser(tokenStream);
+			var builder = throwingParseError ?
+					new Antlr3AstBuilderWithReportingError(tokenStream, parser.TokenNames) :
+					new Antlr3AstBuilder(tokenStream, parser.TokenNames);
+			parser.TraceDestination = Console.Error;
+			parser.TreeAdaptor = builder;
+			var root = Parse(parser);
+			return builder.FinishParsing(root.Element);
+		}
 
-        /// <summary>
-        /// Generates a xml from the specified text of the source code.
-        /// </summary>
-        /// <param name="code"></param>
-        /// <param name="throwingParseError"></param>
-        /// <returns></returns>
-        public override XElement GenerateXml(
-                string code, bool throwingParseError = DefaultThrowingParseError) {
-            return GenerateXml(new ANTLRStringStream(code), throwingParseError);
-        }
+		/// <summary>
+		/// Generates a xml from the specified text of the source code.
+		/// </summary>
+		/// <param name="code"></param>
+		/// <param name="throwingParseError"></param>
+		/// <returns></returns>
+		public override XElement GenerateXml(
+				string code, bool throwingParseError = DefaultThrowingParseError) {
+			return GenerateXml(new ANTLRStringStream(code), throwingParseError);
+		}
 
-        /// <summary>
-        /// Generates a xml from the specified <c>TextReader</c> which reads the source code.
-        /// </summary>
-        /// <param name="codeReader"></param>
-        /// <param name="throwingParseError"></param>
-        /// <returns></returns>
-        public override XElement GenerateXml(
-                TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
-            return GenerateXml(new ANTLRReaderStream(codeReader), throwingParseError);
-        }
-    }
+		/// <summary>
+		/// Generates a xml from the specified <c>TextReader</c> which reads the source code.
+		/// </summary>
+		/// <param name="codeReader"></param>
+		/// <param name="throwingParseError"></param>
+		/// <returns></returns>
+		public override XElement GenerateXml(
+				TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
+			return GenerateXml(new ANTLRReaderStream(codeReader), throwingParseError);
+		}
+	}
 }

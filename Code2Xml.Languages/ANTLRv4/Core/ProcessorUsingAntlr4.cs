@@ -21,105 +21,107 @@ using System.IO;
 using System.Text;
 using System.Xml.Linq;
 using Antlr4.Runtime;
+using Code2Xml.Core;
 using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Languages.ANTLRv4.Core {
-    /// <summary>
-    /// Provides common code for processors using Antlr 4.
-    /// </summary>
-    /// <typeparam name="TParser"></typeparam>
-    public abstract class ProcessorUsingAntlr4<TParser> : Processor
-            where TParser : Parser {
-        protected ProcessorUsingAntlr4(params string[] extensions) : base(extensions) {}
+	/// <summary>
+	/// Provides common code for processors using Antlr 4.
+	/// </summary>
+	/// <typeparam name="TParser"></typeparam>
+	public abstract class ProcessorUsingAntlr4<TParser> : Processor
+			where TParser : Parser {
+		protected ProcessorUsingAntlr4(params string[] extensions) : base(extensions) {}
 
-        /// <summary>
-        /// Generates source code from the specified xml.
-        /// </summary>
-        /// <param name="root"></param>
-        /// <returns></returns>
-        public override string GenerateCode(XElement root) {
-            var builder = new StringBuilder();
-            GenerateCode(builder, root);
-            return builder.ToString();
-        }
+		/// <summary>
+		/// Generates source code from the specified xml.
+		/// </summary>
+		/// <param name="root"></param>
+		/// <returns></returns>
+		public override string GenerateCode(XElement root) {
+			var builder = new StringBuilder();
+			GenerateCode(builder, root);
+			return builder.ToString();
+		}
 
-        private void GenerateCode(StringBuilder builder, XContainer element) {
-            Contract.Requires(element != null);
-            foreach (var e in element.Elements()) {
-                if (e.HasElements) {
-                    GenerateCode(builder, e);
-                } else {
-                    builder.Append(e.Value);
-                }
-            }
-        }
+		private void GenerateCode(StringBuilder builder, XContainer element) {
+			Contract.Requires(element != null);
+			foreach (var e in element.Elements()) {
+				if (e.HasElements) {
+					GenerateCode(builder, e);
+				} else {
+					var attr = e.Attribute(Code2XmlConstants.HiddenName);
+					builder.Append(attr == null ? e.Value : attr.Value);
+				}
+			}
+		}
 
-        /// <summary>
-        /// Creates and returns a lexer.
-        /// </summary>
-        /// <param name="stream"></param>
-        /// <returns></returns>
-        protected abstract ITokenSource CreateLexer(ICharStream stream);
+		/// <summary>
+		/// Creates and returns a lexer.
+		/// </summary>
+		/// <param name="stream"></param>
+		/// <returns></returns>
+		protected abstract ITokenSource CreateLexer(ICharStream stream);
 
-        /// <summary>
-        /// Creates and returns a parser.
-        /// </summary>
-        /// <param name="stream"></param>
-        /// <returns></returns>
-        protected abstract TParser CreateParser(CommonTokenStream stream);
+		/// <summary>
+		/// Creates and returns a parser.
+		/// </summary>
+		/// <param name="stream"></param>
+		/// <returns></returns>
+		protected abstract TParser CreateParser(CommonTokenStream stream);
 
-        /// <summary>
-        /// Parse source code already given.
-        /// </summary>
-        /// <param name="parser"></param>
-        protected abstract ParserRuleContext Parse(TParser parser);
+		/// <summary>
+		/// Parse source code already given.
+		/// </summary>
+		/// <param name="parser"></param>
+		protected abstract ParserRuleContext Parse(TParser parser);
 
-        private XElement GenerateXml(
-                ICharStream charStream, bool throwingParseError = DefaultThrowingParseError) {
-            var lexer = CreateLexer(charStream);
-            var commonTokenStream = new CommonTokenStream(lexer);
-            var parser = CreateParser(commonTokenStream);
-            var builder = new Antlr4AstBuilder(parser);
-            if (throwingParseError) {
-                parser.ErrorHandler = new MyBailErrorStrategy();
-            }
-            builder.Visit(Parse(parser));
-            return builder.FinishParsing();
-        }
+		private XElement GenerateXml(
+				ICharStream charStream, bool throwingParseError = DefaultThrowingParseError) {
+			var lexer = CreateLexer(charStream);
+			var commonTokenStream = new CommonTokenStream(lexer);
+			var parser = CreateParser(commonTokenStream);
+			var builder = new Antlr4AstBuilder(parser);
+			if (throwingParseError) {
+				parser.ErrorHandler = new MyBailErrorStrategy();
+			}
+			builder.Visit(Parse(parser));
+			return builder.FinishParsing();
+		}
 
-        /// <summary>
-        /// Generates a xml from the specified text of the source code.
-        /// </summary>
-        /// <param name="code"></param>
-        /// <param name="throwingParseError"></param>
-        /// <returns></returns>
-        public override XElement GenerateXml(
-                string code, bool throwingParseError = DefaultThrowingParseError) {
-            return GenerateXml(new AntlrInputStream(code), throwingParseError);
-        }
+		/// <summary>
+		/// Generates a xml from the specified text of the source code.
+		/// </summary>
+		/// <param name="code"></param>
+		/// <param name="throwingParseError"></param>
+		/// <returns></returns>
+		public override XElement GenerateXml(
+				string code, bool throwingParseError = DefaultThrowingParseError) {
+			return GenerateXml(new AntlrInputStream(code), throwingParseError);
+		}
 
-        /// <summary>
-        /// Generates a xml from the specified <c>TextReader</c> which reads the source code.
-        /// </summary>
-        /// <param name="codeReader"></param>
-        /// <param name="throwingParseError"></param>
-        /// <returns></returns>
-        public override XElement GenerateXml(
-                TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
-            return GenerateXml(codeReader.ReadToEnd(), throwingParseError);
-        }
-    }
+		/// <summary>
+		/// Generates a xml from the specified <c>TextReader</c> which reads the source code.
+		/// </summary>
+		/// <param name="codeReader"></param>
+		/// <param name="throwingParseError"></param>
+		/// <returns></returns>
+		public override XElement GenerateXml(
+				TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
+			return GenerateXml(codeReader.ReadToEnd(), throwingParseError);
+		}
+	}
 
-    public class MyBailErrorStrategy : DefaultErrorStrategy {
-        public override void Recover(Parser recognizer, RecognitionException e) {
-            throw new ParseException(e);
-        }
+	public class MyBailErrorStrategy : DefaultErrorStrategy {
+		public override void Recover(Parser recognizer, RecognitionException e) {
+			throw new ParseException(e);
+		}
 
-        public override IToken RecoverInline(Parser recognizer) {
-            var e = new InputMismatchException(recognizer);
-            throw new ParseException(recognizer.CurrentToken.ToString(), e);
-        }
+		public override IToken RecoverInline(Parser recognizer) {
+			var e = new InputMismatchException(recognizer);
+			throw new ParseException(recognizer.CurrentToken.ToString(), e);
+		}
 
-        public override void Sync(Parser recognizer) {}
-    }
+		public override void Sync(Parser recognizer) {}
+	}
 }

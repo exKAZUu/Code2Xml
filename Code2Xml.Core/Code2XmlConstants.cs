@@ -18,11 +18,12 @@
 
 namespace Code2Xml.Core {
 	public class Code2XmlConstants {
-		public const string CommentName = "Comment";
 		public const string StartLineName = "startline";
 		public const string StartPositionName = "startpos";
 		public const string EndLineName = "endline";
 		public const string EndPositionName = "endpos";
+		public const string HiddenName = "hidden";
+
 		public const string TokenName = "TOKEN";
 		public const string TokenGroupName = "TOKENS";
 	}

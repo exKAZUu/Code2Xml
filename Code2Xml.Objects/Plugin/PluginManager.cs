@@ -25,6 +25,7 @@ using System.Linq;
 using System.Reflection;
 using Code2Xml.Core.CodeToXmls;
 using Code2Xml.Core.XmlToCodes;
+using Code2Xml.Objects;
 using Paraiba.Linq;
 
 namespace Code2Xml.Core.Plugin {

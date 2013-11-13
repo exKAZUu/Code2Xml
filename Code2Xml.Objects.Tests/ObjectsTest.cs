@@ -16,6 +16,7 @@
 
 #endregion
 
+using Code2Xml.Core;
 using NUnit.Framework;
 
 namespace Code2Xml.Objects.Tests {

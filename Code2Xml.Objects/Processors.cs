@@ -225,8 +225,7 @@ namespace Code2Xml.Objects {
 		public static Processor GetProcessorByExtension(string extension) {
 			var lowerExt = extension.ToLower();
 			return All.Where(
-					ast => ast.SupportedExtensions
-							.Select(e => e.ToLower())
+					ast => Enumerable.Select<string, string>(ast.SupportedExtensions, e => e.ToLower())
 							.Contains(lowerExt))
 					.MinElementOrDefault(ast => ast.GetType().Name.Length);
 		}

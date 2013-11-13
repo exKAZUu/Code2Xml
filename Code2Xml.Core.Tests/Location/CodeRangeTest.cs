@@ -19,6 +19,7 @@
 using System.Linq;
 using System.Xml.Linq;
 using Code2Xml.Core.Location;
+using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv3.Processors.Java;
 using NUnit.Framework;
 
@@ -107,7 +108,7 @@ public class Hello {
 			range.ConvertToIndicies(code, out inclusiveStart, out exclusiveEnd);
 			Assert.That(
 					code.Substring(inclusiveStart, exclusiveEnd - inclusiveStart),
-					Is.EqualTo(elem.Value));
+					Is.EqualTo(elem.TokenWithHiddens()));
 			return range;
 		}
 

@@ -22,6 +22,7 @@ using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using Antlr4.Runtime;
+using Code2Xml.Core;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv4.Core;
 using Code2Xml.Languages.ANTLRv4.Processors.Java;
