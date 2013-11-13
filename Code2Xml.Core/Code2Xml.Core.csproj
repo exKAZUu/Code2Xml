@@ -118,9 +118,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code2XmlConstants.cs" />
-    <Compile Include="Processors\ParseException.cs" />
+    <Compile Include="ParseException.cs" />
     <Compile Include="Location\CodeLocation.cs" />
-    <Compile Include="Processors\Processor.cs" />
+    <Compile Include="Processor.cs" />
     <Compile Include="Location\CodeRange.cs" />
     <Compile Include="XElementExtensionForXmlBasedAst.cs" />
     <Compile Include="XmlToCodes\XmlToCodeBase.cs" />
@@ -132,7 +132,7 @@
     <Compile Include="XmlToCodes\DefaultXmlToCode.cs" />
     <Compile Include="XmlToCodes\ExternalXmlToCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Processors\ExternalProgramUtils.cs" />
+    <Compile Include="ExternalProgramUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

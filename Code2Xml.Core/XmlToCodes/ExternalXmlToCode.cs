@@ -22,7 +22,6 @@ using System.Diagnostics.Contracts;
 using System.IO;
 using System.Text;
 using System.Xml.Linq;
-using Code2Xml.Core.Processors;
 using Paraiba.Core;
 
 namespace Code2Xml.Core.XmlToCodes {

@@ -22,9 +22,10 @@ namespace Code2Xml.Core {
 		public const string StartPositionName = "startpos";
 		public const string EndLineName = "endline";
 		public const string EndPositionName = "endpos";
-		public const string HiddenName = "hidden";
+		public const string HiddenAttributeName = "hidden";
 
-		public const string TokenName = "TOKEN";
-		public const string TokenGroupName = "TOKENS";
+		public const string TokenElementName = "TOKEN";
+		public const string HiddenElementName = "HIDDEN";
+		public const string TokenGroupElementName = "TOKENS";
 	}
 }

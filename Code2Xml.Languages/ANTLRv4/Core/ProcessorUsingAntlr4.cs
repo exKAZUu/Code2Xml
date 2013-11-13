@@ -22,7 +22,6 @@ using System.Text;
 using System.Xml.Linq;
 using Antlr4.Runtime;
 using Code2Xml.Core;
-using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Languages.ANTLRv4.Core {
 	/// <summary>
@@ -50,7 +49,7 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 				if (e.HasElements) {
 					GenerateCode(builder, e);
 				} else {
-					var attr = e.Attribute(Code2XmlConstants.HiddenName);
+					var attr = e.Attribute(Code2XmlConstants.HiddenAttributeName);
 					builder.Append(attr == null ? e.Value : attr.Value);
 				}
 			}

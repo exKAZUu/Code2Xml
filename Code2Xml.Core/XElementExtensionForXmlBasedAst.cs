@@ -54,7 +54,7 @@ namespace Code2Xml.Core {
 			if (e == null) {
 				return null;
 			}
-			var attr = e.Attribute(Code2XmlConstants.HiddenName);
+			var attr = e.Attribute(Code2XmlConstants.HiddenAttributeName);
 			return attr == null ? e.Value : attr.Value;
 		}
 
@@ -71,7 +71,7 @@ namespace Code2Xml.Core {
 					.Where(e2 => !e2.HasElements)
 					.Select(
 							e2 => {
-								var attr = e2.Attribute(Code2XmlConstants.HiddenName);
+								var attr = e2.Attribute(Code2XmlConstants.HiddenAttributeName);
 								return attr == null ? e2.Value : attr.Value;
 							});
 			return string.Join("", values);

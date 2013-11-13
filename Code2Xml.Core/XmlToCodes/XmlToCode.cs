@@ -21,7 +21,6 @@ using System.Collections.ObjectModel;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Xml.Linq;
-using Code2Xml.Core.Processors;
 using Paraiba.Text;
 
 namespace Code2Xml.Core.XmlToCodes {

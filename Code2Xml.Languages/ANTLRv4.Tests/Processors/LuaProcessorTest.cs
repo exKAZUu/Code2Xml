@@ -19,7 +19,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using Code2Xml.Core.Processors;
+using Code2Xml.Core;
 using Code2Xml.Languages.ANTLRv4.Processors.Lua;
 using NUnit.Framework;
 

@@ -18,7 +18,6 @@
 
 using System;
 using System.IO;
-using Code2Xml.Core.Processors;
 using NUnit.Framework;
 using Paraiba.Xml;
 using ParserTests;

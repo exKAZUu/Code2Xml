@@ -24,7 +24,7 @@ using System.Text;
 using System.Xml.Linq;
 using Paraiba.Text;
 
-namespace Code2Xml.Core.Processors {
+namespace Code2Xml.Core {
 	/// <summary>
 	/// Represents a programming language processor for inter-converting source code and a xml representing an abstract syntax tree.
 	/// </summary>

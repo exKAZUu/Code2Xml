@@ -19,7 +19,6 @@
 using System;
 using System.Collections.ObjectModel;
 using System.Xml.Linq;
-using Code2Xml.Core.Processors;
 
 namespace Code2Xml.Core.XmlToCodes {
 	/// <summary>

@@ -7,7 +7,7 @@
     <ProjectGuid>{447B693B-B4D5-4B97-ADF7-4F8546D9DD8E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Code2Xml.Objects</RootNamespace>
+    <RootNamespace>Code2Xml.Core</RootNamespace>
     <AssemblyName>Code2Xml.Objects</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

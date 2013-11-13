@@ -23,7 +23,6 @@ using System.ComponentModel.Composition.Hosting;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ANTLRv3.Processors.C;
 using Code2Xml.Languages.ANTLRv3.Processors.CSharp;
 using Code2Xml.Languages.ANTLRv3.Processors.Java;
@@ -34,7 +33,7 @@ using Code2Xml.Languages.ExternalProcessors.Processors.Python;
 using Code2Xml.Languages.ExternalProcessors.Processors.Ruby;
 using Paraiba.Linq;
 
-namespace Code2Xml.Objects {
+namespace Code2Xml.Core {
 	public class Processors {
 		private static Processors _instance;
 

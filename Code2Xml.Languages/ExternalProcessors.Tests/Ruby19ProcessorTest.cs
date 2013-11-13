@@ -16,7 +16,7 @@
 
 #endregion
 
-using Code2Xml.Core.Processors;
+using Code2Xml.Core;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.ExternalProcessors.Processors.Ruby;
 using NUnit.Framework;

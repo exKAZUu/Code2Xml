@@ -19,7 +19,6 @@
 using System.Linq;
 using Code2Xml.Core;
 using Code2Xml.Core.Location;
-using Code2Xml.Core.Processors;
 using Code2Xml.Languages.JavaScript.CodeToXmls;
 using NUnit.Framework;
 using Paraiba.Xml.Linq;

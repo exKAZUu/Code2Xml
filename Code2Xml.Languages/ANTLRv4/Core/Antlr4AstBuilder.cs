@@ -52,11 +52,11 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 			while (_stream.Get(count - 1).Type < 0) {
 				count--;
 			}
-			GatherHiddenTokens(count);
+			AddHiddenTokens(count);
 
 			var root = _dummyRoot.Elements().First();
-			var firstTokensNode = root.Descendants(Code2XmlConstants.TokenGroupName).FirstOrDefault() ??
-			                      root.Descendants().LastOrDefault();
+			var firstTokensNode = root.Descendants(Code2XmlConstants.TokenElementName)
+					.Select(e => e.Parent).FirstOrDefault() ?? root.Descendants().LastOrDefault();
 			if (firstTokensNode != null) {
 				foreach (var element in _dummyNode.Elements().Reverse()) {
 					firstTokensNode.AddFirst(element);
@@ -69,24 +69,25 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 			var token = node.Symbol;
 			if (token.Type > 0) {
 				var count = token.TokenIndex;
-				GatherHiddenTokens(count);
+				AddHiddenTokens(count);
 
 				_lastTokenIndex = count;
+				var tokenName = DetermineElementName(token, Code2XmlConstants.TokenGroupElementName);
 				_lastElement = new XElement(
-						Code2XmlConstants.TokenGroupName,
-						CreateTokenElement(GetTokenName(token), token));
+						tokenName,
+						CreateTokenElement(Code2XmlConstants.TokenElementName, token));
 				_elements.Peek().Add(_lastElement);
 			}
 			return base.VisitTerminal(node);
 		}
 
-		private void GatherHiddenTokens(int count) {
+		private void AddHiddenTokens(int count) {
 			for (int i = _lastTokenIndex + 1; i < count; i++) {
 				var oldToken = _stream.Get(i);
-				var tokenName = GetTokenName(oldToken);
+				var hiddenName = DetermineElementName(oldToken, Code2XmlConstants.HiddenElementName);
 				var element = oldToken.Channel != Lexer.Hidden
-						? CreateTokenElement(tokenName, oldToken)
-						: CreateHiddenElement(tokenName, oldToken);
+						? CreateTokenElement(hiddenName, oldToken)
+						: CreateHiddenElement(hiddenName, oldToken);
 				_lastElement.Add(element);
 			}
 		}
@@ -104,12 +105,9 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 			return base.VisitChildren(node);
 		}
 
-		private string GetTokenName(IToken token) {
+		private string DetermineElementName(IToken token, string defaultName) {
 			var tokenName = _tokenNames[token.Type];
-			if (!char.IsLetter(tokenName[0])) {
-				tokenName = Code2XmlConstants.TokenName;
-			}
-			return tokenName;
+			return !char.IsLetter(tokenName[0]) ? defaultName : tokenName;
 		}
 
 		private static XElement CreateTokenElement(string name, IToken token) {
@@ -120,7 +118,7 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 
 		private static XElement CreateHiddenElement(string name, IToken token) {
 			var tokenElement = new XElement(name);
-			tokenElement.SetAttributeValue(Code2XmlConstants.HiddenName, token.Text);
+			tokenElement.SetAttributeValue(Code2XmlConstants.HiddenAttributeName, token.Text);
 			var startLocation = new CodeLocation(token.Line, token.Column);
 			return CodeRange.SetLocationAttributes(tokenElement, token.Text, startLocation);
 		}

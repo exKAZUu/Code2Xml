@@ -18,7 +18,7 @@
 
 using System.ComponentModel.Composition;
 using Antlr.Runtime;
-using Code2Xml.Core.Processors;
+using Code2Xml.Core;
 using Code2Xml.Languages.ANTLRv3.Core;
 
 namespace Code2Xml.Languages.ANTLRv3.Processors.C {

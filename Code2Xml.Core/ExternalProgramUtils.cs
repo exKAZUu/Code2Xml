@@ -24,7 +24,7 @@ using System.Linq;
 using Microsoft.Win32;
 using Paraiba.Core;
 
-namespace Code2Xml.Core.Processors {
+namespace Code2Xml.Core {
 	public static class ExternalProgramUtils {
 		public static string GetPythonPath(params string[] versions) {
 			IEnumerable<string> paths;

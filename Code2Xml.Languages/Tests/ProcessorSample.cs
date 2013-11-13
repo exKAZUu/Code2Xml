@@ -18,7 +18,6 @@
 
 using System.IO;
 using Code2Xml.Core;
-using Code2Xml.Objects;
 using NUnit.Framework;
 using ParserTests;
 
