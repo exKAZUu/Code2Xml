@@ -34,14 +34,14 @@ using Code2Xml.Languages.ExternalProcessors.Processors.Ruby;
 using Paraiba.Linq;
 
 namespace Code2Xml.Core {
-	public class Processors {
-		private static Processors _instance;
+	public class ProcessorLoader {
+		private static ProcessorLoader _instance;
 
 #pragma warning disable 649
 		[ImportMany] private IEnumerable<Processor> _processors;
 #pragma warning restore 649
 
-		private Processors() {
+		private ProcessorLoader() {
 			var catalog = new AggregateCatalog();
 			catalog.Catalogs.Add(new AssemblyCatalog(Assembly.GetExecutingAssembly()));
 			catalog.Catalogs.Add(new DirectoryCatalog("."));
@@ -49,8 +49,8 @@ namespace Code2Xml.Core {
 			container.ComposeParts(this);
 		}
 
-		private static Processors Instance {
-			get { return _instance ?? (_instance = new Processors()); }
+		private static ProcessorLoader Instance {
+			get { return _instance ?? (_instance = new ProcessorLoader()); }
 		}
 
 		/// <summary>

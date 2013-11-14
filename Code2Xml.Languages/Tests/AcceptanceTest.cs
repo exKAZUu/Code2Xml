@@ -16,15 +16,33 @@
 
 #endregion
 
+using System.Linq;
 using Code2Xml.Core;
 using NUnit.Framework;
 
-namespace Code2Xml.Objects.Tests {
+namespace Code2Xml.Languages.Tests {
 	[TestFixture]
-	public class ObjectsTest {
+	public class AcceptanceTest {
 		[Test]
-		public void TestProcessors() {
-			ProcessorLoader.JavaUsingAntlr3.GenerateXml("class Klass {}");
+		public void GatherIdentifier() {
+			var code = @"class K { void main(String[] args) {} }";
+			var xml = ProcessorLoader.JavaUsingAntlr3.GenerateXml(code);
+			var ids = xml.Descendants("IDENTIFIER").ToList();
+			Assert.That(ids.Count, Is.EqualTo(4));
+		}
+
+		[Test]
+		public void GetComments() {
+			var code = @"class K {
+/** Main method */
+void main(String[] args) {
+  return; // return
+}
+} // test";
+			var xml = ProcessorLoader.JavaUsingAntlr3.GenerateXml(code);
+			var method = xml.Descendants("methodDeclaration").First();
+			method.BeforeHiddens();
+			//Assert.That(ids.Count, Is.EqualTo(4));
 		}
 	}
 }

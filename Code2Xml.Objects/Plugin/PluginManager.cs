@@ -29,7 +29,7 @@ using Paraiba.Linq;
 
 namespace Code2Xml.Core.Plugin {
 	/// <summary>
-	/// Please use <see cref="Processors"/> class.
+	/// Please use <see cref="ProcessorLoader"/> class.
 	/// </summary>
 	[Obsolete]
 	public class PluginManager {

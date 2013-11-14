@@ -16,11 +16,45 @@
 
 #endregion
 
+using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Xml.Linq;
+using Paraiba.Linq;
+using Paraiba.Xml.Linq;
 
 namespace Code2Xml.Core {
+	/// <summary>
+	/// Here is a sample xml structure.
+	/// The TOKEN element is a neccessary tokens representing code.
+	/// The WS and COMMENT elements are hidden tokens such as spaces and comments.
+	/// The IDENTIFIER element is a set of neccessary and hidden tokens and indicates the name of the TOKEN element.
+	/// We call elements like TOKEN tokens, ones like WS and COMMENT hiddens and ones like IDENTIFIER token sets.
+	/// 
+	/// &lt;IDENTIFIER&gt;
+	///   &lt;WS&gt;&lt;/WS&gt;
+	///   &lt;COMMENT&gt;&lt;/COMMENT&gt;
+	///   &lt;TOKEN&gt;&lt;/TOKEN&gt;
+	/// &lt;/IDENTIFIER&gt;
+	/// </summary>
 	public static class XElementExtensionForXmlBasedAst {
+		public static bool IsTokenSet(this XElement e) {
+			return e.LastElementOrDefault().Name() == Code2XmlConstants.TokenElementName;
+		}
+
+		public static bool IsToken(this XElement e) {
+			return e.Name() == Code2XmlConstants.TokenElementName;
+		}
+
+		public static bool IsHidden(this XElement e) {
+			return e.Attribute(Code2XmlConstants.HiddenAttributeName) != null;
+		}
+
+		public static IEnumerable<XElement> BeforeHiddens(this XElement tokenElement) {
+			Contract.Requires(tokenElement.IsTokenSet());
+			return tokenElement.Elements().SkipLast();
+		}
+
 		/// <summary>
 		/// Returns 
 		/// </summary>

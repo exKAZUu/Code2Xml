@@ -27,8 +27,8 @@ namespace Code2Xml.Languages.Tests {
 		[Test]
 		public void ParseJavaText() {
 			var originalCode = @"class Klass {}";
-			var xml = Processors.JavaUsingAntlr3.GenerateXml(originalCode);
-			var code = Processors.JavaUsingAntlr3.GenerateCode(xml);
+			var xml = ProcessorLoader.JavaUsingAntlr3.GenerateXml(originalCode);
+			var code = ProcessorLoader.JavaUsingAntlr3.GenerateCode(xml);
 			Assert.That(code, Is.EqualTo(originalCode));
 		}
 
@@ -36,8 +36,8 @@ namespace Code2Xml.Languages.Tests {
 		public void ParseCSharpFile() {
 			var path = Fixture.GetInputCodePath("CSharp", "Student.cs");
 			// To read file, please pass a FileInfo instance
-			var xml = Processors.CSharpUsingAntlr3.GenerateXml(new FileInfo(path));
-			var code = Processors.CSharpUsingAntlr3.GenerateCode(xml);
+			var xml = ProcessorLoader.CSharpUsingAntlr3.GenerateXml(new FileInfo(path));
+			var code = ProcessorLoader.CSharpUsingAntlr3.GenerateCode(xml);
 			Assert.That(code, Is.EqualTo(File.ReadAllText(path)));
 		}
 
@@ -45,7 +45,7 @@ namespace Code2Xml.Languages.Tests {
 		public void ParseLuaFileUsingFilePath() {
 			var path = Fixture.GetInputCodePath("Lua", "Block1.lua");
 			// To read file, please pass a FileInfo instance
-			var processor = Processors.GetProcessorByPath(path);
+			var processor = ProcessorLoader.GetProcessorByPath(path);
 			var xml = processor.GenerateXml(new FileInfo(path));
 			var code = processor.GenerateCode(xml);
 			Assert.That(code, Is.EqualTo(File.ReadAllText(path)));
