@@ -17,5 +17,5 @@
 #endregion
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.Lua {
-	public partial class LuaParser {}
+    public partial class LuaParser {}
 }

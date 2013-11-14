@@ -17,5 +17,5 @@
 #endregion
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.Clojure {
-	partial class ClojureLexer {}
+    partial class ClojureLexer {}
 }

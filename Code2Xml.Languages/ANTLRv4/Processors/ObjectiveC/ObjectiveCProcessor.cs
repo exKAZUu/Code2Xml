@@ -22,37 +22,37 @@ using Code2Xml.Core;
 using Code2Xml.Languages.ANTLRv4.Core;
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.ObjectiveC {
-	/// <summary>
-	/// Represents a ObjectiveC parser and a ObjectiveC code generator.
-	/// </summary>
-	[Export(typeof(Processor))]
-	public class ObjectiveCProcessor : ProcessorUsingAntlr4<ObjectiveCParser> {
-		/// <summary>
-		/// Gets the language name except for the version.
-		/// </summary>
-		public override string LanguageName {
-			get { return "ObjectiveC"; }
-		}
+    /// <summary>
+    /// Represents a ObjectiveC parser and a ObjectiveC code generator.
+    /// </summary>
+    [Export(typeof(Processor))]
+    public class ObjectiveCProcessor : ProcessorUsingAntlr4<ObjectiveCParser> {
+        /// <summary>
+        /// Gets the language name except for the version.
+        /// </summary>
+        public override string LanguageName {
+            get { return "ObjectiveC"; }
+        }
 
-		/// <summary>
-		/// Gets the language version.
-		/// </summary>
-		public override string LanguageVersion {
-			get { return "2"; }
-		}
+        /// <summary>
+        /// Gets the language version.
+        /// </summary>
+        public override string LanguageVersion {
+            get { return "2"; }
+        }
 
-		public ObjectiveCProcessor() : base(".m", ".h") {}
+        public ObjectiveCProcessor() : base(".m", ".h") {}
 
-		protected override ITokenSource CreateLexer(ICharStream stream) {
-			return new ObjectiveCLexer(stream);
-		}
+        protected override ITokenSource CreateLexer(ICharStream stream) {
+            return new ObjectiveCLexer(stream);
+        }
 
-		protected override ObjectiveCParser CreateParser(CommonTokenStream stream) {
-			return new ObjectiveCParser(stream);
-		}
+        protected override ObjectiveCParser CreateParser(CommonTokenStream stream) {
+            return new ObjectiveCParser(stream);
+        }
 
-		protected override ParserRuleContext Parse(ObjectiveCParser parser) {
-			return parser.translation_unit();
-		}
-	}
+        protected override ParserRuleContext Parse(ObjectiveCParser parser) {
+            return parser.translation_unit();
+        }
+    }
 }

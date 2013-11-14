@@ -22,37 +22,37 @@ using Code2Xml.Core;
 using Code2Xml.Languages.ANTLRv4.Core;
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.Clojure {
-	/// <summary>
-	/// Represents a Clojure parser and a Clojure code generator.
-	/// </summary>
-	[Export(typeof(Processor))]
-	public class ClojureProcessor : ProcessorUsingAntlr4<ClojureParser> {
-		/// <summary>
-		/// Gets the language name except for the version.
-		/// </summary>
-		public override string LanguageName {
-			get { return "Clojure"; }
-		}
+    /// <summary>
+    /// Represents a Clojure parser and a Clojure code generator.
+    /// </summary>
+    [Export(typeof(Processor))]
+    public class ClojureProcessor : ProcessorUsingAntlr4<ClojureParser> {
+        /// <summary>
+        /// Gets the language name except for the version.
+        /// </summary>
+        public override string LanguageName {
+            get { return "Clojure"; }
+        }
 
-		/// <summary>
-		/// Gets the language version.
-		/// </summary>
-		public override string LanguageVersion {
-			get { return ""; }
-		}
+        /// <summary>
+        /// Gets the language version.
+        /// </summary>
+        public override string LanguageVersion {
+            get { return ""; }
+        }
 
-		public ClojureProcessor() : base(".clj") {}
+        public ClojureProcessor() : base(".clj") {}
 
-		protected override ITokenSource CreateLexer(ICharStream stream) {
-			return new ClojureLexer(stream);
-		}
+        protected override ITokenSource CreateLexer(ICharStream stream) {
+            return new ClojureLexer(stream);
+        }
 
-		protected override ClojureParser CreateParser(CommonTokenStream stream) {
-			return new ClojureParser(stream);
-		}
+        protected override ClojureParser CreateParser(CommonTokenStream stream) {
+            return new ClojureParser(stream);
+        }
 
-		protected override ParserRuleContext Parse(ClojureParser parser) {
-			return parser.file();
-		}
-	}
+        protected override ParserRuleContext Parse(ClojureParser parser) {
+            return parser.file();
+        }
+    }
 }

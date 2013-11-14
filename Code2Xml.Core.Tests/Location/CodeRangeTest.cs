@@ -107,7 +107,7 @@ public class Hello {
 			range.ConvertToIndicies(code, out inclusiveStart, out exclusiveEnd);
 			Assert.That(
 					code.Substring(inclusiveStart, exclusiveEnd - inclusiveStart),
-					Is.EqualTo(elem.TokenWithHiddens()));
+					Is.EqualTo(elem.Text()));
 			return range;
 		}
 

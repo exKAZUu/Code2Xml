@@ -17,5 +17,5 @@
 #endregion
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.ObjectiveC {
-	partial class ObjectiveCLexer {}
+    partial class ObjectiveCLexer {}
 }

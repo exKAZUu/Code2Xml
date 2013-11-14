@@ -22,37 +22,37 @@ using Code2Xml.Core;
 using Code2Xml.Languages.ANTLRv4.Core;
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.Erlang {
-	/// <summary>
-	/// Represents a Erlang parser and a Erlang code generator.
-	/// </summary>
-	[Export(typeof(Processor))]
-	public class ErlangProcessor : ProcessorUsingAntlr4<ErlangParser> {
-		/// <summary>
-		/// Gets the language name except for the version.
-		/// </summary>
-		public override string LanguageName {
-			get { return "Erlang"; }
-		}
+    /// <summary>
+    /// Represents a Erlang parser and a Erlang code generator.
+    /// </summary>
+    [Export(typeof(Processor))]
+    public class ErlangProcessor : ProcessorUsingAntlr4<ErlangParser> {
+        /// <summary>
+        /// Gets the language name except for the version.
+        /// </summary>
+        public override string LanguageName {
+            get { return "Erlang"; }
+        }
 
-		/// <summary>
-		/// Gets the language version.
-		/// </summary>
-		public override string LanguageVersion {
-			get { return ""; }
-		}
+        /// <summary>
+        /// Gets the language version.
+        /// </summary>
+        public override string LanguageVersion {
+            get { return ""; }
+        }
 
-		public ErlangProcessor() : base(".erl") {}
+        public ErlangProcessor() : base(".erl") {}
 
-		protected override ITokenSource CreateLexer(ICharStream stream) {
-			return new ErlangLexer(stream);
-		}
+        protected override ITokenSource CreateLexer(ICharStream stream) {
+            return new ErlangLexer(stream);
+        }
 
-		protected override ErlangParser CreateParser(CommonTokenStream stream) {
-			return new ErlangParser(stream);
-		}
+        protected override ErlangParser CreateParser(CommonTokenStream stream) {
+            return new ErlangParser(stream);
+        }
 
-		protected override ParserRuleContext Parse(ErlangParser parser) {
-			return parser.forms();
-		}
-	}
+        protected override ParserRuleContext Parse(ErlangParser parser) {
+            return parser.forms();
+        }
+    }
 }
