@@ -38,7 +38,11 @@ Provides ```Processor``` classes for C, Clojure, Erlang, Java, Lua, ObjectiveC, 
 ## Sample code using Processor
 
 - https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/ProcessorSample.cs
+  - Parse C#, Java and Lua code.
 - https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/ManipulationSample.cs
+  - ProcessIdentifiers: Extract identifiers including a method name
+  - ProcessComments: Extract comments
+  - InsertStatements: Insert a statement into each method
 
 ```C#
 [Test] public void ParseJavaText() {
