@@ -27,6 +27,6 @@ namespace Code2Xml.Core {
 		public const string EofElementName = "EOF";
 		public const string TokenElementName = "TOKEN";
 		public const string HiddenElementName = "HIDDEN";
-		public const string TokenGroupElementName = "TOKENS";
+		public const string TokenSetElementName = "TOKENS";
 	}
 }

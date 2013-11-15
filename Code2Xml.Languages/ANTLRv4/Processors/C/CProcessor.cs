@@ -22,37 +22,37 @@ using Code2Xml.Core;
 using Code2Xml.Languages.ANTLRv4.Core;
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.C {
-	/// <summary>
-	/// Represents a C parser and a C code generator.
-	/// </summary>
-	[Export(typeof(Processor))]
-	public class CProcessor : ProcessorUsingAntlr4<CParser> {
-		/// <summary>
-		/// Gets the language name except for the version.
-		/// </summary>
-		public override string LanguageName {
-			get { return "C"; }
-		}
+    /// <summary>
+    /// Represents a C parser and a C code generator.
+    /// </summary>
+    [Export(typeof(Processor))]
+    public class CProcessor : ProcessorUsingAntlr4<CParser> {
+        /// <summary>
+        /// Gets the language name except for the version.
+        /// </summary>
+        public override string LanguageName {
+            get { return "C"; }
+        }
 
-		/// <summary>
-		/// Gets the language version.
-		/// </summary>
-		public override string LanguageVersion {
-			get { return "11"; }
-		}
+        /// <summary>
+        /// Gets the language version.
+        /// </summary>
+        public override string LanguageVersion {
+            get { return "11"; }
+        }
 
-		public CProcessor() : base(".c", ".h") {}
+        public CProcessor() : base(".c", ".h") {}
 
-		protected override ITokenSource CreateLexer(ICharStream stream) {
-			return new CLexer(stream);
-		}
+        protected override ITokenSource CreateLexer(ICharStream stream) {
+            return new CLexer(stream);
+        }
 
-		protected override CParser CreateParser(CommonTokenStream stream) {
-			return new CParser(stream);
-		}
+        protected override CParser CreateParser(CommonTokenStream stream) {
+            return new CParser(stream);
+        }
 
-		protected override ParserRuleContext Parse(CParser parser) {
-			return parser.compilationUnit();
-		}
-	}
+        protected override ParserRuleContext Parse(CParser parser) {
+            return parser.compilationUnit();
+        }
+    }
 }

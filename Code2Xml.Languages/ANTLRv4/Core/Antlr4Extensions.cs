@@ -19,25 +19,25 @@
 using Antlr4.Runtime;
 
 namespace Code2Xml.Languages.ANTLRv4.Core {
-	public static class Token {
-		public const int HIDDEN_CHANNEL = TokenConstants.HiddenChannel;
-	}
+    public static class Token {
+        public const int HIDDEN_CHANNEL = TokenConstants.HiddenChannel;
+    }
 
-	public static class Antlr4Extension {
-		public static int getType(this IToken token) {
-			return token.Type;
-		}
+    public static class Antlr4Extension {
+        public static int getType(this IToken token) {
+            return token.Type;
+        }
 
-		public static void setChannel(this IWritableToken token, int channel) {
-			token.Channel = channel;
-		}
+        public static void setChannel(this IWritableToken token, int channel) {
+            token.Channel = channel;
+        }
 
-		public static int LA(this ICharStream stream, int i) {
-			return stream.La(i);
-		}
+        public static int LA(this ICharStream stream, int i) {
+            return stream.La(i);
+        }
 
-		public static IToken LT(this ITokenStream stream, int k) {
-			return stream.Lt(k);
-		}
-	}
+        public static IToken LT(this ITokenStream stream, int k) {
+            return stream.Lt(k);
+        }
+    }
 }

@@ -22,37 +22,37 @@ using Code2Xml.Core;
 using Code2Xml.Languages.ANTLRv4.Core;
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.Verilog2001 {
-	/// <summary>
-	/// Represents a Verilog2001 parser and a Verilog2001 code generator.
-	/// </summary>
-	[Export(typeof(Processor))]
-	public class Verilog2001Processor : ProcessorUsingAntlr4<Verilog2001Parser> {
-		/// <summary>
-		/// Gets the language name except for the version.
-		/// </summary>
-		public override string LanguageName {
-			get { return "Verilog"; }
-		}
+    /// <summary>
+    /// Represents a Verilog2001 parser and a Verilog2001 code generator.
+    /// </summary>
+    [Export(typeof(Processor))]
+    public class Verilog2001Processor : ProcessorUsingAntlr4<Verilog2001Parser> {
+        /// <summary>
+        /// Gets the language name except for the version.
+        /// </summary>
+        public override string LanguageName {
+            get { return "Verilog"; }
+        }
 
-		/// <summary>
-		/// Gets the language version.
-		/// </summary>
-		public override string LanguageVersion {
-			get { return "2001"; }
-		}
+        /// <summary>
+        /// Gets the language version.
+        /// </summary>
+        public override string LanguageVersion {
+            get { return "2001"; }
+        }
 
-		public Verilog2001Processor() : base(".v") {}
+        public Verilog2001Processor() : base(".v") {}
 
-		protected override ITokenSource CreateLexer(ICharStream stream) {
-			return new Verilog2001Lexer(stream);
-		}
+        protected override ITokenSource CreateLexer(ICharStream stream) {
+            return new Verilog2001Lexer(stream);
+        }
 
-		protected override Verilog2001Parser CreateParser(CommonTokenStream stream) {
-			return new Verilog2001Parser(stream);
-		}
+        protected override Verilog2001Parser CreateParser(CommonTokenStream stream) {
+            return new Verilog2001Parser(stream);
+        }
 
-		protected override ParserRuleContext Parse(Verilog2001Parser parser) {
-			return parser.source_text();
-		}
-	}
+        protected override ParserRuleContext Parse(Verilog2001Parser parser) {
+            return parser.source_text();
+        }
+    }
 }

@@ -46,7 +46,7 @@ using System.Runtime.InteropServices;
 [assembly: Guid("e289e42c-2fe6-45d5-842f-406c7f691cad")]
 
 // Version information for an assembly consists of the following four values:
-//
+//git
 //      Major Version
 //      Minor Version 
 //      Build Number
@@ -56,5 +56,5 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("2.0.6.80")]
-[assembly: AssemblyFileVersion("2.0.6.80")]
+[assembly: AssemblyVersion("2.0.8.82")]
+[assembly: AssemblyFileVersion("2.0.8.82")]

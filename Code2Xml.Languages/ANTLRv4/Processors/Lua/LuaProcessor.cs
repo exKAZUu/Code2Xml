@@ -17,45 +17,42 @@
 #endregion
 
 using System.ComponentModel.Composition;
-using System.Diagnostics.Contracts;
-using System.Text;
-using System.Xml.Linq;
 using Antlr4.Runtime;
 using Code2Xml.Core;
 using Code2Xml.Languages.ANTLRv4.Core;
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.Lua {
-	/// <summary>
-	/// Represents a Lua parser and a Lua code generator.
-	/// </summary>
-	[Export(typeof(Processor))]
-	public class LuaProcessor : ProcessorUsingAntlr4<LuaParser> {
-		/// <summary>
-		/// Gets the language name except for the version.
-		/// </summary>
-		public override string LanguageName {
-			get { return "Lua"; }
-		}
+    /// <summary>
+    /// Represents a Lua parser and a Lua code generator.
+    /// </summary>
+    [Export(typeof(Processor))]
+    public class LuaProcessor : ProcessorUsingAntlr4<LuaParser> {
+        /// <summary>
+        /// Gets the language name except for the version.
+        /// </summary>
+        public override string LanguageName {
+            get { return "Lua"; }
+        }
 
-		/// <summary>
-		/// Gets the language version.
-		/// </summary>
-		public override string LanguageVersion {
-			get { return "5.2"; }
-		}
+        /// <summary>
+        /// Gets the language version.
+        /// </summary>
+        public override string LanguageVersion {
+            get { return "5.2"; }
+        }
 
-		public LuaProcessor() : base(".lua") {}
+        public LuaProcessor() : base(".lua") {}
 
-		protected override ITokenSource CreateLexer(ICharStream stream) {
-			return new LuaLexer(stream);
-		}
+        protected override ITokenSource CreateLexer(ICharStream stream) {
+            return new LuaLexer(stream);
+        }
 
-		protected override LuaParser CreateParser(CommonTokenStream stream) {
-			return new LuaParser(stream);
-		}
+        protected override LuaParser CreateParser(CommonTokenStream stream) {
+            return new LuaParser(stream);
+        }
 
-		protected override ParserRuleContext Parse(LuaParser parser) {
-			return parser.chunk();
-		}
-	}
+        protected override ParserRuleContext Parse(LuaParser parser) {
+            return parser.chunk();
+        }
+    }
 }

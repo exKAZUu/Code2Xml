@@ -17,5 +17,5 @@
 #endregion
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.Verilog2001 {
-	partial class Verilog2001Lexer {}
+    partial class Verilog2001Lexer {}
 }

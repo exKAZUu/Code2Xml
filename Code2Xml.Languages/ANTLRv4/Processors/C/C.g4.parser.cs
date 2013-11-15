@@ -17,5 +17,5 @@
 #endregion
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.C {
-	partial class CParser {}
+    partial class CParser {}
 }

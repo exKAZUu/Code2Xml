@@ -17,45 +17,42 @@
 #endregion
 
 using System.ComponentModel.Composition;
-using System.Diagnostics.Contracts;
-using System.Text;
-using System.Xml.Linq;
 using Antlr4.Runtime;
 using Code2Xml.Core;
 using Code2Xml.Languages.ANTLRv4.Core;
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.Java {
-	/// <summary>
-	/// Represents a Java parser and a Java code generator.
-	/// </summary>
-	[Export(typeof(Processor))]
-	public class JavaProcessor : ProcessorUsingAntlr4<JavaParser> {
-		/// <summary>
-		/// Gets the language name except for the version.
-		/// </summary>
-		public override string LanguageName {
-			get { return "Java"; }
-		}
+    /// <summary>
+    /// Represents a Java parser and a Java code generator.
+    /// </summary>
+    [Export(typeof(Processor))]
+    public class JavaProcessor : ProcessorUsingAntlr4<JavaParser> {
+        /// <summary>
+        /// Gets the language name except for the version.
+        /// </summary>
+        public override string LanguageName {
+            get { return "Java"; }
+        }
 
-		/// <summary>
-		/// Gets the language version.
-		/// </summary>
-		public override string LanguageVersion {
-			get { return "7"; }
-		}
+        /// <summary>
+        /// Gets the language version.
+        /// </summary>
+        public override string LanguageVersion {
+            get { return "7"; }
+        }
 
-		public JavaProcessor() : base(".java") {}
+        public JavaProcessor() : base(".java") {}
 
-		protected override ITokenSource CreateLexer(ICharStream stream) {
-			return new JavaLexer(stream);
-		}
+        protected override ITokenSource CreateLexer(ICharStream stream) {
+            return new JavaLexer(stream);
+        }
 
-		protected override JavaParser CreateParser(CommonTokenStream stream) {
-			return new JavaParser(stream);
-		}
+        protected override JavaParser CreateParser(CommonTokenStream stream) {
+            return new JavaParser(stream);
+        }
 
-		protected override ParserRuleContext Parse(JavaParser parser) {
-			return parser.compilationUnit();
-		}
-	}
+        protected override ParserRuleContext Parse(JavaParser parser) {
+            return parser.compilationUnit();
+        }
+    }
 }

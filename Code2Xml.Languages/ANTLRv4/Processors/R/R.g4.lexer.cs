@@ -17,5 +17,5 @@
 #endregion
 
 namespace Code2Xml.Languages.ANTLRv4.Processors.R {
-	partial class RLexer {}
+    partial class RLexer {}
 }

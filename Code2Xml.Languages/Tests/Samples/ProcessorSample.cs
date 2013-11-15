@@ -21,7 +21,7 @@ using Code2Xml.Core;
 using NUnit.Framework;
 using ParserTests;
 
-namespace Code2Xml.Languages.Tests {
+namespace Code2Xml.Languages.Tests.Samples {
 	[TestFixture]
 	public class ProcessorSample {
 		[Test]
