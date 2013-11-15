@@ -31,7 +31,11 @@ Provides ```Processor``` classes for Python and Ruby.
 - Code2Xml.Languages.Obsolete.dll  
 Provides ```CodeToXml``` and ```XmlToCode``` classes, which are obsolete!
 
-## Sample code using ```Processor```
+## Sample code using Processor
+
+- https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/ProcessorSample.cs
+- https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/ManipulationSample.cs
+
 ```C#
 [Test] public void ParseJavaText() {
 	var originalCode = @"class Klass {}";
@@ -58,7 +62,10 @@ Provides ```CodeToXml``` and ```XmlToCode``` classes, which are obsolete!
 }
 ```
 
-## [Obsolete!] Sample code using ```CodeToXml``` and ```XmlToCode```
+### [Obsolete!] Sample code using CodeToXml and XmlToCode
+
+- https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/CodeToXmlSample.cs
+
 ```C#
 [Test] public void ParseJavaText() {
 	var originalCode = @"class Klass {}";
