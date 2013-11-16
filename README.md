@@ -1,4 +1,5 @@
-[![Build Status](https://secure.travis-ci.org/exKAZUu/Code2Xml.png?branch=master)](http://travis-ci.org/exKAZUu/Code2Xml)
+Code2Xml [![Build Status](https://secure.travis-ci.org/exKAZUu/Code2Xml.png?branch=master)](http://travis-ci.org/exKAZUu/Code2Xml)
+=================
 
 # Requirements
 * NuGet
@@ -23,15 +24,26 @@ So please use ```Processor``` and ```Processors``` classes.
 
 ## Structure
 - Code2Xml.Languages.ANTLRv3.dll  
-Provides ```Processor``` classes for C, C#, Java, JavaScript, Lua, PHP.
+Provides ```Processor``` classes for C, C#, Java, JavaScript, Lua and PHP.
 
 - Code2Xml.Languages.ExternalProcessors.dll  
 Provides ```Processor``` classes for Python and Ruby.
 
 - Code2Xml.Languages.Obsolete.dll  
-Provides ```CodeToXml``` and ```XmlToCode``` classes, which are obsolete!
+Provides ```CodeToXml``` and ```XmlToCode``` classes, which are obsolete, for C, C#, Java, JavaScript, Lua, Python and Ruby.
 
-## Sample code using ```Processor```
+- Code2Xml.Languages.ANTLRv4.dll (under experiment)  
+Provides ```Processor``` classes for C, Clojure, Erlang, Java, Lua, ObjectiveC, R and Verilog2001.
+
+## Sample code using Processor
+
+- https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/ProcessorSample.cs
+  - Parse C#, Java and Lua code.
+- https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/ManipulationSample.cs
+  - ProcessIdentifiers: Extract identifiers including a method name
+  - ProcessComments: Extract comments
+  - InsertStatements: Insert a statement into each method
+
 ```C#
 [Test] public void ParseJavaText() {
 	var originalCode = @"class Klass {}";
@@ -58,7 +70,10 @@ Provides ```CodeToXml``` and ```XmlToCode``` classes, which are obsolete!
 }
 ```
 
-## [Obsolete!] Sample code using ```CodeToXml``` and ```XmlToCode```
+### [Obsolete!] Sample code using CodeToXml and XmlToCode
+
+- https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/CodeToXmlSample.cs
+
 ```C#
 [Test] public void ParseJavaText() {
 	var originalCode = @"class Klass {}";
