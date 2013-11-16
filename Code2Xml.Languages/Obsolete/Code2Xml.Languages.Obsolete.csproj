@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Antlr3.Runtime">
@@ -54,6 +56,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cobol\CodeToXmls\Cobol85CodeToXml.cs" />
+    <Compile Include="Cobol\XmlToCodes\Cobol85XmlToCode.cs" />
     <Compile Include="CSharp\CodeToXmls\CSharpCodeToXml.cs" />
     <Compile Include="CSharp\XmlToCodes\CSharpXmlToCode.cs" />
     <Compile Include="C\CodeToXmls\CCodeToXml.cs" />

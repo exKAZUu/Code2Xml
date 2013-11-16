@@ -37,6 +37,7 @@ namespace Code2Xml.Languages.Tests {
 				var names = new[] {
 					"C",
 					"CSharp",
+                    "Cobol85",
 					"Java",
 					"JavaScript",
 					"Lua",

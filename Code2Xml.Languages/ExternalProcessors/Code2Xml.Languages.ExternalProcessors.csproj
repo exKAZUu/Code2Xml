@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Paraiba, Version=1.1.1.91, Culture=neutral, processorArchitecture=MSIL">
@@ -54,6 +56,7 @@
     <Compile Include="Core\ProcessorUsingExternalParser.cs" />
     <Compile Include="Core\ProcessorUsingExternalParserAndOwnCodeGenerator.cs" />
     <Compile Include="Core\ProcessorUsingExternalProcessor.cs" />
+    <Compile Include="Processors\Cobol\Cobol85Processor.cs" />
     <Compile Include="Processors\Python\Python3Processor.cs" />
     <Compile Include="Processors\Python\Python2Processor.cs" />
     <Compile Include="Processors\Ruby\Ruby20Processor.cs" />
@@ -71,6 +74,7 @@
     <Compile Include="Processors\SrcML\SrcMLFiles.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ParserScripts\Cobol\koopafor85.jar" />
     <Content Include="ParserScripts\Python\ast2xml.py" />
     <Content Include="ParserScripts\Ruby\README_ruby2ruby.txt" />
     <Content Include="ParserScripts\Ruby\README_ruby_parser.txt" />
@@ -127,7 +131,12 @@
       <Project>{bccd95a9-7685-4b15-9da3-e48cc0bf499b}</Project>
       <Name>Code2Xml.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\ParserTests\ParserTests\ParserTests.csproj">
+      <Project>{20510236-d8b1-4617-9352-4e6134f9ab67}</Project>
+      <Name>ParserTests</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
