@@ -69,8 +69,7 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
                 string tokenSetName, IToken token, string text, int exclusiveEndIndex) {
             var element = new XElement(tokenSetName);
             for (int i = _nextTokenIndex; i < exclusiveEndIndex; i++) {
-                var oldToken = _stream.Get(i);
-        //        Debug.Assert(oldToken.Channel == Lexer.Hidden);
+                var oldToken = _stream.Get(i);	// Includes skipped tokens (maybe)
                 var hiddenName = DetermineElementName(oldToken, Code2XmlConstants.HiddenElementName);
                 var hiddenElement = CreateHiddenElement(hiddenName, oldToken);
                 element.Add(hiddenElement);

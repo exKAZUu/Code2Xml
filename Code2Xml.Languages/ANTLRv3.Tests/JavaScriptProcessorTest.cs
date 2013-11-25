@@ -30,7 +30,10 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
 
 		[Test]
 		[TestCase(@"var i = 1;")]
-		[TestCase(@"function f() { return 1; }")]
+		[TestCase(@"function
+f() {
+	return 1
+}")]
 		public void Parse(string code) {
 			VerifyRestoringCode(code);
 		}

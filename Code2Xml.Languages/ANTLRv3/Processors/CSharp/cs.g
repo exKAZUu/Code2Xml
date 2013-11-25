@@ -1140,14 +1140,19 @@ IDENTIFIER:
     IdentifierStart IdentifierPart* ;
 Pragma:
 	//	ignore everything after the pragma since the escape's in strings etc. are different
-	'#' ('pragma' | 'region' | 'endregion' | 'line' | 'warning' | 'error') ~('\n'|'\r')*  ('\r' | '\n')+
+	TEST
     { $channel=HIDDEN; } ;
+fragment
+TEST:
+	'#' ('pragma' | 'region' | 'endregion' | 'line' | 'warning' | 'error') ~('\n'|'\r')*  ('\r' | '\n')+
+	| '#' 'define' IDENTIFIER
+	;
 PREPROCESSOR_DIRECTIVE:
-	| PP_CONDITIONAL;
+	| PP_CONDITIONAL
+    { $channel=HIDDEN; } ;
 fragment
 PP_CONDITIONAL:
 	(IF_TOKEN
-	| DEFINE_TOKEN
 	| ELSE_TOKEN
 	| ENDIF_TOKEN 
 	| UNDEF_TOKEN)   TS*   (LINE_COMMENT?  |  ('\r' | '\n')+) ;
