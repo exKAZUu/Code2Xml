@@ -84,8 +84,8 @@ public class Hello {
 }");
 			var elem = xml.Descendants("statement").First();
 			var pos = CodeRange.Locate(elem);
-			Assert.That(pos.FindInnerElement(xml), Is.EqualTo(elem));
-			Assert.That(pos.FindOuterElement(xml), Is.EqualTo(elem.Parent));
+			Assert.That(pos.FindInnermostElement(xml), Is.EqualTo(elem));
+			Assert.That(pos.FindOutermostElement(xml), Is.EqualTo(elem.Parent));
 		}
 
 		[Test]
@@ -120,7 +120,7 @@ public class Hello {
 					? exclusiveEnd + 1 : exclusiveEnd;
 			var elem = CodeRange.ConvertFromIndiciesSkippingWhitespaces(
 					code, ref newInclusiveStart, ref newExclusiveEnd)
-					.FindInnerElement(ast);
+					.FindInnermostElement(ast);
 			Assert.That(CodeRange.Locate(elem), Is.EqualTo(newRange));
 
 			newRange.ConvertToIndicies(code, out newInclusiveStart, out newExclusiveEnd);

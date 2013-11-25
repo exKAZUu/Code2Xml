@@ -208,7 +208,7 @@ namespace Code2Xml.Core.Location {
 		/// </summary>
 		/// <param name="root"></param>
 		/// <returns></returns>
-		public XElement FindInnerElement(XElement root) {
+		public XElement FindInnermostElement(XElement root) {
 			XElement lastElement = null;
 			foreach (var elem in root.DescendantsAndSelf()) {
 				var pos = Locate(elem);
@@ -226,8 +226,8 @@ namespace Code2Xml.Core.Location {
 		/// </summary>
 		/// <param name="root"></param>
 		/// <returns></returns>
-		public XElement FindOuterElement(XElement root) {
-			var ret = FindInnerElement(root);
+		public XElement FindOutermostElement(XElement root) {
+			var ret = FindInnermostElement(root);
 			while (ret.Parent != null && ret.Parent.Elements().Count() == 1) {
 				ret = ret.Parent;
 			}

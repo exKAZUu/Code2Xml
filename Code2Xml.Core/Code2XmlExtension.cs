@@ -28,6 +28,7 @@ namespace Code2Xml.Core {
     /// The WS and COMMENT elements are hidden tokens such as spaces and comments.
     /// The IDENTIFIER element is a set of neccessary and hidden tokens and indicates the name of the TOKEN element.
     /// We call elements like TOKEN tokens, ones like WS and COMMENT hiddens and ones like IDENTIFIER token sets.
+    /// We call tokens, hiddens and token sets terminal nodes and also call others non-terminal nodes.
     /// 
     /// &lt;IDENTIFIER&gt;
     ///   &lt;WS&gt;&lt;/WS&gt;
@@ -35,7 +36,15 @@ namespace Code2Xml.Core {
     ///   &lt;TOKEN&gt;&lt;/TOKEN&gt;
     /// &lt;/IDENTIFIER&gt;
     /// </summary>
-    public static class XmlBasedAstManipulator {
+    public static class Code2XmlExtension {
+        public static bool IsNonTerminal(this XElement e) {
+            return char.IsLower(e.Name()[0]);
+        }
+
+        public static bool IsTerminal(this XElement e) {
+            return char.IsUpper(e.Name()[0]);
+        }
+
         public static bool IsTokenSet(this XElement e) {
             return e.LastElementOrDefault().IsToken();
         }

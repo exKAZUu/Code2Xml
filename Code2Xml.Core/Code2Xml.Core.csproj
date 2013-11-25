@@ -125,7 +125,7 @@
     <Compile Include="Location\CodeLocation.cs" />
     <Compile Include="Processor.cs" />
     <Compile Include="Location\CodeRange.cs" />
-    <Compile Include="XmlBasedAstManipulator.cs" />
+    <Compile Include="Code2XmlExtension.cs" />
     <Compile Include="XmlToCodes\XmlToCodeBase.cs" />
     <Compile Include="CodeToXmls\CodeToXmlContract.cs" />
     <Compile Include="CodeToXmls\CodeToXml.cs" />
