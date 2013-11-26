@@ -41,7 +41,7 @@ statementEnd
 
 public
 program
-    : LT!* sourceElements LT!* EOF!
+    : LT!* sourceElements? LT!* EOF!
     ;
     
 sourceElements
@@ -460,7 +460,7 @@ fragment NonEscapeCharacter
     ;
 
 fragment SingleEscapeCharacter
-    : '\'' | '"' | '\\' | 'b' | 'f' | 'n' | 'r' | 't' | 'v'
+    : '\'' | '"' | '\\' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' | '\r\n' | '\n' | '\r'
     ;
 
 fragment EscapeCharacter
@@ -512,8 +512,8 @@ fragment IdentifierStart
     : UnicodeLetter
     | '$'
     | '_'
-        | '\\' UnicodeEscapeSequence
-        ;
+    | '\\' UnicodeEscapeSequence
+    ;
         
 fragment IdentifierPart
     : (IdentifierStart) => IdentifierStart // Avoids ambiguity, as some IdentifierStart chars also match following alternatives.
@@ -961,8 +961,8 @@ fragment RegularExpressionInnerChar
 
 RegularExpressionLiteral
     : { AreRegularExpressionsEnabled }?=>
-    ( '/' '/' IdentifierPart*
-    | '/'
+    ( /*'/' '/' IdentifierPart*
+    |*/ '/'
       (RegularExpressionFirstChar | '[' RegularExpressionInnerChar* ']')
       RegularExpressionChar*
       ('[' RegularExpressionInnerChar* ']' RegularExpressionChar*)*

@@ -29,11 +29,27 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
 		}
 
 		[Test]
+		[TestCase(@"")]
 		[TestCase(@"var i = 1;")]
 		[TestCase(@"function
 f() {
 	return 1
 }")]
+		[TestCase(@"for ( var i = 0, j = 0; i < 1; i++, j++ ) { }")]
+		[TestCase(@"for(var i = 0, ii = directives.length; i < ii; i++) { }")]
+		[TestCase(@"console.log('test')")]
+		[TestCase(@"
+//
+")]
+		[TestCase(@"
+            compile({
+                                          //
+                                        });
+")]
+		[TestCase(@"
+return 'a\
+b';
+")]
 		public void Parse(string code) {
 			VerifyRestoringCode(code);
 		}
@@ -42,8 +58,15 @@ f() {
 		[TestCase("Block1.js")]
 		[TestCase("Block2.js")]
 		[TestCase("Block3.js")]
+		[TestCase("extracting_branch.js")]
 		public void ParseFile(string fileName) {
 			VerifyRestoringFile("JavaScript", fileName);
+		}
+
+		[Test]
+		[TestCase("ionic")]
+		public void ParseDirectory(string fileName) {
+			VerifyRestoringProjectDirectory("JavaScript", fileName, "*.js");
 		}
 	}
 }

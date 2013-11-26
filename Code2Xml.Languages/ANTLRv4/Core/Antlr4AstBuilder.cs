@@ -47,7 +47,7 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
         public XElement FinishParsing() {
             var root = _dummyRoot.Elements().First();
             var count = _stream.Size - 1; // Avoid writing "<EOF>"
-            while (_stream.Get(count - 1).Type < 0) {
+            while (count > 0 && _stream.Get(count - 1).Type < 0) {
                 count--;
             }
             var token = _stream.Get(count);
