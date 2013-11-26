@@ -1138,36 +1138,25 @@ Character_literal:
     '\'' ;
 IDENTIFIER:
     IdentifierStart IdentifierPart* ;
-Pragma:
+PRAGMA:
 	//	ignore everything after the pragma since the escape's in strings etc. are different
-	TEST
-    { $channel=HIDDEN; } ;
-fragment
-TEST:
 	'#' TS* ('pragma' | 'region' | 'endregion' | 'line' | 'warning' | 'error') ~('\r' | '\n')*  ('\r' | '\n')+
-	| DEFINE_TOKEN TS* (LINE_COMMENT?  |  ('\r' | '\n')+)
-	;
+    { $channel=HIDDEN; } ;
 PREPROCESSOR_DIRECTIVE:
-	| PP_CONDITIONAL
+	PP_CONDITIONAL
     { $channel=HIDDEN; } ;
 fragment
 PP_CONDITIONAL:
 	(IF_TOKEN
 	| ELSE_TOKEN
-	| ENDIF_TOKEN 
+	| ENDIF_TOKEN
+	| DEFINE_TOKEN
 	| UNDEF_TOKEN)   TS*   (LINE_COMMENT?  |  ('\r' | '\n')+) ;
 fragment
 IF_TOKEN
 	@init { bool process = true; }:
 	('#'   TS*  'if'   TS+   ppe = PP_EXPRESSION)
-{
-    // if our parent is processing check this if
-    Debug.Assert(Processing.Count > 0, "Stack underflow preprocessing.  IF_TOKEN");
-    if (Processing.Count > 0 && Processing.Peek())
-	    Processing.Push(Returns.Pop());
-	else
-		Processing.Push(false);
-} ;
+	;
 fragment
 DEFINE_TOKEN:
 	'#'   TS*   'define'   TS+   define = IDENTIFIER
@@ -1183,57 +1172,13 @@ UNDEF_TOKEN:
 	} ;
 fragment
 ELSE_TOKEN:
-	( '#'   TS*   e = 'else'
+	( '#'   TS*   'else'
 	| '#'   TS*   'elif'   TS+   PP_EXPRESSION)
-	{
-		// We are in an elif
-       	if ($e == null)
-		{
-		    Debug.Assert(Processing.Count > 0, "Stack underflow preprocessing.  ELIF_TOKEN");
-			if (Processing.Count > 0 && Processing.Peek() == false)
-			{
-				Processing.Pop();
-				// if our parent was processing, do else logic
-			    Debug.Assert(Processing.Count > 0, "Stack underflow preprocessing.  ELIF_TOKEN2");
-				if (Processing.Count > 0 && Processing.Peek())
-					Processing.Push(Returns.Pop());
-				else
-					Processing.Push(false);
-			}
-			else
-			{
-				Processing.Pop();
-				Processing.Push(false);
-			}
-		}
-		else
-		{
-			// we are in a else
-			if (Processing.Count > 0)
-			{
-				bool bDoElse = !Processing.Pop();
-
-				// if our parent was processing				
-			    Debug.Assert(Processing.Count > 0, "Stack underflow preprocessing, ELSE_TOKEN");
-				if (Processing.Count > 0 && Processing.Peek())
-					Processing.Push(bDoElse);
-				else
-					Processing.Push(false);
-			}
-		}
-        Skip();
-	} ;
+	;
 fragment
 ENDIF_TOKEN:
-	'#'   'endif'
-	{
-		if (Processing.Count > 0)
-			Processing.Pop();
-        Skip();
-	} ;
-	
-	
-	
+	'#' TS* 'endif'
+	;
 	
 fragment
 PP_EXPRESSION:
@@ -1246,24 +1191,15 @@ PP_AND_EXPRESSION:
 	PP_EQUALITY_EXPRESSION   TS*   ('&&'   TS*   PP_EQUALITY_EXPRESSION   TS* )* ;
 fragment
 PP_EQUALITY_EXPRESSION:
-	PP_UNARY_EXPRESSION   TS*   (('=='| ne = '!=')   TS*   PP_UNARY_EXPRESSION
-		{ 
-			bool rt1 = Returns.Pop(), rt2 = Returns.Pop();
-			Returns.Push(rt1 == rt2 == ($ne == null));
-		}
-		TS* )*
-	;
+	PP_UNARY_EXPRESSION   TS*   (('==' | '!=')   TS*   PP_UNARY_EXPRESSION TS* )* ;
 fragment
 PP_UNARY_EXPRESSION:
-	pe = PP_PRIMARY_EXPRESSION
-	| '!'   TS*   ue = PP_UNARY_EXPRESSION  { Returns.Push(!Returns.Pop()); } 
+	PP_PRIMARY_EXPRESSION
+	| '!'   TS*   PP_UNARY_EXPRESSION
 	;
 fragment
 PP_PRIMARY_EXPRESSION:
 	IDENTIFIER	
-	{ 
-		Returns.Push(MacroDefines.ContainsKey($IDENTIFIER.Text));
-	}
 	| '('   PP_EXPRESSION   ')'
 	;
 

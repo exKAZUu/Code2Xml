@@ -29,16 +29,19 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
 		}
 
 		[Test]
-		//[TestCase(@"class Klass { void main() {} }")]
+		[TestCase(@"class Klass { void main() {} }")]
 		[TestCase(@"class Klass {
 #	define DEBUG
 #	region
+# if DEBUG
 void main() { /* comment */ } // comment2
+# endif
+# 	 undef DEBUG
 #	endregion
 }")]
-//		[TestCase(@"class Klass { void main() {
-//	for (int i = 1; i < 2; i++) Console.WriteLine();
-//} }")]
+		[TestCase(@"class Klass { void main() {
+	for (int i = 1; i < 2; i++) Console.WriteLine();
+} }")]
 		public void Parse(string code) {
 			VerifyRestoringCode(code);
 		}
