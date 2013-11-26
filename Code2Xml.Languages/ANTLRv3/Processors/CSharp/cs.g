@@ -1078,7 +1078,7 @@ WS:
 fragment
 TS:
     (' '  |  '\t'  ) 
-    { Skip(); } ;
+    ;
         
 DOC_LINE_COMMENT
     : 	('///' ~('\n'|'\r')*  ('\r' | '\n')+)
@@ -1144,8 +1144,8 @@ Pragma:
     { $channel=HIDDEN; } ;
 fragment
 TEST:
-	'#' ('pragma' | 'region' | 'endregion' | 'line' | 'warning' | 'error') ~('\n'|'\r')*  ('\r' | '\n')+
-	| '#' 'define' IDENTIFIER
+	'#' TS* ('pragma' | 'region' | 'endregion' | 'line' | 'warning' | 'error') ~('\r' | '\n')*  ('\r' | '\n')+
+	| DEFINE_TOKEN TS* (LINE_COMMENT?  |  ('\r' | '\n')+)
 	;
 PREPROCESSOR_DIRECTIVE:
 	| PP_CONDITIONAL

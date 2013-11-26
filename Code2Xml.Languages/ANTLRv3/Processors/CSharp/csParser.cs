@@ -10,7 +10,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g 2013-11-25 15:29:10
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g 2013-11-26 11:06:18
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -40904,13 +40904,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1332:3: assignment ';'
 					{
 					DebugLocation(1332, 3);
-					PushFollow(Follow._assignment_in_assignment_list10306);
+					PushFollow(Follow._assignment_in_assignment_list10326);
 					assignment1079=assignment();
 					PopFollow();
 					if (state.failed) return retval;
 					if (state.backtracking == 0) adaptor.AddChild(root_0, assignment1079.Tree, assignment1079, retval);
 					DebugLocation(1332, 14);
-					char_literal1080=(IToken)Match(input,SEMI,Follow._SEMI_in_assignment_list10308); if (state.failed) return retval;
+					char_literal1080=(IToken)Match(input,SEMI,Follow._SEMI_in_assignment_list10328); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal1080_tree = (object)adaptor.Create(char_literal1080, retval);
 					adaptor.AddChild(root_0, char_literal1080_tree);
@@ -41042,7 +41042,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1334:3: attributes
 						{
 						DebugLocation(1334, 3);
-						PushFollow(Follow._attributes_in_field_declarations10319);
+						PushFollow(Follow._attributes_in_field_declarations10339);
 						attributes1081=attributes();
 						PopFollow();
 						if (state.failed) return retval;
@@ -41073,7 +41073,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1334:17: modifiers
 						{
 						DebugLocation(1334, 17);
-						PushFollow(Follow._modifiers_in_field_declarations10324);
+						PushFollow(Follow._modifiers_in_field_declarations10344);
 						modifiers1082=modifiers();
 						PopFollow();
 						if (state.failed) return retval;
@@ -41086,13 +41086,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					} finally { DebugExitSubRule(275); }
 
 					DebugLocation(1334, 30);
-					PushFollow(Follow._type_in_field_declarations10329);
+					PushFollow(Follow._type_in_field_declarations10349);
 					type1083=type();
 					PopFollow();
 					if (state.failed) return retval;
 					if (state.backtracking == 0) adaptor.AddChild(root_0, type1083.Tree, type1083, retval);
 					DebugLocation(1334, 37);
-					PushFollow(Follow._field_declaration_in_field_declarations10333);
+					PushFollow(Follow._field_declaration_in_field_declarations10353);
 					field_declaration1084=field_declaration();
 					PopFollow();
 					if (state.failed) return retval;
@@ -41224,7 +41224,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1336:3: attributes
 						{
 						DebugLocation(1336, 3);
-						PushFollow(Follow._attributes_in_property_declaration_list10344);
+						PushFollow(Follow._attributes_in_property_declaration_list10364);
 						attributes1085=attributes();
 						PopFollow();
 						if (state.failed) return retval;
@@ -41255,7 +41255,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1336:17: modifiers
 						{
 						DebugLocation(1336, 17);
-						PushFollow(Follow._modifiers_in_property_declaration_list10349);
+						PushFollow(Follow._modifiers_in_property_declaration_list10369);
 						modifiers1086=modifiers();
 						PopFollow();
 						if (state.failed) return retval;
@@ -41268,13 +41268,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					} finally { DebugExitSubRule(278); }
 
 					DebugLocation(1336, 30);
-					PushFollow(Follow._type_in_property_declaration_list10354);
+					PushFollow(Follow._type_in_property_declaration_list10374);
 					type1087=type();
 					PopFollow();
 					if (state.failed) return retval;
 					if (state.backtracking == 0) adaptor.AddChild(root_0, type1087.Tree, type1087, retval);
 					DebugLocation(1336, 37);
-					PushFollow(Follow._property_declaration_in_property_declaration_list10358);
+					PushFollow(Follow._property_declaration_in_property_declaration_list10378);
 					property_declaration1088=property_declaration();
 					PopFollow();
 					if (state.failed) return retval;
@@ -41385,7 +41385,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1338:2: constant_declaration
 					{
 					DebugLocation(1338, 2);
-					PushFollow(Follow._constant_declaration_in_constant_declarations10368);
+					PushFollow(Follow._constant_declaration_in_constant_declarations10388);
 					constant_declaration1089=constant_declaration();
 					PopFollow();
 					if (state.failed) return retval;
@@ -41496,7 +41496,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1340:2: literal
 					{
 					DebugLocation(1340, 2);
-					PushFollow(Follow._literal_in_literals10376);
+					PushFollow(Follow._literal_in_literals10396);
 					literal1090=literal();
 					PopFollow();
 					if (state.failed) return retval;
@@ -41627,7 +41627,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1342:3: attributes
 						{
 						DebugLocation(1342, 3);
-						PushFollow(Follow._attributes_in_delegate_declaration_list10386);
+						PushFollow(Follow._attributes_in_delegate_declaration_list10406);
 						attributes1091=attributes();
 						PopFollow();
 						if (state.failed) return retval;
@@ -41658,7 +41658,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1342:17: modifiers
 						{
 						DebugLocation(1342, 17);
-						PushFollow(Follow._modifiers_in_delegate_declaration_list10391);
+						PushFollow(Follow._modifiers_in_delegate_declaration_list10411);
 						modifiers1092=modifiers();
 						PopFollow();
 						if (state.failed) return retval;
@@ -41671,7 +41671,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					} finally { DebugExitSubRule(283); }
 
 					DebugLocation(1342, 30);
-					PushFollow(Follow._delegate_declaration_in_delegate_declaration_list10396);
+					PushFollow(Follow._delegate_declaration_in_delegate_declaration_list10416);
 					delegate_declaration1093=delegate_declaration();
 					PopFollow();
 					if (state.failed) return retval;
@@ -41784,13 +41784,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1344:3: local_variable_declaration ';'
 					{
 					DebugLocation(1344, 3);
-					PushFollow(Follow._local_variable_declaration_in_local_variable_declaration_list10407);
+					PushFollow(Follow._local_variable_declaration_in_local_variable_declaration_list10427);
 					local_variable_declaration1094=local_variable_declaration();
 					PopFollow();
 					if (state.failed) return retval;
 					if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_declaration1094.Tree, local_variable_declaration1094, retval);
 					DebugLocation(1344, 30);
-					char_literal1095=(IToken)Match(input,SEMI,Follow._SEMI_in_local_variable_declaration_list10409); if (state.failed) return retval;
+					char_literal1095=(IToken)Match(input,SEMI,Follow._SEMI_in_local_variable_declaration_list10429); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal1095_tree = (object)adaptor.Create(char_literal1095, retval);
 					adaptor.AddChild(root_0, char_literal1095_tree);
@@ -41903,13 +41903,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1346:3: local_variable_initializer ';'
 					{
 					DebugLocation(1346, 3);
-					PushFollow(Follow._local_variable_initializer_in_local_variable_initializer_list10420);
+					PushFollow(Follow._local_variable_initializer_in_local_variable_initializer_list10440);
 					local_variable_initializer1096=local_variable_initializer();
 					PopFollow();
 					if (state.failed) return retval;
 					if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_initializer1096.Tree, local_variable_initializer1096, retval);
 					DebugLocation(1346, 30);
-					char_literal1097=(IToken)Match(input,SEMI,Follow._SEMI_in_local_variable_initializer_list10422); if (state.failed) return retval;
+					char_literal1097=(IToken)Match(input,SEMI,Follow._SEMI_in_local_variable_initializer_list10442); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal1097_tree = (object)adaptor.Create(char_literal1097, retval);
 					adaptor.AddChild(root_0, char_literal1097_tree);
@@ -42022,13 +42022,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1348:3: expression ';'
 					{
 					DebugLocation(1348, 3);
-					PushFollow(Follow._expression_in_expression_list_test10433);
+					PushFollow(Follow._expression_in_expression_list_test10453);
 					expression1098=expression();
 					PopFollow();
 					if (state.failed) return retval;
 					if (state.backtracking == 0) adaptor.AddChild(root_0, expression1098.Tree, expression1098, retval);
 					DebugLocation(1348, 14);
-					char_literal1099=(IToken)Match(input,SEMI,Follow._SEMI_in_expression_list_test10435); if (state.failed) return retval;
+					char_literal1099=(IToken)Match(input,SEMI,Follow._SEMI_in_expression_list_test10455); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal1099_tree = (object)adaptor.Create(char_literal1099, retval);
 					adaptor.AddChild(root_0, char_literal1099_tree);
@@ -42141,13 +42141,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1350:3: unary_expression ';'
 					{
 					DebugLocation(1350, 3);
-					PushFollow(Follow._unary_expression_in_unary_expression_list10446);
+					PushFollow(Follow._unary_expression_in_unary_expression_list10466);
 					unary_expression1100=unary_expression();
 					PopFollow();
 					if (state.failed) return retval;
 					if (state.backtracking == 0) adaptor.AddChild(root_0, unary_expression1100.Tree, unary_expression1100, retval);
 					DebugLocation(1350, 20);
-					char_literal1101=(IToken)Match(input,SEMI,Follow._SEMI_in_unary_expression_list10448); if (state.failed) return retval;
+					char_literal1101=(IToken)Match(input,SEMI,Follow._SEMI_in_unary_expression_list10468); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal1101_tree = (object)adaptor.Create(char_literal1101, retval);
 					adaptor.AddChild(root_0, char_literal1101_tree);
@@ -42260,13 +42260,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1352:3: invocation_expression ';'
 					{
 					DebugLocation(1352, 3);
-					PushFollow(Follow._invocation_expression_in_invocation_expression_list10459);
+					PushFollow(Follow._invocation_expression_in_invocation_expression_list10479);
 					invocation_expression1102=invocation_expression();
 					PopFollow();
 					if (state.failed) return retval;
 					if (state.backtracking == 0) adaptor.AddChild(root_0, invocation_expression1102.Tree, invocation_expression1102, retval);
 					DebugLocation(1352, 25);
-					char_literal1103=(IToken)Match(input,SEMI,Follow._SEMI_in_invocation_expression_list10461); if (state.failed) return retval;
+					char_literal1103=(IToken)Match(input,SEMI,Follow._SEMI_in_invocation_expression_list10481); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal1103_tree = (object)adaptor.Create(char_literal1103, retval);
 					adaptor.AddChild(root_0, char_literal1103_tree);
@@ -42379,13 +42379,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1354:3: primary_expression ';'
 					{
 					DebugLocation(1354, 3);
-					PushFollow(Follow._primary_expression_in_primary_expression_list10472);
+					PushFollow(Follow._primary_expression_in_primary_expression_list10492);
 					primary_expression1104=primary_expression();
 					PopFollow();
 					if (state.failed) return retval;
 					if (state.backtracking == 0) adaptor.AddChild(root_0, primary_expression1104.Tree, primary_expression1104, retval);
 					DebugLocation(1354, 22);
-					char_literal1105=(IToken)Match(input,SEMI,Follow._SEMI_in_primary_expression_list10474); if (state.failed) return retval;
+					char_literal1105=(IToken)Match(input,SEMI,Follow._SEMI_in_primary_expression_list10494); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal1105_tree = (object)adaptor.Create(char_literal1105, retval);
 					adaptor.AddChild(root_0, char_literal1105_tree);
@@ -42498,13 +42498,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1356:3: non_assignment_expression ';'
 					{
 					DebugLocation(1356, 3);
-					PushFollow(Follow._non_assignment_expression_in_non_assignment_expression_list10485);
+					PushFollow(Follow._non_assignment_expression_in_non_assignment_expression_list10505);
 					non_assignment_expression1106=non_assignment_expression();
 					PopFollow();
 					if (state.failed) return retval;
 					if (state.backtracking == 0) adaptor.AddChild(root_0, non_assignment_expression1106.Tree, non_assignment_expression1106, retval);
 					DebugLocation(1356, 29);
-					char_literal1107=(IToken)Match(input,SEMI,Follow._SEMI_in_non_assignment_expression_list10487); if (state.failed) return retval;
+					char_literal1107=(IToken)Match(input,SEMI,Follow._SEMI_in_non_assignment_expression_list10507); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal1107_tree = (object)adaptor.Create(char_literal1107, retval);
 					adaptor.AddChild(root_0, char_literal1107_tree);
@@ -42637,7 +42637,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1358:3: modifiers
 						{
 						DebugLocation(1358, 3);
-						PushFollow(Follow._modifiers_in_method_declarations10498);
+						PushFollow(Follow._modifiers_in_method_declarations10518);
 						modifiers1108=modifiers();
 						PopFollow();
 						if (state.failed) return retval;
@@ -42695,7 +42695,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1358:15: 'void'
 						{
 						DebugLocation(1358, 15);
-						string_literal1109=(IToken)Match(input,193,Follow._193_in_method_declarations10502); if (state.failed) return retval;
+						string_literal1109=(IToken)Match(input,193,Follow._193_in_method_declarations10522); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 						string_literal1109_tree = (object)adaptor.Create(string_literal1109, retval);
 						adaptor.AddChild(root_0, string_literal1109_tree);
@@ -42708,7 +42708,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1358:24: type
 						{
 						DebugLocation(1358, 24);
-						PushFollow(Follow._type_in_method_declarations10506);
+						PushFollow(Follow._type_in_method_declarations10526);
 						type1110=type();
 						PopFollow();
 						if (state.failed) return retval;
@@ -42721,7 +42721,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					} finally { DebugExitSubRule(293); }
 
 					DebugLocation(1358, 30);
-					PushFollow(Follow._method_declaration_in_method_declarations10509);
+					PushFollow(Follow._method_declaration_in_method_declarations10529);
 					method_declaration1111=method_declaration();
 					PopFollow();
 					if (state.failed) return retval;
@@ -45802,39 +45802,39 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _SEMI_in_yield_statement7557 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _105_in_yield_statement7572 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _SEMI_in_yield_statement7576 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _assignment_in_assignment_list10306 = new BitSet(new ulong[]{0x4000000000000UL});
-		public static readonly BitSet _SEMI_in_assignment_list10308 = new BitSet(new ulong[]{0x4849001C0C100022UL,0x8B78CDED00001368UL,0xDF24F50A4BBB4924UL,0x828UL});
-		public static readonly BitSet _attributes_in_field_declarations10319 = new BitSet(new ulong[]{0x8000000UL,0xCB484D6F00000000UL,0xED067D7E6BBB6924UL,0x2FUL});
-		public static readonly BitSet _modifiers_in_field_declarations10324 = new BitSet(new ulong[]{0x8000000UL,0x8B484D6D00000000UL,0xCD04750A4B3B4924UL,0x2AUL});
-		public static readonly BitSet _type_in_field_declarations10329 = new BitSet(new ulong[]{0x8000000UL,0x8A40046D00000000UL,0x8100310A4A334120UL,0x28UL});
-		public static readonly BitSet _field_declaration_in_field_declarations10333 = new BitSet(new ulong[]{0x8000002UL,0xCB484D6F10000000UL,0xED067D7E6BBB6924UL,0x2FUL});
-		public static readonly BitSet _attributes_in_property_declaration_list10344 = new BitSet(new ulong[]{0x8000000UL,0xCB484D6F00000000UL,0xED067D7E6BBB6924UL,0x2FUL});
-		public static readonly BitSet _modifiers_in_property_declaration_list10349 = new BitSet(new ulong[]{0x8000000UL,0x8B484D6D00000000UL,0xCD04750A4B3B4924UL,0x2AUL});
-		public static readonly BitSet _type_in_property_declaration_list10354 = new BitSet(new ulong[]{0x84900180C100020UL,0x8B484D6D00000000UL,0xCD04750A4B3B4924UL,0x28UL});
-		public static readonly BitSet _property_declaration_in_property_declaration_list10358 = new BitSet(new ulong[]{0x8000002UL,0xCB484D6F10000000UL,0xED067D7E6BBB6924UL,0x2FUL});
-		public static readonly BitSet _constant_declaration_in_constant_declarations10368 = new BitSet(new ulong[]{0x2UL,0x2000000000000UL});
-		public static readonly BitSet _literal_in_literals10376 = new BitSet(new ulong[]{0x849001804100022UL});
-		public static readonly BitSet _attributes_in_delegate_declaration_list10386 = new BitSet(new ulong[]{0x0UL,0x4020000200000000UL,0x2002087420802000UL,0x5UL});
-		public static readonly BitSet _modifiers_in_delegate_declaration_list10391 = new BitSet(new ulong[]{0x0UL,0x20000000000000UL});
-		public static readonly BitSet _delegate_declaration_in_delegate_declaration_list10396 = new BitSet(new ulong[]{0x2UL,0x4020000210000000UL,0x2002087420802000UL,0x5UL});
-		public static readonly BitSet _local_variable_declaration_in_local_variable_declaration_list10407 = new BitSet(new ulong[]{0x4000000000000UL});
-		public static readonly BitSet _SEMI_in_local_variable_declaration_list10409 = new BitSet(new ulong[]{0x8000002UL,0x8B484D6D00000000UL,0xCD04750A4B3B4924UL,0x2AUL});
-		public static readonly BitSet _local_variable_initializer_in_local_variable_initializer_list10420 = new BitSet(new ulong[]{0x4000000000000UL});
-		public static readonly BitSet _SEMI_in_local_variable_initializer_list10422 = new BitSet(new ulong[]{0x4849001C0C100022UL,0x8B78CDED00001368UL,0xDF25F50A4BBB4924UL,0x868UL});
-		public static readonly BitSet _expression_in_expression_list_test10433 = new BitSet(new ulong[]{0x4000000000000UL});
-		public static readonly BitSet _SEMI_in_expression_list_test10435 = new BitSet(new ulong[]{0x4849001C0C100022UL,0x8B78CDED00001368UL,0xDF24F50A4BBB4924UL,0x828UL});
-		public static readonly BitSet _unary_expression_in_unary_expression_list10446 = new BitSet(new ulong[]{0x4000000000000UL});
-		public static readonly BitSet _SEMI_in_unary_expression_list10448 = new BitSet(new ulong[]{0x4849001C0C100022UL,0x8B78CDED00001368UL,0xDF24F50A4BBB4924UL,0x828UL});
-		public static readonly BitSet _invocation_expression_in_invocation_expression_list10459 = new BitSet(new ulong[]{0x4000000000000UL});
-		public static readonly BitSet _SEMI_in_invocation_expression_list10461 = new BitSet(new ulong[]{0x8000002UL,0x8B484DED00000000UL,0xCF24750A4B3B4924UL,0x28UL});
-		public static readonly BitSet _primary_expression_in_primary_expression_list10472 = new BitSet(new ulong[]{0x4000000000000UL});
-		public static readonly BitSet _SEMI_in_primary_expression_list10474 = new BitSet(new ulong[]{0x84900180C100022UL,0x8B78CDED00000020UL,0xDF24F50A4BBB4924UL,0x28UL});
-		public static readonly BitSet _non_assignment_expression_in_non_assignment_expression_list10485 = new BitSet(new ulong[]{0x4000000000000UL});
-		public static readonly BitSet _SEMI_in_non_assignment_expression_list10487 = new BitSet(new ulong[]{0x4849001C0C100022UL,0x8B78CDED00001368UL,0xDF24F50A4BBB4924UL,0x828UL});
-		public static readonly BitSet _modifiers_in_method_declarations10498 = new BitSet(new ulong[]{0x8000000UL,0x8B484D6D00000000UL,0xCD04750A4B3B4924UL,0x2AUL});
-		public static readonly BitSet _193_in_method_declarations10502 = new BitSet(new ulong[]{0x84900180C100020UL,0x8B484D6D00000000UL,0xCD04750A4B3B4924UL,0x28UL});
-		public static readonly BitSet _type_in_method_declarations10506 = new BitSet(new ulong[]{0x84900180C100020UL,0x8B484D6D00000000UL,0xCD04750A4B3B4924UL,0x28UL});
-		public static readonly BitSet _method_declaration_in_method_declarations10509 = new BitSet(new ulong[]{0x8000002UL,0xCB484D6F00000000UL,0xED067D7E6BBB6924UL,0x2FUL});
+		public static readonly BitSet _assignment_in_assignment_list10326 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _SEMI_in_assignment_list10328 = new BitSet(new ulong[]{0x4849001C0C100022UL,0x8B78CDED00001368UL,0xDF24F50A4BBB4924UL,0x828UL});
+		public static readonly BitSet _attributes_in_field_declarations10339 = new BitSet(new ulong[]{0x8000000UL,0xCB484D6F00000000UL,0xED067D7E6BBB6924UL,0x2FUL});
+		public static readonly BitSet _modifiers_in_field_declarations10344 = new BitSet(new ulong[]{0x8000000UL,0x8B484D6D00000000UL,0xCD04750A4B3B4924UL,0x2AUL});
+		public static readonly BitSet _type_in_field_declarations10349 = new BitSet(new ulong[]{0x8000000UL,0x8A40046D00000000UL,0x8100310A4A334120UL,0x28UL});
+		public static readonly BitSet _field_declaration_in_field_declarations10353 = new BitSet(new ulong[]{0x8000002UL,0xCB484D6F10000000UL,0xED067D7E6BBB6924UL,0x2FUL});
+		public static readonly BitSet _attributes_in_property_declaration_list10364 = new BitSet(new ulong[]{0x8000000UL,0xCB484D6F00000000UL,0xED067D7E6BBB6924UL,0x2FUL});
+		public static readonly BitSet _modifiers_in_property_declaration_list10369 = new BitSet(new ulong[]{0x8000000UL,0x8B484D6D00000000UL,0xCD04750A4B3B4924UL,0x2AUL});
+		public static readonly BitSet _type_in_property_declaration_list10374 = new BitSet(new ulong[]{0x84900180C100020UL,0x8B484D6D00000000UL,0xCD04750A4B3B4924UL,0x28UL});
+		public static readonly BitSet _property_declaration_in_property_declaration_list10378 = new BitSet(new ulong[]{0x8000002UL,0xCB484D6F10000000UL,0xED067D7E6BBB6924UL,0x2FUL});
+		public static readonly BitSet _constant_declaration_in_constant_declarations10388 = new BitSet(new ulong[]{0x2UL,0x2000000000000UL});
+		public static readonly BitSet _literal_in_literals10396 = new BitSet(new ulong[]{0x849001804100022UL});
+		public static readonly BitSet _attributes_in_delegate_declaration_list10406 = new BitSet(new ulong[]{0x0UL,0x4020000200000000UL,0x2002087420802000UL,0x5UL});
+		public static readonly BitSet _modifiers_in_delegate_declaration_list10411 = new BitSet(new ulong[]{0x0UL,0x20000000000000UL});
+		public static readonly BitSet _delegate_declaration_in_delegate_declaration_list10416 = new BitSet(new ulong[]{0x2UL,0x4020000210000000UL,0x2002087420802000UL,0x5UL});
+		public static readonly BitSet _local_variable_declaration_in_local_variable_declaration_list10427 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _SEMI_in_local_variable_declaration_list10429 = new BitSet(new ulong[]{0x8000002UL,0x8B484D6D00000000UL,0xCD04750A4B3B4924UL,0x2AUL});
+		public static readonly BitSet _local_variable_initializer_in_local_variable_initializer_list10440 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _SEMI_in_local_variable_initializer_list10442 = new BitSet(new ulong[]{0x4849001C0C100022UL,0x8B78CDED00001368UL,0xDF25F50A4BBB4924UL,0x868UL});
+		public static readonly BitSet _expression_in_expression_list_test10453 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _SEMI_in_expression_list_test10455 = new BitSet(new ulong[]{0x4849001C0C100022UL,0x8B78CDED00001368UL,0xDF24F50A4BBB4924UL,0x828UL});
+		public static readonly BitSet _unary_expression_in_unary_expression_list10466 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _SEMI_in_unary_expression_list10468 = new BitSet(new ulong[]{0x4849001C0C100022UL,0x8B78CDED00001368UL,0xDF24F50A4BBB4924UL,0x828UL});
+		public static readonly BitSet _invocation_expression_in_invocation_expression_list10479 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _SEMI_in_invocation_expression_list10481 = new BitSet(new ulong[]{0x8000002UL,0x8B484DED00000000UL,0xCF24750A4B3B4924UL,0x28UL});
+		public static readonly BitSet _primary_expression_in_primary_expression_list10492 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _SEMI_in_primary_expression_list10494 = new BitSet(new ulong[]{0x84900180C100022UL,0x8B78CDED00000020UL,0xDF24F50A4BBB4924UL,0x28UL});
+		public static readonly BitSet _non_assignment_expression_in_non_assignment_expression_list10505 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _SEMI_in_non_assignment_expression_list10507 = new BitSet(new ulong[]{0x4849001C0C100022UL,0x8B78CDED00001368UL,0xDF24F50A4BBB4924UL,0x828UL});
+		public static readonly BitSet _modifiers_in_method_declarations10518 = new BitSet(new ulong[]{0x8000000UL,0x8B484D6D00000000UL,0xCD04750A4B3B4924UL,0x2AUL});
+		public static readonly BitSet _193_in_method_declarations10522 = new BitSet(new ulong[]{0x84900180C100020UL,0x8B484D6D00000000UL,0xCD04750A4B3B4924UL,0x28UL});
+		public static readonly BitSet _type_in_method_declarations10526 = new BitSet(new ulong[]{0x84900180C100020UL,0x8B484D6D00000000UL,0xCD04750A4B3B4924UL,0x28UL});
+		public static readonly BitSet _method_declaration_in_method_declarations10529 = new BitSet(new ulong[]{0x8000002UL,0xCB484D6F00000000UL,0xED067D7E6BBB6924UL,0x2FUL});
 		public static readonly BitSet _160_in_synpred1_cs282 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _member_name_in_synpred2_cs546 = new BitSet(new ulong[]{0x0UL,0x20UL});
 		public static readonly BitSet _69_in_synpred2_cs550 = new BitSet(new ulong[]{0x2UL});

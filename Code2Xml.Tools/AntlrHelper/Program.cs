@@ -23,6 +23,7 @@ using System.IO;
 namespace Code2Xml.Tools.AntlrHelper {
 	internal class Program {
 		private static void Main(string[] args) {
+			args = new [] {@"C:\Users\exKAZUu\Projects\Code2Xml\Code2Xml.Languages\ANTLRv3\Processors\CSharp"};
 			if (args.Length == 0) {
 				Console.WriteLine("Please enter the path of the input directory");
 				args = new[] { Console.In.ReadLine() };

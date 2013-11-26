@@ -31,10 +31,10 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
 		[Test]
 		//[TestCase(@"class Klass { void main() {} }")]
 		[TestCase(@"class Klass {
-#define		DEBUG
-#region   
+#	define DEBUG
+#	region
 void main() { /* comment */ } // comment2
-#endregion
+#	endregion
 }")]
 //		[TestCase(@"class Klass { void main() {
 //	for (int i = 1; i < 2; i++) Console.WriteLine();
