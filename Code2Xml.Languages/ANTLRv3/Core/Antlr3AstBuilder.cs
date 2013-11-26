@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using System.Diagnostics;
 using System.Xml.Linq;
 using Antlr.Runtime;
@@ -39,7 +40,7 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 
         public XElement FinishParsing(XElement root) {
             var count = _stream.Count - 1; // Avoid writing "<EOF>"
-            while (_stream.Get(count - 1).Type < 0) {
+            while (count > 0 && _stream.Get(count - 1).Type < 0) {
                 count--;
             }
             var token = _stream.Get(count);
