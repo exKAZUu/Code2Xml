@@ -98,6 +98,23 @@ namespace Code2Xml.Core {
             return e.Value;
         }
 
+	    /// <summary>
+	    /// Returns combined all tokens which the specified node contains.
+	    /// </summary>
+	    /// <param name="e"></param>
+	    /// <param name="maxElementCount"></param>
+	    /// <returns></returns>
+	    public static string TokenText(this XElement e, int maxElementCount) {
+            if (e == null) {
+                return null;
+            }
+	        var texts = e.DescendantsAndSelf()
+			        .Where(e2 => e2.IsTokenSet())
+			        .Select(e2 => e2.Value)
+			        .Take(maxElementCount);
+            return string.Join("", texts);
+        }
+
         /// <summary>
         /// Returns combined all tokens or a hidden token.
         /// </summary>
