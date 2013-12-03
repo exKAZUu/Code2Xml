@@ -10,7 +10,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g 2013-11-25 15:11:42
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g 2013-12-02 17:04:45
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -254,7 +254,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					statement1=statement();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, statement1.Tree, statement1, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, statement1.Tree, statement1, "statement1", retval);
 
 					}
 					break;
@@ -385,7 +385,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				printExpr2=printExpr();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, printExpr2.Tree, printExpr2, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, printExpr2.Tree, printExpr2, "printExpr2", retval);
 				DebugLocation(165, 90);
 				char_literal3=(IToken)Match(input,SemiColon,Follow._SemiColon_in_statement933); if (state.failed) return retval;
 
@@ -452,7 +452,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						printExpr4=printExpr();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, printExpr4.Tree, printExpr4, retval);
+						if (state.backtracking == 0) adaptor.AddChild(root_0, printExpr4.Tree, printExpr4, "printExpr4", retval);
 
 						}
 						break;
@@ -490,7 +490,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						simpleStatement5=simpleStatement();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, simpleStatement5.Tree, simpleStatement5, retval);
+						if (state.backtracking == 0) adaptor.AddChild(root_0, simpleStatement5.Tree, simpleStatement5, "simpleStatement5", retval);
 
 						}
 						break;
@@ -508,7 +508,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(166, 110);
 				BodyString6=(IToken)Match(input,BodyString,Follow._BodyString_in_statement958); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				BodyString6_tree = (object)adaptor.Create(BodyString6, retval);
+				BodyString6_tree = (object)adaptor.Create(BodyString6, "BodyString6", retval);
 				adaptor.AddChild(root_0, BodyString6_tree);
 				}
 				DebugLocation(166, 121);
@@ -528,7 +528,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(167, 7);
 				char_literal7=(IToken)Match(input,OpenCurlyBracket,Follow._OpenCurlyBracket_in_statement968); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal7_tree = (object)adaptor.Create(char_literal7, retval);
+				char_literal7_tree = (object)adaptor.Create(char_literal7, "char_literal7", retval);
 				adaptor.AddChild(root_0, char_literal7_tree);
 				}
 				DebugLocation(167, 11);
@@ -536,11 +536,11 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				statement8=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement8.Tree, statement8, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement8.Tree, statement8, "statement8", retval);
 				DebugLocation(167, 21);
 				char_literal9=(IToken)Match(input,CloseCurlyBracket,Follow._CloseCurlyBracket_in_statement972); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal9_tree = (object)adaptor.Create(char_literal9, retval);
+				char_literal9_tree = (object)adaptor.Create(char_literal9, "char_literal9", retval);
 				adaptor.AddChild(root_0, char_literal9_tree);
 				}
 
@@ -557,7 +557,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				bracketedBlock10=bracketedBlock();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, bracketedBlock10.Tree, bracketedBlock10, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, bracketedBlock10.Tree, bracketedBlock10, "bracketedBlock10", retval);
 
 				}
 				break;
@@ -570,13 +570,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(169, 7);
 				UnquotedString11=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_statement988); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				UnquotedString11_tree = (object)adaptor.Create(UnquotedString11, retval);
+				UnquotedString11_tree = (object)adaptor.Create(UnquotedString11, "UnquotedString11", retval);
 				adaptor.AddChild(root_0, UnquotedString11_tree);
 				}
 				DebugLocation(169, 22);
 				Colon12=(IToken)Match(input,Colon,Follow._Colon_in_statement990); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Colon12_tree = (object)adaptor.Create(Colon12, retval);
+				Colon12_tree = (object)adaptor.Create(Colon12, "Colon12", retval);
 				adaptor.AddChild(root_0, Colon12_tree);
 				}
 				DebugLocation(169, 28);
@@ -584,7 +584,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				statement13=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement13.Tree, statement13, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement13.Tree, statement13, "statement13", retval);
 
 				}
 				break;
@@ -599,7 +599,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				classDefinition14=classDefinition();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, classDefinition14.Tree, classDefinition14, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, classDefinition14.Tree, classDefinition14, "classDefinition14", retval);
 
 				}
 				break;
@@ -614,7 +614,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				interfaceDefinition15=interfaceDefinition();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, interfaceDefinition15.Tree, interfaceDefinition15, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, interfaceDefinition15.Tree, interfaceDefinition15, "interfaceDefinition15", retval);
 
 				}
 				break;
@@ -629,7 +629,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				complexStatement16=complexStatement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, complexStatement16.Tree, complexStatement16, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, complexStatement16.Tree, complexStatement16, "complexStatement16", retval);
 
 				}
 				break;
@@ -644,7 +644,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				simpleStatement17=simpleStatement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, simpleStatement17.Tree, simpleStatement17, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, simpleStatement17.Tree, simpleStatement17, "simpleStatement17", retval);
 				DebugLocation(173, 26);
 				char_literal18=(IToken)Match(input,SemiColon,Follow._SemiColon_in_statement1026); if (state.failed) return retval;
 
@@ -716,7 +716,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			expression19=expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, expression19.Tree, expression19, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, expression19.Tree, expression19, "expression19", retval);
 
 			}
 
@@ -786,7 +786,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(181, 7);
 			char_literal20=(IToken)Match(input,OpenCurlyBracket,Follow._OpenCurlyBracket_in_bracketedBlock1061); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal20_tree = (object)adaptor.Create(char_literal20, retval);
+			char_literal20_tree = (object)adaptor.Create(char_literal20, "char_literal20", retval);
 			adaptor.AddChild(root_0, char_literal20_tree);
 			}
 			DebugLocation(181, 16);
@@ -816,7 +816,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					stmts=statement();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, stmts.Tree, stmts, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, stmts.Tree, stmts, "stmts", retval);
 
 					}
 					break;
@@ -834,7 +834,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(181, 28);
 			char_literal21=(IToken)Match(input,CloseCurlyBracket,Follow._CloseCurlyBracket_in_bracketedBlock1068); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal21_tree = (object)adaptor.Create(char_literal21, retval);
+			char_literal21_tree = (object)adaptor.Create(char_literal21, "char_literal21", retval);
 			adaptor.AddChild(root_0, char_literal21_tree);
 			}
 
@@ -911,13 +911,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(185, 7);
 			Interface22=(IToken)Match(input,Interface,Follow._Interface_in_interfaceDefinition1085); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			Interface22_tree = (object)adaptor.Create(Interface22, retval);
+			Interface22_tree = (object)adaptor.Create(Interface22, "Interface22", retval);
 			adaptor.AddChild(root_0, Interface22_tree);
 			}
 			DebugLocation(185, 30);
 			interfaceName=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_interfaceDefinition1089); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			interfaceName_tree = (object)adaptor.Create(interfaceName, retval);
+			interfaceName_tree = (object)adaptor.Create(interfaceName, "interfaceName", retval);
 			adaptor.AddChild(root_0, interfaceName_tree);
 			}
 			DebugLocation(185, 46);
@@ -943,7 +943,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				interfaceExtends23=interfaceExtends();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, interfaceExtends23.Tree, interfaceExtends23, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, interfaceExtends23.Tree, interfaceExtends23, "interfaceExtends23", retval);
 
 				}
 				break;
@@ -954,7 +954,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(186, 9);
 			OpenCurlyBracket24=(IToken)Match(input,OpenCurlyBracket,Follow._OpenCurlyBracket_in_interfaceDefinition1102); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			OpenCurlyBracket24_tree = (object)adaptor.Create(OpenCurlyBracket24, retval);
+			OpenCurlyBracket24_tree = (object)adaptor.Create(OpenCurlyBracket24, "OpenCurlyBracket24", retval);
 			adaptor.AddChild(root_0, OpenCurlyBracket24_tree);
 			}
 			DebugLocation(187, 9);
@@ -984,7 +984,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					interfaceMember25=interfaceMember();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, interfaceMember25.Tree, interfaceMember25, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, interfaceMember25.Tree, interfaceMember25, "interfaceMember25", retval);
 
 					}
 					break;
@@ -1002,7 +1002,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(188, 9);
 			CloseCurlyBracket26=(IToken)Match(input,CloseCurlyBracket,Follow._CloseCurlyBracket_in_interfaceDefinition1123); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			CloseCurlyBracket26_tree = (object)adaptor.Create(CloseCurlyBracket26, retval);
+			CloseCurlyBracket26_tree = (object)adaptor.Create(CloseCurlyBracket26, "CloseCurlyBracket26", retval);
 			adaptor.AddChild(root_0, CloseCurlyBracket26_tree);
 			}
 
@@ -1077,13 +1077,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(192, 7);
 			Extends27=(IToken)Match(input,Extends,Follow._Extends_in_interfaceExtends1140); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			Extends27_tree = (object)adaptor.Create(Extends27, retval);
+			Extends27_tree = (object)adaptor.Create(Extends27, "Extends27", retval);
 			adaptor.AddChild(root_0, Extends27_tree);
 			}
 			DebugLocation(192, 15);
 			UnquotedString28=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_interfaceExtends1142); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			UnquotedString28_tree = (object)adaptor.Create(UnquotedString28, retval);
+			UnquotedString28_tree = (object)adaptor.Create(UnquotedString28, "UnquotedString28", retval);
 			adaptor.AddChild(root_0, UnquotedString28_tree);
 			}
 			DebugLocation(192, 30);
@@ -1113,7 +1113,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(192, 38);
 					UnquotedString30=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_interfaceExtends1148); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					UnquotedString30_tree = (object)adaptor.Create(UnquotedString30, retval);
+					UnquotedString30_tree = (object)adaptor.Create(UnquotedString30, "UnquotedString30", retval);
 					adaptor.AddChild(root_0, UnquotedString30_tree);
 					}
 
@@ -1234,13 +1234,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(195, 7);
 				Const31=(IToken)Match(input,Const,Follow._Const_in_interfaceMember1166); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Const31_tree = (object)adaptor.Create(Const31, retval);
+				Const31_tree = (object)adaptor.Create(Const31, "Const31", retval);
 				adaptor.AddChild(root_0, Const31_tree);
 				}
 				DebugLocation(195, 13);
 				UnquotedString32=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_interfaceMember1168); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				UnquotedString32_tree = (object)adaptor.Create(UnquotedString32, retval);
+				UnquotedString32_tree = (object)adaptor.Create(UnquotedString32, "UnquotedString32", retval);
 				adaptor.AddChild(root_0, UnquotedString32_tree);
 				}
 				DebugLocation(195, 28);
@@ -1264,7 +1264,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(195, 29);
 					Equals33=(IToken)Match(input,Equals,Follow._Equals_in_interfaceMember1171); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					Equals33_tree = (object)adaptor.Create(Equals33, retval);
+					Equals33_tree = (object)adaptor.Create(Equals33, "Equals33", retval);
 					adaptor.AddChild(root_0, Equals33_tree);
 					}
 					DebugLocation(195, 36);
@@ -1272,7 +1272,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					atom34=atom();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, atom34.Tree, atom34, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, atom34.Tree, atom34, "atom34", retval);
 
 					}
 					break;
@@ -1283,7 +1283,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(195, 43);
 				char_literal35=(IToken)Match(input,SemiColon,Follow._SemiColon_in_interfaceMember1177); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal35_tree = (object)adaptor.Create(char_literal35, retval);
+				char_literal35_tree = (object)adaptor.Create(char_literal35, "char_literal35", retval);
 				adaptor.AddChild(root_0, char_literal35_tree);
 				}
 
@@ -1322,7 +1322,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						fieldModifier36=fieldModifier();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, fieldModifier36.Tree, fieldModifier36, retval);
+						if (state.backtracking == 0) adaptor.AddChild(root_0, fieldModifier36.Tree, fieldModifier36, "fieldModifier36", retval);
 
 						}
 						break;
@@ -1340,13 +1340,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(196, 22);
 				Function37=(IToken)Match(input,Function,Follow._Function_in_interfaceMember1189); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Function37_tree = (object)adaptor.Create(Function37, retval);
+				Function37_tree = (object)adaptor.Create(Function37, "Function37", retval);
 				adaptor.AddChild(root_0, Function37_tree);
 				}
 				DebugLocation(196, 31);
 				UnquotedString38=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_interfaceMember1191); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				UnquotedString38_tree = (object)adaptor.Create(UnquotedString38, retval);
+				UnquotedString38_tree = (object)adaptor.Create(UnquotedString38, "UnquotedString38", retval);
 				adaptor.AddChild(root_0, UnquotedString38_tree);
 				}
 				DebugLocation(196, 46);
@@ -1354,11 +1354,11 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				parametersDefinition39=parametersDefinition();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, parametersDefinition39.Tree, parametersDefinition39, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, parametersDefinition39.Tree, parametersDefinition39, "parametersDefinition39", retval);
 				DebugLocation(196, 67);
 				char_literal40=(IToken)Match(input,SemiColon,Follow._SemiColon_in_interfaceMember1195); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal40_tree = (object)adaptor.Create(char_literal40, retval);
+				char_literal40_tree = (object)adaptor.Create(char_literal40, "char_literal40", retval);
 				adaptor.AddChild(root_0, char_literal40_tree);
 				}
 
@@ -1462,7 +1462,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				classModifier41=classModifier();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, classModifier41.Tree, classModifier41, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, classModifier41.Tree, classModifier41, "classModifier41", retval);
 
 				}
 				break;
@@ -1473,13 +1473,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(201, 9);
 			Class42=(IToken)Match(input,Class,Follow._Class_in_classDefinition1226); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			Class42_tree = (object)adaptor.Create(Class42, retval);
+			Class42_tree = (object)adaptor.Create(Class42, "Class42", retval);
 			adaptor.AddChild(root_0, Class42_tree);
 			}
 			DebugLocation(201, 24);
 			className=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_classDefinition1230); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			className_tree = (object)adaptor.Create(className, retval);
+			className_tree = (object)adaptor.Create(className, "className", retval);
 			adaptor.AddChild(root_0, className_tree);
 			}
 			DebugLocation(202, 9);
@@ -1503,13 +1503,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(202, 10);
 				Extends43=(IToken)Match(input,Extends,Follow._Extends_in_classDefinition1242); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Extends43_tree = (object)adaptor.Create(Extends43, retval);
+				Extends43_tree = (object)adaptor.Create(Extends43, "Extends43", retval);
 				adaptor.AddChild(root_0, Extends43_tree);
 				}
 				DebugLocation(202, 30);
 				extendsclass=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_classDefinition1246); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				extendsclass_tree = (object)adaptor.Create(extendsclass, retval);
+				extendsclass_tree = (object)adaptor.Create(extendsclass, "extendsclass", retval);
 				adaptor.AddChild(root_0, extendsclass_tree);
 				}
 
@@ -1542,7 +1542,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				classImplements44=classImplements();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, classImplements44.Tree, classImplements44, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, classImplements44.Tree, classImplements44, "classImplements44", retval);
 
 				}
 				break;
@@ -1553,7 +1553,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(204, 9);
 			OpenCurlyBracket45=(IToken)Match(input,OpenCurlyBracket,Follow._OpenCurlyBracket_in_classDefinition1270); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			OpenCurlyBracket45_tree = (object)adaptor.Create(OpenCurlyBracket45, retval);
+			OpenCurlyBracket45_tree = (object)adaptor.Create(OpenCurlyBracket45, "OpenCurlyBracket45", retval);
 			adaptor.AddChild(root_0, OpenCurlyBracket45_tree);
 			}
 			DebugLocation(205, 9);
@@ -1583,7 +1583,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					classMember46=classMember();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, classMember46.Tree, classMember46, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, classMember46.Tree, classMember46, "classMember46", retval);
 
 					}
 					break;
@@ -1601,7 +1601,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(206, 9);
 			CloseCurlyBracket47=(IToken)Match(input,CloseCurlyBracket,Follow._CloseCurlyBracket_in_classDefinition1291); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			CloseCurlyBracket47_tree = (object)adaptor.Create(CloseCurlyBracket47, retval);
+			CloseCurlyBracket47_tree = (object)adaptor.Create(CloseCurlyBracket47, "CloseCurlyBracket47", retval);
 			adaptor.AddChild(root_0, CloseCurlyBracket47_tree);
 			}
 
@@ -1676,7 +1676,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(210, 8);
 			Implements48=(IToken)Match(input,Implements,Follow._Implements_in_classImplements1314); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			Implements48_tree = (object)adaptor.Create(Implements48, retval);
+			Implements48_tree = (object)adaptor.Create(Implements48, "Implements48", retval);
 			adaptor.AddChild(root_0, Implements48_tree);
 			}
 			DebugLocation(210, 19);
@@ -1687,7 +1687,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(210, 20);
 			UnquotedString49=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_classImplements1317); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			UnquotedString49_tree = (object)adaptor.Create(UnquotedString49, retval);
+			UnquotedString49_tree = (object)adaptor.Create(UnquotedString49, "UnquotedString49", retval);
 			adaptor.AddChild(root_0, UnquotedString49_tree);
 			}
 			DebugLocation(210, 35);
@@ -1717,7 +1717,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(210, 43);
 					UnquotedString51=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_classImplements1323); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					UnquotedString51_tree = (object)adaptor.Create(UnquotedString51, retval);
+					UnquotedString51_tree = (object)adaptor.Create(UnquotedString51, "UnquotedString51", retval);
 					adaptor.AddChild(root_0, UnquotedString51_tree);
 					}
 
@@ -1951,7 +1951,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						fieldModifier52=fieldModifier();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, fieldModifier52.Tree, fieldModifier52, retval);
+						if (state.backtracking == 0) adaptor.AddChild(root_0, fieldModifier52.Tree, fieldModifier52, "fieldModifier52", retval);
 
 						}
 						break;
@@ -1969,13 +1969,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(214, 22);
 				Function53=(IToken)Match(input,Function,Follow._Function_in_classMember1346); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Function53_tree = (object)adaptor.Create(Function53, retval);
+				Function53_tree = (object)adaptor.Create(Function53, "Function53", retval);
 				adaptor.AddChild(root_0, Function53_tree);
 				}
 				DebugLocation(214, 31);
 				UnquotedString54=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_classMember1348); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				UnquotedString54_tree = (object)adaptor.Create(UnquotedString54, retval);
+				UnquotedString54_tree = (object)adaptor.Create(UnquotedString54, "UnquotedString54", retval);
 				adaptor.AddChild(root_0, UnquotedString54_tree);
 				}
 				DebugLocation(214, 46);
@@ -1983,7 +1983,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				parametersDefinition55=parametersDefinition();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, parametersDefinition55.Tree, parametersDefinition55, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, parametersDefinition55.Tree, parametersDefinition55, "parametersDefinition55", retval);
 				DebugLocation(215, 9);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:215:9: ( bracketedBlock | ';' )
 				int alt19=2;
@@ -2018,7 +2018,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					bracketedBlock56=bracketedBlock();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, bracketedBlock56.Tree, bracketedBlock56, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, bracketedBlock56.Tree, bracketedBlock56, "bracketedBlock56", retval);
 
 					}
 					break;
@@ -2029,7 +2029,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(215, 27);
 					char_literal57=(IToken)Match(input,SemiColon,Follow._SemiColon_in_classMember1366); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal57_tree = (object)adaptor.Create(char_literal57, retval);
+					char_literal57_tree = (object)adaptor.Create(char_literal57, "char_literal57", retval);
 					adaptor.AddChild(root_0, char_literal57_tree);
 					}
 
@@ -2051,19 +2051,19 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(216, 7);
 				Var58=(IToken)Match(input,Var,Follow._Var_in_classMember1375); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Var58_tree = (object)adaptor.Create(Var58, retval);
+				Var58_tree = (object)adaptor.Create(Var58, "Var58", retval);
 				adaptor.AddChild(root_0, Var58_tree);
 				}
 				DebugLocation(216, 11);
 				Dollar59=(IToken)Match(input,Dollar,Follow._Dollar_in_classMember1377); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Dollar59_tree = (object)adaptor.Create(Dollar59, retval);
+				Dollar59_tree = (object)adaptor.Create(Dollar59, "Dollar59", retval);
 				adaptor.AddChild(root_0, Dollar59_tree);
 				}
 				DebugLocation(216, 18);
 				UnquotedString60=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_classMember1379); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				UnquotedString60_tree = (object)adaptor.Create(UnquotedString60, retval);
+				UnquotedString60_tree = (object)adaptor.Create(UnquotedString60, "UnquotedString60", retval);
 				adaptor.AddChild(root_0, UnquotedString60_tree);
 				}
 				DebugLocation(216, 33);
@@ -2087,7 +2087,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(216, 34);
 					Equals61=(IToken)Match(input,Equals,Follow._Equals_in_classMember1382); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					Equals61_tree = (object)adaptor.Create(Equals61, retval);
+					Equals61_tree = (object)adaptor.Create(Equals61, "Equals61", retval);
 					adaptor.AddChild(root_0, Equals61_tree);
 					}
 					DebugLocation(216, 41);
@@ -2095,7 +2095,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					atom62=atom();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, atom62.Tree, atom62, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, atom62.Tree, atom62, "atom62", retval);
 
 					}
 					break;
@@ -2106,7 +2106,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(216, 48);
 				char_literal63=(IToken)Match(input,SemiColon,Follow._SemiColon_in_classMember1388); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal63_tree = (object)adaptor.Create(char_literal63, retval);
+				char_literal63_tree = (object)adaptor.Create(char_literal63, "char_literal63", retval);
 				adaptor.AddChild(root_0, char_literal63_tree);
 				}
 
@@ -2121,13 +2121,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(217, 7);
 				Const64=(IToken)Match(input,Const,Follow._Const_in_classMember1397); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Const64_tree = (object)adaptor.Create(Const64, retval);
+				Const64_tree = (object)adaptor.Create(Const64, "Const64", retval);
 				adaptor.AddChild(root_0, Const64_tree);
 				}
 				DebugLocation(217, 13);
 				UnquotedString65=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_classMember1399); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				UnquotedString65_tree = (object)adaptor.Create(UnquotedString65, retval);
+				UnquotedString65_tree = (object)adaptor.Create(UnquotedString65, "UnquotedString65", retval);
 				adaptor.AddChild(root_0, UnquotedString65_tree);
 				}
 				DebugLocation(217, 28);
@@ -2151,7 +2151,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(217, 29);
 					Equals66=(IToken)Match(input,Equals,Follow._Equals_in_classMember1402); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					Equals66_tree = (object)adaptor.Create(Equals66, retval);
+					Equals66_tree = (object)adaptor.Create(Equals66, "Equals66", retval);
 					adaptor.AddChild(root_0, Equals66_tree);
 					}
 					DebugLocation(217, 36);
@@ -2159,7 +2159,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					atom67=atom();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, atom67.Tree, atom67, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, atom67.Tree, atom67, "atom67", retval);
 
 					}
 					break;
@@ -2170,7 +2170,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(217, 43);
 				char_literal68=(IToken)Match(input,SemiColon,Follow._SemiColon_in_classMember1408); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal68_tree = (object)adaptor.Create(char_literal68, retval);
+				char_literal68_tree = (object)adaptor.Create(char_literal68, "char_literal68", retval);
 				adaptor.AddChild(root_0, char_literal68_tree);
 				}
 
@@ -2209,7 +2209,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						fieldModifier69=fieldModifier();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, fieldModifier69.Tree, fieldModifier69, retval);
+						if (state.backtracking == 0) adaptor.AddChild(root_0, fieldModifier69.Tree, fieldModifier69, "fieldModifier69", retval);
 
 						}
 						break;
@@ -2232,13 +2232,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(218, 23);
 				Dollar70=(IToken)Match(input,Dollar,Follow._Dollar_in_classMember1421); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Dollar70_tree = (object)adaptor.Create(Dollar70, retval);
+				Dollar70_tree = (object)adaptor.Create(Dollar70, "Dollar70", retval);
 				adaptor.AddChild(root_0, Dollar70_tree);
 				}
 				DebugLocation(218, 30);
 				UnquotedString71=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_classMember1423); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				UnquotedString71_tree = (object)adaptor.Create(UnquotedString71, retval);
+				UnquotedString71_tree = (object)adaptor.Create(UnquotedString71, "UnquotedString71", retval);
 				adaptor.AddChild(root_0, UnquotedString71_tree);
 				}
 
@@ -2265,7 +2265,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(218, 47);
 					Equals72=(IToken)Match(input,Equals,Follow._Equals_in_classMember1427); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					Equals72_tree = (object)adaptor.Create(Equals72, retval);
+					Equals72_tree = (object)adaptor.Create(Equals72, "Equals72", retval);
 					adaptor.AddChild(root_0, Equals72_tree);
 					}
 					DebugLocation(218, 54);
@@ -2273,7 +2273,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					atom73=atom();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, atom73.Tree, atom73, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, atom73.Tree, atom73, "atom73", retval);
 
 					}
 					break;
@@ -2284,7 +2284,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(218, 61);
 				char_literal74=(IToken)Match(input,SemiColon,Follow._SemiColon_in_classMember1433); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal74_tree = (object)adaptor.Create(char_literal74, retval);
+				char_literal74_tree = (object)adaptor.Create(char_literal74, "char_literal74", retval);
 				adaptor.AddChild(root_0, char_literal74_tree);
 				}
 
@@ -2362,13 +2362,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(222, 7);
 			Dollar75=(IToken)Match(input,Dollar,Follow._Dollar_in_fieldDefinition1451); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			Dollar75_tree = (object)adaptor.Create(Dollar75, retval);
+			Dollar75_tree = (object)adaptor.Create(Dollar75, "Dollar75", retval);
 			adaptor.AddChild(root_0, Dollar75_tree);
 			}
 			DebugLocation(222, 14);
 			UnquotedString76=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_fieldDefinition1453); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			UnquotedString76_tree = (object)adaptor.Create(UnquotedString76, retval);
+			UnquotedString76_tree = (object)adaptor.Create(UnquotedString76, "UnquotedString76", retval);
 			adaptor.AddChild(root_0, UnquotedString76_tree);
 			}
 			DebugLocation(222, 29);
@@ -2392,7 +2392,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(222, 30);
 				Equals77=(IToken)Match(input,Equals,Follow._Equals_in_fieldDefinition1456); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Equals77_tree = (object)adaptor.Create(Equals77, retval);
+				Equals77_tree = (object)adaptor.Create(Equals77, "Equals77", retval);
 				adaptor.AddChild(root_0, Equals77_tree);
 				}
 				DebugLocation(222, 37);
@@ -2400,7 +2400,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				atom78=atom();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, atom78.Tree, atom78, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, atom78.Tree, atom78, "atom78", retval);
 
 				}
 				break;
@@ -2411,7 +2411,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(222, 44);
 			char_literal79=(IToken)Match(input,SemiColon,Follow._SemiColon_in_fieldDefinition1462); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal79_tree = (object)adaptor.Create(char_literal79, retval);
+			char_literal79_tree = (object)adaptor.Create(char_literal79, "char_literal79", retval);
 			adaptor.AddChild(root_0, char_literal79_tree);
 			}
 
@@ -2480,7 +2480,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(226, 7);
 			string_literal80=(IToken)Match(input,Abstract,Follow._Abstract_in_classModifier1483); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal80_tree = (object)adaptor.Create(string_literal80, retval);
+			string_literal80_tree = (object)adaptor.Create(string_literal80, "string_literal80", retval);
 			adaptor.AddChild(root_0, string_literal80_tree);
 			}
 
@@ -2552,7 +2552,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if ((input.LA(1)>=Abstract && input.LA(1)<=AccessModifier)||input.LA(1)==Static)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set81, retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set81, "set81", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -2742,13 +2742,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(234, 7);
 				If82=(IToken)Match(input,If,Follow._If_in_complexStatement1526); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				If82_tree = (object)adaptor.Create(If82, retval);
+				If82_tree = (object)adaptor.Create(If82, "If82", retval);
 				adaptor.AddChild(root_0, If82_tree);
 				}
 				DebugLocation(234, 10);
 				char_literal83=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_complexStatement1528); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal83_tree = (object)adaptor.Create(char_literal83, retval);
+				char_literal83_tree = (object)adaptor.Create(char_literal83, "char_literal83", retval);
 				adaptor.AddChild(root_0, char_literal83_tree);
 				}
 				DebugLocation(234, 25);
@@ -2756,11 +2756,11 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				ifCondition=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, ifCondition.Tree, ifCondition, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, ifCondition.Tree, ifCondition, "ifCondition", retval);
 				DebugLocation(234, 37);
 				char_literal84=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_complexStatement1534); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal84_tree = (object)adaptor.Create(char_literal84, retval);
+				char_literal84_tree = (object)adaptor.Create(char_literal84, "char_literal84", retval);
 				adaptor.AddChild(root_0, char_literal84_tree);
 				}
 				DebugLocation(234, 47);
@@ -2768,7 +2768,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				ifTrue=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, ifTrue.Tree, ifTrue, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, ifTrue.Tree, ifTrue, "ifTrue", retval);
 				DebugLocation(234, 58);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:234:58: ( conditional )?
 				int alt26=2;
@@ -2795,7 +2795,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					conditional85=conditional();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, conditional85.Tree, conditional85, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, conditional85.Tree, conditional85, "conditional85", retval);
 
 					}
 					break;
@@ -2815,13 +2815,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(235, 7);
 				For86=(IToken)Match(input,For,Follow._For_in_complexStatement1549); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				For86_tree = (object)adaptor.Create(For86, retval);
+				For86_tree = (object)adaptor.Create(For86, "For86", retval);
 				adaptor.AddChild(root_0, For86_tree);
 				}
 				DebugLocation(235, 11);
 				char_literal87=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_complexStatement1551); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal87_tree = (object)adaptor.Create(char_literal87, retval);
+				char_literal87_tree = (object)adaptor.Create(char_literal87, "char_literal87", retval);
 				adaptor.AddChild(root_0, char_literal87_tree);
 				}
 				DebugLocation(235, 15);
@@ -2829,23 +2829,23 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				forInit88=forInit();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, forInit88.Tree, forInit88, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, forInit88.Tree, forInit88, "forInit88", retval);
 				DebugLocation(235, 23);
 				PushFollow(Follow._forCondition_in_complexStatement1555);
 				forCondition89=forCondition();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, forCondition89.Tree, forCondition89, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, forCondition89.Tree, forCondition89, "forCondition89", retval);
 				DebugLocation(235, 36);
 				PushFollow(Follow._forUpdate_in_complexStatement1557);
 				forUpdate90=forUpdate();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, forUpdate90.Tree, forUpdate90, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, forUpdate90.Tree, forUpdate90, "forUpdate90", retval);
 				DebugLocation(235, 46);
 				char_literal91=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_complexStatement1559); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal91_tree = (object)adaptor.Create(char_literal91, retval);
+				char_literal91_tree = (object)adaptor.Create(char_literal91, "char_literal91", retval);
 				adaptor.AddChild(root_0, char_literal91_tree);
 				}
 				DebugLocation(235, 50);
@@ -2853,7 +2853,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				statement92=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement92.Tree, statement92, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement92.Tree, statement92, "statement92", retval);
 
 				}
 				break;
@@ -2866,13 +2866,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(236, 7);
 				Foreach93=(IToken)Match(input,Foreach,Follow._Foreach_in_complexStatement1569); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Foreach93_tree = (object)adaptor.Create(Foreach93, retval);
+				Foreach93_tree = (object)adaptor.Create(Foreach93, "Foreach93", retval);
 				adaptor.AddChild(root_0, Foreach93_tree);
 				}
 				DebugLocation(236, 15);
 				char_literal94=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_complexStatement1571); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal94_tree = (object)adaptor.Create(char_literal94, retval);
+				char_literal94_tree = (object)adaptor.Create(char_literal94, "char_literal94", retval);
 				adaptor.AddChild(root_0, char_literal94_tree);
 				}
 				DebugLocation(236, 19);
@@ -2880,11 +2880,11 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				variable95=variable();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, variable95.Tree, variable95, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, variable95.Tree, variable95, "variable95", retval);
 				DebugLocation(236, 28);
 				string_literal96=(IToken)Match(input,114,Follow._114_in_complexStatement1575); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal96_tree = (object)adaptor.Create(string_literal96, retval);
+				string_literal96_tree = (object)adaptor.Create(string_literal96, "string_literal96", retval);
 				adaptor.AddChild(root_0, string_literal96_tree);
 				}
 				DebugLocation(236, 33);
@@ -2892,11 +2892,11 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				arrayEntry97=arrayEntry();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, arrayEntry97.Tree, arrayEntry97, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, arrayEntry97.Tree, arrayEntry97, "arrayEntry97", retval);
 				DebugLocation(236, 44);
 				char_literal98=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_complexStatement1579); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal98_tree = (object)adaptor.Create(char_literal98, retval);
+				char_literal98_tree = (object)adaptor.Create(char_literal98, "char_literal98", retval);
 				adaptor.AddChild(root_0, char_literal98_tree);
 				}
 				DebugLocation(236, 48);
@@ -2904,7 +2904,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				statement99=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement99.Tree, statement99, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement99.Tree, statement99, "statement99", retval);
 
 				}
 				break;
@@ -2917,13 +2917,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(237, 7);
 				While100=(IToken)Match(input,While,Follow._While_in_complexStatement1589); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				While100_tree = (object)adaptor.Create(While100, retval);
+				While100_tree = (object)adaptor.Create(While100, "While100", retval);
 				adaptor.AddChild(root_0, While100_tree);
 				}
 				DebugLocation(237, 13);
 				char_literal101=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_complexStatement1591); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal101_tree = (object)adaptor.Create(char_literal101, retval);
+				char_literal101_tree = (object)adaptor.Create(char_literal101, "char_literal101", retval);
 				adaptor.AddChild(root_0, char_literal101_tree);
 				}
 				DebugLocation(237, 31);
@@ -2949,7 +2949,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					whileCondition=expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, whileCondition.Tree, whileCondition, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, whileCondition.Tree, whileCondition, "whileCondition", retval);
 
 					}
 					break;
@@ -2960,7 +2960,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(237, 44);
 				char_literal102=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_complexStatement1598); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal102_tree = (object)adaptor.Create(char_literal102, retval);
+				char_literal102_tree = (object)adaptor.Create(char_literal102, "char_literal102", retval);
 				adaptor.AddChild(root_0, char_literal102_tree);
 				}
 				DebugLocation(237, 48);
@@ -2968,7 +2968,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				statement103=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement103.Tree, statement103, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement103.Tree, statement103, "statement103", retval);
 
 				}
 				break;
@@ -2981,7 +2981,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(238, 7);
 				Do104=(IToken)Match(input,Do,Follow._Do_in_complexStatement1608); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Do104_tree = (object)adaptor.Create(Do104, retval);
+				Do104_tree = (object)adaptor.Create(Do104, "Do104", retval);
 				adaptor.AddChild(root_0, Do104_tree);
 				}
 				DebugLocation(238, 10);
@@ -2989,17 +2989,17 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				statement105=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement105.Tree, statement105, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement105.Tree, statement105, "statement105", retval);
 				DebugLocation(238, 20);
 				While106=(IToken)Match(input,While,Follow._While_in_complexStatement1612); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				While106_tree = (object)adaptor.Create(While106, retval);
+				While106_tree = (object)adaptor.Create(While106, "While106", retval);
 				adaptor.AddChild(root_0, While106_tree);
 				}
 				DebugLocation(238, 26);
 				char_literal107=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_complexStatement1614); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal107_tree = (object)adaptor.Create(char_literal107, retval);
+				char_literal107_tree = (object)adaptor.Create(char_literal107, "char_literal107", retval);
 				adaptor.AddChild(root_0, char_literal107_tree);
 				}
 				DebugLocation(238, 41);
@@ -3007,17 +3007,17 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				doCondition=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, doCondition.Tree, doCondition, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, doCondition.Tree, doCondition, "doCondition", retval);
 				DebugLocation(238, 53);
 				char_literal108=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_complexStatement1620); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal108_tree = (object)adaptor.Create(char_literal108, retval);
+				char_literal108_tree = (object)adaptor.Create(char_literal108, "char_literal108", retval);
 				adaptor.AddChild(root_0, char_literal108_tree);
 				}
 				DebugLocation(238, 57);
 				char_literal109=(IToken)Match(input,SemiColon,Follow._SemiColon_in_complexStatement1622); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal109_tree = (object)adaptor.Create(char_literal109, retval);
+				char_literal109_tree = (object)adaptor.Create(char_literal109, "char_literal109", retval);
 				adaptor.AddChild(root_0, char_literal109_tree);
 				}
 
@@ -3032,13 +3032,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(239, 7);
 				Switch110=(IToken)Match(input,Switch,Follow._Switch_in_complexStatement1630); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Switch110_tree = (object)adaptor.Create(Switch110, retval);
+				Switch110_tree = (object)adaptor.Create(Switch110, "Switch110", retval);
 				adaptor.AddChild(root_0, Switch110_tree);
 				}
 				DebugLocation(239, 14);
 				char_literal111=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_complexStatement1632); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal111_tree = (object)adaptor.Create(char_literal111, retval);
+				char_literal111_tree = (object)adaptor.Create(char_literal111, "char_literal111", retval);
 				adaptor.AddChild(root_0, char_literal111_tree);
 				}
 				DebugLocation(239, 18);
@@ -3046,17 +3046,17 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				expression112=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression112.Tree, expression112, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression112.Tree, expression112, "expression112", retval);
 				DebugLocation(239, 29);
 				char_literal113=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_complexStatement1636); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal113_tree = (object)adaptor.Create(char_literal113, retval);
+				char_literal113_tree = (object)adaptor.Create(char_literal113, "char_literal113", retval);
 				adaptor.AddChild(root_0, char_literal113_tree);
 				}
 				DebugLocation(239, 33);
 				char_literal114=(IToken)Match(input,OpenCurlyBracket,Follow._OpenCurlyBracket_in_complexStatement1638); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal114_tree = (object)adaptor.Create(char_literal114, retval);
+				char_literal114_tree = (object)adaptor.Create(char_literal114, "char_literal114", retval);
 				adaptor.AddChild(root_0, char_literal114_tree);
 				}
 				DebugLocation(239, 36);
@@ -3064,11 +3064,11 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				cases115=cases();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, cases115.Tree, cases115, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, cases115.Tree, cases115, "cases115", retval);
 				DebugLocation(239, 41);
 				char_literal116=(IToken)Match(input,CloseCurlyBracket,Follow._CloseCurlyBracket_in_complexStatement1640); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal116_tree = (object)adaptor.Create(char_literal116, retval);
+				char_literal116_tree = (object)adaptor.Create(char_literal116, "char_literal116", retval);
 				adaptor.AddChild(root_0, char_literal116_tree);
 				}
 
@@ -3085,7 +3085,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				functionDefinition117=functionDefinition();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, functionDefinition117.Tree, functionDefinition117, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, functionDefinition117.Tree, functionDefinition117, "functionDefinition117", retval);
 
 				}
 				break;
@@ -3266,7 +3266,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(244, 7);
 				Echo118=(IToken)Match(input,Echo,Follow._Echo_in_simpleStatement1665); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Echo118_tree = (object)adaptor.Create(Echo118, retval);
+				Echo118_tree = (object)adaptor.Create(Echo118, "Echo118", retval);
 				adaptor.AddChild(root_0, Echo118_tree);
 				}
 				DebugLocation(244, 12);
@@ -3274,7 +3274,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				commaList119=commaList();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, commaList119.Tree, commaList119, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, commaList119.Tree, commaList119, "commaList119", retval);
 
 				}
 				break;
@@ -3287,7 +3287,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(245, 7);
 				Global120=(IToken)Match(input,Global,Follow._Global_in_simpleStatement1675); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Global120_tree = (object)adaptor.Create(Global120, retval);
+				Global120_tree = (object)adaptor.Create(Global120, "Global120", retval);
 				adaptor.AddChild(root_0, Global120_tree);
 				}
 				DebugLocation(245, 14);
@@ -3295,7 +3295,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				name121=name();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, name121.Tree, name121, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, name121.Tree, name121, "name121", retval);
 				DebugLocation(245, 19);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:245:19: ( ',' ! name )*
 				try { DebugEnterSubRule(29);
@@ -3325,7 +3325,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						name123=name();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, name123.Tree, name123, retval);
+						if (state.backtracking == 0) adaptor.AddChild(root_0, name123.Tree, name123, "name123", retval);
 
 						}
 						break;
@@ -3352,7 +3352,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(246, 7);
 				Static124=(IToken)Match(input,Static,Follow._Static_in_simpleStatement1693); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Static124_tree = (object)adaptor.Create(Static124, retval);
+				Static124_tree = (object)adaptor.Create(Static124, "Static124", retval);
 				adaptor.AddChild(root_0, Static124_tree);
 				}
 				DebugLocation(246, 14);
@@ -3360,7 +3360,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				variable125=variable();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, variable125.Tree, variable125, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, variable125.Tree, variable125, "variable125", retval);
 				DebugLocation(246, 29);
 				Equals126=(IToken)Match(input,Equals,Follow._Equals_in_simpleStatement1697); if (state.failed) return retval;
 				DebugLocation(246, 31);
@@ -3368,7 +3368,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				atom127=atom();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, atom127.Tree, atom127, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, atom127.Tree, atom127, "atom127", retval);
 
 				}
 				break;
@@ -3381,7 +3381,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(247, 7);
 				Break128=(IToken)Match(input,Break,Follow._Break_in_simpleStatement1708); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Break128_tree = (object)adaptor.Create(Break128, retval);
+				Break128_tree = (object)adaptor.Create(Break128, "Break128", retval);
 				adaptor.AddChild(root_0, Break128_tree);
 				}
 				DebugLocation(247, 13);
@@ -3405,7 +3405,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(247, 13);
 					Integer129=(IToken)Match(input,Integer,Follow._Integer_in_simpleStatement1710); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					Integer129_tree = (object)adaptor.Create(Integer129, retval);
+					Integer129_tree = (object)adaptor.Create(Integer129, "Integer129", retval);
 					adaptor.AddChild(root_0, Integer129_tree);
 					}
 
@@ -3427,7 +3427,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(248, 7);
 				Continue130=(IToken)Match(input,Continue,Follow._Continue_in_simpleStatement1719); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Continue130_tree = (object)adaptor.Create(Continue130, retval);
+				Continue130_tree = (object)adaptor.Create(Continue130, "Continue130", retval);
 				adaptor.AddChild(root_0, Continue130_tree);
 				}
 				DebugLocation(248, 16);
@@ -3451,7 +3451,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(248, 16);
 					Integer131=(IToken)Match(input,Integer,Follow._Integer_in_simpleStatement1721); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					Integer131_tree = (object)adaptor.Create(Integer131, retval);
+					Integer131_tree = (object)adaptor.Create(Integer131, "Integer131", retval);
 					adaptor.AddChild(root_0, Integer131_tree);
 					}
 
@@ -3473,13 +3473,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(249, 7);
 				Goto132=(IToken)Match(input,Goto,Follow._Goto_in_simpleStatement1730); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Goto132_tree = (object)adaptor.Create(Goto132, retval);
+				Goto132_tree = (object)adaptor.Create(Goto132, "Goto132", retval);
 				adaptor.AddChild(root_0, Goto132_tree);
 				}
 				DebugLocation(249, 12);
 				UnquotedString133=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_simpleStatement1732); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				UnquotedString133_tree = (object)adaptor.Create(UnquotedString133, retval);
+				UnquotedString133_tree = (object)adaptor.Create(UnquotedString133, "UnquotedString133", retval);
 				adaptor.AddChild(root_0, UnquotedString133_tree);
 				}
 
@@ -3494,7 +3494,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(250, 7);
 				Return134=(IToken)Match(input,Return,Follow._Return_in_simpleStatement1740); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Return134_tree = (object)adaptor.Create(Return134, retval);
+				Return134_tree = (object)adaptor.Create(Return134, "Return134", retval);
 				adaptor.AddChild(root_0, Return134_tree);
 				}
 				DebugLocation(250, 14);
@@ -3520,7 +3520,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					expression135=expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, expression135.Tree, expression135, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, expression135.Tree, expression135, "expression135", retval);
 
 					}
 					break;
@@ -3540,7 +3540,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(251, 7);
 				RequireOperator136=(IToken)Match(input,RequireOperator,Follow._RequireOperator_in_simpleStatement1751); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				RequireOperator136_tree = (object)adaptor.Create(RequireOperator136, retval);
+				RequireOperator136_tree = (object)adaptor.Create(RequireOperator136, "RequireOperator136", retval);
 				adaptor.AddChild(root_0, RequireOperator136_tree);
 				}
 				DebugLocation(251, 23);
@@ -3548,7 +3548,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				expression137=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression137.Tree, expression137, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression137.Tree, expression137, "expression137", retval);
 
 				}
 				break;
@@ -3563,7 +3563,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				expression138=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression138.Tree, expression138, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression138.Tree, expression138, "expression138", retval);
 
 				}
 				break;
@@ -3665,13 +3665,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(257, 7);
 				ElseIf139=(IToken)Match(input,ElseIf,Follow._ElseIf_in_conditional1779); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				ElseIf139_tree = (object)adaptor.Create(ElseIf139, retval);
+				ElseIf139_tree = (object)adaptor.Create(ElseIf139, "ElseIf139", retval);
 				adaptor.AddChild(root_0, ElseIf139_tree);
 				}
 				DebugLocation(257, 14);
 				char_literal140=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_conditional1781); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal140_tree = (object)adaptor.Create(char_literal140, retval);
+				char_literal140_tree = (object)adaptor.Create(char_literal140, "char_literal140", retval);
 				adaptor.AddChild(root_0, char_literal140_tree);
 				}
 				DebugLocation(257, 29);
@@ -3679,11 +3679,11 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				ifCondition=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, ifCondition.Tree, ifCondition, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, ifCondition.Tree, ifCondition, "ifCondition", retval);
 				DebugLocation(257, 41);
 				char_literal141=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_conditional1787); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal141_tree = (object)adaptor.Create(char_literal141, retval);
+				char_literal141_tree = (object)adaptor.Create(char_literal141, "char_literal141", retval);
 				adaptor.AddChild(root_0, char_literal141_tree);
 				}
 				DebugLocation(257, 51);
@@ -3691,7 +3691,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				ifTrue=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, ifTrue.Tree, ifTrue, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, ifTrue.Tree, ifTrue, "ifTrue", retval);
 				DebugLocation(257, 62);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:257:62: ( conditional )?
 				int alt34=2;
@@ -3718,7 +3718,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					conditional142=conditional();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, conditional142.Tree, conditional142, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, conditional142.Tree, conditional142, "conditional142", retval);
 
 					}
 					break;
@@ -3738,7 +3738,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(258, 7);
 				Else143=(IToken)Match(input,Else,Follow._Else_in_conditional1802); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Else143_tree = (object)adaptor.Create(Else143, retval);
+				Else143_tree = (object)adaptor.Create(Else143, "Else143", retval);
 				adaptor.AddChild(root_0, Else143_tree);
 				}
 				DebugLocation(258, 12);
@@ -3746,7 +3746,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				statement144=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement144.Tree, statement144, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement144.Tree, statement144, "statement144", retval);
 
 				}
 				break;
@@ -3836,7 +3836,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				commaList145=commaList();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, commaList145.Tree, commaList145, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, commaList145.Tree, commaList145, "commaList145", retval);
 
 				}
 				break;
@@ -3847,7 +3847,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(262, 18);
 			char_literal146=(IToken)Match(input,SemiColon,Follow._SemiColon_in_forInit1824); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal146_tree = (object)adaptor.Create(char_literal146, retval);
+			char_literal146_tree = (object)adaptor.Create(char_literal146, "char_literal146", retval);
 			adaptor.AddChild(root_0, char_literal146_tree);
 			}
 
@@ -3937,7 +3937,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				commaList147=commaList();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, commaList147.Tree, commaList147, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, commaList147.Tree, commaList147, "commaList147", retval);
 
 				}
 				break;
@@ -3948,7 +3948,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(266, 18);
 			char_literal148=(IToken)Match(input,SemiColon,Follow._SemiColon_in_forCondition1844); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal148_tree = (object)adaptor.Create(char_literal148, retval);
+			char_literal148_tree = (object)adaptor.Create(char_literal148, "char_literal148", retval);
 			adaptor.AddChild(root_0, char_literal148_tree);
 			}
 
@@ -4036,7 +4036,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				commaList149=commaList();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, commaList149.Tree, commaList149, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, commaList149.Tree, commaList149, "commaList149", retval);
 
 				}
 				break;
@@ -4134,7 +4134,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					casestatement150=casestatement();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, casestatement150.Tree, casestatement150, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, casestatement150.Tree, casestatement150, "casestatement150", retval);
 
 					}
 					break;
@@ -4154,7 +4154,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			defaultcase151=defaultcase();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, defaultcase151.Tree, defaultcase151, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, defaultcase151.Tree, defaultcase151, "defaultcase151", retval);
 
 			}
 
@@ -4225,7 +4225,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(278, 7);
 			Case152=(IToken)Match(input,Case,Follow._Case_in_casestatement1905); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			Case152_tree = (object)adaptor.Create(Case152, retval);
+			Case152_tree = (object)adaptor.Create(Case152, "Case152", retval);
 			adaptor.AddChild(root_0, Case152_tree);
 			}
 			DebugLocation(278, 12);
@@ -4233,7 +4233,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			expression153=expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, expression153.Tree, expression153, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, expression153.Tree, expression153, "expression153", retval);
 			DebugLocation(278, 26);
 			char_literal154=(IToken)Match(input,Colon,Follow._Colon_in_casestatement1909); if (state.failed) return retval;
 			DebugLocation(278, 28);
@@ -4263,7 +4263,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					statement155=statement();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, statement155.Tree, statement155, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, statement155.Tree, statement155, "statement155", retval);
 
 					}
 					break;
@@ -4352,7 +4352,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(282, 8);
 			Default156=(IToken)Match(input,Default,Follow._Default_in_defaultcase1932); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			Default156_tree = (object)adaptor.Create(Default156, retval);
+			Default156_tree = (object)adaptor.Create(Default156, "Default156", retval);
 			adaptor.AddChild(root_0, Default156_tree);
 			}
 			DebugLocation(282, 19);
@@ -4384,7 +4384,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					statement158=statement();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, statement158.Tree, statement158, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, statement158.Tree, statement158, "statement158", retval);
 
 					}
 					break;
@@ -4472,13 +4472,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(286, 7);
 			Function159=(IToken)Match(input,Function,Follow._Function_in_functionDefinition1956); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			Function159_tree = (object)adaptor.Create(Function159, retval);
+			Function159_tree = (object)adaptor.Create(Function159, "Function159", retval);
 			adaptor.AddChild(root_0, Function159_tree);
 			}
 			DebugLocation(286, 16);
 			UnquotedString160=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_functionDefinition1958); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			UnquotedString160_tree = (object)adaptor.Create(UnquotedString160, retval);
+			UnquotedString160_tree = (object)adaptor.Create(UnquotedString160, "UnquotedString160", retval);
 			adaptor.AddChild(root_0, UnquotedString160_tree);
 			}
 			DebugLocation(286, 31);
@@ -4486,13 +4486,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			parametersDefinition161=parametersDefinition();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, parametersDefinition161.Tree, parametersDefinition161, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, parametersDefinition161.Tree, parametersDefinition161, "parametersDefinition161", retval);
 			DebugLocation(286, 52);
 			PushFollow(Follow._bracketedBlock_in_functionDefinition1962);
 			bracketedBlock162=bracketedBlock();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, bracketedBlock162.Tree, bracketedBlock162, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, bracketedBlock162.Tree, bracketedBlock162, "bracketedBlock162", retval);
 
 			}
 
@@ -4565,7 +4565,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(290, 7);
 			OpenRoundBracket163=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_parametersDefinition1979); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			OpenRoundBracket163_tree = (object)adaptor.Create(OpenRoundBracket163, retval);
+			OpenRoundBracket163_tree = (object)adaptor.Create(OpenRoundBracket163, "OpenRoundBracket163", retval);
 			adaptor.AddChild(root_0, OpenRoundBracket163_tree);
 			}
 			DebugLocation(290, 24);
@@ -4591,7 +4591,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				paramDef164=paramDef();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, paramDef164.Tree, paramDef164, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, paramDef164.Tree, paramDef164, "paramDef164", retval);
 				DebugLocation(290, 34);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:290:34: ( Comma paramDef )*
 				try { DebugEnterSubRule(42);
@@ -4617,7 +4617,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						DebugLocation(290, 35);
 						Comma165=(IToken)Match(input,Comma,Follow._Comma_in_parametersDefinition1985); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						Comma165_tree = (object)adaptor.Create(Comma165, retval);
+						Comma165_tree = (object)adaptor.Create(Comma165, "Comma165", retval);
 						adaptor.AddChild(root_0, Comma165_tree);
 						}
 						DebugLocation(290, 41);
@@ -4625,7 +4625,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						paramDef166=paramDef();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, paramDef166.Tree, paramDef166, retval);
+						if (state.backtracking == 0) adaptor.AddChild(root_0, paramDef166.Tree, paramDef166, "paramDef166", retval);
 
 						}
 						break;
@@ -4650,7 +4650,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(290, 54);
 			CloseRoundBracket167=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_parametersDefinition1993); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			CloseRoundBracket167_tree = (object)adaptor.Create(CloseRoundBracket167, retval);
+			CloseRoundBracket167_tree = (object)adaptor.Create(CloseRoundBracket167, "CloseRoundBracket167", retval);
 			adaptor.AddChild(root_0, CloseRoundBracket167_tree);
 			}
 
@@ -4723,7 +4723,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			paramName168=paramName();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, paramName168.Tree, paramName168, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, paramName168.Tree, paramName168, "paramName168", retval);
 			DebugLocation(294, 17);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:294:17: ( Equals atom )?
 			int alt44=2;
@@ -4745,7 +4745,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(294, 18);
 				Equals169=(IToken)Match(input,Equals,Follow._Equals_in_paramDef2013); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Equals169_tree = (object)adaptor.Create(Equals169, retval);
+				Equals169_tree = (object)adaptor.Create(Equals169, "Equals169", retval);
 				adaptor.AddChild(root_0, Equals169_tree);
 				}
 				DebugLocation(294, 25);
@@ -4753,7 +4753,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				atom170=atom();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, atom170.Tree, atom170, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, atom170.Tree, atom170, "atom170", retval);
 
 				}
 				break;
@@ -4858,13 +4858,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(298, 7);
 				Dollar171=(IToken)Match(input,Dollar,Follow._Dollar_in_paramName2034); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Dollar171_tree = (object)adaptor.Create(Dollar171, retval);
+				Dollar171_tree = (object)adaptor.Create(Dollar171, "Dollar171", retval);
 				adaptor.AddChild(root_0, Dollar171_tree);
 				}
 				DebugLocation(298, 14);
 				UnquotedString172=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_paramName2036); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				UnquotedString172_tree = (object)adaptor.Create(UnquotedString172, retval);
+				UnquotedString172_tree = (object)adaptor.Create(UnquotedString172, "UnquotedString172", retval);
 				adaptor.AddChild(root_0, UnquotedString172_tree);
 				}
 
@@ -4879,19 +4879,19 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(299, 7);
 				Ampersand173=(IToken)Match(input,Ampersand,Follow._Ampersand_in_paramName2044); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Ampersand173_tree = (object)adaptor.Create(Ampersand173, retval);
+				Ampersand173_tree = (object)adaptor.Create(Ampersand173, "Ampersand173", retval);
 				adaptor.AddChild(root_0, Ampersand173_tree);
 				}
 				DebugLocation(299, 17);
 				Dollar174=(IToken)Match(input,Dollar,Follow._Dollar_in_paramName2046); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Dollar174_tree = (object)adaptor.Create(Dollar174, retval);
+				Dollar174_tree = (object)adaptor.Create(Dollar174, "Dollar174", retval);
 				adaptor.AddChild(root_0, Dollar174_tree);
 				}
 				DebugLocation(299, 24);
 				UnquotedString175=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_paramName2048); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				UnquotedString175_tree = (object)adaptor.Create(UnquotedString175, retval);
+				UnquotedString175_tree = (object)adaptor.Create(UnquotedString175, "UnquotedString175", retval);
 				adaptor.AddChild(root_0, UnquotedString175_tree);
 				}
 
@@ -4966,7 +4966,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			expression176=expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, expression176.Tree, expression176, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, expression176.Tree, expression176, "expression176", retval);
 			DebugLocation(303, 18);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:303:18: ( ',' ! expression )*
 			try { DebugEnterSubRule(46);
@@ -4996,7 +4996,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					expression178=expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, expression178.Tree, expression178, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, expression178.Tree, expression178, "expression178", retval);
 
 					}
 					break;
@@ -5078,7 +5078,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			weakLogicalOr179=weakLogicalOr();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, weakLogicalOr179.Tree, weakLogicalOr179, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, weakLogicalOr179.Tree, weakLogicalOr179, "weakLogicalOr179", retval);
 
 			}
 
@@ -5149,7 +5149,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			weakLogicalXor180=weakLogicalXor();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, weakLogicalXor180.Tree, weakLogicalXor180, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, weakLogicalXor180.Tree, weakLogicalXor180, "weakLogicalXor180", retval);
 			DebugLocation(311, 22);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:311:22: ( Or weakLogicalXor )*
 			try { DebugEnterSubRule(47);
@@ -5182,7 +5182,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(311, 23);
 					Or181=(IToken)Match(input,Or,Follow._Or_in_weakLogicalOr2115); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					Or181_tree = (object)adaptor.Create(Or181, retval);
+					Or181_tree = (object)adaptor.Create(Or181, "Or181", retval);
 					adaptor.AddChild(root_0, Or181_tree);
 					}
 					DebugLocation(311, 26);
@@ -5190,7 +5190,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					weakLogicalXor182=weakLogicalXor();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, weakLogicalXor182.Tree, weakLogicalXor182, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, weakLogicalXor182.Tree, weakLogicalXor182, "weakLogicalXor182", retval);
 
 					}
 					break;
@@ -5275,7 +5275,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			weakLogicalAnd183=weakLogicalAnd();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, weakLogicalAnd183.Tree, weakLogicalAnd183, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, weakLogicalAnd183.Tree, weakLogicalAnd183, "weakLogicalAnd183", retval);
 			DebugLocation(315, 22);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:315:22: ( Xor weakLogicalAnd )*
 			try { DebugEnterSubRule(48);
@@ -5308,7 +5308,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(315, 23);
 					Xor184=(IToken)Match(input,Xor,Follow._Xor_in_weakLogicalXor2139); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					Xor184_tree = (object)adaptor.Create(Xor184, retval);
+					Xor184_tree = (object)adaptor.Create(Xor184, "Xor184", retval);
 					adaptor.AddChild(root_0, Xor184_tree);
 					}
 					DebugLocation(315, 27);
@@ -5316,7 +5316,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					weakLogicalAnd185=weakLogicalAnd();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, weakLogicalAnd185.Tree, weakLogicalAnd185, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, weakLogicalAnd185.Tree, weakLogicalAnd185, "weakLogicalAnd185", retval);
 
 					}
 					break;
@@ -5401,7 +5401,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			assignment186=assignment();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, assignment186.Tree, assignment186, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, assignment186.Tree, assignment186, "assignment186", retval);
 			DebugLocation(319, 18);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:319:18: ( And assignment )*
 			try { DebugEnterSubRule(49);
@@ -5434,7 +5434,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(319, 19);
 					And187=(IToken)Match(input,And,Follow._And_in_weakLogicalAnd2167); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					And187_tree = (object)adaptor.Create(And187, retval);
+					And187_tree = (object)adaptor.Create(And187, "And187", retval);
 					adaptor.AddChild(root_0, And187_tree);
 					}
 					DebugLocation(319, 23);
@@ -5442,7 +5442,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					assignment188=assignment();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, assignment188.Tree, assignment188, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, assignment188.Tree, assignment188, "assignment188", retval);
 
 					}
 					break;
@@ -5739,7 +5739,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				listVariables189=listVariables();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, listVariables189.Tree, listVariables189, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, listVariables189.Tree, listVariables189, "listVariables189", retval);
 				DebugLocation(323, 21);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:323:21: ( ( Equals | AsignmentOperator ) assignment )
 				DebugEnterAlt(1);
@@ -5751,7 +5751,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (input.LA(1)==AsignmentOperator||input.LA(1)==Equals)
 				{
 					input.Consume();
-					if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set190, retval));
+					if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set190, "set190", retval));
 					state.errorRecovery=false;state.failed=false;
 				}
 				else
@@ -5767,7 +5767,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				assignment191=assignment();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, assignment191.Tree, assignment191, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, assignment191.Tree, assignment191, "assignment191", retval);
 
 				}
 
@@ -5785,7 +5785,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				ternary192=ternary();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, ternary192.Tree, ternary192, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, ternary192.Tree, ternary192, "ternary192", retval);
 
 				}
 				break;
@@ -5886,7 +5886,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(328, 7);
 				List193=(IToken)Match(input,List,Follow._List_in_listVariables2226); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				List193_tree = (object)adaptor.Create(List193, retval);
+				List193_tree = (object)adaptor.Create(List193, "List193", retval);
 				adaptor.AddChild(root_0, List193_tree);
 				}
 				DebugLocation(328, 28);
@@ -5896,7 +5896,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				name195=name();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, name195.Tree, name195, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, name195.Tree, name195, "name195", retval);
 				DebugLocation(328, 35);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:328:35: ( ',' ! name )*
 				try { DebugEnterSubRule(51);
@@ -5926,7 +5926,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						name197=name();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, name197.Tree, name197, retval);
+						if (state.backtracking == 0) adaptor.AddChild(root_0, name197.Tree, name197, "name197", retval);
 
 						}
 						break;
@@ -5957,7 +5957,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				name199=name();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, name199.Tree, name199, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, name199.Tree, name199, "name199", retval);
 
 				}
 				break;
@@ -6049,11 +6049,11 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				logicalOr200=logicalOr();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, logicalOr200.Tree, logicalOr200, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, logicalOr200.Tree, logicalOr200, "logicalOr200", retval);
 				DebugLocation(333, 17);
 				QuestionMark201=(IToken)Match(input,QuestionMark,Follow._QuestionMark_in_ternary2270); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				QuestionMark201_tree = (object)adaptor.Create(QuestionMark201, retval);
+				QuestionMark201_tree = (object)adaptor.Create(QuestionMark201, "QuestionMark201", retval);
 				adaptor.AddChild(root_0, QuestionMark201_tree);
 				}
 				DebugLocation(333, 30);
@@ -6061,11 +6061,11 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				expression202=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression202.Tree, expression202, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression202.Tree, expression202, "expression202", retval);
 				DebugLocation(333, 41);
 				Colon203=(IToken)Match(input,Colon,Follow._Colon_in_ternary2274); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Colon203_tree = (object)adaptor.Create(Colon203, retval);
+				Colon203_tree = (object)adaptor.Create(Colon203, "Colon203", retval);
 				adaptor.AddChild(root_0, Colon203_tree);
 				}
 				DebugLocation(333, 47);
@@ -6073,7 +6073,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				expression204=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression204.Tree, expression204, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression204.Tree, expression204, "expression204", retval);
 
 				}
 				break;
@@ -6088,7 +6088,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				logicalOr205=logicalOr();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, logicalOr205.Tree, logicalOr205, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, logicalOr205.Tree, logicalOr205, "logicalOr205", retval);
 
 				}
 				break;
@@ -6161,7 +6161,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			logicalAnd206=logicalAnd();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, logicalAnd206.Tree, logicalAnd206, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, logicalAnd206.Tree, logicalAnd206, "logicalAnd206", retval);
 			DebugLocation(338, 18);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:338:18: ( LogicalOr logicalAnd )*
 			try { DebugEnterSubRule(54);
@@ -6187,7 +6187,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(338, 19);
 					LogicalOr207=(IToken)Match(input,LogicalOr,Follow._LogicalOr_in_logicalOr2308); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					LogicalOr207_tree = (object)adaptor.Create(LogicalOr207, retval);
+					LogicalOr207_tree = (object)adaptor.Create(LogicalOr207, "LogicalOr207", retval);
 					adaptor.AddChild(root_0, LogicalOr207_tree);
 					}
 					DebugLocation(338, 29);
@@ -6195,7 +6195,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					logicalAnd208=logicalAnd();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, logicalAnd208.Tree, logicalAnd208, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, logicalAnd208.Tree, logicalAnd208, "logicalAnd208", retval);
 
 					}
 					break;
@@ -6280,7 +6280,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			bitwiseOr209=bitwiseOr();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, bitwiseOr209.Tree, bitwiseOr209, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, bitwiseOr209.Tree, bitwiseOr209, "bitwiseOr209", retval);
 			DebugLocation(342, 17);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:342:17: ( LogicalAnd bitwiseOr )*
 			try { DebugEnterSubRule(55);
@@ -6306,7 +6306,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(342, 18);
 					LogicalAnd210=(IToken)Match(input,LogicalAnd,Follow._LogicalAnd_in_logicalAnd2332); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					LogicalAnd210_tree = (object)adaptor.Create(LogicalAnd210, retval);
+					LogicalAnd210_tree = (object)adaptor.Create(LogicalAnd210, "LogicalAnd210", retval);
 					adaptor.AddChild(root_0, LogicalAnd210_tree);
 					}
 					DebugLocation(342, 29);
@@ -6314,7 +6314,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					bitwiseOr211=bitwiseOr();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, bitwiseOr211.Tree, bitwiseOr211, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, bitwiseOr211.Tree, bitwiseOr211, "bitwiseOr211", retval);
 
 					}
 					break;
@@ -6399,7 +6399,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			bitWiseAnd212=bitWiseAnd();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, bitWiseAnd212.Tree, bitWiseAnd212, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, bitWiseAnd212.Tree, bitWiseAnd212, "bitWiseAnd212", retval);
 			DebugLocation(346, 18);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:346:18: ( Pipe bitWiseAnd )*
 			try { DebugEnterSubRule(56);
@@ -6425,7 +6425,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(346, 19);
 					Pipe213=(IToken)Match(input,Pipe,Follow._Pipe_in_bitwiseOr2360); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					Pipe213_tree = (object)adaptor.Create(Pipe213, retval);
+					Pipe213_tree = (object)adaptor.Create(Pipe213, "Pipe213", retval);
 					adaptor.AddChild(root_0, Pipe213_tree);
 					}
 					DebugLocation(346, 24);
@@ -6433,7 +6433,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					bitWiseAnd214=bitWiseAnd();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, bitWiseAnd214.Tree, bitWiseAnd214, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, bitWiseAnd214.Tree, bitWiseAnd214, "bitWiseAnd214", retval);
 
 					}
 					break;
@@ -6518,7 +6518,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			equalityCheck215=equalityCheck();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, equalityCheck215.Tree, equalityCheck215, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, equalityCheck215.Tree, equalityCheck215, "equalityCheck215", retval);
 			DebugLocation(350, 21);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:350:21: ( Ampersand equalityCheck )*
 			try { DebugEnterSubRule(57);
@@ -6544,7 +6544,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(350, 22);
 					Ampersand216=(IToken)Match(input,Ampersand,Follow._Ampersand_in_bitWiseAnd2384); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					Ampersand216_tree = (object)adaptor.Create(Ampersand216, retval);
+					Ampersand216_tree = (object)adaptor.Create(Ampersand216, "Ampersand216", retval);
 					adaptor.AddChild(root_0, Ampersand216_tree);
 					}
 					DebugLocation(350, 32);
@@ -6552,7 +6552,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					equalityCheck217=equalityCheck();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, equalityCheck217.Tree, equalityCheck217, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, equalityCheck217.Tree, equalityCheck217, "equalityCheck217", retval);
 
 					}
 					break;
@@ -6637,7 +6637,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			comparisionCheck218=comparisionCheck();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, comparisionCheck218.Tree, comparisionCheck218, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, comparisionCheck218.Tree, comparisionCheck218, "comparisionCheck218", retval);
 			DebugLocation(354, 24);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:354:24: ( EqualityOperator comparisionCheck )?
 			int alt58=2;
@@ -6659,7 +6659,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(354, 25);
 				EqualityOperator219=(IToken)Match(input,EqualityOperator,Follow._EqualityOperator_in_equalityCheck2408); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				EqualityOperator219_tree = (object)adaptor.Create(EqualityOperator219, retval);
+				EqualityOperator219_tree = (object)adaptor.Create(EqualityOperator219, "EqualityOperator219", retval);
 				adaptor.AddChild(root_0, EqualityOperator219_tree);
 				}
 				DebugLocation(354, 42);
@@ -6667,7 +6667,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				comparisionCheck220=comparisionCheck();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, comparisionCheck220.Tree, comparisionCheck220, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, comparisionCheck220.Tree, comparisionCheck220, "comparisionCheck220", retval);
 
 				}
 				break;
@@ -6745,7 +6745,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			bitWiseShift221=bitWiseShift();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, bitWiseShift221.Tree, bitWiseShift221, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, bitWiseShift221.Tree, bitWiseShift221, "bitWiseShift221", retval);
 			DebugLocation(358, 20);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:358:20: ( ComparisionOperator bitWiseShift )?
 			int alt59=2;
@@ -6767,7 +6767,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(358, 21);
 				ComparisionOperator222=(IToken)Match(input,ComparisionOperator,Follow._ComparisionOperator_in_comparisionCheck2436); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				ComparisionOperator222_tree = (object)adaptor.Create(ComparisionOperator222, retval);
+				ComparisionOperator222_tree = (object)adaptor.Create(ComparisionOperator222, "ComparisionOperator222", retval);
 				adaptor.AddChild(root_0, ComparisionOperator222_tree);
 				}
 				DebugLocation(358, 41);
@@ -6775,7 +6775,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				bitWiseShift223=bitWiseShift();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, bitWiseShift223.Tree, bitWiseShift223, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, bitWiseShift223.Tree, bitWiseShift223, "bitWiseShift223", retval);
 
 				}
 				break;
@@ -6853,7 +6853,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			addition224=addition();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, addition224.Tree, addition224, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, addition224.Tree, addition224, "addition224", retval);
 			DebugLocation(362, 16);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:362:16: ( ShiftOperator addition )*
 			try { DebugEnterSubRule(60);
@@ -6879,7 +6879,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(362, 17);
 					ShiftOperator225=(IToken)Match(input,ShiftOperator,Follow._ShiftOperator_in_bitWiseShift2460); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					ShiftOperator225_tree = (object)adaptor.Create(ShiftOperator225, retval);
+					ShiftOperator225_tree = (object)adaptor.Create(ShiftOperator225, "ShiftOperator225", retval);
 					adaptor.AddChild(root_0, ShiftOperator225_tree);
 					}
 					DebugLocation(362, 31);
@@ -6887,7 +6887,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					addition226=addition();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, addition226.Tree, addition226, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, addition226.Tree, addition226, "addition226", retval);
 
 					}
 					break;
@@ -6972,7 +6972,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			multiplication227=multiplication();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, multiplication227.Tree, multiplication227, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, multiplication227.Tree, multiplication227, "multiplication227", retval);
 			DebugLocation(366, 22);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:366:22: ( ( Plus | Minus | Dot ) multiplication )*
 			try { DebugEnterSubRule(61);
@@ -7001,7 +7001,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					if (input.LA(1)==Dot||input.LA(1)==Minus||input.LA(1)==Plus)
 					{
 						input.Consume();
-						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set228, retval));
+						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set228, "set228", retval));
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -7017,7 +7017,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					multiplication229=multiplication();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, multiplication229.Tree, multiplication229, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, multiplication229.Tree, multiplication229, "multiplication229", retval);
 
 					}
 					break;
@@ -7102,7 +7102,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			logicalNot230=logicalNot();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, logicalNot230.Tree, logicalNot230, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, logicalNot230.Tree, logicalNot230, "logicalNot230", retval);
 			DebugLocation(370, 18);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:370:18: ( ( Asterisk | Forwardslash | Percent ) logicalNot )*
 			try { DebugEnterSubRule(62);
@@ -7131,7 +7131,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					if (input.LA(1)==Asterisk||input.LA(1)==Forwardslash||input.LA(1)==Percent)
 					{
 						input.Consume();
-						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set231, retval));
+						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set231, "set231", retval));
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -7147,7 +7147,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					logicalNot232=logicalNot();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, logicalNot232.Tree, logicalNot232, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, logicalNot232.Tree, logicalNot232, "logicalNot232", retval);
 
 					}
 					break;
@@ -7253,7 +7253,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(374, 7);
 				Bang233=(IToken)Match(input,Bang,Follow._Bang_in_logicalNot2553); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Bang233_tree = (object)adaptor.Create(Bang233, retval);
+				Bang233_tree = (object)adaptor.Create(Bang233, "Bang233", retval);
 				adaptor.AddChild(root_0, Bang233_tree);
 				}
 				DebugLocation(374, 12);
@@ -7261,7 +7261,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				logicalNot234=logicalNot();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, logicalNot234.Tree, logicalNot234, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, logicalNot234.Tree, logicalNot234, "logicalNot234", retval);
 
 				}
 				break;
@@ -7276,7 +7276,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				instanceOf235=instanceOf();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, instanceOf235.Tree, instanceOf235, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, instanceOf235.Tree, instanceOf235, "instanceOf235", retval);
 
 				}
 				break;
@@ -7349,7 +7349,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			negateOrCast236=negateOrCast();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, negateOrCast236.Tree, negateOrCast236, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, negateOrCast236.Tree, negateOrCast236, "negateOrCast236", retval);
 			DebugLocation(379, 20);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:379:20: ( Instanceof negateOrCast )?
 			int alt64=2;
@@ -7371,7 +7371,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(379, 21);
 				Instanceof237=(IToken)Match(input,Instanceof,Follow._Instanceof_in_instanceOf2583); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Instanceof237_tree = (object)adaptor.Create(Instanceof237, retval);
+				Instanceof237_tree = (object)adaptor.Create(Instanceof237, "Instanceof237", retval);
 				adaptor.AddChild(root_0, Instanceof237_tree);
 				}
 				DebugLocation(379, 32);
@@ -7379,7 +7379,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				negateOrCast238=negateOrCast();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, negateOrCast238.Tree, negateOrCast238, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, negateOrCast238.Tree, negateOrCast238, "negateOrCast238", retval);
 
 				}
 				break;
@@ -7532,7 +7532,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (input.LA(1)==Minus||input.LA(1)==SuppressWarnings||input.LA(1)==Tilde)
 				{
 					input.Consume();
-					if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set239, retval));
+					if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set239, "set239", retval));
 					state.errorRecovery=false;state.failed=false;
 				}
 				else
@@ -7548,7 +7548,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				increment240=increment();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, increment240.Tree, increment240, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, increment240.Tree, increment240, "increment240", retval);
 
 				}
 				break;
@@ -7561,19 +7561,19 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(384, 7);
 				OpenRoundBracket241=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_negateOrCast2624); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				OpenRoundBracket241_tree = (object)adaptor.Create(OpenRoundBracket241, retval);
+				OpenRoundBracket241_tree = (object)adaptor.Create(OpenRoundBracket241, "OpenRoundBracket241", retval);
 				adaptor.AddChild(root_0, OpenRoundBracket241_tree);
 				}
 				DebugLocation(384, 24);
 				PrimitiveType242=(IToken)Match(input,PrimitiveType,Follow._PrimitiveType_in_negateOrCast2626); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				PrimitiveType242_tree = (object)adaptor.Create(PrimitiveType242, retval);
+				PrimitiveType242_tree = (object)adaptor.Create(PrimitiveType242, "PrimitiveType242", retval);
 				adaptor.AddChild(root_0, PrimitiveType242_tree);
 				}
 				DebugLocation(384, 38);
 				CloseRoundBracket243=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_negateOrCast2628); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				CloseRoundBracket243_tree = (object)adaptor.Create(CloseRoundBracket243, retval);
+				CloseRoundBracket243_tree = (object)adaptor.Create(CloseRoundBracket243, "CloseRoundBracket243", retval);
 				adaptor.AddChild(root_0, CloseRoundBracket243_tree);
 				}
 				DebugLocation(384, 56);
@@ -7581,7 +7581,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				increment244=increment();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, increment244.Tree, increment244, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, increment244.Tree, increment244, "increment244", retval);
 
 				}
 				break;
@@ -7598,7 +7598,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				weakLogicalAnd246=weakLogicalAnd();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, weakLogicalAnd246.Tree, weakLogicalAnd246, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, weakLogicalAnd246.Tree, weakLogicalAnd246, "weakLogicalAnd246", retval);
 				DebugLocation(385, 57);
 				CloseRoundBracket247=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_negateOrCast2643); if (state.failed) return retval;
 
@@ -7615,7 +7615,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				increment248=increment();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, increment248.Tree, increment248, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, increment248.Tree, increment248, "increment248", retval);
 
 				}
 				break;
@@ -7892,7 +7892,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(390, 7);
 				IncrementOperator249=(IToken)Match(input,IncrementOperator,Follow._IncrementOperator_in_increment2669); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				IncrementOperator249_tree = (object)adaptor.Create(IncrementOperator249, retval);
+				IncrementOperator249_tree = (object)adaptor.Create(IncrementOperator249, "IncrementOperator249", retval);
 				adaptor.AddChild(root_0, IncrementOperator249_tree);
 				}
 				DebugLocation(390, 25);
@@ -7900,7 +7900,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				name250=name();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, name250.Tree, name250, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, name250.Tree, name250, "name250", retval);
 
 				}
 				break;
@@ -7915,11 +7915,11 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				name251=name();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, name251.Tree, name251, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, name251.Tree, name251, "name251", retval);
 				DebugLocation(391, 12);
 				IncrementOperator252=(IToken)Match(input,IncrementOperator,Follow._IncrementOperator_in_increment2681); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				IncrementOperator252_tree = (object)adaptor.Create(IncrementOperator252, retval);
+				IncrementOperator252_tree = (object)adaptor.Create(IncrementOperator252, "IncrementOperator252", retval);
 				adaptor.AddChild(root_0, IncrementOperator252_tree);
 				}
 
@@ -7936,7 +7936,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				newOrClone253=newOrClone();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, newOrClone253.Tree, newOrClone253, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, newOrClone253.Tree, newOrClone253, "newOrClone253", retval);
 
 				}
 				break;
@@ -8051,7 +8051,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(396, 7);
 				New254=(IToken)Match(input,New,Follow._New_in_newOrClone2706); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				New254_tree = (object)adaptor.Create(New254, retval);
+				New254_tree = (object)adaptor.Create(New254, "New254", retval);
 				adaptor.AddChild(root_0, New254_tree);
 				}
 				DebugLocation(396, 11);
@@ -8059,7 +8059,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				nameOrFunctionCall255=nameOrFunctionCall();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, nameOrFunctionCall255.Tree, nameOrFunctionCall255, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, nameOrFunctionCall255.Tree, nameOrFunctionCall255, "nameOrFunctionCall255", retval);
 
 				}
 				break;
@@ -8072,7 +8072,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(397, 7);
 				Clone256=(IToken)Match(input,Clone,Follow._Clone_in_newOrClone2716); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Clone256_tree = (object)adaptor.Create(Clone256, retval);
+				Clone256_tree = (object)adaptor.Create(Clone256, "Clone256", retval);
 				adaptor.AddChild(root_0, Clone256_tree);
 				}
 				DebugLocation(397, 13);
@@ -8080,7 +8080,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				name257=name();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, name257.Tree, name257, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, name257.Tree, name257, "name257", retval);
 
 				}
 				break;
@@ -8095,7 +8095,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				atomOrReference258=atomOrReference();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, atomOrReference258.Tree, atomOrReference258, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, atomOrReference258.Tree, atomOrReference258, "atomOrReference258", retval);
 
 				}
 				break;
@@ -8189,7 +8189,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				atom259=atom();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, atom259.Tree, atom259, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, atom259.Tree, atom259, "atom259", retval);
 
 				}
 				break;
@@ -8204,7 +8204,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				reference260=reference();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, reference260.Tree, reference260, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, reference260.Tree, reference260, "reference260", retval);
 
 				}
 				break;
@@ -8281,13 +8281,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(407, 7);
 			Array261=(IToken)Match(input,Array,Follow._Array_in_arrayDeclaration2768); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			Array261_tree = (object)adaptor.Create(Array261, retval);
+			Array261_tree = (object)adaptor.Create(Array261, "Array261", retval);
 			adaptor.AddChild(root_0, Array261_tree);
 			}
 			DebugLocation(407, 13);
 			OpenRoundBracket262=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_arrayDeclaration2770); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			OpenRoundBracket262_tree = (object)adaptor.Create(OpenRoundBracket262, retval);
+			OpenRoundBracket262_tree = (object)adaptor.Create(OpenRoundBracket262, "OpenRoundBracket262", retval);
 			adaptor.AddChild(root_0, OpenRoundBracket262_tree);
 			}
 			DebugLocation(407, 30);
@@ -8313,7 +8313,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				arrayEntry263=arrayEntry();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, arrayEntry263.Tree, arrayEntry263, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, arrayEntry263.Tree, arrayEntry263, "arrayEntry263", retval);
 				DebugLocation(407, 42);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:407:42: ( Comma arrayEntry )*
 				try { DebugEnterSubRule(69);
@@ -8339,7 +8339,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						DebugLocation(407, 43);
 						Comma264=(IToken)Match(input,Comma,Follow._Comma_in_arrayDeclaration2776); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						Comma264_tree = (object)adaptor.Create(Comma264, retval);
+						Comma264_tree = (object)adaptor.Create(Comma264, "Comma264", retval);
 						adaptor.AddChild(root_0, Comma264_tree);
 						}
 						DebugLocation(407, 49);
@@ -8347,7 +8347,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						arrayEntry265=arrayEntry();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, arrayEntry265.Tree, arrayEntry265, retval);
+						if (state.backtracking == 0) adaptor.AddChild(root_0, arrayEntry265.Tree, arrayEntry265, "arrayEntry265", retval);
 
 						}
 						break;
@@ -8372,7 +8372,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(407, 64);
 			CloseRoundBracket266=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_arrayDeclaration2784); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			CloseRoundBracket266_tree = (object)adaptor.Create(CloseRoundBracket266, retval);
+			CloseRoundBracket266_tree = (object)adaptor.Create(CloseRoundBracket266, "CloseRoundBracket266", retval);
 			adaptor.AddChild(root_0, CloseRoundBracket266_tree);
 			}
 
@@ -8464,7 +8464,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				keyValuePair267=keyValuePair();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, keyValuePair267.Tree, keyValuePair267, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, keyValuePair267.Tree, keyValuePair267, "keyValuePair267", retval);
 
 				}
 				break;
@@ -8477,7 +8477,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				expression268=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression268.Tree, expression268, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression268.Tree, expression268, "expression268", retval);
 
 				}
 				break;
@@ -8560,11 +8560,11 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			expression269=expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, expression269.Tree, expression269, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, expression269.Tree, expression269, "expression269", retval);
 			DebugLocation(415, 19);
 			ArrayAssign270=(IToken)Match(input,ArrayAssign,Follow._ArrayAssign_in_keyValuePair2827); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			ArrayAssign270_tree = (object)adaptor.Create(ArrayAssign270, retval);
+			ArrayAssign270_tree = (object)adaptor.Create(ArrayAssign270, "ArrayAssign270", retval);
 			adaptor.AddChild(root_0, ArrayAssign270_tree);
 			}
 			DebugLocation(415, 31);
@@ -8572,7 +8572,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			expression271=expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, expression271.Tree, expression271, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, expression271.Tree, expression271, "expression271", retval);
 
 			}
 
@@ -8705,7 +8705,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(418, 7);
 				SingleQuotedString272=(IToken)Match(input,SingleQuotedString,Follow._SingleQuotedString_in_atom2842); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				SingleQuotedString272_tree = (object)adaptor.Create(SingleQuotedString272, retval);
+				SingleQuotedString272_tree = (object)adaptor.Create(SingleQuotedString272, "SingleQuotedString272", retval);
 				adaptor.AddChild(root_0, SingleQuotedString272_tree);
 				}
 
@@ -8720,7 +8720,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(418, 28);
 				DoubleQuotedString273=(IToken)Match(input,DoubleQuotedString,Follow._DoubleQuotedString_in_atom2846); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				DoubleQuotedString273_tree = (object)adaptor.Create(DoubleQuotedString273, retval);
+				DoubleQuotedString273_tree = (object)adaptor.Create(DoubleQuotedString273, "DoubleQuotedString273", retval);
 				adaptor.AddChild(root_0, DoubleQuotedString273_tree);
 				}
 
@@ -8735,7 +8735,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(418, 49);
 				HereDoc274=(IToken)Match(input,HereDoc,Follow._HereDoc_in_atom2850); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				HereDoc274_tree = (object)adaptor.Create(HereDoc274, retval);
+				HereDoc274_tree = (object)adaptor.Create(HereDoc274, "HereDoc274", retval);
 				adaptor.AddChild(root_0, HereDoc274_tree);
 				}
 
@@ -8750,7 +8750,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(418, 59);
 				Integer275=(IToken)Match(input,Integer,Follow._Integer_in_atom2854); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Integer275_tree = (object)adaptor.Create(Integer275, retval);
+				Integer275_tree = (object)adaptor.Create(Integer275, "Integer275", retval);
 				adaptor.AddChild(root_0, Integer275_tree);
 				}
 
@@ -8765,7 +8765,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(418, 69);
 				Real276=(IToken)Match(input,Real,Follow._Real_in_atom2858); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Real276_tree = (object)adaptor.Create(Real276, retval);
+				Real276_tree = (object)adaptor.Create(Real276, "Real276", retval);
 				adaptor.AddChild(root_0, Real276_tree);
 				}
 
@@ -8780,7 +8780,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(418, 76);
 				Boolean277=(IToken)Match(input,Boolean,Follow._Boolean_in_atom2862); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Boolean277_tree = (object)adaptor.Create(Boolean277, retval);
+				Boolean277_tree = (object)adaptor.Create(Boolean277, "Boolean277", retval);
 				adaptor.AddChild(root_0, Boolean277_tree);
 				}
 
@@ -8797,7 +8797,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				arrayDeclaration278=arrayDeclaration();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, arrayDeclaration278.Tree, arrayDeclaration278, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, arrayDeclaration278.Tree, arrayDeclaration278, "arrayDeclaration278", retval);
 
 				}
 				break;
@@ -8891,7 +8891,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(423, 7);
 				Ampersand279=(IToken)Match(input,Ampersand,Follow._Ampersand_in_reference2884); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Ampersand279_tree = (object)adaptor.Create(Ampersand279, retval);
+				Ampersand279_tree = (object)adaptor.Create(Ampersand279, "Ampersand279", retval);
 				adaptor.AddChild(root_0, Ampersand279_tree);
 				}
 				DebugLocation(423, 17);
@@ -8899,7 +8899,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				nameOrFunctionCall280=nameOrFunctionCall();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, nameOrFunctionCall280.Tree, nameOrFunctionCall280, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, nameOrFunctionCall280.Tree, nameOrFunctionCall280, "nameOrFunctionCall280", retval);
 
 				}
 				break;
@@ -8914,7 +8914,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				nameOrFunctionCall281=nameOrFunctionCall();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, nameOrFunctionCall281.Tree, nameOrFunctionCall281, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, nameOrFunctionCall281.Tree, nameOrFunctionCall281, "nameOrFunctionCall281", retval);
 
 				}
 				break;
@@ -9172,11 +9172,11 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				name282=name();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, name282.Tree, name282, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, name282.Tree, name282, "name282", retval);
 				DebugLocation(428, 12);
 				OpenRoundBracket283=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_nameOrFunctionCall2913); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				OpenRoundBracket283_tree = (object)adaptor.Create(OpenRoundBracket283, retval);
+				OpenRoundBracket283_tree = (object)adaptor.Create(OpenRoundBracket283, "OpenRoundBracket283", retval);
 				adaptor.AddChild(root_0, OpenRoundBracket283_tree);
 				}
 				DebugLocation(428, 29);
@@ -9202,7 +9202,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					expression284=expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, expression284.Tree, expression284, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, expression284.Tree, expression284, "expression284", retval);
 					DebugLocation(428, 41);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:428:41: ( Comma expression )*
 					try { DebugEnterSubRule(74);
@@ -9228,7 +9228,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 							DebugLocation(428, 42);
 							Comma285=(IToken)Match(input,Comma,Follow._Comma_in_nameOrFunctionCall2919); if (state.failed) return retval;
 							if (state.backtracking == 0) {
-							Comma285_tree = (object)adaptor.Create(Comma285, retval);
+							Comma285_tree = (object)adaptor.Create(Comma285, "Comma285", retval);
 							adaptor.AddChild(root_0, Comma285_tree);
 							}
 							DebugLocation(428, 48);
@@ -9236,7 +9236,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 							expression286=expression();
 							PopFollow();
 							if (state.failed) return retval;
-							if (state.backtracking == 0) adaptor.AddChild(root_0, expression286.Tree, expression286, retval);
+							if (state.backtracking == 0) adaptor.AddChild(root_0, expression286.Tree, expression286, "expression286", retval);
 
 							}
 							break;
@@ -9261,7 +9261,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(428, 63);
 				CloseRoundBracket287=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_nameOrFunctionCall2927); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				CloseRoundBracket287_tree = (object)adaptor.Create(CloseRoundBracket287, retval);
+				CloseRoundBracket287_tree = (object)adaptor.Create(CloseRoundBracket287, "CloseRoundBracket287", retval);
 				adaptor.AddChild(root_0, CloseRoundBracket287_tree);
 				}
 
@@ -9278,7 +9278,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				name288=name();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, name288.Tree, name288, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, name288.Tree, name288, "name288", retval);
 
 				}
 				break;
@@ -9441,7 +9441,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				staticMemberAccess289=staticMemberAccess();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, staticMemberAccess289.Tree, staticMemberAccess289, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, staticMemberAccess289.Tree, staticMemberAccess289, "staticMemberAccess289", retval);
 
 				}
 				break;
@@ -9456,7 +9456,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				memberAccess290=memberAccess();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, memberAccess290.Tree, memberAccess290, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, memberAccess290.Tree, memberAccess290, "memberAccess290", retval);
 
 				}
 				break;
@@ -9471,7 +9471,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				variable291=variable();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, variable291.Tree, variable291, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, variable291.Tree, variable291, "variable291", retval);
 
 				}
 				break;
@@ -9543,13 +9543,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(438, 7);
 			UnquotedString292=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_staticMemberAccess2984); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			UnquotedString292_tree = (object)adaptor.Create(UnquotedString292, retval);
+			UnquotedString292_tree = (object)adaptor.Create(UnquotedString292, "UnquotedString292", retval);
 			adaptor.AddChild(root_0, UnquotedString292_tree);
 			}
 			DebugLocation(438, 22);
 			string_literal293=(IToken)Match(input,ClassMember,Follow._ClassMember_in_staticMemberAccess2986); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal293_tree = (object)adaptor.Create(string_literal293, retval);
+			string_literal293_tree = (object)adaptor.Create(string_literal293, "string_literal293", retval);
 			adaptor.AddChild(root_0, string_literal293_tree);
 			}
 			DebugLocation(438, 27);
@@ -9557,7 +9557,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			variable294=variable();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, variable294.Tree, variable294, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, variable294.Tree, variable294, "variable294", retval);
 
 			}
 
@@ -9634,7 +9634,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			variable295=variable();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, variable295.Tree, variable295, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, variable295.Tree, variable295, "variable295", retval);
 			DebugLocation(443, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Php\\Php.g:443:9: ( OpenSquareBracket expression CloseSquareBracket !| '->' UnquotedString )*
 			try { DebugEnterSubRule(78);
@@ -9664,7 +9664,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(443, 11);
 					OpenSquareBracket296=(IToken)Match(input,OpenSquareBracket,Follow._OpenSquareBracket_in_memberAccess3018); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					OpenSquareBracket296_tree = (object)adaptor.Create(OpenSquareBracket296, retval);
+					OpenSquareBracket296_tree = (object)adaptor.Create(OpenSquareBracket296, "OpenSquareBracket296", retval);
 					adaptor.AddChild(root_0, OpenSquareBracket296_tree);
 					}
 					DebugLocation(443, 29);
@@ -9672,7 +9672,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					expression297=expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, expression297.Tree, expression297, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, expression297.Tree, expression297, "expression297", retval);
 					DebugLocation(443, 58);
 					CloseSquareBracket298=(IToken)Match(input,CloseSquareBracket,Follow._CloseSquareBracket_in_memberAccess3022); if (state.failed) return retval;
 
@@ -9685,13 +9685,13 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(444, 11);
 					string_literal299=(IToken)Match(input,InstanceMember,Follow._InstanceMember_in_memberAccess3035); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					string_literal299_tree = (object)adaptor.Create(string_literal299, retval);
+					string_literal299_tree = (object)adaptor.Create(string_literal299, "string_literal299", retval);
 					adaptor.AddChild(root_0, string_literal299_tree);
 					}
 					DebugLocation(444, 16);
 					UnquotedString300=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_memberAccess3037); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					UnquotedString300_tree = (object)adaptor.Create(UnquotedString300, retval);
+					UnquotedString300_tree = (object)adaptor.Create(UnquotedString300, "UnquotedString300", retval);
 					adaptor.AddChild(root_0, UnquotedString300_tree);
 					}
 
@@ -9800,7 +9800,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(448, 7);
 				Dollar301=(IToken)Match(input,Dollar,Follow._Dollar_in_variable3060); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				Dollar301_tree = (object)adaptor.Create(Dollar301, retval);
+				Dollar301_tree = (object)adaptor.Create(Dollar301, "Dollar301", retval);
 				adaptor.AddChild(root_0, Dollar301_tree);
 				}
 				DebugLocation(448, 14);
@@ -9808,7 +9808,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				variable302=variable();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, variable302.Tree, variable302, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, variable302.Tree, variable302, "variable302", retval);
 
 				}
 				break;
@@ -9821,7 +9821,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(449, 7);
 				UnquotedString303=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_variable3070); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				UnquotedString303_tree = (object)adaptor.Create(UnquotedString303, retval);
+				UnquotedString303_tree = (object)adaptor.Create(UnquotedString303, "UnquotedString303", retval);
 				adaptor.AddChild(root_0, UnquotedString303_tree);
 				}
 

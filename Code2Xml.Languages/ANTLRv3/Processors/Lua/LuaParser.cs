@@ -10,7 +10,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g 2013-11-25 15:11:39
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g 2013-12-02 17:04:41
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -202,7 +202,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					stat1=stat();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, stat1.Tree, stat1, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, stat1.Tree, stat1, "stat1", retval);
 					DebugLocation(27, 15);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:15: ( ';' )?
 					int alt1=2;
@@ -224,7 +224,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						DebugLocation(27, 16);
 						char_literal2=(IToken)Match(input,33,Follow._33_in_chunk68); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						char_literal2_tree = (object)adaptor.Create(char_literal2, retval);
+						char_literal2_tree = (object)adaptor.Create(char_literal2, "char_literal2", retval);
 						adaptor.AddChild(root_0, char_literal2_tree);
 						}
 
@@ -271,7 +271,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				laststat3=laststat();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, laststat3.Tree, laststat3, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, laststat3.Tree, laststat3, "laststat3", retval);
 				DebugLocation(27, 34);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:34: ( ';' )?
 				int alt3=2;
@@ -293,7 +293,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(27, 35);
 					char_literal4=(IToken)Match(input,33,Follow._33_in_chunk78); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal4_tree = (object)adaptor.Create(char_literal4, retval);
+					char_literal4_tree = (object)adaptor.Create(char_literal4, "char_literal4", retval);
 					adaptor.AddChild(root_0, char_literal4_tree);
 					}
 
@@ -372,7 +372,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			chunk5=chunk();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, chunk5.Tree, chunk5, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, chunk5.Tree, chunk5, "chunk5", retval);
 
 			}
 
@@ -647,11 +647,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				varlist16=varlist1();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, varlist16.Tree, varlist16, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, varlist16.Tree, varlist16, "varlist16", retval);
 				DebugLocation(31, 18);
 				char_literal7=(IToken)Match(input,36,Follow._36_in_stat101); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal7_tree = (object)adaptor.Create(char_literal7, retval);
+				char_literal7_tree = (object)adaptor.Create(char_literal7, "char_literal7", retval);
 				adaptor.AddChild(root_0, char_literal7_tree);
 				}
 				DebugLocation(31, 22);
@@ -659,7 +659,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				explist18=explist1();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, explist18.Tree, explist18, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, explist18.Tree, explist18, "explist18", retval);
 
 				}
 				break;
@@ -674,7 +674,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				functioncall9=functioncall();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, functioncall9.Tree, functioncall9, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, functioncall9.Tree, functioncall9, "functioncall9", retval);
 
 				}
 				break;
@@ -687,7 +687,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(33, 5);
 				string_literal10=(IToken)Match(input,45,Follow._45_in_stat121); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal10_tree = (object)adaptor.Create(string_literal10, retval);
+				string_literal10_tree = (object)adaptor.Create(string_literal10, "string_literal10", retval);
 				adaptor.AddChild(root_0, string_literal10_tree);
 				}
 				DebugLocation(33, 10);
@@ -695,11 +695,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				block11=block();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block11.Tree, block11, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block11.Tree, block11, "block11", retval);
 				DebugLocation(33, 16);
 				string_literal12=(IToken)Match(input,48,Follow._48_in_stat125); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal12_tree = (object)adaptor.Create(string_literal12, retval);
+				string_literal12_tree = (object)adaptor.Create(string_literal12, "string_literal12", retval);
 				adaptor.AddChild(root_0, string_literal12_tree);
 				}
 
@@ -714,7 +714,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(34, 5);
 				string_literal13=(IToken)Match(input,63,Follow._63_in_stat134); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal13_tree = (object)adaptor.Create(string_literal13, retval);
+				string_literal13_tree = (object)adaptor.Create(string_literal13, "string_literal13", retval);
 				adaptor.AddChild(root_0, string_literal13_tree);
 				}
 				DebugLocation(34, 13);
@@ -722,11 +722,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				exp14=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp14.Tree, exp14, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp14.Tree, exp14, "exp14", retval);
 				DebugLocation(34, 17);
 				string_literal15=(IToken)Match(input,45,Follow._45_in_stat138); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal15_tree = (object)adaptor.Create(string_literal15, retval);
+				string_literal15_tree = (object)adaptor.Create(string_literal15, "string_literal15", retval);
 				adaptor.AddChild(root_0, string_literal15_tree);
 				}
 				DebugLocation(34, 22);
@@ -734,11 +734,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				block16=block();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block16.Tree, block16, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block16.Tree, block16, "block16", retval);
 				DebugLocation(34, 28);
 				string_literal17=(IToken)Match(input,48,Follow._48_in_stat142); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal17_tree = (object)adaptor.Create(string_literal17, retval);
+				string_literal17_tree = (object)adaptor.Create(string_literal17, "string_literal17", retval);
 				adaptor.AddChild(root_0, string_literal17_tree);
 				}
 
@@ -753,7 +753,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(35, 5);
 				string_literal18=(IToken)Match(input,58,Follow._58_in_stat151); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal18_tree = (object)adaptor.Create(string_literal18, retval);
+				string_literal18_tree = (object)adaptor.Create(string_literal18, "string_literal18", retval);
 				adaptor.AddChild(root_0, string_literal18_tree);
 				}
 				DebugLocation(35, 14);
@@ -761,11 +761,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				block19=block();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block19.Tree, block19, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block19.Tree, block19, "block19", retval);
 				DebugLocation(35, 20);
 				string_literal20=(IToken)Match(input,62,Follow._62_in_stat155); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal20_tree = (object)adaptor.Create(string_literal20, retval);
+				string_literal20_tree = (object)adaptor.Create(string_literal20, "string_literal20", retval);
 				adaptor.AddChild(root_0, string_literal20_tree);
 				}
 				DebugLocation(35, 28);
@@ -773,7 +773,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				exp21=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp21.Tree, exp21, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp21.Tree, exp21, "exp21", retval);
 
 				}
 				break;
@@ -786,7 +786,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(36, 5);
 				string_literal22=(IToken)Match(input,52,Follow._52_in_stat166); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal22_tree = (object)adaptor.Create(string_literal22, retval);
+				string_literal22_tree = (object)adaptor.Create(string_literal22, "string_literal22", retval);
 				adaptor.AddChild(root_0, string_literal22_tree);
 				}
 				DebugLocation(36, 10);
@@ -794,11 +794,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				exp23=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp23.Tree, exp23, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp23.Tree, exp23, "exp23", retval);
 				DebugLocation(36, 14);
 				string_literal24=(IToken)Match(input,60,Follow._60_in_stat170); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal24_tree = (object)adaptor.Create(string_literal24, retval);
+				string_literal24_tree = (object)adaptor.Create(string_literal24, "string_literal24", retval);
 				adaptor.AddChild(root_0, string_literal24_tree);
 				}
 				DebugLocation(36, 21);
@@ -806,7 +806,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				block25=block();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block25.Tree, block25, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block25.Tree, block25, "block25", retval);
 				DebugLocation(36, 27);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:36:27: ( 'elseif' exp 'then' block )*
 				try { DebugEnterSubRule(5);
@@ -832,7 +832,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						DebugLocation(36, 28);
 						string_literal26=(IToken)Match(input,47,Follow._47_in_stat175); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						string_literal26_tree = (object)adaptor.Create(string_literal26, retval);
+						string_literal26_tree = (object)adaptor.Create(string_literal26, "string_literal26", retval);
 						adaptor.AddChild(root_0, string_literal26_tree);
 						}
 						DebugLocation(36, 37);
@@ -840,11 +840,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						exp27=exp();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, exp27.Tree, exp27, retval);
+						if (state.backtracking == 0) adaptor.AddChild(root_0, exp27.Tree, exp27, "exp27", retval);
 						DebugLocation(36, 41);
 						string_literal28=(IToken)Match(input,60,Follow._60_in_stat179); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						string_literal28_tree = (object)adaptor.Create(string_literal28, retval);
+						string_literal28_tree = (object)adaptor.Create(string_literal28, "string_literal28", retval);
 						adaptor.AddChild(root_0, string_literal28_tree);
 						}
 						DebugLocation(36, 48);
@@ -852,7 +852,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						block29=block();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, block29.Tree, block29, retval);
+						if (state.backtracking == 0) adaptor.AddChild(root_0, block29.Tree, block29, "block29", retval);
 
 						}
 						break;
@@ -888,7 +888,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(36, 57);
 					string_literal30=(IToken)Match(input,46,Follow._46_in_stat186); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					string_literal30_tree = (object)adaptor.Create(string_literal30, retval);
+					string_literal30_tree = (object)adaptor.Create(string_literal30, "string_literal30", retval);
 					adaptor.AddChild(root_0, string_literal30_tree);
 					}
 					DebugLocation(36, 64);
@@ -896,7 +896,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					block31=block();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, block31.Tree, block31, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, block31.Tree, block31, "block31", retval);
 
 					}
 					break;
@@ -907,7 +907,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(36, 72);
 				string_literal32=(IToken)Match(input,48,Follow._48_in_stat192); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal32_tree = (object)adaptor.Create(string_literal32, retval);
+				string_literal32_tree = (object)adaptor.Create(string_literal32, "string_literal32", retval);
 				adaptor.AddChild(root_0, string_literal32_tree);
 				}
 
@@ -922,19 +922,19 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(37, 5);
 				string_literal33=(IToken)Match(input,50,Follow._50_in_stat201); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal33_tree = (object)adaptor.Create(string_literal33, retval);
+				string_literal33_tree = (object)adaptor.Create(string_literal33, "string_literal33", retval);
 				adaptor.AddChild(root_0, string_literal33_tree);
 				}
 				DebugLocation(37, 11);
 				NAME34=(IToken)Match(input,NAME,Follow._NAME_in_stat203); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				NAME34_tree = (object)adaptor.Create(NAME34, retval);
+				NAME34_tree = (object)adaptor.Create(NAME34, "NAME34", retval);
 				adaptor.AddChild(root_0, NAME34_tree);
 				}
 				DebugLocation(37, 16);
 				char_literal35=(IToken)Match(input,36,Follow._36_in_stat205); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal35_tree = (object)adaptor.Create(char_literal35, retval);
+				char_literal35_tree = (object)adaptor.Create(char_literal35, "char_literal35", retval);
 				adaptor.AddChild(root_0, char_literal35_tree);
 				}
 				DebugLocation(37, 20);
@@ -942,11 +942,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				exp36=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp36.Tree, exp36, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp36.Tree, exp36, "exp36", retval);
 				DebugLocation(37, 24);
 				char_literal37=(IToken)Match(input,26,Follow._26_in_stat209); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal37_tree = (object)adaptor.Create(char_literal37, retval);
+				char_literal37_tree = (object)adaptor.Create(char_literal37, "char_literal37", retval);
 				adaptor.AddChild(root_0, char_literal37_tree);
 				}
 				DebugLocation(37, 28);
@@ -954,7 +954,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				exp38=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp38.Tree, exp38, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp38.Tree, exp38, "exp38", retval);
 				DebugLocation(37, 32);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:37:32: ( ',' exp )?
 				int alt7=2;
@@ -976,7 +976,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(37, 33);
 					char_literal39=(IToken)Match(input,26,Follow._26_in_stat214); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal39_tree = (object)adaptor.Create(char_literal39, retval);
+					char_literal39_tree = (object)adaptor.Create(char_literal39, "char_literal39", retval);
 					adaptor.AddChild(root_0, char_literal39_tree);
 					}
 					DebugLocation(37, 37);
@@ -984,7 +984,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					exp40=exp();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, exp40.Tree, exp40, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, exp40.Tree, exp40, "exp40", retval);
 
 					}
 					break;
@@ -995,7 +995,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(37, 43);
 				string_literal41=(IToken)Match(input,45,Follow._45_in_stat220); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal41_tree = (object)adaptor.Create(string_literal41, retval);
+				string_literal41_tree = (object)adaptor.Create(string_literal41, "string_literal41", retval);
 				adaptor.AddChild(root_0, string_literal41_tree);
 				}
 				DebugLocation(37, 48);
@@ -1003,11 +1003,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				block42=block();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block42.Tree, block42, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block42.Tree, block42, "block42", retval);
 				DebugLocation(37, 54);
 				string_literal43=(IToken)Match(input,48,Follow._48_in_stat224); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal43_tree = (object)adaptor.Create(string_literal43, retval);
+				string_literal43_tree = (object)adaptor.Create(string_literal43, "string_literal43", retval);
 				adaptor.AddChild(root_0, string_literal43_tree);
 				}
 
@@ -1022,7 +1022,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(38, 5);
 				string_literal44=(IToken)Match(input,50,Follow._50_in_stat233); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal44_tree = (object)adaptor.Create(string_literal44, retval);
+				string_literal44_tree = (object)adaptor.Create(string_literal44, "string_literal44", retval);
 				adaptor.AddChild(root_0, string_literal44_tree);
 				}
 				DebugLocation(38, 11);
@@ -1030,11 +1030,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				namelist45=namelist();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, namelist45.Tree, namelist45, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, namelist45.Tree, namelist45, "namelist45", retval);
 				DebugLocation(38, 20);
 				string_literal46=(IToken)Match(input,53,Follow._53_in_stat237); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal46_tree = (object)adaptor.Create(string_literal46, retval);
+				string_literal46_tree = (object)adaptor.Create(string_literal46, "string_literal46", retval);
 				adaptor.AddChild(root_0, string_literal46_tree);
 				}
 				DebugLocation(38, 25);
@@ -1042,11 +1042,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				explist147=explist1();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, explist147.Tree, explist147, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, explist147.Tree, explist147, "explist147", retval);
 				DebugLocation(38, 34);
 				string_literal48=(IToken)Match(input,45,Follow._45_in_stat241); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal48_tree = (object)adaptor.Create(string_literal48, retval);
+				string_literal48_tree = (object)adaptor.Create(string_literal48, "string_literal48", retval);
 				adaptor.AddChild(root_0, string_literal48_tree);
 				}
 				DebugLocation(38, 39);
@@ -1054,11 +1054,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				block49=block();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block49.Tree, block49, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block49.Tree, block49, "block49", retval);
 				DebugLocation(38, 45);
 				string_literal50=(IToken)Match(input,48,Follow._48_in_stat245); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal50_tree = (object)adaptor.Create(string_literal50, retval);
+				string_literal50_tree = (object)adaptor.Create(string_literal50, "string_literal50", retval);
 				adaptor.AddChild(root_0, string_literal50_tree);
 				}
 
@@ -1073,7 +1073,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(39, 5);
 				string_literal51=(IToken)Match(input,51,Follow._51_in_stat254); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal51_tree = (object)adaptor.Create(string_literal51, retval);
+				string_literal51_tree = (object)adaptor.Create(string_literal51, "string_literal51", retval);
 				adaptor.AddChild(root_0, string_literal51_tree);
 				}
 				DebugLocation(39, 16);
@@ -1081,13 +1081,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				funcname52=funcname();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, funcname52.Tree, funcname52, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, funcname52.Tree, funcname52, "funcname52", retval);
 				DebugLocation(39, 25);
 				PushFollow(Follow._funcbody_in_stat258);
 				funcbody53=funcbody();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, funcbody53.Tree, funcbody53, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, funcbody53.Tree, funcbody53, "funcbody53", retval);
 
 				}
 				break;
@@ -1100,19 +1100,19 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(40, 5);
 				string_literal54=(IToken)Match(input,54,Follow._54_in_stat267); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal54_tree = (object)adaptor.Create(string_literal54, retval);
+				string_literal54_tree = (object)adaptor.Create(string_literal54, "string_literal54", retval);
 				adaptor.AddChild(root_0, string_literal54_tree);
 				}
 				DebugLocation(40, 13);
 				string_literal55=(IToken)Match(input,51,Follow._51_in_stat269); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal55_tree = (object)adaptor.Create(string_literal55, retval);
+				string_literal55_tree = (object)adaptor.Create(string_literal55, "string_literal55", retval);
 				adaptor.AddChild(root_0, string_literal55_tree);
 				}
 				DebugLocation(40, 24);
 				NAME56=(IToken)Match(input,NAME,Follow._NAME_in_stat271); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				NAME56_tree = (object)adaptor.Create(NAME56, retval);
+				NAME56_tree = (object)adaptor.Create(NAME56, "NAME56", retval);
 				adaptor.AddChild(root_0, NAME56_tree);
 				}
 				DebugLocation(40, 29);
@@ -1120,7 +1120,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				funcbody57=funcbody();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, funcbody57.Tree, funcbody57, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, funcbody57.Tree, funcbody57, "funcbody57", retval);
 
 				}
 				break;
@@ -1133,7 +1133,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(41, 5);
 				string_literal58=(IToken)Match(input,54,Follow._54_in_stat282); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal58_tree = (object)adaptor.Create(string_literal58, retval);
+				string_literal58_tree = (object)adaptor.Create(string_literal58, "string_literal58", retval);
 				adaptor.AddChild(root_0, string_literal58_tree);
 				}
 				DebugLocation(41, 13);
@@ -1141,7 +1141,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				namelist59=namelist();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, namelist59.Tree, namelist59, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, namelist59.Tree, namelist59, "namelist59", retval);
 				DebugLocation(41, 22);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:41:22: ( '=' explist1 )?
 				int alt8=2;
@@ -1163,7 +1163,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(41, 23);
 					char_literal60=(IToken)Match(input,36,Follow._36_in_stat287); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal60_tree = (object)adaptor.Create(char_literal60, retval);
+					char_literal60_tree = (object)adaptor.Create(char_literal60, "char_literal60", retval);
 					adaptor.AddChild(root_0, char_literal60_tree);
 					}
 					DebugLocation(41, 27);
@@ -1171,7 +1171,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					explist161=explist1();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, explist161.Tree, explist161, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, explist161.Tree, explist161, "explist161", retval);
 
 					}
 					break;
@@ -1268,7 +1268,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(43, 12);
 				string_literal62=(IToken)Match(input,59,Follow._59_in_laststat300); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal62_tree = (object)adaptor.Create(string_literal62, retval);
+				string_literal62_tree = (object)adaptor.Create(string_literal62, "string_literal62", retval);
 				adaptor.AddChild(root_0, string_literal62_tree);
 				}
 				DebugLocation(43, 21);
@@ -1294,7 +1294,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					explist163=explist1();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, explist163.Tree, explist163, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, explist163.Tree, explist163, "explist163", retval);
 
 					}
 					break;
@@ -1314,7 +1314,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(43, 35);
 				string_literal64=(IToken)Match(input,44,Follow._44_in_laststat309); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal64_tree = (object)adaptor.Create(string_literal64, retval);
+				string_literal64_tree = (object)adaptor.Create(string_literal64, "string_literal64", retval);
 				adaptor.AddChild(root_0, string_literal64_tree);
 				}
 
@@ -1388,7 +1388,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(45, 12);
 			NAME65=(IToken)Match(input,NAME,Follow._NAME_in_funcname317); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			NAME65_tree = (object)adaptor.Create(NAME65, retval);
+			NAME65_tree = (object)adaptor.Create(NAME65, "NAME65", retval);
 			adaptor.AddChild(root_0, NAME65_tree);
 			}
 			DebugLocation(45, 17);
@@ -1416,13 +1416,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(45, 18);
 					char_literal66=(IToken)Match(input,28,Follow._28_in_funcname320); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal66_tree = (object)adaptor.Create(char_literal66, retval);
+					char_literal66_tree = (object)adaptor.Create(char_literal66, "char_literal66", retval);
 					adaptor.AddChild(root_0, char_literal66_tree);
 					}
 					DebugLocation(45, 22);
 					NAME67=(IToken)Match(input,NAME,Follow._NAME_in_funcname322); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					NAME67_tree = (object)adaptor.Create(NAME67, retval);
+					NAME67_tree = (object)adaptor.Create(NAME67, "NAME67", retval);
 					adaptor.AddChild(root_0, NAME67_tree);
 					}
 
@@ -1460,13 +1460,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(45, 30);
 				char_literal68=(IToken)Match(input,32,Follow._32_in_funcname327); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal68_tree = (object)adaptor.Create(char_literal68, retval);
+				char_literal68_tree = (object)adaptor.Create(char_literal68, "char_literal68", retval);
 				adaptor.AddChild(root_0, char_literal68_tree);
 				}
 				DebugLocation(45, 34);
 				NAME69=(IToken)Match(input,NAME,Follow._NAME_in_funcname329); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				NAME69_tree = (object)adaptor.Create(NAME69, retval);
+				NAME69_tree = (object)adaptor.Create(NAME69, "NAME69", retval);
 				adaptor.AddChild(root_0, NAME69_tree);
 				}
 
@@ -1541,7 +1541,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			var70=var();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, var70.Tree, var70, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, var70.Tree, var70, "var70", retval);
 			DebugLocation(47, 16);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:47:16: ( ',' var )*
 			try { DebugEnterSubRule(14);
@@ -1567,7 +1567,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(47, 17);
 					char_literal71=(IToken)Match(input,26,Follow._26_in_varlist1343); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal71_tree = (object)adaptor.Create(char_literal71, retval);
+					char_literal71_tree = (object)adaptor.Create(char_literal71, "char_literal71", retval);
 					adaptor.AddChild(root_0, char_literal71_tree);
 					}
 					DebugLocation(47, 21);
@@ -1575,7 +1575,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					var72=var();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, var72.Tree, var72, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, var72.Tree, var72, "var72", retval);
 
 					}
 					break;
@@ -1655,7 +1655,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(50, 12);
 			NAME73=(IToken)Match(input,NAME,Follow._NAME_in_namelist356); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			NAME73_tree = (object)adaptor.Create(NAME73, retval);
+			NAME73_tree = (object)adaptor.Create(NAME73, "NAME73", retval);
 			adaptor.AddChild(root_0, NAME73_tree);
 			}
 			DebugLocation(50, 17);
@@ -1690,13 +1690,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(50, 18);
 					char_literal74=(IToken)Match(input,26,Follow._26_in_namelist359); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal74_tree = (object)adaptor.Create(char_literal74, retval);
+					char_literal74_tree = (object)adaptor.Create(char_literal74, "char_literal74", retval);
 					adaptor.AddChild(root_0, char_literal74_tree);
 					}
 					DebugLocation(50, 22);
 					NAME75=(IToken)Match(input,NAME,Follow._NAME_in_namelist361); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					NAME75_tree = (object)adaptor.Create(NAME75, retval);
+					NAME75_tree = (object)adaptor.Create(NAME75, "NAME75", retval);
 					adaptor.AddChild(root_0, NAME75_tree);
 					}
 
@@ -1935,11 +1935,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					exp76=exp();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, exp76.Tree, exp76, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, exp76.Tree, exp76, "exp76", retval);
 					DebugLocation(52, 17);
 					char_literal77=(IToken)Match(input,26,Follow._26_in_explist1374); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal77_tree = (object)adaptor.Create(char_literal77, retval);
+					char_literal77_tree = (object)adaptor.Create(char_literal77, "char_literal77", retval);
 					adaptor.AddChild(root_0, char_literal77_tree);
 					}
 
@@ -1961,7 +1961,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			exp78=exp();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, exp78.Tree, exp78, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, exp78.Tree, exp78, "exp78", retval);
 
 			}
 
@@ -2119,7 +2119,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(54, 9);
 				string_literal79=(IToken)Match(input,55,Follow._55_in_exp388); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal79_tree = (object)adaptor.Create(string_literal79, retval);
+				string_literal79_tree = (object)adaptor.Create(string_literal79, "string_literal79", retval);
 				adaptor.AddChild(root_0, string_literal79_tree);
 				}
 
@@ -2132,7 +2132,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(54, 17);
 				string_literal80=(IToken)Match(input,49,Follow._49_in_exp392); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal80_tree = (object)adaptor.Create(string_literal80, retval);
+				string_literal80_tree = (object)adaptor.Create(string_literal80, "string_literal80", retval);
 				adaptor.AddChild(root_0, string_literal80_tree);
 				}
 
@@ -2145,7 +2145,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(54, 27);
 				string_literal81=(IToken)Match(input,61,Follow._61_in_exp396); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal81_tree = (object)adaptor.Create(string_literal81, retval);
+				string_literal81_tree = (object)adaptor.Create(string_literal81, "string_literal81", retval);
 				adaptor.AddChild(root_0, string_literal81_tree);
 				}
 
@@ -2160,7 +2160,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				lua_number82=lua_number();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, lua_number82.Tree, lua_number82, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, lua_number82.Tree, lua_number82, "lua_number82", retval);
 
 				}
 				break;
@@ -2173,7 +2173,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				lua_string83=lua_string();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, lua_string83.Tree, lua_string83, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, lua_string83.Tree, lua_string83, "lua_string83", retval);
 
 				}
 				break;
@@ -2184,7 +2184,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(54, 62);
 				string_literal84=(IToken)Match(input,30,Follow._30_in_exp408); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal84_tree = (object)adaptor.Create(string_literal84, retval);
+				string_literal84_tree = (object)adaptor.Create(string_literal84, "string_literal84", retval);
 				adaptor.AddChild(root_0, string_literal84_tree);
 				}
 
@@ -2199,7 +2199,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				function85=function();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, function85.Tree, function85, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, function85.Tree, function85, "function85", retval);
 
 				}
 				break;
@@ -2212,7 +2212,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				prefixexp86=prefixexp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, prefixexp86.Tree, prefixexp86, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, prefixexp86.Tree, prefixexp86, "prefixexp86", retval);
 
 				}
 				break;
@@ -2225,7 +2225,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				tableconstructor87=tableconstructor();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, tableconstructor87.Tree, tableconstructor87, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, tableconstructor87.Tree, tableconstructor87, "tableconstructor87", retval);
 
 				}
 				break;
@@ -2238,13 +2238,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				unop88=unop();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unop88.Tree, unop88, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unop88.Tree, unop88, "unop88", retval);
 				DebugLocation(54, 117);
 				PushFollow(Follow._exp_in_exp426);
 				exp89=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp89.Tree, exp89, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp89.Tree, exp89, "exp89", retval);
 
 				}
 				break;
@@ -2286,13 +2286,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					binop90=binop();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, binop90.Tree, binop90, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, binop90.Tree, binop90, "binop90", retval);
 					DebugLocation(54, 129);
 					PushFollow(Follow._exp_in_exp432);
 					exp91=exp();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, exp91.Tree, exp91, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, exp91.Tree, exp91, "exp91", retval);
 
 					}
 					break;
@@ -2404,7 +2404,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(56, 7);
 				NAME92=(IToken)Match(input,NAME,Follow._NAME_in_var443); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				NAME92_tree = (object)adaptor.Create(NAME92, retval);
+				NAME92_tree = (object)adaptor.Create(NAME92, "NAME92", retval);
 				adaptor.AddChild(root_0, NAME92_tree);
 				}
 
@@ -2417,7 +2417,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(56, 14);
 				char_literal93=(IToken)Match(input,22,Follow._22_in_var447); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal93_tree = (object)adaptor.Create(char_literal93, retval);
+				char_literal93_tree = (object)adaptor.Create(char_literal93, "char_literal93", retval);
 				adaptor.AddChild(root_0, char_literal93_tree);
 				}
 				DebugLocation(56, 18);
@@ -2425,11 +2425,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				exp94=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp94.Tree, exp94, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp94.Tree, exp94, "exp94", retval);
 				DebugLocation(56, 22);
 				char_literal95=(IToken)Match(input,23,Follow._23_in_var451); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal95_tree = (object)adaptor.Create(char_literal95, retval);
+				char_literal95_tree = (object)adaptor.Create(char_literal95, "char_literal95", retval);
 				adaptor.AddChild(root_0, char_literal95_tree);
 				}
 				DebugLocation(56, 26);
@@ -2437,7 +2437,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				varSuffix96=varSuffix();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, varSuffix96.Tree, varSuffix96, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, varSuffix96.Tree, varSuffix96, "varSuffix96", retval);
 
 				}
 				break;
@@ -2524,7 +2524,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					varSuffix97=varSuffix();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, varSuffix97.Tree, varSuffix97, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, varSuffix97.Tree, varSuffix97, "varSuffix97", retval);
 
 					}
 					break;
@@ -2602,7 +2602,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			varOrExp98=varOrExp();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, varOrExp98.Tree, varOrExp98, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, varOrExp98.Tree, varOrExp98, "varOrExp98", retval);
 			DebugLocation(58, 21);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:58:21: ( nameAndArgs )*
 			try { DebugEnterSubRule(21);
@@ -2641,7 +2641,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					nameAndArgs99=nameAndArgs();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, nameAndArgs99.Tree, nameAndArgs99, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, nameAndArgs99.Tree, nameAndArgs99, "nameAndArgs99", retval);
 
 					}
 					break;
@@ -2719,7 +2719,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			varOrExp100=varOrExp();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, varOrExp100.Tree, varOrExp100, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, varOrExp100.Tree, varOrExp100, "varOrExp100", retval);
 			DebugLocation(60, 24);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:60:24: ( nameAndArgs )+
 			int cnt22=0;
@@ -2759,7 +2759,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					nameAndArgs101=nameAndArgs();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, nameAndArgs101.Tree, nameAndArgs101, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, nameAndArgs101.Tree, nameAndArgs101, "nameAndArgs101", retval);
 
 					}
 					break;
@@ -2886,7 +2886,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				var102=var();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, var102.Tree, var102, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, var102.Tree, var102, "var102", retval);
 
 				}
 				break;
@@ -2899,7 +2899,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(70, 17);
 				char_literal103=(IToken)Match(input,22,Follow._22_in_varOrExp491); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal103_tree = (object)adaptor.Create(char_literal103, retval);
+				char_literal103_tree = (object)adaptor.Create(char_literal103, "char_literal103", retval);
 				adaptor.AddChild(root_0, char_literal103_tree);
 				}
 				DebugLocation(70, 21);
@@ -2907,11 +2907,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				exp104=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp104.Tree, exp104, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp104.Tree, exp104, "exp104", retval);
 				DebugLocation(70, 25);
 				char_literal105=(IToken)Match(input,23,Follow._23_in_varOrExp495); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal105_tree = (object)adaptor.Create(char_literal105, retval);
+				char_literal105_tree = (object)adaptor.Create(char_literal105, "char_literal105", retval);
 				adaptor.AddChild(root_0, char_literal105_tree);
 				}
 
@@ -2998,13 +2998,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(72, 15);
 				char_literal106=(IToken)Match(input,32,Follow._32_in_nameAndArgs503); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal106_tree = (object)adaptor.Create(char_literal106, retval);
+				char_literal106_tree = (object)adaptor.Create(char_literal106, "char_literal106", retval);
 				adaptor.AddChild(root_0, char_literal106_tree);
 				}
 				DebugLocation(72, 19);
 				NAME107=(IToken)Match(input,NAME,Follow._NAME_in_nameAndArgs505); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				NAME107_tree = (object)adaptor.Create(NAME107, retval);
+				NAME107_tree = (object)adaptor.Create(NAME107, "NAME107", retval);
 				adaptor.AddChild(root_0, NAME107_tree);
 				}
 
@@ -3019,7 +3019,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			args108=args();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, args108.Tree, args108, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, args108.Tree, args108, "args108", retval);
 
 			}
 
@@ -3113,7 +3113,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					nameAndArgs109=nameAndArgs();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, nameAndArgs109.Tree, nameAndArgs109, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, nameAndArgs109.Tree, nameAndArgs109, "nameAndArgs109", retval);
 
 					}
 					break;
@@ -3160,7 +3160,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(74, 26);
 				char_literal110=(IToken)Match(input,40,Follow._40_in_varSuffix520); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal110_tree = (object)adaptor.Create(char_literal110, retval);
+				char_literal110_tree = (object)adaptor.Create(char_literal110, "char_literal110", retval);
 				adaptor.AddChild(root_0, char_literal110_tree);
 				}
 				DebugLocation(74, 30);
@@ -3168,11 +3168,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				exp111=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp111.Tree, exp111, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp111.Tree, exp111, "exp111", retval);
 				DebugLocation(74, 34);
 				char_literal112=(IToken)Match(input,41,Follow._41_in_varSuffix524); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal112_tree = (object)adaptor.Create(char_literal112, retval);
+				char_literal112_tree = (object)adaptor.Create(char_literal112, "char_literal112", retval);
 				adaptor.AddChild(root_0, char_literal112_tree);
 				}
 
@@ -3185,13 +3185,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(74, 40);
 				char_literal113=(IToken)Match(input,28,Follow._28_in_varSuffix528); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal113_tree = (object)adaptor.Create(char_literal113, retval);
+				char_literal113_tree = (object)adaptor.Create(char_literal113, "char_literal113", retval);
 				adaptor.AddChild(root_0, char_literal113_tree);
 				}
 				DebugLocation(74, 44);
 				NAME114=(IToken)Match(input,NAME,Follow._NAME_in_varSuffix530); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				NAME114_tree = (object)adaptor.Create(NAME114, retval);
+				NAME114_tree = (object)adaptor.Create(NAME114, "NAME114", retval);
 				adaptor.AddChild(root_0, NAME114_tree);
 				}
 
@@ -3301,7 +3301,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(76, 9);
 				char_literal115=(IToken)Match(input,22,Follow._22_in_args540); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal115_tree = (object)adaptor.Create(char_literal115, retval);
+				char_literal115_tree = (object)adaptor.Create(char_literal115, "char_literal115", retval);
 				adaptor.AddChild(root_0, char_literal115_tree);
 				}
 				DebugLocation(76, 13);
@@ -3327,7 +3327,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					explist1116=explist1();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, explist1116.Tree, explist1116, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, explist1116.Tree, explist1116, "explist1116", retval);
 
 					}
 					break;
@@ -3338,7 +3338,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(76, 25);
 				char_literal117=(IToken)Match(input,23,Follow._23_in_args547); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal117_tree = (object)adaptor.Create(char_literal117, retval);
+				char_literal117_tree = (object)adaptor.Create(char_literal117, "char_literal117", retval);
 				adaptor.AddChild(root_0, char_literal117_tree);
 				}
 
@@ -3355,7 +3355,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				tableconstructor118=tableconstructor();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, tableconstructor118.Tree, tableconstructor118, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, tableconstructor118.Tree, tableconstructor118, "tableconstructor118", retval);
 
 				}
 				break;
@@ -3370,7 +3370,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				lua_string119=lua_string();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, lua_string119.Tree, lua_string119, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, lua_string119.Tree, lua_string119, "lua_string119", retval);
 
 				}
 				break;
@@ -3435,7 +3435,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(78, 12);
 			string_literal120=(IToken)Match(input,51,Follow._51_in_function564); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal120_tree = (object)adaptor.Create(string_literal120, retval);
+			string_literal120_tree = (object)adaptor.Create(string_literal120, "string_literal120", retval);
 			adaptor.AddChild(root_0, string_literal120_tree);
 			}
 			DebugLocation(78, 23);
@@ -3443,7 +3443,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			funcbody121=funcbody();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, funcbody121.Tree, funcbody121, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, funcbody121.Tree, funcbody121, "funcbody121", retval);
 
 			}
 
@@ -3511,7 +3511,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(80, 12);
 			char_literal122=(IToken)Match(input,22,Follow._22_in_funcbody574); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal122_tree = (object)adaptor.Create(char_literal122, retval);
+			char_literal122_tree = (object)adaptor.Create(char_literal122, "char_literal122", retval);
 			adaptor.AddChild(root_0, char_literal122_tree);
 			}
 			DebugLocation(80, 16);
@@ -3537,7 +3537,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				parlist1123=parlist1();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, parlist1123.Tree, parlist1123, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, parlist1123.Tree, parlist1123, "parlist1123", retval);
 
 				}
 				break;
@@ -3548,7 +3548,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(80, 28);
 			char_literal124=(IToken)Match(input,23,Follow._23_in_funcbody581); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal124_tree = (object)adaptor.Create(char_literal124, retval);
+			char_literal124_tree = (object)adaptor.Create(char_literal124, "char_literal124", retval);
 			adaptor.AddChild(root_0, char_literal124_tree);
 			}
 			DebugLocation(80, 32);
@@ -3556,11 +3556,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			block125=block();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, block125.Tree, block125, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, block125.Tree, block125, "block125", retval);
 			DebugLocation(80, 38);
 			string_literal126=(IToken)Match(input,48,Follow._48_in_funcbody585); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal126_tree = (object)adaptor.Create(string_literal126, retval);
+			string_literal126_tree = (object)adaptor.Create(string_literal126, "string_literal126", retval);
 			adaptor.AddChild(root_0, string_literal126_tree);
 			}
 
@@ -3654,7 +3654,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				namelist127=namelist();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, namelist127.Tree, namelist127, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, namelist127.Tree, namelist127, "namelist127", retval);
 				DebugLocation(82, 21);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:82:21: ( ',' '...' )?
 				int alt30=2;
@@ -3676,13 +3676,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(82, 22);
 					char_literal128=(IToken)Match(input,26,Follow._26_in_parlist1596); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal128_tree = (object)adaptor.Create(char_literal128, retval);
+					char_literal128_tree = (object)adaptor.Create(char_literal128, "char_literal128", retval);
 					adaptor.AddChild(root_0, char_literal128_tree);
 					}
 					DebugLocation(82, 26);
 					string_literal129=(IToken)Match(input,30,Follow._30_in_parlist1598); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					string_literal129_tree = (object)adaptor.Create(string_literal129, retval);
+					string_literal129_tree = (object)adaptor.Create(string_literal129, "string_literal129", retval);
 					adaptor.AddChild(root_0, string_literal129_tree);
 					}
 
@@ -3704,7 +3704,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(82, 36);
 				string_literal130=(IToken)Match(input,30,Follow._30_in_parlist1604); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal130_tree = (object)adaptor.Create(string_literal130, retval);
+				string_literal130_tree = (object)adaptor.Create(string_literal130, "string_literal130", retval);
 				adaptor.AddChild(root_0, string_literal130_tree);
 				}
 
@@ -3773,7 +3773,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(84, 20);
 			char_literal131=(IToken)Match(input,64,Follow._64_in_tableconstructor612); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal131_tree = (object)adaptor.Create(char_literal131, retval);
+			char_literal131_tree = (object)adaptor.Create(char_literal131, "char_literal131", retval);
 			adaptor.AddChild(root_0, char_literal131_tree);
 			}
 			DebugLocation(84, 24);
@@ -3799,7 +3799,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				fieldlist132=fieldlist();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, fieldlist132.Tree, fieldlist132, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, fieldlist132.Tree, fieldlist132, "fieldlist132", retval);
 
 				}
 				break;
@@ -3810,7 +3810,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(84, 37);
 			char_literal133=(IToken)Match(input,65,Follow._65_in_tableconstructor619); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal133_tree = (object)adaptor.Create(char_literal133, retval);
+			char_literal133_tree = (object)adaptor.Create(char_literal133, "char_literal133", retval);
 			adaptor.AddChild(root_0, char_literal133_tree);
 			}
 
@@ -3878,7 +3878,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			field134=field();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, field134.Tree, field134, retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, field134.Tree, field134, "field134", retval);
 			DebugLocation(86, 19);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:86:19: ( fieldsep field )*
 			try { DebugEnterSubRule(33);
@@ -3913,13 +3913,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					fieldsep135=fieldsep();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, fieldsep135.Tree, fieldsep135, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, fieldsep135.Tree, fieldsep135, "fieldsep135", retval);
 					DebugLocation(86, 29);
 					PushFollow(Follow._field_in_fieldlist632);
 					field136=field();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, field136.Tree, field136, retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, field136.Tree, field136, "field136", retval);
 
 					}
 					break;
@@ -3957,7 +3957,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				fieldsep137=fieldsep();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, fieldsep137.Tree, fieldsep137, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, fieldsep137.Tree, fieldsep137, "fieldsep137", retval);
 
 				}
 				break;
@@ -4102,7 +4102,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(88, 9);
 				char_literal138=(IToken)Match(input,40,Follow._40_in_field647); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal138_tree = (object)adaptor.Create(char_literal138, retval);
+				char_literal138_tree = (object)adaptor.Create(char_literal138, "char_literal138", retval);
 				adaptor.AddChild(root_0, char_literal138_tree);
 				}
 				DebugLocation(88, 13);
@@ -4110,17 +4110,17 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				exp139=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp139.Tree, exp139, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp139.Tree, exp139, "exp139", retval);
 				DebugLocation(88, 17);
 				char_literal140=(IToken)Match(input,41,Follow._41_in_field651); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal140_tree = (object)adaptor.Create(char_literal140, retval);
+				char_literal140_tree = (object)adaptor.Create(char_literal140, "char_literal140", retval);
 				adaptor.AddChild(root_0, char_literal140_tree);
 				}
 				DebugLocation(88, 21);
 				char_literal141=(IToken)Match(input,36,Follow._36_in_field653); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal141_tree = (object)adaptor.Create(char_literal141, retval);
+				char_literal141_tree = (object)adaptor.Create(char_literal141, "char_literal141", retval);
 				adaptor.AddChild(root_0, char_literal141_tree);
 				}
 				DebugLocation(88, 25);
@@ -4128,7 +4128,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				exp142=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp142.Tree, exp142, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp142.Tree, exp142, "exp142", retval);
 
 				}
 				break;
@@ -4141,13 +4141,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(88, 31);
 				NAME143=(IToken)Match(input,NAME,Follow._NAME_in_field659); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				NAME143_tree = (object)adaptor.Create(NAME143, retval);
+				NAME143_tree = (object)adaptor.Create(NAME143, "NAME143", retval);
 				adaptor.AddChild(root_0, NAME143_tree);
 				}
 				DebugLocation(88, 36);
 				char_literal144=(IToken)Match(input,36,Follow._36_in_field661); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal144_tree = (object)adaptor.Create(char_literal144, retval);
+				char_literal144_tree = (object)adaptor.Create(char_literal144, "char_literal144", retval);
 				adaptor.AddChild(root_0, char_literal144_tree);
 				}
 				DebugLocation(88, 40);
@@ -4155,7 +4155,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				exp145=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp145.Tree, exp145, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp145.Tree, exp145, "exp145", retval);
 
 				}
 				break;
@@ -4170,7 +4170,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				exp146=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp146.Tree, exp146, retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp146.Tree, exp146, "exp146", retval);
 
 				}
 				break;
@@ -4237,7 +4237,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (input.LA(1)==26||input.LA(1)==33)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set147, retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set147, "set147", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -4312,7 +4312,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (input.LA(1)==21||(input.LA(1)>=24 && input.LA(1)<=25)||input.LA(1)==27||input.LA(1)==29||input.LA(1)==31||(input.LA(1)>=34 && input.LA(1)<=35)||(input.LA(1)>=37 && input.LA(1)<=39)||(input.LA(1)>=42 && input.LA(1)<=43)||input.LA(1)==57||input.LA(1)==66)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set148, retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set148, "set148", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -4387,7 +4387,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (input.LA(1)==20||input.LA(1)==27||input.LA(1)==56)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set149, retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set149, "set149", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -4462,7 +4462,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (input.LA(1)==EXP||(input.LA(1)>=FLOAT && input.LA(1)<=HEX)||input.LA(1)==INT)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set150, retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set150, "set150", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -4537,7 +4537,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (input.LA(1)==CHARSTRING||input.LA(1)==LONGSTRING||input.LA(1)==NORMALSTRING)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set151, retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set151, "set151", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else

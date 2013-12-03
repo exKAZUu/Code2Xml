@@ -23,6 +23,7 @@ namespace Code2Xml.Core {
 		public const string EndLineName = "endline";
 		public const string EndPositionName = "endpos";
 		public const string HiddenAttributeName = "hidden";
+		public const string IdAttributeName = "id";
 
 		public const string EofElementName = "EOF";
 		public const string TokenElementName = "TOKEN";

@@ -97,14 +97,14 @@ namespace Code2Xml.Tools.AntlrHelper {
 
 			return NonTerminalRegex.Replace(
 					code,
-					@"adaptor.AddChild($1, $2.Tree, $2, retval)");
+					"adaptor.AddChild($1, $2.Tree, $2, \"$2\", retval)");
 		}
 
 		public static string ModifyCreate(string code) {
 			Contract.Requires(
 					!new Regex(@"adaptor\.Create\(([^)]*),").IsMatch(code));
 
-			return TerminalRegex.Replace(code, @"adaptor.Create($1, retval)");
+			return TerminalRegex.Replace(code, "adaptor.Create($1, \"$1\", retval)");
 		}
 
 		public static string ModifyTraceIn(string code) {

@@ -46,20 +46,25 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
             var token = _stream.Get(count);
             var tokenName = Code2XmlConstants.EofElementName;
             var element = CreateTokenSetElement(tokenName, token, string.Empty, count);
+			element.SetAttributeValue(Code2XmlConstants.IdAttributeName, 0);
             root.Add(element);
+			root.SetAttributeValue(Code2XmlConstants.IdAttributeName, 0);
             return root;
         }
 
-        public void AddChild(object t, object child, Antlr3AstNode target, Antlr3AstNode parent) {
+        public void AddChild(object t, object child, Antlr3AstNode target, string id, Antlr3AstNode parent) {
             parent.Element.Add(target.Element);
+	        var num = id.Substring(target.Element.Name().length());
+			target.Element.SetAttributeValue(Code2XmlConstants.IdAttributeName, num);
             base.AddChild(t, child);
         }
 
-        public object Create(IToken token, Antlr3AstNode parent) {
+        public object Create(IToken token, string id, Antlr3AstNode parent) {
             if (token != null) {
                 var count = token.TokenIndex;
                 var tokenName = DetermineElementName(token, Code2XmlConstants.TokenSetElementName);
                 var element = CreateTokenSetElement(tokenName, token, token.Text, count);
+				element.SetAttributeValue(Code2XmlConstants.IdAttributeName, id);
                 parent.Element.Add(element);
                 _nextTokenIndex = count + 1;
             }

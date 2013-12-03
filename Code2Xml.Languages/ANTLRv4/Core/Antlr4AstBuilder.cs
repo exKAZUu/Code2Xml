@@ -27,7 +27,8 @@ using Code2Xml.Core.Location;
 
 namespace Code2Xml.Languages.ANTLRv4.Core {
     public class Antlr4AstBuilder : AbstractParseTreeVisitor<object> {
-        private readonly string[] _parserRuleNames;
+	    public Parser Parser { get; set; }
+	    private readonly string[] _parserRuleNames;
         private readonly XElement _dummyRoot;
         private readonly Stack<XElement> _elements;
         private readonly CommonTokenStream _stream;
@@ -36,7 +37,8 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
         private int _lastDepth;
 
         public Antlr4AstBuilder(Parser parser) {
-            _parserRuleNames = parser.RuleNames;
+	        Parser = parser;
+	        _parserRuleNames = parser.RuleNames;
             _tokenNames = parser.TokenNames;
             _stream = (CommonTokenStream)parser.InputStream;
             _dummyRoot = new XElement("root");
@@ -53,7 +55,9 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
             var token = _stream.Get(count);
             var tokenName = Code2XmlConstants.EofElementName;
             var element = CreateTokenSetElement(tokenName, token, string.Empty, count);
+			element.SetAttributeValue(Code2XmlConstants.IdAttributeName, 0);
             root.Add(element);
+			root.SetAttributeValue(Code2XmlConstants.IdAttributeName, 0);
             return root;
         }
 
@@ -63,6 +67,7 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
                 var count = token.TokenIndex;
                 var tokenName = DetermineElementName(token, Code2XmlConstants.TokenSetElementName);
                 var element = CreateTokenSetElement(tokenName, token, token.Text, count);
+				element.SetAttributeValue(Code2XmlConstants.IdAttributeName, token.Type);
                 _elements.Peek().Add(element);
                 _nextTokenIndex = count + 1;
             }
@@ -76,6 +81,7 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
                 _elements.Pop();
             }
             var element = new XElement(name);
+			element.SetAttributeValue(Code2XmlConstants.IdAttributeName, node.RuleContext.invokingState);
             _elements.Peek().Add(element);
             _lastDepth = node.RuleContext.Depth();
             _elements.Push(element);
