@@ -78,11 +78,11 @@ modifiers:
 	modifier+ ;
 modifier: 
 	'new' | 'public' | 'protected' | 'private' | 'internal' | 'unsafe' | 'abstract' | 'sealed' | 'static'
-	| 'readonly' | 'volatile' | 'extern' | 'virtual' | 'override';
+	| 'readonly' | 'volatile' | 'extern' | 'virtual' | 'override' | 'async';
 	
 class_member_declaration:
 	attributes?
-	m=modifiers?
+	modifiers?
 	( 'const'   type   constant_declarators   ';'
 	| event_declaration		// 'event'
 	| 'partial' (method_declaration 
@@ -229,7 +229,7 @@ unchecked_expression:
 default_value_expression: 
 	'default'   '('   type   ')' ;
 anonymous_method_expression:
-	'delegate'   explicit_anonymous_function_signature?   block;
+	'async'? 'delegate' explicit_anonymous_function_signature?   block;
 explicit_anonymous_function_signature:
 	'('   explicit_anonymous_function_parameter_list?   ')' ;
 explicit_anonymous_function_parameter_list:
@@ -309,8 +309,10 @@ type_name:
 namespace_or_type_name:
 	 type_or_generic   ('::' type_or_generic)? ('.'   type_or_generic)* ;
 type_or_generic:
-	(identifier   '<') => identifier   generic_argument_list
-	| identifier ;
+	identifier generic_argument_list?
+	;
+//	(identifier   '<') => identifier   generic_argument_list
+//	| identifier ;
 
 qid:		// qualified_identifier v2
 	qid_start   qid_part*
@@ -389,7 +391,11 @@ unary_expression:
 	| pre_increment_expression 
 	| pre_decrement_expression 
 	| pointer_indirection_expression
-	| addressof_expression 
+	| addressof_expression
+	| await_expression
+	;
+await_expression:
+	'await' unary_expression
 	;
 cast_expression:
 	'('   type   ')'   unary_expression ;
@@ -450,7 +456,7 @@ conditional_expression:
 //	lambda Section
 ///////////////////////////////////////////////////////
 lambda_expression:
-	anonymous_function_signature   '=>'   anonymous_function_body;
+	'async'? anonymous_function_signature   '=>'   anonymous_function_body;
 anonymous_function_signature:
 	'('	(explicit_anonymous_function_parameter_list
 		| implicit_anonymous_function_parameter_list)?	')'
@@ -767,7 +773,7 @@ struct_body:
 struct_member_declarations:
 	struct_member_declaration+ ;
 struct_member_declaration:
-	attributes?   m=modifiers?
+	attributes?   modifiers?
 	( 'const'   type   constant_declarators   ';'
 	| event_declaration		// 'event'
 	| 'partial' (method_declaration 
