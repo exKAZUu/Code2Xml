@@ -854,30 +854,22 @@ localVariableDeclaration
 
 statement 
     :   block
-            
-    |   ('assert'
-        )
-        expression (':' expression)? ';'
-    |   'assert'  expression (':' expression)? ';'            
+    |   ';'
+    |   IDENTIFIER ':' statement
+	|   expression  ';'     
     |   'if' parExpression statement ('else' statement)?          
-    |   forstatement
+    |   'assert'  expression (':' expression)? ';'            
+    |   'switch' parExpression '{' switchBlockStatementGroups '}'
     |   'while' parExpression statement
     |   'do' statement 'while' parExpression ';'
-    |   trystatement
-    |   'switch' parExpression '{' switchBlockStatementGroups '}'
-    |   'synchronized' parExpression block
+    |   forstatement
+    |   'break' (IDENTIFIER)? ';'
+	|	'continue' (IDENTIFIER)? ';'
     |   'return' (expression )? ';'
     |   'throw' expression ';'
-    |   'break'
-            (IDENTIFIER
-            )? ';'
-    |   'continue'
-            (IDENTIFIER
-            )? ';'
-    |   expression  ';'     
-    |   IDENTIFIER ':' statement
-    |   ';'
-
+    |   'synchronized' parExpression block
+    |   trystatement
+	|   tryWithResourcesStatement
     ;
 
 switchBlockStatementGroups 
@@ -903,7 +895,6 @@ trystatement
         |   catches
         |   'finally' block
         )
-    |   tryWithResourcesStatement
      ;
 
 catches 
