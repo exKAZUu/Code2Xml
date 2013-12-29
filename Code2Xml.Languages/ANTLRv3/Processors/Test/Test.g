@@ -1,4 +1,4 @@
-grammar cs;
+grammar Test;
 
 options {
     memoize=true;
@@ -129,10 +129,10 @@ primary_expression:
 	;
 
 primary_expression_start:
-	predefined_type            
+	predefined_type
 	| (identifier generic_argument_list) => identifier generic_argument_list
 	| identifier ('::'   identifier)?
-	| 'this' 
+	| 'this'
 	| 'base'
 	| paren_expression
 	| typeof_expression             // typeof(Foo).Name
@@ -317,7 +317,7 @@ qid:		// qualified_identifier v2
 	;
 qid_start:
 	predefined_type
-	| (identifier '<' type_arguments '>') => identifier generic_argument_list
+	| (identifier    '<')	=> identifier   generic_argument_list
 //	| 'this'
 //	| 'base'
 	| identifier   ('::'   identifier)?
@@ -329,7 +329,7 @@ qid_part:
 	access_identifier ;
 
 generic_argument_list: 
-	'<' type_arguments '>' ;
+	'<'   type_arguments   '>' ;
 type_arguments: 
 	type (',' type)* ;
 
@@ -927,7 +927,7 @@ stackalloc_initializer:
 local_constant_declaration:
 	'const'   type   constant_declarators ;
 expression_statement:
-	expression   ';' ;
+	expression2   ';' ;
 
 // TODO: should be assignment, call, increment, decrement, and new object expressions
 statement_expression:
@@ -1296,3 +1296,13 @@ non_assignment_expression_list:
 	(non_assignment_expression ';')+ ;
 method_declarations:
 	(modifiers? ('void' | type) method_declaration)+ ;	
+
+
+
+
+expression2:
+	primary_expression2 (('<'|'>'|'>='|'<=') primary_expression2)*
+	;
+primary_expression2: 
+	identifier primary_expression_part*
+	;

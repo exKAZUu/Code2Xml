@@ -10,7 +10,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g 2013-12-24 18:49:07
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g 2013-12-27 16:23:19
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -315,7 +315,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	public JavaParser(ITokenStream input, RecognizerSharedState state)
 		: base(input, state)
 	{
-		this.state.ruleMemo = new System.Collections.Generic.Dictionary<int, int>[414+1];
+		this.state.ruleMemo = new System.Collections.Generic.Dictionary<int, int>[412+1];
 
 
 		Antlr3AstBuilder treeAdaptor = default(Antlr3AstBuilder);
@@ -12467,7 +12467,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_statement();
 	partial void LeaveRule_statement();
 	// $ANTLR start "statement"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:855:1: statement : ( block | ( 'assert' ) expression ( ':' expression )? ';' | 'assert' expression ( ':' expression )? ';' | 'if' parExpression statement ( 'else' statement )? | forstatement | 'while' parExpression statement | 'do' statement 'while' parExpression ';' | trystatement | 'switch' parExpression '{' switchBlockStatementGroups '}' | 'synchronized' parExpression block | 'return' ( expression )? ';' | 'throw' expression ';' | 'break' ( IDENTIFIER )? ';' | 'continue' ( IDENTIFIER )? ';' | expression ';' | IDENTIFIER ':' statement | ';' );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:855:1: statement : ( block | ';' | IDENTIFIER ':' statement | expression ';' | 'if' parExpression statement ( 'else' statement )? | 'assert' expression ( ':' expression )? ';' | 'switch' parExpression '{' switchBlockStatementGroups '}' | 'while' parExpression statement | 'do' statement 'while' parExpression ';' | forstatement | 'break' ( IDENTIFIER )? ';' | 'continue' ( IDENTIFIER )? ';' | 'return' ( expression )? ';' | 'throw' expression ';' | 'synchronized' parExpression block | trystatement | tryWithResourcesStatement );
 	[GrammarRule("statement")]
 	private Antlr3AstNode statement()
 	{
@@ -12480,179 +12480,122 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal286 = default(IToken);
+		IToken char_literal286 = default(IToken);
+		IToken IDENTIFIER287 = default(IToken);
 		IToken char_literal288 = default(IToken);
-		IToken char_literal290 = default(IToken);
-		IToken string_literal291 = default(IToken);
-		IToken char_literal293 = default(IToken);
-		IToken char_literal295 = default(IToken);
-		IToken string_literal296 = default(IToken);
-		IToken string_literal299 = default(IToken);
+		IToken char_literal291 = default(IToken);
+		IToken string_literal292 = default(IToken);
+		IToken string_literal295 = default(IToken);
+		IToken string_literal297 = default(IToken);
+		IToken char_literal299 = default(IToken);
+		IToken char_literal301 = default(IToken);
 		IToken string_literal302 = default(IToken);
-		IToken string_literal305 = default(IToken);
+		IToken char_literal304 = default(IToken);
+		IToken char_literal306 = default(IToken);
 		IToken string_literal307 = default(IToken);
-		IToken char_literal309 = default(IToken);
-		IToken string_literal311 = default(IToken);
-		IToken char_literal313 = default(IToken);
-		IToken char_literal315 = default(IToken);
+		IToken string_literal310 = default(IToken);
+		IToken string_literal312 = default(IToken);
+		IToken char_literal314 = default(IToken);
 		IToken string_literal316 = default(IToken);
+		IToken IDENTIFIER317 = default(IToken);
+		IToken char_literal318 = default(IToken);
 		IToken string_literal319 = default(IToken);
+		IToken IDENTIFIER320 = default(IToken);
 		IToken char_literal321 = default(IToken);
 		IToken string_literal322 = default(IToken);
 		IToken char_literal324 = default(IToken);
 		IToken string_literal325 = default(IToken);
-		IToken IDENTIFIER326 = default(IToken);
 		IToken char_literal327 = default(IToken);
 		IToken string_literal328 = default(IToken);
-		IToken IDENTIFIER329 = default(IToken);
-		IToken char_literal330 = default(IToken);
-		IToken char_literal332 = default(IToken);
-		IToken IDENTIFIER333 = default(IToken);
-		IToken char_literal334 = default(IToken);
-		IToken char_literal336 = default(IToken);
 		Antlr3AstNode block285 = default(Antlr3AstNode);
-		Antlr3AstNode expression287 = default(Antlr3AstNode);
-		Antlr3AstNode expression289 = default(Antlr3AstNode);
-		Antlr3AstNode expression292 = default(Antlr3AstNode);
-		Antlr3AstNode expression294 = default(Antlr3AstNode);
-		Antlr3AstNode parExpression297 = default(Antlr3AstNode);
-		Antlr3AstNode statement298 = default(Antlr3AstNode);
-		Antlr3AstNode statement300 = default(Antlr3AstNode);
-		Antlr3AstNode forstatement301 = default(Antlr3AstNode);
+		Antlr3AstNode statement289 = default(Antlr3AstNode);
+		Antlr3AstNode expression290 = default(Antlr3AstNode);
+		Antlr3AstNode parExpression293 = default(Antlr3AstNode);
+		Antlr3AstNode statement294 = default(Antlr3AstNode);
+		Antlr3AstNode statement296 = default(Antlr3AstNode);
+		Antlr3AstNode expression298 = default(Antlr3AstNode);
+		Antlr3AstNode expression300 = default(Antlr3AstNode);
 		Antlr3AstNode parExpression303 = default(Antlr3AstNode);
-		Antlr3AstNode statement304 = default(Antlr3AstNode);
-		Antlr3AstNode statement306 = default(Antlr3AstNode);
+		Antlr3AstNode switchBlockStatementGroups305 = default(Antlr3AstNode);
 		Antlr3AstNode parExpression308 = default(Antlr3AstNode);
-		Antlr3AstNode trystatement310 = default(Antlr3AstNode);
-		Antlr3AstNode parExpression312 = default(Antlr3AstNode);
-		Antlr3AstNode switchBlockStatementGroups314 = default(Antlr3AstNode);
-		Antlr3AstNode parExpression317 = default(Antlr3AstNode);
-		Antlr3AstNode block318 = default(Antlr3AstNode);
-		Antlr3AstNode expression320 = default(Antlr3AstNode);
+		Antlr3AstNode statement309 = default(Antlr3AstNode);
+		Antlr3AstNode statement311 = default(Antlr3AstNode);
+		Antlr3AstNode parExpression313 = default(Antlr3AstNode);
+		Antlr3AstNode forstatement315 = default(Antlr3AstNode);
 		Antlr3AstNode expression323 = default(Antlr3AstNode);
-		Antlr3AstNode expression331 = default(Antlr3AstNode);
-		Antlr3AstNode statement335 = default(Antlr3AstNode);
+		Antlr3AstNode expression326 = default(Antlr3AstNode);
+		Antlr3AstNode parExpression329 = default(Antlr3AstNode);
+		Antlr3AstNode block330 = default(Antlr3AstNode);
+		Antlr3AstNode trystatement331 = default(Antlr3AstNode);
+		Antlr3AstNode tryWithResourcesStatement332 = default(Antlr3AstNode);
 
-		object string_literal286_tree = default(object);
+		object char_literal286_tree = default(object);
+		object IDENTIFIER287_tree = default(object);
 		object char_literal288_tree = default(object);
-		object char_literal290_tree = default(object);
-		object string_literal291_tree = default(object);
-		object char_literal293_tree = default(object);
-		object char_literal295_tree = default(object);
-		object string_literal296_tree = default(object);
-		object string_literal299_tree = default(object);
+		object char_literal291_tree = default(object);
+		object string_literal292_tree = default(object);
+		object string_literal295_tree = default(object);
+		object string_literal297_tree = default(object);
+		object char_literal299_tree = default(object);
+		object char_literal301_tree = default(object);
 		object string_literal302_tree = default(object);
-		object string_literal305_tree = default(object);
+		object char_literal304_tree = default(object);
+		object char_literal306_tree = default(object);
 		object string_literal307_tree = default(object);
-		object char_literal309_tree = default(object);
-		object string_literal311_tree = default(object);
-		object char_literal313_tree = default(object);
-		object char_literal315_tree = default(object);
+		object string_literal310_tree = default(object);
+		object string_literal312_tree = default(object);
+		object char_literal314_tree = default(object);
 		object string_literal316_tree = default(object);
+		object IDENTIFIER317_tree = default(object);
+		object char_literal318_tree = default(object);
 		object string_literal319_tree = default(object);
+		object IDENTIFIER320_tree = default(object);
 		object char_literal321_tree = default(object);
 		object string_literal322_tree = default(object);
 		object char_literal324_tree = default(object);
 		object string_literal325_tree = default(object);
-		object IDENTIFIER326_tree = default(object);
 		object char_literal327_tree = default(object);
 		object string_literal328_tree = default(object);
-		object IDENTIFIER329_tree = default(object);
-		object char_literal330_tree = default(object);
-		object char_literal332_tree = default(object);
-		object IDENTIFIER333_tree = default(object);
-		object char_literal334_tree = default(object);
-		object char_literal336_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "statement");
 		DebugLocation(855, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 59)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:856:5: ( block | ( 'assert' ) expression ( ':' expression )? ';' | 'assert' expression ( ':' expression )? ';' | 'if' parExpression statement ( 'else' statement )? | forstatement | 'while' parExpression statement | 'do' statement 'while' parExpression ';' | trystatement | 'switch' parExpression '{' switchBlockStatementGroups '}' | 'synchronized' parExpression block | 'return' ( expression )? ';' | 'throw' expression ';' | 'break' ( IDENTIFIER )? ';' | 'continue' ( IDENTIFIER )? ';' | expression ';' | IDENTIFIER ':' statement | ';' )
-			int alt101=17;
-			try { DebugEnterDecision(101, false);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:856:5: ( block | ';' | IDENTIFIER ':' statement | expression ';' | 'if' parExpression statement ( 'else' statement )? | 'assert' expression ( ':' expression )? ';' | 'switch' parExpression '{' switchBlockStatementGroups '}' | 'while' parExpression statement | 'do' statement 'while' parExpression ';' | forstatement | 'break' ( IDENTIFIER )? ';' | 'continue' ( IDENTIFIER )? ';' | 'return' ( expression )? ';' | 'throw' expression ';' | 'synchronized' parExpression block | trystatement | tryWithResourcesStatement )
+			int alt100=17;
+			try { DebugEnterDecision(100, false);
 			switch (input.LA(1))
 			{
 			case LBRACE:
 				{
-				alt101 = 1;
+				alt100 = 1;
 				}
 				break;
-			case ASSERT:
+			case SEMI:
 				{
-				int LA101_2 = input.LA(2);
-
-				if ((EvaluatePredicate(synpred133_Java_fragment)))
-				{
-					alt101 = 2;
+				alt100 = 2;
 				}
-				else if ((EvaluatePredicate(synpred135_Java_fragment)))
+				break;
+			case IDENTIFIER:
 				{
-					alt101 = 3;
+				int LA100_2 = input.LA(2);
+
+				if ((LA100_2==COLON))
+				{
+					alt100 = 3;
+				}
+				else if (((LA100_2>=AMP && LA100_2<=AMPEQ)||(LA100_2>=BANGEQ && LA100_2<=BAREQ)||(LA100_2>=CARET && LA100_2<=CARETEQ)||LA100_2==DOT||(LA100_2>=EQ && LA100_2<=EQEQ)||LA100_2==GT||LA100_2==INSTANCEOF||LA100_2==LBRACKET||(LA100_2>=LPAREN && LA100_2<=LT)||(LA100_2>=PERCENT && LA100_2<=PLUSPLUS)||LA100_2==QUES||LA100_2==SEMI||(LA100_2>=SLASH && LA100_2<=STAREQ)||(LA100_2>=SUB && LA100_2<=SUBSUB)))
+				{
+					alt100 = 4;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 101, 2, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 100, 3, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
-				}
-				break;
-			case IF:
-				{
-				alt101 = 4;
-				}
-				break;
-			case FOR:
-				{
-				alt101 = 5;
-				}
-				break;
-			case WHILE:
-				{
-				alt101 = 6;
-				}
-				break;
-			case DO:
-				{
-				alt101 = 7;
-				}
-				break;
-			case TRY:
-				{
-				alt101 = 8;
-				}
-				break;
-			case SWITCH:
-				{
-				alt101 = 9;
-				}
-				break;
-			case SYNCHRONIZED:
-				{
-				alt101 = 10;
-				}
-				break;
-			case RETURN:
-				{
-				alt101 = 11;
-				}
-				break;
-			case THROW:
-				{
-				alt101 = 12;
-				}
-				break;
-			case BREAK:
-				{
-				alt101 = 13;
-				}
-				break;
-			case CONTINUE:
-				{
-				alt101 = 14;
 				}
 				break;
 			case BANG:
@@ -12684,46 +12627,96 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case TRUE:
 			case VOID:
 				{
-				alt101 = 15;
+				alt100 = 4;
 				}
 				break;
-			case IDENTIFIER:
+			case IF:
 				{
-				int LA101_2 = input.LA(2);
-
-				if ((EvaluatePredicate(synpred151_Java_fragment)))
-				{
-					alt101 = 15;
+				alt100 = 5;
 				}
-				else if ((EvaluatePredicate(synpred152_Java_fragment)))
+				break;
+			case ASSERT:
 				{
-					alt101 = 16;
+				alt100 = 6;
+				}
+				break;
+			case SWITCH:
+				{
+				alt100 = 7;
+				}
+				break;
+			case WHILE:
+				{
+				alt100 = 8;
+				}
+				break;
+			case DO:
+				{
+				alt100 = 9;
+				}
+				break;
+			case FOR:
+				{
+				alt100 = 10;
+				}
+				break;
+			case BREAK:
+				{
+				alt100 = 11;
+				}
+				break;
+			case CONTINUE:
+				{
+				alt100 = 12;
+				}
+				break;
+			case RETURN:
+				{
+				alt100 = 13;
+				}
+				break;
+			case THROW:
+				{
+				alt100 = 14;
+				}
+				break;
+			case SYNCHRONIZED:
+				{
+				alt100 = 15;
+				}
+				break;
+			case TRY:
+				{
+				int LA100_2 = input.LA(2);
+
+				if ((LA100_2==LBRACE))
+				{
+					alt100 = 16;
+				}
+				else if ((LA100_2==LPAREN))
+				{
+					alt100 = 17;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 101, 22, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 100, 16, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
-				}
-				break;
-			case SEMI:
-				{
-				alt101 = 17;
 				}
 				break;
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 101, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 100, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(101); }
-			switch (alt101)
+			} finally { DebugExitDecision(100); }
+			switch (alt100)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -12742,60 +12735,126 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:858:9: ( 'assert' ) expression ( ':' expression )? ';'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:857:9: ';'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(857, 9);
+				char_literal286=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4375); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal286_tree = (object)adaptor.Create(char_literal286, "char_literal286", retval);
+				adaptor.AddChild(root_0, char_literal286_tree);
+				}
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:858:9: IDENTIFIER ':' statement
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(858, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:858:9: ( 'assert' )
-				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:858:10: 'assert'
-				{
-				DebugLocation(858, 10);
-				string_literal286=(IToken)Match(input,ASSERT,Follow._ASSERT_in_statement4389); if (state.failed) return retval;
+				IDENTIFIER287=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_statement4385); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal286_tree = (object)adaptor.Create(string_literal286, "string_literal286", retval);
-				adaptor.AddChild(root_0, string_literal286_tree);
+				IDENTIFIER287_tree = (object)adaptor.Create(IDENTIFIER287, "IDENTIFIER287", retval);
+				adaptor.AddChild(root_0, IDENTIFIER287_tree);
 				}
-
+				DebugLocation(858, 20);
+				char_literal288=(IToken)Match(input,COLON,Follow._COLON_in_statement4387); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal288_tree = (object)adaptor.Create(char_literal288, "char_literal288", retval);
+				adaptor.AddChild(root_0, char_literal288_tree);
 				}
-
-				DebugLocation(860, 9);
-				PushFollow(Follow._expression_in_statement4409);
-				expression287=expression();
+				DebugLocation(858, 24);
+				PushFollow(Follow._statement_in_statement4389);
+				statement289=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression287.Tree, expression287, "expression287", retval);
-				DebugLocation(860, 20);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:860:20: ( ':' expression )?
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement289.Tree, statement289, "statement289", retval);
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:859:6: expression ';'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(859, 6);
+				PushFollow(Follow._expression_in_statement4396);
+				expression290=expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression290.Tree, expression290, "expression290", retval);
+				DebugLocation(859, 18);
+				char_literal291=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4399); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal291_tree = (object)adaptor.Create(char_literal291, "char_literal291", retval);
+				adaptor.AddChild(root_0, char_literal291_tree);
+				}
+
+				}
+				break;
+			case 5:
+				DebugEnterAlt(5);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:860:9: 'if' parExpression statement ( 'else' statement )?
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(860, 9);
+				string_literal292=(IToken)Match(input,IF,Follow._IF_in_statement4414); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal292_tree = (object)adaptor.Create(string_literal292, "string_literal292", retval);
+				adaptor.AddChild(root_0, string_literal292_tree);
+				}
+				DebugLocation(860, 14);
+				PushFollow(Follow._parExpression_in_statement4416);
+				parExpression293=parExpression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, parExpression293.Tree, parExpression293, "parExpression293", retval);
+				DebugLocation(860, 28);
+				PushFollow(Follow._statement_in_statement4418);
+				statement294=statement();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement294.Tree, statement294, "statement294", retval);
+				DebugLocation(860, 38);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:860:38: ( 'else' statement )?
 				int alt95=2;
 				try { DebugEnterSubRule(95);
 				try { DebugEnterDecision(95, false);
 				int LA95_1 = input.LA(1);
 
-				if ((LA95_1==COLON))
+				if ((LA95_1==ELSE))
 				{
-					alt95 = 1;
+					int LA95_2 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred135_Java_fragment)))
+					{
+						alt95 = 1;
+					}
 				}
 				} finally { DebugExitDecision(95); }
 				switch (alt95)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:860:21: ':' expression
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:860:39: 'else' statement
 					{
-					DebugLocation(860, 21);
-					char_literal288=(IToken)Match(input,COLON,Follow._COLON_in_statement4412); if (state.failed) return retval;
+					DebugLocation(860, 39);
+					string_literal295=(IToken)Match(input,ELSE,Follow._ELSE_in_statement4421); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal288_tree = (object)adaptor.Create(char_literal288, "char_literal288", retval);
-					adaptor.AddChild(root_0, char_literal288_tree);
+					string_literal295_tree = (object)adaptor.Create(string_literal295, "string_literal295", retval);
+					adaptor.AddChild(root_0, string_literal295_tree);
 					}
-					DebugLocation(860, 25);
-					PushFollow(Follow._expression_in_statement4414);
-					expression289=expression();
+					DebugLocation(860, 46);
+					PushFollow(Follow._statement_in_statement4423);
+					statement296=statement();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, expression289.Tree, expression289, "expression289", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, statement296.Tree, statement296, "statement296", retval);
 
 					}
 					break;
@@ -12803,33 +12862,27 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				} finally { DebugExitSubRule(95); }
 
-				DebugLocation(860, 38);
-				char_literal290=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4418); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal290_tree = (object)adaptor.Create(char_literal290, "char_literal290", retval);
-				adaptor.AddChild(root_0, char_literal290_tree);
-				}
 
 				}
 				break;
-			case 3:
-				DebugEnterAlt(3);
+			case 6:
+				DebugEnterAlt(6);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:861:9: 'assert' expression ( ':' expression )? ';'
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(861, 9);
-				string_literal291=(IToken)Match(input,ASSERT,Follow._ASSERT_in_statement4428); if (state.failed) return retval;
+				string_literal297=(IToken)Match(input,ASSERT,Follow._ASSERT_in_statement4445); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal291_tree = (object)adaptor.Create(string_literal291, "string_literal291", retval);
-				adaptor.AddChild(root_0, string_literal291_tree);
+				string_literal297_tree = (object)adaptor.Create(string_literal297, "string_literal297", retval);
+				adaptor.AddChild(root_0, string_literal297_tree);
 				}
 				DebugLocation(861, 19);
-				PushFollow(Follow._expression_in_statement4431);
-				expression292=expression();
+				PushFollow(Follow._expression_in_statement4448);
+				expression298=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression292.Tree, expression292, "expression292", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression298.Tree, expression298, "expression298", retval);
 				DebugLocation(861, 30);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:861:30: ( ':' expression )?
 				int alt96=2;
@@ -12849,17 +12902,17 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:861:31: ':' expression
 					{
 					DebugLocation(861, 31);
-					char_literal293=(IToken)Match(input,COLON,Follow._COLON_in_statement4434); if (state.failed) return retval;
+					char_literal299=(IToken)Match(input,COLON,Follow._COLON_in_statement4451); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal293_tree = (object)adaptor.Create(char_literal293, "char_literal293", retval);
-					adaptor.AddChild(root_0, char_literal293_tree);
+					char_literal299_tree = (object)adaptor.Create(char_literal299, "char_literal299", retval);
+					adaptor.AddChild(root_0, char_literal299_tree);
 					}
 					DebugLocation(861, 35);
-					PushFollow(Follow._expression_in_statement4436);
-					expression294=expression();
+					PushFollow(Follow._expression_in_statement4453);
+					expression300=expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, expression294.Tree, expression294, "expression294", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, expression300.Tree, expression300, "expression300", retval);
 
 					}
 					break;
@@ -12868,73 +12921,170 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				} finally { DebugExitSubRule(96); }
 
 				DebugLocation(861, 48);
-				char_literal295=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4440); if (state.failed) return retval;
+				char_literal301=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4457); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal295_tree = (object)adaptor.Create(char_literal295, "char_literal295", retval);
-				adaptor.AddChild(root_0, char_literal295_tree);
+				char_literal301_tree = (object)adaptor.Create(char_literal301, "char_literal301", retval);
+				adaptor.AddChild(root_0, char_literal301_tree);
 				}
 
 				}
 				break;
-			case 4:
-				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:862:9: 'if' parExpression statement ( 'else' statement )?
+			case 7:
+				DebugEnterAlt(7);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:862:9: 'switch' parExpression '{' switchBlockStatementGroups '}'
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(862, 9);
-				string_literal296=(IToken)Match(input,IF,Follow._IF_in_statement4462); if (state.failed) return retval;
+				string_literal302=(IToken)Match(input,SWITCH,Follow._SWITCH_in_statement4479); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal296_tree = (object)adaptor.Create(string_literal296, "string_literal296", retval);
-				adaptor.AddChild(root_0, string_literal296_tree);
+				string_literal302_tree = (object)adaptor.Create(string_literal302, "string_literal302", retval);
+				adaptor.AddChild(root_0, string_literal302_tree);
 				}
-				DebugLocation(862, 14);
-				PushFollow(Follow._parExpression_in_statement4464);
-				parExpression297=parExpression();
+				DebugLocation(862, 18);
+				PushFollow(Follow._parExpression_in_statement4481);
+				parExpression303=parExpression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, parExpression297.Tree, parExpression297, "parExpression297", retval);
-				DebugLocation(862, 28);
-				PushFollow(Follow._statement_in_statement4466);
-				statement298=statement();
+				if (state.backtracking == 0) adaptor.AddChild(root_0, parExpression303.Tree, parExpression303, "parExpression303", retval);
+				DebugLocation(862, 32);
+				char_literal304=(IToken)Match(input,LBRACE,Follow._LBRACE_in_statement4483); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal304_tree = (object)adaptor.Create(char_literal304, "char_literal304", retval);
+				adaptor.AddChild(root_0, char_literal304_tree);
+				}
+				DebugLocation(862, 36);
+				PushFollow(Follow._switchBlockStatementGroups_in_statement4485);
+				switchBlockStatementGroups305=switchBlockStatementGroups();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement298.Tree, statement298, "statement298", retval);
-				DebugLocation(862, 38);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:862:38: ( 'else' statement )?
+				if (state.backtracking == 0) adaptor.AddChild(root_0, switchBlockStatementGroups305.Tree, switchBlockStatementGroups305, "switchBlockStatementGroups305", retval);
+				DebugLocation(862, 63);
+				char_literal306=(IToken)Match(input,RBRACE,Follow._RBRACE_in_statement4487); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal306_tree = (object)adaptor.Create(char_literal306, "char_literal306", retval);
+				adaptor.AddChild(root_0, char_literal306_tree);
+				}
+
+				}
+				break;
+			case 8:
+				DebugEnterAlt(8);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:863:9: 'while' parExpression statement
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(863, 9);
+				string_literal307=(IToken)Match(input,WHILE,Follow._WHILE_in_statement4497); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal307_tree = (object)adaptor.Create(string_literal307, "string_literal307", retval);
+				adaptor.AddChild(root_0, string_literal307_tree);
+				}
+				DebugLocation(863, 17);
+				PushFollow(Follow._parExpression_in_statement4499);
+				parExpression308=parExpression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, parExpression308.Tree, parExpression308, "parExpression308", retval);
+				DebugLocation(863, 31);
+				PushFollow(Follow._statement_in_statement4501);
+				statement309=statement();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement309.Tree, statement309, "statement309", retval);
+
+				}
+				break;
+			case 9:
+				DebugEnterAlt(9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:864:9: 'do' statement 'while' parExpression ';'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(864, 9);
+				string_literal310=(IToken)Match(input,DO,Follow._DO_in_statement4511); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal310_tree = (object)adaptor.Create(string_literal310, "string_literal310", retval);
+				adaptor.AddChild(root_0, string_literal310_tree);
+				}
+				DebugLocation(864, 14);
+				PushFollow(Follow._statement_in_statement4513);
+				statement311=statement();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement311.Tree, statement311, "statement311", retval);
+				DebugLocation(864, 24);
+				string_literal312=(IToken)Match(input,WHILE,Follow._WHILE_in_statement4515); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal312_tree = (object)adaptor.Create(string_literal312, "string_literal312", retval);
+				adaptor.AddChild(root_0, string_literal312_tree);
+				}
+				DebugLocation(864, 32);
+				PushFollow(Follow._parExpression_in_statement4517);
+				parExpression313=parExpression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, parExpression313.Tree, parExpression313, "parExpression313", retval);
+				DebugLocation(864, 46);
+				char_literal314=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4519); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal314_tree = (object)adaptor.Create(char_literal314, "char_literal314", retval);
+				adaptor.AddChild(root_0, char_literal314_tree);
+				}
+
+				}
+				break;
+			case 10:
+				DebugEnterAlt(10);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:865:9: forstatement
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(865, 9);
+				PushFollow(Follow._forstatement_in_statement4529);
+				forstatement315=forstatement();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, forstatement315.Tree, forstatement315, "forstatement315", retval);
+
+				}
+				break;
+			case 11:
+				DebugEnterAlt(11);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:866:9: 'break' ( IDENTIFIER )? ';'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(866, 9);
+				string_literal316=(IToken)Match(input,BREAK,Follow._BREAK_in_statement4539); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal316_tree = (object)adaptor.Create(string_literal316, "string_literal316", retval);
+				adaptor.AddChild(root_0, string_literal316_tree);
+				}
+				DebugLocation(866, 17);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:866:17: ( IDENTIFIER )?
 				int alt97=2;
 				try { DebugEnterSubRule(97);
 				try { DebugEnterDecision(97, false);
 				int LA97_1 = input.LA(1);
 
-				if ((LA97_1==ELSE))
+				if ((LA97_1==IDENTIFIER))
 				{
-					int LA97_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred136_Java_fragment)))
-					{
-						alt97 = 1;
-					}
+					alt97 = 1;
 				}
 				} finally { DebugExitDecision(97); }
 				switch (alt97)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:862:39: 'else' statement
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:866:18: IDENTIFIER
 					{
-					DebugLocation(862, 39);
-					string_literal299=(IToken)Match(input,ELSE,Follow._ELSE_in_statement4469); if (state.failed) return retval;
+					DebugLocation(866, 18);
+					IDENTIFIER317=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_statement4542); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					string_literal299_tree = (object)adaptor.Create(string_literal299, "string_literal299", retval);
-					adaptor.AddChild(root_0, string_literal299_tree);
+					IDENTIFIER317_tree = (object)adaptor.Create(IDENTIFIER317, "IDENTIFIER317", retval);
+					adaptor.AddChild(root_0, IDENTIFIER317_tree);
 					}
-					DebugLocation(862, 46);
-					PushFollow(Follow._statement_in_statement4471);
-					statement300=statement();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, statement300.Tree, statement300, "statement300", retval);
 
 					}
 					break;
@@ -12942,191 +13092,35 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				} finally { DebugExitSubRule(97); }
 
-
-				}
-				break;
-			case 5:
-				DebugEnterAlt(5);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:863:9: forstatement
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(863, 9);
-				PushFollow(Follow._forstatement_in_statement4493);
-				forstatement301=forstatement();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, forstatement301.Tree, forstatement301, "forstatement301", retval);
-
-				}
-				break;
-			case 6:
-				DebugEnterAlt(6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:864:9: 'while' parExpression statement
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(864, 9);
-				string_literal302=(IToken)Match(input,WHILE,Follow._WHILE_in_statement4503); if (state.failed) return retval;
+				DebugLocation(866, 31);
+				char_literal318=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4546); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal302_tree = (object)adaptor.Create(string_literal302, "string_literal302", retval);
-				adaptor.AddChild(root_0, string_literal302_tree);
-				}
-				DebugLocation(864, 17);
-				PushFollow(Follow._parExpression_in_statement4505);
-				parExpression303=parExpression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, parExpression303.Tree, parExpression303, "parExpression303", retval);
-				DebugLocation(864, 31);
-				PushFollow(Follow._statement_in_statement4507);
-				statement304=statement();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement304.Tree, statement304, "statement304", retval);
-
-				}
-				break;
-			case 7:
-				DebugEnterAlt(7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:865:9: 'do' statement 'while' parExpression ';'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(865, 9);
-				string_literal305=(IToken)Match(input,DO,Follow._DO_in_statement4517); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal305_tree = (object)adaptor.Create(string_literal305, "string_literal305", retval);
-				adaptor.AddChild(root_0, string_literal305_tree);
-				}
-				DebugLocation(865, 14);
-				PushFollow(Follow._statement_in_statement4519);
-				statement306=statement();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement306.Tree, statement306, "statement306", retval);
-				DebugLocation(865, 24);
-				string_literal307=(IToken)Match(input,WHILE,Follow._WHILE_in_statement4521); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal307_tree = (object)adaptor.Create(string_literal307, "string_literal307", retval);
-				adaptor.AddChild(root_0, string_literal307_tree);
-				}
-				DebugLocation(865, 32);
-				PushFollow(Follow._parExpression_in_statement4523);
-				parExpression308=parExpression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, parExpression308.Tree, parExpression308, "parExpression308", retval);
-				DebugLocation(865, 46);
-				char_literal309=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4525); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal309_tree = (object)adaptor.Create(char_literal309, "char_literal309", retval);
-				adaptor.AddChild(root_0, char_literal309_tree);
+				char_literal318_tree = (object)adaptor.Create(char_literal318, "char_literal318", retval);
+				adaptor.AddChild(root_0, char_literal318_tree);
 				}
 
 				}
 				break;
-			case 8:
-				DebugEnterAlt(8);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:866:9: trystatement
+			case 12:
+				DebugEnterAlt(12);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:867:4: 'continue' ( IDENTIFIER )? ';'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(866, 9);
-				PushFollow(Follow._trystatement_in_statement4535);
-				trystatement310=trystatement();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, trystatement310.Tree, trystatement310, "trystatement310", retval);
-
-				}
-				break;
-			case 9:
-				DebugEnterAlt(9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:867:9: 'switch' parExpression '{' switchBlockStatementGroups '}'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(867, 9);
-				string_literal311=(IToken)Match(input,SWITCH,Follow._SWITCH_in_statement4545); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal311_tree = (object)adaptor.Create(string_literal311, "string_literal311", retval);
-				adaptor.AddChild(root_0, string_literal311_tree);
-				}
-				DebugLocation(867, 18);
-				PushFollow(Follow._parExpression_in_statement4547);
-				parExpression312=parExpression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, parExpression312.Tree, parExpression312, "parExpression312", retval);
-				DebugLocation(867, 32);
-				char_literal313=(IToken)Match(input,LBRACE,Follow._LBRACE_in_statement4549); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal313_tree = (object)adaptor.Create(char_literal313, "char_literal313", retval);
-				adaptor.AddChild(root_0, char_literal313_tree);
-				}
-				DebugLocation(867, 36);
-				PushFollow(Follow._switchBlockStatementGroups_in_statement4551);
-				switchBlockStatementGroups314=switchBlockStatementGroups();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, switchBlockStatementGroups314.Tree, switchBlockStatementGroups314, "switchBlockStatementGroups314", retval);
-				DebugLocation(867, 63);
-				char_literal315=(IToken)Match(input,RBRACE,Follow._RBRACE_in_statement4553); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal315_tree = (object)adaptor.Create(char_literal315, "char_literal315", retval);
-				adaptor.AddChild(root_0, char_literal315_tree);
-				}
-
-				}
-				break;
-			case 10:
-				DebugEnterAlt(10);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:868:9: 'synchronized' parExpression block
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(868, 9);
-				string_literal316=(IToken)Match(input,SYNCHRONIZED,Follow._SYNCHRONIZED_in_statement4563); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal316_tree = (object)adaptor.Create(string_literal316, "string_literal316", retval);
-				adaptor.AddChild(root_0, string_literal316_tree);
-				}
-				DebugLocation(868, 24);
-				PushFollow(Follow._parExpression_in_statement4565);
-				parExpression317=parExpression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, parExpression317.Tree, parExpression317, "parExpression317", retval);
-				DebugLocation(868, 38);
-				PushFollow(Follow._block_in_statement4567);
-				block318=block();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block318.Tree, block318, "block318", retval);
-
-				}
-				break;
-			case 11:
-				DebugEnterAlt(11);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:869:9: 'return' ( expression )? ';'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(869, 9);
-				string_literal319=(IToken)Match(input,RETURN,Follow._RETURN_in_statement4577); if (state.failed) return retval;
+				DebugLocation(867, 4);
+				string_literal319=(IToken)Match(input,CONTINUE,Follow._CONTINUE_in_statement4551); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal319_tree = (object)adaptor.Create(string_literal319, "string_literal319", retval);
 				adaptor.AddChild(root_0, string_literal319_tree);
 				}
-				DebugLocation(869, 18);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:869:18: ( expression )?
+				DebugLocation(867, 15);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:867:15: ( IDENTIFIER )?
 				int alt98=2;
 				try { DebugEnterSubRule(98);
 				try { DebugEnterDecision(98, false);
 				int LA98_1 = input.LA(1);
 
-				if ((LA98_1==BANG||LA98_1==BOOLEAN||LA98_1==BYTE||(LA98_1>=CHAR && LA98_1<=CHARLITERAL)||(LA98_1>=DOUBLE && LA98_1<=DOUBLELITERAL)||LA98_1==FALSE||(LA98_1>=FLOAT && LA98_1<=FLOATLITERAL)||LA98_1==IDENTIFIER||LA98_1==INT||LA98_1==INTLITERAL||(LA98_1>=LONG && LA98_1<=LPAREN)||(LA98_1>=NEW && LA98_1<=NULL)||LA98_1==PLUS||LA98_1==PLUSPLUS||LA98_1==SHORT||(LA98_1>=STRINGLITERAL && LA98_1<=SUB)||(LA98_1>=SUBSUB && LA98_1<=SUPER)||LA98_1==THIS||LA98_1==TILDE||LA98_1==TRUE||LA98_1==VOID))
+				if ((LA98_1==IDENTIFIER))
 				{
 					alt98 = 1;
 				}
@@ -13135,14 +13129,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:869:19: expression
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:867:16: IDENTIFIER
 					{
-					DebugLocation(869, 19);
-					PushFollow(Follow._expression_in_statement4580);
-					expression320=expression();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, expression320.Tree, expression320, "expression320", retval);
+					DebugLocation(867, 16);
+					IDENTIFIER320=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_statement4554); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					IDENTIFIER320_tree = (object)adaptor.Create(IDENTIFIER320, "IDENTIFIER320", retval);
+					adaptor.AddChild(root_0, IDENTIFIER320_tree);
+					}
 
 					}
 					break;
@@ -13150,8 +13144,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				} finally { DebugExitSubRule(98); }
 
-				DebugLocation(869, 33);
-				char_literal321=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4585); if (state.failed) return retval;
+				DebugLocation(867, 29);
+				char_literal321=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4558); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal321_tree = (object)adaptor.Create(char_literal321, "char_literal321", retval);
 				adaptor.AddChild(root_0, char_literal321_tree);
@@ -13159,53 +13153,26 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 				}
 				break;
-			case 12:
-				DebugEnterAlt(12);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:870:9: 'throw' expression ';'
+			case 13:
+				DebugEnterAlt(13);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:868:9: 'return' ( expression )? ';'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(870, 9);
-				string_literal322=(IToken)Match(input,THROW,Follow._THROW_in_statement4595); if (state.failed) return retval;
+				DebugLocation(868, 9);
+				string_literal322=(IToken)Match(input,RETURN,Follow._RETURN_in_statement4568); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal322_tree = (object)adaptor.Create(string_literal322, "string_literal322", retval);
 				adaptor.AddChild(root_0, string_literal322_tree);
 				}
-				DebugLocation(870, 17);
-				PushFollow(Follow._expression_in_statement4597);
-				expression323=expression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression323.Tree, expression323, "expression323", retval);
-				DebugLocation(870, 28);
-				char_literal324=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4599); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal324_tree = (object)adaptor.Create(char_literal324, "char_literal324", retval);
-				adaptor.AddChild(root_0, char_literal324_tree);
-				}
-
-				}
-				break;
-			case 13:
-				DebugEnterAlt(13);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:871:9: 'break' ( IDENTIFIER )? ';'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(871, 9);
-				string_literal325=(IToken)Match(input,BREAK,Follow._BREAK_in_statement4609); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal325_tree = (object)adaptor.Create(string_literal325, "string_literal325", retval);
-				adaptor.AddChild(root_0, string_literal325_tree);
-				}
-				DebugLocation(872, 13);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:872:13: ( IDENTIFIER )?
+				DebugLocation(868, 18);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:868:18: ( expression )?
 				int alt99=2;
 				try { DebugEnterSubRule(99);
 				try { DebugEnterDecision(99, false);
 				int LA99_1 = input.LA(1);
 
-				if ((LA99_1==IDENTIFIER))
+				if ((LA99_1==BANG||LA99_1==BOOLEAN||LA99_1==BYTE||(LA99_1>=CHAR && LA99_1<=CHARLITERAL)||(LA99_1>=DOUBLE && LA99_1<=DOUBLELITERAL)||LA99_1==FALSE||(LA99_1>=FLOAT && LA99_1<=FLOATLITERAL)||LA99_1==IDENTIFIER||LA99_1==INT||LA99_1==INTLITERAL||(LA99_1>=LONG && LA99_1<=LPAREN)||(LA99_1>=NEW && LA99_1<=NULL)||LA99_1==PLUS||LA99_1==PLUSPLUS||LA99_1==SHORT||(LA99_1>=STRINGLITERAL && LA99_1<=SUB)||(LA99_1>=SUBSUB && LA99_1<=SUPER)||LA99_1==THIS||LA99_1==TILDE||LA99_1==TRUE||LA99_1==VOID))
 				{
 					alt99 = 1;
 				}
@@ -13214,14 +13181,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:872:14: IDENTIFIER
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:868:19: expression
 					{
-					DebugLocation(872, 14);
-					IDENTIFIER326=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_statement4624); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					IDENTIFIER326_tree = (object)adaptor.Create(IDENTIFIER326, "IDENTIFIER326", retval);
-					adaptor.AddChild(root_0, IDENTIFIER326_tree);
-					}
+					DebugLocation(868, 19);
+					PushFollow(Follow._expression_in_statement4571);
+					expression323=expression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, expression323.Tree, expression323, "expression323", retval);
 
 					}
 					break;
@@ -13229,8 +13196,35 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				} finally { DebugExitSubRule(99); }
 
-				DebugLocation(873, 16);
-				char_literal327=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4641); if (state.failed) return retval;
+				DebugLocation(868, 33);
+				char_literal324=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4576); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal324_tree = (object)adaptor.Create(char_literal324, "char_literal324", retval);
+				adaptor.AddChild(root_0, char_literal324_tree);
+				}
+
+				}
+				break;
+			case 14:
+				DebugEnterAlt(14);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:869:9: 'throw' expression ';'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(869, 9);
+				string_literal325=(IToken)Match(input,THROW,Follow._THROW_in_statement4586); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal325_tree = (object)adaptor.Create(string_literal325, "string_literal325", retval);
+				adaptor.AddChild(root_0, string_literal325_tree);
+				}
+				DebugLocation(869, 17);
+				PushFollow(Follow._expression_in_statement4588);
+				expression326=expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression326.Tree, expression326, "expression326", retval);
+				DebugLocation(869, 28);
+				char_literal327=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4590); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal327_tree = (object)adaptor.Create(char_literal327, "char_literal327", retval);
 				adaptor.AddChild(root_0, char_literal327_tree);
@@ -13238,118 +13232,60 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 				}
 				break;
-			case 14:
-				DebugEnterAlt(14);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:874:9: 'continue' ( IDENTIFIER )? ';'
+			case 15:
+				DebugEnterAlt(15);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:870:9: 'synchronized' parExpression block
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(874, 9);
-				string_literal328=(IToken)Match(input,CONTINUE,Follow._CONTINUE_in_statement4651); if (state.failed) return retval;
+				DebugLocation(870, 9);
+				string_literal328=(IToken)Match(input,SYNCHRONIZED,Follow._SYNCHRONIZED_in_statement4600); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal328_tree = (object)adaptor.Create(string_literal328, "string_literal328", retval);
 				adaptor.AddChild(root_0, string_literal328_tree);
 				}
-				DebugLocation(875, 13);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:875:13: ( IDENTIFIER )?
-				int alt100=2;
-				try { DebugEnterSubRule(100);
-				try { DebugEnterDecision(100, false);
-				int LA100_1 = input.LA(1);
-
-				if ((LA100_1==IDENTIFIER))
-				{
-					alt100 = 1;
-				}
-				} finally { DebugExitDecision(100); }
-				switch (alt100)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:875:14: IDENTIFIER
-					{
-					DebugLocation(875, 14);
-					IDENTIFIER329=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_statement4666); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					IDENTIFIER329_tree = (object)adaptor.Create(IDENTIFIER329, "IDENTIFIER329", retval);
-					adaptor.AddChild(root_0, IDENTIFIER329_tree);
-					}
-
-					}
-					break;
-
-				}
-				} finally { DebugExitSubRule(100); }
-
-				DebugLocation(876, 16);
-				char_literal330=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4683); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal330_tree = (object)adaptor.Create(char_literal330, "char_literal330", retval);
-				adaptor.AddChild(root_0, char_literal330_tree);
-				}
-
-				}
-				break;
-			case 15:
-				DebugEnterAlt(15);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:877:9: expression ';'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(877, 9);
-				PushFollow(Follow._expression_in_statement4693);
-				expression331=expression();
+				DebugLocation(870, 24);
+				PushFollow(Follow._parExpression_in_statement4602);
+				parExpression329=parExpression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression331.Tree, expression331, "expression331", retval);
-				DebugLocation(877, 21);
-				char_literal332=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4696); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal332_tree = (object)adaptor.Create(char_literal332, "char_literal332", retval);
-				adaptor.AddChild(root_0, char_literal332_tree);
-				}
+				if (state.backtracking == 0) adaptor.AddChild(root_0, parExpression329.Tree, parExpression329, "parExpression329", retval);
+				DebugLocation(870, 38);
+				PushFollow(Follow._block_in_statement4604);
+				block330=block();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block330.Tree, block330, "block330", retval);
 
 				}
 				break;
 			case 16:
 				DebugEnterAlt(16);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:878:9: IDENTIFIER ':' statement
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:871:9: trystatement
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(878, 9);
-				IDENTIFIER333=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_statement4711); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				IDENTIFIER333_tree = (object)adaptor.Create(IDENTIFIER333, "IDENTIFIER333", retval);
-				adaptor.AddChild(root_0, IDENTIFIER333_tree);
-				}
-				DebugLocation(878, 20);
-				char_literal334=(IToken)Match(input,COLON,Follow._COLON_in_statement4713); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal334_tree = (object)adaptor.Create(char_literal334, "char_literal334", retval);
-				adaptor.AddChild(root_0, char_literal334_tree);
-				}
-				DebugLocation(878, 24);
-				PushFollow(Follow._statement_in_statement4715);
-				statement335=statement();
+				DebugLocation(871, 9);
+				PushFollow(Follow._trystatement_in_statement4614);
+				trystatement331=trystatement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement335.Tree, statement335, "statement335", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, trystatement331.Tree, trystatement331, "trystatement331", retval);
 
 				}
 				break;
 			case 17:
 				DebugEnterAlt(17);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:879:9: ';'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:872:6: tryWithResourcesStatement
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(879, 9);
-				char_literal336=(IToken)Match(input,SEMI,Follow._SEMI_in_statement4725); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal336_tree = (object)adaptor.Create(char_literal336, "char_literal336", retval);
-				adaptor.AddChild(root_0, char_literal336_tree);
-				}
+				DebugLocation(872, 6);
+				PushFollow(Follow._tryWithResourcesStatement_in_statement4621);
+				tryWithResourcesStatement332=tryWithResourcesStatement();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, tryWithResourcesStatement332.Tree, tryWithResourcesStatement332, "tryWithResourcesStatement332", retval);
 
 				}
 				break;
@@ -13377,7 +13313,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 59, statement_StartIndex); }
 
 		}
-		DebugLocation(881, 4);
+		DebugLocation(873, 4);
 		} finally { DebugExitRule(GrammarFileName, "statement"); }
 		return retval;
 
@@ -13387,7 +13323,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_switchBlockStatementGroups();
 	partial void LeaveRule_switchBlockStatementGroups();
 	// $ANTLR start "switchBlockStatementGroups"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:883:1: switchBlockStatementGroups : ( switchBlockStatementGroup )* ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:875:1: switchBlockStatementGroups : ( switchBlockStatementGroup )* ;
 	[GrammarRule("switchBlockStatementGroups")]
 	private Antlr3AstNode switchBlockStatementGroups()
 	{
@@ -13400,22 +13336,133 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode switchBlockStatementGroup337 = default(Antlr3AstNode);
+		Antlr3AstNode switchBlockStatementGroup333 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "switchBlockStatementGroups");
-		DebugLocation(883, 4);
+		DebugLocation(875, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 60)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:884:5: ( ( switchBlockStatementGroup )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:876:5: ( ( switchBlockStatementGroup )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:884:9: ( switchBlockStatementGroup )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:876:9: ( switchBlockStatementGroup )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(884, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:884:9: ( switchBlockStatementGroup )*
+			DebugLocation(876, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:876:9: ( switchBlockStatementGroup )*
+			try { DebugEnterSubRule(101);
+			while (true)
+			{
+				int alt101=2;
+				try { DebugEnterDecision(101, false);
+				int LA101_1 = input.LA(1);
+
+				if ((LA101_1==CASE||LA101_1==DEFAULT))
+				{
+					alt101 = 1;
+				}
+
+
+				} finally { DebugExitDecision(101); }
+				switch ( alt101 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:876:10: switchBlockStatementGroup
+					{
+					DebugLocation(876, 10);
+					PushFollow(Follow._switchBlockStatementGroup_in_switchBlockStatementGroups4642);
+					switchBlockStatementGroup333=switchBlockStatementGroup();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, switchBlockStatementGroup333.Tree, switchBlockStatementGroup333, "switchBlockStatementGroup333", retval);
+
+					}
+					break;
+
+				default:
+					goto loop101;
+				}
+			}
+
+			loop101:
+				;
+
+			} finally { DebugExitSubRule(101); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("switchBlockStatementGroups", 60);
+			LeaveRule("switchBlockStatementGroups", 60);
+			LeaveRule_switchBlockStatementGroups();
+			if (state.backtracking > 0) { Memoize(input, 60, switchBlockStatementGroups_StartIndex); }
+
+		}
+		DebugLocation(877, 4);
+		} finally { DebugExitRule(GrammarFileName, "switchBlockStatementGroups"); }
+		return retval;
+
+	}
+	// $ANTLR end "switchBlockStatementGroups"
+
+	partial void EnterRule_switchBlockStatementGroup();
+	partial void LeaveRule_switchBlockStatementGroup();
+	// $ANTLR start "switchBlockStatementGroup"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:879:1: switchBlockStatementGroup : switchLabel ( blockStatement )* ;
+	[GrammarRule("switchBlockStatementGroup")]
+	private Antlr3AstNode switchBlockStatementGroup()
+	{
+		EnterRule_switchBlockStatementGroup();
+		EnterRule("switchBlockStatementGroup", 61);
+		var retval = new Antlr3AstNode("switchBlockStatementGroup");
+		
+		retval.Start = (IToken)input.LT(1);
+		int switchBlockStatementGroup_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		Antlr3AstNode switchLabel334 = default(Antlr3AstNode);
+		Antlr3AstNode blockStatement335 = default(Antlr3AstNode);
+
+		try { DebugEnterRule(GrammarFileName, "switchBlockStatementGroup");
+		DebugLocation(879, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 61)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:880:5: ( switchLabel ( blockStatement )* )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:881:9: switchLabel ( blockStatement )*
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(881, 9);
+			PushFollow(Follow._switchLabel_in_switchBlockStatementGroup4671);
+			switchLabel334=switchLabel();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, switchLabel334.Tree, switchLabel334, "switchLabel334", retval);
+			DebugLocation(882, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:882:9: ( blockStatement )*
 			try { DebugEnterSubRule(102);
 			while (true)
 			{
@@ -13423,7 +13470,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(102, false);
 				int LA102_1 = input.LA(1);
 
-				if ((LA102_1==CASE||LA102_1==DEFAULT))
+				if ((LA102_1==ABSTRACT||(LA102_1>=ASSERT && LA102_1<=BANG)||(LA102_1>=BOOLEAN && LA102_1<=BYTE)||(LA102_1>=CHAR && LA102_1<=CLASS)||LA102_1==CONTINUE||LA102_1==DO||(LA102_1>=DOUBLE && LA102_1<=DOUBLELITERAL)||LA102_1==ENUM||(LA102_1>=FALSE && LA102_1<=FINAL)||(LA102_1>=FLOAT && LA102_1<=FOR)||(LA102_1>=IDENTIFIER && LA102_1<=IF)||(LA102_1>=INT && LA102_1<=INTLITERAL)||LA102_1==LBRACE||(LA102_1>=LONG && LA102_1<=LPAREN)||(LA102_1>=MONKEYS_AT && LA102_1<=NULL)||LA102_1==PLUS||(LA102_1>=PLUSPLUS && LA102_1<=PUBLIC)||LA102_1==RETURN||(LA102_1>=SEMI && LA102_1<=SHORT)||(LA102_1>=STATIC && LA102_1<=SUB)||(LA102_1>=SUBSUB && LA102_1<=SYNCHRONIZED)||(LA102_1>=THIS && LA102_1<=THROW)||(LA102_1>=TILDE && LA102_1<=TRY)||(LA102_1>=VOID && LA102_1<=WHILE)))
 				{
 					alt102 = 1;
 				}
@@ -13434,14 +13481,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:884:10: switchBlockStatementGroup
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:882:10: blockStatement
 					{
-					DebugLocation(884, 10);
-					PushFollow(Follow._switchBlockStatementGroup_in_switchBlockStatementGroups4747);
-					switchBlockStatementGroup337=switchBlockStatementGroup();
+					DebugLocation(882, 10);
+					PushFollow(Follow._blockStatement_in_switchBlockStatementGroup4682);
+					blockStatement335=blockStatement();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, switchBlockStatementGroup337.Tree, switchBlockStatementGroup337, "switchBlockStatementGroup337", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, blockStatement335.Tree, blockStatement335, "blockStatement335", retval);
 
 					}
 					break;
@@ -13475,124 +13522,13 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("switchBlockStatementGroups", 60);
-			LeaveRule("switchBlockStatementGroups", 60);
-			LeaveRule_switchBlockStatementGroups();
-			if (state.backtracking > 0) { Memoize(input, 60, switchBlockStatementGroups_StartIndex); }
-
-		}
-		DebugLocation(885, 4);
-		} finally { DebugExitRule(GrammarFileName, "switchBlockStatementGroups"); }
-		return retval;
-
-	}
-	// $ANTLR end "switchBlockStatementGroups"
-
-	partial void EnterRule_switchBlockStatementGroup();
-	partial void LeaveRule_switchBlockStatementGroup();
-	// $ANTLR start "switchBlockStatementGroup"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:887:1: switchBlockStatementGroup : switchLabel ( blockStatement )* ;
-	[GrammarRule("switchBlockStatementGroup")]
-	private Antlr3AstNode switchBlockStatementGroup()
-	{
-		EnterRule_switchBlockStatementGroup();
-		EnterRule("switchBlockStatementGroup", 61);
-		var retval = new Antlr3AstNode("switchBlockStatementGroup");
-		
-		retval.Start = (IToken)input.LT(1);
-		int switchBlockStatementGroup_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		Antlr3AstNode switchLabel338 = default(Antlr3AstNode);
-		Antlr3AstNode blockStatement339 = default(Antlr3AstNode);
-
-		try { DebugEnterRule(GrammarFileName, "switchBlockStatementGroup");
-		DebugLocation(887, 4);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 61)) { return retval; }
-
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:888:5: ( switchLabel ( blockStatement )* )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:889:9: switchLabel ( blockStatement )*
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(889, 9);
-			PushFollow(Follow._switchLabel_in_switchBlockStatementGroup4776);
-			switchLabel338=switchLabel();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, switchLabel338.Tree, switchLabel338, "switchLabel338", retval);
-			DebugLocation(890, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:890:9: ( blockStatement )*
-			try { DebugEnterSubRule(103);
-			while (true)
-			{
-				int alt103=2;
-				try { DebugEnterDecision(103, false);
-				int LA103_1 = input.LA(1);
-
-				if ((LA103_1==ABSTRACT||(LA103_1>=ASSERT && LA103_1<=BANG)||(LA103_1>=BOOLEAN && LA103_1<=BYTE)||(LA103_1>=CHAR && LA103_1<=CLASS)||LA103_1==CONTINUE||LA103_1==DO||(LA103_1>=DOUBLE && LA103_1<=DOUBLELITERAL)||LA103_1==ENUM||(LA103_1>=FALSE && LA103_1<=FINAL)||(LA103_1>=FLOAT && LA103_1<=FOR)||(LA103_1>=IDENTIFIER && LA103_1<=IF)||(LA103_1>=INT && LA103_1<=INTLITERAL)||LA103_1==LBRACE||(LA103_1>=LONG && LA103_1<=LPAREN)||(LA103_1>=MONKEYS_AT && LA103_1<=NULL)||LA103_1==PLUS||(LA103_1>=PLUSPLUS && LA103_1<=PUBLIC)||LA103_1==RETURN||(LA103_1>=SEMI && LA103_1<=SHORT)||(LA103_1>=STATIC && LA103_1<=SUB)||(LA103_1>=SUBSUB && LA103_1<=SYNCHRONIZED)||(LA103_1>=THIS && LA103_1<=THROW)||(LA103_1>=TILDE && LA103_1<=TRY)||(LA103_1>=VOID && LA103_1<=WHILE)))
-				{
-					alt103 = 1;
-				}
-
-
-				} finally { DebugExitDecision(103); }
-				switch ( alt103 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:890:10: blockStatement
-					{
-					DebugLocation(890, 10);
-					PushFollow(Follow._blockStatement_in_switchBlockStatementGroup4787);
-					blockStatement339=blockStatement();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, blockStatement339.Tree, blockStatement339, "blockStatement339", retval);
-
-					}
-					break;
-
-				default:
-					goto loop103;
-				}
-			}
-
-			loop103:
-				;
-
-			} finally { DebugExitSubRule(103); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
 			TraceOut("switchBlockStatementGroup", 61);
 			LeaveRule("switchBlockStatementGroup", 61);
 			LeaveRule_switchBlockStatementGroup();
 			if (state.backtracking > 0) { Memoize(input, 61, switchBlockStatementGroup_StartIndex); }
 
 		}
-		DebugLocation(892, 4);
+		DebugLocation(884, 4);
 		} finally { DebugExitRule(GrammarFileName, "switchBlockStatementGroup"); }
 		return retval;
 
@@ -13602,7 +13538,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_switchLabel();
 	partial void LeaveRule_switchLabel();
 	// $ANTLR start "switchLabel"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:894:1: switchLabel : ( 'case' expression ':' | 'default' ':' );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:886:1: switchLabel : ( 'case' expression ':' | 'default' ':' );
 	[GrammarRule("switchLabel")]
 	private Antlr3AstNode switchLabel()
 	{
@@ -13615,89 +13551,89 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal340 = default(IToken);
-		IToken char_literal342 = default(IToken);
-		IToken string_literal343 = default(IToken);
-		IToken char_literal344 = default(IToken);
-		Antlr3AstNode expression341 = default(Antlr3AstNode);
+		IToken string_literal336 = default(IToken);
+		IToken char_literal338 = default(IToken);
+		IToken string_literal339 = default(IToken);
+		IToken char_literal340 = default(IToken);
+		Antlr3AstNode expression337 = default(Antlr3AstNode);
 
-		object string_literal340_tree = default(object);
-		object char_literal342_tree = default(object);
-		object string_literal343_tree = default(object);
-		object char_literal344_tree = default(object);
+		object string_literal336_tree = default(object);
+		object char_literal338_tree = default(object);
+		object string_literal339_tree = default(object);
+		object char_literal340_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "switchLabel");
-		DebugLocation(894, 4);
+		DebugLocation(886, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 62)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:895:5: ( 'case' expression ':' | 'default' ':' )
-			int alt104=2;
-			try { DebugEnterDecision(104, false);
-			int LA104_1 = input.LA(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:887:5: ( 'case' expression ':' | 'default' ':' )
+			int alt103=2;
+			try { DebugEnterDecision(103, false);
+			int LA103_1 = input.LA(1);
 
-			if ((LA104_1==CASE))
+			if ((LA103_1==CASE))
 			{
-				alt104 = 1;
+				alt103 = 1;
 			}
-			else if ((LA104_1==DEFAULT))
+			else if ((LA103_1==DEFAULT))
 			{
-				alt104 = 2;
+				alt103 = 2;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 104, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 103, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(104); }
-			switch (alt104)
+			} finally { DebugExitDecision(103); }
+			switch (alt103)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:895:9: 'case' expression ':'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:887:9: 'case' expression ':'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(895, 9);
-				string_literal340=(IToken)Match(input,CASE,Follow._CASE_in_switchLabel4818); if (state.failed) return retval;
+				DebugLocation(887, 9);
+				string_literal336=(IToken)Match(input,CASE,Follow._CASE_in_switchLabel4713); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal340_tree = (object)adaptor.Create(string_literal340, "string_literal340", retval);
-				adaptor.AddChild(root_0, string_literal340_tree);
+				string_literal336_tree = (object)adaptor.Create(string_literal336, "string_literal336", retval);
+				adaptor.AddChild(root_0, string_literal336_tree);
 				}
-				DebugLocation(895, 16);
-				PushFollow(Follow._expression_in_switchLabel4820);
-				expression341=expression();
+				DebugLocation(887, 16);
+				PushFollow(Follow._expression_in_switchLabel4715);
+				expression337=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression341.Tree, expression341, "expression341", retval);
-				DebugLocation(895, 27);
-				char_literal342=(IToken)Match(input,COLON,Follow._COLON_in_switchLabel4822); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression337.Tree, expression337, "expression337", retval);
+				DebugLocation(887, 27);
+				char_literal338=(IToken)Match(input,COLON,Follow._COLON_in_switchLabel4717); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal342_tree = (object)adaptor.Create(char_literal342, "char_literal342", retval);
-				adaptor.AddChild(root_0, char_literal342_tree);
+				char_literal338_tree = (object)adaptor.Create(char_literal338, "char_literal338", retval);
+				adaptor.AddChild(root_0, char_literal338_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:896:9: 'default' ':'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:888:9: 'default' ':'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(896, 9);
-				string_literal343=(IToken)Match(input,DEFAULT,Follow._DEFAULT_in_switchLabel4832); if (state.failed) return retval;
+				DebugLocation(888, 9);
+				string_literal339=(IToken)Match(input,DEFAULT,Follow._DEFAULT_in_switchLabel4727); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal343_tree = (object)adaptor.Create(string_literal343, "string_literal343", retval);
-				adaptor.AddChild(root_0, string_literal343_tree);
+				string_literal339_tree = (object)adaptor.Create(string_literal339, "string_literal339", retval);
+				adaptor.AddChild(root_0, string_literal339_tree);
 				}
-				DebugLocation(896, 19);
-				char_literal344=(IToken)Match(input,COLON,Follow._COLON_in_switchLabel4834); if (state.failed) return retval;
+				DebugLocation(888, 19);
+				char_literal340=(IToken)Match(input,COLON,Follow._COLON_in_switchLabel4729); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal344_tree = (object)adaptor.Create(char_literal344, "char_literal344", retval);
-				adaptor.AddChild(root_0, char_literal344_tree);
+				char_literal340_tree = (object)adaptor.Create(char_literal340, "char_literal340", retval);
+				adaptor.AddChild(root_0, char_literal340_tree);
 				}
 
 				}
@@ -13726,7 +13662,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 62, switchLabel_StartIndex); }
 
 		}
-		DebugLocation(897, 4);
+		DebugLocation(889, 4);
 		} finally { DebugExitRule(GrammarFileName, "switchLabel"); }
 		return retval;
 
@@ -13736,7 +13672,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_trystatement();
 	partial void LeaveRule_trystatement();
 	// $ANTLR start "trystatement"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:900:1: trystatement : ( 'try' block ( catches 'finally' block | catches | 'finally' block ) | tryWithResourcesStatement );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:892:1: trystatement : 'try' block ( catches 'finally' block | catches | 'finally' block ) ;
 	[GrammarRule("trystatement")]
 	private Antlr3AstNode trystatement()
 	{
@@ -13749,200 +13685,147 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal345 = default(IToken);
-		IToken string_literal348 = default(IToken);
-		IToken string_literal351 = default(IToken);
-		Antlr3AstNode block346 = default(Antlr3AstNode);
-		Antlr3AstNode catches347 = default(Antlr3AstNode);
-		Antlr3AstNode block349 = default(Antlr3AstNode);
-		Antlr3AstNode catches350 = default(Antlr3AstNode);
-		Antlr3AstNode block352 = default(Antlr3AstNode);
-		Antlr3AstNode tryWithResourcesStatement353 = default(Antlr3AstNode);
+		IToken string_literal341 = default(IToken);
+		IToken string_literal344 = default(IToken);
+		IToken string_literal347 = default(IToken);
+		Antlr3AstNode block342 = default(Antlr3AstNode);
+		Antlr3AstNode catches343 = default(Antlr3AstNode);
+		Antlr3AstNode block345 = default(Antlr3AstNode);
+		Antlr3AstNode catches346 = default(Antlr3AstNode);
+		Antlr3AstNode block348 = default(Antlr3AstNode);
 
-		object string_literal345_tree = default(object);
-		object string_literal348_tree = default(object);
-		object string_literal351_tree = default(object);
+		object string_literal341_tree = default(object);
+		object string_literal344_tree = default(object);
+		object string_literal347_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "trystatement");
-		DebugLocation(900, 5);
+		DebugLocation(892, 5);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 63)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:901:5: ( 'try' block ( catches 'finally' block | catches | 'finally' block ) | tryWithResourcesStatement )
-			int alt106=2;
-			try { DebugEnterDecision(106, false);
-			int LA106_1 = input.LA(1);
-
-			if ((LA106_1==TRY))
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:893:5: ( 'try' block ( catches 'finally' block | catches | 'finally' block ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:893:9: 'try' block ( catches 'finally' block | catches | 'finally' block )
 			{
-				int LA106_2 = input.LA(2);
+			root_0 = (object)adaptor.Nil();
 
-				if ((LA106_2==LBRACE))
+			DebugLocation(893, 9);
+			string_literal341=(IToken)Match(input,TRY,Follow._TRY_in_trystatement4750); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			string_literal341_tree = (object)adaptor.Create(string_literal341, "string_literal341", retval);
+			adaptor.AddChild(root_0, string_literal341_tree);
+			}
+			DebugLocation(893, 15);
+			PushFollow(Follow._block_in_trystatement4752);
+			block342=block();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, block342.Tree, block342, "block342", retval);
+			DebugLocation(894, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:894:9: ( catches 'finally' block | catches | 'finally' block )
+			int alt104=3;
+			try { DebugEnterSubRule(104);
+			try { DebugEnterDecision(104, false);
+			int LA104_1 = input.LA(1);
+
+			if ((LA104_1==CATCH))
+			{
+				int LA104_2 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred155_Java_fragment)))
 				{
-					alt106 = 1;
+					alt104 = 1;
 				}
-				else if ((LA106_2==LPAREN))
+				else if ((EvaluatePredicate(synpred156_Java_fragment)))
 				{
-					alt106 = 2;
+					alt104 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 106, 1, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 104, 1, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
+			}
+			else if ((LA104_1==FINALLY))
+			{
+				alt104 = 3;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 106, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 104, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(106); }
-			switch (alt106)
+			} finally { DebugExitDecision(104); }
+			switch (alt104)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:901:9: 'try' block ( catches 'finally' block | catches | 'finally' block )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:894:13: catches 'finally' block
 				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(901, 9);
-				string_literal345=(IToken)Match(input,TRY,Follow._TRY_in_trystatement4855); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal345_tree = (object)adaptor.Create(string_literal345, "string_literal345", retval);
-				adaptor.AddChild(root_0, string_literal345_tree);
-				}
-				DebugLocation(901, 15);
-				PushFollow(Follow._block_in_trystatement4857);
-				block346=block();
+				DebugLocation(894, 13);
+				PushFollow(Follow._catches_in_trystatement4766);
+				catches343=catches();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block346.Tree, block346, "block346", retval);
-				DebugLocation(902, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:902:9: ( catches 'finally' block | catches | 'finally' block )
-				int alt105=3;
-				try { DebugEnterSubRule(105);
-				try { DebugEnterDecision(105, false);
-				int LA105_1 = input.LA(1);
-
-				if ((LA105_1==CATCH))
-				{
-					int LA105_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred156_Java_fragment)))
-					{
-						alt105 = 1;
-					}
-					else if ((EvaluatePredicate(synpred157_Java_fragment)))
-					{
-						alt105 = 2;
-					}
-					else
-					{
-						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 105, 1, input, 2);
-						DebugRecognitionException(nvae);
-						throw nvae;
-					}
+				if (state.backtracking == 0) adaptor.AddChild(root_0, catches343.Tree, catches343, "catches343", retval);
+				DebugLocation(894, 21);
+				string_literal344=(IToken)Match(input,FINALLY,Follow._FINALLY_in_trystatement4768); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal344_tree = (object)adaptor.Create(string_literal344, "string_literal344", retval);
+				adaptor.AddChild(root_0, string_literal344_tree);
 				}
-				else if ((LA105_1==FINALLY))
-				{
-					alt105 = 3;
-				}
-				else
-				{
-					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 105, 0, input, 1);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
-				} finally { DebugExitDecision(105); }
-				switch (alt105)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:902:13: catches 'finally' block
-					{
-					DebugLocation(902, 13);
-					PushFollow(Follow._catches_in_trystatement4871);
-					catches347=catches();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, catches347.Tree, catches347, "catches347", retval);
-					DebugLocation(902, 21);
-					string_literal348=(IToken)Match(input,FINALLY,Follow._FINALLY_in_trystatement4873); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					string_literal348_tree = (object)adaptor.Create(string_literal348, "string_literal348", retval);
-					adaptor.AddChild(root_0, string_literal348_tree);
-					}
-					DebugLocation(902, 31);
-					PushFollow(Follow._block_in_trystatement4875);
-					block349=block();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, block349.Tree, block349, "block349", retval);
-
-					}
-					break;
-				case 2:
-					DebugEnterAlt(2);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:903:13: catches
-					{
-					DebugLocation(903, 13);
-					PushFollow(Follow._catches_in_trystatement4889);
-					catches350=catches();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, catches350.Tree, catches350, "catches350", retval);
-
-					}
-					break;
-				case 3:
-					DebugEnterAlt(3);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:904:13: 'finally' block
-					{
-					DebugLocation(904, 13);
-					string_literal351=(IToken)Match(input,FINALLY,Follow._FINALLY_in_trystatement4903); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					string_literal351_tree = (object)adaptor.Create(string_literal351, "string_literal351", retval);
-					adaptor.AddChild(root_0, string_literal351_tree);
-					}
-					DebugLocation(904, 23);
-					PushFollow(Follow._block_in_trystatement4905);
-					block352=block();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, block352.Tree, block352, "block352", retval);
-
-					}
-					break;
-
-				}
-				} finally { DebugExitSubRule(105); }
-
+				DebugLocation(894, 31);
+				PushFollow(Follow._block_in_trystatement4770);
+				block345=block();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block345.Tree, block345, "block345", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:906:9: tryWithResourcesStatement
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:895:13: catches
 				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(906, 9);
-				PushFollow(Follow._tryWithResourcesStatement_in_trystatement4925);
-				tryWithResourcesStatement353=tryWithResourcesStatement();
+				DebugLocation(895, 13);
+				PushFollow(Follow._catches_in_trystatement4784);
+				catches346=catches();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, tryWithResourcesStatement353.Tree, tryWithResourcesStatement353, "tryWithResourcesStatement353", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, catches346.Tree, catches346, "catches346", retval);
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:896:13: 'finally' block
+				{
+				DebugLocation(896, 13);
+				string_literal347=(IToken)Match(input,FINALLY,Follow._FINALLY_in_trystatement4798); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal347_tree = (object)adaptor.Create(string_literal347, "string_literal347", retval);
+				adaptor.AddChild(root_0, string_literal347_tree);
+				}
+				DebugLocation(896, 23);
+				PushFollow(Follow._block_in_trystatement4800);
+				block348=block();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block348.Tree, block348, "block348", retval);
 
 				}
 				break;
 
 			}
+			} finally { DebugExitSubRule(104); }
+
+
+			}
+
 			retval.Stop = (IToken)input.LT(-1);
 
 			if (state.backtracking == 0) {
@@ -13965,7 +13848,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 63, trystatement_StartIndex); }
 
 		}
-		DebugLocation(907, 5);
+		DebugLocation(898, 5);
 		} finally { DebugExitRule(GrammarFileName, "trystatement"); }
 		return retval;
 
@@ -13975,7 +13858,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_catches();
 	partial void LeaveRule_catches();
 	// $ANTLR start "catches"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:909:1: catches : catchClause ( catchClause )* ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:900:1: catches : catchClause ( catchClause )* ;
 	[GrammarRule("catches")]
 	private Antlr3AstNode catches()
 	{
@@ -13988,68 +13871,68 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode catchClause354 = default(Antlr3AstNode);
-		Antlr3AstNode catchClause355 = default(Antlr3AstNode);
+		Antlr3AstNode catchClause349 = default(Antlr3AstNode);
+		Antlr3AstNode catchClause350 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "catches");
-		DebugLocation(909, 4);
+		DebugLocation(900, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 64)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:910:5: ( catchClause ( catchClause )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:901:5: ( catchClause ( catchClause )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:910:9: catchClause ( catchClause )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:901:9: catchClause ( catchClause )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(910, 9);
-			PushFollow(Follow._catchClause_in_catches4946);
-			catchClause354=catchClause();
+			DebugLocation(901, 9);
+			PushFollow(Follow._catchClause_in_catches4831);
+			catchClause349=catchClause();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, catchClause354.Tree, catchClause354, "catchClause354", retval);
-			DebugLocation(911, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:911:9: ( catchClause )*
-			try { DebugEnterSubRule(107);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, catchClause349.Tree, catchClause349, "catchClause349", retval);
+			DebugLocation(902, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:902:9: ( catchClause )*
+			try { DebugEnterSubRule(105);
 			while (true)
 			{
-				int alt107=2;
-				try { DebugEnterDecision(107, false);
-				int LA107_1 = input.LA(1);
+				int alt105=2;
+				try { DebugEnterDecision(105, false);
+				int LA105_1 = input.LA(1);
 
-				if ((LA107_1==CATCH))
+				if ((LA105_1==CATCH))
 				{
-					alt107 = 1;
+					alt105 = 1;
 				}
 
 
-				} finally { DebugExitDecision(107); }
-				switch ( alt107 )
+				} finally { DebugExitDecision(105); }
+				switch ( alt105 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:911:10: catchClause
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:902:10: catchClause
 					{
-					DebugLocation(911, 10);
-					PushFollow(Follow._catchClause_in_catches4957);
-					catchClause355=catchClause();
+					DebugLocation(902, 10);
+					PushFollow(Follow._catchClause_in_catches4842);
+					catchClause350=catchClause();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, catchClause355.Tree, catchClause355, "catchClause355", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, catchClause350.Tree, catchClause350, "catchClause350", retval);
 
 					}
 					break;
 
 				default:
-					goto loop107;
+					goto loop105;
 				}
 			}
 
-			loop107:
+			loop105:
 				;
 
-			} finally { DebugExitSubRule(107); }
+			} finally { DebugExitSubRule(105); }
 
 
 			}
@@ -14076,7 +13959,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 64, catches_StartIndex); }
 
 		}
-		DebugLocation(913, 4);
+		DebugLocation(904, 4);
 		} finally { DebugExitRule(GrammarFileName, "catches"); }
 		return retval;
 
@@ -14086,7 +13969,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_catchClause();
 	partial void LeaveRule_catchClause();
 	// $ANTLR start "catchClause"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:915:1: catchClause : 'catch' '(' formalParameter ')' block ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:906:1: catchClause : 'catch' '(' formalParameter ')' block ;
 	[GrammarRule("catchClause")]
 	private Antlr3AstNode catchClause()
 	{
@@ -14099,57 +13982,57 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal356 = default(IToken);
-		IToken char_literal357 = default(IToken);
-		IToken char_literal359 = default(IToken);
-		Antlr3AstNode formalParameter358 = default(Antlr3AstNode);
-		Antlr3AstNode block360 = default(Antlr3AstNode);
+		IToken string_literal351 = default(IToken);
+		IToken char_literal352 = default(IToken);
+		IToken char_literal354 = default(IToken);
+		Antlr3AstNode formalParameter353 = default(Antlr3AstNode);
+		Antlr3AstNode block355 = default(Antlr3AstNode);
 
-		object string_literal356_tree = default(object);
-		object char_literal357_tree = default(object);
-		object char_literal359_tree = default(object);
+		object string_literal351_tree = default(object);
+		object char_literal352_tree = default(object);
+		object char_literal354_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "catchClause");
-		DebugLocation(915, 4);
+		DebugLocation(906, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 65)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:916:5: ( 'catch' '(' formalParameter ')' block )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:907:5: ( 'catch' '(' formalParameter ')' block )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:916:9: 'catch' '(' formalParameter ')' block
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:907:9: 'catch' '(' formalParameter ')' block
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(916, 9);
-			string_literal356=(IToken)Match(input,CATCH,Follow._CATCH_in_catchClause4988); if (state.failed) return retval;
+			DebugLocation(907, 9);
+			string_literal351=(IToken)Match(input,CATCH,Follow._CATCH_in_catchClause4873); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal356_tree = (object)adaptor.Create(string_literal356, "string_literal356", retval);
-			adaptor.AddChild(root_0, string_literal356_tree);
+			string_literal351_tree = (object)adaptor.Create(string_literal351, "string_literal351", retval);
+			adaptor.AddChild(root_0, string_literal351_tree);
 			}
-			DebugLocation(916, 17);
-			char_literal357=(IToken)Match(input,LPAREN,Follow._LPAREN_in_catchClause4990); if (state.failed) return retval;
+			DebugLocation(907, 17);
+			char_literal352=(IToken)Match(input,LPAREN,Follow._LPAREN_in_catchClause4875); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal357_tree = (object)adaptor.Create(char_literal357, "char_literal357", retval);
-			adaptor.AddChild(root_0, char_literal357_tree);
+			char_literal352_tree = (object)adaptor.Create(char_literal352, "char_literal352", retval);
+			adaptor.AddChild(root_0, char_literal352_tree);
 			}
-			DebugLocation(916, 21);
-			PushFollow(Follow._formalParameter_in_catchClause4992);
-			formalParameter358=formalParameter();
+			DebugLocation(907, 21);
+			PushFollow(Follow._formalParameter_in_catchClause4877);
+			formalParameter353=formalParameter();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, formalParameter358.Tree, formalParameter358, "formalParameter358", retval);
-			DebugLocation(917, 9);
-			char_literal359=(IToken)Match(input,RPAREN,Follow._RPAREN_in_catchClause5002); if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, formalParameter353.Tree, formalParameter353, "formalParameter353", retval);
+			DebugLocation(908, 9);
+			char_literal354=(IToken)Match(input,RPAREN,Follow._RPAREN_in_catchClause4887); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal359_tree = (object)adaptor.Create(char_literal359, "char_literal359", retval);
-			adaptor.AddChild(root_0, char_literal359_tree);
+			char_literal354_tree = (object)adaptor.Create(char_literal354, "char_literal354", retval);
+			adaptor.AddChild(root_0, char_literal354_tree);
 			}
-			DebugLocation(917, 13);
-			PushFollow(Follow._block_in_catchClause5004);
-			block360=block();
+			DebugLocation(908, 13);
+			PushFollow(Follow._block_in_catchClause4889);
+			block355=block();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, block360.Tree, block360, "block360", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, block355.Tree, block355, "block355", retval);
 
 			}
 
@@ -14175,7 +14058,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 65, catchClause_StartIndex); }
 
 		}
-		DebugLocation(918, 4);
+		DebugLocation(909, 4);
 		} finally { DebugExitRule(GrammarFileName, "catchClause"); }
 		return retval;
 
@@ -14185,7 +14068,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_formalParameter();
 	partial void LeaveRule_formalParameter();
 	// $ANTLR start "formalParameter"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:920:1: formalParameter : ( variableModifiers catchType IDENTIFIER ( '[' ']' )* | catchType IDENTIFIER ( '[' ']' )* );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:911:1: formalParameter : ( variableModifiers catchType IDENTIFIER ( '[' ']' )* | catchType IDENTIFIER ( '[' ']' )* );
 	[GrammarRule("formalParameter")]
 	private Antlr3AstNode formalParameter()
 	{
@@ -14198,55 +14081,55 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken IDENTIFIER363 = default(IToken);
+		IToken IDENTIFIER358 = default(IToken);
+		IToken char_literal359 = default(IToken);
+		IToken char_literal360 = default(IToken);
+		IToken IDENTIFIER362 = default(IToken);
+		IToken char_literal363 = default(IToken);
 		IToken char_literal364 = default(IToken);
-		IToken char_literal365 = default(IToken);
-		IToken IDENTIFIER367 = default(IToken);
-		IToken char_literal368 = default(IToken);
-		IToken char_literal369 = default(IToken);
-		Antlr3AstNode variableModifiers361 = default(Antlr3AstNode);
-		Antlr3AstNode catchType362 = default(Antlr3AstNode);
-		Antlr3AstNode catchType366 = default(Antlr3AstNode);
+		Antlr3AstNode variableModifiers356 = default(Antlr3AstNode);
+		Antlr3AstNode catchType357 = default(Antlr3AstNode);
+		Antlr3AstNode catchType361 = default(Antlr3AstNode);
 
-		object IDENTIFIER363_tree = default(object);
+		object IDENTIFIER358_tree = default(object);
+		object char_literal359_tree = default(object);
+		object char_literal360_tree = default(object);
+		object IDENTIFIER362_tree = default(object);
+		object char_literal363_tree = default(object);
 		object char_literal364_tree = default(object);
-		object char_literal365_tree = default(object);
-		object IDENTIFIER367_tree = default(object);
-		object char_literal368_tree = default(object);
-		object char_literal369_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "formalParameter");
-		DebugLocation(920, 4);
+		DebugLocation(911, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 66)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:921:5: ( variableModifiers catchType IDENTIFIER ( '[' ']' )* | catchType IDENTIFIER ( '[' ']' )* )
-			int alt110=2;
-			try { DebugEnterDecision(110, false);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:912:5: ( variableModifiers catchType IDENTIFIER ( '[' ']' )* | catchType IDENTIFIER ( '[' ']' )* )
+			int alt108=2;
+			try { DebugEnterDecision(108, false);
 			switch (input.LA(1))
 			{
 			case FINAL:
 			case MONKEYS_AT:
 				{
-				alt110 = 1;
+				alt108 = 1;
 				}
 				break;
 			case IDENTIFIER:
 				{
-				int LA110_2 = input.LA(2);
+				int LA108_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred161_Java_fragment)))
+				if ((EvaluatePredicate(synpred159_Java_fragment)))
 				{
-					alt110 = 1;
+					alt108 = 1;
 				}
 				else if ((true))
 				{
-					alt110 = 2;
+					alt108 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 110, 3, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 108, 3, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -14261,20 +14144,20 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case LONG:
 			case SHORT:
 				{
-				int LA110_2 = input.LA(2);
+				int LA108_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred161_Java_fragment)))
+				if ((EvaluatePredicate(synpred159_Java_fragment)))
 				{
-					alt110 = 1;
+					alt108 = 1;
 				}
 				else if ((true))
 				{
-					alt110 = 2;
+					alt108 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 110, 4, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 108, 4, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -14283,155 +14166,155 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 110, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 108, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(110); }
-			switch (alt110)
+			} finally { DebugExitDecision(108); }
+			switch (alt108)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:921:9: variableModifiers catchType IDENTIFIER ( '[' ']' )*
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:912:9: variableModifiers catchType IDENTIFIER ( '[' ']' )*
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(921, 9);
-				PushFollow(Follow._variableModifiers_in_formalParameter5025);
-				variableModifiers361=variableModifiers();
+				DebugLocation(912, 9);
+				PushFollow(Follow._variableModifiers_in_formalParameter4910);
+				variableModifiers356=variableModifiers();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, variableModifiers361.Tree, variableModifiers361, "variableModifiers361", retval);
-				DebugLocation(921, 27);
-				PushFollow(Follow._catchType_in_formalParameter5027);
-				catchType362=catchType();
+				if (state.backtracking == 0) adaptor.AddChild(root_0, variableModifiers356.Tree, variableModifiers356, "variableModifiers356", retval);
+				DebugLocation(912, 27);
+				PushFollow(Follow._catchType_in_formalParameter4912);
+				catchType357=catchType();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, catchType362.Tree, catchType362, "catchType362", retval);
-				DebugLocation(921, 37);
-				IDENTIFIER363=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_formalParameter5029); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, catchType357.Tree, catchType357, "catchType357", retval);
+				DebugLocation(912, 37);
+				IDENTIFIER358=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_formalParameter4914); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				IDENTIFIER363_tree = (object)adaptor.Create(IDENTIFIER363, "IDENTIFIER363", retval);
-				adaptor.AddChild(root_0, IDENTIFIER363_tree);
+				IDENTIFIER358_tree = (object)adaptor.Create(IDENTIFIER358, "IDENTIFIER358", retval);
+				adaptor.AddChild(root_0, IDENTIFIER358_tree);
 				}
-				DebugLocation(922, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:922:9: ( '[' ']' )*
-				try { DebugEnterSubRule(108);
+				DebugLocation(913, 9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:913:9: ( '[' ']' )*
+				try { DebugEnterSubRule(106);
 				while (true)
 				{
-					int alt108=2;
-					try { DebugEnterDecision(108, false);
-					int LA108_1 = input.LA(1);
+					int alt106=2;
+					try { DebugEnterDecision(106, false);
+					int LA106_1 = input.LA(1);
 
-					if ((LA108_1==LBRACKET))
+					if ((LA106_1==LBRACKET))
 					{
-						alt108 = 1;
+						alt106 = 1;
 					}
 
 
-					} finally { DebugExitDecision(108); }
-					switch ( alt108 )
+					} finally { DebugExitDecision(106); }
+					switch ( alt106 )
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:922:10: '[' ']'
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:913:10: '[' ']'
 						{
-						DebugLocation(922, 10);
-						char_literal364=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_formalParameter5040); if (state.failed) return retval;
+						DebugLocation(913, 10);
+						char_literal359=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_formalParameter4925); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						char_literal364_tree = (object)adaptor.Create(char_literal364, "char_literal364", retval);
-						adaptor.AddChild(root_0, char_literal364_tree);
+						char_literal359_tree = (object)adaptor.Create(char_literal359, "char_literal359", retval);
+						adaptor.AddChild(root_0, char_literal359_tree);
 						}
-						DebugLocation(922, 14);
-						char_literal365=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_formalParameter5042); if (state.failed) return retval;
+						DebugLocation(913, 14);
+						char_literal360=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_formalParameter4927); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						char_literal365_tree = (object)adaptor.Create(char_literal365, "char_literal365", retval);
-						adaptor.AddChild(root_0, char_literal365_tree);
+						char_literal360_tree = (object)adaptor.Create(char_literal360, "char_literal360", retval);
+						adaptor.AddChild(root_0, char_literal360_tree);
 						}
 
 						}
 						break;
 
 					default:
-						goto loop108;
+						goto loop106;
 					}
 				}
 
-				loop108:
+				loop106:
 					;
 
-				} finally { DebugExitSubRule(108); }
+				} finally { DebugExitSubRule(106); }
 
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:924:9: catchType IDENTIFIER ( '[' ']' )*
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:915:9: catchType IDENTIFIER ( '[' ']' )*
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(924, 9);
-				PushFollow(Follow._catchType_in_formalParameter5063);
-				catchType366=catchType();
+				DebugLocation(915, 9);
+				PushFollow(Follow._catchType_in_formalParameter4948);
+				catchType361=catchType();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, catchType366.Tree, catchType366, "catchType366", retval);
-				DebugLocation(924, 19);
-				IDENTIFIER367=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_formalParameter5065); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, catchType361.Tree, catchType361, "catchType361", retval);
+				DebugLocation(915, 19);
+				IDENTIFIER362=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_formalParameter4950); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				IDENTIFIER367_tree = (object)adaptor.Create(IDENTIFIER367, "IDENTIFIER367", retval);
-				adaptor.AddChild(root_0, IDENTIFIER367_tree);
+				IDENTIFIER362_tree = (object)adaptor.Create(IDENTIFIER362, "IDENTIFIER362", retval);
+				adaptor.AddChild(root_0, IDENTIFIER362_tree);
 				}
-				DebugLocation(925, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:925:9: ( '[' ']' )*
-				try { DebugEnterSubRule(109);
+				DebugLocation(916, 9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:916:9: ( '[' ']' )*
+				try { DebugEnterSubRule(107);
 				while (true)
 				{
-					int alt109=2;
-					try { DebugEnterDecision(109, false);
-					int LA109_1 = input.LA(1);
+					int alt107=2;
+					try { DebugEnterDecision(107, false);
+					int LA107_1 = input.LA(1);
 
-					if ((LA109_1==LBRACKET))
+					if ((LA107_1==LBRACKET))
 					{
-						alt109 = 1;
+						alt107 = 1;
 					}
 
 
-					} finally { DebugExitDecision(109); }
-					switch ( alt109 )
+					} finally { DebugExitDecision(107); }
+					switch ( alt107 )
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:925:10: '[' ']'
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:916:10: '[' ']'
 						{
-						DebugLocation(925, 10);
-						char_literal368=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_formalParameter5076); if (state.failed) return retval;
+						DebugLocation(916, 10);
+						char_literal363=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_formalParameter4961); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						char_literal368_tree = (object)adaptor.Create(char_literal368, "char_literal368", retval);
-						adaptor.AddChild(root_0, char_literal368_tree);
+						char_literal363_tree = (object)adaptor.Create(char_literal363, "char_literal363", retval);
+						adaptor.AddChild(root_0, char_literal363_tree);
 						}
-						DebugLocation(925, 14);
-						char_literal369=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_formalParameter5078); if (state.failed) return retval;
+						DebugLocation(916, 14);
+						char_literal364=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_formalParameter4963); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						char_literal369_tree = (object)adaptor.Create(char_literal369, "char_literal369", retval);
-						adaptor.AddChild(root_0, char_literal369_tree);
+						char_literal364_tree = (object)adaptor.Create(char_literal364, "char_literal364", retval);
+						adaptor.AddChild(root_0, char_literal364_tree);
 						}
 
 						}
 						break;
 
 					default:
-						goto loop109;
+						goto loop107;
 					}
 				}
 
-				loop109:
+				loop107:
 					;
 
-				} finally { DebugExitSubRule(109); }
+				} finally { DebugExitSubRule(107); }
 
 
 				}
@@ -14460,7 +14343,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 66, formalParameter_StartIndex); }
 
 		}
-		DebugLocation(927, 4);
+		DebugLocation(918, 4);
 		} finally { DebugExitRule(GrammarFileName, "formalParameter"); }
 		return retval;
 
@@ -14470,7 +14353,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_catchType();
 	partial void LeaveRule_catchType();
 	// $ANTLR start "catchType"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:929:1: catchType : type ( '|' type )* ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:920:1: catchType : type ( '|' type )* ;
 	[GrammarRule("catchType")]
 	private Antlr3AstNode catchType()
 	{
@@ -14483,76 +14366,76 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal371 = default(IToken);
-		Antlr3AstNode type370 = default(Antlr3AstNode);
-		Antlr3AstNode type372 = default(Antlr3AstNode);
+		IToken char_literal366 = default(IToken);
+		Antlr3AstNode type365 = default(Antlr3AstNode);
+		Antlr3AstNode type367 = default(Antlr3AstNode);
 
-		object char_literal371_tree = default(object);
+		object char_literal366_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "catchType");
-		DebugLocation(929, 4);
+		DebugLocation(920, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 67)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:930:5: ( type ( '|' type )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:921:5: ( type ( '|' type )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:930:9: type ( '|' type )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:921:9: type ( '|' type )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(930, 9);
-			PushFollow(Follow._type_in_catchType5108);
-			type370=type();
+			DebugLocation(921, 9);
+			PushFollow(Follow._type_in_catchType4993);
+			type365=type();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, type370.Tree, type370, "type370", retval);
-			DebugLocation(931, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:931:9: ( '|' type )*
-			try { DebugEnterSubRule(111);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, type365.Tree, type365, "type365", retval);
+			DebugLocation(922, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:922:9: ( '|' type )*
+			try { DebugEnterSubRule(109);
 			while (true)
 			{
-				int alt111=2;
-				try { DebugEnterDecision(111, false);
-				int LA111_1 = input.LA(1);
+				int alt109=2;
+				try { DebugEnterDecision(109, false);
+				int LA109_1 = input.LA(1);
 
-				if ((LA111_1==BAR))
+				if ((LA109_1==BAR))
 				{
-					alt111 = 1;
+					alt109 = 1;
 				}
 
 
-				} finally { DebugExitDecision(111); }
-				switch ( alt111 )
+				} finally { DebugExitDecision(109); }
+				switch ( alt109 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:931:10: '|' type
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:922:10: '|' type
 					{
-					DebugLocation(931, 10);
-					char_literal371=(IToken)Match(input,BAR,Follow._BAR_in_catchType5119); if (state.failed) return retval;
+					DebugLocation(922, 10);
+					char_literal366=(IToken)Match(input,BAR,Follow._BAR_in_catchType5004); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal371_tree = (object)adaptor.Create(char_literal371, "char_literal371", retval);
-					adaptor.AddChild(root_0, char_literal371_tree);
+					char_literal366_tree = (object)adaptor.Create(char_literal366, "char_literal366", retval);
+					adaptor.AddChild(root_0, char_literal366_tree);
 					}
-					DebugLocation(931, 14);
-					PushFollow(Follow._type_in_catchType5121);
-					type372=type();
+					DebugLocation(922, 14);
+					PushFollow(Follow._type_in_catchType5006);
+					type367=type();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, type372.Tree, type372, "type372", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, type367.Tree, type367, "type367", retval);
 
 					}
 					break;
 
 				default:
-					goto loop111;
+					goto loop109;
 				}
 			}
 
-			loop111:
+			loop109:
 				;
 
-			} finally { DebugExitSubRule(111); }
+			} finally { DebugExitSubRule(109); }
 
 
 			}
@@ -14579,7 +14462,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 67, catchType_StartIndex); }
 
 		}
-		DebugLocation(933, 4);
+		DebugLocation(924, 4);
 		} finally { DebugExitRule(GrammarFileName, "catchType"); }
 		return retval;
 
@@ -14589,7 +14472,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_tryWithResourcesStatement();
 	partial void LeaveRule_tryWithResourcesStatement();
 	// $ANTLR start "tryWithResourcesStatement"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:935:1: tryWithResourcesStatement : 'try' resourceSpecification block ( catches )? ( 'finally' block )? ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:926:1: tryWithResourcesStatement : 'try' resourceSpecification block ( catches )? ( 'finally' block )? ;
 	[GrammarRule("tryWithResourcesStatement")]
 	private Antlr3AstNode tryWithResourcesStatement()
 	{
@@ -14602,112 +14485,112 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal373 = default(IToken);
-		IToken string_literal377 = default(IToken);
-		Antlr3AstNode resourceSpecification374 = default(Antlr3AstNode);
-		Antlr3AstNode block375 = default(Antlr3AstNode);
-		Antlr3AstNode catches376 = default(Antlr3AstNode);
-		Antlr3AstNode block378 = default(Antlr3AstNode);
+		IToken string_literal368 = default(IToken);
+		IToken string_literal372 = default(IToken);
+		Antlr3AstNode resourceSpecification369 = default(Antlr3AstNode);
+		Antlr3AstNode block370 = default(Antlr3AstNode);
+		Antlr3AstNode catches371 = default(Antlr3AstNode);
+		Antlr3AstNode block373 = default(Antlr3AstNode);
 
-		object string_literal373_tree = default(object);
-		object string_literal377_tree = default(object);
+		object string_literal368_tree = default(object);
+		object string_literal372_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "tryWithResourcesStatement");
-		DebugLocation(935, 4);
+		DebugLocation(926, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 68)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:936:5: ( 'try' resourceSpecification block ( catches )? ( 'finally' block )? )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:927:5: ( 'try' resourceSpecification block ( catches )? ( 'finally' block )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:936:10: 'try' resourceSpecification block ( catches )? ( 'finally' block )?
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:927:10: 'try' resourceSpecification block ( catches )? ( 'finally' block )?
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(936, 10);
-			string_literal373=(IToken)Match(input,TRY,Follow._TRY_in_tryWithResourcesStatement5152); if (state.failed) return retval;
+			DebugLocation(927, 10);
+			string_literal368=(IToken)Match(input,TRY,Follow._TRY_in_tryWithResourcesStatement5037); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal373_tree = (object)adaptor.Create(string_literal373, "string_literal373", retval);
-			adaptor.AddChild(root_0, string_literal373_tree);
+			string_literal368_tree = (object)adaptor.Create(string_literal368, "string_literal368", retval);
+			adaptor.AddChild(root_0, string_literal368_tree);
 			}
-			DebugLocation(936, 16);
-			PushFollow(Follow._resourceSpecification_in_tryWithResourcesStatement5154);
-			resourceSpecification374=resourceSpecification();
+			DebugLocation(927, 16);
+			PushFollow(Follow._resourceSpecification_in_tryWithResourcesStatement5039);
+			resourceSpecification369=resourceSpecification();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, resourceSpecification374.Tree, resourceSpecification374, "resourceSpecification374", retval);
-			DebugLocation(936, 38);
-			PushFollow(Follow._block_in_tryWithResourcesStatement5156);
-			block375=block();
+			if (state.backtracking == 0) adaptor.AddChild(root_0, resourceSpecification369.Tree, resourceSpecification369, "resourceSpecification369", retval);
+			DebugLocation(927, 38);
+			PushFollow(Follow._block_in_tryWithResourcesStatement5041);
+			block370=block();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, block375.Tree, block375, "block375", retval);
-			DebugLocation(936, 44);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:936:44: ( catches )?
-			int alt112=2;
-			try { DebugEnterSubRule(112);
-			try { DebugEnterDecision(112, false);
-			int LA112_1 = input.LA(1);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, block370.Tree, block370, "block370", retval);
+			DebugLocation(927, 44);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:927:44: ( catches )?
+			int alt110=2;
+			try { DebugEnterSubRule(110);
+			try { DebugEnterDecision(110, false);
+			int LA110_1 = input.LA(1);
 
-			if ((LA112_1==CATCH))
+			if ((LA110_1==CATCH))
 			{
-				alt112 = 1;
+				alt110 = 1;
 			}
-			} finally { DebugExitDecision(112); }
-			switch (alt112)
+			} finally { DebugExitDecision(110); }
+			switch (alt110)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:936:44: catches
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:927:44: catches
 				{
-				DebugLocation(936, 44);
-				PushFollow(Follow._catches_in_tryWithResourcesStatement5158);
-				catches376=catches();
+				DebugLocation(927, 44);
+				PushFollow(Follow._catches_in_tryWithResourcesStatement5043);
+				catches371=catches();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, catches376.Tree, catches376, "catches376", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, catches371.Tree, catches371, "catches371", retval);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(112); }
+			} finally { DebugExitSubRule(110); }
 
-			DebugLocation(936, 53);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:936:53: ( 'finally' block )?
-			int alt113=2;
-			try { DebugEnterSubRule(113);
-			try { DebugEnterDecision(113, false);
-			int LA113_1 = input.LA(1);
+			DebugLocation(927, 53);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:927:53: ( 'finally' block )?
+			int alt111=2;
+			try { DebugEnterSubRule(111);
+			try { DebugEnterDecision(111, false);
+			int LA111_1 = input.LA(1);
 
-			if ((LA113_1==FINALLY))
+			if ((LA111_1==FINALLY))
 			{
-				alt113 = 1;
+				alt111 = 1;
 			}
-			} finally { DebugExitDecision(113); }
-			switch (alt113)
+			} finally { DebugExitDecision(111); }
+			switch (alt111)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:936:54: 'finally' block
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:927:54: 'finally' block
 				{
-				DebugLocation(936, 54);
-				string_literal377=(IToken)Match(input,FINALLY,Follow._FINALLY_in_tryWithResourcesStatement5162); if (state.failed) return retval;
+				DebugLocation(927, 54);
+				string_literal372=(IToken)Match(input,FINALLY,Follow._FINALLY_in_tryWithResourcesStatement5047); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal377_tree = (object)adaptor.Create(string_literal377, "string_literal377", retval);
-				adaptor.AddChild(root_0, string_literal377_tree);
+				string_literal372_tree = (object)adaptor.Create(string_literal372, "string_literal372", retval);
+				adaptor.AddChild(root_0, string_literal372_tree);
 				}
-				DebugLocation(936, 64);
-				PushFollow(Follow._block_in_tryWithResourcesStatement5164);
-				block378=block();
+				DebugLocation(927, 64);
+				PushFollow(Follow._block_in_tryWithResourcesStatement5049);
+				block373=block();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block378.Tree, block378, "block378", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block373.Tree, block373, "block373", retval);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(113); }
+			} finally { DebugExitSubRule(111); }
 
 
 			}
@@ -14734,7 +14617,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 68, tryWithResourcesStatement_StartIndex); }
 
 		}
-		DebugLocation(937, 4);
+		DebugLocation(928, 4);
 		} finally { DebugExitRule(GrammarFileName, "tryWithResourcesStatement"); }
 		return retval;
 
@@ -14744,7 +14627,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_resourceSpecification();
 	partial void LeaveRule_resourceSpecification();
 	// $ANTLR start "resourceSpecification"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:939:1: resourceSpecification : '(' resources ( ';' )? ')' ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:930:1: resourceSpecification : '(' resources ( ';' )? ')' ;
 	[GrammarRule("resourceSpecification")]
 	private Antlr3AstNode resourceSpecification()
 	{
@@ -14757,74 +14640,74 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal379 = default(IToken);
-		IToken char_literal381 = default(IToken);
-		IToken char_literal382 = default(IToken);
-		Antlr3AstNode resources380 = default(Antlr3AstNode);
+		IToken char_literal374 = default(IToken);
+		IToken char_literal376 = default(IToken);
+		IToken char_literal377 = default(IToken);
+		Antlr3AstNode resources375 = default(Antlr3AstNode);
 
-		object char_literal379_tree = default(object);
-		object char_literal381_tree = default(object);
-		object char_literal382_tree = default(object);
+		object char_literal374_tree = default(object);
+		object char_literal376_tree = default(object);
+		object char_literal377_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "resourceSpecification");
-		DebugLocation(939, 4);
+		DebugLocation(930, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 69)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:940:5: ( '(' resources ( ';' )? ')' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:931:5: ( '(' resources ( ';' )? ')' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:940:10: '(' resources ( ';' )? ')'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:931:10: '(' resources ( ';' )? ')'
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(940, 10);
-			char_literal379=(IToken)Match(input,LPAREN,Follow._LPAREN_in_resourceSpecification5186); if (state.failed) return retval;
+			DebugLocation(931, 10);
+			char_literal374=(IToken)Match(input,LPAREN,Follow._LPAREN_in_resourceSpecification5071); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal379_tree = (object)adaptor.Create(char_literal379, "char_literal379", retval);
-			adaptor.AddChild(root_0, char_literal379_tree);
+			char_literal374_tree = (object)adaptor.Create(char_literal374, "char_literal374", retval);
+			adaptor.AddChild(root_0, char_literal374_tree);
 			}
-			DebugLocation(940, 14);
-			PushFollow(Follow._resources_in_resourceSpecification5188);
-			resources380=resources();
+			DebugLocation(931, 14);
+			PushFollow(Follow._resources_in_resourceSpecification5073);
+			resources375=resources();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, resources380.Tree, resources380, "resources380", retval);
-			DebugLocation(940, 24);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:940:24: ( ';' )?
-			int alt114=2;
-			try { DebugEnterSubRule(114);
-			try { DebugEnterDecision(114, false);
-			int LA114_1 = input.LA(1);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, resources375.Tree, resources375, "resources375", retval);
+			DebugLocation(931, 24);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:931:24: ( ';' )?
+			int alt112=2;
+			try { DebugEnterSubRule(112);
+			try { DebugEnterDecision(112, false);
+			int LA112_1 = input.LA(1);
 
-			if ((LA114_1==SEMI))
+			if ((LA112_1==SEMI))
 			{
-				alt114 = 1;
+				alt112 = 1;
 			}
-			} finally { DebugExitDecision(114); }
-			switch (alt114)
+			} finally { DebugExitDecision(112); }
+			switch (alt112)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:940:24: ';'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:931:24: ';'
 				{
-				DebugLocation(940, 24);
-				char_literal381=(IToken)Match(input,SEMI,Follow._SEMI_in_resourceSpecification5190); if (state.failed) return retval;
+				DebugLocation(931, 24);
+				char_literal376=(IToken)Match(input,SEMI,Follow._SEMI_in_resourceSpecification5075); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal381_tree = (object)adaptor.Create(char_literal381, "char_literal381", retval);
-				adaptor.AddChild(root_0, char_literal381_tree);
+				char_literal376_tree = (object)adaptor.Create(char_literal376, "char_literal376", retval);
+				adaptor.AddChild(root_0, char_literal376_tree);
 				}
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(114); }
+			} finally { DebugExitSubRule(112); }
 
-			DebugLocation(940, 29);
-			char_literal382=(IToken)Match(input,RPAREN,Follow._RPAREN_in_resourceSpecification5193); if (state.failed) return retval;
+			DebugLocation(931, 29);
+			char_literal377=(IToken)Match(input,RPAREN,Follow._RPAREN_in_resourceSpecification5078); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal382_tree = (object)adaptor.Create(char_literal382, "char_literal382", retval);
-			adaptor.AddChild(root_0, char_literal382_tree);
+			char_literal377_tree = (object)adaptor.Create(char_literal377, "char_literal377", retval);
+			adaptor.AddChild(root_0, char_literal377_tree);
 			}
 
 			}
@@ -14851,7 +14734,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 69, resourceSpecification_StartIndex); }
 
 		}
-		DebugLocation(941, 4);
+		DebugLocation(932, 4);
 		} finally { DebugExitRule(GrammarFileName, "resourceSpecification"); }
 		return retval;
 
@@ -14861,7 +14744,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_resources();
 	partial void LeaveRule_resources();
 	// $ANTLR start "resources"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:943:1: resources : resource ( ';' resource )* ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:934:1: resources : resource ( ';' resource )* ;
 	[GrammarRule("resources")]
 	private Antlr3AstNode resources()
 	{
@@ -14874,83 +14757,83 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal384 = default(IToken);
-		Antlr3AstNode resource383 = default(Antlr3AstNode);
-		Antlr3AstNode resource385 = default(Antlr3AstNode);
+		IToken char_literal379 = default(IToken);
+		Antlr3AstNode resource378 = default(Antlr3AstNode);
+		Antlr3AstNode resource380 = default(Antlr3AstNode);
 
-		object char_literal384_tree = default(object);
+		object char_literal379_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "resources");
-		DebugLocation(943, 4);
+		DebugLocation(934, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 70)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:944:5: ( resource ( ';' resource )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:935:5: ( resource ( ';' resource )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:944:10: resource ( ';' resource )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:935:10: resource ( ';' resource )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(944, 10);
-			PushFollow(Follow._resource_in_resources5213);
-			resource383=resource();
+			DebugLocation(935, 10);
+			PushFollow(Follow._resource_in_resources5098);
+			resource378=resource();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, resource383.Tree, resource383, "resource383", retval);
-			DebugLocation(944, 20);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:944:20: ( ';' resource )*
-			try { DebugEnterSubRule(115);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, resource378.Tree, resource378, "resource378", retval);
+			DebugLocation(935, 20);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:935:20: ( ';' resource )*
+			try { DebugEnterSubRule(113);
 			while (true)
 			{
-				int alt115=2;
-				try { DebugEnterDecision(115, false);
-				int LA115_1 = input.LA(1);
+				int alt113=2;
+				try { DebugEnterDecision(113, false);
+				int LA113_1 = input.LA(1);
 
-				if ((LA115_1==SEMI))
+				if ((LA113_1==SEMI))
 				{
-					int LA115_2 = input.LA(2);
+					int LA113_2 = input.LA(2);
 
-					if ((LA115_2==BOOLEAN||LA115_2==BYTE||LA115_2==CHAR||LA115_2==DOUBLE||LA115_2==FINAL||LA115_2==FLOAT||LA115_2==IDENTIFIER||LA115_2==INT||LA115_2==LONG||LA115_2==MONKEYS_AT||LA115_2==SHORT))
+					if ((LA113_2==BOOLEAN||LA113_2==BYTE||LA113_2==CHAR||LA113_2==DOUBLE||LA113_2==FINAL||LA113_2==FLOAT||LA113_2==IDENTIFIER||LA113_2==INT||LA113_2==LONG||LA113_2==MONKEYS_AT||LA113_2==SHORT))
 					{
-						alt115 = 1;
+						alt113 = 1;
 					}
 
 
 				}
 
 
-				} finally { DebugExitDecision(115); }
-				switch ( alt115 )
+				} finally { DebugExitDecision(113); }
+				switch ( alt113 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:944:22: ';' resource
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:935:22: ';' resource
 					{
-					DebugLocation(944, 22);
-					char_literal384=(IToken)Match(input,SEMI,Follow._SEMI_in_resources5218); if (state.failed) return retval;
+					DebugLocation(935, 22);
+					char_literal379=(IToken)Match(input,SEMI,Follow._SEMI_in_resources5103); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal384_tree = (object)adaptor.Create(char_literal384, "char_literal384", retval);
-					adaptor.AddChild(root_0, char_literal384_tree);
+					char_literal379_tree = (object)adaptor.Create(char_literal379, "char_literal379", retval);
+					adaptor.AddChild(root_0, char_literal379_tree);
 					}
-					DebugLocation(944, 26);
-					PushFollow(Follow._resource_in_resources5220);
-					resource385=resource();
+					DebugLocation(935, 26);
+					PushFollow(Follow._resource_in_resources5105);
+					resource380=resource();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, resource385.Tree, resource385, "resource385", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, resource380.Tree, resource380, "resource380", retval);
 
 					}
 					break;
 
 				default:
-					goto loop115;
+					goto loop113;
 				}
 			}
 
-			loop115:
+			loop113:
 				;
 
-			} finally { DebugExitSubRule(115); }
+			} finally { DebugExitSubRule(113); }
 
 
 			}
@@ -14977,7 +14860,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 70, resources_StartIndex); }
 
 		}
-		DebugLocation(945, 4);
+		DebugLocation(936, 4);
 		} finally { DebugExitRule(GrammarFileName, "resources"); }
 		return retval;
 
@@ -14987,7 +14870,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_resource();
 	partial void LeaveRule_resource();
 	// $ANTLR start "resource"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:947:1: resource : ( variableModifiers )? type IDENTIFIER ( '[' ']' )* '=' expression ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:938:1: resource : ( variableModifiers )? type IDENTIFIER ( '[' ']' )* '=' expression ;
 	[GrammarRule("resource")]
 	private Antlr3AstNode resource()
 	{
@@ -15000,50 +14883,50 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken IDENTIFIER388 = default(IToken);
-		IToken char_literal389 = default(IToken);
-		IToken char_literal390 = default(IToken);
-		IToken char_literal391 = default(IToken);
-		Antlr3AstNode variableModifiers386 = default(Antlr3AstNode);
-		Antlr3AstNode type387 = default(Antlr3AstNode);
-		Antlr3AstNode expression392 = default(Antlr3AstNode);
+		IToken IDENTIFIER383 = default(IToken);
+		IToken char_literal384 = default(IToken);
+		IToken char_literal385 = default(IToken);
+		IToken char_literal386 = default(IToken);
+		Antlr3AstNode variableModifiers381 = default(Antlr3AstNode);
+		Antlr3AstNode type382 = default(Antlr3AstNode);
+		Antlr3AstNode expression387 = default(Antlr3AstNode);
 
-		object IDENTIFIER388_tree = default(object);
-		object char_literal389_tree = default(object);
-		object char_literal390_tree = default(object);
-		object char_literal391_tree = default(object);
+		object IDENTIFIER383_tree = default(object);
+		object char_literal384_tree = default(object);
+		object char_literal385_tree = default(object);
+		object char_literal386_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "resource");
-		DebugLocation(947, 4);
+		DebugLocation(938, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 71)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:948:5: ( ( variableModifiers )? type IDENTIFIER ( '[' ']' )* '=' expression )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:939:5: ( ( variableModifiers )? type IDENTIFIER ( '[' ']' )* '=' expression )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:948:10: ( variableModifiers )? type IDENTIFIER ( '[' ']' )* '=' expression
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:939:10: ( variableModifiers )? type IDENTIFIER ( '[' ']' )* '=' expression
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(948, 10);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:948:10: ( variableModifiers )?
-			int alt116=2;
-			try { DebugEnterSubRule(116);
-			try { DebugEnterDecision(116, false);
+			DebugLocation(939, 10);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:939:10: ( variableModifiers )?
+			int alt114=2;
+			try { DebugEnterSubRule(114);
+			try { DebugEnterDecision(114, false);
 			switch (input.LA(1))
 			{
 			case FINAL:
 			case MONKEYS_AT:
 				{
-				alt116 = 1;
+				alt114 = 1;
 				}
 				break;
 			case IDENTIFIER:
 				{
-				int LA116_2 = input.LA(2);
+				int LA114_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred168_Java_fragment)))
+				if ((EvaluatePredicate(synpred166_Java_fragment)))
 				{
-					alt116 = 1;
+					alt114 = 1;
 				}
 				}
 				break;
@@ -15056,108 +14939,108 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case LONG:
 			case SHORT:
 				{
-				int LA116_2 = input.LA(2);
+				int LA114_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred168_Java_fragment)))
+				if ((EvaluatePredicate(synpred166_Java_fragment)))
 				{
-					alt116 = 1;
+					alt114 = 1;
 				}
 				}
 				break;
 			}
 
-			} finally { DebugExitDecision(116); }
-			switch (alt116)
+			} finally { DebugExitDecision(114); }
+			switch (alt114)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:948:10: variableModifiers
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:939:10: variableModifiers
 				{
-				DebugLocation(948, 10);
-				PushFollow(Follow._variableModifiers_in_resource5243);
-				variableModifiers386=variableModifiers();
+				DebugLocation(939, 10);
+				PushFollow(Follow._variableModifiers_in_resource5128);
+				variableModifiers381=variableModifiers();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, variableModifiers386.Tree, variableModifiers386, "variableModifiers386", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, variableModifiers381.Tree, variableModifiers381, "variableModifiers381", retval);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(116); }
+			} finally { DebugExitSubRule(114); }
 
-			DebugLocation(948, 29);
-			PushFollow(Follow._type_in_resource5246);
-			type387=type();
+			DebugLocation(939, 29);
+			PushFollow(Follow._type_in_resource5131);
+			type382=type();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, type387.Tree, type387, "type387", retval);
-			DebugLocation(948, 34);
-			IDENTIFIER388=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_resource5248); if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, type382.Tree, type382, "type382", retval);
+			DebugLocation(939, 34);
+			IDENTIFIER383=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_resource5133); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			IDENTIFIER388_tree = (object)adaptor.Create(IDENTIFIER388, "IDENTIFIER388", retval);
-			adaptor.AddChild(root_0, IDENTIFIER388_tree);
+			IDENTIFIER383_tree = (object)adaptor.Create(IDENTIFIER383, "IDENTIFIER383", retval);
+			adaptor.AddChild(root_0, IDENTIFIER383_tree);
 			}
-			DebugLocation(948, 45);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:948:45: ( '[' ']' )*
-			try { DebugEnterSubRule(117);
+			DebugLocation(939, 45);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:939:45: ( '[' ']' )*
+			try { DebugEnterSubRule(115);
 			while (true)
 			{
-				int alt117=2;
-				try { DebugEnterDecision(117, false);
-				int LA117_1 = input.LA(1);
+				int alt115=2;
+				try { DebugEnterDecision(115, false);
+				int LA115_1 = input.LA(1);
 
-				if ((LA117_1==LBRACKET))
+				if ((LA115_1==LBRACKET))
 				{
-					alt117 = 1;
+					alt115 = 1;
 				}
 
 
-				} finally { DebugExitDecision(117); }
-				switch ( alt117 )
+				} finally { DebugExitDecision(115); }
+				switch ( alt115 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:948:46: '[' ']'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:939:46: '[' ']'
 					{
-					DebugLocation(948, 46);
-					char_literal389=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_resource5251); if (state.failed) return retval;
+					DebugLocation(939, 46);
+					char_literal384=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_resource5136); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal389_tree = (object)adaptor.Create(char_literal389, "char_literal389", retval);
-					adaptor.AddChild(root_0, char_literal389_tree);
+					char_literal384_tree = (object)adaptor.Create(char_literal384, "char_literal384", retval);
+					adaptor.AddChild(root_0, char_literal384_tree);
 					}
-					DebugLocation(948, 50);
-					char_literal390=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_resource5253); if (state.failed) return retval;
+					DebugLocation(939, 50);
+					char_literal385=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_resource5138); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal390_tree = (object)adaptor.Create(char_literal390, "char_literal390", retval);
-					adaptor.AddChild(root_0, char_literal390_tree);
+					char_literal385_tree = (object)adaptor.Create(char_literal385, "char_literal385", retval);
+					adaptor.AddChild(root_0, char_literal385_tree);
 					}
 
 					}
 					break;
 
 				default:
-					goto loop117;
+					goto loop115;
 				}
 			}
 
-			loop117:
+			loop115:
 				;
 
-			} finally { DebugExitSubRule(117); }
+			} finally { DebugExitSubRule(115); }
 
-			DebugLocation(948, 56);
-			char_literal391=(IToken)Match(input,EQ,Follow._EQ_in_resource5257); if (state.failed) return retval;
+			DebugLocation(939, 56);
+			char_literal386=(IToken)Match(input,EQ,Follow._EQ_in_resource5142); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal391_tree = (object)adaptor.Create(char_literal391, "char_literal391", retval);
-			adaptor.AddChild(root_0, char_literal391_tree);
+			char_literal386_tree = (object)adaptor.Create(char_literal386, "char_literal386", retval);
+			adaptor.AddChild(root_0, char_literal386_tree);
 			}
-			DebugLocation(948, 60);
-			PushFollow(Follow._expression_in_resource5259);
-			expression392=expression();
+			DebugLocation(939, 60);
+			PushFollow(Follow._expression_in_resource5144);
+			expression387=expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, expression392.Tree, expression392, "expression392", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, expression387.Tree, expression387, "expression387", retval);
 
 			}
 
@@ -15183,7 +15066,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 71, resource_StartIndex); }
 
 		}
-		DebugLocation(949, 4);
+		DebugLocation(940, 4);
 		} finally { DebugExitRule(GrammarFileName, "resource"); }
 		return retval;
 
@@ -15193,7 +15076,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_forstatement();
 	partial void LeaveRule_forstatement();
 	// $ANTLR start "forstatement"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:951:1: forstatement : ( 'for' '(' variableModifiers type IDENTIFIER ':' expression ')' statement | 'for' '(' ( forInit )? ';' ( expression )? ';' ( expressionList )? ')' statement );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:942:1: forstatement : ( 'for' '(' variableModifiers type IDENTIFIER ':' expression ')' statement | 'for' '(' ( forInit )? ';' ( expression )? ';' ( expressionList )? ')' statement );
 	[GrammarRule("forstatement")]
 	private Antlr3AstNode forstatement()
 	{
@@ -15206,62 +15089,62 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal393 = default(IToken);
-		IToken char_literal394 = default(IToken);
-		IToken IDENTIFIER397 = default(IToken);
+		IToken string_literal388 = default(IToken);
+		IToken char_literal389 = default(IToken);
+		IToken IDENTIFIER392 = default(IToken);
+		IToken char_literal393 = default(IToken);
+		IToken char_literal395 = default(IToken);
+		IToken string_literal397 = default(IToken);
 		IToken char_literal398 = default(IToken);
 		IToken char_literal400 = default(IToken);
-		IToken string_literal402 = default(IToken);
-		IToken char_literal403 = default(IToken);
-		IToken char_literal405 = default(IToken);
-		IToken char_literal407 = default(IToken);
-		IToken char_literal409 = default(IToken);
-		Antlr3AstNode variableModifiers395 = default(Antlr3AstNode);
-		Antlr3AstNode type396 = default(Antlr3AstNode);
-		Antlr3AstNode expression399 = default(Antlr3AstNode);
-		Antlr3AstNode statement401 = default(Antlr3AstNode);
-		Antlr3AstNode forInit404 = default(Antlr3AstNode);
-		Antlr3AstNode expression406 = default(Antlr3AstNode);
-		Antlr3AstNode expressionList408 = default(Antlr3AstNode);
-		Antlr3AstNode statement410 = default(Antlr3AstNode);
+		IToken char_literal402 = default(IToken);
+		IToken char_literal404 = default(IToken);
+		Antlr3AstNode variableModifiers390 = default(Antlr3AstNode);
+		Antlr3AstNode type391 = default(Antlr3AstNode);
+		Antlr3AstNode expression394 = default(Antlr3AstNode);
+		Antlr3AstNode statement396 = default(Antlr3AstNode);
+		Antlr3AstNode forInit399 = default(Antlr3AstNode);
+		Antlr3AstNode expression401 = default(Antlr3AstNode);
+		Antlr3AstNode expressionList403 = default(Antlr3AstNode);
+		Antlr3AstNode statement405 = default(Antlr3AstNode);
 
-		object string_literal393_tree = default(object);
-		object char_literal394_tree = default(object);
-		object IDENTIFIER397_tree = default(object);
+		object string_literal388_tree = default(object);
+		object char_literal389_tree = default(object);
+		object IDENTIFIER392_tree = default(object);
+		object char_literal393_tree = default(object);
+		object char_literal395_tree = default(object);
+		object string_literal397_tree = default(object);
 		object char_literal398_tree = default(object);
 		object char_literal400_tree = default(object);
-		object string_literal402_tree = default(object);
-		object char_literal403_tree = default(object);
-		object char_literal405_tree = default(object);
-		object char_literal407_tree = default(object);
-		object char_literal409_tree = default(object);
+		object char_literal402_tree = default(object);
+		object char_literal404_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "forstatement");
-		DebugLocation(951, 4);
+		DebugLocation(942, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 72)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:952:5: ( 'for' '(' variableModifiers type IDENTIFIER ':' expression ')' statement | 'for' '(' ( forInit )? ';' ( expression )? ';' ( expressionList )? ')' statement )
-			int alt121=2;
-			try { DebugEnterDecision(121, false);
-			int LA121_1 = input.LA(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:943:5: ( 'for' '(' variableModifiers type IDENTIFIER ':' expression ')' statement | 'for' '(' ( forInit )? ';' ( expression )? ';' ( expressionList )? ')' statement )
+			int alt119=2;
+			try { DebugEnterDecision(119, false);
+			int LA119_1 = input.LA(1);
 
-			if ((LA121_1==FOR))
+			if ((LA119_1==FOR))
 			{
-				int LA121_2 = input.LA(2);
+				int LA119_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred170_Java_fragment)))
+				if ((EvaluatePredicate(synpred168_Java_fragment)))
 				{
-					alt121 = 1;
+					alt119 = 1;
 				}
 				else if ((true))
 				{
-					alt121 = 2;
+					alt119 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 121, 1, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 119, 1, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -15269,102 +15152,176 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 121, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 119, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(121); }
-			switch (alt121)
+			} finally { DebugExitDecision(119); }
+			switch (alt119)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:954:9: 'for' '(' variableModifiers type IDENTIFIER ':' expression ')' statement
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:945:9: 'for' '(' variableModifiers type IDENTIFIER ':' expression ')' statement
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(954, 9);
-				string_literal393=(IToken)Match(input,FOR,Follow._FOR_in_forstatement5298); if (state.failed) return retval;
+				DebugLocation(945, 9);
+				string_literal388=(IToken)Match(input,FOR,Follow._FOR_in_forstatement5183); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal393_tree = (object)adaptor.Create(string_literal393, "string_literal393", retval);
-				adaptor.AddChild(root_0, string_literal393_tree);
+				string_literal388_tree = (object)adaptor.Create(string_literal388, "string_literal388", retval);
+				adaptor.AddChild(root_0, string_literal388_tree);
 				}
-				DebugLocation(954, 15);
-				char_literal394=(IToken)Match(input,LPAREN,Follow._LPAREN_in_forstatement5300); if (state.failed) return retval;
+				DebugLocation(945, 15);
+				char_literal389=(IToken)Match(input,LPAREN,Follow._LPAREN_in_forstatement5185); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal394_tree = (object)adaptor.Create(char_literal394, "char_literal394", retval);
-				adaptor.AddChild(root_0, char_literal394_tree);
+				char_literal389_tree = (object)adaptor.Create(char_literal389, "char_literal389", retval);
+				adaptor.AddChild(root_0, char_literal389_tree);
 				}
-				DebugLocation(954, 19);
-				PushFollow(Follow._variableModifiers_in_forstatement5302);
-				variableModifiers395=variableModifiers();
+				DebugLocation(945, 19);
+				PushFollow(Follow._variableModifiers_in_forstatement5187);
+				variableModifiers390=variableModifiers();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, variableModifiers395.Tree, variableModifiers395, "variableModifiers395", retval);
-				DebugLocation(954, 37);
-				PushFollow(Follow._type_in_forstatement5304);
-				type396=type();
+				if (state.backtracking == 0) adaptor.AddChild(root_0, variableModifiers390.Tree, variableModifiers390, "variableModifiers390", retval);
+				DebugLocation(945, 37);
+				PushFollow(Follow._type_in_forstatement5189);
+				type391=type();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, type396.Tree, type396, "type396", retval);
-				DebugLocation(954, 42);
-				IDENTIFIER397=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_forstatement5306); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, type391.Tree, type391, "type391", retval);
+				DebugLocation(945, 42);
+				IDENTIFIER392=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_forstatement5191); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				IDENTIFIER397_tree = (object)adaptor.Create(IDENTIFIER397, "IDENTIFIER397", retval);
-				adaptor.AddChild(root_0, IDENTIFIER397_tree);
+				IDENTIFIER392_tree = (object)adaptor.Create(IDENTIFIER392, "IDENTIFIER392", retval);
+				adaptor.AddChild(root_0, IDENTIFIER392_tree);
 				}
-				DebugLocation(954, 53);
-				char_literal398=(IToken)Match(input,COLON,Follow._COLON_in_forstatement5308); if (state.failed) return retval;
+				DebugLocation(945, 53);
+				char_literal393=(IToken)Match(input,COLON,Follow._COLON_in_forstatement5193); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal398_tree = (object)adaptor.Create(char_literal398, "char_literal398", retval);
-				adaptor.AddChild(root_0, char_literal398_tree);
+				char_literal393_tree = (object)adaptor.Create(char_literal393, "char_literal393", retval);
+				adaptor.AddChild(root_0, char_literal393_tree);
 				}
-				DebugLocation(955, 9);
-				PushFollow(Follow._expression_in_forstatement5319);
-				expression399=expression();
+				DebugLocation(946, 9);
+				PushFollow(Follow._expression_in_forstatement5204);
+				expression394=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression399.Tree, expression399, "expression399", retval);
-				DebugLocation(955, 20);
-				char_literal400=(IToken)Match(input,RPAREN,Follow._RPAREN_in_forstatement5321); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression394.Tree, expression394, "expression394", retval);
+				DebugLocation(946, 20);
+				char_literal395=(IToken)Match(input,RPAREN,Follow._RPAREN_in_forstatement5206); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal400_tree = (object)adaptor.Create(char_literal400, "char_literal400", retval);
-				adaptor.AddChild(root_0, char_literal400_tree);
+				char_literal395_tree = (object)adaptor.Create(char_literal395, "char_literal395", retval);
+				adaptor.AddChild(root_0, char_literal395_tree);
 				}
-				DebugLocation(955, 24);
-				PushFollow(Follow._statement_in_forstatement5323);
-				statement401=statement();
+				DebugLocation(946, 24);
+				PushFollow(Follow._statement_in_forstatement5208);
+				statement396=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement401.Tree, statement401, "statement401", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement396.Tree, statement396, "statement396", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:958:9: 'for' '(' ( forInit )? ';' ( expression )? ';' ( expressionList )? ')' statement
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:949:9: 'for' '(' ( forInit )? ';' ( expression )? ';' ( expressionList )? ')' statement
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(958, 9);
-				string_literal402=(IToken)Match(input,FOR,Follow._FOR_in_forstatement5355); if (state.failed) return retval;
+				DebugLocation(949, 9);
+				string_literal397=(IToken)Match(input,FOR,Follow._FOR_in_forstatement5240); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal402_tree = (object)adaptor.Create(string_literal402, "string_literal402", retval);
-				adaptor.AddChild(root_0, string_literal402_tree);
+				string_literal397_tree = (object)adaptor.Create(string_literal397, "string_literal397", retval);
+				adaptor.AddChild(root_0, string_literal397_tree);
 				}
-				DebugLocation(958, 15);
-				char_literal403=(IToken)Match(input,LPAREN,Follow._LPAREN_in_forstatement5357); if (state.failed) return retval;
+				DebugLocation(949, 15);
+				char_literal398=(IToken)Match(input,LPAREN,Follow._LPAREN_in_forstatement5242); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal403_tree = (object)adaptor.Create(char_literal403, "char_literal403", retval);
-				adaptor.AddChild(root_0, char_literal403_tree);
+				char_literal398_tree = (object)adaptor.Create(char_literal398, "char_literal398", retval);
+				adaptor.AddChild(root_0, char_literal398_tree);
 				}
-				DebugLocation(959, 17);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:959:17: ( forInit )?
+				DebugLocation(950, 17);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:950:17: ( forInit )?
+				int alt116=2;
+				try { DebugEnterSubRule(116);
+				try { DebugEnterDecision(116, false);
+				int LA116_1 = input.LA(1);
+
+				if ((LA116_1==EOF||LA116_1==BANG||LA116_1==BOOLEAN||LA116_1==BYTE||(LA116_1>=CHAR && LA116_1<=CHARLITERAL)||(LA116_1>=DOUBLE && LA116_1<=DOUBLELITERAL)||(LA116_1>=FALSE && LA116_1<=FINAL)||(LA116_1>=FLOAT && LA116_1<=FLOATLITERAL)||LA116_1==IDENTIFIER||LA116_1==INT||LA116_1==INTLITERAL||(LA116_1>=LONG && LA116_1<=LPAREN)||LA116_1==MONKEYS_AT||(LA116_1>=NEW && LA116_1<=NULL)||LA116_1==PLUS||LA116_1==PLUSPLUS||LA116_1==SHORT||(LA116_1>=STRINGLITERAL && LA116_1<=SUB)||(LA116_1>=SUBSUB && LA116_1<=SUPER)||LA116_1==THIS||LA116_1==TILDE||LA116_1==TRUE||LA116_1==VOID))
+				{
+					alt116 = 1;
+				}
+				} finally { DebugExitDecision(116); }
+				switch (alt116)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:950:18: forInit
+					{
+					DebugLocation(950, 18);
+					PushFollow(Follow._forInit_in_forstatement5262);
+					forInit399=forInit();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, forInit399.Tree, forInit399, "forInit399", retval);
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(116); }
+
+				DebugLocation(951, 20);
+				char_literal400=(IToken)Match(input,SEMI,Follow._SEMI_in_forstatement5283); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal400_tree = (object)adaptor.Create(char_literal400, "char_literal400", retval);
+				adaptor.AddChild(root_0, char_literal400_tree);
+				}
+				DebugLocation(952, 17);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:952:17: ( expression )?
+				int alt117=2;
+				try { DebugEnterSubRule(117);
+				try { DebugEnterDecision(117, false);
+				int LA117_1 = input.LA(1);
+
+				if ((LA117_1==BANG||LA117_1==BOOLEAN||LA117_1==BYTE||(LA117_1>=CHAR && LA117_1<=CHARLITERAL)||(LA117_1>=DOUBLE && LA117_1<=DOUBLELITERAL)||LA117_1==FALSE||(LA117_1>=FLOAT && LA117_1<=FLOATLITERAL)||LA117_1==IDENTIFIER||LA117_1==INT||LA117_1==INTLITERAL||(LA117_1>=LONG && LA117_1<=LPAREN)||(LA117_1>=NEW && LA117_1<=NULL)||LA117_1==PLUS||LA117_1==PLUSPLUS||LA117_1==SHORT||(LA117_1>=STRINGLITERAL && LA117_1<=SUB)||(LA117_1>=SUBSUB && LA117_1<=SUPER)||LA117_1==THIS||LA117_1==TILDE||LA117_1==TRUE||LA117_1==VOID))
+				{
+					alt117 = 1;
+				}
+				} finally { DebugExitDecision(117); }
+				switch (alt117)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:952:18: expression
+					{
+					DebugLocation(952, 18);
+					PushFollow(Follow._expression_in_forstatement5303);
+					expression401=expression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, expression401.Tree, expression401, "expression401", retval);
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(117); }
+
+				DebugLocation(953, 20);
+				char_literal402=(IToken)Match(input,SEMI,Follow._SEMI_in_forstatement5324); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal402_tree = (object)adaptor.Create(char_literal402, "char_literal402", retval);
+				adaptor.AddChild(root_0, char_literal402_tree);
+				}
+				DebugLocation(954, 17);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:954:17: ( expressionList )?
 				int alt118=2;
 				try { DebugEnterSubRule(118);
 				try { DebugEnterDecision(118, false);
 				int LA118_1 = input.LA(1);
 
-				if ((LA118_1==EOF||LA118_1==BANG||LA118_1==BOOLEAN||LA118_1==BYTE||(LA118_1>=CHAR && LA118_1<=CHARLITERAL)||(LA118_1>=DOUBLE && LA118_1<=DOUBLELITERAL)||(LA118_1>=FALSE && LA118_1<=FINAL)||(LA118_1>=FLOAT && LA118_1<=FLOATLITERAL)||LA118_1==IDENTIFIER||LA118_1==INT||LA118_1==INTLITERAL||(LA118_1>=LONG && LA118_1<=LPAREN)||LA118_1==MONKEYS_AT||(LA118_1>=NEW && LA118_1<=NULL)||LA118_1==PLUS||LA118_1==PLUSPLUS||LA118_1==SHORT||(LA118_1>=STRINGLITERAL && LA118_1<=SUB)||(LA118_1>=SUBSUB && LA118_1<=SUPER)||LA118_1==THIS||LA118_1==TILDE||LA118_1==TRUE||LA118_1==VOID))
+				if ((LA118_1==BANG||LA118_1==BOOLEAN||LA118_1==BYTE||(LA118_1>=CHAR && LA118_1<=CHARLITERAL)||(LA118_1>=DOUBLE && LA118_1<=DOUBLELITERAL)||LA118_1==FALSE||(LA118_1>=FLOAT && LA118_1<=FLOATLITERAL)||LA118_1==IDENTIFIER||LA118_1==INT||LA118_1==INTLITERAL||(LA118_1>=LONG && LA118_1<=LPAREN)||(LA118_1>=NEW && LA118_1<=NULL)||LA118_1==PLUS||LA118_1==PLUSPLUS||LA118_1==SHORT||(LA118_1>=STRINGLITERAL && LA118_1<=SUB)||(LA118_1>=SUBSUB && LA118_1<=SUPER)||LA118_1==THIS||LA118_1==TILDE||LA118_1==TRUE||LA118_1==VOID))
 				{
 					alt118 = 1;
 				}
@@ -15373,14 +15330,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:959:18: forInit
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:954:18: expressionList
 					{
-					DebugLocation(959, 18);
-					PushFollow(Follow._forInit_in_forstatement5377);
-					forInit404=forInit();
+					DebugLocation(954, 18);
+					PushFollow(Follow._expressionList_in_forstatement5344);
+					expressionList403=expressionList();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, forInit404.Tree, forInit404, "forInit404", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, expressionList403.Tree, expressionList403, "expressionList403", retval);
 
 					}
 					break;
@@ -15388,92 +15345,18 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				} finally { DebugExitSubRule(118); }
 
-				DebugLocation(960, 20);
-				char_literal405=(IToken)Match(input,SEMI,Follow._SEMI_in_forstatement5398); if (state.failed) return retval;
+				DebugLocation(955, 20);
+				char_literal404=(IToken)Match(input,RPAREN,Follow._RPAREN_in_forstatement5365); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal405_tree = (object)adaptor.Create(char_literal405, "char_literal405", retval);
-				adaptor.AddChild(root_0, char_literal405_tree);
+				char_literal404_tree = (object)adaptor.Create(char_literal404, "char_literal404", retval);
+				adaptor.AddChild(root_0, char_literal404_tree);
 				}
-				DebugLocation(961, 17);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:961:17: ( expression )?
-				int alt119=2;
-				try { DebugEnterSubRule(119);
-				try { DebugEnterDecision(119, false);
-				int LA119_1 = input.LA(1);
-
-				if ((LA119_1==BANG||LA119_1==BOOLEAN||LA119_1==BYTE||(LA119_1>=CHAR && LA119_1<=CHARLITERAL)||(LA119_1>=DOUBLE && LA119_1<=DOUBLELITERAL)||LA119_1==FALSE||(LA119_1>=FLOAT && LA119_1<=FLOATLITERAL)||LA119_1==IDENTIFIER||LA119_1==INT||LA119_1==INTLITERAL||(LA119_1>=LONG && LA119_1<=LPAREN)||(LA119_1>=NEW && LA119_1<=NULL)||LA119_1==PLUS||LA119_1==PLUSPLUS||LA119_1==SHORT||(LA119_1>=STRINGLITERAL && LA119_1<=SUB)||(LA119_1>=SUBSUB && LA119_1<=SUPER)||LA119_1==THIS||LA119_1==TILDE||LA119_1==TRUE||LA119_1==VOID))
-				{
-					alt119 = 1;
-				}
-				} finally { DebugExitDecision(119); }
-				switch (alt119)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:961:18: expression
-					{
-					DebugLocation(961, 18);
-					PushFollow(Follow._expression_in_forstatement5418);
-					expression406=expression();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, expression406.Tree, expression406, "expression406", retval);
-
-					}
-					break;
-
-				}
-				} finally { DebugExitSubRule(119); }
-
-				DebugLocation(962, 20);
-				char_literal407=(IToken)Match(input,SEMI,Follow._SEMI_in_forstatement5439); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal407_tree = (object)adaptor.Create(char_literal407, "char_literal407", retval);
-				adaptor.AddChild(root_0, char_literal407_tree);
-				}
-				DebugLocation(963, 17);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:963:17: ( expressionList )?
-				int alt120=2;
-				try { DebugEnterSubRule(120);
-				try { DebugEnterDecision(120, false);
-				int LA120_1 = input.LA(1);
-
-				if ((LA120_1==BANG||LA120_1==BOOLEAN||LA120_1==BYTE||(LA120_1>=CHAR && LA120_1<=CHARLITERAL)||(LA120_1>=DOUBLE && LA120_1<=DOUBLELITERAL)||LA120_1==FALSE||(LA120_1>=FLOAT && LA120_1<=FLOATLITERAL)||LA120_1==IDENTIFIER||LA120_1==INT||LA120_1==INTLITERAL||(LA120_1>=LONG && LA120_1<=LPAREN)||(LA120_1>=NEW && LA120_1<=NULL)||LA120_1==PLUS||LA120_1==PLUSPLUS||LA120_1==SHORT||(LA120_1>=STRINGLITERAL && LA120_1<=SUB)||(LA120_1>=SUBSUB && LA120_1<=SUPER)||LA120_1==THIS||LA120_1==TILDE||LA120_1==TRUE||LA120_1==VOID))
-				{
-					alt120 = 1;
-				}
-				} finally { DebugExitDecision(120); }
-				switch (alt120)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:963:18: expressionList
-					{
-					DebugLocation(963, 18);
-					PushFollow(Follow._expressionList_in_forstatement5459);
-					expressionList408=expressionList();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, expressionList408.Tree, expressionList408, "expressionList408", retval);
-
-					}
-					break;
-
-				}
-				} finally { DebugExitSubRule(120); }
-
-				DebugLocation(964, 20);
-				char_literal409=(IToken)Match(input,RPAREN,Follow._RPAREN_in_forstatement5480); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal409_tree = (object)adaptor.Create(char_literal409, "char_literal409", retval);
-				adaptor.AddChild(root_0, char_literal409_tree);
-				}
-				DebugLocation(964, 24);
-				PushFollow(Follow._statement_in_forstatement5482);
-				statement410=statement();
+				DebugLocation(955, 24);
+				PushFollow(Follow._statement_in_forstatement5367);
+				statement405=statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement410.Tree, statement410, "statement410", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement405.Tree, statement405, "statement405", retval);
 
 				}
 				break;
@@ -15501,7 +15384,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 72, forstatement_StartIndex); }
 
 		}
-		DebugLocation(965, 4);
+		DebugLocation(956, 4);
 		} finally { DebugExitRule(GrammarFileName, "forstatement"); }
 		return retval;
 
@@ -15511,7 +15394,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_forInit();
 	partial void LeaveRule_forInit();
 	// $ANTLR start "forInit"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:967:1: forInit : ( localVariableDeclaration | expressionList );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:958:1: forInit : ( localVariableDeclaration | expressionList );
 	[GrammarRule("forInit")]
 	private Antlr3AstNode forInit()
 	{
@@ -15524,42 +15407,42 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode localVariableDeclaration411 = default(Antlr3AstNode);
-		Antlr3AstNode expressionList412 = default(Antlr3AstNode);
+		Antlr3AstNode localVariableDeclaration406 = default(Antlr3AstNode);
+		Antlr3AstNode expressionList407 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "forInit");
-		DebugLocation(967, 4);
+		DebugLocation(958, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 73)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:968:5: ( localVariableDeclaration | expressionList )
-			int alt122=2;
-			try { DebugEnterDecision(122, false);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:959:5: ( localVariableDeclaration | expressionList )
+			int alt120=2;
+			try { DebugEnterDecision(120, false);
 			switch (input.LA(1))
 			{
 			case FINAL:
 			case MONKEYS_AT:
 				{
-				alt122 = 1;
+				alt120 = 1;
 				}
 				break;
 			case IDENTIFIER:
 				{
-				int LA122_2 = input.LA(2);
+				int LA120_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred174_Java_fragment)))
+				if ((EvaluatePredicate(synpred172_Java_fragment)))
 				{
-					alt122 = 1;
+					alt120 = 1;
 				}
 				else if ((true))
 				{
-					alt122 = 2;
+					alt120 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 122, 3, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 120, 3, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -15574,20 +15457,20 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case LONG:
 			case SHORT:
 				{
-				int LA122_2 = input.LA(2);
+				int LA120_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred174_Java_fragment)))
+				if ((EvaluatePredicate(synpred172_Java_fragment)))
 				{
-					alt122 = 1;
+					alt120 = 1;
 				}
 				else if ((true))
 				{
-					alt122 = 2;
+					alt120 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 122, 4, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 120, 4, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -15614,48 +15497,48 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case TRUE:
 			case VOID:
 				{
-				alt122 = 2;
+				alt120 = 2;
 				}
 				break;
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 122, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 120, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(122); }
-			switch (alt122)
+			} finally { DebugExitDecision(120); }
+			switch (alt120)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:968:9: localVariableDeclaration
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:959:9: localVariableDeclaration
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(968, 9);
-				PushFollow(Follow._localVariableDeclaration_in_forInit5502);
-				localVariableDeclaration411=localVariableDeclaration();
+				DebugLocation(959, 9);
+				PushFollow(Follow._localVariableDeclaration_in_forInit5387);
+				localVariableDeclaration406=localVariableDeclaration();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, localVariableDeclaration411.Tree, localVariableDeclaration411, "localVariableDeclaration411", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, localVariableDeclaration406.Tree, localVariableDeclaration406, "localVariableDeclaration406", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:969:9: expressionList
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:960:9: expressionList
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(969, 9);
-				PushFollow(Follow._expressionList_in_forInit5512);
-				expressionList412=expressionList();
+				DebugLocation(960, 9);
+				PushFollow(Follow._expressionList_in_forInit5397);
+				expressionList407=expressionList();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expressionList412.Tree, expressionList412, "expressionList412", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expressionList407.Tree, expressionList407, "expressionList407", retval);
 
 				}
 				break;
@@ -15683,7 +15566,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 73, forInit_StartIndex); }
 
 		}
-		DebugLocation(970, 4);
+		DebugLocation(961, 4);
 		} finally { DebugExitRule(GrammarFileName, "forInit"); }
 		return retval;
 
@@ -15693,7 +15576,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_parExpression();
 	partial void LeaveRule_parExpression();
 	// $ANTLR start "parExpression"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:972:1: parExpression : '(' expression ')' ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:963:1: parExpression : '(' expression ')' ;
 	[GrammarRule("parExpression")]
 	private Antlr3AstNode parExpression()
 	{
@@ -15706,41 +15589,41 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal413 = default(IToken);
-		IToken char_literal415 = default(IToken);
-		Antlr3AstNode expression414 = default(Antlr3AstNode);
+		IToken char_literal408 = default(IToken);
+		IToken char_literal410 = default(IToken);
+		Antlr3AstNode expression409 = default(Antlr3AstNode);
 
-		object char_literal413_tree = default(object);
-		object char_literal415_tree = default(object);
+		object char_literal408_tree = default(object);
+		object char_literal410_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "parExpression");
-		DebugLocation(972, 4);
+		DebugLocation(963, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 74)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:973:5: ( '(' expression ')' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:964:5: ( '(' expression ')' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:973:9: '(' expression ')'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:964:9: '(' expression ')'
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(973, 9);
-			char_literal413=(IToken)Match(input,LPAREN,Follow._LPAREN_in_parExpression5532); if (state.failed) return retval;
+			DebugLocation(964, 9);
+			char_literal408=(IToken)Match(input,LPAREN,Follow._LPAREN_in_parExpression5417); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal413_tree = (object)adaptor.Create(char_literal413, "char_literal413", retval);
-			adaptor.AddChild(root_0, char_literal413_tree);
+			char_literal408_tree = (object)adaptor.Create(char_literal408, "char_literal408", retval);
+			adaptor.AddChild(root_0, char_literal408_tree);
 			}
-			DebugLocation(973, 13);
-			PushFollow(Follow._expression_in_parExpression5534);
-			expression414=expression();
+			DebugLocation(964, 13);
+			PushFollow(Follow._expression_in_parExpression5419);
+			expression409=expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, expression414.Tree, expression414, "expression414", retval);
-			DebugLocation(973, 24);
-			char_literal415=(IToken)Match(input,RPAREN,Follow._RPAREN_in_parExpression5536); if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, expression409.Tree, expression409, "expression409", retval);
+			DebugLocation(964, 24);
+			char_literal410=(IToken)Match(input,RPAREN,Follow._RPAREN_in_parExpression5421); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal415_tree = (object)adaptor.Create(char_literal415, "char_literal415", retval);
-			adaptor.AddChild(root_0, char_literal415_tree);
+			char_literal410_tree = (object)adaptor.Create(char_literal410, "char_literal410", retval);
+			adaptor.AddChild(root_0, char_literal410_tree);
 			}
 
 			}
@@ -15767,7 +15650,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 74, parExpression_StartIndex); }
 
 		}
-		DebugLocation(974, 4);
+		DebugLocation(965, 4);
 		} finally { DebugExitRule(GrammarFileName, "parExpression"); }
 		return retval;
 
@@ -15777,7 +15660,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_expressionList();
 	partial void LeaveRule_expressionList();
 	// $ANTLR start "expressionList"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:976:1: expressionList : expression ( ',' expression )* ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:967:1: expressionList : expression ( ',' expression )* ;
 	[GrammarRule("expressionList")]
 	private Antlr3AstNode expressionList()
 	{
@@ -15790,76 +15673,76 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal417 = default(IToken);
-		Antlr3AstNode expression416 = default(Antlr3AstNode);
-		Antlr3AstNode expression418 = default(Antlr3AstNode);
+		IToken char_literal412 = default(IToken);
+		Antlr3AstNode expression411 = default(Antlr3AstNode);
+		Antlr3AstNode expression413 = default(Antlr3AstNode);
 
-		object char_literal417_tree = default(object);
+		object char_literal412_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "expressionList");
-		DebugLocation(976, 4);
+		DebugLocation(967, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 75)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:977:5: ( expression ( ',' expression )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:968:5: ( expression ( ',' expression )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:977:9: expression ( ',' expression )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:968:9: expression ( ',' expression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(977, 9);
-			PushFollow(Follow._expression_in_expressionList5556);
-			expression416=expression();
+			DebugLocation(968, 9);
+			PushFollow(Follow._expression_in_expressionList5441);
+			expression411=expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, expression416.Tree, expression416, "expression416", retval);
-			DebugLocation(978, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:978:9: ( ',' expression )*
-			try { DebugEnterSubRule(123);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, expression411.Tree, expression411, "expression411", retval);
+			DebugLocation(969, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:969:9: ( ',' expression )*
+			try { DebugEnterSubRule(121);
 			while (true)
 			{
-				int alt123=2;
-				try { DebugEnterDecision(123, false);
-				int LA123_1 = input.LA(1);
+				int alt121=2;
+				try { DebugEnterDecision(121, false);
+				int LA121_1 = input.LA(1);
 
-				if ((LA123_1==COMMA))
+				if ((LA121_1==COMMA))
 				{
-					alt123 = 1;
+					alt121 = 1;
 				}
 
 
-				} finally { DebugExitDecision(123); }
-				switch ( alt123 )
+				} finally { DebugExitDecision(121); }
+				switch ( alt121 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:978:10: ',' expression
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:969:10: ',' expression
 					{
-					DebugLocation(978, 10);
-					char_literal417=(IToken)Match(input,COMMA,Follow._COMMA_in_expressionList5567); if (state.failed) return retval;
+					DebugLocation(969, 10);
+					char_literal412=(IToken)Match(input,COMMA,Follow._COMMA_in_expressionList5452); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal417_tree = (object)adaptor.Create(char_literal417, "char_literal417", retval);
-					adaptor.AddChild(root_0, char_literal417_tree);
+					char_literal412_tree = (object)adaptor.Create(char_literal412, "char_literal412", retval);
+					adaptor.AddChild(root_0, char_literal412_tree);
 					}
-					DebugLocation(978, 14);
-					PushFollow(Follow._expression_in_expressionList5569);
-					expression418=expression();
+					DebugLocation(969, 14);
+					PushFollow(Follow._expression_in_expressionList5454);
+					expression413=expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, expression418.Tree, expression418, "expression418", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, expression413.Tree, expression413, "expression413", retval);
 
 					}
 					break;
 
 				default:
-					goto loop123;
+					goto loop121;
 				}
 			}
 
-			loop123:
+			loop121:
 				;
 
-			} finally { DebugExitSubRule(123); }
+			} finally { DebugExitSubRule(121); }
 
 
 			}
@@ -15886,7 +15769,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 75, expressionList_StartIndex); }
 
 		}
-		DebugLocation(980, 4);
+		DebugLocation(971, 4);
 		} finally { DebugExitRule(GrammarFileName, "expressionList"); }
 		return retval;
 
@@ -15896,7 +15779,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_expression();
 	partial void LeaveRule_expression();
 	// $ANTLR start "expression"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:983:1: expression : conditionalExpression ( assignmentOperator expression )? ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:974:1: expression : conditionalExpression ( assignmentOperator expression )? ;
 	[GrammarRule("expression")]
 	private Antlr3AstNode expression()
 	{
@@ -15909,64 +15792,64 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode conditionalExpression419 = default(Antlr3AstNode);
-		Antlr3AstNode assignmentOperator420 = default(Antlr3AstNode);
-		Antlr3AstNode expression421 = default(Antlr3AstNode);
+		Antlr3AstNode conditionalExpression414 = default(Antlr3AstNode);
+		Antlr3AstNode assignmentOperator415 = default(Antlr3AstNode);
+		Antlr3AstNode expression416 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "expression");
-		DebugLocation(983, 4);
+		DebugLocation(974, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 76)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:984:5: ( conditionalExpression ( assignmentOperator expression )? )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:975:5: ( conditionalExpression ( assignmentOperator expression )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:984:9: conditionalExpression ( assignmentOperator expression )?
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:975:9: conditionalExpression ( assignmentOperator expression )?
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(984, 9);
-			PushFollow(Follow._conditionalExpression_in_expression5601);
-			conditionalExpression419=conditionalExpression();
+			DebugLocation(975, 9);
+			PushFollow(Follow._conditionalExpression_in_expression5486);
+			conditionalExpression414=conditionalExpression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, conditionalExpression419.Tree, conditionalExpression419, "conditionalExpression419", retval);
-			DebugLocation(985, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:985:9: ( assignmentOperator expression )?
-			int alt124=2;
-			try { DebugEnterSubRule(124);
-			try { DebugEnterDecision(124, false);
-			int LA124_1 = input.LA(1);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, conditionalExpression414.Tree, conditionalExpression414, "conditionalExpression414", retval);
+			DebugLocation(976, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:976:9: ( assignmentOperator expression )?
+			int alt122=2;
+			try { DebugEnterSubRule(122);
+			try { DebugEnterDecision(122, false);
+			int LA122_1 = input.LA(1);
 
-			if ((LA124_1==AMPEQ||LA124_1==BAREQ||LA124_1==CARETEQ||LA124_1==EQ||LA124_1==GT||LA124_1==LT||LA124_1==PERCENTEQ||LA124_1==PLUSEQ||LA124_1==SLASHEQ||LA124_1==STAREQ||LA124_1==SUBEQ))
+			if ((LA122_1==AMPEQ||LA122_1==BAREQ||LA122_1==CARETEQ||LA122_1==EQ||LA122_1==GT||LA122_1==LT||LA122_1==PERCENTEQ||LA122_1==PLUSEQ||LA122_1==SLASHEQ||LA122_1==STAREQ||LA122_1==SUBEQ))
 			{
-				alt124 = 1;
+				alt122 = 1;
 			}
-			} finally { DebugExitDecision(124); }
-			switch (alt124)
+			} finally { DebugExitDecision(122); }
+			switch (alt122)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:985:10: assignmentOperator expression
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:976:10: assignmentOperator expression
 				{
-				DebugLocation(985, 10);
-				PushFollow(Follow._assignmentOperator_in_expression5612);
-				assignmentOperator420=assignmentOperator();
+				DebugLocation(976, 10);
+				PushFollow(Follow._assignmentOperator_in_expression5497);
+				assignmentOperator415=assignmentOperator();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, assignmentOperator420.Tree, assignmentOperator420, "assignmentOperator420", retval);
-				DebugLocation(985, 29);
-				PushFollow(Follow._expression_in_expression5614);
-				expression421=expression();
+				if (state.backtracking == 0) adaptor.AddChild(root_0, assignmentOperator415.Tree, assignmentOperator415, "assignmentOperator415", retval);
+				DebugLocation(976, 29);
+				PushFollow(Follow._expression_in_expression5499);
+				expression416=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression421.Tree, expression421, "expression421", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression416.Tree, expression416, "expression416", retval);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(124); }
+			} finally { DebugExitSubRule(122); }
 
 
 			}
@@ -15993,7 +15876,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 76, expression_StartIndex); }
 
 		}
-		DebugLocation(987, 4);
+		DebugLocation(978, 4);
 		} finally { DebugExitRule(GrammarFileName, "expression"); }
 		return retval;
 
@@ -16003,7 +15886,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_assignmentOperator();
 	partial void LeaveRule_assignmentOperator();
 	// $ANTLR start "assignmentOperator"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:990:1: assignmentOperator : ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | '<' '<' '=' | '>' '>' '>' '=' | '>' '>' '=' );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:981:1: assignmentOperator : ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | '<' '<' '=' | '>' '>' '>' '=' | '>' '>' '=' );
 	[GrammarRule("assignmentOperator")]
 	private Antlr3AstNode assignmentOperator()
 	{
@@ -16016,126 +15899,126 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal422 = default(IToken);
+		IToken char_literal417 = default(IToken);
+		IToken string_literal418 = default(IToken);
+		IToken string_literal419 = default(IToken);
+		IToken string_literal420 = default(IToken);
+		IToken string_literal421 = default(IToken);
+		IToken string_literal422 = default(IToken);
 		IToken string_literal423 = default(IToken);
 		IToken string_literal424 = default(IToken);
 		IToken string_literal425 = default(IToken);
-		IToken string_literal426 = default(IToken);
-		IToken string_literal427 = default(IToken);
-		IToken string_literal428 = default(IToken);
-		IToken string_literal429 = default(IToken);
-		IToken string_literal430 = default(IToken);
+		IToken char_literal426 = default(IToken);
+		IToken char_literal427 = default(IToken);
+		IToken char_literal428 = default(IToken);
+		IToken char_literal429 = default(IToken);
+		IToken char_literal430 = default(IToken);
 		IToken char_literal431 = default(IToken);
 		IToken char_literal432 = default(IToken);
 		IToken char_literal433 = default(IToken);
 		IToken char_literal434 = default(IToken);
 		IToken char_literal435 = default(IToken);
-		IToken char_literal436 = default(IToken);
-		IToken char_literal437 = default(IToken);
-		IToken char_literal438 = default(IToken);
-		IToken char_literal439 = default(IToken);
-		IToken char_literal440 = default(IToken);
 
-		object char_literal422_tree = default(object);
+		object char_literal417_tree = default(object);
+		object string_literal418_tree = default(object);
+		object string_literal419_tree = default(object);
+		object string_literal420_tree = default(object);
+		object string_literal421_tree = default(object);
+		object string_literal422_tree = default(object);
 		object string_literal423_tree = default(object);
 		object string_literal424_tree = default(object);
 		object string_literal425_tree = default(object);
-		object string_literal426_tree = default(object);
-		object string_literal427_tree = default(object);
-		object string_literal428_tree = default(object);
-		object string_literal429_tree = default(object);
-		object string_literal430_tree = default(object);
+		object char_literal426_tree = default(object);
+		object char_literal427_tree = default(object);
+		object char_literal428_tree = default(object);
+		object char_literal429_tree = default(object);
+		object char_literal430_tree = default(object);
 		object char_literal431_tree = default(object);
 		object char_literal432_tree = default(object);
 		object char_literal433_tree = default(object);
 		object char_literal434_tree = default(object);
 		object char_literal435_tree = default(object);
-		object char_literal436_tree = default(object);
-		object char_literal437_tree = default(object);
-		object char_literal438_tree = default(object);
-		object char_literal439_tree = default(object);
-		object char_literal440_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "assignmentOperator");
-		DebugLocation(990, 4);
+		DebugLocation(981, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 77)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:991:5: ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | '<' '<' '=' | '>' '>' '>' '=' | '>' '>' '=' )
-			int alt125=12;
-			try { DebugEnterDecision(125, false);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:982:5: ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | '<' '<' '=' | '>' '>' '>' '=' | '>' '>' '=' )
+			int alt123=12;
+			try { DebugEnterDecision(123, false);
 			switch (input.LA(1))
 			{
 			case EQ:
 				{
-				alt125 = 1;
+				alt123 = 1;
 				}
 				break;
 			case PLUSEQ:
 				{
-				alt125 = 2;
+				alt123 = 2;
 				}
 				break;
 			case SUBEQ:
 				{
-				alt125 = 3;
+				alt123 = 3;
 				}
 				break;
 			case STAREQ:
 				{
-				alt125 = 4;
+				alt123 = 4;
 				}
 				break;
 			case SLASHEQ:
 				{
-				alt125 = 5;
+				alt123 = 5;
 				}
 				break;
 			case AMPEQ:
 				{
-				alt125 = 6;
+				alt123 = 6;
 				}
 				break;
 			case BAREQ:
 				{
-				alt125 = 7;
+				alt123 = 7;
 				}
 				break;
 			case CARETEQ:
 				{
-				alt125 = 8;
+				alt123 = 8;
 				}
 				break;
 			case PERCENTEQ:
 				{
-				alt125 = 9;
+				alt123 = 9;
 				}
 				break;
 			case LT:
 				{
-				alt125 = 10;
+				alt123 = 10;
 				}
 				break;
 			case GT:
 				{
-				int LA125_2 = input.LA(2);
+				int LA123_2 = input.LA(2);
 
-				if ((LA125_2==GT))
+				if ((LA123_2==GT))
 				{
-					int LA125_3 = input.LA(3);
+					int LA123_3 = input.LA(3);
 
-					if ((LA125_3==GT))
+					if ((LA123_3==GT))
 					{
-						alt125 = 11;
+						alt123 = 11;
 					}
-					else if ((LA125_3==EQ))
+					else if ((LA123_3==EQ))
 					{
-						alt125 = 12;
+						alt123 = 12;
 					}
 					else
 					{
 						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 125, 12, input, 3);
+						NoViableAltException nvae = new NoViableAltException("", 123, 12, input, 3);
 						DebugRecognitionException(nvae);
 						throw nvae;
 					}
@@ -16143,7 +16026,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 125, 11, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 123, 11, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -16152,38 +16035,113 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 125, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 123, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(125); }
-			switch (alt125)
+			} finally { DebugExitDecision(123); }
+			switch (alt123)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:991:9: '='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:982:9: '='
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(991, 9);
-				char_literal422=(IToken)Match(input,EQ,Follow._EQ_in_assignmentOperator5646); if (state.failed) return retval;
+				DebugLocation(982, 9);
+				char_literal417=(IToken)Match(input,EQ,Follow._EQ_in_assignmentOperator5531); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal422_tree = (object)adaptor.Create(char_literal422, "char_literal422", retval);
-				adaptor.AddChild(root_0, char_literal422_tree);
+				char_literal417_tree = (object)adaptor.Create(char_literal417, "char_literal417", retval);
+				adaptor.AddChild(root_0, char_literal417_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:992:9: '+='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:983:9: '+='
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(992, 9);
-				string_literal423=(IToken)Match(input,PLUSEQ,Follow._PLUSEQ_in_assignmentOperator5656); if (state.failed) return retval;
+				DebugLocation(983, 9);
+				string_literal418=(IToken)Match(input,PLUSEQ,Follow._PLUSEQ_in_assignmentOperator5541); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal418_tree = (object)adaptor.Create(string_literal418, "string_literal418", retval);
+				adaptor.AddChild(root_0, string_literal418_tree);
+				}
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:984:9: '-='
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(984, 9);
+				string_literal419=(IToken)Match(input,SUBEQ,Follow._SUBEQ_in_assignmentOperator5551); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal419_tree = (object)adaptor.Create(string_literal419, "string_literal419", retval);
+				adaptor.AddChild(root_0, string_literal419_tree);
+				}
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:985:9: '*='
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(985, 9);
+				string_literal420=(IToken)Match(input,STAREQ,Follow._STAREQ_in_assignmentOperator5561); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal420_tree = (object)adaptor.Create(string_literal420, "string_literal420", retval);
+				adaptor.AddChild(root_0, string_literal420_tree);
+				}
+
+				}
+				break;
+			case 5:
+				DebugEnterAlt(5);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:986:9: '/='
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(986, 9);
+				string_literal421=(IToken)Match(input,SLASHEQ,Follow._SLASHEQ_in_assignmentOperator5571); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal421_tree = (object)adaptor.Create(string_literal421, "string_literal421", retval);
+				adaptor.AddChild(root_0, string_literal421_tree);
+				}
+
+				}
+				break;
+			case 6:
+				DebugEnterAlt(6);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:987:9: '&='
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(987, 9);
+				string_literal422=(IToken)Match(input,AMPEQ,Follow._AMPEQ_in_assignmentOperator5581); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal422_tree = (object)adaptor.Create(string_literal422, "string_literal422", retval);
+				adaptor.AddChild(root_0, string_literal422_tree);
+				}
+
+				}
+				break;
+			case 7:
+				DebugEnterAlt(7);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:988:9: '|='
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(988, 9);
+				string_literal423=(IToken)Match(input,BAREQ,Follow._BAREQ_in_assignmentOperator5591); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal423_tree = (object)adaptor.Create(string_literal423, "string_literal423", retval);
 				adaptor.AddChild(root_0, string_literal423_tree);
@@ -16191,14 +16149,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 				}
 				break;
-			case 3:
-				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:993:9: '-='
+			case 8:
+				DebugEnterAlt(8);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:989:9: '^='
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(993, 9);
-				string_literal424=(IToken)Match(input,SUBEQ,Follow._SUBEQ_in_assignmentOperator5666); if (state.failed) return retval;
+				DebugLocation(989, 9);
+				string_literal424=(IToken)Match(input,CARETEQ,Follow._CARETEQ_in_assignmentOperator5601); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal424_tree = (object)adaptor.Create(string_literal424, "string_literal424", retval);
 				adaptor.AddChild(root_0, string_literal424_tree);
@@ -16206,14 +16164,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 				}
 				break;
-			case 4:
-				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:994:9: '*='
+			case 9:
+				DebugEnterAlt(9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:990:9: '%='
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(994, 9);
-				string_literal425=(IToken)Match(input,STAREQ,Follow._STAREQ_in_assignmentOperator5676); if (state.failed) return retval;
+				DebugLocation(990, 9);
+				string_literal425=(IToken)Match(input,PERCENTEQ,Follow._PERCENTEQ_in_assignmentOperator5611); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal425_tree = (object)adaptor.Create(string_literal425, "string_literal425", retval);
 				adaptor.AddChild(root_0, string_literal425_tree);
@@ -16221,164 +16179,89 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 				}
 				break;
-			case 5:
-				DebugEnterAlt(5);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:995:9: '/='
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(995, 9);
-				string_literal426=(IToken)Match(input,SLASHEQ,Follow._SLASHEQ_in_assignmentOperator5686); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal426_tree = (object)adaptor.Create(string_literal426, "string_literal426", retval);
-				adaptor.AddChild(root_0, string_literal426_tree);
-				}
-
-				}
-				break;
-			case 6:
-				DebugEnterAlt(6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:996:9: '&='
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(996, 9);
-				string_literal427=(IToken)Match(input,AMPEQ,Follow._AMPEQ_in_assignmentOperator5696); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal427_tree = (object)adaptor.Create(string_literal427, "string_literal427", retval);
-				adaptor.AddChild(root_0, string_literal427_tree);
-				}
-
-				}
-				break;
-			case 7:
-				DebugEnterAlt(7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:997:9: '|='
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(997, 9);
-				string_literal428=(IToken)Match(input,BAREQ,Follow._BAREQ_in_assignmentOperator5706); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal428_tree = (object)adaptor.Create(string_literal428, "string_literal428", retval);
-				adaptor.AddChild(root_0, string_literal428_tree);
-				}
-
-				}
-				break;
-			case 8:
-				DebugEnterAlt(8);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:998:9: '^='
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(998, 9);
-				string_literal429=(IToken)Match(input,CARETEQ,Follow._CARETEQ_in_assignmentOperator5716); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal429_tree = (object)adaptor.Create(string_literal429, "string_literal429", retval);
-				adaptor.AddChild(root_0, string_literal429_tree);
-				}
-
-				}
-				break;
-			case 9:
-				DebugEnterAlt(9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:999:9: '%='
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(999, 9);
-				string_literal430=(IToken)Match(input,PERCENTEQ,Follow._PERCENTEQ_in_assignmentOperator5726); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal430_tree = (object)adaptor.Create(string_literal430, "string_literal430", retval);
-				adaptor.AddChild(root_0, string_literal430_tree);
-				}
-
-				}
-				break;
 			case 10:
 				DebugEnterAlt(10);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1000:10: '<' '<' '='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:991:10: '<' '<' '='
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1000, 10);
-				char_literal431=(IToken)Match(input,LT,Follow._LT_in_assignmentOperator5737); if (state.failed) return retval;
+				DebugLocation(991, 10);
+				char_literal426=(IToken)Match(input,LT,Follow._LT_in_assignmentOperator5622); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal431_tree = (object)adaptor.Create(char_literal431, "char_literal431", retval);
-				adaptor.AddChild(root_0, char_literal431_tree);
+				char_literal426_tree = (object)adaptor.Create(char_literal426, "char_literal426", retval);
+				adaptor.AddChild(root_0, char_literal426_tree);
 				}
-				DebugLocation(1000, 14);
-				char_literal432=(IToken)Match(input,LT,Follow._LT_in_assignmentOperator5739); if (state.failed) return retval;
+				DebugLocation(991, 14);
+				char_literal427=(IToken)Match(input,LT,Follow._LT_in_assignmentOperator5624); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal432_tree = (object)adaptor.Create(char_literal432, "char_literal432", retval);
-				adaptor.AddChild(root_0, char_literal432_tree);
+				char_literal427_tree = (object)adaptor.Create(char_literal427, "char_literal427", retval);
+				adaptor.AddChild(root_0, char_literal427_tree);
 				}
-				DebugLocation(1000, 18);
-				char_literal433=(IToken)Match(input,EQ,Follow._EQ_in_assignmentOperator5741); if (state.failed) return retval;
+				DebugLocation(991, 18);
+				char_literal428=(IToken)Match(input,EQ,Follow._EQ_in_assignmentOperator5626); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal433_tree = (object)adaptor.Create(char_literal433, "char_literal433", retval);
-				adaptor.AddChild(root_0, char_literal433_tree);
+				char_literal428_tree = (object)adaptor.Create(char_literal428, "char_literal428", retval);
+				adaptor.AddChild(root_0, char_literal428_tree);
 				}
 
 				}
 				break;
 			case 11:
 				DebugEnterAlt(11);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1001:10: '>' '>' '>' '='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:992:10: '>' '>' '>' '='
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1001, 10);
-				char_literal434=(IToken)Match(input,GT,Follow._GT_in_assignmentOperator5752); if (state.failed) return retval;
+				DebugLocation(992, 10);
+				char_literal429=(IToken)Match(input,GT,Follow._GT_in_assignmentOperator5637); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal434_tree = (object)adaptor.Create(char_literal434, "char_literal434", retval);
-				adaptor.AddChild(root_0, char_literal434_tree);
+				char_literal429_tree = (object)adaptor.Create(char_literal429, "char_literal429", retval);
+				adaptor.AddChild(root_0, char_literal429_tree);
 				}
-				DebugLocation(1001, 14);
-				char_literal435=(IToken)Match(input,GT,Follow._GT_in_assignmentOperator5754); if (state.failed) return retval;
+				DebugLocation(992, 14);
+				char_literal430=(IToken)Match(input,GT,Follow._GT_in_assignmentOperator5639); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal435_tree = (object)adaptor.Create(char_literal435, "char_literal435", retval);
-				adaptor.AddChild(root_0, char_literal435_tree);
+				char_literal430_tree = (object)adaptor.Create(char_literal430, "char_literal430", retval);
+				adaptor.AddChild(root_0, char_literal430_tree);
 				}
-				DebugLocation(1001, 18);
-				char_literal436=(IToken)Match(input,GT,Follow._GT_in_assignmentOperator5756); if (state.failed) return retval;
+				DebugLocation(992, 18);
+				char_literal431=(IToken)Match(input,GT,Follow._GT_in_assignmentOperator5641); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal436_tree = (object)adaptor.Create(char_literal436, "char_literal436", retval);
-				adaptor.AddChild(root_0, char_literal436_tree);
+				char_literal431_tree = (object)adaptor.Create(char_literal431, "char_literal431", retval);
+				adaptor.AddChild(root_0, char_literal431_tree);
 				}
-				DebugLocation(1001, 22);
-				char_literal437=(IToken)Match(input,EQ,Follow._EQ_in_assignmentOperator5758); if (state.failed) return retval;
+				DebugLocation(992, 22);
+				char_literal432=(IToken)Match(input,EQ,Follow._EQ_in_assignmentOperator5643); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal437_tree = (object)adaptor.Create(char_literal437, "char_literal437", retval);
-				adaptor.AddChild(root_0, char_literal437_tree);
+				char_literal432_tree = (object)adaptor.Create(char_literal432, "char_literal432", retval);
+				adaptor.AddChild(root_0, char_literal432_tree);
 				}
 
 				}
 				break;
 			case 12:
 				DebugEnterAlt(12);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1002:10: '>' '>' '='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:993:10: '>' '>' '='
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1002, 10);
-				char_literal438=(IToken)Match(input,GT,Follow._GT_in_assignmentOperator5769); if (state.failed) return retval;
+				DebugLocation(993, 10);
+				char_literal433=(IToken)Match(input,GT,Follow._GT_in_assignmentOperator5654); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal438_tree = (object)adaptor.Create(char_literal438, "char_literal438", retval);
-				adaptor.AddChild(root_0, char_literal438_tree);
+				char_literal433_tree = (object)adaptor.Create(char_literal433, "char_literal433", retval);
+				adaptor.AddChild(root_0, char_literal433_tree);
 				}
-				DebugLocation(1002, 14);
-				char_literal439=(IToken)Match(input,GT,Follow._GT_in_assignmentOperator5771); if (state.failed) return retval;
+				DebugLocation(993, 14);
+				char_literal434=(IToken)Match(input,GT,Follow._GT_in_assignmentOperator5656); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal439_tree = (object)adaptor.Create(char_literal439, "char_literal439", retval);
-				adaptor.AddChild(root_0, char_literal439_tree);
+				char_literal434_tree = (object)adaptor.Create(char_literal434, "char_literal434", retval);
+				adaptor.AddChild(root_0, char_literal434_tree);
 				}
-				DebugLocation(1002, 18);
-				char_literal440=(IToken)Match(input,EQ,Follow._EQ_in_assignmentOperator5773); if (state.failed) return retval;
+				DebugLocation(993, 18);
+				char_literal435=(IToken)Match(input,EQ,Follow._EQ_in_assignmentOperator5658); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal440_tree = (object)adaptor.Create(char_literal440, "char_literal440", retval);
-				adaptor.AddChild(root_0, char_literal440_tree);
+				char_literal435_tree = (object)adaptor.Create(char_literal435, "char_literal435", retval);
+				adaptor.AddChild(root_0, char_literal435_tree);
 				}
 
 				}
@@ -16407,7 +16290,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 77, assignmentOperator_StartIndex); }
 
 		}
-		DebugLocation(1003, 4);
+		DebugLocation(994, 4);
 		} finally { DebugExitRule(GrammarFileName, "assignmentOperator"); }
 		return retval;
 
@@ -16417,7 +16300,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_conditionalExpression();
 	partial void LeaveRule_conditionalExpression();
 	// $ANTLR start "conditionalExpression"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1006:1: conditionalExpression : conditionalOrExpression ( '?' expression ':' conditionalExpression )? ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:997:1: conditionalExpression : conditionalOrExpression ( '?' expression ':' conditionalExpression )? ;
 	[GrammarRule("conditionalExpression")]
 	private Antlr3AstNode conditionalExpression()
 	{
@@ -16430,80 +16313,80 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal442 = default(IToken);
-		IToken char_literal444 = default(IToken);
-		Antlr3AstNode conditionalOrExpression441 = default(Antlr3AstNode);
-		Antlr3AstNode expression443 = default(Antlr3AstNode);
-		Antlr3AstNode conditionalExpression445 = default(Antlr3AstNode);
+		IToken char_literal437 = default(IToken);
+		IToken char_literal439 = default(IToken);
+		Antlr3AstNode conditionalOrExpression436 = default(Antlr3AstNode);
+		Antlr3AstNode expression438 = default(Antlr3AstNode);
+		Antlr3AstNode conditionalExpression440 = default(Antlr3AstNode);
 
-		object char_literal442_tree = default(object);
-		object char_literal444_tree = default(object);
+		object char_literal437_tree = default(object);
+		object char_literal439_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "conditionalExpression");
-		DebugLocation(1006, 4);
+		DebugLocation(997, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 78)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1007:5: ( conditionalOrExpression ( '?' expression ':' conditionalExpression )? )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:998:5: ( conditionalOrExpression ( '?' expression ':' conditionalExpression )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1007:9: conditionalOrExpression ( '?' expression ':' conditionalExpression )?
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:998:9: conditionalOrExpression ( '?' expression ':' conditionalExpression )?
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1007, 9);
-			PushFollow(Follow._conditionalOrExpression_in_conditionalExpression5794);
-			conditionalOrExpression441=conditionalOrExpression();
+			DebugLocation(998, 9);
+			PushFollow(Follow._conditionalOrExpression_in_conditionalExpression5679);
+			conditionalOrExpression436=conditionalOrExpression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, conditionalOrExpression441.Tree, conditionalOrExpression441, "conditionalOrExpression441", retval);
-			DebugLocation(1008, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1008:9: ( '?' expression ':' conditionalExpression )?
-			int alt126=2;
-			try { DebugEnterSubRule(126);
-			try { DebugEnterDecision(126, false);
-			int LA126_1 = input.LA(1);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, conditionalOrExpression436.Tree, conditionalOrExpression436, "conditionalOrExpression436", retval);
+			DebugLocation(999, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:999:9: ( '?' expression ':' conditionalExpression )?
+			int alt124=2;
+			try { DebugEnterSubRule(124);
+			try { DebugEnterDecision(124, false);
+			int LA124_1 = input.LA(1);
 
-			if ((LA126_1==QUES))
+			if ((LA124_1==QUES))
 			{
-				alt126 = 1;
+				alt124 = 1;
 			}
-			} finally { DebugExitDecision(126); }
-			switch (alt126)
+			} finally { DebugExitDecision(124); }
+			switch (alt124)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1008:10: '?' expression ':' conditionalExpression
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:999:10: '?' expression ':' conditionalExpression
 				{
-				DebugLocation(1008, 10);
-				char_literal442=(IToken)Match(input,QUES,Follow._QUES_in_conditionalExpression5805); if (state.failed) return retval;
+				DebugLocation(999, 10);
+				char_literal437=(IToken)Match(input,QUES,Follow._QUES_in_conditionalExpression5690); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal442_tree = (object)adaptor.Create(char_literal442, "char_literal442", retval);
-				adaptor.AddChild(root_0, char_literal442_tree);
+				char_literal437_tree = (object)adaptor.Create(char_literal437, "char_literal437", retval);
+				adaptor.AddChild(root_0, char_literal437_tree);
 				}
-				DebugLocation(1008, 14);
-				PushFollow(Follow._expression_in_conditionalExpression5807);
-				expression443=expression();
+				DebugLocation(999, 14);
+				PushFollow(Follow._expression_in_conditionalExpression5692);
+				expression438=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression443.Tree, expression443, "expression443", retval);
-				DebugLocation(1008, 25);
-				char_literal444=(IToken)Match(input,COLON,Follow._COLON_in_conditionalExpression5809); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression438.Tree, expression438, "expression438", retval);
+				DebugLocation(999, 25);
+				char_literal439=(IToken)Match(input,COLON,Follow._COLON_in_conditionalExpression5694); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal444_tree = (object)adaptor.Create(char_literal444, "char_literal444", retval);
-				adaptor.AddChild(root_0, char_literal444_tree);
+				char_literal439_tree = (object)adaptor.Create(char_literal439, "char_literal439", retval);
+				adaptor.AddChild(root_0, char_literal439_tree);
 				}
-				DebugLocation(1008, 29);
-				PushFollow(Follow._conditionalExpression_in_conditionalExpression5811);
-				conditionalExpression445=conditionalExpression();
+				DebugLocation(999, 29);
+				PushFollow(Follow._conditionalExpression_in_conditionalExpression5696);
+				conditionalExpression440=conditionalExpression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, conditionalExpression445.Tree, conditionalExpression445, "conditionalExpression445", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, conditionalExpression440.Tree, conditionalExpression440, "conditionalExpression440", retval);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(126); }
+			} finally { DebugExitSubRule(124); }
 
 
 			}
@@ -16530,7 +16413,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 78, conditionalExpression_StartIndex); }
 
 		}
-		DebugLocation(1010, 4);
+		DebugLocation(1001, 4);
 		} finally { DebugExitRule(GrammarFileName, "conditionalExpression"); }
 		return retval;
 
@@ -16540,7 +16423,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_conditionalOrExpression();
 	partial void LeaveRule_conditionalOrExpression();
 	// $ANTLR start "conditionalOrExpression"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1012:1: conditionalOrExpression : conditionalAndExpression ( '||' conditionalAndExpression )* ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1003:1: conditionalOrExpression : conditionalAndExpression ( '||' conditionalAndExpression )* ;
 	[GrammarRule("conditionalOrExpression")]
 	private Antlr3AstNode conditionalOrExpression()
 	{
@@ -16553,31 +16436,269 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal447 = default(IToken);
-		Antlr3AstNode conditionalAndExpression446 = default(Antlr3AstNode);
-		Antlr3AstNode conditionalAndExpression448 = default(Antlr3AstNode);
+		IToken string_literal442 = default(IToken);
+		Antlr3AstNode conditionalAndExpression441 = default(Antlr3AstNode);
+		Antlr3AstNode conditionalAndExpression443 = default(Antlr3AstNode);
 
-		object string_literal447_tree = default(object);
+		object string_literal442_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "conditionalOrExpression");
-		DebugLocation(1012, 4);
+		DebugLocation(1003, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 79)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1013:5: ( conditionalAndExpression ( '||' conditionalAndExpression )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1004:5: ( conditionalAndExpression ( '||' conditionalAndExpression )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1013:9: conditionalAndExpression ( '||' conditionalAndExpression )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1004:9: conditionalAndExpression ( '||' conditionalAndExpression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1013, 9);
-			PushFollow(Follow._conditionalAndExpression_in_conditionalOrExpression5841);
-			conditionalAndExpression446=conditionalAndExpression();
+			DebugLocation(1004, 9);
+			PushFollow(Follow._conditionalAndExpression_in_conditionalOrExpression5726);
+			conditionalAndExpression441=conditionalAndExpression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, conditionalAndExpression446.Tree, conditionalAndExpression446, "conditionalAndExpression446", retval);
-			DebugLocation(1014, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1014:9: ( '||' conditionalAndExpression )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, conditionalAndExpression441.Tree, conditionalAndExpression441, "conditionalAndExpression441", retval);
+			DebugLocation(1005, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1005:9: ( '||' conditionalAndExpression )*
+			try { DebugEnterSubRule(125);
+			while (true)
+			{
+				int alt125=2;
+				try { DebugEnterDecision(125, false);
+				int LA125_1 = input.LA(1);
+
+				if ((LA125_1==BARBAR))
+				{
+					alt125 = 1;
+				}
+
+
+				} finally { DebugExitDecision(125); }
+				switch ( alt125 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1005:10: '||' conditionalAndExpression
+					{
+					DebugLocation(1005, 10);
+					string_literal442=(IToken)Match(input,BARBAR,Follow._BARBAR_in_conditionalOrExpression5737); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					string_literal442_tree = (object)adaptor.Create(string_literal442, "string_literal442", retval);
+					adaptor.AddChild(root_0, string_literal442_tree);
+					}
+					DebugLocation(1005, 15);
+					PushFollow(Follow._conditionalAndExpression_in_conditionalOrExpression5739);
+					conditionalAndExpression443=conditionalAndExpression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, conditionalAndExpression443.Tree, conditionalAndExpression443, "conditionalAndExpression443", retval);
+
+					}
+					break;
+
+				default:
+					goto loop125;
+				}
+			}
+
+			loop125:
+				;
+
+			} finally { DebugExitSubRule(125); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("conditionalOrExpression", 79);
+			LeaveRule("conditionalOrExpression", 79);
+			LeaveRule_conditionalOrExpression();
+			if (state.backtracking > 0) { Memoize(input, 79, conditionalOrExpression_StartIndex); }
+
+		}
+		DebugLocation(1007, 4);
+		} finally { DebugExitRule(GrammarFileName, "conditionalOrExpression"); }
+		return retval;
+
+	}
+	// $ANTLR end "conditionalOrExpression"
+
+	partial void EnterRule_conditionalAndExpression();
+	partial void LeaveRule_conditionalAndExpression();
+	// $ANTLR start "conditionalAndExpression"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1009:1: conditionalAndExpression : inclusiveOrExpression ( '&&' inclusiveOrExpression )* ;
+	[GrammarRule("conditionalAndExpression")]
+	private Antlr3AstNode conditionalAndExpression()
+	{
+		EnterRule_conditionalAndExpression();
+		EnterRule("conditionalAndExpression", 80);
+		var retval = new Antlr3AstNode("conditionalAndExpression");
+		
+		retval.Start = (IToken)input.LT(1);
+		int conditionalAndExpression_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken string_literal445 = default(IToken);
+		Antlr3AstNode inclusiveOrExpression444 = default(Antlr3AstNode);
+		Antlr3AstNode inclusiveOrExpression446 = default(Antlr3AstNode);
+
+		object string_literal445_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "conditionalAndExpression");
+		DebugLocation(1009, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 80)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1010:5: ( inclusiveOrExpression ( '&&' inclusiveOrExpression )* )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1010:9: inclusiveOrExpression ( '&&' inclusiveOrExpression )*
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(1010, 9);
+			PushFollow(Follow._inclusiveOrExpression_in_conditionalAndExpression5769);
+			inclusiveOrExpression444=inclusiveOrExpression();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, inclusiveOrExpression444.Tree, inclusiveOrExpression444, "inclusiveOrExpression444", retval);
+			DebugLocation(1011, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1011:9: ( '&&' inclusiveOrExpression )*
+			try { DebugEnterSubRule(126);
+			while (true)
+			{
+				int alt126=2;
+				try { DebugEnterDecision(126, false);
+				int LA126_1 = input.LA(1);
+
+				if ((LA126_1==AMPAMP))
+				{
+					alt126 = 1;
+				}
+
+
+				} finally { DebugExitDecision(126); }
+				switch ( alt126 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1011:10: '&&' inclusiveOrExpression
+					{
+					DebugLocation(1011, 10);
+					string_literal445=(IToken)Match(input,AMPAMP,Follow._AMPAMP_in_conditionalAndExpression5780); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					string_literal445_tree = (object)adaptor.Create(string_literal445, "string_literal445", retval);
+					adaptor.AddChild(root_0, string_literal445_tree);
+					}
+					DebugLocation(1011, 15);
+					PushFollow(Follow._inclusiveOrExpression_in_conditionalAndExpression5782);
+					inclusiveOrExpression446=inclusiveOrExpression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, inclusiveOrExpression446.Tree, inclusiveOrExpression446, "inclusiveOrExpression446", retval);
+
+					}
+					break;
+
+				default:
+					goto loop126;
+				}
+			}
+
+			loop126:
+				;
+
+			} finally { DebugExitSubRule(126); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("conditionalAndExpression", 80);
+			LeaveRule("conditionalAndExpression", 80);
+			LeaveRule_conditionalAndExpression();
+			if (state.backtracking > 0) { Memoize(input, 80, conditionalAndExpression_StartIndex); }
+
+		}
+		DebugLocation(1013, 4);
+		} finally { DebugExitRule(GrammarFileName, "conditionalAndExpression"); }
+		return retval;
+
+	}
+	// $ANTLR end "conditionalAndExpression"
+
+	partial void EnterRule_inclusiveOrExpression();
+	partial void LeaveRule_inclusiveOrExpression();
+	// $ANTLR start "inclusiveOrExpression"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1015:1: inclusiveOrExpression : exclusiveOrExpression ( '|' exclusiveOrExpression )* ;
+	[GrammarRule("inclusiveOrExpression")]
+	private Antlr3AstNode inclusiveOrExpression()
+	{
+		EnterRule_inclusiveOrExpression();
+		EnterRule("inclusiveOrExpression", 81);
+		var retval = new Antlr3AstNode("inclusiveOrExpression");
+		
+		retval.Start = (IToken)input.LT(1);
+		int inclusiveOrExpression_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken char_literal448 = default(IToken);
+		Antlr3AstNode exclusiveOrExpression447 = default(Antlr3AstNode);
+		Antlr3AstNode exclusiveOrExpression449 = default(Antlr3AstNode);
+
+		object char_literal448_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "inclusiveOrExpression");
+		DebugLocation(1015, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 81)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1016:5: ( exclusiveOrExpression ( '|' exclusiveOrExpression )* )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1016:9: exclusiveOrExpression ( '|' exclusiveOrExpression )*
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(1016, 9);
+			PushFollow(Follow._exclusiveOrExpression_in_inclusiveOrExpression5812);
+			exclusiveOrExpression447=exclusiveOrExpression();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, exclusiveOrExpression447.Tree, exclusiveOrExpression447, "exclusiveOrExpression447", retval);
+			DebugLocation(1017, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1017:9: ( '|' exclusiveOrExpression )*
 			try { DebugEnterSubRule(127);
 			while (true)
 			{
@@ -16585,7 +16706,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(127, false);
 				int LA127_1 = input.LA(1);
 
-				if ((LA127_1==BARBAR))
+				if ((LA127_1==BAR))
 				{
 					alt127 = 1;
 				}
@@ -16596,20 +16717,20 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1014:10: '||' conditionalAndExpression
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1017:10: '|' exclusiveOrExpression
 					{
-					DebugLocation(1014, 10);
-					string_literal447=(IToken)Match(input,BARBAR,Follow._BARBAR_in_conditionalOrExpression5852); if (state.failed) return retval;
+					DebugLocation(1017, 10);
+					char_literal448=(IToken)Match(input,BAR,Follow._BAR_in_inclusiveOrExpression5823); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					string_literal447_tree = (object)adaptor.Create(string_literal447, "string_literal447", retval);
-					adaptor.AddChild(root_0, string_literal447_tree);
+					char_literal448_tree = (object)adaptor.Create(char_literal448, "char_literal448", retval);
+					adaptor.AddChild(root_0, char_literal448_tree);
 					}
-					DebugLocation(1014, 15);
-					PushFollow(Follow._conditionalAndExpression_in_conditionalOrExpression5854);
-					conditionalAndExpression448=conditionalAndExpression();
+					DebugLocation(1017, 14);
+					PushFollow(Follow._exclusiveOrExpression_in_inclusiveOrExpression5825);
+					exclusiveOrExpression449=exclusiveOrExpression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, conditionalAndExpression448.Tree, conditionalAndExpression448, "conditionalAndExpression448", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, exclusiveOrExpression449.Tree, exclusiveOrExpression449, "exclusiveOrExpression449", retval);
 
 					}
 					break;
@@ -16643,60 +16764,60 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("conditionalOrExpression", 79);
-			LeaveRule("conditionalOrExpression", 79);
-			LeaveRule_conditionalOrExpression();
-			if (state.backtracking > 0) { Memoize(input, 79, conditionalOrExpression_StartIndex); }
+			TraceOut("inclusiveOrExpression", 81);
+			LeaveRule("inclusiveOrExpression", 81);
+			LeaveRule_inclusiveOrExpression();
+			if (state.backtracking > 0) { Memoize(input, 81, inclusiveOrExpression_StartIndex); }
 
 		}
-		DebugLocation(1016, 4);
-		} finally { DebugExitRule(GrammarFileName, "conditionalOrExpression"); }
+		DebugLocation(1019, 4);
+		} finally { DebugExitRule(GrammarFileName, "inclusiveOrExpression"); }
 		return retval;
 
 	}
-	// $ANTLR end "conditionalOrExpression"
+	// $ANTLR end "inclusiveOrExpression"
 
-	partial void EnterRule_conditionalAndExpression();
-	partial void LeaveRule_conditionalAndExpression();
-	// $ANTLR start "conditionalAndExpression"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1018:1: conditionalAndExpression : inclusiveOrExpression ( '&&' inclusiveOrExpression )* ;
-	[GrammarRule("conditionalAndExpression")]
-	private Antlr3AstNode conditionalAndExpression()
+	partial void EnterRule_exclusiveOrExpression();
+	partial void LeaveRule_exclusiveOrExpression();
+	// $ANTLR start "exclusiveOrExpression"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1021:1: exclusiveOrExpression : andExpression ( '^' andExpression )* ;
+	[GrammarRule("exclusiveOrExpression")]
+	private Antlr3AstNode exclusiveOrExpression()
 	{
-		EnterRule_conditionalAndExpression();
-		EnterRule("conditionalAndExpression", 80);
-		var retval = new Antlr3AstNode("conditionalAndExpression");
+		EnterRule_exclusiveOrExpression();
+		EnterRule("exclusiveOrExpression", 82);
+		var retval = new Antlr3AstNode("exclusiveOrExpression");
 		
 		retval.Start = (IToken)input.LT(1);
-		int conditionalAndExpression_StartIndex = input.Index;
+		int exclusiveOrExpression_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken string_literal450 = default(IToken);
-		Antlr3AstNode inclusiveOrExpression449 = default(Antlr3AstNode);
-		Antlr3AstNode inclusiveOrExpression451 = default(Antlr3AstNode);
+		IToken char_literal451 = default(IToken);
+		Antlr3AstNode andExpression450 = default(Antlr3AstNode);
+		Antlr3AstNode andExpression452 = default(Antlr3AstNode);
 
-		object string_literal450_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "conditionalAndExpression");
-		DebugLocation(1018, 4);
+		object char_literal451_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "exclusiveOrExpression");
+		DebugLocation(1021, 4);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 80)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 82)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1019:5: ( inclusiveOrExpression ( '&&' inclusiveOrExpression )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1022:5: ( andExpression ( '^' andExpression )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1019:9: inclusiveOrExpression ( '&&' inclusiveOrExpression )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1022:9: andExpression ( '^' andExpression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1019, 9);
-			PushFollow(Follow._inclusiveOrExpression_in_conditionalAndExpression5884);
-			inclusiveOrExpression449=inclusiveOrExpression();
+			DebugLocation(1022, 9);
+			PushFollow(Follow._andExpression_in_exclusiveOrExpression5855);
+			andExpression450=andExpression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, inclusiveOrExpression449.Tree, inclusiveOrExpression449, "inclusiveOrExpression449", retval);
-			DebugLocation(1020, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1020:9: ( '&&' inclusiveOrExpression )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, andExpression450.Tree, andExpression450, "andExpression450", retval);
+			DebugLocation(1023, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1023:9: ( '^' andExpression )*
 			try { DebugEnterSubRule(128);
 			while (true)
 			{
@@ -16704,7 +16825,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(128, false);
 				int LA128_1 = input.LA(1);
 
-				if ((LA128_1==AMPAMP))
+				if ((LA128_1==CARET))
 				{
 					alt128 = 1;
 				}
@@ -16715,20 +16836,20 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1020:10: '&&' inclusiveOrExpression
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1023:10: '^' andExpression
 					{
-					DebugLocation(1020, 10);
-					string_literal450=(IToken)Match(input,AMPAMP,Follow._AMPAMP_in_conditionalAndExpression5895); if (state.failed) return retval;
+					DebugLocation(1023, 10);
+					char_literal451=(IToken)Match(input,CARET,Follow._CARET_in_exclusiveOrExpression5866); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					string_literal450_tree = (object)adaptor.Create(string_literal450, "string_literal450", retval);
-					adaptor.AddChild(root_0, string_literal450_tree);
+					char_literal451_tree = (object)adaptor.Create(char_literal451, "char_literal451", retval);
+					adaptor.AddChild(root_0, char_literal451_tree);
 					}
-					DebugLocation(1020, 15);
-					PushFollow(Follow._inclusiveOrExpression_in_conditionalAndExpression5897);
-					inclusiveOrExpression451=inclusiveOrExpression();
+					DebugLocation(1023, 14);
+					PushFollow(Follow._andExpression_in_exclusiveOrExpression5868);
+					andExpression452=andExpression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, inclusiveOrExpression451.Tree, inclusiveOrExpression451, "inclusiveOrExpression451", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, andExpression452.Tree, andExpression452, "andExpression452", retval);
 
 					}
 					break;
@@ -16762,60 +16883,60 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("conditionalAndExpression", 80);
-			LeaveRule("conditionalAndExpression", 80);
-			LeaveRule_conditionalAndExpression();
-			if (state.backtracking > 0) { Memoize(input, 80, conditionalAndExpression_StartIndex); }
+			TraceOut("exclusiveOrExpression", 82);
+			LeaveRule("exclusiveOrExpression", 82);
+			LeaveRule_exclusiveOrExpression();
+			if (state.backtracking > 0) { Memoize(input, 82, exclusiveOrExpression_StartIndex); }
 
 		}
-		DebugLocation(1022, 4);
-		} finally { DebugExitRule(GrammarFileName, "conditionalAndExpression"); }
+		DebugLocation(1025, 4);
+		} finally { DebugExitRule(GrammarFileName, "exclusiveOrExpression"); }
 		return retval;
 
 	}
-	// $ANTLR end "conditionalAndExpression"
+	// $ANTLR end "exclusiveOrExpression"
 
-	partial void EnterRule_inclusiveOrExpression();
-	partial void LeaveRule_inclusiveOrExpression();
-	// $ANTLR start "inclusiveOrExpression"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1024:1: inclusiveOrExpression : exclusiveOrExpression ( '|' exclusiveOrExpression )* ;
-	[GrammarRule("inclusiveOrExpression")]
-	private Antlr3AstNode inclusiveOrExpression()
+	partial void EnterRule_andExpression();
+	partial void LeaveRule_andExpression();
+	// $ANTLR start "andExpression"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1027:1: andExpression : equalityExpression ( '&' equalityExpression )* ;
+	[GrammarRule("andExpression")]
+	private Antlr3AstNode andExpression()
 	{
-		EnterRule_inclusiveOrExpression();
-		EnterRule("inclusiveOrExpression", 81);
-		var retval = new Antlr3AstNode("inclusiveOrExpression");
+		EnterRule_andExpression();
+		EnterRule("andExpression", 83);
+		var retval = new Antlr3AstNode("andExpression");
 		
 		retval.Start = (IToken)input.LT(1);
-		int inclusiveOrExpression_StartIndex = input.Index;
+		int andExpression_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal453 = default(IToken);
-		Antlr3AstNode exclusiveOrExpression452 = default(Antlr3AstNode);
-		Antlr3AstNode exclusiveOrExpression454 = default(Antlr3AstNode);
+		IToken char_literal454 = default(IToken);
+		Antlr3AstNode equalityExpression453 = default(Antlr3AstNode);
+		Antlr3AstNode equalityExpression455 = default(Antlr3AstNode);
 
-		object char_literal453_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "inclusiveOrExpression");
-		DebugLocation(1024, 4);
+		object char_literal454_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "andExpression");
+		DebugLocation(1027, 4);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 81)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 83)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1025:5: ( exclusiveOrExpression ( '|' exclusiveOrExpression )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1028:5: ( equalityExpression ( '&' equalityExpression )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1025:9: exclusiveOrExpression ( '|' exclusiveOrExpression )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1028:9: equalityExpression ( '&' equalityExpression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1025, 9);
-			PushFollow(Follow._exclusiveOrExpression_in_inclusiveOrExpression5927);
-			exclusiveOrExpression452=exclusiveOrExpression();
+			DebugLocation(1028, 9);
+			PushFollow(Follow._equalityExpression_in_andExpression5898);
+			equalityExpression453=equalityExpression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, exclusiveOrExpression452.Tree, exclusiveOrExpression452, "exclusiveOrExpression452", retval);
-			DebugLocation(1026, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1026:9: ( '|' exclusiveOrExpression )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, equalityExpression453.Tree, equalityExpression453, "equalityExpression453", retval);
+			DebugLocation(1029, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1029:9: ( '&' equalityExpression )*
 			try { DebugEnterSubRule(129);
 			while (true)
 			{
@@ -16823,7 +16944,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(129, false);
 				int LA129_1 = input.LA(1);
 
-				if ((LA129_1==BAR))
+				if ((LA129_1==AMP))
 				{
 					alt129 = 1;
 				}
@@ -16834,20 +16955,20 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1026:10: '|' exclusiveOrExpression
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1029:10: '&' equalityExpression
 					{
-					DebugLocation(1026, 10);
-					char_literal453=(IToken)Match(input,BAR,Follow._BAR_in_inclusiveOrExpression5938); if (state.failed) return retval;
+					DebugLocation(1029, 10);
+					char_literal454=(IToken)Match(input,AMP,Follow._AMP_in_andExpression5909); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal453_tree = (object)adaptor.Create(char_literal453, "char_literal453", retval);
-					adaptor.AddChild(root_0, char_literal453_tree);
+					char_literal454_tree = (object)adaptor.Create(char_literal454, "char_literal454", retval);
+					adaptor.AddChild(root_0, char_literal454_tree);
 					}
-					DebugLocation(1026, 14);
-					PushFollow(Follow._exclusiveOrExpression_in_inclusiveOrExpression5940);
-					exclusiveOrExpression454=exclusiveOrExpression();
+					DebugLocation(1029, 14);
+					PushFollow(Follow._equalityExpression_in_andExpression5911);
+					equalityExpression455=equalityExpression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, exclusiveOrExpression454.Tree, exclusiveOrExpression454, "exclusiveOrExpression454", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, equalityExpression455.Tree, equalityExpression455, "equalityExpression455", retval);
 
 					}
 					break;
@@ -16881,60 +17002,60 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("inclusiveOrExpression", 81);
-			LeaveRule("inclusiveOrExpression", 81);
-			LeaveRule_inclusiveOrExpression();
-			if (state.backtracking > 0) { Memoize(input, 81, inclusiveOrExpression_StartIndex); }
+			TraceOut("andExpression", 83);
+			LeaveRule("andExpression", 83);
+			LeaveRule_andExpression();
+			if (state.backtracking > 0) { Memoize(input, 83, andExpression_StartIndex); }
 
 		}
-		DebugLocation(1028, 4);
-		} finally { DebugExitRule(GrammarFileName, "inclusiveOrExpression"); }
+		DebugLocation(1031, 4);
+		} finally { DebugExitRule(GrammarFileName, "andExpression"); }
 		return retval;
 
 	}
-	// $ANTLR end "inclusiveOrExpression"
+	// $ANTLR end "andExpression"
 
-	partial void EnterRule_exclusiveOrExpression();
-	partial void LeaveRule_exclusiveOrExpression();
-	// $ANTLR start "exclusiveOrExpression"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1030:1: exclusiveOrExpression : andExpression ( '^' andExpression )* ;
-	[GrammarRule("exclusiveOrExpression")]
-	private Antlr3AstNode exclusiveOrExpression()
+	partial void EnterRule_equalityExpression();
+	partial void LeaveRule_equalityExpression();
+	// $ANTLR start "equalityExpression"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1033:1: equalityExpression : instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* ;
+	[GrammarRule("equalityExpression")]
+	private Antlr3AstNode equalityExpression()
 	{
-		EnterRule_exclusiveOrExpression();
-		EnterRule("exclusiveOrExpression", 82);
-		var retval = new Antlr3AstNode("exclusiveOrExpression");
+		EnterRule_equalityExpression();
+		EnterRule("equalityExpression", 84);
+		var retval = new Antlr3AstNode("equalityExpression");
 		
 		retval.Start = (IToken)input.LT(1);
-		int exclusiveOrExpression_StartIndex = input.Index;
+		int equalityExpression_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal456 = default(IToken);
-		Antlr3AstNode andExpression455 = default(Antlr3AstNode);
-		Antlr3AstNode andExpression457 = default(Antlr3AstNode);
+		IToken set457 = default(IToken);
+		Antlr3AstNode instanceOfExpression456 = default(Antlr3AstNode);
+		Antlr3AstNode instanceOfExpression458 = default(Antlr3AstNode);
 
-		object char_literal456_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "exclusiveOrExpression");
-		DebugLocation(1030, 4);
+		object set457_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "equalityExpression");
+		DebugLocation(1033, 4);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 82)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 84)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1031:5: ( andExpression ( '^' andExpression )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1034:5: ( instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1031:9: andExpression ( '^' andExpression )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1034:9: instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1031, 9);
-			PushFollow(Follow._andExpression_in_exclusiveOrExpression5970);
-			andExpression455=andExpression();
+			DebugLocation(1034, 9);
+			PushFollow(Follow._instanceOfExpression_in_equalityExpression5941);
+			instanceOfExpression456=instanceOfExpression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, andExpression455.Tree, andExpression455, "andExpression455", retval);
-			DebugLocation(1032, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1032:9: ( '^' andExpression )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, instanceOfExpression456.Tree, instanceOfExpression456, "instanceOfExpression456", retval);
+			DebugLocation(1035, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1035:9: ( ( '==' | '!=' ) instanceOfExpression )*
 			try { DebugEnterSubRule(130);
 			while (true)
 			{
@@ -16942,7 +17063,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(130, false);
 				int LA130_1 = input.LA(1);
 
-				if ((LA130_1==CARET))
+				if ((LA130_1==BANGEQ||LA130_1==EQEQ))
 				{
 					alt130 = 1;
 				}
@@ -16953,20 +17074,31 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1032:10: '^' andExpression
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1036:13: ( '==' | '!=' ) instanceOfExpression
 					{
-					DebugLocation(1032, 10);
-					char_literal456=(IToken)Match(input,CARET,Follow._CARET_in_exclusiveOrExpression5981); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal456_tree = (object)adaptor.Create(char_literal456, "char_literal456", retval);
-					adaptor.AddChild(root_0, char_literal456_tree);
+					DebugLocation(1036, 13);
+
+					set457=(IToken)input.LT(1);
+					if (input.LA(1)==BANGEQ||input.LA(1)==EQEQ)
+					{
+						input.Consume();
+						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set457, "set457", retval));
+						state.errorRecovery=false;state.failed=false;
 					}
-					DebugLocation(1032, 14);
-					PushFollow(Follow._andExpression_in_exclusiveOrExpression5983);
-					andExpression457=andExpression();
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return retval;}
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(1039, 13);
+					PushFollow(Follow._instanceOfExpression_in_equalityExpression6018);
+					instanceOfExpression458=instanceOfExpression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, andExpression457.Tree, andExpression457, "andExpression457", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, instanceOfExpression458.Tree, instanceOfExpression458, "instanceOfExpression458", retval);
 
 					}
 					break;
@@ -17000,104 +17132,93 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("exclusiveOrExpression", 82);
-			LeaveRule("exclusiveOrExpression", 82);
-			LeaveRule_exclusiveOrExpression();
-			if (state.backtracking > 0) { Memoize(input, 82, exclusiveOrExpression_StartIndex); }
+			TraceOut("equalityExpression", 84);
+			LeaveRule("equalityExpression", 84);
+			LeaveRule_equalityExpression();
+			if (state.backtracking > 0) { Memoize(input, 84, equalityExpression_StartIndex); }
 
 		}
-		DebugLocation(1034, 4);
-		} finally { DebugExitRule(GrammarFileName, "exclusiveOrExpression"); }
+		DebugLocation(1041, 4);
+		} finally { DebugExitRule(GrammarFileName, "equalityExpression"); }
 		return retval;
 
 	}
-	// $ANTLR end "exclusiveOrExpression"
+	// $ANTLR end "equalityExpression"
 
-	partial void EnterRule_andExpression();
-	partial void LeaveRule_andExpression();
-	// $ANTLR start "andExpression"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1036:1: andExpression : equalityExpression ( '&' equalityExpression )* ;
-	[GrammarRule("andExpression")]
-	private Antlr3AstNode andExpression()
+	partial void EnterRule_instanceOfExpression();
+	partial void LeaveRule_instanceOfExpression();
+	// $ANTLR start "instanceOfExpression"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1043:1: instanceOfExpression : relationalExpression ( 'instanceof' type )? ;
+	[GrammarRule("instanceOfExpression")]
+	private Antlr3AstNode instanceOfExpression()
 	{
-		EnterRule_andExpression();
-		EnterRule("andExpression", 83);
-		var retval = new Antlr3AstNode("andExpression");
+		EnterRule_instanceOfExpression();
+		EnterRule("instanceOfExpression", 85);
+		var retval = new Antlr3AstNode("instanceOfExpression");
 		
 		retval.Start = (IToken)input.LT(1);
-		int andExpression_StartIndex = input.Index;
+		int instanceOfExpression_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal459 = default(IToken);
-		Antlr3AstNode equalityExpression458 = default(Antlr3AstNode);
-		Antlr3AstNode equalityExpression460 = default(Antlr3AstNode);
+		IToken string_literal460 = default(IToken);
+		Antlr3AstNode relationalExpression459 = default(Antlr3AstNode);
+		Antlr3AstNode type461 = default(Antlr3AstNode);
 
-		object char_literal459_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "andExpression");
-		DebugLocation(1036, 4);
+		object string_literal460_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "instanceOfExpression");
+		DebugLocation(1043, 4);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 83)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 85)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1037:5: ( equalityExpression ( '&' equalityExpression )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1044:5: ( relationalExpression ( 'instanceof' type )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1037:9: equalityExpression ( '&' equalityExpression )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1044:9: relationalExpression ( 'instanceof' type )?
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1037, 9);
-			PushFollow(Follow._equalityExpression_in_andExpression6013);
-			equalityExpression458=equalityExpression();
+			DebugLocation(1044, 9);
+			PushFollow(Follow._relationalExpression_in_instanceOfExpression6048);
+			relationalExpression459=relationalExpression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, equalityExpression458.Tree, equalityExpression458, "equalityExpression458", retval);
-			DebugLocation(1038, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1038:9: ( '&' equalityExpression )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, relationalExpression459.Tree, relationalExpression459, "relationalExpression459", retval);
+			DebugLocation(1045, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1045:9: ( 'instanceof' type )?
+			int alt131=2;
 			try { DebugEnterSubRule(131);
-			while (true)
+			try { DebugEnterDecision(131, false);
+			int LA131_1 = input.LA(1);
+
+			if ((LA131_1==INSTANCEOF))
 			{
-				int alt131=2;
-				try { DebugEnterDecision(131, false);
-				int LA131_1 = input.LA(1);
-
-				if ((LA131_1==AMP))
-				{
-					alt131 = 1;
-				}
-
-
-				} finally { DebugExitDecision(131); }
-				switch ( alt131 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1038:10: '&' equalityExpression
-					{
-					DebugLocation(1038, 10);
-					char_literal459=(IToken)Match(input,AMP,Follow._AMP_in_andExpression6024); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal459_tree = (object)adaptor.Create(char_literal459, "char_literal459", retval);
-					adaptor.AddChild(root_0, char_literal459_tree);
-					}
-					DebugLocation(1038, 14);
-					PushFollow(Follow._equalityExpression_in_andExpression6026);
-					equalityExpression460=equalityExpression();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, equalityExpression460.Tree, equalityExpression460, "equalityExpression460", retval);
-
-					}
-					break;
-
-				default:
-					goto loop131;
-				}
+				alt131 = 1;
 			}
+			} finally { DebugExitDecision(131); }
+			switch (alt131)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1045:10: 'instanceof' type
+				{
+				DebugLocation(1045, 10);
+				string_literal460=(IToken)Match(input,INSTANCEOF,Follow._INSTANCEOF_in_instanceOfExpression6059); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal460_tree = (object)adaptor.Create(string_literal460, "string_literal460", retval);
+				adaptor.AddChild(root_0, string_literal460_tree);
+				}
+				DebugLocation(1045, 23);
+				PushFollow(Follow._type_in_instanceOfExpression6061);
+				type461=type();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, type461.Tree, type461, "type461", retval);
 
-			loop131:
-				;
+				}
+				break;
 
+			}
 			} finally { DebugExitSubRule(131); }
 
 
@@ -17119,60 +17240,59 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("andExpression", 83);
-			LeaveRule("andExpression", 83);
-			LeaveRule_andExpression();
-			if (state.backtracking > 0) { Memoize(input, 83, andExpression_StartIndex); }
+			TraceOut("instanceOfExpression", 85);
+			LeaveRule("instanceOfExpression", 85);
+			LeaveRule_instanceOfExpression();
+			if (state.backtracking > 0) { Memoize(input, 85, instanceOfExpression_StartIndex); }
 
 		}
-		DebugLocation(1040, 4);
-		} finally { DebugExitRule(GrammarFileName, "andExpression"); }
+		DebugLocation(1047, 4);
+		} finally { DebugExitRule(GrammarFileName, "instanceOfExpression"); }
 		return retval;
 
 	}
-	// $ANTLR end "andExpression"
+	// $ANTLR end "instanceOfExpression"
 
-	partial void EnterRule_equalityExpression();
-	partial void LeaveRule_equalityExpression();
-	// $ANTLR start "equalityExpression"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1042:1: equalityExpression : instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* ;
-	[GrammarRule("equalityExpression")]
-	private Antlr3AstNode equalityExpression()
+	partial void EnterRule_relationalExpression();
+	partial void LeaveRule_relationalExpression();
+	// $ANTLR start "relationalExpression"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1049:1: relationalExpression : shiftExpression ( relationalOp shiftExpression )* ;
+	[GrammarRule("relationalExpression")]
+	private Antlr3AstNode relationalExpression()
 	{
-		EnterRule_equalityExpression();
-		EnterRule("equalityExpression", 84);
-		var retval = new Antlr3AstNode("equalityExpression");
+		EnterRule_relationalExpression();
+		EnterRule("relationalExpression", 86);
+		var retval = new Antlr3AstNode("relationalExpression");
 		
 		retval.Start = (IToken)input.LT(1);
-		int equalityExpression_StartIndex = input.Index;
+		int relationalExpression_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken set462 = default(IToken);
-		Antlr3AstNode instanceOfExpression461 = default(Antlr3AstNode);
-		Antlr3AstNode instanceOfExpression463 = default(Antlr3AstNode);
+		Antlr3AstNode shiftExpression462 = default(Antlr3AstNode);
+		Antlr3AstNode relationalOp463 = default(Antlr3AstNode);
+		Antlr3AstNode shiftExpression464 = default(Antlr3AstNode);
 
-		object set462_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "equalityExpression");
-		DebugLocation(1042, 4);
+		try { DebugEnterRule(GrammarFileName, "relationalExpression");
+		DebugLocation(1049, 4);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 84)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 86)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1043:5: ( instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1050:5: ( shiftExpression ( relationalOp shiftExpression )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1043:9: instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1050:9: shiftExpression ( relationalOp shiftExpression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1043, 9);
-			PushFollow(Follow._instanceOfExpression_in_equalityExpression6056);
-			instanceOfExpression461=instanceOfExpression();
+			DebugLocation(1050, 9);
+			PushFollow(Follow._shiftExpression_in_relationalExpression6091);
+			shiftExpression462=shiftExpression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, instanceOfExpression461.Tree, instanceOfExpression461, "instanceOfExpression461", retval);
-			DebugLocation(1044, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1044:9: ( ( '==' | '!=' ) instanceOfExpression )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, shiftExpression462.Tree, shiftExpression462, "shiftExpression462", retval);
+			DebugLocation(1051, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1051:9: ( relationalOp shiftExpression )*
 			try { DebugEnterSubRule(132);
 			while (true)
 			{
@@ -17180,9 +17300,27 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(132, false);
 				int LA132_1 = input.LA(1);
 
-				if ((LA132_1==BANGEQ||LA132_1==EQEQ))
+				if ((LA132_1==LT))
 				{
-					alt132 = 1;
+					int LA132_2 = input.LA(2);
+
+					if ((LA132_2==BANG||LA132_2==BOOLEAN||LA132_2==BYTE||(LA132_2>=CHAR && LA132_2<=CHARLITERAL)||(LA132_2>=DOUBLE && LA132_2<=DOUBLELITERAL)||LA132_2==EQ||LA132_2==FALSE||(LA132_2>=FLOAT && LA132_2<=FLOATLITERAL)||LA132_2==IDENTIFIER||LA132_2==INT||LA132_2==INTLITERAL||(LA132_2>=LONG && LA132_2<=LPAREN)||(LA132_2>=NEW && LA132_2<=NULL)||LA132_2==PLUS||LA132_2==PLUSPLUS||LA132_2==SHORT||(LA132_2>=STRINGLITERAL && LA132_2<=SUB)||(LA132_2>=SUBSUB && LA132_2<=SUPER)||LA132_2==THIS||LA132_2==TILDE||LA132_2==TRUE||LA132_2==VOID))
+					{
+						alt132 = 1;
+					}
+
+
+				}
+				else if ((LA132_1==GT))
+				{
+					int LA132_2 = input.LA(2);
+
+					if ((LA132_2==BANG||LA132_2==BOOLEAN||LA132_2==BYTE||(LA132_2>=CHAR && LA132_2<=CHARLITERAL)||(LA132_2>=DOUBLE && LA132_2<=DOUBLELITERAL)||LA132_2==EQ||LA132_2==FALSE||(LA132_2>=FLOAT && LA132_2<=FLOATLITERAL)||LA132_2==IDENTIFIER||LA132_2==INT||LA132_2==INTLITERAL||(LA132_2>=LONG && LA132_2<=LPAREN)||(LA132_2>=NEW && LA132_2<=NULL)||LA132_2==PLUS||LA132_2==PLUSPLUS||LA132_2==SHORT||(LA132_2>=STRINGLITERAL && LA132_2<=SUB)||(LA132_2>=SUBSUB && LA132_2<=SUPER)||LA132_2==THIS||LA132_2==TILDE||LA132_2==TRUE||LA132_2==VOID))
+					{
+						alt132 = 1;
+					}
+
+
 				}
 
 
@@ -17191,31 +17329,20 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1045:13: ( '==' | '!=' ) instanceOfExpression
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1051:10: relationalOp shiftExpression
 					{
-					DebugLocation(1045, 13);
-
-					set462=(IToken)input.LT(1);
-					if (input.LA(1)==BANGEQ||input.LA(1)==EQEQ)
-					{
-						input.Consume();
-						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set462, "set462", retval));
-						state.errorRecovery=false;state.failed=false;
-					}
-					else
-					{
-						if (state.backtracking>0) {state.failed=true; return retval;}
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						DebugRecognitionException(mse);
-						throw mse;
-					}
-
-					DebugLocation(1048, 13);
-					PushFollow(Follow._instanceOfExpression_in_equalityExpression6133);
-					instanceOfExpression463=instanceOfExpression();
+					DebugLocation(1051, 10);
+					PushFollow(Follow._relationalOp_in_relationalExpression6102);
+					relationalOp463=relationalOp();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, instanceOfExpression463.Tree, instanceOfExpression463, "instanceOfExpression463", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, relationalOp463.Tree, relationalOp463, "relationalOp463", retval);
+					DebugLocation(1051, 23);
+					PushFollow(Follow._shiftExpression_in_relationalExpression6104);
+					shiftExpression464=shiftExpression();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, shiftExpression464.Tree, shiftExpression464, "shiftExpression464", retval);
 
 					}
 					break;
@@ -17249,98 +17376,183 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("equalityExpression", 84);
-			LeaveRule("equalityExpression", 84);
-			LeaveRule_equalityExpression();
-			if (state.backtracking > 0) { Memoize(input, 84, equalityExpression_StartIndex); }
+			TraceOut("relationalExpression", 86);
+			LeaveRule("relationalExpression", 86);
+			LeaveRule_relationalExpression();
+			if (state.backtracking > 0) { Memoize(input, 86, relationalExpression_StartIndex); }
 
 		}
-		DebugLocation(1050, 4);
-		} finally { DebugExitRule(GrammarFileName, "equalityExpression"); }
+		DebugLocation(1053, 4);
+		} finally { DebugExitRule(GrammarFileName, "relationalExpression"); }
 		return retval;
 
 	}
-	// $ANTLR end "equalityExpression"
+	// $ANTLR end "relationalExpression"
 
-	partial void EnterRule_instanceOfExpression();
-	partial void LeaveRule_instanceOfExpression();
-	// $ANTLR start "instanceOfExpression"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1052:1: instanceOfExpression : relationalExpression ( 'instanceof' type )? ;
-	[GrammarRule("instanceOfExpression")]
-	private Antlr3AstNode instanceOfExpression()
+	partial void EnterRule_relationalOp();
+	partial void LeaveRule_relationalOp();
+	// $ANTLR start "relationalOp"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1055:1: relationalOp : ( '<' '=' | '>' '=' | '<' | '>' );
+	[GrammarRule("relationalOp")]
+	private Antlr3AstNode relationalOp()
 	{
-		EnterRule_instanceOfExpression();
-		EnterRule("instanceOfExpression", 85);
-		var retval = new Antlr3AstNode("instanceOfExpression");
+		EnterRule_relationalOp();
+		EnterRule("relationalOp", 87);
+		var retval = new Antlr3AstNode("relationalOp");
 		
 		retval.Start = (IToken)input.LT(1);
-		int instanceOfExpression_StartIndex = input.Index;
+		int relationalOp_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken string_literal465 = default(IToken);
-		Antlr3AstNode relationalExpression464 = default(Antlr3AstNode);
-		Antlr3AstNode type466 = default(Antlr3AstNode);
+		IToken char_literal465 = default(IToken);
+		IToken char_literal466 = default(IToken);
+		IToken char_literal467 = default(IToken);
+		IToken char_literal468 = default(IToken);
+		IToken char_literal469 = default(IToken);
+		IToken char_literal470 = default(IToken);
 
-		object string_literal465_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "instanceOfExpression");
-		DebugLocation(1052, 4);
+		object char_literal465_tree = default(object);
+		object char_literal466_tree = default(object);
+		object char_literal467_tree = default(object);
+		object char_literal468_tree = default(object);
+		object char_literal469_tree = default(object);
+		object char_literal470_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "relationalOp");
+		DebugLocation(1055, 4);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 85)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 87)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1053:5: ( relationalExpression ( 'instanceof' type )? )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1053:9: relationalExpression ( 'instanceof' type )?
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(1053, 9);
-			PushFollow(Follow._relationalExpression_in_instanceOfExpression6163);
-			relationalExpression464=relationalExpression();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, relationalExpression464.Tree, relationalExpression464, "relationalExpression464", retval);
-			DebugLocation(1054, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1054:9: ( 'instanceof' type )?
-			int alt133=2;
-			try { DebugEnterSubRule(133);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1056:5: ( '<' '=' | '>' '=' | '<' | '>' )
+			int alt133=4;
 			try { DebugEnterDecision(133, false);
 			int LA133_1 = input.LA(1);
 
-			if ((LA133_1==INSTANCEOF))
+			if ((LA133_1==LT))
 			{
-				alt133 = 1;
+				int LA133_2 = input.LA(2);
+
+				if ((LA133_2==EQ))
+				{
+					alt133 = 1;
+				}
+				else if ((LA133_2==BANG||LA133_2==BOOLEAN||LA133_2==BYTE||(LA133_2>=CHAR && LA133_2<=CHARLITERAL)||(LA133_2>=DOUBLE && LA133_2<=DOUBLELITERAL)||LA133_2==FALSE||(LA133_2>=FLOAT && LA133_2<=FLOATLITERAL)||LA133_2==IDENTIFIER||LA133_2==INT||LA133_2==INTLITERAL||(LA133_2>=LONG && LA133_2<=LPAREN)||(LA133_2>=NEW && LA133_2<=NULL)||LA133_2==PLUS||LA133_2==PLUSPLUS||LA133_2==SHORT||(LA133_2>=STRINGLITERAL && LA133_2<=SUB)||(LA133_2>=SUBSUB && LA133_2<=SUPER)||LA133_2==THIS||LA133_2==TILDE||LA133_2==TRUE||LA133_2==VOID))
+				{
+					alt133 = 3;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 133, 1, input, 2);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+			else if ((LA133_1==GT))
+			{
+				int LA133_2 = input.LA(2);
+
+				if ((LA133_2==EQ))
+				{
+					alt133 = 2;
+				}
+				else if ((LA133_2==BANG||LA133_2==BOOLEAN||LA133_2==BYTE||(LA133_2>=CHAR && LA133_2<=CHARLITERAL)||(LA133_2>=DOUBLE && LA133_2<=DOUBLELITERAL)||LA133_2==FALSE||(LA133_2>=FLOAT && LA133_2<=FLOATLITERAL)||LA133_2==IDENTIFIER||LA133_2==INT||LA133_2==INTLITERAL||(LA133_2>=LONG && LA133_2<=LPAREN)||(LA133_2>=NEW && LA133_2<=NULL)||LA133_2==PLUS||LA133_2==PLUSPLUS||LA133_2==SHORT||(LA133_2>=STRINGLITERAL && LA133_2<=SUB)||(LA133_2>=SUBSUB && LA133_2<=SUPER)||LA133_2==THIS||LA133_2==TILDE||LA133_2==TRUE||LA133_2==VOID))
+				{
+					alt133 = 4;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 133, 2, input, 2);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return retval;}
+				NoViableAltException nvae = new NoViableAltException("", 133, 0, input, 1);
+				DebugRecognitionException(nvae);
+				throw nvae;
 			}
 			} finally { DebugExitDecision(133); }
 			switch (alt133)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1054:10: 'instanceof' type
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1056:10: '<' '='
 				{
-				DebugLocation(1054, 10);
-				string_literal465=(IToken)Match(input,INSTANCEOF,Follow._INSTANCEOF_in_instanceOfExpression6174); if (state.failed) return retval;
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(1056, 10);
+				char_literal465=(IToken)Match(input,LT,Follow._LT_in_relationalOp6135); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal465_tree = (object)adaptor.Create(string_literal465, "string_literal465", retval);
-				adaptor.AddChild(root_0, string_literal465_tree);
+				char_literal465_tree = (object)adaptor.Create(char_literal465, "char_literal465", retval);
+				adaptor.AddChild(root_0, char_literal465_tree);
 				}
-				DebugLocation(1054, 23);
-				PushFollow(Follow._type_in_instanceOfExpression6176);
-				type466=type();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, type466.Tree, type466, "type466", retval);
+				DebugLocation(1056, 14);
+				char_literal466=(IToken)Match(input,EQ,Follow._EQ_in_relationalOp6137); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal466_tree = (object)adaptor.Create(char_literal466, "char_literal466", retval);
+				adaptor.AddChild(root_0, char_literal466_tree);
+				}
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1057:10: '>' '='
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(1057, 10);
+				char_literal467=(IToken)Match(input,GT,Follow._GT_in_relationalOp6148); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal467_tree = (object)adaptor.Create(char_literal467, "char_literal467", retval);
+				adaptor.AddChild(root_0, char_literal467_tree);
+				}
+				DebugLocation(1057, 14);
+				char_literal468=(IToken)Match(input,EQ,Follow._EQ_in_relationalOp6150); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal468_tree = (object)adaptor.Create(char_literal468, "char_literal468", retval);
+				adaptor.AddChild(root_0, char_literal468_tree);
+				}
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1058:9: '<'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(1058, 9);
+				char_literal469=(IToken)Match(input,LT,Follow._LT_in_relationalOp6160); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal469_tree = (object)adaptor.Create(char_literal469, "char_literal469", retval);
+				adaptor.AddChild(root_0, char_literal469_tree);
+				}
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1059:9: '>'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(1059, 9);
+				char_literal470=(IToken)Match(input,GT,Follow._GT_in_relationalOp6170); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal470_tree = (object)adaptor.Create(char_literal470, "char_literal470", retval);
+				adaptor.AddChild(root_0, char_literal470_tree);
+				}
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(133); }
-
-
-			}
-
 			retval.Stop = (IToken)input.LT(-1);
 
 			if (state.backtracking == 0) {
@@ -17357,59 +17569,59 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("instanceOfExpression", 85);
-			LeaveRule("instanceOfExpression", 85);
-			LeaveRule_instanceOfExpression();
-			if (state.backtracking > 0) { Memoize(input, 85, instanceOfExpression_StartIndex); }
+			TraceOut("relationalOp", 87);
+			LeaveRule("relationalOp", 87);
+			LeaveRule_relationalOp();
+			if (state.backtracking > 0) { Memoize(input, 87, relationalOp_StartIndex); }
 
 		}
-		DebugLocation(1056, 4);
-		} finally { DebugExitRule(GrammarFileName, "instanceOfExpression"); }
+		DebugLocation(1060, 4);
+		} finally { DebugExitRule(GrammarFileName, "relationalOp"); }
 		return retval;
 
 	}
-	// $ANTLR end "instanceOfExpression"
+	// $ANTLR end "relationalOp"
 
-	partial void EnterRule_relationalExpression();
-	partial void LeaveRule_relationalExpression();
-	// $ANTLR start "relationalExpression"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1058:1: relationalExpression : shiftExpression ( relationalOp shiftExpression )* ;
-	[GrammarRule("relationalExpression")]
-	private Antlr3AstNode relationalExpression()
+	partial void EnterRule_shiftExpression();
+	partial void LeaveRule_shiftExpression();
+	// $ANTLR start "shiftExpression"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1062:1: shiftExpression : additiveExpression ( shiftOp additiveExpression )* ;
+	[GrammarRule("shiftExpression")]
+	private Antlr3AstNode shiftExpression()
 	{
-		EnterRule_relationalExpression();
-		EnterRule("relationalExpression", 86);
-		var retval = new Antlr3AstNode("relationalExpression");
+		EnterRule_shiftExpression();
+		EnterRule("shiftExpression", 88);
+		var retval = new Antlr3AstNode("shiftExpression");
 		
 		retval.Start = (IToken)input.LT(1);
-		int relationalExpression_StartIndex = input.Index;
+		int shiftExpression_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		Antlr3AstNode shiftExpression467 = default(Antlr3AstNode);
-		Antlr3AstNode relationalOp468 = default(Antlr3AstNode);
-		Antlr3AstNode shiftExpression469 = default(Antlr3AstNode);
+		Antlr3AstNode additiveExpression471 = default(Antlr3AstNode);
+		Antlr3AstNode shiftOp472 = default(Antlr3AstNode);
+		Antlr3AstNode additiveExpression473 = default(Antlr3AstNode);
 
-		try { DebugEnterRule(GrammarFileName, "relationalExpression");
-		DebugLocation(1058, 4);
+		try { DebugEnterRule(GrammarFileName, "shiftExpression");
+		DebugLocation(1062, 4);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 86)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 88)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1059:5: ( shiftExpression ( relationalOp shiftExpression )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1063:5: ( additiveExpression ( shiftOp additiveExpression )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1059:9: shiftExpression ( relationalOp shiftExpression )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1063:9: additiveExpression ( shiftOp additiveExpression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1059, 9);
-			PushFollow(Follow._shiftExpression_in_relationalExpression6206);
-			shiftExpression467=shiftExpression();
+			DebugLocation(1063, 9);
+			PushFollow(Follow._additiveExpression_in_shiftExpression6189);
+			additiveExpression471=additiveExpression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, shiftExpression467.Tree, shiftExpression467, "shiftExpression467", retval);
-			DebugLocation(1060, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1060:9: ( relationalOp shiftExpression )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, additiveExpression471.Tree, additiveExpression471, "additiveExpression471", retval);
+			DebugLocation(1064, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1064:9: ( shiftOp additiveExpression )*
 			try { DebugEnterSubRule(134);
 			while (true)
 			{
@@ -17421,9 +17633,16 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 					int LA134_2 = input.LA(2);
 
-					if ((LA134_2==BANG||LA134_2==BOOLEAN||LA134_2==BYTE||(LA134_2>=CHAR && LA134_2<=CHARLITERAL)||(LA134_2>=DOUBLE && LA134_2<=DOUBLELITERAL)||LA134_2==EQ||LA134_2==FALSE||(LA134_2>=FLOAT && LA134_2<=FLOATLITERAL)||LA134_2==IDENTIFIER||LA134_2==INT||LA134_2==INTLITERAL||(LA134_2>=LONG && LA134_2<=LPAREN)||(LA134_2>=NEW && LA134_2<=NULL)||LA134_2==PLUS||LA134_2==PLUSPLUS||LA134_2==SHORT||(LA134_2>=STRINGLITERAL && LA134_2<=SUB)||(LA134_2>=SUBSUB && LA134_2<=SUPER)||LA134_2==THIS||LA134_2==TILDE||LA134_2==TRUE||LA134_2==VOID))
+					if ((LA134_2==LT))
 					{
-						alt134 = 1;
+						int LA134_3 = input.LA(3);
+
+						if ((LA134_3==BANG||LA134_3==BOOLEAN||LA134_3==BYTE||(LA134_3>=CHAR && LA134_3<=CHARLITERAL)||(LA134_3>=DOUBLE && LA134_3<=DOUBLELITERAL)||LA134_3==FALSE||(LA134_3>=FLOAT && LA134_3<=FLOATLITERAL)||LA134_3==IDENTIFIER||LA134_3==INT||LA134_3==INTLITERAL||(LA134_3>=LONG && LA134_3<=LPAREN)||(LA134_3>=NEW && LA134_3<=NULL)||LA134_3==PLUS||LA134_3==PLUSPLUS||LA134_3==SHORT||(LA134_3>=STRINGLITERAL && LA134_3<=SUB)||(LA134_3>=SUBSUB && LA134_3<=SUPER)||LA134_3==THIS||LA134_3==TILDE||LA134_3==TRUE||LA134_3==VOID))
+						{
+							alt134 = 1;
+						}
+
+
 					}
 
 
@@ -17432,9 +17651,27 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 					int LA134_2 = input.LA(2);
 
-					if ((LA134_2==BANG||LA134_2==BOOLEAN||LA134_2==BYTE||(LA134_2>=CHAR && LA134_2<=CHARLITERAL)||(LA134_2>=DOUBLE && LA134_2<=DOUBLELITERAL)||LA134_2==EQ||LA134_2==FALSE||(LA134_2>=FLOAT && LA134_2<=FLOATLITERAL)||LA134_2==IDENTIFIER||LA134_2==INT||LA134_2==INTLITERAL||(LA134_2>=LONG && LA134_2<=LPAREN)||(LA134_2>=NEW && LA134_2<=NULL)||LA134_2==PLUS||LA134_2==PLUSPLUS||LA134_2==SHORT||(LA134_2>=STRINGLITERAL && LA134_2<=SUB)||(LA134_2>=SUBSUB && LA134_2<=SUPER)||LA134_2==THIS||LA134_2==TILDE||LA134_2==TRUE||LA134_2==VOID))
+					if ((LA134_2==GT))
 					{
-						alt134 = 1;
+						int LA134_3 = input.LA(3);
+
+						if ((LA134_3==GT))
+						{
+							int LA134_4 = input.LA(4);
+
+							if ((LA134_4==BANG||LA134_4==BOOLEAN||LA134_4==BYTE||(LA134_4>=CHAR && LA134_4<=CHARLITERAL)||(LA134_4>=DOUBLE && LA134_4<=DOUBLELITERAL)||LA134_4==FALSE||(LA134_4>=FLOAT && LA134_4<=FLOATLITERAL)||LA134_4==IDENTIFIER||LA134_4==INT||LA134_4==INTLITERAL||(LA134_4>=LONG && LA134_4<=LPAREN)||(LA134_4>=NEW && LA134_4<=NULL)||LA134_4==PLUS||LA134_4==PLUSPLUS||LA134_4==SHORT||(LA134_4>=STRINGLITERAL && LA134_4<=SUB)||(LA134_4>=SUBSUB && LA134_4<=SUPER)||LA134_4==THIS||LA134_4==TILDE||LA134_4==TRUE||LA134_4==VOID))
+							{
+								alt134 = 1;
+							}
+
+
+						}
+						else if ((LA134_3==BANG||LA134_3==BOOLEAN||LA134_3==BYTE||(LA134_3>=CHAR && LA134_3<=CHARLITERAL)||(LA134_3>=DOUBLE && LA134_3<=DOUBLELITERAL)||LA134_3==FALSE||(LA134_3>=FLOAT && LA134_3<=FLOATLITERAL)||LA134_3==IDENTIFIER||LA134_3==INT||LA134_3==INTLITERAL||(LA134_3>=LONG && LA134_3<=LPAREN)||(LA134_3>=NEW && LA134_3<=NULL)||LA134_3==PLUS||LA134_3==PLUSPLUS||LA134_3==SHORT||(LA134_3>=STRINGLITERAL && LA134_3<=SUB)||(LA134_3>=SUBSUB && LA134_3<=SUPER)||LA134_3==THIS||LA134_3==TILDE||LA134_3==TRUE||LA134_3==VOID))
+						{
+							alt134 = 1;
+						}
+
+
 					}
 
 
@@ -17446,20 +17683,20 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1060:10: relationalOp shiftExpression
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1064:10: shiftOp additiveExpression
 					{
-					DebugLocation(1060, 10);
-					PushFollow(Follow._relationalOp_in_relationalExpression6217);
-					relationalOp468=relationalOp();
+					DebugLocation(1064, 10);
+					PushFollow(Follow._shiftOp_in_shiftExpression6200);
+					shiftOp472=shiftOp();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, relationalOp468.Tree, relationalOp468, "relationalOp468", retval);
-					DebugLocation(1060, 23);
-					PushFollow(Follow._shiftExpression_in_relationalExpression6219);
-					shiftExpression469=shiftExpression();
+					if (state.backtracking == 0) adaptor.AddChild(root_0, shiftOp472.Tree, shiftOp472, "shiftOp472", retval);
+					DebugLocation(1064, 18);
+					PushFollow(Follow._additiveExpression_in_shiftExpression6202);
+					additiveExpression473=additiveExpression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, shiftExpression469.Tree, shiftExpression469, "shiftExpression469", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, additiveExpression473.Tree, additiveExpression473, "additiveExpression473", retval);
 
 					}
 					break;
@@ -17493,90 +17730,88 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("relationalExpression", 86);
-			LeaveRule("relationalExpression", 86);
-			LeaveRule_relationalExpression();
-			if (state.backtracking > 0) { Memoize(input, 86, relationalExpression_StartIndex); }
+			TraceOut("shiftExpression", 88);
+			LeaveRule("shiftExpression", 88);
+			LeaveRule_shiftExpression();
+			if (state.backtracking > 0) { Memoize(input, 88, shiftExpression_StartIndex); }
 
 		}
-		DebugLocation(1062, 4);
-		} finally { DebugExitRule(GrammarFileName, "relationalExpression"); }
+		DebugLocation(1066, 4);
+		} finally { DebugExitRule(GrammarFileName, "shiftExpression"); }
 		return retval;
 
 	}
-	// $ANTLR end "relationalExpression"
+	// $ANTLR end "shiftExpression"
 
-	partial void EnterRule_relationalOp();
-	partial void LeaveRule_relationalOp();
-	// $ANTLR start "relationalOp"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1064:1: relationalOp : ( '<' '=' | '>' '=' | '<' | '>' );
-	[GrammarRule("relationalOp")]
-	private Antlr3AstNode relationalOp()
+	partial void EnterRule_shiftOp();
+	partial void LeaveRule_shiftOp();
+	// $ANTLR start "shiftOp"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1068:1: shiftOp : ( '<' '<' | '>' '>' '>' | '>' '>' );
+	[GrammarRule("shiftOp")]
+	private Antlr3AstNode shiftOp()
 	{
-		EnterRule_relationalOp();
-		EnterRule("relationalOp", 87);
-		var retval = new Antlr3AstNode("relationalOp");
+		EnterRule_shiftOp();
+		EnterRule("shiftOp", 89);
+		var retval = new Antlr3AstNode("shiftOp");
 		
 		retval.Start = (IToken)input.LT(1);
-		int relationalOp_StartIndex = input.Index;
+		int shiftOp_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal470 = default(IToken);
-		IToken char_literal471 = default(IToken);
-		IToken char_literal472 = default(IToken);
-		IToken char_literal473 = default(IToken);
 		IToken char_literal474 = default(IToken);
 		IToken char_literal475 = default(IToken);
+		IToken char_literal476 = default(IToken);
+		IToken char_literal477 = default(IToken);
+		IToken char_literal478 = default(IToken);
+		IToken char_literal479 = default(IToken);
+		IToken char_literal480 = default(IToken);
 
-		object char_literal470_tree = default(object);
-		object char_literal471_tree = default(object);
-		object char_literal472_tree = default(object);
-		object char_literal473_tree = default(object);
 		object char_literal474_tree = default(object);
 		object char_literal475_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "relationalOp");
-		DebugLocation(1064, 4);
+		object char_literal476_tree = default(object);
+		object char_literal477_tree = default(object);
+		object char_literal478_tree = default(object);
+		object char_literal479_tree = default(object);
+		object char_literal480_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "shiftOp");
+		DebugLocation(1068, 4);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 87)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 89)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1065:5: ( '<' '=' | '>' '=' | '<' | '>' )
-			int alt135=4;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1069:5: ( '<' '<' | '>' '>' '>' | '>' '>' )
+			int alt135=3;
 			try { DebugEnterDecision(135, false);
 			int LA135_1 = input.LA(1);
 
 			if ((LA135_1==LT))
 			{
-				int LA135_2 = input.LA(2);
-
-				if ((LA135_2==EQ))
-				{
-					alt135 = 1;
-				}
-				else if ((LA135_2==BANG||LA135_2==BOOLEAN||LA135_2==BYTE||(LA135_2>=CHAR && LA135_2<=CHARLITERAL)||(LA135_2>=DOUBLE && LA135_2<=DOUBLELITERAL)||LA135_2==FALSE||(LA135_2>=FLOAT && LA135_2<=FLOATLITERAL)||LA135_2==IDENTIFIER||LA135_2==INT||LA135_2==INTLITERAL||(LA135_2>=LONG && LA135_2<=LPAREN)||(LA135_2>=NEW && LA135_2<=NULL)||LA135_2==PLUS||LA135_2==PLUSPLUS||LA135_2==SHORT||(LA135_2>=STRINGLITERAL && LA135_2<=SUB)||(LA135_2>=SUBSUB && LA135_2<=SUPER)||LA135_2==THIS||LA135_2==TILDE||LA135_2==TRUE||LA135_2==VOID))
-				{
-					alt135 = 3;
-				}
-				else
-				{
-					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 135, 1, input, 2);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
+				alt135 = 1;
 			}
 			else if ((LA135_1==GT))
 			{
 				int LA135_2 = input.LA(2);
 
-				if ((LA135_2==EQ))
+				if ((LA135_2==GT))
 				{
-					alt135 = 2;
-				}
-				else if ((LA135_2==BANG||LA135_2==BOOLEAN||LA135_2==BYTE||(LA135_2>=CHAR && LA135_2<=CHARLITERAL)||(LA135_2>=DOUBLE && LA135_2<=DOUBLELITERAL)||LA135_2==FALSE||(LA135_2>=FLOAT && LA135_2<=FLOATLITERAL)||LA135_2==IDENTIFIER||LA135_2==INT||LA135_2==INTLITERAL||(LA135_2>=LONG && LA135_2<=LPAREN)||(LA135_2>=NEW && LA135_2<=NULL)||LA135_2==PLUS||LA135_2==PLUSPLUS||LA135_2==SHORT||(LA135_2>=STRINGLITERAL && LA135_2<=SUB)||(LA135_2>=SUBSUB && LA135_2<=SUPER)||LA135_2==THIS||LA135_2==TILDE||LA135_2==TRUE||LA135_2==VOID))
-				{
-					alt135 = 4;
+					int LA135_3 = input.LA(3);
+
+					if ((LA135_3==GT))
+					{
+						alt135 = 2;
+					}
+					else if ((LA135_3==BANG||LA135_3==BOOLEAN||LA135_3==BYTE||(LA135_3>=CHAR && LA135_3<=CHARLITERAL)||(LA135_3>=DOUBLE && LA135_3<=DOUBLELITERAL)||LA135_3==FALSE||(LA135_3>=FLOAT && LA135_3<=FLOATLITERAL)||LA135_3==IDENTIFIER||LA135_3==INT||LA135_3==INTLITERAL||(LA135_3>=LONG && LA135_3<=LPAREN)||(LA135_3>=NEW && LA135_3<=NULL)||LA135_3==PLUS||LA135_3==PLUSPLUS||LA135_3==SHORT||(LA135_3>=STRINGLITERAL && LA135_3<=SUB)||(LA135_3>=SUBSUB && LA135_3<=SUPER)||LA135_3==THIS||LA135_3==TILDE||LA135_3==TRUE||LA135_3==VOID))
+					{
+						alt135 = 3;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return retval;}
+						NoViableAltException nvae = new NoViableAltException("", 135, 3, input, 3);
+						DebugRecognitionException(nvae);
+						throw nvae;
+					}
 				}
 				else
 				{
@@ -17598,72 +17833,69 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1065:10: '<' '='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1069:10: '<' '<'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1065, 10);
-				char_literal470=(IToken)Match(input,LT,Follow._LT_in_relationalOp6250); if (state.failed) return retval;
+				DebugLocation(1069, 10);
+				char_literal474=(IToken)Match(input,LT,Follow._LT_in_shiftOp6233); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal470_tree = (object)adaptor.Create(char_literal470, "char_literal470", retval);
-				adaptor.AddChild(root_0, char_literal470_tree);
+				char_literal474_tree = (object)adaptor.Create(char_literal474, "char_literal474", retval);
+				adaptor.AddChild(root_0, char_literal474_tree);
 				}
-				DebugLocation(1065, 14);
-				char_literal471=(IToken)Match(input,EQ,Follow._EQ_in_relationalOp6252); if (state.failed) return retval;
+				DebugLocation(1069, 14);
+				char_literal475=(IToken)Match(input,LT,Follow._LT_in_shiftOp6235); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal471_tree = (object)adaptor.Create(char_literal471, "char_literal471", retval);
-				adaptor.AddChild(root_0, char_literal471_tree);
+				char_literal475_tree = (object)adaptor.Create(char_literal475, "char_literal475", retval);
+				adaptor.AddChild(root_0, char_literal475_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1066:10: '>' '='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1070:10: '>' '>' '>'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1066, 10);
-				char_literal472=(IToken)Match(input,GT,Follow._GT_in_relationalOp6263); if (state.failed) return retval;
+				DebugLocation(1070, 10);
+				char_literal476=(IToken)Match(input,GT,Follow._GT_in_shiftOp6246); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal472_tree = (object)adaptor.Create(char_literal472, "char_literal472", retval);
-				adaptor.AddChild(root_0, char_literal472_tree);
+				char_literal476_tree = (object)adaptor.Create(char_literal476, "char_literal476", retval);
+				adaptor.AddChild(root_0, char_literal476_tree);
 				}
-				DebugLocation(1066, 14);
-				char_literal473=(IToken)Match(input,EQ,Follow._EQ_in_relationalOp6265); if (state.failed) return retval;
+				DebugLocation(1070, 14);
+				char_literal477=(IToken)Match(input,GT,Follow._GT_in_shiftOp6248); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal473_tree = (object)adaptor.Create(char_literal473, "char_literal473", retval);
-				adaptor.AddChild(root_0, char_literal473_tree);
+				char_literal477_tree = (object)adaptor.Create(char_literal477, "char_literal477", retval);
+				adaptor.AddChild(root_0, char_literal477_tree);
+				}
+				DebugLocation(1070, 18);
+				char_literal478=(IToken)Match(input,GT,Follow._GT_in_shiftOp6250); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal478_tree = (object)adaptor.Create(char_literal478, "char_literal478", retval);
+				adaptor.AddChild(root_0, char_literal478_tree);
 				}
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1067:9: '<'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1071:10: '>' '>'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1067, 9);
-				char_literal474=(IToken)Match(input,LT,Follow._LT_in_relationalOp6275); if (state.failed) return retval;
+				DebugLocation(1071, 10);
+				char_literal479=(IToken)Match(input,GT,Follow._GT_in_shiftOp6261); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal474_tree = (object)adaptor.Create(char_literal474, "char_literal474", retval);
-				adaptor.AddChild(root_0, char_literal474_tree);
+				char_literal479_tree = (object)adaptor.Create(char_literal479, "char_literal479", retval);
+				adaptor.AddChild(root_0, char_literal479_tree);
 				}
-
-				}
-				break;
-			case 4:
-				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1068:9: '>'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1068, 9);
-				char_literal475=(IToken)Match(input,GT,Follow._GT_in_relationalOp6285); if (state.failed) return retval;
+				DebugLocation(1071, 14);
+				char_literal480=(IToken)Match(input,GT,Follow._GT_in_shiftOp6263); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal475_tree = (object)adaptor.Create(char_literal475, "char_literal475", retval);
-				adaptor.AddChild(root_0, char_literal475_tree);
+				char_literal480_tree = (object)adaptor.Create(char_literal480, "char_literal480", retval);
+				adaptor.AddChild(root_0, char_literal480_tree);
 				}
 
 				}
@@ -17686,59 +17918,60 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("relationalOp", 87);
-			LeaveRule("relationalOp", 87);
-			LeaveRule_relationalOp();
-			if (state.backtracking > 0) { Memoize(input, 87, relationalOp_StartIndex); }
+			TraceOut("shiftOp", 89);
+			LeaveRule("shiftOp", 89);
+			LeaveRule_shiftOp();
+			if (state.backtracking > 0) { Memoize(input, 89, shiftOp_StartIndex); }
 
 		}
-		DebugLocation(1069, 4);
-		} finally { DebugExitRule(GrammarFileName, "relationalOp"); }
+		DebugLocation(1072, 4);
+		} finally { DebugExitRule(GrammarFileName, "shiftOp"); }
 		return retval;
 
 	}
-	// $ANTLR end "relationalOp"
+	// $ANTLR end "shiftOp"
 
-	partial void EnterRule_shiftExpression();
-	partial void LeaveRule_shiftExpression();
-	// $ANTLR start "shiftExpression"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1071:1: shiftExpression : additiveExpression ( shiftOp additiveExpression )* ;
-	[GrammarRule("shiftExpression")]
-	private Antlr3AstNode shiftExpression()
+	partial void EnterRule_additiveExpression();
+	partial void LeaveRule_additiveExpression();
+	// $ANTLR start "additiveExpression"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1074:1: additiveExpression : multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* ;
+	[GrammarRule("additiveExpression")]
+	private Antlr3AstNode additiveExpression()
 	{
-		EnterRule_shiftExpression();
-		EnterRule("shiftExpression", 88);
-		var retval = new Antlr3AstNode("shiftExpression");
+		EnterRule_additiveExpression();
+		EnterRule("additiveExpression", 90);
+		var retval = new Antlr3AstNode("additiveExpression");
 		
 		retval.Start = (IToken)input.LT(1);
-		int shiftExpression_StartIndex = input.Index;
+		int additiveExpression_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		Antlr3AstNode additiveExpression476 = default(Antlr3AstNode);
-		Antlr3AstNode shiftOp477 = default(Antlr3AstNode);
-		Antlr3AstNode additiveExpression478 = default(Antlr3AstNode);
+		IToken set482 = default(IToken);
+		Antlr3AstNode multiplicativeExpression481 = default(Antlr3AstNode);
+		Antlr3AstNode multiplicativeExpression483 = default(Antlr3AstNode);
 
-		try { DebugEnterRule(GrammarFileName, "shiftExpression");
-		DebugLocation(1071, 4);
+		object set482_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "additiveExpression");
+		DebugLocation(1074, 4);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 88)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 90)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1072:5: ( additiveExpression ( shiftOp additiveExpression )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1075:5: ( multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1072:9: additiveExpression ( shiftOp additiveExpression )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1075:9: multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1072, 9);
-			PushFollow(Follow._additiveExpression_in_shiftExpression6304);
-			additiveExpression476=additiveExpression();
+			DebugLocation(1075, 9);
+			PushFollow(Follow._multiplicativeExpression_in_additiveExpression6282);
+			multiplicativeExpression481=multiplicativeExpression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, additiveExpression476.Tree, additiveExpression476, "additiveExpression476", retval);
-			DebugLocation(1073, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1073:9: ( shiftOp additiveExpression )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, multiplicativeExpression481.Tree, multiplicativeExpression481, "multiplicativeExpression481", retval);
+			DebugLocation(1076, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1076:9: ( ( '+' | '-' ) multiplicativeExpression )*
 			try { DebugEnterSubRule(136);
 			while (true)
 			{
@@ -17746,52 +17979,9 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(136, false);
 				int LA136_1 = input.LA(1);
 
-				if ((LA136_1==LT))
+				if ((LA136_1==PLUS||LA136_1==SUB))
 				{
-					int LA136_2 = input.LA(2);
-
-					if ((LA136_2==LT))
-					{
-						int LA136_3 = input.LA(3);
-
-						if ((LA136_3==BANG||LA136_3==BOOLEAN||LA136_3==BYTE||(LA136_3>=CHAR && LA136_3<=CHARLITERAL)||(LA136_3>=DOUBLE && LA136_3<=DOUBLELITERAL)||LA136_3==FALSE||(LA136_3>=FLOAT && LA136_3<=FLOATLITERAL)||LA136_3==IDENTIFIER||LA136_3==INT||LA136_3==INTLITERAL||(LA136_3>=LONG && LA136_3<=LPAREN)||(LA136_3>=NEW && LA136_3<=NULL)||LA136_3==PLUS||LA136_3==PLUSPLUS||LA136_3==SHORT||(LA136_3>=STRINGLITERAL && LA136_3<=SUB)||(LA136_3>=SUBSUB && LA136_3<=SUPER)||LA136_3==THIS||LA136_3==TILDE||LA136_3==TRUE||LA136_3==VOID))
-						{
-							alt136 = 1;
-						}
-
-
-					}
-
-
-				}
-				else if ((LA136_1==GT))
-				{
-					int LA136_2 = input.LA(2);
-
-					if ((LA136_2==GT))
-					{
-						int LA136_3 = input.LA(3);
-
-						if ((LA136_3==GT))
-						{
-							int LA136_4 = input.LA(4);
-
-							if ((LA136_4==BANG||LA136_4==BOOLEAN||LA136_4==BYTE||(LA136_4>=CHAR && LA136_4<=CHARLITERAL)||(LA136_4>=DOUBLE && LA136_4<=DOUBLELITERAL)||LA136_4==FALSE||(LA136_4>=FLOAT && LA136_4<=FLOATLITERAL)||LA136_4==IDENTIFIER||LA136_4==INT||LA136_4==INTLITERAL||(LA136_4>=LONG && LA136_4<=LPAREN)||(LA136_4>=NEW && LA136_4<=NULL)||LA136_4==PLUS||LA136_4==PLUSPLUS||LA136_4==SHORT||(LA136_4>=STRINGLITERAL && LA136_4<=SUB)||(LA136_4>=SUBSUB && LA136_4<=SUPER)||LA136_4==THIS||LA136_4==TILDE||LA136_4==TRUE||LA136_4==VOID))
-							{
-								alt136 = 1;
-							}
-
-
-						}
-						else if ((LA136_3==BANG||LA136_3==BOOLEAN||LA136_3==BYTE||(LA136_3>=CHAR && LA136_3<=CHARLITERAL)||(LA136_3>=DOUBLE && LA136_3<=DOUBLELITERAL)||LA136_3==FALSE||(LA136_3>=FLOAT && LA136_3<=FLOATLITERAL)||LA136_3==IDENTIFIER||LA136_3==INT||LA136_3==INTLITERAL||(LA136_3>=LONG && LA136_3<=LPAREN)||(LA136_3>=NEW && LA136_3<=NULL)||LA136_3==PLUS||LA136_3==PLUSPLUS||LA136_3==SHORT||(LA136_3>=STRINGLITERAL && LA136_3<=SUB)||(LA136_3>=SUBSUB && LA136_3<=SUPER)||LA136_3==THIS||LA136_3==TILDE||LA136_3==TRUE||LA136_3==VOID))
-						{
-							alt136 = 1;
-						}
-
-
-					}
-
-
+					alt136 = 1;
 				}
 
 
@@ -17800,20 +17990,31 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1073:10: shiftOp additiveExpression
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1077:13: ( '+' | '-' ) multiplicativeExpression
 					{
-					DebugLocation(1073, 10);
-					PushFollow(Follow._shiftOp_in_shiftExpression6315);
-					shiftOp477=shiftOp();
+					DebugLocation(1077, 13);
+
+					set482=(IToken)input.LT(1);
+					if (input.LA(1)==PLUS||input.LA(1)==SUB)
+					{
+						input.Consume();
+						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set482, "set482", retval));
+						state.errorRecovery=false;state.failed=false;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return retval;}
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(1080, 13);
+					PushFollow(Follow._multiplicativeExpression_in_additiveExpression6359);
+					multiplicativeExpression483=multiplicativeExpression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, shiftOp477.Tree, shiftOp477, "shiftOp477", retval);
-					DebugLocation(1073, 18);
-					PushFollow(Follow._additiveExpression_in_shiftExpression6317);
-					additiveExpression478=additiveExpression();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, additiveExpression478.Tree, additiveExpression478, "additiveExpression478", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, multiplicativeExpression483.Tree, multiplicativeExpression483, "multiplicativeExpression483", retval);
 
 					}
 					break;
@@ -17847,331 +18048,13 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("shiftExpression", 88);
-			LeaveRule("shiftExpression", 88);
-			LeaveRule_shiftExpression();
-			if (state.backtracking > 0) { Memoize(input, 88, shiftExpression_StartIndex); }
-
-		}
-		DebugLocation(1075, 4);
-		} finally { DebugExitRule(GrammarFileName, "shiftExpression"); }
-		return retval;
-
-	}
-	// $ANTLR end "shiftExpression"
-
-	partial void EnterRule_shiftOp();
-	partial void LeaveRule_shiftOp();
-	// $ANTLR start "shiftOp"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1077:1: shiftOp : ( '<' '<' | '>' '>' '>' | '>' '>' );
-	[GrammarRule("shiftOp")]
-	private Antlr3AstNode shiftOp()
-	{
-		EnterRule_shiftOp();
-		EnterRule("shiftOp", 89);
-		var retval = new Antlr3AstNode("shiftOp");
-		
-		retval.Start = (IToken)input.LT(1);
-		int shiftOp_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken char_literal479 = default(IToken);
-		IToken char_literal480 = default(IToken);
-		IToken char_literal481 = default(IToken);
-		IToken char_literal482 = default(IToken);
-		IToken char_literal483 = default(IToken);
-		IToken char_literal484 = default(IToken);
-		IToken char_literal485 = default(IToken);
-
-		object char_literal479_tree = default(object);
-		object char_literal480_tree = default(object);
-		object char_literal481_tree = default(object);
-		object char_literal482_tree = default(object);
-		object char_literal483_tree = default(object);
-		object char_literal484_tree = default(object);
-		object char_literal485_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "shiftOp");
-		DebugLocation(1077, 4);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 89)) { return retval; }
-
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1078:5: ( '<' '<' | '>' '>' '>' | '>' '>' )
-			int alt137=3;
-			try { DebugEnterDecision(137, false);
-			int LA137_1 = input.LA(1);
-
-			if ((LA137_1==LT))
-			{
-				alt137 = 1;
-			}
-			else if ((LA137_1==GT))
-			{
-				int LA137_2 = input.LA(2);
-
-				if ((LA137_2==GT))
-				{
-					int LA137_3 = input.LA(3);
-
-					if ((LA137_3==GT))
-					{
-						alt137 = 2;
-					}
-					else if ((LA137_3==BANG||LA137_3==BOOLEAN||LA137_3==BYTE||(LA137_3>=CHAR && LA137_3<=CHARLITERAL)||(LA137_3>=DOUBLE && LA137_3<=DOUBLELITERAL)||LA137_3==FALSE||(LA137_3>=FLOAT && LA137_3<=FLOATLITERAL)||LA137_3==IDENTIFIER||LA137_3==INT||LA137_3==INTLITERAL||(LA137_3>=LONG && LA137_3<=LPAREN)||(LA137_3>=NEW && LA137_3<=NULL)||LA137_3==PLUS||LA137_3==PLUSPLUS||LA137_3==SHORT||(LA137_3>=STRINGLITERAL && LA137_3<=SUB)||(LA137_3>=SUBSUB && LA137_3<=SUPER)||LA137_3==THIS||LA137_3==TILDE||LA137_3==TRUE||LA137_3==VOID))
-					{
-						alt137 = 3;
-					}
-					else
-					{
-						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 137, 3, input, 3);
-						DebugRecognitionException(nvae);
-						throw nvae;
-					}
-				}
-				else
-				{
-					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 137, 2, input, 2);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 137, 0, input, 1);
-				DebugRecognitionException(nvae);
-				throw nvae;
-			}
-			} finally { DebugExitDecision(137); }
-			switch (alt137)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1078:10: '<' '<'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1078, 10);
-				char_literal479=(IToken)Match(input,LT,Follow._LT_in_shiftOp6348); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal479_tree = (object)adaptor.Create(char_literal479, "char_literal479", retval);
-				adaptor.AddChild(root_0, char_literal479_tree);
-				}
-				DebugLocation(1078, 14);
-				char_literal480=(IToken)Match(input,LT,Follow._LT_in_shiftOp6350); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal480_tree = (object)adaptor.Create(char_literal480, "char_literal480", retval);
-				adaptor.AddChild(root_0, char_literal480_tree);
-				}
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1079:10: '>' '>' '>'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1079, 10);
-				char_literal481=(IToken)Match(input,GT,Follow._GT_in_shiftOp6361); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal481_tree = (object)adaptor.Create(char_literal481, "char_literal481", retval);
-				adaptor.AddChild(root_0, char_literal481_tree);
-				}
-				DebugLocation(1079, 14);
-				char_literal482=(IToken)Match(input,GT,Follow._GT_in_shiftOp6363); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal482_tree = (object)adaptor.Create(char_literal482, "char_literal482", retval);
-				adaptor.AddChild(root_0, char_literal482_tree);
-				}
-				DebugLocation(1079, 18);
-				char_literal483=(IToken)Match(input,GT,Follow._GT_in_shiftOp6365); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal483_tree = (object)adaptor.Create(char_literal483, "char_literal483", retval);
-				adaptor.AddChild(root_0, char_literal483_tree);
-				}
-
-				}
-				break;
-			case 3:
-				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1080:10: '>' '>'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1080, 10);
-				char_literal484=(IToken)Match(input,GT,Follow._GT_in_shiftOp6376); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal484_tree = (object)adaptor.Create(char_literal484, "char_literal484", retval);
-				adaptor.AddChild(root_0, char_literal484_tree);
-				}
-				DebugLocation(1080, 14);
-				char_literal485=(IToken)Match(input,GT,Follow._GT_in_shiftOp6378); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal485_tree = (object)adaptor.Create(char_literal485, "char_literal485", retval);
-				adaptor.AddChild(root_0, char_literal485_tree);
-				}
-
-				}
-				break;
-
-			}
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("shiftOp", 89);
-			LeaveRule("shiftOp", 89);
-			LeaveRule_shiftOp();
-			if (state.backtracking > 0) { Memoize(input, 89, shiftOp_StartIndex); }
-
-		}
-		DebugLocation(1081, 4);
-		} finally { DebugExitRule(GrammarFileName, "shiftOp"); }
-		return retval;
-
-	}
-	// $ANTLR end "shiftOp"
-
-	partial void EnterRule_additiveExpression();
-	partial void LeaveRule_additiveExpression();
-	// $ANTLR start "additiveExpression"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1083:1: additiveExpression : multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* ;
-	[GrammarRule("additiveExpression")]
-	private Antlr3AstNode additiveExpression()
-	{
-		EnterRule_additiveExpression();
-		EnterRule("additiveExpression", 90);
-		var retval = new Antlr3AstNode("additiveExpression");
-		
-		retval.Start = (IToken)input.LT(1);
-		int additiveExpression_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken set487 = default(IToken);
-		Antlr3AstNode multiplicativeExpression486 = default(Antlr3AstNode);
-		Antlr3AstNode multiplicativeExpression488 = default(Antlr3AstNode);
-
-		object set487_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "additiveExpression");
-		DebugLocation(1083, 4);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 90)) { return retval; }
-
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1084:5: ( multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1084:9: multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )*
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(1084, 9);
-			PushFollow(Follow._multiplicativeExpression_in_additiveExpression6397);
-			multiplicativeExpression486=multiplicativeExpression();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, multiplicativeExpression486.Tree, multiplicativeExpression486, "multiplicativeExpression486", retval);
-			DebugLocation(1085, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1085:9: ( ( '+' | '-' ) multiplicativeExpression )*
-			try { DebugEnterSubRule(138);
-			while (true)
-			{
-				int alt138=2;
-				try { DebugEnterDecision(138, false);
-				int LA138_1 = input.LA(1);
-
-				if ((LA138_1==PLUS||LA138_1==SUB))
-				{
-					alt138 = 1;
-				}
-
-
-				} finally { DebugExitDecision(138); }
-				switch ( alt138 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1086:13: ( '+' | '-' ) multiplicativeExpression
-					{
-					DebugLocation(1086, 13);
-
-					set487=(IToken)input.LT(1);
-					if (input.LA(1)==PLUS||input.LA(1)==SUB)
-					{
-						input.Consume();
-						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set487, "set487", retval));
-						state.errorRecovery=false;state.failed=false;
-					}
-					else
-					{
-						if (state.backtracking>0) {state.failed=true; return retval;}
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						DebugRecognitionException(mse);
-						throw mse;
-					}
-
-					DebugLocation(1089, 13);
-					PushFollow(Follow._multiplicativeExpression_in_additiveExpression6474);
-					multiplicativeExpression488=multiplicativeExpression();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, multiplicativeExpression488.Tree, multiplicativeExpression488, "multiplicativeExpression488", retval);
-
-					}
-					break;
-
-				default:
-					goto loop138;
-				}
-			}
-
-			loop138:
-				;
-
-			} finally { DebugExitSubRule(138); }
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
 			TraceOut("additiveExpression", 90);
 			LeaveRule("additiveExpression", 90);
 			LeaveRule_additiveExpression();
 			if (state.backtracking > 0) { Memoize(input, 90, additiveExpression_StartIndex); }
 
 		}
-		DebugLocation(1091, 4);
+		DebugLocation(1082, 4);
 		} finally { DebugExitRule(GrammarFileName, "additiveExpression"); }
 		return retval;
 
@@ -18181,7 +18064,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_multiplicativeExpression();
 	partial void LeaveRule_multiplicativeExpression();
 	// $ANTLR start "multiplicativeExpression"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1093:1: multiplicativeExpression : unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1084:1: multiplicativeExpression : unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* ;
 	[GrammarRule("multiplicativeExpression")]
 	private Antlr3AstNode multiplicativeExpression()
 	{
@@ -18194,58 +18077,58 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken set490 = default(IToken);
-		Antlr3AstNode unaryExpression489 = default(Antlr3AstNode);
-		Antlr3AstNode unaryExpression491 = default(Antlr3AstNode);
+		IToken set485 = default(IToken);
+		Antlr3AstNode unaryExpression484 = default(Antlr3AstNode);
+		Antlr3AstNode unaryExpression486 = default(Antlr3AstNode);
 
-		object set490_tree = default(object);
+		object set485_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "multiplicativeExpression");
-		DebugLocation(1093, 4);
+		DebugLocation(1084, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 91)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1094:5: ( unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1085:5: ( unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1095:9: unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1086:9: unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1095, 9);
-			PushFollow(Follow._unaryExpression_in_multiplicativeExpression6511);
-			unaryExpression489=unaryExpression();
+			DebugLocation(1086, 9);
+			PushFollow(Follow._unaryExpression_in_multiplicativeExpression6396);
+			unaryExpression484=unaryExpression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression489.Tree, unaryExpression489, "unaryExpression489", retval);
-			DebugLocation(1096, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1096:9: ( ( '*' | '/' | '%' ) unaryExpression )*
-			try { DebugEnterSubRule(139);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression484.Tree, unaryExpression484, "unaryExpression484", retval);
+			DebugLocation(1087, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1087:9: ( ( '*' | '/' | '%' ) unaryExpression )*
+			try { DebugEnterSubRule(137);
 			while (true)
 			{
-				int alt139=2;
-				try { DebugEnterDecision(139, false);
-				int LA139_1 = input.LA(1);
+				int alt137=2;
+				try { DebugEnterDecision(137, false);
+				int LA137_1 = input.LA(1);
 
-				if ((LA139_1==PERCENT||LA139_1==SLASH||LA139_1==STAR))
+				if ((LA137_1==PERCENT||LA137_1==SLASH||LA137_1==STAR))
 				{
-					alt139 = 1;
+					alt137 = 1;
 				}
 
 
-				} finally { DebugExitDecision(139); }
-				switch ( alt139 )
+				} finally { DebugExitDecision(137); }
+				switch ( alt137 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1097:13: ( '*' | '/' | '%' ) unaryExpression
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1088:13: ( '*' | '/' | '%' ) unaryExpression
 					{
-					DebugLocation(1097, 13);
+					DebugLocation(1088, 13);
 
-					set490=(IToken)input.LT(1);
+					set485=(IToken)input.LT(1);
 					if (input.LA(1)==PERCENT||input.LA(1)==SLASH||input.LA(1)==STAR)
 					{
 						input.Consume();
-						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set490, "set490", retval));
+						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set485, "set485", retval));
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -18256,25 +18139,25 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						throw mse;
 					}
 
-					DebugLocation(1101, 13);
-					PushFollow(Follow._unaryExpression_in_multiplicativeExpression6606);
-					unaryExpression491=unaryExpression();
+					DebugLocation(1092, 13);
+					PushFollow(Follow._unaryExpression_in_multiplicativeExpression6491);
+					unaryExpression486=unaryExpression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression491.Tree, unaryExpression491, "unaryExpression491", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression486.Tree, unaryExpression486, "unaryExpression486", retval);
 
 					}
 					break;
 
 				default:
-					goto loop139;
+					goto loop137;
 				}
 			}
 
-			loop139:
+			loop137:
 				;
 
-			} finally { DebugExitSubRule(139); }
+			} finally { DebugExitSubRule(137); }
 
 
 			}
@@ -18301,7 +18184,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 91, multiplicativeExpression_StartIndex); }
 
 		}
-		DebugLocation(1103, 4);
+		DebugLocation(1094, 4);
 		} finally { DebugExitRule(GrammarFileName, "multiplicativeExpression"); }
 		return retval;
 
@@ -18311,7 +18194,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_unaryExpression();
 	partial void LeaveRule_unaryExpression();
 	// $ANTLR start "unaryExpression"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1109:1: unaryExpression : ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1100:1: unaryExpression : ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus );
 	[GrammarRule("unaryExpression")]
 	private Antlr3AstNode unaryExpression()
 	{
@@ -18324,49 +18207,49 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal492 = default(IToken);
-		IToken char_literal494 = default(IToken);
-		IToken string_literal496 = default(IToken);
-		IToken string_literal498 = default(IToken);
-		Antlr3AstNode unaryExpression493 = default(Antlr3AstNode);
-		Antlr3AstNode unaryExpression495 = default(Antlr3AstNode);
-		Antlr3AstNode unaryExpression497 = default(Antlr3AstNode);
-		Antlr3AstNode unaryExpression499 = default(Antlr3AstNode);
-		Antlr3AstNode unaryExpressionNotPlusMinus500 = default(Antlr3AstNode);
+		IToken char_literal487 = default(IToken);
+		IToken char_literal489 = default(IToken);
+		IToken string_literal491 = default(IToken);
+		IToken string_literal493 = default(IToken);
+		Antlr3AstNode unaryExpression488 = default(Antlr3AstNode);
+		Antlr3AstNode unaryExpression490 = default(Antlr3AstNode);
+		Antlr3AstNode unaryExpression492 = default(Antlr3AstNode);
+		Antlr3AstNode unaryExpression494 = default(Antlr3AstNode);
+		Antlr3AstNode unaryExpressionNotPlusMinus495 = default(Antlr3AstNode);
 
-		object char_literal492_tree = default(object);
-		object char_literal494_tree = default(object);
-		object string_literal496_tree = default(object);
-		object string_literal498_tree = default(object);
+		object char_literal487_tree = default(object);
+		object char_literal489_tree = default(object);
+		object string_literal491_tree = default(object);
+		object string_literal493_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "unaryExpression");
-		DebugLocation(1109, 4);
+		DebugLocation(1100, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 92)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1110:5: ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus )
-			int alt140=5;
-			try { DebugEnterDecision(140, false);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1101:5: ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus )
+			int alt138=5;
+			try { DebugEnterDecision(138, false);
 			switch (input.LA(1))
 			{
 			case PLUS:
 				{
-				alt140 = 1;
+				alt138 = 1;
 				}
 				break;
 			case SUB:
 				{
-				alt140 = 2;
+				alt138 = 2;
 				}
 				break;
 			case PLUSPLUS:
 				{
-				alt140 = 3;
+				alt138 = 3;
 				}
 				break;
 			case SUBSUB:
 				{
-				alt140 = 4;
+				alt138 = 4;
 				}
 				break;
 			case BANG:
@@ -18395,117 +18278,117 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case TRUE:
 			case VOID:
 				{
-				alt140 = 5;
+				alt138 = 5;
 				}
 				break;
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 140, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 138, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(140); }
-			switch (alt140)
+			} finally { DebugExitDecision(138); }
+			switch (alt138)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1110:9: '+' unaryExpression
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1101:9: '+' unaryExpression
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1110, 9);
-				char_literal492=(IToken)Match(input,PLUS,Follow._PLUS_in_unaryExpression6638); if (state.failed) return retval;
+				DebugLocation(1101, 9);
+				char_literal487=(IToken)Match(input,PLUS,Follow._PLUS_in_unaryExpression6523); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal492_tree = (object)adaptor.Create(char_literal492, "char_literal492", retval);
-				adaptor.AddChild(root_0, char_literal492_tree);
+				char_literal487_tree = (object)adaptor.Create(char_literal487, "char_literal487", retval);
+				adaptor.AddChild(root_0, char_literal487_tree);
 				}
-				DebugLocation(1110, 14);
-				PushFollow(Follow._unaryExpression_in_unaryExpression6641);
-				unaryExpression493=unaryExpression();
+				DebugLocation(1101, 14);
+				PushFollow(Follow._unaryExpression_in_unaryExpression6526);
+				unaryExpression488=unaryExpression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression493.Tree, unaryExpression493, "unaryExpression493", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression488.Tree, unaryExpression488, "unaryExpression488", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1111:9: '-' unaryExpression
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1102:9: '-' unaryExpression
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1111, 9);
-				char_literal494=(IToken)Match(input,SUB,Follow._SUB_in_unaryExpression6651); if (state.failed) return retval;
+				DebugLocation(1102, 9);
+				char_literal489=(IToken)Match(input,SUB,Follow._SUB_in_unaryExpression6536); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal494_tree = (object)adaptor.Create(char_literal494, "char_literal494", retval);
-				adaptor.AddChild(root_0, char_literal494_tree);
+				char_literal489_tree = (object)adaptor.Create(char_literal489, "char_literal489", retval);
+				adaptor.AddChild(root_0, char_literal489_tree);
 				}
-				DebugLocation(1111, 13);
-				PushFollow(Follow._unaryExpression_in_unaryExpression6653);
-				unaryExpression495=unaryExpression();
+				DebugLocation(1102, 13);
+				PushFollow(Follow._unaryExpression_in_unaryExpression6538);
+				unaryExpression490=unaryExpression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression495.Tree, unaryExpression495, "unaryExpression495", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression490.Tree, unaryExpression490, "unaryExpression490", retval);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1112:9: '++' unaryExpression
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1103:9: '++' unaryExpression
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1112, 9);
-				string_literal496=(IToken)Match(input,PLUSPLUS,Follow._PLUSPLUS_in_unaryExpression6663); if (state.failed) return retval;
+				DebugLocation(1103, 9);
+				string_literal491=(IToken)Match(input,PLUSPLUS,Follow._PLUSPLUS_in_unaryExpression6548); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal496_tree = (object)adaptor.Create(string_literal496, "string_literal496", retval);
-				adaptor.AddChild(root_0, string_literal496_tree);
+				string_literal491_tree = (object)adaptor.Create(string_literal491, "string_literal491", retval);
+				adaptor.AddChild(root_0, string_literal491_tree);
 				}
-				DebugLocation(1112, 14);
-				PushFollow(Follow._unaryExpression_in_unaryExpression6665);
-				unaryExpression497=unaryExpression();
+				DebugLocation(1103, 14);
+				PushFollow(Follow._unaryExpression_in_unaryExpression6550);
+				unaryExpression492=unaryExpression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression497.Tree, unaryExpression497, "unaryExpression497", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression492.Tree, unaryExpression492, "unaryExpression492", retval);
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1113:9: '--' unaryExpression
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1104:9: '--' unaryExpression
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1113, 9);
-				string_literal498=(IToken)Match(input,SUBSUB,Follow._SUBSUB_in_unaryExpression6675); if (state.failed) return retval;
+				DebugLocation(1104, 9);
+				string_literal493=(IToken)Match(input,SUBSUB,Follow._SUBSUB_in_unaryExpression6560); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal498_tree = (object)adaptor.Create(string_literal498, "string_literal498", retval);
-				adaptor.AddChild(root_0, string_literal498_tree);
+				string_literal493_tree = (object)adaptor.Create(string_literal493, "string_literal493", retval);
+				adaptor.AddChild(root_0, string_literal493_tree);
 				}
-				DebugLocation(1113, 14);
-				PushFollow(Follow._unaryExpression_in_unaryExpression6677);
-				unaryExpression499=unaryExpression();
+				DebugLocation(1104, 14);
+				PushFollow(Follow._unaryExpression_in_unaryExpression6562);
+				unaryExpression494=unaryExpression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression499.Tree, unaryExpression499, "unaryExpression499", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression494.Tree, unaryExpression494, "unaryExpression494", retval);
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1114:9: unaryExpressionNotPlusMinus
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1105:9: unaryExpressionNotPlusMinus
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1114, 9);
-				PushFollow(Follow._unaryExpressionNotPlusMinus_in_unaryExpression6687);
-				unaryExpressionNotPlusMinus500=unaryExpressionNotPlusMinus();
+				DebugLocation(1105, 9);
+				PushFollow(Follow._unaryExpressionNotPlusMinus_in_unaryExpression6572);
+				unaryExpressionNotPlusMinus495=unaryExpressionNotPlusMinus();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpressionNotPlusMinus500.Tree, unaryExpressionNotPlusMinus500, "unaryExpressionNotPlusMinus500", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpressionNotPlusMinus495.Tree, unaryExpressionNotPlusMinus495, "unaryExpressionNotPlusMinus495", retval);
 
 				}
 				break;
@@ -18533,7 +18416,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 92, unaryExpression_StartIndex); }
 
 		}
-		DebugLocation(1115, 4);
+		DebugLocation(1106, 4);
 		} finally { DebugExitRule(GrammarFileName, "unaryExpression"); }
 		return retval;
 
@@ -18543,7 +18426,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_unaryExpressionNotPlusMinus();
 	partial void LeaveRule_unaryExpressionNotPlusMinus();
 	// $ANTLR start "unaryExpressionNotPlusMinus"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1117:1: unaryExpressionNotPlusMinus : ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1108:1: unaryExpressionNotPlusMinus : ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? );
 	[GrammarRule("unaryExpressionNotPlusMinus")]
 	private Antlr3AstNode unaryExpressionNotPlusMinus()
 	{
@@ -18556,55 +18439,55 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal501 = default(IToken);
-		IToken char_literal503 = default(IToken);
-		IToken set508 = default(IToken);
-		Antlr3AstNode unaryExpression502 = default(Antlr3AstNode);
-		Antlr3AstNode unaryExpression504 = default(Antlr3AstNode);
-		Antlr3AstNode castExpression505 = default(Antlr3AstNode);
-		Antlr3AstNode primary506 = default(Antlr3AstNode);
-		Antlr3AstNode selector507 = default(Antlr3AstNode);
+		IToken char_literal496 = default(IToken);
+		IToken char_literal498 = default(IToken);
+		IToken set503 = default(IToken);
+		Antlr3AstNode unaryExpression497 = default(Antlr3AstNode);
+		Antlr3AstNode unaryExpression499 = default(Antlr3AstNode);
+		Antlr3AstNode castExpression500 = default(Antlr3AstNode);
+		Antlr3AstNode primary501 = default(Antlr3AstNode);
+		Antlr3AstNode selector502 = default(Antlr3AstNode);
 
-		object char_literal501_tree = default(object);
-		object char_literal503_tree = default(object);
-		object set508_tree = default(object);
+		object char_literal496_tree = default(object);
+		object char_literal498_tree = default(object);
+		object set503_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "unaryExpressionNotPlusMinus");
-		DebugLocation(1117, 4);
+		DebugLocation(1108, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 93)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1118:5: ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? )
-			int alt143=4;
-			try { DebugEnterDecision(143, false);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1109:5: ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? )
+			int alt141=4;
+			try { DebugEnterDecision(141, false);
 			switch (input.LA(1))
 			{
 			case TILDE:
 				{
-				alt143 = 1;
+				alt141 = 1;
 				}
 				break;
 			case BANG:
 				{
-				alt143 = 2;
+				alt141 = 2;
 				}
 				break;
 			case LPAREN:
 				{
-				int LA143_2 = input.LA(2);
+				int LA141_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred215_Java_fragment)))
+				if ((EvaluatePredicate(synpred213_Java_fragment)))
 				{
-					alt143 = 3;
+					alt141 = 3;
 				}
 				else if ((true))
 				{
-					alt143 = 4;
+					alt141 = 4;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 143, 3, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 141, 3, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -18633,157 +18516,157 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case TRUE:
 			case VOID:
 				{
-				alt143 = 4;
+				alt141 = 4;
 				}
 				break;
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 143, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 141, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(143); }
-			switch (alt143)
+			} finally { DebugExitDecision(141); }
+			switch (alt141)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1118:9: '~' unaryExpression
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1109:9: '~' unaryExpression
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1118, 9);
-				char_literal501=(IToken)Match(input,TILDE,Follow._TILDE_in_unaryExpressionNotPlusMinus6706); if (state.failed) return retval;
+				DebugLocation(1109, 9);
+				char_literal496=(IToken)Match(input,TILDE,Follow._TILDE_in_unaryExpressionNotPlusMinus6591); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal501_tree = (object)adaptor.Create(char_literal501, "char_literal501", retval);
-				adaptor.AddChild(root_0, char_literal501_tree);
+				char_literal496_tree = (object)adaptor.Create(char_literal496, "char_literal496", retval);
+				adaptor.AddChild(root_0, char_literal496_tree);
 				}
-				DebugLocation(1118, 13);
-				PushFollow(Follow._unaryExpression_in_unaryExpressionNotPlusMinus6708);
-				unaryExpression502=unaryExpression();
+				DebugLocation(1109, 13);
+				PushFollow(Follow._unaryExpression_in_unaryExpressionNotPlusMinus6593);
+				unaryExpression497=unaryExpression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression502.Tree, unaryExpression502, "unaryExpression502", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression497.Tree, unaryExpression497, "unaryExpression497", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1119:9: '!' unaryExpression
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1110:9: '!' unaryExpression
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1119, 9);
-				char_literal503=(IToken)Match(input,BANG,Follow._BANG_in_unaryExpressionNotPlusMinus6718); if (state.failed) return retval;
+				DebugLocation(1110, 9);
+				char_literal498=(IToken)Match(input,BANG,Follow._BANG_in_unaryExpressionNotPlusMinus6603); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal503_tree = (object)adaptor.Create(char_literal503, "char_literal503", retval);
-				adaptor.AddChild(root_0, char_literal503_tree);
+				char_literal498_tree = (object)adaptor.Create(char_literal498, "char_literal498", retval);
+				adaptor.AddChild(root_0, char_literal498_tree);
 				}
-				DebugLocation(1119, 13);
-				PushFollow(Follow._unaryExpression_in_unaryExpressionNotPlusMinus6720);
-				unaryExpression504=unaryExpression();
+				DebugLocation(1110, 13);
+				PushFollow(Follow._unaryExpression_in_unaryExpressionNotPlusMinus6605);
+				unaryExpression499=unaryExpression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression504.Tree, unaryExpression504, "unaryExpression504", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression499.Tree, unaryExpression499, "unaryExpression499", retval);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1120:9: castExpression
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1111:9: castExpression
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1120, 9);
-				PushFollow(Follow._castExpression_in_unaryExpressionNotPlusMinus6730);
-				castExpression505=castExpression();
+				DebugLocation(1111, 9);
+				PushFollow(Follow._castExpression_in_unaryExpressionNotPlusMinus6615);
+				castExpression500=castExpression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, castExpression505.Tree, castExpression505, "castExpression505", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, castExpression500.Tree, castExpression500, "castExpression500", retval);
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1121:9: primary ( selector )* ( '++' | '--' )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1112:9: primary ( selector )* ( '++' | '--' )?
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1121, 9);
-				PushFollow(Follow._primary_in_unaryExpressionNotPlusMinus6740);
-				primary506=primary();
+				DebugLocation(1112, 9);
+				PushFollow(Follow._primary_in_unaryExpressionNotPlusMinus6625);
+				primary501=primary();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, primary506.Tree, primary506, "primary506", retval);
-				DebugLocation(1122, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1122:9: ( selector )*
-				try { DebugEnterSubRule(141);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, primary501.Tree, primary501, "primary501", retval);
+				DebugLocation(1113, 9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1113:9: ( selector )*
+				try { DebugEnterSubRule(139);
 				while (true)
 				{
-					int alt141=2;
-					try { DebugEnterDecision(141, false);
-					int LA141_1 = input.LA(1);
+					int alt139=2;
+					try { DebugEnterDecision(139, false);
+					int LA139_1 = input.LA(1);
 
-					if ((LA141_1==DOT||LA141_1==LBRACKET))
+					if ((LA139_1==DOT||LA139_1==LBRACKET))
 					{
-						alt141 = 1;
+						alt139 = 1;
 					}
 
 
-					} finally { DebugExitDecision(141); }
-					switch ( alt141 )
+					} finally { DebugExitDecision(139); }
+					switch ( alt139 )
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1122:10: selector
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1113:10: selector
 						{
-						DebugLocation(1122, 10);
-						PushFollow(Follow._selector_in_unaryExpressionNotPlusMinus6751);
-						selector507=selector();
+						DebugLocation(1113, 10);
+						PushFollow(Follow._selector_in_unaryExpressionNotPlusMinus6636);
+						selector502=selector();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, selector507.Tree, selector507, "selector507", retval);
+						if (state.backtracking == 0) adaptor.AddChild(root_0, selector502.Tree, selector502, "selector502", retval);
 
 						}
 						break;
 
 					default:
-						goto loop141;
+						goto loop139;
 					}
 				}
 
-				loop141:
+				loop139:
 					;
 
-				} finally { DebugExitSubRule(141); }
+				} finally { DebugExitSubRule(139); }
 
-				DebugLocation(1124, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1124:9: ( '++' | '--' )?
-				int alt142=2;
-				try { DebugEnterSubRule(142);
-				try { DebugEnterDecision(142, false);
-				int LA142_1 = input.LA(1);
+				DebugLocation(1115, 9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1115:9: ( '++' | '--' )?
+				int alt140=2;
+				try { DebugEnterSubRule(140);
+				try { DebugEnterDecision(140, false);
+				int LA140_1 = input.LA(1);
 
-				if ((LA142_1==PLUSPLUS||LA142_1==SUBSUB))
+				if ((LA140_1==PLUSPLUS||LA140_1==SUBSUB))
 				{
-					alt142 = 1;
+					alt140 = 1;
 				}
-				} finally { DebugExitDecision(142); }
-				switch (alt142)
+				} finally { DebugExitDecision(140); }
+				switch (alt140)
 				{
 				case 1:
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:
 					{
-					DebugLocation(1124, 9);
+					DebugLocation(1115, 9);
 
-					set508=(IToken)input.LT(1);
+					set503=(IToken)input.LT(1);
 					if (input.LA(1)==PLUSPLUS||input.LA(1)==SUBSUB)
 					{
 						input.Consume();
-						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set508, "set508", retval));
+						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set503, "set503", retval));
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -18799,7 +18682,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					break;
 
 				}
-				} finally { DebugExitSubRule(142); }
+				} finally { DebugExitSubRule(140); }
 
 
 				}
@@ -18828,7 +18711,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 93, unaryExpressionNotPlusMinus_StartIndex); }
 
 		}
-		DebugLocation(1127, 4);
+		DebugLocation(1118, 4);
 		} finally { DebugExitRule(GrammarFileName, "unaryExpressionNotPlusMinus"); }
 		return retval;
 
@@ -18838,7 +18721,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_castExpression();
 	partial void LeaveRule_castExpression();
 	// $ANTLR start "castExpression"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1129:1: castExpression : ( '(' primitiveType ')' unaryExpression | '(' type ')' unaryExpressionNotPlusMinus );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1120:1: castExpression : ( '(' primitiveType ')' unaryExpression | '(' type ')' unaryExpressionNotPlusMinus );
 	[GrammarRule("castExpression")]
 	private Antlr3AstNode castExpression()
 	{
@@ -18851,46 +18734,46 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal509 = default(IToken);
-		IToken char_literal511 = default(IToken);
-		IToken char_literal513 = default(IToken);
-		IToken char_literal515 = default(IToken);
-		Antlr3AstNode primitiveType510 = default(Antlr3AstNode);
-		Antlr3AstNode unaryExpression512 = default(Antlr3AstNode);
-		Antlr3AstNode type514 = default(Antlr3AstNode);
-		Antlr3AstNode unaryExpressionNotPlusMinus516 = default(Antlr3AstNode);
+		IToken char_literal504 = default(IToken);
+		IToken char_literal506 = default(IToken);
+		IToken char_literal508 = default(IToken);
+		IToken char_literal510 = default(IToken);
+		Antlr3AstNode primitiveType505 = default(Antlr3AstNode);
+		Antlr3AstNode unaryExpression507 = default(Antlr3AstNode);
+		Antlr3AstNode type509 = default(Antlr3AstNode);
+		Antlr3AstNode unaryExpressionNotPlusMinus511 = default(Antlr3AstNode);
 
-		object char_literal509_tree = default(object);
-		object char_literal511_tree = default(object);
-		object char_literal513_tree = default(object);
-		object char_literal515_tree = default(object);
+		object char_literal504_tree = default(object);
+		object char_literal506_tree = default(object);
+		object char_literal508_tree = default(object);
+		object char_literal510_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "castExpression");
-		DebugLocation(1129, 4);
+		DebugLocation(1120, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 94)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1130:5: ( '(' primitiveType ')' unaryExpression | '(' type ')' unaryExpressionNotPlusMinus )
-			int alt144=2;
-			try { DebugEnterDecision(144, false);
-			int LA144_1 = input.LA(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1121:5: ( '(' primitiveType ')' unaryExpression | '(' type ')' unaryExpressionNotPlusMinus )
+			int alt142=2;
+			try { DebugEnterDecision(142, false);
+			int LA142_1 = input.LA(1);
 
-			if ((LA144_1==LPAREN))
+			if ((LA142_1==LPAREN))
 			{
-				int LA144_2 = input.LA(2);
+				int LA142_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred219_Java_fragment)))
+				if ((EvaluatePredicate(synpred217_Java_fragment)))
 				{
-					alt144 = 1;
+					alt142 = 1;
 				}
 				else if ((true))
 				{
-					alt144 = 2;
+					alt142 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 144, 1, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 142, 1, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -18898,76 +18781,76 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 144, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 142, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(144); }
-			switch (alt144)
+			} finally { DebugExitDecision(142); }
+			switch (alt142)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1130:9: '(' primitiveType ')' unaryExpression
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1121:9: '(' primitiveType ')' unaryExpression
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1130, 9);
-				char_literal509=(IToken)Match(input,LPAREN,Follow._LPAREN_in_castExpression6820); if (state.failed) return retval;
+				DebugLocation(1121, 9);
+				char_literal504=(IToken)Match(input,LPAREN,Follow._LPAREN_in_castExpression6705); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal509_tree = (object)adaptor.Create(char_literal509, "char_literal509", retval);
-				adaptor.AddChild(root_0, char_literal509_tree);
+				char_literal504_tree = (object)adaptor.Create(char_literal504, "char_literal504", retval);
+				adaptor.AddChild(root_0, char_literal504_tree);
 				}
-				DebugLocation(1130, 13);
-				PushFollow(Follow._primitiveType_in_castExpression6822);
-				primitiveType510=primitiveType();
+				DebugLocation(1121, 13);
+				PushFollow(Follow._primitiveType_in_castExpression6707);
+				primitiveType505=primitiveType();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, primitiveType510.Tree, primitiveType510, "primitiveType510", retval);
-				DebugLocation(1130, 27);
-				char_literal511=(IToken)Match(input,RPAREN,Follow._RPAREN_in_castExpression6824); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, primitiveType505.Tree, primitiveType505, "primitiveType505", retval);
+				DebugLocation(1121, 27);
+				char_literal506=(IToken)Match(input,RPAREN,Follow._RPAREN_in_castExpression6709); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal511_tree = (object)adaptor.Create(char_literal511, "char_literal511", retval);
-				adaptor.AddChild(root_0, char_literal511_tree);
+				char_literal506_tree = (object)adaptor.Create(char_literal506, "char_literal506", retval);
+				adaptor.AddChild(root_0, char_literal506_tree);
 				}
-				DebugLocation(1130, 31);
-				PushFollow(Follow._unaryExpression_in_castExpression6826);
-				unaryExpression512=unaryExpression();
+				DebugLocation(1121, 31);
+				PushFollow(Follow._unaryExpression_in_castExpression6711);
+				unaryExpression507=unaryExpression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression512.Tree, unaryExpression512, "unaryExpression512", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpression507.Tree, unaryExpression507, "unaryExpression507", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1131:9: '(' type ')' unaryExpressionNotPlusMinus
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1122:9: '(' type ')' unaryExpressionNotPlusMinus
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1131, 9);
-				char_literal513=(IToken)Match(input,LPAREN,Follow._LPAREN_in_castExpression6836); if (state.failed) return retval;
+				DebugLocation(1122, 9);
+				char_literal508=(IToken)Match(input,LPAREN,Follow._LPAREN_in_castExpression6721); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal513_tree = (object)adaptor.Create(char_literal513, "char_literal513", retval);
-				adaptor.AddChild(root_0, char_literal513_tree);
+				char_literal508_tree = (object)adaptor.Create(char_literal508, "char_literal508", retval);
+				adaptor.AddChild(root_0, char_literal508_tree);
 				}
-				DebugLocation(1131, 13);
-				PushFollow(Follow._type_in_castExpression6838);
-				type514=type();
+				DebugLocation(1122, 13);
+				PushFollow(Follow._type_in_castExpression6723);
+				type509=type();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, type514.Tree, type514, "type514", retval);
-				DebugLocation(1131, 18);
-				char_literal515=(IToken)Match(input,RPAREN,Follow._RPAREN_in_castExpression6840); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, type509.Tree, type509, "type509", retval);
+				DebugLocation(1122, 18);
+				char_literal510=(IToken)Match(input,RPAREN,Follow._RPAREN_in_castExpression6725); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal515_tree = (object)adaptor.Create(char_literal515, "char_literal515", retval);
-				adaptor.AddChild(root_0, char_literal515_tree);
+				char_literal510_tree = (object)adaptor.Create(char_literal510, "char_literal510", retval);
+				adaptor.AddChild(root_0, char_literal510_tree);
 				}
-				DebugLocation(1131, 22);
-				PushFollow(Follow._unaryExpressionNotPlusMinus_in_castExpression6842);
-				unaryExpressionNotPlusMinus516=unaryExpressionNotPlusMinus();
+				DebugLocation(1122, 22);
+				PushFollow(Follow._unaryExpressionNotPlusMinus_in_castExpression6727);
+				unaryExpressionNotPlusMinus511=unaryExpressionNotPlusMinus();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpressionNotPlusMinus516.Tree, unaryExpressionNotPlusMinus516, "unaryExpressionNotPlusMinus516", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unaryExpressionNotPlusMinus511.Tree, unaryExpressionNotPlusMinus511, "unaryExpressionNotPlusMinus511", retval);
 
 				}
 				break;
@@ -18995,7 +18878,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 94, castExpression_StartIndex); }
 
 		}
-		DebugLocation(1132, 4);
+		DebugLocation(1123, 4);
 		} finally { DebugExitRule(GrammarFileName, "castExpression"); }
 		return retval;
 
@@ -19005,7 +18888,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_primary();
 	partial void LeaveRule_primary();
 	// $ANTLR start "primary"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1137:1: primary : ( parExpression | 'this' ( '.' IDENTIFIER )* ( identifierSuffix )? | IDENTIFIER ( '.' IDENTIFIER )* ( identifierSuffix )? | 'super' superSuffix | literal | creator | primitiveType ( '[' ']' )* '.' 'class' | 'void' '.' 'class' );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1128:1: primary : ( parExpression | 'this' ( '.' IDENTIFIER )* ( identifierSuffix )? | IDENTIFIER ( '.' IDENTIFIER )* ( identifierSuffix )? | 'super' superSuffix | literal | creator | primitiveType ( '[' ']' )* '.' 'class' | 'void' '.' 'class' );
 	[GrammarRule("primary")]
 	private Antlr3AstNode primary()
 	{
@@ -19018,71 +18901,71 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal518 = default(IToken);
-		IToken char_literal519 = default(IToken);
-		IToken IDENTIFIER520 = default(IToken);
-		IToken IDENTIFIER522 = default(IToken);
-		IToken char_literal523 = default(IToken);
-		IToken IDENTIFIER524 = default(IToken);
-		IToken string_literal526 = default(IToken);
+		IToken string_literal513 = default(IToken);
+		IToken char_literal514 = default(IToken);
+		IToken IDENTIFIER515 = default(IToken);
+		IToken IDENTIFIER517 = default(IToken);
+		IToken char_literal518 = default(IToken);
+		IToken IDENTIFIER519 = default(IToken);
+		IToken string_literal521 = default(IToken);
+		IToken char_literal526 = default(IToken);
+		IToken char_literal527 = default(IToken);
+		IToken char_literal528 = default(IToken);
+		IToken string_literal529 = default(IToken);
+		IToken string_literal530 = default(IToken);
 		IToken char_literal531 = default(IToken);
-		IToken char_literal532 = default(IToken);
-		IToken char_literal533 = default(IToken);
-		IToken string_literal534 = default(IToken);
-		IToken string_literal535 = default(IToken);
-		IToken char_literal536 = default(IToken);
-		IToken string_literal537 = default(IToken);
-		Antlr3AstNode parExpression517 = default(Antlr3AstNode);
-		Antlr3AstNode identifierSuffix521 = default(Antlr3AstNode);
-		Antlr3AstNode identifierSuffix525 = default(Antlr3AstNode);
-		Antlr3AstNode superSuffix527 = default(Antlr3AstNode);
-		Antlr3AstNode literal528 = default(Antlr3AstNode);
-		Antlr3AstNode creator529 = default(Antlr3AstNode);
-		Antlr3AstNode primitiveType530 = default(Antlr3AstNode);
+		IToken string_literal532 = default(IToken);
+		Antlr3AstNode parExpression512 = default(Antlr3AstNode);
+		Antlr3AstNode identifierSuffix516 = default(Antlr3AstNode);
+		Antlr3AstNode identifierSuffix520 = default(Antlr3AstNode);
+		Antlr3AstNode superSuffix522 = default(Antlr3AstNode);
+		Antlr3AstNode literal523 = default(Antlr3AstNode);
+		Antlr3AstNode creator524 = default(Antlr3AstNode);
+		Antlr3AstNode primitiveType525 = default(Antlr3AstNode);
 
-		object string_literal518_tree = default(object);
-		object char_literal519_tree = default(object);
-		object IDENTIFIER520_tree = default(object);
-		object IDENTIFIER522_tree = default(object);
-		object char_literal523_tree = default(object);
-		object IDENTIFIER524_tree = default(object);
-		object string_literal526_tree = default(object);
+		object string_literal513_tree = default(object);
+		object char_literal514_tree = default(object);
+		object IDENTIFIER515_tree = default(object);
+		object IDENTIFIER517_tree = default(object);
+		object char_literal518_tree = default(object);
+		object IDENTIFIER519_tree = default(object);
+		object string_literal521_tree = default(object);
+		object char_literal526_tree = default(object);
+		object char_literal527_tree = default(object);
+		object char_literal528_tree = default(object);
+		object string_literal529_tree = default(object);
+		object string_literal530_tree = default(object);
 		object char_literal531_tree = default(object);
-		object char_literal532_tree = default(object);
-		object char_literal533_tree = default(object);
-		object string_literal534_tree = default(object);
-		object string_literal535_tree = default(object);
-		object char_literal536_tree = default(object);
-		object string_literal537_tree = default(object);
+		object string_literal532_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "primary");
-		DebugLocation(1137, 4);
+		DebugLocation(1128, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 95)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1138:5: ( parExpression | 'this' ( '.' IDENTIFIER )* ( identifierSuffix )? | IDENTIFIER ( '.' IDENTIFIER )* ( identifierSuffix )? | 'super' superSuffix | literal | creator | primitiveType ( '[' ']' )* '.' 'class' | 'void' '.' 'class' )
-			int alt150=8;
-			try { DebugEnterDecision(150, false);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1129:5: ( parExpression | 'this' ( '.' IDENTIFIER )* ( identifierSuffix )? | IDENTIFIER ( '.' IDENTIFIER )* ( identifierSuffix )? | 'super' superSuffix | literal | creator | primitiveType ( '[' ']' )* '.' 'class' | 'void' '.' 'class' )
+			int alt148=8;
+			try { DebugEnterDecision(148, false);
 			switch (input.LA(1))
 			{
 			case LPAREN:
 				{
-				alt150 = 1;
+				alt148 = 1;
 				}
 				break;
 			case THIS:
 				{
-				alt150 = 2;
+				alt148 = 2;
 				}
 				break;
 			case IDENTIFIER:
 				{
-				alt150 = 3;
+				alt148 = 3;
 				}
 				break;
 			case SUPER:
 				{
-				alt150 = 4;
+				alt148 = 4;
 				}
 				break;
 			case CHARLITERAL:
@@ -19095,12 +18978,12 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case STRINGLITERAL:
 			case TRUE:
 				{
-				alt150 = 5;
+				alt148 = 5;
 				}
 				break;
 			case NEW:
 				{
-				alt150 = 6;
+				alt148 = 6;
 				}
 				break;
 			case BOOLEAN:
@@ -19112,55 +18995,186 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case LONG:
 			case SHORT:
 				{
-				alt150 = 7;
+				alt148 = 7;
 				}
 				break;
 			case VOID:
 				{
-				alt150 = 8;
+				alt148 = 8;
 				}
 				break;
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 150, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 148, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(150); }
-			switch (alt150)
+			} finally { DebugExitDecision(148); }
+			switch (alt148)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1138:9: parExpression
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1129:9: parExpression
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1138, 9);
-				PushFollow(Follow._parExpression_in_primary6863);
-				parExpression517=parExpression();
+				DebugLocation(1129, 9);
+				PushFollow(Follow._parExpression_in_primary6748);
+				parExpression512=parExpression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, parExpression517.Tree, parExpression517, "parExpression517", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, parExpression512.Tree, parExpression512, "parExpression512", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1139:9: 'this' ( '.' IDENTIFIER )* ( identifierSuffix )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1130:9: 'this' ( '.' IDENTIFIER )* ( identifierSuffix )?
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1139, 9);
-				string_literal518=(IToken)Match(input,THIS,Follow._THIS_in_primary6885); if (state.failed) return retval;
+				DebugLocation(1130, 9);
+				string_literal513=(IToken)Match(input,THIS,Follow._THIS_in_primary6770); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal518_tree = (object)adaptor.Create(string_literal518, "string_literal518", retval);
-				adaptor.AddChild(root_0, string_literal518_tree);
+				string_literal513_tree = (object)adaptor.Create(string_literal513, "string_literal513", retval);
+				adaptor.AddChild(root_0, string_literal513_tree);
 				}
-				DebugLocation(1140, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1140:9: ( '.' IDENTIFIER )*
+				DebugLocation(1131, 9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1131:9: ( '.' IDENTIFIER )*
+				try { DebugEnterSubRule(143);
+				while (true)
+				{
+					int alt143=2;
+					try { DebugEnterDecision(143, false);
+					int LA143_1 = input.LA(1);
+
+					if ((LA143_1==DOT))
+					{
+						int LA143_2 = input.LA(2);
+
+						if ((LA143_2==IDENTIFIER))
+						{
+							int LA143_3 = input.LA(3);
+
+							if ((EvaluatePredicate(synpred219_Java_fragment)))
+							{
+								alt143 = 1;
+							}
+
+
+						}
+
+
+					}
+
+
+					} finally { DebugExitDecision(143); }
+					switch ( alt143 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1131:10: '.' IDENTIFIER
+						{
+						DebugLocation(1131, 10);
+						char_literal514=(IToken)Match(input,DOT,Follow._DOT_in_primary6781); if (state.failed) return retval;
+						if (state.backtracking == 0) {
+						char_literal514_tree = (object)adaptor.Create(char_literal514, "char_literal514", retval);
+						adaptor.AddChild(root_0, char_literal514_tree);
+						}
+						DebugLocation(1131, 14);
+						IDENTIFIER515=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_primary6783); if (state.failed) return retval;
+						if (state.backtracking == 0) {
+						IDENTIFIER515_tree = (object)adaptor.Create(IDENTIFIER515, "IDENTIFIER515", retval);
+						adaptor.AddChild(root_0, IDENTIFIER515_tree);
+						}
+
+						}
+						break;
+
+					default:
+						goto loop143;
+					}
+				}
+
+				loop143:
+					;
+
+				} finally { DebugExitSubRule(143); }
+
+				DebugLocation(1133, 9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1133:9: ( identifierSuffix )?
+				int alt144=2;
+				try { DebugEnterSubRule(144);
+				try { DebugEnterDecision(144, false);
+				switch (input.LA(1))
+				{
+				case LBRACKET:
+					{
+					int LA144_2 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred220_Java_fragment)))
+					{
+						alt144 = 1;
+					}
+					}
+					break;
+				case LPAREN:
+					{
+					alt144 = 1;
+					}
+					break;
+				case DOT:
+					{
+					int LA144_2 = input.LA(2);
+
+					if ((EvaluatePredicate(synpred220_Java_fragment)))
+					{
+						alt144 = 1;
+					}
+					}
+					break;
+				}
+
+				} finally { DebugExitDecision(144); }
+				switch (alt144)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1133:10: identifierSuffix
+					{
+					DebugLocation(1133, 10);
+					PushFollow(Follow._identifierSuffix_in_primary6805);
+					identifierSuffix516=identifierSuffix();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, identifierSuffix516.Tree, identifierSuffix516, "identifierSuffix516", retval);
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(144); }
+
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1135:9: IDENTIFIER ( '.' IDENTIFIER )* ( identifierSuffix )?
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(1135, 9);
+				IDENTIFIER517=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_primary6826); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				IDENTIFIER517_tree = (object)adaptor.Create(IDENTIFIER517, "IDENTIFIER517", retval);
+				adaptor.AddChild(root_0, IDENTIFIER517_tree);
+				}
+				DebugLocation(1136, 9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1136:9: ( '.' IDENTIFIER )*
 				try { DebugEnterSubRule(145);
 				while (true)
 				{
@@ -19176,7 +19190,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						{
 							int LA145_3 = input.LA(3);
 
-							if ((EvaluatePredicate(synpred221_Java_fragment)))
+							if ((EvaluatePredicate(synpred222_Java_fragment)))
 							{
 								alt145 = 1;
 							}
@@ -19193,19 +19207,19 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1140:10: '.' IDENTIFIER
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1136:10: '.' IDENTIFIER
 						{
-						DebugLocation(1140, 10);
-						char_literal519=(IToken)Match(input,DOT,Follow._DOT_in_primary6896); if (state.failed) return retval;
+						DebugLocation(1136, 10);
+						char_literal518=(IToken)Match(input,DOT,Follow._DOT_in_primary6837); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						char_literal519_tree = (object)adaptor.Create(char_literal519, "char_literal519", retval);
-						adaptor.AddChild(root_0, char_literal519_tree);
+						char_literal518_tree = (object)adaptor.Create(char_literal518, "char_literal518", retval);
+						adaptor.AddChild(root_0, char_literal518_tree);
 						}
-						DebugLocation(1140, 14);
-						IDENTIFIER520=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_primary6898); if (state.failed) return retval;
+						DebugLocation(1136, 14);
+						IDENTIFIER519=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_primary6839); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						IDENTIFIER520_tree = (object)adaptor.Create(IDENTIFIER520, "IDENTIFIER520", retval);
-						adaptor.AddChild(root_0, IDENTIFIER520_tree);
+						IDENTIFIER519_tree = (object)adaptor.Create(IDENTIFIER519, "IDENTIFIER519", retval);
+						adaptor.AddChild(root_0, IDENTIFIER519_tree);
 						}
 
 						}
@@ -19221,8 +19235,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 				} finally { DebugExitSubRule(145); }
 
-				DebugLocation(1142, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1142:9: ( identifierSuffix )?
+				DebugLocation(1138, 9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1138:9: ( identifierSuffix )?
 				int alt146=2;
 				try { DebugEnterSubRule(146);
 				try { DebugEnterDecision(146, false);
@@ -19232,7 +19246,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					{
 					int LA146_2 = input.LA(2);
 
-					if ((EvaluatePredicate(synpred222_Java_fragment)))
+					if ((EvaluatePredicate(synpred223_Java_fragment)))
 					{
 						alt146 = 1;
 					}
@@ -19247,7 +19261,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					{
 					int LA146_2 = input.LA(2);
 
-					if ((EvaluatePredicate(synpred222_Java_fragment)))
+					if ((EvaluatePredicate(synpred223_Java_fragment)))
 					{
 						alt146 = 1;
 					}
@@ -19260,14 +19274,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1142:10: identifierSuffix
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1138:10: identifierSuffix
 					{
-					DebugLocation(1142, 10);
-					PushFollow(Follow._identifierSuffix_in_primary6920);
-					identifierSuffix521=identifierSuffix();
+					DebugLocation(1138, 10);
+					PushFollow(Follow._identifierSuffix_in_primary6861);
+					identifierSuffix520=identifierSuffix();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, identifierSuffix521.Tree, identifierSuffix521, "identifierSuffix521", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, identifierSuffix520.Tree, identifierSuffix520, "identifierSuffix520", retval);
 
 					}
 					break;
@@ -19278,20 +19292,71 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 				}
 				break;
-			case 3:
-				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1144:9: IDENTIFIER ( '.' IDENTIFIER )* ( identifierSuffix )?
+			case 4:
+				DebugEnterAlt(4);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1140:9: 'super' superSuffix
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(1140, 9);
+				string_literal521=(IToken)Match(input,SUPER,Follow._SUPER_in_primary6882); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal521_tree = (object)adaptor.Create(string_literal521, "string_literal521", retval);
+				adaptor.AddChild(root_0, string_literal521_tree);
+				}
+				DebugLocation(1141, 9);
+				PushFollow(Follow._superSuffix_in_primary6892);
+				superSuffix522=superSuffix();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, superSuffix522.Tree, superSuffix522, "superSuffix522", retval);
+
+				}
+				break;
+			case 5:
+				DebugEnterAlt(5);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1142:9: literal
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(1142, 9);
+				PushFollow(Follow._literal_in_primary6902);
+				literal523=literal();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, literal523.Tree, literal523, "literal523", retval);
+
+				}
+				break;
+			case 6:
+				DebugEnterAlt(6);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1143:9: creator
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(1143, 9);
+				PushFollow(Follow._creator_in_primary6912);
+				creator524=creator();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, creator524.Tree, creator524, "creator524", retval);
+
+				}
+				break;
+			case 7:
+				DebugEnterAlt(7);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1144:9: primitiveType ( '[' ']' )* '.' 'class'
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(1144, 9);
-				IDENTIFIER522=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_primary6941); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				IDENTIFIER522_tree = (object)adaptor.Create(IDENTIFIER522, "IDENTIFIER522", retval);
-				adaptor.AddChild(root_0, IDENTIFIER522_tree);
-				}
+				PushFollow(Follow._primitiveType_in_primary6922);
+				primitiveType525=primitiveType();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, primitiveType525.Tree, primitiveType525, "primitiveType525", retval);
 				DebugLocation(1145, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1145:9: ( '.' IDENTIFIER )*
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1145:9: ( '[' ']' )*
 				try { DebugEnterSubRule(147);
 				while (true)
 				{
@@ -19299,23 +19364,9 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(147, false);
 					int LA147_1 = input.LA(1);
 
-					if ((LA147_1==DOT))
+					if ((LA147_1==LBRACKET))
 					{
-						int LA147_2 = input.LA(2);
-
-						if ((LA147_2==IDENTIFIER))
-						{
-							int LA147_3 = input.LA(3);
-
-							if ((EvaluatePredicate(synpred224_Java_fragment)))
-							{
-								alt147 = 1;
-							}
-
-
-						}
-
-
+						alt147 = 1;
 					}
 
 
@@ -19324,19 +19375,19 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1145:10: '.' IDENTIFIER
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1145:10: '[' ']'
 						{
 						DebugLocation(1145, 10);
-						char_literal523=(IToken)Match(input,DOT,Follow._DOT_in_primary6952); if (state.failed) return retval;
+						char_literal526=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_primary6933); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						char_literal523_tree = (object)adaptor.Create(char_literal523, "char_literal523", retval);
-						adaptor.AddChild(root_0, char_literal523_tree);
+						char_literal526_tree = (object)adaptor.Create(char_literal526, "char_literal526", retval);
+						adaptor.AddChild(root_0, char_literal526_tree);
 						}
 						DebugLocation(1145, 14);
-						IDENTIFIER524=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_primary6954); if (state.failed) return retval;
+						char_literal527=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_primary6935); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						IDENTIFIER524_tree = (object)adaptor.Create(IDENTIFIER524, "IDENTIFIER524", retval);
-						adaptor.AddChild(root_0, IDENTIFIER524_tree);
+						char_literal527_tree = (object)adaptor.Create(char_literal527, "char_literal527", retval);
+						adaptor.AddChild(root_0, char_literal527_tree);
 						}
 
 						}
@@ -19353,211 +19404,43 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				} finally { DebugExitSubRule(147); }
 
 				DebugLocation(1147, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1147:9: ( identifierSuffix )?
-				int alt148=2;
-				try { DebugEnterSubRule(148);
-				try { DebugEnterDecision(148, false);
-				switch (input.LA(1))
-				{
-				case LBRACKET:
-					{
-					int LA148_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred225_Java_fragment)))
-					{
-						alt148 = 1;
-					}
-					}
-					break;
-				case LPAREN:
-					{
-					alt148 = 1;
-					}
-					break;
-				case DOT:
-					{
-					int LA148_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred225_Java_fragment)))
-					{
-						alt148 = 1;
-					}
-					}
-					break;
-				}
-
-				} finally { DebugExitDecision(148); }
-				switch (alt148)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1147:10: identifierSuffix
-					{
-					DebugLocation(1147, 10);
-					PushFollow(Follow._identifierSuffix_in_primary6976);
-					identifierSuffix525=identifierSuffix();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, identifierSuffix525.Tree, identifierSuffix525, "identifierSuffix525", retval);
-
-					}
-					break;
-
-				}
-				} finally { DebugExitSubRule(148); }
-
-
-				}
-				break;
-			case 4:
-				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1149:9: 'super' superSuffix
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1149, 9);
-				string_literal526=(IToken)Match(input,SUPER,Follow._SUPER_in_primary6997); if (state.failed) return retval;
+				char_literal528=(IToken)Match(input,DOT,Follow._DOT_in_primary6956); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal526_tree = (object)adaptor.Create(string_literal526, "string_literal526", retval);
-				adaptor.AddChild(root_0, string_literal526_tree);
+				char_literal528_tree = (object)adaptor.Create(char_literal528, "char_literal528", retval);
+				adaptor.AddChild(root_0, char_literal528_tree);
 				}
-				DebugLocation(1150, 9);
-				PushFollow(Follow._superSuffix_in_primary7007);
-				superSuffix527=superSuffix();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, superSuffix527.Tree, superSuffix527, "superSuffix527", retval);
-
-				}
-				break;
-			case 5:
-				DebugEnterAlt(5);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1151:9: literal
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1151, 9);
-				PushFollow(Follow._literal_in_primary7017);
-				literal528=literal();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, literal528.Tree, literal528, "literal528", retval);
-
-				}
-				break;
-			case 6:
-				DebugEnterAlt(6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1152:9: creator
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1152, 9);
-				PushFollow(Follow._creator_in_primary7027);
-				creator529=creator();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, creator529.Tree, creator529, "creator529", retval);
-
-				}
-				break;
-			case 7:
-				DebugEnterAlt(7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1153:9: primitiveType ( '[' ']' )* '.' 'class'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1153, 9);
-				PushFollow(Follow._primitiveType_in_primary7037);
-				primitiveType530=primitiveType();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, primitiveType530.Tree, primitiveType530, "primitiveType530", retval);
-				DebugLocation(1154, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1154:9: ( '[' ']' )*
-				try { DebugEnterSubRule(149);
-				while (true)
-				{
-					int alt149=2;
-					try { DebugEnterDecision(149, false);
-					int LA149_1 = input.LA(1);
-
-					if ((LA149_1==LBRACKET))
-					{
-						alt149 = 1;
-					}
-
-
-					} finally { DebugExitDecision(149); }
-					switch ( alt149 )
-					{
-					case 1:
-						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1154:10: '[' ']'
-						{
-						DebugLocation(1154, 10);
-						char_literal531=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_primary7048); if (state.failed) return retval;
-						if (state.backtracking == 0) {
-						char_literal531_tree = (object)adaptor.Create(char_literal531, "char_literal531", retval);
-						adaptor.AddChild(root_0, char_literal531_tree);
-						}
-						DebugLocation(1154, 14);
-						char_literal532=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_primary7050); if (state.failed) return retval;
-						if (state.backtracking == 0) {
-						char_literal532_tree = (object)adaptor.Create(char_literal532, "char_literal532", retval);
-						adaptor.AddChild(root_0, char_literal532_tree);
-						}
-
-						}
-						break;
-
-					default:
-						goto loop149;
-					}
-				}
-
-				loop149:
-					;
-
-				} finally { DebugExitSubRule(149); }
-
-				DebugLocation(1156, 9);
-				char_literal533=(IToken)Match(input,DOT,Follow._DOT_in_primary7071); if (state.failed) return retval;
+				DebugLocation(1147, 13);
+				string_literal529=(IToken)Match(input,CLASS,Follow._CLASS_in_primary6958); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal533_tree = (object)adaptor.Create(char_literal533, "char_literal533", retval);
-				adaptor.AddChild(root_0, char_literal533_tree);
-				}
-				DebugLocation(1156, 13);
-				string_literal534=(IToken)Match(input,CLASS,Follow._CLASS_in_primary7073); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal534_tree = (object)adaptor.Create(string_literal534, "string_literal534", retval);
-				adaptor.AddChild(root_0, string_literal534_tree);
+				string_literal529_tree = (object)adaptor.Create(string_literal529, "string_literal529", retval);
+				adaptor.AddChild(root_0, string_literal529_tree);
 				}
 
 				}
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1157:9: 'void' '.' 'class'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1148:9: 'void' '.' 'class'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1157, 9);
-				string_literal535=(IToken)Match(input,VOID,Follow._VOID_in_primary7083); if (state.failed) return retval;
+				DebugLocation(1148, 9);
+				string_literal530=(IToken)Match(input,VOID,Follow._VOID_in_primary6968); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal535_tree = (object)adaptor.Create(string_literal535, "string_literal535", retval);
-				adaptor.AddChild(root_0, string_literal535_tree);
+				string_literal530_tree = (object)adaptor.Create(string_literal530, "string_literal530", retval);
+				adaptor.AddChild(root_0, string_literal530_tree);
 				}
-				DebugLocation(1157, 16);
-				char_literal536=(IToken)Match(input,DOT,Follow._DOT_in_primary7085); if (state.failed) return retval;
+				DebugLocation(1148, 16);
+				char_literal531=(IToken)Match(input,DOT,Follow._DOT_in_primary6970); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal536_tree = (object)adaptor.Create(char_literal536, "char_literal536", retval);
-				adaptor.AddChild(root_0, char_literal536_tree);
+				char_literal531_tree = (object)adaptor.Create(char_literal531, "char_literal531", retval);
+				adaptor.AddChild(root_0, char_literal531_tree);
 				}
-				DebugLocation(1157, 20);
-				string_literal537=(IToken)Match(input,CLASS,Follow._CLASS_in_primary7087); if (state.failed) return retval;
+				DebugLocation(1148, 20);
+				string_literal532=(IToken)Match(input,CLASS,Follow._CLASS_in_primary6972); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal537_tree = (object)adaptor.Create(string_literal537, "string_literal537", retval);
-				adaptor.AddChild(root_0, string_literal537_tree);
+				string_literal532_tree = (object)adaptor.Create(string_literal532, "string_literal532", retval);
+				adaptor.AddChild(root_0, string_literal532_tree);
 				}
 
 				}
@@ -19586,7 +19469,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 95, primary_StartIndex); }
 
 		}
-		DebugLocation(1158, 4);
+		DebugLocation(1149, 4);
 		} finally { DebugExitRule(GrammarFileName, "primary"); }
 		return retval;
 
@@ -19596,7 +19479,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_superSuffix();
 	partial void LeaveRule_superSuffix();
 	// $ANTLR start "superSuffix"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1160:1: superSuffix : ( arguments | '.' ( typeArguments )? IDENTIFIER ( arguments )? );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1151:1: superSuffix : ( arguments | '.' ( typeArguments )? IDENTIFIER ( arguments )? );
 	[GrammarRule("superSuffix")]
 	private Antlr3AstNode superSuffix()
 	{
@@ -19609,137 +19492,137 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal539 = default(IToken);
-		IToken IDENTIFIER541 = default(IToken);
-		Antlr3AstNode arguments538 = default(Antlr3AstNode);
-		Antlr3AstNode typeArguments540 = default(Antlr3AstNode);
-		Antlr3AstNode arguments542 = default(Antlr3AstNode);
+		IToken char_literal534 = default(IToken);
+		IToken IDENTIFIER536 = default(IToken);
+		Antlr3AstNode arguments533 = default(Antlr3AstNode);
+		Antlr3AstNode typeArguments535 = default(Antlr3AstNode);
+		Antlr3AstNode arguments537 = default(Antlr3AstNode);
 
-		object char_literal539_tree = default(object);
-		object IDENTIFIER541_tree = default(object);
+		object char_literal534_tree = default(object);
+		object IDENTIFIER536_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "superSuffix");
-		DebugLocation(1160, 4);
+		DebugLocation(1151, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 96)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1161:5: ( arguments | '.' ( typeArguments )? IDENTIFIER ( arguments )? )
-			int alt153=2;
-			try { DebugEnterDecision(153, false);
-			int LA153_1 = input.LA(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1152:5: ( arguments | '.' ( typeArguments )? IDENTIFIER ( arguments )? )
+			int alt151=2;
+			try { DebugEnterDecision(151, false);
+			int LA151_1 = input.LA(1);
 
-			if ((LA153_1==LPAREN))
+			if ((LA151_1==LPAREN))
 			{
-				alt153 = 1;
+				alt151 = 1;
 			}
-			else if ((LA153_1==DOT))
+			else if ((LA151_1==DOT))
 			{
-				alt153 = 2;
+				alt151 = 2;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 153, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 151, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(153); }
-			switch (alt153)
+			} finally { DebugExitDecision(151); }
+			switch (alt151)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1161:9: arguments
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1152:9: arguments
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1161, 9);
-				PushFollow(Follow._arguments_in_superSuffix7106);
-				arguments538=arguments();
+				DebugLocation(1152, 9);
+				PushFollow(Follow._arguments_in_superSuffix6991);
+				arguments533=arguments();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, arguments538.Tree, arguments538, "arguments538", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, arguments533.Tree, arguments533, "arguments533", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1162:9: '.' ( typeArguments )? IDENTIFIER ( arguments )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1153:9: '.' ( typeArguments )? IDENTIFIER ( arguments )?
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1162, 9);
-				char_literal539=(IToken)Match(input,DOT,Follow._DOT_in_superSuffix7116); if (state.failed) return retval;
+				DebugLocation(1153, 9);
+				char_literal534=(IToken)Match(input,DOT,Follow._DOT_in_superSuffix7001); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal539_tree = (object)adaptor.Create(char_literal539, "char_literal539", retval);
-				adaptor.AddChild(root_0, char_literal539_tree);
+				char_literal534_tree = (object)adaptor.Create(char_literal534, "char_literal534", retval);
+				adaptor.AddChild(root_0, char_literal534_tree);
 				}
-				DebugLocation(1162, 13);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1162:13: ( typeArguments )?
-				int alt151=2;
-				try { DebugEnterSubRule(151);
-				try { DebugEnterDecision(151, false);
-				int LA151_1 = input.LA(1);
+				DebugLocation(1153, 13);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1153:13: ( typeArguments )?
+				int alt149=2;
+				try { DebugEnterSubRule(149);
+				try { DebugEnterDecision(149, false);
+				int LA149_1 = input.LA(1);
 
-				if ((LA151_1==LT))
+				if ((LA149_1==LT))
 				{
-					alt151 = 1;
+					alt149 = 1;
 				}
-				} finally { DebugExitDecision(151); }
-				switch (alt151)
+				} finally { DebugExitDecision(149); }
+				switch (alt149)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1162:14: typeArguments
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1153:14: typeArguments
 					{
-					DebugLocation(1162, 14);
-					PushFollow(Follow._typeArguments_in_superSuffix7119);
-					typeArguments540=typeArguments();
+					DebugLocation(1153, 14);
+					PushFollow(Follow._typeArguments_in_superSuffix7004);
+					typeArguments535=typeArguments();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, typeArguments540.Tree, typeArguments540, "typeArguments540", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, typeArguments535.Tree, typeArguments535, "typeArguments535", retval);
 
 					}
 					break;
 
 				}
-				} finally { DebugExitSubRule(151); }
+				} finally { DebugExitSubRule(149); }
 
-				DebugLocation(1164, 9);
-				IDENTIFIER541=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_superSuffix7140); if (state.failed) return retval;
+				DebugLocation(1155, 9);
+				IDENTIFIER536=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_superSuffix7025); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				IDENTIFIER541_tree = (object)adaptor.Create(IDENTIFIER541, "IDENTIFIER541", retval);
-				adaptor.AddChild(root_0, IDENTIFIER541_tree);
+				IDENTIFIER536_tree = (object)adaptor.Create(IDENTIFIER536, "IDENTIFIER536", retval);
+				adaptor.AddChild(root_0, IDENTIFIER536_tree);
 				}
-				DebugLocation(1165, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1165:9: ( arguments )?
-				int alt152=2;
-				try { DebugEnterSubRule(152);
-				try { DebugEnterDecision(152, false);
-				int LA152_1 = input.LA(1);
+				DebugLocation(1156, 9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1156:9: ( arguments )?
+				int alt150=2;
+				try { DebugEnterSubRule(150);
+				try { DebugEnterDecision(150, false);
+				int LA150_1 = input.LA(1);
 
-				if ((LA152_1==LPAREN))
+				if ((LA150_1==LPAREN))
 				{
-					alt152 = 1;
+					alt150 = 1;
 				}
-				} finally { DebugExitDecision(152); }
-				switch (alt152)
+				} finally { DebugExitDecision(150); }
+				switch (alt150)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1165:10: arguments
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1156:10: arguments
 					{
-					DebugLocation(1165, 10);
-					PushFollow(Follow._arguments_in_superSuffix7151);
-					arguments542=arguments();
+					DebugLocation(1156, 10);
+					PushFollow(Follow._arguments_in_superSuffix7036);
+					arguments537=arguments();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, arguments542.Tree, arguments542, "arguments542", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, arguments537.Tree, arguments537, "arguments537", retval);
 
 					}
 					break;
 
 				}
-				} finally { DebugExitSubRule(152); }
+				} finally { DebugExitSubRule(150); }
 
 
 				}
@@ -19768,7 +19651,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 96, superSuffix_StartIndex); }
 
 		}
-		DebugLocation(1167, 4);
+		DebugLocation(1158, 4);
 		} finally { DebugExitRule(GrammarFileName, "superSuffix"); }
 		return retval;
 
@@ -19778,7 +19661,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_identifierSuffix();
 	partial void LeaveRule_identifierSuffix();
 	// $ANTLR start "identifierSuffix"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1169:1: identifierSuffix : ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' nonWildcardTypeArguments IDENTIFIER arguments | '.' 'this' | '.' 'super' arguments | innerCreator );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1160:1: identifierSuffix : ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' nonWildcardTypeArguments IDENTIFIER arguments | '.' 'this' | '.' 'super' arguments | innerCreator );
 	[GrammarRule("identifierSuffix")]
 	private Antlr3AstNode identifierSuffix()
 	{
@@ -19791,68 +19674,68 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal543 = default(IToken);
+		IToken char_literal538 = default(IToken);
+		IToken char_literal539 = default(IToken);
+		IToken char_literal540 = default(IToken);
+		IToken string_literal541 = default(IToken);
+		IToken char_literal542 = default(IToken);
 		IToken char_literal544 = default(IToken);
-		IToken char_literal545 = default(IToken);
-		IToken string_literal546 = default(IToken);
-		IToken char_literal547 = default(IToken);
-		IToken char_literal549 = default(IToken);
-		IToken char_literal551 = default(IToken);
-		IToken string_literal552 = default(IToken);
-		IToken char_literal553 = default(IToken);
-		IToken IDENTIFIER555 = default(IToken);
-		IToken char_literal557 = default(IToken);
-		IToken string_literal558 = default(IToken);
-		IToken char_literal559 = default(IToken);
-		IToken string_literal560 = default(IToken);
-		Antlr3AstNode expression548 = default(Antlr3AstNode);
-		Antlr3AstNode arguments550 = default(Antlr3AstNode);
-		Antlr3AstNode nonWildcardTypeArguments554 = default(Antlr3AstNode);
+		IToken char_literal546 = default(IToken);
+		IToken string_literal547 = default(IToken);
+		IToken char_literal548 = default(IToken);
+		IToken IDENTIFIER550 = default(IToken);
+		IToken char_literal552 = default(IToken);
+		IToken string_literal553 = default(IToken);
+		IToken char_literal554 = default(IToken);
+		IToken string_literal555 = default(IToken);
+		Antlr3AstNode expression543 = default(Antlr3AstNode);
+		Antlr3AstNode arguments545 = default(Antlr3AstNode);
+		Antlr3AstNode nonWildcardTypeArguments549 = default(Antlr3AstNode);
+		Antlr3AstNode arguments551 = default(Antlr3AstNode);
 		Antlr3AstNode arguments556 = default(Antlr3AstNode);
-		Antlr3AstNode arguments561 = default(Antlr3AstNode);
-		Antlr3AstNode innerCreator562 = default(Antlr3AstNode);
+		Antlr3AstNode innerCreator557 = default(Antlr3AstNode);
 
-		object char_literal543_tree = default(object);
+		object char_literal538_tree = default(object);
+		object char_literal539_tree = default(object);
+		object char_literal540_tree = default(object);
+		object string_literal541_tree = default(object);
+		object char_literal542_tree = default(object);
 		object char_literal544_tree = default(object);
-		object char_literal545_tree = default(object);
-		object string_literal546_tree = default(object);
-		object char_literal547_tree = default(object);
-		object char_literal549_tree = default(object);
-		object char_literal551_tree = default(object);
-		object string_literal552_tree = default(object);
-		object char_literal553_tree = default(object);
-		object IDENTIFIER555_tree = default(object);
-		object char_literal557_tree = default(object);
-		object string_literal558_tree = default(object);
-		object char_literal559_tree = default(object);
-		object string_literal560_tree = default(object);
+		object char_literal546_tree = default(object);
+		object string_literal547_tree = default(object);
+		object char_literal548_tree = default(object);
+		object IDENTIFIER550_tree = default(object);
+		object char_literal552_tree = default(object);
+		object string_literal553_tree = default(object);
+		object char_literal554_tree = default(object);
+		object string_literal555_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "identifierSuffix");
-		DebugLocation(1169, 4);
+		DebugLocation(1160, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 97)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1170:5: ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' nonWildcardTypeArguments IDENTIFIER arguments | '.' 'this' | '.' 'super' arguments | innerCreator )
-			int alt156=8;
-			try { DebugEnterDecision(156, false);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1161:5: ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' nonWildcardTypeArguments IDENTIFIER arguments | '.' 'this' | '.' 'super' arguments | innerCreator )
+			int alt154=8;
+			try { DebugEnterDecision(154, false);
 			switch (input.LA(1))
 			{
 			case LBRACKET:
 				{
-				int LA156_2 = input.LA(2);
+				int LA154_2 = input.LA(2);
 
-				if ((LA156_2==RBRACKET))
+				if ((LA154_2==RBRACKET))
 				{
-					alt156 = 1;
+					alt154 = 1;
 				}
-				else if ((LA156_2==BANG||LA156_2==BOOLEAN||LA156_2==BYTE||(LA156_2>=CHAR && LA156_2<=CHARLITERAL)||(LA156_2>=DOUBLE && LA156_2<=DOUBLELITERAL)||LA156_2==FALSE||(LA156_2>=FLOAT && LA156_2<=FLOATLITERAL)||LA156_2==IDENTIFIER||LA156_2==INT||LA156_2==INTLITERAL||(LA156_2>=LONG && LA156_2<=LPAREN)||(LA156_2>=NEW && LA156_2<=NULL)||LA156_2==PLUS||LA156_2==PLUSPLUS||LA156_2==SHORT||(LA156_2>=STRINGLITERAL && LA156_2<=SUB)||(LA156_2>=SUBSUB && LA156_2<=SUPER)||LA156_2==THIS||LA156_2==TILDE||LA156_2==TRUE||LA156_2==VOID))
+				else if ((LA154_2==BANG||LA154_2==BOOLEAN||LA154_2==BYTE||(LA154_2>=CHAR && LA154_2<=CHARLITERAL)||(LA154_2>=DOUBLE && LA154_2<=DOUBLELITERAL)||LA154_2==FALSE||(LA154_2>=FLOAT && LA154_2<=FLOATLITERAL)||LA154_2==IDENTIFIER||LA154_2==INT||LA154_2==INTLITERAL||(LA154_2>=LONG && LA154_2<=LPAREN)||(LA154_2>=NEW && LA154_2<=NULL)||LA154_2==PLUS||LA154_2==PLUSPLUS||LA154_2==SHORT||(LA154_2>=STRINGLITERAL && LA154_2<=SUB)||(LA154_2>=SUBSUB && LA154_2<=SUPER)||LA154_2==THIS||LA154_2==TILDE||LA154_2==TRUE||LA154_2==VOID))
 				{
-					alt156 = 2;
+					alt154 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 156, 1, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 154, 1, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -19860,7 +19743,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 			case LPAREN:
 				{
-				alt156 = 3;
+				alt154 = 3;
 				}
 				break;
 			case DOT:
@@ -19869,33 +19752,33 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case CLASS:
 					{
-					alt156 = 4;
+					alt154 = 4;
 					}
 					break;
 				case THIS:
 					{
-					alt156 = 6;
+					alt154 = 6;
 					}
 					break;
 				case SUPER:
 					{
-					alt156 = 7;
+					alt154 = 7;
 					}
 					break;
 				case NEW:
 					{
-					alt156 = 8;
+					alt154 = 8;
 					}
 					break;
 				case LT:
 					{
-					alt156 = 5;
+					alt154 = 5;
 					}
 					break;
 				default:
 					{
 						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 156, 3, input, 2);
+						NoViableAltException nvae = new NoViableAltException("", 154, 3, input, 2);
 						DebugRecognitionException(nvae);
 						throw nvae;
 					}
@@ -19906,52 +19789,141 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 156, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 154, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(156); }
-			switch (alt156)
+			} finally { DebugExitDecision(154); }
+			switch (alt154)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1170:9: ( '[' ']' )+ '.' 'class'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1161:9: ( '[' ']' )+ '.' 'class'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1170, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1170:9: ( '[' ']' )+
-				int cnt154=0;
-				try { DebugEnterSubRule(154);
+				DebugLocation(1161, 9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1161:9: ( '[' ']' )+
+				int cnt152=0;
+				try { DebugEnterSubRule(152);
 				while (true)
 				{
-					int alt154=2;
-					try { DebugEnterDecision(154, false);
-					int LA154_1 = input.LA(1);
+					int alt152=2;
+					try { DebugEnterDecision(152, false);
+					int LA152_1 = input.LA(1);
 
-					if ((LA154_1==LBRACKET))
+					if ((LA152_1==LBRACKET))
 					{
-						alt154 = 1;
+						alt152 = 1;
 					}
 
 
-					} finally { DebugExitDecision(154); }
-					switch (alt154)
+					} finally { DebugExitDecision(152); }
+					switch (alt152)
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1170:10: '[' ']'
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1161:10: '[' ']'
 						{
-						DebugLocation(1170, 10);
-						char_literal543=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_identifierSuffix7182); if (state.failed) return retval;
+						DebugLocation(1161, 10);
+						char_literal538=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_identifierSuffix7067); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						char_literal543_tree = (object)adaptor.Create(char_literal543, "char_literal543", retval);
-						adaptor.AddChild(root_0, char_literal543_tree);
+						char_literal538_tree = (object)adaptor.Create(char_literal538, "char_literal538", retval);
+						adaptor.AddChild(root_0, char_literal538_tree);
 						}
-						DebugLocation(1170, 14);
-						char_literal544=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_identifierSuffix7184); if (state.failed) return retval;
+						DebugLocation(1161, 14);
+						char_literal539=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_identifierSuffix7069); if (state.failed) return retval;
+						if (state.backtracking == 0) {
+						char_literal539_tree = (object)adaptor.Create(char_literal539, "char_literal539", retval);
+						adaptor.AddChild(root_0, char_literal539_tree);
+						}
+
+						}
+						break;
+
+					default:
+						if (cnt152 >= 1)
+							goto loop152;
+
+						if (state.backtracking>0) {state.failed=true; return retval;}
+						EarlyExitException eee152 = new EarlyExitException( 152, input );
+						DebugRecognitionException(eee152);
+						throw eee152;
+					}
+					cnt152++;
+				}
+				loop152:
+					;
+
+				} finally { DebugExitSubRule(152); }
+
+				DebugLocation(1163, 9);
+				char_literal540=(IToken)Match(input,DOT,Follow._DOT_in_identifierSuffix7090); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal540_tree = (object)adaptor.Create(char_literal540, "char_literal540", retval);
+				adaptor.AddChild(root_0, char_literal540_tree);
+				}
+				DebugLocation(1163, 13);
+				string_literal541=(IToken)Match(input,CLASS,Follow._CLASS_in_identifierSuffix7092); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal541_tree = (object)adaptor.Create(string_literal541, "string_literal541", retval);
+				adaptor.AddChild(root_0, string_literal541_tree);
+				}
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1164:9: ( '[' expression ']' )+
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(1164, 9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1164:9: ( '[' expression ']' )+
+				int cnt153=0;
+				try { DebugEnterSubRule(153);
+				while (true)
+				{
+					int alt153=2;
+					try { DebugEnterDecision(153, false);
+					int LA153_1 = input.LA(1);
+
+					if ((LA153_1==LBRACKET))
+					{
+						int LA153_2 = input.LA(2);
+
+						if ((EvaluatePredicate(synpred235_Java_fragment)))
+						{
+							alt153 = 1;
+						}
+
+
+					}
+
+
+					} finally { DebugExitDecision(153); }
+					switch (alt153)
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1164:10: '[' expression ']'
+						{
+						DebugLocation(1164, 10);
+						char_literal542=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_identifierSuffix7103); if (state.failed) return retval;
+						if (state.backtracking == 0) {
+						char_literal542_tree = (object)adaptor.Create(char_literal542, "char_literal542", retval);
+						adaptor.AddChild(root_0, char_literal542_tree);
+						}
+						DebugLocation(1164, 14);
+						PushFollow(Follow._expression_in_identifierSuffix7105);
+						expression543=expression();
+						PopFollow();
+						if (state.failed) return retval;
+						if (state.backtracking == 0) adaptor.AddChild(root_0, expression543.Tree, expression543, "expression543", retval);
+						DebugLocation(1164, 25);
+						char_literal544=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_identifierSuffix7107); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 						char_literal544_tree = (object)adaptor.Create(char_literal544, "char_literal544", retval);
 						adaptor.AddChild(root_0, char_literal544_tree);
@@ -19961,175 +19933,134 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						break;
 
 					default:
-						if (cnt154 >= 1)
-							goto loop154;
+						if (cnt153 >= 1)
+							goto loop153;
 
 						if (state.backtracking>0) {state.failed=true; return retval;}
-						EarlyExitException eee154 = new EarlyExitException( 154, input );
-						DebugRecognitionException(eee154);
-						throw eee154;
+						EarlyExitException eee153 = new EarlyExitException( 153, input );
+						DebugRecognitionException(eee153);
+						throw eee153;
 					}
-					cnt154++;
+					cnt153++;
 				}
-				loop154:
+				loop153:
 					;
 
-				} finally { DebugExitSubRule(154); }
-
-				DebugLocation(1172, 9);
-				char_literal545=(IToken)Match(input,DOT,Follow._DOT_in_identifierSuffix7205); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal545_tree = (object)adaptor.Create(char_literal545, "char_literal545", retval);
-				adaptor.AddChild(root_0, char_literal545_tree);
-				}
-				DebugLocation(1172, 13);
-				string_literal546=(IToken)Match(input,CLASS,Follow._CLASS_in_identifierSuffix7207); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal546_tree = (object)adaptor.Create(string_literal546, "string_literal546", retval);
-				adaptor.AddChild(root_0, string_literal546_tree);
-				}
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1173:9: ( '[' expression ']' )+
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1173, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1173:9: ( '[' expression ']' )+
-				int cnt155=0;
-				try { DebugEnterSubRule(155);
-				while (true)
-				{
-					int alt155=2;
-					try { DebugEnterDecision(155, false);
-					int LA155_1 = input.LA(1);
-
-					if ((LA155_1==LBRACKET))
-					{
-						int LA155_2 = input.LA(2);
-
-						if ((EvaluatePredicate(synpred237_Java_fragment)))
-						{
-							alt155 = 1;
-						}
-
-
-					}
-
-
-					} finally { DebugExitDecision(155); }
-					switch (alt155)
-					{
-					case 1:
-						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1173:10: '[' expression ']'
-						{
-						DebugLocation(1173, 10);
-						char_literal547=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_identifierSuffix7218); if (state.failed) return retval;
-						if (state.backtracking == 0) {
-						char_literal547_tree = (object)adaptor.Create(char_literal547, "char_literal547", retval);
-						adaptor.AddChild(root_0, char_literal547_tree);
-						}
-						DebugLocation(1173, 14);
-						PushFollow(Follow._expression_in_identifierSuffix7220);
-						expression548=expression();
-						PopFollow();
-						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, expression548.Tree, expression548, "expression548", retval);
-						DebugLocation(1173, 25);
-						char_literal549=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_identifierSuffix7222); if (state.failed) return retval;
-						if (state.backtracking == 0) {
-						char_literal549_tree = (object)adaptor.Create(char_literal549, "char_literal549", retval);
-						adaptor.AddChild(root_0, char_literal549_tree);
-						}
-
-						}
-						break;
-
-					default:
-						if (cnt155 >= 1)
-							goto loop155;
-
-						if (state.backtracking>0) {state.failed=true; return retval;}
-						EarlyExitException eee155 = new EarlyExitException( 155, input );
-						DebugRecognitionException(eee155);
-						throw eee155;
-					}
-					cnt155++;
-				}
-				loop155:
-					;
-
-				} finally { DebugExitSubRule(155); }
+				} finally { DebugExitSubRule(153); }
 
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1175:9: arguments
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1166:9: arguments
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1175, 9);
-				PushFollow(Follow._arguments_in_identifierSuffix7243);
-				arguments550=arguments();
+				DebugLocation(1166, 9);
+				PushFollow(Follow._arguments_in_identifierSuffix7128);
+				arguments545=arguments();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, arguments550.Tree, arguments550, "arguments550", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, arguments545.Tree, arguments545, "arguments545", retval);
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1176:9: '.' 'class'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1167:9: '.' 'class'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1176, 9);
-				char_literal551=(IToken)Match(input,DOT,Follow._DOT_in_identifierSuffix7253); if (state.failed) return retval;
+				DebugLocation(1167, 9);
+				char_literal546=(IToken)Match(input,DOT,Follow._DOT_in_identifierSuffix7138); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal551_tree = (object)adaptor.Create(char_literal551, "char_literal551", retval);
-				adaptor.AddChild(root_0, char_literal551_tree);
+				char_literal546_tree = (object)adaptor.Create(char_literal546, "char_literal546", retval);
+				adaptor.AddChild(root_0, char_literal546_tree);
 				}
-				DebugLocation(1176, 13);
-				string_literal552=(IToken)Match(input,CLASS,Follow._CLASS_in_identifierSuffix7255); if (state.failed) return retval;
+				DebugLocation(1167, 13);
+				string_literal547=(IToken)Match(input,CLASS,Follow._CLASS_in_identifierSuffix7140); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal552_tree = (object)adaptor.Create(string_literal552, "string_literal552", retval);
-				adaptor.AddChild(root_0, string_literal552_tree);
+				string_literal547_tree = (object)adaptor.Create(string_literal547, "string_literal547", retval);
+				adaptor.AddChild(root_0, string_literal547_tree);
 				}
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1177:9: '.' nonWildcardTypeArguments IDENTIFIER arguments
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1168:9: '.' nonWildcardTypeArguments IDENTIFIER arguments
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1177, 9);
-				char_literal553=(IToken)Match(input,DOT,Follow._DOT_in_identifierSuffix7265); if (state.failed) return retval;
+				DebugLocation(1168, 9);
+				char_literal548=(IToken)Match(input,DOT,Follow._DOT_in_identifierSuffix7150); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal553_tree = (object)adaptor.Create(char_literal553, "char_literal553", retval);
-				adaptor.AddChild(root_0, char_literal553_tree);
+				char_literal548_tree = (object)adaptor.Create(char_literal548, "char_literal548", retval);
+				adaptor.AddChild(root_0, char_literal548_tree);
 				}
-				DebugLocation(1177, 13);
-				PushFollow(Follow._nonWildcardTypeArguments_in_identifierSuffix7267);
-				nonWildcardTypeArguments554=nonWildcardTypeArguments();
+				DebugLocation(1168, 13);
+				PushFollow(Follow._nonWildcardTypeArguments_in_identifierSuffix7152);
+				nonWildcardTypeArguments549=nonWildcardTypeArguments();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, nonWildcardTypeArguments554.Tree, nonWildcardTypeArguments554, "nonWildcardTypeArguments554", retval);
-				DebugLocation(1177, 38);
-				IDENTIFIER555=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_identifierSuffix7269); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, nonWildcardTypeArguments549.Tree, nonWildcardTypeArguments549, "nonWildcardTypeArguments549", retval);
+				DebugLocation(1168, 38);
+				IDENTIFIER550=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_identifierSuffix7154); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				IDENTIFIER555_tree = (object)adaptor.Create(IDENTIFIER555, "IDENTIFIER555", retval);
-				adaptor.AddChild(root_0, IDENTIFIER555_tree);
+				IDENTIFIER550_tree = (object)adaptor.Create(IDENTIFIER550, "IDENTIFIER550", retval);
+				adaptor.AddChild(root_0, IDENTIFIER550_tree);
 				}
-				DebugLocation(1177, 49);
-				PushFollow(Follow._arguments_in_identifierSuffix7271);
+				DebugLocation(1168, 49);
+				PushFollow(Follow._arguments_in_identifierSuffix7156);
+				arguments551=arguments();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, arguments551.Tree, arguments551, "arguments551", retval);
+
+				}
+				break;
+			case 6:
+				DebugEnterAlt(6);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1169:9: '.' 'this'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(1169, 9);
+				char_literal552=(IToken)Match(input,DOT,Follow._DOT_in_identifierSuffix7166); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal552_tree = (object)adaptor.Create(char_literal552, "char_literal552", retval);
+				adaptor.AddChild(root_0, char_literal552_tree);
+				}
+				DebugLocation(1169, 13);
+				string_literal553=(IToken)Match(input,THIS,Follow._THIS_in_identifierSuffix7168); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal553_tree = (object)adaptor.Create(string_literal553, "string_literal553", retval);
+				adaptor.AddChild(root_0, string_literal553_tree);
+				}
+
+				}
+				break;
+			case 7:
+				DebugEnterAlt(7);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1170:9: '.' 'super' arguments
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(1170, 9);
+				char_literal554=(IToken)Match(input,DOT,Follow._DOT_in_identifierSuffix7178); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal554_tree = (object)adaptor.Create(char_literal554, "char_literal554", retval);
+				adaptor.AddChild(root_0, char_literal554_tree);
+				}
+				DebugLocation(1170, 13);
+				string_literal555=(IToken)Match(input,SUPER,Follow._SUPER_in_identifierSuffix7180); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal555_tree = (object)adaptor.Create(string_literal555, "string_literal555", retval);
+				adaptor.AddChild(root_0, string_literal555_tree);
+				}
+				DebugLocation(1170, 21);
+				PushFollow(Follow._arguments_in_identifierSuffix7182);
 				arguments556=arguments();
 				PopFollow();
 				if (state.failed) return retval;
@@ -20137,66 +20068,18 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 				}
 				break;
-			case 6:
-				DebugEnterAlt(6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1178:9: '.' 'this'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1178, 9);
-				char_literal557=(IToken)Match(input,DOT,Follow._DOT_in_identifierSuffix7281); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal557_tree = (object)adaptor.Create(char_literal557, "char_literal557", retval);
-				adaptor.AddChild(root_0, char_literal557_tree);
-				}
-				DebugLocation(1178, 13);
-				string_literal558=(IToken)Match(input,THIS,Follow._THIS_in_identifierSuffix7283); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal558_tree = (object)adaptor.Create(string_literal558, "string_literal558", retval);
-				adaptor.AddChild(root_0, string_literal558_tree);
-				}
-
-				}
-				break;
-			case 7:
-				DebugEnterAlt(7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1179:9: '.' 'super' arguments
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1179, 9);
-				char_literal559=(IToken)Match(input,DOT,Follow._DOT_in_identifierSuffix7293); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal559_tree = (object)adaptor.Create(char_literal559, "char_literal559", retval);
-				adaptor.AddChild(root_0, char_literal559_tree);
-				}
-				DebugLocation(1179, 13);
-				string_literal560=(IToken)Match(input,SUPER,Follow._SUPER_in_identifierSuffix7295); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal560_tree = (object)adaptor.Create(string_literal560, "string_literal560", retval);
-				adaptor.AddChild(root_0, string_literal560_tree);
-				}
-				DebugLocation(1179, 21);
-				PushFollow(Follow._arguments_in_identifierSuffix7297);
-				arguments561=arguments();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, arguments561.Tree, arguments561, "arguments561", retval);
-
-				}
-				break;
 			case 8:
 				DebugEnterAlt(8);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1180:9: innerCreator
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1171:9: innerCreator
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1180, 9);
-				PushFollow(Follow._innerCreator_in_identifierSuffix7307);
-				innerCreator562=innerCreator();
+				DebugLocation(1171, 9);
+				PushFollow(Follow._innerCreator_in_identifierSuffix7192);
+				innerCreator557=innerCreator();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, innerCreator562.Tree, innerCreator562, "innerCreator562", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, innerCreator557.Tree, innerCreator557, "innerCreator557", retval);
 
 				}
 				break;
@@ -20224,7 +20107,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 97, identifierSuffix_StartIndex); }
 
 		}
-		DebugLocation(1181, 4);
+		DebugLocation(1172, 4);
 		} finally { DebugExitRule(GrammarFileName, "identifierSuffix"); }
 		return retval;
 
@@ -20234,7 +20117,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_selector();
 	partial void LeaveRule_selector();
 	// $ANTLR start "selector"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1183:1: selector : ( '.' IDENTIFIER ( arguments )? | '.' nonWildcardTypeArguments IDENTIFIER arguments | '.' 'this' | '.' 'super' superSuffix | innerCreator | '[' expression ']' );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1174:1: selector : ( '.' IDENTIFIER ( arguments )? | '.' nonWildcardTypeArguments IDENTIFIER arguments | '.' 'this' | '.' 'super' superSuffix | innerCreator | '[' expression ']' );
 	[GrammarRule("selector")]
 	private Antlr3AstNode selector()
 	{
@@ -20247,268 +20130,268 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal563 = default(IToken);
-		IToken IDENTIFIER564 = default(IToken);
-		IToken char_literal566 = default(IToken);
-		IToken IDENTIFIER568 = default(IToken);
-		IToken char_literal570 = default(IToken);
-		IToken string_literal571 = default(IToken);
-		IToken char_literal572 = default(IToken);
-		IToken string_literal573 = default(IToken);
-		IToken char_literal576 = default(IToken);
-		IToken char_literal578 = default(IToken);
-		Antlr3AstNode arguments565 = default(Antlr3AstNode);
-		Antlr3AstNode nonWildcardTypeArguments567 = default(Antlr3AstNode);
-		Antlr3AstNode arguments569 = default(Antlr3AstNode);
-		Antlr3AstNode superSuffix574 = default(Antlr3AstNode);
-		Antlr3AstNode innerCreator575 = default(Antlr3AstNode);
-		Antlr3AstNode expression577 = default(Antlr3AstNode);
+		IToken char_literal558 = default(IToken);
+		IToken IDENTIFIER559 = default(IToken);
+		IToken char_literal561 = default(IToken);
+		IToken IDENTIFIER563 = default(IToken);
+		IToken char_literal565 = default(IToken);
+		IToken string_literal566 = default(IToken);
+		IToken char_literal567 = default(IToken);
+		IToken string_literal568 = default(IToken);
+		IToken char_literal571 = default(IToken);
+		IToken char_literal573 = default(IToken);
+		Antlr3AstNode arguments560 = default(Antlr3AstNode);
+		Antlr3AstNode nonWildcardTypeArguments562 = default(Antlr3AstNode);
+		Antlr3AstNode arguments564 = default(Antlr3AstNode);
+		Antlr3AstNode superSuffix569 = default(Antlr3AstNode);
+		Antlr3AstNode innerCreator570 = default(Antlr3AstNode);
+		Antlr3AstNode expression572 = default(Antlr3AstNode);
 
-		object char_literal563_tree = default(object);
-		object IDENTIFIER564_tree = default(object);
-		object char_literal566_tree = default(object);
-		object IDENTIFIER568_tree = default(object);
-		object char_literal570_tree = default(object);
-		object string_literal571_tree = default(object);
-		object char_literal572_tree = default(object);
-		object string_literal573_tree = default(object);
-		object char_literal576_tree = default(object);
-		object char_literal578_tree = default(object);
+		object char_literal558_tree = default(object);
+		object IDENTIFIER559_tree = default(object);
+		object char_literal561_tree = default(object);
+		object IDENTIFIER563_tree = default(object);
+		object char_literal565_tree = default(object);
+		object string_literal566_tree = default(object);
+		object char_literal567_tree = default(object);
+		object string_literal568_tree = default(object);
+		object char_literal571_tree = default(object);
+		object char_literal573_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "selector");
-		DebugLocation(1183, 4);
+		DebugLocation(1174, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 98)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1184:5: ( '.' IDENTIFIER ( arguments )? | '.' nonWildcardTypeArguments IDENTIFIER arguments | '.' 'this' | '.' 'super' superSuffix | innerCreator | '[' expression ']' )
-			int alt158=6;
-			try { DebugEnterDecision(158, false);
-			int LA158_1 = input.LA(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1175:5: ( '.' IDENTIFIER ( arguments )? | '.' nonWildcardTypeArguments IDENTIFIER arguments | '.' 'this' | '.' 'super' superSuffix | innerCreator | '[' expression ']' )
+			int alt156=6;
+			try { DebugEnterDecision(156, false);
+			int LA156_1 = input.LA(1);
 
-			if ((LA158_1==DOT))
+			if ((LA156_1==DOT))
 			{
 				switch (input.LA(2))
 				{
 				case IDENTIFIER:
 					{
-					alt158 = 1;
+					alt156 = 1;
 					}
 					break;
 				case THIS:
 					{
-					alt158 = 3;
+					alt156 = 3;
 					}
 					break;
 				case SUPER:
 					{
-					alt158 = 4;
+					alt156 = 4;
 					}
 					break;
 				case NEW:
 					{
-					alt158 = 5;
+					alt156 = 5;
 					}
 					break;
 				case LT:
 					{
-					alt158 = 2;
+					alt156 = 2;
 					}
 					break;
 				default:
 					{
 						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 158, 1, input, 2);
+						NoViableAltException nvae = new NoViableAltException("", 156, 1, input, 2);
 						DebugRecognitionException(nvae);
 						throw nvae;
 					}
 				}
 
 			}
-			else if ((LA158_1==LBRACKET))
+			else if ((LA156_1==LBRACKET))
 			{
-				alt158 = 6;
+				alt156 = 6;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 158, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 156, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(158); }
-			switch (alt158)
+			} finally { DebugExitDecision(156); }
+			switch (alt156)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1184:9: '.' IDENTIFIER ( arguments )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1175:9: '.' IDENTIFIER ( arguments )?
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1184, 9);
-				char_literal563=(IToken)Match(input,DOT,Follow._DOT_in_selector7326); if (state.failed) return retval;
+				DebugLocation(1175, 9);
+				char_literal558=(IToken)Match(input,DOT,Follow._DOT_in_selector7211); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal563_tree = (object)adaptor.Create(char_literal563, "char_literal563", retval);
-				adaptor.AddChild(root_0, char_literal563_tree);
+				char_literal558_tree = (object)adaptor.Create(char_literal558, "char_literal558", retval);
+				adaptor.AddChild(root_0, char_literal558_tree);
 				}
-				DebugLocation(1184, 13);
-				IDENTIFIER564=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_selector7328); if (state.failed) return retval;
+				DebugLocation(1175, 13);
+				IDENTIFIER559=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_selector7213); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				IDENTIFIER564_tree = (object)adaptor.Create(IDENTIFIER564, "IDENTIFIER564", retval);
-				adaptor.AddChild(root_0, IDENTIFIER564_tree);
+				IDENTIFIER559_tree = (object)adaptor.Create(IDENTIFIER559, "IDENTIFIER559", retval);
+				adaptor.AddChild(root_0, IDENTIFIER559_tree);
 				}
-				DebugLocation(1184, 24);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1184:24: ( arguments )?
-				int alt157=2;
-				try { DebugEnterSubRule(157);
-				try { DebugEnterDecision(157, false);
-				int LA157_1 = input.LA(1);
+				DebugLocation(1175, 24);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1175:24: ( arguments )?
+				int alt155=2;
+				try { DebugEnterSubRule(155);
+				try { DebugEnterDecision(155, false);
+				int LA155_1 = input.LA(1);
 
-				if ((LA157_1==LPAREN))
+				if ((LA155_1==LPAREN))
 				{
-					alt157 = 1;
+					alt155 = 1;
 				}
-				} finally { DebugExitDecision(157); }
-				switch (alt157)
+				} finally { DebugExitDecision(155); }
+				switch (alt155)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1184:24: arguments
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1175:24: arguments
 					{
-					DebugLocation(1184, 24);
-					PushFollow(Follow._arguments_in_selector7330);
-					arguments565=arguments();
+					DebugLocation(1175, 24);
+					PushFollow(Follow._arguments_in_selector7215);
+					arguments560=arguments();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, arguments565.Tree, arguments565, "arguments565", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, arguments560.Tree, arguments560, "arguments560", retval);
 
 					}
 					break;
 
 				}
-				} finally { DebugExitSubRule(157); }
+				} finally { DebugExitSubRule(155); }
 
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1185:9: '.' nonWildcardTypeArguments IDENTIFIER arguments
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1176:9: '.' nonWildcardTypeArguments IDENTIFIER arguments
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1185, 9);
-				char_literal566=(IToken)Match(input,DOT,Follow._DOT_in_selector7341); if (state.failed) return retval;
+				DebugLocation(1176, 9);
+				char_literal561=(IToken)Match(input,DOT,Follow._DOT_in_selector7226); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal566_tree = (object)adaptor.Create(char_literal566, "char_literal566", retval);
-				adaptor.AddChild(root_0, char_literal566_tree);
+				char_literal561_tree = (object)adaptor.Create(char_literal561, "char_literal561", retval);
+				adaptor.AddChild(root_0, char_literal561_tree);
 				}
-				DebugLocation(1185, 13);
-				PushFollow(Follow._nonWildcardTypeArguments_in_selector7343);
-				nonWildcardTypeArguments567=nonWildcardTypeArguments();
+				DebugLocation(1176, 13);
+				PushFollow(Follow._nonWildcardTypeArguments_in_selector7228);
+				nonWildcardTypeArguments562=nonWildcardTypeArguments();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, nonWildcardTypeArguments567.Tree, nonWildcardTypeArguments567, "nonWildcardTypeArguments567", retval);
-				DebugLocation(1185, 38);
-				IDENTIFIER568=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_selector7345); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, nonWildcardTypeArguments562.Tree, nonWildcardTypeArguments562, "nonWildcardTypeArguments562", retval);
+				DebugLocation(1176, 38);
+				IDENTIFIER563=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_selector7230); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				IDENTIFIER568_tree = (object)adaptor.Create(IDENTIFIER568, "IDENTIFIER568", retval);
-				adaptor.AddChild(root_0, IDENTIFIER568_tree);
+				IDENTIFIER563_tree = (object)adaptor.Create(IDENTIFIER563, "IDENTIFIER563", retval);
+				adaptor.AddChild(root_0, IDENTIFIER563_tree);
 				}
-				DebugLocation(1185, 49);
-				PushFollow(Follow._arguments_in_selector7347);
-				arguments569=arguments();
+				DebugLocation(1176, 49);
+				PushFollow(Follow._arguments_in_selector7232);
+				arguments564=arguments();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, arguments569.Tree, arguments569, "arguments569", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, arguments564.Tree, arguments564, "arguments564", retval);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1186:9: '.' 'this'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1177:9: '.' 'this'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1186, 9);
-				char_literal570=(IToken)Match(input,DOT,Follow._DOT_in_selector7358); if (state.failed) return retval;
+				DebugLocation(1177, 9);
+				char_literal565=(IToken)Match(input,DOT,Follow._DOT_in_selector7243); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal570_tree = (object)adaptor.Create(char_literal570, "char_literal570", retval);
-				adaptor.AddChild(root_0, char_literal570_tree);
+				char_literal565_tree = (object)adaptor.Create(char_literal565, "char_literal565", retval);
+				adaptor.AddChild(root_0, char_literal565_tree);
 				}
-				DebugLocation(1186, 13);
-				string_literal571=(IToken)Match(input,THIS,Follow._THIS_in_selector7360); if (state.failed) return retval;
+				DebugLocation(1177, 13);
+				string_literal566=(IToken)Match(input,THIS,Follow._THIS_in_selector7245); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal571_tree = (object)adaptor.Create(string_literal571, "string_literal571", retval);
-				adaptor.AddChild(root_0, string_literal571_tree);
+				string_literal566_tree = (object)adaptor.Create(string_literal566, "string_literal566", retval);
+				adaptor.AddChild(root_0, string_literal566_tree);
 				}
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1187:9: '.' 'super' superSuffix
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1178:9: '.' 'super' superSuffix
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1187, 9);
-				char_literal572=(IToken)Match(input,DOT,Follow._DOT_in_selector7370); if (state.failed) return retval;
+				DebugLocation(1178, 9);
+				char_literal567=(IToken)Match(input,DOT,Follow._DOT_in_selector7255); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal572_tree = (object)adaptor.Create(char_literal572, "char_literal572", retval);
-				adaptor.AddChild(root_0, char_literal572_tree);
+				char_literal567_tree = (object)adaptor.Create(char_literal567, "char_literal567", retval);
+				adaptor.AddChild(root_0, char_literal567_tree);
 				}
-				DebugLocation(1187, 13);
-				string_literal573=(IToken)Match(input,SUPER,Follow._SUPER_in_selector7372); if (state.failed) return retval;
+				DebugLocation(1178, 13);
+				string_literal568=(IToken)Match(input,SUPER,Follow._SUPER_in_selector7257); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal573_tree = (object)adaptor.Create(string_literal573, "string_literal573", retval);
-				adaptor.AddChild(root_0, string_literal573_tree);
+				string_literal568_tree = (object)adaptor.Create(string_literal568, "string_literal568", retval);
+				adaptor.AddChild(root_0, string_literal568_tree);
 				}
-				DebugLocation(1188, 9);
-				PushFollow(Follow._superSuffix_in_selector7382);
-				superSuffix574=superSuffix();
+				DebugLocation(1179, 9);
+				PushFollow(Follow._superSuffix_in_selector7267);
+				superSuffix569=superSuffix();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, superSuffix574.Tree, superSuffix574, "superSuffix574", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, superSuffix569.Tree, superSuffix569, "superSuffix569", retval);
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1189:9: innerCreator
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1180:9: innerCreator
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1189, 9);
-				PushFollow(Follow._innerCreator_in_selector7392);
-				innerCreator575=innerCreator();
+				DebugLocation(1180, 9);
+				PushFollow(Follow._innerCreator_in_selector7277);
+				innerCreator570=innerCreator();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, innerCreator575.Tree, innerCreator575, "innerCreator575", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, innerCreator570.Tree, innerCreator570, "innerCreator570", retval);
 
 				}
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1190:9: '[' expression ']'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1181:9: '[' expression ']'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1190, 9);
-				char_literal576=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_selector7402); if (state.failed) return retval;
+				DebugLocation(1181, 9);
+				char_literal571=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_selector7287); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal576_tree = (object)adaptor.Create(char_literal576, "char_literal576", retval);
-				adaptor.AddChild(root_0, char_literal576_tree);
+				char_literal571_tree = (object)adaptor.Create(char_literal571, "char_literal571", retval);
+				adaptor.AddChild(root_0, char_literal571_tree);
 				}
-				DebugLocation(1190, 13);
-				PushFollow(Follow._expression_in_selector7404);
-				expression577=expression();
+				DebugLocation(1181, 13);
+				PushFollow(Follow._expression_in_selector7289);
+				expression572=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression577.Tree, expression577, "expression577", retval);
-				DebugLocation(1190, 24);
-				char_literal578=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_selector7406); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression572.Tree, expression572, "expression572", retval);
+				DebugLocation(1181, 24);
+				char_literal573=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_selector7291); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal578_tree = (object)adaptor.Create(char_literal578, "char_literal578", retval);
-				adaptor.AddChild(root_0, char_literal578_tree);
+				char_literal573_tree = (object)adaptor.Create(char_literal573, "char_literal573", retval);
+				adaptor.AddChild(root_0, char_literal573_tree);
 				}
 
 				}
@@ -20537,7 +20420,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 98, selector_StartIndex); }
 
 		}
-		DebugLocation(1191, 4);
+		DebugLocation(1182, 4);
 		} finally { DebugExitRule(GrammarFileName, "selector"); }
 		return retval;
 
@@ -20547,7 +20430,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_creator();
 	partial void LeaveRule_creator();
 	// $ANTLR start "creator"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1193:1: creator : ( 'new' nonWildcardTypeArguments classOrInterfaceTypeWithDiamond classCreatorRest | 'new' classOrInterfaceTypeWithDiamond classCreatorRest | arrayCreator );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1184:1: creator : ( 'new' nonWildcardTypeArguments classOrInterfaceTypeWithDiamond classCreatorRest | 'new' classOrInterfaceTypeWithDiamond classCreatorRest | arrayCreator );
 	[GrammarRule("creator")]
 	private Antlr3AstNode creator()
 	{
@@ -20560,48 +20443,48 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal579 = default(IToken);
-		IToken string_literal583 = default(IToken);
-		Antlr3AstNode nonWildcardTypeArguments580 = default(Antlr3AstNode);
-		Antlr3AstNode classOrInterfaceTypeWithDiamond581 = default(Antlr3AstNode);
-		Antlr3AstNode classCreatorRest582 = default(Antlr3AstNode);
-		Antlr3AstNode classOrInterfaceTypeWithDiamond584 = default(Antlr3AstNode);
-		Antlr3AstNode classCreatorRest585 = default(Antlr3AstNode);
-		Antlr3AstNode arrayCreator586 = default(Antlr3AstNode);
+		IToken string_literal574 = default(IToken);
+		IToken string_literal578 = default(IToken);
+		Antlr3AstNode nonWildcardTypeArguments575 = default(Antlr3AstNode);
+		Antlr3AstNode classOrInterfaceTypeWithDiamond576 = default(Antlr3AstNode);
+		Antlr3AstNode classCreatorRest577 = default(Antlr3AstNode);
+		Antlr3AstNode classOrInterfaceTypeWithDiamond579 = default(Antlr3AstNode);
+		Antlr3AstNode classCreatorRest580 = default(Antlr3AstNode);
+		Antlr3AstNode arrayCreator581 = default(Antlr3AstNode);
 
-		object string_literal579_tree = default(object);
-		object string_literal583_tree = default(object);
+		object string_literal574_tree = default(object);
+		object string_literal578_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "creator");
-		DebugLocation(1193, 4);
+		DebugLocation(1184, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 99)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1194:5: ( 'new' nonWildcardTypeArguments classOrInterfaceTypeWithDiamond classCreatorRest | 'new' classOrInterfaceTypeWithDiamond classCreatorRest | arrayCreator )
-			int alt159=3;
-			try { DebugEnterDecision(159, false);
-			int LA159_1 = input.LA(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1185:5: ( 'new' nonWildcardTypeArguments classOrInterfaceTypeWithDiamond classCreatorRest | 'new' classOrInterfaceTypeWithDiamond classCreatorRest | arrayCreator )
+			int alt157=3;
+			try { DebugEnterDecision(157, false);
+			int LA157_1 = input.LA(1);
 
-			if ((LA159_1==NEW))
+			if ((LA157_1==NEW))
 			{
-				int LA159_2 = input.LA(2);
+				int LA157_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred250_Java_fragment)))
+				if ((EvaluatePredicate(synpred248_Java_fragment)))
 				{
-					alt159 = 1;
+					alt157 = 1;
 				}
-				else if ((EvaluatePredicate(synpred251_Java_fragment)))
+				else if ((EvaluatePredicate(synpred249_Java_fragment)))
 				{
-					alt159 = 2;
+					alt157 = 2;
 				}
 				else if ((true))
 				{
-					alt159 = 3;
+					alt157 = 3;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 159, 1, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 157, 1, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -20609,85 +20492,85 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 159, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 157, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(159); }
-			switch (alt159)
+			} finally { DebugExitDecision(157); }
+			switch (alt157)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1194:9: 'new' nonWildcardTypeArguments classOrInterfaceTypeWithDiamond classCreatorRest
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1185:9: 'new' nonWildcardTypeArguments classOrInterfaceTypeWithDiamond classCreatorRest
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1194, 9);
-				string_literal579=(IToken)Match(input,NEW,Follow._NEW_in_creator7425); if (state.failed) return retval;
+				DebugLocation(1185, 9);
+				string_literal574=(IToken)Match(input,NEW,Follow._NEW_in_creator7310); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal579_tree = (object)adaptor.Create(string_literal579, "string_literal579", retval);
-				adaptor.AddChild(root_0, string_literal579_tree);
+				string_literal574_tree = (object)adaptor.Create(string_literal574, "string_literal574", retval);
+				adaptor.AddChild(root_0, string_literal574_tree);
 				}
-				DebugLocation(1194, 15);
-				PushFollow(Follow._nonWildcardTypeArguments_in_creator7427);
-				nonWildcardTypeArguments580=nonWildcardTypeArguments();
+				DebugLocation(1185, 15);
+				PushFollow(Follow._nonWildcardTypeArguments_in_creator7312);
+				nonWildcardTypeArguments575=nonWildcardTypeArguments();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, nonWildcardTypeArguments580.Tree, nonWildcardTypeArguments580, "nonWildcardTypeArguments580", retval);
-				DebugLocation(1194, 40);
-				PushFollow(Follow._classOrInterfaceTypeWithDiamond_in_creator7429);
-				classOrInterfaceTypeWithDiamond581=classOrInterfaceTypeWithDiamond();
+				if (state.backtracking == 0) adaptor.AddChild(root_0, nonWildcardTypeArguments575.Tree, nonWildcardTypeArguments575, "nonWildcardTypeArguments575", retval);
+				DebugLocation(1185, 40);
+				PushFollow(Follow._classOrInterfaceTypeWithDiamond_in_creator7314);
+				classOrInterfaceTypeWithDiamond576=classOrInterfaceTypeWithDiamond();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, classOrInterfaceTypeWithDiamond581.Tree, classOrInterfaceTypeWithDiamond581, "classOrInterfaceTypeWithDiamond581", retval);
-				DebugLocation(1194, 72);
-				PushFollow(Follow._classCreatorRest_in_creator7431);
-				classCreatorRest582=classCreatorRest();
+				if (state.backtracking == 0) adaptor.AddChild(root_0, classOrInterfaceTypeWithDiamond576.Tree, classOrInterfaceTypeWithDiamond576, "classOrInterfaceTypeWithDiamond576", retval);
+				DebugLocation(1185, 72);
+				PushFollow(Follow._classCreatorRest_in_creator7316);
+				classCreatorRest577=classCreatorRest();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, classCreatorRest582.Tree, classCreatorRest582, "classCreatorRest582", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, classCreatorRest577.Tree, classCreatorRest577, "classCreatorRest577", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1195:9: 'new' classOrInterfaceTypeWithDiamond classCreatorRest
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1186:9: 'new' classOrInterfaceTypeWithDiamond classCreatorRest
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1195, 9);
-				string_literal583=(IToken)Match(input,NEW,Follow._NEW_in_creator7441); if (state.failed) return retval;
+				DebugLocation(1186, 9);
+				string_literal578=(IToken)Match(input,NEW,Follow._NEW_in_creator7326); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal583_tree = (object)adaptor.Create(string_literal583, "string_literal583", retval);
-				adaptor.AddChild(root_0, string_literal583_tree);
+				string_literal578_tree = (object)adaptor.Create(string_literal578, "string_literal578", retval);
+				adaptor.AddChild(root_0, string_literal578_tree);
 				}
-				DebugLocation(1195, 15);
-				PushFollow(Follow._classOrInterfaceTypeWithDiamond_in_creator7443);
-				classOrInterfaceTypeWithDiamond584=classOrInterfaceTypeWithDiamond();
+				DebugLocation(1186, 15);
+				PushFollow(Follow._classOrInterfaceTypeWithDiamond_in_creator7328);
+				classOrInterfaceTypeWithDiamond579=classOrInterfaceTypeWithDiamond();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, classOrInterfaceTypeWithDiamond584.Tree, classOrInterfaceTypeWithDiamond584, "classOrInterfaceTypeWithDiamond584", retval);
-				DebugLocation(1195, 47);
-				PushFollow(Follow._classCreatorRest_in_creator7445);
-				classCreatorRest585=classCreatorRest();
+				if (state.backtracking == 0) adaptor.AddChild(root_0, classOrInterfaceTypeWithDiamond579.Tree, classOrInterfaceTypeWithDiamond579, "classOrInterfaceTypeWithDiamond579", retval);
+				DebugLocation(1186, 47);
+				PushFollow(Follow._classCreatorRest_in_creator7330);
+				classCreatorRest580=classCreatorRest();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, classCreatorRest585.Tree, classCreatorRest585, "classCreatorRest585", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, classCreatorRest580.Tree, classCreatorRest580, "classCreatorRest580", retval);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1196:9: arrayCreator
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1187:9: arrayCreator
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1196, 9);
-				PushFollow(Follow._arrayCreator_in_creator7455);
-				arrayCreator586=arrayCreator();
+				DebugLocation(1187, 9);
+				PushFollow(Follow._arrayCreator_in_creator7340);
+				arrayCreator581=arrayCreator();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, arrayCreator586.Tree, arrayCreator586, "arrayCreator586", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, arrayCreator581.Tree, arrayCreator581, "arrayCreator581", retval);
 
 				}
 				break;
@@ -20715,7 +20598,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 99, creator_StartIndex); }
 
 		}
-		DebugLocation(1197, 4);
+		DebugLocation(1188, 4);
 		} finally { DebugExitRule(GrammarFileName, "creator"); }
 		return retval;
 
@@ -20725,7 +20608,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_arrayCreator();
 	partial void LeaveRule_arrayCreator();
 	// $ANTLR start "arrayCreator"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1199:1: arrayCreator : ( 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer | 'new' createdName '[' expression ']' ( '[' expression ']' )* ( '[' ']' )* );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1190:1: arrayCreator : ( 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer | 'new' createdName '[' expression ']' ( '[' expression ']' )* ( '[' ']' )* );
 	[GrammarRule("arrayCreator")]
 	private Antlr3AstNode arrayCreator()
 	{
@@ -20738,63 +20621,63 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal587 = default(IToken);
-		IToken char_literal589 = default(IToken);
-		IToken char_literal590 = default(IToken);
+		IToken string_literal582 = default(IToken);
+		IToken char_literal584 = default(IToken);
+		IToken char_literal585 = default(IToken);
+		IToken char_literal586 = default(IToken);
+		IToken char_literal587 = default(IToken);
+		IToken string_literal589 = default(IToken);
 		IToken char_literal591 = default(IToken);
-		IToken char_literal592 = default(IToken);
-		IToken string_literal594 = default(IToken);
+		IToken char_literal593 = default(IToken);
+		IToken char_literal594 = default(IToken);
 		IToken char_literal596 = default(IToken);
+		IToken char_literal597 = default(IToken);
 		IToken char_literal598 = default(IToken);
-		IToken char_literal599 = default(IToken);
-		IToken char_literal601 = default(IToken);
-		IToken char_literal602 = default(IToken);
-		IToken char_literal603 = default(IToken);
-		Antlr3AstNode createdName588 = default(Antlr3AstNode);
-		Antlr3AstNode arrayInitializer593 = default(Antlr3AstNode);
-		Antlr3AstNode createdName595 = default(Antlr3AstNode);
-		Antlr3AstNode expression597 = default(Antlr3AstNode);
-		Antlr3AstNode expression600 = default(Antlr3AstNode);
+		Antlr3AstNode createdName583 = default(Antlr3AstNode);
+		Antlr3AstNode arrayInitializer588 = default(Antlr3AstNode);
+		Antlr3AstNode createdName590 = default(Antlr3AstNode);
+		Antlr3AstNode expression592 = default(Antlr3AstNode);
+		Antlr3AstNode expression595 = default(Antlr3AstNode);
 
-		object string_literal587_tree = default(object);
-		object char_literal589_tree = default(object);
-		object char_literal590_tree = default(object);
+		object string_literal582_tree = default(object);
+		object char_literal584_tree = default(object);
+		object char_literal585_tree = default(object);
+		object char_literal586_tree = default(object);
+		object char_literal587_tree = default(object);
+		object string_literal589_tree = default(object);
 		object char_literal591_tree = default(object);
-		object char_literal592_tree = default(object);
-		object string_literal594_tree = default(object);
+		object char_literal593_tree = default(object);
+		object char_literal594_tree = default(object);
 		object char_literal596_tree = default(object);
+		object char_literal597_tree = default(object);
 		object char_literal598_tree = default(object);
-		object char_literal599_tree = default(object);
-		object char_literal601_tree = default(object);
-		object char_literal602_tree = default(object);
-		object char_literal603_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "arrayCreator");
-		DebugLocation(1199, 4);
+		DebugLocation(1190, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 100)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1200:5: ( 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer | 'new' createdName '[' expression ']' ( '[' expression ']' )* ( '[' ']' )* )
-			int alt163=2;
-			try { DebugEnterDecision(163, false);
-			int LA163_1 = input.LA(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1191:5: ( 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer | 'new' createdName '[' expression ']' ( '[' expression ']' )* ( '[' ']' )* )
+			int alt161=2;
+			try { DebugEnterDecision(161, false);
+			int LA161_1 = input.LA(1);
 
-			if ((LA163_1==NEW))
+			if ((LA161_1==NEW))
 			{
-				int LA163_2 = input.LA(2);
+				int LA161_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred253_Java_fragment)))
+				if ((EvaluatePredicate(synpred251_Java_fragment)))
 				{
-					alt163 = 1;
+					alt161 = 1;
 				}
 				else if ((true))
 				{
-					alt163 = 2;
+					alt161 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 163, 1, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 161, 1, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -20802,45 +20685,199 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 163, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 161, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(163); }
-			switch (alt163)
+			} finally { DebugExitDecision(161); }
+			switch (alt161)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1200:9: 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1191:9: 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1200, 9);
-				string_literal587=(IToken)Match(input,NEW,Follow._NEW_in_arrayCreator7474); if (state.failed) return retval;
+				DebugLocation(1191, 9);
+				string_literal582=(IToken)Match(input,NEW,Follow._NEW_in_arrayCreator7359); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal587_tree = (object)adaptor.Create(string_literal587, "string_literal587", retval);
-				adaptor.AddChild(root_0, string_literal587_tree);
+				string_literal582_tree = (object)adaptor.Create(string_literal582, "string_literal582", retval);
+				adaptor.AddChild(root_0, string_literal582_tree);
 				}
-				DebugLocation(1200, 15);
-				PushFollow(Follow._createdName_in_arrayCreator7476);
-				createdName588=createdName();
+				DebugLocation(1191, 15);
+				PushFollow(Follow._createdName_in_arrayCreator7361);
+				createdName583=createdName();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, createdName588.Tree, createdName588, "createdName588", retval);
-				DebugLocation(1201, 9);
-				char_literal589=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_arrayCreator7486); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, createdName583.Tree, createdName583, "createdName583", retval);
+				DebugLocation(1192, 9);
+				char_literal584=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_arrayCreator7371); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal589_tree = (object)adaptor.Create(char_literal589, "char_literal589", retval);
-				adaptor.AddChild(root_0, char_literal589_tree);
+				char_literal584_tree = (object)adaptor.Create(char_literal584, "char_literal584", retval);
+				adaptor.AddChild(root_0, char_literal584_tree);
 				}
-				DebugLocation(1201, 13);
-				char_literal590=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_arrayCreator7488); if (state.failed) return retval;
+				DebugLocation(1192, 13);
+				char_literal585=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_arrayCreator7373); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal590_tree = (object)adaptor.Create(char_literal590, "char_literal590", retval);
-				adaptor.AddChild(root_0, char_literal590_tree);
+				char_literal585_tree = (object)adaptor.Create(char_literal585, "char_literal585", retval);
+				adaptor.AddChild(root_0, char_literal585_tree);
 				}
-				DebugLocation(1202, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1202:9: ( '[' ']' )*
+				DebugLocation(1193, 9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1193:9: ( '[' ']' )*
+				try { DebugEnterSubRule(158);
+				while (true)
+				{
+					int alt158=2;
+					try { DebugEnterDecision(158, false);
+					int LA158_1 = input.LA(1);
+
+					if ((LA158_1==LBRACKET))
+					{
+						alt158 = 1;
+					}
+
+
+					} finally { DebugExitDecision(158); }
+					switch ( alt158 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1193:10: '[' ']'
+						{
+						DebugLocation(1193, 10);
+						char_literal586=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_arrayCreator7384); if (state.failed) return retval;
+						if (state.backtracking == 0) {
+						char_literal586_tree = (object)adaptor.Create(char_literal586, "char_literal586", retval);
+						adaptor.AddChild(root_0, char_literal586_tree);
+						}
+						DebugLocation(1193, 14);
+						char_literal587=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_arrayCreator7386); if (state.failed) return retval;
+						if (state.backtracking == 0) {
+						char_literal587_tree = (object)adaptor.Create(char_literal587, "char_literal587", retval);
+						adaptor.AddChild(root_0, char_literal587_tree);
+						}
+
+						}
+						break;
+
+					default:
+						goto loop158;
+					}
+				}
+
+				loop158:
+					;
+
+				} finally { DebugExitSubRule(158); }
+
+				DebugLocation(1195, 9);
+				PushFollow(Follow._arrayInitializer_in_arrayCreator7407);
+				arrayInitializer588=arrayInitializer();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, arrayInitializer588.Tree, arrayInitializer588, "arrayInitializer588", retval);
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1197:9: 'new' createdName '[' expression ']' ( '[' expression ']' )* ( '[' ']' )*
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(1197, 9);
+				string_literal589=(IToken)Match(input,NEW,Follow._NEW_in_arrayCreator7418); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal589_tree = (object)adaptor.Create(string_literal589, "string_literal589", retval);
+				adaptor.AddChild(root_0, string_literal589_tree);
+				}
+				DebugLocation(1197, 15);
+				PushFollow(Follow._createdName_in_arrayCreator7420);
+				createdName590=createdName();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, createdName590.Tree, createdName590, "createdName590", retval);
+				DebugLocation(1198, 9);
+				char_literal591=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_arrayCreator7430); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal591_tree = (object)adaptor.Create(char_literal591, "char_literal591", retval);
+				adaptor.AddChild(root_0, char_literal591_tree);
+				}
+				DebugLocation(1198, 13);
+				PushFollow(Follow._expression_in_arrayCreator7432);
+				expression592=expression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression592.Tree, expression592, "expression592", retval);
+				DebugLocation(1199, 9);
+				char_literal593=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_arrayCreator7442); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal593_tree = (object)adaptor.Create(char_literal593, "char_literal593", retval);
+				adaptor.AddChild(root_0, char_literal593_tree);
+				}
+				DebugLocation(1200, 9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1200:9: ( '[' expression ']' )*
+				try { DebugEnterSubRule(159);
+				while (true)
+				{
+					int alt159=2;
+					try { DebugEnterDecision(159, false);
+					int LA159_1 = input.LA(1);
+
+					if ((LA159_1==LBRACKET))
+					{
+						int LA159_2 = input.LA(2);
+
+						if ((EvaluatePredicate(synpred252_Java_fragment)))
+						{
+							alt159 = 1;
+						}
+
+
+					}
+
+
+					} finally { DebugExitDecision(159); }
+					switch ( alt159 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1200:13: '[' expression ']'
+						{
+						DebugLocation(1200, 13);
+						char_literal594=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_arrayCreator7456); if (state.failed) return retval;
+						if (state.backtracking == 0) {
+						char_literal594_tree = (object)adaptor.Create(char_literal594, "char_literal594", retval);
+						adaptor.AddChild(root_0, char_literal594_tree);
+						}
+						DebugLocation(1200, 17);
+						PushFollow(Follow._expression_in_arrayCreator7458);
+						expression595=expression();
+						PopFollow();
+						if (state.failed) return retval;
+						if (state.backtracking == 0) adaptor.AddChild(root_0, expression595.Tree, expression595, "expression595", retval);
+						DebugLocation(1201, 13);
+						char_literal596=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_arrayCreator7472); if (state.failed) return retval;
+						if (state.backtracking == 0) {
+						char_literal596_tree = (object)adaptor.Create(char_literal596, "char_literal596", retval);
+						adaptor.AddChild(root_0, char_literal596_tree);
+						}
+
+						}
+						break;
+
+					default:
+						goto loop159;
+					}
+				}
+
+				loop159:
+					;
+
+				} finally { DebugExitSubRule(159); }
+
+				DebugLocation(1203, 9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1203:9: ( '[' ']' )*
 				try { DebugEnterSubRule(160);
 				while (true)
 				{
@@ -20850,7 +20887,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 					if ((LA160_1==LBRACKET))
 					{
-						alt160 = 1;
+						int LA160_2 = input.LA(2);
+
+						if ((LA160_2==RBRACKET))
+						{
+							alt160 = 1;
+						}
+
+
 					}
 
 
@@ -20859,19 +20903,19 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1202:10: '[' ']'
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1203:10: '[' ']'
 						{
-						DebugLocation(1202, 10);
-						char_literal591=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_arrayCreator7499); if (state.failed) return retval;
+						DebugLocation(1203, 10);
+						char_literal597=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_arrayCreator7494); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						char_literal591_tree = (object)adaptor.Create(char_literal591, "char_literal591", retval);
-						adaptor.AddChild(root_0, char_literal591_tree);
+						char_literal597_tree = (object)adaptor.Create(char_literal597, "char_literal597", retval);
+						adaptor.AddChild(root_0, char_literal597_tree);
 						}
-						DebugLocation(1202, 14);
-						char_literal592=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_arrayCreator7501); if (state.failed) return retval;
+						DebugLocation(1203, 14);
+						char_literal598=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_arrayCreator7496); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						char_literal592_tree = (object)adaptor.Create(char_literal592, "char_literal592", retval);
-						adaptor.AddChild(root_0, char_literal592_tree);
+						char_literal598_tree = (object)adaptor.Create(char_literal598, "char_literal598", retval);
+						adaptor.AddChild(root_0, char_literal598_tree);
 						}
 
 						}
@@ -20886,167 +20930,6 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					;
 
 				} finally { DebugExitSubRule(160); }
-
-				DebugLocation(1204, 9);
-				PushFollow(Follow._arrayInitializer_in_arrayCreator7522);
-				arrayInitializer593=arrayInitializer();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, arrayInitializer593.Tree, arrayInitializer593, "arrayInitializer593", retval);
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1206:9: 'new' createdName '[' expression ']' ( '[' expression ']' )* ( '[' ']' )*
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1206, 9);
-				string_literal594=(IToken)Match(input,NEW,Follow._NEW_in_arrayCreator7533); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal594_tree = (object)adaptor.Create(string_literal594, "string_literal594", retval);
-				adaptor.AddChild(root_0, string_literal594_tree);
-				}
-				DebugLocation(1206, 15);
-				PushFollow(Follow._createdName_in_arrayCreator7535);
-				createdName595=createdName();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, createdName595.Tree, createdName595, "createdName595", retval);
-				DebugLocation(1207, 9);
-				char_literal596=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_arrayCreator7545); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal596_tree = (object)adaptor.Create(char_literal596, "char_literal596", retval);
-				adaptor.AddChild(root_0, char_literal596_tree);
-				}
-				DebugLocation(1207, 13);
-				PushFollow(Follow._expression_in_arrayCreator7547);
-				expression597=expression();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression597.Tree, expression597, "expression597", retval);
-				DebugLocation(1208, 9);
-				char_literal598=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_arrayCreator7557); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				char_literal598_tree = (object)adaptor.Create(char_literal598, "char_literal598", retval);
-				adaptor.AddChild(root_0, char_literal598_tree);
-				}
-				DebugLocation(1209, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1209:9: ( '[' expression ']' )*
-				try { DebugEnterSubRule(161);
-				while (true)
-				{
-					int alt161=2;
-					try { DebugEnterDecision(161, false);
-					int LA161_1 = input.LA(1);
-
-					if ((LA161_1==LBRACKET))
-					{
-						int LA161_2 = input.LA(2);
-
-						if ((EvaluatePredicate(synpred254_Java_fragment)))
-						{
-							alt161 = 1;
-						}
-
-
-					}
-
-
-					} finally { DebugExitDecision(161); }
-					switch ( alt161 )
-					{
-					case 1:
-						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1209:13: '[' expression ']'
-						{
-						DebugLocation(1209, 13);
-						char_literal599=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_arrayCreator7571); if (state.failed) return retval;
-						if (state.backtracking == 0) {
-						char_literal599_tree = (object)adaptor.Create(char_literal599, "char_literal599", retval);
-						adaptor.AddChild(root_0, char_literal599_tree);
-						}
-						DebugLocation(1209, 17);
-						PushFollow(Follow._expression_in_arrayCreator7573);
-						expression600=expression();
-						PopFollow();
-						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, expression600.Tree, expression600, "expression600", retval);
-						DebugLocation(1210, 13);
-						char_literal601=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_arrayCreator7587); if (state.failed) return retval;
-						if (state.backtracking == 0) {
-						char_literal601_tree = (object)adaptor.Create(char_literal601, "char_literal601", retval);
-						adaptor.AddChild(root_0, char_literal601_tree);
-						}
-
-						}
-						break;
-
-					default:
-						goto loop161;
-					}
-				}
-
-				loop161:
-					;
-
-				} finally { DebugExitSubRule(161); }
-
-				DebugLocation(1212, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1212:9: ( '[' ']' )*
-				try { DebugEnterSubRule(162);
-				while (true)
-				{
-					int alt162=2;
-					try { DebugEnterDecision(162, false);
-					int LA162_1 = input.LA(1);
-
-					if ((LA162_1==LBRACKET))
-					{
-						int LA162_2 = input.LA(2);
-
-						if ((LA162_2==RBRACKET))
-						{
-							alt162 = 1;
-						}
-
-
-					}
-
-
-					} finally { DebugExitDecision(162); }
-					switch ( alt162 )
-					{
-					case 1:
-						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1212:10: '[' ']'
-						{
-						DebugLocation(1212, 10);
-						char_literal602=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_arrayCreator7609); if (state.failed) return retval;
-						if (state.backtracking == 0) {
-						char_literal602_tree = (object)adaptor.Create(char_literal602, "char_literal602", retval);
-						adaptor.AddChild(root_0, char_literal602_tree);
-						}
-						DebugLocation(1212, 14);
-						char_literal603=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_arrayCreator7611); if (state.failed) return retval;
-						if (state.backtracking == 0) {
-						char_literal603_tree = (object)adaptor.Create(char_literal603, "char_literal603", retval);
-						adaptor.AddChild(root_0, char_literal603_tree);
-						}
-
-						}
-						break;
-
-					default:
-						goto loop162;
-					}
-				}
-
-				loop162:
-					;
-
-				} finally { DebugExitSubRule(162); }
 
 
 				}
@@ -21075,7 +20958,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 100, arrayCreator_StartIndex); }
 
 		}
-		DebugLocation(1214, 4);
+		DebugLocation(1205, 4);
 		} finally { DebugExitRule(GrammarFileName, "arrayCreator"); }
 		return retval;
 
@@ -21085,7 +20968,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_variableInitializer();
 	partial void LeaveRule_variableInitializer();
 	// $ANTLR start "variableInitializer"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1216:1: variableInitializer : ( arrayInitializer | expression );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1207:1: variableInitializer : ( arrayInitializer | expression );
 	[GrammarRule("variableInitializer")]
 	private Antlr3AstNode variableInitializer()
 	{
@@ -21098,65 +20981,65 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode arrayInitializer604 = default(Antlr3AstNode);
-		Antlr3AstNode expression605 = default(Antlr3AstNode);
+		Antlr3AstNode arrayInitializer599 = default(Antlr3AstNode);
+		Antlr3AstNode expression600 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "variableInitializer");
-		DebugLocation(1216, 4);
+		DebugLocation(1207, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 101)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1217:5: ( arrayInitializer | expression )
-			int alt164=2;
-			try { DebugEnterDecision(164, false);
-			int LA164_1 = input.LA(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1208:5: ( arrayInitializer | expression )
+			int alt162=2;
+			try { DebugEnterDecision(162, false);
+			int LA162_1 = input.LA(1);
 
-			if ((LA164_1==LBRACE))
+			if ((LA162_1==LBRACE))
 			{
-				alt164 = 1;
+				alt162 = 1;
 			}
-			else if ((LA164_1==BANG||LA164_1==BOOLEAN||LA164_1==BYTE||(LA164_1>=CHAR && LA164_1<=CHARLITERAL)||(LA164_1>=DOUBLE && LA164_1<=DOUBLELITERAL)||LA164_1==FALSE||(LA164_1>=FLOAT && LA164_1<=FLOATLITERAL)||LA164_1==IDENTIFIER||LA164_1==INT||LA164_1==INTLITERAL||(LA164_1>=LONG && LA164_1<=LPAREN)||(LA164_1>=NEW && LA164_1<=NULL)||LA164_1==PLUS||LA164_1==PLUSPLUS||LA164_1==SHORT||(LA164_1>=STRINGLITERAL && LA164_1<=SUB)||(LA164_1>=SUBSUB && LA164_1<=SUPER)||LA164_1==THIS||LA164_1==TILDE||LA164_1==TRUE||LA164_1==VOID))
+			else if ((LA162_1==BANG||LA162_1==BOOLEAN||LA162_1==BYTE||(LA162_1>=CHAR && LA162_1<=CHARLITERAL)||(LA162_1>=DOUBLE && LA162_1<=DOUBLELITERAL)||LA162_1==FALSE||(LA162_1>=FLOAT && LA162_1<=FLOATLITERAL)||LA162_1==IDENTIFIER||LA162_1==INT||LA162_1==INTLITERAL||(LA162_1>=LONG && LA162_1<=LPAREN)||(LA162_1>=NEW && LA162_1<=NULL)||LA162_1==PLUS||LA162_1==PLUSPLUS||LA162_1==SHORT||(LA162_1>=STRINGLITERAL && LA162_1<=SUB)||(LA162_1>=SUBSUB && LA162_1<=SUPER)||LA162_1==THIS||LA162_1==TILDE||LA162_1==TRUE||LA162_1==VOID))
 			{
-				alt164 = 2;
+				alt162 = 2;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 164, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 162, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(164); }
-			switch (alt164)
+			} finally { DebugExitDecision(162); }
+			switch (alt162)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1217:9: arrayInitializer
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1208:9: arrayInitializer
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1217, 9);
-				PushFollow(Follow._arrayInitializer_in_variableInitializer7641);
-				arrayInitializer604=arrayInitializer();
+				DebugLocation(1208, 9);
+				PushFollow(Follow._arrayInitializer_in_variableInitializer7526);
+				arrayInitializer599=arrayInitializer();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, arrayInitializer604.Tree, arrayInitializer604, "arrayInitializer604", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, arrayInitializer599.Tree, arrayInitializer599, "arrayInitializer599", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1218:9: expression
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1209:9: expression
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1218, 9);
-				PushFollow(Follow._expression_in_variableInitializer7651);
-				expression605=expression();
+				DebugLocation(1209, 9);
+				PushFollow(Follow._expression_in_variableInitializer7536);
+				expression600=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression605.Tree, expression605, "expression605", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression600.Tree, expression600, "expression600", retval);
 
 				}
 				break;
@@ -21184,7 +21067,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 101, variableInitializer_StartIndex); }
 
 		}
-		DebugLocation(1219, 4);
+		DebugLocation(1210, 4);
 		} finally { DebugExitRule(GrammarFileName, "variableInitializer"); }
 		return retval;
 
@@ -21194,7 +21077,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_arrayInitializer();
 	partial void LeaveRule_arrayInitializer();
 	// $ANTLR start "arrayInitializer"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1221:1: arrayInitializer : '{' ( variableInitializer ( ',' variableInitializer )* )? ( ',' )? '}' ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1212:1: arrayInitializer : '{' ( variableInitializer ( ',' variableInitializer )* )? ( ',' )? '}' ;
 	[GrammarRule("arrayInitializer")]
 	private Antlr3AstNode arrayInitializer()
 	{
@@ -21207,157 +21090,157 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
+		IToken char_literal601 = default(IToken);
+		IToken char_literal603 = default(IToken);
+		IToken char_literal605 = default(IToken);
 		IToken char_literal606 = default(IToken);
-		IToken char_literal608 = default(IToken);
-		IToken char_literal610 = default(IToken);
-		IToken char_literal611 = default(IToken);
-		Antlr3AstNode variableInitializer607 = default(Antlr3AstNode);
-		Antlr3AstNode variableInitializer609 = default(Antlr3AstNode);
+		Antlr3AstNode variableInitializer602 = default(Antlr3AstNode);
+		Antlr3AstNode variableInitializer604 = default(Antlr3AstNode);
 
+		object char_literal601_tree = default(object);
+		object char_literal603_tree = default(object);
+		object char_literal605_tree = default(object);
 		object char_literal606_tree = default(object);
-		object char_literal608_tree = default(object);
-		object char_literal610_tree = default(object);
-		object char_literal611_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "arrayInitializer");
-		DebugLocation(1221, 4);
+		DebugLocation(1212, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 102)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1222:5: ( '{' ( variableInitializer ( ',' variableInitializer )* )? ( ',' )? '}' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1213:5: ( '{' ( variableInitializer ( ',' variableInitializer )* )? ( ',' )? '}' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1222:9: '{' ( variableInitializer ( ',' variableInitializer )* )? ( ',' )? '}'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1213:9: '{' ( variableInitializer ( ',' variableInitializer )* )? ( ',' )? '}'
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1222, 9);
-			char_literal606=(IToken)Match(input,LBRACE,Follow._LBRACE_in_arrayInitializer7670); if (state.failed) return retval;
+			DebugLocation(1213, 9);
+			char_literal601=(IToken)Match(input,LBRACE,Follow._LBRACE_in_arrayInitializer7555); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal606_tree = (object)adaptor.Create(char_literal606, "char_literal606", retval);
-			adaptor.AddChild(root_0, char_literal606_tree);
+			char_literal601_tree = (object)adaptor.Create(char_literal601, "char_literal601", retval);
+			adaptor.AddChild(root_0, char_literal601_tree);
 			}
-			DebugLocation(1223, 13);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1223:13: ( variableInitializer ( ',' variableInitializer )* )?
-			int alt166=2;
-			try { DebugEnterSubRule(166);
-			try { DebugEnterDecision(166, false);
-			int LA166_1 = input.LA(1);
+			DebugLocation(1214, 13);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1214:13: ( variableInitializer ( ',' variableInitializer )* )?
+			int alt164=2;
+			try { DebugEnterSubRule(164);
+			try { DebugEnterDecision(164, false);
+			int LA164_1 = input.LA(1);
 
-			if ((LA166_1==BANG||LA166_1==BOOLEAN||LA166_1==BYTE||(LA166_1>=CHAR && LA166_1<=CHARLITERAL)||(LA166_1>=DOUBLE && LA166_1<=DOUBLELITERAL)||LA166_1==FALSE||(LA166_1>=FLOAT && LA166_1<=FLOATLITERAL)||LA166_1==IDENTIFIER||LA166_1==INT||LA166_1==INTLITERAL||LA166_1==LBRACE||(LA166_1>=LONG && LA166_1<=LPAREN)||(LA166_1>=NEW && LA166_1<=NULL)||LA166_1==PLUS||LA166_1==PLUSPLUS||LA166_1==SHORT||(LA166_1>=STRINGLITERAL && LA166_1<=SUB)||(LA166_1>=SUBSUB && LA166_1<=SUPER)||LA166_1==THIS||LA166_1==TILDE||LA166_1==TRUE||LA166_1==VOID))
+			if ((LA164_1==BANG||LA164_1==BOOLEAN||LA164_1==BYTE||(LA164_1>=CHAR && LA164_1<=CHARLITERAL)||(LA164_1>=DOUBLE && LA164_1<=DOUBLELITERAL)||LA164_1==FALSE||(LA164_1>=FLOAT && LA164_1<=FLOATLITERAL)||LA164_1==IDENTIFIER||LA164_1==INT||LA164_1==INTLITERAL||LA164_1==LBRACE||(LA164_1>=LONG && LA164_1<=LPAREN)||(LA164_1>=NEW && LA164_1<=NULL)||LA164_1==PLUS||LA164_1==PLUSPLUS||LA164_1==SHORT||(LA164_1>=STRINGLITERAL && LA164_1<=SUB)||(LA164_1>=SUBSUB && LA164_1<=SUPER)||LA164_1==THIS||LA164_1==TILDE||LA164_1==TRUE||LA164_1==VOID))
 			{
-				alt166 = 1;
+				alt164 = 1;
 			}
-			} finally { DebugExitDecision(166); }
-			switch (alt166)
+			} finally { DebugExitDecision(164); }
+			switch (alt164)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1223:14: variableInitializer ( ',' variableInitializer )*
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1214:14: variableInitializer ( ',' variableInitializer )*
 				{
-				DebugLocation(1223, 14);
-				PushFollow(Follow._variableInitializer_in_arrayInitializer7686);
-				variableInitializer607=variableInitializer();
+				DebugLocation(1214, 14);
+				PushFollow(Follow._variableInitializer_in_arrayInitializer7571);
+				variableInitializer602=variableInitializer();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, variableInitializer607.Tree, variableInitializer607, "variableInitializer607", retval);
-				DebugLocation(1224, 17);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1224:17: ( ',' variableInitializer )*
-				try { DebugEnterSubRule(165);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, variableInitializer602.Tree, variableInitializer602, "variableInitializer602", retval);
+				DebugLocation(1215, 17);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1215:17: ( ',' variableInitializer )*
+				try { DebugEnterSubRule(163);
 				while (true)
 				{
-					int alt165=2;
-					try { DebugEnterDecision(165, false);
-					int LA165_1 = input.LA(1);
+					int alt163=2;
+					try { DebugEnterDecision(163, false);
+					int LA163_1 = input.LA(1);
 
-					if ((LA165_1==COMMA))
+					if ((LA163_1==COMMA))
 					{
-						int LA165_2 = input.LA(2);
+						int LA163_2 = input.LA(2);
 
-						if ((LA165_2==BANG||LA165_2==BOOLEAN||LA165_2==BYTE||(LA165_2>=CHAR && LA165_2<=CHARLITERAL)||(LA165_2>=DOUBLE && LA165_2<=DOUBLELITERAL)||LA165_2==FALSE||(LA165_2>=FLOAT && LA165_2<=FLOATLITERAL)||LA165_2==IDENTIFIER||LA165_2==INT||LA165_2==INTLITERAL||LA165_2==LBRACE||(LA165_2>=LONG && LA165_2<=LPAREN)||(LA165_2>=NEW && LA165_2<=NULL)||LA165_2==PLUS||LA165_2==PLUSPLUS||LA165_2==SHORT||(LA165_2>=STRINGLITERAL && LA165_2<=SUB)||(LA165_2>=SUBSUB && LA165_2<=SUPER)||LA165_2==THIS||LA165_2==TILDE||LA165_2==TRUE||LA165_2==VOID))
+						if ((LA163_2==BANG||LA163_2==BOOLEAN||LA163_2==BYTE||(LA163_2>=CHAR && LA163_2<=CHARLITERAL)||(LA163_2>=DOUBLE && LA163_2<=DOUBLELITERAL)||LA163_2==FALSE||(LA163_2>=FLOAT && LA163_2<=FLOATLITERAL)||LA163_2==IDENTIFIER||LA163_2==INT||LA163_2==INTLITERAL||LA163_2==LBRACE||(LA163_2>=LONG && LA163_2<=LPAREN)||(LA163_2>=NEW && LA163_2<=NULL)||LA163_2==PLUS||LA163_2==PLUSPLUS||LA163_2==SHORT||(LA163_2>=STRINGLITERAL && LA163_2<=SUB)||(LA163_2>=SUBSUB && LA163_2<=SUPER)||LA163_2==THIS||LA163_2==TILDE||LA163_2==TRUE||LA163_2==VOID))
 						{
-							alt165 = 1;
+							alt163 = 1;
 						}
 
 
 					}
 
 
-					} finally { DebugExitDecision(165); }
-					switch ( alt165 )
+					} finally { DebugExitDecision(163); }
+					switch ( alt163 )
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1224:18: ',' variableInitializer
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1215:18: ',' variableInitializer
 						{
-						DebugLocation(1224, 18);
-						char_literal608=(IToken)Match(input,COMMA,Follow._COMMA_in_arrayInitializer7705); if (state.failed) return retval;
+						DebugLocation(1215, 18);
+						char_literal603=(IToken)Match(input,COMMA,Follow._COMMA_in_arrayInitializer7590); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						char_literal608_tree = (object)adaptor.Create(char_literal608, "char_literal608", retval);
-						adaptor.AddChild(root_0, char_literal608_tree);
+						char_literal603_tree = (object)adaptor.Create(char_literal603, "char_literal603", retval);
+						adaptor.AddChild(root_0, char_literal603_tree);
 						}
-						DebugLocation(1224, 22);
-						PushFollow(Follow._variableInitializer_in_arrayInitializer7707);
-						variableInitializer609=variableInitializer();
+						DebugLocation(1215, 22);
+						PushFollow(Follow._variableInitializer_in_arrayInitializer7592);
+						variableInitializer604=variableInitializer();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, variableInitializer609.Tree, variableInitializer609, "variableInitializer609", retval);
+						if (state.backtracking == 0) adaptor.AddChild(root_0, variableInitializer604.Tree, variableInitializer604, "variableInitializer604", retval);
 
 						}
 						break;
 
 					default:
-						goto loop165;
+						goto loop163;
 					}
 				}
 
-				loop165:
+				loop163:
 					;
 
-				} finally { DebugExitSubRule(165); }
+				} finally { DebugExitSubRule(163); }
 
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(166); }
+			} finally { DebugExitSubRule(164); }
 
-			DebugLocation(1227, 13);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1227:13: ( ',' )?
-			int alt167=2;
-			try { DebugEnterSubRule(167);
-			try { DebugEnterDecision(167, false);
-			int LA167_1 = input.LA(1);
+			DebugLocation(1218, 13);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1218:13: ( ',' )?
+			int alt165=2;
+			try { DebugEnterSubRule(165);
+			try { DebugEnterDecision(165, false);
+			int LA165_1 = input.LA(1);
 
-			if ((LA167_1==COMMA))
+			if ((LA165_1==COMMA))
 			{
-				alt167 = 1;
+				alt165 = 1;
 			}
-			} finally { DebugExitDecision(167); }
-			switch (alt167)
+			} finally { DebugExitDecision(165); }
+			switch (alt165)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1227:14: ','
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1218:14: ','
 				{
-				DebugLocation(1227, 14);
-				char_literal610=(IToken)Match(input,COMMA,Follow._COMMA_in_arrayInitializer7757); if (state.failed) return retval;
+				DebugLocation(1218, 14);
+				char_literal605=(IToken)Match(input,COMMA,Follow._COMMA_in_arrayInitializer7642); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal610_tree = (object)adaptor.Create(char_literal610, "char_literal610", retval);
-				adaptor.AddChild(root_0, char_literal610_tree);
+				char_literal605_tree = (object)adaptor.Create(char_literal605, "char_literal605", retval);
+				adaptor.AddChild(root_0, char_literal605_tree);
 				}
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(167); }
+			} finally { DebugExitSubRule(165); }
 
-			DebugLocation(1228, 9);
-			char_literal611=(IToken)Match(input,RBRACE,Follow._RBRACE_in_arrayInitializer7770); if (state.failed) return retval;
+			DebugLocation(1219, 9);
+			char_literal606=(IToken)Match(input,RBRACE,Follow._RBRACE_in_arrayInitializer7655); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal611_tree = (object)adaptor.Create(char_literal611, "char_literal611", retval);
-			adaptor.AddChild(root_0, char_literal611_tree);
+			char_literal606_tree = (object)adaptor.Create(char_literal606, "char_literal606", retval);
+			adaptor.AddChild(root_0, char_literal606_tree);
 			}
 
 			}
@@ -21384,7 +21267,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 102, arrayInitializer_StartIndex); }
 
 		}
-		DebugLocation(1229, 4);
+		DebugLocation(1220, 4);
 		} finally { DebugExitRule(GrammarFileName, "arrayInitializer"); }
 		return retval;
 
@@ -21394,7 +21277,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_createdName();
 	partial void LeaveRule_createdName();
 	// $ANTLR start "createdName"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1232:1: createdName : ( classOrInterfaceTypeWithDiamond | primitiveType );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1223:1: createdName : ( classOrInterfaceTypeWithDiamond | primitiveType );
 	[GrammarRule("createdName")]
 	private Antlr3AstNode createdName()
 	{
@@ -21407,65 +21290,65 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode classOrInterfaceTypeWithDiamond612 = default(Antlr3AstNode);
-		Antlr3AstNode primitiveType613 = default(Antlr3AstNode);
+		Antlr3AstNode classOrInterfaceTypeWithDiamond607 = default(Antlr3AstNode);
+		Antlr3AstNode primitiveType608 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "createdName");
-		DebugLocation(1232, 4);
+		DebugLocation(1223, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 103)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1233:5: ( classOrInterfaceTypeWithDiamond | primitiveType )
-			int alt168=2;
-			try { DebugEnterDecision(168, false);
-			int LA168_1 = input.LA(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1224:5: ( classOrInterfaceTypeWithDiamond | primitiveType )
+			int alt166=2;
+			try { DebugEnterDecision(166, false);
+			int LA166_1 = input.LA(1);
 
-			if ((LA168_1==IDENTIFIER))
+			if ((LA166_1==IDENTIFIER))
 			{
-				alt168 = 1;
+				alt166 = 1;
 			}
-			else if ((LA168_1==BOOLEAN||LA168_1==BYTE||LA168_1==CHAR||LA168_1==DOUBLE||LA168_1==FLOAT||LA168_1==INT||LA168_1==LONG||LA168_1==SHORT))
+			else if ((LA166_1==BOOLEAN||LA166_1==BYTE||LA166_1==CHAR||LA166_1==DOUBLE||LA166_1==FLOAT||LA166_1==INT||LA166_1==LONG||LA166_1==SHORT))
 			{
-				alt168 = 2;
+				alt166 = 2;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 168, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 166, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(168); }
-			switch (alt168)
+			} finally { DebugExitDecision(166); }
+			switch (alt166)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1233:9: classOrInterfaceTypeWithDiamond
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1224:9: classOrInterfaceTypeWithDiamond
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1233, 9);
-				PushFollow(Follow._classOrInterfaceTypeWithDiamond_in_createdName7803);
-				classOrInterfaceTypeWithDiamond612=classOrInterfaceTypeWithDiamond();
+				DebugLocation(1224, 9);
+				PushFollow(Follow._classOrInterfaceTypeWithDiamond_in_createdName7688);
+				classOrInterfaceTypeWithDiamond607=classOrInterfaceTypeWithDiamond();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, classOrInterfaceTypeWithDiamond612.Tree, classOrInterfaceTypeWithDiamond612, "classOrInterfaceTypeWithDiamond612", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, classOrInterfaceTypeWithDiamond607.Tree, classOrInterfaceTypeWithDiamond607, "classOrInterfaceTypeWithDiamond607", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1234:9: primitiveType
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1225:9: primitiveType
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1234, 9);
-				PushFollow(Follow._primitiveType_in_createdName7813);
-				primitiveType613=primitiveType();
+				DebugLocation(1225, 9);
+				PushFollow(Follow._primitiveType_in_createdName7698);
+				primitiveType608=primitiveType();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, primitiveType613.Tree, primitiveType613, "primitiveType613", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, primitiveType608.Tree, primitiveType608, "primitiveType608", retval);
 
 				}
 				break;
@@ -21493,7 +21376,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 103, createdName_StartIndex); }
 
 		}
-		DebugLocation(1235, 4);
+		DebugLocation(1226, 4);
 		} finally { DebugExitRule(GrammarFileName, "createdName"); }
 		return retval;
 
@@ -21503,7 +21386,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_innerCreator();
 	partial void LeaveRule_innerCreator();
 	// $ANTLR start "innerCreator"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1237:1: innerCreator : '.' 'new' ( nonWildcardTypeArgumentsOrDiamond )? IDENTIFIER ( typeArguments )? classCreatorRest ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1228:1: innerCreator : '.' 'new' ( nonWildcardTypeArgumentsOrDiamond )? IDENTIFIER ( typeArguments )? classCreatorRest ;
 	[GrammarRule("innerCreator")]
 	private Antlr3AstNode innerCreator()
 	{
@@ -21516,114 +21399,114 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal614 = default(IToken);
-		IToken string_literal615 = default(IToken);
-		IToken IDENTIFIER617 = default(IToken);
-		Antlr3AstNode nonWildcardTypeArgumentsOrDiamond616 = default(Antlr3AstNode);
-		Antlr3AstNode typeArguments618 = default(Antlr3AstNode);
-		Antlr3AstNode classCreatorRest619 = default(Antlr3AstNode);
+		IToken char_literal609 = default(IToken);
+		IToken string_literal610 = default(IToken);
+		IToken IDENTIFIER612 = default(IToken);
+		Antlr3AstNode nonWildcardTypeArgumentsOrDiamond611 = default(Antlr3AstNode);
+		Antlr3AstNode typeArguments613 = default(Antlr3AstNode);
+		Antlr3AstNode classCreatorRest614 = default(Antlr3AstNode);
 
-		object char_literal614_tree = default(object);
-		object string_literal615_tree = default(object);
-		object IDENTIFIER617_tree = default(object);
+		object char_literal609_tree = default(object);
+		object string_literal610_tree = default(object);
+		object IDENTIFIER612_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "innerCreator");
-		DebugLocation(1237, 4);
+		DebugLocation(1228, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 104)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1238:5: ( '.' 'new' ( nonWildcardTypeArgumentsOrDiamond )? IDENTIFIER ( typeArguments )? classCreatorRest )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1229:5: ( '.' 'new' ( nonWildcardTypeArgumentsOrDiamond )? IDENTIFIER ( typeArguments )? classCreatorRest )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1238:9: '.' 'new' ( nonWildcardTypeArgumentsOrDiamond )? IDENTIFIER ( typeArguments )? classCreatorRest
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1229:9: '.' 'new' ( nonWildcardTypeArgumentsOrDiamond )? IDENTIFIER ( typeArguments )? classCreatorRest
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1238, 9);
-			char_literal614=(IToken)Match(input,DOT,Follow._DOT_in_innerCreator7832); if (state.failed) return retval;
+			DebugLocation(1229, 9);
+			char_literal609=(IToken)Match(input,DOT,Follow._DOT_in_innerCreator7717); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal614_tree = (object)adaptor.Create(char_literal614, "char_literal614", retval);
-			adaptor.AddChild(root_0, char_literal614_tree);
+			char_literal609_tree = (object)adaptor.Create(char_literal609, "char_literal609", retval);
+			adaptor.AddChild(root_0, char_literal609_tree);
 			}
-			DebugLocation(1238, 13);
-			string_literal615=(IToken)Match(input,NEW,Follow._NEW_in_innerCreator7834); if (state.failed) return retval;
+			DebugLocation(1229, 13);
+			string_literal610=(IToken)Match(input,NEW,Follow._NEW_in_innerCreator7719); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal615_tree = (object)adaptor.Create(string_literal615, "string_literal615", retval);
-			adaptor.AddChild(root_0, string_literal615_tree);
+			string_literal610_tree = (object)adaptor.Create(string_literal610, "string_literal610", retval);
+			adaptor.AddChild(root_0, string_literal610_tree);
 			}
-			DebugLocation(1239, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1239:9: ( nonWildcardTypeArgumentsOrDiamond )?
-			int alt169=2;
-			try { DebugEnterSubRule(169);
-			try { DebugEnterDecision(169, false);
-			int LA169_1 = input.LA(1);
+			DebugLocation(1230, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1230:9: ( nonWildcardTypeArgumentsOrDiamond )?
+			int alt167=2;
+			try { DebugEnterSubRule(167);
+			try { DebugEnterDecision(167, false);
+			int LA167_1 = input.LA(1);
 
-			if ((LA169_1==LT))
+			if ((LA167_1==LT))
 			{
-				alt169 = 1;
+				alt167 = 1;
 			}
-			} finally { DebugExitDecision(169); }
-			switch (alt169)
+			} finally { DebugExitDecision(167); }
+			switch (alt167)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1239:10: nonWildcardTypeArgumentsOrDiamond
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1230:10: nonWildcardTypeArgumentsOrDiamond
 				{
-				DebugLocation(1239, 10);
-				PushFollow(Follow._nonWildcardTypeArgumentsOrDiamond_in_innerCreator7845);
-				nonWildcardTypeArgumentsOrDiamond616=nonWildcardTypeArgumentsOrDiamond();
+				DebugLocation(1230, 10);
+				PushFollow(Follow._nonWildcardTypeArgumentsOrDiamond_in_innerCreator7730);
+				nonWildcardTypeArgumentsOrDiamond611=nonWildcardTypeArgumentsOrDiamond();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, nonWildcardTypeArgumentsOrDiamond616.Tree, nonWildcardTypeArgumentsOrDiamond616, "nonWildcardTypeArgumentsOrDiamond616", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, nonWildcardTypeArgumentsOrDiamond611.Tree, nonWildcardTypeArgumentsOrDiamond611, "nonWildcardTypeArgumentsOrDiamond611", retval);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(169); }
+			} finally { DebugExitSubRule(167); }
 
-			DebugLocation(1241, 9);
-			IDENTIFIER617=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_innerCreator7866); if (state.failed) return retval;
+			DebugLocation(1232, 9);
+			IDENTIFIER612=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_innerCreator7751); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			IDENTIFIER617_tree = (object)adaptor.Create(IDENTIFIER617, "IDENTIFIER617", retval);
-			adaptor.AddChild(root_0, IDENTIFIER617_tree);
+			IDENTIFIER612_tree = (object)adaptor.Create(IDENTIFIER612, "IDENTIFIER612", retval);
+			adaptor.AddChild(root_0, IDENTIFIER612_tree);
 			}
-			DebugLocation(1242, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1242:9: ( typeArguments )?
-			int alt170=2;
-			try { DebugEnterSubRule(170);
-			try { DebugEnterDecision(170, false);
-			int LA170_1 = input.LA(1);
+			DebugLocation(1233, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1233:9: ( typeArguments )?
+			int alt168=2;
+			try { DebugEnterSubRule(168);
+			try { DebugEnterDecision(168, false);
+			int LA168_1 = input.LA(1);
 
-			if ((LA170_1==LT))
+			if ((LA168_1==LT))
 			{
-				alt170 = 1;
+				alt168 = 1;
 			}
-			} finally { DebugExitDecision(170); }
-			switch (alt170)
+			} finally { DebugExitDecision(168); }
+			switch (alt168)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1242:10: typeArguments
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1233:10: typeArguments
 				{
-				DebugLocation(1242, 10);
-				PushFollow(Follow._typeArguments_in_innerCreator7877);
-				typeArguments618=typeArguments();
+				DebugLocation(1233, 10);
+				PushFollow(Follow._typeArguments_in_innerCreator7762);
+				typeArguments613=typeArguments();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, typeArguments618.Tree, typeArguments618, "typeArguments618", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, typeArguments613.Tree, typeArguments613, "typeArguments613", retval);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(170); }
+			} finally { DebugExitSubRule(168); }
 
-			DebugLocation(1244, 9);
-			PushFollow(Follow._classCreatorRest_in_innerCreator7898);
-			classCreatorRest619=classCreatorRest();
+			DebugLocation(1235, 9);
+			PushFollow(Follow._classCreatorRest_in_innerCreator7783);
+			classCreatorRest614=classCreatorRest();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, classCreatorRest619.Tree, classCreatorRest619, "classCreatorRest619", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, classCreatorRest614.Tree, classCreatorRest614, "classCreatorRest614", retval);
 
 			}
 
@@ -21649,7 +21532,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 104, innerCreator_StartIndex); }
 
 		}
-		DebugLocation(1245, 4);
+		DebugLocation(1236, 4);
 		} finally { DebugExitRule(GrammarFileName, "innerCreator"); }
 		return retval;
 
@@ -21659,7 +21542,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_classCreatorRest();
 	partial void LeaveRule_classCreatorRest();
 	// $ANTLR start "classCreatorRest"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1247:1: classCreatorRest : arguments ( classBody )? ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1238:1: classCreatorRest : arguments ( classBody )? ;
 	[GrammarRule("classCreatorRest")]
 	private Antlr3AstNode classCreatorRest()
 	{
@@ -21672,57 +21555,57 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode arguments620 = default(Antlr3AstNode);
-		Antlr3AstNode classBody621 = default(Antlr3AstNode);
+		Antlr3AstNode arguments615 = default(Antlr3AstNode);
+		Antlr3AstNode classBody616 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "classCreatorRest");
-		DebugLocation(1247, 4);
+		DebugLocation(1238, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 105)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1248:5: ( arguments ( classBody )? )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1239:5: ( arguments ( classBody )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1248:9: arguments ( classBody )?
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1239:9: arguments ( classBody )?
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1248, 9);
-			PushFollow(Follow._arguments_in_classCreatorRest7917);
-			arguments620=arguments();
+			DebugLocation(1239, 9);
+			PushFollow(Follow._arguments_in_classCreatorRest7802);
+			arguments615=arguments();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, arguments620.Tree, arguments620, "arguments620", retval);
-			DebugLocation(1249, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1249:9: ( classBody )?
-			int alt171=2;
-			try { DebugEnterSubRule(171);
-			try { DebugEnterDecision(171, false);
-			int LA171_1 = input.LA(1);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, arguments615.Tree, arguments615, "arguments615", retval);
+			DebugLocation(1240, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1240:9: ( classBody )?
+			int alt169=2;
+			try { DebugEnterSubRule(169);
+			try { DebugEnterDecision(169, false);
+			int LA169_1 = input.LA(1);
 
-			if ((LA171_1==LBRACE))
+			if ((LA169_1==LBRACE))
 			{
-				alt171 = 1;
+				alt169 = 1;
 			}
-			} finally { DebugExitDecision(171); }
-			switch (alt171)
+			} finally { DebugExitDecision(169); }
+			switch (alt169)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1249:10: classBody
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1240:10: classBody
 				{
-				DebugLocation(1249, 10);
-				PushFollow(Follow._classBody_in_classCreatorRest7928);
-				classBody621=classBody();
+				DebugLocation(1240, 10);
+				PushFollow(Follow._classBody_in_classCreatorRest7813);
+				classBody616=classBody();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, classBody621.Tree, classBody621, "classBody621", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, classBody616.Tree, classBody616, "classBody616", retval);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(171); }
+			} finally { DebugExitSubRule(169); }
 
 
 			}
@@ -21749,7 +21632,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 105, classCreatorRest_StartIndex); }
 
 		}
-		DebugLocation(1251, 4);
+		DebugLocation(1242, 4);
 		} finally { DebugExitRule(GrammarFileName, "classCreatorRest"); }
 		return retval;
 
@@ -21759,7 +21642,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_nonWildcardTypeArguments();
 	partial void LeaveRule_nonWildcardTypeArguments();
 	// $ANTLR start "nonWildcardTypeArguments"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1253:1: nonWildcardTypeArguments : '<' typeList '>' ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1244:1: nonWildcardTypeArguments : '<' typeList '>' ;
 	[GrammarRule("nonWildcardTypeArguments")]
 	private Antlr3AstNode nonWildcardTypeArguments()
 	{
@@ -21772,41 +21655,41 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal622 = default(IToken);
-		IToken char_literal624 = default(IToken);
-		Antlr3AstNode typeList623 = default(Antlr3AstNode);
+		IToken char_literal617 = default(IToken);
+		IToken char_literal619 = default(IToken);
+		Antlr3AstNode typeList618 = default(Antlr3AstNode);
 
-		object char_literal622_tree = default(object);
-		object char_literal624_tree = default(object);
+		object char_literal617_tree = default(object);
+		object char_literal619_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "nonWildcardTypeArguments");
-		DebugLocation(1253, 4);
+		DebugLocation(1244, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 106)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1254:5: ( '<' typeList '>' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1245:5: ( '<' typeList '>' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1254:9: '<' typeList '>'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1245:9: '<' typeList '>'
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1254, 9);
-			char_literal622=(IToken)Match(input,LT,Follow._LT_in_nonWildcardTypeArguments7958); if (state.failed) return retval;
+			DebugLocation(1245, 9);
+			char_literal617=(IToken)Match(input,LT,Follow._LT_in_nonWildcardTypeArguments7843); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal622_tree = (object)adaptor.Create(char_literal622, "char_literal622", retval);
-			adaptor.AddChild(root_0, char_literal622_tree);
+			char_literal617_tree = (object)adaptor.Create(char_literal617, "char_literal617", retval);
+			adaptor.AddChild(root_0, char_literal617_tree);
 			}
-			DebugLocation(1254, 13);
-			PushFollow(Follow._typeList_in_nonWildcardTypeArguments7960);
-			typeList623=typeList();
+			DebugLocation(1245, 13);
+			PushFollow(Follow._typeList_in_nonWildcardTypeArguments7845);
+			typeList618=typeList();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, typeList623.Tree, typeList623, "typeList623", retval);
-			DebugLocation(1254, 22);
-			char_literal624=(IToken)Match(input,GT,Follow._GT_in_nonWildcardTypeArguments7962); if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, typeList618.Tree, typeList618, "typeList618", retval);
+			DebugLocation(1245, 22);
+			char_literal619=(IToken)Match(input,GT,Follow._GT_in_nonWildcardTypeArguments7847); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal624_tree = (object)adaptor.Create(char_literal624, "char_literal624", retval);
-			adaptor.AddChild(root_0, char_literal624_tree);
+			char_literal619_tree = (object)adaptor.Create(char_literal619, "char_literal619", retval);
+			adaptor.AddChild(root_0, char_literal619_tree);
 			}
 
 			}
@@ -21833,7 +21716,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 106, nonWildcardTypeArguments_StartIndex); }
 
 		}
-		DebugLocation(1255, 4);
+		DebugLocation(1246, 4);
 		} finally { DebugExitRule(GrammarFileName, "nonWildcardTypeArguments"); }
 		return retval;
 
@@ -21843,7 +21726,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_typeArgumentsOrDiamond();
 	partial void LeaveRule_typeArgumentsOrDiamond();
 	// $ANTLR start "typeArgumentsOrDiamond"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1257:1: typeArgumentsOrDiamond : ( '<' '>' | typeArguments );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1248:1: typeArgumentsOrDiamond : ( '<' '>' | typeArguments );
 	[GrammarRule("typeArgumentsOrDiamond")]
 	private Antlr3AstNode typeArgumentsOrDiamond()
 	{
@@ -21856,39 +21739,39 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal625 = default(IToken);
-		IToken char_literal626 = default(IToken);
-		Antlr3AstNode typeArguments627 = default(Antlr3AstNode);
+		IToken char_literal620 = default(IToken);
+		IToken char_literal621 = default(IToken);
+		Antlr3AstNode typeArguments622 = default(Antlr3AstNode);
 
-		object char_literal625_tree = default(object);
-		object char_literal626_tree = default(object);
+		object char_literal620_tree = default(object);
+		object char_literal621_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "typeArgumentsOrDiamond");
-		DebugLocation(1257, 4);
+		DebugLocation(1248, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 107)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1258:5: ( '<' '>' | typeArguments )
-			int alt172=2;
-			try { DebugEnterDecision(172, false);
-			int LA172_1 = input.LA(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1249:5: ( '<' '>' | typeArguments )
+			int alt170=2;
+			try { DebugEnterDecision(170, false);
+			int LA170_1 = input.LA(1);
 
-			if ((LA172_1==LT))
+			if ((LA170_1==LT))
 			{
-				int LA172_2 = input.LA(2);
+				int LA170_2 = input.LA(2);
 
-				if ((LA172_2==GT))
+				if ((LA170_2==GT))
 				{
-					alt172 = 1;
+					alt170 = 1;
 				}
-				else if ((LA172_2==BOOLEAN||LA172_2==BYTE||LA172_2==CHAR||LA172_2==DOUBLE||LA172_2==FLOAT||LA172_2==IDENTIFIER||LA172_2==INT||LA172_2==LONG||LA172_2==QUES||LA172_2==SHORT))
+				else if ((LA170_2==BOOLEAN||LA170_2==BYTE||LA170_2==CHAR||LA170_2==DOUBLE||LA170_2==FLOAT||LA170_2==IDENTIFIER||LA170_2==INT||LA170_2==LONG||LA170_2==QUES||LA170_2==SHORT))
 				{
-					alt172 = 2;
+					alt170 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 172, 1, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 170, 1, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -21896,46 +21779,46 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 172, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 170, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(172); }
-			switch (alt172)
+			} finally { DebugExitDecision(170); }
+			switch (alt170)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1258:9: '<' '>'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1249:9: '<' '>'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1258, 9);
-				char_literal625=(IToken)Match(input,LT,Follow._LT_in_typeArgumentsOrDiamond7981); if (state.failed) return retval;
+				DebugLocation(1249, 9);
+				char_literal620=(IToken)Match(input,LT,Follow._LT_in_typeArgumentsOrDiamond7866); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal625_tree = (object)adaptor.Create(char_literal625, "char_literal625", retval);
-				adaptor.AddChild(root_0, char_literal625_tree);
+				char_literal620_tree = (object)adaptor.Create(char_literal620, "char_literal620", retval);
+				adaptor.AddChild(root_0, char_literal620_tree);
 				}
-				DebugLocation(1258, 13);
-				char_literal626=(IToken)Match(input,GT,Follow._GT_in_typeArgumentsOrDiamond7983); if (state.failed) return retval;
+				DebugLocation(1249, 13);
+				char_literal621=(IToken)Match(input,GT,Follow._GT_in_typeArgumentsOrDiamond7868); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal626_tree = (object)adaptor.Create(char_literal626, "char_literal626", retval);
-				adaptor.AddChild(root_0, char_literal626_tree);
+				char_literal621_tree = (object)adaptor.Create(char_literal621, "char_literal621", retval);
+				adaptor.AddChild(root_0, char_literal621_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1259:9: typeArguments
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1250:9: typeArguments
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1259, 9);
-				PushFollow(Follow._typeArguments_in_typeArgumentsOrDiamond7993);
-				typeArguments627=typeArguments();
+				DebugLocation(1250, 9);
+				PushFollow(Follow._typeArguments_in_typeArgumentsOrDiamond7878);
+				typeArguments622=typeArguments();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, typeArguments627.Tree, typeArguments627, "typeArguments627", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, typeArguments622.Tree, typeArguments622, "typeArguments622", retval);
 
 				}
 				break;
@@ -21963,7 +21846,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 107, typeArgumentsOrDiamond_StartIndex); }
 
 		}
-		DebugLocation(1260, 4);
+		DebugLocation(1251, 4);
 		} finally { DebugExitRule(GrammarFileName, "typeArgumentsOrDiamond"); }
 		return retval;
 
@@ -21973,7 +21856,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_nonWildcardTypeArgumentsOrDiamond();
 	partial void LeaveRule_nonWildcardTypeArgumentsOrDiamond();
 	// $ANTLR start "nonWildcardTypeArgumentsOrDiamond"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1262:1: nonWildcardTypeArgumentsOrDiamond : ( '<' '>' | nonWildcardTypeArguments );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1253:1: nonWildcardTypeArgumentsOrDiamond : ( '<' '>' | nonWildcardTypeArguments );
 	[GrammarRule("nonWildcardTypeArgumentsOrDiamond")]
 	private Antlr3AstNode nonWildcardTypeArgumentsOrDiamond()
 	{
@@ -21986,39 +21869,39 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal628 = default(IToken);
-		IToken char_literal629 = default(IToken);
-		Antlr3AstNode nonWildcardTypeArguments630 = default(Antlr3AstNode);
+		IToken char_literal623 = default(IToken);
+		IToken char_literal624 = default(IToken);
+		Antlr3AstNode nonWildcardTypeArguments625 = default(Antlr3AstNode);
 
-		object char_literal628_tree = default(object);
-		object char_literal629_tree = default(object);
+		object char_literal623_tree = default(object);
+		object char_literal624_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "nonWildcardTypeArgumentsOrDiamond");
-		DebugLocation(1262, 4);
+		DebugLocation(1253, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 108)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1263:5: ( '<' '>' | nonWildcardTypeArguments )
-			int alt173=2;
-			try { DebugEnterDecision(173, false);
-			int LA173_1 = input.LA(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1254:5: ( '<' '>' | nonWildcardTypeArguments )
+			int alt171=2;
+			try { DebugEnterDecision(171, false);
+			int LA171_1 = input.LA(1);
 
-			if ((LA173_1==LT))
+			if ((LA171_1==LT))
 			{
-				int LA173_2 = input.LA(2);
+				int LA171_2 = input.LA(2);
 
-				if ((LA173_2==GT))
+				if ((LA171_2==GT))
 				{
-					alt173 = 1;
+					alt171 = 1;
 				}
-				else if ((LA173_2==BOOLEAN||LA173_2==BYTE||LA173_2==CHAR||LA173_2==DOUBLE||LA173_2==FLOAT||LA173_2==IDENTIFIER||LA173_2==INT||LA173_2==LONG||LA173_2==SHORT))
+				else if ((LA171_2==BOOLEAN||LA171_2==BYTE||LA171_2==CHAR||LA171_2==DOUBLE||LA171_2==FLOAT||LA171_2==IDENTIFIER||LA171_2==INT||LA171_2==LONG||LA171_2==SHORT))
 				{
-					alt173 = 2;
+					alt171 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 173, 1, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 171, 1, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -22026,46 +21909,46 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 173, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 171, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(173); }
-			switch (alt173)
+			} finally { DebugExitDecision(171); }
+			switch (alt171)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1263:9: '<' '>'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1254:9: '<' '>'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1263, 9);
-				char_literal628=(IToken)Match(input,LT,Follow._LT_in_nonWildcardTypeArgumentsOrDiamond8012); if (state.failed) return retval;
+				DebugLocation(1254, 9);
+				char_literal623=(IToken)Match(input,LT,Follow._LT_in_nonWildcardTypeArgumentsOrDiamond7897); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal628_tree = (object)adaptor.Create(char_literal628, "char_literal628", retval);
-				adaptor.AddChild(root_0, char_literal628_tree);
+				char_literal623_tree = (object)adaptor.Create(char_literal623, "char_literal623", retval);
+				adaptor.AddChild(root_0, char_literal623_tree);
 				}
-				DebugLocation(1263, 13);
-				char_literal629=(IToken)Match(input,GT,Follow._GT_in_nonWildcardTypeArgumentsOrDiamond8014); if (state.failed) return retval;
+				DebugLocation(1254, 13);
+				char_literal624=(IToken)Match(input,GT,Follow._GT_in_nonWildcardTypeArgumentsOrDiamond7899); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal629_tree = (object)adaptor.Create(char_literal629, "char_literal629", retval);
-				adaptor.AddChild(root_0, char_literal629_tree);
+				char_literal624_tree = (object)adaptor.Create(char_literal624, "char_literal624", retval);
+				adaptor.AddChild(root_0, char_literal624_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1264:9: nonWildcardTypeArguments
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1255:9: nonWildcardTypeArguments
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1264, 9);
-				PushFollow(Follow._nonWildcardTypeArguments_in_nonWildcardTypeArgumentsOrDiamond8024);
-				nonWildcardTypeArguments630=nonWildcardTypeArguments();
+				DebugLocation(1255, 9);
+				PushFollow(Follow._nonWildcardTypeArguments_in_nonWildcardTypeArgumentsOrDiamond7909);
+				nonWildcardTypeArguments625=nonWildcardTypeArguments();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, nonWildcardTypeArguments630.Tree, nonWildcardTypeArguments630, "nonWildcardTypeArguments630", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, nonWildcardTypeArguments625.Tree, nonWildcardTypeArguments625, "nonWildcardTypeArguments625", retval);
 
 				}
 				break;
@@ -22093,7 +21976,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 108, nonWildcardTypeArgumentsOrDiamond_StartIndex); }
 
 		}
-		DebugLocation(1265, 4);
+		DebugLocation(1256, 4);
 		} finally { DebugExitRule(GrammarFileName, "nonWildcardTypeArgumentsOrDiamond"); }
 		return retval;
 
@@ -22103,7 +21986,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_arguments();
 	partial void LeaveRule_arguments();
 	// $ANTLR start "arguments"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1267:1: arguments : '(' ( expressionList )? ')' ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1258:1: arguments : '(' ( expressionList )? ')' ;
 	[GrammarRule("arguments")]
 	private Antlr3AstNode arguments()
 	{
@@ -22116,66 +21999,66 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal631 = default(IToken);
-		IToken char_literal633 = default(IToken);
-		Antlr3AstNode expressionList632 = default(Antlr3AstNode);
+		IToken char_literal626 = default(IToken);
+		IToken char_literal628 = default(IToken);
+		Antlr3AstNode expressionList627 = default(Antlr3AstNode);
 
-		object char_literal631_tree = default(object);
-		object char_literal633_tree = default(object);
+		object char_literal626_tree = default(object);
+		object char_literal628_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "arguments");
-		DebugLocation(1267, 4);
+		DebugLocation(1258, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 109)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1268:5: ( '(' ( expressionList )? ')' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1259:5: ( '(' ( expressionList )? ')' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1268:9: '(' ( expressionList )? ')'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1259:9: '(' ( expressionList )? ')'
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1268, 9);
-			char_literal631=(IToken)Match(input,LPAREN,Follow._LPAREN_in_arguments8044); if (state.failed) return retval;
+			DebugLocation(1259, 9);
+			char_literal626=(IToken)Match(input,LPAREN,Follow._LPAREN_in_arguments7929); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal631_tree = (object)adaptor.Create(char_literal631, "char_literal631", retval);
-			adaptor.AddChild(root_0, char_literal631_tree);
+			char_literal626_tree = (object)adaptor.Create(char_literal626, "char_literal626", retval);
+			adaptor.AddChild(root_0, char_literal626_tree);
 			}
-			DebugLocation(1268, 13);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1268:13: ( expressionList )?
-			int alt174=2;
-			try { DebugEnterSubRule(174);
-			try { DebugEnterDecision(174, false);
-			int LA174_1 = input.LA(1);
+			DebugLocation(1259, 13);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1259:13: ( expressionList )?
+			int alt172=2;
+			try { DebugEnterSubRule(172);
+			try { DebugEnterDecision(172, false);
+			int LA172_1 = input.LA(1);
 
-			if ((LA174_1==BANG||LA174_1==BOOLEAN||LA174_1==BYTE||(LA174_1>=CHAR && LA174_1<=CHARLITERAL)||(LA174_1>=DOUBLE && LA174_1<=DOUBLELITERAL)||LA174_1==FALSE||(LA174_1>=FLOAT && LA174_1<=FLOATLITERAL)||LA174_1==IDENTIFIER||LA174_1==INT||LA174_1==INTLITERAL||(LA174_1>=LONG && LA174_1<=LPAREN)||(LA174_1>=NEW && LA174_1<=NULL)||LA174_1==PLUS||LA174_1==PLUSPLUS||LA174_1==SHORT||(LA174_1>=STRINGLITERAL && LA174_1<=SUB)||(LA174_1>=SUBSUB && LA174_1<=SUPER)||LA174_1==THIS||LA174_1==TILDE||LA174_1==TRUE||LA174_1==VOID))
+			if ((LA172_1==BANG||LA172_1==BOOLEAN||LA172_1==BYTE||(LA172_1>=CHAR && LA172_1<=CHARLITERAL)||(LA172_1>=DOUBLE && LA172_1<=DOUBLELITERAL)||LA172_1==FALSE||(LA172_1>=FLOAT && LA172_1<=FLOATLITERAL)||LA172_1==IDENTIFIER||LA172_1==INT||LA172_1==INTLITERAL||(LA172_1>=LONG && LA172_1<=LPAREN)||(LA172_1>=NEW && LA172_1<=NULL)||LA172_1==PLUS||LA172_1==PLUSPLUS||LA172_1==SHORT||(LA172_1>=STRINGLITERAL && LA172_1<=SUB)||(LA172_1>=SUBSUB && LA172_1<=SUPER)||LA172_1==THIS||LA172_1==TILDE||LA172_1==TRUE||LA172_1==VOID))
 			{
-				alt174 = 1;
+				alt172 = 1;
 			}
-			} finally { DebugExitDecision(174); }
-			switch (alt174)
+			} finally { DebugExitDecision(172); }
+			switch (alt172)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1268:14: expressionList
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1259:14: expressionList
 				{
-				DebugLocation(1268, 14);
-				PushFollow(Follow._expressionList_in_arguments8047);
-				expressionList632=expressionList();
+				DebugLocation(1259, 14);
+				PushFollow(Follow._expressionList_in_arguments7932);
+				expressionList627=expressionList();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expressionList632.Tree, expressionList632, "expressionList632", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expressionList627.Tree, expressionList627, "expressionList627", retval);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(174); }
+			} finally { DebugExitSubRule(172); }
 
-			DebugLocation(1269, 12);
-			char_literal633=(IToken)Match(input,RPAREN,Follow._RPAREN_in_arguments8060); if (state.failed) return retval;
+			DebugLocation(1260, 12);
+			char_literal628=(IToken)Match(input,RPAREN,Follow._RPAREN_in_arguments7945); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal633_tree = (object)adaptor.Create(char_literal633, "char_literal633", retval);
-			adaptor.AddChild(root_0, char_literal633_tree);
+			char_literal628_tree = (object)adaptor.Create(char_literal628, "char_literal628", retval);
+			adaptor.AddChild(root_0, char_literal628_tree);
 			}
 
 			}
@@ -22202,7 +22085,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 109, arguments_StartIndex); }
 
 		}
-		DebugLocation(1270, 4);
+		DebugLocation(1261, 4);
 		} finally { DebugExitRule(GrammarFileName, "arguments"); }
 		return retval;
 
@@ -22212,7 +22095,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_intLiteral();
 	partial void LeaveRule_intLiteral();
 	// $ANTLR start "intLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1272:1: intLiteral : INTLITERAL ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1263:1: intLiteral : INTLITERAL ;
 	[GrammarRule("intLiteral")]
 	private Antlr3AstNode intLiteral()
 	{
@@ -22225,26 +22108,26 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken INTLITERAL634 = default(IToken);
+		IToken INTLITERAL629 = default(IToken);
 
-		object INTLITERAL634_tree = default(object);
+		object INTLITERAL629_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "intLiteral");
-		DebugLocation(1272, 4);
+		DebugLocation(1263, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 110)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1273:5: ( INTLITERAL )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1264:5: ( INTLITERAL )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1273:7: INTLITERAL
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1264:7: INTLITERAL
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1273, 7);
-			INTLITERAL634=(IToken)Match(input,INTLITERAL,Follow._INTLITERAL_in_intLiteral8077); if (state.failed) return retval;
+			DebugLocation(1264, 7);
+			INTLITERAL629=(IToken)Match(input,INTLITERAL,Follow._INTLITERAL_in_intLiteral7962); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			INTLITERAL634_tree = (object)adaptor.Create(INTLITERAL634, "INTLITERAL634", retval);
-			adaptor.AddChild(root_0, INTLITERAL634_tree);
+			INTLITERAL629_tree = (object)adaptor.Create(INTLITERAL629, "INTLITERAL629", retval);
+			adaptor.AddChild(root_0, INTLITERAL629_tree);
 			}
 
 			}
@@ -22271,7 +22154,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 110, intLiteral_StartIndex); }
 
 		}
-		DebugLocation(1274, 4);
+		DebugLocation(1265, 4);
 		} finally { DebugExitRule(GrammarFileName, "intLiteral"); }
 		return retval;
 
@@ -22281,7 +22164,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_longLiteral();
 	partial void LeaveRule_longLiteral();
 	// $ANTLR start "longLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1276:1: longLiteral : LONGLITERAL ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1267:1: longLiteral : LONGLITERAL ;
 	[GrammarRule("longLiteral")]
 	private Antlr3AstNode longLiteral()
 	{
@@ -22294,26 +22177,26 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken LONGLITERAL635 = default(IToken);
+		IToken LONGLITERAL630 = default(IToken);
 
-		object LONGLITERAL635_tree = default(object);
+		object LONGLITERAL630_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "longLiteral");
-		DebugLocation(1276, 4);
+		DebugLocation(1267, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 111)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1277:5: ( LONGLITERAL )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1268:5: ( LONGLITERAL )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1277:7: LONGLITERAL
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1268:7: LONGLITERAL
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1277, 7);
-			LONGLITERAL635=(IToken)Match(input,LONGLITERAL,Follow._LONGLITERAL_in_longLiteral8094); if (state.failed) return retval;
+			DebugLocation(1268, 7);
+			LONGLITERAL630=(IToken)Match(input,LONGLITERAL,Follow._LONGLITERAL_in_longLiteral7979); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			LONGLITERAL635_tree = (object)adaptor.Create(LONGLITERAL635, "LONGLITERAL635", retval);
-			adaptor.AddChild(root_0, LONGLITERAL635_tree);
+			LONGLITERAL630_tree = (object)adaptor.Create(LONGLITERAL630, "LONGLITERAL630", retval);
+			adaptor.AddChild(root_0, LONGLITERAL630_tree);
 			}
 
 			}
@@ -22340,7 +22223,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 111, longLiteral_StartIndex); }
 
 		}
-		DebugLocation(1278, 4);
+		DebugLocation(1269, 4);
 		} finally { DebugExitRule(GrammarFileName, "longLiteral"); }
 		return retval;
 
@@ -22350,7 +22233,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_floatLiteral();
 	partial void LeaveRule_floatLiteral();
 	// $ANTLR start "floatLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1280:1: floatLiteral : FLOATLITERAL ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1271:1: floatLiteral : FLOATLITERAL ;
 	[GrammarRule("floatLiteral")]
 	private Antlr3AstNode floatLiteral()
 	{
@@ -22363,26 +22246,26 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken FLOATLITERAL636 = default(IToken);
+		IToken FLOATLITERAL631 = default(IToken);
 
-		object FLOATLITERAL636_tree = default(object);
+		object FLOATLITERAL631_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "floatLiteral");
-		DebugLocation(1280, 4);
+		DebugLocation(1271, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 112)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1281:5: ( FLOATLITERAL )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1272:5: ( FLOATLITERAL )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1281:7: FLOATLITERAL
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1272:7: FLOATLITERAL
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1281, 7);
-			FLOATLITERAL636=(IToken)Match(input,FLOATLITERAL,Follow._FLOATLITERAL_in_floatLiteral8111); if (state.failed) return retval;
+			DebugLocation(1272, 7);
+			FLOATLITERAL631=(IToken)Match(input,FLOATLITERAL,Follow._FLOATLITERAL_in_floatLiteral7996); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			FLOATLITERAL636_tree = (object)adaptor.Create(FLOATLITERAL636, "FLOATLITERAL636", retval);
-			adaptor.AddChild(root_0, FLOATLITERAL636_tree);
+			FLOATLITERAL631_tree = (object)adaptor.Create(FLOATLITERAL631, "FLOATLITERAL631", retval);
+			adaptor.AddChild(root_0, FLOATLITERAL631_tree);
 			}
 
 			}
@@ -22409,7 +22292,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 112, floatLiteral_StartIndex); }
 
 		}
-		DebugLocation(1282, 4);
+		DebugLocation(1273, 4);
 		} finally { DebugExitRule(GrammarFileName, "floatLiteral"); }
 		return retval;
 
@@ -22419,7 +22302,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_doubleLiteral();
 	partial void LeaveRule_doubleLiteral();
 	// $ANTLR start "doubleLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1284:1: doubleLiteral : DOUBLELITERAL ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1275:1: doubleLiteral : DOUBLELITERAL ;
 	[GrammarRule("doubleLiteral")]
 	private Antlr3AstNode doubleLiteral()
 	{
@@ -22432,26 +22315,26 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken DOUBLELITERAL637 = default(IToken);
+		IToken DOUBLELITERAL632 = default(IToken);
 
-		object DOUBLELITERAL637_tree = default(object);
+		object DOUBLELITERAL632_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "doubleLiteral");
-		DebugLocation(1284, 4);
+		DebugLocation(1275, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 113)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1285:5: ( DOUBLELITERAL )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1276:5: ( DOUBLELITERAL )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1285:7: DOUBLELITERAL
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1276:7: DOUBLELITERAL
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1285, 7);
-			DOUBLELITERAL637=(IToken)Match(input,DOUBLELITERAL,Follow._DOUBLELITERAL_in_doubleLiteral8128); if (state.failed) return retval;
+			DebugLocation(1276, 7);
+			DOUBLELITERAL632=(IToken)Match(input,DOUBLELITERAL,Follow._DOUBLELITERAL_in_doubleLiteral8013); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			DOUBLELITERAL637_tree = (object)adaptor.Create(DOUBLELITERAL637, "DOUBLELITERAL637", retval);
-			adaptor.AddChild(root_0, DOUBLELITERAL637_tree);
+			DOUBLELITERAL632_tree = (object)adaptor.Create(DOUBLELITERAL632, "DOUBLELITERAL632", retval);
+			adaptor.AddChild(root_0, DOUBLELITERAL632_tree);
 			}
 
 			}
@@ -22478,7 +22361,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 113, doubleLiteral_StartIndex); }
 
 		}
-		DebugLocation(1286, 4);
+		DebugLocation(1277, 4);
 		} finally { DebugExitRule(GrammarFileName, "doubleLiteral"); }
 		return retval;
 
@@ -22488,7 +22371,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_charLiteral();
 	partial void LeaveRule_charLiteral();
 	// $ANTLR start "charLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1288:1: charLiteral : CHARLITERAL ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1279:1: charLiteral : CHARLITERAL ;
 	[GrammarRule("charLiteral")]
 	private Antlr3AstNode charLiteral()
 	{
@@ -22501,26 +22384,26 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken CHARLITERAL638 = default(IToken);
+		IToken CHARLITERAL633 = default(IToken);
 
-		object CHARLITERAL638_tree = default(object);
+		object CHARLITERAL633_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "charLiteral");
-		DebugLocation(1288, 4);
+		DebugLocation(1279, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 114)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1289:5: ( CHARLITERAL )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1280:5: ( CHARLITERAL )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1289:7: CHARLITERAL
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1280:7: CHARLITERAL
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1289, 7);
-			CHARLITERAL638=(IToken)Match(input,CHARLITERAL,Follow._CHARLITERAL_in_charLiteral8145); if (state.failed) return retval;
+			DebugLocation(1280, 7);
+			CHARLITERAL633=(IToken)Match(input,CHARLITERAL,Follow._CHARLITERAL_in_charLiteral8030); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			CHARLITERAL638_tree = (object)adaptor.Create(CHARLITERAL638, "CHARLITERAL638", retval);
-			adaptor.AddChild(root_0, CHARLITERAL638_tree);
+			CHARLITERAL633_tree = (object)adaptor.Create(CHARLITERAL633, "CHARLITERAL633", retval);
+			adaptor.AddChild(root_0, CHARLITERAL633_tree);
 			}
 
 			}
@@ -22547,7 +22430,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 114, charLiteral_StartIndex); }
 
 		}
-		DebugLocation(1290, 4);
+		DebugLocation(1281, 4);
 		} finally { DebugExitRule(GrammarFileName, "charLiteral"); }
 		return retval;
 
@@ -22557,7 +22440,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_stringLiteral();
 	partial void LeaveRule_stringLiteral();
 	// $ANTLR start "stringLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1292:1: stringLiteral : STRINGLITERAL ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1283:1: stringLiteral : STRINGLITERAL ;
 	[GrammarRule("stringLiteral")]
 	private Antlr3AstNode stringLiteral()
 	{
@@ -22570,26 +22453,26 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken STRINGLITERAL639 = default(IToken);
+		IToken STRINGLITERAL634 = default(IToken);
 
-		object STRINGLITERAL639_tree = default(object);
+		object STRINGLITERAL634_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "stringLiteral");
-		DebugLocation(1292, 4);
+		DebugLocation(1283, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 115)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1293:5: ( STRINGLITERAL )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1284:5: ( STRINGLITERAL )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1293:7: STRINGLITERAL
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1284:7: STRINGLITERAL
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1293, 7);
-			STRINGLITERAL639=(IToken)Match(input,STRINGLITERAL,Follow._STRINGLITERAL_in_stringLiteral8162); if (state.failed) return retval;
+			DebugLocation(1284, 7);
+			STRINGLITERAL634=(IToken)Match(input,STRINGLITERAL,Follow._STRINGLITERAL_in_stringLiteral8047); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			STRINGLITERAL639_tree = (object)adaptor.Create(STRINGLITERAL639, "STRINGLITERAL639", retval);
-			adaptor.AddChild(root_0, STRINGLITERAL639_tree);
+			STRINGLITERAL634_tree = (object)adaptor.Create(STRINGLITERAL634, "STRINGLITERAL634", retval);
+			adaptor.AddChild(root_0, STRINGLITERAL634_tree);
 			}
 
 			}
@@ -22616,7 +22499,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 115, stringLiteral_StartIndex); }
 
 		}
-		DebugLocation(1294, 4);
+		DebugLocation(1285, 4);
 		} finally { DebugExitRule(GrammarFileName, "stringLiteral"); }
 		return retval;
 
@@ -22626,7 +22509,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_trueLiteral();
 	partial void LeaveRule_trueLiteral();
 	// $ANTLR start "trueLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1296:1: trueLiteral : TRUE ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1287:1: trueLiteral : TRUE ;
 	[GrammarRule("trueLiteral")]
 	private Antlr3AstNode trueLiteral()
 	{
@@ -22639,26 +22522,26 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken TRUE640 = default(IToken);
+		IToken TRUE635 = default(IToken);
 
-		object TRUE640_tree = default(object);
+		object TRUE635_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "trueLiteral");
-		DebugLocation(1296, 4);
+		DebugLocation(1287, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 116)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1297:5: ( TRUE )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1288:5: ( TRUE )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1297:7: TRUE
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1288:7: TRUE
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1297, 7);
-			TRUE640=(IToken)Match(input,TRUE,Follow._TRUE_in_trueLiteral8179); if (state.failed) return retval;
+			DebugLocation(1288, 7);
+			TRUE635=(IToken)Match(input,TRUE,Follow._TRUE_in_trueLiteral8064); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			TRUE640_tree = (object)adaptor.Create(TRUE640, "TRUE640", retval);
-			adaptor.AddChild(root_0, TRUE640_tree);
+			TRUE635_tree = (object)adaptor.Create(TRUE635, "TRUE635", retval);
+			adaptor.AddChild(root_0, TRUE635_tree);
 			}
 
 			}
@@ -22685,7 +22568,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 116, trueLiteral_StartIndex); }
 
 		}
-		DebugLocation(1298, 4);
+		DebugLocation(1289, 4);
 		} finally { DebugExitRule(GrammarFileName, "trueLiteral"); }
 		return retval;
 
@@ -22695,7 +22578,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_falseLiteral();
 	partial void LeaveRule_falseLiteral();
 	// $ANTLR start "falseLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1300:1: falseLiteral : FALSE ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1291:1: falseLiteral : FALSE ;
 	[GrammarRule("falseLiteral")]
 	private Antlr3AstNode falseLiteral()
 	{
@@ -22708,26 +22591,26 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken FALSE641 = default(IToken);
+		IToken FALSE636 = default(IToken);
 
-		object FALSE641_tree = default(object);
+		object FALSE636_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "falseLiteral");
-		DebugLocation(1300, 4);
+		DebugLocation(1291, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 117)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1301:5: ( FALSE )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1292:5: ( FALSE )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1301:7: FALSE
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1292:7: FALSE
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1301, 7);
-			FALSE641=(IToken)Match(input,FALSE,Follow._FALSE_in_falseLiteral8196); if (state.failed) return retval;
+			DebugLocation(1292, 7);
+			FALSE636=(IToken)Match(input,FALSE,Follow._FALSE_in_falseLiteral8081); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			FALSE641_tree = (object)adaptor.Create(FALSE641, "FALSE641", retval);
-			adaptor.AddChild(root_0, FALSE641_tree);
+			FALSE636_tree = (object)adaptor.Create(FALSE636, "FALSE636", retval);
+			adaptor.AddChild(root_0, FALSE636_tree);
 			}
 
 			}
@@ -22754,7 +22637,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 117, falseLiteral_StartIndex); }
 
 		}
-		DebugLocation(1302, 4);
+		DebugLocation(1293, 4);
 		} finally { DebugExitRule(GrammarFileName, "falseLiteral"); }
 		return retval;
 
@@ -22764,7 +22647,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_nullLiteral();
 	partial void LeaveRule_nullLiteral();
 	// $ANTLR start "nullLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1304:1: nullLiteral : NULL ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1295:1: nullLiteral : NULL ;
 	[GrammarRule("nullLiteral")]
 	private Antlr3AstNode nullLiteral()
 	{
@@ -22777,26 +22660,26 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken NULL642 = default(IToken);
+		IToken NULL637 = default(IToken);
 
-		object NULL642_tree = default(object);
+		object NULL637_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "nullLiteral");
-		DebugLocation(1304, 4);
+		DebugLocation(1295, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 118)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1305:5: ( NULL )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1296:5: ( NULL )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1305:7: NULL
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1296:7: NULL
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1305, 7);
-			NULL642=(IToken)Match(input,NULL,Follow._NULL_in_nullLiteral8213); if (state.failed) return retval;
+			DebugLocation(1296, 7);
+			NULL637=(IToken)Match(input,NULL,Follow._NULL_in_nullLiteral8098); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			NULL642_tree = (object)adaptor.Create(NULL642, "NULL642", retval);
-			adaptor.AddChild(root_0, NULL642_tree);
+			NULL637_tree = (object)adaptor.Create(NULL637, "NULL637", retval);
+			adaptor.AddChild(root_0, NULL637_tree);
 			}
 
 			}
@@ -22823,7 +22706,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 118, nullLiteral_StartIndex); }
 
 		}
-		DebugLocation(1306, 4);
+		DebugLocation(1297, 4);
 		} finally { DebugExitRule(GrammarFileName, "nullLiteral"); }
 		return retval;
 
@@ -22833,7 +22716,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_literal();
 	partial void LeaveRule_literal();
 	// $ANTLR start "literal"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1308:1: literal : ( intLiteral | longLiteral | floatLiteral | doubleLiteral | charLiteral | stringLiteral | trueLiteral | falseLiteral | nullLiteral );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1299:1: literal : ( intLiteral | longLiteral | floatLiteral | doubleLiteral | charLiteral | stringLiteral | trueLiteral | falseLiteral | nullLiteral );
 	[GrammarRule("literal")]
 	private Antlr3AstNode literal()
 	{
@@ -22846,216 +22729,216 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode intLiteral643 = default(Antlr3AstNode);
-		Antlr3AstNode longLiteral644 = default(Antlr3AstNode);
-		Antlr3AstNode floatLiteral645 = default(Antlr3AstNode);
-		Antlr3AstNode doubleLiteral646 = default(Antlr3AstNode);
-		Antlr3AstNode charLiteral647 = default(Antlr3AstNode);
-		Antlr3AstNode stringLiteral648 = default(Antlr3AstNode);
-		Antlr3AstNode trueLiteral649 = default(Antlr3AstNode);
-		Antlr3AstNode falseLiteral650 = default(Antlr3AstNode);
-		Antlr3AstNode nullLiteral651 = default(Antlr3AstNode);
+		Antlr3AstNode intLiteral638 = default(Antlr3AstNode);
+		Antlr3AstNode longLiteral639 = default(Antlr3AstNode);
+		Antlr3AstNode floatLiteral640 = default(Antlr3AstNode);
+		Antlr3AstNode doubleLiteral641 = default(Antlr3AstNode);
+		Antlr3AstNode charLiteral642 = default(Antlr3AstNode);
+		Antlr3AstNode stringLiteral643 = default(Antlr3AstNode);
+		Antlr3AstNode trueLiteral644 = default(Antlr3AstNode);
+		Antlr3AstNode falseLiteral645 = default(Antlr3AstNode);
+		Antlr3AstNode nullLiteral646 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "literal");
-		DebugLocation(1308, 4);
+		DebugLocation(1299, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 119)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1309:5: ( intLiteral | longLiteral | floatLiteral | doubleLiteral | charLiteral | stringLiteral | trueLiteral | falseLiteral | nullLiteral )
-			int alt175=9;
-			try { DebugEnterDecision(175, false);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1300:5: ( intLiteral | longLiteral | floatLiteral | doubleLiteral | charLiteral | stringLiteral | trueLiteral | falseLiteral | nullLiteral )
+			int alt173=9;
+			try { DebugEnterDecision(173, false);
 			switch (input.LA(1))
 			{
 			case INTLITERAL:
 				{
-				alt175 = 1;
+				alt173 = 1;
 				}
 				break;
 			case LONGLITERAL:
 				{
-				alt175 = 2;
+				alt173 = 2;
 				}
 				break;
 			case FLOATLITERAL:
 				{
-				alt175 = 3;
+				alt173 = 3;
 				}
 				break;
 			case DOUBLELITERAL:
 				{
-				alt175 = 4;
+				alt173 = 4;
 				}
 				break;
 			case CHARLITERAL:
 				{
-				alt175 = 5;
+				alt173 = 5;
 				}
 				break;
 			case STRINGLITERAL:
 				{
-				alt175 = 6;
+				alt173 = 6;
 				}
 				break;
 			case TRUE:
 				{
-				alt175 = 7;
+				alt173 = 7;
 				}
 				break;
 			case FALSE:
 				{
-				alt175 = 8;
+				alt173 = 8;
 				}
 				break;
 			case NULL:
 				{
-				alt175 = 9;
+				alt173 = 9;
 				}
 				break;
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 175, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 173, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(175); }
-			switch (alt175)
+			} finally { DebugExitDecision(173); }
+			switch (alt173)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1309:9: intLiteral
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1300:9: intLiteral
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1309, 9);
-				PushFollow(Follow._intLiteral_in_literal8233);
-				intLiteral643=intLiteral();
+				DebugLocation(1300, 9);
+				PushFollow(Follow._intLiteral_in_literal8118);
+				intLiteral638=intLiteral();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, intLiteral643.Tree, intLiteral643, "intLiteral643", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, intLiteral638.Tree, intLiteral638, "intLiteral638", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1310:9: longLiteral
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1301:9: longLiteral
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1310, 9);
-				PushFollow(Follow._longLiteral_in_literal8243);
-				longLiteral644=longLiteral();
+				DebugLocation(1301, 9);
+				PushFollow(Follow._longLiteral_in_literal8128);
+				longLiteral639=longLiteral();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, longLiteral644.Tree, longLiteral644, "longLiteral644", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, longLiteral639.Tree, longLiteral639, "longLiteral639", retval);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1311:9: floatLiteral
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1302:9: floatLiteral
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1311, 9);
-				PushFollow(Follow._floatLiteral_in_literal8253);
-				floatLiteral645=floatLiteral();
+				DebugLocation(1302, 9);
+				PushFollow(Follow._floatLiteral_in_literal8138);
+				floatLiteral640=floatLiteral();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, floatLiteral645.Tree, floatLiteral645, "floatLiteral645", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, floatLiteral640.Tree, floatLiteral640, "floatLiteral640", retval);
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1312:9: doubleLiteral
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1303:9: doubleLiteral
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1312, 9);
-				PushFollow(Follow._doubleLiteral_in_literal8263);
-				doubleLiteral646=doubleLiteral();
+				DebugLocation(1303, 9);
+				PushFollow(Follow._doubleLiteral_in_literal8148);
+				doubleLiteral641=doubleLiteral();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, doubleLiteral646.Tree, doubleLiteral646, "doubleLiteral646", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, doubleLiteral641.Tree, doubleLiteral641, "doubleLiteral641", retval);
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1313:9: charLiteral
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1304:9: charLiteral
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1313, 9);
-				PushFollow(Follow._charLiteral_in_literal8273);
-				charLiteral647=charLiteral();
+				DebugLocation(1304, 9);
+				PushFollow(Follow._charLiteral_in_literal8158);
+				charLiteral642=charLiteral();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, charLiteral647.Tree, charLiteral647, "charLiteral647", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, charLiteral642.Tree, charLiteral642, "charLiteral642", retval);
 
 				}
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1314:9: stringLiteral
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1305:9: stringLiteral
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1314, 9);
-				PushFollow(Follow._stringLiteral_in_literal8283);
-				stringLiteral648=stringLiteral();
+				DebugLocation(1305, 9);
+				PushFollow(Follow._stringLiteral_in_literal8168);
+				stringLiteral643=stringLiteral();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, stringLiteral648.Tree, stringLiteral648, "stringLiteral648", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, stringLiteral643.Tree, stringLiteral643, "stringLiteral643", retval);
 
 				}
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1315:9: trueLiteral
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1306:9: trueLiteral
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1315, 9);
-				PushFollow(Follow._trueLiteral_in_literal8293);
-				trueLiteral649=trueLiteral();
+				DebugLocation(1306, 9);
+				PushFollow(Follow._trueLiteral_in_literal8178);
+				trueLiteral644=trueLiteral();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, trueLiteral649.Tree, trueLiteral649, "trueLiteral649", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, trueLiteral644.Tree, trueLiteral644, "trueLiteral644", retval);
 
 				}
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1316:9: falseLiteral
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1307:9: falseLiteral
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1316, 9);
-				PushFollow(Follow._falseLiteral_in_literal8303);
-				falseLiteral650=falseLiteral();
+				DebugLocation(1307, 9);
+				PushFollow(Follow._falseLiteral_in_literal8188);
+				falseLiteral645=falseLiteral();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, falseLiteral650.Tree, falseLiteral650, "falseLiteral650", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, falseLiteral645.Tree, falseLiteral645, "falseLiteral645", retval);
 
 				}
 				break;
 			case 9:
 				DebugEnterAlt(9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1317:9: nullLiteral
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1308:9: nullLiteral
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(1317, 9);
-				PushFollow(Follow._nullLiteral_in_literal8313);
-				nullLiteral651=nullLiteral();
+				DebugLocation(1308, 9);
+				PushFollow(Follow._nullLiteral_in_literal8198);
+				nullLiteral646=nullLiteral();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, nullLiteral651.Tree, nullLiteral651, "nullLiteral651", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, nullLiteral646.Tree, nullLiteral646, "nullLiteral646", retval);
 
 				}
 				break;
@@ -23083,7 +22966,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 119, literal_StartIndex); }
 
 		}
-		DebugLocation(1318, 4);
+		DebugLocation(1309, 4);
 		} finally { DebugExitRule(GrammarFileName, "literal"); }
 		return retval;
 
@@ -23093,7 +22976,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_classHeader();
 	partial void LeaveRule_classHeader();
 	// $ANTLR start "classHeader"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1324:1: classHeader : modifiers 'class' IDENTIFIER ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1315:1: classHeader : modifiers 'class' IDENTIFIER ;
 	[GrammarRule("classHeader")]
 	private Antlr3AstNode classHeader()
 	{
@@ -23106,41 +22989,41 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal653 = default(IToken);
-		IToken IDENTIFIER654 = default(IToken);
-		Antlr3AstNode modifiers652 = default(Antlr3AstNode);
+		IToken string_literal648 = default(IToken);
+		IToken IDENTIFIER649 = default(IToken);
+		Antlr3AstNode modifiers647 = default(Antlr3AstNode);
 
-		object string_literal653_tree = default(object);
-		object IDENTIFIER654_tree = default(object);
+		object string_literal648_tree = default(object);
+		object IDENTIFIER649_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "classHeader");
-		DebugLocation(1324, 4);
+		DebugLocation(1315, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 120)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1325:5: ( modifiers 'class' IDENTIFIER )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1316:5: ( modifiers 'class' IDENTIFIER )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1325:9: modifiers 'class' IDENTIFIER
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1316:9: modifiers 'class' IDENTIFIER
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1325, 9);
-			PushFollow(Follow._modifiers_in_classHeader8337);
-			modifiers652=modifiers();
+			DebugLocation(1316, 9);
+			PushFollow(Follow._modifiers_in_classHeader8222);
+			modifiers647=modifiers();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers652.Tree, modifiers652, "modifiers652", retval);
-			DebugLocation(1325, 19);
-			string_literal653=(IToken)Match(input,CLASS,Follow._CLASS_in_classHeader8339); if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers647.Tree, modifiers647, "modifiers647", retval);
+			DebugLocation(1316, 19);
+			string_literal648=(IToken)Match(input,CLASS,Follow._CLASS_in_classHeader8224); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal653_tree = (object)adaptor.Create(string_literal653, "string_literal653", retval);
-			adaptor.AddChild(root_0, string_literal653_tree);
+			string_literal648_tree = (object)adaptor.Create(string_literal648, "string_literal648", retval);
+			adaptor.AddChild(root_0, string_literal648_tree);
 			}
-			DebugLocation(1325, 27);
-			IDENTIFIER654=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_classHeader8341); if (state.failed) return retval;
+			DebugLocation(1316, 27);
+			IDENTIFIER649=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_classHeader8226); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			IDENTIFIER654_tree = (object)adaptor.Create(IDENTIFIER654, "IDENTIFIER654", retval);
-			adaptor.AddChild(root_0, IDENTIFIER654_tree);
+			IDENTIFIER649_tree = (object)adaptor.Create(IDENTIFIER649, "IDENTIFIER649", retval);
+			adaptor.AddChild(root_0, IDENTIFIER649_tree);
 			}
 
 			}
@@ -23167,7 +23050,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 120, classHeader_StartIndex); }
 
 		}
-		DebugLocation(1326, 4);
+		DebugLocation(1317, 4);
 		} finally { DebugExitRule(GrammarFileName, "classHeader"); }
 		return retval;
 
@@ -23177,7 +23060,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_enumHeader();
 	partial void LeaveRule_enumHeader();
 	// $ANTLR start "enumHeader"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1328:1: enumHeader : modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1319:1: enumHeader : modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER ;
 	[GrammarRule("enumHeader")]
 	private Antlr3AstNode enumHeader()
 	{
@@ -23190,37 +23073,37 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken set656 = default(IToken);
-		IToken IDENTIFIER657 = default(IToken);
-		Antlr3AstNode modifiers655 = default(Antlr3AstNode);
+		IToken set651 = default(IToken);
+		IToken IDENTIFIER652 = default(IToken);
+		Antlr3AstNode modifiers650 = default(Antlr3AstNode);
 
-		object set656_tree = default(object);
-		object IDENTIFIER657_tree = default(object);
+		object set651_tree = default(object);
+		object IDENTIFIER652_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "enumHeader");
-		DebugLocation(1328, 4);
+		DebugLocation(1319, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 121)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1329:5: ( modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1320:5: ( modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1329:9: modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1320:9: modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1329, 9);
-			PushFollow(Follow._modifiers_in_enumHeader8361);
-			modifiers655=modifiers();
+			DebugLocation(1320, 9);
+			PushFollow(Follow._modifiers_in_enumHeader8246);
+			modifiers650=modifiers();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers655.Tree, modifiers655, "modifiers655", retval);
-			DebugLocation(1329, 19);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers650.Tree, modifiers650, "modifiers650", retval);
+			DebugLocation(1320, 19);
 
-			set656=(IToken)input.LT(1);
+			set651=(IToken)input.LT(1);
 			if (input.LA(1)==ENUM||input.LA(1)==IDENTIFIER)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set656, "set656", retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set651, "set651", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -23231,11 +23114,11 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				throw mse;
 			}
 
-			DebugLocation(1329, 39);
-			IDENTIFIER657=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_enumHeader8369); if (state.failed) return retval;
+			DebugLocation(1320, 39);
+			IDENTIFIER652=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_enumHeader8254); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			IDENTIFIER657_tree = (object)adaptor.Create(IDENTIFIER657, "IDENTIFIER657", retval);
-			adaptor.AddChild(root_0, IDENTIFIER657_tree);
+			IDENTIFIER652_tree = (object)adaptor.Create(IDENTIFIER652, "IDENTIFIER652", retval);
+			adaptor.AddChild(root_0, IDENTIFIER652_tree);
 			}
 
 			}
@@ -23262,7 +23145,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 121, enumHeader_StartIndex); }
 
 		}
-		DebugLocation(1330, 4);
+		DebugLocation(1321, 4);
 		} finally { DebugExitRule(GrammarFileName, "enumHeader"); }
 		return retval;
 
@@ -23272,7 +23155,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_interfaceHeader();
 	partial void LeaveRule_interfaceHeader();
 	// $ANTLR start "interfaceHeader"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1332:1: interfaceHeader : modifiers 'interface' IDENTIFIER ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1323:1: interfaceHeader : modifiers 'interface' IDENTIFIER ;
 	[GrammarRule("interfaceHeader")]
 	private Antlr3AstNode interfaceHeader()
 	{
@@ -23285,41 +23168,41 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal659 = default(IToken);
-		IToken IDENTIFIER660 = default(IToken);
-		Antlr3AstNode modifiers658 = default(Antlr3AstNode);
+		IToken string_literal654 = default(IToken);
+		IToken IDENTIFIER655 = default(IToken);
+		Antlr3AstNode modifiers653 = default(Antlr3AstNode);
 
-		object string_literal659_tree = default(object);
-		object IDENTIFIER660_tree = default(object);
+		object string_literal654_tree = default(object);
+		object IDENTIFIER655_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "interfaceHeader");
-		DebugLocation(1332, 4);
+		DebugLocation(1323, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 122)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1333:5: ( modifiers 'interface' IDENTIFIER )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1324:5: ( modifiers 'interface' IDENTIFIER )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1333:9: modifiers 'interface' IDENTIFIER
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1324:9: modifiers 'interface' IDENTIFIER
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1333, 9);
-			PushFollow(Follow._modifiers_in_interfaceHeader8389);
-			modifiers658=modifiers();
+			DebugLocation(1324, 9);
+			PushFollow(Follow._modifiers_in_interfaceHeader8274);
+			modifiers653=modifiers();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers658.Tree, modifiers658, "modifiers658", retval);
-			DebugLocation(1333, 19);
-			string_literal659=(IToken)Match(input,INTERFACE,Follow._INTERFACE_in_interfaceHeader8391); if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers653.Tree, modifiers653, "modifiers653", retval);
+			DebugLocation(1324, 19);
+			string_literal654=(IToken)Match(input,INTERFACE,Follow._INTERFACE_in_interfaceHeader8276); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal659_tree = (object)adaptor.Create(string_literal659, "string_literal659", retval);
-			adaptor.AddChild(root_0, string_literal659_tree);
+			string_literal654_tree = (object)adaptor.Create(string_literal654, "string_literal654", retval);
+			adaptor.AddChild(root_0, string_literal654_tree);
 			}
-			DebugLocation(1333, 31);
-			IDENTIFIER660=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_interfaceHeader8393); if (state.failed) return retval;
+			DebugLocation(1324, 31);
+			IDENTIFIER655=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_interfaceHeader8278); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			IDENTIFIER660_tree = (object)adaptor.Create(IDENTIFIER660, "IDENTIFIER660", retval);
-			adaptor.AddChild(root_0, IDENTIFIER660_tree);
+			IDENTIFIER655_tree = (object)adaptor.Create(IDENTIFIER655, "IDENTIFIER655", retval);
+			adaptor.AddChild(root_0, IDENTIFIER655_tree);
 			}
 
 			}
@@ -23346,7 +23229,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 122, interfaceHeader_StartIndex); }
 
 		}
-		DebugLocation(1334, 4);
+		DebugLocation(1325, 4);
 		} finally { DebugExitRule(GrammarFileName, "interfaceHeader"); }
 		return retval;
 
@@ -23356,7 +23239,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_annotationHeader();
 	partial void LeaveRule_annotationHeader();
 	// $ANTLR start "annotationHeader"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1336:1: annotationHeader : modifiers '@' 'interface' IDENTIFIER ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1327:1: annotationHeader : modifiers '@' 'interface' IDENTIFIER ;
 	[GrammarRule("annotationHeader")]
 	private Antlr3AstNode annotationHeader()
 	{
@@ -23369,49 +23252,49 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal662 = default(IToken);
-		IToken string_literal663 = default(IToken);
-		IToken IDENTIFIER664 = default(IToken);
-		Antlr3AstNode modifiers661 = default(Antlr3AstNode);
+		IToken char_literal657 = default(IToken);
+		IToken string_literal658 = default(IToken);
+		IToken IDENTIFIER659 = default(IToken);
+		Antlr3AstNode modifiers656 = default(Antlr3AstNode);
 
-		object char_literal662_tree = default(object);
-		object string_literal663_tree = default(object);
-		object IDENTIFIER664_tree = default(object);
+		object char_literal657_tree = default(object);
+		object string_literal658_tree = default(object);
+		object IDENTIFIER659_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "annotationHeader");
-		DebugLocation(1336, 4);
+		DebugLocation(1327, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 123)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1337:5: ( modifiers '@' 'interface' IDENTIFIER )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1328:5: ( modifiers '@' 'interface' IDENTIFIER )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1337:9: modifiers '@' 'interface' IDENTIFIER
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1328:9: modifiers '@' 'interface' IDENTIFIER
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1337, 9);
-			PushFollow(Follow._modifiers_in_annotationHeader8413);
-			modifiers661=modifiers();
+			DebugLocation(1328, 9);
+			PushFollow(Follow._modifiers_in_annotationHeader8298);
+			modifiers656=modifiers();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers661.Tree, modifiers661, "modifiers661", retval);
-			DebugLocation(1337, 19);
-			char_literal662=(IToken)Match(input,MONKEYS_AT,Follow._MONKEYS_AT_in_annotationHeader8415); if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers656.Tree, modifiers656, "modifiers656", retval);
+			DebugLocation(1328, 19);
+			char_literal657=(IToken)Match(input,MONKEYS_AT,Follow._MONKEYS_AT_in_annotationHeader8300); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal662_tree = (object)adaptor.Create(char_literal662, "char_literal662", retval);
-			adaptor.AddChild(root_0, char_literal662_tree);
+			char_literal657_tree = (object)adaptor.Create(char_literal657, "char_literal657", retval);
+			adaptor.AddChild(root_0, char_literal657_tree);
 			}
-			DebugLocation(1337, 23);
-			string_literal663=(IToken)Match(input,INTERFACE,Follow._INTERFACE_in_annotationHeader8417); if (state.failed) return retval;
+			DebugLocation(1328, 23);
+			string_literal658=(IToken)Match(input,INTERFACE,Follow._INTERFACE_in_annotationHeader8302); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal663_tree = (object)adaptor.Create(string_literal663, "string_literal663", retval);
-			adaptor.AddChild(root_0, string_literal663_tree);
+			string_literal658_tree = (object)adaptor.Create(string_literal658, "string_literal658", retval);
+			adaptor.AddChild(root_0, string_literal658_tree);
 			}
-			DebugLocation(1337, 35);
-			IDENTIFIER664=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_annotationHeader8419); if (state.failed) return retval;
+			DebugLocation(1328, 35);
+			IDENTIFIER659=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_annotationHeader8304); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			IDENTIFIER664_tree = (object)adaptor.Create(IDENTIFIER664, "IDENTIFIER664", retval);
-			adaptor.AddChild(root_0, IDENTIFIER664_tree);
+			IDENTIFIER659_tree = (object)adaptor.Create(IDENTIFIER659, "IDENTIFIER659", retval);
+			adaptor.AddChild(root_0, IDENTIFIER659_tree);
 			}
 
 			}
@@ -23438,7 +23321,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 123, annotationHeader_StartIndex); }
 
 		}
-		DebugLocation(1338, 4);
+		DebugLocation(1329, 4);
 		} finally { DebugExitRule(GrammarFileName, "annotationHeader"); }
 		return retval;
 
@@ -23448,7 +23331,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_typeHeader();
 	partial void LeaveRule_typeHeader();
 	// $ANTLR start "typeHeader"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1340:1: typeHeader : modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1331:1: typeHeader : modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER ;
 	[GrammarRule("typeHeader")]
 	private Antlr3AstNode typeHeader()
 	{
@@ -23461,142 +23344,142 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal666 = default(IToken);
-		IToken string_literal667 = default(IToken);
-		IToken char_literal668 = default(IToken);
-		IToken string_literal669 = default(IToken);
-		IToken IDENTIFIER670 = default(IToken);
-		Antlr3AstNode modifiers665 = default(Antlr3AstNode);
+		IToken string_literal661 = default(IToken);
+		IToken string_literal662 = default(IToken);
+		IToken char_literal663 = default(IToken);
+		IToken string_literal664 = default(IToken);
+		IToken IDENTIFIER665 = default(IToken);
+		Antlr3AstNode modifiers660 = default(Antlr3AstNode);
 
-		object string_literal666_tree = default(object);
-		object string_literal667_tree = default(object);
-		object char_literal668_tree = default(object);
-		object string_literal669_tree = default(object);
-		object IDENTIFIER670_tree = default(object);
+		object string_literal661_tree = default(object);
+		object string_literal662_tree = default(object);
+		object char_literal663_tree = default(object);
+		object string_literal664_tree = default(object);
+		object IDENTIFIER665_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "typeHeader");
-		DebugLocation(1340, 4);
+		DebugLocation(1331, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 124)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1341:5: ( modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1332:5: ( modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1341:9: modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1332:9: modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1341, 9);
-			PushFollow(Follow._modifiers_in_typeHeader8439);
-			modifiers665=modifiers();
+			DebugLocation(1332, 9);
+			PushFollow(Follow._modifiers_in_typeHeader8324);
+			modifiers660=modifiers();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers665.Tree, modifiers665, "modifiers665", retval);
-			DebugLocation(1341, 19);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1341:19: ( 'class' | 'enum' | ( ( '@' )? 'interface' ) )
-			int alt177=3;
-			try { DebugEnterSubRule(177);
-			try { DebugEnterDecision(177, false);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers660.Tree, modifiers660, "modifiers660", retval);
+			DebugLocation(1332, 19);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1332:19: ( 'class' | 'enum' | ( ( '@' )? 'interface' ) )
+			int alt175=3;
+			try { DebugEnterSubRule(175);
+			try { DebugEnterDecision(175, false);
 			switch (input.LA(1))
 			{
 			case CLASS:
 				{
-				alt177 = 1;
+				alt175 = 1;
 				}
 				break;
 			case ENUM:
 				{
-				alt177 = 2;
+				alt175 = 2;
 				}
 				break;
 			case INTERFACE:
 			case MONKEYS_AT:
 				{
-				alt177 = 3;
+				alt175 = 3;
 				}
 				break;
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 177, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 175, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(177); }
-			switch (alt177)
+			} finally { DebugExitDecision(175); }
+			switch (alt175)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1341:20: 'class'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1332:20: 'class'
 				{
-				DebugLocation(1341, 20);
-				string_literal666=(IToken)Match(input,CLASS,Follow._CLASS_in_typeHeader8442); if (state.failed) return retval;
+				DebugLocation(1332, 20);
+				string_literal661=(IToken)Match(input,CLASS,Follow._CLASS_in_typeHeader8327); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal666_tree = (object)adaptor.Create(string_literal666, "string_literal666", retval);
-				adaptor.AddChild(root_0, string_literal666_tree);
+				string_literal661_tree = (object)adaptor.Create(string_literal661, "string_literal661", retval);
+				adaptor.AddChild(root_0, string_literal661_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1341:28: 'enum'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1332:28: 'enum'
 				{
-				DebugLocation(1341, 28);
-				string_literal667=(IToken)Match(input,ENUM,Follow._ENUM_in_typeHeader8444); if (state.failed) return retval;
+				DebugLocation(1332, 28);
+				string_literal662=(IToken)Match(input,ENUM,Follow._ENUM_in_typeHeader8329); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal667_tree = (object)adaptor.Create(string_literal667, "string_literal667", retval);
-				adaptor.AddChild(root_0, string_literal667_tree);
+				string_literal662_tree = (object)adaptor.Create(string_literal662, "string_literal662", retval);
+				adaptor.AddChild(root_0, string_literal662_tree);
 				}
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1341:35: ( ( '@' )? 'interface' )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1332:35: ( ( '@' )? 'interface' )
 				{
-				DebugLocation(1341, 35);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1341:35: ( ( '@' )? 'interface' )
+				DebugLocation(1332, 35);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1332:35: ( ( '@' )? 'interface' )
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1341:36: ( '@' )? 'interface'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1332:36: ( '@' )? 'interface'
 				{
-				DebugLocation(1341, 36);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1341:36: ( '@' )?
-				int alt176=2;
-				try { DebugEnterSubRule(176);
-				try { DebugEnterDecision(176, false);
-				int LA176_1 = input.LA(1);
+				DebugLocation(1332, 36);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1332:36: ( '@' )?
+				int alt174=2;
+				try { DebugEnterSubRule(174);
+				try { DebugEnterDecision(174, false);
+				int LA174_1 = input.LA(1);
 
-				if ((LA176_1==MONKEYS_AT))
+				if ((LA174_1==MONKEYS_AT))
 				{
-					alt176 = 1;
+					alt174 = 1;
 				}
-				} finally { DebugExitDecision(176); }
-				switch (alt176)
+				} finally { DebugExitDecision(174); }
+				switch (alt174)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1341:36: '@'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1332:36: '@'
 					{
-					DebugLocation(1341, 36);
-					char_literal668=(IToken)Match(input,MONKEYS_AT,Follow._MONKEYS_AT_in_typeHeader8447); if (state.failed) return retval;
+					DebugLocation(1332, 36);
+					char_literal663=(IToken)Match(input,MONKEYS_AT,Follow._MONKEYS_AT_in_typeHeader8332); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal668_tree = (object)adaptor.Create(char_literal668, "char_literal668", retval);
-					adaptor.AddChild(root_0, char_literal668_tree);
+					char_literal663_tree = (object)adaptor.Create(char_literal663, "char_literal663", retval);
+					adaptor.AddChild(root_0, char_literal663_tree);
 					}
 
 					}
 					break;
 
 				}
-				} finally { DebugExitSubRule(176); }
+				} finally { DebugExitSubRule(174); }
 
-				DebugLocation(1341, 42);
-				string_literal669=(IToken)Match(input,INTERFACE,Follow._INTERFACE_in_typeHeader8451); if (state.failed) return retval;
+				DebugLocation(1332, 42);
+				string_literal664=(IToken)Match(input,INTERFACE,Follow._INTERFACE_in_typeHeader8336); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal669_tree = (object)adaptor.Create(string_literal669, "string_literal669", retval);
-				adaptor.AddChild(root_0, string_literal669_tree);
+				string_literal664_tree = (object)adaptor.Create(string_literal664, "string_literal664", retval);
+				adaptor.AddChild(root_0, string_literal664_tree);
 				}
 
 				}
@@ -23606,13 +23489,13 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 
 			}
-			} finally { DebugExitSubRule(177); }
+			} finally { DebugExitSubRule(175); }
 
-			DebugLocation(1341, 56);
-			IDENTIFIER670=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_typeHeader8455); if (state.failed) return retval;
+			DebugLocation(1332, 56);
+			IDENTIFIER665=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_typeHeader8340); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			IDENTIFIER670_tree = (object)adaptor.Create(IDENTIFIER670, "IDENTIFIER670", retval);
-			adaptor.AddChild(root_0, IDENTIFIER670_tree);
+			IDENTIFIER665_tree = (object)adaptor.Create(IDENTIFIER665, "IDENTIFIER665", retval);
+			adaptor.AddChild(root_0, IDENTIFIER665_tree);
 			}
 
 			}
@@ -23639,7 +23522,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 124, typeHeader_StartIndex); }
 
 		}
-		DebugLocation(1342, 4);
+		DebugLocation(1333, 4);
 		} finally { DebugExitRule(GrammarFileName, "typeHeader"); }
 		return retval;
 
@@ -23649,7 +23532,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_methodHeader();
 	partial void LeaveRule_methodHeader();
 	// $ANTLR start "methodHeader"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1344:1: methodHeader : modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '(' ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1335:1: methodHeader : modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '(' ;
 	[GrammarRule("methodHeader")]
 	private Antlr3AstNode methodHeader()
 	{
@@ -23662,79 +23545,79 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal674 = default(IToken);
-		IToken IDENTIFIER675 = default(IToken);
-		IToken char_literal676 = default(IToken);
-		Antlr3AstNode modifiers671 = default(Antlr3AstNode);
-		Antlr3AstNode typeParameters672 = default(Antlr3AstNode);
-		Antlr3AstNode type673 = default(Antlr3AstNode);
+		IToken string_literal669 = default(IToken);
+		IToken IDENTIFIER670 = default(IToken);
+		IToken char_literal671 = default(IToken);
+		Antlr3AstNode modifiers666 = default(Antlr3AstNode);
+		Antlr3AstNode typeParameters667 = default(Antlr3AstNode);
+		Antlr3AstNode type668 = default(Antlr3AstNode);
 
-		object string_literal674_tree = default(object);
-		object IDENTIFIER675_tree = default(object);
-		object char_literal676_tree = default(object);
+		object string_literal669_tree = default(object);
+		object IDENTIFIER670_tree = default(object);
+		object char_literal671_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "methodHeader");
-		DebugLocation(1344, 4);
+		DebugLocation(1335, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 125)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1345:5: ( modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '(' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1336:5: ( modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '(' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1345:9: modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '('
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1336:9: modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '('
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1345, 9);
-			PushFollow(Follow._modifiers_in_methodHeader8475);
-			modifiers671=modifiers();
+			DebugLocation(1336, 9);
+			PushFollow(Follow._modifiers_in_methodHeader8360);
+			modifiers666=modifiers();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers671.Tree, modifiers671, "modifiers671", retval);
-			DebugLocation(1345, 19);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1345:19: ( typeParameters )?
-			int alt178=2;
-			try { DebugEnterSubRule(178);
-			try { DebugEnterDecision(178, false);
-			int LA178_1 = input.LA(1);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers666.Tree, modifiers666, "modifiers666", retval);
+			DebugLocation(1336, 19);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1336:19: ( typeParameters )?
+			int alt176=2;
+			try { DebugEnterSubRule(176);
+			try { DebugEnterDecision(176, false);
+			int LA176_1 = input.LA(1);
 
-			if ((LA178_1==LT))
+			if ((LA176_1==LT))
 			{
-				alt178 = 1;
+				alt176 = 1;
 			}
-			} finally { DebugExitDecision(178); }
-			switch (alt178)
+			} finally { DebugExitDecision(176); }
+			switch (alt176)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1345:19: typeParameters
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1336:19: typeParameters
 				{
-				DebugLocation(1345, 19);
-				PushFollow(Follow._typeParameters_in_methodHeader8477);
-				typeParameters672=typeParameters();
+				DebugLocation(1336, 19);
+				PushFollow(Follow._typeParameters_in_methodHeader8362);
+				typeParameters667=typeParameters();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, typeParameters672.Tree, typeParameters672, "typeParameters672", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, typeParameters667.Tree, typeParameters667, "typeParameters667", retval);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(178); }
+			} finally { DebugExitSubRule(176); }
 
-			DebugLocation(1345, 35);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1345:35: ( type | 'void' )?
-			int alt179=3;
-			try { DebugEnterSubRule(179);
-			try { DebugEnterDecision(179, false);
+			DebugLocation(1336, 35);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1336:35: ( type | 'void' )?
+			int alt177=3;
+			try { DebugEnterSubRule(177);
+			try { DebugEnterDecision(177, false);
 			switch (input.LA(1))
 			{
 			case IDENTIFIER:
 				{
-				int LA179_2 = input.LA(2);
+				int LA177_2 = input.LA(2);
 
-				if ((LA179_2==DOT||LA179_2==IDENTIFIER||LA179_2==LBRACKET||LA179_2==LT))
+				if ((LA177_2==DOT||LA177_2==IDENTIFIER||LA177_2==LBRACKET||LA177_2==LT))
 				{
-					alt179 = 1;
+					alt177 = 1;
 				}
 				}
 				break;
@@ -23747,60 +23630,60 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case LONG:
 			case SHORT:
 				{
-				alt179 = 1;
+				alt177 = 1;
 				}
 				break;
 			case VOID:
 				{
-				alt179 = 2;
+				alt177 = 2;
 				}
 				break;
 			}
 
-			} finally { DebugExitDecision(179); }
-			switch (alt179)
+			} finally { DebugExitDecision(177); }
+			switch (alt177)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1345:36: type
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1336:36: type
 				{
-				DebugLocation(1345, 36);
-				PushFollow(Follow._type_in_methodHeader8481);
-				type673=type();
+				DebugLocation(1336, 36);
+				PushFollow(Follow._type_in_methodHeader8366);
+				type668=type();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, type673.Tree, type673, "type673", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, type668.Tree, type668, "type668", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1345:41: 'void'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1336:41: 'void'
 				{
-				DebugLocation(1345, 41);
-				string_literal674=(IToken)Match(input,VOID,Follow._VOID_in_methodHeader8483); if (state.failed) return retval;
+				DebugLocation(1336, 41);
+				string_literal669=(IToken)Match(input,VOID,Follow._VOID_in_methodHeader8368); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal674_tree = (object)adaptor.Create(string_literal674, "string_literal674", retval);
-				adaptor.AddChild(root_0, string_literal674_tree);
+				string_literal669_tree = (object)adaptor.Create(string_literal669, "string_literal669", retval);
+				adaptor.AddChild(root_0, string_literal669_tree);
 				}
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(179); }
+			} finally { DebugExitSubRule(177); }
 
-			DebugLocation(1345, 50);
-			IDENTIFIER675=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_methodHeader8487); if (state.failed) return retval;
+			DebugLocation(1336, 50);
+			IDENTIFIER670=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_methodHeader8372); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			IDENTIFIER675_tree = (object)adaptor.Create(IDENTIFIER675, "IDENTIFIER675", retval);
-			adaptor.AddChild(root_0, IDENTIFIER675_tree);
+			IDENTIFIER670_tree = (object)adaptor.Create(IDENTIFIER670, "IDENTIFIER670", retval);
+			adaptor.AddChild(root_0, IDENTIFIER670_tree);
 			}
-			DebugLocation(1345, 61);
-			char_literal676=(IToken)Match(input,LPAREN,Follow._LPAREN_in_methodHeader8489); if (state.failed) return retval;
+			DebugLocation(1336, 61);
+			char_literal671=(IToken)Match(input,LPAREN,Follow._LPAREN_in_methodHeader8374); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal676_tree = (object)adaptor.Create(char_literal676, "char_literal676", retval);
-			adaptor.AddChild(root_0, char_literal676_tree);
+			char_literal671_tree = (object)adaptor.Create(char_literal671, "char_literal671", retval);
+			adaptor.AddChild(root_0, char_literal671_tree);
 			}
 
 			}
@@ -23827,7 +23710,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 125, methodHeader_StartIndex); }
 
 		}
-		DebugLocation(1346, 4);
+		DebugLocation(1337, 4);
 		} finally { DebugExitRule(GrammarFileName, "methodHeader"); }
 		return retval;
 
@@ -23837,7 +23720,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_fieldHeader();
 	partial void LeaveRule_fieldHeader();
 	// $ANTLR start "fieldHeader"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1348:1: fieldHeader : modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1339:1: fieldHeader : modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) ;
 	[GrammarRule("fieldHeader")]
 	private Antlr3AstNode fieldHeader()
 	{
@@ -23850,102 +23733,102 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken IDENTIFIER679 = default(IToken);
-		IToken char_literal680 = default(IToken);
-		IToken char_literal681 = default(IToken);
-		IToken set682 = default(IToken);
-		Antlr3AstNode modifiers677 = default(Antlr3AstNode);
-		Antlr3AstNode type678 = default(Antlr3AstNode);
+		IToken IDENTIFIER674 = default(IToken);
+		IToken char_literal675 = default(IToken);
+		IToken char_literal676 = default(IToken);
+		IToken set677 = default(IToken);
+		Antlr3AstNode modifiers672 = default(Antlr3AstNode);
+		Antlr3AstNode type673 = default(Antlr3AstNode);
 
-		object IDENTIFIER679_tree = default(object);
-		object char_literal680_tree = default(object);
-		object char_literal681_tree = default(object);
-		object set682_tree = default(object);
+		object IDENTIFIER674_tree = default(object);
+		object char_literal675_tree = default(object);
+		object char_literal676_tree = default(object);
+		object set677_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "fieldHeader");
-		DebugLocation(1348, 4);
+		DebugLocation(1339, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 126)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1349:5: ( modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1340:5: ( modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1349:9: modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1340:9: modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' )
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1349, 9);
-			PushFollow(Follow._modifiers_in_fieldHeader8509);
-			modifiers677=modifiers();
+			DebugLocation(1340, 9);
+			PushFollow(Follow._modifiers_in_fieldHeader8394);
+			modifiers672=modifiers();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers677.Tree, modifiers677, "modifiers677", retval);
-			DebugLocation(1349, 19);
-			PushFollow(Follow._type_in_fieldHeader8511);
-			type678=type();
+			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers672.Tree, modifiers672, "modifiers672", retval);
+			DebugLocation(1340, 19);
+			PushFollow(Follow._type_in_fieldHeader8396);
+			type673=type();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, type678.Tree, type678, "type678", retval);
-			DebugLocation(1349, 24);
-			IDENTIFIER679=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_fieldHeader8513); if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, type673.Tree, type673, "type673", retval);
+			DebugLocation(1340, 24);
+			IDENTIFIER674=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_fieldHeader8398); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			IDENTIFIER679_tree = (object)adaptor.Create(IDENTIFIER679, "IDENTIFIER679", retval);
-			adaptor.AddChild(root_0, IDENTIFIER679_tree);
+			IDENTIFIER674_tree = (object)adaptor.Create(IDENTIFIER674, "IDENTIFIER674", retval);
+			adaptor.AddChild(root_0, IDENTIFIER674_tree);
 			}
-			DebugLocation(1349, 35);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1349:35: ( '[' ']' )*
-			try { DebugEnterSubRule(180);
+			DebugLocation(1340, 35);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1340:35: ( '[' ']' )*
+			try { DebugEnterSubRule(178);
 			while (true)
 			{
-				int alt180=2;
-				try { DebugEnterDecision(180, false);
-				int LA180_1 = input.LA(1);
+				int alt178=2;
+				try { DebugEnterDecision(178, false);
+				int LA178_1 = input.LA(1);
 
-				if ((LA180_1==LBRACKET))
+				if ((LA178_1==LBRACKET))
 				{
-					alt180 = 1;
+					alt178 = 1;
 				}
 
 
-				} finally { DebugExitDecision(180); }
-				switch ( alt180 )
+				} finally { DebugExitDecision(178); }
+				switch ( alt178 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1349:36: '[' ']'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1340:36: '[' ']'
 					{
-					DebugLocation(1349, 36);
-					char_literal680=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_fieldHeader8516); if (state.failed) return retval;
+					DebugLocation(1340, 36);
+					char_literal675=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_fieldHeader8401); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal680_tree = (object)adaptor.Create(char_literal680, "char_literal680", retval);
-					adaptor.AddChild(root_0, char_literal680_tree);
+					char_literal675_tree = (object)adaptor.Create(char_literal675, "char_literal675", retval);
+					adaptor.AddChild(root_0, char_literal675_tree);
 					}
-					DebugLocation(1349, 39);
-					char_literal681=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_fieldHeader8517); if (state.failed) return retval;
+					DebugLocation(1340, 39);
+					char_literal676=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_fieldHeader8402); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal681_tree = (object)adaptor.Create(char_literal681, "char_literal681", retval);
-					adaptor.AddChild(root_0, char_literal681_tree);
+					char_literal676_tree = (object)adaptor.Create(char_literal676, "char_literal676", retval);
+					adaptor.AddChild(root_0, char_literal676_tree);
 					}
 
 					}
 					break;
 
 				default:
-					goto loop180;
+					goto loop178;
 				}
 			}
 
-			loop180:
+			loop178:
 				;
 
-			} finally { DebugExitSubRule(180); }
+			} finally { DebugExitSubRule(178); }
 
-			DebugLocation(1349, 45);
+			DebugLocation(1340, 45);
 
-			set682=(IToken)input.LT(1);
+			set677=(IToken)input.LT(1);
 			if (input.LA(1)==COMMA||input.LA(1)==EQ||input.LA(1)==SEMI)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set682, "set682", retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set677, "set677", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -23981,7 +23864,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 126, fieldHeader_StartIndex); }
 
 		}
-		DebugLocation(1350, 4);
+		DebugLocation(1341, 4);
 		} finally { DebugExitRule(GrammarFileName, "fieldHeader"); }
 		return retval;
 
@@ -23991,7 +23874,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_localVariableHeader();
 	partial void LeaveRule_localVariableHeader();
 	// $ANTLR start "localVariableHeader"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1352:1: localVariableHeader : variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1343:1: localVariableHeader : variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) ;
 	[GrammarRule("localVariableHeader")]
 	private Antlr3AstNode localVariableHeader()
 	{
@@ -24004,102 +23887,102 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken IDENTIFIER685 = default(IToken);
-		IToken char_literal686 = default(IToken);
-		IToken char_literal687 = default(IToken);
-		IToken set688 = default(IToken);
-		Antlr3AstNode variableModifiers683 = default(Antlr3AstNode);
-		Antlr3AstNode type684 = default(Antlr3AstNode);
+		IToken IDENTIFIER680 = default(IToken);
+		IToken char_literal681 = default(IToken);
+		IToken char_literal682 = default(IToken);
+		IToken set683 = default(IToken);
+		Antlr3AstNode variableModifiers678 = default(Antlr3AstNode);
+		Antlr3AstNode type679 = default(Antlr3AstNode);
 
-		object IDENTIFIER685_tree = default(object);
-		object char_literal686_tree = default(object);
-		object char_literal687_tree = default(object);
-		object set688_tree = default(object);
+		object IDENTIFIER680_tree = default(object);
+		object char_literal681_tree = default(object);
+		object char_literal682_tree = default(object);
+		object set683_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "localVariableHeader");
-		DebugLocation(1352, 4);
+		DebugLocation(1343, 4);
 		try
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 127)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1353:5: ( variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1344:5: ( variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1353:9: variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1344:9: variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' )
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1353, 9);
-			PushFollow(Follow._variableModifiers_in_localVariableHeader8547);
-			variableModifiers683=variableModifiers();
+			DebugLocation(1344, 9);
+			PushFollow(Follow._variableModifiers_in_localVariableHeader8432);
+			variableModifiers678=variableModifiers();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, variableModifiers683.Tree, variableModifiers683, "variableModifiers683", retval);
-			DebugLocation(1353, 27);
-			PushFollow(Follow._type_in_localVariableHeader8549);
-			type684=type();
+			if (state.backtracking == 0) adaptor.AddChild(root_0, variableModifiers678.Tree, variableModifiers678, "variableModifiers678", retval);
+			DebugLocation(1344, 27);
+			PushFollow(Follow._type_in_localVariableHeader8434);
+			type679=type();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, type684.Tree, type684, "type684", retval);
-			DebugLocation(1353, 32);
-			IDENTIFIER685=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_localVariableHeader8551); if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, type679.Tree, type679, "type679", retval);
+			DebugLocation(1344, 32);
+			IDENTIFIER680=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_localVariableHeader8436); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			IDENTIFIER685_tree = (object)adaptor.Create(IDENTIFIER685, "IDENTIFIER685", retval);
-			adaptor.AddChild(root_0, IDENTIFIER685_tree);
+			IDENTIFIER680_tree = (object)adaptor.Create(IDENTIFIER680, "IDENTIFIER680", retval);
+			adaptor.AddChild(root_0, IDENTIFIER680_tree);
 			}
-			DebugLocation(1353, 43);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1353:43: ( '[' ']' )*
-			try { DebugEnterSubRule(181);
+			DebugLocation(1344, 43);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1344:43: ( '[' ']' )*
+			try { DebugEnterSubRule(179);
 			while (true)
 			{
-				int alt181=2;
-				try { DebugEnterDecision(181, false);
-				int LA181_1 = input.LA(1);
+				int alt179=2;
+				try { DebugEnterDecision(179, false);
+				int LA179_1 = input.LA(1);
 
-				if ((LA181_1==LBRACKET))
+				if ((LA179_1==LBRACKET))
 				{
-					alt181 = 1;
+					alt179 = 1;
 				}
 
 
-				} finally { DebugExitDecision(181); }
-				switch ( alt181 )
+				} finally { DebugExitDecision(179); }
+				switch ( alt179 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1353:44: '[' ']'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1344:44: '[' ']'
 					{
-					DebugLocation(1353, 44);
-					char_literal686=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_localVariableHeader8554); if (state.failed) return retval;
+					DebugLocation(1344, 44);
+					char_literal681=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_localVariableHeader8439); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal686_tree = (object)adaptor.Create(char_literal686, "char_literal686", retval);
-					adaptor.AddChild(root_0, char_literal686_tree);
+					char_literal681_tree = (object)adaptor.Create(char_literal681, "char_literal681", retval);
+					adaptor.AddChild(root_0, char_literal681_tree);
 					}
-					DebugLocation(1353, 47);
-					char_literal687=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_localVariableHeader8555); if (state.failed) return retval;
+					DebugLocation(1344, 47);
+					char_literal682=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_localVariableHeader8440); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal687_tree = (object)adaptor.Create(char_literal687, "char_literal687", retval);
-					adaptor.AddChild(root_0, char_literal687_tree);
+					char_literal682_tree = (object)adaptor.Create(char_literal682, "char_literal682", retval);
+					adaptor.AddChild(root_0, char_literal682_tree);
 					}
 
 					}
 					break;
 
 				default:
-					goto loop181;
+					goto loop179;
 				}
 			}
 
-			loop181:
+			loop179:
 				;
 
-			} finally { DebugExitSubRule(181); }
+			} finally { DebugExitSubRule(179); }
 
-			DebugLocation(1353, 53);
+			DebugLocation(1344, 53);
 
-			set688=(IToken)input.LT(1);
+			set683=(IToken)input.LT(1);
 			if (input.LA(1)==COMMA||input.LA(1)==EQ||input.LA(1)==SEMI)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set688, "set688", retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set683, "set683", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -24135,7 +24018,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.backtracking > 0) { Memoize(input, 127, localVariableHeader_StartIndex); }
 
 		}
-		DebugLocation(1354, 4);
+		DebugLocation(1345, 4);
 		} finally { DebugExitRule(GrammarFileName, "localVariableHeader"); }
 		return retval;
 
@@ -24159,17 +24042,17 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			DebugLocation(302, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:302:13: ( annotations )?
-			int alt182=2;
-			try { DebugEnterSubRule(182);
-			try { DebugEnterDecision(182, false);
-			int LA182_1 = input.LA(1);
+			int alt180=2;
+			try { DebugEnterSubRule(180);
+			try { DebugEnterDecision(180, false);
+			int LA180_1 = input.LA(1);
 
-			if ((LA182_1==MONKEYS_AT))
+			if ((LA180_1==MONKEYS_AT))
 			{
-				alt182 = 1;
+				alt180 = 1;
 			}
-			} finally { DebugExitDecision(182); }
-			switch (alt182)
+			} finally { DebugExitDecision(180); }
+			switch (alt180)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -24185,7 +24068,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 
 			}
-			} finally { DebugExitSubRule(182); }
+			} finally { DebugExitSubRule(180); }
 
 			DebugLocation(304, 13);
 			PushFollow(Follow._packageDeclaration_in_synpred2_Java136);
@@ -24458,17 +24341,17 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return;
 			DebugLocation(518, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:518:9: ( typeParameters )?
-			int alt185=2;
-			try { DebugEnterSubRule(185);
-			try { DebugEnterDecision(185, false);
-			int LA185_1 = input.LA(1);
+			int alt183=2;
+			try { DebugEnterSubRule(183);
+			try { DebugEnterDecision(183, false);
+			int LA183_1 = input.LA(1);
 
-			if ((LA185_1==LT))
+			if ((LA183_1==LT))
 			{
-				alt185 = 1;
+				alt183 = 1;
 			}
-			} finally { DebugExitDecision(185); }
-			switch (alt185)
+			} finally { DebugExitDecision(183); }
+			switch (alt183)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -24484,7 +24367,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 
 			}
-			} finally { DebugExitSubRule(185); }
+			} finally { DebugExitSubRule(183); }
 
 			DebugLocation(520, 9);
 			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred59_Java1843); if (state.failed) return;
@@ -24495,17 +24378,17 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return;
 			DebugLocation(522, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:522:9: ( 'throws' qualifiedNameList )?
-			int alt186=2;
-			try { DebugEnterSubRule(186);
-			try { DebugEnterDecision(186, false);
-			int LA186_1 = input.LA(1);
+			int alt184=2;
+			try { DebugEnterSubRule(184);
+			try { DebugEnterDecision(184, false);
+			int LA184_1 = input.LA(1);
 
-			if ((LA186_1==THROWS))
+			if ((LA184_1==THROWS))
 			{
-				alt186 = 1;
+				alt184 = 1;
 			}
-			} finally { DebugExitDecision(186); }
-			switch (alt186)
+			} finally { DebugExitDecision(184); }
+			switch (alt184)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -24523,159 +24406,159 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 
 			}
-			} finally { DebugExitSubRule(186); }
+			} finally { DebugExitSubRule(184); }
 
 			DebugLocation(524, 9);
 			Match(input,LBRACE,Follow._LBRACE_in_synpred59_Java1887); if (state.failed) return;
 			DebugLocation(525, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:525:9: ( explicitConstructorInvocation )?
-			int alt187=2;
-			try { DebugEnterSubRule(187);
-			try { DebugEnterDecision(187, false);
+			int alt185=2;
+			try { DebugEnterSubRule(185);
+			try { DebugEnterDecision(185, false);
 			switch (input.LA(1))
 			{
 			case LT:
 				{
-				alt187 = 1;
+				alt185 = 1;
 				}
 				break;
 			case THIS:
 				{
-				int LA187_2 = input.LA(2);
+				int LA185_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt187 = 1;
+					alt185 = 1;
 				}
 				}
 				break;
 			case LPAREN:
 				{
-				int LA187_2 = input.LA(2);
+				int LA185_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt187 = 1;
+					alt185 = 1;
 				}
 				}
 				break;
 			case SUPER:
 				{
-				int LA187_2 = input.LA(2);
+				int LA185_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt187 = 1;
+					alt185 = 1;
 				}
 				}
 				break;
 			case IDENTIFIER:
 				{
-				int LA187_2 = input.LA(2);
+				int LA185_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt187 = 1;
+					alt185 = 1;
 				}
 				}
 				break;
 			case INTLITERAL:
 				{
-				int LA187_2 = input.LA(2);
+				int LA185_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt187 = 1;
+					alt185 = 1;
 				}
 				}
 				break;
 			case LONGLITERAL:
 				{
-				int LA187_2 = input.LA(2);
+				int LA185_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt187 = 1;
+					alt185 = 1;
 				}
 				}
 				break;
 			case FLOATLITERAL:
 				{
-				int LA187_2 = input.LA(2);
+				int LA185_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt187 = 1;
+					alt185 = 1;
 				}
 				}
 				break;
 			case DOUBLELITERAL:
 				{
-				int LA187_2 = input.LA(2);
+				int LA185_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt187 = 1;
+					alt185 = 1;
 				}
 				}
 				break;
 			case CHARLITERAL:
 				{
-				int LA187_2 = input.LA(2);
+				int LA185_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt187 = 1;
+					alt185 = 1;
 				}
 				}
 				break;
 			case STRINGLITERAL:
 				{
-				int LA187_2 = input.LA(2);
+				int LA185_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt187 = 1;
+					alt185 = 1;
 				}
 				}
 				break;
 			case TRUE:
 				{
-				int LA187_2 = input.LA(2);
+				int LA185_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt187 = 1;
+					alt185 = 1;
 				}
 				}
 				break;
 			case FALSE:
 				{
-				int LA187_2 = input.LA(2);
+				int LA185_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt187 = 1;
+					alt185 = 1;
 				}
 				}
 				break;
 			case NULL:
 				{
-				int LA187_2 = input.LA(2);
+				int LA185_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt187 = 1;
+					alt185 = 1;
 				}
 				}
 				break;
 			case NEW:
 				{
-				int LA187_2 = input.LA(2);
+				int LA185_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt187 = 1;
+					alt185 = 1;
 				}
 				}
 				break;
@@ -24688,28 +24571,28 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case LONG:
 			case SHORT:
 				{
-				int LA187_2 = input.LA(2);
+				int LA185_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt187 = 1;
+					alt185 = 1;
 				}
 				}
 				break;
 			case VOID:
 				{
-				int LA187_2 = input.LA(2);
+				int LA185_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt187 = 1;
+					alt185 = 1;
 				}
 				}
 				break;
 			}
 
-			} finally { DebugExitDecision(187); }
-			switch (alt187)
+			} finally { DebugExitDecision(185); }
+			switch (alt185)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -24725,25 +24608,25 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 
 			}
-			} finally { DebugExitSubRule(187); }
+			} finally { DebugExitSubRule(185); }
 
 			DebugLocation(527, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:527:9: ( blockStatement )*
-			try { DebugEnterSubRule(188);
+			try { DebugEnterSubRule(186);
 			while (true)
 			{
-				int alt188=2;
-				try { DebugEnterDecision(188, false);
-				int LA188_1 = input.LA(1);
+				int alt186=2;
+				try { DebugEnterDecision(186, false);
+				int LA186_1 = input.LA(1);
 
-				if ((LA188_1==EOF||LA188_1==ABSTRACT||(LA188_1>=ASSERT && LA188_1<=BANG)||(LA188_1>=BOOLEAN && LA188_1<=BYTE)||(LA188_1>=CHAR && LA188_1<=CLASS)||LA188_1==CONTINUE||LA188_1==DO||(LA188_1>=DOUBLE && LA188_1<=DOUBLELITERAL)||LA188_1==ENUM||(LA188_1>=FALSE && LA188_1<=FINAL)||(LA188_1>=FLOAT && LA188_1<=FOR)||(LA188_1>=IDENTIFIER && LA188_1<=IF)||(LA188_1>=INT && LA188_1<=INTLITERAL)||LA188_1==LBRACE||(LA188_1>=LONG && LA188_1<=LT)||(LA188_1>=MONKEYS_AT && LA188_1<=NULL)||LA188_1==PLUS||(LA188_1>=PLUSPLUS && LA188_1<=PUBLIC)||LA188_1==RETURN||(LA188_1>=SEMI && LA188_1<=SHORT)||(LA188_1>=STATIC && LA188_1<=SUB)||(LA188_1>=SUBSUB && LA188_1<=SYNCHRONIZED)||(LA188_1>=THIS && LA188_1<=THROW)||(LA188_1>=TILDE && LA188_1<=TRY)||(LA188_1>=VOID && LA188_1<=WHILE)))
+				if ((LA186_1==EOF||LA186_1==ABSTRACT||(LA186_1>=ASSERT && LA186_1<=BANG)||(LA186_1>=BOOLEAN && LA186_1<=BYTE)||(LA186_1>=CHAR && LA186_1<=CLASS)||LA186_1==CONTINUE||LA186_1==DO||(LA186_1>=DOUBLE && LA186_1<=DOUBLELITERAL)||LA186_1==ENUM||(LA186_1>=FALSE && LA186_1<=FINAL)||(LA186_1>=FLOAT && LA186_1<=FOR)||(LA186_1>=IDENTIFIER && LA186_1<=IF)||(LA186_1>=INT && LA186_1<=INTLITERAL)||LA186_1==LBRACE||(LA186_1>=LONG && LA186_1<=LT)||(LA186_1>=MONKEYS_AT && LA186_1<=NULL)||LA186_1==PLUS||(LA186_1>=PLUSPLUS && LA186_1<=PUBLIC)||LA186_1==RETURN||(LA186_1>=SEMI && LA186_1<=SHORT)||(LA186_1>=STATIC && LA186_1<=SUB)||(LA186_1>=SUBSUB && LA186_1<=SYNCHRONIZED)||(LA186_1>=THIS && LA186_1<=THROW)||(LA186_1>=TILDE && LA186_1<=TRY)||(LA186_1>=VOID && LA186_1<=WHILE)))
 				{
-					alt188 = 1;
+					alt186 = 1;
 				}
 
 
-				} finally { DebugExitDecision(188); }
-				switch ( alt188 )
+				} finally { DebugExitDecision(186); }
+				switch ( alt186 )
 				{
 				case 1:
 					DebugEnterAlt(1);
@@ -24759,14 +24642,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					break;
 
 				default:
-					goto loop188;
+					goto loop186;
 				}
 			}
 
-			loop188:
+			loop186:
 				;
 
-			} finally { DebugExitSubRule(188); }
+			} finally { DebugExitSubRule(186); }
 
 			DebugLocation(529, 9);
 			Match(input,RBRACE,Follow._RBRACE_in_synpred59_Java1942); if (state.failed) return;
@@ -24970,21 +24853,21 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return;
 			DebugLocation(680, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:680:9: ( ',' normalParameterDecl )*
-			try { DebugEnterSubRule(192);
+			try { DebugEnterSubRule(190);
 			while (true)
 			{
-				int alt192=2;
-				try { DebugEnterDecision(192, false);
-				int LA192_1 = input.LA(1);
+				int alt190=2;
+				try { DebugEnterDecision(190, false);
+				int LA190_1 = input.LA(1);
 
-				if ((LA192_1==COMMA))
+				if ((LA190_1==COMMA))
 				{
-					alt192 = 1;
+					alt190 = 1;
 				}
 
 
-				} finally { DebugExitDecision(192); }
-				switch ( alt192 )
+				} finally { DebugExitDecision(190); }
+				switch ( alt190 )
 				{
 				case 1:
 					DebugEnterAlt(1);
@@ -25002,14 +24885,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					break;
 
 				default:
-					goto loop192;
+					goto loop190;
 				}
 			}
 
-			loop192:
+			loop190:
 				;
 
-			} finally { DebugExitSubRule(192); }
+			} finally { DebugExitSubRule(190); }
 
 
 			}
@@ -25076,17 +24959,17 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			DebugLocation(702, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:702:9: ( nonWildcardTypeArguments )?
-			int alt193=2;
-			try { DebugEnterSubRule(193);
-			try { DebugEnterDecision(193, false);
-			int LA193_1 = input.LA(1);
+			int alt191=2;
+			try { DebugEnterSubRule(191);
+			try { DebugEnterDecision(191, false);
+			int LA191_1 = input.LA(1);
 
-			if ((LA193_1==LT))
+			if ((LA191_1==LT))
 			{
-				alt193 = 1;
+				alt191 = 1;
 			}
-			} finally { DebugExitDecision(193); }
-			switch (alt193)
+			} finally { DebugExitDecision(191); }
+			switch (alt191)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -25102,7 +24985,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 
 			}
-			} finally { DebugExitSubRule(193); }
+			} finally { DebugExitSubRule(191); }
 
 			DebugLocation(704, 9);
 			if (input.LA(1)==SUPER||input.LA(1)==THIS)
@@ -25402,83 +25285,6 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	}
 	// $ANTLR end synpred129_Java
 
-	partial void EnterRule_synpred133_Java_fragment();
-	partial void LeaveRule_synpred133_Java_fragment();
-
-	// $ANTLR start synpred133_Java
-	private void synpred133_Java_fragment()
-	{
-		EnterRule_synpred133_Java_fragment();
-		EnterRule("synpred133_Java_fragment", 260);
-		var retval = new Antlr3AstNode("synpred133_Java_fragment");
-		try
-		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:858:9: ( ( 'assert' ) expression ( ':' expression )? ';' )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:858:9: ( 'assert' ) expression ( ':' expression )? ';'
-			{
-			DebugLocation(858, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:858:9: ( 'assert' )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:858:10: 'assert'
-			{
-			DebugLocation(858, 10);
-			Match(input,ASSERT,Follow._ASSERT_in_synpred133_Java4389); if (state.failed) return;
-
-			}
-
-			DebugLocation(860, 9);
-			PushFollow(Follow._expression_in_synpred133_Java4409);
-			expression();
-			PopFollow();
-			if (state.failed) return;
-			DebugLocation(860, 20);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:860:20: ( ':' expression )?
-			int alt196=2;
-			try { DebugEnterSubRule(196);
-			try { DebugEnterDecision(196, false);
-			int LA196_1 = input.LA(1);
-
-			if ((LA196_1==COLON))
-			{
-				alt196 = 1;
-			}
-			} finally { DebugExitDecision(196); }
-			switch (alt196)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:860:21: ':' expression
-				{
-				DebugLocation(860, 21);
-				Match(input,COLON,Follow._COLON_in_synpred133_Java4412); if (state.failed) return;
-				DebugLocation(860, 25);
-				PushFollow(Follow._expression_in_synpred133_Java4414);
-				expression();
-				PopFollow();
-				if (state.failed) return;
-
-				}
-				break;
-
-			}
-			} finally { DebugExitSubRule(196); }
-
-			DebugLocation(860, 38);
-			Match(input,SEMI,Follow._SEMI_in_synpred133_Java4418); if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred133_Java_fragment", 260);
-			LeaveRule("synpred133_Java_fragment", 260);
-			LeaveRule_synpred133_Java_fragment();
-		}
-	}
-	// $ANTLR end synpred133_Java
-
 	partial void EnterRule_synpred135_Java_fragment();
 	partial void LeaveRule_synpred135_Java_fragment();
 
@@ -25490,51 +25296,17 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		var retval = new Antlr3AstNode("synpred135_Java_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:861:9: ( 'assert' expression ( ':' expression )? ';' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:860:39: ( 'else' statement )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:861:9: 'assert' expression ( ':' expression )? ';'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:860:39: 'else' statement
 			{
-			DebugLocation(861, 9);
-			Match(input,ASSERT,Follow._ASSERT_in_synpred135_Java4428); if (state.failed) return;
-			DebugLocation(861, 19);
-			PushFollow(Follow._expression_in_synpred135_Java4431);
-			expression();
+			DebugLocation(860, 39);
+			Match(input,ELSE,Follow._ELSE_in_synpred135_Java4421); if (state.failed) return;
+			DebugLocation(860, 46);
+			PushFollow(Follow._statement_in_synpred135_Java4423);
+			statement();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(861, 30);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:861:30: ( ':' expression )?
-			int alt197=2;
-			try { DebugEnterSubRule(197);
-			try { DebugEnterDecision(197, false);
-			int LA197_1 = input.LA(1);
-
-			if ((LA197_1==COLON))
-			{
-				alt197 = 1;
-			}
-			} finally { DebugExitDecision(197); }
-			switch (alt197)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:861:31: ':' expression
-				{
-				DebugLocation(861, 31);
-				Match(input,COLON,Follow._COLON_in_synpred135_Java4434); if (state.failed) return;
-				DebugLocation(861, 35);
-				PushFollow(Follow._expression_in_synpred135_Java4436);
-				expression();
-				PopFollow();
-				if (state.failed) return;
-
-				}
-				break;
-
-			}
-			} finally { DebugExitSubRule(197); }
-
-			DebugLocation(861, 48);
-			Match(input,SEMI,Follow._SEMI_in_synpred135_Java4440); if (state.failed) return;
 
 			}
 
@@ -25548,26 +25320,31 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	}
 	// $ANTLR end synpred135_Java
 
-	partial void EnterRule_synpred136_Java_fragment();
-	partial void LeaveRule_synpred136_Java_fragment();
+	partial void EnterRule_synpred155_Java_fragment();
+	partial void LeaveRule_synpred155_Java_fragment();
 
-	// $ANTLR start synpred136_Java
-	private void synpred136_Java_fragment()
+	// $ANTLR start synpred155_Java
+	private void synpred155_Java_fragment()
 	{
-		EnterRule_synpred136_Java_fragment();
-		EnterRule("synpred136_Java_fragment", 263);
-		var retval = new Antlr3AstNode("synpred136_Java_fragment");
+		EnterRule_synpred155_Java_fragment();
+		EnterRule("synpred155_Java_fragment", 282);
+		var retval = new Antlr3AstNode("synpred155_Java_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:862:39: ( 'else' statement )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:894:13: ( catches 'finally' block )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:862:39: 'else' statement
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:894:13: catches 'finally' block
 			{
-			DebugLocation(862, 39);
-			Match(input,ELSE,Follow._ELSE_in_synpred136_Java4469); if (state.failed) return;
-			DebugLocation(862, 46);
-			PushFollow(Follow._statement_in_synpred136_Java4471);
-			statement();
+			DebugLocation(894, 13);
+			PushFollow(Follow._catches_in_synpred155_Java4766);
+			catches();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(894, 21);
+			Match(input,FINALLY,Follow._FINALLY_in_synpred155_Java4768); if (state.failed) return;
+			DebugLocation(894, 31);
+			PushFollow(Follow._block_in_synpred155_Java4770);
+			block();
 			PopFollow();
 			if (state.failed) return;
 
@@ -25576,84 +25353,12 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred136_Java_fragment", 263);
-			LeaveRule("synpred136_Java_fragment", 263);
-			LeaveRule_synpred136_Java_fragment();
+			TraceOut("synpred155_Java_fragment", 282);
+			LeaveRule("synpred155_Java_fragment", 282);
+			LeaveRule_synpred155_Java_fragment();
 		}
 	}
-	// $ANTLR end synpred136_Java
-
-	partial void EnterRule_synpred151_Java_fragment();
-	partial void LeaveRule_synpred151_Java_fragment();
-
-	// $ANTLR start synpred151_Java
-	private void synpred151_Java_fragment()
-	{
-		EnterRule_synpred151_Java_fragment();
-		EnterRule("synpred151_Java_fragment", 278);
-		var retval = new Antlr3AstNode("synpred151_Java_fragment");
-		try
-		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:877:9: ( expression ';' )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:877:9: expression ';'
-			{
-			DebugLocation(877, 9);
-			PushFollow(Follow._expression_in_synpred151_Java4693);
-			expression();
-			PopFollow();
-			if (state.failed) return;
-			DebugLocation(877, 21);
-			Match(input,SEMI,Follow._SEMI_in_synpred151_Java4696); if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred151_Java_fragment", 278);
-			LeaveRule("synpred151_Java_fragment", 278);
-			LeaveRule_synpred151_Java_fragment();
-		}
-	}
-	// $ANTLR end synpred151_Java
-
-	partial void EnterRule_synpred152_Java_fragment();
-	partial void LeaveRule_synpred152_Java_fragment();
-
-	// $ANTLR start synpred152_Java
-	private void synpred152_Java_fragment()
-	{
-		EnterRule_synpred152_Java_fragment();
-		EnterRule("synpred152_Java_fragment", 279);
-		var retval = new Antlr3AstNode("synpred152_Java_fragment");
-		try
-		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:878:9: ( IDENTIFIER ':' statement )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:878:9: IDENTIFIER ':' statement
-			{
-			DebugLocation(878, 9);
-			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred152_Java4711); if (state.failed) return;
-			DebugLocation(878, 20);
-			Match(input,COLON,Follow._COLON_in_synpred152_Java4713); if (state.failed) return;
-			DebugLocation(878, 24);
-			PushFollow(Follow._statement_in_synpred152_Java4715);
-			statement();
-			PopFollow();
-			if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred152_Java_fragment", 279);
-			LeaveRule("synpred152_Java_fragment", 279);
-			LeaveRule_synpred152_Java_fragment();
-		}
-	}
-	// $ANTLR end synpred152_Java
+	// $ANTLR end synpred155_Java
 
 	partial void EnterRule_synpred156_Java_fragment();
 	partial void LeaveRule_synpred156_Java_fragment();
@@ -25666,20 +25371,13 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		var retval = new Antlr3AstNode("synpred156_Java_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:902:13: ( catches 'finally' block )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:895:13: ( catches )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:902:13: catches 'finally' block
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:895:13: catches
 			{
-			DebugLocation(902, 13);
-			PushFollow(Follow._catches_in_synpred156_Java4871);
+			DebugLocation(895, 13);
+			PushFollow(Follow._catches_in_synpred156_Java4784);
 			catches();
-			PopFollow();
-			if (state.failed) return;
-			DebugLocation(902, 21);
-			Match(input,FINALLY,Follow._FINALLY_in_synpred156_Java4873); if (state.failed) return;
-			DebugLocation(902, 31);
-			PushFollow(Follow._block_in_synpred156_Java4875);
-			block();
 			PopFollow();
 			if (state.failed) return;
 
@@ -25695,105 +25393,72 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	}
 	// $ANTLR end synpred156_Java
 
-	partial void EnterRule_synpred157_Java_fragment();
-	partial void LeaveRule_synpred157_Java_fragment();
+	partial void EnterRule_synpred159_Java_fragment();
+	partial void LeaveRule_synpred159_Java_fragment();
 
-	// $ANTLR start synpred157_Java
-	private void synpred157_Java_fragment()
+	// $ANTLR start synpred159_Java
+	private void synpred159_Java_fragment()
 	{
-		EnterRule_synpred157_Java_fragment();
-		EnterRule("synpred157_Java_fragment", 284);
-		var retval = new Antlr3AstNode("synpred157_Java_fragment");
+		EnterRule_synpred159_Java_fragment();
+		EnterRule("synpred159_Java_fragment", 286);
+		var retval = new Antlr3AstNode("synpred159_Java_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:903:13: ( catches )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:912:9: ( variableModifiers catchType IDENTIFIER ( '[' ']' )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:903:13: catches
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:912:9: variableModifiers catchType IDENTIFIER ( '[' ']' )*
 			{
-			DebugLocation(903, 13);
-			PushFollow(Follow._catches_in_synpred157_Java4889);
-			catches();
-			PopFollow();
-			if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred157_Java_fragment", 284);
-			LeaveRule("synpred157_Java_fragment", 284);
-			LeaveRule_synpred157_Java_fragment();
-		}
-	}
-	// $ANTLR end synpred157_Java
-
-	partial void EnterRule_synpred161_Java_fragment();
-	partial void LeaveRule_synpred161_Java_fragment();
-
-	// $ANTLR start synpred161_Java
-	private void synpred161_Java_fragment()
-	{
-		EnterRule_synpred161_Java_fragment();
-		EnterRule("synpred161_Java_fragment", 288);
-		var retval = new Antlr3AstNode("synpred161_Java_fragment");
-		try
-		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:921:9: ( variableModifiers catchType IDENTIFIER ( '[' ']' )* )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:921:9: variableModifiers catchType IDENTIFIER ( '[' ']' )*
-			{
-			DebugLocation(921, 9);
-			PushFollow(Follow._variableModifiers_in_synpred161_Java5025);
+			DebugLocation(912, 9);
+			PushFollow(Follow._variableModifiers_in_synpred159_Java4910);
 			variableModifiers();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(921, 27);
-			PushFollow(Follow._catchType_in_synpred161_Java5027);
+			DebugLocation(912, 27);
+			PushFollow(Follow._catchType_in_synpred159_Java4912);
 			catchType();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(921, 37);
-			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred161_Java5029); if (state.failed) return;
-			DebugLocation(922, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:922:9: ( '[' ']' )*
-			try { DebugEnterSubRule(203);
+			DebugLocation(912, 37);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred159_Java4914); if (state.failed) return;
+			DebugLocation(913, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:913:9: ( '[' ']' )*
+			try { DebugEnterSubRule(199);
 			while (true)
 			{
-				int alt203=2;
-				try { DebugEnterDecision(203, false);
-				int LA203_1 = input.LA(1);
+				int alt199=2;
+				try { DebugEnterDecision(199, false);
+				int LA199_1 = input.LA(1);
 
-				if ((LA203_1==LBRACKET))
+				if ((LA199_1==LBRACKET))
 				{
-					alt203 = 1;
+					alt199 = 1;
 				}
 
 
-				} finally { DebugExitDecision(203); }
-				switch ( alt203 )
+				} finally { DebugExitDecision(199); }
+				switch ( alt199 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:922:10: '[' ']'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:913:10: '[' ']'
 					{
-					DebugLocation(922, 10);
-					Match(input,LBRACKET,Follow._LBRACKET_in_synpred161_Java5040); if (state.failed) return;
-					DebugLocation(922, 14);
-					Match(input,RBRACKET,Follow._RBRACKET_in_synpred161_Java5042); if (state.failed) return;
+					DebugLocation(913, 10);
+					Match(input,LBRACKET,Follow._LBRACKET_in_synpred159_Java4925); if (state.failed) return;
+					DebugLocation(913, 14);
+					Match(input,RBRACKET,Follow._RBRACKET_in_synpred159_Java4927); if (state.failed) return;
 
 					}
 					break;
 
 				default:
-					goto loop203;
+					goto loop199;
 				}
 			}
 
-			loop203:
+			loop199:
 				;
 
-			} finally { DebugExitSubRule(203); }
+			} finally { DebugExitSubRule(199); }
 
 
 			}
@@ -25801,12 +25466,45 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred161_Java_fragment", 288);
-			LeaveRule("synpred161_Java_fragment", 288);
-			LeaveRule_synpred161_Java_fragment();
+			TraceOut("synpred159_Java_fragment", 286);
+			LeaveRule("synpred159_Java_fragment", 286);
+			LeaveRule_synpred159_Java_fragment();
 		}
 	}
-	// $ANTLR end synpred161_Java
+	// $ANTLR end synpred159_Java
+
+	partial void EnterRule_synpred166_Java_fragment();
+	partial void LeaveRule_synpred166_Java_fragment();
+
+	// $ANTLR start synpred166_Java
+	private void synpred166_Java_fragment()
+	{
+		EnterRule_synpred166_Java_fragment();
+		EnterRule("synpred166_Java_fragment", 293);
+		var retval = new Antlr3AstNode("synpred166_Java_fragment");
+		try
+		{
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:939:10: ( variableModifiers )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:939:10: variableModifiers
+			{
+			DebugLocation(939, 10);
+			PushFollow(Follow._variableModifiers_in_synpred166_Java5128);
+			variableModifiers();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred166_Java_fragment", 293);
+			LeaveRule("synpred166_Java_fragment", 293);
+			LeaveRule_synpred166_Java_fragment();
+		}
+	}
+	// $ANTLR end synpred166_Java
 
 	partial void EnterRule_synpred168_Java_fragment();
 	partial void LeaveRule_synpred168_Java_fragment();
@@ -25819,13 +25517,38 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		var retval = new Antlr3AstNode("synpred168_Java_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:948:10: ( variableModifiers )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:945:9: ( 'for' '(' variableModifiers type IDENTIFIER ':' expression ')' statement )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:948:10: variableModifiers
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:945:9: 'for' '(' variableModifiers type IDENTIFIER ':' expression ')' statement
 			{
-			DebugLocation(948, 10);
-			PushFollow(Follow._variableModifiers_in_synpred168_Java5243);
+			DebugLocation(945, 9);
+			Match(input,FOR,Follow._FOR_in_synpred168_Java5183); if (state.failed) return;
+			DebugLocation(945, 15);
+			Match(input,LPAREN,Follow._LPAREN_in_synpred168_Java5185); if (state.failed) return;
+			DebugLocation(945, 19);
+			PushFollow(Follow._variableModifiers_in_synpred168_Java5187);
 			variableModifiers();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(945, 37);
+			PushFollow(Follow._type_in_synpred168_Java5189);
+			type();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(945, 42);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred168_Java5191); if (state.failed) return;
+			DebugLocation(945, 53);
+			Match(input,COLON,Follow._COLON_in_synpred168_Java5193); if (state.failed) return;
+			DebugLocation(946, 9);
+			PushFollow(Follow._expression_in_synpred168_Java5204);
+			expression();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(946, 20);
+			Match(input,RPAREN,Follow._RPAREN_in_synpred168_Java5206); if (state.failed) return;
+			DebugLocation(946, 24);
+			PushFollow(Follow._statement_in_synpred168_Java5208);
+			statement();
 			PopFollow();
 			if (state.failed) return;
 
@@ -25841,81 +25564,23 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	}
 	// $ANTLR end synpred168_Java
 
-	partial void EnterRule_synpred170_Java_fragment();
-	partial void LeaveRule_synpred170_Java_fragment();
+	partial void EnterRule_synpred172_Java_fragment();
+	partial void LeaveRule_synpred172_Java_fragment();
 
-	// $ANTLR start synpred170_Java
-	private void synpred170_Java_fragment()
+	// $ANTLR start synpred172_Java
+	private void synpred172_Java_fragment()
 	{
-		EnterRule_synpred170_Java_fragment();
-		EnterRule("synpred170_Java_fragment", 297);
-		var retval = new Antlr3AstNode("synpred170_Java_fragment");
+		EnterRule_synpred172_Java_fragment();
+		EnterRule("synpred172_Java_fragment", 299);
+		var retval = new Antlr3AstNode("synpred172_Java_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:954:9: ( 'for' '(' variableModifiers type IDENTIFIER ':' expression ')' statement )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:959:9: ( localVariableDeclaration )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:954:9: 'for' '(' variableModifiers type IDENTIFIER ':' expression ')' statement
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:959:9: localVariableDeclaration
 			{
-			DebugLocation(954, 9);
-			Match(input,FOR,Follow._FOR_in_synpred170_Java5298); if (state.failed) return;
-			DebugLocation(954, 15);
-			Match(input,LPAREN,Follow._LPAREN_in_synpred170_Java5300); if (state.failed) return;
-			DebugLocation(954, 19);
-			PushFollow(Follow._variableModifiers_in_synpred170_Java5302);
-			variableModifiers();
-			PopFollow();
-			if (state.failed) return;
-			DebugLocation(954, 37);
-			PushFollow(Follow._type_in_synpred170_Java5304);
-			type();
-			PopFollow();
-			if (state.failed) return;
-			DebugLocation(954, 42);
-			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred170_Java5306); if (state.failed) return;
-			DebugLocation(954, 53);
-			Match(input,COLON,Follow._COLON_in_synpred170_Java5308); if (state.failed) return;
-			DebugLocation(955, 9);
-			PushFollow(Follow._expression_in_synpred170_Java5319);
-			expression();
-			PopFollow();
-			if (state.failed) return;
-			DebugLocation(955, 20);
-			Match(input,RPAREN,Follow._RPAREN_in_synpred170_Java5321); if (state.failed) return;
-			DebugLocation(955, 24);
-			PushFollow(Follow._statement_in_synpred170_Java5323);
-			statement();
-			PopFollow();
-			if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred170_Java_fragment", 297);
-			LeaveRule("synpred170_Java_fragment", 297);
-			LeaveRule_synpred170_Java_fragment();
-		}
-	}
-	// $ANTLR end synpred170_Java
-
-	partial void EnterRule_synpred174_Java_fragment();
-	partial void LeaveRule_synpred174_Java_fragment();
-
-	// $ANTLR start synpred174_Java
-	private void synpred174_Java_fragment()
-	{
-		EnterRule_synpred174_Java_fragment();
-		EnterRule("synpred174_Java_fragment", 301);
-		var retval = new Antlr3AstNode("synpred174_Java_fragment");
-		try
-		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:968:9: ( localVariableDeclaration )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:968:9: localVariableDeclaration
-			{
-			DebugLocation(968, 9);
-			PushFollow(Follow._localVariableDeclaration_in_synpred174_Java5502);
+			DebugLocation(959, 9);
+			PushFollow(Follow._localVariableDeclaration_in_synpred172_Java5387);
 			localVariableDeclaration();
 			PopFollow();
 			if (state.failed) return;
@@ -25925,30 +25590,30 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred174_Java_fragment", 301);
-			LeaveRule("synpred174_Java_fragment", 301);
-			LeaveRule_synpred174_Java_fragment();
+			TraceOut("synpred172_Java_fragment", 299);
+			LeaveRule("synpred172_Java_fragment", 299);
+			LeaveRule_synpred172_Java_fragment();
 		}
 	}
-	// $ANTLR end synpred174_Java
+	// $ANTLR end synpred172_Java
 
-	partial void EnterRule_synpred215_Java_fragment();
-	partial void LeaveRule_synpred215_Java_fragment();
+	partial void EnterRule_synpred213_Java_fragment();
+	partial void LeaveRule_synpred213_Java_fragment();
 
-	// $ANTLR start synpred215_Java
-	private void synpred215_Java_fragment()
+	// $ANTLR start synpred213_Java
+	private void synpred213_Java_fragment()
 	{
-		EnterRule_synpred215_Java_fragment();
-		EnterRule("synpred215_Java_fragment", 342);
-		var retval = new Antlr3AstNode("synpred215_Java_fragment");
+		EnterRule_synpred213_Java_fragment();
+		EnterRule("synpred213_Java_fragment", 340);
+		var retval = new Antlr3AstNode("synpred213_Java_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1120:9: ( castExpression )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1111:9: ( castExpression )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1120:9: castExpression
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1111:9: castExpression
 			{
-			DebugLocation(1120, 9);
-			PushFollow(Follow._castExpression_in_synpred215_Java6730);
+			DebugLocation(1111, 9);
+			PushFollow(Follow._castExpression_in_synpred213_Java6615);
 			castExpression();
 			PopFollow();
 			if (state.failed) return;
@@ -25958,12 +25623,54 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred215_Java_fragment", 342);
-			LeaveRule("synpred215_Java_fragment", 342);
-			LeaveRule_synpred215_Java_fragment();
+			TraceOut("synpred213_Java_fragment", 340);
+			LeaveRule("synpred213_Java_fragment", 340);
+			LeaveRule_synpred213_Java_fragment();
 		}
 	}
-	// $ANTLR end synpred215_Java
+	// $ANTLR end synpred213_Java
+
+	partial void EnterRule_synpred217_Java_fragment();
+	partial void LeaveRule_synpred217_Java_fragment();
+
+	// $ANTLR start synpred217_Java
+	private void synpred217_Java_fragment()
+	{
+		EnterRule_synpred217_Java_fragment();
+		EnterRule("synpred217_Java_fragment", 344);
+		var retval = new Antlr3AstNode("synpred217_Java_fragment");
+		try
+		{
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1121:9: ( '(' primitiveType ')' unaryExpression )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1121:9: '(' primitiveType ')' unaryExpression
+			{
+			DebugLocation(1121, 9);
+			Match(input,LPAREN,Follow._LPAREN_in_synpred217_Java6705); if (state.failed) return;
+			DebugLocation(1121, 13);
+			PushFollow(Follow._primitiveType_in_synpred217_Java6707);
+			primitiveType();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(1121, 27);
+			Match(input,RPAREN,Follow._RPAREN_in_synpred217_Java6709); if (state.failed) return;
+			DebugLocation(1121, 31);
+			PushFollow(Follow._unaryExpression_in_synpred217_Java6711);
+			unaryExpression();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred217_Java_fragment", 344);
+			LeaveRule("synpred217_Java_fragment", 344);
+			LeaveRule_synpred217_Java_fragment();
+		}
+	}
+	// $ANTLR end synpred217_Java
 
 	partial void EnterRule_synpred219_Java_fragment();
 	partial void LeaveRule_synpred219_Java_fragment();
@@ -25976,24 +25683,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		var retval = new Antlr3AstNode("synpred219_Java_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1130:9: ( '(' primitiveType ')' unaryExpression )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1131:10: ( '.' IDENTIFIER )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1130:9: '(' primitiveType ')' unaryExpression
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1131:10: '.' IDENTIFIER
 			{
-			DebugLocation(1130, 9);
-			Match(input,LPAREN,Follow._LPAREN_in_synpred219_Java6820); if (state.failed) return;
-			DebugLocation(1130, 13);
-			PushFollow(Follow._primitiveType_in_synpred219_Java6822);
-			primitiveType();
-			PopFollow();
-			if (state.failed) return;
-			DebugLocation(1130, 27);
-			Match(input,RPAREN,Follow._RPAREN_in_synpred219_Java6824); if (state.failed) return;
-			DebugLocation(1130, 31);
-			PushFollow(Follow._unaryExpression_in_synpred219_Java6826);
-			unaryExpression();
-			PopFollow();
-			if (state.failed) return;
+			DebugLocation(1131, 10);
+			Match(input,DOT,Follow._DOT_in_synpred219_Java6781); if (state.failed) return;
+			DebugLocation(1131, 14);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred219_Java6783); if (state.failed) return;
 
 			}
 
@@ -26007,37 +25704,38 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	}
 	// $ANTLR end synpred219_Java
 
-	partial void EnterRule_synpred221_Java_fragment();
-	partial void LeaveRule_synpred221_Java_fragment();
+	partial void EnterRule_synpred220_Java_fragment();
+	partial void LeaveRule_synpred220_Java_fragment();
 
-	// $ANTLR start synpred221_Java
-	private void synpred221_Java_fragment()
+	// $ANTLR start synpred220_Java
+	private void synpred220_Java_fragment()
 	{
-		EnterRule_synpred221_Java_fragment();
-		EnterRule("synpred221_Java_fragment", 348);
-		var retval = new Antlr3AstNode("synpred221_Java_fragment");
+		EnterRule_synpred220_Java_fragment();
+		EnterRule("synpred220_Java_fragment", 347);
+		var retval = new Antlr3AstNode("synpred220_Java_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1140:10: ( '.' IDENTIFIER )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1133:10: ( identifierSuffix )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1140:10: '.' IDENTIFIER
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1133:10: identifierSuffix
 			{
-			DebugLocation(1140, 10);
-			Match(input,DOT,Follow._DOT_in_synpred221_Java6896); if (state.failed) return;
-			DebugLocation(1140, 14);
-			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred221_Java6898); if (state.failed) return;
+			DebugLocation(1133, 10);
+			PushFollow(Follow._identifierSuffix_in_synpred220_Java6805);
+			identifierSuffix();
+			PopFollow();
+			if (state.failed) return;
 
 			}
 
 		}
 		finally
 		{
-			TraceOut("synpred221_Java_fragment", 348);
-			LeaveRule("synpred221_Java_fragment", 348);
-			LeaveRule_synpred221_Java_fragment();
+			TraceOut("synpred220_Java_fragment", 347);
+			LeaveRule("synpred220_Java_fragment", 347);
+			LeaveRule_synpred220_Java_fragment();
 		}
 	}
-	// $ANTLR end synpred221_Java
+	// $ANTLR end synpred220_Java
 
 	partial void EnterRule_synpred222_Java_fragment();
 	partial void LeaveRule_synpred222_Java_fragment();
@@ -26050,15 +25748,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		var retval = new Antlr3AstNode("synpred222_Java_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1142:10: ( identifierSuffix )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1136:10: ( '.' IDENTIFIER )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1142:10: identifierSuffix
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1136:10: '.' IDENTIFIER
 			{
-			DebugLocation(1142, 10);
-			PushFollow(Follow._identifierSuffix_in_synpred222_Java6920);
-			identifierSuffix();
-			PopFollow();
-			if (state.failed) return;
+			DebugLocation(1136, 10);
+			Match(input,DOT,Follow._DOT_in_synpred222_Java6837); if (state.failed) return;
+			DebugLocation(1136, 14);
+			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred222_Java6839); if (state.failed) return;
 
 			}
 
@@ -26072,55 +25769,23 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	}
 	// $ANTLR end synpred222_Java
 
-	partial void EnterRule_synpred224_Java_fragment();
-	partial void LeaveRule_synpred224_Java_fragment();
+	partial void EnterRule_synpred223_Java_fragment();
+	partial void LeaveRule_synpred223_Java_fragment();
 
-	// $ANTLR start synpred224_Java
-	private void synpred224_Java_fragment()
+	// $ANTLR start synpred223_Java
+	private void synpred223_Java_fragment()
 	{
-		EnterRule_synpred224_Java_fragment();
-		EnterRule("synpred224_Java_fragment", 351);
-		var retval = new Antlr3AstNode("synpred224_Java_fragment");
+		EnterRule_synpred223_Java_fragment();
+		EnterRule("synpred223_Java_fragment", 350);
+		var retval = new Antlr3AstNode("synpred223_Java_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1145:10: ( '.' IDENTIFIER )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1138:10: ( identifierSuffix )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1145:10: '.' IDENTIFIER
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1138:10: identifierSuffix
 			{
-			DebugLocation(1145, 10);
-			Match(input,DOT,Follow._DOT_in_synpred224_Java6952); if (state.failed) return;
-			DebugLocation(1145, 14);
-			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred224_Java6954); if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred224_Java_fragment", 351);
-			LeaveRule("synpred224_Java_fragment", 351);
-			LeaveRule_synpred224_Java_fragment();
-		}
-	}
-	// $ANTLR end synpred224_Java
-
-	partial void EnterRule_synpred225_Java_fragment();
-	partial void LeaveRule_synpred225_Java_fragment();
-
-	// $ANTLR start synpred225_Java
-	private void synpred225_Java_fragment()
-	{
-		EnterRule_synpred225_Java_fragment();
-		EnterRule("synpred225_Java_fragment", 352);
-		var retval = new Antlr3AstNode("synpred225_Java_fragment");
-		try
-		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1147:10: ( identifierSuffix )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1147:10: identifierSuffix
-			{
-			DebugLocation(1147, 10);
-			PushFollow(Follow._identifierSuffix_in_synpred225_Java6976);
+			DebugLocation(1138, 10);
+			PushFollow(Follow._identifierSuffix_in_synpred223_Java6861);
 			identifierSuffix();
 			PopFollow();
 			if (state.failed) return;
@@ -26130,79 +25795,79 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred225_Java_fragment", 352);
-			LeaveRule("synpred225_Java_fragment", 352);
-			LeaveRule_synpred225_Java_fragment();
+			TraceOut("synpred223_Java_fragment", 350);
+			LeaveRule("synpred223_Java_fragment", 350);
+			LeaveRule_synpred223_Java_fragment();
 		}
 	}
-	// $ANTLR end synpred225_Java
+	// $ANTLR end synpred223_Java
 
-	partial void EnterRule_synpred237_Java_fragment();
-	partial void LeaveRule_synpred237_Java_fragment();
+	partial void EnterRule_synpred235_Java_fragment();
+	partial void LeaveRule_synpred235_Java_fragment();
 
-	// $ANTLR start synpred237_Java
-	private void synpred237_Java_fragment()
+	// $ANTLR start synpred235_Java
+	private void synpred235_Java_fragment()
 	{
-		EnterRule_synpred237_Java_fragment();
-		EnterRule("synpred237_Java_fragment", 364);
-		var retval = new Antlr3AstNode("synpred237_Java_fragment");
+		EnterRule_synpred235_Java_fragment();
+		EnterRule("synpred235_Java_fragment", 362);
+		var retval = new Antlr3AstNode("synpred235_Java_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1173:10: ( '[' expression ']' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1164:10: ( '[' expression ']' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1173:10: '[' expression ']'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1164:10: '[' expression ']'
 			{
-			DebugLocation(1173, 10);
-			Match(input,LBRACKET,Follow._LBRACKET_in_synpred237_Java7218); if (state.failed) return;
-			DebugLocation(1173, 14);
-			PushFollow(Follow._expression_in_synpred237_Java7220);
+			DebugLocation(1164, 10);
+			Match(input,LBRACKET,Follow._LBRACKET_in_synpred235_Java7103); if (state.failed) return;
+			DebugLocation(1164, 14);
+			PushFollow(Follow._expression_in_synpred235_Java7105);
 			expression();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(1173, 25);
-			Match(input,RBRACKET,Follow._RBRACKET_in_synpred237_Java7222); if (state.failed) return;
+			DebugLocation(1164, 25);
+			Match(input,RBRACKET,Follow._RBRACKET_in_synpred235_Java7107); if (state.failed) return;
 
 			}
 
 		}
 		finally
 		{
-			TraceOut("synpred237_Java_fragment", 364);
-			LeaveRule("synpred237_Java_fragment", 364);
-			LeaveRule_synpred237_Java_fragment();
+			TraceOut("synpred235_Java_fragment", 362);
+			LeaveRule("synpred235_Java_fragment", 362);
+			LeaveRule_synpred235_Java_fragment();
 		}
 	}
-	// $ANTLR end synpred237_Java
+	// $ANTLR end synpred235_Java
 
-	partial void EnterRule_synpred250_Java_fragment();
-	partial void LeaveRule_synpred250_Java_fragment();
+	partial void EnterRule_synpred248_Java_fragment();
+	partial void LeaveRule_synpred248_Java_fragment();
 
-	// $ANTLR start synpred250_Java
-	private void synpred250_Java_fragment()
+	// $ANTLR start synpred248_Java
+	private void synpred248_Java_fragment()
 	{
-		EnterRule_synpred250_Java_fragment();
-		EnterRule("synpred250_Java_fragment", 377);
-		var retval = new Antlr3AstNode("synpred250_Java_fragment");
+		EnterRule_synpred248_Java_fragment();
+		EnterRule("synpred248_Java_fragment", 375);
+		var retval = new Antlr3AstNode("synpred248_Java_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1194:9: ( 'new' nonWildcardTypeArguments classOrInterfaceTypeWithDiamond classCreatorRest )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1185:9: ( 'new' nonWildcardTypeArguments classOrInterfaceTypeWithDiamond classCreatorRest )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1194:9: 'new' nonWildcardTypeArguments classOrInterfaceTypeWithDiamond classCreatorRest
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1185:9: 'new' nonWildcardTypeArguments classOrInterfaceTypeWithDiamond classCreatorRest
 			{
-			DebugLocation(1194, 9);
-			Match(input,NEW,Follow._NEW_in_synpred250_Java7425); if (state.failed) return;
-			DebugLocation(1194, 15);
-			PushFollow(Follow._nonWildcardTypeArguments_in_synpred250_Java7427);
+			DebugLocation(1185, 9);
+			Match(input,NEW,Follow._NEW_in_synpred248_Java7310); if (state.failed) return;
+			DebugLocation(1185, 15);
+			PushFollow(Follow._nonWildcardTypeArguments_in_synpred248_Java7312);
 			nonWildcardTypeArguments();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(1194, 40);
-			PushFollow(Follow._classOrInterfaceTypeWithDiamond_in_synpred250_Java7429);
+			DebugLocation(1185, 40);
+			PushFollow(Follow._classOrInterfaceTypeWithDiamond_in_synpred248_Java7314);
 			classOrInterfaceTypeWithDiamond();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(1194, 72);
-			PushFollow(Follow._classCreatorRest_in_synpred250_Java7431);
+			DebugLocation(1185, 72);
+			PushFollow(Follow._classCreatorRest_in_synpred248_Java7316);
 			classCreatorRest();
 			PopFollow();
 			if (state.failed) return;
@@ -26212,12 +25877,52 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred250_Java_fragment", 377);
-			LeaveRule("synpred250_Java_fragment", 377);
-			LeaveRule_synpred250_Java_fragment();
+			TraceOut("synpred248_Java_fragment", 375);
+			LeaveRule("synpred248_Java_fragment", 375);
+			LeaveRule_synpred248_Java_fragment();
 		}
 	}
-	// $ANTLR end synpred250_Java
+	// $ANTLR end synpred248_Java
+
+	partial void EnterRule_synpred249_Java_fragment();
+	partial void LeaveRule_synpred249_Java_fragment();
+
+	// $ANTLR start synpred249_Java
+	private void synpred249_Java_fragment()
+	{
+		EnterRule_synpred249_Java_fragment();
+		EnterRule("synpred249_Java_fragment", 376);
+		var retval = new Antlr3AstNode("synpred249_Java_fragment");
+		try
+		{
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1186:9: ( 'new' classOrInterfaceTypeWithDiamond classCreatorRest )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1186:9: 'new' classOrInterfaceTypeWithDiamond classCreatorRest
+			{
+			DebugLocation(1186, 9);
+			Match(input,NEW,Follow._NEW_in_synpred249_Java7326); if (state.failed) return;
+			DebugLocation(1186, 15);
+			PushFollow(Follow._classOrInterfaceTypeWithDiamond_in_synpred249_Java7328);
+			classOrInterfaceTypeWithDiamond();
+			PopFollow();
+			if (state.failed) return;
+			DebugLocation(1186, 47);
+			PushFollow(Follow._classCreatorRest_in_synpred249_Java7330);
+			classCreatorRest();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred249_Java_fragment", 376);
+			LeaveRule("synpred249_Java_fragment", 376);
+			LeaveRule_synpred249_Java_fragment();
+		}
+	}
+	// $ANTLR end synpred249_Java
 
 	partial void EnterRule_synpred251_Java_fragment();
 	partial void LeaveRule_synpred251_Java_fragment();
@@ -26230,20 +25935,64 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		var retval = new Antlr3AstNode("synpred251_Java_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1195:9: ( 'new' classOrInterfaceTypeWithDiamond classCreatorRest )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1191:9: ( 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1195:9: 'new' classOrInterfaceTypeWithDiamond classCreatorRest
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1191:9: 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer
 			{
-			DebugLocation(1195, 9);
-			Match(input,NEW,Follow._NEW_in_synpred251_Java7441); if (state.failed) return;
-			DebugLocation(1195, 15);
-			PushFollow(Follow._classOrInterfaceTypeWithDiamond_in_synpred251_Java7443);
-			classOrInterfaceTypeWithDiamond();
+			DebugLocation(1191, 9);
+			Match(input,NEW,Follow._NEW_in_synpred251_Java7359); if (state.failed) return;
+			DebugLocation(1191, 15);
+			PushFollow(Follow._createdName_in_synpred251_Java7361);
+			createdName();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(1195, 47);
-			PushFollow(Follow._classCreatorRest_in_synpred251_Java7445);
-			classCreatorRest();
+			DebugLocation(1192, 9);
+			Match(input,LBRACKET,Follow._LBRACKET_in_synpred251_Java7371); if (state.failed) return;
+			DebugLocation(1192, 13);
+			Match(input,RBRACKET,Follow._RBRACKET_in_synpred251_Java7373); if (state.failed) return;
+			DebugLocation(1193, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1193:9: ( '[' ']' )*
+			try { DebugEnterSubRule(208);
+			while (true)
+			{
+				int alt208=2;
+				try { DebugEnterDecision(208, false);
+				int LA208_1 = input.LA(1);
+
+				if ((LA208_1==LBRACKET))
+				{
+					alt208 = 1;
+				}
+
+
+				} finally { DebugExitDecision(208); }
+				switch ( alt208 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1193:10: '[' ']'
+					{
+					DebugLocation(1193, 10);
+					Match(input,LBRACKET,Follow._LBRACKET_in_synpred251_Java7384); if (state.failed) return;
+					DebugLocation(1193, 14);
+					Match(input,RBRACKET,Follow._RBRACKET_in_synpred251_Java7386); if (state.failed) return;
+
+					}
+					break;
+
+				default:
+					goto loop208;
+				}
+			}
+
+			loop208:
+				;
+
+			} finally { DebugExitSubRule(208); }
+
+			DebugLocation(1195, 9);
+			PushFollow(Follow._arrayInitializer_in_synpred251_Java7407);
+			arrayInitializer();
 			PopFollow();
 			if (state.failed) return;
 
@@ -26259,126 +26008,42 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	}
 	// $ANTLR end synpred251_Java
 
-	partial void EnterRule_synpred253_Java_fragment();
-	partial void LeaveRule_synpred253_Java_fragment();
+	partial void EnterRule_synpred252_Java_fragment();
+	partial void LeaveRule_synpred252_Java_fragment();
 
-	// $ANTLR start synpred253_Java
-	private void synpred253_Java_fragment()
+	// $ANTLR start synpred252_Java
+	private void synpred252_Java_fragment()
 	{
-		EnterRule_synpred253_Java_fragment();
-		EnterRule("synpred253_Java_fragment", 380);
-		var retval = new Antlr3AstNode("synpred253_Java_fragment");
+		EnterRule_synpred252_Java_fragment();
+		EnterRule("synpred252_Java_fragment", 379);
+		var retval = new Antlr3AstNode("synpred252_Java_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1200:9: ( 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1200:13: ( '[' expression ']' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1200:9: 'new' createdName '[' ']' ( '[' ']' )* arrayInitializer
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1200:13: '[' expression ']'
 			{
-			DebugLocation(1200, 9);
-			Match(input,NEW,Follow._NEW_in_synpred253_Java7474); if (state.failed) return;
-			DebugLocation(1200, 15);
-			PushFollow(Follow._createdName_in_synpred253_Java7476);
-			createdName();
-			PopFollow();
-			if (state.failed) return;
-			DebugLocation(1201, 9);
-			Match(input,LBRACKET,Follow._LBRACKET_in_synpred253_Java7486); if (state.failed) return;
-			DebugLocation(1201, 13);
-			Match(input,RBRACKET,Follow._RBRACKET_in_synpred253_Java7488); if (state.failed) return;
-			DebugLocation(1202, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1202:9: ( '[' ']' )*
-			try { DebugEnterSubRule(212);
-			while (true)
-			{
-				int alt212=2;
-				try { DebugEnterDecision(212, false);
-				int LA212_1 = input.LA(1);
-
-				if ((LA212_1==LBRACKET))
-				{
-					alt212 = 1;
-				}
-
-
-				} finally { DebugExitDecision(212); }
-				switch ( alt212 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1202:10: '[' ']'
-					{
-					DebugLocation(1202, 10);
-					Match(input,LBRACKET,Follow._LBRACKET_in_synpred253_Java7499); if (state.failed) return;
-					DebugLocation(1202, 14);
-					Match(input,RBRACKET,Follow._RBRACKET_in_synpred253_Java7501); if (state.failed) return;
-
-					}
-					break;
-
-				default:
-					goto loop212;
-				}
-			}
-
-			loop212:
-				;
-
-			} finally { DebugExitSubRule(212); }
-
-			DebugLocation(1204, 9);
-			PushFollow(Follow._arrayInitializer_in_synpred253_Java7522);
-			arrayInitializer();
-			PopFollow();
-			if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred253_Java_fragment", 380);
-			LeaveRule("synpred253_Java_fragment", 380);
-			LeaveRule_synpred253_Java_fragment();
-		}
-	}
-	// $ANTLR end synpred253_Java
-
-	partial void EnterRule_synpred254_Java_fragment();
-	partial void LeaveRule_synpred254_Java_fragment();
-
-	// $ANTLR start synpred254_Java
-	private void synpred254_Java_fragment()
-	{
-		EnterRule_synpred254_Java_fragment();
-		EnterRule("synpred254_Java_fragment", 381);
-		var retval = new Antlr3AstNode("synpred254_Java_fragment");
-		try
-		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1209:13: ( '[' expression ']' )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Java\\Java.g:1209:13: '[' expression ']'
-			{
-			DebugLocation(1209, 13);
-			Match(input,LBRACKET,Follow._LBRACKET_in_synpred254_Java7571); if (state.failed) return;
-			DebugLocation(1209, 17);
-			PushFollow(Follow._expression_in_synpred254_Java7573);
+			DebugLocation(1200, 13);
+			Match(input,LBRACKET,Follow._LBRACKET_in_synpred252_Java7456); if (state.failed) return;
+			DebugLocation(1200, 17);
+			PushFollow(Follow._expression_in_synpred252_Java7458);
 			expression();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(1210, 13);
-			Match(input,RBRACKET,Follow._RBRACKET_in_synpred254_Java7587); if (state.failed) return;
+			DebugLocation(1201, 13);
+			Match(input,RBRACKET,Follow._RBRACKET_in_synpred252_Java7472); if (state.failed) return;
 
 			}
 
 		}
 		finally
 		{
-			TraceOut("synpred254_Java_fragment", 381);
-			LeaveRule("synpred254_Java_fragment", 381);
-			LeaveRule_synpred254_Java_fragment();
+			TraceOut("synpred252_Java_fragment", 379);
+			LeaveRule("synpred252_Java_fragment", 379);
+			LeaveRule_synpred252_Java_fragment();
 		}
 	}
-	// $ANTLR end synpred254_Java
+	// $ANTLR end synpred252_Java
 	#endregion Rules
 
 	#region Synpreds
@@ -26693,408 +26358,403 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _COMMA_in_localVariableDeclaration4332 = new BitSet(new ulong[]{0x8000000000000000UL});
 		public static readonly BitSet _variableDeclarator_in_localVariableDeclaration4334 = new BitSet(new ulong[]{0x20000002UL});
 		public static readonly BitSet _block_in_statement4365 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ASSERT_in_statement4389 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_statement4409 = new BitSet(new ulong[]{0x10000000UL,0x40000000000UL});
-		public static readonly BitSet _COLON_in_statement4412 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_statement4414 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_statement4418 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ASSERT_in_statement4428 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_statement4431 = new BitSet(new ulong[]{0x10000000UL,0x40000000000UL});
-		public static readonly BitSet _COLON_in_statement4434 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_statement4436 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_statement4440 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IF_in_statement4462 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _parExpression_in_statement4464 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
-		public static readonly BitSet _statement_in_statement4466 = new BitSet(new ulong[]{0x80000000002UL});
-		public static readonly BitSet _ELSE_in_statement4469 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
-		public static readonly BitSet _statement_in_statement4471 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _forstatement_in_statement4493 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _WHILE_in_statement4503 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _parExpression_in_statement4505 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
-		public static readonly BitSet _statement_in_statement4507 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DO_in_statement4517 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
-		public static readonly BitSet _statement_in_statement4519 = new BitSet(new ulong[]{0x0UL,0x0UL,0x10UL});
-		public static readonly BitSet _WHILE_in_statement4521 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _parExpression_in_statement4523 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_statement4525 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _trystatement_in_statement4535 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _SWITCH_in_statement4545 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _parExpression_in_statement4547 = new BitSet(new ulong[]{0x0UL,0x400UL});
-		public static readonly BitSet _LBRACE_in_statement4549 = new BitSet(new ulong[]{0x200800000UL,0x4000000000UL});
-		public static readonly BitSet _switchBlockStatementGroups_in_statement4551 = new BitSet(new ulong[]{0x0UL,0x4000000000UL});
-		public static readonly BitSet _RBRACE_in_statement4553 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _SYNCHRONIZED_in_statement4563 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _parExpression_in_statement4565 = new BitSet(new ulong[]{0x0UL,0x400UL});
-		public static readonly BitSet _block_in_statement4567 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _RETURN_in_statement4577 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C0C028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_statement4580 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_statement4585 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _THROW_in_statement4595 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_statement4597 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_statement4599 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _BREAK_in_statement4609 = new BitSet(new ulong[]{0x8000000000000000UL,0x40000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_statement4624 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_statement4641 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _CONTINUE_in_statement4651 = new BitSet(new ulong[]{0x8000000000000000UL,0x40000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_statement4666 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_statement4683 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_statement4693 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_statement4696 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENTIFIER_in_statement4711 = new BitSet(new ulong[]{0x10000000UL});
-		public static readonly BitSet _COLON_in_statement4713 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
-		public static readonly BitSet _statement_in_statement4715 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _SEMI_in_statement4725 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _switchBlockStatementGroup_in_switchBlockStatementGroups4747 = new BitSet(new ulong[]{0x200800002UL});
-		public static readonly BitSet _switchLabel_in_switchBlockStatementGroup4776 = new BitSet(new ulong[]{0x80EC10350E01C312UL,0xEDEF0D1E803CE471UL,0x1DUL});
-		public static readonly BitSet _blockStatement_in_switchBlockStatementGroup4787 = new BitSet(new ulong[]{0x80EC10350E01C312UL,0xEDEF0D1E803CE471UL,0x1DUL});
-		public static readonly BitSet _CASE_in_switchLabel4818 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_switchLabel4820 = new BitSet(new ulong[]{0x10000000UL});
-		public static readonly BitSet _COLON_in_switchLabel4822 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DEFAULT_in_switchLabel4832 = new BitSet(new ulong[]{0x10000000UL});
-		public static readonly BitSet _COLON_in_switchLabel4834 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _TRY_in_trystatement4855 = new BitSet(new ulong[]{0x0UL,0x400UL});
-		public static readonly BitSet _block_in_trystatement4857 = new BitSet(new ulong[]{0x10000001000000UL});
-		public static readonly BitSet _catches_in_trystatement4871 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _FINALLY_in_trystatement4873 = new BitSet(new ulong[]{0x0UL,0x400UL});
-		public static readonly BitSet _block_in_trystatement4875 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _catches_in_trystatement4889 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _FINALLY_in_trystatement4903 = new BitSet(new ulong[]{0x0UL,0x400UL});
-		public static readonly BitSet _block_in_trystatement4905 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _tryWithResourcesStatement_in_trystatement4925 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _catchClause_in_catches4946 = new BitSet(new ulong[]{0x1000002UL});
-		public static readonly BitSet _catchClause_in_catches4957 = new BitSet(new ulong[]{0x1000002UL});
-		public static readonly BitSet _CATCH_in_catchClause4988 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _LPAREN_in_catchClause4990 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
-		public static readonly BitSet _formalParameter_in_catchClause4992 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_catchClause5002 = new BitSet(new ulong[]{0x0UL,0x400UL});
-		public static readonly BitSet _block_in_catchClause5004 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _variableModifiers_in_formalParameter5025 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _catchType_in_formalParameter5027 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_formalParameter5029 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_formalParameter5040 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_formalParameter5042 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _catchType_in_formalParameter5063 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_formalParameter5065 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_formalParameter5076 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_formalParameter5078 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _type_in_catchType5108 = new BitSet(new ulong[]{0x802UL});
-		public static readonly BitSet _BAR_in_catchType5119 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_catchType5121 = new BitSet(new ulong[]{0x802UL});
-		public static readonly BitSet _TRY_in_tryWithResourcesStatement5152 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _resourceSpecification_in_tryWithResourcesStatement5154 = new BitSet(new ulong[]{0x0UL,0x400UL});
-		public static readonly BitSet _block_in_tryWithResourcesStatement5156 = new BitSet(new ulong[]{0x10000001000002UL});
-		public static readonly BitSet _catches_in_tryWithResourcesStatement5158 = new BitSet(new ulong[]{0x10000000000002UL});
-		public static readonly BitSet _FINALLY_in_tryWithResourcesStatement5162 = new BitSet(new ulong[]{0x0UL,0x400UL});
-		public static readonly BitSet _block_in_tryWithResourcesStatement5164 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LPAREN_in_resourceSpecification5186 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
-		public static readonly BitSet _resources_in_resourceSpecification5188 = new BitSet(new ulong[]{0x0UL,0x60000000000UL});
-		public static readonly BitSet _SEMI_in_resourceSpecification5190 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_resourceSpecification5193 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _resource_in_resources5213 = new BitSet(new ulong[]{0x2UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_resources5218 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
-		public static readonly BitSet _resource_in_resources5220 = new BitSet(new ulong[]{0x2UL,0x40000000000UL});
-		public static readonly BitSet _variableModifiers_in_resource5243 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_resource5246 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_resource5248 = new BitSet(new ulong[]{0x200000000000UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_resource5251 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_resource5253 = new BitSet(new ulong[]{0x200000000000UL,0x800UL});
-		public static readonly BitSet _EQ_in_resource5257 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_resource5259 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _FOR_in_forstatement5298 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _LPAREN_in_forstatement5300 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
-		public static readonly BitSet _variableModifiers_in_forstatement5302 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_forstatement5304 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_forstatement5306 = new BitSet(new ulong[]{0x10000000UL});
-		public static readonly BitSet _COLON_in_forstatement5308 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_forstatement5319 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_forstatement5321 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
-		public static readonly BitSet _statement_in_forstatement5323 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _FOR_in_forstatement5355 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _LPAREN_in_forstatement5357 = new BitSet(new ulong[]{0x806C003006014200UL,0xA46C0C028034E050UL,0x4UL});
-		public static readonly BitSet _forInit_in_forstatement5377 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_forstatement5398 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C0C028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_forstatement5418 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_forstatement5439 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C0A028030E050UL,0x4UL});
-		public static readonly BitSet _expressionList_in_forstatement5459 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_forstatement5480 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
-		public static readonly BitSet _statement_in_forstatement5482 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _localVariableDeclaration_in_forInit5502 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expressionList_in_forInit5512 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LPAREN_in_parExpression5532 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_parExpression5534 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_parExpression5536 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_expressionList5556 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _COMMA_in_expressionList5567 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_expressionList5569 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _conditionalExpression_in_expression5601 = new BitSet(new ulong[]{0x400200000402082UL,0x10A00140010000UL});
-		public static readonly BitSet _assignmentOperator_in_expression5612 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_expression5614 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _EQ_in_assignmentOperator5646 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _PLUSEQ_in_assignmentOperator5656 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _SUBEQ_in_assignmentOperator5666 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _STAREQ_in_assignmentOperator5676 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _SLASHEQ_in_assignmentOperator5686 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _AMPEQ_in_assignmentOperator5696 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _BAREQ_in_assignmentOperator5706 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _CARETEQ_in_assignmentOperator5716 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _PERCENTEQ_in_assignmentOperator5726 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LT_in_assignmentOperator5737 = new BitSet(new ulong[]{0x0UL,0x10000UL});
-		public static readonly BitSet _LT_in_assignmentOperator5739 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _EQ_in_assignmentOperator5741 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _GT_in_assignmentOperator5752 = new BitSet(new ulong[]{0x400000000000000UL});
-		public static readonly BitSet _GT_in_assignmentOperator5754 = new BitSet(new ulong[]{0x400000000000000UL});
-		public static readonly BitSet _GT_in_assignmentOperator5756 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _EQ_in_assignmentOperator5758 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _GT_in_assignmentOperator5769 = new BitSet(new ulong[]{0x400000000000000UL});
-		public static readonly BitSet _GT_in_assignmentOperator5771 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _EQ_in_assignmentOperator5773 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _conditionalOrExpression_in_conditionalExpression5794 = new BitSet(new ulong[]{0x2UL,0x2000000000UL});
-		public static readonly BitSet _QUES_in_conditionalExpression5805 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_conditionalExpression5807 = new BitSet(new ulong[]{0x10000000UL});
-		public static readonly BitSet _COLON_in_conditionalExpression5809 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _conditionalExpression_in_conditionalExpression5811 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _conditionalAndExpression_in_conditionalOrExpression5841 = new BitSet(new ulong[]{0x1002UL});
-		public static readonly BitSet _BARBAR_in_conditionalOrExpression5852 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _conditionalAndExpression_in_conditionalOrExpression5854 = new BitSet(new ulong[]{0x1002UL});
-		public static readonly BitSet _inclusiveOrExpression_in_conditionalAndExpression5884 = new BitSet(new ulong[]{0x42UL});
-		public static readonly BitSet _AMPAMP_in_conditionalAndExpression5895 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _inclusiveOrExpression_in_conditionalAndExpression5897 = new BitSet(new ulong[]{0x42UL});
-		public static readonly BitSet _exclusiveOrExpression_in_inclusiveOrExpression5927 = new BitSet(new ulong[]{0x802UL});
-		public static readonly BitSet _BAR_in_inclusiveOrExpression5938 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _exclusiveOrExpression_in_inclusiveOrExpression5940 = new BitSet(new ulong[]{0x802UL});
-		public static readonly BitSet _andExpression_in_exclusiveOrExpression5970 = new BitSet(new ulong[]{0x200002UL});
-		public static readonly BitSet _CARET_in_exclusiveOrExpression5981 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _andExpression_in_exclusiveOrExpression5983 = new BitSet(new ulong[]{0x200002UL});
-		public static readonly BitSet _equalityExpression_in_andExpression6013 = new BitSet(new ulong[]{0x22UL});
-		public static readonly BitSet _AMP_in_andExpression6024 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _equalityExpression_in_andExpression6026 = new BitSet(new ulong[]{0x22UL});
-		public static readonly BitSet _instanceOfExpression_in_equalityExpression6056 = new BitSet(new ulong[]{0x400000000402UL});
-		public static readonly BitSet _set_in_equalityExpression6083 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _instanceOfExpression_in_equalityExpression6133 = new BitSet(new ulong[]{0x400000000402UL});
-		public static readonly BitSet _relationalExpression_in_instanceOfExpression6163 = new BitSet(new ulong[]{0x2UL,0x8UL});
-		public static readonly BitSet _INSTANCEOF_in_instanceOfExpression6174 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_instanceOfExpression6176 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _shiftExpression_in_relationalExpression6206 = new BitSet(new ulong[]{0x400000000000002UL,0x10000UL});
-		public static readonly BitSet _relationalOp_in_relationalExpression6217 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _shiftExpression_in_relationalExpression6219 = new BitSet(new ulong[]{0x400000000000002UL,0x10000UL});
-		public static readonly BitSet _LT_in_relationalOp6250 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _EQ_in_relationalOp6252 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _GT_in_relationalOp6263 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _EQ_in_relationalOp6265 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LT_in_relationalOp6275 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _GT_in_relationalOp6285 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _additiveExpression_in_shiftExpression6304 = new BitSet(new ulong[]{0x400000000000002UL,0x10000UL});
-		public static readonly BitSet _shiftOp_in_shiftExpression6315 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _additiveExpression_in_shiftExpression6317 = new BitSet(new ulong[]{0x400000000000002UL,0x10000UL});
-		public static readonly BitSet _LT_in_shiftOp6348 = new BitSet(new ulong[]{0x0UL,0x10000UL});
-		public static readonly BitSet _LT_in_shiftOp6350 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _GT_in_shiftOp6361 = new BitSet(new ulong[]{0x400000000000000UL});
-		public static readonly BitSet _GT_in_shiftOp6363 = new BitSet(new ulong[]{0x400000000000000UL});
-		public static readonly BitSet _GT_in_shiftOp6365 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _GT_in_shiftOp6376 = new BitSet(new ulong[]{0x400000000000000UL});
-		public static readonly BitSet _GT_in_shiftOp6378 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _multiplicativeExpression_in_additiveExpression6397 = new BitSet(new ulong[]{0x2UL,0x8000080000000UL});
-		public static readonly BitSet _set_in_additiveExpression6424 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _multiplicativeExpression_in_additiveExpression6474 = new BitSet(new ulong[]{0x2UL,0x8000080000000UL});
-		public static readonly BitSet _unaryExpression_in_multiplicativeExpression6511 = new BitSet(new ulong[]{0x2UL,0x500020000000UL});
-		public static readonly BitSet _set_in_multiplicativeExpression6538 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _unaryExpression_in_multiplicativeExpression6606 = new BitSet(new ulong[]{0x2UL,0x500020000000UL});
-		public static readonly BitSet _PLUS_in_unaryExpression6638 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _unaryExpression_in_unaryExpression6641 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _SUB_in_unaryExpression6651 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _unaryExpression_in_unaryExpression6653 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _PLUSPLUS_in_unaryExpression6663 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _unaryExpression_in_unaryExpression6665 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _SUBSUB_in_unaryExpression6675 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _unaryExpression_in_unaryExpression6677 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _unaryExpressionNotPlusMinus_in_unaryExpression6687 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _TILDE_in_unaryExpressionNotPlusMinus6706 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _unaryExpression_in_unaryExpressionNotPlusMinus6708 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _BANG_in_unaryExpressionNotPlusMinus6718 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _unaryExpression_in_unaryExpressionNotPlusMinus6720 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _castExpression_in_unaryExpressionNotPlusMinus6730 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primary_in_unaryExpressionNotPlusMinus6740 = new BitSet(new ulong[]{0x800000002UL,0x20000200000800UL});
-		public static readonly BitSet _selector_in_unaryExpressionNotPlusMinus6751 = new BitSet(new ulong[]{0x800000002UL,0x20000200000800UL});
-		public static readonly BitSet _LPAREN_in_castExpression6820 = new BitSet(new ulong[]{0x20001002014000UL,0x80000002010UL});
-		public static readonly BitSet _primitiveType_in_castExpression6822 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_castExpression6824 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _unaryExpression_in_castExpression6826 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LPAREN_in_castExpression6836 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_castExpression6838 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_castExpression6840 = new BitSet(new ulong[]{0x8064003006014200UL,0xA44408000030E050UL,0x4UL});
-		public static readonly BitSet _unaryExpressionNotPlusMinus_in_castExpression6842 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _parExpression_in_primary6863 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _THIS_in_primary6885 = new BitSet(new ulong[]{0x800000002UL,0x8800UL});
-		public static readonly BitSet _DOT_in_primary6896 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_primary6898 = new BitSet(new ulong[]{0x800000002UL,0x8800UL});
-		public static readonly BitSet _identifierSuffix_in_primary6920 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENTIFIER_in_primary6941 = new BitSet(new ulong[]{0x800000002UL,0x8800UL});
-		public static readonly BitSet _DOT_in_primary6952 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_primary6954 = new BitSet(new ulong[]{0x800000002UL,0x8800UL});
-		public static readonly BitSet _identifierSuffix_in_primary6976 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _SUPER_in_primary6997 = new BitSet(new ulong[]{0x800000000UL,0x8000UL});
-		public static readonly BitSet _superSuffix_in_primary7007 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _literal_in_primary7017 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _creator_in_primary7027 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primitiveType_in_primary7037 = new BitSet(new ulong[]{0x800000000UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_primary7048 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_primary7050 = new BitSet(new ulong[]{0x800000000UL,0x800UL});
-		public static readonly BitSet _DOT_in_primary7071 = new BitSet(new ulong[]{0x8000000UL});
-		public static readonly BitSet _CLASS_in_primary7073 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _VOID_in_primary7083 = new BitSet(new ulong[]{0x800000000UL});
-		public static readonly BitSet _DOT_in_primary7085 = new BitSet(new ulong[]{0x8000000UL});
-		public static readonly BitSet _CLASS_in_primary7087 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _arguments_in_superSuffix7106 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_superSuffix7116 = new BitSet(new ulong[]{0x8000000000000000UL,0x10000UL});
-		public static readonly BitSet _typeArguments_in_superSuffix7119 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_superSuffix7140 = new BitSet(new ulong[]{0x2UL,0x8000UL});
-		public static readonly BitSet _arguments_in_superSuffix7151 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACKET_in_identifierSuffix7182 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_identifierSuffix7184 = new BitSet(new ulong[]{0x800000000UL,0x800UL});
-		public static readonly BitSet _DOT_in_identifierSuffix7205 = new BitSet(new ulong[]{0x8000000UL});
-		public static readonly BitSet _CLASS_in_identifierSuffix7207 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACKET_in_identifierSuffix7218 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_identifierSuffix7220 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_identifierSuffix7222 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _arguments_in_identifierSuffix7243 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_identifierSuffix7253 = new BitSet(new ulong[]{0x8000000UL});
-		public static readonly BitSet _CLASS_in_identifierSuffix7255 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_identifierSuffix7265 = new BitSet(new ulong[]{0x0UL,0x10000UL});
-		public static readonly BitSet _nonWildcardTypeArguments_in_identifierSuffix7267 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_identifierSuffix7269 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _arguments_in_identifierSuffix7271 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_identifierSuffix7281 = new BitSet(new ulong[]{0x0UL,0x400000000000000UL});
-		public static readonly BitSet _THIS_in_identifierSuffix7283 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_identifierSuffix7293 = new BitSet(new ulong[]{0x0UL,0x40000000000000UL});
-		public static readonly BitSet _SUPER_in_identifierSuffix7295 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _arguments_in_identifierSuffix7297 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _innerCreator_in_identifierSuffix7307 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_selector7326 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_selector7328 = new BitSet(new ulong[]{0x2UL,0x8000UL});
-		public static readonly BitSet _arguments_in_selector7330 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_selector7341 = new BitSet(new ulong[]{0x0UL,0x10000UL});
-		public static readonly BitSet _nonWildcardTypeArguments_in_selector7343 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_selector7345 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _arguments_in_selector7347 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_selector7358 = new BitSet(new ulong[]{0x0UL,0x400000000000000UL});
-		public static readonly BitSet _THIS_in_selector7360 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_selector7370 = new BitSet(new ulong[]{0x0UL,0x40000000000000UL});
-		public static readonly BitSet _SUPER_in_selector7372 = new BitSet(new ulong[]{0x800000000UL,0x8000UL});
-		public static readonly BitSet _superSuffix_in_selector7382 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _innerCreator_in_selector7392 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACKET_in_selector7402 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_selector7404 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_selector7406 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEW_in_creator7425 = new BitSet(new ulong[]{0x0UL,0x10000UL});
-		public static readonly BitSet _nonWildcardTypeArguments_in_creator7427 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_creator7429 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _classCreatorRest_in_creator7431 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEW_in_creator7441 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_creator7443 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _classCreatorRest_in_creator7445 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _arrayCreator_in_creator7455 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEW_in_arrayCreator7474 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _createdName_in_arrayCreator7476 = new BitSet(new ulong[]{0x0UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_arrayCreator7486 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_arrayCreator7488 = new BitSet(new ulong[]{0x0UL,0xC00UL});
-		public static readonly BitSet _LBRACKET_in_arrayCreator7499 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_arrayCreator7501 = new BitSet(new ulong[]{0x0UL,0xC00UL});
-		public static readonly BitSet _arrayInitializer_in_arrayCreator7522 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEW_in_arrayCreator7533 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _createdName_in_arrayCreator7535 = new BitSet(new ulong[]{0x0UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_arrayCreator7545 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_arrayCreator7547 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_arrayCreator7557 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_arrayCreator7571 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_arrayCreator7573 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_arrayCreator7587 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_arrayCreator7609 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_arrayCreator7611 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _arrayInitializer_in_variableInitializer7641 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_variableInitializer7651 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACE_in_arrayInitializer7670 = new BitSet(new ulong[]{0x8064003026014200UL,0xA46C08428030E450UL,0x4UL});
-		public static readonly BitSet _variableInitializer_in_arrayInitializer7686 = new BitSet(new ulong[]{0x20000000UL,0x4000000000UL});
-		public static readonly BitSet _COMMA_in_arrayInitializer7705 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E450UL,0x4UL});
-		public static readonly BitSet _variableInitializer_in_arrayInitializer7707 = new BitSet(new ulong[]{0x20000000UL,0x4000000000UL});
-		public static readonly BitSet _COMMA_in_arrayInitializer7757 = new BitSet(new ulong[]{0x0UL,0x4000000000UL});
-		public static readonly BitSet _RBRACE_in_arrayInitializer7770 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_createdName7803 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primitiveType_in_createdName7813 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_innerCreator7832 = new BitSet(new ulong[]{0x0UL,0x100000UL});
-		public static readonly BitSet _NEW_in_innerCreator7834 = new BitSet(new ulong[]{0x8000000000000000UL,0x10000UL});
-		public static readonly BitSet _nonWildcardTypeArgumentsOrDiamond_in_innerCreator7845 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_innerCreator7866 = new BitSet(new ulong[]{0x0UL,0x18000UL});
-		public static readonly BitSet _typeArguments_in_innerCreator7877 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _classCreatorRest_in_innerCreator7898 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _arguments_in_classCreatorRest7917 = new BitSet(new ulong[]{0x2UL,0x400UL});
-		public static readonly BitSet _classBody_in_classCreatorRest7928 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LT_in_nonWildcardTypeArguments7958 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _typeList_in_nonWildcardTypeArguments7960 = new BitSet(new ulong[]{0x400000000000000UL});
-		public static readonly BitSet _GT_in_nonWildcardTypeArguments7962 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LT_in_typeArgumentsOrDiamond7981 = new BitSet(new ulong[]{0x400000000000000UL});
-		public static readonly BitSet _GT_in_typeArgumentsOrDiamond7983 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _typeArguments_in_typeArgumentsOrDiamond7993 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LT_in_nonWildcardTypeArgumentsOrDiamond8012 = new BitSet(new ulong[]{0x400000000000000UL});
-		public static readonly BitSet _GT_in_nonWildcardTypeArgumentsOrDiamond8014 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _nonWildcardTypeArguments_in_nonWildcardTypeArgumentsOrDiamond8024 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LPAREN_in_arguments8044 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C0A028030E050UL,0x4UL});
-		public static readonly BitSet _expressionList_in_arguments8047 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_arguments8060 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _INTLITERAL_in_intLiteral8077 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LONGLITERAL_in_longLiteral8094 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _FLOATLITERAL_in_floatLiteral8111 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOUBLELITERAL_in_doubleLiteral8128 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _CHARLITERAL_in_charLiteral8145 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _STRINGLITERAL_in_stringLiteral8162 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _TRUE_in_trueLiteral8179 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _FALSE_in_falseLiteral8196 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NULL_in_nullLiteral8213 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _intLiteral_in_literal8233 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _longLiteral_in_literal8243 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _floatLiteral_in_literal8253 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _doubleLiteral_in_literal8263 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _charLiteral_in_literal8273 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _stringLiteral_in_literal8283 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _trueLiteral_in_literal8293 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _falseLiteral_in_literal8303 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _nullLiteral_in_literal8313 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_classHeader8337 = new BitSet(new ulong[]{0x8000000UL});
-		public static readonly BitSet _CLASS_in_classHeader8339 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_classHeader8341 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_enumHeader8361 = new BitSet(new ulong[]{0x8000100000000000UL});
-		public static readonly BitSet _set_in_enumHeader8363 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_enumHeader8369 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_interfaceHeader8389 = new BitSet(new ulong[]{0x0UL,0x20UL});
-		public static readonly BitSet _INTERFACE_in_interfaceHeader8391 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_interfaceHeader8393 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_annotationHeader8413 = new BitSet(new ulong[]{0x0UL,0x40000UL});
-		public static readonly BitSet _MONKEYS_AT_in_annotationHeader8415 = new BitSet(new ulong[]{0x0UL,0x20UL});
-		public static readonly BitSet _INTERFACE_in_annotationHeader8417 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_annotationHeader8419 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_typeHeader8439 = new BitSet(new ulong[]{0x100008000000UL,0x40020UL});
-		public static readonly BitSet _CLASS_in_typeHeader8442 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _ENUM_in_typeHeader8444 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _MONKEYS_AT_in_typeHeader8447 = new BitSet(new ulong[]{0x0UL,0x20UL});
-		public static readonly BitSet _INTERFACE_in_typeHeader8451 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_typeHeader8455 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_methodHeader8475 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000012010UL,0x4UL});
-		public static readonly BitSet _typeParameters_in_methodHeader8477 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL,0x4UL});
-		public static readonly BitSet _type_in_methodHeader8481 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _VOID_in_methodHeader8483 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_methodHeader8487 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _LPAREN_in_methodHeader8489 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_fieldHeader8509 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_fieldHeader8511 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_fieldHeader8513 = new BitSet(new ulong[]{0x200020000000UL,0x40000000800UL});
-		public static readonly BitSet _LBRACKET_in_fieldHeader8516 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_fieldHeader8517 = new BitSet(new ulong[]{0x200020000000UL,0x40000000800UL});
-		public static readonly BitSet _set_in_fieldHeader8521 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _variableModifiers_in_localVariableHeader8547 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_localVariableHeader8549 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_localVariableHeader8551 = new BitSet(new ulong[]{0x200020000000UL,0x40000000800UL});
-		public static readonly BitSet _LBRACKET_in_localVariableHeader8554 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_localVariableHeader8555 = new BitSet(new ulong[]{0x200020000000UL,0x40000000800UL});
-		public static readonly BitSet _set_in_localVariableHeader8559 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SEMI_in_statement4375 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENTIFIER_in_statement4385 = new BitSet(new ulong[]{0x10000000UL});
+		public static readonly BitSet _COLON_in_statement4387 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
+		public static readonly BitSet _statement_in_statement4389 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_in_statement4396 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _SEMI_in_statement4399 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IF_in_statement4414 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _parExpression_in_statement4416 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
+		public static readonly BitSet _statement_in_statement4418 = new BitSet(new ulong[]{0x80000000002UL});
+		public static readonly BitSet _ELSE_in_statement4421 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
+		public static readonly BitSet _statement_in_statement4423 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ASSERT_in_statement4445 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_statement4448 = new BitSet(new ulong[]{0x10000000UL,0x40000000000UL});
+		public static readonly BitSet _COLON_in_statement4451 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_statement4453 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _SEMI_in_statement4457 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SWITCH_in_statement4479 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _parExpression_in_statement4481 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _LBRACE_in_statement4483 = new BitSet(new ulong[]{0x200800000UL,0x4000000000UL});
+		public static readonly BitSet _switchBlockStatementGroups_in_statement4485 = new BitSet(new ulong[]{0x0UL,0x4000000000UL});
+		public static readonly BitSet _RBRACE_in_statement4487 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _WHILE_in_statement4497 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _parExpression_in_statement4499 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
+		public static readonly BitSet _statement_in_statement4501 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DO_in_statement4511 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
+		public static readonly BitSet _statement_in_statement4513 = new BitSet(new ulong[]{0x0UL,0x0UL,0x10UL});
+		public static readonly BitSet _WHILE_in_statement4515 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _parExpression_in_statement4517 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _SEMI_in_statement4519 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _forstatement_in_statement4529 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _BREAK_in_statement4539 = new BitSet(new ulong[]{0x8000000000000000UL,0x40000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_statement4542 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _SEMI_in_statement4546 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _CONTINUE_in_statement4551 = new BitSet(new ulong[]{0x8000000000000000UL,0x40000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_statement4554 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _SEMI_in_statement4558 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _RETURN_in_statement4568 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C0C028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_statement4571 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _SEMI_in_statement4576 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _THROW_in_statement4586 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_statement4588 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _SEMI_in_statement4590 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SYNCHRONIZED_in_statement4600 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _parExpression_in_statement4602 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _block_in_statement4604 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _trystatement_in_statement4614 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _tryWithResourcesStatement_in_statement4621 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _switchBlockStatementGroup_in_switchBlockStatementGroups4642 = new BitSet(new ulong[]{0x200800002UL});
+		public static readonly BitSet _switchLabel_in_switchBlockStatementGroup4671 = new BitSet(new ulong[]{0x80EC10350E01C312UL,0xEDEF0D1E803CE471UL,0x1DUL});
+		public static readonly BitSet _blockStatement_in_switchBlockStatementGroup4682 = new BitSet(new ulong[]{0x80EC10350E01C312UL,0xEDEF0D1E803CE471UL,0x1DUL});
+		public static readonly BitSet _CASE_in_switchLabel4713 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_switchLabel4715 = new BitSet(new ulong[]{0x10000000UL});
+		public static readonly BitSet _COLON_in_switchLabel4717 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DEFAULT_in_switchLabel4727 = new BitSet(new ulong[]{0x10000000UL});
+		public static readonly BitSet _COLON_in_switchLabel4729 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _TRY_in_trystatement4750 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _block_in_trystatement4752 = new BitSet(new ulong[]{0x10000001000000UL});
+		public static readonly BitSet _catches_in_trystatement4766 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _FINALLY_in_trystatement4768 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _block_in_trystatement4770 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _catches_in_trystatement4784 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _FINALLY_in_trystatement4798 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _block_in_trystatement4800 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _catchClause_in_catches4831 = new BitSet(new ulong[]{0x1000002UL});
+		public static readonly BitSet _catchClause_in_catches4842 = new BitSet(new ulong[]{0x1000002UL});
+		public static readonly BitSet _CATCH_in_catchClause4873 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _LPAREN_in_catchClause4875 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
+		public static readonly BitSet _formalParameter_in_catchClause4877 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
+		public static readonly BitSet _RPAREN_in_catchClause4887 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _block_in_catchClause4889 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _variableModifiers_in_formalParameter4910 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _catchType_in_formalParameter4912 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_formalParameter4914 = new BitSet(new ulong[]{0x2UL,0x800UL});
+		public static readonly BitSet _LBRACKET_in_formalParameter4925 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_formalParameter4927 = new BitSet(new ulong[]{0x2UL,0x800UL});
+		public static readonly BitSet _catchType_in_formalParameter4948 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_formalParameter4950 = new BitSet(new ulong[]{0x2UL,0x800UL});
+		public static readonly BitSet _LBRACKET_in_formalParameter4961 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_formalParameter4963 = new BitSet(new ulong[]{0x2UL,0x800UL});
+		public static readonly BitSet _type_in_catchType4993 = new BitSet(new ulong[]{0x802UL});
+		public static readonly BitSet _BAR_in_catchType5004 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _type_in_catchType5006 = new BitSet(new ulong[]{0x802UL});
+		public static readonly BitSet _TRY_in_tryWithResourcesStatement5037 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _resourceSpecification_in_tryWithResourcesStatement5039 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _block_in_tryWithResourcesStatement5041 = new BitSet(new ulong[]{0x10000001000002UL});
+		public static readonly BitSet _catches_in_tryWithResourcesStatement5043 = new BitSet(new ulong[]{0x10000000000002UL});
+		public static readonly BitSet _FINALLY_in_tryWithResourcesStatement5047 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _block_in_tryWithResourcesStatement5049 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LPAREN_in_resourceSpecification5071 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
+		public static readonly BitSet _resources_in_resourceSpecification5073 = new BitSet(new ulong[]{0x0UL,0x60000000000UL});
+		public static readonly BitSet _SEMI_in_resourceSpecification5075 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
+		public static readonly BitSet _RPAREN_in_resourceSpecification5078 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _resource_in_resources5098 = new BitSet(new ulong[]{0x2UL,0x40000000000UL});
+		public static readonly BitSet _SEMI_in_resources5103 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
+		public static readonly BitSet _resource_in_resources5105 = new BitSet(new ulong[]{0x2UL,0x40000000000UL});
+		public static readonly BitSet _variableModifiers_in_resource5128 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _type_in_resource5131 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_resource5133 = new BitSet(new ulong[]{0x200000000000UL,0x800UL});
+		public static readonly BitSet _LBRACKET_in_resource5136 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_resource5138 = new BitSet(new ulong[]{0x200000000000UL,0x800UL});
+		public static readonly BitSet _EQ_in_resource5142 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_resource5144 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _FOR_in_forstatement5183 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _LPAREN_in_forstatement5185 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
+		public static readonly BitSet _variableModifiers_in_forstatement5187 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _type_in_forstatement5189 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_forstatement5191 = new BitSet(new ulong[]{0x10000000UL});
+		public static readonly BitSet _COLON_in_forstatement5193 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_forstatement5204 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
+		public static readonly BitSet _RPAREN_in_forstatement5206 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
+		public static readonly BitSet _statement_in_forstatement5208 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _FOR_in_forstatement5240 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _LPAREN_in_forstatement5242 = new BitSet(new ulong[]{0x806C003006014200UL,0xA46C0C028034E050UL,0x4UL});
+		public static readonly BitSet _forInit_in_forstatement5262 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _SEMI_in_forstatement5283 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C0C028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_forstatement5303 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _SEMI_in_forstatement5324 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C0A028030E050UL,0x4UL});
+		public static readonly BitSet _expressionList_in_forstatement5344 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
+		public static readonly BitSet _RPAREN_in_forstatement5365 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
+		public static readonly BitSet _statement_in_forstatement5367 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _localVariableDeclaration_in_forInit5387 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expressionList_in_forInit5397 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LPAREN_in_parExpression5417 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_parExpression5419 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
+		public static readonly BitSet _RPAREN_in_parExpression5421 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_in_expressionList5441 = new BitSet(new ulong[]{0x20000002UL});
+		public static readonly BitSet _COMMA_in_expressionList5452 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_expressionList5454 = new BitSet(new ulong[]{0x20000002UL});
+		public static readonly BitSet _conditionalExpression_in_expression5486 = new BitSet(new ulong[]{0x400200000402082UL,0x10A00140010000UL});
+		public static readonly BitSet _assignmentOperator_in_expression5497 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_expression5499 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _EQ_in_assignmentOperator5531 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _PLUSEQ_in_assignmentOperator5541 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SUBEQ_in_assignmentOperator5551 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _STAREQ_in_assignmentOperator5561 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SLASHEQ_in_assignmentOperator5571 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _AMPEQ_in_assignmentOperator5581 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _BAREQ_in_assignmentOperator5591 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _CARETEQ_in_assignmentOperator5601 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _PERCENTEQ_in_assignmentOperator5611 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LT_in_assignmentOperator5622 = new BitSet(new ulong[]{0x0UL,0x10000UL});
+		public static readonly BitSet _LT_in_assignmentOperator5624 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _EQ_in_assignmentOperator5626 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _GT_in_assignmentOperator5637 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _GT_in_assignmentOperator5639 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _GT_in_assignmentOperator5641 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _EQ_in_assignmentOperator5643 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _GT_in_assignmentOperator5654 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _GT_in_assignmentOperator5656 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _EQ_in_assignmentOperator5658 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _conditionalOrExpression_in_conditionalExpression5679 = new BitSet(new ulong[]{0x2UL,0x2000000000UL});
+		public static readonly BitSet _QUES_in_conditionalExpression5690 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_conditionalExpression5692 = new BitSet(new ulong[]{0x10000000UL});
+		public static readonly BitSet _COLON_in_conditionalExpression5694 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _conditionalExpression_in_conditionalExpression5696 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _conditionalAndExpression_in_conditionalOrExpression5726 = new BitSet(new ulong[]{0x1002UL});
+		public static readonly BitSet _BARBAR_in_conditionalOrExpression5737 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _conditionalAndExpression_in_conditionalOrExpression5739 = new BitSet(new ulong[]{0x1002UL});
+		public static readonly BitSet _inclusiveOrExpression_in_conditionalAndExpression5769 = new BitSet(new ulong[]{0x42UL});
+		public static readonly BitSet _AMPAMP_in_conditionalAndExpression5780 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _inclusiveOrExpression_in_conditionalAndExpression5782 = new BitSet(new ulong[]{0x42UL});
+		public static readonly BitSet _exclusiveOrExpression_in_inclusiveOrExpression5812 = new BitSet(new ulong[]{0x802UL});
+		public static readonly BitSet _BAR_in_inclusiveOrExpression5823 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _exclusiveOrExpression_in_inclusiveOrExpression5825 = new BitSet(new ulong[]{0x802UL});
+		public static readonly BitSet _andExpression_in_exclusiveOrExpression5855 = new BitSet(new ulong[]{0x200002UL});
+		public static readonly BitSet _CARET_in_exclusiveOrExpression5866 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _andExpression_in_exclusiveOrExpression5868 = new BitSet(new ulong[]{0x200002UL});
+		public static readonly BitSet _equalityExpression_in_andExpression5898 = new BitSet(new ulong[]{0x22UL});
+		public static readonly BitSet _AMP_in_andExpression5909 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _equalityExpression_in_andExpression5911 = new BitSet(new ulong[]{0x22UL});
+		public static readonly BitSet _instanceOfExpression_in_equalityExpression5941 = new BitSet(new ulong[]{0x400000000402UL});
+		public static readonly BitSet _set_in_equalityExpression5968 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _instanceOfExpression_in_equalityExpression6018 = new BitSet(new ulong[]{0x400000000402UL});
+		public static readonly BitSet _relationalExpression_in_instanceOfExpression6048 = new BitSet(new ulong[]{0x2UL,0x8UL});
+		public static readonly BitSet _INSTANCEOF_in_instanceOfExpression6059 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _type_in_instanceOfExpression6061 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _shiftExpression_in_relationalExpression6091 = new BitSet(new ulong[]{0x400000000000002UL,0x10000UL});
+		public static readonly BitSet _relationalOp_in_relationalExpression6102 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _shiftExpression_in_relationalExpression6104 = new BitSet(new ulong[]{0x400000000000002UL,0x10000UL});
+		public static readonly BitSet _LT_in_relationalOp6135 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _EQ_in_relationalOp6137 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _GT_in_relationalOp6148 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _EQ_in_relationalOp6150 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LT_in_relationalOp6160 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _GT_in_relationalOp6170 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _additiveExpression_in_shiftExpression6189 = new BitSet(new ulong[]{0x400000000000002UL,0x10000UL});
+		public static readonly BitSet _shiftOp_in_shiftExpression6200 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _additiveExpression_in_shiftExpression6202 = new BitSet(new ulong[]{0x400000000000002UL,0x10000UL});
+		public static readonly BitSet _LT_in_shiftOp6233 = new BitSet(new ulong[]{0x0UL,0x10000UL});
+		public static readonly BitSet _LT_in_shiftOp6235 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _GT_in_shiftOp6246 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _GT_in_shiftOp6248 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _GT_in_shiftOp6250 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _GT_in_shiftOp6261 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _GT_in_shiftOp6263 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _multiplicativeExpression_in_additiveExpression6282 = new BitSet(new ulong[]{0x2UL,0x8000080000000UL});
+		public static readonly BitSet _set_in_additiveExpression6309 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _multiplicativeExpression_in_additiveExpression6359 = new BitSet(new ulong[]{0x2UL,0x8000080000000UL});
+		public static readonly BitSet _unaryExpression_in_multiplicativeExpression6396 = new BitSet(new ulong[]{0x2UL,0x500020000000UL});
+		public static readonly BitSet _set_in_multiplicativeExpression6423 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _unaryExpression_in_multiplicativeExpression6491 = new BitSet(new ulong[]{0x2UL,0x500020000000UL});
+		public static readonly BitSet _PLUS_in_unaryExpression6523 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _unaryExpression_in_unaryExpression6526 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SUB_in_unaryExpression6536 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _unaryExpression_in_unaryExpression6538 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _PLUSPLUS_in_unaryExpression6548 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _unaryExpression_in_unaryExpression6550 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SUBSUB_in_unaryExpression6560 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _unaryExpression_in_unaryExpression6562 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _unaryExpressionNotPlusMinus_in_unaryExpression6572 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _TILDE_in_unaryExpressionNotPlusMinus6591 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _unaryExpression_in_unaryExpressionNotPlusMinus6593 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _BANG_in_unaryExpressionNotPlusMinus6603 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _unaryExpression_in_unaryExpressionNotPlusMinus6605 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _castExpression_in_unaryExpressionNotPlusMinus6615 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _primary_in_unaryExpressionNotPlusMinus6625 = new BitSet(new ulong[]{0x800000002UL,0x20000200000800UL});
+		public static readonly BitSet _selector_in_unaryExpressionNotPlusMinus6636 = new BitSet(new ulong[]{0x800000002UL,0x20000200000800UL});
+		public static readonly BitSet _LPAREN_in_castExpression6705 = new BitSet(new ulong[]{0x20001002014000UL,0x80000002010UL});
+		public static readonly BitSet _primitiveType_in_castExpression6707 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
+		public static readonly BitSet _RPAREN_in_castExpression6709 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _unaryExpression_in_castExpression6711 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LPAREN_in_castExpression6721 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _type_in_castExpression6723 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
+		public static readonly BitSet _RPAREN_in_castExpression6725 = new BitSet(new ulong[]{0x8064003006014200UL,0xA44408000030E050UL,0x4UL});
+		public static readonly BitSet _unaryExpressionNotPlusMinus_in_castExpression6727 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _parExpression_in_primary6748 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _THIS_in_primary6770 = new BitSet(new ulong[]{0x800000002UL,0x8800UL});
+		public static readonly BitSet _DOT_in_primary6781 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_primary6783 = new BitSet(new ulong[]{0x800000002UL,0x8800UL});
+		public static readonly BitSet _identifierSuffix_in_primary6805 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IDENTIFIER_in_primary6826 = new BitSet(new ulong[]{0x800000002UL,0x8800UL});
+		public static readonly BitSet _DOT_in_primary6837 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_primary6839 = new BitSet(new ulong[]{0x800000002UL,0x8800UL});
+		public static readonly BitSet _identifierSuffix_in_primary6861 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SUPER_in_primary6882 = new BitSet(new ulong[]{0x800000000UL,0x8000UL});
+		public static readonly BitSet _superSuffix_in_primary6892 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _literal_in_primary6902 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _creator_in_primary6912 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _primitiveType_in_primary6922 = new BitSet(new ulong[]{0x800000000UL,0x800UL});
+		public static readonly BitSet _LBRACKET_in_primary6933 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_primary6935 = new BitSet(new ulong[]{0x800000000UL,0x800UL});
+		public static readonly BitSet _DOT_in_primary6956 = new BitSet(new ulong[]{0x8000000UL});
+		public static readonly BitSet _CLASS_in_primary6958 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _VOID_in_primary6968 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _DOT_in_primary6970 = new BitSet(new ulong[]{0x8000000UL});
+		public static readonly BitSet _CLASS_in_primary6972 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _arguments_in_superSuffix6991 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_superSuffix7001 = new BitSet(new ulong[]{0x8000000000000000UL,0x10000UL});
+		public static readonly BitSet _typeArguments_in_superSuffix7004 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_superSuffix7025 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _arguments_in_superSuffix7036 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACKET_in_identifierSuffix7067 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_identifierSuffix7069 = new BitSet(new ulong[]{0x800000000UL,0x800UL});
+		public static readonly BitSet _DOT_in_identifierSuffix7090 = new BitSet(new ulong[]{0x8000000UL});
+		public static readonly BitSet _CLASS_in_identifierSuffix7092 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACKET_in_identifierSuffix7103 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_identifierSuffix7105 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_identifierSuffix7107 = new BitSet(new ulong[]{0x2UL,0x800UL});
+		public static readonly BitSet _arguments_in_identifierSuffix7128 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_identifierSuffix7138 = new BitSet(new ulong[]{0x8000000UL});
+		public static readonly BitSet _CLASS_in_identifierSuffix7140 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_identifierSuffix7150 = new BitSet(new ulong[]{0x0UL,0x10000UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_identifierSuffix7152 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_identifierSuffix7154 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _arguments_in_identifierSuffix7156 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_identifierSuffix7166 = new BitSet(new ulong[]{0x0UL,0x400000000000000UL});
+		public static readonly BitSet _THIS_in_identifierSuffix7168 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_identifierSuffix7178 = new BitSet(new ulong[]{0x0UL,0x40000000000000UL});
+		public static readonly BitSet _SUPER_in_identifierSuffix7180 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _arguments_in_identifierSuffix7182 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _innerCreator_in_identifierSuffix7192 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_selector7211 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_selector7213 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _arguments_in_selector7215 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_selector7226 = new BitSet(new ulong[]{0x0UL,0x10000UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_selector7228 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_selector7230 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _arguments_in_selector7232 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_selector7243 = new BitSet(new ulong[]{0x0UL,0x400000000000000UL});
+		public static readonly BitSet _THIS_in_selector7245 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_selector7255 = new BitSet(new ulong[]{0x0UL,0x40000000000000UL});
+		public static readonly BitSet _SUPER_in_selector7257 = new BitSet(new ulong[]{0x800000000UL,0x8000UL});
+		public static readonly BitSet _superSuffix_in_selector7267 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _innerCreator_in_selector7277 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACKET_in_selector7287 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_selector7289 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_selector7291 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEW_in_creator7310 = new BitSet(new ulong[]{0x0UL,0x10000UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_creator7312 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_creator7314 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _classCreatorRest_in_creator7316 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEW_in_creator7326 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_creator7328 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _classCreatorRest_in_creator7330 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _arrayCreator_in_creator7340 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEW_in_arrayCreator7359 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _createdName_in_arrayCreator7361 = new BitSet(new ulong[]{0x0UL,0x800UL});
+		public static readonly BitSet _LBRACKET_in_arrayCreator7371 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_arrayCreator7373 = new BitSet(new ulong[]{0x0UL,0xC00UL});
+		public static readonly BitSet _LBRACKET_in_arrayCreator7384 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_arrayCreator7386 = new BitSet(new ulong[]{0x0UL,0xC00UL});
+		public static readonly BitSet _arrayInitializer_in_arrayCreator7407 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEW_in_arrayCreator7418 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _createdName_in_arrayCreator7420 = new BitSet(new ulong[]{0x0UL,0x800UL});
+		public static readonly BitSet _LBRACKET_in_arrayCreator7430 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_arrayCreator7432 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_arrayCreator7442 = new BitSet(new ulong[]{0x2UL,0x800UL});
+		public static readonly BitSet _LBRACKET_in_arrayCreator7456 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_arrayCreator7458 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_arrayCreator7472 = new BitSet(new ulong[]{0x2UL,0x800UL});
+		public static readonly BitSet _LBRACKET_in_arrayCreator7494 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_arrayCreator7496 = new BitSet(new ulong[]{0x2UL,0x800UL});
+		public static readonly BitSet _arrayInitializer_in_variableInitializer7526 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_in_variableInitializer7536 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACE_in_arrayInitializer7555 = new BitSet(new ulong[]{0x8064003026014200UL,0xA46C08428030E450UL,0x4UL});
+		public static readonly BitSet _variableInitializer_in_arrayInitializer7571 = new BitSet(new ulong[]{0x20000000UL,0x4000000000UL});
+		public static readonly BitSet _COMMA_in_arrayInitializer7590 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E450UL,0x4UL});
+		public static readonly BitSet _variableInitializer_in_arrayInitializer7592 = new BitSet(new ulong[]{0x20000000UL,0x4000000000UL});
+		public static readonly BitSet _COMMA_in_arrayInitializer7642 = new BitSet(new ulong[]{0x0UL,0x4000000000UL});
+		public static readonly BitSet _RBRACE_in_arrayInitializer7655 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_createdName7688 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _primitiveType_in_createdName7698 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_innerCreator7717 = new BitSet(new ulong[]{0x0UL,0x100000UL});
+		public static readonly BitSet _NEW_in_innerCreator7719 = new BitSet(new ulong[]{0x8000000000000000UL,0x10000UL});
+		public static readonly BitSet _nonWildcardTypeArgumentsOrDiamond_in_innerCreator7730 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_innerCreator7751 = new BitSet(new ulong[]{0x0UL,0x18000UL});
+		public static readonly BitSet _typeArguments_in_innerCreator7762 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _classCreatorRest_in_innerCreator7783 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _arguments_in_classCreatorRest7802 = new BitSet(new ulong[]{0x2UL,0x400UL});
+		public static readonly BitSet _classBody_in_classCreatorRest7813 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LT_in_nonWildcardTypeArguments7843 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _typeList_in_nonWildcardTypeArguments7845 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _GT_in_nonWildcardTypeArguments7847 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LT_in_typeArgumentsOrDiamond7866 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _GT_in_typeArgumentsOrDiamond7868 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _typeArguments_in_typeArgumentsOrDiamond7878 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LT_in_nonWildcardTypeArgumentsOrDiamond7897 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _GT_in_nonWildcardTypeArgumentsOrDiamond7899 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_nonWildcardTypeArgumentsOrDiamond7909 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LPAREN_in_arguments7929 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C0A028030E050UL,0x4UL});
+		public static readonly BitSet _expressionList_in_arguments7932 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
+		public static readonly BitSet _RPAREN_in_arguments7945 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _INTLITERAL_in_intLiteral7962 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LONGLITERAL_in_longLiteral7979 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _FLOATLITERAL_in_floatLiteral7996 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOUBLELITERAL_in_doubleLiteral8013 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _CHARLITERAL_in_charLiteral8030 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _STRINGLITERAL_in_stringLiteral8047 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _TRUE_in_trueLiteral8064 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _FALSE_in_falseLiteral8081 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NULL_in_nullLiteral8098 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _intLiteral_in_literal8118 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _longLiteral_in_literal8128 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _floatLiteral_in_literal8138 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _doubleLiteral_in_literal8148 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _charLiteral_in_literal8158 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _stringLiteral_in_literal8168 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _trueLiteral_in_literal8178 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _falseLiteral_in_literal8188 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _nullLiteral_in_literal8198 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_classHeader8222 = new BitSet(new ulong[]{0x8000000UL});
+		public static readonly BitSet _CLASS_in_classHeader8224 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_classHeader8226 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_enumHeader8246 = new BitSet(new ulong[]{0x8000100000000000UL});
+		public static readonly BitSet _set_in_enumHeader8248 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_enumHeader8254 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_interfaceHeader8274 = new BitSet(new ulong[]{0x0UL,0x20UL});
+		public static readonly BitSet _INTERFACE_in_interfaceHeader8276 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_interfaceHeader8278 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_annotationHeader8298 = new BitSet(new ulong[]{0x0UL,0x40000UL});
+		public static readonly BitSet _MONKEYS_AT_in_annotationHeader8300 = new BitSet(new ulong[]{0x0UL,0x20UL});
+		public static readonly BitSet _INTERFACE_in_annotationHeader8302 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_annotationHeader8304 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_typeHeader8324 = new BitSet(new ulong[]{0x100008000000UL,0x40020UL});
+		public static readonly BitSet _CLASS_in_typeHeader8327 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _ENUM_in_typeHeader8329 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _MONKEYS_AT_in_typeHeader8332 = new BitSet(new ulong[]{0x0UL,0x20UL});
+		public static readonly BitSet _INTERFACE_in_typeHeader8336 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_typeHeader8340 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_methodHeader8360 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000012010UL,0x4UL});
+		public static readonly BitSet _typeParameters_in_methodHeader8362 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL,0x4UL});
+		public static readonly BitSet _type_in_methodHeader8366 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _VOID_in_methodHeader8368 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_methodHeader8372 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _LPAREN_in_methodHeader8374 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_fieldHeader8394 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _type_in_fieldHeader8396 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_fieldHeader8398 = new BitSet(new ulong[]{0x200020000000UL,0x40000000800UL});
+		public static readonly BitSet _LBRACKET_in_fieldHeader8401 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_fieldHeader8402 = new BitSet(new ulong[]{0x200020000000UL,0x40000000800UL});
+		public static readonly BitSet _set_in_fieldHeader8406 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _variableModifiers_in_localVariableHeader8432 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _type_in_localVariableHeader8434 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_localVariableHeader8436 = new BitSet(new ulong[]{0x200020000000UL,0x40000000800UL});
+		public static readonly BitSet _LBRACKET_in_localVariableHeader8439 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_localVariableHeader8440 = new BitSet(new ulong[]{0x200020000000UL,0x40000000800UL});
+		public static readonly BitSet _set_in_localVariableHeader8444 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _annotations_in_synpred2_Java107 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
 		public static readonly BitSet _packageDeclaration_in_synpred2_Java136 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _classDeclaration_in_synpred12_Java494 = new BitSet(new ulong[]{0x2UL});
@@ -27136,74 +26796,59 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _annotationTypeDeclaration_in_synpred125_Java4080 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _localVariableDeclarationStatement_in_synpred128_Java4238 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _classOrInterfaceDeclaration_in_synpred129_Java4248 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ASSERT_in_synpred133_Java4389 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_synpred133_Java4409 = new BitSet(new ulong[]{0x10000000UL,0x40000000000UL});
-		public static readonly BitSet _COLON_in_synpred133_Java4412 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_synpred133_Java4414 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_synpred133_Java4418 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ASSERT_in_synpred135_Java4428 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_synpred135_Java4431 = new BitSet(new ulong[]{0x10000000UL,0x40000000000UL});
-		public static readonly BitSet _COLON_in_synpred135_Java4434 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_synpred135_Java4436 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_synpred135_Java4440 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ELSE_in_synpred136_Java4469 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
-		public static readonly BitSet _statement_in_synpred136_Java4471 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_synpred151_Java4693 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_synpred151_Java4696 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENTIFIER_in_synpred152_Java4711 = new BitSet(new ulong[]{0x10000000UL});
-		public static readonly BitSet _COLON_in_synpred152_Java4713 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
-		public static readonly BitSet _statement_in_synpred152_Java4715 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _catches_in_synpred156_Java4871 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _FINALLY_in_synpred156_Java4873 = new BitSet(new ulong[]{0x0UL,0x400UL});
-		public static readonly BitSet _block_in_synpred156_Java4875 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _catches_in_synpred157_Java4889 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _variableModifiers_in_synpred161_Java5025 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _catchType_in_synpred161_Java5027 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_synpred161_Java5029 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_synpred161_Java5040 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_synpred161_Java5042 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _variableModifiers_in_synpred168_Java5243 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _FOR_in_synpred170_Java5298 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _LPAREN_in_synpred170_Java5300 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
-		public static readonly BitSet _variableModifiers_in_synpred170_Java5302 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_synpred170_Java5304 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_synpred170_Java5306 = new BitSet(new ulong[]{0x10000000UL});
-		public static readonly BitSet _COLON_in_synpred170_Java5308 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_synpred170_Java5319 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_synpred170_Java5321 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
-		public static readonly BitSet _statement_in_synpred170_Java5323 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _localVariableDeclaration_in_synpred174_Java5502 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _castExpression_in_synpred215_Java6730 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LPAREN_in_synpred219_Java6820 = new BitSet(new ulong[]{0x20001002014000UL,0x80000002010UL});
-		public static readonly BitSet _primitiveType_in_synpred219_Java6822 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_synpred219_Java6824 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _unaryExpression_in_synpred219_Java6826 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_synpred221_Java6896 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_synpred221_Java6898 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _identifierSuffix_in_synpred222_Java6920 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_synpred224_Java6952 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_synpred224_Java6954 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _identifierSuffix_in_synpred225_Java6976 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACKET_in_synpred237_Java7218 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_synpred237_Java7220 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_synpred237_Java7222 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEW_in_synpred250_Java7425 = new BitSet(new ulong[]{0x0UL,0x10000UL});
-		public static readonly BitSet _nonWildcardTypeArguments_in_synpred250_Java7427 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_synpred250_Java7429 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _classCreatorRest_in_synpred250_Java7431 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEW_in_synpred251_Java7441 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_synpred251_Java7443 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _classCreatorRest_in_synpred251_Java7445 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEW_in_synpred253_Java7474 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _createdName_in_synpred253_Java7476 = new BitSet(new ulong[]{0x0UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_synpred253_Java7486 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_synpred253_Java7488 = new BitSet(new ulong[]{0x0UL,0xC00UL});
-		public static readonly BitSet _LBRACKET_in_synpred253_Java7499 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_synpred253_Java7501 = new BitSet(new ulong[]{0x0UL,0xC00UL});
-		public static readonly BitSet _arrayInitializer_in_synpred253_Java7522 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACKET_in_synpred254_Java7571 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_synpred254_Java7573 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_synpred254_Java7587 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ELSE_in_synpred135_Java4421 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
+		public static readonly BitSet _statement_in_synpred135_Java4423 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _catches_in_synpred155_Java4766 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _FINALLY_in_synpred155_Java4768 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _block_in_synpred155_Java4770 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _catches_in_synpred156_Java4784 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _variableModifiers_in_synpred159_Java4910 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _catchType_in_synpred159_Java4912 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_synpred159_Java4914 = new BitSet(new ulong[]{0x2UL,0x800UL});
+		public static readonly BitSet _LBRACKET_in_synpred159_Java4925 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_synpred159_Java4927 = new BitSet(new ulong[]{0x2UL,0x800UL});
+		public static readonly BitSet _variableModifiers_in_synpred166_Java5128 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _FOR_in_synpred168_Java5183 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _LPAREN_in_synpred168_Java5185 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
+		public static readonly BitSet _variableModifiers_in_synpred168_Java5187 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _type_in_synpred168_Java5189 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_synpred168_Java5191 = new BitSet(new ulong[]{0x10000000UL});
+		public static readonly BitSet _COLON_in_synpred168_Java5193 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_synpred168_Java5204 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
+		public static readonly BitSet _RPAREN_in_synpred168_Java5206 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
+		public static readonly BitSet _statement_in_synpred168_Java5208 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _localVariableDeclaration_in_synpred172_Java5387 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _castExpression_in_synpred213_Java6615 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LPAREN_in_synpred217_Java6705 = new BitSet(new ulong[]{0x20001002014000UL,0x80000002010UL});
+		public static readonly BitSet _primitiveType_in_synpred217_Java6707 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
+		public static readonly BitSet _RPAREN_in_synpred217_Java6709 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _unaryExpression_in_synpred217_Java6711 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_synpred219_Java6781 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_synpred219_Java6783 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _identifierSuffix_in_synpred220_Java6805 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOT_in_synpred222_Java6837 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_synpred222_Java6839 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _identifierSuffix_in_synpred223_Java6861 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACKET_in_synpred235_Java7103 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_synpred235_Java7105 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_synpred235_Java7107 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEW_in_synpred248_Java7310 = new BitSet(new ulong[]{0x0UL,0x10000UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_synpred248_Java7312 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_synpred248_Java7314 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _classCreatorRest_in_synpred248_Java7316 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEW_in_synpred249_Java7326 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_synpred249_Java7328 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _classCreatorRest_in_synpred249_Java7330 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEW_in_synpred251_Java7359 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _createdName_in_synpred251_Java7361 = new BitSet(new ulong[]{0x0UL,0x800UL});
+		public static readonly BitSet _LBRACKET_in_synpred251_Java7371 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_synpred251_Java7373 = new BitSet(new ulong[]{0x0UL,0xC00UL});
+		public static readonly BitSet _LBRACKET_in_synpred251_Java7384 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_synpred251_Java7386 = new BitSet(new ulong[]{0x0UL,0xC00UL});
+		public static readonly BitSet _arrayInitializer_in_synpred251_Java7407 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LBRACKET_in_synpred252_Java7456 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_synpred252_Java7458 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _RBRACKET_in_synpred252_Java7472 = new BitSet(new ulong[]{0x2UL});
 	}
 	#endregion Follow sets
 }
