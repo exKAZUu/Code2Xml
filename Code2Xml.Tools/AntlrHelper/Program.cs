@@ -19,14 +19,28 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
+using System.Reflection;
 
 namespace Code2Xml.Tools.AntlrHelper {
 	internal class Program {
 		private static void Main(string[] args) {
-			args = new [] {@"C:\Users\exKAZUu\Projects\Code2Xml\Code2Xml.Languages\ANTLRv3\Processors"};
 			if (args.Length == 0) {
-				Console.WriteLine("Please enter the path of the input directory");
-				args = new[] { Console.In.ReadLine() };
+				Console.WriteLine("Find 'Code2Xml.Languages' directory due to no arguments.");
+				var dir = new FileInfo(Assembly.GetEntryAssembly().Location).Directory;
+				while (true) {
+					var dirs = dir.GetDirectories("Code2Xml.Languages", SearchOption.AllDirectories);
+					if (dirs.Length > 0) {
+						args = new[] { dirs[0].FullName };
+						break;
+					}
+					dir = dir.Parent;
+					if (dir == null) {
+						Console.WriteLine("Can't find 'Code2Xml.Languages' directory.");
+						args = new[] { Console.In.ReadLine() };
+						break;
+					}
+				}
 			}
 			foreach (var arg in args) {
 				var path = Path.GetFullPath(arg);
@@ -40,11 +54,12 @@ namespace Code2Xml.Tools.AntlrHelper {
 						UseShellExecute = false,
 						WorkingDirectory = Path.GetDirectoryName(file),
 					};
-					using (var p = Process.Start(info)) {
-						p.WaitForExit();
-					}
+					using (var p = Process.Start(info)) p.WaitForExit();
 				}
-				foreach (var file in Directory.GetFiles(dir, "*.cs", SearchOption.AllDirectories)) {
+				var csFiles = Directory.GetFiles(dir, "*.g", SearchOption.AllDirectories)
+						.Select(Path.GetDirectoryName)
+						.SelectMany(d => Directory.GetFiles(d, "*.cs", SearchOption.AllDirectories));
+				foreach (var file in csFiles) {
 					if (file.EndsWith("Parser.cs")) {
 						Console.WriteLine(file);
 						ParserModifier.Modify(file);
