@@ -11,7 +11,7 @@ options {
 
 @lexer::header {
 using System;
-using Debug = System.Diagnostics.Debug;
+using System.Diagnostics;
 }
 
 @lexer::members {
@@ -21,6 +21,21 @@ using Debug = System.Diagnostics.Debug;
 
 	// Uggh, lexer rules don't return values, so use a stack to return values.
 	protected Stack<bool> Returns = new Stack<bool>();
+
+	private readonly Queue<IToken> _tokens = new Queue<IToken>();
+
+	public override void Emit(IToken token) {
+		state.token = token;
+		_tokens.Enqueue(token);
+	}
+
+	public override IToken NextToken() {
+		base.NextToken();
+		if (_tokens.Count > 0) {
+			return _tokens.Dequeue();
+		}
+		return GetEndOfFileToken();
+	}
 }
 
 @members
@@ -248,12 +263,10 @@ object_creation_expression:
 		  | object_or_collection_initializer )
 	;
 object_or_collection_initializer: 
-	'{'  (object_initializer 
-		| collection_initializer) ;
+	'{' (object_initializer | collection_initializer)? '}'
+	;
 collection_initializer: 
-	element_initializer_list   ','?   '}' ;
-element_initializer_list: 
-	element_initializer  (',' element_initializer)* ;
+	element_initializer  (',' element_initializer)* ','?;
 element_initializer: 
 	non_assignment_expression 
 	| '{'   expression_list   '}' ;
@@ -264,11 +277,9 @@ element_initializer:
 //	};
 // TODO: comma should only follow a member_initializer_list
 object_initializer: 
-	member_initializer_list?   ','?   '}' ;
-member_initializer_list: 
-	member_initializer  (',' member_initializer) ;
+	member_initializer  (',' member_initializer)* ','?;
 member_initializer: 
-	identifier   '='   initializer_value ;
+	identifier '=' initializer_value;
 initializer_value: 
 	expression 
 	| object_or_collection_initializer ;
@@ -1116,7 +1127,7 @@ GooBall
 	Emit(int_literal); 
 	Emit(dot); 
 	Emit(iden); 
-	Console.Error.WriteLine("\tFound GooBall {0}", $text); 
+	Debug.WriteLine("\tFound GooBall {0}", $text); 
 }
 	:
 	dil = Decimal_integer_literal d = '.' s=GooBallIdentifier

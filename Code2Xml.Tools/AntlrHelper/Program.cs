@@ -45,18 +45,19 @@ namespace Code2Xml.Tools.AntlrHelper {
 			foreach (var arg in args) {
 				var path = Path.GetFullPath(arg);
 				var dir = Directory.Exists(path) ? path : Path.GetDirectoryName(path);
-				foreach (var file in Directory.GetFiles(dir, "*.g", SearchOption.AllDirectories)) {
-					Console.WriteLine(file);
+				var grammarFiles = Directory.GetFiles(dir, "cs.g", SearchOption.AllDirectories);
+				foreach (var grammarFile in grammarFiles) {
+					Console.WriteLine(grammarFile);
 					var info = new ProcessStartInfo {
 						FileName = "Antlr3",
-						Arguments = '"' + file + '"',
+						Arguments = '"' + grammarFile + '"',
 						CreateNoWindow = true,
 						UseShellExecute = false,
-						WorkingDirectory = Path.GetDirectoryName(file),
+						WorkingDirectory = Path.GetDirectoryName(grammarFile),
 					};
 					using (var p = Process.Start(info)) p.WaitForExit();
 				}
-				var csFiles = Directory.GetFiles(dir, "*.g", SearchOption.AllDirectories)
+				var csFiles = grammarFiles
 						.Select(Path.GetDirectoryName)
 						.SelectMany(d => Directory.GetFiles(d, "*.cs", SearchOption.AllDirectories));
 				foreach (var file in csFiles) {

@@ -123,7 +123,16 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 					new Antlr3AstBuilder(tokenStream, parser.TokenNames);
 			parser.TraceDestination = Console.Error;
 			parser.TreeAdaptor = builder;
+			var tokens = tokenStream.GetTokens();
+			foreach (var token in tokens) {
+				Console.WriteLine(token);
+			}
 			var root = Parse(parser);
+			Console.WriteLine("-----------------------------------------");
+			tokens = tokenStream.GetTokens();
+			foreach (var token in tokens) {
+				Console.WriteLine(token);
+			}
 			return builder.FinishParsing(root.Element);
 		}
 
