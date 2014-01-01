@@ -16,6 +16,7 @@
 
 #endregion
 
+using System.Linq;
 using Code2Xml.Core;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.ANTLRv3.Processors.CSharp;
@@ -29,22 +30,46 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
 		}
 
 		[Test]
-//		[TestCase(@"class Klass { void main() {} }")]
-//		[TestCase(@"class Klass {
-//#	define DEBUG
-//#	region
-//# if DEBUG
-//void main() { /* comment */ } // comment2
-//# endif
-//# 	 undef DEBUG
-//#	endregion
-//}")]
-//		[TestCase(@"class Klass { void main() {
-//	for (int i = 1; i < 2; i++) Console.WriteLine();
-//} }")]
+		[TestCase(@"class Klass { void main() {} }")]
+		[TestCase(@"class Klass {
+#	define DEBUG
+#	region
+# if DEBUG
+void main() { /* comment */ } // comment2
+# else
+xxxxx
+# endif
+# 	 undef DEBUG
+#	endregion
+}")]
+		[TestCase(@"class Klass { void main() {
+	for (int i = 1; i < 2; i++) Console.WriteLine();
+} }")]
 		[TestCase(@"class Klass { void main() { 1.ToString(); } }")]
+		[TestCase(@"class Klass { void main() {
+			var a = from method in new[] { 123.ToString() }
+				group method by method.Length
+				into overloads
+				let oload = (from overload in overloads
+					orderby overload.Length
+					select overload).FirstOrDefault()
+				orderby oload.Length
+				select oload;
+} }")]
+		[TestCase(@"class Klass {
+        Object s = new HashSet<int>(s.s) {};
+}")]
 		public void Parse(string code) {
 			VerifyRestoringCode(code);
+		}
+
+		public void Test() {
+			var code = @"class Klass {
+        Object s = new HashSet<int>(s.s + 1) {};
+}";
+            var processor = CreateProcessor();
+            var xml = processor.GenerateXml(code, true);
+			Assert.That(xml.Descendants("argument_list").Count(), Is.EqualTo(1));
 		}
 
 		[Test]

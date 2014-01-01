@@ -10,7 +10,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g 2013-12-30 14:08:16
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g 2013-12-31 22:55:10
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219

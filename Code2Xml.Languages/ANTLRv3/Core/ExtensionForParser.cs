@@ -72,7 +72,7 @@ namespace Code2Xml.Languages.ANTLRv3.Core {
 		}
 
 		public static char charAt(this string str, int index) {
-			return str.charAt(index);
+			return str[index];
 		}
 
 		public static bool endsWith(this string str, string other) {

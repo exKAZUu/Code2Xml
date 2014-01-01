@@ -14,30 +14,6 @@ using System;
 using System.Diagnostics;
 }
 
-@lexer::members {
-	// Preprocessor Data Structures - see lexer section below and PreProcessor.cs
-	protected Dictionary<string,string> MacroDefines = new Dictionary<string,string>();	
-	protected Stack<bool> Processing = new Stack<bool>();
-
-	// Uggh, lexer rules don't return values, so use a stack to return values.
-	protected Stack<bool> Returns = new Stack<bool>();
-
-	private readonly Queue<IToken> _tokens = new Queue<IToken>();
-
-	public override void Emit(IToken token) {
-		state.token = token;
-		_tokens.Enqueue(token);
-	}
-
-	public override IToken NextToken() {
-		base.NextToken();
-		if (_tokens.Count > 0) {
-			return _tokens.Dequeue();
-		}
-		return GetEndOfFileToken();
-	}
-}
-
 @members
 {
 	protected bool is_class_modifier() 
@@ -131,10 +107,10 @@ primary_expression:
 	| primary_expression_start   primary_expression_part*
 	| 'new' (   (object_creation_expression   ('.'|'->'|'[')) => 
 					object_creation_expression   primary_expression_part+ 		// new Foo(arg, arg).Member
+				| object_creation_expression
 				// try the simple one first, this has no argS and no expressions
 				// symantically could be object creation
-				| (delegate_creation_expression) => delegate_creation_expression// new FooDelegate (MyFunction)
-				| object_creation_expression
+				// | delegate_creation_expression									// new FooDelegate (MyFunction)
 				| anonymous_object_creation_expression)							// new {int X, string Y} 
 	| sizeof_expression						// sizeof (struct)
 	| checked_expression            		// checked (...
@@ -318,9 +294,9 @@ commas:
 type_name: 
 	namespace_or_type_name ;
 namespace_or_type_name:
-	 type_or_generic   ('::' type_or_generic)? ('.'   type_or_generic)* ;
+	 type_or_generic ('::' type_or_generic)? ('.' type_or_generic)* ;
 type_or_generic:
-	(identifier '<' type_arguments '>') => identifier generic_argument_list
+	(identifier generic_argument_list) => identifier generic_argument_list
 	| identifier ;
 
 qid:		// qualified_identifier v2
@@ -339,15 +315,13 @@ qid_start:
 qid_part:
 	access_identifier ;
 
-generic_argument_list: 
+generic_argument_list:
 	'<' type_arguments '>' ;
 type_arguments: 
 	type (',' type)* ;
 
 type:
-	  ((predefined_type | type_name)  rank_specifiers) => (predefined_type | type_name)   rank_specifiers   '*'*
-	| ((predefined_type | type_name)  ('*'+ | '?')) => (predefined_type | type_name)   ('*'+ | '?')
-	| (predefined_type | type_name)
+	  (predefined_type | type_name) ('*'+ | '?')? rank_specifiers?
 	| 'void' '*'+
 	;
 non_nullable_type:
@@ -421,7 +395,7 @@ addressof_expression:
 
 non_assignment_expression:
 	//'non ASSIGNment'
-	(anonymous_function_signature   '=>')	=> lambda_expression
+	('async'? anonymous_function_signature '=>')	=> lambda_expression
 	| (query_expression) => query_expression 
 	| conditional_expression
 	;
@@ -508,7 +482,7 @@ orderby_clause:
 ordering_list:
 	ordering   (','   ordering)* ;
 ordering:
-	expression    ordering_direction
+	expression    ordering_direction?
 	;
 ordering_direction:
 	'ascending'
@@ -1170,29 +1144,71 @@ PP_CONDITIONAL:
 fragment
 IF_TOKEN
 	@init { bool process = true; }:
-	('#'   TS*  'if'   TS+   ppe = PP_EXPRESSION)
+	('#'   TS*  'if'   TS+   PP_EXPRESSION)
+		{
+			// if our parent is processing check this if
+			Debug.Assert(Processing.Count > 0, "Stack underflow preprocessing.  IF_TOKEN");
+			if (Processing.Count > 0 && Processing.Peek())
+				Processing.Push(Returns.Pop());
+			else
+				Processing.Push(false);
+		}
 	;
 fragment
 DEFINE_TOKEN:
 	'#'   TS*   'define'   TS+   define = IDENTIFIER
 	{
-		MacroDefines.Add($define.Text, "");
+		MacroDefines.Add($define.Text);
 	} ;
 fragment
 UNDEF_TOKEN:
 	'#'   TS*   'undef'   TS+   define = IDENTIFIER
 	{
-		if (MacroDefines.ContainsKey($define.Text))
+		if (MacroDefines.Contains($define.Text))
 			MacroDefines.Remove($define.Text);
 	} ;
 fragment
 ELSE_TOKEN:
-	( '#'   TS*   'else'
+	( '#'   TS*   e = 'else'
 	| '#'   TS*   'elif'   TS+   PP_EXPRESSION)
+	{
+		// We are in an elif
+       	if ($e == null) {
+		    Debug.Assert(Processing.Count > 0, "Stack underflow preprocessing.  ELIF_TOKEN");
+			if (Processing.Count > 0 && !Processing.Peek()) {
+				Processing.Pop();
+				// if our parent was processing, do else logic
+			    Debug.Assert(Processing.Count > 0, "Stack underflow preprocessing.  ELIF_TOKEN2");
+				if (Processing.Count > 0 && Processing.Peek())
+					Processing.Push(Returns.Pop());
+				else
+					Processing.Push(false);
+			} else {
+				Processing.Pop();
+				Processing.Push(false);
+			}
+		} else {
+			// we are in a else
+			if (Processing.Count > 0) {
+				bool bDoElse = !Processing.Pop();
+
+				// if our parent was processing				
+			    Debug.Assert(Processing.Count > 0, "Stack underflow preprocessing, ELSE_TOKEN");
+				if (Processing.Count > 0 && Processing.Peek())
+					Processing.Push(bDoElse);
+				else
+					Processing.Push(false);
+			}
+		}
+	}
 	;
 fragment
 ENDIF_TOKEN:
 	'#' TS* 'endif'
+	{
+		if (Processing.Count > 0)
+			Processing.Pop();
+	}
 	;
 	
 fragment
@@ -1200,21 +1216,46 @@ PP_EXPRESSION:
 	PP_OR_EXPRESSION;
 fragment
 PP_OR_EXPRESSION:
-	PP_AND_EXPRESSION   TS*   ('||'   TS*   PP_AND_EXPRESSION   TS* )* ;
+	PP_AND_EXPRESSION		TS*		('||'				TS* PP_AND_EXPRESSION
+		{
+			bool rt1 = Returns.Pop(), rt2 = Returns.Pop();
+			Returns.Push(rt1 || rt2);
+		}
+		TS* )*
+	;
 fragment
 PP_AND_EXPRESSION:
-	PP_EQUALITY_EXPRESSION   TS*   ('&&'   TS*   PP_EQUALITY_EXPRESSION   TS* )* ;
+	PP_EQUALITY_EXPRESSION	TS*		('&&'				TS* PP_EQUALITY_EXPRESSION
+		{
+			bool rt1 = Returns.Pop(), rt2 = Returns.Pop();
+			Returns.Push(rt1 && rt2);
+		}
+		TS* )*
+	;
 fragment
 PP_EQUALITY_EXPRESSION:
-	PP_UNARY_EXPRESSION   TS*   (('==' | '!=')   TS*   PP_UNARY_EXPRESSION TS* )* ;
+	PP_UNARY_EXPRESSION		TS*		(('=='| ne = '!=')	TS* PP_UNARY_EXPRESSION
+		{
+			bool rt1 = Returns.Pop(), rt2 = Returns.Pop();
+			Returns.Push(rt1 == rt2 == ($ne == null));
+		}
+		TS* )*
+	;
+
 fragment
 PP_UNARY_EXPRESSION:
 	PP_PRIMARY_EXPRESSION
-	| '!'   TS*   PP_UNARY_EXPRESSION
+	| '!' TS* PP_UNARY_EXPRESSION
+		{
+			Returns.Push(!Returns.Pop());
+		}
 	;
 fragment
 PP_PRIMARY_EXPRESSION:
 	IDENTIFIER	
+		{ 
+			Returns.Push(MacroDefines.Contains($IDENTIFIER.Text));
+		}
 	| '('   PP_EXPRESSION   ')'
 	;
 

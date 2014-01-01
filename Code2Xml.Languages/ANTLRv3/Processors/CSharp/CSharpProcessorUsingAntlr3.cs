@@ -44,7 +44,7 @@ namespace Code2Xml.Languages.ANTLRv3.Processors.CSharp {
         public CSharpProcessorUsingAntlr3() : base(".cs") {}
 
         protected override ITokenSource CreateLexer(ICharStream stream) {
-            return new csLexer(stream);
+            return new csLexerWithPreProcessor(stream);
         }
 
         protected override csParser CreateParser(ITokenStream stream) {

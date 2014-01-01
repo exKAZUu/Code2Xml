@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CSharp.cs" />
+    <Compile Include="CSharpLexer.cs" />
+    <Compile Include="CSharpParser.cs" />
+    <Compile Include="PhpLexer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

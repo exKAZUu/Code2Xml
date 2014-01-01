@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 
 namespace Code2Xml.Tools.AntlrGrammarConverter {
-	public class CSharp {
+	public class CSharpParser {
 		private bool _isParserSection;
 		private bool _isOneOf;
 		private readonly HashSet<string> _lexerDict;
 
-		public CSharp() {
+		public CSharpParser() {
 			_isParserSection = false;
 			_isOneOf = false;
 			_lexerDict = new HashSet<string>();

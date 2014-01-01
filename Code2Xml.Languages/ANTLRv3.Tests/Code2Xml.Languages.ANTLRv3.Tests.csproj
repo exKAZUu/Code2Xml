@@ -58,6 +58,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestProcessorTest.cs" />
+    <Compile Include="PhpProcessorTest.cs" />
     <Compile Include="JavaScriptProcessorTest.cs" />
     <Compile Include="CSharpProcessorTest.cs" />
     <Compile Include="JavaProcessorTest.cs" />
