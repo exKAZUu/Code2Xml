@@ -105,13 +105,15 @@ primary_expression:
 	('this'    brackets) => 'this'   brackets   primary_expression_part*
 	| ('base'   brackets) => 'this'   brackets   primary_expression_part*
 	| primary_expression_start   primary_expression_part*
-	| 'new' (   (object_creation_expression   ('.'|'->'|'[')) => 
-					object_creation_expression   primary_expression_part+ 		// new Foo(arg, arg).Member
+	| 'new' (     (object_creation_expression ('.'|'->'|'[')) => 
+					object_creation_expression primary_expression_part+ 			// new Foo(arg, arg).Member
 				| object_creation_expression
 				// try the simple one first, this has no argS and no expressions
 				// symantically could be object creation
 				// | delegate_creation_expression									// new FooDelegate (MyFunction)
-				| anonymous_object_creation_expression)							// new {int X, string Y} 
+				| (anonymous_object_creation_expression ('.'|'->'|'[')) => 
+					anonymous_object_creation_expression primary_expression_part+	// new { X }.X
+				| anonymous_object_creation_expression)								// new {int X, string Y} 
 	| sizeof_expression						// sizeof (struct)
 	| checked_expression            		// checked (...
 	| unchecked_expression          		// unchecked {...}
@@ -165,8 +167,6 @@ ref_variable_reference:
 // lvalue
 variable_reference:
 	expression;
-rank_specifiers: 
-	rank_specifier+ ;        
 rank_specifier: 
 	'['   dim_separators?   ']' ;
 dim_separators: 
@@ -179,13 +179,13 @@ anonymous_object_creation_expression:
 	// 'new'
 	anonymous_object_initializer ;
 anonymous_object_initializer: 
-	'{'   member_declarator_list?   ','?   '}';
+	'{' member_declarator_list? '}';
 member_declarator_list: 
-	member_declarator  (',' member_declarator)* ; 
+	member_declarator (',' member_declarator)* ','?; 
 member_declarator: 
 	identifier   (generic_argument_list
 				 | ('.'   primary_or_array_creation_expression)
-				 | '='   expression) ;
+				 | '='   expression)? ;
 primary_or_array_creation_expression:
 	(array_creation_expression) => array_creation_expression
 	| primary_expression 
@@ -193,22 +193,22 @@ primary_or_array_creation_expression:
 // new Type[2] { }
 array_creation_expression:
 	'new'   
-		(type   ('['   expression_list   ']'   
-					( rank_specifiers?   array_initializer?	// new int[4]
-					// | invocation_part*
-					| ( ((arguments   ('['|'.'|'->')) => arguments   invocation_part)// new object[2].GetEnumerator()
-					  | invocation_part)*   arguments
-					)							// new int[4]()
-				| array_initializer		
-				)
-		| rank_specifier   // [,]
-			(array_initializer	// var a = new[] { 1, 10, 100, 1000 }; // int[]
-		    )
-		) ;
+		( (non_array_type '[' expression) =>
+			non_array_type '[' expression_list ']'
+			((rank_specifier) => rank_specifier)*
+			array_initializer?
+		| type array_initializer 				// var a = new int[][] { };
+		| rank_specifier array_initializer 		// var a = new [] { 1 };
+		) (invocation_part+ arguments)?;		// new object[2].GetEnumerator()
+		/*
+		new   non-array-type   [   expression-list   ]   rank-specifiersopt   array-initializeropt
+new   array-type   array-initializer 
+new   rank-specifier   array-initializer
+*/
 array_initializer:
-	'{'   variable_initializer_list?   ','?   '}' ;
+	'{' variable_initializer_list? '}' ;
 variable_initializer_list:
-	variable_initializer (',' variable_initializer)* ;
+	variable_initializer (',' variable_initializer)* ','?;
 variable_initializer:
 	expression	| array_initializer ;
 sizeof_expression:
@@ -321,18 +321,19 @@ type_arguments:
 	type (',' type)* ;
 
 type:
-	  (predefined_type | type_name) ('*'+ | '?')? rank_specifiers?
-	| 'void' '*'+
+	non_array_type rank_specifier*
 	;
 non_nullable_type:
 	(predefined_type | type_name)
-		(   rank_specifiers   '*'*
+		(   rank_specifier+   '*'*
 			| ('*'+)?
 		)
 	| 'void'   '*'+ ;
 	
 non_array_type:
-	type;
+	  (predefined_type | type_name) ('*'+ | '?')?
+	| 'void' '*'+
+	;
 array_type:
 	type;
 unmanaged_type:
@@ -526,19 +527,20 @@ attribute:
 	type_name   attribute_arguments? ;
 // TODO:  allows a mix of named/positional arguments in any order
 attribute_arguments: 
-	'('   (')'										// empty
-		   | (positional_argument   ((','   identifier   '=') => named_argument
-		   							 |','	positional_argument)*
-			  )	')'
-			) ;
+	'('
+		(
+			  (identifier '=') => named_argument_list
+			| positional_argument_list
+		)?
+	')';
 positional_argument_list: 
-	positional_argument (',' positional_argument)* ;
-positional_argument: 
-	attribute_argument_expression ;
+	positional_argument (',' ((identifier '=') => named_argument_list | positional_argument_list))?;
 named_argument_list: 
-	named_argument (',' named_argument)* ;
+	named_argument (',' named_argument_list)?;
+positional_argument: 
+	((identifier ':') => identifier ':')? attribute_argument_expression ;
 named_argument: 
-	identifier   '='   attribute_argument_expression ;
+	identifier '=' attribute_argument_expression ;
 attribute_argument_expression: 
 	expression ;
 
@@ -658,7 +660,7 @@ variance_annotation:
 	'in' | 'out' ;
 
 type_parameter_constraints_clauses:
-	type_parameter_constraints_clause   (','   type_parameter_constraints_clause)* ;
+	type_parameter_constraints_clause+ ;
 type_parameter_constraints_clause:
 	'where'   type_variable_name   ':'   type_parameter_constraint_list ;
 // class, Circle, new()
@@ -1062,7 +1064,7 @@ SEMI: ';';
 RPAREN: ')';
 
 WS:
-    (' '  |  '\r'  |  '\t'  |  '\n'  ) 
+    (' '  |  '\r'  |  '\t'  |  '\n'  |  '\uFEFF'  )		// C# code sometimes contains duplicated BOMs
     { $channel=HIDDEN; } ;
 fragment
 TS:
@@ -1070,10 +1072,10 @@ TS:
     ;
         
 DOC_LINE_COMMENT
-    : 	('///' ~('\n'|'\r')*  ('\r' | '\n')+)
+    : '///' ~('\n'|'\r')*  (('\r'|'\n')+ | EOF)
     { $channel=HIDDEN; } ;
 LINE_COMMENT
-    :	('//' ~('\n'|'\r')*  ('\r' | '\n')+)
+    : '//' ~('\n'|'\r')*  (('\r'|'\n')+ | EOF)
     { $channel=HIDDEN; } ;
 COMMENT:
    '/*'

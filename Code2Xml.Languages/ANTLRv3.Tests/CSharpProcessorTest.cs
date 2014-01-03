@@ -16,7 +16,6 @@
 
 #endregion
 
-using System.Linq;
 using Code2Xml.Core;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.ANTLRv3.Processors.CSharp;
@@ -30,23 +29,23 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
 		}
 
 		[Test]
-		[TestCase(@"class Klass { void main() {} }")]
-		[TestCase(@"class Klass {
+		[TestCase(@"class K { void m() {} }")]
+		[TestCase(@"class K {
 #	define DEBUG
 #	region
 # if DEBUG
-void main() { /* comment */ } // comment2
+void m() { /* comment */ } // comment2
 # else
 xxxxx
 # endif
 # 	 undef DEBUG
 #	endregion
 }")]
-		[TestCase(@"class Klass { void main() {
+		[TestCase(@"class K { void m() {
 	for (int i = 1; i < 2; i++) Console.WriteLine();
 } }")]
-		[TestCase(@"class Klass { void main() { 1.ToString(); } }")]
-		[TestCase(@"class Klass { void main() {
+		[TestCase(@"class K { void m() { 1.ToString(); } }")]
+		[TestCase(@"class K { void m() {
 			var a = from method in new[] { 123.ToString() }
 				group method by method.Length
 				into overloads
@@ -56,20 +55,23 @@ xxxxx
 				orderby oload.Length
 				select oload;
 } }")]
-		[TestCase(@"class Klass {
-        Object s = new HashSet<int>(s.s) {};
-}")]
+		[TestCase(@"class K { Object s = new HashSet<int>(s.s) {}; }")]
+		[TestCase(@"class K { void m() { var o = new { args }; }; }")]
+		[TestCase(@"[Attr(XX.YY, XX.ZZ, prop: true)] class K {}")]
+		[TestCase(@"//x")]
+		[TestCase(@"class K { void m() {
+			var items = new[] { new L() { Text = emptyItemText, Value = 1 }.m(), }.m(); } }")]
+		[TestCase(@"class K { void m() {
+			var items = new[] { new L() { Text = emptyItemText, Value = 1, }.m() }.m(); } }")]
+		[TestCase(@"class K { void m() {
+			var items = new[] { new L() { Text = emptyItemText, Value = 1, }.m(), }.m(); } }")]
+		[TestCase(@"class K { void m() { new object[2].GetEnumerator(); } }")]
+		[TestCase(@"class K { void m() { var a = new int[][,] {  }; } }")]
+		[TestCase(@"class K { void m() { var a = new []{ 1 }.GetEnumerator(); } }")]
+		[TestCase(@"class K { void m() { new Action[]{ }[0](); } }")]
+		[TestCase(@"class K { void m() { var a = new Action[]{ }[0]; } }")]
 		public void Parse(string code) {
 			VerifyRestoringCode(code);
-		}
-
-		public void Test() {
-			var code = @"class Klass {
-        Object s = new HashSet<int>(s.s + 1) {};
-}";
-            var processor = CreateProcessor();
-            var xml = processor.GenerateXml(code, true);
-			Assert.That(xml.Descendants("argument_list").Count(), Is.EqualTo(1));
 		}
 
 		[Test]
@@ -77,6 +79,13 @@ xxxxx
 		[TestCase("Block2.cs")]
 		public void ParseFile(string fileName) {
 			VerifyRestoringFile("CSharp", fileName);
+		}
+
+		[Test]
+		[TestCase("NuGetGallery")]
+		[TestCase("SignalR")]
+		public void ParseDirectory(string fileName) {
+			VerifyRestoringProjectDirectory("CSharp", fileName, "*.cs");
 		}
 	}
 }
