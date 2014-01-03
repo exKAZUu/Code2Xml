@@ -1,3 +1,4 @@
+// This grammar is derived from https://code.google.com/p/phpparser/
 //Todo: Labels and goto have been disabled, need to test on 5.3 
 
 grammar Php;
