@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LuaProcessorUsingAntlr3Test.cs" />
     <Compile Include="TestProcessorTest.cs" />
     <Compile Include="PhpProcessorTest.cs" />
     <Compile Include="JavaScriptProcessorTest.cs" />

@@ -10,7 +10,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g 2013-12-31 22:55:10
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g 2014-01-04 00:15:45
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -37,29 +37,29 @@ namespace  Code2Xml.Languages.ANTLRv3.Processors.Lua
 public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "CHARSTRING", "COMMENT", "EXP", "EscapeSequence", "FLOAT", "HEX", "HexDigit", "INT", "LINE_COMMENT", "LONGSTRING", "NAME", "NEWLINE", "NORMALSTRING", "OctalEscape", "UnicodeEscape", "WS", "'#'", "'%'", "'('", "')'", "'*'", "'+'", "','", "'-'", "'.'", "'..'", "'...'", "'/'", "':'", "';'", "'<'", "'<='", "'='", "'=='", "'>'", "'>='", "'['", "']'", "'^'", "'and'", "'break'", "'do'", "'else'", "'elseif'", "'end'", "'false'", "'for'", "'function'", "'if'", "'in'", "'local'", "'nil'", "'not'", "'or'", "'repeat'", "'return'", "'then'", "'true'", "'until'", "'while'", "'{'", "'}'", "'~='"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "CHARSTRING", "COMMENT", "DecimalEscape", "Digit", "EscapeSequence", "ExponentPart", "FLOAT", "HEX", "HEX_FLOAT", "HexDigit", "HexEscape", "HexExponentPart", "INT", "LINE_COMMENT", "LONGSTRING", "NAME", "NEWLINE", "NORMALSTRING", "SHEBANG", "WS", "'!'", "'#'", "'%'", "'('", "')'", "'*'", "'+'", "','", "'-'", "'.'", "'..'", "'...'", "'/'", "':'", "'::'", "';'", "'<'", "'<='", "'='", "'=='", "'>'", "'>='", "'['", "'\\n'", "'\\r'", "']'", "'^'", "'and'", "'break'", "'do'", "'else'", "'elseif'", "'end'", "'false'", "'for'", "'function'", "'goto'", "'if'", "'in'", "'local'", "'nil'", "'not'", "'or'", "'repeat'", "'return'", "'then'", "'true'", "'until'", "'while'", "'{'", "'}'", "'~='"
 	};
 	public const int EOF=-1;
 	public const int CHARSTRING=4;
 	public const int COMMENT=5;
-	public const int EXP=6;
-	public const int EscapeSequence=7;
-	public const int FLOAT=8;
-	public const int HEX=9;
-	public const int HexDigit=10;
-	public const int INT=11;
-	public const int LINE_COMMENT=12;
-	public const int LONGSTRING=13;
-	public const int NAME=14;
-	public const int NEWLINE=15;
-	public const int NORMALSTRING=16;
-	public const int OctalEscape=17;
-	public const int UnicodeEscape=18;
-	public const int WS=19;
-	public const int T__20=20;
-	public const int T__21=21;
-	public const int T__22=22;
-	public const int T__23=23;
+	public const int DecimalEscape=6;
+	public const int Digit=7;
+	public const int EscapeSequence=8;
+	public const int ExponentPart=9;
+	public const int FLOAT=10;
+	public const int HEX=11;
+	public const int HEX_FLOAT=12;
+	public const int HexDigit=13;
+	public const int HexEscape=14;
+	public const int HexExponentPart=15;
+	public const int INT=16;
+	public const int LINE_COMMENT=17;
+	public const int LONGSTRING=18;
+	public const int NAME=19;
+	public const int NEWLINE=20;
+	public const int NORMALSTRING=21;
+	public const int SHEBANG=22;
+	public const int WS=23;
 	public const int T__24=24;
 	public const int T__25=25;
 	public const int T__26=26;
@@ -103,6 +103,15 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	public const int T__64=64;
 	public const int T__65=65;
 	public const int T__66=66;
+	public const int T__67=67;
+	public const int T__68=68;
+	public const int T__69=69;
+	public const int T__70=70;
+	public const int T__71=71;
+	public const int T__72=72;
+	public const int T__73=73;
+	public const int T__74=74;
+	public const int T__75=75;
 
 	public LuaParser(ITokenStream input)
 		: this(input, new RecognizerSharedState())
@@ -111,6 +120,9 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	public LuaParser(ITokenStream input, RecognizerSharedState state)
 		: base(input, state)
 	{
+		this.state.ruleMemo = new System.Collections.Generic.Dictionary<int, int>[112+1];
+
+
 		Antlr3AstBuilder treeAdaptor = default(Antlr3AstBuilder);
 		CreateTreeAdaptor(ref treeAdaptor);
 		TreeAdaptor = treeAdaptor ?? new Antlr3AstBuilder();
@@ -146,7 +158,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_chunk();
 	partial void LeaveRule_chunk();
 	// $ANTLR start "chunk"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:1: public chunk : ( stat ( ';' )? )* ( laststat ( ';' )? )? ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:56:1: public chunk : ( shebang )? block ;
 	[GrammarRule("chunk")]
 	public Antlr3AstNode chunk()
 	{
@@ -155,28 +167,145 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		var retval = new Antlr3AstNode("chunk");
 		
 		retval.Start = (IToken)input.LT(1);
+		int chunk_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal2 = default(IToken);
-		IToken char_literal4 = default(IToken);
-		Antlr3AstNode stat1 = default(Antlr3AstNode);
-		Antlr3AstNode laststat3 = default(Antlr3AstNode);
+		Antlr3AstNode shebang1 = default(Antlr3AstNode);
+		Antlr3AstNode block2 = default(Antlr3AstNode);
 
-		object char_literal2_tree = default(object);
-		object char_literal4_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "chunk");
-		DebugLocation(27, 41);
+		DebugLocation(56, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:7: ( ( stat ( ';' )? )* ( laststat ( ';' )? )? )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 1)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:57:5: ( ( shebang )? block )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:9: ( stat ( ';' )? )* ( laststat ( ';' )? )?
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:57:7: ( shebang )? block
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(27, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:9: ( stat ( ';' )? )*
+			DebugLocation(57, 7);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:57:7: ( shebang )?
+			int alt1=2;
+			try { DebugEnterSubRule(1);
+			try { DebugEnterDecision(1, false);
+			int LA1_1 = input.LA(1);
+
+			if ((LA1_1==25))
+			{
+				alt1 = 1;
+			}
+			} finally { DebugExitDecision(1); }
+			switch (alt1)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:57:7: shebang
+				{
+				DebugLocation(57, 7);
+				PushFollow(Follow._shebang_in_chunk77);
+				shebang1=shebang();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, shebang1.Tree, shebang1, "shebang1", retval);
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(1); }
+
+			DebugLocation(57, 16);
+			PushFollow(Follow._block_in_chunk80);
+			block2=block();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, block2.Tree, block2, "block2", retval);
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("chunk", 1);
+			LeaveRule("chunk", 1);
+			LeaveRule_chunk();
+			if (state.backtracking > 0) { Memoize(input, 1, chunk_StartIndex); }
+
+		}
+		DebugLocation(58, 4);
+		} finally { DebugExitRule(GrammarFileName, "chunk"); }
+		return retval;
+
+	}
+	// $ANTLR end "chunk"
+
+	partial void EnterRule_shebang();
+	partial void LeaveRule_shebang();
+	// $ANTLR start "shebang"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:60:1: shebang : '#' '!' (~ ( '\\n' | '\\r' ) )* ( '\\n' | '\\r' ) ;
+	[GrammarRule("shebang")]
+	private Antlr3AstNode shebang()
+	{
+		EnterRule_shebang();
+		EnterRule("shebang", 2);
+		var retval = new Antlr3AstNode("shebang");
+		
+		retval.Start = (IToken)input.LT(1);
+		int shebang_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken char_literal3 = default(IToken);
+		IToken char_literal4 = default(IToken);
+		IToken set5 = default(IToken);
+		IToken set6 = default(IToken);
+
+		object char_literal3_tree = default(object);
+		object char_literal4_tree = default(object);
+		object set5_tree = default(object);
+		object set6_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "shebang");
+		DebugLocation(60, 36);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 2)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:61:2: ( '#' '!' (~ ( '\\n' | '\\r' ) )* ( '\\n' | '\\r' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:61:4: '#' '!' (~ ( '\\n' | '\\r' ) )* ( '\\n' | '\\r' )
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(61, 4);
+			char_literal3=(IToken)Match(input,25,Follow._25_in_shebang94); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			char_literal3_tree = (object)adaptor.Create(char_literal3, "char_literal3", retval);
+			adaptor.AddChild(root_0, char_literal3_tree);
+			}
+			DebugLocation(61, 8);
+			char_literal4=(IToken)Match(input,24,Follow._24_in_shebang96); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			char_literal4_tree = (object)adaptor.Create(char_literal4, "char_literal4", retval);
+			adaptor.AddChild(root_0, char_literal4_tree);
+			}
+			DebugLocation(61, 12);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:61:12: (~ ( '\\n' | '\\r' ) )*
 			try { DebugEnterSubRule(2);
 			while (true)
 			{
@@ -184,7 +313,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(2, false);
 				int LA2_1 = input.LA(1);
 
-				if ((LA2_1==NAME||LA2_1==22||LA2_1==45||(LA2_1>=50 && LA2_1<=52)||LA2_1==54||LA2_1==58||LA2_1==63))
+				if (((LA2_1>=CHARSTRING && LA2_1<=46)||(LA2_1>=49 && LA2_1<=75)))
 				{
 					alt2 = 1;
 				}
@@ -195,44 +324,24 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:10: stat ( ';' )?
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 					{
-					DebugLocation(27, 10);
-					PushFollow(Follow._stat_in_chunk65);
-					stat1=stat();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, stat1.Tree, stat1, "stat1", retval);
-					DebugLocation(27, 15);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:15: ( ';' )?
-					int alt1=2;
-					try { DebugEnterSubRule(1);
-					try { DebugEnterDecision(1, false);
-					int LA1_1 = input.LA(1);
+					DebugLocation(61, 12);
 
-					if ((LA1_1==33))
+					set5=(IToken)input.LT(1);
+					if ((input.LA(1)>=CHARSTRING && input.LA(1)<=46)||(input.LA(1)>=49 && input.LA(1)<=75))
 					{
-						alt1 = 1;
+						input.Consume();
+						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set5, "set5", retval));
+						state.errorRecovery=false;state.failed=false;
 					}
-					} finally { DebugExitDecision(1); }
-					switch (alt1)
+					else
 					{
-					case 1:
-						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:16: ';'
-						{
-						DebugLocation(27, 16);
-						char_literal2=(IToken)Match(input,33,Follow._33_in_chunk68); if (state.failed) return retval;
-						if (state.backtracking == 0) {
-						char_literal2_tree = (object)adaptor.Create(char_literal2, "char_literal2", retval);
-						adaptor.AddChild(root_0, char_literal2_tree);
-						}
-
-						}
-						break;
-
+						if (state.backtracking>0) {state.failed=true; return retval;}
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
 					}
-					} finally { DebugExitSubRule(1); }
 
 
 					}
@@ -248,14 +357,136 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 			} finally { DebugExitSubRule(2); }
 
-			DebugLocation(27, 24);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:24: ( laststat ( ';' )? )?
+			DebugLocation(61, 26);
+
+			set6=(IToken)input.LT(1);
+			if ((input.LA(1)>=47 && input.LA(1)<=48))
+			{
+				input.Consume();
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set6, "set6", retval));
+				state.errorRecovery=false;state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return retval;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				throw mse;
+			}
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("shebang", 2);
+			LeaveRule("shebang", 2);
+			LeaveRule_shebang();
+			if (state.backtracking > 0) { Memoize(input, 2, shebang_StartIndex); }
+
+		}
+		DebugLocation(61, 36);
+		} finally { DebugExitRule(GrammarFileName, "shebang"); }
+		return retval;
+
+	}
+	// $ANTLR end "shebang"
+
+	partial void EnterRule_block();
+	partial void LeaveRule_block();
+	// $ANTLR start "block"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:63:1: block : ( stat )* ( retstat )? ;
+	[GrammarRule("block")]
+	private Antlr3AstNode block()
+	{
+		EnterRule_block();
+		EnterRule("block", 3);
+		var retval = new Antlr3AstNode("block");
+		
+		retval.Start = (IToken)input.LT(1);
+		int block_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		Antlr3AstNode stat7 = default(Antlr3AstNode);
+		Antlr3AstNode retstat8 = default(Antlr3AstNode);
+
+		try { DebugEnterRule(GrammarFileName, "block");
+		DebugLocation(63, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 3)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:64:5: ( ( stat )* ( retstat )? )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:64:7: ( stat )* ( retstat )?
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(64, 7);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:64:7: ( stat )*
+			try { DebugEnterSubRule(3);
+			while (true)
+			{
+				int alt3=2;
+				try { DebugEnterDecision(3, false);
+				int LA3_1 = input.LA(1);
+
+				if ((LA3_1==NAME||LA3_1==27||(LA3_1>=38 && LA3_1<=39)||(LA3_1>=52 && LA3_1<=53)||(LA3_1>=58 && LA3_1<=61)||LA3_1==63||LA3_1==67||LA3_1==72))
+				{
+					alt3 = 1;
+				}
+
+
+				} finally { DebugExitDecision(3); }
+				switch ( alt3 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:64:7: stat
+					{
+					DebugLocation(64, 7);
+					PushFollow(Follow._stat_in_block122);
+					stat7=stat();
+					PopFollow();
+					if (state.failed) return retval;
+					if (state.backtracking == 0) adaptor.AddChild(root_0, stat7.Tree, stat7, "stat7", retval);
+
+					}
+					break;
+
+				default:
+					goto loop3;
+				}
+			}
+
+			loop3:
+				;
+
+			} finally { DebugExitSubRule(3); }
+
+			DebugLocation(64, 13);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:64:13: ( retstat )?
 			int alt4=2;
 			try { DebugEnterSubRule(4);
 			try { DebugEnterDecision(4, false);
 			int LA4_1 = input.LA(1);
 
-			if ((LA4_1==44||LA4_1==59))
+			if ((LA4_1==68))
 			{
 				alt4 = 1;
 			}
@@ -264,45 +495,14 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:25: laststat ( ';' )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:64:13: retstat
 				{
-				DebugLocation(27, 25);
-				PushFollow(Follow._laststat_in_chunk75);
-				laststat3=laststat();
+				DebugLocation(64, 13);
+				PushFollow(Follow._retstat_in_block125);
+				retstat8=retstat();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, laststat3.Tree, laststat3, "laststat3", retval);
-				DebugLocation(27, 34);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:34: ( ';' )?
-				int alt3=2;
-				try { DebugEnterSubRule(3);
-				try { DebugEnterDecision(3, false);
-				int LA3_1 = input.LA(1);
-
-				if ((LA3_1==33))
-				{
-					alt3 = 1;
-				}
-				} finally { DebugExitDecision(3); }
-				switch (alt3)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:35: ';'
-					{
-					DebugLocation(27, 35);
-					char_literal4=(IToken)Match(input,33,Follow._33_in_chunk78); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal4_tree = (object)adaptor.Create(char_literal4, "char_literal4", retval);
-					adaptor.AddChild(root_0, char_literal4_tree);
-					}
-
-					}
-					break;
-
-				}
-				} finally { DebugExitSubRule(3); }
-
+				if (state.backtracking == 0) adaptor.AddChild(root_0, retstat8.Tree, retstat8, "retstat8", retval);
 
 				}
 				break;
@@ -329,74 +529,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("chunk", 1);
-			LeaveRule("chunk", 1);
-			LeaveRule_chunk();
-		}
-		DebugLocation(27, 41);
-		} finally { DebugExitRule(GrammarFileName, "chunk"); }
-		return retval;
-
-	}
-	// $ANTLR end "chunk"
-
-	partial void EnterRule_block();
-	partial void LeaveRule_block();
-	// $ANTLR start "block"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:29:1: block : chunk ;
-	[GrammarRule("block")]
-	private Antlr3AstNode block()
-	{
-		EnterRule_block();
-		EnterRule("block", 2);
-		var retval = new Antlr3AstNode("block");
-		
-		retval.Start = (IToken)input.LT(1);
-
-		object root_0 = default(object);
-
-		Antlr3AstNode chunk5 = default(Antlr3AstNode);
-
-		try { DebugEnterRule(GrammarFileName, "block");
-		DebugLocation(29, 13);
-		try
-		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:29:7: ( chunk )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:29:9: chunk
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(29, 9);
-			PushFollow(Follow._chunk_in_block90);
-			chunk5=chunk();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, chunk5.Tree, chunk5, "chunk5", retval);
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("block", 2);
-			LeaveRule("block", 2);
+			TraceOut("block", 3);
+			LeaveRule("block", 3);
 			LeaveRule_block();
+			if (state.backtracking > 0) { Memoize(input, 3, block_StartIndex); }
+
 		}
-		DebugLocation(29, 13);
+		DebugLocation(65, 4);
 		} finally { DebugExitRule(GrammarFileName, "block"); }
 		return retval;
 
@@ -406,147 +545,143 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_stat();
 	partial void LeaveRule_stat();
 	// $ANTLR start "stat"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:31:1: stat : ( varlist1 '=' explist1 | functioncall | 'do' block 'end' | 'while' exp 'do' block 'end' | 'repeat' block 'until' exp | 'if' exp 'then' block ( 'elseif' exp 'then' block )* ( 'else' block )? 'end' | 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end' | 'for' namelist 'in' explist1 'do' block 'end' | 'function' funcname funcbody | 'local' 'function' NAME funcbody | 'local' namelist ( '=' explist1 )? );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:67:1: stat : ( ';' | varlist '=' explist | functioncall | label | 'break' | 'goto' NAME | 'do' block 'end' | 'while' exp 'do' block 'end' | 'repeat' block 'until' exp | 'if' exp 'then' block ( 'elseif' exp 'then' block )* ( 'else' block )? 'end' | 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end' | 'for' namelist 'in' explist 'do' block 'end' | 'function' funcname funcbody | 'local' 'function' NAME funcbody | 'local' namelist ( '=' explist )? );
 	[GrammarRule("stat")]
 	private Antlr3AstNode stat()
 	{
 		EnterRule_stat();
-		EnterRule("stat", 3);
+		EnterRule("stat", 4);
 		var retval = new Antlr3AstNode("stat");
 		
 		retval.Start = (IToken)input.LT(1);
+		int stat_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal7 = default(IToken);
-		IToken string_literal10 = default(IToken);
-		IToken string_literal12 = default(IToken);
-		IToken string_literal13 = default(IToken);
+		IToken char_literal9 = default(IToken);
+		IToken char_literal11 = default(IToken);
 		IToken string_literal15 = default(IToken);
-		IToken string_literal17 = default(IToken);
+		IToken string_literal16 = default(IToken);
+		IToken NAME17 = default(IToken);
 		IToken string_literal18 = default(IToken);
 		IToken string_literal20 = default(IToken);
-		IToken string_literal22 = default(IToken);
-		IToken string_literal24 = default(IToken);
+		IToken string_literal21 = default(IToken);
+		IToken string_literal23 = default(IToken);
+		IToken string_literal25 = default(IToken);
 		IToken string_literal26 = default(IToken);
 		IToken string_literal28 = default(IToken);
 		IToken string_literal30 = default(IToken);
 		IToken string_literal32 = default(IToken);
-		IToken string_literal33 = default(IToken);
-		IToken NAME34 = default(IToken);
-		IToken char_literal35 = default(IToken);
-		IToken char_literal37 = default(IToken);
-		IToken char_literal39 = default(IToken);
+		IToken string_literal34 = default(IToken);
+		IToken string_literal36 = default(IToken);
+		IToken string_literal38 = default(IToken);
+		IToken string_literal40 = default(IToken);
 		IToken string_literal41 = default(IToken);
-		IToken string_literal43 = default(IToken);
-		IToken string_literal44 = default(IToken);
-		IToken string_literal46 = default(IToken);
-		IToken string_literal48 = default(IToken);
-		IToken string_literal50 = default(IToken);
+		IToken NAME42 = default(IToken);
+		IToken char_literal43 = default(IToken);
+		IToken char_literal45 = default(IToken);
+		IToken char_literal47 = default(IToken);
+		IToken string_literal49 = default(IToken);
 		IToken string_literal51 = default(IToken);
+		IToken string_literal52 = default(IToken);
 		IToken string_literal54 = default(IToken);
-		IToken string_literal55 = default(IToken);
-		IToken NAME56 = default(IToken);
+		IToken string_literal56 = default(IToken);
 		IToken string_literal58 = default(IToken);
-		IToken char_literal60 = default(IToken);
-		Antlr3AstNode varlist16 = default(Antlr3AstNode);
-		Antlr3AstNode explist18 = default(Antlr3AstNode);
-		Antlr3AstNode functioncall9 = default(Antlr3AstNode);
-		Antlr3AstNode block11 = default(Antlr3AstNode);
-		Antlr3AstNode exp14 = default(Antlr3AstNode);
-		Antlr3AstNode block16 = default(Antlr3AstNode);
+		IToken string_literal59 = default(IToken);
+		IToken string_literal62 = default(IToken);
+		IToken string_literal63 = default(IToken);
+		IToken NAME64 = default(IToken);
+		IToken string_literal66 = default(IToken);
+		IToken char_literal68 = default(IToken);
+		Antlr3AstNode varlist10 = default(Antlr3AstNode);
+		Antlr3AstNode explist12 = default(Antlr3AstNode);
+		Antlr3AstNode functioncall13 = default(Antlr3AstNode);
+		Antlr3AstNode label14 = default(Antlr3AstNode);
 		Antlr3AstNode block19 = default(Antlr3AstNode);
-		Antlr3AstNode exp21 = default(Antlr3AstNode);
-		Antlr3AstNode exp23 = default(Antlr3AstNode);
-		Antlr3AstNode block25 = default(Antlr3AstNode);
-		Antlr3AstNode exp27 = default(Antlr3AstNode);
-		Antlr3AstNode block29 = default(Antlr3AstNode);
-		Antlr3AstNode block31 = default(Antlr3AstNode);
-		Antlr3AstNode exp36 = default(Antlr3AstNode);
-		Antlr3AstNode exp38 = default(Antlr3AstNode);
-		Antlr3AstNode exp40 = default(Antlr3AstNode);
-		Antlr3AstNode block42 = default(Antlr3AstNode);
-		Antlr3AstNode namelist45 = default(Antlr3AstNode);
-		Antlr3AstNode explist147 = default(Antlr3AstNode);
-		Antlr3AstNode block49 = default(Antlr3AstNode);
-		Antlr3AstNode funcname52 = default(Antlr3AstNode);
-		Antlr3AstNode funcbody53 = default(Antlr3AstNode);
-		Antlr3AstNode funcbody57 = default(Antlr3AstNode);
-		Antlr3AstNode namelist59 = default(Antlr3AstNode);
-		Antlr3AstNode explist161 = default(Antlr3AstNode);
+		Antlr3AstNode exp22 = default(Antlr3AstNode);
+		Antlr3AstNode block24 = default(Antlr3AstNode);
+		Antlr3AstNode block27 = default(Antlr3AstNode);
+		Antlr3AstNode exp29 = default(Antlr3AstNode);
+		Antlr3AstNode exp31 = default(Antlr3AstNode);
+		Antlr3AstNode block33 = default(Antlr3AstNode);
+		Antlr3AstNode exp35 = default(Antlr3AstNode);
+		Antlr3AstNode block37 = default(Antlr3AstNode);
+		Antlr3AstNode block39 = default(Antlr3AstNode);
+		Antlr3AstNode exp44 = default(Antlr3AstNode);
+		Antlr3AstNode exp46 = default(Antlr3AstNode);
+		Antlr3AstNode exp48 = default(Antlr3AstNode);
+		Antlr3AstNode block50 = default(Antlr3AstNode);
+		Antlr3AstNode namelist53 = default(Antlr3AstNode);
+		Antlr3AstNode explist55 = default(Antlr3AstNode);
+		Antlr3AstNode block57 = default(Antlr3AstNode);
+		Antlr3AstNode funcname60 = default(Antlr3AstNode);
+		Antlr3AstNode funcbody61 = default(Antlr3AstNode);
+		Antlr3AstNode funcbody65 = default(Antlr3AstNode);
+		Antlr3AstNode namelist67 = default(Antlr3AstNode);
+		Antlr3AstNode explist69 = default(Antlr3AstNode);
 
-		object char_literal7_tree = default(object);
-		object string_literal10_tree = default(object);
-		object string_literal12_tree = default(object);
-		object string_literal13_tree = default(object);
+		object char_literal9_tree = default(object);
+		object char_literal11_tree = default(object);
 		object string_literal15_tree = default(object);
-		object string_literal17_tree = default(object);
+		object string_literal16_tree = default(object);
+		object NAME17_tree = default(object);
 		object string_literal18_tree = default(object);
 		object string_literal20_tree = default(object);
-		object string_literal22_tree = default(object);
-		object string_literal24_tree = default(object);
+		object string_literal21_tree = default(object);
+		object string_literal23_tree = default(object);
+		object string_literal25_tree = default(object);
 		object string_literal26_tree = default(object);
 		object string_literal28_tree = default(object);
 		object string_literal30_tree = default(object);
 		object string_literal32_tree = default(object);
-		object string_literal33_tree = default(object);
-		object NAME34_tree = default(object);
-		object char_literal35_tree = default(object);
-		object char_literal37_tree = default(object);
-		object char_literal39_tree = default(object);
+		object string_literal34_tree = default(object);
+		object string_literal36_tree = default(object);
+		object string_literal38_tree = default(object);
+		object string_literal40_tree = default(object);
 		object string_literal41_tree = default(object);
-		object string_literal43_tree = default(object);
-		object string_literal44_tree = default(object);
-		object string_literal46_tree = default(object);
-		object string_literal48_tree = default(object);
-		object string_literal50_tree = default(object);
+		object NAME42_tree = default(object);
+		object char_literal43_tree = default(object);
+		object char_literal45_tree = default(object);
+		object char_literal47_tree = default(object);
+		object string_literal49_tree = default(object);
 		object string_literal51_tree = default(object);
+		object string_literal52_tree = default(object);
 		object string_literal54_tree = default(object);
-		object string_literal55_tree = default(object);
-		object NAME56_tree = default(object);
+		object string_literal56_tree = default(object);
 		object string_literal58_tree = default(object);
-		object char_literal60_tree = default(object);
+		object string_literal59_tree = default(object);
+		object string_literal62_tree = default(object);
+		object string_literal63_tree = default(object);
+		object NAME64_tree = default(object);
+		object string_literal66_tree = default(object);
+		object char_literal68_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "stat");
-		DebugLocation(31, 37);
+		DebugLocation(67, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:31:6: ( varlist1 '=' explist1 | functioncall | 'do' block 'end' | 'while' exp 'do' block 'end' | 'repeat' block 'until' exp | 'if' exp 'then' block ( 'elseif' exp 'then' block )* ( 'else' block )? 'end' | 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end' | 'for' namelist 'in' explist1 'do' block 'end' | 'function' funcname funcbody | 'local' 'function' NAME funcbody | 'local' namelist ( '=' explist1 )? )
-			int alt9=11;
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 4)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:68:5: ( ';' | varlist '=' explist | functioncall | label | 'break' | 'goto' NAME | 'do' block 'end' | 'while' exp 'do' block 'end' | 'repeat' block 'until' exp | 'if' exp 'then' block ( 'elseif' exp 'then' block )* ( 'else' block )? 'end' | 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end' | 'for' namelist 'in' explist 'do' block 'end' | 'function' funcname funcbody | 'local' 'function' NAME funcbody | 'local' namelist ( '=' explist )? )
+			int alt9=15;
 			try { DebugEnterDecision(9, false);
 			switch (input.LA(1))
 			{
+			case 39:
+				{
+				alt9 = 1;
+				}
+				break;
 			case NAME:
 				{
 				int LA9_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred5_Lua_fragment)))
-				{
-					alt9 = 1;
-				}
-				else if ((EvaluatePredicate(synpred6_Lua_fragment)))
+				if ((EvaluatePredicate(synpred9_Lua_fragment)))
 				{
 					alt9 = 2;
 				}
-				else
+				else if ((EvaluatePredicate(synpred10_Lua_fragment)))
 				{
-					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 9, 1, input, 2);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
-				}
-				break;
-			case 22:
-				{
-				int LA9_2 = input.LA(2);
-
-				if ((EvaluatePredicate(synpred5_Lua_fragment)))
-				{
-					alt9 = 1;
-				}
-				else if ((EvaluatePredicate(synpred6_Lua_fragment)))
-				{
-					alt9 = 2;
+					alt9 = 3;
 				}
 				else
 				{
@@ -557,68 +692,104 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 45:
-				{
-				alt9 = 3;
-				}
-				break;
-			case 63:
-				{
-				alt9 = 4;
-				}
-				break;
-			case 58:
-				{
-				alt9 = 5;
-				}
-				break;
-			case 52:
-				{
-				alt9 = 6;
-				}
-				break;
-			case 50:
+			case 27:
 				{
 				int LA9_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred14_Lua_fragment)))
+				if ((EvaluatePredicate(synpred9_Lua_fragment)))
 				{
-					alt9 = 7;
+					alt9 = 2;
 				}
-				else if ((EvaluatePredicate(synpred15_Lua_fragment)))
+				else if ((EvaluatePredicate(synpred10_Lua_fragment)))
 				{
-					alt9 = 8;
+					alt9 = 3;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 9, 7, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 9, 3, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 				}
 				break;
-			case 51:
+			case 38:
+				{
+				alt9 = 4;
+				}
+				break;
+			case 52:
+				{
+				alt9 = 5;
+				}
+				break;
+			case 60:
+				{
+				alt9 = 6;
+				}
+				break;
+			case 53:
+				{
+				alt9 = 7;
+				}
+				break;
+			case 72:
+				{
+				alt9 = 8;
+				}
+				break;
+			case 67:
 				{
 				alt9 = 9;
 				}
 				break;
-			case 54:
+			case 61:
+				{
+				alt9 = 10;
+				}
+				break;
+			case 58:
 				{
 				int LA9_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred17_Lua_fragment)))
-				{
-					alt9 = 10;
-				}
-				else if ((true))
+				if ((EvaluatePredicate(synpred21_Lua_fragment)))
 				{
 					alt9 = 11;
+				}
+				else if ((EvaluatePredicate(synpred22_Lua_fragment)))
+				{
+					alt9 = 12;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 9, 9, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 9, 11, input, 2);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case 59:
+				{
+				alt9 = 13;
+				}
+				break;
+			case 63:
+				{
+				int LA9_2 = input.LA(2);
+
+				if ((EvaluatePredicate(synpred24_Lua_fragment)))
+				{
+					alt9 = 14;
+				}
+				else if ((true))
+				{
+					alt9 = 15;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 9, 13, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -638,177 +809,243 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:31:9: varlist1 '=' explist1
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:68:7: ';'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(31, 9);
-				PushFollow(Follow._varlist1_in_stat99);
-				varlist16=varlist1();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, varlist16.Tree, varlist16, "varlist16", retval);
-				DebugLocation(31, 18);
-				char_literal7=(IToken)Match(input,36,Follow._36_in_stat101); if (state.failed) return retval;
+				DebugLocation(68, 7);
+				char_literal9=(IToken)Match(input,39,Follow._39_in_stat143); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal7_tree = (object)adaptor.Create(char_literal7, "char_literal7", retval);
-				adaptor.AddChild(root_0, char_literal7_tree);
+				char_literal9_tree = (object)adaptor.Create(char_literal9, "char_literal9", retval);
+				adaptor.AddChild(root_0, char_literal9_tree);
 				}
-				DebugLocation(31, 22);
-				PushFollow(Follow._explist1_in_stat103);
-				explist18=explist1();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, explist18.Tree, explist18, "explist18", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:32:5: functioncall
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:69:7: varlist '=' explist
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(32, 5);
-				PushFollow(Follow._functioncall_in_stat112);
-				functioncall9=functioncall();
+				DebugLocation(69, 7);
+				PushFollow(Follow._varlist_in_stat151);
+				varlist10=varlist();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, functioncall9.Tree, functioncall9, "functioncall9", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, varlist10.Tree, varlist10, "varlist10", retval);
+				DebugLocation(69, 15);
+				char_literal11=(IToken)Match(input,42,Follow._42_in_stat153); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				char_literal11_tree = (object)adaptor.Create(char_literal11, "char_literal11", retval);
+				adaptor.AddChild(root_0, char_literal11_tree);
+				}
+				DebugLocation(69, 19);
+				PushFollow(Follow._explist_in_stat155);
+				explist12=explist();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, explist12.Tree, explist12, "explist12", retval);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:33:5: 'do' block 'end'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:70:7: functioncall
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(33, 5);
-				string_literal10=(IToken)Match(input,45,Follow._45_in_stat121); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal10_tree = (object)adaptor.Create(string_literal10, "string_literal10", retval);
-				adaptor.AddChild(root_0, string_literal10_tree);
-				}
-				DebugLocation(33, 10);
-				PushFollow(Follow._block_in_stat123);
-				block11=block();
+				DebugLocation(70, 7);
+				PushFollow(Follow._functioncall_in_stat163);
+				functioncall13=functioncall();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block11.Tree, block11, "block11", retval);
-				DebugLocation(33, 16);
-				string_literal12=(IToken)Match(input,48,Follow._48_in_stat125); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal12_tree = (object)adaptor.Create(string_literal12, "string_literal12", retval);
-				adaptor.AddChild(root_0, string_literal12_tree);
-				}
+				if (state.backtracking == 0) adaptor.AddChild(root_0, functioncall13.Tree, functioncall13, "functioncall13", retval);
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:34:5: 'while' exp 'do' block 'end'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:71:7: label
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(34, 5);
-				string_literal13=(IToken)Match(input,63,Follow._63_in_stat134); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal13_tree = (object)adaptor.Create(string_literal13, "string_literal13", retval);
-				adaptor.AddChild(root_0, string_literal13_tree);
-				}
-				DebugLocation(34, 13);
-				PushFollow(Follow._exp_in_stat136);
-				exp14=exp();
+				DebugLocation(71, 7);
+				PushFollow(Follow._label_in_stat171);
+				label14=label();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp14.Tree, exp14, "exp14", retval);
-				DebugLocation(34, 17);
-				string_literal15=(IToken)Match(input,45,Follow._45_in_stat138); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal15_tree = (object)adaptor.Create(string_literal15, "string_literal15", retval);
-				adaptor.AddChild(root_0, string_literal15_tree);
-				}
-				DebugLocation(34, 22);
-				PushFollow(Follow._block_in_stat140);
-				block16=block();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block16.Tree, block16, "block16", retval);
-				DebugLocation(34, 28);
-				string_literal17=(IToken)Match(input,48,Follow._48_in_stat142); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal17_tree = (object)adaptor.Create(string_literal17, "string_literal17", retval);
-				adaptor.AddChild(root_0, string_literal17_tree);
-				}
+				if (state.backtracking == 0) adaptor.AddChild(root_0, label14.Tree, label14, "label14", retval);
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:35:5: 'repeat' block 'until' exp
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:72:7: 'break'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(35, 5);
-				string_literal18=(IToken)Match(input,58,Follow._58_in_stat151); if (state.failed) return retval;
+				DebugLocation(72, 7);
+				string_literal15=(IToken)Match(input,52,Follow._52_in_stat179); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal18_tree = (object)adaptor.Create(string_literal18, "string_literal18", retval);
-				adaptor.AddChild(root_0, string_literal18_tree);
+				string_literal15_tree = (object)adaptor.Create(string_literal15, "string_literal15", retval);
+				adaptor.AddChild(root_0, string_literal15_tree);
 				}
-				DebugLocation(35, 14);
-				PushFollow(Follow._block_in_stat153);
-				block19=block();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block19.Tree, block19, "block19", retval);
-				DebugLocation(35, 20);
-				string_literal20=(IToken)Match(input,62,Follow._62_in_stat155); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal20_tree = (object)adaptor.Create(string_literal20, "string_literal20", retval);
-				adaptor.AddChild(root_0, string_literal20_tree);
-				}
-				DebugLocation(35, 28);
-				PushFollow(Follow._exp_in_stat157);
-				exp21=exp();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp21.Tree, exp21, "exp21", retval);
 
 				}
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:36:5: 'if' exp 'then' block ( 'elseif' exp 'then' block )* ( 'else' block )? 'end'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:73:7: 'goto' NAME
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(36, 5);
-				string_literal22=(IToken)Match(input,52,Follow._52_in_stat166); if (state.failed) return retval;
+				DebugLocation(73, 7);
+				string_literal16=(IToken)Match(input,60,Follow._60_in_stat187); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal22_tree = (object)adaptor.Create(string_literal22, "string_literal22", retval);
-				adaptor.AddChild(root_0, string_literal22_tree);
+				string_literal16_tree = (object)adaptor.Create(string_literal16, "string_literal16", retval);
+				adaptor.AddChild(root_0, string_literal16_tree);
 				}
-				DebugLocation(36, 10);
-				PushFollow(Follow._exp_in_stat168);
-				exp23=exp();
+				DebugLocation(73, 14);
+				NAME17=(IToken)Match(input,NAME,Follow._NAME_in_stat189); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				NAME17_tree = (object)adaptor.Create(NAME17, "NAME17", retval);
+				adaptor.AddChild(root_0, NAME17_tree);
+				}
+
+				}
+				break;
+			case 7:
+				DebugEnterAlt(7);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:74:7: 'do' block 'end'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(74, 7);
+				string_literal18=(IToken)Match(input,53,Follow._53_in_stat197); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal18_tree = (object)adaptor.Create(string_literal18, "string_literal18", retval);
+				adaptor.AddChild(root_0, string_literal18_tree);
+				}
+				DebugLocation(74, 12);
+				PushFollow(Follow._block_in_stat199);
+				block19=block();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp23.Tree, exp23, "exp23", retval);
-				DebugLocation(36, 14);
-				string_literal24=(IToken)Match(input,60,Follow._60_in_stat170); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block19.Tree, block19, "block19", retval);
+				DebugLocation(74, 18);
+				string_literal20=(IToken)Match(input,56,Follow._56_in_stat201); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal24_tree = (object)adaptor.Create(string_literal24, "string_literal24", retval);
-				adaptor.AddChild(root_0, string_literal24_tree);
+				string_literal20_tree = (object)adaptor.Create(string_literal20, "string_literal20", retval);
+				adaptor.AddChild(root_0, string_literal20_tree);
 				}
-				DebugLocation(36, 21);
-				PushFollow(Follow._block_in_stat172);
-				block25=block();
+
+				}
+				break;
+			case 8:
+				DebugEnterAlt(8);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:75:7: 'while' exp 'do' block 'end'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(75, 7);
+				string_literal21=(IToken)Match(input,72,Follow._72_in_stat209); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal21_tree = (object)adaptor.Create(string_literal21, "string_literal21", retval);
+				adaptor.AddChild(root_0, string_literal21_tree);
+				}
+				DebugLocation(75, 15);
+				PushFollow(Follow._exp_in_stat211);
+				exp22=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block25.Tree, block25, "block25", retval);
-				DebugLocation(36, 27);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:36:27: ( 'elseif' exp 'then' block )*
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp22.Tree, exp22, "exp22", retval);
+				DebugLocation(75, 19);
+				string_literal23=(IToken)Match(input,53,Follow._53_in_stat213); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal23_tree = (object)adaptor.Create(string_literal23, "string_literal23", retval);
+				adaptor.AddChild(root_0, string_literal23_tree);
+				}
+				DebugLocation(75, 24);
+				PushFollow(Follow._block_in_stat215);
+				block24=block();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block24.Tree, block24, "block24", retval);
+				DebugLocation(75, 30);
+				string_literal25=(IToken)Match(input,56,Follow._56_in_stat217); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal25_tree = (object)adaptor.Create(string_literal25, "string_literal25", retval);
+				adaptor.AddChild(root_0, string_literal25_tree);
+				}
+
+				}
+				break;
+			case 9:
+				DebugEnterAlt(9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:76:7: 'repeat' block 'until' exp
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(76, 7);
+				string_literal26=(IToken)Match(input,67,Follow._67_in_stat225); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal26_tree = (object)adaptor.Create(string_literal26, "string_literal26", retval);
+				adaptor.AddChild(root_0, string_literal26_tree);
+				}
+				DebugLocation(76, 16);
+				PushFollow(Follow._block_in_stat227);
+				block27=block();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block27.Tree, block27, "block27", retval);
+				DebugLocation(76, 22);
+				string_literal28=(IToken)Match(input,71,Follow._71_in_stat229); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal28_tree = (object)adaptor.Create(string_literal28, "string_literal28", retval);
+				adaptor.AddChild(root_0, string_literal28_tree);
+				}
+				DebugLocation(76, 30);
+				PushFollow(Follow._exp_in_stat231);
+				exp29=exp();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp29.Tree, exp29, "exp29", retval);
+
+				}
+				break;
+			case 10:
+				DebugEnterAlt(10);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:77:7: 'if' exp 'then' block ( 'elseif' exp 'then' block )* ( 'else' block )? 'end'
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(77, 7);
+				string_literal30=(IToken)Match(input,61,Follow._61_in_stat239); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal30_tree = (object)adaptor.Create(string_literal30, "string_literal30", retval);
+				adaptor.AddChild(root_0, string_literal30_tree);
+				}
+				DebugLocation(77, 12);
+				PushFollow(Follow._exp_in_stat241);
+				exp31=exp();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp31.Tree, exp31, "exp31", retval);
+				DebugLocation(77, 16);
+				string_literal32=(IToken)Match(input,69,Follow._69_in_stat243); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal32_tree = (object)adaptor.Create(string_literal32, "string_literal32", retval);
+				adaptor.AddChild(root_0, string_literal32_tree);
+				}
+				DebugLocation(77, 23);
+				PushFollow(Follow._block_in_stat245);
+				block33=block();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block33.Tree, block33, "block33", retval);
+				DebugLocation(77, 29);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:77:29: ( 'elseif' exp 'then' block )*
 				try { DebugEnterSubRule(5);
 				while (true)
 				{
@@ -816,7 +1053,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(5, false);
 					int LA5_1 = input.LA(1);
 
-					if ((LA5_1==47))
+					if ((LA5_1==55))
 					{
 						alt5 = 1;
 					}
@@ -827,32 +1064,32 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:36:28: 'elseif' exp 'then' block
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:77:30: 'elseif' exp 'then' block
 						{
-						DebugLocation(36, 28);
-						string_literal26=(IToken)Match(input,47,Follow._47_in_stat175); if (state.failed) return retval;
+						DebugLocation(77, 30);
+						string_literal34=(IToken)Match(input,55,Follow._55_in_stat248); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						string_literal26_tree = (object)adaptor.Create(string_literal26, "string_literal26", retval);
-						adaptor.AddChild(root_0, string_literal26_tree);
+						string_literal34_tree = (object)adaptor.Create(string_literal34, "string_literal34", retval);
+						adaptor.AddChild(root_0, string_literal34_tree);
 						}
-						DebugLocation(36, 37);
-						PushFollow(Follow._exp_in_stat177);
-						exp27=exp();
+						DebugLocation(77, 39);
+						PushFollow(Follow._exp_in_stat250);
+						exp35=exp();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, exp27.Tree, exp27, "exp27", retval);
-						DebugLocation(36, 41);
-						string_literal28=(IToken)Match(input,60,Follow._60_in_stat179); if (state.failed) return retval;
+						if (state.backtracking == 0) adaptor.AddChild(root_0, exp35.Tree, exp35, "exp35", retval);
+						DebugLocation(77, 43);
+						string_literal36=(IToken)Match(input,69,Follow._69_in_stat252); if (state.failed) return retval;
 						if (state.backtracking == 0) {
-						string_literal28_tree = (object)adaptor.Create(string_literal28, "string_literal28", retval);
-						adaptor.AddChild(root_0, string_literal28_tree);
+						string_literal36_tree = (object)adaptor.Create(string_literal36, "string_literal36", retval);
+						adaptor.AddChild(root_0, string_literal36_tree);
 						}
-						DebugLocation(36, 48);
-						PushFollow(Follow._block_in_stat181);
-						block29=block();
+						DebugLocation(77, 50);
+						PushFollow(Follow._block_in_stat254);
+						block37=block();
 						PopFollow();
 						if (state.failed) return retval;
-						if (state.backtracking == 0) adaptor.AddChild(root_0, block29.Tree, block29, "block29", retval);
+						if (state.backtracking == 0) adaptor.AddChild(root_0, block37.Tree, block37, "block37", retval);
 
 						}
 						break;
@@ -867,14 +1104,14 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 				} finally { DebugExitSubRule(5); }
 
-				DebugLocation(36, 56);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:36:56: ( 'else' block )?
+				DebugLocation(77, 58);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:77:58: ( 'else' block )?
 				int alt6=2;
 				try { DebugEnterSubRule(6);
 				try { DebugEnterDecision(6, false);
 				int LA6_1 = input.LA(1);
 
-				if ((LA6_1==46))
+				if ((LA6_1==54))
 				{
 					alt6 = 1;
 				}
@@ -883,20 +1120,20 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:36:57: 'else' block
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:77:59: 'else' block
 					{
-					DebugLocation(36, 57);
-					string_literal30=(IToken)Match(input,46,Follow._46_in_stat186); if (state.failed) return retval;
+					DebugLocation(77, 59);
+					string_literal38=(IToken)Match(input,54,Follow._54_in_stat259); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					string_literal30_tree = (object)adaptor.Create(string_literal30, "string_literal30", retval);
-					adaptor.AddChild(root_0, string_literal30_tree);
+					string_literal38_tree = (object)adaptor.Create(string_literal38, "string_literal38", retval);
+					adaptor.AddChild(root_0, string_literal38_tree);
 					}
-					DebugLocation(36, 64);
-					PushFollow(Follow._block_in_stat188);
-					block31=block();
+					DebugLocation(77, 66);
+					PushFollow(Follow._block_in_stat261);
+					block39=block();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, block31.Tree, block31, "block31", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, block39.Tree, block39, "block39", retval);
 
 					}
 					break;
@@ -904,65 +1141,65 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				} finally { DebugExitSubRule(6); }
 
-				DebugLocation(36, 72);
-				string_literal32=(IToken)Match(input,48,Follow._48_in_stat192); if (state.failed) return retval;
+				DebugLocation(77, 74);
+				string_literal40=(IToken)Match(input,56,Follow._56_in_stat265); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal32_tree = (object)adaptor.Create(string_literal32, "string_literal32", retval);
-				adaptor.AddChild(root_0, string_literal32_tree);
+				string_literal40_tree = (object)adaptor.Create(string_literal40, "string_literal40", retval);
+				adaptor.AddChild(root_0, string_literal40_tree);
 				}
 
 				}
 				break;
-			case 7:
-				DebugEnterAlt(7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:37:5: 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end'
+			case 11:
+				DebugEnterAlt(11);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:78:7: 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(37, 5);
-				string_literal33=(IToken)Match(input,50,Follow._50_in_stat201); if (state.failed) return retval;
+				DebugLocation(78, 7);
+				string_literal41=(IToken)Match(input,58,Follow._58_in_stat273); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal33_tree = (object)adaptor.Create(string_literal33, "string_literal33", retval);
-				adaptor.AddChild(root_0, string_literal33_tree);
+				string_literal41_tree = (object)adaptor.Create(string_literal41, "string_literal41", retval);
+				adaptor.AddChild(root_0, string_literal41_tree);
 				}
-				DebugLocation(37, 11);
-				NAME34=(IToken)Match(input,NAME,Follow._NAME_in_stat203); if (state.failed) return retval;
+				DebugLocation(78, 13);
+				NAME42=(IToken)Match(input,NAME,Follow._NAME_in_stat275); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				NAME34_tree = (object)adaptor.Create(NAME34, "NAME34", retval);
-				adaptor.AddChild(root_0, NAME34_tree);
+				NAME42_tree = (object)adaptor.Create(NAME42, "NAME42", retval);
+				adaptor.AddChild(root_0, NAME42_tree);
 				}
-				DebugLocation(37, 16);
-				char_literal35=(IToken)Match(input,36,Follow._36_in_stat205); if (state.failed) return retval;
+				DebugLocation(78, 18);
+				char_literal43=(IToken)Match(input,42,Follow._42_in_stat277); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal35_tree = (object)adaptor.Create(char_literal35, "char_literal35", retval);
-				adaptor.AddChild(root_0, char_literal35_tree);
+				char_literal43_tree = (object)adaptor.Create(char_literal43, "char_literal43", retval);
+				adaptor.AddChild(root_0, char_literal43_tree);
 				}
-				DebugLocation(37, 20);
-				PushFollow(Follow._exp_in_stat207);
-				exp36=exp();
+				DebugLocation(78, 22);
+				PushFollow(Follow._exp_in_stat279);
+				exp44=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp36.Tree, exp36, "exp36", retval);
-				DebugLocation(37, 24);
-				char_literal37=(IToken)Match(input,26,Follow._26_in_stat209); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp44.Tree, exp44, "exp44", retval);
+				DebugLocation(78, 26);
+				char_literal45=(IToken)Match(input,31,Follow._31_in_stat281); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal37_tree = (object)adaptor.Create(char_literal37, "char_literal37", retval);
-				adaptor.AddChild(root_0, char_literal37_tree);
+				char_literal45_tree = (object)adaptor.Create(char_literal45, "char_literal45", retval);
+				adaptor.AddChild(root_0, char_literal45_tree);
 				}
-				DebugLocation(37, 28);
-				PushFollow(Follow._exp_in_stat211);
-				exp38=exp();
+				DebugLocation(78, 30);
+				PushFollow(Follow._exp_in_stat283);
+				exp46=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp38.Tree, exp38, "exp38", retval);
-				DebugLocation(37, 32);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:37:32: ( ',' exp )?
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp46.Tree, exp46, "exp46", retval);
+				DebugLocation(78, 34);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:78:34: ( ',' exp )?
 				int alt7=2;
 				try { DebugEnterSubRule(7);
 				try { DebugEnterDecision(7, false);
 				int LA7_1 = input.LA(1);
 
-				if ((LA7_1==26))
+				if ((LA7_1==31))
 				{
 					alt7 = 1;
 				}
@@ -971,20 +1208,20 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:37:33: ',' exp
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:78:35: ',' exp
 					{
-					DebugLocation(37, 33);
-					char_literal39=(IToken)Match(input,26,Follow._26_in_stat214); if (state.failed) return retval;
+					DebugLocation(78, 35);
+					char_literal47=(IToken)Match(input,31,Follow._31_in_stat286); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal39_tree = (object)adaptor.Create(char_literal39, "char_literal39", retval);
-					adaptor.AddChild(root_0, char_literal39_tree);
+					char_literal47_tree = (object)adaptor.Create(char_literal47, "char_literal47", retval);
+					adaptor.AddChild(root_0, char_literal47_tree);
 					}
-					DebugLocation(37, 37);
-					PushFollow(Follow._exp_in_stat216);
-					exp40=exp();
+					DebugLocation(78, 39);
+					PushFollow(Follow._exp_in_stat288);
+					exp48=exp();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, exp40.Tree, exp40, "exp40", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, exp48.Tree, exp48, "exp48", retval);
 
 					}
 					break;
@@ -992,164 +1229,164 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				} finally { DebugExitSubRule(7); }
 
-				DebugLocation(37, 43);
-				string_literal41=(IToken)Match(input,45,Follow._45_in_stat220); if (state.failed) return retval;
+				DebugLocation(78, 45);
+				string_literal49=(IToken)Match(input,53,Follow._53_in_stat292); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal41_tree = (object)adaptor.Create(string_literal41, "string_literal41", retval);
-				adaptor.AddChild(root_0, string_literal41_tree);
+				string_literal49_tree = (object)adaptor.Create(string_literal49, "string_literal49", retval);
+				adaptor.AddChild(root_0, string_literal49_tree);
 				}
-				DebugLocation(37, 48);
-				PushFollow(Follow._block_in_stat222);
-				block42=block();
+				DebugLocation(78, 50);
+				PushFollow(Follow._block_in_stat294);
+				block50=block();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block42.Tree, block42, "block42", retval);
-				DebugLocation(37, 54);
-				string_literal43=(IToken)Match(input,48,Follow._48_in_stat224); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal43_tree = (object)adaptor.Create(string_literal43, "string_literal43", retval);
-				adaptor.AddChild(root_0, string_literal43_tree);
-				}
-
-				}
-				break;
-			case 8:
-				DebugEnterAlt(8);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:38:5: 'for' namelist 'in' explist1 'do' block 'end'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(38, 5);
-				string_literal44=(IToken)Match(input,50,Follow._50_in_stat233); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal44_tree = (object)adaptor.Create(string_literal44, "string_literal44", retval);
-				adaptor.AddChild(root_0, string_literal44_tree);
-				}
-				DebugLocation(38, 11);
-				PushFollow(Follow._namelist_in_stat235);
-				namelist45=namelist();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, namelist45.Tree, namelist45, "namelist45", retval);
-				DebugLocation(38, 20);
-				string_literal46=(IToken)Match(input,53,Follow._53_in_stat237); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal46_tree = (object)adaptor.Create(string_literal46, "string_literal46", retval);
-				adaptor.AddChild(root_0, string_literal46_tree);
-				}
-				DebugLocation(38, 25);
-				PushFollow(Follow._explist1_in_stat239);
-				explist147=explist1();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, explist147.Tree, explist147, "explist147", retval);
-				DebugLocation(38, 34);
-				string_literal48=(IToken)Match(input,45,Follow._45_in_stat241); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal48_tree = (object)adaptor.Create(string_literal48, "string_literal48", retval);
-				adaptor.AddChild(root_0, string_literal48_tree);
-				}
-				DebugLocation(38, 39);
-				PushFollow(Follow._block_in_stat243);
-				block49=block();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block49.Tree, block49, "block49", retval);
-				DebugLocation(38, 45);
-				string_literal50=(IToken)Match(input,48,Follow._48_in_stat245); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal50_tree = (object)adaptor.Create(string_literal50, "string_literal50", retval);
-				adaptor.AddChild(root_0, string_literal50_tree);
-				}
-
-				}
-				break;
-			case 9:
-				DebugEnterAlt(9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:39:5: 'function' funcname funcbody
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(39, 5);
-				string_literal51=(IToken)Match(input,51,Follow._51_in_stat254); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block50.Tree, block50, "block50", retval);
+				DebugLocation(78, 56);
+				string_literal51=(IToken)Match(input,56,Follow._56_in_stat296); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal51_tree = (object)adaptor.Create(string_literal51, "string_literal51", retval);
 				adaptor.AddChild(root_0, string_literal51_tree);
 				}
-				DebugLocation(39, 16);
-				PushFollow(Follow._funcname_in_stat256);
-				funcname52=funcname();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, funcname52.Tree, funcname52, "funcname52", retval);
-				DebugLocation(39, 25);
-				PushFollow(Follow._funcbody_in_stat258);
-				funcbody53=funcbody();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, funcbody53.Tree, funcbody53, "funcbody53", retval);
 
 				}
 				break;
-			case 10:
-				DebugEnterAlt(10);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:40:5: 'local' 'function' NAME funcbody
+			case 12:
+				DebugEnterAlt(12);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:79:7: 'for' namelist 'in' explist 'do' block 'end'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(40, 5);
-				string_literal54=(IToken)Match(input,54,Follow._54_in_stat267); if (state.failed) return retval;
+				DebugLocation(79, 7);
+				string_literal52=(IToken)Match(input,58,Follow._58_in_stat304); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal52_tree = (object)adaptor.Create(string_literal52, "string_literal52", retval);
+				adaptor.AddChild(root_0, string_literal52_tree);
+				}
+				DebugLocation(79, 13);
+				PushFollow(Follow._namelist_in_stat306);
+				namelist53=namelist();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, namelist53.Tree, namelist53, "namelist53", retval);
+				DebugLocation(79, 22);
+				string_literal54=(IToken)Match(input,62,Follow._62_in_stat308); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal54_tree = (object)adaptor.Create(string_literal54, "string_literal54", retval);
 				adaptor.AddChild(root_0, string_literal54_tree);
 				}
-				DebugLocation(40, 13);
-				string_literal55=(IToken)Match(input,51,Follow._51_in_stat269); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal55_tree = (object)adaptor.Create(string_literal55, "string_literal55", retval);
-				adaptor.AddChild(root_0, string_literal55_tree);
-				}
-				DebugLocation(40, 24);
-				NAME56=(IToken)Match(input,NAME,Follow._NAME_in_stat271); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				NAME56_tree = (object)adaptor.Create(NAME56, "NAME56", retval);
-				adaptor.AddChild(root_0, NAME56_tree);
-				}
-				DebugLocation(40, 29);
-				PushFollow(Follow._funcbody_in_stat273);
-				funcbody57=funcbody();
+				DebugLocation(79, 27);
+				PushFollow(Follow._explist_in_stat310);
+				explist55=explist();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, funcbody57.Tree, funcbody57, "funcbody57", retval);
-
+				if (state.backtracking == 0) adaptor.AddChild(root_0, explist55.Tree, explist55, "explist55", retval);
+				DebugLocation(79, 35);
+				string_literal56=(IToken)Match(input,53,Follow._53_in_stat312); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal56_tree = (object)adaptor.Create(string_literal56, "string_literal56", retval);
+				adaptor.AddChild(root_0, string_literal56_tree);
 				}
-				break;
-			case 11:
-				DebugEnterAlt(11);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:41:5: 'local' namelist ( '=' explist1 )?
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(41, 5);
-				string_literal58=(IToken)Match(input,54,Follow._54_in_stat282); if (state.failed) return retval;
+				DebugLocation(79, 40);
+				PushFollow(Follow._block_in_stat314);
+				block57=block();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block57.Tree, block57, "block57", retval);
+				DebugLocation(79, 46);
+				string_literal58=(IToken)Match(input,56,Follow._56_in_stat316); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal58_tree = (object)adaptor.Create(string_literal58, "string_literal58", retval);
 				adaptor.AddChild(root_0, string_literal58_tree);
 				}
-				DebugLocation(41, 13);
-				PushFollow(Follow._namelist_in_stat284);
-				namelist59=namelist();
+
+				}
+				break;
+			case 13:
+				DebugEnterAlt(13);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:80:7: 'function' funcname funcbody
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(80, 7);
+				string_literal59=(IToken)Match(input,59,Follow._59_in_stat324); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal59_tree = (object)adaptor.Create(string_literal59, "string_literal59", retval);
+				adaptor.AddChild(root_0, string_literal59_tree);
+				}
+				DebugLocation(80, 18);
+				PushFollow(Follow._funcname_in_stat326);
+				funcname60=funcname();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, namelist59.Tree, namelist59, "namelist59", retval);
-				DebugLocation(41, 22);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:41:22: ( '=' explist1 )?
+				if (state.backtracking == 0) adaptor.AddChild(root_0, funcname60.Tree, funcname60, "funcname60", retval);
+				DebugLocation(80, 27);
+				PushFollow(Follow._funcbody_in_stat328);
+				funcbody61=funcbody();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, funcbody61.Tree, funcbody61, "funcbody61", retval);
+
+				}
+				break;
+			case 14:
+				DebugEnterAlt(14);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:81:7: 'local' 'function' NAME funcbody
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(81, 7);
+				string_literal62=(IToken)Match(input,63,Follow._63_in_stat336); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal62_tree = (object)adaptor.Create(string_literal62, "string_literal62", retval);
+				adaptor.AddChild(root_0, string_literal62_tree);
+				}
+				DebugLocation(81, 15);
+				string_literal63=(IToken)Match(input,59,Follow._59_in_stat338); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal63_tree = (object)adaptor.Create(string_literal63, "string_literal63", retval);
+				adaptor.AddChild(root_0, string_literal63_tree);
+				}
+				DebugLocation(81, 26);
+				NAME64=(IToken)Match(input,NAME,Follow._NAME_in_stat340); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				NAME64_tree = (object)adaptor.Create(NAME64, "NAME64", retval);
+				adaptor.AddChild(root_0, NAME64_tree);
+				}
+				DebugLocation(81, 31);
+				PushFollow(Follow._funcbody_in_stat342);
+				funcbody65=funcbody();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, funcbody65.Tree, funcbody65, "funcbody65", retval);
+
+				}
+				break;
+			case 15:
+				DebugEnterAlt(15);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:82:7: 'local' namelist ( '=' explist )?
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(82, 7);
+				string_literal66=(IToken)Match(input,63,Follow._63_in_stat350); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal66_tree = (object)adaptor.Create(string_literal66, "string_literal66", retval);
+				adaptor.AddChild(root_0, string_literal66_tree);
+				}
+				DebugLocation(82, 15);
+				PushFollow(Follow._namelist_in_stat352);
+				namelist67=namelist();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, namelist67.Tree, namelist67, "namelist67", retval);
+				DebugLocation(82, 24);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:82:24: ( '=' explist )?
 				int alt8=2;
 				try { DebugEnterSubRule(8);
 				try { DebugEnterDecision(8, false);
 				int LA8_1 = input.LA(1);
 
-				if ((LA8_1==36))
+				if ((LA8_1==42))
 				{
 					alt8 = 1;
 				}
@@ -1158,20 +1395,20 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:41:23: '=' explist1
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:82:25: '=' explist
 					{
-					DebugLocation(41, 23);
-					char_literal60=(IToken)Match(input,36,Follow._36_in_stat287); if (state.failed) return retval;
+					DebugLocation(82, 25);
+					char_literal68=(IToken)Match(input,42,Follow._42_in_stat355); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal60_tree = (object)adaptor.Create(char_literal60, "char_literal60", retval);
-					adaptor.AddChild(root_0, char_literal60_tree);
+					char_literal68_tree = (object)adaptor.Create(char_literal68, "char_literal68", retval);
+					adaptor.AddChild(root_0, char_literal68_tree);
 					}
-					DebugLocation(41, 27);
-					PushFollow(Follow._explist1_in_stat289);
-					explist161=explist1();
+					DebugLocation(82, 29);
+					PushFollow(Follow._explist_in_stat357);
+					explist69=explist();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, explist161.Tree, explist161, "explist161", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, explist69.Tree, explist69, "explist69", retval);
 
 					}
 					break;
@@ -1200,128 +1437,124 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("stat", 3);
-			LeaveRule("stat", 3);
+			TraceOut("stat", 4);
+			LeaveRule("stat", 4);
 			LeaveRule_stat();
+			if (state.backtracking > 0) { Memoize(input, 4, stat_StartIndex); }
+
 		}
-		DebugLocation(41, 37);
+		DebugLocation(83, 4);
 		} finally { DebugExitRule(GrammarFileName, "stat"); }
 		return retval;
 
 	}
 	// $ANTLR end "stat"
 
-	partial void EnterRule_laststat();
-	partial void LeaveRule_laststat();
-	// $ANTLR start "laststat"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:43:1: laststat : ( 'return' ( explist1 )? | 'break' );
-	[GrammarRule("laststat")]
-	private Antlr3AstNode laststat()
+	partial void EnterRule_retstat();
+	partial void LeaveRule_retstat();
+	// $ANTLR start "retstat"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:85:1: retstat : 'return' ( explist )? ( ';' )? ;
+	[GrammarRule("retstat")]
+	private Antlr3AstNode retstat()
 	{
-		EnterRule_laststat();
-		EnterRule("laststat", 4);
-		var retval = new Antlr3AstNode("laststat");
+		EnterRule_retstat();
+		EnterRule("retstat", 5);
+		var retval = new Antlr3AstNode("retstat");
 		
 		retval.Start = (IToken)input.LT(1);
+		int retstat_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken string_literal62 = default(IToken);
-		IToken string_literal64 = default(IToken);
-		Antlr3AstNode explist163 = default(Antlr3AstNode);
+		IToken string_literal70 = default(IToken);
+		IToken char_literal72 = default(IToken);
+		Antlr3AstNode explist71 = default(Antlr3AstNode);
 
-		object string_literal62_tree = default(object);
-		object string_literal64_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "laststat");
-		DebugLocation(43, 41);
+		object string_literal70_tree = default(object);
+		object char_literal72_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "retstat");
+		DebugLocation(85, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:43:10: ( 'return' ( explist1 )? | 'break' )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 5)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:86:5: ( 'return' ( explist )? ( ';' )? )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:86:7: 'return' ( explist )? ( ';' )?
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(86, 7);
+			string_literal70=(IToken)Match(input,68,Follow._68_in_retstat376); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			string_literal70_tree = (object)adaptor.Create(string_literal70, "string_literal70", retval);
+			adaptor.AddChild(root_0, string_literal70_tree);
+			}
+			DebugLocation(86, 16);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:86:16: ( explist )?
+			int alt10=2;
+			try { DebugEnterSubRule(10);
+			try { DebugEnterDecision(10, false);
+			int LA10_1 = input.LA(1);
+
+			if ((LA10_1==CHARSTRING||(LA10_1>=FLOAT && LA10_1<=HEX_FLOAT)||LA10_1==INT||(LA10_1>=LONGSTRING && LA10_1<=NAME)||LA10_1==NORMALSTRING||LA10_1==25||LA10_1==27||LA10_1==32||LA10_1==35||LA10_1==57||LA10_1==59||(LA10_1>=64 && LA10_1<=65)||LA10_1==70||LA10_1==73))
+			{
+				alt10 = 1;
+			}
+			} finally { DebugExitDecision(10); }
+			switch (alt10)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:86:16: explist
+				{
+				DebugLocation(86, 16);
+				PushFollow(Follow._explist_in_retstat378);
+				explist71=explist();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, explist71.Tree, explist71, "explist71", retval);
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(10); }
+
+			DebugLocation(86, 25);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:86:25: ( ';' )?
 			int alt11=2;
+			try { DebugEnterSubRule(11);
 			try { DebugEnterDecision(11, false);
 			int LA11_1 = input.LA(1);
 
-			if ((LA11_1==59))
+			if ((LA11_1==39))
 			{
 				alt11 = 1;
-			}
-			else if ((LA11_1==44))
-			{
-				alt11 = 2;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 11, 0, input, 1);
-				DebugRecognitionException(nvae);
-				throw nvae;
 			}
 			} finally { DebugExitDecision(11); }
 			switch (alt11)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:43:12: 'return' ( explist1 )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:86:25: ';'
 				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(43, 12);
-				string_literal62=(IToken)Match(input,59,Follow._59_in_laststat300); if (state.failed) return retval;
+				DebugLocation(86, 25);
+				char_literal72=(IToken)Match(input,39,Follow._39_in_retstat381); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal62_tree = (object)adaptor.Create(string_literal62, "string_literal62", retval);
-				adaptor.AddChild(root_0, string_literal62_tree);
-				}
-				DebugLocation(43, 21);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:43:21: ( explist1 )?
-				int alt10=2;
-				try { DebugEnterSubRule(10);
-				try { DebugEnterDecision(10, false);
-				int LA10_1 = input.LA(1);
-
-				if ((LA10_1==CHARSTRING||LA10_1==EXP||(LA10_1>=FLOAT && LA10_1<=HEX)||LA10_1==INT||(LA10_1>=LONGSTRING && LA10_1<=NAME)||LA10_1==NORMALSTRING||LA10_1==20||LA10_1==22||LA10_1==27||LA10_1==30||LA10_1==49||LA10_1==51||(LA10_1>=55 && LA10_1<=56)||LA10_1==61||LA10_1==64))
-				{
-					alt10 = 1;
-				}
-				} finally { DebugExitDecision(10); }
-				switch (alt10)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:43:22: explist1
-					{
-					DebugLocation(43, 22);
-					PushFollow(Follow._explist1_in_laststat303);
-					explist163=explist1();
-					PopFollow();
-					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, explist163.Tree, explist163, "explist163", retval);
-
-					}
-					break;
-
-				}
-				} finally { DebugExitSubRule(10); }
-
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:43:35: 'break'
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(43, 35);
-				string_literal64=(IToken)Match(input,44,Follow._44_in_laststat309); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal64_tree = (object)adaptor.Create(string_literal64, "string_literal64", retval);
-				adaptor.AddChild(root_0, string_literal64_tree);
+				char_literal72_tree = (object)adaptor.Create(char_literal72, "char_literal72", retval);
+				adaptor.AddChild(root_0, char_literal72_tree);
 				}
 
 				}
 				break;
 
 			}
+			} finally { DebugExitSubRule(11); }
+
+
+			}
+
 			retval.Stop = (IToken)input.LT(-1);
 
 			if (state.backtracking == 0) {
@@ -1338,61 +1571,151 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("laststat", 4);
-			LeaveRule("laststat", 4);
-			LeaveRule_laststat();
+			TraceOut("retstat", 5);
+			LeaveRule("retstat", 5);
+			LeaveRule_retstat();
+			if (state.backtracking > 0) { Memoize(input, 5, retstat_StartIndex); }
+
 		}
-		DebugLocation(43, 41);
-		} finally { DebugExitRule(GrammarFileName, "laststat"); }
+		DebugLocation(87, 4);
+		} finally { DebugExitRule(GrammarFileName, "retstat"); }
 		return retval;
 
 	}
-	// $ANTLR end "laststat"
+	// $ANTLR end "retstat"
+
+	partial void EnterRule_label();
+	partial void LeaveRule_label();
+	// $ANTLR start "label"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:89:1: label : '::' NAME '::' ;
+	[GrammarRule("label")]
+	private Antlr3AstNode label()
+	{
+		EnterRule_label();
+		EnterRule("label", 6);
+		var retval = new Antlr3AstNode("label");
+		
+		retval.Start = (IToken)input.LT(1);
+		int label_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken string_literal73 = default(IToken);
+		IToken NAME74 = default(IToken);
+		IToken string_literal75 = default(IToken);
+
+		object string_literal73_tree = default(object);
+		object NAME74_tree = default(object);
+		object string_literal75_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "label");
+		DebugLocation(89, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 6)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:90:5: ( '::' NAME '::' )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:90:7: '::' NAME '::'
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(90, 7);
+			string_literal73=(IToken)Match(input,38,Follow._38_in_label399); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			string_literal73_tree = (object)adaptor.Create(string_literal73, "string_literal73", retval);
+			adaptor.AddChild(root_0, string_literal73_tree);
+			}
+			DebugLocation(90, 12);
+			NAME74=(IToken)Match(input,NAME,Follow._NAME_in_label401); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			NAME74_tree = (object)adaptor.Create(NAME74, "NAME74", retval);
+			adaptor.AddChild(root_0, NAME74_tree);
+			}
+			DebugLocation(90, 17);
+			string_literal75=(IToken)Match(input,38,Follow._38_in_label403); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			string_literal75_tree = (object)adaptor.Create(string_literal75, "string_literal75", retval);
+			adaptor.AddChild(root_0, string_literal75_tree);
+			}
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("label", 6);
+			LeaveRule("label", 6);
+			LeaveRule_label();
+			if (state.backtracking > 0) { Memoize(input, 6, label_StartIndex); }
+
+		}
+		DebugLocation(91, 4);
+		} finally { DebugExitRule(GrammarFileName, "label"); }
+		return retval;
+
+	}
+	// $ANTLR end "label"
 
 	partial void EnterRule_funcname();
 	partial void LeaveRule_funcname();
 	// $ANTLR start "funcname"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:45:1: funcname : NAME ( '.' NAME )* ( ':' NAME )? ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:93:1: funcname : NAME ( '.' NAME )* ( ':' NAME )? ;
 	[GrammarRule("funcname")]
 	private Antlr3AstNode funcname()
 	{
 		EnterRule_funcname();
-		EnterRule("funcname", 5);
+		EnterRule("funcname", 7);
 		var retval = new Antlr3AstNode("funcname");
 		
 		retval.Start = (IToken)input.LT(1);
+		int funcname_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken NAME65 = default(IToken);
-		IToken char_literal66 = default(IToken);
-		IToken NAME67 = default(IToken);
-		IToken char_literal68 = default(IToken);
-		IToken NAME69 = default(IToken);
+		IToken NAME76 = default(IToken);
+		IToken char_literal77 = default(IToken);
+		IToken NAME78 = default(IToken);
+		IToken char_literal79 = default(IToken);
+		IToken NAME80 = default(IToken);
 
-		object NAME65_tree = default(object);
-		object char_literal66_tree = default(object);
-		object NAME67_tree = default(object);
-		object char_literal68_tree = default(object);
-		object NAME69_tree = default(object);
+		object NAME76_tree = default(object);
+		object char_literal77_tree = default(object);
+		object NAME78_tree = default(object);
+		object char_literal79_tree = default(object);
+		object NAME80_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "funcname");
-		DebugLocation(45, 40);
+		DebugLocation(93, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:45:10: ( NAME ( '.' NAME )* ( ':' NAME )? )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 7)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:94:5: ( NAME ( '.' NAME )* ( ':' NAME )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:45:12: NAME ( '.' NAME )* ( ':' NAME )?
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:94:7: NAME ( '.' NAME )* ( ':' NAME )?
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(45, 12);
-			NAME65=(IToken)Match(input,NAME,Follow._NAME_in_funcname317); if (state.failed) return retval;
+			DebugLocation(94, 7);
+			NAME76=(IToken)Match(input,NAME,Follow._NAME_in_funcname420); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			NAME65_tree = (object)adaptor.Create(NAME65, "NAME65", retval);
-			adaptor.AddChild(root_0, NAME65_tree);
+			NAME76_tree = (object)adaptor.Create(NAME76, "NAME76", retval);
+			adaptor.AddChild(root_0, NAME76_tree);
 			}
-			DebugLocation(45, 17);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:45:17: ( '.' NAME )*
+			DebugLocation(94, 12);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:94:12: ( '.' NAME )*
 			try { DebugEnterSubRule(12);
 			while (true)
 			{
@@ -1400,7 +1723,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(12, false);
 				int LA12_1 = input.LA(1);
 
-				if ((LA12_1==28))
+				if ((LA12_1==33))
 				{
 					alt12 = 1;
 				}
@@ -1411,19 +1734,19 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:45:18: '.' NAME
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:94:13: '.' NAME
 					{
-					DebugLocation(45, 18);
-					char_literal66=(IToken)Match(input,28,Follow._28_in_funcname320); if (state.failed) return retval;
+					DebugLocation(94, 13);
+					char_literal77=(IToken)Match(input,33,Follow._33_in_funcname423); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal66_tree = (object)adaptor.Create(char_literal66, "char_literal66", retval);
-					adaptor.AddChild(root_0, char_literal66_tree);
+					char_literal77_tree = (object)adaptor.Create(char_literal77, "char_literal77", retval);
+					adaptor.AddChild(root_0, char_literal77_tree);
 					}
-					DebugLocation(45, 22);
-					NAME67=(IToken)Match(input,NAME,Follow._NAME_in_funcname322); if (state.failed) return retval;
+					DebugLocation(94, 17);
+					NAME78=(IToken)Match(input,NAME,Follow._NAME_in_funcname425); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					NAME67_tree = (object)adaptor.Create(NAME67, "NAME67", retval);
-					adaptor.AddChild(root_0, NAME67_tree);
+					NAME78_tree = (object)adaptor.Create(NAME78, "NAME78", retval);
+					adaptor.AddChild(root_0, NAME78_tree);
 					}
 
 					}
@@ -1439,14 +1762,14 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 			} finally { DebugExitSubRule(12); }
 
-			DebugLocation(45, 29);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:45:29: ( ':' NAME )?
+			DebugLocation(94, 24);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:94:24: ( ':' NAME )?
 			int alt13=2;
 			try { DebugEnterSubRule(13);
 			try { DebugEnterDecision(13, false);
 			int LA13_1 = input.LA(1);
 
-			if ((LA13_1==32))
+			if ((LA13_1==37))
 			{
 				alt13 = 1;
 			}
@@ -1455,19 +1778,19 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:45:30: ':' NAME
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:94:25: ':' NAME
 				{
-				DebugLocation(45, 30);
-				char_literal68=(IToken)Match(input,32,Follow._32_in_funcname327); if (state.failed) return retval;
+				DebugLocation(94, 25);
+				char_literal79=(IToken)Match(input,37,Follow._37_in_funcname430); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal68_tree = (object)adaptor.Create(char_literal68, "char_literal68", retval);
-				adaptor.AddChild(root_0, char_literal68_tree);
+				char_literal79_tree = (object)adaptor.Create(char_literal79, "char_literal79", retval);
+				adaptor.AddChild(root_0, char_literal79_tree);
 				}
-				DebugLocation(45, 34);
-				NAME69=(IToken)Match(input,NAME,Follow._NAME_in_funcname329); if (state.failed) return retval;
+				DebugLocation(94, 29);
+				NAME80=(IToken)Match(input,NAME,Follow._NAME_in_funcname432); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				NAME69_tree = (object)adaptor.Create(NAME69, "NAME69", retval);
-				adaptor.AddChild(root_0, NAME69_tree);
+				NAME80_tree = (object)adaptor.Create(NAME80, "NAME80", retval);
+				adaptor.AddChild(root_0, NAME80_tree);
 				}
 
 				}
@@ -1495,55 +1818,60 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("funcname", 5);
-			LeaveRule("funcname", 5);
+			TraceOut("funcname", 7);
+			LeaveRule("funcname", 7);
 			LeaveRule_funcname();
+			if (state.backtracking > 0) { Memoize(input, 7, funcname_StartIndex); }
+
 		}
-		DebugLocation(45, 40);
+		DebugLocation(95, 4);
 		} finally { DebugExitRule(GrammarFileName, "funcname"); }
 		return retval;
 
 	}
 	// $ANTLR end "funcname"
 
-	partial void EnterRule_varlist1();
-	partial void LeaveRule_varlist1();
-	// $ANTLR start "varlist1"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:47:1: varlist1 : var ( ',' var )* ;
-	[GrammarRule("varlist1")]
-	private Antlr3AstNode varlist1()
+	partial void EnterRule_varlist();
+	partial void LeaveRule_varlist();
+	// $ANTLR start "varlist"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:97:1: varlist : var ( ',' var )* ;
+	[GrammarRule("varlist")]
+	private Antlr3AstNode varlist()
 	{
-		EnterRule_varlist1();
-		EnterRule("varlist1", 6);
-		var retval = new Antlr3AstNode("varlist1");
+		EnterRule_varlist();
+		EnterRule("varlist", 8);
+		var retval = new Antlr3AstNode("varlist");
 		
 		retval.Start = (IToken)input.LT(1);
+		int varlist_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal71 = default(IToken);
-		Antlr3AstNode var70 = default(Antlr3AstNode);
-		Antlr3AstNode var72 = default(Antlr3AstNode);
+		IToken char_literal82 = default(IToken);
+		Antlr3AstNode var81 = default(Antlr3AstNode);
+		Antlr3AstNode var83 = default(Antlr3AstNode);
 
-		object char_literal71_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "varlist1");
-		DebugLocation(47, 25);
+		object char_literal82_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "varlist");
+		DebugLocation(97, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:47:10: ( var ( ',' var )* )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 8)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:98:5: ( var ( ',' var )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:47:12: var ( ',' var )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:98:7: var ( ',' var )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(47, 12);
-			PushFollow(Follow._var_in_varlist1340);
-			var70=var();
+			DebugLocation(98, 7);
+			PushFollow(Follow._var_in_varlist451);
+			var81=var();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, var70.Tree, var70, "var70", retval);
-			DebugLocation(47, 16);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:47:16: ( ',' var )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, var81.Tree, var81, "var81", retval);
+			DebugLocation(98, 11);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:98:11: ( ',' var )*
 			try { DebugEnterSubRule(14);
 			while (true)
 			{
@@ -1551,7 +1879,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(14, false);
 				int LA14_1 = input.LA(1);
 
-				if ((LA14_1==26))
+				if ((LA14_1==31))
 				{
 					alt14 = 1;
 				}
@@ -1562,20 +1890,20 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:47:17: ',' var
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:98:12: ',' var
 					{
-					DebugLocation(47, 17);
-					char_literal71=(IToken)Match(input,26,Follow._26_in_varlist1343); if (state.failed) return retval;
+					DebugLocation(98, 12);
+					char_literal82=(IToken)Match(input,31,Follow._31_in_varlist454); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal71_tree = (object)adaptor.Create(char_literal71, "char_literal71", retval);
-					adaptor.AddChild(root_0, char_literal71_tree);
+					char_literal82_tree = (object)adaptor.Create(char_literal82, "char_literal82", retval);
+					adaptor.AddChild(root_0, char_literal82_tree);
 					}
-					DebugLocation(47, 21);
-					PushFollow(Follow._var_in_varlist1345);
-					var72=var();
+					DebugLocation(98, 16);
+					PushFollow(Follow._var_in_varlist456);
+					var83=var();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, var72.Tree, var72, "var72", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, var83.Tree, var83, "var83", retval);
 
 					}
 					break;
@@ -1609,57 +1937,62 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("varlist1", 6);
-			LeaveRule("varlist1", 6);
-			LeaveRule_varlist1();
+			TraceOut("varlist", 8);
+			LeaveRule("varlist", 8);
+			LeaveRule_varlist();
+			if (state.backtracking > 0) { Memoize(input, 8, varlist_StartIndex); }
+
 		}
-		DebugLocation(47, 25);
-		} finally { DebugExitRule(GrammarFileName, "varlist1"); }
+		DebugLocation(99, 4);
+		} finally { DebugExitRule(GrammarFileName, "varlist"); }
 		return retval;
 
 	}
-	// $ANTLR end "varlist1"
+	// $ANTLR end "varlist"
 
 	partial void EnterRule_namelist();
 	partial void LeaveRule_namelist();
 	// $ANTLR start "namelist"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:50:1: namelist : NAME ( ',' NAME )* ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:101:1: namelist : NAME ( ',' NAME )* ;
 	[GrammarRule("namelist")]
 	private Antlr3AstNode namelist()
 	{
 		EnterRule_namelist();
-		EnterRule("namelist", 7);
+		EnterRule("namelist", 9);
 		var retval = new Antlr3AstNode("namelist");
 		
 		retval.Start = (IToken)input.LT(1);
+		int namelist_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken NAME73 = default(IToken);
-		IToken char_literal74 = default(IToken);
-		IToken NAME75 = default(IToken);
+		IToken NAME84 = default(IToken);
+		IToken char_literal85 = default(IToken);
+		IToken NAME86 = default(IToken);
 
-		object NAME73_tree = default(object);
-		object char_literal74_tree = default(object);
-		object NAME75_tree = default(object);
+		object NAME84_tree = default(object);
+		object char_literal85_tree = default(object);
+		object NAME86_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "namelist");
-		DebugLocation(50, 27);
+		DebugLocation(101, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:50:10: ( NAME ( ',' NAME )* )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 9)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:102:5: ( NAME ( ',' NAME )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:50:12: NAME ( ',' NAME )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:102:7: NAME ( ',' NAME )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(50, 12);
-			NAME73=(IToken)Match(input,NAME,Follow._NAME_in_namelist356); if (state.failed) return retval;
+			DebugLocation(102, 7);
+			NAME84=(IToken)Match(input,NAME,Follow._NAME_in_namelist475); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			NAME73_tree = (object)adaptor.Create(NAME73, "NAME73", retval);
-			adaptor.AddChild(root_0, NAME73_tree);
+			NAME84_tree = (object)adaptor.Create(NAME84, "NAME84", retval);
+			adaptor.AddChild(root_0, NAME84_tree);
 			}
-			DebugLocation(50, 17);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:50:17: ( ',' NAME )*
+			DebugLocation(102, 12);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:102:12: ( ',' NAME )*
 			try { DebugEnterSubRule(15);
 			while (true)
 			{
@@ -1667,7 +2000,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(15, false);
 				int LA15_1 = input.LA(1);
 
-				if ((LA15_1==26))
+				if ((LA15_1==31))
 				{
 					int LA15_2 = input.LA(2);
 
@@ -1685,19 +2018,19 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:50:18: ',' NAME
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:102:13: ',' NAME
 					{
-					DebugLocation(50, 18);
-					char_literal74=(IToken)Match(input,26,Follow._26_in_namelist359); if (state.failed) return retval;
+					DebugLocation(102, 13);
+					char_literal85=(IToken)Match(input,31,Follow._31_in_namelist478); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal74_tree = (object)adaptor.Create(char_literal74, "char_literal74", retval);
-					adaptor.AddChild(root_0, char_literal74_tree);
+					char_literal85_tree = (object)adaptor.Create(char_literal85, "char_literal85", retval);
+					adaptor.AddChild(root_0, char_literal85_tree);
 					}
-					DebugLocation(50, 22);
-					NAME75=(IToken)Match(input,NAME,Follow._NAME_in_namelist361); if (state.failed) return retval;
+					DebugLocation(102, 17);
+					NAME86=(IToken)Match(input,NAME,Follow._NAME_in_namelist480); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					NAME75_tree = (object)adaptor.Create(NAME75, "NAME75", retval);
-					adaptor.AddChild(root_0, NAME75_tree);
+					NAME86_tree = (object)adaptor.Create(NAME86, "NAME86", retval);
+					adaptor.AddChild(root_0, NAME86_tree);
 					}
 
 					}
@@ -1732,216 +2065,92 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("namelist", 7);
-			LeaveRule("namelist", 7);
+			TraceOut("namelist", 9);
+			LeaveRule("namelist", 9);
 			LeaveRule_namelist();
+			if (state.backtracking > 0) { Memoize(input, 9, namelist_StartIndex); }
+
 		}
-		DebugLocation(50, 27);
+		DebugLocation(103, 4);
 		} finally { DebugExitRule(GrammarFileName, "namelist"); }
 		return retval;
 
 	}
 	// $ANTLR end "namelist"
 
-	partial void EnterRule_explist1();
-	partial void LeaveRule_explist1();
-	// $ANTLR start "explist1"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:52:1: explist1 : ( exp ',' )* exp ;
-	[GrammarRule("explist1")]
-	private Antlr3AstNode explist1()
+	partial void EnterRule_explist();
+	partial void LeaveRule_explist();
+	// $ANTLR start "explist"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:105:1: explist : exp ( ',' exp )* ;
+	[GrammarRule("explist")]
+	private Antlr3AstNode explist()
 	{
-		EnterRule_explist1();
-		EnterRule("explist1", 8);
-		var retval = new Antlr3AstNode("explist1");
+		EnterRule_explist();
+		EnterRule("explist", 10);
+		var retval = new Antlr3AstNode("explist");
 		
 		retval.Start = (IToken)input.LT(1);
+		int explist_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal77 = default(IToken);
-		Antlr3AstNode exp76 = default(Antlr3AstNode);
-		Antlr3AstNode exp78 = default(Antlr3AstNode);
+		IToken char_literal88 = default(IToken);
+		Antlr3AstNode exp87 = default(Antlr3AstNode);
+		Antlr3AstNode exp89 = default(Antlr3AstNode);
 
-		object char_literal77_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "explist1");
-		DebugLocation(52, 25);
+		object char_literal88_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "explist");
+		DebugLocation(105, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:52:10: ( ( exp ',' )* exp )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 10)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:106:5: ( exp ( ',' exp )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:52:12: ( exp ',' )* exp
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:106:7: exp ( ',' exp )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(52, 12);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:52:12: ( exp ',' )*
+			DebugLocation(106, 7);
+			PushFollow(Follow._exp_in_explist499);
+			exp87=exp();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, exp87.Tree, exp87, "exp87", retval);
+			DebugLocation(106, 11);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:106:11: ( ',' exp )*
 			try { DebugEnterSubRule(16);
 			while (true)
 			{
 				int alt16=2;
 				try { DebugEnterDecision(16, false);
-				switch (input.LA(1))
+				int LA16_1 = input.LA(1);
+
+				if ((LA16_1==31))
 				{
-				case 55:
-					{
-					int LA16_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred25_Lua_fragment)))
-					{
-						alt16 = 1;
-					}
-
-
-					}
-					break;
-				case 49:
-					{
-					int LA16_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred25_Lua_fragment)))
-					{
-						alt16 = 1;
-					}
-
-
-					}
-					break;
-				case 61:
-					{
-					int LA16_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred25_Lua_fragment)))
-					{
-						alt16 = 1;
-					}
-
-
-					}
-					break;
-				case EXP:
-				case FLOAT:
-				case HEX:
-				case INT:
-					{
-					int LA16_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred25_Lua_fragment)))
-					{
-						alt16 = 1;
-					}
-
-
-					}
-					break;
-				case CHARSTRING:
-				case LONGSTRING:
-				case NORMALSTRING:
-					{
-					int LA16_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred25_Lua_fragment)))
-					{
-						alt16 = 1;
-					}
-
-
-					}
-					break;
-				case 30:
-					{
-					int LA16_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred25_Lua_fragment)))
-					{
-						alt16 = 1;
-					}
-
-
-					}
-					break;
-				case 51:
-					{
-					int LA16_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred25_Lua_fragment)))
-					{
-						alt16 = 1;
-					}
-
-
-					}
-					break;
-				case NAME:
-					{
-					int LA16_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred25_Lua_fragment)))
-					{
-						alt16 = 1;
-					}
-
-
-					}
-					break;
-				case 22:
-					{
-					int LA16_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred25_Lua_fragment)))
-					{
-						alt16 = 1;
-					}
-
-
-					}
-					break;
-				case 64:
-					{
-					int LA16_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred25_Lua_fragment)))
-					{
-						alt16 = 1;
-					}
-
-
-					}
-					break;
-				case 20:
-				case 27:
-				case 56:
-					{
-					int LA16_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred25_Lua_fragment)))
-					{
-						alt16 = 1;
-					}
-
-
-					}
-					break;
+					alt16 = 1;
 				}
+
 
 				} finally { DebugExitDecision(16); }
 				switch ( alt16 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:52:13: exp ','
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:106:12: ',' exp
 					{
-					DebugLocation(52, 13);
-					PushFollow(Follow._exp_in_explist1372);
-					exp76=exp();
+					DebugLocation(106, 12);
+					char_literal88=(IToken)Match(input,31,Follow._31_in_explist502); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal88_tree = (object)adaptor.Create(char_literal88, "char_literal88", retval);
+					adaptor.AddChild(root_0, char_literal88_tree);
+					}
+					DebugLocation(106, 16);
+					PushFollow(Follow._exp_in_explist504);
+					exp89=exp();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, exp76.Tree, exp76, "exp76", retval);
-					DebugLocation(52, 17);
-					char_literal77=(IToken)Match(input,26,Follow._26_in_explist1374); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal77_tree = (object)adaptor.Create(char_literal77, "char_literal77", retval);
-					adaptor.AddChild(root_0, char_literal77_tree);
-					}
+					if (state.backtracking == 0) adaptor.AddChild(root_0, exp89.Tree, exp89, "exp89", retval);
 
 					}
 					break;
@@ -1956,12 +2165,6 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 			} finally { DebugExitSubRule(16); }
 
-			DebugLocation(52, 23);
-			PushFollow(Follow._exp_in_explist1378);
-			exp78=exp();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, exp78.Tree, exp78, "exp78", retval);
 
 			}
 
@@ -1981,85 +2184,90 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("explist1", 8);
-			LeaveRule("explist1", 8);
-			LeaveRule_explist1();
+			TraceOut("explist", 10);
+			LeaveRule("explist", 10);
+			LeaveRule_explist();
+			if (state.backtracking > 0) { Memoize(input, 10, explist_StartIndex); }
+
 		}
-		DebugLocation(52, 25);
-		} finally { DebugExitRule(GrammarFileName, "explist1"); }
+		DebugLocation(107, 4);
+		} finally { DebugExitRule(GrammarFileName, "explist"); }
 		return retval;
 
 	}
-	// $ANTLR end "explist1"
+	// $ANTLR end "explist"
 
 	partial void EnterRule_exp();
 	partial void LeaveRule_exp();
 	// $ANTLR start "exp"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:1: exp : ( 'nil' | 'false' | 'true' | lua_number | lua_string | '...' | function | prefixexp | tableconstructor | unop exp ) ( binop exp )* ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:109:1: exp : ( 'nil' | 'false' | 'true' | number | string | '...' | functiondef | prefixexp | tableconstructor | unop exp ) ( binop exp )* ;
 	[GrammarRule("exp")]
 	private Antlr3AstNode exp()
 	{
 		EnterRule_exp();
-		EnterRule("exp", 9);
+		EnterRule("exp", 11);
 		var retval = new Antlr3AstNode("exp");
 		
 		retval.Start = (IToken)input.LT(1);
+		int exp_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken string_literal79 = default(IToken);
-		IToken string_literal80 = default(IToken);
-		IToken string_literal81 = default(IToken);
-		IToken string_literal84 = default(IToken);
-		Antlr3AstNode lua_number82 = default(Antlr3AstNode);
-		Antlr3AstNode lua_string83 = default(Antlr3AstNode);
-		Antlr3AstNode function85 = default(Antlr3AstNode);
-		Antlr3AstNode prefixexp86 = default(Antlr3AstNode);
-		Antlr3AstNode tableconstructor87 = default(Antlr3AstNode);
-		Antlr3AstNode unop88 = default(Antlr3AstNode);
-		Antlr3AstNode exp89 = default(Antlr3AstNode);
-		Antlr3AstNode binop90 = default(Antlr3AstNode);
-		Antlr3AstNode exp91 = default(Antlr3AstNode);
+		IToken string_literal90 = default(IToken);
+		IToken string_literal91 = default(IToken);
+		IToken string_literal92 = default(IToken);
+		IToken string_literal95 = default(IToken);
+		Antlr3AstNode number93 = default(Antlr3AstNode);
+		Antlr3AstNode string94 = default(Antlr3AstNode);
+		Antlr3AstNode functiondef96 = default(Antlr3AstNode);
+		Antlr3AstNode prefixexp97 = default(Antlr3AstNode);
+		Antlr3AstNode tableconstructor98 = default(Antlr3AstNode);
+		Antlr3AstNode unop99 = default(Antlr3AstNode);
+		Antlr3AstNode exp100 = default(Antlr3AstNode);
+		Antlr3AstNode binop101 = default(Antlr3AstNode);
+		Antlr3AstNode exp102 = default(Antlr3AstNode);
 
-		object string_literal79_tree = default(object);
-		object string_literal80_tree = default(object);
-		object string_literal81_tree = default(object);
-		object string_literal84_tree = default(object);
+		object string_literal90_tree = default(object);
+		object string_literal91_tree = default(object);
+		object string_literal92_tree = default(object);
+		object string_literal95_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "exp");
-		DebugLocation(54, 134);
+		DebugLocation(109, 1);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:5: ( ( 'nil' | 'false' | 'true' | lua_number | lua_string | '...' | function | prefixexp | tableconstructor | unop exp ) ( binop exp )* )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 11)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:110:5: ( ( 'nil' | 'false' | 'true' | number | string | '...' | functiondef | prefixexp | tableconstructor | unop exp ) ( binop exp )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:8: ( 'nil' | 'false' | 'true' | lua_number | lua_string | '...' | function | prefixexp | tableconstructor | unop exp ) ( binop exp )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:110:7: ( 'nil' | 'false' | 'true' | number | string | '...' | functiondef | prefixexp | tableconstructor | unop exp ) ( binop exp )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(54, 8);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:8: ( 'nil' | 'false' | 'true' | lua_number | lua_string | '...' | function | prefixexp | tableconstructor | unop exp )
+			DebugLocation(110, 7);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:110:7: ( 'nil' | 'false' | 'true' | number | string | '...' | functiondef | prefixexp | tableconstructor | unop exp )
 			int alt17=10;
 			try { DebugEnterSubRule(17);
 			try { DebugEnterDecision(17, false);
 			switch (input.LA(1))
 			{
-			case 55:
+			case 64:
 				{
 				alt17 = 1;
 				}
 				break;
-			case 49:
+			case 57:
 				{
 				alt17 = 2;
 				}
 				break;
-			case 61:
+			case 70:
 				{
 				alt17 = 3;
 				}
 				break;
-			case EXP:
 			case FLOAT:
 			case HEX:
+			case HEX_FLOAT:
 			case INT:
 				{
 				alt17 = 4;
@@ -2072,30 +2280,30 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				alt17 = 5;
 				}
 				break;
-			case 30:
+			case 35:
 				{
 				alt17 = 6;
 				}
 				break;
-			case 51:
+			case 59:
 				{
 				alt17 = 7;
 				}
 				break;
 			case NAME:
-			case 22:
+			case 27:
 				{
 				alt17 = 8;
 				}
 				break;
-			case 64:
+			case 73:
 				{
 				alt17 = 9;
 				}
 				break;
-			case 20:
-			case 27:
-			case 56:
+			case 25:
+			case 32:
+			case 65:
 				{
 				alt17 = 10;
 				}
@@ -2114,137 +2322,137 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:9: 'nil'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:110:8: 'nil'
 				{
-				DebugLocation(54, 9);
-				string_literal79=(IToken)Match(input,55,Follow._55_in_exp388); if (state.failed) return retval;
+				DebugLocation(110, 8);
+				string_literal90=(IToken)Match(input,64,Follow._64_in_exp524); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal79_tree = (object)adaptor.Create(string_literal79, "string_literal79", retval);
-				adaptor.AddChild(root_0, string_literal79_tree);
+				string_literal90_tree = (object)adaptor.Create(string_literal90, "string_literal90", retval);
+				adaptor.AddChild(root_0, string_literal90_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:17: 'false'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:110:16: 'false'
 				{
-				DebugLocation(54, 17);
-				string_literal80=(IToken)Match(input,49,Follow._49_in_exp392); if (state.failed) return retval;
+				DebugLocation(110, 16);
+				string_literal91=(IToken)Match(input,57,Follow._57_in_exp528); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal80_tree = (object)adaptor.Create(string_literal80, "string_literal80", retval);
-				adaptor.AddChild(root_0, string_literal80_tree);
+				string_literal91_tree = (object)adaptor.Create(string_literal91, "string_literal91", retval);
+				adaptor.AddChild(root_0, string_literal91_tree);
 				}
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:27: 'true'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:110:26: 'true'
 				{
-				DebugLocation(54, 27);
-				string_literal81=(IToken)Match(input,61,Follow._61_in_exp396); if (state.failed) return retval;
+				DebugLocation(110, 26);
+				string_literal92=(IToken)Match(input,70,Follow._70_in_exp532); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal81_tree = (object)adaptor.Create(string_literal81, "string_literal81", retval);
-				adaptor.AddChild(root_0, string_literal81_tree);
+				string_literal92_tree = (object)adaptor.Create(string_literal92, "string_literal92", retval);
+				adaptor.AddChild(root_0, string_literal92_tree);
 				}
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:36: lua_number
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:110:35: number
 				{
-				DebugLocation(54, 36);
-				PushFollow(Follow._lua_number_in_exp400);
-				lua_number82=lua_number();
+				DebugLocation(110, 35);
+				PushFollow(Follow._number_in_exp536);
+				number93=number();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, lua_number82.Tree, lua_number82, "lua_number82", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, number93.Tree, number93, "number93", retval);
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:49: lua_string
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:110:44: string
 				{
-				DebugLocation(54, 49);
-				PushFollow(Follow._lua_string_in_exp404);
-				lua_string83=lua_string();
+				DebugLocation(110, 44);
+				PushFollow(Follow._string_in_exp540);
+				string94=@string();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, lua_string83.Tree, lua_string83, "lua_string83", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, string94.Tree, string94, "string94", retval);
 
 				}
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:62: '...'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:110:53: '...'
 				{
-				DebugLocation(54, 62);
-				string_literal84=(IToken)Match(input,30,Follow._30_in_exp408); if (state.failed) return retval;
+				DebugLocation(110, 53);
+				string_literal95=(IToken)Match(input,35,Follow._35_in_exp544); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal84_tree = (object)adaptor.Create(string_literal84, "string_literal84", retval);
-				adaptor.AddChild(root_0, string_literal84_tree);
+				string_literal95_tree = (object)adaptor.Create(string_literal95, "string_literal95", retval);
+				adaptor.AddChild(root_0, string_literal95_tree);
 				}
 
 				}
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:70: function
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:110:61: functiondef
 				{
-				DebugLocation(54, 70);
-				PushFollow(Follow._function_in_exp412);
-				function85=function();
+				DebugLocation(110, 61);
+				PushFollow(Follow._functiondef_in_exp548);
+				functiondef96=functiondef();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, function85.Tree, function85, "function85", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, functiondef96.Tree, functiondef96, "functiondef96", retval);
 
 				}
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:81: prefixexp
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:111:7: prefixexp
 				{
-				DebugLocation(54, 81);
-				PushFollow(Follow._prefixexp_in_exp416);
-				prefixexp86=prefixexp();
+				DebugLocation(111, 7);
+				PushFollow(Follow._prefixexp_in_exp556);
+				prefixexp97=prefixexp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, prefixexp86.Tree, prefixexp86, "prefixexp86", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, prefixexp97.Tree, prefixexp97, "prefixexp97", retval);
 
 				}
 				break;
 			case 9:
 				DebugEnterAlt(9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:93: tableconstructor
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:111:19: tableconstructor
 				{
-				DebugLocation(54, 93);
-				PushFollow(Follow._tableconstructor_in_exp420);
-				tableconstructor87=tableconstructor();
+				DebugLocation(111, 19);
+				PushFollow(Follow._tableconstructor_in_exp560);
+				tableconstructor98=tableconstructor();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, tableconstructor87.Tree, tableconstructor87, "tableconstructor87", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, tableconstructor98.Tree, tableconstructor98, "tableconstructor98", retval);
 
 				}
 				break;
 			case 10:
 				DebugEnterAlt(10);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:112: unop exp
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:111:38: unop exp
 				{
-				DebugLocation(54, 112);
-				PushFollow(Follow._unop_in_exp424);
-				unop88=unop();
+				DebugLocation(111, 38);
+				PushFollow(Follow._unop_in_exp564);
+				unop99=unop();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unop88.Tree, unop88, "unop88", retval);
-				DebugLocation(54, 117);
-				PushFollow(Follow._exp_in_exp426);
-				exp89=exp();
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unop99.Tree, unop99, "unop99", retval);
+				DebugLocation(111, 43);
+				PushFollow(Follow._exp_in_exp566);
+				exp100=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp89.Tree, exp89, "exp89", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp100.Tree, exp100, "exp100", retval);
 
 				}
 				break;
@@ -2252,8 +2460,8 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			}
 			} finally { DebugExitSubRule(17); }
 
-			DebugLocation(54, 122);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:122: ( binop exp )*
+			DebugLocation(111, 48);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:111:48: ( binop exp )*
 			try { DebugEnterSubRule(18);
 			while (true)
 			{
@@ -2261,11 +2469,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(18, false);
 				int LA18_1 = input.LA(1);
 
-				if ((LA18_1==21||(LA18_1>=24 && LA18_1<=25)||LA18_1==27||LA18_1==29||LA18_1==31||(LA18_1>=34 && LA18_1<=35)||(LA18_1>=37 && LA18_1<=39)||(LA18_1>=42 && LA18_1<=43)||LA18_1==57||LA18_1==66))
+				if ((LA18_1==26||(LA18_1>=29 && LA18_1<=30)||LA18_1==32||LA18_1==34||LA18_1==36||(LA18_1>=40 && LA18_1<=41)||(LA18_1>=43 && LA18_1<=45)||(LA18_1>=50 && LA18_1<=51)||LA18_1==66||LA18_1==75))
 				{
 					int LA18_2 = input.LA(2);
 
-					if ((EvaluatePredicate(synpred35_Lua_fragment)))
+					if ((EvaluatePredicate(synpred42_Lua_fragment)))
 					{
 						alt18 = 1;
 					}
@@ -2279,20 +2487,20 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:123: binop exp
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:111:49: binop exp
 					{
-					DebugLocation(54, 123);
-					PushFollow(Follow._binop_in_exp430);
-					binop90=binop();
+					DebugLocation(111, 49);
+					PushFollow(Follow._binop_in_exp570);
+					binop101=binop();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, binop90.Tree, binop90, "binop90", retval);
-					DebugLocation(54, 129);
-					PushFollow(Follow._exp_in_exp432);
-					exp91=exp();
+					if (state.backtracking == 0) adaptor.AddChild(root_0, binop101.Tree, binop101, "binop101", retval);
+					DebugLocation(111, 55);
+					PushFollow(Follow._exp_in_exp572);
+					exp102=exp();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, exp91.Tree, exp91, "exp91", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, exp102.Tree, exp102, "exp102", retval);
 
 					}
 					break;
@@ -2326,11 +2534,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("exp", 9);
-			LeaveRule("exp", 9);
+			TraceOut("exp", 11);
+			LeaveRule("exp", 11);
 			LeaveRule_exp();
+			if (state.backtracking > 0) { Memoize(input, 11, exp_StartIndex); }
+
 		}
-		DebugLocation(54, 134);
+		DebugLocation(112, 1);
 		} finally { DebugExitRule(GrammarFileName, "exp"); }
 		return retval;
 
@@ -2340,40 +2550,43 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_var();
 	partial void LeaveRule_var();
 	// $ANTLR start "var"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:56:1: var : ( NAME | '(' exp ')' varSuffix ) ( varSuffix )* ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:114:1: var : ( NAME | '(' exp ')' varSuffix ) ( varSuffix )* ;
 	[GrammarRule("var")]
 	private Antlr3AstNode var()
 	{
 		EnterRule_var();
-		EnterRule("var", 10);
+		EnterRule("var", 12);
 		var retval = new Antlr3AstNode("var");
 		
 		retval.Start = (IToken)input.LT(1);
+		int var_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken NAME92 = default(IToken);
-		IToken char_literal93 = default(IToken);
-		IToken char_literal95 = default(IToken);
-		Antlr3AstNode exp94 = default(Antlr3AstNode);
-		Antlr3AstNode varSuffix96 = default(Antlr3AstNode);
-		Antlr3AstNode varSuffix97 = default(Antlr3AstNode);
+		IToken NAME103 = default(IToken);
+		IToken char_literal104 = default(IToken);
+		IToken char_literal106 = default(IToken);
+		Antlr3AstNode exp105 = default(Antlr3AstNode);
+		Antlr3AstNode varSuffix107 = default(Antlr3AstNode);
+		Antlr3AstNode varSuffix108 = default(Antlr3AstNode);
 
-		object NAME92_tree = default(object);
-		object char_literal93_tree = default(object);
-		object char_literal95_tree = default(object);
+		object NAME103_tree = default(object);
+		object char_literal104_tree = default(object);
+		object char_literal106_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "var");
-		DebugLocation(56, 46);
+		DebugLocation(114, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:56:4: ( ( NAME | '(' exp ')' varSuffix ) ( varSuffix )* )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 12)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:115:5: ( ( NAME | '(' exp ')' varSuffix ) ( varSuffix )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:56:6: ( NAME | '(' exp ')' varSuffix ) ( varSuffix )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:115:7: ( NAME | '(' exp ')' varSuffix ) ( varSuffix )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(56, 6);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:56:6: ( NAME | '(' exp ')' varSuffix )
+			DebugLocation(115, 7);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:115:7: ( NAME | '(' exp ')' varSuffix )
 			int alt19=2;
 			try { DebugEnterSubRule(19);
 			try { DebugEnterDecision(19, false);
@@ -2383,7 +2596,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				alt19 = 1;
 			}
-			else if ((LA19_1==22))
+			else if ((LA19_1==27))
 			{
 				alt19 = 2;
 			}
@@ -2399,45 +2612,45 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:56:7: NAME
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:115:8: NAME
 				{
-				DebugLocation(56, 7);
-				NAME92=(IToken)Match(input,NAME,Follow._NAME_in_var443); if (state.failed) return retval;
+				DebugLocation(115, 8);
+				NAME103=(IToken)Match(input,NAME,Follow._NAME_in_var589); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				NAME92_tree = (object)adaptor.Create(NAME92, "NAME92", retval);
-				adaptor.AddChild(root_0, NAME92_tree);
+				NAME103_tree = (object)adaptor.Create(NAME103, "NAME103", retval);
+				adaptor.AddChild(root_0, NAME103_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:56:14: '(' exp ')' varSuffix
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:115:15: '(' exp ')' varSuffix
 				{
-				DebugLocation(56, 14);
-				char_literal93=(IToken)Match(input,22,Follow._22_in_var447); if (state.failed) return retval;
+				DebugLocation(115, 15);
+				char_literal104=(IToken)Match(input,27,Follow._27_in_var593); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal93_tree = (object)adaptor.Create(char_literal93, "char_literal93", retval);
-				adaptor.AddChild(root_0, char_literal93_tree);
+				char_literal104_tree = (object)adaptor.Create(char_literal104, "char_literal104", retval);
+				adaptor.AddChild(root_0, char_literal104_tree);
 				}
-				DebugLocation(56, 18);
-				PushFollow(Follow._exp_in_var449);
-				exp94=exp();
+				DebugLocation(115, 19);
+				PushFollow(Follow._exp_in_var595);
+				exp105=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp94.Tree, exp94, "exp94", retval);
-				DebugLocation(56, 22);
-				char_literal95=(IToken)Match(input,23,Follow._23_in_var451); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp105.Tree, exp105, "exp105", retval);
+				DebugLocation(115, 23);
+				char_literal106=(IToken)Match(input,28,Follow._28_in_var597); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal95_tree = (object)adaptor.Create(char_literal95, "char_literal95", retval);
-				adaptor.AddChild(root_0, char_literal95_tree);
+				char_literal106_tree = (object)adaptor.Create(char_literal106, "char_literal106", retval);
+				adaptor.AddChild(root_0, char_literal106_tree);
 				}
-				DebugLocation(56, 26);
-				PushFollow(Follow._varSuffix_in_var453);
-				varSuffix96=varSuffix();
+				DebugLocation(115, 27);
+				PushFollow(Follow._varSuffix_in_var599);
+				varSuffix107=varSuffix();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, varSuffix96.Tree, varSuffix96, "varSuffix96", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, varSuffix107.Tree, varSuffix107, "varSuffix107", retval);
 
 				}
 				break;
@@ -2445,8 +2658,8 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			}
 			} finally { DebugExitSubRule(19); }
 
-			DebugLocation(56, 37);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:56:37: ( varSuffix )*
+			DebugLocation(115, 38);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:115:38: ( varSuffix )*
 			try { DebugEnterSubRule(20);
 			while (true)
 			{
@@ -2454,11 +2667,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(20, false);
 				switch (input.LA(1))
 				{
-				case 32:
+				case 37:
 					{
 					int LA20_2 = input.LA(2);
 
-					if ((EvaluatePredicate(synpred37_Lua_fragment)))
+					if ((EvaluatePredicate(synpred44_Lua_fragment)))
 					{
 						alt20 = 1;
 					}
@@ -2466,11 +2679,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 					}
 					break;
-				case 22:
+				case 27:
 					{
 					int LA20_2 = input.LA(2);
 
-					if ((EvaluatePredicate(synpred37_Lua_fragment)))
+					if ((EvaluatePredicate(synpred44_Lua_fragment)))
 					{
 						alt20 = 1;
 					}
@@ -2478,11 +2691,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 					}
 					break;
-				case 64:
+				case 73:
 					{
 					int LA20_2 = input.LA(2);
 
-					if ((EvaluatePredicate(synpred37_Lua_fragment)))
+					if ((EvaluatePredicate(synpred44_Lua_fragment)))
 					{
 						alt20 = 1;
 					}
@@ -2496,7 +2709,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					{
 					int LA20_2 = input.LA(2);
 
-					if ((EvaluatePredicate(synpred37_Lua_fragment)))
+					if ((EvaluatePredicate(synpred44_Lua_fragment)))
 					{
 						alt20 = 1;
 					}
@@ -2504,8 +2717,8 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 					}
 					break;
-				case 28:
-				case 40:
+				case 33:
+				case 46:
 					{
 					alt20 = 1;
 					}
@@ -2517,14 +2730,14 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:56:37: varSuffix
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:115:38: varSuffix
 					{
-					DebugLocation(56, 37);
-					PushFollow(Follow._varSuffix_in_var456);
-					varSuffix97=varSuffix();
+					DebugLocation(115, 38);
+					PushFollow(Follow._varSuffix_in_var602);
+					varSuffix108=varSuffix();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, varSuffix97.Tree, varSuffix97, "varSuffix97", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, varSuffix108.Tree, varSuffix108, "varSuffix108", retval);
 
 					}
 					break;
@@ -2558,11 +2771,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("var", 10);
-			LeaveRule("var", 10);
+			TraceOut("var", 12);
+			LeaveRule("var", 12);
 			LeaveRule_var();
+			if (state.backtracking > 0) { Memoize(input, 12, var_StartIndex); }
+
 		}
-		DebugLocation(56, 46);
+		DebugLocation(116, 4);
 		} finally { DebugExitRule(GrammarFileName, "var"); }
 		return retval;
 
@@ -2572,39 +2787,42 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_prefixexp();
 	partial void LeaveRule_prefixexp();
 	// $ANTLR start "prefixexp"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:58:1: prefixexp : varOrExp ( nameAndArgs )* ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:118:1: prefixexp : varOrExp ( nameAndArgs )* ;
 	[GrammarRule("prefixexp")]
 	private Antlr3AstNode prefixexp()
 	{
 		EnterRule_prefixexp();
-		EnterRule("prefixexp", 11);
+		EnterRule("prefixexp", 13);
 		var retval = new Antlr3AstNode("prefixexp");
 		
 		retval.Start = (IToken)input.LT(1);
+		int prefixexp_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		Antlr3AstNode varOrExp98 = default(Antlr3AstNode);
-		Antlr3AstNode nameAndArgs99 = default(Antlr3AstNode);
+		Antlr3AstNode varOrExp109 = default(Antlr3AstNode);
+		Antlr3AstNode nameAndArgs110 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "prefixexp");
-		DebugLocation(58, 32);
+		DebugLocation(118, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:58:10: ( varOrExp ( nameAndArgs )* )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 13)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:119:5: ( varOrExp ( nameAndArgs )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:58:12: varOrExp ( nameAndArgs )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:119:7: varOrExp ( nameAndArgs )*
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(58, 12);
-			PushFollow(Follow._varOrExp_in_prefixexp464);
-			varOrExp98=varOrExp();
+			DebugLocation(119, 7);
+			PushFollow(Follow._varOrExp_in_prefixexp620);
+			varOrExp109=varOrExp();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, varOrExp98.Tree, varOrExp98, "varOrExp98", retval);
-			DebugLocation(58, 21);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:58:21: ( nameAndArgs )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, varOrExp109.Tree, varOrExp109, "varOrExp109", retval);
+			DebugLocation(119, 16);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:119:16: ( nameAndArgs )*
 			try { DebugEnterSubRule(21);
 			while (true)
 			{
@@ -2612,18 +2830,18 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(21, false);
 				int LA21_1 = input.LA(1);
 
-				if ((LA21_1==22))
+				if ((LA21_1==27))
 				{
 					int LA21_2 = input.LA(2);
 
-					if ((EvaluatePredicate(synpred38_Lua_fragment)))
+					if ((EvaluatePredicate(synpred45_Lua_fragment)))
 					{
 						alt21 = 1;
 					}
 
 
 				}
-				else if ((LA21_1==CHARSTRING||LA21_1==LONGSTRING||LA21_1==NORMALSTRING||LA21_1==32||LA21_1==64))
+				else if ((LA21_1==CHARSTRING||LA21_1==LONGSTRING||LA21_1==NORMALSTRING||LA21_1==37||LA21_1==73))
 				{
 					alt21 = 1;
 				}
@@ -2634,14 +2852,14 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:58:21: nameAndArgs
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:119:16: nameAndArgs
 					{
-					DebugLocation(58, 21);
-					PushFollow(Follow._nameAndArgs_in_prefixexp466);
-					nameAndArgs99=nameAndArgs();
+					DebugLocation(119, 16);
+					PushFollow(Follow._nameAndArgs_in_prefixexp622);
+					nameAndArgs110=nameAndArgs();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, nameAndArgs99.Tree, nameAndArgs99, "nameAndArgs99", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, nameAndArgs110.Tree, nameAndArgs110, "nameAndArgs110", retval);
 
 					}
 					break;
@@ -2675,11 +2893,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("prefixexp", 11);
-			LeaveRule("prefixexp", 11);
+			TraceOut("prefixexp", 13);
+			LeaveRule("prefixexp", 13);
 			LeaveRule_prefixexp();
+			if (state.backtracking > 0) { Memoize(input, 13, prefixexp_StartIndex); }
+
 		}
-		DebugLocation(58, 32);
+		DebugLocation(120, 4);
 		} finally { DebugExitRule(GrammarFileName, "prefixexp"); }
 		return retval;
 
@@ -2689,39 +2909,42 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_functioncall();
 	partial void LeaveRule_functioncall();
 	// $ANTLR start "functioncall"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:60:1: functioncall : varOrExp ( nameAndArgs )+ ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:122:1: functioncall : varOrExp ( nameAndArgs )+ ;
 	[GrammarRule("functioncall")]
 	private Antlr3AstNode functioncall()
 	{
 		EnterRule_functioncall();
-		EnterRule("functioncall", 12);
+		EnterRule("functioncall", 14);
 		var retval = new Antlr3AstNode("functioncall");
 		
 		retval.Start = (IToken)input.LT(1);
+		int functioncall_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		Antlr3AstNode varOrExp100 = default(Antlr3AstNode);
-		Antlr3AstNode nameAndArgs101 = default(Antlr3AstNode);
+		Antlr3AstNode varOrExp111 = default(Antlr3AstNode);
+		Antlr3AstNode nameAndArgs112 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "functioncall");
-		DebugLocation(60, 35);
+		DebugLocation(122, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:60:13: ( varOrExp ( nameAndArgs )+ )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 14)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:123:5: ( varOrExp ( nameAndArgs )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:60:15: varOrExp ( nameAndArgs )+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:123:7: varOrExp ( nameAndArgs )+
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(60, 15);
-			PushFollow(Follow._varOrExp_in_functioncall474);
-			varOrExp100=varOrExp();
+			DebugLocation(123, 7);
+			PushFollow(Follow._varOrExp_in_functioncall640);
+			varOrExp111=varOrExp();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, varOrExp100.Tree, varOrExp100, "varOrExp100", retval);
-			DebugLocation(60, 24);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:60:24: ( nameAndArgs )+
+			if (state.backtracking == 0) adaptor.AddChild(root_0, varOrExp111.Tree, varOrExp111, "varOrExp111", retval);
+			DebugLocation(123, 16);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:123:16: ( nameAndArgs )+
 			int cnt22=0;
 			try { DebugEnterSubRule(22);
 			while (true)
@@ -2730,18 +2953,18 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(22, false);
 				int LA22_1 = input.LA(1);
 
-				if ((LA22_1==22))
+				if ((LA22_1==27))
 				{
 					int LA22_2 = input.LA(2);
 
-					if ((EvaluatePredicate(synpred39_Lua_fragment)))
+					if ((EvaluatePredicate(synpred46_Lua_fragment)))
 					{
 						alt22 = 1;
 					}
 
 
 				}
-				else if ((LA22_1==CHARSTRING||LA22_1==LONGSTRING||LA22_1==NORMALSTRING||LA22_1==32||LA22_1==64))
+				else if ((LA22_1==CHARSTRING||LA22_1==LONGSTRING||LA22_1==NORMALSTRING||LA22_1==37||LA22_1==73))
 				{
 					alt22 = 1;
 				}
@@ -2752,14 +2975,14 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:60:24: nameAndArgs
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:123:16: nameAndArgs
 					{
-					DebugLocation(60, 24);
-					PushFollow(Follow._nameAndArgs_in_functioncall476);
-					nameAndArgs101=nameAndArgs();
+					DebugLocation(123, 16);
+					PushFollow(Follow._nameAndArgs_in_functioncall642);
+					nameAndArgs112=nameAndArgs();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, nameAndArgs101.Tree, nameAndArgs101, "nameAndArgs101", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, nameAndArgs112.Tree, nameAndArgs112, "nameAndArgs112", retval);
 
 					}
 					break;
@@ -2799,11 +3022,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("functioncall", 12);
-			LeaveRule("functioncall", 12);
+			TraceOut("functioncall", 14);
+			LeaveRule("functioncall", 14);
 			LeaveRule_functioncall();
+			if (state.backtracking > 0) { Memoize(input, 14, functioncall_StartIndex); }
+
 		}
-		DebugLocation(60, 35);
+		DebugLocation(124, 4);
 		} finally { DebugExitRule(GrammarFileName, "functioncall"); }
 		return retval;
 
@@ -2813,30 +3038,33 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_varOrExp();
 	partial void LeaveRule_varOrExp();
 	// $ANTLR start "varOrExp"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:70:1: varOrExp : ( var | '(' exp ')' );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:126:1: varOrExp : ( var | '(' exp ')' );
 	[GrammarRule("varOrExp")]
 	private Antlr3AstNode varOrExp()
 	{
 		EnterRule_varOrExp();
-		EnterRule("varOrExp", 13);
+		EnterRule("varOrExp", 15);
 		var retval = new Antlr3AstNode("varOrExp");
 		
 		retval.Start = (IToken)input.LT(1);
+		int varOrExp_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal103 = default(IToken);
-		IToken char_literal105 = default(IToken);
-		Antlr3AstNode var102 = default(Antlr3AstNode);
-		Antlr3AstNode exp104 = default(Antlr3AstNode);
+		IToken char_literal114 = default(IToken);
+		IToken char_literal116 = default(IToken);
+		Antlr3AstNode var113 = default(Antlr3AstNode);
+		Antlr3AstNode exp115 = default(Antlr3AstNode);
 
-		object char_literal103_tree = default(object);
-		object char_literal105_tree = default(object);
+		object char_literal114_tree = default(object);
+		object char_literal116_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "varOrExp");
-		DebugLocation(70, 27);
+		DebugLocation(126, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:70:9: ( var | '(' exp ')' )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 15)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:127:5: ( var | '(' exp ')' )
 			int alt23=2;
 			try { DebugEnterDecision(23, false);
 			int LA23_1 = input.LA(1);
@@ -2845,11 +3073,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				alt23 = 1;
 			}
-			else if ((LA23_1==22))
+			else if ((LA23_1==27))
 			{
 				int LA23_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred40_Lua_fragment)))
+				if ((EvaluatePredicate(synpred47_Lua_fragment)))
 				{
 					alt23 = 1;
 				}
@@ -2877,42 +3105,42 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:70:11: var
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:127:7: var
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(70, 11);
-				PushFollow(Follow._var_in_varOrExp487);
-				var102=var();
+				DebugLocation(127, 7);
+				PushFollow(Follow._var_in_varOrExp660);
+				var113=var();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, var102.Tree, var102, "var102", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, var113.Tree, var113, "var113", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:70:17: '(' exp ')'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:127:13: '(' exp ')'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(70, 17);
-				char_literal103=(IToken)Match(input,22,Follow._22_in_varOrExp491); if (state.failed) return retval;
+				DebugLocation(127, 13);
+				char_literal114=(IToken)Match(input,27,Follow._27_in_varOrExp664); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal103_tree = (object)adaptor.Create(char_literal103, "char_literal103", retval);
-				adaptor.AddChild(root_0, char_literal103_tree);
+				char_literal114_tree = (object)adaptor.Create(char_literal114, "char_literal114", retval);
+				adaptor.AddChild(root_0, char_literal114_tree);
 				}
-				DebugLocation(70, 21);
-				PushFollow(Follow._exp_in_varOrExp493);
-				exp104=exp();
+				DebugLocation(127, 17);
+				PushFollow(Follow._exp_in_varOrExp666);
+				exp115=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp104.Tree, exp104, "exp104", retval);
-				DebugLocation(70, 25);
-				char_literal105=(IToken)Match(input,23,Follow._23_in_varOrExp495); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp115.Tree, exp115, "exp115", retval);
+				DebugLocation(127, 21);
+				char_literal116=(IToken)Match(input,28,Follow._28_in_varOrExp668); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal105_tree = (object)adaptor.Create(char_literal105, "char_literal105", retval);
-				adaptor.AddChild(root_0, char_literal105_tree);
+				char_literal116_tree = (object)adaptor.Create(char_literal116, "char_literal116", retval);
+				adaptor.AddChild(root_0, char_literal116_tree);
 				}
 
 				}
@@ -2935,11 +3163,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("varOrExp", 13);
-			LeaveRule("varOrExp", 13);
+			TraceOut("varOrExp", 15);
+			LeaveRule("varOrExp", 15);
 			LeaveRule_varOrExp();
+			if (state.backtracking > 0) { Memoize(input, 15, varOrExp_StartIndex); }
+
 		}
-		DebugLocation(70, 27);
+		DebugLocation(128, 4);
 		} finally { DebugExitRule(GrammarFileName, "varOrExp"); }
 		return retval;
 
@@ -2949,42 +3179,45 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_nameAndArgs();
 	partial void LeaveRule_nameAndArgs();
 	// $ANTLR start "nameAndArgs"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:72:1: nameAndArgs : ( ':' NAME )? args ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:130:1: nameAndArgs : ( ':' NAME )? args ;
 	[GrammarRule("nameAndArgs")]
 	private Antlr3AstNode nameAndArgs()
 	{
 		EnterRule_nameAndArgs();
-		EnterRule("nameAndArgs", 14);
+		EnterRule("nameAndArgs", 16);
 		var retval = new Antlr3AstNode("nameAndArgs");
 		
 		retval.Start = (IToken)input.LT(1);
+		int nameAndArgs_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal106 = default(IToken);
-		IToken NAME107 = default(IToken);
-		Antlr3AstNode args108 = default(Antlr3AstNode);
+		IToken char_literal117 = default(IToken);
+		IToken NAME118 = default(IToken);
+		Antlr3AstNode args119 = default(Antlr3AstNode);
 
-		object char_literal106_tree = default(object);
-		object NAME107_tree = default(object);
+		object char_literal117_tree = default(object);
+		object NAME118_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "nameAndArgs");
-		DebugLocation(72, 29);
+		DebugLocation(130, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:72:12: ( ( ':' NAME )? args )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 16)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:131:5: ( ( ':' NAME )? args )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:72:14: ( ':' NAME )? args
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:131:7: ( ':' NAME )? args
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(72, 14);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:72:14: ( ':' NAME )?
+			DebugLocation(131, 7);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:131:7: ( ':' NAME )?
 			int alt24=2;
 			try { DebugEnterSubRule(24);
 			try { DebugEnterDecision(24, false);
 			int LA24_1 = input.LA(1);
 
-			if ((LA24_1==32))
+			if ((LA24_1==37))
 			{
 				alt24 = 1;
 			}
@@ -2993,19 +3226,19 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:72:15: ':' NAME
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:131:8: ':' NAME
 				{
-				DebugLocation(72, 15);
-				char_literal106=(IToken)Match(input,32,Follow._32_in_nameAndArgs503); if (state.failed) return retval;
+				DebugLocation(131, 8);
+				char_literal117=(IToken)Match(input,37,Follow._37_in_nameAndArgs686); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal106_tree = (object)adaptor.Create(char_literal106, "char_literal106", retval);
-				adaptor.AddChild(root_0, char_literal106_tree);
+				char_literal117_tree = (object)adaptor.Create(char_literal117, "char_literal117", retval);
+				adaptor.AddChild(root_0, char_literal117_tree);
 				}
-				DebugLocation(72, 19);
-				NAME107=(IToken)Match(input,NAME,Follow._NAME_in_nameAndArgs505); if (state.failed) return retval;
+				DebugLocation(131, 12);
+				NAME118=(IToken)Match(input,NAME,Follow._NAME_in_nameAndArgs688); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				NAME107_tree = (object)adaptor.Create(NAME107, "NAME107", retval);
-				adaptor.AddChild(root_0, NAME107_tree);
+				NAME118_tree = (object)adaptor.Create(NAME118, "NAME118", retval);
+				adaptor.AddChild(root_0, NAME118_tree);
 				}
 
 				}
@@ -3014,12 +3247,12 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			}
 			} finally { DebugExitSubRule(24); }
 
-			DebugLocation(72, 26);
-			PushFollow(Follow._args_in_nameAndArgs509);
-			args108=args();
+			DebugLocation(131, 19);
+			PushFollow(Follow._args_in_nameAndArgs692);
+			args119=args();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, args108.Tree, args108, "args108", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, args119.Tree, args119, "args119", retval);
 
 			}
 
@@ -3039,11 +3272,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("nameAndArgs", 14);
-			LeaveRule("nameAndArgs", 14);
+			TraceOut("nameAndArgs", 16);
+			LeaveRule("nameAndArgs", 16);
 			LeaveRule_nameAndArgs();
+			if (state.backtracking > 0) { Memoize(input, 16, nameAndArgs_StartIndex); }
+
 		}
-		DebugLocation(72, 29);
+		DebugLocation(132, 4);
 		} finally { DebugExitRule(GrammarFileName, "nameAndArgs"); }
 		return retval;
 
@@ -3053,41 +3288,44 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_varSuffix();
 	partial void LeaveRule_varSuffix();
 	// $ANTLR start "varSuffix"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:74:1: varSuffix : ( nameAndArgs )* ( '[' exp ']' | '.' NAME ) ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:134:1: varSuffix : ( nameAndArgs )* ( '[' exp ']' | '.' NAME ) ;
 	[GrammarRule("varSuffix")]
 	private Antlr3AstNode varSuffix()
 	{
 		EnterRule_varSuffix();
-		EnterRule("varSuffix", 15);
+		EnterRule("varSuffix", 17);
 		var retval = new Antlr3AstNode("varSuffix");
 		
 		retval.Start = (IToken)input.LT(1);
+		int varSuffix_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal110 = default(IToken);
-		IToken char_literal112 = default(IToken);
-		IToken char_literal113 = default(IToken);
-		IToken NAME114 = default(IToken);
-		Antlr3AstNode nameAndArgs109 = default(Antlr3AstNode);
-		Antlr3AstNode exp111 = default(Antlr3AstNode);
+		IToken char_literal121 = default(IToken);
+		IToken char_literal123 = default(IToken);
+		IToken char_literal124 = default(IToken);
+		IToken NAME125 = default(IToken);
+		Antlr3AstNode nameAndArgs120 = default(Antlr3AstNode);
+		Antlr3AstNode exp122 = default(Antlr3AstNode);
 
-		object char_literal110_tree = default(object);
-		object char_literal112_tree = default(object);
-		object char_literal113_tree = default(object);
-		object NAME114_tree = default(object);
+		object char_literal121_tree = default(object);
+		object char_literal123_tree = default(object);
+		object char_literal124_tree = default(object);
+		object NAME125_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "varSuffix");
-		DebugLocation(74, 48);
+		DebugLocation(134, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:74:10: ( ( nameAndArgs )* ( '[' exp ']' | '.' NAME ) )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 17)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:135:5: ( ( nameAndArgs )* ( '[' exp ']' | '.' NAME ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:74:12: ( nameAndArgs )* ( '[' exp ']' | '.' NAME )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:135:7: ( nameAndArgs )* ( '[' exp ']' | '.' NAME )
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(74, 12);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:74:12: ( nameAndArgs )*
+			DebugLocation(135, 7);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:135:7: ( nameAndArgs )*
 			try { DebugEnterSubRule(25);
 			while (true)
 			{
@@ -3095,7 +3333,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(25, false);
 				int LA25_1 = input.LA(1);
 
-				if ((LA25_1==CHARSTRING||LA25_1==LONGSTRING||LA25_1==NORMALSTRING||LA25_1==22||LA25_1==32||LA25_1==64))
+				if ((LA25_1==CHARSTRING||LA25_1==LONGSTRING||LA25_1==NORMALSTRING||LA25_1==27||LA25_1==37||LA25_1==73))
 				{
 					alt25 = 1;
 				}
@@ -3106,14 +3344,14 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:74:12: nameAndArgs
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:135:7: nameAndArgs
 					{
-					DebugLocation(74, 12);
-					PushFollow(Follow._nameAndArgs_in_varSuffix516);
-					nameAndArgs109=nameAndArgs();
+					DebugLocation(135, 7);
+					PushFollow(Follow._nameAndArgs_in_varSuffix709);
+					nameAndArgs120=nameAndArgs();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, nameAndArgs109.Tree, nameAndArgs109, "nameAndArgs109", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, nameAndArgs120.Tree, nameAndArgs120, "nameAndArgs120", retval);
 
 					}
 					break;
@@ -3128,18 +3366,18 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 			} finally { DebugExitSubRule(25); }
 
-			DebugLocation(74, 25);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:74:25: ( '[' exp ']' | '.' NAME )
+			DebugLocation(135, 20);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:135:20: ( '[' exp ']' | '.' NAME )
 			int alt26=2;
 			try { DebugEnterSubRule(26);
 			try { DebugEnterDecision(26, false);
 			int LA26_1 = input.LA(1);
 
-			if ((LA26_1==40))
+			if ((LA26_1==46))
 			{
 				alt26 = 1;
 			}
-			else if ((LA26_1==28))
+			else if ((LA26_1==33))
 			{
 				alt26 = 2;
 			}
@@ -3155,44 +3393,44 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:74:26: '[' exp ']'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:135:21: '[' exp ']'
 				{
-				DebugLocation(74, 26);
-				char_literal110=(IToken)Match(input,40,Follow._40_in_varSuffix520); if (state.failed) return retval;
+				DebugLocation(135, 21);
+				char_literal121=(IToken)Match(input,46,Follow._46_in_varSuffix713); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal110_tree = (object)adaptor.Create(char_literal110, "char_literal110", retval);
-				adaptor.AddChild(root_0, char_literal110_tree);
+				char_literal121_tree = (object)adaptor.Create(char_literal121, "char_literal121", retval);
+				adaptor.AddChild(root_0, char_literal121_tree);
 				}
-				DebugLocation(74, 30);
-				PushFollow(Follow._exp_in_varSuffix522);
-				exp111=exp();
+				DebugLocation(135, 25);
+				PushFollow(Follow._exp_in_varSuffix715);
+				exp122=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp111.Tree, exp111, "exp111", retval);
-				DebugLocation(74, 34);
-				char_literal112=(IToken)Match(input,41,Follow._41_in_varSuffix524); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp122.Tree, exp122, "exp122", retval);
+				DebugLocation(135, 29);
+				char_literal123=(IToken)Match(input,49,Follow._49_in_varSuffix717); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal112_tree = (object)adaptor.Create(char_literal112, "char_literal112", retval);
-				adaptor.AddChild(root_0, char_literal112_tree);
+				char_literal123_tree = (object)adaptor.Create(char_literal123, "char_literal123", retval);
+				adaptor.AddChild(root_0, char_literal123_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:74:40: '.' NAME
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:135:35: '.' NAME
 				{
-				DebugLocation(74, 40);
-				char_literal113=(IToken)Match(input,28,Follow._28_in_varSuffix528); if (state.failed) return retval;
+				DebugLocation(135, 35);
+				char_literal124=(IToken)Match(input,33,Follow._33_in_varSuffix721); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal113_tree = (object)adaptor.Create(char_literal113, "char_literal113", retval);
-				adaptor.AddChild(root_0, char_literal113_tree);
+				char_literal124_tree = (object)adaptor.Create(char_literal124, "char_literal124", retval);
+				adaptor.AddChild(root_0, char_literal124_tree);
 				}
-				DebugLocation(74, 44);
-				NAME114=(IToken)Match(input,NAME,Follow._NAME_in_varSuffix530); if (state.failed) return retval;
+				DebugLocation(135, 39);
+				NAME125=(IToken)Match(input,NAME,Follow._NAME_in_varSuffix723); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				NAME114_tree = (object)adaptor.Create(NAME114, "NAME114", retval);
-				adaptor.AddChild(root_0, NAME114_tree);
+				NAME125_tree = (object)adaptor.Create(NAME125, "NAME125", retval);
+				adaptor.AddChild(root_0, NAME125_tree);
 				}
 
 				}
@@ -3220,11 +3458,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("varSuffix", 15);
-			LeaveRule("varSuffix", 15);
+			TraceOut("varSuffix", 17);
+			LeaveRule("varSuffix", 17);
 			LeaveRule_varSuffix();
+			if (state.backtracking > 0) { Memoize(input, 17, varSuffix_StartIndex); }
+
 		}
-		DebugLocation(74, 48);
+		DebugLocation(136, 4);
 		} finally { DebugExitRule(GrammarFileName, "varSuffix"); }
 		return retval;
 
@@ -3234,41 +3474,44 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_args();
 	partial void LeaveRule_args();
 	// $ANTLR start "args"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:76:1: args : ( '(' ( explist1 )? ')' | tableconstructor | lua_string );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:152:1: args : ( '(' ( explist )? ')' | tableconstructor | string );
 	[GrammarRule("args")]
 	private Antlr3AstNode args()
 	{
 		EnterRule_args();
-		EnterRule("args", 16);
+		EnterRule("args", 18);
 		var retval = new Antlr3AstNode("args");
 		
 		retval.Start = (IToken)input.LT(1);
+		int args_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal115 = default(IToken);
-		IToken char_literal117 = default(IToken);
-		Antlr3AstNode explist1116 = default(Antlr3AstNode);
-		Antlr3AstNode tableconstructor118 = default(Antlr3AstNode);
-		Antlr3AstNode lua_string119 = default(Antlr3AstNode);
+		IToken char_literal126 = default(IToken);
+		IToken char_literal128 = default(IToken);
+		Antlr3AstNode explist127 = default(Antlr3AstNode);
+		Antlr3AstNode tableconstructor129 = default(Antlr3AstNode);
+		Antlr3AstNode string130 = default(Antlr3AstNode);
 
-		object char_literal115_tree = default(object);
-		object char_literal117_tree = default(object);
+		object char_literal126_tree = default(object);
+		object char_literal128_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "args");
-		DebugLocation(76, 60);
+		DebugLocation(152, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:76:6: ( '(' ( explist1 )? ')' | tableconstructor | lua_string )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 18)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:153:5: ( '(' ( explist )? ')' | tableconstructor | string )
 			int alt28=3;
 			try { DebugEnterDecision(28, false);
 			switch (input.LA(1))
 			{
-			case 22:
+			case 27:
 				{
 				alt28 = 1;
 				}
 				break;
-			case 64:
+			case 73:
 				{
 				alt28 = 2;
 				}
@@ -3294,24 +3537,24 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:76:9: '(' ( explist1 )? ')'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:153:7: '(' ( explist )? ')'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(76, 9);
-				char_literal115=(IToken)Match(input,22,Follow._22_in_args540); if (state.failed) return retval;
+				DebugLocation(153, 7);
+				char_literal126=(IToken)Match(input,27,Follow._27_in_args744); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal115_tree = (object)adaptor.Create(char_literal115, "char_literal115", retval);
-				adaptor.AddChild(root_0, char_literal115_tree);
+				char_literal126_tree = (object)adaptor.Create(char_literal126, "char_literal126", retval);
+				adaptor.AddChild(root_0, char_literal126_tree);
 				}
-				DebugLocation(76, 13);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:76:13: ( explist1 )?
+				DebugLocation(153, 11);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:153:11: ( explist )?
 				int alt27=2;
 				try { DebugEnterSubRule(27);
 				try { DebugEnterDecision(27, false);
 				int LA27_1 = input.LA(1);
 
-				if ((LA27_1==CHARSTRING||LA27_1==EXP||(LA27_1>=FLOAT && LA27_1<=HEX)||LA27_1==INT||(LA27_1>=LONGSTRING && LA27_1<=NAME)||LA27_1==NORMALSTRING||LA27_1==20||LA27_1==22||LA27_1==27||LA27_1==30||LA27_1==49||LA27_1==51||(LA27_1>=55 && LA27_1<=56)||LA27_1==61||LA27_1==64))
+				if ((LA27_1==CHARSTRING||(LA27_1>=FLOAT && LA27_1<=HEX_FLOAT)||LA27_1==INT||(LA27_1>=LONGSTRING && LA27_1<=NAME)||LA27_1==NORMALSTRING||LA27_1==25||LA27_1==27||LA27_1==32||LA27_1==35||LA27_1==57||LA27_1==59||(LA27_1>=64 && LA27_1<=65)||LA27_1==70||LA27_1==73))
 				{
 					alt27 = 1;
 				}
@@ -3320,14 +3563,14 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:76:14: explist1
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:153:11: explist
 					{
-					DebugLocation(76, 14);
-					PushFollow(Follow._explist1_in_args543);
-					explist1116=explist1();
+					DebugLocation(153, 11);
+					PushFollow(Follow._explist_in_args746);
+					explist127=explist();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, explist1116.Tree, explist1116, "explist1116", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, explist127.Tree, explist127, "explist127", retval);
 
 					}
 					break;
@@ -3335,42 +3578,42 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				} finally { DebugExitSubRule(27); }
 
-				DebugLocation(76, 25);
-				char_literal117=(IToken)Match(input,23,Follow._23_in_args547); if (state.failed) return retval;
+				DebugLocation(153, 20);
+				char_literal128=(IToken)Match(input,28,Follow._28_in_args749); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal117_tree = (object)adaptor.Create(char_literal117, "char_literal117", retval);
-				adaptor.AddChild(root_0, char_literal117_tree);
+				char_literal128_tree = (object)adaptor.Create(char_literal128, "char_literal128", retval);
+				adaptor.AddChild(root_0, char_literal128_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:76:31: tableconstructor
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:153:26: tableconstructor
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(76, 31);
-				PushFollow(Follow._tableconstructor_in_args551);
-				tableconstructor118=tableconstructor();
+				DebugLocation(153, 26);
+				PushFollow(Follow._tableconstructor_in_args753);
+				tableconstructor129=tableconstructor();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, tableconstructor118.Tree, tableconstructor118, "tableconstructor118", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, tableconstructor129.Tree, tableconstructor129, "tableconstructor129", retval);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:76:50: lua_string
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:153:45: string
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(76, 50);
-				PushFollow(Follow._lua_string_in_args555);
-				lua_string119=lua_string();
+				DebugLocation(153, 45);
+				PushFollow(Follow._string_in_args757);
+				string130=@string();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, lua_string119.Tree, lua_string119, "lua_string119", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, string130.Tree, string130, "string130", retval);
 
 				}
 				break;
@@ -3392,58 +3635,63 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("args", 16);
-			LeaveRule("args", 16);
+			TraceOut("args", 18);
+			LeaveRule("args", 18);
 			LeaveRule_args();
+			if (state.backtracking > 0) { Memoize(input, 18, args_StartIndex); }
+
 		}
-		DebugLocation(76, 60);
+		DebugLocation(154, 4);
 		} finally { DebugExitRule(GrammarFileName, "args"); }
 		return retval;
 
 	}
 	// $ANTLR end "args"
 
-	partial void EnterRule_function();
-	partial void LeaveRule_function();
-	// $ANTLR start "function"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:78:1: function : 'function' funcbody ;
-	[GrammarRule("function")]
-	private Antlr3AstNode function()
+	partial void EnterRule_functiondef();
+	partial void LeaveRule_functiondef();
+	// $ANTLR start "functiondef"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:156:1: functiondef : 'function' funcbody ;
+	[GrammarRule("functiondef")]
+	private Antlr3AstNode functiondef()
 	{
-		EnterRule_function();
-		EnterRule("function", 17);
-		var retval = new Antlr3AstNode("function");
+		EnterRule_functiondef();
+		EnterRule("functiondef", 19);
+		var retval = new Antlr3AstNode("functiondef");
 		
 		retval.Start = (IToken)input.LT(1);
+		int functiondef_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken string_literal120 = default(IToken);
-		Antlr3AstNode funcbody121 = default(Antlr3AstNode);
+		IToken string_literal131 = default(IToken);
+		Antlr3AstNode funcbody132 = default(Antlr3AstNode);
 
-		object string_literal120_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "function");
-		DebugLocation(78, 30);
+		object string_literal131_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "functiondef");
+		DebugLocation(156, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:78:10: ( 'function' funcbody )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 19)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:157:5: ( 'function' funcbody )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:78:12: 'function' funcbody
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:157:7: 'function' funcbody
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(78, 12);
-			string_literal120=(IToken)Match(input,51,Follow._51_in_function564); if (state.failed) return retval;
+			DebugLocation(157, 7);
+			string_literal131=(IToken)Match(input,59,Follow._59_in_functiondef774); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal120_tree = (object)adaptor.Create(string_literal120, "string_literal120", retval);
-			adaptor.AddChild(root_0, string_literal120_tree);
+			string_literal131_tree = (object)adaptor.Create(string_literal131, "string_literal131", retval);
+			adaptor.AddChild(root_0, string_literal131_tree);
 			}
-			DebugLocation(78, 23);
-			PushFollow(Follow._funcbody_in_function566);
-			funcbody121=funcbody();
+			DebugLocation(157, 18);
+			PushFollow(Follow._funcbody_in_functiondef776);
+			funcbody132=funcbody();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, funcbody121.Tree, funcbody121, "funcbody121", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, funcbody132.Tree, funcbody132, "funcbody132", retval);
 
 			}
 
@@ -3463,65 +3711,70 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("function", 17);
-			LeaveRule("function", 17);
-			LeaveRule_function();
+			TraceOut("functiondef", 19);
+			LeaveRule("functiondef", 19);
+			LeaveRule_functiondef();
+			if (state.backtracking > 0) { Memoize(input, 19, functiondef_StartIndex); }
+
 		}
-		DebugLocation(78, 30);
-		} finally { DebugExitRule(GrammarFileName, "function"); }
+		DebugLocation(158, 4);
+		} finally { DebugExitRule(GrammarFileName, "functiondef"); }
 		return retval;
 
 	}
-	// $ANTLR end "function"
+	// $ANTLR end "functiondef"
 
 	partial void EnterRule_funcbody();
 	partial void LeaveRule_funcbody();
 	// $ANTLR start "funcbody"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:80:1: funcbody : '(' ( parlist1 )? ')' block 'end' ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:160:1: funcbody : '(' ( parlist )? ')' block 'end' ;
 	[GrammarRule("funcbody")]
 	private Antlr3AstNode funcbody()
 	{
 		EnterRule_funcbody();
-		EnterRule("funcbody", 18);
+		EnterRule("funcbody", 20);
 		var retval = new Antlr3AstNode("funcbody");
 		
 		retval.Start = (IToken)input.LT(1);
+		int funcbody_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal122 = default(IToken);
-		IToken char_literal124 = default(IToken);
-		IToken string_literal126 = default(IToken);
-		Antlr3AstNode parlist1123 = default(Antlr3AstNode);
-		Antlr3AstNode block125 = default(Antlr3AstNode);
+		IToken char_literal133 = default(IToken);
+		IToken char_literal135 = default(IToken);
+		IToken string_literal137 = default(IToken);
+		Antlr3AstNode parlist134 = default(Antlr3AstNode);
+		Antlr3AstNode block136 = default(Antlr3AstNode);
 
-		object char_literal122_tree = default(object);
-		object char_literal124_tree = default(object);
-		object string_literal126_tree = default(object);
+		object char_literal133_tree = default(object);
+		object char_literal135_tree = default(object);
+		object string_literal137_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "funcbody");
-		DebugLocation(80, 42);
+		DebugLocation(160, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:80:10: ( '(' ( parlist1 )? ')' block 'end' )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 20)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:161:5: ( '(' ( parlist )? ')' block 'end' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:80:12: '(' ( parlist1 )? ')' block 'end'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:161:7: '(' ( parlist )? ')' block 'end'
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(80, 12);
-			char_literal122=(IToken)Match(input,22,Follow._22_in_funcbody574); if (state.failed) return retval;
+			DebugLocation(161, 7);
+			char_literal133=(IToken)Match(input,27,Follow._27_in_funcbody793); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal122_tree = (object)adaptor.Create(char_literal122, "char_literal122", retval);
-			adaptor.AddChild(root_0, char_literal122_tree);
+			char_literal133_tree = (object)adaptor.Create(char_literal133, "char_literal133", retval);
+			adaptor.AddChild(root_0, char_literal133_tree);
 			}
-			DebugLocation(80, 16);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:80:16: ( parlist1 )?
+			DebugLocation(161, 11);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:161:11: ( parlist )?
 			int alt29=2;
 			try { DebugEnterSubRule(29);
 			try { DebugEnterDecision(29, false);
 			int LA29_1 = input.LA(1);
 
-			if ((LA29_1==NAME||LA29_1==30))
+			if ((LA29_1==NAME||LA29_1==35))
 			{
 				alt29 = 1;
 			}
@@ -3530,14 +3783,14 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:80:17: parlist1
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:161:11: parlist
 				{
-				DebugLocation(80, 17);
-				PushFollow(Follow._parlist1_in_funcbody577);
-				parlist1123=parlist1();
+				DebugLocation(161, 11);
+				PushFollow(Follow._parlist_in_funcbody795);
+				parlist134=parlist();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, parlist1123.Tree, parlist1123, "parlist1123", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, parlist134.Tree, parlist134, "parlist134", retval);
 
 				}
 				break;
@@ -3545,23 +3798,23 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			}
 			} finally { DebugExitSubRule(29); }
 
-			DebugLocation(80, 28);
-			char_literal124=(IToken)Match(input,23,Follow._23_in_funcbody581); if (state.failed) return retval;
+			DebugLocation(161, 20);
+			char_literal135=(IToken)Match(input,28,Follow._28_in_funcbody798); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal124_tree = (object)adaptor.Create(char_literal124, "char_literal124", retval);
-			adaptor.AddChild(root_0, char_literal124_tree);
+			char_literal135_tree = (object)adaptor.Create(char_literal135, "char_literal135", retval);
+			adaptor.AddChild(root_0, char_literal135_tree);
 			}
-			DebugLocation(80, 32);
-			PushFollow(Follow._block_in_funcbody583);
-			block125=block();
+			DebugLocation(161, 24);
+			PushFollow(Follow._block_in_funcbody800);
+			block136=block();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, block125.Tree, block125, "block125", retval);
-			DebugLocation(80, 38);
-			string_literal126=(IToken)Match(input,48,Follow._48_in_funcbody585); if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, block136.Tree, block136, "block136", retval);
+			DebugLocation(161, 30);
+			string_literal137=(IToken)Match(input,56,Follow._56_in_funcbody802); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal126_tree = (object)adaptor.Create(string_literal126, "string_literal126", retval);
-			adaptor.AddChild(root_0, string_literal126_tree);
+			string_literal137_tree = (object)adaptor.Create(string_literal137, "string_literal137", retval);
+			adaptor.AddChild(root_0, string_literal137_tree);
 			}
 
 			}
@@ -3582,45 +3835,50 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("funcbody", 18);
-			LeaveRule("funcbody", 18);
+			TraceOut("funcbody", 20);
+			LeaveRule("funcbody", 20);
 			LeaveRule_funcbody();
+			if (state.backtracking > 0) { Memoize(input, 20, funcbody_StartIndex); }
+
 		}
-		DebugLocation(80, 42);
+		DebugLocation(162, 4);
 		} finally { DebugExitRule(GrammarFileName, "funcbody"); }
 		return retval;
 
 	}
 	// $ANTLR end "funcbody"
 
-	partial void EnterRule_parlist1();
-	partial void LeaveRule_parlist1();
-	// $ANTLR start "parlist1"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:82:1: parlist1 : ( namelist ( ',' '...' )? | '...' );
-	[GrammarRule("parlist1")]
-	private Antlr3AstNode parlist1()
+	partial void EnterRule_parlist();
+	partial void LeaveRule_parlist();
+	// $ANTLR start "parlist"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:164:1: parlist : ( namelist ( ',' '...' )? | '...' );
+	[GrammarRule("parlist")]
+	private Antlr3AstNode parlist()
 	{
-		EnterRule_parlist1();
-		EnterRule("parlist1", 19);
-		var retval = new Antlr3AstNode("parlist1");
+		EnterRule_parlist();
+		EnterRule("parlist", 21);
+		var retval = new Antlr3AstNode("parlist");
 		
 		retval.Start = (IToken)input.LT(1);
+		int parlist_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal128 = default(IToken);
-		IToken string_literal129 = default(IToken);
-		IToken string_literal130 = default(IToken);
-		Antlr3AstNode namelist127 = default(Antlr3AstNode);
+		IToken char_literal139 = default(IToken);
+		IToken string_literal140 = default(IToken);
+		IToken string_literal141 = default(IToken);
+		Antlr3AstNode namelist138 = default(Antlr3AstNode);
 
-		object char_literal128_tree = default(object);
-		object string_literal129_tree = default(object);
-		object string_literal130_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "parlist1");
-		DebugLocation(82, 40);
+		object char_literal139_tree = default(object);
+		object string_literal140_tree = default(object);
+		object string_literal141_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "parlist");
+		DebugLocation(164, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:82:10: ( namelist ( ',' '...' )? | '...' )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 21)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:165:5: ( namelist ( ',' '...' )? | '...' )
 			int alt31=2;
 			try { DebugEnterDecision(31, false);
 			int LA31_1 = input.LA(1);
@@ -3629,7 +3887,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				alt31 = 1;
 			}
-			else if ((LA31_1==30))
+			else if ((LA31_1==35))
 			{
 				alt31 = 2;
 			}
@@ -3645,24 +3903,24 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:82:12: namelist ( ',' '...' )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:165:7: namelist ( ',' '...' )?
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(82, 12);
-				PushFollow(Follow._namelist_in_parlist1593);
-				namelist127=namelist();
+				DebugLocation(165, 7);
+				PushFollow(Follow._namelist_in_parlist819);
+				namelist138=namelist();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, namelist127.Tree, namelist127, "namelist127", retval);
-				DebugLocation(82, 21);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:82:21: ( ',' '...' )?
+				if (state.backtracking == 0) adaptor.AddChild(root_0, namelist138.Tree, namelist138, "namelist138", retval);
+				DebugLocation(165, 16);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:165:16: ( ',' '...' )?
 				int alt30=2;
 				try { DebugEnterSubRule(30);
 				try { DebugEnterDecision(30, false);
 				int LA30_1 = input.LA(1);
 
-				if ((LA30_1==26))
+				if ((LA30_1==31))
 				{
 					alt30 = 1;
 				}
@@ -3671,19 +3929,19 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:82:22: ',' '...'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:165:17: ',' '...'
 					{
-					DebugLocation(82, 22);
-					char_literal128=(IToken)Match(input,26,Follow._26_in_parlist1596); if (state.failed) return retval;
+					DebugLocation(165, 17);
+					char_literal139=(IToken)Match(input,31,Follow._31_in_parlist822); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal128_tree = (object)adaptor.Create(char_literal128, "char_literal128", retval);
-					adaptor.AddChild(root_0, char_literal128_tree);
+					char_literal139_tree = (object)adaptor.Create(char_literal139, "char_literal139", retval);
+					adaptor.AddChild(root_0, char_literal139_tree);
 					}
-					DebugLocation(82, 26);
-					string_literal129=(IToken)Match(input,30,Follow._30_in_parlist1598); if (state.failed) return retval;
+					DebugLocation(165, 21);
+					string_literal140=(IToken)Match(input,35,Follow._35_in_parlist824); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					string_literal129_tree = (object)adaptor.Create(string_literal129, "string_literal129", retval);
-					adaptor.AddChild(root_0, string_literal129_tree);
+					string_literal140_tree = (object)adaptor.Create(string_literal140, "string_literal140", retval);
+					adaptor.AddChild(root_0, string_literal140_tree);
 					}
 
 					}
@@ -3697,15 +3955,15 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:82:36: '...'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:165:31: '...'
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(82, 36);
-				string_literal130=(IToken)Match(input,30,Follow._30_in_parlist1604); if (state.failed) return retval;
+				DebugLocation(165, 31);
+				string_literal141=(IToken)Match(input,35,Follow._35_in_parlist830); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal130_tree = (object)adaptor.Create(string_literal130, "string_literal130", retval);
-				adaptor.AddChild(root_0, string_literal130_tree);
+				string_literal141_tree = (object)adaptor.Create(string_literal141, "string_literal141", retval);
+				adaptor.AddChild(root_0, string_literal141_tree);
 				}
 
 				}
@@ -3728,62 +3986,67 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("parlist1", 19);
-			LeaveRule("parlist1", 19);
-			LeaveRule_parlist1();
+			TraceOut("parlist", 21);
+			LeaveRule("parlist", 21);
+			LeaveRule_parlist();
+			if (state.backtracking > 0) { Memoize(input, 21, parlist_StartIndex); }
+
 		}
-		DebugLocation(82, 40);
-		} finally { DebugExitRule(GrammarFileName, "parlist1"); }
+		DebugLocation(166, 4);
+		} finally { DebugExitRule(GrammarFileName, "parlist"); }
 		return retval;
 
 	}
-	// $ANTLR end "parlist1"
+	// $ANTLR end "parlist"
 
 	partial void EnterRule_tableconstructor();
 	partial void LeaveRule_tableconstructor();
 	// $ANTLR start "tableconstructor"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:84:1: tableconstructor : '{' ( fieldlist )? '}' ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:168:1: tableconstructor : '{' ( fieldlist )? '}' ;
 	[GrammarRule("tableconstructor")]
 	private Antlr3AstNode tableconstructor()
 	{
 		EnterRule_tableconstructor();
-		EnterRule("tableconstructor", 20);
+		EnterRule("tableconstructor", 22);
 		var retval = new Antlr3AstNode("tableconstructor");
 		
 		retval.Start = (IToken)input.LT(1);
+		int tableconstructor_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal131 = default(IToken);
-		IToken char_literal133 = default(IToken);
-		Antlr3AstNode fieldlist132 = default(Antlr3AstNode);
+		IToken char_literal142 = default(IToken);
+		IToken char_literal144 = default(IToken);
+		Antlr3AstNode fieldlist143 = default(Antlr3AstNode);
 
-		object char_literal131_tree = default(object);
-		object char_literal133_tree = default(object);
+		object char_literal142_tree = default(object);
+		object char_literal144_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "tableconstructor");
-		DebugLocation(84, 39);
+		DebugLocation(168, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:84:18: ( '{' ( fieldlist )? '}' )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 22)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:169:5: ( '{' ( fieldlist )? '}' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:84:20: '{' ( fieldlist )? '}'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:169:7: '{' ( fieldlist )? '}'
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(84, 20);
-			char_literal131=(IToken)Match(input,64,Follow._64_in_tableconstructor612); if (state.failed) return retval;
+			DebugLocation(169, 7);
+			char_literal142=(IToken)Match(input,73,Follow._73_in_tableconstructor847); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal131_tree = (object)adaptor.Create(char_literal131, "char_literal131", retval);
-			adaptor.AddChild(root_0, char_literal131_tree);
+			char_literal142_tree = (object)adaptor.Create(char_literal142, "char_literal142", retval);
+			adaptor.AddChild(root_0, char_literal142_tree);
 			}
-			DebugLocation(84, 24);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:84:24: ( fieldlist )?
+			DebugLocation(169, 11);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:169:11: ( fieldlist )?
 			int alt32=2;
 			try { DebugEnterSubRule(32);
 			try { DebugEnterDecision(32, false);
 			int LA32_1 = input.LA(1);
 
-			if ((LA32_1==CHARSTRING||LA32_1==EXP||(LA32_1>=FLOAT && LA32_1<=HEX)||LA32_1==INT||(LA32_1>=LONGSTRING && LA32_1<=NAME)||LA32_1==NORMALSTRING||LA32_1==20||LA32_1==22||LA32_1==27||LA32_1==30||LA32_1==40||LA32_1==49||LA32_1==51||(LA32_1>=55 && LA32_1<=56)||LA32_1==61||LA32_1==64))
+			if ((LA32_1==CHARSTRING||(LA32_1>=FLOAT && LA32_1<=HEX_FLOAT)||LA32_1==INT||(LA32_1>=LONGSTRING && LA32_1<=NAME)||LA32_1==NORMALSTRING||LA32_1==25||LA32_1==27||LA32_1==32||LA32_1==35||LA32_1==46||LA32_1==57||LA32_1==59||(LA32_1>=64 && LA32_1<=65)||LA32_1==70||LA32_1==73))
 			{
 				alt32 = 1;
 			}
@@ -3792,14 +4055,14 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:84:25: fieldlist
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:169:11: fieldlist
 				{
-				DebugLocation(84, 25);
-				PushFollow(Follow._fieldlist_in_tableconstructor615);
-				fieldlist132=fieldlist();
+				DebugLocation(169, 11);
+				PushFollow(Follow._fieldlist_in_tableconstructor849);
+				fieldlist143=fieldlist();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, fieldlist132.Tree, fieldlist132, "fieldlist132", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, fieldlist143.Tree, fieldlist143, "fieldlist143", retval);
 
 				}
 				break;
@@ -3807,11 +4070,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			}
 			} finally { DebugExitSubRule(32); }
 
-			DebugLocation(84, 37);
-			char_literal133=(IToken)Match(input,65,Follow._65_in_tableconstructor619); if (state.failed) return retval;
+			DebugLocation(169, 22);
+			char_literal144=(IToken)Match(input,74,Follow._74_in_tableconstructor852); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal133_tree = (object)adaptor.Create(char_literal133, "char_literal133", retval);
-			adaptor.AddChild(root_0, char_literal133_tree);
+			char_literal144_tree = (object)adaptor.Create(char_literal144, "char_literal144", retval);
+			adaptor.AddChild(root_0, char_literal144_tree);
 			}
 
 			}
@@ -3832,11 +4095,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("tableconstructor", 20);
-			LeaveRule("tableconstructor", 20);
+			TraceOut("tableconstructor", 22);
+			LeaveRule("tableconstructor", 22);
 			LeaveRule_tableconstructor();
+			if (state.backtracking > 0) { Memoize(input, 22, tableconstructor_StartIndex); }
+
 		}
-		DebugLocation(84, 39);
+		DebugLocation(170, 4);
 		} finally { DebugExitRule(GrammarFileName, "tableconstructor"); }
 		return retval;
 
@@ -3846,41 +4111,44 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_fieldlist();
 	partial void LeaveRule_fieldlist();
 	// $ANTLR start "fieldlist"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:86:1: fieldlist : field ( fieldsep field )* ( fieldsep )? ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:172:1: fieldlist : field ( fieldsep field )* ( fieldsep )? ;
 	[GrammarRule("fieldlist")]
 	private Antlr3AstNode fieldlist()
 	{
 		EnterRule_fieldlist();
-		EnterRule("fieldlist", 21);
+		EnterRule("fieldlist", 23);
 		var retval = new Antlr3AstNode("fieldlist");
 		
 		retval.Start = (IToken)input.LT(1);
+		int fieldlist_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		Antlr3AstNode field134 = default(Antlr3AstNode);
-		Antlr3AstNode fieldsep135 = default(Antlr3AstNode);
-		Antlr3AstNode field136 = default(Antlr3AstNode);
-		Antlr3AstNode fieldsep137 = default(Antlr3AstNode);
+		Antlr3AstNode field145 = default(Antlr3AstNode);
+		Antlr3AstNode fieldsep146 = default(Antlr3AstNode);
+		Antlr3AstNode field147 = default(Antlr3AstNode);
+		Antlr3AstNode fieldsep148 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "fieldlist");
-		DebugLocation(86, 47);
+		DebugLocation(172, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:86:11: ( field ( fieldsep field )* ( fieldsep )? )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 23)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:173:5: ( field ( fieldsep field )* ( fieldsep )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:86:13: field ( fieldsep field )* ( fieldsep )?
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:173:7: field ( fieldsep field )* ( fieldsep )?
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(86, 13);
-			PushFollow(Follow._field_in_fieldlist627);
-			field134=field();
+			DebugLocation(173, 7);
+			PushFollow(Follow._field_in_fieldlist869);
+			field145=field();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, field134.Tree, field134, "field134", retval);
-			DebugLocation(86, 19);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:86:19: ( fieldsep field )*
+			if (state.backtracking == 0) adaptor.AddChild(root_0, field145.Tree, field145, "field145", retval);
+			DebugLocation(173, 13);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:173:13: ( fieldsep field )*
 			try { DebugEnterSubRule(33);
 			while (true)
 			{
@@ -3888,11 +4156,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(33, false);
 				int LA33_1 = input.LA(1);
 
-				if ((LA33_1==26||LA33_1==33))
+				if ((LA33_1==31||LA33_1==39))
 				{
 					int LA33_2 = input.LA(2);
 
-					if ((LA33_2==CHARSTRING||LA33_2==EXP||(LA33_2>=FLOAT && LA33_2<=HEX)||LA33_2==INT||(LA33_2>=LONGSTRING && LA33_2<=NAME)||LA33_2==NORMALSTRING||LA33_2==20||LA33_2==22||LA33_2==27||LA33_2==30||LA33_2==40||LA33_2==49||LA33_2==51||(LA33_2>=55 && LA33_2<=56)||LA33_2==61||LA33_2==64))
+					if ((LA33_2==CHARSTRING||(LA33_2>=FLOAT && LA33_2<=HEX_FLOAT)||LA33_2==INT||(LA33_2>=LONGSTRING && LA33_2<=NAME)||LA33_2==NORMALSTRING||LA33_2==25||LA33_2==27||LA33_2==32||LA33_2==35||LA33_2==46||LA33_2==57||LA33_2==59||(LA33_2>=64 && LA33_2<=65)||LA33_2==70||LA33_2==73))
 					{
 						alt33 = 1;
 					}
@@ -3906,20 +4174,20 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:86:20: fieldsep field
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:173:14: fieldsep field
 					{
-					DebugLocation(86, 20);
-					PushFollow(Follow._fieldsep_in_fieldlist630);
-					fieldsep135=fieldsep();
+					DebugLocation(173, 14);
+					PushFollow(Follow._fieldsep_in_fieldlist872);
+					fieldsep146=fieldsep();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, fieldsep135.Tree, fieldsep135, "fieldsep135", retval);
-					DebugLocation(86, 29);
-					PushFollow(Follow._field_in_fieldlist632);
-					field136=field();
+					if (state.backtracking == 0) adaptor.AddChild(root_0, fieldsep146.Tree, fieldsep146, "fieldsep146", retval);
+					DebugLocation(173, 23);
+					PushFollow(Follow._field_in_fieldlist874);
+					field147=field();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, field136.Tree, field136, "field136", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, field147.Tree, field147, "field147", retval);
 
 					}
 					break;
@@ -3934,14 +4202,14 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 			} finally { DebugExitSubRule(33); }
 
-			DebugLocation(86, 37);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:86:37: ( fieldsep )?
+			DebugLocation(173, 31);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:173:31: ( fieldsep )?
 			int alt34=2;
 			try { DebugEnterSubRule(34);
 			try { DebugEnterDecision(34, false);
 			int LA34_1 = input.LA(1);
 
-			if ((LA34_1==26||LA34_1==33))
+			if ((LA34_1==31||LA34_1==39))
 			{
 				alt34 = 1;
 			}
@@ -3950,14 +4218,14 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:86:38: fieldsep
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:173:31: fieldsep
 				{
-				DebugLocation(86, 38);
-				PushFollow(Follow._fieldsep_in_fieldlist637);
-				fieldsep137=fieldsep();
+				DebugLocation(173, 31);
+				PushFollow(Follow._fieldsep_in_fieldlist878);
+				fieldsep148=fieldsep();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, fieldsep137.Tree, fieldsep137, "fieldsep137", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, fieldsep148.Tree, fieldsep148, "fieldsep148", retval);
 
 				}
 				break;
@@ -3984,11 +4252,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("fieldlist", 21);
-			LeaveRule("fieldlist", 21);
+			TraceOut("fieldlist", 23);
+			LeaveRule("fieldlist", 23);
 			LeaveRule_fieldlist();
+			if (state.backtracking > 0) { Memoize(input, 23, fieldlist_StartIndex); }
+
 		}
-		DebugLocation(86, 47);
+		DebugLocation(174, 4);
 		} finally { DebugExitRule(GrammarFileName, "fieldlist"); }
 		return retval;
 
@@ -3998,43 +4268,46 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_field();
 	partial void LeaveRule_field();
 	// $ANTLR start "field"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:88:1: field : ( '[' exp ']' '=' exp | NAME '=' exp | exp );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:176:1: field : ( '[' exp ']' '=' exp | NAME '=' exp | exp );
 	[GrammarRule("field")]
 	private Antlr3AstNode field()
 	{
 		EnterRule_field();
-		EnterRule("field", 22);
+		EnterRule("field", 24);
 		var retval = new Antlr3AstNode("field");
 		
 		retval.Start = (IToken)input.LT(1);
+		int field_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken char_literal138 = default(IToken);
-		IToken char_literal140 = default(IToken);
-		IToken char_literal141 = default(IToken);
-		IToken NAME143 = default(IToken);
-		IToken char_literal144 = default(IToken);
-		Antlr3AstNode exp139 = default(Antlr3AstNode);
-		Antlr3AstNode exp142 = default(Antlr3AstNode);
-		Antlr3AstNode exp145 = default(Antlr3AstNode);
-		Antlr3AstNode exp146 = default(Antlr3AstNode);
+		IToken char_literal149 = default(IToken);
+		IToken char_literal151 = default(IToken);
+		IToken char_literal152 = default(IToken);
+		IToken NAME154 = default(IToken);
+		IToken char_literal155 = default(IToken);
+		Antlr3AstNode exp150 = default(Antlr3AstNode);
+		Antlr3AstNode exp153 = default(Antlr3AstNode);
+		Antlr3AstNode exp156 = default(Antlr3AstNode);
+		Antlr3AstNode exp157 = default(Antlr3AstNode);
 
-		object char_literal138_tree = default(object);
-		object char_literal140_tree = default(object);
-		object char_literal141_tree = default(object);
-		object NAME143_tree = default(object);
-		object char_literal144_tree = default(object);
+		object char_literal149_tree = default(object);
+		object char_literal151_tree = default(object);
+		object char_literal152_tree = default(object);
+		object NAME154_tree = default(object);
+		object char_literal155_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "field");
-		DebugLocation(88, 48);
+		DebugLocation(176, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:88:7: ( '[' exp ']' '=' exp | NAME '=' exp | exp )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 24)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:177:5: ( '[' exp ']' '=' exp | NAME '=' exp | exp )
 			int alt35=3;
 			try { DebugEnterDecision(35, false);
 			switch (input.LA(1))
 			{
-			case 40:
+			case 46:
 				{
 				alt35 = 1;
 				}
@@ -4043,11 +4316,11 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				int LA35_2 = input.LA(2);
 
-				if ((LA35_2==36))
+				if ((LA35_2==42))
 				{
 					alt35 = 2;
 				}
-				else if ((LA35_2==EOF||LA35_2==CHARSTRING||LA35_2==LONGSTRING||LA35_2==NORMALSTRING||(LA35_2>=21 && LA35_2<=22)||(LA35_2>=24 && LA35_2<=29)||(LA35_2>=31 && LA35_2<=35)||(LA35_2>=37 && LA35_2<=40)||(LA35_2>=42 && LA35_2<=43)||LA35_2==57||(LA35_2>=64 && LA35_2<=66)))
+				else if ((LA35_2==EOF||LA35_2==CHARSTRING||LA35_2==LONGSTRING||LA35_2==NORMALSTRING||(LA35_2>=26 && LA35_2<=27)||(LA35_2>=29 && LA35_2<=34)||(LA35_2>=36 && LA35_2<=37)||(LA35_2>=39 && LA35_2<=41)||(LA35_2>=43 && LA35_2<=46)||(LA35_2>=50 && LA35_2<=51)||LA35_2==66||(LA35_2>=73 && LA35_2<=75)))
 				{
 					alt35 = 3;
 				}
@@ -4061,22 +4334,22 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				break;
 			case CHARSTRING:
-			case EXP:
 			case FLOAT:
 			case HEX:
+			case HEX_FLOAT:
 			case INT:
 			case LONGSTRING:
 			case NORMALSTRING:
-			case 20:
-			case 22:
+			case 25:
 			case 27:
-			case 30:
-			case 49:
-			case 51:
-			case 55:
-			case 56:
-			case 61:
+			case 32:
+			case 35:
+			case 57:
+			case 59:
 			case 64:
+			case 65:
+			case 70:
+			case 73:
 				{
 				alt35 = 3;
 				}
@@ -4095,82 +4368,82 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:88:9: '[' exp ']' '=' exp
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:177:7: '[' exp ']' '=' exp
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(88, 9);
-				char_literal138=(IToken)Match(input,40,Follow._40_in_field647); if (state.failed) return retval;
+				DebugLocation(177, 7);
+				char_literal149=(IToken)Match(input,46,Follow._46_in_field896); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal138_tree = (object)adaptor.Create(char_literal138, "char_literal138", retval);
-				adaptor.AddChild(root_0, char_literal138_tree);
+				char_literal149_tree = (object)adaptor.Create(char_literal149, "char_literal149", retval);
+				adaptor.AddChild(root_0, char_literal149_tree);
 				}
-				DebugLocation(88, 13);
-				PushFollow(Follow._exp_in_field649);
-				exp139=exp();
+				DebugLocation(177, 11);
+				PushFollow(Follow._exp_in_field898);
+				exp150=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp139.Tree, exp139, "exp139", retval);
-				DebugLocation(88, 17);
-				char_literal140=(IToken)Match(input,41,Follow._41_in_field651); if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp150.Tree, exp150, "exp150", retval);
+				DebugLocation(177, 15);
+				char_literal151=(IToken)Match(input,49,Follow._49_in_field900); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal140_tree = (object)adaptor.Create(char_literal140, "char_literal140", retval);
-				adaptor.AddChild(root_0, char_literal140_tree);
+				char_literal151_tree = (object)adaptor.Create(char_literal151, "char_literal151", retval);
+				adaptor.AddChild(root_0, char_literal151_tree);
 				}
-				DebugLocation(88, 21);
-				char_literal141=(IToken)Match(input,36,Follow._36_in_field653); if (state.failed) return retval;
+				DebugLocation(177, 19);
+				char_literal152=(IToken)Match(input,42,Follow._42_in_field902); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal141_tree = (object)adaptor.Create(char_literal141, "char_literal141", retval);
-				adaptor.AddChild(root_0, char_literal141_tree);
+				char_literal152_tree = (object)adaptor.Create(char_literal152, "char_literal152", retval);
+				adaptor.AddChild(root_0, char_literal152_tree);
 				}
-				DebugLocation(88, 25);
-				PushFollow(Follow._exp_in_field655);
-				exp142=exp();
+				DebugLocation(177, 23);
+				PushFollow(Follow._exp_in_field904);
+				exp153=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp142.Tree, exp142, "exp142", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp153.Tree, exp153, "exp153", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:88:31: NAME '=' exp
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:177:29: NAME '=' exp
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(88, 31);
-				NAME143=(IToken)Match(input,NAME,Follow._NAME_in_field659); if (state.failed) return retval;
+				DebugLocation(177, 29);
+				NAME154=(IToken)Match(input,NAME,Follow._NAME_in_field908); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				NAME143_tree = (object)adaptor.Create(NAME143, "NAME143", retval);
-				adaptor.AddChild(root_0, NAME143_tree);
+				NAME154_tree = (object)adaptor.Create(NAME154, "NAME154", retval);
+				adaptor.AddChild(root_0, NAME154_tree);
 				}
-				DebugLocation(88, 36);
-				char_literal144=(IToken)Match(input,36,Follow._36_in_field661); if (state.failed) return retval;
+				DebugLocation(177, 34);
+				char_literal155=(IToken)Match(input,42,Follow._42_in_field910); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal144_tree = (object)adaptor.Create(char_literal144, "char_literal144", retval);
-				adaptor.AddChild(root_0, char_literal144_tree);
+				char_literal155_tree = (object)adaptor.Create(char_literal155, "char_literal155", retval);
+				adaptor.AddChild(root_0, char_literal155_tree);
 				}
-				DebugLocation(88, 40);
-				PushFollow(Follow._exp_in_field663);
-				exp145=exp();
+				DebugLocation(177, 38);
+				PushFollow(Follow._exp_in_field912);
+				exp156=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp145.Tree, exp145, "exp145", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp156.Tree, exp156, "exp156", retval);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:88:46: exp
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:177:44: exp
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(88, 46);
-				PushFollow(Follow._exp_in_field667);
-				exp146=exp();
+				DebugLocation(177, 44);
+				PushFollow(Follow._exp_in_field916);
+				exp157=exp();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, exp146.Tree, exp146, "exp146", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, exp157.Tree, exp157, "exp157", retval);
 
 				}
 				break;
@@ -4192,11 +4465,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("field", 22);
-			LeaveRule("field", 22);
+			TraceOut("field", 24);
+			LeaveRule("field", 24);
 			LeaveRule_field();
+			if (state.backtracking > 0) { Memoize(input, 24, field_StartIndex); }
+
 		}
-		DebugLocation(88, 48);
+		DebugLocation(178, 4);
 		} finally { DebugExitRule(GrammarFileName, "field"); }
 		return retval;
 
@@ -4206,38 +4481,41 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_fieldsep();
 	partial void LeaveRule_fieldsep();
 	// $ANTLR start "fieldsep"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:90:1: fieldsep : ( ',' | ';' );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:180:1: fieldsep : ( ',' | ';' );
 	[GrammarRule("fieldsep")]
 	private Antlr3AstNode fieldsep()
 	{
 		EnterRule_fieldsep();
-		EnterRule("fieldsep", 23);
+		EnterRule("fieldsep", 25);
 		var retval = new Antlr3AstNode("fieldsep");
 		
 		retval.Start = (IToken)input.LT(1);
+		int fieldsep_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken set147 = default(IToken);
+		IToken set158 = default(IToken);
 
-		object set147_tree = default(object);
+		object set158_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "fieldsep");
-		DebugLocation(90, 20);
+		DebugLocation(180, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:90:10: ( ',' | ';' )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 25)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:181:5: ( ',' | ';' )
 			DebugEnterAlt(1);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(90, 10);
+			DebugLocation(181, 5);
 
-			set147=(IToken)input.LT(1);
-			if (input.LA(1)==26||input.LA(1)==33)
+			set158=(IToken)input.LT(1);
+			if (input.LA(1)==31||input.LA(1)==39)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set147, "set147", retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set158, "set158", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -4267,11 +4545,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("fieldsep", 23);
-			LeaveRule("fieldsep", 23);
+			TraceOut("fieldsep", 25);
+			LeaveRule("fieldsep", 25);
 			LeaveRule_fieldsep();
+			if (state.backtracking > 0) { Memoize(input, 25, fieldsep_StartIndex); }
+
 		}
-		DebugLocation(90, 20);
+		DebugLocation(182, 4);
 		} finally { DebugExitRule(GrammarFileName, "fieldsep"); }
 		return retval;
 
@@ -4281,38 +4561,41 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_binop();
 	partial void LeaveRule_binop();
 	// $ANTLR start "binop"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:92:1: binop : ( '+' | '-' | '*' | '/' | '^' | '%' | '..' | '<' | '<=' | '>' | '>=' | '==' | '~=' | 'and' | 'or' );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:184:1: binop : ( '+' | '-' | '*' | '/' | '^' | '%' | '..' | '<' | '<=' | '>' | '>=' | '==' | '~=' | 'and' | 'or' );
 	[GrammarRule("binop")]
 	private Antlr3AstNode binop()
 	{
 		EnterRule_binop();
-		EnterRule("binop", 24);
+		EnterRule("binop", 26);
 		var retval = new Antlr3AstNode("binop");
 		
 		retval.Start = (IToken)input.LT(1);
+		int binop_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken set148 = default(IToken);
+		IToken set159 = default(IToken);
 
-		object set148_tree = default(object);
+		object set159_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "binop");
-		DebugLocation(92, 21);
+		DebugLocation(184, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:92:7: ( '+' | '-' | '*' | '/' | '^' | '%' | '..' | '<' | '<=' | '>' | '>=' | '==' | '~=' | 'and' | 'or' )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 26)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:185:5: ( '+' | '-' | '*' | '/' | '^' | '%' | '..' | '<' | '<=' | '>' | '>=' | '==' | '~=' | 'and' | 'or' )
 			DebugEnterAlt(1);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(92, 7);
+			DebugLocation(185, 5);
 
-			set148=(IToken)input.LT(1);
-			if (input.LA(1)==21||(input.LA(1)>=24 && input.LA(1)<=25)||input.LA(1)==27||input.LA(1)==29||input.LA(1)==31||(input.LA(1)>=34 && input.LA(1)<=35)||(input.LA(1)>=37 && input.LA(1)<=39)||(input.LA(1)>=42 && input.LA(1)<=43)||input.LA(1)==57||input.LA(1)==66)
+			set159=(IToken)input.LT(1);
+			if (input.LA(1)==26||(input.LA(1)>=29 && input.LA(1)<=30)||input.LA(1)==32||input.LA(1)==34||input.LA(1)==36||(input.LA(1)>=40 && input.LA(1)<=41)||(input.LA(1)>=43 && input.LA(1)<=45)||(input.LA(1)>=50 && input.LA(1)<=51)||input.LA(1)==66||input.LA(1)==75)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set148, "set148", retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set159, "set159", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -4342,11 +4625,13 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("binop", 24);
-			LeaveRule("binop", 24);
+			TraceOut("binop", 26);
+			LeaveRule("binop", 26);
 			LeaveRule_binop();
+			if (state.backtracking > 0) { Memoize(input, 26, binop_StartIndex); }
+
 		}
-		DebugLocation(94, 21);
+		DebugLocation(188, 4);
 		} finally { DebugExitRule(GrammarFileName, "binop"); }
 		return retval;
 
@@ -4356,38 +4641,41 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_unop();
 	partial void LeaveRule_unop();
 	// $ANTLR start "unop"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:96:1: unop : ( '-' | 'not' | '#' );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:190:1: unop : ( '-' | 'not' | '#' );
 	[GrammarRule("unop")]
 	private Antlr3AstNode unop()
 	{
 		EnterRule_unop();
-		EnterRule("unop", 25);
+		EnterRule("unop", 27);
 		var retval = new Antlr3AstNode("unop");
 		
 		retval.Start = (IToken)input.LT(1);
+		int unop_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken set149 = default(IToken);
+		IToken set160 = default(IToken);
 
-		object set149_tree = default(object);
+		object set160_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "unop");
-		DebugLocation(96, 24);
+		DebugLocation(190, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:96:6: ( '-' | 'not' | '#' )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 27)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:191:5: ( '-' | 'not' | '#' )
 			DebugEnterAlt(1);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(96, 6);
+			DebugLocation(191, 5);
 
-			set149=(IToken)input.LT(1);
-			if (input.LA(1)==20||input.LA(1)==27||input.LA(1)==56)
+			set160=(IToken)input.LT(1);
+			if (input.LA(1)==25||input.LA(1)==32||input.LA(1)==65)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set149, "set149", retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set160, "set160", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -4417,52 +4705,57 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("unop", 25);
-			LeaveRule("unop", 25);
+			TraceOut("unop", 27);
+			LeaveRule("unop", 27);
 			LeaveRule_unop();
+			if (state.backtracking > 0) { Memoize(input, 27, unop_StartIndex); }
+
 		}
-		DebugLocation(96, 24);
+		DebugLocation(192, 4);
 		} finally { DebugExitRule(GrammarFileName, "unop"); }
 		return retval;
 
 	}
 	// $ANTLR end "unop"
 
-	partial void EnterRule_lua_number();
-	partial void LeaveRule_lua_number();
-	// $ANTLR start "lua_number"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:98:1: lua_number : ( INT | FLOAT | EXP | HEX );
-	[GrammarRule("lua_number")]
-	private Antlr3AstNode lua_number()
+	partial void EnterRule_number();
+	partial void LeaveRule_number();
+	// $ANTLR start "number"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:194:1: number : ( INT | HEX | FLOAT | HEX_FLOAT );
+	[GrammarRule("number")]
+	private Antlr3AstNode number()
 	{
-		EnterRule_lua_number();
-		EnterRule("lua_number", 26);
-		var retval = new Antlr3AstNode("lua_number");
+		EnterRule_number();
+		EnterRule("number", 28);
+		var retval = new Antlr3AstNode("number");
 		
 		retval.Start = (IToken)input.LT(1);
+		int number_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken set150 = default(IToken);
+		IToken set161 = default(IToken);
 
-		object set150_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "lua_number");
-		DebugLocation(98, 36);
+		object set161_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "number");
+		DebugLocation(194, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:98:12: ( INT | FLOAT | EXP | HEX )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 28)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:195:5: ( INT | HEX | FLOAT | HEX_FLOAT )
 			DebugEnterAlt(1);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(98, 12);
+			DebugLocation(195, 5);
 
-			set150=(IToken)input.LT(1);
-			if (input.LA(1)==EXP||(input.LA(1)>=FLOAT && input.LA(1)<=HEX)||input.LA(1)==INT)
+			set161=(IToken)input.LT(1);
+			if ((input.LA(1)>=FLOAT && input.LA(1)<=HEX_FLOAT)||input.LA(1)==INT)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set150, "set150", retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set161, "set161", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -4492,52 +4785,57 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("lua_number", 26);
-			LeaveRule("lua_number", 26);
-			LeaveRule_lua_number();
+			TraceOut("number", 28);
+			LeaveRule("number", 28);
+			LeaveRule_number();
+			if (state.backtracking > 0) { Memoize(input, 28, number_StartIndex); }
+
 		}
-		DebugLocation(98, 36);
-		} finally { DebugExitRule(GrammarFileName, "lua_number"); }
+		DebugLocation(196, 4);
+		} finally { DebugExitRule(GrammarFileName, "number"); }
 		return retval;
 
 	}
-	// $ANTLR end "lua_number"
+	// $ANTLR end "number"
 
-	partial void EnterRule_lua_string();
-	partial void LeaveRule_lua_string();
-	// $ANTLR start "lua_string"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:100:1: lua_string : ( NORMALSTRING | CHARSTRING | LONGSTRING );
-	[GrammarRule("lua_string")]
-	private Antlr3AstNode lua_string()
+	partial void EnterRule_string();
+	partial void LeaveRule_string();
+	// $ANTLR start "string"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:198:1: string : ( NORMALSTRING | CHARSTRING | LONGSTRING );
+	[GrammarRule("string")]
+	private Antlr3AstNode @string()
 	{
-		EnterRule_lua_string();
-		EnterRule("lua_string", 27);
-		var retval = new Antlr3AstNode("lua_string");
+		EnterRule_string();
+		EnterRule("string", 29);
+		var retval = new Antlr3AstNode("string");
 		
 		retval.Start = (IToken)input.LT(1);
+		int string_StartIndex = input.Index;
 
 		object root_0 = default(object);
 
-		IToken set151 = default(IToken);
+		IToken set162 = default(IToken);
 
-		object set151_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "lua_string");
-		DebugLocation(100, 51);
+		object set162_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "string");
+		DebugLocation(198, 4);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:100:12: ( NORMALSTRING | CHARSTRING | LONGSTRING )
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 29)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:199:5: ( NORMALSTRING | CHARSTRING | LONGSTRING )
 			DebugEnterAlt(1);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(100, 12);
+			DebugLocation(199, 5);
 
-			set151=(IToken)input.LT(1);
+			set162=(IToken)input.LT(1);
 			if (input.LA(1)==CHARSTRING||input.LA(1)==LONGSTRING||input.LA(1)==NORMALSTRING)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set151, "set151", retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set162, "set162", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -4567,42 +4865,44 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("lua_string", 27);
-			LeaveRule("lua_string", 27);
-			LeaveRule_lua_string();
+			TraceOut("string", 29);
+			LeaveRule("string", 29);
+			LeaveRule_string();
+			if (state.backtracking > 0) { Memoize(input, 29, string_StartIndex); }
+
 		}
-		DebugLocation(100, 51);
-		} finally { DebugExitRule(GrammarFileName, "lua_string"); }
+		DebugLocation(200, 4);
+		} finally { DebugExitRule(GrammarFileName, "string"); }
 		return retval;
 
 	}
-	// $ANTLR end "lua_string"
+	// $ANTLR end "string"
 
-	partial void EnterRule_synpred5_Lua_fragment();
-	partial void LeaveRule_synpred5_Lua_fragment();
+	partial void EnterRule_synpred9_Lua_fragment();
+	partial void LeaveRule_synpred9_Lua_fragment();
 
-	// $ANTLR start synpred5_Lua
-	private void synpred5_Lua_fragment()
+	// $ANTLR start synpred9_Lua
+	private void synpred9_Lua_fragment()
 	{
-		EnterRule_synpred5_Lua_fragment();
-		EnterRule("synpred5_Lua_fragment", 32);
-		var retval = new Antlr3AstNode("synpred5_Lua_fragment");
+		EnterRule_synpred9_Lua_fragment();
+		EnterRule("synpred9_Lua_fragment", 38);
+		var retval = new Antlr3AstNode("synpred9_Lua_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:31:9: ( varlist1 '=' explist1 )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:69:7: ( varlist '=' explist )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:31:9: varlist1 '=' explist1
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:69:7: varlist '=' explist
 			{
-			DebugLocation(31, 9);
-			PushFollow(Follow._varlist1_in_synpred5_Lua99);
-			varlist1();
+			DebugLocation(69, 7);
+			PushFollow(Follow._varlist_in_synpred9_Lua151);
+			varlist();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(31, 18);
-			Match(input,36,Follow._36_in_synpred5_Lua101); if (state.failed) return;
-			DebugLocation(31, 22);
-			PushFollow(Follow._explist1_in_synpred5_Lua103);
-			explist1();
+			DebugLocation(69, 15);
+			Match(input,42,Follow._42_in_synpred9_Lua153); if (state.failed) return;
+			DebugLocation(69, 19);
+			PushFollow(Follow._explist_in_synpred9_Lua155);
+			explist();
 			PopFollow();
 			if (state.failed) return;
 
@@ -4611,30 +4911,30 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred5_Lua_fragment", 32);
-			LeaveRule("synpred5_Lua_fragment", 32);
-			LeaveRule_synpred5_Lua_fragment();
+			TraceOut("synpred9_Lua_fragment", 38);
+			LeaveRule("synpred9_Lua_fragment", 38);
+			LeaveRule_synpred9_Lua_fragment();
 		}
 	}
-	// $ANTLR end synpred5_Lua
+	// $ANTLR end synpred9_Lua
 
-	partial void EnterRule_synpred6_Lua_fragment();
-	partial void LeaveRule_synpred6_Lua_fragment();
+	partial void EnterRule_synpred10_Lua_fragment();
+	partial void LeaveRule_synpred10_Lua_fragment();
 
-	// $ANTLR start synpred6_Lua
-	private void synpred6_Lua_fragment()
+	// $ANTLR start synpred10_Lua
+	private void synpred10_Lua_fragment()
 	{
-		EnterRule_synpred6_Lua_fragment();
-		EnterRule("synpred6_Lua_fragment", 33);
-		var retval = new Antlr3AstNode("synpred6_Lua_fragment");
+		EnterRule_synpred10_Lua_fragment();
+		EnterRule("synpred10_Lua_fragment", 39);
+		var retval = new Antlr3AstNode("synpred10_Lua_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:32:5: ( functioncall )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:70:7: ( functioncall )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:32:5: functioncall
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:70:7: functioncall
 			{
-			DebugLocation(32, 5);
-			PushFollow(Follow._functioncall_in_synpred6_Lua112);
+			DebugLocation(70, 7);
+			PushFollow(Follow._functioncall_in_synpred10_Lua163);
 			functioncall();
 			PopFollow();
 			if (state.failed) return;
@@ -4644,68 +4944,68 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred6_Lua_fragment", 33);
-			LeaveRule("synpred6_Lua_fragment", 33);
-			LeaveRule_synpred6_Lua_fragment();
+			TraceOut("synpred10_Lua_fragment", 39);
+			LeaveRule("synpred10_Lua_fragment", 39);
+			LeaveRule_synpred10_Lua_fragment();
 		}
 	}
-	// $ANTLR end synpred6_Lua
+	// $ANTLR end synpred10_Lua
 
-	partial void EnterRule_synpred14_Lua_fragment();
-	partial void LeaveRule_synpred14_Lua_fragment();
+	partial void EnterRule_synpred21_Lua_fragment();
+	partial void LeaveRule_synpred21_Lua_fragment();
 
-	// $ANTLR start synpred14_Lua
-	private void synpred14_Lua_fragment()
+	// $ANTLR start synpred21_Lua
+	private void synpred21_Lua_fragment()
 	{
-		EnterRule_synpred14_Lua_fragment();
-		EnterRule("synpred14_Lua_fragment", 41);
-		var retval = new Antlr3AstNode("synpred14_Lua_fragment");
+		EnterRule_synpred21_Lua_fragment();
+		EnterRule("synpred21_Lua_fragment", 50);
+		var retval = new Antlr3AstNode("synpred21_Lua_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:37:5: ( 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:78:7: ( 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:37:5: 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:78:7: 'for' NAME '=' exp ',' exp ( ',' exp )? 'do' block 'end'
 			{
-			DebugLocation(37, 5);
-			Match(input,50,Follow._50_in_synpred14_Lua201); if (state.failed) return;
-			DebugLocation(37, 11);
-			Match(input,NAME,Follow._NAME_in_synpred14_Lua203); if (state.failed) return;
-			DebugLocation(37, 16);
-			Match(input,36,Follow._36_in_synpred14_Lua205); if (state.failed) return;
-			DebugLocation(37, 20);
-			PushFollow(Follow._exp_in_synpred14_Lua207);
+			DebugLocation(78, 7);
+			Match(input,58,Follow._58_in_synpred21_Lua273); if (state.failed) return;
+			DebugLocation(78, 13);
+			Match(input,NAME,Follow._NAME_in_synpred21_Lua275); if (state.failed) return;
+			DebugLocation(78, 18);
+			Match(input,42,Follow._42_in_synpred21_Lua277); if (state.failed) return;
+			DebugLocation(78, 22);
+			PushFollow(Follow._exp_in_synpred21_Lua279);
 			exp();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(37, 24);
-			Match(input,26,Follow._26_in_synpred14_Lua209); if (state.failed) return;
-			DebugLocation(37, 28);
-			PushFollow(Follow._exp_in_synpred14_Lua211);
+			DebugLocation(78, 26);
+			Match(input,31,Follow._31_in_synpred21_Lua281); if (state.failed) return;
+			DebugLocation(78, 30);
+			PushFollow(Follow._exp_in_synpred21_Lua283);
 			exp();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(37, 32);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:37:32: ( ',' exp )?
-			int alt40=2;
-			try { DebugEnterSubRule(40);
-			try { DebugEnterDecision(40, false);
-			int LA40_1 = input.LA(1);
+			DebugLocation(78, 34);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:78:34: ( ',' exp )?
+			int alt38=2;
+			try { DebugEnterSubRule(38);
+			try { DebugEnterDecision(38, false);
+			int LA38_1 = input.LA(1);
 
-			if ((LA40_1==26))
+			if ((LA38_1==31))
 			{
-				alt40 = 1;
+				alt38 = 1;
 			}
-			} finally { DebugExitDecision(40); }
-			switch (alt40)
+			} finally { DebugExitDecision(38); }
+			switch (alt38)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:37:33: ',' exp
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:78:35: ',' exp
 				{
-				DebugLocation(37, 33);
-				Match(input,26,Follow._26_in_synpred14_Lua214); if (state.failed) return;
-				DebugLocation(37, 37);
-				PushFollow(Follow._exp_in_synpred14_Lua216);
+				DebugLocation(78, 35);
+				Match(input,31,Follow._31_in_synpred21_Lua286); if (state.failed) return;
+				DebugLocation(78, 39);
+				PushFollow(Follow._exp_in_synpred21_Lua288);
 				exp();
 				PopFollow();
 				if (state.failed) return;
@@ -4714,104 +5014,104 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 
 			}
-			} finally { DebugExitSubRule(40); }
+			} finally { DebugExitSubRule(38); }
 
-			DebugLocation(37, 43);
-			Match(input,45,Follow._45_in_synpred14_Lua220); if (state.failed) return;
-			DebugLocation(37, 48);
-			PushFollow(Follow._block_in_synpred14_Lua222);
+			DebugLocation(78, 45);
+			Match(input,53,Follow._53_in_synpred21_Lua292); if (state.failed) return;
+			DebugLocation(78, 50);
+			PushFollow(Follow._block_in_synpred21_Lua294);
 			block();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(37, 54);
-			Match(input,48,Follow._48_in_synpred14_Lua224); if (state.failed) return;
+			DebugLocation(78, 56);
+			Match(input,56,Follow._56_in_synpred21_Lua296); if (state.failed) return;
 
 			}
 
 		}
 		finally
 		{
-			TraceOut("synpred14_Lua_fragment", 41);
-			LeaveRule("synpred14_Lua_fragment", 41);
-			LeaveRule_synpred14_Lua_fragment();
+			TraceOut("synpred21_Lua_fragment", 50);
+			LeaveRule("synpred21_Lua_fragment", 50);
+			LeaveRule_synpred21_Lua_fragment();
 		}
 	}
-	// $ANTLR end synpred14_Lua
+	// $ANTLR end synpred21_Lua
 
-	partial void EnterRule_synpred15_Lua_fragment();
-	partial void LeaveRule_synpred15_Lua_fragment();
+	partial void EnterRule_synpred22_Lua_fragment();
+	partial void LeaveRule_synpred22_Lua_fragment();
 
-	// $ANTLR start synpred15_Lua
-	private void synpred15_Lua_fragment()
+	// $ANTLR start synpred22_Lua
+	private void synpred22_Lua_fragment()
 	{
-		EnterRule_synpred15_Lua_fragment();
-		EnterRule("synpred15_Lua_fragment", 42);
-		var retval = new Antlr3AstNode("synpred15_Lua_fragment");
+		EnterRule_synpred22_Lua_fragment();
+		EnterRule("synpred22_Lua_fragment", 51);
+		var retval = new Antlr3AstNode("synpred22_Lua_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:38:5: ( 'for' namelist 'in' explist1 'do' block 'end' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:79:7: ( 'for' namelist 'in' explist 'do' block 'end' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:38:5: 'for' namelist 'in' explist1 'do' block 'end'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:79:7: 'for' namelist 'in' explist 'do' block 'end'
 			{
-			DebugLocation(38, 5);
-			Match(input,50,Follow._50_in_synpred15_Lua233); if (state.failed) return;
-			DebugLocation(38, 11);
-			PushFollow(Follow._namelist_in_synpred15_Lua235);
+			DebugLocation(79, 7);
+			Match(input,58,Follow._58_in_synpred22_Lua304); if (state.failed) return;
+			DebugLocation(79, 13);
+			PushFollow(Follow._namelist_in_synpred22_Lua306);
 			namelist();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(38, 20);
-			Match(input,53,Follow._53_in_synpred15_Lua237); if (state.failed) return;
-			DebugLocation(38, 25);
-			PushFollow(Follow._explist1_in_synpred15_Lua239);
-			explist1();
+			DebugLocation(79, 22);
+			Match(input,62,Follow._62_in_synpred22_Lua308); if (state.failed) return;
+			DebugLocation(79, 27);
+			PushFollow(Follow._explist_in_synpred22_Lua310);
+			explist();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(38, 34);
-			Match(input,45,Follow._45_in_synpred15_Lua241); if (state.failed) return;
-			DebugLocation(38, 39);
-			PushFollow(Follow._block_in_synpred15_Lua243);
+			DebugLocation(79, 35);
+			Match(input,53,Follow._53_in_synpred22_Lua312); if (state.failed) return;
+			DebugLocation(79, 40);
+			PushFollow(Follow._block_in_synpred22_Lua314);
 			block();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(38, 45);
-			Match(input,48,Follow._48_in_synpred15_Lua245); if (state.failed) return;
+			DebugLocation(79, 46);
+			Match(input,56,Follow._56_in_synpred22_Lua316); if (state.failed) return;
 
 			}
 
 		}
 		finally
 		{
-			TraceOut("synpred15_Lua_fragment", 42);
-			LeaveRule("synpred15_Lua_fragment", 42);
-			LeaveRule_synpred15_Lua_fragment();
+			TraceOut("synpred22_Lua_fragment", 51);
+			LeaveRule("synpred22_Lua_fragment", 51);
+			LeaveRule_synpred22_Lua_fragment();
 		}
 	}
-	// $ANTLR end synpred15_Lua
+	// $ANTLR end synpred22_Lua
 
-	partial void EnterRule_synpred17_Lua_fragment();
-	partial void LeaveRule_synpred17_Lua_fragment();
+	partial void EnterRule_synpred24_Lua_fragment();
+	partial void LeaveRule_synpred24_Lua_fragment();
 
-	// $ANTLR start synpred17_Lua
-	private void synpred17_Lua_fragment()
+	// $ANTLR start synpred24_Lua
+	private void synpred24_Lua_fragment()
 	{
-		EnterRule_synpred17_Lua_fragment();
-		EnterRule("synpred17_Lua_fragment", 44);
-		var retval = new Antlr3AstNode("synpred17_Lua_fragment");
+		EnterRule_synpred24_Lua_fragment();
+		EnterRule("synpred24_Lua_fragment", 53);
+		var retval = new Antlr3AstNode("synpred24_Lua_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:40:5: ( 'local' 'function' NAME funcbody )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:81:7: ( 'local' 'function' NAME funcbody )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:40:5: 'local' 'function' NAME funcbody
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:81:7: 'local' 'function' NAME funcbody
 			{
-			DebugLocation(40, 5);
-			Match(input,54,Follow._54_in_synpred17_Lua267); if (state.failed) return;
-			DebugLocation(40, 13);
-			Match(input,51,Follow._51_in_synpred17_Lua269); if (state.failed) return;
-			DebugLocation(40, 24);
-			Match(input,NAME,Follow._NAME_in_synpred17_Lua271); if (state.failed) return;
-			DebugLocation(40, 29);
-			PushFollow(Follow._funcbody_in_synpred17_Lua273);
+			DebugLocation(81, 7);
+			Match(input,63,Follow._63_in_synpred24_Lua336); if (state.failed) return;
+			DebugLocation(81, 15);
+			Match(input,59,Follow._59_in_synpred24_Lua338); if (state.failed) return;
+			DebugLocation(81, 26);
+			Match(input,NAME,Follow._NAME_in_synpred24_Lua340); if (state.failed) return;
+			DebugLocation(81, 31);
+			PushFollow(Follow._funcbody_in_synpred24_Lua342);
 			funcbody();
 			PopFollow();
 			if (state.failed) return;
@@ -4821,70 +5121,35 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred17_Lua_fragment", 44);
-			LeaveRule("synpred17_Lua_fragment", 44);
-			LeaveRule_synpred17_Lua_fragment();
+			TraceOut("synpred24_Lua_fragment", 53);
+			LeaveRule("synpred24_Lua_fragment", 53);
+			LeaveRule_synpred24_Lua_fragment();
 		}
 	}
-	// $ANTLR end synpred17_Lua
+	// $ANTLR end synpred24_Lua
 
-	partial void EnterRule_synpred25_Lua_fragment();
-	partial void LeaveRule_synpred25_Lua_fragment();
+	partial void EnterRule_synpred42_Lua_fragment();
+	partial void LeaveRule_synpred42_Lua_fragment();
 
-	// $ANTLR start synpred25_Lua
-	private void synpred25_Lua_fragment()
+	// $ANTLR start synpred42_Lua
+	private void synpred42_Lua_fragment()
 	{
-		EnterRule_synpred25_Lua_fragment();
-		EnterRule("synpred25_Lua_fragment", 52);
-		var retval = new Antlr3AstNode("synpred25_Lua_fragment");
+		EnterRule_synpred42_Lua_fragment();
+		EnterRule("synpred42_Lua_fragment", 71);
+		var retval = new Antlr3AstNode("synpred42_Lua_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:52:13: ( exp ',' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:111:49: ( binop exp )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:52:13: exp ','
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:111:49: binop exp
 			{
-			DebugLocation(52, 13);
-			PushFollow(Follow._exp_in_synpred25_Lua372);
-			exp();
-			PopFollow();
-			if (state.failed) return;
-			DebugLocation(52, 17);
-			Match(input,26,Follow._26_in_synpred25_Lua374); if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred25_Lua_fragment", 52);
-			LeaveRule("synpred25_Lua_fragment", 52);
-			LeaveRule_synpred25_Lua_fragment();
-		}
-	}
-	// $ANTLR end synpred25_Lua
-
-	partial void EnterRule_synpred35_Lua_fragment();
-	partial void LeaveRule_synpred35_Lua_fragment();
-
-	// $ANTLR start synpred35_Lua
-	private void synpred35_Lua_fragment()
-	{
-		EnterRule_synpred35_Lua_fragment();
-		EnterRule("synpred35_Lua_fragment", 62);
-		var retval = new Antlr3AstNode("synpred35_Lua_fragment");
-		try
-		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:123: ( binop exp )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:123: binop exp
-			{
-			DebugLocation(54, 123);
-			PushFollow(Follow._binop_in_synpred35_Lua430);
+			DebugLocation(111, 49);
+			PushFollow(Follow._binop_in_synpred42_Lua570);
 			binop();
 			PopFollow();
 			if (state.failed) return;
-			DebugLocation(54, 129);
-			PushFollow(Follow._exp_in_synpred35_Lua432);
+			DebugLocation(111, 55);
+			PushFollow(Follow._exp_in_synpred42_Lua572);
 			exp();
 			PopFollow();
 			if (state.failed) return;
@@ -4894,30 +5159,30 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred35_Lua_fragment", 62);
-			LeaveRule("synpred35_Lua_fragment", 62);
-			LeaveRule_synpred35_Lua_fragment();
+			TraceOut("synpred42_Lua_fragment", 71);
+			LeaveRule("synpred42_Lua_fragment", 71);
+			LeaveRule_synpred42_Lua_fragment();
 		}
 	}
-	// $ANTLR end synpred35_Lua
+	// $ANTLR end synpred42_Lua
 
-	partial void EnterRule_synpred37_Lua_fragment();
-	partial void LeaveRule_synpred37_Lua_fragment();
+	partial void EnterRule_synpred44_Lua_fragment();
+	partial void LeaveRule_synpred44_Lua_fragment();
 
-	// $ANTLR start synpred37_Lua
-	private void synpred37_Lua_fragment()
+	// $ANTLR start synpred44_Lua
+	private void synpred44_Lua_fragment()
 	{
-		EnterRule_synpred37_Lua_fragment();
-		EnterRule("synpred37_Lua_fragment", 64);
-		var retval = new Antlr3AstNode("synpred37_Lua_fragment");
+		EnterRule_synpred44_Lua_fragment();
+		EnterRule("synpred44_Lua_fragment", 73);
+		var retval = new Antlr3AstNode("synpred44_Lua_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:56:37: ( varSuffix )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:115:38: ( varSuffix )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:56:37: varSuffix
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:115:38: varSuffix
 			{
-			DebugLocation(56, 37);
-			PushFollow(Follow._varSuffix_in_synpred37_Lua456);
+			DebugLocation(115, 38);
+			PushFollow(Follow._varSuffix_in_synpred44_Lua602);
 			varSuffix();
 			PopFollow();
 			if (state.failed) return;
@@ -4927,30 +5192,30 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred37_Lua_fragment", 64);
-			LeaveRule("synpred37_Lua_fragment", 64);
-			LeaveRule_synpred37_Lua_fragment();
+			TraceOut("synpred44_Lua_fragment", 73);
+			LeaveRule("synpred44_Lua_fragment", 73);
+			LeaveRule_synpred44_Lua_fragment();
 		}
 	}
-	// $ANTLR end synpred37_Lua
+	// $ANTLR end synpred44_Lua
 
-	partial void EnterRule_synpred38_Lua_fragment();
-	partial void LeaveRule_synpred38_Lua_fragment();
+	partial void EnterRule_synpred45_Lua_fragment();
+	partial void LeaveRule_synpred45_Lua_fragment();
 
-	// $ANTLR start synpred38_Lua
-	private void synpred38_Lua_fragment()
+	// $ANTLR start synpred45_Lua
+	private void synpred45_Lua_fragment()
 	{
-		EnterRule_synpred38_Lua_fragment();
-		EnterRule("synpred38_Lua_fragment", 65);
-		var retval = new Antlr3AstNode("synpred38_Lua_fragment");
+		EnterRule_synpred45_Lua_fragment();
+		EnterRule("synpred45_Lua_fragment", 74);
+		var retval = new Antlr3AstNode("synpred45_Lua_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:58:21: ( nameAndArgs )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:119:16: ( nameAndArgs )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:58:21: nameAndArgs
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:119:16: nameAndArgs
 			{
-			DebugLocation(58, 21);
-			PushFollow(Follow._nameAndArgs_in_synpred38_Lua466);
+			DebugLocation(119, 16);
+			PushFollow(Follow._nameAndArgs_in_synpred45_Lua622);
 			nameAndArgs();
 			PopFollow();
 			if (state.failed) return;
@@ -4960,30 +5225,30 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred38_Lua_fragment", 65);
-			LeaveRule("synpred38_Lua_fragment", 65);
-			LeaveRule_synpred38_Lua_fragment();
+			TraceOut("synpred45_Lua_fragment", 74);
+			LeaveRule("synpred45_Lua_fragment", 74);
+			LeaveRule_synpred45_Lua_fragment();
 		}
 	}
-	// $ANTLR end synpred38_Lua
+	// $ANTLR end synpred45_Lua
 
-	partial void EnterRule_synpred39_Lua_fragment();
-	partial void LeaveRule_synpred39_Lua_fragment();
+	partial void EnterRule_synpred46_Lua_fragment();
+	partial void LeaveRule_synpred46_Lua_fragment();
 
-	// $ANTLR start synpred39_Lua
-	private void synpred39_Lua_fragment()
+	// $ANTLR start synpred46_Lua
+	private void synpred46_Lua_fragment()
 	{
-		EnterRule_synpred39_Lua_fragment();
-		EnterRule("synpred39_Lua_fragment", 66);
-		var retval = new Antlr3AstNode("synpred39_Lua_fragment");
+		EnterRule_synpred46_Lua_fragment();
+		EnterRule("synpred46_Lua_fragment", 75);
+		var retval = new Antlr3AstNode("synpred46_Lua_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:60:24: ( nameAndArgs )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:123:16: ( nameAndArgs )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:60:24: nameAndArgs
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:123:16: nameAndArgs
 			{
-			DebugLocation(60, 24);
-			PushFollow(Follow._nameAndArgs_in_synpred39_Lua476);
+			DebugLocation(123, 16);
+			PushFollow(Follow._nameAndArgs_in_synpred46_Lua642);
 			nameAndArgs();
 			PopFollow();
 			if (state.failed) return;
@@ -4993,30 +5258,30 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred39_Lua_fragment", 66);
-			LeaveRule("synpred39_Lua_fragment", 66);
-			LeaveRule_synpred39_Lua_fragment();
+			TraceOut("synpred46_Lua_fragment", 75);
+			LeaveRule("synpred46_Lua_fragment", 75);
+			LeaveRule_synpred46_Lua_fragment();
 		}
 	}
-	// $ANTLR end synpred39_Lua
+	// $ANTLR end synpred46_Lua
 
-	partial void EnterRule_synpred40_Lua_fragment();
-	partial void LeaveRule_synpred40_Lua_fragment();
+	partial void EnterRule_synpred47_Lua_fragment();
+	partial void LeaveRule_synpred47_Lua_fragment();
 
-	// $ANTLR start synpred40_Lua
-	private void synpred40_Lua_fragment()
+	// $ANTLR start synpred47_Lua
+	private void synpred47_Lua_fragment()
 	{
-		EnterRule_synpred40_Lua_fragment();
-		EnterRule("synpred40_Lua_fragment", 67);
-		var retval = new Antlr3AstNode("synpred40_Lua_fragment");
+		EnterRule_synpred47_Lua_fragment();
+		EnterRule("synpred47_Lua_fragment", 76);
+		var retval = new Antlr3AstNode("synpred47_Lua_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:70:11: ( var )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:127:7: ( var )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:70:11: var
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:127:7: var
 			{
-			DebugLocation(70, 11);
-			PushFollow(Follow._var_in_synpred40_Lua487);
+			DebugLocation(127, 7);
+			PushFollow(Follow._var_in_synpred47_Lua660);
 			var();
 			PopFollow();
 			if (state.failed) return;
@@ -5026,12 +5291,12 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred40_Lua_fragment", 67);
-			LeaveRule("synpred40_Lua_fragment", 67);
-			LeaveRule_synpred40_Lua_fragment();
+			TraceOut("synpred47_Lua_fragment", 76);
+			LeaveRule("synpred47_Lua_fragment", 76);
+			LeaveRule_synpred47_Lua_fragment();
 		}
 	}
-	// $ANTLR end synpred40_Lua
+	// $ANTLR end synpred47_Lua
 	#endregion Rules
 
 	#region Synpreds
@@ -5062,186 +5327,194 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	#region Follow sets
 	private static class Follow
 	{
-		public static readonly BitSet _stat_in_chunk65 = new BitSet(new ulong[]{0x8C5C300200404002UL});
-		public static readonly BitSet _33_in_chunk68 = new BitSet(new ulong[]{0x8C5C300000404002UL});
-		public static readonly BitSet _laststat_in_chunk75 = new BitSet(new ulong[]{0x200000002UL});
-		public static readonly BitSet _33_in_chunk78 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _chunk_in_block90 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _varlist1_in_stat99 = new BitSet(new ulong[]{0x1000000000UL});
-		public static readonly BitSet _36_in_stat101 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _explist1_in_stat103 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _functioncall_in_stat112 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _45_in_stat121 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_stat123 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_stat125 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _63_in_stat134 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_stat136 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _45_in_stat138 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_stat140 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_stat142 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _58_in_stat151 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_stat153 = new BitSet(new ulong[]{0x4000000000000000UL});
-		public static readonly BitSet _62_in_stat155 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_stat157 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _52_in_stat166 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_stat168 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_stat170 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_stat172 = new BitSet(new ulong[]{0x1C00000000000UL});
-		public static readonly BitSet _47_in_stat175 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_stat177 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_stat179 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_stat181 = new BitSet(new ulong[]{0x1C00000000000UL});
-		public static readonly BitSet _46_in_stat186 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_stat188 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_stat192 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _50_in_stat201 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_stat203 = new BitSet(new ulong[]{0x1000000000UL});
-		public static readonly BitSet _36_in_stat205 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_stat207 = new BitSet(new ulong[]{0x4000000UL});
-		public static readonly BitSet _26_in_stat209 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_stat211 = new BitSet(new ulong[]{0x200004000000UL});
-		public static readonly BitSet _26_in_stat214 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_stat216 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _45_in_stat220 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_stat222 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_stat224 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _50_in_stat233 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _namelist_in_stat235 = new BitSet(new ulong[]{0x20000000000000UL});
-		public static readonly BitSet _53_in_stat237 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _explist1_in_stat239 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _45_in_stat241 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_stat243 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_stat245 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _51_in_stat254 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _funcname_in_stat256 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _funcbody_in_stat258 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _54_in_stat267 = new BitSet(new ulong[]{0x8000000000000UL});
-		public static readonly BitSet _51_in_stat269 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_stat271 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _funcbody_in_stat273 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _54_in_stat282 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _namelist_in_stat284 = new BitSet(new ulong[]{0x1000000002UL});
-		public static readonly BitSet _36_in_stat287 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _explist1_in_stat289 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _59_in_laststat300 = new BitSet(new ulong[]{0x218A000048516B52UL,0x1UL});
-		public static readonly BitSet _explist1_in_laststat303 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _44_in_laststat309 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NAME_in_funcname317 = new BitSet(new ulong[]{0x110000002UL});
-		public static readonly BitSet _28_in_funcname320 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_funcname322 = new BitSet(new ulong[]{0x110000002UL});
-		public static readonly BitSet _32_in_funcname327 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_funcname329 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _var_in_varlist1340 = new BitSet(new ulong[]{0x4000002UL});
-		public static readonly BitSet _26_in_varlist1343 = new BitSet(new ulong[]{0x404000UL});
-		public static readonly BitSet _var_in_varlist1345 = new BitSet(new ulong[]{0x4000002UL});
-		public static readonly BitSet _NAME_in_namelist356 = new BitSet(new ulong[]{0x4000002UL});
-		public static readonly BitSet _26_in_namelist359 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_namelist361 = new BitSet(new ulong[]{0x4000002UL});
-		public static readonly BitSet _exp_in_explist1372 = new BitSet(new ulong[]{0x4000000UL});
-		public static readonly BitSet _26_in_explist1374 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_explist1378 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _55_in_exp388 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _49_in_exp392 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _61_in_exp396 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _lua_number_in_exp400 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _lua_string_in_exp404 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _30_in_exp408 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _function_in_exp412 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _prefixexp_in_exp416 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _tableconstructor_in_exp420 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _unop_in_exp424 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_exp426 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _binop_in_exp430 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_exp432 = new BitSet(new ulong[]{0x2000CECAB200002UL,0x4UL});
-		public static readonly BitSet _NAME_in_var443 = new BitSet(new ulong[]{0x10110412012UL,0x1UL});
-		public static readonly BitSet _22_in_var447 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_var449 = new BitSet(new ulong[]{0x800000UL});
-		public static readonly BitSet _23_in_var451 = new BitSet(new ulong[]{0x10110412010UL,0x1UL});
-		public static readonly BitSet _varSuffix_in_var453 = new BitSet(new ulong[]{0x10110412012UL,0x1UL});
-		public static readonly BitSet _varSuffix_in_var456 = new BitSet(new ulong[]{0x10110412012UL,0x1UL});
-		public static readonly BitSet _varOrExp_in_prefixexp464 = new BitSet(new ulong[]{0x100412012UL,0x1UL});
-		public static readonly BitSet _nameAndArgs_in_prefixexp466 = new BitSet(new ulong[]{0x100412012UL,0x1UL});
-		public static readonly BitSet _varOrExp_in_functioncall474 = new BitSet(new ulong[]{0x100412010UL,0x1UL});
-		public static readonly BitSet _nameAndArgs_in_functioncall476 = new BitSet(new ulong[]{0x100412012UL,0x1UL});
-		public static readonly BitSet _var_in_varOrExp487 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _22_in_varOrExp491 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_varOrExp493 = new BitSet(new ulong[]{0x800000UL});
-		public static readonly BitSet _23_in_varOrExp495 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _32_in_nameAndArgs503 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_nameAndArgs505 = new BitSet(new ulong[]{0x412010UL,0x1UL});
-		public static readonly BitSet _args_in_nameAndArgs509 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _nameAndArgs_in_varSuffix516 = new BitSet(new ulong[]{0x10110412010UL,0x1UL});
-		public static readonly BitSet _40_in_varSuffix520 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_varSuffix522 = new BitSet(new ulong[]{0x20000000000UL});
-		public static readonly BitSet _41_in_varSuffix524 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _28_in_varSuffix528 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_varSuffix530 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _22_in_args540 = new BitSet(new ulong[]{0x218A000048D16B50UL,0x1UL});
-		public static readonly BitSet _explist1_in_args543 = new BitSet(new ulong[]{0x800000UL});
-		public static readonly BitSet _23_in_args547 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _tableconstructor_in_args551 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _lua_string_in_args555 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _51_in_function564 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _funcbody_in_function566 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _22_in_funcbody574 = new BitSet(new ulong[]{0x40804000UL});
-		public static readonly BitSet _parlist1_in_funcbody577 = new BitSet(new ulong[]{0x800000UL});
-		public static readonly BitSet _23_in_funcbody581 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_funcbody583 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_funcbody585 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _namelist_in_parlist1593 = new BitSet(new ulong[]{0x4000002UL});
-		public static readonly BitSet _26_in_parlist1596 = new BitSet(new ulong[]{0x40000000UL});
-		public static readonly BitSet _30_in_parlist1598 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _30_in_parlist1604 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _64_in_tableconstructor612 = new BitSet(new ulong[]{0x218A010048516B50UL,0x3UL});
-		public static readonly BitSet _fieldlist_in_tableconstructor615 = new BitSet(new ulong[]{0x0UL,0x2UL});
-		public static readonly BitSet _65_in_tableconstructor619 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _field_in_fieldlist627 = new BitSet(new ulong[]{0x204000002UL});
-		public static readonly BitSet _fieldsep_in_fieldlist630 = new BitSet(new ulong[]{0x218A010048516B50UL,0x1UL});
-		public static readonly BitSet _field_in_fieldlist632 = new BitSet(new ulong[]{0x204000002UL});
-		public static readonly BitSet _fieldsep_in_fieldlist637 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _40_in_field647 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_field649 = new BitSet(new ulong[]{0x20000000000UL});
-		public static readonly BitSet _41_in_field651 = new BitSet(new ulong[]{0x1000000000UL});
-		public static readonly BitSet _36_in_field653 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_field655 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NAME_in_field659 = new BitSet(new ulong[]{0x1000000000UL});
-		public static readonly BitSet _36_in_field661 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_field663 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _exp_in_field667 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _varlist1_in_synpred5_Lua99 = new BitSet(new ulong[]{0x1000000000UL});
-		public static readonly BitSet _36_in_synpred5_Lua101 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _explist1_in_synpred5_Lua103 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _functioncall_in_synpred6_Lua112 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _50_in_synpred14_Lua201 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_synpred14_Lua203 = new BitSet(new ulong[]{0x1000000000UL});
-		public static readonly BitSet _36_in_synpred14_Lua205 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_synpred14_Lua207 = new BitSet(new ulong[]{0x4000000UL});
-		public static readonly BitSet _26_in_synpred14_Lua209 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_synpred14_Lua211 = new BitSet(new ulong[]{0x200004000000UL});
-		public static readonly BitSet _26_in_synpred14_Lua214 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_synpred14_Lua216 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _45_in_synpred14_Lua220 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_synpred14_Lua222 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_synpred14_Lua224 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _50_in_synpred15_Lua233 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _namelist_in_synpred15_Lua235 = new BitSet(new ulong[]{0x20000000000000UL});
-		public static readonly BitSet _53_in_synpred15_Lua237 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _explist1_in_synpred15_Lua239 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _45_in_synpred15_Lua241 = new BitSet(new ulong[]{0x8C5C300000404000UL});
-		public static readonly BitSet _block_in_synpred15_Lua243 = new BitSet(new ulong[]{0x1000000000000UL});
-		public static readonly BitSet _48_in_synpred15_Lua245 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _54_in_synpred17_Lua267 = new BitSet(new ulong[]{0x8000000000000UL});
-		public static readonly BitSet _51_in_synpred17_Lua269 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _NAME_in_synpred17_Lua271 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _funcbody_in_synpred17_Lua273 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _exp_in_synpred25_Lua372 = new BitSet(new ulong[]{0x4000000UL});
-		public static readonly BitSet _26_in_synpred25_Lua374 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _binop_in_synpred35_Lua430 = new BitSet(new ulong[]{0x218A000048516B50UL,0x1UL});
-		public static readonly BitSet _exp_in_synpred35_Lua432 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _varSuffix_in_synpred37_Lua456 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _nameAndArgs_in_synpred38_Lua466 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _nameAndArgs_in_synpred39_Lua476 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _var_in_synpred40_Lua487 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _shebang_in_chunk77 = new BitSet(new ulong[]{0xBC3000C008080000UL,0x118UL});
+		public static readonly BitSet _block_in_chunk80 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _25_in_shebang94 = new BitSet(new ulong[]{0x1000000UL});
+		public static readonly BitSet _24_in_shebang96 = new BitSet(new ulong[]{0xFFFFFFFFFFFFFFF0UL,0xFFFUL});
+		public static readonly BitSet _set_in_shebang106 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _stat_in_block122 = new BitSet(new ulong[]{0xBC3000C008080002UL,0x118UL});
+		public static readonly BitSet _retstat_in_block125 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _39_in_stat143 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _varlist_in_stat151 = new BitSet(new ulong[]{0x40000000000UL});
+		public static readonly BitSet _42_in_stat153 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _explist_in_stat155 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _functioncall_in_stat163 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _label_in_stat171 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _52_in_stat179 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _60_in_stat187 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _NAME_in_stat189 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _53_in_stat197 = new BitSet(new ulong[]{0xBD3000C008080000UL,0x118UL});
+		public static readonly BitSet _block_in_stat199 = new BitSet(new ulong[]{0x100000000000000UL});
+		public static readonly BitSet _56_in_stat201 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _72_in_stat209 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_stat211 = new BitSet(new ulong[]{0x20000000000000UL});
+		public static readonly BitSet _53_in_stat213 = new BitSet(new ulong[]{0xBD3000C008080000UL,0x118UL});
+		public static readonly BitSet _block_in_stat215 = new BitSet(new ulong[]{0x100000000000000UL});
+		public static readonly BitSet _56_in_stat217 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _67_in_stat225 = new BitSet(new ulong[]{0xBC3000C008080000UL,0x198UL});
+		public static readonly BitSet _block_in_stat227 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _71_in_stat229 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_stat231 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _61_in_stat239 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_stat241 = new BitSet(new ulong[]{0x0UL,0x20UL});
+		public static readonly BitSet _69_in_stat243 = new BitSet(new ulong[]{0xBDF000C008080000UL,0x118UL});
+		public static readonly BitSet _block_in_stat245 = new BitSet(new ulong[]{0x1C0000000000000UL});
+		public static readonly BitSet _55_in_stat248 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_stat250 = new BitSet(new ulong[]{0x0UL,0x20UL});
+		public static readonly BitSet _69_in_stat252 = new BitSet(new ulong[]{0xBDF000C008080000UL,0x118UL});
+		public static readonly BitSet _block_in_stat254 = new BitSet(new ulong[]{0x1C0000000000000UL});
+		public static readonly BitSet _54_in_stat259 = new BitSet(new ulong[]{0xBD3000C008080000UL,0x118UL});
+		public static readonly BitSet _block_in_stat261 = new BitSet(new ulong[]{0x100000000000000UL});
+		public static readonly BitSet _56_in_stat265 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _58_in_stat273 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _NAME_in_stat275 = new BitSet(new ulong[]{0x40000000000UL});
+		public static readonly BitSet _42_in_stat277 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_stat279 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_stat281 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_stat283 = new BitSet(new ulong[]{0x20000080000000UL});
+		public static readonly BitSet _31_in_stat286 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_stat288 = new BitSet(new ulong[]{0x20000000000000UL});
+		public static readonly BitSet _53_in_stat292 = new BitSet(new ulong[]{0xBD3000C008080000UL,0x118UL});
+		public static readonly BitSet _block_in_stat294 = new BitSet(new ulong[]{0x100000000000000UL});
+		public static readonly BitSet _56_in_stat296 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _58_in_stat304 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _namelist_in_stat306 = new BitSet(new ulong[]{0x4000000000000000UL});
+		public static readonly BitSet _62_in_stat308 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _explist_in_stat310 = new BitSet(new ulong[]{0x20000000000000UL});
+		public static readonly BitSet _53_in_stat312 = new BitSet(new ulong[]{0xBD3000C008080000UL,0x118UL});
+		public static readonly BitSet _block_in_stat314 = new BitSet(new ulong[]{0x100000000000000UL});
+		public static readonly BitSet _56_in_stat316 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _59_in_stat324 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _funcname_in_stat326 = new BitSet(new ulong[]{0x8000000UL});
+		public static readonly BitSet _funcbody_in_stat328 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _63_in_stat336 = new BitSet(new ulong[]{0x800000000000000UL});
+		public static readonly BitSet _59_in_stat338 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _NAME_in_stat340 = new BitSet(new ulong[]{0x8000000UL});
+		public static readonly BitSet _funcbody_in_stat342 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _63_in_stat350 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _namelist_in_stat352 = new BitSet(new ulong[]{0x40000000002UL});
+		public static readonly BitSet _42_in_stat355 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _explist_in_stat357 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _68_in_retstat376 = new BitSet(new ulong[]{0xA0000890A2D1C12UL,0x243UL});
+		public static readonly BitSet _explist_in_retstat378 = new BitSet(new ulong[]{0x8000000002UL});
+		public static readonly BitSet _39_in_retstat381 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _38_in_label399 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _NAME_in_label401 = new BitSet(new ulong[]{0x4000000000UL});
+		public static readonly BitSet _38_in_label403 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NAME_in_funcname420 = new BitSet(new ulong[]{0x2200000002UL});
+		public static readonly BitSet _33_in_funcname423 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _NAME_in_funcname425 = new BitSet(new ulong[]{0x2200000002UL});
+		public static readonly BitSet _37_in_funcname430 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _NAME_in_funcname432 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _var_in_varlist451 = new BitSet(new ulong[]{0x80000002UL});
+		public static readonly BitSet _31_in_varlist454 = new BitSet(new ulong[]{0x8080000UL});
+		public static readonly BitSet _var_in_varlist456 = new BitSet(new ulong[]{0x80000002UL});
+		public static readonly BitSet _NAME_in_namelist475 = new BitSet(new ulong[]{0x80000002UL});
+		public static readonly BitSet _31_in_namelist478 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _NAME_in_namelist480 = new BitSet(new ulong[]{0x80000002UL});
+		public static readonly BitSet _exp_in_explist499 = new BitSet(new ulong[]{0x80000002UL});
+		public static readonly BitSet _31_in_explist502 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_explist504 = new BitSet(new ulong[]{0x80000002UL});
+		public static readonly BitSet _64_in_exp524 = new BitSet(new ulong[]{0xC3B1564000002UL,0x804UL});
+		public static readonly BitSet _57_in_exp528 = new BitSet(new ulong[]{0xC3B1564000002UL,0x804UL});
+		public static readonly BitSet _70_in_exp532 = new BitSet(new ulong[]{0xC3B1564000002UL,0x804UL});
+		public static readonly BitSet _number_in_exp536 = new BitSet(new ulong[]{0xC3B1564000002UL,0x804UL});
+		public static readonly BitSet _string_in_exp540 = new BitSet(new ulong[]{0xC3B1564000002UL,0x804UL});
+		public static readonly BitSet _35_in_exp544 = new BitSet(new ulong[]{0xC3B1564000002UL,0x804UL});
+		public static readonly BitSet _functiondef_in_exp548 = new BitSet(new ulong[]{0xC3B1564000002UL,0x804UL});
+		public static readonly BitSet _prefixexp_in_exp556 = new BitSet(new ulong[]{0xC3B1564000002UL,0x804UL});
+		public static readonly BitSet _tableconstructor_in_exp560 = new BitSet(new ulong[]{0xC3B1564000002UL,0x804UL});
+		public static readonly BitSet _unop_in_exp564 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_exp566 = new BitSet(new ulong[]{0xC3B1564000002UL,0x804UL});
+		public static readonly BitSet _binop_in_exp570 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_exp572 = new BitSet(new ulong[]{0xC3B1564000002UL,0x804UL});
+		public static readonly BitSet _NAME_in_var589 = new BitSet(new ulong[]{0x402208240012UL,0x200UL});
+		public static readonly BitSet _27_in_var593 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_var595 = new BitSet(new ulong[]{0x10000000UL});
+		public static readonly BitSet _28_in_var597 = new BitSet(new ulong[]{0x402208240010UL,0x200UL});
+		public static readonly BitSet _varSuffix_in_var599 = new BitSet(new ulong[]{0x402208240012UL,0x200UL});
+		public static readonly BitSet _varSuffix_in_var602 = new BitSet(new ulong[]{0x402208240012UL,0x200UL});
+		public static readonly BitSet _varOrExp_in_prefixexp620 = new BitSet(new ulong[]{0x2008240012UL,0x200UL});
+		public static readonly BitSet _nameAndArgs_in_prefixexp622 = new BitSet(new ulong[]{0x2008240012UL,0x200UL});
+		public static readonly BitSet _varOrExp_in_functioncall640 = new BitSet(new ulong[]{0x2008240010UL,0x200UL});
+		public static readonly BitSet _nameAndArgs_in_functioncall642 = new BitSet(new ulong[]{0x2008240012UL,0x200UL});
+		public static readonly BitSet _var_in_varOrExp660 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _27_in_varOrExp664 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_varOrExp666 = new BitSet(new ulong[]{0x10000000UL});
+		public static readonly BitSet _28_in_varOrExp668 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _37_in_nameAndArgs686 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _NAME_in_nameAndArgs688 = new BitSet(new ulong[]{0x8240010UL,0x200UL});
+		public static readonly BitSet _args_in_nameAndArgs692 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _nameAndArgs_in_varSuffix709 = new BitSet(new ulong[]{0x402208240010UL,0x200UL});
+		public static readonly BitSet _46_in_varSuffix713 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_varSuffix715 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _49_in_varSuffix717 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _33_in_varSuffix721 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _NAME_in_varSuffix723 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _27_in_args744 = new BitSet(new ulong[]{0xA0000091A2D1C10UL,0x243UL});
+		public static readonly BitSet _explist_in_args746 = new BitSet(new ulong[]{0x10000000UL});
+		public static readonly BitSet _28_in_args749 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _tableconstructor_in_args753 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _string_in_args757 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _59_in_functiondef774 = new BitSet(new ulong[]{0x8000000UL});
+		public static readonly BitSet _funcbody_in_functiondef776 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _27_in_funcbody793 = new BitSet(new ulong[]{0x810080000UL});
+		public static readonly BitSet _parlist_in_funcbody795 = new BitSet(new ulong[]{0x10000000UL});
+		public static readonly BitSet _28_in_funcbody798 = new BitSet(new ulong[]{0xBD3000C008080000UL,0x118UL});
+		public static readonly BitSet _block_in_funcbody800 = new BitSet(new ulong[]{0x100000000000000UL});
+		public static readonly BitSet _56_in_funcbody802 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _namelist_in_parlist819 = new BitSet(new ulong[]{0x80000002UL});
+		public static readonly BitSet _31_in_parlist822 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _35_in_parlist824 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _35_in_parlist830 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _73_in_tableconstructor847 = new BitSet(new ulong[]{0xA0040090A2D1C10UL,0x643UL});
+		public static readonly BitSet _fieldlist_in_tableconstructor849 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _74_in_tableconstructor852 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _field_in_fieldlist869 = new BitSet(new ulong[]{0x8080000002UL});
+		public static readonly BitSet _fieldsep_in_fieldlist872 = new BitSet(new ulong[]{0xA0040090A2D1C10UL,0x243UL});
+		public static readonly BitSet _field_in_fieldlist874 = new BitSet(new ulong[]{0x8080000002UL});
+		public static readonly BitSet _fieldsep_in_fieldlist878 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _46_in_field896 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_field898 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _49_in_field900 = new BitSet(new ulong[]{0x40000000000UL});
+		public static readonly BitSet _42_in_field902 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_field904 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NAME_in_field908 = new BitSet(new ulong[]{0x40000000000UL});
+		public static readonly BitSet _42_in_field910 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_field912 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _exp_in_field916 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _varlist_in_synpred9_Lua151 = new BitSet(new ulong[]{0x40000000000UL});
+		public static readonly BitSet _42_in_synpred9_Lua153 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _explist_in_synpred9_Lua155 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _functioncall_in_synpred10_Lua163 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _58_in_synpred21_Lua273 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _NAME_in_synpred21_Lua275 = new BitSet(new ulong[]{0x40000000000UL});
+		public static readonly BitSet _42_in_synpred21_Lua277 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_synpred21_Lua279 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _31_in_synpred21_Lua281 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_synpred21_Lua283 = new BitSet(new ulong[]{0x20000080000000UL});
+		public static readonly BitSet _31_in_synpred21_Lua286 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_synpred21_Lua288 = new BitSet(new ulong[]{0x20000000000000UL});
+		public static readonly BitSet _53_in_synpred21_Lua292 = new BitSet(new ulong[]{0xBD3000C008080000UL,0x118UL});
+		public static readonly BitSet _block_in_synpred21_Lua294 = new BitSet(new ulong[]{0x100000000000000UL});
+		public static readonly BitSet _56_in_synpred21_Lua296 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _58_in_synpred22_Lua304 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _namelist_in_synpred22_Lua306 = new BitSet(new ulong[]{0x4000000000000000UL});
+		public static readonly BitSet _62_in_synpred22_Lua308 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _explist_in_synpred22_Lua310 = new BitSet(new ulong[]{0x20000000000000UL});
+		public static readonly BitSet _53_in_synpred22_Lua312 = new BitSet(new ulong[]{0xBD3000C008080000UL,0x118UL});
+		public static readonly BitSet _block_in_synpred22_Lua314 = new BitSet(new ulong[]{0x100000000000000UL});
+		public static readonly BitSet _56_in_synpred22_Lua316 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _63_in_synpred24_Lua336 = new BitSet(new ulong[]{0x800000000000000UL});
+		public static readonly BitSet _59_in_synpred24_Lua338 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _NAME_in_synpred24_Lua340 = new BitSet(new ulong[]{0x8000000UL});
+		public static readonly BitSet _funcbody_in_synpred24_Lua342 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _binop_in_synpred42_Lua570 = new BitSet(new ulong[]{0xA0000090A2D1C10UL,0x243UL});
+		public static readonly BitSet _exp_in_synpred42_Lua572 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _varSuffix_in_synpred44_Lua602 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _nameAndArgs_in_synpred45_Lua622 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _nameAndArgs_in_synpred46_Lua642 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _var_in_synpred47_Lua660 = new BitSet(new ulong[]{0x2UL});
 	}
 	#endregion Follow sets
 }

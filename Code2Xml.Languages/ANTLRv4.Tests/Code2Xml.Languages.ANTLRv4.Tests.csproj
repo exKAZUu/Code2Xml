@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LuaProcessorTest.cs" />
     <Compile Include="Processors\JavaProcessorTest.cs" />
     <Compile Include="Processors\LuaProcessorTest.cs" />
     <Compile Include="XElementBuildingListenerTest.cs" />
@@ -66,6 +67,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Code2Xml.Core.Tests\Code2Xml.Core.Tests.csproj">
+      <Project>{F4035613-FAA1-419C-880C-EE60DDA08783}</Project>
+      <Name>Code2Xml.Core.Tests</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">
       <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>
       <Name>Code2Xml.Core</Name>

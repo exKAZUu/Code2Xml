@@ -1,22 +1,51 @@
 /*
- * Lua 5.1 grammar
- * 
- * Nicolai Mainiero
- * May 2007
- * 
- * This is a Lua (http://www.lua.org) grammar for the version 5.1 for ANTLR 3.
- * I tested it with basic and extended examples and it worked fine. It is also used
- * for LunarEclipse (http://lunareclipse.sf.net) a Lua editor based on Eclipse.
- * 
- * Thanks to Johannes Luber and Gavin Lambert who helped me with some mutually left recursion.
- *  
- */
+BSD License
+
+Copyright (c) 2013, Kazunori Sakamoto
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+3. Neither the NAME of Rainer Schuster nor the NAMEs of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+This grammar file derived from:
+
+    Lua 5.2 Reference Manual
+    http://www.lua.org/manual/5.2/manual.html
+
+    Lua 5.1 grammar written by Nicolai Mainiero
+    http://www.antlr3.org/grammar/1178608849736/Lua.g
+
+I tested my grammar with Test suite for Lua 5.2 (http://www.lua.org/tests/5.2/)
+*/
 
 grammar Lua;
 
 options {
     output=AST;
     backtrack=true;
+    memoize=true;
     language=CSharp3;
 }
 
@@ -24,142 +53,271 @@ options {
 @parser::namespace { Code2Xml.Languages.ANTLRv3.Processors.Lua }
 
 public
-chunk : (stat (';')?)* (laststat (';')?)?;
+chunk
+    : shebang? block
+    ;
 
-block : chunk;
+shebang
+	: '#' '!' ~('\n'|'\r')* ('\n'|'\r');
 
-stat :  varlist1 '=' explist1 | 
-    functioncall | 
-    'do' block 'end' | 
-    'while' exp 'do' block 'end' | 
-    'repeat' block 'until' exp | 
-    'if' exp 'then' block ('elseif' exp 'then' block)* ('else' block)? 'end' | 
-    'for' NAME '=' exp ',' exp (',' exp)? 'do' block 'end' | 
-    'for' namelist 'in' explist1 'do' block 'end' | 
-    'function' funcname funcbody | 
-    'local' 'function' NAME funcbody | 
-    'local' namelist ('=' explist1)? ;
+block
+    : stat* retstat?
+    ;
 
-laststat : 'return' (explist1)? | 'break';
+stat
+    : ';'
+    | varlist '=' explist
+    | functioncall
+    | label
+    | 'break'
+    | 'goto' NAME
+    | 'do' block 'end'
+    | 'while' exp 'do' block 'end'
+    | 'repeat' block 'until' exp
+    | 'if' exp 'then' block ('elseif' exp 'then' block)* ('else' block)? 'end'
+    | 'for' NAME '=' exp ',' exp (',' exp)? 'do' block 'end'
+    | 'for' namelist 'in' explist 'do' block 'end'
+    | 'function' funcname funcbody
+    | 'local' 'function' NAME funcbody
+    | 'local' namelist ('=' explist)?
+    ;
 
-funcname : NAME ('.' NAME)* (':' NAME)? ;
+retstat
+    : 'return' explist? ';'?
+    ;
 
-varlist1 : var (',' var)*;
+label
+    : '::' NAME '::'
+    ;
 
+funcname
+    : NAME ('.' NAME)* (':' NAME)?
+    ;
 
-namelist : NAME (',' NAME)*;
+varlist
+    : var (',' var)*
+    ;
 
-explist1 : (exp ',')* exp;
+namelist
+    : NAME (',' NAME)*
+    ;
 
-exp :  ('nil' | 'false' | 'true' | lua_number | lua_string | '...' | function | prefixexp | tableconstructor | unop exp) (binop exp)* ;
+explist
+    : exp (',' exp)*
+    ;
 
-var: (NAME | '(' exp ')' varSuffix) varSuffix*;
+exp
+    : ('nil' | 'false' | 'true' | number | string | '...' | functiondef
+    | prefixexp | tableconstructor | unop exp) (binop exp)*
+	;
 
-prefixexp: varOrExp nameAndArgs*;
+var
+    : (NAME | '(' exp ')' varSuffix) varSuffix*
+    ;
 
-functioncall: varOrExp nameAndArgs+;
+prefixexp
+    : varOrExp nameAndArgs*
+    ;
+
+functioncall
+    : varOrExp nameAndArgs+
+    ;
+
+varOrExp
+    : var | '(' exp ')'
+    ;
+
+nameAndArgs
+    : (':' NAME)? args
+    ;
+
+varSuffix
+    : nameAndArgs* ('[' exp ']' | '.' NAME)
+    ;
 
 /*
-var :  NAME | prefixexp '[' exp ']' | prefixexp '.' NAME; 
+var
+    : NAME | prefixexp '[' exp ']' | prefixexp '.' NAME
+    ;
 
-prefixexp : var | functioncall | '(' exp ')';
+prefixexp
+    : var | functioncall | '(' exp ')'
+    ;
 
-functioncall :  prefixexp args | prefixexp ':' NAME args ;
+functioncall
+    : prefixexp args | prefixexp ':' NAME args 
+    ;
 */
 
-varOrExp: var | '(' exp ')';
+args
+    : '(' explist? ')' | tableconstructor | string
+    ;
 
-nameAndArgs: (':' NAME)? args;
+functiondef
+    : 'function' funcbody
+    ;
 
-varSuffix: nameAndArgs* ('[' exp ']' | '.' NAME);
+funcbody
+    : '(' parlist? ')' block 'end'
+    ;
 
-args :  '(' (explist1)? ')' | tableconstructor | lua_string ;
+parlist
+    : namelist (',' '...')? | '...'
+    ;
 
-function : 'function' funcbody;
+tableconstructor
+    : '{' fieldlist? '}'
+    ;
 
-funcbody : '(' (parlist1)? ')' block 'end';
+fieldlist
+    : field (fieldsep field)* fieldsep?
+    ;
 
-parlist1 : namelist (',' '...')? | '...';
+field
+    : '[' exp ']' '=' exp | NAME '=' exp | exp
+    ;
 
-tableconstructor : '{' (fieldlist)? '}';
+fieldsep
+    : ',' | ';'
+    ;
 
-fieldlist : field (fieldsep field)* (fieldsep)?;
+binop
+    : '+' | '-' | '*' | '/' | '^' | '%' | '..'
+    | '<' | '<=' | '>' | '>=' | '==' | '~='
+    | 'and' | 'or'
+    ;
 
-field : '[' exp ']' '=' exp | NAME '=' exp | exp;
+unop
+    : '-' | 'not' | '#'
+    ;
 
-fieldsep : ',' | ';';
+number
+    : INT | HEX | FLOAT | HEX_FLOAT
+    ;
 
-binop : '+' | '-' | '*' | '/' | '^' | '%' | '..' | 
-         '<' | '<=' | '>' | '>=' | '==' | '~=' | 
-         'and' | 'or';
-
-unop : '-' | 'not' | '#';
-
-lua_number : INT | FLOAT | EXP | HEX;
-
-lua_string	: NORMALSTRING | CHARSTRING | LONGSTRING;
-
+string
+    : NORMALSTRING | CHARSTRING | LONGSTRING
+    ;
 
 // LEXER
 
-NAME	:('a'..'z'|'A'..'Z'|'_')(options{greedy=true;}:	'a'..'z'|'A'..'Z'|'_'|'0'..'9')*
+
+	
+NAME
+    : ('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*
     ;
 
-INT	: ('0'..'9')+;
-
-FLOAT 	:INT '.' INT ;
-
-EXP	: (INT| FLOAT) ('E'|'e') ('-')? INT;
-
-HEX	:'0x' ('0'..'9'| 'a'..'f')+ ;
-
-    
-
 NORMALSTRING
-    :  '"' ( EscapeSequence | ~('\\'|'"') )* '"' 
+    : '"' ( EscapeSequence | ~('\\'|'"') )* '"' 
     ;
 
 CHARSTRING
-   :	'\'' ( EscapeSequence | ~('\''|'\\') )* '\''
-   ;
+    : '\'' ( EscapeSequence | ~('\''|'\\') )* '\''
+    ;
 
+// ANTLR 4 can process NESTED_STR correctly
 LONGSTRING
-    :	'['('=')*'[' ( EscapeSequence | ~('\\'|']') )* ']'('=')*']'
+    : '[[' ( options {greedy=false;} : . )* ']]'
+    | '[=[' ( options {greedy=false;} : . )* ']=]'
+    | '[==[' ( options {greedy=false;} : . )* ']==]'
+    | '[===[' ( options {greedy=false;} : . )* ']===]'
+    | '[====[' ( options {greedy=false;} : . )* ']====]'
+    | '[=====[' ( options {greedy=false;} : . )* ']=====]'
+    | '[======[' ( options {greedy=false;} : . )* ']======]'
+    | '[=======[' ( options {greedy=false;} : . )* ']=======]'
+    | '[========[' ( options {greedy=false;} : . )* ']========]'
+    | '[=========[' ( options {greedy=false;} : . )* ']=========]'
+    | '[==========[' ( options {greedy=false;} : . )* ']==========]'
+    ;
+
+INT
+    : Digit+
+    ;
+
+HEX
+    : '0' ('x'|'X') HexDigit+
+    ;
+
+FLOAT
+    : Digit+ '.' Digit* ExponentPart?
+    | '.' Digit+ ExponentPart?
+    | Digit+ ExponentPart
+    ;
+
+HEX_FLOAT
+    : '0' ('x'|'X') HexDigit+ '.' HexDigit* HexExponentPart?
+    | '0' ('x'|'X') '.' HexDigit+ HexExponentPart?
+    | '0' ('x'|'X') HexDigit+ HexExponentPart
+    ;
+
+fragment
+ExponentPart
+    : ('e'|'E') ('+'|'-')? Digit+
+    ;
+
+fragment
+HexExponentPart
+    : ('p'|'P') ('+'|'-')? Digit+
     ;
 
 fragment
 EscapeSequence
-    :   '\\' ('b'|'t'|'n'|'f'|'r'|'\"'|'\''|'\\')
-    |   UnicodeEscape
-    |   OctalEscape
+    : '\\' ('a'|'b'|'f'|'n'|'r'|'t'|'v'|'z'|'\"'|'\''|'\\')
+	| '\\' '\r'? '\n'
+    | DecimalEscape
+    | HexEscape
     ;
     
 fragment
-OctalEscape
-    :   '\\' ('0'..'3') ('0'..'7') ('0'..'7')
-    |   '\\' ('0'..'7') ('0'..'7')
-    |   '\\' ('0'..'7')
+DecimalEscape
+    : '\\' Digit
+    | '\\' Digit Digit
+    | '\\' '0'..'2' Digit Digit
     ;
     
 fragment
-UnicodeEscape
-    :   '\\' 'u' HexDigit HexDigit HexDigit HexDigit
+HexEscape
+    : '\\' 'x' HexDigit HexDigit
     ;
-    
-fragment
-HexDigit : ('0'..'9'|'a'..'f'|'A'..'F') ;
 
+fragment
+Digit
+    : '0'..'9'
+    ;
+
+fragment
+HexDigit
+    : ('0'..'9'|'a'..'f'|'A'..'F')
+    ;
 
 COMMENT
-    :   '--[[' ( options {greedy=false;} : . )* ']]' {$channel=Hidden;}
+    : '--'
+	( '[[' ( options {greedy=false;} : . )* ']]'
+    | '[=[' ( options {greedy=false;} : . )* ']=]'
+    | '[==[' ( options {greedy=false;} : . )* ']==]'
+    | '[===[' ( options {greedy=false;} : . )* ']===]'
+    | '[====[' ( options {greedy=false;} : . )* ']====]'
+    | '[=====[' ( options {greedy=false;} : . )* ']=====]'
+    | '[======[' ( options {greedy=false;} : . )* ']======]'
+    | '[=======[' ( options {greedy=false;} : . )* ']=======]'
+    | '[========[' ( options {greedy=false;} : . )* ']========]'
+    | '[=========[' ( options {greedy=false;} : . )* ']=========]'
+    | '[==========[' ( options {greedy=false;} : . )* ']==========]')
+	{$channel=Hidden;}
     ;
     
 LINE_COMMENT
-    : '--' ~('\n'|'\r')* '\r'? '\n' {$channel=Hidden;}
-    ;    
-    
-WS  :  (' '|'\t'|'\u000C') {$channel=Hidden;}
+	: '--' ~('\n'|'\r')* {$channel=Hidden;}
     ;
     
-NEWLINE	: ('\r')? '\n' {$channel=Hidden;}
+WS  
+    : (' '|'\t'|'\u000C')+ {$channel=Hidden;}
     ;
+    
+NEWLINE
+    : '\r'? '\n' {$channel=Hidden;}
+    ;
+
+SHEBANG
+	: '#' '!' ~('\n'|'\r')* {$channel=Hidden;}
+	;
