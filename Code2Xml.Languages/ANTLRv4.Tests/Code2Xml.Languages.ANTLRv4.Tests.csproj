@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GarryLuaProcessorTest.cs" />
     <Compile Include="LuaProcessorTest.cs" />
     <Compile Include="Processors\JavaProcessorTest.cs" />
     <Compile Include="Processors\LuaProcessorTest.cs" />

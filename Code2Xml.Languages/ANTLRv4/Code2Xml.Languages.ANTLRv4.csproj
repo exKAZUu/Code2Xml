@@ -75,6 +75,7 @@
     <Compile Include="Processors\Erlang\Erlang.g4.parser.cs">
       <DependentUpon>Erlang.g4</DependentUpon>
     </Compile>
+    <Compile Include="Processors\GarryLua\GarryLuaProcessor.cs" />
     <Compile Include="Processors\Java\JavaProcessor.cs" />
     <Compile Include="Processors\Lua\LuaProcessor.cs" />
     <Compile Include="Processors\Lua\Lua.g4.lexer.cs" />
@@ -175,6 +176,10 @@
     <Antlr4 Include="Processors\CSharp\CSharp.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.CSharp</CustomToolNamespace>
+    </Antlr4>
+    <Antlr4 Include="Processors\GarryLua\GarryLua.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Processors.GarryLua</CustomToolNamespace>
     </Antlr4>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

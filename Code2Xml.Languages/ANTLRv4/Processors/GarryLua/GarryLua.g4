@@ -31,6 +31,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 This grammar file derived from:
 
+	Lua Differences
+	http://maurits.tv/data/garrysmod/wiki/wiki.garrysmod.com/indexba22.html
+
     Lua 5.2 Reference Manual
     http://www.lua.org/manual/5.2/manual.html
 
@@ -40,7 +43,7 @@ This grammar file derived from:
 I tested my grammar with Test suite for Lua 5.2 (http://www.lua.org/tests/5.2/)
 */
 
-grammar Lua;
+grammar GarryLua;
 
 @header {
 	using Code2Xml.Languages.ANTLRv4.Core;
@@ -69,6 +72,7 @@ stat
     | functioncall
     | label
     | 'break'
+    | 'continue'
     | 'goto' NAME
     | 'do' block 'end'
     | 'while' exp 'do' block 'end'
@@ -183,11 +187,11 @@ fieldsep
 binop
     : '+' | '-' | '*' | '/' | '^' | '%' | '..'
     | '<' | '<=' | '>' | '>=' | '==' | '~='
-    | 'and' | 'or'
+    | 'and' | 'or' | '!=' | '&&' | '||'
     ;
 
 unop
-    : '-' | 'not' | '#'
+    : '-' | 'not' | '#' | '!'
     ;
 
 number
@@ -285,9 +289,17 @@ HexDigit
 COMMENT
     : '--[' NESTED_STR ']' -> channel(HIDDEN)
     ;
-    
+
 LINE_COMMENT
     : '--' ('[' '='*)? (~'['|EOF) ~('\n'|'\r')* -> channel(HIDDEN)
+    ;
+
+CSTYLE_COMMENT
+    :   '/*' .*? '*/' -> channel(HIDDEN)
+    ;
+
+CSTYLE_LINE_COMMENT
+    :   '//' ~[\r\n]* -> channel(HIDDEN)
     ;
     
 WS  
