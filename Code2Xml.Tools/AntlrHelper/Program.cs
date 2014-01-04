@@ -45,7 +45,7 @@ namespace Code2Xml.Tools.AntlrHelper {
 			foreach (var arg in args) {
 				var path = Path.GetFullPath(arg);
 				var dir = Directory.Exists(path) ? path : Path.GetDirectoryName(path);
-				var grammarFiles = Directory.GetFiles(dir, "lua.g", SearchOption.AllDirectories);
+				var grammarFiles = Directory.GetFiles(dir, "*.g", SearchOption.AllDirectories);
 				foreach (var grammarFile in grammarFiles) {
 					Console.WriteLine(grammarFile);
 					var info = new ProcessStartInfo {

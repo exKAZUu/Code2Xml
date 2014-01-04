@@ -54,11 +54,8 @@ options {
 
 public
 chunk
-    : shebang? block
+    : block
     ;
-
-shebang
-	: '#' '!' ~('\n'|'\r')* ('\n'|'\r');
 
 block
     : stat* retstat?
@@ -307,15 +304,17 @@ COMMENT
     ;
     
 LINE_COMMENT
-	: '--' ~('\n'|'\r')* {$channel=Hidden;}
+	: '--'
+	(												// --
+	| '[' '='*										// --[==
+	| '[' '='* ~('='|'['|'\r'|'\n') ~('\r'|'\n')*	// --[==AA
+	| ~('['|'\r'|'\n') ~('\r'|'\n')*				// --AAA
+	) ('\r\n'|'\r'|'\n'|EOF)
+	{$channel=Hidden;}
     ;
     
-WS  
-    : (' '|'\t'|'\u000C')+ {$channel=Hidden;}
-    ;
-    
-NEWLINE
-    : '\r'? '\n' {$channel=Hidden;}
+WS
+    : (' '|'\t'|'\r'|'\n'|'\u000C')+ {$channel=Hidden;}
     ;
 
 SHEBANG

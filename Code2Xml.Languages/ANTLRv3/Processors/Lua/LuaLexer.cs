@@ -9,7 +9,7 @@ using Code2Xml.Languages.ANTLRv3.Core;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g 2014-01-04 00:15:45
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g 2014-01-05 01:48:48
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -48,10 +48,10 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	public const int LINE_COMMENT=17;
 	public const int LONGSTRING=18;
 	public const int NAME=19;
-	public const int NEWLINE=20;
-	public const int NORMALSTRING=21;
-	public const int SHEBANG=22;
-	public const int WS=23;
+	public const int NORMALSTRING=20;
+	public const int SHEBANG=21;
+	public const int WS=22;
+	public const int T__23=23;
 	public const int T__24=24;
 	public const int T__25=25;
 	public const int T__26=26;
@@ -100,10 +100,6 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	public const int T__69=69;
 	public const int T__70=70;
 	public const int T__71=71;
-	public const int T__72=72;
-	public const int T__73=73;
-	public const int T__74=74;
-	public const int T__75=75;
 
 	// delegates
 	// delegators
@@ -131,26 +127,26 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	partial void EnterRule(string ruleName, int ruleIndex);
 	partial void LeaveRule(string ruleName, int ruleIndex);
 
-	partial void EnterRule_T__24();
-	partial void LeaveRule_T__24();
+	partial void EnterRule_T__23();
+	partial void LeaveRule_T__23();
 
-	// $ANTLR start "T__24"
-	[GrammarRule("T__24")]
-	private void mT__24()
+	// $ANTLR start "T__23"
+	[GrammarRule("T__23")]
+	private void mT__23()
 	{
-		EnterRule_T__24();
-		EnterRule("T__24", 1);
-		TraceIn("T__24", 1);
+		EnterRule_T__23();
+		EnterRule("T__23", 1);
+		TraceIn("T__23", 1);
 		try
 		{
-			int _type = T__24;
+			int _type = T__23;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:9:7: ( '!' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:9:7: ( '#' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:9:9: '!'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:9:9: '#'
 			{
 			DebugLocation(9, 9);
-			Match('!'); 
+			Match('#'); 
 
 			}
 
@@ -159,8 +155,43 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__24", 1);
-			LeaveRule("T__24", 1);
+			TraceOut("T__23", 1);
+			LeaveRule("T__23", 1);
+			LeaveRule_T__23();
+		}
+	}
+	// $ANTLR end "T__23"
+
+	partial void EnterRule_T__24();
+	partial void LeaveRule_T__24();
+
+	// $ANTLR start "T__24"
+	[GrammarRule("T__24")]
+	private void mT__24()
+	{
+		EnterRule_T__24();
+		EnterRule("T__24", 2);
+		TraceIn("T__24", 2);
+		try
+		{
+			int _type = T__24;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:10:7: ( '%' )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:10:9: '%'
+			{
+			DebugLocation(10, 9);
+			Match('%'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__24", 2);
+			LeaveRule("T__24", 2);
 			LeaveRule_T__24();
 		}
 	}
@@ -174,18 +205,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__25()
 	{
 		EnterRule_T__25();
-		EnterRule("T__25", 2);
-		TraceIn("T__25", 2);
+		EnterRule("T__25", 3);
+		TraceIn("T__25", 3);
 		try
 		{
 			int _type = T__25;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:10:7: ( '#' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:11:7: ( '(' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:10:9: '#'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:11:9: '('
 			{
-			DebugLocation(10, 9);
-			Match('#'); 
+			DebugLocation(11, 9);
+			Match('('); 
 
 			}
 
@@ -194,8 +225,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__25", 2);
-			LeaveRule("T__25", 2);
+			TraceOut("T__25", 3);
+			LeaveRule("T__25", 3);
 			LeaveRule_T__25();
 		}
 	}
@@ -209,18 +240,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__26()
 	{
 		EnterRule_T__26();
-		EnterRule("T__26", 3);
-		TraceIn("T__26", 3);
+		EnterRule("T__26", 4);
+		TraceIn("T__26", 4);
 		try
 		{
 			int _type = T__26;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:11:7: ( '%' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:12:7: ( ')' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:11:9: '%'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:12:9: ')'
 			{
-			DebugLocation(11, 9);
-			Match('%'); 
+			DebugLocation(12, 9);
+			Match(')'); 
 
 			}
 
@@ -229,8 +260,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__26", 3);
-			LeaveRule("T__26", 3);
+			TraceOut("T__26", 4);
+			LeaveRule("T__26", 4);
 			LeaveRule_T__26();
 		}
 	}
@@ -244,18 +275,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__27()
 	{
 		EnterRule_T__27();
-		EnterRule("T__27", 4);
-		TraceIn("T__27", 4);
+		EnterRule("T__27", 5);
+		TraceIn("T__27", 5);
 		try
 		{
 			int _type = T__27;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:12:7: ( '(' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:13:7: ( '*' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:12:9: '('
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:13:9: '*'
 			{
-			DebugLocation(12, 9);
-			Match('('); 
+			DebugLocation(13, 9);
+			Match('*'); 
 
 			}
 
@@ -264,8 +295,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__27", 4);
-			LeaveRule("T__27", 4);
+			TraceOut("T__27", 5);
+			LeaveRule("T__27", 5);
 			LeaveRule_T__27();
 		}
 	}
@@ -279,18 +310,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__28()
 	{
 		EnterRule_T__28();
-		EnterRule("T__28", 5);
-		TraceIn("T__28", 5);
+		EnterRule("T__28", 6);
+		TraceIn("T__28", 6);
 		try
 		{
 			int _type = T__28;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:13:7: ( ')' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:14:7: ( '+' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:13:9: ')'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:14:9: '+'
 			{
-			DebugLocation(13, 9);
-			Match(')'); 
+			DebugLocation(14, 9);
+			Match('+'); 
 
 			}
 
@@ -299,8 +330,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__28", 5);
-			LeaveRule("T__28", 5);
+			TraceOut("T__28", 6);
+			LeaveRule("T__28", 6);
 			LeaveRule_T__28();
 		}
 	}
@@ -314,18 +345,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__29()
 	{
 		EnterRule_T__29();
-		EnterRule("T__29", 6);
-		TraceIn("T__29", 6);
+		EnterRule("T__29", 7);
+		TraceIn("T__29", 7);
 		try
 		{
 			int _type = T__29;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:14:7: ( '*' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:15:7: ( ',' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:14:9: '*'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:15:9: ','
 			{
-			DebugLocation(14, 9);
-			Match('*'); 
+			DebugLocation(15, 9);
+			Match(','); 
 
 			}
 
@@ -334,8 +365,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__29", 6);
-			LeaveRule("T__29", 6);
+			TraceOut("T__29", 7);
+			LeaveRule("T__29", 7);
 			LeaveRule_T__29();
 		}
 	}
@@ -349,18 +380,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__30()
 	{
 		EnterRule_T__30();
-		EnterRule("T__30", 7);
-		TraceIn("T__30", 7);
+		EnterRule("T__30", 8);
+		TraceIn("T__30", 8);
 		try
 		{
 			int _type = T__30;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:15:7: ( '+' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:16:7: ( '-' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:15:9: '+'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:16:9: '-'
 			{
-			DebugLocation(15, 9);
-			Match('+'); 
+			DebugLocation(16, 9);
+			Match('-'); 
 
 			}
 
@@ -369,8 +400,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__30", 7);
-			LeaveRule("T__30", 7);
+			TraceOut("T__30", 8);
+			LeaveRule("T__30", 8);
 			LeaveRule_T__30();
 		}
 	}
@@ -384,18 +415,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__31()
 	{
 		EnterRule_T__31();
-		EnterRule("T__31", 8);
-		TraceIn("T__31", 8);
+		EnterRule("T__31", 9);
+		TraceIn("T__31", 9);
 		try
 		{
 			int _type = T__31;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:16:7: ( ',' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:17:7: ( '.' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:16:9: ','
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:17:9: '.'
 			{
-			DebugLocation(16, 9);
-			Match(','); 
+			DebugLocation(17, 9);
+			Match('.'); 
 
 			}
 
@@ -404,8 +435,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__31", 8);
-			LeaveRule("T__31", 8);
+			TraceOut("T__31", 9);
+			LeaveRule("T__31", 9);
 			LeaveRule_T__31();
 		}
 	}
@@ -419,18 +450,19 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__32()
 	{
 		EnterRule_T__32();
-		EnterRule("T__32", 9);
-		TraceIn("T__32", 9);
+		EnterRule("T__32", 10);
+		TraceIn("T__32", 10);
 		try
 		{
 			int _type = T__32;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:17:7: ( '-' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:18:7: ( '..' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:17:9: '-'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:18:9: '..'
 			{
-			DebugLocation(17, 9);
-			Match('-'); 
+			DebugLocation(18, 9);
+			Match(".."); 
+
 
 			}
 
@@ -439,8 +471,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__32", 9);
-			LeaveRule("T__32", 9);
+			TraceOut("T__32", 10);
+			LeaveRule("T__32", 10);
 			LeaveRule_T__32();
 		}
 	}
@@ -454,18 +486,19 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__33()
 	{
 		EnterRule_T__33();
-		EnterRule("T__33", 10);
-		TraceIn("T__33", 10);
+		EnterRule("T__33", 11);
+		TraceIn("T__33", 11);
 		try
 		{
 			int _type = T__33;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:18:7: ( '.' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:19:7: ( '...' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:18:9: '.'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:19:9: '...'
 			{
-			DebugLocation(18, 9);
-			Match('.'); 
+			DebugLocation(19, 9);
+			Match("..."); 
+
 
 			}
 
@@ -474,8 +507,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__33", 10);
-			LeaveRule("T__33", 10);
+			TraceOut("T__33", 11);
+			LeaveRule("T__33", 11);
 			LeaveRule_T__33();
 		}
 	}
@@ -489,19 +522,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__34()
 	{
 		EnterRule_T__34();
-		EnterRule("T__34", 11);
-		TraceIn("T__34", 11);
+		EnterRule("T__34", 12);
+		TraceIn("T__34", 12);
 		try
 		{
 			int _type = T__34;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:19:7: ( '..' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:20:7: ( '/' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:19:9: '..'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:20:9: '/'
 			{
-			DebugLocation(19, 9);
-			Match(".."); 
-
+			DebugLocation(20, 9);
+			Match('/'); 
 
 			}
 
@@ -510,8 +542,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__34", 11);
-			LeaveRule("T__34", 11);
+			TraceOut("T__34", 12);
+			LeaveRule("T__34", 12);
 			LeaveRule_T__34();
 		}
 	}
@@ -525,19 +557,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__35()
 	{
 		EnterRule_T__35();
-		EnterRule("T__35", 12);
-		TraceIn("T__35", 12);
+		EnterRule("T__35", 13);
+		TraceIn("T__35", 13);
 		try
 		{
 			int _type = T__35;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:20:7: ( '...' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:21:7: ( ':' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:20:9: '...'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:21:9: ':'
 			{
-			DebugLocation(20, 9);
-			Match("..."); 
-
+			DebugLocation(21, 9);
+			Match(':'); 
 
 			}
 
@@ -546,8 +577,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__35", 12);
-			LeaveRule("T__35", 12);
+			TraceOut("T__35", 13);
+			LeaveRule("T__35", 13);
 			LeaveRule_T__35();
 		}
 	}
@@ -561,18 +592,19 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__36()
 	{
 		EnterRule_T__36();
-		EnterRule("T__36", 13);
-		TraceIn("T__36", 13);
+		EnterRule("T__36", 14);
+		TraceIn("T__36", 14);
 		try
 		{
 			int _type = T__36;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:21:7: ( '/' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:22:7: ( '::' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:21:9: '/'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:22:9: '::'
 			{
-			DebugLocation(21, 9);
-			Match('/'); 
+			DebugLocation(22, 9);
+			Match("::"); 
+
 
 			}
 
@@ -581,8 +613,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__36", 13);
-			LeaveRule("T__36", 13);
+			TraceOut("T__36", 14);
+			LeaveRule("T__36", 14);
 			LeaveRule_T__36();
 		}
 	}
@@ -596,18 +628,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__37()
 	{
 		EnterRule_T__37();
-		EnterRule("T__37", 14);
-		TraceIn("T__37", 14);
+		EnterRule("T__37", 15);
+		TraceIn("T__37", 15);
 		try
 		{
 			int _type = T__37;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:22:7: ( ':' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:23:7: ( ';' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:22:9: ':'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:23:9: ';'
 			{
-			DebugLocation(22, 9);
-			Match(':'); 
+			DebugLocation(23, 9);
+			Match(';'); 
 
 			}
 
@@ -616,8 +648,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__37", 14);
-			LeaveRule("T__37", 14);
+			TraceOut("T__37", 15);
+			LeaveRule("T__37", 15);
 			LeaveRule_T__37();
 		}
 	}
@@ -631,19 +663,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__38()
 	{
 		EnterRule_T__38();
-		EnterRule("T__38", 15);
-		TraceIn("T__38", 15);
+		EnterRule("T__38", 16);
+		TraceIn("T__38", 16);
 		try
 		{
 			int _type = T__38;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:23:7: ( '::' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:24:7: ( '<' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:23:9: '::'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:24:9: '<'
 			{
-			DebugLocation(23, 9);
-			Match("::"); 
-
+			DebugLocation(24, 9);
+			Match('<'); 
 
 			}
 
@@ -652,8 +683,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__38", 15);
-			LeaveRule("T__38", 15);
+			TraceOut("T__38", 16);
+			LeaveRule("T__38", 16);
 			LeaveRule_T__38();
 		}
 	}
@@ -667,18 +698,19 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__39()
 	{
 		EnterRule_T__39();
-		EnterRule("T__39", 16);
-		TraceIn("T__39", 16);
+		EnterRule("T__39", 17);
+		TraceIn("T__39", 17);
 		try
 		{
 			int _type = T__39;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:24:7: ( ';' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:25:7: ( '<=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:24:9: ';'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:25:9: '<='
 			{
-			DebugLocation(24, 9);
-			Match(';'); 
+			DebugLocation(25, 9);
+			Match("<="); 
+
 
 			}
 
@@ -687,8 +719,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__39", 16);
-			LeaveRule("T__39", 16);
+			TraceOut("T__39", 17);
+			LeaveRule("T__39", 17);
 			LeaveRule_T__39();
 		}
 	}
@@ -702,18 +734,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__40()
 	{
 		EnterRule_T__40();
-		EnterRule("T__40", 17);
-		TraceIn("T__40", 17);
+		EnterRule("T__40", 18);
+		TraceIn("T__40", 18);
 		try
 		{
 			int _type = T__40;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:25:7: ( '<' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:26:7: ( '=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:25:9: '<'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:26:9: '='
 			{
-			DebugLocation(25, 9);
-			Match('<'); 
+			DebugLocation(26, 9);
+			Match('='); 
 
 			}
 
@@ -722,8 +754,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__40", 17);
-			LeaveRule("T__40", 17);
+			TraceOut("T__40", 18);
+			LeaveRule("T__40", 18);
 			LeaveRule_T__40();
 		}
 	}
@@ -737,18 +769,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__41()
 	{
 		EnterRule_T__41();
-		EnterRule("T__41", 18);
-		TraceIn("T__41", 18);
+		EnterRule("T__41", 19);
+		TraceIn("T__41", 19);
 		try
 		{
 			int _type = T__41;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:26:7: ( '<=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:7: ( '==' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:26:9: '<='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:9: '=='
 			{
-			DebugLocation(26, 9);
-			Match("<="); 
+			DebugLocation(27, 9);
+			Match("=="); 
 
 
 			}
@@ -758,8 +790,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__41", 18);
-			LeaveRule("T__41", 18);
+			TraceOut("T__41", 19);
+			LeaveRule("T__41", 19);
 			LeaveRule_T__41();
 		}
 	}
@@ -773,18 +805,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__42()
 	{
 		EnterRule_T__42();
-		EnterRule("T__42", 19);
-		TraceIn("T__42", 19);
+		EnterRule("T__42", 20);
+		TraceIn("T__42", 20);
 		try
 		{
 			int _type = T__42;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:7: ( '=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:28:7: ( '>' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:27:9: '='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:28:9: '>'
 			{
-			DebugLocation(27, 9);
-			Match('='); 
+			DebugLocation(28, 9);
+			Match('>'); 
 
 			}
 
@@ -793,8 +825,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__42", 19);
-			LeaveRule("T__42", 19);
+			TraceOut("T__42", 20);
+			LeaveRule("T__42", 20);
 			LeaveRule_T__42();
 		}
 	}
@@ -808,18 +840,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__43()
 	{
 		EnterRule_T__43();
-		EnterRule("T__43", 20);
-		TraceIn("T__43", 20);
+		EnterRule("T__43", 21);
+		TraceIn("T__43", 21);
 		try
 		{
 			int _type = T__43;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:28:7: ( '==' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:29:7: ( '>=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:28:9: '=='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:29:9: '>='
 			{
-			DebugLocation(28, 9);
-			Match("=="); 
+			DebugLocation(29, 9);
+			Match(">="); 
 
 
 			}
@@ -829,8 +861,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__43", 20);
-			LeaveRule("T__43", 20);
+			TraceOut("T__43", 21);
+			LeaveRule("T__43", 21);
 			LeaveRule_T__43();
 		}
 	}
@@ -844,18 +876,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__44()
 	{
 		EnterRule_T__44();
-		EnterRule("T__44", 21);
-		TraceIn("T__44", 21);
+		EnterRule("T__44", 22);
+		TraceIn("T__44", 22);
 		try
 		{
 			int _type = T__44;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:29:7: ( '>' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:30:7: ( '[' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:29:9: '>'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:30:9: '['
 			{
-			DebugLocation(29, 9);
-			Match('>'); 
+			DebugLocation(30, 9);
+			Match('['); 
 
 			}
 
@@ -864,8 +896,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__44", 21);
-			LeaveRule("T__44", 21);
+			TraceOut("T__44", 22);
+			LeaveRule("T__44", 22);
 			LeaveRule_T__44();
 		}
 	}
@@ -879,19 +911,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__45()
 	{
 		EnterRule_T__45();
-		EnterRule("T__45", 22);
-		TraceIn("T__45", 22);
+		EnterRule("T__45", 23);
+		TraceIn("T__45", 23);
 		try
 		{
 			int _type = T__45;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:30:7: ( '>=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:31:7: ( ']' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:30:9: '>='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:31:9: ']'
 			{
-			DebugLocation(30, 9);
-			Match(">="); 
-
+			DebugLocation(31, 9);
+			Match(']'); 
 
 			}
 
@@ -900,8 +931,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__45", 22);
-			LeaveRule("T__45", 22);
+			TraceOut("T__45", 23);
+			LeaveRule("T__45", 23);
 			LeaveRule_T__45();
 		}
 	}
@@ -915,18 +946,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__46()
 	{
 		EnterRule_T__46();
-		EnterRule("T__46", 23);
-		TraceIn("T__46", 23);
+		EnterRule("T__46", 24);
+		TraceIn("T__46", 24);
 		try
 		{
 			int _type = T__46;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:31:7: ( '[' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:32:7: ( '^' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:31:9: '['
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:32:9: '^'
 			{
-			DebugLocation(31, 9);
-			Match('['); 
+			DebugLocation(32, 9);
+			Match('^'); 
 
 			}
 
@@ -935,8 +966,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__46", 23);
-			LeaveRule("T__46", 23);
+			TraceOut("T__46", 24);
+			LeaveRule("T__46", 24);
 			LeaveRule_T__46();
 		}
 	}
@@ -950,18 +981,19 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__47()
 	{
 		EnterRule_T__47();
-		EnterRule("T__47", 24);
-		TraceIn("T__47", 24);
+		EnterRule("T__47", 25);
+		TraceIn("T__47", 25);
 		try
 		{
 			int _type = T__47;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:32:7: ( '\\n' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:33:7: ( 'and' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:32:9: '\\n'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:33:9: 'and'
 			{
-			DebugLocation(32, 9);
-			Match('\n'); 
+			DebugLocation(33, 9);
+			Match("and"); 
+
 
 			}
 
@@ -970,8 +1002,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__47", 24);
-			LeaveRule("T__47", 24);
+			TraceOut("T__47", 25);
+			LeaveRule("T__47", 25);
 			LeaveRule_T__47();
 		}
 	}
@@ -985,18 +1017,19 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__48()
 	{
 		EnterRule_T__48();
-		EnterRule("T__48", 25);
-		TraceIn("T__48", 25);
+		EnterRule("T__48", 26);
+		TraceIn("T__48", 26);
 		try
 		{
 			int _type = T__48;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:33:7: ( '\\r' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:34:7: ( 'break' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:33:9: '\\r'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:34:9: 'break'
 			{
-			DebugLocation(33, 9);
-			Match('\r'); 
+			DebugLocation(34, 9);
+			Match("break"); 
+
 
 			}
 
@@ -1005,8 +1038,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__48", 25);
-			LeaveRule("T__48", 25);
+			TraceOut("T__48", 26);
+			LeaveRule("T__48", 26);
 			LeaveRule_T__48();
 		}
 	}
@@ -1020,18 +1053,19 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__49()
 	{
 		EnterRule_T__49();
-		EnterRule("T__49", 26);
-		TraceIn("T__49", 26);
+		EnterRule("T__49", 27);
+		TraceIn("T__49", 27);
 		try
 		{
 			int _type = T__49;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:34:7: ( ']' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:35:7: ( 'do' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:34:9: ']'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:35:9: 'do'
 			{
-			DebugLocation(34, 9);
-			Match(']'); 
+			DebugLocation(35, 9);
+			Match("do"); 
+
 
 			}
 
@@ -1040,8 +1074,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__49", 26);
-			LeaveRule("T__49", 26);
+			TraceOut("T__49", 27);
+			LeaveRule("T__49", 27);
 			LeaveRule_T__49();
 		}
 	}
@@ -1055,18 +1089,19 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__50()
 	{
 		EnterRule_T__50();
-		EnterRule("T__50", 27);
-		TraceIn("T__50", 27);
+		EnterRule("T__50", 28);
+		TraceIn("T__50", 28);
 		try
 		{
 			int _type = T__50;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:35:7: ( '^' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:36:7: ( 'else' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:35:9: '^'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:36:9: 'else'
 			{
-			DebugLocation(35, 9);
-			Match('^'); 
+			DebugLocation(36, 9);
+			Match("else"); 
+
 
 			}
 
@@ -1075,8 +1110,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__50", 27);
-			LeaveRule("T__50", 27);
+			TraceOut("T__50", 28);
+			LeaveRule("T__50", 28);
 			LeaveRule_T__50();
 		}
 	}
@@ -1090,18 +1125,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__51()
 	{
 		EnterRule_T__51();
-		EnterRule("T__51", 28);
-		TraceIn("T__51", 28);
+		EnterRule("T__51", 29);
+		TraceIn("T__51", 29);
 		try
 		{
 			int _type = T__51;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:36:7: ( 'and' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:37:7: ( 'elseif' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:36:9: 'and'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:37:9: 'elseif'
 			{
-			DebugLocation(36, 9);
-			Match("and"); 
+			DebugLocation(37, 9);
+			Match("elseif"); 
 
 
 			}
@@ -1111,8 +1146,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__51", 28);
-			LeaveRule("T__51", 28);
+			TraceOut("T__51", 29);
+			LeaveRule("T__51", 29);
 			LeaveRule_T__51();
 		}
 	}
@@ -1126,18 +1161,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__52()
 	{
 		EnterRule_T__52();
-		EnterRule("T__52", 29);
-		TraceIn("T__52", 29);
+		EnterRule("T__52", 30);
+		TraceIn("T__52", 30);
 		try
 		{
 			int _type = T__52;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:37:7: ( 'break' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:38:7: ( 'end' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:37:9: 'break'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:38:9: 'end'
 			{
-			DebugLocation(37, 9);
-			Match("break"); 
+			DebugLocation(38, 9);
+			Match("end"); 
 
 
 			}
@@ -1147,8 +1182,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__52", 29);
-			LeaveRule("T__52", 29);
+			TraceOut("T__52", 30);
+			LeaveRule("T__52", 30);
 			LeaveRule_T__52();
 		}
 	}
@@ -1162,18 +1197,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__53()
 	{
 		EnterRule_T__53();
-		EnterRule("T__53", 30);
-		TraceIn("T__53", 30);
+		EnterRule("T__53", 31);
+		TraceIn("T__53", 31);
 		try
 		{
 			int _type = T__53;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:38:7: ( 'do' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:39:7: ( 'false' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:38:9: 'do'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:39:9: 'false'
 			{
-			DebugLocation(38, 9);
-			Match("do"); 
+			DebugLocation(39, 9);
+			Match("false"); 
 
 
 			}
@@ -1183,8 +1218,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__53", 30);
-			LeaveRule("T__53", 30);
+			TraceOut("T__53", 31);
+			LeaveRule("T__53", 31);
 			LeaveRule_T__53();
 		}
 	}
@@ -1198,18 +1233,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__54()
 	{
 		EnterRule_T__54();
-		EnterRule("T__54", 31);
-		TraceIn("T__54", 31);
+		EnterRule("T__54", 32);
+		TraceIn("T__54", 32);
 		try
 		{
 			int _type = T__54;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:39:7: ( 'else' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:40:7: ( 'for' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:39:9: 'else'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:40:9: 'for'
 			{
-			DebugLocation(39, 9);
-			Match("else"); 
+			DebugLocation(40, 9);
+			Match("for"); 
 
 
 			}
@@ -1219,8 +1254,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__54", 31);
-			LeaveRule("T__54", 31);
+			TraceOut("T__54", 32);
+			LeaveRule("T__54", 32);
 			LeaveRule_T__54();
 		}
 	}
@@ -1234,18 +1269,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__55()
 	{
 		EnterRule_T__55();
-		EnterRule("T__55", 32);
-		TraceIn("T__55", 32);
+		EnterRule("T__55", 33);
+		TraceIn("T__55", 33);
 		try
 		{
 			int _type = T__55;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:40:7: ( 'elseif' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:41:7: ( 'function' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:40:9: 'elseif'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:41:9: 'function'
 			{
-			DebugLocation(40, 9);
-			Match("elseif"); 
+			DebugLocation(41, 9);
+			Match("function"); 
 
 
 			}
@@ -1255,8 +1290,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__55", 32);
-			LeaveRule("T__55", 32);
+			TraceOut("T__55", 33);
+			LeaveRule("T__55", 33);
 			LeaveRule_T__55();
 		}
 	}
@@ -1270,18 +1305,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__56()
 	{
 		EnterRule_T__56();
-		EnterRule("T__56", 33);
-		TraceIn("T__56", 33);
+		EnterRule("T__56", 34);
+		TraceIn("T__56", 34);
 		try
 		{
 			int _type = T__56;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:41:7: ( 'end' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:42:7: ( 'goto' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:41:9: 'end'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:42:9: 'goto'
 			{
-			DebugLocation(41, 9);
-			Match("end"); 
+			DebugLocation(42, 9);
+			Match("goto"); 
 
 
 			}
@@ -1291,8 +1326,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__56", 33);
-			LeaveRule("T__56", 33);
+			TraceOut("T__56", 34);
+			LeaveRule("T__56", 34);
 			LeaveRule_T__56();
 		}
 	}
@@ -1306,18 +1341,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__57()
 	{
 		EnterRule_T__57();
-		EnterRule("T__57", 34);
-		TraceIn("T__57", 34);
+		EnterRule("T__57", 35);
+		TraceIn("T__57", 35);
 		try
 		{
 			int _type = T__57;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:42:7: ( 'false' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:43:7: ( 'if' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:42:9: 'false'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:43:9: 'if'
 			{
-			DebugLocation(42, 9);
-			Match("false"); 
+			DebugLocation(43, 9);
+			Match("if"); 
 
 
 			}
@@ -1327,8 +1362,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__57", 34);
-			LeaveRule("T__57", 34);
+			TraceOut("T__57", 35);
+			LeaveRule("T__57", 35);
 			LeaveRule_T__57();
 		}
 	}
@@ -1342,18 +1377,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__58()
 	{
 		EnterRule_T__58();
-		EnterRule("T__58", 35);
-		TraceIn("T__58", 35);
+		EnterRule("T__58", 36);
+		TraceIn("T__58", 36);
 		try
 		{
 			int _type = T__58;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:43:7: ( 'for' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:44:7: ( 'in' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:43:9: 'for'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:44:9: 'in'
 			{
-			DebugLocation(43, 9);
-			Match("for"); 
+			DebugLocation(44, 9);
+			Match("in"); 
 
 
 			}
@@ -1363,8 +1398,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__58", 35);
-			LeaveRule("T__58", 35);
+			TraceOut("T__58", 36);
+			LeaveRule("T__58", 36);
 			LeaveRule_T__58();
 		}
 	}
@@ -1378,18 +1413,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__59()
 	{
 		EnterRule_T__59();
-		EnterRule("T__59", 36);
-		TraceIn("T__59", 36);
+		EnterRule("T__59", 37);
+		TraceIn("T__59", 37);
 		try
 		{
 			int _type = T__59;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:44:7: ( 'function' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:45:7: ( 'local' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:44:9: 'function'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:45:9: 'local'
 			{
-			DebugLocation(44, 9);
-			Match("function"); 
+			DebugLocation(45, 9);
+			Match("local"); 
 
 
 			}
@@ -1399,8 +1434,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__59", 36);
-			LeaveRule("T__59", 36);
+			TraceOut("T__59", 37);
+			LeaveRule("T__59", 37);
 			LeaveRule_T__59();
 		}
 	}
@@ -1414,18 +1449,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__60()
 	{
 		EnterRule_T__60();
-		EnterRule("T__60", 37);
-		TraceIn("T__60", 37);
+		EnterRule("T__60", 38);
+		TraceIn("T__60", 38);
 		try
 		{
 			int _type = T__60;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:45:7: ( 'goto' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:46:7: ( 'nil' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:45:9: 'goto'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:46:9: 'nil'
 			{
-			DebugLocation(45, 9);
-			Match("goto"); 
+			DebugLocation(46, 9);
+			Match("nil"); 
 
 
 			}
@@ -1435,8 +1470,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__60", 37);
-			LeaveRule("T__60", 37);
+			TraceOut("T__60", 38);
+			LeaveRule("T__60", 38);
 			LeaveRule_T__60();
 		}
 	}
@@ -1450,18 +1485,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__61()
 	{
 		EnterRule_T__61();
-		EnterRule("T__61", 38);
-		TraceIn("T__61", 38);
+		EnterRule("T__61", 39);
+		TraceIn("T__61", 39);
 		try
 		{
 			int _type = T__61;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:46:7: ( 'if' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:47:7: ( 'not' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:46:9: 'if'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:47:9: 'not'
 			{
-			DebugLocation(46, 9);
-			Match("if"); 
+			DebugLocation(47, 9);
+			Match("not"); 
 
 
 			}
@@ -1471,8 +1506,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__61", 38);
-			LeaveRule("T__61", 38);
+			TraceOut("T__61", 39);
+			LeaveRule("T__61", 39);
 			LeaveRule_T__61();
 		}
 	}
@@ -1486,18 +1521,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__62()
 	{
 		EnterRule_T__62();
-		EnterRule("T__62", 39);
-		TraceIn("T__62", 39);
+		EnterRule("T__62", 40);
+		TraceIn("T__62", 40);
 		try
 		{
 			int _type = T__62;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:47:7: ( 'in' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:48:7: ( 'or' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:47:9: 'in'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:48:9: 'or'
 			{
-			DebugLocation(47, 9);
-			Match("in"); 
+			DebugLocation(48, 9);
+			Match("or"); 
 
 
 			}
@@ -1507,8 +1542,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__62", 39);
-			LeaveRule("T__62", 39);
+			TraceOut("T__62", 40);
+			LeaveRule("T__62", 40);
 			LeaveRule_T__62();
 		}
 	}
@@ -1522,18 +1557,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__63()
 	{
 		EnterRule_T__63();
-		EnterRule("T__63", 40);
-		TraceIn("T__63", 40);
+		EnterRule("T__63", 41);
+		TraceIn("T__63", 41);
 		try
 		{
 			int _type = T__63;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:48:7: ( 'local' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:49:7: ( 'repeat' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:48:9: 'local'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:49:9: 'repeat'
 			{
-			DebugLocation(48, 9);
-			Match("local"); 
+			DebugLocation(49, 9);
+			Match("repeat"); 
 
 
 			}
@@ -1543,8 +1578,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__63", 40);
-			LeaveRule("T__63", 40);
+			TraceOut("T__63", 41);
+			LeaveRule("T__63", 41);
 			LeaveRule_T__63();
 		}
 	}
@@ -1558,18 +1593,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__64()
 	{
 		EnterRule_T__64();
-		EnterRule("T__64", 41);
-		TraceIn("T__64", 41);
+		EnterRule("T__64", 42);
+		TraceIn("T__64", 42);
 		try
 		{
 			int _type = T__64;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:49:7: ( 'nil' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:50:7: ( 'return' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:49:9: 'nil'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:50:9: 'return'
 			{
-			DebugLocation(49, 9);
-			Match("nil"); 
+			DebugLocation(50, 9);
+			Match("return"); 
 
 
 			}
@@ -1579,8 +1614,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__64", 41);
-			LeaveRule("T__64", 41);
+			TraceOut("T__64", 42);
+			LeaveRule("T__64", 42);
 			LeaveRule_T__64();
 		}
 	}
@@ -1594,18 +1629,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__65()
 	{
 		EnterRule_T__65();
-		EnterRule("T__65", 42);
-		TraceIn("T__65", 42);
+		EnterRule("T__65", 43);
+		TraceIn("T__65", 43);
 		try
 		{
 			int _type = T__65;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:50:7: ( 'not' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:51:7: ( 'then' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:50:9: 'not'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:51:9: 'then'
 			{
-			DebugLocation(50, 9);
-			Match("not"); 
+			DebugLocation(51, 9);
+			Match("then"); 
 
 
 			}
@@ -1615,8 +1650,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__65", 42);
-			LeaveRule("T__65", 42);
+			TraceOut("T__65", 43);
+			LeaveRule("T__65", 43);
 			LeaveRule_T__65();
 		}
 	}
@@ -1630,18 +1665,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__66()
 	{
 		EnterRule_T__66();
-		EnterRule("T__66", 43);
-		TraceIn("T__66", 43);
+		EnterRule("T__66", 44);
+		TraceIn("T__66", 44);
 		try
 		{
 			int _type = T__66;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:51:7: ( 'or' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:52:7: ( 'true' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:51:9: 'or'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:52:9: 'true'
 			{
-			DebugLocation(51, 9);
-			Match("or"); 
+			DebugLocation(52, 9);
+			Match("true"); 
 
 
 			}
@@ -1651,8 +1686,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__66", 43);
-			LeaveRule("T__66", 43);
+			TraceOut("T__66", 44);
+			LeaveRule("T__66", 44);
 			LeaveRule_T__66();
 		}
 	}
@@ -1666,18 +1701,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__67()
 	{
 		EnterRule_T__67();
-		EnterRule("T__67", 44);
-		TraceIn("T__67", 44);
+		EnterRule("T__67", 45);
+		TraceIn("T__67", 45);
 		try
 		{
 			int _type = T__67;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:52:7: ( 'repeat' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:53:7: ( 'until' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:52:9: 'repeat'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:53:9: 'until'
 			{
-			DebugLocation(52, 9);
-			Match("repeat"); 
+			DebugLocation(53, 9);
+			Match("until"); 
 
 
 			}
@@ -1687,8 +1722,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__67", 44);
-			LeaveRule("T__67", 44);
+			TraceOut("T__67", 45);
+			LeaveRule("T__67", 45);
 			LeaveRule_T__67();
 		}
 	}
@@ -1702,18 +1737,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__68()
 	{
 		EnterRule_T__68();
-		EnterRule("T__68", 45);
-		TraceIn("T__68", 45);
+		EnterRule("T__68", 46);
+		TraceIn("T__68", 46);
 		try
 		{
 			int _type = T__68;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:53:7: ( 'return' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:7: ( 'while' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:53:9: 'return'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:9: 'while'
 			{
-			DebugLocation(53, 9);
-			Match("return"); 
+			DebugLocation(54, 9);
+			Match("while"); 
 
 
 			}
@@ -1723,8 +1758,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__68", 45);
-			LeaveRule("T__68", 45);
+			TraceOut("T__68", 46);
+			LeaveRule("T__68", 46);
 			LeaveRule_T__68();
 		}
 	}
@@ -1738,19 +1773,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__69()
 	{
 		EnterRule_T__69();
-		EnterRule("T__69", 46);
-		TraceIn("T__69", 46);
+		EnterRule("T__69", 47);
+		TraceIn("T__69", 47);
 		try
 		{
 			int _type = T__69;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:7: ( 'then' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:55:7: ( '{' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:54:9: 'then'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:55:9: '{'
 			{
-			DebugLocation(54, 9);
-			Match("then"); 
-
+			DebugLocation(55, 9);
+			Match('{'); 
 
 			}
 
@@ -1759,8 +1793,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__69", 46);
-			LeaveRule("T__69", 46);
+			TraceOut("T__69", 47);
+			LeaveRule("T__69", 47);
 			LeaveRule_T__69();
 		}
 	}
@@ -1774,19 +1808,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__70()
 	{
 		EnterRule_T__70();
-		EnterRule("T__70", 47);
-		TraceIn("T__70", 47);
+		EnterRule("T__70", 48);
+		TraceIn("T__70", 48);
 		try
 		{
 			int _type = T__70;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:55:7: ( 'true' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:56:7: ( '}' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:55:9: 'true'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:56:9: '}'
 			{
-			DebugLocation(55, 9);
-			Match("true"); 
-
+			DebugLocation(56, 9);
+			Match('}'); 
 
 			}
 
@@ -1795,8 +1828,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__70", 47);
-			LeaveRule("T__70", 47);
+			TraceOut("T__70", 48);
+			LeaveRule("T__70", 48);
 			LeaveRule_T__70();
 		}
 	}
@@ -1810,159 +1843,17 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mT__71()
 	{
 		EnterRule_T__71();
-		EnterRule("T__71", 48);
-		TraceIn("T__71", 48);
+		EnterRule("T__71", 49);
+		TraceIn("T__71", 49);
 		try
 		{
 			int _type = T__71;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:56:7: ( 'until' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:57:7: ( '~=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:56:9: 'until'
-			{
-			DebugLocation(56, 9);
-			Match("until"); 
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("T__71", 48);
-			LeaveRule("T__71", 48);
-			LeaveRule_T__71();
-		}
-	}
-	// $ANTLR end "T__71"
-
-	partial void EnterRule_T__72();
-	partial void LeaveRule_T__72();
-
-	// $ANTLR start "T__72"
-	[GrammarRule("T__72")]
-	private void mT__72()
-	{
-		EnterRule_T__72();
-		EnterRule("T__72", 49);
-		TraceIn("T__72", 49);
-		try
-		{
-			int _type = T__72;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:57:7: ( 'while' )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:57:9: 'while'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:57:9: '~='
 			{
 			DebugLocation(57, 9);
-			Match("while"); 
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("T__72", 49);
-			LeaveRule("T__72", 49);
-			LeaveRule_T__72();
-		}
-	}
-	// $ANTLR end "T__72"
-
-	partial void EnterRule_T__73();
-	partial void LeaveRule_T__73();
-
-	// $ANTLR start "T__73"
-	[GrammarRule("T__73")]
-	private void mT__73()
-	{
-		EnterRule_T__73();
-		EnterRule("T__73", 50);
-		TraceIn("T__73", 50);
-		try
-		{
-			int _type = T__73;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:58:7: ( '{' )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:58:9: '{'
-			{
-			DebugLocation(58, 9);
-			Match('{'); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("T__73", 50);
-			LeaveRule("T__73", 50);
-			LeaveRule_T__73();
-		}
-	}
-	// $ANTLR end "T__73"
-
-	partial void EnterRule_T__74();
-	partial void LeaveRule_T__74();
-
-	// $ANTLR start "T__74"
-	[GrammarRule("T__74")]
-	private void mT__74()
-	{
-		EnterRule_T__74();
-		EnterRule("T__74", 51);
-		TraceIn("T__74", 51);
-		try
-		{
-			int _type = T__74;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:59:7: ( '}' )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:59:9: '}'
-			{
-			DebugLocation(59, 9);
-			Match('}'); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("T__74", 51);
-			LeaveRule("T__74", 51);
-			LeaveRule_T__74();
-		}
-	}
-	// $ANTLR end "T__74"
-
-	partial void EnterRule_T__75();
-	partial void LeaveRule_T__75();
-
-	// $ANTLR start "T__75"
-	[GrammarRule("T__75")]
-	private void mT__75()
-	{
-		EnterRule_T__75();
-		EnterRule("T__75", 52);
-		TraceIn("T__75", 52);
-		try
-		{
-			int _type = T__75;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:60:7: ( '~=' )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:60:9: '~='
-			{
-			DebugLocation(60, 9);
 			Match("~="); 
 
 
@@ -1973,12 +1864,12 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__75", 52);
-			LeaveRule("T__75", 52);
-			LeaveRule_T__75();
+			TraceOut("T__71", 49);
+			LeaveRule("T__71", 49);
+			LeaveRule_T__71();
 		}
 	}
-	// $ANTLR end "T__75"
+	// $ANTLR end "T__71"
 
 	partial void EnterRule_NAME();
 	partial void LeaveRule_NAME();
@@ -1988,17 +1879,17 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mNAME()
 	{
 		EnterRule_NAME();
-		EnterRule("NAME", 53);
-		TraceIn("NAME", 53);
+		EnterRule("NAME", 50);
+		TraceIn("NAME", 50);
 		try
 		{
 			int _type = NAME;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:207:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:204:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:207:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:204:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
 			{
-			DebugLocation(207, 7);
+			DebugLocation(204, 7);
 			if ((input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
@@ -2011,8 +1902,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(207, 30);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:207:30: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+			DebugLocation(204, 30);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:204:30: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
 			try { DebugEnterSubRule(1);
 			while (true)
 			{
@@ -2033,7 +1924,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 					{
-					DebugLocation(207, 30);
+					DebugLocation(204, 30);
 					input.Consume();
 
 
@@ -2058,8 +1949,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("NAME", 53);
-			LeaveRule("NAME", 53);
+			TraceOut("NAME", 50);
+			LeaveRule("NAME", 50);
 			LeaveRule_NAME();
 		}
 	}
@@ -2073,20 +1964,20 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mNORMALSTRING()
 	{
 		EnterRule_NORMALSTRING();
-		EnterRule("NORMALSTRING", 54);
-		TraceIn("NORMALSTRING", 54);
+		EnterRule("NORMALSTRING", 51);
+		TraceIn("NORMALSTRING", 51);
 		try
 		{
 			int _type = NORMALSTRING;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:211:5: ( '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:208:5: ( '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:211:7: '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:208:7: '\"' ( EscapeSequence |~ ( '\\\\' | '\"' ) )* '\"'
 			{
-			DebugLocation(211, 7);
+			DebugLocation(208, 7);
 			Match('\"'); 
-			DebugLocation(211, 11);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:211:11: ( EscapeSequence |~ ( '\\\\' | '\"' ) )*
+			DebugLocation(208, 11);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:208:11: ( EscapeSequence |~ ( '\\\\' | '\"' ) )*
 			try { DebugEnterSubRule(2);
 			while (true)
 			{
@@ -2109,18 +2000,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:211:13: EscapeSequence
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:208:13: EscapeSequence
 					{
-					DebugLocation(211, 13);
+					DebugLocation(208, 13);
 					mEscapeSequence(); 
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:211:30: ~ ( '\\\\' | '\"' )
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:208:30: ~ ( '\\\\' | '\"' )
 					{
-					DebugLocation(211, 30);
+					DebugLocation(208, 30);
 					input.Consume();
 
 
@@ -2137,7 +2028,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(2); }
 
-			DebugLocation(211, 45);
+			DebugLocation(208, 45);
 			Match('\"'); 
 
 			}
@@ -2147,8 +2038,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("NORMALSTRING", 54);
-			LeaveRule("NORMALSTRING", 54);
+			TraceOut("NORMALSTRING", 51);
+			LeaveRule("NORMALSTRING", 51);
 			LeaveRule_NORMALSTRING();
 		}
 	}
@@ -2162,20 +2053,20 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mCHARSTRING()
 	{
 		EnterRule_CHARSTRING();
-		EnterRule("CHARSTRING", 55);
-		TraceIn("CHARSTRING", 55);
+		EnterRule("CHARSTRING", 52);
+		TraceIn("CHARSTRING", 52);
 		try
 		{
 			int _type = CHARSTRING;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:215:5: ( '\\'' ( EscapeSequence |~ ( '\\'' | '\\\\' ) )* '\\'' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:212:5: ( '\\'' ( EscapeSequence |~ ( '\\'' | '\\\\' ) )* '\\'' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:215:7: '\\'' ( EscapeSequence |~ ( '\\'' | '\\\\' ) )* '\\''
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:212:7: '\\'' ( EscapeSequence |~ ( '\\'' | '\\\\' ) )* '\\''
 			{
-			DebugLocation(215, 7);
+			DebugLocation(212, 7);
 			Match('\''); 
-			DebugLocation(215, 12);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:215:12: ( EscapeSequence |~ ( '\\'' | '\\\\' ) )*
+			DebugLocation(212, 12);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:212:12: ( EscapeSequence |~ ( '\\'' | '\\\\' ) )*
 			try { DebugEnterSubRule(3);
 			while (true)
 			{
@@ -2198,18 +2089,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:215:14: EscapeSequence
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:212:14: EscapeSequence
 					{
-					DebugLocation(215, 14);
+					DebugLocation(212, 14);
 					mEscapeSequence(); 
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:215:31: ~ ( '\\'' | '\\\\' )
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:212:31: ~ ( '\\'' | '\\\\' )
 					{
-					DebugLocation(215, 31);
+					DebugLocation(212, 31);
 					input.Consume();
 
 
@@ -2226,7 +2117,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(3); }
 
-			DebugLocation(215, 47);
+			DebugLocation(212, 47);
 			Match('\''); 
 
 			}
@@ -2236,8 +2127,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("CHARSTRING", 55);
-			LeaveRule("CHARSTRING", 55);
+			TraceOut("CHARSTRING", 52);
+			LeaveRule("CHARSTRING", 52);
 			LeaveRule_CHARSTRING();
 		}
 	}
@@ -2251,13 +2142,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mLONGSTRING()
 	{
 		EnterRule_LONGSTRING();
-		EnterRule("LONGSTRING", 56);
-		TraceIn("LONGSTRING", 56);
+		EnterRule("LONGSTRING", 53);
+		TraceIn("LONGSTRING", 53);
 		try
 		{
 			int _type = LONGSTRING;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:220:5: ( '[[' ( options {greedy=false; } : . )* ']]' | '[=[' ( options {greedy=false; } : . )* ']=]' | '[==[' ( options {greedy=false; } : . )* ']==]' | '[===[' ( options {greedy=false; } : . )* ']===]' | '[====[' ( options {greedy=false; } : . )* ']====]' | '[=====[' ( options {greedy=false; } : . )* ']=====]' | '[======[' ( options {greedy=false; } : . )* ']======]' | '[=======[' ( options {greedy=false; } : . )* ']=======]' | '[========[' ( options {greedy=false; } : . )* ']========]' | '[=========[' ( options {greedy=false; } : . )* ']=========]' | '[==========[' ( options {greedy=false; } : . )* ']==========]' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:217:5: ( '[[' ( options {greedy=false; } : . )* ']]' | '[=[' ( options {greedy=false; } : . )* ']=]' | '[==[' ( options {greedy=false; } : . )* ']==]' | '[===[' ( options {greedy=false; } : . )* ']===]' | '[====[' ( options {greedy=false; } : . )* ']====]' | '[=====[' ( options {greedy=false; } : . )* ']=====]' | '[======[' ( options {greedy=false; } : . )* ']======]' | '[=======[' ( options {greedy=false; } : . )* ']=======]' | '[========[' ( options {greedy=false; } : . )* ']========]' | '[=========[' ( options {greedy=false; } : . )* ']=========]' | '[==========[' ( options {greedy=false; } : . )* ']==========]' )
 			int alt15=11;
 			try { DebugEnterDecision(15, false);
 			int LA15_1 = input.LA(1);
@@ -2427,13 +2318,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:220:7: '[[' ( options {greedy=false; } : . )* ']]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:217:7: '[[' ( options {greedy=false; } : . )* ']]'
 				{
-				DebugLocation(220, 7);
+				DebugLocation(217, 7);
 				Match("[["); 
 
-				DebugLocation(220, 12);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:220:12: ( options {greedy=false; } : . )*
+				DebugLocation(217, 12);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:217:12: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(4);
 				while (true)
 				{
@@ -2467,9 +2358,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:220:40: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:217:40: .
 						{
-						DebugLocation(220, 40);
+						DebugLocation(217, 40);
 						MatchAny(); 
 
 						}
@@ -2485,7 +2376,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(4); }
 
-				DebugLocation(220, 45);
+				DebugLocation(217, 45);
 				Match("]]"); 
 
 
@@ -2493,13 +2384,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:221:7: '[=[' ( options {greedy=false; } : . )* ']=]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:218:7: '[=[' ( options {greedy=false; } : . )* ']=]'
 				{
-				DebugLocation(221, 7);
+				DebugLocation(218, 7);
 				Match("[=["); 
 
-				DebugLocation(221, 13);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:221:13: ( options {greedy=false; } : . )*
+				DebugLocation(218, 13);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:218:13: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(5);
 				while (true)
 				{
@@ -2544,9 +2435,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:221:41: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:218:41: .
 						{
-						DebugLocation(221, 41);
+						DebugLocation(218, 41);
 						MatchAny(); 
 
 						}
@@ -2562,7 +2453,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(5); }
 
-				DebugLocation(221, 46);
+				DebugLocation(218, 46);
 				Match("]=]"); 
 
 
@@ -2570,13 +2461,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:222:7: '[==[' ( options {greedy=false; } : . )* ']==]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:219:7: '[==[' ( options {greedy=false; } : . )* ']==]'
 				{
-				DebugLocation(222, 7);
+				DebugLocation(219, 7);
 				Match("[==["); 
 
-				DebugLocation(222, 14);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:222:14: ( options {greedy=false; } : . )*
+				DebugLocation(219, 14);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:219:14: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(6);
 				while (true)
 				{
@@ -2632,9 +2523,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:222:42: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:219:42: .
 						{
-						DebugLocation(222, 42);
+						DebugLocation(219, 42);
 						MatchAny(); 
 
 						}
@@ -2650,7 +2541,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(6); }
 
-				DebugLocation(222, 47);
+				DebugLocation(219, 47);
 				Match("]==]"); 
 
 
@@ -2658,13 +2549,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:223:7: '[===[' ( options {greedy=false; } : . )* ']===]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:220:7: '[===[' ( options {greedy=false; } : . )* ']===]'
 				{
-				DebugLocation(223, 7);
+				DebugLocation(220, 7);
 				Match("[===["); 
 
-				DebugLocation(223, 15);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:223:15: ( options {greedy=false; } : . )*
+				DebugLocation(220, 15);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:220:15: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(7);
 				while (true)
 				{
@@ -2731,9 +2622,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:223:43: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:220:43: .
 						{
-						DebugLocation(223, 43);
+						DebugLocation(220, 43);
 						MatchAny(); 
 
 						}
@@ -2749,7 +2640,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(7); }
 
-				DebugLocation(223, 48);
+				DebugLocation(220, 48);
 				Match("]===]"); 
 
 
@@ -2757,13 +2648,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:224:7: '[====[' ( options {greedy=false; } : . )* ']====]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:221:7: '[====[' ( options {greedy=false; } : . )* ']====]'
 				{
-				DebugLocation(224, 7);
+				DebugLocation(221, 7);
 				Match("[====["); 
 
-				DebugLocation(224, 16);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:224:16: ( options {greedy=false; } : . )*
+				DebugLocation(221, 16);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:221:16: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(8);
 				while (true)
 				{
@@ -2841,9 +2732,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:224:44: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:221:44: .
 						{
-						DebugLocation(224, 44);
+						DebugLocation(221, 44);
 						MatchAny(); 
 
 						}
@@ -2859,7 +2750,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(8); }
 
-				DebugLocation(224, 49);
+				DebugLocation(221, 49);
 				Match("]====]"); 
 
 
@@ -2867,13 +2758,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:225:7: '[=====[' ( options {greedy=false; } : . )* ']=====]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:222:7: '[=====[' ( options {greedy=false; } : . )* ']=====]'
 				{
-				DebugLocation(225, 7);
+				DebugLocation(222, 7);
 				Match("[=====["); 
 
-				DebugLocation(225, 17);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:225:17: ( options {greedy=false; } : . )*
+				DebugLocation(222, 17);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:222:17: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(9);
 				while (true)
 				{
@@ -2962,9 +2853,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:225:45: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:222:45: .
 						{
-						DebugLocation(225, 45);
+						DebugLocation(222, 45);
 						MatchAny(); 
 
 						}
@@ -2980,7 +2871,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(9); }
 
-				DebugLocation(225, 50);
+				DebugLocation(222, 50);
 				Match("]=====]"); 
 
 
@@ -2988,13 +2879,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:226:7: '[======[' ( options {greedy=false; } : . )* ']======]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:223:7: '[======[' ( options {greedy=false; } : . )* ']======]'
 				{
-				DebugLocation(226, 7);
+				DebugLocation(223, 7);
 				Match("[======["); 
 
-				DebugLocation(226, 18);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:226:18: ( options {greedy=false; } : . )*
+				DebugLocation(223, 18);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:223:18: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(10);
 				while (true)
 				{
@@ -3094,9 +2985,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:226:46: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:223:46: .
 						{
-						DebugLocation(226, 46);
+						DebugLocation(223, 46);
 						MatchAny(); 
 
 						}
@@ -3112,7 +3003,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(10); }
 
-				DebugLocation(226, 51);
+				DebugLocation(223, 51);
 				Match("]======]"); 
 
 
@@ -3120,13 +3011,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:227:7: '[=======[' ( options {greedy=false; } : . )* ']=======]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:224:7: '[=======[' ( options {greedy=false; } : . )* ']=======]'
 				{
-				DebugLocation(227, 7);
+				DebugLocation(224, 7);
 				Match("[=======["); 
 
-				DebugLocation(227, 19);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:227:19: ( options {greedy=false; } : . )*
+				DebugLocation(224, 19);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:224:19: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(11);
 				while (true)
 				{
@@ -3237,9 +3128,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:227:47: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:224:47: .
 						{
-						DebugLocation(227, 47);
+						DebugLocation(224, 47);
 						MatchAny(); 
 
 						}
@@ -3255,7 +3146,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(11); }
 
-				DebugLocation(227, 52);
+				DebugLocation(224, 52);
 				Match("]=======]"); 
 
 
@@ -3263,13 +3154,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 9:
 				DebugEnterAlt(9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:228:7: '[========[' ( options {greedy=false; } : . )* ']========]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:225:7: '[========[' ( options {greedy=false; } : . )* ']========]'
 				{
-				DebugLocation(228, 7);
+				DebugLocation(225, 7);
 				Match("[========["); 
 
-				DebugLocation(228, 20);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:228:20: ( options {greedy=false; } : . )*
+				DebugLocation(225, 20);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:225:20: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(12);
 				while (true)
 				{
@@ -3391,9 +3282,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:228:48: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:225:48: .
 						{
-						DebugLocation(228, 48);
+						DebugLocation(225, 48);
 						MatchAny(); 
 
 						}
@@ -3409,7 +3300,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(12); }
 
-				DebugLocation(228, 53);
+				DebugLocation(225, 53);
 				Match("]========]"); 
 
 
@@ -3417,13 +3308,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 10:
 				DebugEnterAlt(10);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:229:7: '[=========[' ( options {greedy=false; } : . )* ']=========]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:226:7: '[=========[' ( options {greedy=false; } : . )* ']=========]'
 				{
-				DebugLocation(229, 7);
+				DebugLocation(226, 7);
 				Match("[=========["); 
 
-				DebugLocation(229, 21);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:229:21: ( options {greedy=false; } : . )*
+				DebugLocation(226, 21);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:226:21: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(13);
 				while (true)
 				{
@@ -3556,9 +3447,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:229:49: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:226:49: .
 						{
-						DebugLocation(229, 49);
+						DebugLocation(226, 49);
 						MatchAny(); 
 
 						}
@@ -3574,7 +3465,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(13); }
 
-				DebugLocation(229, 54);
+				DebugLocation(226, 54);
 				Match("]=========]"); 
 
 
@@ -3582,13 +3473,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 11:
 				DebugEnterAlt(11);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:230:7: '[==========[' ( options {greedy=false; } : . )* ']==========]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:227:7: '[==========[' ( options {greedy=false; } : . )* ']==========]'
 				{
-				DebugLocation(230, 7);
+				DebugLocation(227, 7);
 				Match("[==========["); 
 
-				DebugLocation(230, 22);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:230:22: ( options {greedy=false; } : . )*
+				DebugLocation(227, 22);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:227:22: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(14);
 				while (true)
 				{
@@ -3732,9 +3623,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:230:50: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:227:50: .
 						{
-						DebugLocation(230, 50);
+						DebugLocation(227, 50);
 						MatchAny(); 
 
 						}
@@ -3750,7 +3641,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(14); }
 
-				DebugLocation(230, 55);
+				DebugLocation(227, 55);
 				Match("]==========]"); 
 
 
@@ -3763,8 +3654,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("LONGSTRING", 56);
-			LeaveRule("LONGSTRING", 56);
+			TraceOut("LONGSTRING", 53);
+			LeaveRule("LONGSTRING", 53);
 			LeaveRule_LONGSTRING();
 		}
 	}
@@ -3778,18 +3669,18 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mINT()
 	{
 		EnterRule_INT();
-		EnterRule("INT", 57);
-		TraceIn("INT", 57);
+		EnterRule("INT", 54);
+		TraceIn("INT", 54);
 		try
 		{
 			int _type = INT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:234:5: ( ( Digit )+ )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:231:5: ( ( Digit )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:234:7: ( Digit )+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:231:7: ( Digit )+
 			{
-			DebugLocation(234, 7);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:234:7: ( Digit )+
+			DebugLocation(231, 7);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:231:7: ( Digit )+
 			int cnt16=0;
 			try { DebugEnterSubRule(16);
 			while (true)
@@ -3811,7 +3702,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 					{
-					DebugLocation(234, 7);
+					DebugLocation(231, 7);
 					input.Consume();
 
 
@@ -3841,8 +3732,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("INT", 57);
-			LeaveRule("INT", 57);
+			TraceOut("INT", 54);
+			LeaveRule("INT", 54);
 			LeaveRule_INT();
 		}
 	}
@@ -3856,19 +3747,19 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mHEX()
 	{
 		EnterRule_HEX();
-		EnterRule("HEX", 58);
-		TraceIn("HEX", 58);
+		EnterRule("HEX", 55);
+		TraceIn("HEX", 55);
 		try
 		{
 			int _type = HEX;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:238:5: ( '0' ( 'x' | 'X' ) ( HexDigit )+ )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:235:5: ( '0' ( 'x' | 'X' ) ( HexDigit )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:238:7: '0' ( 'x' | 'X' ) ( HexDigit )+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:235:7: '0' ( 'x' | 'X' ) ( HexDigit )+
 			{
-			DebugLocation(238, 7);
+			DebugLocation(235, 7);
 			Match('0'); 
-			DebugLocation(238, 11);
+			DebugLocation(235, 11);
 			if (input.LA(1)=='X'||input.LA(1)=='x')
 			{
 				input.Consume();
@@ -3881,8 +3772,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(238, 21);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:238:21: ( HexDigit )+
+			DebugLocation(235, 21);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:235:21: ( HexDigit )+
 			int cnt17=0;
 			try { DebugEnterSubRule(17);
 			while (true)
@@ -3904,7 +3795,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 					{
-					DebugLocation(238, 21);
+					DebugLocation(235, 21);
 					input.Consume();
 
 
@@ -3934,8 +3825,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("HEX", 58);
-			LeaveRule("HEX", 58);
+			TraceOut("HEX", 55);
+			LeaveRule("HEX", 55);
 			LeaveRule_HEX();
 		}
 	}
@@ -3949,13 +3840,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mFLOAT()
 	{
 		EnterRule_FLOAT();
-		EnterRule("FLOAT", 59);
-		TraceIn("FLOAT", 59);
+		EnterRule("FLOAT", 56);
+		TraceIn("FLOAT", 56);
 		try
 		{
 			int _type = FLOAT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:242:5: ( ( Digit )+ '.' ( Digit )* ( ExponentPart )? | '.' ( Digit )+ ( ExponentPart )? | ( Digit )+ ExponentPart )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:239:5: ( ( Digit )+ '.' ( Digit )* ( ExponentPart )? | '.' ( Digit )+ ( ExponentPart )? | ( Digit )+ ExponentPart )
 			int alt24=3;
 			try { DebugEnterDecision(24, false);
 			try
@@ -3972,10 +3863,10 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:242:7: ( Digit )+ '.' ( Digit )* ( ExponentPart )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:239:7: ( Digit )+ '.' ( Digit )* ( ExponentPart )?
 				{
-				DebugLocation(242, 7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:242:7: ( Digit )+
+				DebugLocation(239, 7);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:239:7: ( Digit )+
 				int cnt18=0;
 				try { DebugEnterSubRule(18);
 				while (true)
@@ -3997,7 +3888,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 						{
-						DebugLocation(242, 7);
+						DebugLocation(239, 7);
 						input.Consume();
 
 
@@ -4019,10 +3910,10 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(18); }
 
-				DebugLocation(242, 14);
+				DebugLocation(239, 14);
 				Match('.'); 
-				DebugLocation(242, 18);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:242:18: ( Digit )*
+				DebugLocation(239, 18);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:239:18: ( Digit )*
 				try { DebugEnterSubRule(19);
 				while (true)
 				{
@@ -4043,7 +3934,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 						{
-						DebugLocation(242, 18);
+						DebugLocation(239, 18);
 						input.Consume();
 
 
@@ -4060,8 +3951,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(19); }
 
-				DebugLocation(242, 25);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:242:25: ( ExponentPart )?
+				DebugLocation(239, 25);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:239:25: ( ExponentPart )?
 				int alt20=2;
 				try { DebugEnterSubRule(20);
 				try { DebugEnterDecision(20, false);
@@ -4076,9 +3967,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:242:25: ExponentPart
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:239:25: ExponentPart
 					{
-					DebugLocation(242, 25);
+					DebugLocation(239, 25);
 					mExponentPart(); 
 
 					}
@@ -4092,12 +3983,12 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:243:7: '.' ( Digit )+ ( ExponentPart )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:240:7: '.' ( Digit )+ ( ExponentPart )?
 				{
-				DebugLocation(243, 7);
+				DebugLocation(240, 7);
 				Match('.'); 
-				DebugLocation(243, 11);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:243:11: ( Digit )+
+				DebugLocation(240, 11);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:240:11: ( Digit )+
 				int cnt21=0;
 				try { DebugEnterSubRule(21);
 				while (true)
@@ -4119,7 +4010,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 						{
-						DebugLocation(243, 11);
+						DebugLocation(240, 11);
 						input.Consume();
 
 
@@ -4141,8 +4032,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(21); }
 
-				DebugLocation(243, 18);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:243:18: ( ExponentPart )?
+				DebugLocation(240, 18);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:240:18: ( ExponentPart )?
 				int alt22=2;
 				try { DebugEnterSubRule(22);
 				try { DebugEnterDecision(22, false);
@@ -4157,9 +4048,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:243:18: ExponentPart
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:240:18: ExponentPart
 					{
-					DebugLocation(243, 18);
+					DebugLocation(240, 18);
 					mExponentPart(); 
 
 					}
@@ -4173,10 +4064,10 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:244:7: ( Digit )+ ExponentPart
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:241:7: ( Digit )+ ExponentPart
 				{
-				DebugLocation(244, 7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:244:7: ( Digit )+
+				DebugLocation(241, 7);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:241:7: ( Digit )+
 				int cnt23=0;
 				try { DebugEnterSubRule(23);
 				while (true)
@@ -4198,7 +4089,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 						{
-						DebugLocation(244, 7);
+						DebugLocation(241, 7);
 						input.Consume();
 
 
@@ -4220,7 +4111,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(23); }
 
-				DebugLocation(244, 14);
+				DebugLocation(241, 14);
 				mExponentPart(); 
 
 				}
@@ -4232,8 +4123,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("FLOAT", 59);
-			LeaveRule("FLOAT", 59);
+			TraceOut("FLOAT", 56);
+			LeaveRule("FLOAT", 56);
 			LeaveRule_FLOAT();
 		}
 	}
@@ -4247,13 +4138,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mHEX_FLOAT()
 	{
 		EnterRule_HEX_FLOAT();
-		EnterRule("HEX_FLOAT", 60);
-		TraceIn("HEX_FLOAT", 60);
+		EnterRule("HEX_FLOAT", 57);
+		TraceIn("HEX_FLOAT", 57);
 		try
 		{
 			int _type = HEX_FLOAT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:248:5: ( '0' ( 'x' | 'X' ) ( HexDigit )+ '.' ( HexDigit )* ( HexExponentPart )? | '0' ( 'x' | 'X' ) '.' ( HexDigit )+ ( HexExponentPart )? | '0' ( 'x' | 'X' ) ( HexDigit )+ HexExponentPart )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:245:5: ( '0' ( 'x' | 'X' ) ( HexDigit )+ '.' ( HexDigit )* ( HexExponentPart )? | '0' ( 'x' | 'X' ) '.' ( HexDigit )+ ( HexExponentPart )? | '0' ( 'x' | 'X' ) ( HexDigit )+ HexExponentPart )
 			int alt31=3;
 			try { DebugEnterDecision(31, false);
 			try
@@ -4270,15 +4161,15 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:248:7: '0' ( 'x' | 'X' ) ( HexDigit )+ '.' ( HexDigit )* ( HexExponentPart )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:245:7: '0' ( 'x' | 'X' ) ( HexDigit )+ '.' ( HexDigit )* ( HexExponentPart )?
 				{
-				DebugLocation(248, 7);
+				DebugLocation(245, 7);
 				Match('0'); 
-				DebugLocation(248, 11);
+				DebugLocation(245, 11);
 				input.Consume();
 
-				DebugLocation(248, 21);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:248:21: ( HexDigit )+
+				DebugLocation(245, 21);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:245:21: ( HexDigit )+
 				int cnt25=0;
 				try { DebugEnterSubRule(25);
 				while (true)
@@ -4300,7 +4191,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 						{
-						DebugLocation(248, 21);
+						DebugLocation(245, 21);
 						input.Consume();
 
 
@@ -4322,10 +4213,10 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(25); }
 
-				DebugLocation(248, 31);
+				DebugLocation(245, 31);
 				Match('.'); 
-				DebugLocation(248, 35);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:248:35: ( HexDigit )*
+				DebugLocation(245, 35);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:245:35: ( HexDigit )*
 				try { DebugEnterSubRule(26);
 				while (true)
 				{
@@ -4346,7 +4237,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 						{
-						DebugLocation(248, 35);
+						DebugLocation(245, 35);
 						input.Consume();
 
 
@@ -4363,8 +4254,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(26); }
 
-				DebugLocation(248, 45);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:248:45: ( HexExponentPart )?
+				DebugLocation(245, 45);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:245:45: ( HexExponentPart )?
 				int alt27=2;
 				try { DebugEnterSubRule(27);
 				try { DebugEnterDecision(27, false);
@@ -4379,9 +4270,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:248:45: HexExponentPart
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:245:45: HexExponentPart
 					{
-					DebugLocation(248, 45);
+					DebugLocation(245, 45);
 					mHexExponentPart(); 
 
 					}
@@ -4395,17 +4286,17 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:249:7: '0' ( 'x' | 'X' ) '.' ( HexDigit )+ ( HexExponentPart )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:246:7: '0' ( 'x' | 'X' ) '.' ( HexDigit )+ ( HexExponentPart )?
 				{
-				DebugLocation(249, 7);
+				DebugLocation(246, 7);
 				Match('0'); 
-				DebugLocation(249, 11);
+				DebugLocation(246, 11);
 				input.Consume();
 
-				DebugLocation(249, 21);
+				DebugLocation(246, 21);
 				Match('.'); 
-				DebugLocation(249, 25);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:249:25: ( HexDigit )+
+				DebugLocation(246, 25);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:246:25: ( HexDigit )+
 				int cnt28=0;
 				try { DebugEnterSubRule(28);
 				while (true)
@@ -4427,7 +4318,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 						{
-						DebugLocation(249, 25);
+						DebugLocation(246, 25);
 						input.Consume();
 
 
@@ -4449,8 +4340,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(28); }
 
-				DebugLocation(249, 35);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:249:35: ( HexExponentPart )?
+				DebugLocation(246, 35);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:246:35: ( HexExponentPart )?
 				int alt29=2;
 				try { DebugEnterSubRule(29);
 				try { DebugEnterDecision(29, false);
@@ -4465,9 +4356,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:249:35: HexExponentPart
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:246:35: HexExponentPart
 					{
-					DebugLocation(249, 35);
+					DebugLocation(246, 35);
 					mHexExponentPart(); 
 
 					}
@@ -4481,15 +4372,15 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:250:7: '0' ( 'x' | 'X' ) ( HexDigit )+ HexExponentPart
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:247:7: '0' ( 'x' | 'X' ) ( HexDigit )+ HexExponentPart
 				{
-				DebugLocation(250, 7);
+				DebugLocation(247, 7);
 				Match('0'); 
-				DebugLocation(250, 11);
+				DebugLocation(247, 11);
 				input.Consume();
 
-				DebugLocation(250, 21);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:250:21: ( HexDigit )+
+				DebugLocation(247, 21);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:247:21: ( HexDigit )+
 				int cnt30=0;
 				try { DebugEnterSubRule(30);
 				while (true)
@@ -4511,7 +4402,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 						{
-						DebugLocation(250, 21);
+						DebugLocation(247, 21);
 						input.Consume();
 
 
@@ -4533,7 +4424,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(30); }
 
-				DebugLocation(250, 31);
+				DebugLocation(247, 31);
 				mHexExponentPart(); 
 
 				}
@@ -4545,8 +4436,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("HEX_FLOAT", 60);
-			LeaveRule("HEX_FLOAT", 60);
+			TraceOut("HEX_FLOAT", 57);
+			LeaveRule("HEX_FLOAT", 57);
 			LeaveRule_HEX_FLOAT();
 		}
 	}
@@ -4560,15 +4451,15 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mExponentPart()
 	{
 		EnterRule_ExponentPart();
-		EnterRule("ExponentPart", 61);
-		TraceIn("ExponentPart", 61);
+		EnterRule("ExponentPart", 58);
+		TraceIn("ExponentPart", 58);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:256:5: ( ( 'e' | 'E' ) ( '+' | '-' )? ( Digit )+ )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:253:5: ( ( 'e' | 'E' ) ( '+' | '-' )? ( Digit )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:256:7: ( 'e' | 'E' ) ( '+' | '-' )? ( Digit )+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:253:7: ( 'e' | 'E' ) ( '+' | '-' )? ( Digit )+
 			{
-			DebugLocation(256, 7);
+			DebugLocation(253, 7);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -4581,8 +4472,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(256, 17);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:256:17: ( '+' | '-' )?
+			DebugLocation(253, 17);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:253:17: ( '+' | '-' )?
 			int alt32=2;
 			try { DebugEnterSubRule(32);
 			try { DebugEnterDecision(32, false);
@@ -4599,7 +4490,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				DebugEnterAlt(1);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 				{
-				DebugLocation(256, 17);
+				DebugLocation(253, 17);
 				input.Consume();
 
 
@@ -4609,8 +4500,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(32); }
 
-			DebugLocation(256, 28);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:256:28: ( Digit )+
+			DebugLocation(253, 28);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:253:28: ( Digit )+
 			int cnt33=0;
 			try { DebugEnterSubRule(33);
 			while (true)
@@ -4632,7 +4523,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 					{
-					DebugLocation(256, 28);
+					DebugLocation(253, 28);
 					input.Consume();
 
 
@@ -4660,8 +4551,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("ExponentPart", 61);
-			LeaveRule("ExponentPart", 61);
+			TraceOut("ExponentPart", 58);
+			LeaveRule("ExponentPart", 58);
 			LeaveRule_ExponentPart();
 		}
 	}
@@ -4675,15 +4566,15 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mHexExponentPart()
 	{
 		EnterRule_HexExponentPart();
-		EnterRule("HexExponentPart", 62);
-		TraceIn("HexExponentPart", 62);
+		EnterRule("HexExponentPart", 59);
+		TraceIn("HexExponentPart", 59);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:261:5: ( ( 'p' | 'P' ) ( '+' | '-' )? ( Digit )+ )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:258:5: ( ( 'p' | 'P' ) ( '+' | '-' )? ( Digit )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:261:7: ( 'p' | 'P' ) ( '+' | '-' )? ( Digit )+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:258:7: ( 'p' | 'P' ) ( '+' | '-' )? ( Digit )+
 			{
-			DebugLocation(261, 7);
+			DebugLocation(258, 7);
 			if (input.LA(1)=='P'||input.LA(1)=='p')
 			{
 				input.Consume();
@@ -4696,8 +4587,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(261, 17);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:261:17: ( '+' | '-' )?
+			DebugLocation(258, 17);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:258:17: ( '+' | '-' )?
 			int alt34=2;
 			try { DebugEnterSubRule(34);
 			try { DebugEnterDecision(34, false);
@@ -4714,7 +4605,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				DebugEnterAlt(1);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 				{
-				DebugLocation(261, 17);
+				DebugLocation(258, 17);
 				input.Consume();
 
 
@@ -4724,8 +4615,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(34); }
 
-			DebugLocation(261, 28);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:261:28: ( Digit )+
+			DebugLocation(258, 28);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:258:28: ( Digit )+
 			int cnt35=0;
 			try { DebugEnterSubRule(35);
 			while (true)
@@ -4747,7 +4638,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 					{
-					DebugLocation(261, 28);
+					DebugLocation(258, 28);
 					input.Consume();
 
 
@@ -4775,8 +4666,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("HexExponentPart", 62);
-			LeaveRule("HexExponentPart", 62);
+			TraceOut("HexExponentPart", 59);
+			LeaveRule("HexExponentPart", 59);
 			LeaveRule_HexExponentPart();
 		}
 	}
@@ -4790,11 +4681,11 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mEscapeSequence()
 	{
 		EnterRule_EscapeSequence();
-		EnterRule("EscapeSequence", 63);
-		TraceIn("EscapeSequence", 63);
+		EnterRule("EscapeSequence", 60);
+		TraceIn("EscapeSequence", 60);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:266:5: ( '\\\\' ( 'a' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' | 'z' | '\\\"' | '\\'' | '\\\\' ) | '\\\\' ( '\\r' )? '\\n' | DecimalEscape | HexEscape )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:263:5: ( '\\\\' ( 'a' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' | 'z' | '\\\"' | '\\'' | '\\\\' ) | '\\\\' ( '\\r' )? '\\n' | DecimalEscape | HexEscape )
 			int alt37=4;
 			try { DebugEnterDecision(37, false);
 			int LA37_1 = input.LA(1);
@@ -4863,11 +4754,11 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:266:7: '\\\\' ( 'a' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' | 'z' | '\\\"' | '\\'' | '\\\\' )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:263:7: '\\\\' ( 'a' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' | 'z' | '\\\"' | '\\'' | '\\\\' )
 				{
-				DebugLocation(266, 7);
+				DebugLocation(263, 7);
 				Match('\\'); 
-				DebugLocation(266, 12);
+				DebugLocation(263, 12);
 				input.Consume();
 
 
@@ -4875,12 +4766,12 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:267:4: '\\\\' ( '\\r' )? '\\n'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:264:4: '\\\\' ( '\\r' )? '\\n'
 				{
-				DebugLocation(267, 4);
+				DebugLocation(264, 4);
 				Match('\\'); 
-				DebugLocation(267, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:267:9: ( '\\r' )?
+				DebugLocation(264, 9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:264:9: ( '\\r' )?
 				int alt36=2;
 				try { DebugEnterSubRule(36);
 				try { DebugEnterDecision(36, false);
@@ -4895,9 +4786,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:267:9: '\\r'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:264:9: '\\r'
 					{
-					DebugLocation(267, 9);
+					DebugLocation(264, 9);
 					Match('\r'); 
 
 					}
@@ -4906,25 +4797,25 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				}
 				} finally { DebugExitSubRule(36); }
 
-				DebugLocation(267, 15);
+				DebugLocation(264, 15);
 				Match('\n'); 
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:268:7: DecimalEscape
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:265:7: DecimalEscape
 				{
-				DebugLocation(268, 7);
+				DebugLocation(265, 7);
 				mDecimalEscape(); 
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:269:7: HexEscape
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:266:7: HexEscape
 				{
-				DebugLocation(269, 7);
+				DebugLocation(266, 7);
 				mHexEscape(); 
 
 				}
@@ -4934,8 +4825,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("EscapeSequence", 63);
-			LeaveRule("EscapeSequence", 63);
+			TraceOut("EscapeSequence", 60);
+			LeaveRule("EscapeSequence", 60);
 			LeaveRule_EscapeSequence();
 		}
 	}
@@ -4949,11 +4840,11 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mDecimalEscape()
 	{
 		EnterRule_DecimalEscape();
-		EnterRule("DecimalEscape", 64);
-		TraceIn("DecimalEscape", 64);
+		EnterRule("DecimalEscape", 61);
+		TraceIn("DecimalEscape", 61);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:274:5: ( '\\\\' Digit | '\\\\' Digit Digit | '\\\\' '0' .. '2' Digit Digit )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:271:5: ( '\\\\' Digit | '\\\\' Digit Digit | '\\\\' '0' .. '2' Digit Digit )
 			int alt38=3;
 			try { DebugEnterDecision(38, false);
 			int LA38_1 = input.LA(1);
@@ -5015,39 +4906,39 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:274:7: '\\\\' Digit
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:271:7: '\\\\' Digit
 				{
-				DebugLocation(274, 7);
+				DebugLocation(271, 7);
 				Match('\\'); 
-				DebugLocation(274, 12);
+				DebugLocation(271, 12);
 				mDigit(); 
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:275:7: '\\\\' Digit Digit
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:272:7: '\\\\' Digit Digit
 				{
-				DebugLocation(275, 7);
+				DebugLocation(272, 7);
 				Match('\\'); 
-				DebugLocation(275, 12);
+				DebugLocation(272, 12);
 				mDigit(); 
-				DebugLocation(275, 18);
+				DebugLocation(272, 18);
 				mDigit(); 
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:276:7: '\\\\' '0' .. '2' Digit Digit
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:273:7: '\\\\' '0' .. '2' Digit Digit
 				{
-				DebugLocation(276, 7);
+				DebugLocation(273, 7);
 				Match('\\'); 
-				DebugLocation(276, 15);
+				DebugLocation(273, 15);
 				MatchRange('0','2'); 
-				DebugLocation(276, 21);
+				DebugLocation(273, 21);
 				mDigit(); 
-				DebugLocation(276, 27);
+				DebugLocation(273, 27);
 				mDigit(); 
 
 				}
@@ -5057,8 +4948,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("DecimalEscape", 64);
-			LeaveRule("DecimalEscape", 64);
+			TraceOut("DecimalEscape", 61);
+			LeaveRule("DecimalEscape", 61);
 			LeaveRule_DecimalEscape();
 		}
 	}
@@ -5072,21 +4963,21 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mHexEscape()
 	{
 		EnterRule_HexEscape();
-		EnterRule("HexEscape", 65);
-		TraceIn("HexEscape", 65);
+		EnterRule("HexEscape", 62);
+		TraceIn("HexEscape", 62);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:281:5: ( '\\\\' 'x' HexDigit HexDigit )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:278:5: ( '\\\\' 'x' HexDigit HexDigit )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:281:7: '\\\\' 'x' HexDigit HexDigit
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:278:7: '\\\\' 'x' HexDigit HexDigit
 			{
-			DebugLocation(281, 7);
+			DebugLocation(278, 7);
 			Match('\\'); 
-			DebugLocation(281, 12);
+			DebugLocation(278, 12);
 			Match('x'); 
-			DebugLocation(281, 16);
+			DebugLocation(278, 16);
 			mHexDigit(); 
-			DebugLocation(281, 25);
+			DebugLocation(278, 25);
 			mHexDigit(); 
 
 			}
@@ -5094,8 +4985,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("HexEscape", 65);
-			LeaveRule("HexEscape", 65);
+			TraceOut("HexEscape", 62);
+			LeaveRule("HexEscape", 62);
 			LeaveRule_HexEscape();
 		}
 	}
@@ -5109,15 +5000,15 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mDigit()
 	{
 		EnterRule_Digit();
-		EnterRule("Digit", 66);
-		TraceIn("Digit", 66);
+		EnterRule("Digit", 63);
+		TraceIn("Digit", 63);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:286:5: ( '0' .. '9' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:283:5: ( '0' .. '9' )
 			DebugEnterAlt(1);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 			{
-			DebugLocation(286, 5);
+			DebugLocation(283, 5);
 			if ((input.LA(1)>='0' && input.LA(1)<='9'))
 			{
 				input.Consume();
@@ -5136,8 +5027,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("Digit", 66);
-			LeaveRule("Digit", 66);
+			TraceOut("Digit", 63);
+			LeaveRule("Digit", 63);
 			LeaveRule_Digit();
 		}
 	}
@@ -5151,15 +5042,15 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mHexDigit()
 	{
 		EnterRule_HexDigit();
-		EnterRule("HexDigit", 67);
-		TraceIn("HexDigit", 67);
+		EnterRule("HexDigit", 64);
+		TraceIn("HexDigit", 64);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:291:5: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:288:5: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
 			DebugEnterAlt(1);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 			{
-			DebugLocation(291, 5);
+			DebugLocation(288, 5);
 			if ((input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f'))
 			{
 				input.Consume();
@@ -5178,8 +5069,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("HexDigit", 67);
-			LeaveRule("HexDigit", 67);
+			TraceOut("HexDigit", 64);
+			LeaveRule("HexDigit", 64);
 			LeaveRule_HexDigit();
 		}
 	}
@@ -5193,21 +5084,21 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mCOMMENT()
 	{
 		EnterRule_COMMENT();
-		EnterRule("COMMENT", 68);
-		TraceIn("COMMENT", 68);
+		EnterRule("COMMENT", 65);
+		TraceIn("COMMENT", 65);
 		try
 		{
 			int _type = COMMENT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:294:5: ( '--' ( '[[' ( options {greedy=false; } : . )* ']]' | '[=[' ( options {greedy=false; } : . )* ']=]' | '[==[' ( options {greedy=false; } : . )* ']==]' | '[===[' ( options {greedy=false; } : . )* ']===]' | '[====[' ( options {greedy=false; } : . )* ']====]' | '[=====[' ( options {greedy=false; } : . )* ']=====]' | '[======[' ( options {greedy=false; } : . )* ']======]' | '[=======[' ( options {greedy=false; } : . )* ']=======]' | '[========[' ( options {greedy=false; } : . )* ']========]' | '[=========[' ( options {greedy=false; } : . )* ']=========]' | '[==========[' ( options {greedy=false; } : . )* ']==========]' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:291:5: ( '--' ( '[[' ( options {greedy=false; } : . )* ']]' | '[=[' ( options {greedy=false; } : . )* ']=]' | '[==[' ( options {greedy=false; } : . )* ']==]' | '[===[' ( options {greedy=false; } : . )* ']===]' | '[====[' ( options {greedy=false; } : . )* ']====]' | '[=====[' ( options {greedy=false; } : . )* ']=====]' | '[======[' ( options {greedy=false; } : . )* ']======]' | '[=======[' ( options {greedy=false; } : . )* ']=======]' | '[========[' ( options {greedy=false; } : . )* ']========]' | '[=========[' ( options {greedy=false; } : . )* ']=========]' | '[==========[' ( options {greedy=false; } : . )* ']==========]' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:294:7: '--' ( '[[' ( options {greedy=false; } : . )* ']]' | '[=[' ( options {greedy=false; } : . )* ']=]' | '[==[' ( options {greedy=false; } : . )* ']==]' | '[===[' ( options {greedy=false; } : . )* ']===]' | '[====[' ( options {greedy=false; } : . )* ']====]' | '[=====[' ( options {greedy=false; } : . )* ']=====]' | '[======[' ( options {greedy=false; } : . )* ']======]' | '[=======[' ( options {greedy=false; } : . )* ']=======]' | '[========[' ( options {greedy=false; } : . )* ']========]' | '[=========[' ( options {greedy=false; } : . )* ']=========]' | '[==========[' ( options {greedy=false; } : . )* ']==========]' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:291:7: '--' ( '[[' ( options {greedy=false; } : . )* ']]' | '[=[' ( options {greedy=false; } : . )* ']=]' | '[==[' ( options {greedy=false; } : . )* ']==]' | '[===[' ( options {greedy=false; } : . )* ']===]' | '[====[' ( options {greedy=false; } : . )* ']====]' | '[=====[' ( options {greedy=false; } : . )* ']=====]' | '[======[' ( options {greedy=false; } : . )* ']======]' | '[=======[' ( options {greedy=false; } : . )* ']=======]' | '[========[' ( options {greedy=false; } : . )* ']========]' | '[=========[' ( options {greedy=false; } : . )* ']=========]' | '[==========[' ( options {greedy=false; } : . )* ']==========]' )
 			{
-			DebugLocation(294, 7);
+			DebugLocation(291, 7);
 			Match("--"); 
 
-			DebugLocation(295, 2);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:295:2: ( '[[' ( options {greedy=false; } : . )* ']]' | '[=[' ( options {greedy=false; } : . )* ']=]' | '[==[' ( options {greedy=false; } : . )* ']==]' | '[===[' ( options {greedy=false; } : . )* ']===]' | '[====[' ( options {greedy=false; } : . )* ']====]' | '[=====[' ( options {greedy=false; } : . )* ']=====]' | '[======[' ( options {greedy=false; } : . )* ']======]' | '[=======[' ( options {greedy=false; } : . )* ']=======]' | '[========[' ( options {greedy=false; } : . )* ']========]' | '[=========[' ( options {greedy=false; } : . )* ']=========]' | '[==========[' ( options {greedy=false; } : . )* ']==========]' )
+			DebugLocation(292, 2);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:292:2: ( '[[' ( options {greedy=false; } : . )* ']]' | '[=[' ( options {greedy=false; } : . )* ']=]' | '[==[' ( options {greedy=false; } : . )* ']==]' | '[===[' ( options {greedy=false; } : . )* ']===]' | '[====[' ( options {greedy=false; } : . )* ']====]' | '[=====[' ( options {greedy=false; } : . )* ']=====]' | '[======[' ( options {greedy=false; } : . )* ']======]' | '[=======[' ( options {greedy=false; } : . )* ']=======]' | '[========[' ( options {greedy=false; } : . )* ']========]' | '[=========[' ( options {greedy=false; } : . )* ']=========]' | '[==========[' ( options {greedy=false; } : . )* ']==========]' )
 			int alt50=11;
 			try { DebugEnterSubRule(50);
 			try { DebugEnterDecision(50, false);
@@ -5378,13 +5269,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:295:4: '[[' ( options {greedy=false; } : . )* ']]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:292:4: '[[' ( options {greedy=false; } : . )* ']]'
 				{
-				DebugLocation(295, 4);
+				DebugLocation(292, 4);
 				Match("[["); 
 
-				DebugLocation(295, 9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:295:9: ( options {greedy=false; } : . )*
+				DebugLocation(292, 9);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:292:9: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(39);
 				while (true)
 				{
@@ -5418,9 +5309,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:295:37: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:292:37: .
 						{
-						DebugLocation(295, 37);
+						DebugLocation(292, 37);
 						MatchAny(); 
 
 						}
@@ -5436,7 +5327,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(39); }
 
-				DebugLocation(295, 42);
+				DebugLocation(292, 42);
 				Match("]]"); 
 
 
@@ -5444,13 +5335,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:296:7: '[=[' ( options {greedy=false; } : . )* ']=]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:293:7: '[=[' ( options {greedy=false; } : . )* ']=]'
 				{
-				DebugLocation(296, 7);
+				DebugLocation(293, 7);
 				Match("[=["); 
 
-				DebugLocation(296, 13);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:296:13: ( options {greedy=false; } : . )*
+				DebugLocation(293, 13);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:293:13: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(40);
 				while (true)
 				{
@@ -5495,9 +5386,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:296:41: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:293:41: .
 						{
-						DebugLocation(296, 41);
+						DebugLocation(293, 41);
 						MatchAny(); 
 
 						}
@@ -5513,7 +5404,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(40); }
 
-				DebugLocation(296, 46);
+				DebugLocation(293, 46);
 				Match("]=]"); 
 
 
@@ -5521,13 +5412,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:297:7: '[==[' ( options {greedy=false; } : . )* ']==]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:294:7: '[==[' ( options {greedy=false; } : . )* ']==]'
 				{
-				DebugLocation(297, 7);
+				DebugLocation(294, 7);
 				Match("[==["); 
 
-				DebugLocation(297, 14);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:297:14: ( options {greedy=false; } : . )*
+				DebugLocation(294, 14);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:294:14: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(41);
 				while (true)
 				{
@@ -5583,9 +5474,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:297:42: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:294:42: .
 						{
-						DebugLocation(297, 42);
+						DebugLocation(294, 42);
 						MatchAny(); 
 
 						}
@@ -5601,7 +5492,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(41); }
 
-				DebugLocation(297, 47);
+				DebugLocation(294, 47);
 				Match("]==]"); 
 
 
@@ -5609,13 +5500,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:298:7: '[===[' ( options {greedy=false; } : . )* ']===]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:295:7: '[===[' ( options {greedy=false; } : . )* ']===]'
 				{
-				DebugLocation(298, 7);
+				DebugLocation(295, 7);
 				Match("[===["); 
 
-				DebugLocation(298, 15);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:298:15: ( options {greedy=false; } : . )*
+				DebugLocation(295, 15);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:295:15: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(42);
 				while (true)
 				{
@@ -5682,9 +5573,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:298:43: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:295:43: .
 						{
-						DebugLocation(298, 43);
+						DebugLocation(295, 43);
 						MatchAny(); 
 
 						}
@@ -5700,7 +5591,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(42); }
 
-				DebugLocation(298, 48);
+				DebugLocation(295, 48);
 				Match("]===]"); 
 
 
@@ -5708,13 +5599,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:299:7: '[====[' ( options {greedy=false; } : . )* ']====]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:296:7: '[====[' ( options {greedy=false; } : . )* ']====]'
 				{
-				DebugLocation(299, 7);
+				DebugLocation(296, 7);
 				Match("[====["); 
 
-				DebugLocation(299, 16);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:299:16: ( options {greedy=false; } : . )*
+				DebugLocation(296, 16);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:296:16: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(43);
 				while (true)
 				{
@@ -5792,9 +5683,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:299:44: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:296:44: .
 						{
-						DebugLocation(299, 44);
+						DebugLocation(296, 44);
 						MatchAny(); 
 
 						}
@@ -5810,7 +5701,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(43); }
 
-				DebugLocation(299, 49);
+				DebugLocation(296, 49);
 				Match("]====]"); 
 
 
@@ -5818,13 +5709,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:300:7: '[=====[' ( options {greedy=false; } : . )* ']=====]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:297:7: '[=====[' ( options {greedy=false; } : . )* ']=====]'
 				{
-				DebugLocation(300, 7);
+				DebugLocation(297, 7);
 				Match("[=====["); 
 
-				DebugLocation(300, 17);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:300:17: ( options {greedy=false; } : . )*
+				DebugLocation(297, 17);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:297:17: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(44);
 				while (true)
 				{
@@ -5913,9 +5804,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:300:45: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:297:45: .
 						{
-						DebugLocation(300, 45);
+						DebugLocation(297, 45);
 						MatchAny(); 
 
 						}
@@ -5931,7 +5822,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(44); }
 
-				DebugLocation(300, 50);
+				DebugLocation(297, 50);
 				Match("]=====]"); 
 
 
@@ -5939,13 +5830,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:301:7: '[======[' ( options {greedy=false; } : . )* ']======]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:298:7: '[======[' ( options {greedy=false; } : . )* ']======]'
 				{
-				DebugLocation(301, 7);
+				DebugLocation(298, 7);
 				Match("[======["); 
 
-				DebugLocation(301, 18);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:301:18: ( options {greedy=false; } : . )*
+				DebugLocation(298, 18);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:298:18: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(45);
 				while (true)
 				{
@@ -6045,9 +5936,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:301:46: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:298:46: .
 						{
-						DebugLocation(301, 46);
+						DebugLocation(298, 46);
 						MatchAny(); 
 
 						}
@@ -6063,7 +5954,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(45); }
 
-				DebugLocation(301, 51);
+				DebugLocation(298, 51);
 				Match("]======]"); 
 
 
@@ -6071,13 +5962,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:302:7: '[=======[' ( options {greedy=false; } : . )* ']=======]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:299:7: '[=======[' ( options {greedy=false; } : . )* ']=======]'
 				{
-				DebugLocation(302, 7);
+				DebugLocation(299, 7);
 				Match("[=======["); 
 
-				DebugLocation(302, 19);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:302:19: ( options {greedy=false; } : . )*
+				DebugLocation(299, 19);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:299:19: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(46);
 				while (true)
 				{
@@ -6188,9 +6079,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:302:47: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:299:47: .
 						{
-						DebugLocation(302, 47);
+						DebugLocation(299, 47);
 						MatchAny(); 
 
 						}
@@ -6206,7 +6097,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(46); }
 
-				DebugLocation(302, 52);
+				DebugLocation(299, 52);
 				Match("]=======]"); 
 
 
@@ -6214,13 +6105,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 9:
 				DebugEnterAlt(9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:303:7: '[========[' ( options {greedy=false; } : . )* ']========]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:300:7: '[========[' ( options {greedy=false; } : . )* ']========]'
 				{
-				DebugLocation(303, 7);
+				DebugLocation(300, 7);
 				Match("[========["); 
 
-				DebugLocation(303, 20);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:303:20: ( options {greedy=false; } : . )*
+				DebugLocation(300, 20);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:300:20: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(47);
 				while (true)
 				{
@@ -6342,9 +6233,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:303:48: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:300:48: .
 						{
-						DebugLocation(303, 48);
+						DebugLocation(300, 48);
 						MatchAny(); 
 
 						}
@@ -6360,7 +6251,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(47); }
 
-				DebugLocation(303, 53);
+				DebugLocation(300, 53);
 				Match("]========]"); 
 
 
@@ -6368,13 +6259,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 10:
 				DebugEnterAlt(10);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:304:7: '[=========[' ( options {greedy=false; } : . )* ']=========]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:301:7: '[=========[' ( options {greedy=false; } : . )* ']=========]'
 				{
-				DebugLocation(304, 7);
+				DebugLocation(301, 7);
 				Match("[=========["); 
 
-				DebugLocation(304, 21);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:304:21: ( options {greedy=false; } : . )*
+				DebugLocation(301, 21);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:301:21: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(48);
 				while (true)
 				{
@@ -6507,9 +6398,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:304:49: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:301:49: .
 						{
-						DebugLocation(304, 49);
+						DebugLocation(301, 49);
 						MatchAny(); 
 
 						}
@@ -6525,7 +6416,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(48); }
 
-				DebugLocation(304, 54);
+				DebugLocation(301, 54);
 				Match("]=========]"); 
 
 
@@ -6533,13 +6424,13 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 				break;
 			case 11:
 				DebugEnterAlt(11);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:305:7: '[==========[' ( options {greedy=false; } : . )* ']==========]'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:302:7: '[==========[' ( options {greedy=false; } : . )* ']==========]'
 				{
-				DebugLocation(305, 7);
+				DebugLocation(302, 7);
 				Match("[==========["); 
 
-				DebugLocation(305, 22);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:305:22: ( options {greedy=false; } : . )*
+				DebugLocation(302, 22);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:302:22: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(49);
 				while (true)
 				{
@@ -6683,9 +6574,9 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:305:50: .
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:302:50: .
 						{
-						DebugLocation(305, 50);
+						DebugLocation(302, 50);
 						MatchAny(); 
 
 						}
@@ -6701,7 +6592,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(49); }
 
-				DebugLocation(305, 55);
+				DebugLocation(302, 55);
 				Match("]==========]"); 
 
 
@@ -6711,7 +6602,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(50); }
 
-			DebugLocation(306, 2);
+			DebugLocation(303, 2);
 			_channel=Hidden;
 
 			}
@@ -6721,8 +6612,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("COMMENT", 68);
-			LeaveRule("COMMENT", 68);
+			TraceOut("COMMENT", 65);
+			LeaveRule("COMMENT", 65);
 			LeaveRule_COMMENT();
 		}
 	}
@@ -6736,59 +6627,308 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mLINE_COMMENT()
 	{
 		EnterRule_LINE_COMMENT();
-		EnterRule("LINE_COMMENT", 69);
-		TraceIn("LINE_COMMENT", 69);
+		EnterRule("LINE_COMMENT", 66);
+		TraceIn("LINE_COMMENT", 66);
 		try
 		{
 			int _type = LINE_COMMENT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:310:2: ( '--' (~ ( '\\n' | '\\r' ) )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:307:2: ( '--' (| '[' ( '=' )* | '[' ( '=' )* ~ ( '=' | '[' | '\\r' | '\\n' ) (~ ( '\\r' | '\\n' ) )* |~ ( '[' | '\\r' | '\\n' ) (~ ( '\\r' | '\\n' ) )* ) ( '\\r\\n' | '\\r' | '\\n' | EOF ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:310:4: '--' (~ ( '\\n' | '\\r' ) )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:307:4: '--' (| '[' ( '=' )* | '[' ( '=' )* ~ ( '=' | '[' | '\\r' | '\\n' ) (~ ( '\\r' | '\\n' ) )* |~ ( '[' | '\\r' | '\\n' ) (~ ( '\\r' | '\\n' ) )* ) ( '\\r\\n' | '\\r' | '\\n' | EOF )
 			{
-			DebugLocation(310, 4);
+			DebugLocation(307, 4);
 			Match("--"); 
 
-			DebugLocation(310, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:310:9: (~ ( '\\n' | '\\r' ) )*
-			try { DebugEnterSubRule(51);
-			while (true)
+			DebugLocation(308, 2);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:308:2: (| '[' ( '=' )* | '[' ( '=' )* ~ ( '=' | '[' | '\\r' | '\\n' ) (~ ( '\\r' | '\\n' ) )* |~ ( '[' | '\\r' | '\\n' ) (~ ( '\\r' | '\\n' ) )* )
+			int alt55=4;
+			try { DebugEnterSubRule(55);
+			try { DebugEnterDecision(55, false);
+			try
 			{
-				int alt51=2;
-				try { DebugEnterDecision(51, false);
-				int LA51_1 = input.LA(1);
-
-				if (((LA51_1>='\u0000' && LA51_1<='\t')||(LA51_1>='\u000B' && LA51_1<='\f')||(LA51_1>='\u000E' && LA51_1<='\uFFFF')))
+				alt55 = dfa55.Predict(input);
+			}
+			catch (NoViableAltException nvae)
+			{
+				DebugRecognitionException(nvae);
+				throw;
+			}
+			} finally { DebugExitDecision(55); }
+			switch (alt55)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:309:2: 
 				{
-					alt51 = 1;
 				}
-
-
-				} finally { DebugExitDecision(51); }
-				switch ( alt51 )
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:309:4: '[' ( '=' )*
 				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
+				DebugLocation(309, 4);
+				Match('['); 
+				DebugLocation(309, 8);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:309:8: ( '=' )*
+				try { DebugEnterSubRule(51);
+				while (true)
+				{
+					int alt51=2;
+					try { DebugEnterDecision(51, false);
+					int LA51_1 = input.LA(1);
+
+					if ((LA51_1=='='))
 					{
-					DebugLocation(310, 9);
-					input.Consume();
-
-
+						alt51 = 1;
 					}
-					break;
 
-				default:
-					goto loop51;
+
+					} finally { DebugExitDecision(51); }
+					switch ( alt51 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:309:8: '='
+						{
+						DebugLocation(309, 8);
+						Match('='); 
+
+						}
+						break;
+
+					default:
+						goto loop51;
+					}
 				}
+
+				loop51:
+					;
+
+				} finally { DebugExitSubRule(51); }
+
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:310:4: '[' ( '=' )* ~ ( '=' | '[' | '\\r' | '\\n' ) (~ ( '\\r' | '\\n' ) )*
+				{
+				DebugLocation(310, 4);
+				Match('['); 
+				DebugLocation(310, 8);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:310:8: ( '=' )*
+				try { DebugEnterSubRule(52);
+				while (true)
+				{
+					int alt52=2;
+					try { DebugEnterDecision(52, false);
+					int LA52_1 = input.LA(1);
+
+					if ((LA52_1=='='))
+					{
+						alt52 = 1;
+					}
+
+
+					} finally { DebugExitDecision(52); }
+					switch ( alt52 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:310:8: '='
+						{
+						DebugLocation(310, 8);
+						Match('='); 
+
+						}
+						break;
+
+					default:
+						goto loop52;
+					}
+				}
+
+				loop52:
+					;
+
+				} finally { DebugExitSubRule(52); }
+
+				DebugLocation(310, 13);
+				input.Consume();
+
+				DebugLocation(310, 34);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:310:34: (~ ( '\\r' | '\\n' ) )*
+				try { DebugEnterSubRule(53);
+				while (true)
+				{
+					int alt53=2;
+					try { DebugEnterDecision(53, false);
+					int LA53_1 = input.LA(1);
+
+					if (((LA53_1>='\u0000' && LA53_1<='\t')||(LA53_1>='\u000B' && LA53_1<='\f')||(LA53_1>='\u000E' && LA53_1<='\uFFFF')))
+					{
+						alt53 = 1;
+					}
+
+
+					} finally { DebugExitDecision(53); }
+					switch ( alt53 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
+						{
+						DebugLocation(310, 34);
+						input.Consume();
+
+
+						}
+						break;
+
+					default:
+						goto loop53;
+					}
+				}
+
+				loop53:
+					;
+
+				} finally { DebugExitSubRule(53); }
+
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:311:4: ~ ( '[' | '\\r' | '\\n' ) (~ ( '\\r' | '\\n' ) )*
+				{
+				DebugLocation(311, 4);
+				input.Consume();
+
+				DebugLocation(311, 21);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:311:21: (~ ( '\\r' | '\\n' ) )*
+				try { DebugEnterSubRule(54);
+				while (true)
+				{
+					int alt54=2;
+					try { DebugEnterDecision(54, false);
+					int LA54_1 = input.LA(1);
+
+					if (((LA54_1>='\u0000' && LA54_1<='\t')||(LA54_1>='\u000B' && LA54_1<='\f')||(LA54_1>='\u000E' && LA54_1<='\uFFFF')))
+					{
+						alt54 = 1;
+					}
+
+
+					} finally { DebugExitDecision(54); }
+					switch ( alt54 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
+						{
+						DebugLocation(311, 21);
+						input.Consume();
+
+
+						}
+						break;
+
+					default:
+						goto loop54;
+					}
+				}
+
+				loop54:
+					;
+
+				} finally { DebugExitSubRule(54); }
+
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(55); }
+
+			DebugLocation(312, 4);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:312:4: ( '\\r\\n' | '\\r' | '\\n' | EOF )
+			int alt56=4;
+			try { DebugEnterSubRule(56);
+			try { DebugEnterDecision(56, false);
+			switch (input.LA(1))
+			{
+			case '\r':
+				{
+				int LA56_2 = input.LA(2);
+
+				if ((LA56_2=='\n'))
+				{
+					alt56 = 1;
+				}
+				else
+				{
+					alt56 = 2;
+				}
+				}
+				break;
+			case '\n':
+				{
+				alt56 = 3;
+				}
+				break;
+			default:
+				alt56=4;
+				break;
+
 			}
 
-			loop51:
-				;
+			} finally { DebugExitDecision(56); }
+			switch (alt56)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:312:5: '\\r\\n'
+				{
+				DebugLocation(312, 5);
+				Match("\r\n"); 
 
-			} finally { DebugExitSubRule(51); }
 
-			DebugLocation(310, 23);
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:312:12: '\\r'
+				{
+				DebugLocation(312, 12);
+				Match('\r'); 
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:312:17: '\\n'
+				{
+				DebugLocation(312, 17);
+				Match('\n'); 
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:312:22: EOF
+				{
+				DebugLocation(312, 22);
+				Match(EOF); 
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(56); }
+
+			DebugLocation(313, 2);
 			_channel=Hidden;
 
 			}
@@ -6798,8 +6938,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("LINE_COMMENT", 69);
-			LeaveRule("LINE_COMMENT", 69);
+			TraceOut("LINE_COMMENT", 66);
+			LeaveRule("LINE_COMMENT", 66);
 			LeaveRule_LINE_COMMENT();
 		}
 	}
@@ -6813,40 +6953,40 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mWS()
 	{
 		EnterRule_WS();
-		EnterRule("WS", 70);
-		TraceIn("WS", 70);
+		EnterRule("WS", 67);
+		TraceIn("WS", 67);
 		try
 		{
 			int _type = WS;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:314:5: ( ( ' ' | '\\t' | '\\u000C' )+ )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:317:5: ( ( ' ' | '\\t' | '\\r' | '\\n' | '\\u000C' )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:314:7: ( ' ' | '\\t' | '\\u000C' )+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:317:7: ( ' ' | '\\t' | '\\r' | '\\n' | '\\u000C' )+
 			{
-			DebugLocation(314, 7);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:314:7: ( ' ' | '\\t' | '\\u000C' )+
-			int cnt52=0;
-			try { DebugEnterSubRule(52);
+			DebugLocation(317, 7);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:317:7: ( ' ' | '\\t' | '\\r' | '\\n' | '\\u000C' )+
+			int cnt57=0;
+			try { DebugEnterSubRule(57);
 			while (true)
 			{
-				int alt52=2;
-				try { DebugEnterDecision(52, false);
-				int LA52_1 = input.LA(1);
+				int alt57=2;
+				try { DebugEnterDecision(57, false);
+				int LA57_1 = input.LA(1);
 
-				if ((LA52_1=='\t'||LA52_1=='\f'||LA52_1==' '))
+				if (((LA57_1>='\t' && LA57_1<='\n')||(LA57_1>='\f' && LA57_1<='\r')||LA57_1==' '))
 				{
-					alt52 = 1;
+					alt57 = 1;
 				}
 
 
-				} finally { DebugExitDecision(52); }
-				switch (alt52)
+				} finally { DebugExitDecision(57); }
+				switch (alt57)
 				{
 				case 1:
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 					{
-					DebugLocation(314, 7);
+					DebugLocation(317, 7);
 					input.Consume();
 
 
@@ -6854,21 +6994,21 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					break;
 
 				default:
-					if (cnt52 >= 1)
-						goto loop52;
+					if (cnt57 >= 1)
+						goto loop57;
 
-					EarlyExitException eee52 = new EarlyExitException( 52, input );
-					DebugRecognitionException(eee52);
-					throw eee52;
+					EarlyExitException eee57 = new EarlyExitException( 57, input );
+					DebugRecognitionException(eee57);
+					throw eee57;
 				}
-				cnt52++;
+				cnt57++;
 			}
-			loop52:
+			loop57:
 				;
 
-			} finally { DebugExitSubRule(52); }
+			} finally { DebugExitSubRule(57); }
 
-			DebugLocation(314, 28);
+			DebugLocation(317, 38);
 			_channel=Hidden;
 
 			}
@@ -6878,76 +7018,12 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("WS", 70);
-			LeaveRule("WS", 70);
+			TraceOut("WS", 67);
+			LeaveRule("WS", 67);
 			LeaveRule_WS();
 		}
 	}
 	// $ANTLR end "WS"
-
-	partial void EnterRule_NEWLINE();
-	partial void LeaveRule_NEWLINE();
-
-	// $ANTLR start "NEWLINE"
-	[GrammarRule("NEWLINE")]
-	private void mNEWLINE()
-	{
-		EnterRule_NEWLINE();
-		EnterRule("NEWLINE", 71);
-		TraceIn("NEWLINE", 71);
-		try
-		{
-			int _type = NEWLINE;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:318:5: ( ( '\\r' )? '\\n' )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:318:7: ( '\\r' )? '\\n'
-			{
-			DebugLocation(318, 7);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:318:7: ( '\\r' )?
-			int alt53=2;
-			try { DebugEnterSubRule(53);
-			try { DebugEnterDecision(53, false);
-			int LA53_1 = input.LA(1);
-
-			if ((LA53_1=='\r'))
-			{
-				alt53 = 1;
-			}
-			} finally { DebugExitDecision(53); }
-			switch (alt53)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:318:7: '\\r'
-				{
-				DebugLocation(318, 7);
-				Match('\r'); 
-
-				}
-				break;
-
-			}
-			} finally { DebugExitSubRule(53); }
-
-			DebugLocation(318, 13);
-			Match('\n'); 
-			DebugLocation(318, 18);
-			_channel=Hidden;
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("NEWLINE", 71);
-			LeaveRule("NEWLINE", 71);
-			LeaveRule_NEWLINE();
-		}
-	}
-	// $ANTLR end "NEWLINE"
 
 	partial void EnterRule_SHEBANG();
 	partial void LeaveRule_SHEBANG();
@@ -6957,43 +7033,43 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private void mSHEBANG()
 	{
 		EnterRule_SHEBANG();
-		EnterRule("SHEBANG", 72);
-		TraceIn("SHEBANG", 72);
+		EnterRule("SHEBANG", 68);
+		TraceIn("SHEBANG", 68);
 		try
 		{
 			int _type = SHEBANG;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:322:2: ( '#' '!' (~ ( '\\n' | '\\r' ) )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:321:2: ( '#' '!' (~ ( '\\n' | '\\r' ) )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:322:4: '#' '!' (~ ( '\\n' | '\\r' ) )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:321:4: '#' '!' (~ ( '\\n' | '\\r' ) )*
 			{
-			DebugLocation(322, 4);
+			DebugLocation(321, 4);
 			Match('#'); 
-			DebugLocation(322, 8);
+			DebugLocation(321, 8);
 			Match('!'); 
-			DebugLocation(322, 12);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:322:12: (~ ( '\\n' | '\\r' ) )*
-			try { DebugEnterSubRule(54);
+			DebugLocation(321, 12);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:321:12: (~ ( '\\n' | '\\r' ) )*
+			try { DebugEnterSubRule(58);
 			while (true)
 			{
-				int alt54=2;
-				try { DebugEnterDecision(54, false);
-				int LA54_1 = input.LA(1);
+				int alt58=2;
+				try { DebugEnterDecision(58, false);
+				int LA58_1 = input.LA(1);
 
-				if (((LA54_1>='\u0000' && LA54_1<='\t')||(LA54_1>='\u000B' && LA54_1<='\f')||(LA54_1>='\u000E' && LA54_1<='\uFFFF')))
+				if (((LA58_1>='\u0000' && LA58_1<='\t')||(LA58_1>='\u000B' && LA58_1<='\f')||(LA58_1>='\u000E' && LA58_1<='\uFFFF')))
 				{
-					alt54 = 1;
+					alt58 = 1;
 				}
 
 
-				} finally { DebugExitDecision(54); }
-				switch ( alt54 )
+				} finally { DebugExitDecision(58); }
+				switch ( alt58 )
 				{
 				case 1:
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:
 					{
-					DebugLocation(322, 12);
+					DebugLocation(321, 12);
 					input.Consume();
 
 
@@ -7001,16 +7077,16 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 					break;
 
 				default:
-					goto loop54;
+					goto loop58;
 				}
 			}
 
-			loop54:
+			loop58:
 				;
 
-			} finally { DebugExitSubRule(54); }
+			} finally { DebugExitSubRule(58); }
 
-			DebugLocation(322, 26);
+			DebugLocation(321, 26);
 			_channel=Hidden;
 
 			}
@@ -7020,8 +7096,8 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("SHEBANG", 72);
-			LeaveRule("SHEBANG", 72);
+			TraceOut("SHEBANG", 68);
+			LeaveRule("SHEBANG", 68);
 			LeaveRule_SHEBANG();
 		}
 	}
@@ -7029,602 +7105,566 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 
 	public override void mTokens()
 	{
-		// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:8: ( T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | NAME | NORMALSTRING | CHARSTRING | LONGSTRING | INT | HEX | FLOAT | HEX_FLOAT | COMMENT | LINE_COMMENT | WS | NEWLINE | SHEBANG )
-		int alt55=65;
-		try { DebugEnterDecision(55, false);
+		// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:8: ( T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | NAME | NORMALSTRING | CHARSTRING | LONGSTRING | INT | HEX | FLOAT | HEX_FLOAT | COMMENT | LINE_COMMENT | WS | SHEBANG )
+		int alt59=61;
+		try { DebugEnterDecision(59, false);
 		try
 		{
-			alt55 = dfa55.Predict(input);
+			alt59 = dfa59.Predict(input);
 		}
 		catch (NoViableAltException nvae)
 		{
 			DebugRecognitionException(nvae);
 			throw;
 		}
-		} finally { DebugExitDecision(55); }
-		switch (alt55)
+		} finally { DebugExitDecision(59); }
+		switch (alt59)
 		{
 		case 1:
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:10: T__24
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:10: T__23
 			{
 			DebugLocation(1, 10);
-			mT__24(); 
+			mT__23(); 
 
 			}
 			break;
 		case 2:
 			DebugEnterAlt(2);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:16: T__25
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:16: T__24
 			{
 			DebugLocation(1, 16);
-			mT__25(); 
+			mT__24(); 
 
 			}
 			break;
 		case 3:
 			DebugEnterAlt(3);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:22: T__26
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:22: T__25
 			{
 			DebugLocation(1, 22);
-			mT__26(); 
+			mT__25(); 
 
 			}
 			break;
 		case 4:
 			DebugEnterAlt(4);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:28: T__27
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:28: T__26
 			{
 			DebugLocation(1, 28);
-			mT__27(); 
+			mT__26(); 
 
 			}
 			break;
 		case 5:
 			DebugEnterAlt(5);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:34: T__28
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:34: T__27
 			{
 			DebugLocation(1, 34);
-			mT__28(); 
+			mT__27(); 
 
 			}
 			break;
 		case 6:
 			DebugEnterAlt(6);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:40: T__29
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:40: T__28
 			{
 			DebugLocation(1, 40);
-			mT__29(); 
+			mT__28(); 
 
 			}
 			break;
 		case 7:
 			DebugEnterAlt(7);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:46: T__30
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:46: T__29
 			{
 			DebugLocation(1, 46);
-			mT__30(); 
+			mT__29(); 
 
 			}
 			break;
 		case 8:
 			DebugEnterAlt(8);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:52: T__31
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:52: T__30
 			{
 			DebugLocation(1, 52);
-			mT__31(); 
+			mT__30(); 
 
 			}
 			break;
 		case 9:
 			DebugEnterAlt(9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:58: T__32
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:58: T__31
 			{
 			DebugLocation(1, 58);
-			mT__32(); 
+			mT__31(); 
 
 			}
 			break;
 		case 10:
 			DebugEnterAlt(10);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:64: T__33
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:64: T__32
 			{
 			DebugLocation(1, 64);
-			mT__33(); 
+			mT__32(); 
 
 			}
 			break;
 		case 11:
 			DebugEnterAlt(11);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:70: T__34
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:70: T__33
 			{
 			DebugLocation(1, 70);
-			mT__34(); 
+			mT__33(); 
 
 			}
 			break;
 		case 12:
 			DebugEnterAlt(12);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:76: T__35
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:76: T__34
 			{
 			DebugLocation(1, 76);
-			mT__35(); 
+			mT__34(); 
 
 			}
 			break;
 		case 13:
 			DebugEnterAlt(13);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:82: T__36
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:82: T__35
 			{
 			DebugLocation(1, 82);
-			mT__36(); 
+			mT__35(); 
 
 			}
 			break;
 		case 14:
 			DebugEnterAlt(14);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:88: T__37
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:88: T__36
 			{
 			DebugLocation(1, 88);
-			mT__37(); 
+			mT__36(); 
 
 			}
 			break;
 		case 15:
 			DebugEnterAlt(15);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:94: T__38
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:94: T__37
 			{
 			DebugLocation(1, 94);
-			mT__38(); 
+			mT__37(); 
 
 			}
 			break;
 		case 16:
 			DebugEnterAlt(16);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:100: T__39
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:100: T__38
 			{
 			DebugLocation(1, 100);
-			mT__39(); 
+			mT__38(); 
 
 			}
 			break;
 		case 17:
 			DebugEnterAlt(17);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:106: T__40
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:106: T__39
 			{
 			DebugLocation(1, 106);
-			mT__40(); 
+			mT__39(); 
 
 			}
 			break;
 		case 18:
 			DebugEnterAlt(18);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:112: T__41
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:112: T__40
 			{
 			DebugLocation(1, 112);
-			mT__41(); 
+			mT__40(); 
 
 			}
 			break;
 		case 19:
 			DebugEnterAlt(19);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:118: T__42
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:118: T__41
 			{
 			DebugLocation(1, 118);
-			mT__42(); 
+			mT__41(); 
 
 			}
 			break;
 		case 20:
 			DebugEnterAlt(20);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:124: T__43
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:124: T__42
 			{
 			DebugLocation(1, 124);
-			mT__43(); 
+			mT__42(); 
 
 			}
 			break;
 		case 21:
 			DebugEnterAlt(21);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:130: T__44
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:130: T__43
 			{
 			DebugLocation(1, 130);
-			mT__44(); 
+			mT__43(); 
 
 			}
 			break;
 		case 22:
 			DebugEnterAlt(22);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:136: T__45
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:136: T__44
 			{
 			DebugLocation(1, 136);
-			mT__45(); 
+			mT__44(); 
 
 			}
 			break;
 		case 23:
 			DebugEnterAlt(23);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:142: T__46
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:142: T__45
 			{
 			DebugLocation(1, 142);
-			mT__46(); 
+			mT__45(); 
 
 			}
 			break;
 		case 24:
 			DebugEnterAlt(24);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:148: T__47
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:148: T__46
 			{
 			DebugLocation(1, 148);
-			mT__47(); 
+			mT__46(); 
 
 			}
 			break;
 		case 25:
 			DebugEnterAlt(25);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:154: T__48
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:154: T__47
 			{
 			DebugLocation(1, 154);
-			mT__48(); 
+			mT__47(); 
 
 			}
 			break;
 		case 26:
 			DebugEnterAlt(26);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:160: T__49
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:160: T__48
 			{
 			DebugLocation(1, 160);
-			mT__49(); 
+			mT__48(); 
 
 			}
 			break;
 		case 27:
 			DebugEnterAlt(27);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:166: T__50
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:166: T__49
 			{
 			DebugLocation(1, 166);
-			mT__50(); 
+			mT__49(); 
 
 			}
 			break;
 		case 28:
 			DebugEnterAlt(28);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:172: T__51
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:172: T__50
 			{
 			DebugLocation(1, 172);
-			mT__51(); 
+			mT__50(); 
 
 			}
 			break;
 		case 29:
 			DebugEnterAlt(29);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:178: T__52
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:178: T__51
 			{
 			DebugLocation(1, 178);
-			mT__52(); 
+			mT__51(); 
 
 			}
 			break;
 		case 30:
 			DebugEnterAlt(30);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:184: T__53
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:184: T__52
 			{
 			DebugLocation(1, 184);
-			mT__53(); 
+			mT__52(); 
 
 			}
 			break;
 		case 31:
 			DebugEnterAlt(31);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:190: T__54
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:190: T__53
 			{
 			DebugLocation(1, 190);
-			mT__54(); 
+			mT__53(); 
 
 			}
 			break;
 		case 32:
 			DebugEnterAlt(32);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:196: T__55
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:196: T__54
 			{
 			DebugLocation(1, 196);
-			mT__55(); 
+			mT__54(); 
 
 			}
 			break;
 		case 33:
 			DebugEnterAlt(33);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:202: T__56
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:202: T__55
 			{
 			DebugLocation(1, 202);
-			mT__56(); 
+			mT__55(); 
 
 			}
 			break;
 		case 34:
 			DebugEnterAlt(34);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:208: T__57
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:208: T__56
 			{
 			DebugLocation(1, 208);
-			mT__57(); 
+			mT__56(); 
 
 			}
 			break;
 		case 35:
 			DebugEnterAlt(35);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:214: T__58
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:214: T__57
 			{
 			DebugLocation(1, 214);
-			mT__58(); 
+			mT__57(); 
 
 			}
 			break;
 		case 36:
 			DebugEnterAlt(36);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:220: T__59
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:220: T__58
 			{
 			DebugLocation(1, 220);
-			mT__59(); 
+			mT__58(); 
 
 			}
 			break;
 		case 37:
 			DebugEnterAlt(37);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:226: T__60
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:226: T__59
 			{
 			DebugLocation(1, 226);
-			mT__60(); 
+			mT__59(); 
 
 			}
 			break;
 		case 38:
 			DebugEnterAlt(38);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:232: T__61
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:232: T__60
 			{
 			DebugLocation(1, 232);
-			mT__61(); 
+			mT__60(); 
 
 			}
 			break;
 		case 39:
 			DebugEnterAlt(39);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:238: T__62
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:238: T__61
 			{
 			DebugLocation(1, 238);
-			mT__62(); 
+			mT__61(); 
 
 			}
 			break;
 		case 40:
 			DebugEnterAlt(40);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:244: T__63
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:244: T__62
 			{
 			DebugLocation(1, 244);
-			mT__63(); 
+			mT__62(); 
 
 			}
 			break;
 		case 41:
 			DebugEnterAlt(41);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:250: T__64
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:250: T__63
 			{
 			DebugLocation(1, 250);
-			mT__64(); 
+			mT__63(); 
 
 			}
 			break;
 		case 42:
 			DebugEnterAlt(42);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:256: T__65
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:256: T__64
 			{
 			DebugLocation(1, 256);
-			mT__65(); 
+			mT__64(); 
 
 			}
 			break;
 		case 43:
 			DebugEnterAlt(43);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:262: T__66
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:262: T__65
 			{
 			DebugLocation(1, 262);
-			mT__66(); 
+			mT__65(); 
 
 			}
 			break;
 		case 44:
 			DebugEnterAlt(44);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:268: T__67
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:268: T__66
 			{
 			DebugLocation(1, 268);
-			mT__67(); 
+			mT__66(); 
 
 			}
 			break;
 		case 45:
 			DebugEnterAlt(45);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:274: T__68
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:274: T__67
 			{
 			DebugLocation(1, 274);
-			mT__68(); 
+			mT__67(); 
 
 			}
 			break;
 		case 46:
 			DebugEnterAlt(46);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:280: T__69
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:280: T__68
 			{
 			DebugLocation(1, 280);
-			mT__69(); 
+			mT__68(); 
 
 			}
 			break;
 		case 47:
 			DebugEnterAlt(47);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:286: T__70
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:286: T__69
 			{
 			DebugLocation(1, 286);
-			mT__70(); 
+			mT__69(); 
 
 			}
 			break;
 		case 48:
 			DebugEnterAlt(48);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:292: T__71
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:292: T__70
 			{
 			DebugLocation(1, 292);
-			mT__71(); 
+			mT__70(); 
 
 			}
 			break;
 		case 49:
 			DebugEnterAlt(49);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:298: T__72
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:298: T__71
 			{
 			DebugLocation(1, 298);
-			mT__72(); 
+			mT__71(); 
 
 			}
 			break;
 		case 50:
 			DebugEnterAlt(50);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:304: T__73
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:304: NAME
 			{
 			DebugLocation(1, 304);
-			mT__73(); 
+			mNAME(); 
 
 			}
 			break;
 		case 51:
 			DebugEnterAlt(51);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:310: T__74
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:309: NORMALSTRING
 			{
-			DebugLocation(1, 310);
-			mT__74(); 
+			DebugLocation(1, 309);
+			mNORMALSTRING(); 
 
 			}
 			break;
 		case 52:
 			DebugEnterAlt(52);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:316: T__75
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:322: CHARSTRING
 			{
-			DebugLocation(1, 316);
-			mT__75(); 
+			DebugLocation(1, 322);
+			mCHARSTRING(); 
 
 			}
 			break;
 		case 53:
 			DebugEnterAlt(53);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:322: NAME
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:333: LONGSTRING
 			{
-			DebugLocation(1, 322);
-			mNAME(); 
+			DebugLocation(1, 333);
+			mLONGSTRING(); 
 
 			}
 			break;
 		case 54:
 			DebugEnterAlt(54);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:327: NORMALSTRING
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:344: INT
 			{
-			DebugLocation(1, 327);
-			mNORMALSTRING(); 
+			DebugLocation(1, 344);
+			mINT(); 
 
 			}
 			break;
 		case 55:
 			DebugEnterAlt(55);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:340: CHARSTRING
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:348: HEX
 			{
-			DebugLocation(1, 340);
-			mCHARSTRING(); 
+			DebugLocation(1, 348);
+			mHEX(); 
 
 			}
 			break;
 		case 56:
 			DebugEnterAlt(56);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:351: LONGSTRING
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:352: FLOAT
 			{
-			DebugLocation(1, 351);
-			mLONGSTRING(); 
+			DebugLocation(1, 352);
+			mFLOAT(); 
 
 			}
 			break;
 		case 57:
 			DebugEnterAlt(57);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:362: INT
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:358: HEX_FLOAT
 			{
-			DebugLocation(1, 362);
-			mINT(); 
+			DebugLocation(1, 358);
+			mHEX_FLOAT(); 
 
 			}
 			break;
 		case 58:
 			DebugEnterAlt(58);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:366: HEX
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:368: COMMENT
 			{
-			DebugLocation(1, 366);
-			mHEX(); 
+			DebugLocation(1, 368);
+			mCOMMENT(); 
 
 			}
 			break;
 		case 59:
 			DebugEnterAlt(59);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:370: FLOAT
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:376: LINE_COMMENT
 			{
-			DebugLocation(1, 370);
-			mFLOAT(); 
+			DebugLocation(1, 376);
+			mLINE_COMMENT(); 
 
 			}
 			break;
 		case 60:
 			DebugEnterAlt(60);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:376: HEX_FLOAT
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:389: WS
 			{
-			DebugLocation(1, 376);
-			mHEX_FLOAT(); 
+			DebugLocation(1, 389);
+			mWS(); 
 
 			}
 			break;
 		case 61:
 			DebugEnterAlt(61);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:386: COMMENT
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:392: SHEBANG
 			{
-			DebugLocation(1, 386);
-			mCOMMENT(); 
-
-			}
-			break;
-		case 62:
-			DebugEnterAlt(62);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:394: LINE_COMMENT
-			{
-			DebugLocation(1, 394);
-			mLINE_COMMENT(); 
-
-			}
-			break;
-		case 63:
-			DebugEnterAlt(63);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:407: WS
-			{
-			DebugLocation(1, 407);
-			mWS(); 
-
-			}
-			break;
-		case 64:
-			DebugEnterAlt(64);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:410: NEWLINE
-			{
-			DebugLocation(1, 410);
-			mNEWLINE(); 
-
-			}
-			break;
-		case 65:
-			DebugEnterAlt(65);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\Lua\\Lua.g:1:418: SHEBANG
-			{
-			DebugLocation(1, 418);
+			DebugLocation(1, 392);
 			mSHEBANG(); 
 
 			}
@@ -7639,6 +7679,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	DFA24 dfa24;
 	DFA31 dfa31;
 	DFA55 dfa55;
+	DFA59 dfa59;
 
 	protected override void InitDFAs()
 	{
@@ -7646,6 +7687,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		dfa24 = new DFA24(this);
 		dfa31 = new DFA31(this);
 		dfa55 = new DFA55(this, SpecialStateTransition55);
+		dfa59 = new DFA59(this);
 	}
 
 	private class DFA24 : DFA
@@ -7702,7 +7744,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			this.transition = DFA24_transition;
 		}
 
-		public override string Description { get { return "241:1: FLOAT : ( ( Digit )+ '.' ( Digit )* ( ExponentPart )? | '.' ( Digit )+ ( ExponentPart )? | ( Digit )+ ExponentPart );"; } }
+		public override string Description { get { return "238:1: FLOAT : ( ( Digit )+ '.' ( Digit )* ( ExponentPart )? | '.' ( Digit )+ ( ExponentPart )? | ( Digit )+ ExponentPart );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -7767,7 +7809,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			this.transition = DFA31_transition;
 		}
 
-		public override string Description { get { return "247:1: HEX_FLOAT : ( '0' ( 'x' | 'X' ) ( HexDigit )+ '.' ( HexDigit )* ( HexExponentPart )? | '0' ( 'x' | 'X' ) '.' ( HexDigit )+ ( HexExponentPart )? | '0' ( 'x' | 'X' ) ( HexDigit )+ HexExponentPart );"; } }
+		public override string Description { get { return "244:1: HEX_FLOAT : ( '0' ( 'x' | 'X' ) ( HexDigit )+ '.' ( HexDigit )* ( HexExponentPart )? | '0' ( 'x' | 'X' ) '.' ( HexDigit )+ ( HexExponentPart )? | '0' ( 'x' | 'X' ) ( HexDigit )+ HexExponentPart );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -7778,382 +7820,26 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 	private class DFA55 : DFA
 	{
 		private const string DFA55_eotS =
-			"\x2\xFFFF\x1\x2E\x6\xFFFF\x1\x30\x1\x32\x1\xFFFF\x1\x35\x1\xFFFF\x1\x37"+
-			"\x1\x39\x1\x3B\x1\x3D\x1\xFFFF\x1\x3F\x2\xFFFF\xE\x27\x6\xFFFF\x2\x56"+
-			"\x3\xFFFF\x1\x58\x1\xFFFF\x1\x5A\xF\xFFFF\x2\x27\x1\x5D\x6\x27\x1\x64"+
-			"\x1\x65\x3\x27\x1\x69\x5\x27\x2\xFFFF\x1\x58\x3\xFFFF\x1\x74\x1\x27\x1"+
-			"\xFFFF\x1\x27\x1\x77\x1\x27\x1\x79\x2\x27\x2\xFFFF\x1\x27\x1\x7D\x1\x7E"+
-			"\x1\xFFFF\x6\x27\x1\xFFFF\x1\x85\x2\x58\x1\xFFFF\x1\x27\x1\x8D\x1\xFFFF"+
-			"\x1\x27\x1\xFFFF\x1\x27\x1\x90\x1\x27\x2\xFFFF\x2\x27\x1\x94\x1\x95\x2"+
-			"\x27\x1\xFFFF\x2\x58\x1\xFFFF\x2\x58\x1\x9E\x1\x27\x1\xFFFF\x1\xA0\x1"+
-			"\x27\x1\xFFFF\x1\xA2\x2\x27\x2\xFFFF\x1\xA5\x1\xA6\x1\x88\x5\x58\x1\xFFFF"+
-			"\x1\xAD\x1\xFFFF\x1\x27\x1\xFFFF\x1\xAF\x1\xB0\x2\xFFFF\x6\x58\x1\xFFFF"+
-			"\x1\x27\x2\xFFFF\x1\x88\x6\x58\x1\xC0\x7\x58\x1\xFFFF\x1\x88\xF\x58\x1"+
-			"\x88\x11\x58\x1\x88\x10\x58\x1\x88\xB\x58\x1\x88\x8\x58\x1\x88\x6\x58"+
-			"\x1\x88\x4\x58\x1\x88\x2\x58\x1\x88";
+			"\x1\x1\x1\xFFFF\x1\x5\x1\xFFFF\x1\x5\x2\xFFFF";
 		private const string DFA55_eofS =
-			"\x119\xFFFF";
+			"\x7\xFFFF";
 		private const string DFA55_minS =
-			"\x1\x9\x1\xFFFF\x1\x21\x6\xFFFF\x1\x2D\x1\x2E\x1\xFFFF\x1\x3A\x1\xFFFF"+
-			"\x4\x3D\x1\xFFFF\x1\xA\x2\xFFFF\x1\x6E\x1\x72\x1\x6F\x1\x6C\x1\x61\x1"+
-			"\x6F\x1\x66\x1\x6F\x1\x69\x1\x72\x1\x65\x1\x68\x1\x6E\x1\x68\x6\xFFFF"+
-			"\x2\x2E\x3\xFFFF\x1\x5B\x1\xFFFF\x1\x2E\xF\xFFFF\x1\x64\x1\x65\x1\x30"+
-			"\x1\x73\x1\x64\x1\x6C\x1\x72\x1\x6E\x1\x74\x2\x30\x1\x63\x1\x6C\x1\x74"+
-			"\x1\x30\x1\x70\x1\x65\x1\x75\x1\x74\x1\x69\x1\x2E\x1\xFFFF\x1\x3D\x3"+
-			"\xFFFF\x1\x30\x1\x61\x1\xFFFF\x1\x65\x1\x30\x1\x73\x1\x30\x1\x63\x1\x6F"+
-			"\x2\xFFFF\x1\x61\x2\x30\x1\xFFFF\x1\x65\x1\x75\x1\x6E\x1\x65\x1\x69\x1"+
-			"\x6C\x1\xFFFF\x1\x2E\x1\x0\x1\x3D\x1\xFFFF\x1\x6B\x1\x30\x1\xFFFF\x1"+
-			"\x65\x1\xFFFF\x1\x74\x1\x30\x1\x6C\x2\xFFFF\x1\x61\x1\x72\x2\x30\x1\x6C"+
-			"\x1\x65\x1\xFFFF\x2\x0\x1\xFFFF\x1\x0\x1\x3D\x1\x30\x1\x66\x1\xFFFF\x1"+
-			"\x30\x1\x69\x1\xFFFF\x1\x30\x1\x74\x1\x6E\x2\xFFFF\x2\x30\x5\x0\x1\x3D"+
-			"\x1\xFFFF\x1\x30\x1\xFFFF\x1\x6F\x1\xFFFF\x2\x30\x2\xFFFF\x5\x0\x1\x3D"+
-			"\x1\xFFFF\x1\x6E\x2\xFFFF\x6\x0\x1\x3D\x1\x30\x6\x0\x1\x3D\x1\xFFFF\x7"+
-			"\x0\x1\x3D\x7\x0\x1\x3D\x8\x0\x1\x3D\x8\x0\x1\x5B\x36\x0";
+			"\x1\x0\x1\xFFFF\x1\x0\x1\xFFFF\x1\x0\x2\xFFFF";
 		private const string DFA55_maxS =
-			"\x1\x7E\x1\xFFFF\x1\x21\x6\xFFFF\x1\x2D\x1\x39\x1\xFFFF\x1\x3A\x1\xFFFF"+
-			"\x3\x3D\x1\x5B\x1\xFFFF\x1\xA\x2\xFFFF\x1\x6E\x1\x72\x1\x6F\x1\x6E\x1"+
-			"\x75\x1\x6F\x1\x6E\x2\x6F\x1\x72\x1\x65\x1\x72\x1\x6E\x1\x68\x6\xFFFF"+
-			"\x1\x78\x1\x65\x3\xFFFF\x1\x5B\x1\xFFFF\x1\x2E\xF\xFFFF\x1\x64\x1\x65"+
-			"\x1\x7A\x1\x73\x1\x64\x1\x6C\x1\x72\x1\x6E\x1\x74\x2\x7A\x1\x63\x1\x6C"+
-			"\x1\x74\x1\x7A\x1\x74\x1\x65\x1\x75\x1\x74\x1\x69\x1\x66\x1\xFFFF\x1"+
-			"\x5B\x3\xFFFF\x1\x7A\x1\x61\x1\xFFFF\x1\x65\x1\x7A\x1\x73\x1\x7A\x1\x63"+
-			"\x1\x6F\x2\xFFFF\x1\x61\x2\x7A\x1\xFFFF\x1\x65\x1\x75\x1\x6E\x1\x65\x1"+
-			"\x69\x1\x6C\x1\xFFFF\x1\x70\x1\xFFFF\x1\x5B\x1\xFFFF\x1\x6B\x1\x7A\x1"+
-			"\xFFFF\x1\x65\x1\xFFFF\x1\x74\x1\x7A\x1\x6C\x2\xFFFF\x1\x61\x1\x72\x2"+
-			"\x7A\x1\x6C\x1\x65\x1\xFFFF\x2\xFFFF\x1\xFFFF\x1\xFFFF\x1\x5B\x1\x7A"+
-			"\x1\x66\x1\xFFFF\x1\x7A\x1\x69\x1\xFFFF\x1\x7A\x1\x74\x1\x6E\x2\xFFFF"+
-			"\x2\x7A\x5\xFFFF\x1\x5B\x1\xFFFF\x1\x7A\x1\xFFFF\x1\x6F\x1\xFFFF\x2\x7A"+
-			"\x2\xFFFF\x5\xFFFF\x1\x5B\x1\xFFFF\x1\x6E\x2\xFFFF\x6\xFFFF\x1\x5B\x1"+
-			"\x7A\x6\xFFFF\x1\x5B\x1\xFFFF\x7\xFFFF\x1\x5B\x7\xFFFF\x1\x5B\x8\xFFFF"+
-			"\x1\x5B\x8\xFFFF\x1\x5B\x36\xFFFF";
+			"\x1\xFFFF\x1\xFFFF\x1\xFFFF\x1\xFFFF\x1\xFFFF\x2\xFFFF";
 		private const string DFA55_acceptS =
-			"\x1\xFFFF\x1\x1\x1\xFFFF\x1\x3\x1\x4\x1\x5\x1\x6\x1\x7\x1\x8\x2\xFFFF"+
-			"\x1\xD\x1\xFFFF\x1\x10\x4\xFFFF\x1\x18\x1\xFFFF\x1\x1A\x1\x1B\xE\xFFFF"+
-			"\x1\x32\x1\x33\x1\x34\x1\x35\x1\x36\x1\x37\x2\xFFFF\x1\x3F\x1\x41\x1"+
-			"\x2\x1\xFFFF\x1\x9\x1\xFFFF\x1\xA\x1\x3B\x1\xF\x1\xE\x1\x12\x1\x11\x1"+
-			"\x14\x1\x13\x1\x16\x1\x15\x1\x38\x1\x17\x1\x18\x1\x19\x1\x40\x15\xFFFF"+
-			"\x1\x39\x1\xFFFF\x1\x3E\x1\xC\x1\xB\x2\xFFFF\x1\x1E\x6\xFFFF\x1\x26\x1"+
-			"\x27\x3\xFFFF\x1\x2B\x6\xFFFF\x1\x3C\x3\xFFFF\x1\x1C\x2\xFFFF\x1\x21"+
-			"\x1\xFFFF\x1\x23\x3\xFFFF\x1\x29\x1\x2A\x6\xFFFF\x1\x3A\x2\xFFFF\x1\x3D"+
-			"\x4\xFFFF\x1\x1F\x2\xFFFF\x1\x25\x3\xFFFF\x1\x2E\x1\x2F\x8\xFFFF\x1\x1D"+
-			"\x1\xFFFF\x1\x22\x1\xFFFF\x1\x28\x2\xFFFF\x1\x30\x1\x31\x6\xFFFF\x1\x20"+
-			"\x1\xFFFF\x1\x2C\x1\x2D\xF\xFFFF\x1\x24\x58\xFFFF";
+			"\x1\xFFFF\x1\x1\x1\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\x3";
 		private const string DFA55_specialS =
-			"\x72\xFFFF\x1\x0\x13\xFFFF\x1\x1\x1\x2\x1\xFFFF\x1\x3\xE\xFFFF\x1\x4"+
-			"\x1\x5\x1\x6\x1\x7\x1\x8\xA\xFFFF\x1\x9\x1\xA\x1\xB\x1\xC\x1\xD\x5\xFFFF"+
-			"\x1\xE\x1\xF\x1\x10\x1\x11\x1\x12\x1\x13\x2\xFFFF\x1\x14\x1\x15\x1\x16"+
-			"\x1\x17\x1\x18\x1\x19\x2\xFFFF\x1\x1A\x1\x1B\x1\x1C\x1\x1D\x1\x1E\x1"+
-			"\x1F\x1\x20\x1\xFFFF\x1\x21\x1\x22\x1\x23\x1\x24\x1\x25\x1\x26\x1\x27"+
-			"\x1\xFFFF\x1\x28\x1\x29\x1\x2A\x1\x2B\x1\x2C\x1\x2D\x1\x2E\x1\x2F\x1"+
-			"\xFFFF\x1\x30\x1\x31\x1\x32\x1\x33\x1\x34\x1\x35\x1\x36\x1\x37\x1\xFFFF"+
-			"\x1\x38\x1\x39\x1\x3A\x1\x3B\x1\x3C\x1\x3D\x1\x3E\x1\x3F\x1\x40\x1\x41"+
-			"\x1\x42\x1\x43\x1\x44\x1\x45\x1\x46\x1\x47\x1\x48\x1\x49\x1\x4A\x1\x4B"+
-			"\x1\x4C\x1\x4D\x1\x4E\x1\x4F\x1\x50\x1\x51\x1\x52\x1\x53\x1\x54\x1\x55"+
-			"\x1\x56\x1\x57\x1\x58\x1\x59\x1\x5A\x1\x5B\x1\x5C\x1\x5D\x1\x5E\x1\x5F"+
-			"\x1\x60\x1\x61\x1\x62\x1\x63\x1\x64\x1\x65\x1\x66\x1\x67\x1\x68\x1\x69"+
-			"\x1\x6A\x1\x6B\x1\x6C\x1\x6D}>";
+			"\x1\x0\x1\xFFFF\x1\x1\x1\xFFFF\x1\x2\x2\xFFFF}>";
 		private static readonly string[] DFA55_transitionS =
 			{
-				"\x1\x2C\x1\x12\x1\xFFFF\x1\x2C\x1\x13\x12\xFFFF\x1\x2C\x1\x1\x1\x28"+
-				"\x1\x2\x1\xFFFF\x1\x3\x1\xFFFF\x1\x29\x1\x4\x1\x5\x1\x6\x1\x7\x1\x8"+
-				"\x1\x9\x1\xA\x1\xB\x1\x2A\x9\x2B\x1\xC\x1\xD\x1\xE\x1\xF\x1\x10\x2\xFFFF"+
-				"\x1A\x27\x1\x11\x1\xFFFF\x1\x14\x1\x15\x1\x27\x1\xFFFF\x1\x16\x1\x17"+
-				"\x1\x27\x1\x18\x1\x19\x1\x1A\x1\x1B\x1\x27\x1\x1C\x2\x27\x1\x1D\x1\x27"+
-				"\x1\x1E\x1\x1F\x2\x27\x1\x20\x1\x27\x1\x21\x1\x22\x1\x27\x1\x23\x3\x27"+
-				"\x1\x24\x1\xFFFF\x1\x25\x1\x26",
+				"\xA\x3\x1\xFFFF\x2\x3\x1\xFFFF\x4D\x3\x1\x2\xFFA4\x3",
 				"",
-				"\x1\x2D",
+				"\xA\x6\x1\xFFFF\x2\x6\x1\xFFFF\x2F\x6\x1\x4\x1D\x6\x1\xFFFF\xFFA4\x6",
 				"",
+				"\xA\x6\x1\xFFFF\x2\x6\x1\xFFFF\x2F\x6\x1\x4\x1D\x6\x1\xFFFF\xFFA4\x6",
 				"",
-				"",
-				"",
-				"",
-				"",
-				"\x1\x2F",
-				"\x1\x31\x1\xFFFF\xA\x33",
-				"",
-				"\x1\x34",
-				"",
-				"\x1\x36",
-				"\x1\x38",
-				"\x1\x3A",
-				"\x1\x3C\x1D\xFFFF\x1\x3C",
-				"",
-				"\x1\x40",
-				"",
-				"",
-				"\x1\x41",
-				"\x1\x42",
-				"\x1\x43",
-				"\x1\x44\x1\xFFFF\x1\x45",
-				"\x1\x46\xD\xFFFF\x1\x47\x5\xFFFF\x1\x48",
-				"\x1\x49",
-				"\x1\x4A\x7\xFFFF\x1\x4B",
-				"\x1\x4C",
-				"\x1\x4D\x5\xFFFF\x1\x4E",
-				"\x1\x4F",
-				"\x1\x50",
-				"\x1\x51\x9\xFFFF\x1\x52",
-				"\x1\x53",
-				"\x1\x54",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"\x1\x33\x1\xFFFF\xA\x2B\xB\xFFFF\x1\x33\x12\xFFFF\x1\x55\xC\xFFFF\x1"+
-				"\x33\x12\xFFFF\x1\x55",
-				"\x1\x33\x1\xFFFF\xA\x2B\xB\xFFFF\x1\x33\x1F\xFFFF\x1\x33",
-				"",
-				"",
-				"",
-				"\x1\x57",
-				"",
-				"\x1\x59",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"\x1\x5B",
-				"\x1\x5C",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\x1\x5E",
-				"\x1\x5F",
-				"\x1\x60",
-				"\x1\x61",
-				"\x1\x62",
-				"\x1\x63",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\x1\x66",
-				"\x1\x67",
-				"\x1\x68",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\x1\x6A\x3\xFFFF\x1\x6B",
-				"\x1\x6C",
-				"\x1\x6D",
-				"\x1\x6E",
-				"\x1\x6F",
-				"\x1\x70\x1\xFFFF\xA\x71\x7\xFFFF\x6\x71\x1A\xFFFF\x6\x71",
-				"",
-				"\x1\x73\x1D\xFFFF\x1\x72",
-				"",
-				"",
-				"",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\x1\x75",
-				"",
-				"\x1\x76",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\x1\x78",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\x1\x7A",
-				"\x1\x7B",
-				"",
-				"",
-				"\x1\x7C",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"",
-				"\x1\x7F",
-				"\x1\x80",
-				"\x1\x81",
-				"\x1\x82",
-				"\x1\x83",
-				"\x1\x84",
-				"",
-				"\x1\x70\x1\xFFFF\xA\x71\x7\xFFFF\x6\x71\x9\xFFFF\x1\x70\x10\xFFFF\x6"+
-				"\x71\x9\xFFFF\x1\x70",
-				"\xA\x87\x1\x88\x2\x87\x1\x88\x4F\x87\x1\x86\xFFA2\x87",
-				"\x1\x8A\x1D\xFFFF\x1\x89",
-				"",
-				"\x1\x8B",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x8\x27\x1\x8C\x11"+
-				"\x27",
-				"",
-				"\x1\x8E",
-				"",
-				"\x1\x8F",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\x1\x91",
-				"",
-				"",
-				"\x1\x92",
-				"\x1\x93",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\x1\x96",
-				"\x1\x97",
-				"",
-				"\xA\x87\x1\x88\x2\x87\x1\x88\x4F\x87\x1\x98\xFFA2\x87",
-				"\xA\x87\x1\x88\x2\x87\x1\x88\x4F\x87\x1\x99\xFFA2\x87",
-				"",
-				"\xA\x9B\x1\x88\x2\x9B\x1\x88\x4F\x9B\x1\x9A\xFFA2\x9B",
-				"\x1\x9D\x1D\xFFFF\x1\x9C",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\x1\x9F",
-				"",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\x1\xA1",
-				"",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\x1\xA3",
-				"\x1\xA4",
-				"",
-				"",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\xA\x87\x1\xFFFF\x2\x87\x1\xFFFF\x4F\x87\x1\x98\xFFA2\x87",
-				"\xA\x87\x1\x88\x2\x87\x1\x88\x4F\x87\x1\x98\xFFA2\x87",
-				"\xA\x9B\x1\x88\x2\x9B\x1\x88\x2F\x9B\x1\xA7\x1F\x9B\x1\xA8\xFFA2\x9B",
-				"\xA\x9B\x1\x88\x2\x9B\x1\x88\x4F\x9B\x1\xA8\xFFA2\x9B",
-				"\xA\xAA\x1\x88\x2\xAA\x1\x88\x4F\xAA\x1\xA9\xFFA2\xAA",
-				"\x1\xAC\x1D\xFFFF\x1\xAB",
-				"",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"",
-				"\x1\xAE",
-				"",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"",
-				"",
-				"\xA\x9B\x1\x88\x2\x9B\x1\x88\x4F\x9B\x1\xB1\xFFA2\x9B",
-				"\xA\x9B\x1\x88\x2\x9B\x1\x88\x2F\x9B\x1\xA7\x1F\x9B\x1\xA8\xFFA2\x9B",
-				"\xA\xAA\x1\x88\x2\xAA\x1\x88\x2F\xAA\x1\xB2\x1F\xAA\x1\xB3\xFFA2\xAA",
-				"\xA\xAA\x1\x88\x2\xAA\x1\x88\x4F\xAA\x1\xB3\xFFA2\xAA",
-				"\xA\xB5\x1\x88\x2\xB5\x1\x88\x4F\xB5\x1\xB4\xFFA2\xB5",
-				"\x1\xB7\x1D\xFFFF\x1\xB6",
-				"",
-				"\x1\xB8",
-				"",
-				"",
-				"\xA\x9B\x1\xFFFF\x2\x9B\x1\xFFFF\x2F\x9B\x1\xA7\x1F\x9B\x1\xA8\xFFA2"+
-				"\x9B",
-				"\xA\xAA\x1\x88\x2\xAA\x1\x88\x2F\xAA\x1\xB9\x1F\xAA\x1\xB3\xFFA2\xAA",
-				"\xA\xAA\x1\x88\x2\xAA\x1\x88\x2F\xAA\x1\xB2\x1F\xAA\x1\xB3\xFFA2\xAA",
-				"\xA\xB5\x1\x88\x2\xB5\x1\x88\x2F\xB5\x1\xBA\x1F\xB5\x1\xBB\xFFA2\xB5",
-				"\xA\xB5\x1\x88\x2\xB5\x1\x88\x4F\xB5\x1\xBB\xFFA2\xB5",
-				"\xA\xBD\x1\x88\x2\xBD\x1\x88\x4F\xBD\x1\xBC\xFFA2\xBD",
-				"\x1\xBF\x1D\xFFFF\x1\xBE",
-				"\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27",
-				"\xA\xAA\x1\x88\x2\xAA\x1\x88\x4F\xAA\x1\xC1\xFFA2\xAA",
-				"\xA\xB5\x1\x88\x2\xB5\x1\x88\x2F\xB5\x1\xC2\x1F\xB5\x1\xBB\xFFA2\xB5",
-				"\xA\xB5\x1\x88\x2\xB5\x1\x88\x2F\xB5\x1\xBA\x1F\xB5\x1\xBB\xFFA2\xB5",
-				"\xA\xBD\x1\x88\x2\xBD\x1\x88\x2F\xBD\x1\xC3\x1F\xBD\x1\xC4\xFFA2\xBD",
-				"\xA\xBD\x1\x88\x2\xBD\x1\x88\x4F\xBD\x1\xC4\xFFA2\xBD",
-				"\xA\xC6\x1\x88\x2\xC6\x1\x88\x4F\xC6\x1\xC5\xFFA2\xC6",
-				"\x1\xC8\x1D\xFFFF\x1\xC7",
-				"",
-				"\xA\xAA\x1\xFFFF\x2\xAA\x1\xFFFF\x2F\xAA\x1\xB2\x1F\xAA\x1\xB3\xFFA2"+
-				"\xAA",
-				"\xA\xB5\x1\x88\x2\xB5\x1\x88\x2F\xB5\x1\xC9\x1F\xB5\x1\xBB\xFFA2\xB5",
-				"\xA\xBD\x1\x88\x2\xBD\x1\x88\x2F\xBD\x1\xCA\x1F\xBD\x1\xC4\xFFA2\xBD",
-				"\xA\xBD\x1\x88\x2\xBD\x1\x88\x2F\xBD\x1\xC3\x1F\xBD\x1\xC4\xFFA2\xBD",
-				"\xA\xC6\x1\x88\x2\xC6\x1\x88\x2F\xC6\x1\xCB\x1F\xC6\x1\xCC\xFFA2\xC6",
-				"\xA\xC6\x1\x88\x2\xC6\x1\x88\x4F\xC6\x1\xCC\xFFA2\xC6",
-				"\xA\xCE\x1\x88\x2\xCE\x1\x88\x4F\xCE\x1\xCD\xFFA2\xCE",
-				"\x1\xD0\x1D\xFFFF\x1\xCF",
-				"\xA\xB5\x1\x88\x2\xB5\x1\x88\x4F\xB5\x1\xD1\xFFA2\xB5",
-				"\xA\xBD\x1\x88\x2\xBD\x1\x88\x2F\xBD\x1\xD2\x1F\xBD\x1\xC4\xFFA2\xBD",
-				"\xA\xC6\x1\x88\x2\xC6\x1\x88\x2F\xC6\x1\xD3\x1F\xC6\x1\xCC\xFFA2\xC6",
-				"\xA\xC6\x1\x88\x2\xC6\x1\x88\x2F\xC6\x1\xCB\x1F\xC6\x1\xCC\xFFA2\xC6",
-				"\xA\xCE\x1\x88\x2\xCE\x1\x88\x2F\xCE\x1\xD4\x1F\xCE\x1\xD5\xFFA2\xCE",
-				"\xA\xCE\x1\x88\x2\xCE\x1\x88\x4F\xCE\x1\xD5\xFFA2\xCE",
-				"\xA\xD7\x1\x88\x2\xD7\x1\x88\x4F\xD7\x1\xD6\xFFA2\xD7",
-				"\x1\xD9\x1D\xFFFF\x1\xD8",
-				"\xA\xB5\x1\xFFFF\x2\xB5\x1\xFFFF\x2F\xB5\x1\xBA\x1F\xB5\x1\xBB\xFFA2"+
-				"\xB5",
-				"\xA\xBD\x1\x88\x2\xBD\x1\x88\x2F\xBD\x1\xDA\x1F\xBD\x1\xC4\xFFA2\xBD",
-				"\xA\xC6\x1\x88\x2\xC6\x1\x88\x2F\xC6\x1\xDB\x1F\xC6\x1\xCC\xFFA2\xC6",
-				"\xA\xCE\x1\x88\x2\xCE\x1\x88\x2F\xCE\x1\xDC\x1F\xCE\x1\xD5\xFFA2\xCE",
-				"\xA\xCE\x1\x88\x2\xCE\x1\x88\x2F\xCE\x1\xD4\x1F\xCE\x1\xD5\xFFA2\xCE",
-				"\xA\xD7\x1\x88\x2\xD7\x1\x88\x2F\xD7\x1\xDD\x1F\xD7\x1\xDE\xFFA2\xD7",
-				"\xA\xD7\x1\x88\x2\xD7\x1\x88\x4F\xD7\x1\xDE\xFFA2\xD7",
-				"\xA\xE0\x1\x88\x2\xE0\x1\x88\x4F\xE0\x1\xDF\xFFA2\xE0",
-				"\x1\xE2\x1D\xFFFF\x1\xE1",
-				"\xA\xBD\x1\x88\x2\xBD\x1\x88\x4F\xBD\x1\xE3\xFFA2\xBD",
-				"\xA\xC6\x1\x88\x2\xC6\x1\x88\x2F\xC6\x1\xE4\x1F\xC6\x1\xCC\xFFA2\xC6",
-				"\xA\xCE\x1\x88\x2\xCE\x1\x88\x2F\xCE\x1\xE5\x1F\xCE\x1\xD5\xFFA2\xCE",
-				"\xA\xD7\x1\x88\x2\xD7\x1\x88\x2F\xD7\x1\xE6\x1F\xD7\x1\xDE\xFFA2\xD7",
-				"\xA\xD7\x1\x88\x2\xD7\x1\x88\x2F\xD7\x1\xDD\x1F\xD7\x1\xDE\xFFA2\xD7",
-				"\xA\xE0\x1\x88\x2\xE0\x1\x88\x2F\xE0\x1\xE7\x1F\xE0\x1\xE8\xFFA2\xE0",
-				"\xA\xE0\x1\x88\x2\xE0\x1\x88\x4F\xE0\x1\xE8\xFFA2\xE0",
-				"\xA\xEA\x1\x88\x2\xEA\x1\x88\x4F\xEA\x1\xE9\xFFA2\xEA",
-				"\x1\xEB",
-				"\xA\xBD\x1\xFFFF\x2\xBD\x1\xFFFF\x2F\xBD\x1\xC3\x1F\xBD\x1\xC4\xFFA2"+
-				"\xBD",
-				"\xA\xC6\x1\x88\x2\xC6\x1\x88\x2F\xC6\x1\xEC\x1F\xC6\x1\xCC\xFFA2\xC6",
-				"\xA\xCE\x1\x88\x2\xCE\x1\x88\x2F\xCE\x1\xED\x1F\xCE\x1\xD5\xFFA2\xCE",
-				"\xA\xD7\x1\x88\x2\xD7\x1\x88\x2F\xD7\x1\xEE\x1F\xD7\x1\xDE\xFFA2\xD7",
-				"\xA\xE0\x1\x88\x2\xE0\x1\x88\x2F\xE0\x1\xEF\x1F\xE0\x1\xE8\xFFA2\xE0",
-				"\xA\xE0\x1\x88\x2\xE0\x1\x88\x2F\xE0\x1\xE7\x1F\xE0\x1\xE8\xFFA2\xE0",
-				"\xA\xEA\x1\x88\x2\xEA\x1\x88\x2F\xEA\x1\xF0\x1F\xEA\x1\xF1\xFFA2\xEA",
-				"\xA\xEA\x1\x88\x2\xEA\x1\x88\x4F\xEA\x1\xF1\xFFA2\xEA",
-				"\xA\xF3\x1\x88\x2\xF3\x1\x88\x4F\xF3\x1\xF2\xFFA2\xF3",
-				"\xA\xC6\x1\x88\x2\xC6\x1\x88\x4F\xC6\x1\xF4\xFFA2\xC6",
-				"\xA\xCE\x1\x88\x2\xCE\x1\x88\x2F\xCE\x1\xF5\x1F\xCE\x1\xD5\xFFA2\xCE",
-				"\xA\xD7\x1\x88\x2\xD7\x1\x88\x2F\xD7\x1\xF6\x1F\xD7\x1\xDE\xFFA2\xD7",
-				"\xA\xE0\x1\x88\x2\xE0\x1\x88\x2F\xE0\x1\xF7\x1F\xE0\x1\xE8\xFFA2\xE0",
-				"\xA\xEA\x1\x88\x2\xEA\x1\x88\x2F\xEA\x1\xF8\x1F\xEA\x1\xF1\xFFA2\xEA",
-				"\xA\xEA\x1\x88\x2\xEA\x1\x88\x2F\xEA\x1\xF0\x1F\xEA\x1\xF1\xFFA2\xEA",
-				"\xA\xF3\x1\x88\x2\xF3\x1\x88\x2F\xF3\x1\xF9\x1F\xF3\x1\xFA\xFFA2\xF3",
-				"\xA\xF3\x1\x88\x2\xF3\x1\x88\x4F\xF3\x1\xFA\xFFA2\xF3",
-				"\xA\xC6\x1\xFFFF\x2\xC6\x1\xFFFF\x2F\xC6\x1\xCB\x1F\xC6\x1\xCC\xFFA2"+
-				"\xC6",
-				"\xA\xCE\x1\x88\x2\xCE\x1\x88\x2F\xCE\x1\xFB\x1F\xCE\x1\xD5\xFFA2\xCE",
-				"\xA\xD7\x1\x88\x2\xD7\x1\x88\x2F\xD7\x1\xFC\x1F\xD7\x1\xDE\xFFA2\xD7",
-				"\xA\xE0\x1\x88\x2\xE0\x1\x88\x2F\xE0\x1\xFD\x1F\xE0\x1\xE8\xFFA2\xE0",
-				"\xA\xEA\x1\x88\x2\xEA\x1\x88\x2F\xEA\x1\xFE\x1F\xEA\x1\xF1\xFFA2\xEA",
-				"\xA\xF3\x1\x88\x2\xF3\x1\x88\x2F\xF3\x1\xFF\x1F\xF3\x1\xFA\xFFA2\xF3",
-				"\xA\xF3\x1\x88\x2\xF3\x1\x88\x2F\xF3\x1\xF9\x1F\xF3\x1\xFA\xFFA2\xF3",
-				"\xA\xCE\x1\x88\x2\xCE\x1\x88\x4F\xCE\x1\x100\xFFA2\xCE",
-				"\xA\xD7\x1\x88\x2\xD7\x1\x88\x2F\xD7\x1\x101\x1F\xD7\x1\xDE\xFFA2\xD7",
-				"\xA\xE0\x1\x88\x2\xE0\x1\x88\x2F\xE0\x1\x102\x1F\xE0\x1\xE8\xFFA2\xE0",
-				"\xA\xEA\x1\x88\x2\xEA\x1\x88\x2F\xEA\x1\x103\x1F\xEA\x1\xF1\xFFA2\xEA",
-				"\xA\xF3\x1\x88\x2\xF3\x1\x88\x2F\xF3\x1\x104\x1F\xF3\x1\xFA\xFFA2\xF3",
-				"\xA\xCE\x1\xFFFF\x2\xCE\x1\xFFFF\x2F\xCE\x1\xD4\x1F\xCE\x1\xD5\xFFA2"+
-				"\xCE",
-				"\xA\xD7\x1\x88\x2\xD7\x1\x88\x2F\xD7\x1\x105\x1F\xD7\x1\xDE\xFFA2\xD7",
-				"\xA\xE0\x1\x88\x2\xE0\x1\x88\x2F\xE0\x1\x106\x1F\xE0\x1\xE8\xFFA2\xE0",
-				"\xA\xEA\x1\x88\x2\xEA\x1\x88\x2F\xEA\x1\x107\x1F\xEA\x1\xF1\xFFA2\xEA",
-				"\xA\xF3\x1\x88\x2\xF3\x1\x88\x2F\xF3\x1\x108\x1F\xF3\x1\xFA\xFFA2\xF3",
-				"\xA\xD7\x1\x88\x2\xD7\x1\x88\x4F\xD7\x1\x109\xFFA2\xD7",
-				"\xA\xE0\x1\x88\x2\xE0\x1\x88\x2F\xE0\x1\x10A\x1F\xE0\x1\xE8\xFFA2\xE0",
-				"\xA\xEA\x1\x88\x2\xEA\x1\x88\x2F\xEA\x1\x10B\x1F\xEA\x1\xF1\xFFA2\xEA",
-				"\xA\xF3\x1\x88\x2\xF3\x1\x88\x2F\xF3\x1\x10C\x1F\xF3\x1\xFA\xFFA2\xF3",
-				"\xA\xD7\x1\xFFFF\x2\xD7\x1\xFFFF\x2F\xD7\x1\xDD\x1F\xD7\x1\xDE\xFFA2"+
-				"\xD7",
-				"\xA\xE0\x1\x88\x2\xE0\x1\x88\x2F\xE0\x1\x10D\x1F\xE0\x1\xE8\xFFA2\xE0",
-				"\xA\xEA\x1\x88\x2\xEA\x1\x88\x2F\xEA\x1\x10E\x1F\xEA\x1\xF1\xFFA2\xEA",
-				"\xA\xF3\x1\x88\x2\xF3\x1\x88\x2F\xF3\x1\x10F\x1F\xF3\x1\xFA\xFFA2\xF3",
-				"\xA\xE0\x1\x88\x2\xE0\x1\x88\x4F\xE0\x1\x110\xFFA2\xE0",
-				"\xA\xEA\x1\x88\x2\xEA\x1\x88\x2F\xEA\x1\x111\x1F\xEA\x1\xF1\xFFA2\xEA",
-				"\xA\xF3\x1\x88\x2\xF3\x1\x88\x2F\xF3\x1\x112\x1F\xF3\x1\xFA\xFFA2\xF3",
-				"\xA\xE0\x1\xFFFF\x2\xE0\x1\xFFFF\x2F\xE0\x1\xE7\x1F\xE0\x1\xE8\xFFA2"+
-				"\xE0",
-				"\xA\xEA\x1\x88\x2\xEA\x1\x88\x2F\xEA\x1\x113\x1F\xEA\x1\xF1\xFFA2\xEA",
-				"\xA\xF3\x1\x88\x2\xF3\x1\x88\x2F\xF3\x1\x114\x1F\xF3\x1\xFA\xFFA2\xF3",
-				"\xA\xEA\x1\x88\x2\xEA\x1\x88\x4F\xEA\x1\x115\xFFA2\xEA",
-				"\xA\xF3\x1\x88\x2\xF3\x1\x88\x2F\xF3\x1\x116\x1F\xF3\x1\xFA\xFFA2\xF3",
-				"\xA\xEA\x1\xFFFF\x2\xEA\x1\xFFFF\x2F\xEA\x1\xF0\x1F\xEA\x1\xF1\xFFA2"+
-				"\xEA",
-				"\xA\xF3\x1\x88\x2\xF3\x1\x88\x2F\xF3\x1\x117\x1F\xF3\x1\xFA\xFFA2\xF3",
-				"\xA\xF3\x1\x88\x2\xF3\x1\x88\x4F\xF3\x1\x118\xFFA2\xF3",
-				"\xA\xF3\x1\xFFFF\x2\xF3\x1\xFFFF\x2F\xF3\x1\xF9\x1F\xF3\x1\xFA\xFFA2"+
-				"\xF3"
+				""
 			};
 
 		private static readonly short[] DFA55_eot = DFA.UnpackEncodedString(DFA55_eotS);
@@ -8188,7 +7874,7 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 			this.transition = DFA55_transition;
 		}
 
-		public override string Description { get { return "1:1: Tokens : ( T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | NAME | NORMALSTRING | CHARSTRING | LONGSTRING | INT | HEX | FLOAT | HEX_FLOAT | COMMENT | LINE_COMMENT | WS | NEWLINE | SHEBANG );"; } }
+		public override string Description { get { return "308:2: (| '[' ( '=' )* | '[' ( '=' )* ~ ( '=' | '[' | '\\r' | '\\n' ) (~ ( '\\r' | '\\n' ) )* |~ ( '[' | '\\r' | '\\n' ) (~ ( '\\r' | '\\n' ) )* )"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -8207,1449 +7893,31 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		{
 		case 0:
 			{
-				if ((LA55_1==']')) {s = 134;}
+				if ((LA55_1=='[')) {s = 2;}
 
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 135;}
+				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='Z')||(LA55_1>='\\' && LA55_1<='\uFFFF'))) {s = 3;}
 
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
+				else s = 1;
 
 				break;
 			}
 		case 1:
 			{
-				if ((LA55_1==']')) {s = 152;}
+				if ((LA55_1=='=')) {s = 4;}
 
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 135;}
+				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='Z')||(LA55_1>='\\' && LA55_1<='\uFFFF'))) {s = 6;}
 
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
+				else s = 5;
 
 				break;
 			}
 		case 2:
 			{
-				if ((LA55_1==']')) {s = 153;}
+				if ((LA55_1=='=')) {s = 4;}
 
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 135;}
+				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='Z')||(LA55_1>='\\' && LA55_1<='\uFFFF'))) {s = 6;}
 
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 3:
-			{
-				if ((LA55_1==']')) {s = 154;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 155;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 4:
-			{
-				if ((LA55_1==']')) {s = 152;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 135;}
-
-				else s = 136;
-
-				break;
-			}
-		case 5:
-			{
-				if ((LA55_1==']')) {s = 152;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 135;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 6:
-			{
-				if ((LA55_1=='=')) {s = 167;}
-
-				else if ((LA55_1==']')) {s = 168;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 155;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 7:
-			{
-				if ((LA55_1==']')) {s = 168;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 155;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 8:
-			{
-				if ((LA55_1==']')) {s = 169;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 170;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 9:
-			{
-				if ((LA55_1==']')) {s = 177;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 155;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 10:
-			{
-				if ((LA55_1=='=')) {s = 167;}
-
-				else if ((LA55_1==']')) {s = 168;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 155;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 11:
-			{
-				if ((LA55_1=='=')) {s = 178;}
-
-				else if ((LA55_1==']')) {s = 179;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 170;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 12:
-			{
-				if ((LA55_1==']')) {s = 179;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 170;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 13:
-			{
-				if ((LA55_1==']')) {s = 180;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 181;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 14:
-			{
-				if ((LA55_1=='=')) {s = 167;}
-
-				else if ((LA55_1==']')) {s = 168;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 155;}
-
-				else s = 136;
-
-				break;
-			}
-		case 15:
-			{
-				if ((LA55_1=='=')) {s = 185;}
-
-				else if ((LA55_1==']')) {s = 179;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 170;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 16:
-			{
-				if ((LA55_1=='=')) {s = 178;}
-
-				else if ((LA55_1==']')) {s = 179;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 170;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 17:
-			{
-				if ((LA55_1=='=')) {s = 186;}
-
-				else if ((LA55_1==']')) {s = 187;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 181;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 18:
-			{
-				if ((LA55_1==']')) {s = 187;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 181;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 19:
-			{
-				if ((LA55_1==']')) {s = 188;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 189;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 20:
-			{
-				if ((LA55_1==']')) {s = 193;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 170;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 21:
-			{
-				if ((LA55_1=='=')) {s = 194;}
-
-				else if ((LA55_1==']')) {s = 187;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 181;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 22:
-			{
-				if ((LA55_1=='=')) {s = 186;}
-
-				else if ((LA55_1==']')) {s = 187;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 181;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 23:
-			{
-				if ((LA55_1=='=')) {s = 195;}
-
-				else if ((LA55_1==']')) {s = 196;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 189;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 24:
-			{
-				if ((LA55_1==']')) {s = 196;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 189;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 25:
-			{
-				if ((LA55_1==']')) {s = 197;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 198;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 26:
-			{
-				if ((LA55_1=='=')) {s = 178;}
-
-				else if ((LA55_1==']')) {s = 179;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 170;}
-
-				else s = 136;
-
-				break;
-			}
-		case 27:
-			{
-				if ((LA55_1=='=')) {s = 201;}
-
-				else if ((LA55_1==']')) {s = 187;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 181;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 28:
-			{
-				if ((LA55_1=='=')) {s = 202;}
-
-				else if ((LA55_1==']')) {s = 196;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 189;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 29:
-			{
-				if ((LA55_1=='=')) {s = 195;}
-
-				else if ((LA55_1==']')) {s = 196;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 189;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 30:
-			{
-				if ((LA55_1=='=')) {s = 203;}
-
-				else if ((LA55_1==']')) {s = 204;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 198;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 31:
-			{
-				if ((LA55_1==']')) {s = 204;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 198;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 32:
-			{
-				if ((LA55_1==']')) {s = 205;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 206;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 33:
-			{
-				if ((LA55_1==']')) {s = 209;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 181;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 34:
-			{
-				if ((LA55_1=='=')) {s = 210;}
-
-				else if ((LA55_1==']')) {s = 196;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 189;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 35:
-			{
-				if ((LA55_1=='=')) {s = 211;}
-
-				else if ((LA55_1==']')) {s = 204;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 198;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 36:
-			{
-				if ((LA55_1=='=')) {s = 203;}
-
-				else if ((LA55_1==']')) {s = 204;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 198;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 37:
-			{
-				if ((LA55_1=='=')) {s = 212;}
-
-				else if ((LA55_1==']')) {s = 213;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 206;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 38:
-			{
-				if ((LA55_1==']')) {s = 213;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 206;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 39:
-			{
-				if ((LA55_1==']')) {s = 214;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 215;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 40:
-			{
-				if ((LA55_1=='=')) {s = 186;}
-
-				else if ((LA55_1==']')) {s = 187;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 181;}
-
-				else s = 136;
-
-				break;
-			}
-		case 41:
-			{
-				if ((LA55_1=='=')) {s = 218;}
-
-				else if ((LA55_1==']')) {s = 196;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 189;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 42:
-			{
-				if ((LA55_1=='=')) {s = 219;}
-
-				else if ((LA55_1==']')) {s = 204;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 198;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 43:
-			{
-				if ((LA55_1=='=')) {s = 220;}
-
-				else if ((LA55_1==']')) {s = 213;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 206;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 44:
-			{
-				if ((LA55_1=='=')) {s = 212;}
-
-				else if ((LA55_1==']')) {s = 213;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 206;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 45:
-			{
-				if ((LA55_1=='=')) {s = 221;}
-
-				else if ((LA55_1==']')) {s = 222;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 215;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 46:
-			{
-				if ((LA55_1==']')) {s = 222;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 215;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 47:
-			{
-				if ((LA55_1==']')) {s = 223;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 224;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 48:
-			{
-				if ((LA55_1==']')) {s = 227;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 189;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 49:
-			{
-				if ((LA55_1=='=')) {s = 228;}
-
-				else if ((LA55_1==']')) {s = 204;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 198;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 50:
-			{
-				if ((LA55_1=='=')) {s = 229;}
-
-				else if ((LA55_1==']')) {s = 213;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 206;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 51:
-			{
-				if ((LA55_1=='=')) {s = 230;}
-
-				else if ((LA55_1==']')) {s = 222;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 215;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 52:
-			{
-				if ((LA55_1=='=')) {s = 221;}
-
-				else if ((LA55_1==']')) {s = 222;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 215;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 53:
-			{
-				if ((LA55_1=='=')) {s = 231;}
-
-				else if ((LA55_1==']')) {s = 232;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 224;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 54:
-			{
-				if ((LA55_1==']')) {s = 232;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 224;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 55:
-			{
-				if ((LA55_1==']')) {s = 233;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 234;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 56:
-			{
-				if ((LA55_1=='=')) {s = 195;}
-
-				else if ((LA55_1==']')) {s = 196;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 189;}
-
-				else s = 136;
-
-				break;
-			}
-		case 57:
-			{
-				if ((LA55_1=='=')) {s = 236;}
-
-				else if ((LA55_1==']')) {s = 204;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 198;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 58:
-			{
-				if ((LA55_1=='=')) {s = 237;}
-
-				else if ((LA55_1==']')) {s = 213;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 206;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 59:
-			{
-				if ((LA55_1=='=')) {s = 238;}
-
-				else if ((LA55_1==']')) {s = 222;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 215;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 60:
-			{
-				if ((LA55_1=='=')) {s = 239;}
-
-				else if ((LA55_1==']')) {s = 232;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 224;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 61:
-			{
-				if ((LA55_1=='=')) {s = 231;}
-
-				else if ((LA55_1==']')) {s = 232;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 224;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 62:
-			{
-				if ((LA55_1=='=')) {s = 240;}
-
-				else if ((LA55_1==']')) {s = 241;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 234;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 63:
-			{
-				if ((LA55_1==']')) {s = 241;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 234;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 64:
-			{
-				if ((LA55_1==']')) {s = 242;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 243;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 65:
-			{
-				if ((LA55_1==']')) {s = 244;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 198;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 66:
-			{
-				if ((LA55_1=='=')) {s = 245;}
-
-				else if ((LA55_1==']')) {s = 213;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 206;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 67:
-			{
-				if ((LA55_1=='=')) {s = 246;}
-
-				else if ((LA55_1==']')) {s = 222;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 215;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 68:
-			{
-				if ((LA55_1=='=')) {s = 247;}
-
-				else if ((LA55_1==']')) {s = 232;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 224;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 69:
-			{
-				if ((LA55_1=='=')) {s = 248;}
-
-				else if ((LA55_1==']')) {s = 241;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 234;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 70:
-			{
-				if ((LA55_1=='=')) {s = 240;}
-
-				else if ((LA55_1==']')) {s = 241;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 234;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 71:
-			{
-				if ((LA55_1=='=')) {s = 249;}
-
-				else if ((LA55_1==']')) {s = 250;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 243;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 72:
-			{
-				if ((LA55_1==']')) {s = 250;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 243;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 73:
-			{
-				if ((LA55_1=='=')) {s = 203;}
-
-				else if ((LA55_1==']')) {s = 204;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 198;}
-
-				else s = 136;
-
-				break;
-			}
-		case 74:
-			{
-				if ((LA55_1=='=')) {s = 251;}
-
-				else if ((LA55_1==']')) {s = 213;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 206;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 75:
-			{
-				if ((LA55_1=='=')) {s = 252;}
-
-				else if ((LA55_1==']')) {s = 222;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 215;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 76:
-			{
-				if ((LA55_1=='=')) {s = 253;}
-
-				else if ((LA55_1==']')) {s = 232;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 224;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 77:
-			{
-				if ((LA55_1=='=')) {s = 254;}
-
-				else if ((LA55_1==']')) {s = 241;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 234;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 78:
-			{
-				if ((LA55_1=='=')) {s = 255;}
-
-				else if ((LA55_1==']')) {s = 250;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 243;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 79:
-			{
-				if ((LA55_1=='=')) {s = 249;}
-
-				else if ((LA55_1==']')) {s = 250;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 243;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 80:
-			{
-				if ((LA55_1==']')) {s = 256;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 206;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 81:
-			{
-				if ((LA55_1=='=')) {s = 257;}
-
-				else if ((LA55_1==']')) {s = 222;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 215;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 82:
-			{
-				if ((LA55_1=='=')) {s = 258;}
-
-				else if ((LA55_1==']')) {s = 232;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 224;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 83:
-			{
-				if ((LA55_1=='=')) {s = 259;}
-
-				else if ((LA55_1==']')) {s = 241;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 234;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 84:
-			{
-				if ((LA55_1=='=')) {s = 260;}
-
-				else if ((LA55_1==']')) {s = 250;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 243;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 85:
-			{
-				if ((LA55_1=='=')) {s = 212;}
-
-				else if ((LA55_1==']')) {s = 213;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 206;}
-
-				else s = 136;
-
-				break;
-			}
-		case 86:
-			{
-				if ((LA55_1=='=')) {s = 261;}
-
-				else if ((LA55_1==']')) {s = 222;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 215;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 87:
-			{
-				if ((LA55_1=='=')) {s = 262;}
-
-				else if ((LA55_1==']')) {s = 232;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 224;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 88:
-			{
-				if ((LA55_1=='=')) {s = 263;}
-
-				else if ((LA55_1==']')) {s = 241;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 234;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 89:
-			{
-				if ((LA55_1=='=')) {s = 264;}
-
-				else if ((LA55_1==']')) {s = 250;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 243;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 90:
-			{
-				if ((LA55_1==']')) {s = 265;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 215;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 91:
-			{
-				if ((LA55_1=='=')) {s = 266;}
-
-				else if ((LA55_1==']')) {s = 232;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 224;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 92:
-			{
-				if ((LA55_1=='=')) {s = 267;}
-
-				else if ((LA55_1==']')) {s = 241;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 234;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 93:
-			{
-				if ((LA55_1=='=')) {s = 268;}
-
-				else if ((LA55_1==']')) {s = 250;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 243;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 94:
-			{
-				if ((LA55_1=='=')) {s = 221;}
-
-				else if ((LA55_1==']')) {s = 222;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 215;}
-
-				else s = 136;
-
-				break;
-			}
-		case 95:
-			{
-				if ((LA55_1=='=')) {s = 269;}
-
-				else if ((LA55_1==']')) {s = 232;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 224;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 96:
-			{
-				if ((LA55_1=='=')) {s = 270;}
-
-				else if ((LA55_1==']')) {s = 241;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 234;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 97:
-			{
-				if ((LA55_1=='=')) {s = 271;}
-
-				else if ((LA55_1==']')) {s = 250;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 243;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 98:
-			{
-				if ((LA55_1==']')) {s = 272;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 224;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 99:
-			{
-				if ((LA55_1=='=')) {s = 273;}
-
-				else if ((LA55_1==']')) {s = 241;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 234;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 100:
-			{
-				if ((LA55_1=='=')) {s = 274;}
-
-				else if ((LA55_1==']')) {s = 250;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 243;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 101:
-			{
-				if ((LA55_1=='=')) {s = 231;}
-
-				else if ((LA55_1==']')) {s = 232;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 224;}
-
-				else s = 136;
-
-				break;
-			}
-		case 102:
-			{
-				if ((LA55_1=='=')) {s = 275;}
-
-				else if ((LA55_1==']')) {s = 241;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 234;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 103:
-			{
-				if ((LA55_1=='=')) {s = 276;}
-
-				else if ((LA55_1==']')) {s = 250;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 243;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 104:
-			{
-				if ((LA55_1==']')) {s = 277;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 234;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 105:
-			{
-				if ((LA55_1=='=')) {s = 278;}
-
-				else if ((LA55_1==']')) {s = 250;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 243;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 106:
-			{
-				if ((LA55_1=='=')) {s = 240;}
-
-				else if ((LA55_1==']')) {s = 241;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 234;}
-
-				else s = 136;
-
-				break;
-			}
-		case 107:
-			{
-				if ((LA55_1=='=')) {s = 279;}
-
-				else if ((LA55_1==']')) {s = 250;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 243;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 108:
-			{
-				if ((LA55_1==']')) {s = 280;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 243;}
-
-				else if ((LA55_1=='\n'||LA55_1=='\r')) {s = 136;}
-
-				else s = 88;
-
-				break;
-			}
-		case 109:
-			{
-				if ((LA55_1=='=')) {s = 249;}
-
-				else if ((LA55_1==']')) {s = 250;}
-
-				else if (((LA55_1>='\u0000' && LA55_1<='\t')||(LA55_1>='\u000B' && LA55_1<='\f')||(LA55_1>='\u000E' && LA55_1<='<')||(LA55_1>='>' && LA55_1<='\\')||(LA55_1>='^' && LA55_1<='\uFFFF'))) {s = 243;}
-
-				else s = 136;
+				else s = 5;
 
 				break;
 			}
@@ -9665,6 +7933,282 @@ public partial class LuaLexer : Antlr.Runtime.Lexer
 		dfa.Error(nvae);
 		throw nvae;
 	}
+	private class DFA59 : DFA
+	{
+		private const string DFA59_eotS =
+			"\x1\xFFFF\x1\x2B\x6\xFFFF\x1\x2D\x1\x2F\x1\xFFFF\x1\x32\x1\xFFFF\x1\x34"+
+			"\x1\x36\x1\x38\x1\x3A\x2\xFFFF\xE\x24\x6\xFFFF\x2\x50\x3\xFFFF\x1\x52"+
+			"\x1\xFFFF\x1\x54\xC\xFFFF\x2\x24\x1\x57\x6\x24\x1\x5E\x1\x5F\x3\x24\x1"+
+			"\x63\x5\x24\x2\xFFFF\x1\x52\x3\xFFFF\x1\x6E\x1\x24\x1\xFFFF\x1\x24\x1"+
+			"\x71\x1\x24\x1\x73\x2\x24\x2\xFFFF\x1\x24\x1\x77\x1\x78\x1\xFFFF\x6\x24"+
+			"\x1\xFFFF\x1\x7F\x1\xFFFF\x1\x52\x1\xFFFF\x1\x24\x1\x83\x1\xFFFF\x1\x24"+
+			"\x1\xFFFF\x1\x24\x1\x86\x1\x24\x2\xFFFF\x2\x24\x1\x8A\x1\x8B\x2\x24\x1"+
+			"\xFFFF\x1\x52\x1\x8F\x1\x24\x1\xFFFF\x1\x91\x1\x24\x1\xFFFF\x1\x93\x2"+
+			"\x24\x2\xFFFF\x1\x96\x1\x97\x1\x52\x1\xFFFF\x1\x99\x1\xFFFF\x1\x24\x1"+
+			"\xFFFF\x1\x9B\x1\x9C\x2\xFFFF\x1\x52\x1\xFFFF\x1\x24\x2\xFFFF\x1\x52"+
+			"\x1\xA0\x1\x52\x1\xFFFF\x4\x52";
+		private const string DFA59_eofS =
+			"\xA5\xFFFF";
+		private const string DFA59_minS =
+			"\x1\x9\x1\x21\x6\xFFFF\x1\x2D\x1\x2E\x1\xFFFF\x1\x3A\x1\xFFFF\x4\x3D"+
+			"\x2\xFFFF\x1\x6E\x1\x72\x1\x6F\x1\x6C\x1\x61\x1\x6F\x1\x66\x1\x6F\x1"+
+			"\x69\x1\x72\x1\x65\x1\x68\x1\x6E\x1\x68\x6\xFFFF\x2\x2E\x3\xFFFF\x1\x5B"+
+			"\x1\xFFFF\x1\x2E\xC\xFFFF\x1\x64\x1\x65\x1\x30\x1\x73\x1\x64\x1\x6C\x1"+
+			"\x72\x1\x6E\x1\x74\x2\x30\x1\x63\x1\x6C\x1\x74\x1\x30\x1\x70\x1\x65\x1"+
+			"\x75\x1\x74\x1\x69\x1\x2E\x1\xFFFF\x1\x3D\x3\xFFFF\x1\x30\x1\x61\x1\xFFFF"+
+			"\x1\x65\x1\x30\x1\x73\x1\x30\x1\x63\x1\x6F\x2\xFFFF\x1\x61\x2\x30\x1"+
+			"\xFFFF\x1\x65\x1\x75\x1\x6E\x1\x65\x1\x69\x1\x6C\x1\xFFFF\x1\x2E\x1\xFFFF"+
+			"\x1\x3D\x1\xFFFF\x1\x6B\x1\x30\x1\xFFFF\x1\x65\x1\xFFFF\x1\x74\x1\x30"+
+			"\x1\x6C\x2\xFFFF\x1\x61\x1\x72\x2\x30\x1\x6C\x1\x65\x1\xFFFF\x1\x3D\x1"+
+			"\x30\x1\x66\x1\xFFFF\x1\x30\x1\x69\x1\xFFFF\x1\x30\x1\x74\x1\x6E\x2\xFFFF"+
+			"\x2\x30\x1\x3D\x1\xFFFF\x1\x30\x1\xFFFF\x1\x6F\x1\xFFFF\x2\x30\x2\xFFFF"+
+			"\x1\x3D\x1\xFFFF\x1\x6E\x2\xFFFF\x1\x3D\x1\x30\x1\x3D\x1\xFFFF\x3\x3D"+
+			"\x1\x5B";
+		private const string DFA59_maxS =
+			"\x1\x7E\x1\x21\x6\xFFFF\x1\x2D\x1\x39\x1\xFFFF\x1\x3A\x1\xFFFF\x3\x3D"+
+			"\x1\x5B\x2\xFFFF\x1\x6E\x1\x72\x1\x6F\x1\x6E\x1\x75\x1\x6F\x1\x6E\x2"+
+			"\x6F\x1\x72\x1\x65\x1\x72\x1\x6E\x1\x68\x6\xFFFF\x1\x78\x1\x65\x3\xFFFF"+
+			"\x1\x5B\x1\xFFFF\x1\x2E\xC\xFFFF\x1\x64\x1\x65\x1\x7A\x1\x73\x1\x64\x1"+
+			"\x6C\x1\x72\x1\x6E\x1\x74\x2\x7A\x1\x63\x1\x6C\x1\x74\x1\x7A\x1\x74\x1"+
+			"\x65\x1\x75\x1\x74\x1\x69\x1\x66\x1\xFFFF\x1\x5B\x3\xFFFF\x1\x7A\x1\x61"+
+			"\x1\xFFFF\x1\x65\x1\x7A\x1\x73\x1\x7A\x1\x63\x1\x6F\x2\xFFFF\x1\x61\x2"+
+			"\x7A\x1\xFFFF\x1\x65\x1\x75\x1\x6E\x1\x65\x1\x69\x1\x6C\x1\xFFFF\x1\x70"+
+			"\x1\xFFFF\x1\x5B\x1\xFFFF\x1\x6B\x1\x7A\x1\xFFFF\x1\x65\x1\xFFFF\x1\x74"+
+			"\x1\x7A\x1\x6C\x2\xFFFF\x1\x61\x1\x72\x2\x7A\x1\x6C\x1\x65\x1\xFFFF\x1"+
+			"\x5B\x1\x7A\x1\x66\x1\xFFFF\x1\x7A\x1\x69\x1\xFFFF\x1\x7A\x1\x74\x1\x6E"+
+			"\x2\xFFFF\x2\x7A\x1\x5B\x1\xFFFF\x1\x7A\x1\xFFFF\x1\x6F\x1\xFFFF\x2\x7A"+
+			"\x2\xFFFF\x1\x5B\x1\xFFFF\x1\x6E\x2\xFFFF\x1\x5B\x1\x7A\x1\x5B\x1\xFFFF"+
+			"\x4\x5B";
+		private const string DFA59_acceptS =
+			"\x2\xFFFF\x1\x2\x1\x3\x1\x4\x1\x5\x1\x6\x1\x7\x2\xFFFF\x1\xC\x1\xFFFF"+
+			"\x1\xF\x4\xFFFF\x1\x17\x1\x18\xE\xFFFF\x1\x2F\x1\x30\x1\x31\x1\x32\x1"+
+			"\x33\x1\x34\x2\xFFFF\x1\x3C\x1\x3D\x1\x1\x1\xFFFF\x1\x8\x1\xFFFF\x1\x9"+
+			"\x1\x38\x1\xE\x1\xD\x1\x11\x1\x10\x1\x13\x1\x12\x1\x15\x1\x14\x1\x35"+
+			"\x1\x16\x15\xFFFF\x1\x36\x1\xFFFF\x1\x3B\x1\xB\x1\xA\x2\xFFFF\x1\x1B"+
+			"\x6\xFFFF\x1\x23\x1\x24\x3\xFFFF\x1\x28\x6\xFFFF\x1\x39\x1\xFFFF\x1\x3A"+
+			"\x1\xFFFF\x1\x19\x2\xFFFF\x1\x1E\x1\xFFFF\x1\x20\x3\xFFFF\x1\x26\x1\x27"+
+			"\x6\xFFFF\x1\x37\x3\xFFFF\x1\x1C\x2\xFFFF\x1\x22\x3\xFFFF\x1\x2B\x1\x2C"+
+			"\x3\xFFFF\x1\x1A\x1\xFFFF\x1\x1F\x1\xFFFF\x1\x25\x2\xFFFF\x1\x2D\x1\x2E"+
+			"\x1\xFFFF\x1\x1D\x1\xFFFF\x1\x29\x1\x2A\x3\xFFFF\x1\x21\x4\xFFFF";
+		private const string DFA59_specialS =
+			"\xA5\xFFFF}>";
+		private static readonly string[] DFA59_transitionS =
+			{
+				"\x2\x29\x1\xFFFF\x2\x29\x12\xFFFF\x1\x29\x1\xFFFF\x1\x25\x1\x1\x1\xFFFF"+
+				"\x1\x2\x1\xFFFF\x1\x26\x1\x3\x1\x4\x1\x5\x1\x6\x1\x7\x1\x8\x1\x9\x1"+
+				"\xA\x1\x27\x9\x28\x1\xB\x1\xC\x1\xD\x1\xE\x1\xF\x2\xFFFF\x1A\x24\x1"+
+				"\x10\x1\xFFFF\x1\x11\x1\x12\x1\x24\x1\xFFFF\x1\x13\x1\x14\x1\x24\x1"+
+				"\x15\x1\x16\x1\x17\x1\x18\x1\x24\x1\x19\x2\x24\x1\x1A\x1\x24\x1\x1B"+
+				"\x1\x1C\x2\x24\x1\x1D\x1\x24\x1\x1E\x1\x1F\x1\x24\x1\x20\x3\x24\x1\x21"+
+				"\x1\xFFFF\x1\x22\x1\x23",
+				"\x1\x2A",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x2C",
+				"\x1\x2E\x1\xFFFF\xA\x30",
+				"",
+				"\x1\x31",
+				"",
+				"\x1\x33",
+				"\x1\x35",
+				"\x1\x37",
+				"\x1\x39\x1D\xFFFF\x1\x39",
+				"",
+				"",
+				"\x1\x3B",
+				"\x1\x3C",
+				"\x1\x3D",
+				"\x1\x3E\x1\xFFFF\x1\x3F",
+				"\x1\x40\xD\xFFFF\x1\x41\x5\xFFFF\x1\x42",
+				"\x1\x43",
+				"\x1\x44\x7\xFFFF\x1\x45",
+				"\x1\x46",
+				"\x1\x47\x5\xFFFF\x1\x48",
+				"\x1\x49",
+				"\x1\x4A",
+				"\x1\x4B\x9\xFFFF\x1\x4C",
+				"\x1\x4D",
+				"\x1\x4E",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x30\x1\xFFFF\xA\x28\xB\xFFFF\x1\x30\x12\xFFFF\x1\x4F\xC\xFFFF\x1"+
+				"\x30\x12\xFFFF\x1\x4F",
+				"\x1\x30\x1\xFFFF\xA\x28\xB\xFFFF\x1\x30\x1F\xFFFF\x1\x30",
+				"",
+				"",
+				"",
+				"\x1\x51",
+				"",
+				"\x1\x53",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x55",
+				"\x1\x56",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\x1\x58",
+				"\x1\x59",
+				"\x1\x5A",
+				"\x1\x5B",
+				"\x1\x5C",
+				"\x1\x5D",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\x1\x60",
+				"\x1\x61",
+				"\x1\x62",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\x1\x64\x3\xFFFF\x1\x65",
+				"\x1\x66",
+				"\x1\x67",
+				"\x1\x68",
+				"\x1\x69",
+				"\x1\x6A\x1\xFFFF\xA\x6B\x7\xFFFF\x6\x6B\x1A\xFFFF\x6\x6B",
+				"",
+				"\x1\x6D\x1D\xFFFF\x1\x6C",
+				"",
+				"",
+				"",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\x1\x6F",
+				"",
+				"\x1\x70",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\x1\x72",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\x1\x74",
+				"\x1\x75",
+				"",
+				"",
+				"\x1\x76",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"",
+				"\x1\x79",
+				"\x1\x7A",
+				"\x1\x7B",
+				"\x1\x7C",
+				"\x1\x7D",
+				"\x1\x7E",
+				"",
+				"\x1\x6A\x1\xFFFF\xA\x6B\x7\xFFFF\x6\x6B\x9\xFFFF\x1\x6A\x10\xFFFF\x6"+
+				"\x6B\x9\xFFFF\x1\x6A",
+				"",
+				"\x1\x80\x1D\xFFFF\x1\x6C",
+				"",
+				"\x1\x81",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x8\x24\x1\x82\x11"+
+				"\x24",
+				"",
+				"\x1\x84",
+				"",
+				"\x1\x85",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\x1\x87",
+				"",
+				"",
+				"\x1\x88",
+				"\x1\x89",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\x1\x8C",
+				"\x1\x8D",
+				"",
+				"\x1\x8E\x1D\xFFFF\x1\x6C",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\x1\x90",
+				"",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\x1\x92",
+				"",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\x1\x94",
+				"\x1\x95",
+				"",
+				"",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\x1\x98\x1D\xFFFF\x1\x6C",
+				"",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"",
+				"\x1\x9A",
+				"",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"",
+				"",
+				"\x1\x9D\x1D\xFFFF\x1\x6C",
+				"",
+				"\x1\x9E",
+				"",
+				"",
+				"\x1\x9F\x1D\xFFFF\x1\x6C",
+				"\xA\x24\x7\xFFFF\x1A\x24\x4\xFFFF\x1\x24\x1\xFFFF\x1A\x24",
+				"\x1\xA1\x1D\xFFFF\x1\x6C",
+				"",
+				"\x1\xA2\x1D\xFFFF\x1\x6C",
+				"\x1\xA3\x1D\xFFFF\x1\x6C",
+				"\x1\xA4\x1D\xFFFF\x1\x6C",
+				"\x1\x6C"
+			};
+
+		private static readonly short[] DFA59_eot = DFA.UnpackEncodedString(DFA59_eotS);
+		private static readonly short[] DFA59_eof = DFA.UnpackEncodedString(DFA59_eofS);
+		private static readonly char[] DFA59_min = DFA.UnpackEncodedStringToUnsignedChars(DFA59_minS);
+		private static readonly char[] DFA59_max = DFA.UnpackEncodedStringToUnsignedChars(DFA59_maxS);
+		private static readonly short[] DFA59_accept = DFA.UnpackEncodedString(DFA59_acceptS);
+		private static readonly short[] DFA59_special = DFA.UnpackEncodedString(DFA59_specialS);
+		private static readonly short[][] DFA59_transition;
+
+		static DFA59()
+		{
+			int numStates = DFA59_transitionS.Length;
+			DFA59_transition = new short[numStates][];
+			for ( int i=0; i < numStates; i++ )
+			{
+				DFA59_transition[i] = DFA.UnpackEncodedString(DFA59_transitionS[i]);
+			}
+		}
+
+		public DFA59( BaseRecognizer recognizer )
+		{
+			this.recognizer = recognizer;
+			this.decisionNumber = 59;
+			this.eot = DFA59_eot;
+			this.eof = DFA59_eof;
+			this.min = DFA59_min;
+			this.max = DFA59_max;
+			this.accept = DFA59_accept;
+			this.special = DFA59_special;
+			this.transition = DFA59_transition;
+		}
+
+		public override string Description { get { return "1:1: Tokens : ( T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | NAME | NORMALSTRING | CHARSTRING | LONGSTRING | INT | HEX | FLOAT | HEX_FLOAT | COMMENT | LINE_COMMENT | WS | SHEBANG );"; } }
+
+		public override void Error(NoViableAltException nvae)
+		{
+			DebugRecognitionException(nvae);
+		}
+	}
+
 
 	#endregion
 

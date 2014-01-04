@@ -291,7 +291,13 @@ COMMENT
     ;
 
 LINE_COMMENT
-    : '--' ('[' '='*)? (~'['|EOF) ~('\n'|'\r')* -> channel(HIDDEN)
+	: '--'
+	(												// --
+	| '[' '='*										// --[==
+	| '[' '='* ~('='|'['|'\r'|'\n') ~('\r'|'\n')*	// --[==AA
+	| ~('['|'\r'|'\n') ~('\r'|'\n')*				// --AAA
+	) ('\r\n'|'\r'|'\n'|EOF)
+	-> channel(HIDDEN)
     ;
 
 CSTYLE_COMMENT
@@ -299,15 +305,11 @@ CSTYLE_COMMENT
     ;
 
 CSTYLE_LINE_COMMENT
-    :   '//' ~[\r\n]* -> channel(HIDDEN)
+    :   '//' ~('\n'|'\r')* -> channel(HIDDEN)
     ;
     
 WS  
-    : [ \t\u000C]+ -> channel(HIDDEN)
-    ;
-    
-NEWLINE
-    : '\r'? '\n' -> channel(HIDDEN)
+    : [ \t\u000C\r\n]+ -> channel(HIDDEN)
     ;
 
 SHEBANG

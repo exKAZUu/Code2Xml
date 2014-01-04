@@ -38,6 +38,8 @@ a = 1")]
 		[TestCase(@"--[")]
 		[TestCase(@"--[==")]
 		[TestCase(@"--[==[]==]")]
+		[TestCase(@"if true then --[[SCars]] end")]
+		[TestCase(@"if true --[[SCars]] then end")]
 		public void Parse(string code) {
 			VerifyRestoringCode(code);
 		}

@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using Code2Xml.Core;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.ANTLRv3.Processors.Lua;
@@ -38,8 +39,22 @@ a = 1")]
 		[TestCase(@"--[")]
 		[TestCase(@"--[==")]
 		[TestCase(@"--[==[]==]")]
+		[TestCase(@"if true then end --[[SCars]] ")]
+		[TestCase(@"if true then --[[SCars]] end")]
+		[TestCase(@"if true --[[SCars]] then end")]
+		[TestCase(@"--[=")]
+		[TestCase(@"--a")]
+		[TestCase("-- running the tests and examples\nrequire 'pl'\n")]
+		[TestCase("require 'pl'\n")]
 		public void Parse(string code) {
 			VerifyRestoringCode(code);
+		}
+
+		[Test]
+		public void test() {
+			var x = new LuaProcessorUsingAntlr3()
+					.GenerateXml("-- running the tests and examples\nrequire 'pl'\n");
+			Console.WriteLine(x);
 		}
 
 		[Test]
