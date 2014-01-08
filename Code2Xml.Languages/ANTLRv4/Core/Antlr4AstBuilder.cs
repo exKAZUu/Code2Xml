@@ -58,6 +58,7 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
 			element.SetAttributeValue(Code2XmlConstants.IdAttributeName, 0);
             root.Add(element);
 			root.SetAttributeValue(Code2XmlConstants.IdAttributeName, 0);
+			root.Remove();	// TODO: is it OK?
             return root;
         }
 
