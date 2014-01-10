@@ -17,6 +17,8 @@ using System.Diagnostics;
 
 @members
 {
+	private int _queryExpression = 0;
+
 	protected bool is_class_modifier() 
 	{
 		return false;
@@ -554,10 +556,7 @@ select_or_group_clause:
 select_clause:
 	'select'   expression ;
 group_clause:
-	'group' expression 'by' (
-		  ( expression 'into' ) => expression
-		| expression
-	);
+	'group' expression 'by' expression;
 where_clause:
 	'where'   boolean_expression ;
 
@@ -1054,8 +1053,13 @@ predefined_type:
 	| 'short'  | 'string' | 'uint'   | 'ulong'  | 'ushort' ;
 
 identifier:
- 	IDENTIFIER | 'add' | 'alias' | 'assembly' | 'module' | 'field' | 'method' | 'param' | 'property' | 'type'
-	| 'yield' | 'from' | 'into' | 'join' | 'on' | 'where' | 'orderby' | 'group' | 'by' | 'ascending' | 'descending' | 'equals' | 'select' | 'pragma' | 'let' | 'remove' | 'get' | 'set' | 'var' | '__arglist' | 'dynamic' | 'async' | 'await' | 'partial';
+	{_queryExpression == 0}? =>
+ 		( IDENTIFIER | 'add' | 'alias' | 'assembly' | 'module' | 'field' | 'method' | 'param' | 'property' | 'type'
+		| 'yield' | 'pragma' | 'remove' | 'get' | 'set' | 'var' | '__arglist' | 'dynamic' | 'async' | 'await' | 'partial'
+		| 'from' | 'into' | 'join' | 'on' | 'where' | 'orderby' | 'group' | 'by' | 'ascending' | 'descending' | 'equals' | 'select' | 'let')
+	|	( IDENTIFIER | 'add' | 'alias' | 'assembly' | 'module' | 'field' | 'method' | 'param' | 'property' | 'type'
+		| 'yield' | 'pragma' | 'remove' | 'get' | 'set' | 'var' | '__arglist' | 'dynamic' | 'async' | 'await' | 'partial')
+	;
 
 //keyword:
 ////	'abstract' | 'as' | 'base' | 'bool' | 'break' | 'byte' | 'case' |  'catch' | 'char' | 'checked' | 'class' | 'const' | 'continue' | 'decimal' | 'default' | 'delegate' | 'do' |	'double' | 'else' |	 'enum'  | 'event' | 'explicit' | 'extern' | 'false' | 'finally' | 'fixed' | 'float' | 'for' | 'foreach' | 'goto' | 'if' | 'implicit' | 'in' | 'int' | 'interface' | 'internal' | 'is' | 'lock' | 'long' | 'namespace' | 'new' | 'null' | 'object' | 'operator' | 'out' | 'override' | 'params' | 'private' | 'protected' | 'public' | 'readonly' | 'ref' | 'return' | 'sbyte' | 'sealed' | 'short' | 'sizeof' | 'stackalloc' | 'static' | 'string' | 'struct' | 'switch' | 'this' | 'throw' | 'true' | 'try' | 'typeof' | 'uint' | 'ulong' | 'unchecked' | 'unsafe' | 'ushort' | 'using' |	 'virtual' | 'void' | 'volatile' ;
@@ -1291,10 +1295,10 @@ PP_PRIMARY_EXPRESSION:
     
 fragment
 IdentifierStart
-    :   '@' | '_' | 'A'..'Z' | 'a'..'z' ;
+    :   '@' | '_' | 'A'..'Z' | 'a'..'z' | UnicodeEscapeSequence;
 fragment
 IdentifierPart
-: 'A'..'Z' | 'a'..'z' | '0'..'9' | '_' ;
+: 'A'..'Z' | 'a'..'z' | '0'..'9' | '_' | UnicodeEscapeSequence;
 fragment
 EscapeSequence 
     :   '\\' (
@@ -1317,7 +1321,15 @@ EscapeSequence
              |   'x'   HEX_DIGIT   HEX_DIGIT  HEX_DIGIT  HEX_DIGIT
              |   'u'   HEX_DIGIT   HEX_DIGIT  HEX_DIGIT  HEX_DIGIT
              |   'U'   HEX_DIGIT   HEX_DIGIT  HEX_DIGIT  HEX_DIGIT  HEX_DIGIT  HEX_DIGIT  HEX_DIGIT
-             ) ;     
+             ) ;
+
+fragment
+UnicodeEscapeSequence 
+    :   '\\' (
+                 'u'   HEX_DIGIT   HEX_DIGIT  HEX_DIGIT  HEX_DIGIT
+             |   'U'   HEX_DIGIT   HEX_DIGIT  HEX_DIGIT  HEX_DIGIT  HEX_DIGIT  HEX_DIGIT  HEX_DIGIT
+             ) ;
+
 fragment
 Decimal_integer_literal:
     Decimal_digits   INTEGER_TYPE_SUFFIX? ;

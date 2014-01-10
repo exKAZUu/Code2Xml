@@ -89,6 +89,7 @@ xxxxx
 		[TestCase(@"class K { void m() { var partial = 1; } }")]
 		[TestCase(@"class K { void m() { var get = 1; } }")]
 		[TestCase(@"class K { void m() { var set = 1; } }")]
+		[TestCase(@"class K { void m() { var from = 1; } }")]
 		[TestCase(@"class K { void m() { var q = u.Name == (s); } }")]
 		[TestCase(@"class K { void m() { var q = from u in u where u == (s) select u; } }")]
 		[TestCase(@"#pragma warning")]
@@ -97,6 +98,8 @@ xxxxx
 		[TestCase(@"
 #if!A
 #endif")]
+		[TestCase(@"class K { void m() { var from = 1; from = 2; } }")]
+		[TestCase(@"public class \u211B { }")]
 		public void Parse(string code) {
 			VerifyRestoringCode(code);
 		}
@@ -115,9 +118,11 @@ xxxxx
 		[TestCase("moq4")]
 		[TestCase("MechJeb2")]
 		[TestCase("MediaPortal-1")]
-		[TestCase("mobile-samples")]
+		[TestCase("ServiceStack")]
 		[TestCase("MonoTouch.Dialog")]
 		[TestCase("ravendb")]
+		[TestCase("Nancy")]
+		[TestCase("Newtonsoft.Json")]
 		public void ParseDirectory(string fileName) {
 			VerifyRestoringProjectDirectory("CSharp", fileName, "*.cs");
 		}

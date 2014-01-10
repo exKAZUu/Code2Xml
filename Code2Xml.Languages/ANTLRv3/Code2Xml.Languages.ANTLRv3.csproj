@@ -54,6 +54,7 @@
     <Compile Include="Core\ExtensionForParser.cs" />
     <Compile Include="Core\Antlr3AstNode.cs" />
     <Compile Include="Core\XmlToCodeUsingProcessor.cs" />
+    <Compile Include="Processors\CSharp\csParser.Helper.cs" />
     <Compile Include="Processors\CSharp\csLexer.cs" />
     <Compile Include="Processors\CSharp\csLexerWithPreProcessor.cs" />
     <Compile Include="Processors\CSharp\csParser.cs" />
