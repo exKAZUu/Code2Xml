@@ -70,6 +70,7 @@ xxxxx
 		[TestCase(@"class K { void m() { var a = new []{ 1 }.GetEnumerator(); } }")]
 		[TestCase(@"class K { void m() { new Action[]{ }[0](); } }")]
 		[TestCase(@"class K { void m() { var a = new Action[]{ }[0]; } }")]
+		[TestCase(@"﻿using System;")]
 		public void Parse(string code) {
 			VerifyRestoringCode(code);
 		}
