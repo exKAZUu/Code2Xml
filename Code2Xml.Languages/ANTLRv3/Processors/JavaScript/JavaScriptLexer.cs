@@ -9,7 +9,7 @@ using Code2Xml.Languages.ANTLRv3.Core;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g 2014-01-03 15:57:56
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g 2014-01-10 13:19:00
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -60,18 +60,18 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 	public const int RegularExpressionFirstChar=29;
 	public const int RegularExpressionInnerChar=30;
 	public const int RegularExpressionLiteral=31;
-	public const int SingleEscapeCharacter=32;
-	public const int SingleStringCharacter=33;
-	public const int StringLiteral=34;
-	public const int THIS=35;
-	public const int TRUE=36;
-	public const int UnicodeCombiningMark=37;
-	public const int UnicodeConnectorPunctuation=38;
-	public const int UnicodeDigit=39;
-	public const int UnicodeEscapeSequence=40;
-	public const int UnicodeLetter=41;
-	public const int WhiteSpace=42;
-	public const int T__43=43;
+	public const int SHEBANG=32;
+	public const int SingleEscapeCharacter=33;
+	public const int SingleStringCharacter=34;
+	public const int StringLiteral=35;
+	public const int THIS=36;
+	public const int TRUE=37;
+	public const int UnicodeCombiningMark=38;
+	public const int UnicodeConnectorPunctuation=39;
+	public const int UnicodeDigit=40;
+	public const int UnicodeEscapeSequence=41;
+	public const int UnicodeLetter=42;
+	public const int WhiteSpace=43;
 	public const int T__44=44;
 	public const int T__45=45;
 	public const int T__46=46;
@@ -140,6 +140,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 	public const int T__109=109;
 	public const int T__110=110;
 	public const int T__111=111;
+	public const int T__112=112;
 
 	// delegates
 	// delegators
@@ -416,19 +417,19 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 	}
 	// $ANTLR end "TRUE"
 
-	partial void EnterRule_T__43();
-	partial void LeaveRule_T__43();
+	partial void EnterRule_T__44();
+	partial void LeaveRule_T__44();
 
-	// $ANTLR start "T__43"
-	[GrammarRule("T__43")]
-	private void mT__43()
+	// $ANTLR start "T__44"
+	[GrammarRule("T__44")]
+	private void mT__44()
 	{
-		EnterRule_T__43();
-		EnterRule("T__43", 8);
-		TraceIn("T__43", 8);
+		EnterRule_T__44();
+		EnterRule("T__44", 8);
+		TraceIn("T__44", 8);
 		try
 		{
-			int _type = T__43;
+			int _type = T__44;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:16:7: ( '!' )
 			DebugEnterAlt(1);
@@ -444,26 +445,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__43", 8);
-			LeaveRule("T__43", 8);
-			LeaveRule_T__43();
+			TraceOut("T__44", 8);
+			LeaveRule("T__44", 8);
+			LeaveRule_T__44();
 		}
 	}
-	// $ANTLR end "T__43"
+	// $ANTLR end "T__44"
 
-	partial void EnterRule_T__44();
-	partial void LeaveRule_T__44();
+	partial void EnterRule_T__45();
+	partial void LeaveRule_T__45();
 
-	// $ANTLR start "T__44"
-	[GrammarRule("T__44")]
-	private void mT__44()
+	// $ANTLR start "T__45"
+	[GrammarRule("T__45")]
+	private void mT__45()
 	{
-		EnterRule_T__44();
-		EnterRule("T__44", 9);
-		TraceIn("T__44", 9);
+		EnterRule_T__45();
+		EnterRule("T__45", 9);
+		TraceIn("T__45", 9);
 		try
 		{
-			int _type = T__44;
+			int _type = T__45;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:17:7: ( '!=' )
 			DebugEnterAlt(1);
@@ -480,26 +481,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__44", 9);
-			LeaveRule("T__44", 9);
-			LeaveRule_T__44();
+			TraceOut("T__45", 9);
+			LeaveRule("T__45", 9);
+			LeaveRule_T__45();
 		}
 	}
-	// $ANTLR end "T__44"
+	// $ANTLR end "T__45"
 
-	partial void EnterRule_T__45();
-	partial void LeaveRule_T__45();
+	partial void EnterRule_T__46();
+	partial void LeaveRule_T__46();
 
-	// $ANTLR start "T__45"
-	[GrammarRule("T__45")]
-	private void mT__45()
+	// $ANTLR start "T__46"
+	[GrammarRule("T__46")]
+	private void mT__46()
 	{
-		EnterRule_T__45();
-		EnterRule("T__45", 10);
-		TraceIn("T__45", 10);
+		EnterRule_T__46();
+		EnterRule("T__46", 10);
+		TraceIn("T__46", 10);
 		try
 		{
-			int _type = T__45;
+			int _type = T__46;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:18:7: ( '!==' )
 			DebugEnterAlt(1);
@@ -516,26 +517,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__45", 10);
-			LeaveRule("T__45", 10);
-			LeaveRule_T__45();
+			TraceOut("T__46", 10);
+			LeaveRule("T__46", 10);
+			LeaveRule_T__46();
 		}
 	}
-	// $ANTLR end "T__45"
+	// $ANTLR end "T__46"
 
-	partial void EnterRule_T__46();
-	partial void LeaveRule_T__46();
+	partial void EnterRule_T__47();
+	partial void LeaveRule_T__47();
 
-	// $ANTLR start "T__46"
-	[GrammarRule("T__46")]
-	private void mT__46()
+	// $ANTLR start "T__47"
+	[GrammarRule("T__47")]
+	private void mT__47()
 	{
-		EnterRule_T__46();
-		EnterRule("T__46", 11);
-		TraceIn("T__46", 11);
+		EnterRule_T__47();
+		EnterRule("T__47", 11);
+		TraceIn("T__47", 11);
 		try
 		{
-			int _type = T__46;
+			int _type = T__47;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:19:7: ( '%' )
 			DebugEnterAlt(1);
@@ -551,26 +552,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__46", 11);
-			LeaveRule("T__46", 11);
-			LeaveRule_T__46();
+			TraceOut("T__47", 11);
+			LeaveRule("T__47", 11);
+			LeaveRule_T__47();
 		}
 	}
-	// $ANTLR end "T__46"
+	// $ANTLR end "T__47"
 
-	partial void EnterRule_T__47();
-	partial void LeaveRule_T__47();
+	partial void EnterRule_T__48();
+	partial void LeaveRule_T__48();
 
-	// $ANTLR start "T__47"
-	[GrammarRule("T__47")]
-	private void mT__47()
+	// $ANTLR start "T__48"
+	[GrammarRule("T__48")]
+	private void mT__48()
 	{
-		EnterRule_T__47();
-		EnterRule("T__47", 12);
-		TraceIn("T__47", 12);
+		EnterRule_T__48();
+		EnterRule("T__48", 12);
+		TraceIn("T__48", 12);
 		try
 		{
-			int _type = T__47;
+			int _type = T__48;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:20:7: ( '%=' )
 			DebugEnterAlt(1);
@@ -587,26 +588,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__47", 12);
-			LeaveRule("T__47", 12);
-			LeaveRule_T__47();
+			TraceOut("T__48", 12);
+			LeaveRule("T__48", 12);
+			LeaveRule_T__48();
 		}
 	}
-	// $ANTLR end "T__47"
+	// $ANTLR end "T__48"
 
-	partial void EnterRule_T__48();
-	partial void LeaveRule_T__48();
+	partial void EnterRule_T__49();
+	partial void LeaveRule_T__49();
 
-	// $ANTLR start "T__48"
-	[GrammarRule("T__48")]
-	private void mT__48()
+	// $ANTLR start "T__49"
+	[GrammarRule("T__49")]
+	private void mT__49()
 	{
-		EnterRule_T__48();
-		EnterRule("T__48", 13);
-		TraceIn("T__48", 13);
+		EnterRule_T__49();
+		EnterRule("T__49", 13);
+		TraceIn("T__49", 13);
 		try
 		{
-			int _type = T__48;
+			int _type = T__49;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:21:7: ( '&&' )
 			DebugEnterAlt(1);
@@ -623,26 +624,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__48", 13);
-			LeaveRule("T__48", 13);
-			LeaveRule_T__48();
+			TraceOut("T__49", 13);
+			LeaveRule("T__49", 13);
+			LeaveRule_T__49();
 		}
 	}
-	// $ANTLR end "T__48"
+	// $ANTLR end "T__49"
 
-	partial void EnterRule_T__49();
-	partial void LeaveRule_T__49();
+	partial void EnterRule_T__50();
+	partial void LeaveRule_T__50();
 
-	// $ANTLR start "T__49"
-	[GrammarRule("T__49")]
-	private void mT__49()
+	// $ANTLR start "T__50"
+	[GrammarRule("T__50")]
+	private void mT__50()
 	{
-		EnterRule_T__49();
-		EnterRule("T__49", 14);
-		TraceIn("T__49", 14);
+		EnterRule_T__50();
+		EnterRule("T__50", 14);
+		TraceIn("T__50", 14);
 		try
 		{
-			int _type = T__49;
+			int _type = T__50;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:22:7: ( '&' )
 			DebugEnterAlt(1);
@@ -658,26 +659,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__49", 14);
-			LeaveRule("T__49", 14);
-			LeaveRule_T__49();
+			TraceOut("T__50", 14);
+			LeaveRule("T__50", 14);
+			LeaveRule_T__50();
 		}
 	}
-	// $ANTLR end "T__49"
+	// $ANTLR end "T__50"
 
-	partial void EnterRule_T__50();
-	partial void LeaveRule_T__50();
+	partial void EnterRule_T__51();
+	partial void LeaveRule_T__51();
 
-	// $ANTLR start "T__50"
-	[GrammarRule("T__50")]
-	private void mT__50()
+	// $ANTLR start "T__51"
+	[GrammarRule("T__51")]
+	private void mT__51()
 	{
-		EnterRule_T__50();
-		EnterRule("T__50", 15);
-		TraceIn("T__50", 15);
+		EnterRule_T__51();
+		EnterRule("T__51", 15);
+		TraceIn("T__51", 15);
 		try
 		{
-			int _type = T__50;
+			int _type = T__51;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:23:7: ( '&=' )
 			DebugEnterAlt(1);
@@ -694,26 +695,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__50", 15);
-			LeaveRule("T__50", 15);
-			LeaveRule_T__50();
+			TraceOut("T__51", 15);
+			LeaveRule("T__51", 15);
+			LeaveRule_T__51();
 		}
 	}
-	// $ANTLR end "T__50"
+	// $ANTLR end "T__51"
 
-	partial void EnterRule_T__51();
-	partial void LeaveRule_T__51();
+	partial void EnterRule_T__52();
+	partial void LeaveRule_T__52();
 
-	// $ANTLR start "T__51"
-	[GrammarRule("T__51")]
-	private void mT__51()
+	// $ANTLR start "T__52"
+	[GrammarRule("T__52")]
+	private void mT__52()
 	{
-		EnterRule_T__51();
-		EnterRule("T__51", 16);
-		TraceIn("T__51", 16);
+		EnterRule_T__52();
+		EnterRule("T__52", 16);
+		TraceIn("T__52", 16);
 		try
 		{
-			int _type = T__51;
+			int _type = T__52;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:24:7: ( '(' )
 			DebugEnterAlt(1);
@@ -729,26 +730,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__51", 16);
-			LeaveRule("T__51", 16);
-			LeaveRule_T__51();
+			TraceOut("T__52", 16);
+			LeaveRule("T__52", 16);
+			LeaveRule_T__52();
 		}
 	}
-	// $ANTLR end "T__51"
+	// $ANTLR end "T__52"
 
-	partial void EnterRule_T__52();
-	partial void LeaveRule_T__52();
+	partial void EnterRule_T__53();
+	partial void LeaveRule_T__53();
 
-	// $ANTLR start "T__52"
-	[GrammarRule("T__52")]
-	private void mT__52()
+	// $ANTLR start "T__53"
+	[GrammarRule("T__53")]
+	private void mT__53()
 	{
-		EnterRule_T__52();
-		EnterRule("T__52", 17);
-		TraceIn("T__52", 17);
+		EnterRule_T__53();
+		EnterRule("T__53", 17);
+		TraceIn("T__53", 17);
 		try
 		{
-			int _type = T__52;
+			int _type = T__53;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:25:7: ( '*' )
 			DebugEnterAlt(1);
@@ -764,26 +765,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__52", 17);
-			LeaveRule("T__52", 17);
-			LeaveRule_T__52();
+			TraceOut("T__53", 17);
+			LeaveRule("T__53", 17);
+			LeaveRule_T__53();
 		}
 	}
-	// $ANTLR end "T__52"
+	// $ANTLR end "T__53"
 
-	partial void EnterRule_T__53();
-	partial void LeaveRule_T__53();
+	partial void EnterRule_T__54();
+	partial void LeaveRule_T__54();
 
-	// $ANTLR start "T__53"
-	[GrammarRule("T__53")]
-	private void mT__53()
+	// $ANTLR start "T__54"
+	[GrammarRule("T__54")]
+	private void mT__54()
 	{
-		EnterRule_T__53();
-		EnterRule("T__53", 18);
-		TraceIn("T__53", 18);
+		EnterRule_T__54();
+		EnterRule("T__54", 18);
+		TraceIn("T__54", 18);
 		try
 		{
-			int _type = T__53;
+			int _type = T__54;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:26:7: ( '*=' )
 			DebugEnterAlt(1);
@@ -800,26 +801,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__53", 18);
-			LeaveRule("T__53", 18);
-			LeaveRule_T__53();
+			TraceOut("T__54", 18);
+			LeaveRule("T__54", 18);
+			LeaveRule_T__54();
 		}
 	}
-	// $ANTLR end "T__53"
+	// $ANTLR end "T__54"
 
-	partial void EnterRule_T__54();
-	partial void LeaveRule_T__54();
+	partial void EnterRule_T__55();
+	partial void LeaveRule_T__55();
 
-	// $ANTLR start "T__54"
-	[GrammarRule("T__54")]
-	private void mT__54()
+	// $ANTLR start "T__55"
+	[GrammarRule("T__55")]
+	private void mT__55()
 	{
-		EnterRule_T__54();
-		EnterRule("T__54", 19);
-		TraceIn("T__54", 19);
+		EnterRule_T__55();
+		EnterRule("T__55", 19);
+		TraceIn("T__55", 19);
 		try
 		{
-			int _type = T__54;
+			int _type = T__55;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:27:7: ( '+' )
 			DebugEnterAlt(1);
@@ -835,26 +836,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__54", 19);
-			LeaveRule("T__54", 19);
-			LeaveRule_T__54();
+			TraceOut("T__55", 19);
+			LeaveRule("T__55", 19);
+			LeaveRule_T__55();
 		}
 	}
-	// $ANTLR end "T__54"
+	// $ANTLR end "T__55"
 
-	partial void EnterRule_T__55();
-	partial void LeaveRule_T__55();
+	partial void EnterRule_T__56();
+	partial void LeaveRule_T__56();
 
-	// $ANTLR start "T__55"
-	[GrammarRule("T__55")]
-	private void mT__55()
+	// $ANTLR start "T__56"
+	[GrammarRule("T__56")]
+	private void mT__56()
 	{
-		EnterRule_T__55();
-		EnterRule("T__55", 20);
-		TraceIn("T__55", 20);
+		EnterRule_T__56();
+		EnterRule("T__56", 20);
+		TraceIn("T__56", 20);
 		try
 		{
-			int _type = T__55;
+			int _type = T__56;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:28:7: ( '++' )
 			DebugEnterAlt(1);
@@ -871,26 +872,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__55", 20);
-			LeaveRule("T__55", 20);
-			LeaveRule_T__55();
+			TraceOut("T__56", 20);
+			LeaveRule("T__56", 20);
+			LeaveRule_T__56();
 		}
 	}
-	// $ANTLR end "T__55"
+	// $ANTLR end "T__56"
 
-	partial void EnterRule_T__56();
-	partial void LeaveRule_T__56();
+	partial void EnterRule_T__57();
+	partial void LeaveRule_T__57();
 
-	// $ANTLR start "T__56"
-	[GrammarRule("T__56")]
-	private void mT__56()
+	// $ANTLR start "T__57"
+	[GrammarRule("T__57")]
+	private void mT__57()
 	{
-		EnterRule_T__56();
-		EnterRule("T__56", 21);
-		TraceIn("T__56", 21);
+		EnterRule_T__57();
+		EnterRule("T__57", 21);
+		TraceIn("T__57", 21);
 		try
 		{
-			int _type = T__56;
+			int _type = T__57;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:29:7: ( '+=' )
 			DebugEnterAlt(1);
@@ -907,26 +908,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__56", 21);
-			LeaveRule("T__56", 21);
-			LeaveRule_T__56();
+			TraceOut("T__57", 21);
+			LeaveRule("T__57", 21);
+			LeaveRule_T__57();
 		}
 	}
-	// $ANTLR end "T__56"
+	// $ANTLR end "T__57"
 
-	partial void EnterRule_T__57();
-	partial void LeaveRule_T__57();
+	partial void EnterRule_T__58();
+	partial void LeaveRule_T__58();
 
-	// $ANTLR start "T__57"
-	[GrammarRule("T__57")]
-	private void mT__57()
+	// $ANTLR start "T__58"
+	[GrammarRule("T__58")]
+	private void mT__58()
 	{
-		EnterRule_T__57();
-		EnterRule("T__57", 22);
-		TraceIn("T__57", 22);
+		EnterRule_T__58();
+		EnterRule("T__58", 22);
+		TraceIn("T__58", 22);
 		try
 		{
-			int _type = T__57;
+			int _type = T__58;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:30:7: ( ',' )
 			DebugEnterAlt(1);
@@ -942,26 +943,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__57", 22);
-			LeaveRule("T__57", 22);
-			LeaveRule_T__57();
+			TraceOut("T__58", 22);
+			LeaveRule("T__58", 22);
+			LeaveRule_T__58();
 		}
 	}
-	// $ANTLR end "T__57"
+	// $ANTLR end "T__58"
 
-	partial void EnterRule_T__58();
-	partial void LeaveRule_T__58();
+	partial void EnterRule_T__59();
+	partial void LeaveRule_T__59();
 
-	// $ANTLR start "T__58"
-	[GrammarRule("T__58")]
-	private void mT__58()
+	// $ANTLR start "T__59"
+	[GrammarRule("T__59")]
+	private void mT__59()
 	{
-		EnterRule_T__58();
-		EnterRule("T__58", 23);
-		TraceIn("T__58", 23);
+		EnterRule_T__59();
+		EnterRule("T__59", 23);
+		TraceIn("T__59", 23);
 		try
 		{
-			int _type = T__58;
+			int _type = T__59;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:31:7: ( '-' )
 			DebugEnterAlt(1);
@@ -977,26 +978,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__58", 23);
-			LeaveRule("T__58", 23);
-			LeaveRule_T__58();
+			TraceOut("T__59", 23);
+			LeaveRule("T__59", 23);
+			LeaveRule_T__59();
 		}
 	}
-	// $ANTLR end "T__58"
+	// $ANTLR end "T__59"
 
-	partial void EnterRule_T__59();
-	partial void LeaveRule_T__59();
+	partial void EnterRule_T__60();
+	partial void LeaveRule_T__60();
 
-	// $ANTLR start "T__59"
-	[GrammarRule("T__59")]
-	private void mT__59()
+	// $ANTLR start "T__60"
+	[GrammarRule("T__60")]
+	private void mT__60()
 	{
-		EnterRule_T__59();
-		EnterRule("T__59", 24);
-		TraceIn("T__59", 24);
+		EnterRule_T__60();
+		EnterRule("T__60", 24);
+		TraceIn("T__60", 24);
 		try
 		{
-			int _type = T__59;
+			int _type = T__60;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:32:7: ( '--' )
 			DebugEnterAlt(1);
@@ -1013,26 +1014,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__59", 24);
-			LeaveRule("T__59", 24);
-			LeaveRule_T__59();
+			TraceOut("T__60", 24);
+			LeaveRule("T__60", 24);
+			LeaveRule_T__60();
 		}
 	}
-	// $ANTLR end "T__59"
+	// $ANTLR end "T__60"
 
-	partial void EnterRule_T__60();
-	partial void LeaveRule_T__60();
+	partial void EnterRule_T__61();
+	partial void LeaveRule_T__61();
 
-	// $ANTLR start "T__60"
-	[GrammarRule("T__60")]
-	private void mT__60()
+	// $ANTLR start "T__61"
+	[GrammarRule("T__61")]
+	private void mT__61()
 	{
-		EnterRule_T__60();
-		EnterRule("T__60", 25);
-		TraceIn("T__60", 25);
+		EnterRule_T__61();
+		EnterRule("T__61", 25);
+		TraceIn("T__61", 25);
 		try
 		{
-			int _type = T__60;
+			int _type = T__61;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:33:7: ( '-=' )
 			DebugEnterAlt(1);
@@ -1049,26 +1050,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__60", 25);
-			LeaveRule("T__60", 25);
-			LeaveRule_T__60();
+			TraceOut("T__61", 25);
+			LeaveRule("T__61", 25);
+			LeaveRule_T__61();
 		}
 	}
-	// $ANTLR end "T__60"
+	// $ANTLR end "T__61"
 
-	partial void EnterRule_T__61();
-	partial void LeaveRule_T__61();
+	partial void EnterRule_T__62();
+	partial void LeaveRule_T__62();
 
-	// $ANTLR start "T__61"
-	[GrammarRule("T__61")]
-	private void mT__61()
+	// $ANTLR start "T__62"
+	[GrammarRule("T__62")]
+	private void mT__62()
 	{
-		EnterRule_T__61();
-		EnterRule("T__61", 26);
-		TraceIn("T__61", 26);
+		EnterRule_T__62();
+		EnterRule("T__62", 26);
+		TraceIn("T__62", 26);
 		try
 		{
-			int _type = T__61;
+			int _type = T__62;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:34:7: ( '.' )
 			DebugEnterAlt(1);
@@ -1084,26 +1085,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__61", 26);
-			LeaveRule("T__61", 26);
-			LeaveRule_T__61();
+			TraceOut("T__62", 26);
+			LeaveRule("T__62", 26);
+			LeaveRule_T__62();
 		}
 	}
-	// $ANTLR end "T__61"
+	// $ANTLR end "T__62"
 
-	partial void EnterRule_T__62();
-	partial void LeaveRule_T__62();
+	partial void EnterRule_T__63();
+	partial void LeaveRule_T__63();
 
-	// $ANTLR start "T__62"
-	[GrammarRule("T__62")]
-	private void mT__62()
+	// $ANTLR start "T__63"
+	[GrammarRule("T__63")]
+	private void mT__63()
 	{
-		EnterRule_T__62();
-		EnterRule("T__62", 27);
-		TraceIn("T__62", 27);
+		EnterRule_T__63();
+		EnterRule("T__63", 27);
+		TraceIn("T__63", 27);
 		try
 		{
-			int _type = T__62;
+			int _type = T__63;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:35:7: ( '/' )
 			DebugEnterAlt(1);
@@ -1119,26 +1120,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__62", 27);
-			LeaveRule("T__62", 27);
-			LeaveRule_T__62();
+			TraceOut("T__63", 27);
+			LeaveRule("T__63", 27);
+			LeaveRule_T__63();
 		}
 	}
-	// $ANTLR end "T__62"
+	// $ANTLR end "T__63"
 
-	partial void EnterRule_T__63();
-	partial void LeaveRule_T__63();
+	partial void EnterRule_T__64();
+	partial void LeaveRule_T__64();
 
-	// $ANTLR start "T__63"
-	[GrammarRule("T__63")]
-	private void mT__63()
+	// $ANTLR start "T__64"
+	[GrammarRule("T__64")]
+	private void mT__64()
 	{
-		EnterRule_T__63();
-		EnterRule("T__63", 28);
-		TraceIn("T__63", 28);
+		EnterRule_T__64();
+		EnterRule("T__64", 28);
+		TraceIn("T__64", 28);
 		try
 		{
-			int _type = T__63;
+			int _type = T__64;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:36:7: ( '/=' )
 			DebugEnterAlt(1);
@@ -1155,26 +1156,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__63", 28);
-			LeaveRule("T__63", 28);
-			LeaveRule_T__63();
+			TraceOut("T__64", 28);
+			LeaveRule("T__64", 28);
+			LeaveRule_T__64();
 		}
 	}
-	// $ANTLR end "T__63"
+	// $ANTLR end "T__64"
 
-	partial void EnterRule_T__64();
-	partial void LeaveRule_T__64();
+	partial void EnterRule_T__65();
+	partial void LeaveRule_T__65();
 
-	// $ANTLR start "T__64"
-	[GrammarRule("T__64")]
-	private void mT__64()
+	// $ANTLR start "T__65"
+	[GrammarRule("T__65")]
+	private void mT__65()
 	{
-		EnterRule_T__64();
-		EnterRule("T__64", 29);
-		TraceIn("T__64", 29);
+		EnterRule_T__65();
+		EnterRule("T__65", 29);
+		TraceIn("T__65", 29);
 		try
 		{
-			int _type = T__64;
+			int _type = T__65;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:37:7: ( ':' )
 			DebugEnterAlt(1);
@@ -1190,26 +1191,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__64", 29);
-			LeaveRule("T__64", 29);
-			LeaveRule_T__64();
+			TraceOut("T__65", 29);
+			LeaveRule("T__65", 29);
+			LeaveRule_T__65();
 		}
 	}
-	// $ANTLR end "T__64"
+	// $ANTLR end "T__65"
 
-	partial void EnterRule_T__65();
-	partial void LeaveRule_T__65();
+	partial void EnterRule_T__66();
+	partial void LeaveRule_T__66();
 
-	// $ANTLR start "T__65"
-	[GrammarRule("T__65")]
-	private void mT__65()
+	// $ANTLR start "T__66"
+	[GrammarRule("T__66")]
+	private void mT__66()
 	{
-		EnterRule_T__65();
-		EnterRule("T__65", 30);
-		TraceIn("T__65", 30);
+		EnterRule_T__66();
+		EnterRule("T__66", 30);
+		TraceIn("T__66", 30);
 		try
 		{
-			int _type = T__65;
+			int _type = T__66;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:38:7: ( ';' )
 			DebugEnterAlt(1);
@@ -1225,26 +1226,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__65", 30);
-			LeaveRule("T__65", 30);
-			LeaveRule_T__65();
+			TraceOut("T__66", 30);
+			LeaveRule("T__66", 30);
+			LeaveRule_T__66();
 		}
 	}
-	// $ANTLR end "T__65"
+	// $ANTLR end "T__66"
 
-	partial void EnterRule_T__66();
-	partial void LeaveRule_T__66();
+	partial void EnterRule_T__67();
+	partial void LeaveRule_T__67();
 
-	// $ANTLR start "T__66"
-	[GrammarRule("T__66")]
-	private void mT__66()
+	// $ANTLR start "T__67"
+	[GrammarRule("T__67")]
+	private void mT__67()
 	{
-		EnterRule_T__66();
-		EnterRule("T__66", 31);
-		TraceIn("T__66", 31);
+		EnterRule_T__67();
+		EnterRule("T__67", 31);
+		TraceIn("T__67", 31);
 		try
 		{
-			int _type = T__66;
+			int _type = T__67;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:39:7: ( '<' )
 			DebugEnterAlt(1);
@@ -1260,26 +1261,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__66", 31);
-			LeaveRule("T__66", 31);
-			LeaveRule_T__66();
+			TraceOut("T__67", 31);
+			LeaveRule("T__67", 31);
+			LeaveRule_T__67();
 		}
 	}
-	// $ANTLR end "T__66"
+	// $ANTLR end "T__67"
 
-	partial void EnterRule_T__67();
-	partial void LeaveRule_T__67();
+	partial void EnterRule_T__68();
+	partial void LeaveRule_T__68();
 
-	// $ANTLR start "T__67"
-	[GrammarRule("T__67")]
-	private void mT__67()
+	// $ANTLR start "T__68"
+	[GrammarRule("T__68")]
+	private void mT__68()
 	{
-		EnterRule_T__67();
-		EnterRule("T__67", 32);
-		TraceIn("T__67", 32);
+		EnterRule_T__68();
+		EnterRule("T__68", 32);
+		TraceIn("T__68", 32);
 		try
 		{
-			int _type = T__67;
+			int _type = T__68;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:40:7: ( '<<' )
 			DebugEnterAlt(1);
@@ -1296,26 +1297,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__67", 32);
-			LeaveRule("T__67", 32);
-			LeaveRule_T__67();
+			TraceOut("T__68", 32);
+			LeaveRule("T__68", 32);
+			LeaveRule_T__68();
 		}
 	}
-	// $ANTLR end "T__67"
+	// $ANTLR end "T__68"
 
-	partial void EnterRule_T__68();
-	partial void LeaveRule_T__68();
+	partial void EnterRule_T__69();
+	partial void LeaveRule_T__69();
 
-	// $ANTLR start "T__68"
-	[GrammarRule("T__68")]
-	private void mT__68()
+	// $ANTLR start "T__69"
+	[GrammarRule("T__69")]
+	private void mT__69()
 	{
-		EnterRule_T__68();
-		EnterRule("T__68", 33);
-		TraceIn("T__68", 33);
+		EnterRule_T__69();
+		EnterRule("T__69", 33);
+		TraceIn("T__69", 33);
 		try
 		{
-			int _type = T__68;
+			int _type = T__69;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:41:7: ( '<<=' )
 			DebugEnterAlt(1);
@@ -1332,26 +1333,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__68", 33);
-			LeaveRule("T__68", 33);
-			LeaveRule_T__68();
+			TraceOut("T__69", 33);
+			LeaveRule("T__69", 33);
+			LeaveRule_T__69();
 		}
 	}
-	// $ANTLR end "T__68"
+	// $ANTLR end "T__69"
 
-	partial void EnterRule_T__69();
-	partial void LeaveRule_T__69();
+	partial void EnterRule_T__70();
+	partial void LeaveRule_T__70();
 
-	// $ANTLR start "T__69"
-	[GrammarRule("T__69")]
-	private void mT__69()
+	// $ANTLR start "T__70"
+	[GrammarRule("T__70")]
+	private void mT__70()
 	{
-		EnterRule_T__69();
-		EnterRule("T__69", 34);
-		TraceIn("T__69", 34);
+		EnterRule_T__70();
+		EnterRule("T__70", 34);
+		TraceIn("T__70", 34);
 		try
 		{
-			int _type = T__69;
+			int _type = T__70;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:42:7: ( '<=' )
 			DebugEnterAlt(1);
@@ -1368,26 +1369,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__69", 34);
-			LeaveRule("T__69", 34);
-			LeaveRule_T__69();
+			TraceOut("T__70", 34);
+			LeaveRule("T__70", 34);
+			LeaveRule_T__70();
 		}
 	}
-	// $ANTLR end "T__69"
+	// $ANTLR end "T__70"
 
-	partial void EnterRule_T__70();
-	partial void LeaveRule_T__70();
+	partial void EnterRule_T__71();
+	partial void LeaveRule_T__71();
 
-	// $ANTLR start "T__70"
-	[GrammarRule("T__70")]
-	private void mT__70()
+	// $ANTLR start "T__71"
+	[GrammarRule("T__71")]
+	private void mT__71()
 	{
-		EnterRule_T__70();
-		EnterRule("T__70", 35);
-		TraceIn("T__70", 35);
+		EnterRule_T__71();
+		EnterRule("T__71", 35);
+		TraceIn("T__71", 35);
 		try
 		{
-			int _type = T__70;
+			int _type = T__71;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:43:7: ( '=' )
 			DebugEnterAlt(1);
@@ -1403,26 +1404,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__70", 35);
-			LeaveRule("T__70", 35);
-			LeaveRule_T__70();
+			TraceOut("T__71", 35);
+			LeaveRule("T__71", 35);
+			LeaveRule_T__71();
 		}
 	}
-	// $ANTLR end "T__70"
+	// $ANTLR end "T__71"
 
-	partial void EnterRule_T__71();
-	partial void LeaveRule_T__71();
+	partial void EnterRule_T__72();
+	partial void LeaveRule_T__72();
 
-	// $ANTLR start "T__71"
-	[GrammarRule("T__71")]
-	private void mT__71()
+	// $ANTLR start "T__72"
+	[GrammarRule("T__72")]
+	private void mT__72()
 	{
-		EnterRule_T__71();
-		EnterRule("T__71", 36);
-		TraceIn("T__71", 36);
+		EnterRule_T__72();
+		EnterRule("T__72", 36);
+		TraceIn("T__72", 36);
 		try
 		{
-			int _type = T__71;
+			int _type = T__72;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:44:7: ( '==' )
 			DebugEnterAlt(1);
@@ -1439,26 +1440,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__71", 36);
-			LeaveRule("T__71", 36);
-			LeaveRule_T__71();
+			TraceOut("T__72", 36);
+			LeaveRule("T__72", 36);
+			LeaveRule_T__72();
 		}
 	}
-	// $ANTLR end "T__71"
+	// $ANTLR end "T__72"
 
-	partial void EnterRule_T__72();
-	partial void LeaveRule_T__72();
+	partial void EnterRule_T__73();
+	partial void LeaveRule_T__73();
 
-	// $ANTLR start "T__72"
-	[GrammarRule("T__72")]
-	private void mT__72()
+	// $ANTLR start "T__73"
+	[GrammarRule("T__73")]
+	private void mT__73()
 	{
-		EnterRule_T__72();
-		EnterRule("T__72", 37);
-		TraceIn("T__72", 37);
+		EnterRule_T__73();
+		EnterRule("T__73", 37);
+		TraceIn("T__73", 37);
 		try
 		{
-			int _type = T__72;
+			int _type = T__73;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:45:7: ( '===' )
 			DebugEnterAlt(1);
@@ -1475,26 +1476,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__72", 37);
-			LeaveRule("T__72", 37);
-			LeaveRule_T__72();
+			TraceOut("T__73", 37);
+			LeaveRule("T__73", 37);
+			LeaveRule_T__73();
 		}
 	}
-	// $ANTLR end "T__72"
+	// $ANTLR end "T__73"
 
-	partial void EnterRule_T__73();
-	partial void LeaveRule_T__73();
+	partial void EnterRule_T__74();
+	partial void LeaveRule_T__74();
 
-	// $ANTLR start "T__73"
-	[GrammarRule("T__73")]
-	private void mT__73()
+	// $ANTLR start "T__74"
+	[GrammarRule("T__74")]
+	private void mT__74()
 	{
-		EnterRule_T__73();
-		EnterRule("T__73", 38);
-		TraceIn("T__73", 38);
+		EnterRule_T__74();
+		EnterRule("T__74", 38);
+		TraceIn("T__74", 38);
 		try
 		{
-			int _type = T__73;
+			int _type = T__74;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:46:7: ( '>' )
 			DebugEnterAlt(1);
@@ -1510,26 +1511,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__73", 38);
-			LeaveRule("T__73", 38);
-			LeaveRule_T__73();
+			TraceOut("T__74", 38);
+			LeaveRule("T__74", 38);
+			LeaveRule_T__74();
 		}
 	}
-	// $ANTLR end "T__73"
+	// $ANTLR end "T__74"
 
-	partial void EnterRule_T__74();
-	partial void LeaveRule_T__74();
+	partial void EnterRule_T__75();
+	partial void LeaveRule_T__75();
 
-	// $ANTLR start "T__74"
-	[GrammarRule("T__74")]
-	private void mT__74()
+	// $ANTLR start "T__75"
+	[GrammarRule("T__75")]
+	private void mT__75()
 	{
-		EnterRule_T__74();
-		EnterRule("T__74", 39);
-		TraceIn("T__74", 39);
+		EnterRule_T__75();
+		EnterRule("T__75", 39);
+		TraceIn("T__75", 39);
 		try
 		{
-			int _type = T__74;
+			int _type = T__75;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:47:7: ( '>=' )
 			DebugEnterAlt(1);
@@ -1546,26 +1547,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__74", 39);
-			LeaveRule("T__74", 39);
-			LeaveRule_T__74();
+			TraceOut("T__75", 39);
+			LeaveRule("T__75", 39);
+			LeaveRule_T__75();
 		}
 	}
-	// $ANTLR end "T__74"
+	// $ANTLR end "T__75"
 
-	partial void EnterRule_T__75();
-	partial void LeaveRule_T__75();
+	partial void EnterRule_T__76();
+	partial void LeaveRule_T__76();
 
-	// $ANTLR start "T__75"
-	[GrammarRule("T__75")]
-	private void mT__75()
+	// $ANTLR start "T__76"
+	[GrammarRule("T__76")]
+	private void mT__76()
 	{
-		EnterRule_T__75();
-		EnterRule("T__75", 40);
-		TraceIn("T__75", 40);
+		EnterRule_T__76();
+		EnterRule("T__76", 40);
+		TraceIn("T__76", 40);
 		try
 		{
-			int _type = T__75;
+			int _type = T__76;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:48:7: ( '>>' )
 			DebugEnterAlt(1);
@@ -1582,26 +1583,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__75", 40);
-			LeaveRule("T__75", 40);
-			LeaveRule_T__75();
+			TraceOut("T__76", 40);
+			LeaveRule("T__76", 40);
+			LeaveRule_T__76();
 		}
 	}
-	// $ANTLR end "T__75"
+	// $ANTLR end "T__76"
 
-	partial void EnterRule_T__76();
-	partial void LeaveRule_T__76();
+	partial void EnterRule_T__77();
+	partial void LeaveRule_T__77();
 
-	// $ANTLR start "T__76"
-	[GrammarRule("T__76")]
-	private void mT__76()
+	// $ANTLR start "T__77"
+	[GrammarRule("T__77")]
+	private void mT__77()
 	{
-		EnterRule_T__76();
-		EnterRule("T__76", 41);
-		TraceIn("T__76", 41);
+		EnterRule_T__77();
+		EnterRule("T__77", 41);
+		TraceIn("T__77", 41);
 		try
 		{
-			int _type = T__76;
+			int _type = T__77;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:49:7: ( '>>=' )
 			DebugEnterAlt(1);
@@ -1618,26 +1619,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__76", 41);
-			LeaveRule("T__76", 41);
-			LeaveRule_T__76();
+			TraceOut("T__77", 41);
+			LeaveRule("T__77", 41);
+			LeaveRule_T__77();
 		}
 	}
-	// $ANTLR end "T__76"
+	// $ANTLR end "T__77"
 
-	partial void EnterRule_T__77();
-	partial void LeaveRule_T__77();
+	partial void EnterRule_T__78();
+	partial void LeaveRule_T__78();
 
-	// $ANTLR start "T__77"
-	[GrammarRule("T__77")]
-	private void mT__77()
+	// $ANTLR start "T__78"
+	[GrammarRule("T__78")]
+	private void mT__78()
 	{
-		EnterRule_T__77();
-		EnterRule("T__77", 42);
-		TraceIn("T__77", 42);
+		EnterRule_T__78();
+		EnterRule("T__78", 42);
+		TraceIn("T__78", 42);
 		try
 		{
-			int _type = T__77;
+			int _type = T__78;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:50:7: ( '>>>' )
 			DebugEnterAlt(1);
@@ -1654,26 +1655,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__77", 42);
-			LeaveRule("T__77", 42);
-			LeaveRule_T__77();
+			TraceOut("T__78", 42);
+			LeaveRule("T__78", 42);
+			LeaveRule_T__78();
 		}
 	}
-	// $ANTLR end "T__77"
+	// $ANTLR end "T__78"
 
-	partial void EnterRule_T__78();
-	partial void LeaveRule_T__78();
+	partial void EnterRule_T__79();
+	partial void LeaveRule_T__79();
 
-	// $ANTLR start "T__78"
-	[GrammarRule("T__78")]
-	private void mT__78()
+	// $ANTLR start "T__79"
+	[GrammarRule("T__79")]
+	private void mT__79()
 	{
-		EnterRule_T__78();
-		EnterRule("T__78", 43);
-		TraceIn("T__78", 43);
+		EnterRule_T__79();
+		EnterRule("T__79", 43);
+		TraceIn("T__79", 43);
 		try
 		{
-			int _type = T__78;
+			int _type = T__79;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:51:7: ( '>>>=' )
 			DebugEnterAlt(1);
@@ -1690,26 +1691,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__78", 43);
-			LeaveRule("T__78", 43);
-			LeaveRule_T__78();
+			TraceOut("T__79", 43);
+			LeaveRule("T__79", 43);
+			LeaveRule_T__79();
 		}
 	}
-	// $ANTLR end "T__78"
+	// $ANTLR end "T__79"
 
-	partial void EnterRule_T__79();
-	partial void LeaveRule_T__79();
+	partial void EnterRule_T__80();
+	partial void LeaveRule_T__80();
 
-	// $ANTLR start "T__79"
-	[GrammarRule("T__79")]
-	private void mT__79()
+	// $ANTLR start "T__80"
+	[GrammarRule("T__80")]
+	private void mT__80()
 	{
-		EnterRule_T__79();
-		EnterRule("T__79", 44);
-		TraceIn("T__79", 44);
+		EnterRule_T__80();
+		EnterRule("T__80", 44);
+		TraceIn("T__80", 44);
 		try
 		{
-			int _type = T__79;
+			int _type = T__80;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:52:7: ( '?' )
 			DebugEnterAlt(1);
@@ -1725,26 +1726,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__79", 44);
-			LeaveRule("T__79", 44);
-			LeaveRule_T__79();
+			TraceOut("T__80", 44);
+			LeaveRule("T__80", 44);
+			LeaveRule_T__80();
 		}
 	}
-	// $ANTLR end "T__79"
+	// $ANTLR end "T__80"
 
-	partial void EnterRule_T__80();
-	partial void LeaveRule_T__80();
+	partial void EnterRule_T__81();
+	partial void LeaveRule_T__81();
 
-	// $ANTLR start "T__80"
-	[GrammarRule("T__80")]
-	private void mT__80()
+	// $ANTLR start "T__81"
+	[GrammarRule("T__81")]
+	private void mT__81()
 	{
-		EnterRule_T__80();
-		EnterRule("T__80", 45);
-		TraceIn("T__80", 45);
+		EnterRule_T__81();
+		EnterRule("T__81", 45);
+		TraceIn("T__81", 45);
 		try
 		{
-			int _type = T__80;
+			int _type = T__81;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:53:7: ( '[' )
 			DebugEnterAlt(1);
@@ -1760,26 +1761,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__80", 45);
-			LeaveRule("T__80", 45);
-			LeaveRule_T__80();
+			TraceOut("T__81", 45);
+			LeaveRule("T__81", 45);
+			LeaveRule_T__81();
 		}
 	}
-	// $ANTLR end "T__80"
+	// $ANTLR end "T__81"
 
-	partial void EnterRule_T__81();
-	partial void LeaveRule_T__81();
+	partial void EnterRule_T__82();
+	partial void LeaveRule_T__82();
 
-	// $ANTLR start "T__81"
-	[GrammarRule("T__81")]
-	private void mT__81()
+	// $ANTLR start "T__82"
+	[GrammarRule("T__82")]
+	private void mT__82()
 	{
-		EnterRule_T__81();
-		EnterRule("T__81", 46);
-		TraceIn("T__81", 46);
+		EnterRule_T__82();
+		EnterRule("T__82", 46);
+		TraceIn("T__82", 46);
 		try
 		{
-			int _type = T__81;
+			int _type = T__82;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:54:7: ( '^' )
 			DebugEnterAlt(1);
@@ -1795,26 +1796,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__81", 46);
-			LeaveRule("T__81", 46);
-			LeaveRule_T__81();
+			TraceOut("T__82", 46);
+			LeaveRule("T__82", 46);
+			LeaveRule_T__82();
 		}
 	}
-	// $ANTLR end "T__81"
+	// $ANTLR end "T__82"
 
-	partial void EnterRule_T__82();
-	partial void LeaveRule_T__82();
+	partial void EnterRule_T__83();
+	partial void LeaveRule_T__83();
 
-	// $ANTLR start "T__82"
-	[GrammarRule("T__82")]
-	private void mT__82()
+	// $ANTLR start "T__83"
+	[GrammarRule("T__83")]
+	private void mT__83()
 	{
-		EnterRule_T__82();
-		EnterRule("T__82", 47);
-		TraceIn("T__82", 47);
+		EnterRule_T__83();
+		EnterRule("T__83", 47);
+		TraceIn("T__83", 47);
 		try
 		{
-			int _type = T__82;
+			int _type = T__83;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:55:7: ( '^=' )
 			DebugEnterAlt(1);
@@ -1831,26 +1832,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__82", 47);
-			LeaveRule("T__82", 47);
-			LeaveRule_T__82();
+			TraceOut("T__83", 47);
+			LeaveRule("T__83", 47);
+			LeaveRule_T__83();
 		}
 	}
-	// $ANTLR end "T__82"
+	// $ANTLR end "T__83"
 
-	partial void EnterRule_T__83();
-	partial void LeaveRule_T__83();
+	partial void EnterRule_T__84();
+	partial void LeaveRule_T__84();
 
-	// $ANTLR start "T__83"
-	[GrammarRule("T__83")]
-	private void mT__83()
+	// $ANTLR start "T__84"
+	[GrammarRule("T__84")]
+	private void mT__84()
 	{
-		EnterRule_T__83();
-		EnterRule("T__83", 48);
-		TraceIn("T__83", 48);
+		EnterRule_T__84();
+		EnterRule("T__84", 48);
+		TraceIn("T__84", 48);
 		try
 		{
-			int _type = T__83;
+			int _type = T__84;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:56:7: ( 'break' )
 			DebugEnterAlt(1);
@@ -1867,26 +1868,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__83", 48);
-			LeaveRule("T__83", 48);
-			LeaveRule_T__83();
+			TraceOut("T__84", 48);
+			LeaveRule("T__84", 48);
+			LeaveRule_T__84();
 		}
 	}
-	// $ANTLR end "T__83"
+	// $ANTLR end "T__84"
 
-	partial void EnterRule_T__84();
-	partial void LeaveRule_T__84();
+	partial void EnterRule_T__85();
+	partial void LeaveRule_T__85();
 
-	// $ANTLR start "T__84"
-	[GrammarRule("T__84")]
-	private void mT__84()
+	// $ANTLR start "T__85"
+	[GrammarRule("T__85")]
+	private void mT__85()
 	{
-		EnterRule_T__84();
-		EnterRule("T__84", 49);
-		TraceIn("T__84", 49);
+		EnterRule_T__85();
+		EnterRule("T__85", 49);
+		TraceIn("T__85", 49);
 		try
 		{
-			int _type = T__84;
+			int _type = T__85;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:57:7: ( 'case' )
 			DebugEnterAlt(1);
@@ -1903,26 +1904,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__84", 49);
-			LeaveRule("T__84", 49);
-			LeaveRule_T__84();
+			TraceOut("T__85", 49);
+			LeaveRule("T__85", 49);
+			LeaveRule_T__85();
 		}
 	}
-	// $ANTLR end "T__84"
+	// $ANTLR end "T__85"
 
-	partial void EnterRule_T__85();
-	partial void LeaveRule_T__85();
+	partial void EnterRule_T__86();
+	partial void LeaveRule_T__86();
 
-	// $ANTLR start "T__85"
-	[GrammarRule("T__85")]
-	private void mT__85()
+	// $ANTLR start "T__86"
+	[GrammarRule("T__86")]
+	private void mT__86()
 	{
-		EnterRule_T__85();
-		EnterRule("T__85", 50);
-		TraceIn("T__85", 50);
+		EnterRule_T__86();
+		EnterRule("T__86", 50);
+		TraceIn("T__86", 50);
 		try
 		{
-			int _type = T__85;
+			int _type = T__86;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:58:7: ( 'catch' )
 			DebugEnterAlt(1);
@@ -1939,26 +1940,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__85", 50);
-			LeaveRule("T__85", 50);
-			LeaveRule_T__85();
+			TraceOut("T__86", 50);
+			LeaveRule("T__86", 50);
+			LeaveRule_T__86();
 		}
 	}
-	// $ANTLR end "T__85"
+	// $ANTLR end "T__86"
 
-	partial void EnterRule_T__86();
-	partial void LeaveRule_T__86();
+	partial void EnterRule_T__87();
+	partial void LeaveRule_T__87();
 
-	// $ANTLR start "T__86"
-	[GrammarRule("T__86")]
-	private void mT__86()
+	// $ANTLR start "T__87"
+	[GrammarRule("T__87")]
+	private void mT__87()
 	{
-		EnterRule_T__86();
-		EnterRule("T__86", 51);
-		TraceIn("T__86", 51);
+		EnterRule_T__87();
+		EnterRule("T__87", 51);
+		TraceIn("T__87", 51);
 		try
 		{
-			int _type = T__86;
+			int _type = T__87;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:59:7: ( 'continue' )
 			DebugEnterAlt(1);
@@ -1975,26 +1976,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__86", 51);
-			LeaveRule("T__86", 51);
-			LeaveRule_T__86();
+			TraceOut("T__87", 51);
+			LeaveRule("T__87", 51);
+			LeaveRule_T__87();
 		}
 	}
-	// $ANTLR end "T__86"
+	// $ANTLR end "T__87"
 
-	partial void EnterRule_T__87();
-	partial void LeaveRule_T__87();
+	partial void EnterRule_T__88();
+	partial void LeaveRule_T__88();
 
-	// $ANTLR start "T__87"
-	[GrammarRule("T__87")]
-	private void mT__87()
+	// $ANTLR start "T__88"
+	[GrammarRule("T__88")]
+	private void mT__88()
 	{
-		EnterRule_T__87();
-		EnterRule("T__87", 52);
-		TraceIn("T__87", 52);
+		EnterRule_T__88();
+		EnterRule("T__88", 52);
+		TraceIn("T__88", 52);
 		try
 		{
-			int _type = T__87;
+			int _type = T__88;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:60:7: ( 'default' )
 			DebugEnterAlt(1);
@@ -2011,26 +2012,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__87", 52);
-			LeaveRule("T__87", 52);
-			LeaveRule_T__87();
+			TraceOut("T__88", 52);
+			LeaveRule("T__88", 52);
+			LeaveRule_T__88();
 		}
 	}
-	// $ANTLR end "T__87"
+	// $ANTLR end "T__88"
 
-	partial void EnterRule_T__88();
-	partial void LeaveRule_T__88();
+	partial void EnterRule_T__89();
+	partial void LeaveRule_T__89();
 
-	// $ANTLR start "T__88"
-	[GrammarRule("T__88")]
-	private void mT__88()
+	// $ANTLR start "T__89"
+	[GrammarRule("T__89")]
+	private void mT__89()
 	{
-		EnterRule_T__88();
-		EnterRule("T__88", 53);
-		TraceIn("T__88", 53);
+		EnterRule_T__89();
+		EnterRule("T__89", 53);
+		TraceIn("T__89", 53);
 		try
 		{
-			int _type = T__88;
+			int _type = T__89;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:61:7: ( 'delete' )
 			DebugEnterAlt(1);
@@ -2047,26 +2048,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__88", 53);
-			LeaveRule("T__88", 53);
-			LeaveRule_T__88();
+			TraceOut("T__89", 53);
+			LeaveRule("T__89", 53);
+			LeaveRule_T__89();
 		}
 	}
-	// $ANTLR end "T__88"
+	// $ANTLR end "T__89"
 
-	partial void EnterRule_T__89();
-	partial void LeaveRule_T__89();
+	partial void EnterRule_T__90();
+	partial void LeaveRule_T__90();
 
-	// $ANTLR start "T__89"
-	[GrammarRule("T__89")]
-	private void mT__89()
+	// $ANTLR start "T__90"
+	[GrammarRule("T__90")]
+	private void mT__90()
 	{
-		EnterRule_T__89();
-		EnterRule("T__89", 54);
-		TraceIn("T__89", 54);
+		EnterRule_T__90();
+		EnterRule("T__90", 54);
+		TraceIn("T__90", 54);
 		try
 		{
-			int _type = T__89;
+			int _type = T__90;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:62:7: ( 'do' )
 			DebugEnterAlt(1);
@@ -2083,26 +2084,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__89", 54);
-			LeaveRule("T__89", 54);
-			LeaveRule_T__89();
+			TraceOut("T__90", 54);
+			LeaveRule("T__90", 54);
+			LeaveRule_T__90();
 		}
 	}
-	// $ANTLR end "T__89"
+	// $ANTLR end "T__90"
 
-	partial void EnterRule_T__90();
-	partial void LeaveRule_T__90();
+	partial void EnterRule_T__91();
+	partial void LeaveRule_T__91();
 
-	// $ANTLR start "T__90"
-	[GrammarRule("T__90")]
-	private void mT__90()
+	// $ANTLR start "T__91"
+	[GrammarRule("T__91")]
+	private void mT__91()
 	{
-		EnterRule_T__90();
-		EnterRule("T__90", 55);
-		TraceIn("T__90", 55);
+		EnterRule_T__91();
+		EnterRule("T__91", 55);
+		TraceIn("T__91", 55);
 		try
 		{
-			int _type = T__90;
+			int _type = T__91;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:63:7: ( 'else' )
 			DebugEnterAlt(1);
@@ -2119,26 +2120,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__90", 55);
-			LeaveRule("T__90", 55);
-			LeaveRule_T__90();
+			TraceOut("T__91", 55);
+			LeaveRule("T__91", 55);
+			LeaveRule_T__91();
 		}
 	}
-	// $ANTLR end "T__90"
+	// $ANTLR end "T__91"
 
-	partial void EnterRule_T__91();
-	partial void LeaveRule_T__91();
+	partial void EnterRule_T__92();
+	partial void LeaveRule_T__92();
 
-	// $ANTLR start "T__91"
-	[GrammarRule("T__91")]
-	private void mT__91()
+	// $ANTLR start "T__92"
+	[GrammarRule("T__92")]
+	private void mT__92()
 	{
-		EnterRule_T__91();
-		EnterRule("T__91", 56);
-		TraceIn("T__91", 56);
+		EnterRule_T__92();
+		EnterRule("T__92", 56);
+		TraceIn("T__92", 56);
 		try
 		{
-			int _type = T__91;
+			int _type = T__92;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:64:7: ( 'finally' )
 			DebugEnterAlt(1);
@@ -2155,26 +2156,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__91", 56);
-			LeaveRule("T__91", 56);
-			LeaveRule_T__91();
+			TraceOut("T__92", 56);
+			LeaveRule("T__92", 56);
+			LeaveRule_T__92();
 		}
 	}
-	// $ANTLR end "T__91"
+	// $ANTLR end "T__92"
 
-	partial void EnterRule_T__92();
-	partial void LeaveRule_T__92();
+	partial void EnterRule_T__93();
+	partial void LeaveRule_T__93();
 
-	// $ANTLR start "T__92"
-	[GrammarRule("T__92")]
-	private void mT__92()
+	// $ANTLR start "T__93"
+	[GrammarRule("T__93")]
+	private void mT__93()
 	{
-		EnterRule_T__92();
-		EnterRule("T__92", 57);
-		TraceIn("T__92", 57);
+		EnterRule_T__93();
+		EnterRule("T__93", 57);
+		TraceIn("T__93", 57);
 		try
 		{
-			int _type = T__92;
+			int _type = T__93;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:65:7: ( 'for' )
 			DebugEnterAlt(1);
@@ -2191,26 +2192,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__92", 57);
-			LeaveRule("T__92", 57);
-			LeaveRule_T__92();
+			TraceOut("T__93", 57);
+			LeaveRule("T__93", 57);
+			LeaveRule_T__93();
 		}
 	}
-	// $ANTLR end "T__92"
+	// $ANTLR end "T__93"
 
-	partial void EnterRule_T__93();
-	partial void LeaveRule_T__93();
+	partial void EnterRule_T__94();
+	partial void LeaveRule_T__94();
 
-	// $ANTLR start "T__93"
-	[GrammarRule("T__93")]
-	private void mT__93()
+	// $ANTLR start "T__94"
+	[GrammarRule("T__94")]
+	private void mT__94()
 	{
-		EnterRule_T__93();
-		EnterRule("T__93", 58);
-		TraceIn("T__93", 58);
+		EnterRule_T__94();
+		EnterRule("T__94", 58);
+		TraceIn("T__94", 58);
 		try
 		{
-			int _type = T__93;
+			int _type = T__94;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:66:7: ( 'function' )
 			DebugEnterAlt(1);
@@ -2227,26 +2228,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__93", 58);
-			LeaveRule("T__93", 58);
-			LeaveRule_T__93();
+			TraceOut("T__94", 58);
+			LeaveRule("T__94", 58);
+			LeaveRule_T__94();
 		}
 	}
-	// $ANTLR end "T__93"
+	// $ANTLR end "T__94"
 
-	partial void EnterRule_T__94();
-	partial void LeaveRule_T__94();
+	partial void EnterRule_T__95();
+	partial void LeaveRule_T__95();
 
-	// $ANTLR start "T__94"
-	[GrammarRule("T__94")]
-	private void mT__94()
+	// $ANTLR start "T__95"
+	[GrammarRule("T__95")]
+	private void mT__95()
 	{
-		EnterRule_T__94();
-		EnterRule("T__94", 59);
-		TraceIn("T__94", 59);
+		EnterRule_T__95();
+		EnterRule("T__95", 59);
+		TraceIn("T__95", 59);
 		try
 		{
-			int _type = T__94;
+			int _type = T__95;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:67:7: ( 'if' )
 			DebugEnterAlt(1);
@@ -2263,26 +2264,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__94", 59);
-			LeaveRule("T__94", 59);
-			LeaveRule_T__94();
+			TraceOut("T__95", 59);
+			LeaveRule("T__95", 59);
+			LeaveRule_T__95();
 		}
 	}
-	// $ANTLR end "T__94"
+	// $ANTLR end "T__95"
 
-	partial void EnterRule_T__95();
-	partial void LeaveRule_T__95();
+	partial void EnterRule_T__96();
+	partial void LeaveRule_T__96();
 
-	// $ANTLR start "T__95"
-	[GrammarRule("T__95")]
-	private void mT__95()
+	// $ANTLR start "T__96"
+	[GrammarRule("T__96")]
+	private void mT__96()
 	{
-		EnterRule_T__95();
-		EnterRule("T__95", 60);
-		TraceIn("T__95", 60);
+		EnterRule_T__96();
+		EnterRule("T__96", 60);
+		TraceIn("T__96", 60);
 		try
 		{
-			int _type = T__95;
+			int _type = T__96;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:68:7: ( 'in' )
 			DebugEnterAlt(1);
@@ -2299,26 +2300,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__95", 60);
-			LeaveRule("T__95", 60);
-			LeaveRule_T__95();
+			TraceOut("T__96", 60);
+			LeaveRule("T__96", 60);
+			LeaveRule_T__96();
 		}
 	}
-	// $ANTLR end "T__95"
+	// $ANTLR end "T__96"
 
-	partial void EnterRule_T__96();
-	partial void LeaveRule_T__96();
+	partial void EnterRule_T__97();
+	partial void LeaveRule_T__97();
 
-	// $ANTLR start "T__96"
-	[GrammarRule("T__96")]
-	private void mT__96()
+	// $ANTLR start "T__97"
+	[GrammarRule("T__97")]
+	private void mT__97()
 	{
-		EnterRule_T__96();
-		EnterRule("T__96", 61);
-		TraceIn("T__96", 61);
+		EnterRule_T__97();
+		EnterRule("T__97", 61);
+		TraceIn("T__97", 61);
 		try
 		{
-			int _type = T__96;
+			int _type = T__97;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:69:7: ( 'instanceof' )
 			DebugEnterAlt(1);
@@ -2335,26 +2336,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__96", 61);
-			LeaveRule("T__96", 61);
-			LeaveRule_T__96();
+			TraceOut("T__97", 61);
+			LeaveRule("T__97", 61);
+			LeaveRule_T__97();
 		}
 	}
-	// $ANTLR end "T__96"
+	// $ANTLR end "T__97"
 
-	partial void EnterRule_T__97();
-	partial void LeaveRule_T__97();
+	partial void EnterRule_T__98();
+	partial void LeaveRule_T__98();
 
-	// $ANTLR start "T__97"
-	[GrammarRule("T__97")]
-	private void mT__97()
+	// $ANTLR start "T__98"
+	[GrammarRule("T__98")]
+	private void mT__98()
 	{
-		EnterRule_T__97();
-		EnterRule("T__97", 62);
-		TraceIn("T__97", 62);
+		EnterRule_T__98();
+		EnterRule("T__98", 62);
+		TraceIn("T__98", 62);
 		try
 		{
-			int _type = T__97;
+			int _type = T__98;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:70:7: ( 'new' )
 			DebugEnterAlt(1);
@@ -2371,26 +2372,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__97", 62);
-			LeaveRule("T__97", 62);
-			LeaveRule_T__97();
+			TraceOut("T__98", 62);
+			LeaveRule("T__98", 62);
+			LeaveRule_T__98();
 		}
 	}
-	// $ANTLR end "T__97"
+	// $ANTLR end "T__98"
 
-	partial void EnterRule_T__98();
-	partial void LeaveRule_T__98();
+	partial void EnterRule_T__99();
+	partial void LeaveRule_T__99();
 
-	// $ANTLR start "T__98"
-	[GrammarRule("T__98")]
-	private void mT__98()
+	// $ANTLR start "T__99"
+	[GrammarRule("T__99")]
+	private void mT__99()
 	{
-		EnterRule_T__98();
-		EnterRule("T__98", 63);
-		TraceIn("T__98", 63);
+		EnterRule_T__99();
+		EnterRule("T__99", 63);
+		TraceIn("T__99", 63);
 		try
 		{
-			int _type = T__98;
+			int _type = T__99;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:71:7: ( 'return' )
 			DebugEnterAlt(1);
@@ -2407,44 +2408,8 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__98", 63);
-			LeaveRule("T__98", 63);
-			LeaveRule_T__98();
-		}
-	}
-	// $ANTLR end "T__98"
-
-	partial void EnterRule_T__99();
-	partial void LeaveRule_T__99();
-
-	// $ANTLR start "T__99"
-	[GrammarRule("T__99")]
-	private void mT__99()
-	{
-		EnterRule_T__99();
-		EnterRule("T__99", 64);
-		TraceIn("T__99", 64);
-		try
-		{
-			int _type = T__99;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:72:7: ( 'switch' )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:72:9: 'switch'
-			{
-			DebugLocation(72, 9);
-			Match("switch"); if (state.failed) return;
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("T__99", 64);
-			LeaveRule("T__99", 64);
+			TraceOut("T__99", 63);
+			LeaveRule("T__99", 63);
 			LeaveRule_T__99();
 		}
 	}
@@ -2458,11 +2423,47 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 	private void mT__100()
 	{
 		EnterRule_T__100();
-		EnterRule("T__100", 65);
-		TraceIn("T__100", 65);
+		EnterRule("T__100", 64);
+		TraceIn("T__100", 64);
 		try
 		{
 			int _type = T__100;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:72:8: ( 'switch' )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:72:10: 'switch'
+			{
+			DebugLocation(72, 10);
+			Match("switch"); if (state.failed) return;
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__100", 64);
+			LeaveRule("T__100", 64);
+			LeaveRule_T__100();
+		}
+	}
+	// $ANTLR end "T__100"
+
+	partial void EnterRule_T__101();
+	partial void LeaveRule_T__101();
+
+	// $ANTLR start "T__101"
+	[GrammarRule("T__101")]
+	private void mT__101()
+	{
+		EnterRule_T__101();
+		EnterRule("T__101", 65);
+		TraceIn("T__101", 65);
+		try
+		{
+			int _type = T__101;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:73:8: ( 'throw' )
 			DebugEnterAlt(1);
@@ -2479,26 +2480,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__100", 65);
-			LeaveRule("T__100", 65);
-			LeaveRule_T__100();
+			TraceOut("T__101", 65);
+			LeaveRule("T__101", 65);
+			LeaveRule_T__101();
 		}
 	}
-	// $ANTLR end "T__100"
+	// $ANTLR end "T__101"
 
-	partial void EnterRule_T__101();
-	partial void LeaveRule_T__101();
+	partial void EnterRule_T__102();
+	partial void LeaveRule_T__102();
 
-	// $ANTLR start "T__101"
-	[GrammarRule("T__101")]
-	private void mT__101()
+	// $ANTLR start "T__102"
+	[GrammarRule("T__102")]
+	private void mT__102()
 	{
-		EnterRule_T__101();
-		EnterRule("T__101", 66);
-		TraceIn("T__101", 66);
+		EnterRule_T__102();
+		EnterRule("T__102", 66);
+		TraceIn("T__102", 66);
 		try
 		{
-			int _type = T__101;
+			int _type = T__102;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:74:8: ( 'try' )
 			DebugEnterAlt(1);
@@ -2515,26 +2516,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__101", 66);
-			LeaveRule("T__101", 66);
-			LeaveRule_T__101();
+			TraceOut("T__102", 66);
+			LeaveRule("T__102", 66);
+			LeaveRule_T__102();
 		}
 	}
-	// $ANTLR end "T__101"
+	// $ANTLR end "T__102"
 
-	partial void EnterRule_T__102();
-	partial void LeaveRule_T__102();
+	partial void EnterRule_T__103();
+	partial void LeaveRule_T__103();
 
-	// $ANTLR start "T__102"
-	[GrammarRule("T__102")]
-	private void mT__102()
+	// $ANTLR start "T__103"
+	[GrammarRule("T__103")]
+	private void mT__103()
 	{
-		EnterRule_T__102();
-		EnterRule("T__102", 67);
-		TraceIn("T__102", 67);
+		EnterRule_T__103();
+		EnterRule("T__103", 67);
+		TraceIn("T__103", 67);
 		try
 		{
-			int _type = T__102;
+			int _type = T__103;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:75:8: ( 'typeof' )
 			DebugEnterAlt(1);
@@ -2551,26 +2552,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__102", 67);
-			LeaveRule("T__102", 67);
-			LeaveRule_T__102();
+			TraceOut("T__103", 67);
+			LeaveRule("T__103", 67);
+			LeaveRule_T__103();
 		}
 	}
-	// $ANTLR end "T__102"
+	// $ANTLR end "T__103"
 
-	partial void EnterRule_T__103();
-	partial void LeaveRule_T__103();
+	partial void EnterRule_T__104();
+	partial void LeaveRule_T__104();
 
-	// $ANTLR start "T__103"
-	[GrammarRule("T__103")]
-	private void mT__103()
+	// $ANTLR start "T__104"
+	[GrammarRule("T__104")]
+	private void mT__104()
 	{
-		EnterRule_T__103();
-		EnterRule("T__103", 68);
-		TraceIn("T__103", 68);
+		EnterRule_T__104();
+		EnterRule("T__104", 68);
+		TraceIn("T__104", 68);
 		try
 		{
-			int _type = T__103;
+			int _type = T__104;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:76:8: ( 'var' )
 			DebugEnterAlt(1);
@@ -2587,26 +2588,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__103", 68);
-			LeaveRule("T__103", 68);
-			LeaveRule_T__103();
+			TraceOut("T__104", 68);
+			LeaveRule("T__104", 68);
+			LeaveRule_T__104();
 		}
 	}
-	// $ANTLR end "T__103"
+	// $ANTLR end "T__104"
 
-	partial void EnterRule_T__104();
-	partial void LeaveRule_T__104();
+	partial void EnterRule_T__105();
+	partial void LeaveRule_T__105();
 
-	// $ANTLR start "T__104"
-	[GrammarRule("T__104")]
-	private void mT__104()
+	// $ANTLR start "T__105"
+	[GrammarRule("T__105")]
+	private void mT__105()
 	{
-		EnterRule_T__104();
-		EnterRule("T__104", 69);
-		TraceIn("T__104", 69);
+		EnterRule_T__105();
+		EnterRule("T__105", 69);
+		TraceIn("T__105", 69);
 		try
 		{
-			int _type = T__104;
+			int _type = T__105;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:77:8: ( 'void' )
 			DebugEnterAlt(1);
@@ -2623,26 +2624,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__104", 69);
-			LeaveRule("T__104", 69);
-			LeaveRule_T__104();
+			TraceOut("T__105", 69);
+			LeaveRule("T__105", 69);
+			LeaveRule_T__105();
 		}
 	}
-	// $ANTLR end "T__104"
+	// $ANTLR end "T__105"
 
-	partial void EnterRule_T__105();
-	partial void LeaveRule_T__105();
+	partial void EnterRule_T__106();
+	partial void LeaveRule_T__106();
 
-	// $ANTLR start "T__105"
-	[GrammarRule("T__105")]
-	private void mT__105()
+	// $ANTLR start "T__106"
+	[GrammarRule("T__106")]
+	private void mT__106()
 	{
-		EnterRule_T__105();
-		EnterRule("T__105", 70);
-		TraceIn("T__105", 70);
+		EnterRule_T__106();
+		EnterRule("T__106", 70);
+		TraceIn("T__106", 70);
 		try
 		{
-			int _type = T__105;
+			int _type = T__106;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:78:8: ( 'while' )
 			DebugEnterAlt(1);
@@ -2659,26 +2660,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__105", 70);
-			LeaveRule("T__105", 70);
-			LeaveRule_T__105();
+			TraceOut("T__106", 70);
+			LeaveRule("T__106", 70);
+			LeaveRule_T__106();
 		}
 	}
-	// $ANTLR end "T__105"
+	// $ANTLR end "T__106"
 
-	partial void EnterRule_T__106();
-	partial void LeaveRule_T__106();
+	partial void EnterRule_T__107();
+	partial void LeaveRule_T__107();
 
-	// $ANTLR start "T__106"
-	[GrammarRule("T__106")]
-	private void mT__106()
+	// $ANTLR start "T__107"
+	[GrammarRule("T__107")]
+	private void mT__107()
 	{
-		EnterRule_T__106();
-		EnterRule("T__106", 71);
-		TraceIn("T__106", 71);
+		EnterRule_T__107();
+		EnterRule("T__107", 71);
+		TraceIn("T__107", 71);
 		try
 		{
-			int _type = T__106;
+			int _type = T__107;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:79:8: ( 'with' )
 			DebugEnterAlt(1);
@@ -2695,26 +2696,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__106", 71);
-			LeaveRule("T__106", 71);
-			LeaveRule_T__106();
+			TraceOut("T__107", 71);
+			LeaveRule("T__107", 71);
+			LeaveRule_T__107();
 		}
 	}
-	// $ANTLR end "T__106"
+	// $ANTLR end "T__107"
 
-	partial void EnterRule_T__107();
-	partial void LeaveRule_T__107();
+	partial void EnterRule_T__108();
+	partial void LeaveRule_T__108();
 
-	// $ANTLR start "T__107"
-	[GrammarRule("T__107")]
-	private void mT__107()
+	// $ANTLR start "T__108"
+	[GrammarRule("T__108")]
+	private void mT__108()
 	{
-		EnterRule_T__107();
-		EnterRule("T__107", 72);
-		TraceIn("T__107", 72);
+		EnterRule_T__108();
+		EnterRule("T__108", 72);
+		TraceIn("T__108", 72);
 		try
 		{
-			int _type = T__107;
+			int _type = T__108;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:80:8: ( '{' )
 			DebugEnterAlt(1);
@@ -2730,26 +2731,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__107", 72);
-			LeaveRule("T__107", 72);
-			LeaveRule_T__107();
+			TraceOut("T__108", 72);
+			LeaveRule("T__108", 72);
+			LeaveRule_T__108();
 		}
 	}
-	// $ANTLR end "T__107"
+	// $ANTLR end "T__108"
 
-	partial void EnterRule_T__108();
-	partial void LeaveRule_T__108();
+	partial void EnterRule_T__109();
+	partial void LeaveRule_T__109();
 
-	// $ANTLR start "T__108"
-	[GrammarRule("T__108")]
-	private void mT__108()
+	// $ANTLR start "T__109"
+	[GrammarRule("T__109")]
+	private void mT__109()
 	{
-		EnterRule_T__108();
-		EnterRule("T__108", 73);
-		TraceIn("T__108", 73);
+		EnterRule_T__109();
+		EnterRule("T__109", 73);
+		TraceIn("T__109", 73);
 		try
 		{
-			int _type = T__108;
+			int _type = T__109;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:81:8: ( '|' )
 			DebugEnterAlt(1);
@@ -2765,26 +2766,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__108", 73);
-			LeaveRule("T__108", 73);
-			LeaveRule_T__108();
+			TraceOut("T__109", 73);
+			LeaveRule("T__109", 73);
+			LeaveRule_T__109();
 		}
 	}
-	// $ANTLR end "T__108"
+	// $ANTLR end "T__109"
 
-	partial void EnterRule_T__109();
-	partial void LeaveRule_T__109();
+	partial void EnterRule_T__110();
+	partial void LeaveRule_T__110();
 
-	// $ANTLR start "T__109"
-	[GrammarRule("T__109")]
-	private void mT__109()
+	// $ANTLR start "T__110"
+	[GrammarRule("T__110")]
+	private void mT__110()
 	{
-		EnterRule_T__109();
-		EnterRule("T__109", 74);
-		TraceIn("T__109", 74);
+		EnterRule_T__110();
+		EnterRule("T__110", 74);
+		TraceIn("T__110", 74);
 		try
 		{
-			int _type = T__109;
+			int _type = T__110;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:82:8: ( '|=' )
 			DebugEnterAlt(1);
@@ -2801,26 +2802,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__109", 74);
-			LeaveRule("T__109", 74);
-			LeaveRule_T__109();
+			TraceOut("T__110", 74);
+			LeaveRule("T__110", 74);
+			LeaveRule_T__110();
 		}
 	}
-	// $ANTLR end "T__109"
+	// $ANTLR end "T__110"
 
-	partial void EnterRule_T__110();
-	partial void LeaveRule_T__110();
+	partial void EnterRule_T__111();
+	partial void LeaveRule_T__111();
 
-	// $ANTLR start "T__110"
-	[GrammarRule("T__110")]
-	private void mT__110()
+	// $ANTLR start "T__111"
+	[GrammarRule("T__111")]
+	private void mT__111()
 	{
-		EnterRule_T__110();
-		EnterRule("T__110", 75);
-		TraceIn("T__110", 75);
+		EnterRule_T__111();
+		EnterRule("T__111", 75);
+		TraceIn("T__111", 75);
 		try
 		{
-			int _type = T__110;
+			int _type = T__111;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:83:8: ( '||' )
 			DebugEnterAlt(1);
@@ -2837,26 +2838,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__110", 75);
-			LeaveRule("T__110", 75);
-			LeaveRule_T__110();
+			TraceOut("T__111", 75);
+			LeaveRule("T__111", 75);
+			LeaveRule_T__111();
 		}
 	}
-	// $ANTLR end "T__110"
+	// $ANTLR end "T__111"
 
-	partial void EnterRule_T__111();
-	partial void LeaveRule_T__111();
+	partial void EnterRule_T__112();
+	partial void LeaveRule_T__112();
 
-	// $ANTLR start "T__111"
-	[GrammarRule("T__111")]
-	private void mT__111()
+	// $ANTLR start "T__112"
+	[GrammarRule("T__112")]
+	private void mT__112()
 	{
-		EnterRule_T__111();
-		EnterRule("T__111", 76);
-		TraceIn("T__111", 76);
+		EnterRule_T__112();
+		EnterRule("T__112", 76);
+		TraceIn("T__112", 76);
 		try
 		{
-			int _type = T__111;
+			int _type = T__112;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:84:8: ( '~' )
 			DebugEnterAlt(1);
@@ -2872,12 +2873,12 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__111", 76);
-			LeaveRule("T__111", 76);
-			LeaveRule_T__111();
+			TraceOut("T__112", 76);
+			LeaveRule("T__112", 76);
+			LeaveRule_T__112();
 		}
 	}
-	// $ANTLR end "T__111"
+	// $ANTLR end "T__112"
 
 	partial void EnterRule_StringLiteral();
 	partial void LeaveRule_StringLiteral();
@@ -3086,19 +3087,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			{
 				int LA4_2 = input.LA(2);
 
-				if ((LA4_2=='\"'||LA4_2=='\''||LA4_2=='\\'||LA4_2=='b'||LA4_2=='f'||LA4_2=='n'||LA4_2=='r'||LA4_2=='t'||LA4_2=='v'))
+				if (((LA4_2>='\u0000' && LA4_2<='\t')||(LA4_2>='\u000B' && LA4_2<='\f')||(LA4_2>='\u000E' && LA4_2<='0')||(LA4_2>=':' && LA4_2<='\u2027')||(LA4_2>='\u202A' && LA4_2<='\uFFFF')))
 				{
 					alt4 = 2;
 				}
-				else if ((LA4_2=='\r'))
-				{
-					alt4 = 2;
-				}
-				else if (((LA4_2>='\u0000' && LA4_2<='\f')||(LA4_2>='\u000E' && LA4_2<='!')||(LA4_2>='#' && LA4_2<='&')||(LA4_2>='(' && LA4_2<='0')||(LA4_2>=':' && LA4_2<='[')||(LA4_2>=']' && LA4_2<='a')||(LA4_2>='c' && LA4_2<='e')||(LA4_2>='g' && LA4_2<='m')||(LA4_2>='o' && LA4_2<='q')||LA4_2=='s'||LA4_2=='u'||(LA4_2>='w' && LA4_2<='\u2027')||(LA4_2>='\u202A' && LA4_2<='\uFFFF')))
-				{
-					alt4 = 2;
-				}
-				else if (((LA4_2>='\u2028' && LA4_2<='\u2029')))
+				else if ((LA4_2=='\n'||LA4_2=='\r'||(LA4_2>='\u2028' && LA4_2<='\u2029')))
 				{
 					alt4 = 3;
 				}
@@ -3187,19 +3180,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			{
 				int LA5_2 = input.LA(2);
 
-				if ((LA5_2=='\"'||LA5_2=='\''||LA5_2=='\\'||LA5_2=='b'||LA5_2=='f'||LA5_2=='n'||LA5_2=='r'||LA5_2=='t'||LA5_2=='v'))
+				if (((LA5_2>='\u0000' && LA5_2<='\t')||(LA5_2>='\u000B' && LA5_2<='\f')||(LA5_2>='\u000E' && LA5_2<='0')||(LA5_2>=':' && LA5_2<='\u2027')||(LA5_2>='\u202A' && LA5_2<='\uFFFF')))
 				{
 					alt5 = 2;
 				}
-				else if ((LA5_2=='\r'))
-				{
-					alt5 = 2;
-				}
-				else if (((LA5_2>='\u0000' && LA5_2<='\f')||(LA5_2>='\u000E' && LA5_2<='!')||(LA5_2>='#' && LA5_2<='&')||(LA5_2>='(' && LA5_2<='0')||(LA5_2>=':' && LA5_2<='[')||(LA5_2>=']' && LA5_2<='a')||(LA5_2>='c' && LA5_2<='e')||(LA5_2>='g' && LA5_2<='m')||(LA5_2>='o' && LA5_2<='q')||LA5_2=='s'||LA5_2=='u'||(LA5_2>='w' && LA5_2<='\u2027')||(LA5_2>='\u202A' && LA5_2<='\uFFFF')))
-				{
-					alt5 = 2;
-				}
-				else if (((LA5_2>='\u2028' && LA5_2<='\u2029')))
+				else if ((LA5_2=='\n'||LA5_2=='\r'||(LA5_2>='\u2028' && LA5_2<='\u2029')))
 				{
 					alt5 = 3;
 				}
@@ -3280,7 +3265,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			try { DebugEnterDecision(6, false);
 			int LA6_1 = input.LA(1);
 
-			if (((LA6_1>='\u0000' && LA6_1<='/')||(LA6_1>=':' && LA6_1<='t')||(LA6_1>='v' && LA6_1<='w')||(LA6_1>='y' && LA6_1<='\u2027')||(LA6_1>='\u202A' && LA6_1<='\uFFFF')))
+			if (((LA6_1>='\u0000' && LA6_1<='\t')||(LA6_1>='\u000B' && LA6_1<='\f')||(LA6_1>='\u000E' && LA6_1<='/')||(LA6_1>=':' && LA6_1<='t')||(LA6_1>='v' && LA6_1<='w')||(LA6_1>='y' && LA6_1<='\u2027')||(LA6_1>='\u202A' && LA6_1<='\uFFFF')))
 			{
 				alt6 = 1;
 			}
@@ -3371,7 +3356,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			try { DebugEnterDecision(7, false);
 			int LA7_1 = input.LA(1);
 
-			if ((LA7_1=='\n'||LA7_1=='\r'||LA7_1=='\"'||LA7_1=='\''||LA7_1=='\\'||LA7_1=='b'||LA7_1=='f'||LA7_1=='n'||LA7_1=='r'||LA7_1=='t'||LA7_1=='v'))
+			if ((LA7_1=='\"'||LA7_1=='\''||LA7_1=='\\'||LA7_1=='b'||LA7_1=='f'||LA7_1=='n'||LA7_1=='r'||LA7_1=='t'||LA7_1=='v'))
 			{
 				alt7 = 1;
 			}
@@ -3475,198 +3460,28 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("SingleEscapeCharacter", 84);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:463:5: ( '\\'' | '\"' | '\\\\' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' | '\\r\\n' | '\\n' | '\\r' )
-			int alt8=12;
-			try { DebugEnterDecision(8, false);
-			switch (input.LA(1))
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:463:5: ( '\\'' | '\"' | '\\\\' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 			{
-			case '\'':
-				{
-				alt8 = 1;
-				}
-				break;
-			case '\"':
-				{
-				alt8 = 2;
-				}
-				break;
-			case '\\':
-				{
-				alt8 = 3;
-				}
-				break;
-			case 'b':
-				{
-				alt8 = 4;
-				}
-				break;
-			case 'f':
-				{
-				alt8 = 5;
-				}
-				break;
-			case 'n':
-				{
-				alt8 = 6;
-				}
-				break;
-			case 'r':
-				{
-				alt8 = 7;
-				}
-				break;
-			case 't':
-				{
-				alt8 = 8;
-				}
-				break;
-			case 'v':
-				{
-				alt8 = 9;
-				}
-				break;
-			case '\r':
-				{
-				int LA8_2 = input.LA(2);
-
-				if ((LA8_2=='\n'))
-				{
-					alt8 = 10;
-				}
-				else
-				{
-					alt8 = 12;
-				}
-				}
-				break;
-			case '\n':
-				{
-				alt8 = 11;
-				}
-				break;
-			default:
-				{
-					if (state.backtracking>0) {state.failed=true; return;}
-					NoViableAltException nvae = new NoViableAltException("", 8, 0, input, 1);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
+			DebugLocation(463, 5);
+			if (input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t'||input.LA(1)=='v')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
 			}
 
-			} finally { DebugExitDecision(8); }
-			switch (alt8)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:463:7: '\\''
-				{
-				DebugLocation(463, 7);
-				Match('\''); if (state.failed) return;
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:463:14: '\"'
-				{
-				DebugLocation(463, 14);
-				Match('\"'); if (state.failed) return;
-
-				}
-				break;
-			case 3:
-				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:463:20: '\\\\'
-				{
-				DebugLocation(463, 20);
-				Match('\\'); if (state.failed) return;
-
-				}
-				break;
-			case 4:
-				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:463:27: 'b'
-				{
-				DebugLocation(463, 27);
-				Match('b'); if (state.failed) return;
-
-				}
-				break;
-			case 5:
-				DebugEnterAlt(5);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:463:33: 'f'
-				{
-				DebugLocation(463, 33);
-				Match('f'); if (state.failed) return;
-
-				}
-				break;
-			case 6:
-				DebugEnterAlt(6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:463:39: 'n'
-				{
-				DebugLocation(463, 39);
-				Match('n'); if (state.failed) return;
-
-				}
-				break;
-			case 7:
-				DebugEnterAlt(7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:463:45: 'r'
-				{
-				DebugLocation(463, 45);
-				Match('r'); if (state.failed) return;
-
-				}
-				break;
-			case 8:
-				DebugEnterAlt(8);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:463:51: 't'
-				{
-				DebugLocation(463, 51);
-				Match('t'); if (state.failed) return;
-
-				}
-				break;
-			case 9:
-				DebugEnterAlt(9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:463:57: 'v'
-				{
-				DebugLocation(463, 57);
-				Match('v'); if (state.failed) return;
-
-				}
-				break;
-			case 10:
-				DebugEnterAlt(10);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:463:63: '\\r\\n'
-				{
-				DebugLocation(463, 63);
-				Match("\r\n"); if (state.failed) return;
-
-
-				}
-				break;
-			case 11:
-				DebugEnterAlt(11);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:463:72: '\\n'
-				{
-				DebugLocation(463, 72);
-				Match('\n'); if (state.failed) return;
-
-				}
-				break;
-			case 12:
-				DebugEnterAlt(12);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:463:79: '\\r'
-				{
-				DebugLocation(463, 79);
-				Match('\r'); if (state.failed) return;
-
-				}
-				break;
 
 			}
+
 		}
 		finally
 		{
@@ -3690,99 +3505,27 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		try
 		{
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:467:5: ( SingleEscapeCharacter | DecimalDigit | 'x' | 'u' )
-			int alt9=4;
-			try { DebugEnterDecision(9, false);
-			switch (input.LA(1))
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
 			{
-			case '\n':
-			case '\r':
-			case '\"':
-			case '\'':
-			case '\\':
-			case 'b':
-			case 'f':
-			case 'n':
-			case 'r':
-			case 't':
-			case 'v':
-				{
-				alt9 = 1;
-				}
-				break;
-			case '0':
-			case '1':
-			case '2':
-			case '3':
-			case '4':
-			case '5':
-			case '6':
-			case '7':
-			case '8':
-			case '9':
-				{
-				alt9 = 2;
-				}
-				break;
-			case 'x':
-				{
-				alt9 = 3;
-				}
-				break;
-			case 'u':
-				{
-				alt9 = 4;
-				}
-				break;
-			default:
-				{
-					if (state.backtracking>0) {state.failed=true; return;}
-					NoViableAltException nvae = new NoViableAltException("", 9, 0, input, 1);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
+			DebugLocation(467, 5);
+			if (input.LA(1)=='\"'||input.LA(1)=='\''||(input.LA(1)>='0' && input.LA(1)<='9')||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='v')||input.LA(1)=='x')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
 			}
 
-			} finally { DebugExitDecision(9); }
-			switch (alt9)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:467:7: SingleEscapeCharacter
-				{
-				DebugLocation(467, 7);
-				mSingleEscapeCharacter(); if (state.failed) return;
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:468:7: DecimalDigit
-				{
-				DebugLocation(468, 7);
-				mDecimalDigit(); if (state.failed) return;
-
-				}
-				break;
-			case 3:
-				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:469:7: 'x'
-				{
-				DebugLocation(469, 7);
-				Match('x'); if (state.failed) return;
-
-				}
-				break;
-			case 4:
-				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:470:7: 'u'
-				{
-				DebugLocation(470, 7);
-				Match('u'); if (state.failed) return;
-
-				}
-				break;
 
 			}
+
 		}
 		finally
 		{
@@ -3882,36 +3625,36 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			int _type = NumericLiteral;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:482:5: ( DecimalLiteral | HexIntegerLiteral )
-			int alt10=2;
-			try { DebugEnterDecision(10, false);
-			int LA10_1 = input.LA(1);
+			int alt8=2;
+			try { DebugEnterDecision(8, false);
+			int LA8_1 = input.LA(1);
 
-			if ((LA10_1=='0'))
+			if ((LA8_1=='0'))
 			{
-				int LA10_2 = input.LA(2);
+				int LA8_2 = input.LA(2);
 
-				if ((LA10_2=='X'||LA10_2=='x'))
+				if ((LA8_2=='X'||LA8_2=='x'))
 				{
-					alt10 = 2;
+					alt8 = 2;
 				}
 				else
 				{
-					alt10 = 1;
+					alt8 = 1;
 				}
 			}
-			else if ((LA10_1=='.'||(LA10_1>='1' && LA10_1<='9')))
+			else if ((LA8_1=='.'||(LA8_1>='1' && LA8_1<='9')))
 			{
-				alt10 = 1;
+				alt8 = 1;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return;}
-				NoViableAltException nvae = new NoViableAltException("", 10, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 8, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(10); }
-			switch (alt10)
+			} finally { DebugExitDecision(8); }
+			switch (alt8)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -3980,22 +3723,22 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 			DebugLocation(487, 23);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:487:23: ( HexDigit )+
-			int cnt11=0;
-			try { DebugEnterSubRule(11);
+			int cnt9=0;
+			try { DebugEnterSubRule(9);
 			while (true)
 			{
-				int alt11=2;
-				try { DebugEnterDecision(11, false);
-				int LA11_1 = input.LA(1);
+				int alt9=2;
+				try { DebugEnterDecision(9, false);
+				int LA9_1 = input.LA(1);
 
-				if (((LA11_1>='0' && LA11_1<='9')||(LA11_1>='A' && LA11_1<='F')||(LA11_1>='a' && LA11_1<='f')))
+				if (((LA9_1>='0' && LA9_1<='9')||(LA9_1>='A' && LA9_1<='F')||(LA9_1>='a' && LA9_1<='f')))
 				{
-					alt11 = 1;
+					alt9 = 1;
 				}
 
 
-				} finally { DebugExitDecision(11); }
-				switch (alt11)
+				} finally { DebugExitDecision(9); }
+				switch (alt9)
 				{
 				case 1:
 					DebugEnterAlt(1);
@@ -4009,20 +3752,20 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					break;
 
 				default:
-					if (cnt11 >= 1)
-						goto loop11;
+					if (cnt9 >= 1)
+						goto loop9;
 
 					if (state.backtracking>0) {state.failed=true; return;}
-					EarlyExitException eee11 = new EarlyExitException( 11, input );
-					DebugRecognitionException(eee11);
-					throw eee11;
+					EarlyExitException eee9 = new EarlyExitException( 9, input );
+					DebugRecognitionException(eee9);
+					throw eee9;
 				}
-				cnt11++;
+				cnt9++;
 			}
-			loop11:
+			loop9:
 				;
 
-			} finally { DebugExitSubRule(11); }
+			} finally { DebugExitSubRule(9); }
 
 
 			}
@@ -4094,19 +3837,19 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		try
 		{
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:495:5: ( ( DecimalDigit )+ '.' ( DecimalDigit )* ( ExponentPart )? | ( '.' )? ( DecimalDigit )+ ( ExponentPart )? )
-			int alt18=2;
-			try { DebugEnterDecision(18, false);
+			int alt16=2;
+			try { DebugEnterDecision(16, false);
 			try
 			{
-				alt18 = dfa18.Predict(input);
+				alt16 = dfa16.Predict(input);
 			}
 			catch (NoViableAltException nvae)
 			{
 				DebugRecognitionException(nvae);
 				throw;
 			}
-			} finally { DebugExitDecision(18); }
-			switch (alt18)
+			} finally { DebugExitDecision(16); }
+			switch (alt16)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -4114,22 +3857,22 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				{
 				DebugLocation(495, 7);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:495:7: ( DecimalDigit )+
-				int cnt12=0;
-				try { DebugEnterSubRule(12);
+				int cnt10=0;
+				try { DebugEnterSubRule(10);
 				while (true)
 				{
-					int alt12=2;
-					try { DebugEnterDecision(12, false);
-					int LA12_1 = input.LA(1);
+					int alt10=2;
+					try { DebugEnterDecision(10, false);
+					int LA10_1 = input.LA(1);
 
-					if (((LA12_1>='0' && LA12_1<='9')))
+					if (((LA10_1>='0' && LA10_1<='9')))
 					{
-						alt12 = 1;
+						alt10 = 1;
 					}
 
 
-					} finally { DebugExitDecision(12); }
-					switch (alt12)
+					} finally { DebugExitDecision(10); }
+					switch (alt10)
 					{
 					case 1:
 						DebugEnterAlt(1);
@@ -4143,40 +3886,40 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 						break;
 
 					default:
-						if (cnt12 >= 1)
-							goto loop12;
+						if (cnt10 >= 1)
+							goto loop10;
 
 						if (state.backtracking>0) {state.failed=true; return;}
-						EarlyExitException eee12 = new EarlyExitException( 12, input );
-						DebugRecognitionException(eee12);
-						throw eee12;
+						EarlyExitException eee10 = new EarlyExitException( 10, input );
+						DebugRecognitionException(eee10);
+						throw eee10;
 					}
-					cnt12++;
+					cnt10++;
 				}
-				loop12:
+				loop10:
 					;
 
-				} finally { DebugExitSubRule(12); }
+				} finally { DebugExitSubRule(10); }
 
 				DebugLocation(495, 21);
 				Match('.'); if (state.failed) return;
 				DebugLocation(495, 25);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:495:25: ( DecimalDigit )*
-				try { DebugEnterSubRule(13);
+				try { DebugEnterSubRule(11);
 				while (true)
 				{
-					int alt13=2;
-					try { DebugEnterDecision(13, false);
-					int LA13_1 = input.LA(1);
+					int alt11=2;
+					try { DebugEnterDecision(11, false);
+					int LA11_1 = input.LA(1);
 
-					if (((LA13_1>='0' && LA13_1<='9')))
+					if (((LA11_1>='0' && LA11_1<='9')))
 					{
-						alt13 = 1;
+						alt11 = 1;
 					}
 
 
-					} finally { DebugExitDecision(13); }
-					switch ( alt13 )
+					} finally { DebugExitDecision(11); }
+					switch ( alt11 )
 					{
 					case 1:
 						DebugEnterAlt(1);
@@ -4190,28 +3933,28 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 						break;
 
 					default:
-						goto loop13;
+						goto loop11;
 					}
 				}
 
-				loop13:
+				loop11:
 					;
 
-				} finally { DebugExitSubRule(13); }
+				} finally { DebugExitSubRule(11); }
 
 				DebugLocation(495, 39);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:495:39: ( ExponentPart )?
-				int alt14=2;
-				try { DebugEnterSubRule(14);
-				try { DebugEnterDecision(14, false);
-				int LA14_1 = input.LA(1);
+				int alt12=2;
+				try { DebugEnterSubRule(12);
+				try { DebugEnterDecision(12, false);
+				int LA12_1 = input.LA(1);
 
-				if ((LA14_1=='E'||LA14_1=='e'))
+				if ((LA12_1=='E'||LA12_1=='e'))
 				{
-					alt14 = 1;
+					alt12 = 1;
 				}
-				} finally { DebugExitDecision(14); }
-				switch (alt14)
+				} finally { DebugExitDecision(12); }
+				switch (alt12)
 				{
 				case 1:
 					DebugEnterAlt(1);
@@ -4224,7 +3967,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					break;
 
 				}
-				} finally { DebugExitSubRule(14); }
+				} finally { DebugExitSubRule(12); }
 
 
 				}
@@ -4235,17 +3978,17 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				{
 				DebugLocation(496, 7);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:496:7: ( '.' )?
-				int alt15=2;
-				try { DebugEnterSubRule(15);
-				try { DebugEnterDecision(15, false);
-				int LA15_1 = input.LA(1);
+				int alt13=2;
+				try { DebugEnterSubRule(13);
+				try { DebugEnterDecision(13, false);
+				int LA13_1 = input.LA(1);
 
-				if ((LA15_1=='.'))
+				if ((LA13_1=='.'))
 				{
-					alt15 = 1;
+					alt13 = 1;
 				}
-				} finally { DebugExitDecision(15); }
-				switch (alt15)
+				} finally { DebugExitDecision(13); }
+				switch (alt13)
 				{
 				case 1:
 					DebugEnterAlt(1);
@@ -4258,26 +4001,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					break;
 
 				}
-				} finally { DebugExitSubRule(15); }
+				} finally { DebugExitSubRule(13); }
 
 				DebugLocation(496, 12);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:496:12: ( DecimalDigit )+
-				int cnt16=0;
-				try { DebugEnterSubRule(16);
+				int cnt14=0;
+				try { DebugEnterSubRule(14);
 				while (true)
 				{
-					int alt16=2;
-					try { DebugEnterDecision(16, false);
-					int LA16_1 = input.LA(1);
+					int alt14=2;
+					try { DebugEnterDecision(14, false);
+					int LA14_1 = input.LA(1);
 
-					if (((LA16_1>='0' && LA16_1<='9')))
+					if (((LA14_1>='0' && LA14_1<='9')))
 					{
-						alt16 = 1;
+						alt14 = 1;
 					}
 
 
-					} finally { DebugExitDecision(16); }
-					switch (alt16)
+					} finally { DebugExitDecision(14); }
+					switch (alt14)
 					{
 					case 1:
 						DebugEnterAlt(1);
@@ -4291,34 +4034,34 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 						break;
 
 					default:
-						if (cnt16 >= 1)
-							goto loop16;
+						if (cnt14 >= 1)
+							goto loop14;
 
 						if (state.backtracking>0) {state.failed=true; return;}
-						EarlyExitException eee16 = new EarlyExitException( 16, input );
-						DebugRecognitionException(eee16);
-						throw eee16;
+						EarlyExitException eee14 = new EarlyExitException( 14, input );
+						DebugRecognitionException(eee14);
+						throw eee14;
 					}
-					cnt16++;
+					cnt14++;
 				}
-				loop16:
+				loop14:
 					;
 
-				} finally { DebugExitSubRule(16); }
+				} finally { DebugExitSubRule(14); }
 
 				DebugLocation(496, 26);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:496:26: ( ExponentPart )?
-				int alt17=2;
-				try { DebugEnterSubRule(17);
-				try { DebugEnterDecision(17, false);
-				int LA17_1 = input.LA(1);
+				int alt15=2;
+				try { DebugEnterSubRule(15);
+				try { DebugEnterDecision(15, false);
+				int LA15_1 = input.LA(1);
 
-				if ((LA17_1=='E'||LA17_1=='e'))
+				if ((LA15_1=='E'||LA15_1=='e'))
 				{
-					alt17 = 1;
+					alt15 = 1;
 				}
-				} finally { DebugExitDecision(17); }
-				switch (alt17)
+				} finally { DebugExitDecision(15); }
+				switch (alt15)
 				{
 				case 1:
 					DebugEnterAlt(1);
@@ -4331,7 +4074,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					break;
 
 				}
-				} finally { DebugExitSubRule(17); }
+				} finally { DebugExitSubRule(15); }
 
 
 				}
@@ -4425,17 +4168,17 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 			DebugLocation(504, 19);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:504:19: ( '+' | '-' )?
-			int alt19=2;
-			try { DebugEnterSubRule(19);
-			try { DebugEnterDecision(19, false);
-			int LA19_1 = input.LA(1);
+			int alt17=2;
+			try { DebugEnterSubRule(17);
+			try { DebugEnterDecision(17, false);
+			int LA17_1 = input.LA(1);
 
-			if ((LA19_1=='+'||LA19_1=='-'))
+			if ((LA17_1=='+'||LA17_1=='-'))
 			{
-				alt19 = 1;
+				alt17 = 1;
 			}
-			} finally { DebugExitDecision(19); }
-			switch (alt19)
+			} finally { DebugExitDecision(17); }
+			switch (alt17)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -4449,26 +4192,26 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				break;
 
 			}
-			} finally { DebugExitSubRule(19); }
+			} finally { DebugExitSubRule(17); }
 
 			DebugLocation(504, 33);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:504:33: ( DecimalDigit )+
-			int cnt20=0;
-			try { DebugEnterSubRule(20);
+			int cnt18=0;
+			try { DebugEnterSubRule(18);
 			while (true)
 			{
-				int alt20=2;
-				try { DebugEnterDecision(20, false);
-				int LA20_1 = input.LA(1);
+				int alt18=2;
+				try { DebugEnterDecision(18, false);
+				int LA18_1 = input.LA(1);
 
-				if (((LA20_1>='0' && LA20_1<='9')))
+				if (((LA18_1>='0' && LA18_1<='9')))
 				{
-					alt20 = 1;
+					alt18 = 1;
 				}
 
 
-				} finally { DebugExitDecision(20); }
-				switch (alt20)
+				} finally { DebugExitDecision(18); }
+				switch (alt18)
 				{
 				case 1:
 					DebugEnterAlt(1);
@@ -4482,20 +4225,20 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					break;
 
 				default:
-					if (cnt20 >= 1)
-						goto loop20;
+					if (cnt18 >= 1)
+						goto loop18;
 
 					if (state.backtracking>0) {state.failed=true; return;}
-					EarlyExitException eee20 = new EarlyExitException( 20, input );
-					DebugRecognitionException(eee20);
-					throw eee20;
+					EarlyExitException eee18 = new EarlyExitException( 18, input );
+					DebugRecognitionException(eee18);
+					throw eee18;
 				}
-				cnt20++;
+				cnt18++;
 			}
-			loop20:
+			loop18:
 				;
 
-			} finally { DebugExitSubRule(20); }
+			} finally { DebugExitSubRule(18); }
 
 
 			}
@@ -4532,21 +4275,21 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			mIdentifierStart(); if (state.failed) return;
 			DebugLocation(508, 23);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:508:23: ( IdentifierPart )*
-			try { DebugEnterSubRule(21);
+			try { DebugEnterSubRule(19);
 			while (true)
 			{
-				int alt21=2;
-				try { DebugEnterDecision(21, false);
-				int LA21_1 = input.LA(1);
+				int alt19=2;
+				try { DebugEnterDecision(19, false);
+				int LA19_1 = input.LA(1);
 
-				if ((LA21_1=='$'||(LA21_1>='0' && LA21_1<='9')||(LA21_1>='A' && LA21_1<='Z')||LA21_1=='\\'||LA21_1=='_'||(LA21_1>='a' && LA21_1<='z')||LA21_1=='\u00AA'||LA21_1=='\u00B5'||LA21_1=='\u00BA'||(LA21_1>='\u00C0' && LA21_1<='\u00D6')||(LA21_1>='\u00D8' && LA21_1<='\u00F6')||(LA21_1>='\u00F8' && LA21_1<='\u021F')||(LA21_1>='\u0222' && LA21_1<='\u0233')||(LA21_1>='\u0250' && LA21_1<='\u02AD')||(LA21_1>='\u02B0' && LA21_1<='\u02B8')||(LA21_1>='\u02BB' && LA21_1<='\u02C1')||(LA21_1>='\u02D0' && LA21_1<='\u02D1')||(LA21_1>='\u02E0' && LA21_1<='\u02E4')||LA21_1=='\u02EE'||LA21_1=='\u037A'||LA21_1=='\u0386'||(LA21_1>='\u0388' && LA21_1<='\u038A')||LA21_1=='\u038C'||(LA21_1>='\u038E' && LA21_1<='\u03A1')||(LA21_1>='\u03A3' && LA21_1<='\u03CE')||(LA21_1>='\u03D0' && LA21_1<='\u03D7')||(LA21_1>='\u03DA' && LA21_1<='\u03F3')||(LA21_1>='\u0400' && LA21_1<='\u0481')||(LA21_1>='\u048C' && LA21_1<='\u04C4')||(LA21_1>='\u04C7' && LA21_1<='\u04C8')||(LA21_1>='\u04CB' && LA21_1<='\u04CC')||(LA21_1>='\u04D0' && LA21_1<='\u04F5')||(LA21_1>='\u04F8' && LA21_1<='\u04F9')||(LA21_1>='\u0531' && LA21_1<='\u0556')||LA21_1=='\u0559'||(LA21_1>='\u0561' && LA21_1<='\u0587')||(LA21_1>='\u05D0' && LA21_1<='\u05EA')||(LA21_1>='\u05F0' && LA21_1<='\u05F2')||(LA21_1>='\u0621' && LA21_1<='\u063A')||(LA21_1>='\u0640' && LA21_1<='\u064A')||(LA21_1>='\u0660' && LA21_1<='\u0669')||(LA21_1>='\u0671' && LA21_1<='\u06D3')||LA21_1=='\u06D5'||(LA21_1>='\u06E5' && LA21_1<='\u06E6')||(LA21_1>='\u06F0' && LA21_1<='\u06FC')||LA21_1=='\u0710'||(LA21_1>='\u0712' && LA21_1<='\u072C')||(LA21_1>='\u0780' && LA21_1<='\u07A5')||(LA21_1>='\u0905' && LA21_1<='\u0939')||LA21_1=='\u093D'||LA21_1=='\u0950'||(LA21_1>='\u0958' && LA21_1<='\u0961')||(LA21_1>='\u0966' && LA21_1<='\u096F')||(LA21_1>='\u0985' && LA21_1<='\u098C')||(LA21_1>='\u098F' && LA21_1<='\u0990')||(LA21_1>='\u0993' && LA21_1<='\u09A8')||(LA21_1>='\u09AA' && LA21_1<='\u09B0')||LA21_1=='\u09B2'||(LA21_1>='\u09B6' && LA21_1<='\u09B9')||(LA21_1>='\u09DC' && LA21_1<='\u09DD')||(LA21_1>='\u09DF' && LA21_1<='\u09E1')||(LA21_1>='\u09E6' && LA21_1<='\u09F1')||(LA21_1>='\u0A05' && LA21_1<='\u0A0A')||(LA21_1>='\u0A0F' && LA21_1<='\u0A10')||(LA21_1>='\u0A13' && LA21_1<='\u0A28')||(LA21_1>='\u0A2A' && LA21_1<='\u0A30')||(LA21_1>='\u0A32' && LA21_1<='\u0A33')||(LA21_1>='\u0A35' && LA21_1<='\u0A36')||(LA21_1>='\u0A38' && LA21_1<='\u0A39')||(LA21_1>='\u0A59' && LA21_1<='\u0A5C')||LA21_1=='\u0A5E'||(LA21_1>='\u0A66' && LA21_1<='\u0A6F')||(LA21_1>='\u0A72' && LA21_1<='\u0A74')||(LA21_1>='\u0A85' && LA21_1<='\u0A8B')||LA21_1=='\u0A8D'||(LA21_1>='\u0A8F' && LA21_1<='\u0A91')||(LA21_1>='\u0A93' && LA21_1<='\u0AA8')||(LA21_1>='\u0AAA' && LA21_1<='\u0AB0')||(LA21_1>='\u0AB2' && LA21_1<='\u0AB3')||(LA21_1>='\u0AB5' && LA21_1<='\u0AB9')||LA21_1=='\u0ABD'||LA21_1=='\u0AD0'||LA21_1=='\u0AE0'||(LA21_1>='\u0AE6' && LA21_1<='\u0AEF')||(LA21_1>='\u0B05' && LA21_1<='\u0B0C')||(LA21_1>='\u0B0F' && LA21_1<='\u0B10')||(LA21_1>='\u0B13' && LA21_1<='\u0B28')||(LA21_1>='\u0B2A' && LA21_1<='\u0B30')||(LA21_1>='\u0B32' && LA21_1<='\u0B33')||(LA21_1>='\u0B36' && LA21_1<='\u0B39')||LA21_1=='\u0B3D'||(LA21_1>='\u0B5C' && LA21_1<='\u0B5D')||(LA21_1>='\u0B5F' && LA21_1<='\u0B61')||(LA21_1>='\u0B66' && LA21_1<='\u0B6F')||(LA21_1>='\u0B85' && LA21_1<='\u0B8A')||(LA21_1>='\u0B8E' && LA21_1<='\u0B90')||(LA21_1>='\u0B92' && LA21_1<='\u0B95')||(LA21_1>='\u0B99' && LA21_1<='\u0B9A')||LA21_1=='\u0B9C'||(LA21_1>='\u0B9E' && LA21_1<='\u0B9F')||(LA21_1>='\u0BA3' && LA21_1<='\u0BA4')||(LA21_1>='\u0BA8' && LA21_1<='\u0BAA')||(LA21_1>='\u0BAE' && LA21_1<='\u0BB5')||(LA21_1>='\u0BB7' && LA21_1<='\u0BB9')||(LA21_1>='\u0BE7' && LA21_1<='\u0BEF')||(LA21_1>='\u0C05' && LA21_1<='\u0C0C')||(LA21_1>='\u0C0E' && LA21_1<='\u0C10')||(LA21_1>='\u0C12' && LA21_1<='\u0C28')||(LA21_1>='\u0C2A' && LA21_1<='\u0C33')||(LA21_1>='\u0C35' && LA21_1<='\u0C39')||(LA21_1>='\u0C60' && LA21_1<='\u0C61')||(LA21_1>='\u0C66' && LA21_1<='\u0C6F')||(LA21_1>='\u0C85' && LA21_1<='\u0C8C')||(LA21_1>='\u0C8E' && LA21_1<='\u0C90')||(LA21_1>='\u0C92' && LA21_1<='\u0CA8')||(LA21_1>='\u0CAA' && LA21_1<='\u0CB3')||(LA21_1>='\u0CB5' && LA21_1<='\u0CB9')||LA21_1=='\u0CDE'||(LA21_1>='\u0CE0' && LA21_1<='\u0CE1')||(LA21_1>='\u0CE6' && LA21_1<='\u0CEF')||(LA21_1>='\u0D05' && LA21_1<='\u0D0C')||(LA21_1>='\u0D0E' && LA21_1<='\u0D10')||(LA21_1>='\u0D12' && LA21_1<='\u0D28')||(LA21_1>='\u0D2A' && LA21_1<='\u0D39')||(LA21_1>='\u0D60' && LA21_1<='\u0D61')||(LA21_1>='\u0D66' && LA21_1<='\u0D6F')||(LA21_1>='\u0D85' && LA21_1<='\u0D96')||(LA21_1>='\u0D9A' && LA21_1<='\u0DB1')||(LA21_1>='\u0DB3' && LA21_1<='\u0DBB')||LA21_1=='\u0DBD'||(LA21_1>='\u0DC0' && LA21_1<='\u0DC6')||(LA21_1>='\u0E01' && LA21_1<='\u0E30')||(LA21_1>='\u0E32' && LA21_1<='\u0E33')||(LA21_1>='\u0E40' && LA21_1<='\u0E46')||(LA21_1>='\u0E50' && LA21_1<='\u0E59')||(LA21_1>='\u0E81' && LA21_1<='\u0E82')||LA21_1=='\u0E84'||(LA21_1>='\u0E87' && LA21_1<='\u0E88')||LA21_1=='\u0E8A'||LA21_1=='\u0E8D'||(LA21_1>='\u0E94' && LA21_1<='\u0E97')||(LA21_1>='\u0E99' && LA21_1<='\u0E9F')||(LA21_1>='\u0EA1' && LA21_1<='\u0EA3')||LA21_1=='\u0EA5'||LA21_1=='\u0EA7'||(LA21_1>='\u0EAA' && LA21_1<='\u0EAB')||(LA21_1>='\u0EAD' && LA21_1<='\u0EB0')||(LA21_1>='\u0EB2' && LA21_1<='\u0EB3')||(LA21_1>='\u0EBD' && LA21_1<='\u0EC4')||LA21_1=='\u0EC6'||(LA21_1>='\u0ED0' && LA21_1<='\u0ED9')||(LA21_1>='\u0EDC' && LA21_1<='\u0EDD')||LA21_1=='\u0F00'||(LA21_1>='\u0F20' && LA21_1<='\u0F29')||(LA21_1>='\u0F40' && LA21_1<='\u0F6A')||(LA21_1>='\u0F88' && LA21_1<='\u0F8B')||(LA21_1>='\u1000' && LA21_1<='\u1021')||(LA21_1>='\u1023' && LA21_1<='\u1027')||(LA21_1>='\u1029' && LA21_1<='\u102A')||(LA21_1>='\u1040' && LA21_1<='\u1049')||(LA21_1>='\u1050' && LA21_1<='\u1055')||(LA21_1>='\u10A0' && LA21_1<='\u10C5')||(LA21_1>='\u10D0' && LA21_1<='\u10F6')||(LA21_1>='\u1100' && LA21_1<='\u1159')||(LA21_1>='\u115F' && LA21_1<='\u11A2')||(LA21_1>='\u11A8' && LA21_1<='\u11F9')||(LA21_1>='\u1200' && LA21_1<='\u1206')||(LA21_1>='\u1208' && LA21_1<='\u1246')||LA21_1=='\u1248'||(LA21_1>='\u124A' && LA21_1<='\u124D')||(LA21_1>='\u1250' && LA21_1<='\u1256')||LA21_1=='\u1258'||(LA21_1>='\u125A' && LA21_1<='\u125D')||(LA21_1>='\u1260' && LA21_1<='\u1286')||LA21_1=='\u1288'||(LA21_1>='\u128A' && LA21_1<='\u128D')||(LA21_1>='\u1290' && LA21_1<='\u12AE')||LA21_1=='\u12B0'||(LA21_1>='\u12B2' && LA21_1<='\u12B5')||(LA21_1>='\u12B8' && LA21_1<='\u12BE')||LA21_1=='\u12C0'||(LA21_1>='\u12C2' && LA21_1<='\u12C5')||(LA21_1>='\u12C8' && LA21_1<='\u12CE')||(LA21_1>='\u12D0' && LA21_1<='\u12D6')||(LA21_1>='\u12D8' && LA21_1<='\u12EE')||(LA21_1>='\u12F0' && LA21_1<='\u130E')||LA21_1=='\u1310'||(LA21_1>='\u1312' && LA21_1<='\u1315')||(LA21_1>='\u1318' && LA21_1<='\u131E')||(LA21_1>='\u1320' && LA21_1<='\u1346')||(LA21_1>='\u1348' && LA21_1<='\u135A')||(LA21_1>='\u1369' && LA21_1<='\u1371')||(LA21_1>='\u13A0' && LA21_1<='\u13F4')||(LA21_1>='\u1401' && LA21_1<='\u1676')||(LA21_1>='\u1681' && LA21_1<='\u169A')||(LA21_1>='\u16A0' && LA21_1<='\u16EA')||(LA21_1>='\u1780' && LA21_1<='\u17B3')||(LA21_1>='\u17E0' && LA21_1<='\u17E9')||(LA21_1>='\u1810' && LA21_1<='\u1819')||(LA21_1>='\u1820' && LA21_1<='\u1877')||(LA21_1>='\u1880' && LA21_1<='\u18A8')||(LA21_1>='\u1E00' && LA21_1<='\u1E9B')||(LA21_1>='\u1EA0' && LA21_1<='\u1EF9')||(LA21_1>='\u1F00' && LA21_1<='\u1F15')||(LA21_1>='\u1F18' && LA21_1<='\u1F1D')||(LA21_1>='\u1F20' && LA21_1<='\u1F45')||(LA21_1>='\u1F48' && LA21_1<='\u1F4D')||(LA21_1>='\u1F50' && LA21_1<='\u1F57')||LA21_1=='\u1F59'||LA21_1=='\u1F5B'||LA21_1=='\u1F5D'||(LA21_1>='\u1F5F' && LA21_1<='\u1F7D')||(LA21_1>='\u1F80' && LA21_1<='\u1FB4')||(LA21_1>='\u1FB6' && LA21_1<='\u1FBC')||LA21_1=='\u1FBE'||(LA21_1>='\u1FC2' && LA21_1<='\u1FC4')||(LA21_1>='\u1FC6' && LA21_1<='\u1FCC')||(LA21_1>='\u1FD0' && LA21_1<='\u1FD3')||(LA21_1>='\u1FD6' && LA21_1<='\u1FDB')||(LA21_1>='\u1FE0' && LA21_1<='\u1FEC')||(LA21_1>='\u1FF2' && LA21_1<='\u1FF4')||(LA21_1>='\u1FF6' && LA21_1<='\u1FFC')||(LA21_1>='\u203F' && LA21_1<='\u2040')||LA21_1=='\u207F'||LA21_1=='\u2102'||LA21_1=='\u2107'||(LA21_1>='\u210A' && LA21_1<='\u2113')||LA21_1=='\u2115'||(LA21_1>='\u2119' && LA21_1<='\u211D')||LA21_1=='\u2124'||LA21_1=='\u2126'||LA21_1=='\u2128'||(LA21_1>='\u212A' && LA21_1<='\u212D')||(LA21_1>='\u212F' && LA21_1<='\u2131')||(LA21_1>='\u2133' && LA21_1<='\u2139')||(LA21_1>='\u2160' && LA21_1<='\u2183')||(LA21_1>='\u3005' && LA21_1<='\u3007')||(LA21_1>='\u3021' && LA21_1<='\u3029')||(LA21_1>='\u3031' && LA21_1<='\u3035')||(LA21_1>='\u3038' && LA21_1<='\u303A')||(LA21_1>='\u3041' && LA21_1<='\u3094')||(LA21_1>='\u309D' && LA21_1<='\u309E')||(LA21_1>='\u30A1' && LA21_1<='\u30FE')||(LA21_1>='\u3105' && LA21_1<='\u312C')||(LA21_1>='\u3131' && LA21_1<='\u318E')||(LA21_1>='\u31A0' && LA21_1<='\u31B7')||LA21_1=='\u3400'||LA21_1=='\u4DB5'||LA21_1=='\u4E00'||LA21_1=='\u9FA5'||(LA21_1>='\uA000' && LA21_1<='\uA48C')||LA21_1=='\uAC00'||LA21_1=='\uD7A3'||(LA21_1>='\uF900' && LA21_1<='\uFA2D')||(LA21_1>='\uFB00' && LA21_1<='\uFB06')||(LA21_1>='\uFB13' && LA21_1<='\uFB17')||LA21_1=='\uFB1D'||(LA21_1>='\uFB1F' && LA21_1<='\uFB28')||(LA21_1>='\uFB2A' && LA21_1<='\uFB36')||(LA21_1>='\uFB38' && LA21_1<='\uFB3C')||LA21_1=='\uFB3E'||(LA21_1>='\uFB40' && LA21_1<='\uFB41')||(LA21_1>='\uFB43' && LA21_1<='\uFB44')||(LA21_1>='\uFB46' && LA21_1<='\uFBB1')||(LA21_1>='\uFBD3' && LA21_1<='\uFD3D')||(LA21_1>='\uFD50' && LA21_1<='\uFD8F')||(LA21_1>='\uFD92' && LA21_1<='\uFDC7')||(LA21_1>='\uFDF0' && LA21_1<='\uFDFB')||(LA21_1>='\uFE33' && LA21_1<='\uFE34')||(LA21_1>='\uFE4D' && LA21_1<='\uFE4F')||(LA21_1>='\uFE70' && LA21_1<='\uFE72')||LA21_1=='\uFE74'||(LA21_1>='\uFE76' && LA21_1<='\uFEFC')||(LA21_1>='\uFF10' && LA21_1<='\uFF19')||(LA21_1>='\uFF21' && LA21_1<='\uFF3A')||LA21_1=='\uFF3F'||(LA21_1>='\uFF41' && LA21_1<='\uFF5A')||(LA21_1>='\uFF65' && LA21_1<='\uFFBE')||(LA21_1>='\uFFC2' && LA21_1<='\uFFC7')||(LA21_1>='\uFFCA' && LA21_1<='\uFFCF')||(LA21_1>='\uFFD2' && LA21_1<='\uFFD7')||(LA21_1>='\uFFDA' && LA21_1<='\uFFDC')))
+				if ((LA19_1=='$'||(LA19_1>='0' && LA19_1<='9')||(LA19_1>='A' && LA19_1<='Z')||LA19_1=='\\'||LA19_1=='_'||(LA19_1>='a' && LA19_1<='z')||LA19_1=='\u00AA'||LA19_1=='\u00B5'||LA19_1=='\u00BA'||(LA19_1>='\u00C0' && LA19_1<='\u00D6')||(LA19_1>='\u00D8' && LA19_1<='\u00F6')||(LA19_1>='\u00F8' && LA19_1<='\u021F')||(LA19_1>='\u0222' && LA19_1<='\u0233')||(LA19_1>='\u0250' && LA19_1<='\u02AD')||(LA19_1>='\u02B0' && LA19_1<='\u02B8')||(LA19_1>='\u02BB' && LA19_1<='\u02C1')||(LA19_1>='\u02D0' && LA19_1<='\u02D1')||(LA19_1>='\u02E0' && LA19_1<='\u02E4')||LA19_1=='\u02EE'||LA19_1=='\u037A'||LA19_1=='\u0386'||(LA19_1>='\u0388' && LA19_1<='\u038A')||LA19_1=='\u038C'||(LA19_1>='\u038E' && LA19_1<='\u03A1')||(LA19_1>='\u03A3' && LA19_1<='\u03CE')||(LA19_1>='\u03D0' && LA19_1<='\u03D7')||(LA19_1>='\u03DA' && LA19_1<='\u03F3')||(LA19_1>='\u0400' && LA19_1<='\u0481')||(LA19_1>='\u048C' && LA19_1<='\u04C4')||(LA19_1>='\u04C7' && LA19_1<='\u04C8')||(LA19_1>='\u04CB' && LA19_1<='\u04CC')||(LA19_1>='\u04D0' && LA19_1<='\u04F5')||(LA19_1>='\u04F8' && LA19_1<='\u04F9')||(LA19_1>='\u0531' && LA19_1<='\u0556')||LA19_1=='\u0559'||(LA19_1>='\u0561' && LA19_1<='\u0587')||(LA19_1>='\u05D0' && LA19_1<='\u05EA')||(LA19_1>='\u05F0' && LA19_1<='\u05F2')||(LA19_1>='\u0621' && LA19_1<='\u063A')||(LA19_1>='\u0640' && LA19_1<='\u064A')||(LA19_1>='\u0660' && LA19_1<='\u0669')||(LA19_1>='\u0671' && LA19_1<='\u06D3')||LA19_1=='\u06D5'||(LA19_1>='\u06E5' && LA19_1<='\u06E6')||(LA19_1>='\u06F0' && LA19_1<='\u06FC')||LA19_1=='\u0710'||(LA19_1>='\u0712' && LA19_1<='\u072C')||(LA19_1>='\u0780' && LA19_1<='\u07A5')||(LA19_1>='\u0905' && LA19_1<='\u0939')||LA19_1=='\u093D'||LA19_1=='\u0950'||(LA19_1>='\u0958' && LA19_1<='\u0961')||(LA19_1>='\u0966' && LA19_1<='\u096F')||(LA19_1>='\u0985' && LA19_1<='\u098C')||(LA19_1>='\u098F' && LA19_1<='\u0990')||(LA19_1>='\u0993' && LA19_1<='\u09A8')||(LA19_1>='\u09AA' && LA19_1<='\u09B0')||LA19_1=='\u09B2'||(LA19_1>='\u09B6' && LA19_1<='\u09B9')||(LA19_1>='\u09DC' && LA19_1<='\u09DD')||(LA19_1>='\u09DF' && LA19_1<='\u09E1')||(LA19_1>='\u09E6' && LA19_1<='\u09F1')||(LA19_1>='\u0A05' && LA19_1<='\u0A0A')||(LA19_1>='\u0A0F' && LA19_1<='\u0A10')||(LA19_1>='\u0A13' && LA19_1<='\u0A28')||(LA19_1>='\u0A2A' && LA19_1<='\u0A30')||(LA19_1>='\u0A32' && LA19_1<='\u0A33')||(LA19_1>='\u0A35' && LA19_1<='\u0A36')||(LA19_1>='\u0A38' && LA19_1<='\u0A39')||(LA19_1>='\u0A59' && LA19_1<='\u0A5C')||LA19_1=='\u0A5E'||(LA19_1>='\u0A66' && LA19_1<='\u0A6F')||(LA19_1>='\u0A72' && LA19_1<='\u0A74')||(LA19_1>='\u0A85' && LA19_1<='\u0A8B')||LA19_1=='\u0A8D'||(LA19_1>='\u0A8F' && LA19_1<='\u0A91')||(LA19_1>='\u0A93' && LA19_1<='\u0AA8')||(LA19_1>='\u0AAA' && LA19_1<='\u0AB0')||(LA19_1>='\u0AB2' && LA19_1<='\u0AB3')||(LA19_1>='\u0AB5' && LA19_1<='\u0AB9')||LA19_1=='\u0ABD'||LA19_1=='\u0AD0'||LA19_1=='\u0AE0'||(LA19_1>='\u0AE6' && LA19_1<='\u0AEF')||(LA19_1>='\u0B05' && LA19_1<='\u0B0C')||(LA19_1>='\u0B0F' && LA19_1<='\u0B10')||(LA19_1>='\u0B13' && LA19_1<='\u0B28')||(LA19_1>='\u0B2A' && LA19_1<='\u0B30')||(LA19_1>='\u0B32' && LA19_1<='\u0B33')||(LA19_1>='\u0B36' && LA19_1<='\u0B39')||LA19_1=='\u0B3D'||(LA19_1>='\u0B5C' && LA19_1<='\u0B5D')||(LA19_1>='\u0B5F' && LA19_1<='\u0B61')||(LA19_1>='\u0B66' && LA19_1<='\u0B6F')||(LA19_1>='\u0B85' && LA19_1<='\u0B8A')||(LA19_1>='\u0B8E' && LA19_1<='\u0B90')||(LA19_1>='\u0B92' && LA19_1<='\u0B95')||(LA19_1>='\u0B99' && LA19_1<='\u0B9A')||LA19_1=='\u0B9C'||(LA19_1>='\u0B9E' && LA19_1<='\u0B9F')||(LA19_1>='\u0BA3' && LA19_1<='\u0BA4')||(LA19_1>='\u0BA8' && LA19_1<='\u0BAA')||(LA19_1>='\u0BAE' && LA19_1<='\u0BB5')||(LA19_1>='\u0BB7' && LA19_1<='\u0BB9')||(LA19_1>='\u0BE7' && LA19_1<='\u0BEF')||(LA19_1>='\u0C05' && LA19_1<='\u0C0C')||(LA19_1>='\u0C0E' && LA19_1<='\u0C10')||(LA19_1>='\u0C12' && LA19_1<='\u0C28')||(LA19_1>='\u0C2A' && LA19_1<='\u0C33')||(LA19_1>='\u0C35' && LA19_1<='\u0C39')||(LA19_1>='\u0C60' && LA19_1<='\u0C61')||(LA19_1>='\u0C66' && LA19_1<='\u0C6F')||(LA19_1>='\u0C85' && LA19_1<='\u0C8C')||(LA19_1>='\u0C8E' && LA19_1<='\u0C90')||(LA19_1>='\u0C92' && LA19_1<='\u0CA8')||(LA19_1>='\u0CAA' && LA19_1<='\u0CB3')||(LA19_1>='\u0CB5' && LA19_1<='\u0CB9')||LA19_1=='\u0CDE'||(LA19_1>='\u0CE0' && LA19_1<='\u0CE1')||(LA19_1>='\u0CE6' && LA19_1<='\u0CEF')||(LA19_1>='\u0D05' && LA19_1<='\u0D0C')||(LA19_1>='\u0D0E' && LA19_1<='\u0D10')||(LA19_1>='\u0D12' && LA19_1<='\u0D28')||(LA19_1>='\u0D2A' && LA19_1<='\u0D39')||(LA19_1>='\u0D60' && LA19_1<='\u0D61')||(LA19_1>='\u0D66' && LA19_1<='\u0D6F')||(LA19_1>='\u0D85' && LA19_1<='\u0D96')||(LA19_1>='\u0D9A' && LA19_1<='\u0DB1')||(LA19_1>='\u0DB3' && LA19_1<='\u0DBB')||LA19_1=='\u0DBD'||(LA19_1>='\u0DC0' && LA19_1<='\u0DC6')||(LA19_1>='\u0E01' && LA19_1<='\u0E30')||(LA19_1>='\u0E32' && LA19_1<='\u0E33')||(LA19_1>='\u0E40' && LA19_1<='\u0E46')||(LA19_1>='\u0E50' && LA19_1<='\u0E59')||(LA19_1>='\u0E81' && LA19_1<='\u0E82')||LA19_1=='\u0E84'||(LA19_1>='\u0E87' && LA19_1<='\u0E88')||LA19_1=='\u0E8A'||LA19_1=='\u0E8D'||(LA19_1>='\u0E94' && LA19_1<='\u0E97')||(LA19_1>='\u0E99' && LA19_1<='\u0E9F')||(LA19_1>='\u0EA1' && LA19_1<='\u0EA3')||LA19_1=='\u0EA5'||LA19_1=='\u0EA7'||(LA19_1>='\u0EAA' && LA19_1<='\u0EAB')||(LA19_1>='\u0EAD' && LA19_1<='\u0EB0')||(LA19_1>='\u0EB2' && LA19_1<='\u0EB3')||(LA19_1>='\u0EBD' && LA19_1<='\u0EC4')||LA19_1=='\u0EC6'||(LA19_1>='\u0ED0' && LA19_1<='\u0ED9')||(LA19_1>='\u0EDC' && LA19_1<='\u0EDD')||LA19_1=='\u0F00'||(LA19_1>='\u0F20' && LA19_1<='\u0F29')||(LA19_1>='\u0F40' && LA19_1<='\u0F6A')||(LA19_1>='\u0F88' && LA19_1<='\u0F8B')||(LA19_1>='\u1000' && LA19_1<='\u1021')||(LA19_1>='\u1023' && LA19_1<='\u1027')||(LA19_1>='\u1029' && LA19_1<='\u102A')||(LA19_1>='\u1040' && LA19_1<='\u1049')||(LA19_1>='\u1050' && LA19_1<='\u1055')||(LA19_1>='\u10A0' && LA19_1<='\u10C5')||(LA19_1>='\u10D0' && LA19_1<='\u10F6')||(LA19_1>='\u1100' && LA19_1<='\u1159')||(LA19_1>='\u115F' && LA19_1<='\u11A2')||(LA19_1>='\u11A8' && LA19_1<='\u11F9')||(LA19_1>='\u1200' && LA19_1<='\u1206')||(LA19_1>='\u1208' && LA19_1<='\u1246')||LA19_1=='\u1248'||(LA19_1>='\u124A' && LA19_1<='\u124D')||(LA19_1>='\u1250' && LA19_1<='\u1256')||LA19_1=='\u1258'||(LA19_1>='\u125A' && LA19_1<='\u125D')||(LA19_1>='\u1260' && LA19_1<='\u1286')||LA19_1=='\u1288'||(LA19_1>='\u128A' && LA19_1<='\u128D')||(LA19_1>='\u1290' && LA19_1<='\u12AE')||LA19_1=='\u12B0'||(LA19_1>='\u12B2' && LA19_1<='\u12B5')||(LA19_1>='\u12B8' && LA19_1<='\u12BE')||LA19_1=='\u12C0'||(LA19_1>='\u12C2' && LA19_1<='\u12C5')||(LA19_1>='\u12C8' && LA19_1<='\u12CE')||(LA19_1>='\u12D0' && LA19_1<='\u12D6')||(LA19_1>='\u12D8' && LA19_1<='\u12EE')||(LA19_1>='\u12F0' && LA19_1<='\u130E')||LA19_1=='\u1310'||(LA19_1>='\u1312' && LA19_1<='\u1315')||(LA19_1>='\u1318' && LA19_1<='\u131E')||(LA19_1>='\u1320' && LA19_1<='\u1346')||(LA19_1>='\u1348' && LA19_1<='\u135A')||(LA19_1>='\u1369' && LA19_1<='\u1371')||(LA19_1>='\u13A0' && LA19_1<='\u13F4')||(LA19_1>='\u1401' && LA19_1<='\u1676')||(LA19_1>='\u1681' && LA19_1<='\u169A')||(LA19_1>='\u16A0' && LA19_1<='\u16EA')||(LA19_1>='\u1780' && LA19_1<='\u17B3')||(LA19_1>='\u17E0' && LA19_1<='\u17E9')||(LA19_1>='\u1810' && LA19_1<='\u1819')||(LA19_1>='\u1820' && LA19_1<='\u1877')||(LA19_1>='\u1880' && LA19_1<='\u18A8')||(LA19_1>='\u1E00' && LA19_1<='\u1E9B')||(LA19_1>='\u1EA0' && LA19_1<='\u1EF9')||(LA19_1>='\u1F00' && LA19_1<='\u1F15')||(LA19_1>='\u1F18' && LA19_1<='\u1F1D')||(LA19_1>='\u1F20' && LA19_1<='\u1F45')||(LA19_1>='\u1F48' && LA19_1<='\u1F4D')||(LA19_1>='\u1F50' && LA19_1<='\u1F57')||LA19_1=='\u1F59'||LA19_1=='\u1F5B'||LA19_1=='\u1F5D'||(LA19_1>='\u1F5F' && LA19_1<='\u1F7D')||(LA19_1>='\u1F80' && LA19_1<='\u1FB4')||(LA19_1>='\u1FB6' && LA19_1<='\u1FBC')||LA19_1=='\u1FBE'||(LA19_1>='\u1FC2' && LA19_1<='\u1FC4')||(LA19_1>='\u1FC6' && LA19_1<='\u1FCC')||(LA19_1>='\u1FD0' && LA19_1<='\u1FD3')||(LA19_1>='\u1FD6' && LA19_1<='\u1FDB')||(LA19_1>='\u1FE0' && LA19_1<='\u1FEC')||(LA19_1>='\u1FF2' && LA19_1<='\u1FF4')||(LA19_1>='\u1FF6' && LA19_1<='\u1FFC')||(LA19_1>='\u203F' && LA19_1<='\u2040')||LA19_1=='\u207F'||LA19_1=='\u2102'||LA19_1=='\u2107'||(LA19_1>='\u210A' && LA19_1<='\u2113')||LA19_1=='\u2115'||(LA19_1>='\u2119' && LA19_1<='\u211D')||LA19_1=='\u2124'||LA19_1=='\u2126'||LA19_1=='\u2128'||(LA19_1>='\u212A' && LA19_1<='\u212D')||(LA19_1>='\u212F' && LA19_1<='\u2131')||(LA19_1>='\u2133' && LA19_1<='\u2139')||(LA19_1>='\u2160' && LA19_1<='\u2183')||(LA19_1>='\u3005' && LA19_1<='\u3007')||(LA19_1>='\u3021' && LA19_1<='\u3029')||(LA19_1>='\u3031' && LA19_1<='\u3035')||(LA19_1>='\u3038' && LA19_1<='\u303A')||(LA19_1>='\u3041' && LA19_1<='\u3094')||(LA19_1>='\u309D' && LA19_1<='\u309E')||(LA19_1>='\u30A1' && LA19_1<='\u30FE')||(LA19_1>='\u3105' && LA19_1<='\u312C')||(LA19_1>='\u3131' && LA19_1<='\u318E')||(LA19_1>='\u31A0' && LA19_1<='\u31B7')||LA19_1=='\u3400'||LA19_1=='\u4DB5'||LA19_1=='\u4E00'||LA19_1=='\u9FA5'||(LA19_1>='\uA000' && LA19_1<='\uA48C')||LA19_1=='\uAC00'||LA19_1=='\uD7A3'||(LA19_1>='\uF900' && LA19_1<='\uFA2D')||(LA19_1>='\uFB00' && LA19_1<='\uFB06')||(LA19_1>='\uFB13' && LA19_1<='\uFB17')||LA19_1=='\uFB1D'||(LA19_1>='\uFB1F' && LA19_1<='\uFB28')||(LA19_1>='\uFB2A' && LA19_1<='\uFB36')||(LA19_1>='\uFB38' && LA19_1<='\uFB3C')||LA19_1=='\uFB3E'||(LA19_1>='\uFB40' && LA19_1<='\uFB41')||(LA19_1>='\uFB43' && LA19_1<='\uFB44')||(LA19_1>='\uFB46' && LA19_1<='\uFBB1')||(LA19_1>='\uFBD3' && LA19_1<='\uFD3D')||(LA19_1>='\uFD50' && LA19_1<='\uFD8F')||(LA19_1>='\uFD92' && LA19_1<='\uFDC7')||(LA19_1>='\uFDF0' && LA19_1<='\uFDFB')||(LA19_1>='\uFE33' && LA19_1<='\uFE34')||(LA19_1>='\uFE4D' && LA19_1<='\uFE4F')||(LA19_1>='\uFE70' && LA19_1<='\uFE72')||LA19_1=='\uFE74'||(LA19_1>='\uFE76' && LA19_1<='\uFEFC')||(LA19_1>='\uFF10' && LA19_1<='\uFF19')||(LA19_1>='\uFF21' && LA19_1<='\uFF3A')||LA19_1=='\uFF3F'||(LA19_1>='\uFF41' && LA19_1<='\uFF5A')||(LA19_1>='\uFF65' && LA19_1<='\uFFBE')||(LA19_1>='\uFFC2' && LA19_1<='\uFFC7')||(LA19_1>='\uFFCA' && LA19_1<='\uFFCF')||(LA19_1>='\uFFD2' && LA19_1<='\uFFD7')||(LA19_1>='\uFFDA' && LA19_1<='\uFFDC')))
 				{
-					alt21 = 1;
+					alt19 = 1;
 				}
 
 
-				} finally { DebugExitDecision(21); }
-				switch ( alt21 )
+				} finally { DebugExitDecision(19); }
+				switch ( alt19 )
 				{
 				case 1:
 					DebugEnterAlt(1);
@@ -4559,14 +4302,14 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					break;
 
 				default:
-					goto loop21;
+					goto loop19;
 				}
 			}
 
-			loop21:
+			loop19:
 				;
 
-			} finally { DebugExitSubRule(21); }
+			} finally { DebugExitSubRule(19); }
 
 
 			}
@@ -4596,35 +4339,35 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		try
 		{
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:512:5: ( UnicodeLetter | '$' | '_' | '\\\\' UnicodeEscapeSequence )
-			int alt22=4;
-			try { DebugEnterDecision(22, false);
-			int LA22_1 = input.LA(1);
+			int alt20=4;
+			try { DebugEnterDecision(20, false);
+			int LA20_1 = input.LA(1);
 
-			if (((LA22_1>='A' && LA22_1<='Z')||(LA22_1>='a' && LA22_1<='z')||LA22_1=='\u00AA'||LA22_1=='\u00B5'||LA22_1=='\u00BA'||(LA22_1>='\u00C0' && LA22_1<='\u00D6')||(LA22_1>='\u00D8' && LA22_1<='\u00F6')||(LA22_1>='\u00F8' && LA22_1<='\u021F')||(LA22_1>='\u0222' && LA22_1<='\u0233')||(LA22_1>='\u0250' && LA22_1<='\u02AD')||(LA22_1>='\u02B0' && LA22_1<='\u02B8')||(LA22_1>='\u02BB' && LA22_1<='\u02C1')||(LA22_1>='\u02D0' && LA22_1<='\u02D1')||(LA22_1>='\u02E0' && LA22_1<='\u02E4')||LA22_1=='\u02EE'||LA22_1=='\u037A'||LA22_1=='\u0386'||(LA22_1>='\u0388' && LA22_1<='\u038A')||LA22_1=='\u038C'||(LA22_1>='\u038E' && LA22_1<='\u03A1')||(LA22_1>='\u03A3' && LA22_1<='\u03CE')||(LA22_1>='\u03D0' && LA22_1<='\u03D7')||(LA22_1>='\u03DA' && LA22_1<='\u03F3')||(LA22_1>='\u0400' && LA22_1<='\u0481')||(LA22_1>='\u048C' && LA22_1<='\u04C4')||(LA22_1>='\u04C7' && LA22_1<='\u04C8')||(LA22_1>='\u04CB' && LA22_1<='\u04CC')||(LA22_1>='\u04D0' && LA22_1<='\u04F5')||(LA22_1>='\u04F8' && LA22_1<='\u04F9')||(LA22_1>='\u0531' && LA22_1<='\u0556')||LA22_1=='\u0559'||(LA22_1>='\u0561' && LA22_1<='\u0587')||(LA22_1>='\u05D0' && LA22_1<='\u05EA')||(LA22_1>='\u05F0' && LA22_1<='\u05F2')||(LA22_1>='\u0621' && LA22_1<='\u063A')||(LA22_1>='\u0640' && LA22_1<='\u064A')||(LA22_1>='\u0671' && LA22_1<='\u06D3')||LA22_1=='\u06D5'||(LA22_1>='\u06E5' && LA22_1<='\u06E6')||(LA22_1>='\u06FA' && LA22_1<='\u06FC')||LA22_1=='\u0710'||(LA22_1>='\u0712' && LA22_1<='\u072C')||(LA22_1>='\u0780' && LA22_1<='\u07A5')||(LA22_1>='\u0905' && LA22_1<='\u0939')||LA22_1=='\u093D'||LA22_1=='\u0950'||(LA22_1>='\u0958' && LA22_1<='\u0961')||(LA22_1>='\u0985' && LA22_1<='\u098C')||(LA22_1>='\u098F' && LA22_1<='\u0990')||(LA22_1>='\u0993' && LA22_1<='\u09A8')||(LA22_1>='\u09AA' && LA22_1<='\u09B0')||LA22_1=='\u09B2'||(LA22_1>='\u09B6' && LA22_1<='\u09B9')||(LA22_1>='\u09DC' && LA22_1<='\u09DD')||(LA22_1>='\u09DF' && LA22_1<='\u09E1')||(LA22_1>='\u09F0' && LA22_1<='\u09F1')||(LA22_1>='\u0A05' && LA22_1<='\u0A0A')||(LA22_1>='\u0A0F' && LA22_1<='\u0A10')||(LA22_1>='\u0A13' && LA22_1<='\u0A28')||(LA22_1>='\u0A2A' && LA22_1<='\u0A30')||(LA22_1>='\u0A32' && LA22_1<='\u0A33')||(LA22_1>='\u0A35' && LA22_1<='\u0A36')||(LA22_1>='\u0A38' && LA22_1<='\u0A39')||(LA22_1>='\u0A59' && LA22_1<='\u0A5C')||LA22_1=='\u0A5E'||(LA22_1>='\u0A72' && LA22_1<='\u0A74')||(LA22_1>='\u0A85' && LA22_1<='\u0A8B')||LA22_1=='\u0A8D'||(LA22_1>='\u0A8F' && LA22_1<='\u0A91')||(LA22_1>='\u0A93' && LA22_1<='\u0AA8')||(LA22_1>='\u0AAA' && LA22_1<='\u0AB0')||(LA22_1>='\u0AB2' && LA22_1<='\u0AB3')||(LA22_1>='\u0AB5' && LA22_1<='\u0AB9')||LA22_1=='\u0ABD'||LA22_1=='\u0AD0'||LA22_1=='\u0AE0'||(LA22_1>='\u0B05' && LA22_1<='\u0B0C')||(LA22_1>='\u0B0F' && LA22_1<='\u0B10')||(LA22_1>='\u0B13' && LA22_1<='\u0B28')||(LA22_1>='\u0B2A' && LA22_1<='\u0B30')||(LA22_1>='\u0B32' && LA22_1<='\u0B33')||(LA22_1>='\u0B36' && LA22_1<='\u0B39')||LA22_1=='\u0B3D'||(LA22_1>='\u0B5C' && LA22_1<='\u0B5D')||(LA22_1>='\u0B5F' && LA22_1<='\u0B61')||(LA22_1>='\u0B85' && LA22_1<='\u0B8A')||(LA22_1>='\u0B8E' && LA22_1<='\u0B90')||(LA22_1>='\u0B92' && LA22_1<='\u0B95')||(LA22_1>='\u0B99' && LA22_1<='\u0B9A')||LA22_1=='\u0B9C'||(LA22_1>='\u0B9E' && LA22_1<='\u0B9F')||(LA22_1>='\u0BA3' && LA22_1<='\u0BA4')||(LA22_1>='\u0BA8' && LA22_1<='\u0BAA')||(LA22_1>='\u0BAE' && LA22_1<='\u0BB5')||(LA22_1>='\u0BB7' && LA22_1<='\u0BB9')||(LA22_1>='\u0C05' && LA22_1<='\u0C0C')||(LA22_1>='\u0C0E' && LA22_1<='\u0C10')||(LA22_1>='\u0C12' && LA22_1<='\u0C28')||(LA22_1>='\u0C2A' && LA22_1<='\u0C33')||(LA22_1>='\u0C35' && LA22_1<='\u0C39')||(LA22_1>='\u0C60' && LA22_1<='\u0C61')||(LA22_1>='\u0C85' && LA22_1<='\u0C8C')||(LA22_1>='\u0C8E' && LA22_1<='\u0C90')||(LA22_1>='\u0C92' && LA22_1<='\u0CA8')||(LA22_1>='\u0CAA' && LA22_1<='\u0CB3')||(LA22_1>='\u0CB5' && LA22_1<='\u0CB9')||LA22_1=='\u0CDE'||(LA22_1>='\u0CE0' && LA22_1<='\u0CE1')||(LA22_1>='\u0D05' && LA22_1<='\u0D0C')||(LA22_1>='\u0D0E' && LA22_1<='\u0D10')||(LA22_1>='\u0D12' && LA22_1<='\u0D28')||(LA22_1>='\u0D2A' && LA22_1<='\u0D39')||(LA22_1>='\u0D60' && LA22_1<='\u0D61')||(LA22_1>='\u0D85' && LA22_1<='\u0D96')||(LA22_1>='\u0D9A' && LA22_1<='\u0DB1')||(LA22_1>='\u0DB3' && LA22_1<='\u0DBB')||LA22_1=='\u0DBD'||(LA22_1>='\u0DC0' && LA22_1<='\u0DC6')||(LA22_1>='\u0E01' && LA22_1<='\u0E30')||(LA22_1>='\u0E32' && LA22_1<='\u0E33')||(LA22_1>='\u0E40' && LA22_1<='\u0E46')||(LA22_1>='\u0E81' && LA22_1<='\u0E82')||LA22_1=='\u0E84'||(LA22_1>='\u0E87' && LA22_1<='\u0E88')||LA22_1=='\u0E8A'||LA22_1=='\u0E8D'||(LA22_1>='\u0E94' && LA22_1<='\u0E97')||(LA22_1>='\u0E99' && LA22_1<='\u0E9F')||(LA22_1>='\u0EA1' && LA22_1<='\u0EA3')||LA22_1=='\u0EA5'||LA22_1=='\u0EA7'||(LA22_1>='\u0EAA' && LA22_1<='\u0EAB')||(LA22_1>='\u0EAD' && LA22_1<='\u0EB0')||(LA22_1>='\u0EB2' && LA22_1<='\u0EB3')||(LA22_1>='\u0EBD' && LA22_1<='\u0EC4')||LA22_1=='\u0EC6'||(LA22_1>='\u0EDC' && LA22_1<='\u0EDD')||LA22_1=='\u0F00'||(LA22_1>='\u0F40' && LA22_1<='\u0F6A')||(LA22_1>='\u0F88' && LA22_1<='\u0F8B')||(LA22_1>='\u1000' && LA22_1<='\u1021')||(LA22_1>='\u1023' && LA22_1<='\u1027')||(LA22_1>='\u1029' && LA22_1<='\u102A')||(LA22_1>='\u1050' && LA22_1<='\u1055')||(LA22_1>='\u10A0' && LA22_1<='\u10C5')||(LA22_1>='\u10D0' && LA22_1<='\u10F6')||(LA22_1>='\u1100' && LA22_1<='\u1159')||(LA22_1>='\u115F' && LA22_1<='\u11A2')||(LA22_1>='\u11A8' && LA22_1<='\u11F9')||(LA22_1>='\u1200' && LA22_1<='\u1206')||(LA22_1>='\u1208' && LA22_1<='\u1246')||LA22_1=='\u1248'||(LA22_1>='\u124A' && LA22_1<='\u124D')||(LA22_1>='\u1250' && LA22_1<='\u1256')||LA22_1=='\u1258'||(LA22_1>='\u125A' && LA22_1<='\u125D')||(LA22_1>='\u1260' && LA22_1<='\u1286')||LA22_1=='\u1288'||(LA22_1>='\u128A' && LA22_1<='\u128D')||(LA22_1>='\u1290' && LA22_1<='\u12AE')||LA22_1=='\u12B0'||(LA22_1>='\u12B2' && LA22_1<='\u12B5')||(LA22_1>='\u12B8' && LA22_1<='\u12BE')||LA22_1=='\u12C0'||(LA22_1>='\u12C2' && LA22_1<='\u12C5')||(LA22_1>='\u12C8' && LA22_1<='\u12CE')||(LA22_1>='\u12D0' && LA22_1<='\u12D6')||(LA22_1>='\u12D8' && LA22_1<='\u12EE')||(LA22_1>='\u12F0' && LA22_1<='\u130E')||LA22_1=='\u1310'||(LA22_1>='\u1312' && LA22_1<='\u1315')||(LA22_1>='\u1318' && LA22_1<='\u131E')||(LA22_1>='\u1320' && LA22_1<='\u1346')||(LA22_1>='\u1348' && LA22_1<='\u135A')||(LA22_1>='\u13A0' && LA22_1<='\u13F4')||(LA22_1>='\u1401' && LA22_1<='\u1676')||(LA22_1>='\u1681' && LA22_1<='\u169A')||(LA22_1>='\u16A0' && LA22_1<='\u16EA')||(LA22_1>='\u1780' && LA22_1<='\u17B3')||(LA22_1>='\u1820' && LA22_1<='\u1877')||(LA22_1>='\u1880' && LA22_1<='\u18A8')||(LA22_1>='\u1E00' && LA22_1<='\u1E9B')||(LA22_1>='\u1EA0' && LA22_1<='\u1EF9')||(LA22_1>='\u1F00' && LA22_1<='\u1F15')||(LA22_1>='\u1F18' && LA22_1<='\u1F1D')||(LA22_1>='\u1F20' && LA22_1<='\u1F45')||(LA22_1>='\u1F48' && LA22_1<='\u1F4D')||(LA22_1>='\u1F50' && LA22_1<='\u1F57')||LA22_1=='\u1F59'||LA22_1=='\u1F5B'||LA22_1=='\u1F5D'||(LA22_1>='\u1F5F' && LA22_1<='\u1F7D')||(LA22_1>='\u1F80' && LA22_1<='\u1FB4')||(LA22_1>='\u1FB6' && LA22_1<='\u1FBC')||LA22_1=='\u1FBE'||(LA22_1>='\u1FC2' && LA22_1<='\u1FC4')||(LA22_1>='\u1FC6' && LA22_1<='\u1FCC')||(LA22_1>='\u1FD0' && LA22_1<='\u1FD3')||(LA22_1>='\u1FD6' && LA22_1<='\u1FDB')||(LA22_1>='\u1FE0' && LA22_1<='\u1FEC')||(LA22_1>='\u1FF2' && LA22_1<='\u1FF4')||(LA22_1>='\u1FF6' && LA22_1<='\u1FFC')||LA22_1=='\u207F'||LA22_1=='\u2102'||LA22_1=='\u2107'||(LA22_1>='\u210A' && LA22_1<='\u2113')||LA22_1=='\u2115'||(LA22_1>='\u2119' && LA22_1<='\u211D')||LA22_1=='\u2124'||LA22_1=='\u2126'||LA22_1=='\u2128'||(LA22_1>='\u212A' && LA22_1<='\u212D')||(LA22_1>='\u212F' && LA22_1<='\u2131')||(LA22_1>='\u2133' && LA22_1<='\u2139')||(LA22_1>='\u2160' && LA22_1<='\u2183')||(LA22_1>='\u3005' && LA22_1<='\u3007')||(LA22_1>='\u3021' && LA22_1<='\u3029')||(LA22_1>='\u3031' && LA22_1<='\u3035')||(LA22_1>='\u3038' && LA22_1<='\u303A')||(LA22_1>='\u3041' && LA22_1<='\u3094')||(LA22_1>='\u309D' && LA22_1<='\u309E')||(LA22_1>='\u30A1' && LA22_1<='\u30FA')||(LA22_1>='\u30FC' && LA22_1<='\u30FE')||(LA22_1>='\u3105' && LA22_1<='\u312C')||(LA22_1>='\u3131' && LA22_1<='\u318E')||(LA22_1>='\u31A0' && LA22_1<='\u31B7')||LA22_1=='\u3400'||LA22_1=='\u4DB5'||LA22_1=='\u4E00'||LA22_1=='\u9FA5'||(LA22_1>='\uA000' && LA22_1<='\uA48C')||LA22_1=='\uAC00'||LA22_1=='\uD7A3'||(LA22_1>='\uF900' && LA22_1<='\uFA2D')||(LA22_1>='\uFB00' && LA22_1<='\uFB06')||(LA22_1>='\uFB13' && LA22_1<='\uFB17')||LA22_1=='\uFB1D'||(LA22_1>='\uFB1F' && LA22_1<='\uFB28')||(LA22_1>='\uFB2A' && LA22_1<='\uFB36')||(LA22_1>='\uFB38' && LA22_1<='\uFB3C')||LA22_1=='\uFB3E'||(LA22_1>='\uFB40' && LA22_1<='\uFB41')||(LA22_1>='\uFB43' && LA22_1<='\uFB44')||(LA22_1>='\uFB46' && LA22_1<='\uFBB1')||(LA22_1>='\uFBD3' && LA22_1<='\uFD3D')||(LA22_1>='\uFD50' && LA22_1<='\uFD8F')||(LA22_1>='\uFD92' && LA22_1<='\uFDC7')||(LA22_1>='\uFDF0' && LA22_1<='\uFDFB')||(LA22_1>='\uFE70' && LA22_1<='\uFE72')||LA22_1=='\uFE74'||(LA22_1>='\uFE76' && LA22_1<='\uFEFC')||(LA22_1>='\uFF21' && LA22_1<='\uFF3A')||(LA22_1>='\uFF41' && LA22_1<='\uFF5A')||(LA22_1>='\uFF66' && LA22_1<='\uFFBE')||(LA22_1>='\uFFC2' && LA22_1<='\uFFC7')||(LA22_1>='\uFFCA' && LA22_1<='\uFFCF')||(LA22_1>='\uFFD2' && LA22_1<='\uFFD7')||(LA22_1>='\uFFDA' && LA22_1<='\uFFDC')))
+			if (((LA20_1>='A' && LA20_1<='Z')||(LA20_1>='a' && LA20_1<='z')||LA20_1=='\u00AA'||LA20_1=='\u00B5'||LA20_1=='\u00BA'||(LA20_1>='\u00C0' && LA20_1<='\u00D6')||(LA20_1>='\u00D8' && LA20_1<='\u00F6')||(LA20_1>='\u00F8' && LA20_1<='\u021F')||(LA20_1>='\u0222' && LA20_1<='\u0233')||(LA20_1>='\u0250' && LA20_1<='\u02AD')||(LA20_1>='\u02B0' && LA20_1<='\u02B8')||(LA20_1>='\u02BB' && LA20_1<='\u02C1')||(LA20_1>='\u02D0' && LA20_1<='\u02D1')||(LA20_1>='\u02E0' && LA20_1<='\u02E4')||LA20_1=='\u02EE'||LA20_1=='\u037A'||LA20_1=='\u0386'||(LA20_1>='\u0388' && LA20_1<='\u038A')||LA20_1=='\u038C'||(LA20_1>='\u038E' && LA20_1<='\u03A1')||(LA20_1>='\u03A3' && LA20_1<='\u03CE')||(LA20_1>='\u03D0' && LA20_1<='\u03D7')||(LA20_1>='\u03DA' && LA20_1<='\u03F3')||(LA20_1>='\u0400' && LA20_1<='\u0481')||(LA20_1>='\u048C' && LA20_1<='\u04C4')||(LA20_1>='\u04C7' && LA20_1<='\u04C8')||(LA20_1>='\u04CB' && LA20_1<='\u04CC')||(LA20_1>='\u04D0' && LA20_1<='\u04F5')||(LA20_1>='\u04F8' && LA20_1<='\u04F9')||(LA20_1>='\u0531' && LA20_1<='\u0556')||LA20_1=='\u0559'||(LA20_1>='\u0561' && LA20_1<='\u0587')||(LA20_1>='\u05D0' && LA20_1<='\u05EA')||(LA20_1>='\u05F0' && LA20_1<='\u05F2')||(LA20_1>='\u0621' && LA20_1<='\u063A')||(LA20_1>='\u0640' && LA20_1<='\u064A')||(LA20_1>='\u0671' && LA20_1<='\u06D3')||LA20_1=='\u06D5'||(LA20_1>='\u06E5' && LA20_1<='\u06E6')||(LA20_1>='\u06FA' && LA20_1<='\u06FC')||LA20_1=='\u0710'||(LA20_1>='\u0712' && LA20_1<='\u072C')||(LA20_1>='\u0780' && LA20_1<='\u07A5')||(LA20_1>='\u0905' && LA20_1<='\u0939')||LA20_1=='\u093D'||LA20_1=='\u0950'||(LA20_1>='\u0958' && LA20_1<='\u0961')||(LA20_1>='\u0985' && LA20_1<='\u098C')||(LA20_1>='\u098F' && LA20_1<='\u0990')||(LA20_1>='\u0993' && LA20_1<='\u09A8')||(LA20_1>='\u09AA' && LA20_1<='\u09B0')||LA20_1=='\u09B2'||(LA20_1>='\u09B6' && LA20_1<='\u09B9')||(LA20_1>='\u09DC' && LA20_1<='\u09DD')||(LA20_1>='\u09DF' && LA20_1<='\u09E1')||(LA20_1>='\u09F0' && LA20_1<='\u09F1')||(LA20_1>='\u0A05' && LA20_1<='\u0A0A')||(LA20_1>='\u0A0F' && LA20_1<='\u0A10')||(LA20_1>='\u0A13' && LA20_1<='\u0A28')||(LA20_1>='\u0A2A' && LA20_1<='\u0A30')||(LA20_1>='\u0A32' && LA20_1<='\u0A33')||(LA20_1>='\u0A35' && LA20_1<='\u0A36')||(LA20_1>='\u0A38' && LA20_1<='\u0A39')||(LA20_1>='\u0A59' && LA20_1<='\u0A5C')||LA20_1=='\u0A5E'||(LA20_1>='\u0A72' && LA20_1<='\u0A74')||(LA20_1>='\u0A85' && LA20_1<='\u0A8B')||LA20_1=='\u0A8D'||(LA20_1>='\u0A8F' && LA20_1<='\u0A91')||(LA20_1>='\u0A93' && LA20_1<='\u0AA8')||(LA20_1>='\u0AAA' && LA20_1<='\u0AB0')||(LA20_1>='\u0AB2' && LA20_1<='\u0AB3')||(LA20_1>='\u0AB5' && LA20_1<='\u0AB9')||LA20_1=='\u0ABD'||LA20_1=='\u0AD0'||LA20_1=='\u0AE0'||(LA20_1>='\u0B05' && LA20_1<='\u0B0C')||(LA20_1>='\u0B0F' && LA20_1<='\u0B10')||(LA20_1>='\u0B13' && LA20_1<='\u0B28')||(LA20_1>='\u0B2A' && LA20_1<='\u0B30')||(LA20_1>='\u0B32' && LA20_1<='\u0B33')||(LA20_1>='\u0B36' && LA20_1<='\u0B39')||LA20_1=='\u0B3D'||(LA20_1>='\u0B5C' && LA20_1<='\u0B5D')||(LA20_1>='\u0B5F' && LA20_1<='\u0B61')||(LA20_1>='\u0B85' && LA20_1<='\u0B8A')||(LA20_1>='\u0B8E' && LA20_1<='\u0B90')||(LA20_1>='\u0B92' && LA20_1<='\u0B95')||(LA20_1>='\u0B99' && LA20_1<='\u0B9A')||LA20_1=='\u0B9C'||(LA20_1>='\u0B9E' && LA20_1<='\u0B9F')||(LA20_1>='\u0BA3' && LA20_1<='\u0BA4')||(LA20_1>='\u0BA8' && LA20_1<='\u0BAA')||(LA20_1>='\u0BAE' && LA20_1<='\u0BB5')||(LA20_1>='\u0BB7' && LA20_1<='\u0BB9')||(LA20_1>='\u0C05' && LA20_1<='\u0C0C')||(LA20_1>='\u0C0E' && LA20_1<='\u0C10')||(LA20_1>='\u0C12' && LA20_1<='\u0C28')||(LA20_1>='\u0C2A' && LA20_1<='\u0C33')||(LA20_1>='\u0C35' && LA20_1<='\u0C39')||(LA20_1>='\u0C60' && LA20_1<='\u0C61')||(LA20_1>='\u0C85' && LA20_1<='\u0C8C')||(LA20_1>='\u0C8E' && LA20_1<='\u0C90')||(LA20_1>='\u0C92' && LA20_1<='\u0CA8')||(LA20_1>='\u0CAA' && LA20_1<='\u0CB3')||(LA20_1>='\u0CB5' && LA20_1<='\u0CB9')||LA20_1=='\u0CDE'||(LA20_1>='\u0CE0' && LA20_1<='\u0CE1')||(LA20_1>='\u0D05' && LA20_1<='\u0D0C')||(LA20_1>='\u0D0E' && LA20_1<='\u0D10')||(LA20_1>='\u0D12' && LA20_1<='\u0D28')||(LA20_1>='\u0D2A' && LA20_1<='\u0D39')||(LA20_1>='\u0D60' && LA20_1<='\u0D61')||(LA20_1>='\u0D85' && LA20_1<='\u0D96')||(LA20_1>='\u0D9A' && LA20_1<='\u0DB1')||(LA20_1>='\u0DB3' && LA20_1<='\u0DBB')||LA20_1=='\u0DBD'||(LA20_1>='\u0DC0' && LA20_1<='\u0DC6')||(LA20_1>='\u0E01' && LA20_1<='\u0E30')||(LA20_1>='\u0E32' && LA20_1<='\u0E33')||(LA20_1>='\u0E40' && LA20_1<='\u0E46')||(LA20_1>='\u0E81' && LA20_1<='\u0E82')||LA20_1=='\u0E84'||(LA20_1>='\u0E87' && LA20_1<='\u0E88')||LA20_1=='\u0E8A'||LA20_1=='\u0E8D'||(LA20_1>='\u0E94' && LA20_1<='\u0E97')||(LA20_1>='\u0E99' && LA20_1<='\u0E9F')||(LA20_1>='\u0EA1' && LA20_1<='\u0EA3')||LA20_1=='\u0EA5'||LA20_1=='\u0EA7'||(LA20_1>='\u0EAA' && LA20_1<='\u0EAB')||(LA20_1>='\u0EAD' && LA20_1<='\u0EB0')||(LA20_1>='\u0EB2' && LA20_1<='\u0EB3')||(LA20_1>='\u0EBD' && LA20_1<='\u0EC4')||LA20_1=='\u0EC6'||(LA20_1>='\u0EDC' && LA20_1<='\u0EDD')||LA20_1=='\u0F00'||(LA20_1>='\u0F40' && LA20_1<='\u0F6A')||(LA20_1>='\u0F88' && LA20_1<='\u0F8B')||(LA20_1>='\u1000' && LA20_1<='\u1021')||(LA20_1>='\u1023' && LA20_1<='\u1027')||(LA20_1>='\u1029' && LA20_1<='\u102A')||(LA20_1>='\u1050' && LA20_1<='\u1055')||(LA20_1>='\u10A0' && LA20_1<='\u10C5')||(LA20_1>='\u10D0' && LA20_1<='\u10F6')||(LA20_1>='\u1100' && LA20_1<='\u1159')||(LA20_1>='\u115F' && LA20_1<='\u11A2')||(LA20_1>='\u11A8' && LA20_1<='\u11F9')||(LA20_1>='\u1200' && LA20_1<='\u1206')||(LA20_1>='\u1208' && LA20_1<='\u1246')||LA20_1=='\u1248'||(LA20_1>='\u124A' && LA20_1<='\u124D')||(LA20_1>='\u1250' && LA20_1<='\u1256')||LA20_1=='\u1258'||(LA20_1>='\u125A' && LA20_1<='\u125D')||(LA20_1>='\u1260' && LA20_1<='\u1286')||LA20_1=='\u1288'||(LA20_1>='\u128A' && LA20_1<='\u128D')||(LA20_1>='\u1290' && LA20_1<='\u12AE')||LA20_1=='\u12B0'||(LA20_1>='\u12B2' && LA20_1<='\u12B5')||(LA20_1>='\u12B8' && LA20_1<='\u12BE')||LA20_1=='\u12C0'||(LA20_1>='\u12C2' && LA20_1<='\u12C5')||(LA20_1>='\u12C8' && LA20_1<='\u12CE')||(LA20_1>='\u12D0' && LA20_1<='\u12D6')||(LA20_1>='\u12D8' && LA20_1<='\u12EE')||(LA20_1>='\u12F0' && LA20_1<='\u130E')||LA20_1=='\u1310'||(LA20_1>='\u1312' && LA20_1<='\u1315')||(LA20_1>='\u1318' && LA20_1<='\u131E')||(LA20_1>='\u1320' && LA20_1<='\u1346')||(LA20_1>='\u1348' && LA20_1<='\u135A')||(LA20_1>='\u13A0' && LA20_1<='\u13F4')||(LA20_1>='\u1401' && LA20_1<='\u1676')||(LA20_1>='\u1681' && LA20_1<='\u169A')||(LA20_1>='\u16A0' && LA20_1<='\u16EA')||(LA20_1>='\u1780' && LA20_1<='\u17B3')||(LA20_1>='\u1820' && LA20_1<='\u1877')||(LA20_1>='\u1880' && LA20_1<='\u18A8')||(LA20_1>='\u1E00' && LA20_1<='\u1E9B')||(LA20_1>='\u1EA0' && LA20_1<='\u1EF9')||(LA20_1>='\u1F00' && LA20_1<='\u1F15')||(LA20_1>='\u1F18' && LA20_1<='\u1F1D')||(LA20_1>='\u1F20' && LA20_1<='\u1F45')||(LA20_1>='\u1F48' && LA20_1<='\u1F4D')||(LA20_1>='\u1F50' && LA20_1<='\u1F57')||LA20_1=='\u1F59'||LA20_1=='\u1F5B'||LA20_1=='\u1F5D'||(LA20_1>='\u1F5F' && LA20_1<='\u1F7D')||(LA20_1>='\u1F80' && LA20_1<='\u1FB4')||(LA20_1>='\u1FB6' && LA20_1<='\u1FBC')||LA20_1=='\u1FBE'||(LA20_1>='\u1FC2' && LA20_1<='\u1FC4')||(LA20_1>='\u1FC6' && LA20_1<='\u1FCC')||(LA20_1>='\u1FD0' && LA20_1<='\u1FD3')||(LA20_1>='\u1FD6' && LA20_1<='\u1FDB')||(LA20_1>='\u1FE0' && LA20_1<='\u1FEC')||(LA20_1>='\u1FF2' && LA20_1<='\u1FF4')||(LA20_1>='\u1FF6' && LA20_1<='\u1FFC')||LA20_1=='\u207F'||LA20_1=='\u2102'||LA20_1=='\u2107'||(LA20_1>='\u210A' && LA20_1<='\u2113')||LA20_1=='\u2115'||(LA20_1>='\u2119' && LA20_1<='\u211D')||LA20_1=='\u2124'||LA20_1=='\u2126'||LA20_1=='\u2128'||(LA20_1>='\u212A' && LA20_1<='\u212D')||(LA20_1>='\u212F' && LA20_1<='\u2131')||(LA20_1>='\u2133' && LA20_1<='\u2139')||(LA20_1>='\u2160' && LA20_1<='\u2183')||(LA20_1>='\u3005' && LA20_1<='\u3007')||(LA20_1>='\u3021' && LA20_1<='\u3029')||(LA20_1>='\u3031' && LA20_1<='\u3035')||(LA20_1>='\u3038' && LA20_1<='\u303A')||(LA20_1>='\u3041' && LA20_1<='\u3094')||(LA20_1>='\u309D' && LA20_1<='\u309E')||(LA20_1>='\u30A1' && LA20_1<='\u30FA')||(LA20_1>='\u30FC' && LA20_1<='\u30FE')||(LA20_1>='\u3105' && LA20_1<='\u312C')||(LA20_1>='\u3131' && LA20_1<='\u318E')||(LA20_1>='\u31A0' && LA20_1<='\u31B7')||LA20_1=='\u3400'||LA20_1=='\u4DB5'||LA20_1=='\u4E00'||LA20_1=='\u9FA5'||(LA20_1>='\uA000' && LA20_1<='\uA48C')||LA20_1=='\uAC00'||LA20_1=='\uD7A3'||(LA20_1>='\uF900' && LA20_1<='\uFA2D')||(LA20_1>='\uFB00' && LA20_1<='\uFB06')||(LA20_1>='\uFB13' && LA20_1<='\uFB17')||LA20_1=='\uFB1D'||(LA20_1>='\uFB1F' && LA20_1<='\uFB28')||(LA20_1>='\uFB2A' && LA20_1<='\uFB36')||(LA20_1>='\uFB38' && LA20_1<='\uFB3C')||LA20_1=='\uFB3E'||(LA20_1>='\uFB40' && LA20_1<='\uFB41')||(LA20_1>='\uFB43' && LA20_1<='\uFB44')||(LA20_1>='\uFB46' && LA20_1<='\uFBB1')||(LA20_1>='\uFBD3' && LA20_1<='\uFD3D')||(LA20_1>='\uFD50' && LA20_1<='\uFD8F')||(LA20_1>='\uFD92' && LA20_1<='\uFDC7')||(LA20_1>='\uFDF0' && LA20_1<='\uFDFB')||(LA20_1>='\uFE70' && LA20_1<='\uFE72')||LA20_1=='\uFE74'||(LA20_1>='\uFE76' && LA20_1<='\uFEFC')||(LA20_1>='\uFF21' && LA20_1<='\uFF3A')||(LA20_1>='\uFF41' && LA20_1<='\uFF5A')||(LA20_1>='\uFF66' && LA20_1<='\uFFBE')||(LA20_1>='\uFFC2' && LA20_1<='\uFFC7')||(LA20_1>='\uFFCA' && LA20_1<='\uFFCF')||(LA20_1>='\uFFD2' && LA20_1<='\uFFD7')||(LA20_1>='\uFFDA' && LA20_1<='\uFFDC')))
 			{
-				alt22 = 1;
+				alt20 = 1;
 			}
-			else if ((LA22_1=='$'))
+			else if ((LA20_1=='$'))
 			{
-				alt22 = 2;
+				alt20 = 2;
 			}
-			else if ((LA22_1=='_'))
+			else if ((LA20_1=='_'))
 			{
-				alt22 = 3;
+				alt20 = 3;
 			}
-			else if ((LA22_1=='\\'))
+			else if ((LA20_1=='\\'))
 			{
-				alt22 = 4;
+				alt20 = 4;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return;}
-				NoViableAltException nvae = new NoViableAltException("", 22, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 20, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(22); }
-			switch (alt22)
+			} finally { DebugExitDecision(20); }
+			switch (alt20)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -4689,59 +4432,59 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		try
 		{
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:519:5: ( ( IdentifierStart )=> IdentifierStart | UnicodeDigit | UnicodeConnectorPunctuation )
-			int alt23=3;
-			try { DebugEnterDecision(23, false);
-			int LA23_1 = input.LA(1);
+			int alt21=3;
+			try { DebugEnterDecision(21, false);
+			int LA21_1 = input.LA(1);
 
-			if (((LA23_1>='A' && LA23_1<='Z')||(LA23_1>='a' && LA23_1<='z')||LA23_1=='\u00AA'||LA23_1=='\u00B5'||LA23_1=='\u00BA'||(LA23_1>='\u00C0' && LA23_1<='\u00D6')||(LA23_1>='\u00D8' && LA23_1<='\u00F6')||(LA23_1>='\u00F8' && LA23_1<='\u021F')||(LA23_1>='\u0222' && LA23_1<='\u0233')||(LA23_1>='\u0250' && LA23_1<='\u02AD')||(LA23_1>='\u02B0' && LA23_1<='\u02B8')||(LA23_1>='\u02BB' && LA23_1<='\u02C1')||(LA23_1>='\u02D0' && LA23_1<='\u02D1')||(LA23_1>='\u02E0' && LA23_1<='\u02E4')||LA23_1=='\u02EE'||LA23_1=='\u037A'||LA23_1=='\u0386'||(LA23_1>='\u0388' && LA23_1<='\u038A')||LA23_1=='\u038C'||(LA23_1>='\u038E' && LA23_1<='\u03A1')||(LA23_1>='\u03A3' && LA23_1<='\u03CE')||(LA23_1>='\u03D0' && LA23_1<='\u03D7')||(LA23_1>='\u03DA' && LA23_1<='\u03F3')||(LA23_1>='\u0400' && LA23_1<='\u0481')||(LA23_1>='\u048C' && LA23_1<='\u04C4')||(LA23_1>='\u04C7' && LA23_1<='\u04C8')||(LA23_1>='\u04CB' && LA23_1<='\u04CC')||(LA23_1>='\u04D0' && LA23_1<='\u04F5')||(LA23_1>='\u04F8' && LA23_1<='\u04F9')||(LA23_1>='\u0531' && LA23_1<='\u0556')||LA23_1=='\u0559'||(LA23_1>='\u0561' && LA23_1<='\u0587')||(LA23_1>='\u05D0' && LA23_1<='\u05EA')||(LA23_1>='\u05F0' && LA23_1<='\u05F2')||(LA23_1>='\u0621' && LA23_1<='\u063A')||(LA23_1>='\u0640' && LA23_1<='\u064A')||(LA23_1>='\u0671' && LA23_1<='\u06D3')||LA23_1=='\u06D5'||(LA23_1>='\u06E5' && LA23_1<='\u06E6')||(LA23_1>='\u06FA' && LA23_1<='\u06FC')||LA23_1=='\u0710'||(LA23_1>='\u0712' && LA23_1<='\u072C')||(LA23_1>='\u0780' && LA23_1<='\u07A5')||(LA23_1>='\u0905' && LA23_1<='\u0939')||LA23_1=='\u093D'||LA23_1=='\u0950'||(LA23_1>='\u0958' && LA23_1<='\u0961')||(LA23_1>='\u0985' && LA23_1<='\u098C')||(LA23_1>='\u098F' && LA23_1<='\u0990')||(LA23_1>='\u0993' && LA23_1<='\u09A8')||(LA23_1>='\u09AA' && LA23_1<='\u09B0')||LA23_1=='\u09B2'||(LA23_1>='\u09B6' && LA23_1<='\u09B9')||(LA23_1>='\u09DC' && LA23_1<='\u09DD')||(LA23_1>='\u09DF' && LA23_1<='\u09E1')||(LA23_1>='\u09F0' && LA23_1<='\u09F1')||(LA23_1>='\u0A05' && LA23_1<='\u0A0A')||(LA23_1>='\u0A0F' && LA23_1<='\u0A10')||(LA23_1>='\u0A13' && LA23_1<='\u0A28')||(LA23_1>='\u0A2A' && LA23_1<='\u0A30')||(LA23_1>='\u0A32' && LA23_1<='\u0A33')||(LA23_1>='\u0A35' && LA23_1<='\u0A36')||(LA23_1>='\u0A38' && LA23_1<='\u0A39')||(LA23_1>='\u0A59' && LA23_1<='\u0A5C')||LA23_1=='\u0A5E'||(LA23_1>='\u0A72' && LA23_1<='\u0A74')||(LA23_1>='\u0A85' && LA23_1<='\u0A8B')||LA23_1=='\u0A8D'||(LA23_1>='\u0A8F' && LA23_1<='\u0A91')||(LA23_1>='\u0A93' && LA23_1<='\u0AA8')||(LA23_1>='\u0AAA' && LA23_1<='\u0AB0')||(LA23_1>='\u0AB2' && LA23_1<='\u0AB3')||(LA23_1>='\u0AB5' && LA23_1<='\u0AB9')||LA23_1=='\u0ABD'||LA23_1=='\u0AD0'||LA23_1=='\u0AE0'||(LA23_1>='\u0B05' && LA23_1<='\u0B0C')||(LA23_1>='\u0B0F' && LA23_1<='\u0B10')||(LA23_1>='\u0B13' && LA23_1<='\u0B28')||(LA23_1>='\u0B2A' && LA23_1<='\u0B30')||(LA23_1>='\u0B32' && LA23_1<='\u0B33')||(LA23_1>='\u0B36' && LA23_1<='\u0B39')||LA23_1=='\u0B3D'||(LA23_1>='\u0B5C' && LA23_1<='\u0B5D')||(LA23_1>='\u0B5F' && LA23_1<='\u0B61')||(LA23_1>='\u0B85' && LA23_1<='\u0B8A')||(LA23_1>='\u0B8E' && LA23_1<='\u0B90')||(LA23_1>='\u0B92' && LA23_1<='\u0B95')||(LA23_1>='\u0B99' && LA23_1<='\u0B9A')||LA23_1=='\u0B9C'||(LA23_1>='\u0B9E' && LA23_1<='\u0B9F')||(LA23_1>='\u0BA3' && LA23_1<='\u0BA4')||(LA23_1>='\u0BA8' && LA23_1<='\u0BAA')||(LA23_1>='\u0BAE' && LA23_1<='\u0BB5')||(LA23_1>='\u0BB7' && LA23_1<='\u0BB9')||(LA23_1>='\u0C05' && LA23_1<='\u0C0C')||(LA23_1>='\u0C0E' && LA23_1<='\u0C10')||(LA23_1>='\u0C12' && LA23_1<='\u0C28')||(LA23_1>='\u0C2A' && LA23_1<='\u0C33')||(LA23_1>='\u0C35' && LA23_1<='\u0C39')||(LA23_1>='\u0C60' && LA23_1<='\u0C61')||(LA23_1>='\u0C85' && LA23_1<='\u0C8C')||(LA23_1>='\u0C8E' && LA23_1<='\u0C90')||(LA23_1>='\u0C92' && LA23_1<='\u0CA8')||(LA23_1>='\u0CAA' && LA23_1<='\u0CB3')||(LA23_1>='\u0CB5' && LA23_1<='\u0CB9')||LA23_1=='\u0CDE'||(LA23_1>='\u0CE0' && LA23_1<='\u0CE1')||(LA23_1>='\u0D05' && LA23_1<='\u0D0C')||(LA23_1>='\u0D0E' && LA23_1<='\u0D10')||(LA23_1>='\u0D12' && LA23_1<='\u0D28')||(LA23_1>='\u0D2A' && LA23_1<='\u0D39')||(LA23_1>='\u0D60' && LA23_1<='\u0D61')||(LA23_1>='\u0D85' && LA23_1<='\u0D96')||(LA23_1>='\u0D9A' && LA23_1<='\u0DB1')||(LA23_1>='\u0DB3' && LA23_1<='\u0DBB')||LA23_1=='\u0DBD'||(LA23_1>='\u0DC0' && LA23_1<='\u0DC6')||(LA23_1>='\u0E01' && LA23_1<='\u0E30')||(LA23_1>='\u0E32' && LA23_1<='\u0E33')||(LA23_1>='\u0E40' && LA23_1<='\u0E46')||(LA23_1>='\u0E81' && LA23_1<='\u0E82')||LA23_1=='\u0E84'||(LA23_1>='\u0E87' && LA23_1<='\u0E88')||LA23_1=='\u0E8A'||LA23_1=='\u0E8D'||(LA23_1>='\u0E94' && LA23_1<='\u0E97')||(LA23_1>='\u0E99' && LA23_1<='\u0E9F')||(LA23_1>='\u0EA1' && LA23_1<='\u0EA3')||LA23_1=='\u0EA5'||LA23_1=='\u0EA7'||(LA23_1>='\u0EAA' && LA23_1<='\u0EAB')||(LA23_1>='\u0EAD' && LA23_1<='\u0EB0')||(LA23_1>='\u0EB2' && LA23_1<='\u0EB3')||(LA23_1>='\u0EBD' && LA23_1<='\u0EC4')||LA23_1=='\u0EC6'||(LA23_1>='\u0EDC' && LA23_1<='\u0EDD')||LA23_1=='\u0F00'||(LA23_1>='\u0F40' && LA23_1<='\u0F6A')||(LA23_1>='\u0F88' && LA23_1<='\u0F8B')||(LA23_1>='\u1000' && LA23_1<='\u1021')||(LA23_1>='\u1023' && LA23_1<='\u1027')||(LA23_1>='\u1029' && LA23_1<='\u102A')||(LA23_1>='\u1050' && LA23_1<='\u1055')||(LA23_1>='\u10A0' && LA23_1<='\u10C5')||(LA23_1>='\u10D0' && LA23_1<='\u10F6')||(LA23_1>='\u1100' && LA23_1<='\u1159')||(LA23_1>='\u115F' && LA23_1<='\u11A2')||(LA23_1>='\u11A8' && LA23_1<='\u11F9')||(LA23_1>='\u1200' && LA23_1<='\u1206')||(LA23_1>='\u1208' && LA23_1<='\u1246')||LA23_1=='\u1248'||(LA23_1>='\u124A' && LA23_1<='\u124D')||(LA23_1>='\u1250' && LA23_1<='\u1256')||LA23_1=='\u1258'||(LA23_1>='\u125A' && LA23_1<='\u125D')||(LA23_1>='\u1260' && LA23_1<='\u1286')||LA23_1=='\u1288'||(LA23_1>='\u128A' && LA23_1<='\u128D')||(LA23_1>='\u1290' && LA23_1<='\u12AE')||LA23_1=='\u12B0'||(LA23_1>='\u12B2' && LA23_1<='\u12B5')||(LA23_1>='\u12B8' && LA23_1<='\u12BE')||LA23_1=='\u12C0'||(LA23_1>='\u12C2' && LA23_1<='\u12C5')||(LA23_1>='\u12C8' && LA23_1<='\u12CE')||(LA23_1>='\u12D0' && LA23_1<='\u12D6')||(LA23_1>='\u12D8' && LA23_1<='\u12EE')||(LA23_1>='\u12F0' && LA23_1<='\u130E')||LA23_1=='\u1310'||(LA23_1>='\u1312' && LA23_1<='\u1315')||(LA23_1>='\u1318' && LA23_1<='\u131E')||(LA23_1>='\u1320' && LA23_1<='\u1346')||(LA23_1>='\u1348' && LA23_1<='\u135A')||(LA23_1>='\u13A0' && LA23_1<='\u13F4')||(LA23_1>='\u1401' && LA23_1<='\u1676')||(LA23_1>='\u1681' && LA23_1<='\u169A')||(LA23_1>='\u16A0' && LA23_1<='\u16EA')||(LA23_1>='\u1780' && LA23_1<='\u17B3')||(LA23_1>='\u1820' && LA23_1<='\u1877')||(LA23_1>='\u1880' && LA23_1<='\u18A8')||(LA23_1>='\u1E00' && LA23_1<='\u1E9B')||(LA23_1>='\u1EA0' && LA23_1<='\u1EF9')||(LA23_1>='\u1F00' && LA23_1<='\u1F15')||(LA23_1>='\u1F18' && LA23_1<='\u1F1D')||(LA23_1>='\u1F20' && LA23_1<='\u1F45')||(LA23_1>='\u1F48' && LA23_1<='\u1F4D')||(LA23_1>='\u1F50' && LA23_1<='\u1F57')||LA23_1=='\u1F59'||LA23_1=='\u1F5B'||LA23_1=='\u1F5D'||(LA23_1>='\u1F5F' && LA23_1<='\u1F7D')||(LA23_1>='\u1F80' && LA23_1<='\u1FB4')||(LA23_1>='\u1FB6' && LA23_1<='\u1FBC')||LA23_1=='\u1FBE'||(LA23_1>='\u1FC2' && LA23_1<='\u1FC4')||(LA23_1>='\u1FC6' && LA23_1<='\u1FCC')||(LA23_1>='\u1FD0' && LA23_1<='\u1FD3')||(LA23_1>='\u1FD6' && LA23_1<='\u1FDB')||(LA23_1>='\u1FE0' && LA23_1<='\u1FEC')||(LA23_1>='\u1FF2' && LA23_1<='\u1FF4')||(LA23_1>='\u1FF6' && LA23_1<='\u1FFC')||LA23_1=='\u207F'||LA23_1=='\u2102'||LA23_1=='\u2107'||(LA23_1>='\u210A' && LA23_1<='\u2113')||LA23_1=='\u2115'||(LA23_1>='\u2119' && LA23_1<='\u211D')||LA23_1=='\u2124'||LA23_1=='\u2126'||LA23_1=='\u2128'||(LA23_1>='\u212A' && LA23_1<='\u212D')||(LA23_1>='\u212F' && LA23_1<='\u2131')||(LA23_1>='\u2133' && LA23_1<='\u2139')||(LA23_1>='\u2160' && LA23_1<='\u2183')||(LA23_1>='\u3005' && LA23_1<='\u3007')||(LA23_1>='\u3021' && LA23_1<='\u3029')||(LA23_1>='\u3031' && LA23_1<='\u3035')||(LA23_1>='\u3038' && LA23_1<='\u303A')||(LA23_1>='\u3041' && LA23_1<='\u3094')||(LA23_1>='\u309D' && LA23_1<='\u309E')||(LA23_1>='\u30A1' && LA23_1<='\u30FA')||(LA23_1>='\u30FC' && LA23_1<='\u30FE')||(LA23_1>='\u3105' && LA23_1<='\u312C')||(LA23_1>='\u3131' && LA23_1<='\u318E')||(LA23_1>='\u31A0' && LA23_1<='\u31B7')||LA23_1=='\u3400'||LA23_1=='\u4DB5'||LA23_1=='\u4E00'||LA23_1=='\u9FA5'||(LA23_1>='\uA000' && LA23_1<='\uA48C')||LA23_1=='\uAC00'||LA23_1=='\uD7A3'||(LA23_1>='\uF900' && LA23_1<='\uFA2D')||(LA23_1>='\uFB00' && LA23_1<='\uFB06')||(LA23_1>='\uFB13' && LA23_1<='\uFB17')||LA23_1=='\uFB1D'||(LA23_1>='\uFB1F' && LA23_1<='\uFB28')||(LA23_1>='\uFB2A' && LA23_1<='\uFB36')||(LA23_1>='\uFB38' && LA23_1<='\uFB3C')||LA23_1=='\uFB3E'||(LA23_1>='\uFB40' && LA23_1<='\uFB41')||(LA23_1>='\uFB43' && LA23_1<='\uFB44')||(LA23_1>='\uFB46' && LA23_1<='\uFBB1')||(LA23_1>='\uFBD3' && LA23_1<='\uFD3D')||(LA23_1>='\uFD50' && LA23_1<='\uFD8F')||(LA23_1>='\uFD92' && LA23_1<='\uFDC7')||(LA23_1>='\uFDF0' && LA23_1<='\uFDFB')||(LA23_1>='\uFE70' && LA23_1<='\uFE72')||LA23_1=='\uFE74'||(LA23_1>='\uFE76' && LA23_1<='\uFEFC')||(LA23_1>='\uFF21' && LA23_1<='\uFF3A')||(LA23_1>='\uFF41' && LA23_1<='\uFF5A')||(LA23_1>='\uFF66' && LA23_1<='\uFFBE')||(LA23_1>='\uFFC2' && LA23_1<='\uFFC7')||(LA23_1>='\uFFCA' && LA23_1<='\uFFCF')||(LA23_1>='\uFFD2' && LA23_1<='\uFFD7')||(LA23_1>='\uFFDA' && LA23_1<='\uFFDC')) && (EvaluatePredicate(synpred1_JavaScript_fragment)))
+			if (((LA21_1>='A' && LA21_1<='Z')||(LA21_1>='a' && LA21_1<='z')||LA21_1=='\u00AA'||LA21_1=='\u00B5'||LA21_1=='\u00BA'||(LA21_1>='\u00C0' && LA21_1<='\u00D6')||(LA21_1>='\u00D8' && LA21_1<='\u00F6')||(LA21_1>='\u00F8' && LA21_1<='\u021F')||(LA21_1>='\u0222' && LA21_1<='\u0233')||(LA21_1>='\u0250' && LA21_1<='\u02AD')||(LA21_1>='\u02B0' && LA21_1<='\u02B8')||(LA21_1>='\u02BB' && LA21_1<='\u02C1')||(LA21_1>='\u02D0' && LA21_1<='\u02D1')||(LA21_1>='\u02E0' && LA21_1<='\u02E4')||LA21_1=='\u02EE'||LA21_1=='\u037A'||LA21_1=='\u0386'||(LA21_1>='\u0388' && LA21_1<='\u038A')||LA21_1=='\u038C'||(LA21_1>='\u038E' && LA21_1<='\u03A1')||(LA21_1>='\u03A3' && LA21_1<='\u03CE')||(LA21_1>='\u03D0' && LA21_1<='\u03D7')||(LA21_1>='\u03DA' && LA21_1<='\u03F3')||(LA21_1>='\u0400' && LA21_1<='\u0481')||(LA21_1>='\u048C' && LA21_1<='\u04C4')||(LA21_1>='\u04C7' && LA21_1<='\u04C8')||(LA21_1>='\u04CB' && LA21_1<='\u04CC')||(LA21_1>='\u04D0' && LA21_1<='\u04F5')||(LA21_1>='\u04F8' && LA21_1<='\u04F9')||(LA21_1>='\u0531' && LA21_1<='\u0556')||LA21_1=='\u0559'||(LA21_1>='\u0561' && LA21_1<='\u0587')||(LA21_1>='\u05D0' && LA21_1<='\u05EA')||(LA21_1>='\u05F0' && LA21_1<='\u05F2')||(LA21_1>='\u0621' && LA21_1<='\u063A')||(LA21_1>='\u0640' && LA21_1<='\u064A')||(LA21_1>='\u0671' && LA21_1<='\u06D3')||LA21_1=='\u06D5'||(LA21_1>='\u06E5' && LA21_1<='\u06E6')||(LA21_1>='\u06FA' && LA21_1<='\u06FC')||LA21_1=='\u0710'||(LA21_1>='\u0712' && LA21_1<='\u072C')||(LA21_1>='\u0780' && LA21_1<='\u07A5')||(LA21_1>='\u0905' && LA21_1<='\u0939')||LA21_1=='\u093D'||LA21_1=='\u0950'||(LA21_1>='\u0958' && LA21_1<='\u0961')||(LA21_1>='\u0985' && LA21_1<='\u098C')||(LA21_1>='\u098F' && LA21_1<='\u0990')||(LA21_1>='\u0993' && LA21_1<='\u09A8')||(LA21_1>='\u09AA' && LA21_1<='\u09B0')||LA21_1=='\u09B2'||(LA21_1>='\u09B6' && LA21_1<='\u09B9')||(LA21_1>='\u09DC' && LA21_1<='\u09DD')||(LA21_1>='\u09DF' && LA21_1<='\u09E1')||(LA21_1>='\u09F0' && LA21_1<='\u09F1')||(LA21_1>='\u0A05' && LA21_1<='\u0A0A')||(LA21_1>='\u0A0F' && LA21_1<='\u0A10')||(LA21_1>='\u0A13' && LA21_1<='\u0A28')||(LA21_1>='\u0A2A' && LA21_1<='\u0A30')||(LA21_1>='\u0A32' && LA21_1<='\u0A33')||(LA21_1>='\u0A35' && LA21_1<='\u0A36')||(LA21_1>='\u0A38' && LA21_1<='\u0A39')||(LA21_1>='\u0A59' && LA21_1<='\u0A5C')||LA21_1=='\u0A5E'||(LA21_1>='\u0A72' && LA21_1<='\u0A74')||(LA21_1>='\u0A85' && LA21_1<='\u0A8B')||LA21_1=='\u0A8D'||(LA21_1>='\u0A8F' && LA21_1<='\u0A91')||(LA21_1>='\u0A93' && LA21_1<='\u0AA8')||(LA21_1>='\u0AAA' && LA21_1<='\u0AB0')||(LA21_1>='\u0AB2' && LA21_1<='\u0AB3')||(LA21_1>='\u0AB5' && LA21_1<='\u0AB9')||LA21_1=='\u0ABD'||LA21_1=='\u0AD0'||LA21_1=='\u0AE0'||(LA21_1>='\u0B05' && LA21_1<='\u0B0C')||(LA21_1>='\u0B0F' && LA21_1<='\u0B10')||(LA21_1>='\u0B13' && LA21_1<='\u0B28')||(LA21_1>='\u0B2A' && LA21_1<='\u0B30')||(LA21_1>='\u0B32' && LA21_1<='\u0B33')||(LA21_1>='\u0B36' && LA21_1<='\u0B39')||LA21_1=='\u0B3D'||(LA21_1>='\u0B5C' && LA21_1<='\u0B5D')||(LA21_1>='\u0B5F' && LA21_1<='\u0B61')||(LA21_1>='\u0B85' && LA21_1<='\u0B8A')||(LA21_1>='\u0B8E' && LA21_1<='\u0B90')||(LA21_1>='\u0B92' && LA21_1<='\u0B95')||(LA21_1>='\u0B99' && LA21_1<='\u0B9A')||LA21_1=='\u0B9C'||(LA21_1>='\u0B9E' && LA21_1<='\u0B9F')||(LA21_1>='\u0BA3' && LA21_1<='\u0BA4')||(LA21_1>='\u0BA8' && LA21_1<='\u0BAA')||(LA21_1>='\u0BAE' && LA21_1<='\u0BB5')||(LA21_1>='\u0BB7' && LA21_1<='\u0BB9')||(LA21_1>='\u0C05' && LA21_1<='\u0C0C')||(LA21_1>='\u0C0E' && LA21_1<='\u0C10')||(LA21_1>='\u0C12' && LA21_1<='\u0C28')||(LA21_1>='\u0C2A' && LA21_1<='\u0C33')||(LA21_1>='\u0C35' && LA21_1<='\u0C39')||(LA21_1>='\u0C60' && LA21_1<='\u0C61')||(LA21_1>='\u0C85' && LA21_1<='\u0C8C')||(LA21_1>='\u0C8E' && LA21_1<='\u0C90')||(LA21_1>='\u0C92' && LA21_1<='\u0CA8')||(LA21_1>='\u0CAA' && LA21_1<='\u0CB3')||(LA21_1>='\u0CB5' && LA21_1<='\u0CB9')||LA21_1=='\u0CDE'||(LA21_1>='\u0CE0' && LA21_1<='\u0CE1')||(LA21_1>='\u0D05' && LA21_1<='\u0D0C')||(LA21_1>='\u0D0E' && LA21_1<='\u0D10')||(LA21_1>='\u0D12' && LA21_1<='\u0D28')||(LA21_1>='\u0D2A' && LA21_1<='\u0D39')||(LA21_1>='\u0D60' && LA21_1<='\u0D61')||(LA21_1>='\u0D85' && LA21_1<='\u0D96')||(LA21_1>='\u0D9A' && LA21_1<='\u0DB1')||(LA21_1>='\u0DB3' && LA21_1<='\u0DBB')||LA21_1=='\u0DBD'||(LA21_1>='\u0DC0' && LA21_1<='\u0DC6')||(LA21_1>='\u0E01' && LA21_1<='\u0E30')||(LA21_1>='\u0E32' && LA21_1<='\u0E33')||(LA21_1>='\u0E40' && LA21_1<='\u0E46')||(LA21_1>='\u0E81' && LA21_1<='\u0E82')||LA21_1=='\u0E84'||(LA21_1>='\u0E87' && LA21_1<='\u0E88')||LA21_1=='\u0E8A'||LA21_1=='\u0E8D'||(LA21_1>='\u0E94' && LA21_1<='\u0E97')||(LA21_1>='\u0E99' && LA21_1<='\u0E9F')||(LA21_1>='\u0EA1' && LA21_1<='\u0EA3')||LA21_1=='\u0EA5'||LA21_1=='\u0EA7'||(LA21_1>='\u0EAA' && LA21_1<='\u0EAB')||(LA21_1>='\u0EAD' && LA21_1<='\u0EB0')||(LA21_1>='\u0EB2' && LA21_1<='\u0EB3')||(LA21_1>='\u0EBD' && LA21_1<='\u0EC4')||LA21_1=='\u0EC6'||(LA21_1>='\u0EDC' && LA21_1<='\u0EDD')||LA21_1=='\u0F00'||(LA21_1>='\u0F40' && LA21_1<='\u0F6A')||(LA21_1>='\u0F88' && LA21_1<='\u0F8B')||(LA21_1>='\u1000' && LA21_1<='\u1021')||(LA21_1>='\u1023' && LA21_1<='\u1027')||(LA21_1>='\u1029' && LA21_1<='\u102A')||(LA21_1>='\u1050' && LA21_1<='\u1055')||(LA21_1>='\u10A0' && LA21_1<='\u10C5')||(LA21_1>='\u10D0' && LA21_1<='\u10F6')||(LA21_1>='\u1100' && LA21_1<='\u1159')||(LA21_1>='\u115F' && LA21_1<='\u11A2')||(LA21_1>='\u11A8' && LA21_1<='\u11F9')||(LA21_1>='\u1200' && LA21_1<='\u1206')||(LA21_1>='\u1208' && LA21_1<='\u1246')||LA21_1=='\u1248'||(LA21_1>='\u124A' && LA21_1<='\u124D')||(LA21_1>='\u1250' && LA21_1<='\u1256')||LA21_1=='\u1258'||(LA21_1>='\u125A' && LA21_1<='\u125D')||(LA21_1>='\u1260' && LA21_1<='\u1286')||LA21_1=='\u1288'||(LA21_1>='\u128A' && LA21_1<='\u128D')||(LA21_1>='\u1290' && LA21_1<='\u12AE')||LA21_1=='\u12B0'||(LA21_1>='\u12B2' && LA21_1<='\u12B5')||(LA21_1>='\u12B8' && LA21_1<='\u12BE')||LA21_1=='\u12C0'||(LA21_1>='\u12C2' && LA21_1<='\u12C5')||(LA21_1>='\u12C8' && LA21_1<='\u12CE')||(LA21_1>='\u12D0' && LA21_1<='\u12D6')||(LA21_1>='\u12D8' && LA21_1<='\u12EE')||(LA21_1>='\u12F0' && LA21_1<='\u130E')||LA21_1=='\u1310'||(LA21_1>='\u1312' && LA21_1<='\u1315')||(LA21_1>='\u1318' && LA21_1<='\u131E')||(LA21_1>='\u1320' && LA21_1<='\u1346')||(LA21_1>='\u1348' && LA21_1<='\u135A')||(LA21_1>='\u13A0' && LA21_1<='\u13F4')||(LA21_1>='\u1401' && LA21_1<='\u1676')||(LA21_1>='\u1681' && LA21_1<='\u169A')||(LA21_1>='\u16A0' && LA21_1<='\u16EA')||(LA21_1>='\u1780' && LA21_1<='\u17B3')||(LA21_1>='\u1820' && LA21_1<='\u1877')||(LA21_1>='\u1880' && LA21_1<='\u18A8')||(LA21_1>='\u1E00' && LA21_1<='\u1E9B')||(LA21_1>='\u1EA0' && LA21_1<='\u1EF9')||(LA21_1>='\u1F00' && LA21_1<='\u1F15')||(LA21_1>='\u1F18' && LA21_1<='\u1F1D')||(LA21_1>='\u1F20' && LA21_1<='\u1F45')||(LA21_1>='\u1F48' && LA21_1<='\u1F4D')||(LA21_1>='\u1F50' && LA21_1<='\u1F57')||LA21_1=='\u1F59'||LA21_1=='\u1F5B'||LA21_1=='\u1F5D'||(LA21_1>='\u1F5F' && LA21_1<='\u1F7D')||(LA21_1>='\u1F80' && LA21_1<='\u1FB4')||(LA21_1>='\u1FB6' && LA21_1<='\u1FBC')||LA21_1=='\u1FBE'||(LA21_1>='\u1FC2' && LA21_1<='\u1FC4')||(LA21_1>='\u1FC6' && LA21_1<='\u1FCC')||(LA21_1>='\u1FD0' && LA21_1<='\u1FD3')||(LA21_1>='\u1FD6' && LA21_1<='\u1FDB')||(LA21_1>='\u1FE0' && LA21_1<='\u1FEC')||(LA21_1>='\u1FF2' && LA21_1<='\u1FF4')||(LA21_1>='\u1FF6' && LA21_1<='\u1FFC')||LA21_1=='\u207F'||LA21_1=='\u2102'||LA21_1=='\u2107'||(LA21_1>='\u210A' && LA21_1<='\u2113')||LA21_1=='\u2115'||(LA21_1>='\u2119' && LA21_1<='\u211D')||LA21_1=='\u2124'||LA21_1=='\u2126'||LA21_1=='\u2128'||(LA21_1>='\u212A' && LA21_1<='\u212D')||(LA21_1>='\u212F' && LA21_1<='\u2131')||(LA21_1>='\u2133' && LA21_1<='\u2139')||(LA21_1>='\u2160' && LA21_1<='\u2183')||(LA21_1>='\u3005' && LA21_1<='\u3007')||(LA21_1>='\u3021' && LA21_1<='\u3029')||(LA21_1>='\u3031' && LA21_1<='\u3035')||(LA21_1>='\u3038' && LA21_1<='\u303A')||(LA21_1>='\u3041' && LA21_1<='\u3094')||(LA21_1>='\u309D' && LA21_1<='\u309E')||(LA21_1>='\u30A1' && LA21_1<='\u30FA')||(LA21_1>='\u30FC' && LA21_1<='\u30FE')||(LA21_1>='\u3105' && LA21_1<='\u312C')||(LA21_1>='\u3131' && LA21_1<='\u318E')||(LA21_1>='\u31A0' && LA21_1<='\u31B7')||LA21_1=='\u3400'||LA21_1=='\u4DB5'||LA21_1=='\u4E00'||LA21_1=='\u9FA5'||(LA21_1>='\uA000' && LA21_1<='\uA48C')||LA21_1=='\uAC00'||LA21_1=='\uD7A3'||(LA21_1>='\uF900' && LA21_1<='\uFA2D')||(LA21_1>='\uFB00' && LA21_1<='\uFB06')||(LA21_1>='\uFB13' && LA21_1<='\uFB17')||LA21_1=='\uFB1D'||(LA21_1>='\uFB1F' && LA21_1<='\uFB28')||(LA21_1>='\uFB2A' && LA21_1<='\uFB36')||(LA21_1>='\uFB38' && LA21_1<='\uFB3C')||LA21_1=='\uFB3E'||(LA21_1>='\uFB40' && LA21_1<='\uFB41')||(LA21_1>='\uFB43' && LA21_1<='\uFB44')||(LA21_1>='\uFB46' && LA21_1<='\uFBB1')||(LA21_1>='\uFBD3' && LA21_1<='\uFD3D')||(LA21_1>='\uFD50' && LA21_1<='\uFD8F')||(LA21_1>='\uFD92' && LA21_1<='\uFDC7')||(LA21_1>='\uFDF0' && LA21_1<='\uFDFB')||(LA21_1>='\uFE70' && LA21_1<='\uFE72')||LA21_1=='\uFE74'||(LA21_1>='\uFE76' && LA21_1<='\uFEFC')||(LA21_1>='\uFF21' && LA21_1<='\uFF3A')||(LA21_1>='\uFF41' && LA21_1<='\uFF5A')||(LA21_1>='\uFF66' && LA21_1<='\uFFBE')||(LA21_1>='\uFFC2' && LA21_1<='\uFFC7')||(LA21_1>='\uFFCA' && LA21_1<='\uFFCF')||(LA21_1>='\uFFD2' && LA21_1<='\uFFD7')||(LA21_1>='\uFFDA' && LA21_1<='\uFFDC')) && (EvaluatePredicate(synpred1_JavaScript_fragment)))
 			{
-				alt23 = 1;
+				alt21 = 1;
 			}
-			else if ((LA23_1=='$') && (EvaluatePredicate(synpred1_JavaScript_fragment)))
+			else if ((LA21_1=='$') && (EvaluatePredicate(synpred1_JavaScript_fragment)))
 			{
-				alt23 = 1;
+				alt21 = 1;
 			}
-			else if ((LA23_1=='_'))
+			else if ((LA21_1=='_'))
 			{
-				int LA23_2 = input.LA(2);
+				int LA21_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred1_JavaScript_fragment)))
 				{
-					alt23 = 1;
+					alt21 = 1;
 				}
 				else if ((true))
 				{
-					alt23 = 3;
+					alt21 = 3;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return;}
-					NoViableAltException nvae = new NoViableAltException("", 23, 3, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 21, 3, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
-			else if ((LA23_1=='\\') && (EvaluatePredicate(synpred1_JavaScript_fragment)))
+			else if ((LA21_1=='\\') && (EvaluatePredicate(synpred1_JavaScript_fragment)))
 			{
-				alt23 = 1;
+				alt21 = 1;
 			}
-			else if (((LA23_1>='0' && LA23_1<='9')||(LA23_1>='\u0660' && LA23_1<='\u0669')||(LA23_1>='\u06F0' && LA23_1<='\u06F9')||(LA23_1>='\u0966' && LA23_1<='\u096F')||(LA23_1>='\u09E6' && LA23_1<='\u09EF')||(LA23_1>='\u0A66' && LA23_1<='\u0A6F')||(LA23_1>='\u0AE6' && LA23_1<='\u0AEF')||(LA23_1>='\u0B66' && LA23_1<='\u0B6F')||(LA23_1>='\u0BE7' && LA23_1<='\u0BEF')||(LA23_1>='\u0C66' && LA23_1<='\u0C6F')||(LA23_1>='\u0CE6' && LA23_1<='\u0CEF')||(LA23_1>='\u0D66' && LA23_1<='\u0D6F')||(LA23_1>='\u0E50' && LA23_1<='\u0E59')||(LA23_1>='\u0ED0' && LA23_1<='\u0ED9')||(LA23_1>='\u0F20' && LA23_1<='\u0F29')||(LA23_1>='\u1040' && LA23_1<='\u1049')||(LA23_1>='\u1369' && LA23_1<='\u1371')||(LA23_1>='\u17E0' && LA23_1<='\u17E9')||(LA23_1>='\u1810' && LA23_1<='\u1819')||(LA23_1>='\uFF10' && LA23_1<='\uFF19')))
+			else if (((LA21_1>='0' && LA21_1<='9')||(LA21_1>='\u0660' && LA21_1<='\u0669')||(LA21_1>='\u06F0' && LA21_1<='\u06F9')||(LA21_1>='\u0966' && LA21_1<='\u096F')||(LA21_1>='\u09E6' && LA21_1<='\u09EF')||(LA21_1>='\u0A66' && LA21_1<='\u0A6F')||(LA21_1>='\u0AE6' && LA21_1<='\u0AEF')||(LA21_1>='\u0B66' && LA21_1<='\u0B6F')||(LA21_1>='\u0BE7' && LA21_1<='\u0BEF')||(LA21_1>='\u0C66' && LA21_1<='\u0C6F')||(LA21_1>='\u0CE6' && LA21_1<='\u0CEF')||(LA21_1>='\u0D66' && LA21_1<='\u0D6F')||(LA21_1>='\u0E50' && LA21_1<='\u0E59')||(LA21_1>='\u0ED0' && LA21_1<='\u0ED9')||(LA21_1>='\u0F20' && LA21_1<='\u0F29')||(LA21_1>='\u1040' && LA21_1<='\u1049')||(LA21_1>='\u1369' && LA21_1<='\u1371')||(LA21_1>='\u17E0' && LA21_1<='\u17E9')||(LA21_1>='\u1810' && LA21_1<='\u1819')||(LA21_1>='\uFF10' && LA21_1<='\uFF19')))
 			{
-				alt23 = 2;
+				alt21 = 2;
 			}
-			else if (((LA23_1>='\u203F' && LA23_1<='\u2040')||LA23_1=='\u30FB'||(LA23_1>='\uFE33' && LA23_1<='\uFE34')||(LA23_1>='\uFE4D' && LA23_1<='\uFE4F')||LA23_1=='\uFF3F'||LA23_1=='\uFF65'))
+			else if (((LA21_1>='\u203F' && LA21_1<='\u2040')||LA21_1=='\u30FB'||(LA21_1>='\uFE33' && LA21_1<='\uFE34')||(LA21_1>='\uFE4D' && LA21_1<='\uFE4F')||LA21_1=='\uFF3F'||LA21_1=='\uFF65'))
 			{
-				alt23 = 3;
+				alt21 = 3;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return;}
-				NoViableAltException nvae = new NoViableAltException("", 23, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 21, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(23); }
-			switch (alt23)
+			} finally { DebugExitDecision(21); }
+			switch (alt21)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -4981,36 +4724,36 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 			DebugLocation(925, 12);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:925:12: ( options {greedy=false; } : . )*
-			try { DebugEnterSubRule(24);
+			try { DebugEnterSubRule(22);
 			while (true)
 			{
-				int alt24=2;
-				try { DebugEnterDecision(24, false);
-				int LA24_1 = input.LA(1);
+				int alt22=2;
+				try { DebugEnterDecision(22, false);
+				int LA22_1 = input.LA(1);
 
-				if ((LA24_1=='*'))
+				if ((LA22_1=='*'))
 				{
-					int LA24_2 = input.LA(2);
+					int LA22_2 = input.LA(2);
 
-					if ((LA24_2=='/'))
+					if ((LA22_2=='/'))
 					{
-						alt24 = 2;
+						alt22 = 2;
 					}
-					else if (((LA24_2>='\u0000' && LA24_2<='.')||(LA24_2>='0' && LA24_2<='\uFFFF')))
+					else if (((LA22_2>='\u0000' && LA22_2<='.')||(LA22_2>='0' && LA22_2<='\uFFFF')))
 					{
-						alt24 = 1;
+						alt22 = 1;
 					}
 
 
 				}
-				else if (((LA24_1>='\u0000' && LA24_1<=')')||(LA24_1>='+' && LA24_1<='\uFFFF')))
+				else if (((LA22_1>='\u0000' && LA22_1<=')')||(LA22_1>='+' && LA22_1<='\uFFFF')))
 				{
-					alt24 = 1;
+					alt22 = 1;
 				}
 
 
-				} finally { DebugExitDecision(24); }
-				switch ( alt24 )
+				} finally { DebugExitDecision(22); }
+				switch ( alt22 )
 				{
 				case 1:
 					DebugEnterAlt(1);
@@ -5023,14 +4766,14 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					break;
 
 				default:
-					goto loop24;
+					goto loop22;
 				}
 			}
 
-			loop24:
+			loop22:
 				;
 
-			} finally { DebugExitSubRule(24); }
+			} finally { DebugExitSubRule(22); }
 
 			DebugLocation(925, 43);
 			Match("*/"); if (state.failed) return;
@@ -5078,25 +4821,25 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 			DebugLocation(929, 12);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:929:12: (~ ( LT ) )*
-			try { DebugEnterSubRule(25);
+			try { DebugEnterSubRule(23);
 			while (true)
 			{
-				int alt25=2;
-				try { DebugEnterDecision(25, false);
-				int LA25_1 = input.LA(1);
+				int alt23=2;
+				try { DebugEnterDecision(23, false);
+				int LA23_1 = input.LA(1);
 
-				if (((LA25_1>='\u0000' && LA25_1<='\t')||(LA25_1>='\u000B' && LA25_1<='\f')||(LA25_1>='\u000E' && LA25_1<='\u2027')||(LA25_1>='\u202A' && LA25_1<='\uFFFF')))
+				if (((LA23_1>='\u0000' && LA23_1<='\t')||(LA23_1>='\u000B' && LA23_1<='\f')||(LA23_1>='\u000E' && LA23_1<='\u2027')||(LA23_1>='\u202A' && LA23_1<='\uFFFF')))
 				{
-					alt25 = 1;
+					alt23 = 1;
 				}
 
 
-				} finally { DebugExitDecision(25); }
-				switch ( alt25 )
+				} finally { DebugExitDecision(23); }
+				switch ( alt23 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:929:12: ~ ( LT )
 					{
 					DebugLocation(929, 12);
 					input.Consume();
@@ -5106,14 +4849,14 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 					break;
 
 				default:
-					goto loop25;
+					goto loop23;
 				}
 			}
 
-			loop25:
+			loop23:
 				;
 
-			} finally { DebugExitSubRule(25); }
+			} finally { DebugExitSubRule(23); }
 
 			DebugLocation(929, 19);
 			if (state.backtracking == 0)
@@ -5149,28 +4892,100 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = LT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:933:5: ( '\\n' | '\\r' | '\\u2028' | '\\u2029' )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:933:5: ( '\\r\\n' | '\\n' | '\\r' | '\\u2028' | '\\u2029' )
+			int alt24=5;
+			try { DebugEnterDecision(24, false);
+			switch (input.LA(1))
 			{
-			DebugLocation(933, 5);
-			if (input.LA(1)=='\n'||input.LA(1)=='\r'||(input.LA(1)>='\u2028' && input.LA(1)<='\u2029'))
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
+			case '\r':
+				{
+				int LA24_2 = input.LA(2);
+
+				if ((LA24_2=='\n'))
+				{
+					alt24 = 1;
+				}
+				else
+				{
+					alt24 = 3;
+				}
+				}
+				break;
+			case '\n':
+				{
+				alt24 = 2;
+				}
+				break;
+			case '\u2028':
+				{
+				alt24 = 4;
+				}
+				break;
+			case '\u2029':
+				{
+				alt24 = 5;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return;}
+					NoViableAltException nvae = new NoViableAltException("", 24, 0, input, 1);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
 			}
 
+			} finally { DebugExitDecision(24); }
+			switch (alt24)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:933:7: '\\r\\n'
+				{
+				DebugLocation(933, 7);
+				Match("\r\n"); if (state.failed) return;
+
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:934:7: '\\n'
+				{
+				DebugLocation(934, 7);
+				Match('\n'); if (state.failed) return;
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:935:7: '\\r'
+				{
+				DebugLocation(935, 7);
+				Match('\r'); if (state.failed) return;
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:936:7: '\\u2028'
+				{
+				DebugLocation(936, 7);
+				Match('\u2028'); if (state.failed) return;
+
+				}
+				break;
+			case 5:
+				DebugEnterAlt(5);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:937:7: '\\u2029'
+				{
+				DebugLocation(937, 7);
+				Match('\u2029'); if (state.failed) return;
+
+				}
+				break;
 
 			}
-
 			state.type = _type;
 			state.channel = _channel;
 		}
@@ -5197,11 +5012,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = WhiteSpace;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:940:5: ( ( '\\t' | '\\v' | '\\f' | ' ' | '\\u00A0' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:941:5: ( ( '\\t' | '\\v' | '\\f' | ' ' | '\\u00A0' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:940:7: ( '\\t' | '\\v' | '\\f' | ' ' | '\\u00A0' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:941:7: ( '\\t' | '\\v' | '\\f' | ' ' | '\\u00A0' )
 			{
-			DebugLocation(940, 7);
+			DebugLocation(941, 7);
 			if (input.LA(1)=='\t'||input.LA(1)=='\f'||input.LA(1)==' '||input.LA(1)=='v'||input.LA(1)=='\u00A0')
 			{
 				input.Consume();
@@ -5216,7 +5031,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(940, 45);
+			DebugLocation(941, 45);
 			if (state.backtracking == 0)
 			{
 				_channel=Hidden;
@@ -5248,34 +5063,34 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("RegularExpressionFirstChar", 105);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:948:5: (~ ( LT | '*' | '\\\\' | '/' | '[' ) | '\\\\' ~ LT )
-			int alt26=2;
-			try { DebugEnterDecision(26, false);
-			int LA26_1 = input.LA(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:949:5: (~ ( LT | '*' | '\\\\' | '/' | '[' ) | '\\\\' ~ LT )
+			int alt25=2;
+			try { DebugEnterDecision(25, false);
+			int LA25_1 = input.LA(1);
 
-			if (((LA26_1>='\u0000' && LA26_1<='\t')||(LA26_1>='\u000B' && LA26_1<='\f')||(LA26_1>='\u000E' && LA26_1<=')')||(LA26_1>='+' && LA26_1<='.')||(LA26_1>='0' && LA26_1<='Z')||(LA26_1>=']' && LA26_1<='\u2027')||(LA26_1>='\u202A' && LA26_1<='\uFFFF')))
+			if (((LA25_1>='\u0000' && LA25_1<='\t')||(LA25_1>='\u000B' && LA25_1<='\f')||(LA25_1>='\u000E' && LA25_1<=')')||(LA25_1>='+' && LA25_1<='.')||(LA25_1>='0' && LA25_1<='Z')||(LA25_1>=']' && LA25_1<='\u2027')||(LA25_1>='\u202A' && LA25_1<='\uFFFF')))
 			{
-				alt26 = 1;
+				alt25 = 1;
 			}
-			else if ((LA26_1=='\\'))
+			else if ((LA25_1=='\\'))
 			{
-				alt26 = 2;
+				alt25 = 2;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return;}
-				NoViableAltException nvae = new NoViableAltException("", 26, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 25, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(26); }
-			switch (alt26)
+			} finally { DebugExitDecision(25); }
+			switch (alt25)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:948:7: ~ ( LT | '*' | '\\\\' | '/' | '[' )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:949:7: ~ ( LT | '*' | '\\\\' | '/' | '[' )
 				{
-				DebugLocation(948, 7);
+				DebugLocation(949, 7);
 				input.Consume();
 				state.failed=false;
 
@@ -5283,11 +5098,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:949:7: '\\\\' ~ LT
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:950:7: '\\\\' ~ LT
 				{
-				DebugLocation(949, 7);
+				DebugLocation(950, 7);
 				Match('\\'); if (state.failed) return;
-				DebugLocation(949, 12);
+				DebugLocation(950, 12);
 				input.Consume();
 				state.failed=false;
 
@@ -5317,34 +5132,34 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("RegularExpressionChar", 106);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:953:5: (~ ( LT | '\\\\' | '/' | '[' ) | '\\\\' ~ LT )
-			int alt27=2;
-			try { DebugEnterDecision(27, false);
-			int LA27_1 = input.LA(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:954:5: (~ ( LT | '\\\\' | '/' | '[' ) | '\\\\' ~ LT )
+			int alt26=2;
+			try { DebugEnterDecision(26, false);
+			int LA26_1 = input.LA(1);
 
-			if (((LA27_1>='\u0000' && LA27_1<='\t')||(LA27_1>='\u000B' && LA27_1<='\f')||(LA27_1>='\u000E' && LA27_1<='.')||(LA27_1>='0' && LA27_1<='Z')||(LA27_1>=']' && LA27_1<='\u2027')||(LA27_1>='\u202A' && LA27_1<='\uFFFF')))
+			if (((LA26_1>='\u0000' && LA26_1<='\t')||(LA26_1>='\u000B' && LA26_1<='\f')||(LA26_1>='\u000E' && LA26_1<='.')||(LA26_1>='0' && LA26_1<='Z')||(LA26_1>=']' && LA26_1<='\u2027')||(LA26_1>='\u202A' && LA26_1<='\uFFFF')))
 			{
-				alt27 = 1;
+				alt26 = 1;
 			}
-			else if ((LA27_1=='\\'))
+			else if ((LA26_1=='\\'))
 			{
-				alt27 = 2;
+				alt26 = 2;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return;}
-				NoViableAltException nvae = new NoViableAltException("", 27, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 26, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(27); }
-			switch (alt27)
+			} finally { DebugExitDecision(26); }
+			switch (alt26)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:953:7: ~ ( LT | '\\\\' | '/' | '[' )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:954:7: ~ ( LT | '\\\\' | '/' | '[' )
 				{
-				DebugLocation(953, 7);
+				DebugLocation(954, 7);
 				input.Consume();
 				state.failed=false;
 
@@ -5352,11 +5167,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:954:7: '\\\\' ~ LT
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:955:7: '\\\\' ~ LT
 				{
-				DebugLocation(954, 7);
+				DebugLocation(955, 7);
 				Match('\\'); if (state.failed) return;
-				DebugLocation(954, 12);
+				DebugLocation(955, 12);
 				input.Consume();
 				state.failed=false;
 
@@ -5386,34 +5201,34 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		TraceIn("RegularExpressionInnerChar", 107);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:958:5: (~ ( LT | '\\\\' | ']' ) | '\\\\' ~ LT )
-			int alt28=2;
-			try { DebugEnterDecision(28, false);
-			int LA28_1 = input.LA(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:959:5: (~ ( LT | '\\\\' | ']' ) | '\\\\' ~ LT )
+			int alt27=2;
+			try { DebugEnterDecision(27, false);
+			int LA27_1 = input.LA(1);
 
-			if (((LA28_1>='\u0000' && LA28_1<='\t')||(LA28_1>='\u000B' && LA28_1<='\f')||(LA28_1>='\u000E' && LA28_1<='[')||(LA28_1>='^' && LA28_1<='\u2027')||(LA28_1>='\u202A' && LA28_1<='\uFFFF')))
+			if (((LA27_1>='\u0000' && LA27_1<='\t')||(LA27_1>='\u000B' && LA27_1<='\f')||(LA27_1>='\u000E' && LA27_1<='[')||(LA27_1>='^' && LA27_1<='\u2027')||(LA27_1>='\u202A' && LA27_1<='\uFFFF')))
 			{
-				alt28 = 1;
+				alt27 = 1;
 			}
-			else if ((LA28_1=='\\'))
+			else if ((LA27_1=='\\'))
 			{
-				alt28 = 2;
+				alt27 = 2;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return;}
-				NoViableAltException nvae = new NoViableAltException("", 28, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 27, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(28); }
-			switch (alt28)
+			} finally { DebugExitDecision(27); }
+			switch (alt27)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:958:7: ~ ( LT | '\\\\' | ']' )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:959:7: ~ ( LT | '\\\\' | ']' )
 				{
-				DebugLocation(958, 7);
+				DebugLocation(959, 7);
 				input.Consume();
 				state.failed=false;
 
@@ -5421,11 +5236,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:959:7: '\\\\' ~ LT
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:960:7: '\\\\' ~ LT
 				{
-				DebugLocation(959, 7);
+				DebugLocation(960, 7);
 				Match('\\'); if (state.failed) return;
-				DebugLocation(959, 12);
+				DebugLocation(960, 12);
 				input.Consume();
 				state.failed=false;
 
@@ -5457,174 +5272,214 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		{
 			int _type = RegularExpressionLiteral;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:963:5: ({...}? => ( '/' ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' ) ( RegularExpressionChar )* ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )* '/' ( IdentifierPart )* ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:964:5: ({...}? => ( '/' ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' ) ( RegularExpressionChar )* ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )* '/' ( IdentifierPart )* ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:963:7: {...}? => ( '/' ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' ) ( RegularExpressionChar )* ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )* '/' ( IdentifierPart )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:964:7: {...}? => ( '/' ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' ) ( RegularExpressionChar )* ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )* '/' ( IdentifierPart )* )
 			{
-			DebugLocation(963, 7);
+			DebugLocation(964, 7);
 			if (!(( AreRegularExpressionsEnabled )))
 			{
 				if (state.backtracking>0) {state.failed=true; return;}
 				throw new FailedPredicateException(input, "RegularExpressionLiteral", " AreRegularExpressionsEnabled ");
 			}
-			DebugLocation(964, 5);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:964:5: ( '/' ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' ) ( RegularExpressionChar )* ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )* '/' ( IdentifierPart )* )
+			DebugLocation(965, 5);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:965:5: ( '/' ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' ) ( RegularExpressionChar )* ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )* '/' ( IdentifierPart )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:965:9: '/' ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' ) ( RegularExpressionChar )* ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )* '/' ( IdentifierPart )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:966:9: '/' ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' ) ( RegularExpressionChar )* ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )* '/' ( IdentifierPart )*
 			{
-			DebugLocation(965, 9);
+			DebugLocation(966, 9);
 			Match('/'); if (state.failed) return;
-			DebugLocation(966, 7);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:966:7: ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' )
-			int alt30=2;
-			try { DebugEnterSubRule(30);
-			try { DebugEnterDecision(30, false);
-			int LA30_1 = input.LA(1);
+			DebugLocation(967, 7);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:967:7: ( RegularExpressionFirstChar | '[' ( RegularExpressionInnerChar )* ']' )
+			int alt29=2;
+			try { DebugEnterSubRule(29);
+			try { DebugEnterDecision(29, false);
+			int LA29_1 = input.LA(1);
 
-			if (((LA30_1>='\u0000' && LA30_1<='\t')||(LA30_1>='\u000B' && LA30_1<='\f')||(LA30_1>='\u000E' && LA30_1<=')')||(LA30_1>='+' && LA30_1<='.')||(LA30_1>='0' && LA30_1<='Z')||(LA30_1>='\\' && LA30_1<='\u2027')||(LA30_1>='\u202A' && LA30_1<='\uFFFF')))
+			if (((LA29_1>='\u0000' && LA29_1<='\t')||(LA29_1>='\u000B' && LA29_1<='\f')||(LA29_1>='\u000E' && LA29_1<=')')||(LA29_1>='+' && LA29_1<='.')||(LA29_1>='0' && LA29_1<='Z')||(LA29_1>='\\' && LA29_1<='\u2027')||(LA29_1>='\u202A' && LA29_1<='\uFFFF')))
 			{
-				alt30 = 1;
+				alt29 = 1;
 			}
-			else if ((LA30_1=='['))
+			else if ((LA29_1=='['))
 			{
-				alt30 = 2;
+				alt29 = 2;
 			}
 			else
 			{
 				if (state.backtracking>0) {state.failed=true; return;}
-				NoViableAltException nvae = new NoViableAltException("", 30, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 29, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-			} finally { DebugExitDecision(30); }
-			switch (alt30)
+			} finally { DebugExitDecision(29); }
+			switch (alt29)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:966:8: RegularExpressionFirstChar
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:967:8: RegularExpressionFirstChar
 				{
-				DebugLocation(966, 8);
+				DebugLocation(967, 8);
 				mRegularExpressionFirstChar(); if (state.failed) return;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:966:37: '[' ( RegularExpressionInnerChar )* ']'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:967:37: '[' ( RegularExpressionInnerChar )* ']'
 				{
-				DebugLocation(966, 37);
+				DebugLocation(967, 37);
 				Match('['); if (state.failed) return;
-				DebugLocation(966, 41);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:966:41: ( RegularExpressionInnerChar )*
-				try { DebugEnterSubRule(29);
+				DebugLocation(967, 41);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:967:41: ( RegularExpressionInnerChar )*
+				try { DebugEnterSubRule(28);
 				while (true)
 				{
-					int alt29=2;
-					try { DebugEnterDecision(29, false);
-					int LA29_1 = input.LA(1);
+					int alt28=2;
+					try { DebugEnterDecision(28, false);
+					int LA28_1 = input.LA(1);
 
-					if (((LA29_1>='\u0000' && LA29_1<='\t')||(LA29_1>='\u000B' && LA29_1<='\f')||(LA29_1>='\u000E' && LA29_1<='\\')||(LA29_1>='^' && LA29_1<='\u2027')||(LA29_1>='\u202A' && LA29_1<='\uFFFF')))
+					if (((LA28_1>='\u0000' && LA28_1<='\t')||(LA28_1>='\u000B' && LA28_1<='\f')||(LA28_1>='\u000E' && LA28_1<='\\')||(LA28_1>='^' && LA28_1<='\u2027')||(LA28_1>='\u202A' && LA28_1<='\uFFFF')))
 					{
-						alt29 = 1;
+						alt28 = 1;
 					}
 
 
-					} finally { DebugExitDecision(29); }
-					switch ( alt29 )
+					} finally { DebugExitDecision(28); }
+					switch ( alt28 )
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:966:41: RegularExpressionInnerChar
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:967:41: RegularExpressionInnerChar
 						{
-						DebugLocation(966, 41);
+						DebugLocation(967, 41);
 						mRegularExpressionInnerChar(); if (state.failed) return;
 
 						}
 						break;
 
 					default:
-						goto loop29;
+						goto loop28;
 					}
 				}
 
-				loop29:
+				loop28:
 					;
 
-				} finally { DebugExitSubRule(29); }
+				} finally { DebugExitSubRule(28); }
 
-				DebugLocation(966, 69);
+				DebugLocation(967, 69);
 				Match(']'); if (state.failed) return;
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(30); }
+			} finally { DebugExitSubRule(29); }
 
-			DebugLocation(967, 7);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:967:7: ( RegularExpressionChar )*
-			try { DebugEnterSubRule(31);
+			DebugLocation(968, 7);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:968:7: ( RegularExpressionChar )*
+			try { DebugEnterSubRule(30);
 			while (true)
 			{
-				int alt31=2;
-				try { DebugEnterDecision(31, false);
-				int LA31_1 = input.LA(1);
+				int alt30=2;
+				try { DebugEnterDecision(30, false);
+				int LA30_1 = input.LA(1);
 
-				if (((LA31_1>='\u0000' && LA31_1<='\t')||(LA31_1>='\u000B' && LA31_1<='\f')||(LA31_1>='\u000E' && LA31_1<='.')||(LA31_1>='0' && LA31_1<='Z')||(LA31_1>='\\' && LA31_1<='\u2027')||(LA31_1>='\u202A' && LA31_1<='\uFFFF')))
+				if (((LA30_1>='\u0000' && LA30_1<='\t')||(LA30_1>='\u000B' && LA30_1<='\f')||(LA30_1>='\u000E' && LA30_1<='.')||(LA30_1>='0' && LA30_1<='Z')||(LA30_1>='\\' && LA30_1<='\u2027')||(LA30_1>='\u202A' && LA30_1<='\uFFFF')))
 				{
-					alt31 = 1;
+					alt30 = 1;
 				}
 
 
-				} finally { DebugExitDecision(31); }
-				switch ( alt31 )
+				} finally { DebugExitDecision(30); }
+				switch ( alt30 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:967:7: RegularExpressionChar
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:968:7: RegularExpressionChar
 					{
-					DebugLocation(967, 7);
+					DebugLocation(968, 7);
 					mRegularExpressionChar(); if (state.failed) return;
 
 					}
 					break;
 
 				default:
-					goto loop31;
+					goto loop30;
 				}
 			}
 
-			loop31:
+			loop30:
 				;
 
-			} finally { DebugExitSubRule(31); }
+			} finally { DebugExitSubRule(30); }
 
-			DebugLocation(968, 7);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:968:7: ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )*
-			try { DebugEnterSubRule(34);
+			DebugLocation(969, 7);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:969:7: ( '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )* )*
+			try { DebugEnterSubRule(33);
 			while (true)
 			{
-				int alt34=2;
-				try { DebugEnterDecision(34, false);
-				int LA34_1 = input.LA(1);
+				int alt33=2;
+				try { DebugEnterDecision(33, false);
+				int LA33_1 = input.LA(1);
 
-				if ((LA34_1=='['))
+				if ((LA33_1=='['))
 				{
-					alt34 = 1;
+					alt33 = 1;
 				}
 
 
-				} finally { DebugExitDecision(34); }
-				switch ( alt34 )
+				} finally { DebugExitDecision(33); }
+				switch ( alt33 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:968:8: '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )*
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:969:8: '[' ( RegularExpressionInnerChar )* ']' ( RegularExpressionChar )*
 					{
-					DebugLocation(968, 8);
+					DebugLocation(969, 8);
 					Match('['); if (state.failed) return;
-					DebugLocation(968, 12);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:968:12: ( RegularExpressionInnerChar )*
+					DebugLocation(969, 12);
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:969:12: ( RegularExpressionInnerChar )*
+					try { DebugEnterSubRule(31);
+					while (true)
+					{
+						int alt31=2;
+						try { DebugEnterDecision(31, false);
+						int LA31_1 = input.LA(1);
+
+						if (((LA31_1>='\u0000' && LA31_1<='\t')||(LA31_1>='\u000B' && LA31_1<='\f')||(LA31_1>='\u000E' && LA31_1<='\\')||(LA31_1>='^' && LA31_1<='\u2027')||(LA31_1>='\u202A' && LA31_1<='\uFFFF')))
+						{
+							alt31 = 1;
+						}
+
+
+						} finally { DebugExitDecision(31); }
+						switch ( alt31 )
+						{
+						case 1:
+							DebugEnterAlt(1);
+							// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:969:12: RegularExpressionInnerChar
+							{
+							DebugLocation(969, 12);
+							mRegularExpressionInnerChar(); if (state.failed) return;
+
+							}
+							break;
+
+						default:
+							goto loop31;
+						}
+					}
+
+					loop31:
+						;
+
+					} finally { DebugExitSubRule(31); }
+
+					DebugLocation(969, 40);
+					Match(']'); if (state.failed) return;
+					DebugLocation(969, 44);
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:969:44: ( RegularExpressionChar )*
 					try { DebugEnterSubRule(32);
 					while (true)
 					{
@@ -5632,7 +5487,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 						try { DebugEnterDecision(32, false);
 						int LA32_1 = input.LA(1);
 
-						if (((LA32_1>='\u0000' && LA32_1<='\t')||(LA32_1>='\u000B' && LA32_1<='\f')||(LA32_1>='\u000E' && LA32_1<='\\')||(LA32_1>='^' && LA32_1<='\u2027')||(LA32_1>='\u202A' && LA32_1<='\uFFFF')))
+						if (((LA32_1>='\u0000' && LA32_1<='\t')||(LA32_1>='\u000B' && LA32_1<='\f')||(LA32_1>='\u000E' && LA32_1<='.')||(LA32_1>='0' && LA32_1<='Z')||(LA32_1>='\\' && LA32_1<='\u2027')||(LA32_1>='\u202A' && LA32_1<='\uFFFF')))
 						{
 							alt32 = 1;
 						}
@@ -5643,10 +5498,10 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 						{
 						case 1:
 							DebugEnterAlt(1);
-							// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:968:12: RegularExpressionInnerChar
+							// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:969:44: RegularExpressionChar
 							{
-							DebugLocation(968, 12);
-							mRegularExpressionInnerChar(); if (state.failed) return;
+							DebugLocation(969, 44);
+							mRegularExpressionChar(); if (state.failed) return;
 
 							}
 							break;
@@ -5661,46 +5516,46 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 					} finally { DebugExitSubRule(32); }
 
-					DebugLocation(968, 40);
-					Match(']'); if (state.failed) return;
-					DebugLocation(968, 44);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:968:44: ( RegularExpressionChar )*
-					try { DebugEnterSubRule(33);
-					while (true)
-					{
-						int alt33=2;
-						try { DebugEnterDecision(33, false);
-						int LA33_1 = input.LA(1);
 
-						if (((LA33_1>='\u0000' && LA33_1<='\t')||(LA33_1>='\u000B' && LA33_1<='\f')||(LA33_1>='\u000E' && LA33_1<='.')||(LA33_1>='0' && LA33_1<='Z')||(LA33_1>='\\' && LA33_1<='\u2027')||(LA33_1>='\u202A' && LA33_1<='\uFFFF')))
-						{
-							alt33 = 1;
-						}
-
-
-						} finally { DebugExitDecision(33); }
-						switch ( alt33 )
-						{
-						case 1:
-							DebugEnterAlt(1);
-							// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:968:44: RegularExpressionChar
-							{
-							DebugLocation(968, 44);
-							mRegularExpressionChar(); if (state.failed) return;
-
-							}
-							break;
-
-						default:
-							goto loop33;
-						}
 					}
+					break;
 
-					loop33:
-						;
+				default:
+					goto loop33;
+				}
+			}
 
-					} finally { DebugExitSubRule(33); }
+			loop33:
+				;
 
+			} finally { DebugExitSubRule(33); }
+
+			DebugLocation(970, 7);
+			Match('/'); if (state.failed) return;
+			DebugLocation(970, 11);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:970:11: ( IdentifierPart )*
+			try { DebugEnterSubRule(34);
+			while (true)
+			{
+				int alt34=2;
+				try { DebugEnterDecision(34, false);
+				int LA34_1 = input.LA(1);
+
+				if ((LA34_1=='$'||(LA34_1>='0' && LA34_1<='9')||(LA34_1>='A' && LA34_1<='Z')||LA34_1=='\\'||LA34_1=='_'||(LA34_1>='a' && LA34_1<='z')||LA34_1=='\u00AA'||LA34_1=='\u00B5'||LA34_1=='\u00BA'||(LA34_1>='\u00C0' && LA34_1<='\u00D6')||(LA34_1>='\u00D8' && LA34_1<='\u00F6')||(LA34_1>='\u00F8' && LA34_1<='\u021F')||(LA34_1>='\u0222' && LA34_1<='\u0233')||(LA34_1>='\u0250' && LA34_1<='\u02AD')||(LA34_1>='\u02B0' && LA34_1<='\u02B8')||(LA34_1>='\u02BB' && LA34_1<='\u02C1')||(LA34_1>='\u02D0' && LA34_1<='\u02D1')||(LA34_1>='\u02E0' && LA34_1<='\u02E4')||LA34_1=='\u02EE'||LA34_1=='\u037A'||LA34_1=='\u0386'||(LA34_1>='\u0388' && LA34_1<='\u038A')||LA34_1=='\u038C'||(LA34_1>='\u038E' && LA34_1<='\u03A1')||(LA34_1>='\u03A3' && LA34_1<='\u03CE')||(LA34_1>='\u03D0' && LA34_1<='\u03D7')||(LA34_1>='\u03DA' && LA34_1<='\u03F3')||(LA34_1>='\u0400' && LA34_1<='\u0481')||(LA34_1>='\u048C' && LA34_1<='\u04C4')||(LA34_1>='\u04C7' && LA34_1<='\u04C8')||(LA34_1>='\u04CB' && LA34_1<='\u04CC')||(LA34_1>='\u04D0' && LA34_1<='\u04F5')||(LA34_1>='\u04F8' && LA34_1<='\u04F9')||(LA34_1>='\u0531' && LA34_1<='\u0556')||LA34_1=='\u0559'||(LA34_1>='\u0561' && LA34_1<='\u0587')||(LA34_1>='\u05D0' && LA34_1<='\u05EA')||(LA34_1>='\u05F0' && LA34_1<='\u05F2')||(LA34_1>='\u0621' && LA34_1<='\u063A')||(LA34_1>='\u0640' && LA34_1<='\u064A')||(LA34_1>='\u0660' && LA34_1<='\u0669')||(LA34_1>='\u0671' && LA34_1<='\u06D3')||LA34_1=='\u06D5'||(LA34_1>='\u06E5' && LA34_1<='\u06E6')||(LA34_1>='\u06F0' && LA34_1<='\u06FC')||LA34_1=='\u0710'||(LA34_1>='\u0712' && LA34_1<='\u072C')||(LA34_1>='\u0780' && LA34_1<='\u07A5')||(LA34_1>='\u0905' && LA34_1<='\u0939')||LA34_1=='\u093D'||LA34_1=='\u0950'||(LA34_1>='\u0958' && LA34_1<='\u0961')||(LA34_1>='\u0966' && LA34_1<='\u096F')||(LA34_1>='\u0985' && LA34_1<='\u098C')||(LA34_1>='\u098F' && LA34_1<='\u0990')||(LA34_1>='\u0993' && LA34_1<='\u09A8')||(LA34_1>='\u09AA' && LA34_1<='\u09B0')||LA34_1=='\u09B2'||(LA34_1>='\u09B6' && LA34_1<='\u09B9')||(LA34_1>='\u09DC' && LA34_1<='\u09DD')||(LA34_1>='\u09DF' && LA34_1<='\u09E1')||(LA34_1>='\u09E6' && LA34_1<='\u09F1')||(LA34_1>='\u0A05' && LA34_1<='\u0A0A')||(LA34_1>='\u0A0F' && LA34_1<='\u0A10')||(LA34_1>='\u0A13' && LA34_1<='\u0A28')||(LA34_1>='\u0A2A' && LA34_1<='\u0A30')||(LA34_1>='\u0A32' && LA34_1<='\u0A33')||(LA34_1>='\u0A35' && LA34_1<='\u0A36')||(LA34_1>='\u0A38' && LA34_1<='\u0A39')||(LA34_1>='\u0A59' && LA34_1<='\u0A5C')||LA34_1=='\u0A5E'||(LA34_1>='\u0A66' && LA34_1<='\u0A6F')||(LA34_1>='\u0A72' && LA34_1<='\u0A74')||(LA34_1>='\u0A85' && LA34_1<='\u0A8B')||LA34_1=='\u0A8D'||(LA34_1>='\u0A8F' && LA34_1<='\u0A91')||(LA34_1>='\u0A93' && LA34_1<='\u0AA8')||(LA34_1>='\u0AAA' && LA34_1<='\u0AB0')||(LA34_1>='\u0AB2' && LA34_1<='\u0AB3')||(LA34_1>='\u0AB5' && LA34_1<='\u0AB9')||LA34_1=='\u0ABD'||LA34_1=='\u0AD0'||LA34_1=='\u0AE0'||(LA34_1>='\u0AE6' && LA34_1<='\u0AEF')||(LA34_1>='\u0B05' && LA34_1<='\u0B0C')||(LA34_1>='\u0B0F' && LA34_1<='\u0B10')||(LA34_1>='\u0B13' && LA34_1<='\u0B28')||(LA34_1>='\u0B2A' && LA34_1<='\u0B30')||(LA34_1>='\u0B32' && LA34_1<='\u0B33')||(LA34_1>='\u0B36' && LA34_1<='\u0B39')||LA34_1=='\u0B3D'||(LA34_1>='\u0B5C' && LA34_1<='\u0B5D')||(LA34_1>='\u0B5F' && LA34_1<='\u0B61')||(LA34_1>='\u0B66' && LA34_1<='\u0B6F')||(LA34_1>='\u0B85' && LA34_1<='\u0B8A')||(LA34_1>='\u0B8E' && LA34_1<='\u0B90')||(LA34_1>='\u0B92' && LA34_1<='\u0B95')||(LA34_1>='\u0B99' && LA34_1<='\u0B9A')||LA34_1=='\u0B9C'||(LA34_1>='\u0B9E' && LA34_1<='\u0B9F')||(LA34_1>='\u0BA3' && LA34_1<='\u0BA4')||(LA34_1>='\u0BA8' && LA34_1<='\u0BAA')||(LA34_1>='\u0BAE' && LA34_1<='\u0BB5')||(LA34_1>='\u0BB7' && LA34_1<='\u0BB9')||(LA34_1>='\u0BE7' && LA34_1<='\u0BEF')||(LA34_1>='\u0C05' && LA34_1<='\u0C0C')||(LA34_1>='\u0C0E' && LA34_1<='\u0C10')||(LA34_1>='\u0C12' && LA34_1<='\u0C28')||(LA34_1>='\u0C2A' && LA34_1<='\u0C33')||(LA34_1>='\u0C35' && LA34_1<='\u0C39')||(LA34_1>='\u0C60' && LA34_1<='\u0C61')||(LA34_1>='\u0C66' && LA34_1<='\u0C6F')||(LA34_1>='\u0C85' && LA34_1<='\u0C8C')||(LA34_1>='\u0C8E' && LA34_1<='\u0C90')||(LA34_1>='\u0C92' && LA34_1<='\u0CA8')||(LA34_1>='\u0CAA' && LA34_1<='\u0CB3')||(LA34_1>='\u0CB5' && LA34_1<='\u0CB9')||LA34_1=='\u0CDE'||(LA34_1>='\u0CE0' && LA34_1<='\u0CE1')||(LA34_1>='\u0CE6' && LA34_1<='\u0CEF')||(LA34_1>='\u0D05' && LA34_1<='\u0D0C')||(LA34_1>='\u0D0E' && LA34_1<='\u0D10')||(LA34_1>='\u0D12' && LA34_1<='\u0D28')||(LA34_1>='\u0D2A' && LA34_1<='\u0D39')||(LA34_1>='\u0D60' && LA34_1<='\u0D61')||(LA34_1>='\u0D66' && LA34_1<='\u0D6F')||(LA34_1>='\u0D85' && LA34_1<='\u0D96')||(LA34_1>='\u0D9A' && LA34_1<='\u0DB1')||(LA34_1>='\u0DB3' && LA34_1<='\u0DBB')||LA34_1=='\u0DBD'||(LA34_1>='\u0DC0' && LA34_1<='\u0DC6')||(LA34_1>='\u0E01' && LA34_1<='\u0E30')||(LA34_1>='\u0E32' && LA34_1<='\u0E33')||(LA34_1>='\u0E40' && LA34_1<='\u0E46')||(LA34_1>='\u0E50' && LA34_1<='\u0E59')||(LA34_1>='\u0E81' && LA34_1<='\u0E82')||LA34_1=='\u0E84'||(LA34_1>='\u0E87' && LA34_1<='\u0E88')||LA34_1=='\u0E8A'||LA34_1=='\u0E8D'||(LA34_1>='\u0E94' && LA34_1<='\u0E97')||(LA34_1>='\u0E99' && LA34_1<='\u0E9F')||(LA34_1>='\u0EA1' && LA34_1<='\u0EA3')||LA34_1=='\u0EA5'||LA34_1=='\u0EA7'||(LA34_1>='\u0EAA' && LA34_1<='\u0EAB')||(LA34_1>='\u0EAD' && LA34_1<='\u0EB0')||(LA34_1>='\u0EB2' && LA34_1<='\u0EB3')||(LA34_1>='\u0EBD' && LA34_1<='\u0EC4')||LA34_1=='\u0EC6'||(LA34_1>='\u0ED0' && LA34_1<='\u0ED9')||(LA34_1>='\u0EDC' && LA34_1<='\u0EDD')||LA34_1=='\u0F00'||(LA34_1>='\u0F20' && LA34_1<='\u0F29')||(LA34_1>='\u0F40' && LA34_1<='\u0F6A')||(LA34_1>='\u0F88' && LA34_1<='\u0F8B')||(LA34_1>='\u1000' && LA34_1<='\u1021')||(LA34_1>='\u1023' && LA34_1<='\u1027')||(LA34_1>='\u1029' && LA34_1<='\u102A')||(LA34_1>='\u1040' && LA34_1<='\u1049')||(LA34_1>='\u1050' && LA34_1<='\u1055')||(LA34_1>='\u10A0' && LA34_1<='\u10C5')||(LA34_1>='\u10D0' && LA34_1<='\u10F6')||(LA34_1>='\u1100' && LA34_1<='\u1159')||(LA34_1>='\u115F' && LA34_1<='\u11A2')||(LA34_1>='\u11A8' && LA34_1<='\u11F9')||(LA34_1>='\u1200' && LA34_1<='\u1206')||(LA34_1>='\u1208' && LA34_1<='\u1246')||LA34_1=='\u1248'||(LA34_1>='\u124A' && LA34_1<='\u124D')||(LA34_1>='\u1250' && LA34_1<='\u1256')||LA34_1=='\u1258'||(LA34_1>='\u125A' && LA34_1<='\u125D')||(LA34_1>='\u1260' && LA34_1<='\u1286')||LA34_1=='\u1288'||(LA34_1>='\u128A' && LA34_1<='\u128D')||(LA34_1>='\u1290' && LA34_1<='\u12AE')||LA34_1=='\u12B0'||(LA34_1>='\u12B2' && LA34_1<='\u12B5')||(LA34_1>='\u12B8' && LA34_1<='\u12BE')||LA34_1=='\u12C0'||(LA34_1>='\u12C2' && LA34_1<='\u12C5')||(LA34_1>='\u12C8' && LA34_1<='\u12CE')||(LA34_1>='\u12D0' && LA34_1<='\u12D6')||(LA34_1>='\u12D8' && LA34_1<='\u12EE')||(LA34_1>='\u12F0' && LA34_1<='\u130E')||LA34_1=='\u1310'||(LA34_1>='\u1312' && LA34_1<='\u1315')||(LA34_1>='\u1318' && LA34_1<='\u131E')||(LA34_1>='\u1320' && LA34_1<='\u1346')||(LA34_1>='\u1348' && LA34_1<='\u135A')||(LA34_1>='\u1369' && LA34_1<='\u1371')||(LA34_1>='\u13A0' && LA34_1<='\u13F4')||(LA34_1>='\u1401' && LA34_1<='\u1676')||(LA34_1>='\u1681' && LA34_1<='\u169A')||(LA34_1>='\u16A0' && LA34_1<='\u16EA')||(LA34_1>='\u1780' && LA34_1<='\u17B3')||(LA34_1>='\u17E0' && LA34_1<='\u17E9')||(LA34_1>='\u1810' && LA34_1<='\u1819')||(LA34_1>='\u1820' && LA34_1<='\u1877')||(LA34_1>='\u1880' && LA34_1<='\u18A8')||(LA34_1>='\u1E00' && LA34_1<='\u1E9B')||(LA34_1>='\u1EA0' && LA34_1<='\u1EF9')||(LA34_1>='\u1F00' && LA34_1<='\u1F15')||(LA34_1>='\u1F18' && LA34_1<='\u1F1D')||(LA34_1>='\u1F20' && LA34_1<='\u1F45')||(LA34_1>='\u1F48' && LA34_1<='\u1F4D')||(LA34_1>='\u1F50' && LA34_1<='\u1F57')||LA34_1=='\u1F59'||LA34_1=='\u1F5B'||LA34_1=='\u1F5D'||(LA34_1>='\u1F5F' && LA34_1<='\u1F7D')||(LA34_1>='\u1F80' && LA34_1<='\u1FB4')||(LA34_1>='\u1FB6' && LA34_1<='\u1FBC')||LA34_1=='\u1FBE'||(LA34_1>='\u1FC2' && LA34_1<='\u1FC4')||(LA34_1>='\u1FC6' && LA34_1<='\u1FCC')||(LA34_1>='\u1FD0' && LA34_1<='\u1FD3')||(LA34_1>='\u1FD6' && LA34_1<='\u1FDB')||(LA34_1>='\u1FE0' && LA34_1<='\u1FEC')||(LA34_1>='\u1FF2' && LA34_1<='\u1FF4')||(LA34_1>='\u1FF6' && LA34_1<='\u1FFC')||(LA34_1>='\u203F' && LA34_1<='\u2040')||LA34_1=='\u207F'||LA34_1=='\u2102'||LA34_1=='\u2107'||(LA34_1>='\u210A' && LA34_1<='\u2113')||LA34_1=='\u2115'||(LA34_1>='\u2119' && LA34_1<='\u211D')||LA34_1=='\u2124'||LA34_1=='\u2126'||LA34_1=='\u2128'||(LA34_1>='\u212A' && LA34_1<='\u212D')||(LA34_1>='\u212F' && LA34_1<='\u2131')||(LA34_1>='\u2133' && LA34_1<='\u2139')||(LA34_1>='\u2160' && LA34_1<='\u2183')||(LA34_1>='\u3005' && LA34_1<='\u3007')||(LA34_1>='\u3021' && LA34_1<='\u3029')||(LA34_1>='\u3031' && LA34_1<='\u3035')||(LA34_1>='\u3038' && LA34_1<='\u303A')||(LA34_1>='\u3041' && LA34_1<='\u3094')||(LA34_1>='\u309D' && LA34_1<='\u309E')||(LA34_1>='\u30A1' && LA34_1<='\u30FE')||(LA34_1>='\u3105' && LA34_1<='\u312C')||(LA34_1>='\u3131' && LA34_1<='\u318E')||(LA34_1>='\u31A0' && LA34_1<='\u31B7')||LA34_1=='\u3400'||LA34_1=='\u4DB5'||LA34_1=='\u4E00'||LA34_1=='\u9FA5'||(LA34_1>='\uA000' && LA34_1<='\uA48C')||LA34_1=='\uAC00'||LA34_1=='\uD7A3'||(LA34_1>='\uF900' && LA34_1<='\uFA2D')||(LA34_1>='\uFB00' && LA34_1<='\uFB06')||(LA34_1>='\uFB13' && LA34_1<='\uFB17')||LA34_1=='\uFB1D'||(LA34_1>='\uFB1F' && LA34_1<='\uFB28')||(LA34_1>='\uFB2A' && LA34_1<='\uFB36')||(LA34_1>='\uFB38' && LA34_1<='\uFB3C')||LA34_1=='\uFB3E'||(LA34_1>='\uFB40' && LA34_1<='\uFB41')||(LA34_1>='\uFB43' && LA34_1<='\uFB44')||(LA34_1>='\uFB46' && LA34_1<='\uFBB1')||(LA34_1>='\uFBD3' && LA34_1<='\uFD3D')||(LA34_1>='\uFD50' && LA34_1<='\uFD8F')||(LA34_1>='\uFD92' && LA34_1<='\uFDC7')||(LA34_1>='\uFDF0' && LA34_1<='\uFDFB')||(LA34_1>='\uFE33' && LA34_1<='\uFE34')||(LA34_1>='\uFE4D' && LA34_1<='\uFE4F')||(LA34_1>='\uFE70' && LA34_1<='\uFE72')||LA34_1=='\uFE74'||(LA34_1>='\uFE76' && LA34_1<='\uFEFC')||(LA34_1>='\uFF10' && LA34_1<='\uFF19')||(LA34_1>='\uFF21' && LA34_1<='\uFF3A')||LA34_1=='\uFF3F'||(LA34_1>='\uFF41' && LA34_1<='\uFF5A')||(LA34_1>='\uFF65' && LA34_1<='\uFFBE')||(LA34_1>='\uFFC2' && LA34_1<='\uFFC7')||(LA34_1>='\uFFCA' && LA34_1<='\uFFCF')||(LA34_1>='\uFFD2' && LA34_1<='\uFFD7')||(LA34_1>='\uFFDA' && LA34_1<='\uFFDC')))
+				{
+					alt34 = 1;
+				}
+
+
+				} finally { DebugExitDecision(34); }
+				switch ( alt34 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:970:11: IdentifierPart
+					{
+					DebugLocation(970, 11);
+					mIdentifierPart(); if (state.failed) return;
 
 					}
 					break;
@@ -5714,46 +5569,6 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				;
 
 			} finally { DebugExitSubRule(34); }
-
-			DebugLocation(969, 7);
-			Match('/'); if (state.failed) return;
-			DebugLocation(969, 11);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:969:11: ( IdentifierPart )*
-			try { DebugEnterSubRule(35);
-			while (true)
-			{
-				int alt35=2;
-				try { DebugEnterDecision(35, false);
-				int LA35_1 = input.LA(1);
-
-				if ((LA35_1=='$'||(LA35_1>='0' && LA35_1<='9')||(LA35_1>='A' && LA35_1<='Z')||LA35_1=='\\'||LA35_1=='_'||(LA35_1>='a' && LA35_1<='z')||LA35_1=='\u00AA'||LA35_1=='\u00B5'||LA35_1=='\u00BA'||(LA35_1>='\u00C0' && LA35_1<='\u00D6')||(LA35_1>='\u00D8' && LA35_1<='\u00F6')||(LA35_1>='\u00F8' && LA35_1<='\u021F')||(LA35_1>='\u0222' && LA35_1<='\u0233')||(LA35_1>='\u0250' && LA35_1<='\u02AD')||(LA35_1>='\u02B0' && LA35_1<='\u02B8')||(LA35_1>='\u02BB' && LA35_1<='\u02C1')||(LA35_1>='\u02D0' && LA35_1<='\u02D1')||(LA35_1>='\u02E0' && LA35_1<='\u02E4')||LA35_1=='\u02EE'||LA35_1=='\u037A'||LA35_1=='\u0386'||(LA35_1>='\u0388' && LA35_1<='\u038A')||LA35_1=='\u038C'||(LA35_1>='\u038E' && LA35_1<='\u03A1')||(LA35_1>='\u03A3' && LA35_1<='\u03CE')||(LA35_1>='\u03D0' && LA35_1<='\u03D7')||(LA35_1>='\u03DA' && LA35_1<='\u03F3')||(LA35_1>='\u0400' && LA35_1<='\u0481')||(LA35_1>='\u048C' && LA35_1<='\u04C4')||(LA35_1>='\u04C7' && LA35_1<='\u04C8')||(LA35_1>='\u04CB' && LA35_1<='\u04CC')||(LA35_1>='\u04D0' && LA35_1<='\u04F5')||(LA35_1>='\u04F8' && LA35_1<='\u04F9')||(LA35_1>='\u0531' && LA35_1<='\u0556')||LA35_1=='\u0559'||(LA35_1>='\u0561' && LA35_1<='\u0587')||(LA35_1>='\u05D0' && LA35_1<='\u05EA')||(LA35_1>='\u05F0' && LA35_1<='\u05F2')||(LA35_1>='\u0621' && LA35_1<='\u063A')||(LA35_1>='\u0640' && LA35_1<='\u064A')||(LA35_1>='\u0660' && LA35_1<='\u0669')||(LA35_1>='\u0671' && LA35_1<='\u06D3')||LA35_1=='\u06D5'||(LA35_1>='\u06E5' && LA35_1<='\u06E6')||(LA35_1>='\u06F0' && LA35_1<='\u06FC')||LA35_1=='\u0710'||(LA35_1>='\u0712' && LA35_1<='\u072C')||(LA35_1>='\u0780' && LA35_1<='\u07A5')||(LA35_1>='\u0905' && LA35_1<='\u0939')||LA35_1=='\u093D'||LA35_1=='\u0950'||(LA35_1>='\u0958' && LA35_1<='\u0961')||(LA35_1>='\u0966' && LA35_1<='\u096F')||(LA35_1>='\u0985' && LA35_1<='\u098C')||(LA35_1>='\u098F' && LA35_1<='\u0990')||(LA35_1>='\u0993' && LA35_1<='\u09A8')||(LA35_1>='\u09AA' && LA35_1<='\u09B0')||LA35_1=='\u09B2'||(LA35_1>='\u09B6' && LA35_1<='\u09B9')||(LA35_1>='\u09DC' && LA35_1<='\u09DD')||(LA35_1>='\u09DF' && LA35_1<='\u09E1')||(LA35_1>='\u09E6' && LA35_1<='\u09F1')||(LA35_1>='\u0A05' && LA35_1<='\u0A0A')||(LA35_1>='\u0A0F' && LA35_1<='\u0A10')||(LA35_1>='\u0A13' && LA35_1<='\u0A28')||(LA35_1>='\u0A2A' && LA35_1<='\u0A30')||(LA35_1>='\u0A32' && LA35_1<='\u0A33')||(LA35_1>='\u0A35' && LA35_1<='\u0A36')||(LA35_1>='\u0A38' && LA35_1<='\u0A39')||(LA35_1>='\u0A59' && LA35_1<='\u0A5C')||LA35_1=='\u0A5E'||(LA35_1>='\u0A66' && LA35_1<='\u0A6F')||(LA35_1>='\u0A72' && LA35_1<='\u0A74')||(LA35_1>='\u0A85' && LA35_1<='\u0A8B')||LA35_1=='\u0A8D'||(LA35_1>='\u0A8F' && LA35_1<='\u0A91')||(LA35_1>='\u0A93' && LA35_1<='\u0AA8')||(LA35_1>='\u0AAA' && LA35_1<='\u0AB0')||(LA35_1>='\u0AB2' && LA35_1<='\u0AB3')||(LA35_1>='\u0AB5' && LA35_1<='\u0AB9')||LA35_1=='\u0ABD'||LA35_1=='\u0AD0'||LA35_1=='\u0AE0'||(LA35_1>='\u0AE6' && LA35_1<='\u0AEF')||(LA35_1>='\u0B05' && LA35_1<='\u0B0C')||(LA35_1>='\u0B0F' && LA35_1<='\u0B10')||(LA35_1>='\u0B13' && LA35_1<='\u0B28')||(LA35_1>='\u0B2A' && LA35_1<='\u0B30')||(LA35_1>='\u0B32' && LA35_1<='\u0B33')||(LA35_1>='\u0B36' && LA35_1<='\u0B39')||LA35_1=='\u0B3D'||(LA35_1>='\u0B5C' && LA35_1<='\u0B5D')||(LA35_1>='\u0B5F' && LA35_1<='\u0B61')||(LA35_1>='\u0B66' && LA35_1<='\u0B6F')||(LA35_1>='\u0B85' && LA35_1<='\u0B8A')||(LA35_1>='\u0B8E' && LA35_1<='\u0B90')||(LA35_1>='\u0B92' && LA35_1<='\u0B95')||(LA35_1>='\u0B99' && LA35_1<='\u0B9A')||LA35_1=='\u0B9C'||(LA35_1>='\u0B9E' && LA35_1<='\u0B9F')||(LA35_1>='\u0BA3' && LA35_1<='\u0BA4')||(LA35_1>='\u0BA8' && LA35_1<='\u0BAA')||(LA35_1>='\u0BAE' && LA35_1<='\u0BB5')||(LA35_1>='\u0BB7' && LA35_1<='\u0BB9')||(LA35_1>='\u0BE7' && LA35_1<='\u0BEF')||(LA35_1>='\u0C05' && LA35_1<='\u0C0C')||(LA35_1>='\u0C0E' && LA35_1<='\u0C10')||(LA35_1>='\u0C12' && LA35_1<='\u0C28')||(LA35_1>='\u0C2A' && LA35_1<='\u0C33')||(LA35_1>='\u0C35' && LA35_1<='\u0C39')||(LA35_1>='\u0C60' && LA35_1<='\u0C61')||(LA35_1>='\u0C66' && LA35_1<='\u0C6F')||(LA35_1>='\u0C85' && LA35_1<='\u0C8C')||(LA35_1>='\u0C8E' && LA35_1<='\u0C90')||(LA35_1>='\u0C92' && LA35_1<='\u0CA8')||(LA35_1>='\u0CAA' && LA35_1<='\u0CB3')||(LA35_1>='\u0CB5' && LA35_1<='\u0CB9')||LA35_1=='\u0CDE'||(LA35_1>='\u0CE0' && LA35_1<='\u0CE1')||(LA35_1>='\u0CE6' && LA35_1<='\u0CEF')||(LA35_1>='\u0D05' && LA35_1<='\u0D0C')||(LA35_1>='\u0D0E' && LA35_1<='\u0D10')||(LA35_1>='\u0D12' && LA35_1<='\u0D28')||(LA35_1>='\u0D2A' && LA35_1<='\u0D39')||(LA35_1>='\u0D60' && LA35_1<='\u0D61')||(LA35_1>='\u0D66' && LA35_1<='\u0D6F')||(LA35_1>='\u0D85' && LA35_1<='\u0D96')||(LA35_1>='\u0D9A' && LA35_1<='\u0DB1')||(LA35_1>='\u0DB3' && LA35_1<='\u0DBB')||LA35_1=='\u0DBD'||(LA35_1>='\u0DC0' && LA35_1<='\u0DC6')||(LA35_1>='\u0E01' && LA35_1<='\u0E30')||(LA35_1>='\u0E32' && LA35_1<='\u0E33')||(LA35_1>='\u0E40' && LA35_1<='\u0E46')||(LA35_1>='\u0E50' && LA35_1<='\u0E59')||(LA35_1>='\u0E81' && LA35_1<='\u0E82')||LA35_1=='\u0E84'||(LA35_1>='\u0E87' && LA35_1<='\u0E88')||LA35_1=='\u0E8A'||LA35_1=='\u0E8D'||(LA35_1>='\u0E94' && LA35_1<='\u0E97')||(LA35_1>='\u0E99' && LA35_1<='\u0E9F')||(LA35_1>='\u0EA1' && LA35_1<='\u0EA3')||LA35_1=='\u0EA5'||LA35_1=='\u0EA7'||(LA35_1>='\u0EAA' && LA35_1<='\u0EAB')||(LA35_1>='\u0EAD' && LA35_1<='\u0EB0')||(LA35_1>='\u0EB2' && LA35_1<='\u0EB3')||(LA35_1>='\u0EBD' && LA35_1<='\u0EC4')||LA35_1=='\u0EC6'||(LA35_1>='\u0ED0' && LA35_1<='\u0ED9')||(LA35_1>='\u0EDC' && LA35_1<='\u0EDD')||LA35_1=='\u0F00'||(LA35_1>='\u0F20' && LA35_1<='\u0F29')||(LA35_1>='\u0F40' && LA35_1<='\u0F6A')||(LA35_1>='\u0F88' && LA35_1<='\u0F8B')||(LA35_1>='\u1000' && LA35_1<='\u1021')||(LA35_1>='\u1023' && LA35_1<='\u1027')||(LA35_1>='\u1029' && LA35_1<='\u102A')||(LA35_1>='\u1040' && LA35_1<='\u1049')||(LA35_1>='\u1050' && LA35_1<='\u1055')||(LA35_1>='\u10A0' && LA35_1<='\u10C5')||(LA35_1>='\u10D0' && LA35_1<='\u10F6')||(LA35_1>='\u1100' && LA35_1<='\u1159')||(LA35_1>='\u115F' && LA35_1<='\u11A2')||(LA35_1>='\u11A8' && LA35_1<='\u11F9')||(LA35_1>='\u1200' && LA35_1<='\u1206')||(LA35_1>='\u1208' && LA35_1<='\u1246')||LA35_1=='\u1248'||(LA35_1>='\u124A' && LA35_1<='\u124D')||(LA35_1>='\u1250' && LA35_1<='\u1256')||LA35_1=='\u1258'||(LA35_1>='\u125A' && LA35_1<='\u125D')||(LA35_1>='\u1260' && LA35_1<='\u1286')||LA35_1=='\u1288'||(LA35_1>='\u128A' && LA35_1<='\u128D')||(LA35_1>='\u1290' && LA35_1<='\u12AE')||LA35_1=='\u12B0'||(LA35_1>='\u12B2' && LA35_1<='\u12B5')||(LA35_1>='\u12B8' && LA35_1<='\u12BE')||LA35_1=='\u12C0'||(LA35_1>='\u12C2' && LA35_1<='\u12C5')||(LA35_1>='\u12C8' && LA35_1<='\u12CE')||(LA35_1>='\u12D0' && LA35_1<='\u12D6')||(LA35_1>='\u12D8' && LA35_1<='\u12EE')||(LA35_1>='\u12F0' && LA35_1<='\u130E')||LA35_1=='\u1310'||(LA35_1>='\u1312' && LA35_1<='\u1315')||(LA35_1>='\u1318' && LA35_1<='\u131E')||(LA35_1>='\u1320' && LA35_1<='\u1346')||(LA35_1>='\u1348' && LA35_1<='\u135A')||(LA35_1>='\u1369' && LA35_1<='\u1371')||(LA35_1>='\u13A0' && LA35_1<='\u13F4')||(LA35_1>='\u1401' && LA35_1<='\u1676')||(LA35_1>='\u1681' && LA35_1<='\u169A')||(LA35_1>='\u16A0' && LA35_1<='\u16EA')||(LA35_1>='\u1780' && LA35_1<='\u17B3')||(LA35_1>='\u17E0' && LA35_1<='\u17E9')||(LA35_1>='\u1810' && LA35_1<='\u1819')||(LA35_1>='\u1820' && LA35_1<='\u1877')||(LA35_1>='\u1880' && LA35_1<='\u18A8')||(LA35_1>='\u1E00' && LA35_1<='\u1E9B')||(LA35_1>='\u1EA0' && LA35_1<='\u1EF9')||(LA35_1>='\u1F00' && LA35_1<='\u1F15')||(LA35_1>='\u1F18' && LA35_1<='\u1F1D')||(LA35_1>='\u1F20' && LA35_1<='\u1F45')||(LA35_1>='\u1F48' && LA35_1<='\u1F4D')||(LA35_1>='\u1F50' && LA35_1<='\u1F57')||LA35_1=='\u1F59'||LA35_1=='\u1F5B'||LA35_1=='\u1F5D'||(LA35_1>='\u1F5F' && LA35_1<='\u1F7D')||(LA35_1>='\u1F80' && LA35_1<='\u1FB4')||(LA35_1>='\u1FB6' && LA35_1<='\u1FBC')||LA35_1=='\u1FBE'||(LA35_1>='\u1FC2' && LA35_1<='\u1FC4')||(LA35_1>='\u1FC6' && LA35_1<='\u1FCC')||(LA35_1>='\u1FD0' && LA35_1<='\u1FD3')||(LA35_1>='\u1FD6' && LA35_1<='\u1FDB')||(LA35_1>='\u1FE0' && LA35_1<='\u1FEC')||(LA35_1>='\u1FF2' && LA35_1<='\u1FF4')||(LA35_1>='\u1FF6' && LA35_1<='\u1FFC')||(LA35_1>='\u203F' && LA35_1<='\u2040')||LA35_1=='\u207F'||LA35_1=='\u2102'||LA35_1=='\u2107'||(LA35_1>='\u210A' && LA35_1<='\u2113')||LA35_1=='\u2115'||(LA35_1>='\u2119' && LA35_1<='\u211D')||LA35_1=='\u2124'||LA35_1=='\u2126'||LA35_1=='\u2128'||(LA35_1>='\u212A' && LA35_1<='\u212D')||(LA35_1>='\u212F' && LA35_1<='\u2131')||(LA35_1>='\u2133' && LA35_1<='\u2139')||(LA35_1>='\u2160' && LA35_1<='\u2183')||(LA35_1>='\u3005' && LA35_1<='\u3007')||(LA35_1>='\u3021' && LA35_1<='\u3029')||(LA35_1>='\u3031' && LA35_1<='\u3035')||(LA35_1>='\u3038' && LA35_1<='\u303A')||(LA35_1>='\u3041' && LA35_1<='\u3094')||(LA35_1>='\u309D' && LA35_1<='\u309E')||(LA35_1>='\u30A1' && LA35_1<='\u30FE')||(LA35_1>='\u3105' && LA35_1<='\u312C')||(LA35_1>='\u3131' && LA35_1<='\u318E')||(LA35_1>='\u31A0' && LA35_1<='\u31B7')||LA35_1=='\u3400'||LA35_1=='\u4DB5'||LA35_1=='\u4E00'||LA35_1=='\u9FA5'||(LA35_1>='\uA000' && LA35_1<='\uA48C')||LA35_1=='\uAC00'||LA35_1=='\uD7A3'||(LA35_1>='\uF900' && LA35_1<='\uFA2D')||(LA35_1>='\uFB00' && LA35_1<='\uFB06')||(LA35_1>='\uFB13' && LA35_1<='\uFB17')||LA35_1=='\uFB1D'||(LA35_1>='\uFB1F' && LA35_1<='\uFB28')||(LA35_1>='\uFB2A' && LA35_1<='\uFB36')||(LA35_1>='\uFB38' && LA35_1<='\uFB3C')||LA35_1=='\uFB3E'||(LA35_1>='\uFB40' && LA35_1<='\uFB41')||(LA35_1>='\uFB43' && LA35_1<='\uFB44')||(LA35_1>='\uFB46' && LA35_1<='\uFBB1')||(LA35_1>='\uFBD3' && LA35_1<='\uFD3D')||(LA35_1>='\uFD50' && LA35_1<='\uFD8F')||(LA35_1>='\uFD92' && LA35_1<='\uFDC7')||(LA35_1>='\uFDF0' && LA35_1<='\uFDFB')||(LA35_1>='\uFE33' && LA35_1<='\uFE34')||(LA35_1>='\uFE4D' && LA35_1<='\uFE4F')||(LA35_1>='\uFE70' && LA35_1<='\uFE72')||LA35_1=='\uFE74'||(LA35_1>='\uFE76' && LA35_1<='\uFEFC')||(LA35_1>='\uFF10' && LA35_1<='\uFF19')||(LA35_1>='\uFF21' && LA35_1<='\uFF3A')||LA35_1=='\uFF3F'||(LA35_1>='\uFF41' && LA35_1<='\uFF5A')||(LA35_1>='\uFF65' && LA35_1<='\uFFBE')||(LA35_1>='\uFFC2' && LA35_1<='\uFFC7')||(LA35_1>='\uFFCA' && LA35_1<='\uFFCF')||(LA35_1>='\uFFD2' && LA35_1<='\uFFD7')||(LA35_1>='\uFFDA' && LA35_1<='\uFFDC')))
-				{
-					alt35 = 1;
-				}
-
-
-				} finally { DebugExitDecision(35); }
-				switch ( alt35 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:969:11: IdentifierPart
-					{
-					DebugLocation(969, 11);
-					mIdentifierPart(); if (state.failed) return;
-
-					}
-					break;
-
-				default:
-					goto loop35;
-				}
-			}
-
-			loop35:
-				;
-
-			} finally { DebugExitSubRule(35); }
 
 
 			}
@@ -5773,10 +5588,91 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 	}
 	// $ANTLR end "RegularExpressionLiteral"
 
+	partial void EnterRule_SHEBANG();
+	partial void LeaveRule_SHEBANG();
+
+	// $ANTLR start "SHEBANG"
+	[GrammarRule("SHEBANG")]
+	private void mSHEBANG()
+	{
+		EnterRule_SHEBANG();
+		EnterRule("SHEBANG", 109);
+		TraceIn("SHEBANG", 109);
+		try
+		{
+			int _type = SHEBANG;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:975:2: ( '#' '!' (~ ( '\\n' | '\\r' ) )* )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:975:4: '#' '!' (~ ( '\\n' | '\\r' ) )*
+			{
+			DebugLocation(975, 4);
+			Match('#'); if (state.failed) return;
+			DebugLocation(975, 8);
+			Match('!'); if (state.failed) return;
+			DebugLocation(975, 12);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:975:12: (~ ( '\\n' | '\\r' ) )*
+			try { DebugEnterSubRule(35);
+			while (true)
+			{
+				int alt35=2;
+				try { DebugEnterDecision(35, false);
+				int LA35_1 = input.LA(1);
+
+				if (((LA35_1>='\u0000' && LA35_1<='\t')||(LA35_1>='\u000B' && LA35_1<='\f')||(LA35_1>='\u000E' && LA35_1<='\uFFFF')))
+				{
+					alt35 = 1;
+				}
+
+
+				} finally { DebugExitDecision(35); }
+				switch ( alt35 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:
+					{
+					DebugLocation(975, 12);
+					input.Consume();
+					state.failed=false;
+
+					}
+					break;
+
+				default:
+					goto loop35;
+				}
+			}
+
+			loop35:
+				;
+
+			} finally { DebugExitSubRule(35); }
+
+			DebugLocation(975, 26);
+			if (state.backtracking == 0)
+			{
+				_channel=Hidden;
+			}
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("SHEBANG", 109);
+			LeaveRule("SHEBANG", 109);
+			LeaveRule_SHEBANG();
+		}
+	}
+	// $ANTLR end "SHEBANG"
+
 	public override void mTokens()
 	{
-		// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:8: ( FALSE | NULL | RBRACE | RBRACK | RPAREN | THIS | TRUE | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | StringLiteral | NumericLiteral | Identifier | Comment | LineComment | LT | WhiteSpace | RegularExpressionLiteral )
-		int alt36=84;
+		// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:8: ( FALSE | NULL | RBRACE | RBRACK | RPAREN | THIS | TRUE | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | StringLiteral | NumericLiteral | Identifier | Comment | LineComment | LT | WhiteSpace | RegularExpressionLiteral | SHEBANG )
+		int alt36=85;
 		try { DebugEnterDecision(36, false);
 		try
 		{
@@ -5855,694 +5751,703 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			break;
 		case 8:
 			DebugEnterAlt(8);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:52: T__43
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:52: T__44
 			{
 			DebugLocation(1, 52);
-			mT__43(); if (state.failed) return;
+			mT__44(); if (state.failed) return;
 
 			}
 			break;
 		case 9:
 			DebugEnterAlt(9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:58: T__44
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:58: T__45
 			{
 			DebugLocation(1, 58);
-			mT__44(); if (state.failed) return;
+			mT__45(); if (state.failed) return;
 
 			}
 			break;
 		case 10:
 			DebugEnterAlt(10);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:64: T__45
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:64: T__46
 			{
 			DebugLocation(1, 64);
-			mT__45(); if (state.failed) return;
+			mT__46(); if (state.failed) return;
 
 			}
 			break;
 		case 11:
 			DebugEnterAlt(11);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:70: T__46
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:70: T__47
 			{
 			DebugLocation(1, 70);
-			mT__46(); if (state.failed) return;
+			mT__47(); if (state.failed) return;
 
 			}
 			break;
 		case 12:
 			DebugEnterAlt(12);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:76: T__47
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:76: T__48
 			{
 			DebugLocation(1, 76);
-			mT__47(); if (state.failed) return;
+			mT__48(); if (state.failed) return;
 
 			}
 			break;
 		case 13:
 			DebugEnterAlt(13);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:82: T__48
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:82: T__49
 			{
 			DebugLocation(1, 82);
-			mT__48(); if (state.failed) return;
+			mT__49(); if (state.failed) return;
 
 			}
 			break;
 		case 14:
 			DebugEnterAlt(14);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:88: T__49
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:88: T__50
 			{
 			DebugLocation(1, 88);
-			mT__49(); if (state.failed) return;
+			mT__50(); if (state.failed) return;
 
 			}
 			break;
 		case 15:
 			DebugEnterAlt(15);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:94: T__50
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:94: T__51
 			{
 			DebugLocation(1, 94);
-			mT__50(); if (state.failed) return;
+			mT__51(); if (state.failed) return;
 
 			}
 			break;
 		case 16:
 			DebugEnterAlt(16);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:100: T__51
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:100: T__52
 			{
 			DebugLocation(1, 100);
-			mT__51(); if (state.failed) return;
+			mT__52(); if (state.failed) return;
 
 			}
 			break;
 		case 17:
 			DebugEnterAlt(17);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:106: T__52
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:106: T__53
 			{
 			DebugLocation(1, 106);
-			mT__52(); if (state.failed) return;
+			mT__53(); if (state.failed) return;
 
 			}
 			break;
 		case 18:
 			DebugEnterAlt(18);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:112: T__53
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:112: T__54
 			{
 			DebugLocation(1, 112);
-			mT__53(); if (state.failed) return;
+			mT__54(); if (state.failed) return;
 
 			}
 			break;
 		case 19:
 			DebugEnterAlt(19);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:118: T__54
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:118: T__55
 			{
 			DebugLocation(1, 118);
-			mT__54(); if (state.failed) return;
+			mT__55(); if (state.failed) return;
 
 			}
 			break;
 		case 20:
 			DebugEnterAlt(20);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:124: T__55
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:124: T__56
 			{
 			DebugLocation(1, 124);
-			mT__55(); if (state.failed) return;
+			mT__56(); if (state.failed) return;
 
 			}
 			break;
 		case 21:
 			DebugEnterAlt(21);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:130: T__56
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:130: T__57
 			{
 			DebugLocation(1, 130);
-			mT__56(); if (state.failed) return;
+			mT__57(); if (state.failed) return;
 
 			}
 			break;
 		case 22:
 			DebugEnterAlt(22);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:136: T__57
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:136: T__58
 			{
 			DebugLocation(1, 136);
-			mT__57(); if (state.failed) return;
+			mT__58(); if (state.failed) return;
 
 			}
 			break;
 		case 23:
 			DebugEnterAlt(23);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:142: T__58
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:142: T__59
 			{
 			DebugLocation(1, 142);
-			mT__58(); if (state.failed) return;
+			mT__59(); if (state.failed) return;
 
 			}
 			break;
 		case 24:
 			DebugEnterAlt(24);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:148: T__59
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:148: T__60
 			{
 			DebugLocation(1, 148);
-			mT__59(); if (state.failed) return;
+			mT__60(); if (state.failed) return;
 
 			}
 			break;
 		case 25:
 			DebugEnterAlt(25);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:154: T__60
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:154: T__61
 			{
 			DebugLocation(1, 154);
-			mT__60(); if (state.failed) return;
+			mT__61(); if (state.failed) return;
 
 			}
 			break;
 		case 26:
 			DebugEnterAlt(26);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:160: T__61
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:160: T__62
 			{
 			DebugLocation(1, 160);
-			mT__61(); if (state.failed) return;
+			mT__62(); if (state.failed) return;
 
 			}
 			break;
 		case 27:
 			DebugEnterAlt(27);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:166: T__62
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:166: T__63
 			{
 			DebugLocation(1, 166);
-			mT__62(); if (state.failed) return;
+			mT__63(); if (state.failed) return;
 
 			}
 			break;
 		case 28:
 			DebugEnterAlt(28);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:172: T__63
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:172: T__64
 			{
 			DebugLocation(1, 172);
-			mT__63(); if (state.failed) return;
+			mT__64(); if (state.failed) return;
 
 			}
 			break;
 		case 29:
 			DebugEnterAlt(29);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:178: T__64
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:178: T__65
 			{
 			DebugLocation(1, 178);
-			mT__64(); if (state.failed) return;
+			mT__65(); if (state.failed) return;
 
 			}
 			break;
 		case 30:
 			DebugEnterAlt(30);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:184: T__65
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:184: T__66
 			{
 			DebugLocation(1, 184);
-			mT__65(); if (state.failed) return;
+			mT__66(); if (state.failed) return;
 
 			}
 			break;
 		case 31:
 			DebugEnterAlt(31);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:190: T__66
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:190: T__67
 			{
 			DebugLocation(1, 190);
-			mT__66(); if (state.failed) return;
+			mT__67(); if (state.failed) return;
 
 			}
 			break;
 		case 32:
 			DebugEnterAlt(32);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:196: T__67
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:196: T__68
 			{
 			DebugLocation(1, 196);
-			mT__67(); if (state.failed) return;
+			mT__68(); if (state.failed) return;
 
 			}
 			break;
 		case 33:
 			DebugEnterAlt(33);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:202: T__68
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:202: T__69
 			{
 			DebugLocation(1, 202);
-			mT__68(); if (state.failed) return;
+			mT__69(); if (state.failed) return;
 
 			}
 			break;
 		case 34:
 			DebugEnterAlt(34);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:208: T__69
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:208: T__70
 			{
 			DebugLocation(1, 208);
-			mT__69(); if (state.failed) return;
+			mT__70(); if (state.failed) return;
 
 			}
 			break;
 		case 35:
 			DebugEnterAlt(35);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:214: T__70
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:214: T__71
 			{
 			DebugLocation(1, 214);
-			mT__70(); if (state.failed) return;
+			mT__71(); if (state.failed) return;
 
 			}
 			break;
 		case 36:
 			DebugEnterAlt(36);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:220: T__71
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:220: T__72
 			{
 			DebugLocation(1, 220);
-			mT__71(); if (state.failed) return;
+			mT__72(); if (state.failed) return;
 
 			}
 			break;
 		case 37:
 			DebugEnterAlt(37);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:226: T__72
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:226: T__73
 			{
 			DebugLocation(1, 226);
-			mT__72(); if (state.failed) return;
+			mT__73(); if (state.failed) return;
 
 			}
 			break;
 		case 38:
 			DebugEnterAlt(38);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:232: T__73
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:232: T__74
 			{
 			DebugLocation(1, 232);
-			mT__73(); if (state.failed) return;
+			mT__74(); if (state.failed) return;
 
 			}
 			break;
 		case 39:
 			DebugEnterAlt(39);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:238: T__74
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:238: T__75
 			{
 			DebugLocation(1, 238);
-			mT__74(); if (state.failed) return;
+			mT__75(); if (state.failed) return;
 
 			}
 			break;
 		case 40:
 			DebugEnterAlt(40);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:244: T__75
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:244: T__76
 			{
 			DebugLocation(1, 244);
-			mT__75(); if (state.failed) return;
+			mT__76(); if (state.failed) return;
 
 			}
 			break;
 		case 41:
 			DebugEnterAlt(41);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:250: T__76
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:250: T__77
 			{
 			DebugLocation(1, 250);
-			mT__76(); if (state.failed) return;
+			mT__77(); if (state.failed) return;
 
 			}
 			break;
 		case 42:
 			DebugEnterAlt(42);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:256: T__77
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:256: T__78
 			{
 			DebugLocation(1, 256);
-			mT__77(); if (state.failed) return;
+			mT__78(); if (state.failed) return;
 
 			}
 			break;
 		case 43:
 			DebugEnterAlt(43);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:262: T__78
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:262: T__79
 			{
 			DebugLocation(1, 262);
-			mT__78(); if (state.failed) return;
+			mT__79(); if (state.failed) return;
 
 			}
 			break;
 		case 44:
 			DebugEnterAlt(44);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:268: T__79
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:268: T__80
 			{
 			DebugLocation(1, 268);
-			mT__79(); if (state.failed) return;
+			mT__80(); if (state.failed) return;
 
 			}
 			break;
 		case 45:
 			DebugEnterAlt(45);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:274: T__80
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:274: T__81
 			{
 			DebugLocation(1, 274);
-			mT__80(); if (state.failed) return;
+			mT__81(); if (state.failed) return;
 
 			}
 			break;
 		case 46:
 			DebugEnterAlt(46);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:280: T__81
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:280: T__82
 			{
 			DebugLocation(1, 280);
-			mT__81(); if (state.failed) return;
+			mT__82(); if (state.failed) return;
 
 			}
 			break;
 		case 47:
 			DebugEnterAlt(47);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:286: T__82
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:286: T__83
 			{
 			DebugLocation(1, 286);
-			mT__82(); if (state.failed) return;
+			mT__83(); if (state.failed) return;
 
 			}
 			break;
 		case 48:
 			DebugEnterAlt(48);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:292: T__83
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:292: T__84
 			{
 			DebugLocation(1, 292);
-			mT__83(); if (state.failed) return;
+			mT__84(); if (state.failed) return;
 
 			}
 			break;
 		case 49:
 			DebugEnterAlt(49);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:298: T__84
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:298: T__85
 			{
 			DebugLocation(1, 298);
-			mT__84(); if (state.failed) return;
+			mT__85(); if (state.failed) return;
 
 			}
 			break;
 		case 50:
 			DebugEnterAlt(50);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:304: T__85
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:304: T__86
 			{
 			DebugLocation(1, 304);
-			mT__85(); if (state.failed) return;
+			mT__86(); if (state.failed) return;
 
 			}
 			break;
 		case 51:
 			DebugEnterAlt(51);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:310: T__86
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:310: T__87
 			{
 			DebugLocation(1, 310);
-			mT__86(); if (state.failed) return;
+			mT__87(); if (state.failed) return;
 
 			}
 			break;
 		case 52:
 			DebugEnterAlt(52);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:316: T__87
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:316: T__88
 			{
 			DebugLocation(1, 316);
-			mT__87(); if (state.failed) return;
+			mT__88(); if (state.failed) return;
 
 			}
 			break;
 		case 53:
 			DebugEnterAlt(53);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:322: T__88
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:322: T__89
 			{
 			DebugLocation(1, 322);
-			mT__88(); if (state.failed) return;
+			mT__89(); if (state.failed) return;
 
 			}
 			break;
 		case 54:
 			DebugEnterAlt(54);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:328: T__89
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:328: T__90
 			{
 			DebugLocation(1, 328);
-			mT__89(); if (state.failed) return;
+			mT__90(); if (state.failed) return;
 
 			}
 			break;
 		case 55:
 			DebugEnterAlt(55);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:334: T__90
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:334: T__91
 			{
 			DebugLocation(1, 334);
-			mT__90(); if (state.failed) return;
+			mT__91(); if (state.failed) return;
 
 			}
 			break;
 		case 56:
 			DebugEnterAlt(56);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:340: T__91
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:340: T__92
 			{
 			DebugLocation(1, 340);
-			mT__91(); if (state.failed) return;
+			mT__92(); if (state.failed) return;
 
 			}
 			break;
 		case 57:
 			DebugEnterAlt(57);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:346: T__92
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:346: T__93
 			{
 			DebugLocation(1, 346);
-			mT__92(); if (state.failed) return;
+			mT__93(); if (state.failed) return;
 
 			}
 			break;
 		case 58:
 			DebugEnterAlt(58);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:352: T__93
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:352: T__94
 			{
 			DebugLocation(1, 352);
-			mT__93(); if (state.failed) return;
+			mT__94(); if (state.failed) return;
 
 			}
 			break;
 		case 59:
 			DebugEnterAlt(59);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:358: T__94
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:358: T__95
 			{
 			DebugLocation(1, 358);
-			mT__94(); if (state.failed) return;
+			mT__95(); if (state.failed) return;
 
 			}
 			break;
 		case 60:
 			DebugEnterAlt(60);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:364: T__95
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:364: T__96
 			{
 			DebugLocation(1, 364);
-			mT__95(); if (state.failed) return;
+			mT__96(); if (state.failed) return;
 
 			}
 			break;
 		case 61:
 			DebugEnterAlt(61);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:370: T__96
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:370: T__97
 			{
 			DebugLocation(1, 370);
-			mT__96(); if (state.failed) return;
+			mT__97(); if (state.failed) return;
 
 			}
 			break;
 		case 62:
 			DebugEnterAlt(62);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:376: T__97
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:376: T__98
 			{
 			DebugLocation(1, 376);
-			mT__97(); if (state.failed) return;
+			mT__98(); if (state.failed) return;
 
 			}
 			break;
 		case 63:
 			DebugEnterAlt(63);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:382: T__98
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:382: T__99
 			{
 			DebugLocation(1, 382);
-			mT__98(); if (state.failed) return;
+			mT__99(); if (state.failed) return;
 
 			}
 			break;
 		case 64:
 			DebugEnterAlt(64);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:388: T__99
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:388: T__100
 			{
 			DebugLocation(1, 388);
-			mT__99(); if (state.failed) return;
+			mT__100(); if (state.failed) return;
 
 			}
 			break;
 		case 65:
 			DebugEnterAlt(65);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:394: T__100
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:395: T__101
 			{
-			DebugLocation(1, 394);
-			mT__100(); if (state.failed) return;
+			DebugLocation(1, 395);
+			mT__101(); if (state.failed) return;
 
 			}
 			break;
 		case 66:
 			DebugEnterAlt(66);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:401: T__101
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:402: T__102
 			{
-			DebugLocation(1, 401);
-			mT__101(); if (state.failed) return;
+			DebugLocation(1, 402);
+			mT__102(); if (state.failed) return;
 
 			}
 			break;
 		case 67:
 			DebugEnterAlt(67);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:408: T__102
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:409: T__103
 			{
-			DebugLocation(1, 408);
-			mT__102(); if (state.failed) return;
+			DebugLocation(1, 409);
+			mT__103(); if (state.failed) return;
 
 			}
 			break;
 		case 68:
 			DebugEnterAlt(68);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:415: T__103
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:416: T__104
 			{
-			DebugLocation(1, 415);
-			mT__103(); if (state.failed) return;
+			DebugLocation(1, 416);
+			mT__104(); if (state.failed) return;
 
 			}
 			break;
 		case 69:
 			DebugEnterAlt(69);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:422: T__104
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:423: T__105
 			{
-			DebugLocation(1, 422);
-			mT__104(); if (state.failed) return;
+			DebugLocation(1, 423);
+			mT__105(); if (state.failed) return;
 
 			}
 			break;
 		case 70:
 			DebugEnterAlt(70);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:429: T__105
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:430: T__106
 			{
-			DebugLocation(1, 429);
-			mT__105(); if (state.failed) return;
+			DebugLocation(1, 430);
+			mT__106(); if (state.failed) return;
 
 			}
 			break;
 		case 71:
 			DebugEnterAlt(71);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:436: T__106
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:437: T__107
 			{
-			DebugLocation(1, 436);
-			mT__106(); if (state.failed) return;
+			DebugLocation(1, 437);
+			mT__107(); if (state.failed) return;
 
 			}
 			break;
 		case 72:
 			DebugEnterAlt(72);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:443: T__107
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:444: T__108
 			{
-			DebugLocation(1, 443);
-			mT__107(); if (state.failed) return;
+			DebugLocation(1, 444);
+			mT__108(); if (state.failed) return;
 
 			}
 			break;
 		case 73:
 			DebugEnterAlt(73);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:450: T__108
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:451: T__109
 			{
-			DebugLocation(1, 450);
-			mT__108(); if (state.failed) return;
+			DebugLocation(1, 451);
+			mT__109(); if (state.failed) return;
 
 			}
 			break;
 		case 74:
 			DebugEnterAlt(74);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:457: T__109
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:458: T__110
 			{
-			DebugLocation(1, 457);
-			mT__109(); if (state.failed) return;
+			DebugLocation(1, 458);
+			mT__110(); if (state.failed) return;
 
 			}
 			break;
 		case 75:
 			DebugEnterAlt(75);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:464: T__110
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:465: T__111
 			{
-			DebugLocation(1, 464);
-			mT__110(); if (state.failed) return;
+			DebugLocation(1, 465);
+			mT__111(); if (state.failed) return;
 
 			}
 			break;
 		case 76:
 			DebugEnterAlt(76);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:471: T__111
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:472: T__112
 			{
-			DebugLocation(1, 471);
-			mT__111(); if (state.failed) return;
+			DebugLocation(1, 472);
+			mT__112(); if (state.failed) return;
 
 			}
 			break;
 		case 77:
 			DebugEnterAlt(77);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:478: StringLiteral
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:479: StringLiteral
 			{
-			DebugLocation(1, 478);
+			DebugLocation(1, 479);
 			mStringLiteral(); if (state.failed) return;
 
 			}
 			break;
 		case 78:
 			DebugEnterAlt(78);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:492: NumericLiteral
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:493: NumericLiteral
 			{
-			DebugLocation(1, 492);
+			DebugLocation(1, 493);
 			mNumericLiteral(); if (state.failed) return;
 
 			}
 			break;
 		case 79:
 			DebugEnterAlt(79);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:507: Identifier
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:508: Identifier
 			{
-			DebugLocation(1, 507);
+			DebugLocation(1, 508);
 			mIdentifier(); if (state.failed) return;
 
 			}
 			break;
 		case 80:
 			DebugEnterAlt(80);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:518: Comment
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:519: Comment
 			{
-			DebugLocation(1, 518);
+			DebugLocation(1, 519);
 			mComment(); if (state.failed) return;
 
 			}
 			break;
 		case 81:
 			DebugEnterAlt(81);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:526: LineComment
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:527: LineComment
 			{
-			DebugLocation(1, 526);
+			DebugLocation(1, 527);
 			mLineComment(); if (state.failed) return;
 
 			}
 			break;
 		case 82:
 			DebugEnterAlt(82);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:538: LT
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:539: LT
 			{
-			DebugLocation(1, 538);
+			DebugLocation(1, 539);
 			mLT(); if (state.failed) return;
 
 			}
 			break;
 		case 83:
 			DebugEnterAlt(83);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:541: WhiteSpace
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:542: WhiteSpace
 			{
-			DebugLocation(1, 541);
+			DebugLocation(1, 542);
 			mWhiteSpace(); if (state.failed) return;
 
 			}
 			break;
 		case 84:
 			DebugEnterAlt(84);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:552: RegularExpressionLiteral
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:553: RegularExpressionLiteral
 			{
-			DebugLocation(1, 552);
+			DebugLocation(1, 553);
 			mRegularExpressionLiteral(); if (state.failed) return;
+
+			}
+			break;
+		case 85:
+			DebugEnterAlt(85);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:1:578: SHEBANG
+			{
+			DebugLocation(1, 578);
+			mSHEBANG(); if (state.failed) return;
 
 			}
 			break;
@@ -6558,8 +6463,8 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 	private void synpred1_JavaScript_fragment()
 	{
 		EnterRule_synpred1_JavaScript_fragment();
-		EnterRule("synpred1_JavaScript_fragment", 110);
-		TraceIn("synpred1_JavaScript_fragment", 110);
+		EnterRule("synpred1_JavaScript_fragment", 111);
+		TraceIn("synpred1_JavaScript_fragment", 111);
 		try
 		{
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:519:7: ( IdentifierStart )
@@ -6574,8 +6479,8 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("synpred1_JavaScript_fragment", 110);
-			LeaveRule("synpred1_JavaScript_fragment", 110);
+			TraceOut("synpred1_JavaScript_fragment", 111);
+			LeaveRule("synpred1_JavaScript_fragment", 111);
 			LeaveRule_synpred1_JavaScript_fragment();
 		}
 	}
@@ -6607,31 +6512,31 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 
 
 	#region DFA
-	DFA18 dfa18;
+	DFA16 dfa16;
 	DFA36 dfa36;
 
 	protected override void InitDFAs()
 	{
 		base.InitDFAs();
-		dfa18 = new DFA18(this);
+		dfa16 = new DFA16(this);
 		dfa36 = new DFA36(this, SpecialStateTransition36);
 	}
 
-	private class DFA18 : DFA
+	private class DFA16 : DFA
 	{
-		private const string DFA18_eotS =
+		private const string DFA16_eotS =
 			"\x1\xFFFF\x1\x2\x2\xFFFF";
-		private const string DFA18_eofS =
+		private const string DFA16_eofS =
 			"\x4\xFFFF";
-		private const string DFA18_minS =
+		private const string DFA16_minS =
 			"\x2\x2E\x2\xFFFF";
-		private const string DFA18_maxS =
+		private const string DFA16_maxS =
 			"\x2\x39\x2\xFFFF";
-		private const string DFA18_acceptS =
+		private const string DFA16_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
-		private const string DFA18_specialS =
+		private const string DFA16_specialS =
 			"\x4\xFFFF}>";
-		private static readonly string[] DFA18_transitionS =
+		private static readonly string[] DFA16_transitionS =
 			{
 				"\x1\x2\x1\xFFFF\xA\x1",
 				"\x1\x3\x1\xFFFF\xA\x1",
@@ -6639,35 +6544,35 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				""
 			};
 
-		private static readonly short[] DFA18_eot = DFA.UnpackEncodedString(DFA18_eotS);
-		private static readonly short[] DFA18_eof = DFA.UnpackEncodedString(DFA18_eofS);
-		private static readonly char[] DFA18_min = DFA.UnpackEncodedStringToUnsignedChars(DFA18_minS);
-		private static readonly char[] DFA18_max = DFA.UnpackEncodedStringToUnsignedChars(DFA18_maxS);
-		private static readonly short[] DFA18_accept = DFA.UnpackEncodedString(DFA18_acceptS);
-		private static readonly short[] DFA18_special = DFA.UnpackEncodedString(DFA18_specialS);
-		private static readonly short[][] DFA18_transition;
+		private static readonly short[] DFA16_eot = DFA.UnpackEncodedString(DFA16_eotS);
+		private static readonly short[] DFA16_eof = DFA.UnpackEncodedString(DFA16_eofS);
+		private static readonly char[] DFA16_min = DFA.UnpackEncodedStringToUnsignedChars(DFA16_minS);
+		private static readonly char[] DFA16_max = DFA.UnpackEncodedStringToUnsignedChars(DFA16_maxS);
+		private static readonly short[] DFA16_accept = DFA.UnpackEncodedString(DFA16_acceptS);
+		private static readonly short[] DFA16_special = DFA.UnpackEncodedString(DFA16_specialS);
+		private static readonly short[][] DFA16_transition;
 
-		static DFA18()
+		static DFA16()
 		{
-			int numStates = DFA18_transitionS.Length;
-			DFA18_transition = new short[numStates][];
+			int numStates = DFA16_transitionS.Length;
+			DFA16_transition = new short[numStates][];
 			for ( int i=0; i < numStates; i++ )
 			{
-				DFA18_transition[i] = DFA.UnpackEncodedString(DFA18_transitionS[i]);
+				DFA16_transition[i] = DFA.UnpackEncodedString(DFA16_transitionS[i]);
 			}
 		}
 
-		public DFA18( BaseRecognizer recognizer )
+		public DFA16( BaseRecognizer recognizer )
 		{
 			this.recognizer = recognizer;
-			this.decisionNumber = 18;
-			this.eot = DFA18_eot;
-			this.eof = DFA18_eof;
-			this.min = DFA18_min;
-			this.max = DFA18_max;
-			this.accept = DFA18_accept;
-			this.special = DFA18_special;
-			this.transition = DFA18_transition;
+			this.decisionNumber = 16;
+			this.eot = DFA16_eot;
+			this.eof = DFA16_eof;
+			this.min = DFA16_min;
+			this.max = DFA16_max;
+			this.accept = DFA16_accept;
+			this.special = DFA16_special;
+			this.transition = DFA16_transition;
 		}
 
 		public override string Description { get { return "494:10: fragment DecimalLiteral : ( ( DecimalDigit )+ '.' ( DecimalDigit )* ( ExponentPart )? | ( '.' )? ( DecimalDigit )+ ( ExponentPart )? );"; } }
@@ -6681,27 +6586,27 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 	private class DFA36 : DFA
 	{
 		private const string DFA36_eotS =
-			"\x1\xFFFF\x2\x27\x3\xFFFF\x1\x27\x1\x34\x1\x36\x1\x39\x1\xFFFF\x1\x3B"+
-			"\x1\x3E\x1\xFFFF\x1\x41\x1\x42\x1\x46\x2\xFFFF\x1\x4A\x1\x4C\x1\x4F\x2"+
-			"\xFFFF\x1\x51\x9\x27\x1\xFFFF\x1\x62\x6\xFFFF\x9\x27\x1\x6F\xF\xFFFF"+
-			"\x1\x70\x4\xFFFF\x1\x72\x2\xFFFF\x1\x74\x2\xFFFF\x1\x77\x3\xFFFF\x4\x27"+
-			"\x1\x7E\x1\x27\x1\x80\x1\x82\x6\x27\x3\xFFFF\x2\x27\x1\x8B\x2\x27\x1"+
-			"\x8E\x3\x27\x1\x92\x1\x27\x8\xFFFF\x1\x95\x1\xFFFF\x6\x27\x1\xFFFF\x1"+
-			"\x27\x1\xFFFF\x1\x27\x1\xFFFF\x2\x27\x1\xA0\x5\x27\x1\xFFFF\x1\x27\x1"+
-			"\xA7\x1\xFFFF\x1\xA8\x1\x27\x1\xAA\x1\xFFFF\x1\x27\x2\xFFFF\x1\x27\x1"+
-			"\xAD\x4\x27\x1\xB2\x3\x27\x1\xFFFF\x1\xB6\x1\x27\x1\xB8\x1\xB9\x2\x27"+
-			"\x2\xFFFF\x1\xBC\x1\xFFFF\x1\x27\x1\xBE\x1\xFFFF\x1\xBF\x3\x27\x1\xFFFF"+
-			"\x3\x27\x1\xFFFF\x1\xC6\x2\xFFFF\x2\x27\x1\xFFFF\x1\xC9\x2\xFFFF\x2\x27"+
-			"\x1\xCC\x1\x27\x1\xCE\x1\xCF\x1\xFFFF\x1\xD0\x1\x27\x1\xFFFF\x1\x27\x1"+
-			"\xD3\x1\xFFFF\x1\x27\x3\xFFFF\x1\xD5\x1\xD6\x1\xFFFF\x1\x27\x2\xFFFF"+
-			"\x1\x27\x1\xD9\x1\xFFFF";
+			"\x1\xFFFF\x2\x27\x3\xFFFF\x1\x27\x1\x35\x1\x37\x1\x3A\x1\xFFFF\x1\x3C"+
+			"\x1\x3F\x1\xFFFF\x1\x42\x1\x43\x1\x47\x2\xFFFF\x1\x4B\x1\x4D\x1\x50\x2"+
+			"\xFFFF\x1\x52\x9\x27\x1\xFFFF\x1\x63\x7\xFFFF\x9\x27\x1\x70\xF\xFFFF"+
+			"\x1\x71\x4\xFFFF\x1\x73\x2\xFFFF\x1\x75\x2\xFFFF\x1\x78\x3\xFFFF\x4\x27"+
+			"\x1\x7F\x1\x27\x1\x81\x1\x83\x6\x27\x3\xFFFF\x2\x27\x1\x8C\x2\x27\x1"+
+			"\x8F\x3\x27\x1\x93\x1\x27\x8\xFFFF\x1\x96\x1\xFFFF\x6\x27\x1\xFFFF\x1"+
+			"\x27\x1\xFFFF\x1\x27\x1\xFFFF\x2\x27\x1\xA1\x5\x27\x1\xFFFF\x1\x27\x1"+
+			"\xA8\x1\xFFFF\x1\xA9\x1\x27\x1\xAB\x1\xFFFF\x1\x27\x2\xFFFF\x1\x27\x1"+
+			"\xAE\x4\x27\x1\xB3\x3\x27\x1\xFFFF\x1\xB7\x1\x27\x1\xB9\x1\xBA\x2\x27"+
+			"\x2\xFFFF\x1\xBD\x1\xFFFF\x1\x27\x1\xBF\x1\xFFFF\x1\xC0\x3\x27\x1\xFFFF"+
+			"\x3\x27\x1\xFFFF\x1\xC7\x2\xFFFF\x2\x27\x1\xFFFF\x1\xCA\x2\xFFFF\x2\x27"+
+			"\x1\xCD\x1\x27\x1\xCF\x1\xD0\x1\xFFFF\x1\xD1\x1\x27\x1\xFFFF\x1\x27\x1"+
+			"\xD4\x1\xFFFF\x1\x27\x3\xFFFF\x1\xD6\x1\xD7\x1\xFFFF\x1\x27\x2\xFFFF"+
+			"\x1\x27\x1\xDA\x1\xFFFF";
 		private const string DFA36_eofS =
-			"\xDA\xFFFF";
+			"\xDB\xFFFF";
 		private const string DFA36_minS =
 			"\x1\x9\x1\x61\x1\x65\x3\xFFFF\x1\x68\x2\x3D\x1\x26\x1\xFFFF\x1\x3D\x1"+
 			"\x2B\x1\xFFFF\x1\x2D\x1\x30\x1\x0\x2\xFFFF\x1\x3C\x2\x3D\x2\xFFFF\x1"+
 			"\x3D\x1\x72\x1\x61\x1\x65\x1\x6C\x1\x66\x1\x65\x1\x77\x1\x61\x1\x68\x1"+
-			"\xFFFF\x1\x3D\x6\xFFFF\x1\x6C\x1\x6E\x1\x72\x1\x6E\x1\x6C\x1\x77\x1\x69"+
+			"\xFFFF\x1\x3D\x7\xFFFF\x1\x6C\x1\x6E\x1\x72\x1\x6E\x1\x6C\x1\x77\x1\x69"+
 			"\x1\x75\x1\x70\x1\x3D\xF\xFFFF\x1\x0\x4\xFFFF\x1\x3D\x2\xFFFF\x1\x3D"+
 			"\x2\xFFFF\x1\x3D\x3\xFFFF\x1\x65\x1\x73\x1\x6E\x1\x66\x1\x24\x1\x73\x2"+
 			"\x24\x1\x74\x1\x69\x1\x72\x2\x69\x1\x74\x3\xFFFF\x1\x73\x1\x61\x1\x24"+
@@ -6719,7 +6624,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		private const string DFA36_maxS =
 			"\x1\xFFDC\x2\x75\x3\xFFFF\x1\x79\x3\x3D\x1\xFFFF\x2\x3D\x1\xFFFF\x1\x3D"+
 			"\x1\x39\x1\xFFFF\x2\xFFFF\x2\x3D\x1\x3E\x2\xFFFF\x1\x3D\x1\x72\x2\x6F"+
-			"\x1\x6C\x1\x6E\x1\x65\x1\x77\x1\x6F\x1\x69\x1\xFFFF\x1\x7C\x6\xFFFF\x1"+
+			"\x1\x6C\x1\x6E\x1\x65\x1\x77\x1\x6F\x1\x69\x1\xFFFF\x1\x7C\x7\xFFFF\x1"+
 			"\x6C\x1\x6E\x1\x72\x1\x6E\x1\x6C\x1\x77\x1\x72\x1\x79\x1\x70\x1\x3D\xF"+
 			"\xFFFF\x1\xFFFF\x4\xFFFF\x1\x3D\x2\xFFFF\x1\x3D\x2\xFFFF\x1\x3E\x3\xFFFF"+
 			"\x1\x65\x1\x74\x1\x6E\x1\x6C\x1\xFFDC\x1\x73\x2\xFFDC\x1\x74\x1\x69\x1"+
@@ -6738,12 +6643,12 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		private const string DFA36_acceptS =
 			"\x3\xFFFF\x1\x3\x1\x4\x1\x5\x4\xFFFF\x1\x10\x2\xFFFF\x1\x16\x3\xFFFF"+
 			"\x1\x1D\x1\x1E\x3\xFFFF\x1\x2C\x1\x2D\xA\xFFFF\x1\x48\x1\xFFFF\x1\x4C"+
-			"\x1\x4D\x1\x4E\x1\x4F\x1\x52\x1\x53\xA\xFFFF\x1\x8\x1\xC\x1\xB\x1\xD"+
-			"\x1\xF\x1\xE\x1\x12\x1\x11\x1\x14\x1\x15\x1\x13\x1\x18\x1\x19\x1\x17"+
-			"\x1\x1A\x1\xFFFF\x1\x50\x1\x51\x1\x1B\x1\x54\x1\xFFFF\x1\x22\x1\x1F\x1"+
-			"\xFFFF\x1\x23\x1\x27\x1\xFFFF\x1\x26\x1\x2F\x1\x2E\xE\xFFFF\x1\x4A\x1"+
-			"\x4B\x1\x49\xB\xFFFF\x1\xA\x1\x9\x1\x1C\x1\x21\x1\x20\x1\x25\x1\x24\x1"+
-			"\x29\x1\xFFFF\x1\x28\x6\xFFFF\x1\x36\x1\xFFFF\x1\x3B\x1\xFFFF\x1\x3C"+
+			"\x1\x4D\x1\x4E\x1\x4F\x1\x52\x1\x53\x1\x55\xA\xFFFF\x1\x8\x1\xC\x1\xB"+
+			"\x1\xD\x1\xF\x1\xE\x1\x12\x1\x11\x1\x14\x1\x15\x1\x13\x1\x18\x1\x19\x1"+
+			"\x17\x1\x1A\x1\xFFFF\x1\x50\x1\x51\x1\x1B\x1\x54\x1\xFFFF\x1\x22\x1\x1F"+
+			"\x1\xFFFF\x1\x23\x1\x27\x1\xFFFF\x1\x26\x1\x2F\x1\x2E\xE\xFFFF\x1\x4A"+
+			"\x1\x4B\x1\x49\xB\xFFFF\x1\xA\x1\x9\x1\x1C\x1\x21\x1\x20\x1\x25\x1\x24"+
+			"\x1\x29\x1\xFFFF\x1\x28\x6\xFFFF\x1\x36\x1\xFFFF\x1\x3B\x1\xFFFF\x1\x3C"+
 			"\x8\xFFFF\x1\x39\x2\xFFFF\x1\x3E\x3\xFFFF\x1\x42\x1\xFFFF\x1\x2B\x1\x2A"+
 			"\xA\xFFFF\x1\x44\x6\xFFFF\x1\x2\x1\x6\x1\xFFFF\x1\x7\x2\xFFFF\x1\x31"+
 			"\x4\xFFFF\x1\x37\x3\xFFFF\x1\x45\x1\xFFFF\x1\x47\x1\x1\x2\xFFFF\x1\x41"+
@@ -6751,130 +6656,131 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			"\x1\xFFFF\x1\x3F\x1\x40\x1\x38\x2\xFFFF\x1\x34\x1\xFFFF\x1\x3A\x1\x33"+
 			"\x2\xFFFF\x1\x3D";
 		private const string DFA36_specialS =
-			"\x10\xFFFF\x1\x0\x32\xFFFF\x1\x1\x96\xFFFF}>";
+			"\x10\xFFFF\x1\x0\x33\xFFFF\x1\x1\x96\xFFFF}>";
 		private static readonly string[] DFA36_transitionS =
 			{
 				"\x1\x29\x1\x28\x1\xFFFF\x1\x29\x1\x28\x12\xFFFF\x1\x29\x1\x7\x1\x25"+
-				"\x1\xFFFF\x1\x27\x1\x8\x1\x9\x1\x25\x1\xA\x1\x5\x1\xB\x1\xC\x1\xD\x1"+
-				"\xE\x1\xF\x1\x10\xA\x26\x1\x11\x1\x12\x1\x13\x1\x14\x1\x15\x1\x16\x1"+
-				"\xFFFF\x1A\x27\x1\x17\x1\x27\x1\x4\x1\x18\x1\x27\x1\xFFFF\x1\x27\x1"+
-				"\x19\x1\x1A\x1\x1B\x1\x1C\x1\x1\x2\x27\x1\x1D\x4\x27\x1\x2\x3\x27\x1"+
-				"\x1E\x1\x1F\x1\x6\x1\x27\x1\x20\x1\x21\x3\x27\x1\x22\x1\x23\x1\x3\x1"+
-				"\x24\x21\xFFFF\x1\x29\x9\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
-				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
-				"\x1C\xFFFF\x5E\x27\x2\xFFFF\x9\x27\x2\xFFFF\x7\x27\xE\xFFFF\x2\x27\xE"+
-				"\xFFFF\x5\x27\x9\xFFFF\x1\x27\x8B\xFFFF\x1\x27\xB\xFFFF\x1\x27\x1\xFFFF"+
-				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x14\x27\x1\xFFFF\x2C\x27\x1\xFFFF\x8"+
-				"\x27\x2\xFFFF\x1A\x27\xC\xFFFF\x82\x27\xA\xFFFF\x39\x27\x2\xFFFF\x2"+
-				"\x27\x2\xFFFF\x2\x27\x3\xFFFF\x26\x27\x2\xFFFF\x2\x27\x37\xFFFF\x26"+
-				"\x27\x2\xFFFF\x1\x27\x7\xFFFF\x27\x27\x48\xFFFF\x1B\x27\x5\xFFFF\x3"+
-				"\x27\x2E\xFFFF\x1A\x27\x5\xFFFF\xB\x27\x26\xFFFF\x63\x27\x1\xFFFF\x1"+
-				"\x27\xF\xFFFF\x2\x27\x13\xFFFF\x3\x27\x13\xFFFF\x1\x27\x1\xFFFF\x1B"+
-				"\x27\x53\xFFFF\x26\x27\x15F\xFFFF\x35\x27\x3\xFFFF\x1\x27\x12\xFFFF"+
-				"\x1\x27\x7\xFFFF\xA\x27\x23\xFFFF\x8\x27\x2\xFFFF\x2\x27\x2\xFFFF\x16"+
-				"\x27\x1\xFFFF\x7\x27\x1\xFFFF\x1\x27\x3\xFFFF\x4\x27\x22\xFFFF\x2\x27"+
-				"\x1\xFFFF\x3\x27\xE\xFFFF\x2\x27\x13\xFFFF\x6\x27\x4\xFFFF\x2\x27\x2"+
-				"\xFFFF\x16\x27\x1\xFFFF\x7\x27\x1\xFFFF\x2\x27\x1\xFFFF\x2\x27\x1\xFFFF"+
-				"\x2\x27\x1F\xFFFF\x4\x27\x1\xFFFF\x1\x27\x13\xFFFF\x3\x27\x10\xFFFF"+
-				"\x7\x27\x1\xFFFF\x1\x27\x1\xFFFF\x3\x27\x1\xFFFF\x16\x27\x1\xFFFF\x7"+
-				"\x27\x1\xFFFF\x2\x27\x1\xFFFF\x5\x27\x3\xFFFF\x1\x27\x12\xFFFF\x1\x27"+
-				"\xF\xFFFF\x1\x27\x24\xFFFF\x8\x27\x2\xFFFF\x2\x27\x2\xFFFF\x16\x27\x1"+
-				"\xFFFF\x7\x27\x1\xFFFF\x2\x27\x2\xFFFF\x4\x27\x3\xFFFF\x1\x27\x1E\xFFFF"+
-				"\x2\x27\x1\xFFFF\x3\x27\x23\xFFFF\x6\x27\x3\xFFFF\x3\x27\x1\xFFFF\x4"+
-				"\x27\x3\xFFFF\x2\x27\x1\xFFFF\x1\x27\x1\xFFFF\x2\x27\x3\xFFFF\x2\x27"+
-				"\x3\xFFFF\x3\x27\x3\xFFFF\x8\x27\x1\xFFFF\x3\x27\x4B\xFFFF\x8\x27\x1"+
-				"\xFFFF\x3\x27\x1\xFFFF\x17\x27\x1\xFFFF\xA\x27\x1\xFFFF\x5\x27\x26\xFFFF"+
-				"\x2\x27\x23\xFFFF\x8\x27\x1\xFFFF\x3\x27\x1\xFFFF\x17\x27\x1\xFFFF\xA"+
-				"\x27\x1\xFFFF\x5\x27\x24\xFFFF\x1\x27\x1\xFFFF\x2\x27\x23\xFFFF\x8\x27"+
-				"\x1\xFFFF\x3\x27\x1\xFFFF\x17\x27\x1\xFFFF\x10\x27\x26\xFFFF\x2\x27"+
-				"\x23\xFFFF\x12\x27\x3\xFFFF\x18\x27\x1\xFFFF\x9\x27\x1\xFFFF\x1\x27"+
-				"\x2\xFFFF\x7\x27\x3A\xFFFF\x30\x27\x1\xFFFF\x2\x27\xC\xFFFF\x7\x27\x3A"+
-				"\xFFFF\x2\x27\x1\xFFFF\x1\x27\x2\xFFFF\x2\x27\x1\xFFFF\x1\x27\x2\xFFFF"+
-				"\x1\x27\x6\xFFFF\x4\x27\x1\xFFFF\x7\x27\x1\xFFFF\x3\x27\x1\xFFFF\x1"+
-				"\x27\x1\xFFFF\x1\x27\x2\xFFFF\x2\x27\x1\xFFFF\x4\x27\x1\xFFFF\x2\x27"+
-				"\x9\xFFFF\x8\x27\x1\xFFFF\x1\x27\x15\xFFFF\x2\x27\x22\xFFFF\x1\x27\x3F"+
-				"\xFFFF\x2B\x27\x1D\xFFFF\x4\x27\x74\xFFFF\x22\x27\x1\xFFFF\x5\x27\x1"+
-				"\xFFFF\x2\x27\x25\xFFFF\x6\x27\x4A\xFFFF\x26\x27\xA\xFFFF\x27\x27\x9"+
-				"\xFFFF\x5A\x27\x5\xFFFF\x44\x27\x5\xFFFF\x52\x27\x6\xFFFF\x7\x27\x1"+
-				"\xFFFF\x3F\x27\x1\xFFFF\x1\x27\x1\xFFFF\x4\x27\x2\xFFFF\x7\x27\x1\xFFFF"+
-				"\x1\x27\x1\xFFFF\x4\x27\x2\xFFFF\x27\x27\x1\xFFFF\x1\x27\x1\xFFFF\x4"+
-				"\x27\x2\xFFFF\x1F\x27\x1\xFFFF\x1\x27\x1\xFFFF\x4\x27\x2\xFFFF\x7\x27"+
-				"\x1\xFFFF\x1\x27\x1\xFFFF\x4\x27\x2\xFFFF\x7\x27\x1\xFFFF\x7\x27\x1"+
-				"\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x1\x27\x1\xFFFF\x4\x27\x2\xFFFF"+
-				"\x7\x27\x1\xFFFF\x27\x27\x1\xFFFF\x13\x27\x45\xFFFF\x55\x27\xC\xFFFF"+
-				"\x276\x27\xA\xFFFF\x1A\x27\x5\xFFFF\x4B\x27\x95\xFFFF\x34\x27\x6C\xFFFF"+
-				"\x58\x27\x8\xFFFF\x29\x27\x557\xFFFF\x9C\x27\x4\xFFFF\x5A\x27\x6\xFFFF"+
-				"\x16\x27\x2\xFFFF\x6\x27\x2\xFFFF\x26\x27\x2\xFFFF\x6\x27\x2\xFFFF\x8"+
-				"\x27\x1\xFFFF\x1\x27\x1\xFFFF\x1\x27\x1\xFFFF\x1\x27\x1\xFFFF\x1F\x27"+
-				"\x2\xFFFF\x35\x27\x1\xFFFF\x7\x27\x1\xFFFF\x1\x27\x3\xFFFF\x3\x27\x1"+
-				"\xFFFF\x7\x27\x3\xFFFF\x4\x27\x2\xFFFF\x6\x27\x4\xFFFF\xD\x27\x5\xFFFF"+
-				"\x3\x27\x1\xFFFF\x7\x27\x2B\xFFFF\x2\x28\x55\xFFFF\x1\x27\x82\xFFFF"+
-				"\x1\x27\x4\xFFFF\x1\x27\x2\xFFFF\xA\x27\x1\xFFFF\x1\x27\x3\xFFFF\x5"+
-				"\x27\x6\xFFFF\x1\x27\x1\xFFFF\x1\x27\x1\xFFFF\x1\x27\x1\xFFFF\x4\x27"+
-				"\x1\xFFFF\x3\x27\x1\xFFFF\x7\x27\x26\xFFFF\x24\x27\xE81\xFFFF\x3\x27"+
-				"\x19\xFFFF\x9\x27\x7\xFFFF\x5\x27\x2\xFFFF\x3\x27\x6\xFFFF\x54\x27\x8"+
-				"\xFFFF\x2\x27\x2\xFFFF\x5A\x27\x1\xFFFF\x3\x27\x6\xFFFF\x28\x27\x4\xFFFF"+
-				"\x5E\x27\x11\xFFFF\x18\x27\x248\xFFFF\x1\x27\x19B4\xFFFF\x1\x27\x4A"+
-				"\xFFFF\x1\x27\x51A4\xFFFF\x1\x27\x5A\xFFFF\x48D\x27\x773\xFFFF\x1\x27"+
-				"\x2BA2\xFFFF\x1\x27\x215C\xFFFF\x12E\x27\xD2\xFFFF\x7\x27\xC\xFFFF\x5"+
-				"\x27\x5\xFFFF\x1\x27\x1\xFFFF\xA\x27\x1\xFFFF\xD\x27\x1\xFFFF\x5\x27"+
-				"\x1\xFFFF\x1\x27\x1\xFFFF\x2\x27\x1\xFFFF\x2\x27\x1\xFFFF\x6C\x27\x21"+
-				"\xFFFF\x16B\x27\x12\xFFFF\x40\x27\x2\xFFFF\x36\x27\x28\xFFFF\xC\x27"+
-				"\x74\xFFFF\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x24\xFFFF\x1A\x27"+
-				"\x6\xFFFF\x1A\x27\xB\xFFFF\x59\x27\x3\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2"+
-				"\xFFFF\x6\x27\x2\xFFFF\x3\x27",
-				"\x1\x2A\x7\xFFFF\x1\x2B\x5\xFFFF\x1\x2C\x5\xFFFF\x1\x2D",
-				"\x1\x2F\xF\xFFFF\x1\x2E",
+				"\x1\x2A\x1\x27\x1\x8\x1\x9\x1\x25\x1\xA\x1\x5\x1\xB\x1\xC\x1\xD\x1\xE"+
+				"\x1\xF\x1\x10\xA\x26\x1\x11\x1\x12\x1\x13\x1\x14\x1\x15\x1\x16\x1\xFFFF"+
+				"\x1A\x27\x1\x17\x1\x27\x1\x4\x1\x18\x1\x27\x1\xFFFF\x1\x27\x1\x19\x1"+
+				"\x1A\x1\x1B\x1\x1C\x1\x1\x2\x27\x1\x1D\x4\x27\x1\x2\x3\x27\x1\x1E\x1"+
+				"\x1F\x1\x6\x1\x27\x1\x20\x1\x21\x3\x27\x1\x22\x1\x23\x1\x3\x1\x24\x21"+
+				"\xFFFF\x1\x29\x9\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27\x5\xFFFF"+
+				"\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27\x1C\xFFFF"+
+				"\x5E\x27\x2\xFFFF\x9\x27\x2\xFFFF\x7\x27\xE\xFFFF\x2\x27\xE\xFFFF\x5"+
+				"\x27\x9\xFFFF\x1\x27\x8B\xFFFF\x1\x27\xB\xFFFF\x1\x27\x1\xFFFF\x3\x27"+
+				"\x1\xFFFF\x1\x27\x1\xFFFF\x14\x27\x1\xFFFF\x2C\x27\x1\xFFFF\x8\x27\x2"+
+				"\xFFFF\x1A\x27\xC\xFFFF\x82\x27\xA\xFFFF\x39\x27\x2\xFFFF\x2\x27\x2"+
+				"\xFFFF\x2\x27\x3\xFFFF\x26\x27\x2\xFFFF\x2\x27\x37\xFFFF\x26\x27\x2"+
+				"\xFFFF\x1\x27\x7\xFFFF\x27\x27\x48\xFFFF\x1B\x27\x5\xFFFF\x3\x27\x2E"+
+				"\xFFFF\x1A\x27\x5\xFFFF\xB\x27\x26\xFFFF\x63\x27\x1\xFFFF\x1\x27\xF"+
+				"\xFFFF\x2\x27\x13\xFFFF\x3\x27\x13\xFFFF\x1\x27\x1\xFFFF\x1B\x27\x53"+
+				"\xFFFF\x26\x27\x15F\xFFFF\x35\x27\x3\xFFFF\x1\x27\x12\xFFFF\x1\x27\x7"+
+				"\xFFFF\xA\x27\x23\xFFFF\x8\x27\x2\xFFFF\x2\x27\x2\xFFFF\x16\x27\x1\xFFFF"+
+				"\x7\x27\x1\xFFFF\x1\x27\x3\xFFFF\x4\x27\x22\xFFFF\x2\x27\x1\xFFFF\x3"+
+				"\x27\xE\xFFFF\x2\x27\x13\xFFFF\x6\x27\x4\xFFFF\x2\x27\x2\xFFFF\x16\x27"+
+				"\x1\xFFFF\x7\x27\x1\xFFFF\x2\x27\x1\xFFFF\x2\x27\x1\xFFFF\x2\x27\x1F"+
+				"\xFFFF\x4\x27\x1\xFFFF\x1\x27\x13\xFFFF\x3\x27\x10\xFFFF\x7\x27\x1\xFFFF"+
+				"\x1\x27\x1\xFFFF\x3\x27\x1\xFFFF\x16\x27\x1\xFFFF\x7\x27\x1\xFFFF\x2"+
+				"\x27\x1\xFFFF\x5\x27\x3\xFFFF\x1\x27\x12\xFFFF\x1\x27\xF\xFFFF\x1\x27"+
+				"\x24\xFFFF\x8\x27\x2\xFFFF\x2\x27\x2\xFFFF\x16\x27\x1\xFFFF\x7\x27\x1"+
+				"\xFFFF\x2\x27\x2\xFFFF\x4\x27\x3\xFFFF\x1\x27\x1E\xFFFF\x2\x27\x1\xFFFF"+
+				"\x3\x27\x23\xFFFF\x6\x27\x3\xFFFF\x3\x27\x1\xFFFF\x4\x27\x3\xFFFF\x2"+
+				"\x27\x1\xFFFF\x1\x27\x1\xFFFF\x2\x27\x3\xFFFF\x2\x27\x3\xFFFF\x3\x27"+
+				"\x3\xFFFF\x8\x27\x1\xFFFF\x3\x27\x4B\xFFFF\x8\x27\x1\xFFFF\x3\x27\x1"+
+				"\xFFFF\x17\x27\x1\xFFFF\xA\x27\x1\xFFFF\x5\x27\x26\xFFFF\x2\x27\x23"+
+				"\xFFFF\x8\x27\x1\xFFFF\x3\x27\x1\xFFFF\x17\x27\x1\xFFFF\xA\x27\x1\xFFFF"+
+				"\x5\x27\x24\xFFFF\x1\x27\x1\xFFFF\x2\x27\x23\xFFFF\x8\x27\x1\xFFFF\x3"+
+				"\x27\x1\xFFFF\x17\x27\x1\xFFFF\x10\x27\x26\xFFFF\x2\x27\x23\xFFFF\x12"+
+				"\x27\x3\xFFFF\x18\x27\x1\xFFFF\x9\x27\x1\xFFFF\x1\x27\x2\xFFFF\x7\x27"+
+				"\x3A\xFFFF\x30\x27\x1\xFFFF\x2\x27\xC\xFFFF\x7\x27\x3A\xFFFF\x2\x27"+
+				"\x1\xFFFF\x1\x27\x2\xFFFF\x2\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1\x27\x6"+
+				"\xFFFF\x4\x27\x1\xFFFF\x7\x27\x1\xFFFF\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF"+
+				"\x1\x27\x2\xFFFF\x2\x27\x1\xFFFF\x4\x27\x1\xFFFF\x2\x27\x9\xFFFF\x8"+
+				"\x27\x1\xFFFF\x1\x27\x15\xFFFF\x2\x27\x22\xFFFF\x1\x27\x3F\xFFFF\x2B"+
+				"\x27\x1D\xFFFF\x4\x27\x74\xFFFF\x22\x27\x1\xFFFF\x5\x27\x1\xFFFF\x2"+
+				"\x27\x25\xFFFF\x6\x27\x4A\xFFFF\x26\x27\xA\xFFFF\x27\x27\x9\xFFFF\x5A"+
+				"\x27\x5\xFFFF\x44\x27\x5\xFFFF\x52\x27\x6\xFFFF\x7\x27\x1\xFFFF\x3F"+
+				"\x27\x1\xFFFF\x1\x27\x1\xFFFF\x4\x27\x2\xFFFF\x7\x27\x1\xFFFF\x1\x27"+
+				"\x1\xFFFF\x4\x27\x2\xFFFF\x27\x27\x1\xFFFF\x1\x27\x1\xFFFF\x4\x27\x2"+
+				"\xFFFF\x1F\x27\x1\xFFFF\x1\x27\x1\xFFFF\x4\x27\x2\xFFFF\x7\x27\x1\xFFFF"+
+				"\x1\x27\x1\xFFFF\x4\x27\x2\xFFFF\x7\x27\x1\xFFFF\x7\x27\x1\xFFFF\x17"+
+				"\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x1\x27\x1\xFFFF\x4\x27\x2\xFFFF\x7\x27"+
+				"\x1\xFFFF\x27\x27\x1\xFFFF\x13\x27\x45\xFFFF\x55\x27\xC\xFFFF\x276\x27"+
+				"\xA\xFFFF\x1A\x27\x5\xFFFF\x4B\x27\x95\xFFFF\x34\x27\x6C\xFFFF\x58\x27"+
+				"\x8\xFFFF\x29\x27\x557\xFFFF\x9C\x27\x4\xFFFF\x5A\x27\x6\xFFFF\x16\x27"+
+				"\x2\xFFFF\x6\x27\x2\xFFFF\x26\x27\x2\xFFFF\x6\x27\x2\xFFFF\x8\x27\x1"+
+				"\xFFFF\x1\x27\x1\xFFFF\x1\x27\x1\xFFFF\x1\x27\x1\xFFFF\x1F\x27\x2\xFFFF"+
+				"\x35\x27\x1\xFFFF\x7\x27\x1\xFFFF\x1\x27\x3\xFFFF\x3\x27\x1\xFFFF\x7"+
+				"\x27\x3\xFFFF\x4\x27\x2\xFFFF\x6\x27\x4\xFFFF\xD\x27\x5\xFFFF\x3\x27"+
+				"\x1\xFFFF\x7\x27\x2B\xFFFF\x2\x28\x55\xFFFF\x1\x27\x82\xFFFF\x1\x27"+
+				"\x4\xFFFF\x1\x27\x2\xFFFF\xA\x27\x1\xFFFF\x1\x27\x3\xFFFF\x5\x27\x6"+
+				"\xFFFF\x1\x27\x1\xFFFF\x1\x27\x1\xFFFF\x1\x27\x1\xFFFF\x4\x27\x1\xFFFF"+
+				"\x3\x27\x1\xFFFF\x7\x27\x26\xFFFF\x24\x27\xE81\xFFFF\x3\x27\x19\xFFFF"+
+				"\x9\x27\x7\xFFFF\x5\x27\x2\xFFFF\x3\x27\x6\xFFFF\x54\x27\x8\xFFFF\x2"+
+				"\x27\x2\xFFFF\x5A\x27\x1\xFFFF\x3\x27\x6\xFFFF\x28\x27\x4\xFFFF\x5E"+
+				"\x27\x11\xFFFF\x18\x27\x248\xFFFF\x1\x27\x19B4\xFFFF\x1\x27\x4A\xFFFF"+
+				"\x1\x27\x51A4\xFFFF\x1\x27\x5A\xFFFF\x48D\x27\x773\xFFFF\x1\x27\x2BA2"+
+				"\xFFFF\x1\x27\x215C\xFFFF\x12E\x27\xD2\xFFFF\x7\x27\xC\xFFFF\x5\x27"+
+				"\x5\xFFFF\x1\x27\x1\xFFFF\xA\x27\x1\xFFFF\xD\x27\x1\xFFFF\x5\x27\x1"+
+				"\xFFFF\x1\x27\x1\xFFFF\x2\x27\x1\xFFFF\x2\x27\x1\xFFFF\x6C\x27\x21\xFFFF"+
+				"\x16B\x27\x12\xFFFF\x40\x27\x2\xFFFF\x36\x27\x28\xFFFF\xC\x27\x74\xFFFF"+
+				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x24\xFFFF\x1A\x27\x6\xFFFF"+
+				"\x1A\x27\xB\xFFFF\x59\x27\x3\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x6"+
+				"\x27\x2\xFFFF\x3\x27",
+				"\x1\x2B\x7\xFFFF\x1\x2C\x5\xFFFF\x1\x2D\x5\xFFFF\x1\x2E",
+				"\x1\x30\xF\xFFFF\x1\x2F",
 				"",
 				"",
 				"",
-				"\x1\x30\x9\xFFFF\x1\x31\x6\xFFFF\x1\x32",
-				"\x1\x33",
-				"\x1\x35",
-				"\x1\x37\x16\xFFFF\x1\x38",
+				"\x1\x31\x9\xFFFF\x1\x32\x6\xFFFF\x1\x33",
+				"\x1\x34",
+				"\x1\x36",
+				"\x1\x38\x16\xFFFF\x1\x39",
 				"",
-				"\x1\x3A",
-				"\x1\x3C\x11\xFFFF\x1\x3D",
+				"\x1\x3B",
+				"\x1\x3D\x11\xFFFF\x1\x3E",
 				"",
-				"\x1\x3F\xF\xFFFF\x1\x40",
+				"\x1\x40\xF\xFFFF\x1\x41",
 				"\xA\x26",
-				"\xA\x47\x1\xFFFF\x2\x47\x1\xFFFF\x1C\x47\x1\x44\x4\x47\x1\x45\xD\x47"+
-				"\x1\x43\x1FEA\x47\x2\xFFFF\xDFD6\x47",
+				"\xA\x48\x1\xFFFF\x2\x48\x1\xFFFF\x1C\x48\x1\x45\x4\x48\x1\x46\xD\x48"+
+				"\x1\x44\x1FEA\x48\x2\xFFFF\xDFD6\x48",
 				"",
 				"",
-				"\x1\x48\x1\x49",
-				"\x1\x4B",
-				"\x1\x4D\x1\x4E",
+				"\x1\x49\x1\x4A",
+				"\x1\x4C",
+				"\x1\x4E\x1\x4F",
 				"",
 				"",
-				"\x1\x50",
-				"\x1\x52",
-				"\x1\x53\xD\xFFFF\x1\x54",
-				"\x1\x55\x9\xFFFF\x1\x56",
-				"\x1\x57",
-				"\x1\x58\x7\xFFFF\x1\x59",
-				"\x1\x5A",
+				"\x1\x51",
+				"\x1\x53",
+				"\x1\x54\xD\xFFFF\x1\x55",
+				"\x1\x56\x9\xFFFF\x1\x57",
+				"\x1\x58",
+				"\x1\x59\x7\xFFFF\x1\x5A",
 				"\x1\x5B",
-				"\x1\x5C\xD\xFFFF\x1\x5D",
-				"\x1\x5E\x1\x5F",
+				"\x1\x5C",
+				"\x1\x5D\xD\xFFFF\x1\x5E",
+				"\x1\x5F\x1\x60",
 				"",
-				"\x1\x60\x3E\xFFFF\x1\x61",
-				"",
-				"",
-				"",
+				"\x1\x61\x3E\xFFFF\x1\x62",
 				"",
 				"",
 				"",
-				"\x1\x63",
+				"",
+				"",
+				"",
+				"",
 				"\x1\x64",
 				"\x1\x65",
 				"\x1\x66",
 				"\x1\x67",
 				"\x1\x68",
-				"\x1\x69\x8\xFFFF\x1\x6A",
-				"\x1\x6B\x3\xFFFF\x1\x6C",
-				"\x1\x6D",
+				"\x1\x69",
+				"\x1\x6A\x8\xFFFF\x1\x6B",
+				"\x1\x6C\x3\xFFFF\x1\x6D",
 				"\x1\x6E",
+				"\x1\x6F",
 				"",
 				"",
 				"",
@@ -6890,25 +6796,25 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"",
 				"",
 				"",
-				"\xA\x47\x1\xFFFF\x2\x47\x1\xFFFF\x201A\x47\x2\xFFFF\xDFD6\x47",
+				"\xA\x48\x1\xFFFF\x2\x48\x1\xFFFF\x201A\x48\x2\xFFFF\xDFD6\x48",
 				"",
 				"",
 				"",
 				"",
-				"\x1\x71",
+				"\x1\x72",
 				"",
 				"",
-				"\x1\x73",
+				"\x1\x74",
 				"",
 				"",
-				"\x1\x75\x1\x76",
+				"\x1\x76\x1\x77",
 				"",
 				"",
 				"",
-				"\x1\x78",
-				"\x1\x79\x1\x7A",
-				"\x1\x7B",
-				"\x1\x7C\x5\xFFFF\x1\x7D",
+				"\x1\x79",
+				"\x1\x7A\x1\x7B",
+				"\x1\x7C",
+				"\x1\x7D\x5\xFFFF\x1\x7E",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
 				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
@@ -6977,7 +6883,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x13\xFFFF\xA\x27\x7\xFFFF\x1A"+
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
-				"\x1\x7F",
+				"\x1\x80",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
 				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
@@ -7047,7 +6953,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
-				"\x27\x1\xFFFF\x12\x27\x1\x81\x7\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27"+
+				"\x27\x1\xFFFF\x12\x27\x1\x82\x7\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27"+
 				"\x4\xFFFF\x1\x27\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27"+
 				"\x2\xFFFF\x12\x27\x1C\xFFFF\x5E\x27\x2\xFFFF\x9\x27\x2\xFFFF\x7\x27"+
 				"\xE\xFFFF\x2\x27\xE\xFFFF\x5\x27\x9\xFFFF\x1\x27\x8B\xFFFF\x1\x27\xB"+
@@ -7115,17 +7021,17 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF"+
 				"\x5A\x27\x3\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3"+
 				"\x27",
-				"\x1\x83",
 				"\x1\x84",
 				"\x1\x85",
 				"\x1\x86",
 				"\x1\x87",
 				"\x1\x88",
-				"",
-				"",
-				"",
 				"\x1\x89",
+				"",
+				"",
+				"",
 				"\x1\x8A",
+				"\x1\x8B",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
 				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
@@ -7194,8 +7100,8 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x13\xFFFF\xA\x27\x7\xFFFF\x1A"+
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
-				"\x1\x8C",
 				"\x1\x8D",
+				"\x1\x8E",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
 				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
@@ -7264,9 +7170,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x13\xFFFF\xA\x27\x7\xFFFF\x1A"+
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
-				"\x1\x8F",
 				"\x1\x90",
 				"\x1\x91",
+				"\x1\x92",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
 				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
@@ -7335,30 +7241,30 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x13\xFFFF\xA\x27\x7\xFFFF\x1A"+
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
-				"\x1\x93",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
-				"",
 				"\x1\x94",
 				"",
-				"\x1\x96",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x95",
+				"",
 				"\x1\x97",
 				"\x1\x98",
 				"\x1\x99",
 				"\x1\x9A",
 				"\x1\x9B",
-				"",
 				"\x1\x9C",
 				"",
 				"\x1\x9D",
 				"",
 				"\x1\x9E",
+				"",
 				"\x1\x9F",
+				"\x1\xA0",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
 				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
@@ -7427,13 +7333,13 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x13\xFFFF\xA\x27\x7\xFFFF\x1A"+
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
-				"\x1\xA1",
 				"\x1\xA2",
 				"\x1\xA3",
 				"\x1\xA4",
 				"\x1\xA5",
-				"",
 				"\x1\xA6",
+				"",
+				"\x1\xA7",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
 				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
@@ -7571,7 +7477,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x13\xFFFF\xA\x27\x7\xFFFF\x1A"+
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
-				"\x1\xA9",
+				"\x1\xAA",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
 				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
@@ -7640,11 +7546,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x13\xFFFF\xA\x27\x7\xFFFF\x1A"+
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
-				"",
-				"\x1\xAB",
-				"",
 				"",
 				"\x1\xAC",
+				"",
+				"",
+				"\x1\xAD",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
 				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
@@ -7713,10 +7619,10 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x13\xFFFF\xA\x27\x7\xFFFF\x1A"+
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
-				"\x1\xAE",
 				"\x1\xAF",
 				"\x1\xB0",
 				"\x1\xB1",
+				"\x1\xB2",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
 				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
@@ -7785,9 +7691,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x13\xFFFF\xA\x27\x7\xFFFF\x1A"+
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
-				"\x1\xB3",
 				"\x1\xB4",
 				"\x1\xB5",
+				"\x1\xB6",
 				"",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
@@ -7857,7 +7763,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x13\xFFFF\xA\x27\x7\xFFFF\x1A"+
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
-				"\x1\xB7",
+				"\x1\xB8",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
 				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
@@ -7994,8 +7900,8 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x13\xFFFF\xA\x27\x7\xFFFF\x1A"+
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
-				"\x1\xBA",
 				"\x1\xBB",
+				"\x1\xBC",
 				"",
 				"",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
@@ -8067,7 +7973,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
 				"",
-				"\x1\xBD",
+				"\x1\xBE",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
 				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
@@ -8205,13 +8111,13 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x13\xFFFF\xA\x27\x7\xFFFF\x1A"+
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
-				"\x1\xC0",
 				"\x1\xC1",
 				"\x1\xC2",
-				"",
 				"\x1\xC3",
+				"",
 				"\x1\xC4",
 				"\x1\xC5",
+				"\x1\xC6",
 				"",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
@@ -8283,8 +8189,8 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
 				"",
 				"",
-				"\x1\xC7",
 				"\x1\xC8",
+				"\x1\xC9",
 				"",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
@@ -8356,8 +8262,8 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
 				"",
 				"",
-				"\x1\xCA",
 				"\x1\xCB",
+				"\x1\xCC",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
 				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
@@ -8426,7 +8332,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x13\xFFFF\xA\x27\x7\xFFFF\x1A"+
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
-				"\x1\xCD",
+				"\x1\xCE",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
 				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
@@ -8632,9 +8538,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x13\xFFFF\xA\x27\x7\xFFFF\x1A"+
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
-				"\x1\xD1",
-				"",
 				"\x1\xD2",
+				"",
+				"\x1\xD3",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
 				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
@@ -8704,7 +8610,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
 				"",
-				"\x1\xD4",
+				"\x1\xD5",
 				"",
 				"",
 				"",
@@ -8844,11 +8750,11 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 				"\x3\x27\x1\xFFFF\x1\x27\x1\xFFFF\x87\x27\x13\xFFFF\xA\x27\x7\xFFFF\x1A"+
 				"\x27\x4\xFFFF\x1\x27\x1\xFFFF\x1A\x27\xA\xFFFF\x5A\x27\x3\xFFFF\x6\x27"+
 				"\x2\xFFFF\x6\x27\x2\xFFFF\x6\x27\x2\xFFFF\x3\x27",
-				"",
-				"\x1\xD7",
-				"",
 				"",
 				"\x1\xD8",
+				"",
+				"",
+				"\x1\xD9",
 				"\x1\x27\xB\xFFFF\xA\x27\x7\xFFFF\x1A\x27\x1\xFFFF\x1\x27\x2\xFFFF\x1"+
 				"\x27\x1\xFFFF\x1A\x27\x2F\xFFFF\x1\x27\xA\xFFFF\x1\x27\x4\xFFFF\x1\x27"+
 				"\x5\xFFFF\x17\x27\x1\xFFFF\x1F\x27\x1\xFFFF\x128\x27\x2\xFFFF\x12\x27"+
@@ -8952,7 +8858,7 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 			this.transition = DFA36_transition;
 		}
 
-		public override string Description { get { return "1:1: Tokens : ( FALSE | NULL | RBRACE | RBRACK | RPAREN | THIS | TRUE | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | StringLiteral | NumericLiteral | Identifier | Comment | LineComment | LT | WhiteSpace | RegularExpressionLiteral );"; } }
+		public override string Description { get { return "1:1: Tokens : ( FALSE | NULL | RBRACE | RBRACK | RPAREN | THIS | TRUE | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | StringLiteral | NumericLiteral | Identifier | Comment | LineComment | LT | WhiteSpace | RegularExpressionLiteral | SHEBANG );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -8972,15 +8878,15 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		case 0:
 			{
 				input.Rewind();
-				if ((LA36_1=='=')) {s = 67;}
+				if ((LA36_1=='=')) {s = 68;}
 
-				else if ((LA36_1=='*')) {s = 68;}
+				else if ((LA36_1=='*')) {s = 69;}
 
-				else if ((LA36_1=='/')) {s = 69;}
+				else if ((LA36_1=='/')) {s = 70;}
 
-				else if (((LA36_1>='\u0000' && LA36_1<='\t')||(LA36_1>='\u000B' && LA36_1<='\f')||(LA36_1>='\u000E' && LA36_1<=')')||(LA36_1>='+' && LA36_1<='.')||(LA36_1>='0' && LA36_1<='<')||(LA36_1>='>' && LA36_1<='\u2027')||(LA36_1>='\u202A' && LA36_1<='\uFFFF')) && (( AreRegularExpressionsEnabled ))) {s = 71;}
+				else if (((LA36_1>='\u0000' && LA36_1<='\t')||(LA36_1>='\u000B' && LA36_1<='\f')||(LA36_1>='\u000E' && LA36_1<=')')||(LA36_1>='+' && LA36_1<='.')||(LA36_1>='0' && LA36_1<='<')||(LA36_1>='>' && LA36_1<='\u2027')||(LA36_1>='\u202A' && LA36_1<='\uFFFF')) && (( AreRegularExpressionsEnabled ))) {s = 72;}
 
-				else s = 70;
+				else s = 71;
 
 				input.Seek(index36_1);
 				break;
@@ -8988,9 +8894,9 @@ public partial class JavaScriptLexer : Antlr.Runtime.Lexer
 		case 1:
 			{
 				input.Rewind();
-				if (((LA36_1>='\u0000' && LA36_1<='\t')||(LA36_1>='\u000B' && LA36_1<='\f')||(LA36_1>='\u000E' && LA36_1<='\u2027')||(LA36_1>='\u202A' && LA36_1<='\uFFFF')) && (( AreRegularExpressionsEnabled ))) {s = 71;}
+				if (((LA36_1>='\u0000' && LA36_1<='\t')||(LA36_1>='\u000B' && LA36_1<='\f')||(LA36_1>='\u000E' && LA36_1<='\u2027')||(LA36_1>='\u202A' && LA36_1<='\uFFFF')) && (( AreRegularExpressionsEnabled ))) {s = 72;}
 
-				else s = 112;
+				else s = 113;
 
 				input.Seek(index36_1);
 				break;

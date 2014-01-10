@@ -50,6 +50,11 @@ f() {
 return 'a\
 b';
 ")]
+		[TestCase(@"
+var path = require('path');
+var argv = require('optimist').argv;
+var completion = require('../lib/completion');
+")]
 		public void Parse(string code) {
 			VerifyRestoringCode(code);
 		}
@@ -65,6 +70,9 @@ b';
 
 		[Test]
 		[TestCase("ionic")]
+		[TestCase("cheet.js")]
+		[TestCase("clmtrackr")]
+		[TestCase("gulp")]
 		public void ParseDirectory(string fileName) {
 			VerifyRestoringProjectDirectory("JavaScript", fileName, "*.js");
 		}

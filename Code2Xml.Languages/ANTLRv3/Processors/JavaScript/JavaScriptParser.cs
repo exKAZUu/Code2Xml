@@ -10,7 +10,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g 2014-01-03 15:57:55
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g 2014-01-10 13:18:59
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -37,7 +37,7 @@ namespace  Code2Xml.Languages.ANTLRv3.Processors.JavaScript
 public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "CharacterEscapeSequence", "Comment", "ContinuousLineCharacter", "DecimalDigit", "DecimalLiteral", "DoubleStringCharacter", "EscapeCharacter", "EscapeSequence", "ExponentPart", "FALSE", "HexDigit", "HexEscapeSequence", "HexIntegerLiteral", "Identifier", "IdentifierPart", "IdentifierStart", "LT", "LineComment", "NULL", "NonEscapeCharacter", "NumericLiteral", "RBRACE", "RBRACK", "RPAREN", "RegularExpressionChar", "RegularExpressionFirstChar", "RegularExpressionInnerChar", "RegularExpressionLiteral", "SingleEscapeCharacter", "SingleStringCharacter", "StringLiteral", "THIS", "TRUE", "UnicodeCombiningMark", "UnicodeConnectorPunctuation", "UnicodeDigit", "UnicodeEscapeSequence", "UnicodeLetter", "WhiteSpace", "'!'", "'!='", "'!=='", "'%'", "'%='", "'&&'", "'&'", "'&='", "'('", "'*'", "'*='", "'+'", "'++'", "'+='", "','", "'-'", "'--'", "'-='", "'.'", "'/'", "'/='", "':'", "';'", "'<'", "'<<'", "'<<='", "'<='", "'='", "'=='", "'==='", "'>'", "'>='", "'>>'", "'>>='", "'>>>'", "'>>>='", "'?'", "'['", "'^'", "'^='", "'break'", "'case'", "'catch'", "'continue'", "'default'", "'delete'", "'do'", "'else'", "'finally'", "'for'", "'function'", "'if'", "'in'", "'instanceof'", "'new'", "'return'", "'switch'", "'throw'", "'try'", "'typeof'", "'var'", "'void'", "'while'", "'with'", "'{'", "'|'", "'|='", "'||'", "'~'"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "CharacterEscapeSequence", "Comment", "ContinuousLineCharacter", "DecimalDigit", "DecimalLiteral", "DoubleStringCharacter", "EscapeCharacter", "EscapeSequence", "ExponentPart", "FALSE", "HexDigit", "HexEscapeSequence", "HexIntegerLiteral", "Identifier", "IdentifierPart", "IdentifierStart", "LT", "LineComment", "NULL", "NonEscapeCharacter", "NumericLiteral", "RBRACE", "RBRACK", "RPAREN", "RegularExpressionChar", "RegularExpressionFirstChar", "RegularExpressionInnerChar", "RegularExpressionLiteral", "SHEBANG", "SingleEscapeCharacter", "SingleStringCharacter", "StringLiteral", "THIS", "TRUE", "UnicodeCombiningMark", "UnicodeConnectorPunctuation", "UnicodeDigit", "UnicodeEscapeSequence", "UnicodeLetter", "WhiteSpace", "'!'", "'!='", "'!=='", "'%'", "'%='", "'&&'", "'&'", "'&='", "'('", "'*'", "'*='", "'+'", "'++'", "'+='", "','", "'-'", "'--'", "'-='", "'.'", "'/'", "'/='", "':'", "';'", "'<'", "'<<'", "'<<='", "'<='", "'='", "'=='", "'==='", "'>'", "'>='", "'>>'", "'>>='", "'>>>'", "'>>>='", "'?'", "'['", "'^'", "'^='", "'break'", "'case'", "'catch'", "'continue'", "'default'", "'delete'", "'do'", "'else'", "'finally'", "'for'", "'function'", "'if'", "'in'", "'instanceof'", "'new'", "'return'", "'switch'", "'throw'", "'try'", "'typeof'", "'var'", "'void'", "'while'", "'with'", "'{'", "'|'", "'|='", "'||'", "'~'"
 	};
 	public const int EOF=-1;
 	public const int CharacterEscapeSequence=4;
@@ -68,18 +68,18 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 	public const int RegularExpressionFirstChar=29;
 	public const int RegularExpressionInnerChar=30;
 	public const int RegularExpressionLiteral=31;
-	public const int SingleEscapeCharacter=32;
-	public const int SingleStringCharacter=33;
-	public const int StringLiteral=34;
-	public const int THIS=35;
-	public const int TRUE=36;
-	public const int UnicodeCombiningMark=37;
-	public const int UnicodeConnectorPunctuation=38;
-	public const int UnicodeDigit=39;
-	public const int UnicodeEscapeSequence=40;
-	public const int UnicodeLetter=41;
-	public const int WhiteSpace=42;
-	public const int T__43=43;
+	public const int SHEBANG=32;
+	public const int SingleEscapeCharacter=33;
+	public const int SingleStringCharacter=34;
+	public const int StringLiteral=35;
+	public const int THIS=36;
+	public const int TRUE=37;
+	public const int UnicodeCombiningMark=38;
+	public const int UnicodeConnectorPunctuation=39;
+	public const int UnicodeDigit=40;
+	public const int UnicodeEscapeSequence=41;
+	public const int UnicodeLetter=42;
+	public const int WhiteSpace=43;
 	public const int T__44=44;
 	public const int T__45=45;
 	public const int T__46=46;
@@ -148,6 +148,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 	public const int T__109=109;
 	public const int T__110=110;
 	public const int T__111=111;
+	public const int T__112=112;
 
 	public JavaScriptParser(ITokenStream input)
 		: this(input, new RecognizerSharedState())
@@ -229,7 +230,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(1, false);
 			switch (input.LA(1))
 			{
-			case 65:
+			case 66:
 				{
 				int LA1_2 = input.LA(2);
 
@@ -285,7 +286,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				{
 				int LA1_2 = input.LA(2);
 
-				if ((LA1_2==FALSE||LA1_2==Identifier||LA1_2==LT||LA1_2==NULL||(LA1_2>=NumericLiteral && LA1_2<=RBRACE)||LA1_2==RegularExpressionLiteral||(LA1_2>=StringLiteral && LA1_2<=TRUE)||LA1_2==43||LA1_2==51||(LA1_2>=54 && LA1_2<=55)||(LA1_2>=58 && LA1_2<=59)||LA1_2==65||LA1_2==80||(LA1_2>=83 && LA1_2<=84)||(LA1_2>=86 && LA1_2<=90)||(LA1_2>=92 && LA1_2<=94)||(LA1_2>=97 && LA1_2<=107)||LA1_2==111))
+				if ((LA1_2==FALSE||LA1_2==Identifier||LA1_2==LT||LA1_2==NULL||(LA1_2>=NumericLiteral && LA1_2<=RBRACE)||LA1_2==RegularExpressionLiteral||(LA1_2>=StringLiteral && LA1_2<=TRUE)||LA1_2==44||LA1_2==52||(LA1_2>=55 && LA1_2<=56)||(LA1_2>=59 && LA1_2<=60)||LA1_2==66||LA1_2==81||(LA1_2>=84 && LA1_2<=85)||(LA1_2>=87 && LA1_2<=91)||(LA1_2>=93 && LA1_2<=95)||(LA1_2>=98 && LA1_2<=108)||LA1_2==112))
 				{
 					alt1 = 5;
 				}
@@ -323,24 +324,23 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			case StringLiteral:
 			case THIS:
 			case TRUE:
-			case 43:
-			case 51:
-			case 54:
+			case 44:
+			case 52:
 			case 55:
-			case 58:
+			case 56:
 			case 59:
-			case 80:
-			case 83:
+			case 60:
+			case 81:
 			case 84:
-			case 86:
+			case 85:
 			case 87:
 			case 88:
 			case 89:
 			case 90:
-			case 92:
+			case 91:
 			case 93:
 			case 94:
-			case 97:
+			case 95:
 			case 98:
 			case 99:
 			case 100:
@@ -351,7 +351,8 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			case 105:
 			case 106:
 			case 107:
-			case 111:
+			case 108:
+			case 112:
 				{
 				alt1 = 6;
 				}
@@ -375,7 +376,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(34, 7);
-				char_literal1=(IToken)Match(input,65,Follow._65_in_statementEnd175); if (state.failed) return retval;
+				char_literal1=(IToken)Match(input,66,Follow._66_in_statementEnd175); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal1_tree = (object)adaptor.Create(char_literal1, "char_literal1", retval);
 				adaptor.AddChild(root_0, char_literal1_tree);
@@ -573,7 +574,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(3, false);
 			int LA3_1 = input.LA(1);
 
-			if ((LA3_1==FALSE||LA3_1==Identifier||LA3_1==NULL||LA3_1==NumericLiteral||LA3_1==RegularExpressionLiteral||(LA3_1>=StringLiteral && LA3_1<=TRUE)||LA3_1==43||LA3_1==51||(LA3_1>=54 && LA3_1<=55)||(LA3_1>=58 && LA3_1<=59)||LA3_1==65||LA3_1==80||LA3_1==83||LA3_1==86||(LA3_1>=88 && LA3_1<=89)||(LA3_1>=92 && LA3_1<=94)||(LA3_1>=97 && LA3_1<=107)||LA3_1==111))
+			if ((LA3_1==FALSE||LA3_1==Identifier||LA3_1==NULL||LA3_1==NumericLiteral||LA3_1==RegularExpressionLiteral||(LA3_1>=StringLiteral && LA3_1<=TRUE)||LA3_1==44||LA3_1==52||(LA3_1>=55 && LA3_1<=56)||(LA3_1>=59 && LA3_1<=60)||LA3_1==66||LA3_1==81||LA3_1==84||LA3_1==87||(LA3_1>=89 && LA3_1<=90)||(LA3_1>=93 && LA3_1<=95)||(LA3_1>=98 && LA3_1<=108)||LA3_1==112))
 			{
 				alt3 = 1;
 			}
@@ -851,7 +852,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(7, false);
 			int LA7_1 = input.LA(1);
 
-			if ((LA7_1==93))
+			if ((LA7_1==94))
 			{
 				int LA7_2 = input.LA(2);
 
@@ -871,7 +872,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					throw nvae;
 				}
 			}
-			else if ((LA7_1==FALSE||LA7_1==Identifier||LA7_1==NULL||LA7_1==NumericLiteral||LA7_1==RegularExpressionLiteral||(LA7_1>=StringLiteral && LA7_1<=TRUE)||LA7_1==43||LA7_1==51||(LA7_1>=54 && LA7_1<=55)||(LA7_1>=58 && LA7_1<=59)||LA7_1==65||LA7_1==80||LA7_1==83||LA7_1==86||(LA7_1>=88 && LA7_1<=89)||LA7_1==92||LA7_1==94||(LA7_1>=97 && LA7_1<=107)||LA7_1==111))
+			else if ((LA7_1==FALSE||LA7_1==Identifier||LA7_1==NULL||LA7_1==NumericLiteral||LA7_1==RegularExpressionLiteral||(LA7_1>=StringLiteral && LA7_1<=TRUE)||LA7_1==44||LA7_1==52||(LA7_1>=55 && LA7_1<=56)||(LA7_1>=59 && LA7_1<=60)||LA7_1==66||LA7_1==81||LA7_1==84||LA7_1==87||(LA7_1>=89 && LA7_1<=90)||LA7_1==93||LA7_1==95||(LA7_1>=98 && LA7_1<=108)||LA7_1==112))
 			{
 				alt7 = 2;
 			}
@@ -988,7 +989,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(58, 7);
-			string_literal15=(IToken)Match(input,93,Follow._93_in_functionDeclaration328); if (state.failed) return retval;
+			string_literal15=(IToken)Match(input,94,Follow._94_in_functionDeclaration328); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal15_tree = (object)adaptor.Create(string_literal15, "string_literal15", retval);
 			adaptor.AddChild(root_0, string_literal15_tree);
@@ -1199,7 +1200,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(62, 7);
-			string_literal22=(IToken)Match(input,93,Follow._93_in_functionExpression367); if (state.failed) return retval;
+			string_literal22=(IToken)Match(input,94,Follow._94_in_functionExpression367); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal22_tree = (object)adaptor.Create(string_literal22, "string_literal22", retval);
 			adaptor.AddChild(root_0, string_literal22_tree);
@@ -1448,7 +1449,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(66, 7);
-			char_literal29=(IToken)Match(input,51,Follow._51_in_formalParameterList407); if (state.failed) return retval;
+			char_literal29=(IToken)Match(input,52,Follow._52_in_formalParameterList407); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal29_tree = (object)adaptor.Create(char_literal29, "char_literal29", retval);
 			adaptor.AddChild(root_0, char_literal29_tree);
@@ -1580,7 +1581,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 						} finally { DebugExitSubRule(16); }
 
 						DebugLocation(66, 34);
-						char_literal33=(IToken)Match(input,57,Follow._57_in_formalParameterList421); if (state.failed) return retval;
+						char_literal33=(IToken)Match(input,58,Follow._58_in_formalParameterList421); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 						char_literal33_tree = (object)adaptor.Create(char_literal33, "char_literal33", retval);
 						adaptor.AddChild(root_0, char_literal33_tree);
@@ -1765,7 +1766,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(70, 7);
-			char_literal38=(IToken)Match(input,107,Follow._107_in_functionBody454); if (state.failed) return retval;
+			char_literal38=(IToken)Match(input,108,Follow._108_in_functionBody454); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal38_tree = (object)adaptor.Create(char_literal38, "char_literal38", retval);
 			adaptor.AddChild(root_0, char_literal38_tree);
@@ -1822,7 +1823,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(22, false);
 			int LA22_1 = input.LA(1);
 
-			if ((LA22_1==FALSE||LA22_1==Identifier||LA22_1==NULL||LA22_1==NumericLiteral||LA22_1==RegularExpressionLiteral||(LA22_1>=StringLiteral && LA22_1<=TRUE)||LA22_1==43||LA22_1==51||(LA22_1>=54 && LA22_1<=55)||(LA22_1>=58 && LA22_1<=59)||LA22_1==65||LA22_1==80||LA22_1==83||LA22_1==86||(LA22_1>=88 && LA22_1<=89)||(LA22_1>=92 && LA22_1<=94)||(LA22_1>=97 && LA22_1<=107)||LA22_1==111))
+			if ((LA22_1==FALSE||LA22_1==Identifier||LA22_1==NULL||LA22_1==NumericLiteral||LA22_1==RegularExpressionLiteral||(LA22_1>=StringLiteral && LA22_1<=TRUE)||LA22_1==44||LA22_1==52||(LA22_1>=55 && LA22_1<=56)||(LA22_1>=59 && LA22_1<=60)||LA22_1==66||LA22_1==81||LA22_1==84||LA22_1==87||(LA22_1>=89 && LA22_1<=90)||(LA22_1>=93 && LA22_1<=95)||(LA22_1>=98 && LA22_1<=108)||LA22_1==112))
 			{
 				alt22 = 1;
 			}
@@ -1964,7 +1965,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(24, false);
 			switch (input.LA(1))
 			{
-			case 107:
+			case 108:
 				{
 				int LA24_2 = input.LA(2);
 
@@ -1985,12 +1986,12 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 103:
+			case 104:
 				{
 				alt24 = 2;
 				}
 				break;
-			case 65:
+			case 66:
 				{
 				alt24 = 3;
 				}
@@ -2002,19 +2003,19 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			case StringLiteral:
 			case THIS:
 			case TRUE:
-			case 43:
-			case 51:
-			case 54:
+			case 44:
+			case 52:
 			case 55:
-			case 58:
+			case 56:
 			case 59:
-			case 80:
-			case 88:
-			case 93:
-			case 97:
-			case 102:
-			case 104:
-			case 111:
+			case 60:
+			case 81:
+			case 89:
+			case 94:
+			case 98:
+			case 103:
+			case 105:
+			case 112:
 				{
 				alt24 = 4;
 				}
@@ -2040,49 +2041,49 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 94:
+			case 95:
 				{
 				alt24 = 5;
 				}
 				break;
-			case 89:
-			case 92:
-			case 105:
+			case 90:
+			case 93:
+			case 106:
 				{
 				alt24 = 6;
 				}
 				break;
-			case 86:
+			case 87:
 				{
 				alt24 = 7;
 				}
 				break;
-			case 83:
+			case 84:
 				{
 				alt24 = 8;
 				}
 				break;
-			case 98:
+			case 99:
 				{
 				alt24 = 9;
 				}
 				break;
-			case 106:
+			case 107:
 				{
 				alt24 = 10;
 				}
 				break;
-			case 99:
+			case 100:
 				{
 				alt24 = 12;
 				}
 				break;
-			case 100:
+			case 101:
 				{
 				alt24 = 13;
 				}
 				break;
-			case 101:
+			case 102:
 				{
 				alt24 = 14;
 				}
@@ -2379,7 +2380,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(92, 7);
-			char_literal57=(IToken)Match(input,107,Follow._107_in_statementBlock610); if (state.failed) return retval;
+			char_literal57=(IToken)Match(input,108,Follow._108_in_statementBlock610); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal57_tree = (object)adaptor.Create(char_literal57, "char_literal57", retval);
 			adaptor.AddChild(root_0, char_literal57_tree);
@@ -2436,7 +2437,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(26, false);
 			int LA26_1 = input.LA(1);
 
-			if ((LA26_1==FALSE||LA26_1==Identifier||LA26_1==NULL||LA26_1==NumericLiteral||LA26_1==RegularExpressionLiteral||(LA26_1>=StringLiteral && LA26_1<=TRUE)||LA26_1==43||LA26_1==51||(LA26_1>=54 && LA26_1<=55)||(LA26_1>=58 && LA26_1<=59)||LA26_1==65||LA26_1==80||LA26_1==83||LA26_1==86||(LA26_1>=88 && LA26_1<=89)||(LA26_1>=92 && LA26_1<=94)||(LA26_1>=97 && LA26_1<=107)||LA26_1==111))
+			if ((LA26_1==FALSE||LA26_1==Identifier||LA26_1==NULL||LA26_1==NumericLiteral||LA26_1==RegularExpressionLiteral||(LA26_1>=StringLiteral && LA26_1<=TRUE)||LA26_1==44||LA26_1==52||(LA26_1>=55 && LA26_1<=56)||(LA26_1>=59 && LA26_1<=60)||LA26_1==66||LA26_1==81||LA26_1==84||LA26_1==87||(LA26_1>=89 && LA26_1<=90)||(LA26_1>=93 && LA26_1<=95)||(LA26_1>=98 && LA26_1<=108)||LA26_1==112))
 			{
 				alt26 = 1;
 			}
@@ -2724,7 +2725,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(100, 7);
-			string_literal65=(IToken)Match(input,103,Follow._103_in_variableStatement674); if (state.failed) return retval;
+			string_literal65=(IToken)Match(input,104,Follow._104_in_variableStatement674); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal65_tree = (object)adaptor.Create(string_literal65, "string_literal65", retval);
 			adaptor.AddChild(root_0, string_literal65_tree);
@@ -2916,7 +2917,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					} finally { DebugExitSubRule(31); }
 
 					DebugLocation(104, 33);
-					char_literal71=(IToken)Match(input,57,Follow._57_in_variableDeclarationList710); if (state.failed) return retval;
+					char_literal71=(IToken)Match(input,58,Follow._58_in_variableDeclarationList710); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal71_tree = (object)adaptor.Create(char_literal71, "char_literal71", retval);
 					adaptor.AddChild(root_0, char_literal71_tree);
@@ -3116,7 +3117,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					} finally { DebugExitSubRule(34); }
 
 					DebugLocation(108, 37);
-					char_literal76=(IToken)Match(input,57,Follow._57_in_variableDeclarationListNoIn746); if (state.failed) return retval;
+					char_literal76=(IToken)Match(input,58,Follow._58_in_variableDeclarationListNoIn746); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal76_tree = (object)adaptor.Create(char_literal76, "char_literal76", retval);
 					adaptor.AddChild(root_0, char_literal76_tree);
@@ -3534,7 +3535,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(120, 7);
-			char_literal85=(IToken)Match(input,70,Follow._70_in_initialiser835); if (state.failed) return retval;
+			char_literal85=(IToken)Match(input,71,Follow._71_in_initialiser835); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal85_tree = (object)adaptor.Create(char_literal85, "char_literal85", retval);
 			adaptor.AddChild(root_0, char_literal85_tree);
@@ -3650,7 +3651,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(124, 7);
-			char_literal88=(IToken)Match(input,70,Follow._70_in_initialiserNoIn862); if (state.failed) return retval;
+			char_literal88=(IToken)Match(input,71,Follow._71_in_initialiserNoIn862); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal88_tree = (object)adaptor.Create(char_literal88, "char_literal88", retval);
 			adaptor.AddChild(root_0, char_literal88_tree);
@@ -3763,7 +3764,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(128, 7);
-			char_literal91=(IToken)Match(input,65,Follow._65_in_emptyStatement889); if (state.failed) return retval;
+			char_literal91=(IToken)Match(input,66,Follow._66_in_emptyStatement889); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal91_tree = (object)adaptor.Create(char_literal91, "char_literal91", retval);
 			adaptor.AddChild(root_0, char_literal91_tree);
@@ -3928,7 +3929,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(136, 7);
-			string_literal94=(IToken)Match(input,94,Follow._94_in_ifStatement933); if (state.failed) return retval;
+			string_literal94=(IToken)Match(input,95,Follow._95_in_ifStatement933); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal94_tree = (object)adaptor.Create(string_literal94, "string_literal94", retval);
 			adaptor.AddChild(root_0, string_literal94_tree);
@@ -3972,7 +3973,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(43); }
 
 			DebugLocation(136, 17);
-			char_literal96=(IToken)Match(input,51,Follow._51_in_ifStatement939); if (state.failed) return retval;
+			char_literal96=(IToken)Match(input,52,Follow._52_in_ifStatement939); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal96_tree = (object)adaptor.Create(char_literal96, "char_literal96", retval);
 			adaptor.AddChild(root_0, char_literal96_tree);
@@ -4125,7 +4126,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					alt49 = 1;
 				}
 			}
-			else if ((LA49_1==90))
+			else if ((LA49_1==91))
 			{
 				int LA49_2 = input.LA(2);
 
@@ -4180,7 +4181,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				} finally { DebugExitSubRule(47); }
 
 				DebugLocation(136, 70);
-				string_literal104=(IToken)Match(input,90,Follow._90_in_ifStatement964); if (state.failed) return retval;
+				string_literal104=(IToken)Match(input,91,Follow._91_in_ifStatement964); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal104_tree = (object)adaptor.Create(string_literal104, "string_literal104", retval);
 				adaptor.AddChild(root_0, string_literal104_tree);
@@ -4300,17 +4301,17 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(50, false);
 			switch (input.LA(1))
 			{
-			case 89:
+			case 90:
 				{
 				alt50 = 1;
 				}
 				break;
-			case 105:
+			case 106:
 				{
 				alt50 = 2;
 				}
 				break;
-			case 92:
+			case 93:
 				{
 				int LA50_2 = input.LA(2);
 
@@ -4481,7 +4482,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(147, 7);
-			string_literal111=(IToken)Match(input,89,Follow._89_in_doWhileStatement1038); if (state.failed) return retval;
+			string_literal111=(IToken)Match(input,90,Follow._90_in_doWhileStatement1038); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal111_tree = (object)adaptor.Create(string_literal111, "string_literal111", retval);
 			adaptor.AddChild(root_0, string_literal111_tree);
@@ -4569,7 +4570,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(52); }
 
 			DebugLocation(147, 32);
-			string_literal115=(IToken)Match(input,105,Follow._105_in_doWhileStatement1050); if (state.failed) return retval;
+			string_literal115=(IToken)Match(input,106,Follow._106_in_doWhileStatement1050); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal115_tree = (object)adaptor.Create(string_literal115, "string_literal115", retval);
 			adaptor.AddChild(root_0, string_literal115_tree);
@@ -4613,7 +4614,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(53); }
 
 			DebugLocation(147, 45);
-			char_literal117=(IToken)Match(input,51,Follow._51_in_doWhileStatement1056); if (state.failed) return retval;
+			char_literal117=(IToken)Match(input,52,Follow._52_in_doWhileStatement1056); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal117_tree = (object)adaptor.Create(char_literal117, "char_literal117", retval);
 			adaptor.AddChild(root_0, char_literal117_tree);
@@ -4714,7 +4715,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(151, 7);
-			string_literal121=(IToken)Match(input,105,Follow._105_in_whileStatement1083); if (state.failed) return retval;
+			string_literal121=(IToken)Match(input,106,Follow._106_in_whileStatement1083); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal121_tree = (object)adaptor.Create(string_literal121, "string_literal121", retval);
 			adaptor.AddChild(root_0, string_literal121_tree);
@@ -4758,7 +4759,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(54); }
 
 			DebugLocation(151, 20);
-			char_literal123=(IToken)Match(input,51,Follow._51_in_whileStatement1089); if (state.failed) return retval;
+			char_literal123=(IToken)Match(input,52,Follow._52_in_whileStatement1089); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal123_tree = (object)adaptor.Create(char_literal123, "char_literal123", retval);
 			adaptor.AddChild(root_0, char_literal123_tree);
@@ -4987,7 +4988,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(155, 7);
-			string_literal130=(IToken)Match(input,92,Follow._92_in_forStatement1128); if (state.failed) return retval;
+			string_literal130=(IToken)Match(input,93,Follow._93_in_forStatement1128); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal130_tree = (object)adaptor.Create(string_literal130, "string_literal130", retval);
 			adaptor.AddChild(root_0, string_literal130_tree);
@@ -5031,7 +5032,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(58); }
 
 			DebugLocation(155, 18);
-			char_literal132=(IToken)Match(input,51,Follow._51_in_forStatement1134); if (state.failed) return retval;
+			char_literal132=(IToken)Match(input,52,Follow._52_in_forStatement1134); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal132_tree = (object)adaptor.Create(char_literal132, "char_literal132", retval);
 			adaptor.AddChild(root_0, char_literal132_tree);
@@ -5147,7 +5148,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(61); }
 
 			DebugLocation(155, 63);
-			char_literal136=(IToken)Match(input,65,Follow._65_in_forStatement1149); if (state.failed) return retval;
+			char_literal136=(IToken)Match(input,66,Follow._66_in_forStatement1149); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal136_tree = (object)adaptor.Create(char_literal136, "char_literal136", retval);
 			adaptor.AddChild(root_0, char_literal136_tree);
@@ -5263,7 +5264,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(64); }
 
 			DebugLocation(155, 91);
-			char_literal140=(IToken)Match(input,65,Follow._65_in_forStatement1164); if (state.failed) return retval;
+			char_literal140=(IToken)Match(input,66,Follow._66_in_forStatement1164); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal140_tree = (object)adaptor.Create(char_literal140, "char_literal140", retval);
 			adaptor.AddChild(root_0, char_literal140_tree);
@@ -5494,11 +5495,11 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(70, false);
 			int LA70_1 = input.LA(1);
 
-			if ((LA70_1==FALSE||LA70_1==Identifier||LA70_1==NULL||LA70_1==NumericLiteral||LA70_1==RegularExpressionLiteral||(LA70_1>=StringLiteral && LA70_1<=TRUE)||LA70_1==43||LA70_1==51||(LA70_1>=54 && LA70_1<=55)||(LA70_1>=58 && LA70_1<=59)||LA70_1==80||LA70_1==88||LA70_1==93||LA70_1==97||LA70_1==102||LA70_1==104||LA70_1==107||LA70_1==111))
+			if ((LA70_1==FALSE||LA70_1==Identifier||LA70_1==NULL||LA70_1==NumericLiteral||LA70_1==RegularExpressionLiteral||(LA70_1>=StringLiteral && LA70_1<=TRUE)||LA70_1==44||LA70_1==52||(LA70_1>=55 && LA70_1<=56)||(LA70_1>=59 && LA70_1<=60)||LA70_1==81||LA70_1==89||LA70_1==94||LA70_1==98||LA70_1==103||LA70_1==105||LA70_1==108||LA70_1==112))
 			{
 				alt70 = 1;
 			}
-			else if ((LA70_1==103))
+			else if ((LA70_1==104))
 			{
 				alt70 = 2;
 			}
@@ -5534,7 +5535,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(160, 7);
-				string_literal148=(IToken)Match(input,103,Follow._103_in_forStatementInitialiserPart1214); if (state.failed) return retval;
+				string_literal148=(IToken)Match(input,104,Follow._104_in_forStatementInitialiserPart1214); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal148_tree = (object)adaptor.Create(string_literal148, "string_literal148", retval);
 				adaptor.AddChild(root_0, string_literal148_tree);
@@ -5670,7 +5671,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(164, 7);
-			string_literal151=(IToken)Match(input,92,Follow._92_in_forInStatement1241); if (state.failed) return retval;
+			string_literal151=(IToken)Match(input,93,Follow._93_in_forInStatement1241); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal151_tree = (object)adaptor.Create(string_literal151, "string_literal151", retval);
 			adaptor.AddChild(root_0, string_literal151_tree);
@@ -5714,7 +5715,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(71); }
 
 			DebugLocation(164, 18);
-			char_literal153=(IToken)Match(input,51,Follow._51_in_forInStatement1247); if (state.failed) return retval;
+			char_literal153=(IToken)Match(input,52,Follow._52_in_forInStatement1247); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal153_tree = (object)adaptor.Create(char_literal153, "char_literal153", retval);
 			adaptor.AddChild(root_0, char_literal153_tree);
@@ -5802,7 +5803,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(73); }
 
 			DebugLocation(164, 62);
-			string_literal157=(IToken)Match(input,95,Follow._95_in_forInStatement1259); if (state.failed) return retval;
+			string_literal157=(IToken)Match(input,96,Follow._96_in_forInStatement1259); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal157_tree = (object)adaptor.Create(string_literal157, "string_literal157", retval);
 			adaptor.AddChild(root_0, string_literal157_tree);
@@ -6005,11 +6006,11 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(78, false);
 			int LA78_1 = input.LA(1);
 
-			if ((LA78_1==FALSE||LA78_1==Identifier||LA78_1==NULL||LA78_1==NumericLiteral||LA78_1==RegularExpressionLiteral||(LA78_1>=StringLiteral && LA78_1<=TRUE)||LA78_1==51||LA78_1==80||LA78_1==93||LA78_1==97||LA78_1==107))
+			if ((LA78_1==FALSE||LA78_1==Identifier||LA78_1==NULL||LA78_1==NumericLiteral||LA78_1==RegularExpressionLiteral||(LA78_1>=StringLiteral && LA78_1<=TRUE)||LA78_1==52||LA78_1==81||LA78_1==94||LA78_1==98||LA78_1==108))
 			{
 				alt78 = 1;
 			}
-			else if ((LA78_1==103))
+			else if ((LA78_1==104))
 			{
 				alt78 = 2;
 			}
@@ -6045,7 +6046,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(169, 7);
-				string_literal165=(IToken)Match(input,103,Follow._103_in_forInStatementInitialiserPart1306); if (state.failed) return retval;
+				string_literal165=(IToken)Match(input,104,Follow._104_in_forInStatementInitialiserPart1306); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal165_tree = (object)adaptor.Create(string_literal165, "string_literal165", retval);
 				adaptor.AddChild(root_0, string_literal165_tree);
@@ -6163,7 +6164,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(173, 7);
-			string_literal168=(IToken)Match(input,86,Follow._86_in_continueStatement1329); if (state.failed) return retval;
+			string_literal168=(IToken)Match(input,87,Follow._87_in_continueStatement1329); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal168_tree = (object)adaptor.Create(string_literal168, "string_literal168", retval);
 			adaptor.AddChild(root_0, string_literal168_tree);
@@ -6277,7 +6278,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(177, 7);
-			string_literal171=(IToken)Match(input,83,Follow._83_in_breakStatement1351); if (state.failed) return retval;
+			string_literal171=(IToken)Match(input,84,Follow._84_in_breakStatement1351); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal171_tree = (object)adaptor.Create(string_literal171, "string_literal171", retval);
 			adaptor.AddChild(root_0, string_literal171_tree);
@@ -6390,7 +6391,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(181, 7);
-			string_literal174=(IToken)Match(input,98,Follow._98_in_returnStatement1373); if (state.failed) return retval;
+			string_literal174=(IToken)Match(input,99,Follow._99_in_returnStatement1373); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal174_tree = (object)adaptor.Create(string_literal174, "string_literal174", retval);
 			adaptor.AddChild(root_0, string_literal174_tree);
@@ -6482,7 +6483,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 80:
+			case 81:
 				{
 				int LA81_2 = input.LA(2);
 
@@ -6492,7 +6493,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 107:
+			case 108:
 				{
 				int LA81_2 = input.LA(2);
 
@@ -6502,7 +6503,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 51:
+			case 52:
 				{
 				int LA81_2 = input.LA(2);
 
@@ -6512,7 +6513,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 93:
+			case 94:
 				{
 				int LA81_2 = input.LA(2);
 
@@ -6522,7 +6523,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 97:
+			case 98:
 				{
 				int LA81_2 = input.LA(2);
 
@@ -6532,15 +6533,15 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 43:
-			case 54:
+			case 44:
 			case 55:
-			case 58:
+			case 56:
 			case 59:
-			case 88:
-			case 102:
-			case 104:
-			case 111:
+			case 60:
+			case 89:
+			case 103:
+			case 105:
+			case 112:
 				{
 				int LA81_2 = input.LA(2);
 
@@ -6656,7 +6657,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(185, 7);
-			string_literal177=(IToken)Match(input,106,Follow._106_in_withStatement1399); if (state.failed) return retval;
+			string_literal177=(IToken)Match(input,107,Follow._107_in_withStatement1399); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal177_tree = (object)adaptor.Create(string_literal177, "string_literal177", retval);
 			adaptor.AddChild(root_0, string_literal177_tree);
@@ -6700,7 +6701,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(82); }
 
 			DebugLocation(185, 19);
-			char_literal179=(IToken)Match(input,51,Follow._51_in_withStatement1405); if (state.failed) return retval;
+			char_literal179=(IToken)Match(input,52,Follow._52_in_withStatement1405); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal179_tree = (object)adaptor.Create(char_literal179, "char_literal179", retval);
 			adaptor.AddChild(root_0, char_literal179_tree);
@@ -6952,7 +6953,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(86); }
 
 			DebugLocation(189, 23);
-			char_literal188=(IToken)Match(input,64,Follow._64_in_labelledStatement1446); if (state.failed) return retval;
+			char_literal188=(IToken)Match(input,65,Follow._65_in_labelledStatement1446); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal188_tree = (object)adaptor.Create(char_literal188, "char_literal188", retval);
 			adaptor.AddChild(root_0, char_literal188_tree);
@@ -7079,7 +7080,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(193, 7);
-			string_literal191=(IToken)Match(input,99,Follow._99_in_switchStatement1473); if (state.failed) return retval;
+			string_literal191=(IToken)Match(input,100,Follow._100_in_switchStatement1473); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal191_tree = (object)adaptor.Create(string_literal191, "string_literal191", retval);
 			adaptor.AddChild(root_0, string_literal191_tree);
@@ -7123,7 +7124,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(88); }
 
 			DebugLocation(193, 21);
-			char_literal193=(IToken)Match(input,51,Follow._51_in_switchStatement1479); if (state.failed) return retval;
+			char_literal193=(IToken)Match(input,52,Follow._52_in_switchStatement1479); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal193_tree = (object)adaptor.Create(char_literal193, "char_literal193", retval);
 			adaptor.AddChild(root_0, char_literal193_tree);
@@ -7337,7 +7338,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(197, 7);
-			char_literal200=(IToken)Match(input,107,Follow._107_in_caseBlock1518); if (state.failed) return retval;
+			char_literal200=(IToken)Match(input,108,Follow._108_in_caseBlock1518); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal200_tree = (object)adaptor.Create(char_literal200, "char_literal200", retval);
 			adaptor.AddChild(root_0, char_literal200_tree);
@@ -7694,7 +7695,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(201, 7);
-			string_literal209=(IToken)Match(input,84,Follow._84_in_caseClause1568); if (state.failed) return retval;
+			string_literal209=(IToken)Match(input,85,Follow._85_in_caseClause1568); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal209_tree = (object)adaptor.Create(string_literal209, "string_literal209", retval);
 			adaptor.AddChild(root_0, string_literal209_tree);
@@ -7782,7 +7783,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(100); }
 
 			DebugLocation(201, 35);
-			char_literal213=(IToken)Match(input,64,Follow._64_in_caseClause1580); if (state.failed) return retval;
+			char_literal213=(IToken)Match(input,65,Follow._65_in_caseClause1580); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal213_tree = (object)adaptor.Create(char_literal213, "char_literal213", retval);
 			adaptor.AddChild(root_0, char_literal213_tree);
@@ -7839,7 +7840,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(102, false);
 			int LA102_1 = input.LA(1);
 
-			if ((LA102_1==FALSE||LA102_1==Identifier||LA102_1==NULL||LA102_1==NumericLiteral||LA102_1==RegularExpressionLiteral||(LA102_1>=StringLiteral && LA102_1<=TRUE)||LA102_1==43||LA102_1==51||(LA102_1>=54 && LA102_1<=55)||(LA102_1>=58 && LA102_1<=59)||LA102_1==65||LA102_1==80||LA102_1==83||LA102_1==86||(LA102_1>=88 && LA102_1<=89)||(LA102_1>=92 && LA102_1<=94)||(LA102_1>=97 && LA102_1<=107)||LA102_1==111))
+			if ((LA102_1==FALSE||LA102_1==Identifier||LA102_1==NULL||LA102_1==NumericLiteral||LA102_1==RegularExpressionLiteral||(LA102_1>=StringLiteral && LA102_1<=TRUE)||LA102_1==44||LA102_1==52||(LA102_1>=55 && LA102_1<=56)||(LA102_1>=59 && LA102_1<=60)||LA102_1==66||LA102_1==81||LA102_1==84||LA102_1==87||(LA102_1>=89 && LA102_1<=90)||(LA102_1>=93 && LA102_1<=95)||(LA102_1>=98 && LA102_1<=108)||LA102_1==112))
 			{
 				alt102 = 1;
 			}
@@ -7934,7 +7935,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(205, 7);
-			string_literal216=(IToken)Match(input,87,Follow._87_in_defaultClause1608); if (state.failed) return retval;
+			string_literal216=(IToken)Match(input,88,Follow._88_in_defaultClause1608); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal216_tree = (object)adaptor.Create(string_literal216, "string_literal216", retval);
 			adaptor.AddChild(root_0, string_literal216_tree);
@@ -7978,7 +7979,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(103); }
 
 			DebugLocation(205, 22);
-			char_literal218=(IToken)Match(input,64,Follow._64_in_defaultClause1614); if (state.failed) return retval;
+			char_literal218=(IToken)Match(input,65,Follow._65_in_defaultClause1614); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal218_tree = (object)adaptor.Create(char_literal218, "char_literal218", retval);
 			adaptor.AddChild(root_0, char_literal218_tree);
@@ -8035,7 +8036,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(105, false);
 			int LA105_1 = input.LA(1);
 
-			if ((LA105_1==FALSE||LA105_1==Identifier||LA105_1==NULL||LA105_1==NumericLiteral||LA105_1==RegularExpressionLiteral||(LA105_1>=StringLiteral && LA105_1<=TRUE)||LA105_1==43||LA105_1==51||(LA105_1>=54 && LA105_1<=55)||(LA105_1>=58 && LA105_1<=59)||LA105_1==65||LA105_1==80||LA105_1==83||LA105_1==86||(LA105_1>=88 && LA105_1<=89)||(LA105_1>=92 && LA105_1<=94)||(LA105_1>=97 && LA105_1<=107)||LA105_1==111))
+			if ((LA105_1==FALSE||LA105_1==Identifier||LA105_1==NULL||LA105_1==NumericLiteral||LA105_1==RegularExpressionLiteral||(LA105_1>=StringLiteral && LA105_1<=TRUE)||LA105_1==44||LA105_1==52||(LA105_1>=55 && LA105_1<=56)||(LA105_1>=59 && LA105_1<=60)||LA105_1==66||LA105_1==81||LA105_1==84||LA105_1==87||(LA105_1>=89 && LA105_1<=90)||(LA105_1>=93 && LA105_1<=95)||(LA105_1>=98 && LA105_1<=108)||LA105_1==112))
 			{
 				alt105 = 1;
 			}
@@ -8125,7 +8126,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(209, 7);
-			string_literal221=(IToken)Match(input,100,Follow._100_in_throwStatement1642); if (state.failed) return retval;
+			string_literal221=(IToken)Match(input,101,Follow._101_in_throwStatement1642); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal221_tree = (object)adaptor.Create(string_literal221, "string_literal221", retval);
 			adaptor.AddChild(root_0, string_literal221_tree);
@@ -8216,7 +8217,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(213, 7);
-			string_literal224=(IToken)Match(input,101,Follow._101_in_tryStatement1663); if (state.failed) return retval;
+			string_literal224=(IToken)Match(input,102,Follow._102_in_tryStatement1663); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal224_tree = (object)adaptor.Create(string_literal224, "string_literal224", retval);
 			adaptor.AddChild(root_0, string_literal224_tree);
@@ -8310,11 +8311,11 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(110, false);
 			int LA110_1 = input.LA(1);
 
-			if ((LA110_1==91))
+			if ((LA110_1==92))
 			{
 				alt110 = 1;
 			}
-			else if ((LA110_1==85))
+			else if ((LA110_1==86))
 			{
 				alt110 = 2;
 			}
@@ -8509,7 +8510,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(217, 7);
-			string_literal232=(IToken)Match(input,85,Follow._85_in_catchClause1714); if (state.failed) return retval;
+			string_literal232=(IToken)Match(input,86,Follow._86_in_catchClause1714); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal232_tree = (object)adaptor.Create(string_literal232, "string_literal232", retval);
 			adaptor.AddChild(root_0, string_literal232_tree);
@@ -8553,7 +8554,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(111); }
 
 			DebugLocation(217, 20);
-			char_literal234=(IToken)Match(input,51,Follow._51_in_catchClause1720); if (state.failed) return retval;
+			char_literal234=(IToken)Match(input,52,Follow._52_in_catchClause1720); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal234_tree = (object)adaptor.Create(char_literal234, "char_literal234", retval);
 			adaptor.AddChild(root_0, char_literal234_tree);
@@ -8757,7 +8758,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(221, 7);
-			string_literal241=(IToken)Match(input,91,Follow._91_in_finallyClause1759); if (state.failed) return retval;
+			string_literal241=(IToken)Match(input,92,Follow._92_in_finallyClause1759); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal241_tree = (object)adaptor.Create(string_literal241, "string_literal241", retval);
 			adaptor.AddChild(root_0, string_literal241_tree);
@@ -8943,7 +8944,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					} finally { DebugExitSubRule(116); }
 
 					DebugLocation(226, 34);
-					char_literal246=(IToken)Match(input,57,Follow._57_in_expression1790); if (state.failed) return retval;
+					char_literal246=(IToken)Match(input,58,Follow._58_in_expression1790); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal246_tree = (object)adaptor.Create(char_literal246, "char_literal246", retval);
 					adaptor.AddChild(root_0, char_literal246_tree);
@@ -9143,7 +9144,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					} finally { DebugExitSubRule(119); }
 
 					DebugLocation(230, 38);
-					char_literal251=(IToken)Match(input,57,Follow._57_in_expressionNoIn1826); if (state.failed) return retval;
+					char_literal251=(IToken)Match(input,58,Follow._58_in_expressionNoIn1826); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal251_tree = (object)adaptor.Create(char_literal251, "char_literal251", retval);
 					adaptor.AddChild(root_0, char_literal251_tree);
@@ -9442,7 +9443,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 80:
+			case 81:
 				{
 				int LA124_2 = input.LA(2);
 
@@ -9463,7 +9464,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 107:
+			case 108:
 				{
 				int LA124_2 = input.LA(2);
 
@@ -9484,7 +9485,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 51:
+			case 52:
 				{
 				int LA124_2 = input.LA(2);
 
@@ -9505,7 +9506,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 93:
+			case 94:
 				{
 				int LA124_2 = input.LA(2);
 
@@ -9526,7 +9527,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 97:
+			case 98:
 				{
 				int LA124_2 = input.LA(2);
 
@@ -9547,15 +9548,15 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 43:
-			case 54:
+			case 44:
 			case 55:
-			case 58:
+			case 56:
 			case 59:
-			case 88:
-			case 102:
-			case 104:
-			case 111:
+			case 60:
+			case 89:
+			case 103:
+			case 105:
+			case 112:
 				{
 				alt124 = 1;
 				}
@@ -9925,7 +9926,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 80:
+			case 81:
 				{
 				int LA127_2 = input.LA(2);
 
@@ -9946,7 +9947,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 107:
+			case 108:
 				{
 				int LA127_2 = input.LA(2);
 
@@ -9967,7 +9968,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 51:
+			case 52:
 				{
 				int LA127_2 = input.LA(2);
 
@@ -9988,7 +9989,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 93:
+			case 94:
 				{
 				int LA127_2 = input.LA(2);
 
@@ -10009,7 +10010,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 97:
+			case 98:
 				{
 				int LA127_2 = input.LA(2);
 
@@ -10030,15 +10031,15 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 43:
-			case 54:
+			case 44:
 			case 55:
-			case 58:
+			case 56:
 			case 59:
-			case 88:
-			case 102:
-			case 104:
-			case 111:
+			case 60:
+			case 89:
+			case 103:
+			case 105:
+			case 112:
 				{
 				alt127 = 1;
 				}
@@ -10402,7 +10403,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 80:
+			case 81:
 				{
 				int LA128_2 = input.LA(2);
 
@@ -10423,7 +10424,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 107:
+			case 108:
 				{
 				int LA128_2 = input.LA(2);
 
@@ -10444,7 +10445,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 51:
+			case 52:
 				{
 				int LA128_2 = input.LA(2);
 
@@ -10465,7 +10466,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 93:
+			case 94:
 				{
 				int LA128_2 = input.LA(2);
 
@@ -10486,7 +10487,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				}
 				}
 				break;
-			case 97:
+			case 98:
 				{
 				int LA128_2 = input.LA(2);
 
@@ -10614,11 +10615,11 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(130, false);
 			int LA130_1 = input.LA(1);
 
-			if ((LA130_1==FALSE||LA130_1==Identifier||LA130_1==NULL||LA130_1==NumericLiteral||LA130_1==RegularExpressionLiteral||(LA130_1>=StringLiteral && LA130_1<=TRUE)||LA130_1==51||LA130_1==80||LA130_1==93||LA130_1==107))
+			if ((LA130_1==FALSE||LA130_1==Identifier||LA130_1==NULL||LA130_1==NumericLiteral||LA130_1==RegularExpressionLiteral||(LA130_1>=StringLiteral && LA130_1<=TRUE)||LA130_1==52||LA130_1==81||LA130_1==94||LA130_1==108))
 			{
 				alt130 = 1;
 			}
-			else if ((LA130_1==97))
+			else if ((LA130_1==98))
 			{
 				int LA130_2 = input.LA(2);
 
@@ -10670,7 +10671,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(250, 7);
-				string_literal269=(IToken)Match(input,97,Follow._97_in_newExpression1974); if (state.failed) return retval;
+				string_literal269=(IToken)Match(input,98,Follow._98_in_newExpression1974); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal269_tree = (object)adaptor.Create(string_literal269, "string_literal269", retval);
 				adaptor.AddChild(root_0, string_literal269_tree);
@@ -10810,19 +10811,19 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			case StringLiteral:
 			case THIS:
 			case TRUE:
-			case 51:
-			case 80:
-			case 107:
+			case 52:
+			case 81:
+			case 108:
 				{
 				alt133 = 1;
 				}
 				break;
-			case 93:
+			case 94:
 				{
 				alt133 = 2;
 				}
 				break;
-			case 97:
+			case 98:
 				{
 				alt133 = 3;
 				}
@@ -10870,7 +10871,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:254:49: 'new' ( LT !)* memberExpression ( LT !)* arguments
 				{
 				DebugLocation(254, 49);
-				string_literal274=(IToken)Match(input,97,Follow._97_in_memberExpression2010); if (state.failed) return retval;
+				string_literal274=(IToken)Match(input,98,Follow._98_in_memberExpression2010); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal274_tree = (object)adaptor.Create(string_literal274, "string_literal274", retval);
 				adaptor.AddChild(root_0, string_literal274_tree);
@@ -10991,7 +10992,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 
 					}
 					break;
-				case 80:
+				case 81:
 					{
 					int LA135_2 = input.LA(2);
 
@@ -11003,7 +11004,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 
 					}
 					break;
-				case 61:
+				case 62:
 					{
 					alt135 = 1;
 					}
@@ -11137,11 +11138,11 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(136, false);
 			int LA136_1 = input.LA(1);
 
-			if ((LA136_1==80))
+			if ((LA136_1==81))
 			{
 				alt136 = 1;
 			}
-			else if ((LA136_1==61))
+			else if ((LA136_1==62))
 			{
 				alt136 = 2;
 			}
@@ -11323,7 +11324,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 
 					}
 					break;
-				case 80:
+				case 81:
 					{
 					int LA139_2 = input.LA(2);
 
@@ -11335,7 +11336,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 
 					}
 					break;
-				case 51:
+				case 52:
 					{
 					int LA139_2 = input.LA(2);
 
@@ -11347,7 +11348,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 
 					}
 					break;
-				case 61:
+				case 62:
 					{
 					alt139 = 1;
 					}
@@ -11482,17 +11483,17 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(140, false);
 			switch (input.LA(1))
 			{
-			case 51:
+			case 52:
 				{
 				alt140 = 1;
 				}
 				break;
-			case 80:
+			case 81:
 				{
 				alt140 = 2;
 				}
 				break;
-			case 61:
+			case 62:
 				{
 				alt140 = 3;
 				}
@@ -11631,7 +11632,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(273, 7);
-			char_literal291=(IToken)Match(input,51,Follow._51_in_arguments2147); if (state.failed) return retval;
+			char_literal291=(IToken)Match(input,52,Follow._52_in_arguments2147); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal291_tree = (object)adaptor.Create(char_literal291, "char_literal291", retval);
 			adaptor.AddChild(root_0, char_literal291_tree);
@@ -11763,7 +11764,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 						} finally { DebugExitSubRule(142); }
 
 						DebugLocation(273, 44);
-						char_literal295=(IToken)Match(input,57,Follow._57_in_arguments2161); if (state.failed) return retval;
+						char_literal295=(IToken)Match(input,58,Follow._58_in_arguments2161); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 						char_literal295_tree = (object)adaptor.Create(char_literal295, "char_literal295", retval);
 						adaptor.AddChild(root_0, char_literal295_tree);
@@ -11948,7 +11949,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(277, 7);
-			char_literal300=(IToken)Match(input,80,Follow._80_in_indexSuffix2198); if (state.failed) return retval;
+			char_literal300=(IToken)Match(input,81,Follow._81_in_indexSuffix2198); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal300_tree = (object)adaptor.Create(char_literal300, "char_literal300", retval);
 			adaptor.AddChild(root_0, char_literal300_tree);
@@ -12109,7 +12110,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(281, 7);
-			char_literal305=(IToken)Match(input,61,Follow._61_in_propertyReferenceSuffix2232); if (state.failed) return retval;
+			char_literal305=(IToken)Match(input,62,Follow._62_in_propertyReferenceSuffix2232); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal305_tree = (object)adaptor.Create(char_literal305, "char_literal305", retval);
 			adaptor.AddChild(root_0, char_literal305_tree);
@@ -12224,7 +12225,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			DebugLocation(285, 5);
 
 			set308=(IToken)input.LT(1);
-			if (input.LA(1)==47||input.LA(1)==50||input.LA(1)==53||input.LA(1)==56||input.LA(1)==60||input.LA(1)==63||input.LA(1)==68||input.LA(1)==70||input.LA(1)==76||input.LA(1)==78||input.LA(1)==82||input.LA(1)==109)
+			if (input.LA(1)==48||input.LA(1)==51||input.LA(1)==54||input.LA(1)==57||input.LA(1)==61||input.LA(1)==64||input.LA(1)==69||input.LA(1)==71||input.LA(1)==77||input.LA(1)==79||input.LA(1)==83||input.LA(1)==110)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set308, "set308", retval));
@@ -12380,7 +12381,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				} finally { DebugExitSubRule(150); }
 
 				DebugLocation(289, 33);
-				char_literal311=(IToken)Match(input,79,Follow._79_in_conditionalExpression2327); if (state.failed) return retval;
+				char_literal311=(IToken)Match(input,80,Follow._80_in_conditionalExpression2327); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal311_tree = (object)adaptor.Create(char_literal311, "char_literal311", retval);
 				adaptor.AddChild(root_0, char_literal311_tree);
@@ -12468,7 +12469,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				} finally { DebugExitSubRule(152); }
 
 				DebugLocation(289, 68);
-				char_literal315=(IToken)Match(input,64,Follow._64_in_conditionalExpression2339); if (state.failed) return retval;
+				char_literal315=(IToken)Match(input,65,Follow._65_in_conditionalExpression2339); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal315_tree = (object)adaptor.Create(char_literal315, "char_literal315", retval);
 				adaptor.AddChild(root_0, char_literal315_tree);
@@ -12666,7 +12667,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				} finally { DebugExitSubRule(155); }
 
 				DebugLocation(293, 37);
-				char_literal320=(IToken)Match(input,79,Follow._79_in_conditionalExpressionNoIn2371); if (state.failed) return retval;
+				char_literal320=(IToken)Match(input,80,Follow._80_in_conditionalExpressionNoIn2371); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal320_tree = (object)adaptor.Create(char_literal320, "char_literal320", retval);
 				adaptor.AddChild(root_0, char_literal320_tree);
@@ -12754,7 +12755,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				} finally { DebugExitSubRule(157); }
 
 				DebugLocation(293, 76);
-				char_literal324=(IToken)Match(input,64,Follow._64_in_conditionalExpressionNoIn2383); if (state.failed) return retval;
+				char_literal324=(IToken)Match(input,65,Follow._65_in_conditionalExpressionNoIn2383); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal324_tree = (object)adaptor.Create(char_literal324, "char_literal324", retval);
 				adaptor.AddChild(root_0, char_literal324_tree);
@@ -12947,7 +12948,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					} finally { DebugExitSubRule(160); }
 
 					DebugLocation(297, 34);
-					string_literal329=(IToken)Match(input,110,Follow._110_in_logicalORExpression2415); if (state.failed) return retval;
+					string_literal329=(IToken)Match(input,111,Follow._111_in_logicalORExpression2415); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal329_tree = (object)adaptor.Create(string_literal329, "string_literal329", retval);
 					adaptor.AddChild(root_0, string_literal329_tree);
@@ -13147,7 +13148,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					} finally { DebugExitSubRule(163); }
 
 					DebugLocation(301, 38);
-					string_literal334=(IToken)Match(input,110,Follow._110_in_logicalORExpressionNoIn2451); if (state.failed) return retval;
+					string_literal334=(IToken)Match(input,111,Follow._111_in_logicalORExpressionNoIn2451); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal334_tree = (object)adaptor.Create(string_literal334, "string_literal334", retval);
 					adaptor.AddChild(root_0, string_literal334_tree);
@@ -13347,7 +13348,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					} finally { DebugExitSubRule(166); }
 
 					DebugLocation(305, 33);
-					string_literal339=(IToken)Match(input,48,Follow._48_in_logicalANDExpression2487); if (state.failed) return retval;
+					string_literal339=(IToken)Match(input,49,Follow._49_in_logicalANDExpression2487); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal339_tree = (object)adaptor.Create(string_literal339, "string_literal339", retval);
 					adaptor.AddChild(root_0, string_literal339_tree);
@@ -13547,7 +13548,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					} finally { DebugExitSubRule(169); }
 
 					DebugLocation(309, 37);
-					string_literal344=(IToken)Match(input,48,Follow._48_in_logicalANDExpressionNoIn2523); if (state.failed) return retval;
+					string_literal344=(IToken)Match(input,49,Follow._49_in_logicalANDExpressionNoIn2523); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal344_tree = (object)adaptor.Create(string_literal344, "string_literal344", retval);
 					adaptor.AddChild(root_0, string_literal344_tree);
@@ -13747,7 +13748,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					} finally { DebugExitSubRule(172); }
 
 					DebugLocation(313, 34);
-					char_literal349=(IToken)Match(input,108,Follow._108_in_bitwiseORExpression2559); if (state.failed) return retval;
+					char_literal349=(IToken)Match(input,109,Follow._109_in_bitwiseORExpression2559); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal349_tree = (object)adaptor.Create(char_literal349, "char_literal349", retval);
 					adaptor.AddChild(root_0, char_literal349_tree);
@@ -13947,7 +13948,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					} finally { DebugExitSubRule(175); }
 
 					DebugLocation(317, 38);
-					char_literal354=(IToken)Match(input,108,Follow._108_in_bitwiseORExpressionNoIn2595); if (state.failed) return retval;
+					char_literal354=(IToken)Match(input,109,Follow._109_in_bitwiseORExpressionNoIn2595); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal354_tree = (object)adaptor.Create(char_literal354, "char_literal354", retval);
 					adaptor.AddChild(root_0, char_literal354_tree);
@@ -14147,7 +14148,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					} finally { DebugExitSubRule(178); }
 
 					DebugLocation(321, 34);
-					char_literal359=(IToken)Match(input,81,Follow._81_in_bitwiseXORExpression2631); if (state.failed) return retval;
+					char_literal359=(IToken)Match(input,82,Follow._82_in_bitwiseXORExpression2631); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal359_tree = (object)adaptor.Create(char_literal359, "char_literal359", retval);
 					adaptor.AddChild(root_0, char_literal359_tree);
@@ -14347,7 +14348,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					} finally { DebugExitSubRule(181); }
 
 					DebugLocation(325, 38);
-					char_literal364=(IToken)Match(input,81,Follow._81_in_bitwiseXORExpressionNoIn2667); if (state.failed) return retval;
+					char_literal364=(IToken)Match(input,82,Follow._82_in_bitwiseXORExpressionNoIn2667); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal364_tree = (object)adaptor.Create(char_literal364, "char_literal364", retval);
 					adaptor.AddChild(root_0, char_literal364_tree);
@@ -14547,7 +14548,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					} finally { DebugExitSubRule(184); }
 
 					DebugLocation(329, 32);
-					char_literal369=(IToken)Match(input,49,Follow._49_in_bitwiseANDExpression2703); if (state.failed) return retval;
+					char_literal369=(IToken)Match(input,50,Follow._50_in_bitwiseANDExpression2703); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal369_tree = (object)adaptor.Create(char_literal369, "char_literal369", retval);
 					adaptor.AddChild(root_0, char_literal369_tree);
@@ -14747,7 +14748,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					} finally { DebugExitSubRule(187); }
 
 					DebugLocation(333, 36);
-					char_literal374=(IToken)Match(input,49,Follow._49_in_bitwiseANDExpressionNoIn2739); if (state.failed) return retval;
+					char_literal374=(IToken)Match(input,50,Follow._50_in_bitwiseANDExpressionNoIn2739); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal374_tree = (object)adaptor.Create(char_literal374, "char_literal374", retval);
 					adaptor.AddChild(root_0, char_literal374_tree);
@@ -14949,7 +14950,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					DebugLocation(337, 34);
 
 					set379=(IToken)input.LT(1);
-					if ((input.LA(1)>=44 && input.LA(1)<=45)||(input.LA(1)>=71 && input.LA(1)<=72))
+					if ((input.LA(1)>=45 && input.LA(1)<=46)||(input.LA(1)>=72 && input.LA(1)<=73))
 					{
 						input.Consume();
 						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set379, "set379", retval));
@@ -15160,7 +15161,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					DebugLocation(341, 38);
 
 					set384=(IToken)input.LT(1);
-					if ((input.LA(1)>=44 && input.LA(1)<=45)||(input.LA(1)>=71 && input.LA(1)<=72))
+					if ((input.LA(1)>=45 && input.LA(1)<=46)||(input.LA(1)>=72 && input.LA(1)<=73))
 					{
 						input.Consume();
 						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set384, "set384", retval));
@@ -15371,7 +15372,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					DebugLocation(345, 29);
 
 					set389=(IToken)input.LT(1);
-					if (input.LA(1)==66||input.LA(1)==69||(input.LA(1)>=73 && input.LA(1)<=74)||(input.LA(1)>=95 && input.LA(1)<=96))
+					if (input.LA(1)==67||input.LA(1)==70||(input.LA(1)>=74 && input.LA(1)<=75)||(input.LA(1)>=96 && input.LA(1)<=97))
 					{
 						input.Consume();
 						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set389, "set389", retval));
@@ -15582,7 +15583,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					DebugLocation(349, 29);
 
 					set394=(IToken)input.LT(1);
-					if (input.LA(1)==66||input.LA(1)==69||(input.LA(1)>=73 && input.LA(1)<=74)||input.LA(1)==96)
+					if (input.LA(1)==67||input.LA(1)==70||(input.LA(1)>=74 && input.LA(1)<=75)||input.LA(1)==97)
 					{
 						input.Consume();
 						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set394, "set394", retval));
@@ -15793,7 +15794,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					DebugLocation(353, 32);
 
 					set399=(IToken)input.LT(1);
-					if (input.LA(1)==67||input.LA(1)==75||input.LA(1)==77)
+					if (input.LA(1)==68||input.LA(1)==76||input.LA(1)==78)
 					{
 						input.Consume();
 						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set399, "set399", retval));
@@ -15960,7 +15961,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 
 
 				}
-				else if ((LA207_1==54||LA207_1==58))
+				else if ((LA207_1==55||LA207_1==59))
 				{
 					int LA207_2 = input.LA(2);
 
@@ -16021,7 +16022,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					DebugLocation(357, 38);
 
 					set404=(IToken)input.LT(1);
-					if (input.LA(1)==54||input.LA(1)==58)
+					if (input.LA(1)==55||input.LA(1)==59)
 					{
 						input.Consume();
 						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set404, "set404", retval));
@@ -16232,7 +16233,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					DebugLocation(361, 29);
 
 					set409=(IToken)input.LT(1);
-					if (input.LA(1)==46||input.LA(1)==52||input.LA(1)==62)
+					if (input.LA(1)==47||input.LA(1)==53||input.LA(1)==63)
 					{
 						input.Consume();
 						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set409, "set409", retval));
@@ -16368,11 +16369,11 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(211, false);
 			int LA211_1 = input.LA(1);
 
-			if ((LA211_1==FALSE||LA211_1==Identifier||LA211_1==NULL||LA211_1==NumericLiteral||LA211_1==RegularExpressionLiteral||(LA211_1>=StringLiteral && LA211_1<=TRUE)||LA211_1==51||LA211_1==80||LA211_1==93||LA211_1==97||LA211_1==107))
+			if ((LA211_1==FALSE||LA211_1==Identifier||LA211_1==NULL||LA211_1==NumericLiteral||LA211_1==RegularExpressionLiteral||(LA211_1>=StringLiteral && LA211_1<=TRUE)||LA211_1==52||LA211_1==81||LA211_1==94||LA211_1==98||LA211_1==108))
 			{
 				alt211 = 1;
 			}
-			else if ((LA211_1==43||(LA211_1>=54 && LA211_1<=55)||(LA211_1>=58 && LA211_1<=59)||LA211_1==88||LA211_1==102||LA211_1==104||LA211_1==111))
+			else if ((LA211_1==44||(LA211_1>=55 && LA211_1<=56)||(LA211_1>=59 && LA211_1<=60)||LA211_1==89||LA211_1==103||LA211_1==105||LA211_1==112))
 			{
 				alt211 = 2;
 			}
@@ -16410,7 +16411,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				DebugLocation(366, 7);
 
 				set413=(IToken)input.LT(1);
-				if (input.LA(1)==43||(input.LA(1)>=54 && input.LA(1)<=55)||(input.LA(1)>=58 && input.LA(1)<=59)||input.LA(1)==88||input.LA(1)==102||input.LA(1)==104||input.LA(1)==111)
+				if (input.LA(1)==44||(input.LA(1)>=55 && input.LA(1)<=56)||(input.LA(1)>=59 && input.LA(1)<=60)||input.LA(1)==89||input.LA(1)==103||input.LA(1)==105||input.LA(1)==112)
 				{
 					input.Consume();
 					if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set413, "set413", retval));
@@ -16509,7 +16510,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(212, false);
 			int LA212_1 = input.LA(1);
 
-			if ((LA212_1==55||LA212_1==59))
+			if ((LA212_1==56||LA212_1==60))
 			{
 				int LA212_2 = input.LA(2);
 
@@ -16528,7 +16529,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				DebugLocation(370, 30);
 
 				set416=(IToken)input.LT(1);
-				if (input.LA(1)==55||input.LA(1)==59)
+				if (input.LA(1)==56||input.LA(1)==60)
 				{
 					input.Consume();
 					if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set416, "set416", retval));
@@ -16645,17 +16646,17 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				alt215 = 3;
 				}
 				break;
-			case 80:
+			case 81:
 				{
 				alt215 = 4;
 				}
 				break;
-			case 107:
+			case 108:
 				{
 				alt215 = 5;
 				}
 				break;
-			case 51:
+			case 52:
 				{
 				alt215 = 6;
 				}
@@ -16754,7 +16755,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(379, 7);
-				char_literal422=(IToken)Match(input,51,Follow._51_in_primaryExpression3221); if (state.failed) return retval;
+				char_literal422=(IToken)Match(input,52,Follow._52_in_primaryExpression3221); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal422_tree = (object)adaptor.Create(char_literal422, "char_literal422", retval);
 				adaptor.AddChild(root_0, char_literal422_tree);
@@ -16927,7 +16928,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(384, 7);
-			char_literal427=(IToken)Match(input,80,Follow._80_in_arrayLiteral3255); if (state.failed) return retval;
+			char_literal427=(IToken)Match(input,81,Follow._81_in_arrayLiteral3255); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal427_tree = (object)adaptor.Create(char_literal427, "char_literal427", retval);
 			adaptor.AddChild(root_0, char_literal427_tree);
@@ -16984,7 +16985,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			try { DebugEnterDecision(217, false);
 			int LA217_1 = input.LA(1);
 
-			if ((LA217_1==FALSE||LA217_1==Identifier||LA217_1==NULL||LA217_1==NumericLiteral||LA217_1==RegularExpressionLiteral||(LA217_1>=StringLiteral && LA217_1<=TRUE)||LA217_1==43||LA217_1==51||(LA217_1>=54 && LA217_1<=55)||(LA217_1>=58 && LA217_1<=59)||LA217_1==80||LA217_1==88||LA217_1==93||LA217_1==97||LA217_1==102||LA217_1==104||LA217_1==107||LA217_1==111))
+			if ((LA217_1==FALSE||LA217_1==Identifier||LA217_1==NULL||LA217_1==NumericLiteral||LA217_1==RegularExpressionLiteral||(LA217_1>=StringLiteral && LA217_1<=TRUE)||LA217_1==44||LA217_1==52||(LA217_1>=55 && LA217_1<=56)||(LA217_1>=59 && LA217_1<=60)||LA217_1==81||LA217_1==89||LA217_1==94||LA217_1==98||LA217_1==103||LA217_1==105||LA217_1==108||LA217_1==112))
 			{
 				alt217 = 1;
 			}
@@ -17070,7 +17071,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					} finally { DebugExitSubRule(218); }
 
 					DebugLocation(384, 44);
-					char_literal431=(IToken)Match(input,57,Follow._57_in_arrayLiteral3269); if (state.failed) return retval;
+					char_literal431=(IToken)Match(input,58,Follow._58_in_arrayLiteral3269); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal431_tree = (object)adaptor.Create(char_literal431, "char_literal431", retval);
 					adaptor.AddChild(root_0, char_literal431_tree);
@@ -17283,7 +17284,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(389, 7);
-			char_literal436=(IToken)Match(input,107,Follow._107_in_objectLiteral3311); if (state.failed) return retval;
+			char_literal436=(IToken)Match(input,108,Follow._108_in_objectLiteral3311); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal436_tree = (object)adaptor.Create(char_literal436, "char_literal436", retval);
 			adaptor.AddChild(root_0, char_literal436_tree);
@@ -17426,7 +17427,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 					} finally { DebugExitSubRule(225); }
 
 					DebugLocation(389, 44);
-					char_literal440=(IToken)Match(input,57,Follow._57_in_objectLiteral3325); if (state.failed) return retval;
+					char_literal440=(IToken)Match(input,58,Follow._58_in_objectLiteral3325); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal440_tree = (object)adaptor.Create(char_literal440, "char_literal440", retval);
 					adaptor.AddChild(root_0, char_literal440_tree);
@@ -17675,7 +17676,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(230); }
 
 			DebugLocation(393, 25);
-			char_literal447=(IToken)Match(input,64,Follow._64_in_propertyNameAndValue3369); if (state.failed) return retval;
+			char_literal447=(IToken)Match(input,65,Follow._65_in_propertyNameAndValue3369); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal447_tree = (object)adaptor.Create(char_literal447, "char_literal447", retval);
 			adaptor.AddChild(root_0, char_literal447_tree);
@@ -18314,7 +18315,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:34:7: ';'
 			{
 			DebugLocation(34, 7);
-			Match(input,65,Follow._65_in_synpred1_JavaScript175); if (state.failed) return;
+			Match(input,66,Follow._66_in_synpred1_JavaScript175); if (state.failed) return;
 
 			}
 
@@ -18664,7 +18665,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(248); }
 
 			DebugLocation(136, 70);
-			Match(input,90,Follow._90_in_synpred65_JavaScript964); if (state.failed) return;
+			Match(input,91,Follow._91_in_synpred65_JavaScript964); if (state.failed) return;
 			DebugLocation(136, 79);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\JavaScript\\JavaScript.g:136:79: ( LT )*
 			try { DebugEnterSubRule(249);
@@ -19235,7 +19236,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 			} finally { DebugExitSubRule(309); }
 
 			DebugLocation(357, 38);
-			if (input.LA(1)==54||input.LA(1)==58)
+			if (input.LA(1)==55||input.LA(1)==59)
 			{
 				input.Consume();
 				state.errorRecovery=false;state.failed=false;
@@ -19488,7 +19489,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA6_minS =
 			"\x2\xD\x2\xFFFF";
 		private const string DFA6_maxS =
-			"\x2\x6F\x2\xFFFF";
+			"\x2\x70\x2\xFFFF";
 		private const string DFA6_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA6_specialS =
@@ -19496,12 +19497,12 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA6_transitionS =
 			{
 				"\x1\x3\x3\xFFFF\x1\x3\x2\xFFFF\x1\x1\x1\xFFFF\x1\x3\x1\xFFFF\x1\x3\x1"+
-				"\x2\x5\xFFFF\x1\x3\x2\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF"+
+				"\x2\x5\xFFFF\x1\x3\x3\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF"+
 				"\x2\x3\x2\xFFFF\x2\x3\x5\xFFFF\x1\x3\xE\xFFFF\x1\x3\x2\xFFFF\x1\x3\x2"+
 				"\xFFFF\x1\x3\x1\xFFFF\x2\x3\x2\xFFFF\x3\x3\x2\xFFFF\xB\x3\x3\xFFFF\x1"+
 				"\x3",
 				"\x1\x3\x3\xFFFF\x1\x3\x2\xFFFF\x1\x1\x1\xFFFF\x1\x3\x1\xFFFF\x1\x3\x1"+
-				"\x2\x5\xFFFF\x1\x3\x2\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF"+
+				"\x2\x5\xFFFF\x1\x3\x3\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF"+
 				"\x2\x3\x2\xFFFF\x2\x3\x5\xFFFF\x1\x3\xE\xFFFF\x1\x3\x2\xFFFF\x1\x3\x2"+
 				"\xFFFF\x1\x3\x1\xFFFF\x2\x3\x2\xFFFF\x3\x3\x2\xFFFF\xB\x3\x3\xFFFF\x1"+
 				"\x3",
@@ -19618,15 +19619,15 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA18_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA18_maxS =
-			"\x2\x39\x2\xFFFF";
+			"\x2\x3A\x2\xFFFF";
 		private const string DFA18_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA18_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA18_transitionS =
 			{
-				"\x1\x1\x6\xFFFF\x1\x2\x1D\xFFFF\x1\x3",
-				"\x1\x1\x6\xFFFF\x1\x2\x1D\xFFFF\x1\x3",
+				"\x1\x1\x6\xFFFF\x1\x2\x1E\xFFFF\x1\x3",
+				"\x1\x1\x6\xFFFF\x1\x2\x1E\xFFFF\x1\x3",
 				"",
 				""
 			};
@@ -19679,7 +19680,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA29_minS =
 			"\x2\xD\x2\xFFFF";
 		private const string DFA29_maxS =
-			"\x2\x6F\x2\xFFFF";
+			"\x2\x70\x2\xFFFF";
 		private const string DFA29_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA29_specialS =
@@ -19687,12 +19688,12 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA29_transitionS =
 			{
 				"\x1\x3\x3\xFFFF\x1\x3\x2\xFFFF\x1\x1\x1\xFFFF\x1\x3\x1\xFFFF\x1\x3\x1"+
-				"\x2\x5\xFFFF\x1\x3\x2\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF"+
+				"\x2\x5\xFFFF\x1\x3\x3\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF"+
 				"\x2\x3\x2\xFFFF\x2\x3\x5\xFFFF\x1\x3\xE\xFFFF\x1\x3\x2\xFFFF\x1\x3\x1"+
 				"\x2\x1\xFFFF\x1\x3\x1\x2\x2\x3\x2\xFFFF\x3\x3\x2\xFFFF\xB\x3\x3\xFFFF"+
 				"\x1\x3",
 				"\x1\x3\x3\xFFFF\x1\x3\x2\xFFFF\x1\x1\x1\xFFFF\x1\x3\x1\xFFFF\x1\x3\x1"+
-				"\x2\x5\xFFFF\x1\x3\x2\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF"+
+				"\x2\x5\xFFFF\x1\x3\x3\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF"+
 				"\x2\x3\x2\xFFFF\x2\x3\x5\xFFFF\x1\x3\xE\xFFFF\x1\x3\x2\xFFFF\x1\x3\x1"+
 				"\x2\x1\xFFFF\x1\x3\x1\x2\x2\x3\x2\xFFFF\x3\x3\x2\xFFFF\xB\x3\x3\xFFFF"+
 				"\x1\x3",
@@ -19748,7 +19749,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA33_minS =
 			"\x1\x5\x1\xFFFF\x1\xD\x1\xFFFF\x1\xD";
 		private const string DFA33_maxS =
-			"\x1\x6F\x1\xFFFF\x1\x6F\x1\xFFFF\x1\x6F";
+			"\x1\x70\x1\xFFFF\x1\x70\x1\xFFFF\x1\x70";
 		private const string DFA33_acceptS =
 			"\x1\xFFFF\x1\x2\x1\xFFFF\x1\x1\x1\xFFFF";
 		private const string DFA33_specialS =
@@ -19756,17 +19757,17 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA33_transitionS =
 			{
 				"\x1\x1\x7\xFFFF\x1\x1\x3\xFFFF\x1\x1\x2\xFFFF\x1\x2\x2\x1\x1\xFFFF\x2"+
-				"\x1\x5\xFFFF\x1\x1\x2\xFFFF\x3\x1\x6\xFFFF\x1\x1\x7\xFFFF\x1\x1\x2\xFFFF"+
+				"\x1\x5\xFFFF\x1\x1\x3\xFFFF\x3\x1\x6\xFFFF\x1\x1\x7\xFFFF\x1\x1\x2\xFFFF"+
 				"\x2\x1\x1\xFFFF\x1\x3\x2\x1\x5\xFFFF\x1\x1\xE\xFFFF\x1\x1\x2\xFFFF\x2"+
 				"\x1\x1\xFFFF\x5\x1\x1\xFFFF\x3\x1\x2\xFFFF\xB\x1\x3\xFFFF\x1\x1",
 				"",
 				"\x1\x1\x3\xFFFF\x1\x1\x2\xFFFF\x1\x4\x1\xFFFF\x1\x1\x1\xFFFF\x2\x1\x5"+
-				"\xFFFF\x1\x1\x2\xFFFF\x3\x1\x6\xFFFF\x1\x1\x7\xFFFF\x1\x1\x2\xFFFF\x2"+
+				"\xFFFF\x1\x1\x3\xFFFF\x3\x1\x6\xFFFF\x1\x1\x7\xFFFF\x1\x1\x2\xFFFF\x2"+
 				"\x1\x1\xFFFF\x1\x3\x2\x1\x5\xFFFF\x1\x1\xE\xFFFF\x1\x1\x2\xFFFF\x2\x1"+
 				"\x1\xFFFF\x5\x1\x1\xFFFF\x3\x1\x2\xFFFF\xB\x1\x3\xFFFF\x1\x1",
 				"",
 				"\x1\x1\x3\xFFFF\x1\x1\x2\xFFFF\x1\x4\x1\xFFFF\x1\x1\x1\xFFFF\x2\x1\x5"+
-				"\xFFFF\x1\x1\x2\xFFFF\x3\x1\x6\xFFFF\x1\x1\x7\xFFFF\x1\x1\x2\xFFFF\x2"+
+				"\xFFFF\x1\x1\x3\xFFFF\x3\x1\x6\xFFFF\x1\x1\x7\xFFFF\x1\x1\x2\xFFFF\x2"+
 				"\x1\x1\xFFFF\x1\x3\x2\x1\x5\xFFFF\x1\x1\xE\xFFFF\x1\x1\x2\xFFFF\x2\x1"+
 				"\x1\xFFFF\x5\x1\x1\xFFFF\x3\x1\x2\xFFFF\xB\x1\x3\xFFFF\x1\x1"
 			};
@@ -19819,15 +19820,15 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA36_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA36_maxS =
-			"\x2\x41\x2\xFFFF";
+			"\x2\x42\x2\xFFFF";
 		private const string DFA36_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA36_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA36_transitionS =
 			{
-				"\x1\x1\x24\xFFFF\x1\x3\x7\xFFFF\x1\x2",
-				"\x1\x1\x24\xFFFF\x1\x3\x7\xFFFF\x1\x2",
+				"\x1\x1\x25\xFFFF\x1\x3\x7\xFFFF\x1\x2",
+				"\x1\x1\x25\xFFFF\x1\x3\x7\xFFFF\x1\x2",
 				"",
 				""
 			};
@@ -19880,7 +19881,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA38_minS =
 			"\x1\x5\x1\xD\x2\xFFFF\x1\xD";
 		private const string DFA38_maxS =
-			"\x2\x6F\x2\xFFFF\x1\x6F";
+			"\x2\x70\x2\xFFFF\x1\x70";
 		private const string DFA38_acceptS =
 			"\x2\xFFFF\x1\x1\x1\x2\x1\xFFFF";
 		private const string DFA38_specialS =
@@ -19888,18 +19889,18 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA38_transitionS =
 			{
 				"\x1\x3\x7\xFFFF\x1\x3\x3\xFFFF\x1\x3\x2\xFFFF\x1\x1\x2\x3\x1\xFFFF\x2"+
-				"\x3\x5\xFFFF\x1\x3\x2\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF"+
+				"\x3\x5\xFFFF\x1\x3\x3\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF"+
 				"\x2\x3\x1\xFFFF\x3\x3\x5\xFFFF\x1\x3\x4\xFFFF\x1\x2\x9\xFFFF\x1\x3\x2"+
 				"\xFFFF\x2\x3\x1\xFFFF\x5\x3\x1\xFFFF\x3\x3\x2\xFFFF\xB\x3\x3\xFFFF\x1"+
 				"\x3",
 				"\x1\x3\x3\xFFFF\x1\x3\x2\xFFFF\x1\x4\x1\xFFFF\x1\x3\x1\xFFFF\x2\x3\x5"+
-				"\xFFFF\x1\x3\x2\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF\x2"+
+				"\xFFFF\x1\x3\x3\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF\x2"+
 				"\x3\x1\xFFFF\x3\x3\x5\xFFFF\x1\x3\x4\xFFFF\x1\x2\x9\xFFFF\x1\x3\x2\xFFFF"+
 				"\x2\x3\x1\xFFFF\x5\x3\x1\xFFFF\x3\x3\x2\xFFFF\xB\x3\x3\xFFFF\x1\x3",
 				"",
 				"",
 				"\x1\x3\x3\xFFFF\x1\x3\x2\xFFFF\x1\x4\x1\xFFFF\x1\x3\x1\xFFFF\x2\x3\x5"+
-				"\xFFFF\x1\x3\x2\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF\x2"+
+				"\xFFFF\x1\x3\x3\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF\x2"+
 				"\x3\x1\xFFFF\x3\x3\x5\xFFFF\x1\x3\x4\xFFFF\x1\x2\x9\xFFFF\x1\x3\x2\xFFFF"+
 				"\x2\x3\x1\xFFFF\x5\x3\x1\xFFFF\x3\x3\x2\xFFFF\xB\x3\x3\xFFFF\x1\x3"
 			};
@@ -19952,15 +19953,15 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA40_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA40_maxS =
-			"\x2\x5F\x2\xFFFF";
+			"\x2\x60\x2\xFFFF";
 		private const string DFA40_acceptS =
 			"\x2\xFFFF\x1\x1\x1\x2";
 		private const string DFA40_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA40_transitionS =
 			{
-				"\x1\x1\x24\xFFFF\x1\x3\x7\xFFFF\x1\x3\x4\xFFFF\x1\x2\x18\xFFFF\x1\x3",
-				"\x1\x1\x24\xFFFF\x1\x3\x7\xFFFF\x1\x3\x4\xFFFF\x1\x2\x18\xFFFF\x1\x3",
+				"\x1\x1\x25\xFFFF\x1\x3\x7\xFFFF\x1\x3\x4\xFFFF\x1\x2\x18\xFFFF\x1\x3",
+				"\x1\x1\x25\xFFFF\x1\x3\x7\xFFFF\x1\x3\x4\xFFFF\x1\x2\x18\xFFFF\x1\x3",
 				"",
 				""
 			};
@@ -20013,7 +20014,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA60_minS =
 			"\x2\xD\x2\xFFFF";
 		private const string DFA60_maxS =
-			"\x2\x6F\x2\xFFFF";
+			"\x2\x70\x2\xFFFF";
 		private const string DFA60_acceptS =
 			"\x2\xFFFF\x1\x1\x1\x2";
 		private const string DFA60_specialS =
@@ -20021,11 +20022,11 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA60_transitionS =
 			{
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x1\xFFFF\x1\x2\x1\xFFFF\x1\x2\x6"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1\x2\x2\xFFFF\x2"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1\x2\x2\xFFFF\x2"+
 				"\x2\x2\xFFFF\x2\x2\x5\xFFFF\x1\x3\xE\xFFFF\x1\x2\x7\xFFFF\x1\x2\x4\xFFFF"+
 				"\x1\x2\x3\xFFFF\x1\x2\x4\xFFFF\x3\x2\x2\xFFFF\x1\x2\x3\xFFFF\x1\x2",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x1\xFFFF\x1\x2\x1\xFFFF\x1\x2\x6"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1\x2\x2\xFFFF\x2"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1\x2\x2\xFFFF\x2"+
 				"\x2\x2\xFFFF\x2\x2\x5\xFFFF\x1\x3\xE\xFFFF\x1\x2\x7\xFFFF\x1\x2\x4\xFFFF"+
 				"\x1\x2\x3\xFFFF\x1\x2\x4\xFFFF\x3\x2\x2\xFFFF\x1\x2\x3\xFFFF\x1\x2",
 				"",
@@ -20080,7 +20081,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA63_minS =
 			"\x2\xD\x2\xFFFF";
 		private const string DFA63_maxS =
-			"\x2\x6F\x2\xFFFF";
+			"\x2\x70\x2\xFFFF";
 		private const string DFA63_acceptS =
 			"\x2\xFFFF\x1\x1\x1\x2";
 		private const string DFA63_specialS =
@@ -20088,12 +20089,12 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA63_transitionS =
 			{
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x1\xFFFF\x1\x2\x1\xFFFF\x1\x2\x6"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1\x2\x2\xFFFF\x2"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1\x2\x2\xFFFF\x2"+
 				"\x2\x2\xFFFF\x2\x2\x5\xFFFF\x1\x3\xE\xFFFF\x1\x2\x7\xFFFF\x1\x2\x4\xFFFF"+
 				"\x1\x2\x3\xFFFF\x1\x2\x4\xFFFF\x1\x2\x1\xFFFF\x1\x2\x2\xFFFF\x1\x2\x3"+
 				"\xFFFF\x1\x2",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x1\xFFFF\x1\x2\x1\xFFFF\x1\x2\x6"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1\x2\x2\xFFFF\x2"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1\x2\x2\xFFFF\x2"+
 				"\x2\x2\xFFFF\x2\x2\x5\xFFFF\x1\x3\xE\xFFFF\x1\x2\x7\xFFFF\x1\x2\x4\xFFFF"+
 				"\x1\x2\x3\xFFFF\x1\x2\x4\xFFFF\x1\x2\x1\xFFFF\x1\x2\x2\xFFFF\x1\x2\x3"+
 				"\xFFFF\x1\x2",
@@ -20149,7 +20150,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA66_minS =
 			"\x2\xD\x2\xFFFF";
 		private const string DFA66_maxS =
-			"\x2\x6F\x2\xFFFF";
+			"\x2\x70\x2\xFFFF";
 		private const string DFA66_acceptS =
 			"\x2\xFFFF\x1\x1\x1\x2";
 		private const string DFA66_specialS =
@@ -20157,12 +20158,12 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA66_transitionS =
 			{
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x1\xFFFF\x1\x2\x1\xFFFF\x1\x2\x2"+
-				"\xFFFF\x1\x3\x3\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1"+
+				"\xFFFF\x1\x3\x3\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1"+
 				"\x2\x2\xFFFF\x2\x2\x2\xFFFF\x2\x2\x14\xFFFF\x1\x2\x7\xFFFF\x1\x2\x4"+
 				"\xFFFF\x1\x2\x3\xFFFF\x1\x2\x4\xFFFF\x1\x2\x1\xFFFF\x1\x2\x2\xFFFF\x1"+
 				"\x2\x3\xFFFF\x1\x2",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x1\xFFFF\x1\x2\x1\xFFFF\x1\x2\x2"+
-				"\xFFFF\x1\x3\x3\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1"+
+				"\xFFFF\x1\x3\x3\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1"+
 				"\x2\x2\xFFFF\x2\x2\x2\xFFFF\x2\x2\x14\xFFFF\x1\x2\x7\xFFFF\x1\x2\x4"+
 				"\xFFFF\x1\x2\x3\xFFFF\x1\x2\x4\xFFFF\x1\x2\x1\xFFFF\x1\x2\x2\xFFFF\x1"+
 				"\x2\x3\xFFFF\x1\x2",
@@ -20218,15 +20219,15 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA93_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA93_maxS =
-			"\x2\x57\x2\xFFFF";
+			"\x2\x58\x2\xFFFF";
 		private const string DFA93_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA93_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA93_transitionS =
 			{
-				"\x1\x1\x4\xFFFF\x1\x2\x3A\xFFFF\x1\x3\x2\xFFFF\x1\x2",
-				"\x1\x1\x4\xFFFF\x1\x2\x3A\xFFFF\x1\x3\x2\xFFFF\x1\x2",
+				"\x1\x1\x4\xFFFF\x1\x2\x3B\xFFFF\x1\x3\x2\xFFFF\x1\x2",
+				"\x1\x1\x4\xFFFF\x1\x2\x3B\xFFFF\x1\x3\x2\xFFFF\x1\x2",
 				"",
 				""
 			};
@@ -20279,15 +20280,15 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA97_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA97_maxS =
-			"\x2\x57\x2\xFFFF";
+			"\x2\x58\x2\xFFFF";
 		private const string DFA97_acceptS =
 			"\x2\xFFFF\x1\x1\x1\x2";
 		private const string DFA97_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA97_transitionS =
 			{
-				"\x1\x1\x4\xFFFF\x1\x3\x3D\xFFFF\x1\x2",
-				"\x1\x1\x4\xFFFF\x1\x3\x3D\xFFFF\x1\x2",
+				"\x1\x1\x4\xFFFF\x1\x3\x3E\xFFFF\x1\x2",
+				"\x1\x1\x4\xFFFF\x1\x3\x3E\xFFFF\x1\x2",
 				"",
 				""
 			};
@@ -20340,15 +20341,15 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA96_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA96_maxS =
-			"\x2\x54\x2\xFFFF";
+			"\x2\x55\x2\xFFFF";
 		private const string DFA96_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA96_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA96_transitionS =
 			{
-				"\x1\x1\x4\xFFFF\x1\x2\x3A\xFFFF\x1\x3",
-				"\x1\x1\x4\xFFFF\x1\x2\x3A\xFFFF\x1\x3",
+				"\x1\x1\x4\xFFFF\x1\x2\x3B\xFFFF\x1\x3",
+				"\x1\x1\x4\xFFFF\x1\x2\x3B\xFFFF\x1\x3",
 				"",
 				""
 			};
@@ -20401,7 +20402,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA109_minS =
 			"\x2\xD\x2\xFFFF";
 		private const string DFA109_maxS =
-			"\x2\x6F\x2\xFFFF";
+			"\x2\x70\x2\xFFFF";
 		private const string DFA109_acceptS =
 			"\x2\xFFFF\x1\x1\x1\x2";
 		private const string DFA109_specialS =
@@ -20409,11 +20410,11 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA109_transitionS =
 			{
 				"\x1\x3\x3\xFFFF\x1\x3\x2\xFFFF\x1\x1\x1\xFFFF\x1\x3\x1\xFFFF\x2\x3\x5"+
-				"\xFFFF\x1\x3\x2\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF\x2"+
+				"\xFFFF\x1\x3\x3\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF\x2"+
 				"\x3\x2\xFFFF\x2\x3\x5\xFFFF\x1\x3\xE\xFFFF\x1\x3\x2\xFFFF\x2\x3\x1\xFFFF"+
 				"\x5\x3\x1\x2\x3\x3\x2\xFFFF\xB\x3\x3\xFFFF\x1\x3",
 				"\x1\x3\x3\xFFFF\x1\x3\x2\xFFFF\x1\x1\x1\xFFFF\x1\x3\x1\xFFFF\x2\x3\x5"+
-				"\xFFFF\x1\x3\x2\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF\x2"+
+				"\xFFFF\x1\x3\x3\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF\x2"+
 				"\x3\x2\xFFFF\x2\x3\x5\xFFFF\x1\x3\xE\xFFFF\x1\x3\x2\xFFFF\x2\x3\x1\xFFFF"+
 				"\x5\x3\x1\x2\x3\x3\x2\xFFFF\xB\x3\x3\xFFFF\x1\x3",
 				"",
@@ -20468,7 +20469,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA118_minS =
 			"\x1\x5\x1\xFFFF\x1\xD\x1\xFFFF\x1\xD";
 		private const string DFA118_maxS =
-			"\x1\x6F\x1\xFFFF\x1\x6F\x1\xFFFF\x1\x6F";
+			"\x1\x70\x1\xFFFF\x1\x70\x1\xFFFF\x1\x70";
 		private const string DFA118_acceptS =
 			"\x1\xFFFF\x1\x2\x1\xFFFF\x1\x1\x1\xFFFF";
 		private const string DFA118_specialS =
@@ -20476,17 +20477,17 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA118_transitionS =
 			{
 				"\x1\x1\x7\xFFFF\x1\x1\x3\xFFFF\x1\x1\x2\xFFFF\x1\x2\x2\x1\x1\xFFFF\x4"+
-				"\x1\x3\xFFFF\x1\x1\x2\xFFFF\x3\x1\x6\xFFFF\x1\x1\x7\xFFFF\x1\x1\x2\xFFFF"+
+				"\x1\x3\xFFFF\x1\x1\x3\xFFFF\x3\x1\x6\xFFFF\x1\x1\x7\xFFFF\x1\x1\x2\xFFFF"+
 				"\x2\x1\x1\xFFFF\x1\x3\x2\x1\x4\xFFFF\x2\x1\xE\xFFFF\x1\x1\x2\xFFFF\x2"+
 				"\x1\x1\xFFFF\x5\x1\x1\xFFFF\x3\x1\x2\xFFFF\xB\x1\x3\xFFFF\x1\x1",
 				"",
 				"\x1\x1\x3\xFFFF\x1\x1\x2\xFFFF\x1\x4\x1\xFFFF\x1\x1\x1\xFFFF\x4\x1\x3"+
-				"\xFFFF\x1\x1\x2\xFFFF\x3\x1\x6\xFFFF\x1\x1\x7\xFFFF\x1\x1\x2\xFFFF\x2"+
+				"\xFFFF\x1\x1\x3\xFFFF\x3\x1\x6\xFFFF\x1\x1\x7\xFFFF\x1\x1\x2\xFFFF\x2"+
 				"\x1\x1\xFFFF\x1\x3\x2\x1\x4\xFFFF\x2\x1\xE\xFFFF\x1\x1\x2\xFFFF\x2\x1"+
 				"\x1\xFFFF\x5\x1\x1\xFFFF\x3\x1\x2\xFFFF\xB\x1\x3\xFFFF\x1\x1",
 				"",
 				"\x1\x1\x3\xFFFF\x1\x1\x2\xFFFF\x1\x4\x1\xFFFF\x1\x1\x1\xFFFF\x4\x1\x3"+
-				"\xFFFF\x1\x1\x2\xFFFF\x3\x1\x6\xFFFF\x1\x1\x7\xFFFF\x1\x1\x2\xFFFF\x2"+
+				"\xFFFF\x1\x1\x3\xFFFF\x3\x1\x6\xFFFF\x1\x1\x7\xFFFF\x1\x1\x2\xFFFF\x2"+
 				"\x1\x1\xFFFF\x1\x3\x2\x1\x4\xFFFF\x2\x1\xE\xFFFF\x1\x1\x2\xFFFF\x2\x1"+
 				"\x1\xFFFF\x5\x1\x1\xFFFF\x3\x1\x2\xFFFF\xB\x1\x3\xFFFF\x1\x1"
 			};
@@ -20539,15 +20540,15 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA121_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA121_maxS =
-			"\x2\x41\x2\xFFFF";
+			"\x2\x42\x2\xFFFF";
 		private const string DFA121_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA121_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA121_transitionS =
 			{
-				"\x1\x1\x24\xFFFF\x1\x3\x7\xFFFF\x1\x2",
-				"\x1\x1\x24\xFFFF\x1\x3\x7\xFFFF\x1\x2",
+				"\x1\x1\x25\xFFFF\x1\x3\x7\xFFFF\x1\x2",
+				"\x1\x1\x25\xFFFF\x1\x3\x7\xFFFF\x1\x2",
 				"",
 				""
 			};
@@ -20600,7 +20601,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA145_minS =
 			"\x2\xD\x2\xFFFF";
 		private const string DFA145_maxS =
-			"\x2\x6F\x2\xFFFF";
+			"\x2\x70\x2\xFFFF";
 		private const string DFA145_acceptS =
 			"\x2\xFFFF\x1\x1\x1\x2";
 		private const string DFA145_specialS =
@@ -20608,12 +20609,12 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA145_transitionS =
 			{
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x1\xFFFF\x1\x2\x1\xFFFF\x1\x2\x2"+
-				"\xFFFF\x1\x3\x3\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1"+
+				"\xFFFF\x1\x3\x3\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1"+
 				"\x2\x2\xFFFF\x2\x2\x2\xFFFF\x2\x2\x14\xFFFF\x1\x2\x7\xFFFF\x1\x2\x4"+
 				"\xFFFF\x1\x2\x3\xFFFF\x1\x2\x4\xFFFF\x1\x2\x1\xFFFF\x1\x2\x2\xFFFF\x1"+
 				"\x2\x3\xFFFF\x1\x2",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x1\xFFFF\x1\x2\x1\xFFFF\x1\x2\x2"+
-				"\xFFFF\x1\x3\x3\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1"+
+				"\xFFFF\x1\x3\x3\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1"+
 				"\x2\x2\xFFFF\x2\x2\x2\xFFFF\x2\x2\x14\xFFFF\x1\x2\x7\xFFFF\x1\x2\x4"+
 				"\xFFFF\x1\x2\x3\xFFFF\x1\x2\x4\xFFFF\x1\x2\x1\xFFFF\x1\x2\x2\xFFFF\x1"+
 				"\x2\x3\xFFFF\x1\x2",
@@ -20669,15 +20670,15 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA144_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA144_maxS =
-			"\x2\x39\x2\xFFFF";
+			"\x2\x3A\x2\xFFFF";
 		private const string DFA144_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA144_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA144_transitionS =
 			{
-				"\x1\x1\x6\xFFFF\x1\x2\x1D\xFFFF\x1\x3",
-				"\x1\x1\x6\xFFFF\x1\x2\x1D\xFFFF\x1\x3",
+				"\x1\x1\x6\xFFFF\x1\x2\x1E\xFFFF\x1\x3",
+				"\x1\x1\x6\xFFFF\x1\x2\x1E\xFFFF\x1\x3",
 				"",
 				""
 			};
@@ -20730,7 +20731,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA154_minS =
 			"\x1\x5\x1\xD\x2\xFFFF\x1\xD";
 		private const string DFA154_maxS =
-			"\x2\x6F\x2\xFFFF\x1\x6F";
+			"\x2\x70\x2\xFFFF\x1\x70";
 		private const string DFA154_acceptS =
 			"\x2\xFFFF\x1\x1\x1\x2\x1\xFFFF";
 		private const string DFA154_specialS =
@@ -20738,17 +20739,17 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA154_transitionS =
 			{
 				"\x1\x3\x7\xFFFF\x1\x3\x3\xFFFF\x1\x3\x2\xFFFF\x1\x1\x2\x3\x1\xFFFF\x4"+
-				"\x3\x3\xFFFF\x1\x3\x2\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF"+
+				"\x3\x3\xFFFF\x1\x3\x3\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF"+
 				"\x2\x3\x1\xFFFF\x3\x3\x4\xFFFF\x2\x3\xD\xFFFF\x1\x2\x1\x3\x2\xFFFF\x2"+
 				"\x3\x1\xFFFF\x5\x3\x1\xFFFF\x3\x3\x2\xFFFF\xB\x3\x3\xFFFF\x1\x3",
 				"\x1\x3\x3\xFFFF\x1\x3\x2\xFFFF\x1\x4\x1\xFFFF\x1\x3\x1\xFFFF\x4\x3\x3"+
-				"\xFFFF\x1\x3\x2\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF\x2"+
+				"\xFFFF\x1\x3\x3\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF\x2"+
 				"\x3\x1\xFFFF\x3\x3\x4\xFFFF\x2\x3\xD\xFFFF\x1\x2\x1\x3\x2\xFFFF\x2\x3"+
 				"\x1\xFFFF\x5\x3\x1\xFFFF\x3\x3\x2\xFFFF\xB\x3\x3\xFFFF\x1\x3",
 				"",
 				"",
 				"\x1\x3\x3\xFFFF\x1\x3\x2\xFFFF\x1\x4\x1\xFFFF\x1\x3\x1\xFFFF\x4\x3\x3"+
-				"\xFFFF\x1\x3\x2\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF\x2"+
+				"\xFFFF\x1\x3\x3\xFFFF\x3\x3\x6\xFFFF\x1\x3\x7\xFFFF\x1\x3\x2\xFFFF\x2"+
 				"\x3\x1\xFFFF\x3\x3\x4\xFFFF\x2\x3\xD\xFFFF\x1\x2\x1\x3\x2\xFFFF\x2\x3"+
 				"\x1\xFFFF\x5\x3\x1\xFFFF\x3\x3\x2\xFFFF\xB\x3\x3\xFFFF\x1\x3"
 			};
@@ -20801,15 +20802,15 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA159_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA159_maxS =
-			"\x2\x5F\x2\xFFFF";
+			"\x2\x60\x2\xFFFF";
 		private const string DFA159_acceptS =
 			"\x2\xFFFF\x1\x1\x1\x2";
 		private const string DFA159_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA159_transitionS =
 			{
-				"\x1\x1\x24\xFFFF\x1\x3\x6\xFFFF\x2\x3\xD\xFFFF\x1\x2\xF\xFFFF\x1\x3",
-				"\x1\x1\x24\xFFFF\x1\x3\x6\xFFFF\x2\x3\xD\xFFFF\x1\x2\xF\xFFFF\x1\x3",
+				"\x1\x1\x25\xFFFF\x1\x3\x6\xFFFF\x2\x3\xD\xFFFF\x1\x2\xF\xFFFF\x1\x3",
+				"\x1\x1\x25\xFFFF\x1\x3\x6\xFFFF\x2\x3\xD\xFFFF\x1\x2\xF\xFFFF\x1\x3",
 				"",
 				""
 			};
@@ -20862,7 +20863,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA162_minS =
 			"\x1\x5\x1\xD\x2\xFFFF\x1\xD";
 		private const string DFA162_maxS =
-			"\x2\x6F\x2\xFFFF\x1\x6F";
+			"\x2\x70\x2\xFFFF\x1\x70";
 		private const string DFA162_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1\x1\xFFFF";
 		private const string DFA162_specialS =
@@ -20870,17 +20871,17 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA162_transitionS =
 			{
 				"\x1\x2\x7\xFFFF\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x2\x2\x1\xFFFF\x4"+
-				"\x2\x3\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1\x2\x2\xFFFF"+
+				"\x2\x3\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1\x2\x2\xFFFF"+
 				"\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\xD\xFFFF\x2\x2\x2\xFFFF\x2\x2\x1"+
 				"\xFFFF\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xB\x2\x2\xFFFF\x1\x3\x1\x2",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1\x2\x2\xFFFF\x2"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1\x2\x2\xFFFF\x2"+
 				"\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\xD\xFFFF\x2\x2\x2\xFFFF\x2\x2\x1\xFFFF"+
 				"\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xB\x2\x2\xFFFF\x1\x3\x1\x2",
 				"",
 				"",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1\x2\x2\xFFFF\x2"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1\x2\x2\xFFFF\x2"+
 				"\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\xD\xFFFF\x2\x2\x2\xFFFF\x2\x2\x1\xFFFF"+
 				"\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xB\x2\x2\xFFFF\x1\x3\x1\x2"
 			};
@@ -20933,16 +20934,16 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA165_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA165_maxS =
-			"\x2\x6E\x2\xFFFF";
+			"\x2\x6F\x2\xFFFF";
 		private const string DFA165_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA165_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA165_transitionS =
 			{
-				"\x1\x1\x24\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF\x1\x2\xF\xFFFF\x1\x2"+
+				"\x1\x1\x25\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF\x1\x2\xF\xFFFF\x1\x2"+
 				"\xE\xFFFF\x1\x3",
-				"\x1\x1\x24\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF\x1\x2\xF\xFFFF\x1\x2"+
+				"\x1\x1\x25\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF\x1\x2\xF\xFFFF\x1\x2"+
 				"\xE\xFFFF\x1\x3",
 				"",
 				""
@@ -20996,7 +20997,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA168_minS =
 			"\x1\x5\x1\xD\x2\xFFFF\x1\xD";
 		private const string DFA168_maxS =
-			"\x2\x6F\x2\xFFFF\x1\x6F";
+			"\x2\x70\x2\xFFFF\x1\x70";
 		private const string DFA168_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1\x1\xFFFF";
 		private const string DFA168_specialS =
@@ -21004,18 +21005,18 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA168_transitionS =
 			{
 				"\x1\x2\x7\xFFFF\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x2\x2\x1\xFFFF\x4"+
-				"\x2\x3\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x3\x2\xFFFF"+
+				"\x2\x3\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x3\x2\xFFFF"+
 				"\x1\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\xD\xFFFF\x2\x2\x2"+
 				"\xFFFF\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xB\x2\x2\xFFFF\x2"+
 				"\x2",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x3\x2\xFFFF\x1"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x3\x2\xFFFF\x1"+
 				"\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\xD\xFFFF\x2\x2\x2\xFFFF"+
 				"\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xB\x2\x2\xFFFF\x2\x2",
 				"",
 				"",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x3\x2\xFFFF\x1"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x3\x2\xFFFF\x1"+
 				"\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\xD\xFFFF\x2\x2\x2\xFFFF"+
 				"\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xB\x2\x2\xFFFF\x2\x2"
 			};
@@ -21068,16 +21069,16 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA171_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA171_maxS =
-			"\x2\x6E\x2\xFFFF";
+			"\x2\x6F\x2\xFFFF";
 		private const string DFA171_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA171_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA171_transitionS =
 			{
-				"\x1\x1\x1B\xFFFF\x1\x3\x8\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF\x1\x2"+
+				"\x1\x1\x1C\xFFFF\x1\x3\x8\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF\x1\x2"+
 				"\xF\xFFFF\x1\x2\xE\xFFFF\x1\x2",
-				"\x1\x1\x1B\xFFFF\x1\x3\x8\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF\x1\x2"+
+				"\x1\x1\x1C\xFFFF\x1\x3\x8\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF\x1\x2"+
 				"\xF\xFFFF\x1\x2\xE\xFFFF\x1\x2",
 				"",
 				""
@@ -21131,7 +21132,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA174_minS =
 			"\x1\x5\x1\xD\x2\xFFFF\x1\xD";
 		private const string DFA174_maxS =
-			"\x2\x6F\x2\xFFFF\x1\x6F";
+			"\x2\x70\x2\xFFFF\x1\x70";
 		private const string DFA174_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1\x1\xFFFF";
 		private const string DFA174_specialS =
@@ -21139,19 +21140,19 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA174_transitionS =
 			{
 				"\x1\x2\x7\xFFFF\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x2\x2\x1\xFFFF\x4"+
-				"\x2\x3\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x2\xFFFF"+
+				"\x2\x3\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x2\xFFFF"+
 				"\x1\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\xD\xFFFF\x2\x2\x2"+
 				"\xFFFF\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xB\x2\x1\x3\x1\xFFFF"+
 				"\x2\x2",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x2\xFFFF\x1"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x2\xFFFF\x1"+
 				"\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\xD\xFFFF\x2\x2\x2\xFFFF"+
 				"\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xB\x2\x1\x3\x1\xFFFF\x2"+
 				"\x2",
 				"",
 				"",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x2\xFFFF\x1"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x2\xFFFF\x1"+
 				"\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\xD\xFFFF\x2\x2\x2\xFFFF"+
 				"\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xB\x2\x1\x3\x1\xFFFF\x2"+
 				"\x2"
@@ -21205,16 +21206,16 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA177_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA177_maxS =
-			"\x2\x6E\x2\xFFFF";
+			"\x2\x6F\x2\xFFFF";
 		private const string DFA177_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA177_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA177_transitionS =
 			{
-				"\x1\x1\x1B\xFFFF\x1\x2\x8\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF\x1\x2"+
+				"\x1\x1\x1C\xFFFF\x1\x2\x8\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF\x1\x2"+
 				"\xF\xFFFF\x1\x2\xC\xFFFF\x1\x3\x1\xFFFF\x1\x2",
-				"\x1\x1\x1B\xFFFF\x1\x2\x8\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF\x1\x2"+
+				"\x1\x1\x1C\xFFFF\x1\x2\x8\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF\x1\x2"+
 				"\xF\xFFFF\x1\x2\xC\xFFFF\x1\x3\x1\xFFFF\x1\x2",
 				"",
 				""
@@ -21268,7 +21269,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA180_minS =
 			"\x1\x5\x1\xD\x2\xFFFF\x1\xD";
 		private const string DFA180_maxS =
-			"\x2\x6F\x2\xFFFF\x1\x6F";
+			"\x2\x70\x2\xFFFF\x1\x70";
 		private const string DFA180_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1\x1\xFFFF";
 		private const string DFA180_specialS =
@@ -21276,19 +21277,19 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA180_transitionS =
 			{
 				"\x1\x2\x7\xFFFF\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x2\x2\x1\xFFFF\x4"+
-				"\x2\x3\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x2\xFFFF"+
+				"\x2\x3\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x2\xFFFF"+
 				"\x1\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\xD\xFFFF\x2\x2\x1"+
 				"\x3\x1\xFFFF\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xC\x2\x1\xFFFF"+
 				"\x2\x2",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x2\xFFFF\x1"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x2\xFFFF\x1"+
 				"\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\xD\xFFFF\x2\x2\x1\x3"+
 				"\x1\xFFFF\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xC\x2\x1\xFFFF"+
 				"\x2\x2",
 				"",
 				"",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x2\xFFFF\x1"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x2\xFFFF\x1"+
 				"\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\xD\xFFFF\x2\x2\x1\x3"+
 				"\x1\xFFFF\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xC\x2\x1\xFFFF"+
 				"\x2\x2"
@@ -21342,16 +21343,16 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA183_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA183_maxS =
-			"\x2\x6E\x2\xFFFF";
+			"\x2\x6F\x2\xFFFF";
 		private const string DFA183_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA183_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA183_transitionS =
 			{
-				"\x1\x1\x1B\xFFFF\x1\x2\x8\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF\x1\x2"+
+				"\x1\x1\x1C\xFFFF\x1\x2\x8\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF\x1\x2"+
 				"\x1\xFFFF\x1\x3\xD\xFFFF\x1\x2\xC\xFFFF\x1\x2\x1\xFFFF\x1\x2",
-				"\x1\x1\x1B\xFFFF\x1\x2\x8\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF\x1\x2"+
+				"\x1\x1\x1C\xFFFF\x1\x2\x8\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF\x1\x2"+
 				"\x1\xFFFF\x1\x3\xD\xFFFF\x1\x2\xC\xFFFF\x1\x2\x1\xFFFF\x1\x2",
 				"",
 				""
@@ -21405,7 +21406,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA186_minS =
 			"\x1\x5\x1\xD\x2\xFFFF\x1\xD";
 		private const string DFA186_maxS =
-			"\x2\x6F\x2\xFFFF\x1\x6F";
+			"\x2\x70\x2\xFFFF\x1\x70";
 		private const string DFA186_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1\x1\xFFFF";
 		private const string DFA186_specialS =
@@ -21413,19 +21414,19 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA186_transitionS =
 			{
 				"\x1\x2\x7\xFFFF\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x2\x2\x1\xFFFF\x4"+
-				"\x2\x3\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x1\x3"+
+				"\x2\x3\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x1\x3"+
 				"\x1\xFFFF\x1\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\xD\xFFFF"+
 				"\x3\x2\x1\xFFFF\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xC\x2\x1"+
 				"\xFFFF\x2\x2",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x1\x3\x1\xFFFF"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x1\x3\x1\xFFFF"+
 				"\x1\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\xD\xFFFF\x3\x2\x1"+
 				"\xFFFF\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xC\x2\x1\xFFFF\x2"+
 				"\x2",
 				"",
 				"",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x1\x3\x1\xFFFF"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x4\xFFFF\x1\x2\x1\x3\x1\xFFFF"+
 				"\x1\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\xD\xFFFF\x3\x2\x1"+
 				"\xFFFF\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xC\x2\x1\xFFFF\x2"+
 				"\x2"
@@ -21479,16 +21480,16 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA189_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA189_maxS =
-			"\x2\x6E\x2\xFFFF";
+			"\x2\x6F\x2\xFFFF";
 		private const string DFA189_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA189_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA189_transitionS =
 			{
-				"\x1\x1\x1B\xFFFF\x1\x2\x1\x3\x7\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF"+
+				"\x1\x1\x1C\xFFFF\x1\x2\x1\x3\x7\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF"+
 				"\x1\x2\x1\xFFFF\x1\x2\xD\xFFFF\x1\x2\xC\xFFFF\x1\x2\x1\xFFFF\x1\x2",
-				"\x1\x1\x1B\xFFFF\x1\x2\x1\x3\x7\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF"+
+				"\x1\x1\x1C\xFFFF\x1\x2\x1\x3\x7\xFFFF\x1\x2\x6\xFFFF\x2\x2\xD\xFFFF"+
 				"\x1\x2\x1\xFFFF\x1\x2\xD\xFFFF\x1\x2\xC\xFFFF\x1\x2\x1\xFFFF\x1\x2",
 				"",
 				""
@@ -21542,7 +21543,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA192_minS =
 			"\x1\x5\x1\xD\x2\xFFFF\x1\xD";
 		private const string DFA192_maxS =
-			"\x2\x6F\x2\xFFFF\x1\x6F";
+			"\x2\x70\x2\xFFFF\x1\x70";
 		private const string DFA192_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1\x1\xFFFF";
 		private const string DFA192_specialS =
@@ -21550,19 +21551,19 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA192_transitionS =
 			{
 				"\x1\x2\x7\xFFFF\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x2\x2\x1\xFFFF\x4"+
-				"\x2\x3\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x2\x3\x2\xFFFF\x2\x2"+
+				"\x2\x3\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x2\x3\x2\xFFFF\x2\x2"+
 				"\x1\xFFFF\x1\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\x5\xFFFF"+
 				"\x2\x3\x6\xFFFF\x3\x2\x1\xFFFF\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x3\x2\x2"+
 				"\xFFFF\xC\x2\x1\xFFFF\x2\x2",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x2\x3\x2\xFFFF\x2\x2\x1\xFFFF"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x2\x3\x2\xFFFF\x2\x2\x1\xFFFF"+
 				"\x1\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\x5\xFFFF\x2\x3\x6"+
 				"\xFFFF\x3\x2\x1\xFFFF\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xC"+
 				"\x2\x1\xFFFF\x2\x2",
 				"",
 				"",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x2\x3\x2\xFFFF\x2\x2\x1\xFFFF"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x2\x3\x2\xFFFF\x2\x2\x1\xFFFF"+
 				"\x1\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\x5\xFFFF\x2\x3\x6"+
 				"\xFFFF\x3\x2\x1\xFFFF\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x3\x2\x2\xFFFF\xC"+
 				"\x2\x1\xFFFF\x2\x2"
@@ -21616,17 +21617,17 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA195_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA195_maxS =
-			"\x2\x6E\x2\xFFFF";
+			"\x2\x6F\x2\xFFFF";
 		private const string DFA195_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA195_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA195_transitionS =
 			{
-				"\x1\x1\x17\xFFFF\x2\x3\x2\xFFFF\x2\x2\x7\xFFFF\x1\x2\x6\xFFFF\x2\x2"+
+				"\x1\x1\x18\xFFFF\x2\x3\x2\xFFFF\x2\x2\x7\xFFFF\x1\x2\x6\xFFFF\x2\x2"+
 				"\x5\xFFFF\x2\x3\x6\xFFFF\x1\x2\x1\xFFFF\x1\x2\xD\xFFFF\x1\x2\xC\xFFFF"+
 				"\x1\x2\x1\xFFFF\x1\x2",
-				"\x1\x1\x17\xFFFF\x2\x3\x2\xFFFF\x2\x2\x7\xFFFF\x1\x2\x6\xFFFF\x2\x2"+
+				"\x1\x1\x18\xFFFF\x2\x3\x2\xFFFF\x2\x2\x7\xFFFF\x1\x2\x6\xFFFF\x2\x2"+
 				"\x5\xFFFF\x2\x3\x6\xFFFF\x1\x2\x1\xFFFF\x1\x2\xD\xFFFF\x1\x2\xC\xFFFF"+
 				"\x1\x2\x1\xFFFF\x1\x2",
 				"",
@@ -21681,7 +21682,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA198_minS =
 			"\x1\x5\x1\xD\x2\xFFFF\x1\xD";
 		private const string DFA198_maxS =
-			"\x2\x6F\x2\xFFFF\x1\x6F";
+			"\x2\x70\x2\xFFFF\x1\x70";
 		private const string DFA198_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1\x1\xFFFF";
 		private const string DFA198_specialS =
@@ -21689,19 +21690,19 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA198_transitionS =
 			{
 				"\x1\x2\x7\xFFFF\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x2\x2\x1\xFFFF\x4"+
-				"\x2\x3\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x3\x2\x2\xFFFF\x2\x2\x1\xFFFF"+
+				"\x2\x3\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x3\x2\x2\xFFFF\x2\x2\x1\xFFFF"+
 				"\x1\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\x1\x3\x2\xFFFF\x1"+
 				"\x3\x1\xFFFF\x2\x2\x2\x3\x4\xFFFF\x3\x2\x1\xFFFF\x2\x2\x1\xFFFF\x5\x2"+
 				"\x1\xFFFF\x3\x2\x2\x3\xC\x2\x1\xFFFF\x2\x2",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x3\x2\x2\xFFFF\x2\x2\x1\xFFFF\x1"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x3\x2\x2\xFFFF\x2\x2\x1\xFFFF\x1"+
 				"\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\x1\x3\x2\xFFFF\x1\x3"+
 				"\x1\xFFFF\x2\x2\x2\x3\x4\xFFFF\x3\x2\x1\xFFFF\x2\x2\x1\xFFFF\x5\x2\x1"+
 				"\xFFFF\x3\x2\x2\x3\xC\x2\x1\xFFFF\x2\x2",
 				"",
 				"",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x3\x2\x2\xFFFF\x2\x2\x1\xFFFF\x1"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x3\x2\x2\xFFFF\x2\x2\x1\xFFFF\x1"+
 				"\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x2\x2\x1\x3\x2\xFFFF\x1\x3"+
 				"\x1\xFFFF\x2\x2\x2\x3\x4\xFFFF\x3\x2\x1\xFFFF\x2\x2\x1\xFFFF\x5\x2\x1"+
 				"\xFFFF\x3\x2\x2\x3\xC\x2\x1\xFFFF\x2\x2"
@@ -21755,17 +21756,17 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA201_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA201_maxS =
-			"\x2\x6E\x2\xFFFF";
+			"\x2\x6F\x2\xFFFF";
 		private const string DFA201_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA201_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA201_transitionS =
 			{
-				"\x1\x1\x17\xFFFF\x2\x2\x2\xFFFF\x2\x2\x7\xFFFF\x1\x2\x6\xFFFF\x2\x2"+
+				"\x1\x1\x18\xFFFF\x2\x2\x2\xFFFF\x2\x2\x7\xFFFF\x1\x2\x6\xFFFF\x2\x2"+
 				"\x1\x3\x2\xFFFF\x1\x3\x1\xFFFF\x2\x2\x2\x3\x4\xFFFF\x1\x2\x1\xFFFF\x1"+
 				"\x2\xD\xFFFF\x1\x2\x1\x3\xB\xFFFF\x1\x2\x1\xFFFF\x1\x2",
-				"\x1\x1\x17\xFFFF\x2\x2\x2\xFFFF\x2\x2\x7\xFFFF\x1\x2\x6\xFFFF\x2\x2"+
+				"\x1\x1\x18\xFFFF\x2\x2\x2\xFFFF\x2\x2\x7\xFFFF\x1\x2\x6\xFFFF\x2\x2"+
 				"\x1\x3\x2\xFFFF\x1\x3\x1\xFFFF\x2\x2\x2\x3\x4\xFFFF\x1\x2\x1\xFFFF\x1"+
 				"\x2\xD\xFFFF\x1\x2\x1\x3\xB\xFFFF\x1\x2\x1\xFFFF\x1\x2",
 				"",
@@ -21820,7 +21821,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA204_minS =
 			"\x1\x5\x1\xD\x2\xFFFF\x1\xD";
 		private const string DFA204_maxS =
-			"\x2\x6F\x2\xFFFF\x1\x6F";
+			"\x2\x70\x2\xFFFF\x1\x70";
 		private const string DFA204_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1\x1\xFFFF";
 		private const string DFA204_specialS =
@@ -21828,19 +21829,19 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA204_transitionS =
 			{
 				"\x1\x2\x7\xFFFF\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x2\x2\x1\xFFFF\x4"+
-				"\x2\x3\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x3\x2\x2\xFFFF\x2\x2\x1\xFFFF"+
+				"\x2\x3\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x3\x2\x2\xFFFF\x2\x2\x1\xFFFF"+
 				"\x1\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x3\x2\x1\x3\x1\xFFFF\x1"+
 				"\x2\x1\xFFFF\x4\x2\x1\x3\x1\xFFFF\x1\x3\x1\xFFFF\x3\x2\x1\xFFFF\x2\x2"+
 				"\x1\xFFFF\x5\x2\x1\xFFFF\x11\x2\x1\xFFFF\x2\x2",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x3\x2\x2\xFFFF\x2\x2\x1\xFFFF\x1"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x3\x2\x2\xFFFF\x2\x2\x1\xFFFF\x1"+
 				"\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x3\x2\x1\x3\x1\xFFFF\x1\x2"+
 				"\x1\xFFFF\x4\x2\x1\x3\x1\xFFFF\x1\x3\x1\xFFFF\x3\x2\x1\xFFFF\x2\x2\x1"+
 				"\xFFFF\x5\x2\x1\xFFFF\x11\x2\x1\xFFFF\x2\x2",
 				"",
 				"",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x3\x2\x2\xFFFF\x2\x2\x1\xFFFF\x1"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x3\x2\x2\xFFFF\x2\x2\x1\xFFFF\x1"+
 				"\x2\x2\xFFFF\x2\x2\x1\xFFFF\x3\x2\x4\xFFFF\x3\x2\x1\x3\x1\xFFFF\x1\x2"+
 				"\x1\xFFFF\x4\x2\x1\x3\x1\xFFFF\x1\x3\x1\xFFFF\x3\x2\x1\xFFFF\x2\x2\x1"+
 				"\xFFFF\x5\x2\x1\xFFFF\x11\x2\x1\xFFFF\x2\x2"
@@ -21894,7 +21895,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA210_minS =
 			"\x1\x5\x1\xD\x2\xFFFF\x1\xD";
 		private const string DFA210_maxS =
-			"\x2\x6F\x2\xFFFF\x1\x6F";
+			"\x2\x70\x2\xFFFF\x1\x70";
 		private const string DFA210_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1\x1\xFFFF";
 		private const string DFA210_specialS =
@@ -21902,19 +21903,19 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA210_transitionS =
 			{
 				"\x1\x2\x7\xFFFF\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x2\x2\x1\xFFFF\x4"+
-				"\x2\x3\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x3\x2\x1\x3\x1\xFFFF\x2\x2"+
+				"\x2\x3\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x3\x2\x1\x3\x1\xFFFF\x2\x2"+
 				"\x1\xFFFF\x1\x2\x1\x3\x1\xFFFF\x2\x2\x1\xFFFF\x3\x2\x2\xFFFF\x1\x3\x1"+
 				"\xFFFF\x4\x2\x1\xFFFF\x1\x2\x1\xFFFF\x5\x2\x1\xFFFF\x1\x2\x1\xFFFF\x3"+
 				"\x2\x1\xFFFF\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x11\x2\x1\xFFFF\x2\x2",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x3\x2\x1\x3\x1\xFFFF\x2\x2\x1\xFFFF"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x3\x2\x1\x3\x1\xFFFF\x2\x2\x1\xFFFF"+
 				"\x1\x2\x1\x3\x1\xFFFF\x2\x2\x1\xFFFF\x3\x2\x2\xFFFF\x1\x3\x1\xFFFF\x4"+
 				"\x2\x1\xFFFF\x1\x2\x1\xFFFF\x5\x2\x1\xFFFF\x1\x2\x1\xFFFF\x3\x2\x1\xFFFF"+
 				"\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x11\x2\x1\xFFFF\x2\x2",
 				"",
 				"",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x4\x1\xFFFF\x1\x2\x1\xFFFF\x4\x2\x3"+
-				"\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x3\x2\x1\x3\x1\xFFFF\x2\x2\x1\xFFFF"+
+				"\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x3\x2\x1\x3\x1\xFFFF\x2\x2\x1\xFFFF"+
 				"\x1\x2\x1\x3\x1\xFFFF\x2\x2\x1\xFFFF\x3\x2\x2\xFFFF\x1\x3\x1\xFFFF\x4"+
 				"\x2\x1\xFFFF\x1\x2\x1\xFFFF\x5\x2\x1\xFFFF\x1\x2\x1\xFFFF\x3\x2\x1\xFFFF"+
 				"\x2\x2\x1\xFFFF\x5\x2\x1\xFFFF\x11\x2\x1\xFFFF\x2\x2"
@@ -21968,15 +21969,15 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA221_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA221_maxS =
-			"\x2\x39\x2\xFFFF";
+			"\x2\x3A\x2\xFFFF";
 		private const string DFA221_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA221_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA221_transitionS =
 			{
-				"\x1\x1\x5\xFFFF\x1\x2\x1E\xFFFF\x1\x3",
-				"\x1\x1\x5\xFFFF\x1\x2\x1E\xFFFF\x1\x3",
+				"\x1\x1\x5\xFFFF\x1\x2\x1F\xFFFF\x1\x3",
+				"\x1\x1\x5\xFFFF\x1\x2\x1F\xFFFF\x1\x3",
 				"",
 				""
 			};
@@ -22029,7 +22030,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA220_minS =
 			"\x2\xD\x2\xFFFF";
 		private const string DFA220_maxS =
-			"\x2\x6F\x2\xFFFF";
+			"\x2\x70\x2\xFFFF";
 		private const string DFA220_acceptS =
 			"\x2\xFFFF\x1\x1\x1\x2";
 		private const string DFA220_specialS =
@@ -22037,12 +22038,12 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private static readonly string[] DFA220_transitionS =
 			{
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x1\xFFFF\x1\x2\x1\xFFFF\x1\x2\x1"+
-				"\xFFFF\x1\x3\x4\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1"+
+				"\xFFFF\x1\x3\x4\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1"+
 				"\x2\x2\xFFFF\x2\x2\x1\xFFFF\x1\x3\x2\x2\x14\xFFFF\x1\x2\x7\xFFFF\x1"+
 				"\x2\x4\xFFFF\x1\x2\x3\xFFFF\x1\x2\x4\xFFFF\x1\x2\x1\xFFFF\x1\x2\x2\xFFFF"+
 				"\x1\x2\x3\xFFFF\x1\x2",
 				"\x1\x2\x3\xFFFF\x1\x2\x2\xFFFF\x1\x1\x1\xFFFF\x1\x2\x1\xFFFF\x1\x2\x1"+
-				"\xFFFF\x1\x3\x4\xFFFF\x1\x2\x2\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1"+
+				"\xFFFF\x1\x3\x4\xFFFF\x1\x2\x3\xFFFF\x3\x2\x6\xFFFF\x1\x2\x7\xFFFF\x1"+
 				"\x2\x2\xFFFF\x2\x2\x1\xFFFF\x1\x3\x2\x2\x14\xFFFF\x1\x2\x7\xFFFF\x1"+
 				"\x2\x4\xFFFF\x1\x2\x3\xFFFF\x1\x2\x4\xFFFF\x1\x2\x1\xFFFF\x1\x2\x2\xFFFF"+
 				"\x1\x2\x3\xFFFF\x1\x2",
@@ -22098,15 +22099,15 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA228_minS =
 			"\x2\x14\x2\xFFFF";
 		private const string DFA228_maxS =
-			"\x2\x39\x2\xFFFF";
+			"\x2\x3A\x2\xFFFF";
 		private const string DFA228_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1";
 		private const string DFA228_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA228_transitionS =
 			{
-				"\x1\x1\x4\xFFFF\x1\x2\x1F\xFFFF\x1\x3",
-				"\x1\x1\x4\xFFFF\x1\x2\x1F\xFFFF\x1\x3",
+				"\x1\x1\x4\xFFFF\x1\x2\x20\xFFFF\x1\x3",
+				"\x1\x1\x4\xFFFF\x1\x2\x20\xFFFF\x1\x3",
 				"",
 				""
 			};
@@ -22159,16 +22160,16 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		private const string DFA227_minS =
 			"\x2\x11\x2\xFFFF";
 		private const string DFA227_maxS =
-			"\x2\x39\x2\xFFFF";
+			"\x2\x3A\x2\xFFFF";
 		private const string DFA227_acceptS =
 			"\x2\xFFFF\x1\x1\x1\x2";
 		private const string DFA227_specialS =
 			"\x4\xFFFF}>";
 		private static readonly string[] DFA227_transitionS =
 			{
-				"\x1\x2\x2\xFFFF\x1\x1\x3\xFFFF\x1\x2\x1\x3\x8\xFFFF\x1\x2\x16\xFFFF"+
+				"\x1\x2\x2\xFFFF\x1\x1\x3\xFFFF\x1\x2\x1\x3\x9\xFFFF\x1\x2\x16\xFFFF"+
 				"\x1\x3",
-				"\x1\x2\x2\xFFFF\x1\x1\x3\xFFFF\x1\x2\x1\x3\x8\xFFFF\x1\x2\x16\xFFFF"+
+				"\x1\x2\x2\xFFFF\x1\x1\x3\xFFFF\x1\x2\x1\x3\x9\xFFFF\x1\x2\x16\xFFFF"+
 				"\x1\x3",
 				"",
 				""
@@ -22219,7 +22220,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 	#region Follow sets
 	private static class Follow
 	{
-		public static readonly BitSet _65_in_statementEnd175 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _66_in_statementEnd175 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _LT_in_statementEnd183 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _Comment_in_statementEnd191 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _LineComment_in_statementEnd199 = new BitSet(new ulong[]{0x2UL});
@@ -22228,36 +22229,36 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		public static readonly BitSet _sourceElements_in_program239 = new BitSet(new ulong[]{0x0UL});
 		public static readonly BitSet _LT_in_program242 = new BitSet(new ulong[]{0x0UL});
 		public static readonly BitSet _EOF_in_program246 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _sourceElement_in_sourceElements268 = new BitSet(new ulong[]{0xCC8081C81522002UL,0x8FFE73490002UL});
-		public static readonly BitSet _LT_in_sourceElements271 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
-		public static readonly BitSet _sourceElement_in_sourceElements275 = new BitSet(new ulong[]{0xCC8081C81522002UL,0x8FFE73490002UL});
+		public static readonly BitSet _sourceElement_in_sourceElements268 = new BitSet(new ulong[]{0x1990103881522002UL,0x11FFCE6920004UL});
+		public static readonly BitSet _LT_in_sourceElements271 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
+		public static readonly BitSet _sourceElement_in_sourceElements275 = new BitSet(new ulong[]{0x1990103881522002UL,0x11FFCE6920004UL});
 		public static readonly BitSet _functionDeclaration_in_sourceElement298 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _statement_in_sourceElement306 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _93_in_functionDeclaration328 = new BitSet(new ulong[]{0x120000UL});
+		public static readonly BitSet _94_in_functionDeclaration328 = new BitSet(new ulong[]{0x120000UL});
 		public static readonly BitSet _LT_in_functionDeclaration330 = new BitSet(new ulong[]{0x120000UL});
-		public static readonly BitSet _Identifier_in_functionDeclaration334 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _LT_in_functionDeclaration336 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _formalParameterList_in_functionDeclaration340 = new BitSet(new ulong[]{0x100000UL,0x80000000000UL});
-		public static readonly BitSet _LT_in_functionDeclaration342 = new BitSet(new ulong[]{0x100000UL,0x80000000000UL});
+		public static readonly BitSet _Identifier_in_functionDeclaration334 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _LT_in_functionDeclaration336 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _formalParameterList_in_functionDeclaration340 = new BitSet(new ulong[]{0x100000UL,0x100000000000UL});
+		public static readonly BitSet _LT_in_functionDeclaration342 = new BitSet(new ulong[]{0x100000UL,0x100000000000UL});
 		public static readonly BitSet _functionBody_in_functionDeclaration346 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _93_in_functionExpression367 = new BitSet(new ulong[]{0x8000000120000UL});
-		public static readonly BitSet _LT_in_functionExpression369 = new BitSet(new ulong[]{0x8000000120000UL});
-		public static readonly BitSet _Identifier_in_functionExpression373 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _LT_in_functionExpression376 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _formalParameterList_in_functionExpression380 = new BitSet(new ulong[]{0x100000UL,0x80000000000UL});
-		public static readonly BitSet _LT_in_functionExpression382 = new BitSet(new ulong[]{0x100000UL,0x80000000000UL});
+		public static readonly BitSet _94_in_functionExpression367 = new BitSet(new ulong[]{0x10000000120000UL});
+		public static readonly BitSet _LT_in_functionExpression369 = new BitSet(new ulong[]{0x10000000120000UL});
+		public static readonly BitSet _Identifier_in_functionExpression373 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _LT_in_functionExpression376 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _formalParameterList_in_functionExpression380 = new BitSet(new ulong[]{0x100000UL,0x100000000000UL});
+		public static readonly BitSet _LT_in_functionExpression382 = new BitSet(new ulong[]{0x100000UL,0x100000000000UL});
 		public static readonly BitSet _functionBody_in_functionExpression386 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _51_in_formalParameterList407 = new BitSet(new ulong[]{0x8120000UL});
+		public static readonly BitSet _52_in_formalParameterList407 = new BitSet(new ulong[]{0x8120000UL});
 		public static readonly BitSet _LT_in_formalParameterList410 = new BitSet(new ulong[]{0x120000UL});
-		public static readonly BitSet _Identifier_in_formalParameterList414 = new BitSet(new ulong[]{0x200000008100000UL});
-		public static readonly BitSet _LT_in_formalParameterList417 = new BitSet(new ulong[]{0x200000000100000UL});
-		public static readonly BitSet _57_in_formalParameterList421 = new BitSet(new ulong[]{0x120000UL});
+		public static readonly BitSet _Identifier_in_formalParameterList414 = new BitSet(new ulong[]{0x400000008100000UL});
+		public static readonly BitSet _LT_in_formalParameterList417 = new BitSet(new ulong[]{0x400000000100000UL});
+		public static readonly BitSet _58_in_formalParameterList421 = new BitSet(new ulong[]{0x120000UL});
 		public static readonly BitSet _LT_in_formalParameterList423 = new BitSet(new ulong[]{0x120000UL});
-		public static readonly BitSet _Identifier_in_formalParameterList427 = new BitSet(new ulong[]{0x200000008100000UL});
+		public static readonly BitSet _Identifier_in_formalParameterList427 = new BitSet(new ulong[]{0x400000008100000UL});
 		public static readonly BitSet _LT_in_formalParameterList433 = new BitSet(new ulong[]{0x8100000UL});
 		public static readonly BitSet _RPAREN_in_formalParameterList437 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _107_in_functionBody454 = new BitSet(new ulong[]{0xCC8081C83522000UL,0x8FFE73490002UL});
-		public static readonly BitSet _LT_in_functionBody456 = new BitSet(new ulong[]{0xCC8081C83522000UL,0x8FFE73490002UL});
+		public static readonly BitSet _108_in_functionBody454 = new BitSet(new ulong[]{0x1990103883522000UL,0x11FFCE6920004UL});
+		public static readonly BitSet _LT_in_functionBody456 = new BitSet(new ulong[]{0x1990103883522000UL,0x11FFCE6920004UL});
 		public static readonly BitSet _sourceElements_in_functionBody460 = new BitSet(new ulong[]{0x2100000UL});
 		public static readonly BitSet _LT_in_functionBody463 = new BitSet(new ulong[]{0x2100000UL});
 		public static readonly BitSet _RBRACE_in_functionBody467 = new BitSet(new ulong[]{0x2UL});
@@ -22275,396 +22276,396 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		public static readonly BitSet _switchStatement_in_statement573 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _throwStatement_in_statement581 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _tryStatement_in_statement589 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _107_in_statementBlock610 = new BitSet(new ulong[]{0xCC8081C83522000UL,0x8FFE73490002UL});
-		public static readonly BitSet _LT_in_statementBlock612 = new BitSet(new ulong[]{0xCC8081C83522000UL,0x8FFE73490002UL});
+		public static readonly BitSet _108_in_statementBlock610 = new BitSet(new ulong[]{0x1990103883522000UL,0x11FFCE6920004UL});
+		public static readonly BitSet _LT_in_statementBlock612 = new BitSet(new ulong[]{0x1990103883522000UL,0x11FFCE6920004UL});
 		public static readonly BitSet _statementList_in_statementBlock616 = new BitSet(new ulong[]{0x2100000UL});
 		public static readonly BitSet _LT_in_statementBlock619 = new BitSet(new ulong[]{0x2100000UL});
 		public static readonly BitSet _RBRACE_in_statementBlock623 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _statement_in_statementList644 = new BitSet(new ulong[]{0xCC8081C81522002UL,0x8FFE73490002UL});
-		public static readonly BitSet _LT_in_statementList647 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
-		public static readonly BitSet _statement_in_statementList651 = new BitSet(new ulong[]{0xCC8081C81522002UL,0x8FFE73490002UL});
-		public static readonly BitSet _103_in_variableStatement674 = new BitSet(new ulong[]{0x120000UL});
+		public static readonly BitSet _statement_in_statementList644 = new BitSet(new ulong[]{0x1990103881522002UL,0x11FFCE6920004UL});
+		public static readonly BitSet _LT_in_statementList647 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
+		public static readonly BitSet _statement_in_statementList651 = new BitSet(new ulong[]{0x1990103881522002UL,0x11FFCE6920004UL});
+		public static readonly BitSet _104_in_variableStatement674 = new BitSet(new ulong[]{0x120000UL});
 		public static readonly BitSet _LT_in_variableStatement676 = new BitSet(new ulong[]{0x120000UL});
-		public static readonly BitSet _variableDeclarationList_in_variableStatement680 = new BitSet(new ulong[]{0x300020UL,0x2UL});
+		public static readonly BitSet _variableDeclarationList_in_variableStatement680 = new BitSet(new ulong[]{0x300020UL,0x4UL});
 		public static readonly BitSet _statementEnd_in_variableStatement682 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _variableDeclaration_in_variableDeclarationList703 = new BitSet(new ulong[]{0x200000000100002UL});
-		public static readonly BitSet _LT_in_variableDeclarationList706 = new BitSet(new ulong[]{0x200000000100000UL});
-		public static readonly BitSet _57_in_variableDeclarationList710 = new BitSet(new ulong[]{0x120000UL});
+		public static readonly BitSet _variableDeclaration_in_variableDeclarationList703 = new BitSet(new ulong[]{0x400000000100002UL});
+		public static readonly BitSet _LT_in_variableDeclarationList706 = new BitSet(new ulong[]{0x400000000100000UL});
+		public static readonly BitSet _58_in_variableDeclarationList710 = new BitSet(new ulong[]{0x120000UL});
 		public static readonly BitSet _LT_in_variableDeclarationList712 = new BitSet(new ulong[]{0x120000UL});
-		public static readonly BitSet _variableDeclaration_in_variableDeclarationList716 = new BitSet(new ulong[]{0x200000000100002UL});
-		public static readonly BitSet _variableDeclarationNoIn_in_variableDeclarationListNoIn739 = new BitSet(new ulong[]{0x200000000100002UL});
-		public static readonly BitSet _LT_in_variableDeclarationListNoIn742 = new BitSet(new ulong[]{0x200000000100000UL});
-		public static readonly BitSet _57_in_variableDeclarationListNoIn746 = new BitSet(new ulong[]{0x120000UL});
+		public static readonly BitSet _variableDeclaration_in_variableDeclarationList716 = new BitSet(new ulong[]{0x400000000100002UL});
+		public static readonly BitSet _variableDeclarationNoIn_in_variableDeclarationListNoIn739 = new BitSet(new ulong[]{0x400000000100002UL});
+		public static readonly BitSet _LT_in_variableDeclarationListNoIn742 = new BitSet(new ulong[]{0x400000000100000UL});
+		public static readonly BitSet _58_in_variableDeclarationListNoIn746 = new BitSet(new ulong[]{0x120000UL});
 		public static readonly BitSet _LT_in_variableDeclarationListNoIn748 = new BitSet(new ulong[]{0x120000UL});
-		public static readonly BitSet _variableDeclarationNoIn_in_variableDeclarationListNoIn752 = new BitSet(new ulong[]{0x200000000100002UL});
-		public static readonly BitSet _Identifier_in_variableDeclaration775 = new BitSet(new ulong[]{0x100002UL,0x40UL});
-		public static readonly BitSet _LT_in_variableDeclaration778 = new BitSet(new ulong[]{0x100000UL,0x40UL});
+		public static readonly BitSet _variableDeclarationNoIn_in_variableDeclarationListNoIn752 = new BitSet(new ulong[]{0x400000000100002UL});
+		public static readonly BitSet _Identifier_in_variableDeclaration775 = new BitSet(new ulong[]{0x100002UL,0x80UL});
+		public static readonly BitSet _LT_in_variableDeclaration778 = new BitSet(new ulong[]{0x100000UL,0x80UL});
 		public static readonly BitSet _initialiser_in_variableDeclaration782 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _Identifier_in_variableDeclarationNoIn805 = new BitSet(new ulong[]{0x100002UL,0x40UL});
-		public static readonly BitSet _LT_in_variableDeclarationNoIn808 = new BitSet(new ulong[]{0x100000UL,0x40UL});
+		public static readonly BitSet _Identifier_in_variableDeclarationNoIn805 = new BitSet(new ulong[]{0x100002UL,0x80UL});
+		public static readonly BitSet _LT_in_variableDeclarationNoIn808 = new BitSet(new ulong[]{0x100000UL,0x80UL});
 		public static readonly BitSet _initialiserNoIn_in_variableDeclarationNoIn812 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _70_in_initialiser835 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_initialiser837 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
+		public static readonly BitSet _71_in_initialiser835 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_initialiser837 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
 		public static readonly BitSet _assignmentExpression_in_initialiser841 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _70_in_initialiserNoIn862 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_initialiserNoIn864 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
+		public static readonly BitSet _71_in_initialiserNoIn862 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_initialiserNoIn864 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
 		public static readonly BitSet _assignmentExpressionNoIn_in_initialiserNoIn868 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _65_in_emptyStatement889 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_expressionStatement910 = new BitSet(new ulong[]{0x300020UL,0x2UL});
+		public static readonly BitSet _66_in_emptyStatement889 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_in_expressionStatement910 = new BitSet(new ulong[]{0x300020UL,0x4UL});
 		public static readonly BitSet _statementEnd_in_expressionStatement912 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _94_in_ifStatement933 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _LT_in_ifStatement935 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _51_in_ifStatement939 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_ifStatement941 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
+		public static readonly BitSet _95_in_ifStatement933 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _LT_in_ifStatement935 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _52_in_ifStatement939 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_ifStatement941 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
 		public static readonly BitSet _expression_in_ifStatement945 = new BitSet(new ulong[]{0x8100000UL});
 		public static readonly BitSet _LT_in_ifStatement947 = new BitSet(new ulong[]{0x8100000UL});
-		public static readonly BitSet _RPAREN_in_ifStatement951 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
-		public static readonly BitSet _LT_in_ifStatement953 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
-		public static readonly BitSet _statement_in_ifStatement957 = new BitSet(new ulong[]{0x100002UL,0x4000000UL});
-		public static readonly BitSet _LT_in_ifStatement960 = new BitSet(new ulong[]{0x100000UL,0x4000000UL});
-		public static readonly BitSet _90_in_ifStatement964 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
-		public static readonly BitSet _LT_in_ifStatement966 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
+		public static readonly BitSet _RPAREN_in_ifStatement951 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
+		public static readonly BitSet _LT_in_ifStatement953 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
+		public static readonly BitSet _statement_in_ifStatement957 = new BitSet(new ulong[]{0x100002UL,0x8000000UL});
+		public static readonly BitSet _LT_in_ifStatement960 = new BitSet(new ulong[]{0x100000UL,0x8000000UL});
+		public static readonly BitSet _91_in_ifStatement964 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
+		public static readonly BitSet _LT_in_ifStatement966 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
 		public static readonly BitSet _statement_in_ifStatement970 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _doWhileStatement_in_iterationStatement993 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _whileStatement_in_iterationStatement1001 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _forStatement_in_iterationStatement1009 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _forInStatement_in_iterationStatement1017 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _89_in_doWhileStatement1038 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
-		public static readonly BitSet _LT_in_doWhileStatement1040 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
-		public static readonly BitSet _statement_in_doWhileStatement1044 = new BitSet(new ulong[]{0x100000UL,0x20000000000UL});
-		public static readonly BitSet _LT_in_doWhileStatement1046 = new BitSet(new ulong[]{0x100000UL,0x20000000000UL});
-		public static readonly BitSet _105_in_doWhileStatement1050 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _LT_in_doWhileStatement1052 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _51_in_doWhileStatement1056 = new BitSet(new ulong[]{0xCC8081C81422000UL,0x894221010000UL});
+		public static readonly BitSet _90_in_doWhileStatement1038 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
+		public static readonly BitSet _LT_in_doWhileStatement1040 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
+		public static readonly BitSet _statement_in_doWhileStatement1044 = new BitSet(new ulong[]{0x100000UL,0x40000000000UL});
+		public static readonly BitSet _LT_in_doWhileStatement1046 = new BitSet(new ulong[]{0x100000UL,0x40000000000UL});
+		public static readonly BitSet _106_in_doWhileStatement1050 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _LT_in_doWhileStatement1052 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _52_in_doWhileStatement1056 = new BitSet(new ulong[]{0x1990103881422000UL,0x1128442020000UL});
 		public static readonly BitSet _expression_in_doWhileStatement1058 = new BitSet(new ulong[]{0x8000000UL});
-		public static readonly BitSet _RPAREN_in_doWhileStatement1060 = new BitSet(new ulong[]{0x300020UL,0x2UL});
+		public static readonly BitSet _RPAREN_in_doWhileStatement1060 = new BitSet(new ulong[]{0x300020UL,0x4UL});
 		public static readonly BitSet _statementEnd_in_doWhileStatement1062 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _105_in_whileStatement1083 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _LT_in_whileStatement1085 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _51_in_whileStatement1089 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_whileStatement1091 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
+		public static readonly BitSet _106_in_whileStatement1083 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _LT_in_whileStatement1085 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _52_in_whileStatement1089 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_whileStatement1091 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
 		public static readonly BitSet _expression_in_whileStatement1095 = new BitSet(new ulong[]{0x8100000UL});
 		public static readonly BitSet _LT_in_whileStatement1097 = new BitSet(new ulong[]{0x8100000UL});
-		public static readonly BitSet _RPAREN_in_whileStatement1101 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
-		public static readonly BitSet _LT_in_whileStatement1103 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
+		public static readonly BitSet _RPAREN_in_whileStatement1101 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
+		public static readonly BitSet _LT_in_whileStatement1103 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
 		public static readonly BitSet _statement_in_whileStatement1107 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _92_in_forStatement1128 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _LT_in_forStatement1130 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _51_in_forStatement1134 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x89C221010002UL});
-		public static readonly BitSet _LT_in_forStatement1137 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x89C221010000UL});
-		public static readonly BitSet _forStatementInitialiserPart_in_forStatement1141 = new BitSet(new ulong[]{0x100000UL,0x2UL});
-		public static readonly BitSet _LT_in_forStatement1145 = new BitSet(new ulong[]{0x100000UL,0x2UL});
-		public static readonly BitSet _65_in_forStatement1149 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010002UL});
-		public static readonly BitSet _LT_in_forStatement1152 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _expression_in_forStatement1156 = new BitSet(new ulong[]{0x100000UL,0x2UL});
-		public static readonly BitSet _LT_in_forStatement1160 = new BitSet(new ulong[]{0x100000UL,0x2UL});
-		public static readonly BitSet _65_in_forStatement1164 = new BitSet(new ulong[]{0xCC8081C89522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_forStatement1167 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
+		public static readonly BitSet _93_in_forStatement1128 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _LT_in_forStatement1130 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _52_in_forStatement1134 = new BitSet(new ulong[]{0x1990103881522000UL,0x1138442020004UL});
+		public static readonly BitSet _LT_in_forStatement1137 = new BitSet(new ulong[]{0x1990103881522000UL,0x1138442020000UL});
+		public static readonly BitSet _forStatementInitialiserPart_in_forStatement1141 = new BitSet(new ulong[]{0x100000UL,0x4UL});
+		public static readonly BitSet _LT_in_forStatement1145 = new BitSet(new ulong[]{0x100000UL,0x4UL});
+		public static readonly BitSet _66_in_forStatement1149 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020004UL});
+		public static readonly BitSet _LT_in_forStatement1152 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _expression_in_forStatement1156 = new BitSet(new ulong[]{0x100000UL,0x4UL});
+		public static readonly BitSet _LT_in_forStatement1160 = new BitSet(new ulong[]{0x100000UL,0x4UL});
+		public static readonly BitSet _66_in_forStatement1164 = new BitSet(new ulong[]{0x1990103889522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_forStatement1167 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
 		public static readonly BitSet _expression_in_forStatement1171 = new BitSet(new ulong[]{0x8100000UL});
 		public static readonly BitSet _LT_in_forStatement1175 = new BitSet(new ulong[]{0x8100000UL});
-		public static readonly BitSet _RPAREN_in_forStatement1179 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
-		public static readonly BitSet _LT_in_forStatement1181 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
+		public static readonly BitSet _RPAREN_in_forStatement1179 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
+		public static readonly BitSet _LT_in_forStatement1181 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
 		public static readonly BitSet _statement_in_forStatement1185 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expressionNoIn_in_forStatementInitialiserPart1206 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _103_in_forStatementInitialiserPart1214 = new BitSet(new ulong[]{0x120000UL});
+		public static readonly BitSet _104_in_forStatementInitialiserPart1214 = new BitSet(new ulong[]{0x120000UL});
 		public static readonly BitSet _LT_in_forStatementInitialiserPart1216 = new BitSet(new ulong[]{0x120000UL});
 		public static readonly BitSet _variableDeclarationListNoIn_in_forStatementInitialiserPart1220 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _92_in_forInStatement1241 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _LT_in_forInStatement1243 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _51_in_forInStatement1247 = new BitSet(new ulong[]{0x8001C81522000UL,0x88220010000UL});
-		public static readonly BitSet _LT_in_forInStatement1249 = new BitSet(new ulong[]{0x8001C81522000UL,0x88220010000UL});
-		public static readonly BitSet _forInStatementInitialiserPart_in_forInStatement1253 = new BitSet(new ulong[]{0x100000UL,0x80000000UL});
-		public static readonly BitSet _LT_in_forInStatement1255 = new BitSet(new ulong[]{0x100000UL,0x80000000UL});
-		public static readonly BitSet _95_in_forInStatement1259 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_forInStatement1261 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
+		public static readonly BitSet _93_in_forInStatement1241 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _LT_in_forInStatement1243 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _52_in_forInStatement1247 = new BitSet(new ulong[]{0x10003881522000UL,0x110440020000UL});
+		public static readonly BitSet _LT_in_forInStatement1249 = new BitSet(new ulong[]{0x10003881522000UL,0x110440020000UL});
+		public static readonly BitSet _forInStatementInitialiserPart_in_forInStatement1253 = new BitSet(new ulong[]{0x100000UL,0x100000000UL});
+		public static readonly BitSet _LT_in_forInStatement1255 = new BitSet(new ulong[]{0x100000UL,0x100000000UL});
+		public static readonly BitSet _96_in_forInStatement1259 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_forInStatement1261 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
 		public static readonly BitSet _expression_in_forInStatement1265 = new BitSet(new ulong[]{0x8100000UL});
 		public static readonly BitSet _LT_in_forInStatement1267 = new BitSet(new ulong[]{0x8100000UL});
-		public static readonly BitSet _RPAREN_in_forInStatement1271 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
-		public static readonly BitSet _LT_in_forInStatement1273 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
+		public static readonly BitSet _RPAREN_in_forInStatement1271 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
+		public static readonly BitSet _LT_in_forInStatement1273 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
 		public static readonly BitSet _statement_in_forInStatement1277 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _leftHandSideExpression_in_forInStatementInitialiserPart1298 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _103_in_forInStatementInitialiserPart1306 = new BitSet(new ulong[]{0x120000UL});
+		public static readonly BitSet _104_in_forInStatementInitialiserPart1306 = new BitSet(new ulong[]{0x120000UL});
 		public static readonly BitSet _LT_in_forInStatementInitialiserPart1308 = new BitSet(new ulong[]{0x120000UL});
 		public static readonly BitSet _variableDeclarationNoIn_in_forInStatementInitialiserPart1312 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _86_in_continueStatement1329 = new BitSet(new ulong[]{0x320020UL,0x2UL});
-		public static readonly BitSet _Identifier_in_continueStatement1331 = new BitSet(new ulong[]{0x300020UL,0x2UL});
+		public static readonly BitSet _87_in_continueStatement1329 = new BitSet(new ulong[]{0x320020UL,0x4UL});
+		public static readonly BitSet _Identifier_in_continueStatement1331 = new BitSet(new ulong[]{0x300020UL,0x4UL});
 		public static readonly BitSet _statementEnd_in_continueStatement1334 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _83_in_breakStatement1351 = new BitSet(new ulong[]{0x320020UL,0x2UL});
-		public static readonly BitSet _Identifier_in_breakStatement1353 = new BitSet(new ulong[]{0x300020UL,0x2UL});
+		public static readonly BitSet _84_in_breakStatement1351 = new BitSet(new ulong[]{0x320020UL,0x4UL});
+		public static readonly BitSet _Identifier_in_breakStatement1353 = new BitSet(new ulong[]{0x300020UL,0x4UL});
 		public static readonly BitSet _statementEnd_in_breakStatement1356 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _98_in_returnStatement1373 = new BitSet(new ulong[]{0xCC8081C81722020UL,0x894221010002UL});
-		public static readonly BitSet _expression_in_returnStatement1375 = new BitSet(new ulong[]{0x300020UL,0x2UL});
+		public static readonly BitSet _99_in_returnStatement1373 = new BitSet(new ulong[]{0x1990103881722020UL,0x1128442020004UL});
+		public static readonly BitSet _expression_in_returnStatement1375 = new BitSet(new ulong[]{0x300020UL,0x4UL});
 		public static readonly BitSet _statementEnd_in_returnStatement1378 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _106_in_withStatement1399 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _LT_in_withStatement1401 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _51_in_withStatement1405 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_withStatement1407 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
+		public static readonly BitSet _107_in_withStatement1399 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _LT_in_withStatement1401 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _52_in_withStatement1405 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_withStatement1407 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
 		public static readonly BitSet _expression_in_withStatement1411 = new BitSet(new ulong[]{0x8100000UL});
 		public static readonly BitSet _LT_in_withStatement1413 = new BitSet(new ulong[]{0x8100000UL});
-		public static readonly BitSet _RPAREN_in_withStatement1417 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
-		public static readonly BitSet _LT_in_withStatement1419 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
+		public static readonly BitSet _RPAREN_in_withStatement1417 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
+		public static readonly BitSet _LT_in_withStatement1419 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
 		public static readonly BitSet _statement_in_withStatement1423 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _Identifier_in_labelledStatement1440 = new BitSet(new ulong[]{0x100000UL,0x1UL});
-		public static readonly BitSet _LT_in_labelledStatement1442 = new BitSet(new ulong[]{0x100000UL,0x1UL});
-		public static readonly BitSet _64_in_labelledStatement1446 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
-		public static readonly BitSet _LT_in_labelledStatement1448 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
+		public static readonly BitSet _Identifier_in_labelledStatement1440 = new BitSet(new ulong[]{0x100000UL,0x2UL});
+		public static readonly BitSet _LT_in_labelledStatement1442 = new BitSet(new ulong[]{0x100000UL,0x2UL});
+		public static readonly BitSet _65_in_labelledStatement1446 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
+		public static readonly BitSet _LT_in_labelledStatement1448 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
 		public static readonly BitSet _statement_in_labelledStatement1452 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _99_in_switchStatement1473 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _LT_in_switchStatement1475 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _51_in_switchStatement1479 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_switchStatement1481 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
+		public static readonly BitSet _100_in_switchStatement1473 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _LT_in_switchStatement1475 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _52_in_switchStatement1479 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_switchStatement1481 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
 		public static readonly BitSet _expression_in_switchStatement1485 = new BitSet(new ulong[]{0x8100000UL});
 		public static readonly BitSet _LT_in_switchStatement1487 = new BitSet(new ulong[]{0x8100000UL});
-		public static readonly BitSet _RPAREN_in_switchStatement1491 = new BitSet(new ulong[]{0x100000UL,0x80000000000UL});
-		public static readonly BitSet _LT_in_switchStatement1493 = new BitSet(new ulong[]{0x100000UL,0x80000000000UL});
+		public static readonly BitSet _RPAREN_in_switchStatement1491 = new BitSet(new ulong[]{0x100000UL,0x100000000000UL});
+		public static readonly BitSet _LT_in_switchStatement1493 = new BitSet(new ulong[]{0x100000UL,0x100000000000UL});
 		public static readonly BitSet _caseBlock_in_switchStatement1497 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _107_in_caseBlock1518 = new BitSet(new ulong[]{0x2100000UL,0x900000UL});
-		public static readonly BitSet _LT_in_caseBlock1521 = new BitSet(new ulong[]{0x100000UL,0x100000UL});
-		public static readonly BitSet _caseClause_in_caseBlock1525 = new BitSet(new ulong[]{0x2100000UL,0x900000UL});
-		public static readonly BitSet _LT_in_caseBlock1530 = new BitSet(new ulong[]{0x100000UL,0x800000UL});
-		public static readonly BitSet _defaultClause_in_caseBlock1534 = new BitSet(new ulong[]{0x2100000UL,0x100000UL});
-		public static readonly BitSet _LT_in_caseBlock1537 = new BitSet(new ulong[]{0x100000UL,0x100000UL});
-		public static readonly BitSet _caseClause_in_caseBlock1541 = new BitSet(new ulong[]{0x2100000UL,0x100000UL});
+		public static readonly BitSet _108_in_caseBlock1518 = new BitSet(new ulong[]{0x2100000UL,0x1200000UL});
+		public static readonly BitSet _LT_in_caseBlock1521 = new BitSet(new ulong[]{0x100000UL,0x200000UL});
+		public static readonly BitSet _caseClause_in_caseBlock1525 = new BitSet(new ulong[]{0x2100000UL,0x1200000UL});
+		public static readonly BitSet _LT_in_caseBlock1530 = new BitSet(new ulong[]{0x100000UL,0x1000000UL});
+		public static readonly BitSet _defaultClause_in_caseBlock1534 = new BitSet(new ulong[]{0x2100000UL,0x200000UL});
+		public static readonly BitSet _LT_in_caseBlock1537 = new BitSet(new ulong[]{0x100000UL,0x200000UL});
+		public static readonly BitSet _caseClause_in_caseBlock1541 = new BitSet(new ulong[]{0x2100000UL,0x200000UL});
 		public static readonly BitSet _LT_in_caseBlock1547 = new BitSet(new ulong[]{0x2100000UL});
 		public static readonly BitSet _RBRACE_in_caseBlock1551 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _84_in_caseClause1568 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_caseClause1570 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _expression_in_caseClause1574 = new BitSet(new ulong[]{0x100000UL,0x1UL});
-		public static readonly BitSet _LT_in_caseClause1576 = new BitSet(new ulong[]{0x100000UL,0x1UL});
-		public static readonly BitSet _64_in_caseClause1580 = new BitSet(new ulong[]{0xCC8081C81522002UL,0x8FFE73490002UL});
-		public static readonly BitSet _LT_in_caseClause1582 = new BitSet(new ulong[]{0xCC8081C81522002UL,0x8FFE73490002UL});
+		public static readonly BitSet _85_in_caseClause1568 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_caseClause1570 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _expression_in_caseClause1574 = new BitSet(new ulong[]{0x100000UL,0x2UL});
+		public static readonly BitSet _LT_in_caseClause1576 = new BitSet(new ulong[]{0x100000UL,0x2UL});
+		public static readonly BitSet _65_in_caseClause1580 = new BitSet(new ulong[]{0x1990103881522002UL,0x11FFCE6920004UL});
+		public static readonly BitSet _LT_in_caseClause1582 = new BitSet(new ulong[]{0x1990103881522002UL,0x11FFCE6920004UL});
 		public static readonly BitSet _statementList_in_caseClause1586 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _87_in_defaultClause1608 = new BitSet(new ulong[]{0x100000UL,0x1UL});
-		public static readonly BitSet _LT_in_defaultClause1610 = new BitSet(new ulong[]{0x100000UL,0x1UL});
-		public static readonly BitSet _64_in_defaultClause1614 = new BitSet(new ulong[]{0xCC8081C81522002UL,0x8FFE73490002UL});
-		public static readonly BitSet _LT_in_defaultClause1616 = new BitSet(new ulong[]{0xCC8081C81522002UL,0x8FFE73490002UL});
+		public static readonly BitSet _88_in_defaultClause1608 = new BitSet(new ulong[]{0x100000UL,0x2UL});
+		public static readonly BitSet _LT_in_defaultClause1610 = new BitSet(new ulong[]{0x100000UL,0x2UL});
+		public static readonly BitSet _65_in_defaultClause1614 = new BitSet(new ulong[]{0x1990103881522002UL,0x11FFCE6920004UL});
+		public static readonly BitSet _LT_in_defaultClause1616 = new BitSet(new ulong[]{0x1990103881522002UL,0x11FFCE6920004UL});
 		public static readonly BitSet _statementList_in_defaultClause1620 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _100_in_throwStatement1642 = new BitSet(new ulong[]{0xCC8081C81422000UL,0x894221010000UL});
-		public static readonly BitSet _expression_in_throwStatement1644 = new BitSet(new ulong[]{0x300020UL,0x2UL});
+		public static readonly BitSet _101_in_throwStatement1642 = new BitSet(new ulong[]{0x1990103881422000UL,0x1128442020000UL});
+		public static readonly BitSet _expression_in_throwStatement1644 = new BitSet(new ulong[]{0x300020UL,0x4UL});
 		public static readonly BitSet _statementEnd_in_throwStatement1646 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _101_in_tryStatement1663 = new BitSet(new ulong[]{0x100000UL,0x80000000000UL});
-		public static readonly BitSet _LT_in_tryStatement1665 = new BitSet(new ulong[]{0x100000UL,0x80000000000UL});
-		public static readonly BitSet _statementBlock_in_tryStatement1669 = new BitSet(new ulong[]{0x100000UL,0x8200000UL});
-		public static readonly BitSet _LT_in_tryStatement1671 = new BitSet(new ulong[]{0x100000UL,0x8200000UL});
+		public static readonly BitSet _102_in_tryStatement1663 = new BitSet(new ulong[]{0x100000UL,0x100000000000UL});
+		public static readonly BitSet _LT_in_tryStatement1665 = new BitSet(new ulong[]{0x100000UL,0x100000000000UL});
+		public static readonly BitSet _statementBlock_in_tryStatement1669 = new BitSet(new ulong[]{0x100000UL,0x10400000UL});
+		public static readonly BitSet _LT_in_tryStatement1671 = new BitSet(new ulong[]{0x100000UL,0x10400000UL});
 		public static readonly BitSet _finallyClause_in_tryStatement1676 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _catchClause_in_tryStatement1680 = new BitSet(new ulong[]{0x100002UL,0x8000000UL});
-		public static readonly BitSet _LT_in_tryStatement1683 = new BitSet(new ulong[]{0x100000UL,0x8000000UL});
+		public static readonly BitSet _catchClause_in_tryStatement1680 = new BitSet(new ulong[]{0x100002UL,0x10000000UL});
+		public static readonly BitSet _LT_in_tryStatement1683 = new BitSet(new ulong[]{0x100000UL,0x10000000UL});
 		public static readonly BitSet _finallyClause_in_tryStatement1687 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _85_in_catchClause1714 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _LT_in_catchClause1716 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _51_in_catchClause1720 = new BitSet(new ulong[]{0x120000UL});
+		public static readonly BitSet _86_in_catchClause1714 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _LT_in_catchClause1716 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _52_in_catchClause1720 = new BitSet(new ulong[]{0x120000UL});
 		public static readonly BitSet _LT_in_catchClause1722 = new BitSet(new ulong[]{0x120000UL});
 		public static readonly BitSet _Identifier_in_catchClause1726 = new BitSet(new ulong[]{0x8100000UL});
 		public static readonly BitSet _LT_in_catchClause1728 = new BitSet(new ulong[]{0x8100000UL});
-		public static readonly BitSet _RPAREN_in_catchClause1732 = new BitSet(new ulong[]{0x100000UL,0x80000000000UL});
-		public static readonly BitSet _LT_in_catchClause1734 = new BitSet(new ulong[]{0x100000UL,0x80000000000UL});
+		public static readonly BitSet _RPAREN_in_catchClause1732 = new BitSet(new ulong[]{0x100000UL,0x100000000000UL});
+		public static readonly BitSet _LT_in_catchClause1734 = new BitSet(new ulong[]{0x100000UL,0x100000000000UL});
 		public static readonly BitSet _statementBlock_in_catchClause1738 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _91_in_finallyClause1759 = new BitSet(new ulong[]{0x100000UL,0x80000000000UL});
-		public static readonly BitSet _LT_in_finallyClause1761 = new BitSet(new ulong[]{0x100000UL,0x80000000000UL});
+		public static readonly BitSet _92_in_finallyClause1759 = new BitSet(new ulong[]{0x100000UL,0x100000000000UL});
+		public static readonly BitSet _LT_in_finallyClause1761 = new BitSet(new ulong[]{0x100000UL,0x100000000000UL});
 		public static readonly BitSet _statementBlock_in_finallyClause1765 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _assignmentExpression_in_expression1783 = new BitSet(new ulong[]{0x200000000100002UL});
-		public static readonly BitSet _LT_in_expression1786 = new BitSet(new ulong[]{0x200000000100000UL});
-		public static readonly BitSet _57_in_expression1790 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_expression1792 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _assignmentExpression_in_expression1796 = new BitSet(new ulong[]{0x200000000100002UL});
-		public static readonly BitSet _assignmentExpressionNoIn_in_expressionNoIn1819 = new BitSet(new ulong[]{0x200000000100002UL});
-		public static readonly BitSet _LT_in_expressionNoIn1822 = new BitSet(new ulong[]{0x200000000100000UL});
-		public static readonly BitSet _57_in_expressionNoIn1826 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_expressionNoIn1828 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _assignmentExpressionNoIn_in_expressionNoIn1832 = new BitSet(new ulong[]{0x200000000100002UL});
+		public static readonly BitSet _assignmentExpression_in_expression1783 = new BitSet(new ulong[]{0x400000000100002UL});
+		public static readonly BitSet _LT_in_expression1786 = new BitSet(new ulong[]{0x400000000100000UL});
+		public static readonly BitSet _58_in_expression1790 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_expression1792 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _assignmentExpression_in_expression1796 = new BitSet(new ulong[]{0x400000000100002UL});
+		public static readonly BitSet _assignmentExpressionNoIn_in_expressionNoIn1819 = new BitSet(new ulong[]{0x400000000100002UL});
+		public static readonly BitSet _LT_in_expressionNoIn1822 = new BitSet(new ulong[]{0x400000000100000UL});
+		public static readonly BitSet _58_in_expressionNoIn1826 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_expressionNoIn1828 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _assignmentExpressionNoIn_in_expressionNoIn1832 = new BitSet(new ulong[]{0x400000000100002UL});
 		public static readonly BitSet _conditionalExpression_in_assignmentExpression1855 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _leftHandSideExpression_in_assignmentExpression1863 = new BitSet(new ulong[]{0x9124800000100000UL,0x200000045050UL});
-		public static readonly BitSet _LT_in_assignmentExpression1865 = new BitSet(new ulong[]{0x9124800000100000UL,0x200000045050UL});
-		public static readonly BitSet _assignmentOperator_in_assignmentExpression1869 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_assignmentExpression1871 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
+		public static readonly BitSet _leftHandSideExpression_in_assignmentExpression1863 = new BitSet(new ulong[]{0x2249000000100000UL,0x40000008A0A1UL});
+		public static readonly BitSet _LT_in_assignmentExpression1865 = new BitSet(new ulong[]{0x2249000000100000UL,0x40000008A0A1UL});
+		public static readonly BitSet _assignmentOperator_in_assignmentExpression1869 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_assignmentExpression1871 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
 		public static readonly BitSet _assignmentExpression_in_assignmentExpression1875 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _conditionalExpressionNoIn_in_assignmentExpressionNoIn1896 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _leftHandSideExpression_in_assignmentExpressionNoIn1904 = new BitSet(new ulong[]{0x9124800000100000UL,0x200000045050UL});
-		public static readonly BitSet _LT_in_assignmentExpressionNoIn1906 = new BitSet(new ulong[]{0x9124800000100000UL,0x200000045050UL});
-		public static readonly BitSet _assignmentOperator_in_assignmentExpressionNoIn1910 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_assignmentExpressionNoIn1912 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
+		public static readonly BitSet _leftHandSideExpression_in_assignmentExpressionNoIn1904 = new BitSet(new ulong[]{0x2249000000100000UL,0x40000008A0A1UL});
+		public static readonly BitSet _LT_in_assignmentExpressionNoIn1906 = new BitSet(new ulong[]{0x2249000000100000UL,0x40000008A0A1UL});
+		public static readonly BitSet _assignmentOperator_in_assignmentExpressionNoIn1910 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_assignmentExpressionNoIn1912 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
 		public static readonly BitSet _assignmentExpressionNoIn_in_assignmentExpressionNoIn1916 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _callExpression_in_leftHandSideExpression1937 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _newExpression_in_leftHandSideExpression1945 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _memberExpression_in_newExpression1966 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _97_in_newExpression1974 = new BitSet(new ulong[]{0x8001C81522000UL,0x80220010000UL});
-		public static readonly BitSet _LT_in_newExpression1976 = new BitSet(new ulong[]{0x8001C81522000UL,0x80220010000UL});
+		public static readonly BitSet _98_in_newExpression1974 = new BitSet(new ulong[]{0x10003881522000UL,0x100440020000UL});
+		public static readonly BitSet _LT_in_newExpression1976 = new BitSet(new ulong[]{0x10003881522000UL,0x100440020000UL});
 		public static readonly BitSet _newExpression_in_newExpression1980 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primaryExpression_in_memberExpression2002 = new BitSet(new ulong[]{0x2000000000100002UL,0x10000UL});
-		public static readonly BitSet _functionExpression_in_memberExpression2006 = new BitSet(new ulong[]{0x2000000000100002UL,0x10000UL});
-		public static readonly BitSet _97_in_memberExpression2010 = new BitSet(new ulong[]{0x8001C81522000UL,0x80220010000UL});
-		public static readonly BitSet _LT_in_memberExpression2012 = new BitSet(new ulong[]{0x8001C81522000UL,0x80220010000UL});
-		public static readonly BitSet _memberExpression_in_memberExpression2016 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _LT_in_memberExpression2018 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _arguments_in_memberExpression2022 = new BitSet(new ulong[]{0x2000000000100002UL,0x10000UL});
-		public static readonly BitSet _LT_in_memberExpression2026 = new BitSet(new ulong[]{0x2000000000100000UL,0x10000UL});
-		public static readonly BitSet _memberExpressionSuffix_in_memberExpression2030 = new BitSet(new ulong[]{0x2000000000100002UL,0x10000UL});
+		public static readonly BitSet _primaryExpression_in_memberExpression2002 = new BitSet(new ulong[]{0x4000000000100002UL,0x20000UL});
+		public static readonly BitSet _functionExpression_in_memberExpression2006 = new BitSet(new ulong[]{0x4000000000100002UL,0x20000UL});
+		public static readonly BitSet _98_in_memberExpression2010 = new BitSet(new ulong[]{0x10003881522000UL,0x100440020000UL});
+		public static readonly BitSet _LT_in_memberExpression2012 = new BitSet(new ulong[]{0x10003881522000UL,0x100440020000UL});
+		public static readonly BitSet _memberExpression_in_memberExpression2016 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _LT_in_memberExpression2018 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _arguments_in_memberExpression2022 = new BitSet(new ulong[]{0x4000000000100002UL,0x20000UL});
+		public static readonly BitSet _LT_in_memberExpression2026 = new BitSet(new ulong[]{0x4000000000100000UL,0x20000UL});
+		public static readonly BitSet _memberExpressionSuffix_in_memberExpression2030 = new BitSet(new ulong[]{0x4000000000100002UL,0x20000UL});
 		public static readonly BitSet _indexSuffix_in_memberExpressionSuffix2053 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _propertyReferenceSuffix_in_memberExpressionSuffix2061 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _memberExpression_in_callExpression2078 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _LT_in_callExpression2080 = new BitSet(new ulong[]{0x8000000100000UL});
-		public static readonly BitSet _arguments_in_callExpression2084 = new BitSet(new ulong[]{0x2008000000100002UL,0x10000UL});
-		public static readonly BitSet _LT_in_callExpression2087 = new BitSet(new ulong[]{0x2008000000100000UL,0x10000UL});
-		public static readonly BitSet _callExpressionSuffix_in_callExpression2091 = new BitSet(new ulong[]{0x2008000000100002UL,0x10000UL});
+		public static readonly BitSet _memberExpression_in_callExpression2078 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _LT_in_callExpression2080 = new BitSet(new ulong[]{0x10000000100000UL});
+		public static readonly BitSet _arguments_in_callExpression2084 = new BitSet(new ulong[]{0x4010000000100002UL,0x20000UL});
+		public static readonly BitSet _LT_in_callExpression2087 = new BitSet(new ulong[]{0x4010000000100000UL,0x20000UL});
+		public static readonly BitSet _callExpressionSuffix_in_callExpression2091 = new BitSet(new ulong[]{0x4010000000100002UL,0x20000UL});
 		public static readonly BitSet _arguments_in_callExpressionSuffix2114 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _indexSuffix_in_callExpressionSuffix2122 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _propertyReferenceSuffix_in_callExpressionSuffix2130 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _51_in_arguments2147 = new BitSet(new ulong[]{0xCC8081C89522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_arguments2150 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _assignmentExpression_in_arguments2154 = new BitSet(new ulong[]{0x200000008100000UL});
-		public static readonly BitSet _LT_in_arguments2157 = new BitSet(new ulong[]{0x200000000100000UL});
-		public static readonly BitSet _57_in_arguments2161 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_arguments2163 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _assignmentExpression_in_arguments2167 = new BitSet(new ulong[]{0x200000008100000UL});
+		public static readonly BitSet _52_in_arguments2147 = new BitSet(new ulong[]{0x1990103889522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_arguments2150 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _assignmentExpression_in_arguments2154 = new BitSet(new ulong[]{0x400000008100000UL});
+		public static readonly BitSet _LT_in_arguments2157 = new BitSet(new ulong[]{0x400000000100000UL});
+		public static readonly BitSet _58_in_arguments2161 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_arguments2163 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _assignmentExpression_in_arguments2167 = new BitSet(new ulong[]{0x400000008100000UL});
 		public static readonly BitSet _LT_in_arguments2173 = new BitSet(new ulong[]{0x8100000UL});
 		public static readonly BitSet _RPAREN_in_arguments2177 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _80_in_indexSuffix2198 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_indexSuffix2200 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
+		public static readonly BitSet _81_in_indexSuffix2198 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_indexSuffix2200 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
 		public static readonly BitSet _expression_in_indexSuffix2204 = new BitSet(new ulong[]{0x4100000UL});
 		public static readonly BitSet _LT_in_indexSuffix2206 = new BitSet(new ulong[]{0x4100000UL});
 		public static readonly BitSet _RBRACK_in_indexSuffix2210 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _61_in_propertyReferenceSuffix2232 = new BitSet(new ulong[]{0x120000UL});
+		public static readonly BitSet _62_in_propertyReferenceSuffix2232 = new BitSet(new ulong[]{0x120000UL});
 		public static readonly BitSet _LT_in_propertyReferenceSuffix2234 = new BitSet(new ulong[]{0x120000UL});
 		public static readonly BitSet _Identifier_in_propertyReferenceSuffix2238 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _logicalORExpression_in_conditionalExpression2320 = new BitSet(new ulong[]{0x100002UL,0x8000UL});
-		public static readonly BitSet _LT_in_conditionalExpression2323 = new BitSet(new ulong[]{0x100000UL,0x8000UL});
-		public static readonly BitSet _79_in_conditionalExpression2327 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_conditionalExpression2329 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _assignmentExpression_in_conditionalExpression2333 = new BitSet(new ulong[]{0x100000UL,0x1UL});
-		public static readonly BitSet _LT_in_conditionalExpression2335 = new BitSet(new ulong[]{0x100000UL,0x1UL});
-		public static readonly BitSet _64_in_conditionalExpression2339 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_conditionalExpression2341 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
+		public static readonly BitSet _logicalORExpression_in_conditionalExpression2320 = new BitSet(new ulong[]{0x100002UL,0x10000UL});
+		public static readonly BitSet _LT_in_conditionalExpression2323 = new BitSet(new ulong[]{0x100000UL,0x10000UL});
+		public static readonly BitSet _80_in_conditionalExpression2327 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_conditionalExpression2329 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _assignmentExpression_in_conditionalExpression2333 = new BitSet(new ulong[]{0x100000UL,0x2UL});
+		public static readonly BitSet _LT_in_conditionalExpression2335 = new BitSet(new ulong[]{0x100000UL,0x2UL});
+		public static readonly BitSet _65_in_conditionalExpression2339 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_conditionalExpression2341 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
 		public static readonly BitSet _assignmentExpression_in_conditionalExpression2345 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _logicalORExpressionNoIn_in_conditionalExpressionNoIn2364 = new BitSet(new ulong[]{0x100002UL,0x8000UL});
-		public static readonly BitSet _LT_in_conditionalExpressionNoIn2367 = new BitSet(new ulong[]{0x100000UL,0x8000UL});
-		public static readonly BitSet _79_in_conditionalExpressionNoIn2371 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_conditionalExpressionNoIn2373 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _assignmentExpressionNoIn_in_conditionalExpressionNoIn2377 = new BitSet(new ulong[]{0x100000UL,0x1UL});
-		public static readonly BitSet _LT_in_conditionalExpressionNoIn2379 = new BitSet(new ulong[]{0x100000UL,0x1UL});
-		public static readonly BitSet _64_in_conditionalExpressionNoIn2383 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_conditionalExpressionNoIn2385 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
+		public static readonly BitSet _logicalORExpressionNoIn_in_conditionalExpressionNoIn2364 = new BitSet(new ulong[]{0x100002UL,0x10000UL});
+		public static readonly BitSet _LT_in_conditionalExpressionNoIn2367 = new BitSet(new ulong[]{0x100000UL,0x10000UL});
+		public static readonly BitSet _80_in_conditionalExpressionNoIn2371 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_conditionalExpressionNoIn2373 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _assignmentExpressionNoIn_in_conditionalExpressionNoIn2377 = new BitSet(new ulong[]{0x100000UL,0x2UL});
+		public static readonly BitSet _LT_in_conditionalExpressionNoIn2379 = new BitSet(new ulong[]{0x100000UL,0x2UL});
+		public static readonly BitSet _65_in_conditionalExpressionNoIn2383 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_conditionalExpressionNoIn2385 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
 		public static readonly BitSet _assignmentExpressionNoIn_in_conditionalExpressionNoIn2389 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _logicalANDExpression_in_logicalORExpression2408 = new BitSet(new ulong[]{0x100002UL,0x400000000000UL});
-		public static readonly BitSet _LT_in_logicalORExpression2411 = new BitSet(new ulong[]{0x100000UL,0x400000000000UL});
-		public static readonly BitSet _110_in_logicalORExpression2415 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_logicalORExpression2417 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _logicalANDExpression_in_logicalORExpression2421 = new BitSet(new ulong[]{0x100002UL,0x400000000000UL});
-		public static readonly BitSet _logicalANDExpressionNoIn_in_logicalORExpressionNoIn2444 = new BitSet(new ulong[]{0x100002UL,0x400000000000UL});
-		public static readonly BitSet _LT_in_logicalORExpressionNoIn2447 = new BitSet(new ulong[]{0x100000UL,0x400000000000UL});
-		public static readonly BitSet _110_in_logicalORExpressionNoIn2451 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_logicalORExpressionNoIn2453 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _logicalANDExpressionNoIn_in_logicalORExpressionNoIn2457 = new BitSet(new ulong[]{0x100002UL,0x400000000000UL});
-		public static readonly BitSet _bitwiseORExpression_in_logicalANDExpression2480 = new BitSet(new ulong[]{0x1000000100002UL});
-		public static readonly BitSet _LT_in_logicalANDExpression2483 = new BitSet(new ulong[]{0x1000000100000UL});
-		public static readonly BitSet _48_in_logicalANDExpression2487 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_logicalANDExpression2489 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _bitwiseORExpression_in_logicalANDExpression2493 = new BitSet(new ulong[]{0x1000000100002UL});
-		public static readonly BitSet _bitwiseORExpressionNoIn_in_logicalANDExpressionNoIn2516 = new BitSet(new ulong[]{0x1000000100002UL});
-		public static readonly BitSet _LT_in_logicalANDExpressionNoIn2519 = new BitSet(new ulong[]{0x1000000100000UL});
-		public static readonly BitSet _48_in_logicalANDExpressionNoIn2523 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_logicalANDExpressionNoIn2525 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _bitwiseORExpressionNoIn_in_logicalANDExpressionNoIn2529 = new BitSet(new ulong[]{0x1000000100002UL});
-		public static readonly BitSet _bitwiseXORExpression_in_bitwiseORExpression2552 = new BitSet(new ulong[]{0x100002UL,0x100000000000UL});
-		public static readonly BitSet _LT_in_bitwiseORExpression2555 = new BitSet(new ulong[]{0x100000UL,0x100000000000UL});
-		public static readonly BitSet _108_in_bitwiseORExpression2559 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_bitwiseORExpression2561 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _bitwiseXORExpression_in_bitwiseORExpression2565 = new BitSet(new ulong[]{0x100002UL,0x100000000000UL});
-		public static readonly BitSet _bitwiseXORExpressionNoIn_in_bitwiseORExpressionNoIn2588 = new BitSet(new ulong[]{0x100002UL,0x100000000000UL});
-		public static readonly BitSet _LT_in_bitwiseORExpressionNoIn2591 = new BitSet(new ulong[]{0x100000UL,0x100000000000UL});
-		public static readonly BitSet _108_in_bitwiseORExpressionNoIn2595 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_bitwiseORExpressionNoIn2597 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _bitwiseXORExpressionNoIn_in_bitwiseORExpressionNoIn2601 = new BitSet(new ulong[]{0x100002UL,0x100000000000UL});
-		public static readonly BitSet _bitwiseANDExpression_in_bitwiseXORExpression2624 = new BitSet(new ulong[]{0x100002UL,0x20000UL});
-		public static readonly BitSet _LT_in_bitwiseXORExpression2627 = new BitSet(new ulong[]{0x100000UL,0x20000UL});
-		public static readonly BitSet _81_in_bitwiseXORExpression2631 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_bitwiseXORExpression2633 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _bitwiseANDExpression_in_bitwiseXORExpression2637 = new BitSet(new ulong[]{0x100002UL,0x20000UL});
-		public static readonly BitSet _bitwiseANDExpressionNoIn_in_bitwiseXORExpressionNoIn2660 = new BitSet(new ulong[]{0x100002UL,0x20000UL});
-		public static readonly BitSet _LT_in_bitwiseXORExpressionNoIn2663 = new BitSet(new ulong[]{0x100000UL,0x20000UL});
-		public static readonly BitSet _81_in_bitwiseXORExpressionNoIn2667 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_bitwiseXORExpressionNoIn2669 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _bitwiseANDExpressionNoIn_in_bitwiseXORExpressionNoIn2673 = new BitSet(new ulong[]{0x100002UL,0x20000UL});
-		public static readonly BitSet _equalityExpression_in_bitwiseANDExpression2696 = new BitSet(new ulong[]{0x2000000100002UL});
-		public static readonly BitSet _LT_in_bitwiseANDExpression2699 = new BitSet(new ulong[]{0x2000000100000UL});
-		public static readonly BitSet _49_in_bitwiseANDExpression2703 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_bitwiseANDExpression2705 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _equalityExpression_in_bitwiseANDExpression2709 = new BitSet(new ulong[]{0x2000000100002UL});
-		public static readonly BitSet _equalityExpressionNoIn_in_bitwiseANDExpressionNoIn2732 = new BitSet(new ulong[]{0x2000000100002UL});
-		public static readonly BitSet _LT_in_bitwiseANDExpressionNoIn2735 = new BitSet(new ulong[]{0x2000000100000UL});
-		public static readonly BitSet _49_in_bitwiseANDExpressionNoIn2739 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_bitwiseANDExpressionNoIn2741 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _equalityExpressionNoIn_in_bitwiseANDExpressionNoIn2745 = new BitSet(new ulong[]{0x2000000100002UL});
-		public static readonly BitSet _relationalExpression_in_equalityExpression2768 = new BitSet(new ulong[]{0x300000100002UL,0x180UL});
-		public static readonly BitSet _LT_in_equalityExpression2771 = new BitSet(new ulong[]{0x300000100000UL,0x180UL});
-		public static readonly BitSet _set_in_equalityExpression2775 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_equalityExpression2791 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _relationalExpression_in_equalityExpression2795 = new BitSet(new ulong[]{0x300000100002UL,0x180UL});
-		public static readonly BitSet _relationalExpressionNoIn_in_equalityExpressionNoIn2814 = new BitSet(new ulong[]{0x300000100002UL,0x180UL});
-		public static readonly BitSet _LT_in_equalityExpressionNoIn2817 = new BitSet(new ulong[]{0x300000100000UL,0x180UL});
-		public static readonly BitSet _set_in_equalityExpressionNoIn2821 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_equalityExpressionNoIn2837 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _relationalExpressionNoIn_in_equalityExpressionNoIn2841 = new BitSet(new ulong[]{0x300000100002UL,0x180UL});
-		public static readonly BitSet _shiftExpression_in_relationalExpression2864 = new BitSet(new ulong[]{0x100002UL,0x180000624UL});
-		public static readonly BitSet _LT_in_relationalExpression2867 = new BitSet(new ulong[]{0x100000UL,0x180000624UL});
-		public static readonly BitSet _set_in_relationalExpression2871 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_relationalExpression2895 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _shiftExpression_in_relationalExpression2899 = new BitSet(new ulong[]{0x100002UL,0x180000624UL});
-		public static readonly BitSet _shiftExpression_in_relationalExpressionNoIn2918 = new BitSet(new ulong[]{0x100002UL,0x100000624UL});
-		public static readonly BitSet _LT_in_relationalExpressionNoIn2921 = new BitSet(new ulong[]{0x100000UL,0x100000624UL});
-		public static readonly BitSet _set_in_relationalExpressionNoIn2925 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_relationalExpressionNoIn2945 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _shiftExpression_in_relationalExpressionNoIn2949 = new BitSet(new ulong[]{0x100002UL,0x100000624UL});
-		public static readonly BitSet _additiveExpression_in_shiftExpression2968 = new BitSet(new ulong[]{0x100002UL,0x2808UL});
-		public static readonly BitSet _LT_in_shiftExpression2971 = new BitSet(new ulong[]{0x100000UL,0x2808UL});
-		public static readonly BitSet _set_in_shiftExpression2975 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_shiftExpression2987 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _additiveExpression_in_shiftExpression2991 = new BitSet(new ulong[]{0x100002UL,0x2808UL});
-		public static readonly BitSet _multiplicativeExpression_in_additiveExpression3010 = new BitSet(new ulong[]{0x440000000100002UL});
-		public static readonly BitSet _LT_in_additiveExpression3013 = new BitSet(new ulong[]{0x440000000100000UL});
-		public static readonly BitSet _set_in_additiveExpression3017 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_additiveExpression3025 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _multiplicativeExpression_in_additiveExpression3029 = new BitSet(new ulong[]{0x440000000100002UL});
-		public static readonly BitSet _unaryExpression_in_multiplicativeExpression3048 = new BitSet(new ulong[]{0x4010400000100002UL});
-		public static readonly BitSet _LT_in_multiplicativeExpression3051 = new BitSet(new ulong[]{0x4010400000100000UL});
-		public static readonly BitSet _set_in_multiplicativeExpression3055 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_multiplicativeExpression3067 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _unaryExpression_in_multiplicativeExpression3071 = new BitSet(new ulong[]{0x4010400000100002UL});
+		public static readonly BitSet _logicalANDExpression_in_logicalORExpression2408 = new BitSet(new ulong[]{0x100002UL,0x800000000000UL});
+		public static readonly BitSet _LT_in_logicalORExpression2411 = new BitSet(new ulong[]{0x100000UL,0x800000000000UL});
+		public static readonly BitSet _111_in_logicalORExpression2415 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_logicalORExpression2417 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _logicalANDExpression_in_logicalORExpression2421 = new BitSet(new ulong[]{0x100002UL,0x800000000000UL});
+		public static readonly BitSet _logicalANDExpressionNoIn_in_logicalORExpressionNoIn2444 = new BitSet(new ulong[]{0x100002UL,0x800000000000UL});
+		public static readonly BitSet _LT_in_logicalORExpressionNoIn2447 = new BitSet(new ulong[]{0x100000UL,0x800000000000UL});
+		public static readonly BitSet _111_in_logicalORExpressionNoIn2451 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_logicalORExpressionNoIn2453 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _logicalANDExpressionNoIn_in_logicalORExpressionNoIn2457 = new BitSet(new ulong[]{0x100002UL,0x800000000000UL});
+		public static readonly BitSet _bitwiseORExpression_in_logicalANDExpression2480 = new BitSet(new ulong[]{0x2000000100002UL});
+		public static readonly BitSet _LT_in_logicalANDExpression2483 = new BitSet(new ulong[]{0x2000000100000UL});
+		public static readonly BitSet _49_in_logicalANDExpression2487 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_logicalANDExpression2489 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _bitwiseORExpression_in_logicalANDExpression2493 = new BitSet(new ulong[]{0x2000000100002UL});
+		public static readonly BitSet _bitwiseORExpressionNoIn_in_logicalANDExpressionNoIn2516 = new BitSet(new ulong[]{0x2000000100002UL});
+		public static readonly BitSet _LT_in_logicalANDExpressionNoIn2519 = new BitSet(new ulong[]{0x2000000100000UL});
+		public static readonly BitSet _49_in_logicalANDExpressionNoIn2523 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_logicalANDExpressionNoIn2525 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _bitwiseORExpressionNoIn_in_logicalANDExpressionNoIn2529 = new BitSet(new ulong[]{0x2000000100002UL});
+		public static readonly BitSet _bitwiseXORExpression_in_bitwiseORExpression2552 = new BitSet(new ulong[]{0x100002UL,0x200000000000UL});
+		public static readonly BitSet _LT_in_bitwiseORExpression2555 = new BitSet(new ulong[]{0x100000UL,0x200000000000UL});
+		public static readonly BitSet _109_in_bitwiseORExpression2559 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_bitwiseORExpression2561 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _bitwiseXORExpression_in_bitwiseORExpression2565 = new BitSet(new ulong[]{0x100002UL,0x200000000000UL});
+		public static readonly BitSet _bitwiseXORExpressionNoIn_in_bitwiseORExpressionNoIn2588 = new BitSet(new ulong[]{0x100002UL,0x200000000000UL});
+		public static readonly BitSet _LT_in_bitwiseORExpressionNoIn2591 = new BitSet(new ulong[]{0x100000UL,0x200000000000UL});
+		public static readonly BitSet _109_in_bitwiseORExpressionNoIn2595 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_bitwiseORExpressionNoIn2597 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _bitwiseXORExpressionNoIn_in_bitwiseORExpressionNoIn2601 = new BitSet(new ulong[]{0x100002UL,0x200000000000UL});
+		public static readonly BitSet _bitwiseANDExpression_in_bitwiseXORExpression2624 = new BitSet(new ulong[]{0x100002UL,0x40000UL});
+		public static readonly BitSet _LT_in_bitwiseXORExpression2627 = new BitSet(new ulong[]{0x100000UL,0x40000UL});
+		public static readonly BitSet _82_in_bitwiseXORExpression2631 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_bitwiseXORExpression2633 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _bitwiseANDExpression_in_bitwiseXORExpression2637 = new BitSet(new ulong[]{0x100002UL,0x40000UL});
+		public static readonly BitSet _bitwiseANDExpressionNoIn_in_bitwiseXORExpressionNoIn2660 = new BitSet(new ulong[]{0x100002UL,0x40000UL});
+		public static readonly BitSet _LT_in_bitwiseXORExpressionNoIn2663 = new BitSet(new ulong[]{0x100000UL,0x40000UL});
+		public static readonly BitSet _82_in_bitwiseXORExpressionNoIn2667 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_bitwiseXORExpressionNoIn2669 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _bitwiseANDExpressionNoIn_in_bitwiseXORExpressionNoIn2673 = new BitSet(new ulong[]{0x100002UL,0x40000UL});
+		public static readonly BitSet _equalityExpression_in_bitwiseANDExpression2696 = new BitSet(new ulong[]{0x4000000100002UL});
+		public static readonly BitSet _LT_in_bitwiseANDExpression2699 = new BitSet(new ulong[]{0x4000000100000UL});
+		public static readonly BitSet _50_in_bitwiseANDExpression2703 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_bitwiseANDExpression2705 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _equalityExpression_in_bitwiseANDExpression2709 = new BitSet(new ulong[]{0x4000000100002UL});
+		public static readonly BitSet _equalityExpressionNoIn_in_bitwiseANDExpressionNoIn2732 = new BitSet(new ulong[]{0x4000000100002UL});
+		public static readonly BitSet _LT_in_bitwiseANDExpressionNoIn2735 = new BitSet(new ulong[]{0x4000000100000UL});
+		public static readonly BitSet _50_in_bitwiseANDExpressionNoIn2739 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_bitwiseANDExpressionNoIn2741 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _equalityExpressionNoIn_in_bitwiseANDExpressionNoIn2745 = new BitSet(new ulong[]{0x4000000100002UL});
+		public static readonly BitSet _relationalExpression_in_equalityExpression2768 = new BitSet(new ulong[]{0x600000100002UL,0x300UL});
+		public static readonly BitSet _LT_in_equalityExpression2771 = new BitSet(new ulong[]{0x600000100000UL,0x300UL});
+		public static readonly BitSet _set_in_equalityExpression2775 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_equalityExpression2791 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _relationalExpression_in_equalityExpression2795 = new BitSet(new ulong[]{0x600000100002UL,0x300UL});
+		public static readonly BitSet _relationalExpressionNoIn_in_equalityExpressionNoIn2814 = new BitSet(new ulong[]{0x600000100002UL,0x300UL});
+		public static readonly BitSet _LT_in_equalityExpressionNoIn2817 = new BitSet(new ulong[]{0x600000100000UL,0x300UL});
+		public static readonly BitSet _set_in_equalityExpressionNoIn2821 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_equalityExpressionNoIn2837 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _relationalExpressionNoIn_in_equalityExpressionNoIn2841 = new BitSet(new ulong[]{0x600000100002UL,0x300UL});
+		public static readonly BitSet _shiftExpression_in_relationalExpression2864 = new BitSet(new ulong[]{0x100002UL,0x300000C48UL});
+		public static readonly BitSet _LT_in_relationalExpression2867 = new BitSet(new ulong[]{0x100000UL,0x300000C48UL});
+		public static readonly BitSet _set_in_relationalExpression2871 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_relationalExpression2895 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _shiftExpression_in_relationalExpression2899 = new BitSet(new ulong[]{0x100002UL,0x300000C48UL});
+		public static readonly BitSet _shiftExpression_in_relationalExpressionNoIn2918 = new BitSet(new ulong[]{0x100002UL,0x200000C48UL});
+		public static readonly BitSet _LT_in_relationalExpressionNoIn2921 = new BitSet(new ulong[]{0x100000UL,0x200000C48UL});
+		public static readonly BitSet _set_in_relationalExpressionNoIn2925 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_relationalExpressionNoIn2945 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _shiftExpression_in_relationalExpressionNoIn2949 = new BitSet(new ulong[]{0x100002UL,0x200000C48UL});
+		public static readonly BitSet _additiveExpression_in_shiftExpression2968 = new BitSet(new ulong[]{0x100002UL,0x5010UL});
+		public static readonly BitSet _LT_in_shiftExpression2971 = new BitSet(new ulong[]{0x100000UL,0x5010UL});
+		public static readonly BitSet _set_in_shiftExpression2975 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_shiftExpression2987 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _additiveExpression_in_shiftExpression2991 = new BitSet(new ulong[]{0x100002UL,0x5010UL});
+		public static readonly BitSet _multiplicativeExpression_in_additiveExpression3010 = new BitSet(new ulong[]{0x880000000100002UL});
+		public static readonly BitSet _LT_in_additiveExpression3013 = new BitSet(new ulong[]{0x880000000100000UL});
+		public static readonly BitSet _set_in_additiveExpression3017 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_additiveExpression3025 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _multiplicativeExpression_in_additiveExpression3029 = new BitSet(new ulong[]{0x880000000100002UL});
+		public static readonly BitSet _unaryExpression_in_multiplicativeExpression3048 = new BitSet(new ulong[]{0x8020800000100002UL});
+		public static readonly BitSet _LT_in_multiplicativeExpression3051 = new BitSet(new ulong[]{0x8020800000100000UL});
+		public static readonly BitSet _set_in_multiplicativeExpression3055 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_multiplicativeExpression3067 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _unaryExpression_in_multiplicativeExpression3071 = new BitSet(new ulong[]{0x8020800000100002UL});
 		public static readonly BitSet _postfixExpression_in_unaryExpression3090 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _set_in_unaryExpression3098 = new BitSet(new ulong[]{0xCC8081C81422000UL,0x894221010000UL});
+		public static readonly BitSet _set_in_unaryExpression3098 = new BitSet(new ulong[]{0x1990103881422000UL,0x1128442020000UL});
 		public static readonly BitSet _unaryExpression_in_unaryExpression3134 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _leftHandSideExpression_in_postfixExpression3155 = new BitSet(new ulong[]{0x880000000000002UL});
+		public static readonly BitSet _leftHandSideExpression_in_postfixExpression3155 = new BitSet(new ulong[]{0x1100000000000002UL});
 		public static readonly BitSet _THIS_in_primaryExpression3181 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _Identifier_in_primaryExpression3189 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _literal_in_primaryExpression3197 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _arrayLiteral_in_primaryExpression3205 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _objectLiteral_in_primaryExpression3213 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _51_in_primaryExpression3221 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_primaryExpression3223 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
+		public static readonly BitSet _52_in_primaryExpression3221 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_primaryExpression3223 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
 		public static readonly BitSet _expression_in_primaryExpression3227 = new BitSet(new ulong[]{0x8100000UL});
 		public static readonly BitSet _LT_in_primaryExpression3229 = new BitSet(new ulong[]{0x8100000UL});
 		public static readonly BitSet _RPAREN_in_primaryExpression3233 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _80_in_arrayLiteral3255 = new BitSet(new ulong[]{0xEC8081C85522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_arrayLiteral3257 = new BitSet(new ulong[]{0xEC8081C85522000UL,0x894221010000UL});
-		public static readonly BitSet _assignmentExpression_in_arrayLiteral3261 = new BitSet(new ulong[]{0x200000004100000UL});
-		public static readonly BitSet _LT_in_arrayLiteral3265 = new BitSet(new ulong[]{0x200000000100000UL});
-		public static readonly BitSet _57_in_arrayLiteral3269 = new BitSet(new ulong[]{0xEC8081C85522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_arrayLiteral3272 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _assignmentExpression_in_arrayLiteral3276 = new BitSet(new ulong[]{0x200000004100000UL});
+		public static readonly BitSet _81_in_arrayLiteral3255 = new BitSet(new ulong[]{0x1D90103885522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_arrayLiteral3257 = new BitSet(new ulong[]{0x1D90103885522000UL,0x1128442020000UL});
+		public static readonly BitSet _assignmentExpression_in_arrayLiteral3261 = new BitSet(new ulong[]{0x400000004100000UL});
+		public static readonly BitSet _LT_in_arrayLiteral3265 = new BitSet(new ulong[]{0x400000000100000UL});
+		public static readonly BitSet _58_in_arrayLiteral3269 = new BitSet(new ulong[]{0x1D90103885522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_arrayLiteral3272 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _assignmentExpression_in_arrayLiteral3276 = new BitSet(new ulong[]{0x400000004100000UL});
 		public static readonly BitSet _LT_in_arrayLiteral3282 = new BitSet(new ulong[]{0x4100000UL});
 		public static readonly BitSet _RBRACK_in_arrayLiteral3286 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _107_in_objectLiteral3311 = new BitSet(new ulong[]{0x200000403120000UL});
-		public static readonly BitSet _LT_in_objectLiteral3313 = new BitSet(new ulong[]{0x200000403120000UL});
-		public static readonly BitSet _propertyNameAndValue_in_objectLiteral3317 = new BitSet(new ulong[]{0x200000002100000UL});
-		public static readonly BitSet _LT_in_objectLiteral3321 = new BitSet(new ulong[]{0x200000000100000UL});
-		public static readonly BitSet _57_in_objectLiteral3325 = new BitSet(new ulong[]{0x200000403120000UL});
-		public static readonly BitSet _LT_in_objectLiteral3328 = new BitSet(new ulong[]{0x401120000UL});
-		public static readonly BitSet _propertyNameAndValue_in_objectLiteral3332 = new BitSet(new ulong[]{0x200000002100000UL});
+		public static readonly BitSet _108_in_objectLiteral3311 = new BitSet(new ulong[]{0x400000803120000UL});
+		public static readonly BitSet _LT_in_objectLiteral3313 = new BitSet(new ulong[]{0x400000803120000UL});
+		public static readonly BitSet _propertyNameAndValue_in_objectLiteral3317 = new BitSet(new ulong[]{0x400000002100000UL});
+		public static readonly BitSet _LT_in_objectLiteral3321 = new BitSet(new ulong[]{0x400000000100000UL});
+		public static readonly BitSet _58_in_objectLiteral3325 = new BitSet(new ulong[]{0x400000803120000UL});
+		public static readonly BitSet _LT_in_objectLiteral3328 = new BitSet(new ulong[]{0x801120000UL});
+		public static readonly BitSet _propertyNameAndValue_in_objectLiteral3332 = new BitSet(new ulong[]{0x400000002100000UL});
 		public static readonly BitSet _LT_in_objectLiteral3338 = new BitSet(new ulong[]{0x2100000UL});
 		public static readonly BitSet _RBRACE_in_objectLiteral3342 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _propertyName_in_propertyNameAndValue3363 = new BitSet(new ulong[]{0x100000UL,0x1UL});
-		public static readonly BitSet _LT_in_propertyNameAndValue3365 = new BitSet(new ulong[]{0x100000UL,0x1UL});
-		public static readonly BitSet _64_in_propertyNameAndValue3369 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_propertyNameAndValue3371 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
+		public static readonly BitSet _propertyName_in_propertyNameAndValue3363 = new BitSet(new ulong[]{0x100000UL,0x2UL});
+		public static readonly BitSet _LT_in_propertyNameAndValue3365 = new BitSet(new ulong[]{0x100000UL,0x2UL});
+		public static readonly BitSet _65_in_propertyNameAndValue3369 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_propertyNameAndValue3371 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
 		public static readonly BitSet _assignmentExpression_in_propertyNameAndValue3375 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _Identifier_in_propertyName3392 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _stringliteral_in_propertyName3400 = new BitSet(new ulong[]{0x2UL});
@@ -22678,7 +22679,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		public static readonly BitSet _NumericLiteral_in_numericliteral3483 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _StringLiteral_in_stringliteral3504 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _RegularExpressionLiteral_in_regularExpressionLiteral3521 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _65_in_synpred1_JavaScript175 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _66_in_synpred1_JavaScript175 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _LT_in_synpred2_JavaScript183 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _LT_in_synpred6_JavaScript235 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _functionDeclaration_in_synpred11_JavaScript298 = new BitSet(new ulong[]{0x2UL});
@@ -22688,9 +22689,9 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		public static readonly BitSet _expressionStatement_in_synpred31_JavaScript509 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _labelledStatement_in_synpred38_JavaScript565 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _LT_in_synpred41_JavaScript612 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LT_in_synpred65_JavaScript960 = new BitSet(new ulong[]{0x100000UL,0x4000000UL});
-		public static readonly BitSet _90_in_synpred65_JavaScript964 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
-		public static readonly BitSet _LT_in_synpred65_JavaScript966 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x8FFE73490002UL});
+		public static readonly BitSet _LT_in_synpred65_JavaScript960 = new BitSet(new ulong[]{0x100000UL,0x8000000UL});
+		public static readonly BitSet _91_in_synpred65_JavaScript964 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
+		public static readonly BitSet _LT_in_synpred65_JavaScript966 = new BitSet(new ulong[]{0x1990103881522000UL,0x11FFCE6920004UL});
 		public static readonly BitSet _statement_in_synpred65_JavaScript970 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _forStatement_in_synpred68_JavaScript1009 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _Identifier_in_synpred97_JavaScript1331 = new BitSet(new ulong[]{0x2UL});
@@ -22702,13 +22703,13 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 		public static readonly BitSet _conditionalExpressionNoIn_in_synpred143_JavaScript1896 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _callExpression_in_synpred146_JavaScript1937 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _memberExpression_in_synpred147_JavaScript1966 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LT_in_synpred154_JavaScript2026 = new BitSet(new ulong[]{0x2000000000100000UL,0x10000UL});
+		public static readonly BitSet _LT_in_synpred154_JavaScript2026 = new BitSet(new ulong[]{0x4000000000100000UL,0x20000UL});
 		public static readonly BitSet _memberExpressionSuffix_in_synpred154_JavaScript2030 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LT_in_synpred158_JavaScript2087 = new BitSet(new ulong[]{0x2008000000100000UL,0x10000UL});
+		public static readonly BitSet _LT_in_synpred158_JavaScript2087 = new BitSet(new ulong[]{0x4010000000100000UL,0x20000UL});
 		public static readonly BitSet _callExpressionSuffix_in_synpred158_JavaScript2091 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LT_in_synpred256_JavaScript3013 = new BitSet(new ulong[]{0x440000000100000UL});
-		public static readonly BitSet _set_in_synpred256_JavaScript3017 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
-		public static readonly BitSet _LT_in_synpred256_JavaScript3025 = new BitSet(new ulong[]{0xCC8081C81522000UL,0x894221010000UL});
+		public static readonly BitSet _LT_in_synpred256_JavaScript3013 = new BitSet(new ulong[]{0x880000000100000UL});
+		public static readonly BitSet _set_in_synpred256_JavaScript3017 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
+		public static readonly BitSet _LT_in_synpred256_JavaScript3025 = new BitSet(new ulong[]{0x1990103881522000UL,0x1128442020000UL});
 		public static readonly BitSet _multiplicativeExpression_in_synpred256_JavaScript3029 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _LT_in_synpred280_JavaScript3257 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _LT_in_synpred287_JavaScript3313 = new BitSet(new ulong[]{0x2UL});

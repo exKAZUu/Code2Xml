@@ -460,7 +460,7 @@ fragment NonEscapeCharacter
     ;
 
 fragment SingleEscapeCharacter
-    : '\'' | '"' | '\\' | 'b' | 'f' | 'n' | 'r' | 't' | 'v' | '\r\n' | '\n' | '\r'
+    : '\'' | '"' | '\\' | 'b' | 'f' | 'n' | 'r' | 't' | 'v'// | '\r\n' | '\n' | '\r'
     ;
 
 fragment EscapeCharacter
@@ -930,7 +930,8 @@ LineComment
     ;
 
 LT
-    : '\n'		// Line feed.
+    : '\r\n'
+    | '\n'		// Line feed.
     | '\r'		// Carriage return.
     | '\u2028'	// Line separator.
     | '\u2029'	// Paragraph separator.
@@ -969,3 +970,7 @@ RegularExpressionLiteral
       '/' IdentifierPart*
     )
     ;
+	
+SHEBANG
+	: '#' '!' ~('\n'|'\r')* {$channel=Hidden;}
+	;
