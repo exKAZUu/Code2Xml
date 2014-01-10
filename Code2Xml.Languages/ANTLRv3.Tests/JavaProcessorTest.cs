@@ -57,6 +57,11 @@ public class Hello extends JFrame {
         [TestCase(@"class Klass { void main() {
 	try (Object obj = new Object() ; Object obj = new Object()) { } finally { }
 }}")]
+        [TestCase(@"class Klass { void main() {
+		checkArgument(args == null);
+		Preconditions.checkArgument(args != null);
+		com.google.common.base.Preconditions.checkArgument(args.length == 0, str);
+}}")]
         public void Parse(string code) {
             VerifyRestoringCode(code);
         }
