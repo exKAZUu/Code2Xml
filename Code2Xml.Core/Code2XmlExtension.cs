@@ -75,7 +75,7 @@ namespace Code2Xml.Core {
         }
 
         /// <summary>
-        /// Returns 
+        /// Returns the node name (the rule name in the grammar)
         /// </summary>
         /// <param name="e"></param>
         /// <returns></returns>

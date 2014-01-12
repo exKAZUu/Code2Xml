@@ -16,6 +16,7 @@
 
 #endregion
 
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics.Contracts;
 using System.IO;
@@ -61,9 +62,12 @@ namespace Code2Xml.Core {
 			get { return SupportedExtensions[0]; }
 		}
 
-		protected Processor(params string[] extensions) {
+		protected Processor(IEnumerable<string> extensions) {
 			SupportedExtensions = extensions.ToList().AsReadOnly();
 		}
+
+		protected Processor(params string[] extensions)
+				: this((IEnumerable<string>)extensions) {}
 
 		#region GenerateCode
 
@@ -119,9 +123,7 @@ namespace Code2Xml.Core {
 			if (encoding == null) {
 				return GenerateCode(GuessEncoding.ReadAllText(xmlFile.FullName));
 			}
-			using (var stream = new StreamReader(xmlFile.FullName, encoding)) {
-				return GenerateCode(stream);
-			}
+			using (var stream = new StreamReader(xmlFile.FullName, encoding)) return GenerateCode(stream);
 		}
 
 		#endregion
@@ -155,7 +157,7 @@ namespace Code2Xml.Core {
 		/// <param name="encoding"></param>
 		/// <param name="throwingParseError"></param>
 		/// <returns></returns>
-		public XElement GenerateXml(
+		public virtual XElement GenerateXml(
 				FileInfo codeFile, Encoding encoding = null,
 				bool throwingParseError = DefaultThrowingParseError) {
 			Contract.Requires(codeFile != null);
@@ -163,9 +165,8 @@ namespace Code2Xml.Core {
 				return GenerateXml(
 						GuessEncoding.ReadAllText(codeFile.FullName), throwingParseError);
 			}
-			using (var reader = new StreamReader(codeFile.FullName, encoding)) {
+			using (var reader = new StreamReader(codeFile.FullName, encoding))
 				return GenerateXml(reader, throwingParseError);
-			}
 		}
 
 		#endregion
