@@ -128,6 +128,9 @@
     <Compile Include="Processor.cs" />
     <Compile Include="Location\CodeRange.cs" />
     <Compile Include="Code2XmlExtension.cs" />
+    <Compile Include="Processors\ProcessorUsingExternalParser.cs" />
+    <Compile Include="Processors\ProcessorUsingExternalParserAndOwnCodeGenerator.cs" />
+    <Compile Include="Processors\ProcessorUsingExternalProcessor.cs" />
     <Compile Include="XmlToCodes\XmlToCodeBase.cs" />
     <Compile Include="CodeToXmls\CodeToXmlContract.cs" />
     <Compile Include="CodeToXmls\CodeToXml.cs" />

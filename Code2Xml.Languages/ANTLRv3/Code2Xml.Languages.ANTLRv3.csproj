@@ -64,6 +64,7 @@
     <Compile Include="Processors\C\CParser.cs" />
     <Compile Include="Processors\C\CParser.Extension.cs" />
     <Compile Include="Processors\C\CProcessorUsingAntlr3.cs" />
+    <Compile Include="Processors\C\CProcessorUsingGcc.cs" />
     <Compile Include="Processors\JavaScript\JavaScriptProcessorUsingAntlr3.cs" />
     <Compile Include="Processors\JavaScript\JavaScriptLexer.Action.cs" />
     <Compile Include="Processors\JavaScript\JavaScriptLexer.cs" />

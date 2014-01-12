@@ -53,9 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\ProcessorUsingExternalParser.cs" />
-    <Compile Include="Core\ProcessorUsingExternalParserAndOwnCodeGenerator.cs" />
-    <Compile Include="Core\ProcessorUsingExternalProcessor.cs" />
     <Compile Include="Processors\Cobol\Cobol85Processor.cs" />
     <Compile Include="Processors\Python\Python3Processor.cs" />
     <Compile Include="Processors\Python\Python2Processor.cs" />

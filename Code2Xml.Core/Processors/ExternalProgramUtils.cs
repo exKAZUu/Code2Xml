@@ -26,6 +26,31 @@ using Paraiba.Core;
 
 namespace Code2Xml.Core.Processors {
 	public static class ExternalProgramUtils {
+        private static readonly Encoding Encoding = new UTF8Encoding(false);
+
+		public static void Invoke(string filePath, string arguments, string workingDirectory = "") {
+            var info = new ProcessStartInfo {
+                FileName = filePath,
+                Arguments = arguments.JoinString(" "),
+                CreateNoWindow = true,
+                RedirectStandardInput = true,
+                RedirectStandardOutput = true,
+                StandardOutputEncoding = Encoding,
+                StandardErrorEncoding = Encoding,
+                RedirectStandardError = true,
+                UseShellExecute = false,
+                WorkingDirectory = workingDirectory,
+            };
+            using (var p = Process.Start(info)) {
+                using (var write = new StreamWriter(p.StandardInput.BaseStream, Encoding)) {
+                    write.Write(root);
+                }
+                var result = p.StandardOutput.ReadToEnd();
+                Debug.WriteLine(p.StandardError.ReadToEnd());
+                return result;
+            }
+		}
+
 		public static string GetPythonPath(params string[] versions) {
 			IEnumerable<string> paths;
 			// Check whether running OS is Unix/Linux
