@@ -162,8 +162,12 @@ scope Symbols; // structs are scopes
 @init {
   $Symbols::types = new HashSet<string>();
 }
-	: struct_or_union gcc_attribute_list? IDENTIFIER? '{' struct_declaration_list '}'
+	: unnamed_struct_or_union_specifier					// GCC accepts empty struct
 	| struct_or_union gcc_attribute_list? IDENTIFIER
+	;
+
+unnamed_struct_or_union_specifier
+	: struct_or_union gcc_attribute_list? IDENTIFIER? '{' struct_declaration_list? '}'
 	;
 
 struct_or_union
@@ -176,8 +180,10 @@ struct_declaration_list
 	;
 
 struct_declaration
+options {k=3;}
 	: specifier_qualifier_list struct_declarator_list ';'
-	| ';' // for gcc
+	| unnamed_struct_or_union_specifier // GCC accepts unnamed struct / union
+	| ';'	// for gcc
 	;
 
 specifier_qualifier_list
