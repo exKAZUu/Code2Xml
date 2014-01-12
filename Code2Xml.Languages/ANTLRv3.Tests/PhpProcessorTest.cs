@@ -59,6 +59,7 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
 		[TestCase(@"<?php if ($a = 1 + $b = 0) {}")]
 		[TestCase(@"<?php 1 + $a = 1;")]
 		[TestCase(@"<?php $x .= $y ^ $z;")]
+		[TestCase(@"<?php if (true) { }")]
 		public void Parse(string code) {
 			VerifyRestoringCode(code);
 		}
