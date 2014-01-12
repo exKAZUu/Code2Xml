@@ -18,7 +18,7 @@
 
 using System.IO;
 using System.Text.RegularExpressions;
-using Code2Xml.Languages.ExternalProcessors.Core;
+using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ExternalProcessors.Properties;
 using Paraiba.IO;
 

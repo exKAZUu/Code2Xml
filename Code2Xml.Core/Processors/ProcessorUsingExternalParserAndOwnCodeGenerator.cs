@@ -20,7 +20,7 @@ using System.Diagnostics.Contracts;
 using System.Text;
 using System.Xml.Linq;
 
-namespace Code2Xml.Languages.ExternalProcessors.Core {
+namespace Code2Xml.Core.Processors {
     public abstract class ProcessorUsingExternalParserAndOwnCodeGenerator
             : ProcessorUsingExternalParser {
         private readonly string _newLine;

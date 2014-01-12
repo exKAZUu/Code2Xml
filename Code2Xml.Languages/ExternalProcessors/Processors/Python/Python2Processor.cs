@@ -21,7 +21,6 @@ using System.IO;
 using System.Xml.Linq;
 using Code2Xml.Core;
 using Code2Xml.Core.Processors;
-using Code2Xml.Languages.ExternalProcessors.Core;
 using Code2Xml.Languages.ExternalProcessors.Properties;
 using Paraiba.IO;
 

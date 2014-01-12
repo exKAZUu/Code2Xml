@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Text;
 using Microsoft.Win32;
 using Paraiba.Core;
 
@@ -28,7 +29,7 @@ namespace Code2Xml.Core.Processors {
 	public static class ExternalProgramUtils {
         private static readonly Encoding Encoding = new UTF8Encoding(false);
 
-		public static void Invoke(string filePath, string arguments, string workingDirectory = "") {
+        public static string Invoke(string input, string filePath, IEnumerable<string> arguments, string workingDirectory) {
             var info = new ProcessStartInfo {
                 FileName = filePath,
                 Arguments = arguments.JoinString(" "),
@@ -43,7 +44,7 @@ namespace Code2Xml.Core.Processors {
             };
             using (var p = Process.Start(info)) {
                 using (var write = new StreamWriter(p.StandardInput.BaseStream, Encoding)) {
-                    write.Write(root);
+                    write.Write(input);
                 }
                 var result = p.StandardOutput.ReadToEnd();
                 Debug.WriteLine(p.StandardError.ReadToEnd());

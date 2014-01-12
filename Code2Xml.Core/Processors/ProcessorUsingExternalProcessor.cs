@@ -22,7 +22,7 @@ using System.IO;
 using System.Xml.Linq;
 using Paraiba.Core;
 
-namespace Code2Xml.Languages.ExternalProcessors.Core {
+namespace Code2Xml.Core.Processors {
     public abstract class ProcessorUsingExternalProcessor : ProcessorUsingExternalParser {
         protected ProcessorUsingExternalProcessor(params string[] extensions) : base(extensions) {}
 

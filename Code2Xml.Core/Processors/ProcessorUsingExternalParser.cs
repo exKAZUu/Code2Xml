@@ -21,11 +21,10 @@ using System.Diagnostics.Contracts;
 using System.IO;
 using System.Text;
 using System.Xml.Linq;
-using Code2Xml.Core;
 using Paraiba.Core;
 using Paraiba.IO;
 
-namespace Code2Xml.Languages.ExternalProcessors.Core {
+namespace Code2Xml.Core.Processors {
     /// <summary>
     /// Provides functions to invoke external parsers.
     /// Note that this class does not help invoking external programs to generate code from xml.
