@@ -68,6 +68,7 @@
     <Compile Include="Processors\C\C.g4.lexer.cs" />
     <Compile Include="Processors\C\C.g4.parser.cs" />
     <Compile Include="Processors\C\CProcessor.cs" />
+    <Compile Include="Processors\C\CProcessorUsingAntlr4AndGcc.cs" />
     <Compile Include="Processors\Erlang\ErlangProcessor.cs" />
     <Compile Include="Processors\Erlang\Erlang.g4.lexer.cs">
       <DependentUpon>Erlang.g4</DependentUpon>

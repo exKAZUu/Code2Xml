@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CProcessorTest.cs" />
     <Compile Include="GarryLuaProcessorTest.cs" />
     <Compile Include="LuaProcessorTest.cs" />
     <Compile Include="Processors\JavaProcessorTest.cs" />
@@ -75,6 +76,10 @@
     <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">
       <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>
       <Name>Code2Xml.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ParserTests\ParserTests\ParserTests.csproj">
+      <Project>{20510236-D8B1-4617-9352-4E6134F9AB67}</Project>
+      <Name>ParserTests</Name>
     </ProjectReference>
     <ProjectReference Include="..\ANTLRv4\Code2Xml.Languages.ANTLRv4.csproj">
       <Project>{1de85da9-6ebf-49d1-8dda-75d9d25497f6}</Project>

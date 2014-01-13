@@ -204,6 +204,7 @@ declarationSpecifier
     |   typeQualifier
     |   functionSpecifier
     |   alignmentSpecifier
+	|   gccDeclaratorExtension
     ;
 
 initDeclaratorList
@@ -217,7 +218,7 @@ initDeclarator
     ;
 
 storageClassSpecifier
-    :   'typedef'
+    :   '__extension__'? 'typedef'
     |   'extern'
     |   'static'
     |   '_Thread_local'
@@ -271,6 +272,7 @@ structDeclaration
 specifierQualifierList
     :   typeSpecifier specifierQualifierList?
     |   typeQualifier specifierQualifierList?
+    |   gccDeclaratorExtension specifierQualifierList?
     ;
 
 structDeclaratorList
@@ -334,7 +336,7 @@ declarator
 
 directDeclarator
     :   Identifier
-    |   '(' declarator ')'
+    |   '(' gccDeclaratorExtension* declarator ')'
     |   directDeclarator '[' typeQualifierList? assignmentExpression? ']'
     |   directDeclarator '[' 'static' typeQualifierList? assignmentExpression ']'
     |   directDeclarator '[' typeQualifierList 'static' assignmentExpression ']'
@@ -345,6 +347,7 @@ directDeclarator
 
 gccDeclaratorExtension
     :   '__asm' '(' StringLiteral+ ')'
+	|   '__extension__'
     |   gccAttributeSpecifier
     ;
 

@@ -145,6 +145,7 @@ type_specifier
 	| 'double'
 	| 'signed'
 	| 'unsigned'
+	| '_Bool'
 	| struct_or_union_specifier
 	| enum_specifier
 	| type_id
@@ -180,9 +181,9 @@ struct_declaration_list
 	;
 
 struct_declaration
-options {k=3;}
 	: specifier_qualifier_list struct_declarator_list ';'
-	| unnamed_struct_or_union_specifier // GCC accepts unnamed struct / union
+	// GCC accepts unnamed struct / union
+	| ( type_qualifier | unnamed_struct_or_union_specifier | gcc_declaration_specifier)+
 	| ';'	// for gcc
 	;
 
@@ -206,7 +207,7 @@ options {k=4;}
 	;
 
 enumerator_list
-	: enumerator (',' enumerator)*
+	: enumerator (',' enumerator)* ','?
 	;
 
 enumerator
@@ -615,7 +616,7 @@ gcc_builtin_va_arg
 	;
 
 gcc_typeof
-	: 'typeof' '(' ( type_name | assignment_expression ) ')'
+	: ('typeof' | '__typeof__')	'(' ( type_name | assignment_expression ) ')'
 	;
 
 gcc_builtin_offsetof
@@ -658,16 +659,18 @@ HexDigit : ('0'..'9'|'a'..'f'|'A'..'F') ;
 
 fragment
 IntegerTypeSuffix
-	:	('u'|'U')? ('l'|'L')
-	|	('u'|'U')  ('l'|'L')?
+	:	('l'|'L')
+	|	('u'|'U')
+	|	('u'|'U')  ('l'|'L')
 	|	('u'|'U')? ('l'|'L') ('l'|'L')
 	;
 
 FLOATING_POINT_LITERAL
 	:   ('0'..'9')+ '.' ('0'..'9')* Exponent? FloatTypeSuffix?
 	|   '.' ('0'..'9')+ Exponent? FloatTypeSuffix?
-	|   ('0'..'9')+ Exponent FloatTypeSuffix?
-	|   ('0'..'9')+ Exponent? FloatTypeSuffix
+	|   ('0'..'9')+ Exponent
+	|   ('0'..'9')+ FloatTypeSuffix
+	|   ('0'..'9')+ Exponent FloatTypeSuffix
 	;
 
 fragment
@@ -678,8 +681,15 @@ FloatTypeSuffix : ('f'|'F'|'d'|'D') ;
 
 fragment
 EscapeSequence
-	:   '\\' ('b'|'t'|'n'|'f'|'r'|'\"'|'\''|'\\')
-	|   OctalEscape
+	:   '\\' ('0'|'a'|'b'|'e'|'t'|'n'|'f'|'r'|'v'|'\"'|'\''|'\\'|'?')
+	| OctalEscape
+	| HexicalEscape
+	| UnicodeEscape
+	;
+
+fragment
+HexicalEscape
+	: '\\' ('x'|'X') HexDigit HexDigit
 	;
 
 fragment

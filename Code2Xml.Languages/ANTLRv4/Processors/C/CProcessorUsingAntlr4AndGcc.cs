@@ -23,19 +23,19 @@ using System.Xml.Linq;
 using Code2Xml.Core;
 using Code2Xml.Core.Processors;
 
-namespace Code2Xml.Languages.ANTLRv3.Processors.C {
+namespace Code2Xml.Languages.ANTLRv4.Processors.C {
 	/// <summary>
 	/// Represents a C parser and a C code generator using GCC as a preprocessor.
 	/// </summary>
 	[Export(typeof(Processor))]
-	public class CProcessorUsingAntlr3AndGcc : CProcessorUsingAntlr3 {
+	public class CProcessorUsingAntlr4AndGcc : CProcessor {
 		private readonly string _defaultWorkingDirectory;
 
-		public CProcessorUsingAntlr3AndGcc() {
+		public CProcessorUsingAntlr4AndGcc() {
 			_defaultWorkingDirectory = null;
 		}
 
-		public CProcessorUsingAntlr3AndGcc(string defaultWorkingDirectory) {
+		public CProcessorUsingAntlr4AndGcc(string defaultWorkingDirectory) {
 			_defaultWorkingDirectory = defaultWorkingDirectory;
 		}
 
