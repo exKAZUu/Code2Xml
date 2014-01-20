@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2013 Kazunori Sakamoto
+// Copyright (C) 2011-2014 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -123,7 +123,9 @@ namespace Code2Xml.Core {
 			if (encoding == null) {
 				return GenerateCode(GuessEncoding.ReadAllText(xmlFile.FullName));
 			}
-			using (var stream = new StreamReader(xmlFile.FullName, encoding)) return GenerateCode(stream);
+			using (var stream = new StreamReader(xmlFile.FullName, encoding)) {
+				return GenerateCode(stream);
+			}
 		}
 
 		#endregion
@@ -162,11 +164,17 @@ namespace Code2Xml.Core {
 				bool throwingParseError = DefaultThrowingParseError) {
 			Contract.Requires(codeFile != null);
 			if (encoding == null) {
-				return GenerateXml(
-						GuessEncoding.ReadAllText(codeFile.FullName), throwingParseError);
+				try {
+					return GenerateXml(
+							GuessEncoding.ReadAllText(codeFile.FullName), true);
+				} catch {
+					return GenerateXml(
+							File.ReadAllText(codeFile.FullName), throwingParseError);
+				}
 			}
-			using (var reader = new StreamReader(codeFile.FullName, encoding))
+			using (var reader = new StreamReader(codeFile.FullName, encoding)) {
 				return GenerateXml(reader, throwingParseError);
+			}
 		}
 
 		#endregion

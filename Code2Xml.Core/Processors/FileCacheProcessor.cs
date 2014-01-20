@@ -39,20 +39,17 @@ namespace Code2Xml.Core.Processors {
 			foreach (var invalidChar in Path.GetInvalidFileNameChars()) {
 				time = time.Replace(invalidChar, '_');
 			}
-			Directory.CreateDirectory("cache");
-			var chachFileInfo =
-					new FileInfo(Path.Combine("cache",
-							Path.GetFileNameWithoutExtension(codeFile.FullName) + time + ".xml"));
-			if (chachFileInfo.Exists) {
-				using (var reader = chachFileInfo.OpenText()) {
+			var cacheFileInfo = new FileInfo(codeFile.FullName + time + ".cached_xml");
+			if (cacheFileInfo.Exists) {
+				using (var reader = cacheFileInfo.OpenText()) {
 					var xdoc = XDocument.Load(reader, LoadOptions.PreserveWhitespace);
 					var cachedTree = xdoc.Root;
 					cachedTree.Remove();
 					return cachedTree;
 				}
 			}
-			var tree = base.GenerateXml(codeFile, encoding, throwingParseError);
-			using (var stream = chachFileInfo.OpenWrite()) {
+			var tree = DelegatingProcessor.GenerateXml(codeFile, encoding, throwingParseError);
+			using (var stream = cacheFileInfo.OpenWrite()) {
 				tree.Save(stream, SaveOptions.DisableFormatting | SaveOptions.OmitDuplicateNamespaces);
 			}
 			return tree;

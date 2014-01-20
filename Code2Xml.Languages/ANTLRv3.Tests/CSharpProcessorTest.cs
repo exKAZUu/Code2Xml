@@ -1,8 +1,29 @@
-﻿using System.Linq;
+﻿#region License
+
+// Copyright (C) 2011-2014 Kazunori Sakamoto
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+#endregion
+
+using System;
+using System.IO;
+using System.Linq;
 using Code2Xml.Core;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.ANTLRv3.Processors.CSharp;
 using NUnit.Framework;
+using ParserTests;
 
 namespace Code2Xml.Languages.ANTLRv3.Tests {
 	[TestFixture]
@@ -100,6 +121,17 @@ xxxxx
 #endif")]
 		[TestCase(@"class K { void m() { var from = 1; from = 2; } }")]
 		[TestCase(@"public class \u211B { }")]
+		[TestCase(@"class K { void m() {
+			Contract.Requires(true);
+			Contract.Requires(true, s);
+			Contract.Requires<Exception>(true);
+			Contract.Requires<Exception>(true, s);
+
+			System.Diagnostics.Contracts.Contract.Requires(true);
+			System.Diagnostics.Contracts.Contract.Requires(true, s);
+			System.Diagnostics.Contracts.Contract.Requires<Exception>(true);
+			System.Diagnostics.Contracts.Contract.Requires<Exception>(true, s);
+} }")]
 		public void Parse(string code) {
 			VerifyRestoringCode(code);
 		}
@@ -112,17 +144,27 @@ xxxxx
 		}
 
 		[Test]
-		[TestCase("NuGetGallery")]
-		[TestCase("SignalR")]
-		[TestCase("StarryboundServer")]
-		[TestCase("moq4")]
-		[TestCase("MechJeb2")]
-		[TestCase("MediaPortal-1")]
-		[TestCase("ServiceStack")]
-		[TestCase("MonoTouch.Dialog")]
-		[TestCase("ravendb")]
-		[TestCase("Nancy")]
-		[TestCase("Newtonsoft.Json")]
+		public void Test() {
+			var path = Fixture.GetInputProjectPath("CSharp", "MediaPortal-1");
+			new CSharpProcessorUsingAntlr3()
+					.GenerateXml(
+							new FileInfo(
+									Path.Combine(path, "mediaportal", "Utils", "Web", "html", "HtmlString.cs")),
+							null, true);
+		}
+
+		[Test]
+		[TestCase("MechJeb2")] //  39453 ms (69 files)
+		[TestCase("MediaPortal-1")] // 335704 ms (2787 files)
+		[TestCase("MonoTouch.Dialog")] //   2328 ms (31 files)
+		[TestCase("Nancy")] //  24187 ms (813 files)
+		[TestCase("Newtonsoft.Json")] //  30765 ms (477 files)
+		[TestCase("NuGetGallery")] //  24235 ms (764 files)
+		[TestCase("ServiceStack")] //  80156 ms (3335 files)
+		[TestCase("SignalR")] //  35469 ms (702 files)
+		[TestCase("StarryboundServer")] //   4922 ms (54 files)
+		[TestCase("moq4")] //   6640 ms (226 files)
+		[TestCase("ravendb")] // 176156 ms (4041 files)
 		public void ParseDirectory(string fileName) {
 			VerifyRestoringProjectDirectory("CSharp", fileName, "*.cs");
 		}

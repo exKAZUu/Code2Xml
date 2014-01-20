@@ -39,16 +39,12 @@ namespace Code2Xml.Core.Processors {
 
 		public override XElement GenerateXml(
 				FileInfo codeFile, Encoding encoding = null, bool throwingParseError = DefaultThrowingParseError) {
-			var time = codeFile.LastWriteTime.ToString();
-			foreach (var invalidChar in Path.GetInvalidPathChars()) {
-				time = time.Replace(invalidChar, '_');
+			var id = codeFile.FullName + codeFile.LastWriteTime;
+			if (Path2Element.ContainsKey(id)) {
+				return Path2Element[id];
 			}
-			var path = Path.GetFileNameWithoutExtension(codeFile.FullName) + time + ".xml";
-			if (Path2Element.ContainsKey(path)) {
-				return Path2Element[path];
-			}
-			var tree = base.GenerateXml(codeFile, encoding, throwingParseError);
-			Path2Element[path] = tree;
+			var tree = DelegatingProcessor.GenerateXml(codeFile, encoding, throwingParseError);
+			Path2Element[id] = tree;
 			return tree;
 		}
 	}

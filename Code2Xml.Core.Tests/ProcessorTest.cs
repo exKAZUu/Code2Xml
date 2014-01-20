@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2013 Kazunori Sakamoto
+// Copyright (C) 2011-2014 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -23,55 +23,57 @@ using Paraiba.Xml;
 using ParserTests;
 
 namespace Code2Xml.Core.Tests {
-    public abstract class ProcessorTest {
-        protected abstract Processor CreateProcessor();
+	public abstract class ProcessorTest {
+		protected abstract Processor CreateProcessor();
 
-        protected void VerifyParsing(string code) {
-            var processor = CreateProcessor();
-            var xml = processor.GenerateXml(code);
+		protected void VerifyParsing(string code) {
+			var processor = CreateProcessor();
+			var xml = processor.GenerateXml(code);
 
-            Console.WriteLine(xml);
-        }
+			Console.WriteLine(xml);
+		}
 
-        protected void VerifyInterConverting(string code) {
-            var processor = CreateProcessor();
-            var r1 = processor.GenerateXml(code, true);
-            var c1 = processor.GenerateCode(r1);
-            var r2 = processor.GenerateXml(c1, true);
-            var c2 = processor.GenerateCode(r2);
-            var r3 = processor.GenerateXml(c2, true);
-            var c3 = processor.GenerateCode(r3);
+		protected void VerifyInterConverting(string code) {
+			var processor = CreateProcessor();
+			var r1 = processor.GenerateXml(code, true);
+			var c1 = processor.GenerateCode(r1);
+			var r2 = processor.GenerateXml(c1, true);
+			var c2 = processor.GenerateCode(r2);
+			var r3 = processor.GenerateXml(c2, true);
+			var c3 = processor.GenerateCode(r3);
 
-            Assert.IsTrue(XmlUtil.EqualsWithElementAndValue(r2, r3));
-            Assert.AreEqual(c2, c3);
-        }
+			Assert.IsTrue(XmlUtil.EqualsWithElementAndValue(r2, r3));
+			Assert.AreEqual(c2, c3);
+		}
 
-        protected void VerifyRestoringCode(string code, bool write = true) {
-            var processor = CreateProcessor();
-            var xml = processor.GenerateXml(code, true);
-            var code2 = processor.GenerateCode(xml);
+		protected void VerifyRestoringCode(string code, bool write = true) {
+			var processor = CreateProcessor();
+			var xml = processor.GenerateXml(code, true);
+			var code2 = processor.GenerateCode(xml);
 
-            Assert.That(code2, Is.EqualTo(code));
-            if (write) {
-                Console.WriteLine(xml);
-            }
-        }
+			Assert.That(code2, Is.EqualTo(code));
+			if (write) {
+				Console.WriteLine(xml);
+			}
+		}
 
-        protected void VerifyRestoringFile(string langName, string fileName) {
-            var path = Fixture.GetInputCodePath(langName, fileName);
-            VerifyRestoringCode(File.ReadAllText(path));
-        }
+		protected void VerifyRestoringFile(string langName, string fileName) {
+			var path = Fixture.GetInputCodePath(langName, fileName);
+			VerifyRestoringCode(File.ReadAllText(path));
+		}
 
-        protected void VerifyRestoringProjectDirectory(
-                string langName, string fileName, params string[] patterns) {
-            var path = Fixture.GetInputProjectPath(langName, fileName);
-            foreach (var pattern in patterns) {
-                var filePaths = Directory.GetFiles(path, pattern, SearchOption.AllDirectories);
-                foreach (var filePath in filePaths) {
-                    Console.WriteLine(filePath);
-                    VerifyRestoringCode(File.ReadAllText(filePath), false);
-                }
-            }
-        }
-    }
+		protected void VerifyRestoringProjectDirectory(
+				string langName, string fileName, params string[] patterns) {
+			var time = Environment.TickCount;
+			var path = Fixture.GetInputProjectPath(langName, fileName);
+			foreach (var pattern in patterns) {
+				var filePaths = Directory.GetFiles(path, pattern, SearchOption.AllDirectories);
+				foreach (var filePath in filePaths) {
+					Console.WriteLine(filePath);
+					VerifyRestoringCode(File.ReadAllText(filePath), false);
+				}
+			}
+			Console.WriteLine("Time: " + (Environment.TickCount - time));
+		}
+	}
 }
