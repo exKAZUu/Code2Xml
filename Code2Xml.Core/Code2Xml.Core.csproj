@@ -120,8 +120,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Processors\MemoryCachchProcessor.cs" />
     <Compile Include="Processors\FileCacheProcessor.cs" />
+    <Compile Include="Processors\MemoryCacheProcessor.cs" />
     <Compile Include="Code2XmlConstants.cs" />
     <Compile Include="ParseException.cs" />
     <Compile Include="Location\CodeLocation.cs" />

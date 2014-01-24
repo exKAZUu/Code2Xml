@@ -4,7 +4,7 @@ using System.Text;
 using System.Xml.Linq;
 
 namespace Code2Xml.Core.Processors {
-	public class MemoryCachchProcessor : Processor {
+	public class MemoryCacheProcessor : Processor {
 		public Processor DelegatingProcessor { get; private set; }
 
 		private static readonly Dictionary<string, XElement> Path2Element =
@@ -18,7 +18,7 @@ namespace Code2Xml.Core.Processors {
 			get { return DelegatingProcessor.LanguageVersion; }
 		}
 
-		public MemoryCachchProcessor(Processor delegatingProcessor)
+		public MemoryCacheProcessor(Processor delegatingProcessor)
 				: base(delegatingProcessor.SupportedExtensions) {
 			DelegatingProcessor = delegatingProcessor;
 		}
