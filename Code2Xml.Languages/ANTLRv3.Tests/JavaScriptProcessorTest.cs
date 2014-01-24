@@ -69,10 +69,30 @@ var completion = require('../lib/completion');
 		}
 
 		[Test]
-		[TestCase("ionic")]
+		//[TestCase("angular.js")]	// failed
+		[TestCase("bootstrap")]
+		[TestCase("browser-sync")]
 		[TestCase("cheet.js")]
 		[TestCase("clmtrackr")]
+		//[TestCase("codebox")]	// failed
+		[TestCase("countUp.js")]
+		//[TestCase("d3")]	// failed
+		[TestCase("fit.js")]
+		//[TestCase("Ghost")]	// failed
 		[TestCase("gulp")]
+		[TestCase("ionic")]
+		//[TestCase("jquery")]	// failed
+		[TestCase("jQuery-File-Upload")]	// failed
+		//[TestCase("koa")]	// failed
+		//[TestCase("Lychee")]	// failed
+		//[TestCase("mathjs")]	// failed
+		//[TestCase("moment")]	// failed
+		[TestCase("my-mind")]
+		//[TestCase("node-jscs")]	// failed
+		//[TestCase("orbit.js")]	// failed
+		//[TestCase("planetary.js")]	// failed
+		//[TestCase("react")]	// failed
+		//[TestCase("Semantic-UI")]	// failed
 		public void ParseDirectory(string fileName) {
 			VerifyRestoringProjectDirectory("JavaScript", fileName, "*.js");
 		}

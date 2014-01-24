@@ -70,10 +70,34 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
 		}
 
 		[Test]
+		[TestCase("bedrock")]
 		[TestCase("cockpit")]
+		//[TestCase("CodeIgniter")]	// failed
+		//[TestCase("composer")]	// too heavy
 		[TestCase("composer-service")]
+		//[TestCase("core")]	// failed
+		[TestCase("flight")]
+		[TestCase("flysystem")]
+		//[TestCase("google-api-php-client")]	// failed
+		[TestCase("gush")]
+		//[TestCase("guzzle")]	// failed
+		[TestCase("laravel")]
+		//[TestCase("Mobile-Detect")]	// failed
+		//[TestCase("phabricator")]	// failed
+		//[TestCase("phoronix-test-suite")]	// failed
+		[TestCase("phpdotenv")]
+		//[TestCase("PHPMailer")]	// failed
+		//[TestCase("php-mpos")]	// failed
 		[TestCase("php-mvc")]
+		//[TestCase("piwik")]	// failed
+		//[TestCase("psysh")]	// too heavy
+		//[TestCase("rocketeer")]	// failed
 		[TestCase("sovereign")]
+		//[TestCase("symfony")]	// failed
+		//[TestCase("yii")]	// failed
+		//[TestCase("yii2")]	// failed
+		//[TestCase("YOURLS")]	// failed
+		//[TestCase("zf2")]	// failed
 		public void ParseDirectory(string fileName) {
 			VerifyRestoringProjectDirectory("Php", fileName, "*.php");
 		}
