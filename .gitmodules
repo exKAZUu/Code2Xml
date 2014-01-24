@@ -1,6 +1,3 @@
 [submodule "ParserTest"]
 	path = ParserTest
 	url = git@github.com:exKAZUu/ParserTest.git
-[submodule "ParserTests"]
-	path = ParserTests
-	url = https://github.com/exKAZUu/ParserTests.git
