@@ -115,7 +115,8 @@ statement
 	| classDefinition
 	| interfaceDefinition
 	| complexStatement
-	| simpleStatement? ';'
+	| simpleStatement ';'
+	| ';'
 	;
 
 printExpr
