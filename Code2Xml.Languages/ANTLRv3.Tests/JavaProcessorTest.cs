@@ -68,7 +68,16 @@ public class Hello extends JFrame {
         }
 
         [Test]
+        [TestCase(@"android-betterpickers")]
+        [TestCase(@"android-priority-jobqueue")]
+        [TestCase(@"elasticsearch")]
+        [TestCase(@"Hydra")]
+        [TestCase(@"pageobjectgenerator")]
         [TestCase(@"presto")]
+        [TestCase(@"RxJava")]
+        [TestCase(@"scalpel")]
+        [TestCase(@"storm")]
+        [TestCase(@"u2020")]
         public void ParseDirectory(string directoryName) {
             VerifyRestoringProjectDirectory("Java", directoryName, "*.java");
         }
