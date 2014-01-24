@@ -65,6 +65,7 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
 		}
 
 		[Test]
+		[TestCase("Seed.php")]
 		public void ParseFile(string fileName) {
 			VerifyRestoringFile("Php", fileName);
 		}
