@@ -10,7 +10,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g 2014-01-11 01:33:27
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g 2014-01-25 13:05:28
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -250,7 +250,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	public csParser(ITokenStream input, RecognizerSharedState state)
 		: base(input, state)
 	{
-		this.state.ruleMemo = new System.Collections.Generic.Dictionary<int, int>[1075+1];
+		this.state.ruleMemo = new System.Collections.Generic.Dictionary<int, int>[1074+1];
 
 
 		Antlr3AstBuilder treeAdaptor = default(Antlr3AstBuilder);
@@ -44914,7 +44914,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_embedded_statement();
 	partial void LeaveRule_embedded_statement();
 	// $ANTLR start "embedded_statement"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:875:1: embedded_statement : ( block | empty_statement | expression_statement | selection_statement | iteration_statement | jump_statement | try_statement | checked_statement | unchecked_statement | lock_statement | using_statement | yield_statement | unsafe_statement | fixed_statement );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:875:1: embedded_statement : ( block | expression_statement | selection_statement | iteration_statement | jump_statement | try_statement | checked_statement | unchecked_statement | lock_statement | using_statement | yield_statement | unsafe_statement | fixed_statement );
 	[GrammarRule("embedded_statement")]
 	private Antlr3AstNode embedded_statement()
 	{
@@ -44928,19 +44928,18 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		object root_0 = default(object);
 
 		Antlr3AstNode block1062 = default(Antlr3AstNode);
-		Antlr3AstNode empty_statement1063 = default(Antlr3AstNode);
-		Antlr3AstNode expression_statement1064 = default(Antlr3AstNode);
-		Antlr3AstNode selection_statement1065 = default(Antlr3AstNode);
-		Antlr3AstNode iteration_statement1066 = default(Antlr3AstNode);
-		Antlr3AstNode jump_statement1067 = default(Antlr3AstNode);
-		Antlr3AstNode try_statement1068 = default(Antlr3AstNode);
-		Antlr3AstNode checked_statement1069 = default(Antlr3AstNode);
-		Antlr3AstNode unchecked_statement1070 = default(Antlr3AstNode);
-		Antlr3AstNode lock_statement1071 = default(Antlr3AstNode);
-		Antlr3AstNode using_statement1072 = default(Antlr3AstNode);
-		Antlr3AstNode yield_statement1073 = default(Antlr3AstNode);
-		Antlr3AstNode unsafe_statement1074 = default(Antlr3AstNode);
-		Antlr3AstNode fixed_statement1075 = default(Antlr3AstNode);
+		Antlr3AstNode expression_statement1063 = default(Antlr3AstNode);
+		Antlr3AstNode selection_statement1064 = default(Antlr3AstNode);
+		Antlr3AstNode iteration_statement1065 = default(Antlr3AstNode);
+		Antlr3AstNode jump_statement1066 = default(Antlr3AstNode);
+		Antlr3AstNode try_statement1067 = default(Antlr3AstNode);
+		Antlr3AstNode checked_statement1068 = default(Antlr3AstNode);
+		Antlr3AstNode unchecked_statement1069 = default(Antlr3AstNode);
+		Antlr3AstNode lock_statement1070 = default(Antlr3AstNode);
+		Antlr3AstNode using_statement1071 = default(Antlr3AstNode);
+		Antlr3AstNode yield_statement1072 = default(Antlr3AstNode);
+		Antlr3AstNode unsafe_statement1073 = default(Antlr3AstNode);
+		Antlr3AstNode fixed_statement1074 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "embedded_statement");
 		DebugLocation(875, 18);
@@ -44948,32 +44947,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		{
 			if (state.backtracking > 0 && AlreadyParsedRule(input, 287)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:875:19: ( block | empty_statement | expression_statement | selection_statement | iteration_statement | jump_statement | try_statement | checked_statement | unchecked_statement | lock_statement | using_statement | yield_statement | unsafe_statement | fixed_statement )
-			int alt350=14;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:875:19: ( block | expression_statement | selection_statement | iteration_statement | jump_statement | try_statement | checked_statement | unchecked_statement | lock_statement | using_statement | yield_statement | unsafe_statement | fixed_statement )
+			int alt350=13;
 			try { DebugEnterDecision(350, false);
 			switch (input.LA(1))
 			{
 			case SEMI:
-				{
-				int LA350_2 = input.LA(2);
-
-				if ((EvaluatePredicate(synpred592_cs_fragment)))
-				{
-					alt350 = 1;
-				}
-				else if ((EvaluatePredicate(synpred593_cs_fragment)))
-				{
-					alt350 = 2;
-				}
-				else
-				{
-					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 350, 1, input, 2);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
-				}
-				break;
 			case 200:
 				{
 				alt350 = 1;
@@ -45053,7 +45032,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case 197:
 			case 205:
 				{
-				alt350 = 3;
+				alt350 = 2;
 				}
 				break;
 			case 199:
@@ -45062,16 +45041,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 				if ((LA350_2==110||LA350_2==172))
 				{
-					alt350 = 12;
+					alt350 = 11;
 				}
 				else if ((LA350_2==DOT||LA350_2==GT||LA350_2==MINUS||LA350_2==PTR||LA350_2==SEMI||(LA350_2>=66 && LA350_2<=82)||(LA350_2>=84 && LA350_2<=95)||(LA350_2>=97 && LA350_2<=98)||LA350_2==103||LA350_2==146||(LA350_2>=201 && LA350_2<=203)))
 				{
-					alt350 = 3;
+					alt350 = 2;
 				}
 				else
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 350, 4, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 350, 3, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -45083,7 +45062,28 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 				if ((LA350_2==72))
 				{
-					alt350 = 3;
+					alt350 = 2;
+				}
+				else if ((LA350_2==SEMI||LA350_2==200))
+				{
+					alt350 = 7;
+				}
+				else
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 350, 4, input, 2);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
+				}
+				break;
+			case 190:
+				{
+				int LA350_2 = input.LA(2);
+
+				if ((LA350_2==72))
+				{
+					alt350 = 2;
 				}
 				else if ((LA350_2==SEMI||LA350_2==200))
 				{
@@ -45098,31 +45098,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 190:
-				{
-				int LA350_2 = input.LA(2);
-
-				if ((LA350_2==72))
-				{
-					alt350 = 3;
-				}
-				else if ((LA350_2==SEMI||LA350_2==200))
-				{
-					alt350 = 9;
-				}
-				else
-				{
-					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 350, 6, input, 2);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
-				}
-				break;
 			case IF:
 			case 182:
 				{
-				alt350 = 4;
+				alt350 = 3;
 				}
 				break;
 			case 124:
@@ -45130,7 +45109,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case 136:
 			case 198:
 				{
-				alt350 = 5;
+				alt350 = 4;
 				}
 				break;
 			case 110:
@@ -45139,32 +45118,32 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case 172:
 			case 184:
 				{
-				alt350 = 6;
+				alt350 = 5;
 				}
 				break;
 			case 185:
 				{
-				alt350 = 7;
+				alt350 = 6;
 				}
 				break;
 			case 149:
 				{
-				alt350 = 10;
+				alt350 = 9;
 				}
 				break;
 			case USING:
 				{
-				alt350 = 11;
+				alt350 = 10;
 				}
 				break;
 			case 191:
 				{
-				alt350 = 13;
+				alt350 = 12;
 				}
 				break;
 			case 133:
 				{
-				alt350 = 14;
+				alt350 = 13;
 				}
 				break;
 			default:
@@ -45196,196 +45175,181 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:877:4: empty_statement
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(877, 4);
-				PushFollow(Follow._empty_statement_in_embedded_statement6911);
-				empty_statement1063=empty_statement();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, empty_statement1063.Tree, empty_statement1063, "empty_statement1063", retval);
-
-				}
-				break;
-			case 3:
-				DebugEnterAlt(3);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:878:4: expression_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(878, 4);
-				PushFollow(Follow._expression_statement_in_embedded_statement6916);
-				expression_statement1064=expression_statement();
+				PushFollow(Follow._expression_statement_in_embedded_statement6913);
+				expression_statement1063=expression_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression_statement1064.Tree, expression_statement1064, "expression_statement1064", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression_statement1063.Tree, expression_statement1063, "expression_statement1063", retval);
 
 				}
 				break;
-			case 4:
-				DebugEnterAlt(4);
+			case 3:
+				DebugEnterAlt(3);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:879:4: selection_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(879, 4);
-				PushFollow(Follow._selection_statement_in_embedded_statement6921);
-				selection_statement1065=selection_statement();
+				PushFollow(Follow._selection_statement_in_embedded_statement6918);
+				selection_statement1064=selection_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, selection_statement1065.Tree, selection_statement1065, "selection_statement1065", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, selection_statement1064.Tree, selection_statement1064, "selection_statement1064", retval);
 
 				}
 				break;
-			case 5:
-				DebugEnterAlt(5);
+			case 4:
+				DebugEnterAlt(4);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:880:4: iteration_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(880, 4);
-				PushFollow(Follow._iteration_statement_in_embedded_statement6926);
-				iteration_statement1066=iteration_statement();
+				PushFollow(Follow._iteration_statement_in_embedded_statement6923);
+				iteration_statement1065=iteration_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, iteration_statement1066.Tree, iteration_statement1066, "iteration_statement1066", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, iteration_statement1065.Tree, iteration_statement1065, "iteration_statement1065", retval);
 
 				}
 				break;
-			case 6:
-				DebugEnterAlt(6);
+			case 5:
+				DebugEnterAlt(5);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:881:4: jump_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(881, 4);
-				PushFollow(Follow._jump_statement_in_embedded_statement6931);
-				jump_statement1067=jump_statement();
+				PushFollow(Follow._jump_statement_in_embedded_statement6928);
+				jump_statement1066=jump_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, jump_statement1067.Tree, jump_statement1067, "jump_statement1067", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, jump_statement1066.Tree, jump_statement1066, "jump_statement1066", retval);
 
 				}
 				break;
-			case 7:
-				DebugEnterAlt(7);
+			case 6:
+				DebugEnterAlt(6);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:882:4: try_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(882, 4);
-				PushFollow(Follow._try_statement_in_embedded_statement6936);
-				try_statement1068=try_statement();
+				PushFollow(Follow._try_statement_in_embedded_statement6933);
+				try_statement1067=try_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, try_statement1068.Tree, try_statement1068, "try_statement1068", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, try_statement1067.Tree, try_statement1067, "try_statement1067", retval);
 
 				}
 				break;
-			case 8:
-				DebugEnterAlt(8);
+			case 7:
+				DebugEnterAlt(7);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:883:4: checked_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(883, 4);
-				PushFollow(Follow._checked_statement_in_embedded_statement6941);
-				checked_statement1069=checked_statement();
+				PushFollow(Follow._checked_statement_in_embedded_statement6938);
+				checked_statement1068=checked_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, checked_statement1069.Tree, checked_statement1069, "checked_statement1069", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, checked_statement1068.Tree, checked_statement1068, "checked_statement1068", retval);
 
 				}
 				break;
-			case 9:
-				DebugEnterAlt(9);
+			case 8:
+				DebugEnterAlt(8);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:884:4: unchecked_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(884, 4);
-				PushFollow(Follow._unchecked_statement_in_embedded_statement6946);
-				unchecked_statement1070=unchecked_statement();
+				PushFollow(Follow._unchecked_statement_in_embedded_statement6943);
+				unchecked_statement1069=unchecked_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unchecked_statement1070.Tree, unchecked_statement1070, "unchecked_statement1070", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unchecked_statement1069.Tree, unchecked_statement1069, "unchecked_statement1069", retval);
 
 				}
 				break;
-			case 10:
-				DebugEnterAlt(10);
+			case 9:
+				DebugEnterAlt(9);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:885:4: lock_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(885, 4);
-				PushFollow(Follow._lock_statement_in_embedded_statement6951);
-				lock_statement1071=lock_statement();
+				PushFollow(Follow._lock_statement_in_embedded_statement6948);
+				lock_statement1070=lock_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, lock_statement1071.Tree, lock_statement1071, "lock_statement1071", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, lock_statement1070.Tree, lock_statement1070, "lock_statement1070", retval);
 
 				}
 				break;
-			case 11:
-				DebugEnterAlt(11);
+			case 10:
+				DebugEnterAlt(10);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:886:4: using_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(886, 4);
-				PushFollow(Follow._using_statement_in_embedded_statement6956);
-				using_statement1072=using_statement();
+				PushFollow(Follow._using_statement_in_embedded_statement6953);
+				using_statement1071=using_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, using_statement1072.Tree, using_statement1072, "using_statement1072", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, using_statement1071.Tree, using_statement1071, "using_statement1071", retval);
 
 				}
 				break;
-			case 12:
-				DebugEnterAlt(12);
+			case 11:
+				DebugEnterAlt(11);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:887:4: yield_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(887, 4);
-				PushFollow(Follow._yield_statement_in_embedded_statement6962);
-				yield_statement1073=yield_statement();
+				PushFollow(Follow._yield_statement_in_embedded_statement6959);
+				yield_statement1072=yield_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, yield_statement1073.Tree, yield_statement1073, "yield_statement1073", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, yield_statement1072.Tree, yield_statement1072, "yield_statement1072", retval);
 
 				}
 				break;
-			case 13:
-				DebugEnterAlt(13);
+			case 12:
+				DebugEnterAlt(12);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:888:4: unsafe_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(888, 4);
-				PushFollow(Follow._unsafe_statement_in_embedded_statement6968);
-				unsafe_statement1074=unsafe_statement();
+				PushFollow(Follow._unsafe_statement_in_embedded_statement6965);
+				unsafe_statement1073=unsafe_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unsafe_statement1074.Tree, unsafe_statement1074, "unsafe_statement1074", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unsafe_statement1073.Tree, unsafe_statement1073, "unsafe_statement1073", retval);
 
 				}
 				break;
-			case 14:
-				DebugEnterAlt(14);
+			case 13:
+				DebugEnterAlt(13);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:889:4: fixed_statement
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(889, 4);
-				PushFollow(Follow._fixed_statement_in_embedded_statement6973);
-				fixed_statement1075=fixed_statement();
+				PushFollow(Follow._fixed_statement_in_embedded_statement6970);
+				fixed_statement1074=fixed_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, fixed_statement1075.Tree, fixed_statement1075, "fixed_statement1075", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, fixed_statement1074.Tree, fixed_statement1074, "fixed_statement1074", retval);
 
 				}
 				break;
@@ -45436,16 +45400,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1076 = default(IToken);
-		IToken char_literal1077 = default(IToken);
-		IToken char_literal1080 = default(IToken);
-		Antlr3AstNode pointer_type1078 = default(Antlr3AstNode);
-		Antlr3AstNode fixed_pointer_declarators1079 = default(Antlr3AstNode);
-		Antlr3AstNode embedded_statement1081 = default(Antlr3AstNode);
+		IToken string_literal1075 = default(IToken);
+		IToken char_literal1076 = default(IToken);
+		IToken char_literal1079 = default(IToken);
+		Antlr3AstNode pointer_type1077 = default(Antlr3AstNode);
+		Antlr3AstNode fixed_pointer_declarators1078 = default(Antlr3AstNode);
+		Antlr3AstNode embedded_statement1080 = default(Antlr3AstNode);
 
-		object string_literal1076_tree = default(object);
-		object char_literal1077_tree = default(object);
-		object char_literal1080_tree = default(object);
+		object string_literal1075_tree = default(object);
+		object char_literal1076_tree = default(object);
+		object char_literal1079_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "fixed_statement");
 		DebugLocation(890, 83);
 		try
@@ -45459,41 +45423,41 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(891, 2);
-			string_literal1076=(IToken)Match(input,133,Follow._133_in_fixed_statement6980); if (state.failed) return retval;
+			string_literal1075=(IToken)Match(input,133,Follow._133_in_fixed_statement6977); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1076_tree = (object)adaptor.Create(string_literal1076, "string_literal1076", retval);
-			adaptor.AddChild(root_0, string_literal1076_tree);
+			string_literal1075_tree = (object)adaptor.Create(string_literal1075, "string_literal1075", retval);
+			adaptor.AddChild(root_0, string_literal1075_tree);
 			}
 			DebugLocation(891, 12);
-			char_literal1077=(IToken)Match(input,72,Follow._72_in_fixed_statement6984); if (state.failed) return retval;
+			char_literal1076=(IToken)Match(input,72,Follow._72_in_fixed_statement6981); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1077_tree = (object)adaptor.Create(char_literal1077, "char_literal1077", retval);
-			adaptor.AddChild(root_0, char_literal1077_tree);
+			char_literal1076_tree = (object)adaptor.Create(char_literal1076, "char_literal1076", retval);
+			adaptor.AddChild(root_0, char_literal1076_tree);
 			}
 			DebugLocation(891, 18);
-			PushFollow(Follow._pointer_type_in_fixed_statement6988);
-			pointer_type1078=pointer_type();
+			PushFollow(Follow._pointer_type_in_fixed_statement6985);
+			pointer_type1077=pointer_type();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, pointer_type1078.Tree, pointer_type1078, "pointer_type1078", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, pointer_type1077.Tree, pointer_type1077, "pointer_type1077", retval);
 			DebugLocation(891, 31);
-			PushFollow(Follow._fixed_pointer_declarators_in_fixed_statement6990);
-			fixed_pointer_declarators1079=fixed_pointer_declarators();
+			PushFollow(Follow._fixed_pointer_declarators_in_fixed_statement6987);
+			fixed_pointer_declarators1078=fixed_pointer_declarators();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, fixed_pointer_declarators1079.Tree, fixed_pointer_declarators1079, "fixed_pointer_declarators1079", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, fixed_pointer_declarators1078.Tree, fixed_pointer_declarators1078, "fixed_pointer_declarators1078", retval);
 			DebugLocation(891, 59);
-			char_literal1080=(IToken)Match(input,RPAREN,Follow._RPAREN_in_fixed_statement6994); if (state.failed) return retval;
+			char_literal1079=(IToken)Match(input,RPAREN,Follow._RPAREN_in_fixed_statement6991); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1080_tree = (object)adaptor.Create(char_literal1080, "char_literal1080", retval);
-			adaptor.AddChild(root_0, char_literal1080_tree);
+			char_literal1079_tree = (object)adaptor.Create(char_literal1079, "char_literal1079", retval);
+			adaptor.AddChild(root_0, char_literal1079_tree);
 			}
 			DebugLocation(891, 65);
-			PushFollow(Follow._embedded_statement_in_fixed_statement6998);
-			embedded_statement1081=embedded_statement();
+			PushFollow(Follow._embedded_statement_in_fixed_statement6995);
+			embedded_statement1080=embedded_statement();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1081.Tree, embedded_statement1081, "embedded_statement1081", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1080.Tree, embedded_statement1080, "embedded_statement1080", retval);
 
 			}
 
@@ -45542,11 +45506,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal1083 = default(IToken);
-		Antlr3AstNode fixed_pointer_declarator1082 = default(Antlr3AstNode);
-		Antlr3AstNode fixed_pointer_declarator1084 = default(Antlr3AstNode);
+		IToken char_literal1082 = default(IToken);
+		Antlr3AstNode fixed_pointer_declarator1081 = default(Antlr3AstNode);
+		Antlr3AstNode fixed_pointer_declarator1083 = default(Antlr3AstNode);
 
-		object char_literal1083_tree = default(object);
+		object char_literal1082_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "fixed_pointer_declarators");
 		DebugLocation(892, 62);
 		try
@@ -45560,11 +45524,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(893, 2);
-			PushFollow(Follow._fixed_pointer_declarator_in_fixed_pointer_declarators7006);
-			fixed_pointer_declarator1082=fixed_pointer_declarator();
+			PushFollow(Follow._fixed_pointer_declarator_in_fixed_pointer_declarators7003);
+			fixed_pointer_declarator1081=fixed_pointer_declarator();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, fixed_pointer_declarator1082.Tree, fixed_pointer_declarator1082, "fixed_pointer_declarator1082", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, fixed_pointer_declarator1081.Tree, fixed_pointer_declarator1081, "fixed_pointer_declarator1081", retval);
 			DebugLocation(893, 29);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:893:29: ( ',' fixed_pointer_declarator )*
 			try { DebugEnterSubRule(351);
@@ -45588,17 +45552,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:893:30: ',' fixed_pointer_declarator
 					{
 					DebugLocation(893, 30);
-					char_literal1083=(IToken)Match(input,78,Follow._78_in_fixed_pointer_declarators7011); if (state.failed) return retval;
+					char_literal1082=(IToken)Match(input,78,Follow._78_in_fixed_pointer_declarators7008); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal1083_tree = (object)adaptor.Create(char_literal1083, "char_literal1083", retval);
-					adaptor.AddChild(root_0, char_literal1083_tree);
+					char_literal1082_tree = (object)adaptor.Create(char_literal1082, "char_literal1082", retval);
+					adaptor.AddChild(root_0, char_literal1082_tree);
 					}
 					DebugLocation(893, 36);
-					PushFollow(Follow._fixed_pointer_declarator_in_fixed_pointer_declarators7015);
-					fixed_pointer_declarator1084=fixed_pointer_declarator();
+					PushFollow(Follow._fixed_pointer_declarator_in_fixed_pointer_declarators7012);
+					fixed_pointer_declarator1083=fixed_pointer_declarator();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, fixed_pointer_declarator1084.Tree, fixed_pointer_declarator1084, "fixed_pointer_declarator1084", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, fixed_pointer_declarator1083.Tree, fixed_pointer_declarator1083, "fixed_pointer_declarator1083", retval);
 
 					}
 					break;
@@ -45661,11 +45625,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal1086 = default(IToken);
-		Antlr3AstNode identifier1085 = default(Antlr3AstNode);
-		Antlr3AstNode fixed_pointer_initializer1087 = default(Antlr3AstNode);
+		IToken char_literal1085 = default(IToken);
+		Antlr3AstNode identifier1084 = default(Antlr3AstNode);
+		Antlr3AstNode fixed_pointer_initializer1086 = default(Antlr3AstNode);
 
-		object char_literal1086_tree = default(object);
+		object char_literal1085_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "fixed_pointer_declarator");
 		DebugLocation(894, 46);
 		try
@@ -45679,23 +45643,23 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(895, 2);
-			PushFollow(Follow._identifier_in_fixed_pointer_declarator7025);
-			identifier1085=identifier();
+			PushFollow(Follow._identifier_in_fixed_pointer_declarator7022);
+			identifier1084=identifier();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1085.Tree, identifier1085, "identifier1085", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1084.Tree, identifier1084, "identifier1084", retval);
 			DebugLocation(895, 15);
-			char_literal1086=(IToken)Match(input,89,Follow._89_in_fixed_pointer_declarator7029); if (state.failed) return retval;
+			char_literal1085=(IToken)Match(input,89,Follow._89_in_fixed_pointer_declarator7026); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1086_tree = (object)adaptor.Create(char_literal1086, "char_literal1086", retval);
-			adaptor.AddChild(root_0, char_literal1086_tree);
+			char_literal1085_tree = (object)adaptor.Create(char_literal1085, "char_literal1085", retval);
+			adaptor.AddChild(root_0, char_literal1085_tree);
 			}
 			DebugLocation(895, 21);
-			PushFollow(Follow._fixed_pointer_initializer_in_fixed_pointer_declarator7033);
-			fixed_pointer_initializer1087=fixed_pointer_initializer();
+			PushFollow(Follow._fixed_pointer_initializer_in_fixed_pointer_declarator7030);
+			fixed_pointer_initializer1086=fixed_pointer_initializer();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, fixed_pointer_initializer1087.Tree, fixed_pointer_initializer1087, "fixed_pointer_initializer1087", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, fixed_pointer_initializer1086.Tree, fixed_pointer_initializer1086, "fixed_pointer_initializer1086", retval);
 
 			}
 
@@ -45744,11 +45708,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal1088 = default(IToken);
-		Antlr3AstNode variable_reference1089 = default(Antlr3AstNode);
-		Antlr3AstNode expression1090 = default(Antlr3AstNode);
+		IToken char_literal1087 = default(IToken);
+		Antlr3AstNode variable_reference1088 = default(Antlr3AstNode);
+		Antlr3AstNode expression1089 = default(Antlr3AstNode);
 
-		object char_literal1088_tree = default(object);
+		object char_literal1087_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "fixed_pointer_initializer");
 		DebugLocation(896, 13);
 		try
@@ -45764,7 +45728,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA352_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred606_cs_fragment)))
+				if ((EvaluatePredicate(synpred605_cs_fragment)))
 				{
 					alt352 = 1;
 				}
@@ -45809,17 +45773,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(897, 2);
-				char_literal1088=(IToken)Match(input,70,Follow._70_in_fixed_pointer_initializer7041); if (state.failed) return retval;
+				char_literal1087=(IToken)Match(input,70,Follow._70_in_fixed_pointer_initializer7038); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal1088_tree = (object)adaptor.Create(char_literal1088, "char_literal1088", retval);
-				adaptor.AddChild(root_0, char_literal1088_tree);
+				char_literal1087_tree = (object)adaptor.Create(char_literal1087, "char_literal1087", retval);
+				adaptor.AddChild(root_0, char_literal1087_tree);
 				}
 				DebugLocation(897, 8);
-				PushFollow(Follow._variable_reference_in_fixed_pointer_initializer7045);
-				variable_reference1089=variable_reference();
+				PushFollow(Follow._variable_reference_in_fixed_pointer_initializer7042);
+				variable_reference1088=variable_reference();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, variable_reference1089.Tree, variable_reference1089, "variable_reference1089", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, variable_reference1088.Tree, variable_reference1088, "variable_reference1088", retval);
 
 				}
 				break;
@@ -45830,11 +45794,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(898, 4);
-				PushFollow(Follow._expression_in_fixed_pointer_initializer7053);
-				expression1090=expression();
+				PushFollow(Follow._expression_in_fixed_pointer_initializer7050);
+				expression1089=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression1090.Tree, expression1090, "expression1090", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression1089.Tree, expression1089, "expression1089", retval);
 
 				}
 				break;
@@ -45885,10 +45849,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1091 = default(IToken);
-		Antlr3AstNode block1092 = default(Antlr3AstNode);
+		IToken string_literal1090 = default(IToken);
+		Antlr3AstNode block1091 = default(Antlr3AstNode);
 
-		object string_literal1091_tree = default(object);
+		object string_literal1090_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "unsafe_statement");
 		DebugLocation(899, 17);
 		try
@@ -45902,17 +45866,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(900, 2);
-			string_literal1091=(IToken)Match(input,191,Follow._191_in_unsafe_statement7060); if (state.failed) return retval;
+			string_literal1090=(IToken)Match(input,191,Follow._191_in_unsafe_statement7057); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1091_tree = (object)adaptor.Create(string_literal1091, "string_literal1091", retval);
-			adaptor.AddChild(root_0, string_literal1091_tree);
+			string_literal1090_tree = (object)adaptor.Create(string_literal1090, "string_literal1090", retval);
+			adaptor.AddChild(root_0, string_literal1090_tree);
 			}
 			DebugLocation(900, 13);
-			PushFollow(Follow._block_in_unsafe_statement7064);
-			block1092=block();
+			PushFollow(Follow._block_in_unsafe_statement7061);
+			block1091=block();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, block1092.Tree, block1092, "block1092", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, block1091.Tree, block1091, "block1091", retval);
 
 			}
 
@@ -45961,14 +45925,14 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
+		IToken char_literal1092 = default(IToken);
 		IToken char_literal1093 = default(IToken);
-		IToken char_literal1094 = default(IToken);
-		IToken char_literal1096 = default(IToken);
-		Antlr3AstNode statement_list1095 = default(Antlr3AstNode);
+		IToken char_literal1095 = default(IToken);
+		Antlr3AstNode statement_list1094 = default(Antlr3AstNode);
 
+		object char_literal1092_tree = default(object);
 		object char_literal1093_tree = default(object);
-		object char_literal1094_tree = default(object);
-		object char_literal1096_tree = default(object);
+		object char_literal1095_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "block");
 		DebugLocation(901, 31);
 		try
@@ -46005,10 +45969,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(902, 2);
-				char_literal1093=(IToken)Match(input,SEMI,Follow._SEMI_in_block7071); if (state.failed) return retval;
+				char_literal1092=(IToken)Match(input,SEMI,Follow._SEMI_in_block7068); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal1093_tree = (object)adaptor.Create(char_literal1093, "char_literal1093", retval);
-				adaptor.AddChild(root_0, char_literal1093_tree);
+				char_literal1092_tree = (object)adaptor.Create(char_literal1092, "char_literal1092", retval);
+				adaptor.AddChild(root_0, char_literal1092_tree);
 				}
 
 				}
@@ -46020,10 +45984,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(903, 4);
-				char_literal1094=(IToken)Match(input,200,Follow._200_in_block7077); if (state.failed) return retval;
+				char_literal1093=(IToken)Match(input,200,Follow._200_in_block7074); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal1094_tree = (object)adaptor.Create(char_literal1094, "char_literal1094", retval);
-				adaptor.AddChild(root_0, char_literal1094_tree);
+				char_literal1093_tree = (object)adaptor.Create(char_literal1093, "char_literal1093", retval);
+				adaptor.AddChild(root_0, char_literal1093_tree);
 				}
 				DebugLocation(903, 10);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:903:10: ( statement_list )?
@@ -46044,11 +46008,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:903:10: statement_list
 					{
 					DebugLocation(903, 10);
-					PushFollow(Follow._statement_list_in_block7081);
-					statement_list1095=statement_list();
+					PushFollow(Follow._statement_list_in_block7078);
+					statement_list1094=statement_list();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, statement_list1095.Tree, statement_list1095, "statement_list1095", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, statement_list1094.Tree, statement_list1094, "statement_list1094", retval);
 
 					}
 					break;
@@ -46057,10 +46021,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				} finally { DebugExitSubRule(353); }
 
 				DebugLocation(903, 28);
-				char_literal1096=(IToken)Match(input,204,Follow._204_in_block7086); if (state.failed) return retval;
+				char_literal1095=(IToken)Match(input,204,Follow._204_in_block7083); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal1096_tree = (object)adaptor.Create(char_literal1096, "char_literal1096", retval);
-				adaptor.AddChild(root_0, char_literal1096_tree);
+				char_literal1095_tree = (object)adaptor.Create(char_literal1095, "char_literal1095", retval);
+				adaptor.AddChild(root_0, char_literal1095_tree);
 				}
 
 				}
@@ -46112,7 +46076,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode statement1097 = default(Antlr3AstNode);
+		Antlr3AstNode statement1096 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "statement_list");
 		DebugLocation(904, 12);
@@ -46161,11 +46125,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:905:2: statement
 					{
 					DebugLocation(905, 2);
-					PushFollow(Follow._statement_in_statement_list7094);
-					statement1097=statement();
+					PushFollow(Follow._statement_in_statement_list7091);
+					statement1096=statement();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, statement1097.Tree, statement1097, "statement1097", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, statement1096.Tree, statement1096, "statement1096", retval);
 
 					}
 					break;
@@ -46234,9 +46198,9 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal1098 = default(IToken);
+		IToken char_literal1097 = default(IToken);
 
-		object char_literal1098_tree = default(object);
+		object char_literal1097_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "empty_statement");
 		DebugLocation(906, 5);
 		try
@@ -46250,10 +46214,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(907, 2);
-			char_literal1098=(IToken)Match(input,SEMI,Follow._SEMI_in_empty_statement7103); if (state.failed) return retval;
+			char_literal1097=(IToken)Match(input,SEMI,Follow._SEMI_in_empty_statement7100); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1098_tree = (object)adaptor.Create(char_literal1098, "char_literal1098", retval);
-			adaptor.AddChild(root_0, char_literal1098_tree);
+			char_literal1097_tree = (object)adaptor.Create(char_literal1097, "char_literal1097", retval);
+			adaptor.AddChild(root_0, char_literal1097_tree);
 			}
 
 			}
@@ -46303,11 +46267,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal1100 = default(IToken);
-		Antlr3AstNode identifier1099 = default(Antlr3AstNode);
-		Antlr3AstNode statement1101 = default(Antlr3AstNode);
+		IToken char_literal1099 = default(IToken);
+		Antlr3AstNode identifier1098 = default(Antlr3AstNode);
+		Antlr3AstNode statement1100 = default(Antlr3AstNode);
 
-		object char_literal1100_tree = default(object);
+		object char_literal1099_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "labeled_statement");
 		DebugLocation(908, 30);
 		try
@@ -46321,23 +46285,23 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(909, 2);
-			PushFollow(Follow._identifier_in_labeled_statement7111);
-			identifier1099=identifier();
+			PushFollow(Follow._identifier_in_labeled_statement7108);
+			identifier1098=identifier();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1099.Tree, identifier1099, "identifier1099", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1098.Tree, identifier1098, "identifier1098", retval);
 			DebugLocation(909, 15);
-			char_literal1100=(IToken)Match(input,83,Follow._83_in_labeled_statement7115); if (state.failed) return retval;
+			char_literal1099=(IToken)Match(input,83,Follow._83_in_labeled_statement7112); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1100_tree = (object)adaptor.Create(char_literal1100, "char_literal1100", retval);
-			adaptor.AddChild(root_0, char_literal1100_tree);
+			char_literal1099_tree = (object)adaptor.Create(char_literal1099, "char_literal1099", retval);
+			adaptor.AddChild(root_0, char_literal1099_tree);
 			}
 			DebugLocation(909, 21);
-			PushFollow(Follow._statement_in_labeled_statement7119);
-			statement1101=statement();
+			PushFollow(Follow._statement_in_labeled_statement7116);
+			statement1100=statement();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, statement1101.Tree, statement1101, "statement1101", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, statement1100.Tree, statement1100, "statement1100", retval);
 
 			}
 
@@ -46386,11 +46350,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal1104 = default(IToken);
-		Antlr3AstNode local_variable_declaration1102 = default(Antlr3AstNode);
-		Antlr3AstNode local_constant_declaration1103 = default(Antlr3AstNode);
+		IToken char_literal1103 = default(IToken);
+		Antlr3AstNode local_variable_declaration1101 = default(Antlr3AstNode);
+		Antlr3AstNode local_constant_declaration1102 = default(Antlr3AstNode);
 
-		object char_literal1104_tree = default(object);
+		object char_literal1103_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "declaration_statement");
 		DebugLocation(910, 35);
 		try
@@ -46433,11 +46397,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:911:3: local_variable_declaration
 				{
 				DebugLocation(911, 3);
-				PushFollow(Follow._local_variable_declaration_in_declaration_statement7128);
-				local_variable_declaration1102=local_variable_declaration();
+				PushFollow(Follow._local_variable_declaration_in_declaration_statement7125);
+				local_variable_declaration1101=local_variable_declaration();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_declaration1102.Tree, local_variable_declaration1102, "local_variable_declaration1102", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_declaration1101.Tree, local_variable_declaration1101, "local_variable_declaration1101", retval);
 
 				}
 				break;
@@ -46446,11 +46410,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:912:4: local_constant_declaration
 				{
 				DebugLocation(912, 4);
-				PushFollow(Follow._local_constant_declaration_in_declaration_statement7134);
-				local_constant_declaration1103=local_constant_declaration();
+				PushFollow(Follow._local_constant_declaration_in_declaration_statement7131);
+				local_constant_declaration1102=local_constant_declaration();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, local_constant_declaration1103.Tree, local_constant_declaration1103, "local_constant_declaration1103", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, local_constant_declaration1102.Tree, local_constant_declaration1102, "local_constant_declaration1102", retval);
 
 				}
 				break;
@@ -46459,10 +46423,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(356); }
 
 			DebugLocation(912, 32);
-			char_literal1104=(IToken)Match(input,SEMI,Follow._SEMI_in_declaration_statement7137); if (state.failed) return retval;
+			char_literal1103=(IToken)Match(input,SEMI,Follow._SEMI_in_declaration_statement7134); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1104_tree = (object)adaptor.Create(char_literal1104, "char_literal1104", retval);
-			adaptor.AddChild(root_0, char_literal1104_tree);
+			char_literal1103_tree = (object)adaptor.Create(char_literal1103, "char_literal1103", retval);
+			adaptor.AddChild(root_0, char_literal1103_tree);
 			}
 
 			}
@@ -46512,8 +46476,8 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode local_variable_type1105 = default(Antlr3AstNode);
-		Antlr3AstNode local_variable_declarators1106 = default(Antlr3AstNode);
+		Antlr3AstNode local_variable_type1104 = default(Antlr3AstNode);
+		Antlr3AstNode local_variable_declarators1105 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "local_variable_declaration");
 		DebugLocation(913, 50);
@@ -46528,17 +46492,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(914, 2);
-			PushFollow(Follow._local_variable_type_in_local_variable_declaration7145);
-			local_variable_type1105=local_variable_type();
+			PushFollow(Follow._local_variable_type_in_local_variable_declaration7142);
+			local_variable_type1104=local_variable_type();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_type1105.Tree, local_variable_type1105, "local_variable_type1105", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_type1104.Tree, local_variable_type1104, "local_variable_type1104", retval);
 			DebugLocation(914, 24);
-			PushFollow(Follow._local_variable_declarators_in_local_variable_declaration7149);
-			local_variable_declarators1106=local_variable_declarators();
+			PushFollow(Follow._local_variable_declarators_in_local_variable_declaration7146);
+			local_variable_declarators1105=local_variable_declarators();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_declarators1106.Tree, local_variable_declarators1106, "local_variable_declarators1106", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_declarators1105.Tree, local_variable_declarators1105, "local_variable_declarators1105", retval);
 
 			}
 
@@ -46587,12 +46551,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
+		IToken string_literal1107 = default(IToken);
 		IToken string_literal1108 = default(IToken);
-		IToken string_literal1109 = default(IToken);
-		Antlr3AstNode type1107 = default(Antlr3AstNode);
+		Antlr3AstNode type1106 = default(Antlr3AstNode);
 
+		object string_literal1107_tree = default(object);
 		object string_literal1108_tree = default(object);
-		object string_literal1109_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "local_variable_type");
 		DebugLocation(915, 12);
 		try
@@ -46660,11 +46624,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				int LA357_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred611_cs_fragment)))
+				if ((EvaluatePredicate(synpred610_cs_fragment)))
 				{
 					alt357 = 1;
 				}
-				else if ((EvaluatePredicate(synpred612_cs_fragment)))
+				else if ((EvaluatePredicate(synpred611_cs_fragment)))
 				{
 					alt357 = 2;
 				}
@@ -46681,7 +46645,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				int LA357_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred611_cs_fragment)))
+				if ((EvaluatePredicate(synpred610_cs_fragment)))
 				{
 					alt357 = 1;
 				}
@@ -46717,11 +46681,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(916, 2);
-				PushFollow(Follow._type_in_local_variable_type7157);
-				type1107=type();
+				PushFollow(Follow._type_in_local_variable_type7154);
+				type1106=type();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, type1107.Tree, type1107, "type1107", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, type1106.Tree, type1106, "type1106", retval);
 
 				}
 				break;
@@ -46732,10 +46696,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(917, 4);
-				string_literal1108=(IToken)Match(input,193,Follow._193_in_local_variable_type7162); if (state.failed) return retval;
+				string_literal1107=(IToken)Match(input,193,Follow._193_in_local_variable_type7159); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal1108_tree = (object)adaptor.Create(string_literal1108, "string_literal1108", retval);
-				adaptor.AddChild(root_0, string_literal1108_tree);
+				string_literal1107_tree = (object)adaptor.Create(string_literal1107, "string_literal1107", retval);
+				adaptor.AddChild(root_0, string_literal1107_tree);
 				}
 
 				}
@@ -46747,10 +46711,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(918, 4);
-				string_literal1109=(IToken)Match(input,126,Follow._126_in_local_variable_type7168); if (state.failed) return retval;
+				string_literal1108=(IToken)Match(input,126,Follow._126_in_local_variable_type7165); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal1109_tree = (object)adaptor.Create(string_literal1109, "string_literal1109", retval);
-				adaptor.AddChild(root_0, string_literal1109_tree);
+				string_literal1108_tree = (object)adaptor.Create(string_literal1108, "string_literal1108", retval);
+				adaptor.AddChild(root_0, string_literal1108_tree);
 				}
 
 				}
@@ -46802,11 +46766,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal1111 = default(IToken);
-		Antlr3AstNode local_variable_declarator1110 = default(Antlr3AstNode);
-		Antlr3AstNode local_variable_declarator1112 = default(Antlr3AstNode);
+		IToken char_literal1110 = default(IToken);
+		Antlr3AstNode local_variable_declarator1109 = default(Antlr3AstNode);
+		Antlr3AstNode local_variable_declarator1111 = default(Antlr3AstNode);
 
-		object char_literal1111_tree = default(object);
+		object char_literal1110_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "local_variable_declarators");
 		DebugLocation(919, 60);
 		try
@@ -46820,11 +46784,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(920, 2);
-			PushFollow(Follow._local_variable_declarator_in_local_variable_declarators7175);
-			local_variable_declarator1110=local_variable_declarator();
+			PushFollow(Follow._local_variable_declarator_in_local_variable_declarators7172);
+			local_variable_declarator1109=local_variable_declarator();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_declarator1110.Tree, local_variable_declarator1110, "local_variable_declarator1110", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_declarator1109.Tree, local_variable_declarator1109, "local_variable_declarator1109", retval);
 			DebugLocation(920, 28);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:920:28: ( ',' local_variable_declarator )*
 			try { DebugEnterSubRule(358);
@@ -46848,17 +46812,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:920:29: ',' local_variable_declarator
 					{
 					DebugLocation(920, 29);
-					char_literal1111=(IToken)Match(input,78,Follow._78_in_local_variable_declarators7178); if (state.failed) return retval;
+					char_literal1110=(IToken)Match(input,78,Follow._78_in_local_variable_declarators7175); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal1111_tree = (object)adaptor.Create(char_literal1111, "char_literal1111", retval);
-					adaptor.AddChild(root_0, char_literal1111_tree);
+					char_literal1110_tree = (object)adaptor.Create(char_literal1110, "char_literal1110", retval);
+					adaptor.AddChild(root_0, char_literal1110_tree);
 					}
 					DebugLocation(920, 33);
-					PushFollow(Follow._local_variable_declarator_in_local_variable_declarators7180);
-					local_variable_declarator1112=local_variable_declarator();
+					PushFollow(Follow._local_variable_declarator_in_local_variable_declarators7177);
+					local_variable_declarator1111=local_variable_declarator();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_declarator1112.Tree, local_variable_declarator1112, "local_variable_declarator1112", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_declarator1111.Tree, local_variable_declarator1111, "local_variable_declarator1111", retval);
 
 					}
 					break;
@@ -46921,11 +46885,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal1114 = default(IToken);
-		Antlr3AstNode identifier1113 = default(Antlr3AstNode);
-		Antlr3AstNode local_variable_initializer1115 = default(Antlr3AstNode);
+		IToken char_literal1113 = default(IToken);
+		Antlr3AstNode identifier1112 = default(Antlr3AstNode);
+		Antlr3AstNode local_variable_initializer1114 = default(Antlr3AstNode);
 
-		object char_literal1114_tree = default(object);
+		object char_literal1113_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "local_variable_declarator");
 		DebugLocation(921, 1);
 		try
@@ -46939,11 +46903,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(922, 2);
-			PushFollow(Follow._identifier_in_local_variable_declarator7190);
-			identifier1113=identifier();
+			PushFollow(Follow._identifier_in_local_variable_declarator7187);
+			identifier1112=identifier();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1113.Tree, identifier1113, "identifier1113", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1112.Tree, identifier1112, "identifier1112", retval);
 			DebugLocation(922, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:922:13: ( '=' local_variable_initializer )?
 			int alt359=2;
@@ -46963,17 +46927,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:922:14: '=' local_variable_initializer
 				{
 				DebugLocation(922, 14);
-				char_literal1114=(IToken)Match(input,89,Follow._89_in_local_variable_declarator7193); if (state.failed) return retval;
+				char_literal1113=(IToken)Match(input,89,Follow._89_in_local_variable_declarator7190); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal1114_tree = (object)adaptor.Create(char_literal1114, "char_literal1114", retval);
-				adaptor.AddChild(root_0, char_literal1114_tree);
+				char_literal1113_tree = (object)adaptor.Create(char_literal1113, "char_literal1113", retval);
+				adaptor.AddChild(root_0, char_literal1113_tree);
 				}
 				DebugLocation(922, 20);
-				PushFollow(Follow._local_variable_initializer_in_local_variable_declarator7197);
-				local_variable_initializer1115=local_variable_initializer();
+				PushFollow(Follow._local_variable_initializer_in_local_variable_declarator7194);
+				local_variable_initializer1114=local_variable_initializer();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_initializer1115.Tree, local_variable_initializer1115, "local_variable_initializer1115", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_initializer1114.Tree, local_variable_initializer1114, "local_variable_initializer1114", retval);
 
 				}
 				break;
@@ -47029,9 +46993,9 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode expression1116 = default(Antlr3AstNode);
-		Antlr3AstNode array_initializer1117 = default(Antlr3AstNode);
-		Antlr3AstNode stackalloc_initializer1118 = default(Antlr3AstNode);
+		Antlr3AstNode expression1115 = default(Antlr3AstNode);
+		Antlr3AstNode array_initializer1116 = default(Antlr3AstNode);
+		Antlr3AstNode stackalloc_initializer1117 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "local_variable_initializer");
 		DebugLocation(924, 25);
@@ -47153,11 +47117,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(925, 2);
-				PushFollow(Follow._expression_in_local_variable_initializer7210);
-				expression1116=expression();
+				PushFollow(Follow._expression_in_local_variable_initializer7207);
+				expression1115=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression1116.Tree, expression1116, "expression1116", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression1115.Tree, expression1115, "expression1115", retval);
 
 				}
 				break;
@@ -47168,11 +47132,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(926, 4);
-				PushFollow(Follow._array_initializer_in_local_variable_initializer7215);
-				array_initializer1117=array_initializer();
+				PushFollow(Follow._array_initializer_in_local_variable_initializer7212);
+				array_initializer1116=array_initializer();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, array_initializer1117.Tree, array_initializer1117, "array_initializer1117", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, array_initializer1116.Tree, array_initializer1116, "array_initializer1116", retval);
 
 				}
 				break;
@@ -47183,11 +47147,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(927, 4);
-				PushFollow(Follow._stackalloc_initializer_in_local_variable_initializer7221);
-				stackalloc_initializer1118=stackalloc_initializer();
+				PushFollow(Follow._stackalloc_initializer_in_local_variable_initializer7218);
+				stackalloc_initializer1117=stackalloc_initializer();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, stackalloc_initializer1118.Tree, stackalloc_initializer1118, "stackalloc_initializer1118", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, stackalloc_initializer1117.Tree, stackalloc_initializer1117, "stackalloc_initializer1117", retval);
 
 				}
 				break;
@@ -47238,15 +47202,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1119 = default(IToken);
-		IToken char_literal1121 = default(IToken);
-		IToken char_literal1123 = default(IToken);
-		Antlr3AstNode unmanaged_type1120 = default(Antlr3AstNode);
-		Antlr3AstNode expression1122 = default(Antlr3AstNode);
+		IToken string_literal1118 = default(IToken);
+		IToken char_literal1120 = default(IToken);
+		IToken char_literal1122 = default(IToken);
+		Antlr3AstNode unmanaged_type1119 = default(Antlr3AstNode);
+		Antlr3AstNode expression1121 = default(Antlr3AstNode);
 
-		object string_literal1119_tree = default(object);
-		object char_literal1121_tree = default(object);
-		object char_literal1123_tree = default(object);
+		object string_literal1118_tree = default(object);
+		object char_literal1120_tree = default(object);
+		object char_literal1122_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "stackalloc_initializer");
 		DebugLocation(928, 56);
 		try
@@ -47260,34 +47224,34 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(929, 2);
-			string_literal1119=(IToken)Match(input,178,Follow._178_in_stackalloc_initializer7228); if (state.failed) return retval;
+			string_literal1118=(IToken)Match(input,178,Follow._178_in_stackalloc_initializer7225); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1119_tree = (object)adaptor.Create(string_literal1119, "string_literal1119", retval);
-			adaptor.AddChild(root_0, string_literal1119_tree);
+			string_literal1118_tree = (object)adaptor.Create(string_literal1118, "string_literal1118", retval);
+			adaptor.AddChild(root_0, string_literal1118_tree);
 			}
 			DebugLocation(929, 17);
-			PushFollow(Follow._unmanaged_type_in_stackalloc_initializer7232);
-			unmanaged_type1120=unmanaged_type();
+			PushFollow(Follow._unmanaged_type_in_stackalloc_initializer7229);
+			unmanaged_type1119=unmanaged_type();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, unmanaged_type1120.Tree, unmanaged_type1120, "unmanaged_type1120", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, unmanaged_type1119.Tree, unmanaged_type1119, "unmanaged_type1119", retval);
 			DebugLocation(929, 34);
-			char_literal1121=(IToken)Match(input,95,Follow._95_in_stackalloc_initializer7236); if (state.failed) return retval;
+			char_literal1120=(IToken)Match(input,95,Follow._95_in_stackalloc_initializer7233); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1121_tree = (object)adaptor.Create(char_literal1121, "char_literal1121", retval);
-			adaptor.AddChild(root_0, char_literal1121_tree);
+			char_literal1120_tree = (object)adaptor.Create(char_literal1120, "char_literal1120", retval);
+			adaptor.AddChild(root_0, char_literal1120_tree);
 			}
 			DebugLocation(929, 40);
-			PushFollow(Follow._expression_in_stackalloc_initializer7240);
-			expression1122=expression();
+			PushFollow(Follow._expression_in_stackalloc_initializer7237);
+			expression1121=expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, expression1122.Tree, expression1122, "expression1122", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, expression1121.Tree, expression1121, "expression1121", retval);
 			DebugLocation(929, 53);
-			char_literal1123=(IToken)Match(input,96,Follow._96_in_stackalloc_initializer7244); if (state.failed) return retval;
+			char_literal1122=(IToken)Match(input,96,Follow._96_in_stackalloc_initializer7241); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1123_tree = (object)adaptor.Create(char_literal1123, "char_literal1123", retval);
-			adaptor.AddChild(root_0, char_literal1123_tree);
+			char_literal1122_tree = (object)adaptor.Create(char_literal1122, "char_literal1122", retval);
+			adaptor.AddChild(root_0, char_literal1122_tree);
 			}
 
 			}
@@ -47337,11 +47301,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1124 = default(IToken);
-		Antlr3AstNode type1125 = default(Antlr3AstNode);
-		Antlr3AstNode constant_declarators1126 = default(Antlr3AstNode);
+		IToken string_literal1123 = default(IToken);
+		Antlr3AstNode type1124 = default(Antlr3AstNode);
+		Antlr3AstNode constant_declarators1125 = default(Antlr3AstNode);
 
-		object string_literal1124_tree = default(object);
+		object string_literal1123_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "local_constant_declaration");
 		DebugLocation(930, 39);
 		try
@@ -47355,23 +47319,23 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(931, 2);
-			string_literal1124=(IToken)Match(input,118,Follow._118_in_local_constant_declaration7252); if (state.failed) return retval;
+			string_literal1123=(IToken)Match(input,118,Follow._118_in_local_constant_declaration7249); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1124_tree = (object)adaptor.Create(string_literal1124, "string_literal1124", retval);
-			adaptor.AddChild(root_0, string_literal1124_tree);
+			string_literal1123_tree = (object)adaptor.Create(string_literal1123, "string_literal1123", retval);
+			adaptor.AddChild(root_0, string_literal1123_tree);
 			}
 			DebugLocation(931, 12);
-			PushFollow(Follow._type_in_local_constant_declaration7256);
-			type1125=type();
+			PushFollow(Follow._type_in_local_constant_declaration7253);
+			type1124=type();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, type1125.Tree, type1125, "type1125", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, type1124.Tree, type1124, "type1124", retval);
 			DebugLocation(931, 19);
-			PushFollow(Follow._constant_declarators_in_local_constant_declaration7260);
-			constant_declarators1126=constant_declarators();
+			PushFollow(Follow._constant_declarators_in_local_constant_declaration7257);
+			constant_declarators1125=constant_declarators();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, constant_declarators1126.Tree, constant_declarators1126, "constant_declarators1126", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, constant_declarators1125.Tree, constant_declarators1125, "constant_declarators1125", retval);
 
 			}
 
@@ -47420,11 +47384,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal1128 = default(IToken);
-		Antlr3AstNode constant_declarator1127 = default(Antlr3AstNode);
-		Antlr3AstNode constant_declarator1129 = default(Antlr3AstNode);
+		IToken char_literal1127 = default(IToken);
+		Antlr3AstNode constant_declarator1126 = default(Antlr3AstNode);
+		Antlr3AstNode constant_declarator1128 = default(Antlr3AstNode);
 
-		object char_literal1128_tree = default(object);
+		object char_literal1127_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "constant_declarators");
 		DebugLocation(932, 48);
 		try
@@ -47438,11 +47402,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(933, 2);
-			PushFollow(Follow._constant_declarator_in_constant_declarators7268);
-			constant_declarator1127=constant_declarator();
+			PushFollow(Follow._constant_declarator_in_constant_declarators7265);
+			constant_declarator1126=constant_declarator();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, constant_declarator1127.Tree, constant_declarator1127, "constant_declarator1127", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, constant_declarator1126.Tree, constant_declarator1126, "constant_declarator1126", retval);
 			DebugLocation(933, 22);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:933:22: ( ',' constant_declarator )*
 			try { DebugEnterSubRule(361);
@@ -47466,17 +47430,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:933:23: ',' constant_declarator
 					{
 					DebugLocation(933, 23);
-					char_literal1128=(IToken)Match(input,78,Follow._78_in_constant_declarators7271); if (state.failed) return retval;
+					char_literal1127=(IToken)Match(input,78,Follow._78_in_constant_declarators7268); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal1128_tree = (object)adaptor.Create(char_literal1128, "char_literal1128", retval);
-					adaptor.AddChild(root_0, char_literal1128_tree);
+					char_literal1127_tree = (object)adaptor.Create(char_literal1127, "char_literal1127", retval);
+					adaptor.AddChild(root_0, char_literal1127_tree);
 					}
 					DebugLocation(933, 27);
-					PushFollow(Follow._constant_declarator_in_constant_declarators7273);
-					constant_declarator1129=constant_declarator();
+					PushFollow(Follow._constant_declarator_in_constant_declarators7270);
+					constant_declarator1128=constant_declarator();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, constant_declarator1129.Tree, constant_declarator1129, "constant_declarator1129", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, constant_declarator1128.Tree, constant_declarator1128, "constant_declarator1128", retval);
 
 					}
 					break;
@@ -47539,11 +47503,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal1131 = default(IToken);
-		Antlr3AstNode identifier1130 = default(Antlr3AstNode);
-		Antlr3AstNode constant_expression1132 = default(Antlr3AstNode);
+		IToken char_literal1130 = default(IToken);
+		Antlr3AstNode identifier1129 = default(Antlr3AstNode);
+		Antlr3AstNode constant_expression1131 = default(Antlr3AstNode);
 
-		object char_literal1131_tree = default(object);
+		object char_literal1130_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "constant_declarator");
 		DebugLocation(934, 43);
 		try
@@ -47557,11 +47521,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(935, 2);
-			PushFollow(Follow._identifier_in_constant_declarator7283);
-			identifier1130=identifier();
+			PushFollow(Follow._identifier_in_constant_declarator7280);
+			identifier1129=identifier();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1130.Tree, identifier1130, "identifier1130", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1129.Tree, identifier1129, "identifier1129", retval);
 			DebugLocation(935, 15);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:935:15: ( '=' constant_expression )?
 			int alt362=2;
@@ -47581,17 +47545,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:935:16: '=' constant_expression
 				{
 				DebugLocation(935, 16);
-				char_literal1131=(IToken)Match(input,89,Follow._89_in_constant_declarator7288); if (state.failed) return retval;
+				char_literal1130=(IToken)Match(input,89,Follow._89_in_constant_declarator7285); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal1131_tree = (object)adaptor.Create(char_literal1131, "char_literal1131", retval);
-				adaptor.AddChild(root_0, char_literal1131_tree);
+				char_literal1130_tree = (object)adaptor.Create(char_literal1130, "char_literal1130", retval);
+				adaptor.AddChild(root_0, char_literal1130_tree);
 				}
 				DebugLocation(935, 22);
-				PushFollow(Follow._constant_expression_in_constant_declarator7292);
-				constant_expression1132=constant_expression();
+				PushFollow(Follow._constant_expression_in_constant_declarator7289);
+				constant_expression1131=constant_expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression1132.Tree, constant_expression1132, "constant_expression1132", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression1131.Tree, constant_expression1131, "constant_expression1131", retval);
 
 				}
 				break;
@@ -47647,10 +47611,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal1134 = default(IToken);
-		Antlr3AstNode expression1133 = default(Antlr3AstNode);
+		IToken char_literal1133 = default(IToken);
+		Antlr3AstNode expression1132 = default(Antlr3AstNode);
 
-		object char_literal1134_tree = default(object);
+		object char_literal1133_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "expression_statement");
 		DebugLocation(937, 18);
 		try
@@ -47664,16 +47628,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(938, 2);
-			PushFollow(Follow._expression_in_expression_statement7303);
-			expression1133=expression();
+			PushFollow(Follow._expression_in_expression_statement7300);
+			expression1132=expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, expression1133.Tree, expression1133, "expression1133", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, expression1132.Tree, expression1132, "expression1132", retval);
 			DebugLocation(938, 15);
-			char_literal1134=(IToken)Match(input,SEMI,Follow._SEMI_in_expression_statement7307); if (state.failed) return retval;
+			char_literal1133=(IToken)Match(input,SEMI,Follow._SEMI_in_expression_statement7304); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1134_tree = (object)adaptor.Create(char_literal1134, "char_literal1134", retval);
-			adaptor.AddChild(root_0, char_literal1134_tree);
+			char_literal1133_tree = (object)adaptor.Create(char_literal1133, "char_literal1133", retval);
+			adaptor.AddChild(root_0, char_literal1133_tree);
 			}
 
 			}
@@ -47723,10 +47687,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode invocation_expression1135 = default(Antlr3AstNode);
-		Antlr3AstNode object_creation_expression1136 = default(Antlr3AstNode);
-		Antlr3AstNode assignment1137 = default(Antlr3AstNode);
-		Antlr3AstNode unary_expression1138 = default(Antlr3AstNode);
+		Antlr3AstNode invocation_expression1134 = default(Antlr3AstNode);
+		Antlr3AstNode object_creation_expression1135 = default(Antlr3AstNode);
+		Antlr3AstNode assignment1136 = default(Antlr3AstNode);
+		Antlr3AstNode unary_expression1137 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "statement_expression");
 		DebugLocation(939, 19);
@@ -47743,11 +47707,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred619_cs_fragment)))
+				if ((EvaluatePredicate(synpred618_cs_fragment)))
 				{
 					alt363 = 1;
 				}
-				else if ((EvaluatePredicate(synpred621_cs_fragment)))
+				else if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -47767,11 +47731,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred619_cs_fragment)))
+				if ((EvaluatePredicate(synpred618_cs_fragment)))
 				{
 					alt363 = 1;
 				}
-				else if ((EvaluatePredicate(synpred621_cs_fragment)))
+				else if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -47791,11 +47755,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if (((EvaluatePredicate(synpred619_cs_fragment)&&(_queryExpression == 0))))
+				if (((EvaluatePredicate(synpred618_cs_fragment)&&(_queryExpression == 0))))
 				{
 					alt363 = 1;
 				}
-				else if (((EvaluatePredicate(synpred621_cs_fragment)&&(_queryExpression == 0))))
+				else if (((EvaluatePredicate(synpred620_cs_fragment)&&(_queryExpression == 0))))
 				{
 					alt363 = 3;
 				}
@@ -47815,11 +47779,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred619_cs_fragment)))
+				if ((EvaluatePredicate(synpred618_cs_fragment)))
 				{
 					alt363 = 1;
 				}
-				else if ((EvaluatePredicate(synpred621_cs_fragment)))
+				else if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -47839,11 +47803,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred619_cs_fragment)))
+				if ((EvaluatePredicate(synpred618_cs_fragment)))
 				{
 					alt363 = 1;
 				}
-				else if ((EvaluatePredicate(synpred621_cs_fragment)))
+				else if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -47863,11 +47827,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred619_cs_fragment)))
+				if ((EvaluatePredicate(synpred618_cs_fragment)))
 				{
 					alt363 = 1;
 				}
-				else if ((EvaluatePredicate(synpred621_cs_fragment)))
+				else if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -47887,11 +47851,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred619_cs_fragment)))
+				if ((EvaluatePredicate(synpred618_cs_fragment)))
 				{
 					alt363 = 1;
 				}
-				else if ((EvaluatePredicate(synpred621_cs_fragment)))
+				else if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -47911,11 +47875,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred620_cs_fragment)))
+				if ((EvaluatePredicate(synpred619_cs_fragment)))
 				{
 					alt363 = 2;
 				}
-				else if ((EvaluatePredicate(synpred621_cs_fragment)))
+				else if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -47935,7 +47899,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred621_cs_fragment)))
+				if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -47955,7 +47919,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred621_cs_fragment)))
+				if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -47975,7 +47939,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred621_cs_fragment)))
+				if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -47995,7 +47959,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred621_cs_fragment)))
+				if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -48015,7 +47979,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred621_cs_fragment)))
+				if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -48035,11 +47999,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred619_cs_fragment)))
+				if ((EvaluatePredicate(synpred618_cs_fragment)))
 				{
 					alt363 = 1;
 				}
-				else if ((EvaluatePredicate(synpred621_cs_fragment)))
+				else if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -48059,7 +48023,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred621_cs_fragment)))
+				if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -48079,7 +48043,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred621_cs_fragment)))
+				if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -48099,7 +48063,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred621_cs_fragment)))
+				if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -48119,7 +48083,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred621_cs_fragment)))
+				if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -48139,7 +48103,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred621_cs_fragment)))
+				if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -48159,7 +48123,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred621_cs_fragment)))
+				if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -48179,7 +48143,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred621_cs_fragment)))
+				if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -48199,11 +48163,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred619_cs_fragment)))
+				if ((EvaluatePredicate(synpred618_cs_fragment)))
 				{
 					alt363 = 1;
 				}
-				else if ((EvaluatePredicate(synpred621_cs_fragment)))
+				else if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -48223,7 +48187,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred621_cs_fragment)))
+				if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -48243,7 +48207,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA363_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred621_cs_fragment)))
+				if ((EvaluatePredicate(synpred620_cs_fragment)))
 				{
 					alt363 = 3;
 				}
@@ -48276,11 +48240,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(940, 2);
-				PushFollow(Follow._invocation_expression_in_statement_expression7315);
-				invocation_expression1135=invocation_expression();
+				PushFollow(Follow._invocation_expression_in_statement_expression7312);
+				invocation_expression1134=invocation_expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, invocation_expression1135.Tree, invocation_expression1135, "invocation_expression1135", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, invocation_expression1134.Tree, invocation_expression1134, "invocation_expression1134", retval);
 
 				}
 				break;
@@ -48291,11 +48255,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(941, 4);
-				PushFollow(Follow._object_creation_expression_in_statement_expression7320);
-				object_creation_expression1136=object_creation_expression();
+				PushFollow(Follow._object_creation_expression_in_statement_expression7317);
+				object_creation_expression1135=object_creation_expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, object_creation_expression1136.Tree, object_creation_expression1136, "object_creation_expression1136", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, object_creation_expression1135.Tree, object_creation_expression1135, "object_creation_expression1135", retval);
 
 				}
 				break;
@@ -48306,11 +48270,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(942, 4);
-				PushFollow(Follow._assignment_in_statement_expression7325);
-				assignment1137=assignment();
+				PushFollow(Follow._assignment_in_statement_expression7322);
+				assignment1136=assignment();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, assignment1137.Tree, assignment1137, "assignment1137", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, assignment1136.Tree, assignment1136, "assignment1136", retval);
 
 				}
 				break;
@@ -48321,11 +48285,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(943, 4);
-				PushFollow(Follow._unary_expression_in_statement_expression7330);
-				unary_expression1138=unary_expression();
+				PushFollow(Follow._unary_expression_in_statement_expression7327);
+				unary_expression1137=unary_expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, unary_expression1138.Tree, unary_expression1138, "unary_expression1138", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, unary_expression1137.Tree, unary_expression1137, "unary_expression1137", retval);
 
 				}
 				break;
@@ -48376,8 +48340,8 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode if_statement1139 = default(Antlr3AstNode);
-		Antlr3AstNode switch_statement1140 = default(Antlr3AstNode);
+		Antlr3AstNode if_statement1138 = default(Antlr3AstNode);
+		Antlr3AstNode switch_statement1139 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "selection_statement");
 		DebugLocation(944, 20);
@@ -48415,11 +48379,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(945, 2);
-				PushFollow(Follow._if_statement_in_selection_statement7337);
-				if_statement1139=if_statement();
+				PushFollow(Follow._if_statement_in_selection_statement7334);
+				if_statement1138=if_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, if_statement1139.Tree, if_statement1139, "if_statement1139", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, if_statement1138.Tree, if_statement1138, "if_statement1138", retval);
 
 				}
 				break;
@@ -48430,11 +48394,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(946, 4);
-				PushFollow(Follow._switch_statement_in_selection_statement7342);
-				switch_statement1140=switch_statement();
+				PushFollow(Follow._switch_statement_in_selection_statement7339);
+				switch_statement1139=switch_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, switch_statement1140.Tree, switch_statement1140, "switch_statement1140", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, switch_statement1139.Tree, switch_statement1139, "switch_statement1139", retval);
 
 				}
 				break;
@@ -48485,16 +48449,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1141 = default(IToken);
-		IToken char_literal1142 = default(IToken);
-		IToken char_literal1144 = default(IToken);
-		Antlr3AstNode boolean_expression1143 = default(Antlr3AstNode);
-		Antlr3AstNode embedded_statement1145 = default(Antlr3AstNode);
-		Antlr3AstNode else_statement1146 = default(Antlr3AstNode);
+		IToken string_literal1140 = default(IToken);
+		IToken char_literal1141 = default(IToken);
+		IToken char_literal1143 = default(IToken);
+		Antlr3AstNode boolean_expression1142 = default(Antlr3AstNode);
+		Antlr3AstNode embedded_statement1144 = default(Antlr3AstNode);
+		Antlr3AstNode else_statement1145 = default(Antlr3AstNode);
 
-		object string_literal1141_tree = default(object);
-		object char_literal1142_tree = default(object);
-		object char_literal1144_tree = default(object);
+		object string_literal1140_tree = default(object);
+		object char_literal1141_tree = default(object);
+		object char_literal1143_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "if_statement");
 		DebugLocation(947, 1);
 		try
@@ -48508,35 +48472,35 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(948, 2);
-			string_literal1141=(IToken)Match(input,IF,Follow._IF_in_if_statement7350); if (state.failed) return retval;
+			string_literal1140=(IToken)Match(input,IF,Follow._IF_in_if_statement7347); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1141_tree = (object)adaptor.Create(string_literal1141, "string_literal1141", retval);
-			adaptor.AddChild(root_0, string_literal1141_tree);
+			string_literal1140_tree = (object)adaptor.Create(string_literal1140, "string_literal1140", retval);
+			adaptor.AddChild(root_0, string_literal1140_tree);
 			}
 			DebugLocation(948, 9);
-			char_literal1142=(IToken)Match(input,72,Follow._72_in_if_statement7354); if (state.failed) return retval;
+			char_literal1141=(IToken)Match(input,72,Follow._72_in_if_statement7351); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1142_tree = (object)adaptor.Create(char_literal1142, "char_literal1142", retval);
-			adaptor.AddChild(root_0, char_literal1142_tree);
+			char_literal1141_tree = (object)adaptor.Create(char_literal1141, "char_literal1141", retval);
+			adaptor.AddChild(root_0, char_literal1141_tree);
 			}
 			DebugLocation(948, 15);
-			PushFollow(Follow._boolean_expression_in_if_statement7358);
-			boolean_expression1143=boolean_expression();
+			PushFollow(Follow._boolean_expression_in_if_statement7355);
+			boolean_expression1142=boolean_expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, boolean_expression1143.Tree, boolean_expression1143, "boolean_expression1143", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, boolean_expression1142.Tree, boolean_expression1142, "boolean_expression1142", retval);
 			DebugLocation(948, 36);
-			char_literal1144=(IToken)Match(input,RPAREN,Follow._RPAREN_in_if_statement7362); if (state.failed) return retval;
+			char_literal1143=(IToken)Match(input,RPAREN,Follow._RPAREN_in_if_statement7359); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1144_tree = (object)adaptor.Create(char_literal1144, "char_literal1144", retval);
-			adaptor.AddChild(root_0, char_literal1144_tree);
+			char_literal1143_tree = (object)adaptor.Create(char_literal1143, "char_literal1143", retval);
+			adaptor.AddChild(root_0, char_literal1143_tree);
 			}
 			DebugLocation(948, 42);
-			PushFollow(Follow._embedded_statement_in_if_statement7366);
-			embedded_statement1145=embedded_statement();
+			PushFollow(Follow._embedded_statement_in_if_statement7363);
+			embedded_statement1144=embedded_statement();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1145.Tree, embedded_statement1145, "embedded_statement1145", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1144.Tree, embedded_statement1144, "embedded_statement1144", retval);
 			DebugLocation(948, 63);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:948:63: ( else_statement )?
 			int alt365=2;
@@ -48548,7 +48512,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA365_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred623_cs_fragment)))
+				if ((EvaluatePredicate(synpred622_cs_fragment)))
 				{
 					alt365 = 1;
 				}
@@ -48561,11 +48525,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:948:63: else_statement
 				{
 				DebugLocation(948, 63);
-				PushFollow(Follow._else_statement_in_if_statement7370);
-				else_statement1146=else_statement();
+				PushFollow(Follow._else_statement_in_if_statement7367);
+				else_statement1145=else_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, else_statement1146.Tree, else_statement1146, "else_statement1146", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, else_statement1145.Tree, else_statement1145, "else_statement1145", retval);
 
 				}
 				break;
@@ -48621,10 +48585,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1147 = default(IToken);
-		Antlr3AstNode embedded_statement1148 = default(Antlr3AstNode);
+		IToken string_literal1146 = default(IToken);
+		Antlr3AstNode embedded_statement1147 = default(Antlr3AstNode);
 
-		object string_literal1147_tree = default(object);
+		object string_literal1146_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "else_statement");
 		DebugLocation(950, 1);
 		try
@@ -48638,17 +48602,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(951, 2);
-			string_literal1147=(IToken)Match(input,ELSE,Follow._ELSE_in_else_statement7380); if (state.failed) return retval;
+			string_literal1146=(IToken)Match(input,ELSE,Follow._ELSE_in_else_statement7377); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1147_tree = (object)adaptor.Create(string_literal1147, "string_literal1147", retval);
-			adaptor.AddChild(root_0, string_literal1147_tree);
+			string_literal1146_tree = (object)adaptor.Create(string_literal1146, "string_literal1146", retval);
+			adaptor.AddChild(root_0, string_literal1146_tree);
 			}
 			DebugLocation(951, 11);
-			PushFollow(Follow._embedded_statement_in_else_statement7384);
-			embedded_statement1148=embedded_statement();
+			PushFollow(Follow._embedded_statement_in_else_statement7381);
+			embedded_statement1147=embedded_statement();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1148.Tree, embedded_statement1148, "embedded_statement1148", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1147.Tree, embedded_statement1147, "embedded_statement1147", retval);
 
 			}
 
@@ -48697,15 +48661,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1149 = default(IToken);
-		IToken char_literal1150 = default(IToken);
-		IToken char_literal1152 = default(IToken);
-		Antlr3AstNode expression1151 = default(Antlr3AstNode);
-		Antlr3AstNode switch_block1153 = default(Antlr3AstNode);
+		IToken string_literal1148 = default(IToken);
+		IToken char_literal1149 = default(IToken);
+		IToken char_literal1151 = default(IToken);
+		Antlr3AstNode expression1150 = default(Antlr3AstNode);
+		Antlr3AstNode switch_block1152 = default(Antlr3AstNode);
 
-		object string_literal1149_tree = default(object);
-		object char_literal1150_tree = default(object);
-		object char_literal1152_tree = default(object);
+		object string_literal1148_tree = default(object);
+		object char_literal1149_tree = default(object);
+		object char_literal1151_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "switch_statement");
 		DebugLocation(953, 50);
 		try
@@ -48719,35 +48683,35 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(954, 2);
-			string_literal1149=(IToken)Match(input,182,Follow._182_in_switch_statement7394); if (state.failed) return retval;
+			string_literal1148=(IToken)Match(input,182,Follow._182_in_switch_statement7391); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1149_tree = (object)adaptor.Create(string_literal1149, "string_literal1149", retval);
-			adaptor.AddChild(root_0, string_literal1149_tree);
+			string_literal1148_tree = (object)adaptor.Create(string_literal1148, "string_literal1148", retval);
+			adaptor.AddChild(root_0, string_literal1148_tree);
 			}
 			DebugLocation(954, 13);
-			char_literal1150=(IToken)Match(input,72,Follow._72_in_switch_statement7398); if (state.failed) return retval;
+			char_literal1149=(IToken)Match(input,72,Follow._72_in_switch_statement7395); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1150_tree = (object)adaptor.Create(char_literal1150, "char_literal1150", retval);
-			adaptor.AddChild(root_0, char_literal1150_tree);
+			char_literal1149_tree = (object)adaptor.Create(char_literal1149, "char_literal1149", retval);
+			adaptor.AddChild(root_0, char_literal1149_tree);
 			}
 			DebugLocation(954, 19);
-			PushFollow(Follow._expression_in_switch_statement7402);
-			expression1151=expression();
+			PushFollow(Follow._expression_in_switch_statement7399);
+			expression1150=expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, expression1151.Tree, expression1151, "expression1151", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, expression1150.Tree, expression1150, "expression1150", retval);
 			DebugLocation(954, 32);
-			char_literal1152=(IToken)Match(input,RPAREN,Follow._RPAREN_in_switch_statement7406); if (state.failed) return retval;
+			char_literal1151=(IToken)Match(input,RPAREN,Follow._RPAREN_in_switch_statement7403); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1152_tree = (object)adaptor.Create(char_literal1152, "char_literal1152", retval);
-			adaptor.AddChild(root_0, char_literal1152_tree);
+			char_literal1151_tree = (object)adaptor.Create(char_literal1151, "char_literal1151", retval);
+			adaptor.AddChild(root_0, char_literal1151_tree);
 			}
 			DebugLocation(954, 38);
-			PushFollow(Follow._switch_block_in_switch_statement7410);
-			switch_block1153=switch_block();
+			PushFollow(Follow._switch_block_in_switch_statement7407);
+			switch_block1152=switch_block();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, switch_block1153.Tree, switch_block1153, "switch_block1153", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, switch_block1152.Tree, switch_block1152, "switch_block1152", retval);
 
 			}
 
@@ -48796,12 +48760,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal1154 = default(IToken);
-		IToken char_literal1156 = default(IToken);
-		Antlr3AstNode switch_sections1155 = default(Antlr3AstNode);
+		IToken char_literal1153 = default(IToken);
+		IToken char_literal1155 = default(IToken);
+		Antlr3AstNode switch_sections1154 = default(Antlr3AstNode);
 
-		object char_literal1154_tree = default(object);
-		object char_literal1156_tree = default(object);
+		object char_literal1153_tree = default(object);
+		object char_literal1155_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "switch_block");
 		DebugLocation(955, 30);
 		try
@@ -48815,10 +48779,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(956, 2);
-			char_literal1154=(IToken)Match(input,200,Follow._200_in_switch_block7418); if (state.failed) return retval;
+			char_literal1153=(IToken)Match(input,200,Follow._200_in_switch_block7415); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1154_tree = (object)adaptor.Create(char_literal1154, "char_literal1154", retval);
-			adaptor.AddChild(root_0, char_literal1154_tree);
+			char_literal1153_tree = (object)adaptor.Create(char_literal1153, "char_literal1153", retval);
+			adaptor.AddChild(root_0, char_literal1153_tree);
 			}
 			DebugLocation(956, 8);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:956:8: ( switch_sections )?
@@ -48839,11 +48803,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:956:8: switch_sections
 				{
 				DebugLocation(956, 8);
-				PushFollow(Follow._switch_sections_in_switch_block7422);
-				switch_sections1155=switch_sections();
+				PushFollow(Follow._switch_sections_in_switch_block7419);
+				switch_sections1154=switch_sections();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, switch_sections1155.Tree, switch_sections1155, "switch_sections1155", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, switch_sections1154.Tree, switch_sections1154, "switch_sections1154", retval);
 
 				}
 				break;
@@ -48852,10 +48816,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(366); }
 
 			DebugLocation(956, 27);
-			char_literal1156=(IToken)Match(input,204,Follow._204_in_switch_block7427); if (state.failed) return retval;
+			char_literal1155=(IToken)Match(input,204,Follow._204_in_switch_block7424); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1156_tree = (object)adaptor.Create(char_literal1156, "char_literal1156", retval);
-			adaptor.AddChild(root_0, char_literal1156_tree);
+			char_literal1155_tree = (object)adaptor.Create(char_literal1155, "char_literal1155", retval);
+			adaptor.AddChild(root_0, char_literal1155_tree);
 			}
 
 			}
@@ -48905,7 +48869,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode switch_section1157 = default(Antlr3AstNode);
+		Antlr3AstNode switch_section1156 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "switch_sections");
 		DebugLocation(957, 17);
@@ -48943,11 +48907,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:958:2: switch_section
 					{
 					DebugLocation(958, 2);
-					PushFollow(Follow._switch_section_in_switch_sections7435);
-					switch_section1157=switch_section();
+					PushFollow(Follow._switch_section_in_switch_sections7432);
+					switch_section1156=switch_section();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, switch_section1157.Tree, switch_section1157, "switch_section1157", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, switch_section1156.Tree, switch_section1156, "switch_section1156", retval);
 
 					}
 					break;
@@ -49016,8 +48980,8 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode switch_labels1158 = default(Antlr3AstNode);
-		Antlr3AstNode statement_list1159 = default(Antlr3AstNode);
+		Antlr3AstNode switch_labels1157 = default(Antlr3AstNode);
+		Antlr3AstNode statement_list1158 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "switch_section");
 		DebugLocation(959, 32);
@@ -49032,17 +48996,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(960, 2);
-			PushFollow(Follow._switch_labels_in_switch_section7444);
-			switch_labels1158=switch_labels();
+			PushFollow(Follow._switch_labels_in_switch_section7441);
+			switch_labels1157=switch_labels();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, switch_labels1158.Tree, switch_labels1158, "switch_labels1158", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, switch_labels1157.Tree, switch_labels1157, "switch_labels1157", retval);
 			DebugLocation(960, 18);
-			PushFollow(Follow._statement_list_in_switch_section7448);
-			statement_list1159=statement_list();
+			PushFollow(Follow._statement_list_in_switch_section7445);
+			statement_list1158=statement_list();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, statement_list1159.Tree, statement_list1159, "statement_list1159", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, statement_list1158.Tree, statement_list1158, "statement_list1158", retval);
 
 			}
 
@@ -49091,7 +49055,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode switch_label1160 = default(Antlr3AstNode);
+		Antlr3AstNode switch_label1159 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "switch_labels");
 		DebugLocation(961, 15);
@@ -49140,11 +49104,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:962:2: switch_label
 					{
 					DebugLocation(962, 2);
-					PushFollow(Follow._switch_label_in_switch_labels7456);
-					switch_label1160=switch_label();
+					PushFollow(Follow._switch_label_in_switch_labels7453);
+					switch_label1159=switch_label();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, switch_label1160.Tree, switch_label1160, "switch_label1160", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, switch_label1159.Tree, switch_label1159, "switch_label1159", retval);
 
 					}
 					break;
@@ -49213,16 +49177,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1161 = default(IToken);
-		IToken char_literal1163 = default(IToken);
-		IToken string_literal1164 = default(IToken);
-		IToken char_literal1165 = default(IToken);
-		Antlr3AstNode constant_expression1162 = default(Antlr3AstNode);
+		IToken string_literal1160 = default(IToken);
+		IToken char_literal1162 = default(IToken);
+		IToken string_literal1163 = default(IToken);
+		IToken char_literal1164 = default(IToken);
+		Antlr3AstNode constant_expression1161 = default(Antlr3AstNode);
 
-		object string_literal1161_tree = default(object);
-		object char_literal1163_tree = default(object);
-		object string_literal1164_tree = default(object);
-		object char_literal1165_tree = default(object);
+		object string_literal1160_tree = default(object);
+		object char_literal1162_tree = default(object);
+		object string_literal1163_tree = default(object);
+		object char_literal1164_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "switch_label");
 		DebugLocation(963, 21);
 		try
@@ -49264,22 +49228,22 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:964:3: 'case' constant_expression ':'
 				{
 				DebugLocation(964, 3);
-				string_literal1161=(IToken)Match(input,113,Follow._113_in_switch_label7466); if (state.failed) return retval;
+				string_literal1160=(IToken)Match(input,113,Follow._113_in_switch_label7463); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal1161_tree = (object)adaptor.Create(string_literal1161, "string_literal1161", retval);
-				adaptor.AddChild(root_0, string_literal1161_tree);
+				string_literal1160_tree = (object)adaptor.Create(string_literal1160, "string_literal1160", retval);
+				adaptor.AddChild(root_0, string_literal1160_tree);
 				}
 				DebugLocation(964, 12);
-				PushFollow(Follow._constant_expression_in_switch_label7470);
-				constant_expression1162=constant_expression();
+				PushFollow(Follow._constant_expression_in_switch_label7467);
+				constant_expression1161=constant_expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression1162.Tree, constant_expression1162, "constant_expression1162", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression1161.Tree, constant_expression1161, "constant_expression1161", retval);
 				DebugLocation(964, 34);
-				char_literal1163=(IToken)Match(input,83,Follow._83_in_switch_label7474); if (state.failed) return retval;
+				char_literal1162=(IToken)Match(input,83,Follow._83_in_switch_label7471); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal1163_tree = (object)adaptor.Create(char_literal1163, "char_literal1163", retval);
-				adaptor.AddChild(root_0, char_literal1163_tree);
+				char_literal1162_tree = (object)adaptor.Create(char_literal1162, "char_literal1162", retval);
+				adaptor.AddChild(root_0, char_literal1162_tree);
 				}
 
 				}
@@ -49299,16 +49263,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:965:5: 'default' ':'
 				{
 				DebugLocation(965, 5);
-				string_literal1164=(IToken)Match(input,121,Follow._121_in_switch_label7481); if (state.failed) return retval;
+				string_literal1163=(IToken)Match(input,121,Follow._121_in_switch_label7478); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal1164_tree = (object)adaptor.Create(string_literal1164, "string_literal1164", retval);
-				adaptor.AddChild(root_0, string_literal1164_tree);
+				string_literal1163_tree = (object)adaptor.Create(string_literal1163, "string_literal1163", retval);
+				adaptor.AddChild(root_0, string_literal1163_tree);
 				}
 				DebugLocation(965, 17);
-				char_literal1165=(IToken)Match(input,83,Follow._83_in_switch_label7485); if (state.failed) return retval;
+				char_literal1164=(IToken)Match(input,83,Follow._83_in_switch_label7482); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal1165_tree = (object)adaptor.Create(char_literal1165, "char_literal1165", retval);
-				adaptor.AddChild(root_0, char_literal1165_tree);
+				char_literal1164_tree = (object)adaptor.Create(char_literal1164, "char_literal1164", retval);
+				adaptor.AddChild(root_0, char_literal1164_tree);
 				}
 
 				}
@@ -49363,10 +49327,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode while_statement1166 = default(Antlr3AstNode);
-		Antlr3AstNode do_statement1167 = default(Antlr3AstNode);
-		Antlr3AstNode for_statement1168 = default(Antlr3AstNode);
-		Antlr3AstNode foreach_statement1169 = default(Antlr3AstNode);
+		Antlr3AstNode while_statement1165 = default(Antlr3AstNode);
+		Antlr3AstNode do_statement1166 = default(Antlr3AstNode);
+		Antlr3AstNode for_statement1167 = default(Antlr3AstNode);
+		Antlr3AstNode foreach_statement1168 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "iteration_statement");
 		DebugLocation(966, 21);
@@ -49418,11 +49382,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(967, 2);
-				PushFollow(Follow._while_statement_in_iteration_statement7494);
-				while_statement1166=while_statement();
+				PushFollow(Follow._while_statement_in_iteration_statement7491);
+				while_statement1165=while_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, while_statement1166.Tree, while_statement1166, "while_statement1166", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, while_statement1165.Tree, while_statement1165, "while_statement1165", retval);
 
 				}
 				break;
@@ -49433,11 +49397,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(968, 4);
-				PushFollow(Follow._do_statement_in_iteration_statement7499);
-				do_statement1167=do_statement();
+				PushFollow(Follow._do_statement_in_iteration_statement7496);
+				do_statement1166=do_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, do_statement1167.Tree, do_statement1167, "do_statement1167", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, do_statement1166.Tree, do_statement1166, "do_statement1166", retval);
 
 				}
 				break;
@@ -49448,11 +49412,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(969, 4);
-				PushFollow(Follow._for_statement_in_iteration_statement7504);
-				for_statement1168=for_statement();
+				PushFollow(Follow._for_statement_in_iteration_statement7501);
+				for_statement1167=for_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, for_statement1168.Tree, for_statement1168, "for_statement1168", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, for_statement1167.Tree, for_statement1167, "for_statement1167", retval);
 
 				}
 				break;
@@ -49463,11 +49427,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(970, 4);
-				PushFollow(Follow._foreach_statement_in_iteration_statement7509);
-				foreach_statement1169=foreach_statement();
+				PushFollow(Follow._foreach_statement_in_iteration_statement7506);
+				foreach_statement1168=foreach_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, foreach_statement1169.Tree, foreach_statement1169, "foreach_statement1169", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, foreach_statement1168.Tree, foreach_statement1168, "foreach_statement1168", retval);
 
 				}
 				break;
@@ -49518,15 +49482,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1170 = default(IToken);
-		IToken char_literal1171 = default(IToken);
-		IToken char_literal1173 = default(IToken);
-		Antlr3AstNode boolean_expression1172 = default(Antlr3AstNode);
-		Antlr3AstNode embedded_statement1174 = default(Antlr3AstNode);
+		IToken string_literal1169 = default(IToken);
+		IToken char_literal1170 = default(IToken);
+		IToken char_literal1172 = default(IToken);
+		Antlr3AstNode boolean_expression1171 = default(Antlr3AstNode);
+		Antlr3AstNode embedded_statement1173 = default(Antlr3AstNode);
 
-		object string_literal1170_tree = default(object);
-		object char_literal1171_tree = default(object);
-		object char_literal1173_tree = default(object);
+		object string_literal1169_tree = default(object);
+		object char_literal1170_tree = default(object);
+		object char_literal1172_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "while_statement");
 		DebugLocation(971, 63);
 		try
@@ -49540,35 +49504,35 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(972, 2);
-			string_literal1170=(IToken)Match(input,198,Follow._198_in_while_statement7517); if (state.failed) return retval;
+			string_literal1169=(IToken)Match(input,198,Follow._198_in_while_statement7514); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1170_tree = (object)adaptor.Create(string_literal1170, "string_literal1170", retval);
-			adaptor.AddChild(root_0, string_literal1170_tree);
+			string_literal1169_tree = (object)adaptor.Create(string_literal1169, "string_literal1169", retval);
+			adaptor.AddChild(root_0, string_literal1169_tree);
 			}
 			DebugLocation(972, 12);
-			char_literal1171=(IToken)Match(input,72,Follow._72_in_while_statement7521); if (state.failed) return retval;
+			char_literal1170=(IToken)Match(input,72,Follow._72_in_while_statement7518); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1171_tree = (object)adaptor.Create(char_literal1171, "char_literal1171", retval);
-			adaptor.AddChild(root_0, char_literal1171_tree);
+			char_literal1170_tree = (object)adaptor.Create(char_literal1170, "char_literal1170", retval);
+			adaptor.AddChild(root_0, char_literal1170_tree);
 			}
 			DebugLocation(972, 18);
-			PushFollow(Follow._boolean_expression_in_while_statement7525);
-			boolean_expression1172=boolean_expression();
+			PushFollow(Follow._boolean_expression_in_while_statement7522);
+			boolean_expression1171=boolean_expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, boolean_expression1172.Tree, boolean_expression1172, "boolean_expression1172", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, boolean_expression1171.Tree, boolean_expression1171, "boolean_expression1171", retval);
 			DebugLocation(972, 39);
-			char_literal1173=(IToken)Match(input,RPAREN,Follow._RPAREN_in_while_statement7529); if (state.failed) return retval;
+			char_literal1172=(IToken)Match(input,RPAREN,Follow._RPAREN_in_while_statement7526); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1173_tree = (object)adaptor.Create(char_literal1173, "char_literal1173", retval);
-			adaptor.AddChild(root_0, char_literal1173_tree);
+			char_literal1172_tree = (object)adaptor.Create(char_literal1172, "char_literal1172", retval);
+			adaptor.AddChild(root_0, char_literal1172_tree);
 			}
 			DebugLocation(972, 45);
-			PushFollow(Follow._embedded_statement_in_while_statement7533);
-			embedded_statement1174=embedded_statement();
+			PushFollow(Follow._embedded_statement_in_while_statement7530);
+			embedded_statement1173=embedded_statement();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1174.Tree, embedded_statement1174, "embedded_statement1174", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1173.Tree, embedded_statement1173, "embedded_statement1173", retval);
 
 			}
 
@@ -49617,19 +49581,19 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1175 = default(IToken);
-		IToken string_literal1177 = default(IToken);
-		IToken char_literal1178 = default(IToken);
+		IToken string_literal1174 = default(IToken);
+		IToken string_literal1176 = default(IToken);
+		IToken char_literal1177 = default(IToken);
+		IToken char_literal1179 = default(IToken);
 		IToken char_literal1180 = default(IToken);
-		IToken char_literal1181 = default(IToken);
-		Antlr3AstNode embedded_statement1176 = default(Antlr3AstNode);
-		Antlr3AstNode boolean_expression1179 = default(Antlr3AstNode);
+		Antlr3AstNode embedded_statement1175 = default(Antlr3AstNode);
+		Antlr3AstNode boolean_expression1178 = default(Antlr3AstNode);
 
-		object string_literal1175_tree = default(object);
-		object string_literal1177_tree = default(object);
-		object char_literal1178_tree = default(object);
+		object string_literal1174_tree = default(object);
+		object string_literal1176_tree = default(object);
+		object char_literal1177_tree = default(object);
+		object char_literal1179_tree = default(object);
 		object char_literal1180_tree = default(object);
-		object char_literal1181_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "do_statement");
 		DebugLocation(973, 76);
 		try
@@ -49643,46 +49607,46 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(974, 2);
-			string_literal1175=(IToken)Match(input,124,Follow._124_in_do_statement7541); if (state.failed) return retval;
+			string_literal1174=(IToken)Match(input,124,Follow._124_in_do_statement7538); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1175_tree = (object)adaptor.Create(string_literal1175, "string_literal1175", retval);
-			adaptor.AddChild(root_0, string_literal1175_tree);
+			string_literal1174_tree = (object)adaptor.Create(string_literal1174, "string_literal1174", retval);
+			adaptor.AddChild(root_0, string_literal1174_tree);
 			}
 			DebugLocation(974, 9);
-			PushFollow(Follow._embedded_statement_in_do_statement7545);
-			embedded_statement1176=embedded_statement();
+			PushFollow(Follow._embedded_statement_in_do_statement7542);
+			embedded_statement1175=embedded_statement();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1176.Tree, embedded_statement1176, "embedded_statement1176", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1175.Tree, embedded_statement1175, "embedded_statement1175", retval);
 			DebugLocation(974, 30);
-			string_literal1177=(IToken)Match(input,198,Follow._198_in_do_statement7549); if (state.failed) return retval;
+			string_literal1176=(IToken)Match(input,198,Follow._198_in_do_statement7546); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1177_tree = (object)adaptor.Create(string_literal1177, "string_literal1177", retval);
-			adaptor.AddChild(root_0, string_literal1177_tree);
+			string_literal1176_tree = (object)adaptor.Create(string_literal1176, "string_literal1176", retval);
+			adaptor.AddChild(root_0, string_literal1176_tree);
 			}
 			DebugLocation(974, 40);
-			char_literal1178=(IToken)Match(input,72,Follow._72_in_do_statement7553); if (state.failed) return retval;
+			char_literal1177=(IToken)Match(input,72,Follow._72_in_do_statement7550); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1178_tree = (object)adaptor.Create(char_literal1178, "char_literal1178", retval);
-			adaptor.AddChild(root_0, char_literal1178_tree);
+			char_literal1177_tree = (object)adaptor.Create(char_literal1177, "char_literal1177", retval);
+			adaptor.AddChild(root_0, char_literal1177_tree);
 			}
 			DebugLocation(974, 46);
-			PushFollow(Follow._boolean_expression_in_do_statement7557);
-			boolean_expression1179=boolean_expression();
+			PushFollow(Follow._boolean_expression_in_do_statement7554);
+			boolean_expression1178=boolean_expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, boolean_expression1179.Tree, boolean_expression1179, "boolean_expression1179", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, boolean_expression1178.Tree, boolean_expression1178, "boolean_expression1178", retval);
 			DebugLocation(974, 67);
-			char_literal1180=(IToken)Match(input,RPAREN,Follow._RPAREN_in_do_statement7561); if (state.failed) return retval;
+			char_literal1179=(IToken)Match(input,RPAREN,Follow._RPAREN_in_do_statement7558); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			char_literal1179_tree = (object)adaptor.Create(char_literal1179, "char_literal1179", retval);
+			adaptor.AddChild(root_0, char_literal1179_tree);
+			}
+			DebugLocation(974, 73);
+			char_literal1180=(IToken)Match(input,SEMI,Follow._SEMI_in_do_statement7562); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1180_tree = (object)adaptor.Create(char_literal1180, "char_literal1180", retval);
 			adaptor.AddChild(root_0, char_literal1180_tree);
-			}
-			DebugLocation(974, 73);
-			char_literal1181=(IToken)Match(input,SEMI,Follow._SEMI_in_do_statement7565); if (state.failed) return retval;
-			if (state.backtracking == 0) {
-			char_literal1181_tree = (object)adaptor.Create(char_literal1181, "char_literal1181", retval);
-			adaptor.AddChild(root_0, char_literal1181_tree);
 			}
 
 			}
@@ -49732,21 +49696,21 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1182 = default(IToken);
-		IToken char_literal1183 = default(IToken);
-		IToken char_literal1185 = default(IToken);
-		IToken char_literal1187 = default(IToken);
-		IToken char_literal1189 = default(IToken);
-		Antlr3AstNode for_initializer1184 = default(Antlr3AstNode);
-		Antlr3AstNode for_condition1186 = default(Antlr3AstNode);
-		Antlr3AstNode for_iterator1188 = default(Antlr3AstNode);
-		Antlr3AstNode embedded_statement1190 = default(Antlr3AstNode);
+		IToken string_literal1181 = default(IToken);
+		IToken char_literal1182 = default(IToken);
+		IToken char_literal1184 = default(IToken);
+		IToken char_literal1186 = default(IToken);
+		IToken char_literal1188 = default(IToken);
+		Antlr3AstNode for_initializer1183 = default(Antlr3AstNode);
+		Antlr3AstNode for_condition1185 = default(Antlr3AstNode);
+		Antlr3AstNode for_iterator1187 = default(Antlr3AstNode);
+		Antlr3AstNode embedded_statement1189 = default(Antlr3AstNode);
 
-		object string_literal1182_tree = default(object);
-		object char_literal1183_tree = default(object);
-		object char_literal1185_tree = default(object);
-		object char_literal1187_tree = default(object);
-		object char_literal1189_tree = default(object);
+		object string_literal1181_tree = default(object);
+		object char_literal1182_tree = default(object);
+		object char_literal1184_tree = default(object);
+		object char_literal1186_tree = default(object);
+		object char_literal1188_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "for_statement");
 		DebugLocation(975, 104);
 		try
@@ -49760,16 +49724,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(976, 2);
-			string_literal1182=(IToken)Match(input,135,Follow._135_in_for_statement7573); if (state.failed) return retval;
+			string_literal1181=(IToken)Match(input,135,Follow._135_in_for_statement7570); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1182_tree = (object)adaptor.Create(string_literal1182, "string_literal1182", retval);
-			adaptor.AddChild(root_0, string_literal1182_tree);
+			string_literal1181_tree = (object)adaptor.Create(string_literal1181, "string_literal1181", retval);
+			adaptor.AddChild(root_0, string_literal1181_tree);
 			}
 			DebugLocation(976, 10);
-			char_literal1183=(IToken)Match(input,72,Follow._72_in_for_statement7577); if (state.failed) return retval;
+			char_literal1182=(IToken)Match(input,72,Follow._72_in_for_statement7574); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1183_tree = (object)adaptor.Create(char_literal1183, "char_literal1183", retval);
-			adaptor.AddChild(root_0, char_literal1183_tree);
+			char_literal1182_tree = (object)adaptor.Create(char_literal1182, "char_literal1182", retval);
+			adaptor.AddChild(root_0, char_literal1182_tree);
 			}
 			DebugLocation(976, 16);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:976:16: ( for_initializer )?
@@ -49790,11 +49754,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:976:16: for_initializer
 				{
 				DebugLocation(976, 16);
-				PushFollow(Follow._for_initializer_in_for_statement7581);
-				for_initializer1184=for_initializer();
+				PushFollow(Follow._for_initializer_in_for_statement7578);
+				for_initializer1183=for_initializer();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, for_initializer1184.Tree, for_initializer1184, "for_initializer1184", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, for_initializer1183.Tree, for_initializer1183, "for_initializer1183", retval);
 
 				}
 				break;
@@ -49803,10 +49767,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(371); }
 
 			DebugLocation(976, 35);
-			char_literal1185=(IToken)Match(input,SEMI,Follow._SEMI_in_for_statement7586); if (state.failed) return retval;
+			char_literal1184=(IToken)Match(input,SEMI,Follow._SEMI_in_for_statement7583); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1185_tree = (object)adaptor.Create(char_literal1185, "char_literal1185", retval);
-			adaptor.AddChild(root_0, char_literal1185_tree);
+			char_literal1184_tree = (object)adaptor.Create(char_literal1184, "char_literal1184", retval);
+			adaptor.AddChild(root_0, char_literal1184_tree);
 			}
 			DebugLocation(976, 41);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:976:41: ( for_condition )?
@@ -49827,11 +49791,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:976:41: for_condition
 				{
 				DebugLocation(976, 41);
-				PushFollow(Follow._for_condition_in_for_statement7590);
-				for_condition1186=for_condition();
+				PushFollow(Follow._for_condition_in_for_statement7587);
+				for_condition1185=for_condition();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, for_condition1186.Tree, for_condition1186, "for_condition1186", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, for_condition1185.Tree, for_condition1185, "for_condition1185", retval);
 
 				}
 				break;
@@ -49840,10 +49804,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(372); }
 
 			DebugLocation(976, 58);
-			char_literal1187=(IToken)Match(input,SEMI,Follow._SEMI_in_for_statement7595); if (state.failed) return retval;
+			char_literal1186=(IToken)Match(input,SEMI,Follow._SEMI_in_for_statement7592); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1187_tree = (object)adaptor.Create(char_literal1187, "char_literal1187", retval);
-			adaptor.AddChild(root_0, char_literal1187_tree);
+			char_literal1186_tree = (object)adaptor.Create(char_literal1186, "char_literal1186", retval);
+			adaptor.AddChild(root_0, char_literal1186_tree);
 			}
 			DebugLocation(976, 64);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:976:64: ( for_iterator )?
@@ -49864,11 +49828,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:976:64: for_iterator
 				{
 				DebugLocation(976, 64);
-				PushFollow(Follow._for_iterator_in_for_statement7599);
-				for_iterator1188=for_iterator();
+				PushFollow(Follow._for_iterator_in_for_statement7596);
+				for_iterator1187=for_iterator();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, for_iterator1188.Tree, for_iterator1188, "for_iterator1188", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, for_iterator1187.Tree, for_iterator1187, "for_iterator1187", retval);
 
 				}
 				break;
@@ -49877,17 +49841,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(373); }
 
 			DebugLocation(976, 80);
-			char_literal1189=(IToken)Match(input,RPAREN,Follow._RPAREN_in_for_statement7604); if (state.failed) return retval;
+			char_literal1188=(IToken)Match(input,RPAREN,Follow._RPAREN_in_for_statement7601); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1189_tree = (object)adaptor.Create(char_literal1189, "char_literal1189", retval);
-			adaptor.AddChild(root_0, char_literal1189_tree);
+			char_literal1188_tree = (object)adaptor.Create(char_literal1188, "char_literal1188", retval);
+			adaptor.AddChild(root_0, char_literal1188_tree);
 			}
 			DebugLocation(976, 86);
-			PushFollow(Follow._embedded_statement_in_for_statement7608);
-			embedded_statement1190=embedded_statement();
+			PushFollow(Follow._embedded_statement_in_for_statement7605);
+			embedded_statement1189=embedded_statement();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1190.Tree, embedded_statement1190, "embedded_statement1190", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1189.Tree, embedded_statement1189, "embedded_statement1189", retval);
 
 			}
 
@@ -49936,8 +49900,8 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode local_variable_declaration1191 = default(Antlr3AstNode);
-		Antlr3AstNode statement_expression_list1192 = default(Antlr3AstNode);
+		Antlr3AstNode local_variable_declaration1190 = default(Antlr3AstNode);
+		Antlr3AstNode statement_expression_list1191 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "for_initializer");
 		DebugLocation(977, 29);
@@ -49954,7 +49918,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA374_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred634_cs_fragment)))
+				if ((EvaluatePredicate(synpred633_cs_fragment)))
 				{
 					alt374 = 1;
 				}
@@ -49974,7 +49938,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA374_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred634_cs_fragment)))
+				if ((EvaluatePredicate(synpred633_cs_fragment)))
 				{
 					alt374 = 1;
 				}
@@ -49994,7 +49958,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA374_2 = input.LA(2);
 
-				if (((EvaluatePredicate(synpred634_cs_fragment)&&(_queryExpression == 0))))
+				if (((EvaluatePredicate(synpred633_cs_fragment)&&(_queryExpression == 0))))
 				{
 					alt374 = 1;
 				}
@@ -50018,7 +49982,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA374_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred634_cs_fragment)))
+				if ((EvaluatePredicate(synpred633_cs_fragment)))
 				{
 					alt374 = 1;
 				}
@@ -50038,7 +50002,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA374_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred634_cs_fragment)))
+				if ((EvaluatePredicate(synpred633_cs_fragment)))
 				{
 					alt374 = 1;
 				}
@@ -50062,7 +50026,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA374_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred634_cs_fragment)))
+				if ((EvaluatePredicate(synpred633_cs_fragment)))
 				{
 					alt374 = 1;
 				}
@@ -50082,7 +50046,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA374_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred634_cs_fragment)))
+				if ((EvaluatePredicate(synpred633_cs_fragment)))
 				{
 					alt374 = 1;
 				}
@@ -50115,11 +50079,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(978, 2);
-				PushFollow(Follow._local_variable_declaration_in_for_initializer7616);
-				local_variable_declaration1191=local_variable_declaration();
+				PushFollow(Follow._local_variable_declaration_in_for_initializer7613);
+				local_variable_declaration1190=local_variable_declaration();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_declaration1191.Tree, local_variable_declaration1191, "local_variable_declaration1191", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_declaration1190.Tree, local_variable_declaration1190, "local_variable_declaration1190", retval);
 
 				}
 				break;
@@ -50130,11 +50094,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(979, 4);
-				PushFollow(Follow._statement_expression_list_in_for_initializer7621);
-				statement_expression_list1192=statement_expression_list();
+				PushFollow(Follow._statement_expression_list_in_for_initializer7618);
+				statement_expression_list1191=statement_expression_list();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, statement_expression_list1192.Tree, statement_expression_list1192, "statement_expression_list1192", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, statement_expression_list1191.Tree, statement_expression_list1191, "statement_expression_list1191", retval);
 
 				}
 				break;
@@ -50185,7 +50149,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode boolean_expression1193 = default(Antlr3AstNode);
+		Antlr3AstNode boolean_expression1192 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "for_condition");
 		DebugLocation(980, 20);
@@ -50200,11 +50164,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(981, 2);
-			PushFollow(Follow._boolean_expression_in_for_condition7629);
-			boolean_expression1193=boolean_expression();
+			PushFollow(Follow._boolean_expression_in_for_condition7626);
+			boolean_expression1192=boolean_expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, boolean_expression1193.Tree, boolean_expression1193, "boolean_expression1193", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, boolean_expression1192.Tree, boolean_expression1192, "boolean_expression1192", retval);
 
 			}
 
@@ -50253,7 +50217,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode statement_expression_list1194 = default(Antlr3AstNode);
+		Antlr3AstNode statement_expression_list1193 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "for_iterator");
 		DebugLocation(982, 27);
@@ -50268,11 +50232,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(983, 2);
-			PushFollow(Follow._statement_expression_list_in_for_iterator7637);
-			statement_expression_list1194=statement_expression_list();
+			PushFollow(Follow._statement_expression_list_in_for_iterator7634);
+			statement_expression_list1193=statement_expression_list();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, statement_expression_list1194.Tree, statement_expression_list1194, "statement_expression_list1194", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, statement_expression_list1193.Tree, statement_expression_list1193, "statement_expression_list1193", retval);
 
 			}
 
@@ -50321,11 +50285,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal1196 = default(IToken);
-		Antlr3AstNode statement_expression1195 = default(Antlr3AstNode);
-		Antlr3AstNode statement_expression1197 = default(Antlr3AstNode);
+		IToken char_literal1195 = default(IToken);
+		Antlr3AstNode statement_expression1194 = default(Antlr3AstNode);
+		Antlr3AstNode statement_expression1196 = default(Antlr3AstNode);
 
-		object char_literal1196_tree = default(object);
+		object char_literal1195_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "statement_expression_list");
 		DebugLocation(984, 50);
 		try
@@ -50339,11 +50303,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(985, 2);
-			PushFollow(Follow._statement_expression_in_statement_expression_list7645);
-			statement_expression1195=statement_expression();
+			PushFollow(Follow._statement_expression_in_statement_expression_list7642);
+			statement_expression1194=statement_expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, statement_expression1195.Tree, statement_expression1195, "statement_expression1195", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, statement_expression1194.Tree, statement_expression1194, "statement_expression1194", retval);
 			DebugLocation(985, 23);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:985:23: ( ',' statement_expression )*
 			try { DebugEnterSubRule(375);
@@ -50367,17 +50331,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:985:24: ',' statement_expression
 					{
 					DebugLocation(985, 24);
-					char_literal1196=(IToken)Match(input,78,Follow._78_in_statement_expression_list7648); if (state.failed) return retval;
+					char_literal1195=(IToken)Match(input,78,Follow._78_in_statement_expression_list7645); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal1196_tree = (object)adaptor.Create(char_literal1196, "char_literal1196", retval);
-					adaptor.AddChild(root_0, char_literal1196_tree);
+					char_literal1195_tree = (object)adaptor.Create(char_literal1195, "char_literal1195", retval);
+					adaptor.AddChild(root_0, char_literal1195_tree);
 					}
 					DebugLocation(985, 28);
-					PushFollow(Follow._statement_expression_in_statement_expression_list7650);
-					statement_expression1197=statement_expression();
+					PushFollow(Follow._statement_expression_in_statement_expression_list7647);
+					statement_expression1196=statement_expression();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, statement_expression1197.Tree, statement_expression1197, "statement_expression1197", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, statement_expression1196.Tree, statement_expression1196, "statement_expression1196", retval);
 
 					}
 					break;
@@ -50440,19 +50404,19 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1198 = default(IToken);
-		IToken char_literal1199 = default(IToken);
-		IToken string_literal1202 = default(IToken);
-		IToken char_literal1204 = default(IToken);
-		Antlr3AstNode local_variable_type1200 = default(Antlr3AstNode);
-		Antlr3AstNode identifier1201 = default(Antlr3AstNode);
-		Antlr3AstNode expression1203 = default(Antlr3AstNode);
-		Antlr3AstNode embedded_statement1205 = default(Antlr3AstNode);
+		IToken string_literal1197 = default(IToken);
+		IToken char_literal1198 = default(IToken);
+		IToken string_literal1201 = default(IToken);
+		IToken char_literal1203 = default(IToken);
+		Antlr3AstNode local_variable_type1199 = default(Antlr3AstNode);
+		Antlr3AstNode identifier1200 = default(Antlr3AstNode);
+		Antlr3AstNode expression1202 = default(Antlr3AstNode);
+		Antlr3AstNode embedded_statement1204 = default(Antlr3AstNode);
 
-		object string_literal1198_tree = default(object);
-		object char_literal1199_tree = default(object);
-		object string_literal1202_tree = default(object);
-		object char_literal1204_tree = default(object);
+		object string_literal1197_tree = default(object);
+		object char_literal1198_tree = default(object);
+		object string_literal1201_tree = default(object);
+		object char_literal1203_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "foreach_statement");
 		DebugLocation(986, 99);
 		try
@@ -50466,53 +50430,53 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(987, 2);
-			string_literal1198=(IToken)Match(input,136,Follow._136_in_foreach_statement7660); if (state.failed) return retval;
+			string_literal1197=(IToken)Match(input,136,Follow._136_in_foreach_statement7657); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1198_tree = (object)adaptor.Create(string_literal1198, "string_literal1198", retval);
-			adaptor.AddChild(root_0, string_literal1198_tree);
+			string_literal1197_tree = (object)adaptor.Create(string_literal1197, "string_literal1197", retval);
+			adaptor.AddChild(root_0, string_literal1197_tree);
 			}
 			DebugLocation(987, 14);
-			char_literal1199=(IToken)Match(input,72,Follow._72_in_foreach_statement7664); if (state.failed) return retval;
+			char_literal1198=(IToken)Match(input,72,Follow._72_in_foreach_statement7661); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1199_tree = (object)adaptor.Create(char_literal1199, "char_literal1199", retval);
-			adaptor.AddChild(root_0, char_literal1199_tree);
+			char_literal1198_tree = (object)adaptor.Create(char_literal1198, "char_literal1198", retval);
+			adaptor.AddChild(root_0, char_literal1198_tree);
 			}
 			DebugLocation(987, 20);
-			PushFollow(Follow._local_variable_type_in_foreach_statement7668);
-			local_variable_type1200=local_variable_type();
+			PushFollow(Follow._local_variable_type_in_foreach_statement7665);
+			local_variable_type1199=local_variable_type();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_type1200.Tree, local_variable_type1200, "local_variable_type1200", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_type1199.Tree, local_variable_type1199, "local_variable_type1199", retval);
 			DebugLocation(987, 42);
-			PushFollow(Follow._identifier_in_foreach_statement7672);
-			identifier1201=identifier();
+			PushFollow(Follow._identifier_in_foreach_statement7669);
+			identifier1200=identifier();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1201.Tree, identifier1201, "identifier1201", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1200.Tree, identifier1200, "identifier1200", retval);
 			DebugLocation(987, 55);
-			string_literal1202=(IToken)Match(input,141,Follow._141_in_foreach_statement7676); if (state.failed) return retval;
+			string_literal1201=(IToken)Match(input,141,Follow._141_in_foreach_statement7673); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1202_tree = (object)adaptor.Create(string_literal1202, "string_literal1202", retval);
-			adaptor.AddChild(root_0, string_literal1202_tree);
+			string_literal1201_tree = (object)adaptor.Create(string_literal1201, "string_literal1201", retval);
+			adaptor.AddChild(root_0, string_literal1201_tree);
 			}
 			DebugLocation(987, 62);
-			PushFollow(Follow._expression_in_foreach_statement7680);
-			expression1203=expression();
+			PushFollow(Follow._expression_in_foreach_statement7677);
+			expression1202=expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, expression1203.Tree, expression1203, "expression1203", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, expression1202.Tree, expression1202, "expression1202", retval);
 			DebugLocation(987, 75);
-			char_literal1204=(IToken)Match(input,RPAREN,Follow._RPAREN_in_foreach_statement7684); if (state.failed) return retval;
+			char_literal1203=(IToken)Match(input,RPAREN,Follow._RPAREN_in_foreach_statement7681); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1204_tree = (object)adaptor.Create(char_literal1204, "char_literal1204", retval);
-			adaptor.AddChild(root_0, char_literal1204_tree);
+			char_literal1203_tree = (object)adaptor.Create(char_literal1203, "char_literal1203", retval);
+			adaptor.AddChild(root_0, char_literal1203_tree);
 			}
 			DebugLocation(987, 81);
-			PushFollow(Follow._embedded_statement_in_foreach_statement7688);
-			embedded_statement1205=embedded_statement();
+			PushFollow(Follow._embedded_statement_in_foreach_statement7685);
+			embedded_statement1204=embedded_statement();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1205.Tree, embedded_statement1205, "embedded_statement1205", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1204.Tree, embedded_statement1204, "embedded_statement1204", retval);
 
 			}
 
@@ -50561,11 +50525,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode break_statement1206 = default(Antlr3AstNode);
-		Antlr3AstNode continue_statement1207 = default(Antlr3AstNode);
-		Antlr3AstNode goto_statement1208 = default(Antlr3AstNode);
-		Antlr3AstNode return_statement1209 = default(Antlr3AstNode);
-		Antlr3AstNode throw_statement1210 = default(Antlr3AstNode);
+		Antlr3AstNode break_statement1205 = default(Antlr3AstNode);
+		Antlr3AstNode continue_statement1206 = default(Antlr3AstNode);
+		Antlr3AstNode goto_statement1207 = default(Antlr3AstNode);
+		Antlr3AstNode return_statement1208 = default(Antlr3AstNode);
+		Antlr3AstNode throw_statement1209 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "jump_statement");
 		DebugLocation(988, 19);
@@ -50622,11 +50586,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(989, 2);
-				PushFollow(Follow._break_statement_in_jump_statement7696);
-				break_statement1206=break_statement();
+				PushFollow(Follow._break_statement_in_jump_statement7693);
+				break_statement1205=break_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, break_statement1206.Tree, break_statement1206, "break_statement1206", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, break_statement1205.Tree, break_statement1205, "break_statement1205", retval);
 
 				}
 				break;
@@ -50637,11 +50601,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(990, 4);
-				PushFollow(Follow._continue_statement_in_jump_statement7701);
-				continue_statement1207=continue_statement();
+				PushFollow(Follow._continue_statement_in_jump_statement7698);
+				continue_statement1206=continue_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, continue_statement1207.Tree, continue_statement1207, "continue_statement1207", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, continue_statement1206.Tree, continue_statement1206, "continue_statement1206", retval);
 
 				}
 				break;
@@ -50652,11 +50616,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(991, 4);
-				PushFollow(Follow._goto_statement_in_jump_statement7706);
-				goto_statement1208=goto_statement();
+				PushFollow(Follow._goto_statement_in_jump_statement7703);
+				goto_statement1207=goto_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, goto_statement1208.Tree, goto_statement1208, "goto_statement1208", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, goto_statement1207.Tree, goto_statement1207, "goto_statement1207", retval);
 
 				}
 				break;
@@ -50667,11 +50631,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(992, 4);
-				PushFollow(Follow._return_statement_in_jump_statement7711);
-				return_statement1209=return_statement();
+				PushFollow(Follow._return_statement_in_jump_statement7708);
+				return_statement1208=return_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, return_statement1209.Tree, return_statement1209, "return_statement1209", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, return_statement1208.Tree, return_statement1208, "return_statement1208", retval);
 
 				}
 				break;
@@ -50682,11 +50646,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(993, 4);
-				PushFollow(Follow._throw_statement_in_jump_statement7716);
-				throw_statement1210=throw_statement();
+				PushFollow(Follow._throw_statement_in_jump_statement7713);
+				throw_statement1209=throw_statement();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, throw_statement1210.Tree, throw_statement1210, "throw_statement1210", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, throw_statement1209.Tree, throw_statement1209, "throw_statement1209", retval);
 
 				}
 				break;
@@ -50737,11 +50701,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1211 = default(IToken);
-		IToken char_literal1212 = default(IToken);
+		IToken string_literal1210 = default(IToken);
+		IToken char_literal1211 = default(IToken);
 
-		object string_literal1211_tree = default(object);
-		object char_literal1212_tree = default(object);
+		object string_literal1210_tree = default(object);
+		object char_literal1211_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "break_statement");
 		DebugLocation(994, 15);
 		try
@@ -50755,16 +50719,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(995, 2);
-			string_literal1211=(IToken)Match(input,110,Follow._110_in_break_statement7724); if (state.failed) return retval;
+			string_literal1210=(IToken)Match(input,110,Follow._110_in_break_statement7721); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1211_tree = (object)adaptor.Create(string_literal1211, "string_literal1211", retval);
-			adaptor.AddChild(root_0, string_literal1211_tree);
+			string_literal1210_tree = (object)adaptor.Create(string_literal1210, "string_literal1210", retval);
+			adaptor.AddChild(root_0, string_literal1210_tree);
 			}
 			DebugLocation(995, 12);
-			char_literal1212=(IToken)Match(input,SEMI,Follow._SEMI_in_break_statement7728); if (state.failed) return retval;
+			char_literal1211=(IToken)Match(input,SEMI,Follow._SEMI_in_break_statement7725); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1212_tree = (object)adaptor.Create(char_literal1212, "char_literal1212", retval);
-			adaptor.AddChild(root_0, char_literal1212_tree);
+			char_literal1211_tree = (object)adaptor.Create(char_literal1211, "char_literal1211", retval);
+			adaptor.AddChild(root_0, char_literal1211_tree);
 			}
 
 			}
@@ -50814,11 +50778,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1213 = default(IToken);
-		IToken char_literal1214 = default(IToken);
+		IToken string_literal1212 = default(IToken);
+		IToken char_literal1213 = default(IToken);
 
-		object string_literal1213_tree = default(object);
-		object char_literal1214_tree = default(object);
+		object string_literal1212_tree = default(object);
+		object char_literal1213_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "continue_statement");
 		DebugLocation(996, 18);
 		try
@@ -50832,16 +50796,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(997, 2);
-			string_literal1213=(IToken)Match(input,119,Follow._119_in_continue_statement7736); if (state.failed) return retval;
+			string_literal1212=(IToken)Match(input,119,Follow._119_in_continue_statement7733); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1213_tree = (object)adaptor.Create(string_literal1213, "string_literal1213", retval);
-			adaptor.AddChild(root_0, string_literal1213_tree);
+			string_literal1212_tree = (object)adaptor.Create(string_literal1212, "string_literal1212", retval);
+			adaptor.AddChild(root_0, string_literal1212_tree);
 			}
 			DebugLocation(997, 15);
-			char_literal1214=(IToken)Match(input,SEMI,Follow._SEMI_in_continue_statement7740); if (state.failed) return retval;
+			char_literal1213=(IToken)Match(input,SEMI,Follow._SEMI_in_continue_statement7737); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1214_tree = (object)adaptor.Create(char_literal1214, "char_literal1214", retval);
-			adaptor.AddChild(root_0, char_literal1214_tree);
+			char_literal1213_tree = (object)adaptor.Create(char_literal1213, "char_literal1213", retval);
+			adaptor.AddChild(root_0, char_literal1213_tree);
 			}
 
 			}
@@ -50891,25 +50855,25 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1215 = default(IToken);
-		IToken char_literal1217 = default(IToken);
+		IToken string_literal1214 = default(IToken);
+		IToken char_literal1216 = default(IToken);
+		IToken string_literal1217 = default(IToken);
 		IToken string_literal1218 = default(IToken);
-		IToken string_literal1219 = default(IToken);
-		IToken char_literal1221 = default(IToken);
+		IToken char_literal1220 = default(IToken);
+		IToken string_literal1221 = default(IToken);
 		IToken string_literal1222 = default(IToken);
-		IToken string_literal1223 = default(IToken);
-		IToken char_literal1224 = default(IToken);
-		Antlr3AstNode identifier1216 = default(Antlr3AstNode);
-		Antlr3AstNode constant_expression1220 = default(Antlr3AstNode);
+		IToken char_literal1223 = default(IToken);
+		Antlr3AstNode identifier1215 = default(Antlr3AstNode);
+		Antlr3AstNode constant_expression1219 = default(Antlr3AstNode);
 
-		object string_literal1215_tree = default(object);
-		object char_literal1217_tree = default(object);
+		object string_literal1214_tree = default(object);
+		object char_literal1216_tree = default(object);
+		object string_literal1217_tree = default(object);
 		object string_literal1218_tree = default(object);
-		object string_literal1219_tree = default(object);
-		object char_literal1221_tree = default(object);
+		object char_literal1220_tree = default(object);
+		object string_literal1221_tree = default(object);
 		object string_literal1222_tree = default(object);
-		object string_literal1223_tree = default(object);
-		object char_literal1224_tree = default(object);
+		object char_literal1223_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "goto_statement");
 		DebugLocation(998, 30);
 		try
@@ -51005,22 +50969,22 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:999:3: 'goto' identifier ';'
 				{
 				DebugLocation(999, 3);
-				string_literal1215=(IToken)Match(input,138,Follow._138_in_goto_statement7749); if (state.failed) return retval;
+				string_literal1214=(IToken)Match(input,138,Follow._138_in_goto_statement7746); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal1215_tree = (object)adaptor.Create(string_literal1215, "string_literal1215", retval);
-				adaptor.AddChild(root_0, string_literal1215_tree);
+				string_literal1214_tree = (object)adaptor.Create(string_literal1214, "string_literal1214", retval);
+				adaptor.AddChild(root_0, string_literal1214_tree);
 				}
 				DebugLocation(999, 12);
-				PushFollow(Follow._identifier_in_goto_statement7753);
-				identifier1216=identifier();
+				PushFollow(Follow._identifier_in_goto_statement7750);
+				identifier1215=identifier();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1216.Tree, identifier1216, "identifier1216", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1215.Tree, identifier1215, "identifier1215", retval);
 				DebugLocation(999, 25);
-				char_literal1217=(IToken)Match(input,SEMI,Follow._SEMI_in_goto_statement7757); if (state.failed) return retval;
+				char_literal1216=(IToken)Match(input,SEMI,Follow._SEMI_in_goto_statement7754); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal1217_tree = (object)adaptor.Create(char_literal1217, "char_literal1217", retval);
-				adaptor.AddChild(root_0, char_literal1217_tree);
+				char_literal1216_tree = (object)adaptor.Create(char_literal1216, "char_literal1216", retval);
+				adaptor.AddChild(root_0, char_literal1216_tree);
 				}
 
 				}
@@ -51040,28 +51004,28 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1000:5: 'goto' 'case' constant_expression ';'
 				{
 				DebugLocation(1000, 5);
-				string_literal1218=(IToken)Match(input,138,Follow._138_in_goto_statement7764); if (state.failed) return retval;
+				string_literal1217=(IToken)Match(input,138,Follow._138_in_goto_statement7761); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal1217_tree = (object)adaptor.Create(string_literal1217, "string_literal1217", retval);
+				adaptor.AddChild(root_0, string_literal1217_tree);
+				}
+				DebugLocation(1000, 14);
+				string_literal1218=(IToken)Match(input,113,Follow._113_in_goto_statement7765); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1218_tree = (object)adaptor.Create(string_literal1218, "string_literal1218", retval);
 				adaptor.AddChild(root_0, string_literal1218_tree);
 				}
-				DebugLocation(1000, 14);
-				string_literal1219=(IToken)Match(input,113,Follow._113_in_goto_statement7768); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal1219_tree = (object)adaptor.Create(string_literal1219, "string_literal1219", retval);
-				adaptor.AddChild(root_0, string_literal1219_tree);
-				}
 				DebugLocation(1000, 23);
-				PushFollow(Follow._constant_expression_in_goto_statement7772);
-				constant_expression1220=constant_expression();
+				PushFollow(Follow._constant_expression_in_goto_statement7769);
+				constant_expression1219=constant_expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression1220.Tree, constant_expression1220, "constant_expression1220", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression1219.Tree, constant_expression1219, "constant_expression1219", retval);
 				DebugLocation(1000, 45);
-				char_literal1221=(IToken)Match(input,SEMI,Follow._SEMI_in_goto_statement7776); if (state.failed) return retval;
+				char_literal1220=(IToken)Match(input,SEMI,Follow._SEMI_in_goto_statement7773); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal1221_tree = (object)adaptor.Create(char_literal1221, "char_literal1221", retval);
-				adaptor.AddChild(root_0, char_literal1221_tree);
+				char_literal1220_tree = (object)adaptor.Create(char_literal1220, "char_literal1220", retval);
+				adaptor.AddChild(root_0, char_literal1220_tree);
 				}
 
 				}
@@ -51081,22 +51045,22 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1001:5: 'goto' 'default' ';'
 				{
 				DebugLocation(1001, 5);
-				string_literal1222=(IToken)Match(input,138,Follow._138_in_goto_statement7783); if (state.failed) return retval;
+				string_literal1221=(IToken)Match(input,138,Follow._138_in_goto_statement7780); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal1221_tree = (object)adaptor.Create(string_literal1221, "string_literal1221", retval);
+				adaptor.AddChild(root_0, string_literal1221_tree);
+				}
+				DebugLocation(1001, 14);
+				string_literal1222=(IToken)Match(input,121,Follow._121_in_goto_statement7784); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1222_tree = (object)adaptor.Create(string_literal1222, "string_literal1222", retval);
 				adaptor.AddChild(root_0, string_literal1222_tree);
 				}
-				DebugLocation(1001, 14);
-				string_literal1223=(IToken)Match(input,121,Follow._121_in_goto_statement7787); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal1223_tree = (object)adaptor.Create(string_literal1223, "string_literal1223", retval);
-				adaptor.AddChild(root_0, string_literal1223_tree);
-				}
 				DebugLocation(1001, 26);
-				char_literal1224=(IToken)Match(input,SEMI,Follow._SEMI_in_goto_statement7791); if (state.failed) return retval;
+				char_literal1223=(IToken)Match(input,SEMI,Follow._SEMI_in_goto_statement7788); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal1224_tree = (object)adaptor.Create(char_literal1224, "char_literal1224", retval);
-				adaptor.AddChild(root_0, char_literal1224_tree);
+				char_literal1223_tree = (object)adaptor.Create(char_literal1223, "char_literal1223", retval);
+				adaptor.AddChild(root_0, char_literal1223_tree);
 				}
 
 				}
@@ -51151,12 +51115,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1225 = default(IToken);
-		IToken char_literal1227 = default(IToken);
-		Antlr3AstNode expression1226 = default(Antlr3AstNode);
+		IToken string_literal1224 = default(IToken);
+		IToken char_literal1226 = default(IToken);
+		Antlr3AstNode expression1225 = default(Antlr3AstNode);
 
-		object string_literal1225_tree = default(object);
-		object char_literal1227_tree = default(object);
+		object string_literal1224_tree = default(object);
+		object char_literal1226_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "return_statement");
 		DebugLocation(1002, 30);
 		try
@@ -51170,10 +51134,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1003, 2);
-			string_literal1225=(IToken)Match(input,172,Follow._172_in_return_statement7800); if (state.failed) return retval;
+			string_literal1224=(IToken)Match(input,172,Follow._172_in_return_statement7797); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1225_tree = (object)adaptor.Create(string_literal1225, "string_literal1225", retval);
-			adaptor.AddChild(root_0, string_literal1225_tree);
+			string_literal1224_tree = (object)adaptor.Create(string_literal1224, "string_literal1224", retval);
+			adaptor.AddChild(root_0, string_literal1224_tree);
 			}
 			DebugLocation(1003, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1003:13: ( expression )?
@@ -51194,11 +51158,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1003:13: expression
 				{
 				DebugLocation(1003, 13);
-				PushFollow(Follow._expression_in_return_statement7804);
-				expression1226=expression();
+				PushFollow(Follow._expression_in_return_statement7801);
+				expression1225=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression1226.Tree, expression1226, "expression1226", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression1225.Tree, expression1225, "expression1225", retval);
 
 				}
 				break;
@@ -51207,10 +51171,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(378); }
 
 			DebugLocation(1003, 27);
-			char_literal1227=(IToken)Match(input,SEMI,Follow._SEMI_in_return_statement7809); if (state.failed) return retval;
+			char_literal1226=(IToken)Match(input,SEMI,Follow._SEMI_in_return_statement7806); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1227_tree = (object)adaptor.Create(char_literal1227, "char_literal1227", retval);
-			adaptor.AddChild(root_0, char_literal1227_tree);
+			char_literal1226_tree = (object)adaptor.Create(char_literal1226, "char_literal1226", retval);
+			adaptor.AddChild(root_0, char_literal1226_tree);
 			}
 
 			}
@@ -51260,12 +51224,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1228 = default(IToken);
-		IToken char_literal1230 = default(IToken);
-		Antlr3AstNode expression1229 = default(Antlr3AstNode);
+		IToken string_literal1227 = default(IToken);
+		IToken char_literal1229 = default(IToken);
+		Antlr3AstNode expression1228 = default(Antlr3AstNode);
 
-		object string_literal1228_tree = default(object);
-		object char_literal1230_tree = default(object);
+		object string_literal1227_tree = default(object);
+		object char_literal1229_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "throw_statement");
 		DebugLocation(1004, 29);
 		try
@@ -51279,10 +51243,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1005, 2);
-			string_literal1228=(IToken)Match(input,184,Follow._184_in_throw_statement7817); if (state.failed) return retval;
+			string_literal1227=(IToken)Match(input,184,Follow._184_in_throw_statement7814); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1228_tree = (object)adaptor.Create(string_literal1228, "string_literal1228", retval);
-			adaptor.AddChild(root_0, string_literal1228_tree);
+			string_literal1227_tree = (object)adaptor.Create(string_literal1227, "string_literal1227", retval);
+			adaptor.AddChild(root_0, string_literal1227_tree);
 			}
 			DebugLocation(1005, 12);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1005:12: ( expression )?
@@ -51303,11 +51267,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1005:12: expression
 				{
 				DebugLocation(1005, 12);
-				PushFollow(Follow._expression_in_throw_statement7821);
-				expression1229=expression();
+				PushFollow(Follow._expression_in_throw_statement7818);
+				expression1228=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression1229.Tree, expression1229, "expression1229", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression1228.Tree, expression1228, "expression1228", retval);
 
 				}
 				break;
@@ -51316,10 +51280,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(379); }
 
 			DebugLocation(1005, 26);
-			char_literal1230=(IToken)Match(input,SEMI,Follow._SEMI_in_throw_statement7826); if (state.failed) return retval;
+			char_literal1229=(IToken)Match(input,SEMI,Follow._SEMI_in_throw_statement7823); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1230_tree = (object)adaptor.Create(char_literal1230, "char_literal1230", retval);
-			adaptor.AddChild(root_0, char_literal1230_tree);
+			char_literal1229_tree = (object)adaptor.Create(char_literal1229, "char_literal1229", retval);
+			adaptor.AddChild(root_0, char_literal1229_tree);
 			}
 
 			}
@@ -51369,16 +51333,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1231 = default(IToken);
-		IToken string_literal1235 = default(IToken);
-		Antlr3AstNode block1232 = default(Antlr3AstNode);
-		Antlr3AstNode catch_clauses1233 = default(Antlr3AstNode);
-		Antlr3AstNode finally_clause1234 = default(Antlr3AstNode);
-		Antlr3AstNode block1236 = default(Antlr3AstNode);
-		Antlr3AstNode finally_clause1237 = default(Antlr3AstNode);
+		IToken string_literal1230 = default(IToken);
+		IToken string_literal1234 = default(IToken);
+		Antlr3AstNode block1231 = default(Antlr3AstNode);
+		Antlr3AstNode catch_clauses1232 = default(Antlr3AstNode);
+		Antlr3AstNode finally_clause1233 = default(Antlr3AstNode);
+		Antlr3AstNode block1235 = default(Antlr3AstNode);
+		Antlr3AstNode finally_clause1236 = default(Antlr3AstNode);
 
-		object string_literal1231_tree = default(object);
-		object string_literal1235_tree = default(object);
+		object string_literal1230_tree = default(object);
+		object string_literal1234_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "try_statement");
 		DebugLocation(1006, 35);
 		try
@@ -51394,7 +51358,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA381_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred645_cs_fragment)))
+				if ((EvaluatePredicate(synpred644_cs_fragment)))
 				{
 					alt381 = 1;
 				}
@@ -51432,23 +51396,23 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1007:8: 'try' block catch_clauses ( finally_clause )?
 				{
 				DebugLocation(1007, 8);
-				string_literal1231=(IToken)Match(input,185,Follow._185_in_try_statement7840); if (state.failed) return retval;
+				string_literal1230=(IToken)Match(input,185,Follow._185_in_try_statement7837); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal1231_tree = (object)adaptor.Create(string_literal1231, "string_literal1231", retval);
-				adaptor.AddChild(root_0, string_literal1231_tree);
+				string_literal1230_tree = (object)adaptor.Create(string_literal1230, "string_literal1230", retval);
+				adaptor.AddChild(root_0, string_literal1230_tree);
 				}
 				DebugLocation(1007, 16);
-				PushFollow(Follow._block_in_try_statement7844);
-				block1232=block();
+				PushFollow(Follow._block_in_try_statement7841);
+				block1231=block();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block1232.Tree, block1232, "block1232", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block1231.Tree, block1231, "block1231", retval);
 				DebugLocation(1007, 24);
-				PushFollow(Follow._catch_clauses_in_try_statement7848);
-				catch_clauses1233=catch_clauses();
+				PushFollow(Follow._catch_clauses_in_try_statement7845);
+				catch_clauses1232=catch_clauses();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, catch_clauses1233.Tree, catch_clauses1233, "catch_clauses1233", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, catch_clauses1232.Tree, catch_clauses1232, "catch_clauses1232", retval);
 				DebugLocation(1007, 40);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1007:40: ( finally_clause )?
 				int alt380=2;
@@ -51468,11 +51432,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1007:40: finally_clause
 					{
 					DebugLocation(1007, 40);
-					PushFollow(Follow._finally_clause_in_try_statement7852);
-					finally_clause1234=finally_clause();
+					PushFollow(Follow._finally_clause_in_try_statement7849);
+					finally_clause1233=finally_clause();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, finally_clause1234.Tree, finally_clause1234, "finally_clause1234", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, finally_clause1233.Tree, finally_clause1233, "finally_clause1233", retval);
 
 					}
 					break;
@@ -51498,23 +51462,23 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1008:5: 'try' block finally_clause
 				{
 				DebugLocation(1008, 5);
-				string_literal1235=(IToken)Match(input,185,Follow._185_in_try_statement7860); if (state.failed) return retval;
+				string_literal1234=(IToken)Match(input,185,Follow._185_in_try_statement7857); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal1235_tree = (object)adaptor.Create(string_literal1235, "string_literal1235", retval);
-				adaptor.AddChild(root_0, string_literal1235_tree);
+				string_literal1234_tree = (object)adaptor.Create(string_literal1234, "string_literal1234", retval);
+				adaptor.AddChild(root_0, string_literal1234_tree);
 				}
 				DebugLocation(1008, 13);
-				PushFollow(Follow._block_in_try_statement7864);
-				block1236=block();
+				PushFollow(Follow._block_in_try_statement7861);
+				block1235=block();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, block1236.Tree, block1236, "block1236", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, block1235.Tree, block1235, "block1235", retval);
 				DebugLocation(1008, 21);
-				PushFollow(Follow._finally_clause_in_try_statement7868);
-				finally_clause1237=finally_clause();
+				PushFollow(Follow._finally_clause_in_try_statement7865);
+				finally_clause1236=finally_clause();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, finally_clause1237.Tree, finally_clause1237, "finally_clause1237", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, finally_clause1236.Tree, finally_clause1236, "finally_clause1236", retval);
 
 				}
 
@@ -51568,10 +51532,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode specific_catch_clauses1238 = default(Antlr3AstNode);
-		Antlr3AstNode general_catch_clause1239 = default(Antlr3AstNode);
-		Antlr3AstNode specific_catch_clauses1240 = default(Antlr3AstNode);
-		Antlr3AstNode general_catch_clause1241 = default(Antlr3AstNode);
+		Antlr3AstNode specific_catch_clauses1237 = default(Antlr3AstNode);
+		Antlr3AstNode general_catch_clause1238 = default(Antlr3AstNode);
+		Antlr3AstNode specific_catch_clauses1239 = default(Antlr3AstNode);
+		Antlr3AstNode general_catch_clause1240 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "catch_clauses");
 		DebugLocation(1009, 52);
@@ -51588,7 +51552,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA384_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred647_cs_fragment)))
+				if ((EvaluatePredicate(synpred646_cs_fragment)))
 				{
 					alt384 = 1;
 				}
@@ -51626,11 +51590,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1010:3: specific_catch_clauses ( general_catch_clause )?
 				{
 				DebugLocation(1010, 3);
-				PushFollow(Follow._specific_catch_clauses_in_catch_clauses7877);
-				specific_catch_clauses1238=specific_catch_clauses();
+				PushFollow(Follow._specific_catch_clauses_in_catch_clauses7874);
+				specific_catch_clauses1237=specific_catch_clauses();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, specific_catch_clauses1238.Tree, specific_catch_clauses1238, "specific_catch_clauses1238", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, specific_catch_clauses1237.Tree, specific_catch_clauses1237, "specific_catch_clauses1237", retval);
 				DebugLocation(1010, 28);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1010:28: ( general_catch_clause )?
 				int alt382=2;
@@ -51650,11 +51614,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1010:28: general_catch_clause
 					{
 					DebugLocation(1010, 28);
-					PushFollow(Follow._general_catch_clause_in_catch_clauses7881);
-					general_catch_clause1239=general_catch_clause();
+					PushFollow(Follow._general_catch_clause_in_catch_clauses7878);
+					general_catch_clause1238=general_catch_clause();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, general_catch_clause1239.Tree, general_catch_clause1239, "general_catch_clause1239", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, general_catch_clause1238.Tree, general_catch_clause1238, "general_catch_clause1238", retval);
 
 					}
 					break;
@@ -51703,11 +51667,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1011:5: specific_catch_clauses
 					{
 					DebugLocation(1011, 5);
-					PushFollow(Follow._specific_catch_clauses_in_catch_clauses7889);
-					specific_catch_clauses1240=specific_catch_clauses();
+					PushFollow(Follow._specific_catch_clauses_in_catch_clauses7886);
+					specific_catch_clauses1239=specific_catch_clauses();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, specific_catch_clauses1240.Tree, specific_catch_clauses1240, "specific_catch_clauses1240", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, specific_catch_clauses1239.Tree, specific_catch_clauses1239, "specific_catch_clauses1239", retval);
 
 					}
 					break;
@@ -51716,11 +51680,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				} finally { DebugExitSubRule(383); }
 
 				DebugLocation(1011, 31);
-				PushFollow(Follow._general_catch_clause_in_catch_clauses7894);
-				general_catch_clause1241=general_catch_clause();
+				PushFollow(Follow._general_catch_clause_in_catch_clauses7891);
+				general_catch_clause1240=general_catch_clause();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, general_catch_clause1241.Tree, general_catch_clause1241, "general_catch_clause1241", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, general_catch_clause1240.Tree, general_catch_clause1240, "general_catch_clause1240", retval);
 
 				}
 
@@ -51774,7 +51738,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode specific_catch_clause1242 = default(Antlr3AstNode);
+		Antlr3AstNode specific_catch_clause1241 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "specific_catch_clauses");
 		DebugLocation(1012, 24);
@@ -51819,11 +51783,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1013:2: specific_catch_clause
 					{
 					DebugLocation(1013, 2);
-					PushFollow(Follow._specific_catch_clause_in_specific_catch_clauses7903);
-					specific_catch_clause1242=specific_catch_clause();
+					PushFollow(Follow._specific_catch_clause_in_specific_catch_clauses7900);
+					specific_catch_clause1241=specific_catch_clause();
 					PopFollow();
 					if (state.failed) return retval;
-					if (state.backtracking == 0) adaptor.AddChild(root_0, specific_catch_clause1242.Tree, specific_catch_clause1242, "specific_catch_clause1242", retval);
+					if (state.backtracking == 0) adaptor.AddChild(root_0, specific_catch_clause1241.Tree, specific_catch_clause1241, "specific_catch_clause1241", retval);
 
 					}
 					break;
@@ -51892,16 +51856,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1243 = default(IToken);
-		IToken char_literal1244 = default(IToken);
-		IToken char_literal1247 = default(IToken);
-		Antlr3AstNode class_type1245 = default(Antlr3AstNode);
-		Antlr3AstNode identifier1246 = default(Antlr3AstNode);
-		Antlr3AstNode block1248 = default(Antlr3AstNode);
+		IToken string_literal1242 = default(IToken);
+		IToken char_literal1243 = default(IToken);
+		IToken char_literal1246 = default(IToken);
+		Antlr3AstNode class_type1244 = default(Antlr3AstNode);
+		Antlr3AstNode identifier1245 = default(Antlr3AstNode);
+		Antlr3AstNode block1247 = default(Antlr3AstNode);
 
-		object string_literal1243_tree = default(object);
-		object char_literal1244_tree = default(object);
-		object char_literal1247_tree = default(object);
+		object string_literal1242_tree = default(object);
+		object char_literal1243_tree = default(object);
+		object char_literal1246_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "specific_catch_clause");
 		DebugLocation(1014, 56);
 		try
@@ -51915,23 +51879,23 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1015, 2);
-			string_literal1243=(IToken)Match(input,114,Follow._114_in_specific_catch_clause7912); if (state.failed) return retval;
+			string_literal1242=(IToken)Match(input,114,Follow._114_in_specific_catch_clause7909); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1243_tree = (object)adaptor.Create(string_literal1243, "string_literal1243", retval);
-			adaptor.AddChild(root_0, string_literal1243_tree);
+			string_literal1242_tree = (object)adaptor.Create(string_literal1242, "string_literal1242", retval);
+			adaptor.AddChild(root_0, string_literal1242_tree);
 			}
 			DebugLocation(1015, 12);
-			char_literal1244=(IToken)Match(input,72,Follow._72_in_specific_catch_clause7916); if (state.failed) return retval;
+			char_literal1243=(IToken)Match(input,72,Follow._72_in_specific_catch_clause7913); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1244_tree = (object)adaptor.Create(char_literal1244, "char_literal1244", retval);
-			adaptor.AddChild(root_0, char_literal1244_tree);
+			char_literal1243_tree = (object)adaptor.Create(char_literal1243, "char_literal1243", retval);
+			adaptor.AddChild(root_0, char_literal1243_tree);
 			}
 			DebugLocation(1015, 18);
-			PushFollow(Follow._class_type_in_specific_catch_clause7920);
-			class_type1245=class_type();
+			PushFollow(Follow._class_type_in_specific_catch_clause7917);
+			class_type1244=class_type();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, class_type1245.Tree, class_type1245, "class_type1245", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, class_type1244.Tree, class_type1244, "class_type1244", retval);
 			DebugLocation(1015, 31);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1015:31: ( identifier )?
 			int alt386=2;
@@ -51951,11 +51915,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1015:31: identifier
 				{
 				DebugLocation(1015, 31);
-				PushFollow(Follow._identifier_in_specific_catch_clause7924);
-				identifier1246=identifier();
+				PushFollow(Follow._identifier_in_specific_catch_clause7921);
+				identifier1245=identifier();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1246.Tree, identifier1246, "identifier1246", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1245.Tree, identifier1245, "identifier1245", retval);
 
 				}
 				break;
@@ -51964,17 +51928,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(386); }
 
 			DebugLocation(1015, 45);
-			char_literal1247=(IToken)Match(input,RPAREN,Follow._RPAREN_in_specific_catch_clause7929); if (state.failed) return retval;
+			char_literal1246=(IToken)Match(input,RPAREN,Follow._RPAREN_in_specific_catch_clause7926); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1247_tree = (object)adaptor.Create(char_literal1247, "char_literal1247", retval);
-			adaptor.AddChild(root_0, char_literal1247_tree);
+			char_literal1246_tree = (object)adaptor.Create(char_literal1246, "char_literal1246", retval);
+			adaptor.AddChild(root_0, char_literal1246_tree);
 			}
 			DebugLocation(1015, 51);
-			PushFollow(Follow._block_in_specific_catch_clause7933);
-			block1248=block();
+			PushFollow(Follow._block_in_specific_catch_clause7930);
+			block1247=block();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, block1248.Tree, block1248, "block1248", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, block1247.Tree, block1247, "block1247", retval);
 
 			}
 
@@ -52023,10 +51987,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1249 = default(IToken);
-		Antlr3AstNode block1250 = default(Antlr3AstNode);
+		IToken string_literal1248 = default(IToken);
+		Antlr3AstNode block1249 = default(Antlr3AstNode);
 
-		object string_literal1249_tree = default(object);
+		object string_literal1248_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "general_catch_clause");
 		DebugLocation(1016, 17);
 		try
@@ -52040,17 +52004,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1017, 2);
-			string_literal1249=(IToken)Match(input,114,Follow._114_in_general_catch_clause7941); if (state.failed) return retval;
+			string_literal1248=(IToken)Match(input,114,Follow._114_in_general_catch_clause7938); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1249_tree = (object)adaptor.Create(string_literal1249, "string_literal1249", retval);
-			adaptor.AddChild(root_0, string_literal1249_tree);
+			string_literal1248_tree = (object)adaptor.Create(string_literal1248, "string_literal1248", retval);
+			adaptor.AddChild(root_0, string_literal1248_tree);
 			}
 			DebugLocation(1017, 12);
-			PushFollow(Follow._block_in_general_catch_clause7945);
-			block1250=block();
+			PushFollow(Follow._block_in_general_catch_clause7942);
+			block1249=block();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, block1250.Tree, block1250, "block1250", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, block1249.Tree, block1249, "block1249", retval);
 
 			}
 
@@ -52099,10 +52063,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1251 = default(IToken);
-		Antlr3AstNode block1252 = default(Antlr3AstNode);
+		IToken string_literal1250 = default(IToken);
+		Antlr3AstNode block1251 = default(Antlr3AstNode);
 
-		object string_literal1251_tree = default(object);
+		object string_literal1250_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "finally_clause");
 		DebugLocation(1018, 19);
 		try
@@ -52116,17 +52080,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1019, 2);
-			string_literal1251=(IToken)Match(input,132,Follow._132_in_finally_clause7953); if (state.failed) return retval;
+			string_literal1250=(IToken)Match(input,132,Follow._132_in_finally_clause7950); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1251_tree = (object)adaptor.Create(string_literal1251, "string_literal1251", retval);
-			adaptor.AddChild(root_0, string_literal1251_tree);
+			string_literal1250_tree = (object)adaptor.Create(string_literal1250, "string_literal1250", retval);
+			adaptor.AddChild(root_0, string_literal1250_tree);
 			}
 			DebugLocation(1019, 14);
-			PushFollow(Follow._block_in_finally_clause7957);
-			block1252=block();
+			PushFollow(Follow._block_in_finally_clause7954);
+			block1251=block();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, block1252.Tree, block1252, "block1252", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, block1251.Tree, block1251, "block1251", retval);
 
 			}
 
@@ -52175,10 +52139,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1253 = default(IToken);
-		Antlr3AstNode block1254 = default(Antlr3AstNode);
+		IToken string_literal1252 = default(IToken);
+		Antlr3AstNode block1253 = default(Antlr3AstNode);
 
-		object string_literal1253_tree = default(object);
+		object string_literal1252_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "checked_statement");
 		DebugLocation(1020, 19);
 		try
@@ -52192,17 +52156,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1021, 2);
-			string_literal1253=(IToken)Match(input,116,Follow._116_in_checked_statement7965); if (state.failed) return retval;
+			string_literal1252=(IToken)Match(input,116,Follow._116_in_checked_statement7962); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1253_tree = (object)adaptor.Create(string_literal1253, "string_literal1253", retval);
-			adaptor.AddChild(root_0, string_literal1253_tree);
+			string_literal1252_tree = (object)adaptor.Create(string_literal1252, "string_literal1252", retval);
+			adaptor.AddChild(root_0, string_literal1252_tree);
 			}
 			DebugLocation(1021, 14);
-			PushFollow(Follow._block_in_checked_statement7969);
-			block1254=block();
+			PushFollow(Follow._block_in_checked_statement7966);
+			block1253=block();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, block1254.Tree, block1254, "block1254", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, block1253.Tree, block1253, "block1253", retval);
 
 			}
 
@@ -52251,10 +52215,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1255 = default(IToken);
-		Antlr3AstNode block1256 = default(Antlr3AstNode);
+		IToken string_literal1254 = default(IToken);
+		Antlr3AstNode block1255 = default(Antlr3AstNode);
 
-		object string_literal1255_tree = default(object);
+		object string_literal1254_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "unchecked_statement");
 		DebugLocation(1022, 21);
 		try
@@ -52268,17 +52232,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1023, 2);
-			string_literal1255=(IToken)Match(input,190,Follow._190_in_unchecked_statement7977); if (state.failed) return retval;
+			string_literal1254=(IToken)Match(input,190,Follow._190_in_unchecked_statement7974); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1255_tree = (object)adaptor.Create(string_literal1255, "string_literal1255", retval);
-			adaptor.AddChild(root_0, string_literal1255_tree);
+			string_literal1254_tree = (object)adaptor.Create(string_literal1254, "string_literal1254", retval);
+			adaptor.AddChild(root_0, string_literal1254_tree);
 			}
 			DebugLocation(1023, 16);
-			PushFollow(Follow._block_in_unchecked_statement7981);
-			block1256=block();
+			PushFollow(Follow._block_in_unchecked_statement7978);
+			block1255=block();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, block1256.Tree, block1256, "block1256", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, block1255.Tree, block1255, "block1255", retval);
 
 			}
 
@@ -52327,15 +52291,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1257 = default(IToken);
-		IToken char_literal1258 = default(IToken);
-		IToken char_literal1260 = default(IToken);
-		Antlr3AstNode expression1259 = default(Antlr3AstNode);
-		Antlr3AstNode embedded_statement1261 = default(Antlr3AstNode);
+		IToken string_literal1256 = default(IToken);
+		IToken char_literal1257 = default(IToken);
+		IToken char_literal1259 = default(IToken);
+		Antlr3AstNode expression1258 = default(Antlr3AstNode);
+		Antlr3AstNode embedded_statement1260 = default(Antlr3AstNode);
 
-		object string_literal1257_tree = default(object);
-		object char_literal1258_tree = default(object);
-		object char_literal1260_tree = default(object);
+		object string_literal1256_tree = default(object);
+		object char_literal1257_tree = default(object);
+		object char_literal1259_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "lock_statement");
 		DebugLocation(1024, 53);
 		try
@@ -52349,35 +52313,35 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1025, 2);
-			string_literal1257=(IToken)Match(input,149,Follow._149_in_lock_statement7989); if (state.failed) return retval;
+			string_literal1256=(IToken)Match(input,149,Follow._149_in_lock_statement7986); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1257_tree = (object)adaptor.Create(string_literal1257, "string_literal1257", retval);
-			adaptor.AddChild(root_0, string_literal1257_tree);
+			string_literal1256_tree = (object)adaptor.Create(string_literal1256, "string_literal1256", retval);
+			adaptor.AddChild(root_0, string_literal1256_tree);
 			}
 			DebugLocation(1025, 11);
-			char_literal1258=(IToken)Match(input,72,Follow._72_in_lock_statement7993); if (state.failed) return retval;
+			char_literal1257=(IToken)Match(input,72,Follow._72_in_lock_statement7990); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1258_tree = (object)adaptor.Create(char_literal1258, "char_literal1258", retval);
-			adaptor.AddChild(root_0, char_literal1258_tree);
+			char_literal1257_tree = (object)adaptor.Create(char_literal1257, "char_literal1257", retval);
+			adaptor.AddChild(root_0, char_literal1257_tree);
 			}
 			DebugLocation(1025, 16);
-			PushFollow(Follow._expression_in_lock_statement7996);
-			expression1259=expression();
+			PushFollow(Follow._expression_in_lock_statement7993);
+			expression1258=expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, expression1259.Tree, expression1259, "expression1259", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, expression1258.Tree, expression1258, "expression1258", retval);
 			DebugLocation(1025, 29);
-			char_literal1260=(IToken)Match(input,RPAREN,Follow._RPAREN_in_lock_statement8000); if (state.failed) return retval;
+			char_literal1259=(IToken)Match(input,RPAREN,Follow._RPAREN_in_lock_statement7997); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1260_tree = (object)adaptor.Create(char_literal1260, "char_literal1260", retval);
-			adaptor.AddChild(root_0, char_literal1260_tree);
+			char_literal1259_tree = (object)adaptor.Create(char_literal1259, "char_literal1259", retval);
+			adaptor.AddChild(root_0, char_literal1259_tree);
 			}
 			DebugLocation(1025, 35);
-			PushFollow(Follow._embedded_statement_in_lock_statement8004);
-			embedded_statement1261=embedded_statement();
+			PushFollow(Follow._embedded_statement_in_lock_statement8001);
+			embedded_statement1260=embedded_statement();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1261.Tree, embedded_statement1261, "embedded_statement1261", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1260.Tree, embedded_statement1260, "embedded_statement1260", retval);
 
 			}
 
@@ -52426,15 +52390,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal1262 = default(IToken);
-		IToken char_literal1263 = default(IToken);
-		IToken char_literal1265 = default(IToken);
-		Antlr3AstNode resource_acquisition1264 = default(Antlr3AstNode);
-		Antlr3AstNode embedded_statement1266 = default(Antlr3AstNode);
+		IToken string_literal1261 = default(IToken);
+		IToken char_literal1262 = default(IToken);
+		IToken char_literal1264 = default(IToken);
+		Antlr3AstNode resource_acquisition1263 = default(Antlr3AstNode);
+		Antlr3AstNode embedded_statement1265 = default(Antlr3AstNode);
 
-		object string_literal1262_tree = default(object);
-		object char_literal1263_tree = default(object);
-		object char_literal1265_tree = default(object);
+		object string_literal1261_tree = default(object);
+		object char_literal1262_tree = default(object);
+		object char_literal1264_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "using_statement");
 		DebugLocation(1026, 67);
 		try
@@ -52448,35 +52412,35 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1027, 2);
-			string_literal1262=(IToken)Match(input,USING,Follow._USING_in_using_statement8012); if (state.failed) return retval;
+			string_literal1261=(IToken)Match(input,USING,Follow._USING_in_using_statement8009); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal1262_tree = (object)adaptor.Create(string_literal1262, "string_literal1262", retval);
-			adaptor.AddChild(root_0, string_literal1262_tree);
+			string_literal1261_tree = (object)adaptor.Create(string_literal1261, "string_literal1261", retval);
+			adaptor.AddChild(root_0, string_literal1261_tree);
 			}
 			DebugLocation(1027, 12);
-			char_literal1263=(IToken)Match(input,72,Follow._72_in_using_statement8016); if (state.failed) return retval;
+			char_literal1262=(IToken)Match(input,72,Follow._72_in_using_statement8013); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1263_tree = (object)adaptor.Create(char_literal1263, "char_literal1263", retval);
-			adaptor.AddChild(root_0, char_literal1263_tree);
+			char_literal1262_tree = (object)adaptor.Create(char_literal1262, "char_literal1262", retval);
+			adaptor.AddChild(root_0, char_literal1262_tree);
 			}
 			DebugLocation(1027, 19);
-			PushFollow(Follow._resource_acquisition_in_using_statement8021);
-			resource_acquisition1264=resource_acquisition();
+			PushFollow(Follow._resource_acquisition_in_using_statement8018);
+			resource_acquisition1263=resource_acquisition();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, resource_acquisition1264.Tree, resource_acquisition1264, "resource_acquisition1264", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, resource_acquisition1263.Tree, resource_acquisition1263, "resource_acquisition1263", retval);
 			DebugLocation(1027, 42);
-			char_literal1265=(IToken)Match(input,RPAREN,Follow._RPAREN_in_using_statement8025); if (state.failed) return retval;
+			char_literal1264=(IToken)Match(input,RPAREN,Follow._RPAREN_in_using_statement8022); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal1265_tree = (object)adaptor.Create(char_literal1265, "char_literal1265", retval);
-			adaptor.AddChild(root_0, char_literal1265_tree);
+			char_literal1264_tree = (object)adaptor.Create(char_literal1264, "char_literal1264", retval);
+			adaptor.AddChild(root_0, char_literal1264_tree);
 			}
 			DebugLocation(1027, 49);
-			PushFollow(Follow._embedded_statement_in_using_statement8030);
-			embedded_statement1266=embedded_statement();
+			PushFollow(Follow._embedded_statement_in_using_statement8027);
+			embedded_statement1265=embedded_statement();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1266.Tree, embedded_statement1266, "embedded_statement1266", retval);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1265.Tree, embedded_statement1265, "embedded_statement1265", retval);
 
 			}
 
@@ -52525,8 +52489,8 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3AstNode local_variable_declaration1267 = default(Antlr3AstNode);
-		Antlr3AstNode expression1268 = default(Antlr3AstNode);
+		Antlr3AstNode local_variable_declaration1266 = default(Antlr3AstNode);
+		Antlr3AstNode expression1267 = default(Antlr3AstNode);
 
 		try { DebugEnterRule(GrammarFileName, "resource_acquisition");
 		DebugLocation(1028, 14);
@@ -52543,7 +52507,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA387_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred651_cs_fragment)))
+				if ((EvaluatePredicate(synpred650_cs_fragment)))
 				{
 					alt387 = 1;
 				}
@@ -52563,7 +52527,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA387_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred651_cs_fragment)))
+				if ((EvaluatePredicate(synpred650_cs_fragment)))
 				{
 					alt387 = 1;
 				}
@@ -52583,7 +52547,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA387_2 = input.LA(2);
 
-				if (((EvaluatePredicate(synpred651_cs_fragment)&&(_queryExpression == 0))))
+				if (((EvaluatePredicate(synpred650_cs_fragment)&&(_queryExpression == 0))))
 				{
 					alt387 = 1;
 				}
@@ -52607,7 +52571,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA387_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred651_cs_fragment)))
+				if ((EvaluatePredicate(synpred650_cs_fragment)))
 				{
 					alt387 = 1;
 				}
@@ -52627,7 +52591,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA387_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred651_cs_fragment)))
+				if ((EvaluatePredicate(synpred650_cs_fragment)))
 				{
 					alt387 = 1;
 				}
@@ -52647,7 +52611,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA387_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred651_cs_fragment)))
+				if ((EvaluatePredicate(synpred650_cs_fragment)))
 				{
 					alt387 = 1;
 				}
@@ -52671,7 +52635,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA387_2 = input.LA(2);
 
-				if (((EvaluatePredicate(synpred651_cs_fragment)&&(_queryExpression == 0))))
+				if (((EvaluatePredicate(synpred650_cs_fragment)&&(_queryExpression == 0))))
 				{
 					alt387 = 1;
 				}
@@ -52691,7 +52655,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA387_2 = input.LA(2);
 
-				if ((EvaluatePredicate(synpred651_cs_fragment)))
+				if ((EvaluatePredicate(synpred650_cs_fragment)))
 				{
 					alt387 = 1;
 				}
@@ -52724,11 +52688,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(1029, 2);
-				PushFollow(Follow._local_variable_declaration_in_resource_acquisition8038);
-				local_variable_declaration1267=local_variable_declaration();
+				PushFollow(Follow._local_variable_declaration_in_resource_acquisition8035);
+				local_variable_declaration1266=local_variable_declaration();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_declaration1267.Tree, local_variable_declaration1267, "local_variable_declaration1267", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, local_variable_declaration1266.Tree, local_variable_declaration1266, "local_variable_declaration1266", retval);
 
 				}
 				break;
@@ -52739,11 +52703,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(1030, 4);
-				PushFollow(Follow._expression_in_resource_acquisition8043);
-				expression1268=expression();
+				PushFollow(Follow._expression_in_resource_acquisition8040);
+				expression1267=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression1268.Tree, expression1268, "expression1268", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression1267.Tree, expression1267, "expression1267", retval);
 
 				}
 				break;
@@ -52794,20 +52758,20 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
+		IToken string_literal1268 = default(IToken);
 		IToken string_literal1269 = default(IToken);
-		IToken string_literal1270 = default(IToken);
-		IToken char_literal1272 = default(IToken);
+		IToken char_literal1271 = default(IToken);
+		IToken string_literal1272 = default(IToken);
 		IToken string_literal1273 = default(IToken);
-		IToken string_literal1274 = default(IToken);
-		IToken char_literal1275 = default(IToken);
-		Antlr3AstNode expression1271 = default(Antlr3AstNode);
+		IToken char_literal1274 = default(IToken);
+		Antlr3AstNode expression1270 = default(Antlr3AstNode);
 
+		object string_literal1268_tree = default(object);
 		object string_literal1269_tree = default(object);
-		object string_literal1270_tree = default(object);
-		object char_literal1272_tree = default(object);
+		object char_literal1271_tree = default(object);
+		object string_literal1272_tree = default(object);
 		object string_literal1273_tree = default(object);
-		object string_literal1274_tree = default(object);
-		object char_literal1275_tree = default(object);
+		object char_literal1274_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "yield_statement");
 		DebugLocation(1031, 29);
 		try
@@ -52861,28 +52825,28 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1032:3: 'yield' 'return' expression ';'
 				{
 				DebugLocation(1032, 3);
-				string_literal1269=(IToken)Match(input,199,Follow._199_in_yield_statement8052); if (state.failed) return retval;
+				string_literal1268=(IToken)Match(input,199,Follow._199_in_yield_statement8049); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal1268_tree = (object)adaptor.Create(string_literal1268, "string_literal1268", retval);
+				adaptor.AddChild(root_0, string_literal1268_tree);
+				}
+				DebugLocation(1032, 13);
+				string_literal1269=(IToken)Match(input,172,Follow._172_in_yield_statement8053); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1269_tree = (object)adaptor.Create(string_literal1269, "string_literal1269", retval);
 				adaptor.AddChild(root_0, string_literal1269_tree);
 				}
-				DebugLocation(1032, 13);
-				string_literal1270=(IToken)Match(input,172,Follow._172_in_yield_statement8056); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal1270_tree = (object)adaptor.Create(string_literal1270, "string_literal1270", retval);
-				adaptor.AddChild(root_0, string_literal1270_tree);
-				}
 				DebugLocation(1032, 24);
-				PushFollow(Follow._expression_in_yield_statement8060);
-				expression1271=expression();
+				PushFollow(Follow._expression_in_yield_statement8057);
+				expression1270=expression();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, expression1271.Tree, expression1271, "expression1271", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, expression1270.Tree, expression1270, "expression1270", retval);
 				DebugLocation(1032, 37);
-				char_literal1272=(IToken)Match(input,SEMI,Follow._SEMI_in_yield_statement8064); if (state.failed) return retval;
+				char_literal1271=(IToken)Match(input,SEMI,Follow._SEMI_in_yield_statement8061); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal1272_tree = (object)adaptor.Create(char_literal1272, "char_literal1272", retval);
-				adaptor.AddChild(root_0, char_literal1272_tree);
+				char_literal1271_tree = (object)adaptor.Create(char_literal1271, "char_literal1271", retval);
+				adaptor.AddChild(root_0, char_literal1271_tree);
 				}
 
 				}
@@ -52902,22 +52866,22 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1033:5: 'yield' 'break' ';'
 				{
 				DebugLocation(1033, 5);
-				string_literal1273=(IToken)Match(input,199,Follow._199_in_yield_statement8071); if (state.failed) return retval;
+				string_literal1272=(IToken)Match(input,199,Follow._199_in_yield_statement8068); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				string_literal1272_tree = (object)adaptor.Create(string_literal1272, "string_literal1272", retval);
+				adaptor.AddChild(root_0, string_literal1272_tree);
+				}
+				DebugLocation(1033, 15);
+				string_literal1273=(IToken)Match(input,110,Follow._110_in_yield_statement8072); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1273_tree = (object)adaptor.Create(string_literal1273, "string_literal1273", retval);
 				adaptor.AddChild(root_0, string_literal1273_tree);
 				}
-				DebugLocation(1033, 15);
-				string_literal1274=(IToken)Match(input,110,Follow._110_in_yield_statement8075); if (state.failed) return retval;
-				if (state.backtracking == 0) {
-				string_literal1274_tree = (object)adaptor.Create(string_literal1274, "string_literal1274", retval);
-				adaptor.AddChild(root_0, string_literal1274_tree);
-				}
 				DebugLocation(1033, 25);
-				char_literal1275=(IToken)Match(input,SEMI,Follow._SEMI_in_yield_statement8079); if (state.failed) return retval;
+				char_literal1274=(IToken)Match(input,SEMI,Follow._SEMI_in_yield_statement8076); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				char_literal1275_tree = (object)adaptor.Create(char_literal1275, "char_literal1275", retval);
-				adaptor.AddChild(root_0, char_literal1275_tree);
+				char_literal1274_tree = (object)adaptor.Create(char_literal1274, "char_literal1274", retval);
+				adaptor.AddChild(root_0, char_literal1274_tree);
 				}
 
 				}
@@ -52972,9 +52936,9 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken set1276 = default(IToken);
+		IToken set1275 = default(IToken);
 
-		object set1276_tree = default(object);
+		object set1275_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "literal");
 		DebugLocation(1035, 1);
 		try
@@ -52989,11 +52953,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 			DebugLocation(1035, 8);
 
-			set1276=(IToken)input.LT(1);
+			set1275=(IToken)input.LT(1);
 			if (input.LA(1)==Character_literal||input.LA(1)==FALSE||input.LA(1)==Hex_number||(input.LA(1)>=NULL && input.LA(1)<=NUMBER)||input.LA(1)==Real_literal||input.LA(1)==STRINGLITERAL||input.LA(1)==TRUE||input.LA(1)==Verbatim_string_literal)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set1276, "set1276", retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set1275, "set1275", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -53052,9 +53016,9 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken set1277 = default(IToken);
+		IToken set1276 = default(IToken);
 
-		object set1277_tree = default(object);
+		object set1276_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "predefined_type");
 		DebugLocation(1051, 56);
 		try
@@ -53069,11 +53033,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 			DebugLocation(1051, 16);
 
-			set1277=(IToken)input.LT(1);
+			set1276=(IToken)input.LT(1);
 			if (input.LA(1)==109||input.LA(1)==112||input.LA(1)==115||input.LA(1)==120||input.LA(1)==125||input.LA(1)==134||input.LA(1)==142||input.LA(1)==150||input.LA(1)==155||input.LA(1)==173||input.LA(1)==176||input.LA(1)==180||(input.LA(1)>=188 && input.LA(1)<=189)||input.LA(1)==192)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set1277, "set1277", retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set1276, "set1276", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -53132,11 +53096,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
+		IToken set1277 = default(IToken);
 		IToken set1278 = default(IToken);
-		IToken set1279 = default(IToken);
 
+		object set1277_tree = default(object);
 		object set1278_tree = default(object);
-		object set1279_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "identifier");
 		DebugLocation(1055, 1);
 		try
@@ -53152,7 +53116,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA389_2 = input.LA(2);
 
-				if (((EvaluatePredicate(synpred708_cs_fragment)&&(_queryExpression == 0))))
+				if (((EvaluatePredicate(synpred707_cs_fragment)&&(_queryExpression == 0))))
 				{
 					alt389 = 1;
 				}
@@ -53196,11 +53160,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				DebugLocation(1057, 4);
 
-				set1278=(IToken)input.LT(1);
+				set1277=(IToken)input.LT(1);
 				if (input.LA(1)==GET||input.LA(1)==IDENTIFIER||input.LA(1)==SET||input.LA(1)==99||(input.LA(1)>=101 && input.LA(1)<=102)||(input.LA(1)>=104 && input.LA(1)<=107)||input.LA(1)==111||input.LA(1)==123||(input.LA(1)>=126 && input.LA(1)<=127)||input.LA(1)==131||input.LA(1)==137||input.LA(1)==139||input.LA(1)==145||(input.LA(1)>=147 && input.LA(1)<=148)||(input.LA(1)>=151 && input.LA(1)<=152)||input.LA(1)==156||input.LA(1)==158||input.LA(1)==161||(input.LA(1)>=163 && input.LA(1)<=164)||input.LA(1)==166||input.LA(1)==171||input.LA(1)==175||input.LA(1)==186||input.LA(1)==193||input.LA(1)==197||input.LA(1)==199)
 				{
 					input.Consume();
-					if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set1278, "set1278", retval));
+					if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set1277, "set1277", retval));
 					state.errorRecovery=false;state.failed=false;
 				}
 				else
@@ -53222,11 +53186,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 				DebugLocation(1060, 4);
 
-				set1279=(IToken)input.LT(1);
+				set1278=(IToken)input.LT(1);
 				if (input.LA(1)==GET||input.LA(1)==IDENTIFIER||input.LA(1)==SET||input.LA(1)==99||(input.LA(1)>=101 && input.LA(1)<=102)||(input.LA(1)>=105 && input.LA(1)<=107)||input.LA(1)==126||input.LA(1)==131||(input.LA(1)>=151 && input.LA(1)<=152)||input.LA(1)==161||(input.LA(1)>=163 && input.LA(1)<=164)||input.LA(1)==166||input.LA(1)==171||input.LA(1)==186||input.LA(1)==193||input.LA(1)==199)
 				{
 					input.Consume();
-					if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set1279, "set1279", retval));
+					if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set1278, "set1278", retval));
 					state.errorRecovery=false;state.failed=false;
 				}
 				else
@@ -59261,39 +59225,6 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	}
 	// $ANTLR end synpred591_cs
 
-	partial void EnterRule_synpred592_cs_fragment();
-	partial void LeaveRule_synpred592_cs_fragment();
-
-	// $ANTLR start synpred592_cs
-	private void synpred592_cs_fragment()
-	{
-		EnterRule_synpred592_cs_fragment();
-		EnterRule("synpred592_cs_fragment", 939);
-		var retval = new Antlr3AstNode("synpred592_cs_fragment");
-		try
-		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:876:2: ( block )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:876:2: block
-			{
-			DebugLocation(876, 2);
-			PushFollow(Follow._block_in_synpred592_cs6906);
-			block();
-			PopFollow();
-			if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred592_cs_fragment", 939);
-			LeaveRule("synpred592_cs_fragment", 939);
-			LeaveRule_synpred592_cs_fragment();
-		}
-	}
-	// $ANTLR end synpred592_cs
-
 	partial void EnterRule_synpred593_cs_fragment();
 	partial void LeaveRule_synpred593_cs_fragment();
 
@@ -59305,13 +59236,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		var retval = new Antlr3AstNode("synpred593_cs_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:877:4: ( empty_statement )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:878:4: ( expression_statement )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:877:4: empty_statement
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:878:4: expression_statement
 			{
-			DebugLocation(877, 4);
-			PushFollow(Follow._empty_statement_in_synpred593_cs6911);
-			empty_statement();
+			DebugLocation(878, 4);
+			PushFollow(Follow._expression_statement_in_synpred593_cs6913);
+			expression_statement();
 			PopFollow();
 			if (state.failed) return;
 
@@ -59327,48 +59258,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	}
 	// $ANTLR end synpred593_cs
 
-	partial void EnterRule_synpred594_cs_fragment();
-	partial void LeaveRule_synpred594_cs_fragment();
+	partial void EnterRule_synpred605_cs_fragment();
+	partial void LeaveRule_synpred605_cs_fragment();
 
-	// $ANTLR start synpred594_cs
-	private void synpred594_cs_fragment()
+	// $ANTLR start synpred605_cs
+	private void synpred605_cs_fragment()
 	{
-		EnterRule_synpred594_cs_fragment();
-		EnterRule("synpred594_cs_fragment", 941);
-		var retval = new Antlr3AstNode("synpred594_cs_fragment");
-		try
-		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:878:4: ( expression_statement )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:878:4: expression_statement
-			{
-			DebugLocation(878, 4);
-			PushFollow(Follow._expression_statement_in_synpred594_cs6916);
-			expression_statement();
-			PopFollow();
-			if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred594_cs_fragment", 941);
-			LeaveRule("synpred594_cs_fragment", 941);
-			LeaveRule_synpred594_cs_fragment();
-		}
-	}
-	// $ANTLR end synpred594_cs
-
-	partial void EnterRule_synpred606_cs_fragment();
-	partial void LeaveRule_synpred606_cs_fragment();
-
-	// $ANTLR start synpred606_cs
-	private void synpred606_cs_fragment()
-	{
-		EnterRule_synpred606_cs_fragment();
-		EnterRule("synpred606_cs_fragment", 953);
-		var retval = new Antlr3AstNode("synpred606_cs_fragment");
+		EnterRule_synpred605_cs_fragment();
+		EnterRule("synpred605_cs_fragment", 952);
+		var retval = new Antlr3AstNode("synpred605_cs_fragment");
 		try
 		{
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:897:2: ( '&' variable_reference )
@@ -59376,9 +59274,9 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:897:2: '&' variable_reference
 			{
 			DebugLocation(897, 2);
-			Match(input,70,Follow._70_in_synpred606_cs7041); if (state.failed) return;
+			Match(input,70,Follow._70_in_synpred605_cs7038); if (state.failed) return;
 			DebugLocation(897, 8);
-			PushFollow(Follow._variable_reference_in_synpred606_cs7045);
+			PushFollow(Follow._variable_reference_in_synpred605_cs7042);
 			variable_reference();
 			PopFollow();
 			if (state.failed) return;
@@ -59388,12 +59286,45 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred606_cs_fragment", 953);
-			LeaveRule("synpred606_cs_fragment", 953);
-			LeaveRule_synpred606_cs_fragment();
+			TraceOut("synpred605_cs_fragment", 952);
+			LeaveRule("synpred605_cs_fragment", 952);
+			LeaveRule_synpred605_cs_fragment();
 		}
 	}
-	// $ANTLR end synpred606_cs
+	// $ANTLR end synpred605_cs
+
+	partial void EnterRule_synpred607_cs_fragment();
+	partial void LeaveRule_synpred607_cs_fragment();
+
+	// $ANTLR start synpred607_cs
+	private void synpred607_cs_fragment()
+	{
+		EnterRule_synpred607_cs_fragment();
+		EnterRule("synpred607_cs_fragment", 954);
+		var retval = new Antlr3AstNode("synpred607_cs_fragment");
+		try
+		{
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:903:10: ( statement_list )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:903:10: statement_list
+			{
+			DebugLocation(903, 10);
+			PushFollow(Follow._statement_list_in_synpred607_cs7078);
+			statement_list();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred607_cs_fragment", 954);
+			LeaveRule("synpred607_cs_fragment", 954);
+			LeaveRule_synpred607_cs_fragment();
+		}
+	}
+	// $ANTLR end synpred607_cs
 
 	partial void EnterRule_synpred608_cs_fragment();
 	partial void LeaveRule_synpred608_cs_fragment();
@@ -59406,13 +59337,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		var retval = new Antlr3AstNode("synpred608_cs_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:903:10: ( statement_list )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:905:2: ( statement )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:903:10: statement_list
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:905:2: statement
 			{
-			DebugLocation(903, 10);
-			PushFollow(Follow._statement_list_in_synpred608_cs7081);
-			statement_list();
+			DebugLocation(905, 2);
+			PushFollow(Follow._statement_in_synpred608_cs7091);
+			statement();
 			PopFollow();
 			if (state.failed) return;
 
@@ -59428,24 +59359,24 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	}
 	// $ANTLR end synpred608_cs
 
-	partial void EnterRule_synpred609_cs_fragment();
-	partial void LeaveRule_synpred609_cs_fragment();
+	partial void EnterRule_synpred610_cs_fragment();
+	partial void LeaveRule_synpred610_cs_fragment();
 
-	// $ANTLR start synpred609_cs
-	private void synpred609_cs_fragment()
+	// $ANTLR start synpred610_cs
+	private void synpred610_cs_fragment()
 	{
-		EnterRule_synpred609_cs_fragment();
-		EnterRule("synpred609_cs_fragment", 956);
-		var retval = new Antlr3AstNode("synpred609_cs_fragment");
+		EnterRule_synpred610_cs_fragment();
+		EnterRule("synpred610_cs_fragment", 957);
+		var retval = new Antlr3AstNode("synpred610_cs_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:905:2: ( statement )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:916:2: ( type )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:905:2: statement
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:916:2: type
 			{
-			DebugLocation(905, 2);
-			PushFollow(Follow._statement_in_synpred609_cs7094);
-			statement();
+			DebugLocation(916, 2);
+			PushFollow(Follow._type_in_synpred610_cs7154);
+			type();
 			PopFollow();
 			if (state.failed) return;
 
@@ -59454,12 +59385,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred609_cs_fragment", 956);
-			LeaveRule("synpred609_cs_fragment", 956);
-			LeaveRule_synpred609_cs_fragment();
+			TraceOut("synpred610_cs_fragment", 957);
+			LeaveRule("synpred610_cs_fragment", 957);
+			LeaveRule_synpred610_cs_fragment();
 		}
 	}
-	// $ANTLR end synpred609_cs
+	// $ANTLR end synpred610_cs
 
 	partial void EnterRule_synpred611_cs_fragment();
 	partial void LeaveRule_synpred611_cs_fragment();
@@ -59472,15 +59403,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		var retval = new Antlr3AstNode("synpred611_cs_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:916:2: ( type )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:917:4: ( 'var' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:916:2: type
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:917:4: 'var'
 			{
-			DebugLocation(916, 2);
-			PushFollow(Follow._type_in_synpred611_cs7157);
-			type();
-			PopFollow();
-			if (state.failed) return;
+			DebugLocation(917, 4);
+			Match(input,193,Follow._193_in_synpred611_cs7159); if (state.failed) return;
 
 			}
 
@@ -59494,45 +59422,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	}
 	// $ANTLR end synpred611_cs
 
-	partial void EnterRule_synpred612_cs_fragment();
-	partial void LeaveRule_synpred612_cs_fragment();
+	partial void EnterRule_synpred614_cs_fragment();
+	partial void LeaveRule_synpred614_cs_fragment();
 
-	// $ANTLR start synpred612_cs
-	private void synpred612_cs_fragment()
+	// $ANTLR start synpred614_cs
+	private void synpred614_cs_fragment()
 	{
-		EnterRule_synpred612_cs_fragment();
-		EnterRule("synpred612_cs_fragment", 959);
-		var retval = new Antlr3AstNode("synpred612_cs_fragment");
-		try
-		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:917:4: ( 'var' )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:917:4: 'var'
-			{
-			DebugLocation(917, 4);
-			Match(input,193,Follow._193_in_synpred612_cs7162); if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred612_cs_fragment", 959);
-			LeaveRule("synpred612_cs_fragment", 959);
-			LeaveRule_synpred612_cs_fragment();
-		}
-	}
-	// $ANTLR end synpred612_cs
-
-	partial void EnterRule_synpred615_cs_fragment();
-	partial void LeaveRule_synpred615_cs_fragment();
-
-	// $ANTLR start synpred615_cs
-	private void synpred615_cs_fragment()
-	{
-		EnterRule_synpred615_cs_fragment();
-		EnterRule("synpred615_cs_fragment", 962);
-		var retval = new Antlr3AstNode("synpred615_cs_fragment");
+		EnterRule_synpred614_cs_fragment();
+		EnterRule("synpred614_cs_fragment", 961);
+		var retval = new Antlr3AstNode("synpred614_cs_fragment");
 		try
 		{
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:925:2: ( expression )
@@ -59540,7 +59438,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:925:2: expression
 			{
 			DebugLocation(925, 2);
-			PushFollow(Follow._expression_in_synpred615_cs7210);
+			PushFollow(Follow._expression_in_synpred614_cs7207);
 			expression();
 			PopFollow();
 			if (state.failed) return;
@@ -59550,12 +59448,45 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred615_cs_fragment", 962);
-			LeaveRule("synpred615_cs_fragment", 962);
-			LeaveRule_synpred615_cs_fragment();
+			TraceOut("synpred614_cs_fragment", 961);
+			LeaveRule("synpred614_cs_fragment", 961);
+			LeaveRule_synpred614_cs_fragment();
 		}
 	}
-	// $ANTLR end synpred615_cs
+	// $ANTLR end synpred614_cs
+
+	partial void EnterRule_synpred618_cs_fragment();
+	partial void LeaveRule_synpred618_cs_fragment();
+
+	// $ANTLR start synpred618_cs
+	private void synpred618_cs_fragment()
+	{
+		EnterRule_synpred618_cs_fragment();
+		EnterRule("synpred618_cs_fragment", 965);
+		var retval = new Antlr3AstNode("synpred618_cs_fragment");
+		try
+		{
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:940:2: ( invocation_expression )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:940:2: invocation_expression
+			{
+			DebugLocation(940, 2);
+			PushFollow(Follow._invocation_expression_in_synpred618_cs7312);
+			invocation_expression();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred618_cs_fragment", 965);
+			LeaveRule("synpred618_cs_fragment", 965);
+			LeaveRule_synpred618_cs_fragment();
+		}
+	}
+	// $ANTLR end synpred618_cs
 
 	partial void EnterRule_synpred619_cs_fragment();
 	partial void LeaveRule_synpred619_cs_fragment();
@@ -59568,13 +59499,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		var retval = new Antlr3AstNode("synpred619_cs_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:940:2: ( invocation_expression )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:941:4: ( object_creation_expression )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:940:2: invocation_expression
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:941:4: object_creation_expression
 			{
-			DebugLocation(940, 2);
-			PushFollow(Follow._invocation_expression_in_synpred619_cs7315);
-			invocation_expression();
+			DebugLocation(941, 4);
+			PushFollow(Follow._object_creation_expression_in_synpred619_cs7317);
+			object_creation_expression();
 			PopFollow();
 			if (state.failed) return;
 
@@ -59601,13 +59532,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		var retval = new Antlr3AstNode("synpred620_cs_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:941:4: ( object_creation_expression )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:942:4: ( assignment )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:941:4: object_creation_expression
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:942:4: assignment
 			{
-			DebugLocation(941, 4);
-			PushFollow(Follow._object_creation_expression_in_synpred620_cs7320);
-			object_creation_expression();
+			DebugLocation(942, 4);
+			PushFollow(Follow._assignment_in_synpred620_cs7322);
+			assignment();
 			PopFollow();
 			if (state.failed) return;
 
@@ -59623,48 +59554,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	}
 	// $ANTLR end synpred620_cs
 
-	partial void EnterRule_synpred621_cs_fragment();
-	partial void LeaveRule_synpred621_cs_fragment();
+	partial void EnterRule_synpred622_cs_fragment();
+	partial void LeaveRule_synpred622_cs_fragment();
 
-	// $ANTLR start synpred621_cs
-	private void synpred621_cs_fragment()
+	// $ANTLR start synpred622_cs
+	private void synpred622_cs_fragment()
 	{
-		EnterRule_synpred621_cs_fragment();
-		EnterRule("synpred621_cs_fragment", 968);
-		var retval = new Antlr3AstNode("synpred621_cs_fragment");
-		try
-		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:942:4: ( assignment )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:942:4: assignment
-			{
-			DebugLocation(942, 4);
-			PushFollow(Follow._assignment_in_synpred621_cs7325);
-			assignment();
-			PopFollow();
-			if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred621_cs_fragment", 968);
-			LeaveRule("synpred621_cs_fragment", 968);
-			LeaveRule_synpred621_cs_fragment();
-		}
-	}
-	// $ANTLR end synpred621_cs
-
-	partial void EnterRule_synpred623_cs_fragment();
-	partial void LeaveRule_synpred623_cs_fragment();
-
-	// $ANTLR start synpred623_cs
-	private void synpred623_cs_fragment()
-	{
-		EnterRule_synpred623_cs_fragment();
-		EnterRule("synpred623_cs_fragment", 970);
-		var retval = new Antlr3AstNode("synpred623_cs_fragment");
+		EnterRule_synpred622_cs_fragment();
+		EnterRule("synpred622_cs_fragment", 969);
+		var retval = new Antlr3AstNode("synpred622_cs_fragment");
 		try
 		{
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:948:63: ( else_statement )
@@ -59672,7 +59570,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:948:63: else_statement
 			{
 			DebugLocation(948, 63);
-			PushFollow(Follow._else_statement_in_synpred623_cs7370);
+			PushFollow(Follow._else_statement_in_synpred622_cs7367);
 			else_statement();
 			PopFollow();
 			if (state.failed) return;
@@ -59682,22 +59580,22 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred623_cs_fragment", 970);
-			LeaveRule("synpred623_cs_fragment", 970);
-			LeaveRule_synpred623_cs_fragment();
+			TraceOut("synpred622_cs_fragment", 969);
+			LeaveRule("synpred622_cs_fragment", 969);
+			LeaveRule_synpred622_cs_fragment();
 		}
 	}
-	// $ANTLR end synpred623_cs
+	// $ANTLR end synpred622_cs
 
-	partial void EnterRule_synpred632_cs_fragment();
-	partial void LeaveRule_synpred632_cs_fragment();
+	partial void EnterRule_synpred631_cs_fragment();
+	partial void LeaveRule_synpred631_cs_fragment();
 
-	// $ANTLR start synpred632_cs
-	private void synpred632_cs_fragment()
+	// $ANTLR start synpred631_cs
+	private void synpred631_cs_fragment()
 	{
-		EnterRule_synpred632_cs_fragment();
-		EnterRule("synpred632_cs_fragment", 979);
-		var retval = new Antlr3AstNode("synpred632_cs_fragment");
+		EnterRule_synpred631_cs_fragment();
+		EnterRule("synpred631_cs_fragment", 978);
+		var retval = new Antlr3AstNode("synpred631_cs_fragment");
 		try
 		{
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:976:41: ( for_condition )
@@ -59705,7 +59603,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:976:41: for_condition
 			{
 			DebugLocation(976, 41);
-			PushFollow(Follow._for_condition_in_synpred632_cs7590);
+			PushFollow(Follow._for_condition_in_synpred631_cs7587);
 			for_condition();
 			PopFollow();
 			if (state.failed) return;
@@ -59715,22 +59613,22 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred632_cs_fragment", 979);
-			LeaveRule("synpred632_cs_fragment", 979);
-			LeaveRule_synpred632_cs_fragment();
+			TraceOut("synpred631_cs_fragment", 978);
+			LeaveRule("synpred631_cs_fragment", 978);
+			LeaveRule_synpred631_cs_fragment();
 		}
 	}
-	// $ANTLR end synpred632_cs
+	// $ANTLR end synpred631_cs
 
-	partial void EnterRule_synpred634_cs_fragment();
-	partial void LeaveRule_synpred634_cs_fragment();
+	partial void EnterRule_synpred633_cs_fragment();
+	partial void LeaveRule_synpred633_cs_fragment();
 
-	// $ANTLR start synpred634_cs
-	private void synpred634_cs_fragment()
+	// $ANTLR start synpred633_cs
+	private void synpred633_cs_fragment()
 	{
-		EnterRule_synpred634_cs_fragment();
-		EnterRule("synpred634_cs_fragment", 981);
-		var retval = new Antlr3AstNode("synpred634_cs_fragment");
+		EnterRule_synpred633_cs_fragment();
+		EnterRule("synpred633_cs_fragment", 980);
+		var retval = new Antlr3AstNode("synpred633_cs_fragment");
 		try
 		{
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:978:2: ( local_variable_declaration )
@@ -59738,7 +59636,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:978:2: local_variable_declaration
 			{
 			DebugLocation(978, 2);
-			PushFollow(Follow._local_variable_declaration_in_synpred634_cs7616);
+			PushFollow(Follow._local_variable_declaration_in_synpred633_cs7613);
 			local_variable_declaration();
 			PopFollow();
 			if (state.failed) return;
@@ -59748,12 +59646,45 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred634_cs_fragment", 981);
-			LeaveRule("synpred634_cs_fragment", 981);
-			LeaveRule_synpred634_cs_fragment();
+			TraceOut("synpred633_cs_fragment", 980);
+			LeaveRule("synpred633_cs_fragment", 980);
+			LeaveRule_synpred633_cs_fragment();
 		}
 	}
-	// $ANTLR end synpred634_cs
+	// $ANTLR end synpred633_cs
+
+	partial void EnterRule_synpred641_cs_fragment();
+	partial void LeaveRule_synpred641_cs_fragment();
+
+	// $ANTLR start synpred641_cs
+	private void synpred641_cs_fragment()
+	{
+		EnterRule_synpred641_cs_fragment();
+		EnterRule("synpred641_cs_fragment", 988);
+		var retval = new Antlr3AstNode("synpred641_cs_fragment");
+		try
+		{
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1003:13: ( expression )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1003:13: expression
+			{
+			DebugLocation(1003, 13);
+			PushFollow(Follow._expression_in_synpred641_cs7801);
+			expression();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred641_cs_fragment", 988);
+			LeaveRule("synpred641_cs_fragment", 988);
+			LeaveRule_synpred641_cs_fragment();
+		}
+	}
+	// $ANTLR end synpred641_cs
 
 	partial void EnterRule_synpred642_cs_fragment();
 	partial void LeaveRule_synpred642_cs_fragment();
@@ -59766,12 +59697,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		var retval = new Antlr3AstNode("synpred642_cs_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1003:13: ( expression )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1005:12: ( expression )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1003:13: expression
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1005:12: expression
 			{
-			DebugLocation(1003, 13);
-			PushFollow(Follow._expression_in_synpred642_cs7804);
+			DebugLocation(1005, 12);
+			PushFollow(Follow._expression_in_synpred642_cs7818);
 			expression();
 			PopFollow();
 			if (state.failed) return;
@@ -59788,48 +59719,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	}
 	// $ANTLR end synpred642_cs
 
-	partial void EnterRule_synpred643_cs_fragment();
-	partial void LeaveRule_synpred643_cs_fragment();
+	partial void EnterRule_synpred644_cs_fragment();
+	partial void LeaveRule_synpred644_cs_fragment();
 
-	// $ANTLR start synpred643_cs
-	private void synpred643_cs_fragment()
+	// $ANTLR start synpred644_cs
+	private void synpred644_cs_fragment()
 	{
-		EnterRule_synpred643_cs_fragment();
-		EnterRule("synpred643_cs_fragment", 990);
-		var retval = new Antlr3AstNode("synpred643_cs_fragment");
-		try
-		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1005:12: ( expression )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1005:12: expression
-			{
-			DebugLocation(1005, 12);
-			PushFollow(Follow._expression_in_synpred643_cs7821);
-			expression();
-			PopFollow();
-			if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred643_cs_fragment", 990);
-			LeaveRule("synpred643_cs_fragment", 990);
-			LeaveRule_synpred643_cs_fragment();
-		}
-	}
-	// $ANTLR end synpred643_cs
-
-	partial void EnterRule_synpred645_cs_fragment();
-	partial void LeaveRule_synpred645_cs_fragment();
-
-	// $ANTLR start synpred645_cs
-	private void synpred645_cs_fragment()
-	{
-		EnterRule_synpred645_cs_fragment();
-		EnterRule("synpred645_cs_fragment", 992);
-		var retval = new Antlr3AstNode("synpred645_cs_fragment");
+		EnterRule_synpred644_cs_fragment();
+		EnterRule("synpred644_cs_fragment", 991);
+		var retval = new Antlr3AstNode("synpred644_cs_fragment");
 		try
 		{
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1007:7: ( ( 'try' block catch_clauses ( finally_clause )? ) )
@@ -59842,14 +59740,14 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1007:8: 'try' block catch_clauses ( finally_clause )?
 			{
 			DebugLocation(1007, 8);
-			Match(input,185,Follow._185_in_synpred645_cs7840); if (state.failed) return;
+			Match(input,185,Follow._185_in_synpred644_cs7837); if (state.failed) return;
 			DebugLocation(1007, 16);
-			PushFollow(Follow._block_in_synpred645_cs7844);
+			PushFollow(Follow._block_in_synpred644_cs7841);
 			block();
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(1007, 24);
-			PushFollow(Follow._catch_clauses_in_synpred645_cs7848);
+			PushFollow(Follow._catch_clauses_in_synpred644_cs7845);
 			catch_clauses();
 			PopFollow();
 			if (state.failed) return;
@@ -59872,7 +59770,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1007:40: finally_clause
 				{
 				DebugLocation(1007, 40);
-				PushFollow(Follow._finally_clause_in_synpred645_cs7852);
+				PushFollow(Follow._finally_clause_in_synpred644_cs7849);
 				finally_clause();
 				PopFollow();
 				if (state.failed) return;
@@ -59892,22 +59790,22 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred645_cs_fragment", 992);
-			LeaveRule("synpred645_cs_fragment", 992);
-			LeaveRule_synpred645_cs_fragment();
+			TraceOut("synpred644_cs_fragment", 991);
+			LeaveRule("synpred644_cs_fragment", 991);
+			LeaveRule_synpred644_cs_fragment();
 		}
 	}
-	// $ANTLR end synpred645_cs
+	// $ANTLR end synpred644_cs
 
-	partial void EnterRule_synpred647_cs_fragment();
-	partial void LeaveRule_synpred647_cs_fragment();
+	partial void EnterRule_synpred646_cs_fragment();
+	partial void LeaveRule_synpred646_cs_fragment();
 
-	// $ANTLR start synpred647_cs
-	private void synpred647_cs_fragment()
+	// $ANTLR start synpred646_cs
+	private void synpred646_cs_fragment()
 	{
-		EnterRule_synpred647_cs_fragment();
-		EnterRule("synpred647_cs_fragment", 994);
-		var retval = new Antlr3AstNode("synpred647_cs_fragment");
+		EnterRule_synpred646_cs_fragment();
+		EnterRule("synpred646_cs_fragment", 993);
+		var retval = new Antlr3AstNode("synpred646_cs_fragment");
 		try
 		{
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1010:2: ( ( specific_catch_clauses ( general_catch_clause )? ) )
@@ -59920,7 +59818,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1010:3: specific_catch_clauses ( general_catch_clause )?
 			{
 			DebugLocation(1010, 3);
-			PushFollow(Follow._specific_catch_clauses_in_synpred647_cs7877);
+			PushFollow(Follow._specific_catch_clauses_in_synpred646_cs7874);
 			specific_catch_clauses();
 			PopFollow();
 			if (state.failed) return;
@@ -59943,7 +59841,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1010:28: general_catch_clause
 				{
 				DebugLocation(1010, 28);
-				PushFollow(Follow._general_catch_clause_in_synpred647_cs7881);
+				PushFollow(Follow._general_catch_clause_in_synpred646_cs7878);
 				general_catch_clause();
 				PopFollow();
 				if (state.failed) return;
@@ -59963,12 +59861,45 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred647_cs_fragment", 994);
-			LeaveRule("synpred647_cs_fragment", 994);
-			LeaveRule_synpred647_cs_fragment();
+			TraceOut("synpred646_cs_fragment", 993);
+			LeaveRule("synpred646_cs_fragment", 993);
+			LeaveRule_synpred646_cs_fragment();
 		}
 	}
-	// $ANTLR end synpred647_cs
+	// $ANTLR end synpred646_cs
+
+	partial void EnterRule_synpred649_cs_fragment();
+	partial void LeaveRule_synpred649_cs_fragment();
+
+	// $ANTLR start synpred649_cs
+	private void synpred649_cs_fragment()
+	{
+		EnterRule_synpred649_cs_fragment();
+		EnterRule("synpred649_cs_fragment", 996);
+		var retval = new Antlr3AstNode("synpred649_cs_fragment");
+		try
+		{
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1015:31: ( identifier )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1015:31: identifier
+			{
+			DebugLocation(1015, 31);
+			PushFollow(Follow._identifier_in_synpred649_cs7921);
+			identifier();
+			PopFollow();
+			if (state.failed) return;
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("synpred649_cs_fragment", 996);
+			LeaveRule("synpred649_cs_fragment", 996);
+			LeaveRule_synpred649_cs_fragment();
+		}
+	}
+	// $ANTLR end synpred649_cs
 
 	partial void EnterRule_synpred650_cs_fragment();
 	partial void LeaveRule_synpred650_cs_fragment();
@@ -59981,13 +59912,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		var retval = new Antlr3AstNode("synpred650_cs_fragment");
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1015:31: ( identifier )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1029:2: ( local_variable_declaration )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1015:31: identifier
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1029:2: local_variable_declaration
 			{
-			DebugLocation(1015, 31);
-			PushFollow(Follow._identifier_in_synpred650_cs7924);
-			identifier();
+			DebugLocation(1029, 2);
+			PushFollow(Follow._local_variable_declaration_in_synpred650_cs8035);
+			local_variable_declaration();
 			PopFollow();
 			if (state.failed) return;
 
@@ -60003,48 +59934,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	}
 	// $ANTLR end synpred650_cs
 
-	partial void EnterRule_synpred651_cs_fragment();
-	partial void LeaveRule_synpred651_cs_fragment();
+	partial void EnterRule_synpred707_cs_fragment();
+	partial void LeaveRule_synpred707_cs_fragment();
 
-	// $ANTLR start synpred651_cs
-	private void synpred651_cs_fragment()
+	// $ANTLR start synpred707_cs
+	private void synpred707_cs_fragment()
 	{
-		EnterRule_synpred651_cs_fragment();
-		EnterRule("synpred651_cs_fragment", 998);
-		var retval = new Antlr3AstNode("synpred651_cs_fragment");
-		try
-		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1029:2: ( local_variable_declaration )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1029:2: local_variable_declaration
-			{
-			DebugLocation(1029, 2);
-			PushFollow(Follow._local_variable_declaration_in_synpred651_cs8038);
-			local_variable_declaration();
-			PopFollow();
-			if (state.failed) return;
-
-			}
-
-		}
-		finally
-		{
-			TraceOut("synpred651_cs_fragment", 998);
-			LeaveRule("synpred651_cs_fragment", 998);
-			LeaveRule_synpred651_cs_fragment();
-		}
-	}
-	// $ANTLR end synpred651_cs
-
-	partial void EnterRule_synpred708_cs_fragment();
-	partial void LeaveRule_synpred708_cs_fragment();
-
-	// $ANTLR start synpred708_cs
-	private void synpred708_cs_fragment()
-	{
-		EnterRule_synpred708_cs_fragment();
-		EnterRule("synpred708_cs_fragment", 1055);
-		var retval = new Antlr3AstNode("synpred708_cs_fragment");
+		EnterRule_synpred707_cs_fragment();
+		EnterRule("synpred707_cs_fragment", 1054);
+		var retval = new Antlr3AstNode("synpred707_cs_fragment");
 		try
 		{
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1056:2: ({...}? => ( IDENTIFIER | 'add' | 'alias' | 'assembly' | 'module' | 'field' | 'method' | 'param' | 'property' | 'type' | 'yield' | 'pragma' | 'remove' | 'get' | 'set' | 'var' | '__arglist' | 'dynamic' | 'async' | 'await' | 'partial' | 'from' | 'into' | 'join' | 'on' | 'where' | 'orderby' | 'group' | 'by' | 'ascending' | 'descending' | 'equals' | 'select' | 'let' ) )
@@ -60055,7 +59953,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (!((_queryExpression == 0)))
 			{
 				if (state.backtracking>0) {state.failed=true; return;}
-				throw new FailedPredicateException(input, "synpred708_cs", "_queryExpression == 0");
+				throw new FailedPredicateException(input, "synpred707_cs", "_queryExpression == 0");
 			}
 			DebugLocation(1057, 4);
 			if (input.LA(1)==GET||input.LA(1)==IDENTIFIER||input.LA(1)==SET||input.LA(1)==99||(input.LA(1)>=101 && input.LA(1)<=102)||(input.LA(1)>=104 && input.LA(1)<=107)||input.LA(1)==111||input.LA(1)==123||(input.LA(1)>=126 && input.LA(1)<=127)||input.LA(1)==131||input.LA(1)==137||input.LA(1)==139||input.LA(1)==145||(input.LA(1)>=147 && input.LA(1)<=148)||(input.LA(1)>=151 && input.LA(1)<=152)||input.LA(1)==156||input.LA(1)==158||input.LA(1)==161||(input.LA(1)>=163 && input.LA(1)<=164)||input.LA(1)==166||input.LA(1)==171||input.LA(1)==175||input.LA(1)==186||input.LA(1)==193||input.LA(1)==197||input.LA(1)==199)
@@ -60077,12 +59975,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred708_cs_fragment", 1055);
-			LeaveRule("synpred708_cs_fragment", 1055);
-			LeaveRule_synpred708_cs_fragment();
+			TraceOut("synpred707_cs_fragment", 1054);
+			LeaveRule("synpred707_cs_fragment", 1054);
+			LeaveRule_synpred707_cs_fragment();
 		}
 	}
-	// $ANTLR end synpred708_cs
+	// $ANTLR end synpred707_cs
 	#endregion Rules
 
 	#region Synpreds
@@ -61652,221 +61550,220 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _declaration_statement_in_statement6893 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _embedded_statement_in_statement6898 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _block_in_embedded_statement6906 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _empty_statement_in_embedded_statement6911 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_statement_in_embedded_statement6916 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _selection_statement_in_embedded_statement6921 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _iteration_statement_in_embedded_statement6926 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _jump_statement_in_embedded_statement6931 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _try_statement_in_embedded_statement6936 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _checked_statement_in_embedded_statement6941 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _unchecked_statement_in_embedded_statement6946 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _lock_statement_in_embedded_statement6951 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _using_statement_in_embedded_statement6956 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _yield_statement_in_embedded_statement6962 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _unsafe_statement_in_embedded_statement6968 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _fixed_statement_in_embedded_statement6973 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _133_in_fixed_statement6980 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_fixed_statement6984 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _pointer_type_in_fixed_statement6988 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _fixed_pointer_declarators_in_fixed_statement6990 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_fixed_statement6994 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
-		public static readonly BitSet _embedded_statement_in_fixed_statement6998 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _fixed_pointer_declarator_in_fixed_pointer_declarators7006 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_fixed_pointer_declarators7011 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _fixed_pointer_declarator_in_fixed_pointer_declarators7015 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _identifier_in_fixed_pointer_declarator7025 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
-		public static readonly BitSet _89_in_fixed_pointer_declarator7029 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _fixed_pointer_initializer_in_fixed_pointer_declarator7033 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _70_in_fixed_pointer_initializer7041 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _variable_reference_in_fixed_pointer_initializer7045 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_fixed_pointer_initializer7053 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _191_in_unsafe_statement7060 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _block_in_unsafe_statement7064 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _SEMI_in_block7071 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_block7077 = new BitSet(new ulong[]{0x5174007070600020UL,0xFFD9FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x31EBUL});
-		public static readonly BitSet _statement_list_in_block7081 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_block7086 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _statement_in_statement_list7094 = new BitSet(new ulong[]{0x5174007070600022UL,0xFFD9FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21EBUL});
-		public static readonly BitSet _SEMI_in_empty_statement7103 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _identifier_in_labeled_statement7111 = new BitSet(new ulong[]{0x0UL,0x80000UL});
-		public static readonly BitSet _83_in_labeled_statement7115 = new BitSet(new ulong[]{0x5174007070600020UL,0xFFD9FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21EBUL});
-		public static readonly BitSet _statement_in_labeled_statement7119 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _local_variable_declaration_in_declaration_statement7128 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _local_constant_declaration_in_declaration_statement7134 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _SEMI_in_declaration_statement7137 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _local_variable_type_in_local_variable_declaration7145 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _local_variable_declarators_in_local_variable_declaration7149 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _type_in_local_variable_type7157 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _193_in_local_variable_type7162 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _126_in_local_variable_type7168 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _local_variable_declarator_in_local_variable_declarators7175 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_local_variable_declarators7178 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _local_variable_declarator_in_local_variable_declarators7180 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _identifier_in_local_variable_declarator7190 = new BitSet(new ulong[]{0x2UL,0x2000000UL});
-		public static readonly BitSet _89_in_local_variable_declarator7193 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C97A85A5DDA4A48UL,0x21A3UL});
-		public static readonly BitSet _local_variable_initializer_in_local_variable_declarator7197 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_local_variable_initializer7210 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _array_initializer_in_local_variable_initializer7215 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _stackalloc_initializer_in_local_variable_initializer7221 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _178_in_stackalloc_initializer7228 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _unmanaged_type_in_stackalloc_initializer7232 = new BitSet(new ulong[]{0x0UL,0x80000000UL});
-		public static readonly BitSet _95_in_stackalloc_initializer7236 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_stackalloc_initializer7240 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
-		public static readonly BitSet _96_in_stackalloc_initializer7244 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _118_in_local_constant_declaration7252 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_local_constant_declaration7256 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _constant_declarators_in_local_constant_declaration7260 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _constant_declarator_in_constant_declarators7268 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_constant_declarators7271 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _constant_declarator_in_constant_declarators7273 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _identifier_in_constant_declarator7283 = new BitSet(new ulong[]{0x2UL,0x2000000UL});
-		public static readonly BitSet _89_in_constant_declarator7288 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _constant_expression_in_constant_declarator7292 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_expression_statement7303 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _SEMI_in_expression_statement7307 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _invocation_expression_in_statement_expression7315 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _object_creation_expression_in_statement_expression7320 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _assignment_in_statement_expression7325 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _unary_expression_in_statement_expression7330 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _if_statement_in_selection_statement7337 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _switch_statement_in_selection_statement7342 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IF_in_if_statement7350 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_if_statement7354 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _boolean_expression_in_if_statement7358 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_if_statement7362 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
-		public static readonly BitSet _embedded_statement_in_if_statement7366 = new BitSet(new ulong[]{0x4002UL});
-		public static readonly BitSet _else_statement_in_if_statement7370 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ELSE_in_else_statement7380 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
-		public static readonly BitSet _embedded_statement_in_else_statement7384 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _182_in_switch_statement7394 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_switch_statement7398 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_switch_statement7402 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_switch_statement7406 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _switch_block_in_switch_statement7410 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_switch_block7418 = new BitSet(new ulong[]{0x0UL,0x202000000000000UL,0x0UL,0x1000UL});
-		public static readonly BitSet _switch_sections_in_switch_block7422 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_switch_block7427 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _switch_section_in_switch_sections7435 = new BitSet(new ulong[]{0x2UL,0x202000000000000UL});
-		public static readonly BitSet _switch_labels_in_switch_section7444 = new BitSet(new ulong[]{0x5174007070600020UL,0xFFD9FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21EBUL});
-		public static readonly BitSet _statement_list_in_switch_section7448 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _switch_label_in_switch_labels7456 = new BitSet(new ulong[]{0x2UL,0x202000000000000UL});
-		public static readonly BitSet _113_in_switch_label7466 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _constant_expression_in_switch_label7470 = new BitSet(new ulong[]{0x0UL,0x80000UL});
-		public static readonly BitSet _83_in_switch_label7474 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _121_in_switch_label7481 = new BitSet(new ulong[]{0x0UL,0x80000UL});
-		public static readonly BitSet _83_in_switch_label7485 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _while_statement_in_iteration_statement7494 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _do_statement_in_iteration_statement7499 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _for_statement_in_iteration_statement7504 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _foreach_statement_in_iteration_statement7509 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _198_in_while_statement7517 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_while_statement7521 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _boolean_expression_in_while_statement7525 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_while_statement7529 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
-		public static readonly BitSet _embedded_statement_in_while_statement7533 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _124_in_do_statement7541 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
-		public static readonly BitSet _embedded_statement_in_do_statement7545 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x40UL});
-		public static readonly BitSet _198_in_do_statement7549 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_do_statement7553 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _boolean_expression_in_do_statement7557 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_do_statement7561 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _SEMI_in_do_statement7565 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _135_in_for_statement7573 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_for_statement7577 = new BitSet(new ulong[]{0x4174007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20ABUL});
-		public static readonly BitSet _for_initializer_in_for_statement7581 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _SEMI_in_for_statement7586 = new BitSet(new ulong[]{0x4174007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _for_condition_in_for_statement7590 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _SEMI_in_for_statement7595 = new BitSet(new ulong[]{0x4166007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _for_iterator_in_for_statement7599 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_for_statement7604 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
-		public static readonly BitSet _embedded_statement_in_for_statement7608 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _local_variable_declaration_in_for_initializer7616 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _statement_expression_list_in_for_initializer7621 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _boolean_expression_in_for_condition7629 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _statement_expression_list_in_for_iterator7637 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _statement_expression_in_statement_expression_list7645 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_statement_expression_list7648 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _statement_expression_in_statement_expression_list7650 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _136_in_foreach_statement7660 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_foreach_statement7664 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _local_variable_type_in_foreach_statement7668 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_foreach_statement7672 = new BitSet(new ulong[]{0x0UL,0x0UL,0x2000UL});
-		public static readonly BitSet _141_in_foreach_statement7676 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_foreach_statement7680 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_foreach_statement7684 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
-		public static readonly BitSet _embedded_statement_in_foreach_statement7688 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _break_statement_in_jump_statement7696 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _continue_statement_in_jump_statement7701 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _goto_statement_in_jump_statement7706 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _return_statement_in_jump_statement7711 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _throw_statement_in_jump_statement7716 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _110_in_break_statement7724 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _SEMI_in_break_statement7728 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _119_in_continue_statement7736 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _SEMI_in_continue_statement7740 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _138_in_goto_statement7749 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_goto_statement7753 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _SEMI_in_goto_statement7757 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _138_in_goto_statement7764 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
-		public static readonly BitSet _113_in_goto_statement7768 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _constant_expression_in_goto_statement7772 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _SEMI_in_goto_statement7776 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _138_in_goto_statement7783 = new BitSet(new ulong[]{0x0UL,0x200000000000000UL});
-		public static readonly BitSet _121_in_goto_statement7787 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _SEMI_in_goto_statement7791 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _172_in_return_statement7800 = new BitSet(new ulong[]{0x4174007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_return_statement7804 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _SEMI_in_return_statement7809 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _184_in_throw_statement7817 = new BitSet(new ulong[]{0x4174007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_throw_statement7821 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _SEMI_in_throw_statement7826 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _185_in_try_statement7840 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _block_in_try_statement7844 = new BitSet(new ulong[]{0x0UL,0x4000000000000UL});
-		public static readonly BitSet _catch_clauses_in_try_statement7848 = new BitSet(new ulong[]{0x2UL,0x0UL,0x10UL});
-		public static readonly BitSet _finally_clause_in_try_statement7852 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _185_in_try_statement7860 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _block_in_try_statement7864 = new BitSet(new ulong[]{0x0UL,0x0UL,0x10UL});
-		public static readonly BitSet _finally_clause_in_try_statement7868 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _specific_catch_clauses_in_catch_clauses7877 = new BitSet(new ulong[]{0x2UL,0x4000000000000UL});
-		public static readonly BitSet _general_catch_clause_in_catch_clauses7881 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _specific_catch_clauses_in_catch_clauses7889 = new BitSet(new ulong[]{0x0UL,0x4000000000000UL});
-		public static readonly BitSet _general_catch_clause_in_catch_clauses7894 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _specific_catch_clause_in_specific_catch_clauses7903 = new BitSet(new ulong[]{0x2UL,0x4000000000000UL});
-		public static readonly BitSet _114_in_specific_catch_clause7912 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_specific_catch_clause7916 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _class_type_in_specific_catch_clause7920 = new BitSet(new ulong[]{0x22000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_specific_catch_clause7924 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_specific_catch_clause7929 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _block_in_specific_catch_clause7933 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _114_in_general_catch_clause7941 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _block_in_general_catch_clause7945 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _132_in_finally_clause7953 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _block_in_finally_clause7957 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _116_in_checked_statement7965 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _block_in_checked_statement7969 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _190_in_unchecked_statement7977 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _block_in_unchecked_statement7981 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _149_in_lock_statement7989 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_lock_statement7993 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_lock_statement7996 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_lock_statement8000 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
-		public static readonly BitSet _embedded_statement_in_lock_statement8004 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _USING_in_using_statement8012 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_using_statement8016 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20ABUL});
-		public static readonly BitSet _resource_acquisition_in_using_statement8021 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_using_statement8025 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
-		public static readonly BitSet _embedded_statement_in_using_statement8030 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _local_variable_declaration_in_resource_acquisition8038 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_resource_acquisition8043 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _199_in_yield_statement8052 = new BitSet(new ulong[]{0x0UL,0x0UL,0x100000000000UL});
-		public static readonly BitSet _172_in_yield_statement8056 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_yield_statement8060 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _SEMI_in_yield_statement8064 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _199_in_yield_statement8071 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
-		public static readonly BitSet _110_in_yield_statement8075 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _SEMI_in_yield_statement8079 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _set_in_identifier8235 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _set_in_identifier8379 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_statement_in_embedded_statement6913 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _selection_statement_in_embedded_statement6918 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _iteration_statement_in_embedded_statement6923 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _jump_statement_in_embedded_statement6928 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _try_statement_in_embedded_statement6933 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _checked_statement_in_embedded_statement6938 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _unchecked_statement_in_embedded_statement6943 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _lock_statement_in_embedded_statement6948 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _using_statement_in_embedded_statement6953 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _yield_statement_in_embedded_statement6959 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _unsafe_statement_in_embedded_statement6965 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _fixed_statement_in_embedded_statement6970 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _133_in_fixed_statement6977 = new BitSet(new ulong[]{0x0UL,0x100UL});
+		public static readonly BitSet _72_in_fixed_statement6981 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
+		public static readonly BitSet _pointer_type_in_fixed_statement6985 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _fixed_pointer_declarators_in_fixed_statement6987 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _RPAREN_in_fixed_statement6991 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
+		public static readonly BitSet _embedded_statement_in_fixed_statement6995 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _fixed_pointer_declarator_in_fixed_pointer_declarators7003 = new BitSet(new ulong[]{0x2UL,0x4000UL});
+		public static readonly BitSet _78_in_fixed_pointer_declarators7008 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _fixed_pointer_declarator_in_fixed_pointer_declarators7012 = new BitSet(new ulong[]{0x2UL,0x4000UL});
+		public static readonly BitSet _identifier_in_fixed_pointer_declarator7022 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
+		public static readonly BitSet _89_in_fixed_pointer_declarator7026 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _fixed_pointer_initializer_in_fixed_pointer_declarator7030 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _70_in_fixed_pointer_initializer7038 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _variable_reference_in_fixed_pointer_initializer7042 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_in_fixed_pointer_initializer7050 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _191_in_unsafe_statement7057 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _block_in_unsafe_statement7061 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _SEMI_in_block7068 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _200_in_block7074 = new BitSet(new ulong[]{0x5174007070600020UL,0xFFD9FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x31EBUL});
+		public static readonly BitSet _statement_list_in_block7078 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
+		public static readonly BitSet _204_in_block7083 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _statement_in_statement_list7091 = new BitSet(new ulong[]{0x5174007070600022UL,0xFFD9FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21EBUL});
+		public static readonly BitSet _SEMI_in_empty_statement7100 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _identifier_in_labeled_statement7108 = new BitSet(new ulong[]{0x0UL,0x80000UL});
+		public static readonly BitSet _83_in_labeled_statement7112 = new BitSet(new ulong[]{0x5174007070600020UL,0xFFD9FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21EBUL});
+		public static readonly BitSet _statement_in_labeled_statement7116 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _local_variable_declaration_in_declaration_statement7125 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _local_constant_declaration_in_declaration_statement7131 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _SEMI_in_declaration_statement7134 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _local_variable_type_in_local_variable_declaration7142 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _local_variable_declarators_in_local_variable_declaration7146 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _type_in_local_variable_type7154 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _193_in_local_variable_type7159 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _126_in_local_variable_type7165 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _local_variable_declarator_in_local_variable_declarators7172 = new BitSet(new ulong[]{0x2UL,0x4000UL});
+		public static readonly BitSet _78_in_local_variable_declarators7175 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _local_variable_declarator_in_local_variable_declarators7177 = new BitSet(new ulong[]{0x2UL,0x4000UL});
+		public static readonly BitSet _identifier_in_local_variable_declarator7187 = new BitSet(new ulong[]{0x2UL,0x2000000UL});
+		public static readonly BitSet _89_in_local_variable_declarator7190 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C97A85A5DDA4A48UL,0x21A3UL});
+		public static readonly BitSet _local_variable_initializer_in_local_variable_declarator7194 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_in_local_variable_initializer7207 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _array_initializer_in_local_variable_initializer7212 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _stackalloc_initializer_in_local_variable_initializer7218 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _178_in_stackalloc_initializer7225 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
+		public static readonly BitSet _unmanaged_type_in_stackalloc_initializer7229 = new BitSet(new ulong[]{0x0UL,0x80000000UL});
+		public static readonly BitSet _95_in_stackalloc_initializer7233 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _expression_in_stackalloc_initializer7237 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
+		public static readonly BitSet _96_in_stackalloc_initializer7241 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _118_in_local_constant_declaration7249 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
+		public static readonly BitSet _type_in_local_constant_declaration7253 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _constant_declarators_in_local_constant_declaration7257 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _constant_declarator_in_constant_declarators7265 = new BitSet(new ulong[]{0x2UL,0x4000UL});
+		public static readonly BitSet _78_in_constant_declarators7268 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _constant_declarator_in_constant_declarators7270 = new BitSet(new ulong[]{0x2UL,0x4000UL});
+		public static readonly BitSet _identifier_in_constant_declarator7280 = new BitSet(new ulong[]{0x2UL,0x2000000UL});
+		public static readonly BitSet _89_in_constant_declarator7285 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _constant_expression_in_constant_declarator7289 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_in_expression_statement7300 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _SEMI_in_expression_statement7304 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _invocation_expression_in_statement_expression7312 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _object_creation_expression_in_statement_expression7317 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _assignment_in_statement_expression7322 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _unary_expression_in_statement_expression7327 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _if_statement_in_selection_statement7334 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _switch_statement_in_selection_statement7339 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IF_in_if_statement7347 = new BitSet(new ulong[]{0x0UL,0x100UL});
+		public static readonly BitSet _72_in_if_statement7351 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _boolean_expression_in_if_statement7355 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _RPAREN_in_if_statement7359 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
+		public static readonly BitSet _embedded_statement_in_if_statement7363 = new BitSet(new ulong[]{0x4002UL});
+		public static readonly BitSet _else_statement_in_if_statement7367 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ELSE_in_else_statement7377 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
+		public static readonly BitSet _embedded_statement_in_else_statement7381 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _182_in_switch_statement7391 = new BitSet(new ulong[]{0x0UL,0x100UL});
+		public static readonly BitSet _72_in_switch_statement7395 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _expression_in_switch_statement7399 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _RPAREN_in_switch_statement7403 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _switch_block_in_switch_statement7407 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _200_in_switch_block7415 = new BitSet(new ulong[]{0x0UL,0x202000000000000UL,0x0UL,0x1000UL});
+		public static readonly BitSet _switch_sections_in_switch_block7419 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
+		public static readonly BitSet _204_in_switch_block7424 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _switch_section_in_switch_sections7432 = new BitSet(new ulong[]{0x2UL,0x202000000000000UL});
+		public static readonly BitSet _switch_labels_in_switch_section7441 = new BitSet(new ulong[]{0x5174007070600020UL,0xFFD9FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21EBUL});
+		public static readonly BitSet _statement_list_in_switch_section7445 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _switch_label_in_switch_labels7453 = new BitSet(new ulong[]{0x2UL,0x202000000000000UL});
+		public static readonly BitSet _113_in_switch_label7463 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _constant_expression_in_switch_label7467 = new BitSet(new ulong[]{0x0UL,0x80000UL});
+		public static readonly BitSet _83_in_switch_label7471 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _121_in_switch_label7478 = new BitSet(new ulong[]{0x0UL,0x80000UL});
+		public static readonly BitSet _83_in_switch_label7482 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _while_statement_in_iteration_statement7491 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _do_statement_in_iteration_statement7496 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _for_statement_in_iteration_statement7501 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _foreach_statement_in_iteration_statement7506 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _198_in_while_statement7514 = new BitSet(new ulong[]{0x0UL,0x100UL});
+		public static readonly BitSet _72_in_while_statement7518 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _boolean_expression_in_while_statement7522 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _RPAREN_in_while_statement7526 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
+		public static readonly BitSet _embedded_statement_in_while_statement7530 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _124_in_do_statement7538 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
+		public static readonly BitSet _embedded_statement_in_do_statement7542 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x40UL});
+		public static readonly BitSet _198_in_do_statement7546 = new BitSet(new ulong[]{0x0UL,0x100UL});
+		public static readonly BitSet _72_in_do_statement7550 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _boolean_expression_in_do_statement7554 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _RPAREN_in_do_statement7558 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _SEMI_in_do_statement7562 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _135_in_for_statement7570 = new BitSet(new ulong[]{0x0UL,0x100UL});
+		public static readonly BitSet _72_in_for_statement7574 = new BitSet(new ulong[]{0x4174007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20ABUL});
+		public static readonly BitSet _for_initializer_in_for_statement7578 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _SEMI_in_for_statement7583 = new BitSet(new ulong[]{0x4174007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _for_condition_in_for_statement7587 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _SEMI_in_for_statement7592 = new BitSet(new ulong[]{0x4166007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _for_iterator_in_for_statement7596 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _RPAREN_in_for_statement7601 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
+		public static readonly BitSet _embedded_statement_in_for_statement7605 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _local_variable_declaration_in_for_initializer7613 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _statement_expression_list_in_for_initializer7618 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _boolean_expression_in_for_condition7626 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _statement_expression_list_in_for_iterator7634 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _statement_expression_in_statement_expression_list7642 = new BitSet(new ulong[]{0x2UL,0x4000UL});
+		public static readonly BitSet _78_in_statement_expression_list7645 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _statement_expression_in_statement_expression_list7647 = new BitSet(new ulong[]{0x2UL,0x4000UL});
+		public static readonly BitSet _136_in_foreach_statement7657 = new BitSet(new ulong[]{0x0UL,0x100UL});
+		public static readonly BitSet _72_in_foreach_statement7661 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
+		public static readonly BitSet _local_variable_type_in_foreach_statement7665 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _identifier_in_foreach_statement7669 = new BitSet(new ulong[]{0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _141_in_foreach_statement7673 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _expression_in_foreach_statement7677 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _RPAREN_in_foreach_statement7681 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
+		public static readonly BitSet _embedded_statement_in_foreach_statement7685 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _break_statement_in_jump_statement7693 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _continue_statement_in_jump_statement7698 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _goto_statement_in_jump_statement7703 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _return_statement_in_jump_statement7708 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _throw_statement_in_jump_statement7713 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _110_in_break_statement7721 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _SEMI_in_break_statement7725 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _119_in_continue_statement7733 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _SEMI_in_continue_statement7737 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _138_in_goto_statement7746 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _identifier_in_goto_statement7750 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _SEMI_in_goto_statement7754 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _138_in_goto_statement7761 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
+		public static readonly BitSet _113_in_goto_statement7765 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _constant_expression_in_goto_statement7769 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _SEMI_in_goto_statement7773 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _138_in_goto_statement7780 = new BitSet(new ulong[]{0x0UL,0x200000000000000UL});
+		public static readonly BitSet _121_in_goto_statement7784 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _SEMI_in_goto_statement7788 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _172_in_return_statement7797 = new BitSet(new ulong[]{0x4174007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _expression_in_return_statement7801 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _SEMI_in_return_statement7806 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _184_in_throw_statement7814 = new BitSet(new ulong[]{0x4174007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _expression_in_throw_statement7818 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _SEMI_in_throw_statement7823 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _185_in_try_statement7837 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _block_in_try_statement7841 = new BitSet(new ulong[]{0x0UL,0x4000000000000UL});
+		public static readonly BitSet _catch_clauses_in_try_statement7845 = new BitSet(new ulong[]{0x2UL,0x0UL,0x10UL});
+		public static readonly BitSet _finally_clause_in_try_statement7849 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _185_in_try_statement7857 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _block_in_try_statement7861 = new BitSet(new ulong[]{0x0UL,0x0UL,0x10UL});
+		public static readonly BitSet _finally_clause_in_try_statement7865 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _specific_catch_clauses_in_catch_clauses7874 = new BitSet(new ulong[]{0x2UL,0x4000000000000UL});
+		public static readonly BitSet _general_catch_clause_in_catch_clauses7878 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _specific_catch_clauses_in_catch_clauses7886 = new BitSet(new ulong[]{0x0UL,0x4000000000000UL});
+		public static readonly BitSet _general_catch_clause_in_catch_clauses7891 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _specific_catch_clause_in_specific_catch_clauses7900 = new BitSet(new ulong[]{0x2UL,0x4000000000000UL});
+		public static readonly BitSet _114_in_specific_catch_clause7909 = new BitSet(new ulong[]{0x0UL,0x100UL});
+		public static readonly BitSet _72_in_specific_catch_clause7913 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
+		public static readonly BitSet _class_type_in_specific_catch_clause7917 = new BitSet(new ulong[]{0x22000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _identifier_in_specific_catch_clause7921 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _RPAREN_in_specific_catch_clause7926 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _block_in_specific_catch_clause7930 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _114_in_general_catch_clause7938 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _block_in_general_catch_clause7942 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _132_in_finally_clause7950 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _block_in_finally_clause7954 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _116_in_checked_statement7962 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _block_in_checked_statement7966 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _190_in_unchecked_statement7974 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _block_in_unchecked_statement7978 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _149_in_lock_statement7986 = new BitSet(new ulong[]{0x0UL,0x100UL});
+		public static readonly BitSet _72_in_lock_statement7990 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _expression_in_lock_statement7993 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _RPAREN_in_lock_statement7997 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
+		public static readonly BitSet _embedded_statement_in_lock_statement8001 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _USING_in_using_statement8009 = new BitSet(new ulong[]{0x0UL,0x100UL});
+		public static readonly BitSet _72_in_using_statement8013 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20ABUL});
+		public static readonly BitSet _resource_acquisition_in_using_statement8018 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _RPAREN_in_using_statement8022 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
+		public static readonly BitSet _embedded_statement_in_using_statement8027 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _local_variable_declaration_in_resource_acquisition8035 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_in_resource_acquisition8040 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _199_in_yield_statement8049 = new BitSet(new ulong[]{0x0UL,0x0UL,0x100000000000UL});
+		public static readonly BitSet _172_in_yield_statement8053 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _expression_in_yield_statement8057 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _SEMI_in_yield_statement8061 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _199_in_yield_statement8068 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _110_in_yield_statement8072 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _SEMI_in_yield_statement8076 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _set_in_identifier8232 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _set_in_identifier8376 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _using_directives_in_synpred1_cs87 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _namespace_declaration_in_synpred3_cs101 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _generic_argument_list_in_synpred8_cs176 = new BitSet(new ulong[]{0x2UL});
@@ -62088,33 +61985,31 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _interface_set_accessor_declaration_in_synpred568_cs6603 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _labeled_statement_in_synpred590_cs6888 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _declaration_statement_in_synpred591_cs6893 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _block_in_synpred592_cs6906 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _empty_statement_in_synpred593_cs6911 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_statement_in_synpred594_cs6916 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _70_in_synpred606_cs7041 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _variable_reference_in_synpred606_cs7045 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _statement_list_in_synpred608_cs7081 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _statement_in_synpred609_cs7094 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _type_in_synpred611_cs7157 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _193_in_synpred612_cs7162 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_synpred615_cs7210 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _invocation_expression_in_synpred619_cs7315 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _object_creation_expression_in_synpred620_cs7320 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _assignment_in_synpred621_cs7325 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _else_statement_in_synpred623_cs7370 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _for_condition_in_synpred632_cs7590 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _local_variable_declaration_in_synpred634_cs7616 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_synpred642_cs7804 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_synpred643_cs7821 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _185_in_synpred645_cs7840 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _block_in_synpred645_cs7844 = new BitSet(new ulong[]{0x0UL,0x4000000000000UL});
-		public static readonly BitSet _catch_clauses_in_synpred645_cs7848 = new BitSet(new ulong[]{0x2UL,0x0UL,0x10UL});
-		public static readonly BitSet _finally_clause_in_synpred645_cs7852 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _specific_catch_clauses_in_synpred647_cs7877 = new BitSet(new ulong[]{0x2UL,0x4000000000000UL});
-		public static readonly BitSet _general_catch_clause_in_synpred647_cs7881 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _identifier_in_synpred650_cs7924 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _local_variable_declaration_in_synpred651_cs8038 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _set_in_synpred708_cs8235 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_statement_in_synpred593_cs6913 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _70_in_synpred605_cs7038 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _variable_reference_in_synpred605_cs7042 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _statement_list_in_synpred607_cs7078 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _statement_in_synpred608_cs7091 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _type_in_synpred610_cs7154 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _193_in_synpred611_cs7159 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_in_synpred614_cs7207 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _invocation_expression_in_synpred618_cs7312 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _object_creation_expression_in_synpred619_cs7317 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _assignment_in_synpred620_cs7322 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _else_statement_in_synpred622_cs7367 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _for_condition_in_synpred631_cs7587 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _local_variable_declaration_in_synpred633_cs7613 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_in_synpred641_cs7801 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expression_in_synpred642_cs7818 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _185_in_synpred644_cs7837 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _block_in_synpred644_cs7841 = new BitSet(new ulong[]{0x0UL,0x4000000000000UL});
+		public static readonly BitSet _catch_clauses_in_synpred644_cs7845 = new BitSet(new ulong[]{0x2UL,0x0UL,0x10UL});
+		public static readonly BitSet _finally_clause_in_synpred644_cs7849 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _specific_catch_clauses_in_synpred646_cs7874 = new BitSet(new ulong[]{0x2UL,0x4000000000000UL});
+		public static readonly BitSet _general_catch_clause_in_synpred646_cs7878 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _identifier_in_synpred649_cs7921 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _local_variable_declaration_in_synpred650_cs8035 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _set_in_synpred707_cs8232 = new BitSet(new ulong[]{0x2UL});
 	}
 	#endregion Follow sets
 }

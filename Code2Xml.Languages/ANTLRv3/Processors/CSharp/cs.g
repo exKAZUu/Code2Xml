@@ -874,7 +874,7 @@ statement:
 	| embedded_statement ;
 embedded_statement:
 	block
-	| empty_statement
+	//| empty_statement	// TODO
 	| expression_statement
 	| selection_statement
 	| iteration_statement
