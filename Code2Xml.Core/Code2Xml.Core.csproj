@@ -131,6 +131,8 @@
     <Compile Include="Processors\ProcessorUsingExternalParser.cs" />
     <Compile Include="Processors\ProcessorUsingExternalParserAndOwnCodeGenerator.cs" />
     <Compile Include="Processors\ProcessorUsingExternalProcessor.cs" />
+    <Compile Include="Traversal\Traversal.cs" />
+    <Compile Include="Tree\SyntaxTree.cs" />
     <Compile Include="XmlToCodes\XmlToCodeBase.cs" />
     <Compile Include="CodeToXmls\CodeToXmlContract.cs" />
     <Compile Include="CodeToXmls\CodeToXml.cs" />
@@ -144,6 +146,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Tree.NET\TreeDotNet\TreeDotNet.csproj">
+      <Project>{0fe882e3-623b-4438-bf66-3a13c4a6b888}</Project>
+      <Name>TreeDotNet</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
