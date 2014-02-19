@@ -168,5 +168,106 @@ namespace Code2Xml.Core {
                 element = element.Parent;
             }
         }
+
+		public static IEnumerable<XElement> AncestorsAndSelf(this XElement element, int depth) {
+			for (int count = depth; count >= 0 && element != null; count--) {
+				yield return element;
+				element = element.Parent;
+			}
+		}
+
+		public static IEnumerable<XElement> AncestorsOfOnlyChild(this XElement element) {
+			while (element.Parent != null && element.Parent.Elements().Count() == 1) {
+				element = element.Parent;
+				yield return element;
+			}
+		}
+
+		public static IEnumerable<XElement> AncestorsOfOnlyChildAndSelf(this XElement element) {
+			yield return element;
+			while (element.Parent != null && element.Parent.Elements().Count() == 1) {
+				element = element.Parent;
+				yield return element;
+			}
+		}
+
+		public static IEnumerable<XElement> FirstDescendants(this XElement element) {
+			while (true) {
+				element = element.FirstElementOrDefault();
+				if (element == null) {
+					yield break;
+				}
+				yield return element;
+			}
+		}
+
+		public static IEnumerable<List<XElement>> Descendants(this XElement element, int depth) {
+			var elements = new List<XElement> { element };
+			for (int count = depth - 1; count >= 0; count--) {
+				elements = elements.Where(e => !e.IsTokenSet()).Elements().ToList();
+				yield return elements;
+			}
+		}
+
+		public static IEnumerable<XElement> DescendantsOfOnlyChild(this XElement element) {
+			while (element.Elements().Count() == 1) {
+				element = element.Elements().First();
+				if (element.IsTokenSet()) {
+					break;
+				}
+				yield return element;
+			}
+		}
+
+		public static IEnumerable<XElement> DescendantsOfOnlyChildAndSelf(this XElement element) {
+			yield return element;
+			while (element.Elements().Count() == 1) {
+				element = element.Elements().First();
+				if (element.IsTokenSet()) {
+					break;
+				}
+				yield return element;
+			}
+		}
+
+		public static IEnumerable<XElement> Siblings(this XElement element) {
+			foreach (var e in element.ElementsBeforeSelf()) {
+				yield return e;
+			}
+			foreach (var e in element.ElementsAfterSelf()) {
+				yield return e;
+			}
+		}
+
+		public static IEnumerable<XElement> Siblings(this XElement element, int eachLength) {
+			foreach (var e in element.ElementsBeforeSelf().Reverse().Take(eachLength).Reverse()) {
+				yield return e;
+			}
+			foreach (var e in element.ElementsAfterSelf().Take(eachLength)) {
+				yield return e;
+			}
+		}
+
+		public static IEnumerable<XElement> SiblingsAndSelf(this XElement element) {
+			var p = element.Parent;
+			if (p == null) {
+				return Enumerable.Repeat(element, 1);
+			}
+			return p.Elements();
+		}
+
+		public static string NameOrTokenText(this XElement element) {
+			return element.IsTokenSet() ? element.TokenText() : element.Name();
+		}
+
+		public static string NameWithId(this XElement element) {
+			return element.Name() + element.Attribute("id").Value;
+		}
+
+		public static string NameOrTokenWithId(this XElement element) {
+			return element.IsTokenSet()
+					? element.Name() + element.Attribute("id").Value + element.TokenText()
+					: element.Name() + element.Attribute("id").Value;
+		}
     }
 }
