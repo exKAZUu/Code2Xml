@@ -290,10 +290,18 @@ namespace Code2Xml.Core.Location {
 		#region Locate a node of an AST
 
 		public static CodeRange Locate(XElement element) {
-			return LocatePrivate(element.DescendantsAndSelf());
+			return LocatePrivate(element.DescendantsAndSelf().Where(e => e.IsToken()));
 		}
 
 		public static CodeRange Locate(IEnumerable<XElement> elements) {
+			return LocatePrivate(elements.DescendantsAndSelf().Where(e => e.IsToken()));
+		}
+
+		public static CodeRange LocateWithHidden(XElement element) {
+			return LocatePrivate(element.DescendantsAndSelf());
+		}
+
+		public static CodeRange LocateWithHidden(IEnumerable<XElement> elements) {
 			return LocatePrivate(elements.DescendantsAndSelf());
 		}
 
