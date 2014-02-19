@@ -82,10 +82,25 @@ public class Hello {
 		System.out.println(1);
 	}
 }");
-			var elem = xml.Descendants("statement").First();
-			var pos = CodeRange.Locate(elem);
-			Assert.That(pos.FindInnermostElement(xml), Is.EqualTo(elem));
-			Assert.That(pos.FindOutermostElement(xml), Is.EqualTo(elem.Parent));
+			var stmt = xml.Descendants("statement").First();
+			var pos = CodeRange.Locate(stmt);
+			Assert.That(pos.FindInnermostElement(xml), Is.EqualTo(stmt));
+			Assert.That(pos.FindOutermostElement(xml), Is.EqualTo(stmt.Parent));
+		}
+
+		[Test]
+		public void Locate() {
+			var code = @"
+public class Hello {
+	public static void main(String[] args) {
+	}
+}";
+			var xml = new JavaProcessorUsingAntlr3().GenerateXml(code);
+			var id = xml.Descendants("IDENTIFIER").First();
+			var pos = CodeRange.Locate(id);
+			var indicies = pos.ConvertToIndicies(code);
+			var fragment = code.Substring(indicies.Item1, indicies.Item2 - indicies.Item1);
+			Assert.That(fragment, Is.EqualTo(id.TokenText()));
 		}
 
 		[Test]
@@ -107,7 +122,7 @@ public class Hello {
 			range.ConvertToIndicies(code, out inclusiveStart, out exclusiveEnd);
 			Assert.That(
 					code.Substring(inclusiveStart, exclusiveEnd - inclusiveStart),
-					Is.EqualTo(elem.Text()));
+					Is.EqualTo(elem.Text().Trim()));
 			return range;
 		}
 
