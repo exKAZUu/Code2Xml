@@ -225,7 +225,10 @@ namespace Code2Xml.Core.Location {
 
 		public string GetCodeFragment(string code) {
 			var indicies = ConvertToIndicies(code);
-			return code.Substring(indicies.Item1, indicies.Item2 - indicies.Item1);
+			var length = indicies.Item2 - indicies.Item1;
+			return length != 0
+					? code.Substring(indicies.Item1, indicies.Item2 - indicies.Item1)
+					: string.Empty;
 		}
 
 		public string GetCodeFragment(StructuredCode code) {

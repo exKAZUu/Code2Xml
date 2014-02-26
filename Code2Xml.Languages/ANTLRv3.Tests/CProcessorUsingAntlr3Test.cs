@@ -26,7 +26,7 @@ using ParserTests;
 
 namespace Code2Xml.Languages.ANTLRv3.Tests {
 	[TestFixture]
-	public class CProcessorTest : ProcessorTest {
+	public class CProcessorUsingAntlr3Test : ProcessorTest {
 		protected override Processor CreateProcessor() {
 			return new CProcessorUsingAntlr3();
 		}

@@ -58,7 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CProcessorTest.cs" />
+    <Compile Include="CProcessorUsingAntlr3Test.cs" />
     <Compile Include="LuaProcessorUsingAntlr3Test.cs" />
     <Compile Include="FileCacheProcessorTest.cs" />
     <Compile Include="TestProcessorTest.cs" />

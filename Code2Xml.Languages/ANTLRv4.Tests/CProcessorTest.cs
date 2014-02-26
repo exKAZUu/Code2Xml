@@ -46,14 +46,14 @@ pvariant = (__extension__ ({ __typeof__ (stype[0]) __x = (stype[0]); (void) __ct
 		}
 
 		[Test]
-		[TestCase("preprocessed.c")]
+		[TestCase("assignment.c")]
 		public void ParseFile(string fileName) {
 			VerifyRestoringFile("C", fileName);
 		}
 
-		[Test]
-		[TestCase(@"FiniteStateEntropy")]
-		[TestCase(@"greatest")]
+		//[Test]
+		//[TestCase(@"FiniteStateEntropy")]	// TODO: Import ANTLR3 grammar
+		//[TestCase(@"greatest")]			// TODO: Import ANTLR3 grammar
 		//[TestCase(@"libgit2")]
 		//[TestCase(@"the_silver_searcher")]
 		//[TestCase(@"twemproxy")]
