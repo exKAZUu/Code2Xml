@@ -65,7 +65,7 @@
     <Compile Include="PhpProcessorTest.cs" />
     <Compile Include="JavaScriptProcessorTest.cs" />
     <Compile Include="CSharpProcessorTest.cs" />
-    <Compile Include="JavaProcessorTest.cs" />
+    <Compile Include="JavaProcessorUsingAntlr3Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

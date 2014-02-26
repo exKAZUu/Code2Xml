@@ -40,46 +40,40 @@ pvariant = (__extension__ ({ __typeof__ (stype[0]) __x = (stype[0]); (void) __ct
 		[TestCase(@"enum e { a = 0, };")]
 		[TestCase(@"struct s { struct { int a; } b; struct { int c; }; };")]
 		[TestCase(@"char cs[] = ""\xa5\xc2\x28\x1a"";")]
-		[TestCase(@"typedef struct option option_t;
-void main() {
-	int x;
-	x = (option_t){ ((void *)0), 0, ((void *)0), 0 };
-}
-")]
+//		[TestCase(@"typedef struct option option_t;
+//void main() {
+//	int x;
+//	x = (option_t){ ((void *)0), 0, ((void *)0), 0 };
+//}
+//")]
 		public void Parse(string code) {
 			VerifyRestoringCode(code);
 		}
 
 		[Test]
-		[TestCase("preprocessed.c")]
+		[TestCase("assignment.c")]
 		public void ParseFile(string fileName) {
 			VerifyRestoringFile("C", fileName);
 		}
 
 		[Test]
-		public void Test() {
-			var processor = CreateProcessor();
-			processor.GenerateXml(new FileInfo(@"C:\Users\exKAZUu\Desktop\test.c"));
-		}
-
-		[Test]
 		[TestCase(@"FiniteStateEntropy")]
 		[TestCase(@"greatest")]
-		[TestCase(@"libgit2")]
-		[TestCase(@"the_silver_searcher")]
-		[TestCase(@"twemproxy")]
-		[TestCase(@"bfgminer")]
-		[TestCase(@"Cinnamon")]
-		[TestCase(@"ejoy2d")]
-		[TestCase(@"exploit-database")]
-		[TestCase(@"lwan")]
-		[TestCase(@"micropython")]
-		[TestCase(@"redis")]
-		[TestCase(@"watchman")]
-		[TestCase(@"frida-core")]
-		[TestCase(@"libgdx")]
-		[TestCase(@"libuv")]
-		[TestCase(@"algo")]
+		//[TestCase(@"libgit2")]
+		//[TestCase(@"the_silver_searcher")]
+		//[TestCase(@"twemproxy")]
+		//[TestCase(@"bfgminer")]
+		//[TestCase(@"Cinnamon")]
+		//[TestCase(@"ejoy2d")]
+		//[TestCase(@"exploit-database")]
+		//[TestCase(@"lwan")]
+		//[TestCase(@"micropython")]
+		//[TestCase(@"redis")]
+		//[TestCase(@"watchman")]
+		//[TestCase(@"frida-core")]
+		//[TestCase(@"libgdx")]
+		//[TestCase(@"libuv")]
+		//[TestCase(@"algo")]
 		public void ParseDirectory(string directoryName) {
 			var path = Fixture.GetInputProjectPath("C", directoryName);
 			var filePaths = Directory.GetFiles(path, "*.c", SearchOption.AllDirectories);

@@ -16,37 +16,24 @@
 
 #endregion
 
-using System;
 using System.Linq;
-using Code2Xml.Core;
-using Code2Xml.Core.Tests;
-using Code2Xml.Languages.ExternalProcessors.Processors.Python;
+using System.Xml.Linq;
+using Code2Xml.Core.Location;
+using Code2Xml.Languages.ANTLRv3.Processors.Java;
 using NUnit.Framework;
 
-namespace Code2Xml.Languages.ExternalProcessors.Tests {
+namespace Code2Xml.Core.Tests.Location {
 	[TestFixture]
-	public class Python3ProcessorTest : ProcessorTest {
-		protected override Processor CreateProcessor() {
-			return new Python3Processor();
-		}
-
+	public class CodeLocationTest {
 		[Test]
-		[TestCase("a = 1\n\n")]
-		[TestCase("a = 1\nb = 2\n\n")]
-		public void Parse(string code) {
-			VerifyRestoringCode(code);
-		}
-
-		[Test]
-		public void AnalyzeLocation() {
-			var code = @"
-a = 1
-if b == 2:
-    c = 3
-d = 4";
-			var xml = new Python3Processor().GenerateXml(code);
-			VerifyLocation(code, xml);
-			Console.WriteLine(xml);
+		[TestCase(2, 2, "aaa\r\nbbb", 3, 3)]
+		[TestCase(2, 2, "aaa\r\n", 3, 0)]
+		[TestCase(2, 2, "aaa", 2, 5)]
+		public void Advance(
+				int startLine, int startPos, string text, int endLine, int endPos) {
+			var startLocation = new CodeLocation(startLine, startPos);
+			var endLocation = startLocation.Advance(text);
+			Assert.That(endLocation, Is.EqualTo(new CodeLocation(endLine, endPos)));
 		}
 	}
 }

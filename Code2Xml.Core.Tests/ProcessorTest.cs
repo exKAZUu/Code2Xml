@@ -18,6 +18,9 @@
 
 using System;
 using System.IO;
+using System.Linq;
+using System.Xml.Linq;
+using Code2Xml.Core.Location;
 using NUnit.Framework;
 using Paraiba.Xml;
 using ParserTests;
@@ -54,6 +57,14 @@ namespace Code2Xml.Core.Tests {
 			Assert.That(code2, Is.EqualTo(code));
 			if (write) {
 				Console.WriteLine(xml);
+			}
+			VerifyLocation(code, xml);
+		}
+
+		protected void VerifyLocation(string code, XElement ast) {
+			var es = ast.Descendants().Where(e => e.Attribute("startpos") != null);
+			foreach (var e in es) {
+				Assert.That(CodeRange.LocateIncludingHidden(e).GetCodeFragment(code), Is.EqualTo(e.Text()));
 			}
 		}
 

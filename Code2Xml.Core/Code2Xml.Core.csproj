@@ -120,6 +120,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Location\StructuredCode.cs" />
     <Compile Include="Processors\FileCacheProcessor.cs" />
     <Compile Include="Processors\MemoryCacheProcessor.cs" />
     <Compile Include="Code2XmlConstants.cs" />

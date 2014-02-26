@@ -309,11 +309,11 @@ namespace Code2Xml.Core.Tree
 		}
 
 		public Token(string token) {
-			TokenText = token;
+			TokenText = token ?? "";
 		}
 
 		public Token(string token, CodeRange codeRange) {
-			TokenText = token;
+			TokenText = token ?? "";
 			CodeRange = codeRange;
 		}
 	}

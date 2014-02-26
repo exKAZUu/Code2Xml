@@ -1122,17 +1122,16 @@ NUMBER:
 GooBall
 @after		
 {
-	CommonToken int_literal = new CommonToken(NUMBER, $dil.text);
-	CommonToken dot = new CommonToken(DOT, ".");
-	CommonToken iden = new CommonToken(IDENTIFIER, $s.text);
-	
-	Emit(int_literal); 
-	Emit(dot); 
-	Emit(iden); 
+	dil.Type = NUMBER;
+	d.Type = DOT;
+	s.Type = IDENTIFIER;
+	Emit(dil); 
+	Emit(d); 
+	Emit(s); 
 	Debug.WriteLine("\tFound GooBall {0}", $text); 
 }
 	:
-	dil = Decimal_integer_literal d = '.' s=GooBallIdentifier
+	dil = Decimal_integer_literal d = Dot s = GooBallIdentifier
 	;
 
 fragment GooBallIdentifier
@@ -1333,6 +1332,9 @@ UnicodeEscapeSequence
 fragment
 Decimal_integer_literal:
     Decimal_digits   INTEGER_TYPE_SUFFIX? ;
+fragment
+Dot:
+    '.' ;
 //--------------------------------------------------------
 Hex_number:
     '0'('x'|'X')   HEX_DIGITS   INTEGER_TYPE_SUFFIX? ;

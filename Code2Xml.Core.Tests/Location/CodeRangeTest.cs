@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2013 Kazunori Sakamoto
+// Copyright (C) 2011-2014 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,52 +26,65 @@ namespace Code2Xml.Core.Tests.Location {
 	[TestFixture]
 	public class CodeRangeTest {
 		[Test]
-		[TestCase(1, 1, Result = false)]
-		[TestCase(1, 3, Result = false)]
-		[TestCase(1, 5, Result = true)]
-		[TestCase(1, 6, Result = true)]
-		[TestCase(2, 0, Result = true)]
-		[TestCase(2, 3, Result = true)]
-		[TestCase(2, 4, Result = false)]
+		[TestCase(1, 10, Result = false)]
+		[TestCase(2, 1, Result = false)]
+		[TestCase(2, 3, Result = false)]
+		[TestCase(2, 5, Result = true)]
+		[TestCase(2, 6, Result = true)]
+		[TestCase(3, 0, Result = true)]
+		[TestCase(3, 3, Result = false)]
+		[TestCase(3, 4, Result = false)]
+		[TestCase(5, 0, Result = false)]
 		public bool ContainsCodeLocation(int line, int pos) {
-			return new CodeRange(new CodeLocation(1, 5), new CodeLocation(2, 3))
+			return new CodeRange(new CodeLocation(2, 5), new CodeLocation(3, 3))
 					.Contains(new CodeLocation(line, pos));
 		}
 
 		[Test]
-		[TestCase(1, 0, 1, 1, Result = false)]
-		[TestCase(1, 0, 1, 5, Result = false)]
-		[TestCase(1, 0, 1, 6, Result = false)]
-		[TestCase(1, 5, 1, 6, Result = true)]
-		[TestCase(1, 5, 2, 1, Result = true)]
-		[TestCase(1, 5, 2, 3, Result = true)]
-		[TestCase(1, 5, 2, 8, Result = false)]
-		[TestCase(2, 7, 2, 8, Result = false)]
+		[TestCase(1, 0, 2, 1, Result = false)]
+		[TestCase(1, 0, 2, 5, Result = false)]
+		[TestCase(1, 0, 2, 10, Result = false)]
+		[TestCase(1, 0, 3, 10, Result = false)]
+		[TestCase(2, 0, 2, 1, Result = false)]
+		[TestCase(2, 0, 2, 5, Result = false)]
+		[TestCase(2, 0, 2, 10, Result = false)]
+		[TestCase(2, 0, 3, 10, Result = false)]
+		[TestCase(2, 5, 2, 10, Result = true)]
+		[TestCase(2, 5, 3, 1, Result = true)]
+		[TestCase(2, 5, 3, 3, Result = true)]
+		[TestCase(2, 5, 3, 10, Result = false)]
+		[TestCase(3, 7, 3, 8, Result = false)]
 		public bool ContainsCodePosition(int startLine, int startPos, int endLine, int endPos) {
 			var startLocation = new CodeLocation(startLine, startPos);
 			var endLocation = new CodeLocation(endLine, endPos);
-			return new CodeRange(new CodeLocation(1, 5), new CodeLocation(2, 3))
+			return new CodeRange(new CodeLocation(2, 5), new CodeLocation(3, 3))
 					.Contains(new CodeRange(startLocation, endLocation));
 		}
 
 		[Test]
-		[TestCase(1, 0, 1, 1, false)]
-		[TestCase(1, 0, 1, 5, true)]
-		[TestCase(1, 0, 1, 6, true)]
-		[TestCase(1, 5, 1, 6, true)]
-		[TestCase(1, 5, 2, 1, true)]
-		[TestCase(1, 5, 2, 3, true)]
-		[TestCase(1, 5, 2, 8, true)]
-		[TestCase(2, 7, 2, 8, false)]
-		public void Overlaps(
-				int startLine, int startPos, int endLine, int endPos, bool contained) {
-			Assert.That(
-					new CodeRange(new CodeLocation(1, 5), new CodeLocation(2, 3))
-							.Overlaps(
-									new CodeRange(
-											new CodeLocation(startLine, startPos),
-											new CodeLocation(endLine, endPos))),
-					Is.EqualTo(contained));
+		[TestCase(1, 0, 2, 1, Result = false)]
+		[TestCase(1, 0, 2, 5, Result = false)]
+		[TestCase(1, 0, 2, 6, Result = true)]
+		[TestCase(1, 0, 2, 10, Result = true)]
+		[TestCase(1, 0, 3, 10, Result = true)]
+		[TestCase(2, 0, 2, 1, Result = false)]
+		[TestCase(2, 0, 2, 5, Result = false)]
+		[TestCase(2, 0, 2, 6, Result = true)]
+		[TestCase(2, 0, 2, 10, Result = true)]
+		[TestCase(2, 0, 3, 10, Result = true)]
+		[TestCase(2, 5, 2, 10, Result = true)]
+		[TestCase(2, 5, 3, 1, Result = true)]
+		[TestCase(2, 5, 3, 3, Result = true)]
+		[TestCase(2, 5, 3, 10, Result = true)]
+		[TestCase(3, 2, 3, 8, Result = true)]
+		[TestCase(3, 3, 3, 8, Result = false)]
+		[TestCase(3, 7, 3, 8, Result = false)]
+		public bool Overlaps(int startLine, int startPos, int endLine, int endPos) {
+			return new CodeRange(new CodeLocation(2, 5), new CodeLocation(3, 3))
+					.Overlaps(
+							new CodeRange(
+									new CodeLocation(startLine, startPos),
+									new CodeLocation(endLine, endPos)));
 		}
 
 		[Test]
@@ -97,10 +110,9 @@ public class Hello {
 }";
 			var xml = new JavaProcessorUsingAntlr3().GenerateXml(code);
 			var id = xml.Descendants("IDENTIFIER").First();
-			var pos = CodeRange.Locate(id);
-			var indicies = pos.ConvertToIndicies(code);
-			var fragment = code.Substring(indicies.Item1, indicies.Item2 - indicies.Item1);
-			Assert.That(fragment, Is.EqualTo(id.TokenText()));
+			var range = CodeRange.Locate(id);
+			Assert.That(range.GetCodeFragment(code), Is.EqualTo(id.TokenText()));
+			Assert.That(range.GetCodeFragment(new StructuredCode(code)), Is.EqualTo(id.TokenText()));
 		}
 
 		[Test]
@@ -123,6 +135,11 @@ public class Hello {
 			Assert.That(
 					code.Substring(inclusiveStart, exclusiveEnd - inclusiveStart),
 					Is.EqualTo(elem.Text().Trim()));
+
+			range.ConvertToIndicies(new StructuredCode(code), out inclusiveStart, out exclusiveEnd);
+			Assert.That(
+					code.Substring(inclusiveStart, exclusiveEnd - inclusiveStart),
+					Is.EqualTo(elem.Text().Trim()));
 			return range;
 		}
 
@@ -142,17 +159,13 @@ public class Hello {
 			Assert.That(newRange, Is.EqualTo(range));
 			Assert.That(newInclusiveStart, Is.EqualTo(inclusiveStart));
 			Assert.That(newExclusiveEnd, Is.EqualTo(exclusiveEnd));
-		}
 
-		[Test]
-		[TestCase(2, 2, "aaa\r\nbbb", 3, 2)]
-		[TestCase(2, 2, "aaa\r\n", 2, 6)]
-		[TestCase(2, 2, "aaa", 2, 4)]
-		public void CalculateInclusiveEndLocation(
-				int startLine, int startPos, string text, int endLine, int endPos) {
-			var startLocation = new CodeLocation(startLine, startPos);
-			var endLocation = CodeRange.CalculateInclusiveEndLocation(startLocation, text);
-			Assert.That(endLocation, Is.EqualTo(new CodeLocation(endLine, endPos)));
+			var scode = new StructuredCode(code);
+			Assert.That(
+					CodeRange.ConvertFromIndicies(scode, inclusiveStart, exclusiveEnd), Is.EqualTo(range));
+			newRange.ConvertToIndicies(scode, out newInclusiveStart, out newExclusiveEnd);
+			Assert.That(newInclusiveStart, Is.EqualTo(inclusiveStart));
+			Assert.That(newExclusiveEnd, Is.EqualTo(exclusiveEnd));
 		}
 	}
 }

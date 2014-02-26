@@ -91,5 +91,38 @@ namespace Code2Xml.Core.Location {
 		public static bool operator !=(CodeLocation location1, CodeLocation location2) {
 			return location1.CompareTo(location2) != 0;
 		}
+
+		public CodeLocation Advance(string code) {
+			return ConvertFromIndex(code, code.Length, Line, Position, 0);
+		}
+
+		public static CodeLocation ConvertFromIndex(string code, int index) {
+			return ConvertFromIndex(code, index, 1, 0, 0);
+		}
+
+		public static CodeLocation ConvertFromIndex(string code, int index, CodeLocation startLocation, int startIndex) {
+			return ConvertFromIndex(code, index, startLocation.Line, startLocation.Position, startIndex);
+		}
+
+		public static CodeLocation ConvertFromIndex(StructuredCode code, int index) {
+			return code.GetLocation(index);
+		}
+
+		public static CodeLocation ConvertFromIndex(StructuredCode code, int index, CodeLocation startLocation) {
+			return code.GetLocation(index, startLocation);
+		}
+
+		private static CodeLocation ConvertFromIndex(string code, int endIndex, int startLine, int startPosition, int startIndex) {
+			var i = startIndex;
+			for (; i < endIndex; i++) {
+				if (code[i] != '\n') {
+					startPosition++;
+				} else {
+					startLine++;
+					startPosition = 0;
+				}
+			}
+			return new CodeLocation(startLine, startPosition);
+		}
 	}
 }

@@ -20,8 +20,8 @@ namespace Code2Xml.Core {
 	public class Code2XmlConstants {
 		public const string StartLineName = "startline";
 		public const string StartPositionName = "startpos";
-		public const string EndLineName = "endline";
-		public const string EndPositionName = "endpos";
+		public const string EndLineName = "endline";	// Inclusive 
+		public const string EndPositionName = "endpos";	// Inclusive 
 		public const string HiddenAttributeName = "hidden";
 		public const string IdAttributeName = "id";
 

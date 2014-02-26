@@ -10,7 +10,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g 2014-01-25 13:05:28
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g 2014-02-26 17:33:34
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -37,7 +37,7 @@ namespace  Code2Xml.Languages.ANTLRv3.Processors.CSharp
 public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "COMMENT", "Character_literal", "DECIMAL_DIGIT", "DEFINE", "DEFINE_TOKEN", "DOC_LINE_COMMENT", "DOT", "Decimal_digits", "Decimal_integer_literal", "ELIF", "ELSE", "ELSE_TOKEN", "ENDIF", "ENDIF_TOKEN", "ENUM", "EscapeSequence", "Exponent_part", "FALSE", "GET", "GT", "GooBall", "GooBallIdentifier", "HEX_DIGIT", "HEX_DIGITS", "Hex_number", "IDENTIFIER", "IF", "IF_TOKEN", "INTEGER_TYPE_SUFFIX", "IdentifierPart", "IdentifierStart", "LINE_COMMENT", "MINUS", "NULL", "NUMBER", "PP_AND_EXPRESSION", "PP_CONDITIONAL", "PP_EQUALITY_EXPRESSION", "PP_EXPRESSION", "PP_OR_EXPRESSION", "PP_PRIMARY_EXPRESSION", "PP_UNARY_EXPRESSION", "PRAGMA", "PREPROCESSOR_DIRECTIVE", "PTR", "RPAREN", "Real_literal", "Real_type_suffix", "SEMI", "SET", "STRINGLITERAL", "Sign", "TRUE", "TS", "UNDEF", "UNDEF_TOKEN", "USING", "UnicodeEscapeSequence", "Verbatim_string_literal", "Verbatim_string_literal_character", "WS", "'!'", "'!='", "'%'", "'%='", "'&&'", "'&'", "'&='", "'('", "'*'", "'*='", "'+'", "'++'", "'+='", "','", "'--'", "'-='", "'/'", "'/='", "':'", "'::'", "'<'", "'<<'", "'<<='", "'<='", "'='", "'=='", "'=>'", "'>='", "'?'", "'??'", "'['", "']'", "'^'", "'^='", "'__arglist'", "'abstract'", "'add'", "'alias'", "'as'", "'ascending'", "'assembly'", "'async'", "'await'", "'base'", "'bool'", "'break'", "'by'", "'byte'", "'case'", "'catch'", "'char'", "'checked'", "'class'", "'const'", "'continue'", "'decimal'", "'default'", "'delegate'", "'descending'", "'do'", "'double'", "'dynamic'", "'equals'", "'event'", "'explicit'", "'extern'", "'field'", "'finally'", "'fixed'", "'float'", "'for'", "'foreach'", "'from'", "'goto'", "'group'", "'implicit'", "'in'", "'int'", "'interface'", "'internal'", "'into'", "'is'", "'join'", "'let'", "'lock'", "'long'", "'method'", "'module'", "'namespace'", "'new'", "'object'", "'on'", "'operator'", "'orderby'", "'out'", "'override'", "'param'", "'params'", "'partial'", "'pragma'", "'private'", "'property'", "'protected'", "'public'", "'readonly'", "'ref'", "'remove'", "'return'", "'sbyte'", "'sealed'", "'select'", "'short'", "'sizeof'", "'stackalloc'", "'static'", "'string'", "'struct'", "'switch'", "'this'", "'throw'", "'try'", "'type'", "'typeof'", "'uint'", "'ulong'", "'unchecked'", "'unsafe'", "'ushort'", "'var'", "'virtual'", "'void'", "'volatile'", "'where'", "'while'", "'yield'", "'{'", "'|'", "'|='", "'||'", "'}'", "'~'"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "COMMENT", "Character_literal", "DECIMAL_DIGIT", "DEFINE", "DEFINE_TOKEN", "DOC_LINE_COMMENT", "DOT", "Decimal_digits", "Decimal_integer_literal", "Dot", "ELIF", "ELSE", "ELSE_TOKEN", "ENDIF", "ENDIF_TOKEN", "ENUM", "EscapeSequence", "Exponent_part", "FALSE", "GET", "GT", "GooBall", "GooBallIdentifier", "HEX_DIGIT", "HEX_DIGITS", "Hex_number", "IDENTIFIER", "IF", "IF_TOKEN", "INTEGER_TYPE_SUFFIX", "IdentifierPart", "IdentifierStart", "LINE_COMMENT", "MINUS", "NULL", "NUMBER", "PP_AND_EXPRESSION", "PP_CONDITIONAL", "PP_EQUALITY_EXPRESSION", "PP_EXPRESSION", "PP_OR_EXPRESSION", "PP_PRIMARY_EXPRESSION", "PP_UNARY_EXPRESSION", "PRAGMA", "PREPROCESSOR_DIRECTIVE", "PTR", "RPAREN", "Real_literal", "Real_type_suffix", "SEMI", "SET", "STRINGLITERAL", "Sign", "TRUE", "TS", "UNDEF", "UNDEF_TOKEN", "USING", "UnicodeEscapeSequence", "Verbatim_string_literal", "Verbatim_string_literal_character", "WS", "'!'", "'!='", "'%'", "'%='", "'&&'", "'&'", "'&='", "'('", "'*'", "'*='", "'+'", "'++'", "'+='", "','", "'--'", "'-='", "'/'", "'/='", "':'", "'::'", "'<'", "'<<'", "'<<='", "'<='", "'='", "'=='", "'=>'", "'>='", "'?'", "'??'", "'['", "']'", "'^'", "'^='", "'__arglist'", "'abstract'", "'add'", "'alias'", "'as'", "'ascending'", "'assembly'", "'async'", "'await'", "'base'", "'bool'", "'break'", "'by'", "'byte'", "'case'", "'catch'", "'char'", "'checked'", "'class'", "'const'", "'continue'", "'decimal'", "'default'", "'delegate'", "'descending'", "'do'", "'double'", "'dynamic'", "'equals'", "'event'", "'explicit'", "'extern'", "'field'", "'finally'", "'fixed'", "'float'", "'for'", "'foreach'", "'from'", "'goto'", "'group'", "'implicit'", "'in'", "'int'", "'interface'", "'internal'", "'into'", "'is'", "'join'", "'let'", "'lock'", "'long'", "'method'", "'module'", "'namespace'", "'new'", "'object'", "'on'", "'operator'", "'orderby'", "'out'", "'override'", "'param'", "'params'", "'partial'", "'pragma'", "'private'", "'property'", "'protected'", "'public'", "'readonly'", "'ref'", "'remove'", "'return'", "'sbyte'", "'sealed'", "'select'", "'short'", "'sizeof'", "'stackalloc'", "'static'", "'string'", "'struct'", "'switch'", "'this'", "'throw'", "'try'", "'type'", "'typeof'", "'uint'", "'ulong'", "'unchecked'", "'unsafe'", "'ushort'", "'var'", "'virtual'", "'void'", "'volatile'", "'where'", "'while'", "'yield'", "'{'", "'|'", "'|='", "'||'", "'}'", "'~'"
 	};
 	public const int EOF=-1;
 	public const int COMMENT=4;
@@ -49,59 +49,59 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	public const int DOT=10;
 	public const int Decimal_digits=11;
 	public const int Decimal_integer_literal=12;
-	public const int ELIF=13;
-	public const int ELSE=14;
-	public const int ELSE_TOKEN=15;
-	public const int ENDIF=16;
-	public const int ENDIF_TOKEN=17;
-	public const int ENUM=18;
-	public const int EscapeSequence=19;
-	public const int Exponent_part=20;
-	public const int FALSE=21;
-	public const int GET=22;
-	public const int GT=23;
-	public const int GooBall=24;
-	public const int GooBallIdentifier=25;
-	public const int HEX_DIGIT=26;
-	public const int HEX_DIGITS=27;
-	public const int Hex_number=28;
-	public const int IDENTIFIER=29;
-	public const int IF=30;
-	public const int IF_TOKEN=31;
-	public const int INTEGER_TYPE_SUFFIX=32;
-	public const int IdentifierPart=33;
-	public const int IdentifierStart=34;
-	public const int LINE_COMMENT=35;
-	public const int MINUS=36;
-	public const int NULL=37;
-	public const int NUMBER=38;
-	public const int PP_AND_EXPRESSION=39;
-	public const int PP_CONDITIONAL=40;
-	public const int PP_EQUALITY_EXPRESSION=41;
-	public const int PP_EXPRESSION=42;
-	public const int PP_OR_EXPRESSION=43;
-	public const int PP_PRIMARY_EXPRESSION=44;
-	public const int PP_UNARY_EXPRESSION=45;
-	public const int PRAGMA=46;
-	public const int PREPROCESSOR_DIRECTIVE=47;
-	public const int PTR=48;
-	public const int RPAREN=49;
-	public const int Real_literal=50;
-	public const int Real_type_suffix=51;
-	public const int SEMI=52;
-	public const int SET=53;
-	public const int STRINGLITERAL=54;
-	public const int Sign=55;
-	public const int TRUE=56;
-	public const int TS=57;
-	public const int UNDEF=58;
-	public const int UNDEF_TOKEN=59;
-	public const int USING=60;
-	public const int UnicodeEscapeSequence=61;
-	public const int Verbatim_string_literal=62;
-	public const int Verbatim_string_literal_character=63;
-	public const int WS=64;
-	public const int T__65=65;
+	public const int Dot=13;
+	public const int ELIF=14;
+	public const int ELSE=15;
+	public const int ELSE_TOKEN=16;
+	public const int ENDIF=17;
+	public const int ENDIF_TOKEN=18;
+	public const int ENUM=19;
+	public const int EscapeSequence=20;
+	public const int Exponent_part=21;
+	public const int FALSE=22;
+	public const int GET=23;
+	public const int GT=24;
+	public const int GooBall=25;
+	public const int GooBallIdentifier=26;
+	public const int HEX_DIGIT=27;
+	public const int HEX_DIGITS=28;
+	public const int Hex_number=29;
+	public const int IDENTIFIER=30;
+	public const int IF=31;
+	public const int IF_TOKEN=32;
+	public const int INTEGER_TYPE_SUFFIX=33;
+	public const int IdentifierPart=34;
+	public const int IdentifierStart=35;
+	public const int LINE_COMMENT=36;
+	public const int MINUS=37;
+	public const int NULL=38;
+	public const int NUMBER=39;
+	public const int PP_AND_EXPRESSION=40;
+	public const int PP_CONDITIONAL=41;
+	public const int PP_EQUALITY_EXPRESSION=42;
+	public const int PP_EXPRESSION=43;
+	public const int PP_OR_EXPRESSION=44;
+	public const int PP_PRIMARY_EXPRESSION=45;
+	public const int PP_UNARY_EXPRESSION=46;
+	public const int PRAGMA=47;
+	public const int PREPROCESSOR_DIRECTIVE=48;
+	public const int PTR=49;
+	public const int RPAREN=50;
+	public const int Real_literal=51;
+	public const int Real_type_suffix=52;
+	public const int SEMI=53;
+	public const int SET=54;
+	public const int STRINGLITERAL=55;
+	public const int Sign=56;
+	public const int TRUE=57;
+	public const int TS=58;
+	public const int UNDEF=59;
+	public const int UNDEF_TOKEN=60;
+	public const int USING=61;
+	public const int UnicodeEscapeSequence=62;
+	public const int Verbatim_string_literal=63;
+	public const int Verbatim_string_literal_character=64;
+	public const int WS=65;
 	public const int T__66=66;
 	public const int T__67=67;
 	public const int T__68=68;
@@ -242,6 +242,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	public const int T__203=203;
 	public const int T__204=204;
 	public const int T__205=205;
+	public const int T__206=206;
 
 	public csParser(ITokenStream input)
 		: this(input, new RecognizerSharedState())
@@ -369,15 +370,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(2, false);
 			int LA2_1 = input.LA(1);
 
-			if ((LA2_1==95))
+			if ((LA2_1==96))
 			{
 				int LA2_2 = input.LA(2);
 
-				if ((LA2_2==105||LA2_2==152))
+				if ((LA2_2==106||LA2_2==153))
 				{
 					int LA2_3 = input.LA(3);
 
-					if ((LA2_3==83))
+					if ((LA2_3==84))
 					{
 						alt2 = 1;
 					}
@@ -410,7 +411,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(3, false);
 			int LA3_1 = input.LA(1);
 
-			if ((LA3_1==153))
+			if ((LA3_1==154))
 			{
 				int LA3_2 = input.LA(2);
 
@@ -513,7 +514,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(42, 2);
-			string_literal5=(IToken)Match(input,153,Follow._153_in_namespace_declaration115); if (state.failed) return retval;
+			string_literal5=(IToken)Match(input,154,Follow._154_in_namespace_declaration115); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal5_tree = (object)adaptor.Create(string_literal5, "string_literal5", retval);
 			adaptor.AddChild(root_0, string_literal5_tree);
@@ -865,66 +866,66 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case GET:
 			case IDENTIFIER:
 			case SET:
-			case 99:
-			case 101:
+			case 100:
 			case 102:
-			case 104:
+			case 103:
 			case 105:
 			case 106:
 			case 107:
-			case 111:
-			case 123:
-			case 126:
+			case 108:
+			case 112:
+			case 124:
 			case 127:
-			case 131:
-			case 137:
-			case 139:
-			case 145:
-			case 147:
+			case 128:
+			case 132:
+			case 138:
+			case 140:
+			case 146:
 			case 148:
-			case 151:
+			case 149:
 			case 152:
-			case 156:
-			case 158:
-			case 161:
-			case 163:
+			case 153:
+			case 157:
+			case 159:
+			case 162:
 			case 164:
-			case 166:
-			case 171:
-			case 175:
-			case 186:
-			case 193:
-			case 197:
-			case 199:
+			case 165:
+			case 167:
+			case 172:
+			case 176:
+			case 187:
+			case 194:
+			case 198:
+			case 200:
 				{
 				alt9 = 1;
 				}
 				break;
-			case 183:
+			case 184:
 				{
 				alt9 = 2;
 				}
 				break;
-			case 108:
+			case 109:
 				{
 				alt9 = 3;
 				}
 				break;
-			case 109:
-			case 112:
-			case 115:
-			case 120:
-			case 125:
-			case 134:
-			case 142:
-			case 150:
-			case 155:
-			case 173:
-			case 176:
-			case 180:
-			case 188:
+			case 110:
+			case 113:
+			case 116:
+			case 121:
+			case 126:
+			case 135:
+			case 143:
+			case 151:
+			case 156:
+			case 174:
+			case 177:
+			case 181:
 			case 189:
-			case 192:
+			case 190:
+			case 193:
 				{
 				alt9 = 4;
 				}
@@ -973,7 +974,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(7, false);
 				int LA7_1 = input.LA(1);
 
-				if ((LA7_1==84))
+				if ((LA7_1==85))
 				{
 					alt7 = 1;
 				}
@@ -985,7 +986,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:50:14: '::' identifier
 					{
 					DebugLocation(50, 14);
-					string_literal15=(IToken)Match(input,84,Follow._84_in_qid_start170); if (state.failed) return retval;
+					string_literal15=(IToken)Match(input,85,Follow._85_in_qid_start170); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal15_tree = (object)adaptor.Create(string_literal15, "string_literal15", retval);
 					adaptor.AddChild(root_0, string_literal15_tree);
@@ -1047,7 +1048,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(51, 4);
-				string_literal18=(IToken)Match(input,183,Follow._183_in_qid_start182); if (state.failed) return retval;
+				string_literal18=(IToken)Match(input,184,Follow._184_in_qid_start182); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal18_tree = (object)adaptor.Create(string_literal18, "string_literal18", retval);
 				adaptor.AddChild(root_0, string_literal18_tree);
@@ -1062,7 +1063,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(52, 4);
-				string_literal19=(IToken)Match(input,108,Follow._108_in_qid_start187); if (state.failed) return retval;
+				string_literal19=(IToken)Match(input,109,Follow._109_in_qid_start187); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal19_tree = (object)adaptor.Create(string_literal19, "string_literal19", retval);
 				adaptor.AddChild(root_0, string_literal19_tree);
@@ -1182,7 +1183,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(10, false);
 			int LA10_1 = input.LA(1);
 
-			if ((LA10_1==85))
+			if ((LA10_1==86))
 			{
 				int LA10_2 = input.LA(2);
 
@@ -1278,7 +1279,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(60, 2);
-			char_literal25=(IToken)Match(input,200,Follow._200_in_namespace_block226); if (state.failed) return retval;
+			char_literal25=(IToken)Match(input,201,Follow._201_in_namespace_block226); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal25_tree = (object)adaptor.Create(char_literal25, "char_literal25", retval);
 			adaptor.AddChild(root_0, char_literal25_tree);
@@ -1290,7 +1291,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, namespace_body26.Tree, namespace_body26, "namespace_body26", retval);
 			DebugLocation(60, 25);
-			char_literal27=(IToken)Match(input,204,Follow._204_in_namespace_block234); if (state.failed) return retval;
+			char_literal27=(IToken)Match(input,205,Follow._205_in_namespace_block234); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal27_tree = (object)adaptor.Create(char_literal27, "char_literal27", retval);
 			adaptor.AddChild(root_0, char_literal27_tree);
@@ -1366,7 +1367,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(11, false);
 			int LA11_1 = input.LA(1);
 
-			if ((LA11_1==130))
+			if ((LA11_1==131))
 			{
 				alt11 = 1;
 			}
@@ -1428,7 +1429,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(13, false);
 			int LA13_1 = input.LA(1);
 
-			if ((LA13_1==ENUM||LA13_1==95||LA13_1==100||LA13_1==117||LA13_1==122||(LA13_1>=143 && LA13_1<=144)||(LA13_1>=153 && LA13_1<=154)||LA13_1==163||LA13_1==165||(LA13_1>=167 && LA13_1<=168)||LA13_1==174||LA13_1==179||LA13_1==181||LA13_1==191))
+			if ((LA13_1==ENUM||LA13_1==96||LA13_1==101||LA13_1==118||LA13_1==123||(LA13_1>=144 && LA13_1<=145)||(LA13_1>=154 && LA13_1<=155)||LA13_1==164||LA13_1==166||(LA13_1>=168 && LA13_1<=169)||LA13_1==175||LA13_1==180||LA13_1==182||LA13_1==192))
 			{
 				alt13 = 1;
 			}
@@ -1524,7 +1525,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(14, false);
 				int LA14_1 = input.LA(1);
 
-				if ((LA14_1==130))
+				if ((LA14_1==131))
 				{
 					alt14 = 1;
 				}
@@ -1632,13 +1633,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(66, 2);
-			string_literal32=(IToken)Match(input,130,Follow._130_in_extern_alias_directive270); if (state.failed) return retval;
+			string_literal32=(IToken)Match(input,131,Follow._131_in_extern_alias_directive270); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal32_tree = (object)adaptor.Create(string_literal32, "string_literal32", retval);
 			adaptor.AddChild(root_0, string_literal32_tree);
 			}
 			DebugLocation(66, 13);
-			string_literal33=(IToken)Match(input,102,Follow._102_in_extern_alias_directive274); if (state.failed) return retval;
+			string_literal33=(IToken)Match(input,103,Follow._103_in_extern_alias_directive274); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal33_tree = (object)adaptor.Create(string_literal33, "string_literal33", retval);
 			adaptor.AddChild(root_0, string_literal33_tree);
@@ -1847,15 +1848,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				int LA16_2 = input.LA(2);
 
-				if ((LA16_2==GET||LA16_2==IDENTIFIER||LA16_2==SET||LA16_2==99||(LA16_2>=101 && LA16_2<=102)||(LA16_2>=105 && LA16_2<=107)||LA16_2==126||LA16_2==131||(LA16_2>=151 && LA16_2<=152)||LA16_2==161||(LA16_2>=163 && LA16_2<=164)||LA16_2==166||LA16_2==171||LA16_2==186||LA16_2==193||LA16_2==199))
+				if ((LA16_2==GET||LA16_2==IDENTIFIER||LA16_2==SET||LA16_2==100||(LA16_2>=102 && LA16_2<=103)||(LA16_2>=106 && LA16_2<=108)||LA16_2==127||LA16_2==132||(LA16_2>=152 && LA16_2<=153)||LA16_2==162||(LA16_2>=164 && LA16_2<=165)||LA16_2==167||LA16_2==172||LA16_2==187||LA16_2==194||LA16_2==200))
 				{
 					int LA16_3 = input.LA(3);
 
-					if ((LA16_3==89))
+					if ((LA16_3==90))
 					{
 						alt16 = 1;
 					}
-					else if ((LA16_3==DOT||LA16_3==SEMI||(LA16_3>=84 && LA16_3<=85)))
+					else if ((LA16_3==DOT||LA16_3==SEMI||(LA16_3>=85 && LA16_3<=86)))
 					{
 						alt16 = 2;
 					}
@@ -1867,15 +1868,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						throw nvae;
 					}
 				}
-				else if ((LA16_2==104||LA16_2==111||LA16_2==123||LA16_2==127||LA16_2==137||LA16_2==139||LA16_2==145||(LA16_2>=147 && LA16_2<=148)||LA16_2==156||LA16_2==158||LA16_2==175||LA16_2==197))
+				else if ((LA16_2==105||LA16_2==112||LA16_2==124||LA16_2==128||LA16_2==138||LA16_2==140||LA16_2==146||(LA16_2>=148 && LA16_2<=149)||LA16_2==157||LA16_2==159||LA16_2==176||LA16_2==198))
 				{
 					int LA16_3 = input.LA(3);
 
-					if ((LA16_3==89))
+					if ((LA16_3==90))
 					{
 						alt16 = 1;
 					}
-					else if ((LA16_3==DOT||LA16_3==SEMI||(LA16_3>=84 && LA16_3<=85)))
+					else if ((LA16_3==DOT||LA16_3==SEMI||(LA16_3>=85 && LA16_3<=86)))
 					{
 						alt16 = 2;
 					}
@@ -2017,7 +2018,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier40.Tree, identifier40, "identifier40", retval);
 			DebugLocation(74, 25);
-			char_literal41=(IToken)Match(input,89,Follow._89_in_using_alias_directive322); if (state.failed) return retval;
+			char_literal41=(IToken)Match(input,90,Follow._90_in_using_alias_directive322); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal41_tree = (object)adaptor.Create(char_literal41, "char_literal41", retval);
 			adaptor.AddChild(root_0, char_literal41_tree);
@@ -2190,7 +2191,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(17, false);
 				int LA17_1 = input.LA(1);
 
-				if ((LA17_1==ENUM||LA17_1==95||LA17_1==100||LA17_1==117||LA17_1==122||(LA17_1>=143 && LA17_1<=144)||(LA17_1>=153 && LA17_1<=154)||LA17_1==163||LA17_1==165||(LA17_1>=167 && LA17_1<=168)||LA17_1==174||LA17_1==179||LA17_1==181||LA17_1==191))
+				if ((LA17_1==ENUM||LA17_1==96||LA17_1==101||LA17_1==118||LA17_1==123||(LA17_1>=144 && LA17_1<=145)||(LA17_1>=154 && LA17_1<=155)||LA17_1==164||LA17_1==166||(LA17_1>=168 && LA17_1<=169)||LA17_1==175||LA17_1==180||LA17_1==182||LA17_1==192))
 				{
 					alt17 = 1;
 				}
@@ -2291,11 +2292,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(18, false);
 			int LA18_1 = input.LA(1);
 
-			if ((LA18_1==153))
+			if ((LA18_1==154))
 			{
 				alt18 = 1;
 			}
-			else if ((LA18_1==ENUM||LA18_1==95||LA18_1==100||LA18_1==117||LA18_1==122||(LA18_1>=143 && LA18_1<=144)||LA18_1==154||LA18_1==163||LA18_1==165||(LA18_1>=167 && LA18_1<=168)||LA18_1==174||LA18_1==179||LA18_1==181||LA18_1==191))
+			else if ((LA18_1==ENUM||LA18_1==96||LA18_1==101||LA18_1==118||LA18_1==123||(LA18_1>=144 && LA18_1<=145)||LA18_1==155||LA18_1==164||LA18_1==166||(LA18_1>=168 && LA18_1<=169)||LA18_1==175||LA18_1==180||LA18_1==182||LA18_1==192))
 			{
 				alt18 = 2;
 			}
@@ -2403,7 +2404,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(19, false);
 			switch (input.LA(1))
 			{
-			case 95:
+			case 96:
 				{
 				int LA19_2 = input.LA(2);
 
@@ -2436,11 +2437,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 144:
-			case 154:
-			case 165:
-			case 167:
+			case 145:
+			case 155:
+			case 166:
 			case 168:
+			case 169:
 				{
 				int LA19_2 = input.LA(2);
 
@@ -2473,7 +2474,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 163:
+			case 164:
 				{
 				int LA19_2 = input.LA(2);
 
@@ -2498,25 +2499,25 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 100:
-			case 117:
-			case 174:
-			case 179:
+			case 101:
+			case 118:
+			case 175:
+			case 180:
 				{
 				alt19 = 1;
 				}
 				break;
-			case 181:
+			case 182:
 				{
 				alt19 = 2;
 				}
 				break;
-			case 143:
+			case 144:
 				{
 				alt19 = 3;
 				}
 				break;
-			case 191:
+			case 192:
 				{
 				int LA19_2 = input.LA(2);
 
@@ -2550,7 +2551,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				alt19 = 4;
 				}
 				break;
-			case 122:
+			case 123:
 				{
 				alt19 = 5;
 				}
@@ -2714,7 +2715,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier55.Tree, identifier55, "identifier55", retval);
 			DebugLocation(89, 15);
-			string_literal56=(IToken)Match(input,84,Follow._84_in_qualified_alias_member408); if (state.failed) return retval;
+			string_literal56=(IToken)Match(input,85,Follow._85_in_qualified_alias_member408); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal56_tree = (object)adaptor.Create(string_literal56, "string_literal56", retval);
 			adaptor.AddChild(root_0, string_literal56_tree);
@@ -2732,7 +2733,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(20, false);
 			int LA20_1 = input.LA(1);
 
-			if ((LA20_1==85))
+			if ((LA20_1==86))
 			{
 				alt20 = 1;
 			}
@@ -2976,7 +2977,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(21, false);
 			int LA21_1 = input.LA(1);
 
-			if ((LA21_1==85))
+			if ((LA21_1==86))
 			{
 				alt21 = 1;
 			}
@@ -3007,7 +3008,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(23, false);
 			int LA23_1 = input.LA(1);
 
-			if ((LA23_1==84))
+			if ((LA23_1==85))
 			{
 				alt23 = 1;
 			}
@@ -3019,7 +3020,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:97:40: '::' identifier ( generic_argument_list )?
 				{
 				DebugLocation(97, 40);
-				string_literal63=(IToken)Match(input,84,Follow._84_in_namespace_or_type_name454); if (state.failed) return retval;
+				string_literal63=(IToken)Match(input,85,Follow._85_in_namespace_or_type_name454); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal63_tree = (object)adaptor.Create(string_literal63, "string_literal63", retval);
 				adaptor.AddChild(root_0, string_literal63_tree);
@@ -3037,7 +3038,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(22, false);
 				int LA22_1 = input.LA(1);
 
-				if ((LA22_1==85))
+				if ((LA22_1==86))
 				{
 					alt22 = 1;
 				}
@@ -3081,7 +3082,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 					int LA25_2 = input.LA(2);
 
-					if ((LA25_2==GET||LA25_2==IDENTIFIER||LA25_2==SET||LA25_2==99||(LA25_2>=101 && LA25_2<=102)||(LA25_2>=104 && LA25_2<=107)||LA25_2==111||LA25_2==123||(LA25_2>=126 && LA25_2<=127)||LA25_2==131||LA25_2==137||LA25_2==139||LA25_2==145||(LA25_2>=147 && LA25_2<=148)||(LA25_2>=151 && LA25_2<=152)||LA25_2==156||LA25_2==158||LA25_2==161||(LA25_2>=163 && LA25_2<=164)||LA25_2==166||LA25_2==171||LA25_2==175||LA25_2==186||LA25_2==193||LA25_2==197||LA25_2==199))
+					if ((LA25_2==GET||LA25_2==IDENTIFIER||LA25_2==SET||LA25_2==100||(LA25_2>=102 && LA25_2<=103)||(LA25_2>=105 && LA25_2<=108)||LA25_2==112||LA25_2==124||(LA25_2>=127 && LA25_2<=128)||LA25_2==132||LA25_2==138||LA25_2==140||LA25_2==146||(LA25_2>=148 && LA25_2<=149)||(LA25_2>=152 && LA25_2<=153)||LA25_2==157||LA25_2==159||LA25_2==162||(LA25_2>=164 && LA25_2<=165)||LA25_2==167||LA25_2==172||LA25_2==176||LA25_2==187||LA25_2==194||LA25_2==198||LA25_2==200))
 					{
 						alt25 = 1;
 					}
@@ -3116,7 +3117,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(24, false);
 					int LA24_1 = input.LA(1);
 
-					if ((LA24_1==85))
+					if ((LA24_1==86))
 					{
 						alt24 = 1;
 					}
@@ -3226,15 +3227,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(26, false);
 				int LA26_1 = input.LA(1);
 
-				if ((LA26_1==95))
+				if ((LA26_1==96))
 				{
 					int LA26_2 = input.LA(2);
 
-					if ((LA26_2==105||LA26_2==152))
+					if ((LA26_2==106||LA26_2==153))
 					{
 						int LA26_3 = input.LA(3);
 
-						if ((LA26_3==83))
+						if ((LA26_3==84))
 						{
 							alt26 = 1;
 						}
@@ -3349,7 +3350,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(105, 2);
-			char_literal70=(IToken)Match(input,95,Follow._95_in_global_attribute517); if (state.failed) return retval;
+			char_literal70=(IToken)Match(input,96,Follow._96_in_global_attribute517); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal70_tree = (object)adaptor.Create(char_literal70, "char_literal70", retval);
 			adaptor.AddChild(root_0, char_literal70_tree);
@@ -3373,7 +3374,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(27, false);
 			int LA27_1 = input.LA(1);
 
-			if ((LA27_1==78))
+			if ((LA27_1==79))
 			{
 				alt27 = 1;
 			}
@@ -3385,7 +3386,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:105:61: ','
 				{
 				DebugLocation(105, 61);
-				char_literal73=(IToken)Match(input,78,Follow._78_in_global_attribute529); if (state.failed) return retval;
+				char_literal73=(IToken)Match(input,79,Follow._79_in_global_attribute529); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal73_tree = (object)adaptor.Create(char_literal73, "char_literal73", retval);
 				adaptor.AddChild(root_0, char_literal73_tree);
@@ -3398,7 +3399,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(27); }
 
 			DebugLocation(105, 68);
-			char_literal74=(IToken)Match(input,96,Follow._96_in_global_attribute534); if (state.failed) return retval;
+			char_literal74=(IToken)Match(input,97,Follow._97_in_global_attribute534); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal74_tree = (object)adaptor.Create(char_literal74, "char_literal74", retval);
 			adaptor.AddChild(root_0, char_literal74_tree);
@@ -3474,7 +3475,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, global_attribute_target75.Tree, global_attribute_target75, "global_attribute_target75", retval);
 			DebugLocation(107, 28);
-			char_literal76=(IToken)Match(input,83,Follow._83_in_global_attribute_target_specifier547); if (state.failed) return retval;
+			char_literal76=(IToken)Match(input,84,Follow._84_in_global_attribute_target_specifier547); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal76_tree = (object)adaptor.Create(char_literal76, "char_literal76", retval);
 			adaptor.AddChild(root_0, char_literal76_tree);
@@ -3545,7 +3546,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(108, 24);
 
 			set77=(IToken)input.LT(1);
-			if (input.LA(1)==105||input.LA(1)==152)
+			if (input.LA(1)==106||input.LA(1)==153)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set77, "set77", retval));
@@ -3699,7 +3700,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(28, false);
 				int LA28_1 = input.LA(1);
 
-				if ((LA28_1==95))
+				if ((LA28_1==96))
 				{
 					alt28 = 1;
 				}
@@ -3808,7 +3809,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(115, 2);
-			char_literal80=(IToken)Match(input,95,Follow._95_in_attribute_section588); if (state.failed) return retval;
+			char_literal80=(IToken)Match(input,96,Follow._96_in_attribute_section588); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal80_tree = (object)adaptor.Create(char_literal80, "char_literal80", retval);
 			adaptor.AddChild(root_0, char_literal80_tree);
@@ -3820,16 +3821,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(29, false);
 			int LA29_1 = input.LA(1);
 
-			if ((LA29_1==131||LA29_1==151||LA29_1==161||LA29_1==166||LA29_1==186))
+			if ((LA29_1==132||LA29_1==152||LA29_1==162||LA29_1==167||LA29_1==187))
 			{
 				int LA29_2 = input.LA(2);
 
-				if ((LA29_2==83))
+				if ((LA29_2==84))
 				{
 					alt29 = 1;
 				}
 			}
-			else if ((LA29_1==128||LA29_1==172))
+			else if ((LA29_1==129||LA29_1==173))
 			{
 				alt29 = 1;
 			}
@@ -3866,7 +3867,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(30, false);
 			int LA30_1 = input.LA(1);
 
-			if ((LA30_1==78))
+			if ((LA30_1==79))
 			{
 				alt30 = 1;
 			}
@@ -3878,7 +3879,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:115:55: ','
 				{
 				DebugLocation(115, 55);
-				char_literal83=(IToken)Match(input,78,Follow._78_in_attribute_section601); if (state.failed) return retval;
+				char_literal83=(IToken)Match(input,79,Follow._79_in_attribute_section601); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal83_tree = (object)adaptor.Create(char_literal83, "char_literal83", retval);
 				adaptor.AddChild(root_0, char_literal83_tree);
@@ -3891,7 +3892,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(30); }
 
 			DebugLocation(115, 62);
-			char_literal84=(IToken)Match(input,96,Follow._96_in_attribute_section606); if (state.failed) return retval;
+			char_literal84=(IToken)Match(input,97,Follow._97_in_attribute_section606); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal84_tree = (object)adaptor.Create(char_literal84, "char_literal84", retval);
 			adaptor.AddChild(root_0, char_literal84_tree);
@@ -3967,7 +3968,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, attribute_target85.Tree, attribute_target85, "attribute_target85", retval);
 			DebugLocation(117, 21);
-			char_literal86=(IToken)Match(input,83,Follow._83_in_attribute_target_specifier619); if (state.failed) return retval;
+			char_literal86=(IToken)Match(input,84,Follow._84_in_attribute_target_specifier619); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal86_tree = (object)adaptor.Create(char_literal86, "char_literal86", retval);
 			adaptor.AddChild(root_0, char_literal86_tree);
@@ -4038,7 +4039,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(118, 17);
 
 			set87=(IToken)input.LT(1);
-			if (input.LA(1)==128||input.LA(1)==131||input.LA(1)==151||input.LA(1)==161||input.LA(1)==166||input.LA(1)==172||input.LA(1)==186)
+			if (input.LA(1)==129||input.LA(1)==132||input.LA(1)==152||input.LA(1)==162||input.LA(1)==167||input.LA(1)==173||input.LA(1)==187)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set87, "set87", retval));
@@ -4132,11 +4133,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(31, false);
 				int LA31_1 = input.LA(1);
 
-				if ((LA31_1==78))
+				if ((LA31_1==79))
 				{
 					int LA31_2 = input.LA(2);
 
-					if ((LA31_2==GET||LA31_2==IDENTIFIER||LA31_2==SET||LA31_2==99||(LA31_2>=101 && LA31_2<=102)||(LA31_2>=104 && LA31_2<=107)||LA31_2==111||LA31_2==123||(LA31_2>=126 && LA31_2<=127)||LA31_2==131||LA31_2==137||LA31_2==139||LA31_2==145||(LA31_2>=147 && LA31_2<=148)||(LA31_2>=151 && LA31_2<=152)||LA31_2==156||LA31_2==158||LA31_2==161||(LA31_2>=163 && LA31_2<=164)||LA31_2==166||LA31_2==171||LA31_2==175||LA31_2==186||LA31_2==193||LA31_2==197||LA31_2==199))
+					if ((LA31_2==GET||LA31_2==IDENTIFIER||LA31_2==SET||LA31_2==100||(LA31_2>=102 && LA31_2<=103)||(LA31_2>=105 && LA31_2<=108)||LA31_2==112||LA31_2==124||(LA31_2>=127 && LA31_2<=128)||LA31_2==132||LA31_2==138||LA31_2==140||LA31_2==146||(LA31_2>=148 && LA31_2<=149)||(LA31_2>=152 && LA31_2<=153)||LA31_2==157||LA31_2==159||LA31_2==162||(LA31_2>=164 && LA31_2<=165)||LA31_2==167||LA31_2==172||LA31_2==176||LA31_2==187||LA31_2==194||LA31_2==198||LA31_2==200))
 					{
 						alt31 = 1;
 					}
@@ -4153,7 +4154,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:121:13: ',' attribute
 					{
 					DebugLocation(121, 13);
-					char_literal89=(IToken)Match(input,78,Follow._78_in_attribute_list664); if (state.failed) return retval;
+					char_literal89=(IToken)Match(input,79,Follow._79_in_attribute_list664); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal89_tree = (object)adaptor.Create(char_literal89, "char_literal89", retval);
 					adaptor.AddChild(root_0, char_literal89_tree);
@@ -4254,7 +4255,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(32, false);
 			int LA32_1 = input.LA(1);
 
-			if ((LA32_1==72))
+			if ((LA32_1==73))
 			{
 				alt32 = 1;
 			}
@@ -4346,7 +4347,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(126, 5);
-			char_literal93=(IToken)Match(input,72,Follow._72_in_attribute_arguments697); if (state.failed) return retval;
+			char_literal93=(IToken)Match(input,73,Follow._73_in_attribute_arguments697); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal93_tree = (object)adaptor.Create(char_literal93, "char_literal93", retval);
 			adaptor.AddChild(root_0, char_literal93_tree);
@@ -4358,7 +4359,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(33, false);
 			switch (input.LA(1))
 			{
-			case 106:
+			case 107:
 				{
 				int LA33_2 = input.LA(2);
 
@@ -4372,7 +4373,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 137:
+			case 138:
 				{
 				int LA33_2 = input.LA(2);
 
@@ -4386,7 +4387,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 107:
+			case 108:
 				{
 				int LA33_2 = input.LA(2);
 
@@ -4410,54 +4411,54 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case STRINGLITERAL:
 			case TRUE:
 			case Verbatim_string_literal:
-			case 65:
-			case 70:
-			case 72:
+			case 66:
+			case 71:
 			case 73:
-			case 75:
+			case 74:
 			case 76:
-			case 79:
-			case 108:
+			case 77:
+			case 80:
 			case 109:
-			case 112:
-			case 115:
+			case 110:
+			case 113:
 			case 116:
-			case 120:
+			case 117:
 			case 121:
 			case 122:
-			case 125:
-			case 134:
-			case 142:
-			case 150:
-			case 154:
+			case 123:
+			case 126:
+			case 135:
+			case 143:
+			case 151:
 			case 155:
-			case 173:
-			case 176:
+			case 156:
+			case 174:
 			case 177:
-			case 180:
-			case 183:
-			case 187:
+			case 178:
+			case 181:
+			case 184:
 			case 188:
 			case 189:
 			case 190:
-			case 192:
-			case 205:
+			case 191:
+			case 193:
+			case 206:
 				{
 				alt33 = 2;
 				}
 				break;
-			case 104:
-			case 111:
-			case 123:
-			case 127:
-			case 139:
-			case 145:
-			case 147:
+			case 105:
+			case 112:
+			case 124:
+			case 128:
+			case 140:
+			case 146:
 			case 148:
-			case 156:
-			case 158:
-			case 175:
-			case 197:
+			case 149:
+			case 157:
+			case 159:
+			case 176:
+			case 198:
 				{
 				int LA33_2 = input.LA(2);
 
@@ -4474,22 +4475,22 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case GET:
 			case IDENTIFIER:
 			case SET:
-			case 99:
-			case 101:
+			case 100:
 			case 102:
-			case 105:
-			case 126:
-			case 131:
-			case 151:
+			case 103:
+			case 106:
+			case 127:
+			case 132:
 			case 152:
-			case 161:
-			case 163:
+			case 153:
+			case 162:
 			case 164:
-			case 166:
-			case 171:
-			case 186:
-			case 193:
-			case 199:
+			case 165:
+			case 167:
+			case 172:
+			case 187:
+			case 194:
+			case 200:
 				{
 				int LA33_2 = input.LA(2);
 
@@ -4623,7 +4624,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(35, false);
 			int LA35_1 = input.LA(1);
 
-			if ((LA35_1==78))
+			if ((LA35_1==79))
 			{
 				alt35 = 1;
 			}
@@ -4635,7 +4636,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:133:26: ',' ( ( identifier '=' )=> named_argument_list | positional_argument_list )
 				{
 				DebugLocation(133, 26);
-				char_literal98=(IToken)Match(input,78,Follow._78_in_positional_argument_list778); if (state.failed) return retval;
+				char_literal98=(IToken)Match(input,79,Follow._79_in_positional_argument_list778); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal98_tree = (object)adaptor.Create(char_literal98, "char_literal98", retval);
 				adaptor.AddChild(root_0, char_literal98_tree);
@@ -4647,7 +4648,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(34, false);
 				int LA34_1 = input.LA(1);
 
-				if ((LA34_1==106))
+				if ((LA34_1==107))
 				{
 					int LA34_2 = input.LA(2);
 
@@ -4667,7 +4668,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						throw nvae;
 					}
 				}
-				else if ((LA34_1==137))
+				else if ((LA34_1==138))
 				{
 					int LA34_2 = input.LA(2);
 
@@ -4687,7 +4688,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						throw nvae;
 					}
 				}
-				else if ((LA34_1==107))
+				else if ((LA34_1==108))
 				{
 					int LA34_2 = input.LA(2);
 
@@ -4707,11 +4708,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						throw nvae;
 					}
 				}
-				else if ((LA34_1==Character_literal||LA34_1==FALSE||LA34_1==Hex_number||(LA34_1>=MINUS && LA34_1<=NUMBER)||LA34_1==Real_literal||LA34_1==STRINGLITERAL||LA34_1==TRUE||LA34_1==Verbatim_string_literal||LA34_1==65||LA34_1==70||(LA34_1>=72 && LA34_1<=73)||(LA34_1>=75 && LA34_1<=76)||LA34_1==79||(LA34_1>=108 && LA34_1<=109)||LA34_1==112||(LA34_1>=115 && LA34_1<=116)||(LA34_1>=120 && LA34_1<=122)||LA34_1==125||LA34_1==134||LA34_1==142||LA34_1==150||(LA34_1>=154 && LA34_1<=155)||LA34_1==173||(LA34_1>=176 && LA34_1<=177)||LA34_1==180||LA34_1==183||(LA34_1>=187 && LA34_1<=190)||LA34_1==192||LA34_1==205))
+				else if ((LA34_1==Character_literal||LA34_1==FALSE||LA34_1==Hex_number||(LA34_1>=MINUS && LA34_1<=NUMBER)||LA34_1==Real_literal||LA34_1==STRINGLITERAL||LA34_1==TRUE||LA34_1==Verbatim_string_literal||LA34_1==66||LA34_1==71||(LA34_1>=73 && LA34_1<=74)||(LA34_1>=76 && LA34_1<=77)||LA34_1==80||(LA34_1>=109 && LA34_1<=110)||LA34_1==113||(LA34_1>=116 && LA34_1<=117)||(LA34_1>=121 && LA34_1<=123)||LA34_1==126||LA34_1==135||LA34_1==143||LA34_1==151||(LA34_1>=155 && LA34_1<=156)||LA34_1==174||(LA34_1>=177 && LA34_1<=178)||LA34_1==181||LA34_1==184||(LA34_1>=188 && LA34_1<=191)||LA34_1==193||LA34_1==206))
 				{
 					alt34 = 2;
 				}
-				else if ((LA34_1==104||LA34_1==111||LA34_1==123||LA34_1==127||LA34_1==139||LA34_1==145||(LA34_1>=147 && LA34_1<=148)||LA34_1==156||LA34_1==158||LA34_1==175||LA34_1==197) && ((_queryExpression == 0)))
+				else if ((LA34_1==105||LA34_1==112||LA34_1==124||LA34_1==128||LA34_1==140||LA34_1==146||(LA34_1>=148 && LA34_1<=149)||LA34_1==157||LA34_1==159||LA34_1==176||LA34_1==198) && ((_queryExpression == 0)))
 				{
 					int LA34_2 = input.LA(2);
 
@@ -4731,7 +4732,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						throw nvae;
 					}
 				}
-				else if ((LA34_1==GET||LA34_1==IDENTIFIER||LA34_1==SET||LA34_1==99||(LA34_1>=101 && LA34_1<=102)||LA34_1==105||LA34_1==126||LA34_1==131||(LA34_1>=151 && LA34_1<=152)||LA34_1==161||(LA34_1>=163 && LA34_1<=164)||LA34_1==166||LA34_1==171||LA34_1==186||LA34_1==193||LA34_1==199))
+				else if ((LA34_1==GET||LA34_1==IDENTIFIER||LA34_1==SET||LA34_1==100||(LA34_1>=102 && LA34_1<=103)||LA34_1==106||LA34_1==127||LA34_1==132||(LA34_1>=152 && LA34_1<=153)||LA34_1==162||(LA34_1>=164 && LA34_1<=165)||LA34_1==167||LA34_1==172||LA34_1==187||LA34_1==194||LA34_1==200))
 				{
 					int LA34_2 = input.LA(2);
 
@@ -4876,7 +4877,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(36, false);
 			int LA36_1 = input.LA(1);
 
-			if ((LA36_1==78))
+			if ((LA36_1==79))
 			{
 				alt36 = 1;
 			}
@@ -4888,7 +4889,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:135:21: ',' named_argument_list
 				{
 				DebugLocation(135, 21);
-				char_literal102=(IToken)Match(input,78,Follow._78_in_named_argument_list810); if (state.failed) return retval;
+				char_literal102=(IToken)Match(input,79,Follow._79_in_named_argument_list810); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal102_tree = (object)adaptor.Create(char_literal102, "char_literal102", retval);
 				adaptor.AddChild(root_0, char_literal102_tree);
@@ -4978,47 +4979,47 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(37, false);
 			int LA37_1 = input.LA(1);
 
-			if ((LA37_1==106))
+			if ((LA37_1==107))
 			{
 				int LA37_2 = input.LA(2);
 
-				if ((LA37_2==83) && (EvaluatePredicate(synpred51_cs_fragment)))
+				if ((LA37_2==84) && (EvaluatePredicate(synpred51_cs_fragment)))
 				{
 					alt37 = 1;
 				}
 			}
-			else if ((LA37_1==137))
+			else if ((LA37_1==138))
 			{
 				int LA37_2 = input.LA(2);
 
-				if ((LA37_2==83) && ((EvaluatePredicate(synpred51_cs_fragment)&&(_queryExpression == 0))))
+				if ((LA37_2==84) && ((EvaluatePredicate(synpred51_cs_fragment)&&(_queryExpression == 0))))
 				{
 					alt37 = 1;
 				}
 			}
-			else if ((LA37_1==107))
+			else if ((LA37_1==108))
 			{
 				int LA37_2 = input.LA(2);
 
-				if ((LA37_2==83) && (EvaluatePredicate(synpred51_cs_fragment)))
+				if ((LA37_2==84) && (EvaluatePredicate(synpred51_cs_fragment)))
 				{
 					alt37 = 1;
 				}
 			}
-			else if ((LA37_1==104||LA37_1==111||LA37_1==123||LA37_1==127||LA37_1==139||LA37_1==145||(LA37_1>=147 && LA37_1<=148)||LA37_1==156||LA37_1==158||LA37_1==175||LA37_1==197) && ((_queryExpression == 0)))
+			else if ((LA37_1==105||LA37_1==112||LA37_1==124||LA37_1==128||LA37_1==140||LA37_1==146||(LA37_1>=148 && LA37_1<=149)||LA37_1==157||LA37_1==159||LA37_1==176||LA37_1==198) && ((_queryExpression == 0)))
 			{
 				int LA37_2 = input.LA(2);
 
-				if ((LA37_2==83) && ((EvaluatePredicate(synpred51_cs_fragment)&&(_queryExpression == 0))))
+				if ((LA37_2==84) && ((EvaluatePredicate(synpred51_cs_fragment)&&(_queryExpression == 0))))
 				{
 					alt37 = 1;
 				}
 			}
-			else if ((LA37_1==GET||LA37_1==IDENTIFIER||LA37_1==SET||LA37_1==99||(LA37_1>=101 && LA37_1<=102)||LA37_1==105||LA37_1==126||LA37_1==131||(LA37_1>=151 && LA37_1<=152)||LA37_1==161||(LA37_1>=163 && LA37_1<=164)||LA37_1==166||LA37_1==171||LA37_1==186||LA37_1==193||LA37_1==199))
+			else if ((LA37_1==GET||LA37_1==IDENTIFIER||LA37_1==SET||LA37_1==100||(LA37_1>=102 && LA37_1<=103)||LA37_1==106||LA37_1==127||LA37_1==132||(LA37_1>=152 && LA37_1<=153)||LA37_1==162||(LA37_1>=164 && LA37_1<=165)||LA37_1==167||LA37_1==172||LA37_1==187||LA37_1==194||LA37_1==200))
 			{
 				int LA37_2 = input.LA(2);
 
-				if ((LA37_2==83) && (EvaluatePredicate(synpred51_cs_fragment)))
+				if ((LA37_2==84) && (EvaluatePredicate(synpred51_cs_fragment)))
 				{
 					alt37 = 1;
 				}
@@ -5037,7 +5038,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, identifier104.Tree, identifier104, "identifier104", retval);
 				DebugLocation(137, 37);
-				char_literal105=(IToken)Match(input,83,Follow._83_in_positional_argument836); if (state.failed) return retval;
+				char_literal105=(IToken)Match(input,84,Follow._84_in_positional_argument836); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal105_tree = (object)adaptor.Create(char_literal105, "char_literal105", retval);
 				adaptor.AddChild(root_0, char_literal105_tree);
@@ -5127,7 +5128,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier107.Tree, identifier107, "identifier107", retval);
 			DebugLocation(139, 16);
-			char_literal108=(IToken)Match(input,89,Follow._89_in_named_argument854); if (state.failed) return retval;
+			char_literal108=(IToken)Match(input,90,Follow._90_in_named_argument854); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal108_tree = (object)adaptor.Create(char_literal108, "char_literal108", retval);
 			adaptor.AddChild(root_0, char_literal108_tree);
@@ -5284,11 +5285,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(38, false);
 				int LA38_1 = input.LA(1);
 
-				if ((LA38_1==95))
+				if ((LA38_1==96))
 				{
 					int LA38_2 = input.LA(2);
 
-					if ((LA38_2==78||LA38_2==96))
+					if ((LA38_2==79||LA38_2==97))
 					{
 						alt38 = 1;
 					}
@@ -5395,11 +5396,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(46, false);
 			int LA46_1 = input.LA(1);
 
-			if ((LA46_1==GET||LA46_1==IDENTIFIER||LA46_1==SET||LA46_1==99||(LA46_1>=101 && LA46_1<=102)||(LA46_1>=104 && LA46_1<=107)||LA46_1==109||(LA46_1>=111 && LA46_1<=112)||LA46_1==115||LA46_1==120||LA46_1==123||(LA46_1>=125 && LA46_1<=127)||LA46_1==131||LA46_1==134||LA46_1==137||LA46_1==139||LA46_1==142||LA46_1==145||(LA46_1>=147 && LA46_1<=148)||(LA46_1>=150 && LA46_1<=152)||(LA46_1>=155 && LA46_1<=156)||LA46_1==158||LA46_1==161||(LA46_1>=163 && LA46_1<=164)||LA46_1==166||LA46_1==171||LA46_1==173||(LA46_1>=175 && LA46_1<=176)||LA46_1==180||LA46_1==186||(LA46_1>=188 && LA46_1<=189)||(LA46_1>=192 && LA46_1<=193)||LA46_1==197||LA46_1==199))
+			if ((LA46_1==GET||LA46_1==IDENTIFIER||LA46_1==SET||LA46_1==100||(LA46_1>=102 && LA46_1<=103)||(LA46_1>=105 && LA46_1<=108)||LA46_1==110||(LA46_1>=112 && LA46_1<=113)||LA46_1==116||LA46_1==121||LA46_1==124||(LA46_1>=126 && LA46_1<=128)||LA46_1==132||LA46_1==135||LA46_1==138||LA46_1==140||LA46_1==143||LA46_1==146||(LA46_1>=148 && LA46_1<=149)||(LA46_1>=151 && LA46_1<=153)||(LA46_1>=156 && LA46_1<=157)||LA46_1==159||LA46_1==162||(LA46_1>=164 && LA46_1<=165)||LA46_1==167||LA46_1==172||LA46_1==174||(LA46_1>=176 && LA46_1<=177)||LA46_1==181||LA46_1==187||(LA46_1>=189 && LA46_1<=190)||(LA46_1>=193 && LA46_1<=194)||LA46_1==198||LA46_1==200))
 			{
 				alt46 = 1;
 			}
-			else if ((LA46_1==195))
+			else if ((LA46_1==196))
 			{
 				alt46 = 2;
 			}
@@ -5426,15 +5427,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(39, false);
 				int LA39_1 = input.LA(1);
 
-				if ((LA39_1==109||LA39_1==112||LA39_1==115||LA39_1==120||LA39_1==125||LA39_1==134||LA39_1==142||LA39_1==150||LA39_1==155||LA39_1==173||LA39_1==176||LA39_1==180||(LA39_1>=188 && LA39_1<=189)||LA39_1==192))
+				if ((LA39_1==110||LA39_1==113||LA39_1==116||LA39_1==121||LA39_1==126||LA39_1==135||LA39_1==143||LA39_1==151||LA39_1==156||LA39_1==174||LA39_1==177||LA39_1==181||(LA39_1>=189 && LA39_1<=190)||LA39_1==193))
 				{
 					alt39 = 1;
 				}
-				else if ((LA39_1==GET||LA39_1==IDENTIFIER||LA39_1==SET||LA39_1==99||(LA39_1>=101 && LA39_1<=102)||(LA39_1>=105 && LA39_1<=107)||LA39_1==126||LA39_1==131||(LA39_1>=151 && LA39_1<=152)||LA39_1==161||(LA39_1>=163 && LA39_1<=164)||LA39_1==166||LA39_1==171||LA39_1==186||LA39_1==193||LA39_1==199))
+				else if ((LA39_1==GET||LA39_1==IDENTIFIER||LA39_1==SET||LA39_1==100||(LA39_1>=102 && LA39_1<=103)||(LA39_1>=106 && LA39_1<=108)||LA39_1==127||LA39_1==132||(LA39_1>=152 && LA39_1<=153)||LA39_1==162||(LA39_1>=164 && LA39_1<=165)||LA39_1==167||LA39_1==172||LA39_1==187||LA39_1==194||LA39_1==200))
 				{
 					alt39 = 2;
 				}
-				else if ((LA39_1==104||LA39_1==111||LA39_1==123||LA39_1==127||LA39_1==137||LA39_1==139||LA39_1==145||(LA39_1>=147 && LA39_1<=148)||LA39_1==156||LA39_1==158||LA39_1==175||LA39_1==197) && ((_queryExpression == 0)))
+				else if ((LA39_1==105||LA39_1==112||LA39_1==124||LA39_1==128||LA39_1==138||LA39_1==140||LA39_1==146||(LA39_1>=148 && LA39_1<=149)||LA39_1==157||LA39_1==159||LA39_1==176||LA39_1==198) && ((_queryExpression == 0)))
 				{
 					alt39 = 2;
 				}
@@ -5485,15 +5486,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(44, false);
 				int LA44_1 = input.LA(1);
 
-				if ((LA44_1==95))
+				if ((LA44_1==96))
 				{
 					int LA44_2 = input.LA(2);
 
-					if ((LA44_2==78||LA44_2==96))
+					if ((LA44_2==79||LA44_2==97))
 					{
 						alt44 = 1;
 					}
-					else if ((LA44_2==GET||LA44_2==IDENTIFIER||LA44_2==SET||LA44_2==99||(LA44_2>=101 && LA44_2<=102)||(LA44_2>=104 && LA44_2<=107)||LA44_2==111||LA44_2==123||(LA44_2>=126 && LA44_2<=128)||LA44_2==131||LA44_2==137||LA44_2==139||LA44_2==145||(LA44_2>=147 && LA44_2<=148)||(LA44_2>=151 && LA44_2<=152)||LA44_2==156||LA44_2==158||LA44_2==161||(LA44_2>=163 && LA44_2<=164)||LA44_2==166||(LA44_2>=171 && LA44_2<=172)||LA44_2==175||LA44_2==186||LA44_2==193||LA44_2==197||LA44_2==199))
+					else if ((LA44_2==GET||LA44_2==IDENTIFIER||LA44_2==SET||LA44_2==100||(LA44_2>=102 && LA44_2<=103)||(LA44_2>=105 && LA44_2<=108)||LA44_2==112||LA44_2==124||(LA44_2>=127 && LA44_2<=129)||LA44_2==132||LA44_2==138||LA44_2==140||LA44_2==146||(LA44_2>=148 && LA44_2<=149)||(LA44_2>=152 && LA44_2<=153)||LA44_2==157||LA44_2==159||LA44_2==162||(LA44_2>=164 && LA44_2<=165)||LA44_2==167||(LA44_2>=172 && LA44_2<=173)||LA44_2==176||LA44_2==187||LA44_2==194||LA44_2==198||LA44_2==200))
 					{
 						alt44 = 2;
 					}
@@ -5505,7 +5506,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						throw nvae;
 					}
 				}
-				else if ((LA44_1==EOF||LA44_1==GET||LA44_1==IDENTIFIER||LA44_1==RPAREN||(LA44_1>=SEMI && LA44_1<=SET)||LA44_1==66||(LA44_1>=69 && LA44_1<=70)||LA44_1==73||LA44_1==78||LA44_1==83||LA44_1==90||(LA44_1>=93 && LA44_1<=94)||(LA44_1>=96 && LA44_1<=97)||LA44_1==99||(LA44_1>=101 && LA44_1<=107)||LA44_1==109||(LA44_1>=111 && LA44_1<=112)||LA44_1==115||LA44_1==120||LA44_1==123||(LA44_1>=125 && LA44_1<=127)||LA44_1==131||LA44_1==134||LA44_1==137||LA44_1==139||LA44_1==142||(LA44_1>=145 && LA44_1<=148)||(LA44_1>=150 && LA44_1<=152)||(LA44_1>=155 && LA44_1<=156)||(LA44_1>=158 && LA44_1<=159)||LA44_1==161||(LA44_1>=163 && LA44_1<=164)||LA44_1==166||(LA44_1>=170 && LA44_1<=171)||LA44_1==173||(LA44_1>=175 && LA44_1<=176)||LA44_1==180||LA44_1==183||LA44_1==186||(LA44_1>=188 && LA44_1<=189)||(LA44_1>=192 && LA44_1<=193)||LA44_1==195||LA44_1==197||LA44_1==199||LA44_1==201||(LA44_1>=203 && LA44_1<=204)))
+				else if ((LA44_1==EOF||LA44_1==GET||LA44_1==IDENTIFIER||LA44_1==RPAREN||(LA44_1>=SEMI && LA44_1<=SET)||LA44_1==67||(LA44_1>=70 && LA44_1<=71)||LA44_1==74||LA44_1==79||LA44_1==84||LA44_1==91||(LA44_1>=94 && LA44_1<=95)||(LA44_1>=97 && LA44_1<=98)||LA44_1==100||(LA44_1>=102 && LA44_1<=108)||LA44_1==110||(LA44_1>=112 && LA44_1<=113)||LA44_1==116||LA44_1==121||LA44_1==124||(LA44_1>=126 && LA44_1<=128)||LA44_1==132||LA44_1==135||LA44_1==138||LA44_1==140||LA44_1==143||(LA44_1>=146 && LA44_1<=149)||(LA44_1>=151 && LA44_1<=153)||(LA44_1>=156 && LA44_1<=157)||(LA44_1>=159 && LA44_1<=160)||LA44_1==162||(LA44_1>=164 && LA44_1<=165)||LA44_1==167||(LA44_1>=171 && LA44_1<=172)||LA44_1==174||(LA44_1>=176 && LA44_1<=177)||LA44_1==181||LA44_1==184||LA44_1==187||(LA44_1>=189 && LA44_1<=190)||(LA44_1>=193 && LA44_1<=194)||LA44_1==196||LA44_1==198||LA44_1==200||LA44_1==202||(LA44_1>=204 && LA44_1<=205)))
 				{
 					alt44 = 2;
 				}
@@ -5533,11 +5534,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						try { DebugEnterDecision(40, false);
 						int LA40_1 = input.LA(1);
 
-						if ((LA40_1==95))
+						if ((LA40_1==96))
 						{
 							int LA40_2 = input.LA(2);
 
-							if ((LA40_2==78||LA40_2==96))
+							if ((LA40_2==79||LA40_2==97))
 							{
 								alt40 = 1;
 							}
@@ -5588,7 +5589,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						try { DebugEnterDecision(41, false);
 						int LA41_1 = input.LA(1);
 
-						if ((LA41_1==73))
+						if ((LA41_1==74))
 						{
 							alt41 = 1;
 						}
@@ -5602,7 +5603,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 							// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:151:25: '*'
 							{
 							DebugLocation(151, 25);
-							char_literal116=(IToken)Match(input,73,Follow._73_in_non_nullable_type909); if (state.failed) return retval;
+							char_literal116=(IToken)Match(input,74,Follow._74_in_non_nullable_type909); if (state.failed) return retval;
 							if (state.backtracking == 0) {
 							char_literal116_tree = (object)adaptor.Create(char_literal116, "char_literal116", retval);
 							adaptor.AddChild(root_0, char_literal116_tree);
@@ -5635,7 +5636,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(43, false);
 					int LA43_1 = input.LA(1);
 
-					if ((LA43_1==73))
+					if ((LA43_1==74))
 					{
 						alt43 = 1;
 					}
@@ -5656,7 +5657,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 							try { DebugEnterDecision(42, false);
 							int LA42_1 = input.LA(1);
 
-							if ((LA42_1==73))
+							if ((LA42_1==74))
 							{
 								alt42 = 1;
 							}
@@ -5670,7 +5671,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 								// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:152:7: '*'
 								{
 								DebugLocation(152, 7);
-								char_literal117=(IToken)Match(input,73,Follow._73_in_non_nullable_type918); if (state.failed) return retval;
+								char_literal117=(IToken)Match(input,74,Follow._74_in_non_nullable_type918); if (state.failed) return retval;
 								if (state.backtracking == 0) {
 								char_literal117_tree = (object)adaptor.Create(char_literal117, "char_literal117", retval);
 								adaptor.AddChild(root_0, char_literal117_tree);
@@ -5719,7 +5720,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(154, 4);
-				string_literal118=(IToken)Match(input,195,Follow._195_in_non_nullable_type930); if (state.failed) return retval;
+				string_literal118=(IToken)Match(input,196,Follow._196_in_non_nullable_type930); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal118_tree = (object)adaptor.Create(string_literal118, "string_literal118", retval);
 				adaptor.AddChild(root_0, string_literal118_tree);
@@ -5734,7 +5735,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(45, false);
 					int LA45_1 = input.LA(1);
 
-					if ((LA45_1==73))
+					if ((LA45_1==74))
 					{
 						alt45 = 1;
 					}
@@ -5748,7 +5749,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:154:13: '*'
 						{
 						DebugLocation(154, 13);
-						char_literal119=(IToken)Match(input,73,Follow._73_in_non_nullable_type934); if (state.failed) return retval;
+						char_literal119=(IToken)Match(input,74,Follow._74_in_non_nullable_type934); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 						char_literal119_tree = (object)adaptor.Create(char_literal119, "char_literal119", retval);
 						adaptor.AddChild(root_0, char_literal119_tree);
@@ -5845,11 +5846,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(51, false);
 			int LA51_1 = input.LA(1);
 
-			if ((LA51_1==GET||LA51_1==IDENTIFIER||LA51_1==SET||LA51_1==99||(LA51_1>=101 && LA51_1<=102)||(LA51_1>=104 && LA51_1<=107)||LA51_1==109||(LA51_1>=111 && LA51_1<=112)||LA51_1==115||LA51_1==120||LA51_1==123||(LA51_1>=125 && LA51_1<=127)||LA51_1==131||LA51_1==134||LA51_1==137||LA51_1==139||LA51_1==142||LA51_1==145||(LA51_1>=147 && LA51_1<=148)||(LA51_1>=150 && LA51_1<=152)||(LA51_1>=155 && LA51_1<=156)||LA51_1==158||LA51_1==161||(LA51_1>=163 && LA51_1<=164)||LA51_1==166||LA51_1==171||LA51_1==173||(LA51_1>=175 && LA51_1<=176)||LA51_1==180||LA51_1==186||(LA51_1>=188 && LA51_1<=189)||(LA51_1>=192 && LA51_1<=193)||LA51_1==197||LA51_1==199))
+			if ((LA51_1==GET||LA51_1==IDENTIFIER||LA51_1==SET||LA51_1==100||(LA51_1>=102 && LA51_1<=103)||(LA51_1>=105 && LA51_1<=108)||LA51_1==110||(LA51_1>=112 && LA51_1<=113)||LA51_1==116||LA51_1==121||LA51_1==124||(LA51_1>=126 && LA51_1<=128)||LA51_1==132||LA51_1==135||LA51_1==138||LA51_1==140||LA51_1==143||LA51_1==146||(LA51_1>=148 && LA51_1<=149)||(LA51_1>=151 && LA51_1<=153)||(LA51_1>=156 && LA51_1<=157)||LA51_1==159||LA51_1==162||(LA51_1>=164 && LA51_1<=165)||LA51_1==167||LA51_1==172||LA51_1==174||(LA51_1>=176 && LA51_1<=177)||LA51_1==181||LA51_1==187||(LA51_1>=189 && LA51_1<=190)||(LA51_1>=193 && LA51_1<=194)||LA51_1==198||LA51_1==200))
 			{
 				alt51 = 1;
 			}
-			else if ((LA51_1==195))
+			else if ((LA51_1==196))
 			{
 				alt51 = 2;
 			}
@@ -5876,15 +5877,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(47, false);
 				int LA47_1 = input.LA(1);
 
-				if ((LA47_1==109||LA47_1==112||LA47_1==115||LA47_1==120||LA47_1==125||LA47_1==134||LA47_1==142||LA47_1==150||LA47_1==155||LA47_1==173||LA47_1==176||LA47_1==180||(LA47_1>=188 && LA47_1<=189)||LA47_1==192))
+				if ((LA47_1==110||LA47_1==113||LA47_1==116||LA47_1==121||LA47_1==126||LA47_1==135||LA47_1==143||LA47_1==151||LA47_1==156||LA47_1==174||LA47_1==177||LA47_1==181||(LA47_1>=189 && LA47_1<=190)||LA47_1==193))
 				{
 					alt47 = 1;
 				}
-				else if ((LA47_1==GET||LA47_1==IDENTIFIER||LA47_1==SET||LA47_1==99||(LA47_1>=101 && LA47_1<=102)||(LA47_1>=105 && LA47_1<=107)||LA47_1==126||LA47_1==131||(LA47_1>=151 && LA47_1<=152)||LA47_1==161||(LA47_1>=163 && LA47_1<=164)||LA47_1==166||LA47_1==171||LA47_1==186||LA47_1==193||LA47_1==199))
+				else if ((LA47_1==GET||LA47_1==IDENTIFIER||LA47_1==SET||LA47_1==100||(LA47_1>=102 && LA47_1<=103)||(LA47_1>=106 && LA47_1<=108)||LA47_1==127||LA47_1==132||(LA47_1>=152 && LA47_1<=153)||LA47_1==162||(LA47_1>=164 && LA47_1<=165)||LA47_1==167||LA47_1==172||LA47_1==187||LA47_1==194||LA47_1==200))
 				{
 					alt47 = 2;
 				}
-				else if ((LA47_1==104||LA47_1==111||LA47_1==123||LA47_1==127||LA47_1==137||LA47_1==139||LA47_1==145||(LA47_1>=147 && LA47_1<=148)||LA47_1==156||LA47_1==158||LA47_1==175||LA47_1==197) && ((_queryExpression == 0)))
+				else if ((LA47_1==105||LA47_1==112||LA47_1==124||LA47_1==128||LA47_1==138||LA47_1==140||LA47_1==146||(LA47_1>=148 && LA47_1<=149)||LA47_1==157||LA47_1==159||LA47_1==176||LA47_1==198) && ((_queryExpression == 0)))
 				{
 					alt47 = 2;
 				}
@@ -5935,11 +5936,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(49, false);
 				int LA49_1 = input.LA(1);
 
-				if ((LA49_1==73))
+				if ((LA49_1==74))
 				{
 					alt49 = 1;
 				}
-				else if ((LA49_1==93))
+				else if ((LA49_1==94))
 				{
 					int LA49_2 = input.LA(2);
 
@@ -5965,7 +5966,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						try { DebugEnterDecision(48, false);
 						int LA48_1 = input.LA(1);
 
-						if ((LA48_1==73))
+						if ((LA48_1==74))
 						{
 							alt48 = 1;
 						}
@@ -5979,7 +5980,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 							// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:156:35: '*'
 							{
 							DebugLocation(156, 35);
-							char_literal122=(IToken)Match(input,73,Follow._73_in_non_array_type954); if (state.failed) return retval;
+							char_literal122=(IToken)Match(input,74,Follow._74_in_non_array_type954); if (state.failed) return retval;
 							if (state.backtracking == 0) {
 							char_literal122_tree = (object)adaptor.Create(char_literal122, "char_literal122", retval);
 							adaptor.AddChild(root_0, char_literal122_tree);
@@ -6012,7 +6013,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:156:42: '?'
 					{
 					DebugLocation(156, 42);
-					char_literal123=(IToken)Match(input,93,Follow._93_in_non_array_type959); if (state.failed) return retval;
+					char_literal123=(IToken)Match(input,94,Follow._94_in_non_array_type959); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal123_tree = (object)adaptor.Create(char_literal123, "char_literal123", retval);
 					adaptor.AddChild(root_0, char_literal123_tree);
@@ -6034,7 +6035,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(157, 4);
-				string_literal124=(IToken)Match(input,195,Follow._195_in_non_array_type966); if (state.failed) return retval;
+				string_literal124=(IToken)Match(input,196,Follow._196_in_non_array_type966); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal124_tree = (object)adaptor.Create(string_literal124, "string_literal124", retval);
 				adaptor.AddChild(root_0, string_literal124_tree);
@@ -6049,7 +6050,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(50, false);
 					int LA50_1 = input.LA(1);
 
-					if ((LA50_1==73))
+					if ((LA50_1==74))
 					{
 						alt50 = 1;
 					}
@@ -6063,7 +6064,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:157:11: '*'
 						{
 						DebugLocation(157, 11);
-						char_literal125=(IToken)Match(input,73,Follow._73_in_non_array_type968); if (state.failed) return retval;
+						char_literal125=(IToken)Match(input,74,Follow._74_in_non_array_type968); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 						char_literal125_tree = (object)adaptor.Create(char_literal125, "char_literal125", retval);
 						adaptor.AddChild(root_0, char_literal125_tree);
@@ -6170,7 +6171,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(52, false);
 				int LA52_1 = input.LA(1);
 
-				if ((LA52_1==78))
+				if ((LA52_1==79))
 				{
 					alt52 = 1;
 				}
@@ -6184,7 +6185,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:160:8: ',' type
 					{
 					DebugLocation(160, 8);
-					char_literal127=(IToken)Match(input,78,Follow._78_in_type_list981); if (state.failed) return retval;
+					char_literal127=(IToken)Match(input,79,Follow._79_in_type_list981); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal127_tree = (object)adaptor.Create(char_literal127, "char_literal127", retval);
 					adaptor.AddChild(root_0, char_literal127_tree);
@@ -6411,7 +6412,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(165, 14);
 
 			set131=(IToken)input.LT(1);
-			if (input.LA(1)==112||input.LA(1)==115||input.LA(1)==142||input.LA(1)==150||input.LA(1)==173||input.LA(1)==176||(input.LA(1)>=188 && input.LA(1)<=189)||input.LA(1)==192)
+			if (input.LA(1)==113||input.LA(1)==116||input.LA(1)==143||input.LA(1)==151||input.LA(1)==174||input.LA(1)==177||(input.LA(1)>=189 && input.LA(1)<=190)||input.LA(1)==193)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set131, "set131", retval));
@@ -6633,11 +6634,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(53, false);
 				int LA53_1 = input.LA(1);
 
-				if ((LA53_1==95))
+				if ((LA53_1==96))
 				{
 					int LA53_2 = input.LA(2);
 
-					if ((LA53_2==96))
+					if ((LA53_2==97))
 					{
 						int LA53_3 = input.LA(3);
 
@@ -6648,7 +6649,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 
 					}
-					else if ((LA53_2==78))
+					else if ((LA53_2==79))
 					{
 						alt53 = 1;
 					}
@@ -6757,7 +6758,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(174, 2);
-			char_literal135=(IToken)Match(input,95,Follow._95_in_rank_specifier1081); if (state.failed) return retval;
+			char_literal135=(IToken)Match(input,96,Follow._96_in_rank_specifier1081); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal135_tree = (object)adaptor.Create(char_literal135, "char_literal135", retval);
 			adaptor.AddChild(root_0, char_literal135_tree);
@@ -6769,7 +6770,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(54, false);
 			int LA54_1 = input.LA(1);
 
-			if ((LA54_1==78))
+			if ((LA54_1==79))
 			{
 				alt54 = 1;
 			}
@@ -6794,7 +6795,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(54); }
 
 			DebugLocation(174, 26);
-			char_literal137=(IToken)Match(input,96,Follow._96_in_rank_specifier1090); if (state.failed) return retval;
+			char_literal137=(IToken)Match(input,97,Follow._97_in_rank_specifier1090); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal137_tree = (object)adaptor.Create(char_literal137, "char_literal137", retval);
 			adaptor.AddChild(root_0, char_literal137_tree);
@@ -6872,7 +6873,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(55, false);
 				int LA55_1 = input.LA(1);
 
-				if ((LA55_1==78))
+				if ((LA55_1==79))
 				{
 					alt55 = 1;
 				}
@@ -6886,7 +6887,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:176:2: ','
 					{
 					DebugLocation(176, 2);
-					char_literal138=(IToken)Match(input,78,Follow._78_in_dim_separators1100); if (state.failed) return retval;
+					char_literal138=(IToken)Match(input,79,Follow._79_in_dim_separators1100); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal138_tree = (object)adaptor.Create(char_literal138, "char_literal138", retval);
 					adaptor.AddChild(root_0, char_literal138_tree);
@@ -6978,7 +6979,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(178, 2);
-			char_literal139=(IToken)Match(input,85,Follow._85_in_generic_argument_list1110); if (state.failed) return retval;
+			char_literal139=(IToken)Match(input,86,Follow._86_in_generic_argument_list1110); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal139_tree = (object)adaptor.Create(char_literal139, "char_literal139", retval);
 			adaptor.AddChild(root_0, char_literal139_tree);
@@ -7075,7 +7076,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(56, false);
 				int LA56_1 = input.LA(1);
 
-				if ((LA56_1==78))
+				if ((LA56_1==79))
 				{
 					alt56 = 1;
 				}
@@ -7089,7 +7090,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:180:17: ',' type_argument
 					{
 					DebugLocation(180, 17);
-					char_literal143=(IToken)Match(input,78,Follow._78_in_type_arguments1130); if (state.failed) return retval;
+					char_literal143=(IToken)Match(input,79,Follow._79_in_type_arguments1130); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal143_tree = (object)adaptor.Create(char_literal143, "char_literal143", retval);
 					adaptor.AddChild(root_0, char_literal143_tree);
@@ -7312,7 +7313,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(57, false);
 			int LA57_1 = input.LA(1);
 
-			if ((LA57_1==106))
+			if ((LA57_1==107))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7332,7 +7333,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==72))
+			else if ((LA57_1==73))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7352,7 +7353,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==107))
+			else if ((LA57_1==108))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7372,7 +7373,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==137))
+			else if ((LA57_1==138))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7392,7 +7393,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==104||LA57_1==111||LA57_1==123||LA57_1==127||LA57_1==139||LA57_1==145||(LA57_1>=147 && LA57_1<=148)||LA57_1==156||LA57_1==158||LA57_1==175||LA57_1==197) && ((_queryExpression == 0)))
+			else if ((LA57_1==105||LA57_1==112||LA57_1==124||LA57_1==128||LA57_1==140||LA57_1==146||(LA57_1>=148 && LA57_1<=149)||LA57_1==157||LA57_1==159||LA57_1==176||LA57_1==198) && ((_queryExpression == 0)))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7412,7 +7413,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==75))
+			else if ((LA57_1==76))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7452,7 +7453,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==65))
+			else if ((LA57_1==66))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7472,7 +7473,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==205))
+			else if ((LA57_1==206))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7492,7 +7493,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==73))
+			else if ((LA57_1==74))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7512,7 +7513,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==GET||LA57_1==IDENTIFIER||LA57_1==SET||LA57_1==99||(LA57_1>=101 && LA57_1<=102)||LA57_1==105||LA57_1==126||LA57_1==131||(LA57_1>=151 && LA57_1<=152)||LA57_1==161||(LA57_1>=163 && LA57_1<=164)||LA57_1==166||LA57_1==171||LA57_1==186||LA57_1==193||LA57_1==199))
+			else if ((LA57_1==GET||LA57_1==IDENTIFIER||LA57_1==SET||LA57_1==100||(LA57_1>=102 && LA57_1<=103)||LA57_1==106||LA57_1==127||LA57_1==132||(LA57_1>=152 && LA57_1<=153)||LA57_1==162||(LA57_1>=164 && LA57_1<=165)||LA57_1==167||LA57_1==172||LA57_1==187||LA57_1==194||LA57_1==200))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7532,7 +7533,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==76))
+			else if ((LA57_1==77))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7552,7 +7553,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==79))
+			else if ((LA57_1==80))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7572,7 +7573,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==109||LA57_1==112||LA57_1==115||LA57_1==120||LA57_1==125||LA57_1==134||LA57_1==142||LA57_1==150||LA57_1==155||LA57_1==173||LA57_1==176||LA57_1==180||(LA57_1>=188 && LA57_1<=189)||LA57_1==192))
+			else if ((LA57_1==110||LA57_1==113||LA57_1==116||LA57_1==121||LA57_1==126||LA57_1==135||LA57_1==143||LA57_1==151||LA57_1==156||LA57_1==174||LA57_1==177||LA57_1==181||(LA57_1>=189 && LA57_1<=190)||LA57_1==193))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7612,7 +7613,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==183))
+			else if ((LA57_1==184))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7632,7 +7633,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==108))
+			else if ((LA57_1==109))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7652,7 +7653,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==154))
+			else if ((LA57_1==155))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7672,7 +7673,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==187))
+			else if ((LA57_1==188))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7692,7 +7693,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==177))
+			else if ((LA57_1==178))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7712,7 +7713,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==116))
+			else if ((LA57_1==117))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7732,7 +7733,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==190))
+			else if ((LA57_1==191))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7752,7 +7753,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==121))
+			else if ((LA57_1==122))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7772,7 +7773,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==122))
+			else if ((LA57_1==123))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7792,7 +7793,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA57_1==70))
+			else if ((LA57_1==71))
 			{
 				int LA57_2 = input.LA(2);
 
@@ -7937,7 +7938,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(60, false);
 			switch (input.LA(1))
 			{
-			case 72:
+			case 73:
 				{
 				int LA60_2 = input.LA(2);
 
@@ -7958,7 +7959,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 75:
+			case 76:
 				{
 				alt60 = 2;
 				}
@@ -7968,17 +7969,17 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				alt60 = 3;
 				}
 				break;
-			case 65:
+			case 66:
 				{
 				alt60 = 4;
 				}
 				break;
-			case 205:
+			case 206:
 				{
 				alt60 = 5;
 				}
 				break;
-			case 73:
+			case 74:
 				{
 				int LA60_2 = input.LA(2);
 
@@ -7999,7 +8000,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 107:
+			case 108:
 				{
 				int LA60_2 = input.LA(2);
 
@@ -8020,12 +8021,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 76:
+			case 77:
 				{
 				alt60 = 8;
 				}
 				break;
-			case 79:
+			case 80:
 				{
 				alt60 = 9;
 				}
@@ -8042,65 +8043,65 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case STRINGLITERAL:
 			case TRUE:
 			case Verbatim_string_literal:
-			case 99:
-			case 101:
+			case 100:
 			case 102:
-			case 104:
+			case 103:
 			case 105:
 			case 106:
-			case 108:
+			case 107:
 			case 109:
-			case 111:
+			case 110:
 			case 112:
-			case 115:
+			case 113:
 			case 116:
-			case 120:
+			case 117:
 			case 121:
 			case 122:
 			case 123:
-			case 125:
+			case 124:
 			case 126:
 			case 127:
-			case 131:
-			case 134:
-			case 137:
-			case 139:
-			case 142:
-			case 145:
-			case 147:
+			case 128:
+			case 132:
+			case 135:
+			case 138:
+			case 140:
+			case 143:
+			case 146:
 			case 148:
-			case 150:
+			case 149:
 			case 151:
 			case 152:
-			case 154:
+			case 153:
 			case 155:
 			case 156:
-			case 158:
-			case 161:
-			case 163:
+			case 157:
+			case 159:
+			case 162:
 			case 164:
-			case 166:
-			case 171:
-			case 173:
-			case 175:
+			case 165:
+			case 167:
+			case 172:
+			case 174:
 			case 176:
 			case 177:
-			case 180:
-			case 183:
-			case 186:
+			case 178:
+			case 181:
+			case 184:
 			case 187:
 			case 188:
 			case 189:
 			case 190:
-			case 192:
+			case 191:
 			case 193:
-			case 197:
-			case 199:
+			case 194:
+			case 198:
+			case 200:
 				{
 				alt60 = 10;
 				}
 				break;
-			case 70:
+			case 71:
 				{
 				alt60 = 12;
 				}
@@ -8139,7 +8140,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(194, 4);
-				char_literal150=(IToken)Match(input,75,Follow._75_in_unary_expression1189); if (state.failed) return retval;
+				char_literal150=(IToken)Match(input,76,Follow._76_in_unary_expression1189); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal150_tree = (object)adaptor.Create(char_literal150, "char_literal150", retval);
 				adaptor.AddChild(root_0, char_literal150_tree);
@@ -8181,7 +8182,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(196, 4);
-				char_literal154=(IToken)Match(input,65,Follow._65_in_unary_expression1209); if (state.failed) return retval;
+				char_literal154=(IToken)Match(input,66,Follow._66_in_unary_expression1209); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal154_tree = (object)adaptor.Create(char_literal154, "char_literal154", retval);
 				adaptor.AddChild(root_0, char_literal154_tree);
@@ -8202,7 +8203,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(197, 4);
-				char_literal156=(IToken)Match(input,205,Follow._205_in_unary_expression1219); if (state.failed) return retval;
+				char_literal156=(IToken)Match(input,206,Follow._206_in_unary_expression1219); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal156_tree = (object)adaptor.Create(char_literal156, "char_literal156", retval);
 				adaptor.AddChild(root_0, char_literal156_tree);
@@ -8223,7 +8224,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(198, 4);
-				char_literal158=(IToken)Match(input,73,Follow._73_in_unary_expression1229); if (state.failed) return retval;
+				char_literal158=(IToken)Match(input,74,Follow._74_in_unary_expression1229); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal158_tree = (object)adaptor.Create(char_literal158, "char_literal158", retval);
 				adaptor.AddChild(root_0, char_literal158_tree);
@@ -8301,7 +8302,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(58, false);
 				int LA58_1 = input.LA(1);
 
-				if ((LA58_1==76))
+				if ((LA58_1==77))
 				{
 					alt58 = 1;
 				}
@@ -8313,7 +8314,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:202:43: '++'
 					{
 					DebugLocation(202, 43);
-					string_literal164=(IToken)Match(input,76,Follow._76_in_unary_expression1260); if (state.failed) return retval;
+					string_literal164=(IToken)Match(input,77,Follow._77_in_unary_expression1260); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal164_tree = (object)adaptor.Create(string_literal164, "string_literal164", retval);
 					adaptor.AddChild(root_0, string_literal164_tree);
@@ -8332,7 +8333,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(59, false);
 				int LA59_1 = input.LA(1);
 
-				if ((LA59_1==79))
+				if ((LA59_1==80))
 				{
 					alt59 = 1;
 				}
@@ -8344,7 +8345,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:202:51: '--'
 					{
 					DebugLocation(202, 51);
-					string_literal165=(IToken)Match(input,79,Follow._79_in_unary_expression1265); if (state.failed) return retval;
+					string_literal165=(IToken)Match(input,80,Follow._80_in_unary_expression1265); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal165_tree = (object)adaptor.Create(string_literal165, "string_literal165", retval);
 					adaptor.AddChild(root_0, string_literal165_tree);
@@ -8453,7 +8454,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(207, 2);
-			string_literal168=(IToken)Match(input,107,Follow._107_in_await_expression1285); if (state.failed) return retval;
+			string_literal168=(IToken)Match(input,108,Follow._108_in_await_expression1285); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal168_tree = (object)adaptor.Create(string_literal168, "string_literal168", retval);
 			adaptor.AddChild(root_0, string_literal168_tree);
@@ -8529,7 +8530,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(209, 2);
-			string_literal170=(IToken)Match(input,76,Follow._76_in_pre_increment_expression1296); if (state.failed) return retval;
+			string_literal170=(IToken)Match(input,77,Follow._77_in_pre_increment_expression1296); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal170_tree = (object)adaptor.Create(string_literal170, "string_literal170", retval);
 			adaptor.AddChild(root_0, string_literal170_tree);
@@ -8605,7 +8606,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(211, 2);
-			string_literal172=(IToken)Match(input,79,Follow._79_in_pre_decrement_expression1309); if (state.failed) return retval;
+			string_literal172=(IToken)Match(input,80,Follow._80_in_pre_decrement_expression1309); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal172_tree = (object)adaptor.Create(string_literal172, "string_literal172", retval);
 			adaptor.AddChild(root_0, string_literal172_tree);
@@ -8681,7 +8682,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(213, 2);
-			char_literal174=(IToken)Match(input,73,Follow._73_in_pointer_indirection_expression1321); if (state.failed) return retval;
+			char_literal174=(IToken)Match(input,74,Follow._74_in_pointer_indirection_expression1321); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal174_tree = (object)adaptor.Create(char_literal174, "char_literal174", retval);
 			adaptor.AddChild(root_0, char_literal174_tree);
@@ -8757,7 +8758,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(215, 2);
-			char_literal176=(IToken)Match(input,70,Follow._70_in_addressof_expression1333); if (state.failed) return retval;
+			char_literal176=(IToken)Match(input,71,Follow._71_in_addressof_expression1333); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal176_tree = (object)adaptor.Create(char_literal176, "char_literal176", retval);
 			adaptor.AddChild(root_0, char_literal176_tree);
@@ -8831,7 +8832,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(61, false);
 			int LA61_1 = input.LA(1);
 
-			if ((LA61_1==106))
+			if ((LA61_1==107))
 			{
 				int LA61_2 = input.LA(2);
 
@@ -8851,7 +8852,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA61_1==72))
+			else if ((LA61_1==73))
 			{
 				int LA61_2 = input.LA(2);
 
@@ -8871,7 +8872,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA61_1==107))
+			else if ((LA61_1==108))
 			{
 				int LA61_2 = input.LA(2);
 
@@ -8891,7 +8892,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA61_1==137))
+			else if ((LA61_1==138))
 			{
 				int LA61_2 = input.LA(2);
 
@@ -8915,7 +8916,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA61_1==104||LA61_1==111||LA61_1==123||LA61_1==127||LA61_1==139||LA61_1==145||(LA61_1>=147 && LA61_1<=148)||LA61_1==156||LA61_1==158||LA61_1==175||LA61_1==197) && ((_queryExpression == 0)))
+			else if ((LA61_1==105||LA61_1==112||LA61_1==124||LA61_1==128||LA61_1==140||LA61_1==146||(LA61_1>=148 && LA61_1<=149)||LA61_1==157||LA61_1==159||LA61_1==176||LA61_1==198) && ((_queryExpression == 0)))
 			{
 				int LA61_2 = input.LA(2);
 
@@ -8935,11 +8936,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA61_1==Character_literal||LA61_1==FALSE||LA61_1==Hex_number||(LA61_1>=MINUS && LA61_1<=NUMBER)||LA61_1==Real_literal||LA61_1==STRINGLITERAL||LA61_1==TRUE||LA61_1==Verbatim_string_literal||LA61_1==65||LA61_1==70||LA61_1==73||(LA61_1>=75 && LA61_1<=76)||LA61_1==79||(LA61_1>=108 && LA61_1<=109)||LA61_1==112||(LA61_1>=115 && LA61_1<=116)||(LA61_1>=120 && LA61_1<=122)||LA61_1==125||LA61_1==134||LA61_1==142||LA61_1==150||(LA61_1>=154 && LA61_1<=155)||LA61_1==173||(LA61_1>=176 && LA61_1<=177)||LA61_1==180||LA61_1==183||(LA61_1>=187 && LA61_1<=190)||LA61_1==192||LA61_1==205))
+			else if ((LA61_1==Character_literal||LA61_1==FALSE||LA61_1==Hex_number||(LA61_1>=MINUS && LA61_1<=NUMBER)||LA61_1==Real_literal||LA61_1==STRINGLITERAL||LA61_1==TRUE||LA61_1==Verbatim_string_literal||LA61_1==66||LA61_1==71||LA61_1==74||(LA61_1>=76 && LA61_1<=77)||LA61_1==80||(LA61_1>=109 && LA61_1<=110)||LA61_1==113||(LA61_1>=116 && LA61_1<=117)||(LA61_1>=121 && LA61_1<=123)||LA61_1==126||LA61_1==135||LA61_1==143||LA61_1==151||(LA61_1>=155 && LA61_1<=156)||LA61_1==174||(LA61_1>=177 && LA61_1<=178)||LA61_1==181||LA61_1==184||(LA61_1>=188 && LA61_1<=191)||LA61_1==193||LA61_1==206))
 			{
 				alt61 = 3;
 			}
-			else if ((LA61_1==GET||LA61_1==IDENTIFIER||LA61_1==SET||LA61_1==99||(LA61_1>=101 && LA61_1<=102)||LA61_1==105||LA61_1==126||LA61_1==131||(LA61_1>=151 && LA61_1<=152)||LA61_1==161||(LA61_1>=163 && LA61_1<=164)||LA61_1==166||LA61_1==171||LA61_1==186||LA61_1==193||LA61_1==199))
+			else if ((LA61_1==GET||LA61_1==IDENTIFIER||LA61_1==SET||LA61_1==100||(LA61_1>=102 && LA61_1<=103)||LA61_1==106||LA61_1==127||LA61_1==132||(LA61_1>=152 && LA61_1<=153)||LA61_1==162||(LA61_1>=164 && LA61_1<=165)||LA61_1==167||LA61_1==172||LA61_1==187||LA61_1==194||LA61_1==200))
 			{
 				int LA61_2 = input.LA(2);
 
@@ -9243,7 +9244,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(62, false);
 				int LA62_1 = input.LA(1);
 
-				if ((LA62_1==78))
+				if ((LA62_1==79))
 				{
 					alt62 = 1;
 				}
@@ -9257,7 +9258,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:227:12: ',' argument
 					{
 					DebugLocation(227, 12);
-					char_literal186=(IToken)Match(input,78,Follow._78_in_argument_list1395); if (state.failed) return retval;
+					char_literal186=(IToken)Match(input,79,Follow._79_in_argument_list1395); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal186_tree = (object)adaptor.Create(char_literal186, "char_literal186", retval);
 					adaptor.AddChild(root_0, char_literal186_tree);
@@ -9345,15 +9346,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(63, false);
 			int LA63_1 = input.LA(1);
 
-			if ((LA63_1==106))
+			if ((LA63_1==107))
 			{
 				int LA63_2 = input.LA(2);
 
-				if ((LA63_2==83))
+				if ((LA63_2==84))
 				{
 					alt63 = 1;
 				}
-				else if ((LA63_2==EOF||LA63_2==DOT||(LA63_2>=GET && LA63_2<=GT)||LA63_2==IDENTIFIER||LA63_2==MINUS||(LA63_2>=PTR && LA63_2<=RPAREN)||LA63_2==SET||(LA63_2>=66 && LA63_2<=82)||(LA63_2>=84 && LA63_2<=95)||(LA63_2>=97 && LA63_2<=99)||(LA63_2>=101 && LA63_2<=107)||LA63_2==111||(LA63_2>=122 && LA63_2<=123)||(LA63_2>=126 && LA63_2<=127)||LA63_2==131||LA63_2==137||LA63_2==139||(LA63_2>=145 && LA63_2<=148)||(LA63_2>=151 && LA63_2<=152)||LA63_2==156||LA63_2==158||LA63_2==161||(LA63_2>=163 && LA63_2<=164)||LA63_2==166||LA63_2==171||LA63_2==175||LA63_2==186||LA63_2==193||LA63_2==197||LA63_2==199||(LA63_2>=201 && LA63_2<=203)))
+				else if ((LA63_2==EOF||LA63_2==DOT||(LA63_2>=GET && LA63_2<=GT)||LA63_2==IDENTIFIER||LA63_2==MINUS||(LA63_2>=PTR && LA63_2<=RPAREN)||LA63_2==SET||(LA63_2>=67 && LA63_2<=83)||(LA63_2>=85 && LA63_2<=96)||(LA63_2>=98 && LA63_2<=100)||(LA63_2>=102 && LA63_2<=108)||LA63_2==112||(LA63_2>=123 && LA63_2<=124)||(LA63_2>=127 && LA63_2<=128)||LA63_2==132||LA63_2==138||LA63_2==140||(LA63_2>=146 && LA63_2<=149)||(LA63_2>=152 && LA63_2<=153)||LA63_2==157||LA63_2==159||LA63_2==162||(LA63_2>=164 && LA63_2<=165)||LA63_2==167||LA63_2==172||LA63_2==176||LA63_2==187||LA63_2==194||LA63_2==198||LA63_2==200||(LA63_2>=202 && LA63_2<=204)))
 				{
 					alt63 = 2;
 				}
@@ -9365,23 +9366,23 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA63_1==137))
+			else if ((LA63_1==138))
 			{
 				int LA63_2 = input.LA(2);
 
-				if ((LA63_2==83))
+				if ((LA63_2==84))
 				{
 					alt63 = 1;
 				}
-				else if ((LA63_2==78||LA63_2==91) && ((_queryExpression == 0)))
+				else if ((LA63_2==79||LA63_2==92) && ((_queryExpression == 0)))
 				{
 					alt63 = 2;
 				}
-				else if ((LA63_2==GET||LA63_2==IDENTIFIER||LA63_2==SET||LA63_2==99||(LA63_2>=101 && LA63_2<=102)||(LA63_2>=104 && LA63_2<=107)||LA63_2==109||(LA63_2>=111 && LA63_2<=112)||LA63_2==115||LA63_2==120||LA63_2==123||(LA63_2>=125 && LA63_2<=127)||LA63_2==131||LA63_2==134||LA63_2==137||LA63_2==139||LA63_2==142||LA63_2==145||(LA63_2>=147 && LA63_2<=148)||(LA63_2>=150 && LA63_2<=152)||(LA63_2>=155 && LA63_2<=156)||LA63_2==158||LA63_2==161||(LA63_2>=163 && LA63_2<=164)||LA63_2==166||LA63_2==171||LA63_2==173||(LA63_2>=175 && LA63_2<=176)||LA63_2==180||LA63_2==186||(LA63_2>=188 && LA63_2<=189)||(LA63_2>=192 && LA63_2<=193)||LA63_2==195||LA63_2==197||LA63_2==199))
+				else if ((LA63_2==GET||LA63_2==IDENTIFIER||LA63_2==SET||LA63_2==100||(LA63_2>=102 && LA63_2<=103)||(LA63_2>=105 && LA63_2<=108)||LA63_2==110||(LA63_2>=112 && LA63_2<=113)||LA63_2==116||LA63_2==121||LA63_2==124||(LA63_2>=126 && LA63_2<=128)||LA63_2==132||LA63_2==135||LA63_2==138||LA63_2==140||LA63_2==143||LA63_2==146||(LA63_2>=148 && LA63_2<=149)||(LA63_2>=151 && LA63_2<=153)||(LA63_2>=156 && LA63_2<=157)||LA63_2==159||LA63_2==162||(LA63_2>=164 && LA63_2<=165)||LA63_2==167||LA63_2==172||LA63_2==174||(LA63_2>=176 && LA63_2<=177)||LA63_2==181||LA63_2==187||(LA63_2>=189 && LA63_2<=190)||(LA63_2>=193 && LA63_2<=194)||LA63_2==196||LA63_2==198||LA63_2==200))
 				{
 					alt63 = 2;
 				}
-				else if ((LA63_2==EOF||LA63_2==DOT||LA63_2==GT||LA63_2==MINUS||(LA63_2>=PTR && LA63_2<=RPAREN)||(LA63_2>=66 && LA63_2<=77)||(LA63_2>=79 && LA63_2<=82)||(LA63_2>=84 && LA63_2<=90)||(LA63_2>=92 && LA63_2<=95)||(LA63_2>=97 && LA63_2<=98)||LA63_2==103||LA63_2==146||(LA63_2>=201 && LA63_2<=203)) && ((_queryExpression == 0)))
+				else if ((LA63_2==EOF||LA63_2==DOT||LA63_2==GT||LA63_2==MINUS||(LA63_2>=PTR && LA63_2<=RPAREN)||(LA63_2>=67 && LA63_2<=78)||(LA63_2>=80 && LA63_2<=83)||(LA63_2>=85 && LA63_2<=91)||(LA63_2>=93 && LA63_2<=96)||(LA63_2>=98 && LA63_2<=99)||LA63_2==104||LA63_2==147||(LA63_2>=202 && LA63_2<=204)) && ((_queryExpression == 0)))
 				{
 					alt63 = 2;
 				}
@@ -9393,15 +9394,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA63_1==107))
+			else if ((LA63_1==108))
 			{
 				int LA63_2 = input.LA(2);
 
-				if ((LA63_2==83))
+				if ((LA63_2==84))
 				{
 					alt63 = 1;
 				}
-				else if ((LA63_2==EOF||LA63_2==Character_literal||LA63_2==DOT||(LA63_2>=FALSE && LA63_2<=GT)||(LA63_2>=Hex_number && LA63_2<=IDENTIFIER)||(LA63_2>=MINUS && LA63_2<=NUMBER)||(LA63_2>=PTR && LA63_2<=Real_literal)||(LA63_2>=SET && LA63_2<=STRINGLITERAL)||LA63_2==TRUE||LA63_2==Verbatim_string_literal||(LA63_2>=65 && LA63_2<=82)||(LA63_2>=84 && LA63_2<=95)||(LA63_2>=97 && LA63_2<=99)||(LA63_2>=101 && LA63_2<=109)||(LA63_2>=111 && LA63_2<=112)||(LA63_2>=115 && LA63_2<=116)||(LA63_2>=120 && LA63_2<=123)||(LA63_2>=125 && LA63_2<=127)||LA63_2==131||LA63_2==134||LA63_2==137||LA63_2==139||LA63_2==142||(LA63_2>=145 && LA63_2<=148)||(LA63_2>=150 && LA63_2<=152)||(LA63_2>=154 && LA63_2<=156)||LA63_2==158||LA63_2==161||(LA63_2>=163 && LA63_2<=164)||LA63_2==166||LA63_2==171||LA63_2==173||(LA63_2>=175 && LA63_2<=177)||LA63_2==180||LA63_2==183||(LA63_2>=186 && LA63_2<=190)||(LA63_2>=192 && LA63_2<=193)||LA63_2==197||LA63_2==199||(LA63_2>=201 && LA63_2<=203)||LA63_2==205))
+				else if ((LA63_2==EOF||LA63_2==Character_literal||LA63_2==DOT||(LA63_2>=FALSE && LA63_2<=GT)||(LA63_2>=Hex_number && LA63_2<=IDENTIFIER)||(LA63_2>=MINUS && LA63_2<=NUMBER)||(LA63_2>=PTR && LA63_2<=Real_literal)||(LA63_2>=SET && LA63_2<=STRINGLITERAL)||LA63_2==TRUE||LA63_2==Verbatim_string_literal||(LA63_2>=66 && LA63_2<=83)||(LA63_2>=85 && LA63_2<=96)||(LA63_2>=98 && LA63_2<=100)||(LA63_2>=102 && LA63_2<=110)||(LA63_2>=112 && LA63_2<=113)||(LA63_2>=116 && LA63_2<=117)||(LA63_2>=121 && LA63_2<=124)||(LA63_2>=126 && LA63_2<=128)||LA63_2==132||LA63_2==135||LA63_2==138||LA63_2==140||LA63_2==143||(LA63_2>=146 && LA63_2<=149)||(LA63_2>=151 && LA63_2<=153)||(LA63_2>=155 && LA63_2<=157)||LA63_2==159||LA63_2==162||(LA63_2>=164 && LA63_2<=165)||LA63_2==167||LA63_2==172||LA63_2==174||(LA63_2>=176 && LA63_2<=178)||LA63_2==181||LA63_2==184||(LA63_2>=187 && LA63_2<=191)||(LA63_2>=193 && LA63_2<=194)||LA63_2==198||LA63_2==200||(LA63_2>=202 && LA63_2<=204)||LA63_2==206))
 				{
 					alt63 = 2;
 				}
@@ -9413,27 +9414,27 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA63_1==Character_literal||LA63_1==FALSE||LA63_1==Hex_number||(LA63_1>=MINUS && LA63_1<=NUMBER)||LA63_1==Real_literal||LA63_1==STRINGLITERAL||LA63_1==TRUE||LA63_1==Verbatim_string_literal||LA63_1==65||LA63_1==70||(LA63_1>=72 && LA63_1<=73)||(LA63_1>=75 && LA63_1<=76)||LA63_1==79||(LA63_1>=108 && LA63_1<=109)||LA63_1==112||(LA63_1>=115 && LA63_1<=116)||(LA63_1>=120 && LA63_1<=122)||LA63_1==125||LA63_1==134||LA63_1==142||LA63_1==150||(LA63_1>=154 && LA63_1<=155)||LA63_1==159||LA63_1==170||LA63_1==173||(LA63_1>=176 && LA63_1<=177)||LA63_1==180||LA63_1==183||(LA63_1>=187 && LA63_1<=190)||LA63_1==192||LA63_1==205))
+			else if ((LA63_1==Character_literal||LA63_1==FALSE||LA63_1==Hex_number||(LA63_1>=MINUS && LA63_1<=NUMBER)||LA63_1==Real_literal||LA63_1==STRINGLITERAL||LA63_1==TRUE||LA63_1==Verbatim_string_literal||LA63_1==66||LA63_1==71||(LA63_1>=73 && LA63_1<=74)||(LA63_1>=76 && LA63_1<=77)||LA63_1==80||(LA63_1>=109 && LA63_1<=110)||LA63_1==113||(LA63_1>=116 && LA63_1<=117)||(LA63_1>=121 && LA63_1<=123)||LA63_1==126||LA63_1==135||LA63_1==143||LA63_1==151||(LA63_1>=155 && LA63_1<=156)||LA63_1==160||LA63_1==171||LA63_1==174||(LA63_1>=177 && LA63_1<=178)||LA63_1==181||LA63_1==184||(LA63_1>=188 && LA63_1<=191)||LA63_1==193||LA63_1==206))
 			{
 				alt63 = 2;
 			}
-			else if ((LA63_1==104||LA63_1==111||LA63_1==123||LA63_1==127||LA63_1==139||LA63_1==145||(LA63_1>=147 && LA63_1<=148)||LA63_1==156||LA63_1==158||LA63_1==175||LA63_1==197) && ((_queryExpression == 0)))
+			else if ((LA63_1==105||LA63_1==112||LA63_1==124||LA63_1==128||LA63_1==140||LA63_1==146||(LA63_1>=148 && LA63_1<=149)||LA63_1==157||LA63_1==159||LA63_1==176||LA63_1==198) && ((_queryExpression == 0)))
 			{
 				int LA63_2 = input.LA(2);
 
-				if ((LA63_2==83))
+				if ((LA63_2==84))
 				{
 					alt63 = 1;
 				}
-				else if ((LA63_2==78) && ((_queryExpression == 0)))
+				else if ((LA63_2==79) && ((_queryExpression == 0)))
 				{
 					alt63 = 2;
 				}
-				else if ((LA63_2==EOF||LA63_2==DOT||LA63_2==GT||LA63_2==MINUS||(LA63_2>=PTR && LA63_2<=RPAREN)||(LA63_2>=66 && LA63_2<=77)||(LA63_2>=79 && LA63_2<=82)||LA63_2==84||(LA63_2>=86 && LA63_2<=95)||(LA63_2>=97 && LA63_2<=98)||LA63_2==103||LA63_2==146||(LA63_2>=201 && LA63_2<=203)) && ((_queryExpression == 0)))
+				else if ((LA63_2==EOF||LA63_2==DOT||LA63_2==GT||LA63_2==MINUS||(LA63_2>=PTR && LA63_2<=RPAREN)||(LA63_2>=67 && LA63_2<=78)||(LA63_2>=80 && LA63_2<=83)||LA63_2==85||(LA63_2>=87 && LA63_2<=96)||(LA63_2>=98 && LA63_2<=99)||LA63_2==104||LA63_2==147||(LA63_2>=202 && LA63_2<=204)) && ((_queryExpression == 0)))
 				{
 					alt63 = 2;
 				}
-				else if ((LA63_2==85) && ((_queryExpression == 0)))
+				else if ((LA63_2==86) && ((_queryExpression == 0)))
 				{
 					alt63 = 2;
 				}
@@ -9445,16 +9446,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA63_1==GET||LA63_1==IDENTIFIER||LA63_1==SET||LA63_1==99||(LA63_1>=101 && LA63_1<=102)||LA63_1==105||LA63_1==126||LA63_1==131||(LA63_1>=151 && LA63_1<=152)||LA63_1==161||(LA63_1>=163 && LA63_1<=164)||LA63_1==166||LA63_1==171||LA63_1==186||LA63_1==193||LA63_1==199))
+			else if ((LA63_1==GET||LA63_1==IDENTIFIER||LA63_1==SET||LA63_1==100||(LA63_1>=102 && LA63_1<=103)||LA63_1==106||LA63_1==127||LA63_1==132||(LA63_1>=152 && LA63_1<=153)||LA63_1==162||(LA63_1>=164 && LA63_1<=165)||LA63_1==167||LA63_1==172||LA63_1==187||LA63_1==194||LA63_1==200))
 			{
 				switch (input.LA(2))
 				{
-				case 83:
+				case 84:
 					{
 					alt63 = 1;
 					}
 					break;
-				case 78:
+				case 79:
 					{
 					alt63 = 2;
 					}
@@ -9465,7 +9466,6 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				case MINUS:
 				case PTR:
 				case RPAREN:
-				case 66:
 				case 67:
 				case 68:
 				case 69:
@@ -9477,11 +9477,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				case 75:
 				case 76:
 				case 77:
-				case 79:
+				case 78:
 				case 80:
 				case 81:
 				case 82:
-				case 84:
+				case 83:
 				case 85:
 				case 86:
 				case 87:
@@ -9493,13 +9493,14 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				case 93:
 				case 94:
 				case 95:
-				case 97:
+				case 96:
 				case 98:
-				case 103:
-				case 146:
-				case 201:
+				case 99:
+				case 104:
+				case 147:
 				case 202:
 				case 203:
+				case 204:
 					{
 					alt63 = 2;
 					}
@@ -9630,7 +9631,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier191.Tree, identifier191, "identifier191", retval);
 			DebugLocation(233, 15);
-			char_literal192=(IToken)Match(input,83,Follow._83_in_argument_name1427); if (state.failed) return retval;
+			char_literal192=(IToken)Match(input,84,Follow._84_in_argument_name1427); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal192_tree = (object)adaptor.Create(char_literal192, "char_literal192", retval);
 			adaptor.AddChild(root_0, char_literal192_tree);
@@ -9713,79 +9714,79 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case STRINGLITERAL:
 			case TRUE:
 			case Verbatim_string_literal:
-			case 65:
-			case 70:
-			case 72:
+			case 66:
+			case 71:
 			case 73:
-			case 75:
+			case 74:
 			case 76:
-			case 79:
-			case 99:
-			case 101:
+			case 77:
+			case 80:
+			case 100:
 			case 102:
-			case 104:
+			case 103:
 			case 105:
 			case 106:
 			case 107:
 			case 108:
 			case 109:
-			case 111:
+			case 110:
 			case 112:
-			case 115:
+			case 113:
 			case 116:
-			case 120:
+			case 117:
 			case 121:
 			case 122:
 			case 123:
-			case 125:
+			case 124:
 			case 126:
 			case 127:
-			case 131:
-			case 134:
-			case 137:
-			case 139:
-			case 142:
-			case 145:
-			case 147:
+			case 128:
+			case 132:
+			case 135:
+			case 138:
+			case 140:
+			case 143:
+			case 146:
 			case 148:
-			case 150:
+			case 149:
 			case 151:
 			case 152:
-			case 154:
+			case 153:
 			case 155:
 			case 156:
-			case 158:
-			case 161:
-			case 163:
+			case 157:
+			case 159:
+			case 162:
 			case 164:
-			case 166:
-			case 171:
-			case 173:
-			case 175:
+			case 165:
+			case 167:
+			case 172:
+			case 174:
 			case 176:
 			case 177:
-			case 180:
-			case 183:
-			case 186:
+			case 178:
+			case 181:
+			case 184:
 			case 187:
 			case 188:
 			case 189:
 			case 190:
-			case 192:
+			case 191:
 			case 193:
-			case 197:
-			case 199:
-			case 205:
+			case 194:
+			case 198:
+			case 200:
+			case 206:
 				{
 				alt64 = 1;
 				}
 				break;
-			case 170:
+			case 171:
 				{
 				alt64 = 2;
 				}
 				break;
-			case 159:
+			case 160:
 				{
 				alt64 = 3;
 				}
@@ -9839,7 +9840,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(237, 4);
-				string_literal195=(IToken)Match(input,159,Follow._159_in_argument_value1447); if (state.failed) return retval;
+				string_literal195=(IToken)Match(input,160,Follow._160_in_argument_value1447); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal195_tree = (object)adaptor.Create(string_literal195, "string_literal195", retval);
 				adaptor.AddChild(root_0, string_literal195_tree);
@@ -9932,7 +9933,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(71, false);
 			int LA71_1 = input.LA(1);
 
-			if ((LA71_1==170))
+			if ((LA71_1==171))
 			{
 				int LA71_2 = input.LA(2);
 
@@ -9969,13 +9970,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(239, 2);
-				string_literal197=(IToken)Match(input,170,Follow._170_in_ref_variable_reference1459); if (state.failed) return retval;
+				string_literal197=(IToken)Match(input,171,Follow._171_in_ref_variable_reference1459); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal197_tree = (object)adaptor.Create(string_literal197, "string_literal197", retval);
 				adaptor.AddChild(root_0, string_literal197_tree);
 				}
 				DebugLocation(239, 8);
-				char_literal198=(IToken)Match(input,72,Follow._72_in_ref_variable_reference1461); if (state.failed) return retval;
+				char_literal198=(IToken)Match(input,73,Follow._73_in_ref_variable_reference1461); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal198_tree = (object)adaptor.Create(char_literal198, "char_literal198", retval);
 				adaptor.AddChild(root_0, char_literal198_tree);
@@ -9987,11 +9988,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(70, false);
 				int LA70_1 = input.LA(1);
 
-				if ((LA70_1==GET||LA70_1==IDENTIFIER||LA70_1==SET||LA70_1==99||(LA70_1>=101 && LA70_1<=102)||(LA70_1>=104 && LA70_1<=107)||LA70_1==109||(LA70_1>=111 && LA70_1<=112)||LA70_1==115||LA70_1==120||LA70_1==123||(LA70_1>=125 && LA70_1<=127)||LA70_1==131||LA70_1==134||LA70_1==137||LA70_1==139||LA70_1==142||LA70_1==145||(LA70_1>=147 && LA70_1<=148)||(LA70_1>=150 && LA70_1<=152)||(LA70_1>=155 && LA70_1<=156)||LA70_1==158||LA70_1==161||(LA70_1>=163 && LA70_1<=164)||LA70_1==166||LA70_1==171||LA70_1==173||(LA70_1>=175 && LA70_1<=176)||LA70_1==180||LA70_1==186||(LA70_1>=188 && LA70_1<=189)||(LA70_1>=192 && LA70_1<=193)||LA70_1==197||LA70_1==199))
+				if ((LA70_1==GET||LA70_1==IDENTIFIER||LA70_1==SET||LA70_1==100||(LA70_1>=102 && LA70_1<=103)||(LA70_1>=105 && LA70_1<=108)||LA70_1==110||(LA70_1>=112 && LA70_1<=113)||LA70_1==116||LA70_1==121||LA70_1==124||(LA70_1>=126 && LA70_1<=128)||LA70_1==132||LA70_1==135||LA70_1==138||LA70_1==140||LA70_1==143||LA70_1==146||(LA70_1>=148 && LA70_1<=149)||(LA70_1>=151 && LA70_1<=153)||(LA70_1>=156 && LA70_1<=157)||LA70_1==159||LA70_1==162||(LA70_1>=164 && LA70_1<=165)||LA70_1==167||LA70_1==172||LA70_1==174||(LA70_1>=176 && LA70_1<=177)||LA70_1==181||LA70_1==187||(LA70_1>=189 && LA70_1<=190)||(LA70_1>=193 && LA70_1<=194)||LA70_1==198||LA70_1==200))
 				{
 					alt70 = 1;
 				}
-				else if ((LA70_1==195))
+				else if ((LA70_1==196))
 				{
 					alt70 = 2;
 				}
@@ -10016,11 +10017,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(65, false);
 					int LA65_1 = input.LA(1);
 
-					if ((LA65_1==GET||LA65_1==IDENTIFIER||LA65_1==SET||LA65_1==99||(LA65_1>=101 && LA65_1<=102)||(LA65_1>=104 && LA65_1<=107)||LA65_1==111||LA65_1==123||(LA65_1>=126 && LA65_1<=127)||LA65_1==131||LA65_1==137||LA65_1==139||LA65_1==145||(LA65_1>=147 && LA65_1<=148)||(LA65_1>=151 && LA65_1<=152)||LA65_1==156||LA65_1==158||LA65_1==161||(LA65_1>=163 && LA65_1<=164)||LA65_1==166||LA65_1==171||LA65_1==175||LA65_1==186||LA65_1==193||LA65_1==197||LA65_1==199))
+					if ((LA65_1==GET||LA65_1==IDENTIFIER||LA65_1==SET||LA65_1==100||(LA65_1>=102 && LA65_1<=103)||(LA65_1>=105 && LA65_1<=108)||LA65_1==112||LA65_1==124||(LA65_1>=127 && LA65_1<=128)||LA65_1==132||LA65_1==138||LA65_1==140||LA65_1==146||(LA65_1>=148 && LA65_1<=149)||(LA65_1>=152 && LA65_1<=153)||LA65_1==157||LA65_1==159||LA65_1==162||(LA65_1>=164 && LA65_1<=165)||LA65_1==167||LA65_1==172||LA65_1==176||LA65_1==187||LA65_1==194||LA65_1==198||LA65_1==200))
 					{
 						alt65 = 1;
 					}
-					else if ((LA65_1==109||LA65_1==112||LA65_1==115||LA65_1==120||LA65_1==125||LA65_1==134||LA65_1==142||LA65_1==150||LA65_1==155||LA65_1==173||LA65_1==176||LA65_1==180||(LA65_1>=188 && LA65_1<=189)||LA65_1==192))
+					else if ((LA65_1==110||LA65_1==113||LA65_1==116||LA65_1==121||LA65_1==126||LA65_1==135||LA65_1==143||LA65_1==151||LA65_1==156||LA65_1==174||LA65_1==177||LA65_1==181||(LA65_1>=189 && LA65_1<=190)||LA65_1==193))
 					{
 						alt65 = 2;
 					}
@@ -10073,7 +10074,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						try { DebugEnterDecision(66, false);
 						int LA66_1 = input.LA(1);
 
-						if ((LA66_1==73))
+						if ((LA66_1==74))
 						{
 							alt66 = 1;
 						}
@@ -10087,7 +10088,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 							// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:240:56: '*'
 							{
 							DebugLocation(240, 56);
-							char_literal201=(IToken)Match(input,73,Follow._73_in_ref_variable_reference1485); if (state.failed) return retval;
+							char_literal201=(IToken)Match(input,74,Follow._74_in_ref_variable_reference1485); if (state.failed) return retval;
 							if (state.backtracking == 0) {
 							char_literal201_tree = (object)adaptor.Create(char_literal201, "char_literal201", retval);
 							adaptor.AddChild(root_0, char_literal201_tree);
@@ -10113,7 +10114,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(67, false);
 					int LA67_1 = input.LA(1);
 
-					if ((LA67_1==95))
+					if ((LA67_1==96))
 					{
 						alt67 = 1;
 					}
@@ -10145,7 +10146,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:241:5: 'void' ( '*' )+ ( rank_specifiers )?
 					{
 					DebugLocation(241, 5);
-					string_literal203=(IToken)Match(input,195,Follow._195_in_ref_variable_reference1497); if (state.failed) return retval;
+					string_literal203=(IToken)Match(input,196,Follow._196_in_ref_variable_reference1497); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal203_tree = (object)adaptor.Create(string_literal203, "string_literal203", retval);
 					adaptor.AddChild(root_0, string_literal203_tree);
@@ -10160,7 +10161,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						try { DebugEnterDecision(68, false);
 						int LA68_1 = input.LA(1);
 
-						if ((LA68_1==73))
+						if ((LA68_1==74))
 						{
 							alt68 = 1;
 						}
@@ -10174,7 +10175,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 							// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:241:14: '*'
 							{
 							DebugLocation(241, 14);
-							char_literal204=(IToken)Match(input,73,Follow._73_in_ref_variable_reference1501); if (state.failed) return retval;
+							char_literal204=(IToken)Match(input,74,Follow._74_in_ref_variable_reference1501); if (state.failed) return retval;
 							if (state.backtracking == 0) {
 							char_literal204_tree = (object)adaptor.Create(char_literal204, "char_literal204", retval);
 							adaptor.AddChild(root_0, char_literal204_tree);
@@ -10206,7 +10207,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(69, false);
 					int LA69_1 = input.LA(1);
 
-					if ((LA69_1==95))
+					if ((LA69_1==96))
 					{
 						alt69 = 1;
 					}
@@ -10259,7 +10260,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(243, 4);
-				string_literal208=(IToken)Match(input,170,Follow._170_in_ref_variable_reference1524); if (state.failed) return retval;
+				string_literal208=(IToken)Match(input,171,Follow._171_in_ref_variable_reference1524); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal208_tree = (object)adaptor.Create(string_literal208, "string_literal208", retval);
 				adaptor.AddChild(root_0, string_literal208_tree);
@@ -10334,11 +10335,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(72, false);
 			int LA72_1 = input.LA(1);
 
-			if ((LA72_1==Character_literal||(LA72_1>=FALSE && LA72_1<=GET)||(LA72_1>=Hex_number && LA72_1<=IDENTIFIER)||(LA72_1>=NULL && LA72_1<=NUMBER)||LA72_1==Real_literal||(LA72_1>=SET && LA72_1<=STRINGLITERAL)||LA72_1==TRUE||LA72_1==Verbatim_string_literal||LA72_1==72||LA72_1==99||(LA72_1>=101 && LA72_1<=102)||(LA72_1>=104 && LA72_1<=109)||(LA72_1>=111 && LA72_1<=112)||(LA72_1>=115 && LA72_1<=116)||(LA72_1>=120 && LA72_1<=123)||(LA72_1>=125 && LA72_1<=127)||LA72_1==131||LA72_1==134||LA72_1==137||LA72_1==139||LA72_1==142||LA72_1==145||(LA72_1>=147 && LA72_1<=148)||(LA72_1>=150 && LA72_1<=152)||(LA72_1>=155 && LA72_1<=156)||LA72_1==158||LA72_1==161||(LA72_1>=163 && LA72_1<=164)||LA72_1==166||LA72_1==171||LA72_1==173||(LA72_1>=175 && LA72_1<=177)||LA72_1==180||LA72_1==183||(LA72_1>=186 && LA72_1<=190)||(LA72_1>=192 && LA72_1<=193)||LA72_1==197||LA72_1==199))
+			if ((LA72_1==Character_literal||(LA72_1>=FALSE && LA72_1<=GET)||(LA72_1>=Hex_number && LA72_1<=IDENTIFIER)||(LA72_1>=NULL && LA72_1<=NUMBER)||LA72_1==Real_literal||(LA72_1>=SET && LA72_1<=STRINGLITERAL)||LA72_1==TRUE||LA72_1==Verbatim_string_literal||LA72_1==73||LA72_1==100||(LA72_1>=102 && LA72_1<=103)||(LA72_1>=105 && LA72_1<=110)||(LA72_1>=112 && LA72_1<=113)||(LA72_1>=116 && LA72_1<=117)||(LA72_1>=121 && LA72_1<=124)||(LA72_1>=126 && LA72_1<=128)||LA72_1==132||LA72_1==135||LA72_1==138||LA72_1==140||LA72_1==143||LA72_1==146||(LA72_1>=148 && LA72_1<=149)||(LA72_1>=151 && LA72_1<=153)||(LA72_1>=156 && LA72_1<=157)||LA72_1==159||LA72_1==162||(LA72_1>=164 && LA72_1<=165)||LA72_1==167||LA72_1==172||LA72_1==174||(LA72_1>=176 && LA72_1<=178)||LA72_1==181||LA72_1==184||(LA72_1>=187 && LA72_1<=191)||(LA72_1>=193 && LA72_1<=194)||LA72_1==198||LA72_1==200))
 			{
 				alt72 = 1;
 			}
-			else if ((LA72_1==154))
+			else if ((LA72_1==155))
 			{
 				int LA72_2 = input.LA(2);
 
@@ -10541,7 +10542,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(73, false);
 			int LA73_1 = input.LA(1);
 
-			if ((LA73_1==72))
+			if ((LA73_1==73))
 			{
 				alt73 = 1;
 			}
@@ -10631,7 +10632,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(77, false);
 			int LA77_1 = input.LA(1);
 
-			if ((LA77_1==72))
+			if ((LA77_1==73))
 			{
 				int LA77_2 = input.LA(2);
 
@@ -10681,7 +10682,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(74, false);
 					int LA74_1 = input.LA(1);
 
-					if ((LA74_1==72))
+					if ((LA74_1==73))
 					{
 						alt74 = 1;
 					}
@@ -10758,7 +10759,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(75, false);
 					int LA75_1 = input.LA(1);
 
-					if ((LA75_1==72))
+					if ((LA75_1==73))
 					{
 						alt75 = 1;
 					}
@@ -10822,7 +10823,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(76, false);
 					int LA76_1 = input.LA(1);
 
-					if ((LA76_1==72))
+					if ((LA76_1==73))
 					{
 						alt76 = 1;
 					}
@@ -10939,7 +10940,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(78, false);
 			int LA78_1 = input.LA(1);
 
-			if ((LA78_1==95))
+			if ((LA78_1==96))
 			{
 				alt78 = 1;
 			}
@@ -11029,7 +11030,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(82, false);
 			int LA82_1 = input.LA(1);
 
-			if ((LA82_1==95))
+			if ((LA82_1==96))
 			{
 				int LA82_2 = input.LA(2);
 
@@ -11079,7 +11080,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(79, false);
 					int LA79_1 = input.LA(1);
 
-					if ((LA79_1==95))
+					if ((LA79_1==96))
 					{
 						alt79 = 1;
 					}
@@ -11157,7 +11158,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(80, false);
 					int LA80_1 = input.LA(1);
 
-					if ((LA80_1==95))
+					if ((LA80_1==96))
 					{
 						alt80 = 1;
 					}
@@ -11221,7 +11222,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(81, false);
 					int LA81_1 = input.LA(1);
 
-					if ((LA81_1==95))
+					if ((LA81_1==96))
 					{
 						alt81 = 1;
 					}
@@ -11460,60 +11461,60 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case STRINGLITERAL:
 			case TRUE:
 			case Verbatim_string_literal:
-			case 72:
-			case 99:
-			case 101:
+			case 73:
+			case 100:
 			case 102:
-			case 104:
+			case 103:
 			case 105:
-			case 107:
+			case 106:
 			case 108:
 			case 109:
-			case 111:
+			case 110:
 			case 112:
-			case 115:
-			case 120:
-			case 123:
-			case 125:
+			case 113:
+			case 116:
+			case 121:
+			case 124:
 			case 126:
 			case 127:
-			case 131:
-			case 134:
-			case 137:
-			case 139:
-			case 142:
-			case 145:
-			case 147:
+			case 128:
+			case 132:
+			case 135:
+			case 138:
+			case 140:
+			case 143:
+			case 146:
 			case 148:
-			case 150:
+			case 149:
 			case 151:
 			case 152:
-			case 155:
+			case 153:
 			case 156:
-			case 158:
-			case 161:
-			case 163:
+			case 157:
+			case 159:
+			case 162:
 			case 164:
-			case 166:
-			case 171:
-			case 173:
-			case 175:
+			case 165:
+			case 167:
+			case 172:
+			case 174:
 			case 176:
-			case 180:
-			case 183:
-			case 186:
+			case 177:
+			case 181:
+			case 184:
 			case 187:
 			case 188:
 			case 189:
-			case 192:
+			case 190:
 			case 193:
-			case 197:
-			case 199:
+			case 194:
+			case 198:
+			case 200:
 				{
 				alt85 = 1;
 				}
 				break;
-			case 106:
+			case 107:
 				{
 				int LA85_2 = input.LA(2);
 
@@ -11534,7 +11535,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 154:
+			case 155:
 				{
 				int LA85_2 = input.LA(2);
 
@@ -11555,27 +11556,27 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 177:
+			case 178:
 				{
 				alt85 = 3;
 				}
 				break;
-			case 116:
+			case 117:
 				{
 				alt85 = 4;
 				}
 				break;
-			case 190:
+			case 191:
 				{
 				alt85 = 5;
 				}
 				break;
-			case 121:
+			case 122:
 				{
 				alt85 = 6;
 				}
 				break;
-			case 122:
+			case 123:
 				{
 				alt85 = 7;
 				}
@@ -11613,7 +11614,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(84, false);
 					int LA84_1 = input.LA(1);
 
-					if ((LA84_1==95))
+					if ((LA84_1==96))
 					{
 						int LA84_2 = input.LA(2);
 
@@ -11624,7 +11625,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 
 					}
-					else if ((LA84_1==DOT||LA84_1==PTR||LA84_1==72))
+					else if ((LA84_1==DOT||LA84_1==PTR||LA84_1==73))
 					{
 						alt84 = 1;
 					}
@@ -11837,21 +11838,21 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case STRINGLITERAL:
 			case TRUE:
 			case Verbatim_string_literal:
-			case 109:
-			case 112:
-			case 115:
-			case 120:
-			case 125:
-			case 134:
-			case 142:
-			case 150:
-			case 155:
-			case 173:
-			case 176:
-			case 180:
-			case 188:
+			case 110:
+			case 113:
+			case 116:
+			case 121:
+			case 126:
+			case 135:
+			case 143:
+			case 151:
+			case 156:
+			case 174:
+			case 177:
+			case 181:
 			case 189:
-			case 192:
+			case 190:
+			case 193:
 				{
 				alt91 = 1;
 				}
@@ -11859,32 +11860,32 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case GET:
 			case IDENTIFIER:
 			case SET:
-			case 99:
-			case 101:
+			case 100:
 			case 102:
-			case 105:
+			case 103:
 			case 106:
 			case 107:
-			case 126:
-			case 131:
-			case 151:
+			case 108:
+			case 127:
+			case 132:
 			case 152:
-			case 161:
-			case 163:
+			case 153:
+			case 162:
 			case 164:
-			case 166:
-			case 171:
-			case 186:
-			case 193:
-			case 199:
+			case 165:
+			case 167:
+			case 172:
+			case 187:
+			case 194:
+			case 200:
 				{
 				int LA91_2 = input.LA(2);
 
-				if ((LA91_2==EOF||LA91_2==DOT||(LA91_2>=GET && LA91_2<=GT)||LA91_2==IDENTIFIER||LA91_2==MINUS||(LA91_2>=PTR && LA91_2<=RPAREN)||(LA91_2>=SEMI && LA91_2<=SET)||(LA91_2>=66 && LA91_2<=83)||(LA91_2>=85 && LA91_2<=90)||(LA91_2>=92 && LA91_2<=99)||(LA91_2>=101 && LA91_2<=107)||LA91_2==109||(LA91_2>=111 && LA91_2<=112)||LA91_2==115||LA91_2==120||LA91_2==123||(LA91_2>=125 && LA91_2<=127)||LA91_2==131||LA91_2==134||LA91_2==137||LA91_2==139||LA91_2==142||(LA91_2>=145 && LA91_2<=148)||(LA91_2>=150 && LA91_2<=152)||(LA91_2>=155 && LA91_2<=156)||(LA91_2>=158 && LA91_2<=159)||LA91_2==161||(LA91_2>=163 && LA91_2<=164)||LA91_2==166||(LA91_2>=170 && LA91_2<=171)||LA91_2==173||(LA91_2>=175 && LA91_2<=176)||LA91_2==180||LA91_2==183||LA91_2==186||(LA91_2>=188 && LA91_2<=189)||(LA91_2>=192 && LA91_2<=193)||LA91_2==195||LA91_2==197||LA91_2==199||(LA91_2>=201 && LA91_2<=204)))
+				if ((LA91_2==EOF||LA91_2==DOT||(LA91_2>=GET && LA91_2<=GT)||LA91_2==IDENTIFIER||LA91_2==MINUS||(LA91_2>=PTR && LA91_2<=RPAREN)||(LA91_2>=SEMI && LA91_2<=SET)||(LA91_2>=67 && LA91_2<=84)||(LA91_2>=86 && LA91_2<=91)||(LA91_2>=93 && LA91_2<=100)||(LA91_2>=102 && LA91_2<=108)||LA91_2==110||(LA91_2>=112 && LA91_2<=113)||LA91_2==116||LA91_2==121||LA91_2==124||(LA91_2>=126 && LA91_2<=128)||LA91_2==132||LA91_2==135||LA91_2==138||LA91_2==140||LA91_2==143||(LA91_2>=146 && LA91_2<=149)||(LA91_2>=151 && LA91_2<=153)||(LA91_2>=156 && LA91_2<=157)||(LA91_2>=159 && LA91_2<=160)||LA91_2==162||(LA91_2>=164 && LA91_2<=165)||LA91_2==167||(LA91_2>=171 && LA91_2<=172)||LA91_2==174||(LA91_2>=176 && LA91_2<=177)||LA91_2==181||LA91_2==184||LA91_2==187||(LA91_2>=189 && LA91_2<=190)||(LA91_2>=193 && LA91_2<=194)||LA91_2==196||LA91_2==198||LA91_2==200||(LA91_2>=202 && LA91_2<=205)))
 				{
 					alt91 = 1;
 				}
-				else if ((LA91_2==84))
+				else if ((LA91_2==85))
 				{
 					alt91 = 4;
 				}
@@ -11897,27 +11898,27 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 104:
-			case 111:
-			case 123:
-			case 127:
-			case 137:
-			case 139:
-			case 145:
-			case 147:
+			case 105:
+			case 112:
+			case 124:
+			case 128:
+			case 138:
+			case 140:
+			case 146:
 			case 148:
-			case 156:
-			case 158:
-			case 175:
-			case 197:
+			case 149:
+			case 157:
+			case 159:
+			case 176:
+			case 198:
 				{
 				int LA91_2 = input.LA(2);
 
-				if ((LA91_2==EOF||LA91_2==DOT||(LA91_2>=GET && LA91_2<=GT)||LA91_2==IDENTIFIER||LA91_2==MINUS||(LA91_2>=PTR && LA91_2<=RPAREN)||(LA91_2>=SEMI && LA91_2<=SET)||(LA91_2>=66 && LA91_2<=83)||(LA91_2>=85 && LA91_2<=90)||(LA91_2>=92 && LA91_2<=99)||(LA91_2>=101 && LA91_2<=107)||LA91_2==109||(LA91_2>=111 && LA91_2<=112)||LA91_2==115||LA91_2==120||LA91_2==123||(LA91_2>=125 && LA91_2<=127)||LA91_2==131||LA91_2==134||LA91_2==137||LA91_2==139||LA91_2==142||(LA91_2>=145 && LA91_2<=148)||(LA91_2>=150 && LA91_2<=152)||(LA91_2>=155 && LA91_2<=156)||(LA91_2>=158 && LA91_2<=159)||LA91_2==161||(LA91_2>=163 && LA91_2<=164)||LA91_2==166||(LA91_2>=170 && LA91_2<=171)||LA91_2==173||(LA91_2>=175 && LA91_2<=176)||LA91_2==180||LA91_2==183||LA91_2==186||(LA91_2>=188 && LA91_2<=189)||(LA91_2>=192 && LA91_2<=193)||LA91_2==195||LA91_2==197||LA91_2==199||(LA91_2>=201 && LA91_2<=204)))
+				if ((LA91_2==EOF||LA91_2==DOT||(LA91_2>=GET && LA91_2<=GT)||LA91_2==IDENTIFIER||LA91_2==MINUS||(LA91_2>=PTR && LA91_2<=RPAREN)||(LA91_2>=SEMI && LA91_2<=SET)||(LA91_2>=67 && LA91_2<=84)||(LA91_2>=86 && LA91_2<=91)||(LA91_2>=93 && LA91_2<=100)||(LA91_2>=102 && LA91_2<=108)||LA91_2==110||(LA91_2>=112 && LA91_2<=113)||LA91_2==116||LA91_2==121||LA91_2==124||(LA91_2>=126 && LA91_2<=128)||LA91_2==132||LA91_2==135||LA91_2==138||LA91_2==140||LA91_2==143||(LA91_2>=146 && LA91_2<=149)||(LA91_2>=151 && LA91_2<=153)||(LA91_2>=156 && LA91_2<=157)||(LA91_2>=159 && LA91_2<=160)||LA91_2==162||(LA91_2>=164 && LA91_2<=165)||LA91_2==167||(LA91_2>=171 && LA91_2<=172)||LA91_2==174||(LA91_2>=176 && LA91_2<=177)||LA91_2==181||LA91_2==184||LA91_2==187||(LA91_2>=189 && LA91_2<=190)||(LA91_2>=193 && LA91_2<=194)||LA91_2==196||LA91_2==198||LA91_2==200||(LA91_2>=202 && LA91_2<=205)))
 				{
 					alt91 = 1;
 				}
-				else if ((LA91_2==84))
+				else if ((LA91_2==85))
 				{
 					alt91 = 4;
 				}
@@ -11930,30 +11931,30 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 183:
+			case 184:
 				{
 				alt91 = 2;
 				}
 				break;
-			case 108:
+			case 109:
 				{
 				alt91 = 3;
 				}
 				break;
-			case 72:
+			case 73:
 				{
 				alt91 = 5;
 				}
 				break;
-			case 154:
+			case 155:
 				{
 				int LA91_2 = input.LA(2);
 
-				if ((LA91_2==GET||LA91_2==IDENTIFIER||LA91_2==SET||LA91_2==99||(LA91_2>=101 && LA91_2<=102)||(LA91_2>=104 && LA91_2<=107)||LA91_2==109||(LA91_2>=111 && LA91_2<=112)||LA91_2==115||LA91_2==120||LA91_2==123||(LA91_2>=125 && LA91_2<=127)||LA91_2==131||LA91_2==134||LA91_2==137||LA91_2==139||LA91_2==142||LA91_2==145||(LA91_2>=147 && LA91_2<=148)||(LA91_2>=150 && LA91_2<=152)||(LA91_2>=155 && LA91_2<=156)||LA91_2==158||LA91_2==161||(LA91_2>=163 && LA91_2<=164)||LA91_2==166||LA91_2==171||LA91_2==173||(LA91_2>=175 && LA91_2<=176)||LA91_2==180||LA91_2==186||(LA91_2>=188 && LA91_2<=189)||(LA91_2>=192 && LA91_2<=193)||LA91_2==195||LA91_2==197||LA91_2==199))
+				if ((LA91_2==GET||LA91_2==IDENTIFIER||LA91_2==SET||LA91_2==100||(LA91_2>=102 && LA91_2<=103)||(LA91_2>=105 && LA91_2<=108)||LA91_2==110||(LA91_2>=112 && LA91_2<=113)||LA91_2==116||LA91_2==121||LA91_2==124||(LA91_2>=126 && LA91_2<=128)||LA91_2==132||LA91_2==135||LA91_2==138||LA91_2==140||LA91_2==143||LA91_2==146||(LA91_2>=148 && LA91_2<=149)||(LA91_2>=151 && LA91_2<=153)||(LA91_2>=156 && LA91_2<=157)||LA91_2==159||LA91_2==162||(LA91_2>=164 && LA91_2<=165)||LA91_2==167||LA91_2==172||LA91_2==174||(LA91_2>=176 && LA91_2<=177)||LA91_2==181||LA91_2==187||(LA91_2>=189 && LA91_2<=190)||(LA91_2>=193 && LA91_2<=194)||LA91_2==196||LA91_2==198||LA91_2==200))
 				{
 					alt91 = 6;
 				}
-				else if ((LA91_2==200))
+				else if ((LA91_2==201))
 				{
 					alt91 = 7;
 				}
@@ -11966,7 +11967,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 187:
+			case 188:
 				{
 				alt91 = 8;
 				}
@@ -11996,21 +11997,21 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(86, false);
 				switch (input.LA(1))
 				{
-				case 109:
-				case 112:
-				case 115:
-				case 120:
-				case 125:
-				case 134:
-				case 142:
-				case 150:
-				case 155:
-				case 173:
-				case 176:
-				case 180:
-				case 188:
+				case 110:
+				case 113:
+				case 116:
+				case 121:
+				case 126:
+				case 135:
+				case 143:
+				case 151:
+				case 156:
+				case 174:
+				case 177:
+				case 181:
 				case 189:
-				case 192:
+				case 190:
+				case 193:
 					{
 					alt86 = 1;
 					}
@@ -12018,37 +12019,37 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				case GET:
 				case IDENTIFIER:
 				case SET:
-				case 99:
-				case 101:
+				case 100:
 				case 102:
-				case 104:
+				case 103:
 				case 105:
 				case 106:
 				case 107:
-				case 111:
-				case 123:
-				case 126:
+				case 108:
+				case 112:
+				case 124:
 				case 127:
-				case 131:
-				case 137:
-				case 139:
-				case 145:
-				case 147:
+				case 128:
+				case 132:
+				case 138:
+				case 140:
+				case 146:
 				case 148:
-				case 151:
+				case 149:
 				case 152:
-				case 156:
-				case 158:
-				case 161:
-				case 163:
+				case 153:
+				case 157:
+				case 159:
+				case 162:
 				case 164:
-				case 166:
-				case 171:
-				case 175:
-				case 186:
-				case 193:
-				case 197:
-				case 199:
+				case 165:
+				case 167:
+				case 172:
+				case 176:
+				case 187:
+				case 194:
+				case 198:
+				case 200:
 					{
 					alt86 = 2;
 					}
@@ -12128,7 +12129,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(87, false);
 				int LA87_1 = input.LA(1);
 
-				if ((LA87_1==85))
+				if ((LA87_1==86))
 				{
 					int LA87_2 = input.LA(2);
 
@@ -12167,7 +12168,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(283, 4);
-				string_literal244=(IToken)Match(input,183,Follow._183_in_primary_expression_start1814); if (state.failed) return retval;
+				string_literal244=(IToken)Match(input,184,Follow._184_in_primary_expression_start1814); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal244_tree = (object)adaptor.Create(string_literal244, "string_literal244", retval);
 				adaptor.AddChild(root_0, string_literal244_tree);
@@ -12179,7 +12180,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(88, false);
 				int LA88_1 = input.LA(1);
 
-				if ((LA88_1==95))
+				if ((LA88_1==96))
 				{
 					int LA88_2 = input.LA(2);
 
@@ -12218,7 +12219,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(284, 4);
-				string_literal246=(IToken)Match(input,108,Follow._108_in_primary_expression_start1825); if (state.failed) return retval;
+				string_literal246=(IToken)Match(input,109,Follow._109_in_primary_expression_start1825); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal246_tree = (object)adaptor.Create(string_literal246, "string_literal246", retval);
 				adaptor.AddChild(root_0, string_literal246_tree);
@@ -12230,7 +12231,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(89, false);
 				int LA89_1 = input.LA(1);
 
-				if ((LA89_1==95))
+				if ((LA89_1==96))
 				{
 					int LA89_2 = input.LA(2);
 
@@ -12275,7 +12276,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, identifier248.Tree, identifier248, "identifier248", retval);
 				DebugLocation(285, 17);
-				string_literal249=(IToken)Match(input,84,Follow._84_in_primary_expression_start1840); if (state.failed) return retval;
+				string_literal249=(IToken)Match(input,85,Follow._85_in_primary_expression_start1840); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal249_tree = (object)adaptor.Create(string_literal249, "string_literal249", retval);
 				adaptor.AddChild(root_0, string_literal249_tree);
@@ -12308,7 +12309,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(90, false);
 				int LA90_1 = input.LA(1);
 
-				if ((LA90_1==95))
+				if ((LA90_1==96))
 				{
 					int LA90_2 = input.LA(2);
 
@@ -12317,7 +12318,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						alt90 = 1;
 					}
 				}
-				else if ((LA90_1==72))
+				else if ((LA90_1==73))
 				{
 					int LA90_2 = input.LA(2);
 
@@ -12460,7 +12461,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				alt93 = 1;
 			}
-			else if ((LA93_1==72||LA93_1==95))
+			else if ((LA93_1==73||LA93_1==96))
 			{
 				alt93 = 2;
 			}
@@ -12493,7 +12494,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(92, false);
 				int LA92_1 = input.LA(1);
 
-				if ((LA92_1==95))
+				if ((LA92_1==96))
 				{
 					int LA92_2 = input.LA(2);
 
@@ -12502,7 +12503,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						alt92 = 1;
 					}
 				}
-				else if ((LA92_1==72))
+				else if ((LA92_1==73))
 				{
 					int LA92_2 = input.LA(2);
 
@@ -12616,7 +12617,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				alt96 = 1;
 			}
-			else if ((LA96_1==95))
+			else if ((LA96_1==96))
 			{
 				alt96 = 2;
 			}
@@ -12652,7 +12653,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(94, false);
 					int LA94_1 = input.LA(1);
 
-					if ((LA94_1==95))
+					if ((LA94_1==96))
 					{
 						int LA94_2 = input.LA(2);
 
@@ -12705,7 +12706,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(95, false);
 				int LA95_1 = input.LA(1);
 
-				if ((LA95_1==DOT||LA95_1==PTR||LA95_1==72||LA95_1==95))
+				if ((LA95_1==DOT||LA95_1==PTR||LA95_1==73||LA95_1==96))
 				{
 					alt95 = 1;
 				}
@@ -12814,7 +12815,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				alt98 = 1;
 			}
-			else if ((LA98_1==72))
+			else if ((LA98_1==73))
 			{
 				alt98 = 2;
 			}
@@ -12853,7 +12854,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(97, false);
 				int LA97_1 = input.LA(1);
 
-				if ((LA97_1==Character_literal||(LA97_1>=FALSE && LA97_1<=GET)||(LA97_1>=Hex_number && LA97_1<=IDENTIFIER)||(LA97_1>=NULL && LA97_1<=NUMBER)||LA97_1==Real_literal||(LA97_1>=SET && LA97_1<=STRINGLITERAL)||LA97_1==TRUE||LA97_1==Verbatim_string_literal||LA97_1==72||LA97_1==99||(LA97_1>=101 && LA97_1<=102)||(LA97_1>=104 && LA97_1<=109)||(LA97_1>=111 && LA97_1<=112)||LA97_1==115||LA97_1==120||LA97_1==123||(LA97_1>=125 && LA97_1<=127)||LA97_1==131||LA97_1==134||LA97_1==137||LA97_1==139||LA97_1==142||LA97_1==145||(LA97_1>=147 && LA97_1<=148)||(LA97_1>=150 && LA97_1<=152)||(LA97_1>=154 && LA97_1<=156)||LA97_1==158||LA97_1==161||(LA97_1>=163 && LA97_1<=164)||LA97_1==166||LA97_1==171||LA97_1==173||(LA97_1>=175 && LA97_1<=176)||LA97_1==180||LA97_1==183||(LA97_1>=186 && LA97_1<=189)||(LA97_1>=192 && LA97_1<=193)||LA97_1==197||LA97_1==199))
+				if ((LA97_1==Character_literal||(LA97_1>=FALSE && LA97_1<=GET)||(LA97_1>=Hex_number && LA97_1<=IDENTIFIER)||(LA97_1>=NULL && LA97_1<=NUMBER)||LA97_1==Real_literal||(LA97_1>=SET && LA97_1<=STRINGLITERAL)||LA97_1==TRUE||LA97_1==Verbatim_string_literal||LA97_1==73||LA97_1==100||(LA97_1>=102 && LA97_1<=103)||(LA97_1>=105 && LA97_1<=110)||(LA97_1>=112 && LA97_1<=113)||LA97_1==116||LA97_1==121||LA97_1==124||(LA97_1>=126 && LA97_1<=128)||LA97_1==132||LA97_1==135||LA97_1==138||LA97_1==140||LA97_1==143||LA97_1==146||(LA97_1>=148 && LA97_1<=149)||(LA97_1>=151 && LA97_1<=153)||(LA97_1>=155 && LA97_1<=157)||LA97_1==159||LA97_1==162||(LA97_1>=164 && LA97_1<=165)||LA97_1==167||LA97_1==172||LA97_1==174||(LA97_1>=176 && LA97_1<=177)||LA97_1==181||LA97_1==184||(LA97_1>=187 && LA97_1<=190)||(LA97_1>=193 && LA97_1<=194)||LA97_1==198||LA97_1==200))
 				{
 					alt97 = 1;
 				}
@@ -13045,7 +13046,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(99, false);
 			int LA99_1 = input.LA(1);
 
-			if ((LA99_1==85))
+			if ((LA99_1==86))
 			{
 				int LA99_2 = input.LA(2);
 
@@ -13141,7 +13142,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(307, 2);
-			char_literal271=(IToken)Match(input,72,Follow._72_in_paren_expression1983); if (state.failed) return retval;
+			char_literal271=(IToken)Match(input,73,Follow._73_in_paren_expression1983); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal271_tree = (object)adaptor.Create(char_literal271, "char_literal271", retval);
 			adaptor.AddChild(root_0, char_literal271_tree);
@@ -13222,11 +13223,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(103, false);
 			int LA103_1 = input.LA(1);
 
-			if ((LA103_1==95))
+			if ((LA103_1==96))
 			{
 				alt103 = 1;
 			}
-			else if ((LA103_1==72))
+			else if ((LA103_1==73))
 			{
 				alt103 = 2;
 			}
@@ -13256,7 +13257,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(100, false);
 					int LA100_1 = input.LA(1);
 
-					if ((LA100_1==95))
+					if ((LA100_1==96))
 					{
 						int LA100_2 = input.LA(2);
 
@@ -13309,7 +13310,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(101, false);
 				int LA101_1 = input.LA(1);
 
-				if ((LA101_1==72))
+				if ((LA101_1==73))
 				{
 					int LA101_2 = input.LA(2);
 
@@ -13362,7 +13363,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(102, false);
 					int LA102_1 = input.LA(1);
 
-					if ((LA102_1==95))
+					if ((LA102_1==96))
 					{
 						int LA102_2 = input.LA(2);
 
@@ -13551,7 +13552,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(314, 2);
-			char_literal279=(IToken)Match(input,72,Follow._72_in_arguments2038); if (state.failed) return retval;
+			char_literal279=(IToken)Match(input,73,Follow._73_in_arguments2038); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal279_tree = (object)adaptor.Create(char_literal279, "char_literal279", retval);
 			adaptor.AddChild(root_0, char_literal279_tree);
@@ -13563,7 +13564,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(104, false);
 			int LA104_1 = input.LA(1);
 
-			if ((LA104_1==Character_literal||(LA104_1>=FALSE && LA104_1<=GET)||(LA104_1>=Hex_number && LA104_1<=IDENTIFIER)||(LA104_1>=MINUS && LA104_1<=NUMBER)||LA104_1==Real_literal||(LA104_1>=SET && LA104_1<=STRINGLITERAL)||LA104_1==TRUE||LA104_1==Verbatim_string_literal||LA104_1==65||LA104_1==70||(LA104_1>=72 && LA104_1<=73)||(LA104_1>=75 && LA104_1<=76)||LA104_1==79||LA104_1==99||(LA104_1>=101 && LA104_1<=102)||(LA104_1>=104 && LA104_1<=109)||(LA104_1>=111 && LA104_1<=112)||(LA104_1>=115 && LA104_1<=116)||(LA104_1>=120 && LA104_1<=123)||(LA104_1>=125 && LA104_1<=127)||LA104_1==131||LA104_1==134||LA104_1==137||LA104_1==139||LA104_1==142||LA104_1==145||(LA104_1>=147 && LA104_1<=148)||(LA104_1>=150 && LA104_1<=152)||(LA104_1>=154 && LA104_1<=156)||(LA104_1>=158 && LA104_1<=159)||LA104_1==161||(LA104_1>=163 && LA104_1<=164)||LA104_1==166||(LA104_1>=170 && LA104_1<=171)||LA104_1==173||(LA104_1>=175 && LA104_1<=177)||LA104_1==180||LA104_1==183||(LA104_1>=186 && LA104_1<=190)||(LA104_1>=192 && LA104_1<=193)||LA104_1==197||LA104_1==199||LA104_1==205))
+			if ((LA104_1==Character_literal||(LA104_1>=FALSE && LA104_1<=GET)||(LA104_1>=Hex_number && LA104_1<=IDENTIFIER)||(LA104_1>=MINUS && LA104_1<=NUMBER)||LA104_1==Real_literal||(LA104_1>=SET && LA104_1<=STRINGLITERAL)||LA104_1==TRUE||LA104_1==Verbatim_string_literal||LA104_1==66||LA104_1==71||(LA104_1>=73 && LA104_1<=74)||(LA104_1>=76 && LA104_1<=77)||LA104_1==80||LA104_1==100||(LA104_1>=102 && LA104_1<=103)||(LA104_1>=105 && LA104_1<=110)||(LA104_1>=112 && LA104_1<=113)||(LA104_1>=116 && LA104_1<=117)||(LA104_1>=121 && LA104_1<=124)||(LA104_1>=126 && LA104_1<=128)||LA104_1==132||LA104_1==135||LA104_1==138||LA104_1==140||LA104_1==143||LA104_1==146||(LA104_1>=148 && LA104_1<=149)||(LA104_1>=151 && LA104_1<=153)||(LA104_1>=155 && LA104_1<=157)||(LA104_1>=159 && LA104_1<=160)||LA104_1==162||(LA104_1>=164 && LA104_1<=165)||LA104_1==167||(LA104_1>=171 && LA104_1<=172)||LA104_1==174||(LA104_1>=176 && LA104_1<=178)||LA104_1==181||LA104_1==184||(LA104_1>=187 && LA104_1<=191)||(LA104_1>=193 && LA104_1<=194)||LA104_1==198||LA104_1==200||LA104_1==206))
 			{
 				alt104 = 1;
 			}
@@ -13660,7 +13661,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(316, 2);
-			char_literal282=(IToken)Match(input,95,Follow._95_in_bracket_expression2055); if (state.failed) return retval;
+			char_literal282=(IToken)Match(input,96,Follow._96_in_bracket_expression2055); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal282_tree = (object)adaptor.Create(char_literal282, "char_literal282", retval);
 			adaptor.AddChild(root_0, char_literal282_tree);
@@ -13672,7 +13673,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(105, false);
 			int LA105_1 = input.LA(1);
 
-			if ((LA105_1==Character_literal||(LA105_1>=FALSE && LA105_1<=GET)||(LA105_1>=Hex_number && LA105_1<=IDENTIFIER)||(LA105_1>=MINUS && LA105_1<=NUMBER)||LA105_1==Real_literal||(LA105_1>=SET && LA105_1<=STRINGLITERAL)||LA105_1==TRUE||LA105_1==Verbatim_string_literal||LA105_1==65||LA105_1==70||(LA105_1>=72 && LA105_1<=73)||(LA105_1>=75 && LA105_1<=76)||LA105_1==79||LA105_1==99||(LA105_1>=101 && LA105_1<=102)||(LA105_1>=104 && LA105_1<=109)||(LA105_1>=111 && LA105_1<=112)||(LA105_1>=115 && LA105_1<=116)||(LA105_1>=120 && LA105_1<=123)||(LA105_1>=125 && LA105_1<=127)||LA105_1==131||LA105_1==134||LA105_1==137||LA105_1==139||LA105_1==142||LA105_1==145||(LA105_1>=147 && LA105_1<=148)||(LA105_1>=150 && LA105_1<=152)||(LA105_1>=154 && LA105_1<=156)||LA105_1==158||LA105_1==161||(LA105_1>=163 && LA105_1<=164)||LA105_1==166||LA105_1==171||LA105_1==173||(LA105_1>=175 && LA105_1<=177)||LA105_1==180||LA105_1==183||(LA105_1>=186 && LA105_1<=190)||(LA105_1>=192 && LA105_1<=193)||LA105_1==197||LA105_1==199||LA105_1==205))
+			if ((LA105_1==Character_literal||(LA105_1>=FALSE && LA105_1<=GET)||(LA105_1>=Hex_number && LA105_1<=IDENTIFIER)||(LA105_1>=MINUS && LA105_1<=NUMBER)||LA105_1==Real_literal||(LA105_1>=SET && LA105_1<=STRINGLITERAL)||LA105_1==TRUE||LA105_1==Verbatim_string_literal||LA105_1==66||LA105_1==71||(LA105_1>=73 && LA105_1<=74)||(LA105_1>=76 && LA105_1<=77)||LA105_1==80||LA105_1==100||(LA105_1>=102 && LA105_1<=103)||(LA105_1>=105 && LA105_1<=110)||(LA105_1>=112 && LA105_1<=113)||(LA105_1>=116 && LA105_1<=117)||(LA105_1>=121 && LA105_1<=124)||(LA105_1>=126 && LA105_1<=128)||LA105_1==132||LA105_1==135||LA105_1==138||LA105_1==140||LA105_1==143||LA105_1==146||(LA105_1>=148 && LA105_1<=149)||(LA105_1>=151 && LA105_1<=153)||(LA105_1>=155 && LA105_1<=157)||LA105_1==159||LA105_1==162||(LA105_1>=164 && LA105_1<=165)||LA105_1==167||LA105_1==172||LA105_1==174||(LA105_1>=176 && LA105_1<=178)||LA105_1==181||LA105_1==184||(LA105_1>=187 && LA105_1<=191)||(LA105_1>=193 && LA105_1<=194)||LA105_1==198||LA105_1==200||LA105_1==206))
 			{
 				alt105 = 1;
 			}
@@ -13697,7 +13698,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(105); }
 
 			DebugLocation(316, 27);
-			char_literal284=(IToken)Match(input,96,Follow._96_in_bracket_expression2064); if (state.failed) return retval;
+			char_literal284=(IToken)Match(input,97,Follow._97_in_bracket_expression2064); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal284_tree = (object)adaptor.Create(char_literal284, "char_literal284", retval);
 			adaptor.AddChild(root_0, char_literal284_tree);
@@ -13954,19 +13955,19 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(109, false);
 			int LA109_1 = input.LA(1);
 
-			if ((LA109_1==72))
+			if ((LA109_1==73))
 			{
 				alt109 = 1;
 			}
-			else if ((LA109_1==GET||LA109_1==IDENTIFIER||LA109_1==SET||LA109_1==99||(LA109_1>=101 && LA109_1<=102)||(LA109_1>=105 && LA109_1<=107)||LA109_1==126||LA109_1==131||(LA109_1>=151 && LA109_1<=152)||LA109_1==161||(LA109_1>=163 && LA109_1<=164)||LA109_1==166||LA109_1==171||LA109_1==186||LA109_1==193||LA109_1==199))
+			else if ((LA109_1==GET||LA109_1==IDENTIFIER||LA109_1==SET||LA109_1==100||(LA109_1>=102 && LA109_1<=103)||(LA109_1>=106 && LA109_1<=108)||LA109_1==127||LA109_1==132||(LA109_1>=152 && LA109_1<=153)||LA109_1==162||(LA109_1>=164 && LA109_1<=165)||LA109_1==167||LA109_1==172||LA109_1==187||LA109_1==194||LA109_1==200))
 			{
 				alt109 = 2;
 			}
-			else if ((LA109_1==104||LA109_1==111||LA109_1==123||LA109_1==127||LA109_1==137||LA109_1==139||LA109_1==145||(LA109_1>=147 && LA109_1<=148)||LA109_1==156||LA109_1==158||LA109_1==175||LA109_1==197) && ((_queryExpression == 0)))
+			else if ((LA109_1==105||LA109_1==112||LA109_1==124||LA109_1==128||LA109_1==138||LA109_1==140||LA109_1==146||(LA109_1>=148 && LA109_1<=149)||LA109_1==157||LA109_1==159||LA109_1==176||LA109_1==198) && ((_queryExpression == 0)))
 			{
 				alt109 = 2;
 			}
-			else if ((LA109_1==Character_literal||LA109_1==FALSE||LA109_1==Hex_number||(LA109_1>=NULL && LA109_1<=NUMBER)||LA109_1==Real_literal||LA109_1==STRINGLITERAL||LA109_1==TRUE||LA109_1==Verbatim_string_literal||(LA109_1>=108 && LA109_1<=109)||LA109_1==112||LA109_1==115||LA109_1==120||LA109_1==125||LA109_1==134||LA109_1==142||LA109_1==150||LA109_1==155||LA109_1==173||LA109_1==176||LA109_1==180||LA109_1==183||(LA109_1>=188 && LA109_1<=189)||LA109_1==192))
+			else if ((LA109_1==Character_literal||LA109_1==FALSE||LA109_1==Hex_number||(LA109_1>=NULL && LA109_1<=NUMBER)||LA109_1==Real_literal||LA109_1==STRINGLITERAL||LA109_1==TRUE||LA109_1==Verbatim_string_literal||(LA109_1>=109 && LA109_1<=110)||LA109_1==113||LA109_1==116||LA109_1==121||LA109_1==126||LA109_1==135||LA109_1==143||LA109_1==151||LA109_1==156||LA109_1==174||LA109_1==177||LA109_1==181||LA109_1==184||(LA109_1>=189 && LA109_1<=190)||LA109_1==193))
 			{
 				alt109 = 2;
 			}
@@ -13987,7 +13988,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(325, 2);
-				char_literal290=(IToken)Match(input,72,Follow._72_in_access2104); if (state.failed) return retval;
+				char_literal290=(IToken)Match(input,73,Follow._73_in_access2104); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal290_tree = (object)adaptor.Create(char_literal290, "char_literal290", retval);
 				adaptor.AddChild(root_0, char_literal290_tree);
@@ -14011,7 +14012,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(107, false);
 				switch (input.LA(1))
 				{
-				case 72:
+				case 73:
 					{
 					int LA107_2 = input.LA(2);
 
@@ -14044,61 +14045,61 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				case STRINGLITERAL:
 				case TRUE:
 				case Verbatim_string_literal:
-				case 99:
-				case 101:
+				case 100:
 				case 102:
-				case 104:
+				case 103:
 				case 105:
 				case 106:
 				case 107:
 				case 108:
 				case 109:
-				case 111:
+				case 110:
 				case 112:
-				case 115:
-				case 120:
-				case 123:
-				case 125:
+				case 113:
+				case 116:
+				case 121:
+				case 124:
 				case 126:
 				case 127:
-				case 131:
-				case 134:
-				case 137:
-				case 139:
-				case 142:
-				case 145:
-				case 147:
+				case 128:
+				case 132:
+				case 135:
+				case 138:
+				case 140:
+				case 143:
+				case 146:
 				case 148:
-				case 150:
+				case 149:
 				case 151:
 				case 152:
-				case 155:
+				case 153:
 				case 156:
-				case 158:
-				case 161:
-				case 163:
+				case 157:
+				case 159:
+				case 162:
 				case 164:
-				case 166:
-				case 171:
-				case 173:
-				case 175:
+				case 165:
+				case 167:
+				case 172:
+				case 174:
 				case 176:
-				case 180:
-				case 183:
-				case 186:
-				case 188:
+				case 177:
+				case 181:
+				case 184:
+				case 187:
 				case 189:
-				case 192:
+				case 190:
 				case 193:
-				case 197:
-				case 199:
+				case 194:
+				case 198:
+				case 200:
 					{
 					alt107 = 1;
 					}
 					break;
 				case DOT:
 				case PTR:
-				case 95:
+				case 96:
 					{
 					alt107 = 2;
 					}
@@ -14167,11 +14168,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(108, false);
 				int LA108_1 = input.LA(1);
 
-				if ((LA108_1==DOT||LA108_1==PTR||LA108_1==95))
+				if ((LA108_1==DOT||LA108_1==PTR||LA108_1==96))
 				{
 					alt108 = 1;
 				}
-				else if ((LA108_1==72))
+				else if ((LA108_1==73))
 				{
 					int LA108_2 = input.LA(2);
 
@@ -14274,12 +14275,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				alt113 = 1;
 				}
 				break;
-			case 95:
+			case 96:
 				{
 				alt113 = 2;
 				}
 				break;
-			case 72:
+			case 73:
 				{
 				alt113 = 3;
 				}
@@ -14321,7 +14322,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					alt110 = 1;
 					}
 					break;
-				case 95:
+				case 96:
 					{
 					int LA110_2 = input.LA(2);
 
@@ -14331,7 +14332,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					}
 					}
 					break;
-				case 72:
+				case 73:
 					{
 					int LA110_2 = input.LA(2);
 
@@ -14391,7 +14392,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					alt111 = 1;
 					}
 					break;
-				case 95:
+				case 96:
 					{
 					int LA111_2 = input.LA(2);
 
@@ -14401,7 +14402,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					}
 					}
 					break;
-				case 72:
+				case 73:
 					{
 					int LA111_2 = input.LA(2);
 
@@ -14461,7 +14462,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					alt112 = 1;
 					}
 					break;
-				case 95:
+				case 96:
 					{
 					int LA112_2 = input.LA(2);
 
@@ -14471,7 +14472,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					}
 					}
 					break;
-				case 72:
+				case 73:
 					{
 					int LA112_2 = input.LA(2);
 
@@ -14585,7 +14586,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(114, false);
 				int LA114_1 = input.LA(1);
 
-				if ((LA114_1==78))
+				if ((LA114_1==79))
 				{
 					alt114 = 1;
 				}
@@ -14599,7 +14600,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:334:15: ',' expression
 					{
 					DebugLocation(334, 15);
-					char_literal304=(IToken)Match(input,78,Follow._78_in_expression_list2198); if (state.failed) return retval;
+					char_literal304=(IToken)Match(input,79,Follow._79_in_expression_list2198); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal304_tree = (object)adaptor.Create(char_literal304, "char_literal304", retval);
 					adaptor.AddChild(root_0, char_literal304_tree);
@@ -14696,7 +14697,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(337, 2);
-			string_literal306=(IToken)Match(input,154,Follow._154_in_object_creation_expression2213); if (state.failed) return retval;
+			string_literal306=(IToken)Match(input,155,Follow._155_in_object_creation_expression2213); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal306_tree = (object)adaptor.Create(string_literal306, "string_literal306", retval);
 			adaptor.AddChild(root_0, string_literal306_tree);
@@ -14714,11 +14715,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(117, false);
 			int LA117_1 = input.LA(1);
 
-			if ((LA117_1==72))
+			if ((LA117_1==73))
 			{
 				alt117 = 1;
 			}
-			else if ((LA117_1==200))
+			else if ((LA117_1==201))
 			{
 				alt117 = 2;
 			}
@@ -14737,7 +14738,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:338:5: '(' ( argument_list )? ')' ( object_or_collection_initializer )?
 				{
 				DebugLocation(338, 5);
-				char_literal308=(IToken)Match(input,72,Follow._72_in_object_creation_expression2226); if (state.failed) return retval;
+				char_literal308=(IToken)Match(input,73,Follow._73_in_object_creation_expression2226); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal308_tree = (object)adaptor.Create(char_literal308, "char_literal308", retval);
 				adaptor.AddChild(root_0, char_literal308_tree);
@@ -14749,7 +14750,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(115, false);
 				int LA115_1 = input.LA(1);
 
-				if ((LA115_1==Character_literal||(LA115_1>=FALSE && LA115_1<=GET)||(LA115_1>=Hex_number && LA115_1<=IDENTIFIER)||(LA115_1>=MINUS && LA115_1<=NUMBER)||LA115_1==Real_literal||(LA115_1>=SET && LA115_1<=STRINGLITERAL)||LA115_1==TRUE||LA115_1==Verbatim_string_literal||LA115_1==65||LA115_1==70||(LA115_1>=72 && LA115_1<=73)||(LA115_1>=75 && LA115_1<=76)||LA115_1==79||LA115_1==99||(LA115_1>=101 && LA115_1<=102)||(LA115_1>=104 && LA115_1<=109)||(LA115_1>=111 && LA115_1<=112)||(LA115_1>=115 && LA115_1<=116)||(LA115_1>=120 && LA115_1<=123)||(LA115_1>=125 && LA115_1<=127)||LA115_1==131||LA115_1==134||LA115_1==137||LA115_1==139||LA115_1==142||LA115_1==145||(LA115_1>=147 && LA115_1<=148)||(LA115_1>=150 && LA115_1<=152)||(LA115_1>=154 && LA115_1<=156)||(LA115_1>=158 && LA115_1<=159)||LA115_1==161||(LA115_1>=163 && LA115_1<=164)||LA115_1==166||(LA115_1>=170 && LA115_1<=171)||LA115_1==173||(LA115_1>=175 && LA115_1<=177)||LA115_1==180||LA115_1==183||(LA115_1>=186 && LA115_1<=190)||(LA115_1>=192 && LA115_1<=193)||LA115_1==197||LA115_1==199||LA115_1==205))
+				if ((LA115_1==Character_literal||(LA115_1>=FALSE && LA115_1<=GET)||(LA115_1>=Hex_number && LA115_1<=IDENTIFIER)||(LA115_1>=MINUS && LA115_1<=NUMBER)||LA115_1==Real_literal||(LA115_1>=SET && LA115_1<=STRINGLITERAL)||LA115_1==TRUE||LA115_1==Verbatim_string_literal||LA115_1==66||LA115_1==71||(LA115_1>=73 && LA115_1<=74)||(LA115_1>=76 && LA115_1<=77)||LA115_1==80||LA115_1==100||(LA115_1>=102 && LA115_1<=103)||(LA115_1>=105 && LA115_1<=110)||(LA115_1>=112 && LA115_1<=113)||(LA115_1>=116 && LA115_1<=117)||(LA115_1>=121 && LA115_1<=124)||(LA115_1>=126 && LA115_1<=128)||LA115_1==132||LA115_1==135||LA115_1==138||LA115_1==140||LA115_1==143||LA115_1==146||(LA115_1>=148 && LA115_1<=149)||(LA115_1>=151 && LA115_1<=153)||(LA115_1>=155 && LA115_1<=157)||(LA115_1>=159 && LA115_1<=160)||LA115_1==162||(LA115_1>=164 && LA115_1<=165)||LA115_1==167||(LA115_1>=171 && LA115_1<=172)||LA115_1==174||(LA115_1>=176 && LA115_1<=178)||LA115_1==181||LA115_1==184||(LA115_1>=187 && LA115_1<=191)||(LA115_1>=193 && LA115_1<=194)||LA115_1==198||LA115_1==200||LA115_1==206))
 				{
 					alt115 = 1;
 				}
@@ -14786,7 +14787,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(116, false);
 				int LA116_1 = input.LA(1);
 
-				if ((LA116_1==200))
+				if ((LA116_1==201))
 				{
 					alt116 = 1;
 				}
@@ -14892,19 +14893,19 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(118, false);
 			int LA118_1 = input.LA(1);
 
-			if ((LA118_1==200))
+			if ((LA118_1==201))
 			{
 				switch (input.LA(2))
 				{
-				case 106:
+				case 107:
 					{
 					int LA118_3 = input.LA(3);
 
-					if ((LA118_3==89))
+					if ((LA118_3==90))
 					{
 						alt118 = 1;
 					}
-					else if ((LA118_3==DOT||(LA118_3>=GET && LA118_3<=GT)||LA118_3==IDENTIFIER||LA118_3==MINUS||LA118_3==PTR||LA118_3==SET||(LA118_3>=66 && LA118_3<=67)||(LA118_3>=69 && LA118_3<=70)||(LA118_3>=72 && LA118_3<=73)||(LA118_3>=75 && LA118_3<=76)||(LA118_3>=78 && LA118_3<=79)||LA118_3==81||(LA118_3>=84 && LA118_3<=86)||LA118_3==88||(LA118_3>=90 && LA118_3<=95)||LA118_3==97||LA118_3==99||(LA118_3>=101 && LA118_3<=107)||LA118_3==111||(LA118_3>=122 && LA118_3<=123)||(LA118_3>=126 && LA118_3<=127)||LA118_3==131||LA118_3==137||LA118_3==139||(LA118_3>=145 && LA118_3<=148)||(LA118_3>=151 && LA118_3<=152)||LA118_3==156||LA118_3==158||LA118_3==161||(LA118_3>=163 && LA118_3<=164)||LA118_3==166||LA118_3==171||LA118_3==175||LA118_3==186||LA118_3==193||LA118_3==197||LA118_3==199||LA118_3==201||(LA118_3>=203 && LA118_3<=204)))
+					else if ((LA118_3==DOT||(LA118_3>=GET && LA118_3<=GT)||LA118_3==IDENTIFIER||LA118_3==MINUS||LA118_3==PTR||LA118_3==SET||(LA118_3>=67 && LA118_3<=68)||(LA118_3>=70 && LA118_3<=71)||(LA118_3>=73 && LA118_3<=74)||(LA118_3>=76 && LA118_3<=77)||(LA118_3>=79 && LA118_3<=80)||LA118_3==82||(LA118_3>=85 && LA118_3<=87)||LA118_3==89||(LA118_3>=91 && LA118_3<=96)||LA118_3==98||LA118_3==100||(LA118_3>=102 && LA118_3<=108)||LA118_3==112||(LA118_3>=123 && LA118_3<=124)||(LA118_3>=127 && LA118_3<=128)||LA118_3==132||LA118_3==138||LA118_3==140||(LA118_3>=146 && LA118_3<=149)||(LA118_3>=152 && LA118_3<=153)||LA118_3==157||LA118_3==159||LA118_3==162||(LA118_3>=164 && LA118_3<=165)||LA118_3==167||LA118_3==172||LA118_3==176||LA118_3==187||LA118_3==194||LA118_3==198||LA118_3==200||LA118_3==202||(LA118_3>=204 && LA118_3<=205)))
 					{
 						alt118 = 2;
 					}
@@ -14917,15 +14918,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					}
 					}
 					break;
-				case 137:
+				case 138:
 					{
 					int LA118_3 = input.LA(3);
 
-					if ((LA118_3==89))
+					if ((LA118_3==90))
 					{
 						alt118 = 1;
 					}
-					else if ((LA118_3==DOT||(LA118_3>=GET && LA118_3<=GT)||LA118_3==IDENTIFIER||LA118_3==MINUS||LA118_3==PTR||LA118_3==SET||(LA118_3>=66 && LA118_3<=67)||(LA118_3>=69 && LA118_3<=70)||(LA118_3>=72 && LA118_3<=73)||(LA118_3>=75 && LA118_3<=76)||(LA118_3>=78 && LA118_3<=79)||LA118_3==81||(LA118_3>=84 && LA118_3<=86)||LA118_3==88||(LA118_3>=90 && LA118_3<=95)||LA118_3==97||LA118_3==99||(LA118_3>=101 && LA118_3<=107)||LA118_3==109||(LA118_3>=111 && LA118_3<=112)||LA118_3==115||LA118_3==120||LA118_3==123||(LA118_3>=125 && LA118_3<=127)||LA118_3==131||LA118_3==134||LA118_3==137||LA118_3==139||LA118_3==142||(LA118_3>=145 && LA118_3<=148)||(LA118_3>=150 && LA118_3<=152)||(LA118_3>=155 && LA118_3<=156)||LA118_3==158||LA118_3==161||(LA118_3>=163 && LA118_3<=164)||LA118_3==166||LA118_3==171||LA118_3==173||(LA118_3>=175 && LA118_3<=176)||LA118_3==180||LA118_3==186||(LA118_3>=188 && LA118_3<=189)||(LA118_3>=192 && LA118_3<=193)||LA118_3==195||LA118_3==197||LA118_3==199||LA118_3==201||(LA118_3>=203 && LA118_3<=204)))
+					else if ((LA118_3==DOT||(LA118_3>=GET && LA118_3<=GT)||LA118_3==IDENTIFIER||LA118_3==MINUS||LA118_3==PTR||LA118_3==SET||(LA118_3>=67 && LA118_3<=68)||(LA118_3>=70 && LA118_3<=71)||(LA118_3>=73 && LA118_3<=74)||(LA118_3>=76 && LA118_3<=77)||(LA118_3>=79 && LA118_3<=80)||LA118_3==82||(LA118_3>=85 && LA118_3<=87)||LA118_3==89||(LA118_3>=91 && LA118_3<=96)||LA118_3==98||LA118_3==100||(LA118_3>=102 && LA118_3<=108)||LA118_3==110||(LA118_3>=112 && LA118_3<=113)||LA118_3==116||LA118_3==121||LA118_3==124||(LA118_3>=126 && LA118_3<=128)||LA118_3==132||LA118_3==135||LA118_3==138||LA118_3==140||LA118_3==143||(LA118_3>=146 && LA118_3<=149)||(LA118_3>=151 && LA118_3<=153)||(LA118_3>=156 && LA118_3<=157)||LA118_3==159||LA118_3==162||(LA118_3>=164 && LA118_3<=165)||LA118_3==167||LA118_3==172||LA118_3==174||(LA118_3>=176 && LA118_3<=177)||LA118_3==181||LA118_3==187||(LA118_3>=189 && LA118_3<=190)||(LA118_3>=193 && LA118_3<=194)||LA118_3==196||LA118_3==198||LA118_3==200||LA118_3==202||(LA118_3>=204 && LA118_3<=205)))
 					{
 						alt118 = 2;
 					}
@@ -14938,20 +14939,20 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					}
 					}
 					break;
-				case 204:
+				case 205:
 					{
 					alt118 = 1;
 					}
 					break;
-				case 107:
+				case 108:
 					{
 					int LA118_3 = input.LA(3);
 
-					if ((LA118_3==89))
+					if ((LA118_3==90))
 					{
 						alt118 = 1;
 					}
-					else if ((LA118_3==Character_literal||LA118_3==DOT||(LA118_3>=FALSE && LA118_3<=GT)||(LA118_3>=Hex_number && LA118_3<=IDENTIFIER)||(LA118_3>=MINUS && LA118_3<=NUMBER)||LA118_3==PTR||LA118_3==Real_literal||(LA118_3>=SET && LA118_3<=STRINGLITERAL)||LA118_3==TRUE||LA118_3==Verbatim_string_literal||(LA118_3>=65 && LA118_3<=67)||(LA118_3>=69 && LA118_3<=70)||(LA118_3>=72 && LA118_3<=73)||(LA118_3>=75 && LA118_3<=76)||(LA118_3>=78 && LA118_3<=79)||LA118_3==81||(LA118_3>=84 && LA118_3<=86)||LA118_3==88||(LA118_3>=90 && LA118_3<=95)||LA118_3==97||LA118_3==99||(LA118_3>=101 && LA118_3<=109)||(LA118_3>=111 && LA118_3<=112)||(LA118_3>=115 && LA118_3<=116)||(LA118_3>=120 && LA118_3<=123)||(LA118_3>=125 && LA118_3<=127)||LA118_3==131||LA118_3==134||LA118_3==137||LA118_3==139||LA118_3==142||(LA118_3>=145 && LA118_3<=148)||(LA118_3>=150 && LA118_3<=152)||(LA118_3>=154 && LA118_3<=156)||LA118_3==158||LA118_3==161||(LA118_3>=163 && LA118_3<=164)||LA118_3==166||LA118_3==171||LA118_3==173||(LA118_3>=175 && LA118_3<=177)||LA118_3==180||LA118_3==183||(LA118_3>=186 && LA118_3<=190)||(LA118_3>=192 && LA118_3<=193)||LA118_3==197||LA118_3==199||LA118_3==201||(LA118_3>=203 && LA118_3<=205)))
+					else if ((LA118_3==Character_literal||LA118_3==DOT||(LA118_3>=FALSE && LA118_3<=GT)||(LA118_3>=Hex_number && LA118_3<=IDENTIFIER)||(LA118_3>=MINUS && LA118_3<=NUMBER)||LA118_3==PTR||LA118_3==Real_literal||(LA118_3>=SET && LA118_3<=STRINGLITERAL)||LA118_3==TRUE||LA118_3==Verbatim_string_literal||(LA118_3>=66 && LA118_3<=68)||(LA118_3>=70 && LA118_3<=71)||(LA118_3>=73 && LA118_3<=74)||(LA118_3>=76 && LA118_3<=77)||(LA118_3>=79 && LA118_3<=80)||LA118_3==82||(LA118_3>=85 && LA118_3<=87)||LA118_3==89||(LA118_3>=91 && LA118_3<=96)||LA118_3==98||LA118_3==100||(LA118_3>=102 && LA118_3<=110)||(LA118_3>=112 && LA118_3<=113)||(LA118_3>=116 && LA118_3<=117)||(LA118_3>=121 && LA118_3<=124)||(LA118_3>=126 && LA118_3<=128)||LA118_3==132||LA118_3==135||LA118_3==138||LA118_3==140||LA118_3==143||(LA118_3>=146 && LA118_3<=149)||(LA118_3>=151 && LA118_3<=153)||(LA118_3>=155 && LA118_3<=157)||LA118_3==159||LA118_3==162||(LA118_3>=164 && LA118_3<=165)||LA118_3==167||LA118_3==172||LA118_3==174||(LA118_3>=176 && LA118_3<=178)||LA118_3==181||LA118_3==184||(LA118_3>=187 && LA118_3<=191)||(LA118_3>=193 && LA118_3<=194)||LA118_3==198||LA118_3==200||LA118_3==202||(LA118_3>=204 && LA118_3<=206)))
 					{
 						alt118 = 2;
 					}
@@ -14974,63 +14975,63 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				case STRINGLITERAL:
 				case TRUE:
 				case Verbatim_string_literal:
-				case 65:
-				case 70:
-				case 72:
+				case 66:
+				case 71:
 				case 73:
-				case 75:
+				case 74:
 				case 76:
-				case 79:
-				case 108:
+				case 77:
+				case 80:
 				case 109:
-				case 112:
-				case 115:
+				case 110:
+				case 113:
 				case 116:
-				case 120:
+				case 117:
 				case 121:
 				case 122:
-				case 125:
-				case 134:
-				case 142:
-				case 150:
-				case 154:
+				case 123:
+				case 126:
+				case 135:
+				case 143:
+				case 151:
 				case 155:
-				case 173:
-				case 176:
+				case 156:
+				case 174:
 				case 177:
-				case 180:
-				case 183:
-				case 187:
+				case 178:
+				case 181:
+				case 184:
 				case 188:
 				case 189:
 				case 190:
-				case 192:
-				case 200:
-				case 205:
+				case 191:
+				case 193:
+				case 201:
+				case 206:
 					{
 					alt118 = 2;
 					}
 					break;
-				case 104:
-				case 111:
-				case 123:
-				case 127:
-				case 139:
-				case 145:
-				case 147:
+				case 105:
+				case 112:
+				case 124:
+				case 128:
+				case 140:
+				case 146:
 				case 148:
-				case 156:
-				case 158:
-				case 175:
-				case 197:
+				case 149:
+				case 157:
+				case 159:
+				case 176:
+				case 198:
 					{
 					int LA118_3 = input.LA(3);
 
-					if ((LA118_3==89))
+					if ((LA118_3==90))
 					{
 						alt118 = 1;
 					}
-					else if ((LA118_3==DOT||LA118_3==GT||LA118_3==MINUS||LA118_3==PTR||(LA118_3>=66 && LA118_3<=67)||(LA118_3>=69 && LA118_3<=70)||(LA118_3>=72 && LA118_3<=73)||(LA118_3>=75 && LA118_3<=76)||(LA118_3>=78 && LA118_3<=79)||LA118_3==81||(LA118_3>=84 && LA118_3<=86)||LA118_3==88||(LA118_3>=90 && LA118_3<=95)||LA118_3==97||LA118_3==103||LA118_3==146||LA118_3==201||(LA118_3>=203 && LA118_3<=204)))
+					else if ((LA118_3==DOT||LA118_3==GT||LA118_3==MINUS||LA118_3==PTR||(LA118_3>=67 && LA118_3<=68)||(LA118_3>=70 && LA118_3<=71)||(LA118_3>=73 && LA118_3<=74)||(LA118_3>=76 && LA118_3<=77)||(LA118_3>=79 && LA118_3<=80)||LA118_3==82||(LA118_3>=85 && LA118_3<=87)||LA118_3==89||(LA118_3>=91 && LA118_3<=96)||LA118_3==98||LA118_3==104||LA118_3==147||LA118_3==202||(LA118_3>=204 && LA118_3<=205)))
 					{
 						alt118 = 2;
 					}
@@ -15046,30 +15047,30 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				case GET:
 				case IDENTIFIER:
 				case SET:
-				case 99:
-				case 101:
+				case 100:
 				case 102:
-				case 105:
-				case 126:
-				case 131:
-				case 151:
+				case 103:
+				case 106:
+				case 127:
+				case 132:
 				case 152:
-				case 161:
-				case 163:
+				case 153:
+				case 162:
 				case 164:
-				case 166:
-				case 171:
-				case 186:
-				case 193:
-				case 199:
+				case 165:
+				case 167:
+				case 172:
+				case 187:
+				case 194:
+				case 200:
 					{
 					int LA118_3 = input.LA(3);
 
-					if ((LA118_3==89))
+					if ((LA118_3==90))
 					{
 						alt118 = 1;
 					}
-					else if ((LA118_3==DOT||LA118_3==GT||LA118_3==MINUS||LA118_3==PTR||(LA118_3>=66 && LA118_3<=67)||(LA118_3>=69 && LA118_3<=70)||(LA118_3>=72 && LA118_3<=73)||(LA118_3>=75 && LA118_3<=76)||(LA118_3>=78 && LA118_3<=79)||LA118_3==81||(LA118_3>=84 && LA118_3<=86)||LA118_3==88||(LA118_3>=90 && LA118_3<=95)||LA118_3==97||LA118_3==103||LA118_3==146||LA118_3==201||(LA118_3>=203 && LA118_3<=204)))
+					else if ((LA118_3==DOT||LA118_3==GT||LA118_3==MINUS||LA118_3==PTR||(LA118_3>=67 && LA118_3<=68)||(LA118_3>=70 && LA118_3<=71)||(LA118_3>=73 && LA118_3<=74)||(LA118_3>=76 && LA118_3<=77)||(LA118_3>=79 && LA118_3<=80)||LA118_3==82||(LA118_3>=85 && LA118_3<=87)||LA118_3==89||(LA118_3>=91 && LA118_3<=96)||LA118_3==98||LA118_3==104||LA118_3==147||LA118_3==202||(LA118_3>=204 && LA118_3<=205)))
 					{
 						alt118 = 2;
 					}
@@ -15203,7 +15204,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(120, false);
 			int LA120_1 = input.LA(1);
 
-			if ((LA120_1==200))
+			if ((LA120_1==201))
 			{
 				int LA120_2 = input.LA(2);
 
@@ -15240,7 +15241,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(351, 2);
-				char_literal315=(IToken)Match(input,200,Follow._200_in_object_initializer2283); if (state.failed) return retval;
+				char_literal315=(IToken)Match(input,201,Follow._201_in_object_initializer2283); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal315_tree = (object)adaptor.Create(char_literal315, "char_literal315", retval);
 				adaptor.AddChild(root_0, char_literal315_tree);
@@ -15252,7 +15253,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(119, false);
 				int LA119_1 = input.LA(1);
 
-				if ((LA119_1==GET||LA119_1==IDENTIFIER||LA119_1==SET||LA119_1==99||(LA119_1>=101 && LA119_1<=102)||(LA119_1>=104 && LA119_1<=107)||LA119_1==111||LA119_1==123||(LA119_1>=126 && LA119_1<=127)||LA119_1==131||LA119_1==137||LA119_1==139||LA119_1==145||(LA119_1>=147 && LA119_1<=148)||(LA119_1>=151 && LA119_1<=152)||LA119_1==156||LA119_1==158||LA119_1==161||(LA119_1>=163 && LA119_1<=164)||LA119_1==166||LA119_1==171||LA119_1==175||LA119_1==186||LA119_1==193||LA119_1==197||LA119_1==199))
+				if ((LA119_1==GET||LA119_1==IDENTIFIER||LA119_1==SET||LA119_1==100||(LA119_1>=102 && LA119_1<=103)||(LA119_1>=105 && LA119_1<=108)||LA119_1==112||LA119_1==124||(LA119_1>=127 && LA119_1<=128)||LA119_1==132||LA119_1==138||LA119_1==140||LA119_1==146||(LA119_1>=148 && LA119_1<=149)||(LA119_1>=152 && LA119_1<=153)||LA119_1==157||LA119_1==159||LA119_1==162||(LA119_1>=164 && LA119_1<=165)||LA119_1==167||LA119_1==172||LA119_1==176||LA119_1==187||LA119_1==194||LA119_1==198||LA119_1==200))
 				{
 					alt119 = 1;
 				}
@@ -15277,7 +15278,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				} finally { DebugExitSubRule(119); }
 
 				DebugLocation(351, 35);
-				char_literal317=(IToken)Match(input,204,Follow._204_in_object_initializer2292); if (state.failed) return retval;
+				char_literal317=(IToken)Match(input,205,Follow._205_in_object_initializer2292); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal317_tree = (object)adaptor.Create(char_literal317, "char_literal317", retval);
 				adaptor.AddChild(root_0, char_literal317_tree);
@@ -15292,7 +15293,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(352, 4);
-				char_literal318=(IToken)Match(input,200,Follow._200_in_object_initializer2298); if (state.failed) return retval;
+				char_literal318=(IToken)Match(input,201,Follow._201_in_object_initializer2298); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal318_tree = (object)adaptor.Create(char_literal318, "char_literal318", retval);
 				adaptor.AddChild(root_0, char_literal318_tree);
@@ -15304,13 +15305,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, member_initializer_list319.Tree, member_initializer_list319, "member_initializer_list319", retval);
 				DebugLocation(352, 36);
-				char_literal320=(IToken)Match(input,78,Follow._78_in_object_initializer2306); if (state.failed) return retval;
+				char_literal320=(IToken)Match(input,79,Follow._79_in_object_initializer2306); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal320_tree = (object)adaptor.Create(char_literal320, "char_literal320", retval);
 				adaptor.AddChild(root_0, char_literal320_tree);
 				}
 				DebugLocation(352, 42);
-				char_literal321=(IToken)Match(input,204,Follow._204_in_object_initializer2310); if (state.failed) return retval;
+				char_literal321=(IToken)Match(input,205,Follow._205_in_object_initializer2310); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal321_tree = (object)adaptor.Create(char_literal321, "char_literal321", retval);
 				adaptor.AddChild(root_0, char_literal321_tree);
@@ -15397,11 +15398,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(121, false);
 				int LA121_1 = input.LA(1);
 
-				if ((LA121_1==78))
+				if ((LA121_1==79))
 				{
 					int LA121_2 = input.LA(2);
 
-					if ((LA121_2==GET||LA121_2==IDENTIFIER||LA121_2==SET||LA121_2==99||(LA121_2>=101 && LA121_2<=102)||(LA121_2>=104 && LA121_2<=107)||LA121_2==111||LA121_2==123||(LA121_2>=126 && LA121_2<=127)||LA121_2==131||LA121_2==137||LA121_2==139||LA121_2==145||(LA121_2>=147 && LA121_2<=148)||(LA121_2>=151 && LA121_2<=152)||LA121_2==156||LA121_2==158||LA121_2==161||(LA121_2>=163 && LA121_2<=164)||LA121_2==166||LA121_2==171||LA121_2==175||LA121_2==186||LA121_2==193||LA121_2==197||LA121_2==199))
+					if ((LA121_2==GET||LA121_2==IDENTIFIER||LA121_2==SET||LA121_2==100||(LA121_2>=102 && LA121_2<=103)||(LA121_2>=105 && LA121_2<=108)||LA121_2==112||LA121_2==124||(LA121_2>=127 && LA121_2<=128)||LA121_2==132||LA121_2==138||LA121_2==140||LA121_2==146||(LA121_2>=148 && LA121_2<=149)||(LA121_2>=152 && LA121_2<=153)||LA121_2==157||LA121_2==159||LA121_2==162||(LA121_2>=164 && LA121_2<=165)||LA121_2==167||LA121_2==172||LA121_2==176||LA121_2==187||LA121_2==194||LA121_2==198||LA121_2==200))
 					{
 						alt121 = 1;
 					}
@@ -15418,7 +15419,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:354:23: ',' member_initializer
 					{
 					DebugLocation(354, 23);
-					char_literal323=(IToken)Match(input,78,Follow._78_in_member_initializer_list2323); if (state.failed) return retval;
+					char_literal323=(IToken)Match(input,79,Follow._79_in_member_initializer_list2323); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal323_tree = (object)adaptor.Create(char_literal323, "char_literal323", retval);
 					adaptor.AddChild(root_0, char_literal323_tree);
@@ -15515,7 +15516,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier325.Tree, identifier325, "identifier325", retval);
 			DebugLocation(357, 15);
-			char_literal326=(IToken)Match(input,89,Follow._89_in_member_initializer2342); if (state.failed) return retval;
+			char_literal326=(IToken)Match(input,90,Follow._90_in_member_initializer2342); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal326_tree = (object)adaptor.Create(char_literal326, "char_literal326", retval);
 			adaptor.AddChild(root_0, char_literal326_tree);
@@ -15588,11 +15589,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(122, false);
 			int LA122_1 = input.LA(1);
 
-			if ((LA122_1==Character_literal||(LA122_1>=FALSE && LA122_1<=GET)||(LA122_1>=Hex_number && LA122_1<=IDENTIFIER)||(LA122_1>=MINUS && LA122_1<=NUMBER)||LA122_1==Real_literal||(LA122_1>=SET && LA122_1<=STRINGLITERAL)||LA122_1==TRUE||LA122_1==Verbatim_string_literal||LA122_1==65||LA122_1==70||(LA122_1>=72 && LA122_1<=73)||(LA122_1>=75 && LA122_1<=76)||LA122_1==79||LA122_1==99||(LA122_1>=101 && LA122_1<=102)||(LA122_1>=104 && LA122_1<=109)||(LA122_1>=111 && LA122_1<=112)||(LA122_1>=115 && LA122_1<=116)||(LA122_1>=120 && LA122_1<=123)||(LA122_1>=125 && LA122_1<=127)||LA122_1==131||LA122_1==134||LA122_1==137||LA122_1==139||LA122_1==142||LA122_1==145||(LA122_1>=147 && LA122_1<=148)||(LA122_1>=150 && LA122_1<=152)||(LA122_1>=154 && LA122_1<=156)||LA122_1==158||LA122_1==161||(LA122_1>=163 && LA122_1<=164)||LA122_1==166||LA122_1==171||LA122_1==173||(LA122_1>=175 && LA122_1<=177)||LA122_1==180||LA122_1==183||(LA122_1>=186 && LA122_1<=190)||(LA122_1>=192 && LA122_1<=193)||LA122_1==197||LA122_1==199||LA122_1==205))
+			if ((LA122_1==Character_literal||(LA122_1>=FALSE && LA122_1<=GET)||(LA122_1>=Hex_number && LA122_1<=IDENTIFIER)||(LA122_1>=MINUS && LA122_1<=NUMBER)||LA122_1==Real_literal||(LA122_1>=SET && LA122_1<=STRINGLITERAL)||LA122_1==TRUE||LA122_1==Verbatim_string_literal||LA122_1==66||LA122_1==71||(LA122_1>=73 && LA122_1<=74)||(LA122_1>=76 && LA122_1<=77)||LA122_1==80||LA122_1==100||(LA122_1>=102 && LA122_1<=103)||(LA122_1>=105 && LA122_1<=110)||(LA122_1>=112 && LA122_1<=113)||(LA122_1>=116 && LA122_1<=117)||(LA122_1>=121 && LA122_1<=124)||(LA122_1>=126 && LA122_1<=128)||LA122_1==132||LA122_1==135||LA122_1==138||LA122_1==140||LA122_1==143||LA122_1==146||(LA122_1>=148 && LA122_1<=149)||(LA122_1>=151 && LA122_1<=153)||(LA122_1>=155 && LA122_1<=157)||LA122_1==159||LA122_1==162||(LA122_1>=164 && LA122_1<=165)||LA122_1==167||LA122_1==172||LA122_1==174||(LA122_1>=176 && LA122_1<=178)||LA122_1==181||LA122_1==184||(LA122_1>=187 && LA122_1<=191)||(LA122_1>=193 && LA122_1<=194)||LA122_1==198||LA122_1==200||LA122_1==206))
 			{
 				alt122 = 1;
 			}
-			else if ((LA122_1==200))
+			else if ((LA122_1==201))
 			{
 				alt122 = 2;
 			}
@@ -15704,7 +15705,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(362, 2);
-			char_literal330=(IToken)Match(input,200,Follow._200_in_collection_initializer2370); if (state.failed) return retval;
+			char_literal330=(IToken)Match(input,201,Follow._201_in_collection_initializer2370); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal330_tree = (object)adaptor.Create(char_literal330, "char_literal330", retval);
 			adaptor.AddChild(root_0, char_literal330_tree);
@@ -15722,7 +15723,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(123, false);
 			int LA123_1 = input.LA(1);
 
-			if ((LA123_1==78))
+			if ((LA123_1==79))
 			{
 				alt123 = 1;
 			}
@@ -15734,7 +15735,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:362:35: ','
 				{
 				DebugLocation(362, 35);
-				char_literal332=(IToken)Match(input,78,Follow._78_in_collection_initializer2378); if (state.failed) return retval;
+				char_literal332=(IToken)Match(input,79,Follow._79_in_collection_initializer2378); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal332_tree = (object)adaptor.Create(char_literal332, "char_literal332", retval);
 				adaptor.AddChild(root_0, char_literal332_tree);
@@ -15747,7 +15748,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(123); }
 
 			DebugLocation(362, 42);
-			char_literal333=(IToken)Match(input,204,Follow._204_in_collection_initializer2383); if (state.failed) return retval;
+			char_literal333=(IToken)Match(input,205,Follow._205_in_collection_initializer2383); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal333_tree = (object)adaptor.Create(char_literal333, "char_literal333", retval);
 			adaptor.AddChild(root_0, char_literal333_tree);
@@ -15832,11 +15833,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(124, false);
 				int LA124_1 = input.LA(1);
 
-				if ((LA124_1==78))
+				if ((LA124_1==79))
 				{
 					int LA124_2 = input.LA(2);
 
-					if ((LA124_2==Character_literal||(LA124_2>=FALSE && LA124_2<=GET)||(LA124_2>=Hex_number && LA124_2<=IDENTIFIER)||(LA124_2>=MINUS && LA124_2<=NUMBER)||LA124_2==Real_literal||(LA124_2>=SET && LA124_2<=STRINGLITERAL)||LA124_2==TRUE||LA124_2==Verbatim_string_literal||LA124_2==65||LA124_2==70||(LA124_2>=72 && LA124_2<=73)||(LA124_2>=75 && LA124_2<=76)||LA124_2==79||LA124_2==99||(LA124_2>=101 && LA124_2<=102)||(LA124_2>=104 && LA124_2<=109)||(LA124_2>=111 && LA124_2<=112)||(LA124_2>=115 && LA124_2<=116)||(LA124_2>=120 && LA124_2<=123)||(LA124_2>=125 && LA124_2<=127)||LA124_2==131||LA124_2==134||LA124_2==137||LA124_2==139||LA124_2==142||LA124_2==145||(LA124_2>=147 && LA124_2<=148)||(LA124_2>=150 && LA124_2<=152)||(LA124_2>=154 && LA124_2<=156)||LA124_2==158||LA124_2==161||(LA124_2>=163 && LA124_2<=164)||LA124_2==166||LA124_2==171||LA124_2==173||(LA124_2>=175 && LA124_2<=177)||LA124_2==180||LA124_2==183||(LA124_2>=186 && LA124_2<=190)||(LA124_2>=192 && LA124_2<=193)||LA124_2==197||(LA124_2>=199 && LA124_2<=200)||LA124_2==205))
+					if ((LA124_2==Character_literal||(LA124_2>=FALSE && LA124_2<=GET)||(LA124_2>=Hex_number && LA124_2<=IDENTIFIER)||(LA124_2>=MINUS && LA124_2<=NUMBER)||LA124_2==Real_literal||(LA124_2>=SET && LA124_2<=STRINGLITERAL)||LA124_2==TRUE||LA124_2==Verbatim_string_literal||LA124_2==66||LA124_2==71||(LA124_2>=73 && LA124_2<=74)||(LA124_2>=76 && LA124_2<=77)||LA124_2==80||LA124_2==100||(LA124_2>=102 && LA124_2<=103)||(LA124_2>=105 && LA124_2<=110)||(LA124_2>=112 && LA124_2<=113)||(LA124_2>=116 && LA124_2<=117)||(LA124_2>=121 && LA124_2<=124)||(LA124_2>=126 && LA124_2<=128)||LA124_2==132||LA124_2==135||LA124_2==138||LA124_2==140||LA124_2==143||LA124_2==146||(LA124_2>=148 && LA124_2<=149)||(LA124_2>=151 && LA124_2<=153)||(LA124_2>=155 && LA124_2<=157)||LA124_2==159||LA124_2==162||(LA124_2>=164 && LA124_2<=165)||LA124_2==167||LA124_2==172||LA124_2==174||(LA124_2>=176 && LA124_2<=178)||LA124_2==181||LA124_2==184||(LA124_2>=187 && LA124_2<=191)||(LA124_2>=193 && LA124_2<=194)||LA124_2==198||(LA124_2>=200 && LA124_2<=201)||LA124_2==206))
 					{
 						alt124 = 1;
 					}
@@ -15853,7 +15854,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:364:24: ',' element_initializer
 					{
 					DebugLocation(364, 24);
-					char_literal335=(IToken)Match(input,78,Follow._78_in_element_initializer_list2396); if (state.failed) return retval;
+					char_literal335=(IToken)Match(input,79,Follow._79_in_element_initializer_list2396); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal335_tree = (object)adaptor.Create(char_literal335, "char_literal335", retval);
 					adaptor.AddChild(root_0, char_literal335_tree);
@@ -15944,11 +15945,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(125, false);
 			int LA125_1 = input.LA(1);
 
-			if ((LA125_1==Character_literal||(LA125_1>=FALSE && LA125_1<=GET)||(LA125_1>=Hex_number && LA125_1<=IDENTIFIER)||(LA125_1>=MINUS && LA125_1<=NUMBER)||LA125_1==Real_literal||(LA125_1>=SET && LA125_1<=STRINGLITERAL)||LA125_1==TRUE||LA125_1==Verbatim_string_literal||LA125_1==65||LA125_1==70||(LA125_1>=72 && LA125_1<=73)||(LA125_1>=75 && LA125_1<=76)||LA125_1==79||LA125_1==99||(LA125_1>=101 && LA125_1<=102)||(LA125_1>=104 && LA125_1<=109)||(LA125_1>=111 && LA125_1<=112)||(LA125_1>=115 && LA125_1<=116)||(LA125_1>=120 && LA125_1<=123)||(LA125_1>=125 && LA125_1<=127)||LA125_1==131||LA125_1==134||LA125_1==137||LA125_1==139||LA125_1==142||LA125_1==145||(LA125_1>=147 && LA125_1<=148)||(LA125_1>=150 && LA125_1<=152)||(LA125_1>=154 && LA125_1<=156)||LA125_1==158||LA125_1==161||(LA125_1>=163 && LA125_1<=164)||LA125_1==166||LA125_1==171||LA125_1==173||(LA125_1>=175 && LA125_1<=177)||LA125_1==180||LA125_1==183||(LA125_1>=186 && LA125_1<=190)||(LA125_1>=192 && LA125_1<=193)||LA125_1==197||LA125_1==199||LA125_1==205))
+			if ((LA125_1==Character_literal||(LA125_1>=FALSE && LA125_1<=GET)||(LA125_1>=Hex_number && LA125_1<=IDENTIFIER)||(LA125_1>=MINUS && LA125_1<=NUMBER)||LA125_1==Real_literal||(LA125_1>=SET && LA125_1<=STRINGLITERAL)||LA125_1==TRUE||LA125_1==Verbatim_string_literal||LA125_1==66||LA125_1==71||(LA125_1>=73 && LA125_1<=74)||(LA125_1>=76 && LA125_1<=77)||LA125_1==80||LA125_1==100||(LA125_1>=102 && LA125_1<=103)||(LA125_1>=105 && LA125_1<=110)||(LA125_1>=112 && LA125_1<=113)||(LA125_1>=116 && LA125_1<=117)||(LA125_1>=121 && LA125_1<=124)||(LA125_1>=126 && LA125_1<=128)||LA125_1==132||LA125_1==135||LA125_1==138||LA125_1==140||LA125_1==143||LA125_1==146||(LA125_1>=148 && LA125_1<=149)||(LA125_1>=151 && LA125_1<=153)||(LA125_1>=155 && LA125_1<=157)||LA125_1==159||LA125_1==162||(LA125_1>=164 && LA125_1<=165)||LA125_1==167||LA125_1==172||LA125_1==174||(LA125_1>=176 && LA125_1<=178)||LA125_1==181||LA125_1==184||(LA125_1>=187 && LA125_1<=191)||(LA125_1>=193 && LA125_1<=194)||LA125_1==198||LA125_1==200||LA125_1==206))
 			{
 				alt125 = 1;
 			}
-			else if ((LA125_1==200))
+			else if ((LA125_1==201))
 			{
 				alt125 = 2;
 			}
@@ -15984,7 +15985,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(368, 4);
-				char_literal338=(IToken)Match(input,200,Follow._200_in_element_initializer2417); if (state.failed) return retval;
+				char_literal338=(IToken)Match(input,201,Follow._201_in_element_initializer2417); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal338_tree = (object)adaptor.Create(char_literal338, "char_literal338", retval);
 				adaptor.AddChild(root_0, char_literal338_tree);
@@ -15996,7 +15997,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, expression_list339.Tree, expression_list339, "expression_list339", retval);
 				DebugLocation(368, 28);
-				char_literal340=(IToken)Match(input,204,Follow._204_in_element_initializer2425); if (state.failed) return retval;
+				char_literal340=(IToken)Match(input,205,Follow._205_in_element_initializer2425); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal340_tree = (object)adaptor.Create(char_literal340, "char_literal340", retval);
 				adaptor.AddChild(root_0, char_literal340_tree);
@@ -16080,7 +16081,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(370, 2);
-			string_literal341=(IToken)Match(input,154,Follow._154_in_array_creation_expression2434); if (state.failed) return retval;
+			string_literal341=(IToken)Match(input,155,Follow._155_in_array_creation_expression2434); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal341_tree = (object)adaptor.Create(string_literal341, "string_literal341", retval);
 			adaptor.AddChild(root_0, string_literal341_tree);
@@ -16092,21 +16093,21 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(128, false);
 			switch (input.LA(1))
 			{
-			case 109:
-			case 112:
-			case 115:
-			case 120:
-			case 125:
-			case 134:
-			case 142:
-			case 150:
-			case 155:
-			case 173:
-			case 176:
-			case 180:
-			case 188:
+			case 110:
+			case 113:
+			case 116:
+			case 121:
+			case 126:
+			case 135:
+			case 143:
+			case 151:
+			case 156:
+			case 174:
+			case 177:
+			case 181:
 			case 189:
-			case 192:
+			case 190:
+			case 193:
 				{
 				int LA128_2 = input.LA(2);
 
@@ -16130,24 +16131,24 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case GET:
 			case IDENTIFIER:
 			case SET:
-			case 99:
-			case 101:
+			case 100:
 			case 102:
-			case 105:
+			case 103:
 			case 106:
 			case 107:
-			case 126:
-			case 131:
-			case 151:
+			case 108:
+			case 127:
+			case 132:
 			case 152:
-			case 161:
-			case 163:
+			case 153:
+			case 162:
 			case 164:
-			case 166:
-			case 171:
-			case 186:
-			case 193:
-			case 199:
+			case 165:
+			case 167:
+			case 172:
+			case 187:
+			case 194:
+			case 200:
 				{
 				int LA128_2 = input.LA(2);
 
@@ -16168,19 +16169,19 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 104:
-			case 111:
-			case 123:
-			case 127:
-			case 137:
-			case 139:
-			case 145:
-			case 147:
+			case 105:
+			case 112:
+			case 124:
+			case 128:
+			case 138:
+			case 140:
+			case 146:
 			case 148:
-			case 156:
-			case 158:
-			case 175:
-			case 197:
+			case 149:
+			case 157:
+			case 159:
+			case 176:
+			case 198:
 				{
 				int LA128_2 = input.LA(2);
 
@@ -16201,7 +16202,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 195:
+			case 196:
 				{
 				int LA128_2 = input.LA(2);
 
@@ -16222,7 +16223,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 95:
+			case 96:
 				{
 				alt128 = 3;
 				}
@@ -16250,7 +16251,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, non_array_type342.Tree, non_array_type342, "non_array_type342", retval);
 				DebugLocation(371, 20);
-				char_literal343=(IToken)Match(input,95,Follow._95_in_array_creation_expression2442); if (state.failed) return retval;
+				char_literal343=(IToken)Match(input,96,Follow._96_in_array_creation_expression2442); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal343_tree = (object)adaptor.Create(char_literal343, "char_literal343", retval);
 				adaptor.AddChild(root_0, char_literal343_tree);
@@ -16262,7 +16263,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, expression_list344.Tree, expression_list344, "expression_list344", retval);
 				DebugLocation(371, 40);
-				char_literal345=(IToken)Match(input,96,Follow._96_in_array_creation_expression2446); if (state.failed) return retval;
+				char_literal345=(IToken)Match(input,97,Follow._97_in_array_creation_expression2446); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal345_tree = (object)adaptor.Create(char_literal345, "char_literal345", retval);
 				adaptor.AddChild(root_0, char_literal345_tree);
@@ -16274,15 +16275,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(126, false);
 				int LA126_1 = input.LA(1);
 
-				if ((LA126_1==95))
+				if ((LA126_1==96))
 				{
 					int LA126_2 = input.LA(2);
 
-					if ((LA126_2==78))
+					if ((LA126_2==79))
 					{
 						alt126 = 1;
 					}
-					else if ((LA126_2==96))
+					else if ((LA126_2==97))
 					{
 						int LA126_3 = input.LA(3);
 
@@ -16319,7 +16320,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(127, false);
 				int LA127_1 = input.LA(1);
 
-				if ((LA127_1==200))
+				if ((LA127_1==201))
 				{
 					alt127 = 1;
 				}
@@ -16395,11 +16396,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(129, false);
 			int LA129_1 = input.LA(1);
 
-			if ((LA129_1==DOT||LA129_1==PTR||LA129_1==72))
+			if ((LA129_1==DOT||LA129_1==PTR||LA129_1==73))
 			{
 				alt129 = 1;
 			}
-			else if ((LA129_1==95))
+			else if ((LA129_1==96))
 			{
 				int LA129_2 = input.LA(2);
 
@@ -16498,7 +16499,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(377, 2);
-			string_literal353=(IToken)Match(input,154,Follow._154_in_delegate_creation_expression2487); if (state.failed) return retval;
+			string_literal353=(IToken)Match(input,155,Follow._155_in_delegate_creation_expression2487); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal353_tree = (object)adaptor.Create(string_literal353, "string_literal353", retval);
 			adaptor.AddChild(root_0, string_literal353_tree);
@@ -16510,7 +16511,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, type_name354.Tree, type_name354, "type_name354", retval);
 			DebugLocation(377, 22);
-			char_literal355=(IToken)Match(input,72,Follow._72_in_delegate_creation_expression2495); if (state.failed) return retval;
+			char_literal355=(IToken)Match(input,73,Follow._73_in_delegate_creation_expression2495); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal355_tree = (object)adaptor.Create(char_literal355, "char_literal355", retval);
 			adaptor.AddChild(root_0, char_literal355_tree);
@@ -16592,7 +16593,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(379, 2);
-			string_literal358=(IToken)Match(input,154,Follow._154_in_anonymous_object_creation_expression2512); if (state.failed) return retval;
+			string_literal358=(IToken)Match(input,155,Follow._155_in_anonymous_object_creation_expression2512); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal358_tree = (object)adaptor.Create(string_literal358, "string_literal358", retval);
 			adaptor.AddChild(root_0, string_literal358_tree);
@@ -16675,7 +16676,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(131, false);
 			int LA131_1 = input.LA(1);
 
-			if ((LA131_1==200))
+			if ((LA131_1==201))
 			{
 				int LA131_2 = input.LA(2);
 
@@ -16712,7 +16713,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(381, 2);
-				char_literal360=(IToken)Match(input,200,Follow._200_in_anonymous_object_initializer2525); if (state.failed) return retval;
+				char_literal360=(IToken)Match(input,201,Follow._201_in_anonymous_object_initializer2525); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal360_tree = (object)adaptor.Create(char_literal360, "char_literal360", retval);
 				adaptor.AddChild(root_0, char_literal360_tree);
@@ -16724,7 +16725,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(130, false);
 				int LA130_1 = input.LA(1);
 
-				if ((LA130_1==GET||LA130_1==IDENTIFIER||LA130_1==SET||LA130_1==99||(LA130_1>=101 && LA130_1<=102)||(LA130_1>=104 && LA130_1<=107)||LA130_1==111||LA130_1==123||(LA130_1>=126 && LA130_1<=127)||LA130_1==131||LA130_1==137||LA130_1==139||LA130_1==145||(LA130_1>=147 && LA130_1<=148)||(LA130_1>=151 && LA130_1<=152)||LA130_1==156||LA130_1==158||LA130_1==161||(LA130_1>=163 && LA130_1<=164)||LA130_1==166||LA130_1==171||LA130_1==175||LA130_1==186||LA130_1==193||LA130_1==197||LA130_1==199))
+				if ((LA130_1==GET||LA130_1==IDENTIFIER||LA130_1==SET||LA130_1==100||(LA130_1>=102 && LA130_1<=103)||(LA130_1>=105 && LA130_1<=108)||LA130_1==112||LA130_1==124||(LA130_1>=127 && LA130_1<=128)||LA130_1==132||LA130_1==138||LA130_1==140||LA130_1==146||(LA130_1>=148 && LA130_1<=149)||(LA130_1>=152 && LA130_1<=153)||LA130_1==157||LA130_1==159||LA130_1==162||(LA130_1>=164 && LA130_1<=165)||LA130_1==167||LA130_1==172||LA130_1==176||LA130_1==187||LA130_1==194||LA130_1==198||LA130_1==200))
 				{
 					alt130 = 1;
 				}
@@ -16749,7 +16750,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				} finally { DebugExitSubRule(130); }
 
 				DebugLocation(381, 34);
-				char_literal362=(IToken)Match(input,204,Follow._204_in_anonymous_object_initializer2534); if (state.failed) return retval;
+				char_literal362=(IToken)Match(input,205,Follow._205_in_anonymous_object_initializer2534); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal362_tree = (object)adaptor.Create(char_literal362, "char_literal362", retval);
 				adaptor.AddChild(root_0, char_literal362_tree);
@@ -16764,7 +16765,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(382, 4);
-				char_literal363=(IToken)Match(input,200,Follow._200_in_anonymous_object_initializer2540); if (state.failed) return retval;
+				char_literal363=(IToken)Match(input,201,Follow._201_in_anonymous_object_initializer2540); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal363_tree = (object)adaptor.Create(char_literal363, "char_literal363", retval);
 				adaptor.AddChild(root_0, char_literal363_tree);
@@ -16776,13 +16777,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, member_declarator_list364.Tree, member_declarator_list364, "member_declarator_list364", retval);
 				DebugLocation(382, 35);
-				char_literal365=(IToken)Match(input,78,Follow._78_in_anonymous_object_initializer2548); if (state.failed) return retval;
+				char_literal365=(IToken)Match(input,79,Follow._79_in_anonymous_object_initializer2548); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal365_tree = (object)adaptor.Create(char_literal365, "char_literal365", retval);
 				adaptor.AddChild(root_0, char_literal365_tree);
 				}
 				DebugLocation(382, 41);
-				char_literal366=(IToken)Match(input,204,Follow._204_in_anonymous_object_initializer2552); if (state.failed) return retval;
+				char_literal366=(IToken)Match(input,205,Follow._205_in_anonymous_object_initializer2552); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal366_tree = (object)adaptor.Create(char_literal366, "char_literal366", retval);
 				adaptor.AddChild(root_0, char_literal366_tree);
@@ -16869,11 +16870,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(132, false);
 				int LA132_1 = input.LA(1);
 
-				if ((LA132_1==78))
+				if ((LA132_1==79))
 				{
 					int LA132_2 = input.LA(2);
 
-					if ((LA132_2==GET||LA132_2==IDENTIFIER||LA132_2==SET||LA132_2==99||(LA132_2>=101 && LA132_2<=102)||(LA132_2>=104 && LA132_2<=107)||LA132_2==111||LA132_2==123||(LA132_2>=126 && LA132_2<=127)||LA132_2==131||LA132_2==137||LA132_2==139||LA132_2==145||(LA132_2>=147 && LA132_2<=148)||(LA132_2>=151 && LA132_2<=152)||LA132_2==156||LA132_2==158||LA132_2==161||(LA132_2>=163 && LA132_2<=164)||LA132_2==166||LA132_2==171||LA132_2==175||LA132_2==186||LA132_2==193||LA132_2==197||LA132_2==199))
+					if ((LA132_2==GET||LA132_2==IDENTIFIER||LA132_2==SET||LA132_2==100||(LA132_2>=102 && LA132_2<=103)||(LA132_2>=105 && LA132_2<=108)||LA132_2==112||LA132_2==124||(LA132_2>=127 && LA132_2<=128)||LA132_2==132||LA132_2==138||LA132_2==140||LA132_2==146||(LA132_2>=148 && LA132_2<=149)||(LA132_2>=152 && LA132_2<=153)||LA132_2==157||LA132_2==159||LA132_2==162||(LA132_2>=164 && LA132_2<=165)||LA132_2==167||LA132_2==172||LA132_2==176||LA132_2==187||LA132_2==194||LA132_2==198||LA132_2==200))
 					{
 						alt132 = 1;
 					}
@@ -16890,7 +16891,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:384:22: ',' member_declarator
 					{
 					DebugLocation(384, 22);
-					char_literal368=(IToken)Match(input,78,Follow._78_in_member_declarator_list2564); if (state.failed) return retval;
+					char_literal368=(IToken)Match(input,79,Follow._79_in_member_declarator_list2564); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal368_tree = (object)adaptor.Create(char_literal368, "char_literal368", retval);
 					adaptor.AddChild(root_0, char_literal368_tree);
@@ -16997,7 +16998,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(133, false);
 			switch (input.LA(1))
 			{
-			case 85:
+			case 86:
 				{
 				alt133 = 1;
 				}
@@ -17007,7 +17008,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				alt133 = 2;
 				}
 				break;
-			case 89:
+			case 90:
 				{
 				alt133 = 3;
 				}
@@ -17054,7 +17055,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:389:8: '=' expression
 				{
 				DebugLocation(389, 8);
-				char_literal374=(IToken)Match(input,89,Follow._89_in_member_declarator2605); if (state.failed) return retval;
+				char_literal374=(IToken)Match(input,90,Follow._90_in_member_declarator2605); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal374_tree = (object)adaptor.Create(char_literal374, "char_literal374", retval);
 				adaptor.AddChild(root_0, char_literal374_tree);
@@ -17141,13 +17142,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(391, 2);
-			string_literal376=(IToken)Match(input,177,Follow._177_in_sizeof_expression2617); if (state.failed) return retval;
+			string_literal376=(IToken)Match(input,178,Follow._178_in_sizeof_expression2617); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal376_tree = (object)adaptor.Create(string_literal376, "string_literal376", retval);
 			adaptor.AddChild(root_0, string_literal376_tree);
 			}
 			DebugLocation(391, 13);
-			char_literal377=(IToken)Match(input,72,Follow._72_in_sizeof_expression2621); if (state.failed) return retval;
+			char_literal377=(IToken)Match(input,73,Follow._73_in_sizeof_expression2621); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal377_tree = (object)adaptor.Create(char_literal377, "char_literal377", retval);
 			adaptor.AddChild(root_0, char_literal377_tree);
@@ -17263,13 +17264,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(393, 2);
-				string_literal380=(IToken)Match(input,187,Follow._187_in_typeof_expression2637); if (state.failed) return retval;
+				string_literal380=(IToken)Match(input,188,Follow._188_in_typeof_expression2637); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal380_tree = (object)adaptor.Create(string_literal380, "string_literal380", retval);
 				adaptor.AddChild(root_0, string_literal380_tree);
 				}
 				DebugLocation(393, 13);
-				char_literal381=(IToken)Match(input,72,Follow._72_in_typeof_expression2641); if (state.failed) return retval;
+				char_literal381=(IToken)Match(input,73,Follow._73_in_typeof_expression2641); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal381_tree = (object)adaptor.Create(char_literal381, "char_literal381", retval);
 				adaptor.AddChild(root_0, char_literal381_tree);
@@ -17296,13 +17297,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(394, 4);
-				string_literal384=(IToken)Match(input,187,Follow._187_in_typeof_expression2655); if (state.failed) return retval;
+				string_literal384=(IToken)Match(input,188,Follow._188_in_typeof_expression2655); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal384_tree = (object)adaptor.Create(string_literal384, "string_literal384", retval);
 				adaptor.AddChild(root_0, string_literal384_tree);
 				}
 				DebugLocation(394, 13);
-				char_literal385=(IToken)Match(input,72,Follow._72_in_typeof_expression2657); if (state.failed) return retval;
+				char_literal385=(IToken)Match(input,73,Follow._73_in_typeof_expression2657); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal385_tree = (object)adaptor.Create(char_literal385, "char_literal385", retval);
 				adaptor.AddChild(root_0, char_literal385_tree);
@@ -17329,19 +17330,19 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(395, 4);
-				string_literal388=(IToken)Match(input,187,Follow._187_in_typeof_expression2671); if (state.failed) return retval;
+				string_literal388=(IToken)Match(input,188,Follow._188_in_typeof_expression2671); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal388_tree = (object)adaptor.Create(string_literal388, "string_literal388", retval);
 				adaptor.AddChild(root_0, string_literal388_tree);
 				}
 				DebugLocation(395, 13);
-				char_literal389=(IToken)Match(input,72,Follow._72_in_typeof_expression2673); if (state.failed) return retval;
+				char_literal389=(IToken)Match(input,73,Follow._73_in_typeof_expression2673); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal389_tree = (object)adaptor.Create(char_literal389, "char_literal389", retval);
 				adaptor.AddChild(root_0, char_literal389_tree);
 				}
 				DebugLocation(395, 17);
-				string_literal390=(IToken)Match(input,195,Follow._195_in_typeof_expression2675); if (state.failed) return retval;
+				string_literal390=(IToken)Match(input,196,Follow._196_in_typeof_expression2675); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal390_tree = (object)adaptor.Create(string_literal390, "string_literal390", retval);
 				adaptor.AddChild(root_0, string_literal390_tree);
@@ -17544,7 +17545,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(136, false);
 			int LA136_1 = input.LA(1);
 
-			if ((LA136_1==84))
+			if ((LA136_1==85))
 			{
 				alt136 = 1;
 			}
@@ -17556,7 +17557,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:403:14: '::' identifier
 				{
 				DebugLocation(403, 14);
-				string_literal395=(IToken)Match(input,84,Follow._84_in_unbound_type_name_start2705); if (state.failed) return retval;
+				string_literal395=(IToken)Match(input,85,Follow._85_in_unbound_type_name_start2705); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal395_tree = (object)adaptor.Create(string_literal395, "string_literal395", retval);
 				adaptor.AddChild(root_0, string_literal395_tree);
@@ -17581,7 +17582,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(137, false);
 			int LA137_1 = input.LA(1);
 
-			if ((LA137_1==85))
+			if ((LA137_1==86))
 			{
 				alt137 = 1;
 			}
@@ -17689,7 +17690,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(138, false);
 			int LA138_1 = input.LA(1);
 
-			if ((LA138_1==85))
+			if ((LA138_1==86))
 			{
 				alt138 = 1;
 			}
@@ -17780,7 +17781,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(407, 2);
-			char_literal401=(IToken)Match(input,85,Follow._85_in_generic_dimension_specifier2737); if (state.failed) return retval;
+			char_literal401=(IToken)Match(input,86,Follow._86_in_generic_dimension_specifier2737); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal401_tree = (object)adaptor.Create(char_literal401, "char_literal401", retval);
 			adaptor.AddChild(root_0, char_literal401_tree);
@@ -17792,7 +17793,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(139, false);
 			int LA139_1 = input.LA(1);
 
-			if ((LA139_1==78))
+			if ((LA139_1==79))
 			{
 				alt139 = 1;
 			}
@@ -17895,7 +17896,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(140, false);
 				int LA140_1 = input.LA(1);
 
-				if ((LA140_1==78))
+				if ((LA140_1==79))
 				{
 					alt140 = 1;
 				}
@@ -17909,7 +17910,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:409:2: ','
 					{
 					DebugLocation(409, 2);
-					char_literal404=(IToken)Match(input,78,Follow._78_in_commas2755); if (state.failed) return retval;
+					char_literal404=(IToken)Match(input,79,Follow._79_in_commas2755); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal404_tree = (object)adaptor.Create(char_literal404, "char_literal404", retval);
 					adaptor.AddChild(root_0, char_literal404_tree);
@@ -18003,13 +18004,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(411, 2);
-			string_literal405=(IToken)Match(input,116,Follow._116_in_checked_expression2766); if (state.failed) return retval;
+			string_literal405=(IToken)Match(input,117,Follow._117_in_checked_expression2766); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal405_tree = (object)adaptor.Create(string_literal405, "string_literal405", retval);
 			adaptor.AddChild(root_0, string_literal405_tree);
 			}
 			DebugLocation(411, 14);
-			char_literal406=(IToken)Match(input,72,Follow._72_in_checked_expression2770); if (state.failed) return retval;
+			char_literal406=(IToken)Match(input,73,Follow._73_in_checked_expression2770); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal406_tree = (object)adaptor.Create(char_literal406, "char_literal406", retval);
 			adaptor.AddChild(root_0, char_literal406_tree);
@@ -18095,13 +18096,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(413, 2);
-			string_literal409=(IToken)Match(input,190,Follow._190_in_unchecked_expression2787); if (state.failed) return retval;
+			string_literal409=(IToken)Match(input,191,Follow._191_in_unchecked_expression2787); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal409_tree = (object)adaptor.Create(string_literal409, "string_literal409", retval);
 			adaptor.AddChild(root_0, string_literal409_tree);
 			}
 			DebugLocation(413, 16);
-			char_literal410=(IToken)Match(input,72,Follow._72_in_unchecked_expression2791); if (state.failed) return retval;
+			char_literal410=(IToken)Match(input,73,Follow._73_in_unchecked_expression2791); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal410_tree = (object)adaptor.Create(char_literal410, "char_literal410", retval);
 			adaptor.AddChild(root_0, char_literal410_tree);
@@ -18187,13 +18188,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(415, 2);
-			string_literal413=(IToken)Match(input,121,Follow._121_in_default_value_expression2808); if (state.failed) return retval;
+			string_literal413=(IToken)Match(input,122,Follow._122_in_default_value_expression2808); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal413_tree = (object)adaptor.Create(string_literal413, "string_literal413", retval);
 			adaptor.AddChild(root_0, string_literal413_tree);
 			}
 			DebugLocation(415, 14);
-			char_literal414=(IToken)Match(input,72,Follow._72_in_default_value_expression2812); if (state.failed) return retval;
+			char_literal414=(IToken)Match(input,73,Follow._73_in_default_value_expression2812); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal414_tree = (object)adaptor.Create(char_literal414, "char_literal414", retval);
 			adaptor.AddChild(root_0, char_literal414_tree);
@@ -18420,7 +18421,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(141, false);
 			int LA141_1 = input.LA(1);
 
-			if ((LA141_1==106))
+			if ((LA141_1==107))
 			{
 				alt141 = 1;
 			}
@@ -18432,7 +18433,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:421:2: 'async'
 				{
 				DebugLocation(421, 2);
-				string_literal419=(IToken)Match(input,106,Follow._106_in_anonymous_method_expression2842); if (state.failed) return retval;
+				string_literal419=(IToken)Match(input,107,Follow._107_in_anonymous_method_expression2842); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal419_tree = (object)adaptor.Create(string_literal419, "string_literal419", retval);
 				adaptor.AddChild(root_0, string_literal419_tree);
@@ -18445,7 +18446,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(141); }
 
 			DebugLocation(421, 11);
-			string_literal420=(IToken)Match(input,122,Follow._122_in_anonymous_method_expression2845); if (state.failed) return retval;
+			string_literal420=(IToken)Match(input,123,Follow._123_in_anonymous_method_expression2845); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal420_tree = (object)adaptor.Create(string_literal420, "string_literal420", retval);
 			adaptor.AddChild(root_0, string_literal420_tree);
@@ -18457,7 +18458,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(142, false);
 			int LA142_1 = input.LA(1);
 
-			if ((LA142_1==72))
+			if ((LA142_1==73))
 			{
 				alt142 = 1;
 			}
@@ -18554,7 +18555,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(423, 2);
-			char_literal423=(IToken)Match(input,72,Follow._72_in_explicit_anonymous_function_signature2857); if (state.failed) return retval;
+			char_literal423=(IToken)Match(input,73,Follow._73_in_explicit_anonymous_function_signature2857); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal423_tree = (object)adaptor.Create(char_literal423, "char_literal423", retval);
 			adaptor.AddChild(root_0, char_literal423_tree);
@@ -18566,7 +18567,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(143, false);
 			int LA143_1 = input.LA(1);
 
-			if ((LA143_1==GET||LA143_1==IDENTIFIER||LA143_1==SET||LA143_1==99||(LA143_1>=101 && LA143_1<=102)||(LA143_1>=104 && LA143_1<=107)||LA143_1==109||(LA143_1>=111 && LA143_1<=112)||LA143_1==115||LA143_1==120||LA143_1==123||(LA143_1>=125 && LA143_1<=127)||LA143_1==131||LA143_1==134||LA143_1==137||LA143_1==139||LA143_1==142||LA143_1==145||(LA143_1>=147 && LA143_1<=148)||(LA143_1>=150 && LA143_1<=152)||(LA143_1>=155 && LA143_1<=156)||(LA143_1>=158 && LA143_1<=159)||LA143_1==161||(LA143_1>=163 && LA143_1<=164)||LA143_1==166||(LA143_1>=170 && LA143_1<=171)||LA143_1==173||(LA143_1>=175 && LA143_1<=176)||LA143_1==180||LA143_1==186||(LA143_1>=188 && LA143_1<=189)||(LA143_1>=192 && LA143_1<=193)||LA143_1==195||LA143_1==197||LA143_1==199))
+			if ((LA143_1==GET||LA143_1==IDENTIFIER||LA143_1==SET||LA143_1==100||(LA143_1>=102 && LA143_1<=103)||(LA143_1>=105 && LA143_1<=108)||LA143_1==110||(LA143_1>=112 && LA143_1<=113)||LA143_1==116||LA143_1==121||LA143_1==124||(LA143_1>=126 && LA143_1<=128)||LA143_1==132||LA143_1==135||LA143_1==138||LA143_1==140||LA143_1==143||LA143_1==146||(LA143_1>=148 && LA143_1<=149)||(LA143_1>=151 && LA143_1<=153)||(LA143_1>=156 && LA143_1<=157)||(LA143_1>=159 && LA143_1<=160)||LA143_1==162||(LA143_1>=164 && LA143_1<=165)||LA143_1==167||(LA143_1>=171 && LA143_1<=172)||LA143_1==174||(LA143_1>=176 && LA143_1<=177)||LA143_1==181||LA143_1==187||(LA143_1>=189 && LA143_1<=190)||(LA143_1>=193 && LA143_1<=194)||LA143_1==196||LA143_1==198||LA143_1==200))
 			{
 				alt143 = 1;
 			}
@@ -18676,7 +18677,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(144, false);
 				int LA144_1 = input.LA(1);
 
-				if ((LA144_1==78))
+				if ((LA144_1==79))
 				{
 					alt144 = 1;
 				}
@@ -18690,7 +18691,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:425:43: ',' explicit_anonymous_function_parameter
 					{
 					DebugLocation(425, 43);
-					char_literal427=(IToken)Match(input,78,Follow._78_in_explicit_anonymous_function_parameter_list2879); if (state.failed) return retval;
+					char_literal427=(IToken)Match(input,79,Follow._79_in_explicit_anonymous_function_parameter_list2879); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal427_tree = (object)adaptor.Create(char_literal427, "char_literal427", retval);
 					adaptor.AddChild(root_0, char_literal427_tree);
@@ -18786,7 +18787,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(145, false);
 			int LA145_1 = input.LA(1);
 
-			if ((LA145_1==159||LA145_1==170))
+			if ((LA145_1==160||LA145_1==171))
 			{
 				alt145 = 1;
 			}
@@ -18888,7 +18889,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(429, 38);
 
 			set432=(IToken)input.LT(1);
-			if (input.LA(1)==159||input.LA(1)==170)
+			if (input.LA(1)==160||input.LA(1)==171)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set432, "set432", retval));
@@ -18969,7 +18970,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(433, 2);
-			char_literal433=(IToken)Match(input,85,Follow._85_in_variant_generic_parameter_list2922); if (state.failed) return retval;
+			char_literal433=(IToken)Match(input,86,Follow._86_in_variant_generic_parameter_list2922); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal433_tree = (object)adaptor.Create(char_literal433, "char_literal433", retval);
 			adaptor.AddChild(root_0, char_literal433_tree);
@@ -19066,7 +19067,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(146, false);
 				int LA146_1 = input.LA(1);
 
-				if ((LA146_1==78))
+				if ((LA146_1==79))
 				{
 					alt146 = 1;
 				}
@@ -19080,7 +19081,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:435:30: ',' variant_type_variable_name
 					{
 					DebugLocation(435, 30);
-					char_literal437=(IToken)Match(input,78,Follow._78_in_variant_type_parameters2941); if (state.failed) return retval;
+					char_literal437=(IToken)Match(input,79,Follow._79_in_variant_type_parameters2941); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal437_tree = (object)adaptor.Create(char_literal437, "char_literal437", retval);
 					adaptor.AddChild(root_0, char_literal437_tree);
@@ -19176,7 +19177,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(147, false);
 			int LA147_1 = input.LA(1);
 
-			if ((LA147_1==95))
+			if ((LA147_1==96))
 			{
 				alt147 = 1;
 			}
@@ -19207,7 +19208,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(148, false);
 			int LA148_1 = input.LA(1);
 
-			if ((LA148_1==141||LA148_1==159))
+			if ((LA148_1==142||LA148_1==160))
 			{
 				alt148 = 1;
 			}
@@ -19303,7 +19304,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(439, 20);
 
 			set442=(IToken)input.LT(1);
-			if (input.LA(1)==141||input.LA(1)==159)
+			if (input.LA(1)==142||input.LA(1)==160)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set442, "set442", retval));
@@ -19384,7 +19385,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(443, 2);
-			char_literal443=(IToken)Match(input,85,Follow._85_in_generic_parameter_list2987); if (state.failed) return retval;
+			char_literal443=(IToken)Match(input,86,Follow._86_in_generic_parameter_list2987); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal443_tree = (object)adaptor.Create(char_literal443, "char_literal443", retval);
 			adaptor.AddChild(root_0, char_literal443_tree);
@@ -19481,7 +19482,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(149, false);
 				int LA149_1 = input.LA(1);
 
-				if ((LA149_1==78))
+				if ((LA149_1==79))
 				{
 					alt149 = 1;
 				}
@@ -19495,7 +19496,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:445:33: ',' attributed_type_variable_name
 					{
 					DebugLocation(445, 33);
-					char_literal447=(IToken)Match(input,78,Follow._78_in_type_parameters3006); if (state.failed) return retval;
+					char_literal447=(IToken)Match(input,79,Follow._79_in_type_parameters3006); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal447_tree = (object)adaptor.Create(char_literal447, "char_literal447", retval);
 					adaptor.AddChild(root_0, char_literal447_tree);
@@ -19590,7 +19591,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(150, false);
 			int LA150_1 = input.LA(1);
 
-			if ((LA150_1==95))
+			if ((LA150_1==96))
 			{
 				alt150 = 1;
 			}
@@ -19706,7 +19707,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(450, 2);
-			char_literal451=(IToken)Match(input,72,Follow._72_in_cast_expression3033); if (state.failed) return retval;
+			char_literal451=(IToken)Match(input,73,Follow._73_in_cast_expression3033); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal451_tree = (object)adaptor.Create(char_literal451, "char_literal451", retval);
 			adaptor.AddChild(root_0, char_literal451_tree);
@@ -19721,24 +19722,24 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case GET:
 			case IDENTIFIER:
 			case SET:
-			case 99:
-			case 101:
+			case 100:
 			case 102:
-			case 105:
+			case 103:
 			case 106:
 			case 107:
-			case 126:
-			case 131:
-			case 151:
+			case 108:
+			case 127:
+			case 132:
 			case 152:
-			case 161:
-			case 163:
+			case 153:
+			case 162:
 			case 164:
-			case 166:
-			case 171:
-			case 186:
-			case 193:
-			case 199:
+			case 165:
+			case 167:
+			case 172:
+			case 187:
+			case 194:
+			case 200:
 				{
 				int LA160_2 = input.LA(2);
 
@@ -19763,19 +19764,19 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 104:
-			case 111:
-			case 123:
-			case 127:
-			case 137:
-			case 139:
-			case 145:
-			case 147:
+			case 105:
+			case 112:
+			case 124:
+			case 128:
+			case 138:
+			case 140:
+			case 146:
 			case 148:
-			case 156:
-			case 158:
-			case 175:
-			case 197:
+			case 149:
+			case 157:
+			case 159:
+			case 176:
+			case 198:
 				{
 				int LA160_2 = input.LA(2);
 
@@ -19800,21 +19801,21 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 109:
-			case 112:
-			case 115:
-			case 120:
-			case 125:
-			case 134:
-			case 142:
-			case 150:
-			case 155:
-			case 173:
-			case 176:
-			case 180:
-			case 188:
+			case 110:
+			case 113:
+			case 116:
+			case 121:
+			case 126:
+			case 135:
+			case 143:
+			case 151:
+			case 156:
+			case 174:
+			case 177:
+			case 181:
 			case 189:
-			case 192:
+			case 190:
+			case 193:
 				{
 				int LA160_2 = input.LA(2);
 
@@ -19839,7 +19840,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 195:
+			case 196:
 				{
 				alt160 = 4;
 				}
@@ -19867,11 +19868,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(151, false);
 				int LA151_1 = input.LA(1);
 
-				if ((LA151_1==GET||LA151_1==IDENTIFIER||LA151_1==SET||LA151_1==99||(LA151_1>=101 && LA151_1<=102)||(LA151_1>=104 && LA151_1<=107)||LA151_1==111||LA151_1==123||(LA151_1>=126 && LA151_1<=127)||LA151_1==131||LA151_1==137||LA151_1==139||LA151_1==145||(LA151_1>=147 && LA151_1<=148)||(LA151_1>=151 && LA151_1<=152)||LA151_1==156||LA151_1==158||LA151_1==161||(LA151_1>=163 && LA151_1<=164)||LA151_1==166||LA151_1==171||LA151_1==175||LA151_1==186||LA151_1==193||LA151_1==197||LA151_1==199))
+				if ((LA151_1==GET||LA151_1==IDENTIFIER||LA151_1==SET||LA151_1==100||(LA151_1>=102 && LA151_1<=103)||(LA151_1>=105 && LA151_1<=108)||LA151_1==112||LA151_1==124||(LA151_1>=127 && LA151_1<=128)||LA151_1==132||LA151_1==138||LA151_1==140||LA151_1==146||(LA151_1>=148 && LA151_1<=149)||(LA151_1>=152 && LA151_1<=153)||LA151_1==157||LA151_1==159||LA151_1==162||(LA151_1>=164 && LA151_1<=165)||LA151_1==167||LA151_1==172||LA151_1==176||LA151_1==187||LA151_1==194||LA151_1==198||LA151_1==200))
 				{
 					alt151 = 1;
 				}
-				else if ((LA151_1==109||LA151_1==112||LA151_1==115||LA151_1==120||LA151_1==125||LA151_1==134||LA151_1==142||LA151_1==150||LA151_1==155||LA151_1==173||LA151_1==176||LA151_1==180||(LA151_1>=188 && LA151_1<=189)||LA151_1==192))
+				else if ((LA151_1==110||LA151_1==113||LA151_1==116||LA151_1==121||LA151_1==126||LA151_1==135||LA151_1==143||LA151_1==151||LA151_1==156||LA151_1==174||LA151_1==177||LA151_1==181||(LA151_1>=189 && LA151_1<=190)||LA151_1==193))
 				{
 					alt151 = 2;
 				}
@@ -19925,7 +19926,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(152, false);
 					int LA152_1 = input.LA(1);
 
-					if ((LA152_1==73))
+					if ((LA152_1==74))
 					{
 						alt152 = 1;
 					}
@@ -19939,7 +19940,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:452:52: '*'
 						{
 						DebugLocation(452, 52);
-						char_literal454=(IToken)Match(input,73,Follow._73_in_cast_expression3057); if (state.failed) return retval;
+						char_literal454=(IToken)Match(input,74,Follow._74_in_cast_expression3057); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 						char_literal454_tree = (object)adaptor.Create(char_literal454, "char_literal454", retval);
 						adaptor.AddChild(root_0, char_literal454_tree);
@@ -19971,7 +19972,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(153, false);
 				int LA153_1 = input.LA(1);
 
-				if ((LA153_1==95))
+				if ((LA153_1==96))
 				{
 					alt153 = 1;
 				}
@@ -20009,11 +20010,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(154, false);
 				int LA154_1 = input.LA(1);
 
-				if ((LA154_1==GET||LA154_1==IDENTIFIER||LA154_1==SET||LA154_1==99||(LA154_1>=101 && LA154_1<=102)||(LA154_1>=104 && LA154_1<=107)||LA154_1==111||LA154_1==123||(LA154_1>=126 && LA154_1<=127)||LA154_1==131||LA154_1==137||LA154_1==139||LA154_1==145||(LA154_1>=147 && LA154_1<=148)||(LA154_1>=151 && LA154_1<=152)||LA154_1==156||LA154_1==158||LA154_1==161||(LA154_1>=163 && LA154_1<=164)||LA154_1==166||LA154_1==171||LA154_1==175||LA154_1==186||LA154_1==193||LA154_1==197||LA154_1==199))
+				if ((LA154_1==GET||LA154_1==IDENTIFIER||LA154_1==SET||LA154_1==100||(LA154_1>=102 && LA154_1<=103)||(LA154_1>=105 && LA154_1<=108)||LA154_1==112||LA154_1==124||(LA154_1>=127 && LA154_1<=128)||LA154_1==132||LA154_1==138||LA154_1==140||LA154_1==146||(LA154_1>=148 && LA154_1<=149)||(LA154_1>=152 && LA154_1<=153)||LA154_1==157||LA154_1==159||LA154_1==162||(LA154_1>=164 && LA154_1<=165)||LA154_1==167||LA154_1==172||LA154_1==176||LA154_1==187||LA154_1==194||LA154_1==198||LA154_1==200))
 				{
 					alt154 = 1;
 				}
-				else if ((LA154_1==109||LA154_1==112||LA154_1==115||LA154_1==120||LA154_1==125||LA154_1==134||LA154_1==142||LA154_1==150||LA154_1==155||LA154_1==173||LA154_1==176||LA154_1==180||(LA154_1>=188 && LA154_1<=189)||LA154_1==192))
+				else if ((LA154_1==110||LA154_1==113||LA154_1==116||LA154_1==121||LA154_1==126||LA154_1==135||LA154_1==143||LA154_1==151||LA154_1==156||LA154_1==174||LA154_1==177||LA154_1==181||(LA154_1>=189 && LA154_1<=190)||LA154_1==193))
 				{
 					alt154 = 2;
 				}
@@ -20058,7 +20059,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				} finally { DebugExitSubRule(154); }
 
 				DebugLocation(453, 54);
-				char_literal458=(IToken)Match(input,93,Follow._93_in_cast_expression3083); if (state.failed) return retval;
+				char_literal458=(IToken)Match(input,94,Follow._94_in_cast_expression3083); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal458_tree = (object)adaptor.Create(char_literal458, "char_literal458", retval);
 				adaptor.AddChild(root_0, char_literal458_tree);
@@ -20070,7 +20071,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(155, false);
 				int LA155_1 = input.LA(1);
 
-				if ((LA155_1==95))
+				if ((LA155_1==96))
 				{
 					alt155 = 1;
 				}
@@ -20108,11 +20109,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(156, false);
 				int LA156_1 = input.LA(1);
 
-				if ((LA156_1==GET||LA156_1==IDENTIFIER||LA156_1==SET||LA156_1==99||(LA156_1>=101 && LA156_1<=102)||(LA156_1>=104 && LA156_1<=107)||LA156_1==111||LA156_1==123||(LA156_1>=126 && LA156_1<=127)||LA156_1==131||LA156_1==137||LA156_1==139||LA156_1==145||(LA156_1>=147 && LA156_1<=148)||(LA156_1>=151 && LA156_1<=152)||LA156_1==156||LA156_1==158||LA156_1==161||(LA156_1>=163 && LA156_1<=164)||LA156_1==166||LA156_1==171||LA156_1==175||LA156_1==186||LA156_1==193||LA156_1==197||LA156_1==199))
+				if ((LA156_1==GET||LA156_1==IDENTIFIER||LA156_1==SET||LA156_1==100||(LA156_1>=102 && LA156_1<=103)||(LA156_1>=105 && LA156_1<=108)||LA156_1==112||LA156_1==124||(LA156_1>=127 && LA156_1<=128)||LA156_1==132||LA156_1==138||LA156_1==140||LA156_1==146||(LA156_1>=148 && LA156_1<=149)||(LA156_1>=152 && LA156_1<=153)||LA156_1==157||LA156_1==159||LA156_1==162||(LA156_1>=164 && LA156_1<=165)||LA156_1==167||LA156_1==172||LA156_1==176||LA156_1==187||LA156_1==194||LA156_1==198||LA156_1==200))
 				{
 					alt156 = 1;
 				}
-				else if ((LA156_1==109||LA156_1==112||LA156_1==115||LA156_1==120||LA156_1==125||LA156_1==134||LA156_1==142||LA156_1==150||LA156_1==155||LA156_1==173||LA156_1==176||LA156_1==180||(LA156_1>=188 && LA156_1<=189)||LA156_1==192))
+				else if ((LA156_1==110||LA156_1==113||LA156_1==116||LA156_1==121||LA156_1==126||LA156_1==135||LA156_1==143||LA156_1==151||LA156_1==156||LA156_1==174||LA156_1==177||LA156_1==181||(LA156_1>=189 && LA156_1<=190)||LA156_1==193))
 				{
 					alt156 = 2;
 				}
@@ -20163,7 +20164,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(157, false);
 				int LA157_1 = input.LA(1);
 
-				if ((LA157_1==95))
+				if ((LA157_1==96))
 				{
 					alt157 = 1;
 				}
@@ -20195,7 +20196,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:455:5: 'void' ( '*' )* ( rank_specifiers )?
 				{
 				DebugLocation(455, 5);
-				string_literal463=(IToken)Match(input,195,Follow._195_in_cast_expression3115); if (state.failed) return retval;
+				string_literal463=(IToken)Match(input,196,Follow._196_in_cast_expression3115); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal463_tree = (object)adaptor.Create(string_literal463, "string_literal463", retval);
 				adaptor.AddChild(root_0, string_literal463_tree);
@@ -20209,7 +20210,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(158, false);
 					int LA158_1 = input.LA(1);
 
-					if ((LA158_1==73))
+					if ((LA158_1==74))
 					{
 						alt158 = 1;
 					}
@@ -20223,7 +20224,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:455:14: '*'
 						{
 						DebugLocation(455, 14);
-						char_literal464=(IToken)Match(input,73,Follow._73_in_cast_expression3119); if (state.failed) return retval;
+						char_literal464=(IToken)Match(input,74,Follow._74_in_cast_expression3119); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 						char_literal464_tree = (object)adaptor.Create(char_literal464, "char_literal464", retval);
 						adaptor.AddChild(root_0, char_literal464_tree);
@@ -20249,7 +20250,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(159, false);
 				int LA159_1 = input.LA(1);
 
-				if ((LA159_1==95))
+				if ((LA159_1==96))
 				{
 					alt159 = 1;
 				}
@@ -20295,7 +20296,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(161, false);
 				int LA161_1 = input.LA(1);
 
-				if ((LA161_1==95))
+				if ((LA161_1==96))
 				{
 					alt161 = 1;
 				}
@@ -20414,7 +20415,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(162, false);
 				int LA162_1 = input.LA(1);
 
-				if ((LA162_1==67||LA162_1==73||LA162_1==81))
+				if ((LA162_1==68||LA162_1==74||LA162_1==82))
 				{
 					alt162 = 1;
 				}
@@ -20430,7 +20431,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(460, 22);
 
 					set470=(IToken)input.LT(1);
-					if (input.LA(1)==67||input.LA(1)==73||input.LA(1)==81)
+					if (input.LA(1)==68||input.LA(1)==74||input.LA(1)==82)
 					{
 						input.Consume();
 						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set470, "set470", retval));
@@ -20544,7 +20545,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(163, false);
 				int LA163_1 = input.LA(1);
 
-				if ((LA163_1==MINUS||LA163_1==75))
+				if ((LA163_1==MINUS||LA163_1==76))
 				{
 					alt163 = 1;
 				}
@@ -20560,7 +20561,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(462, 29);
 
 					set473=(IToken)input.LT(1);
-					if (input.LA(1)==MINUS||input.LA(1)==75)
+					if (input.LA(1)==MINUS||input.LA(1)==76)
 					{
 						input.Consume();
 						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set473, "set473", retval));
@@ -20689,7 +20690,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 
 				}
-				else if ((LA165_1==86))
+				else if ((LA165_1==87))
 				{
 					alt165 = 1;
 				}
@@ -20709,7 +20710,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(164, false);
 					int LA164_1 = input.LA(1);
 
-					if ((LA164_1==86))
+					if ((LA164_1==87))
 					{
 						alt164 = 1;
 					}
@@ -20732,7 +20733,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:465:24: '<<'
 						{
 						DebugLocation(465, 24);
-						string_literal476=(IToken)Match(input,86,Follow._86_in_shift_expression3205); if (state.failed) return retval;
+						string_literal476=(IToken)Match(input,87,Follow._87_in_shift_expression3205); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 						string_literal476_tree = (object)adaptor.Create(string_literal476, "string_literal476", retval);
 						adaptor.AddChild(root_0, string_literal476_tree);
@@ -20866,15 +20867,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			switch (input.LA(1))
 			{
 			case GT:
-			case 85:
-			case 88:
-			case 92:
+			case 86:
+			case 89:
+			case 93:
 				{
 				alt169 = 1;
 				}
 				break;
-			case 66:
-			case 90:
+			case 67:
+			case 91:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -20895,7 +20896,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 70:
+			case 71:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -20916,7 +20917,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 97:
+			case 98:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -20937,7 +20938,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 201:
+			case 202:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -20958,7 +20959,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 69:
+			case 70:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -20979,7 +20980,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 203:
+			case 204:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21000,7 +21001,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 94:
+			case 95:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21021,7 +21022,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 93:
+			case 94:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21042,7 +21043,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 78:
+			case 79:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21126,7 +21127,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 96:
+			case 97:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21147,7 +21148,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 204:
+			case 205:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21168,7 +21169,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 83:
+			case 84:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21189,7 +21190,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 175:
+			case 176:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21210,7 +21211,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 139:
+			case 140:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21231,7 +21232,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 137:
+			case 138:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21252,7 +21253,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 148:
+			case 149:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21273,7 +21274,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 197:
+			case 198:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21294,7 +21295,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 147:
+			case 148:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21315,7 +21316,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 158:
+			case 159:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21336,7 +21337,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 156:
+			case 157:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21357,7 +21358,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 127:
+			case 128:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21378,7 +21379,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 145:
+			case 146:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21399,8 +21400,8 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 104:
-			case 123:
+			case 105:
+			case 124:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21421,7 +21422,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 111:
+			case 112:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21442,7 +21443,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 95:
+			case 96:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21463,9 +21464,9 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 159:
-			case 170:
-			case 183:
+			case 160:
+			case 171:
+			case 184:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21486,21 +21487,21 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 109:
-			case 112:
-			case 115:
-			case 120:
-			case 125:
-			case 134:
-			case 142:
-			case 150:
-			case 155:
-			case 173:
-			case 176:
-			case 180:
-			case 188:
+			case 110:
+			case 113:
+			case 116:
+			case 121:
+			case 126:
+			case 135:
+			case 143:
+			case 151:
+			case 156:
+			case 174:
+			case 177:
+			case 181:
 			case 189:
-			case 192:
+			case 190:
+			case 193:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21524,24 +21525,24 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case GET:
 			case IDENTIFIER:
 			case SET:
-			case 99:
-			case 101:
+			case 100:
 			case 102:
-			case 105:
+			case 103:
 			case 106:
 			case 107:
-			case 126:
-			case 131:
-			case 151:
+			case 108:
+			case 127:
+			case 132:
 			case 152:
-			case 161:
-			case 163:
+			case 153:
+			case 162:
 			case 164:
-			case 166:
-			case 171:
-			case 186:
-			case 193:
-			case 199:
+			case 165:
+			case 167:
+			case 172:
+			case 187:
+			case 194:
+			case 200:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21562,7 +21563,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 195:
+			case 196:
 				{
 				int LA169_2 = input.LA(2);
 
@@ -21583,8 +21584,8 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 103:
-			case 146:
+			case 104:
+			case 147:
 				{
 				alt169 = 2;
 				}
@@ -21614,7 +21615,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(166, false);
 					int LA166_1 = input.LA(1);
 
-					if ((LA166_1==GT||LA166_1==85||LA166_1==88||LA166_1==92))
+					if ((LA166_1==GT||LA166_1==86||LA166_1==89||LA166_1==93))
 					{
 						alt166 = 1;
 					}
@@ -21630,7 +21631,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						DebugLocation(468, 10);
 
 						set481=(IToken)input.LT(1);
-						if (input.LA(1)==GT||input.LA(1)==85||input.LA(1)==88||input.LA(1)==92)
+						if (input.LA(1)==GT||input.LA(1)==86||input.LA(1)==89||input.LA(1)==93)
 						{
 							input.Consume();
 							if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set481, "set481", retval));
@@ -21680,7 +21681,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(168, false);
 					int LA168_1 = input.LA(1);
 
-					if ((LA168_1==103||LA168_1==146))
+					if ((LA168_1==104||LA168_1==147))
 					{
 						alt168 = 1;
 					}
@@ -21696,7 +21697,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						DebugLocation(469, 8);
 
 						set483=(IToken)input.LT(1);
-						if (input.LA(1)==103||input.LA(1)==146)
+						if (input.LA(1)==104||input.LA(1)==147)
 						{
 							input.Consume();
 							if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set483, "set483", retval));
@@ -21717,7 +21718,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						try { DebugEnterDecision(167, false);
 						int LA167_1 = input.LA(1);
 
-						if ((LA167_1==109||LA167_1==112||LA167_1==115||LA167_1==120||LA167_1==125||LA167_1==134||LA167_1==142||LA167_1==150||LA167_1==155||LA167_1==173||LA167_1==176||LA167_1==180||(LA167_1>=188 && LA167_1<=189)||LA167_1==192))
+						if ((LA167_1==110||LA167_1==113||LA167_1==116||LA167_1==121||LA167_1==126||LA167_1==135||LA167_1==143||LA167_1==151||LA167_1==156||LA167_1==174||LA167_1==177||LA167_1==181||(LA167_1>=189 && LA167_1<=190)||LA167_1==193))
 						{
 							int LA167_2 = input.LA(2);
 
@@ -21737,7 +21738,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 								throw nvae;
 							}
 						}
-						else if ((LA167_1==GET||LA167_1==IDENTIFIER||LA167_1==SET||LA167_1==99||(LA167_1>=101 && LA167_1<=102)||(LA167_1>=105 && LA167_1<=107)||LA167_1==126||LA167_1==131||(LA167_1>=151 && LA167_1<=152)||LA167_1==161||(LA167_1>=163 && LA167_1<=164)||LA167_1==166||LA167_1==171||LA167_1==186||LA167_1==193||LA167_1==199))
+						else if ((LA167_1==GET||LA167_1==IDENTIFIER||LA167_1==SET||LA167_1==100||(LA167_1>=102 && LA167_1<=103)||(LA167_1>=106 && LA167_1<=108)||LA167_1==127||LA167_1==132||(LA167_1>=152 && LA167_1<=153)||LA167_1==162||(LA167_1>=164 && LA167_1<=165)||LA167_1==167||LA167_1==172||LA167_1==187||LA167_1==194||LA167_1==200))
 						{
 							int LA167_2 = input.LA(2);
 
@@ -21757,7 +21758,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 								throw nvae;
 							}
 						}
-						else if ((LA167_1==104||LA167_1==111||LA167_1==123||LA167_1==127||LA167_1==137||LA167_1==139||LA167_1==145||(LA167_1>=147 && LA167_1<=148)||LA167_1==156||LA167_1==158||LA167_1==175||LA167_1==197) && ((_queryExpression == 0)))
+						else if ((LA167_1==105||LA167_1==112||LA167_1==124||LA167_1==128||LA167_1==138||LA167_1==140||LA167_1==146||(LA167_1>=148 && LA167_1<=149)||LA167_1==157||LA167_1==159||LA167_1==176||LA167_1==198) && ((_queryExpression == 0)))
 						{
 							int LA167_2 = input.LA(2);
 
@@ -21777,11 +21778,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 								throw nvae;
 							}
 						}
-						else if ((LA167_1==195))
+						else if ((LA167_1==196))
 						{
 							int LA167_2 = input.LA(2);
 
-							if ((LA167_2==73))
+							if ((LA167_2==74))
 							{
 								int LA167_3 = input.LA(3);
 
@@ -21950,7 +21951,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(170, false);
 				int LA170_1 = input.LA(1);
 
-				if ((LA170_1==66||LA170_1==90))
+				if ((LA170_1==67||LA170_1==91))
 				{
 					alt170 = 1;
 				}
@@ -21966,7 +21967,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					DebugLocation(475, 6);
 
 					set487=(IToken)input.LT(1);
-					if (input.LA(1)==66||input.LA(1)==90)
+					if (input.LA(1)==67||input.LA(1)==91)
 					{
 						input.Consume();
 						if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set487, "set487", retval));
@@ -22080,7 +22081,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(171, false);
 				int LA171_1 = input.LA(1);
 
-				if ((LA171_1==70))
+				if ((LA171_1==71))
 				{
 					alt171 = 1;
 				}
@@ -22094,7 +22095,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:477:23: '&' equality_expression
 					{
 					DebugLocation(477, 23);
-					char_literal490=(IToken)Match(input,70,Follow._70_in_and_expression3339); if (state.failed) return retval;
+					char_literal490=(IToken)Match(input,71,Follow._71_in_and_expression3339); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal490_tree = (object)adaptor.Create(char_literal490, "char_literal490", retval);
 					adaptor.AddChild(root_0, char_literal490_tree);
@@ -22199,7 +22200,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(172, false);
 				int LA172_1 = input.LA(1);
 
-				if ((LA172_1==97))
+				if ((LA172_1==98))
 				{
 					alt172 = 1;
 				}
@@ -22213,7 +22214,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:479:18: '^' and_expression
 					{
 					DebugLocation(479, 18);
-					char_literal493=(IToken)Match(input,97,Follow._97_in_exclusive_or_expression3356); if (state.failed) return retval;
+					char_literal493=(IToken)Match(input,98,Follow._98_in_exclusive_or_expression3356); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal493_tree = (object)adaptor.Create(char_literal493, "char_literal493", retval);
 					adaptor.AddChild(root_0, char_literal493_tree);
@@ -22318,7 +22319,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(173, false);
 				int LA173_1 = input.LA(1);
 
-				if ((LA173_1==201))
+				if ((LA173_1==202))
 				{
 					alt173 = 1;
 				}
@@ -22332,7 +22333,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:481:29: '|' exclusive_or_expression
 					{
 					DebugLocation(481, 29);
-					char_literal496=(IToken)Match(input,201,Follow._201_in_inclusive_or_expression3375); if (state.failed) return retval;
+					char_literal496=(IToken)Match(input,202,Follow._202_in_inclusive_or_expression3375); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal496_tree = (object)adaptor.Create(char_literal496, "char_literal496", retval);
 					adaptor.AddChild(root_0, char_literal496_tree);
@@ -22437,7 +22438,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(174, false);
 				int LA174_1 = input.LA(1);
 
-				if ((LA174_1==69))
+				if ((LA174_1==70))
 				{
 					alt174 = 1;
 				}
@@ -22451,7 +22452,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:483:29: '&&' inclusive_or_expression
 					{
 					DebugLocation(483, 29);
-					string_literal499=(IToken)Match(input,69,Follow._69_in_conditional_and_expression3394); if (state.failed) return retval;
+					string_literal499=(IToken)Match(input,70,Follow._70_in_conditional_and_expression3394); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal499_tree = (object)adaptor.Create(string_literal499, "string_literal499", retval);
 					adaptor.AddChild(root_0, string_literal499_tree);
@@ -22556,7 +22557,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(175, false);
 				int LA175_1 = input.LA(1);
 
-				if ((LA175_1==203))
+				if ((LA175_1==204))
 				{
 					alt175 = 1;
 				}
@@ -22570,7 +22571,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:485:31: '||' conditional_and_expression
 					{
 					DebugLocation(485, 31);
-					string_literal502=(IToken)Match(input,203,Follow._203_in_conditional_or_expression3412); if (state.failed) return retval;
+					string_literal502=(IToken)Match(input,204,Follow._204_in_conditional_or_expression3412); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal502_tree = (object)adaptor.Create(string_literal502, "string_literal502", retval);
 					adaptor.AddChild(root_0, string_literal502_tree);
@@ -22675,7 +22676,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(176, false);
 				int LA176_1 = input.LA(1);
 
-				if ((LA176_1==94))
+				if ((LA176_1==95))
 				{
 					int LA176_2 = input.LA(2);
 
@@ -22696,7 +22697,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:487:31: '??' null_coalescing_expression
 					{
 					DebugLocation(487, 31);
-					string_literal505=(IToken)Match(input,94,Follow._94_in_null_coalescing_expression3431); if (state.failed) return retval;
+					string_literal505=(IToken)Match(input,95,Follow._95_in_null_coalescing_expression3431); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal505_tree = (object)adaptor.Create(string_literal505, "string_literal505", retval);
 					adaptor.AddChild(root_0, string_literal505_tree);
@@ -22802,7 +22803,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(177, false);
 			int LA177_1 = input.LA(1);
 
-			if ((LA177_1==93))
+			if ((LA177_1==94))
 			{
 				alt177 = 1;
 			}
@@ -22814,7 +22815,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:489:32: '?' expression ':' expression
 				{
 				DebugLocation(489, 32);
-				char_literal508=(IToken)Match(input,93,Follow._93_in_conditional_expression3449); if (state.failed) return retval;
+				char_literal508=(IToken)Match(input,94,Follow._94_in_conditional_expression3449); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal508_tree = (object)adaptor.Create(char_literal508, "char_literal508", retval);
 				adaptor.AddChild(root_0, char_literal508_tree);
@@ -22826,7 +22827,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, expression509.Tree, expression509, "expression509", retval);
 				DebugLocation(489, 51);
-				char_literal510=(IToken)Match(input,83,Follow._83_in_conditional_expression3457); if (state.failed) return retval;
+				char_literal510=(IToken)Match(input,84,Follow._84_in_conditional_expression3457); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal510_tree = (object)adaptor.Create(char_literal510, "char_literal510", retval);
 				adaptor.AddChild(root_0, char_literal510_tree);
@@ -22913,7 +22914,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(493, 2);
-			char_literal512=(IToken)Match(input,200,Follow._200_in_array_initializer3473); if (state.failed) return retval;
+			char_literal512=(IToken)Match(input,201,Follow._201_in_array_initializer3473); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal512_tree = (object)adaptor.Create(char_literal512, "char_literal512", retval);
 			adaptor.AddChild(root_0, char_literal512_tree);
@@ -22925,7 +22926,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(178, false);
 			int LA178_1 = input.LA(1);
 
-			if ((LA178_1==Character_literal||(LA178_1>=FALSE && LA178_1<=GET)||(LA178_1>=Hex_number && LA178_1<=IDENTIFIER)||(LA178_1>=MINUS && LA178_1<=NUMBER)||LA178_1==Real_literal||(LA178_1>=SET && LA178_1<=STRINGLITERAL)||LA178_1==TRUE||LA178_1==Verbatim_string_literal||LA178_1==65||LA178_1==70||(LA178_1>=72 && LA178_1<=73)||(LA178_1>=75 && LA178_1<=76)||LA178_1==79||LA178_1==99||(LA178_1>=101 && LA178_1<=102)||(LA178_1>=104 && LA178_1<=109)||(LA178_1>=111 && LA178_1<=112)||(LA178_1>=115 && LA178_1<=116)||(LA178_1>=120 && LA178_1<=123)||(LA178_1>=125 && LA178_1<=127)||LA178_1==131||LA178_1==134||LA178_1==137||LA178_1==139||LA178_1==142||LA178_1==145||(LA178_1>=147 && LA178_1<=148)||(LA178_1>=150 && LA178_1<=152)||(LA178_1>=154 && LA178_1<=156)||LA178_1==158||LA178_1==161||(LA178_1>=163 && LA178_1<=164)||LA178_1==166||LA178_1==171||LA178_1==173||(LA178_1>=175 && LA178_1<=177)||LA178_1==180||LA178_1==183||(LA178_1>=186 && LA178_1<=190)||(LA178_1>=192 && LA178_1<=193)||LA178_1==197||(LA178_1>=199 && LA178_1<=200)||LA178_1==205))
+			if ((LA178_1==Character_literal||(LA178_1>=FALSE && LA178_1<=GET)||(LA178_1>=Hex_number && LA178_1<=IDENTIFIER)||(LA178_1>=MINUS && LA178_1<=NUMBER)||LA178_1==Real_literal||(LA178_1>=SET && LA178_1<=STRINGLITERAL)||LA178_1==TRUE||LA178_1==Verbatim_string_literal||LA178_1==66||LA178_1==71||(LA178_1>=73 && LA178_1<=74)||(LA178_1>=76 && LA178_1<=77)||LA178_1==80||LA178_1==100||(LA178_1>=102 && LA178_1<=103)||(LA178_1>=105 && LA178_1<=110)||(LA178_1>=112 && LA178_1<=113)||(LA178_1>=116 && LA178_1<=117)||(LA178_1>=121 && LA178_1<=124)||(LA178_1>=126 && LA178_1<=128)||LA178_1==132||LA178_1==135||LA178_1==138||LA178_1==140||LA178_1==143||LA178_1==146||(LA178_1>=148 && LA178_1<=149)||(LA178_1>=151 && LA178_1<=153)||(LA178_1>=155 && LA178_1<=157)||LA178_1==159||LA178_1==162||(LA178_1>=164 && LA178_1<=165)||LA178_1==167||LA178_1==172||LA178_1==174||(LA178_1>=176 && LA178_1<=178)||LA178_1==181||LA178_1==184||(LA178_1>=187 && LA178_1<=191)||(LA178_1>=193 && LA178_1<=194)||LA178_1==198||(LA178_1>=200 && LA178_1<=201)||LA178_1==206))
 			{
 				alt178 = 1;
 			}
@@ -22956,7 +22957,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(179, false);
 			int LA179_1 = input.LA(1);
 
-			if ((LA179_1==78))
+			if ((LA179_1==79))
 			{
 				alt179 = 1;
 			}
@@ -22968,7 +22969,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:493:37: ','
 				{
 				DebugLocation(493, 37);
-				char_literal514=(IToken)Match(input,78,Follow._78_in_array_initializer3482); if (state.failed) return retval;
+				char_literal514=(IToken)Match(input,79,Follow._79_in_array_initializer3482); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal514_tree = (object)adaptor.Create(char_literal514, "char_literal514", retval);
 				adaptor.AddChild(root_0, char_literal514_tree);
@@ -22981,7 +22982,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(179); }
 
 			DebugLocation(493, 44);
-			char_literal515=(IToken)Match(input,204,Follow._204_in_array_initializer3487); if (state.failed) return retval;
+			char_literal515=(IToken)Match(input,205,Follow._205_in_array_initializer3487); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal515_tree = (object)adaptor.Create(char_literal515, "char_literal515", retval);
 			adaptor.AddChild(root_0, char_literal515_tree);
@@ -23066,11 +23067,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(180, false);
 				int LA180_1 = input.LA(1);
 
-				if ((LA180_1==78))
+				if ((LA180_1==79))
 				{
 					int LA180_2 = input.LA(2);
 
-					if ((LA180_2==Character_literal||(LA180_2>=FALSE && LA180_2<=GET)||(LA180_2>=Hex_number && LA180_2<=IDENTIFIER)||(LA180_2>=MINUS && LA180_2<=NUMBER)||LA180_2==Real_literal||(LA180_2>=SET && LA180_2<=STRINGLITERAL)||LA180_2==TRUE||LA180_2==Verbatim_string_literal||LA180_2==65||LA180_2==70||(LA180_2>=72 && LA180_2<=73)||(LA180_2>=75 && LA180_2<=76)||LA180_2==79||LA180_2==99||(LA180_2>=101 && LA180_2<=102)||(LA180_2>=104 && LA180_2<=109)||(LA180_2>=111 && LA180_2<=112)||(LA180_2>=115 && LA180_2<=116)||(LA180_2>=120 && LA180_2<=123)||(LA180_2>=125 && LA180_2<=127)||LA180_2==131||LA180_2==134||LA180_2==137||LA180_2==139||LA180_2==142||LA180_2==145||(LA180_2>=147 && LA180_2<=148)||(LA180_2>=150 && LA180_2<=152)||(LA180_2>=154 && LA180_2<=156)||LA180_2==158||LA180_2==161||(LA180_2>=163 && LA180_2<=164)||LA180_2==166||LA180_2==171||LA180_2==173||(LA180_2>=175 && LA180_2<=177)||LA180_2==180||LA180_2==183||(LA180_2>=186 && LA180_2<=190)||(LA180_2>=192 && LA180_2<=193)||LA180_2==197||(LA180_2>=199 && LA180_2<=200)||LA180_2==205))
+					if ((LA180_2==Character_literal||(LA180_2>=FALSE && LA180_2<=GET)||(LA180_2>=Hex_number && LA180_2<=IDENTIFIER)||(LA180_2>=MINUS && LA180_2<=NUMBER)||LA180_2==Real_literal||(LA180_2>=SET && LA180_2<=STRINGLITERAL)||LA180_2==TRUE||LA180_2==Verbatim_string_literal||LA180_2==66||LA180_2==71||(LA180_2>=73 && LA180_2<=74)||(LA180_2>=76 && LA180_2<=77)||LA180_2==80||LA180_2==100||(LA180_2>=102 && LA180_2<=103)||(LA180_2>=105 && LA180_2<=110)||(LA180_2>=112 && LA180_2<=113)||(LA180_2>=116 && LA180_2<=117)||(LA180_2>=121 && LA180_2<=124)||(LA180_2>=126 && LA180_2<=128)||LA180_2==132||LA180_2==135||LA180_2==138||LA180_2==140||LA180_2==143||LA180_2==146||(LA180_2>=148 && LA180_2<=149)||(LA180_2>=151 && LA180_2<=153)||(LA180_2>=155 && LA180_2<=157)||LA180_2==159||LA180_2==162||(LA180_2>=164 && LA180_2<=165)||LA180_2==167||LA180_2==172||LA180_2==174||(LA180_2>=176 && LA180_2<=178)||LA180_2==181||LA180_2==184||(LA180_2>=187 && LA180_2<=191)||(LA180_2>=193 && LA180_2<=194)||LA180_2==198||(LA180_2>=200 && LA180_2<=201)||LA180_2==206))
 					{
 						alt180 = 1;
 					}
@@ -23087,7 +23088,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:495:24: ',' variable_initializer
 					{
 					DebugLocation(495, 24);
-					char_literal517=(IToken)Match(input,78,Follow._78_in_variable_initializer_list3498); if (state.failed) return retval;
+					char_literal517=(IToken)Match(input,79,Follow._79_in_variable_initializer_list3498); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal517_tree = (object)adaptor.Create(char_literal517, "char_literal517", retval);
 					adaptor.AddChild(root_0, char_literal517_tree);
@@ -23196,52 +23197,52 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(181, false);
 			switch (input.LA(1))
 			{
-			case 89:
+			case 90:
 				{
 				alt181 = 1;
 				}
 				break;
-			case 77:
+			case 78:
 				{
 				alt181 = 2;
 				}
 				break;
-			case 80:
+			case 81:
 				{
 				alt181 = 3;
 				}
 				break;
-			case 74:
+			case 75:
 				{
 				alt181 = 4;
 				}
 				break;
-			case 82:
+			case 83:
 				{
 				alt181 = 5;
 				}
 				break;
-			case 68:
+			case 69:
 				{
 				alt181 = 6;
 				}
 				break;
-			case 71:
+			case 72:
 				{
 				alt181 = 7;
 				}
 				break;
-			case 202:
+			case 203:
 				{
 				alt181 = 8;
 				}
 				break;
-			case 98:
+			case 99:
 				{
 				alt181 = 9;
 				}
 				break;
-			case 87:
+			case 88:
 				{
 				alt181 = 10;
 				}
@@ -23270,7 +23271,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(498, 2);
-				char_literal519=(IToken)Match(input,89,Follow._89_in_assignment_operator3511); if (state.failed) return retval;
+				char_literal519=(IToken)Match(input,90,Follow._90_in_assignment_operator3511); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal519_tree = (object)adaptor.Create(char_literal519, "char_literal519", retval);
 				adaptor.AddChild(root_0, char_literal519_tree);
@@ -23285,7 +23286,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(498, 8);
-				string_literal520=(IToken)Match(input,77,Follow._77_in_assignment_operator3515); if (state.failed) return retval;
+				string_literal520=(IToken)Match(input,78,Follow._78_in_assignment_operator3515); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal520_tree = (object)adaptor.Create(string_literal520, "string_literal520", retval);
 				adaptor.AddChild(root_0, string_literal520_tree);
@@ -23300,7 +23301,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(498, 15);
-				string_literal521=(IToken)Match(input,80,Follow._80_in_assignment_operator3519); if (state.failed) return retval;
+				string_literal521=(IToken)Match(input,81,Follow._81_in_assignment_operator3519); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal521_tree = (object)adaptor.Create(string_literal521, "string_literal521", retval);
 				adaptor.AddChild(root_0, string_literal521_tree);
@@ -23315,7 +23316,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(498, 22);
-				string_literal522=(IToken)Match(input,74,Follow._74_in_assignment_operator3523); if (state.failed) return retval;
+				string_literal522=(IToken)Match(input,75,Follow._75_in_assignment_operator3523); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal522_tree = (object)adaptor.Create(string_literal522, "string_literal522", retval);
 				adaptor.AddChild(root_0, string_literal522_tree);
@@ -23330,7 +23331,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(498, 29);
-				string_literal523=(IToken)Match(input,82,Follow._82_in_assignment_operator3527); if (state.failed) return retval;
+				string_literal523=(IToken)Match(input,83,Follow._83_in_assignment_operator3527); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal523_tree = (object)adaptor.Create(string_literal523, "string_literal523", retval);
 				adaptor.AddChild(root_0, string_literal523_tree);
@@ -23345,7 +23346,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(498, 36);
-				string_literal524=(IToken)Match(input,68,Follow._68_in_assignment_operator3531); if (state.failed) return retval;
+				string_literal524=(IToken)Match(input,69,Follow._69_in_assignment_operator3531); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal524_tree = (object)adaptor.Create(string_literal524, "string_literal524", retval);
 				adaptor.AddChild(root_0, string_literal524_tree);
@@ -23360,7 +23361,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(498, 43);
-				string_literal525=(IToken)Match(input,71,Follow._71_in_assignment_operator3535); if (state.failed) return retval;
+				string_literal525=(IToken)Match(input,72,Follow._72_in_assignment_operator3535); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal525_tree = (object)adaptor.Create(string_literal525, "string_literal525", retval);
 				adaptor.AddChild(root_0, string_literal525_tree);
@@ -23375,7 +23376,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(498, 50);
-				string_literal526=(IToken)Match(input,202,Follow._202_in_assignment_operator3539); if (state.failed) return retval;
+				string_literal526=(IToken)Match(input,203,Follow._203_in_assignment_operator3539); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal526_tree = (object)adaptor.Create(string_literal526, "string_literal526", retval);
 				adaptor.AddChild(root_0, string_literal526_tree);
@@ -23390,7 +23391,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(498, 57);
-				string_literal527=(IToken)Match(input,98,Follow._98_in_assignment_operator3543); if (state.failed) return retval;
+				string_literal527=(IToken)Match(input,99,Follow._99_in_assignment_operator3543); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal527_tree = (object)adaptor.Create(string_literal527, "string_literal527", retval);
 				adaptor.AddChild(root_0, string_literal527_tree);
@@ -23405,7 +23406,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(498, 64);
-				string_literal528=(IToken)Match(input,87,Follow._87_in_assignment_operator3547); if (state.failed) return retval;
+				string_literal528=(IToken)Match(input,88,Follow._88_in_assignment_operator3547); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal528_tree = (object)adaptor.Create(string_literal528, "string_literal528", retval);
 				adaptor.AddChild(root_0, string_literal528_tree);
@@ -23426,7 +23427,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				adaptor.AddChild(root_0, char_literal529_tree);
 				}
 				DebugLocation(498, 76);
-				string_literal530=(IToken)Match(input,92,Follow._92_in_assignment_operator3553); if (state.failed) return retval;
+				string_literal530=(IToken)Match(input,93,Follow._93_in_assignment_operator3553); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal530_tree = (object)adaptor.Create(string_literal530, "string_literal530", retval);
 				adaptor.AddChild(root_0, string_literal530_tree);
@@ -23507,11 +23508,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(182, false);
 			int LA182_1 = input.LA(1);
 
-			if ((LA182_1==106))
+			if ((LA182_1==107))
 			{
 				int LA182_2 = input.LA(2);
 
-				if ((LA182_2==GET||LA182_2==IDENTIFIER||LA182_2==SET||LA182_2==72||LA182_2==99||(LA182_2>=101 && LA182_2<=102)||(LA182_2>=104 && LA182_2<=107)||LA182_2==111||LA182_2==123||(LA182_2>=126 && LA182_2<=127)||LA182_2==131||LA182_2==137||LA182_2==139||LA182_2==145||(LA182_2>=147 && LA182_2<=148)||(LA182_2>=151 && LA182_2<=152)||LA182_2==156||LA182_2==158||LA182_2==161||(LA182_2>=163 && LA182_2<=164)||LA182_2==166||LA182_2==171||LA182_2==175||LA182_2==186||LA182_2==193||LA182_2==197||LA182_2==199))
+				if ((LA182_2==GET||LA182_2==IDENTIFIER||LA182_2==SET||LA182_2==73||LA182_2==100||(LA182_2>=102 && LA182_2<=103)||(LA182_2>=105 && LA182_2<=108)||LA182_2==112||LA182_2==124||(LA182_2>=127 && LA182_2<=128)||LA182_2==132||LA182_2==138||LA182_2==140||LA182_2==146||(LA182_2>=148 && LA182_2<=149)||(LA182_2>=152 && LA182_2<=153)||LA182_2==157||LA182_2==159||LA182_2==162||(LA182_2>=164 && LA182_2<=165)||LA182_2==167||LA182_2==172||LA182_2==176||LA182_2==187||LA182_2==194||LA182_2==198||LA182_2==200))
 				{
 					alt182 = 1;
 				}
@@ -23524,7 +23525,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:500:2: 'async'
 				{
 				DebugLocation(500, 2);
-				string_literal531=(IToken)Match(input,106,Follow._106_in_lambda_expression3561); if (state.failed) return retval;
+				string_literal531=(IToken)Match(input,107,Follow._107_in_lambda_expression3561); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal531_tree = (object)adaptor.Create(string_literal531, "string_literal531", retval);
 				adaptor.AddChild(root_0, string_literal531_tree);
@@ -23543,7 +23544,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, anonymous_function_signature532.Tree, anonymous_function_signature532, "anonymous_function_signature532", retval);
 			DebugLocation(500, 42);
-			string_literal533=(IToken)Match(input,91,Follow._91_in_lambda_expression3568); if (state.failed) return retval;
+			string_literal533=(IToken)Match(input,92,Follow._92_in_lambda_expression3568); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal533_tree = (object)adaptor.Create(string_literal533, "string_literal533", retval);
 			adaptor.AddChild(root_0, string_literal533_tree);
@@ -23616,28 +23617,28 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(183, false);
 			int LA183_1 = input.LA(1);
 
-			if ((LA183_1==72))
+			if ((LA183_1==73))
 			{
 				switch (input.LA(2))
 				{
-				case 109:
-				case 112:
-				case 115:
-				case 120:
-				case 125:
-				case 134:
-				case 142:
-				case 150:
-				case 155:
-				case 159:
-				case 170:
-				case 173:
-				case 176:
-				case 180:
-				case 188:
+				case 110:
+				case 113:
+				case 116:
+				case 121:
+				case 126:
+				case 135:
+				case 143:
+				case 151:
+				case 156:
+				case 160:
+				case 171:
+				case 174:
+				case 177:
+				case 181:
 				case 189:
-				case 192:
-				case 195:
+				case 190:
+				case 193:
+				case 196:
 					{
 					alt183 = 1;
 					}
@@ -23645,32 +23646,32 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				case GET:
 				case IDENTIFIER:
 				case SET:
-				case 99:
-				case 101:
+				case 100:
 				case 102:
-				case 105:
+				case 103:
 				case 106:
 				case 107:
-				case 126:
-				case 131:
-				case 151:
+				case 108:
+				case 127:
+				case 132:
 				case 152:
-				case 161:
-				case 163:
+				case 153:
+				case 162:
 				case 164:
-				case 166:
-				case 171:
-				case 186:
-				case 193:
-				case 199:
+				case 165:
+				case 167:
+				case 172:
+				case 187:
+				case 194:
+				case 200:
 					{
 					int LA183_3 = input.LA(3);
 
-					if ((LA183_3==DOT||LA183_3==GET||LA183_3==IDENTIFIER||LA183_3==SET||LA183_3==73||(LA183_3>=84 && LA183_3<=85)||LA183_3==93||LA183_3==95||LA183_3==99||(LA183_3>=101 && LA183_3<=102)||(LA183_3>=104 && LA183_3<=107)||LA183_3==111||LA183_3==123||(LA183_3>=126 && LA183_3<=127)||LA183_3==131||LA183_3==137||LA183_3==139||LA183_3==145||(LA183_3>=147 && LA183_3<=148)||(LA183_3>=151 && LA183_3<=152)||LA183_3==156||LA183_3==158||LA183_3==161||(LA183_3>=163 && LA183_3<=164)||LA183_3==166||LA183_3==171||LA183_3==175||LA183_3==186||LA183_3==193||LA183_3==197||LA183_3==199))
+					if ((LA183_3==DOT||LA183_3==GET||LA183_3==IDENTIFIER||LA183_3==SET||LA183_3==74||(LA183_3>=85 && LA183_3<=86)||LA183_3==94||LA183_3==96||LA183_3==100||(LA183_3>=102 && LA183_3<=103)||(LA183_3>=105 && LA183_3<=108)||LA183_3==112||LA183_3==124||(LA183_3>=127 && LA183_3<=128)||LA183_3==132||LA183_3==138||LA183_3==140||LA183_3==146||(LA183_3>=148 && LA183_3<=149)||(LA183_3>=152 && LA183_3<=153)||LA183_3==157||LA183_3==159||LA183_3==162||(LA183_3>=164 && LA183_3<=165)||LA183_3==167||LA183_3==172||LA183_3==176||LA183_3==187||LA183_3==194||LA183_3==198||LA183_3==200))
 					{
 						alt183 = 1;
 					}
-					else if ((LA183_3==RPAREN||LA183_3==78))
+					else if ((LA183_3==RPAREN||LA183_3==79))
 					{
 						alt183 = 2;
 					}
@@ -23683,27 +23684,27 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					}
 					}
 					break;
-				case 104:
-				case 111:
-				case 123:
-				case 127:
-				case 137:
-				case 139:
-				case 145:
-				case 147:
+				case 105:
+				case 112:
+				case 124:
+				case 128:
+				case 138:
+				case 140:
+				case 146:
 				case 148:
-				case 156:
-				case 158:
-				case 175:
-				case 197:
+				case 149:
+				case 157:
+				case 159:
+				case 176:
+				case 198:
 					{
 					int LA183_3 = input.LA(3);
 
-					if ((LA183_3==DOT||LA183_3==GET||LA183_3==IDENTIFIER||LA183_3==SET||LA183_3==73||(LA183_3>=84 && LA183_3<=85)||LA183_3==93||LA183_3==95||LA183_3==99||(LA183_3>=101 && LA183_3<=102)||(LA183_3>=104 && LA183_3<=107)||LA183_3==111||LA183_3==123||(LA183_3>=126 && LA183_3<=127)||LA183_3==131||LA183_3==137||LA183_3==139||LA183_3==145||(LA183_3>=147 && LA183_3<=148)||(LA183_3>=151 && LA183_3<=152)||LA183_3==156||LA183_3==158||LA183_3==161||(LA183_3>=163 && LA183_3<=164)||LA183_3==166||LA183_3==171||LA183_3==175||LA183_3==186||LA183_3==193||LA183_3==197||LA183_3==199))
+					if ((LA183_3==DOT||LA183_3==GET||LA183_3==IDENTIFIER||LA183_3==SET||LA183_3==74||(LA183_3>=85 && LA183_3<=86)||LA183_3==94||LA183_3==96||LA183_3==100||(LA183_3>=102 && LA183_3<=103)||(LA183_3>=105 && LA183_3<=108)||LA183_3==112||LA183_3==124||(LA183_3>=127 && LA183_3<=128)||LA183_3==132||LA183_3==138||LA183_3==140||LA183_3==146||(LA183_3>=148 && LA183_3<=149)||(LA183_3>=152 && LA183_3<=153)||LA183_3==157||LA183_3==159||LA183_3==162||(LA183_3>=164 && LA183_3<=165)||LA183_3==167||LA183_3==172||LA183_3==176||LA183_3==187||LA183_3==194||LA183_3==198||LA183_3==200))
 					{
 						alt183 = 1;
 					}
-					else if ((LA183_3==RPAREN||LA183_3==78))
+					else if ((LA183_3==RPAREN||LA183_3==79))
 					{
 						alt183 = 2;
 					}
@@ -23747,11 +23748,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 
 			}
-			else if ((LA183_1==GET||LA183_1==IDENTIFIER||LA183_1==SET||LA183_1==99||(LA183_1>=101 && LA183_1<=102)||(LA183_1>=105 && LA183_1<=107)||LA183_1==126||LA183_1==131||(LA183_1>=151 && LA183_1<=152)||LA183_1==161||(LA183_1>=163 && LA183_1<=164)||LA183_1==166||LA183_1==171||LA183_1==186||LA183_1==193||LA183_1==199))
+			else if ((LA183_1==GET||LA183_1==IDENTIFIER||LA183_1==SET||LA183_1==100||(LA183_1>=102 && LA183_1<=103)||(LA183_1>=106 && LA183_1<=108)||LA183_1==127||LA183_1==132||(LA183_1>=152 && LA183_1<=153)||LA183_1==162||(LA183_1>=164 && LA183_1<=165)||LA183_1==167||LA183_1==172||LA183_1==187||LA183_1==194||LA183_1==200))
 			{
 				alt183 = 2;
 			}
-			else if ((LA183_1==104||LA183_1==111||LA183_1==123||LA183_1==127||LA183_1==137||LA183_1==139||LA183_1==145||(LA183_1>=147 && LA183_1<=148)||LA183_1==156||LA183_1==158||LA183_1==175||LA183_1==197) && ((_queryExpression == 0)))
+			else if ((LA183_1==105||LA183_1==112||LA183_1==124||LA183_1==128||LA183_1==138||LA183_1==140||LA183_1==146||(LA183_1>=148 && LA183_1<=149)||LA183_1==157||LA183_1==159||LA183_1==176||LA183_1==198) && ((_queryExpression == 0)))
 			{
 				alt183 = 2;
 			}
@@ -23860,15 +23861,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(185, false);
 			int LA185_1 = input.LA(1);
 
-			if ((LA185_1==72))
+			if ((LA185_1==73))
 			{
 				alt185 = 1;
 			}
-			else if ((LA185_1==GET||LA185_1==IDENTIFIER||LA185_1==SET||LA185_1==99||(LA185_1>=101 && LA185_1<=102)||(LA185_1>=105 && LA185_1<=107)||LA185_1==126||LA185_1==131||(LA185_1>=151 && LA185_1<=152)||LA185_1==161||(LA185_1>=163 && LA185_1<=164)||LA185_1==166||LA185_1==171||LA185_1==186||LA185_1==193||LA185_1==199))
+			else if ((LA185_1==GET||LA185_1==IDENTIFIER||LA185_1==SET||LA185_1==100||(LA185_1>=102 && LA185_1<=103)||(LA185_1>=106 && LA185_1<=108)||LA185_1==127||LA185_1==132||(LA185_1>=152 && LA185_1<=153)||LA185_1==162||(LA185_1>=164 && LA185_1<=165)||LA185_1==167||LA185_1==172||LA185_1==187||LA185_1==194||LA185_1==200))
 			{
 				alt185 = 2;
 			}
-			else if ((LA185_1==104||LA185_1==111||LA185_1==123||LA185_1==127||LA185_1==137||LA185_1==139||LA185_1==145||(LA185_1>=147 && LA185_1<=148)||LA185_1==156||LA185_1==158||LA185_1==175||LA185_1==197) && ((_queryExpression == 0)))
+			else if ((LA185_1==105||LA185_1==112||LA185_1==124||LA185_1==128||LA185_1==138||LA185_1==140||LA185_1==146||(LA185_1>=148 && LA185_1<=149)||LA185_1==157||LA185_1==159||LA185_1==176||LA185_1==198) && ((_queryExpression == 0)))
 			{
 				alt185 = 2;
 			}
@@ -23889,7 +23890,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(505, 2);
-				char_literal537=(IToken)Match(input,72,Follow._72_in_implicit_anonymous_function_signature3592); if (state.failed) return retval;
+				char_literal537=(IToken)Match(input,73,Follow._73_in_implicit_anonymous_function_signature3592); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal537_tree = (object)adaptor.Create(char_literal537, "char_literal537", retval);
 				adaptor.AddChild(root_0, char_literal537_tree);
@@ -23901,7 +23902,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(184, false);
 				int LA184_1 = input.LA(1);
 
-				if ((LA184_1==GET||LA184_1==IDENTIFIER||LA184_1==SET||LA184_1==99||(LA184_1>=101 && LA184_1<=102)||(LA184_1>=104 && LA184_1<=107)||LA184_1==111||LA184_1==123||(LA184_1>=126 && LA184_1<=127)||LA184_1==131||LA184_1==137||LA184_1==139||LA184_1==145||(LA184_1>=147 && LA184_1<=148)||(LA184_1>=151 && LA184_1<=152)||LA184_1==156||LA184_1==158||LA184_1==161||(LA184_1>=163 && LA184_1<=164)||LA184_1==166||LA184_1==171||LA184_1==175||LA184_1==186||LA184_1==193||LA184_1==197||LA184_1==199))
+				if ((LA184_1==GET||LA184_1==IDENTIFIER||LA184_1==SET||LA184_1==100||(LA184_1>=102 && LA184_1<=103)||(LA184_1>=105 && LA184_1<=108)||LA184_1==112||LA184_1==124||(LA184_1>=127 && LA184_1<=128)||LA184_1==132||LA184_1==138||LA184_1==140||LA184_1==146||(LA184_1>=148 && LA184_1<=149)||(LA184_1>=152 && LA184_1<=153)||LA184_1==157||LA184_1==159||LA184_1==162||(LA184_1>=164 && LA184_1<=165)||LA184_1==167||LA184_1==172||LA184_1==176||LA184_1==187||LA184_1==194||LA184_1==198||LA184_1==200))
 				{
 					alt184 = 1;
 				}
@@ -24028,7 +24029,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(186, false);
 				int LA186_1 = input.LA(1);
 
-				if ((LA186_1==78))
+				if ((LA186_1==79))
 				{
 					alt186 = 1;
 				}
@@ -24042,7 +24043,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:508:43: ',' implicit_anonymous_function_parameter
 					{
 					DebugLocation(508, 43);
-					char_literal542=(IToken)Match(input,78,Follow._78_in_implicit_anonymous_function_parameter_list3618); if (state.failed) return retval;
+					char_literal542=(IToken)Match(input,79,Follow._79_in_implicit_anonymous_function_parameter_list3618); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal542_tree = (object)adaptor.Create(char_literal542, "char_literal542", retval);
 					adaptor.AddChild(root_0, char_literal542_tree);
@@ -24197,11 +24198,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(187, false);
 			int LA187_1 = input.LA(1);
 
-			if ((LA187_1==Character_literal||(LA187_1>=FALSE && LA187_1<=GET)||(LA187_1>=Hex_number && LA187_1<=IDENTIFIER)||(LA187_1>=MINUS && LA187_1<=NUMBER)||LA187_1==Real_literal||(LA187_1>=SET && LA187_1<=STRINGLITERAL)||LA187_1==TRUE||LA187_1==Verbatim_string_literal||LA187_1==65||LA187_1==70||(LA187_1>=72 && LA187_1<=73)||(LA187_1>=75 && LA187_1<=76)||LA187_1==79||LA187_1==99||(LA187_1>=101 && LA187_1<=102)||(LA187_1>=104 && LA187_1<=109)||(LA187_1>=111 && LA187_1<=112)||(LA187_1>=115 && LA187_1<=116)||(LA187_1>=120 && LA187_1<=123)||(LA187_1>=125 && LA187_1<=127)||LA187_1==131||LA187_1==134||LA187_1==137||LA187_1==139||LA187_1==142||LA187_1==145||(LA187_1>=147 && LA187_1<=148)||(LA187_1>=150 && LA187_1<=152)||(LA187_1>=154 && LA187_1<=156)||LA187_1==158||LA187_1==161||(LA187_1>=163 && LA187_1<=164)||LA187_1==166||LA187_1==171||LA187_1==173||(LA187_1>=175 && LA187_1<=177)||LA187_1==180||LA187_1==183||(LA187_1>=186 && LA187_1<=190)||(LA187_1>=192 && LA187_1<=193)||LA187_1==197||LA187_1==199||LA187_1==205))
+			if ((LA187_1==Character_literal||(LA187_1>=FALSE && LA187_1<=GET)||(LA187_1>=Hex_number && LA187_1<=IDENTIFIER)||(LA187_1>=MINUS && LA187_1<=NUMBER)||LA187_1==Real_literal||(LA187_1>=SET && LA187_1<=STRINGLITERAL)||LA187_1==TRUE||LA187_1==Verbatim_string_literal||LA187_1==66||LA187_1==71||(LA187_1>=73 && LA187_1<=74)||(LA187_1>=76 && LA187_1<=77)||LA187_1==80||LA187_1==100||(LA187_1>=102 && LA187_1<=103)||(LA187_1>=105 && LA187_1<=110)||(LA187_1>=112 && LA187_1<=113)||(LA187_1>=116 && LA187_1<=117)||(LA187_1>=121 && LA187_1<=124)||(LA187_1>=126 && LA187_1<=128)||LA187_1==132||LA187_1==135||LA187_1==138||LA187_1==140||LA187_1==143||LA187_1==146||(LA187_1>=148 && LA187_1<=149)||(LA187_1>=151 && LA187_1<=153)||(LA187_1>=155 && LA187_1<=157)||LA187_1==159||LA187_1==162||(LA187_1>=164 && LA187_1<=165)||LA187_1==167||LA187_1==172||LA187_1==174||(LA187_1>=176 && LA187_1<=178)||LA187_1==181||LA187_1==184||(LA187_1>=187 && LA187_1<=191)||(LA187_1>=193 && LA187_1<=194)||LA187_1==198||LA187_1==200||LA187_1==206))
 			{
 				alt187 = 1;
 			}
-			else if ((LA187_1==SEMI||LA187_1==200))
+			else if ((LA187_1==SEMI||LA187_1==201))
 			{
 				alt187 = 2;
 			}
@@ -24327,7 +24328,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(188, false);
 			int LA188_1 = input.LA(1);
 
-			if ((LA188_1==95))
+			if ((LA188_1==96))
 			{
 				alt188 = 1;
 			}
@@ -24358,7 +24359,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(189, false);
 			int LA189_1 = input.LA(1);
 
-			if ((LA189_1==144||LA189_1==154||LA189_1==165||(LA189_1>=167 && LA189_1<=168)||LA189_1==191))
+			if ((LA189_1==145||LA189_1==155||LA189_1==166||(LA189_1>=168 && LA189_1<=169)||LA189_1==192))
 			{
 				alt189 = 1;
 			}
@@ -24383,7 +24384,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(189); }
 
 			DebugLocation(517, 38);
-			string_literal549=(IToken)Match(input,122,Follow._122_in_delegate_declaration3664); if (state.failed) return retval;
+			string_literal549=(IToken)Match(input,123,Follow._123_in_delegate_declaration3664); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal549_tree = (object)adaptor.Create(string_literal549, "string_literal549", retval);
 			adaptor.AddChild(root_0, string_literal549_tree);
@@ -24407,7 +24408,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(190, false);
 			int LA190_1 = input.LA(1);
 
-			if ((LA190_1==85))
+			if ((LA190_1==86))
 			{
 				alt190 = 1;
 			}
@@ -24432,7 +24433,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(190); }
 
 			DebugLocation(518, 3);
-			char_literal553=(IToken)Match(input,72,Follow._72_in_delegate_declaration3683); if (state.failed) return retval;
+			char_literal553=(IToken)Match(input,73,Follow._73_in_delegate_declaration3683); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal553_tree = (object)adaptor.Create(char_literal553, "char_literal553", retval);
 			adaptor.AddChild(root_0, char_literal553_tree);
@@ -24444,7 +24445,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(191, false);
 			int LA191_1 = input.LA(1);
 
-			if ((LA191_1==GET||LA191_1==IDENTIFIER||LA191_1==SET||LA191_1==95||LA191_1==99||(LA191_1>=101 && LA191_1<=102)||(LA191_1>=104 && LA191_1<=107)||LA191_1==109||(LA191_1>=111 && LA191_1<=112)||LA191_1==115||LA191_1==120||LA191_1==123||(LA191_1>=125 && LA191_1<=127)||LA191_1==131||LA191_1==134||LA191_1==137||LA191_1==139||LA191_1==142||LA191_1==145||(LA191_1>=147 && LA191_1<=148)||(LA191_1>=150 && LA191_1<=152)||(LA191_1>=155 && LA191_1<=156)||(LA191_1>=158 && LA191_1<=159)||(LA191_1>=161 && LA191_1<=164)||LA191_1==166||(LA191_1>=170 && LA191_1<=171)||LA191_1==173||(LA191_1>=175 && LA191_1<=176)||LA191_1==180||LA191_1==183||LA191_1==186||(LA191_1>=188 && LA191_1<=189)||(LA191_1>=192 && LA191_1<=193)||LA191_1==195||LA191_1==197||LA191_1==199))
+			if ((LA191_1==GET||LA191_1==IDENTIFIER||LA191_1==SET||LA191_1==96||LA191_1==100||(LA191_1>=102 && LA191_1<=103)||(LA191_1>=105 && LA191_1<=108)||LA191_1==110||(LA191_1>=112 && LA191_1<=113)||LA191_1==116||LA191_1==121||LA191_1==124||(LA191_1>=126 && LA191_1<=128)||LA191_1==132||LA191_1==135||LA191_1==138||LA191_1==140||LA191_1==143||LA191_1==146||(LA191_1>=148 && LA191_1<=149)||(LA191_1>=151 && LA191_1<=153)||(LA191_1>=156 && LA191_1<=157)||(LA191_1>=159 && LA191_1<=160)||(LA191_1>=162 && LA191_1<=165)||LA191_1==167||(LA191_1>=171 && LA191_1<=172)||LA191_1==174||(LA191_1>=176 && LA191_1<=177)||LA191_1==181||LA191_1==184||LA191_1==187||(LA191_1>=189 && LA191_1<=190)||(LA191_1>=193 && LA191_1<=194)||LA191_1==196||LA191_1==198||LA191_1==200))
 			{
 				alt191 = 1;
 			}
@@ -24481,7 +24482,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(192, false);
 			int LA192_1 = input.LA(1);
 
-			if ((LA192_1==197))
+			if ((LA192_1==198))
 			{
 				alt192 = 1;
 			}
@@ -24589,7 +24590,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(193, false);
 				int LA193_1 = input.LA(1);
 
-				if ((LA193_1==144||LA193_1==154||LA193_1==165||(LA193_1>=167 && LA193_1<=168)||LA193_1==191))
+				if ((LA193_1==145||LA193_1==155||LA193_1==166||(LA193_1>=168 && LA193_1<=169)||LA193_1==192))
 				{
 					alt193 = 1;
 				}
@@ -24688,7 +24689,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(522, 18);
 
 			set560=(IToken)input.LT(1);
-			if (input.LA(1)==144||input.LA(1)==154||input.LA(1)==165||(input.LA(1)>=167 && input.LA(1)<=168)||input.LA(1)==191)
+			if (input.LA(1)==145||input.LA(1)==155||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==192)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set560, "set560", retval));
@@ -24846,7 +24847,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(527, 2);
-			string_literal563=(IToken)Match(input,137,Follow._137_in_from_clause3762); if (state.failed) return retval;
+			string_literal563=(IToken)Match(input,138,Follow._138_in_from_clause3762); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal563_tree = (object)adaptor.Create(string_literal563, "string_literal563", retval);
 			adaptor.AddChild(root_0, string_literal563_tree);
@@ -24858,24 +24859,24 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(194, false);
 			int LA194_1 = input.LA(1);
 
-			if ((LA194_1==109||LA194_1==112||LA194_1==115||LA194_1==120||LA194_1==125||LA194_1==134||LA194_1==142||LA194_1==150||LA194_1==155||LA194_1==173||LA194_1==176||LA194_1==180||(LA194_1>=188 && LA194_1<=189)||LA194_1==192||LA194_1==195))
+			if ((LA194_1==110||LA194_1==113||LA194_1==116||LA194_1==121||LA194_1==126||LA194_1==135||LA194_1==143||LA194_1==151||LA194_1==156||LA194_1==174||LA194_1==177||LA194_1==181||(LA194_1>=189 && LA194_1<=190)||LA194_1==193||LA194_1==196))
 			{
 				alt194 = 1;
 			}
-			else if ((LA194_1==GET||LA194_1==IDENTIFIER||LA194_1==SET||LA194_1==99||(LA194_1>=101 && LA194_1<=102)||(LA194_1>=105 && LA194_1<=107)||LA194_1==126||LA194_1==131||(LA194_1>=151 && LA194_1<=152)||LA194_1==161||(LA194_1>=163 && LA194_1<=164)||LA194_1==166||LA194_1==171||LA194_1==186||LA194_1==193||LA194_1==199))
+			else if ((LA194_1==GET||LA194_1==IDENTIFIER||LA194_1==SET||LA194_1==100||(LA194_1>=102 && LA194_1<=103)||(LA194_1>=106 && LA194_1<=108)||LA194_1==127||LA194_1==132||(LA194_1>=152 && LA194_1<=153)||LA194_1==162||(LA194_1>=164 && LA194_1<=165)||LA194_1==167||LA194_1==172||LA194_1==187||LA194_1==194||LA194_1==200))
 			{
 				int LA194_2 = input.LA(2);
 
-				if ((LA194_2==DOT||LA194_2==GET||LA194_2==IDENTIFIER||LA194_2==SET||LA194_2==73||(LA194_2>=84 && LA194_2<=85)||LA194_2==93||LA194_2==95||LA194_2==99||(LA194_2>=101 && LA194_2<=102)||(LA194_2>=104 && LA194_2<=107)||LA194_2==111||LA194_2==123||(LA194_2>=126 && LA194_2<=127)||LA194_2==131||LA194_2==137||LA194_2==139||LA194_2==145||(LA194_2>=147 && LA194_2<=148)||(LA194_2>=151 && LA194_2<=152)||LA194_2==156||LA194_2==158||LA194_2==161||(LA194_2>=163 && LA194_2<=164)||LA194_2==166||LA194_2==171||LA194_2==175||LA194_2==186||LA194_2==193||LA194_2==197||LA194_2==199))
+				if ((LA194_2==DOT||LA194_2==GET||LA194_2==IDENTIFIER||LA194_2==SET||LA194_2==74||(LA194_2>=85 && LA194_2<=86)||LA194_2==94||LA194_2==96||LA194_2==100||(LA194_2>=102 && LA194_2<=103)||(LA194_2>=105 && LA194_2<=108)||LA194_2==112||LA194_2==124||(LA194_2>=127 && LA194_2<=128)||LA194_2==132||LA194_2==138||LA194_2==140||LA194_2==146||(LA194_2>=148 && LA194_2<=149)||(LA194_2>=152 && LA194_2<=153)||LA194_2==157||LA194_2==159||LA194_2==162||(LA194_2>=164 && LA194_2<=165)||LA194_2==167||LA194_2==172||LA194_2==176||LA194_2==187||LA194_2==194||LA194_2==198||LA194_2==200))
 				{
 					alt194 = 1;
 				}
 			}
-			else if ((LA194_1==104||LA194_1==111||LA194_1==123||LA194_1==127||LA194_1==137||LA194_1==139||LA194_1==145||(LA194_1>=147 && LA194_1<=148)||LA194_1==156||LA194_1==158||LA194_1==175||LA194_1==197) && ((_queryExpression == 0)))
+			else if ((LA194_1==105||LA194_1==112||LA194_1==124||LA194_1==128||LA194_1==138||LA194_1==140||LA194_1==146||(LA194_1>=148 && LA194_1<=149)||LA194_1==157||LA194_1==159||LA194_1==176||LA194_1==198) && ((_queryExpression == 0)))
 			{
 				int LA194_2 = input.LA(2);
 
-				if ((LA194_2==DOT||LA194_2==GET||LA194_2==IDENTIFIER||LA194_2==SET||LA194_2==73||(LA194_2>=84 && LA194_2<=85)||LA194_2==93||LA194_2==95||LA194_2==99||(LA194_2>=101 && LA194_2<=102)||(LA194_2>=104 && LA194_2<=107)||LA194_2==111||LA194_2==123||(LA194_2>=126 && LA194_2<=127)||LA194_2==131||LA194_2==137||LA194_2==139||LA194_2==145||(LA194_2>=147 && LA194_2<=148)||(LA194_2>=151 && LA194_2<=152)||LA194_2==156||LA194_2==158||LA194_2==161||(LA194_2>=163 && LA194_2<=164)||LA194_2==166||LA194_2==171||LA194_2==175||LA194_2==186||LA194_2==193||LA194_2==197||LA194_2==199))
+				if ((LA194_2==DOT||LA194_2==GET||LA194_2==IDENTIFIER||LA194_2==SET||LA194_2==74||(LA194_2>=85 && LA194_2<=86)||LA194_2==94||LA194_2==96||LA194_2==100||(LA194_2>=102 && LA194_2<=103)||(LA194_2>=105 && LA194_2<=108)||LA194_2==112||LA194_2==124||(LA194_2>=127 && LA194_2<=128)||LA194_2==132||LA194_2==138||LA194_2==140||LA194_2==146||(LA194_2>=148 && LA194_2<=149)||(LA194_2>=152 && LA194_2<=153)||LA194_2==157||LA194_2==159||LA194_2==162||(LA194_2>=164 && LA194_2<=165)||LA194_2==167||LA194_2==172||LA194_2==176||LA194_2==187||LA194_2==194||LA194_2==198||LA194_2==200))
 				{
 					alt194 = 1;
 				}
@@ -24907,7 +24908,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier565.Tree, identifier565, "identifier565", retval);
 			DebugLocation(527, 32);
-			string_literal566=(IToken)Match(input,141,Follow._141_in_from_clause3775); if (state.failed) return retval;
+			string_literal566=(IToken)Match(input,142,Follow._142_in_from_clause3775); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal566_tree = (object)adaptor.Create(string_literal566, "string_literal566", retval);
 			adaptor.AddChild(root_0, string_literal566_tree);
@@ -24989,7 +24990,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(195, false);
 			int LA195_1 = input.LA(1);
 
-			if ((LA195_1==137||(LA195_1>=147 && LA195_1<=148)||LA195_1==158||LA195_1==197))
+			if ((LA195_1==138||(LA195_1>=148 && LA195_1<=149)||LA195_1==159||LA195_1==198))
 			{
 				alt195 = 1;
 			}
@@ -25026,7 +25027,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(196, false);
 			int LA196_1 = input.LA(1);
 
-			if ((LA196_1==145))
+			if ((LA196_1==146))
 			{
 				int LA196_2 = input.LA(2);
 
@@ -25121,7 +25122,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(531, 2);
-			string_literal571=(IToken)Match(input,145,Follow._145_in_query_continuation3812); if (state.failed) return retval;
+			string_literal571=(IToken)Match(input,146,Follow._146_in_query_continuation3812); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal571_tree = (object)adaptor.Create(string_literal571, "string_literal571", retval);
 			adaptor.AddChild(root_0, string_literal571_tree);
@@ -25210,7 +25211,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(197, false);
 				int LA197_1 = input.LA(1);
 
-				if ((LA197_1==137||(LA197_1>=147 && LA197_1<=148)||LA197_1==158||LA197_1==197))
+				if ((LA197_1==138||(LA197_1>=148 && LA197_1<=149)||LA197_1==159||LA197_1==198))
 				{
 					alt197 = 1;
 				}
@@ -25314,27 +25315,27 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(198, false);
 			switch (input.LA(1))
 			{
-			case 137:
+			case 138:
 				{
 				alt198 = 1;
 				}
 				break;
-			case 148:
+			case 149:
 				{
 				alt198 = 2;
 				}
 				break;
-			case 197:
+			case 198:
 				{
 				alt198 = 3;
 				}
 				break;
-			case 147:
+			case 148:
 				{
 				alt198 = 4;
 				}
 				break;
-			case 158:
+			case 159:
 				{
 				alt198 = 5;
 				}
@@ -25503,7 +25504,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(541, 2);
-			string_literal580=(IToken)Match(input,147,Follow._147_in_join_clause3863); if (state.failed) return retval;
+			string_literal580=(IToken)Match(input,148,Follow._148_in_join_clause3863); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal580_tree = (object)adaptor.Create(string_literal580, "string_literal580", retval);
 			adaptor.AddChild(root_0, string_literal580_tree);
@@ -25515,24 +25516,24 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(199, false);
 			int LA199_1 = input.LA(1);
 
-			if ((LA199_1==109||LA199_1==112||LA199_1==115||LA199_1==120||LA199_1==125||LA199_1==134||LA199_1==142||LA199_1==150||LA199_1==155||LA199_1==173||LA199_1==176||LA199_1==180||(LA199_1>=188 && LA199_1<=189)||LA199_1==192||LA199_1==195))
+			if ((LA199_1==110||LA199_1==113||LA199_1==116||LA199_1==121||LA199_1==126||LA199_1==135||LA199_1==143||LA199_1==151||LA199_1==156||LA199_1==174||LA199_1==177||LA199_1==181||(LA199_1>=189 && LA199_1<=190)||LA199_1==193||LA199_1==196))
 			{
 				alt199 = 1;
 			}
-			else if ((LA199_1==GET||LA199_1==IDENTIFIER||LA199_1==SET||LA199_1==99||(LA199_1>=101 && LA199_1<=102)||(LA199_1>=105 && LA199_1<=107)||LA199_1==126||LA199_1==131||(LA199_1>=151 && LA199_1<=152)||LA199_1==161||(LA199_1>=163 && LA199_1<=164)||LA199_1==166||LA199_1==171||LA199_1==186||LA199_1==193||LA199_1==199))
+			else if ((LA199_1==GET||LA199_1==IDENTIFIER||LA199_1==SET||LA199_1==100||(LA199_1>=102 && LA199_1<=103)||(LA199_1>=106 && LA199_1<=108)||LA199_1==127||LA199_1==132||(LA199_1>=152 && LA199_1<=153)||LA199_1==162||(LA199_1>=164 && LA199_1<=165)||LA199_1==167||LA199_1==172||LA199_1==187||LA199_1==194||LA199_1==200))
 			{
 				int LA199_2 = input.LA(2);
 
-				if ((LA199_2==DOT||LA199_2==GET||LA199_2==IDENTIFIER||LA199_2==SET||LA199_2==73||(LA199_2>=84 && LA199_2<=85)||LA199_2==93||LA199_2==95||LA199_2==99||(LA199_2>=101 && LA199_2<=102)||(LA199_2>=104 && LA199_2<=107)||LA199_2==111||LA199_2==123||(LA199_2>=126 && LA199_2<=127)||LA199_2==131||LA199_2==137||LA199_2==139||LA199_2==145||(LA199_2>=147 && LA199_2<=148)||(LA199_2>=151 && LA199_2<=152)||LA199_2==156||LA199_2==158||LA199_2==161||(LA199_2>=163 && LA199_2<=164)||LA199_2==166||LA199_2==171||LA199_2==175||LA199_2==186||LA199_2==193||LA199_2==197||LA199_2==199))
+				if ((LA199_2==DOT||LA199_2==GET||LA199_2==IDENTIFIER||LA199_2==SET||LA199_2==74||(LA199_2>=85 && LA199_2<=86)||LA199_2==94||LA199_2==96||LA199_2==100||(LA199_2>=102 && LA199_2<=103)||(LA199_2>=105 && LA199_2<=108)||LA199_2==112||LA199_2==124||(LA199_2>=127 && LA199_2<=128)||LA199_2==132||LA199_2==138||LA199_2==140||LA199_2==146||(LA199_2>=148 && LA199_2<=149)||(LA199_2>=152 && LA199_2<=153)||LA199_2==157||LA199_2==159||LA199_2==162||(LA199_2>=164 && LA199_2<=165)||LA199_2==167||LA199_2==172||LA199_2==176||LA199_2==187||LA199_2==194||LA199_2==198||LA199_2==200))
 				{
 					alt199 = 1;
 				}
 			}
-			else if ((LA199_1==104||LA199_1==111||LA199_1==123||LA199_1==127||LA199_1==137||LA199_1==139||LA199_1==145||(LA199_1>=147 && LA199_1<=148)||LA199_1==156||LA199_1==158||LA199_1==175||LA199_1==197) && ((_queryExpression == 0)))
+			else if ((LA199_1==105||LA199_1==112||LA199_1==124||LA199_1==128||LA199_1==138||LA199_1==140||LA199_1==146||(LA199_1>=148 && LA199_1<=149)||LA199_1==157||LA199_1==159||LA199_1==176||LA199_1==198) && ((_queryExpression == 0)))
 			{
 				int LA199_2 = input.LA(2);
 
-				if ((LA199_2==DOT||LA199_2==GET||LA199_2==IDENTIFIER||LA199_2==SET||LA199_2==73||(LA199_2>=84 && LA199_2<=85)||LA199_2==93||LA199_2==95||LA199_2==99||(LA199_2>=101 && LA199_2<=102)||(LA199_2>=104 && LA199_2<=107)||LA199_2==111||LA199_2==123||(LA199_2>=126 && LA199_2<=127)||LA199_2==131||LA199_2==137||LA199_2==139||LA199_2==145||(LA199_2>=147 && LA199_2<=148)||(LA199_2>=151 && LA199_2<=152)||LA199_2==156||LA199_2==158||LA199_2==161||(LA199_2>=163 && LA199_2<=164)||LA199_2==166||LA199_2==171||LA199_2==175||LA199_2==186||LA199_2==193||LA199_2==197||LA199_2==199))
+				if ((LA199_2==DOT||LA199_2==GET||LA199_2==IDENTIFIER||LA199_2==SET||LA199_2==74||(LA199_2>=85 && LA199_2<=86)||LA199_2==94||LA199_2==96||LA199_2==100||(LA199_2>=102 && LA199_2<=103)||(LA199_2>=105 && LA199_2<=108)||LA199_2==112||LA199_2==124||(LA199_2>=127 && LA199_2<=128)||LA199_2==132||LA199_2==138||LA199_2==140||LA199_2==146||(LA199_2>=148 && LA199_2<=149)||(LA199_2>=152 && LA199_2<=153)||LA199_2==157||LA199_2==159||LA199_2==162||(LA199_2>=164 && LA199_2<=165)||LA199_2==167||LA199_2==172||LA199_2==176||LA199_2==187||LA199_2==194||LA199_2==198||LA199_2==200))
 				{
 					alt199 = 1;
 				}
@@ -25564,7 +25565,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier582.Tree, identifier582, "identifier582", retval);
 			DebugLocation(541, 32);
-			string_literal583=(IToken)Match(input,141,Follow._141_in_join_clause3876); if (state.failed) return retval;
+			string_literal583=(IToken)Match(input,142,Follow._142_in_join_clause3876); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal583_tree = (object)adaptor.Create(string_literal583, "string_literal583", retval);
 			adaptor.AddChild(root_0, string_literal583_tree);
@@ -25576,7 +25577,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, expression584.Tree, expression584, "expression584", retval);
 			DebugLocation(541, 52);
-			string_literal585=(IToken)Match(input,156,Follow._156_in_join_clause3884); if (state.failed) return retval;
+			string_literal585=(IToken)Match(input,157,Follow._157_in_join_clause3884); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal585_tree = (object)adaptor.Create(string_literal585, "string_literal585", retval);
 			adaptor.AddChild(root_0, string_literal585_tree);
@@ -25588,7 +25589,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, expression586.Tree, expression586, "expression586", retval);
 			DebugLocation(541, 72);
-			string_literal587=(IToken)Match(input,127,Follow._127_in_join_clause3892); if (state.failed) return retval;
+			string_literal587=(IToken)Match(input,128,Follow._128_in_join_clause3892); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal587_tree = (object)adaptor.Create(string_literal587, "string_literal587", retval);
 			adaptor.AddChild(root_0, string_literal587_tree);
@@ -25606,7 +25607,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(200, false);
 			int LA200_1 = input.LA(1);
 
-			if ((LA200_1==145))
+			if ((LA200_1==146))
 			{
 				alt200 = 1;
 			}
@@ -25618,7 +25619,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:541:95: 'into' identifier
 				{
 				DebugLocation(541, 95);
-				string_literal589=(IToken)Match(input,145,Follow._145_in_join_clause3899); if (state.failed) return retval;
+				string_literal589=(IToken)Match(input,146,Follow._146_in_join_clause3899); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal589_tree = (object)adaptor.Create(string_literal589, "string_literal589", retval);
 				adaptor.AddChild(root_0, string_literal589_tree);
@@ -25704,7 +25705,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(543, 2);
-			string_literal591=(IToken)Match(input,148,Follow._148_in_let_clause3911); if (state.failed) return retval;
+			string_literal591=(IToken)Match(input,149,Follow._149_in_let_clause3911); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal591_tree = (object)adaptor.Create(string_literal591, "string_literal591", retval);
 			adaptor.AddChild(root_0, string_literal591_tree);
@@ -25716,7 +25717,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier592.Tree, identifier592, "identifier592", retval);
 			DebugLocation(543, 23);
-			char_literal593=(IToken)Match(input,89,Follow._89_in_let_clause3919); if (state.failed) return retval;
+			char_literal593=(IToken)Match(input,90,Follow._90_in_let_clause3919); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal593_tree = (object)adaptor.Create(char_literal593, "char_literal593", retval);
 			adaptor.AddChild(root_0, char_literal593_tree);
@@ -25792,7 +25793,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(545, 2);
-			string_literal595=(IToken)Match(input,158,Follow._158_in_orderby_clause3930); if (state.failed) return retval;
+			string_literal595=(IToken)Match(input,159,Follow._159_in_orderby_clause3930); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal595_tree = (object)adaptor.Create(string_literal595, "string_literal595", retval);
 			adaptor.AddChild(root_0, string_literal595_tree);
@@ -25883,7 +25884,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(201, false);
 				int LA201_1 = input.LA(1);
 
-				if ((LA201_1==78))
+				if ((LA201_1==79))
 				{
 					alt201 = 1;
 				}
@@ -25897,7 +25898,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:547:12: ',' ordering
 					{
 					DebugLocation(547, 12);
-					char_literal598=(IToken)Match(input,78,Follow._78_in_ordering_list3945); if (state.failed) return retval;
+					char_literal598=(IToken)Match(input,79,Follow._79_in_ordering_list3945); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal598_tree = (object)adaptor.Create(char_literal598, "char_literal598", retval);
 					adaptor.AddChild(root_0, char_literal598_tree);
@@ -25998,7 +25999,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(202, false);
 			int LA202_1 = input.LA(1);
 
-			if ((LA202_1==104||LA202_1==123))
+			if ((LA202_1==105||LA202_1==124))
 			{
 				alt202 = 1;
 			}
@@ -26088,7 +26089,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(550, 19);
 
 			set602=(IToken)input.LT(1);
-			if (input.LA(1)==104||input.LA(1)==123)
+			if (input.LA(1)==105||input.LA(1)==124)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set602, "set602", retval));
@@ -26164,11 +26165,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(203, false);
 			int LA203_1 = input.LA(1);
 
-			if ((LA203_1==175))
+			if ((LA203_1==176))
 			{
 				alt203 = 1;
 			}
-			else if ((LA203_1==139))
+			else if ((LA203_1==140))
 			{
 				alt203 = 2;
 			}
@@ -26276,7 +26277,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(557, 2);
-			string_literal605=(IToken)Match(input,175,Follow._175_in_select_clause3997); if (state.failed) return retval;
+			string_literal605=(IToken)Match(input,176,Follow._176_in_select_clause3997); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal605_tree = (object)adaptor.Create(string_literal605, "string_literal605", retval);
 			adaptor.AddChild(root_0, string_literal605_tree);
@@ -26355,7 +26356,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(559, 2);
-			string_literal607=(IToken)Match(input,139,Follow._139_in_group_clause4009); if (state.failed) return retval;
+			string_literal607=(IToken)Match(input,140,Follow._140_in_group_clause4009); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal607_tree = (object)adaptor.Create(string_literal607, "string_literal607", retval);
 			adaptor.AddChild(root_0, string_literal607_tree);
@@ -26367,7 +26368,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, expression608.Tree, expression608, "expression608", retval);
 			DebugLocation(559, 21);
-			string_literal609=(IToken)Match(input,111,Follow._111_in_group_clause4013); if (state.failed) return retval;
+			string_literal609=(IToken)Match(input,112,Follow._112_in_group_clause4013); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal609_tree = (object)adaptor.Create(string_literal609, "string_literal609", retval);
 			adaptor.AddChild(root_0, string_literal609_tree);
@@ -26443,7 +26444,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(561, 2);
-			string_literal611=(IToken)Match(input,197,Follow._197_in_where_clause4022); if (state.failed) return retval;
+			string_literal611=(IToken)Match(input,198,Follow._198_in_where_clause4022); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal611_tree = (object)adaptor.Create(string_literal611, "string_literal611", retval);
 			adaptor.AddChild(root_0, string_literal611_tree);
@@ -26535,7 +26536,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(204, false);
 			int LA204_1 = input.LA(1);
 
-			if ((LA204_1==95))
+			if ((LA204_1==96))
 			{
 				alt204 = 1;
 			}
@@ -26566,7 +26567,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(205, false);
 			int LA205_1 = input.LA(1);
 
-			if ((LA205_1==100||LA205_1==144||LA205_1==154||LA205_1==165||(LA205_1>=167 && LA205_1<=168)||LA205_1==174||LA205_1==179||LA205_1==191))
+			if ((LA205_1==101||LA205_1==145||LA205_1==155||LA205_1==166||(LA205_1>=168 && LA205_1<=169)||LA205_1==175||LA205_1==180||LA205_1==192))
 			{
 				alt205 = 1;
 			}
@@ -26597,7 +26598,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(206, false);
 			int LA206_1 = input.LA(1);
 
-			if ((LA206_1==163))
+			if ((LA206_1==164))
 			{
 				alt206 = 1;
 			}
@@ -26609,7 +26610,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:567:33: 'partial'
 				{
 				DebugLocation(567, 33);
-				string_literal615=(IToken)Match(input,163,Follow._163_in_class_declaration4046); if (state.failed) return retval;
+				string_literal615=(IToken)Match(input,164,Follow._164_in_class_declaration4046); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal615_tree = (object)adaptor.Create(string_literal615, "string_literal615", retval);
 				adaptor.AddChild(root_0, string_literal615_tree);
@@ -26622,7 +26623,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(206); }
 
 			DebugLocation(567, 45);
-			string_literal616=(IToken)Match(input,117,Follow._117_in_class_declaration4050); if (state.failed) return retval;
+			string_literal616=(IToken)Match(input,118,Follow._118_in_class_declaration4050); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal616_tree = (object)adaptor.Create(string_literal616, "string_literal616", retval);
 			adaptor.AddChild(root_0, string_literal616_tree);
@@ -26640,7 +26641,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(207, false);
 			int LA207_1 = input.LA(1);
 
-			if ((LA207_1==85))
+			if ((LA207_1==86))
 			{
 				alt207 = 1;
 			}
@@ -26671,7 +26672,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(208, false);
 			int LA208_1 = input.LA(1);
 
-			if ((LA208_1==83))
+			if ((LA208_1==84))
 			{
 				alt208 = 1;
 			}
@@ -26702,7 +26703,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(209, false);
 			int LA209_1 = input.LA(1);
 
-			if ((LA209_1==197))
+			if ((LA209_1==198))
 			{
 				alt209 = 1;
 			}
@@ -26835,7 +26836,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(211, false);
 				int LA211_1 = input.LA(1);
 
-				if ((LA211_1==100||LA211_1==144||LA211_1==154||LA211_1==165||(LA211_1>=167 && LA211_1<=168)||LA211_1==174||LA211_1==179||LA211_1==191))
+				if ((LA211_1==101||LA211_1==145||LA211_1==155||LA211_1==166||(LA211_1>=168 && LA211_1<=169)||LA211_1==175||LA211_1==180||LA211_1==192))
 				{
 					alt211 = 1;
 				}
@@ -26940,7 +26941,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(571, 15);
 
 			set624=(IToken)input.LT(1);
-			if (input.LA(1)==100||input.LA(1)==144||input.LA(1)==154||input.LA(1)==165||(input.LA(1)>=167 && input.LA(1)<=168)||input.LA(1)==174||input.LA(1)==179||input.LA(1)==191)
+			if (input.LA(1)==101||input.LA(1)==145||input.LA(1)==155||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==175||input.LA(1)==180||input.LA(1)==192)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set624, "set624", retval));
@@ -27023,26 +27024,26 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(213, false);
 			int LA213_1 = input.LA(1);
 
-			if ((LA213_1==83))
+			if ((LA213_1==84))
 			{
 				switch (input.LA(2))
 				{
-				case 109:
-				case 112:
-				case 115:
-				case 120:
-				case 125:
-				case 134:
-				case 142:
-				case 150:
-				case 155:
-				case 173:
-				case 176:
-				case 180:
-				case 188:
+				case 110:
+				case 113:
+				case 116:
+				case 121:
+				case 126:
+				case 135:
+				case 143:
+				case 151:
+				case 156:
+				case 174:
+				case 177:
+				case 181:
 				case 189:
-				case 192:
-				case 195:
+				case 190:
+				case 193:
+				case 196:
 					{
 					alt213 = 1;
 					}
@@ -27050,24 +27051,24 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				case GET:
 				case IDENTIFIER:
 				case SET:
-				case 99:
-				case 101:
+				case 100:
 				case 102:
-				case 105:
+				case 103:
 				case 106:
 				case 107:
-				case 126:
-				case 131:
-				case 151:
+				case 108:
+				case 127:
+				case 132:
 				case 152:
-				case 161:
-				case 163:
+				case 153:
+				case 162:
 				case 164:
-				case 166:
-				case 171:
-				case 186:
-				case 193:
-				case 199:
+				case 165:
+				case 167:
+				case 172:
+				case 187:
+				case 194:
+				case 200:
 					{
 					int LA213_3 = input.LA(3);
 
@@ -27088,19 +27089,19 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					}
 					}
 					break;
-				case 104:
-				case 111:
-				case 123:
-				case 127:
-				case 137:
-				case 139:
-				case 145:
-				case 147:
+				case 105:
+				case 112:
+				case 124:
+				case 128:
+				case 138:
+				case 140:
+				case 146:
 				case 148:
-				case 156:
-				case 158:
-				case 175:
-				case 197:
+				case 149:
+				case 157:
+				case 159:
+				case 176:
+				case 198:
 					{
 					int LA213_3 = input.LA(3);
 
@@ -27148,7 +27149,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(574, 2);
-				char_literal625=(IToken)Match(input,83,Follow._83_in_class_base4131); if (state.failed) return retval;
+				char_literal625=(IToken)Match(input,84,Follow._84_in_class_base4131); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal625_tree = (object)adaptor.Create(char_literal625, "char_literal625", retval);
 				adaptor.AddChild(root_0, char_literal625_tree);
@@ -27166,7 +27167,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(212, false);
 				int LA212_1 = input.LA(1);
 
-				if ((LA212_1==78))
+				if ((LA212_1==79))
 				{
 					alt212 = 1;
 				}
@@ -27178,7 +27179,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:574:20: ',' interface_type_list
 					{
 					DebugLocation(574, 20);
-					char_literal627=(IToken)Match(input,78,Follow._78_in_class_base4138); if (state.failed) return retval;
+					char_literal627=(IToken)Match(input,79,Follow._79_in_class_base4138); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal627_tree = (object)adaptor.Create(char_literal627, "char_literal627", retval);
 					adaptor.AddChild(root_0, char_literal627_tree);
@@ -27206,7 +27207,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(575, 4);
-				char_literal629=(IToken)Match(input,83,Follow._83_in_class_base4147); if (state.failed) return retval;
+				char_literal629=(IToken)Match(input,84,Follow._84_in_class_base4147); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal629_tree = (object)adaptor.Create(char_literal629, "char_literal629", retval);
 				adaptor.AddChild(root_0, char_literal629_tree);
@@ -27299,7 +27300,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(214, false);
 				int LA214_1 = input.LA(1);
 
-				if ((LA214_1==78))
+				if ((LA214_1==79))
 				{
 					alt214 = 1;
 				}
@@ -27313,7 +27314,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:577:13: ',' type_name
 					{
 					DebugLocation(577, 13);
-					char_literal632=(IToken)Match(input,78,Follow._78_in_interface_type_list4162); if (state.failed) return retval;
+					char_literal632=(IToken)Match(input,79,Follow._79_in_interface_type_list4162); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal632_tree = (object)adaptor.Create(char_literal632, "char_literal632", retval);
 					adaptor.AddChild(root_0, char_literal632_tree);
@@ -27410,7 +27411,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(215, false);
 				int LA215_1 = input.LA(1);
 
-				if ((LA215_1==197))
+				if ((LA215_1==198))
 				{
 					alt215 = 1;
 				}
@@ -27517,7 +27518,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(582, 2);
-			string_literal635=(IToken)Match(input,197,Follow._197_in_type_parameter_constraints_clause4185); if (state.failed) return retval;
+			string_literal635=(IToken)Match(input,198,Follow._198_in_type_parameter_constraints_clause4185); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal635_tree = (object)adaptor.Create(string_literal635, "string_literal635", retval);
 			adaptor.AddChild(root_0, string_literal635_tree);
@@ -27529,7 +27530,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, type_variable_name636.Tree, type_variable_name636, "type_variable_name636", retval);
 			DebugLocation(582, 33);
-			char_literal637=(IToken)Match(input,83,Follow._83_in_type_parameter_constraints_clause4193); if (state.failed) return retval;
+			char_literal637=(IToken)Match(input,84,Follow._84_in_type_parameter_constraints_clause4193); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal637_tree = (object)adaptor.Create(char_literal637, "char_literal637", retval);
 			adaptor.AddChild(root_0, char_literal637_tree);
@@ -27622,21 +27623,21 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(216, false);
 			switch (input.LA(1))
 			{
-			case 109:
-			case 112:
-			case 115:
-			case 120:
-			case 125:
-			case 134:
-			case 142:
-			case 150:
-			case 155:
-			case 173:
-			case 176:
-			case 180:
-			case 188:
+			case 110:
+			case 113:
+			case 116:
+			case 121:
+			case 126:
+			case 135:
+			case 143:
+			case 151:
+			case 156:
+			case 174:
+			case 177:
+			case 181:
 			case 189:
-			case 192:
+			case 190:
+			case 193:
 				{
 				int LA216_2 = input.LA(2);
 
@@ -27668,24 +27669,24 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case GET:
 			case IDENTIFIER:
 			case SET:
-			case 99:
-			case 101:
+			case 100:
 			case 102:
-			case 105:
+			case 103:
 			case 106:
 			case 107:
-			case 126:
-			case 131:
-			case 151:
+			case 108:
+			case 127:
+			case 132:
 			case 152:
-			case 161:
-			case 163:
+			case 153:
+			case 162:
 			case 164:
-			case 166:
-			case 171:
-			case 186:
-			case 193:
-			case 199:
+			case 165:
+			case 167:
+			case 172:
+			case 187:
+			case 194:
+			case 200:
 				{
 				int LA216_2 = input.LA(2);
 
@@ -27722,19 +27723,19 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 104:
-			case 111:
-			case 123:
-			case 127:
-			case 137:
-			case 139:
-			case 145:
-			case 147:
+			case 105:
+			case 112:
+			case 124:
+			case 128:
+			case 138:
+			case 140:
+			case 146:
 			case 148:
-			case 156:
-			case 158:
-			case 175:
-			case 197:
+			case 149:
+			case 157:
+			case 159:
+			case 176:
+			case 198:
 				{
 				int LA216_2 = input.LA(2);
 
@@ -27771,7 +27772,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 195:
+			case 196:
 				{
 				int LA216_2 = input.LA(2);
 
@@ -27800,7 +27801,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 117:
+			case 118:
 				{
 				int LA216_2 = input.LA(2);
 
@@ -27829,7 +27830,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 181:
+			case 182:
 				{
 				int LA216_2 = input.LA(2);
 
@@ -27858,7 +27859,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 154:
+			case 155:
 				{
 				alt216 = 7;
 				}
@@ -27893,7 +27894,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, primary_constraint639.Tree, primary_constraint639, "primary_constraint639", retval);
 				DebugLocation(584, 26);
-				char_literal640=(IToken)Match(input,78,Follow._78_in_type_parameter_constraint_list4212); if (state.failed) return retval;
+				char_literal640=(IToken)Match(input,79,Follow._79_in_type_parameter_constraint_list4212); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal640_tree = (object)adaptor.Create(char_literal640, "char_literal640", retval);
 				adaptor.AddChild(root_0, char_literal640_tree);
@@ -27905,7 +27906,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, secondary_constraint_list641.Tree, secondary_constraint_list641, "secondary_constraint_list641", retval);
 				DebugLocation(584, 60);
-				char_literal642=(IToken)Match(input,78,Follow._78_in_type_parameter_constraint_list4220); if (state.failed) return retval;
+				char_literal642=(IToken)Match(input,79,Follow._79_in_type_parameter_constraint_list4220); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal642_tree = (object)adaptor.Create(char_literal642, "char_literal642", retval);
 				adaptor.AddChild(root_0, char_literal642_tree);
@@ -27940,7 +27941,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, primary_constraint644.Tree, primary_constraint644, "primary_constraint644", retval);
 				DebugLocation(585, 28);
-				char_literal645=(IToken)Match(input,78,Follow._78_in_type_parameter_constraint_list4237); if (state.failed) return retval;
+				char_literal645=(IToken)Match(input,79,Follow._79_in_type_parameter_constraint_list4237); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal645_tree = (object)adaptor.Create(char_literal645, "char_literal645", retval);
 				adaptor.AddChild(root_0, char_literal645_tree);
@@ -27975,7 +27976,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, primary_constraint647.Tree, primary_constraint647, "primary_constraint647", retval);
 				DebugLocation(586, 28);
-				char_literal648=(IToken)Match(input,78,Follow._78_in_type_parameter_constraint_list4254); if (state.failed) return retval;
+				char_literal648=(IToken)Match(input,79,Follow._79_in_type_parameter_constraint_list4254); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal648_tree = (object)adaptor.Create(char_literal648, "char_literal648", retval);
 				adaptor.AddChild(root_0, char_literal648_tree);
@@ -28010,7 +28011,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, secondary_constraint_list650.Tree, secondary_constraint_list650, "secondary_constraint_list650", retval);
 				DebugLocation(587, 34);
-				char_literal651=(IToken)Match(input,78,Follow._78_in_type_parameter_constraint_list4270); if (state.failed) return retval;
+				char_literal651=(IToken)Match(input,79,Follow._79_in_type_parameter_constraint_list4270); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal651_tree = (object)adaptor.Create(char_literal651, "char_literal651", retval);
 				adaptor.AddChild(root_0, char_literal651_tree);
@@ -28139,63 +28140,63 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case GET:
 			case IDENTIFIER:
 			case SET:
-			case 99:
-			case 101:
+			case 100:
 			case 102:
-			case 104:
+			case 103:
 			case 105:
 			case 106:
 			case 107:
-			case 109:
-			case 111:
+			case 108:
+			case 110:
 			case 112:
-			case 115:
-			case 120:
-			case 123:
-			case 125:
+			case 113:
+			case 116:
+			case 121:
+			case 124:
 			case 126:
 			case 127:
-			case 131:
-			case 134:
-			case 137:
-			case 139:
-			case 142:
-			case 145:
-			case 147:
+			case 128:
+			case 132:
+			case 135:
+			case 138:
+			case 140:
+			case 143:
+			case 146:
 			case 148:
-			case 150:
+			case 149:
 			case 151:
 			case 152:
-			case 155:
+			case 153:
 			case 156:
-			case 158:
-			case 161:
-			case 163:
+			case 157:
+			case 159:
+			case 162:
 			case 164:
-			case 166:
-			case 171:
-			case 173:
-			case 175:
+			case 165:
+			case 167:
+			case 172:
+			case 174:
 			case 176:
-			case 180:
-			case 186:
-			case 188:
+			case 177:
+			case 181:
+			case 187:
 			case 189:
-			case 192:
+			case 190:
 			case 193:
-			case 195:
-			case 197:
-			case 199:
+			case 194:
+			case 196:
+			case 198:
+			case 200:
 				{
 				alt217 = 1;
 				}
 				break;
-			case 117:
+			case 118:
 				{
 				alt217 = 2;
 				}
 				break;
-			case 181:
+			case 182:
 				{
 				alt217 = 3;
 				}
@@ -28234,7 +28235,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(594, 4);
-				string_literal657=(IToken)Match(input,117,Follow._117_in_primary_constraint4304); if (state.failed) return retval;
+				string_literal657=(IToken)Match(input,118,Follow._118_in_primary_constraint4304); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal657_tree = (object)adaptor.Create(string_literal657, "string_literal657", retval);
 				adaptor.AddChild(root_0, string_literal657_tree);
@@ -28249,7 +28250,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(595, 4);
-				string_literal658=(IToken)Match(input,181,Follow._181_in_primary_constraint4309); if (state.failed) return retval;
+				string_literal658=(IToken)Match(input,182,Follow._182_in_primary_constraint4309); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal658_tree = (object)adaptor.Create(string_literal658, "string_literal658", retval);
 				adaptor.AddChild(root_0, string_literal658_tree);
@@ -28336,11 +28337,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(218, false);
 				int LA218_1 = input.LA(1);
 
-				if ((LA218_1==78))
+				if ((LA218_1==79))
 				{
 					int LA218_2 = input.LA(2);
 
-					if ((LA218_2==GET||LA218_2==IDENTIFIER||LA218_2==SET||LA218_2==99||(LA218_2>=101 && LA218_2<=102)||(LA218_2>=104 && LA218_2<=107)||LA218_2==111||LA218_2==123||(LA218_2>=126 && LA218_2<=127)||LA218_2==131||LA218_2==137||LA218_2==139||LA218_2==145||(LA218_2>=147 && LA218_2<=148)||(LA218_2>=151 && LA218_2<=152)||LA218_2==156||LA218_2==158||LA218_2==161||(LA218_2>=163 && LA218_2<=164)||LA218_2==166||LA218_2==171||LA218_2==175||LA218_2==186||LA218_2==193||LA218_2==197||LA218_2==199))
+					if ((LA218_2==GET||LA218_2==IDENTIFIER||LA218_2==SET||LA218_2==100||(LA218_2>=102 && LA218_2<=103)||(LA218_2>=105 && LA218_2<=108)||LA218_2==112||LA218_2==124||(LA218_2>=127 && LA218_2<=128)||LA218_2==132||LA218_2==138||LA218_2==140||LA218_2==146||(LA218_2>=148 && LA218_2<=149)||(LA218_2>=152 && LA218_2<=153)||LA218_2==157||LA218_2==159||LA218_2==162||(LA218_2>=164 && LA218_2<=165)||LA218_2==167||LA218_2==172||LA218_2==176||LA218_2==187||LA218_2==194||LA218_2==198||LA218_2==200))
 					{
 						alt218 = 1;
 					}
@@ -28357,7 +28358,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:597:24: ',' secondary_constraint
 					{
 					DebugLocation(597, 24);
-					char_literal660=(IToken)Match(input,78,Follow._78_in_secondary_constraint_list4320); if (state.failed) return retval;
+					char_literal660=(IToken)Match(input,79,Follow._79_in_secondary_constraint_list4320); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal660_tree = (object)adaptor.Create(char_literal660, "char_literal660", retval);
 					adaptor.AddChild(root_0, char_literal660_tree);
@@ -28452,7 +28453,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(219, false);
 			int LA219_1 = input.LA(1);
 
-			if ((LA219_1==GET||LA219_1==IDENTIFIER||LA219_1==SET||LA219_1==99||(LA219_1>=101 && LA219_1<=102)||(LA219_1>=105 && LA219_1<=107)||LA219_1==126||LA219_1==131||(LA219_1>=151 && LA219_1<=152)||LA219_1==161||(LA219_1>=163 && LA219_1<=164)||LA219_1==166||LA219_1==171||LA219_1==186||LA219_1==193||LA219_1==199))
+			if ((LA219_1==GET||LA219_1==IDENTIFIER||LA219_1==SET||LA219_1==100||(LA219_1>=102 && LA219_1<=103)||(LA219_1>=106 && LA219_1<=108)||LA219_1==127||LA219_1==132||(LA219_1>=152 && LA219_1<=153)||LA219_1==162||(LA219_1>=164 && LA219_1<=165)||LA219_1==167||LA219_1==172||LA219_1==187||LA219_1==194||LA219_1==200))
 			{
 				int LA219_2 = input.LA(2);
 
@@ -28472,7 +28473,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA219_1==104||LA219_1==111||LA219_1==123||LA219_1==127||LA219_1==137||LA219_1==139||LA219_1==145||(LA219_1>=147 && LA219_1<=148)||LA219_1==156||LA219_1==158||LA219_1==175||LA219_1==197) && ((_queryExpression == 0)))
+			else if ((LA219_1==105||LA219_1==112||LA219_1==124||LA219_1==128||LA219_1==138||LA219_1==140||LA219_1==146||(LA219_1>=148 && LA219_1<=149)||LA219_1==157||LA219_1==159||LA219_1==176||LA219_1==198) && ((_queryExpression == 0)))
 			{
 				int LA219_2 = input.LA(2);
 
@@ -28600,13 +28601,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(602, 2);
-			string_literal664=(IToken)Match(input,154,Follow._154_in_constructor_constraint4348); if (state.failed) return retval;
+			string_literal664=(IToken)Match(input,155,Follow._155_in_constructor_constraint4348); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal664_tree = (object)adaptor.Create(string_literal664, "string_literal664", retval);
 			adaptor.AddChild(root_0, string_literal664_tree);
 			}
 			DebugLocation(602, 10);
-			char_literal665=(IToken)Match(input,72,Follow._72_in_constructor_constraint4352); if (state.failed) return retval;
+			char_literal665=(IToken)Match(input,73,Follow._73_in_constructor_constraint4352); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal665_tree = (object)adaptor.Create(char_literal665, "char_literal665", retval);
 			adaptor.AddChild(root_0, char_literal665_tree);
@@ -28684,7 +28685,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(604, 2);
-			char_literal667=(IToken)Match(input,200,Follow._200_in_class_body4364); if (state.failed) return retval;
+			char_literal667=(IToken)Match(input,201,Follow._201_in_class_body4364); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal667_tree = (object)adaptor.Create(char_literal667, "char_literal667", retval);
 			adaptor.AddChild(root_0, char_literal667_tree);
@@ -28696,7 +28697,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(220, false);
 			int LA220_1 = input.LA(1);
 
-			if ((LA220_1==ENUM||LA220_1==GET||LA220_1==IDENTIFIER||LA220_1==SET||LA220_1==95||(LA220_1>=99 && LA220_1<=102)||(LA220_1>=104 && LA220_1<=107)||LA220_1==109||(LA220_1>=111 && LA220_1<=112)||LA220_1==115||(LA220_1>=117 && LA220_1<=118)||LA220_1==120||(LA220_1>=122 && LA220_1<=123)||(LA220_1>=125 && LA220_1<=128)||(LA220_1>=130 && LA220_1<=131)||LA220_1==134||LA220_1==137||LA220_1==139||(LA220_1>=142 && LA220_1<=145)||(LA220_1>=147 && LA220_1<=148)||(LA220_1>=150 && LA220_1<=152)||(LA220_1>=154 && LA220_1<=156)||LA220_1==158||(LA220_1>=160 && LA220_1<=161)||(LA220_1>=163 && LA220_1<=169)||LA220_1==171||(LA220_1>=173 && LA220_1<=176)||(LA220_1>=179 && LA220_1<=181)||LA220_1==186||(LA220_1>=188 && LA220_1<=189)||(LA220_1>=191 && LA220_1<=197)||LA220_1==199||LA220_1==205))
+			if ((LA220_1==ENUM||LA220_1==GET||LA220_1==IDENTIFIER||LA220_1==SET||LA220_1==96||(LA220_1>=100 && LA220_1<=103)||(LA220_1>=105 && LA220_1<=108)||LA220_1==110||(LA220_1>=112 && LA220_1<=113)||LA220_1==116||(LA220_1>=118 && LA220_1<=119)||LA220_1==121||(LA220_1>=123 && LA220_1<=124)||(LA220_1>=126 && LA220_1<=129)||(LA220_1>=131 && LA220_1<=132)||LA220_1==135||LA220_1==138||LA220_1==140||(LA220_1>=143 && LA220_1<=146)||(LA220_1>=148 && LA220_1<=149)||(LA220_1>=151 && LA220_1<=153)||(LA220_1>=155 && LA220_1<=157)||LA220_1==159||(LA220_1>=161 && LA220_1<=162)||(LA220_1>=164 && LA220_1<=170)||LA220_1==172||(LA220_1>=174 && LA220_1<=177)||(LA220_1>=180 && LA220_1<=182)||LA220_1==187||(LA220_1>=189 && LA220_1<=190)||(LA220_1>=192 && LA220_1<=198)||LA220_1==200||LA220_1==206))
 			{
 				alt220 = 1;
 			}
@@ -28721,7 +28722,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(220); }
 
 			DebugLocation(604, 37);
-			char_literal669=(IToken)Match(input,204,Follow._204_in_class_body4373); if (state.failed) return retval;
+			char_literal669=(IToken)Match(input,205,Follow._205_in_class_body4373); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal669_tree = (object)adaptor.Create(char_literal669, "char_literal669", retval);
 			adaptor.AddChild(root_0, char_literal669_tree);
@@ -28798,7 +28799,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(221, false);
 				int LA221_1 = input.LA(1);
 
-				if ((LA221_1==ENUM||LA221_1==GET||LA221_1==IDENTIFIER||LA221_1==SET||LA221_1==95||(LA221_1>=99 && LA221_1<=102)||(LA221_1>=104 && LA221_1<=107)||LA221_1==109||(LA221_1>=111 && LA221_1<=112)||LA221_1==115||(LA221_1>=117 && LA221_1<=118)||LA221_1==120||(LA221_1>=122 && LA221_1<=123)||(LA221_1>=125 && LA221_1<=128)||(LA221_1>=130 && LA221_1<=131)||LA221_1==134||LA221_1==137||LA221_1==139||(LA221_1>=142 && LA221_1<=145)||(LA221_1>=147 && LA221_1<=148)||(LA221_1>=150 && LA221_1<=152)||(LA221_1>=154 && LA221_1<=156)||LA221_1==158||(LA221_1>=160 && LA221_1<=161)||(LA221_1>=163 && LA221_1<=169)||LA221_1==171||(LA221_1>=173 && LA221_1<=176)||(LA221_1>=179 && LA221_1<=181)||LA221_1==186||(LA221_1>=188 && LA221_1<=189)||(LA221_1>=191 && LA221_1<=197)||LA221_1==199||LA221_1==205))
+				if ((LA221_1==ENUM||LA221_1==GET||LA221_1==IDENTIFIER||LA221_1==SET||LA221_1==96||(LA221_1>=100 && LA221_1<=103)||(LA221_1>=105 && LA221_1<=108)||LA221_1==110||(LA221_1>=112 && LA221_1<=113)||LA221_1==116||(LA221_1>=118 && LA221_1<=119)||LA221_1==121||(LA221_1>=123 && LA221_1<=124)||(LA221_1>=126 && LA221_1<=129)||(LA221_1>=131 && LA221_1<=132)||LA221_1==135||LA221_1==138||LA221_1==140||(LA221_1>=143 && LA221_1<=146)||(LA221_1>=148 && LA221_1<=149)||(LA221_1>=151 && LA221_1<=153)||(LA221_1>=155 && LA221_1<=157)||LA221_1==159||(LA221_1>=161 && LA221_1<=162)||(LA221_1>=164 && LA221_1<=170)||LA221_1==172||(LA221_1>=174 && LA221_1<=177)||(LA221_1>=180 && LA221_1<=182)||LA221_1==187||(LA221_1>=189 && LA221_1<=190)||(LA221_1>=192 && LA221_1<=198)||LA221_1==200||LA221_1==206))
 				{
 					alt221 = 1;
 				}
@@ -28909,7 +28910,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(222, false);
 			switch (input.LA(1))
 			{
-			case 95:
+			case 96:
 				{
 				int LA222_2 = input.LA(2);
 
@@ -28970,7 +28971,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 168:
+			case 169:
 				{
 				int LA222_2 = input.LA(2);
 
@@ -29023,12 +29024,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 118:
+			case 119:
 				{
 				alt222 = 1;
 				}
 				break;
-			case 191:
+			case 192:
 				{
 				int LA222_2 = input.LA(2);
 
@@ -29085,21 +29086,21 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 109:
-			case 112:
-			case 115:
-			case 120:
-			case 125:
-			case 134:
-			case 142:
-			case 150:
-			case 155:
-			case 173:
-			case 176:
-			case 180:
-			case 188:
+			case 110:
+			case 113:
+			case 116:
+			case 121:
+			case 126:
+			case 135:
+			case 143:
+			case 151:
+			case 156:
+			case 174:
+			case 177:
+			case 181:
 			case 189:
-			case 192:
+			case 190:
+			case 193:
 				{
 				int LA222_2 = input.LA(2);
 
@@ -29128,7 +29129,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 106:
+			case 107:
 				{
 				int LA222_2 = input.LA(2);
 
@@ -29161,19 +29162,19 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 104:
-			case 111:
-			case 123:
-			case 127:
-			case 137:
-			case 139:
-			case 145:
-			case 147:
+			case 105:
+			case 112:
+			case 124:
+			case 128:
+			case 138:
+			case 140:
+			case 146:
 			case 148:
-			case 156:
-			case 158:
-			case 175:
-			case 197:
+			case 149:
+			case 157:
+			case 159:
+			case 176:
+			case 198:
 				{
 				int LA222_2 = input.LA(2);
 
@@ -29206,7 +29207,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 195:
+			case 196:
 				{
 				int LA222_2 = input.LA(2);
 
@@ -29235,13 +29236,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 169:
-			case 196:
+			case 170:
+			case 197:
 				{
 				alt222 = 2;
 				}
 				break;
-			case 163:
+			case 164:
 				{
 				int LA222_2 = input.LA(2);
 
@@ -29282,7 +29283,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 130:
+			case 131:
 				{
 				int LA222_2 = input.LA(2);
 
@@ -29330,22 +29331,22 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case GET:
 			case IDENTIFIER:
 			case SET:
-			case 99:
-			case 101:
+			case 100:
 			case 102:
-			case 105:
-			case 107:
-			case 126:
-			case 131:
-			case 151:
+			case 103:
+			case 106:
+			case 108:
+			case 127:
+			case 132:
 			case 152:
-			case 161:
-			case 164:
-			case 166:
-			case 171:
-			case 186:
-			case 193:
-			case 199:
+			case 153:
+			case 162:
+			case 165:
+			case 167:
+			case 172:
+			case 187:
+			case 194:
+			case 200:
 				{
 				int LA222_2 = input.LA(2);
 
@@ -29378,12 +29379,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 128:
+			case 129:
 				{
 				alt222 = 5;
 				}
 				break;
-			case 179:
+			case 180:
 				{
 				int LA222_2 = input.LA(2);
 
@@ -29428,9 +29429,9 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 144:
-			case 165:
-			case 167:
+			case 145:
+			case 166:
+			case 168:
 				{
 				int LA222_2 = input.LA(2);
 
@@ -29479,8 +29480,8 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 100:
-			case 174:
+			case 101:
+			case 175:
 				{
 				int LA222_2 = input.LA(2);
 
@@ -29517,7 +29518,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 154:
+			case 155:
 				{
 				int LA222_2 = input.LA(2);
 
@@ -29562,13 +29563,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 205:
+			case 206:
 				{
 				alt222 = 9;
 				}
 				break;
-			case 160:
-			case 194:
+			case 161:
+			case 195:
 				{
 				int LA222_2 = input.LA(2);
 
@@ -29597,7 +29598,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 117:
+			case 118:
 				{
 				int LA222_2 = input.LA(2);
 
@@ -29619,9 +29620,9 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				break;
 			case ENUM:
-			case 122:
-			case 143:
-			case 181:
+			case 123:
+			case 144:
+			case 182:
 				{
 				alt222 = 11;
 				}
@@ -29893,7 +29894,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(223, false);
 			int LA223_1 = input.LA(1);
 
-			if ((LA223_1==95))
+			if ((LA223_1==96))
 			{
 				alt223 = 1;
 			}
@@ -29924,7 +29925,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(224, false);
 			int LA224_1 = input.LA(1);
 
-			if ((LA224_1==144||LA224_1==154||LA224_1==165||(LA224_1>=167 && LA224_1<=168)))
+			if ((LA224_1==145||LA224_1==155||LA224_1==166||(LA224_1>=168 && LA224_1<=169)))
 			{
 				alt224 = 1;
 			}
@@ -29949,7 +29950,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(224); }
 
 			DebugLocation(621, 38);
-			string_literal685=(IToken)Match(input,118,Follow._118_in_constant_declaration4464); if (state.failed) return retval;
+			string_literal685=(IToken)Match(input,119,Follow._119_in_constant_declaration4464); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal685_tree = (object)adaptor.Create(string_literal685, "string_literal685", retval);
 			adaptor.AddChild(root_0, string_literal685_tree);
@@ -30044,7 +30045,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(225, false);
 				int LA225_1 = input.LA(1);
 
-				if ((LA225_1==144||LA225_1==154||LA225_1==165||(LA225_1>=167 && LA225_1<=168)))
+				if ((LA225_1==145||LA225_1==155||LA225_1==166||(LA225_1>=168 && LA225_1<=169)))
 				{
 					alt225 = 1;
 				}
@@ -30149,7 +30150,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(624, 18);
 
 			set690=(IToken)input.LT(1);
-			if (input.LA(1)==144||input.LA(1)==154||input.LA(1)==165||(input.LA(1)>=167 && input.LA(1)<=168))
+			if (input.LA(1)==145||input.LA(1)==155||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169))
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set690, "set690", retval));
@@ -30237,7 +30238,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(226, false);
 			int LA226_1 = input.LA(1);
 
-			if ((LA226_1==95))
+			if ((LA226_1==96))
 			{
 				alt226 = 1;
 			}
@@ -30268,7 +30269,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(227, false);
 			int LA227_1 = input.LA(1);
 
-			if ((LA227_1==144||LA227_1==154||LA227_1==165||(LA227_1>=167 && LA227_1<=169)||LA227_1==179||LA227_1==191||LA227_1==196))
+			if ((LA227_1==145||LA227_1==155||LA227_1==166||(LA227_1>=168 && LA227_1<=170)||LA227_1==180||LA227_1==192||LA227_1==197))
 			{
 				alt227 = 1;
 			}
@@ -30382,7 +30383,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(228, false);
 				int LA228_1 = input.LA(1);
 
-				if ((LA228_1==144||LA228_1==154||LA228_1==165||(LA228_1>=167 && LA228_1<=169)||LA228_1==179||LA228_1==191||LA228_1==196))
+				if ((LA228_1==145||LA228_1==155||LA228_1==166||(LA228_1>=168 && LA228_1<=170)||LA228_1==180||LA228_1==192||LA228_1==197))
 				{
 					alt228 = 1;
 				}
@@ -30487,7 +30488,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(631, 15);
 
 			set697=(IToken)input.LT(1);
-			if (input.LA(1)==144||input.LA(1)==154||input.LA(1)==165||(input.LA(1)>=167 && input.LA(1)<=169)||input.LA(1)==179||input.LA(1)==191||input.LA(1)==196)
+			if (input.LA(1)==145||input.LA(1)==155||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=170)||input.LA(1)==180||input.LA(1)==192||input.LA(1)==197)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set697, "set697", retval));
@@ -30581,7 +30582,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(229, false);
 				int LA229_1 = input.LA(1);
 
-				if ((LA229_1==78))
+				if ((LA229_1==79))
 				{
 					alt229 = 1;
 				}
@@ -30595,7 +30596,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:634:23: ',' variable_declarator
 					{
 					DebugLocation(634, 23);
-					char_literal699=(IToken)Match(input,78,Follow._78_in_variable_declarators4596); if (state.failed) return retval;
+					char_literal699=(IToken)Match(input,79,Follow._79_in_variable_declarators4596); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal699_tree = (object)adaptor.Create(char_literal699, "char_literal699", retval);
 					adaptor.AddChild(root_0, char_literal699_tree);
@@ -30698,7 +30699,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(230, false);
 			int LA230_1 = input.LA(1);
 
-			if ((LA230_1==89))
+			if ((LA230_1==90))
 			{
 				alt230 = 1;
 			}
@@ -30710,7 +30711,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:637:13: '=' variable_initializer
 				{
 				DebugLocation(637, 13);
-				char_literal702=(IToken)Match(input,89,Follow._89_in_variable_declarator4612); if (state.failed) return retval;
+				char_literal702=(IToken)Match(input,90,Follow._90_in_variable_declarator4612); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal702_tree = (object)adaptor.Create(char_literal702, "char_literal702", retval);
 				adaptor.AddChild(root_0, char_literal702_tree);
@@ -30790,11 +30791,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(231, false);
 			int LA231_1 = input.LA(1);
 
-			if ((LA231_1==Character_literal||(LA231_1>=FALSE && LA231_1<=GET)||(LA231_1>=Hex_number && LA231_1<=IDENTIFIER)||(LA231_1>=MINUS && LA231_1<=NUMBER)||LA231_1==Real_literal||(LA231_1>=SET && LA231_1<=STRINGLITERAL)||LA231_1==TRUE||LA231_1==Verbatim_string_literal||LA231_1==65||LA231_1==70||(LA231_1>=72 && LA231_1<=73)||(LA231_1>=75 && LA231_1<=76)||LA231_1==79||LA231_1==99||(LA231_1>=101 && LA231_1<=102)||(LA231_1>=104 && LA231_1<=109)||(LA231_1>=111 && LA231_1<=112)||(LA231_1>=115 && LA231_1<=116)||(LA231_1>=120 && LA231_1<=123)||(LA231_1>=125 && LA231_1<=127)||LA231_1==131||LA231_1==134||LA231_1==137||LA231_1==139||LA231_1==142||LA231_1==145||(LA231_1>=147 && LA231_1<=148)||(LA231_1>=150 && LA231_1<=152)||(LA231_1>=154 && LA231_1<=156)||LA231_1==158||LA231_1==161||(LA231_1>=163 && LA231_1<=164)||LA231_1==166||LA231_1==171||LA231_1==173||(LA231_1>=175 && LA231_1<=177)||LA231_1==180||LA231_1==183||(LA231_1>=186 && LA231_1<=190)||(LA231_1>=192 && LA231_1<=193)||LA231_1==197||LA231_1==199||LA231_1==205))
+			if ((LA231_1==Character_literal||(LA231_1>=FALSE && LA231_1<=GET)||(LA231_1>=Hex_number && LA231_1<=IDENTIFIER)||(LA231_1>=MINUS && LA231_1<=NUMBER)||LA231_1==Real_literal||(LA231_1>=SET && LA231_1<=STRINGLITERAL)||LA231_1==TRUE||LA231_1==Verbatim_string_literal||LA231_1==66||LA231_1==71||(LA231_1>=73 && LA231_1<=74)||(LA231_1>=76 && LA231_1<=77)||LA231_1==80||LA231_1==100||(LA231_1>=102 && LA231_1<=103)||(LA231_1>=105 && LA231_1<=110)||(LA231_1>=112 && LA231_1<=113)||(LA231_1>=116 && LA231_1<=117)||(LA231_1>=121 && LA231_1<=124)||(LA231_1>=126 && LA231_1<=128)||LA231_1==132||LA231_1==135||LA231_1==138||LA231_1==140||LA231_1==143||LA231_1==146||(LA231_1>=148 && LA231_1<=149)||(LA231_1>=151 && LA231_1<=153)||(LA231_1>=155 && LA231_1<=157)||LA231_1==159||LA231_1==162||(LA231_1>=164 && LA231_1<=165)||LA231_1==167||LA231_1==172||LA231_1==174||(LA231_1>=176 && LA231_1<=178)||LA231_1==181||LA231_1==184||(LA231_1>=187 && LA231_1<=191)||(LA231_1>=193 && LA231_1<=194)||LA231_1==198||LA231_1==200||LA231_1==206))
 			{
 				alt231 = 1;
 			}
-			else if ((LA231_1==200))
+			else if ((LA231_1==201))
 			{
 				alt231 = 2;
 			}
@@ -30909,7 +30910,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(232, false);
 				int LA232_1 = input.LA(1);
 
-				if ((LA232_1==GET||LA232_1==IDENTIFIER||LA232_1==SET||LA232_1==95||(LA232_1>=99 && LA232_1<=102)||(LA232_1>=104 && LA232_1<=107)||LA232_1==109||(LA232_1>=111 && LA232_1<=112)||LA232_1==115||LA232_1==120||LA232_1==123||(LA232_1>=125 && LA232_1<=127)||(LA232_1>=130 && LA232_1<=131)||LA232_1==134||LA232_1==137||LA232_1==139||LA232_1==142||(LA232_1>=144 && LA232_1<=145)||(LA232_1>=147 && LA232_1<=148)||(LA232_1>=150 && LA232_1<=152)||(LA232_1>=154 && LA232_1<=156)||LA232_1==158||(LA232_1>=160 && LA232_1<=161)||(LA232_1>=163 && LA232_1<=168)||LA232_1==171||(LA232_1>=173 && LA232_1<=176)||(LA232_1>=179 && LA232_1<=180)||LA232_1==186||(LA232_1>=188 && LA232_1<=189)||(LA232_1>=191 && LA232_1<=195)||LA232_1==197||LA232_1==199))
+				if ((LA232_1==GET||LA232_1==IDENTIFIER||LA232_1==SET||LA232_1==96||(LA232_1>=100 && LA232_1<=103)||(LA232_1>=105 && LA232_1<=108)||LA232_1==110||(LA232_1>=112 && LA232_1<=113)||LA232_1==116||LA232_1==121||LA232_1==124||(LA232_1>=126 && LA232_1<=128)||(LA232_1>=131 && LA232_1<=132)||LA232_1==135||LA232_1==138||LA232_1==140||LA232_1==143||(LA232_1>=145 && LA232_1<=146)||(LA232_1>=148 && LA232_1<=149)||(LA232_1>=151 && LA232_1<=153)||(LA232_1>=155 && LA232_1<=157)||LA232_1==159||(LA232_1>=161 && LA232_1<=162)||(LA232_1>=164 && LA232_1<=169)||LA232_1==172||(LA232_1>=174 && LA232_1<=177)||(LA232_1>=180 && LA232_1<=181)||LA232_1==187||(LA232_1>=189 && LA232_1<=190)||(LA232_1>=192 && LA232_1<=196)||LA232_1==198||LA232_1==200))
 				{
 					alt232 = 1;
 				}
@@ -31104,7 +31105,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(233, false);
 			int LA233_1 = input.LA(1);
 
-			if ((LA233_1==95))
+			if ((LA233_1==96))
 			{
 				alt233 = 1;
 			}
@@ -31135,7 +31136,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(234, false);
 			int LA234_1 = input.LA(1);
 
-			if ((LA234_1==106))
+			if ((LA234_1==107))
 			{
 				int LA234_2 = input.LA(2);
 
@@ -31144,7 +31145,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					alt234 = 1;
 				}
 			}
-			else if ((LA234_1==100||LA234_1==130||LA234_1==144||LA234_1==154||LA234_1==160||LA234_1==165||(LA234_1>=167 && LA234_1<=168)||LA234_1==174||LA234_1==179||LA234_1==191||LA234_1==194))
+			else if ((LA234_1==101||LA234_1==131||LA234_1==145||LA234_1==155||LA234_1==161||LA234_1==166||(LA234_1>=168 && LA234_1<=169)||LA234_1==175||LA234_1==180||LA234_1==192||LA234_1==195))
 			{
 				alt234 = 1;
 			}
@@ -31175,7 +31176,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(235, false);
 			int LA235_1 = input.LA(1);
 
-			if ((LA235_1==163))
+			if ((LA235_1==164))
 			{
 				int LA235_2 = input.LA(2);
 
@@ -31192,7 +31193,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:647:36: 'partial'
 				{
 				DebugLocation(647, 36);
-				string_literal711=(IToken)Match(input,163,Follow._163_in_method_header4675); if (state.failed) return retval;
+				string_literal711=(IToken)Match(input,164,Follow._164_in_method_header4675); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal711_tree = (object)adaptor.Create(string_literal711, "string_literal711", retval);
 				adaptor.AddChild(root_0, string_literal711_tree);
@@ -31223,7 +31224,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(236, false);
 			int LA236_1 = input.LA(1);
 
-			if ((LA236_1==85))
+			if ((LA236_1==86))
 			{
 				alt236 = 1;
 			}
@@ -31248,7 +31249,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(236); }
 
 			DebugLocation(648, 4);
-			char_literal715=(IToken)Match(input,72,Follow._72_in_method_header4694); if (state.failed) return retval;
+			char_literal715=(IToken)Match(input,73,Follow._73_in_method_header4694); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal715_tree = (object)adaptor.Create(char_literal715, "char_literal715", retval);
 			adaptor.AddChild(root_0, char_literal715_tree);
@@ -31260,7 +31261,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(237, false);
 			int LA237_1 = input.LA(1);
 
-			if ((LA237_1==GET||LA237_1==IDENTIFIER||LA237_1==SET||LA237_1==95||LA237_1==99||(LA237_1>=101 && LA237_1<=102)||(LA237_1>=104 && LA237_1<=107)||LA237_1==109||(LA237_1>=111 && LA237_1<=112)||LA237_1==115||LA237_1==120||LA237_1==123||(LA237_1>=125 && LA237_1<=127)||LA237_1==131||LA237_1==134||LA237_1==137||LA237_1==139||LA237_1==142||LA237_1==145||(LA237_1>=147 && LA237_1<=148)||(LA237_1>=150 && LA237_1<=152)||(LA237_1>=155 && LA237_1<=156)||(LA237_1>=158 && LA237_1<=159)||(LA237_1>=161 && LA237_1<=164)||LA237_1==166||(LA237_1>=170 && LA237_1<=171)||LA237_1==173||(LA237_1>=175 && LA237_1<=176)||LA237_1==180||LA237_1==183||LA237_1==186||(LA237_1>=188 && LA237_1<=189)||(LA237_1>=192 && LA237_1<=193)||LA237_1==195||LA237_1==197||LA237_1==199))
+			if ((LA237_1==GET||LA237_1==IDENTIFIER||LA237_1==SET||LA237_1==96||LA237_1==100||(LA237_1>=102 && LA237_1<=103)||(LA237_1>=105 && LA237_1<=108)||LA237_1==110||(LA237_1>=112 && LA237_1<=113)||LA237_1==116||LA237_1==121||LA237_1==124||(LA237_1>=126 && LA237_1<=128)||LA237_1==132||LA237_1==135||LA237_1==138||LA237_1==140||LA237_1==143||LA237_1==146||(LA237_1>=148 && LA237_1<=149)||(LA237_1>=151 && LA237_1<=153)||(LA237_1>=156 && LA237_1<=157)||(LA237_1>=159 && LA237_1<=160)||(LA237_1>=162 && LA237_1<=165)||LA237_1==167||(LA237_1>=171 && LA237_1<=172)||LA237_1==174||(LA237_1>=176 && LA237_1<=177)||LA237_1==181||LA237_1==184||LA237_1==187||(LA237_1>=189 && LA237_1<=190)||(LA237_1>=193 && LA237_1<=194)||LA237_1==196||LA237_1==198||LA237_1==200))
 			{
 				alt237 = 1;
 			}
@@ -31297,7 +31298,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(238, false);
 			int LA238_1 = input.LA(1);
 
-			if ((LA238_1==197))
+			if ((LA238_1==198))
 			{
 				alt238 = 1;
 			}
@@ -31393,7 +31394,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(239, false);
 				int LA239_1 = input.LA(1);
 
-				if ((LA239_1==106))
+				if ((LA239_1==107))
 				{
 					int LA239_2 = input.LA(2);
 
@@ -31404,7 +31405,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 
 				}
-				else if ((LA239_1==100||LA239_1==130||LA239_1==144||LA239_1==154||LA239_1==160||LA239_1==165||(LA239_1>=167 && LA239_1<=168)||LA239_1==174||LA239_1==179||LA239_1==191||LA239_1==194))
+				else if ((LA239_1==101||LA239_1==131||LA239_1==145||LA239_1==155||LA239_1==161||LA239_1==166||(LA239_1>=168 && LA239_1<=169)||LA239_1==175||LA239_1==180||LA239_1==192||LA239_1==195))
 				{
 					alt239 = 1;
 				}
@@ -31509,7 +31510,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(651, 16);
 
 			set720=(IToken)input.LT(1);
-			if (input.LA(1)==100||input.LA(1)==106||input.LA(1)==130||input.LA(1)==144||input.LA(1)==154||input.LA(1)==160||input.LA(1)==165||(input.LA(1)>=167 && input.LA(1)<=168)||input.LA(1)==174||input.LA(1)==179||input.LA(1)==191||input.LA(1)==194)
+			if (input.LA(1)==101||input.LA(1)==107||input.LA(1)==131||input.LA(1)==145||input.LA(1)==155||input.LA(1)==161||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==175||input.LA(1)==180||input.LA(1)==192||input.LA(1)==195)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set720, "set720", retval));
@@ -31588,15 +31589,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(241, false);
 			int LA241_1 = input.LA(1);
 
-			if ((LA241_1==GET||LA241_1==IDENTIFIER||LA241_1==SET||LA241_1==99||(LA241_1>=101 && LA241_1<=102)||(LA241_1>=104 && LA241_1<=107)||LA241_1==109||(LA241_1>=111 && LA241_1<=112)||LA241_1==115||LA241_1==120||LA241_1==123||(LA241_1>=125 && LA241_1<=127)||LA241_1==131||LA241_1==134||LA241_1==137||LA241_1==139||LA241_1==142||LA241_1==145||(LA241_1>=147 && LA241_1<=148)||(LA241_1>=150 && LA241_1<=152)||(LA241_1>=155 && LA241_1<=156)||LA241_1==158||LA241_1==161||(LA241_1>=163 && LA241_1<=164)||LA241_1==166||LA241_1==171||LA241_1==173||(LA241_1>=175 && LA241_1<=176)||LA241_1==180||LA241_1==186||(LA241_1>=188 && LA241_1<=189)||(LA241_1>=192 && LA241_1<=193)||LA241_1==197||LA241_1==199))
+			if ((LA241_1==GET||LA241_1==IDENTIFIER||LA241_1==SET||LA241_1==100||(LA241_1>=102 && LA241_1<=103)||(LA241_1>=105 && LA241_1<=108)||LA241_1==110||(LA241_1>=112 && LA241_1<=113)||LA241_1==116||LA241_1==121||LA241_1==124||(LA241_1>=126 && LA241_1<=128)||LA241_1==132||LA241_1==135||LA241_1==138||LA241_1==140||LA241_1==143||LA241_1==146||(LA241_1>=148 && LA241_1<=149)||(LA241_1>=151 && LA241_1<=153)||(LA241_1>=156 && LA241_1<=157)||LA241_1==159||LA241_1==162||(LA241_1>=164 && LA241_1<=165)||LA241_1==167||LA241_1==172||LA241_1==174||(LA241_1>=176 && LA241_1<=177)||LA241_1==181||LA241_1==187||(LA241_1>=189 && LA241_1<=190)||(LA241_1>=193 && LA241_1<=194)||LA241_1==198||LA241_1==200))
 			{
 				alt241 = 1;
 			}
-			else if ((LA241_1==195))
+			else if ((LA241_1==196))
 			{
 				int LA241_2 = input.LA(2);
 
-				if ((LA241_2==73))
+				if ((LA241_2==74))
 				{
 					int LA241_3 = input.LA(3);
 
@@ -31616,7 +31617,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						throw nvae;
 					}
 				}
-				else if ((LA241_2==Character_literal||(LA241_2>=FALSE && LA241_2<=GET)||(LA241_2>=Hex_number && LA241_2<=IDENTIFIER)||(LA241_2>=NULL && LA241_2<=NUMBER)||LA241_2==Real_literal||(LA241_2>=SET && LA241_2<=STRINGLITERAL)||LA241_2==TRUE||LA241_2==Verbatim_string_literal||LA241_2==99||(LA241_2>=101 && LA241_2<=102)||(LA241_2>=104 && LA241_2<=109)||(LA241_2>=111 && LA241_2<=112)||LA241_2==115||LA241_2==120||LA241_2==123||(LA241_2>=125 && LA241_2<=127)||LA241_2==131||LA241_2==134||LA241_2==137||LA241_2==139||LA241_2==142||LA241_2==145||(LA241_2>=147 && LA241_2<=148)||(LA241_2>=150 && LA241_2<=152)||(LA241_2>=155 && LA241_2<=156)||LA241_2==158||LA241_2==161||(LA241_2>=163 && LA241_2<=164)||LA241_2==166||LA241_2==171||LA241_2==173||(LA241_2>=175 && LA241_2<=176)||LA241_2==180||LA241_2==183||LA241_2==186||(LA241_2>=188 && LA241_2<=189)||(LA241_2>=192 && LA241_2<=193)||LA241_2==197||LA241_2==199))
+				else if ((LA241_2==Character_literal||(LA241_2>=FALSE && LA241_2<=GET)||(LA241_2>=Hex_number && LA241_2<=IDENTIFIER)||(LA241_2>=NULL && LA241_2<=NUMBER)||LA241_2==Real_literal||(LA241_2>=SET && LA241_2<=STRINGLITERAL)||LA241_2==TRUE||LA241_2==Verbatim_string_literal||LA241_2==100||(LA241_2>=102 && LA241_2<=103)||(LA241_2>=105 && LA241_2<=110)||(LA241_2>=112 && LA241_2<=113)||LA241_2==116||LA241_2==121||LA241_2==124||(LA241_2>=126 && LA241_2<=128)||LA241_2==132||LA241_2==135||LA241_2==138||LA241_2==140||LA241_2==143||LA241_2==146||(LA241_2>=148 && LA241_2<=149)||(LA241_2>=151 && LA241_2<=153)||(LA241_2>=156 && LA241_2<=157)||LA241_2==159||LA241_2==162||(LA241_2>=164 && LA241_2<=165)||LA241_2==167||LA241_2==172||LA241_2==174||(LA241_2>=176 && LA241_2<=177)||LA241_2==181||LA241_2==184||LA241_2==187||(LA241_2>=189 && LA241_2<=190)||(LA241_2>=193 && LA241_2<=194)||LA241_2==198||LA241_2==200))
 				{
 					alt241 = 2;
 				}
@@ -31660,7 +31661,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(656, 4);
-				string_literal722=(IToken)Match(input,195,Follow._195_in_return_type4788); if (state.failed) return retval;
+				string_literal722=(IToken)Match(input,196,Follow._196_in_return_type4788); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal722_tree = (object)adaptor.Create(string_literal722, "string_literal722", retval);
 				adaptor.AddChild(root_0, string_literal722_tree);
@@ -31674,7 +31675,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(240, false);
 					int LA240_1 = input.LA(1);
 
-					if ((LA240_1==73))
+					if ((LA240_1==74))
 					{
 						alt240 = 1;
 					}
@@ -31688,7 +31689,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:656:11: '*'
 						{
 						DebugLocation(656, 11);
-						char_literal723=(IToken)Match(input,73,Follow._73_in_return_type4790); if (state.failed) return retval;
+						char_literal723=(IToken)Match(input,74,Follow._74_in_return_type4790); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 						char_literal723_tree = (object)adaptor.Create(char_literal723, "char_literal723", retval);
 						adaptor.AddChild(root_0, char_literal723_tree);
@@ -31857,7 +31858,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(242, false);
 				int LA242_1 = input.LA(1);
 
-				if ((LA242_1==78))
+				if ((LA242_1==79))
 				{
 					alt242 = 1;
 				}
@@ -31871,7 +31872,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:660:20: ',' formal_parameter
 					{
 					DebugLocation(660, 20);
-					char_literal726=(IToken)Match(input,78,Follow._78_in_formal_parameter_list4809); if (state.failed) return retval;
+					char_literal726=(IToken)Match(input,79,Follow._79_in_formal_parameter_list4809); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal726_tree = (object)adaptor.Create(char_literal726, "char_literal726", retval);
 					adaptor.AddChild(root_0, char_literal726_tree);
@@ -31960,7 +31961,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(243, false);
 			switch (input.LA(1))
 			{
-			case 95:
+			case 96:
 				{
 				int LA243_2 = input.LA(2);
 
@@ -31981,28 +31982,28 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 159:
-			case 170:
-			case 183:
+			case 160:
+			case 171:
+			case 184:
 				{
 				alt243 = 1;
 				}
 				break;
-			case 109:
-			case 112:
-			case 115:
-			case 120:
-			case 125:
-			case 134:
-			case 142:
-			case 150:
-			case 155:
-			case 173:
-			case 176:
-			case 180:
-			case 188:
+			case 110:
+			case 113:
+			case 116:
+			case 121:
+			case 126:
+			case 135:
+			case 143:
+			case 151:
+			case 156:
+			case 174:
+			case 177:
+			case 181:
 			case 189:
-			case 192:
+			case 190:
+			case 193:
 				{
 				int LA243_2 = input.LA(2);
 
@@ -32023,7 +32024,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 99:
+			case 100:
 				{
 				int LA243_2 = input.LA(2);
 
@@ -32048,19 +32049,19 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 104:
-			case 111:
-			case 123:
-			case 127:
-			case 137:
-			case 139:
-			case 145:
-			case 147:
+			case 105:
+			case 112:
+			case 124:
+			case 128:
+			case 138:
+			case 140:
+			case 146:
 			case 148:
-			case 156:
-			case 158:
-			case 175:
-			case 197:
+			case 149:
+			case 157:
+			case 159:
+			case 176:
+			case 198:
 				{
 				int LA243_2 = input.LA(2);
 
@@ -32081,7 +32082,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 195:
+			case 196:
 				{
 				int LA243_2 = input.LA(2);
 
@@ -32102,7 +32103,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 162:
+			case 163:
 				{
 				alt243 = 2;
 				}
@@ -32110,23 +32111,23 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case GET:
 			case IDENTIFIER:
 			case SET:
-			case 101:
 			case 102:
-			case 105:
+			case 103:
 			case 106:
 			case 107:
-			case 126:
-			case 131:
-			case 151:
+			case 108:
+			case 127:
+			case 132:
 			case 152:
-			case 161:
-			case 163:
+			case 153:
+			case 162:
 			case 164:
-			case 166:
-			case 171:
-			case 186:
-			case 193:
-			case 199:
+			case 165:
+			case 167:
+			case 172:
+			case 187:
+			case 194:
+			case 200:
 				{
 				int LA243_2 = input.LA(2);
 
@@ -32196,7 +32197,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(663, 38);
-				string_literal730=(IToken)Match(input,99,Follow._99_in_formal_parameter4831); if (state.failed) return retval;
+				string_literal730=(IToken)Match(input,100,Follow._100_in_formal_parameter4831); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal730_tree = (object)adaptor.Create(string_literal730, "string_literal730", retval);
 				adaptor.AddChild(root_0, string_literal730_tree);
@@ -32275,7 +32276,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(244, false);
 				int LA244_1 = input.LA(1);
 
-				if ((LA244_1==GET||LA244_1==IDENTIFIER||LA244_1==SET||LA244_1==95||LA244_1==99||(LA244_1>=101 && LA244_1<=102)||(LA244_1>=104 && LA244_1<=107)||LA244_1==109||(LA244_1>=111 && LA244_1<=112)||LA244_1==115||LA244_1==120||LA244_1==123||(LA244_1>=125 && LA244_1<=127)||LA244_1==131||LA244_1==134||LA244_1==137||LA244_1==139||LA244_1==142||LA244_1==145||(LA244_1>=147 && LA244_1<=148)||(LA244_1>=150 && LA244_1<=152)||(LA244_1>=155 && LA244_1<=156)||(LA244_1>=158 && LA244_1<=159)||LA244_1==161||(LA244_1>=163 && LA244_1<=164)||LA244_1==166||(LA244_1>=170 && LA244_1<=171)||LA244_1==173||(LA244_1>=175 && LA244_1<=176)||LA244_1==180||LA244_1==183||LA244_1==186||(LA244_1>=188 && LA244_1<=189)||(LA244_1>=192 && LA244_1<=193)||LA244_1==195||LA244_1==197||LA244_1==199))
+				if ((LA244_1==GET||LA244_1==IDENTIFIER||LA244_1==SET||LA244_1==96||LA244_1==100||(LA244_1>=102 && LA244_1<=103)||(LA244_1>=105 && LA244_1<=108)||LA244_1==110||(LA244_1>=112 && LA244_1<=113)||LA244_1==116||LA244_1==121||LA244_1==124||(LA244_1>=126 && LA244_1<=128)||LA244_1==132||LA244_1==135||LA244_1==138||LA244_1==140||LA244_1==143||LA244_1==146||(LA244_1>=148 && LA244_1<=149)||(LA244_1>=151 && LA244_1<=153)||(LA244_1>=156 && LA244_1<=157)||(LA244_1>=159 && LA244_1<=160)||LA244_1==162||(LA244_1>=164 && LA244_1<=165)||LA244_1==167||(LA244_1>=171 && LA244_1<=172)||LA244_1==174||(LA244_1>=176 && LA244_1<=177)||LA244_1==181||LA244_1==184||LA244_1==187||(LA244_1>=189 && LA244_1<=190)||(LA244_1>=193 && LA244_1<=194)||LA244_1==196||LA244_1==198||LA244_1==200))
 				{
 					alt244 = 1;
 				}
@@ -32387,7 +32388,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(245, false);
 			int LA245_1 = input.LA(1);
 
-			if ((LA245_1==95))
+			if ((LA245_1==96))
 			{
 				alt245 = 1;
 			}
@@ -32418,7 +32419,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(246, false);
 			int LA246_1 = input.LA(1);
 
-			if ((LA246_1==159||LA246_1==170||LA246_1==183))
+			if ((LA246_1==160||LA246_1==171||LA246_1==184))
 			{
 				alt246 = 1;
 			}
@@ -32461,7 +32462,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(247, false);
 			int LA247_1 = input.LA(1);
 
-			if ((LA247_1==89))
+			if ((LA247_1==90))
 			{
 				alt247 = 1;
 			}
@@ -32550,7 +32551,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(671, 2);
-			char_literal737=(IToken)Match(input,89,Follow._89_in_default_argument4874); if (state.failed) return retval;
+			char_literal737=(IToken)Match(input,90,Follow._90_in_default_argument4874); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal737_tree = (object)adaptor.Create(char_literal737, "char_literal737", retval);
 			adaptor.AddChild(root_0, char_literal737_tree);
@@ -32627,7 +32628,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(672, 19);
 
 			set739=(IToken)input.LT(1);
-			if (input.LA(1)==159||input.LA(1)==170||input.LA(1)==183)
+			if (input.LA(1)==160||input.LA(1)==171||input.LA(1)==184)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set739, "set739", retval));
@@ -32714,7 +32715,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(248, false);
 			int LA248_1 = input.LA(1);
 
-			if ((LA248_1==95))
+			if ((LA248_1==96))
 			{
 				alt248 = 1;
 			}
@@ -32745,7 +32746,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(249, false);
 			int LA249_1 = input.LA(1);
 
-			if ((LA249_1==162))
+			if ((LA249_1==163))
 			{
 				alt249 = 1;
 			}
@@ -32757,7 +32758,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:675:16: 'params'
 				{
 				DebugLocation(675, 16);
-				string_literal741=(IToken)Match(input,162,Follow._162_in_parameter_array4904); if (state.failed) return retval;
+				string_literal741=(IToken)Match(input,163,Follow._163_in_parameter_array4904); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal741_tree = (object)adaptor.Create(string_literal741, "string_literal741", retval);
 				adaptor.AddChild(root_0, string_literal741_tree);
@@ -32858,7 +32859,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(250, false);
 			int LA250_1 = input.LA(1);
 
-			if ((LA250_1==95))
+			if ((LA250_1==96))
 			{
 				alt250 = 1;
 			}
@@ -32889,7 +32890,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(251, false);
 			int LA251_1 = input.LA(1);
 
-			if ((LA251_1==100||LA251_1==130||LA251_1==144||LA251_1==154||LA251_1==160||LA251_1==165||(LA251_1>=167 && LA251_1<=168)||LA251_1==174||LA251_1==179||LA251_1==191||LA251_1==194))
+			if ((LA251_1==101||LA251_1==131||LA251_1==145||LA251_1==155||LA251_1==161||LA251_1==166||(LA251_1>=168 && LA251_1<=169)||LA251_1==175||LA251_1==180||LA251_1==192||LA251_1==195))
 			{
 				alt251 = 1;
 			}
@@ -32926,7 +32927,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, member_name747.Tree, member_name747, "member_name747", retval);
 			DebugLocation(677, 59);
-			char_literal748=(IToken)Match(input,200,Follow._200_in_property_declaration4939); if (state.failed) return retval;
+			char_literal748=(IToken)Match(input,201,Follow._201_in_property_declaration4939); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal748_tree = (object)adaptor.Create(char_literal748, "char_literal748", retval);
 			adaptor.AddChild(root_0, char_literal748_tree);
@@ -32938,7 +32939,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, accessor_declarations749.Tree, accessor_declarations749, "accessor_declarations749", retval);
 			DebugLocation(677, 89);
-			char_literal750=(IToken)Match(input,204,Follow._204_in_property_declaration4947); if (state.failed) return retval;
+			char_literal750=(IToken)Match(input,205,Follow._205_in_property_declaration4947); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal750_tree = (object)adaptor.Create(char_literal750, "char_literal750", retval);
 			adaptor.AddChild(root_0, char_literal750_tree);
@@ -33015,7 +33016,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(252, false);
 				int LA252_1 = input.LA(1);
 
-				if ((LA252_1==100||LA252_1==130||LA252_1==144||LA252_1==154||LA252_1==160||LA252_1==165||(LA252_1>=167 && LA252_1<=168)||LA252_1==174||LA252_1==179||LA252_1==191||LA252_1==194))
+				if ((LA252_1==101||LA252_1==131||LA252_1==145||LA252_1==155||LA252_1==161||LA252_1==166||(LA252_1>=168 && LA252_1<=169)||LA252_1==175||LA252_1==180||LA252_1==192||LA252_1==195))
 				{
 					alt252 = 1;
 				}
@@ -33120,7 +33121,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(682, 2);
 
 			set752=(IToken)input.LT(1);
-			if (input.LA(1)==100||input.LA(1)==130||input.LA(1)==144||input.LA(1)==154||input.LA(1)==160||input.LA(1)==165||(input.LA(1)>=167 && input.LA(1)<=168)||input.LA(1)==174||input.LA(1)==179||input.LA(1)==191||input.LA(1)==194)
+			if (input.LA(1)==101||input.LA(1)==131||input.LA(1)==145||input.LA(1)==155||input.LA(1)==161||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==175||input.LA(1)==180||input.LA(1)==192||input.LA(1)==195)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set752, "set752", retval));
@@ -33211,7 +33212,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(253, false);
 			int LA253_1 = input.LA(1);
 
-			if ((LA253_1==85))
+			if ((LA253_1==86))
 			{
 				int LA253_2 = input.LA(2);
 
@@ -33310,7 +33311,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(256, false);
 			switch (input.LA(1))
 			{
-			case 95:
+			case 96:
 				{
 				int LA256_2 = input.LA(2);
 
@@ -33331,7 +33332,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 168:
+			case 169:
 				{
 				int LA256_2 = input.LA(2);
 
@@ -33352,7 +33353,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 167:
+			case 168:
 				{
 				int LA256_2 = input.LA(2);
 
@@ -33373,7 +33374,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 144:
+			case 145:
 				{
 				int LA256_2 = input.LA(2);
 
@@ -33394,7 +33395,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 165:
+			case 166:
 				{
 				int LA256_2 = input.LA(2);
 
@@ -33461,7 +33462,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(254, false);
 				int LA254_1 = input.LA(1);
 
-				if ((LA254_1==SET||LA254_1==95||LA254_1==144||LA254_1==165||(LA254_1>=167 && LA254_1<=168)))
+				if ((LA254_1==SET||LA254_1==96||LA254_1==145||LA254_1==166||(LA254_1>=168 && LA254_1<=169)))
 				{
 					alt254 = 1;
 				}
@@ -33515,7 +33516,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(255, false);
 				int LA255_1 = input.LA(1);
 
-				if ((LA255_1==GET||LA255_1==95||LA255_1==144||LA255_1==165||(LA255_1>=167 && LA255_1<=168)))
+				if ((LA255_1==GET||LA255_1==96||LA255_1==145||LA255_1==166||(LA255_1>=168 && LA255_1<=169)))
 				{
 					alt255 = 1;
 				}
@@ -33617,7 +33618,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(257, false);
 			int LA257_1 = input.LA(1);
 
-			if ((LA257_1==95))
+			if ((LA257_1==96))
 			{
 				alt257 = 1;
 			}
@@ -33648,7 +33649,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(258, false);
 			int LA258_1 = input.LA(1);
 
-			if ((LA258_1==144||LA258_1==165||(LA258_1>=167 && LA258_1<=168)))
+			if ((LA258_1==145||LA258_1==166||(LA258_1>=168 && LA258_1<=169)))
 			{
 				alt258 = 1;
 			}
@@ -33757,7 +33758,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(259, false);
 			int LA259_1 = input.LA(1);
 
-			if ((LA259_1==95))
+			if ((LA259_1==96))
 			{
 				alt259 = 1;
 			}
@@ -33788,7 +33789,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(260, false);
 			int LA260_1 = input.LA(1);
 
-			if ((LA260_1==144||LA260_1==165||(LA260_1>=167 && LA260_1<=168)))
+			if ((LA260_1==145||LA260_1==166||(LA260_1>=168 && LA260_1<=169)))
 			{
 				alt260 = 1;
 			}
@@ -33908,16 +33909,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(261, false);
 			switch (input.LA(1))
 			{
-			case 168:
+			case 169:
 				{
 				alt261 = 1;
 				}
 				break;
-			case 167:
+			case 168:
 				{
 				int LA261_2 = input.LA(2);
 
-				if ((LA261_2==144))
+				if ((LA261_2==145))
 				{
 					alt261 = 5;
 				}
@@ -33934,11 +33935,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 144:
+			case 145:
 				{
 				int LA261_2 = input.LA(2);
 
-				if ((LA261_2==167))
+				if ((LA261_2==168))
 				{
 					alt261 = 6;
 				}
@@ -33955,7 +33956,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 165:
+			case 166:
 				{
 				alt261 = 4;
 				}
@@ -33977,7 +33978,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:694:3: 'public'
 				{
 				DebugLocation(694, 3);
-				string_literal768=(IToken)Match(input,168,Follow._168_in_accessor_modifier5108); if (state.failed) return retval;
+				string_literal768=(IToken)Match(input,169,Follow._169_in_accessor_modifier5108); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal768_tree = (object)adaptor.Create(string_literal768, "string_literal768", retval);
 				adaptor.AddChild(root_0, string_literal768_tree);
@@ -33990,7 +33991,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:694:14: 'protected'
 				{
 				DebugLocation(694, 14);
-				string_literal769=(IToken)Match(input,167,Follow._167_in_accessor_modifier5112); if (state.failed) return retval;
+				string_literal769=(IToken)Match(input,168,Follow._168_in_accessor_modifier5112); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal769_tree = (object)adaptor.Create(string_literal769, "string_literal769", retval);
 				adaptor.AddChild(root_0, string_literal769_tree);
@@ -34003,7 +34004,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:694:28: 'internal'
 				{
 				DebugLocation(694, 28);
-				string_literal770=(IToken)Match(input,144,Follow._144_in_accessor_modifier5116); if (state.failed) return retval;
+				string_literal770=(IToken)Match(input,145,Follow._145_in_accessor_modifier5116); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal770_tree = (object)adaptor.Create(string_literal770, "string_literal770", retval);
 				adaptor.AddChild(root_0, string_literal770_tree);
@@ -34016,7 +34017,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:694:41: 'private'
 				{
 				DebugLocation(694, 41);
-				string_literal771=(IToken)Match(input,165,Follow._165_in_accessor_modifier5120); if (state.failed) return retval;
+				string_literal771=(IToken)Match(input,166,Follow._166_in_accessor_modifier5120); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal771_tree = (object)adaptor.Create(string_literal771, "string_literal771", retval);
 				adaptor.AddChild(root_0, string_literal771_tree);
@@ -34034,13 +34035,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:694:54: 'protected' 'internal'
 				{
 				DebugLocation(694, 54);
-				string_literal772=(IToken)Match(input,167,Follow._167_in_accessor_modifier5125); if (state.failed) return retval;
+				string_literal772=(IToken)Match(input,168,Follow._168_in_accessor_modifier5125); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal772_tree = (object)adaptor.Create(string_literal772, "string_literal772", retval);
 				adaptor.AddChild(root_0, string_literal772_tree);
 				}
 				DebugLocation(694, 68);
-				string_literal773=(IToken)Match(input,144,Follow._144_in_accessor_modifier5129); if (state.failed) return retval;
+				string_literal773=(IToken)Match(input,145,Follow._145_in_accessor_modifier5129); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal773_tree = (object)adaptor.Create(string_literal773, "string_literal773", retval);
 				adaptor.AddChild(root_0, string_literal773_tree);
@@ -34061,13 +34062,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:694:83: 'internal' 'protected'
 				{
 				DebugLocation(694, 83);
-				string_literal774=(IToken)Match(input,144,Follow._144_in_accessor_modifier5135); if (state.failed) return retval;
+				string_literal774=(IToken)Match(input,145,Follow._145_in_accessor_modifier5135); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal774_tree = (object)adaptor.Create(string_literal774, "string_literal774", retval);
 				adaptor.AddChild(root_0, string_literal774_tree);
 				}
 				DebugLocation(694, 96);
-				string_literal775=(IToken)Match(input,167,Follow._167_in_accessor_modifier5139); if (state.failed) return retval;
+				string_literal775=(IToken)Match(input,168,Follow._168_in_accessor_modifier5139); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal775_tree = (object)adaptor.Create(string_literal775, "string_literal775", retval);
 				adaptor.AddChild(root_0, string_literal775_tree);
@@ -34229,7 +34230,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(266, false);
 			switch (input.LA(1))
 			{
-			case 95:
+			case 96:
 				{
 				int LA266_2 = input.LA(2);
 
@@ -34250,18 +34251,18 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 100:
-			case 130:
-			case 144:
-			case 154:
-			case 160:
-			case 165:
-			case 167:
+			case 101:
+			case 131:
+			case 145:
+			case 155:
+			case 161:
+			case 166:
 			case 168:
-			case 174:
-			case 179:
-			case 191:
-			case 194:
+			case 169:
+			case 175:
+			case 180:
+			case 192:
+			case 195:
 				{
 				int LA266_2 = input.LA(2);
 
@@ -34282,7 +34283,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 128:
+			case 129:
 				{
 				int LA266_2 = input.LA(2);
 
@@ -34333,7 +34334,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(262, false);
 				int LA262_1 = input.LA(1);
 
-				if ((LA262_1==95))
+				if ((LA262_1==96))
 				{
 					alt262 = 1;
 				}
@@ -34364,7 +34365,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(263, false);
 				int LA263_1 = input.LA(1);
 
-				if ((LA263_1==100||LA263_1==130||LA263_1==144||LA263_1==154||LA263_1==160||LA263_1==165||(LA263_1>=167 && LA263_1<=168)||LA263_1==174||LA263_1==179||LA263_1==191||LA263_1==194))
+				if ((LA263_1==101||LA263_1==131||LA263_1==145||LA263_1==155||LA263_1==161||LA263_1==166||(LA263_1>=168 && LA263_1<=169)||LA263_1==175||LA263_1==180||LA263_1==192||LA263_1==195))
 				{
 					alt263 = 1;
 				}
@@ -34389,7 +34390,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				} finally { DebugExitSubRule(263); }
 
 				DebugLocation(699, 37);
-				string_literal779=(IToken)Match(input,128,Follow._128_in_event_declaration5171); if (state.failed) return retval;
+				string_literal779=(IToken)Match(input,129,Follow._129_in_event_declaration5171); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal779_tree = (object)adaptor.Create(string_literal779, "string_literal779", retval);
 				adaptor.AddChild(root_0, string_literal779_tree);
@@ -34436,7 +34437,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(264, false);
 				int LA264_1 = input.LA(1);
 
-				if ((LA264_1==95))
+				if ((LA264_1==96))
 				{
 					alt264 = 1;
 				}
@@ -34467,7 +34468,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(265, false);
 				int LA265_1 = input.LA(1);
 
-				if ((LA265_1==100||LA265_1==130||LA265_1==144||LA265_1==154||LA265_1==160||LA265_1==165||(LA265_1>=167 && LA265_1<=168)||LA265_1==174||LA265_1==179||LA265_1==191||LA265_1==194))
+				if ((LA265_1==101||LA265_1==131||LA265_1==145||LA265_1==155||LA265_1==161||LA265_1==166||(LA265_1>=168 && LA265_1<=169)||LA265_1==175||LA265_1==180||LA265_1==192||LA265_1==195))
 				{
 					alt265 = 1;
 				}
@@ -34492,7 +34493,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				} finally { DebugExitSubRule(265); }
 
 				DebugLocation(700, 39);
-				string_literal785=(IToken)Match(input,128,Follow._128_in_event_declaration5201); if (state.failed) return retval;
+				string_literal785=(IToken)Match(input,129,Follow._129_in_event_declaration5201); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal785_tree = (object)adaptor.Create(string_literal785, "string_literal785", retval);
 				adaptor.AddChild(root_0, string_literal785_tree);
@@ -34510,7 +34511,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, member_name787.Tree, member_name787, "member_name787", retval);
 				DebugLocation(700, 70);
-				char_literal788=(IToken)Match(input,200,Follow._200_in_event_declaration5213); if (state.failed) return retval;
+				char_literal788=(IToken)Match(input,201,Follow._201_in_event_declaration5213); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal788_tree = (object)adaptor.Create(char_literal788, "char_literal788", retval);
 				adaptor.AddChild(root_0, char_literal788_tree);
@@ -34522,7 +34523,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, event_accessor_declarations789.Tree, event_accessor_declarations789, "event_accessor_declarations789", retval);
 				DebugLocation(700, 106);
-				char_literal790=(IToken)Match(input,204,Follow._204_in_event_declaration5221); if (state.failed) return retval;
+				char_literal790=(IToken)Match(input,205,Follow._205_in_event_declaration5221); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal790_tree = (object)adaptor.Create(char_literal790, "char_literal790", retval);
 				adaptor.AddChild(root_0, char_literal790_tree);
@@ -34604,7 +34605,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(267, false);
 				int LA267_1 = input.LA(1);
 
-				if ((LA267_1==100||LA267_1==130||LA267_1==144||LA267_1==154||LA267_1==160||LA267_1==165||(LA267_1>=167 && LA267_1<=168)||LA267_1==174||LA267_1==179||LA267_1==191||LA267_1==194))
+				if ((LA267_1==101||LA267_1==131||LA267_1==145||LA267_1==155||LA267_1==161||LA267_1==166||(LA267_1>=168 && LA267_1<=169)||LA267_1==175||LA267_1==180||LA267_1==192||LA267_1==195))
 				{
 					alt267 = 1;
 				}
@@ -34709,7 +34710,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(703, 15);
 
 			set792=(IToken)input.LT(1);
-			if (input.LA(1)==100||input.LA(1)==130||input.LA(1)==144||input.LA(1)==154||input.LA(1)==160||input.LA(1)==165||(input.LA(1)>=167 && input.LA(1)<=168)||input.LA(1)==174||input.LA(1)==179||input.LA(1)==191||input.LA(1)==194)
+			if (input.LA(1)==101||input.LA(1)==131||input.LA(1)==145||input.LA(1)==155||input.LA(1)==161||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==175||input.LA(1)==180||input.LA(1)==192||input.LA(1)==195)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set792, "set792", retval));
@@ -34787,7 +34788,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(268, false);
 			switch (input.LA(1))
 			{
-			case 95:
+			case 96:
 				{
 				int LA268_2 = input.LA(2);
 
@@ -34808,12 +34809,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 101:
+			case 102:
 				{
 				alt268 = 1;
 				}
 				break;
-			case 171:
+			case 172:
 				{
 				alt268 = 2;
 				}
@@ -34959,7 +34960,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(269, false);
 			int LA269_1 = input.LA(1);
 
-			if ((LA269_1==95))
+			if ((LA269_1==96))
 			{
 				alt269 = 1;
 			}
@@ -34984,7 +34985,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(269); }
 
 			DebugLocation(710, 16);
-			string_literal798=(IToken)Match(input,101,Follow._101_in_add_accessor_declaration5323); if (state.failed) return retval;
+			string_literal798=(IToken)Match(input,102,Follow._102_in_add_accessor_declaration5323); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal798_tree = (object)adaptor.Create(string_literal798, "string_literal798", retval);
 			adaptor.AddChild(root_0, string_literal798_tree);
@@ -35067,7 +35068,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(270, false);
 			int LA270_1 = input.LA(1);
 
-			if ((LA270_1==95))
+			if ((LA270_1==96))
 			{
 				alt270 = 1;
 			}
@@ -35092,7 +35093,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(270); }
 
 			DebugLocation(712, 16);
-			string_literal801=(IToken)Match(input,171,Follow._171_in_remove_accessor_declaration5340); if (state.failed) return retval;
+			string_literal801=(IToken)Match(input,172,Follow._172_in_remove_accessor_declaration5340); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal801_tree = (object)adaptor.Create(string_literal801, "string_literal801", retval);
 			adaptor.AddChild(root_0, string_literal801_tree);
@@ -35179,7 +35180,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(271, false);
 			int LA271_1 = input.LA(1);
 
-			if ((LA271_1==95))
+			if ((LA271_1==96))
 			{
 				alt271 = 1;
 			}
@@ -35210,7 +35211,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(272, false);
 			int LA272_1 = input.LA(1);
 
-			if ((LA272_1==100||LA272_1==130||LA272_1==144||LA272_1==154||LA272_1==160||LA272_1==165||(LA272_1>=167 && LA272_1<=168)||LA272_1==174||LA272_1==191||LA272_1==194))
+			if ((LA272_1==101||LA272_1==131||LA272_1==145||LA272_1==155||LA272_1==161||LA272_1==166||(LA272_1>=168 && LA272_1<=169)||LA272_1==175||LA272_1==192||LA272_1==195))
 			{
 				alt272 = 1;
 			}
@@ -35241,7 +35242,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, indexer_declarator805.Tree, indexer_declarator805, "indexer_declarator805", retval);
 			DebugLocation(714, 58);
-			char_literal806=(IToken)Match(input,200,Follow._200_in_indexer_declaration5366); if (state.failed) return retval;
+			char_literal806=(IToken)Match(input,201,Follow._201_in_indexer_declaration5366); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal806_tree = (object)adaptor.Create(char_literal806, "char_literal806", retval);
 			adaptor.AddChild(root_0, char_literal806_tree);
@@ -35253,7 +35254,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, accessor_declarations807.Tree, accessor_declarations807, "accessor_declarations807", retval);
 			DebugLocation(714, 88);
-			char_literal808=(IToken)Match(input,204,Follow._204_in_indexer_declaration5374); if (state.failed) return retval;
+			char_literal808=(IToken)Match(input,205,Follow._205_in_indexer_declaration5374); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal808_tree = (object)adaptor.Create(char_literal808, "char_literal808", retval);
 			adaptor.AddChild(root_0, char_literal808_tree);
@@ -35330,7 +35331,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(273, false);
 				int LA273_1 = input.LA(1);
 
-				if ((LA273_1==100||LA273_1==130||LA273_1==144||LA273_1==154||LA273_1==160||LA273_1==165||(LA273_1>=167 && LA273_1<=168)||LA273_1==174||LA273_1==191||LA273_1==194))
+				if ((LA273_1==101||LA273_1==131||LA273_1==145||LA273_1==155||LA273_1==161||LA273_1==166||(LA273_1>=168 && LA273_1<=169)||LA273_1==175||LA273_1==192||LA273_1==195))
 				{
 					alt273 = 1;
 				}
@@ -35435,7 +35436,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(717, 17);
 
 			set810=(IToken)input.LT(1);
-			if (input.LA(1)==100||input.LA(1)==130||input.LA(1)==144||input.LA(1)==154||input.LA(1)==160||input.LA(1)==165||(input.LA(1)>=167 && input.LA(1)<=168)||input.LA(1)==174||input.LA(1)==191||input.LA(1)==194)
+			if (input.LA(1)==101||input.LA(1)==131||input.LA(1)==145||input.LA(1)==155||input.LA(1)==161||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==175||input.LA(1)==192||input.LA(1)==195)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set810, "set810", retval));
@@ -35534,7 +35535,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(274, false);
 			int LA274_1 = input.LA(1);
 
-			if ((LA274_1==GET||LA274_1==IDENTIFIER||LA274_1==SET||LA274_1==99||(LA274_1>=101 && LA274_1<=102)||(LA274_1>=104 && LA274_1<=107)||LA274_1==111||LA274_1==123||(LA274_1>=126 && LA274_1<=127)||LA274_1==131||LA274_1==137||LA274_1==139||LA274_1==145||(LA274_1>=147 && LA274_1<=148)||(LA274_1>=151 && LA274_1<=152)||LA274_1==156||LA274_1==158||LA274_1==161||(LA274_1>=163 && LA274_1<=164)||LA274_1==166||LA274_1==171||LA274_1==175||LA274_1==186||LA274_1==193||LA274_1==197||LA274_1==199))
+			if ((LA274_1==GET||LA274_1==IDENTIFIER||LA274_1==SET||LA274_1==100||(LA274_1>=102 && LA274_1<=103)||(LA274_1>=105 && LA274_1<=108)||LA274_1==112||LA274_1==124||(LA274_1>=127 && LA274_1<=128)||LA274_1==132||LA274_1==138||LA274_1==140||LA274_1==146||(LA274_1>=148 && LA274_1<=149)||(LA274_1>=152 && LA274_1<=153)||LA274_1==157||LA274_1==159||LA274_1==162||(LA274_1>=164 && LA274_1<=165)||LA274_1==167||LA274_1==172||LA274_1==176||LA274_1==187||LA274_1==194||LA274_1==198||LA274_1==200))
 			{
 				alt274 = 1;
 			}
@@ -35565,13 +35566,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(274); }
 
 			DebugLocation(720, 26);
-			string_literal814=(IToken)Match(input,183,Follow._183_in_indexer_declarator5450); if (state.failed) return retval;
+			string_literal814=(IToken)Match(input,184,Follow._184_in_indexer_declarator5450); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal814_tree = (object)adaptor.Create(string_literal814, "string_literal814", retval);
 			adaptor.AddChild(root_0, string_literal814_tree);
 			}
 			DebugLocation(720, 35);
-			char_literal815=(IToken)Match(input,95,Follow._95_in_indexer_declarator5454); if (state.failed) return retval;
+			char_literal815=(IToken)Match(input,96,Follow._96_in_indexer_declarator5454); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal815_tree = (object)adaptor.Create(char_literal815, "char_literal815", retval);
 			adaptor.AddChild(root_0, char_literal815_tree);
@@ -35583,7 +35584,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, formal_parameter_list816.Tree, formal_parameter_list816, "formal_parameter_list816", retval);
 			DebugLocation(720, 65);
-			char_literal817=(IToken)Match(input,96,Follow._96_in_indexer_declarator5462); if (state.failed) return retval;
+			char_literal817=(IToken)Match(input,97,Follow._97_in_indexer_declarator5462); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal817_tree = (object)adaptor.Create(char_literal817, "char_literal817", retval);
 			adaptor.AddChild(root_0, char_literal817_tree);
@@ -35660,7 +35661,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(275, false);
 			int LA275_1 = input.LA(1);
 
-			if ((LA275_1==95))
+			if ((LA275_1==96))
 			{
 				alt275 = 1;
 			}
@@ -35774,7 +35775,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(276, false);
 				int LA276_1 = input.LA(1);
 
-				if ((LA276_1==130||LA276_1==168||LA276_1==179||LA276_1==191))
+				if ((LA276_1==131||LA276_1==169||LA276_1==180||LA276_1==192))
 				{
 					alt276 = 1;
 				}
@@ -35879,7 +35880,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(725, 18);
 
 			set823=(IToken)input.LT(1);
-			if (input.LA(1)==130||input.LA(1)==168||input.LA(1)==179||input.LA(1)==191)
+			if (input.LA(1)==131||input.LA(1)==169||input.LA(1)==180||input.LA(1)==192)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set823, "set823", retval));
@@ -35956,21 +35957,21 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(277, false);
 			switch (input.LA(1))
 			{
-			case 109:
-			case 112:
-			case 115:
-			case 120:
-			case 125:
-			case 134:
-			case 142:
-			case 150:
-			case 155:
-			case 173:
-			case 176:
-			case 180:
-			case 188:
+			case 110:
+			case 113:
+			case 116:
+			case 121:
+			case 126:
+			case 135:
+			case 143:
+			case 151:
+			case 156:
+			case 174:
+			case 177:
+			case 181:
 			case 189:
-			case 192:
+			case 190:
+			case 193:
 				{
 				int LA277_2 = input.LA(2);
 
@@ -35994,24 +35995,24 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case GET:
 			case IDENTIFIER:
 			case SET:
-			case 99:
-			case 101:
+			case 100:
 			case 102:
-			case 105:
+			case 103:
 			case 106:
 			case 107:
-			case 126:
-			case 131:
-			case 151:
+			case 108:
+			case 127:
+			case 132:
 			case 152:
-			case 161:
-			case 163:
+			case 153:
+			case 162:
 			case 164:
-			case 166:
-			case 171:
-			case 186:
-			case 193:
-			case 199:
+			case 165:
+			case 167:
+			case 172:
+			case 187:
+			case 194:
+			case 200:
 				{
 				int LA277_2 = input.LA(2);
 
@@ -36032,19 +36033,19 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 104:
-			case 111:
-			case 123:
-			case 127:
-			case 137:
-			case 139:
-			case 145:
-			case 147:
+			case 105:
+			case 112:
+			case 124:
+			case 128:
+			case 138:
+			case 140:
+			case 146:
 			case 148:
-			case 156:
-			case 158:
-			case 175:
-			case 197:
+			case 149:
+			case 157:
+			case 159:
+			case 176:
+			case 198:
 				{
 				int LA277_2 = input.LA(2);
 
@@ -36065,7 +36066,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 195:
+			case 196:
 				{
 				int LA277_2 = input.LA(2);
 
@@ -36086,8 +36087,8 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 129:
-			case 140:
+			case 130:
+			case 141:
 				{
 				alt277 = 3;
 				}
@@ -36226,7 +36227,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, type827.Tree, type827, "type827", retval);
 			DebugLocation(732, 9);
-			string_literal828=(IToken)Match(input,157,Follow._157_in_unary_operator_declarator5541); if (state.failed) return retval;
+			string_literal828=(IToken)Match(input,158,Follow._158_in_unary_operator_declarator5541); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal828_tree = (object)adaptor.Create(string_literal828, "string_literal828", retval);
 			adaptor.AddChild(root_0, string_literal828_tree);
@@ -36238,7 +36239,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, overloadable_unary_operator829.Tree, overloadable_unary_operator829, "overloadable_unary_operator829", retval);
 			DebugLocation(732, 52);
-			char_literal830=(IToken)Match(input,72,Follow._72_in_unary_operator_declarator5549); if (state.failed) return retval;
+			char_literal830=(IToken)Match(input,73,Follow._73_in_unary_operator_declarator5549); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal830_tree = (object)adaptor.Create(char_literal830, "char_literal830", retval);
 			adaptor.AddChild(root_0, char_literal830_tree);
@@ -36327,7 +36328,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(733, 28);
 
 			set834=(IToken)input.LT(1);
-			if (input.LA(1)==FALSE||input.LA(1)==MINUS||input.LA(1)==TRUE||input.LA(1)==65||(input.LA(1)>=75 && input.LA(1)<=76)||input.LA(1)==79||input.LA(1)==205)
+			if (input.LA(1)==FALSE||input.LA(1)==MINUS||input.LA(1)==TRUE||input.LA(1)==66||(input.LA(1)>=76 && input.LA(1)<=77)||input.LA(1)==80||input.LA(1)==206)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set834, "set834", retval));
@@ -36423,7 +36424,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, type835.Tree, type835, "type835", retval);
 			DebugLocation(736, 9);
-			string_literal836=(IToken)Match(input,157,Follow._157_in_binary_operator_declarator5616); if (state.failed) return retval;
+			string_literal836=(IToken)Match(input,158,Follow._158_in_binary_operator_declarator5616); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal836_tree = (object)adaptor.Create(string_literal836, "string_literal836", retval);
 			adaptor.AddChild(root_0, string_literal836_tree);
@@ -36435,7 +36436,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, overloadable_binary_operator837.Tree, overloadable_binary_operator837, "overloadable_binary_operator837", retval);
 			DebugLocation(736, 53);
-			char_literal838=(IToken)Match(input,72,Follow._72_in_binary_operator_declarator5624); if (state.failed) return retval;
+			char_literal838=(IToken)Match(input,73,Follow._73_in_binary_operator_declarator5624); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal838_tree = (object)adaptor.Create(char_literal838, "char_literal838", retval);
 			adaptor.AddChild(root_0, char_literal838_tree);
@@ -36453,7 +36454,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier840.Tree, identifier840, "identifier840", retval);
 			DebugLocation(736, 79);
-			char_literal841=(IToken)Match(input,78,Follow._78_in_binary_operator_declarator5636); if (state.failed) return retval;
+			char_literal841=(IToken)Match(input,79,Follow._79_in_binary_operator_declarator5636); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal841_tree = (object)adaptor.Create(char_literal841, "char_literal841", retval);
 			adaptor.AddChild(root_0, char_literal841_tree);
@@ -36570,7 +36571,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(278, false);
 			switch (input.LA(1))
 			{
-			case 75:
+			case 76:
 				{
 				alt278 = 1;
 				}
@@ -36580,37 +36581,37 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				alt278 = 2;
 				}
 				break;
-			case 73:
+			case 74:
 				{
 				alt278 = 3;
 				}
 				break;
-			case 81:
+			case 82:
 				{
 				alt278 = 4;
 				}
 				break;
-			case 67:
+			case 68:
 				{
 				alt278 = 5;
 				}
 				break;
-			case 70:
+			case 71:
 				{
 				alt278 = 6;
 				}
 				break;
-			case 201:
+			case 202:
 				{
 				alt278 = 7;
 				}
 				break;
-			case 97:
+			case 98:
 				{
 				alt278 = 8;
 				}
 				break;
-			case 86:
+			case 87:
 				{
 				alt278 = 9;
 				}
@@ -36623,7 +36624,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 					alt278 = 10;
 				}
-				else if ((LA278_2==72))
+				else if ((LA278_2==73))
 				{
 					alt278 = 13;
 				}
@@ -36636,27 +36637,27 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 90:
+			case 91:
 				{
 				alt278 = 11;
 				}
 				break;
-			case 66:
+			case 67:
 				{
 				alt278 = 12;
 				}
 				break;
-			case 85:
+			case 86:
 				{
 				alt278 = 14;
 				}
 				break;
-			case 92:
+			case 93:
 				{
 				alt278 = 15;
 				}
 				break;
-			case 88:
+			case 89:
 				{
 				alt278 = 16;
 				}
@@ -36680,7 +36681,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(739, 2);
-				char_literal845=(IToken)Match(input,75,Follow._75_in_overloadable_binary_operator5657); if (state.failed) return retval;
+				char_literal845=(IToken)Match(input,76,Follow._76_in_overloadable_binary_operator5657); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal845_tree = (object)adaptor.Create(char_literal845, "char_literal845", retval);
 				adaptor.AddChild(root_0, char_literal845_tree);
@@ -36710,7 +36711,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(739, 14);
-				char_literal847=(IToken)Match(input,73,Follow._73_in_overloadable_binary_operator5665); if (state.failed) return retval;
+				char_literal847=(IToken)Match(input,74,Follow._74_in_overloadable_binary_operator5665); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal847_tree = (object)adaptor.Create(char_literal847, "char_literal847", retval);
 				adaptor.AddChild(root_0, char_literal847_tree);
@@ -36725,7 +36726,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(739, 20);
-				char_literal848=(IToken)Match(input,81,Follow._81_in_overloadable_binary_operator5669); if (state.failed) return retval;
+				char_literal848=(IToken)Match(input,82,Follow._82_in_overloadable_binary_operator5669); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal848_tree = (object)adaptor.Create(char_literal848, "char_literal848", retval);
 				adaptor.AddChild(root_0, char_literal848_tree);
@@ -36740,7 +36741,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(739, 26);
-				char_literal849=(IToken)Match(input,67,Follow._67_in_overloadable_binary_operator5673); if (state.failed) return retval;
+				char_literal849=(IToken)Match(input,68,Follow._68_in_overloadable_binary_operator5673); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal849_tree = (object)adaptor.Create(char_literal849, "char_literal849", retval);
 				adaptor.AddChild(root_0, char_literal849_tree);
@@ -36755,7 +36756,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(739, 32);
-				char_literal850=(IToken)Match(input,70,Follow._70_in_overloadable_binary_operator5677); if (state.failed) return retval;
+				char_literal850=(IToken)Match(input,71,Follow._71_in_overloadable_binary_operator5677); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal850_tree = (object)adaptor.Create(char_literal850, "char_literal850", retval);
 				adaptor.AddChild(root_0, char_literal850_tree);
@@ -36770,7 +36771,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(739, 38);
-				char_literal851=(IToken)Match(input,201,Follow._201_in_overloadable_binary_operator5681); if (state.failed) return retval;
+				char_literal851=(IToken)Match(input,202,Follow._202_in_overloadable_binary_operator5681); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal851_tree = (object)adaptor.Create(char_literal851, "char_literal851", retval);
 				adaptor.AddChild(root_0, char_literal851_tree);
@@ -36785,7 +36786,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(739, 44);
-				char_literal852=(IToken)Match(input,97,Follow._97_in_overloadable_binary_operator5685); if (state.failed) return retval;
+				char_literal852=(IToken)Match(input,98,Follow._98_in_overloadable_binary_operator5685); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal852_tree = (object)adaptor.Create(char_literal852, "char_literal852", retval);
 				adaptor.AddChild(root_0, char_literal852_tree);
@@ -36800,7 +36801,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(739, 50);
-				string_literal853=(IToken)Match(input,86,Follow._86_in_overloadable_binary_operator5689); if (state.failed) return retval;
+				string_literal853=(IToken)Match(input,87,Follow._87_in_overloadable_binary_operator5689); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal853_tree = (object)adaptor.Create(string_literal853, "string_literal853", retval);
 				adaptor.AddChild(root_0, string_literal853_tree);
@@ -36836,7 +36837,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(739, 67);
-				string_literal856=(IToken)Match(input,90,Follow._90_in_overloadable_binary_operator5699); if (state.failed) return retval;
+				string_literal856=(IToken)Match(input,91,Follow._91_in_overloadable_binary_operator5699); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal856_tree = (object)adaptor.Create(string_literal856, "string_literal856", retval);
 				adaptor.AddChild(root_0, string_literal856_tree);
@@ -36851,7 +36852,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(739, 74);
-				string_literal857=(IToken)Match(input,66,Follow._66_in_overloadable_binary_operator5703); if (state.failed) return retval;
+				string_literal857=(IToken)Match(input,67,Follow._67_in_overloadable_binary_operator5703); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal857_tree = (object)adaptor.Create(string_literal857, "string_literal857", retval);
 				adaptor.AddChild(root_0, string_literal857_tree);
@@ -36881,7 +36882,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(739, 87);
-				char_literal859=(IToken)Match(input,85,Follow._85_in_overloadable_binary_operator5711); if (state.failed) return retval;
+				char_literal859=(IToken)Match(input,86,Follow._86_in_overloadable_binary_operator5711); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal859_tree = (object)adaptor.Create(char_literal859, "char_literal859", retval);
 				adaptor.AddChild(root_0, char_literal859_tree);
@@ -36896,7 +36897,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(739, 93);
-				string_literal860=(IToken)Match(input,92,Follow._92_in_overloadable_binary_operator5715); if (state.failed) return retval;
+				string_literal860=(IToken)Match(input,93,Follow._93_in_overloadable_binary_operator5715); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal860_tree = (object)adaptor.Create(string_literal860, "string_literal860", retval);
 				adaptor.AddChild(root_0, string_literal860_tree);
@@ -36911,7 +36912,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(739, 100);
-				string_literal861=(IToken)Match(input,88,Follow._88_in_overloadable_binary_operator5719); if (state.failed) return retval;
+				string_literal861=(IToken)Match(input,89,Follow._89_in_overloadable_binary_operator5719); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal861_tree = (object)adaptor.Create(string_literal861, "string_literal861", retval);
 				adaptor.AddChild(root_0, string_literal861_tree);
@@ -36993,7 +36994,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(741, 2);
 
 			set862=(IToken)input.LT(1);
-			if (input.LA(1)==129||input.LA(1)==140)
+			if (input.LA(1)==130||input.LA(1)==141)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set862, "set862", retval));
@@ -37008,7 +37009,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			}
 
 			DebugLocation(741, 29);
-			string_literal863=(IToken)Match(input,157,Follow._157_in_conversion_operator_declarator5737); if (state.failed) return retval;
+			string_literal863=(IToken)Match(input,158,Follow._158_in_conversion_operator_declarator5737); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal863_tree = (object)adaptor.Create(string_literal863, "string_literal863", retval);
 			adaptor.AddChild(root_0, string_literal863_tree);
@@ -37020,7 +37021,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, type864.Tree, type864, "type864", retval);
 			DebugLocation(741, 49);
-			char_literal865=(IToken)Match(input,72,Follow._72_in_conversion_operator_declarator5745); if (state.failed) return retval;
+			char_literal865=(IToken)Match(input,73,Follow._73_in_conversion_operator_declarator5745); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal865_tree = (object)adaptor.Create(char_literal865, "char_literal865", retval);
 			adaptor.AddChild(root_0, char_literal865_tree);
@@ -37183,7 +37184,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(279, false);
 			int LA279_1 = input.LA(1);
 
-			if ((LA279_1==95))
+			if ((LA279_1==96))
 			{
 				alt279 = 1;
 			}
@@ -37214,7 +37215,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(280, false);
 			int LA280_1 = input.LA(1);
 
-			if ((LA280_1==130||LA280_1==144||LA280_1==165||(LA280_1>=167 && LA280_1<=168)||LA280_1==191))
+			if ((LA280_1==131||LA280_1==145||LA280_1==166||(LA280_1>=168 && LA280_1<=169)||LA280_1==192))
 			{
 				alt280 = 1;
 			}
@@ -37322,7 +37323,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(281, false);
 				int LA281_1 = input.LA(1);
 
-				if ((LA281_1==130||LA281_1==144||LA281_1==165||(LA281_1>=167 && LA281_1<=168)||LA281_1==191))
+				if ((LA281_1==131||LA281_1==145||LA281_1==166||(LA281_1>=168 && LA281_1<=169)||LA281_1==192))
 				{
 					alt281 = 1;
 				}
@@ -37427,7 +37428,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(748, 21);
 
 			set875=(IToken)input.LT(1);
-			if (input.LA(1)==130||input.LA(1)==144||input.LA(1)==165||(input.LA(1)>=167 && input.LA(1)<=168)||input.LA(1)==191)
+			if (input.LA(1)==131||input.LA(1)==145||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==192)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set875, "set875", retval));
@@ -37516,7 +37517,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier876.Tree, identifier876, "identifier876", retval);
 			DebugLocation(751, 15);
-			char_literal877=(IToken)Match(input,72,Follow._72_in_constructor_declarator5837); if (state.failed) return retval;
+			char_literal877=(IToken)Match(input,73,Follow._73_in_constructor_declarator5837); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal877_tree = (object)adaptor.Create(char_literal877, "char_literal877", retval);
 			adaptor.AddChild(root_0, char_literal877_tree);
@@ -37528,7 +37529,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(282, false);
 			int LA282_1 = input.LA(1);
 
-			if ((LA282_1==GET||LA282_1==IDENTIFIER||LA282_1==SET||LA282_1==95||LA282_1==99||(LA282_1>=101 && LA282_1<=102)||(LA282_1>=104 && LA282_1<=107)||LA282_1==109||(LA282_1>=111 && LA282_1<=112)||LA282_1==115||LA282_1==120||LA282_1==123||(LA282_1>=125 && LA282_1<=127)||LA282_1==131||LA282_1==134||LA282_1==137||LA282_1==139||LA282_1==142||LA282_1==145||(LA282_1>=147 && LA282_1<=148)||(LA282_1>=150 && LA282_1<=152)||(LA282_1>=155 && LA282_1<=156)||(LA282_1>=158 && LA282_1<=159)||(LA282_1>=161 && LA282_1<=164)||LA282_1==166||(LA282_1>=170 && LA282_1<=171)||LA282_1==173||(LA282_1>=175 && LA282_1<=176)||LA282_1==180||LA282_1==183||LA282_1==186||(LA282_1>=188 && LA282_1<=189)||(LA282_1>=192 && LA282_1<=193)||LA282_1==195||LA282_1==197||LA282_1==199))
+			if ((LA282_1==GET||LA282_1==IDENTIFIER||LA282_1==SET||LA282_1==96||LA282_1==100||(LA282_1>=102 && LA282_1<=103)||(LA282_1>=105 && LA282_1<=108)||LA282_1==110||(LA282_1>=112 && LA282_1<=113)||LA282_1==116||LA282_1==121||LA282_1==124||(LA282_1>=126 && LA282_1<=128)||LA282_1==132||LA282_1==135||LA282_1==138||LA282_1==140||LA282_1==143||LA282_1==146||(LA282_1>=148 && LA282_1<=149)||(LA282_1>=151 && LA282_1<=153)||(LA282_1>=156 && LA282_1<=157)||(LA282_1>=159 && LA282_1<=160)||(LA282_1>=162 && LA282_1<=165)||LA282_1==167||(LA282_1>=171 && LA282_1<=172)||LA282_1==174||(LA282_1>=176 && LA282_1<=177)||LA282_1==181||LA282_1==184||LA282_1==187||(LA282_1>=189 && LA282_1<=190)||(LA282_1>=193 && LA282_1<=194)||LA282_1==196||LA282_1==198||LA282_1==200))
 			{
 				alt282 = 1;
 			}
@@ -37565,7 +37566,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(283, false);
 			int LA283_1 = input.LA(1);
 
-			if ((LA283_1==83))
+			if ((LA283_1==84))
 			{
 				alt283 = 1;
 			}
@@ -37660,7 +37661,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(753, 2);
-			char_literal881=(IToken)Match(input,83,Follow._83_in_constructor_initializer5859); if (state.failed) return retval;
+			char_literal881=(IToken)Match(input,84,Follow._84_in_constructor_initializer5859); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal881_tree = (object)adaptor.Create(char_literal881, "char_literal881", retval);
 			adaptor.AddChild(root_0, char_literal881_tree);
@@ -37668,7 +37669,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(753, 8);
 
 			set882=(IToken)input.LT(1);
-			if (input.LA(1)==108||input.LA(1)==183)
+			if (input.LA(1)==109||input.LA(1)==184)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set882, "set882", retval));
@@ -37683,7 +37684,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			}
 
 			DebugLocation(753, 28);
-			char_literal883=(IToken)Match(input,72,Follow._72_in_constructor_initializer5873); if (state.failed) return retval;
+			char_literal883=(IToken)Match(input,73,Follow._73_in_constructor_initializer5873); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal883_tree = (object)adaptor.Create(char_literal883, "char_literal883", retval);
 			adaptor.AddChild(root_0, char_literal883_tree);
@@ -37695,7 +37696,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(284, false);
 			int LA284_1 = input.LA(1);
 
-			if ((LA284_1==Character_literal||(LA284_1>=FALSE && LA284_1<=GET)||(LA284_1>=Hex_number && LA284_1<=IDENTIFIER)||(LA284_1>=MINUS && LA284_1<=NUMBER)||LA284_1==Real_literal||(LA284_1>=SET && LA284_1<=STRINGLITERAL)||LA284_1==TRUE||LA284_1==Verbatim_string_literal||LA284_1==65||LA284_1==70||(LA284_1>=72 && LA284_1<=73)||(LA284_1>=75 && LA284_1<=76)||LA284_1==79||LA284_1==99||(LA284_1>=101 && LA284_1<=102)||(LA284_1>=104 && LA284_1<=109)||(LA284_1>=111 && LA284_1<=112)||(LA284_1>=115 && LA284_1<=116)||(LA284_1>=120 && LA284_1<=123)||(LA284_1>=125 && LA284_1<=127)||LA284_1==131||LA284_1==134||LA284_1==137||LA284_1==139||LA284_1==142||LA284_1==145||(LA284_1>=147 && LA284_1<=148)||(LA284_1>=150 && LA284_1<=152)||(LA284_1>=154 && LA284_1<=156)||(LA284_1>=158 && LA284_1<=159)||LA284_1==161||(LA284_1>=163 && LA284_1<=164)||LA284_1==166||(LA284_1>=170 && LA284_1<=171)||LA284_1==173||(LA284_1>=175 && LA284_1<=177)||LA284_1==180||LA284_1==183||(LA284_1>=186 && LA284_1<=190)||(LA284_1>=192 && LA284_1<=193)||LA284_1==197||LA284_1==199||LA284_1==205))
+			if ((LA284_1==Character_literal||(LA284_1>=FALSE && LA284_1<=GET)||(LA284_1>=Hex_number && LA284_1<=IDENTIFIER)||(LA284_1>=MINUS && LA284_1<=NUMBER)||LA284_1==Real_literal||(LA284_1>=SET && LA284_1<=STRINGLITERAL)||LA284_1==TRUE||LA284_1==Verbatim_string_literal||LA284_1==66||LA284_1==71||(LA284_1>=73 && LA284_1<=74)||(LA284_1>=76 && LA284_1<=77)||LA284_1==80||LA284_1==100||(LA284_1>=102 && LA284_1<=103)||(LA284_1>=105 && LA284_1<=110)||(LA284_1>=112 && LA284_1<=113)||(LA284_1>=116 && LA284_1<=117)||(LA284_1>=121 && LA284_1<=124)||(LA284_1>=126 && LA284_1<=128)||LA284_1==132||LA284_1==135||LA284_1==138||LA284_1==140||LA284_1==143||LA284_1==146||(LA284_1>=148 && LA284_1<=149)||(LA284_1>=151 && LA284_1<=153)||(LA284_1>=155 && LA284_1<=157)||(LA284_1>=159 && LA284_1<=160)||LA284_1==162||(LA284_1>=164 && LA284_1<=165)||LA284_1==167||(LA284_1>=171 && LA284_1<=172)||LA284_1==174||(LA284_1>=176 && LA284_1<=178)||LA284_1==181||LA284_1==184||(LA284_1>=187 && LA284_1<=191)||(LA284_1>=193 && LA284_1<=194)||LA284_1==198||LA284_1==200||LA284_1==206))
 			{
 				alt284 = 1;
 			}
@@ -37869,7 +37870,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(285, false);
 			int LA285_1 = input.LA(1);
 
-			if ((LA285_1==95))
+			if ((LA285_1==96))
 			{
 				alt285 = 1;
 			}
@@ -37906,7 +37907,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier889.Tree, identifier889, "identifier889", retval);
 			DebugLocation(757, 59);
-			char_literal890=(IToken)Match(input,72,Follow._72_in_static_constructor_declaration5910); if (state.failed) return retval;
+			char_literal890=(IToken)Match(input,73,Follow._73_in_static_constructor_declaration5910); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal890_tree = (object)adaptor.Create(char_literal890, "char_literal890", retval);
 			adaptor.AddChild(root_0, char_literal890_tree);
@@ -38025,16 +38026,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(290, false);
 			switch (input.LA(1))
 			{
-			case 130:
+			case 131:
 				{
 				switch (input.LA(2))
 				{
-				case 191:
+				case 192:
 					{
 					alt290 = 1;
 					}
 					break;
-				case 179:
+				case 180:
 					{
 					alt290 = 2;
 					}
@@ -38042,37 +38043,37 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				case GET:
 				case IDENTIFIER:
 				case SET:
-				case 99:
-				case 101:
+				case 100:
 				case 102:
-				case 104:
+				case 103:
 				case 105:
 				case 106:
 				case 107:
-				case 111:
-				case 123:
-				case 126:
+				case 108:
+				case 112:
+				case 124:
 				case 127:
-				case 131:
-				case 137:
-				case 139:
-				case 145:
-				case 147:
+				case 128:
+				case 132:
+				case 138:
+				case 140:
+				case 146:
 				case 148:
-				case 151:
+				case 149:
 				case 152:
-				case 156:
-				case 158:
-				case 161:
-				case 163:
+				case 153:
+				case 157:
+				case 159:
+				case 162:
 				case 164:
-				case 166:
-				case 171:
-				case 175:
-				case 186:
-				case 193:
-				case 197:
-				case 199:
+				case 165:
+				case 167:
+				case 172:
+				case 176:
+				case 187:
+				case 194:
+				case 198:
+				case 200:
 					{
 					alt290 = 7;
 					}
@@ -38088,16 +38089,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 				}
 				break;
-			case 191:
+			case 192:
 				{
 				switch (input.LA(2))
 				{
-				case 130:
+				case 131:
 					{
 					alt290 = 3;
 					}
 					break;
-				case 179:
+				case 180:
 					{
 					alt290 = 4;
 					}
@@ -38105,37 +38106,37 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				case GET:
 				case IDENTIFIER:
 				case SET:
-				case 99:
-				case 101:
+				case 100:
 				case 102:
-				case 104:
+				case 103:
 				case 105:
 				case 106:
 				case 107:
-				case 111:
-				case 123:
-				case 126:
+				case 108:
+				case 112:
+				case 124:
 				case 127:
-				case 131:
-				case 137:
-				case 139:
-				case 145:
-				case 147:
+				case 128:
+				case 132:
+				case 138:
+				case 140:
+				case 146:
 				case 148:
-				case 151:
+				case 149:
 				case 152:
-				case 156:
-				case 158:
-				case 161:
-				case 163:
+				case 153:
+				case 157:
+				case 159:
+				case 162:
 				case 164:
-				case 166:
-				case 171:
-				case 175:
-				case 186:
-				case 193:
-				case 197:
-				case 199:
+				case 165:
+				case 167:
+				case 172:
+				case 176:
+				case 187:
+				case 194:
+				case 198:
+				case 200:
 					{
 					alt290 = 8;
 					}
@@ -38151,16 +38152,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 				}
 				break;
-			case 179:
+			case 180:
 				{
 				switch (input.LA(2))
 				{
-				case 130:
+				case 131:
 					{
 					alt290 = 5;
 					}
 					break;
-				case 191:
+				case 192:
 					{
 					alt290 = 6;
 					}
@@ -38168,37 +38169,37 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				case GET:
 				case IDENTIFIER:
 				case SET:
-				case 99:
-				case 101:
+				case 100:
 				case 102:
-				case 104:
+				case 103:
 				case 105:
 				case 106:
 				case 107:
-				case 111:
-				case 123:
-				case 126:
+				case 108:
+				case 112:
+				case 124:
 				case 127:
-				case 131:
-				case 137:
-				case 139:
-				case 145:
-				case 147:
+				case 128:
+				case 132:
+				case 138:
+				case 140:
+				case 146:
 				case 148:
-				case 151:
+				case 149:
 				case 152:
-				case 156:
-				case 158:
-				case 161:
-				case 163:
+				case 153:
+				case 157:
+				case 159:
+				case 162:
 				case 164:
-				case 166:
-				case 171:
-				case 175:
-				case 186:
-				case 193:
-				case 197:
-				case 199:
+				case 165:
+				case 167:
+				case 172:
+				case 176:
+				case 187:
+				case 194:
+				case 198:
+				case 200:
 					{
 					alt290 = 9;
 					}
@@ -38233,19 +38234,19 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(759, 4);
-				string_literal893=(IToken)Match(input,130,Follow._130_in_static_constructor_modifiers5927); if (state.failed) return retval;
+				string_literal893=(IToken)Match(input,131,Follow._131_in_static_constructor_modifiers5927); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal893_tree = (object)adaptor.Create(string_literal893, "string_literal893", retval);
 				adaptor.AddChild(root_0, string_literal893_tree);
 				}
 				DebugLocation(759, 13);
-				string_literal894=(IToken)Match(input,191,Follow._191_in_static_constructor_modifiers5929); if (state.failed) return retval;
+				string_literal894=(IToken)Match(input,192,Follow._192_in_static_constructor_modifiers5929); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal894_tree = (object)adaptor.Create(string_literal894, "string_literal894", retval);
 				adaptor.AddChild(root_0, string_literal894_tree);
 				}
 				DebugLocation(759, 22);
-				string_literal895=(IToken)Match(input,179,Follow._179_in_static_constructor_modifiers5931); if (state.failed) return retval;
+				string_literal895=(IToken)Match(input,180,Follow._180_in_static_constructor_modifiers5931); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal895_tree = (object)adaptor.Create(string_literal895, "string_literal895", retval);
 				adaptor.AddChild(root_0, string_literal895_tree);
@@ -38260,13 +38261,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(760, 4);
-				string_literal896=(IToken)Match(input,130,Follow._130_in_static_constructor_modifiers5936); if (state.failed) return retval;
+				string_literal896=(IToken)Match(input,131,Follow._131_in_static_constructor_modifiers5936); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal896_tree = (object)adaptor.Create(string_literal896, "string_literal896", retval);
 				adaptor.AddChild(root_0, string_literal896_tree);
 				}
 				DebugLocation(760, 13);
-				string_literal897=(IToken)Match(input,179,Follow._179_in_static_constructor_modifiers5938); if (state.failed) return retval;
+				string_literal897=(IToken)Match(input,180,Follow._180_in_static_constructor_modifiers5938); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal897_tree = (object)adaptor.Create(string_literal897, "string_literal897", retval);
 				adaptor.AddChild(root_0, string_literal897_tree);
@@ -38278,7 +38279,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(286, false);
 				int LA286_1 = input.LA(1);
 
-				if ((LA286_1==191))
+				if ((LA286_1==192))
 				{
 					alt286 = 1;
 				}
@@ -38290,7 +38291,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:760:22: 'unsafe'
 					{
 					DebugLocation(760, 22);
-					string_literal898=(IToken)Match(input,191,Follow._191_in_static_constructor_modifiers5940); if (state.failed) return retval;
+					string_literal898=(IToken)Match(input,192,Follow._192_in_static_constructor_modifiers5940); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal898_tree = (object)adaptor.Create(string_literal898, "string_literal898", retval);
 					adaptor.AddChild(root_0, string_literal898_tree);
@@ -38312,19 +38313,19 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(761, 4);
-				string_literal899=(IToken)Match(input,191,Follow._191_in_static_constructor_modifiers5946); if (state.failed) return retval;
+				string_literal899=(IToken)Match(input,192,Follow._192_in_static_constructor_modifiers5946); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal899_tree = (object)adaptor.Create(string_literal899, "string_literal899", retval);
 				adaptor.AddChild(root_0, string_literal899_tree);
 				}
 				DebugLocation(761, 13);
-				string_literal900=(IToken)Match(input,130,Follow._130_in_static_constructor_modifiers5948); if (state.failed) return retval;
+				string_literal900=(IToken)Match(input,131,Follow._131_in_static_constructor_modifiers5948); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal900_tree = (object)adaptor.Create(string_literal900, "string_literal900", retval);
 				adaptor.AddChild(root_0, string_literal900_tree);
 				}
 				DebugLocation(761, 22);
-				string_literal901=(IToken)Match(input,179,Follow._179_in_static_constructor_modifiers5950); if (state.failed) return retval;
+				string_literal901=(IToken)Match(input,180,Follow._180_in_static_constructor_modifiers5950); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal901_tree = (object)adaptor.Create(string_literal901, "string_literal901", retval);
 				adaptor.AddChild(root_0, string_literal901_tree);
@@ -38339,13 +38340,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(762, 4);
-				string_literal902=(IToken)Match(input,191,Follow._191_in_static_constructor_modifiers5955); if (state.failed) return retval;
+				string_literal902=(IToken)Match(input,192,Follow._192_in_static_constructor_modifiers5955); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal902_tree = (object)adaptor.Create(string_literal902, "string_literal902", retval);
 				adaptor.AddChild(root_0, string_literal902_tree);
 				}
 				DebugLocation(762, 13);
-				string_literal903=(IToken)Match(input,179,Follow._179_in_static_constructor_modifiers5957); if (state.failed) return retval;
+				string_literal903=(IToken)Match(input,180,Follow._180_in_static_constructor_modifiers5957); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal903_tree = (object)adaptor.Create(string_literal903, "string_literal903", retval);
 				adaptor.AddChild(root_0, string_literal903_tree);
@@ -38357,7 +38358,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(287, false);
 				int LA287_1 = input.LA(1);
 
-				if ((LA287_1==130))
+				if ((LA287_1==131))
 				{
 					alt287 = 1;
 				}
@@ -38369,7 +38370,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:762:22: 'extern'
 					{
 					DebugLocation(762, 22);
-					string_literal904=(IToken)Match(input,130,Follow._130_in_static_constructor_modifiers5959); if (state.failed) return retval;
+					string_literal904=(IToken)Match(input,131,Follow._131_in_static_constructor_modifiers5959); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal904_tree = (object)adaptor.Create(string_literal904, "string_literal904", retval);
 					adaptor.AddChild(root_0, string_literal904_tree);
@@ -38391,13 +38392,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(763, 4);
-				string_literal905=(IToken)Match(input,179,Follow._179_in_static_constructor_modifiers5965); if (state.failed) return retval;
+				string_literal905=(IToken)Match(input,180,Follow._180_in_static_constructor_modifiers5965); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal905_tree = (object)adaptor.Create(string_literal905, "string_literal905", retval);
 				adaptor.AddChild(root_0, string_literal905_tree);
 				}
 				DebugLocation(763, 13);
-				string_literal906=(IToken)Match(input,130,Follow._130_in_static_constructor_modifiers5967); if (state.failed) return retval;
+				string_literal906=(IToken)Match(input,131,Follow._131_in_static_constructor_modifiers5967); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal906_tree = (object)adaptor.Create(string_literal906, "string_literal906", retval);
 				adaptor.AddChild(root_0, string_literal906_tree);
@@ -38409,7 +38410,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(288, false);
 				int LA288_1 = input.LA(1);
 
-				if ((LA288_1==191))
+				if ((LA288_1==192))
 				{
 					alt288 = 1;
 				}
@@ -38421,7 +38422,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:763:22: 'unsafe'
 					{
 					DebugLocation(763, 22);
-					string_literal907=(IToken)Match(input,191,Follow._191_in_static_constructor_modifiers5969); if (state.failed) return retval;
+					string_literal907=(IToken)Match(input,192,Follow._192_in_static_constructor_modifiers5969); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal907_tree = (object)adaptor.Create(string_literal907, "string_literal907", retval);
 					adaptor.AddChild(root_0, string_literal907_tree);
@@ -38443,13 +38444,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(764, 4);
-				string_literal908=(IToken)Match(input,179,Follow._179_in_static_constructor_modifiers5975); if (state.failed) return retval;
+				string_literal908=(IToken)Match(input,180,Follow._180_in_static_constructor_modifiers5975); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal908_tree = (object)adaptor.Create(string_literal908, "string_literal908", retval);
 				adaptor.AddChild(root_0, string_literal908_tree);
 				}
 				DebugLocation(764, 13);
-				string_literal909=(IToken)Match(input,191,Follow._191_in_static_constructor_modifiers5977); if (state.failed) return retval;
+				string_literal909=(IToken)Match(input,192,Follow._192_in_static_constructor_modifiers5977); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal909_tree = (object)adaptor.Create(string_literal909, "string_literal909", retval);
 				adaptor.AddChild(root_0, string_literal909_tree);
@@ -38461,7 +38462,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(289, false);
 				int LA289_1 = input.LA(1);
 
-				if ((LA289_1==130))
+				if ((LA289_1==131))
 				{
 					alt289 = 1;
 				}
@@ -38473,7 +38474,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:764:22: 'extern'
 					{
 					DebugLocation(764, 22);
-					string_literal910=(IToken)Match(input,130,Follow._130_in_static_constructor_modifiers5979); if (state.failed) return retval;
+					string_literal910=(IToken)Match(input,131,Follow._131_in_static_constructor_modifiers5979); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal910_tree = (object)adaptor.Create(string_literal910, "string_literal910", retval);
 					adaptor.AddChild(root_0, string_literal910_tree);
@@ -38495,7 +38496,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(765, 4);
-				string_literal911=(IToken)Match(input,130,Follow._130_in_static_constructor_modifiers5986); if (state.failed) return retval;
+				string_literal911=(IToken)Match(input,131,Follow._131_in_static_constructor_modifiers5986); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal911_tree = (object)adaptor.Create(string_literal911, "string_literal911", retval);
 				adaptor.AddChild(root_0, string_literal911_tree);
@@ -38510,7 +38511,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(766, 4);
-				string_literal912=(IToken)Match(input,191,Follow._191_in_static_constructor_modifiers5991); if (state.failed) return retval;
+				string_literal912=(IToken)Match(input,192,Follow._192_in_static_constructor_modifiers5991); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal912_tree = (object)adaptor.Create(string_literal912, "string_literal912", retval);
 				adaptor.AddChild(root_0, string_literal912_tree);
@@ -38525,7 +38526,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(767, 4);
-				string_literal913=(IToken)Match(input,179,Follow._179_in_static_constructor_modifiers5996); if (state.failed) return retval;
+				string_literal913=(IToken)Match(input,180,Follow._180_in_static_constructor_modifiers5996); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal913_tree = (object)adaptor.Create(string_literal913, "string_literal913", retval);
 				adaptor.AddChild(root_0, string_literal913_tree);
@@ -38678,7 +38679,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(291, false);
 			int LA291_1 = input.LA(1);
 
-			if ((LA291_1==95))
+			if ((LA291_1==96))
 			{
 				alt291 = 1;
 			}
@@ -38709,7 +38710,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(292, false);
 			int LA292_1 = input.LA(1);
 
-			if ((LA292_1==130||LA292_1==191))
+			if ((LA292_1==131||LA292_1==192))
 			{
 				alt292 = 1;
 			}
@@ -38734,7 +38735,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(292); }
 
 			DebugLocation(771, 40);
-			char_literal917=(IToken)Match(input,205,Follow._205_in_destructor_declaration6021); if (state.failed) return retval;
+			char_literal917=(IToken)Match(input,206,Follow._206_in_destructor_declaration6021); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal917_tree = (object)adaptor.Create(char_literal917, "char_literal917", retval);
 			adaptor.AddChild(root_0, char_literal917_tree);
@@ -38746,7 +38747,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier918.Tree, identifier918, "identifier918", retval);
 			DebugLocation(771, 58);
-			char_literal919=(IToken)Match(input,72,Follow._72_in_destructor_declaration6028); if (state.failed) return retval;
+			char_literal919=(IToken)Match(input,73,Follow._73_in_destructor_declaration6028); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal919_tree = (object)adaptor.Create(char_literal919, "char_literal919", retval);
 			adaptor.AddChild(root_0, char_literal919_tree);
@@ -38831,11 +38832,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(295, false);
 			int LA295_1 = input.LA(1);
 
-			if ((LA295_1==130))
+			if ((LA295_1==131))
 			{
 				int LA295_2 = input.LA(2);
 
-				if ((LA295_2==191))
+				if ((LA295_2==192))
 				{
 					int LA295_3 = input.LA(3);
 
@@ -38855,7 +38856,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						throw nvae;
 					}
 				}
-				else if ((LA295_2==EOF||LA295_2==205))
+				else if ((LA295_2==EOF||LA295_2==206))
 				{
 					alt295 = 2;
 				}
@@ -38867,7 +38868,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA295_1==191))
+			else if ((LA295_1==192))
 			{
 				alt295 = 1;
 			}
@@ -38899,7 +38900,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(293, false);
 				int LA293_1 = input.LA(1);
 
-				if ((LA293_1==130))
+				if ((LA293_1==131))
 				{
 					alt293 = 1;
 				}
@@ -38911,7 +38912,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:773:3: 'extern'
 					{
 					DebugLocation(773, 3);
-					string_literal922=(IToken)Match(input,130,Follow._130_in_destructor_modifiers6046); if (state.failed) return retval;
+					string_literal922=(IToken)Match(input,131,Follow._131_in_destructor_modifiers6046); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal922_tree = (object)adaptor.Create(string_literal922, "string_literal922", retval);
 					adaptor.AddChild(root_0, string_literal922_tree);
@@ -38924,7 +38925,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				} finally { DebugExitSubRule(293); }
 
 				DebugLocation(773, 13);
-				string_literal923=(IToken)Match(input,191,Follow._191_in_destructor_modifiers6049); if (state.failed) return retval;
+				string_literal923=(IToken)Match(input,192,Follow._192_in_destructor_modifiers6049); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal923_tree = (object)adaptor.Create(string_literal923, "string_literal923", retval);
 				adaptor.AddChild(root_0, string_literal923_tree);
@@ -38947,7 +38948,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:774:5: 'extern' ( 'unsafe' )?
 				{
 				DebugLocation(774, 5);
-				string_literal924=(IToken)Match(input,130,Follow._130_in_destructor_modifiers6056); if (state.failed) return retval;
+				string_literal924=(IToken)Match(input,131,Follow._131_in_destructor_modifiers6056); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal924_tree = (object)adaptor.Create(string_literal924, "string_literal924", retval);
 				adaptor.AddChild(root_0, string_literal924_tree);
@@ -38959,7 +38960,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(294, false);
 				int LA294_1 = input.LA(1);
 
-				if ((LA294_1==191))
+				if ((LA294_1==192))
 				{
 					alt294 = 1;
 				}
@@ -38971,7 +38972,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:774:14: 'unsafe'
 					{
 					DebugLocation(774, 14);
-					string_literal925=(IToken)Match(input,191,Follow._191_in_destructor_modifiers6058); if (state.failed) return retval;
+					string_literal925=(IToken)Match(input,192,Follow._192_in_destructor_modifiers6058); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					string_literal925_tree = (object)adaptor.Create(string_literal925, "string_literal925", retval);
 					adaptor.AddChild(root_0, string_literal925_tree);
@@ -39137,7 +39138,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(296, false);
 			int LA296_1 = input.LA(1);
 
-			if ((LA296_1==95))
+			if ((LA296_1==96))
 			{
 				alt296 = 1;
 			}
@@ -39168,7 +39169,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(297, false);
 			int LA297_1 = input.LA(1);
 
-			if ((LA297_1==144||LA297_1==154||LA297_1==165||(LA297_1>=167 && LA297_1<=168)||LA297_1==191))
+			if ((LA297_1==145||LA297_1==155||LA297_1==166||(LA297_1>=168 && LA297_1<=169)||LA297_1==192))
 			{
 				alt297 = 1;
 			}
@@ -39199,7 +39200,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(298, false);
 			int LA298_1 = input.LA(1);
 
-			if ((LA298_1==163))
+			if ((LA298_1==164))
 			{
 				alt298 = 1;
 			}
@@ -39211,7 +39212,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:780:36: 'partial'
 				{
 				DebugLocation(780, 36);
-				string_literal929=(IToken)Match(input,163,Follow._163_in_struct_declaration6088); if (state.failed) return retval;
+				string_literal929=(IToken)Match(input,164,Follow._164_in_struct_declaration6088); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal929_tree = (object)adaptor.Create(string_literal929, "string_literal929", retval);
 				adaptor.AddChild(root_0, string_literal929_tree);
@@ -39224,7 +39225,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(298); }
 
 			DebugLocation(780, 49);
-			string_literal930=(IToken)Match(input,181,Follow._181_in_struct_declaration6093); if (state.failed) return retval;
+			string_literal930=(IToken)Match(input,182,Follow._182_in_struct_declaration6093); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal930_tree = (object)adaptor.Create(string_literal930, "string_literal930", retval);
 			adaptor.AddChild(root_0, string_literal930_tree);
@@ -39242,7 +39243,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(299, false);
 			int LA299_1 = input.LA(1);
 
-			if ((LA299_1==85))
+			if ((LA299_1==86))
 			{
 				alt299 = 1;
 			}
@@ -39273,7 +39274,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(300, false);
 			int LA300_1 = input.LA(1);
 
-			if ((LA300_1==83))
+			if ((LA300_1==84))
 			{
 				alt300 = 1;
 			}
@@ -39304,7 +39305,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(301, false);
 			int LA301_1 = input.LA(1);
 
-			if ((LA301_1==197))
+			if ((LA301_1==198))
 			{
 				alt301 = 1;
 			}
@@ -39437,7 +39438,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(303, false);
 				int LA303_1 = input.LA(1);
 
-				if ((LA303_1==144||LA303_1==154||LA303_1==165||(LA303_1>=167 && LA303_1<=168)||LA303_1==191))
+				if ((LA303_1==145||LA303_1==155||LA303_1==166||(LA303_1>=168 && LA303_1<=169)||LA303_1==192))
 				{
 					alt303 = 1;
 				}
@@ -39542,7 +39543,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(784, 16);
 
 			set938=(IToken)input.LT(1);
-			if (input.LA(1)==144||input.LA(1)==154||input.LA(1)==165||(input.LA(1)>=167 && input.LA(1)<=168)||input.LA(1)==191)
+			if (input.LA(1)==145||input.LA(1)==155||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==192)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set938, "set938", retval));
@@ -39621,7 +39622,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(787, 2);
-			char_literal939=(IToken)Match(input,83,Follow._83_in_struct_interfaces6167); if (state.failed) return retval;
+			char_literal939=(IToken)Match(input,84,Follow._84_in_struct_interfaces6167); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal939_tree = (object)adaptor.Create(char_literal939, "char_literal939", retval);
 			adaptor.AddChild(root_0, char_literal939_tree);
@@ -39699,7 +39700,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(789, 2);
-			char_literal941=(IToken)Match(input,200,Follow._200_in_struct_body6178); if (state.failed) return retval;
+			char_literal941=(IToken)Match(input,201,Follow._201_in_struct_body6178); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal941_tree = (object)adaptor.Create(char_literal941, "char_literal941", retval);
 			adaptor.AddChild(root_0, char_literal941_tree);
@@ -39711,7 +39712,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(304, false);
 			int LA304_1 = input.LA(1);
 
-			if ((LA304_1==ENUM||LA304_1==GET||LA304_1==IDENTIFIER||LA304_1==SET||LA304_1==95||(LA304_1>=99 && LA304_1<=102)||(LA304_1>=104 && LA304_1<=107)||LA304_1==109||(LA304_1>=111 && LA304_1<=112)||LA304_1==115||(LA304_1>=117 && LA304_1<=118)||LA304_1==120||(LA304_1>=122 && LA304_1<=123)||(LA304_1>=125 && LA304_1<=128)||(LA304_1>=130 && LA304_1<=131)||(LA304_1>=133 && LA304_1<=134)||LA304_1==137||LA304_1==139||(LA304_1>=142 && LA304_1<=145)||(LA304_1>=147 && LA304_1<=148)||(LA304_1>=150 && LA304_1<=152)||(LA304_1>=154 && LA304_1<=156)||LA304_1==158||(LA304_1>=160 && LA304_1<=161)||(LA304_1>=163 && LA304_1<=169)||LA304_1==171||(LA304_1>=173 && LA304_1<=176)||(LA304_1>=179 && LA304_1<=181)||LA304_1==186||(LA304_1>=188 && LA304_1<=189)||(LA304_1>=191 && LA304_1<=197)||LA304_1==199))
+			if ((LA304_1==ENUM||LA304_1==GET||LA304_1==IDENTIFIER||LA304_1==SET||LA304_1==96||(LA304_1>=100 && LA304_1<=103)||(LA304_1>=105 && LA304_1<=108)||LA304_1==110||(LA304_1>=112 && LA304_1<=113)||LA304_1==116||(LA304_1>=118 && LA304_1<=119)||LA304_1==121||(LA304_1>=123 && LA304_1<=124)||(LA304_1>=126 && LA304_1<=129)||(LA304_1>=131 && LA304_1<=132)||(LA304_1>=134 && LA304_1<=135)||LA304_1==138||LA304_1==140||(LA304_1>=143 && LA304_1<=146)||(LA304_1>=148 && LA304_1<=149)||(LA304_1>=151 && LA304_1<=153)||(LA304_1>=155 && LA304_1<=157)||LA304_1==159||(LA304_1>=161 && LA304_1<=162)||(LA304_1>=164 && LA304_1<=170)||LA304_1==172||(LA304_1>=174 && LA304_1<=177)||(LA304_1>=180 && LA304_1<=182)||LA304_1==187||(LA304_1>=189 && LA304_1<=190)||(LA304_1>=192 && LA304_1<=198)||LA304_1==200))
 			{
 				alt304 = 1;
 			}
@@ -39736,7 +39737,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(304); }
 
 			DebugLocation(789, 38);
-			char_literal943=(IToken)Match(input,204,Follow._204_in_struct_body6187); if (state.failed) return retval;
+			char_literal943=(IToken)Match(input,205,Follow._205_in_struct_body6187); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal943_tree = (object)adaptor.Create(char_literal943, "char_literal943", retval);
 			adaptor.AddChild(root_0, char_literal943_tree);
@@ -39813,7 +39814,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(305, false);
 				int LA305_1 = input.LA(1);
 
-				if ((LA305_1==ENUM||LA305_1==GET||LA305_1==IDENTIFIER||LA305_1==SET||LA305_1==95||(LA305_1>=99 && LA305_1<=102)||(LA305_1>=104 && LA305_1<=107)||LA305_1==109||(LA305_1>=111 && LA305_1<=112)||LA305_1==115||(LA305_1>=117 && LA305_1<=118)||LA305_1==120||(LA305_1>=122 && LA305_1<=123)||(LA305_1>=125 && LA305_1<=128)||(LA305_1>=130 && LA305_1<=131)||(LA305_1>=133 && LA305_1<=134)||LA305_1==137||LA305_1==139||(LA305_1>=142 && LA305_1<=145)||(LA305_1>=147 && LA305_1<=148)||(LA305_1>=150 && LA305_1<=152)||(LA305_1>=154 && LA305_1<=156)||LA305_1==158||(LA305_1>=160 && LA305_1<=161)||(LA305_1>=163 && LA305_1<=169)||LA305_1==171||(LA305_1>=173 && LA305_1<=176)||(LA305_1>=179 && LA305_1<=181)||LA305_1==186||(LA305_1>=188 && LA305_1<=189)||(LA305_1>=191 && LA305_1<=197)||LA305_1==199))
+				if ((LA305_1==ENUM||LA305_1==GET||LA305_1==IDENTIFIER||LA305_1==SET||LA305_1==96||(LA305_1>=100 && LA305_1<=103)||(LA305_1>=105 && LA305_1<=108)||LA305_1==110||(LA305_1>=112 && LA305_1<=113)||LA305_1==116||(LA305_1>=118 && LA305_1<=119)||LA305_1==121||(LA305_1>=123 && LA305_1<=124)||(LA305_1>=126 && LA305_1<=129)||(LA305_1>=131 && LA305_1<=132)||(LA305_1>=134 && LA305_1<=135)||LA305_1==138||LA305_1==140||(LA305_1>=143 && LA305_1<=146)||(LA305_1>=148 && LA305_1<=149)||(LA305_1>=151 && LA305_1<=153)||(LA305_1>=155 && LA305_1<=157)||LA305_1==159||(LA305_1>=161 && LA305_1<=162)||(LA305_1>=164 && LA305_1<=170)||LA305_1==172||(LA305_1>=174 && LA305_1<=177)||(LA305_1>=180 && LA305_1<=182)||LA305_1==187||(LA305_1>=189 && LA305_1<=190)||(LA305_1>=192 && LA305_1<=198)||LA305_1==200))
 				{
 					alt305 = 1;
 				}
@@ -39923,7 +39924,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(306, false);
 			switch (input.LA(1))
 			{
-			case 95:
+			case 96:
 				{
 				int LA306_2 = input.LA(2);
 
@@ -39980,7 +39981,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 168:
+			case 169:
 				{
 				int LA306_2 = input.LA(2);
 
@@ -40033,12 +40034,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 118:
+			case 119:
 				{
 				alt306 = 1;
 				}
 				break;
-			case 191:
+			case 192:
 				{
 				int LA306_2 = input.LA(2);
 
@@ -40091,12 +40092,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 133:
+			case 134:
 				{
 				alt306 = 2;
 				}
 				break;
-			case 179:
+			case 180:
 				{
 				int LA306_2 = input.LA(2);
 
@@ -40137,21 +40138,21 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 109:
-			case 112:
-			case 115:
-			case 120:
-			case 125:
-			case 134:
-			case 142:
-			case 150:
-			case 155:
-			case 173:
-			case 176:
-			case 180:
-			case 188:
+			case 110:
+			case 113:
+			case 116:
+			case 121:
+			case 126:
+			case 135:
+			case 143:
+			case 151:
+			case 156:
+			case 174:
+			case 177:
+			case 181:
 			case 189:
-			case 192:
+			case 190:
+			case 193:
 				{
 				int LA306_2 = input.LA(2);
 
@@ -40180,7 +40181,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 106:
+			case 107:
 				{
 				int LA306_2 = input.LA(2);
 
@@ -40213,19 +40214,19 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 104:
-			case 111:
-			case 123:
-			case 127:
-			case 137:
-			case 139:
-			case 145:
-			case 147:
+			case 105:
+			case 112:
+			case 124:
+			case 128:
+			case 138:
+			case 140:
+			case 146:
 			case 148:
-			case 156:
-			case 158:
-			case 175:
-			case 197:
+			case 149:
+			case 157:
+			case 159:
+			case 176:
+			case 198:
 				{
 				int LA306_2 = input.LA(2);
 
@@ -40258,7 +40259,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 195:
+			case 196:
 				{
 				int LA306_2 = input.LA(2);
 
@@ -40287,13 +40288,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 169:
-			case 196:
+			case 170:
+			case 197:
 				{
 				alt306 = 3;
 				}
 				break;
-			case 163:
+			case 164:
 				{
 				int LA306_2 = input.LA(2);
 
@@ -40330,7 +40331,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 130:
+			case 131:
 				{
 				int LA306_2 = input.LA(2);
 
@@ -40374,22 +40375,22 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case GET:
 			case IDENTIFIER:
 			case SET:
-			case 99:
-			case 101:
+			case 100:
 			case 102:
-			case 105:
-			case 107:
-			case 126:
-			case 131:
-			case 151:
+			case 103:
+			case 106:
+			case 108:
+			case 127:
+			case 132:
 			case 152:
-			case 161:
-			case 164:
-			case 166:
-			case 171:
-			case 186:
-			case 193:
-			case 199:
+			case 153:
+			case 162:
+			case 165:
+			case 167:
+			case 172:
+			case 187:
+			case 194:
+			case 200:
 				{
 				int LA306_2 = input.LA(2);
 
@@ -40422,14 +40423,14 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 128:
+			case 129:
 				{
 				alt306 = 6;
 				}
 				break;
-			case 144:
-			case 165:
-			case 167:
+			case 145:
+			case 166:
+			case 168:
 				{
 				int LA306_2 = input.LA(2);
 
@@ -40478,8 +40479,8 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 100:
-			case 174:
+			case 101:
+			case 175:
 				{
 				int LA306_2 = input.LA(2);
 
@@ -40512,7 +40513,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 154:
+			case 155:
 				{
 				int LA306_2 = input.LA(2);
 
@@ -40557,8 +40558,8 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 160:
-			case 194:
+			case 161:
+			case 195:
 				{
 				int LA306_2 = input.LA(2);
 
@@ -40588,10 +40589,10 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				break;
 			case ENUM:
-			case 117:
-			case 122:
-			case 143:
-			case 181:
+			case 118:
+			case 123:
+			case 144:
+			case 182:
 				{
 				alt306 = 11;
 				}
@@ -40848,7 +40849,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(307, false);
 			int LA307_1 = input.LA(1);
 
-			if ((LA307_1==95))
+			if ((LA307_1==96))
 			{
 				alt307 = 1;
 			}
@@ -40879,7 +40880,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(308, false);
 			int LA308_1 = input.LA(1);
 
-			if ((LA308_1==144||LA308_1==154||LA308_1==165||(LA308_1>=167 && LA308_1<=168)||LA308_1==191))
+			if ((LA308_1==145||LA308_1==155||LA308_1==166||(LA308_1>=168 && LA308_1<=169)||LA308_1==192))
 			{
 				alt308 = 1;
 			}
@@ -40904,7 +40905,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(308); }
 
 			DebugLocation(805, 43);
-			string_literal958=(IToken)Match(input,133,Follow._133_in_fixed_size_buffer_declaration6267); if (state.failed) return retval;
+			string_literal958=(IToken)Match(input,134,Follow._134_in_fixed_size_buffer_declaration6267); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal958_tree = (object)adaptor.Create(string_literal958, "string_literal958", retval);
 			adaptor.AddChild(root_0, string_literal958_tree);
@@ -40999,7 +41000,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(309, false);
 				int LA309_1 = input.LA(1);
 
-				if ((LA309_1==144||LA309_1==154||LA309_1==165||(LA309_1>=167 && LA309_1<=168)||LA309_1==191))
+				if ((LA309_1==145||LA309_1==155||LA309_1==166||(LA309_1>=168 && LA309_1<=169)||LA309_1==192))
 				{
 					alt309 = 1;
 				}
@@ -41104,7 +41105,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(808, 27);
 
 			set963=(IToken)input.LT(1);
-			if (input.LA(1)==144||input.LA(1)==154||input.LA(1)==165||(input.LA(1)>=167 && input.LA(1)<=168)||input.LA(1)==191)
+			if (input.LA(1)==145||input.LA(1)==155||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==192)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set963, "set963", retval));
@@ -41198,7 +41199,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(310, false);
 				int LA310_1 = input.LA(1);
 
-				if ((LA310_1==78))
+				if ((LA310_1==79))
 				{
 					alt310 = 1;
 				}
@@ -41212,7 +41213,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:811:32: ',' fixed_size_buffer_declarator
 					{
 					DebugLocation(811, 32);
-					char_literal965=(IToken)Match(input,78,Follow._78_in_fixed_size_buffer_declarators6320); if (state.failed) return retval;
+					char_literal965=(IToken)Match(input,79,Follow._79_in_fixed_size_buffer_declarators6320); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal965_tree = (object)adaptor.Create(char_literal965, "char_literal965", retval);
 					adaptor.AddChild(root_0, char_literal965_tree);
@@ -41311,7 +41312,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier967.Tree, identifier967, "identifier967", retval);
 			DebugLocation(813, 13);
-			char_literal968=(IToken)Match(input,95,Follow._95_in_fixed_size_buffer_declarator6333); if (state.failed) return retval;
+			char_literal968=(IToken)Match(input,96,Follow._96_in_fixed_size_buffer_declarator6333); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal968_tree = (object)adaptor.Create(char_literal968, "char_literal968", retval);
 			adaptor.AddChild(root_0, char_literal968_tree);
@@ -41323,7 +41324,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression969.Tree, constant_expression969, "constant_expression969", retval);
 			DebugLocation(813, 37);
-			char_literal970=(IToken)Match(input,96,Follow._96_in_fixed_size_buffer_declarator6337); if (state.failed) return retval;
+			char_literal970=(IToken)Match(input,97,Follow._97_in_fixed_size_buffer_declarator6337); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal970_tree = (object)adaptor.Create(char_literal970, "char_literal970", retval);
 			adaptor.AddChild(root_0, char_literal970_tree);
@@ -41409,7 +41410,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(311, false);
 			int LA311_1 = input.LA(1);
 
-			if ((LA311_1==95))
+			if ((LA311_1==96))
 			{
 				alt311 = 1;
 			}
@@ -41440,7 +41441,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(312, false);
 			int LA312_1 = input.LA(1);
 
-			if ((LA312_1==144||LA312_1==154||LA312_1==165||(LA312_1>=167 && LA312_1<=168)||LA312_1==191))
+			if ((LA312_1==145||LA312_1==155||LA312_1==166||(LA312_1>=168 && LA312_1<=169)||LA312_1==192))
 			{
 				alt312 = 1;
 			}
@@ -41471,7 +41472,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(313, false);
 			int LA313_1 = input.LA(1);
 
-			if ((LA313_1==163))
+			if ((LA313_1==164))
 			{
 				alt313 = 1;
 			}
@@ -41483,7 +41484,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:817:39: 'partial'
 				{
 				DebugLocation(817, 39);
-				string_literal973=(IToken)Match(input,163,Follow._163_in_interface_declaration6356); if (state.failed) return retval;
+				string_literal973=(IToken)Match(input,164,Follow._164_in_interface_declaration6356); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal973_tree = (object)adaptor.Create(string_literal973, "string_literal973", retval);
 				adaptor.AddChild(root_0, string_literal973_tree);
@@ -41496,7 +41497,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(313); }
 
 			DebugLocation(817, 52);
-			string_literal974=(IToken)Match(input,143,Follow._143_in_interface_declaration6361); if (state.failed) return retval;
+			string_literal974=(IToken)Match(input,144,Follow._144_in_interface_declaration6361); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal974_tree = (object)adaptor.Create(string_literal974, "string_literal974", retval);
 			adaptor.AddChild(root_0, string_literal974_tree);
@@ -41514,7 +41515,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(314, false);
 			int LA314_1 = input.LA(1);
 
-			if ((LA314_1==85))
+			if ((LA314_1==86))
 			{
 				alt314 = 1;
 			}
@@ -41545,7 +41546,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(315, false);
 			int LA315_1 = input.LA(1);
 
-			if ((LA315_1==83))
+			if ((LA315_1==84))
 			{
 				alt315 = 1;
 			}
@@ -41576,7 +41577,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(316, false);
 			int LA316_1 = input.LA(1);
 
-			if ((LA316_1==197))
+			if ((LA316_1==198))
 			{
 				alt316 = 1;
 			}
@@ -41709,7 +41710,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(318, false);
 				int LA318_1 = input.LA(1);
 
-				if ((LA318_1==144||LA318_1==154||LA318_1==165||(LA318_1>=167 && LA318_1<=168)||LA318_1==191))
+				if ((LA318_1==145||LA318_1==155||LA318_1==166||(LA318_1>=168 && LA318_1<=169)||LA318_1==192))
 				{
 					alt318 = 1;
 				}
@@ -41814,7 +41815,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(822, 19);
 
 			set982=(IToken)input.LT(1);
-			if (input.LA(1)==144||input.LA(1)==154||input.LA(1)==165||(input.LA(1)>=167 && input.LA(1)<=168)||input.LA(1)==191)
+			if (input.LA(1)==145||input.LA(1)==155||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==192)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set982, "set982", retval));
@@ -41893,7 +41894,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(825, 5);
-			char_literal983=(IToken)Match(input,83,Follow._83_in_interface_base6444); if (state.failed) return retval;
+			char_literal983=(IToken)Match(input,84,Follow._84_in_interface_base6444); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal983_tree = (object)adaptor.Create(char_literal983, "char_literal983", retval);
 			adaptor.AddChild(root_0, char_literal983_tree);
@@ -41971,7 +41972,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(827, 2);
-			char_literal985=(IToken)Match(input,200,Follow._200_in_interface_body6454); if (state.failed) return retval;
+			char_literal985=(IToken)Match(input,201,Follow._201_in_interface_body6454); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal985_tree = (object)adaptor.Create(char_literal985, "char_literal985", retval);
 			adaptor.AddChild(root_0, char_literal985_tree);
@@ -41983,7 +41984,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(319, false);
 			int LA319_1 = input.LA(1);
 
-			if ((LA319_1==GET||LA319_1==IDENTIFIER||LA319_1==SET||LA319_1==95||(LA319_1>=99 && LA319_1<=102)||(LA319_1>=104 && LA319_1<=107)||LA319_1==109||(LA319_1>=111 && LA319_1<=112)||LA319_1==115||LA319_1==120||LA319_1==123||(LA319_1>=125 && LA319_1<=128)||(LA319_1>=130 && LA319_1<=131)||LA319_1==134||LA319_1==137||LA319_1==139||LA319_1==142||(LA319_1>=144 && LA319_1<=145)||(LA319_1>=147 && LA319_1<=148)||(LA319_1>=150 && LA319_1<=152)||(LA319_1>=154 && LA319_1<=156)||LA319_1==158||(LA319_1>=160 && LA319_1<=161)||(LA319_1>=163 && LA319_1<=168)||LA319_1==171||(LA319_1>=173 && LA319_1<=176)||(LA319_1>=179 && LA319_1<=180)||LA319_1==186||(LA319_1>=188 && LA319_1<=189)||(LA319_1>=191 && LA319_1<=195)||LA319_1==197||LA319_1==199))
+			if ((LA319_1==GET||LA319_1==IDENTIFIER||LA319_1==SET||LA319_1==96||(LA319_1>=100 && LA319_1<=103)||(LA319_1>=105 && LA319_1<=108)||LA319_1==110||(LA319_1>=112 && LA319_1<=113)||LA319_1==116||LA319_1==121||LA319_1==124||(LA319_1>=126 && LA319_1<=129)||(LA319_1>=131 && LA319_1<=132)||LA319_1==135||LA319_1==138||LA319_1==140||LA319_1==143||(LA319_1>=145 && LA319_1<=146)||(LA319_1>=148 && LA319_1<=149)||(LA319_1>=151 && LA319_1<=153)||(LA319_1>=155 && LA319_1<=157)||LA319_1==159||(LA319_1>=161 && LA319_1<=162)||(LA319_1>=164 && LA319_1<=169)||LA319_1==172||(LA319_1>=174 && LA319_1<=177)||(LA319_1>=180 && LA319_1<=181)||LA319_1==187||(LA319_1>=189 && LA319_1<=190)||(LA319_1>=192 && LA319_1<=196)||LA319_1==198||LA319_1==200))
 			{
 				alt319 = 1;
 			}
@@ -42008,7 +42009,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(319); }
 
 			DebugLocation(827, 41);
-			char_literal987=(IToken)Match(input,204,Follow._204_in_interface_body6463); if (state.failed) return retval;
+			char_literal987=(IToken)Match(input,205,Follow._205_in_interface_body6463); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal987_tree = (object)adaptor.Create(char_literal987, "char_literal987", retval);
 			adaptor.AddChild(root_0, char_literal987_tree);
@@ -42085,7 +42086,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(320, false);
 				int LA320_1 = input.LA(1);
 
-				if ((LA320_1==GET||LA320_1==IDENTIFIER||LA320_1==SET||LA320_1==95||(LA320_1>=99 && LA320_1<=102)||(LA320_1>=104 && LA320_1<=107)||LA320_1==109||(LA320_1>=111 && LA320_1<=112)||LA320_1==115||LA320_1==120||LA320_1==123||(LA320_1>=125 && LA320_1<=128)||(LA320_1>=130 && LA320_1<=131)||LA320_1==134||LA320_1==137||LA320_1==139||LA320_1==142||(LA320_1>=144 && LA320_1<=145)||(LA320_1>=147 && LA320_1<=148)||(LA320_1>=150 && LA320_1<=152)||(LA320_1>=154 && LA320_1<=156)||LA320_1==158||(LA320_1>=160 && LA320_1<=161)||(LA320_1>=163 && LA320_1<=168)||LA320_1==171||(LA320_1>=173 && LA320_1<=176)||(LA320_1>=179 && LA320_1<=180)||LA320_1==186||(LA320_1>=188 && LA320_1<=189)||(LA320_1>=191 && LA320_1<=195)||LA320_1==197||LA320_1==199))
+				if ((LA320_1==GET||LA320_1==IDENTIFIER||LA320_1==SET||LA320_1==96||(LA320_1>=100 && LA320_1<=103)||(LA320_1>=105 && LA320_1<=108)||LA320_1==110||(LA320_1>=112 && LA320_1<=113)||LA320_1==116||LA320_1==121||LA320_1==124||(LA320_1>=126 && LA320_1<=129)||(LA320_1>=131 && LA320_1<=132)||LA320_1==135||LA320_1==138||LA320_1==140||LA320_1==143||(LA320_1>=145 && LA320_1<=146)||(LA320_1>=148 && LA320_1<=149)||(LA320_1>=151 && LA320_1<=153)||(LA320_1>=155 && LA320_1<=157)||LA320_1==159||(LA320_1>=161 && LA320_1<=162)||(LA320_1>=164 && LA320_1<=169)||LA320_1==172||(LA320_1>=174 && LA320_1<=177)||(LA320_1>=180 && LA320_1<=181)||LA320_1==187||(LA320_1>=189 && LA320_1<=190)||(LA320_1>=192 && LA320_1<=196)||LA320_1==198||LA320_1==200))
 				{
 					alt320 = 1;
 				}
@@ -42188,7 +42189,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(321, false);
 			int LA321_1 = input.LA(1);
 
-			if ((LA321_1==95))
+			if ((LA321_1==96))
 			{
 				int LA321_2 = input.LA(2);
 
@@ -42216,7 +42217,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA321_1==154))
+			else if ((LA321_1==155))
 			{
 				int LA321_2 = input.LA(2);
 
@@ -42244,7 +42245,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA321_1==109||LA321_1==112||LA321_1==115||LA321_1==120||LA321_1==125||LA321_1==134||LA321_1==142||LA321_1==150||LA321_1==155||LA321_1==173||LA321_1==176||LA321_1==180||(LA321_1>=188 && LA321_1<=189)||LA321_1==192))
+			else if ((LA321_1==110||LA321_1==113||LA321_1==116||LA321_1==121||LA321_1==126||LA321_1==135||LA321_1==143||LA321_1==151||LA321_1==156||LA321_1==174||LA321_1==177||LA321_1==181||(LA321_1>=189 && LA321_1<=190)||LA321_1==193))
 			{
 				int LA321_2 = input.LA(2);
 
@@ -42268,7 +42269,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA321_1==106))
+			else if ((LA321_1==107))
 			{
 				int LA321_2 = input.LA(2);
 
@@ -42292,7 +42293,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA321_1==104||LA321_1==111||LA321_1==123||LA321_1==127||LA321_1==137||LA321_1==139||LA321_1==145||(LA321_1>=147 && LA321_1<=148)||LA321_1==156||LA321_1==158||LA321_1==175||LA321_1==197) && ((_queryExpression == 0)))
+			else if ((LA321_1==105||LA321_1==112||LA321_1==124||LA321_1==128||LA321_1==138||LA321_1==140||LA321_1==146||(LA321_1>=148 && LA321_1<=149)||LA321_1==157||LA321_1==159||LA321_1==176||LA321_1==198) && ((_queryExpression == 0)))
 			{
 				int LA321_2 = input.LA(2);
 
@@ -42316,7 +42317,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA321_1==195))
+			else if ((LA321_1==196))
 			{
 				int LA321_2 = input.LA(2);
 
@@ -42340,7 +42341,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA321_1==GET||LA321_1==IDENTIFIER||LA321_1==SET||LA321_1==99||(LA321_1>=101 && LA321_1<=102)||LA321_1==105||LA321_1==107||LA321_1==126||LA321_1==131||(LA321_1>=151 && LA321_1<=152)||LA321_1==161||(LA321_1>=163 && LA321_1<=164)||LA321_1==166||LA321_1==171||LA321_1==186||LA321_1==193||LA321_1==199))
+			else if ((LA321_1==GET||LA321_1==IDENTIFIER||LA321_1==SET||LA321_1==100||(LA321_1>=102 && LA321_1<=103)||LA321_1==106||LA321_1==108||LA321_1==127||LA321_1==132||(LA321_1>=152 && LA321_1<=153)||LA321_1==162||(LA321_1>=164 && LA321_1<=165)||LA321_1==167||LA321_1==172||LA321_1==187||LA321_1==194||LA321_1==200))
 			{
 				int LA321_2 = input.LA(2);
 
@@ -42364,11 +42365,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA321_1==100||LA321_1==130||LA321_1==144||LA321_1==160||LA321_1==165||(LA321_1>=167 && LA321_1<=168)||LA321_1==174||LA321_1==179||LA321_1==191||LA321_1==194))
+			else if ((LA321_1==101||LA321_1==131||LA321_1==145||LA321_1==161||LA321_1==166||(LA321_1>=168 && LA321_1<=169)||LA321_1==175||LA321_1==180||LA321_1==192||LA321_1==195))
 			{
 				alt321 = 2;
 			}
-			else if ((LA321_1==128))
+			else if ((LA321_1==129))
 			{
 				alt321 = 3;
 			}
@@ -42524,7 +42525,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(322, false);
 			int LA322_1 = input.LA(1);
 
-			if ((LA322_1==95))
+			if ((LA322_1==96))
 			{
 				alt322 = 1;
 			}
@@ -42555,7 +42556,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(323, false);
 			int LA323_1 = input.LA(1);
 
-			if ((LA323_1==154))
+			if ((LA323_1==155))
 			{
 				int LA323_2 = input.LA(2);
 
@@ -42572,7 +42573,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:836:16: 'new'
 				{
 				DebugLocation(836, 16);
-				string_literal994=(IToken)Match(input,154,Follow._154_in_interface_method_declaration6511); if (state.failed) return retval;
+				string_literal994=(IToken)Match(input,155,Follow._155_in_interface_method_declaration6511); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal994_tree = (object)adaptor.Create(string_literal994, "string_literal994", retval);
 				adaptor.AddChild(root_0, string_literal994_tree);
@@ -42637,7 +42638,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(325, false);
 			int LA325_1 = input.LA(1);
 
-			if ((LA325_1==85))
+			if ((LA325_1==86))
 			{
 				alt325 = 1;
 			}
@@ -42662,7 +42663,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(325); }
 
 			DebugLocation(837, 9);
-			char_literal999=(IToken)Match(input,72,Follow._72_in_interface_method_declaration6536); if (state.failed) return retval;
+			char_literal999=(IToken)Match(input,73,Follow._73_in_interface_method_declaration6536); if (state.failed) return retval;
 			DebugLocation(837, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:837:13: ( formal_parameter_list )?
 			int alt326=2;
@@ -42670,7 +42671,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(326, false);
 			int LA326_1 = input.LA(1);
 
-			if ((LA326_1==GET||LA326_1==IDENTIFIER||LA326_1==SET||LA326_1==95||LA326_1==99||(LA326_1>=101 && LA326_1<=102)||(LA326_1>=104 && LA326_1<=107)||LA326_1==109||(LA326_1>=111 && LA326_1<=112)||LA326_1==115||LA326_1==120||LA326_1==123||(LA326_1>=125 && LA326_1<=127)||LA326_1==131||LA326_1==134||LA326_1==137||LA326_1==139||LA326_1==142||LA326_1==145||(LA326_1>=147 && LA326_1<=148)||(LA326_1>=150 && LA326_1<=152)||(LA326_1>=155 && LA326_1<=156)||(LA326_1>=158 && LA326_1<=159)||(LA326_1>=161 && LA326_1<=164)||LA326_1==166||(LA326_1>=170 && LA326_1<=171)||LA326_1==173||(LA326_1>=175 && LA326_1<=176)||LA326_1==180||LA326_1==183||LA326_1==186||(LA326_1>=188 && LA326_1<=189)||(LA326_1>=192 && LA326_1<=193)||LA326_1==195||LA326_1==197||LA326_1==199))
+			if ((LA326_1==GET||LA326_1==IDENTIFIER||LA326_1==SET||LA326_1==96||LA326_1==100||(LA326_1>=102 && LA326_1<=103)||(LA326_1>=105 && LA326_1<=108)||LA326_1==110||(LA326_1>=112 && LA326_1<=113)||LA326_1==116||LA326_1==121||LA326_1==124||(LA326_1>=126 && LA326_1<=128)||LA326_1==132||LA326_1==135||LA326_1==138||LA326_1==140||LA326_1==143||LA326_1==146||(LA326_1>=148 && LA326_1<=149)||(LA326_1>=151 && LA326_1<=153)||(LA326_1>=156 && LA326_1<=157)||(LA326_1>=159 && LA326_1<=160)||(LA326_1>=162 && LA326_1<=165)||LA326_1==167||(LA326_1>=171 && LA326_1<=172)||LA326_1==174||(LA326_1>=176 && LA326_1<=177)||LA326_1==181||LA326_1==184||LA326_1==187||(LA326_1>=189 && LA326_1<=190)||(LA326_1>=193 && LA326_1<=194)||LA326_1==196||LA326_1==198||LA326_1==200))
 			{
 				alt326 = 1;
 			}
@@ -42703,7 +42704,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(327, false);
 			int LA327_1 = input.LA(1);
 
-			if ((LA327_1==197))
+			if ((LA327_1==198))
 			{
 				alt327 = 1;
 			}
@@ -42811,7 +42812,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(328, false);
 			int LA328_1 = input.LA(1);
 
-			if ((LA328_1==95))
+			if ((LA328_1==96))
 			{
 				alt328 = 1;
 			}
@@ -42842,7 +42843,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(329, false);
 			int LA329_1 = input.LA(1);
 
-			if ((LA329_1==154))
+			if ((LA329_1==155))
 			{
 				alt329 = 1;
 			}
@@ -42854,7 +42855,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:839:16: 'new'
 				{
 				DebugLocation(839, 16);
-				string_literal1005=(IToken)Match(input,154,Follow._154_in_interface_property_declaration6570); if (state.failed) return retval;
+				string_literal1005=(IToken)Match(input,155,Follow._155_in_interface_property_declaration6570); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1005_tree = (object)adaptor.Create(string_literal1005, "string_literal1005", retval);
 				adaptor.AddChild(root_0, string_literal1005_tree);
@@ -42879,7 +42880,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1007.Tree, identifier1007, "identifier1007", retval);
 			DebugLocation(839, 45);
-			char_literal1008=(IToken)Match(input,200,Follow._200_in_interface_property_declaration6583); if (state.failed) return retval;
+			char_literal1008=(IToken)Match(input,201,Follow._201_in_interface_property_declaration6583); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1008_tree = (object)adaptor.Create(char_literal1008, "char_literal1008", retval);
 			adaptor.AddChild(root_0, char_literal1008_tree);
@@ -42891,7 +42892,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, interface_accessor_declarations1009.Tree, interface_accessor_declarations1009, "interface_accessor_declarations1009", retval);
 			DebugLocation(839, 85);
-			char_literal1010=(IToken)Match(input,204,Follow._204_in_interface_property_declaration6591); if (state.failed) return retval;
+			char_literal1010=(IToken)Match(input,205,Follow._205_in_interface_property_declaration6591); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1010_tree = (object)adaptor.Create(char_literal1010, "char_literal1010", retval);
 			adaptor.AddChild(root_0, char_literal1010_tree);
@@ -42960,7 +42961,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(332, false);
 			switch (input.LA(1))
 			{
-			case 95:
+			case 96:
 				{
 				int LA332_2 = input.LA(2);
 
@@ -43022,7 +43023,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(330, false);
 				int LA330_1 = input.LA(1);
 
-				if ((LA330_1==SET||LA330_1==95))
+				if ((LA330_1==SET||LA330_1==96))
 				{
 					alt330 = 1;
 				}
@@ -43068,7 +43069,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(331, false);
 				int LA331_1 = input.LA(1);
 
-				if ((LA331_1==GET||LA331_1==95))
+				if ((LA331_1==GET||LA331_1==96))
 				{
 					alt331 = 1;
 				}
@@ -43167,7 +43168,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(333, false);
 			int LA333_1 = input.LA(1);
 
-			if ((LA333_1==95))
+			if ((LA333_1==96))
 			{
 				alt333 = 1;
 			}
@@ -43276,7 +43277,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(334, false);
 			int LA334_1 = input.LA(1);
 
-			if ((LA334_1==95))
+			if ((LA334_1==96))
 			{
 				alt334 = 1;
 			}
@@ -43389,7 +43390,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(335, false);
 			int LA335_1 = input.LA(1);
 
-			if ((LA335_1==95))
+			if ((LA335_1==96))
 			{
 				alt335 = 1;
 			}
@@ -43420,7 +43421,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(336, false);
 			int LA336_1 = input.LA(1);
 
-			if ((LA336_1==154))
+			if ((LA336_1==155))
 			{
 				alt336 = 1;
 			}
@@ -43432,7 +43433,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:848:16: 'new'
 				{
 				DebugLocation(848, 16);
-				string_literal1022=(IToken)Match(input,154,Follow._154_in_interface_event_declaration6666); if (state.failed) return retval;
+				string_literal1022=(IToken)Match(input,155,Follow._155_in_interface_event_declaration6666); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1022_tree = (object)adaptor.Create(string_literal1022, "string_literal1022", retval);
 				adaptor.AddChild(root_0, string_literal1022_tree);
@@ -43445,7 +43446,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(336); }
 
 			DebugLocation(848, 25);
-			string_literal1023=(IToken)Match(input,128,Follow._128_in_interface_event_declaration6671); if (state.failed) return retval;
+			string_literal1023=(IToken)Match(input,129,Follow._129_in_interface_event_declaration6671); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1023_tree = (object)adaptor.Create(string_literal1023, "string_literal1023", retval);
 			adaptor.AddChild(root_0, string_literal1023_tree);
@@ -43552,7 +43553,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(337, false);
 			int LA337_1 = input.LA(1);
 
-			if ((LA337_1==95))
+			if ((LA337_1==96))
 			{
 				alt337 = 1;
 			}
@@ -43583,7 +43584,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(338, false);
 			int LA338_1 = input.LA(1);
 
-			if ((LA338_1==154))
+			if ((LA338_1==155))
 			{
 				alt338 = 1;
 			}
@@ -43595,7 +43596,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:850:17: 'new'
 				{
 				DebugLocation(850, 17);
-				string_literal1028=(IToken)Match(input,154,Follow._154_in_interface_indexer_declaration6699); if (state.failed) return retval;
+				string_literal1028=(IToken)Match(input,155,Follow._155_in_interface_indexer_declaration6699); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1028_tree = (object)adaptor.Create(string_literal1028, "string_literal1028", retval);
 				adaptor.AddChild(root_0, string_literal1028_tree);
@@ -43614,13 +43615,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, type1029.Tree, type1029, "type1029", retval);
 			DebugLocation(850, 34);
-			string_literal1030=(IToken)Match(input,183,Follow._183_in_interface_indexer_declaration6709); if (state.failed) return retval;
+			string_literal1030=(IToken)Match(input,184,Follow._184_in_interface_indexer_declaration6709); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1030_tree = (object)adaptor.Create(string_literal1030, "string_literal1030", retval);
 			adaptor.AddChild(root_0, string_literal1030_tree);
 			}
 			DebugLocation(850, 43);
-			char_literal1031=(IToken)Match(input,95,Follow._95_in_interface_indexer_declaration6713); if (state.failed) return retval;
+			char_literal1031=(IToken)Match(input,96,Follow._96_in_interface_indexer_declaration6713); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1031_tree = (object)adaptor.Create(char_literal1031, "char_literal1031", retval);
 			adaptor.AddChild(root_0, char_literal1031_tree);
@@ -43632,13 +43633,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, formal_parameter_list1032.Tree, formal_parameter_list1032, "formal_parameter_list1032", retval);
 			DebugLocation(850, 73);
-			char_literal1033=(IToken)Match(input,96,Follow._96_in_interface_indexer_declaration6721); if (state.failed) return retval;
+			char_literal1033=(IToken)Match(input,97,Follow._97_in_interface_indexer_declaration6721); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1033_tree = (object)adaptor.Create(char_literal1033, "char_literal1033", retval);
 			adaptor.AddChild(root_0, char_literal1033_tree);
 			}
 			DebugLocation(850, 79);
-			char_literal1034=(IToken)Match(input,200,Follow._200_in_interface_indexer_declaration6725); if (state.failed) return retval;
+			char_literal1034=(IToken)Match(input,201,Follow._201_in_interface_indexer_declaration6725); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1034_tree = (object)adaptor.Create(char_literal1034, "char_literal1034", retval);
 			adaptor.AddChild(root_0, char_literal1034_tree);
@@ -43650,7 +43651,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, interface_accessor_declarations1035.Tree, interface_accessor_declarations1035, "interface_accessor_declarations1035", retval);
 			DebugLocation(850, 119);
-			char_literal1036=(IToken)Match(input,204,Follow._204_in_interface_indexer_declaration6733); if (state.failed) return retval;
+			char_literal1036=(IToken)Match(input,205,Follow._205_in_interface_indexer_declaration6733); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1036_tree = (object)adaptor.Create(char_literal1036, "char_literal1036", retval);
 			adaptor.AddChild(root_0, char_literal1036_tree);
@@ -43732,7 +43733,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(339, false);
 			int LA339_1 = input.LA(1);
 
-			if ((LA339_1==95))
+			if ((LA339_1==96))
 			{
 				alt339 = 1;
 			}
@@ -43763,7 +43764,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(340, false);
 			int LA340_1 = input.LA(1);
 
-			if ((LA340_1==144||LA340_1==154||LA340_1==165||(LA340_1>=167 && LA340_1<=168)))
+			if ((LA340_1==145||LA340_1==155||LA340_1==166||(LA340_1>=168 && LA340_1<=169)))
 			{
 				alt340 = 1;
 			}
@@ -43806,7 +43807,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(341, false);
 			int LA341_1 = input.LA(1);
 
-			if ((LA341_1==83))
+			if ((LA341_1==84))
 			{
 				alt341 = 1;
 			}
@@ -43932,7 +43933,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(858, 2);
-			char_literal1044=(IToken)Match(input,83,Follow._83_in_enum_base6782); if (state.failed) return retval;
+			char_literal1044=(IToken)Match(input,84,Follow._84_in_enum_base6782); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1044_tree = (object)adaptor.Create(char_literal1044, "char_literal1044", retval);
 			adaptor.AddChild(root_0, char_literal1044_tree);
@@ -44012,7 +44013,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(860, 2);
-			char_literal1046=(IToken)Match(input,200,Follow._200_in_enum_body6794); if (state.failed) return retval;
+			char_literal1046=(IToken)Match(input,201,Follow._201_in_enum_body6794); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1046_tree = (object)adaptor.Create(char_literal1046, "char_literal1046", retval);
 			adaptor.AddChild(root_0, char_literal1046_tree);
@@ -44024,7 +44025,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(344, false);
 			int LA344_1 = input.LA(1);
 
-			if ((LA344_1==GET||LA344_1==IDENTIFIER||LA344_1==SET||LA344_1==95||LA344_1==99||(LA344_1>=101 && LA344_1<=102)||(LA344_1>=104 && LA344_1<=107)||LA344_1==111||LA344_1==123||(LA344_1>=126 && LA344_1<=127)||LA344_1==131||LA344_1==137||LA344_1==139||LA344_1==145||(LA344_1>=147 && LA344_1<=148)||(LA344_1>=151 && LA344_1<=152)||LA344_1==156||LA344_1==158||LA344_1==161||(LA344_1>=163 && LA344_1<=164)||LA344_1==166||LA344_1==171||LA344_1==175||LA344_1==186||LA344_1==193||LA344_1==197||LA344_1==199))
+			if ((LA344_1==GET||LA344_1==IDENTIFIER||LA344_1==SET||LA344_1==96||LA344_1==100||(LA344_1>=102 && LA344_1<=103)||(LA344_1>=105 && LA344_1<=108)||LA344_1==112||LA344_1==124||(LA344_1>=127 && LA344_1<=128)||LA344_1==132||LA344_1==138||LA344_1==140||LA344_1==146||(LA344_1>=148 && LA344_1<=149)||(LA344_1>=152 && LA344_1<=153)||LA344_1==157||LA344_1==159||LA344_1==162||(LA344_1>=164 && LA344_1<=165)||LA344_1==167||LA344_1==172||LA344_1==176||LA344_1==187||LA344_1==194||LA344_1==198||LA344_1==200))
 			{
 				alt344 = 1;
 			}
@@ -44048,7 +44049,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(343, false);
 				int LA343_1 = input.LA(1);
 
-				if ((LA343_1==78))
+				if ((LA343_1==79))
 				{
 					alt343 = 1;
 				}
@@ -44060,7 +44061,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:860:32: ','
 					{
 					DebugLocation(860, 32);
-					char_literal1048=(IToken)Match(input,78,Follow._78_in_enum_body6799); if (state.failed) return retval;
+					char_literal1048=(IToken)Match(input,79,Follow._79_in_enum_body6799); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal1048_tree = (object)adaptor.Create(char_literal1048, "char_literal1048", retval);
 					adaptor.AddChild(root_0, char_literal1048_tree);
@@ -44080,7 +44081,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(344); }
 
 			DebugLocation(860, 41);
-			char_literal1049=(IToken)Match(input,204,Follow._204_in_enum_body6806); if (state.failed) return retval;
+			char_literal1049=(IToken)Match(input,205,Follow._205_in_enum_body6806); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1049_tree = (object)adaptor.Create(char_literal1049, "char_literal1049", retval);
 			adaptor.AddChild(root_0, char_literal1049_tree);
@@ -44165,11 +44166,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(345, false);
 				int LA345_1 = input.LA(1);
 
-				if ((LA345_1==78))
+				if ((LA345_1==79))
 				{
 					int LA345_2 = input.LA(2);
 
-					if ((LA345_2==GET||LA345_2==IDENTIFIER||LA345_2==SET||LA345_2==95||LA345_2==99||(LA345_2>=101 && LA345_2<=102)||(LA345_2>=104 && LA345_2<=107)||LA345_2==111||LA345_2==123||(LA345_2>=126 && LA345_2<=127)||LA345_2==131||LA345_2==137||LA345_2==139||LA345_2==145||(LA345_2>=147 && LA345_2<=148)||(LA345_2>=151 && LA345_2<=152)||LA345_2==156||LA345_2==158||LA345_2==161||(LA345_2>=163 && LA345_2<=164)||LA345_2==166||LA345_2==171||LA345_2==175||LA345_2==186||LA345_2==193||LA345_2==197||LA345_2==199))
+					if ((LA345_2==GET||LA345_2==IDENTIFIER||LA345_2==SET||LA345_2==96||LA345_2==100||(LA345_2>=102 && LA345_2<=103)||(LA345_2>=105 && LA345_2<=108)||LA345_2==112||LA345_2==124||(LA345_2>=127 && LA345_2<=128)||LA345_2==132||LA345_2==138||LA345_2==140||LA345_2==146||(LA345_2>=148 && LA345_2<=149)||(LA345_2>=152 && LA345_2<=153)||LA345_2==157||LA345_2==159||LA345_2==162||(LA345_2>=164 && LA345_2<=165)||LA345_2==167||LA345_2==172||LA345_2==176||LA345_2==187||LA345_2==194||LA345_2==198||LA345_2==200))
 					{
 						alt345 = 1;
 					}
@@ -44186,7 +44187,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:862:27: ',' enum_member_declaration
 					{
 					DebugLocation(862, 27);
-					char_literal1051=(IToken)Match(input,78,Follow._78_in_enum_member_declarations6817); if (state.failed) return retval;
+					char_literal1051=(IToken)Match(input,79,Follow._79_in_enum_member_declarations6817); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal1051_tree = (object)adaptor.Create(char_literal1051, "char_literal1051", retval);
 					adaptor.AddChild(root_0, char_literal1051_tree);
@@ -44284,7 +44285,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(346, false);
 			int LA346_1 = input.LA(1);
 
-			if ((LA346_1==95))
+			if ((LA346_1==96))
 			{
 				alt346 = 1;
 			}
@@ -44321,7 +44322,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(347, false);
 			int LA347_1 = input.LA(1);
 
-			if ((LA347_1==89))
+			if ((LA347_1==90))
 			{
 				alt347 = 1;
 			}
@@ -44333,7 +44334,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:864:30: '=' expression
 				{
 				DebugLocation(864, 30);
-				char_literal1055=(IToken)Match(input,89,Follow._89_in_enum_member_declaration6839); if (state.failed) return retval;
+				char_literal1055=(IToken)Match(input,90,Follow._90_in_enum_member_declaration6839); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal1055_tree = (object)adaptor.Create(char_literal1055, "char_literal1055", retval);
 				adaptor.AddChild(root_0, char_literal1055_tree);
@@ -44423,7 +44424,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(348, false);
 				int LA348_1 = input.LA(1);
 
-				if ((LA348_1==144||LA348_1==154||LA348_1==165||(LA348_1>=167 && LA348_1<=168)))
+				if ((LA348_1==145||LA348_1==155||LA348_1==166||(LA348_1>=168 && LA348_1<=169)))
 				{
 					alt348 = 1;
 				}
@@ -44528,7 +44529,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(867, 14);
 
 			set1058=(IToken)input.LT(1);
-			if (input.LA(1)==144||input.LA(1)==154||input.LA(1)==165||(input.LA(1)>=167 && input.LA(1)<=168))
+			if (input.LA(1)==145||input.LA(1)==155||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169))
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set1058, "set1058", retval));
@@ -44605,7 +44606,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(349, false);
 			int LA349_1 = input.LA(1);
 
-			if ((LA349_1==193))
+			if ((LA349_1==194))
 			{
 				int LA349_2 = input.LA(2);
 
@@ -44629,7 +44630,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA349_1==137))
+			else if ((LA349_1==138))
 			{
 				int LA349_2 = input.LA(2);
 
@@ -44653,7 +44654,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA349_1==109||LA349_1==112||LA349_1==115||LA349_1==120||LA349_1==125||LA349_1==134||LA349_1==142||LA349_1==150||LA349_1==155||LA349_1==173||LA349_1==176||LA349_1==180||(LA349_1>=188 && LA349_1<=189)||LA349_1==192))
+			else if ((LA349_1==110||LA349_1==113||LA349_1==116||LA349_1==121||LA349_1==126||LA349_1==135||LA349_1==143||LA349_1==151||LA349_1==156||LA349_1==174||LA349_1==177||LA349_1==181||(LA349_1>=189 && LA349_1<=190)||LA349_1==193))
 			{
 				int LA349_2 = input.LA(2);
 
@@ -44673,11 +44674,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA349_1==118||LA349_1==195))
+			else if ((LA349_1==119||LA349_1==196))
 			{
 				alt349 = 2;
 			}
-			else if ((LA349_1==126))
+			else if ((LA349_1==127))
 			{
 				int LA349_2 = input.LA(2);
 
@@ -44701,7 +44702,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA349_1==106))
+			else if ((LA349_1==107))
 			{
 				int LA349_2 = input.LA(2);
 
@@ -44725,11 +44726,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA349_1==Character_literal||LA349_1==FALSE||LA349_1==Hex_number||LA349_1==IF||(LA349_1>=MINUS && LA349_1<=NUMBER)||LA349_1==Real_literal||LA349_1==SEMI||LA349_1==STRINGLITERAL||LA349_1==TRUE||LA349_1==USING||LA349_1==Verbatim_string_literal||LA349_1==65||LA349_1==70||(LA349_1>=72 && LA349_1<=73)||(LA349_1>=75 && LA349_1<=76)||LA349_1==79||LA349_1==108||LA349_1==110||LA349_1==116||LA349_1==119||(LA349_1>=121 && LA349_1<=122)||LA349_1==124||LA349_1==133||(LA349_1>=135 && LA349_1<=136)||LA349_1==138||LA349_1==149||LA349_1==154||LA349_1==172||LA349_1==177||(LA349_1>=182 && LA349_1<=185)||LA349_1==187||(LA349_1>=190 && LA349_1<=191)||LA349_1==198||LA349_1==200||LA349_1==205))
+			else if ((LA349_1==Character_literal||LA349_1==FALSE||LA349_1==Hex_number||LA349_1==IF||(LA349_1>=MINUS && LA349_1<=NUMBER)||LA349_1==Real_literal||LA349_1==SEMI||LA349_1==STRINGLITERAL||LA349_1==TRUE||LA349_1==USING||LA349_1==Verbatim_string_literal||LA349_1==66||LA349_1==71||(LA349_1>=73 && LA349_1<=74)||(LA349_1>=76 && LA349_1<=77)||LA349_1==80||LA349_1==109||LA349_1==111||LA349_1==117||LA349_1==120||(LA349_1>=122 && LA349_1<=123)||LA349_1==125||LA349_1==134||(LA349_1>=136 && LA349_1<=137)||LA349_1==139||LA349_1==150||LA349_1==155||LA349_1==173||LA349_1==178||(LA349_1>=183 && LA349_1<=186)||LA349_1==188||(LA349_1>=191 && LA349_1<=192)||LA349_1==199||LA349_1==201||LA349_1==206))
 			{
 				alt349 = 3;
 			}
-			else if ((LA349_1==107))
+			else if ((LA349_1==108))
 			{
 				int LA349_2 = input.LA(2);
 
@@ -44753,7 +44754,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA349_1==104||LA349_1==111||LA349_1==123||LA349_1==127||LA349_1==139||LA349_1==145||(LA349_1>=147 && LA349_1<=148)||LA349_1==156||LA349_1==158||LA349_1==175||LA349_1==197) && ((_queryExpression == 0)))
+			else if ((LA349_1==105||LA349_1==112||LA349_1==124||LA349_1==128||LA349_1==140||LA349_1==146||(LA349_1>=148 && LA349_1<=149)||LA349_1==157||LA349_1==159||LA349_1==176||LA349_1==198) && ((_queryExpression == 0)))
 			{
 				int LA349_2 = input.LA(2);
 
@@ -44777,7 +44778,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA349_1==199))
+			else if ((LA349_1==200))
 			{
 				int LA349_2 = input.LA(2);
 
@@ -44801,7 +44802,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA349_1==GET||LA349_1==IDENTIFIER||LA349_1==SET||LA349_1==99||(LA349_1>=101 && LA349_1<=102)||LA349_1==105||LA349_1==131||(LA349_1>=151 && LA349_1<=152)||LA349_1==161||(LA349_1>=163 && LA349_1<=164)||LA349_1==166||LA349_1==171||LA349_1==186))
+			else if ((LA349_1==GET||LA349_1==IDENTIFIER||LA349_1==SET||LA349_1==100||(LA349_1>=102 && LA349_1<=103)||LA349_1==106||LA349_1==132||(LA349_1>=152 && LA349_1<=153)||LA349_1==162||(LA349_1>=164 && LA349_1<=165)||LA349_1==167||LA349_1==172||LA349_1==187))
 			{
 				int LA349_2 = input.LA(2);
 
@@ -44953,7 +44954,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			switch (input.LA(1))
 			{
 			case SEMI:
-			case 200:
+			case 201:
 				{
 				alt350 = 1;
 				}
@@ -44971,79 +44972,79 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case STRINGLITERAL:
 			case TRUE:
 			case Verbatim_string_literal:
-			case 65:
-			case 70:
-			case 72:
+			case 66:
+			case 71:
 			case 73:
-			case 75:
+			case 74:
 			case 76:
-			case 79:
-			case 99:
-			case 101:
+			case 77:
+			case 80:
+			case 100:
 			case 102:
-			case 104:
+			case 103:
 			case 105:
 			case 106:
 			case 107:
 			case 108:
 			case 109:
-			case 111:
+			case 110:
 			case 112:
-			case 115:
-			case 120:
+			case 113:
+			case 116:
 			case 121:
 			case 122:
 			case 123:
-			case 125:
+			case 124:
 			case 126:
 			case 127:
-			case 131:
-			case 134:
-			case 137:
-			case 139:
-			case 142:
-			case 145:
-			case 147:
+			case 128:
+			case 132:
+			case 135:
+			case 138:
+			case 140:
+			case 143:
+			case 146:
 			case 148:
-			case 150:
+			case 149:
 			case 151:
 			case 152:
-			case 154:
+			case 153:
 			case 155:
 			case 156:
-			case 158:
-			case 161:
-			case 163:
+			case 157:
+			case 159:
+			case 162:
 			case 164:
-			case 166:
-			case 171:
-			case 173:
-			case 175:
+			case 165:
+			case 167:
+			case 172:
+			case 174:
 			case 176:
 			case 177:
-			case 180:
-			case 183:
-			case 186:
+			case 178:
+			case 181:
+			case 184:
 			case 187:
 			case 188:
 			case 189:
-			case 192:
+			case 190:
 			case 193:
-			case 197:
-			case 205:
+			case 194:
+			case 198:
+			case 206:
 				{
 				alt350 = 2;
 				}
 				break;
-			case 199:
+			case 200:
 				{
 				int LA350_2 = input.LA(2);
 
-				if ((LA350_2==110||LA350_2==172))
+				if ((LA350_2==111||LA350_2==173))
 				{
 					alt350 = 11;
 				}
-				else if ((LA350_2==DOT||LA350_2==GT||LA350_2==MINUS||LA350_2==PTR||LA350_2==SEMI||(LA350_2>=66 && LA350_2<=82)||(LA350_2>=84 && LA350_2<=95)||(LA350_2>=97 && LA350_2<=98)||LA350_2==103||LA350_2==146||(LA350_2>=201 && LA350_2<=203)))
+				else if ((LA350_2==DOT||LA350_2==GT||LA350_2==MINUS||LA350_2==PTR||LA350_2==SEMI||(LA350_2>=67 && LA350_2<=83)||(LA350_2>=85 && LA350_2<=96)||(LA350_2>=98 && LA350_2<=99)||LA350_2==104||LA350_2==147||(LA350_2>=202 && LA350_2<=204)))
 				{
 					alt350 = 2;
 				}
@@ -45056,15 +45057,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 116:
+			case 117:
 				{
 				int LA350_2 = input.LA(2);
 
-				if ((LA350_2==72))
+				if ((LA350_2==73))
 				{
 					alt350 = 2;
 				}
-				else if ((LA350_2==SEMI||LA350_2==200))
+				else if ((LA350_2==SEMI||LA350_2==201))
 				{
 					alt350 = 7;
 				}
@@ -45077,15 +45078,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 190:
+			case 191:
 				{
 				int LA350_2 = input.LA(2);
 
-				if ((LA350_2==72))
+				if ((LA350_2==73))
 				{
 					alt350 = 2;
 				}
-				else if ((LA350_2==SEMI||LA350_2==200))
+				else if ((LA350_2==SEMI||LA350_2==201))
 				{
 					alt350 = 8;
 				}
@@ -45099,34 +45100,34 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				break;
 			case IF:
-			case 182:
+			case 183:
 				{
 				alt350 = 3;
 				}
 				break;
-			case 124:
-			case 135:
+			case 125:
 			case 136:
-			case 198:
+			case 137:
+			case 199:
 				{
 				alt350 = 4;
 				}
 				break;
-			case 110:
-			case 119:
-			case 138:
-			case 172:
-			case 184:
+			case 111:
+			case 120:
+			case 139:
+			case 173:
+			case 185:
 				{
 				alt350 = 5;
 				}
 				break;
-			case 185:
+			case 186:
 				{
 				alt350 = 6;
 				}
 				break;
-			case 149:
+			case 150:
 				{
 				alt350 = 9;
 				}
@@ -45136,12 +45137,12 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				alt350 = 10;
 				}
 				break;
-			case 191:
+			case 192:
 				{
 				alt350 = 12;
 				}
 				break;
-			case 133:
+			case 134:
 				{
 				alt350 = 13;
 				}
@@ -45423,13 +45424,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(891, 2);
-			string_literal1075=(IToken)Match(input,133,Follow._133_in_fixed_statement6977); if (state.failed) return retval;
+			string_literal1075=(IToken)Match(input,134,Follow._134_in_fixed_statement6977); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1075_tree = (object)adaptor.Create(string_literal1075, "string_literal1075", retval);
 			adaptor.AddChild(root_0, string_literal1075_tree);
 			}
 			DebugLocation(891, 12);
-			char_literal1076=(IToken)Match(input,72,Follow._72_in_fixed_statement6981); if (state.failed) return retval;
+			char_literal1076=(IToken)Match(input,73,Follow._73_in_fixed_statement6981); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1076_tree = (object)adaptor.Create(char_literal1076, "char_literal1076", retval);
 			adaptor.AddChild(root_0, char_literal1076_tree);
@@ -45538,7 +45539,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(351, false);
 				int LA351_1 = input.LA(1);
 
-				if ((LA351_1==78))
+				if ((LA351_1==79))
 				{
 					alt351 = 1;
 				}
@@ -45552,7 +45553,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:893:30: ',' fixed_pointer_declarator
 					{
 					DebugLocation(893, 30);
-					char_literal1082=(IToken)Match(input,78,Follow._78_in_fixed_pointer_declarators7008); if (state.failed) return retval;
+					char_literal1082=(IToken)Match(input,79,Follow._79_in_fixed_pointer_declarators7008); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal1082_tree = (object)adaptor.Create(char_literal1082, "char_literal1082", retval);
 					adaptor.AddChild(root_0, char_literal1082_tree);
@@ -45649,7 +45650,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1084.Tree, identifier1084, "identifier1084", retval);
 			DebugLocation(895, 15);
-			char_literal1085=(IToken)Match(input,89,Follow._89_in_fixed_pointer_declarator7026); if (state.failed) return retval;
+			char_literal1085=(IToken)Match(input,90,Follow._90_in_fixed_pointer_declarator7026); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1085_tree = (object)adaptor.Create(char_literal1085, "char_literal1085", retval);
 			adaptor.AddChild(root_0, char_literal1085_tree);
@@ -45724,7 +45725,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(352, false);
 			int LA352_1 = input.LA(1);
 
-			if ((LA352_1==70))
+			if ((LA352_1==71))
 			{
 				int LA352_2 = input.LA(2);
 
@@ -45744,15 +45745,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA352_1==72||(LA352_1>=106 && LA352_1<=107)||LA352_1==137))
+			else if ((LA352_1==73||(LA352_1>=107 && LA352_1<=108)||LA352_1==138))
 			{
 				alt352 = 2;
 			}
-			else if ((LA352_1==104||LA352_1==111||LA352_1==123||LA352_1==127||LA352_1==139||LA352_1==145||(LA352_1>=147 && LA352_1<=148)||LA352_1==156||LA352_1==158||LA352_1==175||LA352_1==197) && ((_queryExpression == 0)))
+			else if ((LA352_1==105||LA352_1==112||LA352_1==124||LA352_1==128||LA352_1==140||LA352_1==146||(LA352_1>=148 && LA352_1<=149)||LA352_1==157||LA352_1==159||LA352_1==176||LA352_1==198) && ((_queryExpression == 0)))
 			{
 				alt352 = 2;
 			}
-			else if ((LA352_1==Character_literal||(LA352_1>=FALSE && LA352_1<=GET)||(LA352_1>=Hex_number && LA352_1<=IDENTIFIER)||(LA352_1>=MINUS && LA352_1<=NUMBER)||LA352_1==Real_literal||(LA352_1>=SET && LA352_1<=STRINGLITERAL)||LA352_1==TRUE||LA352_1==Verbatim_string_literal||LA352_1==65||LA352_1==73||(LA352_1>=75 && LA352_1<=76)||LA352_1==79||LA352_1==99||(LA352_1>=101 && LA352_1<=102)||LA352_1==105||(LA352_1>=108 && LA352_1<=109)||LA352_1==112||(LA352_1>=115 && LA352_1<=116)||(LA352_1>=120 && LA352_1<=122)||(LA352_1>=125 && LA352_1<=126)||LA352_1==131||LA352_1==134||LA352_1==142||(LA352_1>=150 && LA352_1<=152)||(LA352_1>=154 && LA352_1<=155)||LA352_1==161||(LA352_1>=163 && LA352_1<=164)||LA352_1==166||LA352_1==171||LA352_1==173||(LA352_1>=176 && LA352_1<=177)||LA352_1==180||LA352_1==183||(LA352_1>=186 && LA352_1<=190)||(LA352_1>=192 && LA352_1<=193)||LA352_1==199||LA352_1==205))
+			else if ((LA352_1==Character_literal||(LA352_1>=FALSE && LA352_1<=GET)||(LA352_1>=Hex_number && LA352_1<=IDENTIFIER)||(LA352_1>=MINUS && LA352_1<=NUMBER)||LA352_1==Real_literal||(LA352_1>=SET && LA352_1<=STRINGLITERAL)||LA352_1==TRUE||LA352_1==Verbatim_string_literal||LA352_1==66||LA352_1==74||(LA352_1>=76 && LA352_1<=77)||LA352_1==80||LA352_1==100||(LA352_1>=102 && LA352_1<=103)||LA352_1==106||(LA352_1>=109 && LA352_1<=110)||LA352_1==113||(LA352_1>=116 && LA352_1<=117)||(LA352_1>=121 && LA352_1<=123)||(LA352_1>=126 && LA352_1<=127)||LA352_1==132||LA352_1==135||LA352_1==143||(LA352_1>=151 && LA352_1<=153)||(LA352_1>=155 && LA352_1<=156)||LA352_1==162||(LA352_1>=164 && LA352_1<=165)||LA352_1==167||LA352_1==172||LA352_1==174||(LA352_1>=177 && LA352_1<=178)||LA352_1==181||LA352_1==184||(LA352_1>=187 && LA352_1<=191)||(LA352_1>=193 && LA352_1<=194)||LA352_1==200||LA352_1==206))
 			{
 				alt352 = 2;
 			}
@@ -45773,7 +45774,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(897, 2);
-				char_literal1087=(IToken)Match(input,70,Follow._70_in_fixed_pointer_initializer7038); if (state.failed) return retval;
+				char_literal1087=(IToken)Match(input,71,Follow._71_in_fixed_pointer_initializer7038); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal1087_tree = (object)adaptor.Create(char_literal1087, "char_literal1087", retval);
 				adaptor.AddChild(root_0, char_literal1087_tree);
@@ -45866,7 +45867,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(900, 2);
-			string_literal1090=(IToken)Match(input,191,Follow._191_in_unsafe_statement7057); if (state.failed) return retval;
+			string_literal1090=(IToken)Match(input,192,Follow._192_in_unsafe_statement7057); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1090_tree = (object)adaptor.Create(string_literal1090, "string_literal1090", retval);
 			adaptor.AddChild(root_0, string_literal1090_tree);
@@ -45948,7 +45949,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				alt354 = 1;
 			}
-			else if ((LA354_1==200))
+			else if ((LA354_1==201))
 			{
 				alt354 = 2;
 			}
@@ -45984,7 +45985,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(903, 4);
-				char_literal1093=(IToken)Match(input,200,Follow._200_in_block7074); if (state.failed) return retval;
+				char_literal1093=(IToken)Match(input,201,Follow._201_in_block7074); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal1093_tree = (object)adaptor.Create(char_literal1093, "char_literal1093", retval);
 				adaptor.AddChild(root_0, char_literal1093_tree);
@@ -45996,7 +45997,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(353, false);
 				int LA353_1 = input.LA(1);
 
-				if ((LA353_1==Character_literal||(LA353_1>=FALSE && LA353_1<=GET)||(LA353_1>=Hex_number && LA353_1<=IF)||(LA353_1>=MINUS && LA353_1<=NUMBER)||LA353_1==Real_literal||(LA353_1>=SEMI && LA353_1<=STRINGLITERAL)||LA353_1==TRUE||LA353_1==USING||LA353_1==Verbatim_string_literal||LA353_1==65||LA353_1==70||(LA353_1>=72 && LA353_1<=73)||(LA353_1>=75 && LA353_1<=76)||LA353_1==79||LA353_1==99||(LA353_1>=101 && LA353_1<=102)||(LA353_1>=104 && LA353_1<=112)||(LA353_1>=115 && LA353_1<=116)||(LA353_1>=118 && LA353_1<=127)||LA353_1==131||(LA353_1>=133 && LA353_1<=139)||LA353_1==142||LA353_1==145||(LA353_1>=147 && LA353_1<=152)||(LA353_1>=154 && LA353_1<=156)||LA353_1==158||LA353_1==161||(LA353_1>=163 && LA353_1<=164)||LA353_1==166||(LA353_1>=171 && LA353_1<=173)||(LA353_1>=175 && LA353_1<=177)||LA353_1==180||(LA353_1>=182 && LA353_1<=193)||LA353_1==195||(LA353_1>=197 && LA353_1<=200)||LA353_1==205))
+				if ((LA353_1==Character_literal||(LA353_1>=FALSE && LA353_1<=GET)||(LA353_1>=Hex_number && LA353_1<=IF)||(LA353_1>=MINUS && LA353_1<=NUMBER)||LA353_1==Real_literal||(LA353_1>=SEMI && LA353_1<=STRINGLITERAL)||LA353_1==TRUE||LA353_1==USING||LA353_1==Verbatim_string_literal||LA353_1==66||LA353_1==71||(LA353_1>=73 && LA353_1<=74)||(LA353_1>=76 && LA353_1<=77)||LA353_1==80||LA353_1==100||(LA353_1>=102 && LA353_1<=103)||(LA353_1>=105 && LA353_1<=113)||(LA353_1>=116 && LA353_1<=117)||(LA353_1>=119 && LA353_1<=128)||LA353_1==132||(LA353_1>=134 && LA353_1<=140)||LA353_1==143||LA353_1==146||(LA353_1>=148 && LA353_1<=153)||(LA353_1>=155 && LA353_1<=157)||LA353_1==159||LA353_1==162||(LA353_1>=164 && LA353_1<=165)||LA353_1==167||(LA353_1>=172 && LA353_1<=174)||(LA353_1>=176 && LA353_1<=178)||LA353_1==181||(LA353_1>=183 && LA353_1<=194)||LA353_1==196||(LA353_1>=198 && LA353_1<=201)||LA353_1==206))
 				{
 					alt353 = 1;
 				}
@@ -46021,7 +46022,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				} finally { DebugExitSubRule(353); }
 
 				DebugLocation(903, 28);
-				char_literal1095=(IToken)Match(input,204,Follow._204_in_block7083); if (state.failed) return retval;
+				char_literal1095=(IToken)Match(input,205,Follow._205_in_block7083); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal1095_tree = (object)adaptor.Create(char_literal1095, "char_literal1095", retval);
 				adaptor.AddChild(root_0, char_literal1095_tree);
@@ -46100,18 +46101,18 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(355, false);
 				int LA355_1 = input.LA(1);
 
-				if ((LA355_1==121))
+				if ((LA355_1==122))
 				{
 					int LA355_2 = input.LA(2);
 
-					if ((LA355_2==72))
+					if ((LA355_2==73))
 					{
 						alt355 = 1;
 					}
 
 
 				}
-				else if ((LA355_1==Character_literal||(LA355_1>=FALSE && LA355_1<=GET)||(LA355_1>=Hex_number && LA355_1<=IF)||(LA355_1>=MINUS && LA355_1<=NUMBER)||LA355_1==Real_literal||(LA355_1>=SEMI && LA355_1<=STRINGLITERAL)||LA355_1==TRUE||LA355_1==USING||LA355_1==Verbatim_string_literal||LA355_1==65||LA355_1==70||(LA355_1>=72 && LA355_1<=73)||(LA355_1>=75 && LA355_1<=76)||LA355_1==79||LA355_1==99||(LA355_1>=101 && LA355_1<=102)||(LA355_1>=104 && LA355_1<=112)||(LA355_1>=115 && LA355_1<=116)||(LA355_1>=118 && LA355_1<=120)||(LA355_1>=122 && LA355_1<=127)||LA355_1==131||(LA355_1>=133 && LA355_1<=139)||LA355_1==142||LA355_1==145||(LA355_1>=147 && LA355_1<=152)||(LA355_1>=154 && LA355_1<=156)||LA355_1==158||LA355_1==161||(LA355_1>=163 && LA355_1<=164)||LA355_1==166||(LA355_1>=171 && LA355_1<=173)||(LA355_1>=175 && LA355_1<=177)||LA355_1==180||(LA355_1>=182 && LA355_1<=193)||LA355_1==195||(LA355_1>=197 && LA355_1<=200)||LA355_1==205))
+				else if ((LA355_1==Character_literal||(LA355_1>=FALSE && LA355_1<=GET)||(LA355_1>=Hex_number && LA355_1<=IF)||(LA355_1>=MINUS && LA355_1<=NUMBER)||LA355_1==Real_literal||(LA355_1>=SEMI && LA355_1<=STRINGLITERAL)||LA355_1==TRUE||LA355_1==USING||LA355_1==Verbatim_string_literal||LA355_1==66||LA355_1==71||(LA355_1>=73 && LA355_1<=74)||(LA355_1>=76 && LA355_1<=77)||LA355_1==80||LA355_1==100||(LA355_1>=102 && LA355_1<=103)||(LA355_1>=105 && LA355_1<=113)||(LA355_1>=116 && LA355_1<=117)||(LA355_1>=119 && LA355_1<=121)||(LA355_1>=123 && LA355_1<=128)||LA355_1==132||(LA355_1>=134 && LA355_1<=140)||LA355_1==143||LA355_1==146||(LA355_1>=148 && LA355_1<=153)||(LA355_1>=155 && LA355_1<=157)||LA355_1==159||LA355_1==162||(LA355_1>=164 && LA355_1<=165)||LA355_1==167||(LA355_1>=172 && LA355_1<=174)||(LA355_1>=176 && LA355_1<=178)||LA355_1==181||(LA355_1>=183 && LA355_1<=194)||LA355_1==196||(LA355_1>=198 && LA355_1<=201)||LA355_1==206))
 				{
 					alt355 = 1;
 				}
@@ -46291,7 +46292,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1098.Tree, identifier1098, "identifier1098", retval);
 			DebugLocation(909, 15);
-			char_literal1099=(IToken)Match(input,83,Follow._83_in_labeled_statement7112); if (state.failed) return retval;
+			char_literal1099=(IToken)Match(input,84,Follow._84_in_labeled_statement7112); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1099_tree = (object)adaptor.Create(char_literal1099, "char_literal1099", retval);
 			adaptor.AddChild(root_0, char_literal1099_tree);
@@ -46374,11 +46375,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(356, false);
 			int LA356_1 = input.LA(1);
 
-			if ((LA356_1==GET||LA356_1==IDENTIFIER||LA356_1==SET||LA356_1==99||(LA356_1>=101 && LA356_1<=102)||(LA356_1>=104 && LA356_1<=107)||LA356_1==109||(LA356_1>=111 && LA356_1<=112)||LA356_1==115||LA356_1==120||LA356_1==123||(LA356_1>=125 && LA356_1<=127)||LA356_1==131||LA356_1==134||LA356_1==137||LA356_1==139||LA356_1==142||LA356_1==145||(LA356_1>=147 && LA356_1<=148)||(LA356_1>=150 && LA356_1<=152)||(LA356_1>=155 && LA356_1<=156)||LA356_1==158||LA356_1==161||(LA356_1>=163 && LA356_1<=164)||LA356_1==166||LA356_1==171||LA356_1==173||(LA356_1>=175 && LA356_1<=176)||LA356_1==180||LA356_1==186||(LA356_1>=188 && LA356_1<=189)||(LA356_1>=192 && LA356_1<=193)||LA356_1==195||LA356_1==197||LA356_1==199))
+			if ((LA356_1==GET||LA356_1==IDENTIFIER||LA356_1==SET||LA356_1==100||(LA356_1>=102 && LA356_1<=103)||(LA356_1>=105 && LA356_1<=108)||LA356_1==110||(LA356_1>=112 && LA356_1<=113)||LA356_1==116||LA356_1==121||LA356_1==124||(LA356_1>=126 && LA356_1<=128)||LA356_1==132||LA356_1==135||LA356_1==138||LA356_1==140||LA356_1==143||LA356_1==146||(LA356_1>=148 && LA356_1<=149)||(LA356_1>=151 && LA356_1<=153)||(LA356_1>=156 && LA356_1<=157)||LA356_1==159||LA356_1==162||(LA356_1>=164 && LA356_1<=165)||LA356_1==167||LA356_1==172||LA356_1==174||(LA356_1>=176 && LA356_1<=177)||LA356_1==181||LA356_1==187||(LA356_1>=189 && LA356_1<=190)||(LA356_1>=193 && LA356_1<=194)||LA356_1==196||LA356_1==198||LA356_1==200))
 			{
 				alt356 = 1;
 			}
-			else if ((LA356_1==118))
+			else if ((LA356_1==119))
 			{
 				alt356 = 2;
 			}
@@ -46571,56 +46572,56 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case GET:
 			case IDENTIFIER:
 			case SET:
-			case 99:
-			case 101:
+			case 100:
 			case 102:
-			case 104:
+			case 103:
 			case 105:
 			case 106:
 			case 107:
-			case 109:
-			case 111:
+			case 108:
+			case 110:
 			case 112:
-			case 115:
-			case 120:
-			case 123:
-			case 125:
-			case 127:
-			case 131:
-			case 134:
-			case 137:
-			case 139:
-			case 142:
-			case 145:
-			case 147:
+			case 113:
+			case 116:
+			case 121:
+			case 124:
+			case 126:
+			case 128:
+			case 132:
+			case 135:
+			case 138:
+			case 140:
+			case 143:
+			case 146:
 			case 148:
-			case 150:
+			case 149:
 			case 151:
 			case 152:
-			case 155:
+			case 153:
 			case 156:
-			case 158:
-			case 161:
-			case 163:
+			case 157:
+			case 159:
+			case 162:
 			case 164:
-			case 166:
-			case 171:
-			case 173:
-			case 175:
+			case 165:
+			case 167:
+			case 172:
+			case 174:
 			case 176:
-			case 180:
-			case 186:
-			case 188:
+			case 177:
+			case 181:
+			case 187:
 			case 189:
-			case 192:
-			case 195:
-			case 197:
-			case 199:
+			case 190:
+			case 193:
+			case 196:
+			case 198:
+			case 200:
 				{
 				alt357 = 1;
 				}
 				break;
-			case 193:
+			case 194:
 				{
 				int LA357_2 = input.LA(2);
 
@@ -46641,7 +46642,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				}
 				break;
-			case 126:
+			case 127:
 				{
 				int LA357_2 = input.LA(2);
 
@@ -46696,7 +46697,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(917, 4);
-				string_literal1107=(IToken)Match(input,193,Follow._193_in_local_variable_type7159); if (state.failed) return retval;
+				string_literal1107=(IToken)Match(input,194,Follow._194_in_local_variable_type7159); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1107_tree = (object)adaptor.Create(string_literal1107, "string_literal1107", retval);
 				adaptor.AddChild(root_0, string_literal1107_tree);
@@ -46711,7 +46712,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(918, 4);
-				string_literal1108=(IToken)Match(input,126,Follow._126_in_local_variable_type7165); if (state.failed) return retval;
+				string_literal1108=(IToken)Match(input,127,Follow._127_in_local_variable_type7165); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1108_tree = (object)adaptor.Create(string_literal1108, "string_literal1108", retval);
 				adaptor.AddChild(root_0, string_literal1108_tree);
@@ -46798,7 +46799,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(358, false);
 				int LA358_1 = input.LA(1);
 
-				if ((LA358_1==78))
+				if ((LA358_1==79))
 				{
 					alt358 = 1;
 				}
@@ -46812,7 +46813,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:920:29: ',' local_variable_declarator
 					{
 					DebugLocation(920, 29);
-					char_literal1110=(IToken)Match(input,78,Follow._78_in_local_variable_declarators7175); if (state.failed) return retval;
+					char_literal1110=(IToken)Match(input,79,Follow._79_in_local_variable_declarators7175); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal1110_tree = (object)adaptor.Create(char_literal1110, "char_literal1110", retval);
 					adaptor.AddChild(root_0, char_literal1110_tree);
@@ -46915,7 +46916,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(359, false);
 			int LA359_1 = input.LA(1);
 
-			if ((LA359_1==89))
+			if ((LA359_1==90))
 			{
 				alt359 = 1;
 			}
@@ -46927,7 +46928,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:922:14: '=' local_variable_initializer
 				{
 				DebugLocation(922, 14);
-				char_literal1113=(IToken)Match(input,89,Follow._89_in_local_variable_declarator7190); if (state.failed) return retval;
+				char_literal1113=(IToken)Match(input,90,Follow._90_in_local_variable_declarator7190); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal1113_tree = (object)adaptor.Create(char_literal1113, "char_literal1113", retval);
 				adaptor.AddChild(root_0, char_literal1113_tree);
@@ -47021,79 +47022,79 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case STRINGLITERAL:
 			case TRUE:
 			case Verbatim_string_literal:
-			case 65:
-			case 70:
-			case 72:
+			case 66:
+			case 71:
 			case 73:
-			case 75:
+			case 74:
 			case 76:
-			case 79:
-			case 99:
-			case 101:
+			case 77:
+			case 80:
+			case 100:
 			case 102:
-			case 104:
+			case 103:
 			case 105:
 			case 106:
 			case 107:
 			case 108:
 			case 109:
-			case 111:
+			case 110:
 			case 112:
-			case 115:
+			case 113:
 			case 116:
-			case 120:
+			case 117:
 			case 121:
 			case 122:
 			case 123:
-			case 125:
+			case 124:
 			case 126:
 			case 127:
-			case 131:
-			case 134:
-			case 137:
-			case 139:
-			case 142:
-			case 145:
-			case 147:
+			case 128:
+			case 132:
+			case 135:
+			case 138:
+			case 140:
+			case 143:
+			case 146:
 			case 148:
-			case 150:
+			case 149:
 			case 151:
 			case 152:
-			case 154:
+			case 153:
 			case 155:
 			case 156:
-			case 158:
-			case 161:
-			case 163:
+			case 157:
+			case 159:
+			case 162:
 			case 164:
-			case 166:
-			case 171:
-			case 173:
-			case 175:
+			case 165:
+			case 167:
+			case 172:
+			case 174:
 			case 176:
 			case 177:
-			case 180:
-			case 183:
-			case 186:
+			case 178:
+			case 181:
+			case 184:
 			case 187:
 			case 188:
 			case 189:
 			case 190:
-			case 192:
+			case 191:
 			case 193:
-			case 197:
-			case 199:
-			case 205:
+			case 194:
+			case 198:
+			case 200:
+			case 206:
 				{
 				alt360 = 1;
 				}
 				break;
-			case 200:
+			case 201:
 				{
 				alt360 = 2;
 				}
 				break;
-			case 178:
+			case 179:
 				{
 				alt360 = 3;
 				}
@@ -47224,7 +47225,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(929, 2);
-			string_literal1118=(IToken)Match(input,178,Follow._178_in_stackalloc_initializer7225); if (state.failed) return retval;
+			string_literal1118=(IToken)Match(input,179,Follow._179_in_stackalloc_initializer7225); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1118_tree = (object)adaptor.Create(string_literal1118, "string_literal1118", retval);
 			adaptor.AddChild(root_0, string_literal1118_tree);
@@ -47236,7 +47237,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, unmanaged_type1119.Tree, unmanaged_type1119, "unmanaged_type1119", retval);
 			DebugLocation(929, 34);
-			char_literal1120=(IToken)Match(input,95,Follow._95_in_stackalloc_initializer7233); if (state.failed) return retval;
+			char_literal1120=(IToken)Match(input,96,Follow._96_in_stackalloc_initializer7233); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1120_tree = (object)adaptor.Create(char_literal1120, "char_literal1120", retval);
 			adaptor.AddChild(root_0, char_literal1120_tree);
@@ -47248,7 +47249,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, expression1121.Tree, expression1121, "expression1121", retval);
 			DebugLocation(929, 53);
-			char_literal1122=(IToken)Match(input,96,Follow._96_in_stackalloc_initializer7241); if (state.failed) return retval;
+			char_literal1122=(IToken)Match(input,97,Follow._97_in_stackalloc_initializer7241); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1122_tree = (object)adaptor.Create(char_literal1122, "char_literal1122", retval);
 			adaptor.AddChild(root_0, char_literal1122_tree);
@@ -47319,7 +47320,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(931, 2);
-			string_literal1123=(IToken)Match(input,118,Follow._118_in_local_constant_declaration7249); if (state.failed) return retval;
+			string_literal1123=(IToken)Match(input,119,Follow._119_in_local_constant_declaration7249); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1123_tree = (object)adaptor.Create(string_literal1123, "string_literal1123", retval);
 			adaptor.AddChild(root_0, string_literal1123_tree);
@@ -47416,7 +47417,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(361, false);
 				int LA361_1 = input.LA(1);
 
-				if ((LA361_1==78))
+				if ((LA361_1==79))
 				{
 					alt361 = 1;
 				}
@@ -47430,7 +47431,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:933:23: ',' constant_declarator
 					{
 					DebugLocation(933, 23);
-					char_literal1127=(IToken)Match(input,78,Follow._78_in_constant_declarators7268); if (state.failed) return retval;
+					char_literal1127=(IToken)Match(input,79,Follow._79_in_constant_declarators7268); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal1127_tree = (object)adaptor.Create(char_literal1127, "char_literal1127", retval);
 					adaptor.AddChild(root_0, char_literal1127_tree);
@@ -47533,7 +47534,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(362, false);
 			int LA362_1 = input.LA(1);
 
-			if ((LA362_1==89))
+			if ((LA362_1==90))
 			{
 				alt362 = 1;
 			}
@@ -47545,7 +47546,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:935:16: '=' constant_expression
 				{
 				DebugLocation(935, 16);
-				char_literal1130=(IToken)Match(input,89,Follow._89_in_constant_declarator7285); if (state.failed) return retval;
+				char_literal1130=(IToken)Match(input,90,Follow._90_in_constant_declarator7285); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal1130_tree = (object)adaptor.Create(char_literal1130, "char_literal1130", retval);
 				adaptor.AddChild(root_0, char_literal1130_tree);
@@ -47703,7 +47704,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(363, false);
 			int LA363_1 = input.LA(1);
 
-			if ((LA363_1==72))
+			if ((LA363_1==73))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -47727,7 +47728,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==107))
+			else if ((LA363_1==108))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -47751,7 +47752,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==104||LA363_1==111||LA363_1==123||LA363_1==127||LA363_1==137||LA363_1==139||LA363_1==145||(LA363_1>=147 && LA363_1<=148)||LA363_1==156||LA363_1==158||LA363_1==175||LA363_1==197) && ((_queryExpression == 0)))
+			else if ((LA363_1==105||LA363_1==112||LA363_1==124||LA363_1==128||LA363_1==138||LA363_1==140||LA363_1==146||(LA363_1>=148 && LA363_1<=149)||LA363_1==157||LA363_1==159||LA363_1==176||LA363_1==198) && ((_queryExpression == 0)))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -47775,7 +47776,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==183))
+			else if ((LA363_1==184))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -47799,7 +47800,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==108))
+			else if ((LA363_1==109))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -47823,7 +47824,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==109||LA363_1==112||LA363_1==115||LA363_1==120||LA363_1==125||LA363_1==134||LA363_1==142||LA363_1==150||LA363_1==155||LA363_1==173||LA363_1==176||LA363_1==180||(LA363_1>=188 && LA363_1<=189)||LA363_1==192))
+			else if ((LA363_1==110||LA363_1==113||LA363_1==116||LA363_1==121||LA363_1==126||LA363_1==135||LA363_1==143||LA363_1==151||LA363_1==156||LA363_1==174||LA363_1==177||LA363_1==181||(LA363_1>=189 && LA363_1<=190)||LA363_1==193))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -47871,7 +47872,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==154))
+			else if ((LA363_1==155))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -47895,7 +47896,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==75))
+			else if ((LA363_1==76))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -47935,7 +47936,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==65))
+			else if ((LA363_1==66))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -47955,7 +47956,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==205))
+			else if ((LA363_1==206))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -47975,7 +47976,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==73))
+			else if ((LA363_1==74))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -47995,7 +47996,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==106))
+			else if ((LA363_1==107))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -48019,7 +48020,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==76))
+			else if ((LA363_1==77))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -48039,7 +48040,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==79))
+			else if ((LA363_1==80))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -48059,7 +48060,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==187))
+			else if ((LA363_1==188))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -48079,7 +48080,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==177))
+			else if ((LA363_1==178))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -48099,7 +48100,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==116))
+			else if ((LA363_1==117))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -48119,7 +48120,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==190))
+			else if ((LA363_1==191))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -48139,7 +48140,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==121))
+			else if ((LA363_1==122))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -48159,7 +48160,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==GET||LA363_1==IDENTIFIER||LA363_1==SET||LA363_1==99||(LA363_1>=101 && LA363_1<=102)||LA363_1==105||LA363_1==126||LA363_1==131||(LA363_1>=151 && LA363_1<=152)||LA363_1==161||(LA363_1>=163 && LA363_1<=164)||LA363_1==166||LA363_1==171||LA363_1==186||LA363_1==193||LA363_1==199))
+			else if ((LA363_1==GET||LA363_1==IDENTIFIER||LA363_1==SET||LA363_1==100||(LA363_1>=102 && LA363_1<=103)||LA363_1==106||LA363_1==127||LA363_1==132||(LA363_1>=152 && LA363_1<=153)||LA363_1==162||(LA363_1>=164 && LA363_1<=165)||LA363_1==167||LA363_1==172||LA363_1==187||LA363_1==194||LA363_1==200))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -48183,7 +48184,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==122))
+			else if ((LA363_1==123))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -48203,7 +48204,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA363_1==70))
+			else if ((LA363_1==71))
 			{
 				int LA363_2 = input.LA(2);
 
@@ -48358,7 +48359,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				alt364 = 1;
 			}
-			else if ((LA364_1==182))
+			else if ((LA364_1==183))
 			{
 				alt364 = 2;
 			}
@@ -48478,7 +48479,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			adaptor.AddChild(root_0, string_literal1140_tree);
 			}
 			DebugLocation(948, 9);
-			char_literal1141=(IToken)Match(input,72,Follow._72_in_if_statement7351); if (state.failed) return retval;
+			char_literal1141=(IToken)Match(input,73,Follow._73_in_if_statement7351); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1141_tree = (object)adaptor.Create(char_literal1141, "char_literal1141", retval);
 			adaptor.AddChild(root_0, char_literal1141_tree);
@@ -48683,13 +48684,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(954, 2);
-			string_literal1148=(IToken)Match(input,182,Follow._182_in_switch_statement7391); if (state.failed) return retval;
+			string_literal1148=(IToken)Match(input,183,Follow._183_in_switch_statement7391); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1148_tree = (object)adaptor.Create(string_literal1148, "string_literal1148", retval);
 			adaptor.AddChild(root_0, string_literal1148_tree);
 			}
 			DebugLocation(954, 13);
-			char_literal1149=(IToken)Match(input,72,Follow._72_in_switch_statement7395); if (state.failed) return retval;
+			char_literal1149=(IToken)Match(input,73,Follow._73_in_switch_statement7395); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1149_tree = (object)adaptor.Create(char_literal1149, "char_literal1149", retval);
 			adaptor.AddChild(root_0, char_literal1149_tree);
@@ -48779,7 +48780,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(956, 2);
-			char_literal1153=(IToken)Match(input,200,Follow._200_in_switch_block7415); if (state.failed) return retval;
+			char_literal1153=(IToken)Match(input,201,Follow._201_in_switch_block7415); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1153_tree = (object)adaptor.Create(char_literal1153, "char_literal1153", retval);
 			adaptor.AddChild(root_0, char_literal1153_tree);
@@ -48791,7 +48792,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(366, false);
 			int LA366_1 = input.LA(1);
 
-			if ((LA366_1==113||LA366_1==121))
+			if ((LA366_1==114||LA366_1==122))
 			{
 				alt366 = 1;
 			}
@@ -48816,7 +48817,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(366); }
 
 			DebugLocation(956, 27);
-			char_literal1155=(IToken)Match(input,204,Follow._204_in_switch_block7424); if (state.failed) return retval;
+			char_literal1155=(IToken)Match(input,205,Follow._205_in_switch_block7424); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1155_tree = (object)adaptor.Create(char_literal1155, "char_literal1155", retval);
 			adaptor.AddChild(root_0, char_literal1155_tree);
@@ -48893,7 +48894,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(367, false);
 				int LA367_1 = input.LA(1);
 
-				if ((LA367_1==113||LA367_1==121))
+				if ((LA367_1==114||LA367_1==122))
 				{
 					alt367 = 1;
 				}
@@ -49079,18 +49080,18 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(368, false);
 				int LA368_1 = input.LA(1);
 
-				if ((LA368_1==121))
+				if ((LA368_1==122))
 				{
 					int LA368_2 = input.LA(2);
 
-					if ((LA368_2==83))
+					if ((LA368_2==84))
 					{
 						alt368 = 1;
 					}
 
 
 				}
-				else if ((LA368_1==113))
+				else if ((LA368_1==114))
 				{
 					alt368 = 1;
 				}
@@ -49198,11 +49199,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(369, false);
 			int LA369_1 = input.LA(1);
 
-			if ((LA369_1==113))
+			if ((LA369_1==114))
 			{
 				alt369 = 1;
 			}
-			else if ((LA369_1==121))
+			else if ((LA369_1==122))
 			{
 				alt369 = 2;
 			}
@@ -49228,7 +49229,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:964:3: 'case' constant_expression ':'
 				{
 				DebugLocation(964, 3);
-				string_literal1160=(IToken)Match(input,113,Follow._113_in_switch_label7463); if (state.failed) return retval;
+				string_literal1160=(IToken)Match(input,114,Follow._114_in_switch_label7463); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1160_tree = (object)adaptor.Create(string_literal1160, "string_literal1160", retval);
 				adaptor.AddChild(root_0, string_literal1160_tree);
@@ -49240,7 +49241,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) adaptor.AddChild(root_0, constant_expression1161.Tree, constant_expression1161, "constant_expression1161", retval);
 				DebugLocation(964, 34);
-				char_literal1162=(IToken)Match(input,83,Follow._83_in_switch_label7471); if (state.failed) return retval;
+				char_literal1162=(IToken)Match(input,84,Follow._84_in_switch_label7471); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal1162_tree = (object)adaptor.Create(char_literal1162, "char_literal1162", retval);
 				adaptor.AddChild(root_0, char_literal1162_tree);
@@ -49263,13 +49264,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:965:5: 'default' ':'
 				{
 				DebugLocation(965, 5);
-				string_literal1163=(IToken)Match(input,121,Follow._121_in_switch_label7478); if (state.failed) return retval;
+				string_literal1163=(IToken)Match(input,122,Follow._122_in_switch_label7478); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1163_tree = (object)adaptor.Create(string_literal1163, "string_literal1163", retval);
 				adaptor.AddChild(root_0, string_literal1163_tree);
 				}
 				DebugLocation(965, 17);
-				char_literal1164=(IToken)Match(input,83,Follow._83_in_switch_label7482); if (state.failed) return retval;
+				char_literal1164=(IToken)Match(input,84,Follow._84_in_switch_label7482); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				char_literal1164_tree = (object)adaptor.Create(char_literal1164, "char_literal1164", retval);
 				adaptor.AddChild(root_0, char_literal1164_tree);
@@ -49343,22 +49344,22 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(370, false);
 			switch (input.LA(1))
 			{
-			case 198:
+			case 199:
 				{
 				alt370 = 1;
 				}
 				break;
-			case 124:
+			case 125:
 				{
 				alt370 = 2;
 				}
 				break;
-			case 135:
+			case 136:
 				{
 				alt370 = 3;
 				}
 				break;
-			case 136:
+			case 137:
 				{
 				alt370 = 4;
 				}
@@ -49504,13 +49505,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(972, 2);
-			string_literal1169=(IToken)Match(input,198,Follow._198_in_while_statement7514); if (state.failed) return retval;
+			string_literal1169=(IToken)Match(input,199,Follow._199_in_while_statement7514); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1169_tree = (object)adaptor.Create(string_literal1169, "string_literal1169", retval);
 			adaptor.AddChild(root_0, string_literal1169_tree);
 			}
 			DebugLocation(972, 12);
-			char_literal1170=(IToken)Match(input,72,Follow._72_in_while_statement7518); if (state.failed) return retval;
+			char_literal1170=(IToken)Match(input,73,Follow._73_in_while_statement7518); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1170_tree = (object)adaptor.Create(char_literal1170, "char_literal1170", retval);
 			adaptor.AddChild(root_0, char_literal1170_tree);
@@ -49607,7 +49608,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(974, 2);
-			string_literal1174=(IToken)Match(input,124,Follow._124_in_do_statement7538); if (state.failed) return retval;
+			string_literal1174=(IToken)Match(input,125,Follow._125_in_do_statement7538); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1174_tree = (object)adaptor.Create(string_literal1174, "string_literal1174", retval);
 			adaptor.AddChild(root_0, string_literal1174_tree);
@@ -49619,13 +49620,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, embedded_statement1175.Tree, embedded_statement1175, "embedded_statement1175", retval);
 			DebugLocation(974, 30);
-			string_literal1176=(IToken)Match(input,198,Follow._198_in_do_statement7546); if (state.failed) return retval;
+			string_literal1176=(IToken)Match(input,199,Follow._199_in_do_statement7546); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1176_tree = (object)adaptor.Create(string_literal1176, "string_literal1176", retval);
 			adaptor.AddChild(root_0, string_literal1176_tree);
 			}
 			DebugLocation(974, 40);
-			char_literal1177=(IToken)Match(input,72,Follow._72_in_do_statement7550); if (state.failed) return retval;
+			char_literal1177=(IToken)Match(input,73,Follow._73_in_do_statement7550); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1177_tree = (object)adaptor.Create(char_literal1177, "char_literal1177", retval);
 			adaptor.AddChild(root_0, char_literal1177_tree);
@@ -49724,13 +49725,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(976, 2);
-			string_literal1181=(IToken)Match(input,135,Follow._135_in_for_statement7570); if (state.failed) return retval;
+			string_literal1181=(IToken)Match(input,136,Follow._136_in_for_statement7570); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1181_tree = (object)adaptor.Create(string_literal1181, "string_literal1181", retval);
 			adaptor.AddChild(root_0, string_literal1181_tree);
 			}
 			DebugLocation(976, 10);
-			char_literal1182=(IToken)Match(input,72,Follow._72_in_for_statement7574); if (state.failed) return retval;
+			char_literal1182=(IToken)Match(input,73,Follow._73_in_for_statement7574); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1182_tree = (object)adaptor.Create(char_literal1182, "char_literal1182", retval);
 			adaptor.AddChild(root_0, char_literal1182_tree);
@@ -49742,7 +49743,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(371, false);
 			int LA371_1 = input.LA(1);
 
-			if ((LA371_1==Character_literal||(LA371_1>=FALSE && LA371_1<=GET)||(LA371_1>=Hex_number && LA371_1<=IDENTIFIER)||(LA371_1>=MINUS && LA371_1<=NUMBER)||LA371_1==Real_literal||(LA371_1>=SET && LA371_1<=STRINGLITERAL)||LA371_1==TRUE||LA371_1==Verbatim_string_literal||LA371_1==65||LA371_1==70||(LA371_1>=72 && LA371_1<=73)||(LA371_1>=75 && LA371_1<=76)||LA371_1==79||LA371_1==99||(LA371_1>=101 && LA371_1<=102)||(LA371_1>=104 && LA371_1<=109)||(LA371_1>=111 && LA371_1<=112)||(LA371_1>=115 && LA371_1<=116)||(LA371_1>=120 && LA371_1<=123)||(LA371_1>=125 && LA371_1<=127)||LA371_1==131||LA371_1==134||LA371_1==137||LA371_1==139||LA371_1==142||LA371_1==145||(LA371_1>=147 && LA371_1<=148)||(LA371_1>=150 && LA371_1<=152)||(LA371_1>=154 && LA371_1<=156)||LA371_1==158||LA371_1==161||(LA371_1>=163 && LA371_1<=164)||LA371_1==166||LA371_1==171||LA371_1==173||(LA371_1>=175 && LA371_1<=177)||LA371_1==180||LA371_1==183||(LA371_1>=186 && LA371_1<=190)||(LA371_1>=192 && LA371_1<=193)||LA371_1==195||LA371_1==197||LA371_1==199||LA371_1==205))
+			if ((LA371_1==Character_literal||(LA371_1>=FALSE && LA371_1<=GET)||(LA371_1>=Hex_number && LA371_1<=IDENTIFIER)||(LA371_1>=MINUS && LA371_1<=NUMBER)||LA371_1==Real_literal||(LA371_1>=SET && LA371_1<=STRINGLITERAL)||LA371_1==TRUE||LA371_1==Verbatim_string_literal||LA371_1==66||LA371_1==71||(LA371_1>=73 && LA371_1<=74)||(LA371_1>=76 && LA371_1<=77)||LA371_1==80||LA371_1==100||(LA371_1>=102 && LA371_1<=103)||(LA371_1>=105 && LA371_1<=110)||(LA371_1>=112 && LA371_1<=113)||(LA371_1>=116 && LA371_1<=117)||(LA371_1>=121 && LA371_1<=124)||(LA371_1>=126 && LA371_1<=128)||LA371_1==132||LA371_1==135||LA371_1==138||LA371_1==140||LA371_1==143||LA371_1==146||(LA371_1>=148 && LA371_1<=149)||(LA371_1>=151 && LA371_1<=153)||(LA371_1>=155 && LA371_1<=157)||LA371_1==159||LA371_1==162||(LA371_1>=164 && LA371_1<=165)||LA371_1==167||LA371_1==172||LA371_1==174||(LA371_1>=176 && LA371_1<=178)||LA371_1==181||LA371_1==184||(LA371_1>=187 && LA371_1<=191)||(LA371_1>=193 && LA371_1<=194)||LA371_1==196||LA371_1==198||LA371_1==200||LA371_1==206))
 			{
 				alt371 = 1;
 			}
@@ -49779,7 +49780,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(372, false);
 			int LA372_1 = input.LA(1);
 
-			if ((LA372_1==Character_literal||(LA372_1>=FALSE && LA372_1<=GET)||(LA372_1>=Hex_number && LA372_1<=IDENTIFIER)||(LA372_1>=MINUS && LA372_1<=NUMBER)||LA372_1==Real_literal||(LA372_1>=SET && LA372_1<=STRINGLITERAL)||LA372_1==TRUE||LA372_1==Verbatim_string_literal||LA372_1==65||LA372_1==70||(LA372_1>=72 && LA372_1<=73)||(LA372_1>=75 && LA372_1<=76)||LA372_1==79||LA372_1==99||(LA372_1>=101 && LA372_1<=102)||(LA372_1>=104 && LA372_1<=109)||(LA372_1>=111 && LA372_1<=112)||(LA372_1>=115 && LA372_1<=116)||(LA372_1>=120 && LA372_1<=123)||(LA372_1>=125 && LA372_1<=127)||LA372_1==131||LA372_1==134||LA372_1==137||LA372_1==139||LA372_1==142||LA372_1==145||(LA372_1>=147 && LA372_1<=148)||(LA372_1>=150 && LA372_1<=152)||(LA372_1>=154 && LA372_1<=156)||LA372_1==158||LA372_1==161||(LA372_1>=163 && LA372_1<=164)||LA372_1==166||LA372_1==171||LA372_1==173||(LA372_1>=175 && LA372_1<=177)||LA372_1==180||LA372_1==183||(LA372_1>=186 && LA372_1<=190)||(LA372_1>=192 && LA372_1<=193)||LA372_1==197||LA372_1==199||LA372_1==205))
+			if ((LA372_1==Character_literal||(LA372_1>=FALSE && LA372_1<=GET)||(LA372_1>=Hex_number && LA372_1<=IDENTIFIER)||(LA372_1>=MINUS && LA372_1<=NUMBER)||LA372_1==Real_literal||(LA372_1>=SET && LA372_1<=STRINGLITERAL)||LA372_1==TRUE||LA372_1==Verbatim_string_literal||LA372_1==66||LA372_1==71||(LA372_1>=73 && LA372_1<=74)||(LA372_1>=76 && LA372_1<=77)||LA372_1==80||LA372_1==100||(LA372_1>=102 && LA372_1<=103)||(LA372_1>=105 && LA372_1<=110)||(LA372_1>=112 && LA372_1<=113)||(LA372_1>=116 && LA372_1<=117)||(LA372_1>=121 && LA372_1<=124)||(LA372_1>=126 && LA372_1<=128)||LA372_1==132||LA372_1==135||LA372_1==138||LA372_1==140||LA372_1==143||LA372_1==146||(LA372_1>=148 && LA372_1<=149)||(LA372_1>=151 && LA372_1<=153)||(LA372_1>=155 && LA372_1<=157)||LA372_1==159||LA372_1==162||(LA372_1>=164 && LA372_1<=165)||LA372_1==167||LA372_1==172||LA372_1==174||(LA372_1>=176 && LA372_1<=178)||LA372_1==181||LA372_1==184||(LA372_1>=187 && LA372_1<=191)||(LA372_1>=193 && LA372_1<=194)||LA372_1==198||LA372_1==200||LA372_1==206))
 			{
 				alt372 = 1;
 			}
@@ -49816,7 +49817,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(373, false);
 			int LA373_1 = input.LA(1);
 
-			if ((LA373_1==Character_literal||(LA373_1>=FALSE && LA373_1<=GET)||(LA373_1>=Hex_number && LA373_1<=IDENTIFIER)||(LA373_1>=MINUS && LA373_1<=NUMBER)||LA373_1==Real_literal||(LA373_1>=SET && LA373_1<=STRINGLITERAL)||LA373_1==TRUE||LA373_1==Verbatim_string_literal||LA373_1==65||LA373_1==70||(LA373_1>=72 && LA373_1<=73)||(LA373_1>=75 && LA373_1<=76)||LA373_1==79||LA373_1==99||(LA373_1>=101 && LA373_1<=102)||(LA373_1>=104 && LA373_1<=109)||(LA373_1>=111 && LA373_1<=112)||(LA373_1>=115 && LA373_1<=116)||(LA373_1>=120 && LA373_1<=123)||(LA373_1>=125 && LA373_1<=127)||LA373_1==131||LA373_1==134||LA373_1==137||LA373_1==139||LA373_1==142||LA373_1==145||(LA373_1>=147 && LA373_1<=148)||(LA373_1>=150 && LA373_1<=152)||(LA373_1>=154 && LA373_1<=156)||LA373_1==158||LA373_1==161||(LA373_1>=163 && LA373_1<=164)||LA373_1==166||LA373_1==171||LA373_1==173||(LA373_1>=175 && LA373_1<=177)||LA373_1==180||LA373_1==183||(LA373_1>=186 && LA373_1<=190)||(LA373_1>=192 && LA373_1<=193)||LA373_1==197||LA373_1==199||LA373_1==205))
+			if ((LA373_1==Character_literal||(LA373_1>=FALSE && LA373_1<=GET)||(LA373_1>=Hex_number && LA373_1<=IDENTIFIER)||(LA373_1>=MINUS && LA373_1<=NUMBER)||LA373_1==Real_literal||(LA373_1>=SET && LA373_1<=STRINGLITERAL)||LA373_1==TRUE||LA373_1==Verbatim_string_literal||LA373_1==66||LA373_1==71||(LA373_1>=73 && LA373_1<=74)||(LA373_1>=76 && LA373_1<=77)||LA373_1==80||LA373_1==100||(LA373_1>=102 && LA373_1<=103)||(LA373_1>=105 && LA373_1<=110)||(LA373_1>=112 && LA373_1<=113)||(LA373_1>=116 && LA373_1<=117)||(LA373_1>=121 && LA373_1<=124)||(LA373_1>=126 && LA373_1<=128)||LA373_1==132||LA373_1==135||LA373_1==138||LA373_1==140||LA373_1==143||LA373_1==146||(LA373_1>=148 && LA373_1<=149)||(LA373_1>=151 && LA373_1<=153)||(LA373_1>=155 && LA373_1<=157)||LA373_1==159||LA373_1==162||(LA373_1>=164 && LA373_1<=165)||LA373_1==167||LA373_1==172||LA373_1==174||(LA373_1>=176 && LA373_1<=178)||LA373_1==181||LA373_1==184||(LA373_1>=187 && LA373_1<=191)||(LA373_1>=193 && LA373_1<=194)||LA373_1==198||LA373_1==200||LA373_1==206))
 			{
 				alt373 = 1;
 			}
@@ -49914,7 +49915,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(374, false);
 			int LA374_1 = input.LA(1);
 
-			if ((LA374_1==109||LA374_1==112||LA374_1==115||LA374_1==120||LA374_1==125||LA374_1==134||LA374_1==142||LA374_1==150||LA374_1==155||LA374_1==173||LA374_1==176||LA374_1==180||(LA374_1>=188 && LA374_1<=189)||LA374_1==192))
+			if ((LA374_1==110||LA374_1==113||LA374_1==116||LA374_1==121||LA374_1==126||LA374_1==135||LA374_1==143||LA374_1==151||LA374_1==156||LA374_1==174||LA374_1==177||LA374_1==181||(LA374_1>=189 && LA374_1<=190)||LA374_1==193))
 			{
 				int LA374_2 = input.LA(2);
 
@@ -49934,7 +49935,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA374_1==193))
+			else if ((LA374_1==194))
 			{
 				int LA374_2 = input.LA(2);
 
@@ -49954,7 +49955,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA374_1==104||LA374_1==111||LA374_1==123||LA374_1==127||LA374_1==137||LA374_1==139||LA374_1==145||(LA374_1>=147 && LA374_1<=148)||LA374_1==156||LA374_1==158||LA374_1==175||LA374_1==197) && ((_queryExpression == 0)))
+			else if ((LA374_1==105||LA374_1==112||LA374_1==124||LA374_1==128||LA374_1==138||LA374_1==140||LA374_1==146||(LA374_1>=148 && LA374_1<=149)||LA374_1==157||LA374_1==159||LA374_1==176||LA374_1==198) && ((_queryExpression == 0)))
 			{
 				int LA374_2 = input.LA(2);
 
@@ -49974,11 +49975,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA374_1==195))
+			else if ((LA374_1==196))
 			{
 				alt374 = 1;
 			}
-			else if ((LA374_1==126))
+			else if ((LA374_1==127))
 			{
 				int LA374_2 = input.LA(2);
 
@@ -49998,7 +49999,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA374_1==107))
+			else if ((LA374_1==108))
 			{
 				int LA374_2 = input.LA(2);
 
@@ -50018,11 +50019,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA374_1==Character_literal||LA374_1==FALSE||LA374_1==Hex_number||(LA374_1>=MINUS && LA374_1<=NUMBER)||LA374_1==Real_literal||LA374_1==STRINGLITERAL||LA374_1==TRUE||LA374_1==Verbatim_string_literal||LA374_1==65||LA374_1==70||(LA374_1>=72 && LA374_1<=73)||(LA374_1>=75 && LA374_1<=76)||LA374_1==79||LA374_1==108||LA374_1==116||(LA374_1>=121 && LA374_1<=122)||LA374_1==154||LA374_1==177||LA374_1==183||LA374_1==187||LA374_1==190||LA374_1==205))
+			else if ((LA374_1==Character_literal||LA374_1==FALSE||LA374_1==Hex_number||(LA374_1>=MINUS && LA374_1<=NUMBER)||LA374_1==Real_literal||LA374_1==STRINGLITERAL||LA374_1==TRUE||LA374_1==Verbatim_string_literal||LA374_1==66||LA374_1==71||(LA374_1>=73 && LA374_1<=74)||(LA374_1>=76 && LA374_1<=77)||LA374_1==80||LA374_1==109||LA374_1==117||(LA374_1>=122 && LA374_1<=123)||LA374_1==155||LA374_1==178||LA374_1==184||LA374_1==188||LA374_1==191||LA374_1==206))
 			{
 				alt374 = 2;
 			}
-			else if ((LA374_1==106))
+			else if ((LA374_1==107))
 			{
 				int LA374_2 = input.LA(2);
 
@@ -50042,7 +50043,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA374_1==GET||LA374_1==IDENTIFIER||LA374_1==SET||LA374_1==99||(LA374_1>=101 && LA374_1<=102)||LA374_1==105||LA374_1==131||(LA374_1>=151 && LA374_1<=152)||LA374_1==161||(LA374_1>=163 && LA374_1<=164)||LA374_1==166||LA374_1==171||LA374_1==186||LA374_1==199))
+			else if ((LA374_1==GET||LA374_1==IDENTIFIER||LA374_1==SET||LA374_1==100||(LA374_1>=102 && LA374_1<=103)||LA374_1==106||LA374_1==132||(LA374_1>=152 && LA374_1<=153)||LA374_1==162||(LA374_1>=164 && LA374_1<=165)||LA374_1==167||LA374_1==172||LA374_1==187||LA374_1==200))
 			{
 				int LA374_2 = input.LA(2);
 
@@ -50317,7 +50318,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(375, false);
 				int LA375_1 = input.LA(1);
 
-				if ((LA375_1==78))
+				if ((LA375_1==79))
 				{
 					alt375 = 1;
 				}
@@ -50331,7 +50332,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:985:24: ',' statement_expression
 					{
 					DebugLocation(985, 24);
-					char_literal1195=(IToken)Match(input,78,Follow._78_in_statement_expression_list7645); if (state.failed) return retval;
+					char_literal1195=(IToken)Match(input,79,Follow._79_in_statement_expression_list7645); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal1195_tree = (object)adaptor.Create(char_literal1195, "char_literal1195", retval);
 					adaptor.AddChild(root_0, char_literal1195_tree);
@@ -50430,13 +50431,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(987, 2);
-			string_literal1197=(IToken)Match(input,136,Follow._136_in_foreach_statement7657); if (state.failed) return retval;
+			string_literal1197=(IToken)Match(input,137,Follow._137_in_foreach_statement7657); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1197_tree = (object)adaptor.Create(string_literal1197, "string_literal1197", retval);
 			adaptor.AddChild(root_0, string_literal1197_tree);
 			}
 			DebugLocation(987, 14);
-			char_literal1198=(IToken)Match(input,72,Follow._72_in_foreach_statement7661); if (state.failed) return retval;
+			char_literal1198=(IToken)Match(input,73,Follow._73_in_foreach_statement7661); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1198_tree = (object)adaptor.Create(char_literal1198, "char_literal1198", retval);
 			adaptor.AddChild(root_0, char_literal1198_tree);
@@ -50454,7 +50455,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) adaptor.AddChild(root_0, identifier1200.Tree, identifier1200, "identifier1200", retval);
 			DebugLocation(987, 55);
-			string_literal1201=(IToken)Match(input,141,Follow._141_in_foreach_statement7673); if (state.failed) return retval;
+			string_literal1201=(IToken)Match(input,142,Follow._142_in_foreach_statement7673); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1201_tree = (object)adaptor.Create(string_literal1201, "string_literal1201", retval);
 			adaptor.AddChild(root_0, string_literal1201_tree);
@@ -50542,27 +50543,27 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(376, false);
 			switch (input.LA(1))
 			{
-			case 110:
+			case 111:
 				{
 				alt376 = 1;
 				}
 				break;
-			case 119:
+			case 120:
 				{
 				alt376 = 2;
 				}
 				break;
-			case 138:
+			case 139:
 				{
 				alt376 = 3;
 				}
 				break;
-			case 172:
+			case 173:
 				{
 				alt376 = 4;
 				}
 				break;
-			case 184:
+			case 185:
 				{
 				alt376 = 5;
 				}
@@ -50719,7 +50720,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(995, 2);
-			string_literal1210=(IToken)Match(input,110,Follow._110_in_break_statement7721); if (state.failed) return retval;
+			string_literal1210=(IToken)Match(input,111,Follow._111_in_break_statement7721); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1210_tree = (object)adaptor.Create(string_literal1210, "string_literal1210", retval);
 			adaptor.AddChild(root_0, string_literal1210_tree);
@@ -50796,7 +50797,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(997, 2);
-			string_literal1212=(IToken)Match(input,119,Follow._119_in_continue_statement7733); if (state.failed) return retval;
+			string_literal1212=(IToken)Match(input,120,Follow._120_in_continue_statement7733); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1212_tree = (object)adaptor.Create(string_literal1212, "string_literal1212", retval);
 			adaptor.AddChild(root_0, string_literal1212_tree);
@@ -50885,16 +50886,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(377, false);
 			int LA377_1 = input.LA(1);
 
-			if ((LA377_1==138))
+			if ((LA377_1==139))
 			{
 				switch (input.LA(2))
 				{
-				case 113:
+				case 114:
 					{
 					alt377 = 2;
 					}
 					break;
-				case 121:
+				case 122:
 					{
 					alt377 = 3;
 					}
@@ -50902,37 +50903,37 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				case GET:
 				case IDENTIFIER:
 				case SET:
-				case 99:
-				case 101:
+				case 100:
 				case 102:
-				case 104:
+				case 103:
 				case 105:
 				case 106:
 				case 107:
-				case 111:
-				case 123:
-				case 126:
+				case 108:
+				case 112:
+				case 124:
 				case 127:
-				case 131:
-				case 137:
-				case 139:
-				case 145:
-				case 147:
+				case 128:
+				case 132:
+				case 138:
+				case 140:
+				case 146:
 				case 148:
-				case 151:
+				case 149:
 				case 152:
-				case 156:
-				case 158:
-				case 161:
-				case 163:
+				case 153:
+				case 157:
+				case 159:
+				case 162:
 				case 164:
-				case 166:
-				case 171:
-				case 175:
-				case 186:
-				case 193:
-				case 197:
-				case 199:
+				case 165:
+				case 167:
+				case 172:
+				case 176:
+				case 187:
+				case 194:
+				case 198:
+				case 200:
 					{
 					alt377 = 1;
 					}
@@ -50969,7 +50970,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:999:3: 'goto' identifier ';'
 				{
 				DebugLocation(999, 3);
-				string_literal1214=(IToken)Match(input,138,Follow._138_in_goto_statement7746); if (state.failed) return retval;
+				string_literal1214=(IToken)Match(input,139,Follow._139_in_goto_statement7746); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1214_tree = (object)adaptor.Create(string_literal1214, "string_literal1214", retval);
 				adaptor.AddChild(root_0, string_literal1214_tree);
@@ -51004,13 +51005,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1000:5: 'goto' 'case' constant_expression ';'
 				{
 				DebugLocation(1000, 5);
-				string_literal1217=(IToken)Match(input,138,Follow._138_in_goto_statement7761); if (state.failed) return retval;
+				string_literal1217=(IToken)Match(input,139,Follow._139_in_goto_statement7761); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1217_tree = (object)adaptor.Create(string_literal1217, "string_literal1217", retval);
 				adaptor.AddChild(root_0, string_literal1217_tree);
 				}
 				DebugLocation(1000, 14);
-				string_literal1218=(IToken)Match(input,113,Follow._113_in_goto_statement7765); if (state.failed) return retval;
+				string_literal1218=(IToken)Match(input,114,Follow._114_in_goto_statement7765); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1218_tree = (object)adaptor.Create(string_literal1218, "string_literal1218", retval);
 				adaptor.AddChild(root_0, string_literal1218_tree);
@@ -51045,13 +51046,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1001:5: 'goto' 'default' ';'
 				{
 				DebugLocation(1001, 5);
-				string_literal1221=(IToken)Match(input,138,Follow._138_in_goto_statement7780); if (state.failed) return retval;
+				string_literal1221=(IToken)Match(input,139,Follow._139_in_goto_statement7780); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1221_tree = (object)adaptor.Create(string_literal1221, "string_literal1221", retval);
 				adaptor.AddChild(root_0, string_literal1221_tree);
 				}
 				DebugLocation(1001, 14);
-				string_literal1222=(IToken)Match(input,121,Follow._121_in_goto_statement7784); if (state.failed) return retval;
+				string_literal1222=(IToken)Match(input,122,Follow._122_in_goto_statement7784); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1222_tree = (object)adaptor.Create(string_literal1222, "string_literal1222", retval);
 				adaptor.AddChild(root_0, string_literal1222_tree);
@@ -51134,7 +51135,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1003, 2);
-			string_literal1224=(IToken)Match(input,172,Follow._172_in_return_statement7797); if (state.failed) return retval;
+			string_literal1224=(IToken)Match(input,173,Follow._173_in_return_statement7797); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1224_tree = (object)adaptor.Create(string_literal1224, "string_literal1224", retval);
 			adaptor.AddChild(root_0, string_literal1224_tree);
@@ -51146,7 +51147,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(378, false);
 			int LA378_1 = input.LA(1);
 
-			if ((LA378_1==Character_literal||(LA378_1>=FALSE && LA378_1<=GET)||(LA378_1>=Hex_number && LA378_1<=IDENTIFIER)||(LA378_1>=MINUS && LA378_1<=NUMBER)||LA378_1==Real_literal||(LA378_1>=SET && LA378_1<=STRINGLITERAL)||LA378_1==TRUE||LA378_1==Verbatim_string_literal||LA378_1==65||LA378_1==70||(LA378_1>=72 && LA378_1<=73)||(LA378_1>=75 && LA378_1<=76)||LA378_1==79||LA378_1==99||(LA378_1>=101 && LA378_1<=102)||(LA378_1>=104 && LA378_1<=109)||(LA378_1>=111 && LA378_1<=112)||(LA378_1>=115 && LA378_1<=116)||(LA378_1>=120 && LA378_1<=123)||(LA378_1>=125 && LA378_1<=127)||LA378_1==131||LA378_1==134||LA378_1==137||LA378_1==139||LA378_1==142||LA378_1==145||(LA378_1>=147 && LA378_1<=148)||(LA378_1>=150 && LA378_1<=152)||(LA378_1>=154 && LA378_1<=156)||LA378_1==158||LA378_1==161||(LA378_1>=163 && LA378_1<=164)||LA378_1==166||LA378_1==171||LA378_1==173||(LA378_1>=175 && LA378_1<=177)||LA378_1==180||LA378_1==183||(LA378_1>=186 && LA378_1<=190)||(LA378_1>=192 && LA378_1<=193)||LA378_1==197||LA378_1==199||LA378_1==205))
+			if ((LA378_1==Character_literal||(LA378_1>=FALSE && LA378_1<=GET)||(LA378_1>=Hex_number && LA378_1<=IDENTIFIER)||(LA378_1>=MINUS && LA378_1<=NUMBER)||LA378_1==Real_literal||(LA378_1>=SET && LA378_1<=STRINGLITERAL)||LA378_1==TRUE||LA378_1==Verbatim_string_literal||LA378_1==66||LA378_1==71||(LA378_1>=73 && LA378_1<=74)||(LA378_1>=76 && LA378_1<=77)||LA378_1==80||LA378_1==100||(LA378_1>=102 && LA378_1<=103)||(LA378_1>=105 && LA378_1<=110)||(LA378_1>=112 && LA378_1<=113)||(LA378_1>=116 && LA378_1<=117)||(LA378_1>=121 && LA378_1<=124)||(LA378_1>=126 && LA378_1<=128)||LA378_1==132||LA378_1==135||LA378_1==138||LA378_1==140||LA378_1==143||LA378_1==146||(LA378_1>=148 && LA378_1<=149)||(LA378_1>=151 && LA378_1<=153)||(LA378_1>=155 && LA378_1<=157)||LA378_1==159||LA378_1==162||(LA378_1>=164 && LA378_1<=165)||LA378_1==167||LA378_1==172||LA378_1==174||(LA378_1>=176 && LA378_1<=178)||LA378_1==181||LA378_1==184||(LA378_1>=187 && LA378_1<=191)||(LA378_1>=193 && LA378_1<=194)||LA378_1==198||LA378_1==200||LA378_1==206))
 			{
 				alt378 = 1;
 			}
@@ -51243,7 +51244,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1005, 2);
-			string_literal1227=(IToken)Match(input,184,Follow._184_in_throw_statement7814); if (state.failed) return retval;
+			string_literal1227=(IToken)Match(input,185,Follow._185_in_throw_statement7814); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1227_tree = (object)adaptor.Create(string_literal1227, "string_literal1227", retval);
 			adaptor.AddChild(root_0, string_literal1227_tree);
@@ -51255,7 +51256,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(379, false);
 			int LA379_1 = input.LA(1);
 
-			if ((LA379_1==Character_literal||(LA379_1>=FALSE && LA379_1<=GET)||(LA379_1>=Hex_number && LA379_1<=IDENTIFIER)||(LA379_1>=MINUS && LA379_1<=NUMBER)||LA379_1==Real_literal||(LA379_1>=SET && LA379_1<=STRINGLITERAL)||LA379_1==TRUE||LA379_1==Verbatim_string_literal||LA379_1==65||LA379_1==70||(LA379_1>=72 && LA379_1<=73)||(LA379_1>=75 && LA379_1<=76)||LA379_1==79||LA379_1==99||(LA379_1>=101 && LA379_1<=102)||(LA379_1>=104 && LA379_1<=109)||(LA379_1>=111 && LA379_1<=112)||(LA379_1>=115 && LA379_1<=116)||(LA379_1>=120 && LA379_1<=123)||(LA379_1>=125 && LA379_1<=127)||LA379_1==131||LA379_1==134||LA379_1==137||LA379_1==139||LA379_1==142||LA379_1==145||(LA379_1>=147 && LA379_1<=148)||(LA379_1>=150 && LA379_1<=152)||(LA379_1>=154 && LA379_1<=156)||LA379_1==158||LA379_1==161||(LA379_1>=163 && LA379_1<=164)||LA379_1==166||LA379_1==171||LA379_1==173||(LA379_1>=175 && LA379_1<=177)||LA379_1==180||LA379_1==183||(LA379_1>=186 && LA379_1<=190)||(LA379_1>=192 && LA379_1<=193)||LA379_1==197||LA379_1==199||LA379_1==205))
+			if ((LA379_1==Character_literal||(LA379_1>=FALSE && LA379_1<=GET)||(LA379_1>=Hex_number && LA379_1<=IDENTIFIER)||(LA379_1>=MINUS && LA379_1<=NUMBER)||LA379_1==Real_literal||(LA379_1>=SET && LA379_1<=STRINGLITERAL)||LA379_1==TRUE||LA379_1==Verbatim_string_literal||LA379_1==66||LA379_1==71||(LA379_1>=73 && LA379_1<=74)||(LA379_1>=76 && LA379_1<=77)||LA379_1==80||LA379_1==100||(LA379_1>=102 && LA379_1<=103)||(LA379_1>=105 && LA379_1<=110)||(LA379_1>=112 && LA379_1<=113)||(LA379_1>=116 && LA379_1<=117)||(LA379_1>=121 && LA379_1<=124)||(LA379_1>=126 && LA379_1<=128)||LA379_1==132||LA379_1==135||LA379_1==138||LA379_1==140||LA379_1==143||LA379_1==146||(LA379_1>=148 && LA379_1<=149)||(LA379_1>=151 && LA379_1<=153)||(LA379_1>=155 && LA379_1<=157)||LA379_1==159||LA379_1==162||(LA379_1>=164 && LA379_1<=165)||LA379_1==167||LA379_1==172||LA379_1==174||(LA379_1>=176 && LA379_1<=178)||LA379_1==181||LA379_1==184||(LA379_1>=187 && LA379_1<=191)||(LA379_1>=193 && LA379_1<=194)||LA379_1==198||LA379_1==200||LA379_1==206))
 			{
 				alt379 = 1;
 			}
@@ -51354,7 +51355,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(381, false);
 			int LA381_1 = input.LA(1);
 
-			if ((LA381_1==185))
+			if ((LA381_1==186))
 			{
 				int LA381_2 = input.LA(2);
 
@@ -51396,7 +51397,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1007:8: 'try' block catch_clauses ( finally_clause )?
 				{
 				DebugLocation(1007, 8);
-				string_literal1230=(IToken)Match(input,185,Follow._185_in_try_statement7837); if (state.failed) return retval;
+				string_literal1230=(IToken)Match(input,186,Follow._186_in_try_statement7837); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1230_tree = (object)adaptor.Create(string_literal1230, "string_literal1230", retval);
 				adaptor.AddChild(root_0, string_literal1230_tree);
@@ -51420,7 +51421,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(380, false);
 				int LA380_1 = input.LA(1);
 
-				if ((LA380_1==132))
+				if ((LA380_1==133))
 				{
 					alt380 = 1;
 				}
@@ -51462,7 +51463,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1008:5: 'try' block finally_clause
 				{
 				DebugLocation(1008, 5);
-				string_literal1234=(IToken)Match(input,185,Follow._185_in_try_statement7857); if (state.failed) return retval;
+				string_literal1234=(IToken)Match(input,186,Follow._186_in_try_statement7857); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1234_tree = (object)adaptor.Create(string_literal1234, "string_literal1234", retval);
 				adaptor.AddChild(root_0, string_literal1234_tree);
@@ -51548,7 +51549,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(384, false);
 			int LA384_1 = input.LA(1);
 
-			if ((LA384_1==114))
+			if ((LA384_1==115))
 			{
 				int LA384_2 = input.LA(2);
 
@@ -51602,7 +51603,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(382, false);
 				int LA382_1 = input.LA(1);
 
-				if ((LA382_1==114))
+				if ((LA382_1==115))
 				{
 					alt382 = 1;
 				}
@@ -51650,11 +51651,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(383, false);
 				int LA383_1 = input.LA(1);
 
-				if ((LA383_1==114))
+				if ((LA383_1==115))
 				{
 					int LA383_2 = input.LA(2);
 
-					if ((LA383_2==72))
+					if ((LA383_2==73))
 					{
 						alt383 = 1;
 					}
@@ -51762,11 +51763,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(385, false);
 				int LA385_1 = input.LA(1);
 
-				if ((LA385_1==114))
+				if ((LA385_1==115))
 				{
 					int LA385_2 = input.LA(2);
 
-					if ((LA385_2==72))
+					if ((LA385_2==73))
 					{
 						alt385 = 1;
 					}
@@ -51879,13 +51880,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1015, 2);
-			string_literal1242=(IToken)Match(input,114,Follow._114_in_specific_catch_clause7909); if (state.failed) return retval;
+			string_literal1242=(IToken)Match(input,115,Follow._115_in_specific_catch_clause7909); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1242_tree = (object)adaptor.Create(string_literal1242, "string_literal1242", retval);
 			adaptor.AddChild(root_0, string_literal1242_tree);
 			}
 			DebugLocation(1015, 12);
-			char_literal1243=(IToken)Match(input,72,Follow._72_in_specific_catch_clause7913); if (state.failed) return retval;
+			char_literal1243=(IToken)Match(input,73,Follow._73_in_specific_catch_clause7913); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1243_tree = (object)adaptor.Create(char_literal1243, "char_literal1243", retval);
 			adaptor.AddChild(root_0, char_literal1243_tree);
@@ -51903,7 +51904,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(386, false);
 			int LA386_1 = input.LA(1);
 
-			if ((LA386_1==GET||LA386_1==IDENTIFIER||LA386_1==SET||LA386_1==99||(LA386_1>=101 && LA386_1<=102)||(LA386_1>=104 && LA386_1<=107)||LA386_1==111||LA386_1==123||(LA386_1>=126 && LA386_1<=127)||LA386_1==131||LA386_1==137||LA386_1==139||LA386_1==145||(LA386_1>=147 && LA386_1<=148)||(LA386_1>=151 && LA386_1<=152)||LA386_1==156||LA386_1==158||LA386_1==161||(LA386_1>=163 && LA386_1<=164)||LA386_1==166||LA386_1==171||LA386_1==175||LA386_1==186||LA386_1==193||LA386_1==197||LA386_1==199))
+			if ((LA386_1==GET||LA386_1==IDENTIFIER||LA386_1==SET||LA386_1==100||(LA386_1>=102 && LA386_1<=103)||(LA386_1>=105 && LA386_1<=108)||LA386_1==112||LA386_1==124||(LA386_1>=127 && LA386_1<=128)||LA386_1==132||LA386_1==138||LA386_1==140||LA386_1==146||(LA386_1>=148 && LA386_1<=149)||(LA386_1>=152 && LA386_1<=153)||LA386_1==157||LA386_1==159||LA386_1==162||(LA386_1>=164 && LA386_1<=165)||LA386_1==167||LA386_1==172||LA386_1==176||LA386_1==187||LA386_1==194||LA386_1==198||LA386_1==200))
 			{
 				alt386 = 1;
 			}
@@ -52004,7 +52005,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1017, 2);
-			string_literal1248=(IToken)Match(input,114,Follow._114_in_general_catch_clause7938); if (state.failed) return retval;
+			string_literal1248=(IToken)Match(input,115,Follow._115_in_general_catch_clause7938); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1248_tree = (object)adaptor.Create(string_literal1248, "string_literal1248", retval);
 			adaptor.AddChild(root_0, string_literal1248_tree);
@@ -52080,7 +52081,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1019, 2);
-			string_literal1250=(IToken)Match(input,132,Follow._132_in_finally_clause7950); if (state.failed) return retval;
+			string_literal1250=(IToken)Match(input,133,Follow._133_in_finally_clause7950); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1250_tree = (object)adaptor.Create(string_literal1250, "string_literal1250", retval);
 			adaptor.AddChild(root_0, string_literal1250_tree);
@@ -52156,7 +52157,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1021, 2);
-			string_literal1252=(IToken)Match(input,116,Follow._116_in_checked_statement7962); if (state.failed) return retval;
+			string_literal1252=(IToken)Match(input,117,Follow._117_in_checked_statement7962); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1252_tree = (object)adaptor.Create(string_literal1252, "string_literal1252", retval);
 			adaptor.AddChild(root_0, string_literal1252_tree);
@@ -52232,7 +52233,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1023, 2);
-			string_literal1254=(IToken)Match(input,190,Follow._190_in_unchecked_statement7974); if (state.failed) return retval;
+			string_literal1254=(IToken)Match(input,191,Follow._191_in_unchecked_statement7974); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1254_tree = (object)adaptor.Create(string_literal1254, "string_literal1254", retval);
 			adaptor.AddChild(root_0, string_literal1254_tree);
@@ -52313,13 +52314,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(1025, 2);
-			string_literal1256=(IToken)Match(input,149,Follow._149_in_lock_statement7986); if (state.failed) return retval;
+			string_literal1256=(IToken)Match(input,150,Follow._150_in_lock_statement7986); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			string_literal1256_tree = (object)adaptor.Create(string_literal1256, "string_literal1256", retval);
 			adaptor.AddChild(root_0, string_literal1256_tree);
 			}
 			DebugLocation(1025, 11);
-			char_literal1257=(IToken)Match(input,72,Follow._72_in_lock_statement7990); if (state.failed) return retval;
+			char_literal1257=(IToken)Match(input,73,Follow._73_in_lock_statement7990); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1257_tree = (object)adaptor.Create(char_literal1257, "char_literal1257", retval);
 			adaptor.AddChild(root_0, char_literal1257_tree);
@@ -52418,7 +52419,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			adaptor.AddChild(root_0, string_literal1261_tree);
 			}
 			DebugLocation(1027, 12);
-			char_literal1262=(IToken)Match(input,72,Follow._72_in_using_statement8013); if (state.failed) return retval;
+			char_literal1262=(IToken)Match(input,73,Follow._73_in_using_statement8013); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 			char_literal1262_tree = (object)adaptor.Create(char_literal1262, "char_literal1262", retval);
 			adaptor.AddChild(root_0, char_literal1262_tree);
@@ -52503,7 +52504,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(387, false);
 			int LA387_1 = input.LA(1);
 
-			if ((LA387_1==109||LA387_1==112||LA387_1==115||LA387_1==120||LA387_1==125||LA387_1==134||LA387_1==142||LA387_1==150||LA387_1==155||LA387_1==173||LA387_1==176||LA387_1==180||(LA387_1>=188 && LA387_1<=189)||LA387_1==192))
+			if ((LA387_1==110||LA387_1==113||LA387_1==116||LA387_1==121||LA387_1==126||LA387_1==135||LA387_1==143||LA387_1==151||LA387_1==156||LA387_1==174||LA387_1==177||LA387_1==181||(LA387_1>=189 && LA387_1<=190)||LA387_1==193))
 			{
 				int LA387_2 = input.LA(2);
 
@@ -52523,7 +52524,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA387_1==193))
+			else if ((LA387_1==194))
 			{
 				int LA387_2 = input.LA(2);
 
@@ -52543,7 +52544,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA387_1==137))
+			else if ((LA387_1==138))
 			{
 				int LA387_2 = input.LA(2);
 
@@ -52563,11 +52564,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA387_1==195))
+			else if ((LA387_1==196))
 			{
 				alt387 = 1;
 			}
-			else if ((LA387_1==126))
+			else if ((LA387_1==127))
 			{
 				int LA387_2 = input.LA(2);
 
@@ -52587,7 +52588,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA387_1==106))
+			else if ((LA387_1==107))
 			{
 				int LA387_2 = input.LA(2);
 
@@ -52607,7 +52608,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA387_1==107))
+			else if ((LA387_1==108))
 			{
 				int LA387_2 = input.LA(2);
 
@@ -52627,11 +52628,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA387_1==Character_literal||LA387_1==FALSE||LA387_1==Hex_number||(LA387_1>=MINUS && LA387_1<=NUMBER)||LA387_1==Real_literal||LA387_1==STRINGLITERAL||LA387_1==TRUE||LA387_1==Verbatim_string_literal||LA387_1==65||LA387_1==70||(LA387_1>=72 && LA387_1<=73)||(LA387_1>=75 && LA387_1<=76)||LA387_1==79||LA387_1==108||LA387_1==116||(LA387_1>=121 && LA387_1<=122)||LA387_1==154||LA387_1==177||LA387_1==183||LA387_1==187||LA387_1==190||LA387_1==205))
+			else if ((LA387_1==Character_literal||LA387_1==FALSE||LA387_1==Hex_number||(LA387_1>=MINUS && LA387_1<=NUMBER)||LA387_1==Real_literal||LA387_1==STRINGLITERAL||LA387_1==TRUE||LA387_1==Verbatim_string_literal||LA387_1==66||LA387_1==71||(LA387_1>=73 && LA387_1<=74)||(LA387_1>=76 && LA387_1<=77)||LA387_1==80||LA387_1==109||LA387_1==117||(LA387_1>=122 && LA387_1<=123)||LA387_1==155||LA387_1==178||LA387_1==184||LA387_1==188||LA387_1==191||LA387_1==206))
 			{
 				alt387 = 2;
 			}
-			else if ((LA387_1==104||LA387_1==111||LA387_1==123||LA387_1==127||LA387_1==139||LA387_1==145||(LA387_1>=147 && LA387_1<=148)||LA387_1==156||LA387_1==158||LA387_1==175||LA387_1==197) && ((_queryExpression == 0)))
+			else if ((LA387_1==105||LA387_1==112||LA387_1==124||LA387_1==128||LA387_1==140||LA387_1==146||(LA387_1>=148 && LA387_1<=149)||LA387_1==157||LA387_1==159||LA387_1==176||LA387_1==198) && ((_queryExpression == 0)))
 			{
 				int LA387_2 = input.LA(2);
 
@@ -52651,7 +52652,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA387_1==GET||LA387_1==IDENTIFIER||LA387_1==SET||LA387_1==99||(LA387_1>=101 && LA387_1<=102)||LA387_1==105||LA387_1==131||(LA387_1>=151 && LA387_1<=152)||LA387_1==161||(LA387_1>=163 && LA387_1<=164)||LA387_1==166||LA387_1==171||LA387_1==186||LA387_1==199))
+			else if ((LA387_1==GET||LA387_1==IDENTIFIER||LA387_1==SET||LA387_1==100||(LA387_1>=102 && LA387_1<=103)||LA387_1==106||LA387_1==132||(LA387_1>=152 && LA387_1<=153)||LA387_1==162||(LA387_1>=164 && LA387_1<=165)||LA387_1==167||LA387_1==172||LA387_1==187||LA387_1==200))
 			{
 				int LA387_2 = input.LA(2);
 
@@ -52783,15 +52784,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(388, false);
 			int LA388_1 = input.LA(1);
 
-			if ((LA388_1==199))
+			if ((LA388_1==200))
 			{
 				int LA388_2 = input.LA(2);
 
-				if ((LA388_2==172))
+				if ((LA388_2==173))
 				{
 					alt388 = 1;
 				}
-				else if ((LA388_2==110))
+				else if ((LA388_2==111))
 				{
 					alt388 = 2;
 				}
@@ -52825,13 +52826,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1032:3: 'yield' 'return' expression ';'
 				{
 				DebugLocation(1032, 3);
-				string_literal1268=(IToken)Match(input,199,Follow._199_in_yield_statement8049); if (state.failed) return retval;
+				string_literal1268=(IToken)Match(input,200,Follow._200_in_yield_statement8049); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1268_tree = (object)adaptor.Create(string_literal1268, "string_literal1268", retval);
 				adaptor.AddChild(root_0, string_literal1268_tree);
 				}
 				DebugLocation(1032, 13);
-				string_literal1269=(IToken)Match(input,172,Follow._172_in_yield_statement8053); if (state.failed) return retval;
+				string_literal1269=(IToken)Match(input,173,Follow._173_in_yield_statement8053); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1269_tree = (object)adaptor.Create(string_literal1269, "string_literal1269", retval);
 				adaptor.AddChild(root_0, string_literal1269_tree);
@@ -52866,13 +52867,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1033:5: 'yield' 'break' ';'
 				{
 				DebugLocation(1033, 5);
-				string_literal1272=(IToken)Match(input,199,Follow._199_in_yield_statement8068); if (state.failed) return retval;
+				string_literal1272=(IToken)Match(input,200,Follow._200_in_yield_statement8068); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1272_tree = (object)adaptor.Create(string_literal1272, "string_literal1272", retval);
 				adaptor.AddChild(root_0, string_literal1272_tree);
 				}
 				DebugLocation(1033, 15);
-				string_literal1273=(IToken)Match(input,110,Follow._110_in_yield_statement8072); if (state.failed) return retval;
+				string_literal1273=(IToken)Match(input,111,Follow._111_in_yield_statement8072); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 				string_literal1273_tree = (object)adaptor.Create(string_literal1273, "string_literal1273", retval);
 				adaptor.AddChild(root_0, string_literal1273_tree);
@@ -53034,7 +53035,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			DebugLocation(1051, 16);
 
 			set1276=(IToken)input.LT(1);
-			if (input.LA(1)==109||input.LA(1)==112||input.LA(1)==115||input.LA(1)==120||input.LA(1)==125||input.LA(1)==134||input.LA(1)==142||input.LA(1)==150||input.LA(1)==155||input.LA(1)==173||input.LA(1)==176||input.LA(1)==180||(input.LA(1)>=188 && input.LA(1)<=189)||input.LA(1)==192)
+			if (input.LA(1)==110||input.LA(1)==113||input.LA(1)==116||input.LA(1)==121||input.LA(1)==126||input.LA(1)==135||input.LA(1)==143||input.LA(1)==151||input.LA(1)==156||input.LA(1)==174||input.LA(1)==177||input.LA(1)==181||(input.LA(1)>=189 && input.LA(1)<=190)||input.LA(1)==193)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set1276, "set1276", retval));
@@ -53112,7 +53113,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(389, false);
 			int LA389_1 = input.LA(1);
 
-			if ((LA389_1==GET||LA389_1==IDENTIFIER||LA389_1==SET||LA389_1==99||(LA389_1>=101 && LA389_1<=102)||(LA389_1>=105 && LA389_1<=107)||LA389_1==126||LA389_1==131||(LA389_1>=151 && LA389_1<=152)||LA389_1==161||(LA389_1>=163 && LA389_1<=164)||LA389_1==166||LA389_1==171||LA389_1==186||LA389_1==193||LA389_1==199))
+			if ((LA389_1==GET||LA389_1==IDENTIFIER||LA389_1==SET||LA389_1==100||(LA389_1>=102 && LA389_1<=103)||(LA389_1>=106 && LA389_1<=108)||LA389_1==127||LA389_1==132||(LA389_1>=152 && LA389_1<=153)||LA389_1==162||(LA389_1>=164 && LA389_1<=165)||LA389_1==167||LA389_1==172||LA389_1==187||LA389_1==194||LA389_1==200))
 			{
 				int LA389_2 = input.LA(2);
 
@@ -53132,7 +53133,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					throw nvae;
 				}
 			}
-			else if ((LA389_1==104||LA389_1==111||LA389_1==123||LA389_1==127||LA389_1==137||LA389_1==139||LA389_1==145||(LA389_1>=147 && LA389_1<=148)||LA389_1==156||LA389_1==158||LA389_1==175||LA389_1==197) && ((_queryExpression == 0)))
+			else if ((LA389_1==105||LA389_1==112||LA389_1==124||LA389_1==128||LA389_1==138||LA389_1==140||LA389_1==146||(LA389_1>=148 && LA389_1<=149)||LA389_1==157||LA389_1==159||LA389_1==176||LA389_1==198) && ((_queryExpression == 0)))
 			{
 				alt389 = 1;
 			}
@@ -53161,7 +53162,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(1057, 4);
 
 				set1277=(IToken)input.LT(1);
-				if (input.LA(1)==GET||input.LA(1)==IDENTIFIER||input.LA(1)==SET||input.LA(1)==99||(input.LA(1)>=101 && input.LA(1)<=102)||(input.LA(1)>=104 && input.LA(1)<=107)||input.LA(1)==111||input.LA(1)==123||(input.LA(1)>=126 && input.LA(1)<=127)||input.LA(1)==131||input.LA(1)==137||input.LA(1)==139||input.LA(1)==145||(input.LA(1)>=147 && input.LA(1)<=148)||(input.LA(1)>=151 && input.LA(1)<=152)||input.LA(1)==156||input.LA(1)==158||input.LA(1)==161||(input.LA(1)>=163 && input.LA(1)<=164)||input.LA(1)==166||input.LA(1)==171||input.LA(1)==175||input.LA(1)==186||input.LA(1)==193||input.LA(1)==197||input.LA(1)==199)
+				if (input.LA(1)==GET||input.LA(1)==IDENTIFIER||input.LA(1)==SET||input.LA(1)==100||(input.LA(1)>=102 && input.LA(1)<=103)||(input.LA(1)>=105 && input.LA(1)<=108)||input.LA(1)==112||input.LA(1)==124||(input.LA(1)>=127 && input.LA(1)<=128)||input.LA(1)==132||input.LA(1)==138||input.LA(1)==140||input.LA(1)==146||(input.LA(1)>=148 && input.LA(1)<=149)||(input.LA(1)>=152 && input.LA(1)<=153)||input.LA(1)==157||input.LA(1)==159||input.LA(1)==162||(input.LA(1)>=164 && input.LA(1)<=165)||input.LA(1)==167||input.LA(1)==172||input.LA(1)==176||input.LA(1)==187||input.LA(1)==194||input.LA(1)==198||input.LA(1)==200)
 				{
 					input.Consume();
 					if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set1277, "set1277", retval));
@@ -53187,7 +53188,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				DebugLocation(1060, 4);
 
 				set1278=(IToken)input.LT(1);
-				if (input.LA(1)==GET||input.LA(1)==IDENTIFIER||input.LA(1)==SET||input.LA(1)==99||(input.LA(1)>=101 && input.LA(1)<=102)||(input.LA(1)>=105 && input.LA(1)<=107)||input.LA(1)==126||input.LA(1)==131||(input.LA(1)>=151 && input.LA(1)<=152)||input.LA(1)==161||(input.LA(1)>=163 && input.LA(1)<=164)||input.LA(1)==166||input.LA(1)==171||input.LA(1)==186||input.LA(1)==193||input.LA(1)==199)
+				if (input.LA(1)==GET||input.LA(1)==IDENTIFIER||input.LA(1)==SET||input.LA(1)==100||(input.LA(1)>=102 && input.LA(1)<=103)||(input.LA(1)>=106 && input.LA(1)<=108)||input.LA(1)==127||input.LA(1)==132||(input.LA(1)>=152 && input.LA(1)<=153)||input.LA(1)==162||(input.LA(1)>=164 && input.LA(1)<=165)||input.LA(1)==167||input.LA(1)==172||input.LA(1)==187||input.LA(1)==194||input.LA(1)==200)
 				{
 					input.Consume();
 					if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set1278, "set1278", retval));
@@ -53361,7 +53362,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(390, false);
 			int LA390_1 = input.LA(1);
 
-			if ((LA390_1==84))
+			if ((LA390_1==85))
 			{
 				alt390 = 1;
 			}
@@ -53373,7 +53374,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:50:14: '::' identifier
 				{
 				DebugLocation(50, 14);
-				Match(input,84,Follow._84_in_synpred9_cs170); if (state.failed) return;
+				Match(input,85,Follow._85_in_synpred9_cs170); if (state.failed) return;
 				DebugLocation(50, 19);
 				PushFollow(Follow._identifier_in_synpred9_cs172);
 				identifier();
@@ -53393,7 +53394,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(391, false);
 			int LA391_1 = input.LA(1);
 
-			if ((LA391_1==85))
+			if ((LA391_1==86))
 			{
 				alt391 = 1;
 			}
@@ -53648,7 +53649,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(128, 27);
-			Match(input,89,Follow._89_in_synpred46_cs726); if (state.failed) return;
+			Match(input,90,Follow._90_in_synpred46_cs726); if (state.failed) return;
 
 			}
 
@@ -53716,7 +53717,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(133, 43);
-			Match(input,89,Follow._89_in_synpred48_cs784); if (state.failed) return;
+			Match(input,90,Follow._90_in_synpred48_cs784); if (state.failed) return;
 
 			}
 
@@ -53751,7 +53752,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(137, 18);
-			Match(input,83,Follow._83_in_synpred51_cs829); if (state.failed) return;
+			Match(input,84,Follow._84_in_synpred51_cs829); if (state.failed) return;
 
 			}
 
@@ -53781,7 +53782,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:156:42: '?'
 			{
 			DebugLocation(156, 42);
-			Match(input,93,Follow._93_in_synpred64_cs959); if (state.failed) return;
+			Match(input,94,Follow._94_in_synpred64_cs959); if (state.failed) return;
 
 			}
 
@@ -53910,7 +53911,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:198:4: '*' unary_expression
 			{
 			DebugLocation(198, 4);
-			Match(input,73,Follow._73_in_synpred86_cs1229); if (state.failed) return;
+			Match(input,74,Follow._74_in_synpred86_cs1229); if (state.failed) return;
 			DebugLocation(198, 10);
 			PushFollow(Follow._unary_expression_in_synpred86_cs1233);
 			unary_expression();
@@ -53989,7 +53990,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(408, false);
 			int LA408_1 = input.LA(1);
 
-			if ((LA408_1==76))
+			if ((LA408_1==77))
 			{
 				alt408 = 1;
 			}
@@ -54001,7 +54002,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:202:43: '++'
 				{
 				DebugLocation(202, 43);
-				Match(input,76,Follow._76_in_synpred92_cs1260); if (state.failed) return;
+				Match(input,77,Follow._77_in_synpred92_cs1260); if (state.failed) return;
 
 				}
 				break;
@@ -54016,7 +54017,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(409, false);
 			int LA409_1 = input.LA(1);
 
-			if ((LA409_1==79))
+			if ((LA409_1==80))
 			{
 				alt409 = 1;
 			}
@@ -54028,7 +54029,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:202:51: '--'
 				{
 				DebugLocation(202, 51);
-				Match(input,79,Follow._79_in_synpred92_cs1265); if (state.failed) return;
+				Match(input,80,Follow._80_in_synpred92_cs1265); if (state.failed) return;
 
 				}
 				break;
@@ -54274,11 +54275,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(410, false);
 			int LA410_1 = input.LA(1);
 
-			if ((LA410_1==GET||LA410_1==IDENTIFIER||LA410_1==SET||LA410_1==99||(LA410_1>=101 && LA410_1<=102)||(LA410_1>=104 && LA410_1<=107)||LA410_1==111||LA410_1==123||(LA410_1>=126 && LA410_1<=127)||LA410_1==131||LA410_1==137||LA410_1==139||LA410_1==145||(LA410_1>=147 && LA410_1<=148)||(LA410_1>=151 && LA410_1<=152)||LA410_1==156||LA410_1==158||LA410_1==161||(LA410_1>=163 && LA410_1<=164)||LA410_1==166||LA410_1==171||LA410_1==175||LA410_1==186||LA410_1==193||LA410_1==197||LA410_1==199))
+			if ((LA410_1==GET||LA410_1==IDENTIFIER||LA410_1==SET||LA410_1==100||(LA410_1>=102 && LA410_1<=103)||(LA410_1>=105 && LA410_1<=108)||LA410_1==112||LA410_1==124||(LA410_1>=127 && LA410_1<=128)||LA410_1==132||LA410_1==138||LA410_1==140||LA410_1==146||(LA410_1>=148 && LA410_1<=149)||(LA410_1>=152 && LA410_1<=153)||LA410_1==157||LA410_1==159||LA410_1==162||(LA410_1>=164 && LA410_1<=165)||LA410_1==167||LA410_1==172||LA410_1==176||LA410_1==187||LA410_1==194||LA410_1==198||LA410_1==200))
 			{
 				alt410 = 1;
 			}
-			else if ((LA410_1==109||LA410_1==112||LA410_1==115||LA410_1==120||LA410_1==125||LA410_1==134||LA410_1==142||LA410_1==150||LA410_1==155||LA410_1==173||LA410_1==176||LA410_1==180||(LA410_1>=188 && LA410_1<=189)||LA410_1==192))
+			else if ((LA410_1==110||LA410_1==113||LA410_1==116||LA410_1==121||LA410_1==126||LA410_1==135||LA410_1==143||LA410_1==151||LA410_1==156||LA410_1==174||LA410_1==177||LA410_1==181||(LA410_1>=189 && LA410_1<=190)||LA410_1==193))
 			{
 				alt410 = 2;
 			}
@@ -54329,7 +54330,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(411, false);
 				int LA411_1 = input.LA(1);
 
-				if ((LA411_1==73))
+				if ((LA411_1==74))
 				{
 					alt411 = 1;
 				}
@@ -54343,7 +54344,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:240:56: '*'
 					{
 					DebugLocation(240, 56);
-					Match(input,73,Follow._73_in_synpred103_cs1485); if (state.failed) return;
+					Match(input,74,Follow._74_in_synpred103_cs1485); if (state.failed) return;
 
 					}
 					break;
@@ -54365,7 +54366,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(412, false);
 			int LA412_1 = input.LA(1);
 
-			if ((LA412_1==95))
+			if ((LA412_1==96))
 			{
 				alt412 = 1;
 			}
@@ -54417,9 +54418,9 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:239:2: 'ref' '(' ( ( namespace_or_type_name | predefined_type ) ( '*' )* ( rank_specifiers )? | 'void' ( '*' )+ ( rank_specifiers )? ) ')' ref_variable_reference
 			{
 			DebugLocation(239, 2);
-			Match(input,170,Follow._170_in_synpred106_cs1459); if (state.failed) return;
+			Match(input,171,Follow._171_in_synpred106_cs1459); if (state.failed) return;
 			DebugLocation(239, 8);
-			Match(input,72,Follow._72_in_synpred106_cs1461); if (state.failed) return;
+			Match(input,73,Follow._73_in_synpred106_cs1461); if (state.failed) return;
 			DebugLocation(240, 3);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:240:3: ( ( namespace_or_type_name | predefined_type ) ( '*' )* ( rank_specifiers )? | 'void' ( '*' )+ ( rank_specifiers )? )
 			int alt418=2;
@@ -54427,11 +54428,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(418, false);
 			int LA418_1 = input.LA(1);
 
-			if ((LA418_1==GET||LA418_1==IDENTIFIER||LA418_1==SET||LA418_1==99||(LA418_1>=101 && LA418_1<=102)||(LA418_1>=104 && LA418_1<=107)||LA418_1==109||(LA418_1>=111 && LA418_1<=112)||LA418_1==115||LA418_1==120||LA418_1==123||(LA418_1>=125 && LA418_1<=127)||LA418_1==131||LA418_1==134||LA418_1==137||LA418_1==139||LA418_1==142||LA418_1==145||(LA418_1>=147 && LA418_1<=148)||(LA418_1>=150 && LA418_1<=152)||(LA418_1>=155 && LA418_1<=156)||LA418_1==158||LA418_1==161||(LA418_1>=163 && LA418_1<=164)||LA418_1==166||LA418_1==171||LA418_1==173||(LA418_1>=175 && LA418_1<=176)||LA418_1==180||LA418_1==186||(LA418_1>=188 && LA418_1<=189)||(LA418_1>=192 && LA418_1<=193)||LA418_1==197||LA418_1==199))
+			if ((LA418_1==GET||LA418_1==IDENTIFIER||LA418_1==SET||LA418_1==100||(LA418_1>=102 && LA418_1<=103)||(LA418_1>=105 && LA418_1<=108)||LA418_1==110||(LA418_1>=112 && LA418_1<=113)||LA418_1==116||LA418_1==121||LA418_1==124||(LA418_1>=126 && LA418_1<=128)||LA418_1==132||LA418_1==135||LA418_1==138||LA418_1==140||LA418_1==143||LA418_1==146||(LA418_1>=148 && LA418_1<=149)||(LA418_1>=151 && LA418_1<=153)||(LA418_1>=156 && LA418_1<=157)||LA418_1==159||LA418_1==162||(LA418_1>=164 && LA418_1<=165)||LA418_1==167||LA418_1==172||LA418_1==174||(LA418_1>=176 && LA418_1<=177)||LA418_1==181||LA418_1==187||(LA418_1>=189 && LA418_1<=190)||(LA418_1>=193 && LA418_1<=194)||LA418_1==198||LA418_1==200))
 			{
 				alt418 = 1;
 			}
-			else if ((LA418_1==195))
+			else if ((LA418_1==196))
 			{
 				alt418 = 2;
 			}
@@ -54456,11 +54457,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(413, false);
 				int LA413_1 = input.LA(1);
 
-				if ((LA413_1==GET||LA413_1==IDENTIFIER||LA413_1==SET||LA413_1==99||(LA413_1>=101 && LA413_1<=102)||(LA413_1>=104 && LA413_1<=107)||LA413_1==111||LA413_1==123||(LA413_1>=126 && LA413_1<=127)||LA413_1==131||LA413_1==137||LA413_1==139||LA413_1==145||(LA413_1>=147 && LA413_1<=148)||(LA413_1>=151 && LA413_1<=152)||LA413_1==156||LA413_1==158||LA413_1==161||(LA413_1>=163 && LA413_1<=164)||LA413_1==166||LA413_1==171||LA413_1==175||LA413_1==186||LA413_1==193||LA413_1==197||LA413_1==199))
+				if ((LA413_1==GET||LA413_1==IDENTIFIER||LA413_1==SET||LA413_1==100||(LA413_1>=102 && LA413_1<=103)||(LA413_1>=105 && LA413_1<=108)||LA413_1==112||LA413_1==124||(LA413_1>=127 && LA413_1<=128)||LA413_1==132||LA413_1==138||LA413_1==140||LA413_1==146||(LA413_1>=148 && LA413_1<=149)||(LA413_1>=152 && LA413_1<=153)||LA413_1==157||LA413_1==159||LA413_1==162||(LA413_1>=164 && LA413_1<=165)||LA413_1==167||LA413_1==172||LA413_1==176||LA413_1==187||LA413_1==194||LA413_1==198||LA413_1==200))
 				{
 					alt413 = 1;
 				}
-				else if ((LA413_1==109||LA413_1==112||LA413_1==115||LA413_1==120||LA413_1==125||LA413_1==134||LA413_1==142||LA413_1==150||LA413_1==155||LA413_1==173||LA413_1==176||LA413_1==180||(LA413_1>=188 && LA413_1<=189)||LA413_1==192))
+				else if ((LA413_1==110||LA413_1==113||LA413_1==116||LA413_1==121||LA413_1==126||LA413_1==135||LA413_1==143||LA413_1==151||LA413_1==156||LA413_1==174||LA413_1==177||LA413_1==181||(LA413_1>=189 && LA413_1<=190)||LA413_1==193))
 				{
 					alt413 = 2;
 				}
@@ -54511,7 +54512,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(414, false);
 					int LA414_1 = input.LA(1);
 
-					if ((LA414_1==73))
+					if ((LA414_1==74))
 					{
 						alt414 = 1;
 					}
@@ -54525,7 +54526,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:240:56: '*'
 						{
 						DebugLocation(240, 56);
-						Match(input,73,Follow._73_in_synpred106_cs1485); if (state.failed) return;
+						Match(input,74,Follow._74_in_synpred106_cs1485); if (state.failed) return;
 
 						}
 						break;
@@ -54547,7 +54548,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(415, false);
 				int LA415_1 = input.LA(1);
 
-				if ((LA415_1==95))
+				if ((LA415_1==96))
 				{
 					alt415 = 1;
 				}
@@ -54578,7 +54579,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:241:5: 'void' ( '*' )+ ( rank_specifiers )?
 				{
 				DebugLocation(241, 5);
-				Match(input,195,Follow._195_in_synpred106_cs1497); if (state.failed) return;
+				Match(input,196,Follow._196_in_synpred106_cs1497); if (state.failed) return;
 				DebugLocation(241, 14);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:241:14: ( '*' )+
 				int cnt416=0;
@@ -54589,7 +54590,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(416, false);
 					int LA416_1 = input.LA(1);
 
-					if ((LA416_1==73))
+					if ((LA416_1==74))
 					{
 						alt416 = 1;
 					}
@@ -54603,7 +54604,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:241:14: '*'
 						{
 						DebugLocation(241, 14);
-						Match(input,73,Follow._73_in_synpred106_cs1501); if (state.failed) return;
+						Match(input,74,Follow._74_in_synpred106_cs1501); if (state.failed) return;
 
 						}
 						break;
@@ -54631,7 +54632,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(417, false);
 				int LA417_1 = input.LA(1);
 
-				if ((LA417_1==95))
+				if ((LA417_1==96))
 				{
 					alt417 = 1;
 				}
@@ -54739,7 +54740,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(419, false);
 				int LA419_1 = input.LA(1);
 
-				if ((LA419_1==72))
+				if ((LA419_1==73))
 				{
 					alt419 = 1;
 				}
@@ -54833,7 +54834,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(420, false);
 				int LA420_1 = input.LA(1);
 
-				if ((LA420_1==72))
+				if ((LA420_1==73))
 				{
 					alt420 = 1;
 				}
@@ -54914,7 +54915,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(421, false);
 				int LA421_1 = input.LA(1);
 
-				if ((LA421_1==95))
+				if ((LA421_1==96))
 				{
 					alt421 = 1;
 				}
@@ -55008,7 +55009,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(422, false);
 				int LA422_1 = input.LA(1);
 
-				if ((LA422_1==95))
+				if ((LA422_1==96))
 				{
 					alt422 = 1;
 				}
@@ -55126,7 +55127,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(423, false);
 				int LA423_1 = input.LA(1);
 
-				if ((LA423_1==DOT||LA423_1==PTR||LA423_1==72||LA423_1==95))
+				if ((LA423_1==DOT||LA423_1==PTR||LA423_1==73||LA423_1==96))
 				{
 					alt423 = 1;
 				}
@@ -55357,7 +55358,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(285, 17);
-			Match(input,84,Follow._84_in_synpred136_cs1840); if (state.failed) return;
+			Match(input,85,Follow._85_in_synpred136_cs1840); if (state.failed) return;
 			DebugLocation(285, 24);
 			PushFollow(Follow._identifier_in_synpred136_cs1844);
 			identifier();
@@ -55920,7 +55921,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:351:2: '{' ( member_initializer_list )? '}'
 			{
 			DebugLocation(351, 2);
-			Match(input,200,Follow._200_in_synpred171_cs2283); if (state.failed) return;
+			Match(input,201,Follow._201_in_synpred171_cs2283); if (state.failed) return;
 			DebugLocation(351, 8);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:351:8: ( member_initializer_list )?
 			int alt440=2;
@@ -55928,7 +55929,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(440, false);
 			int LA440_1 = input.LA(1);
 
-			if ((LA440_1==GET||LA440_1==IDENTIFIER||LA440_1==SET||LA440_1==99||(LA440_1>=101 && LA440_1<=102)||(LA440_1>=104 && LA440_1<=107)||LA440_1==111||LA440_1==123||(LA440_1>=126 && LA440_1<=127)||LA440_1==131||LA440_1==137||LA440_1==139||LA440_1==145||(LA440_1>=147 && LA440_1<=148)||(LA440_1>=151 && LA440_1<=152)||LA440_1==156||LA440_1==158||LA440_1==161||(LA440_1>=163 && LA440_1<=164)||LA440_1==166||LA440_1==171||LA440_1==175||LA440_1==186||LA440_1==193||LA440_1==197||LA440_1==199))
+			if ((LA440_1==GET||LA440_1==IDENTIFIER||LA440_1==SET||LA440_1==100||(LA440_1>=102 && LA440_1<=103)||(LA440_1>=105 && LA440_1<=108)||LA440_1==112||LA440_1==124||(LA440_1>=127 && LA440_1<=128)||LA440_1==132||LA440_1==138||LA440_1==140||LA440_1==146||(LA440_1>=148 && LA440_1<=149)||(LA440_1>=152 && LA440_1<=153)||LA440_1==157||LA440_1==159||LA440_1==162||(LA440_1>=164 && LA440_1<=165)||LA440_1==167||LA440_1==172||LA440_1==176||LA440_1==187||LA440_1==194||LA440_1==198||LA440_1==200))
 			{
 				alt440 = 1;
 			}
@@ -55952,7 +55953,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(440); }
 
 			DebugLocation(351, 35);
-			Match(input,204,Follow._204_in_synpred171_cs2292); if (state.failed) return;
+			Match(input,205,Follow._205_in_synpred171_cs2292); if (state.failed) return;
 
 			}
 
@@ -56086,14 +56087,14 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(371, 20);
-			Match(input,95,Follow._95_in_synpred179_cs2442); if (state.failed) return;
+			Match(input,96,Follow._96_in_synpred179_cs2442); if (state.failed) return;
 			DebugLocation(371, 24);
 			PushFollow(Follow._expression_list_in_synpred179_cs2444);
 			expression_list();
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(371, 40);
-			Match(input,96,Follow._96_in_synpred179_cs2446); if (state.failed) return;
+			Match(input,97,Follow._97_in_synpred179_cs2446); if (state.failed) return;
 			DebugLocation(371, 44);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:371:44: ( rank_specifiers )?
 			int alt441=2;
@@ -56101,7 +56102,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(441, false);
 			int LA441_1 = input.LA(1);
 
-			if ((LA441_1==95))
+			if ((LA441_1==96))
 			{
 				alt441 = 1;
 			}
@@ -56131,7 +56132,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(442, false);
 			int LA442_1 = input.LA(1);
 
-			if ((LA442_1==200))
+			if ((LA442_1==201))
 			{
 				alt442 = 1;
 			}
@@ -56287,7 +56288,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:381:2: '{' ( member_declarator_list )? '}'
 			{
 			DebugLocation(381, 2);
-			Match(input,200,Follow._200_in_synpred183_cs2525); if (state.failed) return;
+			Match(input,201,Follow._201_in_synpred183_cs2525); if (state.failed) return;
 			DebugLocation(381, 8);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:381:8: ( member_declarator_list )?
 			int alt443=2;
@@ -56295,7 +56296,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(443, false);
 			int LA443_1 = input.LA(1);
 
-			if ((LA443_1==GET||LA443_1==IDENTIFIER||LA443_1==SET||LA443_1==99||(LA443_1>=101 && LA443_1<=102)||(LA443_1>=104 && LA443_1<=107)||LA443_1==111||LA443_1==123||(LA443_1>=126 && LA443_1<=127)||LA443_1==131||LA443_1==137||LA443_1==139||LA443_1==145||(LA443_1>=147 && LA443_1<=148)||(LA443_1>=151 && LA443_1<=152)||LA443_1==156||LA443_1==158||LA443_1==161||(LA443_1>=163 && LA443_1<=164)||LA443_1==166||LA443_1==171||LA443_1==175||LA443_1==186||LA443_1==193||LA443_1==197||LA443_1==199))
+			if ((LA443_1==GET||LA443_1==IDENTIFIER||LA443_1==SET||LA443_1==100||(LA443_1>=102 && LA443_1<=103)||(LA443_1>=105 && LA443_1<=108)||LA443_1==112||LA443_1==124||(LA443_1>=127 && LA443_1<=128)||LA443_1==132||LA443_1==138||LA443_1==140||LA443_1==146||(LA443_1>=148 && LA443_1<=149)||(LA443_1>=152 && LA443_1<=153)||LA443_1==157||LA443_1==159||LA443_1==162||(LA443_1>=164 && LA443_1<=165)||LA443_1==167||LA443_1==172||LA443_1==176||LA443_1==187||LA443_1==194||LA443_1==198||LA443_1==200))
 			{
 				alt443 = 1;
 			}
@@ -56319,7 +56320,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(443); }
 
 			DebugLocation(381, 34);
-			Match(input,204,Follow._204_in_synpred183_cs2534); if (state.failed) return;
+			Match(input,205,Follow._205_in_synpred183_cs2534); if (state.failed) return;
 
 			}
 
@@ -56349,9 +56350,9 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:393:2: 'typeof' '(' type ')'
 			{
 			DebugLocation(393, 2);
-			Match(input,187,Follow._187_in_synpred188_cs2637); if (state.failed) return;
+			Match(input,188,Follow._188_in_synpred188_cs2637); if (state.failed) return;
 			DebugLocation(393, 13);
-			Match(input,72,Follow._72_in_synpred188_cs2641); if (state.failed) return;
+			Match(input,73,Follow._73_in_synpred188_cs2641); if (state.failed) return;
 			DebugLocation(393, 19);
 			PushFollow(Follow._type_in_synpred188_cs2645);
 			type();
@@ -56388,9 +56389,9 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:394:4: 'typeof' '(' unbound_type_name ')'
 			{
 			DebugLocation(394, 4);
-			Match(input,187,Follow._187_in_synpred189_cs2655); if (state.failed) return;
+			Match(input,188,Follow._188_in_synpred189_cs2655); if (state.failed) return;
 			DebugLocation(394, 13);
-			Match(input,72,Follow._72_in_synpred189_cs2657); if (state.failed) return;
+			Match(input,73,Follow._73_in_synpred189_cs2657); if (state.failed) return;
 			DebugLocation(394, 19);
 			PushFollow(Follow._unbound_type_name_in_synpred189_cs2661);
 			unbound_type_name();
@@ -56466,11 +56467,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(444, false);
 			int LA444_1 = input.LA(1);
 
-			if ((LA444_1==GET||LA444_1==IDENTIFIER||LA444_1==SET||LA444_1==99||(LA444_1>=101 && LA444_1<=102)||(LA444_1>=104 && LA444_1<=107)||LA444_1==111||LA444_1==123||(LA444_1>=126 && LA444_1<=127)||LA444_1==131||LA444_1==137||LA444_1==139||LA444_1==145||(LA444_1>=147 && LA444_1<=148)||(LA444_1>=151 && LA444_1<=152)||LA444_1==156||LA444_1==158||LA444_1==161||(LA444_1>=163 && LA444_1<=164)||LA444_1==166||LA444_1==171||LA444_1==175||LA444_1==186||LA444_1==193||LA444_1==197||LA444_1==199))
+			if ((LA444_1==GET||LA444_1==IDENTIFIER||LA444_1==SET||LA444_1==100||(LA444_1>=102 && LA444_1<=103)||(LA444_1>=105 && LA444_1<=108)||LA444_1==112||LA444_1==124||(LA444_1>=127 && LA444_1<=128)||LA444_1==132||LA444_1==138||LA444_1==140||LA444_1==146||(LA444_1>=148 && LA444_1<=149)||(LA444_1>=152 && LA444_1<=153)||LA444_1==157||LA444_1==159||LA444_1==162||(LA444_1>=164 && LA444_1<=165)||LA444_1==167||LA444_1==172||LA444_1==176||LA444_1==187||LA444_1==194||LA444_1==198||LA444_1==200))
 			{
 				alt444 = 1;
 			}
-			else if ((LA444_1==109||LA444_1==112||LA444_1==115||LA444_1==120||LA444_1==125||LA444_1==134||LA444_1==142||LA444_1==150||LA444_1==155||LA444_1==173||LA444_1==176||LA444_1==180||(LA444_1>=188 && LA444_1<=189)||LA444_1==192))
+			else if ((LA444_1==110||LA444_1==113||LA444_1==116||LA444_1==121||LA444_1==126||LA444_1==135||LA444_1==143||LA444_1==151||LA444_1==156||LA444_1==174||LA444_1==177||LA444_1==181||(LA444_1>=189 && LA444_1<=190)||LA444_1==193))
 			{
 				alt444 = 2;
 			}
@@ -56522,7 +56523,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(445, false);
 				int LA445_1 = input.LA(1);
 
-				if ((LA445_1==73))
+				if ((LA445_1==74))
 				{
 					alt445 = 1;
 				}
@@ -56536,7 +56537,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:452:52: '*'
 					{
 					DebugLocation(452, 52);
-					Match(input,73,Follow._73_in_synpred211_cs3057); if (state.failed) return;
+					Match(input,74,Follow._74_in_synpred211_cs3057); if (state.failed) return;
 
 					}
 					break;
@@ -56564,7 +56565,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(446, false);
 			int LA446_1 = input.LA(1);
 
-			if ((LA446_1==95))
+			if ((LA446_1==96))
 			{
 				alt446 = 1;
 			}
@@ -56655,11 +56656,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(447, false);
 			int LA447_1 = input.LA(1);
 
-			if ((LA447_1==GET||LA447_1==IDENTIFIER||LA447_1==SET||LA447_1==99||(LA447_1>=101 && LA447_1<=102)||(LA447_1>=104 && LA447_1<=107)||LA447_1==111||LA447_1==123||(LA447_1>=126 && LA447_1<=127)||LA447_1==131||LA447_1==137||LA447_1==139||LA447_1==145||(LA447_1>=147 && LA447_1<=148)||(LA447_1>=151 && LA447_1<=152)||LA447_1==156||LA447_1==158||LA447_1==161||(LA447_1>=163 && LA447_1<=164)||LA447_1==166||LA447_1==171||LA447_1==175||LA447_1==186||LA447_1==193||LA447_1==197||LA447_1==199))
+			if ((LA447_1==GET||LA447_1==IDENTIFIER||LA447_1==SET||LA447_1==100||(LA447_1>=102 && LA447_1<=103)||(LA447_1>=105 && LA447_1<=108)||LA447_1==112||LA447_1==124||(LA447_1>=127 && LA447_1<=128)||LA447_1==132||LA447_1==138||LA447_1==140||LA447_1==146||(LA447_1>=148 && LA447_1<=149)||(LA447_1>=152 && LA447_1<=153)||LA447_1==157||LA447_1==159||LA447_1==162||(LA447_1>=164 && LA447_1<=165)||LA447_1==167||LA447_1==172||LA447_1==176||LA447_1==187||LA447_1==194||LA447_1==198||LA447_1==200))
 			{
 				alt447 = 1;
 			}
-			else if ((LA447_1==109||LA447_1==112||LA447_1==115||LA447_1==120||LA447_1==125||LA447_1==134||LA447_1==142||LA447_1==150||LA447_1==155||LA447_1==173||LA447_1==176||LA447_1==180||(LA447_1>=188 && LA447_1<=189)||LA447_1==192))
+			else if ((LA447_1==110||LA447_1==113||LA447_1==116||LA447_1==121||LA447_1==126||LA447_1==135||LA447_1==143||LA447_1==151||LA447_1==156||LA447_1==174||LA447_1==177||LA447_1==181||(LA447_1>=189 && LA447_1<=190)||LA447_1==193))
 			{
 				alt447 = 2;
 			}
@@ -56702,7 +56703,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(447); }
 
 			DebugLocation(453, 54);
-			Match(input,93,Follow._93_in_synpred214_cs3083); if (state.failed) return;
+			Match(input,94,Follow._94_in_synpred214_cs3083); if (state.failed) return;
 			DebugLocation(453, 60);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:453:60: ( rank_specifiers )?
 			int alt448=2;
@@ -56710,7 +56711,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(448, false);
 			int LA448_1 = input.LA(1);
 
-			if ((LA448_1==95))
+			if ((LA448_1==96))
 			{
 				alt448 = 1;
 			}
@@ -56801,11 +56802,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(449, false);
 			int LA449_1 = input.LA(1);
 
-			if ((LA449_1==GET||LA449_1==IDENTIFIER||LA449_1==SET||LA449_1==99||(LA449_1>=101 && LA449_1<=102)||(LA449_1>=104 && LA449_1<=107)||LA449_1==111||LA449_1==123||(LA449_1>=126 && LA449_1<=127)||LA449_1==131||LA449_1==137||LA449_1==139||LA449_1==145||(LA449_1>=147 && LA449_1<=148)||(LA449_1>=151 && LA449_1<=152)||LA449_1==156||LA449_1==158||LA449_1==161||(LA449_1>=163 && LA449_1<=164)||LA449_1==166||LA449_1==171||LA449_1==175||LA449_1==186||LA449_1==193||LA449_1==197||LA449_1==199))
+			if ((LA449_1==GET||LA449_1==IDENTIFIER||LA449_1==SET||LA449_1==100||(LA449_1>=102 && LA449_1<=103)||(LA449_1>=105 && LA449_1<=108)||LA449_1==112||LA449_1==124||(LA449_1>=127 && LA449_1<=128)||LA449_1==132||LA449_1==138||LA449_1==140||LA449_1==146||(LA449_1>=148 && LA449_1<=149)||(LA449_1>=152 && LA449_1<=153)||LA449_1==157||LA449_1==159||LA449_1==162||(LA449_1>=164 && LA449_1<=165)||LA449_1==167||LA449_1==172||LA449_1==176||LA449_1==187||LA449_1==194||LA449_1==198||LA449_1==200))
 			{
 				alt449 = 1;
 			}
-			else if ((LA449_1==109||LA449_1==112||LA449_1==115||LA449_1==120||LA449_1==125||LA449_1==134||LA449_1==142||LA449_1==150||LA449_1==155||LA449_1==173||LA449_1==176||LA449_1==180||(LA449_1>=188 && LA449_1<=189)||LA449_1==192))
+			else if ((LA449_1==110||LA449_1==113||LA449_1==116||LA449_1==121||LA449_1==126||LA449_1==135||LA449_1==143||LA449_1==151||LA449_1==156||LA449_1==174||LA449_1==177||LA449_1==181||(LA449_1>=189 && LA449_1<=190)||LA449_1==193))
 			{
 				alt449 = 2;
 			}
@@ -56854,7 +56855,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(450, false);
 			int LA450_1 = input.LA(1);
 
-			if ((LA450_1==95))
+			if ((LA450_1==96))
 			{
 				alt450 = 1;
 			}
@@ -56914,7 +56915,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(452, false);
 				int LA452_1 = input.LA(1);
 
-				if ((LA452_1==GT||LA452_1==85||LA452_1==88||LA452_1==92))
+				if ((LA452_1==GT||LA452_1==86||LA452_1==89||LA452_1==93))
 				{
 					alt452 = 1;
 				}
@@ -56928,7 +56929,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:468:10: ( '<' | '>' | '<=' | '>=' ) shift_expression
 					{
 					DebugLocation(468, 10);
-					if (input.LA(1)==GT||input.LA(1)==85||input.LA(1)==88||input.LA(1)==92)
+					if (input.LA(1)==GT||input.LA(1)==86||input.LA(1)==89||input.LA(1)==93)
 					{
 						input.Consume();
 						state.errorRecovery=false;state.failed=false;
@@ -56994,14 +56995,14 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(469, 40);
-			Match(input,93,Follow._93_in_synpred234_cs3267); if (state.failed) return;
+			Match(input,94,Follow._94_in_synpred234_cs3267); if (state.failed) return;
 			DebugLocation(469, 44);
 			PushFollow(Follow._expression_in_synpred234_cs3269);
 			expression();
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(469, 55);
-			Match(input,83,Follow._83_in_synpred234_cs3271); if (state.failed) return;
+			Match(input,84,Follow._84_in_synpred234_cs3271); if (state.failed) return;
 			DebugLocation(469, 59);
 			PushFollow(Follow._expression_in_synpred234_cs3273);
 			expression();
@@ -57036,7 +57037,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:487:31: '??' null_coalescing_expression
 			{
 			DebugLocation(487, 31);
-			Match(input,94,Follow._94_in_synpred243_cs3431); if (state.failed) return;
+			Match(input,95,Follow._95_in_synpred243_cs3431); if (state.failed) return;
 			DebugLocation(487, 38);
 			PushFollow(Follow._null_coalescing_expression_in_synpred243_cs3435);
 			null_coalescing_expression();
@@ -57203,7 +57204,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:529:51: 'into'
 			{
 			DebugLocation(529, 51);
-			Match(input,145,Follow._145_in_synpred277_cs3798); if (state.failed) return;
+			Match(input,146,Follow._146_in_synpred277_cs3798); if (state.failed) return;
 
 			}
 
@@ -57233,7 +57234,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:574:2: ':' class_type ( ',' interface_type_list )?
 			{
 			DebugLocation(574, 2);
-			Match(input,83,Follow._83_in_synpred306_cs4131); if (state.failed) return;
+			Match(input,84,Follow._84_in_synpred306_cs4131); if (state.failed) return;
 			DebugLocation(574, 8);
 			PushFollow(Follow._class_type_in_synpred306_cs4135);
 			class_type();
@@ -57246,7 +57247,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(455, false);
 			int LA455_1 = input.LA(1);
 
-			if ((LA455_1==78))
+			if ((LA455_1==79))
 			{
 				alt455 = 1;
 			}
@@ -57258,7 +57259,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:574:20: ',' interface_type_list
 				{
 				DebugLocation(574, 20);
-				Match(input,78,Follow._78_in_synpred306_cs4138); if (state.failed) return;
+				Match(input,79,Follow._79_in_synpred306_cs4138); if (state.failed) return;
 				DebugLocation(574, 24);
 				PushFollow(Follow._interface_type_list_in_synpred306_cs4140);
 				interface_type_list();
@@ -57310,14 +57311,14 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(584, 26);
-			Match(input,78,Follow._78_in_synpred309_cs4212); if (state.failed) return;
+			Match(input,79,Follow._79_in_synpred309_cs4212); if (state.failed) return;
 			DebugLocation(584, 32);
 			PushFollow(Follow._secondary_constraint_list_in_synpred309_cs4216);
 			secondary_constraint_list();
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(584, 60);
-			Match(input,78,Follow._78_in_synpred309_cs4220); if (state.failed) return;
+			Match(input,79,Follow._79_in_synpred309_cs4220); if (state.failed) return;
 			DebugLocation(584, 66);
 			PushFollow(Follow._constructor_constraint_in_synpred309_cs4224);
 			constructor_constraint();
@@ -57365,7 +57366,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(585, 28);
-			Match(input,78,Follow._78_in_synpred310_cs4237); if (state.failed) return;
+			Match(input,79,Follow._79_in_synpred310_cs4237); if (state.failed) return;
 			DebugLocation(585, 34);
 			PushFollow(Follow._secondary_constraint_list_in_synpred310_cs4241);
 			secondary_constraint_list();
@@ -57413,7 +57414,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(586, 28);
-			Match(input,78,Follow._78_in_synpred311_cs4254); if (state.failed) return;
+			Match(input,79,Follow._79_in_synpred311_cs4254); if (state.failed) return;
 			DebugLocation(586, 34);
 			PushFollow(Follow._constructor_constraint_in_synpred311_cs4258);
 			constructor_constraint();
@@ -57461,7 +57462,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(587, 34);
-			Match(input,78,Follow._78_in_synpred312_cs4270); if (state.failed) return;
+			Match(input,79,Follow._79_in_synpred312_cs4270); if (state.failed) return;
 			DebugLocation(587, 40);
 			PushFollow(Follow._constructor_constraint_in_synpred312_cs4274);
 			constructor_constraint();
@@ -58027,7 +58028,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:647:36: 'partial'
 			{
 			DebugLocation(647, 36);
-			Match(input,163,Follow._163_in_synpred356_cs4675); if (state.failed) return;
+			Match(input,164,Follow._164_in_synpred356_cs4675); if (state.failed) return;
 
 			}
 
@@ -58243,7 +58244,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(456, false);
 			int LA456_1 = input.LA(1);
 
-			if ((LA456_1==SET||LA456_1==95||LA456_1==144||LA456_1==165||(LA456_1>=167 && LA456_1<=168)))
+			if ((LA456_1==SET||LA456_1==96||LA456_1==145||LA456_1==166||(LA456_1>=168 && LA456_1<=169)))
 			{
 				alt456 = 1;
 			}
@@ -58309,7 +58310,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(457, false);
 			int LA457_1 = input.LA(1);
 
-			if ((LA457_1==95))
+			if ((LA457_1==96))
 			{
 				alt457 = 1;
 			}
@@ -58339,7 +58340,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(458, false);
 			int LA458_1 = input.LA(1);
 
-			if ((LA458_1==100||LA458_1==130||LA458_1==144||LA458_1==154||LA458_1==160||LA458_1==165||(LA458_1>=167 && LA458_1<=168)||LA458_1==174||LA458_1==179||LA458_1==191||LA458_1==194))
+			if ((LA458_1==101||LA458_1==131||LA458_1==145||LA458_1==155||LA458_1==161||LA458_1==166||(LA458_1>=168 && LA458_1<=169)||LA458_1==175||LA458_1==180||LA458_1==192||LA458_1==195))
 			{
 				alt458 = 1;
 			}
@@ -58363,7 +58364,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(458); }
 
 			DebugLocation(699, 37);
-			Match(input,128,Follow._128_in_synpred415_cs5171); if (state.failed) return;
+			Match(input,129,Follow._129_in_synpred415_cs5171); if (state.failed) return;
 			DebugLocation(699, 47);
 			PushFollow(Follow._type_in_synpred415_cs5175);
 			type();
@@ -58599,7 +58600,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(463, false);
 			int LA463_1 = input.LA(1);
 
-			if ((LA463_1==130))
+			if ((LA463_1==131))
 			{
 				alt463 = 1;
 			}
@@ -58611,7 +58612,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:773:3: 'extern'
 				{
 				DebugLocation(773, 3);
-				Match(input,130,Follow._130_in_synpred505_cs6046); if (state.failed) return;
+				Match(input,131,Follow._131_in_synpred505_cs6046); if (state.failed) return;
 
 				}
 				break;
@@ -58620,7 +58621,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			} finally { DebugExitSubRule(463); }
 
 			DebugLocation(773, 13);
-			Match(input,191,Follow._191_in_synpred505_cs6049); if (state.failed) return;
+			Match(input,192,Follow._192_in_synpred505_cs6049); if (state.failed) return;
 
 			}
 
@@ -59082,7 +59083,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:836:16: 'new'
 			{
 			DebugLocation(836, 16);
-			Match(input,154,Follow._154_in_synpred560_cs6511); if (state.failed) return;
+			Match(input,155,Follow._155_in_synpred560_cs6511); if (state.failed) return;
 
 			}
 
@@ -59123,7 +59124,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(464, false);
 			int LA464_1 = input.LA(1);
 
-			if ((LA464_1==SET||LA464_1==95))
+			if ((LA464_1==SET||LA464_1==96))
 			{
 				alt464 = 1;
 			}
@@ -59274,7 +59275,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:897:2: '&' variable_reference
 			{
 			DebugLocation(897, 2);
-			Match(input,70,Follow._70_in_synpred605_cs7038); if (state.failed) return;
+			Match(input,71,Follow._71_in_synpred605_cs7038); if (state.failed) return;
 			DebugLocation(897, 8);
 			PushFollow(Follow._variable_reference_in_synpred605_cs7042);
 			variable_reference();
@@ -59408,7 +59409,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:917:4: 'var'
 			{
 			DebugLocation(917, 4);
-			Match(input,193,Follow._193_in_synpred611_cs7159); if (state.failed) return;
+			Match(input,194,Follow._194_in_synpred611_cs7159); if (state.failed) return;
 
 			}
 
@@ -59740,7 +59741,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Processors\\CSharp\\cs.g:1007:8: 'try' block catch_clauses ( finally_clause )?
 			{
 			DebugLocation(1007, 8);
-			Match(input,185,Follow._185_in_synpred644_cs7837); if (state.failed) return;
+			Match(input,186,Follow._186_in_synpred644_cs7837); if (state.failed) return;
 			DebugLocation(1007, 16);
 			PushFollow(Follow._block_in_synpred644_cs7841);
 			block();
@@ -59758,7 +59759,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(466, false);
 			int LA466_1 = input.LA(1);
 
-			if ((LA466_1==132))
+			if ((LA466_1==133))
 			{
 				alt466 = 1;
 			}
@@ -59829,7 +59830,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(467, false);
 			int LA467_1 = input.LA(1);
 
-			if ((LA467_1==114))
+			if ((LA467_1==115))
 			{
 				alt467 = 1;
 			}
@@ -59956,7 +59957,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				throw new FailedPredicateException(input, "synpred707_cs", "_queryExpression == 0");
 			}
 			DebugLocation(1057, 4);
-			if (input.LA(1)==GET||input.LA(1)==IDENTIFIER||input.LA(1)==SET||input.LA(1)==99||(input.LA(1)>=101 && input.LA(1)<=102)||(input.LA(1)>=104 && input.LA(1)<=107)||input.LA(1)==111||input.LA(1)==123||(input.LA(1)>=126 && input.LA(1)<=127)||input.LA(1)==131||input.LA(1)==137||input.LA(1)==139||input.LA(1)==145||(input.LA(1)>=147 && input.LA(1)<=148)||(input.LA(1)>=151 && input.LA(1)<=152)||input.LA(1)==156||input.LA(1)==158||input.LA(1)==161||(input.LA(1)>=163 && input.LA(1)<=164)||input.LA(1)==166||input.LA(1)==171||input.LA(1)==175||input.LA(1)==186||input.LA(1)==193||input.LA(1)==197||input.LA(1)==199)
+			if (input.LA(1)==GET||input.LA(1)==IDENTIFIER||input.LA(1)==SET||input.LA(1)==100||(input.LA(1)>=102 && input.LA(1)<=103)||(input.LA(1)>=105 && input.LA(1)<=108)||input.LA(1)==112||input.LA(1)==124||(input.LA(1)>=127 && input.LA(1)<=128)||input.LA(1)==132||input.LA(1)==138||input.LA(1)==140||input.LA(1)==146||(input.LA(1)>=148 && input.LA(1)<=149)||(input.LA(1)>=152 && input.LA(1)<=153)||input.LA(1)==157||input.LA(1)==159||input.LA(1)==162||(input.LA(1)>=164 && input.LA(1)<=165)||input.LA(1)==167||input.LA(1)==172||input.LA(1)==176||input.LA(1)==187||input.LA(1)==194||input.LA(1)==198||input.LA(1)==200)
 			{
 				input.Consume();
 				state.errorRecovery=false;state.failed=false;
@@ -60028,16 +60029,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		private const string DFA8_eofS =
 			"\x1\x2\xC\xFFFF";
 		private const string DFA8_minS =
-			"\x1\xA\x1\x16\x2\xFFFF\x2\xA\x1\x16\x2\x0\x2\xA\x2\x0";
+			"\x1\xA\x1\x17\x2\xFFFF\x2\xA\x1\x17\x2\x0\x2\xA\x2\x0";
 		private const string DFA8_maxS =
-			"\x1\xC8\x1\xC7\x2\xFFFF\x2\x5F\x1\xC7\x2\x0\x2\x5F\x2\x0";
+			"\x1\xC9\x1\xC8\x2\xFFFF\x2\x60\x1\xC8\x2\x0\x2\x60\x2\x0";
 		private const string DFA8_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1\x9\xFFFF";
 		private const string DFA8_specialS =
 			"\x7\xFFFF\x1\x0\x1\x1\x2\xFFFF\x1\x2\x1\x3}>";
 		private static readonly string[] DFA8_transitionS =
 			{
-				"\x1\x2\x25\xFFFF\x1\x2\x17\xFFFF\x1\x2\xC\xFFFF\x1\x1\x9\xFFFF\x1\x2"+
+				"\x1\x2\x26\xFFFF\x1\x2\x17\xFFFF\x1\x2\xC\xFFFF\x1\x1\x9\xFFFF\x1\x2"+
 				"\x68\xFFFF\x1\x2",
 				"\x1\x4\x6\xFFFF\x1\x4\x17\xFFFF\x1\x4\x29\xFFFF\x1\x2\x3\xFFFF\x1\x4"+
 				"\x1\xFFFF\x2\x4\x1\xFFFF\x1\x5\x3\x4\x1\xFFFF\x1\x3\x1\xFFFF\x1\x5\x1"+
@@ -60050,9 +60051,9 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				"\xFFFF\x1\x5\x1\xFFFF\x1\x4",
 				"",
 				"",
-				"\x1\x3\xC\xFFFF\x1\x7\x31\xFFFF\x1\x3\x4\xFFFF\x1\x6\x5\xFFFF\x2\x3"+
+				"\x1\x3\xD\xFFFF\x1\x7\x31\xFFFF\x1\x3\x4\xFFFF\x1\x6\x5\xFFFF\x2\x3"+
 				"\x7\xFFFF\x1\x3\x1\xFFFF\x1\x3",
-				"\x1\x3\xC\xFFFF\x1\x8\x31\xFFFF\x1\x3\x4\xFFFF\x1\x6\x5\xFFFF\x2\x3"+
+				"\x1\x3\xD\xFFFF\x1\x8\x31\xFFFF\x1\x3\x4\xFFFF\x1\x6\x5\xFFFF\x2\x3"+
 				"\x7\xFFFF\x1\x3\x1\xFFFF\x1\x3",
 				"\x1\x9\x6\xFFFF\x1\x9\x17\xFFFF\x1\x9\x29\xFFFF\x1\x2\x3\xFFFF\x1\x9"+
 				"\x1\xFFFF\x2\x9\x1\xFFFF\x1\xA\x3\x9\x1\xFFFF\x1\x3\x1\xFFFF\x1\xA\x1"+
@@ -60065,9 +60066,9 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				"\xFFFF\x1\xA\x1\xFFFF\x1\x9",
 				"\x1\xFFFF",
 				"\x1\xFFFF",
-				"\x1\x3\xC\xFFFF\x1\xB\x31\xFFFF\x1\x3\x4\xFFFF\x1\x6\x5\xFFFF\x2\x3"+
+				"\x1\x3\xD\xFFFF\x1\xB\x31\xFFFF\x1\x3\x4\xFFFF\x1\x6\x5\xFFFF\x2\x3"+
 				"\x7\xFFFF\x1\x3\x1\xFFFF\x1\x3",
-				"\x1\x3\xC\xFFFF\x1\xC\x31\xFFFF\x1\x3\x4\xFFFF\x1\x6\x5\xFFFF\x2\x3"+
+				"\x1\x3\xD\xFFFF\x1\xC\x31\xFFFF\x1\x3\x4\xFFFF\x1\x6\x5\xFFFF\x2\x3"+
 				"\x7\xFFFF\x1\x3\x1\xFFFF\x1\x3",
 				"\x1\xFFFF",
 				"\x1\xFFFF"
@@ -60182,11 +60183,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		private const string DFA134_eofS =
 			"\x13\xFFFF";
 		private const string DFA134_minS =
-			"\x1\xBB\x1\x48\x1\x16\x1\x31\x1\xFFFF\x2\xA\x1\xFFFF\x3\x16\x1\x0\x1"+
-			"\xFFFF\x4\xA\x2\x16";
+			"\x1\xBC\x1\x49\x1\x17\x1\x32\x1\xFFFF\x2\xA\x1\xFFFF\x3\x17\x1\x0\x1"+
+			"\xFFFF\x4\xA\x2\x17";
 		private const string DFA134_maxS =
-			"\x1\xBB\x1\x48\x1\xC7\x1\x49\x1\xFFFF\x2\x5F\x1\xFFFF\x3\xC7\x1\x0\x1"+
-			"\xFFFF\x4\x5F\x2\xC7";
+			"\x1\xBC\x1\x49\x1\xC8\x1\x4A\x1\xFFFF\x2\x60\x1\xFFFF\x3\xC8\x1\x0\x1"+
+			"\xFFFF\x4\x60\x2\xC8";
 		private const string DFA134_acceptS =
 			"\x4\xFFFF\x1\x1\x2\xFFFF\x1\x3\x4\xFFFF\x1\x2\x6\xFFFF";
 		private const string DFA134_specialS =
@@ -60206,9 +60207,9 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				"\x1\xFFFF\x1\x5",
 				"\x1\x7\x17\xFFFF\x1\x4",
 				"",
-				"\x1\xA\x26\xFFFF\x1\xB\x17\xFFFF\x1\x4\xA\xFFFF\x1\x9\x1\x8\x7\xFFFF"+
+				"\x1\xA\x27\xFFFF\x1\xB\x17\xFFFF\x1\x4\xA\xFFFF\x1\x9\x1\x8\x7\xFFFF"+
 				"\x1\x4\x1\xFFFF\x1\x4",
-				"\x1\xA\x26\xFFFF\x1\xB\x17\xFFFF\x1\x4\xA\xFFFF\x1\x9\x1\x8\x7\xFFFF"+
+				"\x1\xA\x27\xFFFF\x1\xB\x17\xFFFF\x1\x4\xA\xFFFF\x1\x9\x1\x8\x7\xFFFF"+
 				"\x1\x4\x1\xFFFF\x1\x4",
 				"",
 				"\x1\x4\x1\xC\x5\xFFFF\x1\x4\x17\xFFFF\x1\x4\x18\xFFFF\x1\xC\x14\xFFFF"+
@@ -60233,13 +60234,13 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				"\xA\xFFFF\x1\xF\x6\xFFFF\x1\xF\x3\xFFFF\x1\x10\x1\xFFFF\x1\xF",
 				"\x1\xFFFF",
 				"",
-				"\x1\xA\x26\xFFFF\x1\xB\x17\xFFFF\x1\x4\xB\xFFFF\x1\x11\x7\xFFFF\x1\x4"+
+				"\x1\xA\x27\xFFFF\x1\xB\x17\xFFFF\x1\x4\xB\xFFFF\x1\x11\x7\xFFFF\x1\x4"+
 				"\x1\xFFFF\x1\x4",
-				"\x1\xA\x26\xFFFF\x1\xB\x17\xFFFF\x1\x4\xB\xFFFF\x1\x11\x7\xFFFF\x1\x4"+
+				"\x1\xA\x27\xFFFF\x1\xB\x17\xFFFF\x1\x4\xB\xFFFF\x1\x11\x7\xFFFF\x1\x4"+
 				"\x1\xFFFF\x1\x4",
-				"\x1\xA\x26\xFFFF\x1\xB\x17\xFFFF\x1\x4\xB\xFFFF\x1\x12\x7\xFFFF\x1\x4"+
+				"\x1\xA\x27\xFFFF\x1\xB\x17\xFFFF\x1\x4\xB\xFFFF\x1\x12\x7\xFFFF\x1\x4"+
 				"\x1\xFFFF\x1\x4",
-				"\x1\xA\x26\xFFFF\x1\xB\x17\xFFFF\x1\x4\xB\xFFFF\x1\x12\x7\xFFFF\x1\x4"+
+				"\x1\xA\x27\xFFFF\x1\xB\x17\xFFFF\x1\x4\xB\xFFFF\x1\x12\x7\xFFFF\x1\x4"+
 				"\x1\xFFFF\x1\x4",
 				"\x1\x4\x1\xC\x5\xFFFF\x1\x4\x17\xFFFF\x1\x4\x18\xFFFF\x1\xC\x14\xFFFF"+
 				"\x1\x4\x1\xFFFF\x2\x4\x1\xFFFF\x4\x4\x1\xFFFF\x1\x4\x1\xFFFF\x2\x4\x2"+
@@ -60338,9 +60339,9 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		private const string DFA324_eofS =
 			"\x10\xFFFF";
 		private const string DFA324_minS =
-			"\x1\x16\x1\xA\x4\xFFFF\x3\xA\x1\x16\x2\xA\x1\x16\x3\xA";
+			"\x1\x17\x1\xA\x4\xFFFF\x3\xA\x1\x17\x2\xA\x1\x17\x3\xA";
 		private const string DFA324_maxS =
-			"\x2\xC7\x4\xFFFF\x4\xC7\x2\x5F\x2\xC7\x2\x5F";
+			"\x2\xC8\x4\xFFFF\x4\xC8\x2\x60\x2\xC8\x2\x60";
 		private const string DFA324_acceptS =
 			"\x2\xFFFF\x1\x2\x1\x1\x2\x2\xA\xFFFF";
 		private const string DFA324_specialS =
@@ -60356,7 +60357,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				"\x1\x2\x2\x3\x2\xFFFF\x1\x2\x1\xFFFF\x1\x2\x1\x3\x1\x4\x1\x2\x2\xFFFF"+
 				"\x1\x3\x1\x2\x5\xFFFF\x1\x2\x1\xFFFF\x2\x2\x1\xFFFF\x1\x3\x2\x2\x1\x3"+
 				"\x1\x5\x1\xFFFF\x1\x4\x1\xFFFF\x1\x2",
-				"\x1\x5\xB\xFFFF\x1\x8\x6\xFFFF\x1\x8\x17\xFFFF\x1\x8\x13\xFFFF\x1\x5"+
+				"\x1\x5\xC\xFFFF\x1\x8\x6\xFFFF\x1\x8\x17\xFFFF\x1\x8\x13\xFFFF\x1\x5"+
 				"\xA\xFFFF\x2\x5\x7\xFFFF\x1\x5\x1\xFFFF\x1\x5\x3\xFFFF\x1\x8\x1\x3\x2"+
 				"\x8\x1\xFFFF\x1\x7\x1\x8\x1\x6\x1\x8\x1\xFFFF\x1\x3\x1\xFFFF\x1\x7\x1"+
 				"\x3\x2\xFFFF\x1\x3\x4\xFFFF\x1\x3\x2\xFFFF\x1\x7\x1\xFFFF\x1\x3\x1\x8"+
@@ -60370,7 +60371,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				"",
 				"",
 				"",
-				"\x1\x3\xB\xFFFF\x1\x3\x6\xFFFF\x1\x3\x17\xFFFF\x1\x3\x12\xFFFF\x1\x5"+
+				"\x1\x3\xC\xFFFF\x1\x3\x6\xFFFF\x1\x3\x17\xFFFF\x1\x3\x12\xFFFF\x1\x5"+
 				"\x1\x3\xA\xFFFF\x1\x3\x1\x9\x7\xFFFF\x1\x3\x1\xFFFF\x1\x3\x3\xFFFF\x4"+
 				"\x3\x1\xFFFF\x4\x3\x1\xFFFF\x1\x3\x1\xFFFF\x2\x3\x2\xFFFF\x1\x3\x4\xFFFF"+
 				"\x1\x3\x2\xFFFF\x1\x3\x1\xFFFF\x3\x3\x2\xFFFF\x2\x3\x2\xFFFF\x1\x3\x2"+
@@ -60378,14 +60379,14 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				"\x3\x1\xFFFF\x3\x3\x1\xFFFF\x3\x3\x1\xFFFF\x1\x3\x1\xFFFF\x2\x3\x1\xFFFF"+
 				"\x6\x3\x2\xFFFF\x1\x3\x1\xFFFF\x4\x3\x2\xFFFF\x2\x3\x5\xFFFF\x1\x3\x1"+
 				"\xFFFF\x2\x3\x1\xFFFF\x5\x3\x1\xFFFF\x1\x3\x1\xFFFF\x1\x3",
-				"\x1\x3\xB\xFFFF\x1\x3\x6\xFFFF\x1\x3\x17\xFFFF\x1\x3\x12\xFFFF\x1\x5"+
+				"\x1\x3\xC\xFFFF\x1\x3\x6\xFFFF\x1\x3\x17\xFFFF\x1\x3\x12\xFFFF\x1\x5"+
 				"\x1\x3\xA\xFFFF\x1\x3\x1\x9\x7\xFFFF\x1\x3\x1\xFFFF\x1\x3\x3\xFFFF\x1"+
 				"\x3\x1\xFFFF\x2\x3\x1\xFFFF\x4\x3\x3\xFFFF\x1\x3\xB\xFFFF\x1\x3\x2\xFFFF"+
 				"\x2\x3\x3\xFFFF\x1\x3\x5\xFFFF\x1\x3\x1\xFFFF\x1\x3\x5\xFFFF\x1\x3\x1"+
 				"\xFFFF\x2\x3\x2\xFFFF\x2\x3\x3\xFFFF\x1\x3\x1\xFFFF\x1\x3\x2\xFFFF\x1"+
 				"\x3\x1\xFFFF\x2\x3\x1\xFFFF\x1\x3\x4\xFFFF\x1\x3\x3\xFFFF\x1\x3\xA\xFFFF"+
 				"\x1\x3\x6\xFFFF\x1\x3\x3\xFFFF\x1\x3\x1\xFFFF\x1\x3",
-				"\x1\x3\xB\xFFFF\x1\x3\x6\xFFFF\x1\x3\x17\xFFFF\x1\x3\x12\xFFFF\x1\x5"+
+				"\x1\x3\xC\xFFFF\x1\x3\x6\xFFFF\x1\x3\x17\xFFFF\x1\x3\x12\xFFFF\x1\x5"+
 				"\x1\x3\xA\xFFFF\x1\x3\x1\x9\x7\xFFFF\x1\x3\x1\xFFFF\x1\x3\x3\xFFFF\x1"+
 				"\x3\x1\xFFFF\x2\x3\x1\xFFFF\x4\x3\x3\xFFFF\x1\x3\xB\xFFFF\x1\x3\x2\xFFFF"+
 				"\x2\x3\x3\xFFFF\x1\x3\x5\xFFFF\x1\x3\x1\xFFFF\x1\x3\x5\xFFFF\x1\x3\x1"+
@@ -60401,9 +60402,9 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				"\xA\x4\xFFFF\x1\xA\x1\xFFFF\x1\x3\x1\xFFFF\x1\xB\x1\x3\x3\xFFFF\x1\x3"+
 				"\x5\xFFFF\x1\xA\x1\xFFFF\x2\x3\x2\xFFFF\x1\x3\x1\xA\x1\xFFFF\x1\x3\x1"+
 				"\xFFFF\x1\xB\x1\xFFFF\x1\xA",
-				"\x1\x3\xC\xFFFF\x1\xD\x31\xFFFF\x1\x3\x4\xFFFF\x1\xC\x5\xFFFF\x2\x3"+
+				"\x1\x3\xD\xFFFF\x1\xD\x31\xFFFF\x1\x3\x4\xFFFF\x1\xC\x5\xFFFF\x2\x3"+
 				"\x7\xFFFF\x1\x3\x1\xFFFF\x1\x3",
-				"\x1\x3\xC\xFFFF\x1\xD\x31\xFFFF\x1\x3\x4\xFFFF\x1\xC\x5\xFFFF\x2\x3"+
+				"\x1\x3\xD\xFFFF\x1\xD\x31\xFFFF\x1\x3\x4\xFFFF\x1\xC\x5\xFFFF\x2\x3"+
 				"\x7\xFFFF\x1\x3\x1\xFFFF\x1\x3",
 				"\x1\xE\x6\xFFFF\x1\xE\x17\xFFFF\x1\xE\x29\xFFFF\x1\x5\x3\xFFFF\x1\xE"+
 				"\x1\xFFFF\x2\xE\x1\xFFFF\x1\xF\x3\xE\x1\xFFFF\x1\x3\x1\xFFFF\x1\xF\x1"+
@@ -60414,16 +60415,16 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				"\xE\x4\xFFFF\x1\xE\x1\xFFFF\x1\x3\x1\xFFFF\x1\xF\x1\x3\x3\xFFFF\x1\x3"+
 				"\x5\xFFFF\x1\xE\x1\xFFFF\x2\x3\x2\xFFFF\x1\x3\x1\xE\x1\xFFFF\x1\x3\x1"+
 				"\xFFFF\x1\xF\x1\xFFFF\x1\xE",
-				"\x1\x3\xB\xFFFF\x1\x3\x6\xFFFF\x1\x3\x17\xFFFF\x1\x3\x12\xFFFF\x1\x5"+
+				"\x1\x3\xC\xFFFF\x1\x3\x6\xFFFF\x1\x3\x17\xFFFF\x1\x3\x12\xFFFF\x1\x5"+
 				"\x1\x3\xA\xFFFF\x1\x3\x8\xFFFF\x1\x3\x1\xFFFF\x1\x3\x3\xFFFF\x1\x3\x1"+
 				"\xFFFF\x2\x3\x1\xFFFF\x4\x3\x3\xFFFF\x1\x3\xB\xFFFF\x1\x3\x2\xFFFF\x2"+
 				"\x3\x3\xFFFF\x1\x3\x5\xFFFF\x1\x3\x1\xFFFF\x1\x3\x5\xFFFF\x1\x3\x1\xFFFF"+
 				"\x2\x3\x2\xFFFF\x2\x3\x3\xFFFF\x1\x3\x1\xFFFF\x1\x3\x2\xFFFF\x1\x3\x1"+
 				"\xFFFF\x2\x3\x1\xFFFF\x1\x3\x4\xFFFF\x1\x3\x3\xFFFF\x1\x3\xA\xFFFF\x1"+
 				"\x3\x6\xFFFF\x1\x3\x3\xFFFF\x1\x3\x1\xFFFF\x1\x3",
-				"\x1\x3\xC\xFFFF\x1\xD\x31\xFFFF\x1\x3\x4\xFFFF\x1\xC\x5\xFFFF\x2\x3"+
+				"\x1\x3\xD\xFFFF\x1\xD\x31\xFFFF\x1\x3\x4\xFFFF\x1\xC\x5\xFFFF\x2\x3"+
 				"\x7\xFFFF\x1\x3\x1\xFFFF\x1\x3",
-				"\x1\x3\xC\xFFFF\x1\xD\x31\xFFFF\x1\x3\x4\xFFFF\x1\xC\x5\xFFFF\x2\x3"+
+				"\x1\x3\xD\xFFFF\x1\xD\x31\xFFFF\x1\x3\x4\xFFFF\x1\xC\x5\xFFFF\x2\x3"+
 				"\x7\xFFFF\x1\x3\x1\xFFFF\x1\x3"
 			};
 
@@ -60479,15 +60480,15 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		case 0:
 			{
 				input.Rewind();
-				if ((LA324_1==106)) {s = 1;}
+				if ((LA324_1==107)) {s = 1;}
 
-				else if ((LA324_1==GET||LA324_1==IDENTIFIER||LA324_1==SET||LA324_1==99||(LA324_1>=101 && LA324_1<=102)||LA324_1==105||LA324_1==107||LA324_1==109||LA324_1==112||LA324_1==115||LA324_1==120||(LA324_1>=125 && LA324_1<=126)||LA324_1==131||LA324_1==134||LA324_1==142||(LA324_1>=150 && LA324_1<=152)||LA324_1==155||LA324_1==161||(LA324_1>=163 && LA324_1<=164)||LA324_1==166||LA324_1==171||LA324_1==173||LA324_1==176||LA324_1==180||LA324_1==186||(LA324_1>=188 && LA324_1<=189)||(LA324_1>=192 && LA324_1<=193)||LA324_1==199)) {s = 2;}
+				else if ((LA324_1==GET||LA324_1==IDENTIFIER||LA324_1==SET||LA324_1==100||(LA324_1>=102 && LA324_1<=103)||LA324_1==106||LA324_1==108||LA324_1==110||LA324_1==113||LA324_1==116||LA324_1==121||(LA324_1>=126 && LA324_1<=127)||LA324_1==132||LA324_1==135||LA324_1==143||(LA324_1>=151 && LA324_1<=153)||LA324_1==156||LA324_1==162||(LA324_1>=164 && LA324_1<=165)||LA324_1==167||LA324_1==172||LA324_1==174||LA324_1==177||LA324_1==181||LA324_1==187||(LA324_1>=189 && LA324_1<=190)||(LA324_1>=193 && LA324_1<=194)||LA324_1==200)) {s = 2;}
 
-				else if ((LA324_1==100||LA324_1==130||LA324_1==144||LA324_1==154||LA324_1==160||LA324_1==165||(LA324_1>=167 && LA324_1<=168)||LA324_1==174||LA324_1==179||LA324_1==191||LA324_1==194)) {s = 3;}
+				else if ((LA324_1==101||LA324_1==131||LA324_1==145||LA324_1==155||LA324_1==161||LA324_1==166||(LA324_1>=168 && LA324_1<=169)||LA324_1==175||LA324_1==180||LA324_1==192||LA324_1==195)) {s = 3;}
 
-				else if ((LA324_1==104||LA324_1==111||LA324_1==123||LA324_1==127||LA324_1==137||LA324_1==139||LA324_1==145||(LA324_1>=147 && LA324_1<=148)||LA324_1==156||LA324_1==158||LA324_1==175||LA324_1==197) && ((_queryExpression == 0))) {s = 4;}
+				else if ((LA324_1==105||LA324_1==112||LA324_1==124||LA324_1==128||LA324_1==138||LA324_1==140||LA324_1==146||(LA324_1>=148 && LA324_1<=149)||LA324_1==157||LA324_1==159||LA324_1==176||LA324_1==198) && ((_queryExpression == 0))) {s = 4;}
 
-				else if ((LA324_1==195)) {s = 5;}
+				else if ((LA324_1==196)) {s = 5;}
 
 				input.Seek(index324_1);
 				break;
@@ -60511,53 +60512,53 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	#region Follow sets
 	private static class Follow
 	{
-		public static readonly BitSet _using_directives_in_compilation_unit87 = new BitSet(new ulong[]{0x1000000000040000UL,0x420001080000000UL,0x802841A806018004UL});
-		public static readonly BitSet _global_attributes_in_compilation_unit94 = new BitSet(new ulong[]{0x1000000000040000UL,0x420001080000000UL,0x802841A806018004UL});
-		public static readonly BitSet _namespace_declaration_in_compilation_unit101 = new BitSet(new ulong[]{0x1000000000040000UL,0x420001080000000UL,0x802841A806018004UL});
+		public static readonly BitSet _using_directives_in_compilation_unit87 = new BitSet(new ulong[]{0x2000000000080000UL,0x840002100000000UL,0x5083500C030008UL,0x1UL});
+		public static readonly BitSet _global_attributes_in_compilation_unit94 = new BitSet(new ulong[]{0x2000000000080000UL,0x840002100000000UL,0x5083500C030008UL,0x1UL});
+		public static readonly BitSet _namespace_declaration_in_compilation_unit101 = new BitSet(new ulong[]{0x2000000000080000UL,0x840002100000000UL,0x5083500C030008UL,0x1UL});
 		public static readonly BitSet _namespace_body_in_compilation_unit106 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _153_in_namespace_declaration115 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _qualified_identifier_in_namespace_declaration119 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _namespace_block_in_namespace_declaration123 = new BitSet(new ulong[]{0x10000000000002UL});
+		public static readonly BitSet _154_in_namespace_declaration115 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _qualified_identifier_in_namespace_declaration119 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x200UL});
+		public static readonly BitSet _namespace_block_in_namespace_declaration123 = new BitSet(new ulong[]{0x20000000000002UL});
 		public static readonly BitSet _SEMI_in_namespace_declaration127 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _identifier_in_qualified_identifier138 = new BitSet(new ulong[]{0x402UL});
-		public static readonly BitSet _DOT_in_qualified_identifier141 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _DOT_in_qualified_identifier141 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _identifier_in_qualified_identifier143 = new BitSet(new ulong[]{0x402UL});
-		public static readonly BitSet _qid_start_in_qid156 = new BitSet(new ulong[]{0x1000000000402UL});
-		public static readonly BitSet _qid_part_in_qid158 = new BitSet(new ulong[]{0x1000000000402UL});
-		public static readonly BitSet _identifier_in_qid_start167 = new BitSet(new ulong[]{0x2UL,0x300000UL});
-		public static readonly BitSet _84_in_qid_start170 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_qid_start172 = new BitSet(new ulong[]{0x2UL,0x200000UL});
+		public static readonly BitSet _qid_start_in_qid156 = new BitSet(new ulong[]{0x2000000000402UL});
+		public static readonly BitSet _qid_part_in_qid158 = new BitSet(new ulong[]{0x2000000000402UL});
+		public static readonly BitSet _identifier_in_qid_start167 = new BitSet(new ulong[]{0x2UL,0x600000UL});
+		public static readonly BitSet _85_in_qid_start170 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_qid_start172 = new BitSet(new ulong[]{0x2UL,0x400000UL});
 		public static readonly BitSet _generic_argument_list_in_qid_start176 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _183_in_qid_start182 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _108_in_qid_start187 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _184_in_qid_start182 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _109_in_qid_start187 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _predefined_type_in_qid_start192 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _literal_in_qid_start197 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _access_operator_in_qid_part207 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_qid_part211 = new BitSet(new ulong[]{0x2UL,0x200000UL});
+		public static readonly BitSet _access_operator_in_qid_part207 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_qid_part211 = new BitSet(new ulong[]{0x2UL,0x400000UL});
 		public static readonly BitSet _generic_argument_list_in_qid_part215 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_namespace_block226 = new BitSet(new ulong[]{0x1000000000040000UL,0x420001080000000UL,0x802841A806018004UL,0x1000UL});
-		public static readonly BitSet _namespace_body_in_namespace_block230 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_namespace_block234 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _extern_alias_directives_in_namespace_body242 = new BitSet(new ulong[]{0x1000000000040002UL,0x420001080000000UL,0x802841A806018000UL});
-		public static readonly BitSet _using_directives_in_namespace_body247 = new BitSet(new ulong[]{0x40002UL,0x420001080000000UL,0x802841A806018000UL});
+		public static readonly BitSet _201_in_namespace_block226 = new BitSet(new ulong[]{0x2000000000080000UL,0x840002100000000UL,0x5083500C030008UL,0x2001UL});
+		public static readonly BitSet _namespace_body_in_namespace_block230 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_namespace_block234 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _extern_alias_directives_in_namespace_body242 = new BitSet(new ulong[]{0x2000000000080002UL,0x840002100000000UL,0x5083500C030000UL,0x1UL});
+		public static readonly BitSet _using_directives_in_namespace_body247 = new BitSet(new ulong[]{0x80002UL,0x840002100000000UL,0x5083500C030000UL,0x1UL});
 		public static readonly BitSet _namespace_member_declarations_in_namespace_body252 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _extern_alias_directive_in_extern_alias_directives261 = new BitSet(new ulong[]{0x2UL,0x0UL,0x4UL});
-		public static readonly BitSet _130_in_extern_alias_directive270 = new BitSet(new ulong[]{0x0UL,0x4000000000UL});
-		public static readonly BitSet _102_in_extern_alias_directive274 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_extern_alias_directive278 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _extern_alias_directive_in_extern_alias_directives261 = new BitSet(new ulong[]{0x2UL,0x0UL,0x8UL});
+		public static readonly BitSet _131_in_extern_alias_directive270 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _103_in_extern_alias_directive274 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_extern_alias_directive278 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_extern_alias_directive281 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _using_directive_in_using_directives289 = new BitSet(new ulong[]{0x1000000000000002UL});
+		public static readonly BitSet _using_directive_in_using_directives289 = new BitSet(new ulong[]{0x2000000000000002UL});
 		public static readonly BitSet _using_alias_directive_in_using_directive299 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _using_namespace_directive_in_using_directive304 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _USING_in_using_alias_directive314 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_using_alias_directive318 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
-		public static readonly BitSet _89_in_using_alias_directive322 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _namespace_or_type_name_in_using_alias_directive326 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _USING_in_using_alias_directive314 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_using_alias_directive318 = new BitSet(new ulong[]{0x0UL,0x4000000UL});
+		public static readonly BitSet _90_in_using_alias_directive322 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _namespace_or_type_name_in_using_alias_directive326 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_using_alias_directive330 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _USING_in_using_namespace_directive338 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _namespace_name_in_using_namespace_directive342 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _USING_in_using_namespace_directive338 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _namespace_name_in_using_namespace_directive342 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_using_namespace_directive346 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _namespace_member_declaration_in_namespace_member_declarations354 = new BitSet(new ulong[]{0x40002UL,0x420001080000000UL,0x802841A806018000UL});
+		public static readonly BitSet _namespace_member_declaration_in_namespace_member_declarations354 = new BitSet(new ulong[]{0x80002UL,0x840002100000000UL,0x5083500C030000UL,0x1UL});
 		public static readonly BitSet _namespace_declaration_in_namespace_member_declaration363 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _type_declaration_in_namespace_member_declaration368 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _class_declaration_in_type_declaration376 = new BitSet(new ulong[]{0x2UL});
@@ -60565,613 +60566,613 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _interface_declaration_in_type_declaration386 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _enum_declaration_in_type_declaration391 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _delegate_declaration_in_type_declaration396 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _identifier_in_qualified_alias_member404 = new BitSet(new ulong[]{0x0UL,0x100000UL});
-		public static readonly BitSet _84_in_qualified_alias_member408 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_qualified_alias_member412 = new BitSet(new ulong[]{0x2UL,0x200000UL});
+		public static readonly BitSet _identifier_in_qualified_alias_member404 = new BitSet(new ulong[]{0x0UL,0x200000UL});
+		public static readonly BitSet _85_in_qualified_alias_member408 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_qualified_alias_member412 = new BitSet(new ulong[]{0x2UL,0x400000UL});
 		public static readonly BitSet _generic_argument_list_in_qualified_alias_member416 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _namespace_or_type_name_in_namespace_name428 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _namespace_or_type_name_in_type_name437 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _identifier_in_namespace_or_type_name445 = new BitSet(new ulong[]{0x402UL,0x300000UL});
-		public static readonly BitSet _generic_argument_list_in_namespace_or_type_name449 = new BitSet(new ulong[]{0x402UL,0x100000UL});
-		public static readonly BitSet _84_in_namespace_or_type_name454 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_namespace_or_type_name456 = new BitSet(new ulong[]{0x402UL,0x200000UL});
+		public static readonly BitSet _identifier_in_namespace_or_type_name445 = new BitSet(new ulong[]{0x402UL,0x600000UL});
+		public static readonly BitSet _generic_argument_list_in_namespace_or_type_name449 = new BitSet(new ulong[]{0x402UL,0x200000UL});
+		public static readonly BitSet _85_in_namespace_or_type_name454 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_namespace_or_type_name456 = new BitSet(new ulong[]{0x402UL,0x400000UL});
 		public static readonly BitSet _generic_argument_list_in_namespace_or_type_name460 = new BitSet(new ulong[]{0x402UL});
-		public static readonly BitSet _DOT_in_namespace_or_type_name466 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_namespace_or_type_name470 = new BitSet(new ulong[]{0x402UL,0x200000UL});
+		public static readonly BitSet _DOT_in_namespace_or_type_name466 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_namespace_or_type_name470 = new BitSet(new ulong[]{0x402UL,0x400000UL});
 		public static readonly BitSet _generic_argument_list_in_namespace_or_type_name474 = new BitSet(new ulong[]{0x402UL});
-		public static readonly BitSet _global_attribute_in_global_attributes507 = new BitSet(new ulong[]{0x2UL,0x80000000UL});
-		public static readonly BitSet _95_in_global_attribute517 = new BitSet(new ulong[]{0x0UL,0x20000000000UL,0x1000000UL});
-		public static readonly BitSet _global_attribute_target_specifier_in_global_attribute521 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _attribute_list_in_global_attribute525 = new BitSet(new ulong[]{0x0UL,0x100004000UL});
-		public static readonly BitSet _78_in_global_attribute529 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
-		public static readonly BitSet _96_in_global_attribute534 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _global_attribute_target_in_global_attribute_target_specifier543 = new BitSet(new ulong[]{0x0UL,0x80000UL});
-		public static readonly BitSet _83_in_global_attribute_target_specifier547 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _global_attribute_in_global_attributes507 = new BitSet(new ulong[]{0x2UL,0x100000000UL});
+		public static readonly BitSet _96_in_global_attribute517 = new BitSet(new ulong[]{0x0UL,0x40000000000UL,0x2000000UL});
+		public static readonly BitSet _global_attribute_target_specifier_in_global_attribute521 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _attribute_list_in_global_attribute525 = new BitSet(new ulong[]{0x0UL,0x200008000UL});
+		public static readonly BitSet _79_in_global_attribute529 = new BitSet(new ulong[]{0x0UL,0x200000000UL});
+		public static readonly BitSet _97_in_global_attribute534 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _global_attribute_target_in_global_attribute_target_specifier543 = new BitSet(new ulong[]{0x0UL,0x100000UL});
+		public static readonly BitSet _84_in_global_attribute_target_specifier547 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _attribute_sections_in_attributes569 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attribute_section_in_attribute_sections578 = new BitSet(new ulong[]{0x2UL,0x80000000UL});
-		public static readonly BitSet _95_in_attribute_section588 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400985A519A0A09UL,0xA2UL});
-		public static readonly BitSet _attribute_target_specifier_in_attribute_section592 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _attribute_list_in_attribute_section597 = new BitSet(new ulong[]{0x0UL,0x100004000UL});
-		public static readonly BitSet _78_in_attribute_section601 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
-		public static readonly BitSet _96_in_attribute_section606 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attribute_target_in_attribute_target_specifier615 = new BitSet(new ulong[]{0x0UL,0x80000UL});
-		public static readonly BitSet _83_in_attribute_target_specifier619 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attribute_in_attribute_list661 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_attribute_list664 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _attribute_in_attribute_list666 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _type_name_in_attribute680 = new BitSet(new ulong[]{0x2UL,0x100UL});
+		public static readonly BitSet _attribute_section_in_attribute_sections578 = new BitSet(new ulong[]{0x2UL,0x100000000UL});
+		public static readonly BitSet _96_in_attribute_section588 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80130B4A3341413UL,0x144UL});
+		public static readonly BitSet _attribute_target_specifier_in_attribute_section592 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _attribute_list_in_attribute_section597 = new BitSet(new ulong[]{0x0UL,0x200008000UL});
+		public static readonly BitSet _79_in_attribute_section601 = new BitSet(new ulong[]{0x0UL,0x200000000UL});
+		public static readonly BitSet _97_in_attribute_section606 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _attribute_target_in_attribute_target_specifier615 = new BitSet(new ulong[]{0x0UL,0x100000UL});
+		public static readonly BitSet _84_in_attribute_target_specifier619 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _attribute_in_attribute_list661 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_attribute_list664 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _attribute_in_attribute_list666 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _type_name_in_attribute680 = new BitSet(new ulong[]{0x2UL,0x200UL});
 		public static readonly BitSet _attribute_arguments_in_attribute684 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _72_in_attribute_arguments697 = new BitSet(new ulong[]{0x4166007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _named_argument_list_in_attribute_arguments731 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _positional_argument_list_in_attribute_arguments747 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _73_in_attribute_arguments697 = new BitSet(new ulong[]{0x82CC00E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _named_argument_list_in_attribute_arguments731 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _positional_argument_list_in_attribute_arguments747 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_attribute_arguments764 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _positional_argument_in_positional_argument_list775 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_positional_argument_list778 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _positional_argument_in_positional_argument_list775 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_positional_argument_list778 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _named_argument_list_in_positional_argument_list789 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _positional_argument_list_in_positional_argument_list793 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _named_argument_in_named_argument_list807 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_named_argument_list810 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _named_argument_in_named_argument_list807 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_named_argument_list810 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _named_argument_list_in_named_argument_list812 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _identifier_in_positional_argument834 = new BitSet(new ulong[]{0x0UL,0x80000UL});
-		public static readonly BitSet _83_in_positional_argument836 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _identifier_in_positional_argument834 = new BitSet(new ulong[]{0x0UL,0x100000UL});
+		public static readonly BitSet _84_in_positional_argument836 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _attribute_argument_expression_in_positional_argument840 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _identifier_in_named_argument852 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
-		public static readonly BitSet _89_in_named_argument854 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _identifier_in_named_argument852 = new BitSet(new ulong[]{0x0UL,0x4000000UL});
+		public static readonly BitSet _90_in_named_argument854 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _attribute_argument_expression_in_named_argument856 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_attribute_argument_expression865 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _non_array_type_in_type878 = new BitSet(new ulong[]{0x2UL,0x80000000UL});
-		public static readonly BitSet _rank_specifier_in_type880 = new BitSet(new ulong[]{0x2UL,0x80000000UL});
-		public static readonly BitSet _predefined_type_in_non_nullable_type891 = new BitSet(new ulong[]{0x2UL,0x80000200UL});
-		public static readonly BitSet _type_name_in_non_nullable_type895 = new BitSet(new ulong[]{0x2UL,0x80000200UL});
-		public static readonly BitSet _rank_specifier_in_non_nullable_type904 = new BitSet(new ulong[]{0x2UL,0x80000200UL});
-		public static readonly BitSet _73_in_non_nullable_type909 = new BitSet(new ulong[]{0x2UL,0x200UL});
-		public static readonly BitSet _73_in_non_nullable_type918 = new BitSet(new ulong[]{0x2UL,0x200UL});
-		public static readonly BitSet _195_in_non_nullable_type930 = new BitSet(new ulong[]{0x0UL,0x200UL});
-		public static readonly BitSet _73_in_non_nullable_type934 = new BitSet(new ulong[]{0x2UL,0x200UL});
-		public static readonly BitSet _predefined_type_in_non_array_type946 = new BitSet(new ulong[]{0x2UL,0x20000200UL});
-		public static readonly BitSet _type_name_in_non_array_type950 = new BitSet(new ulong[]{0x2UL,0x20000200UL});
-		public static readonly BitSet _73_in_non_array_type954 = new BitSet(new ulong[]{0x2UL,0x200UL});
-		public static readonly BitSet _93_in_non_array_type959 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _195_in_non_array_type966 = new BitSet(new ulong[]{0x0UL,0x200UL});
-		public static readonly BitSet _73_in_non_array_type968 = new BitSet(new ulong[]{0x2UL,0x200UL});
-		public static readonly BitSet _type_in_type_list978 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_type_list981 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_type_list983 = new BitSet(new ulong[]{0x2UL,0x4000UL});
+		public static readonly BitSet _non_array_type_in_type878 = new BitSet(new ulong[]{0x2UL,0x100000000UL});
+		public static readonly BitSet _rank_specifier_in_type880 = new BitSet(new ulong[]{0x2UL,0x100000000UL});
+		public static readonly BitSet _predefined_type_in_non_nullable_type891 = new BitSet(new ulong[]{0x2UL,0x100000400UL});
+		public static readonly BitSet _type_name_in_non_nullable_type895 = new BitSet(new ulong[]{0x2UL,0x100000400UL});
+		public static readonly BitSet _rank_specifier_in_non_nullable_type904 = new BitSet(new ulong[]{0x2UL,0x100000400UL});
+		public static readonly BitSet _74_in_non_nullable_type909 = new BitSet(new ulong[]{0x2UL,0x400UL});
+		public static readonly BitSet _74_in_non_nullable_type918 = new BitSet(new ulong[]{0x2UL,0x400UL});
+		public static readonly BitSet _196_in_non_nullable_type930 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _74_in_non_nullable_type934 = new BitSet(new ulong[]{0x2UL,0x400UL});
+		public static readonly BitSet _predefined_type_in_non_array_type946 = new BitSet(new ulong[]{0x2UL,0x40000400UL});
+		public static readonly BitSet _type_name_in_non_array_type950 = new BitSet(new ulong[]{0x2UL,0x40000400UL});
+		public static readonly BitSet _74_in_non_array_type954 = new BitSet(new ulong[]{0x2UL,0x400UL});
+		public static readonly BitSet _94_in_non_array_type959 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _196_in_non_array_type966 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _74_in_non_array_type968 = new BitSet(new ulong[]{0x2UL,0x400UL});
+		public static readonly BitSet _type_in_type_list978 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_type_list981 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_type_list983 = new BitSet(new ulong[]{0x2UL,0x8000UL});
 		public static readonly BitSet _type_in_class_type993 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _type_in_array_type1000 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _type_in_unmanaged_type1048 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _type_in_pointer_type1055 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _rank_specifier_in_rank_specifiers1063 = new BitSet(new ulong[]{0x2UL,0x80000000UL});
-		public static readonly BitSet _95_in_rank_specifier1081 = new BitSet(new ulong[]{0x0UL,0x100004000UL});
-		public static readonly BitSet _dim_separators_in_rank_specifier1085 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
-		public static readonly BitSet _96_in_rank_specifier1090 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _78_in_dim_separators1100 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _85_in_generic_argument_list1110 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_arguments_in_generic_argument_list1114 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _rank_specifier_in_rank_specifiers1063 = new BitSet(new ulong[]{0x2UL,0x100000000UL});
+		public static readonly BitSet _96_in_rank_specifier1081 = new BitSet(new ulong[]{0x0UL,0x200008000UL});
+		public static readonly BitSet _dim_separators_in_rank_specifier1085 = new BitSet(new ulong[]{0x0UL,0x200000000UL});
+		public static readonly BitSet _97_in_rank_specifier1090 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _79_in_dim_separators1100 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _86_in_generic_argument_list1110 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_arguments_in_generic_argument_list1114 = new BitSet(new ulong[]{0x1000000UL});
 		public static readonly BitSet _GT_in_generic_argument_list1118 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _type_argument_in_type_arguments1127 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_type_arguments1130 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_argument_in_type_arguments1132 = new BitSet(new ulong[]{0x2UL,0x4000UL});
+		public static readonly BitSet _type_argument_in_type_arguments1127 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_type_arguments1130 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_argument_in_type_arguments1132 = new BitSet(new ulong[]{0x2UL,0x8000UL});
 		public static readonly BitSet _type_in_type_argument1146 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _identifier_in_type_variable_name1155 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _non_assignment_expression_in_expression1167 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _assignment_in_expression1172 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _cast_expression_in_unary_expression1180 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _75_in_unary_expression1189 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _76_in_unary_expression1189 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _unary_expression_in_unary_expression1193 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _MINUS_in_unary_expression1199 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _MINUS_in_unary_expression1199 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _unary_expression_in_unary_expression1203 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _65_in_unary_expression1209 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _66_in_unary_expression1209 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _unary_expression_in_unary_expression1213 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _205_in_unary_expression1219 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _206_in_unary_expression1219 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _unary_expression_in_unary_expression1223 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _73_in_unary_expression1229 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _74_in_unary_expression1229 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _unary_expression_in_unary_expression1233 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _await_expression_in_unary_expression1238 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _pre_increment_expression_in_unary_expression1244 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _pre_decrement_expression_in_unary_expression1250 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primary_or_array_creation_expression_in_unary_expression1256 = new BitSet(new ulong[]{0x2UL,0x9000UL});
-		public static readonly BitSet _76_in_unary_expression1260 = new BitSet(new ulong[]{0x2UL,0x8000UL});
-		public static readonly BitSet _79_in_unary_expression1265 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _primary_or_array_creation_expression_in_unary_expression1256 = new BitSet(new ulong[]{0x2UL,0x12000UL});
+		public static readonly BitSet _77_in_unary_expression1260 = new BitSet(new ulong[]{0x2UL,0x10000UL});
+		public static readonly BitSet _80_in_unary_expression1265 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _pointer_indirection_expression_in_unary_expression1271 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _addressof_expression_in_unary_expression1276 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _107_in_await_expression1285 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _108_in_await_expression1285 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _unary_expression_in_await_expression1287 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _76_in_pre_increment_expression1296 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _77_in_pre_increment_expression1296 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _unary_expression_in_pre_increment_expression1300 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _79_in_pre_decrement_expression1309 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _80_in_pre_decrement_expression1309 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _unary_expression_in_pre_decrement_expression1313 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _73_in_pointer_indirection_expression1321 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _74_in_pointer_indirection_expression1321 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _unary_expression_in_pointer_indirection_expression1325 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _70_in_addressof_expression1333 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _71_in_addressof_expression1333 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _unary_expression_in_addressof_expression1337 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _lambda_expression_in_non_assignment_expression1345 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _query_expression_in_non_assignment_expression1350 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _conditional_expression_in_non_assignment_expression1356 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _unary_expression_in_assignment1363 = new BitSet(new ulong[]{0x800000UL,0x402852490UL,0x0UL,0x400UL});
-		public static readonly BitSet _assignment_operator_in_assignment1367 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _unary_expression_in_assignment1363 = new BitSet(new ulong[]{0x1000000UL,0x8050A4920UL,0x0UL,0x800UL});
+		public static readonly BitSet _assignment_operator_in_assignment1367 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _expression_in_assignment1371 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_variable_reference1381 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _argument_in_argument_list1392 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_argument_list1395 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93AC5ADDDA4A48UL,0x20A3UL});
-		public static readonly BitSet _argument_in_argument_list1397 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _argument_name_in_argument1407 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93AC5ADDDA4A48UL,0x20A3UL});
+		public static readonly BitSet _argument_in_argument_list1392 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_argument_list1395 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92758B5BBB49491UL,0x4146UL});
+		public static readonly BitSet _argument_in_argument_list1397 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _argument_name_in_argument1407 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92758B5BBB49491UL,0x4146UL});
 		public static readonly BitSet _argument_value_in_argument1411 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _argument_value_in_argument1416 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _identifier_in_argument_name1423 = new BitSet(new ulong[]{0x0UL,0x80000UL});
-		public static readonly BitSet _83_in_argument_name1427 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _identifier_in_argument_name1423 = new BitSet(new ulong[]{0x0UL,0x100000UL});
+		public static readonly BitSet _84_in_argument_name1427 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_argument_value1435 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _ref_variable_reference_in_argument_value1441 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _159_in_argument_value1447 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _160_in_argument_value1447 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _variable_reference_in_argument_value1451 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _170_in_ref_variable_reference1459 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_ref_variable_reference1461 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _namespace_or_type_name_in_ref_variable_reference1471 = new BitSet(new ulong[]{0x2000000000000UL,0x80000200UL});
-		public static readonly BitSet _predefined_type_in_ref_variable_reference1479 = new BitSet(new ulong[]{0x2000000000000UL,0x80000200UL});
-		public static readonly BitSet _73_in_ref_variable_reference1485 = new BitSet(new ulong[]{0x2000000000000UL,0x80000200UL});
-		public static readonly BitSet _rank_specifiers_in_ref_variable_reference1490 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _195_in_ref_variable_reference1497 = new BitSet(new ulong[]{0x0UL,0x200UL});
-		public static readonly BitSet _73_in_ref_variable_reference1501 = new BitSet(new ulong[]{0x2000000000000UL,0x80000200UL});
-		public static readonly BitSet _rank_specifiers_in_ref_variable_reference1506 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_ref_variable_reference1515 = new BitSet(new ulong[]{0x0UL,0x0UL,0x40000000000UL});
+		public static readonly BitSet _171_in_ref_variable_reference1459 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_ref_variable_reference1461 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _namespace_or_type_name_in_ref_variable_reference1471 = new BitSet(new ulong[]{0x4000000000000UL,0x100000400UL});
+		public static readonly BitSet _predefined_type_in_ref_variable_reference1479 = new BitSet(new ulong[]{0x4000000000000UL,0x100000400UL});
+		public static readonly BitSet _74_in_ref_variable_reference1485 = new BitSet(new ulong[]{0x4000000000000UL,0x100000400UL});
+		public static readonly BitSet _rank_specifiers_in_ref_variable_reference1490 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _196_in_ref_variable_reference1497 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _74_in_ref_variable_reference1501 = new BitSet(new ulong[]{0x4000000000000UL,0x100000400UL});
+		public static readonly BitSet _rank_specifiers_in_ref_variable_reference1506 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_ref_variable_reference1515 = new BitSet(new ulong[]{0x0UL,0x0UL,0x80000000000UL});
 		public static readonly BitSet _ref_variable_reference_in_ref_variable_reference1519 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _170_in_ref_variable_reference1524 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _171_in_ref_variable_reference1524 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _variable_reference_in_ref_variable_reference1526 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _primary_expression_in_primary_or_array_creation_expression1536 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _array_creation_expression_in_primary_or_array_creation_expression1542 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _tmember_in_texpr1551 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _tmember_in_tinvocation1563 = new BitSet(new ulong[]{0x2UL,0x100UL});
+		public static readonly BitSet _tmember_in_tinvocation1563 = new BitSet(new ulong[]{0x2UL,0x200UL});
 		public static readonly BitSet _tinvocation_part_in_tinvocation1567 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _arguments_in_tinvocation_part1576 = new BitSet(new ulong[]{0x1000000000400UL,0x100UL});
-		public static readonly BitSet _access_operator_in_tinvocation_part1582 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _arguments_in_tinvocation_part1576 = new BitSet(new ulong[]{0x2000000000400UL,0x200UL});
+		public static readonly BitSet _access_operator_in_tinvocation_part1582 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _tinvocation_in_tinvocation_part1587 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _arguments_in_tinvocation_part1593 = new BitSet(new ulong[]{0x0UL,0x80000100UL});
+		public static readonly BitSet _arguments_in_tinvocation_part1593 = new BitSet(new ulong[]{0x0UL,0x100000200UL});
 		public static readonly BitSet _telement_part_in_tinvocation_part1598 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _arguments_in_tinvocation_part1603 = new BitSet(new ulong[]{0x2UL,0x100UL});
-		public static readonly BitSet _tmember_in_telement1633 = new BitSet(new ulong[]{0x2UL,0x80000000UL});
+		public static readonly BitSet _arguments_in_tinvocation_part1603 = new BitSet(new ulong[]{0x2UL,0x200UL});
+		public static readonly BitSet _tmember_in_telement1633 = new BitSet(new ulong[]{0x2UL,0x100000000UL});
 		public static readonly BitSet _telement_part_in_telement1637 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _bracket_expression_in_telement_part1646 = new BitSet(new ulong[]{0x1000000000400UL,0x80000000UL});
-		public static readonly BitSet _access_operator_in_telement_part1652 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _bracket_expression_in_telement_part1646 = new BitSet(new ulong[]{0x2000000000400UL,0x100000000UL});
+		public static readonly BitSet _access_operator_in_telement_part1652 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _telement_in_telement_part1656 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _bracket_expression_in_telement_part1662 = new BitSet(new ulong[]{0x0UL,0x80000100UL});
+		public static readonly BitSet _bracket_expression_in_telement_part1662 = new BitSet(new ulong[]{0x0UL,0x100000200UL});
 		public static readonly BitSet _tinvocation_part_in_telement_part1667 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _bracket_expression_in_telement_part1672 = new BitSet(new ulong[]{0x2UL,0x80000000UL});
-		public static readonly BitSet _identifier_in_tmember1682 = new BitSet(new ulong[]{0x1000000000402UL});
-		public static readonly BitSet _access_operator_in_tmember1687 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_tmember1691 = new BitSet(new ulong[]{0x1000000000402UL});
-		public static readonly BitSet _primary_expression_start_in_primary_expression1703 = new BitSet(new ulong[]{0x1000000000402UL,0x80000100UL});
-		public static readonly BitSet _primary_expression_part_in_primary_expression1707 = new BitSet(new ulong[]{0x1000000000402UL,0x80000100UL});
+		public static readonly BitSet _bracket_expression_in_telement_part1672 = new BitSet(new ulong[]{0x2UL,0x100000000UL});
+		public static readonly BitSet _identifier_in_tmember1682 = new BitSet(new ulong[]{0x2000000000402UL});
+		public static readonly BitSet _access_operator_in_tmember1687 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_tmember1691 = new BitSet(new ulong[]{0x2000000000402UL});
+		public static readonly BitSet _primary_expression_start_in_primary_expression1703 = new BitSet(new ulong[]{0x2000000000402UL,0x100000200UL});
+		public static readonly BitSet _primary_expression_part_in_primary_expression1707 = new BitSet(new ulong[]{0x2000000000402UL,0x100000200UL});
 		public static readonly BitSet _delegate_creation_expression_in_primary_expression1713 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _sizeof_expression_in_primary_expression1722 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _checked_expression_in_primary_expression1733 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _unchecked_expression_in_primary_expression1752 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _default_value_expression_in_primary_expression1769 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _anonymous_method_expression_in_primary_expression1782 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _predefined_type_in_primary_expression_start1795 = new BitSet(new ulong[]{0x2UL,0x200000UL});
-		public static readonly BitSet _identifier_in_primary_expression_start1799 = new BitSet(new ulong[]{0x2UL,0x200000UL});
-		public static readonly BitSet _literal_in_primary_expression_start1803 = new BitSet(new ulong[]{0x2UL,0x200000UL});
+		public static readonly BitSet _predefined_type_in_primary_expression_start1795 = new BitSet(new ulong[]{0x2UL,0x400000UL});
+		public static readonly BitSet _identifier_in_primary_expression_start1799 = new BitSet(new ulong[]{0x2UL,0x400000UL});
+		public static readonly BitSet _literal_in_primary_expression_start1803 = new BitSet(new ulong[]{0x2UL,0x400000UL});
 		public static readonly BitSet _generic_argument_list_in_primary_expression_start1808 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _183_in_primary_expression_start1814 = new BitSet(new ulong[]{0x2UL,0x80000000UL});
+		public static readonly BitSet _184_in_primary_expression_start1814 = new BitSet(new ulong[]{0x2UL,0x100000000UL});
 		public static readonly BitSet _bracket_expression_in_primary_expression_start1819 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _108_in_primary_expression_start1825 = new BitSet(new ulong[]{0x2UL,0x80000000UL});
+		public static readonly BitSet _109_in_primary_expression_start1825 = new BitSet(new ulong[]{0x2UL,0x100000000UL});
 		public static readonly BitSet _bracket_expression_in_primary_expression_start1830 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _identifier_in_primary_expression_start1836 = new BitSet(new ulong[]{0x0UL,0x100000UL});
-		public static readonly BitSet _84_in_primary_expression_start1840 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _identifier_in_primary_expression_start1836 = new BitSet(new ulong[]{0x0UL,0x200000UL});
+		public static readonly BitSet _85_in_primary_expression_start1840 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _identifier_in_primary_expression_start1844 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _paren_expression_in_primary_expression_start1849 = new BitSet(new ulong[]{0x2UL,0x80000100UL});
+		public static readonly BitSet _paren_expression_in_primary_expression_start1849 = new BitSet(new ulong[]{0x2UL,0x100000200UL});
 		public static readonly BitSet _brackets_or_arguments_in_primary_expression_start1853 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _object_creation_expression_in_primary_expression_start1859 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _anonymous_object_creation_expression_in_primary_expression_start1867 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _typeof_expression_in_primary_expression_start1873 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _access_identifier_in_primary_expression_part1890 = new BitSet(new ulong[]{0x2UL,0x80000100UL});
+		public static readonly BitSet _access_identifier_in_primary_expression_part1890 = new BitSet(new ulong[]{0x2UL,0x100000200UL});
 		public static readonly BitSet _brackets_or_arguments_in_primary_expression_part1894 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _brackets_or_arguments_in_primary_expression_part1900 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _access_identifier_in_element_part1909 = new BitSet(new ulong[]{0x0UL,0x80000000UL});
-		public static readonly BitSet _bracket_expression_in_element_part1913 = new BitSet(new ulong[]{0x1000000000402UL,0x80000100UL});
+		public static readonly BitSet _access_identifier_in_element_part1909 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
+		public static readonly BitSet _bracket_expression_in_element_part1913 = new BitSet(new ulong[]{0x2000000000402UL,0x100000200UL});
 		public static readonly BitSet _primary_expression_part_in_element_part1918 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _bracket_expression_in_element_part1925 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _access_identifier_in_invocation_part1933 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _arguments_in_invocation_part1937 = new BitSet(new ulong[]{0x4164006030600022UL,0xE909BF6800000100UL,0x3C91A85A5DDA4A48UL,0xA3UL});
+		public static readonly BitSet _access_identifier_in_invocation_part1933 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _arguments_in_invocation_part1937 = new BitSet(new ulong[]{0x82C800C060C00022UL,0xD2137ED000000200UL,0x792350B4BBB49491UL,0x146UL});
 		public static readonly BitSet _primary_expression_start_in_invocation_part1941 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _arguments_in_invocation_part1948 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _access_identifier_in_member_part1957 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _access_operator_in_access_identifier1965 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_access_identifier1969 = new BitSet(new ulong[]{0x2UL,0x200000UL});
+		public static readonly BitSet _access_operator_in_access_identifier1965 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_access_identifier1969 = new BitSet(new ulong[]{0x2UL,0x400000UL});
 		public static readonly BitSet _generic_argument_list_in_access_identifier1973 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _72_in_paren_expression1983 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_paren_expression1987 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _73_in_paren_expression1983 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_paren_expression1987 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_paren_expression1991 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _bracket_expression_in_brackets_or_arguments1999 = new BitSet(new ulong[]{0x2UL,0x80000100UL});
+		public static readonly BitSet _bracket_expression_in_brackets_or_arguments1999 = new BitSet(new ulong[]{0x2UL,0x100000200UL});
 		public static readonly BitSet _arguments_in_brackets_or_arguments2004 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _arguments_in_brackets_or_arguments2010 = new BitSet(new ulong[]{0x2UL,0x80000000UL});
-		public static readonly BitSet _bracket_expression_in_brackets_or_arguments2014 = new BitSet(new ulong[]{0x2UL,0x80000000UL});
-		public static readonly BitSet _72_in_arguments2038 = new BitSet(new ulong[]{0x4166007030600020UL,0xEF19BF6800009B42UL,0x7C93AC5ADDDA4A48UL,0x20A3UL});
-		public static readonly BitSet _argument_list_in_arguments2042 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _arguments_in_brackets_or_arguments2010 = new BitSet(new ulong[]{0x2UL,0x100000000UL});
+		public static readonly BitSet _bracket_expression_in_brackets_or_arguments2014 = new BitSet(new ulong[]{0x2UL,0x100000000UL});
+		public static readonly BitSet _73_in_arguments2038 = new BitSet(new ulong[]{0x82CC00E060C00020UL,0xDE337ED000013684UL,0xF92758B5BBB49491UL,0x4146UL});
+		public static readonly BitSet _argument_list_in_arguments2042 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_arguments2047 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _95_in_bracket_expression2055 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6900009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_list_in_bracket_expression2059 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
-		public static readonly BitSet _96_in_bracket_expression2064 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _96_in_bracket_expression2055 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED200013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_list_in_bracket_expression2059 = new BitSet(new ulong[]{0x0UL,0x200000000UL});
+		public static readonly BitSet _97_in_bracket_expression2064 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _identifier_in_member_access2073 = new BitSet(new ulong[]{0x402UL});
-		public static readonly BitSet _DOT_in_member_access2078 = new BitSet(new ulong[]{0x4164006030600020UL,0xEF19BF6800000100UL,0x7C93A85A5DDA4A48UL,0xA3UL});
+		public static readonly BitSet _DOT_in_member_access2078 = new BitSet(new ulong[]{0x82C800C060C00020UL,0xDE337ED000000200UL,0xF92750B4BBB49491UL,0x146UL});
 		public static readonly BitSet _primary_or_array_creation_expression_in_member_access2082 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _access_in_invocation_expression2095 = new BitSet(new ulong[]{0x0UL,0x100UL});
+		public static readonly BitSet _access_in_invocation_expression2095 = new BitSet(new ulong[]{0x0UL,0x200UL});
 		public static readonly BitSet _arguments_in_invocation_expression2097 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _72_in_access2104 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_access2106 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_access2108 = new BitSet(new ulong[]{0x4165006030600420UL,0xE909BF6880000100UL,0x3491A85A59DA4A48UL,0xA3UL});
+		public static readonly BitSet _73_in_access2104 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_access2106 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_access2108 = new BitSet(new ulong[]{0x82CA00C060C00420UL,0xD2137ED100000200UL,0x692350B4B3B49491UL,0x146UL});
 		public static readonly BitSet _access_in_access2113 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _access_part_in_access2125 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _qid_start_in_access2133 = new BitSet(new ulong[]{0x1000000000402UL,0x80000100UL});
+		public static readonly BitSet _qid_start_in_access2133 = new BitSet(new ulong[]{0x2000000000402UL,0x100000200UL});
 		public static readonly BitSet _access_part_in_access2137 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _qid_part_in_access_part2147 = new BitSet(new ulong[]{0x1000000000402UL,0x80000100UL});
+		public static readonly BitSet _qid_part_in_access_part2147 = new BitSet(new ulong[]{0x2000000000402UL,0x100000200UL});
 		public static readonly BitSet _access_part_in_access_part2149 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _bracket_expression_in_access_part2159 = new BitSet(new ulong[]{0x1000000000402UL,0x80000100UL});
+		public static readonly BitSet _bracket_expression_in_access_part2159 = new BitSet(new ulong[]{0x2000000000402UL,0x100000200UL});
 		public static readonly BitSet _access_part_in_access_part2161 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _arguments_in_access_part2171 = new BitSet(new ulong[]{0x1000000000402UL,0x80000100UL});
+		public static readonly BitSet _arguments_in_access_part2171 = new BitSet(new ulong[]{0x2000000000402UL,0x100000200UL});
 		public static readonly BitSet _access_part_in_access_part2173 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_expression_list2194 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_expression_list2198 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_expression_list2200 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _154_in_object_creation_expression2213 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_object_creation_expression2217 = new BitSet(new ulong[]{0x0UL,0x100UL,0x0UL,0x100UL});
-		public static readonly BitSet _72_in_object_creation_expression2226 = new BitSet(new ulong[]{0x4166007030600020UL,0xEF19BF6800009B42UL,0x7C93AC5ADDDA4A48UL,0x20A3UL});
-		public static readonly BitSet _argument_list_in_object_creation_expression2230 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_object_creation_expression2235 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _expression_in_expression_list2194 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_expression_list2198 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_expression_list2200 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _155_in_object_creation_expression2213 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_object_creation_expression2217 = new BitSet(new ulong[]{0x0UL,0x200UL,0x0UL,0x200UL});
+		public static readonly BitSet _73_in_object_creation_expression2226 = new BitSet(new ulong[]{0x82CC00E060C00020UL,0xDE337ED000013684UL,0xF92758B5BBB49491UL,0x4146UL});
+		public static readonly BitSet _argument_list_in_object_creation_expression2230 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_object_creation_expression2235 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _object_or_collection_initializer_in_object_creation_expression2239 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _object_or_collection_initializer_in_object_creation_expression2250 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _object_initializer_in_object_or_collection_initializer2262 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _collection_initializer_in_object_or_collection_initializer2268 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_object_initializer2283 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0x10A2UL});
-		public static readonly BitSet _member_initializer_list_in_object_initializer2287 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_object_initializer2292 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_object_initializer2298 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _member_initializer_list_in_object_initializer2302 = new BitSet(new ulong[]{0x0UL,0x4000UL});
-		public static readonly BitSet _78_in_object_initializer2306 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_object_initializer2310 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _member_initializer_in_member_initializer_list2319 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_member_initializer_list2323 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _member_initializer_in_member_initializer_list2325 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _identifier_in_member_initializer2338 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
-		public static readonly BitSet _89_in_member_initializer2342 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x21A3UL});
+		public static readonly BitSet _201_in_object_initializer2283 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x2144UL});
+		public static readonly BitSet _member_initializer_list_in_object_initializer2287 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_object_initializer2292 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _201_in_object_initializer2298 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _member_initializer_list_in_object_initializer2302 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _79_in_object_initializer2306 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_object_initializer2310 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _member_initializer_in_member_initializer_list2319 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_member_initializer_list2323 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _member_initializer_in_member_initializer_list2325 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _identifier_in_member_initializer2338 = new BitSet(new ulong[]{0x0UL,0x4000000UL});
+		public static readonly BitSet _90_in_member_initializer2342 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4346UL});
 		public static readonly BitSet _initializer_value_in_member_initializer2346 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_initializer_value2355 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _object_or_collection_initializer_in_initializer_value2361 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_collection_initializer2370 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x21A3UL});
-		public static readonly BitSet _element_initializer_list_in_collection_initializer2374 = new BitSet(new ulong[]{0x0UL,0x4000UL,0x0UL,0x1000UL});
-		public static readonly BitSet _78_in_collection_initializer2378 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_collection_initializer2383 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _element_initializer_in_element_initializer_list2392 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_element_initializer_list2396 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x21A3UL});
-		public static readonly BitSet _element_initializer_in_element_initializer_list2398 = new BitSet(new ulong[]{0x2UL,0x4000UL});
+		public static readonly BitSet _201_in_collection_initializer2370 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4346UL});
+		public static readonly BitSet _element_initializer_list_in_collection_initializer2374 = new BitSet(new ulong[]{0x0UL,0x8000UL,0x0UL,0x2000UL});
+		public static readonly BitSet _79_in_collection_initializer2378 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_collection_initializer2383 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _element_initializer_in_element_initializer_list2392 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_element_initializer_list2396 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4346UL});
+		public static readonly BitSet _element_initializer_in_element_initializer_list2398 = new BitSet(new ulong[]{0x2UL,0x8000UL});
 		public static readonly BitSet _non_assignment_expression_in_element_initializer2411 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_element_initializer2417 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_list_in_element_initializer2421 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_element_initializer2425 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _154_in_array_creation_expression2434 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6880000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _non_array_type_in_array_creation_expression2440 = new BitSet(new ulong[]{0x0UL,0x80000000UL});
-		public static readonly BitSet _95_in_array_creation_expression2442 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_list_in_array_creation_expression2444 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
-		public static readonly BitSet _96_in_array_creation_expression2446 = new BitSet(new ulong[]{0x1000000000402UL,0x80000100UL,0x0UL,0x100UL});
-		public static readonly BitSet _rank_specifiers_in_array_creation_expression2448 = new BitSet(new ulong[]{0x1000000000402UL,0x80000100UL,0x0UL,0x100UL});
-		public static readonly BitSet _array_initializer_in_array_creation_expression2451 = new BitSet(new ulong[]{0x1000000000402UL,0x80000100UL});
-		public static readonly BitSet _array_type_in_array_creation_expression2459 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _array_initializer_in_array_creation_expression2461 = new BitSet(new ulong[]{0x1000000000402UL,0x80000100UL});
-		public static readonly BitSet _rank_specifier_in_array_creation_expression2469 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _array_initializer_in_array_creation_expression2471 = new BitSet(new ulong[]{0x1000000000402UL,0x80000100UL});
+		public static readonly BitSet _201_in_element_initializer2417 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_list_in_element_initializer2421 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_element_initializer2425 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _155_in_array_creation_expression2434 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED100000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _non_array_type_in_array_creation_expression2440 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
+		public static readonly BitSet _96_in_array_creation_expression2442 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_list_in_array_creation_expression2444 = new BitSet(new ulong[]{0x0UL,0x200000000UL});
+		public static readonly BitSet _97_in_array_creation_expression2446 = new BitSet(new ulong[]{0x2000000000402UL,0x100000200UL,0x0UL,0x200UL});
+		public static readonly BitSet _rank_specifiers_in_array_creation_expression2448 = new BitSet(new ulong[]{0x2000000000402UL,0x100000200UL,0x0UL,0x200UL});
+		public static readonly BitSet _array_initializer_in_array_creation_expression2451 = new BitSet(new ulong[]{0x2000000000402UL,0x100000200UL});
+		public static readonly BitSet _array_type_in_array_creation_expression2459 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x200UL});
+		public static readonly BitSet _array_initializer_in_array_creation_expression2461 = new BitSet(new ulong[]{0x2000000000402UL,0x100000200UL});
+		public static readonly BitSet _rank_specifier_in_array_creation_expression2469 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x200UL});
+		public static readonly BitSet _array_initializer_in_array_creation_expression2471 = new BitSet(new ulong[]{0x2000000000402UL,0x100000200UL});
 		public static readonly BitSet _access_part_in_array_creation_expression2476 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _154_in_delegate_creation_expression2487 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _type_name_in_delegate_creation_expression2491 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_delegate_creation_expression2495 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_delegate_creation_expression2499 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _155_in_delegate_creation_expression2487 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _type_name_in_delegate_creation_expression2491 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_delegate_creation_expression2495 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_delegate_creation_expression2499 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_delegate_creation_expression2503 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _154_in_anonymous_object_creation_expression2512 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _155_in_anonymous_object_creation_expression2512 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _anonymous_object_initializer_in_anonymous_object_creation_expression2516 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_anonymous_object_initializer2525 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0x10A2UL});
-		public static readonly BitSet _member_declarator_list_in_anonymous_object_initializer2529 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_anonymous_object_initializer2534 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_anonymous_object_initializer2540 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _member_declarator_list_in_anonymous_object_initializer2544 = new BitSet(new ulong[]{0x0UL,0x4000UL});
-		public static readonly BitSet _78_in_anonymous_object_initializer2548 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_anonymous_object_initializer2552 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _member_declarator_in_member_declarator_list2560 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_member_declarator_list2564 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _member_declarator_in_member_declarator_list2566 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _identifier_in_member_declarator2579 = new BitSet(new ulong[]{0x402UL,0x2200000UL});
+		public static readonly BitSet _201_in_anonymous_object_initializer2525 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x2144UL});
+		public static readonly BitSet _member_declarator_list_in_anonymous_object_initializer2529 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_anonymous_object_initializer2534 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _201_in_anonymous_object_initializer2540 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _member_declarator_list_in_anonymous_object_initializer2544 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _79_in_anonymous_object_initializer2548 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_anonymous_object_initializer2552 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _member_declarator_in_member_declarator_list2560 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_member_declarator_list2564 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _member_declarator_in_member_declarator_list2566 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _identifier_in_member_declarator2579 = new BitSet(new ulong[]{0x402UL,0x4400000UL});
 		public static readonly BitSet _generic_argument_list_in_member_declarator2585 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_member_declarator2594 = new BitSet(new ulong[]{0x4164006030600020UL,0xEF19BF6800000100UL,0x7C93A85A5DDA4A48UL,0xA3UL});
+		public static readonly BitSet _DOT_in_member_declarator2594 = new BitSet(new ulong[]{0x82C800C060C00020UL,0xDE337ED000000200UL,0xF92750B4BBB49491UL,0x146UL});
 		public static readonly BitSet _primary_or_array_creation_expression_in_member_declarator2596 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _89_in_member_declarator2605 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _90_in_member_declarator2605 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _expression_in_member_declarator2607 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _177_in_sizeof_expression2617 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_sizeof_expression2621 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _unmanaged_type_in_sizeof_expression2625 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _178_in_sizeof_expression2617 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_sizeof_expression2621 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _unmanaged_type_in_sizeof_expression2625 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_sizeof_expression2629 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _187_in_typeof_expression2637 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_typeof_expression2641 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_typeof_expression2645 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _188_in_typeof_expression2637 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_typeof_expression2641 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_typeof_expression2645 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_typeof_expression2649 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _187_in_typeof_expression2655 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_typeof_expression2657 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _unbound_type_name_in_typeof_expression2661 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _188_in_typeof_expression2655 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_typeof_expression2657 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _unbound_type_name_in_typeof_expression2661 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_typeof_expression2665 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _187_in_typeof_expression2671 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_typeof_expression2673 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x8UL});
-		public static readonly BitSet _195_in_typeof_expression2675 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _188_in_typeof_expression2671 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_typeof_expression2673 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x10UL});
+		public static readonly BitSet _196_in_typeof_expression2675 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_typeof_expression2677 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _unbound_type_name_start_in_unbound_type_name2691 = new BitSet(new ulong[]{0x402UL});
 		public static readonly BitSet _unbound_type_name_part_in_unbound_type_name2693 = new BitSet(new ulong[]{0x402UL});
-		public static readonly BitSet _identifier_in_unbound_type_name_start2702 = new BitSet(new ulong[]{0x2UL,0x300000UL});
-		public static readonly BitSet _84_in_unbound_type_name_start2705 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_unbound_type_name_start2707 = new BitSet(new ulong[]{0x2UL,0x200000UL});
+		public static readonly BitSet _identifier_in_unbound_type_name_start2702 = new BitSet(new ulong[]{0x2UL,0x600000UL});
+		public static readonly BitSet _85_in_unbound_type_name_start2705 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_unbound_type_name_start2707 = new BitSet(new ulong[]{0x2UL,0x400000UL});
 		public static readonly BitSet _generic_dimension_specifier_in_unbound_type_name_start2711 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_unbound_type_name_part2719 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_unbound_type_name_part2723 = new BitSet(new ulong[]{0x2UL,0x200000UL});
+		public static readonly BitSet _DOT_in_unbound_type_name_part2719 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_unbound_type_name_part2723 = new BitSet(new ulong[]{0x2UL,0x400000UL});
 		public static readonly BitSet _generic_dimension_specifier_in_unbound_type_name_part2727 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _85_in_generic_dimension_specifier2737 = new BitSet(new ulong[]{0x800000UL,0x4000UL});
-		public static readonly BitSet _commas_in_generic_dimension_specifier2741 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _86_in_generic_dimension_specifier2737 = new BitSet(new ulong[]{0x1000000UL,0x8000UL});
+		public static readonly BitSet _commas_in_generic_dimension_specifier2741 = new BitSet(new ulong[]{0x1000000UL});
 		public static readonly BitSet _GT_in_generic_dimension_specifier2746 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _78_in_commas2755 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _116_in_checked_expression2766 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_checked_expression2770 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_checked_expression2774 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _79_in_commas2755 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _117_in_checked_expression2766 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_checked_expression2770 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_checked_expression2774 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_checked_expression2778 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _190_in_unchecked_expression2787 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_unchecked_expression2791 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_unchecked_expression2795 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _191_in_unchecked_expression2787 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_unchecked_expression2791 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_unchecked_expression2795 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_unchecked_expression2799 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _121_in_default_value_expression2808 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_default_value_expression2812 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_default_value_expression2816 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _122_in_default_value_expression2808 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_default_value_expression2812 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_default_value_expression2816 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_default_value_expression2820 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_constant_expression2828 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_boolean_expression2835 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _106_in_anonymous_method_expression2842 = new BitSet(new ulong[]{0x0UL,0x400000000000000UL});
-		public static readonly BitSet _122_in_anonymous_method_expression2845 = new BitSet(new ulong[]{0x10000000000000UL,0x100UL,0x0UL,0x100UL});
-		public static readonly BitSet _explicit_anonymous_function_signature_in_anonymous_method_expression2847 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _107_in_anonymous_method_expression2842 = new BitSet(new ulong[]{0x0UL,0x800000000000000UL});
+		public static readonly BitSet _123_in_anonymous_method_expression2845 = new BitSet(new ulong[]{0x20000000000000UL,0x200UL,0x0UL,0x200UL});
+		public static readonly BitSet _explicit_anonymous_function_signature_in_anonymous_method_expression2847 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _block_in_anonymous_method_expression2850 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _72_in_explicit_anonymous_function_signature2857 = new BitSet(new ulong[]{0x22000020400000UL,0xE909AF6800000000UL,0x3411AC5AD9DA4A48UL,0xABUL});
-		public static readonly BitSet _explicit_anonymous_function_parameter_list_in_explicit_anonymous_function_signature2861 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _73_in_explicit_anonymous_function_signature2857 = new BitSet(new ulong[]{0x44000040800000UL,0xD2135ED000000000UL,0x682358B5B3B49491UL,0x156UL});
+		public static readonly BitSet _explicit_anonymous_function_parameter_list_in_explicit_anonymous_function_signature2861 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_explicit_anonymous_function_signature2866 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _explicit_anonymous_function_parameter_in_explicit_anonymous_function_parameter_list2874 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_explicit_anonymous_function_parameter_list2879 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411AC5AD9DA4A48UL,0xABUL});
-		public static readonly BitSet _explicit_anonymous_function_parameter_in_explicit_anonymous_function_parameter_list2883 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _anonymous_function_parameter_modifier_in_explicit_anonymous_function_parameter2894 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_explicit_anonymous_function_parameter2899 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _explicit_anonymous_function_parameter_in_explicit_anonymous_function_parameter_list2874 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_explicit_anonymous_function_parameter_list2879 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682358B5B3B49491UL,0x156UL});
+		public static readonly BitSet _explicit_anonymous_function_parameter_in_explicit_anonymous_function_parameter_list2883 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _anonymous_function_parameter_modifier_in_explicit_anonymous_function_parameter2894 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_explicit_anonymous_function_parameter2899 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _identifier_in_explicit_anonymous_function_parameter2903 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _85_in_variant_generic_parameter_list2922 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6880000000UL,0x400885AD19A2A08UL,0xA2UL});
-		public static readonly BitSet _variant_type_parameters_in_variant_generic_parameter_list2926 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _86_in_variant_generic_parameter_list2922 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED100000000UL,0x80110B5A3345411UL,0x144UL});
+		public static readonly BitSet _variant_type_parameters_in_variant_generic_parameter_list2926 = new BitSet(new ulong[]{0x1000000UL});
 		public static readonly BitSet _GT_in_variant_generic_parameter_list2930 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _variant_type_variable_name_in_variant_type_parameters2938 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_variant_type_parameters2941 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6880000000UL,0x400885AD19A2A08UL,0xA2UL});
-		public static readonly BitSet _variant_type_variable_name_in_variant_type_parameters2943 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _attributes_in_variant_type_variable_name2955 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885AD19A2A08UL,0xA2UL});
-		public static readonly BitSet _variance_annotation_in_variant_type_variable_name2960 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _variant_type_variable_name_in_variant_type_parameters2938 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_variant_type_parameters2941 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED100000000UL,0x80110B5A3345411UL,0x144UL});
+		public static readonly BitSet _variant_type_variable_name_in_variant_type_parameters2943 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _attributes_in_variant_type_variable_name2955 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B5A3345411UL,0x144UL});
+		public static readonly BitSet _variance_annotation_in_variant_type_variable_name2960 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _type_variable_name_in_variant_type_variable_name2965 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _85_in_generic_parameter_list2987 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6880000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _type_parameters_in_generic_parameter_list2991 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _86_in_generic_parameter_list2987 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED100000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _type_parameters_in_generic_parameter_list2991 = new BitSet(new ulong[]{0x1000000UL});
 		public static readonly BitSet _GT_in_generic_parameter_list2995 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributed_type_variable_name_in_type_parameters3003 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_type_parameters3006 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6880000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _attributed_type_variable_name_in_type_parameters3008 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _attributes_in_attributed_type_variable_name3020 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _attributed_type_variable_name_in_type_parameters3003 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_type_parameters3006 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED100000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _attributed_type_variable_name_in_type_parameters3008 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _attributes_in_attributed_type_variable_name3020 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _type_variable_name_in_attributed_type_variable_name3025 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _72_in_cast_expression3033 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _namespace_or_type_name_in_cast_expression3046 = new BitSet(new ulong[]{0x0UL,0x200UL});
-		public static readonly BitSet _predefined_type_in_cast_expression3051 = new BitSet(new ulong[]{0x0UL,0x200UL});
-		public static readonly BitSet _73_in_cast_expression3057 = new BitSet(new ulong[]{0x2000000000000UL,0x80000200UL});
-		public static readonly BitSet _rank_specifiers_in_cast_expression3062 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _namespace_or_type_name_in_cast_expression3072 = new BitSet(new ulong[]{0x0UL,0x20000000UL});
-		public static readonly BitSet _predefined_type_in_cast_expression3077 = new BitSet(new ulong[]{0x0UL,0x20000000UL});
-		public static readonly BitSet _93_in_cast_expression3083 = new BitSet(new ulong[]{0x2000000000000UL,0x80000000UL});
-		public static readonly BitSet _rank_specifiers_in_cast_expression3087 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _namespace_or_type_name_in_cast_expression3097 = new BitSet(new ulong[]{0x2000000000000UL,0x80000000UL});
-		public static readonly BitSet _predefined_type_in_cast_expression3102 = new BitSet(new ulong[]{0x2000000000000UL,0x80000000UL});
-		public static readonly BitSet _rank_specifiers_in_cast_expression3108 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _195_in_cast_expression3115 = new BitSet(new ulong[]{0x2000000000000UL,0x80000200UL});
-		public static readonly BitSet _73_in_cast_expression3119 = new BitSet(new ulong[]{0x2000000000000UL,0x80000200UL});
-		public static readonly BitSet _rank_specifiers_in_cast_expression3124 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_cast_expression3137 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6880009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _bracket_expression_in_cast_expression3141 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6880009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _73_in_cast_expression3033 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _namespace_or_type_name_in_cast_expression3046 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _predefined_type_in_cast_expression3051 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _74_in_cast_expression3057 = new BitSet(new ulong[]{0x4000000000000UL,0x100000400UL});
+		public static readonly BitSet _rank_specifiers_in_cast_expression3062 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _namespace_or_type_name_in_cast_expression3072 = new BitSet(new ulong[]{0x0UL,0x40000000UL});
+		public static readonly BitSet _predefined_type_in_cast_expression3077 = new BitSet(new ulong[]{0x0UL,0x40000000UL});
+		public static readonly BitSet _94_in_cast_expression3083 = new BitSet(new ulong[]{0x4000000000000UL,0x100000000UL});
+		public static readonly BitSet _rank_specifiers_in_cast_expression3087 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _namespace_or_type_name_in_cast_expression3097 = new BitSet(new ulong[]{0x4000000000000UL,0x100000000UL});
+		public static readonly BitSet _predefined_type_in_cast_expression3102 = new BitSet(new ulong[]{0x4000000000000UL,0x100000000UL});
+		public static readonly BitSet _rank_specifiers_in_cast_expression3108 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _196_in_cast_expression3115 = new BitSet(new ulong[]{0x4000000000000UL,0x100000400UL});
+		public static readonly BitSet _74_in_cast_expression3119 = new BitSet(new ulong[]{0x4000000000000UL,0x100000400UL});
+		public static readonly BitSet _rank_specifiers_in_cast_expression3124 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_cast_expression3137 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED100013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _bracket_expression_in_cast_expression3141 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED100013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _unary_expression_in_cast_expression3144 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _unary_expression_in_multiplicative_expression3154 = new BitSet(new ulong[]{0x2UL,0x20208UL});
-		public static readonly BitSet _set_in_multiplicative_expression3159 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _unary_expression_in_multiplicative_expression3169 = new BitSet(new ulong[]{0x2UL,0x20208UL});
-		public static readonly BitSet _multiplicative_expression_in_additive_expression3179 = new BitSet(new ulong[]{0x1000000002UL,0x800UL});
-		public static readonly BitSet _set_in_additive_expression3182 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _multiplicative_expression_in_additive_expression3190 = new BitSet(new ulong[]{0x1000000002UL,0x800UL});
-		public static readonly BitSet _additive_expression_in_shift_expression3201 = new BitSet(new ulong[]{0x800002UL,0x400000UL});
-		public static readonly BitSet _86_in_shift_expression3205 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _GT_in_shift_expression3207 = new BitSet(new ulong[]{0x800000UL});
-		public static readonly BitSet _GT_in_shift_expression3209 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _additive_expression_in_shift_expression3212 = new BitSet(new ulong[]{0x800002UL,0x400000UL});
-		public static readonly BitSet _shift_expression_in_relational_expression3222 = new BitSet(new ulong[]{0x800002UL,0x8011200000UL,0x40000UL});
-		public static readonly BitSet _set_in_relational_expression3234 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _shift_expression_in_relational_expression3246 = new BitSet(new ulong[]{0x800002UL,0x11200000UL});
-		public static readonly BitSet _set_in_relational_expression3257 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _non_nullable_type_in_relational_expression3278 = new BitSet(new ulong[]{0x2UL,0x8000000000UL,0x40000UL});
-		public static readonly BitSet _type_in_relational_expression3289 = new BitSet(new ulong[]{0x2UL,0x8000000000UL,0x40000UL});
-		public static readonly BitSet _relational_expression_in_equality_expression3311 = new BitSet(new ulong[]{0x2UL,0x4000004UL});
-		public static readonly BitSet _set_in_equality_expression3318 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _relational_expression_in_equality_expression3326 = new BitSet(new ulong[]{0x2UL,0x4000004UL});
-		public static readonly BitSet _equality_expression_in_and_expression3336 = new BitSet(new ulong[]{0x2UL,0x40UL});
-		public static readonly BitSet _70_in_and_expression3339 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _equality_expression_in_and_expression3343 = new BitSet(new ulong[]{0x2UL,0x40UL});
-		public static readonly BitSet _and_expression_in_exclusive_or_expression3353 = new BitSet(new ulong[]{0x2UL,0x200000000UL});
-		public static readonly BitSet _97_in_exclusive_or_expression3356 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _and_expression_in_exclusive_or_expression3360 = new BitSet(new ulong[]{0x2UL,0x200000000UL});
-		public static readonly BitSet _exclusive_or_expression_in_inclusive_or_expression3370 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x200UL});
-		public static readonly BitSet _201_in_inclusive_or_expression3375 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _exclusive_or_expression_in_inclusive_or_expression3379 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x200UL});
-		public static readonly BitSet _inclusive_or_expression_in_conditional_and_expression3389 = new BitSet(new ulong[]{0x2UL,0x20UL});
-		public static readonly BitSet _69_in_conditional_and_expression3394 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _inclusive_or_expression_in_conditional_and_expression3398 = new BitSet(new ulong[]{0x2UL,0x20UL});
-		public static readonly BitSet _conditional_and_expression_in_conditional_or_expression3408 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x800UL});
-		public static readonly BitSet _203_in_conditional_or_expression3412 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _conditional_and_expression_in_conditional_or_expression3416 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x800UL});
-		public static readonly BitSet _conditional_or_expression_in_null_coalescing_expression3426 = new BitSet(new ulong[]{0x2UL,0x40000000UL});
-		public static readonly BitSet _94_in_null_coalescing_expression3431 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _null_coalescing_expression_in_null_coalescing_expression3435 = new BitSet(new ulong[]{0x2UL,0x40000000UL});
-		public static readonly BitSet _null_coalescing_expression_in_conditional_expression3444 = new BitSet(new ulong[]{0x2UL,0x20000000UL});
-		public static readonly BitSet _93_in_conditional_expression3449 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_conditional_expression3453 = new BitSet(new ulong[]{0x0UL,0x80000UL});
-		public static readonly BitSet _83_in_conditional_expression3457 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _unary_expression_in_multiplicative_expression3154 = new BitSet(new ulong[]{0x2UL,0x40410UL});
+		public static readonly BitSet _set_in_multiplicative_expression3159 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _unary_expression_in_multiplicative_expression3169 = new BitSet(new ulong[]{0x2UL,0x40410UL});
+		public static readonly BitSet _multiplicative_expression_in_additive_expression3179 = new BitSet(new ulong[]{0x2000000002UL,0x1000UL});
+		public static readonly BitSet _set_in_additive_expression3182 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _multiplicative_expression_in_additive_expression3190 = new BitSet(new ulong[]{0x2000000002UL,0x1000UL});
+		public static readonly BitSet _additive_expression_in_shift_expression3201 = new BitSet(new ulong[]{0x1000002UL,0x800000UL});
+		public static readonly BitSet _87_in_shift_expression3205 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _GT_in_shift_expression3207 = new BitSet(new ulong[]{0x1000000UL});
+		public static readonly BitSet _GT_in_shift_expression3209 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _additive_expression_in_shift_expression3212 = new BitSet(new ulong[]{0x1000002UL,0x800000UL});
+		public static readonly BitSet _shift_expression_in_relational_expression3222 = new BitSet(new ulong[]{0x1000002UL,0x10022400000UL,0x80000UL});
+		public static readonly BitSet _set_in_relational_expression3234 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _shift_expression_in_relational_expression3246 = new BitSet(new ulong[]{0x1000002UL,0x22400000UL});
+		public static readonly BitSet _set_in_relational_expression3257 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _non_nullable_type_in_relational_expression3278 = new BitSet(new ulong[]{0x2UL,0x10000000000UL,0x80000UL});
+		public static readonly BitSet _type_in_relational_expression3289 = new BitSet(new ulong[]{0x2UL,0x10000000000UL,0x80000UL});
+		public static readonly BitSet _relational_expression_in_equality_expression3311 = new BitSet(new ulong[]{0x2UL,0x8000008UL});
+		public static readonly BitSet _set_in_equality_expression3318 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _relational_expression_in_equality_expression3326 = new BitSet(new ulong[]{0x2UL,0x8000008UL});
+		public static readonly BitSet _equality_expression_in_and_expression3336 = new BitSet(new ulong[]{0x2UL,0x80UL});
+		public static readonly BitSet _71_in_and_expression3339 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _equality_expression_in_and_expression3343 = new BitSet(new ulong[]{0x2UL,0x80UL});
+		public static readonly BitSet _and_expression_in_exclusive_or_expression3353 = new BitSet(new ulong[]{0x2UL,0x400000000UL});
+		public static readonly BitSet _98_in_exclusive_or_expression3356 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _and_expression_in_exclusive_or_expression3360 = new BitSet(new ulong[]{0x2UL,0x400000000UL});
+		public static readonly BitSet _exclusive_or_expression_in_inclusive_or_expression3370 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x400UL});
+		public static readonly BitSet _202_in_inclusive_or_expression3375 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _exclusive_or_expression_in_inclusive_or_expression3379 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x400UL});
+		public static readonly BitSet _inclusive_or_expression_in_conditional_and_expression3389 = new BitSet(new ulong[]{0x2UL,0x40UL});
+		public static readonly BitSet _70_in_conditional_and_expression3394 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _inclusive_or_expression_in_conditional_and_expression3398 = new BitSet(new ulong[]{0x2UL,0x40UL});
+		public static readonly BitSet _conditional_and_expression_in_conditional_or_expression3408 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x1000UL});
+		public static readonly BitSet _204_in_conditional_or_expression3412 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _conditional_and_expression_in_conditional_or_expression3416 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x1000UL});
+		public static readonly BitSet _conditional_or_expression_in_null_coalescing_expression3426 = new BitSet(new ulong[]{0x2UL,0x80000000UL});
+		public static readonly BitSet _95_in_null_coalescing_expression3431 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _null_coalescing_expression_in_null_coalescing_expression3435 = new BitSet(new ulong[]{0x2UL,0x80000000UL});
+		public static readonly BitSet _null_coalescing_expression_in_conditional_expression3444 = new BitSet(new ulong[]{0x2UL,0x40000000UL});
+		public static readonly BitSet _94_in_conditional_expression3449 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_conditional_expression3453 = new BitSet(new ulong[]{0x0UL,0x100000UL});
+		public static readonly BitSet _84_in_conditional_expression3457 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _expression_in_conditional_expression3461 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_array_initializer3473 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF680000DB42UL,0x7C93A85A5DDA4A48UL,0x31A3UL});
-		public static readonly BitSet _variable_initializer_list_in_array_initializer3477 = new BitSet(new ulong[]{0x0UL,0x4000UL,0x0UL,0x1000UL});
-		public static readonly BitSet _78_in_array_initializer3482 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_array_initializer3487 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _variable_initializer_in_variable_initializer_list3495 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_variable_initializer_list3498 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x21A3UL});
-		public static readonly BitSet _variable_initializer_in_variable_initializer_list3500 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _89_in_assignment_operator3511 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _77_in_assignment_operator3515 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _80_in_assignment_operator3519 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _74_in_assignment_operator3523 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _82_in_assignment_operator3527 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _68_in_assignment_operator3531 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _71_in_assignment_operator3535 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _202_in_assignment_operator3539 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _98_in_assignment_operator3543 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _87_in_assignment_operator3547 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _GT_in_assignment_operator3551 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
-		public static readonly BitSet _92_in_assignment_operator3553 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _106_in_lambda_expression3561 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000100UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _anonymous_function_signature_in_lambda_expression3564 = new BitSet(new ulong[]{0x0UL,0x8000000UL});
-		public static readonly BitSet _91_in_lambda_expression3568 = new BitSet(new ulong[]{0x4174007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x21A3UL});
+		public static readonly BitSet _201_in_array_initializer3473 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED00001B684UL,0xF92750B4BBB49491UL,0x6346UL});
+		public static readonly BitSet _variable_initializer_list_in_array_initializer3477 = new BitSet(new ulong[]{0x0UL,0x8000UL,0x0UL,0x2000UL});
+		public static readonly BitSet _79_in_array_initializer3482 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_array_initializer3487 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _variable_initializer_in_variable_initializer_list3495 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_variable_initializer_list3498 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4346UL});
+		public static readonly BitSet _variable_initializer_in_variable_initializer_list3500 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _90_in_assignment_operator3511 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _78_in_assignment_operator3515 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _81_in_assignment_operator3519 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _75_in_assignment_operator3523 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _83_in_assignment_operator3527 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _69_in_assignment_operator3531 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _72_in_assignment_operator3535 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _203_in_assignment_operator3539 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _99_in_assignment_operator3543 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _88_in_assignment_operator3547 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _GT_in_assignment_operator3551 = new BitSet(new ulong[]{0x0UL,0x20000000UL});
+		public static readonly BitSet _93_in_assignment_operator3553 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _107_in_lambda_expression3561 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000200UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _anonymous_function_signature_in_lambda_expression3564 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _92_in_lambda_expression3568 = new BitSet(new ulong[]{0x82E800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4346UL});
 		public static readonly BitSet _anonymous_function_body_in_lambda_expression3572 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _explicit_anonymous_function_signature_in_anonymous_function_signature3579 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _implicit_anonymous_function_signature_in_anonymous_function_signature3585 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _72_in_implicit_anonymous_function_signature3592 = new BitSet(new ulong[]{0x22000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _implicit_anonymous_function_parameter_list_in_implicit_anonymous_function_signature3596 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _73_in_implicit_anonymous_function_signature3592 = new BitSet(new ulong[]{0x44000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _implicit_anonymous_function_parameter_list_in_implicit_anonymous_function_signature3596 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_implicit_anonymous_function_signature3601 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _implicit_anonymous_function_parameter_list_in_implicit_anonymous_function_signature3606 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _implicit_anonymous_function_parameter_in_implicit_anonymous_function_parameter_list3613 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_implicit_anonymous_function_parameter_list3618 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _implicit_anonymous_function_parameter_in_implicit_anonymous_function_parameter_list3622 = new BitSet(new ulong[]{0x2UL,0x4000UL});
+		public static readonly BitSet _implicit_anonymous_function_parameter_in_implicit_anonymous_function_parameter_list3613 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_implicit_anonymous_function_parameter_list3618 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _implicit_anonymous_function_parameter_in_implicit_anonymous_function_parameter_list3622 = new BitSet(new ulong[]{0x2UL,0x8000UL});
 		public static readonly BitSet _identifier_in_implicit_anonymous_function_parameter3632 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_anonymous_function_body3639 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _block_in_anonymous_function_body3644 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_delegate_declaration3654 = new BitSet(new ulong[]{0x0UL,0x400000000000000UL,0x800001A004010000UL});
-		public static readonly BitSet _delegate_modifiers_in_delegate_declaration3659 = new BitSet(new ulong[]{0x0UL,0x400000000000000UL});
-		public static readonly BitSet _122_in_delegate_declaration3664 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _return_type_in_delegate_declaration3668 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_delegate_declaration3672 = new BitSet(new ulong[]{0x0UL,0x200100UL});
-		public static readonly BitSet _variant_generic_parameter_list_in_delegate_declaration3675 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_delegate_declaration3683 = new BitSet(new ulong[]{0x22000020400000UL,0xE909AF6880000000UL,0x3491AC5ED9DA4A48UL,0xABUL});
-		public static readonly BitSet _formal_parameter_list_in_delegate_declaration3687 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_delegate_declaration3692 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x20UL});
-		public static readonly BitSet _type_parameter_constraints_clauses_in_delegate_declaration3696 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _attributes_in_delegate_declaration3654 = new BitSet(new ulong[]{0x0UL,0x800000000000000UL,0x34008020000UL,0x1UL});
+		public static readonly BitSet _delegate_modifiers_in_delegate_declaration3659 = new BitSet(new ulong[]{0x0UL,0x800000000000000UL});
+		public static readonly BitSet _123_in_delegate_declaration3664 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _return_type_in_delegate_declaration3668 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_delegate_declaration3672 = new BitSet(new ulong[]{0x0UL,0x400200UL});
+		public static readonly BitSet _variant_generic_parameter_list_in_delegate_declaration3675 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_delegate_declaration3683 = new BitSet(new ulong[]{0x44000040800000UL,0xD2135ED100000000UL,0x692358BDB3B49491UL,0x156UL});
+		public static readonly BitSet _formal_parameter_list_in_delegate_declaration3687 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_delegate_declaration3692 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x40UL});
+		public static readonly BitSet _type_parameter_constraints_clauses_in_delegate_declaration3696 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_delegate_declaration3701 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _delegate_modifier_in_delegate_modifiers3709 = new BitSet(new ulong[]{0x2UL,0x0UL,0x800001A004010000UL});
-		public static readonly BitSet _delegate_modifier_in_delegate_modifiers3712 = new BitSet(new ulong[]{0x2UL,0x0UL,0x800001A004010000UL});
-		public static readonly BitSet _from_clause_in_query_expression3750 = new BitSet(new ulong[]{0x0UL,0x0UL,0x800040180A00UL,0x20UL});
+		public static readonly BitSet _delegate_modifier_in_delegate_modifiers3709 = new BitSet(new ulong[]{0x2UL,0x0UL,0x34008020000UL,0x1UL});
+		public static readonly BitSet _delegate_modifier_in_delegate_modifiers3712 = new BitSet(new ulong[]{0x2UL,0x0UL,0x34008020000UL,0x1UL});
+		public static readonly BitSet _from_clause_in_query_expression3750 = new BitSet(new ulong[]{0x0UL,0x0UL,0x1000080301400UL,0x40UL});
 		public static readonly BitSet _query_body_in_query_expression3754 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _137_in_from_clause3762 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_from_clause3766 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_from_clause3771 = new BitSet(new ulong[]{0x0UL,0x0UL,0x2000UL});
-		public static readonly BitSet _141_in_from_clause3775 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _138_in_from_clause3762 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_from_clause3766 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_from_clause3771 = new BitSet(new ulong[]{0x0UL,0x0UL,0x4000UL});
+		public static readonly BitSet _142_in_from_clause3775 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _expression_in_from_clause3779 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _query_body_clauses_in_query_body3787 = new BitSet(new ulong[]{0x0UL,0x0UL,0x800000000800UL});
-		public static readonly BitSet _select_or_group_clause_in_query_body3792 = new BitSet(new ulong[]{0x2UL,0x0UL,0x20000UL});
+		public static readonly BitSet _query_body_clauses_in_query_body3787 = new BitSet(new ulong[]{0x0UL,0x0UL,0x1000000001000UL});
+		public static readonly BitSet _select_or_group_clause_in_query_body3792 = new BitSet(new ulong[]{0x2UL,0x0UL,0x40000UL});
 		public static readonly BitSet _query_continuation_in_query_body3803 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _145_in_query_continuation3812 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_query_continuation3816 = new BitSet(new ulong[]{0x0UL,0x0UL,0x800040180A00UL,0x20UL});
+		public static readonly BitSet _146_in_query_continuation3812 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_query_continuation3816 = new BitSet(new ulong[]{0x0UL,0x0UL,0x1000080301400UL,0x40UL});
 		public static readonly BitSet _query_body_in_query_continuation3820 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _query_body_clause_in_query_body_clauses3827 = new BitSet(new ulong[]{0x2UL,0x0UL,0x40180200UL,0x20UL});
+		public static readonly BitSet _query_body_clause_in_query_body_clauses3827 = new BitSet(new ulong[]{0x2UL,0x0UL,0x80300400UL,0x40UL});
 		public static readonly BitSet _from_clause_in_query_body_clause3836 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _let_clause_in_query_body_clause3841 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _where_clause_in_query_body_clause3846 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _join_clause_in_query_body_clause3851 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _orderby_clause_in_query_body_clause3856 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _147_in_join_clause3863 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_join_clause3867 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_join_clause3872 = new BitSet(new ulong[]{0x0UL,0x0UL,0x2000UL});
-		public static readonly BitSet _141_in_join_clause3876 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_join_clause3880 = new BitSet(new ulong[]{0x0UL,0x0UL,0x10000000UL});
-		public static readonly BitSet _156_in_join_clause3884 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_join_clause3888 = new BitSet(new ulong[]{0x0UL,0x8000000000000000UL});
-		public static readonly BitSet _127_in_join_clause3892 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_join_clause3896 = new BitSet(new ulong[]{0x2UL,0x0UL,0x20000UL});
-		public static readonly BitSet _145_in_join_clause3899 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _148_in_join_clause3863 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_join_clause3867 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_join_clause3872 = new BitSet(new ulong[]{0x0UL,0x0UL,0x4000UL});
+		public static readonly BitSet _142_in_join_clause3876 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_join_clause3880 = new BitSet(new ulong[]{0x0UL,0x0UL,0x20000000UL});
+		public static readonly BitSet _157_in_join_clause3884 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_join_clause3888 = new BitSet(new ulong[]{0x0UL,0x0UL,0x1UL});
+		public static readonly BitSet _128_in_join_clause3892 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_join_clause3896 = new BitSet(new ulong[]{0x2UL,0x0UL,0x40000UL});
+		public static readonly BitSet _146_in_join_clause3899 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _identifier_in_join_clause3901 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _148_in_let_clause3911 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_let_clause3915 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
-		public static readonly BitSet _89_in_let_clause3919 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _149_in_let_clause3911 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_let_clause3915 = new BitSet(new ulong[]{0x0UL,0x4000000UL});
+		public static readonly BitSet _90_in_let_clause3919 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _expression_in_let_clause3923 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _158_in_orderby_clause3930 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _159_in_orderby_clause3930 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _ordering_list_in_orderby_clause3934 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ordering_in_ordering_list3942 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_ordering_list3945 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _ordering_in_ordering_list3947 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _expression_in_ordering3957 = new BitSet(new ulong[]{0x2UL,0x800010000000000UL});
+		public static readonly BitSet _ordering_in_ordering_list3942 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_ordering_list3945 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _ordering_in_ordering_list3947 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _expression_in_ordering3957 = new BitSet(new ulong[]{0x2UL,0x1000020000000000UL});
 		public static readonly BitSet _ordering_direction_in_ordering3962 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _select_clause_in_select_or_group_clause3984 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _group_clause_in_select_or_group_clause3989 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _175_in_select_clause3997 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _176_in_select_clause3997 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _expression_in_select_clause4001 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _139_in_group_clause4009 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_group_clause4011 = new BitSet(new ulong[]{0x0UL,0x800000000000UL});
-		public static readonly BitSet _111_in_group_clause4013 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _140_in_group_clause4009 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_group_clause4011 = new BitSet(new ulong[]{0x0UL,0x1000000000000UL});
+		public static readonly BitSet _112_in_group_clause4013 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _expression_in_group_clause4015 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _197_in_where_clause4022 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _198_in_where_clause4022 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _boolean_expression_in_where_clause4026 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_class_declaration4038 = new BitSet(new ulong[]{0x0UL,0x20001000000000UL,0x800841A804010000UL});
-		public static readonly BitSet _class_modifiers_in_class_declaration4041 = new BitSet(new ulong[]{0x0UL,0x20000000000000UL,0x800000000UL});
-		public static readonly BitSet _163_in_class_declaration4046 = new BitSet(new ulong[]{0x0UL,0x20000000000000UL});
-		public static readonly BitSet _117_in_class_declaration4050 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_class_declaration4053 = new BitSet(new ulong[]{0x0UL,0x280000UL,0x0UL,0x120UL});
-		public static readonly BitSet _generic_parameter_list_in_class_declaration4056 = new BitSet(new ulong[]{0x0UL,0x80000UL,0x0UL,0x120UL});
-		public static readonly BitSet _class_base_in_class_declaration4061 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x120UL});
-		public static readonly BitSet _type_parameter_constraints_clauses_in_class_declaration4066 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _class_body_in_class_declaration4071 = new BitSet(new ulong[]{0x10000000000002UL});
+		public static readonly BitSet _attributes_in_class_declaration4038 = new BitSet(new ulong[]{0x0UL,0x40002000000000UL,0x10835008020000UL,0x1UL});
+		public static readonly BitSet _class_modifiers_in_class_declaration4041 = new BitSet(new ulong[]{0x0UL,0x40000000000000UL,0x1000000000UL});
+		public static readonly BitSet _164_in_class_declaration4046 = new BitSet(new ulong[]{0x0UL,0x40000000000000UL});
+		public static readonly BitSet _118_in_class_declaration4050 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_class_declaration4053 = new BitSet(new ulong[]{0x0UL,0x500000UL,0x0UL,0x240UL});
+		public static readonly BitSet _generic_parameter_list_in_class_declaration4056 = new BitSet(new ulong[]{0x0UL,0x100000UL,0x0UL,0x240UL});
+		public static readonly BitSet _class_base_in_class_declaration4061 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x240UL});
+		public static readonly BitSet _type_parameter_constraints_clauses_in_class_declaration4066 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x200UL});
+		public static readonly BitSet _class_body_in_class_declaration4071 = new BitSet(new ulong[]{0x20000000000002UL});
 		public static readonly BitSet _SEMI_in_class_declaration4075 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _class_modifier_in_class_modifiers4083 = new BitSet(new ulong[]{0x2UL,0x1000000000UL,0x800841A004010000UL});
-		public static readonly BitSet _83_in_class_base4131 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _class_type_in_class_base4135 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_class_base4138 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _class_modifier_in_class_modifiers4083 = new BitSet(new ulong[]{0x2UL,0x2000000000UL,0x10834008020000UL,0x1UL});
+		public static readonly BitSet _84_in_class_base4131 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _class_type_in_class_base4135 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_class_base4138 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _interface_type_list_in_class_base4140 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _83_in_class_base4147 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _84_in_class_base4147 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _interface_type_list_in_class_base4151 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _type_name_in_interface_type_list4159 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_interface_type_list4162 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _type_name_in_interface_type_list4164 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _type_parameter_constraints_clause_in_type_parameter_constraints_clauses4176 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x20UL});
-		public static readonly BitSet _197_in_type_parameter_constraints_clause4185 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _type_variable_name_in_type_parameter_constraints_clause4189 = new BitSet(new ulong[]{0x0UL,0x80000UL});
-		public static readonly BitSet _83_in_type_parameter_constraints_clause4193 = new BitSet(new ulong[]{0x20000020400000UL,0xE929AF6800000000UL,0x3431A85A5DDA4A48UL,0xABUL});
+		public static readonly BitSet _type_name_in_interface_type_list4159 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_interface_type_list4162 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _type_name_in_interface_type_list4164 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _type_parameter_constraints_clause_in_type_parameter_constraints_clauses4176 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x40UL});
+		public static readonly BitSet _198_in_type_parameter_constraints_clause4185 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _type_variable_name_in_type_parameter_constraints_clause4189 = new BitSet(new ulong[]{0x0UL,0x100000UL});
+		public static readonly BitSet _84_in_type_parameter_constraints_clause4193 = new BitSet(new ulong[]{0x40000040800000UL,0xD2535ED000000000UL,0x686350B4BBB49491UL,0x156UL});
 		public static readonly BitSet _type_parameter_constraint_list_in_type_parameter_constraints_clause4197 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primary_constraint_in_type_parameter_constraint_list4206 = new BitSet(new ulong[]{0x0UL,0x4000UL});
-		public static readonly BitSet _78_in_type_parameter_constraint_list4212 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _secondary_constraint_list_in_type_parameter_constraint_list4216 = new BitSet(new ulong[]{0x0UL,0x4000UL});
-		public static readonly BitSet _78_in_type_parameter_constraint_list4220 = new BitSet(new ulong[]{0x0UL,0x0UL,0x4000000UL});
+		public static readonly BitSet _primary_constraint_in_type_parameter_constraint_list4206 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _79_in_type_parameter_constraint_list4212 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _secondary_constraint_list_in_type_parameter_constraint_list4216 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _79_in_type_parameter_constraint_list4220 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000000UL});
 		public static readonly BitSet _constructor_constraint_in_type_parameter_constraint_list4224 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primary_constraint_in_type_parameter_constraint_list4231 = new BitSet(new ulong[]{0x0UL,0x4000UL});
-		public static readonly BitSet _78_in_type_parameter_constraint_list4237 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _primary_constraint_in_type_parameter_constraint_list4231 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _79_in_type_parameter_constraint_list4237 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _secondary_constraint_list_in_type_parameter_constraint_list4241 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primary_constraint_in_type_parameter_constraint_list4248 = new BitSet(new ulong[]{0x0UL,0x4000UL});
-		public static readonly BitSet _78_in_type_parameter_constraint_list4254 = new BitSet(new ulong[]{0x0UL,0x0UL,0x4000000UL});
+		public static readonly BitSet _primary_constraint_in_type_parameter_constraint_list4248 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _79_in_type_parameter_constraint_list4254 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000000UL});
 		public static readonly BitSet _constructor_constraint_in_type_parameter_constraint_list4258 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _secondary_constraint_list_in_type_parameter_constraint_list4265 = new BitSet(new ulong[]{0x0UL,0x4000UL});
-		public static readonly BitSet _78_in_type_parameter_constraint_list4270 = new BitSet(new ulong[]{0x0UL,0x0UL,0x4000000UL});
+		public static readonly BitSet _secondary_constraint_list_in_type_parameter_constraint_list4265 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _79_in_type_parameter_constraint_list4270 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000000UL});
 		public static readonly BitSet _constructor_constraint_in_type_parameter_constraint_list4274 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _primary_constraint_in_type_parameter_constraint_list4280 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _secondary_constraint_list_in_type_parameter_constraint_list4285 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _constructor_constraint_in_type_parameter_constraint_list4290 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _class_type_in_primary_constraint4299 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _117_in_primary_constraint4304 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _181_in_primary_constraint4309 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _secondary_constraint_in_secondary_constraint_list4317 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_secondary_constraint_list4320 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _secondary_constraint_in_secondary_constraint_list4322 = new BitSet(new ulong[]{0x2UL,0x4000UL});
+		public static readonly BitSet _118_in_primary_constraint4304 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _182_in_primary_constraint4309 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _secondary_constraint_in_secondary_constraint_list4317 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_secondary_constraint_list4320 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _secondary_constraint_in_secondary_constraint_list4322 = new BitSet(new ulong[]{0x2UL,0x8000UL});
 		public static readonly BitSet _type_name_in_secondary_constraint4335 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _type_variable_name_in_secondary_constraint4339 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _154_in_constructor_constraint4348 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_constructor_constraint4352 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _155_in_constructor_constraint4348 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_constructor_constraint4352 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_constructor_constraint4356 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_class_body4364 = new BitSet(new ulong[]{0x20000020440000UL,0xED69AF7880000000UL,0xB439EBFB5DDBCA4DUL,0x30BFUL});
-		public static readonly BitSet _class_member_declarations_in_class_body4368 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_class_body4373 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _class_member_declaration_in_class_member_declarations4381 = new BitSet(new ulong[]{0x20000020440002UL,0xED69AF7880000000UL,0xB439EBFB5DDBCA4DUL,0x20BFUL});
+		public static readonly BitSet _201_in_class_body4364 = new BitSet(new ulong[]{0x40000040880000UL,0xDAD35EF100000000UL,0x6873D7F6BBB7949BUL,0x617FUL});
+		public static readonly BitSet _class_member_declarations_in_class_body4368 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_class_body4373 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _class_member_declaration_in_class_member_declarations4381 = new BitSet(new ulong[]{0x40000040880002UL,0xDAD35EF100000000UL,0x6873D7F6BBB7949BUL,0x417FUL});
 		public static readonly BitSet _constant_declaration_in_class_member_declaration4390 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _field_declaration_in_class_member_declaration4395 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _method_declaration_in_class_member_declaration4400 = new BitSet(new ulong[]{0x2UL});
@@ -61184,257 +61185,257 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _static_constructor_declaration_in_class_member_declaration4435 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _type_declaration_in_class_member_declaration4440 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _class_declaration_in_class_member_declaration4446 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_constant_declaration4454 = new BitSet(new ulong[]{0x0UL,0x40000000000000UL,0x1A004010000UL});
-		public static readonly BitSet _constant_modifiers_in_constant_declaration4459 = new BitSet(new ulong[]{0x0UL,0x40000000000000UL});
-		public static readonly BitSet _118_in_constant_declaration4464 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_constant_declaration4468 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _constant_declarators_in_constant_declaration4472 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _attributes_in_constant_declaration4454 = new BitSet(new ulong[]{0x0UL,0x80000000000000UL,0x34008020000UL});
+		public static readonly BitSet _constant_modifiers_in_constant_declaration4459 = new BitSet(new ulong[]{0x0UL,0x80000000000000UL});
+		public static readonly BitSet _119_in_constant_declaration4464 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_constant_declaration4468 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _constant_declarators_in_constant_declaration4472 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_constant_declaration4476 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _constant_modifier_in_constant_modifiers4484 = new BitSet(new ulong[]{0x2UL,0x0UL,0x1A004010000UL});
-		public static readonly BitSet _attributes_in_field_declaration4517 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0xB419ABFA5DDB4A48UL,0xBBUL});
-		public static readonly BitSet _field_modifiers_in_field_declaration4522 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_field_declaration4527 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _variable_declarators_in_field_declaration4531 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _constant_modifier_in_constant_modifiers4484 = new BitSet(new ulong[]{0x2UL,0x0UL,0x34008020000UL});
+		public static readonly BitSet _attributes_in_field_declaration4517 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x683357F4BBB69491UL,0x177UL});
+		public static readonly BitSet _field_modifiers_in_field_declaration4522 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_field_declaration4527 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _variable_declarators_in_field_declaration4531 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_field_declaration4535 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _field_modifier_in_field_modifiers4544 = new BitSet(new ulong[]{0x2UL,0x0UL,0x800803A004010000UL,0x10UL});
-		public static readonly BitSet _variable_declarator_in_variable_declarators4593 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_variable_declarators4596 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _variable_declarator_in_variable_declarators4598 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _type_name_in_variable_declarator4609 = new BitSet(new ulong[]{0x2UL,0x2000000UL});
-		public static readonly BitSet _89_in_variable_declarator4612 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x21A3UL});
+		public static readonly BitSet _field_modifier_in_field_modifiers4544 = new BitSet(new ulong[]{0x2UL,0x0UL,0x10074008020000UL,0x21UL});
+		public static readonly BitSet _variable_declarator_in_variable_declarators4593 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_variable_declarators4596 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _variable_declarator_in_variable_declarators4598 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _type_name_in_variable_declarator4609 = new BitSet(new ulong[]{0x2UL,0x4000000UL});
+		public static readonly BitSet _90_in_variable_declarator4612 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4346UL});
 		public static readonly BitSet _variable_initializer_in_variable_declarator4616 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_variable_initializer4628 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _array_initializer_in_variable_initializer4632 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _method_declaration_in_method_declarations4641 = new BitSet(new ulong[]{0x20000020400002UL,0xE909AF7880000000UL,0xB419E9FB5DDB4A4CUL,0xAFUL});
-		public static readonly BitSet _method_header_in_method_declaration4651 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _method_declaration_in_method_declarations4641 = new BitSet(new ulong[]{0x40000040800002UL,0xD2135EF100000000UL,0x6833D3F6BBB69499UL,0x15FUL});
+		public static readonly BitSet _method_header_in_method_declaration4651 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _method_body_in_method_declaration4655 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_method_header4665 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF7800000000UL,0xB419E9FB5DDB4A4CUL,0xAFUL});
-		public static readonly BitSet _method_modifiers_in_method_header4670 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _163_in_method_header4675 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _return_type_in_method_header4680 = new BitSet(new ulong[]{0x4164006030600020UL,0xE909BF6800000000UL,0x3491A85A59DA4A48UL,0xA3UL});
-		public static readonly BitSet _member_name_in_method_header4684 = new BitSet(new ulong[]{0x0UL,0x200100UL});
-		public static readonly BitSet _generic_parameter_list_in_method_header4688 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_method_header4694 = new BitSet(new ulong[]{0x22000020400000UL,0xE909AF6880000000UL,0x3491AC5ED9DA4A48UL,0xABUL});
-		public static readonly BitSet _formal_parameter_list_in_method_header4698 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_method_header4703 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x20UL});
+		public static readonly BitSet _attributes_in_method_header4665 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135EF000000000UL,0x6833D3F6BBB69499UL,0x15FUL});
+		public static readonly BitSet _method_modifiers_in_method_header4670 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _164_in_method_header4675 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _return_type_in_method_header4680 = new BitSet(new ulong[]{0x82C800C060C00020UL,0xD2137ED000000000UL,0x692350B4B3B49491UL,0x146UL});
+		public static readonly BitSet _member_name_in_method_header4684 = new BitSet(new ulong[]{0x0UL,0x400200UL});
+		public static readonly BitSet _generic_parameter_list_in_method_header4688 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_method_header4694 = new BitSet(new ulong[]{0x44000040800000UL,0xD2135ED100000000UL,0x692358BDB3B49491UL,0x156UL});
+		public static readonly BitSet _formal_parameter_list_in_method_header4698 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_method_header4703 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x40UL});
 		public static readonly BitSet _type_parameter_constraints_clauses_in_method_header4707 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _method_modifier_in_method_modifiers4716 = new BitSet(new ulong[]{0x2UL,0x41000000000UL,0x800841A104010004UL,0x4UL});
+		public static readonly BitSet _method_modifier_in_method_modifiers4716 = new BitSet(new ulong[]{0x2UL,0x82000000000UL,0x10834208020008UL,0x9UL});
 		public static readonly BitSet _type_in_return_type4783 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _195_in_return_type4788 = new BitSet(new ulong[]{0x2UL,0x200UL});
-		public static readonly BitSet _73_in_return_type4790 = new BitSet(new ulong[]{0x2UL,0x200UL});
+		public static readonly BitSet _196_in_return_type4788 = new BitSet(new ulong[]{0x2UL,0x400UL});
+		public static readonly BitSet _74_in_return_type4790 = new BitSet(new ulong[]{0x2UL,0x400UL});
 		public static readonly BitSet _block_in_method_body4798 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _formal_parameter_in_formal_parameter_list4806 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_formal_parameter_list4809 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6880000000UL,0x3491AC5ED9DA4A48UL,0xABUL});
-		public static readonly BitSet _formal_parameter_in_formal_parameter_list4811 = new BitSet(new ulong[]{0x2UL,0x4000UL});
+		public static readonly BitSet _formal_parameter_in_formal_parameter_list4806 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_formal_parameter_list4809 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED100000000UL,0x692358BDB3B49491UL,0x156UL});
+		public static readonly BitSet _formal_parameter_in_formal_parameter_list4811 = new BitSet(new ulong[]{0x2UL,0x8000UL});
 		public static readonly BitSet _fixed_parameter_in_formal_parameter4823 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _parameter_array_in_formal_parameter4827 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _99_in_formal_parameter4831 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _fixed_parameter_in_fixed_parameters4839 = new BitSet(new ulong[]{0x20000020400002UL,0xE909AF6880000000UL,0x3491AC5AD9DA4A48UL,0xABUL});
-		public static readonly BitSet _attributes_in_fixed_parameter4849 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3491AC5AD9DA4A48UL,0xABUL});
-		public static readonly BitSet _parameter_modifier_in_fixed_parameter4854 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_fixed_parameter4859 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_fixed_parameter4863 = new BitSet(new ulong[]{0x2UL,0x2000000UL});
+		public static readonly BitSet _100_in_formal_parameter4831 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _fixed_parameter_in_fixed_parameters4839 = new BitSet(new ulong[]{0x40000040800002UL,0xD2135ED100000000UL,0x692358B5B3B49491UL,0x156UL});
+		public static readonly BitSet _attributes_in_fixed_parameter4849 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x692358B5B3B49491UL,0x156UL});
+		public static readonly BitSet _parameter_modifier_in_fixed_parameter4854 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_fixed_parameter4859 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_fixed_parameter4863 = new BitSet(new ulong[]{0x2UL,0x4000000UL});
 		public static readonly BitSet _default_argument_in_fixed_parameter4865 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _89_in_default_argument4874 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _90_in_default_argument4874 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _expression_in_default_argument4876 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_parameter_array4899 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85E59DA4A48UL,0xABUL});
-		public static readonly BitSet _162_in_parameter_array4904 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _array_type_in_parameter_array4909 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _attributes_in_parameter_array4899 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350BCB3B49491UL,0x156UL});
+		public static readonly BitSet _163_in_parameter_array4904 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _array_type_in_parameter_array4909 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _identifier_in_parameter_array4913 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_property_declaration4921 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF7800000000UL,0xB419E9FB5DDB4A4CUL,0xAFUL});
-		public static readonly BitSet _property_modifiers_in_property_declaration4926 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_property_declaration4931 = new BitSet(new ulong[]{0x4164006030600020UL,0xE909BF6800000000UL,0x3491A85A59DA4A48UL,0xA3UL});
-		public static readonly BitSet _member_name_in_property_declaration4935 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _200_in_property_declaration4939 = new BitSet(new ulong[]{0x20000000400000UL,0x80000000UL,0x1A000010000UL});
-		public static readonly BitSet _accessor_declarations_in_property_declaration4943 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_property_declaration4947 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _property_modifier_in_property_modifiers4956 = new BitSet(new ulong[]{0x2UL,0x1000000000UL,0x800841A104010004UL,0x4UL});
-		public static readonly BitSet _qid_in_member_name5019 = new BitSet(new ulong[]{0x2UL,0x200000UL});
-		public static readonly BitSet _generic_parameter_list_in_member_name5022 = new BitSet(new ulong[]{0x1000000000400UL});
+		public static readonly BitSet _attributes_in_property_declaration4921 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135EF000000000UL,0x6833D3F6BBB69499UL,0x15FUL});
+		public static readonly BitSet _property_modifiers_in_property_declaration4926 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_property_declaration4931 = new BitSet(new ulong[]{0x82C800C060C00020UL,0xD2137ED000000000UL,0x692350B4B3B49491UL,0x146UL});
+		public static readonly BitSet _member_name_in_property_declaration4935 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x200UL});
+		public static readonly BitSet _201_in_property_declaration4939 = new BitSet(new ulong[]{0x40000000800000UL,0x100000000UL,0x34000020000UL});
+		public static readonly BitSet _accessor_declarations_in_property_declaration4943 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_property_declaration4947 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _property_modifier_in_property_modifiers4956 = new BitSet(new ulong[]{0x2UL,0x2000000000UL,0x10834208020008UL,0x9UL});
+		public static readonly BitSet _qid_in_member_name5019 = new BitSet(new ulong[]{0x2UL,0x400000UL});
+		public static readonly BitSet _generic_parameter_list_in_member_name5022 = new BitSet(new ulong[]{0x2000000000400UL});
 		public static readonly BitSet _qid_part_in_member_name5024 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _get_accessor_declaration_in_accessor_declarations5037 = new BitSet(new ulong[]{0x20000000000002UL,0x80000000UL,0x1A000010000UL});
+		public static readonly BitSet _get_accessor_declaration_in_accessor_declarations5037 = new BitSet(new ulong[]{0x40000000000002UL,0x100000000UL,0x34000020000UL});
 		public static readonly BitSet _set_accessor_declaration_in_accessor_declarations5041 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _set_accessor_declaration_in_accessor_declarations5049 = new BitSet(new ulong[]{0x400002UL,0x80000000UL,0x1A000010000UL});
+		public static readonly BitSet _set_accessor_declaration_in_accessor_declarations5049 = new BitSet(new ulong[]{0x800002UL,0x100000000UL,0x34000020000UL});
 		public static readonly BitSet _get_accessor_declaration_in_accessor_declarations5053 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_get_accessor_declaration5063 = new BitSet(new ulong[]{0x400000UL,0x0UL,0x1A000010000UL});
-		public static readonly BitSet _accessor_modifier_in_get_accessor_declaration5068 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _GET_in_get_accessor_declaration5073 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _attributes_in_get_accessor_declaration5063 = new BitSet(new ulong[]{0x800000UL,0x0UL,0x34000020000UL});
+		public static readonly BitSet _accessor_modifier_in_get_accessor_declaration5068 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _GET_in_get_accessor_declaration5073 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _accessor_body_in_get_accessor_declaration5077 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_set_accessor_declaration5085 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x1A000010000UL});
-		public static readonly BitSet _accessor_modifier_in_set_accessor_declaration5090 = new BitSet(new ulong[]{0x20000000000000UL});
-		public static readonly BitSet _SET_in_set_accessor_declaration5095 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _attributes_in_set_accessor_declaration5085 = new BitSet(new ulong[]{0x40000000000000UL,0x0UL,0x34000020000UL});
+		public static readonly BitSet _accessor_modifier_in_set_accessor_declaration5090 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _SET_in_set_accessor_declaration5095 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _accessor_body_in_set_accessor_declaration5099 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _168_in_accessor_modifier5108 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _167_in_accessor_modifier5112 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _144_in_accessor_modifier5116 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _165_in_accessor_modifier5120 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _167_in_accessor_modifier5125 = new BitSet(new ulong[]{0x0UL,0x0UL,0x10000UL});
-		public static readonly BitSet _144_in_accessor_modifier5129 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _144_in_accessor_modifier5135 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000000000UL});
-		public static readonly BitSet _167_in_accessor_modifier5139 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _169_in_accessor_modifier5108 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _168_in_accessor_modifier5112 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _145_in_accessor_modifier5116 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _166_in_accessor_modifier5120 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _168_in_accessor_modifier5125 = new BitSet(new ulong[]{0x0UL,0x0UL,0x20000UL});
+		public static readonly BitSet _145_in_accessor_modifier5129 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _145_in_accessor_modifier5135 = new BitSet(new ulong[]{0x0UL,0x0UL,0x10000000000UL});
+		public static readonly BitSet _168_in_accessor_modifier5139 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _block_in_accessor_body5149 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_event_declaration5161 = new BitSet(new ulong[]{0x0UL,0x1000000000UL,0x800841A104010005UL,0x4UL});
-		public static readonly BitSet _event_modifiers_in_event_declaration5166 = new BitSet(new ulong[]{0x0UL,0x0UL,0x1UL});
-		public static readonly BitSet _128_in_event_declaration5171 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_event_declaration5175 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _variable_declarators_in_event_declaration5179 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _attributes_in_event_declaration5161 = new BitSet(new ulong[]{0x0UL,0x2000000000UL,0x1083420802000AUL,0x9UL});
+		public static readonly BitSet _event_modifiers_in_event_declaration5166 = new BitSet(new ulong[]{0x0UL,0x0UL,0x2UL});
+		public static readonly BitSet _129_in_event_declaration5171 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_event_declaration5175 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _variable_declarators_in_event_declaration5179 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_event_declaration5183 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_event_declaration5191 = new BitSet(new ulong[]{0x0UL,0x1000000000UL,0x800841A104010005UL,0x4UL});
-		public static readonly BitSet _event_modifiers_in_event_declaration5196 = new BitSet(new ulong[]{0x0UL,0x0UL,0x1UL});
-		public static readonly BitSet _128_in_event_declaration5201 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_event_declaration5205 = new BitSet(new ulong[]{0x4164006030600020UL,0xE909BF6800000000UL,0x3491A85A59DA4A48UL,0xA3UL});
-		public static readonly BitSet _member_name_in_event_declaration5209 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _200_in_event_declaration5213 = new BitSet(new ulong[]{0x0UL,0x2080000000UL,0x80000000000UL});
-		public static readonly BitSet _event_accessor_declarations_in_event_declaration5217 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_event_declaration5221 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _event_modifier_in_event_modifiers5230 = new BitSet(new ulong[]{0x2UL,0x1000000000UL,0x800841A104010004UL,0x4UL});
-		public static readonly BitSet _add_accessor_declaration_in_event_accessor_declarations5294 = new BitSet(new ulong[]{0x0UL,0x80000000UL,0x80000000000UL});
+		public static readonly BitSet _attributes_in_event_declaration5191 = new BitSet(new ulong[]{0x0UL,0x2000000000UL,0x1083420802000AUL,0x9UL});
+		public static readonly BitSet _event_modifiers_in_event_declaration5196 = new BitSet(new ulong[]{0x0UL,0x0UL,0x2UL});
+		public static readonly BitSet _129_in_event_declaration5201 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_event_declaration5205 = new BitSet(new ulong[]{0x82C800C060C00020UL,0xD2137ED000000000UL,0x692350B4B3B49491UL,0x146UL});
+		public static readonly BitSet _member_name_in_event_declaration5209 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x200UL});
+		public static readonly BitSet _201_in_event_declaration5213 = new BitSet(new ulong[]{0x0UL,0x4100000000UL,0x100000000000UL});
+		public static readonly BitSet _event_accessor_declarations_in_event_declaration5217 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_event_declaration5221 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _event_modifier_in_event_modifiers5230 = new BitSet(new ulong[]{0x2UL,0x2000000000UL,0x10834208020008UL,0x9UL});
+		public static readonly BitSet _add_accessor_declaration_in_event_accessor_declarations5294 = new BitSet(new ulong[]{0x0UL,0x100000000UL,0x100000000000UL});
 		public static readonly BitSet _remove_accessor_declaration_in_event_accessor_declarations5298 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _remove_accessor_declaration_in_event_accessor_declarations5305 = new BitSet(new ulong[]{0x0UL,0x2080000000UL});
+		public static readonly BitSet _remove_accessor_declaration_in_event_accessor_declarations5305 = new BitSet(new ulong[]{0x0UL,0x4100000000UL});
 		public static readonly BitSet _add_accessor_declaration_in_event_accessor_declarations5309 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_add_accessor_declaration5318 = new BitSet(new ulong[]{0x0UL,0x2000000000UL});
-		public static readonly BitSet _101_in_add_accessor_declaration5323 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _attributes_in_add_accessor_declaration5318 = new BitSet(new ulong[]{0x0UL,0x4000000000UL});
+		public static readonly BitSet _102_in_add_accessor_declaration5323 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _block_in_add_accessor_declaration5327 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_remove_accessor_declaration5335 = new BitSet(new ulong[]{0x0UL,0x0UL,0x80000000000UL});
-		public static readonly BitSet _171_in_remove_accessor_declaration5340 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _attributes_in_remove_accessor_declaration5335 = new BitSet(new ulong[]{0x0UL,0x0UL,0x100000000000UL});
+		public static readonly BitSet _172_in_remove_accessor_declaration5340 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _block_in_remove_accessor_declaration5344 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_indexer_declaration5352 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF7800000000UL,0xB411E9FB5DDB4A4CUL,0xAFUL});
-		public static readonly BitSet _indexer_modifiers_in_indexer_declaration5357 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _indexer_declarator_in_indexer_declaration5362 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _200_in_indexer_declaration5366 = new BitSet(new ulong[]{0x20000000400000UL,0x80000000UL,0x1A000010000UL});
-		public static readonly BitSet _accessor_declarations_in_indexer_declaration5370 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_indexer_declaration5374 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _indexer_modifier_in_indexer_modifiers5382 = new BitSet(new ulong[]{0x2UL,0x1000000000UL,0x800041A104010004UL,0x4UL});
-		public static readonly BitSet _type_in_indexer_declarator5439 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x480885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _attributes_in_indexer_declaration5352 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135EF000000000UL,0x6823D3F6BBB69499UL,0x15FUL});
+		public static readonly BitSet _indexer_modifiers_in_indexer_declaration5357 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _indexer_declarator_in_indexer_declaration5362 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x200UL});
+		public static readonly BitSet _201_in_indexer_declaration5366 = new BitSet(new ulong[]{0x40000000800000UL,0x100000000UL,0x34000020000UL});
+		public static readonly BitSet _accessor_declarations_in_indexer_declaration5370 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_indexer_declaration5374 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _indexer_modifier_in_indexer_modifiers5382 = new BitSet(new ulong[]{0x2UL,0x2000000000UL,0x834208020008UL,0x9UL});
+		public static readonly BitSet _type_in_indexer_declarator5439 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x90110B4A3341411UL,0x144UL});
 		public static readonly BitSet _type_name_in_indexer_declarator5444 = new BitSet(new ulong[]{0x400UL});
-		public static readonly BitSet _DOT_in_indexer_declarator5446 = new BitSet(new ulong[]{0x0UL,0x0UL,0x80000000000000UL});
-		public static readonly BitSet _183_in_indexer_declarator5450 = new BitSet(new ulong[]{0x0UL,0x80000000UL});
-		public static readonly BitSet _95_in_indexer_declarator5454 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6880000000UL,0x3491AC5ED9DA4A48UL,0xABUL});
-		public static readonly BitSet _formal_parameter_list_in_indexer_declarator5458 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
-		public static readonly BitSet _96_in_indexer_declarator5462 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_operator_declaration5470 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8008010000000004UL});
-		public static readonly BitSet _operator_modifiers_in_operator_declaration5475 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA5A4AUL,0xABUL});
-		public static readonly BitSet _operator_declarator_in_operator_declaration5479 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _DOT_in_indexer_declarator5446 = new BitSet(new ulong[]{0x0UL,0x0UL,0x100000000000000UL});
+		public static readonly BitSet _184_in_indexer_declarator5450 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
+		public static readonly BitSet _96_in_indexer_declarator5454 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED100000000UL,0x692358BDB3B49491UL,0x156UL});
+		public static readonly BitSet _formal_parameter_list_in_indexer_declarator5458 = new BitSet(new ulong[]{0x0UL,0x200000000UL});
+		public static readonly BitSet _97_in_indexer_declarator5462 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _attributes_in_operator_declaration5470 = new BitSet(new ulong[]{0x0UL,0x0UL,0x10020000000008UL,0x1UL});
+		public static readonly BitSet _operator_modifiers_in_operator_declaration5475 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B4B495UL,0x156UL});
+		public static readonly BitSet _operator_declarator_in_operator_declaration5479 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _operator_body_in_operator_declaration5483 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _operator_modifier_in_operator_modifiers5491 = new BitSet(new ulong[]{0x2UL,0x0UL,0x8008010000000004UL});
+		public static readonly BitSet _operator_modifier_in_operator_modifiers5491 = new BitSet(new ulong[]{0x2UL,0x0UL,0x10020000000008UL,0x1UL});
 		public static readonly BitSet _unary_operator_declarator_in_operator_declarator5520 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _binary_operator_declarator_in_operator_declarator5525 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _conversion_operator_declarator_in_operator_declarator5530 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _type_in_unary_operator_declarator5537 = new BitSet(new ulong[]{0x0UL,0x0UL,0x20000000UL});
-		public static readonly BitSet _157_in_unary_operator_declarator5541 = new BitSet(new ulong[]{0x100001000200000UL,0x9802UL,0x0UL,0x2000UL});
-		public static readonly BitSet _overloadable_unary_operator_in_unary_operator_declarator5545 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_unary_operator_declarator5549 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_unary_operator_declarator5553 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_unary_operator_declarator5557 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _type_in_unary_operator_declarator5537 = new BitSet(new ulong[]{0x0UL,0x0UL,0x40000000UL});
+		public static readonly BitSet _158_in_unary_operator_declarator5541 = new BitSet(new ulong[]{0x200002000400000UL,0x13004UL,0x0UL,0x4000UL});
+		public static readonly BitSet _overloadable_unary_operator_in_unary_operator_declarator5545 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_unary_operator_declarator5549 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_unary_operator_declarator5553 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_unary_operator_declarator5557 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_unary_operator_declarator5561 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _type_in_binary_operator_declarator5612 = new BitSet(new ulong[]{0x0UL,0x0UL,0x20000000UL});
-		public static readonly BitSet _157_in_binary_operator_declarator5616 = new BitSet(new ulong[]{0x1000800000UL,0x215620A4CUL,0x0UL,0x200UL});
-		public static readonly BitSet _overloadable_binary_operator_in_binary_operator_declarator5620 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_binary_operator_declarator5624 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_binary_operator_declarator5628 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_binary_operator_declarator5632 = new BitSet(new ulong[]{0x0UL,0x4000UL});
-		public static readonly BitSet _78_in_binary_operator_declarator5636 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_binary_operator_declarator5640 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_binary_operator_declarator5644 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _type_in_binary_operator_declarator5612 = new BitSet(new ulong[]{0x0UL,0x0UL,0x40000000UL});
+		public static readonly BitSet _158_in_binary_operator_declarator5616 = new BitSet(new ulong[]{0x2001000000UL,0x42AC41498UL,0x0UL,0x400UL});
+		public static readonly BitSet _overloadable_binary_operator_in_binary_operator_declarator5620 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_binary_operator_declarator5624 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_binary_operator_declarator5628 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_binary_operator_declarator5632 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _79_in_binary_operator_declarator5636 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_binary_operator_declarator5640 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_binary_operator_declarator5644 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_binary_operator_declarator5648 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _75_in_overloadable_binary_operator5657 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _76_in_overloadable_binary_operator5657 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _MINUS_in_overloadable_binary_operator5661 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _73_in_overloadable_binary_operator5665 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _81_in_overloadable_binary_operator5669 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _67_in_overloadable_binary_operator5673 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _70_in_overloadable_binary_operator5677 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _201_in_overloadable_binary_operator5681 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _97_in_overloadable_binary_operator5685 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _86_in_overloadable_binary_operator5689 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _GT_in_overloadable_binary_operator5693 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _74_in_overloadable_binary_operator5665 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _82_in_overloadable_binary_operator5669 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _68_in_overloadable_binary_operator5673 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _71_in_overloadable_binary_operator5677 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _202_in_overloadable_binary_operator5681 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _98_in_overloadable_binary_operator5685 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _87_in_overloadable_binary_operator5689 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _GT_in_overloadable_binary_operator5693 = new BitSet(new ulong[]{0x1000000UL});
 		public static readonly BitSet _GT_in_overloadable_binary_operator5695 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _90_in_overloadable_binary_operator5699 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _66_in_overloadable_binary_operator5703 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _91_in_overloadable_binary_operator5699 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _67_in_overloadable_binary_operator5703 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _GT_in_overloadable_binary_operator5707 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _85_in_overloadable_binary_operator5711 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _92_in_overloadable_binary_operator5715 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _88_in_overloadable_binary_operator5719 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _set_in_conversion_operator_declarator5728 = new BitSet(new ulong[]{0x0UL,0x0UL,0x20000000UL});
-		public static readonly BitSet _157_in_conversion_operator_declarator5737 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_conversion_operator_declarator5741 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_conversion_operator_declarator5745 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_conversion_operator_declarator5749 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_conversion_operator_declarator5753 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _86_in_overloadable_binary_operator5711 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _93_in_overloadable_binary_operator5715 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _89_in_overloadable_binary_operator5719 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _set_in_conversion_operator_declarator5728 = new BitSet(new ulong[]{0x0UL,0x0UL,0x40000000UL});
+		public static readonly BitSet _158_in_conversion_operator_declarator5737 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_conversion_operator_declarator5741 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_conversion_operator_declarator5745 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_conversion_operator_declarator5749 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_conversion_operator_declarator5753 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_conversion_operator_declarator5757 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _block_in_operator_body5765 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_constructor_declaration5773 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x840089FA519B0A0CUL,0xA2UL});
-		public static readonly BitSet _constructor_modifiers_in_constructor_declaration5778 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _constructor_declarator_in_constructor_declaration5783 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _attributes_in_constructor_declaration5773 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80113F4A3361419UL,0x145UL});
+		public static readonly BitSet _constructor_modifiers_in_constructor_declaration5778 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _constructor_declarator_in_constructor_declaration5783 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _constructor_body_in_constructor_declaration5787 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _constructor_modifier_in_constructor_modifiers5795 = new BitSet(new ulong[]{0x2UL,0x0UL,0x800001A000010004UL});
-		public static readonly BitSet _identifier_in_constructor_declarator5833 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_constructor_declarator5837 = new BitSet(new ulong[]{0x22000020400000UL,0xE909AF6880000000UL,0x3491AC5ED9DA4A48UL,0xABUL});
-		public static readonly BitSet _formal_parameter_list_in_constructor_declarator5841 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_constructor_declarator5846 = new BitSet(new ulong[]{0x2UL,0x80000UL});
+		public static readonly BitSet _constructor_modifier_in_constructor_modifiers5795 = new BitSet(new ulong[]{0x2UL,0x0UL,0x34000020008UL,0x1UL});
+		public static readonly BitSet _identifier_in_constructor_declarator5833 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_constructor_declarator5837 = new BitSet(new ulong[]{0x44000040800000UL,0xD2135ED100000000UL,0x692358BDB3B49491UL,0x156UL});
+		public static readonly BitSet _formal_parameter_list_in_constructor_declarator5841 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_constructor_declarator5846 = new BitSet(new ulong[]{0x2UL,0x100000UL});
 		public static readonly BitSet _constructor_initializer_in_constructor_declarator5850 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _83_in_constructor_initializer5859 = new BitSet(new ulong[]{0x0UL,0x100000000000UL,0x80000000000000UL});
-		public static readonly BitSet _set_in_constructor_initializer5863 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_constructor_initializer5873 = new BitSet(new ulong[]{0x4166007030600020UL,0xEF19BF6800009B42UL,0x7C93AC5ADDDA4A48UL,0x20A3UL});
-		public static readonly BitSet _argument_list_in_constructor_initializer5877 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _84_in_constructor_initializer5859 = new BitSet(new ulong[]{0x0UL,0x200000000000UL,0x100000000000000UL});
+		public static readonly BitSet _set_in_constructor_initializer5863 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_constructor_initializer5873 = new BitSet(new ulong[]{0x82CC00E060C00020UL,0xDE337ED000013684UL,0xF92758B5BBB49491UL,0x4146UL});
+		public static readonly BitSet _argument_list_in_constructor_initializer5877 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_constructor_initializer5882 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _block_in_constructor_body5890 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_static_constructor_declaration5898 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8008000000000004UL});
-		public static readonly BitSet _static_constructor_modifiers_in_static_constructor_declaration5903 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_static_constructor_declaration5906 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_static_constructor_declaration5910 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_static_constructor_declaration5914 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _attributes_in_static_constructor_declaration5898 = new BitSet(new ulong[]{0x0UL,0x0UL,0x10000000000008UL,0x1UL});
+		public static readonly BitSet _static_constructor_modifiers_in_static_constructor_declaration5903 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_static_constructor_declaration5906 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_static_constructor_declaration5910 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_static_constructor_declaration5914 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _static_constructor_body_in_static_constructor_declaration5917 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _130_in_static_constructor_modifiers5927 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000000000000000UL});
-		public static readonly BitSet _191_in_static_constructor_modifiers5929 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000000000000UL});
-		public static readonly BitSet _179_in_static_constructor_modifiers5931 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _130_in_static_constructor_modifiers5936 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000000000000UL});
-		public static readonly BitSet _179_in_static_constructor_modifiers5938 = new BitSet(new ulong[]{0x2UL,0x0UL,0x8000000000000000UL});
-		public static readonly BitSet _191_in_static_constructor_modifiers5940 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _191_in_static_constructor_modifiers5946 = new BitSet(new ulong[]{0x0UL,0x0UL,0x4UL});
-		public static readonly BitSet _130_in_static_constructor_modifiers5948 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000000000000UL});
-		public static readonly BitSet _179_in_static_constructor_modifiers5950 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _191_in_static_constructor_modifiers5955 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000000000000UL});
-		public static readonly BitSet _179_in_static_constructor_modifiers5957 = new BitSet(new ulong[]{0x2UL,0x0UL,0x4UL});
-		public static readonly BitSet _130_in_static_constructor_modifiers5959 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _179_in_static_constructor_modifiers5965 = new BitSet(new ulong[]{0x0UL,0x0UL,0x4UL});
-		public static readonly BitSet _130_in_static_constructor_modifiers5967 = new BitSet(new ulong[]{0x2UL,0x0UL,0x8000000000000000UL});
-		public static readonly BitSet _191_in_static_constructor_modifiers5969 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _179_in_static_constructor_modifiers5975 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000000000000000UL});
-		public static readonly BitSet _191_in_static_constructor_modifiers5977 = new BitSet(new ulong[]{0x2UL,0x0UL,0x4UL});
-		public static readonly BitSet _130_in_static_constructor_modifiers5979 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _130_in_static_constructor_modifiers5986 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _191_in_static_constructor_modifiers5991 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _179_in_static_constructor_modifiers5996 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _131_in_static_constructor_modifiers5927 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1UL});
+		public static readonly BitSet _192_in_static_constructor_modifiers5929 = new BitSet(new ulong[]{0x0UL,0x0UL,0x10000000000000UL});
+		public static readonly BitSet _180_in_static_constructor_modifiers5931 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _131_in_static_constructor_modifiers5936 = new BitSet(new ulong[]{0x0UL,0x0UL,0x10000000000000UL});
+		public static readonly BitSet _180_in_static_constructor_modifiers5938 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x1UL});
+		public static readonly BitSet _192_in_static_constructor_modifiers5940 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _192_in_static_constructor_modifiers5946 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8UL});
+		public static readonly BitSet _131_in_static_constructor_modifiers5948 = new BitSet(new ulong[]{0x0UL,0x0UL,0x10000000000000UL});
+		public static readonly BitSet _180_in_static_constructor_modifiers5950 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _192_in_static_constructor_modifiers5955 = new BitSet(new ulong[]{0x0UL,0x0UL,0x10000000000000UL});
+		public static readonly BitSet _180_in_static_constructor_modifiers5957 = new BitSet(new ulong[]{0x2UL,0x0UL,0x8UL});
+		public static readonly BitSet _131_in_static_constructor_modifiers5959 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _180_in_static_constructor_modifiers5965 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8UL});
+		public static readonly BitSet _131_in_static_constructor_modifiers5967 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x1UL});
+		public static readonly BitSet _192_in_static_constructor_modifiers5969 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _180_in_static_constructor_modifiers5975 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1UL});
+		public static readonly BitSet _192_in_static_constructor_modifiers5977 = new BitSet(new ulong[]{0x2UL,0x0UL,0x8UL});
+		public static readonly BitSet _131_in_static_constructor_modifiers5979 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _131_in_static_constructor_modifiers5986 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _192_in_static_constructor_modifiers5991 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _180_in_static_constructor_modifiers5996 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _block_in_static_constructor_body6003 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_destructor_declaration6011 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000000000000004UL,0x2000UL});
-		public static readonly BitSet _destructor_modifiers_in_destructor_declaration6016 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
-		public static readonly BitSet _205_in_destructor_declaration6021 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_destructor_declaration6024 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_destructor_declaration6028 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_destructor_declaration6032 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _attributes_in_destructor_declaration6011 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8UL,0x4001UL});
+		public static readonly BitSet _destructor_modifiers_in_destructor_declaration6016 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x4000UL});
+		public static readonly BitSet _206_in_destructor_declaration6021 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_destructor_declaration6024 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_destructor_declaration6028 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_destructor_declaration6032 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _destructor_body_in_destructor_declaration6037 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _130_in_destructor_modifiers6046 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000000000000000UL});
-		public static readonly BitSet _191_in_destructor_modifiers6049 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _130_in_destructor_modifiers6056 = new BitSet(new ulong[]{0x2UL,0x0UL,0x8000000000000000UL});
-		public static readonly BitSet _191_in_destructor_modifiers6058 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _131_in_destructor_modifiers6046 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1UL});
+		public static readonly BitSet _192_in_destructor_modifiers6049 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _131_in_destructor_modifiers6056 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x1UL});
+		public static readonly BitSet _192_in_destructor_modifiers6058 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _block_in_destructor_body6068 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_struct_declaration6078 = new BitSet(new ulong[]{0x0UL,0x0UL,0x802001A804010000UL});
-		public static readonly BitSet _struct_modifiers_in_struct_declaration6083 = new BitSet(new ulong[]{0x0UL,0x0UL,0x20000800000000UL});
-		public static readonly BitSet _163_in_struct_declaration6088 = new BitSet(new ulong[]{0x0UL,0x0UL,0x20000000000000UL});
-		public static readonly BitSet _181_in_struct_declaration6093 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_struct_declaration6097 = new BitSet(new ulong[]{0x0UL,0x280000UL,0x0UL,0x120UL});
-		public static readonly BitSet _generic_parameter_list_in_struct_declaration6101 = new BitSet(new ulong[]{0x0UL,0x80000UL,0x0UL,0x120UL});
-		public static readonly BitSet _struct_interfaces_in_struct_declaration6107 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x120UL});
-		public static readonly BitSet _type_parameter_constraints_clauses_in_struct_declaration6112 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _struct_body_in_struct_declaration6117 = new BitSet(new ulong[]{0x10000000000002UL});
+		public static readonly BitSet _attributes_in_struct_declaration6078 = new BitSet(new ulong[]{0x0UL,0x0UL,0x40035008020000UL,0x1UL});
+		public static readonly BitSet _struct_modifiers_in_struct_declaration6083 = new BitSet(new ulong[]{0x0UL,0x0UL,0x40001000000000UL});
+		public static readonly BitSet _164_in_struct_declaration6088 = new BitSet(new ulong[]{0x0UL,0x0UL,0x40000000000000UL});
+		public static readonly BitSet _182_in_struct_declaration6093 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_struct_declaration6097 = new BitSet(new ulong[]{0x0UL,0x500000UL,0x0UL,0x240UL});
+		public static readonly BitSet _generic_parameter_list_in_struct_declaration6101 = new BitSet(new ulong[]{0x0UL,0x100000UL,0x0UL,0x240UL});
+		public static readonly BitSet _struct_interfaces_in_struct_declaration6107 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x240UL});
+		public static readonly BitSet _type_parameter_constraints_clauses_in_struct_declaration6112 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x200UL});
+		public static readonly BitSet _struct_body_in_struct_declaration6117 = new BitSet(new ulong[]{0x20000000000002UL});
 		public static readonly BitSet _SEMI_in_struct_declaration6121 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _struct_modifier_in_struct_modifiers6130 = new BitSet(new ulong[]{0x2UL,0x0UL,0x800001A004010000UL});
-		public static readonly BitSet _83_in_struct_interfaces6167 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _struct_modifier_in_struct_modifiers6130 = new BitSet(new ulong[]{0x2UL,0x0UL,0x34008020000UL,0x1UL});
+		public static readonly BitSet _84_in_struct_interfaces6167 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _interface_type_list_in_struct_interfaces6171 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_struct_body6178 = new BitSet(new ulong[]{0x20000020440000UL,0xED69AF7880000000UL,0xB439EBFB5DDBCA6DUL,0x10BFUL});
-		public static readonly BitSet _struct_member_declarations_in_struct_body6182 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_struct_body6187 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _struct_member_declaration_in_struct_member_declarations6194 = new BitSet(new ulong[]{0x20000020440002UL,0xED69AF7880000000UL,0xB439EBFB5DDBCA6DUL,0xBFUL});
+		public static readonly BitSet _201_in_struct_body6178 = new BitSet(new ulong[]{0x40000040880000UL,0xDAD35EF100000000UL,0x6873D7F6BBB794DBUL,0x217FUL});
+		public static readonly BitSet _struct_member_declarations_in_struct_body6182 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_struct_body6187 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _struct_member_declaration_in_struct_member_declarations6194 = new BitSet(new ulong[]{0x40000040880002UL,0xDAD35EF100000000UL,0x6873D7F6BBB794DBUL,0x17FUL});
 		public static readonly BitSet _constant_declaration_in_struct_member_declaration6203 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _fixed_size_buffer_declaration_in_struct_member_declaration6208 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _field_declaration_in_struct_member_declaration6213 = new BitSet(new ulong[]{0x2UL});
@@ -61446,106 +61447,106 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _constructor_declaration_in_struct_member_declaration6243 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _static_constructor_declaration_in_struct_member_declaration6248 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _type_declaration_in_struct_member_declaration6253 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_fixed_size_buffer_declaration6261 = new BitSet(new ulong[]{0x0UL,0x0UL,0x800001A004010020UL});
-		public static readonly BitSet _fixed_size_buffer_modifiers_in_fixed_size_buffer_declaration6264 = new BitSet(new ulong[]{0x0UL,0x0UL,0x20UL});
-		public static readonly BitSet _133_in_fixed_size_buffer_declaration6267 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_fixed_size_buffer_declaration6269 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _fixed_size_buffer_declarators_in_fixed_size_buffer_declaration6271 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _attributes_in_fixed_size_buffer_declaration6261 = new BitSet(new ulong[]{0x0UL,0x0UL,0x34008020040UL,0x1UL});
+		public static readonly BitSet _fixed_size_buffer_modifiers_in_fixed_size_buffer_declaration6264 = new BitSet(new ulong[]{0x0UL,0x0UL,0x40UL});
+		public static readonly BitSet _134_in_fixed_size_buffer_declaration6267 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_fixed_size_buffer_declaration6269 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _fixed_size_buffer_declarators_in_fixed_size_buffer_declaration6271 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_fixed_size_buffer_declaration6273 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _fixed_size_buffer_modifier_in_fixed_size_buffer_modifiers6281 = new BitSet(new ulong[]{0x2UL,0x0UL,0x800001A004010000UL});
-		public static readonly BitSet _fixed_size_buffer_declarator_in_fixed_size_buffer_declarators6317 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_fixed_size_buffer_declarators6320 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _fixed_size_buffer_declarator_in_fixed_size_buffer_declarators6322 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _identifier_in_fixed_size_buffer_declarator6331 = new BitSet(new ulong[]{0x0UL,0x80000000UL});
-		public static readonly BitSet _95_in_fixed_size_buffer_declarator6333 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _constant_expression_in_fixed_size_buffer_declarator6335 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
-		public static readonly BitSet _96_in_fixed_size_buffer_declarator6337 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_interface_declaration6346 = new BitSet(new ulong[]{0x0UL,0x0UL,0x800001A804018000UL});
-		public static readonly BitSet _interface_modifiers_in_interface_declaration6351 = new BitSet(new ulong[]{0x0UL,0x0UL,0x800008000UL});
-		public static readonly BitSet _163_in_interface_declaration6356 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000UL});
-		public static readonly BitSet _143_in_interface_declaration6361 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_interface_declaration6365 = new BitSet(new ulong[]{0x0UL,0x280000UL,0x0UL,0x120UL});
-		public static readonly BitSet _variant_generic_parameter_list_in_interface_declaration6369 = new BitSet(new ulong[]{0x0UL,0x80000UL,0x0UL,0x120UL});
-		public static readonly BitSet _interface_base_in_interface_declaration6378 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x120UL});
-		public static readonly BitSet _type_parameter_constraints_clauses_in_interface_declaration6383 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _interface_body_in_interface_declaration6388 = new BitSet(new ulong[]{0x10000000000002UL});
+		public static readonly BitSet _fixed_size_buffer_modifier_in_fixed_size_buffer_modifiers6281 = new BitSet(new ulong[]{0x2UL,0x0UL,0x34008020000UL,0x1UL});
+		public static readonly BitSet _fixed_size_buffer_declarator_in_fixed_size_buffer_declarators6317 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_fixed_size_buffer_declarators6320 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _fixed_size_buffer_declarator_in_fixed_size_buffer_declarators6322 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _identifier_in_fixed_size_buffer_declarator6331 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
+		public static readonly BitSet _96_in_fixed_size_buffer_declarator6333 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _constant_expression_in_fixed_size_buffer_declarator6335 = new BitSet(new ulong[]{0x0UL,0x200000000UL});
+		public static readonly BitSet _97_in_fixed_size_buffer_declarator6337 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _attributes_in_interface_declaration6346 = new BitSet(new ulong[]{0x0UL,0x0UL,0x35008030000UL,0x1UL});
+		public static readonly BitSet _interface_modifiers_in_interface_declaration6351 = new BitSet(new ulong[]{0x0UL,0x0UL,0x1000010000UL});
+		public static readonly BitSet _164_in_interface_declaration6356 = new BitSet(new ulong[]{0x0UL,0x0UL,0x10000UL});
+		public static readonly BitSet _144_in_interface_declaration6361 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_interface_declaration6365 = new BitSet(new ulong[]{0x0UL,0x500000UL,0x0UL,0x240UL});
+		public static readonly BitSet _variant_generic_parameter_list_in_interface_declaration6369 = new BitSet(new ulong[]{0x0UL,0x100000UL,0x0UL,0x240UL});
+		public static readonly BitSet _interface_base_in_interface_declaration6378 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x240UL});
+		public static readonly BitSet _type_parameter_constraints_clauses_in_interface_declaration6383 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x200UL});
+		public static readonly BitSet _interface_body_in_interface_declaration6388 = new BitSet(new ulong[]{0x20000000000002UL});
 		public static readonly BitSet _SEMI_in_interface_declaration6392 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _interface_modifier_in_interface_modifiers6403 = new BitSet(new ulong[]{0x2UL,0x0UL,0x800001A004010000UL});
-		public static readonly BitSet _83_in_interface_base6444 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _interface_modifier_in_interface_modifiers6403 = new BitSet(new ulong[]{0x2UL,0x0UL,0x34008020000UL,0x1UL});
+		public static readonly BitSet _84_in_interface_base6444 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _interface_type_list_in_interface_base6446 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_interface_body6454 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF7880000000UL,0xB419E9FB5DDB4A4DUL,0x10AFUL});
-		public static readonly BitSet _interface_member_declarations_in_interface_body6458 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_interface_body6463 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _interface_member_declaration_in_interface_member_declarations6471 = new BitSet(new ulong[]{0x20000020400002UL,0xE909AF7880000000UL,0xB419E9FB5DDB4A4DUL,0xAFUL});
+		public static readonly BitSet _201_in_interface_body6454 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135EF100000000UL,0x6833D3F6BBB6949BUL,0x215FUL});
+		public static readonly BitSet _interface_member_declarations_in_interface_body6458 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_interface_body6463 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _interface_member_declaration_in_interface_member_declarations6471 = new BitSet(new ulong[]{0x40000040800002UL,0xD2135EF100000000UL,0x6833D3F6BBB6949BUL,0x15FUL});
 		public static readonly BitSet _interface_property_declaration_in_interface_member_declaration6480 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _interface_method_declaration_in_interface_member_declaration6486 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _interface_event_declaration_in_interface_member_declaration6492 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _interface_indexer_declaration_in_interface_member_declaration6498 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_interface_method_declaration6506 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF7800000000UL,0xB419E9FB5DDB4A4CUL,0xAFUL});
-		public static readonly BitSet _154_in_interface_method_declaration6511 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF7800000000UL,0xB419E9FB5DDB4A4CUL,0xAFUL});
-		public static readonly BitSet _method_modifiers_in_interface_method_declaration6516 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _return_type_in_interface_method_declaration6520 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_interface_method_declaration6524 = new BitSet(new ulong[]{0x0UL,0x200100UL});
-		public static readonly BitSet _generic_parameter_list_in_interface_method_declaration6528 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_interface_method_declaration6536 = new BitSet(new ulong[]{0x22000020400000UL,0xE909AF6880000000UL,0x3491AC5ED9DA4A48UL,0xABUL});
-		public static readonly BitSet _formal_parameter_list_in_interface_method_declaration6541 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_interface_method_declaration6546 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x20UL});
-		public static readonly BitSet _type_parameter_constraints_clauses_in_interface_method_declaration6551 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _attributes_in_interface_method_declaration6506 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135EF000000000UL,0x6833D3F6BBB69499UL,0x15FUL});
+		public static readonly BitSet _155_in_interface_method_declaration6511 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135EF000000000UL,0x6833D3F6BBB69499UL,0x15FUL});
+		public static readonly BitSet _method_modifiers_in_interface_method_declaration6516 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _return_type_in_interface_method_declaration6520 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_interface_method_declaration6524 = new BitSet(new ulong[]{0x0UL,0x400200UL});
+		public static readonly BitSet _generic_parameter_list_in_interface_method_declaration6528 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_interface_method_declaration6536 = new BitSet(new ulong[]{0x44000040800000UL,0xD2135ED100000000UL,0x692358BDB3B49491UL,0x156UL});
+		public static readonly BitSet _formal_parameter_list_in_interface_method_declaration6541 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_interface_method_declaration6546 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x40UL});
+		public static readonly BitSet _type_parameter_constraints_clauses_in_interface_method_declaration6551 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_interface_method_declaration6556 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_interface_property_declaration6565 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A5DDA4A48UL,0xABUL});
-		public static readonly BitSet _154_in_interface_property_declaration6570 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_interface_property_declaration6575 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_interface_property_declaration6579 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _200_in_interface_property_declaration6583 = new BitSet(new ulong[]{0x20000000400000UL,0x80000000UL});
-		public static readonly BitSet _interface_accessor_declarations_in_interface_property_declaration6587 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_interface_property_declaration6591 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _interface_get_accessor_declaration_in_interface_accessor_declarations6599 = new BitSet(new ulong[]{0x20000000000002UL,0x80000000UL});
+		public static readonly BitSet _attributes_in_interface_property_declaration6565 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4BBB49491UL,0x156UL});
+		public static readonly BitSet _155_in_interface_property_declaration6570 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_interface_property_declaration6575 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_interface_property_declaration6579 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x200UL});
+		public static readonly BitSet _201_in_interface_property_declaration6583 = new BitSet(new ulong[]{0x40000000800000UL,0x100000000UL});
+		public static readonly BitSet _interface_accessor_declarations_in_interface_property_declaration6587 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_interface_property_declaration6591 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _interface_get_accessor_declaration_in_interface_accessor_declarations6599 = new BitSet(new ulong[]{0x40000000000002UL,0x100000000UL});
 		public static readonly BitSet _interface_set_accessor_declaration_in_interface_accessor_declarations6603 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _interface_set_accessor_declaration_in_interface_accessor_declarations6609 = new BitSet(new ulong[]{0x400002UL,0x80000000UL});
+		public static readonly BitSet _interface_set_accessor_declaration_in_interface_accessor_declarations6609 = new BitSet(new ulong[]{0x800002UL,0x100000000UL});
 		public static readonly BitSet _interface_get_accessor_declaration_in_interface_accessor_declarations6613 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_interface_get_accessor_declaration6622 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _GET_in_interface_get_accessor_declaration6627 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _attributes_in_interface_get_accessor_declaration6622 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _GET_in_interface_get_accessor_declaration6627 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_interface_get_accessor_declaration6631 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_interface_set_accessor_declaration6641 = new BitSet(new ulong[]{0x20000000000000UL});
-		public static readonly BitSet _SET_in_interface_set_accessor_declaration6646 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _attributes_in_interface_set_accessor_declaration6641 = new BitSet(new ulong[]{0x40000000000000UL});
+		public static readonly BitSet _SET_in_interface_set_accessor_declaration6646 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_interface_set_accessor_declaration6650 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_interface_event_declaration6661 = new BitSet(new ulong[]{0x0UL,0x0UL,0x4000001UL});
-		public static readonly BitSet _154_in_interface_event_declaration6666 = new BitSet(new ulong[]{0x0UL,0x0UL,0x1UL});
-		public static readonly BitSet _128_in_interface_event_declaration6671 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_interface_event_declaration6675 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_interface_event_declaration6679 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _attributes_in_interface_event_declaration6661 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000002UL});
+		public static readonly BitSet _155_in_interface_event_declaration6666 = new BitSet(new ulong[]{0x0UL,0x0UL,0x2UL});
+		public static readonly BitSet _129_in_interface_event_declaration6671 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_interface_event_declaration6675 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_interface_event_declaration6679 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_interface_event_declaration6683 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_interface_indexer_declaration6693 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A5DDA4A48UL,0xABUL});
-		public static readonly BitSet _154_in_interface_indexer_declaration6699 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_interface_indexer_declaration6705 = new BitSet(new ulong[]{0x0UL,0x0UL,0x80000000000000UL});
-		public static readonly BitSet _183_in_interface_indexer_declaration6709 = new BitSet(new ulong[]{0x0UL,0x80000000UL});
-		public static readonly BitSet _95_in_interface_indexer_declaration6713 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6880000000UL,0x3491AC5ED9DA4A48UL,0xABUL});
-		public static readonly BitSet _formal_parameter_list_in_interface_indexer_declaration6717 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
-		public static readonly BitSet _96_in_interface_indexer_declaration6721 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _200_in_interface_indexer_declaration6725 = new BitSet(new ulong[]{0x20000000400000UL,0x80000000UL});
-		public static readonly BitSet _interface_accessor_declarations_in_interface_indexer_declaration6729 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_interface_indexer_declaration6733 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_enum_declaration6744 = new BitSet(new ulong[]{0x40000UL,0x0UL,0x1A004010000UL});
-		public static readonly BitSet _enum_modifiers_in_enum_declaration6749 = new BitSet(new ulong[]{0x40000UL});
-		public static readonly BitSet _ENUM_in_enum_declaration6754 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_enum_declaration6758 = new BitSet(new ulong[]{0x0UL,0x80000UL,0x0UL,0x100UL});
-		public static readonly BitSet _enum_base_in_enum_declaration6762 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _enum_body_in_enum_declaration6767 = new BitSet(new ulong[]{0x10000000000002UL});
+		public static readonly BitSet _attributes_in_interface_indexer_declaration6693 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4BBB49491UL,0x156UL});
+		public static readonly BitSet _155_in_interface_indexer_declaration6699 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_interface_indexer_declaration6705 = new BitSet(new ulong[]{0x0UL,0x0UL,0x100000000000000UL});
+		public static readonly BitSet _184_in_interface_indexer_declaration6709 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
+		public static readonly BitSet _96_in_interface_indexer_declaration6713 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED100000000UL,0x692358BDB3B49491UL,0x156UL});
+		public static readonly BitSet _formal_parameter_list_in_interface_indexer_declaration6717 = new BitSet(new ulong[]{0x0UL,0x200000000UL});
+		public static readonly BitSet _97_in_interface_indexer_declaration6721 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x200UL});
+		public static readonly BitSet _201_in_interface_indexer_declaration6725 = new BitSet(new ulong[]{0x40000000800000UL,0x100000000UL});
+		public static readonly BitSet _interface_accessor_declarations_in_interface_indexer_declaration6729 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_interface_indexer_declaration6733 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _attributes_in_enum_declaration6744 = new BitSet(new ulong[]{0x80000UL,0x0UL,0x34008020000UL});
+		public static readonly BitSet _enum_modifiers_in_enum_declaration6749 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _ENUM_in_enum_declaration6754 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_enum_declaration6758 = new BitSet(new ulong[]{0x0UL,0x100000UL,0x0UL,0x200UL});
+		public static readonly BitSet _enum_base_in_enum_declaration6762 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x200UL});
+		public static readonly BitSet _enum_body_in_enum_declaration6767 = new BitSet(new ulong[]{0x20000000000002UL});
 		public static readonly BitSet _SEMI_in_enum_declaration6771 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _83_in_enum_base6782 = new BitSet(new ulong[]{0x0UL,0x9000000000000UL,0x3001200000404000UL,0x1UL});
+		public static readonly BitSet _84_in_enum_base6782 = new BitSet(new ulong[]{0x0UL,0x12000000000000UL,0x6002400000808000UL,0x2UL});
 		public static readonly BitSet _integral_type_in_enum_base6786 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_enum_body6794 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6880000000UL,0x400885A519A0A08UL,0x10A2UL});
-		public static readonly BitSet _enum_member_declarations_in_enum_body6797 = new BitSet(new ulong[]{0x0UL,0x4000UL,0x0UL,0x1000UL});
-		public static readonly BitSet _78_in_enum_body6799 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_enum_body6806 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _enum_member_declaration_in_enum_member_declarations6814 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_enum_member_declarations6817 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6880000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _enum_member_declaration_in_enum_member_declarations6819 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _attributes_in_enum_member_declaration6829 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_enum_member_declaration6834 = new BitSet(new ulong[]{0x2UL,0x2000000UL});
-		public static readonly BitSet _89_in_enum_member_declaration6839 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _201_in_enum_body6794 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED100000000UL,0x80110B4A3341411UL,0x2144UL});
+		public static readonly BitSet _enum_member_declarations_in_enum_body6797 = new BitSet(new ulong[]{0x0UL,0x8000UL,0x0UL,0x2000UL});
+		public static readonly BitSet _79_in_enum_body6799 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_enum_body6806 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _enum_member_declaration_in_enum_member_declarations6814 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_enum_member_declarations6817 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED100000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _enum_member_declaration_in_enum_member_declarations6819 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _attributes_in_enum_member_declaration6829 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_enum_member_declaration6834 = new BitSet(new ulong[]{0x2UL,0x4000000UL});
+		public static readonly BitSet _90_in_enum_member_declaration6839 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _expression_in_enum_member_declaration6843 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _enum_modifier_in_enum_modifiers6853 = new BitSet(new ulong[]{0x2UL,0x0UL,0x1A004010000UL});
+		public static readonly BitSet _enum_modifier_in_enum_modifiers6853 = new BitSet(new ulong[]{0x2UL,0x0UL,0x34008020000UL});
 		public static readonly BitSet _labeled_statement_in_statement6888 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _declaration_statement_in_statement6893 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _embedded_statement_in_statement6898 = new BitSet(new ulong[]{0x2UL});
@@ -61562,64 +61563,64 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _yield_statement_in_embedded_statement6959 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _unsafe_statement_in_embedded_statement6965 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _fixed_statement_in_embedded_statement6970 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _133_in_fixed_statement6977 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_fixed_statement6981 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _pointer_type_in_fixed_statement6985 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _fixed_pointer_declarators_in_fixed_statement6987 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_fixed_statement6991 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
+		public static readonly BitSet _134_in_fixed_statement6977 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_fixed_statement6981 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _pointer_type_in_fixed_statement6985 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _fixed_pointer_declarators_in_fixed_statement6987 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_fixed_statement6991 = new BitSet(new ulong[]{0xA2E800E0E0C00020UL,0xFF33FED000013684UL,0xFFA770B4BBF49FD1UL,0x43C7UL});
 		public static readonly BitSet _embedded_statement_in_fixed_statement6995 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _fixed_pointer_declarator_in_fixed_pointer_declarators7003 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_fixed_pointer_declarators7008 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _fixed_pointer_declarator_in_fixed_pointer_declarators7012 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _identifier_in_fixed_pointer_declarator7022 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
-		public static readonly BitSet _89_in_fixed_pointer_declarator7026 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _fixed_pointer_declarator_in_fixed_pointer_declarators7003 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_fixed_pointer_declarators7008 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _fixed_pointer_declarator_in_fixed_pointer_declarators7012 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _identifier_in_fixed_pointer_declarator7022 = new BitSet(new ulong[]{0x0UL,0x4000000UL});
+		public static readonly BitSet _90_in_fixed_pointer_declarator7026 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _fixed_pointer_initializer_in_fixed_pointer_declarator7030 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _70_in_fixed_pointer_initializer7038 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _71_in_fixed_pointer_initializer7038 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _variable_reference_in_fixed_pointer_initializer7042 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_fixed_pointer_initializer7050 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _191_in_unsafe_statement7057 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _192_in_unsafe_statement7057 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _block_in_unsafe_statement7061 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _SEMI_in_block7068 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_block7074 = new BitSet(new ulong[]{0x5174007070600020UL,0xFFD9FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x31EBUL});
-		public static readonly BitSet _statement_list_in_block7078 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_block7083 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _statement_in_statement_list7091 = new BitSet(new ulong[]{0x5174007070600022UL,0xFFD9FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21EBUL});
+		public static readonly BitSet _201_in_block7074 = new BitSet(new ulong[]{0xA2E800E0E0C00020UL,0xFFB3FED000013684UL,0xFFA770B4BBF49FD1UL,0x63D7UL});
+		public static readonly BitSet _statement_list_in_block7078 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_block7083 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _statement_in_statement_list7091 = new BitSet(new ulong[]{0xA2E800E0E0C00022UL,0xFFB3FED000013684UL,0xFFA770B4BBF49FD1UL,0x43D7UL});
 		public static readonly BitSet _SEMI_in_empty_statement7100 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _identifier_in_labeled_statement7108 = new BitSet(new ulong[]{0x0UL,0x80000UL});
-		public static readonly BitSet _83_in_labeled_statement7112 = new BitSet(new ulong[]{0x5174007070600020UL,0xFFD9FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21EBUL});
+		public static readonly BitSet _identifier_in_labeled_statement7108 = new BitSet(new ulong[]{0x0UL,0x100000UL});
+		public static readonly BitSet _84_in_labeled_statement7112 = new BitSet(new ulong[]{0xA2E800E0E0C00020UL,0xFFB3FED000013684UL,0xFFA770B4BBF49FD1UL,0x43D7UL});
 		public static readonly BitSet _statement_in_labeled_statement7116 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _local_variable_declaration_in_declaration_statement7125 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _local_constant_declaration_in_declaration_statement7131 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _local_variable_declaration_in_declaration_statement7125 = new BitSet(new ulong[]{0x20000000000000UL});
+		public static readonly BitSet _local_constant_declaration_in_declaration_statement7131 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_declaration_statement7134 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _local_variable_type_in_local_variable_declaration7142 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _local_variable_type_in_local_variable_declaration7142 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _local_variable_declarators_in_local_variable_declaration7146 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _type_in_local_variable_type7154 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _193_in_local_variable_type7159 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _126_in_local_variable_type7165 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _local_variable_declarator_in_local_variable_declarators7172 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_local_variable_declarators7175 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _local_variable_declarator_in_local_variable_declarators7177 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _identifier_in_local_variable_declarator7187 = new BitSet(new ulong[]{0x2UL,0x2000000UL});
-		public static readonly BitSet _89_in_local_variable_declarator7190 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C97A85A5DDA4A48UL,0x21A3UL});
+		public static readonly BitSet _194_in_local_variable_type7159 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _127_in_local_variable_type7165 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _local_variable_declarator_in_local_variable_declarators7172 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_local_variable_declarators7175 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _local_variable_declarator_in_local_variable_declarators7177 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _identifier_in_local_variable_declarator7187 = new BitSet(new ulong[]{0x2UL,0x4000000UL});
+		public static readonly BitSet _90_in_local_variable_declarator7190 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92F50B4BBB49491UL,0x4346UL});
 		public static readonly BitSet _local_variable_initializer_in_local_variable_declarator7194 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_local_variable_initializer7207 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _array_initializer_in_local_variable_initializer7212 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _stackalloc_initializer_in_local_variable_initializer7218 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _178_in_stackalloc_initializer7225 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _unmanaged_type_in_stackalloc_initializer7229 = new BitSet(new ulong[]{0x0UL,0x80000000UL});
-		public static readonly BitSet _95_in_stackalloc_initializer7233 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_stackalloc_initializer7237 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
-		public static readonly BitSet _96_in_stackalloc_initializer7241 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _118_in_local_constant_declaration7249 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_local_constant_declaration7253 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _179_in_stackalloc_initializer7225 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _unmanaged_type_in_stackalloc_initializer7229 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
+		public static readonly BitSet _96_in_stackalloc_initializer7233 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_stackalloc_initializer7237 = new BitSet(new ulong[]{0x0UL,0x200000000UL});
+		public static readonly BitSet _97_in_stackalloc_initializer7241 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _119_in_local_constant_declaration7249 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_local_constant_declaration7253 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _constant_declarators_in_local_constant_declaration7257 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _constant_declarator_in_constant_declarators7265 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_constant_declarators7268 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _constant_declarator_in_constant_declarators7270 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _identifier_in_constant_declarator7280 = new BitSet(new ulong[]{0x2UL,0x2000000UL});
-		public static readonly BitSet _89_in_constant_declarator7285 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _constant_declarator_in_constant_declarators7265 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_constant_declarators7268 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _constant_declarator_in_constant_declarators7270 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _identifier_in_constant_declarator7280 = new BitSet(new ulong[]{0x2UL,0x4000000UL});
+		public static readonly BitSet _90_in_constant_declarator7285 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _constant_expression_in_constant_declarator7289 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_expression_statement7300 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _expression_in_expression_statement7300 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_expression_statement7304 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _invocation_expression_in_statement_expression7312 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _object_creation_expression_in_statement_expression7317 = new BitSet(new ulong[]{0x2UL});
@@ -61627,149 +61628,149 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _unary_expression_in_statement_expression7327 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _if_statement_in_selection_statement7334 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _switch_statement_in_selection_statement7339 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IF_in_if_statement7347 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_if_statement7351 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _boolean_expression_in_if_statement7355 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_if_statement7359 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
-		public static readonly BitSet _embedded_statement_in_if_statement7363 = new BitSet(new ulong[]{0x4002UL});
+		public static readonly BitSet _IF_in_if_statement7347 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_if_statement7351 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _boolean_expression_in_if_statement7355 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_if_statement7359 = new BitSet(new ulong[]{0xA2E800E0E0C00020UL,0xFF33FED000013684UL,0xFFA770B4BBF49FD1UL,0x43C7UL});
+		public static readonly BitSet _embedded_statement_in_if_statement7363 = new BitSet(new ulong[]{0x8002UL});
 		public static readonly BitSet _else_statement_in_if_statement7367 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ELSE_in_else_statement7377 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
+		public static readonly BitSet _ELSE_in_else_statement7377 = new BitSet(new ulong[]{0xA2E800E0E0C00020UL,0xFF33FED000013684UL,0xFFA770B4BBF49FD1UL,0x43C7UL});
 		public static readonly BitSet _embedded_statement_in_else_statement7381 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _182_in_switch_statement7391 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_switch_statement7395 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_switch_statement7399 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_switch_statement7403 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _183_in_switch_statement7391 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_switch_statement7395 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_switch_statement7399 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_switch_statement7403 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _switch_block_in_switch_statement7407 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_switch_block7415 = new BitSet(new ulong[]{0x0UL,0x202000000000000UL,0x0UL,0x1000UL});
-		public static readonly BitSet _switch_sections_in_switch_block7419 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_switch_block7424 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _switch_section_in_switch_sections7432 = new BitSet(new ulong[]{0x2UL,0x202000000000000UL});
-		public static readonly BitSet _switch_labels_in_switch_section7441 = new BitSet(new ulong[]{0x5174007070600020UL,0xFFD9FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21EBUL});
+		public static readonly BitSet _201_in_switch_block7415 = new BitSet(new ulong[]{0x0UL,0x404000000000000UL,0x0UL,0x2000UL});
+		public static readonly BitSet _switch_sections_in_switch_block7419 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_switch_block7424 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _switch_section_in_switch_sections7432 = new BitSet(new ulong[]{0x2UL,0x404000000000000UL});
+		public static readonly BitSet _switch_labels_in_switch_section7441 = new BitSet(new ulong[]{0xA2E800E0E0C00020UL,0xFFB3FED000013684UL,0xFFA770B4BBF49FD1UL,0x43D7UL});
 		public static readonly BitSet _statement_list_in_switch_section7445 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _switch_label_in_switch_labels7453 = new BitSet(new ulong[]{0x2UL,0x202000000000000UL});
-		public static readonly BitSet _113_in_switch_label7463 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _constant_expression_in_switch_label7467 = new BitSet(new ulong[]{0x0UL,0x80000UL});
-		public static readonly BitSet _83_in_switch_label7471 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _121_in_switch_label7478 = new BitSet(new ulong[]{0x0UL,0x80000UL});
-		public static readonly BitSet _83_in_switch_label7482 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _switch_label_in_switch_labels7453 = new BitSet(new ulong[]{0x2UL,0x404000000000000UL});
+		public static readonly BitSet _114_in_switch_label7463 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _constant_expression_in_switch_label7467 = new BitSet(new ulong[]{0x0UL,0x100000UL});
+		public static readonly BitSet _84_in_switch_label7471 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _122_in_switch_label7478 = new BitSet(new ulong[]{0x0UL,0x100000UL});
+		public static readonly BitSet _84_in_switch_label7482 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _while_statement_in_iteration_statement7491 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _do_statement_in_iteration_statement7496 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _for_statement_in_iteration_statement7501 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _foreach_statement_in_iteration_statement7506 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _198_in_while_statement7514 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_while_statement7518 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _boolean_expression_in_while_statement7522 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_while_statement7526 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
+		public static readonly BitSet _199_in_while_statement7514 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_while_statement7518 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _boolean_expression_in_while_statement7522 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_while_statement7526 = new BitSet(new ulong[]{0xA2E800E0E0C00020UL,0xFF33FED000013684UL,0xFFA770B4BBF49FD1UL,0x43C7UL});
 		public static readonly BitSet _embedded_statement_in_while_statement7530 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _124_in_do_statement7538 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
-		public static readonly BitSet _embedded_statement_in_do_statement7542 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x40UL});
-		public static readonly BitSet _198_in_do_statement7546 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_do_statement7550 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _boolean_expression_in_do_statement7554 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_do_statement7558 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _125_in_do_statement7538 = new BitSet(new ulong[]{0xA2E800E0E0C00020UL,0xFF33FED000013684UL,0xFFA770B4BBF49FD1UL,0x43C7UL});
+		public static readonly BitSet _embedded_statement_in_do_statement7542 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x80UL});
+		public static readonly BitSet _199_in_do_statement7546 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_do_statement7550 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _boolean_expression_in_do_statement7554 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_do_statement7558 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_do_statement7562 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _135_in_for_statement7570 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_for_statement7574 = new BitSet(new ulong[]{0x4174007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20ABUL});
-		public static readonly BitSet _for_initializer_in_for_statement7578 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _SEMI_in_for_statement7583 = new BitSet(new ulong[]{0x4174007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _for_condition_in_for_statement7587 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _SEMI_in_for_statement7592 = new BitSet(new ulong[]{0x4166007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _for_iterator_in_for_statement7596 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_for_statement7601 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
+		public static readonly BitSet _136_in_for_statement7570 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_for_statement7574 = new BitSet(new ulong[]{0x82E800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4156UL});
+		public static readonly BitSet _for_initializer_in_for_statement7578 = new BitSet(new ulong[]{0x20000000000000UL});
+		public static readonly BitSet _SEMI_in_for_statement7583 = new BitSet(new ulong[]{0x82E800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _for_condition_in_for_statement7587 = new BitSet(new ulong[]{0x20000000000000UL});
+		public static readonly BitSet _SEMI_in_for_statement7592 = new BitSet(new ulong[]{0x82CC00E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _for_iterator_in_for_statement7596 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_for_statement7601 = new BitSet(new ulong[]{0xA2E800E0E0C00020UL,0xFF33FED000013684UL,0xFFA770B4BBF49FD1UL,0x43C7UL});
 		public static readonly BitSet _embedded_statement_in_for_statement7605 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _local_variable_declaration_in_for_initializer7613 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _statement_expression_list_in_for_initializer7618 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _boolean_expression_in_for_condition7626 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _statement_expression_list_in_for_iterator7634 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _statement_expression_in_statement_expression_list7642 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_statement_expression_list7645 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _statement_expression_in_statement_expression_list7647 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _136_in_foreach_statement7657 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_foreach_statement7661 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _local_variable_type_in_foreach_statement7665 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_foreach_statement7669 = new BitSet(new ulong[]{0x0UL,0x0UL,0x2000UL});
-		public static readonly BitSet _141_in_foreach_statement7673 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_foreach_statement7677 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_foreach_statement7681 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
+		public static readonly BitSet _statement_expression_in_statement_expression_list7642 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_statement_expression_list7645 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _statement_expression_in_statement_expression_list7647 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _137_in_foreach_statement7657 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_foreach_statement7661 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _local_variable_type_in_foreach_statement7665 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_foreach_statement7669 = new BitSet(new ulong[]{0x0UL,0x0UL,0x4000UL});
+		public static readonly BitSet _142_in_foreach_statement7673 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_foreach_statement7677 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_foreach_statement7681 = new BitSet(new ulong[]{0xA2E800E0E0C00020UL,0xFF33FED000013684UL,0xFFA770B4BBF49FD1UL,0x43C7UL});
 		public static readonly BitSet _embedded_statement_in_foreach_statement7685 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _break_statement_in_jump_statement7693 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _continue_statement_in_jump_statement7698 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _goto_statement_in_jump_statement7703 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _return_statement_in_jump_statement7708 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _throw_statement_in_jump_statement7713 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _110_in_break_statement7721 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _111_in_break_statement7721 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_break_statement7725 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _119_in_continue_statement7733 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _120_in_continue_statement7733 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_continue_statement7737 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _138_in_goto_statement7746 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_goto_statement7750 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _139_in_goto_statement7746 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_goto_statement7750 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_goto_statement7754 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _138_in_goto_statement7761 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
-		public static readonly BitSet _113_in_goto_statement7765 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _constant_expression_in_goto_statement7769 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _139_in_goto_statement7761 = new BitSet(new ulong[]{0x0UL,0x4000000000000UL});
+		public static readonly BitSet _114_in_goto_statement7765 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _constant_expression_in_goto_statement7769 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_goto_statement7773 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _138_in_goto_statement7780 = new BitSet(new ulong[]{0x0UL,0x200000000000000UL});
-		public static readonly BitSet _121_in_goto_statement7784 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _139_in_goto_statement7780 = new BitSet(new ulong[]{0x0UL,0x400000000000000UL});
+		public static readonly BitSet _122_in_goto_statement7784 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_goto_statement7788 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _172_in_return_statement7797 = new BitSet(new ulong[]{0x4174007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_return_statement7801 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _173_in_return_statement7797 = new BitSet(new ulong[]{0x82E800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_return_statement7801 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_return_statement7806 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _184_in_throw_statement7814 = new BitSet(new ulong[]{0x4174007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_throw_statement7818 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _185_in_throw_statement7814 = new BitSet(new ulong[]{0x82E800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_throw_statement7818 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_throw_statement7823 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _185_in_try_statement7837 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _block_in_try_statement7841 = new BitSet(new ulong[]{0x0UL,0x4000000000000UL});
-		public static readonly BitSet _catch_clauses_in_try_statement7845 = new BitSet(new ulong[]{0x2UL,0x0UL,0x10UL});
+		public static readonly BitSet _186_in_try_statement7837 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
+		public static readonly BitSet _block_in_try_statement7841 = new BitSet(new ulong[]{0x0UL,0x8000000000000UL});
+		public static readonly BitSet _catch_clauses_in_try_statement7845 = new BitSet(new ulong[]{0x2UL,0x0UL,0x20UL});
 		public static readonly BitSet _finally_clause_in_try_statement7849 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _185_in_try_statement7857 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _block_in_try_statement7861 = new BitSet(new ulong[]{0x0UL,0x0UL,0x10UL});
+		public static readonly BitSet _186_in_try_statement7857 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
+		public static readonly BitSet _block_in_try_statement7861 = new BitSet(new ulong[]{0x0UL,0x0UL,0x20UL});
 		public static readonly BitSet _finally_clause_in_try_statement7865 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _specific_catch_clauses_in_catch_clauses7874 = new BitSet(new ulong[]{0x2UL,0x4000000000000UL});
+		public static readonly BitSet _specific_catch_clauses_in_catch_clauses7874 = new BitSet(new ulong[]{0x2UL,0x8000000000000UL});
 		public static readonly BitSet _general_catch_clause_in_catch_clauses7878 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _specific_catch_clauses_in_catch_clauses7886 = new BitSet(new ulong[]{0x0UL,0x4000000000000UL});
+		public static readonly BitSet _specific_catch_clauses_in_catch_clauses7886 = new BitSet(new ulong[]{0x0UL,0x8000000000000UL});
 		public static readonly BitSet _general_catch_clause_in_catch_clauses7891 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _specific_catch_clause_in_specific_catch_clauses7900 = new BitSet(new ulong[]{0x2UL,0x4000000000000UL});
-		public static readonly BitSet _114_in_specific_catch_clause7909 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_specific_catch_clause7913 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _class_type_in_specific_catch_clause7917 = new BitSet(new ulong[]{0x22000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_specific_catch_clause7921 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_specific_catch_clause7926 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _specific_catch_clause_in_specific_catch_clauses7900 = new BitSet(new ulong[]{0x2UL,0x8000000000000UL});
+		public static readonly BitSet _115_in_specific_catch_clause7909 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_specific_catch_clause7913 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _class_type_in_specific_catch_clause7917 = new BitSet(new ulong[]{0x44000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_specific_catch_clause7921 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_specific_catch_clause7926 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _block_in_specific_catch_clause7930 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _114_in_general_catch_clause7938 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _115_in_general_catch_clause7938 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _block_in_general_catch_clause7942 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _132_in_finally_clause7950 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _133_in_finally_clause7950 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _block_in_finally_clause7954 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _116_in_checked_statement7962 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _117_in_checked_statement7962 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _block_in_checked_statement7966 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _190_in_unchecked_statement7974 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _191_in_unchecked_statement7974 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _block_in_unchecked_statement7978 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _149_in_lock_statement7986 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_lock_statement7990 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_lock_statement7993 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_lock_statement7997 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
+		public static readonly BitSet _150_in_lock_statement7986 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_lock_statement7990 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_lock_statement7993 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_lock_statement7997 = new BitSet(new ulong[]{0xA2E800E0E0C00020UL,0xFF33FED000013684UL,0xFFA770B4BBF49FD1UL,0x43C7UL});
 		public static readonly BitSet _embedded_statement_in_lock_statement8001 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _USING_in_using_statement8009 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_using_statement8013 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20ABUL});
-		public static readonly BitSet _resource_acquisition_in_using_statement8018 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_using_statement8022 = new BitSet(new ulong[]{0x5174007070600020UL,0xFF99FF6800009B42UL,0xFFD3B85A5DFA4FE8UL,0x21E3UL});
+		public static readonly BitSet _USING_in_using_statement8009 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_using_statement8013 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4156UL});
+		public static readonly BitSet _resource_acquisition_in_using_statement8018 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_using_statement8022 = new BitSet(new ulong[]{0xA2E800E0E0C00020UL,0xFF33FED000013684UL,0xFFA770B4BBF49FD1UL,0x43C7UL});
 		public static readonly BitSet _embedded_statement_in_using_statement8027 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _local_variable_declaration_in_resource_acquisition8035 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_resource_acquisition8040 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _199_in_yield_statement8049 = new BitSet(new ulong[]{0x0UL,0x0UL,0x100000000000UL});
-		public static readonly BitSet _172_in_yield_statement8053 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_yield_statement8057 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _200_in_yield_statement8049 = new BitSet(new ulong[]{0x0UL,0x0UL,0x200000000000UL});
+		public static readonly BitSet _173_in_yield_statement8053 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_yield_statement8057 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_yield_statement8061 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _199_in_yield_statement8068 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
-		public static readonly BitSet _110_in_yield_statement8072 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _200_in_yield_statement8068 = new BitSet(new ulong[]{0x0UL,0x800000000000UL});
+		public static readonly BitSet _111_in_yield_statement8072 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_yield_statement8076 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _set_in_identifier8232 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _set_in_identifier8376 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _using_directives_in_synpred1_cs87 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _namespace_declaration_in_synpred3_cs101 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _generic_argument_list_in_synpred8_cs176 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _identifier_in_synpred9_cs167 = new BitSet(new ulong[]{0x2UL,0x300000UL});
-		public static readonly BitSet _84_in_synpred9_cs170 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _identifier_in_synpred9_cs172 = new BitSet(new ulong[]{0x2UL,0x200000UL});
+		public static readonly BitSet _identifier_in_synpred9_cs167 = new BitSet(new ulong[]{0x2UL,0x600000UL});
+		public static readonly BitSet _85_in_synpred9_cs170 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _identifier_in_synpred9_cs172 = new BitSet(new ulong[]{0x2UL,0x400000UL});
 		public static readonly BitSet _generic_argument_list_in_synpred9_cs176 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _generic_argument_list_in_synpred13_cs215 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _using_directive_in_synpred18_cs289 = new BitSet(new ulong[]{0x2UL});
@@ -61777,66 +61778,66 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _struct_declaration_in_synpred23_cs381 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _interface_declaration_in_synpred24_cs386 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _enum_declaration_in_synpred25_cs391 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _identifier_in_synpred46_cs724 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
-		public static readonly BitSet _89_in_synpred46_cs726 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _identifier_in_synpred46_cs724 = new BitSet(new ulong[]{0x0UL,0x4000000UL});
+		public static readonly BitSet _90_in_synpred46_cs726 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _positional_argument_list_in_synpred47_cs747 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _identifier_in_synpred48_cs782 = new BitSet(new ulong[]{0x0UL,0x2000000UL});
-		public static readonly BitSet _89_in_synpred48_cs784 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _identifier_in_synpred51_cs827 = new BitSet(new ulong[]{0x0UL,0x80000UL});
-		public static readonly BitSet _83_in_synpred51_cs829 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _93_in_synpred64_cs959 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _identifier_in_synpred48_cs782 = new BitSet(new ulong[]{0x0UL,0x4000000UL});
+		public static readonly BitSet _90_in_synpred48_cs784 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _identifier_in_synpred51_cs827 = new BitSet(new ulong[]{0x0UL,0x100000UL});
+		public static readonly BitSet _84_in_synpred51_cs829 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _94_in_synpred64_cs959 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _rank_specifier_in_synpred76_cs1063 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _non_assignment_expression_in_synpred80_cs1167 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _cast_expression_in_synpred81_cs1180 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _73_in_synpred86_cs1229 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _74_in_synpred86_cs1229 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _unary_expression_in_synpred86_cs1233 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _await_expression_in_synpred87_cs1238 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primary_or_array_creation_expression_in_synpred92_cs1256 = new BitSet(new ulong[]{0x2UL,0x9000UL});
-		public static readonly BitSet _76_in_synpred92_cs1260 = new BitSet(new ulong[]{0x2UL,0x8000UL});
-		public static readonly BitSet _79_in_synpred92_cs1265 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _primary_or_array_creation_expression_in_synpred92_cs1256 = new BitSet(new ulong[]{0x2UL,0x12000UL});
+		public static readonly BitSet _77_in_synpred92_cs1260 = new BitSet(new ulong[]{0x2UL,0x10000UL});
+		public static readonly BitSet _80_in_synpred92_cs1265 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _pointer_indirection_expression_in_synpred93_cs1271 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _lambda_expression_in_synpred94_cs1345 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _query_expression_in_synpred95_cs1350 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _argument_name_in_synpred97_cs1407 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93AC5ADDDA4A48UL,0x20A3UL});
+		public static readonly BitSet _argument_name_in_synpred97_cs1407 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92758B5BBB49491UL,0x4146UL});
 		public static readonly BitSet _argument_value_in_synpred97_cs1411 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_synpred98_cs1435 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _namespace_or_type_name_in_synpred100_cs1471 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _namespace_or_type_name_in_synpred103_cs1471 = new BitSet(new ulong[]{0x2UL,0x80000200UL});
-		public static readonly BitSet _predefined_type_in_synpred103_cs1479 = new BitSet(new ulong[]{0x2UL,0x80000200UL});
-		public static readonly BitSet _73_in_synpred103_cs1485 = new BitSet(new ulong[]{0x2UL,0x80000200UL});
+		public static readonly BitSet _namespace_or_type_name_in_synpred103_cs1471 = new BitSet(new ulong[]{0x2UL,0x100000400UL});
+		public static readonly BitSet _predefined_type_in_synpred103_cs1479 = new BitSet(new ulong[]{0x2UL,0x100000400UL});
+		public static readonly BitSet _74_in_synpred103_cs1485 = new BitSet(new ulong[]{0x2UL,0x100000400UL});
 		public static readonly BitSet _rank_specifiers_in_synpred103_cs1490 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _170_in_synpred106_cs1459 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_synpred106_cs1461 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _namespace_or_type_name_in_synpred106_cs1471 = new BitSet(new ulong[]{0x2000000000000UL,0x80000200UL});
-		public static readonly BitSet _predefined_type_in_synpred106_cs1479 = new BitSet(new ulong[]{0x2000000000000UL,0x80000200UL});
-		public static readonly BitSet _73_in_synpred106_cs1485 = new BitSet(new ulong[]{0x2000000000000UL,0x80000200UL});
-		public static readonly BitSet _rank_specifiers_in_synpred106_cs1490 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _195_in_synpred106_cs1497 = new BitSet(new ulong[]{0x0UL,0x200UL});
-		public static readonly BitSet _73_in_synpred106_cs1501 = new BitSet(new ulong[]{0x2000000000000UL,0x80000200UL});
-		public static readonly BitSet _rank_specifiers_in_synpred106_cs1506 = new BitSet(new ulong[]{0x2000000000000UL});
-		public static readonly BitSet _RPAREN_in_synpred106_cs1515 = new BitSet(new ulong[]{0x0UL,0x0UL,0x40000000000UL});
+		public static readonly BitSet _171_in_synpred106_cs1459 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_synpred106_cs1461 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _namespace_or_type_name_in_synpred106_cs1471 = new BitSet(new ulong[]{0x4000000000000UL,0x100000400UL});
+		public static readonly BitSet _predefined_type_in_synpred106_cs1479 = new BitSet(new ulong[]{0x4000000000000UL,0x100000400UL});
+		public static readonly BitSet _74_in_synpred106_cs1485 = new BitSet(new ulong[]{0x4000000000000UL,0x100000400UL});
+		public static readonly BitSet _rank_specifiers_in_synpred106_cs1490 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _196_in_synpred106_cs1497 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _74_in_synpred106_cs1501 = new BitSet(new ulong[]{0x4000000000000UL,0x100000400UL});
+		public static readonly BitSet _rank_specifiers_in_synpred106_cs1506 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _RPAREN_in_synpred106_cs1515 = new BitSet(new ulong[]{0x0UL,0x0UL,0x80000000000UL});
 		public static readonly BitSet _ref_variable_reference_in_synpred106_cs1519 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _primary_expression_in_synpred107_cs1536 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _arguments_in_synpred110_cs1576 = new BitSet(new ulong[]{0x1000000000400UL,0x100UL});
-		public static readonly BitSet _access_operator_in_synpred110_cs1582 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _arguments_in_synpred110_cs1576 = new BitSet(new ulong[]{0x2000000000400UL,0x200UL});
+		public static readonly BitSet _access_operator_in_synpred110_cs1582 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _tinvocation_in_synpred110_cs1587 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _arguments_in_synpred112_cs1593 = new BitSet(new ulong[]{0x0UL,0x80000100UL});
+		public static readonly BitSet _arguments_in_synpred112_cs1593 = new BitSet(new ulong[]{0x0UL,0x100000200UL});
 		public static readonly BitSet _telement_part_in_synpred112_cs1598 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _bracket_expression_in_synpred116_cs1646 = new BitSet(new ulong[]{0x1000000000400UL,0x80000000UL});
-		public static readonly BitSet _access_operator_in_synpred116_cs1652 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _bracket_expression_in_synpred116_cs1646 = new BitSet(new ulong[]{0x2000000000400UL,0x100000000UL});
+		public static readonly BitSet _access_operator_in_synpred116_cs1652 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _telement_in_synpred116_cs1656 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _bracket_expression_in_synpred118_cs1662 = new BitSet(new ulong[]{0x0UL,0x80000100UL});
+		public static readonly BitSet _bracket_expression_in_synpred118_cs1662 = new BitSet(new ulong[]{0x0UL,0x100000200UL});
 		public static readonly BitSet _tinvocation_part_in_synpred118_cs1667 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _primary_expression_part_in_synpred121_cs1707 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primary_expression_start_in_synpred122_cs1703 = new BitSet(new ulong[]{0x1000000000402UL,0x80000100UL});
-		public static readonly BitSet _primary_expression_part_in_synpred122_cs1707 = new BitSet(new ulong[]{0x1000000000402UL,0x80000100UL});
+		public static readonly BitSet _primary_expression_start_in_synpred122_cs1703 = new BitSet(new ulong[]{0x2000000000402UL,0x100000200UL});
+		public static readonly BitSet _primary_expression_part_in_synpred122_cs1707 = new BitSet(new ulong[]{0x2000000000402UL,0x100000200UL});
 		public static readonly BitSet _delegate_creation_expression_in_synpred123_cs1713 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _identifier_in_synpred129_cs1799 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _generic_argument_list_in_synpred130_cs1808 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _bracket_expression_in_synpred132_cs1819 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _bracket_expression_in_synpred134_cs1830 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _identifier_in_synpred136_cs1836 = new BitSet(new ulong[]{0x0UL,0x100000UL});
-		public static readonly BitSet _84_in_synpred136_cs1840 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _identifier_in_synpred136_cs1836 = new BitSet(new ulong[]{0x0UL,0x200000UL});
+		public static readonly BitSet _85_in_synpred136_cs1840 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _identifier_in_synpred136_cs1844 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _brackets_or_arguments_in_synpred137_cs1853 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _brackets_or_arguments_in_synpred141_cs1894 = new BitSet(new ulong[]{0x2UL});
@@ -61854,78 +61855,78 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _access_part_in_synpred164_cs2173 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _argument_list_in_synpred166_cs2230 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _member_initializer_list_in_synpred170_cs2287 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_synpred171_cs2283 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0x10A2UL});
-		public static readonly BitSet _member_initializer_list_in_synpred171_cs2287 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_synpred171_cs2292 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _201_in_synpred171_cs2283 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x2144UL});
+		public static readonly BitSet _member_initializer_list_in_synpred171_cs2287 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_synpred171_cs2292 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_synpred173_cs2355 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _non_assignment_expression_in_synpred176_cs2411 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _rank_specifiers_in_synpred177_cs2448 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _non_array_type_in_synpred179_cs2440 = new BitSet(new ulong[]{0x0UL,0x80000000UL});
-		public static readonly BitSet _95_in_synpred179_cs2442 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_list_in_synpred179_cs2444 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
-		public static readonly BitSet _96_in_synpred179_cs2446 = new BitSet(new ulong[]{0x2UL,0x80000000UL,0x0UL,0x100UL});
-		public static readonly BitSet _rank_specifiers_in_synpred179_cs2448 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _non_array_type_in_synpred179_cs2440 = new BitSet(new ulong[]{0x0UL,0x100000000UL});
+		public static readonly BitSet _96_in_synpred179_cs2442 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_list_in_synpred179_cs2444 = new BitSet(new ulong[]{0x0UL,0x200000000UL});
+		public static readonly BitSet _97_in_synpred179_cs2446 = new BitSet(new ulong[]{0x2UL,0x100000000UL,0x0UL,0x200UL});
+		public static readonly BitSet _rank_specifiers_in_synpred179_cs2448 = new BitSet(new ulong[]{0x2UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _array_initializer_in_synpred179_cs2451 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _array_type_in_synpred180_cs2459 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x100UL});
+		public static readonly BitSet _array_type_in_synpred180_cs2459 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x200UL});
 		public static readonly BitSet _array_initializer_in_synpred180_cs2461 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _access_part_in_synpred181_cs2476 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _member_declarator_list_in_synpred182_cs2529 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _200_in_synpred183_cs2525 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0x10A2UL});
-		public static readonly BitSet _member_declarator_list_in_synpred183_cs2529 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1000UL});
-		public static readonly BitSet _204_in_synpred183_cs2534 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _187_in_synpred188_cs2637 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_synpred188_cs2641 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_synpred188_cs2645 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _201_in_synpred183_cs2525 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x2144UL});
+		public static readonly BitSet _member_declarator_list_in_synpred183_cs2529 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _205_in_synpred183_cs2534 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _188_in_synpred188_cs2637 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_synpred188_cs2641 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_synpred188_cs2645 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_synpred188_cs2649 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _187_in_synpred189_cs2655 = new BitSet(new ulong[]{0x0UL,0x100UL});
-		public static readonly BitSet _72_in_synpred189_cs2657 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _unbound_type_name_in_synpred189_cs2661 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _188_in_synpred189_cs2655 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_synpred189_cs2657 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _unbound_type_name_in_synpred189_cs2661 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _RPAREN_in_synpred189_cs2665 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _namespace_or_type_name_in_synpred208_cs3046 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _namespace_or_type_name_in_synpred211_cs3046 = new BitSet(new ulong[]{0x0UL,0x200UL});
-		public static readonly BitSet _predefined_type_in_synpred211_cs3051 = new BitSet(new ulong[]{0x0UL,0x200UL});
-		public static readonly BitSet _73_in_synpred211_cs3057 = new BitSet(new ulong[]{0x2UL,0x80000200UL});
+		public static readonly BitSet _namespace_or_type_name_in_synpred211_cs3046 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _predefined_type_in_synpred211_cs3051 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _74_in_synpred211_cs3057 = new BitSet(new ulong[]{0x2UL,0x100000400UL});
 		public static readonly BitSet _rank_specifiers_in_synpred211_cs3062 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _namespace_or_type_name_in_synpred212_cs3072 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _namespace_or_type_name_in_synpred214_cs3072 = new BitSet(new ulong[]{0x0UL,0x20000000UL});
-		public static readonly BitSet _predefined_type_in_synpred214_cs3077 = new BitSet(new ulong[]{0x0UL,0x20000000UL});
-		public static readonly BitSet _93_in_synpred214_cs3083 = new BitSet(new ulong[]{0x2UL,0x80000000UL});
+		public static readonly BitSet _namespace_or_type_name_in_synpred214_cs3072 = new BitSet(new ulong[]{0x0UL,0x40000000UL});
+		public static readonly BitSet _predefined_type_in_synpred214_cs3077 = new BitSet(new ulong[]{0x0UL,0x40000000UL});
+		public static readonly BitSet _94_in_synpred214_cs3083 = new BitSet(new ulong[]{0x2UL,0x100000000UL});
 		public static readonly BitSet _rank_specifiers_in_synpred214_cs3087 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _namespace_or_type_name_in_synpred215_cs3097 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _namespace_or_type_name_in_synpred217_cs3097 = new BitSet(new ulong[]{0x2UL,0x80000000UL});
-		public static readonly BitSet _predefined_type_in_synpred217_cs3102 = new BitSet(new ulong[]{0x2UL,0x80000000UL});
+		public static readonly BitSet _namespace_or_type_name_in_synpred217_cs3097 = new BitSet(new ulong[]{0x2UL,0x100000000UL});
+		public static readonly BitSet _predefined_type_in_synpred217_cs3102 = new BitSet(new ulong[]{0x2UL,0x100000000UL});
 		public static readonly BitSet _rank_specifiers_in_synpred217_cs3108 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _set_in_synpred232_cs3234 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _shift_expression_in_synpred232_cs3246 = new BitSet(new ulong[]{0x800002UL,0x11200000UL});
-		public static readonly BitSet _non_nullable_type_in_synpred234_cs3265 = new BitSet(new ulong[]{0x0UL,0x20000000UL});
-		public static readonly BitSet _93_in_synpred234_cs3267 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
-		public static readonly BitSet _expression_in_synpred234_cs3269 = new BitSet(new ulong[]{0x0UL,0x80000UL});
-		public static readonly BitSet _83_in_synpred234_cs3271 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _set_in_synpred232_cs3234 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _shift_expression_in_synpred232_cs3246 = new BitSet(new ulong[]{0x1000002UL,0x22400000UL});
+		public static readonly BitSet _non_nullable_type_in_synpred234_cs3265 = new BitSet(new ulong[]{0x0UL,0x40000000UL});
+		public static readonly BitSet _94_in_synpred234_cs3267 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
+		public static readonly BitSet _expression_in_synpred234_cs3269 = new BitSet(new ulong[]{0x0UL,0x100000UL});
+		public static readonly BitSet _84_in_synpred234_cs3271 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _expression_in_synpred234_cs3273 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _94_in_synpred243_cs3431 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _95_in_synpred243_cs3431 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _null_coalescing_expression_in_synpred243_cs3435 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _variable_initializer_list_in_synpred245_cs3477 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _explicit_anonymous_function_signature_in_synpred259_cs3579 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _implicit_anonymous_function_parameter_list_in_synpred260_cs3596 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_synpred263_cs3639 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _145_in_synpred277_cs3798 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _83_in_synpred306_cs4131 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _class_type_in_synpred306_cs4135 = new BitSet(new ulong[]{0x2UL,0x4000UL});
-		public static readonly BitSet _78_in_synpred306_cs4138 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _146_in_synpred277_cs3798 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _84_in_synpred306_cs4131 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _class_type_in_synpred306_cs4135 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _79_in_synpred306_cs4138 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _interface_type_list_in_synpred306_cs4140 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primary_constraint_in_synpred309_cs4206 = new BitSet(new ulong[]{0x0UL,0x4000UL});
-		public static readonly BitSet _78_in_synpred309_cs4212 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _secondary_constraint_list_in_synpred309_cs4216 = new BitSet(new ulong[]{0x0UL,0x4000UL});
-		public static readonly BitSet _78_in_synpred309_cs4220 = new BitSet(new ulong[]{0x0UL,0x0UL,0x4000000UL});
+		public static readonly BitSet _primary_constraint_in_synpred309_cs4206 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _79_in_synpred309_cs4212 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _secondary_constraint_list_in_synpred309_cs4216 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _79_in_synpred309_cs4220 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000000UL});
 		public static readonly BitSet _constructor_constraint_in_synpred309_cs4224 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primary_constraint_in_synpred310_cs4231 = new BitSet(new ulong[]{0x0UL,0x4000UL});
-		public static readonly BitSet _78_in_synpred310_cs4237 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
+		public static readonly BitSet _primary_constraint_in_synpred310_cs4231 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _79_in_synpred310_cs4237 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
 		public static readonly BitSet _secondary_constraint_list_in_synpred310_cs4241 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primary_constraint_in_synpred311_cs4248 = new BitSet(new ulong[]{0x0UL,0x4000UL});
-		public static readonly BitSet _78_in_synpred311_cs4254 = new BitSet(new ulong[]{0x0UL,0x0UL,0x4000000UL});
+		public static readonly BitSet _primary_constraint_in_synpred311_cs4248 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _79_in_synpred311_cs4254 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000000UL});
 		public static readonly BitSet _constructor_constraint_in_synpred311_cs4258 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _secondary_constraint_list_in_synpred312_cs4265 = new BitSet(new ulong[]{0x0UL,0x4000UL});
-		public static readonly BitSet _78_in_synpred312_cs4270 = new BitSet(new ulong[]{0x0UL,0x0UL,0x4000000UL});
+		public static readonly BitSet _secondary_constraint_list_in_synpred312_cs4265 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _79_in_synpred312_cs4270 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000000UL});
 		public static readonly BitSet _constructor_constraint_in_synpred312_cs4274 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _primary_constraint_in_synpred313_cs4280 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _secondary_constraint_list_in_synpred314_cs4285 = new BitSet(new ulong[]{0x2UL});
@@ -61943,30 +61944,30 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _type_declaration_in_synpred331_cs4440 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_synpred352_cs4628 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _method_modifiers_in_synpred355_cs4670 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _163_in_synpred356_cs4675 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _164_in_synpred356_cs4675 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _method_modifier_in_synpred360_cs4716 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _type_in_synpred373_cs4783 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _fixed_parameter_in_synpred376_cs4823 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _parameter_array_in_synpred377_cs4827 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _generic_parameter_list_in_synpred400_cs5022 = new BitSet(new ulong[]{0x1000000000400UL});
+		public static readonly BitSet _generic_parameter_list_in_synpred400_cs5022 = new BitSet(new ulong[]{0x2000000000400UL});
 		public static readonly BitSet _qid_part_in_synpred400_cs5024 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _get_accessor_declaration_in_synpred402_cs5037 = new BitSet(new ulong[]{0x20000000000002UL,0x80000000UL,0x1A000010000UL});
+		public static readonly BitSet _get_accessor_declaration_in_synpred402_cs5037 = new BitSet(new ulong[]{0x40000000000002UL,0x100000000UL,0x34000020000UL});
 		public static readonly BitSet _set_accessor_declaration_in_synpred402_cs5041 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _attributes_in_synpred415_cs5161 = new BitSet(new ulong[]{0x0UL,0x1000000000UL,0x800841A104010005UL,0x4UL});
-		public static readonly BitSet _event_modifiers_in_synpred415_cs5166 = new BitSet(new ulong[]{0x0UL,0x0UL,0x1UL});
-		public static readonly BitSet _128_in_synpred415_cs5171 = new BitSet(new ulong[]{0x20000020400000UL,0xE909AF6800000000UL,0x3411A85A59DA4A48UL,0xABUL});
-		public static readonly BitSet _type_in_synpred415_cs5175 = new BitSet(new ulong[]{0x20000020400000UL,0xC8008F6800000000UL,0x400885A519A0A08UL,0xA2UL});
-		public static readonly BitSet _variable_declarators_in_synpred415_cs5179 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _attributes_in_synpred415_cs5161 = new BitSet(new ulong[]{0x0UL,0x2000000000UL,0x1083420802000AUL,0x9UL});
+		public static readonly BitSet _event_modifiers_in_synpred415_cs5166 = new BitSet(new ulong[]{0x0UL,0x0UL,0x2UL});
+		public static readonly BitSet _129_in_synpred415_cs5171 = new BitSet(new ulong[]{0x40000040800000UL,0xD2135ED000000000UL,0x682350B4B3B49491UL,0x156UL});
+		public static readonly BitSet _type_in_synpred415_cs5175 = new BitSet(new ulong[]{0x40000040800000UL,0x90011ED000000000UL,0x80110B4A3341411UL,0x144UL});
+		public static readonly BitSet _variable_declarators_in_synpred415_cs5179 = new BitSet(new ulong[]{0x20000000000000UL});
 		public static readonly BitSet _SEMI_in_synpred415_cs5183 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _add_accessor_declaration_in_synpred430_cs5294 = new BitSet(new ulong[]{0x0UL,0x80000000UL,0x80000000000UL});
+		public static readonly BitSet _add_accessor_declaration_in_synpred430_cs5294 = new BitSet(new ulong[]{0x0UL,0x100000000UL,0x100000000000UL});
 		public static readonly BitSet _remove_accessor_declaration_in_synpred430_cs5298 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _type_name_in_synpred446_cs5444 = new BitSet(new ulong[]{0x400UL});
 		public static readonly BitSet _DOT_in_synpred446_cs5446 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _unary_operator_declarator_in_synpred452_cs5520 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _binary_operator_declarator_in_synpred453_cs5525 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _argument_list_in_synpred488_cs5877 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _130_in_synpred505_cs6046 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8000000000000000UL});
-		public static readonly BitSet _191_in_synpred505_cs6049 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _131_in_synpred505_cs6046 = new BitSet(new ulong[]{0x0UL,0x0UL,0x0UL,0x1UL});
+		public static readonly BitSet _192_in_synpred505_cs6049 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _constant_declaration_in_synpred522_cs6203 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _fixed_size_buffer_declaration_in_synpred523_cs6208 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _field_declaration_in_synpred524_cs6213 = new BitSet(new ulong[]{0x2UL});
@@ -61980,18 +61981,18 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _interface_property_declaration_in_synpred556_cs6480 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _interface_method_declaration_in_synpred557_cs6486 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _interface_event_declaration_in_synpred558_cs6492 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _154_in_synpred560_cs6511 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _interface_get_accessor_declaration_in_synpred568_cs6599 = new BitSet(new ulong[]{0x20000000000002UL,0x80000000UL});
+		public static readonly BitSet _155_in_synpred560_cs6511 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _interface_get_accessor_declaration_in_synpred568_cs6599 = new BitSet(new ulong[]{0x40000000000002UL,0x100000000UL});
 		public static readonly BitSet _interface_set_accessor_declaration_in_synpred568_cs6603 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _labeled_statement_in_synpred590_cs6888 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _declaration_statement_in_synpred591_cs6893 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_statement_in_synpred593_cs6913 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _70_in_synpred605_cs7038 = new BitSet(new ulong[]{0x4164007030600020UL,0xEF19BF6800009B42UL,0x7C93A85A5DDA4A48UL,0x20A3UL});
+		public static readonly BitSet _71_in_synpred605_cs7038 = new BitSet(new ulong[]{0x82C800E060C00020UL,0xDE337ED000013684UL,0xF92750B4BBB49491UL,0x4146UL});
 		public static readonly BitSet _variable_reference_in_synpred605_cs7042 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _statement_list_in_synpred607_cs7078 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _statement_in_synpred608_cs7091 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _type_in_synpred610_cs7154 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _193_in_synpred611_cs7159 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _194_in_synpred611_cs7159 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_synpred614_cs7207 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _invocation_expression_in_synpred618_cs7312 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _object_creation_expression_in_synpred619_cs7317 = new BitSet(new ulong[]{0x2UL});
@@ -62001,11 +62002,11 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _local_variable_declaration_in_synpred633_cs7613 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_synpred641_cs7801 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_synpred642_cs7818 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _185_in_synpred644_cs7837 = new BitSet(new ulong[]{0x10000000000000UL,0x0UL,0x0UL,0x100UL});
-		public static readonly BitSet _block_in_synpred644_cs7841 = new BitSet(new ulong[]{0x0UL,0x4000000000000UL});
-		public static readonly BitSet _catch_clauses_in_synpred644_cs7845 = new BitSet(new ulong[]{0x2UL,0x0UL,0x10UL});
+		public static readonly BitSet _186_in_synpred644_cs7837 = new BitSet(new ulong[]{0x20000000000000UL,0x0UL,0x0UL,0x200UL});
+		public static readonly BitSet _block_in_synpred644_cs7841 = new BitSet(new ulong[]{0x0UL,0x8000000000000UL});
+		public static readonly BitSet _catch_clauses_in_synpred644_cs7845 = new BitSet(new ulong[]{0x2UL,0x0UL,0x20UL});
 		public static readonly BitSet _finally_clause_in_synpred644_cs7849 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _specific_catch_clauses_in_synpred646_cs7874 = new BitSet(new ulong[]{0x2UL,0x4000000000000UL});
+		public static readonly BitSet _specific_catch_clauses_in_synpred646_cs7874 = new BitSet(new ulong[]{0x2UL,0x8000000000000UL});
 		public static readonly BitSet _general_catch_clause_in_synpred646_cs7878 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _identifier_in_synpred649_cs7921 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _local_variable_declaration_in_synpred650_cs8035 = new BitSet(new ulong[]{0x2UL});

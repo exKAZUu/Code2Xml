@@ -52,28 +52,22 @@ pvariant = (__extension__ ({ __typeof__ (stype[0]) __x = (stype[0]); (void) __ct
 		}
 
 		[Test]
-		public void Test() {
-			var processor = CreateProcessor();
-			processor.GenerateXml(new FileInfo(@"C:\Users\exKAZUu\Desktop\test.c"));
-		}
-
-		[Test]
 		[TestCase(@"FiniteStateEntropy")]
 		[TestCase(@"greatest")]
-		[TestCase(@"libgit2")]
-		[TestCase(@"the_silver_searcher")]
-		[TestCase(@"twemproxy")]
-		[TestCase(@"bfgminer")]
-		[TestCase(@"Cinnamon")]
-		[TestCase(@"ejoy2d")]
-		[TestCase(@"exploit-database")]
-		[TestCase(@"lwan")]
-		[TestCase(@"micropython")]
-		[TestCase(@"redis")]
-		[TestCase(@"watchman")]
-		[TestCase(@"frida-core")]
-		[TestCase(@"libgdx")]
-		[TestCase(@"libuv")]
+		//[TestCase(@"libgit2")]
+		//[TestCase(@"the_silver_searcher")]
+		//[TestCase(@"twemproxy")]
+		//[TestCase(@"bfgminer")]
+		//[TestCase(@"Cinnamon")]
+		//[TestCase(@"ejoy2d")]
+		//[TestCase(@"exploit-database")]
+		//[TestCase(@"lwan")]
+		//[TestCase(@"micropython")]
+		//[TestCase(@"redis")]
+		//[TestCase(@"watchman")]
+		//[TestCase(@"frida-core")]
+		//[TestCase(@"libgdx")]
+		//[TestCase(@"libuv")]
 		public void ParseDirectory(string directoryName) {
 			var path = Fixture.GetInputProjectPath("C", directoryName);
 			var filePaths = Directory.GetFiles(path, "*.c", SearchOption.AllDirectories);

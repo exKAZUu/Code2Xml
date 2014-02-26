@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2013 Kazunori Sakamoto
+// Copyright (C) 2011-2014 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,6 +18,7 @@
 
 using System.ComponentModel.Composition;
 using System.IO;
+using System.Linq;
 using System.Xml.Linq;
 using Code2Xml.Core;
 using Code2Xml.Core.Processors;
@@ -25,73 +26,118 @@ using Code2Xml.Languages.ExternalProcessors.Properties;
 using Paraiba.IO;
 
 namespace Code2Xml.Languages.ExternalProcessors.Processors.Python {
-    /// <summary>
-    /// Represents a Python 3.x processor for inter-converting between source code and XML-based ASTs.
-    /// </summary>
-    [Export(typeof(Processor))]
-    public class Python3Processor : ProcessorUsingExternalParserAndOwnCodeGenerator {
-        private static readonly string DirectoryPath = Path.Combine("ParserScripts", "Python");
+	/// <summary>
+	/// Represents a Python 3.x processor for inter-converting between source code and XML-based ASTs.
+	/// </summary>
+	[Export(typeof(Processor))]
+	public class Python3Processor : ProcessorUsingExternalParserAndOwnCodeGenerator {
+		private static readonly string DirectoryPath = Path.Combine("ParserScripts", "Python");
 
-        private static readonly string[] PrivateXmlGeneratorArguments = {
-            Path.Combine(DirectoryPath, "st2xml.py"),
-        };
+		private static readonly string[] PrivateXmlGeneratorArguments = {
+			Path.Combine(DirectoryPath, "st2xml.py"),
+		};
 
-        /// <summary>
-        /// Gets the language name except for the version.
-        /// </summary>
-        public override string LanguageName {
-            get { return "Python"; }
-        }
+		/// <summary>
+		/// Gets the language name except for the version.
+		/// </summary>
+		public override string LanguageName {
+			get { return "Python"; }
+		}
 
-        /// <summary>
-        /// Gets the language version.
-        /// </summary>
-        public override string LanguageVersion {
-            get { return "3"; }
-        }
+		/// <summary>
+		/// Gets the language version.
+		/// </summary>
+		public override string LanguageVersion {
+			get { return "3"; }
+		}
 
-        protected override string XmlGeneratorPath {
-            get { return _processorPath; }
-        }
+		protected override string XmlGeneratorPath {
+			get { return _processorPath; }
+		}
 
-        protected override string[] XmlGeneratorArguments {
-            get { return PrivateXmlGeneratorArguments; }
-        }
+		protected override string[] XmlGeneratorArguments {
+			get { return PrivateXmlGeneratorArguments; }
+		}
 
-        private readonly string _processorPath;
+		private readonly string _processorPath;
 
-        public Python3Processor()
-                : this("\n") {}
+		public Python3Processor()
+				: this("\n") {}
 
-        public Python3Processor(string newLine)
-                : this(newLine, ExternalProgramUtils.GetPythonPath("3") ?? "python3") {}
+		public Python3Processor(string newLine)
+				: this(newLine, ExternalProgramUtils.GetPythonPath("3") ?? "python3") {}
 
-        public Python3Processor(string newLine, string processorPath)
-                : base(newLine, ".py") {
-            _processorPath = processorPath;
+		public Python3Processor(string newLine, string processorPath)
+				: base(newLine, ".py") {
+			_processorPath = processorPath;
 
-            ParaibaFile.WriteIfDifferentSize(PrivateXmlGeneratorArguments[0], Resources.st2xml);
-        }
+			ParaibaFile.WriteIfDifferentSize(PrivateXmlGeneratorArguments[0], Resources.st2xml);
+		}
 
-        protected override bool TreatTerminalSymbol(XElement element) {
-            switch (element.Name.LocalName) {
-            case "NEWLINE":
-                WriteLine();
-                break;
+		public override XElement GenerateXml(
+				string code, bool throwingParseError = DefaultThrowingParseError) {
+			var xml = base.GenerateXml(code, throwingParseError);
+			var tokens = xml.Descendants().Where(e => char.IsUpper(e.Name()[0]));
+			var line = 1;
+			var pos = 0;
+			var index = 0;
+			foreach (var token in tokens) {
+				var tokenStr = token.Value;
+				if (tokenStr == string.Empty) {
+					token.SetAttributeValue(Code2XmlConstants.StartLineName, line);
+					token.SetAttributeValue(Code2XmlConstants.StartPositionName, pos);
+					token.SetAttributeValue(Code2XmlConstants.EndLineName, line);
+					token.SetAttributeValue(Code2XmlConstants.EndPositionName, pos);
+					continue;
+				}
 
-            case "INDENT":
-                Depth++;
-                break;
+				var tokenChar = tokenStr[0];
+				while (code[index] != tokenChar || code.Substring(index, tokenStr.Length) != tokenStr) {
+					if (code[index] != '\n') {
+						pos++;
+					} else {
+						line++;
+						pos = 0;
+					}
+					index++;
+				}
+				token.SetAttributeValue(Code2XmlConstants.StartLineName, line);
+				token.SetAttributeValue(Code2XmlConstants.StartPositionName, pos);
+				var endIndex = index + tokenStr.Length;
+				while (index < endIndex) {
+					if (code[index] != '\n') {
+						pos++;
+					} else {
+						line++;
+						pos = 0;
+					}
+					index++;
+				}
+				token.SetAttributeValue(Code2XmlConstants.EndLineName, line);
+				token.SetAttributeValue(Code2XmlConstants.EndPositionName, pos);
+			}
+			return xml;
+		}
 
-            case "DEDENT":
-                Depth--;
-                break;
+		protected override bool TreatTerminalSymbol(XElement element) {
+			switch (element.Name.LocalName) {
+			case "NEWLINE":
+				WriteLine();
+				break;
 
-            default:
-                return false;
-            }
+			case "INDENT":
+				Depth++;
+				break;
 
-            return true;
-        }
-    }
+			case "DEDENT":
+				Depth--;
+				break;
+
+			default:
+				return false;
+			}
+
+			return true;
+		}
+	}
 }

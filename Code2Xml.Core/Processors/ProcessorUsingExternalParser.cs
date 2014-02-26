@@ -48,6 +48,11 @@ namespace Code2Xml.Core.Processors {
 
         public override XElement GenerateXml(
                 TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
+            return GenerateXml(codeReader.ReadToEnd(), throwingParseError);
+        }
+
+        public override XElement GenerateXml(
+                string code, bool throwingParseError = DefaultThrowingParseError) {
             // TODO: Support throwingParseError and enablePosition
             var info = new ProcessStartInfo {
                 FileName = XmlGeneratorPath,
@@ -63,18 +68,13 @@ namespace Code2Xml.Core.Processors {
             };
             using (var p = Process.Start(info)) {
                 using (var write = new StreamWriter(p.StandardInput.BaseStream, Encoding)) {
-                    write.WriteFromStream(codeReader);
+                    write.Write(code);
                 }
                 var xmlStr = p.StandardOutput.ReadToEnd();
                 var normalizedXmlStr = NormalizeXmlText(xmlStr);
                 Debug.WriteLine(p.StandardError.ReadToEnd());
                 return XDocument.Parse(normalizedXmlStr).Root;
             }
-        }
-
-        public override XElement GenerateXml(
-                string code, bool throwingParseError = DefaultThrowingParseError) {
-            return GenerateXml(new StringReader(code), throwingParseError);
         }
 
         protected virtual string NormalizeXmlText(string xml) {
