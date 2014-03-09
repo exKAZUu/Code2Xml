@@ -31,6 +31,7 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
 		}
 
 		[Test]
+		[TestCase(@"class K { }")]
 		[TestCase(@"class K { void m() {} }")]
 		[TestCase(@"class K {
 #	define DEBUG
