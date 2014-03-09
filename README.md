@@ -1,7 +1,9 @@
 Code2Xml [![Build Status](https://secure.travis-ci.org/exKAZUu/Code2Xml.png?branch=master)](http://travis-ci.org/exKAZUu/Code2Xml)
 =================
 
-# Requirements
+# How to Use
+
+## Requirements
 * NuGet
 You can install NuGet Package Manager with Extension Manager.  
 * Code Contracts
@@ -9,18 +11,6 @@ http://research.microsoft.com/en-us/projects/contracts/
 * Python 2.x for parsing Python 2.x
 * Python 3.x for parsing Python 3.x
 * Ruby 2.x for parsing Ruby 1.8.x, 1.9.x and 2.0.x
-
-# How to build
-1. ```git submodule update --init``` at the root directory
-1. ```git submodule update --init``` at the ```ParserTests``` directory
-1. Open ```Code2Xml.sln```
-1. Right click the ```Code2Xml``` solution in Solution Explorer.
-1. Select ```Enable NuGet Package Restore```.
-1. Build the solution.
-
-# How to use
-Note that ```Processor``` class is introduced instead of ```CodeToXml``` and ```XmlToCode``` classes.  
-So please use ```Processor``` and ```Processors``` classes.
 
 ## Structure
 - Code2Xml.Languages.ANTLRv3.dll  
@@ -70,6 +60,9 @@ Provides ```Processor``` classes for C, Clojure, Erlang, Java, Lua, ObjectiveC, 
 }
 ```
 
+Note that ```Processor``` class is introduced instead of ```CodeToXml``` and ```XmlToCode``` classes.  
+So please use ```Processor``` and ```Processors``` classes.
+
 ### [Obsolete!] Sample code using CodeToXml and XmlToCode
 
 - https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/CodeToXmlSample.cs
@@ -97,3 +90,76 @@ Provides ```Processor``` classes for C, Clojure, Erlang, Java, Lua, ObjectiveC, 
 	Assert.That(code, Is.EqualTo(File.ReadAllText(path)));
 }
 ```
+
+## How it works
+
+For example, the ```CSharpProcessorUsingAntlr3``` class generates the two following xml files corresponding to ```class K {}``` and ```class K { void m() {} }```.
+
+    <compilation_unit id="0">
+      .. snip ..
+              <class_declaration id="50">
+      .. snip ..
+                <class_body id="621">
+                  <TOKENS id="char_literal667">
+                    <WS hidden=" " startline="1" startpos="7" endline="1" endpos="8" />
+                    <TOKEN startline="1" startpos="8" endline="1" endpos="9">{</TOKEN>
+                  </TOKENS>
+                  <TOKENS id="char_literal669">
+                    <WS hidden=" " startline="1" startpos="9" endline="1" endpos="10" />
+                    <TOKEN startline="1" startpos="10" endline="1" endpos="11">}</TOKEN>
+                  </TOKENS>
+                </class_body>
+              </class_declaration>
+            </type_declaration>
+      .. snip ..
+    </compilation_unit>
+
+and
+
+    <compilation_unit id="0">
+      .. snip ..
+              <class_declaration id="50">
+      .. snip ..
+                <class_body id="621">
+                  <TOKENS id="char_literal667">
+                    <WS hidden=" " startline="1" startpos="7" endline="1" endpos="8" />
+                    <TOKEN startline="1" startpos="8" endline="1" endpos="9">{</TOKEN>
+                  </TOKENS>
+                  <class_member_declarations id="668">
+                    <class_member_declaration id="670">
+                      <method_declaration id="673">
+                        <method_header id="707">
+      .. snip ..
+                        </method_header>
+                        <method_body id="708">
+      .. snip ..
+                        </method_body>
+                      </method_declaration>
+                    </class_member_declaration>
+                  </class_member_declarations>
+                  <TOKENS id="char_literal669">
+                    <WS hidden=" " startline="1" startpos="21" endline="1" endpos="22" />
+                    <TOKEN startline="1" startpos="22" endline="1" endpos="23">}</TOKEN>
+                  </TOKENS>
+                </class_body>
+              </class_declaration>
+            </type_declaration>
+      .. snip ..
+    </compilation_unit>
+
+```class_body``` element in the first xml contains only two tokens of ```{``` and ```}```,
+in contrast, one in the second xml contains also the ```class_member_declarations``` element corresponding to ```void m() {}```.
+This difference is caused by the ANTLR EBNF grammar ([cs.g](https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/ANTLRv3/Processors/CSharp/cs.g "cs.g")) that has the following parsing rule.
+
+    class_body:	'{'   class_member_declarations?   '}' ;
+
+This rule indicates that ```class_body``` elements can have one or no ```class_member_declarations``` element.
+
+# How to Build
+1. ```git submodule update --init``` at the root directory
+1. ```git submodule update --init``` at the ```ParserTests``` directory
+1. Open ```Code2Xml.sln```
+1. Right click the ```Code2Xml``` solution in Solution Explorer.
+1. Select ```Enable NuGet Package Restore```.
+1. Build the solution.
+
