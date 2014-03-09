@@ -93,7 +93,7 @@ So please use ```Processor``` and ```Processors``` classes.
 
 ## How it works
 
-For example, the ```CSharpProcessorUsingAntlr3``` class generates the two following xml files corresponding to ```class K {}``` and ```class K { void m() {} }```.
+For example, ```CSharpProcessorUsingAntlr3``` class generates the two following xml files corresponding to ```class K {}``` and ```class K { void m() {} }```.
 
     <compilation_unit id="0">
       .. snip ..
@@ -148,7 +148,7 @@ and
     </compilation_unit>
 
 ```class_body``` element in the first xml contains only two tokens of ```{``` and ```}```,
-in contrast, one in the second xml contains also the ```class_member_declarations``` element corresponding to ```void m() {}```.
+in contrast, one in the second xml contains also ```class_member_declarations``` element corresponding to ```void m() {}```.
 This difference is caused by the ANTLR EBNF grammar ([cs.g](https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/ANTLRv3/Processors/CSharp/cs.g "cs.g")) that has the following parsing rule.
 
     class_body:	'{'   class_member_declarations?   '}' ;
