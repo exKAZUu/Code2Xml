@@ -167,7 +167,7 @@ Assume that unique integers as ```id``` values are annotated in the rule as foll
 
     additive_expression: multiplicative_expression<id: 1> ( ('+'<id: 2> | '-'<id: 3>) multiplicative_expression<id: 4> )* ;
     
-Then, one possible xml may be as follows:
+Then, one possible xml may be as follows.
 
     <additive_expression>
       <multiplicative_expression id="1">
