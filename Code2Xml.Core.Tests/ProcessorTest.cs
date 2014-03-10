@@ -49,16 +49,21 @@ namespace Code2Xml.Core.Tests {
 			Assert.AreEqual(c2, c3);
 		}
 
-		protected void VerifyRestoringCode(string code, bool write = true) {
+		protected Tuple<int, int> VerifyRestoringCode(string code, bool write = true) {
 			var processor = CreateProcessor();
+			var time1 = Environment.TickCount;
 			var xml = processor.GenerateXml(code, true);
+			var time2 = Environment.TickCount;
 			var code2 = processor.GenerateCode(xml);
+			var time3 = Environment.TickCount;
 
 			Assert.That(code2, Is.EqualTo(code));
 			if (write) {
 				Console.WriteLine(xml);
 			}
 			VerifyLocation(code, xml);
+
+			return Tuple.Create(time2 - time1, time3 - time2);
 		}
 
 		protected void VerifyLocation(string code, XElement ast) {
@@ -75,16 +80,21 @@ namespace Code2Xml.Core.Tests {
 
 		protected void VerifyRestoringProjectDirectory(
 				string langName, string fileName, params string[] patterns) {
-			var time = Environment.TickCount;
+			var times = new { Ast = 0, Code = 0 };
 			var path = Fixture.GetInputProjectPath(langName, fileName);
 			foreach (var pattern in patterns) {
 				var filePaths = Directory.GetFiles(path, pattern, SearchOption.AllDirectories);
 				foreach (var filePath in filePaths) {
 					Console.WriteLine(filePath);
-					VerifyRestoringCode(File.ReadAllText(filePath), false);
+					var ts = VerifyRestoringCode(File.ReadAllText(filePath), false);
+					times = new {
+						Ast = times.Ast + ts.Item1,
+						Code = times.Code + ts.Item2
+					};
 				}
 			}
-			Console.WriteLine("Time: " + (Environment.TickCount - time));
+			var total = times.Ast + times.Code;
+			Console.WriteLine("Ast: " + times.Ast + ", Code: " + times.Code + ", Total: " + total);
 		}
 	}
 }
