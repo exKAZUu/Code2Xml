@@ -166,6 +166,26 @@ For example, the ```id``` value indicates that a ```multiplicative_expression```
 Assume that unique integers as ```id``` values are annotated in the rule as follows.
 
     additive_expression: multiplicative_expression<id: 1> ( ('+'<id: 2> | '-'<id: 3>) multiplicative_expression<id: 4> )* ;
+    
+Then, one possible xml may be as follows:
+
+    <additive_expression>
+      <multiplicative_expression id="1">
+        .. snip ..
+      </multiplicative_expression>
+      <TOKENS>
+        <TOKEN id="2">+</TOKEN>
+      </TOKENS>
+      <multiplicative_expression id="4">
+        .. snip ..
+      </multiplicative_expression>
+      <TOKENS>
+        <TOKEN id="3">-</TOKEN>
+      </TOKENS>
+      <multiplicative_expression id="4">
+        .. snip ..
+      </multiplicative_expression>
+    </additive_expression>
 
 As another example, the ```id``` values can also identify the locatoin of the corresponding non-terminal node.
 
