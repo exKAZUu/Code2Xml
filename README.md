@@ -155,9 +155,9 @@ This difference is caused by the ANTLR EBNF grammar ([cs.g](https://github.com/e
 
 This rule indicates that the ```class_body``` elements can have one or no ```class_member_declarations``` element.
 
-## What Is ```id``` Attribute
+## What Is ID Attribute
 
-As you can see, each non-terminal node, whose name start a lower letter, has an ```id``` attribute.
+As you can see, each non-terminal node, whose name starts a lower letter, has an ```id``` attribute.
 The ```id``` value identifies the location where the corresponding node appears in reft sides of the EBNF rules.
 For example, the ```id``` value indicates that a ```multiplicative_expression``` element corresponds to the first or second ```multiplicative_expression``` rules in the ```additive_expression``` rule.
 
