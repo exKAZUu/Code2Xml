@@ -165,7 +165,8 @@ For example, the ```id``` value indicates that a ```multiplicative_expression```
 
 Assume that unique integers as ```id``` values are annotated in the rule as follows.
 
-    additive_expression: multiplicative_expression<id: 1> ( ('+'<id: 2> | '-'<id: 3>) multiplicative_expression<id: 4> )* ;
+    additive_expression:
+      multiplicative_expression<id: 1> ( ('+'<id: 2> | '-'<id: 3>) multiplicative_expression<id: 4> )* ;
     
 Then, one possible xml may be as follows.
 
@@ -195,7 +196,8 @@ As another example, the ```id``` values can also identify the locatoin of the co
 Assume that unique integers as ```id``` values are annotated in the rule as follows.
 
     bracket_expression: '['<id: 5> expression_list<id: 6>? ']'<id: 7> ;
-    element_initializer: non_assignment_expression<id: 8> | '{'<id: 9> expression_list<id: 10> '}'<id: 11> ;
+    element_initializer:
+      non_assignment_expression<id: 8> | '{'<id: 9> expression_list<id: 10> '}'<id: 11> ;
 
 
 # How to Build
