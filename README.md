@@ -147,32 +147,32 @@ and
       .. snip ..
     </compilation_unit>
 
-```class_body``` element in the first xml contains only two tokens of ```{``` and ```}```,
-in contrast, one in the second xml contains also ```class_member_declarations``` element corresponding to ```void m() {}```.
+The ```class_body``` element in the first xml contains only two tokens of ```{``` and ```}```,
+in contrast, one in the second xml contains also the ```class_member_declarations``` element corresponding to ```void m() {}```.
 This difference is caused by the ANTLR EBNF grammar ([cs.g](https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/ANTLRv3/Processors/CSharp/cs.g "cs.g")) that has the following parsing rule.
 
     class_body:	'{' class_member_declarations? '}' ;
 
-This rule indicates that ```class_body``` elements can have one or no ```class_member_declarations``` element.
+This rule indicates that the ```class_body``` elements can have one or no ```class_member_declarations``` element.
 
 ## What Is ```id``` Attribute
 
-As you can see, each non-terminal node, whose name start a lower letter, has ```id``` attribute.
-The ```id``` values identify the location where the corresponding non-terminal node appears in reft sides of the EBNF rules.
-For example, the ```id``` values indicate that a ```multiplicative_expression``` element corresponds to the first or second ```multiplicative_expression``` rules in the ```additive_expression``` rule.
+As you can see, each non-terminal node, whose name start a lower letter, has an ```id``` attribute.
+The ```id``` value identifies the location where the corresponding node appears in reft sides of the EBNF rules.
+For example, the ```id``` value indicates that a ```multiplicative_expression``` element corresponds to the first or second ```multiplicative_expression``` rules in the ```additive_expression``` rule.
 
     additive_expression: multiplicative_expression ( ('+'|'-') multiplicative_expression )* ;
 
-Assume that unique integers as ```id``` values are annoted in the rule as follows.
+Assume that unique integers as ```id``` values are annotated in the rule as follows.
 
     additive_expression: multiplicative_expression<id: 1> ( ('+'<id: 2> | '-'<id: 3>) multiplicative_expression<id: 4> )* ;
 
-As another example, the ```id``` values can also identigy the locatoin of the corresponding non-terminal node.
+As another example, the ```id``` values can also identify the locatoin of the corresponding non-terminal node.
 
     bracket_expression: '[' expression_list? ']' ;
     element_initializer: non_assignment_expression  | '{' expression_list '}' ;
 
-Assume that unique integers as ```id``` values are annoted in the rule as follows.
+Assume that unique integers as ```id``` values are annotated in the rule as follows.
 
     bracket_expression: '['<id: 5> expression_list<id: 6>? ']'<id: 7> ;
     element_initializer: non_assignment_expression<id: 8> | '{'<id: 9> expression_list<id: 10> '}'<id: 11> ;
