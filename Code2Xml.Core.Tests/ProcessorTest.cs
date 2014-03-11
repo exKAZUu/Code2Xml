@@ -22,6 +22,7 @@ using System.Linq;
 using System.Xml.Linq;
 using Code2Xml.Core.Location;
 using NUnit.Framework;
+using Paraiba.Core;
 using Paraiba.Xml;
 using ParserTests;
 
@@ -80,7 +81,8 @@ namespace Code2Xml.Core.Tests {
 
 		protected void VerifyRestoringProjectDirectory(
 				string langName, string urlOrFileName, params string[] patterns) {
-			var fileName = urlOrFileName.StartsWith("https://") ? urlOrFileName.Split('/')[4] : urlOrFileName;
+			var splittedUrl = urlOrFileName.Split('/');
+			var fileName = urlOrFileName.StartsWith("https://") ? splittedUrl[4] : urlOrFileName;
 			var props = new { Size = 0, Tree = 0, Code = 0 };
 			var path = Fixture.GetInputProjectPath(langName, fileName);
 			foreach (var pattern in patterns) {
@@ -111,7 +113,7 @@ namespace Code2Xml.Core.Tests {
 					if (urlOrFileName == fileName) {
 						stream.Write(fileName);
 					} else {
-						stream.Write("[" + fileName + "](" + urlOrFileName + ")");
+						stream.Write("[" + fileName + "](" + splittedUrl.Take(5).JoinString("/") + ")");
 					}
 					stream.Write(" | ");
 					stream.Write(props.Size.ToString("N0"));

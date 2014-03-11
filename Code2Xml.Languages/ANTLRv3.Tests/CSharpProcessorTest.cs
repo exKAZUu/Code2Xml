@@ -153,8 +153,8 @@ xxxxx
 		}
 
 		[Test]
-		[TestCase("https://github.com/MuMech/MechJeb2/releases/tag/v2.1.1")] //  39453 ms (69 files)
-		[TestCase("MediaPortal-1")] // 335704 ms (2787 files)
+		[TestCase("https://github.com/MuMech/MechJeb2/archive/v2.1.1.zip")] //  39453 ms (69 files)
+		[TestCase("https://github.com/MediaPortal/MediaPortal-1/archive/Release_1.6.0.zip")] // 335704 ms (2787 files)
 		[TestCase("MonoTouch.Dialog")] //   2328 ms (31 files)
 		[TestCase("Nancy")] //  24187 ms (813 files)
 		[TestCase("Newtonsoft.Json")] //  30765 ms (477 files)
@@ -162,7 +162,7 @@ xxxxx
 		[TestCase("ServiceStack")] //  80156 ms (3335 files)
 		[TestCase("SignalR")] //  35469 ms (702 files)
 		[TestCase("StarryboundServer")] //   4922 ms (54 files)
-		[TestCase("moq4")] //   6640 ms (226 files)
+		[TestCase("https://github.com/Moq/moq4/archive/v4.2.1312.zip")] //   6640 ms (226 files)
 		[TestCase("ravendb")] // 176156 ms (4041 files)
 		public void ParseDirectory(string fileName) {
 			VerifyRestoringProjectDirectory("CSharp", fileName, "*.cs");
