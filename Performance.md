@@ -1,4 +1,4 @@
-| Project | Size | Parsing Code | Generating Code | Total |
+| Project | Size [byte] | Parsing Code [ms] | Generating Code [ms] | Total [ms] |
 | --- | ---: | ---: | ---: | ---: |
 | [moq4](https://github.com/Moq/moq4) | 1,152,394 | 4,895 | 186 | 5,081 |
 | ravendb | 20,174,450 | 67,945 | 4,794 | 72,739 |
