@@ -79,22 +79,51 @@ namespace Code2Xml.Core.Tests {
 		}
 
 		protected void VerifyRestoringProjectDirectory(
-				string langName, string fileName, params string[] patterns) {
-			var times = new { Ast = 0, Code = 0 };
+				string langName, string urlOrFileName, params string[] patterns) {
+			var fileName = urlOrFileName.StartsWith("https://") ? urlOrFileName.Split('/')[4] : urlOrFileName;
+			var props = new { Size = 0, Tree = 0, Code = 0 };
 			var path = Fixture.GetInputProjectPath(langName, fileName);
 			foreach (var pattern in patterns) {
 				var filePaths = Directory.GetFiles(path, pattern, SearchOption.AllDirectories);
 				foreach (var filePath in filePaths) {
 					Console.WriteLine(filePath);
-					var ts = VerifyRestoringCode(File.ReadAllText(filePath), false);
-					times = new {
-						Ast = times.Ast + ts.Item1,
-						Code = times.Code + ts.Item2
+					var code = File.ReadAllText(filePath);
+					var ts = VerifyRestoringCode(code, false);
+					props = new {
+						Size = props.Size + code.Length,
+						Tree = props.Tree + ts.Item1,
+						Code = props.Code + ts.Item2,
 					};
 				}
 			}
-			var total = times.Ast + times.Code;
-			Console.WriteLine("Ast: " + times.Ast + ", Code: " + times.Code + ", Total: " + total);
+			var total = props.Tree + props.Code;
+			Console.WriteLine(
+					"Tree: " + props.Tree + ", Code: " + props.Code + ", Total: " + total);
+			var info = new FileInfo("Performance.md");
+			var exists = info.Exists;
+			using (var fs = info.Open(FileMode.Append, FileAccess.Write)) {
+				using (var stream = new StreamWriter(fs)) {
+					if (!exists) {
+						stream.WriteLine("| Project | Size | Tree | Code | Total |");
+						stream.WriteLine("| --- | ---: | ---: | ---: | ---: |");
+					}
+					stream.Write("| ");
+					if (urlOrFileName == fileName) {
+						stream.Write(fileName);
+					} else {
+						stream.Write("[" + fileName + "](" + urlOrFileName + ")");
+					}
+					stream.Write(" | ");
+					stream.Write(props.Size.ToString("N0"));
+					stream.Write(" | ");
+					stream.Write(props.Tree.ToString("N0"));
+					stream.Write(" | ");
+					stream.Write(props.Code.ToString("N0"));
+					stream.Write(" | ");
+					stream.Write((props.Tree + props.Code).ToString("N0"));
+					stream.WriteLine(" |");
+				}
+			}
 		}
 	}
 }

@@ -153,7 +153,7 @@ xxxxx
 		}
 
 		[Test]
-		[TestCase("MechJeb2")] //  39453 ms (69 files)
+		[TestCase("https://github.com/MuMech/MechJeb2/releases/tag/v2.1.1")] //  39453 ms (69 files)
 		[TestCase("MediaPortal-1")] // 335704 ms (2787 files)
 		[TestCase("MonoTouch.Dialog")] //   2328 ms (31 files)
 		[TestCase("Nancy")] //  24187 ms (813 files)
