@@ -38,13 +38,13 @@
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Paraiba, Version=1.1.1.91, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Paraiba, Version=1.1.2.92, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Paraiba.1.1.1.91\lib\net40\Paraiba.dll</HintPath>
+      <HintPath>..\packages\Paraiba.1.1.2.92\lib\net40\Paraiba.dll</HintPath>
     </Reference>
-    <Reference Include="Paraiba.Experiment, Version=1.1.1.91, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Paraiba.Experiment, Version=1.1.2.92, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Paraiba.Experiment.1.1.1.91\lib\net40\Paraiba.Experiment.dll</HintPath>
+      <HintPath>..\packages\Paraiba.Experiment.1.1.2.92\lib\net40\Paraiba.Experiment.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />

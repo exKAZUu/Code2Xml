@@ -63,7 +63,9 @@ public class Hello extends JFrame {
 		com.google.common.base.Preconditions.checkArgument(args.length == 0, str);
 }}")]
         [TestCase(@"class K { void m() { if (true) {} for(;false;) {} }}")]
-        public void Parse(string code) {
+        [TestCase(@"class K { void m() { if (true) { } else { } }}")]
+        public void Parse(string code)
+        {
             VerifyRestoringCode(code);
         }
 

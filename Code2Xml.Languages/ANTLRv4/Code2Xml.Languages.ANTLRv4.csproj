@@ -41,13 +41,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Antlr4.Runtime.4.2.0-alpha001\lib\net40\Antlr4.Runtime.v4.0.dll</HintPath>
     </Reference>
-    <Reference Include="Paraiba, Version=1.1.1.91, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Paraiba, Version=1.1.2.92, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Paraiba.1.1.1.91\lib\net40\Paraiba.dll</HintPath>
+      <HintPath>..\..\packages\Paraiba.1.1.2.92\lib\net40\Paraiba.dll</HintPath>
     </Reference>
-    <Reference Include="Paraiba.Experiment, Version=1.1.1.91, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Paraiba.Experiment, Version=1.1.2.92, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Paraiba.Experiment.1.1.1.91\lib\net40\Paraiba.Experiment.dll</HintPath>
+      <HintPath>..\..\packages\Paraiba.Experiment.1.1.2.92\lib\net40\Paraiba.Experiment.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
