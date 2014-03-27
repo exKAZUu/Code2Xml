@@ -5,7 +5,7 @@ Code2Xml [![Build Status](https://secure.travis-ci.org/exKAZUu/Code2Xml.png?bran
 
 - 3.0.0 (April, 2014)
   - Add ```CstGeneraotr``` and ```AstGenerator``` classes
-  - Add ```CstNode```, ```CstToken```, ```CstToken``` and ```AstToken``` classes instead of ```XElement``` class
+  - Add ```CstNode```, ```CstToken```, ```AstNode``` and ```AstToken``` classes instead of ```XElement``` class
   - Support inter-conversion between ```CstNode/AstNode``` and ```XElement``` classes
   - Remove ```Code2Xml```, ```Xml2Code``` and ```Processor``` classes
 
