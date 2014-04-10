@@ -52,7 +52,7 @@ namespace Code2Xml.Core.Tests.Generators {
                     "Tree: " + _timeToGenerateTree + ", Code: " + _timeToGenerateCode + ", Total: "
                     + total);
             var rootPath = Fixture.GetRootPath("Code2Xml.sln");
-            var info = new FileInfo(Path.Combine(rootPath, "Performance.md"));
+            var info = new FileInfo(Path.Combine(rootPath, "Performance.md.latest"));
             var exists = info.Exists;
             using (var fs = info.Open(FileMode.Append, FileAccess.Write)) {
                 using (var stream = new StreamWriter(fs)) {

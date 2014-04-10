@@ -29,25 +29,28 @@ _ReSharper*/
 ipch/
 target
 
-# Ignore vim files
+# vim
 *~
 *.swp
 
-# Ignore Resharper files
+# Resharper
 *.docstates
 *.dotCover
 
-# Ignore NuGet files
+# NuGet
 nuspec/
 packages/
 
-# Ignore generated files for testing
+# Generated for testing
 output
 download
 
-# Ignore MonoDevelop files
+# MonoDevelop
 test-results
 *.userprefs
 
-# Ignore ANTLR files
+# ANTLR
 *.tokens
+
+# Generated documents
+*.latest
