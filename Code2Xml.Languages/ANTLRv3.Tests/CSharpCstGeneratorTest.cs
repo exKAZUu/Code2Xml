@@ -142,45 +142,29 @@ xxxxx
             VerifyRestoringFile("CSharp", fileName);
         }
 
-        //[Test]
-        //[TestCase("MechJeb2")] //  39453 ms (69 files)
-        //[TestCase("MediaPortal-1")] // 335704 ms (2787 files)
-        //[TestCase("MonoTouch.Dialog")] //   2328 ms (31 files)
-        //[TestCase("Nancy")] //  24187 ms (813 files)
-        //[TestCase("Newtonsoft.Json")] //  30765 ms (477 files)
-        //[TestCase("NuGetGallery")] //  24235 ms (764 files)
-        //[TestCase("ServiceStack")] //  80156 ms (3335 files)
-        //[TestCase("SignalR")] //  35469 ms (702 files)
-        //[TestCase("StarryboundServer")] //   4922 ms (54 files)
-        //[TestCase("moq4")] //   6640 ms (226 files)
-        //[TestCase("ravendb")] // 176156 ms (4041 files)
-        //public void ParseDirectory(string directoryName) {
-        //    VerifyRestoringProjectDirectory("CSharp", directoryName, "*.cs");
-        //}
-
         [Test]
-        //[TestCase(@"https://github.com/MuMech/MechJeb2.git",
-        //        @"2837dbac38f59520ff840c479a242228c88ab485")]
-        //[TestCase(@"https://github.com/MediaPortal/MediaPortal-1.git",
-        //        @"0b1948ec6c11366e807c74dfa06956b397c0c08e")]
-        //[TestCase(@"https://github.com/migueldeicaza/MonoTouch.Dialog.git",
-        //        @"6dfe7f61ea40486310c68fd12f2988d6d242f7f7")]
-        //[TestCase(@"https://github.com/NancyFx/Nancy.git",
-        //        @"9cef623759baaa74158b73a079b3e62b5100c1a2")]
-        //[TestCase(@"https://github.com/JamesNK/Newtonsoft.Json.git",
-        //        @"14c6ef733bca06bc6ec57cccee50652493d849ab")]
-        //[TestCase(@"https://github.com/NuGet/NuGetGallery.git",
-        //        @"139f368b7b665f19cbd90e9ccd265a84a0c38df0")]
-        //[TestCase(@"https://github.com/ServiceStack/ServiceStack.git",
-        //        @"363255f0b64ab56f34f85f315aa97161fbb083cb")]
-        //[TestCase(@"https://github.com/SignalR/SignalR.git",
-        //        @"b940230aedc851c50775c2ed32ab96c476f10ec6")]
-        //[TestCase(@"https://github.com/AvilanceLtd/StarryboundServer.git",
-        //        @"250af0081d72d164dc07074b9bbb40b9e65323f4")]
+        [TestCase(@"https://github.com/MuMech/MechJeb2.git",
+                @"2837dbac38f59520ff840c479a242228c88ab485")]
+        [TestCase(@"https://github.com/MediaPortal/MediaPortal-1.git",
+                @"bb1af6b26eb596ba953c9a2d307313840f43f93f")]
+        [TestCase(@"https://github.com/migueldeicaza/MonoTouch.Dialog.git",
+                @"921612a37a282d2d32512e2d94465d0ed845f457")]
+        [TestCase(@"https://github.com/NancyFx/Nancy.git",
+                @"333096e9d4b50e715260acf6e7fd73ebd63def69")]
+        [TestCase(@"https://github.com/JamesNK/Newtonsoft.Json.git",
+                @"fdb2811bae10dd285a155e07cb8ea1c2e7683a3a")]
+        [TestCase(@"https://github.com/NuGet/NuGetGallery.git",
+                @"50ec4075f82d0dde0dcb9b94f991185c39e13326")]
+        [TestCase(@"https://github.com/ServiceStack/ServiceStack.git",
+                @"2c14c23396996115d8120042168c6282a8b1a3c7")]
+        [TestCase(@"https://github.com/SignalR/SignalR.git",
+                @"2f6649e9b6c645daed59eae7e893b0d0dcd9840d")]
+        [TestCase(@"https://github.com/AvilanceLtd/StarryboundServer.git",
+                @"2a89b59f28959257aceba1b542b7b1d6b41e2b0b")]
         [TestCase(@"https://github.com/Moq/moq4.git",
-                @"f007f0a1326e3af9b862c94665fb6e63a23a47d4")]
+                @"3c3eab9d2f10357b3ee1655984d1eea0d3010a0b")]
         [TestCase(@"https://github.com/ravendb/ravendb.git",
-                @"1c01407b5ac4eab14428d8e38ea4369b0fcadf34")]
+                @"cd5e3234276082bef217dd87e69eaaca0078dc46")]
         public void ParseGitRepository(string url, string commitPointer) {
             VerifyRestoringGitRepository(url, commitPointer, "*.cs");
         }

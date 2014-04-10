@@ -47,34 +47,36 @@ namespace Code2Xml.Core.Tests.Generators {
 
         protected void ShowTimes(string path, string url = null) {
             var name = Path.GetFileName(path);
-			var total = _timeToGenerateTree + _timeToGenerateCode;
-			Console.WriteLine(
-					"Tree: " + _timeToGenerateTree + ", Code: " + _timeToGenerateCode + ", Total: " + total);
-			var info = new FileInfo("Performance.md");
-			var exists = info.Exists;
-			using (var fs = info.Open(FileMode.Append, FileAccess.Write)) {
-				using (var stream = new StreamWriter(fs)) {
-					if (!exists) {
-						stream.WriteLine("| Project | Size | Tree | Code | Total |");
-						stream.WriteLine("| --- | ---: | ---: | ---: | ---: |");
-					}
-					stream.Write("| ");
-					if (string.IsNullOrEmpty(url)) {
-						stream.Write(name);
-					} else {
-						stream.Write("[" + name + "](" + url + ")");
-					}
-					stream.Write(" | ");
-					stream.Write(_codeLength.ToString("N0"));
-					stream.Write(" | ");
-					stream.Write(_timeToGenerateTree.ToString("N0"));
-					stream.Write(" | ");
-					stream.Write(_timeToGenerateCode.ToString("N0"));
-					stream.Write(" | ");
-					stream.Write(total.ToString("N0"));
-					stream.WriteLine(" |");
-				}
-			}
+            var total = _timeToGenerateTree + _timeToGenerateCode;
+            Console.WriteLine(
+                    "Tree: " + _timeToGenerateTree + ", Code: " + _timeToGenerateCode + ", Total: "
+                    + total);
+            var rootPath = Fixture.GetRootPath("Code2Xml.sln");
+            var info = new FileInfo(Path.Combine(rootPath, "Performance.md"));
+            var exists = info.Exists;
+            using (var fs = info.Open(FileMode.Append, FileAccess.Write)) {
+                using (var stream = new StreamWriter(fs)) {
+                    if (!exists) {
+                        stream.WriteLine("| Project | Size | Tree | Code | Total |");
+                        stream.WriteLine("| --- | ---: | ---: | ---: | ---: |");
+                    }
+                    stream.Write("| ");
+                    if (string.IsNullOrEmpty(url)) {
+                        stream.Write(name);
+                    } else {
+                        stream.Write("[" + name + "](" + url + ")");
+                    }
+                    stream.Write(" | ");
+                    stream.Write(_codeLength.ToString("N0"));
+                    stream.Write(" | ");
+                    stream.Write(_timeToGenerateTree.ToString("N0"));
+                    stream.Write(" | ");
+                    stream.Write(_timeToGenerateCode.ToString("N0"));
+                    stream.Write(" | ");
+                    stream.Write(total.ToString("N0"));
+                    stream.WriteLine(" |");
+                }
+            }
         }
 
         protected void VerifyParsing(string code) {
@@ -128,16 +130,19 @@ namespace Code2Xml.Core.Tests.Generators {
         protected void VerifyRestoringProjectDirectory(
                 string langName, string directoryName,
                 params string[] patterns) {
-            PrivateVerifyRestoringProjectDirectory(langName, directoryName, File.ReadAllText, patterns);
+            PrivateVerifyRestoringProjectDirectory(
+                    langName, directoryName, File.ReadAllText, patterns);
         }
 
-        protected void VerifyRestoringProjectDirectory(string langName, string directoryName,
+        protected void VerifyRestoringProjectDirectory(
+                string langName, string directoryName,
                 Func<string, string> readFileFunc, params string[] patterns) {
             var path = Fixture.GetInputProjectPath(langName, directoryName);
             PrivateVerifyRestoringProjectDirectory(path, null, readFileFunc, patterns);
         }
 
-        private void PrivateVerifyRestoringProjectDirectory(string path, string url, Func<string, string> readFileFunc,
+        private void PrivateVerifyRestoringProjectDirectory(
+                string path, string url, Func<string, string> readFileFunc,
                 params string[] patterns) {
             StartMeasuringTimes();
             foreach (var pattern in patterns) {
@@ -151,19 +156,22 @@ namespace Code2Xml.Core.Tests.Generators {
             ShowTimes(path, url);
         }
 
-        protected void VerifyRestoringGitRepository(string url, string commitPointer,
+        protected void VerifyRestoringGitRepository(
+                string url, string commitPointer,
                 params string[] patterns) {
             VerifyRestoringGitRepository(url, commitPointer, File.ReadAllText, patterns);
         }
 
-        protected void VerifyRestoringGitRepository(string url, string commitPointer,
+        protected void VerifyRestoringGitRepository(
+                string url, string commitPointer,
                 Func<string, string> readFileFunc, params string[] patterns) {
             var path = Fixture.GetGitRepositoryPath(url);
             Directory.CreateDirectory(path);
             if (!new DirectoryInfo(path).GetDirectories().Any()) {
                 Git.Clone(url, commitPointer, path);
             }
-            VerifyRestoringProjectDirectory(path, url, readFileFunc, patterns);
+            Git.Checkout(path, commitPointer);
+            PrivateVerifyRestoringProjectDirectory(path, url, readFileFunc, patterns);
         }
     }
 }

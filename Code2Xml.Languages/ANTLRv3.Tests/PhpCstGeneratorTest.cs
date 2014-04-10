@@ -70,60 +70,64 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
             VerifyRestoringFile("Php", fileName);
         }
 
-        //[Test]
-        //[TestCase("bedrock")]
-        //[TestCase("cockpit")]
-        ////[TestCase("CodeIgniter")]	// failed
-        ////[TestCase("composer")]	// too heavy
-        //[TestCase("composer-service")]
-        ////[TestCase("core")]	// failed
-        //[TestCase("flight")]
-        //[TestCase("flysystem")]
-        ////[TestCase("google-api-php-client")]	// failed
-        //[TestCase("gush")]
-        ////[TestCase("guzzle")]	// failed
-        //[TestCase("laravel")]
-        ////[TestCase("Mobile-Detect")]	// failed
-        ////[TestCase("phabricator")]	// failed
-        ////[TestCase("phoronix-test-suite")]	// failed
-        //[TestCase("phpdotenv")]
-        ////[TestCase("PHPMailer")]	// failed
-        ////[TestCase("php-mpos")]	// failed
-        //[TestCase("php-mvc")]
-        ////[TestCase("piwik")]	// failed
-        ////[TestCase("psysh")]	// too heavy
-        ////[TestCase("rocketeer")]	// failed
-        //[TestCase("sovereign")]
-        ////[TestCase("symfony")]	// failed
-        ////[TestCase("yii")]	// failed
-        ////[TestCase("yii2")]	// failed
-        ////[TestCase("YOURLS")]	// failed
-        ////[TestCase("zf2")]	// failed
-        //public void ParseDirectory(string directoryName) {
-        //    VerifyRestoringProjectDirectory("Php", directoryName, "*.php");
-        //}
-
         [Test]
         [TestCase(@"https://github.com/roots/bedrock.git",
-                @"f0c21c22e3366f0777fe88decd43f62e61e028dd")]
+                @"513a3cff64b29be7a4d08ffdfa9728c55a30b68a")]
         [TestCase(@"https://github.com/aheinze/cockpit.git",
-                @"42136f0173b732ec8b1d8aacf612521bec11331d")]
+                @"3b65c826559d45833078a1e1f196773495fdd47f")]
         [TestCase(@"https://github.com/pborreli/composer-service.git",
-                @"44e13091818b0219e9943572e52376b76043cebe")]
+                @"38c12f002cfad65e32510f80778a645ddfa03c48")]
         [TestCase(@"https://github.com/mikecao/flight.git",
-                @"b9b2d0fa2d75e6b2f606fbd0d9a8059a0f741578")]
+                @"2776d542286c1abd0e91b3892dd02029085c1ba8")]
         [TestCase(@"https://github.com/thephpleague/flysystem.git",
-                @"63686a3d3fa27276fcd2b1562b2aa696d3d9e51d")]
+                @"4fb166cbba5b6614d67ee2b361afed6e0901dc9c")]
         [TestCase(@"https://github.com/cordoval/gush.git",
-                @"7863bc406ed3948b8b28d44d5c8124b9590a9d06")]
+                @"37576d4211e7d23dbe5a7e6477ede4be4ded047b")]
         [TestCase(@"https://github.com/laravel/laravel.git",
-                @"a2cb6049c9bbbc4a65a07d1827ac7cb5a646fcd4")]
-        [TestCase(@"https://github.com/vlucas/phpdotenv.git",
-                @"a6d7d9778975100460a24395f8b5175024e14a54")]
+                @"aeda6b13cdfcd662089c30d428839965c7443ab9")]
         [TestCase(@"https://github.com/panique/php-mvc.git",
-                @"2fe402b7e10a642c18a56826366dfdb1bcd5b2ad")]
+                @"319eaa8c845569592c3fbefdd15003848e49226e")]
+        [TestCase(@"https://github.com/vlucas/phpdotenv.git",
+                @"8efa54e839f569422d5891b69495ebeaeee5e7ca")]
         [TestCase(@"https://github.com/al3x/sovereign.git",
-                @"18ea566cee435c47e7b706b7c607b932f16fe66a")]
+                @"5853ee92615b67a4f4bd802ff7493cb684294a79")]
+        // Failed test cases
+        //[TestCase(@"https://github.com/EllisLab/CodeIgniter.git",
+        //        @"8fb31c929b9cca6154eb007ff553f4a96d31415e")]
+        //[TestCase(@"https://github.com/serbanghita/Mobile-Detect.git",
+        //        @"d6943b36f45a9ee654e87cd98832890797a228fb")]
+        //[TestCase(@"https://github.com/PHPMailer/PHPMailer.git",
+        //        @"01f4c43b683d994e461d4e5049e88d8c5daff31d")]
+        //[TestCase(@"https://github.com/YOURLS/YOURLS.git",
+        //        @"f645c06f054c851ce00fd8c349f567b7a0b2100f")]
+        //[TestCase(@"https://github.com/composer/composer.git",
+        //        @"7adc41d02c3536b3e19a6b906cf0c4cf6d3beb70")]
+        //[TestCase(@"https://github.com/owncloud/core.git",
+        //        @"9fa788c452403646cc5c2a7c0fe875879e7082fa")]
+        //[TestCase(@"https://github.com/google/google-api-php-client.git",
+        //        @"7b7030e33fa6e99071ebe1369c8c23443e642a95")]
+        //[TestCase(@"https://github.com/guzzle/guzzle.git",
+        //        @"028195b32bb2e096b168baebe07c704473db81d4")]
+        //[TestCase(@"https://github.com/facebook/phabricator.git",
+        //        @"e61069f0d6b798e958987ccbb90110e548694903")]
+        //[TestCase(@"https://github.com/phoronix-test-suite/phoronix-test-suite.git",
+        //        @"307a0c3f7d5fb1a5fee93e59e52410e04b9868e0")]
+        //[TestCase(@"https://github.com/MPOS/php-mpos.git",
+        //        @"481c8dd980fe0603e38d7e1e464cd74b8ced5d17")]
+        //[TestCase(@"https://github.com/piwik/piwik.git",
+        //        @"b234e0ac5aa70a1b8d1e9115f79ffaa00b5a40e2")]
+        //[TestCase(@"https://github.com/bobthecow/psysh.git",
+        //        @"46dd9a050405ecc2a3d1203d57bcff0f00675ff5")]
+        //[TestCase(@"https://github.com/Anahkiasen/rocketeer.git",
+        //        @"3591b74208e632ce5ffe090ffcd19330785feb77")]
+        //[TestCase(@"https://github.com/symfony/symfony.git",
+        //        @"78d49fbe8c479722319d9e7f1021c89ba6e55308")]
+        //[TestCase(@"https://github.com/yiisoft/yii.git",
+        //        @"2c2f25ba411e9e8d8b9fe3d7a2598940e05eb645")]
+        //[TestCase(@"https://github.com/yiisoft/yii2.git",
+        //        @"30accd28d6507935acb0ce3d7a1b374a3117d878")]
+        //[TestCase(@"https://github.com/zendframework/zf2.git",
+        //        @"4fe2829353077239aafc9ffe39a15c07bba5b660")]
         public void ParseGitRepository(string url, string commitPointer) {
             VerifyRestoringGitRepository(url, commitPointer, "*.java");
         }

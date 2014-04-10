@@ -96,42 +96,27 @@ public class AlignedTuplePrinter {
             Assert.That(nodes[1].RuleId, Is.Not.EqualTo(nodes[2].RuleId));
         }
 
-        //[Test]
-        //[TestCase(@"android-betterpickers")]
-        //[TestCase(@"android-priority-jobqueue")]
-        //[TestCase(@"elasticsearch")]
-        //[TestCase(@"Hydra")]
-        //[TestCase(@"pageobjectgenerator")]
-        //[TestCase(@"presto")]
-        //[TestCase(@"RxJava")]
-        //[TestCase(@"scalpel")]
-        //[TestCase(@"storm")]
-        //[TestCase(@"u2020")]
-        //public void ParseDirectory(string directoryName) {
-        //    VerifyRestoringProjectDirectory("Java", directoryName, "*.java");
-        //}
-
         [Test]
-        [TestCase(@"https://github.com/derekbrameyer/android-betterpickers.git",
-                @"0a72367b478970b1731822e78790a158a4f7ebb4")]
-        [TestCase(@"https://github.com/path/android-priority-jobqueue.git",
-                @"89d76ea193cfded0d9401f534fedbfe14c981c04")]
-        [TestCase(@"https://github.com/elasticsearch/elasticsearch.git",
-                @"211f740100bae44a96ce5efe7a850914ad8d9abb")]
         [TestCase(@"https://github.com/Findwise/Hydra.git",
-                @"455917103ad47bf14edce135c5eba1045d9196a4")]
-        [TestCase(@"https://github.com/exKAZUu/POGen.git",
-                @"69fff3e37565ad668e6c8e90e7b2e4d135117cf5")]
-        [TestCase(@"https://github.com/facebook/presto.git",
-                @"16c3fae380c2caf195d5f43f87495c978bccb22b")]
+                @"5c781845a466f99645eac9fa27fb27aceb88a442")]
         [TestCase(@"https://github.com/Netflix/RxJava.git",
-                @"3c6fbe0bb170e45ed072b82adef8b34f63100a79")]
+                @"bd87341aecb408b2a0acc3f7a42dc118be006b1d")]
+        [TestCase(@"https://github.com/derekbrameyer/android-betterpickers.git",
+                @"5646215424ad779f1f780254101b75221675b76b")]
+        [TestCase(@"https://github.com/path/android-priority-jobqueue.git",
+                @"d3b33d9ae94df76ffde1f4b9735c0f7cc6463384")]
+        [TestCase(@"https://github.com/elasticsearch/elasticsearch.git",
+                @"2f32908193f3f61139da054f0ee5a949f8c589dc")]
+        [TestCase(@"https://code.google.com/p/pageobjectgenerator/",
+                @"169bdaf6a5a08fab62e167764e7f8401309d7b64")]
+        [TestCase(@"https://github.com/facebook/presto.git",
+                @"78045f8ede1f1e3deb4e40b880745141480d362f")]
         [TestCase(@"https://github.com/JakeWharton/scalpel.git",
-                @"97299acd1cc7b4138af714f1ed0bce47e9ce516d")]
+                @"27338feaa632bc160ae4f27f001474f0850310ea")]
         [TestCase(@"https://github.com/nathanmarz/storm.git",
-                @"cdb116e942666973bc4eaa0df098d5bab82739e7")]
+                @"66a397368a98834095b47db2b706420901c52ba3")]
         [TestCase(@"https://github.com/JakeWharton/u2020.git",
-                @"831efcdaf8dec58bc8da836d94b6e1ea6151696e")]
+                @"a08a7ec51e01cc40aa27779dca52277e69d156f7")]
         public void ParseGitRepository(string url, string commitPointer) {
             VerifyRestoringGitRepository(url, commitPointer, "*.java");
         }
