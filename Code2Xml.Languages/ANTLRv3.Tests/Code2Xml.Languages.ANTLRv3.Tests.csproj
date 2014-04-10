@@ -51,7 +51,7 @@
   <ItemGroup>
     <Compile Include="CCstGeneratorUsingAntlr3Test.cs" />
     <Compile Include="LuaCstGeneratorUsingAntlr3Test.cs" />
-    <Compile Include="FileCacheProcessorTest.cs" />
+    <Compile Include="FileCacheCstGeneratorTest.cs" />
     <Compile Include="TestCstGeneratorTest.cs" />
     <Compile Include="PhpCstGeneratorTest.cs" />
     <Compile Include="JavaScriptCstGeneratorTest.cs" />

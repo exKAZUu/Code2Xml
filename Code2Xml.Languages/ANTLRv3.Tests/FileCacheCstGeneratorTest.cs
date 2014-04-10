@@ -24,7 +24,7 @@ using NUnit.Framework;
 
 namespace Code2Xml.Languages.ANTLRv3.Tests {
     [TestFixture]
-    public class FileCacheProcessorTest {
+    public class FileCacheCstGeneratorTest {
         [Test]
         public void TestWritingXml() {
             var proc = new FileCacheCstGenerator(new JavaCstGeneratorUsingAntlr3());
