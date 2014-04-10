@@ -35,21 +35,14 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Paraiba, Version=1.1.2.92, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Paraiba, Version=1.1.3.93, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Paraiba.1.1.2.92\lib\net40\Paraiba.dll</HintPath>
-    </Reference>
-    <Reference Include="Paraiba.Experiment, Version=1.1.2.92, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Paraiba.Experiment.1.1.2.92\lib\net40\Paraiba.Experiment.dll</HintPath>
+      <HintPath>..\..\packages\Paraiba.1.1.3.93\lib\net40\Paraiba.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -127,10 +120,6 @@
     <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">
       <Project>{bccd95a9-7685-4b15-9da3-e48cc0bf499b}</Project>
       <Name>Code2Xml.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\ParserTests\ParserTests\ParserTests.csproj">
-      <Project>{20510236-d8b1-4617-9352-4e6134f9ab67}</Project>
-      <Name>ParserTests</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

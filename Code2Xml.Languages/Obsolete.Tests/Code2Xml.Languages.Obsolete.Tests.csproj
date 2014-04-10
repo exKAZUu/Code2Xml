@@ -41,20 +41,12 @@
     <Reference Include="nunit.framework">
       <HintPath>..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="Paraiba, Version=1.1.2.92, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Paraiba.1.1.2.92\lib\net40\Paraiba.dll</HintPath>
-    </Reference>
-    <Reference Include="Paraiba.Experiment, Version=1.1.2.92, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Paraiba.Experiment.1.1.2.92\lib\net40\Paraiba.Experiment.dll</HintPath>
+    <Reference Include="Paraiba.Experiment">
+      <HintPath>..\..\packages\Paraiba.Experiment.1.1.3.93\lib\net40\Paraiba.Experiment.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -69,10 +61,6 @@
     <Compile Include="SrcMLForCppCodeToXmlTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Code2Xml.Core.Tests\Code2Xml.Core.Tests.csproj">
-      <Project>{f4035613-faa1-419c-880c-ee60dda08783}</Project>
-      <Name>Code2Xml.Core.Tests</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">
       <Project>{bccd95a9-7685-4b15-9da3-e48cc0bf499b}</Project>
       <Name>Code2Xml.Core</Name>

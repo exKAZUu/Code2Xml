@@ -26,7 +26,6 @@ using Code2Xml.Core;
 using Code2Xml.Languages.ANTLRv4.Core;
 using Code2Xml.Languages.ANTLRv4.Processors.Java;
 using NUnit.Framework;
-using Paraiba.Xml.Linq;
 
 namespace Code2Xml.Languages.ANTLRv4.Tests.Processors {
 	[TestFixture]

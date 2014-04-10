@@ -23,7 +23,6 @@ using Code2Xml.Core;
 using Code2Xml.Core.Processors;
 using Code2Xml.Languages.ExternalProcessors.Properties;
 using Paraiba.IO;
-using ParserTests;
 
 namespace Code2Xml.Languages.ExternalProcessors.Processors.Cobol {
     /// <summary>

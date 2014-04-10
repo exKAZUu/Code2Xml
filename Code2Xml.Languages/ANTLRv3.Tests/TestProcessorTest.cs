@@ -16,7 +16,6 @@
 
 #endregion
 
-using System.Linq;
 using Code2Xml.Core;
 using Code2Xml.Core.Tests;
 using Code2Xml.Languages.ANTLRv3.Processors.Test;
