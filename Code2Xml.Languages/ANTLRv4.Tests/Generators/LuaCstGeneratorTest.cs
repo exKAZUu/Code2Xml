@@ -72,28 +72,33 @@ if true then --[[VERBOSE]] print(1) end
         }
 
         [Test]
+        [TestCase(@"https://github.com/stevedonovan/Penlight.git",
+                @"e9992789af07861974cad2bad5ba7c067d089e26")]
+        [TestCase(@"https://github.com/zedshaw/Tir.git",
+                @"4c1bdfa5b421e8eb9d3724928055da2728130d40")]
         [TestCase(@"https://github.com/ostinelli/gin.git",
                 @"8361d2f5f16e64c65ba33d1dbbc74b97d5256f76")]
         [TestCase(@"https://github.com/koreader/koreader.git",
-                @"87f69291e18c84b5d7135589d2e8c910bab79f74")]
+                @"ca85deb1fa6779bc001b914d7bd371864106ea3a")]
         [TestCase(@"https://github.com/leafo/lapis.git",
-                @"afe3480cf9e64d3f92838846f1ce889a013d1d5e")]
+                @"0fe074b55e834267d82122f5c49d8b5a89c55f3d")]
         [TestCase(@"https://github.com/exKAZUu/lsyncd.git",
-                @"7addc7060b05e664b8e09e5c13b294e8e6394481")]
+                @"178f31590732da0eb39cd58b20cc53c3d954ebec")]
         [TestCase(@"https://github.com/rtsisyk/luafun.git",
-                @"3d44c0841dbc93b645546bb13868550089bfa076")]
+                @"396dfc14171cfccda349ce2b445707b889ab422d")]
         [TestCase(@"https://github.com/mason-larobina/luakit.git",
                 @"993d814c6a51bf50ec0424e65ce2dc35f4aa435f")]
         [TestCase(@"https://github.com/kikito/middleclass.git",
-                @"a8a8298a4c0fc03cb7c2906b4d17c3123c2c0038")]
+                @"124c6d687eaf46fa7f869056959975f018ae45bd")]
         [TestCase(@"https://github.com/tylerneylon/pacpac.git",
                 @"cad99bdd64346dbc3180ee611ea502197da8b414")]
-        [TestCase(@"https://github.com/zedshaw/Tir.git",
-                @"4c1bdfa5b421e8eb9d3724928055da2728130d40")]
-        [TestCase(@"https://github.com/stevedonovan/Penlight.git",
-                @"6118a923f5ef4a21a9ae432d42707c5f4f0446a1")]
         [TestCase(@"https://github.com/exebetche/vlsub.git",
-                @"71ef0ef295cafb5477769d9ba3975c6c2ba8d609")]
+                @"e2280c4a75c3c3aba2986465d9c9559927ed4479")]
+        // Failed test cases
+        //[TestCase(@"https://github.com/pkulchenko/ZeroBraneStudio.git",
+        //        @"777690862d387ed5c2311cf52ae35ff37b20269c")]
+        //[TestCase(@"https://github.com/justincormack/ljsyscall.git",
+        //        @"e71e418526e506dc1ab07d1e955f17de21e4b471")]
         public void ParseGitRepository(string url, string commitPointer) {
             VerifyRestoringGitRepository(url, commitPointer, "*.java");
         }

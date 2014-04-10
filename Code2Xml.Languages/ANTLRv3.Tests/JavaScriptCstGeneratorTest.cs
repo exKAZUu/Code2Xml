@@ -99,56 +99,60 @@ var completion = require('../lib/completion');
             VerifyRestoringFile("JavaScript", fileName);
         }
 
-        //[Test]
-        ////[TestCase("angular.js")]	// failed
-        //[TestCase("bootstrap")]
-        //[TestCase("browser-sync")]
-        //[TestCase("cheet.js")]
-        //[TestCase("clmtrackr")]
-        ////[TestCase("codebox")]	// failed
-        //[TestCase("countUp.js")]
-        ////[TestCase("d3")]	// failed
-        //[TestCase("fit.js")]
-        ////[TestCase("Ghost")]	// failed
-        //[TestCase("gulp")]
-        //[TestCase("ionic")]
-        ////[TestCase("jquery")]	// failed
-        //[TestCase("jQuery-File-Upload")] // failed
-        ////[TestCase("koa")]	// failed
-        ////[TestCase("Lychee")]	// failed
-        ////[TestCase("mathjs")]	// failed
-        ////[TestCase("moment")]	// failed
-        //[TestCase("my-mind")]
-        ////[TestCase("node-jscs")]	// failed
-        ////[TestCase("orbit.js")]	// failed
-        ////[TestCase("planetary.js")]	// failed
-        ////[TestCase("react")]	// failed
-        ////[TestCase("Semantic-UI")]	// failed
-        //public void ParseDirectory(string directoryName) {
-        //    VerifyRestoringProjectDirectory("JavaScript", directoryName, "*.js");
-        //}
-
         [Test]
         [TestCase(@"https://github.com/angular-ui/bootstrap.git",
-                @"3b6ab25b5c227ee21fc863ffe523e719475dbca5")]
+                @"94a7f5934ac114626e386a46619e19a43f918bf2")]
         [TestCase(@"https://github.com/shakyShane/browser-sync.git",
-                @"388634027ddd79bacaffae5a3ac82106d0008801")]
+                @"e56b9314ba6f6ed45eaa2f378d5391b98c3bf239")]
         [TestCase(@"https://github.com/namuol/cheet.js.git",
-                @"dd5fae6c476b22903c7c1777fbb6cb74b50ca4ed")]
+                @"25f9e09245ad615d52e5e56f906bf2f011db51e9")]
         [TestCase(@"https://github.com/auduno/clmtrackr.git",
-                @"f4461ac66b0dcf7146fe41611fbe91dda48cae89")]
+                @"58f852aa8e796488fd7ebe3791f87eede7d34c6d")]
         [TestCase(@"https://github.com/inorganik/countUp.js.git",
-                @"c86547a4abf3263c5116c2c07448d4352a3a2be3")]
+                @"67788e475e2fd26b5ef5bd8b19d9e787cb148b7c")]
         [TestCase(@"https://github.com/soulwire/fit.js.git",
-                @"74b6ef79a5cb1cda95a88c4b0c467c1c2eadbd54")]
+                @"9ad6d824805cfabba511f044325b219ad9d8c267")]
         [TestCase(@"https://github.com/gulpjs/gulp.git",
-                @"c2d02113d2b978e4565b9545495d3d9953ea4430")]
+                @"23b2e41c8be1888f4ef79bed05219ac13a359af9")]
         [TestCase(@"https://github.com/driftyco/ionic.git",
-                @"3a577129e932a42bb6c1de6b3808ca70764f4e92")]
+                @"8bc870e494469785aaec934878a4ee631596a06f")]
         [TestCase(@"https://github.com/blueimp/jQuery-File-Upload.git",
-                @"8dc29ded32a0f2caad86ebbdf8b23a22375ae78c")]
+                @"d87b2494a4157b8aea309fe3eeab862d5cd9e6d5")]
         [TestCase(@"https://github.com/ondras/my-mind.git",
-                @"19500978c610429b292d094df9c1aa599c2cb3fb")]
+                @"47215ceec70ba7c529012e2aa63ea5f2acbe321d")]
+        // Failed test cases
+        //[TestCase(@"https://github.com/TryGhost/Ghost.git",
+        //        @"185f3c65cd7a389384b3d9b91021954ba18f03dc")]
+        //[TestCase(@"https://github.com/electerious/Lychee.git",
+        //        @"f9f4afe7db9d2a2f9c98b208edb7fc47962cb41f")]
+        //[TestCase(@"https://github.com/Semantic-Org/Semantic-UI.git",
+        //        @"db646f9b72c3c0ff7a12f1c75c7bbdaf5b26ce57")]
+        //[TestCase(@"https://github.com/angular/angular.js.git",
+        //        @"40dc806e03b81cf8bdbb24d67c8e8e3c8af42324")]
+        //[TestCase(@"https://github.com/FriendCode/codebox.git",
+        //        @"6bdd4769c0fba1af7ac1ce3f455295fb97b5fd8c")]
+        //[TestCase(@"https://github.com/mbostock/d3.git",
+        //        @"b3d9f5e63b62974acd4ce5848e4da3e241cca649")]
+        //[TestCase(@"https://github.com/blueimp/jQuery-File-Upload.git",
+        //        @"d87b2494a4157b8aea309fe3eeab862d5cd9e6d5")]
+        //[TestCase(@"https://github.com/jquery/jquery.git",
+        //        @"4655c3de5f0348da25452ea64d80613bf919284e")]
+        //[TestCase(@"https://github.com/koajs/koa.git",
+        //        @"ac0896598860e90fab2d36ec17f427befff4a2e3")]
+        //[TestCase(@"https://github.com/josdejong/mathjs.git",
+        //        @"fe8d832bedd06dd411a37d35b781241762e7e590")]
+        //[TestCase(@"https://github.com/moment/moment.git",
+        //        @"e5c26e00a4dc00b45443e46cca28dabc472d54a7")]
+        //[TestCase(@"https://github.com/mdevils/node-jscs.git",
+        //        @"d36c4727cc35a551ec5f0a0b8601d75808756975")]
+        //[TestCase(@"https://github.com/orbitjs/orbit.js.git",
+        //        @"2a015c5defa825a8bca83917c1e02d039e161faa")]
+        //[TestCase(@"https://github.com/mdevils/node-jscs.git",
+        //        @"d36c4727cc35a551ec5f0a0b8601d75808756975")]
+        //[TestCase(@"https://github.com/BinaryMuse/planetary.js.git",
+        //        @"74013bde2960b5d271091e0db152adee2fc854d6")]
+        //[TestCase(@"https://github.com/facebook/react.git",
+        //        @"ce92efefc03116169f4a52aa96f8413471b260b9")]
         public void ParseGitRepository(string url, string commitPointer) {
             VerifyRestoringGitRepository(url, commitPointer, "*.js");
         }

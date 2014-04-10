@@ -99,38 +99,29 @@ int main() {
             VerifyRestoringFile("C", fileName);
         }
 
-        //[Test]
-        //[TestCase(@"FiniteStateEntropy")]
-        //[TestCase(@"greatest")]
-        ////[TestCase(@"libgit2")]
-        ////[TestCase(@"the_silver_searcher")]
-        ////[TestCase(@"twemproxy")]
-        ////[TestCase(@"bfgminer")]
-        ////[TestCase(@"Cinnamon")]
-        ////[TestCase(@"ejoy2d")]
-        ////[TestCase(@"exploit-database")]
-        ////[TestCase(@"lwan")]
-        ////[TestCase(@"micropython")]
-        ////[TestCase(@"redis")]
-        ////[TestCase(@"watchman")]
-        ////[TestCase(@"frida-core")]
-        ////[TestCase(@"libgdx")]
-        ////[TestCase(@"libuv")]
-        ////[TestCase(@"algo")]
-        //public void ParseDirectory(string directoryName) {
-        //    VerifyRestoringProjectDirectory("C", directoryName,
-        //            filePath => CCstGeneratorUsingAntlr3AndGcc.PreprocessCode(
-        //                    File.ReadAllText(filePath), Path.GetDirectoryName(filePath)),
-        //            "*.c");
-        //}
-
         [Test]
         [TestCase(@"https://github.com/Cyan4973/FiniteStateEntropy.git",
-                @"369fdf1758769c3050b3023c7e93c32841204aa1")]
+                @"2549f7ff026f1168dc09d705f7fb9a7856945740")]
         [TestCase(@"https://github.com/silentbicycle/greatest.git",
-                @"713785b0a227e8faf4eadfac04a9a139922fd14b")]
+                @"64cc0eb00bc4eca7381652a162779c952327a7b8")]
+        //[TestCase(@"libgit2")]
+        //[TestCase(@"the_silver_searcher")]
+        //[TestCase(@"twemproxy")]
+        //[TestCase(@"bfgminer")]
+        //[TestCase(@"Cinnamon")]
+        //[TestCase(@"ejoy2d")]
+        //[TestCase(@"exploit-database")]
+        //[TestCase(@"lwan")]
+        //[TestCase(@"micropython")]
+        //[TestCase(@"redis")]
+        //[TestCase(@"watchman")]
+        //[TestCase(@"frida-core")]
+        //[TestCase(@"libgdx")]
+        //[TestCase(@"libuv")]
+        //[TestCase(@"algo")]
         public void ParseGitRepository(string url, string commitPointer) {
-            VerifyRestoringGitRepository(url, commitPointer,
+            VerifyRestoringGitRepository(
+                    url, commitPointer,
                     filePath => CCstGeneratorUsingAntlr3AndGcc.PreprocessCode(
                             File.ReadAllText(filePath), Path.GetDirectoryName(filePath))
                     , "*.c");

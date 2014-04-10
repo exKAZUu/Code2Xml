@@ -11,3 +11,6 @@
 | ServiceStack | 5,018,555 | 13,950 | 1,094 | 15,044 |
 | SignalR | 2,202,044 | 6,489 | 483 | 6,972 |
 | StarryboundServer | 313,445 | 958 | 16 | 974 |
+| [greatest](https://github.com/silentbicycle/greatest.git) | 0 | 125 | 46 | 171 |
+| [FiniteStateEntropy](https://github.com/Cyan4973/FiniteStateEntropy.git) | 0 | 466 | 79 | 545 |
+| [MonoTouch.Dialog](https://github.com/migueldeicaza/MonoTouch.Dialog.git) | 0 | 531 | 15 | 546 |
