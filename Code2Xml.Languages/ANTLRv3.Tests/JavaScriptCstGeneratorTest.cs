@@ -121,8 +121,8 @@ var completion = require('../lib/completion');
         [TestCase(@"https://github.com/ondras/my-mind.git",
                 @"47215ceec70ba7c529012e2aa63ea5f2acbe321d")]
         // Failed test cases
-        //[TestCase(@"https://github.com/TryGhost/Ghost.git",
-        //        @"185f3c65cd7a389384b3d9b91021954ba18f03dc")]
+        [TestCase(@"https://github.com/TryGhost/Ghost.git",
+                @"185f3c65cd7a389384b3d9b91021954ba18f03dc")]
         //[TestCase(@"https://github.com/electerious/Lychee.git",
         //        @"f9f4afe7db9d2a2f9c98b208edb7fc47962cb41f")]
         //[TestCase(@"https://github.com/Semantic-Org/Semantic-UI.git",
