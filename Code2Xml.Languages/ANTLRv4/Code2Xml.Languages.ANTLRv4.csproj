@@ -169,6 +169,7 @@
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Generators.GarryLua</CustomToolNamespace>
       <Listener>False</Listener>
+      <Visitor>True</Visitor>
     </Antlr4>
     <None Include="packages.config" />
     <Antlr4 Include="Generators\CSharp\CSharp.g4">
