@@ -101,9 +101,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Paraiba">
+    <Reference Include="Paraiba, Version=1.1.3.93, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Paraiba.1.1.3.93\lib\net40\Paraiba.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Paraiba.Experiment, Version=1.1.3.93, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -113,32 +113,43 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="TreeDotNet, Version=1.2.2.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\TreeDotNet.1.2.2.12\lib\net40\TreeDotNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generators\CstGenerator.cs" />
     <Compile Include="Location\StructuredCode.cs" />
-    <Compile Include="Processors\FileCacheProcessor.cs" />
-    <Compile Include="Processors\MemoryCacheProcessor.cs" />
+    <Compile Include="Generators\AstGenerator.cs" />
+    <Compile Include="Generators\SyntaxTreeGenerator.cs" />
+    <Compile Include="Generators\AstGeneratorUsingExternalProgram.cs" />
+    <Compile Include="Generators\FileCacheCstGenerator.cs" />
+    <Compile Include="Generators\MemoryCacheCstGenerator.cs" />
     <Compile Include="Code2XmlConstants.cs" />
-    <Compile Include="ParseException.cs" />
+    <Compile Include="Generators\ParseException.cs" />
     <Compile Include="Location\CodeLocation.cs" />
-    <Compile Include="Processor.cs" />
     <Compile Include="Location\CodeRange.cs" />
     <Compile Include="Code2XmlExtension.cs" />
-    <Compile Include="Processors\ProcessorUsingExternalParser.cs" />
-    <Compile Include="Processors\ProcessorUsingExternalParserAndOwnCodeGenerator.cs" />
-    <Compile Include="Processors\ProcessorUsingExternalProcessor.cs" />
-    <Compile Include="Traversal\Traversal.cs" />
-    <Compile Include="Tree\SyntaxTree.cs" />
-    <Compile Include="XmlToCodes\XmlToCodeBase.cs" />
-    <Compile Include="CodeToXmls\CodeToXmlContract.cs" />
-    <Compile Include="CodeToXmls\CodeToXml.cs" />
-    <Compile Include="CodeToXmls\ExternalCodeToXmlContract.cs" />
-    <Compile Include="CodeToXmls\ExternalCodeToXml.cs" />
-    <Compile Include="XmlToCodes\XmlToCode.cs" />
-    <Compile Include="XmlToCodes\DefaultXmlToCode.cs" />
-    <Compile Include="XmlToCodes\ExternalXmlToCode.cs" />
+    <Compile Include="Generators\CstGeneratorUsingExternalProgram.cs" />
+    <Compile Include="Serialization\BinarySerializer.cs" />
+    <Compile Include="Serialization\BinaryDeserializer.cs" />
+    <Compile Include="Serialization\Serializer.cs" />
+    <Compile Include="Serialization\Deserializer.cs" />
+    <Compile Include="Generators\SyntaxTree\AstNode.cs" />
+    <Compile Include="Generators\SyntaxTree\AstToken.cs" />
+    <Compile Include="Generators\SyntaxTree\AstNodeExtension.cs" />
+    <Compile Include="Generators\SyntaxTree\SyntaxTreeNode.cs" />
+    <Compile Include="Generators\SyntaxTree\SyntaxTreeToken.cs" />
+    <Compile Include="Generators\SyntaxTree\CstNodeExtension.cs" />
+    <Compile Include="Generators\SyntaxTree\Traversal.cs" />
+    <Compile Include="Serialization\TextDeserializer.cs" />
+    <Compile Include="Serialization\TextSerializer.cs" />
+    <Compile Include="Generators\SyntaxTree\CstNode.cs" />
+    <Compile Include="Generators\SyntaxTree\CstToken.cs" />
+    <Compile Include="Generators\SyntaxTree\SerializationType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Processors\ExternalProgramUtils.cs" />
+    <Compile Include="Generators\ExternalProgramUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

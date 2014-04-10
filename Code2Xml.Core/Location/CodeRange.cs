@@ -22,374 +22,474 @@ using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
+using Code2Xml.Core.Generators;
+using Code2Xml.Core.Serialization;
+using Paraiba.Linq;
 
 namespace Code2Xml.Core.Location {
-	/// <summary>
-	/// Represents a range in sour code with the specified *INCLUSIVE* start and *EXCLUSIVE* end positions.
-	/// </summary>
-	[Serializable]
-	public struct CodeRange : IEquatable<CodeRange> {
-		public CodeLocation StartLocation;
-		public CodeLocation EndLocation;
+    /// <summary>
+    /// Represents a range in sour code with the specified start and *EXCLUSIVE* end positions.
+    /// </summary>
+    [Serializable]
+    public struct CodeRange : IEquatable<CodeRange> {
+        public static CodeRange Nil = new CodeRange
+        { StartLine = -1, EndLine = -1, StartPosition = -1, EndPosition = -1 };
 
-		public int StartLine {
-			get { return StartLocation.Line; }
-			set { StartLocation.Line = value; }
-		}
+        public CodeLocation StartLocation;
+        public CodeLocation EndLocation;
 
-		public int StartPosition {
-			get { return StartLocation.Position; }
-			set { StartLocation.Position = value; }
-		}
+        public int StartLine {
+            get { return StartLocation.Line; }
+            set { StartLocation.Line = value; }
+        }
 
-		public int EndLine {
-			get { return EndLocation.Line; }
-			set { EndLocation.Line = value; }
-		}
+        public int StartPosition {
+            get { return StartLocation.Position; }
+            set { StartLocation.Position = value; }
+        }
 
-		public int EndPosition {
-			get { return EndLocation.Position; }
-			set { EndLocation.Position = value; }
-		}
+        public int EndLine {
+            get { return EndLocation.Line; }
+            set { EndLocation.Line = value; }
+        }
 
-		public CodeRange(CodeLocation inclusiveStartLocation, CodeLocation exclusiveEndLocation) {
-			Contract.Requires<ArgumentException>(inclusiveStartLocation <= exclusiveEndLocation);
-			StartLocation = inclusiveStartLocation;
-			EndLocation = exclusiveEndLocation;
-		}
+        public int EndPosition {
+            get { return EndLocation.Position; }
+            set { EndLocation.Position = value; }
+        }
 
-		#region Members about the string representation
+        public CodeRange(CodeLocation inclusiveStartLocation, CodeLocation exclusiveEndLocation) {
+            Contract.Requires(inclusiveStartLocation <= exclusiveEndLocation);
+            StartLocation = inclusiveStartLocation;
+            EndLocation = exclusiveEndLocation;
+        }
 
-		/// <summary>
-		/// Returns the string representation of the line numbers with "StartLine - EndLine"
-		/// </summary>
-		public string LineString {
-			get { return StartLine + " - " + EndLine; }
-		}
+        public CodeRange(XElement startElement, XElement endElement) {
+            Contract.Requires(startElement != null);
+            Contract.Requires(endElement != null);
+            StartLocation = new CodeLocation(
+                    int.Parse(startElement.Attribute(Code2XmlConstants.StartLineName).Value),
+                    int.Parse(startElement.Attribute(Code2XmlConstants.StartPositionName).Value));
+            EndLocation = new CodeLocation(
+                    int.Parse(endElement.Attribute(Code2XmlConstants.EndLineName).Value),
+                    int.Parse(endElement.Attribute(Code2XmlConstants.EndPositionName).Value));
+        }
 
-		/// <summary>
-		/// Returns the string representation of the position (column) numbers with "StartPosition - EndPosition"
-		/// </summary>
-		public string PositionString {
-			get { return StartPosition + " - " + EndPosition; }
-		}
+        public CodeRange(XElement element) : this(element, element) {}
 
-		/// <summary>
-		/// Returns the smart string representation of the line numbers
-		/// with "StartLine - EndLine" when StartLine != EndLine
-		/// with just "StartLine" when StartLine == EndLine
-		/// </summary>
-		public string SmartLineString {
-			get {
-				return StartLine == EndLine
-						? StartLine.ToString() : (StartLine + " - " + EndLine);
-			}
-		}
+        #region Members about the string representation
 
-		/// <summary>
-		/// Returns the smart string representation of the position (column) numbers
-		/// with "StartPosition - EndPosition" when StartPosition != EndPosition
-		/// with just "StartPosition" when StartPosition == EndPosition
-		/// </summary>
-		public string SmartPositionString {
-			get {
-				return StartPosition == EndPosition
-						? StartPosition.ToString() : (StartPosition + " - " + EndPosition);
-			}
-		}
+        /// <summary>
+        /// Returns the string representation of the line numbers with "StartLine - EndLine"
+        /// </summary>
+        public string LineString {
+            get { return StartLine + " - " + EndLine; }
+        }
 
-		public override string ToString() {
-			return "Line: " + SmartLineString + ", Pos: " + SmartPositionString;
-		}
+        /// <summary>
+        /// Returns the string representation of the position (column) numbers with "StartPosition - EndPosition"
+        /// </summary>
+        public string PositionString {
+            get { return StartPosition + " - " + EndPosition; }
+        }
 
-		#endregion
+        /// <summary>
+        /// Returns the smart string representation of the line numbers
+        /// with "StartLine - EndLine" when StartLine != EndLine
+        /// with just "StartLine" when StartLine == EndLine
+        /// </summary>
+        public string SmartLineString {
+            get {
+                return StartLine == EndLine
+                        ? StartLine.ToString() : (StartLine + " - " + EndLine);
+            }
+        }
 
-		#region Members about the equality
+        /// <summary>
+        /// Returns the smart string representation of the position (column) numbers
+        /// with "StartPosition - EndPosition" when StartPosition != EndPosition
+        /// with just "StartPosition" when StartPosition == EndPosition
+        /// </summary>
+        public string SmartPositionString {
+            get {
+                return StartPosition == EndPosition
+                        ? StartPosition.ToString() : (StartPosition + " - " + EndPosition);
+            }
+        }
 
-		public bool Equals(CodeRange other) {
-			return other.EndLine == EndLine && other.EndPosition == EndPosition &&
-			       other.StartLine == StartLine && other.StartPosition == StartPosition;
-		}
+        public override string ToString() {
+            return "Line: " + SmartLineString + ", Pos: " + SmartPositionString;
+        }
 
-		public override bool Equals(object obj) {
-			if (ReferenceEquals(null, obj)) {
-				return false;
-			}
-			if (obj.GetType() != typeof(CodeRange)) {
-				return false;
-			}
-			return Equals((CodeRange)obj);
-		}
+        #endregion
 
-		public override int GetHashCode() {
-			unchecked {
-				int result = EndLine;
-				result = (result * 397) ^ EndPosition;
-				result = (result * 397) ^ StartLine;
-				result = (result * 397) ^ StartPosition;
-				return result;
-			}
-		}
+        #region Members about the equality
 
-		public static bool operator ==(CodeRange left, CodeRange right) {
-			return left.Equals(right);
-		}
+        public bool Equals(CodeRange other) {
+            return other.EndLine == EndLine && other.EndPosition == EndPosition &&
+                   other.StartLine == StartLine && other.StartPosition == StartPosition;
+        }
 
-		public static bool operator !=(CodeRange left, CodeRange right) {
-			return !left.Equals(right);
-		}
+        public override bool Equals(object obj) {
+            if (ReferenceEquals(null, obj)) {
+                return false;
+            }
+            if (obj.GetType() != typeof(CodeRange)) {
+                return false;
+            }
+            return Equals((CodeRange)obj);
+        }
 
-		#endregion
+        public override int GetHashCode() {
+            unchecked {
+                int result = EndLine;
+                result = (result * 397) ^ EndPosition;
+                result = (result * 397) ^ StartLine;
+                result = (result * 397) ^ StartPosition;
+                return result;
+            }
+        }
 
-		#region Members about the serialization
+        public static bool operator ==(CodeRange left, CodeRange right) {
+            return left.Equals(right);
+        }
 
-		public static CodeRange Read(BinaryReader reader) {
-			var startLine = reader.ReadInt32();
-			var endLine = reader.ReadInt32();
-			var startPos = reader.ReadInt32();
-			var endPos = reader.ReadInt32();
-			return new CodeRange(new CodeLocation(startLine, startPos), new CodeLocation(endLine, endPos));
-		}
+        public static bool operator !=(CodeRange left, CodeRange right) {
+            return !left.Equals(right);
+        }
 
-		public void Write(BinaryWriter writer) {
-			writer.Write(StartLine);
-			writer.Write(EndLine);
-			writer.Write(StartPosition);
-			writer.Write(EndPosition);
-		}
+        #endregion
 
-		#endregion
+        #region Members about the serialization
 
-		/// <summary>
-		/// Returns whether the specified location (line and position) is included this CodeRange instance.
-		/// </summary>
-		/// <param name="location"></param>
-		/// <returns></returns>
-		public bool Contains(CodeLocation location) {
-			return StartLocation <= location && location < EndLocation;
-		}
+        public static CodeRange ReadBinary(BinaryReader reader) {
+            var startLine = reader.ReadInt32();
+            var endLine = reader.ReadInt32();
+            var startPos = reader.ReadInt32();
+            var endPos = reader.ReadInt32();
+            return new CodeRange(
+                    new CodeLocation(startLine, startPos), new CodeLocation(endLine, endPos));
+        }
 
-		/// <summary>
-		/// Returns whether the specified CodeRange instance is included by this CodeRange instance.
-		/// </summary>
-		/// <param name="other"></param>
-		/// <returns></returns>
-		public bool Contains(CodeRange other) {
-			return StartLocation <= other.StartLocation && other.EndLocation <= EndLocation;
-		}
+        public void WriteBinary(BinaryWriter writer) {
+            writer.Write(StartLine);
+            writer.Write(EndLine);
+            writer.Write(StartPosition);
+            writer.Write(EndPosition);
+        }
 
-		/// <summary>
-		/// Returns whether the specified CodeRange instance is overlapped with this CodeRange instance.
-		/// </summary>
-		/// <param name="other"></param>
-		/// <returns></returns>
-		public bool Overlaps(CodeRange other) {
-			return (StartLocation <= other.StartLocation && other.StartLocation < EndLocation) ||
-			       (StartLocation < other.EndLocation && other.EndLocation <= EndLocation) ||
-			       (other.StartLocation <= StartLocation && StartLocation < other.EndLocation) ||
-			       (other.StartLocation < EndLocation && EndLocation <= other.EndLocation);
-		}
+        public static CodeRange Desrialize(Deserializer deserializer) {
+            var startLine = deserializer.DeserializeInt();
+            var endLine = deserializer.DeserializeInt();
+            var startPos = deserializer.DeserializeInt();
+            var endPos = deserializer.DeserializeInt();
+            return new CodeRange(
+                    new CodeLocation(startLine, startPos), new CodeLocation(endLine, endPos));
+        }
 
-		/// <summary>
-		/// Find the most inner element which locates at the this range from the specified root.
-		/// </summary>
-		/// <param name="root"></param>
-		/// <returns></returns>
-		public XElement FindInnermostElement(XElement root) {
-			XElement lastElement = null;
-			foreach (var elem in root.DescendantsAndSelf()) {
-				var pos = Locate(elem);
-				if (pos.Contains(this)) {
-					lastElement = elem;
-				} else if (EndLocation <= pos.StartLocation) {
-					break;
-				}
-			}
-			return lastElement;
-		}
+        public void Serialize(Serializer serializer) {
+            serializer.Serialize(StartLine);
+            serializer.Serialize(EndLine);
+            serializer.Serialize(StartPosition);
+            serializer.Serialize(EndPosition);
+        }
 
-		/// <summary>
-		/// Find the most outer element which locates at the this range from the specified root.
-		/// </summary>
-		/// <param name="root"></param>
-		/// <returns></returns>
-		public XElement FindOutermostElement(XElement root) {
-			var ret = FindInnermostElement(root);
-			while (ret.Parent != null && ret.Parent.Elements().Count() == 1) {
-				ret = ret.Parent;
-			}
-			return ret;
-		}
+        #endregion
 
-		#region Inter-Conversion between a CodeRange object and indicies
+        /// <summary>
+        /// Returns whether the specified location (line and position) is included this CodeRange instance.
+        /// </summary>
+        /// <param name="location"></param>
+        /// <returns></returns>
+        public bool Contains(CodeLocation location) {
+            return StartLocation <= location && location < EndLocation;
+        }
 
-		public string GetCodeFragment(string code) {
-			var indicies = ConvertToIndicies(code);
-			var length = indicies.Item2 - indicies.Item1;
-			return length != 0
-					? code.Substring(indicies.Item1, indicies.Item2 - indicies.Item1)
-					: string.Empty;
-		}
+        /// <summary>
+        /// Returns whether the specified CodeRange instance is included by this CodeRange instance.
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public bool Contains(CodeRange other) {
+            return StartLocation <= other.StartLocation && other.EndLocation <= EndLocation;
+        }
 
-		public string GetCodeFragment(StructuredCode code) {
-			return code.GetFragment(this);
-		}
+        /// <summary>
+        /// Returns whether the specified CodeRange instance is overlapped with this CodeRange instance.
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public bool Overlaps(CodeRange other) {
+            return (StartLocation <= other.StartLocation && other.StartLocation < EndLocation) ||
+                   (StartLocation < other.EndLocation && other.EndLocation <= EndLocation) ||
+                   (other.StartLocation <= StartLocation && StartLocation < other.EndLocation) ||
+                   (other.StartLocation < EndLocation && EndLocation <= other.EndLocation);
+        }
 
-		public void ConvertToIndicies(string code, out int inclusiveStart, out int exclusiveEnd) {
-			var headIndex = 0;
-			var i = 1;
-			for (; i < StartLine; i++) {
-				headIndex = code.IndexOf('\n', headIndex) + 1;
-			}
-			inclusiveStart = headIndex + StartPosition;
-			for (; i < EndLine; i++) {
-				headIndex = code.IndexOf('\n', headIndex) + 1;
-			}
-			exclusiveEnd = headIndex + EndPosition;
-		}
+        /// <summary>
+        /// Find the most inner element which locates at the this range from the specified root.
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public CstNode FindInnermostElement(CstNode root) {
+            CstNode lastElement = null;
+            foreach (var elem in root.DescendantsAndSelf()) {
+                var pos = Locate(elem);
+                if (pos.Contains(this)) {
+                    lastElement = elem;
+                } else if (EndLocation <= pos.StartLocation) {
+                    break;
+                }
+            }
+            return lastElement;
+        }
 
-		public void ConvertToIndicies(StructuredCode code, out int inclusiveStart, out int exclusiveEnd) {
-			inclusiveStart = code.GetIndex(StartLocation);
-			exclusiveEnd = code.GetIndex(EndLocation);
-		}
+        /// <summary>
+        /// Find the most outer element which locates at the this range from the specified root.
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public CstNode FindOutermostElement(CstNode root) {
+            var ret = FindInnermostElement(root);
+            while (ret.Parent != null && ret.Parent.Elements().Count() == 1) {
+                ret = ret.Parent;
+            }
+            return ret;
+        }
 
-		public Tuple<int, int> ConvertToIndicies(string code) {
-			int inclusiveStart, exclusiveEnd;
-			ConvertToIndicies(code, out inclusiveStart, out exclusiveEnd);
-			return Tuple.Create(inclusiveStart, exclusiveEnd);
-		}
+        /// <summary>
+        /// Find the most inner element which locates at the this range from the specified root.
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public XElement FindInnermostElement(XElement root) {
+            XElement lastElement = null;
+            foreach (var elem in root.DescendantsAndSelf()) {
+                var pos = Locate(elem);
+                if (pos.Contains(this)) {
+                    lastElement = elem;
+                } else if (EndLocation <= pos.StartLocation) {
+                    break;
+                }
+            }
+            return lastElement;
+        }
 
-		public Tuple<int, int> ConvertToIndicies(StructuredCode code) {
-			int inclusiveStart, exclusiveEnd;
-			ConvertToIndicies(code, out inclusiveStart, out exclusiveEnd);
-			return Tuple.Create(inclusiveStart, exclusiveEnd);
-		}
+        /// <summary>
+        /// Find the most outer element which locates at the this range from the specified root.
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public XElement FindOutermostElement(XElement root) {
+            var ret = FindInnermostElement(root);
+            while (ret.Parent != null && ret.Parent.Elements().Count() == 1) {
+                ret = ret.Parent;
+            }
+            return ret;
+        }
 
-		public static CodeRange ConvertFromIndicies(string code, int inclusiveStart, int exclusiveEnd) {
-			var startLocation = CodeLocation.ConvertFromIndex(code, inclusiveStart);
-			var endLocation = CodeLocation.ConvertFromIndex(
-					code, exclusiveEnd, startLocation, inclusiveStart);
-			return new CodeRange(startLocation, endLocation);
-		}
+        #region Inter-Conversion between a CodeRange object and indicies
 
-		public static CodeRange ConvertFromIndicies(
-				StructuredCode code, int inclusiveStart, int exclusiveEnd) {
-			var startLocation = CodeLocation.ConvertFromIndex(code, inclusiveStart);
-			var endLocation = CodeLocation.ConvertFromIndex(code, exclusiveEnd, startLocation);
-			return new CodeRange(startLocation, endLocation);
-		}
+        public string GetCodeFragment(string code) {
+            var indicies = ConvertToIndicies(code);
+            var length = indicies.Item2 - indicies.Item1;
+            return length != 0
+                    ? code.Substring(indicies.Item1, indicies.Item2 - indicies.Item1)
+                    : string.Empty;
+        }
 
-		public static CodeRange ConvertFromIndiciesSkippingWhitespaces(
-				string code, ref int inclusiveStart, ref int exclusiveEnd) {
-			while (char.IsWhiteSpace(code[inclusiveStart])) {
-				inclusiveStart++;
-			}
-			while (char.IsWhiteSpace(code[exclusiveEnd - 1])) {
-				exclusiveEnd--;
-			}
-			return ConvertFromIndicies(code, inclusiveStart, exclusiveEnd);
-		}
+        public string GetCodeFragment(StructuredCode code) {
+            return code.GetFragment(this);
+        }
 
-		public static CodeRange ConvertFromIndiciesSkippingWhitespaces(
-				StructuredCode code, ref int inclusiveStart, ref int exclusiveEnd) {
-			while (char.IsWhiteSpace(code[inclusiveStart])) {
-				inclusiveStart++;
-			}
-			while (char.IsWhiteSpace(code[exclusiveEnd - 1])) {
-				exclusiveEnd--;
-			}
-			return ConvertFromIndicies(code, inclusiveStart, exclusiveEnd);
-		}
+        public void ConvertToIndicies(string code, out int inclusiveStart, out int exclusiveEnd) {
+            var headIndex = 0;
+            var i = 1;
+            for (; i < StartLine; i++) {
+                headIndex = code.IndexOf('\n', headIndex) + 1;
+            }
+            inclusiveStart = headIndex + StartPosition;
+            for (; i < EndLine; i++) {
+                headIndex = code.IndexOf('\n', headIndex) + 1;
+            }
+            exclusiveEnd = headIndex + EndPosition;
+        }
 
-		#endregion
+        public void ConvertToIndicies(
+                StructuredCode code, out int inclusiveStart, out int exclusiveEnd) {
+            inclusiveStart = code.GetIndex(StartLocation);
+            exclusiveEnd = code.GetIndex(EndLocation);
+        }
 
-		#region Locate a node of an AST
+        public Tuple<int, int> ConvertToIndicies(string code) {
+            int inclusiveStart, exclusiveEnd;
+            ConvertToIndicies(code, out inclusiveStart, out exclusiveEnd);
+            return Tuple.Create(inclusiveStart, exclusiveEnd);
+        }
 
-		public static CodeRange LocateIncludingHidden(XElement element) {
-			return LocatePrivate(
-					element.DescendantsAndSelf()
-							.Where(e => e.Attribute(Code2XmlConstants.StartPositionName) != null));
-		}
+        public Tuple<int, int> ConvertToIndicies(StructuredCode code) {
+            int inclusiveStart, exclusiveEnd;
+            ConvertToIndicies(code, out inclusiveStart, out exclusiveEnd);
+            return Tuple.Create(inclusiveStart, exclusiveEnd);
+        }
 
-		public static CodeRange Locate(XElement element) {
-			return LocatePrivate(
-					element.DescendantsAndSelf()
-							.Where(e => e.Attribute(Code2XmlConstants.StartPositionName) != null && !e.IsHidden()));
-		}
+        public static CodeRange ConvertFromIndicies(
+                string code, int inclusiveStart, int exclusiveEnd) {
+            var startLocation = CodeLocation.ConvertFromIndex(code, inclusiveStart);
+            var endLocation = CodeLocation.ConvertFromIndex(
+                    code, exclusiveEnd, startLocation, inclusiveStart);
+            return new CodeRange(startLocation, endLocation);
+        }
 
-		public static CodeRange Locate(IEnumerable<XElement> elements) {
-			return LocatePrivate(
-					elements.DescendantsAndSelf()
-							.Where(e => e.Attribute(Code2XmlConstants.StartPositionName) != null && !e.IsHidden()));
-		}
+        public static CodeRange ConvertFromIndicies(
+                StructuredCode code, int inclusiveStart, int exclusiveEnd) {
+            var startLocation = CodeLocation.ConvertFromIndex(code, inclusiveStart);
+            var endLocation = CodeLocation.ConvertFromIndex(code, exclusiveEnd, startLocation);
+            return new CodeRange(startLocation, endLocation);
+        }
 
-		public static CodeRange LocateWithHidden(XElement element) {
-			return LocatePrivate(element.DescendantsAndSelf());
-		}
+        public static CodeRange ConvertFromIndiciesSkippingWhitespaces(
+                string code, ref int inclusiveStart, ref int exclusiveEnd) {
+            while (char.IsWhiteSpace(code[inclusiveStart])) {
+                inclusiveStart++;
+            }
+            while (char.IsWhiteSpace(code[exclusiveEnd - 1])) {
+                exclusiveEnd--;
+            }
+            return ConvertFromIndicies(code, inclusiveStart, exclusiveEnd);
+        }
 
-		public static CodeRange LocateWithHidden(IEnumerable<XElement> elements) {
-			return LocatePrivate(elements.DescendantsAndSelf());
-		}
+        public static CodeRange ConvertFromIndiciesSkippingWhitespaces(
+                StructuredCode code, ref int inclusiveStart, ref int exclusiveEnd) {
+            while (char.IsWhiteSpace(code[inclusiveStart])) {
+                inclusiveStart++;
+            }
+            while (char.IsWhiteSpace(code[exclusiveEnd - 1])) {
+                exclusiveEnd--;
+            }
+            return ConvertFromIndicies(code, inclusiveStart, exclusiveEnd);
+        }
 
-		public static XElement SetLocationAttributes(
-				XElement element, string text, CodeLocation startLocation) {
-			var exclusiveEndLocation = startLocation.Advance(text);
-			element.SetAttributeValue(
-					Code2XmlConstants.StartLineName, startLocation.Line);
-			element.SetAttributeValue(
-					Code2XmlConstants.StartPositionName, startLocation.Position);
-			element.SetAttributeValue(
-					Code2XmlConstants.EndLineName, exclusiveEndLocation.Line);
-			element.SetAttributeValue(
-					Code2XmlConstants.EndPositionName, exclusiveEndLocation.Position);
-			return element;
-		}
+        #endregion
 
-		private static CodeRange LocatePrivate(IEnumerable<XElement> descendants) {
-			int startLine = 0, startPos = 0;
-			var first = descendants.FirstOrDefault(
-					e => e.Attribute(Code2XmlConstants.StartLineName) != null);
-			if (first != null) {
-				var startLineAttr = first.Attribute(Code2XmlConstants.StartLineName);
-				int.TryParse(startLineAttr.Value, out startLine);
+        #region Locate a node of an AST
 
-				var startPosAttr =
-						first.Attribute(Code2XmlConstants.StartPositionName);
-				if (startPosAttr != null) {
-					int.TryParse(startPosAttr.Value, out startPos);
-				}
-			} else {
-				return new CodeRange(new CodeLocation(-1, -1), new CodeLocation(-1, -1));
-			}
+        public static CodeRange LocateIncludingHidden(XElement element) {
+            return LocatePrivate(
+                    element.DescendantsAndSelf()
+                            .Where(e => e.Attribute(Code2XmlConstants.StartPositionName) != null));
+        }
 
-			int endLine = 0, endPos = 0;
-			var last = descendants.LastOrDefault(
-					e => e.Attribute(Code2XmlConstants.StartLineName) != null);
-			if (last != null) {
-				var endLineAttr = last.Attribute(Code2XmlConstants.EndLineName);
-				if (!(endLineAttr != null && int.TryParse(endLineAttr.Value, out endLine))) {
-					// Accept the last element's start line number
-					var startLineAttr = last.Attribute(Code2XmlConstants.StartLineName);
-					if (int.TryParse(startLineAttr.Value, out endLine)) {
-						endLine += last.Value.Count(c => c == '\n');
-					}
-				}
+        public static CodeRange Locate(XElement element) {
+            return LocatePrivate(
+                    element.DescendantsAndSelf()
+                            .Where(
+                                    e =>
+                                            e.Attribute(Code2XmlConstants.StartPositionName) != null
+                                            && !e.IsHidden()));
+        }
 
-				var endPosAttr = last.Attribute(Code2XmlConstants.EndPositionName);
-				if (!(endPosAttr != null && int.TryParse(endPosAttr.Value, out endPos))) {
-					var startPosAttr =
-							last.Attribute(Code2XmlConstants.StartPositionName);
-					int value;
-					if (startPosAttr != null && int.TryParse(startPosAttr.Value, out value)) {
-						int ignoredCount = last.Value.LastIndexOf('\n') + 1;
-						endPos = value + (last.Value.Length - 1) - ignoredCount;
-					}
-				}
-			}
+        public static CodeRange Locate(IEnumerable<XElement> elements) {
+            return LocatePrivate(
+                    elements.DescendantsAndSelf()
+                            .Where(
+                                    e =>
+                                            e.Attribute(Code2XmlConstants.StartPositionName) != null
+                                            && !e.IsHidden()));
+        }
 
-			return new CodeRange(new CodeLocation(startLine, startPos), new CodeLocation(endLine, endPos));
-		}
+        public static CodeRange LocateWithHiddens(XElement element) {
+            return LocatePrivate(element.DescendantsAndSelf());
+        }
 
-		#endregion
-	}
+        public static CodeRange LocateWithHiddens(IEnumerable<XElement> elements) {
+            return LocatePrivate(elements.DescendantsAndSelf());
+        }
+
+        public static XElement SetLocationAttributes(
+                XElement element, string text, CodeLocation startLocation) {
+            var exclusiveEndLocation = startLocation.Advance(text);
+            element.SetAttributeValue(
+                    Code2XmlConstants.StartLineName, startLocation.Line);
+            element.SetAttributeValue(
+                    Code2XmlConstants.StartPositionName, startLocation.Position);
+            element.SetAttributeValue(
+                    Code2XmlConstants.EndLineName, exclusiveEndLocation.Line);
+            element.SetAttributeValue(
+                    Code2XmlConstants.EndPositionName, exclusiveEndLocation.Position);
+            return element;
+        }
+
+        private static CodeRange LocatePrivate(IEnumerable<XElement> descendants) {
+            int startLine = 0, startPos = 0;
+            var first = descendants.FirstOrDefault(
+                    e => e.Attribute(Code2XmlConstants.StartLineName) != null);
+            if (first != null) {
+                var startLineAttr = first.Attribute(Code2XmlConstants.StartLineName);
+                int.TryParse(startLineAttr.Value, out startLine);
+
+                var startPosAttr =
+                        first.Attribute(Code2XmlConstants.StartPositionName);
+                if (startPosAttr != null) {
+                    int.TryParse(startPosAttr.Value, out startPos);
+                }
+            } else {
+                return new CodeRange(new CodeLocation(-1, -1), new CodeLocation(-1, -1));
+            }
+
+            int endLine = 0, endPos = 0;
+            var last = descendants.LastOrDefault(
+                    e => e.Attribute(Code2XmlConstants.StartLineName) != null);
+            if (last != null) {
+                var endLineAttr = last.Attribute(Code2XmlConstants.EndLineName);
+                if (!(endLineAttr != null && int.TryParse(endLineAttr.Value, out endLine))) {
+                    // Accept the last element's start line number
+                    var startLineAttr = last.Attribute(Code2XmlConstants.StartLineName);
+                    if (int.TryParse(startLineAttr.Value, out endLine)) {
+                        endLine += last.Value.Count(c => c == '\n');
+                    }
+                }
+
+                var endPosAttr = last.Attribute(Code2XmlConstants.EndPositionName);
+                if (!(endPosAttr != null && int.TryParse(endPosAttr.Value, out endPos))) {
+                    var startPosAttr =
+                            last.Attribute(Code2XmlConstants.StartPositionName);
+                    int value;
+                    if (startPosAttr != null && int.TryParse(startPosAttr.Value, out value)) {
+                        int ignoredCount = last.Value.LastIndexOf('\n') + 1;
+                        endPos = value + (last.Value.Length - 1) - ignoredCount;
+                    }
+                }
+            }
+
+            return new CodeRange(
+                    new CodeLocation(startLine, startPos), new CodeLocation(endLine, endPos));
+        }
+
+        #endregion
+
+        public static CodeRange Locate(CstNode node) {
+            var tuple = node.AllTokens().FirstAndLastOrNull();
+            if (tuple != null) {
+                var firstToken = tuple.Item1;
+                var lastToken = tuple.Item2;
+                return new CodeRange(
+                        new CodeLocation(firstToken.StartLine, firstToken.StartPosition),
+                        new CodeLocation(lastToken.EndLine, lastToken.EndPosition));
+            }
+            return Nil;
+        }
+
+        public static CodeRange LocateWithHiddens(CstNode node) {
+            var tuple = node.AllTokensWithHiddens().FirstAndLastOrNull();
+            if (tuple != null) {
+                var firstToken = tuple.Item1;
+                var lastToken = tuple.Item2;
+                return new CodeRange(
+                        new CodeLocation(firstToken.StartLine, firstToken.StartPosition),
+                        new CodeLocation(lastToken.EndLine, lastToken.EndPosition));
+            }
+            return Nil;
+        }
+    }
 }

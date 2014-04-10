@@ -17,155 +17,158 @@
 #endregion
 
 using System.Linq;
-using System.Xml.Linq;
+using Code2Xml.Core.Generators;
 using Code2Xml.Core.Location;
-using Code2Xml.Languages.ANTLRv3.Processors.Java;
+using Code2Xml.Languages.ANTLRv3.Generators.Java;
 using NUnit.Framework;
 
 namespace Code2Xml.Core.Tests.Location {
-	[TestFixture]
-	public class CodeRangeTest {
-		[Test]
-		[TestCase(1, 10, Result = false)]
-		[TestCase(2, 1, Result = false)]
-		[TestCase(2, 3, Result = false)]
-		[TestCase(2, 5, Result = true)]
-		[TestCase(2, 6, Result = true)]
-		[TestCase(3, 0, Result = true)]
-		[TestCase(3, 3, Result = false)]
-		[TestCase(3, 4, Result = false)]
-		[TestCase(5, 0, Result = false)]
-		public bool ContainsCodeLocation(int line, int pos) {
-			return new CodeRange(new CodeLocation(2, 5), new CodeLocation(3, 3))
-					.Contains(new CodeLocation(line, pos));
-		}
+    [TestFixture]
+    public class CodeRangeTest {
+        [Test]
+        [TestCase(1, 10, Result = false)]
+        [TestCase(2, 1, Result = false)]
+        [TestCase(2, 3, Result = false)]
+        [TestCase(2, 5, Result = true)]
+        [TestCase(2, 6, Result = true)]
+        [TestCase(3, 0, Result = true)]
+        [TestCase(3, 3, Result = false)]
+        [TestCase(3, 4, Result = false)]
+        [TestCase(5, 0, Result = false)]
+        public bool ContainsCodeLocation(int line, int pos) {
+            return new CodeRange(new CodeLocation(2, 5), new CodeLocation(3, 3))
+                    .Contains(new CodeLocation(line, pos));
+        }
 
-		[Test]
-		[TestCase(1, 0, 2, 1, Result = false)]
-		[TestCase(1, 0, 2, 5, Result = false)]
-		[TestCase(1, 0, 2, 10, Result = false)]
-		[TestCase(1, 0, 3, 10, Result = false)]
-		[TestCase(2, 0, 2, 1, Result = false)]
-		[TestCase(2, 0, 2, 5, Result = false)]
-		[TestCase(2, 0, 2, 10, Result = false)]
-		[TestCase(2, 0, 3, 10, Result = false)]
-		[TestCase(2, 5, 2, 10, Result = true)]
-		[TestCase(2, 5, 3, 1, Result = true)]
-		[TestCase(2, 5, 3, 3, Result = true)]
-		[TestCase(2, 5, 3, 10, Result = false)]
-		[TestCase(3, 7, 3, 8, Result = false)]
-		public bool ContainsCodePosition(int startLine, int startPos, int endLine, int endPos) {
-			var startLocation = new CodeLocation(startLine, startPos);
-			var endLocation = new CodeLocation(endLine, endPos);
-			return new CodeRange(new CodeLocation(2, 5), new CodeLocation(3, 3))
-					.Contains(new CodeRange(startLocation, endLocation));
-		}
+        [Test]
+        [TestCase(1, 0, 2, 1, Result = false)]
+        [TestCase(1, 0, 2, 5, Result = false)]
+        [TestCase(1, 0, 2, 10, Result = false)]
+        [TestCase(1, 0, 3, 10, Result = false)]
+        [TestCase(2, 0, 2, 1, Result = false)]
+        [TestCase(2, 0, 2, 5, Result = false)]
+        [TestCase(2, 0, 2, 10, Result = false)]
+        [TestCase(2, 0, 3, 10, Result = false)]
+        [TestCase(2, 5, 2, 10, Result = true)]
+        [TestCase(2, 5, 3, 1, Result = true)]
+        [TestCase(2, 5, 3, 3, Result = true)]
+        [TestCase(2, 5, 3, 10, Result = false)]
+        [TestCase(3, 7, 3, 8, Result = false)]
+        public bool ContainsCodePosition(int startLine, int startPos, int endLine, int endPos) {
+            var startLocation = new CodeLocation(startLine, startPos);
+            var endLocation = new CodeLocation(endLine, endPos);
+            return new CodeRange(new CodeLocation(2, 5), new CodeLocation(3, 3))
+                    .Contains(new CodeRange(startLocation, endLocation));
+        }
 
-		[Test]
-		[TestCase(1, 0, 2, 1, Result = false)]
-		[TestCase(1, 0, 2, 5, Result = false)]
-		[TestCase(1, 0, 2, 6, Result = true)]
-		[TestCase(1, 0, 2, 10, Result = true)]
-		[TestCase(1, 0, 3, 10, Result = true)]
-		[TestCase(2, 0, 2, 1, Result = false)]
-		[TestCase(2, 0, 2, 5, Result = false)]
-		[TestCase(2, 0, 2, 6, Result = true)]
-		[TestCase(2, 0, 2, 10, Result = true)]
-		[TestCase(2, 0, 3, 10, Result = true)]
-		[TestCase(2, 5, 2, 10, Result = true)]
-		[TestCase(2, 5, 3, 1, Result = true)]
-		[TestCase(2, 5, 3, 3, Result = true)]
-		[TestCase(2, 5, 3, 10, Result = true)]
-		[TestCase(3, 2, 3, 8, Result = true)]
-		[TestCase(3, 3, 3, 8, Result = false)]
-		[TestCase(3, 7, 3, 8, Result = false)]
-		public bool Overlaps(int startLine, int startPos, int endLine, int endPos) {
-			return new CodeRange(new CodeLocation(2, 5), new CodeLocation(3, 3))
-					.Overlaps(
-							new CodeRange(
-									new CodeLocation(startLine, startPos),
-									new CodeLocation(endLine, endPos)));
-		}
+        [Test]
+        [TestCase(1, 0, 2, 1, Result = false)]
+        [TestCase(1, 0, 2, 5, Result = false)]
+        [TestCase(1, 0, 2, 6, Result = true)]
+        [TestCase(1, 0, 2, 10, Result = true)]
+        [TestCase(1, 0, 3, 10, Result = true)]
+        [TestCase(2, 0, 2, 1, Result = false)]
+        [TestCase(2, 0, 2, 5, Result = false)]
+        [TestCase(2, 0, 2, 6, Result = true)]
+        [TestCase(2, 0, 2, 10, Result = true)]
+        [TestCase(2, 0, 3, 10, Result = true)]
+        [TestCase(2, 5, 2, 10, Result = true)]
+        [TestCase(2, 5, 3, 1, Result = true)]
+        [TestCase(2, 5, 3, 3, Result = true)]
+        [TestCase(2, 5, 3, 10, Result = true)]
+        [TestCase(3, 2, 3, 8, Result = true)]
+        [TestCase(3, 3, 3, 8, Result = false)]
+        [TestCase(3, 7, 3, 8, Result = false)]
+        public bool Overlaps(int startLine, int startPos, int endLine, int endPos) {
+            return new CodeRange(new CodeLocation(2, 5), new CodeLocation(3, 3))
+                    .Overlaps(
+                            new CodeRange(
+                                    new CodeLocation(startLine, startPos),
+                                    new CodeLocation(endLine, endPos)));
+        }
 
-		[Test]
-		public void FindElement() {
-			var xml = new JavaProcessorUsingAntlr3().GenerateXml(@"
+        [Test]
+        public void FindElement() {
+            var cst = new JavaCstGeneratorUsingAntlr3().GenerateTreeFromCodeText(@"
 public class Hello {
 	public static void main(String[] args) {
 		System.out.println(1);
 	}
 }");
-			var stmt = xml.Descendants("statement").First();
-			var pos = CodeRange.Locate(stmt);
-			Assert.That(pos.FindInnermostElement(xml), Is.EqualTo(stmt));
-			Assert.That(pos.FindOutermostElement(xml), Is.EqualTo(stmt.Parent));
-		}
+            var stmt = cst.Descendants("statement").First();
+            var pos = CodeRange.Locate(stmt);
+            Assert.That(pos.FindInnermostElement(cst), Is.EqualTo(stmt));
+            Assert.That(pos.FindOutermostElement(cst), Is.EqualTo(stmt.Parent));
+        }
 
-		[Test]
-		public void Locate() {
-			var code = @"
+        [Test]
+        public void Locate() {
+            var code = @"
 public class Hello {
 	public static void main(String[] args) {
 	}
 }";
-			var xml = new JavaProcessorUsingAntlr3().GenerateXml(code);
-			var id = xml.Descendants("IDENTIFIER").First();
-			var range = CodeRange.Locate(id);
-			Assert.That(range.GetCodeFragment(code), Is.EqualTo(id.TokenText()));
-			Assert.That(range.GetCodeFragment(new StructuredCode(code)), Is.EqualTo(id.TokenText()));
-		}
+            var xml = new JavaCstGeneratorUsingAntlr3().GenerateTreeFromCodeText(code);
+            var id = xml.Descendants("IDENTIFIER").First();
+            var range = CodeRange.Locate(id);
+            Assert.That(range.GetCodeFragment(code), Is.EqualTo(id.TokenText));
+            Assert.That(
+                    range.GetCodeFragment(new StructuredCode(code)),
+                    Is.EqualTo(id.TokenText));
+        }
 
-		[Test]
-		[TestCase(@"class Klass { void method() { System.out.println(1); } }")]
-		[TestCase(@"class Klass { void method() { System.out
+        [Test]
+        [TestCase(@"class Klass { void method() { System.out.println(1); } }")]
+        [TestCase(@"class Klass { void method() { System.out
 .println(1); } }")]
-		public void InterConvertCodeRangeAndIndicies(string code) {
-			var ast = new JavaProcessorUsingAntlr3().GenerateXml(code);
-			foreach (var elem in ast.DescendantsAndSelf("statement")) {
-				int inclusiveStart, exclusiveEnd;
-				var range = ConvertRangeToIndicies(code, elem, out inclusiveStart, out exclusiveEnd);
-				ConvertIndiciesToRange(ast, code, inclusiveStart, exclusiveEnd, range);
-			}
-		}
+        public void InterConvertCodeRangeAndIndicies(string code) {
+            var ast = new JavaCstGeneratorUsingAntlr3().GenerateTreeFromCodeText(code);
+            foreach (var elem in ast.DescendantsAndSelf("statement")) {
+                int inclusiveStart, exclusiveEnd;
+                var range = ConvertRangeToIndicies(code, elem, out inclusiveStart, out exclusiveEnd);
+                ConvertIndiciesToRange(ast, code, inclusiveStart, exclusiveEnd, range);
+            }
+        }
 
-		private static CodeRange ConvertRangeToIndicies(
-				string code, XElement elem, out int inclusiveStart, out int exclusiveEnd) {
-			var range = CodeRange.Locate(elem);
-			range.ConvertToIndicies(code, out inclusiveStart, out exclusiveEnd);
-			Assert.That(
-					code.Substring(inclusiveStart, exclusiveEnd - inclusiveStart),
-					Is.EqualTo(elem.Text().Trim()));
+        private static CodeRange ConvertRangeToIndicies(
+                string code, CstNode node, out int inclusiveStart, out int exclusiveEnd) {
+            var range = CodeRange.Locate(node);
+            range.ConvertToIndicies(code, out inclusiveStart, out exclusiveEnd);
+            Assert.That(
+                    code.Substring(inclusiveStart, exclusiveEnd - inclusiveStart),
+                    Is.EqualTo(node.Code.Trim()));
 
-			range.ConvertToIndicies(new StructuredCode(code), out inclusiveStart, out exclusiveEnd);
-			Assert.That(
-					code.Substring(inclusiveStart, exclusiveEnd - inclusiveStart),
-					Is.EqualTo(elem.Text().Trim()));
-			return range;
-		}
+            range.ConvertToIndicies(new StructuredCode(code), out inclusiveStart, out exclusiveEnd);
+            Assert.That(
+                    code.Substring(inclusiveStart, exclusiveEnd - inclusiveStart),
+                    Is.EqualTo(node.Code.Trim()));
+            return range;
+        }
 
-		private static void ConvertIndiciesToRange(
-				XElement ast, string code, int inclusiveStart, int exclusiveEnd, CodeRange range) {
-			var newRange = CodeRange.ConvertFromIndicies(code, inclusiveStart, exclusiveEnd);
-			var newInclusiveStart = char.IsWhiteSpace(code[inclusiveStart - 1])
-					? inclusiveStart - 1 : inclusiveStart;
-			var newExclusiveEnd = char.IsWhiteSpace(code[exclusiveEnd])
-					? exclusiveEnd + 1 : exclusiveEnd;
-			var elem = CodeRange.ConvertFromIndiciesSkippingWhitespaces(
-					code, ref newInclusiveStart, ref newExclusiveEnd)
-					.FindInnermostElement(ast);
-			Assert.That(CodeRange.Locate(elem), Is.EqualTo(newRange));
+        private static void ConvertIndiciesToRange(
+                CstNode node, string code, int inclusiveStart, int exclusiveEnd, CodeRange range) {
+            var newRange = CodeRange.ConvertFromIndicies(code, inclusiveStart, exclusiveEnd);
+            var newInclusiveStart = char.IsWhiteSpace(code[inclusiveStart - 1])
+                    ? inclusiveStart - 1 : inclusiveStart;
+            var newExclusiveEnd = char.IsWhiteSpace(code[exclusiveEnd])
+                    ? exclusiveEnd + 1 : exclusiveEnd;
+            var elem = CodeRange.ConvertFromIndiciesSkippingWhitespaces(
+                    code, ref newInclusiveStart, ref newExclusiveEnd)
+                    .FindInnermostElement(node);
+            Assert.That(CodeRange.Locate(elem), Is.EqualTo(newRange));
 
-			newRange.ConvertToIndicies(code, out newInclusiveStart, out newExclusiveEnd);
-			Assert.That(newRange, Is.EqualTo(range));
-			Assert.That(newInclusiveStart, Is.EqualTo(inclusiveStart));
-			Assert.That(newExclusiveEnd, Is.EqualTo(exclusiveEnd));
+            newRange.ConvertToIndicies(code, out newInclusiveStart, out newExclusiveEnd);
+            Assert.That(newRange, Is.EqualTo(range));
+            Assert.That(newInclusiveStart, Is.EqualTo(inclusiveStart));
+            Assert.That(newExclusiveEnd, Is.EqualTo(exclusiveEnd));
 
-			var scode = new StructuredCode(code);
-			Assert.That(
-					CodeRange.ConvertFromIndicies(scode, inclusiveStart, exclusiveEnd), Is.EqualTo(range));
-			newRange.ConvertToIndicies(scode, out newInclusiveStart, out newExclusiveEnd);
-			Assert.That(newInclusiveStart, Is.EqualTo(inclusiveStart));
-			Assert.That(newExclusiveEnd, Is.EqualTo(exclusiveEnd));
-		}
-	}
+            var scode = new StructuredCode(code);
+            Assert.That(
+                    CodeRange.ConvertFromIndicies(scode, inclusiveStart, exclusiveEnd),
+                    Is.EqualTo(range));
+            newRange.ConvertToIndicies(scode, out newInclusiveStart, out newExclusiveEnd);
+            Assert.That(newInclusiveStart, Is.EqualTo(inclusiveStart));
+            Assert.That(newExclusiveEnd, Is.EqualTo(exclusiveEnd));
+        }
+    }
 }

@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2013 Kazunori Sakamoto
+// Copyright (C) 2011-2014 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,24 +16,21 @@
 
 #endregion
 
-using System.Linq;
-using System.Xml.Linq;
 using Code2Xml.Core.Location;
-using Code2Xml.Languages.ANTLRv3.Processors.Java;
 using NUnit.Framework;
 
 namespace Code2Xml.Core.Tests.Location {
-	[TestFixture]
-	public class CodeLocationTest {
-		[Test]
-		[TestCase(2, 2, "aaa\r\nbbb", 3, 3)]
-		[TestCase(2, 2, "aaa\r\n", 3, 0)]
-		[TestCase(2, 2, "aaa", 2, 5)]
-		public void Advance(
-				int startLine, int startPos, string text, int endLine, int endPos) {
-			var startLocation = new CodeLocation(startLine, startPos);
-			var endLocation = startLocation.Advance(text);
-			Assert.That(endLocation, Is.EqualTo(new CodeLocation(endLine, endPos)));
-		}
-	}
+    [TestFixture]
+    public class CodeLocationTest {
+        [Test]
+        [TestCase(2, 2, "aaa\r\nbbb", 3, 3)]
+        [TestCase(2, 2, "aaa\r\n", 3, 0)]
+        [TestCase(2, 2, "aaa", 2, 5)]
+        public void Advance(
+                int startLine, int startPos, string text, int endLine, int endPos) {
+            var startLocation = new CodeLocation(startLine, startPos);
+            var endLocation = startLocation.Advance(text);
+            Assert.That(endLocation, Is.EqualTo(new CodeLocation(endLine, endPos)));
+        }
+    }
 }

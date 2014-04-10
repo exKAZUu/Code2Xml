@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2013 Kazunori Sakamoto
+// Copyright (C) 2011-2014 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,25 @@
 #endregion
 
 namespace Code2Xml.Core {
-	public class Code2XmlConstants {
-		public const string StartLineName = "startline";
-		public const string StartPositionName = "startpos";
-		public const string EndLineName = "endline";	// Inclusive 
-		public const string EndPositionName = "endpos";	// Inclusive 
-		public const string HiddenAttributeName = "hidden";
-		public const string IdAttributeName = "id";
+    public class Code2XmlConstants {
+        public const string SyntaxTreeCacheExtension = ".cached_xml";
+        public const string LearningCacheExtension = ".learning_cache";
+        public const string DependenciesDirectoryName = "Dependencies";
 
-		public const string EofElementName = "EOF";
-		public const string TokenElementName = "TOKEN";
-		public const string HiddenElementName = "HIDDEN";
-		public const string TokenSetElementName = "TOKENS";
-	}
+        public const string EofTokenName = "EOF";
+        public const string EofRuleId = "EOF";
+        public const string DefaultRuleId = "";
+        public const string DefaultHiddenRuleId = "-1";
+
+        public const string StartLineName = "startline";
+        public const string StartPositionName = "startpos";
+        public const string EndLineName = "endline"; // Inclusive 
+        public const string EndPositionName = "endpos"; // Inclusive 
+        public const string HiddenAttributeName = "hidden";
+        public const string IdAttributeName = "id";
+
+        public const string TokenElementName = "TOKEN";
+        public const string HiddenElementName = "HIDDEN";
+        public const string TokenSetElementName = "TOKENS";
+    }
 }

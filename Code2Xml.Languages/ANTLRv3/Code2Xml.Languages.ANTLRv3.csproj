@@ -43,59 +43,61 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="TreeDotNet, Version=1.2.2.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\TreeDotNet.1.2.2.12\lib\net40\TreeDotNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\CodeToXmlUsingAntlr3Processor.cs" />
-    <Compile Include="Core\CodeToXmlUsingProcessor.cs" />
     <Compile Include="Core\ICustomizedAntlr3Parser.cs" />
     <Compile Include="Core\ExtensionForParser.cs" />
-    <Compile Include="Core\Antlr3AstNode.cs" />
-    <Compile Include="Core\XmlToCodeUsingProcessor.cs" />
-    <Compile Include="Processors\CSharp\csParser.Helper.cs" />
-    <Compile Include="Processors\CSharp\csLexer.cs" />
-    <Compile Include="Processors\CSharp\csLexerWithPreProcessor.cs" />
-    <Compile Include="Processors\CSharp\csParser.cs" />
-    <Compile Include="Processors\CSharp\CSharpProcessorUsingAntlr3.cs" />
-    <Compile Include="Processors\CSharp\csLexer.Helper.cs" />
-    <Compile Include="Processors\C\CLexer.cs" />
-    <Compile Include="Processors\C\CProcessorUsingAntlr3AndGcc.cs" />
-    <Compile Include="Processors\C\CParser.cs" />
-    <Compile Include="Processors\C\CParser.Extension.cs" />
-    <Compile Include="Processors\C\CProcessorUsingAntlr3.cs" />
-    <Compile Include="Processors\JavaScript\JavaScriptProcessorUsingAntlr3.cs" />
-    <Compile Include="Processors\JavaScript\JavaScriptLexer.Action.cs" />
-    <Compile Include="Processors\JavaScript\JavaScriptLexer.cs" />
-    <Compile Include="Processors\JavaScript\JavaScriptParser.cs" />
-    <Compile Include="Core\Antlr3AstBuilder.cs" />
-    <Compile Include="Core\ProcessorUsingAntlr3.cs" />
-    <Compile Include="Processors\Java\JavaLexer.cs" />
-    <Compile Include="Processors\Java\JavaParser.cs" />
-    <Compile Include="Processors\Java\JavaProcessorUsingAntlr3.cs" />
-    <Compile Include="Processors\Lua\LuaLexer.cs" />
-    <Compile Include="Processors\Lua\LuaParser.cs" />
-    <Compile Include="Processors\Lua\LuaProcessorUsingAntlr3.cs" />
-    <Compile Include="Processors\Php\PhpProcessorUsingAntlr3.cs" />
-    <Compile Include="Processors\Php\PhpLexer.cs" />
-    <Compile Include="Processors\Php\PhpParser.cs" />
-    <Compile Include="Processors\Test\TestLexer.cs" />
-    <Compile Include="Processors\Test\TestParser.cs" />
-    <Compile Include="Processors\Test\TestProcessorUsingAntlr3.cs" />
+    <Compile Include="Core\Antlr3CstNode.cs" />
+    <Compile Include="Generators\CSharp\csParser.Helper.cs" />
+    <Compile Include="Generators\CSharp\csLexer.cs" />
+    <Compile Include="Generators\CSharp\csLexerWithPreProcessor.cs" />
+    <Compile Include="Generators\CSharp\csParser.cs" />
+    <Compile Include="Generators\CSharp\CSharpCstGeneratorUsingAntlr3.cs" />
+    <Compile Include="Generators\CSharp\csLexer.Helper.cs" />
+    <Compile Include="Generators\C\CLexer.cs" />
+    <Compile Include="Generators\C\CCstGeneratorUsingAntlr3AndGcc.cs" />
+    <Compile Include="Generators\C\CParser.cs" />
+    <Compile Include="Generators\C\CParser.Extension.cs" />
+    <Compile Include="Generators\C\CCstGeneratorUsingAntlr3.cs" />
+    <Compile Include="Generators\JavaScript\JavaScriptCstGeneratorUsingAntlr3.cs" />
+    <Compile Include="Generators\JavaScript\JavaScriptLexer.Action.cs" />
+    <Compile Include="Generators\JavaScript\JavaScriptLexer.cs" />
+    <Compile Include="Generators\JavaScript\JavaScriptParser.cs" />
+    <Compile Include="Core\CstBuilderForAntlr3.cs" />
+    <Compile Include="Core\CstGeneratorUsingAntlr3.cs" />
+    <Compile Include="Generators\Java\JavaLexer.cs" />
+    <Compile Include="Generators\Java\JavaParser.cs" />
+    <Compile Include="Generators\Java\JavaCstGeneratorUsingAntlr3.cs" />
+    <Compile Include="Generators\Lua\LuaLexer.cs" />
+    <Compile Include="Generators\Lua\LuaParser.cs" />
+    <Compile Include="Generators\Lua\LuaCstGeneratorUsingAntlr3.cs" />
+    <Compile Include="Generators\Php\PhpCstGeneratorUsingAntlr3.cs" />
+    <Compile Include="Generators\Php\PhpLexer.cs" />
+    <Compile Include="Generators\Php\PhpParser.cs" />
+    <Compile Include="Generators\Test\TestLexer.cs" />
+    <Compile Include="Generators\Test\TestParser.cs" />
+    <Compile Include="Generators\Test\TestCstGeneratorUsingAntlr3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Antlr3 Include="Processors\CSharp\cs.g">
+    <Antlr3 Include="Generators\CSharp\cs.g">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv3.Processors.CSharp</CustomToolNamespace>
     </Antlr3>
-    <Antlr3 Include="Processors\Php\Php.g">
+    <Antlr3 Include="Generators\Php\Php.g">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv3.Processors.Php</CustomToolNamespace>
     </Antlr3>
-    <Antlr3 Include="Processors\JavaScript\JavaScript.g">
+    <Antlr3 Include="Generators\JavaScript\JavaScript.g">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv3.Processors.JavaScript</CustomToolNamespace>
     </Antlr3>
-    <Antlr3 Include="Processors\Java\Java.g">
+    <Antlr3 Include="Generators\Java\Java.g">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv3.Processors.Java</CustomToolNamespace>
     </Antlr3>
@@ -108,15 +110,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Antlr3 Include="Processors\C\C.g">
+    <Antlr3 Include="Generators\C\C.g">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv3.Processors.C</CustomToolNamespace>
     </Antlr3>
-    <Antlr3 Include="Processors\Lua\Lua.g">
+    <Antlr3 Include="Generators\Lua\Lua.g">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv3.Processors.Lua</CustomToolNamespace>
     </Antlr3>
-    <Antlr3 Include="Processors\Test\Test.g">
+    <Antlr3 Include="Generators\Test\Test.g">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv3.Processors.Test</CustomToolNamespace>
     </Antlr3>

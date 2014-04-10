@@ -38,13 +38,29 @@
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="Paraiba.Experiment">
+      <HintPath>..\packages\Paraiba.Experiment.1.1.3.93\lib\net40\Paraiba.Experiment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.XML" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Xml" />
+    <Reference Include="TreeDotNet, Version=1.2.1.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\TreeDotNet.1.2.2.12\lib\net40\TreeDotNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ObjectsTest.cs" />
+    <Compile Include="Generators\CstGeneratorsTest.cs" />
+    <Compile Include="Learning\BitLearningExperimentGroupingWithId.cs" />
+    <Compile Include="Learning\Experiments\CSharpExperiment.cs" />
+    <Compile Include="Learning\Experiments\JavaExperiment.cs" />
+    <Compile Include="Learning\Experiments\JavaScriptExperiment.cs" />
+    <Compile Include="Learning\Experiments\LuaExperiment.cs" />
+    <Compile Include="Learning\Experiments\PhpExperiment.cs" />
+    <Compile Include="Learning\SurroundingNodeTraversal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +78,10 @@
     <ProjectReference Include="..\Code2Xml.Objects\Code2Xml.Objects.csproj">
       <Project>{447b693b-b4d5-4b97-adf7-4f8546d9dd8e}</Project>
       <Name>Code2Xml.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParserTests\ParserTests\ParserTests.csproj">
+      <Project>{20510236-D8B1-4617-9352-4E6134F9AB67}</Project>
+      <Name>ParserTests</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

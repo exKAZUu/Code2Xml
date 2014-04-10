@@ -44,7 +44,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="Paraiba">
+    <Reference Include="Paraiba, Version=1.1.3.93, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Paraiba.1.1.3.93\lib\net40\Paraiba.dll</HintPath>
     </Reference>
     <Reference Include="Paraiba.Experiment, Version=1.1.3.93, Culture=neutral, processorArchitecture=MSIL">
@@ -55,6 +56,10 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="TreeDotNet, Version=1.2.2.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\TreeDotNet.1.2.2.12\lib\net40\TreeDotNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ProgramTest.cs" />
@@ -67,10 +72,6 @@
     <ProjectReference Include="..\..\Code2Xml.Languages\ANTLRv3\Code2Xml.Languages.ANTLRv3.csproj">
       <Project>{942a56fd-13af-4ee6-a8d7-7ddf50374715}</Project>
       <Name>Code2Xml.Languages.ANTLRv3</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Code2Xml.Languages\Obsolete\Code2Xml.Languages.Obsolete.csproj">
-      <Project>{d5dec839-57fb-408b-b162-d7a027379127}</Project>
-      <Name>Code2Xml.Languages.Obsolete</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Code2Xml.Objects\Code2Xml.Objects.csproj">
       <Project>{447b693b-b4d5-4b97-adf7-4f8546d9dd8e}</Project>

@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2013 Kazunori Sakamoto
+// Copyright (C) 2011-2014 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -25,13 +25,13 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("Code2Xml.Core")]
 [assembly:
-		AssemblyDescription(
-				"Code2Xml is a parser library that interconverts source code and xml files supporting multiple programming languages."
-				)]
+        AssemblyDescription(
+                "Code2Xml is a parser library that interconverts source code and xml files supporting multiple programming languages."
+                )]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Kazunori Sakamoto")]
 [assembly: AssemblyProduct("Code2Xml.Core")]
-[assembly: AssemblyCopyright("Copyright © Kazunori Sakamoto 2011-2013")]
+[assembly: AssemblyCopyright("Copyright © Kazunori Sakamoto 2011-2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -56,5 +56,5 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("2.1.1.84")]
-[assembly: AssemblyFileVersion("2.1.1.84")]
+[assembly: AssemblyVersion("3.0.1.86")]
+[assembly: AssemblyFileVersion("3.0.1.86")]

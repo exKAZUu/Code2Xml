@@ -1,17 +1,26 @@
 # Travis-CI Build
 # see travis-ci.org for details
 
-language: c
-      
-install:
- # Install Mono comipler and runtime
- - sudo apt-get install mono-devel mono-gmcs
- # Set up certificatins for NuGet
- - mozroots --import --sync
+language: objective-c
+
+env:
+ global:
+  - EnableNuGetPackageRestore=true 
+ matrix:
+  - MONO_VERSION="3.2.7" DMG=0
+  - MONO_VERSION="3.0.12" DMG=1
+  - MONO_VERSION="2.10.11" DMG=1
+
+before_install:
+ - "if [ \"$DMG\" = \"0\" ]; then wget \"http://download.xamarin.com/MonoFrameworkMDK/Macx86/MonoFramework-MDK-${MONO_VERSION}.macos10.xamarin.x86.pkg\"; fi"
+ - "if [ \"$DMG\" = \"0\" ]; then sudo installer -pkg \"MonoFramework-MDK-${MONO_VERSION}.macos10.xamarin.x86.pkg\" -target /; fi"
+ - "if [ \"$DMG\" = \"1\" ]; then wget \"http://download.mono-project.com/archive/${MONO_VERSION}/macos-10-x86/MonoFramework-MDK-${MONO_VERSION}.macos10.xamarin.x86.dmg\"; fi"
+ - "if [ \"$DMG\" = \"1\" ]; then hdid \"MonoFramework-MDK-${MONO_VERSION}.macos10.xamarin.x86.dmg\"; fi"
+ - "if [ \"$DMG\" = \"1\" ]; then sudo installer -pkg \"/Volumes/Mono Framework MDK ${MONO_VERSION}/MonoFramework-MDK-${MONO_VERSION}.macos10.xamarin.x86.pkg\" -target /; fi"
 
 script:
- # Build and run tests
- - xbuild CI-build.msbuild /t:Test
+ - xbuild 
+ - sh .ci/nunit.sh "*.Tests.dll" "*.Test.dll"
 
 # Notify development list when needed
 notifications:

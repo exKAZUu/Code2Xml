@@ -109,19 +109,24 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="Paraiba.Experiment, Version=1.1.3.93, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Paraiba.Experiment.1.1.3.93\lib\net40\Paraiba.Experiment.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.XML" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="TreeDotNet, Version=1.2.2.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\TreeDotNet.1.2.2.12\lib\net40\TreeDotNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generators\AstGeneratorTest.cs" />
+    <Compile Include="Generators\SyntaxTreeGeneratorTest.cs" />
     <Compile Include="Location\CodeRangeTest.cs" />
     <Compile Include="Location\CodeLocationTest.cs" />
-    <Compile Include="ProcessorTest.cs" />
+    <Compile Include="Generators\CstGeneratorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\SerializationTest.cs" />
+    <Compile Include="SyntaxTree\SyntaxTreeNodeExtensionTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Code2Xml.Core\Code2Xml.Core.csproj">

@@ -43,18 +43,20 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Xml" />
+    <Reference Include="TreeDotNet, Version=1.2.2.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\TreeDotNet.1.2.2.12\lib\net40\TreeDotNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CProcessorUsingAntlr3Test.cs" />
-    <Compile Include="LuaProcessorUsingAntlr3Test.cs" />
+    <Compile Include="CCstGeneratorUsingAntlr3Test.cs" />
+    <Compile Include="LuaCstGeneratorUsingAntlr3Test.cs" />
     <Compile Include="FileCacheProcessorTest.cs" />
-    <Compile Include="TestProcessorTest.cs" />
-    <Compile Include="PhpProcessorTest.cs" />
-    <Compile Include="JavaScriptProcessorTest.cs" />
-    <Compile Include="CSharpProcessorTest.cs" />
-    <Compile Include="JavaProcessorUsingAntlr3Test.cs" />
+    <Compile Include="TestCstGeneratorTest.cs" />
+    <Compile Include="PhpCstGeneratorTest.cs" />
+    <Compile Include="JavaScriptCstGeneratorTest.cs" />
+    <Compile Include="CSharpCstGeneratorTest.cs" />
+    <Compile Include="JavaCstGeneratorUsingAntlr3Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +85,14 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>
+if not exist "$(TargetDir)NativeBinaries" md "$(TargetDir)NativeBinaries"
+if not exist "$(TargetDir)NativeBinaries\x86" md "$(TargetDir)NativeBinaries\x86"
+xcopy /s /y /d "$(SolutionDir)packages\LibGit2Sharp.0.16.0.0\lib\net35\NativeBinaries\x86\*.*" "$(TargetDir)NativeBinaries\x86"
+if not exist "$(TargetDir)NativeBinaries\amd64" md "$(TargetDir)NativeBinaries\amd64"
+xcopy /s /y /d "$(SolutionDir)packages\LibGit2Sharp.0.16.0.0\lib\net35\NativeBinaries\amd64\*.*" "$(TargetDir)NativeBinaries\amd64"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

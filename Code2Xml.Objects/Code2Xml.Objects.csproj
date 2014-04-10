@@ -38,6 +38,10 @@
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Paraiba, Version=1.1.3.93, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Paraiba.1.1.3.93\lib\net40\Paraiba.dll</HintPath>
+    </Reference>
     <Reference Include="Paraiba.Experiment, Version=1.1.3.93, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Paraiba.Experiment.1.1.3.93\lib\net40\Paraiba.Experiment.dll</HintPath>
@@ -45,10 +49,15 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="TreeDotNet, Version=1.2.2.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\TreeDotNet.1.2.2.12\lib\net40\TreeDotNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Plugin\PluginManager.cs" />
-    <Compile Include="ProcessorLoader.cs" />
+    <Compile Include="Generators\AstGenerators.cs" />
+    <Compile Include="Generators\SyntaxTreeGenerators.cs" />
+    <Compile Include="Generators\CstGenerators.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,9 +69,9 @@
       <Project>{942a56fd-13af-4ee6-a8d7-7ddf50374715}</Project>
       <Name>Code2Xml.Languages.ANTLRv3</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Code2Xml.Languages\ExternalProcessors\Code2Xml.Languages.ExternalProcessors.csproj">
+    <ProjectReference Include="..\Code2Xml.Languages\ExternalPrograms\Code2Xml.Languages.ExternalGenerators.csproj">
       <Project>{311ea4b7-dd3c-4945-9ae3-a86a3ede6a68}</Project>
-      <Name>Code2Xml.Languages.ExternalProcessors</Name>
+      <Name>Code2Xml.Languages.ExternalGenerators</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

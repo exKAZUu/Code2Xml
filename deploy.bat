@@ -1,5 +1,6 @@
 cd .nuget
 nuget Update -self
+set nuget=%cd%\nuget
 del *.old
 cd ..
 rd nuspec /s /q
@@ -13,9 +14,9 @@ del lib\*ANTLRv4*
 del lib\Paraiba.*
 del lib\Antlr*
 FOR %%f IN (*.nuspec) DO (
-	nuget pack %%f
+	%nuget% pack %%f
 )
 FOR %%f IN (*.nupkg) DO (
-	nuget push %%f
+	%nuget% push %%f
 )
 cd ..\

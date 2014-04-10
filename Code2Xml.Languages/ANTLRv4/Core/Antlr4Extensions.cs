@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2013 Kazunori Sakamoto
+// Copyright (C) 2011-2014 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,9 +16,7 @@
 
 #endregion
 
-using Antlr4.Runtime;
-
-namespace Code2Xml.Languages.ANTLRv4.Core {
+namespace Antlr4.Runtime {
     public static class Token {
         public const int HIDDEN_CHANNEL = TokenConstants.HiddenChannel;
     }
