@@ -167,10 +167,7 @@ namespace Code2Xml.Core.Tests.Generators {
                 Func<string, string> readFileFunc, params string[] patterns) {
             var path = Fixture.GetGitRepositoryPath(url);
             Directory.CreateDirectory(path);
-            if (!new DirectoryInfo(path).GetDirectories().Any()) {
-                Git.Clone(url, commitPointer, path);
-            }
-            Git.Checkout(path, commitPointer);
+            Git.CloneAndCheckout(path, url, commitPointer);
             PrivateVerifyRestoringProjectDirectory(path, url, readFileFunc, patterns);
         }
     }

@@ -51,39 +51,52 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                 const string langName = "Java";
                 var learningSets = new[] {
                     Tuple.Create(
-                            Fixture.GetInputProjectPath(langName, "android-betterpickers"),
+                            @"https://github.com/Findwise/Hydra.git",
+                            @"5c781845a466f99645eac9fa27fb27aceb88a442",
                             new List<string> { Fixture.GetInputCodePath(langName, "Seed.java"), }),
                     Tuple.Create(
-                            Fixture.GetInputProjectPath(langName, "android-priority-jobqueue"),
+                            @"https://github.com/Netflix/RxJava.git",
+                            @"bd87341aecb408b2a0acc3f7a42dc118be006b1d",
                             new List<string> { Fixture.GetInputCodePath(langName, "Seed.java"), }),
                     Tuple.Create(
-                            Fixture.GetInputProjectPath(langName, "elasticsearch"),
+                            @"https://github.com/derekbrameyer/android-betterpickers.git",
+                            @"5646215424ad779f1f780254101b75221675b76b",
                             new List<string> { Fixture.GetInputCodePath(langName, "Seed.java"), }),
                     Tuple.Create(
-                            Fixture.GetInputProjectPath(langName, "Hydra"),
+                            @"https://github.com/path/android-priority-jobqueue.git",
+                            @"d3b33d9ae94df76ffde1f4b9735c0f7cc6463384",
                             new List<string> { Fixture.GetInputCodePath(langName, "Seed.java"), }),
                     Tuple.Create(
-                            Fixture.GetInputProjectPath(langName, "pageobjectgenerator"),
+                            @"https://github.com/elasticsearch/elasticsearch.git",
+                            @"2f32908193f3f61139da054f0ee5a949f8c589dc",
                             new List<string> { Fixture.GetInputCodePath(langName, "Seed.java"), }),
                     Tuple.Create(
-                            Fixture.GetInputProjectPath(langName, "presto"),
+                            @"https://code.google.com/p/pageobjectgenerator/",
+                            @"169bdaf6a5a08fab62e167764e7f8401309d7b64",
                             new List<string> { Fixture.GetInputCodePath(langName, "Seed.java"), }),
                     Tuple.Create(
-                            Fixture.GetInputProjectPath(langName, "RxJava"),
+                            @"https://github.com/facebook/presto.git",
+                            @"78045f8ede1f1e3deb4e40b880745141480d362f",
                             new List<string> { Fixture.GetInputCodePath(langName, "Seed.java"), }),
                     Tuple.Create(
-                            Fixture.GetInputProjectPath(langName, "scalpel"),
+                            @"https://github.com/JakeWharton/scalpel.git",
+                            @"27338feaa632bc160ae4f27f001474f0850310ea",
                             new List<string> { Fixture.GetInputCodePath(langName, "Seed.java"), }),
                     Tuple.Create(
-                            Fixture.GetInputProjectPath(langName, "storm"),
+                            @"https://github.com/nathanmarz/storm.git",
+                            @"66a397368a98834095b47db2b706420901c52ba3",
                             new List<string> { Fixture.GetInputCodePath(langName, "Seed.java"), }),
                     Tuple.Create(
-                            Fixture.GetInputProjectPath(langName, "u2020"),
+                            @"https://github.com/JakeWharton/u2020.git",
+                            @"a08a7ec51e01cc40aa27779dca52277e69d156f7",
                             new List<string> { Fixture.GetInputCodePath(langName, "Seed.java"), }),
                 };
                 foreach (var exp in exps) {
                     foreach (var learningSet in learningSets) {
-                        yield return new TestCaseData(exp, learningSet.Item1, learningSet.Item2);
+                        var url = learningSet.Item1;
+                        var path = Fixture.GetGitRepositoryPath(url);
+                        Git.CloneAndCheckout(path, url, learningSet.Item2);
+                        yield return new TestCaseData(exp, path, learningSet.Item3);
                     }
                 }
             }
@@ -113,14 +126,6 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             }
             exp.Clear();
             Assert.That(exp.WrongCount, Is.EqualTo(0));
-        }
-
-        [Test, TestCaseSource("TestCases")]
-        public void CheckLearnable(
-                BitLearningExperimentGroupingWithId exp, string projectPath, IList<string> seedPaths) {
-            var allPaths = Directory.GetFiles(projectPath, "*.java", SearchOption.AllDirectories)
-                    .ToList();
-            //exp.CheckLearnable(allPaths, seedPaths);
         }
     }
 

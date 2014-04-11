@@ -25,319 +25,326 @@ using NUnit.Framework;
 using ParserTests;
 
 namespace Code2Xml.Objects.Tests.Learning.Experiments {
-	[TestFixture]
-	public class LuaExperiment {
-		private readonly StreamWriter _writer = File.CreateText(@"C:\Users\exKAZUu\Desktop\lua.txt");
+    [TestFixture]
+    public class LuaExperiment {
+        private readonly StreamWriter _writer = File.CreateText(@"C:\Users\exKAZUu\Desktop\lua.txt");
 
-		public static CstGenerator Generator = CstGenerators.LuaUsingAntlr3;
+        public static CstGenerator Generator = CstGenerators.LuaUsingAntlr3;
 
-		//new MemoryCacheProcessor(new FileCacheProcessor(ProcessorLoader.LuaUsingAntlr3));
+        private static IEnumerable<TestCaseData> TestCases {
+            get {
+                var exps = new BitLearningExperimentGroupingWithId[] {
+                    new LuaComplexStatementExperiment(),
+                    new LuaSuperComplexBranchExperiment(),
+                    new LuaComplexBranchExperiment(),
+                    new LuaStatementExperiment(),
+                    new LuaIfExperiment(),
+                    new LuaWhileExperiment(),
+                    new LuaDoWhileExperiment(),
+                    new LuaPrintExperiment(),
+                    new LuaStatementExperiment(),
+                    new LuaLabeledStatementExperiment(),
+                    new LuaEmptyStatementExperiment(),
+                };
+                const string langName = "Lua";
+                var learningSets = new[] {
+                    Tuple.Create(
+                            @"https://github.com/stevedonovan/Penlight.git",
+                            @"e9992789af07861974cad2bad5ba7c067d089e26",
+                            new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
+                    Tuple.Create(
+                            @"https://github.com/zedshaw/Tir.git",
+                            @"4c1bdfa5b421e8eb9d3724928055da2728130d40",
+                            new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
+                    Tuple.Create(
+                            @"https://github.com/ostinelli/gin.git",
+                            @"8361d2f5f16e64c65ba33d1dbbc74b97d5256f76",
+                            new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
+                    Tuple.Create(
+                            @"https://github.com/koreader/koreader.git",
+                            @"ca85deb1fa6779bc001b914d7bd371864106ea3a",
+                            new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
+                    Tuple.Create(
+                            @"https://github.com/leafo/lapis.git",
+                            @"0fe074b55e834267d82122f5c49d8b5a89c55f3d",
+                            new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
+                    Tuple.Create(
+                            @"https://github.com/exKAZUu/lsyncd.git",
+                            @"178f31590732da0eb39cd58b20cc53c3d954ebec",
+                            new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
+                    Tuple.Create(
+                            @"https://github.com/rtsisyk/luafun.git",
+                            @"396dfc14171cfccda349ce2b445707b889ab422d",
+                            new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
+                    Tuple.Create(
+                            @"https://github.com/mason-larobina/luakit.git",
+                            @"993d814c6a51bf50ec0424e65ce2dc35f4aa435f",
+                            new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
+                    Tuple.Create(
+                            @"https://github.com/kikito/middleclass.git",
+                            @"124c6d687eaf46fa7f869056959975f018ae45bd",
+                            new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
+                    Tuple.Create(
+                            @"https://github.com/tylerneylon/pacpac.git",
+                            @"cad99bdd64346dbc3180ee611ea502197da8b414",
+                            new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
+                    Tuple.Create(
+                            @"https://github.com/exebetche/vlsub.git",
+                            @"e2280c4a75c3c3aba2986465d9c9559927ed4479",
+                            new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
+                };
+                foreach (var exp in exps) {
+                    foreach (var learningSet in learningSets) {
+                        var url = learningSet.Item1;
+                        var path = Fixture.GetGitRepositoryPath(url);
+                        Git.CloneAndCheckout(path, url, learningSet.Item2);
+                        yield return new TestCaseData(exp, path, learningSet.Item3);
+                    }
+                }
+            }
+        }
 
-		private static IEnumerable<TestCaseData> TestCases {
-			get {
-				var exps = new BitLearningExperimentGroupingWithId[] {
-					new LuaComplexStatementExperiment(),
-					new LuaSuperComplexBranchExperiment(),
-					new LuaComplexBranchExperiment(),
-					new LuaStatementExperiment(),
-					new LuaIfExperiment(),
-					new LuaWhileExperiment(),
-					new LuaDoWhileExperiment(),
-					new LuaPrintExperiment(),
-					new LuaStatementExperiment(),
-					new LuaLabeledStatementExperiment(),
-					new LuaEmptyStatementExperiment(),
-				};
-				const string langName = "Lua";
-				var learningSets = new[] {
-					Tuple.Create(
-							Fixture.GetInputProjectPath(langName, "gin"),
-							new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
-					Tuple.Create(
-							Fixture.GetInputProjectPath(langName, "koreader"),
-							new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
-					Tuple.Create(
-							Fixture.GetInputProjectPath(langName, "lapis"),
-							new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
-					Tuple.Create(
-							Fixture.GetInputProjectPath(langName, "luafun"),
-							new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
-					Tuple.Create(
-							Fixture.GetInputProjectPath(langName, "luakit"),
-							new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
-					Tuple.Create(
-							Fixture.GetInputProjectPath(langName, "middleclass"),
-							new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
-					Tuple.Create(
-							Fixture.GetInputProjectPath(langName, "pacpac"),
-							new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
-					Tuple.Create(
-							Fixture.GetInputProjectPath(langName, "Penlight"),
-							new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
-					Tuple.Create(
-							Fixture.GetInputProjectPath(langName, "Tir"),
-							new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
-					Tuple.Create(
-							Fixture.GetInputProjectPath(langName, "vlsub"),
-							new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), }),
-				};
-				foreach (var exp in exps) {
-					foreach (var learningSet in learningSets) {
-						yield return new TestCaseData(exp, learningSet.Item1, learningSet.Item2);
-					}
-				}
-			}
-		}
+        [Test, TestCaseSource("TestCases")]
+        public void Test(
+                BitLearningExperimentGroupingWithId exp, string projectPath, IList<string> seedPaths) {
+            var allPaths = Directory.GetFiles(projectPath, "*.lua", SearchOption.AllDirectories)
+                    .ToList();
+            exp.AutomaticallyLearnUntilBeStable(allPaths, seedPaths, _writer, projectPath);
+            //if (exp.WrongCount > 0) {
+            //	Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
+            //	foreach (var we in exp.WronglyAcceptedElements) {
+            //		var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
+            //		Console.WriteLine(we.Text());
+            //		Console.WriteLine(e.Text());
+            //		Console.WriteLine("---------------------------------------------");
+            //	}
+            //	Console.WriteLine("---- WronglyRejectedElements ----");
+            //	foreach (var we in exp.WronglyRejectedElements) {
+            //		var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
+            //		Console.WriteLine(we.Text());
+            //		Console.WriteLine(e.Text());
+            //		Console.WriteLine("---------------------------------------------");
+            //	}
+            //}
+            exp.Clear();
+            Assert.That(exp.WrongCount, Is.EqualTo(0));
+        }
+    }
 
-		[Test, TestCaseSource("TestCases")]
-		public void Test(
-				BitLearningExperimentGroupingWithId exp, string projectPath, IList<string> seedPaths) {
-			var allPaths = Directory.GetFiles(projectPath, "*.lua", SearchOption.AllDirectories)
-					.ToList();
-			exp.AutomaticallyLearnUntilBeStable(allPaths, seedPaths, _writer, projectPath);
-			//if (exp.WrongCount > 0) {
-			//	Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
-			//	foreach (var we in exp.WronglyAcceptedElements) {
-			//		var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
-			//		Console.WriteLine(we.Text());
-			//		Console.WriteLine(e.Text());
-			//		Console.WriteLine("---------------------------------------------");
-			//	}
-			//	Console.WriteLine("---- WronglyRejectedElements ----");
-			//	foreach (var we in exp.WronglyRejectedElements) {
-			//		var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
-			//		Console.WriteLine(we.Text());
-			//		Console.WriteLine(e.Text());
-			//		Console.WriteLine("---------------------------------------------");
-			//	}
-			//}
-			exp.Clear();
-			Assert.That(exp.WrongCount, Is.EqualTo(0));
-		}
+    public class LuaComplexBranchExperiment : BitLearningExperimentGroupingWithId {
+        protected override CstGenerator Generator {
+            get { return LuaExperiment.Generator; }
+        }
 
-		[Test, TestCaseSource("TestCases")]
-		public void CheckLearnable(
-				BitLearningExperimentGroupingWithId exp, string projectPath, IList<string> seedPaths) {
-			var allPaths = Directory.GetFiles(projectPath, "*.lua", SearchOption.AllDirectories)
-					.ToList();
-			//exp.CheckLearnable(allPaths, seedPaths);
-		}
-	}
+        protected override bool IsInner {
+            get { return false; }
+        }
 
-	public class LuaComplexBranchExperiment : BitLearningExperimentGroupingWithId {
-		protected override CstGenerator Generator {
-			get { return LuaExperiment.Generator; }
-		}
+        public LuaComplexBranchExperiment() : base("exp") {}
 
-		protected override bool IsInner {
-			get { return false; }
-		}
+        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            var siblings = e.Siblings().ToList();
+            var parent = e.Parent;
+            if (parent.SafeName() == "stat" && siblings[0].TokenText == "if") {
+                return true;
+            }
+            if (parent.SafeName() == "stat" && siblings[0].TokenText == "while") {
+                return true;
+            }
+            if (parent.SafeName() == "stat" && siblings[0].TokenText == "repeat") {
+                return true;
+            }
+            return false;
+        }
+    }
 
-		public LuaComplexBranchExperiment() : base("exp") {}
+    public class LuaSuperComplexBranchExperiment : BitLearningExperimentGroupingWithId {
+        protected override CstGenerator Generator {
+            get { return LuaExperiment.Generator; }
+        }
 
-		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
-			var siblings = e.Siblings().ToList();
-			var parent = e.Parent;
-			if (parent.SafeName() == "stat" && siblings[0].TokenText == "if") {
-				return true;
-			}
-			if (parent.SafeName() == "stat" && siblings[0].TokenText == "while") {
-				return true;
-			}
-			if (parent.SafeName() == "stat" && siblings[0].TokenText == "repeat") {
-				return true;
-			}
-			return false;
-		}
-	}
+        protected override bool IsInner {
+            get { return false; }
+        }
 
-	public class LuaSuperComplexBranchExperiment : BitLearningExperimentGroupingWithId {
-		protected override CstGenerator Generator {
-			get { return LuaExperiment.Generator; }
-		}
+        public LuaSuperComplexBranchExperiment() : base("exp") {}
 
-		protected override bool IsInner {
-			get { return false; }
-		}
+        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            var siblings = e.Siblings().ToList();
+            var parent = e.Parent;
+            if (parent.SafeName() == "stat" && siblings[0].TokenText == "if") {
+                return true;
+            }
+            if (parent.SafeName() == "stat" && siblings[0].TokenText == "while") {
+                return true;
+            }
+            if (parent.SafeName() == "stat" && siblings[0].TokenText == "repeat") {
+                return true;
+            }
+            var pppp = e.SafeParent().SafeParent().SafeParent().SafeParent();
+            if (pppp.SafeName() == "functioncall" && pppp.FirstChild.TokenText == "print") {
+                return true;
+            }
+            return false;
+        }
+    }
 
-		public LuaSuperComplexBranchExperiment() : base("exp") {}
+    public class LuaIfExperiment : BitLearningExperimentGroupingWithId {
+        protected override CstGenerator Generator {
+            get { return LuaExperiment.Generator; }
+        }
 
-		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
-			var siblings = e.Siblings().ToList();
-			var parent = e.Parent;
-			if (parent.SafeName() == "stat" && siblings[0].TokenText == "if") {
-				return true;
-			}
-			if (parent.SafeName() == "stat" && siblings[0].TokenText == "while") {
-				return true;
-			}
-			if (parent.SafeName() == "stat" && siblings[0].TokenText == "repeat") {
-				return true;
-			}
-			var pppp = e.SafeParent().SafeParent().SafeParent().SafeParent();
-			if (pppp.SafeName() == "functioncall" && pppp.FirstChild.TokenText == "print") {
-				return true;
-			}
-			return false;
-		}
-	}
+        protected override bool IsInner {
+            get { return false; }
+        }
 
-	public class LuaIfExperiment : BitLearningExperimentGroupingWithId {
-		protected override CstGenerator Generator {
-			get { return LuaExperiment.Generator; }
-		}
+        public LuaIfExperiment() : base("exp") {}
 
-		protected override bool IsInner {
-			get { return false; }
-		}
+        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            var siblings = e.Siblings().ToList();
+            var parent = e.Parent;
+            if (parent.SafeName() == "stat" && siblings[0].TokenText == "if") {
+                return true;
+            }
+            return false;
+        }
+    }
 
-		public LuaIfExperiment() : base("exp") {}
+    public class LuaWhileExperiment : BitLearningExperimentGroupingWithId {
+        protected override CstGenerator Generator {
+            get { return LuaExperiment.Generator; }
+        }
 
-		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
-			var siblings = e.Siblings().ToList();
-			var parent = e.Parent;
-			if (parent.SafeName() == "stat" && siblings[0].TokenText == "if") {
-				return true;
-			}
-			return false;
-		}
-	}
+        protected override bool IsInner {
+            get { return false; }
+        }
 
-	public class LuaWhileExperiment : BitLearningExperimentGroupingWithId {
-		protected override CstGenerator Generator {
-			get { return LuaExperiment.Generator; }
-		}
+        public LuaWhileExperiment() : base("exp") {}
 
-		protected override bool IsInner {
-			get { return false; }
-		}
+        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            var siblings = e.Siblings().ToList();
+            var parent = e.Parent;
+            if (parent.SafeName() == "stat" && siblings[0].TokenText == "while") {
+                return true;
+            }
+            return false;
+        }
+    }
 
-		public LuaWhileExperiment() : base("exp") {}
+    public class LuaDoWhileExperiment : BitLearningExperimentGroupingWithId {
+        protected override CstGenerator Generator {
+            get { return LuaExperiment.Generator; }
+        }
 
-		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
-			var siblings = e.Siblings().ToList();
-			var parent = e.Parent;
-			if (parent.SafeName() == "stat" && siblings[0].TokenText == "while") {
-				return true;
-			}
-			return false;
-		}
-	}
+        protected override bool IsInner {
+            get { return false; }
+        }
 
-	public class LuaDoWhileExperiment : BitLearningExperimentGroupingWithId {
-		protected override CstGenerator Generator {
-			get { return LuaExperiment.Generator; }
-		}
+        public LuaDoWhileExperiment() : base("exp") {}
 
-		protected override bool IsInner {
-			get { return false; }
-		}
+        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            var siblings = e.Siblings().ToList();
+            var parent = e.Parent;
+            if (parent.SafeName() == "stat" && siblings[0].TokenText == "repeat") {
+                return true;
+            }
+            return false;
+        }
+    }
 
-		public LuaDoWhileExperiment() : base("exp") {}
+    public class LuaPrintExperiment : BitLearningExperimentGroupingWithId {
+        protected override CstGenerator Generator {
+            get { return LuaExperiment.Generator; }
+        }
 
-		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
-			var siblings = e.Siblings().ToList();
-			var parent = e.Parent;
-			if (parent.SafeName() == "stat" && siblings[0].TokenText == "repeat") {
-				return true;
-			}
-			return false;
-		}
-	}
+        protected override bool IsInner {
+            get { return false; }
+        }
 
-	public class LuaPrintExperiment : BitLearningExperimentGroupingWithId {
-		protected override CstGenerator Generator {
-			get { return LuaExperiment.Generator; }
-		}
+        public LuaPrintExperiment() : base("exp") {}
 
-		protected override bool IsInner {
-			get { return false; }
-		}
+        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            var pppp = e.SafeParent().SafeParent().SafeParent().SafeParent();
+            if (pppp.SafeName() == "functioncall" && pppp.FirstChild.TokenText == "print") {
+                return true;
+            }
+            return false;
+        }
+    }
 
-		public LuaPrintExperiment() : base("exp") {}
+    public class LuaComplexStatementExperiment : BitLearningExperimentGroupingWithId {
+        protected override CstGenerator Generator {
+            get { return LuaExperiment.Generator; }
+        }
 
-		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
-			var pppp = e.SafeParent().SafeParent().SafeParent().SafeParent();
-			if (pppp.SafeName() == "functioncall" && pppp.FirstChild.TokenText == "print") {
-				return true;
-			}
-			return false;
-		}
-	}
+        protected override bool IsInner {
+            get { return true; }
+        }
 
-	public class LuaComplexStatementExperiment : BitLearningExperimentGroupingWithId {
-		protected override CstGenerator Generator {
-			get { return LuaExperiment.Generator; }
-		}
+        public LuaComplexStatementExperiment() : base("stat") {}
 
-		protected override bool IsInner {
-			get { return true; }
-		}
+        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            if (e.FirstChild.Name == "label") {
+                return false;
+            }
+            if (e.FirstChild.TokenText == ";") {
+                return false;
+            }
+            return true;
+        }
+    }
 
-		public LuaComplexStatementExperiment() : base("stat") {}
+    public class LuaStatementExperiment : BitLearningExperimentGroupingWithId {
+        protected override CstGenerator Generator {
+            get { return LuaExperiment.Generator; }
+        }
 
-		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
-			if (e.FirstChild.Name == "label") {
-				return false;
-			}
-			if (e.FirstChild.TokenText == ";") {
-				return false;
-			}
-			return true;
-		}
-	}
+        protected override bool IsInner {
+            get { return true; }
+        }
 
-	public class LuaStatementExperiment : BitLearningExperimentGroupingWithId {
-		protected override CstGenerator Generator {
-			get { return LuaExperiment.Generator; }
-		}
+        public LuaStatementExperiment() : base("stat") {}
 
-		protected override bool IsInner {
-			get { return true; }
-		}
+        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            return true;
+        }
+    }
 
-		public LuaStatementExperiment() : base("stat") {}
+    public class LuaLabeledStatementExperiment : BitLearningExperimentGroupingWithId {
+        protected override CstGenerator Generator {
+            get { return LuaExperiment.Generator; }
+        }
 
-		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
-			return true;
-		}
-	}
+        protected override bool IsInner {
+            get { return true; }
+        }
 
-	public class LuaLabeledStatementExperiment : BitLearningExperimentGroupingWithId {
-		protected override CstGenerator Generator {
-			get { return LuaExperiment.Generator; }
-		}
+        public LuaLabeledStatementExperiment() : base("stat") {}
 
-		protected override bool IsInner {
-			get { return true; }
-		}
+        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            if (e.FirstChild.Name == "label") {
+                return true;
+            }
+            return false;
+        }
+    }
 
-		public LuaLabeledStatementExperiment() : base("stat") {}
+    public class LuaEmptyStatementExperiment : BitLearningExperimentGroupingWithId {
+        protected override CstGenerator Generator {
+            get { return LuaExperiment.Generator; }
+        }
 
-		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
-			if (e.FirstChild.Name == "label") {
-				return true;
-			}
-			return false;
-		}
-	}
+        protected override bool IsInner {
+            get { return true; }
+        }
 
-	public class LuaEmptyStatementExperiment : BitLearningExperimentGroupingWithId {
-		protected override CstGenerator Generator {
-			get { return LuaExperiment.Generator; }
-		}
+        public LuaEmptyStatementExperiment() : base("stat") {}
 
-		protected override bool IsInner {
-			get { return true; }
-		}
-
-		public LuaEmptyStatementExperiment() : base("stat") {}
-
-		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
-			if (e.FirstChild.TokenText == ";") {
-				return true;
-			}
-			return false;
-		}
-	}
+        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            if (e.FirstChild.TokenText == ";") {
+                return true;
+            }
+            return false;
+        }
+    }
 }

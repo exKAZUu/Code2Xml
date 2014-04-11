@@ -36,8 +36,7 @@ namespace Code2Xml.Tools.AntlrHelper {
 				new Regex(@"private ([^.]*Parser)");
 
 		private static readonly Regex TraceInRegex =
-				new Regex(
-						@"TraceIn\((.*), .*\)");
+				new Regex(@"TraceIn\((.*), .*\)");
 
 		public static void Modify(string path) {
 			Contract.Requires(path != null);

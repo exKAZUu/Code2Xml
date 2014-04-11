@@ -50,7 +50,7 @@ a = 1")]
         [TestCase(@"print(1, 2)")]
         [TestCase("a = [=[one [[two]] three]=]")]
         [TestCase("a = func()[1]")]
-        [TestCase(@"local expr = '/[^() ]*lib' .. libname .. '\.so[^() ]*'")]
+        [TestCase(@"local s = '/[^() ]*lib' .. '%.so[^() ]*'")]
         [TestCase("--[[Any--]]")]
         [TestCase(@"
 --
