@@ -86,6 +86,7 @@ var completion = require('../lib/completion');
         [TestCase(@"quickExpr = /a/")]
         [TestCase(@"{1}{2}")]
         [TestCase(@"[ 1 / 1 ]")]
+        [TestCase(@"res.true;")]
         public void Parse(string code) {
             VerifyRestoringCode(code);
         }
