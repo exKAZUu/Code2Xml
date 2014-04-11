@@ -17,6 +17,7 @@
 #endregion
 
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Code2Xml.Core.Generators;
@@ -149,7 +150,13 @@ namespace Code2Xml.Core.Tests.Generators {
                 var filePaths = Directory.GetFiles(path, pattern, SearchOption.AllDirectories);
                 foreach (var filePath in filePaths) {
                     Console.Write(".");
-                    VerifyRestoringCode(readFileFunc(filePath), false);
+                    try {
+                        VerifyRestoringCode(readFileFunc(filePath), false);
+                    } catch (Exception e) {
+                        Console.WriteLine();
+                        Console.WriteLine(filePath);
+                        throw e;
+                    }
                 }
             }
             Console.WriteLine();
