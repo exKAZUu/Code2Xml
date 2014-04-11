@@ -16,15 +16,47 @@ options
 tokens
 {
 // Reserved words
-    NULL		= 'null' ;
-    TRUE		= 'true' ;
-    FALSE		= 'false' ;
+	NULL		= 'null' ;
+	TRUE		= 'true' ;
+	FALSE		= 'false' ;
+	FUNCTION	= 'function' ;
+	IF			= 'if' ;
+	ELSE		= 'else' ;
+	WHILE		= 'while' ;
+	DO			= 'do';
+	FOR			= 'for' ;
+	BREAK		= 'break' ;
+	CONTINUE	= 'continue' ;
+	VAR			= 'var' ;
+	RETURN		= 'return' ;
+	WITH		= 'with' ;
+	SWITCH		= 'switch' ;
+	CASE		= 'case' ;
+	DEFAULT		= 'default' ;
+	THROW		= 'throw' ;
+	TRY			= 'try' ;
+	CATCH		= 'catch' ;
+	FINALLY		= 'finally' ;
+	NEW			= 'new' ;
+	DELETE		= 'delete' ;
+	VOID		= 'void' ;
+	TYPEOF		= 'typeof' ;
+	INSTANCEOF	= 'instanceof' ;
+	IN			= 'in' ;
+	
+	YIELD		= 'yield' ;
+
+	MODULE		= 'module' ;
+	IMPORT		= 'import' ;
+	FROM		= 'from' ;
+	EXPORT		= 'export' ;
+	AS			= 'as' ;
 // Keywords
-    THIS 		= 'this' ;
+	THIS		= 'this' ;
 // Punctuators
-    RBRACK		= ']' ;
-    RPAREN		= ')' ;
-    RBRACE		= '}' ;
+	RBRACK		= ']' ;
+	RPAREN		= ')' ;
+	RBRACE		= '}' ;
 }
 
 @lexer::namespace { Code2Xml.Languages.ANTLRv3.Processors.JavaScript }
@@ -49,21 +81,86 @@ sourceElements
     ;
     
 sourceElement
-    : functionDeclaration
+    : moduleDeclaration
+    | importDeclaration
+	| functionDeclaration
     | statement
     ;
-    
+
+// 15.1.1 Imports
+moduleDeclaration
+    : MODULE LT!* bindingIdentifier LT!* fromClause
+    ;
+
+importDeclaration
+    : IMPORT LT!* importClause LT!* fromClause statementEnd
+    | IMPORT LT!* moduleSpecifier statementEnd
+    ;
+
+fromClause
+    : FROM LT!* moduleSpecifier
+    ;
+
+importClause
+    : bindingIdentifier
+    | '{' LT!* '}'
+    | '{' LT!* importsList LT!* '}'
+    | '{' LT!* importsList LT!* ',' LT!* '}'
+    ;
+
+importsList
+    : importSpecifier (LT!* ',' LT!* importSpecifier)*
+    ;
+
+importSpecifier
+    : bindingIdentifier
+    | identifierName LT!* AS LT!* bindingIdentifier
+    ;
+
+moduleSpecifier
+    : stringliteral
+    ;
+
+// 15.1.2 Exports
+declaration
+    : functionDeclaration
+    ;
+
+exportDeclaration
+    : EXPORT LT!* '*' LT!* (fromClause LT!*)? statementEnd
+    | EXPORT exportsClause LT!* (fromClause LT!*)? statementEnd
+    | EXPORT variableStatement statementEnd
+    | EXPORT declaration statementEnd
+    | EXPORT bindingList statementEnd
+    ;
+
+exportsClause
+    : '{' LT!* '}'
+    | '{' LT!* exportsList LT!* '}'
+    | '{' LT!* exportsList LT!* ',' LT!* '}'
+    ;
+
+exportsList
+    : exportSpecifier (LT!* ',' LT!* exportSpecifier)*
+    ;
+
+exportSpecifier
+    : identifierReference
+    | identifierReference LT!* AS LT!* identifierName
+    ;
+
+
 // functions
 functionDeclaration
-    : 'function' LT!* Identifier LT!* formalParameterList LT!* functionBody
+    : FUNCTION LT!* identifier LT!* formalParameterList LT!* functionBody
     ;
     
 functionExpression
-    : 'function' LT!* Identifier? LT!* formalParameterList LT!* functionBody
+    : FUNCTION LT!* identifier? LT!* formalParameterList LT!* functionBody
     ;
     
 formalParameterList
-    : '(' (LT!* Identifier (LT!* ',' LT!* Identifier)*)? LT!* RPAREN
+    : '(' (LT!* identifier (LT!* ',' LT!* identifier)*)? LT!* RPAREN
     ;
 
 functionBody
@@ -97,7 +194,7 @@ statementList
     ;
     
 variableStatement
-    : 'var' LT!* variableDeclarationList statementEnd
+    : VAR LT!* variableDeclarationList statementEnd
     ;
     
 variableDeclarationList
@@ -109,11 +206,11 @@ variableDeclarationListNoIn
     ;
     
 variableDeclaration
-    : Identifier (LT!* initialiser)?
+    : identifier (LT!* initialiser)?
     ;
     
 variableDeclarationNoIn
-    : Identifier (LT!* initialiserNoIn)?
+    : identifier (LT!* initialiserNoIn)?
     ;
     
 initialiser
@@ -133,7 +230,7 @@ expressionStatement
     ;
     
 ifStatement
-    : 'if' LT!* '(' LT!* expression LT!* RPAREN LT!* statement (LT!* 'else' LT!* statement)?
+    : IF LT!* '(' LT!* expression LT!* RPAREN LT!* statement (LT!* ELSE LT!* statement)?
     ;
     
 iterationStatement
@@ -144,53 +241,53 @@ iterationStatement
     ;
     
 doWhileStatement
-    : 'do' LT!* statement LT!* 'while' LT!* '(' expression RPAREN statementEnd
+    : DO LT!* statement LT!* WHILE LT!* '(' expression RPAREN statementEnd
     ;
     
 whileStatement
-    : 'while' LT!* '(' LT!* expression LT!* RPAREN LT!* statement
+    : WHILE LT!* '(' LT!* expression LT!* RPAREN LT!* statement
     ;
     
 forStatement
-    : 'for' LT!* '(' (LT!* forStatementInitialiserPart)? LT!* ';' (LT!* expression)? LT!* ';' (LT!* expression)? LT!* RPAREN LT!* statement
+    : FOR LT!* '(' (LT!* forStatementInitialiserPart)? LT!* ';' (LT!* expression)? LT!* ';' (LT!* expression)? LT!* RPAREN LT!* statement
     ;
     
 forStatementInitialiserPart
     : expressionNoIn
-    | 'var' LT!* variableDeclarationListNoIn
+    | VAR LT!* variableDeclarationListNoIn
     ;
     
 forInStatement
-    : 'for' LT!* '(' LT!* forInStatementInitialiserPart LT!* 'in' LT!* expression LT!* RPAREN LT!* statement
+    : FOR LT!* '(' LT!* forInStatementInitialiserPart LT!* 'in' LT!* expression LT!* RPAREN LT!* statement
     ;
     
 forInStatementInitialiserPart
     : leftHandSideExpression
-    | 'var' LT!* variableDeclarationNoIn
+    | VAR LT!* variableDeclarationNoIn
     ;
 
 continueStatement
-    : 'continue' Identifier? statementEnd
+    : CONTINUE identifier? statementEnd
     ;
 
 breakStatement
-    : 'break' Identifier? statementEnd
+    : BREAK identifier? statementEnd
     ;
 
 returnStatement
-    : 'return' expression? statementEnd
+    : RETURN expression? statementEnd
     ;
     
 withStatement
-    : 'with' LT!* '(' LT!* expression LT!* RPAREN LT!* statement
+    : WITH LT!* '(' LT!* expression LT!* RPAREN LT!* statement
     ;
 
 labelledStatement
-    : Identifier LT!* ':' LT!* statement
+    : identifier LT!* ':' LT!* statement
     ;
     
 switchStatement
-    : 'switch' LT!* '(' LT!* expression LT!* RPAREN LT!* caseBlock
+    : SWITCH LT!* '(' LT!* expression LT!* RPAREN LT!* caseBlock
     ;
     
 caseBlock
@@ -198,27 +295,27 @@ caseBlock
     ;
 
 caseClause
-    : 'case' LT!* expression LT!* ':' LT!* statementList?
+    : CASE LT!* expression LT!* ':' LT!* statementList?
     ;
     
 defaultClause
-    : 'default' LT!* ':' LT!* statementList?
+    : DEFAULT LT!* ':' LT!* statementList?
     ;
     
 throwStatement
-    : 'throw' expression statementEnd
+    : THROW expression statementEnd
     ;
 
 tryStatement
-    : 'try' LT!* statementBlock LT!* (finallyClause | catchClause (LT!* finallyClause)?)
+    : TRY LT!* statementBlock LT!* (finallyClause | catchClause (LT!* finallyClause)?)
     ;
        
 catchClause
-    : 'catch' LT!* '(' LT!* Identifier LT!* RPAREN LT!* statementBlock
+    : CATCH LT!* '(' LT!* identifier LT!* RPAREN LT!* statementBlock
     ;
     
 finallyClause
-    : 'finally' LT!* statementBlock
+    : FINALLY LT!* statementBlock
     ;
 
 // expressions
@@ -247,11 +344,11 @@ leftHandSideExpression
     
 newExpression
     : memberExpression
-    | 'new' LT!* newExpression
+    | NEW LT!* newExpression
     ;
     
 memberExpression
-    : (primaryExpression | functionExpression | 'new' LT!* memberExpression LT!* arguments) (LT!* memberExpressionSuffix)*
+    : (primaryExpression | functionExpression | NEW LT!* memberExpression LT!* arguments) (LT!* memberExpressionSuffix)*
     ;
     
 memberExpressionSuffix
@@ -278,7 +375,7 @@ indexSuffix
     ;	
     
 propertyReferenceSuffix
-    : '.' LT!* Identifier
+    : '.' LT!* identifierName
     ;
     
 assignmentOperator
@@ -342,11 +439,11 @@ equalityExpressionNoIn
     ;
     
 relationalExpression
-    : shiftExpression (LT!* ('<' | '>' | '<=' | '>=' | 'instanceof' | 'in') LT!* shiftExpression)*
+    : shiftExpression (LT!* ('<' | '>' | '<=' | '>=' | INSTANCEOF | IN) LT!* shiftExpression)*
     ;
 
 relationalExpressionNoIn
-    : shiftExpression (LT!* ('<' | '>' | '<=' | '>=' | 'instanceof') LT!* shiftExpression)*
+    : shiftExpression (LT!* ('<' | '>' | '<=' | '>=' | INSTANCEOF) LT!* shiftExpression)*
     ;
 
 shiftExpression
@@ -363,7 +460,7 @@ multiplicativeExpression
 
 unaryExpression
     : postfixExpression
-    | ('delete' | 'void' | 'typeof' | '++' | '--' | '+' | '-' | '~' | '!') unaryExpression
+    | (DELETE | VOID | TYPEOF | '++' | '--' | '+' | '-' | '~' | '!') unaryExpression
     ;
     
 postfixExpression
@@ -372,7 +469,7 @@ postfixExpression
 
 primaryExpression
     : THIS
-    | Identifier
+    | identifier
     | literal
     | arrayLiteral
     | objectLiteral
@@ -394,10 +491,14 @@ propertyNameAndValue
     ;
 
 propertyName
-    : Identifier
+    : identifier
     | stringliteral
     | numericliteral
     ;
+
+elision
+	: ',' (LT!* ',')*
+	;
 
 // primitive literal definition.
 literal
@@ -420,6 +521,84 @@ stringliteral
 regularExpressionLiteral
     : RegularExpressionLiteral
     ;
+
+identifier
+	: Identifier
+	| MODULE | IMPORT | FROM | EXPORT | AS
+	;
+
+identifierName
+	: identifier
+	| NULL | TRUE | FALSE | FUNCTION | IF | ELSE | WHILE | DO | FOR | BREAK | CONTINUE
+	| VAR | RETURN | WITH | SWITCH | CASE | DEFAULT | THROW | TRY | CATCH | FINALLY
+	| NEW | DELETE | VOID | TYPEOF | INSTANCEOF | IN | THIS
+	| MODULE | IMPORT | FROM | EXPORT | AS
+	;
+
+identifierReference
+	: identifier
+	| YIELD
+	;
+
+// 13.2.1 Let and Const Declarations
+bindingList
+  : lexicalBinding (LT!* ',' LT!* lexicalBinding)*
+  ;
+
+lexicalBinding
+  : bindingIdentifier LT!* initialiser?
+  | bindingPattern LT!* initialiser
+  ;
+
+bindingIdentifier
+	: identifier
+	| DEFAULT
+	| YIELD
+	;
+
+// 13.2.3 Destructuring Binding Pattern
+bindingPattern
+  : objectBindingPattern
+  | arrayBindingPattern
+  ;
+
+objectBindingPattern
+  : '{' LT!* '}'
+  | '{' LT!* bindingPropertyList LT!* '}'
+  | '{' LT!* bindingPropertyList LT!* ',' LT!* '}'
+  ;
+
+arrayBindingPattern
+  : '[' LT!* elision? LT!* bindingRestElement? LT!* ']'
+  | '[' LT!* bindingElementList LT!* ']'
+  | '[' LT!* bindingElementList LT!* ',' LT!* elision? LT!* bindingRestElement? LT!* ']'
+  ;
+
+bindingPropertyList
+  : bindingProperty (LT!* ',' LT!* bindingProperty)*
+  ;
+
+bindingElementList
+  : (elision LT!*)? bindingElement (LT!* ',' LT!* (elision LT!*)? bindingElement)*
+  ;
+
+bindingProperty
+  : singleNameBinding
+  | propertyName LT!* ':' LT!* bindingElement
+  ;
+
+bindingElement
+  : singleNameBinding
+  | bindingPattern LT!* initialiser?
+  ;
+
+singleNameBinding
+  : bindingIdentifier LT!* initialiser?
+  ;
+
+bindingRestElement
+  : '...' LT!* bindingIdentifier
+  ;
     
 // lexer rules.
 StringLiteral

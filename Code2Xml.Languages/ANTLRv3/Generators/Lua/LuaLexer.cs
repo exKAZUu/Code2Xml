@@ -9,7 +9,7 @@ using Code2Xml.Languages.ANTLRv3.Core;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Lua\\Lua.g 2014-04-08 10:36:18
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Lua\\Lua.g 2014-04-11 15:26:53
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
