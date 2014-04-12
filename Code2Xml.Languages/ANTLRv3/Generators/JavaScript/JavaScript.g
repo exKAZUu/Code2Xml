@@ -83,6 +83,7 @@ sourceElements
 sourceElement
     : moduleDeclaration
     | importDeclaration
+	| exportDeclaration
 	| functionDeclaration
     | statement
     ;
@@ -127,11 +128,11 @@ declaration
     ;
 
 exportDeclaration
-    : EXPORT LT!* '*' LT!* (fromClause LT!*)? statementEnd
-    | EXPORT exportsClause LT!* (fromClause LT!*)? statementEnd
-    | EXPORT variableStatement statementEnd
-    | EXPORT declaration statementEnd
-    | EXPORT bindingList statementEnd
+    : EXPORT LT!* (DEFAULT LT!*)? '*' LT!* (fromClause LT!*)? statementEnd
+    | EXPORT LT!* (DEFAULT LT!*)? exportsClause LT!* (fromClause LT!*)? statementEnd
+    | EXPORT LT!* (DEFAULT LT!*)? variableStatement statementEnd
+    | EXPORT LT!* (DEFAULT LT!*)? declaration statementEnd
+    | EXPORT LT!* (DEFAULT LT!*)? bindingList statementEnd
     ;
 
 exportsClause
@@ -491,7 +492,7 @@ propertyNameAndValue
     ;
 
 propertyName
-    : identifier
+    : identifierName
     | stringliteral
     | numericliteral
     ;

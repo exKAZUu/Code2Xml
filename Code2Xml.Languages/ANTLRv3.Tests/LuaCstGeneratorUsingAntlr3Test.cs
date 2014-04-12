@@ -108,7 +108,7 @@ if true then --[[VERBOSE]] print(1) end
         //[TestCase(@"https://github.com/justincormack/ljsyscall.git",
         //        @"e71e418526e506dc1ab07d1e955f17de21e4b471")]
         public void ParseGitRepository(string url, string commitPointer) {
-            VerifyRestoringGitRepository(url, commitPointer, "*.java");
+            VerifyRestoringGitRepository(url, commitPointer, "*.lua");
         }
     }
 }

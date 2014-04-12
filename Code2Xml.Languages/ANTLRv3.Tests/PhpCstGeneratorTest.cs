@@ -101,7 +101,7 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
         //[TestCase(@"https://github.com/YOURLS/YOURLS.git",
         //        @"f645c06f054c851ce00fd8c349f567b7a0b2100f")]
         //[TestCase(@"https://github.com/composer/composer.git",
-        //        @"7adc41d02c3536b3e19a6b906cf0c4cf6d3beb70")]
+        //        @"7adc41d02c3536b3e19a6b906cf0c4cf6d3beb70")] // not terminate
         //[TestCase(@"https://github.com/owncloud/core.git",
         //        @"9fa788c452403646cc5c2a7c0fe875879e7082fa")]
         //[TestCase(@"https://github.com/google/google-api-php-client.git",
@@ -117,7 +117,7 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
         //[TestCase(@"https://github.com/piwik/piwik.git",
         //        @"b234e0ac5aa70a1b8d1e9115f79ffaa00b5a40e2")]
         //[TestCase(@"https://github.com/bobthecow/psysh.git",
-        //        @"46dd9a050405ecc2a3d1203d57bcff0f00675ff5")]
+        //        @"46dd9a050405ecc2a3d1203d57bcff0f00675ff5")] // not terminate
         //[TestCase(@"https://github.com/Anahkiasen/rocketeer.git",
         //        @"3591b74208e632ce5ffe090ffcd19330785feb77")]
         //[TestCase(@"https://github.com/symfony/symfony.git",
@@ -129,7 +129,7 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
         //[TestCase(@"https://github.com/zendframework/zf2.git",
         //        @"4fe2829353077239aafc9ffe39a15c07bba5b660")]
         public void ParseGitRepository(string url, string commitPointer) {
-            VerifyRestoringGitRepository(url, commitPointer, "*.java");
+            VerifyRestoringGitRepository(url, commitPointer, "*.php");
         }
     }
 }
