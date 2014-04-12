@@ -16,10 +16,8 @@
 
 #endregion
 
-using System.IO;
 using System.Linq;
 using Code2Xml.Core.Generators;
-using Code2Xml.Core.Location;
 using Code2Xml.Core.Tests.Generators;
 using Code2Xml.Languages.ANTLRv3.Generators.JavaScript;
 using NUnit.Framework;
@@ -167,8 +165,9 @@ var completion = require('../lib/completion');
                     @"function(name) { /*a*/ } //aa
 /*
 c*/");
-            Assert.That(e.AllHiddens()
-                    .Count(e2 => e2.Name == "Comment" || e2.Name == "LineComment"),
+            Assert.That(
+                    e.AllHiddens()
+                            .Count(e2 => e2.Name == "Comment" || e2.Name == "LineComment"),
                     Is.EqualTo(3));
             var pos = e.AllHiddens("Comment").Last().Range;
             Assert.That(pos.StartLine, Is.EqualTo(2));

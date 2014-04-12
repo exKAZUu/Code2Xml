@@ -88,9 +88,11 @@ public class AlignedTuplePrinter {
 
         [Test]
         public void CheckIds() {
-            var nodes = Generator.GenerateTreeFromCodeText("class K { void m() { if (true) stmt(); else stmt(); } }")
-                    .Descendants("statement")
-                    .ToList();
+            var nodes =
+                    Generator.GenerateTreeFromCodeText(
+                            "class K { void m() { if (true) stmt(); else stmt(); } }")
+                            .Descendants("statement")
+                            .ToList();
             Assert.That(nodes[0].RuleId, Is.Not.EqualTo(nodes[1].RuleId));
             Assert.That(nodes[0].RuleId, Is.Not.EqualTo(nodes[2].RuleId));
             Assert.That(nodes[1].RuleId, Is.Not.EqualTo(nodes[2].RuleId));
