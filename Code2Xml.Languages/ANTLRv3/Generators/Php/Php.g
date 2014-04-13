@@ -186,8 +186,12 @@ complexStatement
 	| For '(' forInit forCondition forUpdate ')' statement
 	| Foreach '(' expression As arrayEntry ')' statement
 	| While '(' expression? ')' statement
+	| If '(' expression ')' ':' statement* conditionalWithColon?
+	| For '(' forInit forCondition forUpdate ')' ':' statement*
+	| Foreach '(' expression As arrayEntry ')' ':' statement*
+	| While '(' expression? ')' ':' statement*
 	| Do statement While '(' expression ')' ';'
-	| Switch '(' expression ')' '{'cases'}'
+	| Switch '(' expression ')' '{' cases '}'
 	| tryStatement
 	| functionDefinition
 	;
@@ -200,6 +204,7 @@ tryStatement
 
 simpleStatement
 	: Echo commaList
+	| Print expression
 	| Global variable (',' variable)*	// fixed
 	| Static VariableName (Equals atom)? (',' VariableName (Equals atom)?)*
 	| constDefinition
@@ -215,6 +220,11 @@ simpleStatement
 conditional
 	: ElseIf '(' expression ')' statement conditional?
 	| Else statement
+	;
+
+conditionalWithColon
+	: ElseIf '(' expression ')' ':' statement* conditionalWithColon?
+	| Else ':' statement*
 	;
 
 forInit
@@ -247,7 +257,7 @@ anonymousFunctionDefinition
 	;
 
 functionDefinition
-	: Function qualifiedName parametersDefinition bracketedBlock
+	: Function '&'? qualifiedName parametersDefinition bracketedBlock
 	;
 
 parametersDefinition
@@ -289,7 +299,7 @@ assignment
 	;
 
 listVariables
-	: List OpenRoundBracket variable? (',' variable?)* CloseRoundBracket	// fixed
+	: List OpenRoundBracket name? (',' name?)* CloseRoundBracket	// fixed
 	| name
 	;
 
@@ -377,8 +387,12 @@ newOrClone
 	;
 
 atomOrReference
-	: reference
+
+	: Ampersand nameOrFunctionCall
+	| anonymousFunctionDefinition
+	| constantOrFunctionCall
 	| atom
+	| variableOrFunctionCall
 	;
 
 arrayDeclaration
@@ -406,13 +420,6 @@ atom: SingleQuotedString
 	| constantOrStaticAccessor
 	;
 
-//Need to be smarter with references, they have their own tower of application.
-reference
-	: Ampersand nameOrFunctionCall
-	| nameOrFunctionCall
-	| anonymousFunctionDefinition
-	;
-
 functionArguments
 	: OpenRoundBracket (expression (Comma expression)*)? CloseRoundBracket
 	;
@@ -425,15 +432,24 @@ indexer
 // OK: $foo->$arr[1], $foo->{$arr}[1]
 memberAccess
 	: '->' (expression | '{' expression '}'
-	  | New|Clone|Echo|If|Else|ElseIf|For|Foreach|While|Do|Try|Catch|Finally|Switch|Case|Default|Namespace|Function|Break|Continue|Goto|Return|Throw|Global|Static|And|Or|Xor|Instanceof|Null|List|Class|Interface|Extends|Implements|Abstract|Var|Const|As|Use|Require|RequireOnce|Include|IncludeOnce|Public|Private|Protected|True|False|HaltCompiler|Die|Empty|Exit|Eval|Isset
+	  | New|Clone|Echo|Print|If|Else|ElseIf|For|Foreach|While|Do|Try|Catch|Finally|Switch|Case|Default|Namespace|Function|Break|Continue|Goto|Return|Throw|Global|Static|And|Or|Xor|Instanceof|Null|List|Class|Interface|Extends|Implements|Abstract|Var|Const|As|Require|RequireOnce|Include|IncludeOnce|Public|Private|Protected|True|False|HaltCompiler|Die|Empty|Exit|Eval|Isset
 	  | IntType | IntegerType | BoolType | BooleanType | FloatType | DoubleType
 	  | RealType | StringType | ObjectType
+	  |Use
 	  )
 	;
 
 nameOrFunctionCall
+	: constantOrFunctionCall
+	| variableOrFunctionCall
+	;
+
+variableOrFunctionCall
 	: variableOrStaticAccessor functionArguments? (indexer | memberAccess functionArguments?)*
-	| constantOrStaticAccessor functionArguments (indexer | memberAccess functionArguments?)*
+	;
+
+constantOrFunctionCall
+	: constantOrStaticAccessor functionArguments (indexer | memberAccess functionArguments?)*
 	| constantOrStaticAccessor (indexer | memberAccess functionArguments?)+
 	| predefinedFunctionName functionArguments?
 	;
@@ -457,6 +473,7 @@ variableOrStaticAccessor
 
 constantOrStaticAccessor
 	: (variable | qualifiedName) '::' (UnquotedString
+		  | New|Clone|Echo|Print|If|Else|ElseIf|For|Foreach|While|Do|Try|Catch|Finally|Switch|Case|Default|Namespace|Function|Break|Continue|Goto|Return|Throw|Global|Static|And|Or|Xor|Instanceof|Null|List|Class|Interface|Extends|Implements|Abstract|Var|Const|As|Require|RequireOnce|Include|IncludeOnce|Public|Private|Protected|True|False|HaltCompiler|Die|Empty|Exit|Eval|Isset|Use
 		  | IntType | IntegerType | BoolType | BooleanType | FloatType | DoubleType
 		  | RealType | StringType | ObjectType
 		  )
@@ -475,10 +492,13 @@ variableVariable
 // names don't accept any pre-defined keywords
 qualifiedName
 	: '\\'? (UnquotedString
+		  | New|Clone|Echo|Print|If|Else|ElseIf|For|Foreach|While|Do|Try|Catch|Finally|Switch|Case|Default|Namespace|Function|Break|Continue|Goto|Return|Throw|Global|Static|And|Or|Xor|Instanceof|Null|List|Class|Interface|Extends|Implements|Abstract|Var|Const|As|Require|RequireOnce|Include|IncludeOnce|Public|Private|Protected|True|False|HaltCompiler|Die|Empty|Exit|Eval|Isset|Use
 		  | IntType | IntegerType | BoolType | BooleanType | FloatType | DoubleType
-		  | RealType | StringType | ObjectType | Static
+		  | RealType | StringType | ObjectType
+		  
 		  )
 	( '\\' (UnquotedString
+		  | New|Clone|Echo|Print|If|Else|ElseIf|For|Foreach|While|Do|Try|Catch|Finally|Switch|Case|Default|Namespace|Function|Break|Continue|Goto|Return|Throw|Global|Static|And|Or|Xor|Instanceof|Null|List|Class|Interface|Extends|Implements|Abstract|Var|Const|As|Require|RequireOnce|Include|IncludeOnce|Public|Private|Protected|True|False|HaltCompiler|Die|Empty|Exit|Eval|Isset|Use
 		  | IntType | IntegerType | BoolType | BooleanType | FloatType | DoubleType
 		  | RealType | StringType | ObjectType
 		  ))*
@@ -576,6 +596,7 @@ ArrayType
 New : ('n'|'N')('e'|'E')('w'|'W');
 Clone : ('c'|'C')('l'|'L')('o'|'O')('n'|'N')('e'|'E');
 Echo : ('e'|'E')('c'|'C')('h'|'H')('o'|'O');
+Print : ('p'|'P')('r'|'R')('i'|'I')('n'|'N')('t'|'T');
 If : ('i'|'I')('f'|'F');
 Else : ('e'|'E')('l'|'L')('s'|'S')('e'|'E');
 ElseIf : ('e'|'E')('l'|'L')('s'|'S')('e'|'E')('i'|'I')('f'|'F');

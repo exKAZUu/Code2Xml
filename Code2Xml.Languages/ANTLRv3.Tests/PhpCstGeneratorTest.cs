@@ -60,6 +60,26 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
         [TestCase(@"<?php 1 + $a = 1;")]
         [TestCase(@"<?php $x .= $y ^ $z;")]
         [TestCase(@"<?php if (true) { }")]
+        [TestCase(@"<?php print $output;")]
+        [TestCase(@"<?php list( $this->parm ) = $parms;")]
+        [TestCase(@"<?php function &f() { }")]
+        [TestCase(@"<?php $response = $interface::preload();")]
+        [TestCase(@"<?php $response = $interface::$preload();")]
+        [TestCase(@"<?php $response = interface::preload();")]
+        [TestCase(@"<?php $response = preload();")]
+        [TestCase(@"<?php int;")]
+        [TestCase(@"<?php $classname::int;")]
+        [TestCase(@"<?php $classname::CONST_VALUE;")]
+        [TestCase(@"<?php $classname::$my_static;")]
+        [TestCase(@"<?php self::CONST_VALUE;")]
+        [TestCase(@"<?php self::CONST_VALUE();")]
+        [TestCase(@"<?php interface::preload();")]
+        [TestCase(@"<?php interfac::preload();")]
+        [TestCase(@"<?php self::$my_static;")]
+        [TestCase(@"<?php \xxx\yyy::zzz();")]
+        [TestCase(@"<?php class::preload();")]
+        [TestCase(@"<?php function ($results) use (&$output) {};")]
+        [TestCase(@"<?php function ($results) {};")]
         public void Parse(string code) {
             VerifyRestoringCode(code);
         }
@@ -91,13 +111,17 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
                 @"8efa54e839f569422d5891b69495ebeaeee5e7ca")]
         [TestCase(@"https://github.com/al3x/sovereign.git",
                 @"5853ee92615b67a4f4bd802ff7493cb684294a79")]
+        [TestCase(@"https://github.com/serbanghita/Mobile-Detect.git",
+                @"d6943b36f45a9ee654e87cd98832890797a228fb")]
+        [TestCase(@"https://github.com/Anahkiasen/rocketeer.git",
+                @"3591b74208e632ce5ffe090ffcd19330785feb77")]
+        [TestCase(@"https://github.com/PHPMailer/PHPMailer.git",
+                @"01f4c43b683d994e461d4e5049e88d8c5daff31d")]
+        [TestCase(@"https://github.com/phoronix-test-suite/phoronix-test-suite.git",
+                @"307a0c3f7d5fb1a5fee93e59e52410e04b9868e0")]
         // Failed test cases
         //[TestCase(@"https://github.com/EllisLab/CodeIgniter.git",
         //        @"8fb31c929b9cca6154eb007ff553f4a96d31415e")]
-        //[TestCase(@"https://github.com/serbanghita/Mobile-Detect.git",
-        //        @"d6943b36f45a9ee654e87cd98832890797a228fb")]
-        //[TestCase(@"https://github.com/PHPMailer/PHPMailer.git",
-        //        @"01f4c43b683d994e461d4e5049e88d8c5daff31d")]
         //[TestCase(@"https://github.com/YOURLS/YOURLS.git",
         //        @"f645c06f054c851ce00fd8c349f567b7a0b2100f")]
         //[TestCase(@"https://github.com/composer/composer.git",
@@ -110,16 +134,12 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
         //        @"028195b32bb2e096b168baebe07c704473db81d4")]
         //[TestCase(@"https://github.com/facebook/phabricator.git",
         //        @"e61069f0d6b798e958987ccbb90110e548694903")]
-        //[TestCase(@"https://github.com/phoronix-test-suite/phoronix-test-suite.git",
-        //        @"307a0c3f7d5fb1a5fee93e59e52410e04b9868e0")]
         //[TestCase(@"https://github.com/MPOS/php-mpos.git",
         //        @"481c8dd980fe0603e38d7e1e464cd74b8ced5d17")]
         //[TestCase(@"https://github.com/piwik/piwik.git",
         //        @"b234e0ac5aa70a1b8d1e9115f79ffaa00b5a40e2")]
         //[TestCase(@"https://github.com/bobthecow/psysh.git",
         //        @"46dd9a050405ecc2a3d1203d57bcff0f00675ff5")] // not terminate
-        //[TestCase(@"https://github.com/Anahkiasen/rocketeer.git",
-        //        @"3591b74208e632ce5ffe090ffcd19330785feb77")]
         //[TestCase(@"https://github.com/symfony/symfony.git",
         //        @"78d49fbe8c479722319d9e7f1021c89ba6e55308")]
         //[TestCase(@"https://github.com/yiisoft/yii.git",
