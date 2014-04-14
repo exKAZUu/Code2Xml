@@ -17,9 +17,7 @@
 #endregion
 
 using System;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using Code2Xml.Core.Generators;
 using NUnit.Framework;
 using ParserTests;
@@ -106,7 +104,18 @@ namespace Code2Xml.Core.Tests.Generators {
             Assert.That(c2, Is.EqualTo(c3));
         }
 
+        protected void VerifyRestoringCodeAndInspect(string code, bool write = true) {
+            try {
+                VerifyRestoringCode(code, write);
+            } catch (Exception e) {
+                Inspect(code);
+                throw e;
+            }
+        }
+
         protected void VerifyRestoringCode(string code, bool write = true) {
+            code = code.Replace("\r\n", "\n");
+
             var time = Environment.TickCount;
             var tree = Generator.GenerateTreeFromCodeText(code, true);
             var time2 = Environment.TickCount;
@@ -155,7 +164,7 @@ namespace Code2Xml.Core.Tests.Generators {
                     } catch (Exception e) {
                         Console.WriteLine();
                         Console.WriteLine(filePath);
-                        throw e;
+                        throw new ParseException(e);
                     }
                 }
             }
@@ -176,6 +185,25 @@ namespace Code2Xml.Core.Tests.Generators {
             Directory.CreateDirectory(path);
             Git.CloneAndCheckout(path, url, commitPointer);
             PrivateVerifyRestoringProjectDirectory(path, url, readFileFunc, patterns);
+        }
+
+        protected void Inspect(string code) {
+            code = code.Replace("\r\n", "\n");
+            var lines = code.Split('\n');
+            var length = code.Length;
+            for (int i = lines.Length - 1; i >= 0; i--) {
+                length -= lines[i].Length;
+                try {
+                    var code2 = code.Substring(0, length);
+                    var tree = Generator.GenerateTreeFromCodeText(code2);
+                    var code3 = Generator.GenerateCodeFromTree(tree);
+                    if (code2 == code3) {
+                        Console.WriteLine();
+                        Console.WriteLine("Max parsable line: " + i);
+                        return;
+                    }
+                } catch {}
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g 2014-04-11 15:26:42
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g 2014-04-14 12:14:12
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -174,7 +174,7 @@ namespace  Code2Xml.Languages.ANTLRv3.Processors.Java
 public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "ABSTRACT", "AMP", "AMPAMP", "AMPEQ", "ASSERT", "BANG", "BANGEQ", "BAR", "BARBAR", "BAREQ", "BOOLEAN", "BREAK", "BYTE", "BinaryDigit", "BinaryDigitOrUnderscore", "BinaryDigits", "BinaryPrefix", "CARET", "CARETEQ", "CASE", "CATCH", "CHAR", "CHARLITERAL", "CLASS", "COLON", "COMMA", "COMMENT", "CONST", "CONTINUE", "DEFAULT", "DO", "DOT", "DOUBLE", "DOUBLELITERAL", "Digit", "DigitOrUnderscore", "Digits", "DoubleSuffix", "ELLIPSIS", "ELSE", "ENUM", "EQ", "EQEQ", "EXTENDS", "EscapeSequence", "Exponent", "FALSE", "FINAL", "FINALLY", "FLOAT", "FLOATLITERAL", "FOR", "FloatSuffix", "GOTO", "GT", "HexDigit", "HexDigitOrUnderscore", "HexDigits", "HexPrefix", "IDENTIFIER", "IF", "IMPLEMENTS", "IMPORT", "INSTANCEOF", "INT", "INTERFACE", "INTLITERAL", "IdentifierPart", "IdentifierStart", "IntegerNumber", "LBRACE", "LBRACKET", "LINE_COMMENT", "LONG", "LONGLITERAL", "LPAREN", "LT", "LongSuffix", "MONKEYS_AT", "NATIVE", "NEW", "NULL", "NonIntegerNumber", "NonZeroDigit", "OctalDigit", "OctalDigitOrUnderscore", "OctalDigits", "OctalPrefix", "PACKAGE", "PERCENT", "PERCENTEQ", "PLUS", "PLUSEQ", "PLUSPLUS", "PRIVATE", "PROTECTED", "PUBLIC", "QUES", "RBRACE", "RBRACKET", "RETURN", "RPAREN", "SEMI", "SHORT", "SLASH", "SLASHEQ", "STAR", "STAREQ", "STATIC", "STRICTFP", "STRINGLITERAL", "SUB", "SUBEQ", "SUBSUB", "SUPER", "SWITCH", "SYNCHRONIZED", "SurrogateIdentifer", "THIS", "THROW", "THROWS", "TILDE", "TRANSIENT", "TRUE", "TRY", "Underscores", "VOID", "VOLATILE", "WHILE", "WS"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "ABSTRACT", "AMP", "AMPAMP", "AMPEQ", "ASSERT", "BANG", "BANGEQ", "BAR", "BARBAR", "BAREQ", "BOOLEAN", "BREAK", "BYTE", "BinaryDigit", "BinaryDigitOrUnderscore", "BinaryDigits", "BinaryExponent", "BinaryExponentIndicator", "BinaryIntegerLiteral", "BinaryNumeral", "BooleanLiteral", "CARET", "CARETEQ", "CASE", "CATCH", "CHAR", "CLASS", "COLON", "COMMA", "COMMENT", "CONST", "CONTINUE", "CharacterLiteral", "DEFAULT", "DO", "DOT", "DOUBLE", "DecimalFloatingPointLiteral", "DecimalIntegerLiteral", "DecimalNumeral", "Digit", "DigitOrUnderscore", "Digits", "ELLIPSIS", "ELSE", "ENUM", "EQ", "EQEQ", "EXTENDS", "EscapeSequence", "ExponentIndicator", "ExponentPart", "FINAL", "FINALLY", "FLOAT", "FOR", "FloatTypeSuffix", "FloatingPointLiteral", "GOTO", "GT", "HexDigit", "HexDigitOrUnderscore", "HexDigits", "HexIntegerLiteral", "HexNumeral", "HexSignificand", "HexadecimalFloatingPointLiteral", "IDENTIFIER", "IF", "IMPLEMENTS", "IMPORT", "INSTANCEOF", "INT", "INTERFACE", "IdentifierPart", "IdentifierStart", "IntegerLiteral", "IntegerTypeSuffix", "LBRACE", "LBRACKET", "LINE_COMMENT", "LONG", "LPAREN", "LT", "MONKEYS_AT", "NATIVE", "NEW", "NonZeroDigit", "NullLiteral", "OctalDigit", "OctalDigitOrUnderscore", "OctalDigits", "OctalEscape", "OctalIntegerLiteral", "OctalNumeral", "PACKAGE", "PERCENT", "PERCENTEQ", "PLUS", "PLUSEQ", "PLUSPLUS", "PRIVATE", "PROTECTED", "PUBLIC", "QUES", "RBRACE", "RBRACKET", "RETURN", "RPAREN", "SEMI", "SHORT", "SLASH", "SLASHEQ", "STAR", "STAREQ", "STATIC", "STRICTFP", "SUB", "SUBEQ", "SUBSUB", "SUPER", "SWITCH", "SYNCHRONIZED", "Sign", "SignedInteger", "StringLiteral", "SurrogateIdentifer", "THIS", "THROW", "THROWS", "TILDE", "TRANSIENT", "TRY", "Underscores", "UnicodeEscape", "VOID", "VOLATILE", "WHILE", "WS", "ZeroToThree"
 	};
 	public const int EOF=-1;
 	public const int ABSTRACT=4;
@@ -193,120 +193,130 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	public const int BinaryDigit=17;
 	public const int BinaryDigitOrUnderscore=18;
 	public const int BinaryDigits=19;
-	public const int BinaryPrefix=20;
-	public const int CARET=21;
-	public const int CARETEQ=22;
-	public const int CASE=23;
-	public const int CATCH=24;
-	public const int CHAR=25;
-	public const int CHARLITERAL=26;
-	public const int CLASS=27;
-	public const int COLON=28;
-	public const int COMMA=29;
-	public const int COMMENT=30;
-	public const int CONST=31;
-	public const int CONTINUE=32;
-	public const int DEFAULT=33;
-	public const int DO=34;
-	public const int DOT=35;
-	public const int DOUBLE=36;
-	public const int DOUBLELITERAL=37;
-	public const int Digit=38;
-	public const int DigitOrUnderscore=39;
-	public const int Digits=40;
-	public const int DoubleSuffix=41;
-	public const int ELLIPSIS=42;
-	public const int ELSE=43;
-	public const int ENUM=44;
-	public const int EQ=45;
-	public const int EQEQ=46;
-	public const int EXTENDS=47;
-	public const int EscapeSequence=48;
-	public const int Exponent=49;
-	public const int FALSE=50;
-	public const int FINAL=51;
-	public const int FINALLY=52;
-	public const int FLOAT=53;
-	public const int FLOATLITERAL=54;
-	public const int FOR=55;
-	public const int FloatSuffix=56;
-	public const int GOTO=57;
-	public const int GT=58;
-	public const int HexDigit=59;
-	public const int HexDigitOrUnderscore=60;
-	public const int HexDigits=61;
-	public const int HexPrefix=62;
-	public const int IDENTIFIER=63;
-	public const int IF=64;
-	public const int IMPLEMENTS=65;
-	public const int IMPORT=66;
-	public const int INSTANCEOF=67;
-	public const int INT=68;
-	public const int INTERFACE=69;
-	public const int INTLITERAL=70;
-	public const int IdentifierPart=71;
-	public const int IdentifierStart=72;
-	public const int IntegerNumber=73;
-	public const int LBRACE=74;
-	public const int LBRACKET=75;
-	public const int LINE_COMMENT=76;
-	public const int LONG=77;
-	public const int LONGLITERAL=78;
-	public const int LPAREN=79;
-	public const int LT=80;
-	public const int LongSuffix=81;
-	public const int MONKEYS_AT=82;
-	public const int NATIVE=83;
-	public const int NEW=84;
-	public const int NULL=85;
-	public const int NonIntegerNumber=86;
-	public const int NonZeroDigit=87;
-	public const int OctalDigit=88;
-	public const int OctalDigitOrUnderscore=89;
-	public const int OctalDigits=90;
-	public const int OctalPrefix=91;
-	public const int PACKAGE=92;
-	public const int PERCENT=93;
-	public const int PERCENTEQ=94;
-	public const int PLUS=95;
-	public const int PLUSEQ=96;
-	public const int PLUSPLUS=97;
-	public const int PRIVATE=98;
-	public const int PROTECTED=99;
-	public const int PUBLIC=100;
-	public const int QUES=101;
-	public const int RBRACE=102;
-	public const int RBRACKET=103;
-	public const int RETURN=104;
-	public const int RPAREN=105;
-	public const int SEMI=106;
-	public const int SHORT=107;
-	public const int SLASH=108;
-	public const int SLASHEQ=109;
-	public const int STAR=110;
-	public const int STAREQ=111;
-	public const int STATIC=112;
-	public const int STRICTFP=113;
-	public const int STRINGLITERAL=114;
-	public const int SUB=115;
-	public const int SUBEQ=116;
-	public const int SUBSUB=117;
-	public const int SUPER=118;
-	public const int SWITCH=119;
-	public const int SYNCHRONIZED=120;
-	public const int SurrogateIdentifer=121;
-	public const int THIS=122;
-	public const int THROW=123;
-	public const int THROWS=124;
-	public const int TILDE=125;
-	public const int TRANSIENT=126;
-	public const int TRUE=127;
-	public const int TRY=128;
-	public const int Underscores=129;
-	public const int VOID=130;
-	public const int VOLATILE=131;
-	public const int WHILE=132;
-	public const int WS=133;
+	public const int BinaryExponent=20;
+	public const int BinaryExponentIndicator=21;
+	public const int BinaryIntegerLiteral=22;
+	public const int BinaryNumeral=23;
+	public const int BooleanLiteral=24;
+	public const int CARET=25;
+	public const int CARETEQ=26;
+	public const int CASE=27;
+	public const int CATCH=28;
+	public const int CHAR=29;
+	public const int CLASS=30;
+	public const int COLON=31;
+	public const int COMMA=32;
+	public const int COMMENT=33;
+	public const int CONST=34;
+	public const int CONTINUE=35;
+	public const int CharacterLiteral=36;
+	public const int DEFAULT=37;
+	public const int DO=38;
+	public const int DOT=39;
+	public const int DOUBLE=40;
+	public const int DecimalFloatingPointLiteral=41;
+	public const int DecimalIntegerLiteral=42;
+	public const int DecimalNumeral=43;
+	public const int Digit=44;
+	public const int DigitOrUnderscore=45;
+	public const int Digits=46;
+	public const int ELLIPSIS=47;
+	public const int ELSE=48;
+	public const int ENUM=49;
+	public const int EQ=50;
+	public const int EQEQ=51;
+	public const int EXTENDS=52;
+	public const int EscapeSequence=53;
+	public const int ExponentIndicator=54;
+	public const int ExponentPart=55;
+	public const int FINAL=56;
+	public const int FINALLY=57;
+	public const int FLOAT=58;
+	public const int FOR=59;
+	public const int FloatTypeSuffix=60;
+	public const int FloatingPointLiteral=61;
+	public const int GOTO=62;
+	public const int GT=63;
+	public const int HexDigit=64;
+	public const int HexDigitOrUnderscore=65;
+	public const int HexDigits=66;
+	public const int HexIntegerLiteral=67;
+	public const int HexNumeral=68;
+	public const int HexSignificand=69;
+	public const int HexadecimalFloatingPointLiteral=70;
+	public const int IDENTIFIER=71;
+	public const int IF=72;
+	public const int IMPLEMENTS=73;
+	public const int IMPORT=74;
+	public const int INSTANCEOF=75;
+	public const int INT=76;
+	public const int INTERFACE=77;
+	public const int IdentifierPart=78;
+	public const int IdentifierStart=79;
+	public const int IntegerLiteral=80;
+	public const int IntegerTypeSuffix=81;
+	public const int LBRACE=82;
+	public const int LBRACKET=83;
+	public const int LINE_COMMENT=84;
+	public const int LONG=85;
+	public const int LPAREN=86;
+	public const int LT=87;
+	public const int MONKEYS_AT=88;
+	public const int NATIVE=89;
+	public const int NEW=90;
+	public const int NonZeroDigit=91;
+	public const int NullLiteral=92;
+	public const int OctalDigit=93;
+	public const int OctalDigitOrUnderscore=94;
+	public const int OctalDigits=95;
+	public const int OctalEscape=96;
+	public const int OctalIntegerLiteral=97;
+	public const int OctalNumeral=98;
+	public const int PACKAGE=99;
+	public const int PERCENT=100;
+	public const int PERCENTEQ=101;
+	public const int PLUS=102;
+	public const int PLUSEQ=103;
+	public const int PLUSPLUS=104;
+	public const int PRIVATE=105;
+	public const int PROTECTED=106;
+	public const int PUBLIC=107;
+	public const int QUES=108;
+	public const int RBRACE=109;
+	public const int RBRACKET=110;
+	public const int RETURN=111;
+	public const int RPAREN=112;
+	public const int SEMI=113;
+	public const int SHORT=114;
+	public const int SLASH=115;
+	public const int SLASHEQ=116;
+	public const int STAR=117;
+	public const int STAREQ=118;
+	public const int STATIC=119;
+	public const int STRICTFP=120;
+	public const int SUB=121;
+	public const int SUBEQ=122;
+	public const int SUBSUB=123;
+	public const int SUPER=124;
+	public const int SWITCH=125;
+	public const int SYNCHRONIZED=126;
+	public const int Sign=127;
+	public const int SignedInteger=128;
+	public const int StringLiteral=129;
+	public const int SurrogateIdentifer=130;
+	public const int THIS=131;
+	public const int THROW=132;
+	public const int THROWS=133;
+	public const int TILDE=134;
+	public const int TRANSIENT=135;
+	public const int TRY=136;
+	public const int Underscores=137;
+	public const int UnicodeEscape=138;
+	public const int VOID=139;
+	public const int VOLATILE=140;
+	public const int WHILE=141;
+	public const int WS=142;
+	public const int ZeroToThree=143;
 
 	public JavaParser(ITokenStream input)
 		: this(input, new RecognizerSharedState())
@@ -315,7 +325,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	public JavaParser(ITokenStream input, RecognizerSharedState state)
 		: base(input, state)
 	{
-		this.state.ruleMemo = new System.Collections.Generic.Dictionary<int, int>[412+1];
+		this.state.ruleMemo = new System.Collections.Generic.Dictionary<int, int>[400+1];
 
 
 		CstBuilderForAntlr3 treeAdaptor = default(CstBuilderForAntlr3);
@@ -505,7 +515,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(4, false);
 				int LA4_1 = input.LA(1);
 
-				if ((LA4_1==ABSTRACT||LA4_1==BOOLEAN||LA4_1==BYTE||LA4_1==CHAR||LA4_1==CLASS||LA4_1==DOUBLE||LA4_1==ENUM||LA4_1==FINAL||LA4_1==FLOAT||LA4_1==IDENTIFIER||(LA4_1>=INT && LA4_1<=INTERFACE)||LA4_1==LONG||LA4_1==LT||(LA4_1>=MONKEYS_AT && LA4_1<=NATIVE)||(LA4_1>=PRIVATE && LA4_1<=PUBLIC)||(LA4_1>=SEMI && LA4_1<=SHORT)||(LA4_1>=STATIC && LA4_1<=STRICTFP)||LA4_1==SYNCHRONIZED||LA4_1==TRANSIENT||(LA4_1>=VOID && LA4_1<=VOLATILE)))
+				if ((LA4_1==ABSTRACT||LA4_1==BOOLEAN||LA4_1==BYTE||(LA4_1>=CHAR && LA4_1<=CLASS)||LA4_1==DOUBLE||LA4_1==ENUM||LA4_1==FINAL||LA4_1==FLOAT||LA4_1==IDENTIFIER||(LA4_1>=INT && LA4_1<=INTERFACE)||LA4_1==LONG||(LA4_1>=LT && LA4_1<=NATIVE)||(LA4_1>=PRIVATE && LA4_1<=PUBLIC)||(LA4_1>=SEMI && LA4_1<=SHORT)||(LA4_1>=STATIC && LA4_1<=STRICTFP)||LA4_1==SYNCHRONIZED||LA4_1==TRANSIENT||(LA4_1>=VOID && LA4_1<=VOLATILE)))
 				{
 					alt4 = 1;
 				}
@@ -1218,7 +1228,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(11, false);
 			int LA11_1 = input.LA(1);
 
-			if ((LA11_1==ABSTRACT||LA11_1==BOOLEAN||LA11_1==BYTE||LA11_1==CHAR||LA11_1==CLASS||LA11_1==DOUBLE||LA11_1==ENUM||LA11_1==FINAL||LA11_1==FLOAT||LA11_1==IDENTIFIER||(LA11_1>=INT && LA11_1<=INTERFACE)||LA11_1==LONG||LA11_1==LT||(LA11_1>=MONKEYS_AT && LA11_1<=NATIVE)||(LA11_1>=PRIVATE && LA11_1<=PUBLIC)||LA11_1==SHORT||(LA11_1>=STATIC && LA11_1<=STRICTFP)||LA11_1==SYNCHRONIZED||LA11_1==TRANSIENT||(LA11_1>=VOID && LA11_1<=VOLATILE)))
+			if ((LA11_1==ABSTRACT||LA11_1==BOOLEAN||LA11_1==BYTE||(LA11_1>=CHAR && LA11_1<=CLASS)||LA11_1==DOUBLE||LA11_1==ENUM||LA11_1==FINAL||LA11_1==FLOAT||LA11_1==IDENTIFIER||(LA11_1>=INT && LA11_1<=INTERFACE)||LA11_1==LONG||(LA11_1>=LT && LA11_1<=NATIVE)||(LA11_1>=PRIVATE && LA11_1<=PUBLIC)||LA11_1==SHORT||(LA11_1>=STATIC && LA11_1<=STRICTFP)||LA11_1==SYNCHRONIZED||LA11_1==TRANSIENT||(LA11_1>=VOID && LA11_1<=VOLATILE)))
 			{
 				alt11 = 1;
 			}
@@ -3700,7 +3710,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(30, false);
 				int LA30_1 = input.LA(1);
 
-				if ((LA30_1==ABSTRACT||LA30_1==BOOLEAN||LA30_1==BYTE||LA30_1==CHAR||LA30_1==CLASS||LA30_1==DOUBLE||LA30_1==ENUM||LA30_1==FINAL||LA30_1==FLOAT||LA30_1==IDENTIFIER||(LA30_1>=INT && LA30_1<=INTERFACE)||LA30_1==LBRACE||LA30_1==LONG||LA30_1==LT||(LA30_1>=MONKEYS_AT && LA30_1<=NATIVE)||(LA30_1>=PRIVATE && LA30_1<=PUBLIC)||(LA30_1>=SEMI && LA30_1<=SHORT)||(LA30_1>=STATIC && LA30_1<=STRICTFP)||LA30_1==SYNCHRONIZED||LA30_1==TRANSIENT||(LA30_1>=VOID && LA30_1<=VOLATILE)))
+				if ((LA30_1==ABSTRACT||LA30_1==BOOLEAN||LA30_1==BYTE||(LA30_1>=CHAR && LA30_1<=CLASS)||LA30_1==DOUBLE||LA30_1==ENUM||LA30_1==FINAL||LA30_1==FLOAT||LA30_1==IDENTIFIER||(LA30_1>=INT && LA30_1<=INTERFACE)||LA30_1==LBRACE||LA30_1==LONG||(LA30_1>=LT && LA30_1<=NATIVE)||(LA30_1>=PRIVATE && LA30_1<=PUBLIC)||(LA30_1>=SEMI && LA30_1<=SHORT)||(LA30_1>=STATIC && LA30_1<=STRICTFP)||LA30_1==SYNCHRONIZED||LA30_1==TRANSIENT||(LA30_1>=VOID && LA30_1<=VOLATILE)))
 				{
 					alt30 = 1;
 				}
@@ -4456,7 +4466,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(35, false);
 				int LA35_1 = input.LA(1);
 
-				if ((LA35_1==ABSTRACT||LA35_1==BOOLEAN||LA35_1==BYTE||LA35_1==CHAR||LA35_1==CLASS||LA35_1==DOUBLE||LA35_1==ENUM||LA35_1==FINAL||LA35_1==FLOAT||LA35_1==IDENTIFIER||(LA35_1>=INT && LA35_1<=INTERFACE)||LA35_1==LBRACE||LA35_1==LONG||LA35_1==LT||(LA35_1>=MONKEYS_AT && LA35_1<=NATIVE)||(LA35_1>=PRIVATE && LA35_1<=PUBLIC)||(LA35_1>=SEMI && LA35_1<=SHORT)||(LA35_1>=STATIC && LA35_1<=STRICTFP)||LA35_1==SYNCHRONIZED||LA35_1==TRANSIENT||(LA35_1>=VOID && LA35_1<=VOLATILE)))
+				if ((LA35_1==ABSTRACT||LA35_1==BOOLEAN||LA35_1==BYTE||(LA35_1>=CHAR && LA35_1<=CLASS)||LA35_1==DOUBLE||LA35_1==ENUM||LA35_1==FINAL||LA35_1==FLOAT||LA35_1==IDENTIFIER||(LA35_1>=INT && LA35_1<=INTERFACE)||LA35_1==LBRACE||LA35_1==LONG||(LA35_1>=LT && LA35_1<=NATIVE)||(LA35_1>=PRIVATE && LA35_1<=PUBLIC)||(LA35_1>=SEMI && LA35_1<=SHORT)||(LA35_1>=STATIC && LA35_1<=STRICTFP)||LA35_1==SYNCHRONIZED||LA35_1==TRANSIENT||(LA35_1>=VOID && LA35_1<=VOLATILE)))
 				{
 					alt35 = 1;
 				}
@@ -4576,7 +4586,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(36, false);
 				int LA36_1 = input.LA(1);
 
-				if ((LA36_1==ABSTRACT||LA36_1==BOOLEAN||LA36_1==BYTE||LA36_1==CHAR||LA36_1==CLASS||LA36_1==DOUBLE||LA36_1==ENUM||LA36_1==FINAL||LA36_1==FLOAT||LA36_1==IDENTIFIER||(LA36_1>=INT && LA36_1<=INTERFACE)||LA36_1==LONG||LA36_1==LT||(LA36_1>=MONKEYS_AT && LA36_1<=NATIVE)||(LA36_1>=PRIVATE && LA36_1<=PUBLIC)||(LA36_1>=SEMI && LA36_1<=SHORT)||(LA36_1>=STATIC && LA36_1<=STRICTFP)||LA36_1==SYNCHRONIZED||LA36_1==TRANSIENT||(LA36_1>=VOID && LA36_1<=VOLATILE)))
+				if ((LA36_1==ABSTRACT||LA36_1==BOOLEAN||LA36_1==BYTE||(LA36_1>=CHAR && LA36_1<=CLASS)||LA36_1==DOUBLE||LA36_1==ENUM||LA36_1==FINAL||LA36_1==FLOAT||LA36_1==IDENTIFIER||(LA36_1>=INT && LA36_1<=INTERFACE)||LA36_1==LONG||(LA36_1>=LT && LA36_1<=NATIVE)||(LA36_1>=PRIVATE && LA36_1<=PUBLIC)||(LA36_1>=SEMI && LA36_1<=SHORT)||(LA36_1>=STATIC && LA36_1<=STRICTFP)||LA36_1==SYNCHRONIZED||LA36_1==TRANSIENT||(LA36_1>=VOID && LA36_1<=VOLATILE)))
 				{
 					alt36 = 1;
 				}
@@ -4694,7 +4704,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 					alt38 = 2;
 				}
-				else if ((LA38_2==ABSTRACT||LA38_2==BOOLEAN||LA38_2==BYTE||LA38_2==CHAR||LA38_2==CLASS||LA38_2==DOUBLE||LA38_2==ENUM||LA38_2==FINAL||LA38_2==FLOAT||LA38_2==IDENTIFIER||(LA38_2>=INT && LA38_2<=INTERFACE)||LA38_2==LONG||LA38_2==LT||(LA38_2>=MONKEYS_AT && LA38_2<=NATIVE)||(LA38_2>=PRIVATE && LA38_2<=PUBLIC)||LA38_2==SHORT||(LA38_2>=STATIC && LA38_2<=STRICTFP)||LA38_2==SYNCHRONIZED||LA38_2==TRANSIENT||(LA38_2>=VOID && LA38_2<=VOLATILE)))
+				else if ((LA38_2==ABSTRACT||LA38_2==BOOLEAN||LA38_2==BYTE||(LA38_2>=CHAR && LA38_2<=CLASS)||LA38_2==DOUBLE||LA38_2==ENUM||LA38_2==FINAL||LA38_2==FLOAT||LA38_2==IDENTIFIER||(LA38_2>=INT && LA38_2<=INTERFACE)||LA38_2==LONG||(LA38_2>=LT && LA38_2<=NATIVE)||(LA38_2>=PRIVATE && LA38_2<=PUBLIC)||LA38_2==SHORT||(LA38_2>=STATIC && LA38_2<=STRICTFP)||LA38_2==SYNCHRONIZED||LA38_2==TRANSIENT||(LA38_2>=VOID && LA38_2<=VOLATILE)))
 				{
 					alt38 = 3;
 				}
@@ -5938,87 +5948,12 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					}
 					}
 					break;
-				case INTLITERAL:
-					{
-					int LA42_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred57_Java_fragment)))
-					{
-						alt42 = 1;
-					}
-					}
-					break;
-				case LONGLITERAL:
-					{
-					int LA42_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred57_Java_fragment)))
-					{
-						alt42 = 1;
-					}
-					}
-					break;
-				case FLOATLITERAL:
-					{
-					int LA42_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred57_Java_fragment)))
-					{
-						alt42 = 1;
-					}
-					}
-					break;
-				case DOUBLELITERAL:
-					{
-					int LA42_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred57_Java_fragment)))
-					{
-						alt42 = 1;
-					}
-					}
-					break;
-				case CHARLITERAL:
-					{
-					int LA42_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred57_Java_fragment)))
-					{
-						alt42 = 1;
-					}
-					}
-					break;
-				case STRINGLITERAL:
-					{
-					int LA42_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred57_Java_fragment)))
-					{
-						alt42 = 1;
-					}
-					}
-					break;
-				case TRUE:
-					{
-					int LA42_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred57_Java_fragment)))
-					{
-						alt42 = 1;
-					}
-					}
-					break;
-				case FALSE:
-					{
-					int LA42_2 = input.LA(2);
-
-					if ((EvaluatePredicate(synpred57_Java_fragment)))
-					{
-						alt42 = 1;
-					}
-					}
-					break;
-				case NULL:
+				case BooleanLiteral:
+				case CharacterLiteral:
+				case FloatingPointLiteral:
+				case IntegerLiteral:
+				case NullLiteral:
+				case StringLiteral:
 					{
 					int LA42_2 = input.LA(2);
 
@@ -6096,7 +6031,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					try { DebugEnterDecision(43, false);
 					int LA43_1 = input.LA(1);
 
-					if ((LA43_1==EOF||LA43_1==ABSTRACT||(LA43_1>=ASSERT && LA43_1<=BANG)||(LA43_1>=BOOLEAN && LA43_1<=BYTE)||(LA43_1>=CHAR && LA43_1<=CLASS)||LA43_1==CONTINUE||LA43_1==DO||(LA43_1>=DOUBLE && LA43_1<=DOUBLELITERAL)||LA43_1==ENUM||(LA43_1>=FALSE && LA43_1<=FINAL)||(LA43_1>=FLOAT && LA43_1<=FOR)||(LA43_1>=IDENTIFIER && LA43_1<=IF)||(LA43_1>=INT && LA43_1<=INTLITERAL)||LA43_1==LBRACE||(LA43_1>=LONG && LA43_1<=LT)||(LA43_1>=MONKEYS_AT && LA43_1<=NULL)||LA43_1==PLUS||(LA43_1>=PLUSPLUS && LA43_1<=PUBLIC)||LA43_1==RETURN||(LA43_1>=SEMI && LA43_1<=SHORT)||(LA43_1>=STATIC && LA43_1<=SUB)||(LA43_1>=SUBSUB && LA43_1<=SYNCHRONIZED)||(LA43_1>=THIS && LA43_1<=THROW)||(LA43_1>=TILDE && LA43_1<=TRY)||(LA43_1>=VOID && LA43_1<=WHILE)))
+					if ((LA43_1==EOF||LA43_1==ABSTRACT||(LA43_1>=ASSERT && LA43_1<=BANG)||(LA43_1>=BOOLEAN && LA43_1<=BYTE)||LA43_1==BooleanLiteral||(LA43_1>=CHAR && LA43_1<=CLASS)||(LA43_1>=CONTINUE && LA43_1<=CharacterLiteral)||LA43_1==DO||LA43_1==DOUBLE||LA43_1==ENUM||LA43_1==FINAL||(LA43_1>=FLOAT && LA43_1<=FOR)||LA43_1==FloatingPointLiteral||(LA43_1>=IDENTIFIER && LA43_1<=IF)||(LA43_1>=INT && LA43_1<=INTERFACE)||LA43_1==IntegerLiteral||LA43_1==LBRACE||(LA43_1>=LONG && LA43_1<=NEW)||LA43_1==NullLiteral||LA43_1==PLUS||(LA43_1>=PLUSPLUS && LA43_1<=PUBLIC)||LA43_1==RETURN||(LA43_1>=SEMI && LA43_1<=SHORT)||(LA43_1>=STATIC && LA43_1<=SUB)||(LA43_1>=SUBSUB && LA43_1<=SYNCHRONIZED)||LA43_1==StringLiteral||(LA43_1>=THIS && LA43_1<=THROW)||(LA43_1>=TILDE && LA43_1<=TRY)||(LA43_1>=VOID && LA43_1<=WHILE)))
 					{
 						alt43 = 1;
 					}
@@ -9589,24 +9524,21 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 			case BOOLEAN:
 			case BYTE:
+			case BooleanLiteral:
 			case CHAR:
-			case CHARLITERAL:
+			case CharacterLiteral:
 			case DOUBLE:
-			case DOUBLELITERAL:
-			case FALSE:
 			case FLOAT:
-			case FLOATLITERAL:
+			case FloatingPointLiteral:
 			case IDENTIFIER:
 			case INT:
-			case INTLITERAL:
+			case IntegerLiteral:
 			case LONG:
-			case LONGLITERAL:
 			case LPAREN:
 			case NEW:
-			case NULL:
+			case NullLiteral:
 			case SHORT:
-			case STRINGLITERAL:
-			case TRUE:
+			case StringLiteral:
 			case VOID:
 				{
 				alt79 = 2;
@@ -10141,7 +10073,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						alt82 = 2;
 					}
 				}
-				else if ((LA82_1==BANG||LA82_1==BOOLEAN||LA82_1==BYTE||(LA82_1>=CHAR && LA82_1<=CHARLITERAL)||(LA82_1>=DOUBLE && LA82_1<=DOUBLELITERAL)||LA82_1==FALSE||(LA82_1>=FLOAT && LA82_1<=FLOATLITERAL)||LA82_1==INT||LA82_1==INTLITERAL||LA82_1==LBRACE||(LA82_1>=LONG && LA82_1<=LPAREN)||LA82_1==MONKEYS_AT||(LA82_1>=NEW && LA82_1<=NULL)||LA82_1==PLUS||LA82_1==PLUSPLUS||LA82_1==SHORT||(LA82_1>=STRINGLITERAL && LA82_1<=SUB)||(LA82_1>=SUBSUB && LA82_1<=SUPER)||LA82_1==THIS||LA82_1==TILDE||LA82_1==TRUE||LA82_1==VOID))
+				else if ((LA82_1==BANG||LA82_1==BOOLEAN||LA82_1==BYTE||LA82_1==BooleanLiteral||LA82_1==CHAR||LA82_1==CharacterLiteral||LA82_1==DOUBLE||LA82_1==FLOAT||LA82_1==FloatingPointLiteral||LA82_1==INT||LA82_1==IntegerLiteral||LA82_1==LBRACE||(LA82_1>=LONG && LA82_1<=LPAREN)||LA82_1==MONKEYS_AT||LA82_1==NEW||LA82_1==NullLiteral||LA82_1==PLUS||LA82_1==PLUSPLUS||LA82_1==SHORT||LA82_1==SUB||(LA82_1>=SUBSUB && LA82_1<=SUPER)||LA82_1==StringLiteral||LA82_1==THIS||LA82_1==TILDE||LA82_1==VOID))
 				{
 					alt82 = 2;
 				}
@@ -10460,31 +10392,28 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case BANG:
 			case BOOLEAN:
 			case BYTE:
+			case BooleanLiteral:
 			case CHAR:
-			case CHARLITERAL:
+			case CharacterLiteral:
 			case DOUBLE:
-			case DOUBLELITERAL:
-			case FALSE:
 			case FLOAT:
-			case FLOATLITERAL:
+			case FloatingPointLiteral:
 			case IDENTIFIER:
 			case INT:
-			case INTLITERAL:
+			case IntegerLiteral:
 			case LONG:
-			case LONGLITERAL:
 			case LPAREN:
 			case NEW:
-			case NULL:
+			case NullLiteral:
 			case PLUS:
 			case PLUSPLUS:
 			case SHORT:
-			case STRINGLITERAL:
 			case SUB:
 			case SUBSUB:
 			case SUPER:
+			case StringLiteral:
 			case THIS:
 			case TILDE:
-			case TRUE:
 			case VOID:
 				{
 				alt85 = 1;
@@ -10640,7 +10569,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(87, false);
 			int LA87_1 = input.LA(1);
 
-			if ((LA87_1==BANG||LA87_1==BOOLEAN||LA87_1==BYTE||(LA87_1>=CHAR && LA87_1<=CHARLITERAL)||(LA87_1>=DOUBLE && LA87_1<=DOUBLELITERAL)||LA87_1==FALSE||(LA87_1>=FLOAT && LA87_1<=FLOATLITERAL)||LA87_1==IDENTIFIER||LA87_1==INT||LA87_1==INTLITERAL||LA87_1==LBRACE||(LA87_1>=LONG && LA87_1<=LPAREN)||LA87_1==MONKEYS_AT||(LA87_1>=NEW && LA87_1<=NULL)||LA87_1==PLUS||LA87_1==PLUSPLUS||LA87_1==SHORT||(LA87_1>=STRINGLITERAL && LA87_1<=SUB)||(LA87_1>=SUBSUB && LA87_1<=SUPER)||LA87_1==THIS||LA87_1==TILDE||LA87_1==TRUE||LA87_1==VOID))
+			if ((LA87_1==BANG||LA87_1==BOOLEAN||LA87_1==BYTE||LA87_1==BooleanLiteral||LA87_1==CHAR||LA87_1==CharacterLiteral||LA87_1==DOUBLE||LA87_1==FLOAT||LA87_1==FloatingPointLiteral||LA87_1==IDENTIFIER||LA87_1==INT||LA87_1==IntegerLiteral||LA87_1==LBRACE||(LA87_1>=LONG && LA87_1<=LPAREN)||LA87_1==MONKEYS_AT||LA87_1==NEW||LA87_1==NullLiteral||LA87_1==PLUS||LA87_1==PLUSPLUS||LA87_1==SHORT||LA87_1==SUB||(LA87_1>=SUBSUB && LA87_1<=SUPER)||LA87_1==StringLiteral||LA87_1==THIS||LA87_1==TILDE||LA87_1==VOID))
 			{
 				alt87 = 1;
 			}
@@ -10670,7 +10599,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					{
 						int LA86_2 = input.LA(2);
 
-						if ((LA86_2==BANG||LA86_2==BOOLEAN||LA86_2==BYTE||(LA86_2>=CHAR && LA86_2<=CHARLITERAL)||(LA86_2>=DOUBLE && LA86_2<=DOUBLELITERAL)||LA86_2==FALSE||(LA86_2>=FLOAT && LA86_2<=FLOATLITERAL)||LA86_2==IDENTIFIER||LA86_2==INT||LA86_2==INTLITERAL||LA86_2==LBRACE||(LA86_2>=LONG && LA86_2<=LPAREN)||LA86_2==MONKEYS_AT||(LA86_2>=NEW && LA86_2<=NULL)||LA86_2==PLUS||LA86_2==PLUSPLUS||LA86_2==SHORT||(LA86_2>=STRINGLITERAL && LA86_2<=SUB)||(LA86_2>=SUBSUB && LA86_2<=SUPER)||LA86_2==THIS||LA86_2==TILDE||LA86_2==TRUE||LA86_2==VOID))
+						if ((LA86_2==BANG||LA86_2==BOOLEAN||LA86_2==BYTE||LA86_2==BooleanLiteral||LA86_2==CHAR||LA86_2==CharacterLiteral||LA86_2==DOUBLE||LA86_2==FLOAT||LA86_2==FloatingPointLiteral||LA86_2==IDENTIFIER||LA86_2==INT||LA86_2==IntegerLiteral||LA86_2==LBRACE||(LA86_2>=LONG && LA86_2<=LPAREN)||LA86_2==MONKEYS_AT||LA86_2==NEW||LA86_2==NullLiteral||LA86_2==PLUS||LA86_2==PLUSPLUS||LA86_2==SHORT||LA86_2==SUB||(LA86_2>=SUBSUB && LA86_2<=SUPER)||LA86_2==StringLiteral||LA86_2==THIS||LA86_2==TILDE||LA86_2==VOID))
 						{
 							alt86 = 1;
 						}
@@ -10936,7 +10865,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(89, false);
 				int LA89_1 = input.LA(1);
 
-				if ((LA89_1==ABSTRACT||LA89_1==BOOLEAN||LA89_1==BYTE||LA89_1==CHAR||LA89_1==CLASS||LA89_1==DOUBLE||LA89_1==ENUM||LA89_1==FINAL||LA89_1==FLOAT||LA89_1==IDENTIFIER||(LA89_1>=INT && LA89_1<=INTERFACE)||LA89_1==LONG||LA89_1==LT||(LA89_1>=MONKEYS_AT && LA89_1<=NATIVE)||(LA89_1>=PRIVATE && LA89_1<=PUBLIC)||(LA89_1>=SEMI && LA89_1<=SHORT)||(LA89_1>=STATIC && LA89_1<=STRICTFP)||LA89_1==SYNCHRONIZED||LA89_1==TRANSIENT||(LA89_1>=VOID && LA89_1<=VOLATILE)))
+				if ((LA89_1==ABSTRACT||LA89_1==BOOLEAN||LA89_1==BYTE||(LA89_1>=CHAR && LA89_1<=CLASS)||LA89_1==DOUBLE||LA89_1==ENUM||LA89_1==FINAL||LA89_1==FLOAT||LA89_1==IDENTIFIER||(LA89_1>=INT && LA89_1<=INTERFACE)||LA89_1==LONG||(LA89_1>=LT && LA89_1<=NATIVE)||(LA89_1>=PRIVATE && LA89_1<=PUBLIC)||(LA89_1>=SEMI && LA89_1<=SHORT)||(LA89_1>=STATIC && LA89_1<=STRICTFP)||LA89_1==SYNCHRONIZED||LA89_1==TRANSIENT||(LA89_1>=VOID && LA89_1<=VOLATILE)))
 				{
 					alt89 = 1;
 				}
@@ -11900,7 +11829,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(92, false);
 				int LA92_1 = input.LA(1);
 
-				if ((LA92_1==EOF||LA92_1==ABSTRACT||(LA92_1>=ASSERT && LA92_1<=BANG)||(LA92_1>=BOOLEAN && LA92_1<=BYTE)||(LA92_1>=CHAR && LA92_1<=CLASS)||LA92_1==CONTINUE||LA92_1==DO||(LA92_1>=DOUBLE && LA92_1<=DOUBLELITERAL)||LA92_1==ENUM||(LA92_1>=FALSE && LA92_1<=FINAL)||(LA92_1>=FLOAT && LA92_1<=FOR)||(LA92_1>=IDENTIFIER && LA92_1<=IF)||(LA92_1>=INT && LA92_1<=INTLITERAL)||LA92_1==LBRACE||(LA92_1>=LONG && LA92_1<=LT)||(LA92_1>=MONKEYS_AT && LA92_1<=NULL)||LA92_1==PLUS||(LA92_1>=PLUSPLUS && LA92_1<=PUBLIC)||LA92_1==RETURN||(LA92_1>=SEMI && LA92_1<=SHORT)||(LA92_1>=STATIC && LA92_1<=SUB)||(LA92_1>=SUBSUB && LA92_1<=SYNCHRONIZED)||(LA92_1>=THIS && LA92_1<=THROW)||(LA92_1>=TILDE && LA92_1<=TRY)||(LA92_1>=VOID && LA92_1<=WHILE)))
+				if ((LA92_1==EOF||LA92_1==ABSTRACT||(LA92_1>=ASSERT && LA92_1<=BANG)||(LA92_1>=BOOLEAN && LA92_1<=BYTE)||LA92_1==BooleanLiteral||(LA92_1>=CHAR && LA92_1<=CLASS)||(LA92_1>=CONTINUE && LA92_1<=CharacterLiteral)||LA92_1==DO||LA92_1==DOUBLE||LA92_1==ENUM||LA92_1==FINAL||(LA92_1>=FLOAT && LA92_1<=FOR)||LA92_1==FloatingPointLiteral||(LA92_1>=IDENTIFIER && LA92_1<=IF)||(LA92_1>=INT && LA92_1<=INTERFACE)||LA92_1==IntegerLiteral||LA92_1==LBRACE||(LA92_1>=LONG && LA92_1<=NEW)||LA92_1==NullLiteral||LA92_1==PLUS||(LA92_1>=PLUSPLUS && LA92_1<=PUBLIC)||LA92_1==RETURN||(LA92_1>=SEMI && LA92_1<=SHORT)||(LA92_1>=STATIC && LA92_1<=SUB)||(LA92_1>=SUBSUB && LA92_1<=SYNCHRONIZED)||LA92_1==StringLiteral||(LA92_1>=THIS && LA92_1<=THROW)||(LA92_1>=TILDE && LA92_1<=TRY)||(LA92_1>=VOID && LA92_1<=WHILE)))
 				{
 					alt92 = 1;
 				}
@@ -12133,33 +12062,30 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case ASSERT:
 			case BANG:
 			case BREAK:
-			case CHARLITERAL:
+			case BooleanLiteral:
 			case CONTINUE:
+			case CharacterLiteral:
 			case DO:
-			case DOUBLELITERAL:
-			case FALSE:
-			case FLOATLITERAL:
 			case FOR:
+			case FloatingPointLiteral:
 			case IF:
-			case INTLITERAL:
+			case IntegerLiteral:
 			case LBRACE:
-			case LONGLITERAL:
 			case LPAREN:
 			case NEW:
-			case NULL:
+			case NullLiteral:
 			case PLUS:
 			case PLUSPLUS:
 			case RETURN:
 			case SEMI:
-			case STRINGLITERAL:
 			case SUB:
 			case SUBSUB:
 			case SUPER:
 			case SWITCH:
+			case StringLiteral:
 			case THIS:
 			case THROW:
 			case TILDE:
-			case TRUE:
 			case TRY:
 			case VOID:
 			case WHILE:
@@ -12601,30 +12527,27 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case BANG:
 			case BOOLEAN:
 			case BYTE:
+			case BooleanLiteral:
 			case CHAR:
-			case CHARLITERAL:
+			case CharacterLiteral:
 			case DOUBLE:
-			case DOUBLELITERAL:
-			case FALSE:
 			case FLOAT:
-			case FLOATLITERAL:
+			case FloatingPointLiteral:
 			case INT:
-			case INTLITERAL:
+			case IntegerLiteral:
 			case LONG:
-			case LONGLITERAL:
 			case LPAREN:
 			case NEW:
-			case NULL:
+			case NullLiteral:
 			case PLUS:
 			case PLUSPLUS:
 			case SHORT:
-			case STRINGLITERAL:
 			case SUB:
 			case SUBSUB:
 			case SUPER:
+			case StringLiteral:
 			case THIS:
 			case TILDE:
-			case TRUE:
 			case VOID:
 				{
 				alt100 = 4;
@@ -13172,7 +13095,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(99, false);
 				int LA99_1 = input.LA(1);
 
-				if ((LA99_1==BANG||LA99_1==BOOLEAN||LA99_1==BYTE||(LA99_1>=CHAR && LA99_1<=CHARLITERAL)||(LA99_1>=DOUBLE && LA99_1<=DOUBLELITERAL)||LA99_1==FALSE||(LA99_1>=FLOAT && LA99_1<=FLOATLITERAL)||LA99_1==IDENTIFIER||LA99_1==INT||LA99_1==INTLITERAL||(LA99_1>=LONG && LA99_1<=LPAREN)||(LA99_1>=NEW && LA99_1<=NULL)||LA99_1==PLUS||LA99_1==PLUSPLUS||LA99_1==SHORT||(LA99_1>=STRINGLITERAL && LA99_1<=SUB)||(LA99_1>=SUBSUB && LA99_1<=SUPER)||LA99_1==THIS||LA99_1==TILDE||LA99_1==TRUE||LA99_1==VOID))
+				if ((LA99_1==BANG||LA99_1==BOOLEAN||LA99_1==BYTE||LA99_1==BooleanLiteral||LA99_1==CHAR||LA99_1==CharacterLiteral||LA99_1==DOUBLE||LA99_1==FLOAT||LA99_1==FloatingPointLiteral||LA99_1==IDENTIFIER||LA99_1==INT||LA99_1==IntegerLiteral||(LA99_1>=LONG && LA99_1<=LPAREN)||LA99_1==NEW||LA99_1==NullLiteral||LA99_1==PLUS||LA99_1==PLUSPLUS||LA99_1==SHORT||LA99_1==SUB||(LA99_1>=SUBSUB && LA99_1<=SUPER)||LA99_1==StringLiteral||LA99_1==THIS||LA99_1==TILDE||LA99_1==VOID))
 				{
 					alt99 = 1;
 				}
@@ -13470,7 +13393,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(102, false);
 				int LA102_1 = input.LA(1);
 
-				if ((LA102_1==ABSTRACT||(LA102_1>=ASSERT && LA102_1<=BANG)||(LA102_1>=BOOLEAN && LA102_1<=BYTE)||(LA102_1>=CHAR && LA102_1<=CLASS)||LA102_1==CONTINUE||LA102_1==DO||(LA102_1>=DOUBLE && LA102_1<=DOUBLELITERAL)||LA102_1==ENUM||(LA102_1>=FALSE && LA102_1<=FINAL)||(LA102_1>=FLOAT && LA102_1<=FOR)||(LA102_1>=IDENTIFIER && LA102_1<=IF)||(LA102_1>=INT && LA102_1<=INTLITERAL)||LA102_1==LBRACE||(LA102_1>=LONG && LA102_1<=LPAREN)||(LA102_1>=MONKEYS_AT && LA102_1<=NULL)||LA102_1==PLUS||(LA102_1>=PLUSPLUS && LA102_1<=PUBLIC)||LA102_1==RETURN||(LA102_1>=SEMI && LA102_1<=SHORT)||(LA102_1>=STATIC && LA102_1<=SUB)||(LA102_1>=SUBSUB && LA102_1<=SYNCHRONIZED)||(LA102_1>=THIS && LA102_1<=THROW)||(LA102_1>=TILDE && LA102_1<=TRY)||(LA102_1>=VOID && LA102_1<=WHILE)))
+				if ((LA102_1==ABSTRACT||(LA102_1>=ASSERT && LA102_1<=BANG)||(LA102_1>=BOOLEAN && LA102_1<=BYTE)||LA102_1==BooleanLiteral||(LA102_1>=CHAR && LA102_1<=CLASS)||(LA102_1>=CONTINUE && LA102_1<=CharacterLiteral)||LA102_1==DO||LA102_1==DOUBLE||LA102_1==ENUM||LA102_1==FINAL||(LA102_1>=FLOAT && LA102_1<=FOR)||LA102_1==FloatingPointLiteral||(LA102_1>=IDENTIFIER && LA102_1<=IF)||(LA102_1>=INT && LA102_1<=INTERFACE)||LA102_1==IntegerLiteral||LA102_1==LBRACE||(LA102_1>=LONG && LA102_1<=LPAREN)||(LA102_1>=MONKEYS_AT && LA102_1<=NEW)||LA102_1==NullLiteral||LA102_1==PLUS||(LA102_1>=PLUSPLUS && LA102_1<=PUBLIC)||LA102_1==RETURN||(LA102_1>=SEMI && LA102_1<=SHORT)||(LA102_1>=STATIC && LA102_1<=SUB)||(LA102_1>=SUBSUB && LA102_1<=SYNCHRONIZED)||LA102_1==StringLiteral||(LA102_1>=THIS && LA102_1<=THROW)||(LA102_1>=TILDE && LA102_1<=TRY)||(LA102_1>=VOID && LA102_1<=WHILE)))
 				{
 					alt102 = 1;
 				}
@@ -15247,7 +15170,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(116, false);
 				int LA116_1 = input.LA(1);
 
-				if ((LA116_1==EOF||LA116_1==BANG||LA116_1==BOOLEAN||LA116_1==BYTE||(LA116_1>=CHAR && LA116_1<=CHARLITERAL)||(LA116_1>=DOUBLE && LA116_1<=DOUBLELITERAL)||(LA116_1>=FALSE && LA116_1<=FINAL)||(LA116_1>=FLOAT && LA116_1<=FLOATLITERAL)||LA116_1==IDENTIFIER||LA116_1==INT||LA116_1==INTLITERAL||(LA116_1>=LONG && LA116_1<=LPAREN)||LA116_1==MONKEYS_AT||(LA116_1>=NEW && LA116_1<=NULL)||LA116_1==PLUS||LA116_1==PLUSPLUS||LA116_1==SHORT||(LA116_1>=STRINGLITERAL && LA116_1<=SUB)||(LA116_1>=SUBSUB && LA116_1<=SUPER)||LA116_1==THIS||LA116_1==TILDE||LA116_1==TRUE||LA116_1==VOID))
+				if ((LA116_1==EOF||LA116_1==BANG||LA116_1==BOOLEAN||LA116_1==BYTE||LA116_1==BooleanLiteral||LA116_1==CHAR||LA116_1==CharacterLiteral||LA116_1==DOUBLE||LA116_1==FINAL||LA116_1==FLOAT||LA116_1==FloatingPointLiteral||LA116_1==IDENTIFIER||LA116_1==INT||LA116_1==IntegerLiteral||(LA116_1>=LONG && LA116_1<=LPAREN)||LA116_1==MONKEYS_AT||LA116_1==NEW||LA116_1==NullLiteral||LA116_1==PLUS||LA116_1==PLUSPLUS||LA116_1==SHORT||LA116_1==SUB||(LA116_1>=SUBSUB && LA116_1<=SUPER)||LA116_1==StringLiteral||LA116_1==THIS||LA116_1==TILDE||LA116_1==VOID))
 				{
 					alt116 = 1;
 				}
@@ -15284,7 +15207,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(117, false);
 				int LA117_1 = input.LA(1);
 
-				if ((LA117_1==BANG||LA117_1==BOOLEAN||LA117_1==BYTE||(LA117_1>=CHAR && LA117_1<=CHARLITERAL)||(LA117_1>=DOUBLE && LA117_1<=DOUBLELITERAL)||LA117_1==FALSE||(LA117_1>=FLOAT && LA117_1<=FLOATLITERAL)||LA117_1==IDENTIFIER||LA117_1==INT||LA117_1==INTLITERAL||(LA117_1>=LONG && LA117_1<=LPAREN)||(LA117_1>=NEW && LA117_1<=NULL)||LA117_1==PLUS||LA117_1==PLUSPLUS||LA117_1==SHORT||(LA117_1>=STRINGLITERAL && LA117_1<=SUB)||(LA117_1>=SUBSUB && LA117_1<=SUPER)||LA117_1==THIS||LA117_1==TILDE||LA117_1==TRUE||LA117_1==VOID))
+				if ((LA117_1==BANG||LA117_1==BOOLEAN||LA117_1==BYTE||LA117_1==BooleanLiteral||LA117_1==CHAR||LA117_1==CharacterLiteral||LA117_1==DOUBLE||LA117_1==FLOAT||LA117_1==FloatingPointLiteral||LA117_1==IDENTIFIER||LA117_1==INT||LA117_1==IntegerLiteral||(LA117_1>=LONG && LA117_1<=LPAREN)||LA117_1==NEW||LA117_1==NullLiteral||LA117_1==PLUS||LA117_1==PLUSPLUS||LA117_1==SHORT||LA117_1==SUB||(LA117_1>=SUBSUB && LA117_1<=SUPER)||LA117_1==StringLiteral||LA117_1==THIS||LA117_1==TILDE||LA117_1==VOID))
 				{
 					alt117 = 1;
 				}
@@ -15321,7 +15244,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				try { DebugEnterDecision(118, false);
 				int LA118_1 = input.LA(1);
 
-				if ((LA118_1==BANG||LA118_1==BOOLEAN||LA118_1==BYTE||(LA118_1>=CHAR && LA118_1<=CHARLITERAL)||(LA118_1>=DOUBLE && LA118_1<=DOUBLELITERAL)||LA118_1==FALSE||(LA118_1>=FLOAT && LA118_1<=FLOATLITERAL)||LA118_1==IDENTIFIER||LA118_1==INT||LA118_1==INTLITERAL||(LA118_1>=LONG && LA118_1<=LPAREN)||(LA118_1>=NEW && LA118_1<=NULL)||LA118_1==PLUS||LA118_1==PLUSPLUS||LA118_1==SHORT||(LA118_1>=STRINGLITERAL && LA118_1<=SUB)||(LA118_1>=SUBSUB && LA118_1<=SUPER)||LA118_1==THIS||LA118_1==TILDE||LA118_1==TRUE||LA118_1==VOID))
+				if ((LA118_1==BANG||LA118_1==BOOLEAN||LA118_1==BYTE||LA118_1==BooleanLiteral||LA118_1==CHAR||LA118_1==CharacterLiteral||LA118_1==DOUBLE||LA118_1==FLOAT||LA118_1==FloatingPointLiteral||LA118_1==IDENTIFIER||LA118_1==INT||LA118_1==IntegerLiteral||(LA118_1>=LONG && LA118_1<=LPAREN)||LA118_1==NEW||LA118_1==NullLiteral||LA118_1==PLUS||LA118_1==PLUSPLUS||LA118_1==SHORT||LA118_1==SUB||(LA118_1>=SUBSUB && LA118_1<=SUPER)||LA118_1==StringLiteral||LA118_1==THIS||LA118_1==TILDE||LA118_1==VOID))
 				{
 					alt118 = 1;
 				}
@@ -15477,24 +15400,21 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				}
 				break;
 			case BANG:
-			case CHARLITERAL:
-			case DOUBLELITERAL:
-			case FALSE:
-			case FLOATLITERAL:
-			case INTLITERAL:
-			case LONGLITERAL:
+			case BooleanLiteral:
+			case CharacterLiteral:
+			case FloatingPointLiteral:
+			case IntegerLiteral:
 			case LPAREN:
 			case NEW:
-			case NULL:
+			case NullLiteral:
 			case PLUS:
 			case PLUSPLUS:
-			case STRINGLITERAL:
 			case SUB:
 			case SUBSUB:
 			case SUPER:
+			case StringLiteral:
 			case THIS:
 			case TILDE:
-			case TRUE:
 			case VOID:
 				{
 				alt120 = 2;
@@ -17304,7 +17224,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 					int LA132_2 = input.LA(2);
 
-					if ((LA132_2==BANG||LA132_2==BOOLEAN||LA132_2==BYTE||(LA132_2>=CHAR && LA132_2<=CHARLITERAL)||(LA132_2>=DOUBLE && LA132_2<=DOUBLELITERAL)||LA132_2==EQ||LA132_2==FALSE||(LA132_2>=FLOAT && LA132_2<=FLOATLITERAL)||LA132_2==IDENTIFIER||LA132_2==INT||LA132_2==INTLITERAL||(LA132_2>=LONG && LA132_2<=LPAREN)||(LA132_2>=NEW && LA132_2<=NULL)||LA132_2==PLUS||LA132_2==PLUSPLUS||LA132_2==SHORT||(LA132_2>=STRINGLITERAL && LA132_2<=SUB)||(LA132_2>=SUBSUB && LA132_2<=SUPER)||LA132_2==THIS||LA132_2==TILDE||LA132_2==TRUE||LA132_2==VOID))
+					if ((LA132_2==BANG||LA132_2==BOOLEAN||LA132_2==BYTE||LA132_2==BooleanLiteral||LA132_2==CHAR||LA132_2==CharacterLiteral||LA132_2==DOUBLE||LA132_2==EQ||LA132_2==FLOAT||LA132_2==FloatingPointLiteral||LA132_2==IDENTIFIER||LA132_2==INT||LA132_2==IntegerLiteral||(LA132_2>=LONG && LA132_2<=LPAREN)||LA132_2==NEW||LA132_2==NullLiteral||LA132_2==PLUS||LA132_2==PLUSPLUS||LA132_2==SHORT||LA132_2==SUB||(LA132_2>=SUBSUB && LA132_2<=SUPER)||LA132_2==StringLiteral||LA132_2==THIS||LA132_2==TILDE||LA132_2==VOID))
 					{
 						alt132 = 1;
 					}
@@ -17315,7 +17235,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 					int LA132_2 = input.LA(2);
 
-					if ((LA132_2==BANG||LA132_2==BOOLEAN||LA132_2==BYTE||(LA132_2>=CHAR && LA132_2<=CHARLITERAL)||(LA132_2>=DOUBLE && LA132_2<=DOUBLELITERAL)||LA132_2==EQ||LA132_2==FALSE||(LA132_2>=FLOAT && LA132_2<=FLOATLITERAL)||LA132_2==IDENTIFIER||LA132_2==INT||LA132_2==INTLITERAL||(LA132_2>=LONG && LA132_2<=LPAREN)||(LA132_2>=NEW && LA132_2<=NULL)||LA132_2==PLUS||LA132_2==PLUSPLUS||LA132_2==SHORT||(LA132_2>=STRINGLITERAL && LA132_2<=SUB)||(LA132_2>=SUBSUB && LA132_2<=SUPER)||LA132_2==THIS||LA132_2==TILDE||LA132_2==TRUE||LA132_2==VOID))
+					if ((LA132_2==BANG||LA132_2==BOOLEAN||LA132_2==BYTE||LA132_2==BooleanLiteral||LA132_2==CHAR||LA132_2==CharacterLiteral||LA132_2==DOUBLE||LA132_2==EQ||LA132_2==FLOAT||LA132_2==FloatingPointLiteral||LA132_2==IDENTIFIER||LA132_2==INT||LA132_2==IntegerLiteral||(LA132_2>=LONG && LA132_2<=LPAREN)||LA132_2==NEW||LA132_2==NullLiteral||LA132_2==PLUS||LA132_2==PLUSPLUS||LA132_2==SHORT||LA132_2==SUB||(LA132_2>=SUBSUB && LA132_2<=SUPER)||LA132_2==StringLiteral||LA132_2==THIS||LA132_2==TILDE||LA132_2==VOID))
 					{
 						alt132 = 1;
 					}
@@ -17437,7 +17357,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 					alt133 = 1;
 				}
-				else if ((LA133_2==BANG||LA133_2==BOOLEAN||LA133_2==BYTE||(LA133_2>=CHAR && LA133_2<=CHARLITERAL)||(LA133_2>=DOUBLE && LA133_2<=DOUBLELITERAL)||LA133_2==FALSE||(LA133_2>=FLOAT && LA133_2<=FLOATLITERAL)||LA133_2==IDENTIFIER||LA133_2==INT||LA133_2==INTLITERAL||(LA133_2>=LONG && LA133_2<=LPAREN)||(LA133_2>=NEW && LA133_2<=NULL)||LA133_2==PLUS||LA133_2==PLUSPLUS||LA133_2==SHORT||(LA133_2>=STRINGLITERAL && LA133_2<=SUB)||(LA133_2>=SUBSUB && LA133_2<=SUPER)||LA133_2==THIS||LA133_2==TILDE||LA133_2==TRUE||LA133_2==VOID))
+				else if ((LA133_2==BANG||LA133_2==BOOLEAN||LA133_2==BYTE||LA133_2==BooleanLiteral||LA133_2==CHAR||LA133_2==CharacterLiteral||LA133_2==DOUBLE||LA133_2==FLOAT||LA133_2==FloatingPointLiteral||LA133_2==IDENTIFIER||LA133_2==INT||LA133_2==IntegerLiteral||(LA133_2>=LONG && LA133_2<=LPAREN)||LA133_2==NEW||LA133_2==NullLiteral||LA133_2==PLUS||LA133_2==PLUSPLUS||LA133_2==SHORT||LA133_2==SUB||(LA133_2>=SUBSUB && LA133_2<=SUPER)||LA133_2==StringLiteral||LA133_2==THIS||LA133_2==TILDE||LA133_2==VOID))
 				{
 					alt133 = 3;
 				}
@@ -17457,7 +17377,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 					alt133 = 2;
 				}
-				else if ((LA133_2==BANG||LA133_2==BOOLEAN||LA133_2==BYTE||(LA133_2>=CHAR && LA133_2<=CHARLITERAL)||(LA133_2>=DOUBLE && LA133_2<=DOUBLELITERAL)||LA133_2==FALSE||(LA133_2>=FLOAT && LA133_2<=FLOATLITERAL)||LA133_2==IDENTIFIER||LA133_2==INT||LA133_2==INTLITERAL||(LA133_2>=LONG && LA133_2<=LPAREN)||(LA133_2>=NEW && LA133_2<=NULL)||LA133_2==PLUS||LA133_2==PLUSPLUS||LA133_2==SHORT||(LA133_2>=STRINGLITERAL && LA133_2<=SUB)||(LA133_2>=SUBSUB && LA133_2<=SUPER)||LA133_2==THIS||LA133_2==TILDE||LA133_2==TRUE||LA133_2==VOID))
+				else if ((LA133_2==BANG||LA133_2==BOOLEAN||LA133_2==BYTE||LA133_2==BooleanLiteral||LA133_2==CHAR||LA133_2==CharacterLiteral||LA133_2==DOUBLE||LA133_2==FLOAT||LA133_2==FloatingPointLiteral||LA133_2==IDENTIFIER||LA133_2==INT||LA133_2==IntegerLiteral||(LA133_2>=LONG && LA133_2<=LPAREN)||LA133_2==NEW||LA133_2==NullLiteral||LA133_2==PLUS||LA133_2==PLUSPLUS||LA133_2==SHORT||LA133_2==SUB||(LA133_2>=SUBSUB && LA133_2<=SUPER)||LA133_2==StringLiteral||LA133_2==THIS||LA133_2==TILDE||LA133_2==VOID))
 				{
 					alt133 = 4;
 				}
@@ -17637,7 +17557,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					{
 						int LA134_3 = input.LA(3);
 
-						if ((LA134_3==BANG||LA134_3==BOOLEAN||LA134_3==BYTE||(LA134_3>=CHAR && LA134_3<=CHARLITERAL)||(LA134_3>=DOUBLE && LA134_3<=DOUBLELITERAL)||LA134_3==FALSE||(LA134_3>=FLOAT && LA134_3<=FLOATLITERAL)||LA134_3==IDENTIFIER||LA134_3==INT||LA134_3==INTLITERAL||(LA134_3>=LONG && LA134_3<=LPAREN)||(LA134_3>=NEW && LA134_3<=NULL)||LA134_3==PLUS||LA134_3==PLUSPLUS||LA134_3==SHORT||(LA134_3>=STRINGLITERAL && LA134_3<=SUB)||(LA134_3>=SUBSUB && LA134_3<=SUPER)||LA134_3==THIS||LA134_3==TILDE||LA134_3==TRUE||LA134_3==VOID))
+						if ((LA134_3==BANG||LA134_3==BOOLEAN||LA134_3==BYTE||LA134_3==BooleanLiteral||LA134_3==CHAR||LA134_3==CharacterLiteral||LA134_3==DOUBLE||LA134_3==FLOAT||LA134_3==FloatingPointLiteral||LA134_3==IDENTIFIER||LA134_3==INT||LA134_3==IntegerLiteral||(LA134_3>=LONG && LA134_3<=LPAREN)||LA134_3==NEW||LA134_3==NullLiteral||LA134_3==PLUS||LA134_3==PLUSPLUS||LA134_3==SHORT||LA134_3==SUB||(LA134_3>=SUBSUB && LA134_3<=SUPER)||LA134_3==StringLiteral||LA134_3==THIS||LA134_3==TILDE||LA134_3==VOID))
 						{
 							alt134 = 1;
 						}
@@ -17659,14 +17579,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 						{
 							int LA134_4 = input.LA(4);
 
-							if ((LA134_4==BANG||LA134_4==BOOLEAN||LA134_4==BYTE||(LA134_4>=CHAR && LA134_4<=CHARLITERAL)||(LA134_4>=DOUBLE && LA134_4<=DOUBLELITERAL)||LA134_4==FALSE||(LA134_4>=FLOAT && LA134_4<=FLOATLITERAL)||LA134_4==IDENTIFIER||LA134_4==INT||LA134_4==INTLITERAL||(LA134_4>=LONG && LA134_4<=LPAREN)||(LA134_4>=NEW && LA134_4<=NULL)||LA134_4==PLUS||LA134_4==PLUSPLUS||LA134_4==SHORT||(LA134_4>=STRINGLITERAL && LA134_4<=SUB)||(LA134_4>=SUBSUB && LA134_4<=SUPER)||LA134_4==THIS||LA134_4==TILDE||LA134_4==TRUE||LA134_4==VOID))
+							if ((LA134_4==BANG||LA134_4==BOOLEAN||LA134_4==BYTE||LA134_4==BooleanLiteral||LA134_4==CHAR||LA134_4==CharacterLiteral||LA134_4==DOUBLE||LA134_4==FLOAT||LA134_4==FloatingPointLiteral||LA134_4==IDENTIFIER||LA134_4==INT||LA134_4==IntegerLiteral||(LA134_4>=LONG && LA134_4<=LPAREN)||LA134_4==NEW||LA134_4==NullLiteral||LA134_4==PLUS||LA134_4==PLUSPLUS||LA134_4==SHORT||LA134_4==SUB||(LA134_4>=SUBSUB && LA134_4<=SUPER)||LA134_4==StringLiteral||LA134_4==THIS||LA134_4==TILDE||LA134_4==VOID))
 							{
 								alt134 = 1;
 							}
 
 
 						}
-						else if ((LA134_3==BANG||LA134_3==BOOLEAN||LA134_3==BYTE||(LA134_3>=CHAR && LA134_3<=CHARLITERAL)||(LA134_3>=DOUBLE && LA134_3<=DOUBLELITERAL)||LA134_3==FALSE||(LA134_3>=FLOAT && LA134_3<=FLOATLITERAL)||LA134_3==IDENTIFIER||LA134_3==INT||LA134_3==INTLITERAL||(LA134_3>=LONG && LA134_3<=LPAREN)||(LA134_3>=NEW && LA134_3<=NULL)||LA134_3==PLUS||LA134_3==PLUSPLUS||LA134_3==SHORT||(LA134_3>=STRINGLITERAL && LA134_3<=SUB)||(LA134_3>=SUBSUB && LA134_3<=SUPER)||LA134_3==THIS||LA134_3==TILDE||LA134_3==TRUE||LA134_3==VOID))
+						else if ((LA134_3==BANG||LA134_3==BOOLEAN||LA134_3==BYTE||LA134_3==BooleanLiteral||LA134_3==CHAR||LA134_3==CharacterLiteral||LA134_3==DOUBLE||LA134_3==FLOAT||LA134_3==FloatingPointLiteral||LA134_3==IDENTIFIER||LA134_3==INT||LA134_3==IntegerLiteral||(LA134_3>=LONG && LA134_3<=LPAREN)||LA134_3==NEW||LA134_3==NullLiteral||LA134_3==PLUS||LA134_3==PLUSPLUS||LA134_3==SHORT||LA134_3==SUB||(LA134_3>=SUBSUB && LA134_3<=SUPER)||LA134_3==StringLiteral||LA134_3==THIS||LA134_3==TILDE||LA134_3==VOID))
 						{
 							alt134 = 1;
 						}
@@ -17801,7 +17721,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					{
 						alt135 = 2;
 					}
-					else if ((LA135_3==BANG||LA135_3==BOOLEAN||LA135_3==BYTE||(LA135_3>=CHAR && LA135_3<=CHARLITERAL)||(LA135_3>=DOUBLE && LA135_3<=DOUBLELITERAL)||LA135_3==FALSE||(LA135_3>=FLOAT && LA135_3<=FLOATLITERAL)||LA135_3==IDENTIFIER||LA135_3==INT||LA135_3==INTLITERAL||(LA135_3>=LONG && LA135_3<=LPAREN)||(LA135_3>=NEW && LA135_3<=NULL)||LA135_3==PLUS||LA135_3==PLUSPLUS||LA135_3==SHORT||(LA135_3>=STRINGLITERAL && LA135_3<=SUB)||(LA135_3>=SUBSUB && LA135_3<=SUPER)||LA135_3==THIS||LA135_3==TILDE||LA135_3==TRUE||LA135_3==VOID))
+					else if ((LA135_3==BANG||LA135_3==BOOLEAN||LA135_3==BYTE||LA135_3==BooleanLiteral||LA135_3==CHAR||LA135_3==CharacterLiteral||LA135_3==DOUBLE||LA135_3==FLOAT||LA135_3==FloatingPointLiteral||LA135_3==IDENTIFIER||LA135_3==INT||LA135_3==IntegerLiteral||(LA135_3>=LONG && LA135_3<=LPAREN)||LA135_3==NEW||LA135_3==NullLiteral||LA135_3==PLUS||LA135_3==PLUSPLUS||LA135_3==SHORT||LA135_3==SUB||(LA135_3>=SUBSUB && LA135_3<=SUPER)||LA135_3==StringLiteral||LA135_3==THIS||LA135_3==TILDE||LA135_3==VOID))
 					{
 						alt135 = 3;
 					}
@@ -18255,27 +18175,24 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case BANG:
 			case BOOLEAN:
 			case BYTE:
+			case BooleanLiteral:
 			case CHAR:
-			case CHARLITERAL:
+			case CharacterLiteral:
 			case DOUBLE:
-			case DOUBLELITERAL:
-			case FALSE:
 			case FLOAT:
-			case FLOATLITERAL:
+			case FloatingPointLiteral:
 			case IDENTIFIER:
 			case INT:
-			case INTLITERAL:
+			case IntegerLiteral:
 			case LONG:
-			case LONGLITERAL:
 			case LPAREN:
 			case NEW:
-			case NULL:
+			case NullLiteral:
 			case SHORT:
-			case STRINGLITERAL:
 			case SUPER:
+			case StringLiteral:
 			case THIS:
 			case TILDE:
-			case TRUE:
 			case VOID:
 				{
 				alt138 = 5;
@@ -18495,25 +18412,22 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 			case BOOLEAN:
 			case BYTE:
+			case BooleanLiteral:
 			case CHAR:
-			case CHARLITERAL:
+			case CharacterLiteral:
 			case DOUBLE:
-			case DOUBLELITERAL:
-			case FALSE:
 			case FLOAT:
-			case FLOATLITERAL:
+			case FloatingPointLiteral:
 			case IDENTIFIER:
 			case INT:
-			case INTLITERAL:
+			case IntegerLiteral:
 			case LONG:
-			case LONGLITERAL:
 			case NEW:
-			case NULL:
+			case NullLiteral:
 			case SHORT:
-			case STRINGLITERAL:
 			case SUPER:
+			case StringLiteral:
 			case THIS:
-			case TRUE:
 			case VOID:
 				{
 				alt141 = 4;
@@ -18968,15 +18882,12 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				alt148 = 4;
 				}
 				break;
-			case CHARLITERAL:
-			case DOUBLELITERAL:
-			case FALSE:
-			case FLOATLITERAL:
-			case INTLITERAL:
-			case LONGLITERAL:
-			case NULL:
-			case STRINGLITERAL:
-			case TRUE:
+			case BooleanLiteral:
+			case CharacterLiteral:
+			case FloatingPointLiteral:
+			case IntegerLiteral:
+			case NullLiteral:
+			case StringLiteral:
 				{
 				alt148 = 5;
 				}
@@ -19728,7 +19639,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 					alt154 = 1;
 				}
-				else if ((LA154_2==BANG||LA154_2==BOOLEAN||LA154_2==BYTE||(LA154_2>=CHAR && LA154_2<=CHARLITERAL)||(LA154_2>=DOUBLE && LA154_2<=DOUBLELITERAL)||LA154_2==FALSE||(LA154_2>=FLOAT && LA154_2<=FLOATLITERAL)||LA154_2==IDENTIFIER||LA154_2==INT||LA154_2==INTLITERAL||(LA154_2>=LONG && LA154_2<=LPAREN)||(LA154_2>=NEW && LA154_2<=NULL)||LA154_2==PLUS||LA154_2==PLUSPLUS||LA154_2==SHORT||(LA154_2>=STRINGLITERAL && LA154_2<=SUB)||(LA154_2>=SUBSUB && LA154_2<=SUPER)||LA154_2==THIS||LA154_2==TILDE||LA154_2==TRUE||LA154_2==VOID))
+				else if ((LA154_2==BANG||LA154_2==BOOLEAN||LA154_2==BYTE||LA154_2==BooleanLiteral||LA154_2==CHAR||LA154_2==CharacterLiteral||LA154_2==DOUBLE||LA154_2==FLOAT||LA154_2==FloatingPointLiteral||LA154_2==IDENTIFIER||LA154_2==INT||LA154_2==IntegerLiteral||(LA154_2>=LONG && LA154_2<=LPAREN)||LA154_2==NEW||LA154_2==NullLiteral||LA154_2==PLUS||LA154_2==PLUSPLUS||LA154_2==SHORT||LA154_2==SUB||(LA154_2>=SUBSUB && LA154_2<=SUPER)||LA154_2==StringLiteral||LA154_2==THIS||LA154_2==TILDE||LA154_2==VOID))
 				{
 					alt154 = 2;
 				}
@@ -20999,7 +20910,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 				alt162 = 1;
 			}
-			else if ((LA162_1==BANG||LA162_1==BOOLEAN||LA162_1==BYTE||(LA162_1>=CHAR && LA162_1<=CHARLITERAL)||(LA162_1>=DOUBLE && LA162_1<=DOUBLELITERAL)||LA162_1==FALSE||(LA162_1>=FLOAT && LA162_1<=FLOATLITERAL)||LA162_1==IDENTIFIER||LA162_1==INT||LA162_1==INTLITERAL||(LA162_1>=LONG && LA162_1<=LPAREN)||(LA162_1>=NEW && LA162_1<=NULL)||LA162_1==PLUS||LA162_1==PLUSPLUS||LA162_1==SHORT||(LA162_1>=STRINGLITERAL && LA162_1<=SUB)||(LA162_1>=SUBSUB && LA162_1<=SUPER)||LA162_1==THIS||LA162_1==TILDE||LA162_1==TRUE||LA162_1==VOID))
+			else if ((LA162_1==BANG||LA162_1==BOOLEAN||LA162_1==BYTE||LA162_1==BooleanLiteral||LA162_1==CHAR||LA162_1==CharacterLiteral||LA162_1==DOUBLE||LA162_1==FLOAT||LA162_1==FloatingPointLiteral||LA162_1==IDENTIFIER||LA162_1==INT||LA162_1==IntegerLiteral||(LA162_1>=LONG && LA162_1<=LPAREN)||LA162_1==NEW||LA162_1==NullLiteral||LA162_1==PLUS||LA162_1==PLUSPLUS||LA162_1==SHORT||LA162_1==SUB||(LA162_1>=SUBSUB && LA162_1<=SUPER)||LA162_1==StringLiteral||LA162_1==THIS||LA162_1==TILDE||LA162_1==VOID))
 			{
 				alt162 = 2;
 			}
@@ -21126,7 +21037,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(164, false);
 			int LA164_1 = input.LA(1);
 
-			if ((LA164_1==BANG||LA164_1==BOOLEAN||LA164_1==BYTE||(LA164_1>=CHAR && LA164_1<=CHARLITERAL)||(LA164_1>=DOUBLE && LA164_1<=DOUBLELITERAL)||LA164_1==FALSE||(LA164_1>=FLOAT && LA164_1<=FLOATLITERAL)||LA164_1==IDENTIFIER||LA164_1==INT||LA164_1==INTLITERAL||LA164_1==LBRACE||(LA164_1>=LONG && LA164_1<=LPAREN)||(LA164_1>=NEW && LA164_1<=NULL)||LA164_1==PLUS||LA164_1==PLUSPLUS||LA164_1==SHORT||(LA164_1>=STRINGLITERAL && LA164_1<=SUB)||(LA164_1>=SUBSUB && LA164_1<=SUPER)||LA164_1==THIS||LA164_1==TILDE||LA164_1==TRUE||LA164_1==VOID))
+			if ((LA164_1==BANG||LA164_1==BOOLEAN||LA164_1==BYTE||LA164_1==BooleanLiteral||LA164_1==CHAR||LA164_1==CharacterLiteral||LA164_1==DOUBLE||LA164_1==FLOAT||LA164_1==FloatingPointLiteral||LA164_1==IDENTIFIER||LA164_1==INT||LA164_1==IntegerLiteral||LA164_1==LBRACE||(LA164_1>=LONG && LA164_1<=LPAREN)||LA164_1==NEW||LA164_1==NullLiteral||LA164_1==PLUS||LA164_1==PLUSPLUS||LA164_1==SHORT||LA164_1==SUB||(LA164_1>=SUBSUB && LA164_1<=SUPER)||LA164_1==StringLiteral||LA164_1==THIS||LA164_1==TILDE||LA164_1==VOID))
 			{
 				alt164 = 1;
 			}
@@ -21156,7 +21067,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					{
 						int LA163_2 = input.LA(2);
 
-						if ((LA163_2==BANG||LA163_2==BOOLEAN||LA163_2==BYTE||(LA163_2>=CHAR && LA163_2<=CHARLITERAL)||(LA163_2>=DOUBLE && LA163_2<=DOUBLELITERAL)||LA163_2==FALSE||(LA163_2>=FLOAT && LA163_2<=FLOATLITERAL)||LA163_2==IDENTIFIER||LA163_2==INT||LA163_2==INTLITERAL||LA163_2==LBRACE||(LA163_2>=LONG && LA163_2<=LPAREN)||(LA163_2>=NEW && LA163_2<=NULL)||LA163_2==PLUS||LA163_2==PLUSPLUS||LA163_2==SHORT||(LA163_2>=STRINGLITERAL && LA163_2<=SUB)||(LA163_2>=SUBSUB && LA163_2<=SUPER)||LA163_2==THIS||LA163_2==TILDE||LA163_2==TRUE||LA163_2==VOID))
+						if ((LA163_2==BANG||LA163_2==BOOLEAN||LA163_2==BYTE||LA163_2==BooleanLiteral||LA163_2==CHAR||LA163_2==CharacterLiteral||LA163_2==DOUBLE||LA163_2==FLOAT||LA163_2==FloatingPointLiteral||LA163_2==IDENTIFIER||LA163_2==INT||LA163_2==IntegerLiteral||LA163_2==LBRACE||(LA163_2>=LONG && LA163_2<=LPAREN)||LA163_2==NEW||LA163_2==NullLiteral||LA163_2==PLUS||LA163_2==PLUSPLUS||LA163_2==SHORT||LA163_2==SUB||(LA163_2>=SUBSUB && LA163_2<=SUPER)||LA163_2==StringLiteral||LA163_2==THIS||LA163_2==TILDE||LA163_2==VOID))
 						{
 							alt163 = 1;
 						}
@@ -22030,7 +21941,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			try { DebugEnterDecision(172, false);
 			int LA172_1 = input.LA(1);
 
-			if ((LA172_1==BANG||LA172_1==BOOLEAN||LA172_1==BYTE||(LA172_1>=CHAR && LA172_1<=CHARLITERAL)||(LA172_1>=DOUBLE && LA172_1<=DOUBLELITERAL)||LA172_1==FALSE||(LA172_1>=FLOAT && LA172_1<=FLOATLITERAL)||LA172_1==IDENTIFIER||LA172_1==INT||LA172_1==INTLITERAL||(LA172_1>=LONG && LA172_1<=LPAREN)||(LA172_1>=NEW && LA172_1<=NULL)||LA172_1==PLUS||LA172_1==PLUSPLUS||LA172_1==SHORT||(LA172_1>=STRINGLITERAL && LA172_1<=SUB)||(LA172_1>=SUBSUB && LA172_1<=SUPER)||LA172_1==THIS||LA172_1==TILDE||LA172_1==TRUE||LA172_1==VOID))
+			if ((LA172_1==BANG||LA172_1==BOOLEAN||LA172_1==BYTE||LA172_1==BooleanLiteral||LA172_1==CHAR||LA172_1==CharacterLiteral||LA172_1==DOUBLE||LA172_1==FLOAT||LA172_1==FloatingPointLiteral||LA172_1==IDENTIFIER||LA172_1==INT||LA172_1==IntegerLiteral||(LA172_1>=LONG && LA172_1<=LPAREN)||LA172_1==NEW||LA172_1==NullLiteral||LA172_1==PLUS||LA172_1==PLUSPLUS||LA172_1==SHORT||LA172_1==SUB||(LA172_1>=SUBSUB && LA172_1<=SUPER)||LA172_1==StringLiteral||LA172_1==THIS||LA172_1==TILDE||LA172_1==VOID))
 			{
 				alt172 = 1;
 			}
@@ -22092,636 +22003,15 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	}
 	// $ANTLR end "arguments"
 
-	partial void EnterRule_intLiteral();
-	partial void LeaveRule_intLiteral();
-	// $ANTLR start "intLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1263:1: intLiteral : INTLITERAL ;
-	[GrammarRule("intLiteral")]
-	private Antlr3CstNode intLiteral()
-	{
-		EnterRule_intLiteral();
-		EnterRule("intLiteral", 110);
-		var retval = new Antlr3CstNode("intLiteral");
-		
-		retval.Start = (IToken)input.LT(1);
-		int intLiteral_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken INTLITERAL629 = default(IToken);
-
-		object INTLITERAL629_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "intLiteral");
-		DebugLocation(1263, 4);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 110)) { return retval; }
-
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1264:5: ( INTLITERAL )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1264:7: INTLITERAL
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(1264, 7);
-			INTLITERAL629=(IToken)Match(input,INTLITERAL,Follow._INTLITERAL_in_intLiteral7962); if (state.failed) return retval;
-			if (state.backtracking == 0) {
-			INTLITERAL629_tree = (object)adaptor.Create(INTLITERAL629, "INTLITERAL629", retval);
-			adaptor.AddChild(root_0, INTLITERAL629_tree);
-			}
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("intLiteral", 110);
-			LeaveRule("intLiteral", 110);
-			LeaveRule_intLiteral();
-			if (state.backtracking > 0) { Memoize(input, 110, intLiteral_StartIndex); }
-
-		}
-		DebugLocation(1265, 4);
-		} finally { DebugExitRule(GrammarFileName, "intLiteral"); }
-		return retval;
-
-	}
-	// $ANTLR end "intLiteral"
-
-	partial void EnterRule_longLiteral();
-	partial void LeaveRule_longLiteral();
-	// $ANTLR start "longLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1267:1: longLiteral : LONGLITERAL ;
-	[GrammarRule("longLiteral")]
-	private Antlr3CstNode longLiteral()
-	{
-		EnterRule_longLiteral();
-		EnterRule("longLiteral", 111);
-		var retval = new Antlr3CstNode("longLiteral");
-		
-		retval.Start = (IToken)input.LT(1);
-		int longLiteral_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken LONGLITERAL630 = default(IToken);
-
-		object LONGLITERAL630_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "longLiteral");
-		DebugLocation(1267, 4);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 111)) { return retval; }
-
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1268:5: ( LONGLITERAL )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1268:7: LONGLITERAL
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(1268, 7);
-			LONGLITERAL630=(IToken)Match(input,LONGLITERAL,Follow._LONGLITERAL_in_longLiteral7979); if (state.failed) return retval;
-			if (state.backtracking == 0) {
-			LONGLITERAL630_tree = (object)adaptor.Create(LONGLITERAL630, "LONGLITERAL630", retval);
-			adaptor.AddChild(root_0, LONGLITERAL630_tree);
-			}
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("longLiteral", 111);
-			LeaveRule("longLiteral", 111);
-			LeaveRule_longLiteral();
-			if (state.backtracking > 0) { Memoize(input, 111, longLiteral_StartIndex); }
-
-		}
-		DebugLocation(1269, 4);
-		} finally { DebugExitRule(GrammarFileName, "longLiteral"); }
-		return retval;
-
-	}
-	// $ANTLR end "longLiteral"
-
-	partial void EnterRule_floatLiteral();
-	partial void LeaveRule_floatLiteral();
-	// $ANTLR start "floatLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1271:1: floatLiteral : FLOATLITERAL ;
-	[GrammarRule("floatLiteral")]
-	private Antlr3CstNode floatLiteral()
-	{
-		EnterRule_floatLiteral();
-		EnterRule("floatLiteral", 112);
-		var retval = new Antlr3CstNode("floatLiteral");
-		
-		retval.Start = (IToken)input.LT(1);
-		int floatLiteral_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken FLOATLITERAL631 = default(IToken);
-
-		object FLOATLITERAL631_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "floatLiteral");
-		DebugLocation(1271, 4);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 112)) { return retval; }
-
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1272:5: ( FLOATLITERAL )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1272:7: FLOATLITERAL
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(1272, 7);
-			FLOATLITERAL631=(IToken)Match(input,FLOATLITERAL,Follow._FLOATLITERAL_in_floatLiteral7996); if (state.failed) return retval;
-			if (state.backtracking == 0) {
-			FLOATLITERAL631_tree = (object)adaptor.Create(FLOATLITERAL631, "FLOATLITERAL631", retval);
-			adaptor.AddChild(root_0, FLOATLITERAL631_tree);
-			}
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("floatLiteral", 112);
-			LeaveRule("floatLiteral", 112);
-			LeaveRule_floatLiteral();
-			if (state.backtracking > 0) { Memoize(input, 112, floatLiteral_StartIndex); }
-
-		}
-		DebugLocation(1273, 4);
-		} finally { DebugExitRule(GrammarFileName, "floatLiteral"); }
-		return retval;
-
-	}
-	// $ANTLR end "floatLiteral"
-
-	partial void EnterRule_doubleLiteral();
-	partial void LeaveRule_doubleLiteral();
-	// $ANTLR start "doubleLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1275:1: doubleLiteral : DOUBLELITERAL ;
-	[GrammarRule("doubleLiteral")]
-	private Antlr3CstNode doubleLiteral()
-	{
-		EnterRule_doubleLiteral();
-		EnterRule("doubleLiteral", 113);
-		var retval = new Antlr3CstNode("doubleLiteral");
-		
-		retval.Start = (IToken)input.LT(1);
-		int doubleLiteral_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken DOUBLELITERAL632 = default(IToken);
-
-		object DOUBLELITERAL632_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "doubleLiteral");
-		DebugLocation(1275, 4);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 113)) { return retval; }
-
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1276:5: ( DOUBLELITERAL )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1276:7: DOUBLELITERAL
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(1276, 7);
-			DOUBLELITERAL632=(IToken)Match(input,DOUBLELITERAL,Follow._DOUBLELITERAL_in_doubleLiteral8013); if (state.failed) return retval;
-			if (state.backtracking == 0) {
-			DOUBLELITERAL632_tree = (object)adaptor.Create(DOUBLELITERAL632, "DOUBLELITERAL632", retval);
-			adaptor.AddChild(root_0, DOUBLELITERAL632_tree);
-			}
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("doubleLiteral", 113);
-			LeaveRule("doubleLiteral", 113);
-			LeaveRule_doubleLiteral();
-			if (state.backtracking > 0) { Memoize(input, 113, doubleLiteral_StartIndex); }
-
-		}
-		DebugLocation(1277, 4);
-		} finally { DebugExitRule(GrammarFileName, "doubleLiteral"); }
-		return retval;
-
-	}
-	// $ANTLR end "doubleLiteral"
-
-	partial void EnterRule_charLiteral();
-	partial void LeaveRule_charLiteral();
-	// $ANTLR start "charLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1279:1: charLiteral : CHARLITERAL ;
-	[GrammarRule("charLiteral")]
-	private Antlr3CstNode charLiteral()
-	{
-		EnterRule_charLiteral();
-		EnterRule("charLiteral", 114);
-		var retval = new Antlr3CstNode("charLiteral");
-		
-		retval.Start = (IToken)input.LT(1);
-		int charLiteral_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken CHARLITERAL633 = default(IToken);
-
-		object CHARLITERAL633_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "charLiteral");
-		DebugLocation(1279, 4);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 114)) { return retval; }
-
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1280:5: ( CHARLITERAL )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1280:7: CHARLITERAL
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(1280, 7);
-			CHARLITERAL633=(IToken)Match(input,CHARLITERAL,Follow._CHARLITERAL_in_charLiteral8030); if (state.failed) return retval;
-			if (state.backtracking == 0) {
-			CHARLITERAL633_tree = (object)adaptor.Create(CHARLITERAL633, "CHARLITERAL633", retval);
-			adaptor.AddChild(root_0, CHARLITERAL633_tree);
-			}
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("charLiteral", 114);
-			LeaveRule("charLiteral", 114);
-			LeaveRule_charLiteral();
-			if (state.backtracking > 0) { Memoize(input, 114, charLiteral_StartIndex); }
-
-		}
-		DebugLocation(1281, 4);
-		} finally { DebugExitRule(GrammarFileName, "charLiteral"); }
-		return retval;
-
-	}
-	// $ANTLR end "charLiteral"
-
-	partial void EnterRule_stringLiteral();
-	partial void LeaveRule_stringLiteral();
-	// $ANTLR start "stringLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1283:1: stringLiteral : STRINGLITERAL ;
-	[GrammarRule("stringLiteral")]
-	private Antlr3CstNode stringLiteral()
-	{
-		EnterRule_stringLiteral();
-		EnterRule("stringLiteral", 115);
-		var retval = new Antlr3CstNode("stringLiteral");
-		
-		retval.Start = (IToken)input.LT(1);
-		int stringLiteral_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken STRINGLITERAL634 = default(IToken);
-
-		object STRINGLITERAL634_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "stringLiteral");
-		DebugLocation(1283, 4);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 115)) { return retval; }
-
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1284:5: ( STRINGLITERAL )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1284:7: STRINGLITERAL
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(1284, 7);
-			STRINGLITERAL634=(IToken)Match(input,STRINGLITERAL,Follow._STRINGLITERAL_in_stringLiteral8047); if (state.failed) return retval;
-			if (state.backtracking == 0) {
-			STRINGLITERAL634_tree = (object)adaptor.Create(STRINGLITERAL634, "STRINGLITERAL634", retval);
-			adaptor.AddChild(root_0, STRINGLITERAL634_tree);
-			}
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("stringLiteral", 115);
-			LeaveRule("stringLiteral", 115);
-			LeaveRule_stringLiteral();
-			if (state.backtracking > 0) { Memoize(input, 115, stringLiteral_StartIndex); }
-
-		}
-		DebugLocation(1285, 4);
-		} finally { DebugExitRule(GrammarFileName, "stringLiteral"); }
-		return retval;
-
-	}
-	// $ANTLR end "stringLiteral"
-
-	partial void EnterRule_trueLiteral();
-	partial void LeaveRule_trueLiteral();
-	// $ANTLR start "trueLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1287:1: trueLiteral : TRUE ;
-	[GrammarRule("trueLiteral")]
-	private Antlr3CstNode trueLiteral()
-	{
-		EnterRule_trueLiteral();
-		EnterRule("trueLiteral", 116);
-		var retval = new Antlr3CstNode("trueLiteral");
-		
-		retval.Start = (IToken)input.LT(1);
-		int trueLiteral_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken TRUE635 = default(IToken);
-
-		object TRUE635_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "trueLiteral");
-		DebugLocation(1287, 4);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 116)) { return retval; }
-
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1288:5: ( TRUE )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1288:7: TRUE
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(1288, 7);
-			TRUE635=(IToken)Match(input,TRUE,Follow._TRUE_in_trueLiteral8064); if (state.failed) return retval;
-			if (state.backtracking == 0) {
-			TRUE635_tree = (object)adaptor.Create(TRUE635, "TRUE635", retval);
-			adaptor.AddChild(root_0, TRUE635_tree);
-			}
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("trueLiteral", 116);
-			LeaveRule("trueLiteral", 116);
-			LeaveRule_trueLiteral();
-			if (state.backtracking > 0) { Memoize(input, 116, trueLiteral_StartIndex); }
-
-		}
-		DebugLocation(1289, 4);
-		} finally { DebugExitRule(GrammarFileName, "trueLiteral"); }
-		return retval;
-
-	}
-	// $ANTLR end "trueLiteral"
-
-	partial void EnterRule_falseLiteral();
-	partial void LeaveRule_falseLiteral();
-	// $ANTLR start "falseLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1291:1: falseLiteral : FALSE ;
-	[GrammarRule("falseLiteral")]
-	private Antlr3CstNode falseLiteral()
-	{
-		EnterRule_falseLiteral();
-		EnterRule("falseLiteral", 117);
-		var retval = new Antlr3CstNode("falseLiteral");
-		
-		retval.Start = (IToken)input.LT(1);
-		int falseLiteral_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken FALSE636 = default(IToken);
-
-		object FALSE636_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "falseLiteral");
-		DebugLocation(1291, 4);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 117)) { return retval; }
-
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1292:5: ( FALSE )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1292:7: FALSE
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(1292, 7);
-			FALSE636=(IToken)Match(input,FALSE,Follow._FALSE_in_falseLiteral8081); if (state.failed) return retval;
-			if (state.backtracking == 0) {
-			FALSE636_tree = (object)adaptor.Create(FALSE636, "FALSE636", retval);
-			adaptor.AddChild(root_0, FALSE636_tree);
-			}
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("falseLiteral", 117);
-			LeaveRule("falseLiteral", 117);
-			LeaveRule_falseLiteral();
-			if (state.backtracking > 0) { Memoize(input, 117, falseLiteral_StartIndex); }
-
-		}
-		DebugLocation(1293, 4);
-		} finally { DebugExitRule(GrammarFileName, "falseLiteral"); }
-		return retval;
-
-	}
-	// $ANTLR end "falseLiteral"
-
-	partial void EnterRule_nullLiteral();
-	partial void LeaveRule_nullLiteral();
-	// $ANTLR start "nullLiteral"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1295:1: nullLiteral : NULL ;
-	[GrammarRule("nullLiteral")]
-	private Antlr3CstNode nullLiteral()
-	{
-		EnterRule_nullLiteral();
-		EnterRule("nullLiteral", 118);
-		var retval = new Antlr3CstNode("nullLiteral");
-		
-		retval.Start = (IToken)input.LT(1);
-		int nullLiteral_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken NULL637 = default(IToken);
-
-		object NULL637_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "nullLiteral");
-		DebugLocation(1295, 4);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 118)) { return retval; }
-
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1296:5: ( NULL )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1296:7: NULL
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(1296, 7);
-			NULL637=(IToken)Match(input,NULL,Follow._NULL_in_nullLiteral8098); if (state.failed) return retval;
-			if (state.backtracking == 0) {
-			NULL637_tree = (object)adaptor.Create(NULL637, "NULL637", retval);
-			adaptor.AddChild(root_0, NULL637_tree);
-			}
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("nullLiteral", 118);
-			LeaveRule("nullLiteral", 118);
-			LeaveRule_nullLiteral();
-			if (state.backtracking > 0) { Memoize(input, 118, nullLiteral_StartIndex); }
-
-		}
-		DebugLocation(1297, 4);
-		} finally { DebugExitRule(GrammarFileName, "nullLiteral"); }
-		return retval;
-
-	}
-	// $ANTLR end "nullLiteral"
-
 	partial void EnterRule_literal();
 	partial void LeaveRule_literal();
 	// $ANTLR start "literal"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1299:1: literal : ( intLiteral | longLiteral | floatLiteral | doubleLiteral | charLiteral | stringLiteral | trueLiteral | falseLiteral | nullLiteral );
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1263:1: literal : ( IntegerLiteral | FloatingPointLiteral | CharacterLiteral | StringLiteral | BooleanLiteral | NullLiteral );
 	[GrammarRule("literal")]
 	private Antlr3CstNode literal()
 	{
 		EnterRule_literal();
-		EnterRule("literal", 119);
+		EnterRule("literal", 110);
 		var retval = new Antlr3CstNode("literal");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -22729,381 +22019,28 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		Antlr3CstNode intLiteral638 = default(Antlr3CstNode);
-		Antlr3CstNode longLiteral639 = default(Antlr3CstNode);
-		Antlr3CstNode floatLiteral640 = default(Antlr3CstNode);
-		Antlr3CstNode doubleLiteral641 = default(Antlr3CstNode);
-		Antlr3CstNode charLiteral642 = default(Antlr3CstNode);
-		Antlr3CstNode stringLiteral643 = default(Antlr3CstNode);
-		Antlr3CstNode trueLiteral644 = default(Antlr3CstNode);
-		Antlr3CstNode falseLiteral645 = default(Antlr3CstNode);
-		Antlr3CstNode nullLiteral646 = default(Antlr3CstNode);
+		IToken set629 = default(IToken);
 
+		object set629_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "literal");
-		DebugLocation(1299, 4);
+		DebugLocation(1263, 4);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 119)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 110)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1300:5: ( intLiteral | longLiteral | floatLiteral | doubleLiteral | charLiteral | stringLiteral | trueLiteral | falseLiteral | nullLiteral )
-			int alt173=9;
-			try { DebugEnterDecision(173, false);
-			switch (input.LA(1))
-			{
-			case INTLITERAL:
-				{
-				alt173 = 1;
-				}
-				break;
-			case LONGLITERAL:
-				{
-				alt173 = 2;
-				}
-				break;
-			case FLOATLITERAL:
-				{
-				alt173 = 3;
-				}
-				break;
-			case DOUBLELITERAL:
-				{
-				alt173 = 4;
-				}
-				break;
-			case CHARLITERAL:
-				{
-				alt173 = 5;
-				}
-				break;
-			case STRINGLITERAL:
-				{
-				alt173 = 6;
-				}
-				break;
-			case TRUE:
-				{
-				alt173 = 7;
-				}
-				break;
-			case FALSE:
-				{
-				alt173 = 8;
-				}
-				break;
-			case NULL:
-				{
-				alt173 = 9;
-				}
-				break;
-			default:
-				{
-					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 173, 0, input, 1);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
-			}
-
-			} finally { DebugExitDecision(173); }
-			switch (alt173)
-			{
-			case 1:
-				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1300:9: intLiteral
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1300, 9);
-				PushFollow(Follow._intLiteral_in_literal8118);
-				intLiteral638=intLiteral();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, intLiteral638.Tree, intLiteral638, "intLiteral638", retval);
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1301:9: longLiteral
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1301, 9);
-				PushFollow(Follow._longLiteral_in_literal8128);
-				longLiteral639=longLiteral();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, longLiteral639.Tree, longLiteral639, "longLiteral639", retval);
-
-				}
-				break;
-			case 3:
-				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1302:9: floatLiteral
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1302, 9);
-				PushFollow(Follow._floatLiteral_in_literal8138);
-				floatLiteral640=floatLiteral();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, floatLiteral640.Tree, floatLiteral640, "floatLiteral640", retval);
-
-				}
-				break;
-			case 4:
-				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1303:9: doubleLiteral
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1303, 9);
-				PushFollow(Follow._doubleLiteral_in_literal8148);
-				doubleLiteral641=doubleLiteral();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, doubleLiteral641.Tree, doubleLiteral641, "doubleLiteral641", retval);
-
-				}
-				break;
-			case 5:
-				DebugEnterAlt(5);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1304:9: charLiteral
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1304, 9);
-				PushFollow(Follow._charLiteral_in_literal8158);
-				charLiteral642=charLiteral();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, charLiteral642.Tree, charLiteral642, "charLiteral642", retval);
-
-				}
-				break;
-			case 6:
-				DebugEnterAlt(6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1305:9: stringLiteral
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1305, 9);
-				PushFollow(Follow._stringLiteral_in_literal8168);
-				stringLiteral643=stringLiteral();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, stringLiteral643.Tree, stringLiteral643, "stringLiteral643", retval);
-
-				}
-				break;
-			case 7:
-				DebugEnterAlt(7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1306:9: trueLiteral
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1306, 9);
-				PushFollow(Follow._trueLiteral_in_literal8178);
-				trueLiteral644=trueLiteral();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, trueLiteral644.Tree, trueLiteral644, "trueLiteral644", retval);
-
-				}
-				break;
-			case 8:
-				DebugEnterAlt(8);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1307:9: falseLiteral
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1307, 9);
-				PushFollow(Follow._falseLiteral_in_literal8188);
-				falseLiteral645=falseLiteral();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, falseLiteral645.Tree, falseLiteral645, "falseLiteral645", retval);
-
-				}
-				break;
-			case 9:
-				DebugEnterAlt(9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1308:9: nullLiteral
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(1308, 9);
-				PushFollow(Follow._nullLiteral_in_literal8198);
-				nullLiteral646=nullLiteral();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, nullLiteral646.Tree, nullLiteral646, "nullLiteral646", retval);
-
-				}
-				break;
-
-			}
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("literal", 119);
-			LeaveRule("literal", 119);
-			LeaveRule_literal();
-			if (state.backtracking > 0) { Memoize(input, 119, literal_StartIndex); }
-
-		}
-		DebugLocation(1309, 4);
-		} finally { DebugExitRule(GrammarFileName, "literal"); }
-		return retval;
-
-	}
-	// $ANTLR end "literal"
-
-	partial void EnterRule_classHeader();
-	partial void LeaveRule_classHeader();
-	// $ANTLR start "classHeader"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1315:1: classHeader : modifiers 'class' IDENTIFIER ;
-	[GrammarRule("classHeader")]
-	private Antlr3CstNode classHeader()
-	{
-		EnterRule_classHeader();
-		EnterRule("classHeader", 120);
-		var retval = new Antlr3CstNode("classHeader");
-		
-		retval.Start = (IToken)input.LT(1);
-		int classHeader_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken string_literal648 = default(IToken);
-		IToken IDENTIFIER649 = default(IToken);
-		Antlr3CstNode modifiers647 = default(Antlr3CstNode);
-
-		object string_literal648_tree = default(object);
-		object IDENTIFIER649_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "classHeader");
-		DebugLocation(1315, 4);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 120)) { return retval; }
-
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1316:5: ( modifiers 'class' IDENTIFIER )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1264:5: ( IntegerLiteral | FloatingPointLiteral | CharacterLiteral | StringLiteral | BooleanLiteral | NullLiteral )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1316:9: modifiers 'class' IDENTIFIER
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1316, 9);
-			PushFollow(Follow._modifiers_in_classHeader8222);
-			modifiers647=modifiers();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers647.Tree, modifiers647, "modifiers647", retval);
-			DebugLocation(1316, 19);
-			string_literal648=(IToken)Match(input,CLASS,Follow._CLASS_in_classHeader8224); if (state.failed) return retval;
-			if (state.backtracking == 0) {
-			string_literal648_tree = (object)adaptor.Create(string_literal648, "string_literal648", retval);
-			adaptor.AddChild(root_0, string_literal648_tree);
-			}
-			DebugLocation(1316, 27);
-			IDENTIFIER649=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_classHeader8226); if (state.failed) return retval;
-			if (state.backtracking == 0) {
-			IDENTIFIER649_tree = (object)adaptor.Create(IDENTIFIER649, "IDENTIFIER649", retval);
-			adaptor.AddChild(root_0, IDENTIFIER649_tree);
-			}
+			DebugLocation(1264, 5);
 
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("classHeader", 120);
-			LeaveRule("classHeader", 120);
-			LeaveRule_classHeader();
-			if (state.backtracking > 0) { Memoize(input, 120, classHeader_StartIndex); }
-
-		}
-		DebugLocation(1317, 4);
-		} finally { DebugExitRule(GrammarFileName, "classHeader"); }
-		return retval;
-
-	}
-	// $ANTLR end "classHeader"
-
-	partial void EnterRule_enumHeader();
-	partial void LeaveRule_enumHeader();
-	// $ANTLR start "enumHeader"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1319:1: enumHeader : modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER ;
-	[GrammarRule("enumHeader")]
-	private Antlr3CstNode enumHeader()
-	{
-		EnterRule_enumHeader();
-		EnterRule("enumHeader", 121);
-		var retval = new Antlr3CstNode("enumHeader");
-		
-		retval.Start = (IToken)input.LT(1);
-		int enumHeader_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken set651 = default(IToken);
-		IToken IDENTIFIER652 = default(IToken);
-		Antlr3CstNode modifiers650 = default(Antlr3CstNode);
-
-		object set651_tree = default(object);
-		object IDENTIFIER652_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "enumHeader");
-		DebugLocation(1319, 4);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 121)) { return retval; }
-
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1320:5: ( modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1320:9: modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(1320, 9);
-			PushFollow(Follow._modifiers_in_enumHeader8246);
-			modifiers650=modifiers();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers650.Tree, modifiers650, "modifiers650", retval);
-			DebugLocation(1320, 19);
-
-			set651=(IToken)input.LT(1);
-			if (input.LA(1)==ENUM||input.LA(1)==IDENTIFIER)
+			set629=(IToken)input.LT(1);
+			if (input.LA(1)==BooleanLiteral||input.LA(1)==CharacterLiteral||input.LA(1)==FloatingPointLiteral||input.LA(1)==IntegerLiteral||input.LA(1)==NullLiteral||input.LA(1)==StringLiteral)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set651, "set651", retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set629, "set629", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -23114,11 +22051,89 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				throw mse;
 			}
 
-			DebugLocation(1320, 39);
-			IDENTIFIER652=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_enumHeader8254); if (state.failed) return retval;
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
 			if (state.backtracking == 0) {
-			IDENTIFIER652_tree = (object)adaptor.Create(IDENTIFIER652, "IDENTIFIER652", retval);
-			adaptor.AddChild(root_0, IDENTIFIER652_tree);
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("literal", 110);
+			LeaveRule("literal", 110);
+			LeaveRule_literal();
+			if (state.backtracking > 0) { Memoize(input, 110, literal_StartIndex); }
+
+		}
+		DebugLocation(1270, 4);
+		} finally { DebugExitRule(GrammarFileName, "literal"); }
+		return retval;
+
+	}
+	// $ANTLR end "literal"
+
+	partial void EnterRule_classHeader();
+	partial void LeaveRule_classHeader();
+	// $ANTLR start "classHeader"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1277:1: classHeader : modifiers 'class' IDENTIFIER ;
+	[GrammarRule("classHeader")]
+	private Antlr3CstNode classHeader()
+	{
+		EnterRule_classHeader();
+		EnterRule("classHeader", 111);
+		var retval = new Antlr3CstNode("classHeader");
+		
+		retval.Start = (IToken)input.LT(1);
+		int classHeader_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken string_literal631 = default(IToken);
+		IToken IDENTIFIER632 = default(IToken);
+		Antlr3CstNode modifiers630 = default(Antlr3CstNode);
+
+		object string_literal631_tree = default(object);
+		object IDENTIFIER632_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "classHeader");
+		DebugLocation(1277, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 111)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1278:5: ( modifiers 'class' IDENTIFIER )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1278:9: modifiers 'class' IDENTIFIER
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(1278, 9);
+			PushFollow(Follow._modifiers_in_classHeader8039);
+			modifiers630=modifiers();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers630.Tree, modifiers630, "modifiers630", retval);
+			DebugLocation(1278, 19);
+			string_literal631=(IToken)Match(input,CLASS,Follow._CLASS_in_classHeader8041); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			string_literal631_tree = (object)adaptor.Create(string_literal631, "string_literal631", retval);
+			adaptor.AddChild(root_0, string_literal631_tree);
+			}
+			DebugLocation(1278, 27);
+			IDENTIFIER632=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_classHeader8043); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			IDENTIFIER632_tree = (object)adaptor.Create(IDENTIFIER632, "IDENTIFIER632", retval);
+			adaptor.AddChild(root_0, IDENTIFIER632_tree);
 			}
 
 			}
@@ -23139,13 +22154,108 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("enumHeader", 121);
-			LeaveRule("enumHeader", 121);
-			LeaveRule_enumHeader();
-			if (state.backtracking > 0) { Memoize(input, 121, enumHeader_StartIndex); }
+			TraceOut("classHeader", 111);
+			LeaveRule("classHeader", 111);
+			LeaveRule_classHeader();
+			if (state.backtracking > 0) { Memoize(input, 111, classHeader_StartIndex); }
 
 		}
-		DebugLocation(1321, 4);
+		DebugLocation(1279, 4);
+		} finally { DebugExitRule(GrammarFileName, "classHeader"); }
+		return retval;
+
+	}
+	// $ANTLR end "classHeader"
+
+	partial void EnterRule_enumHeader();
+	partial void LeaveRule_enumHeader();
+	// $ANTLR start "enumHeader"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1281:1: enumHeader : modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER ;
+	[GrammarRule("enumHeader")]
+	private Antlr3CstNode enumHeader()
+	{
+		EnterRule_enumHeader();
+		EnterRule("enumHeader", 112);
+		var retval = new Antlr3CstNode("enumHeader");
+		
+		retval.Start = (IToken)input.LT(1);
+		int enumHeader_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken set634 = default(IToken);
+		IToken IDENTIFIER635 = default(IToken);
+		Antlr3CstNode modifiers633 = default(Antlr3CstNode);
+
+		object set634_tree = default(object);
+		object IDENTIFIER635_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "enumHeader");
+		DebugLocation(1281, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 112)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1282:5: ( modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1282:9: modifiers ( 'enum' | IDENTIFIER ) IDENTIFIER
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(1282, 9);
+			PushFollow(Follow._modifiers_in_enumHeader8063);
+			modifiers633=modifiers();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers633.Tree, modifiers633, "modifiers633", retval);
+			DebugLocation(1282, 19);
+
+			set634=(IToken)input.LT(1);
+			if (input.LA(1)==ENUM||input.LA(1)==IDENTIFIER)
+			{
+				input.Consume();
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set634, "set634", retval));
+				state.errorRecovery=false;state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return retval;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				throw mse;
+			}
+
+			DebugLocation(1282, 39);
+			IDENTIFIER635=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_enumHeader8071); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			IDENTIFIER635_tree = (object)adaptor.Create(IDENTIFIER635, "IDENTIFIER635", retval);
+			adaptor.AddChild(root_0, IDENTIFIER635_tree);
+			}
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("enumHeader", 112);
+			LeaveRule("enumHeader", 112);
+			LeaveRule_enumHeader();
+			if (state.backtracking > 0) { Memoize(input, 112, enumHeader_StartIndex); }
+
+		}
+		DebugLocation(1283, 4);
 		} finally { DebugExitRule(GrammarFileName, "enumHeader"); }
 		return retval;
 
@@ -23155,12 +22265,12 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_interfaceHeader();
 	partial void LeaveRule_interfaceHeader();
 	// $ANTLR start "interfaceHeader"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1323:1: interfaceHeader : modifiers 'interface' IDENTIFIER ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1285:1: interfaceHeader : modifiers 'interface' IDENTIFIER ;
 	[GrammarRule("interfaceHeader")]
 	private Antlr3CstNode interfaceHeader()
 	{
 		EnterRule_interfaceHeader();
-		EnterRule("interfaceHeader", 122);
+		EnterRule("interfaceHeader", 113);
 		var retval = new Antlr3CstNode("interfaceHeader");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -23168,41 +22278,41 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal654 = default(IToken);
-		IToken IDENTIFIER655 = default(IToken);
-		Antlr3CstNode modifiers653 = default(Antlr3CstNode);
+		IToken string_literal637 = default(IToken);
+		IToken IDENTIFIER638 = default(IToken);
+		Antlr3CstNode modifiers636 = default(Antlr3CstNode);
 
-		object string_literal654_tree = default(object);
-		object IDENTIFIER655_tree = default(object);
+		object string_literal637_tree = default(object);
+		object IDENTIFIER638_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "interfaceHeader");
-		DebugLocation(1323, 4);
+		DebugLocation(1285, 4);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 122)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 113)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1324:5: ( modifiers 'interface' IDENTIFIER )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1286:5: ( modifiers 'interface' IDENTIFIER )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1324:9: modifiers 'interface' IDENTIFIER
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1286:9: modifiers 'interface' IDENTIFIER
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1324, 9);
-			PushFollow(Follow._modifiers_in_interfaceHeader8274);
-			modifiers653=modifiers();
+			DebugLocation(1286, 9);
+			PushFollow(Follow._modifiers_in_interfaceHeader8091);
+			modifiers636=modifiers();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers653.Tree, modifiers653, "modifiers653", retval);
-			DebugLocation(1324, 19);
-			string_literal654=(IToken)Match(input,INTERFACE,Follow._INTERFACE_in_interfaceHeader8276); if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers636.Tree, modifiers636, "modifiers636", retval);
+			DebugLocation(1286, 19);
+			string_literal637=(IToken)Match(input,INTERFACE,Follow._INTERFACE_in_interfaceHeader8093); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal654_tree = (object)adaptor.Create(string_literal654, "string_literal654", retval);
-			adaptor.AddChild(root_0, string_literal654_tree);
+			string_literal637_tree = (object)adaptor.Create(string_literal637, "string_literal637", retval);
+			adaptor.AddChild(root_0, string_literal637_tree);
 			}
-			DebugLocation(1324, 31);
-			IDENTIFIER655=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_interfaceHeader8278); if (state.failed) return retval;
+			DebugLocation(1286, 31);
+			IDENTIFIER638=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_interfaceHeader8095); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			IDENTIFIER655_tree = (object)adaptor.Create(IDENTIFIER655, "IDENTIFIER655", retval);
-			adaptor.AddChild(root_0, IDENTIFIER655_tree);
+			IDENTIFIER638_tree = (object)adaptor.Create(IDENTIFIER638, "IDENTIFIER638", retval);
+			adaptor.AddChild(root_0, IDENTIFIER638_tree);
 			}
 
 			}
@@ -23223,13 +22333,13 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("interfaceHeader", 122);
-			LeaveRule("interfaceHeader", 122);
+			TraceOut("interfaceHeader", 113);
+			LeaveRule("interfaceHeader", 113);
 			LeaveRule_interfaceHeader();
-			if (state.backtracking > 0) { Memoize(input, 122, interfaceHeader_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 113, interfaceHeader_StartIndex); }
 
 		}
-		DebugLocation(1325, 4);
+		DebugLocation(1287, 4);
 		} finally { DebugExitRule(GrammarFileName, "interfaceHeader"); }
 		return retval;
 
@@ -23239,12 +22349,12 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_annotationHeader();
 	partial void LeaveRule_annotationHeader();
 	// $ANTLR start "annotationHeader"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1327:1: annotationHeader : modifiers '@' 'interface' IDENTIFIER ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1289:1: annotationHeader : modifiers '@' 'interface' IDENTIFIER ;
 	[GrammarRule("annotationHeader")]
 	private Antlr3CstNode annotationHeader()
 	{
 		EnterRule_annotationHeader();
-		EnterRule("annotationHeader", 123);
+		EnterRule("annotationHeader", 114);
 		var retval = new Antlr3CstNode("annotationHeader");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -23252,49 +22362,49 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal657 = default(IToken);
-		IToken string_literal658 = default(IToken);
-		IToken IDENTIFIER659 = default(IToken);
-		Antlr3CstNode modifiers656 = default(Antlr3CstNode);
+		IToken char_literal640 = default(IToken);
+		IToken string_literal641 = default(IToken);
+		IToken IDENTIFIER642 = default(IToken);
+		Antlr3CstNode modifiers639 = default(Antlr3CstNode);
 
-		object char_literal657_tree = default(object);
-		object string_literal658_tree = default(object);
-		object IDENTIFIER659_tree = default(object);
+		object char_literal640_tree = default(object);
+		object string_literal641_tree = default(object);
+		object IDENTIFIER642_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "annotationHeader");
-		DebugLocation(1327, 4);
+		DebugLocation(1289, 4);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 123)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 114)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1328:5: ( modifiers '@' 'interface' IDENTIFIER )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1290:5: ( modifiers '@' 'interface' IDENTIFIER )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1328:9: modifiers '@' 'interface' IDENTIFIER
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1290:9: modifiers '@' 'interface' IDENTIFIER
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1328, 9);
-			PushFollow(Follow._modifiers_in_annotationHeader8298);
-			modifiers656=modifiers();
+			DebugLocation(1290, 9);
+			PushFollow(Follow._modifiers_in_annotationHeader8115);
+			modifiers639=modifiers();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers656.Tree, modifiers656, "modifiers656", retval);
-			DebugLocation(1328, 19);
-			char_literal657=(IToken)Match(input,MONKEYS_AT,Follow._MONKEYS_AT_in_annotationHeader8300); if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers639.Tree, modifiers639, "modifiers639", retval);
+			DebugLocation(1290, 19);
+			char_literal640=(IToken)Match(input,MONKEYS_AT,Follow._MONKEYS_AT_in_annotationHeader8117); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal657_tree = (object)adaptor.Create(char_literal657, "char_literal657", retval);
-			adaptor.AddChild(root_0, char_literal657_tree);
+			char_literal640_tree = (object)adaptor.Create(char_literal640, "char_literal640", retval);
+			adaptor.AddChild(root_0, char_literal640_tree);
 			}
-			DebugLocation(1328, 23);
-			string_literal658=(IToken)Match(input,INTERFACE,Follow._INTERFACE_in_annotationHeader8302); if (state.failed) return retval;
+			DebugLocation(1290, 23);
+			string_literal641=(IToken)Match(input,INTERFACE,Follow._INTERFACE_in_annotationHeader8119); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			string_literal658_tree = (object)adaptor.Create(string_literal658, "string_literal658", retval);
-			adaptor.AddChild(root_0, string_literal658_tree);
+			string_literal641_tree = (object)adaptor.Create(string_literal641, "string_literal641", retval);
+			adaptor.AddChild(root_0, string_literal641_tree);
 			}
-			DebugLocation(1328, 35);
-			IDENTIFIER659=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_annotationHeader8304); if (state.failed) return retval;
+			DebugLocation(1290, 35);
+			IDENTIFIER642=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_annotationHeader8121); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			IDENTIFIER659_tree = (object)adaptor.Create(IDENTIFIER659, "IDENTIFIER659", retval);
-			adaptor.AddChild(root_0, IDENTIFIER659_tree);
+			IDENTIFIER642_tree = (object)adaptor.Create(IDENTIFIER642, "IDENTIFIER642", retval);
+			adaptor.AddChild(root_0, IDENTIFIER642_tree);
 			}
 
 			}
@@ -23315,13 +22425,13 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("annotationHeader", 123);
-			LeaveRule("annotationHeader", 123);
+			TraceOut("annotationHeader", 114);
+			LeaveRule("annotationHeader", 114);
 			LeaveRule_annotationHeader();
-			if (state.backtracking > 0) { Memoize(input, 123, annotationHeader_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 114, annotationHeader_StartIndex); }
 
 		}
-		DebugLocation(1329, 4);
+		DebugLocation(1291, 4);
 		} finally { DebugExitRule(GrammarFileName, "annotationHeader"); }
 		return retval;
 
@@ -23331,12 +22441,12 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_typeHeader();
 	partial void LeaveRule_typeHeader();
 	// $ANTLR start "typeHeader"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1331:1: typeHeader : modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1293:1: typeHeader : modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER ;
 	[GrammarRule("typeHeader")]
 	private Antlr3CstNode typeHeader()
 	{
 		EnterRule_typeHeader();
-		EnterRule("typeHeader", 124);
+		EnterRule("typeHeader", 115);
 		var retval = new Antlr3CstNode("typeHeader");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -23344,142 +22454,142 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal661 = default(IToken);
-		IToken string_literal662 = default(IToken);
-		IToken char_literal663 = default(IToken);
-		IToken string_literal664 = default(IToken);
-		IToken IDENTIFIER665 = default(IToken);
-		Antlr3CstNode modifiers660 = default(Antlr3CstNode);
+		IToken string_literal644 = default(IToken);
+		IToken string_literal645 = default(IToken);
+		IToken char_literal646 = default(IToken);
+		IToken string_literal647 = default(IToken);
+		IToken IDENTIFIER648 = default(IToken);
+		Antlr3CstNode modifiers643 = default(Antlr3CstNode);
 
-		object string_literal661_tree = default(object);
-		object string_literal662_tree = default(object);
-		object char_literal663_tree = default(object);
-		object string_literal664_tree = default(object);
-		object IDENTIFIER665_tree = default(object);
+		object string_literal644_tree = default(object);
+		object string_literal645_tree = default(object);
+		object char_literal646_tree = default(object);
+		object string_literal647_tree = default(object);
+		object IDENTIFIER648_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "typeHeader");
-		DebugLocation(1331, 4);
+		DebugLocation(1293, 4);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 124)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 115)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1332:5: ( modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1294:5: ( modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1332:9: modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1294:9: modifiers ( 'class' | 'enum' | ( ( '@' )? 'interface' ) ) IDENTIFIER
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1332, 9);
-			PushFollow(Follow._modifiers_in_typeHeader8324);
-			modifiers660=modifiers();
+			DebugLocation(1294, 9);
+			PushFollow(Follow._modifiers_in_typeHeader8141);
+			modifiers643=modifiers();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers660.Tree, modifiers660, "modifiers660", retval);
-			DebugLocation(1332, 19);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1332:19: ( 'class' | 'enum' | ( ( '@' )? 'interface' ) )
-			int alt175=3;
-			try { DebugEnterSubRule(175);
-			try { DebugEnterDecision(175, false);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers643.Tree, modifiers643, "modifiers643", retval);
+			DebugLocation(1294, 19);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1294:19: ( 'class' | 'enum' | ( ( '@' )? 'interface' ) )
+			int alt174=3;
+			try { DebugEnterSubRule(174);
+			try { DebugEnterDecision(174, false);
 			switch (input.LA(1))
 			{
 			case CLASS:
 				{
-				alt175 = 1;
+				alt174 = 1;
 				}
 				break;
 			case ENUM:
 				{
-				alt175 = 2;
+				alt174 = 2;
 				}
 				break;
 			case INTERFACE:
 			case MONKEYS_AT:
 				{
-				alt175 = 3;
+				alt174 = 3;
 				}
 				break;
 			default:
 				{
 					if (state.backtracking>0) {state.failed=true; return retval;}
-					NoViableAltException nvae = new NoViableAltException("", 175, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 174, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(175); }
-			switch (alt175)
+			} finally { DebugExitDecision(174); }
+			switch (alt174)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1332:20: 'class'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1294:20: 'class'
 				{
-				DebugLocation(1332, 20);
-				string_literal661=(IToken)Match(input,CLASS,Follow._CLASS_in_typeHeader8327); if (state.failed) return retval;
+				DebugLocation(1294, 20);
+				string_literal644=(IToken)Match(input,CLASS,Follow._CLASS_in_typeHeader8144); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal661_tree = (object)adaptor.Create(string_literal661, "string_literal661", retval);
-				adaptor.AddChild(root_0, string_literal661_tree);
+				string_literal644_tree = (object)adaptor.Create(string_literal644, "string_literal644", retval);
+				adaptor.AddChild(root_0, string_literal644_tree);
 				}
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1332:28: 'enum'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1294:28: 'enum'
 				{
-				DebugLocation(1332, 28);
-				string_literal662=(IToken)Match(input,ENUM,Follow._ENUM_in_typeHeader8329); if (state.failed) return retval;
+				DebugLocation(1294, 28);
+				string_literal645=(IToken)Match(input,ENUM,Follow._ENUM_in_typeHeader8146); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal662_tree = (object)adaptor.Create(string_literal662, "string_literal662", retval);
-				adaptor.AddChild(root_0, string_literal662_tree);
+				string_literal645_tree = (object)adaptor.Create(string_literal645, "string_literal645", retval);
+				adaptor.AddChild(root_0, string_literal645_tree);
 				}
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1332:35: ( ( '@' )? 'interface' )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1294:35: ( ( '@' )? 'interface' )
 				{
-				DebugLocation(1332, 35);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1332:35: ( ( '@' )? 'interface' )
+				DebugLocation(1294, 35);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1294:35: ( ( '@' )? 'interface' )
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1332:36: ( '@' )? 'interface'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1294:36: ( '@' )? 'interface'
 				{
-				DebugLocation(1332, 36);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1332:36: ( '@' )?
-				int alt174=2;
-				try { DebugEnterSubRule(174);
-				try { DebugEnterDecision(174, false);
-				int LA174_1 = input.LA(1);
+				DebugLocation(1294, 36);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1294:36: ( '@' )?
+				int alt173=2;
+				try { DebugEnterSubRule(173);
+				try { DebugEnterDecision(173, false);
+				int LA173_1 = input.LA(1);
 
-				if ((LA174_1==MONKEYS_AT))
+				if ((LA173_1==MONKEYS_AT))
 				{
-					alt174 = 1;
+					alt173 = 1;
 				}
-				} finally { DebugExitDecision(174); }
-				switch (alt174)
+				} finally { DebugExitDecision(173); }
+				switch (alt173)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1332:36: '@'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1294:36: '@'
 					{
-					DebugLocation(1332, 36);
-					char_literal663=(IToken)Match(input,MONKEYS_AT,Follow._MONKEYS_AT_in_typeHeader8332); if (state.failed) return retval;
+					DebugLocation(1294, 36);
+					char_literal646=(IToken)Match(input,MONKEYS_AT,Follow._MONKEYS_AT_in_typeHeader8149); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal663_tree = (object)adaptor.Create(char_literal663, "char_literal663", retval);
-					adaptor.AddChild(root_0, char_literal663_tree);
+					char_literal646_tree = (object)adaptor.Create(char_literal646, "char_literal646", retval);
+					adaptor.AddChild(root_0, char_literal646_tree);
 					}
 
 					}
 					break;
 
 				}
-				} finally { DebugExitSubRule(174); }
+				} finally { DebugExitSubRule(173); }
 
-				DebugLocation(1332, 42);
-				string_literal664=(IToken)Match(input,INTERFACE,Follow._INTERFACE_in_typeHeader8336); if (state.failed) return retval;
+				DebugLocation(1294, 42);
+				string_literal647=(IToken)Match(input,INTERFACE,Follow._INTERFACE_in_typeHeader8153); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal664_tree = (object)adaptor.Create(string_literal664, "string_literal664", retval);
-				adaptor.AddChild(root_0, string_literal664_tree);
+				string_literal647_tree = (object)adaptor.Create(string_literal647, "string_literal647", retval);
+				adaptor.AddChild(root_0, string_literal647_tree);
 				}
 
 				}
@@ -23489,13 +22599,13 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 
 			}
-			} finally { DebugExitSubRule(175); }
+			} finally { DebugExitSubRule(174); }
 
-			DebugLocation(1332, 56);
-			IDENTIFIER665=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_typeHeader8340); if (state.failed) return retval;
+			DebugLocation(1294, 56);
+			IDENTIFIER648=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_typeHeader8157); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			IDENTIFIER665_tree = (object)adaptor.Create(IDENTIFIER665, "IDENTIFIER665", retval);
-			adaptor.AddChild(root_0, IDENTIFIER665_tree);
+			IDENTIFIER648_tree = (object)adaptor.Create(IDENTIFIER648, "IDENTIFIER648", retval);
+			adaptor.AddChild(root_0, IDENTIFIER648_tree);
 			}
 
 			}
@@ -23516,13 +22626,13 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("typeHeader", 124);
-			LeaveRule("typeHeader", 124);
+			TraceOut("typeHeader", 115);
+			LeaveRule("typeHeader", 115);
 			LeaveRule_typeHeader();
-			if (state.backtracking > 0) { Memoize(input, 124, typeHeader_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 115, typeHeader_StartIndex); }
 
 		}
-		DebugLocation(1333, 4);
+		DebugLocation(1295, 4);
 		} finally { DebugExitRule(GrammarFileName, "typeHeader"); }
 		return retval;
 
@@ -23532,12 +22642,12 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_methodHeader();
 	partial void LeaveRule_methodHeader();
 	// $ANTLR start "methodHeader"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1335:1: methodHeader : modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '(' ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1297:1: methodHeader : modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '(' ;
 	[GrammarRule("methodHeader")]
 	private Antlr3CstNode methodHeader()
 	{
 		EnterRule_methodHeader();
-		EnterRule("methodHeader", 125);
+		EnterRule("methodHeader", 116);
 		var retval = new Antlr3CstNode("methodHeader");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -23545,79 +22655,79 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken string_literal669 = default(IToken);
-		IToken IDENTIFIER670 = default(IToken);
-		IToken char_literal671 = default(IToken);
-		Antlr3CstNode modifiers666 = default(Antlr3CstNode);
-		Antlr3CstNode typeParameters667 = default(Antlr3CstNode);
-		Antlr3CstNode type668 = default(Antlr3CstNode);
+		IToken string_literal652 = default(IToken);
+		IToken IDENTIFIER653 = default(IToken);
+		IToken char_literal654 = default(IToken);
+		Antlr3CstNode modifiers649 = default(Antlr3CstNode);
+		Antlr3CstNode typeParameters650 = default(Antlr3CstNode);
+		Antlr3CstNode type651 = default(Antlr3CstNode);
 
-		object string_literal669_tree = default(object);
-		object IDENTIFIER670_tree = default(object);
-		object char_literal671_tree = default(object);
+		object string_literal652_tree = default(object);
+		object IDENTIFIER653_tree = default(object);
+		object char_literal654_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "methodHeader");
-		DebugLocation(1335, 4);
+		DebugLocation(1297, 4);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 125)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 116)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1336:5: ( modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '(' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1298:5: ( modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '(' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1336:9: modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '('
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1298:9: modifiers ( typeParameters )? ( type | 'void' )? IDENTIFIER '('
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1336, 9);
-			PushFollow(Follow._modifiers_in_methodHeader8360);
-			modifiers666=modifiers();
+			DebugLocation(1298, 9);
+			PushFollow(Follow._modifiers_in_methodHeader8177);
+			modifiers649=modifiers();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers666.Tree, modifiers666, "modifiers666", retval);
-			DebugLocation(1336, 19);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1336:19: ( typeParameters )?
-			int alt176=2;
-			try { DebugEnterSubRule(176);
-			try { DebugEnterDecision(176, false);
-			int LA176_1 = input.LA(1);
+			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers649.Tree, modifiers649, "modifiers649", retval);
+			DebugLocation(1298, 19);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1298:19: ( typeParameters )?
+			int alt175=2;
+			try { DebugEnterSubRule(175);
+			try { DebugEnterDecision(175, false);
+			int LA175_1 = input.LA(1);
 
-			if ((LA176_1==LT))
+			if ((LA175_1==LT))
 			{
-				alt176 = 1;
+				alt175 = 1;
 			}
-			} finally { DebugExitDecision(176); }
-			switch (alt176)
+			} finally { DebugExitDecision(175); }
+			switch (alt175)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1336:19: typeParameters
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1298:19: typeParameters
 				{
-				DebugLocation(1336, 19);
-				PushFollow(Follow._typeParameters_in_methodHeader8362);
-				typeParameters667=typeParameters();
+				DebugLocation(1298, 19);
+				PushFollow(Follow._typeParameters_in_methodHeader8179);
+				typeParameters650=typeParameters();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, typeParameters667.Tree, typeParameters667, "typeParameters667", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, typeParameters650.Tree, typeParameters650, "typeParameters650", retval);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(176); }
+			} finally { DebugExitSubRule(175); }
 
-			DebugLocation(1336, 35);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1336:35: ( type | 'void' )?
-			int alt177=3;
-			try { DebugEnterSubRule(177);
-			try { DebugEnterDecision(177, false);
+			DebugLocation(1298, 35);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1298:35: ( type | 'void' )?
+			int alt176=3;
+			try { DebugEnterSubRule(176);
+			try { DebugEnterDecision(176, false);
 			switch (input.LA(1))
 			{
 			case IDENTIFIER:
 				{
-				int LA177_2 = input.LA(2);
+				int LA176_2 = input.LA(2);
 
-				if ((LA177_2==DOT||LA177_2==IDENTIFIER||LA177_2==LBRACKET||LA177_2==LT))
+				if ((LA176_2==DOT||LA176_2==IDENTIFIER||LA176_2==LBRACKET||LA176_2==LT))
 				{
-					alt177 = 1;
+					alt176 = 1;
 				}
 				}
 				break;
@@ -23630,60 +22740,60 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case LONG:
 			case SHORT:
 				{
-				alt177 = 1;
+				alt176 = 1;
 				}
 				break;
 			case VOID:
 				{
-				alt177 = 2;
+				alt176 = 2;
 				}
 				break;
 			}
 
-			} finally { DebugExitDecision(177); }
-			switch (alt177)
+			} finally { DebugExitDecision(176); }
+			switch (alt176)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1336:36: type
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1298:36: type
 				{
-				DebugLocation(1336, 36);
-				PushFollow(Follow._type_in_methodHeader8366);
-				type668=type();
+				DebugLocation(1298, 36);
+				PushFollow(Follow._type_in_methodHeader8183);
+				type651=type();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, type668.Tree, type668, "type668", retval);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, type651.Tree, type651, "type651", retval);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1336:41: 'void'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1298:41: 'void'
 				{
-				DebugLocation(1336, 41);
-				string_literal669=(IToken)Match(input,VOID,Follow._VOID_in_methodHeader8368); if (state.failed) return retval;
+				DebugLocation(1298, 41);
+				string_literal652=(IToken)Match(input,VOID,Follow._VOID_in_methodHeader8185); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				string_literal669_tree = (object)adaptor.Create(string_literal669, "string_literal669", retval);
-				adaptor.AddChild(root_0, string_literal669_tree);
+				string_literal652_tree = (object)adaptor.Create(string_literal652, "string_literal652", retval);
+				adaptor.AddChild(root_0, string_literal652_tree);
 				}
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(177); }
+			} finally { DebugExitSubRule(176); }
 
-			DebugLocation(1336, 50);
-			IDENTIFIER670=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_methodHeader8372); if (state.failed) return retval;
+			DebugLocation(1298, 50);
+			IDENTIFIER653=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_methodHeader8189); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			IDENTIFIER670_tree = (object)adaptor.Create(IDENTIFIER670, "IDENTIFIER670", retval);
-			adaptor.AddChild(root_0, IDENTIFIER670_tree);
+			IDENTIFIER653_tree = (object)adaptor.Create(IDENTIFIER653, "IDENTIFIER653", retval);
+			adaptor.AddChild(root_0, IDENTIFIER653_tree);
 			}
-			DebugLocation(1336, 61);
-			char_literal671=(IToken)Match(input,LPAREN,Follow._LPAREN_in_methodHeader8374); if (state.failed) return retval;
+			DebugLocation(1298, 61);
+			char_literal654=(IToken)Match(input,LPAREN,Follow._LPAREN_in_methodHeader8191); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			char_literal671_tree = (object)adaptor.Create(char_literal671, "char_literal671", retval);
-			adaptor.AddChild(root_0, char_literal671_tree);
+			char_literal654_tree = (object)adaptor.Create(char_literal654, "char_literal654", retval);
+			adaptor.AddChild(root_0, char_literal654_tree);
 			}
 
 			}
@@ -23704,13 +22814,13 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("methodHeader", 125);
-			LeaveRule("methodHeader", 125);
+			TraceOut("methodHeader", 116);
+			LeaveRule("methodHeader", 116);
 			LeaveRule_methodHeader();
-			if (state.backtracking > 0) { Memoize(input, 125, methodHeader_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 116, methodHeader_StartIndex); }
 
 		}
-		DebugLocation(1337, 4);
+		DebugLocation(1299, 4);
 		} finally { DebugExitRule(GrammarFileName, "methodHeader"); }
 		return retval;
 
@@ -23720,12 +22830,12 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	partial void EnterRule_fieldHeader();
 	partial void LeaveRule_fieldHeader();
 	// $ANTLR start "fieldHeader"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1339:1: fieldHeader : modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) ;
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1301:1: fieldHeader : modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) ;
 	[GrammarRule("fieldHeader")]
 	private Antlr3CstNode fieldHeader()
 	{
 		EnterRule_fieldHeader();
-		EnterRule("fieldHeader", 126);
+		EnterRule("fieldHeader", 117);
 		var retval = new Antlr3CstNode("fieldHeader");
 		
 		retval.Start = (IToken)input.LT(1);
@@ -23733,49 +22843,203 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 		object root_0 = default(object);
 
-		IToken IDENTIFIER674 = default(IToken);
-		IToken char_literal675 = default(IToken);
-		IToken char_literal676 = default(IToken);
-		IToken set677 = default(IToken);
-		Antlr3CstNode modifiers672 = default(Antlr3CstNode);
-		Antlr3CstNode type673 = default(Antlr3CstNode);
+		IToken IDENTIFIER657 = default(IToken);
+		IToken char_literal658 = default(IToken);
+		IToken char_literal659 = default(IToken);
+		IToken set660 = default(IToken);
+		Antlr3CstNode modifiers655 = default(Antlr3CstNode);
+		Antlr3CstNode type656 = default(Antlr3CstNode);
 
-		object IDENTIFIER674_tree = default(object);
-		object char_literal675_tree = default(object);
-		object char_literal676_tree = default(object);
-		object set677_tree = default(object);
+		object IDENTIFIER657_tree = default(object);
+		object char_literal658_tree = default(object);
+		object char_literal659_tree = default(object);
+		object set660_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "fieldHeader");
-		DebugLocation(1339, 4);
+		DebugLocation(1301, 4);
 		try
 		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 126)) { return retval; }
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 117)) { return retval; }
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1340:5: ( modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1302:5: ( modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1340:9: modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1302:9: modifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' )
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(1340, 9);
-			PushFollow(Follow._modifiers_in_fieldHeader8394);
-			modifiers672=modifiers();
+			DebugLocation(1302, 9);
+			PushFollow(Follow._modifiers_in_fieldHeader8211);
+			modifiers655=modifiers();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers672.Tree, modifiers672, "modifiers672", retval);
-			DebugLocation(1340, 19);
-			PushFollow(Follow._type_in_fieldHeader8396);
-			type673=type();
+			if (state.backtracking == 0) adaptor.AddChild(root_0, modifiers655.Tree, modifiers655, "modifiers655", retval);
+			DebugLocation(1302, 19);
+			PushFollow(Follow._type_in_fieldHeader8213);
+			type656=type();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, type673.Tree, type673, "type673", retval);
-			DebugLocation(1340, 24);
-			IDENTIFIER674=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_fieldHeader8398); if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, type656.Tree, type656, "type656", retval);
+			DebugLocation(1302, 24);
+			IDENTIFIER657=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_fieldHeader8215); if (state.failed) return retval;
 			if (state.backtracking == 0) {
-			IDENTIFIER674_tree = (object)adaptor.Create(IDENTIFIER674, "IDENTIFIER674", retval);
-			adaptor.AddChild(root_0, IDENTIFIER674_tree);
+			IDENTIFIER657_tree = (object)adaptor.Create(IDENTIFIER657, "IDENTIFIER657", retval);
+			adaptor.AddChild(root_0, IDENTIFIER657_tree);
 			}
-			DebugLocation(1340, 35);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1340:35: ( '[' ']' )*
+			DebugLocation(1302, 35);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1302:35: ( '[' ']' )*
+			try { DebugEnterSubRule(177);
+			while (true)
+			{
+				int alt177=2;
+				try { DebugEnterDecision(177, false);
+				int LA177_1 = input.LA(1);
+
+				if ((LA177_1==LBRACKET))
+				{
+					alt177 = 1;
+				}
+
+
+				} finally { DebugExitDecision(177); }
+				switch ( alt177 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1302:36: '[' ']'
+					{
+					DebugLocation(1302, 36);
+					char_literal658=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_fieldHeader8218); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal658_tree = (object)adaptor.Create(char_literal658, "char_literal658", retval);
+					adaptor.AddChild(root_0, char_literal658_tree);
+					}
+					DebugLocation(1302, 39);
+					char_literal659=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_fieldHeader8219); if (state.failed) return retval;
+					if (state.backtracking == 0) {
+					char_literal659_tree = (object)adaptor.Create(char_literal659, "char_literal659", retval);
+					adaptor.AddChild(root_0, char_literal659_tree);
+					}
+
+					}
+					break;
+
+				default:
+					goto loop177;
+				}
+			}
+
+			loop177:
+				;
+
+			} finally { DebugExitSubRule(177); }
+
+			DebugLocation(1302, 45);
+
+			set660=(IToken)input.LT(1);
+			if (input.LA(1)==COMMA||input.LA(1)==EQ||input.LA(1)==SEMI)
+			{
+				input.Consume();
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set660, "set660", retval));
+				state.errorRecovery=false;state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return retval;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				throw mse;
+			}
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			if (state.backtracking == 0) {
+			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+			}
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("fieldHeader", 117);
+			LeaveRule("fieldHeader", 117);
+			LeaveRule_fieldHeader();
+			if (state.backtracking > 0) { Memoize(input, 117, fieldHeader_StartIndex); }
+
+		}
+		DebugLocation(1303, 4);
+		} finally { DebugExitRule(GrammarFileName, "fieldHeader"); }
+		return retval;
+
+	}
+	// $ANTLR end "fieldHeader"
+
+	partial void EnterRule_localVariableHeader();
+	partial void LeaveRule_localVariableHeader();
+	// $ANTLR start "localVariableHeader"
+	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1305:1: localVariableHeader : variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) ;
+	[GrammarRule("localVariableHeader")]
+	private Antlr3CstNode localVariableHeader()
+	{
+		EnterRule_localVariableHeader();
+		EnterRule("localVariableHeader", 118);
+		var retval = new Antlr3CstNode("localVariableHeader");
+		
+		retval.Start = (IToken)input.LT(1);
+		int localVariableHeader_StartIndex = input.Index;
+
+		object root_0 = default(object);
+
+		IToken IDENTIFIER663 = default(IToken);
+		IToken char_literal664 = default(IToken);
+		IToken char_literal665 = default(IToken);
+		IToken set666 = default(IToken);
+		Antlr3CstNode variableModifiers661 = default(Antlr3CstNode);
+		Antlr3CstNode type662 = default(Antlr3CstNode);
+
+		object IDENTIFIER663_tree = default(object);
+		object char_literal664_tree = default(object);
+		object char_literal665_tree = default(object);
+		object set666_tree = default(object);
+		try { DebugEnterRule(GrammarFileName, "localVariableHeader");
+		DebugLocation(1305, 4);
+		try
+		{
+			if (state.backtracking > 0 && AlreadyParsedRule(input, 118)) { return retval; }
+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1306:5: ( variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1306:9: variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' )
+			{
+			root_0 = (object)adaptor.Nil();
+
+			DebugLocation(1306, 9);
+			PushFollow(Follow._variableModifiers_in_localVariableHeader8249);
+			variableModifiers661=variableModifiers();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, variableModifiers661.Tree, variableModifiers661, "variableModifiers661", retval);
+			DebugLocation(1306, 27);
+			PushFollow(Follow._type_in_localVariableHeader8251);
+			type662=type();
+			PopFollow();
+			if (state.failed) return retval;
+			if (state.backtracking == 0) adaptor.AddChild(root_0, type662.Tree, type662, "type662", retval);
+			DebugLocation(1306, 32);
+			IDENTIFIER663=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_localVariableHeader8253); if (state.failed) return retval;
+			if (state.backtracking == 0) {
+			IDENTIFIER663_tree = (object)adaptor.Create(IDENTIFIER663, "IDENTIFIER663", retval);
+			adaptor.AddChild(root_0, IDENTIFIER663_tree);
+			}
+			DebugLocation(1306, 43);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1306:43: ( '[' ']' )*
 			try { DebugEnterSubRule(178);
 			while (true)
 			{
@@ -23794,19 +23058,19 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1340:36: '[' ']'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1306:44: '[' ']'
 					{
-					DebugLocation(1340, 36);
-					char_literal675=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_fieldHeader8401); if (state.failed) return retval;
+					DebugLocation(1306, 44);
+					char_literal664=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_localVariableHeader8256); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal675_tree = (object)adaptor.Create(char_literal675, "char_literal675", retval);
-					adaptor.AddChild(root_0, char_literal675_tree);
+					char_literal664_tree = (object)adaptor.Create(char_literal664, "char_literal664", retval);
+					adaptor.AddChild(root_0, char_literal664_tree);
 					}
-					DebugLocation(1340, 39);
-					char_literal676=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_fieldHeader8402); if (state.failed) return retval;
+					DebugLocation(1306, 47);
+					char_literal665=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_localVariableHeader8257); if (state.failed) return retval;
 					if (state.backtracking == 0) {
-					char_literal676_tree = (object)adaptor.Create(char_literal676, "char_literal676", retval);
-					adaptor.AddChild(root_0, char_literal676_tree);
+					char_literal665_tree = (object)adaptor.Create(char_literal665, "char_literal665", retval);
+					adaptor.AddChild(root_0, char_literal665_tree);
 					}
 
 					}
@@ -23822,13 +23086,13 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 			} finally { DebugExitSubRule(178); }
 
-			DebugLocation(1340, 45);
+			DebugLocation(1306, 53);
 
-			set677=(IToken)input.LT(1);
+			set666=(IToken)input.LT(1);
 			if (input.LA(1)==COMMA||input.LA(1)==EQ||input.LA(1)==SEMI)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set677, "set677", retval));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set666, "set666", retval));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -23858,167 +23122,13 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("fieldHeader", 126);
-			LeaveRule("fieldHeader", 126);
-			LeaveRule_fieldHeader();
-			if (state.backtracking > 0) { Memoize(input, 126, fieldHeader_StartIndex); }
-
-		}
-		DebugLocation(1341, 4);
-		} finally { DebugExitRule(GrammarFileName, "fieldHeader"); }
-		return retval;
-
-	}
-	// $ANTLR end "fieldHeader"
-
-	partial void EnterRule_localVariableHeader();
-	partial void LeaveRule_localVariableHeader();
-	// $ANTLR start "localVariableHeader"
-	// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1343:1: localVariableHeader : variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) ;
-	[GrammarRule("localVariableHeader")]
-	private Antlr3CstNode localVariableHeader()
-	{
-		EnterRule_localVariableHeader();
-		EnterRule("localVariableHeader", 127);
-		var retval = new Antlr3CstNode("localVariableHeader");
-		
-		retval.Start = (IToken)input.LT(1);
-		int localVariableHeader_StartIndex = input.Index;
-
-		object root_0 = default(object);
-
-		IToken IDENTIFIER680 = default(IToken);
-		IToken char_literal681 = default(IToken);
-		IToken char_literal682 = default(IToken);
-		IToken set683 = default(IToken);
-		Antlr3CstNode variableModifiers678 = default(Antlr3CstNode);
-		Antlr3CstNode type679 = default(Antlr3CstNode);
-
-		object IDENTIFIER680_tree = default(object);
-		object char_literal681_tree = default(object);
-		object char_literal682_tree = default(object);
-		object set683_tree = default(object);
-		try { DebugEnterRule(GrammarFileName, "localVariableHeader");
-		DebugLocation(1343, 4);
-		try
-		{
-			if (state.backtracking > 0 && AlreadyParsedRule(input, 127)) { return retval; }
-
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1344:5: ( variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' ) )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1344:9: variableModifiers type IDENTIFIER ( '[' ']' )* ( '=' | ',' | ';' )
-			{
-			root_0 = (object)adaptor.Nil();
-
-			DebugLocation(1344, 9);
-			PushFollow(Follow._variableModifiers_in_localVariableHeader8432);
-			variableModifiers678=variableModifiers();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, variableModifiers678.Tree, variableModifiers678, "variableModifiers678", retval);
-			DebugLocation(1344, 27);
-			PushFollow(Follow._type_in_localVariableHeader8434);
-			type679=type();
-			PopFollow();
-			if (state.failed) return retval;
-			if (state.backtracking == 0) adaptor.AddChild(root_0, type679.Tree, type679, "type679", retval);
-			DebugLocation(1344, 32);
-			IDENTIFIER680=(IToken)Match(input,IDENTIFIER,Follow._IDENTIFIER_in_localVariableHeader8436); if (state.failed) return retval;
-			if (state.backtracking == 0) {
-			IDENTIFIER680_tree = (object)adaptor.Create(IDENTIFIER680, "IDENTIFIER680", retval);
-			adaptor.AddChild(root_0, IDENTIFIER680_tree);
-			}
-			DebugLocation(1344, 43);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1344:43: ( '[' ']' )*
-			try { DebugEnterSubRule(179);
-			while (true)
-			{
-				int alt179=2;
-				try { DebugEnterDecision(179, false);
-				int LA179_1 = input.LA(1);
-
-				if ((LA179_1==LBRACKET))
-				{
-					alt179 = 1;
-				}
-
-
-				} finally { DebugExitDecision(179); }
-				switch ( alt179 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1344:44: '[' ']'
-					{
-					DebugLocation(1344, 44);
-					char_literal681=(IToken)Match(input,LBRACKET,Follow._LBRACKET_in_localVariableHeader8439); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal681_tree = (object)adaptor.Create(char_literal681, "char_literal681", retval);
-					adaptor.AddChild(root_0, char_literal681_tree);
-					}
-					DebugLocation(1344, 47);
-					char_literal682=(IToken)Match(input,RBRACKET,Follow._RBRACKET_in_localVariableHeader8440); if (state.failed) return retval;
-					if (state.backtracking == 0) {
-					char_literal682_tree = (object)adaptor.Create(char_literal682, "char_literal682", retval);
-					adaptor.AddChild(root_0, char_literal682_tree);
-					}
-
-					}
-					break;
-
-				default:
-					goto loop179;
-				}
-			}
-
-			loop179:
-				;
-
-			} finally { DebugExitSubRule(179); }
-
-			DebugLocation(1344, 53);
-
-			set683=(IToken)input.LT(1);
-			if (input.LA(1)==COMMA||input.LA(1)==EQ||input.LA(1)==SEMI)
-			{
-				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set683, "set683", retval));
-				state.errorRecovery=false;state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return retval;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				throw mse;
-			}
-
-
-			}
-
-			retval.Stop = (IToken)input.LT(-1);
-
-			if (state.backtracking == 0) {
-			retval.Tree = (object)adaptor.RulePostProcessing(root_0);
-			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
-			}
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-			retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
-
-		}
-		finally
-		{
-			TraceOut("localVariableHeader", 127);
-			LeaveRule("localVariableHeader", 127);
+			TraceOut("localVariableHeader", 118);
+			LeaveRule("localVariableHeader", 118);
 			LeaveRule_localVariableHeader();
-			if (state.backtracking > 0) { Memoize(input, 127, localVariableHeader_StartIndex); }
+			if (state.backtracking > 0) { Memoize(input, 118, localVariableHeader_StartIndex); }
 
 		}
-		DebugLocation(1345, 4);
+		DebugLocation(1307, 4);
 		} finally { DebugExitRule(GrammarFileName, "localVariableHeader"); }
 		return retval;
 
@@ -24032,7 +23142,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred2_Java_fragment()
 	{
 		EnterRule_synpred2_Java_fragment();
-		EnterRule("synpred2_Java_fragment", 129);
+		EnterRule("synpred2_Java_fragment", 120);
 		var retval = new Antlr3CstNode("synpred2_Java_fragment");
 		try
 		{
@@ -24042,17 +23152,17 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			DebugLocation(302, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:302:13: ( annotations )?
-			int alt180=2;
-			try { DebugEnterSubRule(180);
-			try { DebugEnterDecision(180, false);
-			int LA180_1 = input.LA(1);
+			int alt179=2;
+			try { DebugEnterSubRule(179);
+			try { DebugEnterDecision(179, false);
+			int LA179_1 = input.LA(1);
 
-			if ((LA180_1==MONKEYS_AT))
+			if ((LA179_1==MONKEYS_AT))
 			{
-				alt180 = 1;
+				alt179 = 1;
 			}
-			} finally { DebugExitDecision(180); }
-			switch (alt180)
+			} finally { DebugExitDecision(179); }
+			switch (alt179)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -24068,7 +23178,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 
 			}
-			} finally { DebugExitSubRule(180); }
+			} finally { DebugExitSubRule(179); }
 
 			DebugLocation(304, 13);
 			PushFollow(Follow._packageDeclaration_in_synpred2_Java136);
@@ -24081,8 +23191,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred2_Java_fragment", 129);
-			LeaveRule("synpred2_Java_fragment", 129);
+			TraceOut("synpred2_Java_fragment", 120);
+			LeaveRule("synpred2_Java_fragment", 120);
 			LeaveRule_synpred2_Java_fragment();
 		}
 	}
@@ -24095,7 +23205,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred12_Java_fragment()
 	{
 		EnterRule_synpred12_Java_fragment();
-		EnterRule("synpred12_Java_fragment", 139);
+		EnterRule("synpred12_Java_fragment", 130);
 		var retval = new Antlr3CstNode("synpred12_Java_fragment");
 		try
 		{
@@ -24114,8 +23224,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred12_Java_fragment", 139);
-			LeaveRule("synpred12_Java_fragment", 139);
+			TraceOut("synpred12_Java_fragment", 130);
+			LeaveRule("synpred12_Java_fragment", 130);
 			LeaveRule_synpred12_Java_fragment();
 		}
 	}
@@ -24128,7 +23238,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred27_Java_fragment()
 	{
 		EnterRule_synpred27_Java_fragment();
-		EnterRule("synpred27_Java_fragment", 154);
+		EnterRule("synpred27_Java_fragment", 145);
 		var retval = new Antlr3CstNode("synpred27_Java_fragment");
 		try
 		{
@@ -24147,8 +23257,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred27_Java_fragment", 154);
-			LeaveRule("synpred27_Java_fragment", 154);
+			TraceOut("synpred27_Java_fragment", 145);
+			LeaveRule("synpred27_Java_fragment", 145);
 			LeaveRule_synpred27_Java_fragment();
 		}
 	}
@@ -24161,7 +23271,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred43_Java_fragment()
 	{
 		EnterRule_synpred43_Java_fragment();
-		EnterRule("synpred43_Java_fragment", 170);
+		EnterRule("synpred43_Java_fragment", 161);
 		var retval = new Antlr3CstNode("synpred43_Java_fragment");
 		try
 		{
@@ -24180,8 +23290,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred43_Java_fragment", 170);
-			LeaveRule("synpred43_Java_fragment", 170);
+			TraceOut("synpred43_Java_fragment", 161);
+			LeaveRule("synpred43_Java_fragment", 161);
 			LeaveRule_synpred43_Java_fragment();
 		}
 	}
@@ -24194,7 +23304,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred52_Java_fragment()
 	{
 		EnterRule_synpred52_Java_fragment();
-		EnterRule("synpred52_Java_fragment", 179);
+		EnterRule("synpred52_Java_fragment", 170);
 		var retval = new Antlr3CstNode("synpred52_Java_fragment");
 		try
 		{
@@ -24213,8 +23323,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred52_Java_fragment", 179);
-			LeaveRule("synpred52_Java_fragment", 179);
+			TraceOut("synpred52_Java_fragment", 170);
+			LeaveRule("synpred52_Java_fragment", 170);
 			LeaveRule_synpred52_Java_fragment();
 		}
 	}
@@ -24227,7 +23337,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred53_Java_fragment()
 	{
 		EnterRule_synpred53_Java_fragment();
-		EnterRule("synpred53_Java_fragment", 180);
+		EnterRule("synpred53_Java_fragment", 171);
 		var retval = new Antlr3CstNode("synpred53_Java_fragment");
 		try
 		{
@@ -24246,8 +23356,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred53_Java_fragment", 180);
-			LeaveRule("synpred53_Java_fragment", 180);
+			TraceOut("synpred53_Java_fragment", 171);
+			LeaveRule("synpred53_Java_fragment", 171);
 			LeaveRule_synpred53_Java_fragment();
 		}
 	}
@@ -24260,7 +23370,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred54_Java_fragment()
 	{
 		EnterRule_synpred54_Java_fragment();
-		EnterRule("synpred54_Java_fragment", 181);
+		EnterRule("synpred54_Java_fragment", 172);
 		var retval = new Antlr3CstNode("synpred54_Java_fragment");
 		try
 		{
@@ -24279,8 +23389,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred54_Java_fragment", 181);
-			LeaveRule("synpred54_Java_fragment", 181);
+			TraceOut("synpred54_Java_fragment", 172);
+			LeaveRule("synpred54_Java_fragment", 172);
 			LeaveRule_synpred54_Java_fragment();
 		}
 	}
@@ -24293,7 +23403,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred57_Java_fragment()
 	{
 		EnterRule_synpred57_Java_fragment();
-		EnterRule("synpred57_Java_fragment", 184);
+		EnterRule("synpred57_Java_fragment", 175);
 		var retval = new Antlr3CstNode("synpred57_Java_fragment");
 		try
 		{
@@ -24312,8 +23422,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred57_Java_fragment", 184);
-			LeaveRule("synpred57_Java_fragment", 184);
+			TraceOut("synpred57_Java_fragment", 175);
+			LeaveRule("synpred57_Java_fragment", 175);
 			LeaveRule_synpred57_Java_fragment();
 		}
 	}
@@ -24326,7 +23436,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred59_Java_fragment()
 	{
 		EnterRule_synpred59_Java_fragment();
-		EnterRule("synpred59_Java_fragment", 186);
+		EnterRule("synpred59_Java_fragment", 177);
 		var retval = new Antlr3CstNode("synpred59_Java_fragment");
 		try
 		{
@@ -24341,17 +23451,17 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return;
 			DebugLocation(518, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:518:9: ( typeParameters )?
-			int alt183=2;
-			try { DebugEnterSubRule(183);
-			try { DebugEnterDecision(183, false);
-			int LA183_1 = input.LA(1);
+			int alt182=2;
+			try { DebugEnterSubRule(182);
+			try { DebugEnterDecision(182, false);
+			int LA182_1 = input.LA(1);
 
-			if ((LA183_1==LT))
+			if ((LA182_1==LT))
 			{
-				alt183 = 1;
+				alt182 = 1;
 			}
-			} finally { DebugExitDecision(183); }
-			switch (alt183)
+			} finally { DebugExitDecision(182); }
+			switch (alt182)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -24367,7 +23477,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 
 			}
-			} finally { DebugExitSubRule(183); }
+			} finally { DebugExitSubRule(182); }
 
 			DebugLocation(520, 9);
 			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred59_Java1843); if (state.failed) return;
@@ -24378,17 +23488,17 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return;
 			DebugLocation(522, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:522:9: ( 'throws' qualifiedNameList )?
-			int alt184=2;
-			try { DebugEnterSubRule(184);
-			try { DebugEnterDecision(184, false);
-			int LA184_1 = input.LA(1);
+			int alt183=2;
+			try { DebugEnterSubRule(183);
+			try { DebugEnterDecision(183, false);
+			int LA183_1 = input.LA(1);
 
-			if ((LA184_1==THROWS))
+			if ((LA183_1==THROWS))
 			{
-				alt184 = 1;
+				alt183 = 1;
 			}
-			} finally { DebugExitDecision(184); }
-			switch (alt184)
+			} finally { DebugExitDecision(183); }
+			switch (alt183)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -24406,159 +23516,84 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 
 			}
-			} finally { DebugExitSubRule(184); }
+			} finally { DebugExitSubRule(183); }
 
 			DebugLocation(524, 9);
 			Match(input,LBRACE,Follow._LBRACE_in_synpred59_Java1887); if (state.failed) return;
 			DebugLocation(525, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:525:9: ( explicitConstructorInvocation )?
-			int alt185=2;
-			try { DebugEnterSubRule(185);
-			try { DebugEnterDecision(185, false);
+			int alt184=2;
+			try { DebugEnterSubRule(184);
+			try { DebugEnterDecision(184, false);
 			switch (input.LA(1))
 			{
 			case LT:
 				{
-				alt185 = 1;
+				alt184 = 1;
 				}
 				break;
 			case THIS:
 				{
-				int LA185_2 = input.LA(2);
+				int LA184_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt185 = 1;
+					alt184 = 1;
 				}
 				}
 				break;
 			case LPAREN:
 				{
-				int LA185_2 = input.LA(2);
+				int LA184_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt185 = 1;
+					alt184 = 1;
 				}
 				}
 				break;
 			case SUPER:
 				{
-				int LA185_2 = input.LA(2);
+				int LA184_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt185 = 1;
+					alt184 = 1;
 				}
 				}
 				break;
 			case IDENTIFIER:
 				{
-				int LA185_2 = input.LA(2);
+				int LA184_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt185 = 1;
+					alt184 = 1;
 				}
 				}
 				break;
-			case INTLITERAL:
+			case BooleanLiteral:
+			case CharacterLiteral:
+			case FloatingPointLiteral:
+			case IntegerLiteral:
+			case NullLiteral:
+			case StringLiteral:
 				{
-				int LA185_2 = input.LA(2);
+				int LA184_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt185 = 1;
-				}
-				}
-				break;
-			case LONGLITERAL:
-				{
-				int LA185_2 = input.LA(2);
-
-				if ((EvaluatePredicate(synpred57_Java_fragment)))
-				{
-					alt185 = 1;
-				}
-				}
-				break;
-			case FLOATLITERAL:
-				{
-				int LA185_2 = input.LA(2);
-
-				if ((EvaluatePredicate(synpred57_Java_fragment)))
-				{
-					alt185 = 1;
-				}
-				}
-				break;
-			case DOUBLELITERAL:
-				{
-				int LA185_2 = input.LA(2);
-
-				if ((EvaluatePredicate(synpred57_Java_fragment)))
-				{
-					alt185 = 1;
-				}
-				}
-				break;
-			case CHARLITERAL:
-				{
-				int LA185_2 = input.LA(2);
-
-				if ((EvaluatePredicate(synpred57_Java_fragment)))
-				{
-					alt185 = 1;
-				}
-				}
-				break;
-			case STRINGLITERAL:
-				{
-				int LA185_2 = input.LA(2);
-
-				if ((EvaluatePredicate(synpred57_Java_fragment)))
-				{
-					alt185 = 1;
-				}
-				}
-				break;
-			case TRUE:
-				{
-				int LA185_2 = input.LA(2);
-
-				if ((EvaluatePredicate(synpred57_Java_fragment)))
-				{
-					alt185 = 1;
-				}
-				}
-				break;
-			case FALSE:
-				{
-				int LA185_2 = input.LA(2);
-
-				if ((EvaluatePredicate(synpred57_Java_fragment)))
-				{
-					alt185 = 1;
-				}
-				}
-				break;
-			case NULL:
-				{
-				int LA185_2 = input.LA(2);
-
-				if ((EvaluatePredicate(synpred57_Java_fragment)))
-				{
-					alt185 = 1;
+					alt184 = 1;
 				}
 				}
 				break;
 			case NEW:
 				{
-				int LA185_2 = input.LA(2);
+				int LA184_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt185 = 1;
+					alt184 = 1;
 				}
 				}
 				break;
@@ -24571,28 +23606,28 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			case LONG:
 			case SHORT:
 				{
-				int LA185_2 = input.LA(2);
+				int LA184_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt185 = 1;
+					alt184 = 1;
 				}
 				}
 				break;
 			case VOID:
 				{
-				int LA185_2 = input.LA(2);
+				int LA184_2 = input.LA(2);
 
 				if ((EvaluatePredicate(synpred57_Java_fragment)))
 				{
-					alt185 = 1;
+					alt184 = 1;
 				}
 				}
 				break;
 			}
 
-			} finally { DebugExitDecision(185); }
-			switch (alt185)
+			} finally { DebugExitDecision(184); }
+			switch (alt184)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -24608,25 +23643,25 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 
 			}
-			} finally { DebugExitSubRule(185); }
+			} finally { DebugExitSubRule(184); }
 
 			DebugLocation(527, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:527:9: ( blockStatement )*
-			try { DebugEnterSubRule(186);
+			try { DebugEnterSubRule(185);
 			while (true)
 			{
-				int alt186=2;
-				try { DebugEnterDecision(186, false);
-				int LA186_1 = input.LA(1);
+				int alt185=2;
+				try { DebugEnterDecision(185, false);
+				int LA185_1 = input.LA(1);
 
-				if ((LA186_1==EOF||LA186_1==ABSTRACT||(LA186_1>=ASSERT && LA186_1<=BANG)||(LA186_1>=BOOLEAN && LA186_1<=BYTE)||(LA186_1>=CHAR && LA186_1<=CLASS)||LA186_1==CONTINUE||LA186_1==DO||(LA186_1>=DOUBLE && LA186_1<=DOUBLELITERAL)||LA186_1==ENUM||(LA186_1>=FALSE && LA186_1<=FINAL)||(LA186_1>=FLOAT && LA186_1<=FOR)||(LA186_1>=IDENTIFIER && LA186_1<=IF)||(LA186_1>=INT && LA186_1<=INTLITERAL)||LA186_1==LBRACE||(LA186_1>=LONG && LA186_1<=LT)||(LA186_1>=MONKEYS_AT && LA186_1<=NULL)||LA186_1==PLUS||(LA186_1>=PLUSPLUS && LA186_1<=PUBLIC)||LA186_1==RETURN||(LA186_1>=SEMI && LA186_1<=SHORT)||(LA186_1>=STATIC && LA186_1<=SUB)||(LA186_1>=SUBSUB && LA186_1<=SYNCHRONIZED)||(LA186_1>=THIS && LA186_1<=THROW)||(LA186_1>=TILDE && LA186_1<=TRY)||(LA186_1>=VOID && LA186_1<=WHILE)))
+				if ((LA185_1==EOF||LA185_1==ABSTRACT||(LA185_1>=ASSERT && LA185_1<=BANG)||(LA185_1>=BOOLEAN && LA185_1<=BYTE)||LA185_1==BooleanLiteral||(LA185_1>=CHAR && LA185_1<=CLASS)||(LA185_1>=CONTINUE && LA185_1<=CharacterLiteral)||LA185_1==DO||LA185_1==DOUBLE||LA185_1==ENUM||LA185_1==FINAL||(LA185_1>=FLOAT && LA185_1<=FOR)||LA185_1==FloatingPointLiteral||(LA185_1>=IDENTIFIER && LA185_1<=IF)||(LA185_1>=INT && LA185_1<=INTERFACE)||LA185_1==IntegerLiteral||LA185_1==LBRACE||(LA185_1>=LONG && LA185_1<=NEW)||LA185_1==NullLiteral||LA185_1==PLUS||(LA185_1>=PLUSPLUS && LA185_1<=PUBLIC)||LA185_1==RETURN||(LA185_1>=SEMI && LA185_1<=SHORT)||(LA185_1>=STATIC && LA185_1<=SUB)||(LA185_1>=SUBSUB && LA185_1<=SYNCHRONIZED)||LA185_1==StringLiteral||(LA185_1>=THIS && LA185_1<=THROW)||(LA185_1>=TILDE && LA185_1<=TRY)||(LA185_1>=VOID && LA185_1<=WHILE)))
 				{
-					alt186 = 1;
+					alt185 = 1;
 				}
 
 
-				} finally { DebugExitDecision(186); }
-				switch ( alt186 )
+				} finally { DebugExitDecision(185); }
+				switch ( alt185 )
 				{
 				case 1:
 					DebugEnterAlt(1);
@@ -24642,14 +23677,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					break;
 
 				default:
-					goto loop186;
+					goto loop185;
 				}
 			}
 
-			loop186:
+			loop185:
 				;
 
-			} finally { DebugExitSubRule(186); }
+			} finally { DebugExitSubRule(185); }
 
 			DebugLocation(529, 9);
 			Match(input,RBRACE,Follow._RBRACE_in_synpred59_Java1942); if (state.failed) return;
@@ -24659,8 +23694,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred59_Java_fragment", 186);
-			LeaveRule("synpred59_Java_fragment", 186);
+			TraceOut("synpred59_Java_fragment", 177);
+			LeaveRule("synpred59_Java_fragment", 177);
 			LeaveRule_synpred59_Java_fragment();
 		}
 	}
@@ -24673,7 +23708,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred68_Java_fragment()
 	{
 		EnterRule_synpred68_Java_fragment();
-		EnterRule("synpred68_Java_fragment", 195);
+		EnterRule("synpred68_Java_fragment", 186);
 		var retval = new Antlr3CstNode("synpred68_Java_fragment");
 		try
 		{
@@ -24692,8 +23727,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred68_Java_fragment", 195);
-			LeaveRule("synpred68_Java_fragment", 195);
+			TraceOut("synpred68_Java_fragment", 186);
+			LeaveRule("synpred68_Java_fragment", 186);
 			LeaveRule_synpred68_Java_fragment();
 		}
 	}
@@ -24706,7 +23741,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred69_Java_fragment()
 	{
 		EnterRule_synpred69_Java_fragment();
-		EnterRule("synpred69_Java_fragment", 196);
+		EnterRule("synpred69_Java_fragment", 187);
 		var retval = new Antlr3CstNode("synpred69_Java_fragment");
 		try
 		{
@@ -24725,8 +23760,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred69_Java_fragment", 196);
-			LeaveRule("synpred69_Java_fragment", 196);
+			TraceOut("synpred69_Java_fragment", 187);
+			LeaveRule("synpred69_Java_fragment", 187);
 			LeaveRule_synpred69_Java_fragment();
 		}
 	}
@@ -24739,7 +23774,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred70_Java_fragment()
 	{
 		EnterRule_synpred70_Java_fragment();
-		EnterRule("synpred70_Java_fragment", 197);
+		EnterRule("synpred70_Java_fragment", 188);
 		var retval = new Antlr3CstNode("synpred70_Java_fragment");
 		try
 		{
@@ -24758,8 +23793,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred70_Java_fragment", 197);
-			LeaveRule("synpred70_Java_fragment", 197);
+			TraceOut("synpred70_Java_fragment", 188);
+			LeaveRule("synpred70_Java_fragment", 188);
 			LeaveRule_synpred70_Java_fragment();
 		}
 	}
@@ -24772,7 +23807,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred71_Java_fragment()
 	{
 		EnterRule_synpred71_Java_fragment();
-		EnterRule("synpred71_Java_fragment", 198);
+		EnterRule("synpred71_Java_fragment", 189);
 		var retval = new Antlr3CstNode("synpred71_Java_fragment");
 		try
 		{
@@ -24791,8 +23826,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred71_Java_fragment", 198);
-			LeaveRule("synpred71_Java_fragment", 198);
+			TraceOut("synpred71_Java_fragment", 189);
+			LeaveRule("synpred71_Java_fragment", 189);
 			LeaveRule_synpred71_Java_fragment();
 		}
 	}
@@ -24805,7 +23840,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred99_Java_fragment()
 	{
 		EnterRule_synpred99_Java_fragment();
-		EnterRule("synpred99_Java_fragment", 226);
+		EnterRule("synpred99_Java_fragment", 217);
 		var retval = new Antlr3CstNode("synpred99_Java_fragment");
 		try
 		{
@@ -24824,8 +23859,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred99_Java_fragment", 226);
-			LeaveRule("synpred99_Java_fragment", 226);
+			TraceOut("synpred99_Java_fragment", 217);
+			LeaveRule("synpred99_Java_fragment", 217);
 			LeaveRule_synpred99_Java_fragment();
 		}
 	}
@@ -24838,7 +23873,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred101_Java_fragment()
 	{
 		EnterRule_synpred101_Java_fragment();
-		EnterRule("synpred101_Java_fragment", 228);
+		EnterRule("synpred101_Java_fragment", 219);
 		var retval = new Antlr3CstNode("synpred101_Java_fragment");
 		try
 		{
@@ -24853,21 +23888,21 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			if (state.failed) return;
 			DebugLocation(680, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:680:9: ( ',' normalParameterDecl )*
-			try { DebugEnterSubRule(190);
+			try { DebugEnterSubRule(189);
 			while (true)
 			{
-				int alt190=2;
-				try { DebugEnterDecision(190, false);
-				int LA190_1 = input.LA(1);
+				int alt189=2;
+				try { DebugEnterDecision(189, false);
+				int LA189_1 = input.LA(1);
 
-				if ((LA190_1==COMMA))
+				if ((LA189_1==COMMA))
 				{
-					alt190 = 1;
+					alt189 = 1;
 				}
 
 
-				} finally { DebugExitDecision(190); }
-				switch ( alt190 )
+				} finally { DebugExitDecision(189); }
+				switch ( alt189 )
 				{
 				case 1:
 					DebugEnterAlt(1);
@@ -24885,14 +23920,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					break;
 
 				default:
-					goto loop190;
+					goto loop189;
 				}
 			}
 
-			loop190:
+			loop189:
 				;
 
-			} finally { DebugExitSubRule(190); }
+			} finally { DebugExitSubRule(189); }
 
 
 			}
@@ -24900,8 +23935,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred101_Java_fragment", 228);
-			LeaveRule("synpred101_Java_fragment", 228);
+			TraceOut("synpred101_Java_fragment", 219);
+			LeaveRule("synpred101_Java_fragment", 219);
 			LeaveRule_synpred101_Java_fragment();
 		}
 	}
@@ -24914,7 +23949,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred102_Java_fragment()
 	{
 		EnterRule_synpred102_Java_fragment();
-		EnterRule("synpred102_Java_fragment", 229);
+		EnterRule("synpred102_Java_fragment", 220);
 		var retval = new Antlr3CstNode("synpred102_Java_fragment");
 		try
 		{
@@ -24935,8 +23970,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred102_Java_fragment", 229);
-			LeaveRule("synpred102_Java_fragment", 229);
+			TraceOut("synpred102_Java_fragment", 220);
+			LeaveRule("synpred102_Java_fragment", 220);
 			LeaveRule_synpred102_Java_fragment();
 		}
 	}
@@ -24949,7 +23984,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred106_Java_fragment()
 	{
 		EnterRule_synpred106_Java_fragment();
-		EnterRule("synpred106_Java_fragment", 233);
+		EnterRule("synpred106_Java_fragment", 224);
 		var retval = new Antlr3CstNode("synpred106_Java_fragment");
 		try
 		{
@@ -24959,17 +23994,17 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			{
 			DebugLocation(702, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:702:9: ( nonWildcardTypeArguments )?
-			int alt191=2;
-			try { DebugEnterSubRule(191);
-			try { DebugEnterDecision(191, false);
-			int LA191_1 = input.LA(1);
+			int alt190=2;
+			try { DebugEnterSubRule(190);
+			try { DebugEnterDecision(190, false);
+			int LA190_1 = input.LA(1);
 
-			if ((LA191_1==LT))
+			if ((LA190_1==LT))
 			{
-				alt191 = 1;
+				alt190 = 1;
 			}
-			} finally { DebugExitDecision(191); }
-			switch (alt191)
+			} finally { DebugExitDecision(190); }
+			switch (alt190)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -24985,7 +24020,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				break;
 
 			}
-			} finally { DebugExitSubRule(191); }
+			} finally { DebugExitSubRule(190); }
 
 			DebugLocation(704, 9);
 			if (input.LA(1)==SUPER||input.LA(1)==THIS)
@@ -25014,8 +24049,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred106_Java_fragment", 233);
-			LeaveRule("synpred106_Java_fragment", 233);
+			TraceOut("synpred106_Java_fragment", 224);
+			LeaveRule("synpred106_Java_fragment", 224);
 			LeaveRule_synpred106_Java_fragment();
 		}
 	}
@@ -25028,7 +24063,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred120_Java_fragment()
 	{
 		EnterRule_synpred120_Java_fragment();
-		EnterRule("synpred120_Java_fragment", 247);
+		EnterRule("synpred120_Java_fragment", 238);
 		var retval = new Antlr3CstNode("synpred120_Java_fragment");
 		try
 		{
@@ -25047,8 +24082,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred120_Java_fragment", 247);
-			LeaveRule("synpred120_Java_fragment", 247);
+			TraceOut("synpred120_Java_fragment", 238);
+			LeaveRule("synpred120_Java_fragment", 238);
 			LeaveRule_synpred120_Java_fragment();
 		}
 	}
@@ -25061,7 +24096,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred121_Java_fragment()
 	{
 		EnterRule_synpred121_Java_fragment();
-		EnterRule("synpred121_Java_fragment", 248);
+		EnterRule("synpred121_Java_fragment", 239);
 		var retval = new Antlr3CstNode("synpred121_Java_fragment");
 		try
 		{
@@ -25080,8 +24115,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred121_Java_fragment", 248);
-			LeaveRule("synpred121_Java_fragment", 248);
+			TraceOut("synpred121_Java_fragment", 239);
+			LeaveRule("synpred121_Java_fragment", 239);
 			LeaveRule_synpred121_Java_fragment();
 		}
 	}
@@ -25094,7 +24129,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred122_Java_fragment()
 	{
 		EnterRule_synpred122_Java_fragment();
-		EnterRule("synpred122_Java_fragment", 249);
+		EnterRule("synpred122_Java_fragment", 240);
 		var retval = new Antlr3CstNode("synpred122_Java_fragment");
 		try
 		{
@@ -25113,8 +24148,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred122_Java_fragment", 249);
-			LeaveRule("synpred122_Java_fragment", 249);
+			TraceOut("synpred122_Java_fragment", 240);
+			LeaveRule("synpred122_Java_fragment", 240);
 			LeaveRule_synpred122_Java_fragment();
 		}
 	}
@@ -25127,7 +24162,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred123_Java_fragment()
 	{
 		EnterRule_synpred123_Java_fragment();
-		EnterRule("synpred123_Java_fragment", 250);
+		EnterRule("synpred123_Java_fragment", 241);
 		var retval = new Antlr3CstNode("synpred123_Java_fragment");
 		try
 		{
@@ -25146,8 +24181,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred123_Java_fragment", 250);
-			LeaveRule("synpred123_Java_fragment", 250);
+			TraceOut("synpred123_Java_fragment", 241);
+			LeaveRule("synpred123_Java_fragment", 241);
 			LeaveRule_synpred123_Java_fragment();
 		}
 	}
@@ -25160,7 +24195,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred124_Java_fragment()
 	{
 		EnterRule_synpred124_Java_fragment();
-		EnterRule("synpred124_Java_fragment", 251);
+		EnterRule("synpred124_Java_fragment", 242);
 		var retval = new Antlr3CstNode("synpred124_Java_fragment");
 		try
 		{
@@ -25179,8 +24214,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred124_Java_fragment", 251);
-			LeaveRule("synpred124_Java_fragment", 251);
+			TraceOut("synpred124_Java_fragment", 242);
+			LeaveRule("synpred124_Java_fragment", 242);
 			LeaveRule_synpred124_Java_fragment();
 		}
 	}
@@ -25193,7 +24228,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred125_Java_fragment()
 	{
 		EnterRule_synpred125_Java_fragment();
-		EnterRule("synpred125_Java_fragment", 252);
+		EnterRule("synpred125_Java_fragment", 243);
 		var retval = new Antlr3CstNode("synpred125_Java_fragment");
 		try
 		{
@@ -25212,8 +24247,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred125_Java_fragment", 252);
-			LeaveRule("synpred125_Java_fragment", 252);
+			TraceOut("synpred125_Java_fragment", 243);
+			LeaveRule("synpred125_Java_fragment", 243);
 			LeaveRule_synpred125_Java_fragment();
 		}
 	}
@@ -25226,7 +24261,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred128_Java_fragment()
 	{
 		EnterRule_synpred128_Java_fragment();
-		EnterRule("synpred128_Java_fragment", 255);
+		EnterRule("synpred128_Java_fragment", 246);
 		var retval = new Antlr3CstNode("synpred128_Java_fragment");
 		try
 		{
@@ -25245,8 +24280,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred128_Java_fragment", 255);
-			LeaveRule("synpred128_Java_fragment", 255);
+			TraceOut("synpred128_Java_fragment", 246);
+			LeaveRule("synpred128_Java_fragment", 246);
 			LeaveRule_synpred128_Java_fragment();
 		}
 	}
@@ -25259,7 +24294,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred129_Java_fragment()
 	{
 		EnterRule_synpred129_Java_fragment();
-		EnterRule("synpred129_Java_fragment", 256);
+		EnterRule("synpred129_Java_fragment", 247);
 		var retval = new Antlr3CstNode("synpred129_Java_fragment");
 		try
 		{
@@ -25278,8 +24313,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred129_Java_fragment", 256);
-			LeaveRule("synpred129_Java_fragment", 256);
+			TraceOut("synpred129_Java_fragment", 247);
+			LeaveRule("synpred129_Java_fragment", 247);
 			LeaveRule_synpred129_Java_fragment();
 		}
 	}
@@ -25292,7 +24327,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred135_Java_fragment()
 	{
 		EnterRule_synpred135_Java_fragment();
-		EnterRule("synpred135_Java_fragment", 262);
+		EnterRule("synpred135_Java_fragment", 253);
 		var retval = new Antlr3CstNode("synpred135_Java_fragment");
 		try
 		{
@@ -25313,8 +24348,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred135_Java_fragment", 262);
-			LeaveRule("synpred135_Java_fragment", 262);
+			TraceOut("synpred135_Java_fragment", 253);
+			LeaveRule("synpred135_Java_fragment", 253);
 			LeaveRule_synpred135_Java_fragment();
 		}
 	}
@@ -25327,7 +24362,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred155_Java_fragment()
 	{
 		EnterRule_synpred155_Java_fragment();
-		EnterRule("synpred155_Java_fragment", 282);
+		EnterRule("synpred155_Java_fragment", 273);
 		var retval = new Antlr3CstNode("synpred155_Java_fragment");
 		try
 		{
@@ -25353,8 +24388,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred155_Java_fragment", 282);
-			LeaveRule("synpred155_Java_fragment", 282);
+			TraceOut("synpred155_Java_fragment", 273);
+			LeaveRule("synpred155_Java_fragment", 273);
 			LeaveRule_synpred155_Java_fragment();
 		}
 	}
@@ -25367,7 +24402,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred156_Java_fragment()
 	{
 		EnterRule_synpred156_Java_fragment();
-		EnterRule("synpred156_Java_fragment", 283);
+		EnterRule("synpred156_Java_fragment", 274);
 		var retval = new Antlr3CstNode("synpred156_Java_fragment");
 		try
 		{
@@ -25386,8 +24421,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred156_Java_fragment", 283);
-			LeaveRule("synpred156_Java_fragment", 283);
+			TraceOut("synpred156_Java_fragment", 274);
+			LeaveRule("synpred156_Java_fragment", 274);
 			LeaveRule_synpred156_Java_fragment();
 		}
 	}
@@ -25400,7 +24435,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred159_Java_fragment()
 	{
 		EnterRule_synpred159_Java_fragment();
-		EnterRule("synpred159_Java_fragment", 286);
+		EnterRule("synpred159_Java_fragment", 277);
 		var retval = new Antlr3CstNode("synpred159_Java_fragment");
 		try
 		{
@@ -25422,21 +24457,21 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			Match(input,IDENTIFIER,Follow._IDENTIFIER_in_synpred159_Java4914); if (state.failed) return;
 			DebugLocation(913, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:913:9: ( '[' ']' )*
-			try { DebugEnterSubRule(199);
+			try { DebugEnterSubRule(198);
 			while (true)
 			{
-				int alt199=2;
-				try { DebugEnterDecision(199, false);
-				int LA199_1 = input.LA(1);
+				int alt198=2;
+				try { DebugEnterDecision(198, false);
+				int LA198_1 = input.LA(1);
 
-				if ((LA199_1==LBRACKET))
+				if ((LA198_1==LBRACKET))
 				{
-					alt199 = 1;
+					alt198 = 1;
 				}
 
 
-				} finally { DebugExitDecision(199); }
-				switch ( alt199 )
+				} finally { DebugExitDecision(198); }
+				switch ( alt198 )
 				{
 				case 1:
 					DebugEnterAlt(1);
@@ -25451,14 +24486,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					break;
 
 				default:
-					goto loop199;
+					goto loop198;
 				}
 			}
 
-			loop199:
+			loop198:
 				;
 
-			} finally { DebugExitSubRule(199); }
+			} finally { DebugExitSubRule(198); }
 
 
 			}
@@ -25466,8 +24501,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred159_Java_fragment", 286);
-			LeaveRule("synpred159_Java_fragment", 286);
+			TraceOut("synpred159_Java_fragment", 277);
+			LeaveRule("synpred159_Java_fragment", 277);
 			LeaveRule_synpred159_Java_fragment();
 		}
 	}
@@ -25480,7 +24515,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred166_Java_fragment()
 	{
 		EnterRule_synpred166_Java_fragment();
-		EnterRule("synpred166_Java_fragment", 293);
+		EnterRule("synpred166_Java_fragment", 284);
 		var retval = new Antlr3CstNode("synpred166_Java_fragment");
 		try
 		{
@@ -25499,8 +24534,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred166_Java_fragment", 293);
-			LeaveRule("synpred166_Java_fragment", 293);
+			TraceOut("synpred166_Java_fragment", 284);
+			LeaveRule("synpred166_Java_fragment", 284);
 			LeaveRule_synpred166_Java_fragment();
 		}
 	}
@@ -25513,7 +24548,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred168_Java_fragment()
 	{
 		EnterRule_synpred168_Java_fragment();
-		EnterRule("synpred168_Java_fragment", 295);
+		EnterRule("synpred168_Java_fragment", 286);
 		var retval = new Antlr3CstNode("synpred168_Java_fragment");
 		try
 		{
@@ -25557,8 +24592,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred168_Java_fragment", 295);
-			LeaveRule("synpred168_Java_fragment", 295);
+			TraceOut("synpred168_Java_fragment", 286);
+			LeaveRule("synpred168_Java_fragment", 286);
 			LeaveRule_synpred168_Java_fragment();
 		}
 	}
@@ -25571,7 +24606,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred172_Java_fragment()
 	{
 		EnterRule_synpred172_Java_fragment();
-		EnterRule("synpred172_Java_fragment", 299);
+		EnterRule("synpred172_Java_fragment", 290);
 		var retval = new Antlr3CstNode("synpred172_Java_fragment");
 		try
 		{
@@ -25590,8 +24625,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred172_Java_fragment", 299);
-			LeaveRule("synpred172_Java_fragment", 299);
+			TraceOut("synpred172_Java_fragment", 290);
+			LeaveRule("synpred172_Java_fragment", 290);
 			LeaveRule_synpred172_Java_fragment();
 		}
 	}
@@ -25604,7 +24639,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred213_Java_fragment()
 	{
 		EnterRule_synpred213_Java_fragment();
-		EnterRule("synpred213_Java_fragment", 340);
+		EnterRule("synpred213_Java_fragment", 331);
 		var retval = new Antlr3CstNode("synpred213_Java_fragment");
 		try
 		{
@@ -25623,8 +24658,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred213_Java_fragment", 340);
-			LeaveRule("synpred213_Java_fragment", 340);
+			TraceOut("synpred213_Java_fragment", 331);
+			LeaveRule("synpred213_Java_fragment", 331);
 			LeaveRule_synpred213_Java_fragment();
 		}
 	}
@@ -25637,7 +24672,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred217_Java_fragment()
 	{
 		EnterRule_synpred217_Java_fragment();
-		EnterRule("synpred217_Java_fragment", 344);
+		EnterRule("synpred217_Java_fragment", 335);
 		var retval = new Antlr3CstNode("synpred217_Java_fragment");
 		try
 		{
@@ -25665,8 +24700,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred217_Java_fragment", 344);
-			LeaveRule("synpred217_Java_fragment", 344);
+			TraceOut("synpred217_Java_fragment", 335);
+			LeaveRule("synpred217_Java_fragment", 335);
 			LeaveRule_synpred217_Java_fragment();
 		}
 	}
@@ -25679,7 +24714,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred219_Java_fragment()
 	{
 		EnterRule_synpred219_Java_fragment();
-		EnterRule("synpred219_Java_fragment", 346);
+		EnterRule("synpred219_Java_fragment", 337);
 		var retval = new Antlr3CstNode("synpred219_Java_fragment");
 		try
 		{
@@ -25697,8 +24732,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred219_Java_fragment", 346);
-			LeaveRule("synpred219_Java_fragment", 346);
+			TraceOut("synpred219_Java_fragment", 337);
+			LeaveRule("synpred219_Java_fragment", 337);
 			LeaveRule_synpred219_Java_fragment();
 		}
 	}
@@ -25711,7 +24746,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred220_Java_fragment()
 	{
 		EnterRule_synpred220_Java_fragment();
-		EnterRule("synpred220_Java_fragment", 347);
+		EnterRule("synpred220_Java_fragment", 338);
 		var retval = new Antlr3CstNode("synpred220_Java_fragment");
 		try
 		{
@@ -25730,8 +24765,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred220_Java_fragment", 347);
-			LeaveRule("synpred220_Java_fragment", 347);
+			TraceOut("synpred220_Java_fragment", 338);
+			LeaveRule("synpred220_Java_fragment", 338);
 			LeaveRule_synpred220_Java_fragment();
 		}
 	}
@@ -25744,7 +24779,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred222_Java_fragment()
 	{
 		EnterRule_synpred222_Java_fragment();
-		EnterRule("synpred222_Java_fragment", 349);
+		EnterRule("synpred222_Java_fragment", 340);
 		var retval = new Antlr3CstNode("synpred222_Java_fragment");
 		try
 		{
@@ -25762,8 +24797,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred222_Java_fragment", 349);
-			LeaveRule("synpred222_Java_fragment", 349);
+			TraceOut("synpred222_Java_fragment", 340);
+			LeaveRule("synpred222_Java_fragment", 340);
 			LeaveRule_synpred222_Java_fragment();
 		}
 	}
@@ -25776,7 +24811,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred223_Java_fragment()
 	{
 		EnterRule_synpred223_Java_fragment();
-		EnterRule("synpred223_Java_fragment", 350);
+		EnterRule("synpred223_Java_fragment", 341);
 		var retval = new Antlr3CstNode("synpred223_Java_fragment");
 		try
 		{
@@ -25795,8 +24830,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred223_Java_fragment", 350);
-			LeaveRule("synpred223_Java_fragment", 350);
+			TraceOut("synpred223_Java_fragment", 341);
+			LeaveRule("synpred223_Java_fragment", 341);
 			LeaveRule_synpred223_Java_fragment();
 		}
 	}
@@ -25809,7 +24844,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred235_Java_fragment()
 	{
 		EnterRule_synpred235_Java_fragment();
-		EnterRule("synpred235_Java_fragment", 362);
+		EnterRule("synpred235_Java_fragment", 353);
 		var retval = new Antlr3CstNode("synpred235_Java_fragment");
 		try
 		{
@@ -25832,8 +24867,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred235_Java_fragment", 362);
-			LeaveRule("synpred235_Java_fragment", 362);
+			TraceOut("synpred235_Java_fragment", 353);
+			LeaveRule("synpred235_Java_fragment", 353);
 			LeaveRule_synpred235_Java_fragment();
 		}
 	}
@@ -25846,7 +24881,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred248_Java_fragment()
 	{
 		EnterRule_synpred248_Java_fragment();
-		EnterRule("synpred248_Java_fragment", 375);
+		EnterRule("synpred248_Java_fragment", 366);
 		var retval = new Antlr3CstNode("synpred248_Java_fragment");
 		try
 		{
@@ -25877,8 +24912,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred248_Java_fragment", 375);
-			LeaveRule("synpred248_Java_fragment", 375);
+			TraceOut("synpred248_Java_fragment", 366);
+			LeaveRule("synpred248_Java_fragment", 366);
 			LeaveRule_synpred248_Java_fragment();
 		}
 	}
@@ -25891,7 +24926,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred249_Java_fragment()
 	{
 		EnterRule_synpred249_Java_fragment();
-		EnterRule("synpred249_Java_fragment", 376);
+		EnterRule("synpred249_Java_fragment", 367);
 		var retval = new Antlr3CstNode("synpred249_Java_fragment");
 		try
 		{
@@ -25917,8 +24952,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred249_Java_fragment", 376);
-			LeaveRule("synpred249_Java_fragment", 376);
+			TraceOut("synpred249_Java_fragment", 367);
+			LeaveRule("synpred249_Java_fragment", 367);
 			LeaveRule_synpred249_Java_fragment();
 		}
 	}
@@ -25931,7 +24966,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred251_Java_fragment()
 	{
 		EnterRule_synpred251_Java_fragment();
-		EnterRule("synpred251_Java_fragment", 378);
+		EnterRule("synpred251_Java_fragment", 369);
 		var retval = new Antlr3CstNode("synpred251_Java_fragment");
 		try
 		{
@@ -25952,21 +24987,21 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			Match(input,RBRACKET,Follow._RBRACKET_in_synpred251_Java7373); if (state.failed) return;
 			DebugLocation(1193, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Java\\Java.g:1193:9: ( '[' ']' )*
-			try { DebugEnterSubRule(208);
+			try { DebugEnterSubRule(207);
 			while (true)
 			{
-				int alt208=2;
-				try { DebugEnterDecision(208, false);
-				int LA208_1 = input.LA(1);
+				int alt207=2;
+				try { DebugEnterDecision(207, false);
+				int LA207_1 = input.LA(1);
 
-				if ((LA208_1==LBRACKET))
+				if ((LA207_1==LBRACKET))
 				{
-					alt208 = 1;
+					alt207 = 1;
 				}
 
 
-				} finally { DebugExitDecision(208); }
-				switch ( alt208 )
+				} finally { DebugExitDecision(207); }
+				switch ( alt207 )
 				{
 				case 1:
 					DebugEnterAlt(1);
@@ -25981,14 +25016,14 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 					break;
 
 				default:
-					goto loop208;
+					goto loop207;
 				}
 			}
 
-			loop208:
+			loop207:
 				;
 
-			} finally { DebugExitSubRule(208); }
+			} finally { DebugExitSubRule(207); }
 
 			DebugLocation(1195, 9);
 			PushFollow(Follow._arrayInitializer_in_synpred251_Java7407);
@@ -26001,8 +25036,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred251_Java_fragment", 378);
-			LeaveRule("synpred251_Java_fragment", 378);
+			TraceOut("synpred251_Java_fragment", 369);
+			LeaveRule("synpred251_Java_fragment", 369);
 			LeaveRule_synpred251_Java_fragment();
 		}
 	}
@@ -26015,7 +25050,7 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	private void synpred252_Java_fragment()
 	{
 		EnterRule_synpred252_Java_fragment();
-		EnterRule("synpred252_Java_fragment", 379);
+		EnterRule("synpred252_Java_fragment", 370);
 		var retval = new Antlr3CstNode("synpred252_Java_fragment");
 		try
 		{
@@ -26038,8 +25073,8 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		}
 		finally
 		{
-			TraceOut("synpred252_Java_fragment", 379);
-			LeaveRule("synpred252_Java_fragment", 379);
+			TraceOut("synpred252_Java_fragment", 370);
+			LeaveRule("synpred252_Java_fragment", 370);
 			LeaveRule_synpred252_Java_fragment();
 		}
 	}
@@ -26074,260 +25109,260 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 	#region Follow sets
 	private static class Follow
 	{
-		public static readonly BitSet _annotations_in_compilationUnit107 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
-		public static readonly BitSet _packageDeclaration_in_compilationUnit136 = new BitSet(new ulong[]{0x8100008000012UL,0x4103041C000C0024UL,0x8UL});
-		public static readonly BitSet _importDeclaration_in_compilationUnit158 = new BitSet(new ulong[]{0x8100008000012UL,0x4103041C000C0024UL,0x8UL});
-		public static readonly BitSet _typeDeclaration_in_compilationUnit180 = new BitSet(new ulong[]{0x8100008000012UL,0x4103041C000C0020UL,0x8UL});
-		public static readonly BitSet _PACKAGE_in_packageDeclaration211 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _qualifiedName_in_packageDeclaration213 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _annotations_in_compilationUnit107 = new BitSet(new ulong[]{0x0UL,0x800000000UL});
+		public static readonly BitSet _packageDeclaration_in_compilationUnit136 = new BitSet(new ulong[]{0x102000040000012UL,0x41820E0003002400UL,0x1080UL});
+		public static readonly BitSet _importDeclaration_in_compilationUnit158 = new BitSet(new ulong[]{0x102000040000012UL,0x41820E0003002400UL,0x1080UL});
+		public static readonly BitSet _typeDeclaration_in_compilationUnit180 = new BitSet(new ulong[]{0x102000040000012UL,0x41820E0003002000UL,0x1080UL});
+		public static readonly BitSet _PACKAGE_in_packageDeclaration211 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _qualifiedName_in_packageDeclaration213 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_packageDeclaration223 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IMPORT_in_importDeclaration244 = new BitSet(new ulong[]{0x8000000000000000UL,0x1000000000000UL});
-		public static readonly BitSet _STATIC_in_importDeclaration256 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_importDeclaration277 = new BitSet(new ulong[]{0x800000000UL});
-		public static readonly BitSet _DOT_in_importDeclaration279 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
-		public static readonly BitSet _STAR_in_importDeclaration281 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _IMPORT_in_importDeclaration244 = new BitSet(new ulong[]{0x0UL,0x80000000000080UL});
+		public static readonly BitSet _STATIC_in_importDeclaration256 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_importDeclaration277 = new BitSet(new ulong[]{0x8000000000UL});
+		public static readonly BitSet _DOT_in_importDeclaration279 = new BitSet(new ulong[]{0x0UL,0x20000000000000UL});
+		public static readonly BitSet _STAR_in_importDeclaration281 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_importDeclaration291 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IMPORT_in_importDeclaration308 = new BitSet(new ulong[]{0x8000000000000000UL,0x1000000000000UL});
-		public static readonly BitSet _STATIC_in_importDeclaration320 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_importDeclaration341 = new BitSet(new ulong[]{0x800000000UL});
-		public static readonly BitSet _DOT_in_importDeclaration352 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_importDeclaration354 = new BitSet(new ulong[]{0x800000000UL,0x40000000000UL});
-		public static readonly BitSet _DOT_in_importDeclaration376 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
-		public static readonly BitSet _STAR_in_importDeclaration378 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _IMPORT_in_importDeclaration308 = new BitSet(new ulong[]{0x0UL,0x80000000000080UL});
+		public static readonly BitSet _STATIC_in_importDeclaration320 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_importDeclaration341 = new BitSet(new ulong[]{0x8000000000UL});
+		public static readonly BitSet _DOT_in_importDeclaration352 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_importDeclaration354 = new BitSet(new ulong[]{0x8000000000UL,0x2000000000000UL});
+		public static readonly BitSet _DOT_in_importDeclaration376 = new BitSet(new ulong[]{0x0UL,0x20000000000000UL});
+		public static readonly BitSet _STAR_in_importDeclaration378 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_importDeclaration399 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENTIFIER_in_qualifiedImportName419 = new BitSet(new ulong[]{0x800000002UL});
-		public static readonly BitSet _DOT_in_qualifiedImportName430 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_qualifiedImportName432 = new BitSet(new ulong[]{0x800000002UL});
+		public static readonly BitSet _IDENTIFIER_in_qualifiedImportName419 = new BitSet(new ulong[]{0x8000000002UL});
+		public static readonly BitSet _DOT_in_qualifiedImportName430 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_qualifiedImportName432 = new BitSet(new ulong[]{0x8000000002UL});
 		public static readonly BitSet _classOrInterfaceDeclaration_in_typeDeclaration463 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _SEMI_in_typeDeclaration473 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _classDeclaration_in_classOrInterfaceDeclaration494 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _interfaceDeclaration_in_classOrInterfaceDeclaration504 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _annotation_in_modifiers539 = new BitSet(new ulong[]{0x8000000000012UL,0x4103001C000C0000UL,0x8UL});
-		public static readonly BitSet _PUBLIC_in_modifiers549 = new BitSet(new ulong[]{0x8000000000012UL,0x4103001C000C0000UL,0x8UL});
-		public static readonly BitSet _PROTECTED_in_modifiers559 = new BitSet(new ulong[]{0x8000000000012UL,0x4103001C000C0000UL,0x8UL});
-		public static readonly BitSet _PRIVATE_in_modifiers569 = new BitSet(new ulong[]{0x8000000000012UL,0x4103001C000C0000UL,0x8UL});
-		public static readonly BitSet _STATIC_in_modifiers579 = new BitSet(new ulong[]{0x8000000000012UL,0x4103001C000C0000UL,0x8UL});
-		public static readonly BitSet _ABSTRACT_in_modifiers589 = new BitSet(new ulong[]{0x8000000000012UL,0x4103001C000C0000UL,0x8UL});
-		public static readonly BitSet _FINAL_in_modifiers599 = new BitSet(new ulong[]{0x8000000000012UL,0x4103001C000C0000UL,0x8UL});
-		public static readonly BitSet _NATIVE_in_modifiers609 = new BitSet(new ulong[]{0x8000000000012UL,0x4103001C000C0000UL,0x8UL});
-		public static readonly BitSet _SYNCHRONIZED_in_modifiers619 = new BitSet(new ulong[]{0x8000000000012UL,0x4103001C000C0000UL,0x8UL});
-		public static readonly BitSet _TRANSIENT_in_modifiers629 = new BitSet(new ulong[]{0x8000000000012UL,0x4103001C000C0000UL,0x8UL});
-		public static readonly BitSet _VOLATILE_in_modifiers639 = new BitSet(new ulong[]{0x8000000000012UL,0x4103001C000C0000UL,0x8UL});
-		public static readonly BitSet _STRICTFP_in_modifiers649 = new BitSet(new ulong[]{0x8000000000012UL,0x4103001C000C0000UL,0x8UL});
-		public static readonly BitSet _FINAL_in_variableModifiers681 = new BitSet(new ulong[]{0x8000000000002UL,0x40000UL});
-		public static readonly BitSet _annotation_in_variableModifiers695 = new BitSet(new ulong[]{0x8000000000002UL,0x40000UL});
+		public static readonly BitSet _annotation_in_modifiers539 = new BitSet(new ulong[]{0x100000000000012UL,0x41800E0003000000UL,0x1080UL});
+		public static readonly BitSet _PUBLIC_in_modifiers549 = new BitSet(new ulong[]{0x100000000000012UL,0x41800E0003000000UL,0x1080UL});
+		public static readonly BitSet _PROTECTED_in_modifiers559 = new BitSet(new ulong[]{0x100000000000012UL,0x41800E0003000000UL,0x1080UL});
+		public static readonly BitSet _PRIVATE_in_modifiers569 = new BitSet(new ulong[]{0x100000000000012UL,0x41800E0003000000UL,0x1080UL});
+		public static readonly BitSet _STATIC_in_modifiers579 = new BitSet(new ulong[]{0x100000000000012UL,0x41800E0003000000UL,0x1080UL});
+		public static readonly BitSet _ABSTRACT_in_modifiers589 = new BitSet(new ulong[]{0x100000000000012UL,0x41800E0003000000UL,0x1080UL});
+		public static readonly BitSet _FINAL_in_modifiers599 = new BitSet(new ulong[]{0x100000000000012UL,0x41800E0003000000UL,0x1080UL});
+		public static readonly BitSet _NATIVE_in_modifiers609 = new BitSet(new ulong[]{0x100000000000012UL,0x41800E0003000000UL,0x1080UL});
+		public static readonly BitSet _SYNCHRONIZED_in_modifiers619 = new BitSet(new ulong[]{0x100000000000012UL,0x41800E0003000000UL,0x1080UL});
+		public static readonly BitSet _TRANSIENT_in_modifiers629 = new BitSet(new ulong[]{0x100000000000012UL,0x41800E0003000000UL,0x1080UL});
+		public static readonly BitSet _VOLATILE_in_modifiers639 = new BitSet(new ulong[]{0x100000000000012UL,0x41800E0003000000UL,0x1080UL});
+		public static readonly BitSet _STRICTFP_in_modifiers649 = new BitSet(new ulong[]{0x100000000000012UL,0x41800E0003000000UL,0x1080UL});
+		public static readonly BitSet _FINAL_in_variableModifiers681 = new BitSet(new ulong[]{0x100000000000002UL,0x1000000UL});
+		public static readonly BitSet _annotation_in_variableModifiers695 = new BitSet(new ulong[]{0x100000000000002UL,0x1000000UL});
 		public static readonly BitSet _normalClassDeclaration_in_classDeclaration731 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _enumDeclaration_in_classDeclaration741 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_normalClassDeclaration761 = new BitSet(new ulong[]{0x8000000UL});
-		public static readonly BitSet _CLASS_in_normalClassDeclaration764 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_normalClassDeclaration766 = new BitSet(new ulong[]{0x800000000000UL,0x10402UL});
-		public static readonly BitSet _typeParameters_in_normalClassDeclaration777 = new BitSet(new ulong[]{0x800000000000UL,0x402UL});
-		public static readonly BitSet _EXTENDS_in_normalClassDeclaration799 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_normalClassDeclaration801 = new BitSet(new ulong[]{0x0UL,0x402UL});
-		public static readonly BitSet _IMPLEMENTS_in_normalClassDeclaration823 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _typeList_in_normalClassDeclaration825 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _modifiers_in_normalClassDeclaration761 = new BitSet(new ulong[]{0x40000000UL});
+		public static readonly BitSet _CLASS_in_normalClassDeclaration764 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_normalClassDeclaration766 = new BitSet(new ulong[]{0x10000000000000UL,0x840200UL});
+		public static readonly BitSet _typeParameters_in_normalClassDeclaration777 = new BitSet(new ulong[]{0x10000000000000UL,0x40200UL});
+		public static readonly BitSet _EXTENDS_in_normalClassDeclaration799 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _type_in_normalClassDeclaration801 = new BitSet(new ulong[]{0x0UL,0x40200UL});
+		public static readonly BitSet _IMPLEMENTS_in_normalClassDeclaration823 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _typeList_in_normalClassDeclaration825 = new BitSet(new ulong[]{0x0UL,0x40000UL});
 		public static readonly BitSet _classBody_in_normalClassDeclaration858 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LT_in_typeParameters879 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _typeParameter_in_typeParameters893 = new BitSet(new ulong[]{0x400000020000000UL});
-		public static readonly BitSet _COMMA_in_typeParameters908 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _typeParameter_in_typeParameters910 = new BitSet(new ulong[]{0x400000020000000UL});
+		public static readonly BitSet _LT_in_typeParameters879 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _typeParameter_in_typeParameters893 = new BitSet(new ulong[]{0x8000000100000000UL});
+		public static readonly BitSet _COMMA_in_typeParameters908 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _typeParameter_in_typeParameters910 = new BitSet(new ulong[]{0x8000000100000000UL});
 		public static readonly BitSet _GT_in_typeParameters935 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENTIFIER_in_typeParameter955 = new BitSet(new ulong[]{0x800000000002UL});
-		public static readonly BitSet _EXTENDS_in_typeParameter966 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _IDENTIFIER_in_typeParameter955 = new BitSet(new ulong[]{0x10000000000002UL});
+		public static readonly BitSet _EXTENDS_in_typeParameter966 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
 		public static readonly BitSet _typeBound_in_typeParameter968 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _type_in_typeBound1000 = new BitSet(new ulong[]{0x22UL});
-		public static readonly BitSet _AMP_in_typeBound1011 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _AMP_in_typeBound1011 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
 		public static readonly BitSet _type_in_typeBound1013 = new BitSet(new ulong[]{0x22UL});
-		public static readonly BitSet _modifiers_in_enumDeclaration1045 = new BitSet(new ulong[]{0x100000000000UL});
-		public static readonly BitSet _ENUM_in_enumDeclaration1057 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_enumDeclaration1078 = new BitSet(new ulong[]{0x0UL,0x402UL});
-		public static readonly BitSet _IMPLEMENTS_in_enumDeclaration1089 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _typeList_in_enumDeclaration1091 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _modifiers_in_enumDeclaration1045 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _ENUM_in_enumDeclaration1057 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_enumDeclaration1078 = new BitSet(new ulong[]{0x0UL,0x40200UL});
+		public static readonly BitSet _IMPLEMENTS_in_enumDeclaration1089 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _typeList_in_enumDeclaration1091 = new BitSet(new ulong[]{0x0UL,0x40000UL});
 		public static readonly BitSet _enumBody_in_enumDeclaration1112 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACE_in_enumBody1137 = new BitSet(new ulong[]{0x8000000020000000UL,0x44000040000UL});
-		public static readonly BitSet _enumConstants_in_enumBody1148 = new BitSet(new ulong[]{0x20000000UL,0x44000000000UL});
-		public static readonly BitSet _COMMA_in_enumBody1170 = new BitSet(new ulong[]{0x0UL,0x44000000000UL});
-		public static readonly BitSet _enumBodyDeclarations_in_enumBody1183 = new BitSet(new ulong[]{0x0UL,0x4000000000UL});
+		public static readonly BitSet _LBRACE_in_enumBody1137 = new BitSet(new ulong[]{0x100000000UL,0x2200001000080UL});
+		public static readonly BitSet _enumConstants_in_enumBody1148 = new BitSet(new ulong[]{0x100000000UL,0x2200000000000UL});
+		public static readonly BitSet _COMMA_in_enumBody1170 = new BitSet(new ulong[]{0x0UL,0x2200000000000UL});
+		public static readonly BitSet _enumBodyDeclarations_in_enumBody1183 = new BitSet(new ulong[]{0x0UL,0x200000000000UL});
 		public static readonly BitSet _RBRACE_in_enumBody1205 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _enumConstant_in_enumConstants1225 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _COMMA_in_enumConstants1236 = new BitSet(new ulong[]{0x8000000000000000UL,0x40000UL});
-		public static readonly BitSet _enumConstant_in_enumConstants1238 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _annotations_in_enumConstant1272 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_enumConstant1293 = new BitSet(new ulong[]{0x2UL,0x8400UL});
-		public static readonly BitSet _arguments_in_enumConstant1304 = new BitSet(new ulong[]{0x2UL,0x400UL});
+		public static readonly BitSet _enumConstant_in_enumConstants1225 = new BitSet(new ulong[]{0x100000002UL});
+		public static readonly BitSet _COMMA_in_enumConstants1236 = new BitSet(new ulong[]{0x0UL,0x1000080UL});
+		public static readonly BitSet _enumConstant_in_enumConstants1238 = new BitSet(new ulong[]{0x100000002UL});
+		public static readonly BitSet _annotations_in_enumConstant1272 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_enumConstant1293 = new BitSet(new ulong[]{0x2UL,0x440000UL});
+		public static readonly BitSet _arguments_in_enumConstant1304 = new BitSet(new ulong[]{0x2UL,0x40000UL});
 		public static readonly BitSet _classBody_in_enumConstant1326 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _SEMI_in_enumBodyDeclarations1367 = new BitSet(new ulong[]{0x802810100A014012UL,0x41030C1C000D2430UL,0xCUL});
-		public static readonly BitSet _classBodyDeclaration_in_enumBodyDeclarations1379 = new BitSet(new ulong[]{0x802810100A014012UL,0x41030C1C000D2430UL,0xCUL});
+		public static readonly BitSet _SEMI_in_enumBodyDeclarations1367 = new BitSet(new ulong[]{0x502010060014012UL,0x41860E0003A43080UL,0x1880UL});
+		public static readonly BitSet _classBodyDeclaration_in_enumBodyDeclarations1379 = new BitSet(new ulong[]{0x502010060014012UL,0x41860E0003A43080UL,0x1880UL});
 		public static readonly BitSet _normalInterfaceDeclaration_in_interfaceDeclaration1410 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _annotationTypeDeclaration_in_interfaceDeclaration1420 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_normalInterfaceDeclaration1444 = new BitSet(new ulong[]{0x0UL,0x20UL});
-		public static readonly BitSet _INTERFACE_in_normalInterfaceDeclaration1446 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_normalInterfaceDeclaration1448 = new BitSet(new ulong[]{0x800000000000UL,0x10400UL});
-		public static readonly BitSet _typeParameters_in_normalInterfaceDeclaration1459 = new BitSet(new ulong[]{0x800000000000UL,0x400UL});
-		public static readonly BitSet _EXTENDS_in_normalInterfaceDeclaration1481 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _typeList_in_normalInterfaceDeclaration1483 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _modifiers_in_normalInterfaceDeclaration1444 = new BitSet(new ulong[]{0x0UL,0x2000UL});
+		public static readonly BitSet _INTERFACE_in_normalInterfaceDeclaration1446 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_normalInterfaceDeclaration1448 = new BitSet(new ulong[]{0x10000000000000UL,0x840000UL});
+		public static readonly BitSet _typeParameters_in_normalInterfaceDeclaration1459 = new BitSet(new ulong[]{0x10000000000000UL,0x40000UL});
+		public static readonly BitSet _EXTENDS_in_normalInterfaceDeclaration1481 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _typeList_in_normalInterfaceDeclaration1483 = new BitSet(new ulong[]{0x0UL,0x40000UL});
 		public static readonly BitSet _interfaceBody_in_normalInterfaceDeclaration1504 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _type_in_typeList1524 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _COMMA_in_typeList1535 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_typeList1537 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _LBRACE_in_classBody1568 = new BitSet(new ulong[]{0x802810100A014010UL,0x41030C5C000D2430UL,0xCUL});
-		public static readonly BitSet _classBodyDeclaration_in_classBody1580 = new BitSet(new ulong[]{0x802810100A014010UL,0x41030C5C000D2430UL,0xCUL});
+		public static readonly BitSet _type_in_typeList1524 = new BitSet(new ulong[]{0x100000002UL});
+		public static readonly BitSet _COMMA_in_typeList1535 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _type_in_typeList1537 = new BitSet(new ulong[]{0x100000002UL});
+		public static readonly BitSet _LBRACE_in_classBody1568 = new BitSet(new ulong[]{0x502010060014010UL,0x41862E0003A43080UL,0x1880UL});
+		public static readonly BitSet _classBodyDeclaration_in_classBody1580 = new BitSet(new ulong[]{0x502010060014010UL,0x41862E0003A43080UL,0x1880UL});
 		public static readonly BitSet _RBRACE_in_classBody1602 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACE_in_interfaceBody1622 = new BitSet(new ulong[]{0x802810100A014010UL,0x41030C5C000D2030UL,0xCUL});
-		public static readonly BitSet _interfaceBodyDeclaration_in_interfaceBody1634 = new BitSet(new ulong[]{0x802810100A014010UL,0x41030C5C000D2030UL,0xCUL});
+		public static readonly BitSet _LBRACE_in_interfaceBody1622 = new BitSet(new ulong[]{0x502010060014010UL,0x41862E0003A03080UL,0x1880UL});
+		public static readonly BitSet _interfaceBodyDeclaration_in_interfaceBody1634 = new BitSet(new ulong[]{0x502010060014010UL,0x41862E0003A03080UL,0x1880UL});
 		public static readonly BitSet _RBRACE_in_interfaceBody1656 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _SEMI_in_classBodyDeclaration1676 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _STATIC_in_classBodyDeclaration1687 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _STATIC_in_classBodyDeclaration1687 = new BitSet(new ulong[]{0x0UL,0x40000UL});
 		public static readonly BitSet _block_in_classBodyDeclaration1709 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _memberDecl_in_classBodyDeclaration1719 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _fieldDeclaration_in_memberDecl1740 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _methodDeclaration_in_memberDecl1751 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _classDeclaration_in_memberDecl1762 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _interfaceDeclaration_in_memberDecl1773 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_methodDeclaration1811 = new BitSet(new ulong[]{0x8000000000000000UL,0x10000UL});
-		public static readonly BitSet _typeParameters_in_methodDeclaration1822 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_methodDeclaration1843 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _formalParameters_in_methodDeclaration1853 = new BitSet(new ulong[]{0x0UL,0x1000000000000400UL});
-		public static readonly BitSet _THROWS_in_methodDeclaration1864 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _qualifiedNameList_in_methodDeclaration1866 = new BitSet(new ulong[]{0x0UL,0x400UL});
-		public static readonly BitSet _LBRACE_in_methodDeclaration1887 = new BitSet(new ulong[]{0x80EC10350E01C310UL,0xEDEF0D5E803DE471UL,0x1DUL});
-		public static readonly BitSet _explicitConstructorInvocation_in_methodDeclaration1899 = new BitSet(new ulong[]{0x80EC10350E01C310UL,0xEDEF0D5E803CE471UL,0x1DUL});
-		public static readonly BitSet _blockStatement_in_methodDeclaration1921 = new BitSet(new ulong[]{0x80EC10350E01C310UL,0xEDEF0D5E803CE471UL,0x1DUL});
+		public static readonly BitSet _modifiers_in_methodDeclaration1811 = new BitSet(new ulong[]{0x0UL,0x800080UL});
+		public static readonly BitSet _typeParameters_in_methodDeclaration1822 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_methodDeclaration1843 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _formalParameters_in_methodDeclaration1853 = new BitSet(new ulong[]{0x0UL,0x40000UL,0x20UL});
+		public static readonly BitSet _THROWS_in_methodDeclaration1864 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _qualifiedNameList_in_methodDeclaration1866 = new BitSet(new ulong[]{0x0UL,0x40000UL});
+		public static readonly BitSet _LBRACE_in_methodDeclaration1887 = new BitSet(new ulong[]{0x2D0201586101C310UL,0x7B86AF4017E53180UL,0x39DAUL});
+		public static readonly BitSet _explicitConstructorInvocation_in_methodDeclaration1899 = new BitSet(new ulong[]{0x2D0201586101C310UL,0x7B86AF4017653180UL,0x39DAUL});
+		public static readonly BitSet _blockStatement_in_methodDeclaration1921 = new BitSet(new ulong[]{0x2D0201586101C310UL,0x7B86AF4017653180UL,0x39DAUL});
 		public static readonly BitSet _RBRACE_in_methodDeclaration1942 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_methodDeclaration1952 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000012010UL,0x4UL});
-		public static readonly BitSet _typeParameters_in_methodDeclaration1963 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL,0x4UL});
-		public static readonly BitSet _type_in_methodDeclaration1985 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _VOID_in_methodDeclaration1999 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_methodDeclaration2019 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _formalParameters_in_methodDeclaration2029 = new BitSet(new ulong[]{0x0UL,0x1000040000000C00UL});
-		public static readonly BitSet _LBRACKET_in_methodDeclaration2040 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_methodDeclaration2042 = new BitSet(new ulong[]{0x0UL,0x1000040000000C00UL});
-		public static readonly BitSet _THROWS_in_methodDeclaration2064 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _qualifiedNameList_in_methodDeclaration2066 = new BitSet(new ulong[]{0x0UL,0x40000000400UL});
+		public static readonly BitSet _modifiers_in_methodDeclaration1952 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000A01080UL,0x800UL});
+		public static readonly BitSet _typeParameters_in_methodDeclaration1963 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL,0x800UL});
+		public static readonly BitSet _type_in_methodDeclaration1985 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _VOID_in_methodDeclaration1999 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_methodDeclaration2019 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _formalParameters_in_methodDeclaration2029 = new BitSet(new ulong[]{0x0UL,0x20000000C0000UL,0x20UL});
+		public static readonly BitSet _LBRACKET_in_methodDeclaration2040 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_methodDeclaration2042 = new BitSet(new ulong[]{0x0UL,0x20000000C0000UL,0x20UL});
+		public static readonly BitSet _THROWS_in_methodDeclaration2064 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _qualifiedNameList_in_methodDeclaration2066 = new BitSet(new ulong[]{0x0UL,0x2000000040000UL});
 		public static readonly BitSet _block_in_methodDeclaration2121 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _SEMI_in_methodDeclaration2135 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_fieldDeclaration2167 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_fieldDeclaration2177 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _variableDeclarator_in_fieldDeclaration2187 = new BitSet(new ulong[]{0x20000000UL,0x40000000000UL});
-		public static readonly BitSet _COMMA_in_fieldDeclaration2198 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _variableDeclarator_in_fieldDeclaration2200 = new BitSet(new ulong[]{0x20000000UL,0x40000000000UL});
+		public static readonly BitSet _modifiers_in_fieldDeclaration2167 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _type_in_fieldDeclaration2177 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _variableDeclarator_in_fieldDeclaration2187 = new BitSet(new ulong[]{0x100000000UL,0x2000000000000UL});
+		public static readonly BitSet _COMMA_in_fieldDeclaration2198 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _variableDeclarator_in_fieldDeclaration2200 = new BitSet(new ulong[]{0x100000000UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_fieldDeclaration2221 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENTIFIER_in_variableDeclarator2241 = new BitSet(new ulong[]{0x200000000002UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_variableDeclarator2252 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_variableDeclarator2254 = new BitSet(new ulong[]{0x200000000002UL,0x800UL});
-		public static readonly BitSet _EQ_in_variableDeclarator2276 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E450UL,0x4UL});
+		public static readonly BitSet _IDENTIFIER_in_variableDeclarator2241 = new BitSet(new ulong[]{0x4000000000002UL,0x80000UL});
+		public static readonly BitSet _LBRACKET_in_variableDeclarator2252 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_variableDeclarator2254 = new BitSet(new ulong[]{0x4000000000002UL,0x80000UL});
+		public static readonly BitSet _EQ_in_variableDeclarator2276 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014651080UL,0x84AUL});
 		public static readonly BitSet _variableInitializer_in_variableDeclarator2278 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _interfaceFieldDeclaration_in_interfaceBodyDeclaration2317 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _interfaceMethodDeclaration_in_interfaceBodyDeclaration2327 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _interfaceDeclaration_in_interfaceBodyDeclaration2337 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _classDeclaration_in_interfaceBodyDeclaration2347 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _SEMI_in_interfaceBodyDeclaration2357 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_interfaceMethodDeclaration2377 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000012010UL,0x4UL});
-		public static readonly BitSet _typeParameters_in_interfaceMethodDeclaration2388 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL,0x4UL});
-		public static readonly BitSet _type_in_interfaceMethodDeclaration2410 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _VOID_in_interfaceMethodDeclaration2421 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_interfaceMethodDeclaration2441 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _formalParameters_in_interfaceMethodDeclaration2451 = new BitSet(new ulong[]{0x0UL,0x1000040000000800UL});
-		public static readonly BitSet _LBRACKET_in_interfaceMethodDeclaration2462 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_interfaceMethodDeclaration2464 = new BitSet(new ulong[]{0x0UL,0x1000040000000800UL});
-		public static readonly BitSet _THROWS_in_interfaceMethodDeclaration2486 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _qualifiedNameList_in_interfaceMethodDeclaration2488 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _modifiers_in_interfaceMethodDeclaration2377 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000A01080UL,0x800UL});
+		public static readonly BitSet _typeParameters_in_interfaceMethodDeclaration2388 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL,0x800UL});
+		public static readonly BitSet _type_in_interfaceMethodDeclaration2410 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _VOID_in_interfaceMethodDeclaration2421 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_interfaceMethodDeclaration2441 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _formalParameters_in_interfaceMethodDeclaration2451 = new BitSet(new ulong[]{0x0UL,0x2000000080000UL,0x20UL});
+		public static readonly BitSet _LBRACKET_in_interfaceMethodDeclaration2462 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_interfaceMethodDeclaration2464 = new BitSet(new ulong[]{0x0UL,0x2000000080000UL,0x20UL});
+		public static readonly BitSet _THROWS_in_interfaceMethodDeclaration2486 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _qualifiedNameList_in_interfaceMethodDeclaration2488 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_interfaceMethodDeclaration2501 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_interfaceFieldDeclaration2523 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_interfaceFieldDeclaration2525 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _variableDeclarator_in_interfaceFieldDeclaration2527 = new BitSet(new ulong[]{0x20000000UL,0x40000000000UL});
-		public static readonly BitSet _COMMA_in_interfaceFieldDeclaration2538 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _variableDeclarator_in_interfaceFieldDeclaration2540 = new BitSet(new ulong[]{0x20000000UL,0x40000000000UL});
+		public static readonly BitSet _modifiers_in_interfaceFieldDeclaration2523 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _type_in_interfaceFieldDeclaration2525 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _variableDeclarator_in_interfaceFieldDeclaration2527 = new BitSet(new ulong[]{0x100000000UL,0x2000000000000UL});
+		public static readonly BitSet _COMMA_in_interfaceFieldDeclaration2538 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _variableDeclarator_in_interfaceFieldDeclaration2540 = new BitSet(new ulong[]{0x100000000UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_interfaceFieldDeclaration2561 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _classOrInterfaceType_in_type2582 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_type2593 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_type2595 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _primitiveType_in_type2616 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_type2627 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_type2629 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _IDENTIFIER_in_classOrInterfaceType2661 = new BitSet(new ulong[]{0x800000002UL,0x10000UL});
-		public static readonly BitSet _typeArguments_in_classOrInterfaceType2672 = new BitSet(new ulong[]{0x800000002UL});
-		public static readonly BitSet _DOT_in_classOrInterfaceType2694 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_classOrInterfaceType2696 = new BitSet(new ulong[]{0x800000002UL,0x10000UL});
-		public static readonly BitSet _typeArguments_in_classOrInterfaceType2711 = new BitSet(new ulong[]{0x800000002UL});
-		public static readonly BitSet _IDENTIFIER_in_classOrInterfaceTypeWithDiamond2757 = new BitSet(new ulong[]{0x800000002UL,0x10000UL});
-		public static readonly BitSet _typeArgumentsOrDiamond_in_classOrInterfaceTypeWithDiamond2768 = new BitSet(new ulong[]{0x800000002UL});
-		public static readonly BitSet _DOT_in_classOrInterfaceTypeWithDiamond2790 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_classOrInterfaceTypeWithDiamond2792 = new BitSet(new ulong[]{0x800000002UL,0x10000UL});
-		public static readonly BitSet _typeArgumentsOrDiamond_in_classOrInterfaceTypeWithDiamond2807 = new BitSet(new ulong[]{0x800000002UL});
-		public static readonly BitSet _LT_in_typeArguments2944 = new BitSet(new ulong[]{0x8020001002014000UL,0x82000002010UL});
-		public static readonly BitSet _typeArgument_in_typeArguments2946 = new BitSet(new ulong[]{0x400000020000000UL});
-		public static readonly BitSet _COMMA_in_typeArguments2949 = new BitSet(new ulong[]{0x8020001002014000UL,0x82000002010UL});
-		public static readonly BitSet _typeArgument_in_typeArguments2951 = new BitSet(new ulong[]{0x400000020000000UL});
+		public static readonly BitSet _classOrInterfaceType_in_type2582 = new BitSet(new ulong[]{0x2UL,0x80000UL});
+		public static readonly BitSet _LBRACKET_in_type2593 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_type2595 = new BitSet(new ulong[]{0x2UL,0x80000UL});
+		public static readonly BitSet _primitiveType_in_type2616 = new BitSet(new ulong[]{0x2UL,0x80000UL});
+		public static readonly BitSet _LBRACKET_in_type2627 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_type2629 = new BitSet(new ulong[]{0x2UL,0x80000UL});
+		public static readonly BitSet _IDENTIFIER_in_classOrInterfaceType2661 = new BitSet(new ulong[]{0x8000000002UL,0x800000UL});
+		public static readonly BitSet _typeArguments_in_classOrInterfaceType2672 = new BitSet(new ulong[]{0x8000000002UL});
+		public static readonly BitSet _DOT_in_classOrInterfaceType2694 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_classOrInterfaceType2696 = new BitSet(new ulong[]{0x8000000002UL,0x800000UL});
+		public static readonly BitSet _typeArguments_in_classOrInterfaceType2711 = new BitSet(new ulong[]{0x8000000002UL});
+		public static readonly BitSet _IDENTIFIER_in_classOrInterfaceTypeWithDiamond2757 = new BitSet(new ulong[]{0x8000000002UL,0x800000UL});
+		public static readonly BitSet _typeArgumentsOrDiamond_in_classOrInterfaceTypeWithDiamond2768 = new BitSet(new ulong[]{0x8000000002UL});
+		public static readonly BitSet _DOT_in_classOrInterfaceTypeWithDiamond2790 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_classOrInterfaceTypeWithDiamond2792 = new BitSet(new ulong[]{0x8000000002UL,0x800000UL});
+		public static readonly BitSet _typeArgumentsOrDiamond_in_classOrInterfaceTypeWithDiamond2807 = new BitSet(new ulong[]{0x8000000002UL});
+		public static readonly BitSet _LT_in_typeArguments2944 = new BitSet(new ulong[]{0x400010020014000UL,0x4100000201080UL});
+		public static readonly BitSet _typeArgument_in_typeArguments2946 = new BitSet(new ulong[]{0x8000000100000000UL});
+		public static readonly BitSet _COMMA_in_typeArguments2949 = new BitSet(new ulong[]{0x400010020014000UL,0x4100000201080UL});
+		public static readonly BitSet _typeArgument_in_typeArguments2951 = new BitSet(new ulong[]{0x8000000100000000UL});
 		public static readonly BitSet _GT_in_typeArguments2955 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _type_in_typeArgument2975 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _QUES_in_typeArgument2985 = new BitSet(new ulong[]{0x800000000002UL,0x40000000000000UL});
-		public static readonly BitSet _set_in_typeArgument3009 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _QUES_in_typeArgument2985 = new BitSet(new ulong[]{0x10000000000002UL,0x1000000000000000UL});
+		public static readonly BitSet _set_in_typeArgument3009 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
 		public static readonly BitSet _type_in_typeArgument3053 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _qualifiedName_in_qualifiedNameList3084 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _COMMA_in_qualifiedNameList3095 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _qualifiedName_in_qualifiedNameList3097 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _LPAREN_in_formalParameters3128 = new BitSet(new ulong[]{0x8028001002014000UL,0xA0000042010UL});
-		public static readonly BitSet _formalParameterDecls_in_formalParameters3139 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
+		public static readonly BitSet _qualifiedName_in_qualifiedNameList3084 = new BitSet(new ulong[]{0x100000002UL});
+		public static readonly BitSet _COMMA_in_qualifiedNameList3095 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _qualifiedName_in_qualifiedNameList3097 = new BitSet(new ulong[]{0x100000002UL});
+		public static readonly BitSet _LPAREN_in_formalParameters3128 = new BitSet(new ulong[]{0x500010020014000UL,0x5000001201080UL});
+		public static readonly BitSet _formalParameterDecls_in_formalParameters3139 = new BitSet(new ulong[]{0x0UL,0x1000000000000UL});
 		public static readonly BitSet _RPAREN_in_formalParameters3161 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _ellipsisParameterDecl_in_formalParameterDecls3181 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _normalParameterDecl_in_formalParameterDecls3191 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _COMMA_in_formalParameterDecls3202 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
-		public static readonly BitSet _normalParameterDecl_in_formalParameterDecls3204 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _normalParameterDecl_in_formalParameterDecls3226 = new BitSet(new ulong[]{0x20000000UL});
-		public static readonly BitSet _COMMA_in_formalParameterDecls3236 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
+		public static readonly BitSet _normalParameterDecl_in_formalParameterDecls3191 = new BitSet(new ulong[]{0x100000002UL});
+		public static readonly BitSet _COMMA_in_formalParameterDecls3202 = new BitSet(new ulong[]{0x500010020014000UL,0x4000001201080UL});
+		public static readonly BitSet _normalParameterDecl_in_formalParameterDecls3204 = new BitSet(new ulong[]{0x100000002UL});
+		public static readonly BitSet _normalParameterDecl_in_formalParameterDecls3226 = new BitSet(new ulong[]{0x100000000UL});
+		public static readonly BitSet _COMMA_in_formalParameterDecls3236 = new BitSet(new ulong[]{0x500010020014000UL,0x4000001201080UL});
 		public static readonly BitSet _ellipsisParameterDecl_in_formalParameterDecls3258 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _variableModifiers_in_normalParameterDecl3278 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_normalParameterDecl3280 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_normalParameterDecl3282 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_normalParameterDecl3293 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_normalParameterDecl3295 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _variableModifiers_in_ellipsisParameterDecl3326 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_ellipsisParameterDecl3336 = new BitSet(new ulong[]{0x40000000000UL});
-		public static readonly BitSet _ELLIPSIS_in_ellipsisParameterDecl3339 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _variableModifiers_in_normalParameterDecl3278 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _type_in_normalParameterDecl3280 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_normalParameterDecl3282 = new BitSet(new ulong[]{0x2UL,0x80000UL});
+		public static readonly BitSet _LBRACKET_in_normalParameterDecl3293 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_normalParameterDecl3295 = new BitSet(new ulong[]{0x2UL,0x80000UL});
+		public static readonly BitSet _variableModifiers_in_ellipsisParameterDecl3326 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _type_in_ellipsisParameterDecl3336 = new BitSet(new ulong[]{0x800000000000UL});
+		public static readonly BitSet _ELLIPSIS_in_ellipsisParameterDecl3339 = new BitSet(new ulong[]{0x0UL,0x80UL});
 		public static readonly BitSet _IDENTIFIER_in_ellipsisParameterDecl3349 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _nonWildcardTypeArguments_in_explicitConstructorInvocation3371 = new BitSet(new ulong[]{0x0UL,0x440000000000000UL});
-		public static readonly BitSet _set_in_explicitConstructorInvocation3397 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _arguments_in_explicitConstructorInvocation3429 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_explicitConstructorInvocation3371 = new BitSet(new ulong[]{0x0UL,0x1000000000000000UL,0x8UL});
+		public static readonly BitSet _set_in_explicitConstructorInvocation3397 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _arguments_in_explicitConstructorInvocation3429 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_explicitConstructorInvocation3431 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primary_in_explicitConstructorInvocation3442 = new BitSet(new ulong[]{0x800000000UL});
-		public static readonly BitSet _DOT_in_explicitConstructorInvocation3452 = new BitSet(new ulong[]{0x0UL,0x40000000010000UL});
-		public static readonly BitSet _nonWildcardTypeArguments_in_explicitConstructorInvocation3463 = new BitSet(new ulong[]{0x0UL,0x40000000000000UL});
-		public static readonly BitSet _SUPER_in_explicitConstructorInvocation3484 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _arguments_in_explicitConstructorInvocation3494 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _primary_in_explicitConstructorInvocation3442 = new BitSet(new ulong[]{0x8000000000UL});
+		public static readonly BitSet _DOT_in_explicitConstructorInvocation3452 = new BitSet(new ulong[]{0x0UL,0x1000000000800000UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_explicitConstructorInvocation3463 = new BitSet(new ulong[]{0x0UL,0x1000000000000000UL});
+		public static readonly BitSet _SUPER_in_explicitConstructorInvocation3484 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _arguments_in_explicitConstructorInvocation3494 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_explicitConstructorInvocation3496 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENTIFIER_in_qualifiedName3516 = new BitSet(new ulong[]{0x800000002UL});
-		public static readonly BitSet _DOT_in_qualifiedName3527 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_qualifiedName3529 = new BitSet(new ulong[]{0x800000002UL});
-		public static readonly BitSet _annotation_in_annotations3561 = new BitSet(new ulong[]{0x2UL,0x40000UL});
-		public static readonly BitSet _MONKEYS_AT_in_annotation3594 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _qualifiedName_in_annotation3596 = new BitSet(new ulong[]{0x2UL,0x8000UL});
-		public static readonly BitSet _LPAREN_in_annotation3610 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C0A028034E450UL,0x4UL});
-		public static readonly BitSet _elementValuePairs_in_annotation3637 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _elementValue_in_annotation3661 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
+		public static readonly BitSet _IDENTIFIER_in_qualifiedName3516 = new BitSet(new ulong[]{0x8000000002UL});
+		public static readonly BitSet _DOT_in_qualifiedName3527 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_qualifiedName3529 = new BitSet(new ulong[]{0x8000000002UL});
+		public static readonly BitSet _annotation_in_annotations3561 = new BitSet(new ulong[]{0x2UL,0x1000000UL});
+		public static readonly BitSet _MONKEYS_AT_in_annotation3594 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _qualifiedName_in_annotation3596 = new BitSet(new ulong[]{0x2UL,0x400000UL});
+		public static readonly BitSet _LPAREN_in_annotation3610 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A05014015651080UL,0x84AUL});
+		public static readonly BitSet _elementValuePairs_in_annotation3637 = new BitSet(new ulong[]{0x0UL,0x1000000000000UL});
+		public static readonly BitSet _elementValue_in_annotation3661 = new BitSet(new ulong[]{0x0UL,0x1000000000000UL});
 		public static readonly BitSet _RPAREN_in_annotation3697 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _elementValuePair_in_elementValuePairs3729 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _COMMA_in_elementValuePairs3740 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _elementValuePair_in_elementValuePairs3742 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _IDENTIFIER_in_elementValuePair3773 = new BitSet(new ulong[]{0x200000000000UL});
-		public static readonly BitSet _EQ_in_elementValuePair3775 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028034E450UL,0x4UL});
+		public static readonly BitSet _elementValuePair_in_elementValuePairs3729 = new BitSet(new ulong[]{0x100000002UL});
+		public static readonly BitSet _COMMA_in_elementValuePairs3740 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _elementValuePair_in_elementValuePairs3742 = new BitSet(new ulong[]{0x100000002UL});
+		public static readonly BitSet _IDENTIFIER_in_elementValuePair3773 = new BitSet(new ulong[]{0x4000000000000UL});
+		public static readonly BitSet _EQ_in_elementValuePair3775 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014015651080UL,0x84AUL});
 		public static readonly BitSet _elementValue_in_elementValuePair3777 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _conditionalExpression_in_elementValue3797 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _annotation_in_elementValue3807 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _elementValueArrayInitializer_in_elementValue3817 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACE_in_elementValueArrayInitializer3837 = new BitSet(new ulong[]{0x8064003026014200UL,0xA46C08428034E450UL,0x4UL});
-		public static readonly BitSet _elementValue_in_elementValueArrayInitializer3848 = new BitSet(new ulong[]{0x20000000UL,0x4000000000UL});
-		public static readonly BitSet _COMMA_in_elementValueArrayInitializer3863 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028034E450UL,0x4UL});
-		public static readonly BitSet _elementValue_in_elementValueArrayInitializer3865 = new BitSet(new ulong[]{0x20000000UL,0x4000000000UL});
-		public static readonly BitSet _COMMA_in_elementValueArrayInitializer3894 = new BitSet(new ulong[]{0x0UL,0x4000000000UL});
+		public static readonly BitSet _LBRACE_in_elementValueArrayInitializer3837 = new BitSet(new ulong[]{0x2400011121014200UL,0x1A04214015651080UL,0x84AUL});
+		public static readonly BitSet _elementValue_in_elementValueArrayInitializer3848 = new BitSet(new ulong[]{0x100000000UL,0x200000000000UL});
+		public static readonly BitSet _COMMA_in_elementValueArrayInitializer3863 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014015651080UL,0x84AUL});
+		public static readonly BitSet _elementValue_in_elementValueArrayInitializer3865 = new BitSet(new ulong[]{0x100000000UL,0x200000000000UL});
+		public static readonly BitSet _COMMA_in_elementValueArrayInitializer3894 = new BitSet(new ulong[]{0x0UL,0x200000000000UL});
 		public static readonly BitSet _RBRACE_in_elementValueArrayInitializer3898 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_annotationTypeDeclaration3921 = new BitSet(new ulong[]{0x0UL,0x40000UL});
-		public static readonly BitSet _MONKEYS_AT_in_annotationTypeDeclaration3923 = new BitSet(new ulong[]{0x0UL,0x20UL});
-		public static readonly BitSet _INTERFACE_in_annotationTypeDeclaration3933 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_annotationTypeDeclaration3943 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _modifiers_in_annotationTypeDeclaration3921 = new BitSet(new ulong[]{0x0UL,0x1000000UL});
+		public static readonly BitSet _MONKEYS_AT_in_annotationTypeDeclaration3923 = new BitSet(new ulong[]{0x0UL,0x2000UL});
+		public static readonly BitSet _INTERFACE_in_annotationTypeDeclaration3933 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_annotationTypeDeclaration3943 = new BitSet(new ulong[]{0x0UL,0x40000UL});
 		public static readonly BitSet _annotationTypeBody_in_annotationTypeDeclaration3953 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACE_in_annotationTypeBody3974 = new BitSet(new ulong[]{0x802810100A014010UL,0x41030C5C000C2030UL,0x8UL});
-		public static readonly BitSet _annotationTypeElementDeclaration_in_annotationTypeBody3986 = new BitSet(new ulong[]{0x802810100A014010UL,0x41030C5C000C2030UL,0x8UL});
+		public static readonly BitSet _LBRACE_in_annotationTypeBody3974 = new BitSet(new ulong[]{0x502010060014010UL,0x41862E0003203080UL,0x1080UL});
+		public static readonly BitSet _annotationTypeElementDeclaration_in_annotationTypeBody3986 = new BitSet(new ulong[]{0x502010060014010UL,0x41862E0003203080UL,0x1080UL});
 		public static readonly BitSet _RBRACE_in_annotationTypeBody4008 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _annotationMethodDeclaration_in_annotationTypeElementDeclaration4030 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _interfaceFieldDeclaration_in_annotationTypeElementDeclaration4040 = new BitSet(new ulong[]{0x2UL});
@@ -26336,158 +25371,158 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _enumDeclaration_in_annotationTypeElementDeclaration4070 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _annotationTypeDeclaration_in_annotationTypeElementDeclaration4080 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _SEMI_in_annotationTypeElementDeclaration4090 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_annotationMethodDeclaration4110 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_annotationMethodDeclaration4112 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_annotationMethodDeclaration4114 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _LPAREN_in_annotationMethodDeclaration4124 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_annotationMethodDeclaration4126 = new BitSet(new ulong[]{0x200000000UL,0x40000000000UL});
-		public static readonly BitSet _DEFAULT_in_annotationMethodDeclaration4129 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028034E450UL,0x4UL});
-		public static readonly BitSet _elementValue_in_annotationMethodDeclaration4131 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _modifiers_in_annotationMethodDeclaration4110 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _type_in_annotationMethodDeclaration4112 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_annotationMethodDeclaration4114 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _LPAREN_in_annotationMethodDeclaration4124 = new BitSet(new ulong[]{0x0UL,0x1000000000000UL});
+		public static readonly BitSet _RPAREN_in_annotationMethodDeclaration4126 = new BitSet(new ulong[]{0x2000000000UL,0x2000000000000UL});
+		public static readonly BitSet _DEFAULT_in_annotationMethodDeclaration4129 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014015651080UL,0x84AUL});
+		public static readonly BitSet _elementValue_in_annotationMethodDeclaration4131 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_annotationMethodDeclaration4160 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACE_in_block4184 = new BitSet(new ulong[]{0x80EC10350E01C310UL,0xEDEF0D5E803CE471UL,0x1DUL});
-		public static readonly BitSet _blockStatement_in_block4195 = new BitSet(new ulong[]{0x80EC10350E01C310UL,0xEDEF0D5E803CE471UL,0x1DUL});
+		public static readonly BitSet _LBRACE_in_block4184 = new BitSet(new ulong[]{0x2D0201586101C310UL,0x7B86AF4017653180UL,0x39DAUL});
+		public static readonly BitSet _blockStatement_in_block4195 = new BitSet(new ulong[]{0x2D0201586101C310UL,0x7B86AF4017653180UL,0x39DAUL});
 		public static readonly BitSet _RBRACE_in_block4216 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _localVariableDeclarationStatement_in_blockStatement4238 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _classOrInterfaceDeclaration_in_blockStatement4248 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _statement_in_blockStatement4258 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _localVariableDeclaration_in_localVariableDeclarationStatement4279 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _localVariableDeclaration_in_localVariableDeclarationStatement4279 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_localVariableDeclarationStatement4289 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _variableModifiers_in_localVariableDeclaration4309 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_localVariableDeclaration4311 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _variableDeclarator_in_localVariableDeclaration4321 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _COMMA_in_localVariableDeclaration4332 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _variableDeclarator_in_localVariableDeclaration4334 = new BitSet(new ulong[]{0x20000002UL});
+		public static readonly BitSet _variableModifiers_in_localVariableDeclaration4309 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _type_in_localVariableDeclaration4311 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _variableDeclarator_in_localVariableDeclaration4321 = new BitSet(new ulong[]{0x100000002UL});
+		public static readonly BitSet _COMMA_in_localVariableDeclaration4332 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _variableDeclarator_in_localVariableDeclaration4334 = new BitSet(new ulong[]{0x100000002UL});
 		public static readonly BitSet _block_in_statement4365 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _SEMI_in_statement4375 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENTIFIER_in_statement4385 = new BitSet(new ulong[]{0x10000000UL});
-		public static readonly BitSet _COLON_in_statement4387 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
+		public static readonly BitSet _IDENTIFIER_in_statement4385 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _COLON_in_statement4387 = new BitSet(new ulong[]{0x2C0001582101C300UL,0x7A06814014651180UL,0x295AUL});
 		public static readonly BitSet _statement_in_statement4389 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_statement4396 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _expression_in_statement4396 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_statement4399 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IF_in_statement4414 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _parExpression_in_statement4416 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
-		public static readonly BitSet _statement_in_statement4418 = new BitSet(new ulong[]{0x80000000002UL});
-		public static readonly BitSet _ELSE_in_statement4421 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
+		public static readonly BitSet _IF_in_statement4414 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _parExpression_in_statement4416 = new BitSet(new ulong[]{0x2C0001582101C300UL,0x7A06814014651180UL,0x295AUL});
+		public static readonly BitSet _statement_in_statement4418 = new BitSet(new ulong[]{0x1000000000002UL});
+		public static readonly BitSet _ELSE_in_statement4421 = new BitSet(new ulong[]{0x2C0001582101C300UL,0x7A06814014651180UL,0x295AUL});
 		public static readonly BitSet _statement_in_statement4423 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ASSERT_in_statement4445 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_statement4448 = new BitSet(new ulong[]{0x10000000UL,0x40000000000UL});
-		public static readonly BitSet _COLON_in_statement4451 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_statement4453 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _ASSERT_in_statement4445 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_statement4448 = new BitSet(new ulong[]{0x80000000UL,0x2000000000000UL});
+		public static readonly BitSet _COLON_in_statement4451 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_statement4453 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_statement4457 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _SWITCH_in_statement4479 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _parExpression_in_statement4481 = new BitSet(new ulong[]{0x0UL,0x400UL});
-		public static readonly BitSet _LBRACE_in_statement4483 = new BitSet(new ulong[]{0x200800000UL,0x4000000000UL});
-		public static readonly BitSet _switchBlockStatementGroups_in_statement4485 = new BitSet(new ulong[]{0x0UL,0x4000000000UL});
+		public static readonly BitSet _SWITCH_in_statement4479 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _parExpression_in_statement4481 = new BitSet(new ulong[]{0x0UL,0x40000UL});
+		public static readonly BitSet _LBRACE_in_statement4483 = new BitSet(new ulong[]{0x2008000000UL,0x200000000000UL});
+		public static readonly BitSet _switchBlockStatementGroups_in_statement4485 = new BitSet(new ulong[]{0x0UL,0x200000000000UL});
 		public static readonly BitSet _RBRACE_in_statement4487 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _WHILE_in_statement4497 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _parExpression_in_statement4499 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
+		public static readonly BitSet _WHILE_in_statement4497 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _parExpression_in_statement4499 = new BitSet(new ulong[]{0x2C0001582101C300UL,0x7A06814014651180UL,0x295AUL});
 		public static readonly BitSet _statement_in_statement4501 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DO_in_statement4511 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
-		public static readonly BitSet _statement_in_statement4513 = new BitSet(new ulong[]{0x0UL,0x0UL,0x10UL});
-		public static readonly BitSet _WHILE_in_statement4515 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _parExpression_in_statement4517 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _DO_in_statement4511 = new BitSet(new ulong[]{0x2C0001582101C300UL,0x7A06814014651180UL,0x295AUL});
+		public static readonly BitSet _statement_in_statement4513 = new BitSet(new ulong[]{0x0UL,0x0UL,0x2000UL});
+		public static readonly BitSet _WHILE_in_statement4515 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _parExpression_in_statement4517 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_statement4519 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _forstatement_in_statement4529 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _BREAK_in_statement4539 = new BitSet(new ulong[]{0x8000000000000000UL,0x40000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_statement4542 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _BREAK_in_statement4539 = new BitSet(new ulong[]{0x0UL,0x2000000000080UL});
+		public static readonly BitSet _IDENTIFIER_in_statement4542 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_statement4546 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _CONTINUE_in_statement4551 = new BitSet(new ulong[]{0x8000000000000000UL,0x40000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_statement4554 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _CONTINUE_in_statement4551 = new BitSet(new ulong[]{0x0UL,0x2000000000080UL});
+		public static readonly BitSet _IDENTIFIER_in_statement4554 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_statement4558 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _RETURN_in_statement4568 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C0C028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_statement4571 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _RETURN_in_statement4568 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A06014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_statement4571 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_statement4576 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _THROW_in_statement4586 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_statement4588 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _THROW_in_statement4586 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_statement4588 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_statement4590 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _SYNCHRONIZED_in_statement4600 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _parExpression_in_statement4602 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _SYNCHRONIZED_in_statement4600 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _parExpression_in_statement4602 = new BitSet(new ulong[]{0x0UL,0x40000UL});
 		public static readonly BitSet _block_in_statement4604 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _trystatement_in_statement4614 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _tryWithResourcesStatement_in_statement4621 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _switchBlockStatementGroup_in_switchBlockStatementGroups4642 = new BitSet(new ulong[]{0x200800002UL});
-		public static readonly BitSet _switchLabel_in_switchBlockStatementGroup4671 = new BitSet(new ulong[]{0x80EC10350E01C312UL,0xEDEF0D1E803CE471UL,0x1DUL});
-		public static readonly BitSet _blockStatement_in_switchBlockStatementGroup4682 = new BitSet(new ulong[]{0x80EC10350E01C312UL,0xEDEF0D1E803CE471UL,0x1DUL});
-		public static readonly BitSet _CASE_in_switchLabel4713 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_switchLabel4715 = new BitSet(new ulong[]{0x10000000UL});
+		public static readonly BitSet _switchBlockStatementGroup_in_switchBlockStatementGroups4642 = new BitSet(new ulong[]{0x2008000002UL});
+		public static readonly BitSet _switchLabel_in_switchBlockStatementGroup4671 = new BitSet(new ulong[]{0x2D0201586101C312UL,0x7B868F4017653180UL,0x39DAUL});
+		public static readonly BitSet _blockStatement_in_switchBlockStatementGroup4682 = new BitSet(new ulong[]{0x2D0201586101C312UL,0x7B868F4017653180UL,0x39DAUL});
+		public static readonly BitSet _CASE_in_switchLabel4713 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_switchLabel4715 = new BitSet(new ulong[]{0x80000000UL});
 		public static readonly BitSet _COLON_in_switchLabel4717 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DEFAULT_in_switchLabel4727 = new BitSet(new ulong[]{0x10000000UL});
+		public static readonly BitSet _DEFAULT_in_switchLabel4727 = new BitSet(new ulong[]{0x80000000UL});
 		public static readonly BitSet _COLON_in_switchLabel4729 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _TRY_in_trystatement4750 = new BitSet(new ulong[]{0x0UL,0x400UL});
-		public static readonly BitSet _block_in_trystatement4752 = new BitSet(new ulong[]{0x10000001000000UL});
-		public static readonly BitSet _catches_in_trystatement4766 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _FINALLY_in_trystatement4768 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _TRY_in_trystatement4750 = new BitSet(new ulong[]{0x0UL,0x40000UL});
+		public static readonly BitSet _block_in_trystatement4752 = new BitSet(new ulong[]{0x200000010000000UL});
+		public static readonly BitSet _catches_in_trystatement4766 = new BitSet(new ulong[]{0x200000000000000UL});
+		public static readonly BitSet _FINALLY_in_trystatement4768 = new BitSet(new ulong[]{0x0UL,0x40000UL});
 		public static readonly BitSet _block_in_trystatement4770 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _catches_in_trystatement4784 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _FINALLY_in_trystatement4798 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _FINALLY_in_trystatement4798 = new BitSet(new ulong[]{0x0UL,0x40000UL});
 		public static readonly BitSet _block_in_trystatement4800 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _catchClause_in_catches4831 = new BitSet(new ulong[]{0x1000002UL});
-		public static readonly BitSet _catchClause_in_catches4842 = new BitSet(new ulong[]{0x1000002UL});
-		public static readonly BitSet _CATCH_in_catchClause4873 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _LPAREN_in_catchClause4875 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
-		public static readonly BitSet _formalParameter_in_catchClause4877 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_catchClause4887 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _catchClause_in_catches4831 = new BitSet(new ulong[]{0x10000002UL});
+		public static readonly BitSet _catchClause_in_catches4842 = new BitSet(new ulong[]{0x10000002UL});
+		public static readonly BitSet _CATCH_in_catchClause4873 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _LPAREN_in_catchClause4875 = new BitSet(new ulong[]{0x500010020014000UL,0x4000001201080UL});
+		public static readonly BitSet _formalParameter_in_catchClause4877 = new BitSet(new ulong[]{0x0UL,0x1000000000000UL});
+		public static readonly BitSet _RPAREN_in_catchClause4887 = new BitSet(new ulong[]{0x0UL,0x40000UL});
 		public static readonly BitSet _block_in_catchClause4889 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _variableModifiers_in_formalParameter4910 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _catchType_in_formalParameter4912 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_formalParameter4914 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_formalParameter4925 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_formalParameter4927 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _catchType_in_formalParameter4948 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_formalParameter4950 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_formalParameter4961 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_formalParameter4963 = new BitSet(new ulong[]{0x2UL,0x800UL});
+		public static readonly BitSet _variableModifiers_in_formalParameter4910 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _catchType_in_formalParameter4912 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_formalParameter4914 = new BitSet(new ulong[]{0x2UL,0x80000UL});
+		public static readonly BitSet _LBRACKET_in_formalParameter4925 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_formalParameter4927 = new BitSet(new ulong[]{0x2UL,0x80000UL});
+		public static readonly BitSet _catchType_in_formalParameter4948 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_formalParameter4950 = new BitSet(new ulong[]{0x2UL,0x80000UL});
+		public static readonly BitSet _LBRACKET_in_formalParameter4961 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_formalParameter4963 = new BitSet(new ulong[]{0x2UL,0x80000UL});
 		public static readonly BitSet _type_in_catchType4993 = new BitSet(new ulong[]{0x802UL});
-		public static readonly BitSet _BAR_in_catchType5004 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _BAR_in_catchType5004 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
 		public static readonly BitSet _type_in_catchType5006 = new BitSet(new ulong[]{0x802UL});
-		public static readonly BitSet _TRY_in_tryWithResourcesStatement5037 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _resourceSpecification_in_tryWithResourcesStatement5039 = new BitSet(new ulong[]{0x0UL,0x400UL});
-		public static readonly BitSet _block_in_tryWithResourcesStatement5041 = new BitSet(new ulong[]{0x10000001000002UL});
-		public static readonly BitSet _catches_in_tryWithResourcesStatement5043 = new BitSet(new ulong[]{0x10000000000002UL});
-		public static readonly BitSet _FINALLY_in_tryWithResourcesStatement5047 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _TRY_in_tryWithResourcesStatement5037 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _resourceSpecification_in_tryWithResourcesStatement5039 = new BitSet(new ulong[]{0x0UL,0x40000UL});
+		public static readonly BitSet _block_in_tryWithResourcesStatement5041 = new BitSet(new ulong[]{0x200000010000002UL});
+		public static readonly BitSet _catches_in_tryWithResourcesStatement5043 = new BitSet(new ulong[]{0x200000000000002UL});
+		public static readonly BitSet _FINALLY_in_tryWithResourcesStatement5047 = new BitSet(new ulong[]{0x0UL,0x40000UL});
 		public static readonly BitSet _block_in_tryWithResourcesStatement5049 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LPAREN_in_resourceSpecification5071 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
-		public static readonly BitSet _resources_in_resourceSpecification5073 = new BitSet(new ulong[]{0x0UL,0x60000000000UL});
-		public static readonly BitSet _SEMI_in_resourceSpecification5075 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
+		public static readonly BitSet _LPAREN_in_resourceSpecification5071 = new BitSet(new ulong[]{0x500010020014000UL,0x4000001201080UL});
+		public static readonly BitSet _resources_in_resourceSpecification5073 = new BitSet(new ulong[]{0x0UL,0x3000000000000UL});
+		public static readonly BitSet _SEMI_in_resourceSpecification5075 = new BitSet(new ulong[]{0x0UL,0x1000000000000UL});
 		public static readonly BitSet _RPAREN_in_resourceSpecification5078 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _resource_in_resources5098 = new BitSet(new ulong[]{0x2UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_resources5103 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
-		public static readonly BitSet _resource_in_resources5105 = new BitSet(new ulong[]{0x2UL,0x40000000000UL});
-		public static readonly BitSet _variableModifiers_in_resource5128 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_resource5131 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_resource5133 = new BitSet(new ulong[]{0x200000000000UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_resource5136 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_resource5138 = new BitSet(new ulong[]{0x200000000000UL,0x800UL});
-		public static readonly BitSet _EQ_in_resource5142 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _resource_in_resources5098 = new BitSet(new ulong[]{0x2UL,0x2000000000000UL});
+		public static readonly BitSet _SEMI_in_resources5103 = new BitSet(new ulong[]{0x500010020014000UL,0x4000001201080UL});
+		public static readonly BitSet _resource_in_resources5105 = new BitSet(new ulong[]{0x2UL,0x2000000000000UL});
+		public static readonly BitSet _variableModifiers_in_resource5128 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _type_in_resource5131 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_resource5133 = new BitSet(new ulong[]{0x4000000000000UL,0x80000UL});
+		public static readonly BitSet _LBRACKET_in_resource5136 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_resource5138 = new BitSet(new ulong[]{0x4000000000000UL,0x80000UL});
+		public static readonly BitSet _EQ_in_resource5142 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
 		public static readonly BitSet _expression_in_resource5144 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _FOR_in_forstatement5183 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _LPAREN_in_forstatement5185 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
-		public static readonly BitSet _variableModifiers_in_forstatement5187 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_forstatement5189 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_forstatement5191 = new BitSet(new ulong[]{0x10000000UL});
-		public static readonly BitSet _COLON_in_forstatement5193 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_forstatement5204 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_forstatement5206 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
+		public static readonly BitSet _FOR_in_forstatement5183 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _LPAREN_in_forstatement5185 = new BitSet(new ulong[]{0x500010020014000UL,0x4000001201080UL});
+		public static readonly BitSet _variableModifiers_in_forstatement5187 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _type_in_forstatement5189 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_forstatement5191 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _COLON_in_forstatement5193 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_forstatement5204 = new BitSet(new ulong[]{0x0UL,0x1000000000000UL});
+		public static readonly BitSet _RPAREN_in_forstatement5206 = new BitSet(new ulong[]{0x2C0001582101C300UL,0x7A06814014651180UL,0x295AUL});
 		public static readonly BitSet _statement_in_forstatement5208 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _FOR_in_forstatement5240 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _LPAREN_in_forstatement5242 = new BitSet(new ulong[]{0x806C003006014200UL,0xA46C0C028034E050UL,0x4UL});
-		public static readonly BitSet _forInit_in_forstatement5262 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_forstatement5283 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C0C028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_forstatement5303 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
-		public static readonly BitSet _SEMI_in_forstatement5324 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C0A028030E050UL,0x4UL});
-		public static readonly BitSet _expressionList_in_forstatement5344 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_forstatement5365 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
+		public static readonly BitSet _FOR_in_forstatement5240 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _LPAREN_in_forstatement5242 = new BitSet(new ulong[]{0x2500011021014200UL,0x1A06014015611080UL,0x84AUL});
+		public static readonly BitSet _forInit_in_forstatement5262 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
+		public static readonly BitSet _SEMI_in_forstatement5283 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A06014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_forstatement5303 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
+		public static readonly BitSet _SEMI_in_forstatement5324 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A05014014611080UL,0x84AUL});
+		public static readonly BitSet _expressionList_in_forstatement5344 = new BitSet(new ulong[]{0x0UL,0x1000000000000UL});
+		public static readonly BitSet _RPAREN_in_forstatement5365 = new BitSet(new ulong[]{0x2C0001582101C300UL,0x7A06814014651180UL,0x295AUL});
 		public static readonly BitSet _statement_in_forstatement5367 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _localVariableDeclaration_in_forInit5387 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expressionList_in_forInit5397 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LPAREN_in_parExpression5417 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_parExpression5419 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
+		public static readonly BitSet _LPAREN_in_parExpression5417 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_parExpression5419 = new BitSet(new ulong[]{0x0UL,0x1000000000000UL});
 		public static readonly BitSet _RPAREN_in_parExpression5421 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expression_in_expressionList5441 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _COMMA_in_expressionList5452 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_expressionList5454 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _conditionalExpression_in_expression5486 = new BitSet(new ulong[]{0x400200000402082UL,0x10A00140010000UL});
-		public static readonly BitSet _assignmentOperator_in_expression5497 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _expression_in_expressionList5441 = new BitSet(new ulong[]{0x100000002UL});
+		public static readonly BitSet _COMMA_in_expressionList5452 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_expressionList5454 = new BitSet(new ulong[]{0x100000002UL});
+		public static readonly BitSet _conditionalExpression_in_expression5486 = new BitSet(new ulong[]{0x8004000004002082UL,0x45000A000800000UL});
+		public static readonly BitSet _assignmentOperator_in_expression5497 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
 		public static readonly BitSet _expression_in_expression5499 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _EQ_in_assignmentOperator5531 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _PLUSEQ_in_assignmentOperator5541 = new BitSet(new ulong[]{0x2UL});
@@ -26498,264 +25533,246 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _BAREQ_in_assignmentOperator5591 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _CARETEQ_in_assignmentOperator5601 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _PERCENTEQ_in_assignmentOperator5611 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LT_in_assignmentOperator5622 = new BitSet(new ulong[]{0x0UL,0x10000UL});
-		public static readonly BitSet _LT_in_assignmentOperator5624 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _LT_in_assignmentOperator5622 = new BitSet(new ulong[]{0x0UL,0x800000UL});
+		public static readonly BitSet _LT_in_assignmentOperator5624 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _EQ_in_assignmentOperator5626 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _GT_in_assignmentOperator5637 = new BitSet(new ulong[]{0x400000000000000UL});
-		public static readonly BitSet _GT_in_assignmentOperator5639 = new BitSet(new ulong[]{0x400000000000000UL});
-		public static readonly BitSet _GT_in_assignmentOperator5641 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _GT_in_assignmentOperator5637 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _GT_in_assignmentOperator5639 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _GT_in_assignmentOperator5641 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _EQ_in_assignmentOperator5643 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _GT_in_assignmentOperator5654 = new BitSet(new ulong[]{0x400000000000000UL});
-		public static readonly BitSet _GT_in_assignmentOperator5656 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _GT_in_assignmentOperator5654 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _GT_in_assignmentOperator5656 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _EQ_in_assignmentOperator5658 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _conditionalOrExpression_in_conditionalExpression5679 = new BitSet(new ulong[]{0x2UL,0x2000000000UL});
-		public static readonly BitSet _QUES_in_conditionalExpression5690 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_conditionalExpression5692 = new BitSet(new ulong[]{0x10000000UL});
-		public static readonly BitSet _COLON_in_conditionalExpression5694 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _conditionalOrExpression_in_conditionalExpression5679 = new BitSet(new ulong[]{0x2UL,0x100000000000UL});
+		public static readonly BitSet _QUES_in_conditionalExpression5690 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_conditionalExpression5692 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _COLON_in_conditionalExpression5694 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
 		public static readonly BitSet _conditionalExpression_in_conditionalExpression5696 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _conditionalAndExpression_in_conditionalOrExpression5726 = new BitSet(new ulong[]{0x1002UL});
-		public static readonly BitSet _BARBAR_in_conditionalOrExpression5737 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _BARBAR_in_conditionalOrExpression5737 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
 		public static readonly BitSet _conditionalAndExpression_in_conditionalOrExpression5739 = new BitSet(new ulong[]{0x1002UL});
 		public static readonly BitSet _inclusiveOrExpression_in_conditionalAndExpression5769 = new BitSet(new ulong[]{0x42UL});
-		public static readonly BitSet _AMPAMP_in_conditionalAndExpression5780 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _AMPAMP_in_conditionalAndExpression5780 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
 		public static readonly BitSet _inclusiveOrExpression_in_conditionalAndExpression5782 = new BitSet(new ulong[]{0x42UL});
 		public static readonly BitSet _exclusiveOrExpression_in_inclusiveOrExpression5812 = new BitSet(new ulong[]{0x802UL});
-		public static readonly BitSet _BAR_in_inclusiveOrExpression5823 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _BAR_in_inclusiveOrExpression5823 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
 		public static readonly BitSet _exclusiveOrExpression_in_inclusiveOrExpression5825 = new BitSet(new ulong[]{0x802UL});
-		public static readonly BitSet _andExpression_in_exclusiveOrExpression5855 = new BitSet(new ulong[]{0x200002UL});
-		public static readonly BitSet _CARET_in_exclusiveOrExpression5866 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _andExpression_in_exclusiveOrExpression5868 = new BitSet(new ulong[]{0x200002UL});
+		public static readonly BitSet _andExpression_in_exclusiveOrExpression5855 = new BitSet(new ulong[]{0x2000002UL});
+		public static readonly BitSet _CARET_in_exclusiveOrExpression5866 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _andExpression_in_exclusiveOrExpression5868 = new BitSet(new ulong[]{0x2000002UL});
 		public static readonly BitSet _equalityExpression_in_andExpression5898 = new BitSet(new ulong[]{0x22UL});
-		public static readonly BitSet _AMP_in_andExpression5909 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _AMP_in_andExpression5909 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
 		public static readonly BitSet _equalityExpression_in_andExpression5911 = new BitSet(new ulong[]{0x22UL});
-		public static readonly BitSet _instanceOfExpression_in_equalityExpression5941 = new BitSet(new ulong[]{0x400000000402UL});
-		public static readonly BitSet _set_in_equalityExpression5968 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _instanceOfExpression_in_equalityExpression6018 = new BitSet(new ulong[]{0x400000000402UL});
-		public static readonly BitSet _relationalExpression_in_instanceOfExpression6048 = new BitSet(new ulong[]{0x2UL,0x8UL});
-		public static readonly BitSet _INSTANCEOF_in_instanceOfExpression6059 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
+		public static readonly BitSet _instanceOfExpression_in_equalityExpression5941 = new BitSet(new ulong[]{0x8000000000402UL});
+		public static readonly BitSet _set_in_equalityExpression5968 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _instanceOfExpression_in_equalityExpression6018 = new BitSet(new ulong[]{0x8000000000402UL});
+		public static readonly BitSet _relationalExpression_in_instanceOfExpression6048 = new BitSet(new ulong[]{0x2UL,0x800UL});
+		public static readonly BitSet _INSTANCEOF_in_instanceOfExpression6059 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
 		public static readonly BitSet _type_in_instanceOfExpression6061 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _shiftExpression_in_relationalExpression6091 = new BitSet(new ulong[]{0x400000000000002UL,0x10000UL});
-		public static readonly BitSet _relationalOp_in_relationalExpression6102 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _shiftExpression_in_relationalExpression6104 = new BitSet(new ulong[]{0x400000000000002UL,0x10000UL});
-		public static readonly BitSet _LT_in_relationalOp6135 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _shiftExpression_in_relationalExpression6091 = new BitSet(new ulong[]{0x8000000000000002UL,0x800000UL});
+		public static readonly BitSet _relationalOp_in_relationalExpression6102 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _shiftExpression_in_relationalExpression6104 = new BitSet(new ulong[]{0x8000000000000002UL,0x800000UL});
+		public static readonly BitSet _LT_in_relationalOp6135 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _EQ_in_relationalOp6137 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _GT_in_relationalOp6148 = new BitSet(new ulong[]{0x200000000000UL});
+		public static readonly BitSet _GT_in_relationalOp6148 = new BitSet(new ulong[]{0x4000000000000UL});
 		public static readonly BitSet _EQ_in_relationalOp6150 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _LT_in_relationalOp6160 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _GT_in_relationalOp6170 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _additiveExpression_in_shiftExpression6189 = new BitSet(new ulong[]{0x400000000000002UL,0x10000UL});
-		public static readonly BitSet _shiftOp_in_shiftExpression6200 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _additiveExpression_in_shiftExpression6202 = new BitSet(new ulong[]{0x400000000000002UL,0x10000UL});
-		public static readonly BitSet _LT_in_shiftOp6233 = new BitSet(new ulong[]{0x0UL,0x10000UL});
+		public static readonly BitSet _additiveExpression_in_shiftExpression6189 = new BitSet(new ulong[]{0x8000000000000002UL,0x800000UL});
+		public static readonly BitSet _shiftOp_in_shiftExpression6200 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _additiveExpression_in_shiftExpression6202 = new BitSet(new ulong[]{0x8000000000000002UL,0x800000UL});
+		public static readonly BitSet _LT_in_shiftOp6233 = new BitSet(new ulong[]{0x0UL,0x800000UL});
 		public static readonly BitSet _LT_in_shiftOp6235 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _GT_in_shiftOp6246 = new BitSet(new ulong[]{0x400000000000000UL});
-		public static readonly BitSet _GT_in_shiftOp6248 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _GT_in_shiftOp6246 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _GT_in_shiftOp6248 = new BitSet(new ulong[]{0x8000000000000000UL});
 		public static readonly BitSet _GT_in_shiftOp6250 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _GT_in_shiftOp6261 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _GT_in_shiftOp6261 = new BitSet(new ulong[]{0x8000000000000000UL});
 		public static readonly BitSet _GT_in_shiftOp6263 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _multiplicativeExpression_in_additiveExpression6282 = new BitSet(new ulong[]{0x2UL,0x8000080000000UL});
-		public static readonly BitSet _set_in_additiveExpression6309 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _multiplicativeExpression_in_additiveExpression6359 = new BitSet(new ulong[]{0x2UL,0x8000080000000UL});
-		public static readonly BitSet _unaryExpression_in_multiplicativeExpression6396 = new BitSet(new ulong[]{0x2UL,0x500020000000UL});
-		public static readonly BitSet _set_in_multiplicativeExpression6423 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _unaryExpression_in_multiplicativeExpression6491 = new BitSet(new ulong[]{0x2UL,0x500020000000UL});
-		public static readonly BitSet _PLUS_in_unaryExpression6523 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _multiplicativeExpression_in_additiveExpression6282 = new BitSet(new ulong[]{0x2UL,0x200004000000000UL});
+		public static readonly BitSet _set_in_additiveExpression6309 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _multiplicativeExpression_in_additiveExpression6359 = new BitSet(new ulong[]{0x2UL,0x200004000000000UL});
+		public static readonly BitSet _unaryExpression_in_multiplicativeExpression6396 = new BitSet(new ulong[]{0x2UL,0x28001000000000UL});
+		public static readonly BitSet _set_in_multiplicativeExpression6423 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _unaryExpression_in_multiplicativeExpression6491 = new BitSet(new ulong[]{0x2UL,0x28001000000000UL});
+		public static readonly BitSet _PLUS_in_unaryExpression6523 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
 		public static readonly BitSet _unaryExpression_in_unaryExpression6526 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _SUB_in_unaryExpression6536 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _SUB_in_unaryExpression6536 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
 		public static readonly BitSet _unaryExpression_in_unaryExpression6538 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _PLUSPLUS_in_unaryExpression6548 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _PLUSPLUS_in_unaryExpression6548 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
 		public static readonly BitSet _unaryExpression_in_unaryExpression6550 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _SUBSUB_in_unaryExpression6560 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _SUBSUB_in_unaryExpression6560 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
 		public static readonly BitSet _unaryExpression_in_unaryExpression6562 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _unaryExpressionNotPlusMinus_in_unaryExpression6572 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _TILDE_in_unaryExpressionNotPlusMinus6591 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _TILDE_in_unaryExpressionNotPlusMinus6591 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
 		public static readonly BitSet _unaryExpression_in_unaryExpressionNotPlusMinus6593 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _BANG_in_unaryExpressionNotPlusMinus6603 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _BANG_in_unaryExpressionNotPlusMinus6603 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
 		public static readonly BitSet _unaryExpression_in_unaryExpressionNotPlusMinus6605 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _castExpression_in_unaryExpressionNotPlusMinus6615 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primary_in_unaryExpressionNotPlusMinus6625 = new BitSet(new ulong[]{0x800000002UL,0x20000200000800UL});
-		public static readonly BitSet _selector_in_unaryExpressionNotPlusMinus6636 = new BitSet(new ulong[]{0x800000002UL,0x20000200000800UL});
-		public static readonly BitSet _LPAREN_in_castExpression6705 = new BitSet(new ulong[]{0x20001002014000UL,0x80000002010UL});
-		public static readonly BitSet _primitiveType_in_castExpression6707 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_castExpression6709 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _primary_in_unaryExpressionNotPlusMinus6625 = new BitSet(new ulong[]{0x8000000002UL,0x800010000080000UL});
+		public static readonly BitSet _selector_in_unaryExpressionNotPlusMinus6636 = new BitSet(new ulong[]{0x8000000002UL,0x800010000080000UL});
+		public static readonly BitSet _LPAREN_in_castExpression6705 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201000UL});
+		public static readonly BitSet _primitiveType_in_castExpression6707 = new BitSet(new ulong[]{0x0UL,0x1000000000000UL});
+		public static readonly BitSet _RPAREN_in_castExpression6709 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
 		public static readonly BitSet _unaryExpression_in_castExpression6711 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LPAREN_in_castExpression6721 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_castExpression6723 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_castExpression6725 = new BitSet(new ulong[]{0x8064003006014200UL,0xA44408000030E050UL,0x4UL});
+		public static readonly BitSet _LPAREN_in_castExpression6721 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _type_in_castExpression6723 = new BitSet(new ulong[]{0x0UL,0x1000000000000UL});
+		public static readonly BitSet _RPAREN_in_castExpression6725 = new BitSet(new ulong[]{0x2400011021014200UL,0x1004000014611080UL,0x84AUL});
 		public static readonly BitSet _unaryExpressionNotPlusMinus_in_castExpression6727 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _parExpression_in_primary6748 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _THIS_in_primary6770 = new BitSet(new ulong[]{0x800000002UL,0x8800UL});
-		public static readonly BitSet _DOT_in_primary6781 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_primary6783 = new BitSet(new ulong[]{0x800000002UL,0x8800UL});
+		public static readonly BitSet _THIS_in_primary6770 = new BitSet(new ulong[]{0x8000000002UL,0x480000UL});
+		public static readonly BitSet _DOT_in_primary6781 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_primary6783 = new BitSet(new ulong[]{0x8000000002UL,0x480000UL});
 		public static readonly BitSet _identifierSuffix_in_primary6805 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IDENTIFIER_in_primary6826 = new BitSet(new ulong[]{0x800000002UL,0x8800UL});
-		public static readonly BitSet _DOT_in_primary6837 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_primary6839 = new BitSet(new ulong[]{0x800000002UL,0x8800UL});
+		public static readonly BitSet _IDENTIFIER_in_primary6826 = new BitSet(new ulong[]{0x8000000002UL,0x480000UL});
+		public static readonly BitSet _DOT_in_primary6837 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_primary6839 = new BitSet(new ulong[]{0x8000000002UL,0x480000UL});
 		public static readonly BitSet _identifierSuffix_in_primary6861 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _SUPER_in_primary6882 = new BitSet(new ulong[]{0x800000000UL,0x8000UL});
+		public static readonly BitSet _SUPER_in_primary6882 = new BitSet(new ulong[]{0x8000000000UL,0x400000UL});
 		public static readonly BitSet _superSuffix_in_primary6892 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _literal_in_primary6902 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _creator_in_primary6912 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _primitiveType_in_primary6922 = new BitSet(new ulong[]{0x800000000UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_primary6933 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_primary6935 = new BitSet(new ulong[]{0x800000000UL,0x800UL});
-		public static readonly BitSet _DOT_in_primary6956 = new BitSet(new ulong[]{0x8000000UL});
+		public static readonly BitSet _primitiveType_in_primary6922 = new BitSet(new ulong[]{0x8000000000UL,0x80000UL});
+		public static readonly BitSet _LBRACKET_in_primary6933 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_primary6935 = new BitSet(new ulong[]{0x8000000000UL,0x80000UL});
+		public static readonly BitSet _DOT_in_primary6956 = new BitSet(new ulong[]{0x40000000UL});
 		public static readonly BitSet _CLASS_in_primary6958 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _VOID_in_primary6968 = new BitSet(new ulong[]{0x800000000UL});
-		public static readonly BitSet _DOT_in_primary6970 = new BitSet(new ulong[]{0x8000000UL});
+		public static readonly BitSet _VOID_in_primary6968 = new BitSet(new ulong[]{0x8000000000UL});
+		public static readonly BitSet _DOT_in_primary6970 = new BitSet(new ulong[]{0x40000000UL});
 		public static readonly BitSet _CLASS_in_primary6972 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _arguments_in_superSuffix6991 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_superSuffix7001 = new BitSet(new ulong[]{0x8000000000000000UL,0x10000UL});
-		public static readonly BitSet _typeArguments_in_superSuffix7004 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_superSuffix7025 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _DOT_in_superSuffix7001 = new BitSet(new ulong[]{0x0UL,0x800080UL});
+		public static readonly BitSet _typeArguments_in_superSuffix7004 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_superSuffix7025 = new BitSet(new ulong[]{0x2UL,0x400000UL});
 		public static readonly BitSet _arguments_in_superSuffix7036 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACKET_in_identifierSuffix7067 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_identifierSuffix7069 = new BitSet(new ulong[]{0x800000000UL,0x800UL});
-		public static readonly BitSet _DOT_in_identifierSuffix7090 = new BitSet(new ulong[]{0x8000000UL});
+		public static readonly BitSet _LBRACKET_in_identifierSuffix7067 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_identifierSuffix7069 = new BitSet(new ulong[]{0x8000000000UL,0x80000UL});
+		public static readonly BitSet _DOT_in_identifierSuffix7090 = new BitSet(new ulong[]{0x40000000UL});
 		public static readonly BitSet _CLASS_in_identifierSuffix7092 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACKET_in_identifierSuffix7103 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_identifierSuffix7105 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_identifierSuffix7107 = new BitSet(new ulong[]{0x2UL,0x800UL});
+		public static readonly BitSet _LBRACKET_in_identifierSuffix7103 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_identifierSuffix7105 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_identifierSuffix7107 = new BitSet(new ulong[]{0x2UL,0x80000UL});
 		public static readonly BitSet _arguments_in_identifierSuffix7128 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_identifierSuffix7138 = new BitSet(new ulong[]{0x8000000UL});
+		public static readonly BitSet _DOT_in_identifierSuffix7138 = new BitSet(new ulong[]{0x40000000UL});
 		public static readonly BitSet _CLASS_in_identifierSuffix7140 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_identifierSuffix7150 = new BitSet(new ulong[]{0x0UL,0x10000UL});
-		public static readonly BitSet _nonWildcardTypeArguments_in_identifierSuffix7152 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_identifierSuffix7154 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _DOT_in_identifierSuffix7150 = new BitSet(new ulong[]{0x0UL,0x800000UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_identifierSuffix7152 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_identifierSuffix7154 = new BitSet(new ulong[]{0x0UL,0x400000UL});
 		public static readonly BitSet _arguments_in_identifierSuffix7156 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_identifierSuffix7166 = new BitSet(new ulong[]{0x0UL,0x400000000000000UL});
+		public static readonly BitSet _DOT_in_identifierSuffix7166 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8UL});
 		public static readonly BitSet _THIS_in_identifierSuffix7168 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_identifierSuffix7178 = new BitSet(new ulong[]{0x0UL,0x40000000000000UL});
-		public static readonly BitSet _SUPER_in_identifierSuffix7180 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _DOT_in_identifierSuffix7178 = new BitSet(new ulong[]{0x0UL,0x1000000000000000UL});
+		public static readonly BitSet _SUPER_in_identifierSuffix7180 = new BitSet(new ulong[]{0x0UL,0x400000UL});
 		public static readonly BitSet _arguments_in_identifierSuffix7182 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _innerCreator_in_identifierSuffix7192 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_selector7211 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_selector7213 = new BitSet(new ulong[]{0x2UL,0x8000UL});
+		public static readonly BitSet _DOT_in_selector7211 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_selector7213 = new BitSet(new ulong[]{0x2UL,0x400000UL});
 		public static readonly BitSet _arguments_in_selector7215 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_selector7226 = new BitSet(new ulong[]{0x0UL,0x10000UL});
-		public static readonly BitSet _nonWildcardTypeArguments_in_selector7228 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_selector7230 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _DOT_in_selector7226 = new BitSet(new ulong[]{0x0UL,0x800000UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_selector7228 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_selector7230 = new BitSet(new ulong[]{0x0UL,0x400000UL});
 		public static readonly BitSet _arguments_in_selector7232 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_selector7243 = new BitSet(new ulong[]{0x0UL,0x400000000000000UL});
+		public static readonly BitSet _DOT_in_selector7243 = new BitSet(new ulong[]{0x0UL,0x0UL,0x8UL});
 		public static readonly BitSet _THIS_in_selector7245 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_selector7255 = new BitSet(new ulong[]{0x0UL,0x40000000000000UL});
-		public static readonly BitSet _SUPER_in_selector7257 = new BitSet(new ulong[]{0x800000000UL,0x8000UL});
+		public static readonly BitSet _DOT_in_selector7255 = new BitSet(new ulong[]{0x0UL,0x1000000000000000UL});
+		public static readonly BitSet _SUPER_in_selector7257 = new BitSet(new ulong[]{0x8000000000UL,0x400000UL});
 		public static readonly BitSet _superSuffix_in_selector7267 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _innerCreator_in_selector7277 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACKET_in_selector7287 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_selector7289 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _LBRACKET_in_selector7287 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_selector7289 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
 		public static readonly BitSet _RBRACKET_in_selector7291 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEW_in_creator7310 = new BitSet(new ulong[]{0x0UL,0x10000UL});
-		public static readonly BitSet _nonWildcardTypeArguments_in_creator7312 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_creator7314 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _NEW_in_creator7310 = new BitSet(new ulong[]{0x0UL,0x800000UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_creator7312 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_creator7314 = new BitSet(new ulong[]{0x0UL,0x400000UL});
 		public static readonly BitSet _classCreatorRest_in_creator7316 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEW_in_creator7326 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_creator7328 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _NEW_in_creator7326 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_creator7328 = new BitSet(new ulong[]{0x0UL,0x400000UL});
 		public static readonly BitSet _classCreatorRest_in_creator7330 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _arrayCreator_in_creator7340 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEW_in_arrayCreator7359 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _createdName_in_arrayCreator7361 = new BitSet(new ulong[]{0x0UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_arrayCreator7371 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_arrayCreator7373 = new BitSet(new ulong[]{0x0UL,0xC00UL});
-		public static readonly BitSet _LBRACKET_in_arrayCreator7384 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_arrayCreator7386 = new BitSet(new ulong[]{0x0UL,0xC00UL});
+		public static readonly BitSet _NEW_in_arrayCreator7359 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _createdName_in_arrayCreator7361 = new BitSet(new ulong[]{0x0UL,0x80000UL});
+		public static readonly BitSet _LBRACKET_in_arrayCreator7371 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_arrayCreator7373 = new BitSet(new ulong[]{0x0UL,0xC0000UL});
+		public static readonly BitSet _LBRACKET_in_arrayCreator7384 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_arrayCreator7386 = new BitSet(new ulong[]{0x0UL,0xC0000UL});
 		public static readonly BitSet _arrayInitializer_in_arrayCreator7407 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEW_in_arrayCreator7418 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _createdName_in_arrayCreator7420 = new BitSet(new ulong[]{0x0UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_arrayCreator7430 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_arrayCreator7432 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_arrayCreator7442 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_arrayCreator7456 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_arrayCreator7458 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_arrayCreator7472 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_arrayCreator7494 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_arrayCreator7496 = new BitSet(new ulong[]{0x2UL,0x800UL});
+		public static readonly BitSet _NEW_in_arrayCreator7418 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _createdName_in_arrayCreator7420 = new BitSet(new ulong[]{0x0UL,0x80000UL});
+		public static readonly BitSet _LBRACKET_in_arrayCreator7430 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_arrayCreator7432 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_arrayCreator7442 = new BitSet(new ulong[]{0x2UL,0x80000UL});
+		public static readonly BitSet _LBRACKET_in_arrayCreator7456 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_arrayCreator7458 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_arrayCreator7472 = new BitSet(new ulong[]{0x2UL,0x80000UL});
+		public static readonly BitSet _LBRACKET_in_arrayCreator7494 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_arrayCreator7496 = new BitSet(new ulong[]{0x2UL,0x80000UL});
 		public static readonly BitSet _arrayInitializer_in_variableInitializer7526 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _expression_in_variableInitializer7536 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACE_in_arrayInitializer7555 = new BitSet(new ulong[]{0x8064003026014200UL,0xA46C08428030E450UL,0x4UL});
-		public static readonly BitSet _variableInitializer_in_arrayInitializer7571 = new BitSet(new ulong[]{0x20000000UL,0x4000000000UL});
-		public static readonly BitSet _COMMA_in_arrayInitializer7590 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E450UL,0x4UL});
-		public static readonly BitSet _variableInitializer_in_arrayInitializer7592 = new BitSet(new ulong[]{0x20000000UL,0x4000000000UL});
-		public static readonly BitSet _COMMA_in_arrayInitializer7642 = new BitSet(new ulong[]{0x0UL,0x4000000000UL});
+		public static readonly BitSet _LBRACE_in_arrayInitializer7555 = new BitSet(new ulong[]{0x2400011121014200UL,0x1A04214014651080UL,0x84AUL});
+		public static readonly BitSet _variableInitializer_in_arrayInitializer7571 = new BitSet(new ulong[]{0x100000000UL,0x200000000000UL});
+		public static readonly BitSet _COMMA_in_arrayInitializer7590 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014651080UL,0x84AUL});
+		public static readonly BitSet _variableInitializer_in_arrayInitializer7592 = new BitSet(new ulong[]{0x100000000UL,0x200000000000UL});
+		public static readonly BitSet _COMMA_in_arrayInitializer7642 = new BitSet(new ulong[]{0x0UL,0x200000000000UL});
 		public static readonly BitSet _RBRACE_in_arrayInitializer7655 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_createdName7688 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _primitiveType_in_createdName7698 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_innerCreator7717 = new BitSet(new ulong[]{0x0UL,0x100000UL});
-		public static readonly BitSet _NEW_in_innerCreator7719 = new BitSet(new ulong[]{0x8000000000000000UL,0x10000UL});
-		public static readonly BitSet _nonWildcardTypeArgumentsOrDiamond_in_innerCreator7730 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_innerCreator7751 = new BitSet(new ulong[]{0x0UL,0x18000UL});
-		public static readonly BitSet _typeArguments_in_innerCreator7762 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _DOT_in_innerCreator7717 = new BitSet(new ulong[]{0x0UL,0x4000000UL});
+		public static readonly BitSet _NEW_in_innerCreator7719 = new BitSet(new ulong[]{0x0UL,0x800080UL});
+		public static readonly BitSet _nonWildcardTypeArgumentsOrDiamond_in_innerCreator7730 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_innerCreator7751 = new BitSet(new ulong[]{0x0UL,0xC00000UL});
+		public static readonly BitSet _typeArguments_in_innerCreator7762 = new BitSet(new ulong[]{0x0UL,0x400000UL});
 		public static readonly BitSet _classCreatorRest_in_innerCreator7783 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _arguments_in_classCreatorRest7802 = new BitSet(new ulong[]{0x2UL,0x400UL});
+		public static readonly BitSet _arguments_in_classCreatorRest7802 = new BitSet(new ulong[]{0x2UL,0x40000UL});
 		public static readonly BitSet _classBody_in_classCreatorRest7813 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LT_in_nonWildcardTypeArguments7843 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _typeList_in_nonWildcardTypeArguments7845 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _LT_in_nonWildcardTypeArguments7843 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _typeList_in_nonWildcardTypeArguments7845 = new BitSet(new ulong[]{0x8000000000000000UL});
 		public static readonly BitSet _GT_in_nonWildcardTypeArguments7847 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LT_in_typeArgumentsOrDiamond7866 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _LT_in_typeArgumentsOrDiamond7866 = new BitSet(new ulong[]{0x8000000000000000UL});
 		public static readonly BitSet _GT_in_typeArgumentsOrDiamond7868 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _typeArguments_in_typeArgumentsOrDiamond7878 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LT_in_nonWildcardTypeArgumentsOrDiamond7897 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _LT_in_nonWildcardTypeArgumentsOrDiamond7897 = new BitSet(new ulong[]{0x8000000000000000UL});
 		public static readonly BitSet _GT_in_nonWildcardTypeArgumentsOrDiamond7899 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _nonWildcardTypeArguments_in_nonWildcardTypeArgumentsOrDiamond7909 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LPAREN_in_arguments7929 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C0A028030E050UL,0x4UL});
-		public static readonly BitSet _expressionList_in_arguments7932 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
+		public static readonly BitSet _LPAREN_in_arguments7929 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A05014014611080UL,0x84AUL});
+		public static readonly BitSet _expressionList_in_arguments7932 = new BitSet(new ulong[]{0x0UL,0x1000000000000UL});
 		public static readonly BitSet _RPAREN_in_arguments7945 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _INTLITERAL_in_intLiteral7962 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LONGLITERAL_in_longLiteral7979 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _FLOATLITERAL_in_floatLiteral7996 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOUBLELITERAL_in_doubleLiteral8013 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _CHARLITERAL_in_charLiteral8030 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _STRINGLITERAL_in_stringLiteral8047 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _TRUE_in_trueLiteral8064 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _FALSE_in_falseLiteral8081 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NULL_in_nullLiteral8098 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _intLiteral_in_literal8118 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _longLiteral_in_literal8128 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _floatLiteral_in_literal8138 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _doubleLiteral_in_literal8148 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _charLiteral_in_literal8158 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _stringLiteral_in_literal8168 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _trueLiteral_in_literal8178 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _falseLiteral_in_literal8188 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _nullLiteral_in_literal8198 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_classHeader8222 = new BitSet(new ulong[]{0x8000000UL});
-		public static readonly BitSet _CLASS_in_classHeader8224 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_classHeader8226 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_enumHeader8246 = new BitSet(new ulong[]{0x8000100000000000UL});
-		public static readonly BitSet _set_in_enumHeader8248 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_enumHeader8254 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_interfaceHeader8274 = new BitSet(new ulong[]{0x0UL,0x20UL});
-		public static readonly BitSet _INTERFACE_in_interfaceHeader8276 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_interfaceHeader8278 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_annotationHeader8298 = new BitSet(new ulong[]{0x0UL,0x40000UL});
-		public static readonly BitSet _MONKEYS_AT_in_annotationHeader8300 = new BitSet(new ulong[]{0x0UL,0x20UL});
-		public static readonly BitSet _INTERFACE_in_annotationHeader8302 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_annotationHeader8304 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_typeHeader8324 = new BitSet(new ulong[]{0x100008000000UL,0x40020UL});
-		public static readonly BitSet _CLASS_in_typeHeader8327 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _ENUM_in_typeHeader8329 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _MONKEYS_AT_in_typeHeader8332 = new BitSet(new ulong[]{0x0UL,0x20UL});
-		public static readonly BitSet _INTERFACE_in_typeHeader8336 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_typeHeader8340 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_methodHeader8360 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000012010UL,0x4UL});
-		public static readonly BitSet _typeParameters_in_methodHeader8362 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL,0x4UL});
-		public static readonly BitSet _type_in_methodHeader8366 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _VOID_in_methodHeader8368 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_methodHeader8372 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _LPAREN_in_methodHeader8374 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_fieldHeader8394 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_fieldHeader8396 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_fieldHeader8398 = new BitSet(new ulong[]{0x200020000000UL,0x40000000800UL});
-		public static readonly BitSet _LBRACKET_in_fieldHeader8401 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_fieldHeader8402 = new BitSet(new ulong[]{0x200020000000UL,0x40000000800UL});
-		public static readonly BitSet _set_in_fieldHeader8406 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _variableModifiers_in_localVariableHeader8432 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_localVariableHeader8434 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_localVariableHeader8436 = new BitSet(new ulong[]{0x200020000000UL,0x40000000800UL});
-		public static readonly BitSet _LBRACKET_in_localVariableHeader8439 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_localVariableHeader8440 = new BitSet(new ulong[]{0x200020000000UL,0x40000000800UL});
-		public static readonly BitSet _set_in_localVariableHeader8444 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _annotations_in_synpred2_Java107 = new BitSet(new ulong[]{0x0UL,0x10000000UL});
+		public static readonly BitSet _modifiers_in_classHeader8039 = new BitSet(new ulong[]{0x40000000UL});
+		public static readonly BitSet _CLASS_in_classHeader8041 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_classHeader8043 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_enumHeader8063 = new BitSet(new ulong[]{0x2000000000000UL,0x80UL});
+		public static readonly BitSet _set_in_enumHeader8065 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_enumHeader8071 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_interfaceHeader8091 = new BitSet(new ulong[]{0x0UL,0x2000UL});
+		public static readonly BitSet _INTERFACE_in_interfaceHeader8093 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_interfaceHeader8095 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_annotationHeader8115 = new BitSet(new ulong[]{0x0UL,0x1000000UL});
+		public static readonly BitSet _MONKEYS_AT_in_annotationHeader8117 = new BitSet(new ulong[]{0x0UL,0x2000UL});
+		public static readonly BitSet _INTERFACE_in_annotationHeader8119 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_annotationHeader8121 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_typeHeader8141 = new BitSet(new ulong[]{0x2000040000000UL,0x1002000UL});
+		public static readonly BitSet _CLASS_in_typeHeader8144 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _ENUM_in_typeHeader8146 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _MONKEYS_AT_in_typeHeader8149 = new BitSet(new ulong[]{0x0UL,0x2000UL});
+		public static readonly BitSet _INTERFACE_in_typeHeader8153 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_typeHeader8157 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_methodHeader8177 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000A01080UL,0x800UL});
+		public static readonly BitSet _typeParameters_in_methodHeader8179 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL,0x800UL});
+		public static readonly BitSet _type_in_methodHeader8183 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _VOID_in_methodHeader8185 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_methodHeader8189 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _LPAREN_in_methodHeader8191 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _modifiers_in_fieldHeader8211 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _type_in_fieldHeader8213 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_fieldHeader8215 = new BitSet(new ulong[]{0x4000100000000UL,0x2000000080000UL});
+		public static readonly BitSet _LBRACKET_in_fieldHeader8218 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_fieldHeader8219 = new BitSet(new ulong[]{0x4000100000000UL,0x2000000080000UL});
+		public static readonly BitSet _set_in_fieldHeader8223 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _variableModifiers_in_localVariableHeader8249 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _type_in_localVariableHeader8251 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_localVariableHeader8253 = new BitSet(new ulong[]{0x4000100000000UL,0x2000000080000UL});
+		public static readonly BitSet _LBRACKET_in_localVariableHeader8256 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_localVariableHeader8257 = new BitSet(new ulong[]{0x4000100000000UL,0x2000000080000UL});
+		public static readonly BitSet _set_in_localVariableHeader8261 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _annotations_in_synpred2_Java107 = new BitSet(new ulong[]{0x0UL,0x800000000UL});
 		public static readonly BitSet _packageDeclaration_in_synpred2_Java136 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _classDeclaration_in_synpred12_Java494 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _normalClassDeclaration_in_synpred27_Java731 = new BitSet(new ulong[]{0x2UL});
@@ -26764,29 +25781,29 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _methodDeclaration_in_synpred53_Java1751 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _classDeclaration_in_synpred54_Java1762 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _explicitConstructorInvocation_in_synpred57_Java1899 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _modifiers_in_synpred59_Java1811 = new BitSet(new ulong[]{0x8000000000000000UL,0x10000UL});
-		public static readonly BitSet _typeParameters_in_synpred59_Java1822 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_synpred59_Java1843 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _formalParameters_in_synpred59_Java1853 = new BitSet(new ulong[]{0x0UL,0x1000000000000400UL});
-		public static readonly BitSet _THROWS_in_synpred59_Java1864 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _qualifiedNameList_in_synpred59_Java1866 = new BitSet(new ulong[]{0x0UL,0x400UL});
-		public static readonly BitSet _LBRACE_in_synpred59_Java1887 = new BitSet(new ulong[]{0x80EC10350E01C310UL,0xEDEF0D5E803DE471UL,0x1DUL});
-		public static readonly BitSet _explicitConstructorInvocation_in_synpred59_Java1899 = new BitSet(new ulong[]{0x80EC10350E01C310UL,0xEDEF0D5E803CE471UL,0x1DUL});
-		public static readonly BitSet _blockStatement_in_synpred59_Java1921 = new BitSet(new ulong[]{0x80EC10350E01C310UL,0xEDEF0D5E803CE471UL,0x1DUL});
+		public static readonly BitSet _modifiers_in_synpred59_Java1811 = new BitSet(new ulong[]{0x0UL,0x800080UL});
+		public static readonly BitSet _typeParameters_in_synpred59_Java1822 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_synpred59_Java1843 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _formalParameters_in_synpred59_Java1853 = new BitSet(new ulong[]{0x0UL,0x40000UL,0x20UL});
+		public static readonly BitSet _THROWS_in_synpred59_Java1864 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _qualifiedNameList_in_synpred59_Java1866 = new BitSet(new ulong[]{0x0UL,0x40000UL});
+		public static readonly BitSet _LBRACE_in_synpred59_Java1887 = new BitSet(new ulong[]{0x2D0201586101C310UL,0x7B86AF4017E53180UL,0x39DAUL});
+		public static readonly BitSet _explicitConstructorInvocation_in_synpred59_Java1899 = new BitSet(new ulong[]{0x2D0201586101C310UL,0x7B86AF4017653180UL,0x39DAUL});
+		public static readonly BitSet _blockStatement_in_synpred59_Java1921 = new BitSet(new ulong[]{0x2D0201586101C310UL,0x7B86AF4017653180UL,0x39DAUL});
 		public static readonly BitSet _RBRACE_in_synpred59_Java1942 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _interfaceFieldDeclaration_in_synpred68_Java2317 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _interfaceMethodDeclaration_in_synpred69_Java2327 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _interfaceDeclaration_in_synpred70_Java2337 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _classDeclaration_in_synpred71_Java2347 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _ellipsisParameterDecl_in_synpred99_Java3181 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _normalParameterDecl_in_synpred101_Java3191 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _COMMA_in_synpred101_Java3202 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
-		public static readonly BitSet _normalParameterDecl_in_synpred101_Java3204 = new BitSet(new ulong[]{0x20000002UL});
-		public static readonly BitSet _normalParameterDecl_in_synpred102_Java3226 = new BitSet(new ulong[]{0x20000000UL});
+		public static readonly BitSet _normalParameterDecl_in_synpred101_Java3191 = new BitSet(new ulong[]{0x100000002UL});
+		public static readonly BitSet _COMMA_in_synpred101_Java3202 = new BitSet(new ulong[]{0x500010020014000UL,0x4000001201080UL});
+		public static readonly BitSet _normalParameterDecl_in_synpred101_Java3204 = new BitSet(new ulong[]{0x100000002UL});
+		public static readonly BitSet _normalParameterDecl_in_synpred102_Java3226 = new BitSet(new ulong[]{0x100000000UL});
 		public static readonly BitSet _COMMA_in_synpred102_Java3236 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _nonWildcardTypeArguments_in_synpred106_Java3371 = new BitSet(new ulong[]{0x0UL,0x440000000000000UL});
-		public static readonly BitSet _set_in_synpred106_Java3397 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _arguments_in_synpred106_Java3429 = new BitSet(new ulong[]{0x0UL,0x40000000000UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_synpred106_Java3371 = new BitSet(new ulong[]{0x0UL,0x1000000000000000UL,0x8UL});
+		public static readonly BitSet _set_in_synpred106_Java3397 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _arguments_in_synpred106_Java3429 = new BitSet(new ulong[]{0x0UL,0x2000000000000UL});
 		public static readonly BitSet _SEMI_in_synpred106_Java3431 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _annotationMethodDeclaration_in_synpred120_Java4030 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _interfaceFieldDeclaration_in_synpred121_Java4040 = new BitSet(new ulong[]{0x2UL});
@@ -26796,58 +25813,58 @@ public partial class JavaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 		public static readonly BitSet _annotationTypeDeclaration_in_synpred125_Java4080 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _localVariableDeclarationStatement_in_synpred128_Java4238 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _classOrInterfaceDeclaration_in_synpred129_Java4248 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ELSE_in_synpred135_Java4421 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
+		public static readonly BitSet _ELSE_in_synpred135_Java4421 = new BitSet(new ulong[]{0x2C0001582101C300UL,0x7A06814014651180UL,0x295AUL});
 		public static readonly BitSet _statement_in_synpred135_Java4423 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _catches_in_synpred155_Java4766 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _FINALLY_in_synpred155_Java4768 = new BitSet(new ulong[]{0x0UL,0x400UL});
+		public static readonly BitSet _catches_in_synpred155_Java4766 = new BitSet(new ulong[]{0x200000000000000UL});
+		public static readonly BitSet _FINALLY_in_synpred155_Java4768 = new BitSet(new ulong[]{0x0UL,0x40000UL});
 		public static readonly BitSet _block_in_synpred155_Java4770 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _catches_in_synpred156_Java4784 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _variableModifiers_in_synpred159_Java4910 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _catchType_in_synpred159_Java4912 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_synpred159_Java4914 = new BitSet(new ulong[]{0x2UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_synpred159_Java4925 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_synpred159_Java4927 = new BitSet(new ulong[]{0x2UL,0x800UL});
+		public static readonly BitSet _variableModifiers_in_synpred159_Java4910 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _catchType_in_synpred159_Java4912 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_synpred159_Java4914 = new BitSet(new ulong[]{0x2UL,0x80000UL});
+		public static readonly BitSet _LBRACKET_in_synpred159_Java4925 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_synpred159_Java4927 = new BitSet(new ulong[]{0x2UL,0x80000UL});
 		public static readonly BitSet _variableModifiers_in_synpred166_Java5128 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _FOR_in_synpred168_Java5183 = new BitSet(new ulong[]{0x0UL,0x8000UL});
-		public static readonly BitSet _LPAREN_in_synpred168_Java5185 = new BitSet(new ulong[]{0x8028001002014000UL,0x80000042010UL});
-		public static readonly BitSet _variableModifiers_in_synpred168_Java5187 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _type_in_synpred168_Java5189 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _IDENTIFIER_in_synpred168_Java5191 = new BitSet(new ulong[]{0x10000000UL});
-		public static readonly BitSet _COLON_in_synpred168_Java5193 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_synpred168_Java5204 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_synpred168_Java5206 = new BitSet(new ulong[]{0x80E400350601C300UL,0xADEC0D028030E451UL,0x15UL});
+		public static readonly BitSet _FOR_in_synpred168_Java5183 = new BitSet(new ulong[]{0x0UL,0x400000UL});
+		public static readonly BitSet _LPAREN_in_synpred168_Java5185 = new BitSet(new ulong[]{0x500010020014000UL,0x4000001201080UL});
+		public static readonly BitSet _variableModifiers_in_synpred168_Java5187 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _type_in_synpred168_Java5189 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _IDENTIFIER_in_synpred168_Java5191 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _COLON_in_synpred168_Java5193 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_synpred168_Java5204 = new BitSet(new ulong[]{0x0UL,0x1000000000000UL});
+		public static readonly BitSet _RPAREN_in_synpred168_Java5206 = new BitSet(new ulong[]{0x2C0001582101C300UL,0x7A06814014651180UL,0x295AUL});
 		public static readonly BitSet _statement_in_synpred168_Java5208 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _localVariableDeclaration_in_synpred172_Java5387 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _castExpression_in_synpred213_Java6615 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LPAREN_in_synpred217_Java6705 = new BitSet(new ulong[]{0x20001002014000UL,0x80000002010UL});
-		public static readonly BitSet _primitiveType_in_synpred217_Java6707 = new BitSet(new ulong[]{0x0UL,0x20000000000UL});
-		public static readonly BitSet _RPAREN_in_synpred217_Java6709 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
+		public static readonly BitSet _LPAREN_in_synpred217_Java6705 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201000UL});
+		public static readonly BitSet _primitiveType_in_synpred217_Java6707 = new BitSet(new ulong[]{0x0UL,0x1000000000000UL});
+		public static readonly BitSet _RPAREN_in_synpred217_Java6709 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
 		public static readonly BitSet _unaryExpression_in_synpred217_Java6711 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_synpred219_Java6781 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _DOT_in_synpred219_Java6781 = new BitSet(new ulong[]{0x0UL,0x80UL});
 		public static readonly BitSet _IDENTIFIER_in_synpred219_Java6783 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _identifierSuffix_in_synpred220_Java6805 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOT_in_synpred222_Java6837 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _DOT_in_synpred222_Java6837 = new BitSet(new ulong[]{0x0UL,0x80UL});
 		public static readonly BitSet _IDENTIFIER_in_synpred222_Java6839 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _identifierSuffix_in_synpred223_Java6861 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACKET_in_synpred235_Java7103 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_synpred235_Java7105 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _LBRACKET_in_synpred235_Java7103 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_synpred235_Java7105 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
 		public static readonly BitSet _RBRACKET_in_synpred235_Java7107 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEW_in_synpred248_Java7310 = new BitSet(new ulong[]{0x0UL,0x10000UL});
-		public static readonly BitSet _nonWildcardTypeArguments_in_synpred248_Java7312 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_synpred248_Java7314 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _NEW_in_synpred248_Java7310 = new BitSet(new ulong[]{0x0UL,0x800000UL});
+		public static readonly BitSet _nonWildcardTypeArguments_in_synpred248_Java7312 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_synpred248_Java7314 = new BitSet(new ulong[]{0x0UL,0x400000UL});
 		public static readonly BitSet _classCreatorRest_in_synpred248_Java7316 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEW_in_synpred249_Java7326 = new BitSet(new ulong[]{0x8000000000000000UL});
-		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_synpred249_Java7328 = new BitSet(new ulong[]{0x0UL,0x8000UL});
+		public static readonly BitSet _NEW_in_synpred249_Java7326 = new BitSet(new ulong[]{0x0UL,0x80UL});
+		public static readonly BitSet _classOrInterfaceTypeWithDiamond_in_synpred249_Java7328 = new BitSet(new ulong[]{0x0UL,0x400000UL});
 		public static readonly BitSet _classCreatorRest_in_synpred249_Java7330 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEW_in_synpred251_Java7359 = new BitSet(new ulong[]{0x8020001002014000UL,0x80000002010UL});
-		public static readonly BitSet _createdName_in_synpred251_Java7361 = new BitSet(new ulong[]{0x0UL,0x800UL});
-		public static readonly BitSet _LBRACKET_in_synpred251_Java7371 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_synpred251_Java7373 = new BitSet(new ulong[]{0x0UL,0xC00UL});
-		public static readonly BitSet _LBRACKET_in_synpred251_Java7384 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
-		public static readonly BitSet _RBRACKET_in_synpred251_Java7386 = new BitSet(new ulong[]{0x0UL,0xC00UL});
+		public static readonly BitSet _NEW_in_synpred251_Java7359 = new BitSet(new ulong[]{0x400010020014000UL,0x4000000201080UL});
+		public static readonly BitSet _createdName_in_synpred251_Java7361 = new BitSet(new ulong[]{0x0UL,0x80000UL});
+		public static readonly BitSet _LBRACKET_in_synpred251_Java7371 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_synpred251_Java7373 = new BitSet(new ulong[]{0x0UL,0xC0000UL});
+		public static readonly BitSet _LBRACKET_in_synpred251_Java7384 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
+		public static readonly BitSet _RBRACKET_in_synpred251_Java7386 = new BitSet(new ulong[]{0x0UL,0xC0000UL});
 		public static readonly BitSet _arrayInitializer_in_synpred251_Java7407 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LBRACKET_in_synpred252_Java7456 = new BitSet(new ulong[]{0x8064003006014200UL,0xA46C08028030E050UL,0x4UL});
-		public static readonly BitSet _expression_in_synpred252_Java7458 = new BitSet(new ulong[]{0x0UL,0x8000000000UL});
+		public static readonly BitSet _LBRACKET_in_synpred252_Java7456 = new BitSet(new ulong[]{0x2400011021014200UL,0x1A04014014611080UL,0x84AUL});
+		public static readonly BitSet _expression_in_synpred252_Java7458 = new BitSet(new ulong[]{0x0UL,0x400000000000UL});
 		public static readonly BitSet _RBRACKET_in_synpred252_Java7472 = new BitSet(new ulong[]{0x2UL});
 	}
 	#endregion Follow sets

@@ -45,15 +45,17 @@ namespace Code2Xml.Core.Generators {
                 string code, bool throwingParseError = DefaultThrowingParseError) {
             // TODO: Support throwingParseError and enablePosition
             using (var p = StartProcess(code)) {
-                try {
                     var tree = CstNode.Deserialize(p.StandardOutput);
                     SetLocationInformation(tree, code);
-                    Debug.WriteLine(p.StandardError.ReadToEnd());
                     return tree;
-                } catch (Exception e) {
-                    Debug.WriteLine(p.StandardError.ReadToEnd());
-                    throw e;
-                }
+                //try {
+                //    var tree = CstNode.Deserialize(p.StandardOutput);
+                //    SetLocationInformation(tree, code);
+                //    return tree;
+                //} catch (Exception e) {
+                //    Debug.WriteLine(p.StandardError.ReadToEnd());    
+                //    throw new ParseException(e);
+                //}
             }
         }
 

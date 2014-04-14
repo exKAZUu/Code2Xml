@@ -82,6 +82,7 @@ public @interface Beta {}")]
 public class AlignedTuplePrinter {
     List<String> columnLines = new ArrayList<>();
 }")]
+        [TestCase(@"class K { void m() { converter.reverse().convert(0666); }}")]
         public void Parse(string code) {
             VerifyRestoringCode(code);
         }
@@ -119,8 +120,15 @@ public class AlignedTuplePrinter {
                 @"66a397368a98834095b47db2b706420901c52ba3")]
         [TestCase(@"https://github.com/JakeWharton/u2020.git",
                 @"a08a7ec51e01cc40aa27779dca52277e69d156f7")]
+        [TestCase(@"https://code.google.com/p/guava-libraries/",
+                @"f510d9bc51715c4d583e0b152e5d0265c44c982f")]
         public void ParseGitRepository(string url, string commitPointer) {
             VerifyRestoringGitRepository(url, commitPointer, "*.java");
+        }
+
+        [Test]
+        public void ParseSourceCodeOfHudson2() {
+            Generator.GenerateTreeFromCode(new FileInfo(@"C:\Users\exKAZUu\Projects\Code2Xml\ParserTests\fixture\Git\guava-libraries\guava-gwt\test-super\com\google\common\primitives\super\com\google\common\primitives\IntsTest.java"), null, true);
         }
 
         [Test]

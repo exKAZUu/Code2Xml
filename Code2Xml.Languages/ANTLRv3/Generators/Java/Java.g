@@ -1260,53 +1260,15 @@ arguments
         )? ')'
     ;
 
-intLiteral
-    : INTLITERAL
+literal
+    :   IntegerLiteral
+    |   FloatingPointLiteral
+    |   CharacterLiteral
+    |   StringLiteral
+    |   BooleanLiteral
+    |   NullLiteral
     ;
 
-longLiteral
-    : LONGLITERAL
-    ;
-
-floatLiteral
-    : FLOATLITERAL
-    ;
-
-doubleLiteral
-    : DOUBLELITERAL
-    ;
-
-charLiteral
-    : CHARLITERAL
-    ;
-
-stringLiteral
-    : STRINGLITERAL
-    ;
-
-trueLiteral
-    : TRUE
-    ;
-
-falseLiteral
-    : FALSE
-    ;
-
-nullLiteral
-    : NULL
-    ;
-
-literal 
-    :   intLiteral
-    |   longLiteral
-    |   floatLiteral
-    |   doubleLiteral
-    |   charLiteral
-    |   stringLiteral
-    |   trueLiteral
-    |   falseLiteral
-    |   nullLiteral
-    ;
 
 /**
  * These are headers help to make syntatical predicates, not necessary but helps to make grammar faster.
@@ -1351,170 +1313,230 @@ localVariableHeader
                   Lexer section
 *********************************************************************************************/
 
-LONGLITERAL
-    :   IntegerNumber LongSuffix
+// Åò3.10.1 Integer Literals
+
+IntegerLiteral
+    :   DecimalIntegerLiteral
+    |   HexIntegerLiteral
+    |   OctalIntegerLiteral
+    |   BinaryIntegerLiteral
     ;
 
-    
-INTLITERAL
-    :   IntegerNumber 
-    ;
-    
 fragment
-IntegerNumber
-    :   '0' 
-    |   NonZeroDigit (Digits)?
-	|	NonZeroDigit Underscores Digits
-    |   OctalPrefix OctalDigits         
-    |   HexPrefix HexDigits
-	|	BinaryPrefix BinaryDigits        
+DecimalIntegerLiteral
+    :   DecimalNumeral IntegerTypeSuffix?
+    ;
+
+fragment
+HexIntegerLiteral
+    :   HexNumeral IntegerTypeSuffix?
+    ;
+
+fragment
+OctalIntegerLiteral
+    :   OctalNumeral IntegerTypeSuffix?
+    ;
+
+fragment
+BinaryIntegerLiteral
+    :   BinaryNumeral IntegerTypeSuffix?
+    ;
+
+fragment
+IntegerTypeSuffix
+    :   ('l' | 'L')
+    ;
+
+fragment
+DecimalNumeral
+    :   '0'
+    |   NonZeroDigit (Digits? | Underscores Digits)
+    ;
+
+fragment
+Digits
+    :   Digit (DigitOrUnderscore* Digit)?
+    ;
+
+fragment
+Digit
+    :   '0'
+    |   NonZeroDigit
     ;
 
 fragment
 NonZeroDigit
-	:	'1'..'9'
-	;
-
-fragment
-Digits
-	:	Digit
-	|	Digit (DigitOrUnderscore)* Digit
-	;
-
-fragment
-Digit
-	:	'0'
-	|	NonZeroDigit
-	;
+    :   ('1'..'9')
+    ;
 
 fragment
 DigitOrUnderscore
-	:	Digit
-	|	'_'
-	;
+    :   Digit
+    |   '_'
+    ;
 
 fragment
 Underscores
-	:	'_'+
-	;
+    :   '_'+
+    ;
 
 fragment
-HexPrefix
-    :   '0x' | '0X'
+HexNumeral
+    :   '0' ('x' | 'X') HexDigits
     ;
-    
+
 fragment
 HexDigits
-	:	HexDigit
-	|	HexDigit (HexDigitOrUnderscore)* HexDigit
-	;	
-	    
+    :   HexDigit (HexDigitOrUnderscore* HexDigit)?
+    ;
+
 fragment
 HexDigit
-    :   ('0'..'9'|'a'..'f'|'A'..'F')
+    :   ('0'..'9') | ('a'..'f') | ('A'..'F')
     ;
 
 fragment
 HexDigitOrUnderscore
-	:	HexDigit
-	|	'_'
-	;
+    :   HexDigit
+    |   '_'
+    ;
 
 fragment
-OctalPrefix
-	:	'0' OctalDigits
-	|	'0' Underscores OctalDigits
-	;
+OctalNumeral
+    :   '0' Underscores? OctalDigits
+    ;
 
 fragment
 OctalDigits
-	:	OctalDigit
-	|	OctalDigit (OctalDigitOrUnderscore)* OctalDigit
-	;
+    :   OctalDigit (OctalDigitOrUnderscore* OctalDigit)?
+    ;
 
 fragment
 OctalDigit
-	:	'0'..'7'
-	;
+    :   ('0'..'7')
+    ;
 
 fragment
 OctalDigitOrUnderscore
-	:	OctalDigit
-	|	'_'
-	;
+    :   OctalDigit
+    |   '_'
+    ;
 
 fragment
-BinaryPrefix
-	:	'0b' | '0B'
-	;
+BinaryNumeral
+    :   '0' ('b' | 'B') BinaryDigits
+    ;
 
 fragment
 BinaryDigits
-	:	BinaryDigit
-	|	BinaryDigit (BinaryDigitOrUnderscore)* BinaryDigit
-	;
+    :   BinaryDigit (BinaryDigitOrUnderscore* BinaryDigit)?
+    ;
 
 fragment
 BinaryDigit
-	:	'0' | '1'
-	;
+    :   ('0' | '1')
+    ;
 
 fragment
 BinaryDigitOrUnderscore
-	:	BinaryDigit
-	|	'_'
-	;
+    :   BinaryDigit
+    |   '_'
+    ;
+
+// Åò3.10.2 Floating-Point Literals
+
+FloatingPointLiteral
+    :   DecimalFloatingPointLiteral
+    |   HexadecimalFloatingPointLiteral
+    ;
 
 fragment
-LongSuffix
-    :   'l' | 'L'
+DecimalFloatingPointLiteral
+    :   Digits '.' Digits? ExponentPart? FloatTypeSuffix?
+    |   '.' Digits ExponentPart? FloatTypeSuffix?
+    |   Digits ExponentPart FloatTypeSuffix?
+    |   Digits FloatTypeSuffix
     ;
 
 fragment
-NonIntegerNumber
-    :   Digits '.' Digits? Exponent?  
-    |   '.' Digits Exponent?  
-    |   Digits Exponent  
-    |   Digits 
-    |   
-        HexPrefix HexDigits
-        (    () 
-        |    ('.' HexDigits? ) 
-        ) 
-        ( 'p' | 'P' ) 
-        ( '+' | '-' )? 
-        Digits
-	|
-		HexPrefix '.' HexDigits
-		( 'p' | 'P' ) 
-        ( '+' | '-' )? 
-		Digits
+ExponentPart
+    :   ExponentIndicator SignedInteger
     ;
-        
-fragment 
-Exponent    
-    :   ( 'e' | 'E' ) ( '+' | '-' )? Digits
-    ;
-    
-fragment 
-FloatSuffix
-    :   'f' | 'F' 
-    ;     
 
 fragment
-DoubleSuffix
-    :   'd' | 'D'
-    ;
-        
-FLOATLITERAL
-    :   NonIntegerNumber FloatSuffix
-    ;
-    
-DOUBLELITERAL
-    :   NonIntegerNumber DoubleSuffix?
+ExponentIndicator
+    :   ('e' | 'E')
     ;
 
-CHARLITERAL
+fragment
+SignedInteger
+    :   Sign? Digits
+    ;
+
+fragment
+Sign
+    :   ('+' | '-')
+    ;
+
+fragment
+FloatTypeSuffix
+    :   ('f' | 'F' | 'd' | 'D')
+    ;
+
+fragment
+HexadecimalFloatingPointLiteral
+    :   HexSignificand BinaryExponent FloatTypeSuffix?
+    ;
+
+fragment
+HexSignificand
+    :   HexNumeral '.'?
+    |   '0' ('x'|'X') HexDigits? '.' HexDigits
+    ;
+
+fragment
+BinaryExponent
+    :   BinaryExponentIndicator SignedInteger
+    ;
+
+fragment
+BinaryExponentIndicator
+    :   ('p'|'P')
+    ;
+
+// Åò3.10.3 Boolean Literals
+
+BooleanLiteral
+    :   'true'
+    |   'false'
+    ;
+
+// Åò3.10.6 Escape Sequences for Character and String Literals
+
+fragment
+OctalEscape
+    :   '\\' OctalDigit
+    |   '\\' OctalDigit OctalDigit
+    |   '\\' ZeroToThree OctalDigit OctalDigit
+    ;
+
+fragment
+UnicodeEscape
+    :   '\\' 'u' HexDigit HexDigit HexDigit HexDigit
+    ;
+
+fragment
+ZeroToThree
+    :   ('0'..'3')
+    ;
+
+// Åò3.10.7 The Null Literal
+
+NullLiteral
+    :   'null'
+    ;
+
+CharacterLiteral
     :   '\'' 
         (   EscapeSequence 
         |   ~( '\'' | '\\' | '\r' | '\n' )
@@ -1522,7 +1544,7 @@ CHARLITERAL
         '\''
     ; 
 
-STRINGLITERAL
+StringLiteral
     :   '"' 
         (   EscapeSequence
         |   ~( '\\' | '"' | '\r' | '\n' )        
@@ -1794,18 +1816,6 @@ VOLATILE
 
 WHILE
     :   'while'
-    ;
-
-TRUE
-    :   'true'
-    ;
-
-FALSE
-    :   'false'
-    ;
-
-NULL
-    :   'null'
     ;
 
 LPAREN

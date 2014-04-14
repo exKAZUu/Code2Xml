@@ -17,27 +17,31 @@ def print_string(str):
 	print_int(len(unicode(str)))
 	sys.stdout.write(str)
 
-def print_ast(tuple):
-	if not isinstance(tuple, types.TupleType):
-		return
-	id = tuple[0]
-	if not isinstance(tuple[1], types.StringType):
+def print_ast(node):
+	id = node[0]
+	if not isinstance(node[1], types.StringType):
 		print_bool(True)					# IsInnerNode
 		print_string(symbol.sym_name[id])	# Name
 		print_string(str(id))				# RuleId
-		for item in tuple[1:]:
-			print_bool(True)				# ExistsNextChild
-			print_ast(item)
+		for item in node[1:]:
+			if isinstance(item, types.TupleType):
+				print_bool(True)			# ExistsNextChild
+				print_ast(item)
 		print_bool(False)					# ExistsNextChild
 	else:
 		print_bool(False)					# IsInnerNode
 		print_string(token.tok_name[id])	# Name
 		print_string(str(id))				# RuleId
-		print_string(tuple[1])				# Text
+		print_string(node[1])				# Text
 
 reload(sys)
 sys.setdefaultencoding('utf_8')
 
+if sys.platform == "win32":
+    import os, msvcrt
+    msvcrt.setmode(sys.stdout.fileno(), os.O_BINARY)
+
 ast = suite(sys.stdin.read())
 print_string('WithRuleId')
 print_ast(ast2tuple(ast))
+sys.stdout.flush()
