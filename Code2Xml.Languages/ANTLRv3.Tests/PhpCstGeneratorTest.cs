@@ -119,6 +119,70 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
                 @"01f4c43b683d994e461d4e5049e88d8c5daff31d")]
         [TestCase(@"https://github.com/phoronix-test-suite/phoronix-test-suite.git",
                 @"307a0c3f7d5fb1a5fee93e59e52410e04b9868e0")]
+        [TestCase(@"https://github.com/laravel/laravel.git",
+                @"af7092275956a839e79f49158312241d3ea3b7f9")] // Star: 9316
+        [TestCase(@"https://github.com/yiisoft/yii2.git",
+                @"c501ae4f4d35343115733f9a6a09259050a78d8f")] // Star: 2223
+        [TestCase(@"https://github.com/owncloud/core.git",
+                @"71de32186936c4afc2e48a566c2d3c6f3fdf365b")] // Star: 2074
+        [TestCase(@"https://github.com/Anahkiasen/rocketeer.git",
+                @"02e2eace2765d88754731d1c672bb14b0d2cf6ca")] // Star: 867
+        [TestCase(@"https://github.com/gajus/vlad.git",
+                @"65ecdb433485163a7bf27b3ed317cc458cf17aab")] // Star: 80
+        [TestCase(@"https://github.com/guzzle/guzzle.git",
+                @"222323bd6a2c79ea7e13bfe6b3b1435f007274fd")] // Star: 3166
+        [TestCase(@"https://github.com/composer/composer.git",
+                @"14f35e812cd41746c4a4a7a2dec2b2365c8cdc61")] // Star: 3686
+        [TestCase(@"https://github.com/thephpleague/flysystem.git",
+                @"387e012fa93878e3865ed8db1aa9daba8bf2f9c5")] // Star: 1045
+        [TestCase(@"https://github.com/domnikl/DesignPatternsPHP.git",
+                @"ed291cd959053366e9d9edba62d8633034f93b0b")] // Star: 3753
+        [TestCase(@"https://github.com/JeffreyWay/Laravel-4-Generators.git",
+                @"cf766fae573d35621c2f2a14f0710c5484edf3f0")] // Star: 1695
+        [TestCase(@"https://github.com/fzaninotto/Faker.git",
+                @"89345a3ccc366bc14e0a984a086cc66028bd6411")] // Star: 3363
+        [TestCase(@"https://github.com/php-fig/fig-standards.git",
+                @"2e276153b8f084d5d552ae3cf86876bb06b20385")] // Star: 4069
+        [TestCase(@"https://github.com/Seldaek/monolog.git",
+                @"03000a7fcd4072bd7e1f99c8ce4328621c5773b9")] // Star: 2053
+        [TestCase(@"https://github.com/JakubOnderka/PHP-Parallel-Lint.git",
+                @"9c601da4e840e35c7f85a0682b30b9b04400f9e0")] // Star: 35
+        [TestCase(@"https://github.com/AdvancedCustomFields/acf5-beta.git",
+                @"3be7f4586683e8aa1d6e20834eb4fccf8ea863e9")] // Star: 92
+        [TestCase(@"https://github.com/facebook/phabricator.git",
+                @"2509c6b0f57dc533607fb6811adc02529b0d6fd8")] // Star: 3497
+        [TestCase(@"https://github.com/ginatrapani/ThinkUp.git",
+                @"06bc738952cd534938ebd03fe05a8f1a0cb9d8b8")] // Star: 3032
+        [TestCase(@"https://github.com/puphpet/puphpet.git",
+                @"e4012cbbe0fc3b200b4750bb79673a9f468c1b9e")] // Star: 1800
+        [TestCase(@"https://github.com/google/google-api-php-client.git",
+                @"e1a2f23ada736923627d1db315d045f6d1d1cc1b")] // Star: 520
+        [TestCase(@"https://github.com/sonata-project/SonataDoctrinePhpcrAdminBundle.git",
+                @"33deaa30c2b554603647db05b7647d1b4e1c43ca")] // Star: 24
+        [TestCase(@"https://github.com/PrestaShop/PrestaShop-modules.git",
+                @"07a753b47a48200629eb7ef0f4a2373ccb26a093")] // Star: 91
+        [TestCase(@"https://github.com/opencart/opencart.git",
+                @"263117979c50f424feab60f9918e602f5bf9b2af")] // Star: 1092
+        [TestCase(@"https://github.com/benedmunds/CodeIgniter-Ion-Auth.git",
+                @"e083881869045eeee9f96f957a65872b9977450f")] // Star: 1184
+        [TestCase(@"https://github.com/zendframework/modules.zendframework.com.git",
+                @"3dd1f19d35eee60090acd7e2cdff2f279ffbc735")] // Star: 157
+        [TestCase(@"https://github.com/zendframework/zf1.git",
+                @"89bedb5de121610eee02b610c40b6f818200a6b3")] // Star: 165
+        [TestCase(@"https://github.com/dingo/api.git",
+                @"5687f23b56d62ccb62f1809da39e847da7508495")] // Star: 70
+        [TestCase(@"https://github.com/symfony/symfony.git",
+                @"c875acf3a264f852e4bb2ddc5987bb5426d41cda")] // Star: 8234
+        [TestCase(@"https://github.com/EllisLab/CodeIgniter.git",
+                @"db0873365aabce72390fe9ccf19081de143a1d51")] // Star: 7476
+        [TestCase(@"https://github.com/PHPMailer/PHPMailer.git",
+                @"7b384d0bedf7feb1d3cdfaae689d8c5b68eb0515")] // Star: 1600
+        [TestCase(@"https://github.com/leroy-merlin-br/larasniffer.git",
+                @"5f1c6104a8c9229357aba56312ba0cc6bf7863b6")] // Star: 47
+        [TestCase(@"https://github.com/WordPress/WordPress.git",
+                @"3de93ccba3525de41216784ca0ccc8863195d4f6")] // Star: 3789
+        [TestCase(@"https://github.com/laravel/framework.git",
+                @"627fc22cb2fdd343cb17b552955eb317860f023d")] // Star: 1850
         // Failed test cases
         //[TestCase(@"https://github.com/EllisLab/CodeIgniter.git",
         //        @"8fb31c929b9cca6154eb007ff553f4a96d31415e")]
@@ -149,7 +213,7 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
         //[TestCase(@"https://github.com/zendframework/zf2.git",
         //        @"4fe2829353077239aafc9ffe39a15c07bba5b660")]
         public void ParseGitRepository(string url, string commitPointer) {
-            VerifyRestoringGitRepository(url, commitPointer, "*.php");
+            VerifyRestoringGitRepositorySavingRepo(url, commitPointer, "php_repo.txt", "*.php");
         }
     }
 }

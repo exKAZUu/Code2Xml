@@ -18,6 +18,7 @@
 
 using System;
 using System.IO;
+using System.Threading;
 using Code2Xml.Core.Generators;
 using NUnit.Framework;
 using ParserTests;
@@ -185,6 +186,33 @@ namespace Code2Xml.Core.Tests.Generators {
             Directory.CreateDirectory(path);
             Git.CloneAndCheckout(path, url, commitPointer);
             PrivateVerifyRestoringProjectDirectory(path, url, readFileFunc, patterns);
+        }
+
+        protected void VerifyRestoringGitRepositorySavingRepo(
+                string url, string commitPointer, string filePath,
+                params string[] patterns) {
+            VerifyRestoringGitRepositorySavingRepo(
+                    url, commitPointer, filePath, File.ReadAllText, patterns);
+        }
+
+        protected void VerifyRestoringGitRepositorySavingRepo(
+                string url, string commitPointer, string filePath,
+                Func<string, string> readFileFunc, params string[] patterns) {
+            var thread = new Thread(
+                    () => {
+                        var path = Fixture.GetGitRepositoryPath(url);
+                        Directory.CreateDirectory(path);
+                        Git.CloneAndCheckout(path, url, commitPointer);
+                        PrivateVerifyRestoringProjectDirectory(path, url, readFileFunc, patterns);
+                        File.AppendAllText(
+                                filePath,
+                                "[TestCase(@\"" + url + "\",\r\n" +
+                                "@\"" + commitPointer + "\")]\r\n");
+                    });
+            thread.Start();
+            if (thread.Join(1000 * 60 * 5)) {
+                thread.Abort();
+            }
         }
 
         protected void Inspect(string code) {
