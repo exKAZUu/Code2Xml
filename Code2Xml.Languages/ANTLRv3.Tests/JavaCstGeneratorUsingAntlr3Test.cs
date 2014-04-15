@@ -83,7 +83,6 @@ public class AlignedTuplePrinter {
     List<String> columnLines = new ArrayList<>();
 }")]
         [TestCase(@"class K { void m() { converter.reverse().convert(0666); }}")]
-        [TestCase(@"class K { void m() { if (1 < 2) {} else {} }}")]
         public void Parse(string code) {
             VerifyRestoringCode(code);
         }
@@ -101,116 +100,326 @@ public class AlignedTuplePrinter {
         }
 
         [Test]
-        [TestCase(@"https://github.com/Findwise/Hydra.git",
-                @"5c781845a466f99645eac9fa27fb27aceb88a442")]
-        [TestCase(@"https://github.com/Netflix/RxJava.git",
-                @"bd87341aecb408b2a0acc3f7a42dc118be006b1d")]
-        [TestCase(@"https://github.com/derekbrameyer/android-betterpickers.git",
-                @"5646215424ad779f1f780254101b75221675b76b")]
-        [TestCase(@"https://github.com/path/android-priority-jobqueue.git",
-                @"d3b33d9ae94df76ffde1f4b9735c0f7cc6463384")]
+        //[TestCase(@"https://github.com/Findwise/Hydra.git",
+        //        @"5c781845a466f99645eac9fa27fb27aceb88a442")]
+        //[TestCase(@"https://github.com/Netflix/RxJava.git",
+        //        @"bd87341aecb408b2a0acc3f7a42dc118be006b1d")]
+        //[TestCase(@"https://github.com/derekbrameyer/android-betterpickers.git",
+        //        @"5646215424ad779f1f780254101b75221675b76b")]
+        //[TestCase(@"https://github.com/path/android-priority-jobqueue.git",
+        //        @"d3b33d9ae94df76ffde1f4b9735c0f7cc6463384")]
+        //[TestCase(@"https://github.com/elasticsearch/elasticsearch.git",
+        //        @"2f32908193f3f61139da054f0ee5a949f8c589dc")]
+        //[TestCase(@"https://code.google.com/p/pageobjectgenerator/",
+        //        @"169bdaf6a5a08fab62e167764e7f8401309d7b64")]
+        //[TestCase(@"https://github.com/facebook/presto.git",
+        //        @"78045f8ede1f1e3deb4e40b880745141480d362f")]
+        //[TestCase(@"https://github.com/JakeWharton/scalpel.git",
+        //        @"27338feaa632bc160ae4f27f001474f0850310ea")]
+        //[TestCase(@"https://github.com/nathanmarz/storm.git",
+        //        @"66a397368a98834095b47db2b706420901c52ba3")]
+        //[TestCase(@"https://github.com/JakeWharton/u2020.git",
+        //        @"a08a7ec51e01cc40aa27779dca52277e69d156f7")]
+        //[TestCase(@"https://code.google.com/p/guava-libraries/",
+        //        @"f510d9bc51715c4d583e0b152e5d0265c44c982f")]
+        [TestCase(@"https://github.com/jfeinstein10/SlidingMenu.git",
+                @"4254feca3ece9397cd501921ee733f19ea0fdad8")] // Star: 5192
+        [TestCase(@"https://github.com/spring-projects/spring-framework.git",
+                @"09248a0b372ad2e6019b44190ae64f4316dbc1fd")] // Star: 3294
+        [TestCase(@"https://github.com/junit-team/junit.git",
+                @"e65558c174a8f5c4c7758f0d9dd1ffe027b023d8")] // Star: 2461
+        [TestCase(@"https://github.com/github/android.git",
+                @"9d490829b944d3a2c77dbd0010ec7a0bfe2efaee")] // Star: 3881
+        [TestCase(@"https://github.com/excilys/androidannotations.git",
+                @"5e769c2d90c76ebfe685f6423435b3fda5fa4bc6")] // Star: 2725
+        [TestCase(@"https://github.com/AndroidBootstrap/android-bootstrap.git",
+                @"e43e3ac4a5984edf9a6ccc87bac04be177a3615a")] // Star: 2446
         [TestCase(@"https://github.com/elasticsearch/elasticsearch.git",
-                @"2f32908193f3f61139da054f0ee5a949f8c589dc")]
-        [TestCase(@"https://code.google.com/p/pageobjectgenerator/",
-                @"169bdaf6a5a08fab62e167764e7f8401309d7b64")]
-        [TestCase(@"https://github.com/facebook/presto.git",
-                @"78045f8ede1f1e3deb4e40b880745141480d362f")]
-        [TestCase(@"https://github.com/JakeWharton/scalpel.git",
-                @"27338feaa632bc160ae4f27f001474f0850310ea")]
+                @"e688f445ad15054d9335f71c94a0b6736877481b")] // Star: 6637
+        [TestCase(@"https://github.com/chrisbanes/Android-PullToRefresh.git",
+                @"3bd8ef6869c3297bfe874d2f15c2ee53c3456e99")] // Star: 3007
+        [TestCase(@"https://github.com/JakeWharton/ActionBarSherlock.git",
+                @"4a79d536af872339899a90d6dc743aa57745474b")] // Star: 5553
+        [TestCase(@"https://github.com/loopj/android-async-http.git",
+                @"6077c6aa7bf06b2b8c13fbb4355e094dea436b7c")] // Star: 3304
+        [TestCase(@"https://github.com/Bearded-Hen/Android-Bootstrap.git",
+                @"9187a05fd7d91350569347f8565078441135d8d4")] // Star: 2650
+        [TestCase(@"https://github.com/sparklemotion/nokogiri.git",
+                @"163103b0eaf904575e62909eddc00dcc9e425a2a")] // Star: 2604
         [TestCase(@"https://github.com/nathanmarz/storm.git",
-                @"66a397368a98834095b47db2b706420901c52ba3")]
-        [TestCase(@"https://github.com/JakeWharton/u2020.git",
-                @"a08a7ec51e01cc40aa27779dca52277e69d156f7")]
-        [TestCase(@"https://code.google.com/p/guava-libraries/",
-                @"f510d9bc51715c4d583e0b152e5d0265c44c982f")]
-        [TestCase(@"https://github.com/MehdiK/Humanizer.git",
-                @"b51cc6715acde38f674dfd84ae02188be0547702")] // Star: 503
-        [TestCase(@"https://github.com/NancyFx/Nancy.git",
-                @"e069dfbc326af4552f79b55b12c6966305baad79")] // Star: 2104
-        [TestCase(@"https://github.com/mono/MonoGame.git",
-                @"73fc2954b0cd83a4a7f3ddecdc56f155ff135e99")] // Star: 1996
-        [TestCase(@"https://github.com/SignalR/SignalR.git",
-                @"b940230aedc851c50775c2ed32ab96c476f10ec6")] // Star: 4108
-        [TestCase(@"https://github.com/JamesNK/Newtonsoft.Json.git",
-                @"9e2581be74585605b4f49e0110d65c85c17cb323")] // Star: 825
-        [TestCase(@"https://github.com/Glimpse/Glimpse.git",
-                @"b78f1c8b336e86278efea95c115f8a9a404ab901")] // Star: 691
-        [TestCase(@"https://github.com/WebMBro/WebMConverter.git",
-                @"07ff15b0e4fdf1b5cf66cf25a71a2d3b88a6f75e")] // Star: 40
-        [TestCase(@"https://github.com/shimat/opencvsharp.git",
-                @"d337e665265a8ce88773869d2402cad7fc1d21d3")] // Star: 40
-        [TestCase(@"https://github.com/mrward/monodevelop-nuget-addin.git",
-                @"f593536fcd779f4e819def961c676e392eee0ff3")] // Star: 225
-        [TestCase(@"https://github.com/MahApps/MahApps.Metro.git",
-                @"36fe5e517e0c65116d288fdabf2e68a2a9494bd9")] // Star: 799
-        [TestCase(@"https://github.com/apache/cordova-wp8.git",
-                @"30fba42357f8b6cf2e9a433128369c8f4cc914bb")] // Star: 49
-        [TestCase(@"https://github.com/magicdict/MagicMongoDBTool.git",
-                @"694ab21e1d4e4d3f47c1d9e31527c96b2a0e29bc")] // Star: 92
-        [TestCase(@"https://github.com/sharpdx/SharpDX.git",
-                @"65799e012fa2200748b16095aebb7b9427a6fb16")] // Star: 201
-        [TestCase(@"https://github.com/hbons/SparkleShare.git",
-                @"4085f1937041d89f76829336119f8b68ce97b43c")] // Star: 3033
-        [TestCase(@"https://github.com/ServiceStack/ServiceStack.git",
-                @"6cb92e0429e2cce31ef68e4fa02801718b00dd4f")] // Star: 2285
-        [TestCase(@"https://github.com/mono/mono.git",
-                @"81bdc35dd4b800831efc540be9705e021f8b848a")] // Star: 2056
-        [TestCase(@"https://github.com/AutoMapper/AutoMapper.git",
-                @"bc2ece165e028b4dbe963d978ef54e1ed2b50f5f")] // Star: 1853
-        [TestCase(@"https://github.com/restsharp/RestSharp.git",
-                @"70be25dae0edb44a1c962aee078e9dbf74cb4177")] // Star: 1828
-        [TestCase(@"https://github.com/Redth/PushSharp.git",
-                @"19216ead2bfbbf36c4fcaa95dfa8469facc5a7ef")] // Star: 1688
-        [TestCase(@"https://github.com/opserver/Opserver.git",
-                @"a170ea8bcda9f9e52d4aaff7339f3d198309369b")] // Star: 1324
-        [TestCase(@"https://github.com/robconery/massive.git",
-                @"87075153609fe096bcbd9f81a6901c1b60e2e579")] // Star: 1203
-        [TestCase(@"https://github.com/SamSaffron/dapper-dot-net.git",
-                @"885a8d46cbd67f09bd6a5e686a824759d79d5f78")] // Star: 1182
-        [TestCase(@"https://github.com/ravendb/ravendb.git",
-                @"a60d8dd3ffaf5892d86d5fcf8a9a81bec71800e7")] // Star: 1118
-        [TestCase(@"https://github.com/SamSaffron/MiniProfiler.git",
-                @"3744054e0686b2f88083b869a7f2fe7e1fa14e9c")] // Star: 1113
-        [TestCase(@"https://github.com/jaredpar/VsVim.git",
-                @"86d9e298c9d117e54266501ae9c4dd35b4d345cb")] // Star: 1097
-        [TestCase(@"https://github.com/mono/roslyn.git",
-                @"35ebc72b4fde323dde2c372d70ecd6437de97c4c")] // Star: 46
-        [TestCase(@"https://github.com/PlasmaByte/PokemonNXT.git",
-                @"8cf7d43119ea1a7cba4f8711472efefb54bb53fb")] // Star: 34
-        [TestCase(@"https://github.com/robconery/biggy.git",
-                @"0c7a0cb8f08b0ac7e5d87f91c5617d4cc6e21b84")] // Star: 266
-        [TestCase(@"https://github.com/jstedfast/MailKit.git",
-                @"3ef47b326f89a4a6ad960c9fcca00bdbac18a227")] // Star: 122
-        [TestCase(@"https://github.com/madskristensen/WebEssentials2013.git",
-                @"e422af47986bfd6c70ee6564cb1bf892cbf197f8")] // Star: 489
-        [TestCase(@"https://github.com/jamesmontemagno/Xam.PCL.Plugins.git",
-                @"0e6151295a2dba17f77c90034e4820ca42a941d9")] // Star: 28
-        [TestCase(@"https://github.com/xamarin/xamarin-store-app.git",
-                @"a68dcd6f07a45a127c6ed9af21fc8084f1b3bcb5")] // Star: 38
-        [TestCase(@"https://github.com/StephanieRct/NieMath.git",
-                @"9a4a49ab374d1652c3568ea5960b0de9a0218ea1")] // Star: 32
-        [TestCase(@"https://github.com/MvvmCross/MvvmCross.git",
-                @"fd16e13d05678e578ddc96938a680b3d94d8a496")] // Star: 706
-        [TestCase(@"https://github.com/reactiveui/ReactiveUI.git",
-                @"45aaa51f5d5202a5c8d34ea3151955f0bce8a956")] // Star: 888
-        [TestCase(@"https://github.com/Moq/moq4.git",
-                @"ac31aeca01056e3608540d5b5d043ba013f19abe")] // Star: 273
-        [TestCase(@"https://github.com/xunit/xunit.git",
-                @"075bedaa4a25ca407b6a73f4e5c2f68298618967")] // Star: 137
-        [TestCase(@"https://github.com/playgameservices/play-games-plugin-for-unity.git",
-                @"3ad9798396cc5e443815d5c1438bcebc54d98ed9")] // Star: 281
-        [TestCase(@"https://github.com/qianlifeng/Wox.git",
-                @"b07d1b027c42c045bce8304b40b4c27e4d03248f")] // Star: 334
-        [TestCase(@"https://github.com/serilog/serilog.git",
-                @"60e8120a12abee4db942d2ff03b123341fab1fff")] // Star: 161
-        [TestCase(@"https://github.com/akkadotnet/akka.net.git",
-                @"25b66cc2d62fc2bfc50cd4050ac6fdd6909063fa")] // Star: 177
-        [TestCase(@"https://github.com/autofac/Autofac.git",
-                @"8c0732e120b55d277dc9313827fe02bbde289f3e")] // Star: 182
-        [TestCase(@"https://github.com/umbraco/Umbraco-CMS.git",
-                @"5697809ce930e1b8f9f111586c2b4bb59e8f3869")] // Star: 458
-        [TestCase(@"https://github.com/xamarin/monodroid-samples.git",
-                @"4851316a320c9c6ce0b57348d05c6dc6e8819e1c")] // Star: 597
+                @"cdb116e942666973bc4eaa0df098d5bab82739e7")] // Star: 8108
+        [TestCase(@"https://github.com/netty/netty.git",
+                @"8615f7a69ecbbabd6d8f7ba8cae90ba63d702fec")] // Star: 2805
+        [TestCase(@"https://github.com/libgdx/libgdx.git",
+                @"ed9733d93a2e5bdf20e10e8c10437e86a66941a2")] // Star: 3289
+        [TestCase(@"https://github.com/eclipse/vert.x.git",
+                @"4a6498baa2269a0dc753861d0539ebeee5926769")] // Star: 2866
+        [TestCase(@"https://github.com/facebook/facebook-android-sdk.git",
+                @"118e756568f7e9a8045e87575c190a2c304071a6")] // Star: 2818
+        [TestCase(@"https://github.com/JakeWharton/Android-ViewPagerIndicator.git",
+                @"8cd549f23f3d20ff920e19a2345c54983f65e26b")] // Star: 3466
+        [TestCase(@"https://github.com/nostra13/Android-Universal-Image-Loader.git",
+                @"29811229c3ba3da390b29353875be2c92f88a789")] // Star: 4251
+        [TestCase(@"https://github.com/clojure/clojure.git",
+                @"201a0dd9701e1a0ee3998431241388eb4a854ebf")] // Star: 3051
+        [TestCase(@"https://github.com/square/picasso.git",
+                @"e0c3d44f53919742a0a608277be26b47742bb2a2")] // Star: 2312
+        [TestCase(@"https://github.com/facebook/presto.git",
+                @"b4b5d67e09576ec38be1564123e5a0e2d4bc1996")] // Star: 2281
+        [TestCase(@"https://github.com/WhisperSystems/TextSecure.git",
+                @"4d52d2ee364c2edad50420a9afa500dde66a48d9")] // Star: 2261
+        [TestCase(@"https://github.com/chrisbanes/ActionBar-PullToRefresh.git",
+                @"65d4183994eaf8c450e81afadb389fca61499063")] // Star: 2272
+        [TestCase(@"https://github.com/dropwizard/metrics.git",
+                @"e61395657d9f471a88dc0d9f3c7f78f0e773fe28")] // Star: 2090
+        [TestCase(@"https://github.com/Prototik/HoloEverywhere.git",
+                @"3b6021aa4af717cd31b1b6c877f6c30b674af6d9")] // Star: 2065
+        [TestCase(@"https://github.com/Netflix/RxJava.git",
+                @"8bb52a0184a194f2faa4a4732f72f62be2caafe9")] // Star: 2049
+        [TestCase(@"https://github.com/Bukkit/CraftBukkit.git",
+                @"1ab090e71ea261fe38cef980bc2ebe696a494ea3")] // Star: 2032
+        [TestCase(@"https://github.com/cyrilmottier/GreenDroid.git",
+                @"abd9769f677bb4a753f0bf1119f961187bdf7020")] // Star: 2123
+        [TestCase(@"https://github.com/nicolasgramlich/AndEngine.git",
+                @"720897f99d2c56ba357e8fe361454bd8d88c37ed")] // Star: 2068
+        [TestCase(@"https://github.com/fernandezpablo85/scribe-java.git",
+                @"135ad50a4e4e27e97f09e42ae50d6011c7af7a4b")] // Star: 1997
+        [TestCase(@"https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition.git",
+                @"5f399a52c8bf5626b098629906f82be1763089f4")] // Star: 2005
+        [TestCase(@"https://github.com/OpenRefine/OpenRefine.git",
+                @"c2cadab47593d5d3f49e45b5fe434e117e67f8dd")] // Star: 1827
+        [TestCase(@"https://github.com/LMAX-Exchange/disruptor.git",
+                @"1072645ad75f8b07b9145197fd4137fcfa79011a")] // Star: 1836
+        [TestCase(@"https://github.com/dropwizard/dropwizard.git",
+                @"4758ac698ff9993879798db338b3314c6a1c6a27")] // Star: 1776
+        [TestCase(@"https://github.com/Netflix/SimianArmy.git",
+                @"6a8b799af24cd638cd7110965ca8504e18cd6b24")] // Star: 1743
+        [TestCase(@"https://github.com/johannilsson/android-pulltorefresh.git",
+                @"4277c1ecf6256518248a1143b3ee882c703b33d6")] // Star: 1739
+        [TestCase(@"https://github.com/Atmosphere/atmosphere.git",
+                @"dd2397e03088f2bced1f8e47f8f81e935664a923")] // Star: 1671
+        [TestCase(@"https://github.com/SimonVT/android-menudrawer.git",
+                @"1260f2f6d50d3b572ebfa98e93a0b4f8258371de")] // Star: 1727
+        [TestCase(@"https://github.com/square/retrofit.git",
+                @"1f7cc4942f71d6c6cf4770fcd93670bc93a8c710")] // Star: 1776
+        [TestCase(@"https://github.com/thinkaurelius/titan.git",
+                @"c26cd982b1dc5ba792ee7a63af59887bd8b08223")] // Star: 1625
+        [TestCase(@"https://github.com/android/platform_frameworks_base.git",
+                @"aa19a2f69c33fdb6499d0bc1cfafced9f572da5b")] // Star: 1606
+        [TestCase(@"https://github.com/square/dagger.git",
+                @"21a9e0d875da31306b0f41273348f4f75741fef7")] // Star: 1706
+        [TestCase(@"https://github.com/chrisbanes/PhotoView.git",
+                @"99fc9956a2de2279e45af9e95286efec79c0d739")] // Star: 1609
+        [TestCase(@"https://github.com/Netflix/Hystrix.git",
+                @"04949497901e6fcd71f68d804e5b89f9e368271d")] // Star: 1624
+        [TestCase(@"https://github.com/roboguice/roboguice.git",
+                @"c0c61a89ad8ce844858373748f09222de187d61e")] // Star: 1644
+        [TestCase(@"https://github.com/etsy/AndroidStaggeredGrid.git",
+                @"84a06f8da0ba70de32e7373c57f6e38b9d9b6780")] // Star: 1612
+        [TestCase(@"https://github.com/apache/cassandra.git",
+                @"6e97178a50d1cc9a6817653e463ef5f0cf132873")] // Star: 1540
+        [TestCase(@"https://github.com/jeresig/processing-js.git",
+                @"02363398a823eae731cafa180a5581fe353397bf")] // Star: 1553
+        [TestCase(@"https://github.com/springside/springside4.git",
+                @"c92379755c041cd081c8c4cd881b44283a80f845")] // Star: 1500
+        [TestCase(@"https://github.com/zxing/zxing.git",
+                @"41caac38e8414be512fee712dae98966b7f4f05e")] // Star: 1494
+        [TestCase(@"https://github.com/Bukkit/Bukkit.git",
+                @"ec19988db3ba9415f9453c68b4861ffbe90e4153")] // Star: 1477
+        [TestCase(@"https://github.com/gabrielemariotti/cardslib.git",
+                @"3a1998cbf4d1ab24a5dcf22441fadafab3da655f")] // Star: 1436
+        [TestCase(@"https://github.com/keyboardsurfer/Crouton.git",
+                @"0957a7ea09e40d521defa28c6d1ffa1127f7e7da")] // Star: 1441
+        [TestCase(@"https://github.com/gradle/gradle.git",
+                @"b690b255ecefe8724fd78e8248d91be054e8e718")] // Star: 1400
+        [TestCase(@"https://github.com/emilsjolander/StickyListHeaders.git",
+                @"60eecee1b8a53a0c6de9a5d6ddb3cefbfef6d90a")] // Star: 1379
+        [TestCase(@"https://github.com/yui/yuicompressor.git",
+                @"e814062c2f1f8c75decde08e884d84387938faba")] // Star: 1430
+        [TestCase(@"https://github.com/xetorthio/jedis.git",
+                @"ac53759f9706b52184963e98af11d2e44bfb1297")] // Star: 1373
+        [TestCase(@"https://github.com/square/okhttp.git",
+                @"c51e223ff96da5f6581515d7080a080808c35384")] // Star: 1353
+        [TestCase(@"https://github.com/aporter/coursera-android.git",
+                @"a4c1fceac0d2c0a86f74ebad8ccc7539330e8290")] // Star: 1405
+        [TestCase(@"https://github.com/nhaarman/ListViewAnimations.git",
+                @"98a4793f62bbb4c9c9aaec199ccdeb3b4403a162")] // Star: 1352
+        [TestCase(@"https://github.com/47deg/android-swipelistview.git",
+                @"f0d4859100d7cb80e3e7ca4551daa69d5c61fd25")] // Star: 1486
+        [TestCase(@"https://github.com/koush/ion.git",
+                @"d14f69b87387bb57a213c871ff57dd42c3481e5b")] // Star: 1324
+        [TestCase(@"https://github.com/k9mail/k-9.git",
+                @"8e078bc0146cf0ab02a54c1d852842f6ee734f23")] // Star: 1323
+        [TestCase(@"https://github.com/stephanenicolas/robospice.git",
+                @"03d119df6de56c0007a65b21582c99adb22734b4")] // Star: 1304
+        [TestCase(@"https://github.com/bauerca/drag-sort-listview.git",
+                @"c3cfccee21676149dfdf8e803c0ec2eaebc6b841")] // Star: 1449
+        [TestCase(@"https://github.com/square/otto.git",
+                @"b821b22e283dabc08ae09786861c4a958000a5ae")] // Star: 1297
+        [TestCase(@"https://github.com/voldemort/voldemort.git",
+                @"351f4dee88829f2107afd5c283fb0768b5282165")] // Star: 1261
+        [TestCase(@"https://github.com/videlalvaro/gifsockets.git",
+                @"0ccb1fd01edeb835a90c0c1140ad91dbd1a354b1")] // Star: 1285
+        [TestCase(@"https://github.com/androidquery/androidquery.git",
+                @"45ed6c85dcf0b3b58a08810b423886fb275b33b0")] // Star: 1225
+        [TestCase(@"https://github.com/johannilsson/android-actionbar.git",
+                @"093a5f8039dfade914f52b55b5536b95850ddaf1")] // Star: 1242
+        [TestCase(@"https://github.com/ACRA/acra.git",
+                @"ee7085683018b556e73f74b059040d93794cf388")] // Star: 1196
+        [TestCase(@"https://github.com/AsyncHttpClient/async-http-client.git",
+                @"f96bcbbe906c1e472fbbd7cca5cfaf3778db02d6")] // Star: 1175
+        [TestCase(@"https://github.com/pakerfeldt/android-viewflow.git",
+                @"3da74fa32a935bcbb37e5ebeb270477cde1985d4")] // Star: 1247
+        [TestCase(@"https://github.com/xamarin/XobotOS.git",
+                @"f20db6295e878a2f298c5e3896528e240785805b")] // Star: 1166
+        [TestCase(@"https://github.com/umano/AndroidSlidingUpPanel.git",
+                @"38327d828690da0771e7b35a15a118eeecc20e26")] // Star: 1161
+        [TestCase(@"https://github.com/JetBrains/intellij-community.git",
+                @"e8b5589ad6a04a407d6af701dd72dc0540118688")] // Star: 1124
+        [TestCase(@"https://github.com/JakeWharton/butterknife.git",
+                @"3a6f2eb9713cfcea3037282e4fc4d34d50f19d6c")] // Star: 1121
+        [TestCase(@"https://github.com/yinwang0/pysonar2.git",
+                @"240192fb7827dedd9381dbfdd0df3062c47078d0")] // Star: 1128
+        [TestCase(@"https://github.com/tinkerpop/gremlin.git",
+                @"e622d5bf289ef8f74a088dc0237c69b98baf6792")] // Star: 1111
+        [TestCase(@"https://github.com/wildfly/wildfly.git",
+                @"23dc89381b609dcdac4d2f9da4e4d78b235c51e3")] // Star: 1102
+        [TestCase(@"https://github.com/commonsguy/cw-omnibus.git",
+                @"674f1edab621b409922028d0326e02e9ad81015f")] // Star: 1124
+        [TestCase(@"https://github.com/twall/jna.git",
+                @"323a913bf610c982f43b58883b0fc54c78a29621")] // Star: 1098
+        [TestCase(@"https://github.com/JakeWharton/NineOldAndroids.git",
+                @"9f20fd77e04942fd50b95aeb1c492a38e36c06dd")] // Star: 1252
+        [TestCase(@"https://github.com/purplecabbage/phonegap-plugins.git",
+                @"319dfb7297002040ec7ab98896e68d05c7fd8180")] // Star: 1083
+        [TestCase(@"https://github.com/phonegap/phonegap-facebook-plugin.git",
+                @"ccb2a6f648bb2ed44e4b7b71add4fb7b7e95eaed")] // Star: 1084
+        [TestCase(@"https://github.com/Comcast/FreeFlow.git",
+                @"47bfb57e8037eecae320266cb00dd23e673362e5")] // Star: 1079
+        [TestCase(@"https://github.com/yusuke/twitter4j.git",
+                @"747982dfdccd6d1b2ef4857720fe289455a435a1")] // Star: 1101
+        [TestCase(@"https://github.com/ManuelPeinado/FadingActionBar.git",
+                @"f679e313d105075cfb389695052348ee09a8e80a")] // Star: 1068
+        [TestCase(@"https://github.com/bigbluebutton/bigbluebutton.git",
+                @"55773f594eed3e0eff5af47ec8cbd6fcf713a56a")] // Star: 1062
+        [TestCase(@"https://github.com/greenrobot/EventBus.git",
+                @"0fe7ea575c508ac3b072b4a31ecea9c8680435be")] // Star: 1270
+        [TestCase(@"https://github.com/processing/processing.git",
+                @"9c63a2c4a227ed2329fd01006cb593ba8954962d")] // Star: 1054
+        [TestCase(@"https://github.com/Athou/commafeed.git",
+                @"3a8d72cab4038e975af87d8083e2b7e68f2e328c")] // Star: 1048
+        [TestCase(@"https://github.com/Graylog2/graylog2-server.git",
+                @"c1c5491c4a3194a19c21a7c744d5d45421ecd227")] // Star: 1041
+        [TestCase(@"https://github.com/amlcurran/ShowcaseView.git",
+                @"cc55def081814213c94ad80be4195b17ac4ef18c")] // Star: 1145
+        [TestCase(@"https://github.com/jhy/jsoup.git",
+                @"80158d6fa7445506eaaafdeadb1f4dc291ca10a5")] // Star: 1129
+        [TestCase(@"https://github.com/astuetz/PagerSlidingTabStrip.git",
+                @"3f4738eca833faeca563d93cd77c8df763a45fb6")] // Star: 1340
+        [TestCase(@"https://github.com/mttkay/ignition.git",
+                @"bbeb55cb4f080bdc31e549142ea745c65e4727c7")] // Star: 1058
+        [TestCase(@"https://github.com/openaphid/android-flip.git",
+                @"ab2dea1b045ffc626221c2826ce9dd00823e696d")] // Star: 1142
+        [TestCase(@"https://github.com/koush/AndroidAsync.git",
+                @"09c60732944a20eac52301026e9c24344ccb3062")] // Star: 993
+        [TestCase(@"https://github.com/ether/pad.git",
+                @"cb4977238f55f9b2518e7c43a5c769823b0afd45")] // Star: 987
+        [TestCase(@"https://github.com/commonsguy/cw-advandroid.git",
+                @"ab8e52a00413592b99a7bb9f93050bee760f289f")] // Star: 1028
+        [TestCase(@"https://github.com/grails/grails-core.git",
+                @"048025b9b98332645df30d82593d44b1f7a84bbd")] // Star: 960
+        [TestCase(@"https://github.com/douglascrockford/JSON-java.git",
+                @"4d86b05d3c6a72e88c476430d60676f9ae2fafab")] // Star: 1052
+        [TestCase(@"https://github.com/pardom/ActiveAndroid.git",
+                @"bd98740d466249fc085311b1c166570cfc08f532")] // Star: 959
+        [TestCase(@"https://github.com/square/android-times-square.git",
+                @"2bb367039b3cb93e6764e55835dc023df9f4fd77")] // Star: 967
+        [TestCase(@"https://github.com/mongodb/mongo-java-driver.git",
+                @"244b5a26bfe1b6f9e15264d690fa944e7c6e2c54")] // Star: 924
+        [TestCase(@"https://github.com/kevinsawicki/http-request.git",
+                @"c11e2a8b335d43adb9e273412ec7a39c7e404e72")] // Star: 939
+        [TestCase(@"https://github.com/hibernate/hibernate-orm.git",
+                @"9bd6917d0d92c3d350b74f23c03af5a4bb80890d")] // Star: 910
+        [TestCase(@"https://github.com/BonzaiThePenguin/WikiSort.git",
+                @"b83bde28fbf26198749eb0169d7f01052841b192")] // Star: 905
+        [TestCase(@"https://github.com/qii/weiciyuan.git",
+                @"14fdfe9f6f7f3d927a66d802b709f53ba0ff629e")] // Star: 906
+        [TestCase(@"https://github.com/orientechnologies/orientdb.git",
+                @"8bfc83acadc833b40ec3d485216b39b786935b4c")] // Star: 897
+        [TestCase(@"https://github.com/reactor/reactor.git",
+                @"83f0b805ca0a8e5fd9cd881e6370c173685ad228")] // Star: 875
+        [TestCase(@"https://github.com/pcpratts/rootbeer1.git",
+                @"c046801c73b9b2e48d4fe40739b0ce68c496d103")] // Star: 872
+        [TestCase(@"https://github.com/mttkay/droid-fu.git",
+                @"469b1bf7a844cc09866bad95fc06321291c649e8")] // Star: 882
+        [TestCase(@"https://github.com/Netflix/curator.git",
+                @"1e66d7ccd7ac601df3c814833f1b9e32b25331c6")] // Star: 896
+        [TestCase(@"https://github.com/spring-projects/spring-mvc-showcase.git",
+                @"c7b9162c061e135c081a28bf7fc209bb9a992cea")] // Star: 869
+        [TestCase(@"https://github.com/greenrobot/greenDAO.git",
+                @"d13a1f1d0e8d244e8033a944599adda7bb157bef")] // Star: 1039
+        [TestCase(@"https://github.com/commonsguy/cw-android.git",
+                @"568c11f2b9b556027dda05ad7b62c044f039b4e4")] // Star: 899
+        [TestCase(@"https://github.com/yangfuhai/afinal.git",
+                @"e706f0e896f8f819aa9a6a8374c7fe9f71fa4950")] // Star: 865
+        [TestCase(@"https://github.com/thest1/LazyList.git",
+                @"0f37d108f2067f5f44749eb0ad44e51656f96f02")] // Star: 882
+        [TestCase(@"https://github.com/metamx/druid.git",
+                @"db5f04c84dc7b23f87aac31397f1a6457f4903f7")] // Star: 837
+        [TestCase(@"https://github.com/tjerkw/Android-SlideExpandableListView.git",
+                @"a44e6f0fcfabf3a870469667b219552a5d562e87")] // Star: 901
+        [TestCase(@"https://github.com/tinkerpop/blueprints.git",
+                @"34b5b83fcfd92cca3a69c425c67a9a782dd18c42")] // Star: 824
+        [TestCase(@"https://github.com/rzwitserloot/lombok.git",
+                @"6afa3d2ec9ec18ed8ae5f6c5217b9fb1710c69c7")] // Star: 827
+        [TestCase(@"https://github.com/perwendel/spark.git",
+                @"f1f06769abacc6732e511774d4db2306cbe5db54")] // Star: 843
+        [TestCase(@"https://github.com/robovm/robovm.git",
+                @"a72f06e62dbe4afd3271fb3bfa4ca2c4d47d3329")] // Star: 832
+        [TestCase(@"https://github.com/addthis/stream-lib.git",
+                @"56c48e001341f874c37e0113c09554436e93ea10")] // Star: 808
+        [TestCase(@"https://github.com/twitter/ambrose.git",
+                @"9ff6dc68e6eb7e95645878082774f44acca5814f")] // Star: 847
+        [TestCase(@"https://github.com/quartzjer/TeleHash.git",
+                @"133f4212666911d066f59255e2e7fbd69bea8265")] // Star: 791
+        [TestCase(@"https://github.com/todoroo/astrid.git",
+                @"4fc5c7714fb1b48ae46dcacbda287bcef9c3f6bf")] // Star: 848
+        [TestCase(@"https://github.com/apache/hadoop-common.git",
+                @"572bd72991fe976da586db41ac4dd03466a480dd")] // Star: 795
+        [TestCase(@"https://github.com/jgilfelt/android-viewbadger.git",
+                @"e08c3a78cb92c0c8587790b15e73434f972912cf")] // Star: 900
+        [TestCase(@"https://github.com/jgilfelt/android-mapviewballoons.git",
+                @"a47528473b562170fbed33b7cf01da2353300acd")] // Star: 806
+        [TestCase(@"https://github.com/http-kit/http-kit.git",
+                @"7184fa8cf2526a24446e7e6602bc16d9d1c0948a")] // Star: 804
+        [TestCase(@"https://github.com/cucumber/cucumber-jvm.git",
+                @"08e6b87a0a21010bf35d643157b7032a40832efd")] // Star: 784
+        [TestCase(@"https://github.com/alibaba/druid.git",
+                @"4bebaa9d86038ec563febd2f50e7b232544a3ab7")] // Star: 798
+        [TestCase(@"https://github.com/BoltsFramework/Bolts-Android.git",
+                @"b046dfdbe9b36989ab7bf4492dc403a20118c590")] // Star: 781
+        [TestCase(@"https://github.com/Netflix/ice.git",
+                @"f5cd61177fca0ea0d45eecacc7c3209e8b1bbc57")] // Star: 790
+        [TestCase(@"https://github.com/cloudera/flume.git",
+                @"1d7535638556998e895d55599a2f4a024390edd1")] // Star: 774
+        [TestCase(@"https://github.com/jankotek/MapDB.git",
+                @"c890d8b4edc5fb9d064bb04aa132aea8608f87dd")] // Star: 763
+        [TestCase(@"https://github.com/linkedin/indextank-engine.git",
+                @"f2354fe9db43786126e304d12aae4322ae7b98b1")] // Star: 770
+        [TestCase(@"https://github.com/tjake/Solandra.git",
+                @"64e1d192604144c06962e284523cce3c4df51c4e")] // Star: 768
+        [TestCase(@"https://github.com/amplab/tachyon.git",
+                @"6ce29b2da55130e7cb32a32f029fef43cdc35ef5")] // Star: 756
+        [TestCase(@"https://github.com/novoda/android.git",
+                @"3052e6d253bd6a29c3e9b043ba87021242857ba5")] // Star: 875
+        [TestCase(@"https://github.com/facebook/hadoop-20.git",
+                @"9f1ea1b28047a4b16f4962c7561613f139dd3e86")] // Star: 752
+        [TestCase(@"https://github.com/ginatrapani/todo.txt-android.git",
+                @"ce117c601510cb7343f4633e3033ec0cbfe35ff7")] // Star: 761
+        [TestCase(@"https://github.com/OpenTSDB/opentsdb.git",
+                @"a2bd5737d9d11a8fd3fa6e9c36a31dd8cb5c4af4")] // Star: 733
+        [TestCase(@"https://github.com/peter-lawrey/Java-Chronicle.git",
+                @"6716f0cff0750d125a07eb769bba0698a617b7fb")] // Star: 756
         public void ParseGitRepository(string url, string commitPointer) {
             VerifyRestoringGitRepositorySavingRepo(url, commitPointer, "java_repo.txt", "*.java");
         }
