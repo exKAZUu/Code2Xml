@@ -110,7 +110,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             var allPaths = Directory.GetFiles(projectPath, "*.lua", SearchOption.AllDirectories)
                     .ToList();
             exp.AutomaticallyLearnUntilBeStable(allPaths, seedPaths, _writer, projectPath);
-            //if (exp.WrongCount > 0) {
+            //if (exp.WrongFeatureCount > 0) {
             //	Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
             //	foreach (var we in exp.WronglyAcceptedElements) {
             //		var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
@@ -127,7 +127,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             //	}
             //}
             exp.Clear();
-            Assert.That(exp.WrongCount, Is.EqualTo(0));
+            Assert.That(exp.WrongFeatureCount, Is.EqualTo(0));
         }
     }
 

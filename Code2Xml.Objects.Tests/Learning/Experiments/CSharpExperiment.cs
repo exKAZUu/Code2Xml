@@ -114,7 +114,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                     .ToList();
             exp.AutomaticallyLearnUntilBeStable(allPaths, seedPaths, _writer, projectPath);
             exp.Clear();
-            Assert.That(exp.WrongCount, Is.EqualTo(0));
+            Assert.That(exp.WrongFeatureCount, Is.EqualTo(0));
         }
     }
 
