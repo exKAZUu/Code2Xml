@@ -83,6 +83,7 @@ public class AlignedTuplePrinter {
     List<String> columnLines = new ArrayList<>();
 }")]
         [TestCase(@"class K { void m() { converter.reverse().convert(0666); }}")]
+        [TestCase(@"class K { void m() { if (1 < 2) {} else {} }}")]
         public void Parse(string code) {
             VerifyRestoringCode(code);
         }

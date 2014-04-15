@@ -35,7 +35,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
         private static IEnumerable<TestCaseData> TestCases {
             get {
-                var exps = new BitLearningExperimentGroupingWithId[] {
+                var exps = new LearningExperiment[] {
                     new CSharpComplexStatementExperiment(),
                     new CSharpSuperComplexBranchExperiment(),
                     new CSharpComplexBranchExperiment(),
@@ -109,7 +109,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
         [Test, TestCaseSource("TestCases")]
         public void Test(
-                BitLearningExperimentGroupingWithId exp, string projectPath, IList<string> seedPaths) {
+                LearningExperiment exp, string projectPath, IList<string> seedPaths) {
             var allPaths = Directory.GetFiles(projectPath, "*.cs", SearchOption.AllDirectories)
                     .ToList();
             exp.AutomaticallyLearnUntilBeStable(allPaths, seedPaths, _writer, projectPath);
@@ -118,7 +118,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class CSharpSuperComplexBranchExperiment : BitLearningExperimentGroupingWithId {
+    public class CSharpSuperComplexBranchExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return CSharpExperiment.Generator; }
         }
@@ -168,7 +168,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class CSharpComplexBranchExperiment : BitLearningExperimentGroupingWithId {
+    public class CSharpComplexBranchExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return CSharpExperiment.Generator; }
         }
@@ -197,7 +197,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class CSharpIfExperiment : BitLearningExperimentGroupingWithId {
+    public class CSharpIfExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return CSharpExperiment.Generator; }
         }
@@ -217,7 +217,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public CSharpIfExperiment() : base("boolean_expression") {}
     }
 
-    public class CSharpWhileExperiment : BitLearningExperimentGroupingWithId {
+    public class CSharpWhileExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return CSharpExperiment.Generator; }
         }
@@ -237,7 +237,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public CSharpWhileExperiment() : base("boolean_expression") {}
     }
 
-    public class CSharpDoWhileExperiment : BitLearningExperimentGroupingWithId {
+    public class CSharpDoWhileExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return CSharpExperiment.Generator; }
         }
@@ -257,7 +257,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public CSharpDoWhileExperiment() : base("boolean_expression") {}
     }
 
-    public class CSharpForExperiment : BitLearningExperimentGroupingWithId {
+    public class CSharpForExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return CSharpExperiment.Generator; }
         }
@@ -273,7 +273,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public CSharpForExperiment() : base("for_condition") {}
     }
 
-    public class CSharpPreconditionsExperiment : BitLearningExperimentGroupingWithId {
+    public class CSharpPreconditionsExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return CSharpExperiment.Generator; }
         }
@@ -310,7 +310,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public CSharpPreconditionsExperiment() : base("argument") {}
     }
 
-    public class CSharpComplexStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class CSharpComplexStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return CSharpExperiment.Generator; }
         }
@@ -341,7 +341,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public CSharpComplexStatementExperiment() : base("statement") {}
     }
 
-    public class CSharpStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class CSharpStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return CSharpExperiment.Generator; }
         }
@@ -357,7 +357,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public CSharpStatementExperiment() : base("statement") {}
     }
 
-    public class CSharpBlockExperiment : BitLearningExperimentGroupingWithId {
+    public class CSharpBlockExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return CSharpExperiment.Generator; }
         }
@@ -378,7 +378,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public CSharpBlockExperiment() : base("statement") {}
     }
 
-    public class CSharpLabeledStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class CSharpLabeledStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return CSharpExperiment.Generator; }
         }
@@ -398,7 +398,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public CSharpLabeledStatementExperiment() : base("statement") {}
     }
 
-    public class CSharpEmptyStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class CSharpEmptyStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return CSharpExperiment.Generator; }
         }

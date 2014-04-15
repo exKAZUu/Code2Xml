@@ -34,7 +34,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
         private static IEnumerable<TestCaseData> TestCases {
             get {
-                var exps = new BitLearningExperimentGroupingWithId[] {
+                var exps = new LearningExperiment[] {
                     new JavaComplexStatementExperiment(),
                     new JavaSuperComplexBranchExperiment(),
                     new JavaComplexBranchExperiment(),
@@ -104,7 +104,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
         [Test, TestCaseSource("TestCases")]
         public void Test(
-                BitLearningExperimentGroupingWithId exp, string projectPath, IList<string> seedPaths) {
+                LearningExperiment exp, string projectPath, IList<string> seedPaths) {
             var allPaths = Directory.GetFiles(projectPath, "*.java", SearchOption.AllDirectories)
                     .ToList();
             exp.AutomaticallyLearnUntilBeStable(allPaths, seedPaths, _writer, projectPath);
@@ -129,7 +129,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaSuperComplexBranchExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaSuperComplexBranchExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
@@ -237,7 +237,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaComplexBranchExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaComplexBranchExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
@@ -270,7 +270,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaIfExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaIfExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
@@ -293,7 +293,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaWhileExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaWhileExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
@@ -316,7 +316,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaDoWhileExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaDoWhileExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
@@ -339,7 +339,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaForExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaForExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
@@ -360,7 +360,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaPreconditionsExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaPreconditionsExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
@@ -395,7 +395,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaComplexStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaComplexStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
@@ -483,7 +483,7 @@ statement
         }
     }
 
-    public class JavaBlockExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaBlockExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
@@ -503,7 +503,7 @@ statement
         }
     }
 
-    public class JavaStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
@@ -519,7 +519,7 @@ statement
         }
     }
 
-    public class JavaLabeledStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaLabeledStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
@@ -541,7 +541,7 @@ statement
         }
     }
 
-    public class JavaEmptyStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaEmptyStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }

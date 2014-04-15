@@ -33,7 +33,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
         private static IEnumerable<TestCaseData> TestCases {
             get {
-                var exps = new BitLearningExperimentGroupingWithId[] {
+                var exps = new LearningExperiment[] {
                     new LuaComplexStatementExperiment(),
                     new LuaSuperComplexBranchExperiment(),
                     new LuaComplexBranchExperiment(),
@@ -106,7 +106,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
         [Test, TestCaseSource("TestCases")]
         public void Test(
-                BitLearningExperimentGroupingWithId exp, string projectPath, IList<string> seedPaths) {
+                LearningExperiment exp, string projectPath, IList<string> seedPaths) {
             var allPaths = Directory.GetFiles(projectPath, "*.lua", SearchOption.AllDirectories)
                     .ToList();
             exp.AutomaticallyLearnUntilBeStable(allPaths, seedPaths, _writer, projectPath);
@@ -131,7 +131,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class LuaComplexBranchExperiment : BitLearningExperimentGroupingWithId {
+    public class LuaComplexBranchExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return LuaExperiment.Generator; }
         }
@@ -158,7 +158,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class LuaSuperComplexBranchExperiment : BitLearningExperimentGroupingWithId {
+    public class LuaSuperComplexBranchExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return LuaExperiment.Generator; }
         }
@@ -189,7 +189,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class LuaIfExperiment : BitLearningExperimentGroupingWithId {
+    public class LuaIfExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return LuaExperiment.Generator; }
         }
@@ -210,7 +210,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class LuaWhileExperiment : BitLearningExperimentGroupingWithId {
+    public class LuaWhileExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return LuaExperiment.Generator; }
         }
@@ -231,7 +231,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class LuaDoWhileExperiment : BitLearningExperimentGroupingWithId {
+    public class LuaDoWhileExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return LuaExperiment.Generator; }
         }
@@ -252,7 +252,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class LuaPrintExperiment : BitLearningExperimentGroupingWithId {
+    public class LuaPrintExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return LuaExperiment.Generator; }
         }
@@ -272,7 +272,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class LuaComplexStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class LuaComplexStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return LuaExperiment.Generator; }
         }
@@ -294,7 +294,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class LuaStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class LuaStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return LuaExperiment.Generator; }
         }
@@ -310,7 +310,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class LuaLabeledStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class LuaLabeledStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return LuaExperiment.Generator; }
         }
@@ -329,7 +329,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class LuaEmptyStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class LuaEmptyStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return LuaExperiment.Generator; }
         }

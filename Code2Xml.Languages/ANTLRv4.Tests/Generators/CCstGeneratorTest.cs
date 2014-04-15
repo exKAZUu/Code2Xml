@@ -16,8 +16,6 @@
 
 #endregion
 
-using System;
-using System.IO;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Tests.Generators;
 using Code2Xml.Languages.ANTLRv4.Generators.C;

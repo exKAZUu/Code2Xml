@@ -35,7 +35,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
         private static IEnumerable<TestCaseData> TestCases {
             get {
-                var exps = new BitLearningExperimentGroupingWithId[] {
+                var exps = new LearningExperiment[] {
                     new PhpComplexStatementExperiment(),
                     new PhpSuperComplexBranchExperiment(),
                     new PhpComplexBranchExperiment(),
@@ -105,7 +105,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
         [Test, TestCaseSource("TestCases")]
         public void Test(
-                BitLearningExperimentGroupingWithId exp, string projectPath, IList<string> seedPaths) {
+                LearningExperiment exp, string projectPath, IList<string> seedPaths) {
             var allPaths = Directory.GetFiles(projectPath, "*.php", SearchOption.AllDirectories)
                     .ToList();
             exp.AutomaticallyLearnUntilBeStable(allPaths, seedPaths, _writer, projectPath);
@@ -114,7 +114,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class PhpComplexBranchExperiment : BitLearningExperimentGroupingWithId {
+    public class PhpComplexBranchExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
         }
@@ -144,7 +144,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class PhpSuperComplexBranchExperiment : BitLearningExperimentGroupingWithId {
+    public class PhpSuperComplexBranchExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
         }
@@ -181,7 +181,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class PhpIfExperiment : BitLearningExperimentGroupingWithId {
+    public class PhpIfExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
         }
@@ -201,7 +201,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public PhpIfExperiment() : base("expression") {}
     }
 
-    public class PhpWhileExperiment : BitLearningExperimentGroupingWithId {
+    public class PhpWhileExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
         }
@@ -221,7 +221,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public PhpWhileExperiment() : base("expression") {}
     }
 
-    public class PhpDoWhileExperiment : BitLearningExperimentGroupingWithId {
+    public class PhpDoWhileExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
         }
@@ -241,7 +241,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public PhpDoWhileExperiment() : base("expression") {}
     }
 
-    public class PhpForExperiment : BitLearningExperimentGroupingWithId {
+    public class PhpForExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
         }
@@ -262,7 +262,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public PhpForExperiment() : base("expression") {}
     }
 
-    public class PhpEchoExperiment : BitLearningExperimentGroupingWithId {
+    public class PhpEchoExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
         }
@@ -284,7 +284,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public PhpEchoExperiment() : base("expression") {}
     }
 
-    public class PhpComplexStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class PhpComplexStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
         }
@@ -312,7 +312,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public PhpComplexStatementExperiment() : base("statement") {}
     }
 
-    public class PhpStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class PhpStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
         }
@@ -328,7 +328,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public PhpStatementExperiment() : base("statement") {}
     }
 
-    public class PhpBlockExperiment : BitLearningExperimentGroupingWithId {
+    public class PhpBlockExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
         }
@@ -348,7 +348,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public PhpBlockExperiment() : base("statement") {}
     }
 
-    public class PhpLabeledStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class PhpLabeledStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
         }
@@ -368,7 +368,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public PhpLabeledStatementExperiment() : base("statement") {}
     }
 
-    public class PhpEmptyStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class PhpEmptyStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
         }

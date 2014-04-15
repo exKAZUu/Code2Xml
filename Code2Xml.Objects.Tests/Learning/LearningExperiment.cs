@@ -28,7 +28,7 @@ using Paraiba.Collections.Generic;
 using Paraiba.Linq;
 
 namespace Code2Xml.Objects.Tests.Learning {
-    public abstract class BitLearningExperimentGroupingWithId {
+    public abstract class LearningExperiment {
         public class SuspiciousTarget {
             public int BitsCount { get; set; }
             public BigInteger Feature { get; set; }
@@ -82,10 +82,10 @@ namespace Code2Xml.Objects.Tests.Learning {
         private readonly List<KeyValuePair<BigInteger, string>> _wronglyRejectedFeatures =
                 new List<KeyValuePair<BigInteger, string>>();
 
-        private int _predicateDepth = 7;
-        private IDictionary<string, BigInteger> _masterPredicates;
+        private const int PredicateDepth = 7;
         private const int LearningCount = 5;
         private const int AncestorCount = 5;
+        private IDictionary<string, BigInteger> _masterPredicates;
         private List<string> _groupKeys;
         private int _acceptingPredicatesCount;
         private BigInteger _acceptingMask;
@@ -98,7 +98,7 @@ namespace Code2Xml.Objects.Tests.Learning {
         private IList<BigInteger> _rejectingPredicates;
         private readonly HashSet<string> _initialElementNames;
 
-        protected BitLearningExperimentGroupingWithId(params string[] elementNames) {
+        protected LearningExperiment(params string[] elementNames) {
             _initialElementNames = elementNames.ToHashSet();
         }
 
@@ -135,9 +135,10 @@ namespace Code2Xml.Objects.Tests.Learning {
             SuspiciousRejectedInRejecting = null;
         }
 
-        private string CommonSuffix(string s1, string s2) {
-            int count = Math.Min(s1.Length, s2.Length);
+        private static string CommonSuffix(string s1, string s2) {
+            var count = Math.Min(s1.Length, s2.Length);
             var ret = "";
+            var lastIndex = -1;
             for (int i = 0; i < count; i++) {
                 var ch = s1[i];
                 if (ch == s2[i]) {
@@ -145,9 +146,11 @@ namespace Code2Xml.Objects.Tests.Learning {
                 } else {
                     break;
                 }
+                if (ch == '>') {
+                    lastIndex = i;
+                }
             }
-            var index = ret.LastIndexOf(">");
-            return ret.Substring(0, index + 1);
+            return ret.Substring(0, lastIndex + 1);
         }
 
         private void UpdateDict(
@@ -343,13 +346,13 @@ namespace Code2Xml.Objects.Tests.Learning {
                 }
             }
             var acceptingPredicates = extendedSeedAcceptedElements
-                    .GetUnionKeys(_predicateDepth, IsInner, !IsInner)
+                    .GetUnionKeys(PredicateDepth, IsInner, !IsInner)
                     .ToHashSet()
                     .ToList();
             acceptingPredicates.Sort((s1, s2) => s1.Length.CompareTo(s2.Length));
             _acceptingPredicatesCount = acceptingPredicates.Count;
             var rejectingPredicateSet = extendedSeedRejectedElements
-                    .GetUnionKeys(_predicateDepth, IsInner, !IsInner)
+                    .GetUnionKeys(PredicateDepth, IsInner, !IsInner)
                     .ToHashSet();
             rejectingPredicateSet.ExceptWith(acceptingPredicates);
             var rejectingPredicates = rejectingPredicateSet.ToList();
@@ -370,15 +373,13 @@ namespace Code2Xml.Objects.Tests.Learning {
             _rejectingMask = _mask ^ _acceptingMask;
 
             foreach (var e in extendedSeedAcceptedElements) {
-                var bits = e.GetSurroundingBits(
-                        _predicateDepth, _masterPredicates, IsInner, !IsInner);
+                var bits = e.GetSurroundingBits(PredicateDepth, _masterPredicates, IsInner, !IsInner);
                 UpdateDict(_idealAccepted, bits, e);
                 _acceptedTrainingSet[bits] = _idealAccepted[bits];
                 _feature2Element[bits] = e;
             }
             foreach (var e in extendedSeedRejectedElements) {
-                var bits = e.GetSurroundingBits(
-                        _predicateDepth, _masterPredicates, IsInner, !IsInner);
+                var bits = e.GetSurroundingBits(PredicateDepth, _masterPredicates, IsInner, !IsInner);
                 UpdateDict(_idealRejected, bits, e);
                 _rejectedTrainingNodes[bits] = _idealRejected[bits];
                 _feature2Element[bits] = e;
@@ -388,7 +389,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                 Console.Write(".");
                 foreach (var e in GetAllElementsWithoutDuplicates(ast)) {
                     var bits = e.GetSurroundingBits(
-                            _predicateDepth, _masterPredicates, IsInner, !IsInner);
+                            PredicateDepth, _masterPredicates, IsInner, !IsInner);
                     if (IsAcceptedUsingOracle(e)) {
                         // TODO: for debug
                         if (_idealRejected.ContainsKey(bits)) {
@@ -399,7 +400,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                                     + _feature2Element[bits].Code);
                             IsAcceptedUsingOracle(e);
                             bits = e.GetSurroundingBits(
-                                    _predicateDepth, _masterPredicates, IsInner, !IsInner);
+                                    PredicateDepth, _masterPredicates, IsInner, !IsInner);
                         }
                         UpdateDict(_idealAccepted, bits, e);
                     } else {
@@ -412,7 +413,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                                     + _feature2Element[bits].Code);
                             IsAcceptedUsingOracle(e);
                             bits = e.GetSurroundingBits(
-                                    _predicateDepth, _masterPredicates, IsInner, !IsInner);
+                                    PredicateDepth, _masterPredicates, IsInner, !IsInner);
                         }
                         UpdateDict(_idealRejected, bits, e);
                     }

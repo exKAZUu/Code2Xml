@@ -36,7 +36,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
         private static IEnumerable<TestCaseData> TestCases {
             get {
-                var exps = new BitLearningExperimentGroupingWithId[] {
+                var exps = new LearningExperiment[] {
                     new JavaScriptComplexStatementExperiment(),
                     new JavaScriptSuperComplexBranchExperiment(),
                     new JavaScriptComplexBranchExperiment(),
@@ -106,7 +106,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
         [Test, TestCaseSource("TestCases")]
         public void Test(
-                BitLearningExperimentGroupingWithId exp, string projectPath, IList<string> seedPaths) {
+                LearningExperiment exp, string projectPath, IList<string> seedPaths) {
             var allPaths = Directory.GetFiles(projectPath, "*.js", SearchOption.AllDirectories)
                     .ToList();
             exp.AutomaticallyLearnUntilBeStable(allPaths, seedPaths, _writer, projectPath);
@@ -115,7 +115,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaScriptSuperComplexBranchExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaScriptSuperComplexBranchExperiment : LearningExperiment {
         public JavaScriptSuperComplexBranchExperiment() : base("expression") {}
 
         protected override CstGenerator Generator {
@@ -150,7 +150,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaScriptComplexBranchExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaScriptComplexBranchExperiment : LearningExperiment {
         public JavaScriptComplexBranchExperiment() : base("expression") {}
 
         protected override CstGenerator Generator {
@@ -180,7 +180,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaScriptIfExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaScriptIfExperiment : LearningExperiment {
         public JavaScriptIfExperiment() : base("expression") {}
 
         protected override CstGenerator Generator {
@@ -200,7 +200,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaScriptWhileExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaScriptWhileExperiment : LearningExperiment {
         public JavaScriptWhileExperiment() : base("expression") {}
 
         protected override CstGenerator Generator {
@@ -220,7 +220,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaScriptDoWhileExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaScriptDoWhileExperiment : LearningExperiment {
         public JavaScriptDoWhileExperiment() : base("expression") {}
 
         protected override CstGenerator Generator {
@@ -240,7 +240,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaScriptForExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaScriptForExperiment : LearningExperiment {
         public JavaScriptForExperiment() : base("expression") {}
 
         protected override CstGenerator Generator {
@@ -261,7 +261,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaScriptConsoleLogExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaScriptConsoleLogExperiment : LearningExperiment {
         public JavaScriptConsoleLogExperiment() : base("assignmentExpression") {}
 
         protected override CstGenerator Generator {
@@ -282,7 +282,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaScriptStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaScriptStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaScriptExperiment.Generator; }
         }
@@ -298,7 +298,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaScriptComplexStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaScriptComplexStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaScriptExperiment.Generator; }
         }
@@ -323,7 +323,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaScriptBlockExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaScriptBlockExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaScriptExperiment.Generator; }
         }
@@ -342,7 +342,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaScriptLabeledStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaScriptLabeledStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaScriptExperiment.Generator; }
         }
@@ -361,7 +361,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
     }
 
-    public class JavaScriptEmptyStatementExperiment : BitLearningExperimentGroupingWithId {
+    public class JavaScriptEmptyStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaScriptExperiment.Generator; }
         }

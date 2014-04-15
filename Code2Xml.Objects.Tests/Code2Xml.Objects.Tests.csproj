@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Generators\CstGeneratorsTest.cs" />
-    <Compile Include="Learning\BitLearningExperimentGroupingWithId.cs" />
+    <Compile Include="Learning\LearningExperiment.cs" />
     <Compile Include="Learning\Experiments\CSharpExperiment.cs" />
     <Compile Include="Learning\Experiments\JavaExperiment.cs" />
     <Compile Include="Learning\Experiments\JavaScriptExperiment.cs" />
