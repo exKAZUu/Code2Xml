@@ -210,7 +210,7 @@ namespace Code2Xml.Core.Tests.Generators {
                                 "@\"" + commitPointer + "\")]\r\n");
                     });
             thread.Start();
-            if (thread.Join(1000 * 60 * 5)) {
+            if (thread.Join(1000 * 60 * 30)) {
                 thread.Abort();
             }
         }
