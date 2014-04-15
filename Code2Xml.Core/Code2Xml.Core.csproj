@@ -115,7 +115,7 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="TreeDotNet, Version=1.2.2.12, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\TreeDotNet.1.2.2.12\lib\net40\TreeDotNet.dll</HintPath>
+      <HintPath>..\packages\TreeDotNet.1.2.3.13\lib\net40\TreeDotNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
