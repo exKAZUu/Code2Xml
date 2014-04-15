@@ -109,7 +109,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                 LearningExperiment exp, string projectPath, IList<string> seedPaths) {
             var allPaths = Directory.GetFiles(projectPath, "*.lua", SearchOption.AllDirectories)
                     .ToList();
-            exp.AutomaticallyLearnUntilBeStable(allPaths, seedPaths, _writer, projectPath);
+            exp.Learn(allPaths, seedPaths, _writer, projectPath);
             //if (exp.WrongFeatureCount > 0) {
             //	Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
             //	foreach (var we in exp.WronglyAcceptedElements) {

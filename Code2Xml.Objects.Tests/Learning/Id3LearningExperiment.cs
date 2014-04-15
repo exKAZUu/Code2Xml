@@ -22,13 +22,14 @@ using System.IO;
 using System.Linq;
 using System.Numerics;
 using System.Runtime.Serialization.Formatters.Binary;
+using Accord.MachineLearning.DecisionTrees;
 using Code2Xml.Core;
 using Code2Xml.Core.Generators;
 using Paraiba.Collections.Generic;
 using Paraiba.Linq;
 
 namespace Code2Xml.Objects.Tests.Learning {
-    public abstract class LearningExperiment {
+    public abstract class Id3LearningExperiment {
         public class SuspiciousTarget {
             public int BitsCount { get; set; }
             public BigInteger Feature { get; set; }
@@ -109,8 +110,9 @@ namespace Code2Xml.Objects.Tests.Learning {
         private IList<BigInteger> _rejectingClassifiers;
         private readonly HashSet<string> _initialElementNames;
         private Dictionary<BigInteger, int> _feature2Count;
+        private IList<DecisionVariable> _variables;
 
-        protected LearningExperiment(params string[] elementNames) {
+        protected Id3LearningExperiment(params string[] elementNames) {
             _initialElementNames = elementNames.ToHashSet();
         }
 
@@ -239,6 +241,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                 }
                 if (string.IsNullOrEmpty(projectPath) != null) {
                     ExtractFeatures(allAsts, seedAsts, seedAcceptedElements.ToList());
+
                     var formatter = new BinaryFormatter();
                     using (var stream = cacheFile.OpenWrite()) {
                         formatter.Serialize(stream, _elementNames);
@@ -281,6 +284,10 @@ namespace Code2Xml.Objects.Tests.Learning {
                     _rejectingClassifiers = (IList<BigInteger>)formatter.Deserialize(stream);
                 }
             }
+
+            _variables = Enumerable.Repeat(0, _masterFeatures.Count)
+                    .Select(_ => new DecisionVariable(null, DecisionVariableKind.Discrete))
+                    .ToList();
 
             var count = 0;
             var sumTime = Environment.TickCount;

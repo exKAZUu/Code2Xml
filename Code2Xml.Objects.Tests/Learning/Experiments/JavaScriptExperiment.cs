@@ -109,7 +109,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                 LearningExperiment exp, string projectPath, IList<string> seedPaths) {
             var allPaths = Directory.GetFiles(projectPath, "*.js", SearchOption.AllDirectories)
                     .ToList();
-            exp.AutomaticallyLearnUntilBeStable(allPaths, seedPaths, _writer, projectPath);
+            exp.Learn(allPaths, seedPaths, _writer, projectPath);
             exp.Clear();
             Assert.That(exp.WrongFeatureCount, Is.EqualTo(0));
         }
