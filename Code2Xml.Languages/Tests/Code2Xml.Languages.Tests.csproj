@@ -49,6 +49,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CleanUp.cs" />
     <Compile Include="Samples\CstSerializationSample.cs" />
     <Compile Include="Samples\CstManipulationSample.cs" />
     <Compile Include="Samples\CstGeneratorSample.cs" />

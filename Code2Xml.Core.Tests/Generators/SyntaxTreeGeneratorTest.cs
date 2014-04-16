@@ -188,24 +188,21 @@ namespace Code2Xml.Core.Tests.Generators {
         }
 
         protected void VerifyRestoringGitRepositorySavingRepo(
-                string url, string commitPointer, string filePath,
+                string url, string commitPointer, string filePath, int starCount,
                 params string[] patterns) {
             VerifyRestoringGitRepositorySavingRepo(
-                    url, commitPointer, filePath, File.ReadAllText, patterns);
+                    url, commitPointer, filePath, starCount, File.ReadAllText, patterns);
         }
 
         protected void VerifyRestoringGitRepositorySavingRepo(
-                string url, string commitPointer, string filePath,
+                string url, string commitPointer, string filePath, int starCount,
                 Func<string, string> readFileFunc, params string[] patterns) {
             var thread = new Thread(
                     () => {
                         var path = Fixture.GetGitRepositoryPath(url);
                         Git.CloneAndCheckout(path, url, commitPointer);
                         PrivateVerifyRestoringProjectDirectory(path, url, readFileFunc, patterns);
-                        File.AppendAllText(
-                                filePath,
-                                "[TestCase(@\"" + url + "\",\r\n" +
-                                "@\"" + commitPointer + "\")]\r\n");
+                        File.AppendAllText(filePath, url + "," + commitPointer + "," + starCount);
                     });
             thread.Start();
             if (thread.Join(1000 * 60 * 30)) {

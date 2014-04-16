@@ -28,7 +28,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
     [TestFixture]
     public class JavaExperiment {
         private readonly StreamWriter _writer = File.CreateText(
-                @"C:\Users\exKAZUu\Desktop\java.txt");
+                @"C:\Users\exKAZUu\Desktop\java.csv");
 
         public static CstGenerator Generator = CstGenerators.JavaUsingAntlr3;
         private const string LangName = "Java";
@@ -80,117 +80,117 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                     Tuple.Create(
                             @"https://github.com/WhisperSystems/TextSecure.git",
                             @"4d52d2ee364c2edad50420a9afa500dde66a48d9"),
-                    Tuple.Create(
-                            @"https://github.com/fernandezpablo85/scribe-java.git",
-                            @"135ad50a4e4e27e97f09e42ae50d6011c7af7a4b"),
-                    Tuple.Create(
-                            @"https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition.git",
-                            @"5f399a52c8bf5626b098629906f82be1763089f4"),
-                    Tuple.Create(
-                            @"https://github.com/Bukkit/CraftBukkit.git",
-                            @"1ab090e71ea261fe38cef980bc2ebe696a494ea3"),
-                    Tuple.Create(
-                            @"https://github.com/nicolasgramlich/AndEngine.git",
-                            @"720897f99d2c56ba357e8fe361454bd8d88c37ed"),
-                    Tuple.Create(
-                            @"https://github.com/Prototik/HoloEverywhere.git",
-                            @"3b6021aa4af717cd31b1b6c877f6c30b674af6d9"),
-                    Tuple.Create(
-                            @"https://github.com/LMAX-Exchange/disruptor.git",
-                            @"1072645ad75f8b07b9145197fd4137fcfa79011a"),
-                    Tuple.Create(
-                            @"https://github.com/johannilsson/android-pulltorefresh.git",
-                            @"4277c1ecf6256518248a1143b3ee882c703b33d6"),
-                    Tuple.Create(
-                            @"https://github.com/dropwizard/dropwizard.git",
-                            @"4758ac698ff9993879798db338b3314c6a1c6a27"),
-                    Tuple.Create(
-                            @"https://github.com/facebook/facebook-android-sdk.git",
-                            @"118e756568f7e9a8045e87575c190a2c304071a6"),
-                    Tuple.Create(
-                            @"https://github.com/JakeWharton/Android-ViewPagerIndicator.git",
-                            @"8cd549f23f3d20ff920e19a2345c54983f65e26b"),
-                    Tuple.Create(
-                            @"https://github.com/nostra13/Android-Universal-Image-Loader.git",
-                            @"29811229c3ba3da390b29353875be2c92f88a789"),
-                    Tuple.Create(
-                            @"https://github.com/clojure/clojure.git",
-                            @"201a0dd9701e1a0ee3998431241388eb4a854ebf"),
-                    Tuple.Create(
-                            @"https://github.com/square/picasso.git",
-                            @"e0c3d44f53919742a0a608277be26b47742bb2a2"),
-                    Tuple.Create(
-                            @"https://github.com/facebook/presto.git",
-                            @"b4b5d67e09576ec38be1564123e5a0e2d4bc1996"),
-                    Tuple.Create(
-                            @"https://github.com/WhisperSystems/TextSecure.git",
-                            @"4d52d2ee364c2edad50420a9afa500dde66a48d9"),
-                    Tuple.Create(
-                            @"https://github.com/chrisbanes/ActionBar-PullToRefresh.git",
-                            @"65d4183994eaf8c450e81afadb389fca61499063"),
-                    Tuple.Create(
-                            @"https://github.com/dropwizard/metrics.git",
-                            @"e61395657d9f471a88dc0d9f3c7f78f0e773fe28"),
-                    Tuple.Create(
-                            @"https://github.com/Prototik/HoloEverywhere.git",
-                            @"3b6021aa4af717cd31b1b6c877f6c30b674af6d9"),
-                    Tuple.Create(
-                            @"https://github.com/Bukkit/CraftBukkit.git",
-                            @"1ab090e71ea261fe38cef980bc2ebe696a494ea3"),
-                    Tuple.Create(
-                            @"https://github.com/cyrilmottier/GreenDroid.git",
-                            @"abd9769f677bb4a753f0bf1119f961187bdf7020"),
-                    Tuple.Create(
-                            @"https://github.com/nicolasgramlich/AndEngine.git",
-                            @"720897f99d2c56ba357e8fe361454bd8d88c37ed"),
-                    Tuple.Create(
-                            @"https://github.com/fernandezpablo85/scribe-java.git",
-                            @"135ad50a4e4e27e97f09e42ae50d6011c7af7a4b"),
-                    Tuple.Create(
-                            @"https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition.git",
-                            @"5f399a52c8bf5626b098629906f82be1763089f4"),
-                    Tuple.Create(
-                            @"https://github.com/LMAX-Exchange/disruptor.git",
-                            @"1072645ad75f8b07b9145197fd4137fcfa79011a"),
-                    Tuple.Create(
-                            @"https://github.com/johannilsson/android-pulltorefresh.git",
-                            @"4277c1ecf6256518248a1143b3ee882c703b33d6"),
-                    Tuple.Create(
-                            @"https://github.com/SimonVT/android-menudrawer.git",
-                            @"1260f2f6d50d3b572ebfa98e93a0b4f8258371de"),
-                    Tuple.Create(
-                            @"https://github.com/square/retrofit.git",
-                            @"1f7cc4942f71d6c6cf4770fcd93670bc93a8c710"),
-                    Tuple.Create(
-                            @"https://github.com/robovm/robovm.git",
-                            @"a72f06e62dbe4afd3271fb3bfa4ca2c4d47d3329"),
-                    Tuple.Create(
-                            @"https://github.com/jfeinstein10/SlidingMenu.git",
-                            @"4254feca3ece9397cd501921ee733f19ea0fdad8"),
-                    Tuple.Create(
-                            @"https://github.com/junit-team/junit.git",
-                            @"e65558c174a8f5c4c7758f0d9dd1ffe027b023d8"),
-                    Tuple.Create(
-                            @"https://github.com/github/android.git",
-                            @"9d490829b944d3a2c77dbd0010ec7a0bfe2efaee"),
-                    Tuple.Create(
-                            @"https://github.com/AndroidBootstrap/android-bootstrap.git",
-                            @"e43e3ac4a5984edf9a6ccc87bac04be177a3615a"),
-                    Tuple.Create(
-                            @"https://github.com/JakeWharton/ActionBarSherlock.git",
-                            @"4a79d536af872339899a90d6dc743aa57745474b"),
-                    Tuple.Create(
-                            @"https://github.com/loopj/android-async-http.git",
-                            @"6077c6aa7bf06b2b8c13fbb4355e094dea436b7c"),
-                    Tuple.Create(
-                            @"https://github.com/sparklemotion/nokogiri.git",
-                            @"163103b0eaf904575e62909eddc00dcc9e425a2a"),
-                    Tuple.Create(
-                            @"https://github.com/nathanmarz/storm.git",
-                            @"cdb116e942666973bc4eaa0df098d5bab82739e7"),
-                    Tuple.Create(
-                            @"https://github.com/netty/netty.git",
-                            @"8615f7a69ecbbabd6d8f7ba8cae90ba63d702fec"),
+                    //Tuple.Create(
+                    //        @"https://github.com/fernandezpablo85/scribe-java.git",
+                    //        @"135ad50a4e4e27e97f09e42ae50d6011c7af7a4b"),
+                    //Tuple.Create(
+                    //        @"https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition.git",
+                    //        @"5f399a52c8bf5626b098629906f82be1763089f4"),
+                    //Tuple.Create(
+                    //        @"https://github.com/Bukkit/CraftBukkit.git",
+                    //        @"1ab090e71ea261fe38cef980bc2ebe696a494ea3"),
+                    //Tuple.Create(
+                    //        @"https://github.com/nicolasgramlich/AndEngine.git",
+                    //        @"720897f99d2c56ba357e8fe361454bd8d88c37ed"),
+                    //Tuple.Create(
+                    //        @"https://github.com/Prototik/HoloEverywhere.git",
+                    //        @"3b6021aa4af717cd31b1b6c877f6c30b674af6d9"),
+                    //Tuple.Create(
+                    //        @"https://github.com/LMAX-Exchange/disruptor.git",
+                    //        @"1072645ad75f8b07b9145197fd4137fcfa79011a"),
+                    //Tuple.Create(
+                    //        @"https://github.com/johannilsson/android-pulltorefresh.git",
+                    //        @"4277c1ecf6256518248a1143b3ee882c703b33d6"),
+                    //Tuple.Create(
+                    //        @"https://github.com/dropwizard/dropwizard.git",
+                    //        @"4758ac698ff9993879798db338b3314c6a1c6a27"),
+                    //Tuple.Create(
+                    //        @"https://github.com/facebook/facebook-android-sdk.git",
+                    //        @"118e756568f7e9a8045e87575c190a2c304071a6"),
+                    //Tuple.Create(
+                    //        @"https://github.com/JakeWharton/Android-ViewPagerIndicator.git",
+                    //        @"8cd549f23f3d20ff920e19a2345c54983f65e26b"),
+                    //Tuple.Create(
+                    //        @"https://github.com/nostra13/Android-Universal-Image-Loader.git",
+                    //        @"29811229c3ba3da390b29353875be2c92f88a789"),
+                    //Tuple.Create(
+                    //        @"https://github.com/clojure/clojure.git",
+                    //        @"201a0dd9701e1a0ee3998431241388eb4a854ebf"),
+                    //Tuple.Create(
+                    //        @"https://github.com/square/picasso.git",
+                    //        @"e0c3d44f53919742a0a608277be26b47742bb2a2"),
+                    //Tuple.Create(
+                    //        @"https://github.com/facebook/presto.git",
+                    //        @"b4b5d67e09576ec38be1564123e5a0e2d4bc1996"),
+                    //Tuple.Create(
+                    //        @"https://github.com/WhisperSystems/TextSecure.git",
+                    //        @"4d52d2ee364c2edad50420a9afa500dde66a48d9"),
+                    //Tuple.Create(
+                    //        @"https://github.com/chrisbanes/ActionBar-PullToRefresh.git",
+                    //        @"65d4183994eaf8c450e81afadb389fca61499063"),
+                    //Tuple.Create(
+                    //        @"https://github.com/dropwizard/metrics.git",
+                    //        @"e61395657d9f471a88dc0d9f3c7f78f0e773fe28"),
+                    //Tuple.Create(
+                    //        @"https://github.com/Prototik/HoloEverywhere.git",
+                    //        @"3b6021aa4af717cd31b1b6c877f6c30b674af6d9"),
+                    //Tuple.Create(
+                    //        @"https://github.com/Bukkit/CraftBukkit.git",
+                    //        @"1ab090e71ea261fe38cef980bc2ebe696a494ea3"),
+                    //Tuple.Create(
+                    //        @"https://github.com/cyrilmottier/GreenDroid.git",
+                    //        @"abd9769f677bb4a753f0bf1119f961187bdf7020"),
+                    //Tuple.Create(
+                    //        @"https://github.com/nicolasgramlich/AndEngine.git",
+                    //        @"720897f99d2c56ba357e8fe361454bd8d88c37ed"),
+                    //Tuple.Create(
+                    //        @"https://github.com/fernandezpablo85/scribe-java.git",
+                    //        @"135ad50a4e4e27e97f09e42ae50d6011c7af7a4b"),
+                    //Tuple.Create(
+                    //        @"https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition.git",
+                    //        @"5f399a52c8bf5626b098629906f82be1763089f4"),
+                    //Tuple.Create(
+                    //        @"https://github.com/LMAX-Exchange/disruptor.git",
+                    //        @"1072645ad75f8b07b9145197fd4137fcfa79011a"),
+                    //Tuple.Create(
+                    //        @"https://github.com/johannilsson/android-pulltorefresh.git",
+                    //        @"4277c1ecf6256518248a1143b3ee882c703b33d6"),
+                    //Tuple.Create(
+                    //        @"https://github.com/SimonVT/android-menudrawer.git",
+                    //        @"1260f2f6d50d3b572ebfa98e93a0b4f8258371de"),
+                    //Tuple.Create(
+                    //        @"https://github.com/square/retrofit.git",
+                    //        @"1f7cc4942f71d6c6cf4770fcd93670bc93a8c710"),
+                    //Tuple.Create(
+                    //        @"https://github.com/robovm/robovm.git",
+                    //        @"a72f06e62dbe4afd3271fb3bfa4ca2c4d47d3329"),
+                    //Tuple.Create(
+                    //        @"https://github.com/jfeinstein10/SlidingMenu.git",
+                    //        @"4254feca3ece9397cd501921ee733f19ea0fdad8"),
+                    //Tuple.Create(
+                    //        @"https://github.com/junit-team/junit.git",
+                    //        @"e65558c174a8f5c4c7758f0d9dd1ffe027b023d8"),
+                    //Tuple.Create(
+                    //        @"https://github.com/github/android.git",
+                    //        @"9d490829b944d3a2c77dbd0010ec7a0bfe2efaee"),
+                    //Tuple.Create(
+                    //        @"https://github.com/AndroidBootstrap/android-bootstrap.git",
+                    //        @"e43e3ac4a5984edf9a6ccc87bac04be177a3615a"),
+                    //Tuple.Create(
+                    //        @"https://github.com/JakeWharton/ActionBarSherlock.git",
+                    //        @"4a79d536af872339899a90d6dc743aa57745474b"),
+                    //Tuple.Create(
+                    //        @"https://github.com/loopj/android-async-http.git",
+                    //        @"6077c6aa7bf06b2b8c13fbb4355e094dea436b7c"),
+                    //Tuple.Create(
+                    //        @"https://github.com/sparklemotion/nokogiri.git",
+                    //        @"163103b0eaf904575e62909eddc00dcc9e425a2a"),
+                    //Tuple.Create(
+                    //        @"https://github.com/nathanmarz/storm.git",
+                    //        @"cdb116e942666973bc4eaa0df098d5bab82739e7"),
+                    //Tuple.Create(
+                    //        @"https://github.com/netty/netty.git",
+                    //        @"8615f7a69ecbbabd6d8f7ba8cae90ba63d702fec"),
                 };
                 foreach (var exp in exps) {
                     foreach (var learningSet in learningSets) {

@@ -683,34 +683,65 @@ namespace Code2Xml.Objects.Tests.Learning {
                 //		suspiciousRejectedListByRejecting, rejectingClassifiers, _rejectingMask, _rejectingMask);
                 //suspiciousAcceptedInAccepting = FlattenSuspiciousTargetsList(acceptedInAccepting);
                 //suspiciousRejectedInAccepting = FlattenSuspiciousTargetsList(rejectedInAccepting);
+
+                //var existing = _acceptedTrainingSet.Keys.Concat(_rejectedTrainingSet.Keys).ToList();
+                //SuspiciousAcceptedInAccepting = SelectVariousElementsExisting(
+                //        acceptedInAccepting, existing, _mask);
+                //SuspiciousRejectedInAccepting = SelectVariousElementsExisting(
+                //        rejectedInAccepting, existing, _mask);
+                //SuspiciousRejectedInRejecting = SelectVariousElementsExisting(
+                //        rejectedInRejecting, existing, _mask);
+
+                //Best
                 SuspiciousAcceptedInAccepting = SelectVariousElements(
                         acceptedInAccepting, _acceptingMask);
                 SuspiciousRejectedInAccepting = SelectVariousElements(
                         rejectedInAccepting, _acceptingMask);
                 SuspiciousRejectedInRejecting = FlattenSuspiciousTargetsList(rejectedInRejecting);
-                //SuspiciousRejectedInRejecting = SelectVariousElements(rejectedInRejecting, _rejectingMask);
+
+                //SuspiciousAcceptedInAccepting = SelectSuspiciousElementsWithMask(
+                //        acceptedInAccepting, BigInteger.Zero, _mask);
+                //SuspiciousRejectedInAccepting = SelectSuspiciousElementsWithMask(
+                //        rejectedInAccepting, _acceptingMask, _acceptingMask);
+                //SuspiciousRejectedInRejecting = SelectSuspiciousElementsWithMask(
+                //        rejectedInRejecting, _rejectingMask, _rejectingMask);
+
+                //var added = new HashSet<BigInteger>();
+                //SuspiciousAcceptedInAccepting =
+                //        SelectNodesForFastAcceptanceLearning(acceptedInAccepting, added);
+                //SuspiciousRejectedInAccepting =
+                //        SelectNodesForFastAcceptanceLearning(rejectedInAccepting, added);
+                //SuspiciousRejectedInRejecting =
+                //        SelectNodesForFastAcceptanceLearning(rejectedInRejecting, added);
+                //SuspiciousAcceptedInAccepting =
+                //        SelectNodesForFastRejectionLearning(acceptedInAccepting, added);
+                //SuspiciousRejectedInAccepting =
+                //        SelectNodesForFastRejectionLearning(rejectedInAccepting, added);
+                //SuspiciousRejectedInRejecting =
+                //        SelectNodesForFastRejectionLearning(rejectedInRejecting, added);
+
                 break;
             case 1:
-                SuspiciousAcceptedInAccepting = SelectSuspiciousElementsWithMaskWithSmallGrowing(
+                //Best
+                SuspiciousAcceptedInAccepting = SelectSuspiciousElementsWithMask(
                         acceptedInAccepting, BigInteger.Zero, _mask);
-                SuspiciousRejectedInAccepting = SelectSuspiciousElementsWithMaskWithSmallGrowing(
+                SuspiciousRejectedInAccepting = SelectSuspiciousElementsWithMask(
                         rejectedInAccepting, _acceptingMask, _acceptingMask);
-                SuspiciousRejectedInRejecting = SelectSuspiciousElementsWithMaskWithSmallGrowing(
+                SuspiciousRejectedInRejecting = SelectSuspiciousElementsWithMask(
                         rejectedInRejecting, _rejectingMask, _rejectingMask);
-                //suspiciousAcceptedByAccepting = SelectSuspiciousElements(
-                //		suspiciousAcceptedListByAccepting, acceptingClassifiers, _acceptingMask, BigInteger.Zero);
-                //suspiciousRejectedByAccepting = SelectSuspiciousElements(
-                //		suspiciousRejectedListByAccepting, acceptingClassifiers, BigInteger.Zero, BigInteger.Zero);
-                //suspiciousRejectedByRejecting = SelectSuspiciousElements(
-                //		suspiciousRejectedListByRejecting, rejectingClassifiers, _rejectingMask, _rejectingMask);
-                return -1;
+
+                //SuspiciousAcceptedInAccepting = SelectVariousElements(
+                //        acceptedInAccepting, _acceptingMask);
+                //SuspiciousRejectedInAccepting = SelectVariousElements(
+                //        rejectedInAccepting, _acceptingMask);
+                //SuspiciousRejectedInRejecting = FlattenSuspiciousTargetsList(rejectedInRejecting);                return -1;
                 break;
             case 2:
-                SuspiciousAcceptedInAccepting = SelectSuspiciousElementsWithMaskWithSmallGrowing(
+                SuspiciousAcceptedInAccepting = SelectSuspiciousElementsWithMask(
                         acceptedInAccepting, BigInteger.Zero, _acceptingMask);
-                SuspiciousRejectedInAccepting = SelectSuspiciousElementsWithMaskWithSmallGrowing(
+                SuspiciousRejectedInAccepting = SelectSuspiciousElementsWithMask(
                         rejectedInAccepting, BigInteger.Zero, _acceptingMask);
-                SuspiciousRejectedInRejecting = SelectSuspiciousElementsWithMaskWithSmallGrowing(
+                SuspiciousRejectedInRejecting = SelectSuspiciousElementsWithMask(
                         rejectedInRejecting, _rejectingMask, _rejectingMask);
                 break;
             default:
@@ -781,7 +812,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                         var newFeature = (feature | (t.Feature ^ xor)) & mask;
                         var diff = newFeature ^ feature;
                         var diffCount = CountBits(diff);
-                        if (minDiffCount != 0 && minDiffCount > diffCount) {
+                        if (diffCount > 0 && minDiffCount > diffCount) {
                             minDiffCount = diffCount;
                             feature = newFeature;
                             newTarget = t;
@@ -839,16 +870,16 @@ namespace Code2Xml.Objects.Tests.Learning {
         }
 
         private SuspiciousTarget SelectMostDifferentElement(
-                IList<SuspiciousTarget> existings, IEnumerable<SuspiciousTarget> targets,
+                IEnumerable<BigInteger> existings, IEnumerable<SuspiciousTarget> targets,
                 BigInteger mask) {
-            if (existings.Count == 0) {
+            if (!existings.Any()) {
                 return targets.FirstOrDefault();
             }
             var maxDiff = 0;
             SuspiciousTarget ret = null;
             foreach (var t in targets) {
                 var feature = t.Feature & mask;
-                var diff = existings.Min(e => CountBits((e.Feature & mask) ^ feature));
+                var diff = existings.Min(f => CountBits((f & mask) ^ feature));
                 if (maxDiff < diff) {
                     maxDiff = diff;
                     ret = t;
@@ -866,13 +897,126 @@ namespace Code2Xml.Objects.Tests.Learning {
             while (ret.Count < LearningCount) {
                 var added = false;
                 foreach (var list in targetsList) {
-                    var e = SelectMostDifferentElement(ret, list, mask);
+                    var e = SelectMostDifferentElement(ret.Select(t => t.Feature), list, mask);
                     if (e != null) {
                         ret.Add(e);
                         added = true;
                     }
                 }
                 if (!added) {
+                    break;
+                }
+            }
+            return ret;
+        }
+
+        private List<SuspiciousTarget> SelectVariousElementsExisting(
+                List<List<SuspiciousTarget>> targetsList, IList<BigInteger> existings,
+                BigInteger mask) {
+            var ret = new List<SuspiciousTarget>();
+            foreach (List<SuspiciousTarget> list in targetsList) {
+                list.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
+            }
+            while (ret.Count < LearningCount) {
+                var added = false;
+                foreach (var list in targetsList) {
+                    var e = SelectMostDifferentElement(existings, list, mask);
+                    if (e != null) {
+                        ret.Add(e);
+                        existings.Add(e.Feature);
+                        added = true;
+                    }
+                }
+                if (!added) {
+                    break;
+                }
+            }
+            return ret;
+        }
+
+        private List<SuspiciousTarget> SelectSuspiciousElementsWithMaskForFastAcceptanceLearning(
+                List<List<SuspiciousTarget>> suspiciousElementsList, BigInteger xor, BigInteger mask) {
+            var classifiers = _acceptingClassifiers;
+            var suspiciousElements = new List<SuspiciousTarget>();
+            for (int i = 0; i < suspiciousElementsList.Count; i++) {
+                var feature = BigInteger.Zero;
+                var classifier = classifiers[i];
+                var list = suspiciousElementsList[i]
+                        .OrderBy(t => CountBits(classifier & t.Feature))
+                        .ToList();
+                foreach (var t in list) {
+                    var newFeature = (feature | (t.Feature ^ xor)) & mask;
+                    if (newFeature != feature) {
+                        feature = newFeature;
+                        suspiciousElements.Add(t);
+                    }
+                }
+            }
+            return suspiciousElements;
+        }
+
+        private List<SuspiciousTarget> SelectSuspiciousElementsWithMaskForFastRejectionLearning(
+                List<List<SuspiciousTarget>> suspiciousElementsList, BigInteger xor, BigInteger mask) {
+            var classifiers = _acceptingClassifiers;
+            var suspiciousElements = new List<SuspiciousTarget>();
+            for (int i = 0; i < suspiciousElementsList.Count; i++) {
+                var feature = BigInteger.Zero;
+                var classifier = classifiers[i];
+                var list = suspiciousElementsList[i]
+                        .OrderBy(t => CountBits(classifier & ((t.Feature & _rejectingMask) ^ _rejectingMask)))
+                        .ToList();
+                foreach (var t in list) {
+                    var newFeature = (feature | (t.Feature ^ xor)) & mask;
+                    if (newFeature != feature) {
+                        feature = newFeature;
+                        suspiciousElements.Add(t);
+                    }
+                }
+            }
+            return suspiciousElements;
+        }
+
+        private List<SuspiciousTarget> SelectNodesForFastAcceptanceLearning(List<List<SuspiciousTarget>> targetsList, HashSet<BigInteger> added) {
+            var classifiers = _acceptingClassifiers;
+            var ret = new List<SuspiciousTarget>();
+            for (int j = 0; j < 1; j++) {
+                var updated = false;
+                for (int i = 0; i < targetsList.Count; i++) {
+                    var classifier = classifiers[i];
+                    var e = targetsList[i]
+                            .Where(t => !added.Contains(t.Feature))
+                            .MinElementOrDefault(t => CountBits(classifier & t.Feature));
+                    if (e != null) {
+                        ret.Add(e);
+                        added.Add(e.Feature);
+                        updated = true;
+                    }
+                }
+                if (!updated) {
+                    break;
+                }
+            }
+            return ret;
+        }
+
+        private List<SuspiciousTarget> SelectNodesForFastRejectionLearning(List<List<SuspiciousTarget>> targetsList, HashSet<BigInteger> added) {
+            var classifiers = _acceptingClassifiers;
+            var ret = new List<SuspiciousTarget>();
+            for (int j = 0; j < 1; j++) {
+                var updated = false;
+                for (int i = 0; i < targetsList.Count; i++) {
+                    var classifier = classifiers[i];
+                    var e = targetsList[i]
+                            .Where(t => !added.Contains(t.Feature))
+                            .MinElementOrDefault(t =>
+                                CountBits(classifier & ((t.Feature & _rejectingMask) ^ _rejectingMask)));
+                    if (e != null) {
+                        ret.Add(e);
+                        added.Add(e.Feature);
+                        updated = true;
+                    }
+                }
+                if (!updated) {
                     break;
                 }
             }
