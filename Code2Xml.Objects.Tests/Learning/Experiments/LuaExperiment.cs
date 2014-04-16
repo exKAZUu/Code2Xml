@@ -603,4 +603,36 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             return false;
         }
     }
+
+	public class LuaExpressionStatementExperiment : LearningExperiment {
+		protected override CstGenerator Generator {
+			get { return LuaExperiment.Generator; }
+		}
+
+		protected override bool IsInner {
+			get { return true; }
+		}
+
+		public LuaExpressionStatementExperiment() : base("stat") {}
+
+		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+			return e.FirstChild.Name == "varlist";
+		}
+	}
+
+	public class LuaArithmeticOperatorExperiment : LearningExperiment {
+		protected override CstGenerator Generator {
+			get { return LuaExperiment.Generator; }
+		}
+
+		protected override bool IsInner {
+			get { return true; }
+		}
+
+		public LuaArithmeticOperatorExperiment() : base("TOKENS") {}
+
+		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+			return e.Parent.Name == "binop" && (e.TokenText == "+" || e.TokenText == "-" || e.TokenText == "*" || e.TokenText == "/");
+		}
+	}
 }

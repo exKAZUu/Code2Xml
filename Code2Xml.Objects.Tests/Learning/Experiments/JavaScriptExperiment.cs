@@ -730,4 +730,37 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             return false;
         }
     }
+
+	public class JavaScriptExpressionStatementExperiment : LearningExperiment {
+		protected override CstGenerator Generator {
+			get { return JavaScriptExperiment.Generator; }
+		}
+
+		protected override bool IsInner {
+			get { return true; }
+		}
+
+		public JavaScriptExpressionStatementExperiment() : base("expressionStatement") {}
+
+		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+			return true;
+		}
+	}
+
+	public class JavaScriptArithmeticOperatorExperiment : LearningExperiment {
+		protected override CstGenerator Generator {
+			get { return JavaScriptExperiment.Generator; }
+		}
+
+		protected override bool IsInner {
+			get { return true; }
+		}
+
+		public JavaScriptArithmeticOperatorExperiment() : base("TOKENS") {}
+
+		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+			return ((e.TokenText == "*" || e.TokenText == "/") && e.Parent.Name == "multiplicativeExpression") ||
+			       ((e.TokenText == "+" || e.TokenText == "-") && e.Parent.Name == "additiveExpression");
+		}
+	}
 }

@@ -1215,6 +1215,10 @@ namespace Code2Xml.Objects.Tests.Learning {
                     .Any(ProtectedIsAcceptedUsingOracle);
         }
 
+        public bool OriginalIsAcceptedUsingOracle(CstNode e) {
+            return _initialElementNames.Contains(e.Name) && ProtectedIsAcceptedUsingOracle(e);
+        }
+
         protected abstract bool ProtectedIsAcceptedUsingOracle(CstNode e);
     }
 }

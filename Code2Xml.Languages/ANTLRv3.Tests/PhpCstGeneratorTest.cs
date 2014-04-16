@@ -80,6 +80,7 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
         [TestCase(@"<?php class::preload();")]
         [TestCase(@"<?php function ($results) use (&$output) {};")]
         [TestCase(@"<?php function ($results) {};")]
+        [TestCase(@"<?php $i = 0 + 1 - 2 * 3 / 4;")]
         public void Parse(string code) {
             VerifyRestoringCode(code);
         }

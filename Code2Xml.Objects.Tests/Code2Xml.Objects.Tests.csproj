@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="Generators\CstGeneratorsTest.cs" />
     <Compile Include="Learning\C45LearningExperiment.cs" />
+    <Compile Include="Learning\Experiments\PythonExperiment.cs" />
     <Compile Include="Learning\LearningExperiment.cs" />
     <Compile Include="Learning\Experiments\CSharpExperiment.cs" />
     <Compile Include="Learning\Experiments\JavaExperiment.cs" />
@@ -96,6 +97,10 @@
     <ProjectReference Include="..\Code2Xml.Languages\ANTLRv3\Code2Xml.Languages.ANTLRv3.csproj">
       <Project>{942a56fd-13af-4ee6-a8d7-7ddf50374715}</Project>
       <Name>Code2Xml.Languages.ANTLRv3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Code2Xml.Languages\ExternalPrograms\Code2Xml.Languages.ExternalGenerators.csproj">
+      <Project>{311EA4B7-DD3C-4945-9AE3-A86A3EDE6A68}</Project>
+      <Name>Code2Xml.Languages.ExternalGenerators</Name>
     </ProjectReference>
     <ProjectReference Include="..\Code2Xml.Objects\Code2Xml.Objects.csproj">
       <Project>{447b693b-b4d5-4b97-adf7-4f8546d9dd8e}</Project>

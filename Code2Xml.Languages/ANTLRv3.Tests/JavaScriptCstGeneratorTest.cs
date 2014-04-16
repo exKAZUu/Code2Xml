@@ -90,6 +90,7 @@ var completion = require('../lib/completion');
         [TestCase(@"import 'start';")]
         [TestCase(@"module.exports = function(grunt) { };")]
         [TestCase(@"export default xxx;")]
+        [TestCase(@"i = 0 + 1 - 2 * 3 / 4;")]
         public void Parse(string code) {
             VerifyRestoringCode(code);
         }
