@@ -26,7 +26,7 @@ using ParserTests;
 
 namespace Code2Xml.Objects.Tests.Learning.Experiments {
 	[TestFixture]
-	public class PythonExperiment {
+	public class Python2Experiment {
 		private readonly StreamWriter _writer = File.CreateText(
 				@"C:\Users\exKAZUu\Desktop\Python.csv");
 
@@ -38,16 +38,9 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 				var exps = new LearningExperiment[] {
 					new PythonComplexStatementExperiment(),
 					new PythonSuperComplexBranchExperiment(),
-					//new PythonComplexBranchExperiment(),
-					//new PythonIfExperiment(),
-					//new PythonWhileExperiment(),
-					//new PythonDoWhileExperiment(),
-					//new PythonForExperiment(),
-					//new PythonPreconditionsExperiment(),
-					//new PythonStatementExperiment(),
-					//new PythonBlockExperiment(),
-					//new PythonLabeledStatementExperiment(),
-					//new PythonEmptyStatementExperiment(),
+					new PythonEmptyStatementExperiment(),
+					new PythonExpressionStatementExperiment(),
+					new PythonArithmeticOperatorExperiment(), 
 				};
 				var learningSets = new[] {
 					Tuple.Create(
@@ -59,9 +52,6 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 					Tuple.Create(
 							@"https://github.com/mitsuhiko/flask.git",
 							@"d4b3d16c142e2189c6faf8f784a195e7f827c596", 9253),
-					Tuple.Create(
-							@"https://github.com/facebook/tornado.git",
-							@"c5292057a8db3ebec4a80d9c9207bfadff7fa784", 7026),
 					Tuple.Create(
 							@"https://github.com/jkbr/httpie.git",
 							@"746a1899f319a7c2a60f27bf23cc3762822be1a2", 6922),
@@ -77,7 +67,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 						var url = learningSet.Item1;
 						var path = Fixture.GetGitRepositoryPath(url);
 						Git.CloneAndCheckout(path, url, learningSet.Item2);
-						yield return new TestCaseData(exp, path);
+						yield return new TestCaseData(exp, path, learningSet.Item3);
 					}
 				}
 			}
@@ -112,7 +102,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
 	public class PythonSuperComplexBranchExperiment : LearningExperiment {
 		protected override CstGenerator Generator {
-			get { return PythonExperiment.Generator; }
+			get { return Python2Experiment.Generator; }
 		}
 
 		protected override bool IsInner {
@@ -135,7 +125,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
 	public class PythonComplexStatementExperiment : LearningExperiment {
 		protected override CstGenerator Generator {
-			get { return PythonExperiment.Generator; }
+			get { return Python2Experiment.Generator; }
 		}
 
 		protected override bool IsInner {
@@ -145,16 +135,19 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 		public PythonComplexStatementExperiment() : base("small_stmt", "compound_stmt") {}
 
 		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+			if (e.Name == "stmt") {
+				e = e.FirstChild;
+			}
 			if (e.Name == "small_stmt" && e.FirstChild.Name == "pass_stmt") {
 				return false;
 			}
-			return true;
+			return e.Name == "small_stmt" || e.Name == "compound_stmt";
 		}
 	}
 
 	public class PythonEmptyStatementExperiment : LearningExperiment {
 		protected override CstGenerator Generator {
-			get { return PythonExperiment.Generator; }
+			get { return Python2Experiment.Generator; }
 		}
 
 		protected override bool IsInner {
@@ -170,7 +163,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
 	public class PythonExpressionStatementExperiment : LearningExperiment {
 		protected override CstGenerator Generator {
-			get { return PythonExperiment.Generator; }
+			get { return Python2Experiment.Generator; }
 		}
 
 		protected override bool IsInner {
@@ -186,7 +179,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
 	public class PythonArithmeticOperatorExperiment : LearningExperiment {
 		protected override CstGenerator Generator {
-			get { return PythonExperiment.Generator; }
+			get { return Python2Experiment.Generator; }
 		}
 
 		protected override bool IsInner {
