@@ -183,7 +183,6 @@ namespace Code2Xml.Core.Tests.Generators {
                 string url, string commitPointer,
                 Func<string, string> readFileFunc, params string[] patterns) {
             var path = Fixture.GetGitRepositoryPath(url);
-            Directory.CreateDirectory(path);
             Git.CloneAndCheckout(path, url, commitPointer);
             PrivateVerifyRestoringProjectDirectory(path, url, readFileFunc, patterns);
         }
@@ -201,7 +200,6 @@ namespace Code2Xml.Core.Tests.Generators {
             var thread = new Thread(
                     () => {
                         var path = Fixture.GetGitRepositoryPath(url);
-                        Directory.CreateDirectory(path);
                         Git.CloneAndCheckout(path, url, commitPointer);
                         PrivateVerifyRestoringProjectDirectory(path, url, readFileFunc, patterns);
                         File.AppendAllText(

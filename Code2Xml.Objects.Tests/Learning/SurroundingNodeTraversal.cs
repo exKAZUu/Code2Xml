@@ -24,6 +24,21 @@ using Code2Xml.Core.Generators;
 
 namespace Code2Xml.Objects.Tests.Learning {
 	public static class SurroundingNodeTraversal {
+
+		public static double[] BigIntegerToDoubles(this BigInteger i, int bitLength) {
+		    var doubles = new List<double>();
+			while (i != BigInteger.Zero) {
+				if ((i & BigInteger.One) != BigInteger.Zero) {
+					doubles.Add(1);
+				} else {
+					doubles.Add(0);
+				}
+				i >>= 1;
+			}
+			return doubles.ToArray();
+		}
+
+
 		public static string BigIntegerToString(this BigInteger i) {
 			var ret = "";
 			while (i != BigInteger.Zero) {

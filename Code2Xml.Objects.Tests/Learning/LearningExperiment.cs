@@ -98,7 +98,7 @@ namespace Code2Xml.Objects.Tests.Learning {
         private const int GroupKeyLength = 5;
         private IDictionary<string, BigInteger> _masterFeatures;
         private List<string> _groupKeys;
-        private int _acceptingClassifierCount;
+        private int _acceptingFeatureCount;
         private BigInteger _acceptingMask;
         private BigInteger _rejectingMask;
         private BigInteger _mask;
@@ -166,30 +166,32 @@ namespace Code2Xml.Objects.Tests.Learning {
         }
 
         private void UpdateDict(
-                Dictionary<BigInteger, string> dict, BigInteger bits, CstNode element) {
-            var existingClassifiersStr = dict.GetValueOrDefault(bits);
-            IEnumerable<string> classifiers;
+                Dictionary<BigInteger, string> dict, BigInteger feature, CstNode node) {
+            IEnumerable<string> groupKeySequence;
             if (IsInner) {
-                //element = element.AncestorsOfOnlyChildAndSelf().Last(); // TODO
+                //node = node.AncestorsOfOnlyChildAndSelf().Last(); // TODO
                 // TODO: descendants may be empty list
-                var descendants = element.DescendantsOfFirstChild()
+                var descendants = node.DescendantsOfFirstChild()
                         .Take(GroupKeyLength)
                         .ToList();
-                classifiers = descendants.Select(e => e.NameWithId());
+                groupKeySequence = descendants.Select(e => e.NameWithId());
                 if (descendants[descendants.Count - 1].HasToken) {
-                    classifiers = classifiers.Concat(descendants[descendants.Count - 1].TokenText);
+                    groupKeySequence =
+                            groupKeySequence.Concat(descendants[descendants.Count - 1].TokenText);
                 }
             } else {
-                //element = element.DescendantsOfOnlyChildAndSelf().Last(); // TODO
-                classifiers = element.AncestorsAndSelf()
+                //node = node.DescendantsOfOnlyChildAndSelf().Last(); // TODO
+                groupKeySequence = node.AncestorsAndSelf()
                         .Take(GroupKeyLength)
                         .Select(e => e.NameWithId());
             }
-            var classifiersStre = ">" + element.Name + ">" + string.Join(">", classifiers) + ">";
-            if (existingClassifiersStr == null) {
-                dict.Add(bits, classifiersStre);
+
+            var groupKey = ">" + node.Name + ">" + string.Join(">", groupKeySequence) + ">";
+            var existingGroupKey = dict.GetValueOrDefault(feature);
+            if (existingGroupKey == null) {
+                dict.Add(feature, groupKey);
             } else {
-                dict[bits] = CommonSuffix(existingClassifiersStr, classifiersStre);
+                dict[feature] = CommonSuffix(existingGroupKey, groupKey);
             }
         }
 
@@ -250,7 +252,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                         formatter.Serialize(stream, _feature2Count);
                         formatter.Serialize(stream, _masterFeatures);
                         formatter.Serialize(stream, _groupKeys);
-                        formatter.Serialize(stream, _acceptingClassifierCount);
+                        formatter.Serialize(stream, _acceptingFeatureCount);
                         formatter.Serialize(stream, _acceptingMask);
                         formatter.Serialize(stream, _rejectingMask);
                         formatter.Serialize(stream, _mask);
@@ -273,7 +275,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                     _masterFeatures =
                             (IDictionary<string, BigInteger>)formatter.Deserialize(stream);
                     _groupKeys = (List<string>)formatter.Deserialize(stream);
-                    _acceptingClassifierCount = (int)formatter.Deserialize(stream);
+                    _acceptingFeatureCount = (int)formatter.Deserialize(stream);
                     _acceptingMask = (BigInteger)formatter.Deserialize(stream);
                     _rejectingMask = (BigInteger)formatter.Deserialize(stream);
                     _mask = (BigInteger)formatter.Deserialize(stream);
@@ -350,71 +352,71 @@ namespace Code2Xml.Objects.Tests.Learning {
                     }
                 }
             }
-            var acceptingClassifiers = seedAcceptedElements
+            var acceptingFeatures = seedAcceptedElements
                     .GetUnionKeys(SurroundingLength, IsInner, !IsInner)
                     .ToHashSet()
                     .ToList();
-            acceptingClassifiers.Sort((s1, s2) => s1.Length.CompareTo(s2.Length));
-            _acceptingClassifierCount = acceptingClassifiers.Count;
+            acceptingFeatures.Sort((s1, s2) => s1.Length.CompareTo(s2.Length));
+            _acceptingFeatureCount = acceptingFeatures.Count;
             var rejectingFeatureSet = seedRejectedElements
                     .GetUnionKeys(SurroundingLength, IsInner, !IsInner)
                     .ToHashSet();
-            rejectingFeatureSet.ExceptWith(acceptingClassifiers);
-            var rejectingClassifiers = rejectingFeatureSet.ToList();
-            rejectingClassifiers.Sort((s1, s2) => s1.Length.CompareTo(s2.Length));
+            rejectingFeatureSet.ExceptWith(acceptingFeatures);
+            var rejectingFeatures = rejectingFeatureSet.ToList();
+            rejectingFeatures.Sort((s1, s2) => s1.Length.CompareTo(s2.Length));
 
-            var masterBit = BigInteger.One;
-            foreach (var predicate in acceptingClassifiers) {
-                _masterFeatures.Add(predicate, masterBit);
-                masterBit <<= 1;
+            var masterFeature = BigInteger.One;
+            foreach (var feature in acceptingFeatures) {
+                _masterFeatures.Add(feature, masterFeature);
+                masterFeature <<= 1;
             }
-            foreach (var predicate in rejectingClassifiers) {
-                _masterFeatures.Add(predicate, masterBit);
-                masterBit <<= 1;
+            foreach (var feature in rejectingFeatures) {
+                _masterFeatures.Add(feature, masterFeature);
+                masterFeature <<= 1;
             }
 
             _mask = (BigInteger.One << _masterFeatures.Count) - BigInteger.One;
-            _acceptingMask = (BigInteger.One << _acceptingClassifierCount) - BigInteger.One;
+            _acceptingMask = (BigInteger.One << _acceptingFeatureCount) - BigInteger.One;
             _rejectingMask = _mask ^ _acceptingMask;
 
             foreach (var e in seedAcceptedElements) {
-                var bits = e.GetSurroundingBits(
+                var feature = e.GetSurroundingBits(
                         SurroundingLength, _masterFeatures, IsInner, !IsInner);
-                UpdateDict(_idealAccepted, bits, e);
-                _acceptedTrainingSet[bits] = _idealAccepted[bits];
-                _feature2Element[bits] = e;
+                UpdateDict(_idealAccepted, feature, e);
+                _acceptedTrainingSet[feature] = _idealAccepted[feature];
+                _feature2Element[feature] = e;
             }
             foreach (var e in seedRejectedElements) {
-                var bits = e.GetSurroundingBits(
+                var feature = e.GetSurroundingBits(
                         SurroundingLength, _masterFeatures, IsInner, !IsInner);
-                UpdateDict(_idealRejected, bits, e);
-                _rejectedTrainingSet[bits] = _idealRejected[bits];
-                _feature2Element[bits] = e;
+                UpdateDict(_idealRejected, feature, e);
+                _rejectedTrainingSet[feature] = _idealRejected[feature];
+                _feature2Element[feature] = e;
             }
 
             foreach (var ast in allAsts) {
                 Console.Write(".");
                 foreach (var e in GetAllElementsWithoutDuplicates(ast)) {
-                    var bits = e.GetSurroundingBits(
+                    var feature = e.GetSurroundingBits(
                             SurroundingLength, _masterFeatures, IsInner, !IsInner);
                     if (IsAcceptedUsingOracle(e)) {
                         // TODO: for debug
-                        if (_idealRejected.ContainsKey(bits)) {
-                            PrintNotDistinguishedElement(e, bits);
+                        if (_idealRejected.ContainsKey(feature)) {
+                            PrintNotDistinguishedElement(e, feature);
                         }
-                        UpdateDict(_idealAccepted, bits, e);
+                        UpdateDict(_idealAccepted, feature, e);
                     } else {
                         // TODO: for debug
-                        if (_idealAccepted.ContainsKey(bits)) {
-                            PrintNotDistinguishedElement(e, bits);
+                        if (_idealAccepted.ContainsKey(feature)) {
+                            PrintNotDistinguishedElement(e, feature);
                         }
-                        UpdateDict(_idealRejected, bits, e);
+                        UpdateDict(_idealRejected, feature, e);
                     }
-                    _feature2Element[bits] = e;
-                    if (_feature2Count.ContainsKey(bits)) {
-                        _feature2Count[bits]++;
+                    _feature2Element[feature] = e;
+                    if (_feature2Count.ContainsKey(feature)) {
+                        _feature2Count[feature]++;
                     } else {
-                        _feature2Count[bits] = 1;
+                        _feature2Count[feature] = 1;
                     }
                 }
             }
@@ -428,14 +430,14 @@ namespace Code2Xml.Objects.Tests.Learning {
             Console.WriteLine("Preparing time: " + (Environment.TickCount - preparingTime));
         }
 
-        private void PrintNotDistinguishedElement(CstNode e, BigInteger bits) {
+        private void PrintNotDistinguishedElement(CstNode e, BigInteger feautre) {
             Console.WriteLine(e.Parent.Name + ", " + e.Name + ", " + e.Code);
             Console.WriteLine(
-                    _feature2Element[bits].Parent.Name + ", "
-                    + _feature2Element[bits].Name + ", "
-                    + _feature2Element[bits].Code);
+                    _feature2Element[feautre].Parent.Name + ", "
+                    + _feature2Element[feautre].Name + ", "
+                    + _feature2Element[feautre].Code);
             IsAcceptedUsingOracle(e);
-            bits = e.GetSurroundingBits(
+            feautre = e.GetSurroundingBits(
                     SurroundingLength, _masterFeatures, IsInner, !IsInner);
         }
 
@@ -454,8 +456,9 @@ namespace Code2Xml.Objects.Tests.Learning {
             while (true) {
                 var acceptingClassifiers = InitializeAcceptingClassifiers();
                 var rejectingClassifiers = CreateRejectingClassifiers();
-                var groupInfo = CreateAcceptingClassifiers(acceptingClassifiers, rejectingClassifiers);
-                if (groupInfo.Rejected == null) {
+                var groupInfo = CreateAcceptingClassifiers(
+                        acceptingClassifiers, rejectingClassifiers);
+                if (groupInfo == null) {
                     _acceptingClassifiers = acceptingClassifiers;
                     _rejectingClassifiers = rejectingClassifiers;
                     return;
@@ -688,11 +691,11 @@ namespace Code2Xml.Objects.Tests.Learning {
                 //SuspiciousRejectedInRejecting = SelectVariousElements(rejectedInRejecting, _rejectingMask);
                 break;
             case 1:
-                SuspiciousAcceptedInAccepting = SelectSuspiciousElementsWithMask(
+                SuspiciousAcceptedInAccepting = SelectSuspiciousElementsWithMaskWithSmallGrowing(
                         acceptedInAccepting, BigInteger.Zero, _mask);
-                SuspiciousRejectedInAccepting = SelectSuspiciousElementsWithMask(
+                SuspiciousRejectedInAccepting = SelectSuspiciousElementsWithMaskWithSmallGrowing(
                         rejectedInAccepting, _acceptingMask, _acceptingMask);
-                SuspiciousRejectedInRejecting = SelectSuspiciousElementsWithMask(
+                SuspiciousRejectedInRejecting = SelectSuspiciousElementsWithMaskWithSmallGrowing(
                         rejectedInRejecting, _rejectingMask, _rejectingMask);
                 //suspiciousAcceptedByAccepting = SelectSuspiciousElements(
                 //		suspiciousAcceptedListByAccepting, acceptingClassifiers, _acceptingMask, BigInteger.Zero);
@@ -703,11 +706,11 @@ namespace Code2Xml.Objects.Tests.Learning {
                 return -1;
                 break;
             case 2:
-                SuspiciousAcceptedInAccepting = SelectSuspiciousElementsWithMask(
+                SuspiciousAcceptedInAccepting = SelectSuspiciousElementsWithMaskWithSmallGrowing(
                         acceptedInAccepting, BigInteger.Zero, _acceptingMask);
-                SuspiciousRejectedInAccepting = SelectSuspiciousElementsWithMask(
+                SuspiciousRejectedInAccepting = SelectSuspiciousElementsWithMaskWithSmallGrowing(
                         rejectedInAccepting, BigInteger.Zero, _acceptingMask);
-                SuspiciousRejectedInRejecting = SelectSuspiciousElementsWithMask(
+                SuspiciousRejectedInRejecting = SelectSuspiciousElementsWithMaskWithSmallGrowing(
                         rejectedInRejecting, _rejectingMask, _rejectingMask);
                 break;
             default:
@@ -765,20 +768,29 @@ namespace Code2Xml.Objects.Tests.Learning {
 
         #region SelectNextElements
 
-        private List<SuspiciousTarget> SelectSuspiciousElements(
-                List<List<SuspiciousTarget>> suspiciousElementsList, List<BigInteger> predicates,
-                BigInteger predXor, BigInteger featureXor) {
+        private List<SuspiciousTarget> SelectSuspiciousElementsWithMaskWithSmallGrowing(
+                List<List<SuspiciousTarget>> suspiciousElementsList, BigInteger xor, BigInteger mask) {
             var suspiciousElements = new List<SuspiciousTarget>();
             for (int i = 0; i < suspiciousElementsList.Count; i++) {
                 var feature = BigInteger.Zero;
                 var list = suspiciousElementsList[i];
-                var pred = predicates[i] ^ predXor;
-                list.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
-                foreach (var t in list) {
-                    var newFeature = (feature | (t.Feature ^ featureXor)) & pred;
-                    if (newFeature != feature) {
-                        feature = newFeature;
-                        suspiciousElements.Add(t);
+                while (true) {
+                    var minDiffCount = int.MaxValue;
+                    SuspiciousTarget newTarget = null;
+                    foreach (var t in list) {
+                        var newFeature = (feature | (t.Feature ^ xor)) & mask;
+                        var diff = newFeature ^ feature;
+                        var diffCount = CountBits(diff);
+                        if (minDiffCount != 0 && minDiffCount > diffCount) {
+                            minDiffCount = diffCount;
+                            feature = newFeature;
+                            newTarget = t;
+                        }
+                    }
+                    if (newTarget != null) {
+                        suspiciousElements.Add(newTarget);
+                    } else {
+                        break;
                     }
                 }
             }
@@ -909,7 +921,7 @@ namespace Code2Xml.Objects.Tests.Learning {
         }
 
         private int CountRejectingBits(BigInteger bits) {
-            return CountBits(bits >> _acceptingClassifierCount);
+            return CountBits(bits >> _acceptingFeatureCount);
         }
 
         private void ShowBitsInfo() {
