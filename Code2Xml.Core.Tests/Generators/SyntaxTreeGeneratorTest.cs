@@ -202,7 +202,7 @@ namespace Code2Xml.Core.Tests.Generators {
                         var path = Fixture.GetGitRepositoryPath(url);
                         Git.CloneAndCheckout(path, url, commitPointer);
                         PrivateVerifyRestoringProjectDirectory(path, url, readFileFunc, patterns);
-                        File.AppendAllText(filePath, url + "," + commitPointer + "," + starCount);
+                        File.AppendAllText(filePath, url + "," + commitPointer + "," + starCount + "\r\n");
                     });
             thread.Start();
             if (thread.Join(1000 * 60 * 30)) {
