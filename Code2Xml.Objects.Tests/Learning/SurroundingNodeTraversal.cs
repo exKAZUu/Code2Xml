@@ -116,7 +116,7 @@ namespace Code2Xml.Objects.Tests.Learning {
 					}
 					foreach (var e in parentElement.Item1.Siblings(10)) {
 						var key = parentElement.Item2 + "-" + e.NameOrTokenWithId();
-						newChildElements.Add(Tuple.Create(e, key));
+						//newChildElements.Add(Tuple.Create(e, key));
 						// トークンが存在するかチェックする弱い条件
 						// for Preconditions.checkArguments()
 						ret.Add(parentElement.Item2 + "-'" + e.TokenText + "'");
@@ -124,12 +124,16 @@ namespace Code2Xml.Objects.Tests.Learning {
 					parentElement.Item1.PrevsFromSelf().Take(10)
 							.ForEach(
 									(e, index) => {
-										ret.Add(parentElement.Item2 + "<-" + index + "-" + e.NameOrTokenWithId());
+										var key = parentElement.Item2 + "<-" + index + "-" + e.NameOrTokenWithId();
+										newChildElements.Add(Tuple.Create(e, key));
+										//ret.Add(key);
 									});
 					parentElement.Item1.NextsFromSelf().Take(10)
 							.ForEach(
 									(e, index) => {
-										ret.Add(parentElement.Item2 + ">-" + index + "-" + e.NameOrTokenWithId());
+										var key = parentElement.Item2 + ">-" + index + "-" + e.NameOrTokenWithId();
+										newChildElements.Add(Tuple.Create(e, key));
+										//ret.Add(key);
 									});
 					ret.UnionWith(newChildElements.Select(t => t.Item2));
 					childElements = newChildElements;
@@ -215,10 +219,10 @@ namespace Code2Xml.Objects.Tests.Learning {
 					}
 					foreach (var e in parentElement.Item1.Siblings(10)) {
 						var key = parentElement.Item2 + "-" + e.NameOrTokenWithId();
-						if (key2Bit.TryGetValue(key, out bit)) {
-							newChildElements.Add(Tuple.Create(e, key));
-							ret |= bit;
-						}
+						//if (key2Bit.TryGetValue(key, out bit)) {
+						//	newChildElements.Add(Tuple.Create(e, key));
+						//	ret |= bit;
+						//}
 						// トークンが存在するかチェックする弱い条件
 						// for Preconditions.checkArguments()
 						if (key2Bit.TryGetValue(parentElement.Item2 + "-'" + e.TokenText + "'", out bit)) {
@@ -228,16 +232,18 @@ namespace Code2Xml.Objects.Tests.Learning {
 					parentElement.Item1.PrevsFromSelf().Take(10)
 							.ForEach(
 									(e, index) => {
-										if (key2Bit.TryGetValue(
-												parentElement.Item2 + "<-" + index + "-" + e.NameOrTokenWithId(), out bit)) {
+										var key = parentElement.Item2 + "<-" + index + "-" + e.NameOrTokenWithId();
+										if (key2Bit.TryGetValue(key, out bit)) {
+											newChildElements.Add(Tuple.Create(e, key));
 											ret |= bit;
 										}
 									});
 					parentElement.Item1.NextsFromSelf().Take(10)
 							.ForEach(
 									(e, index) => {
-										if (key2Bit.TryGetValue(
-												parentElement.Item2 + ">-" + index + "-" + e.NameOrTokenWithId(), out bit)) {
+										var key = parentElement.Item2 + ">-" + index + "-" + e.NameOrTokenWithId();
+										if (key2Bit.TryGetValue(key, out bit)) {
+											newChildElements.Add(Tuple.Create(e, key));
 											ret |= bit;
 										}
 									});

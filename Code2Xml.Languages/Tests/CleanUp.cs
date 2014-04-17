@@ -20,6 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Code2Xml.Core;
 using Code2Xml.Core.Generators;
 using Code2Xml.Objects.Tests.Learning.Experiments;
 using NUnit.Framework;
@@ -41,9 +42,15 @@ namespace Code2Xml.Languages.Tests {
 			foreach (var directory in directories) {
 				try {
 					Directory.Delete(directory, true);
-				} catch (Exception e) {
+				} catch {
 					Console.WriteLine(directory);
 				}
+			}
+
+			var cachFilePaths = Directory.GetFiles(
+					fixturePath, "*" + Code2XmlConstants.LearningCacheExtension, SearchOption.AllDirectories);
+			foreach (var filePath in cachFilePaths) {
+				File.Delete(filePath);
 			}
 		}
 

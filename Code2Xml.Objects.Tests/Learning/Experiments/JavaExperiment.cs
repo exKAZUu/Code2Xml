@@ -315,11 +315,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 							@"244b5a26bfe1b6f9e15264d690fa944e7c6e2c54", 924),
 				};
 				foreach (var exp in exps) {
-					foreach (var learningSet in learningSets) {
+					foreach (var learningSet in learningSets.Take(10)) {
 						var url = learningSet.Item1;
 						var path = Fixture.GetGitRepositoryPath(url);
 						Git.CloneAndCheckout(path, url, learningSet.Item2);
-						yield return new TestCaseData(exp, path);
+						yield return new TestCaseData(exp, path, learningSet.Item3);
 					}
 				}
 			}

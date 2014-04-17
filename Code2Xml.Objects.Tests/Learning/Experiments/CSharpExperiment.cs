@@ -359,7 +359,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 						var url = learningSet.Item1;
 						var path = Fixture.GetGitRepositoryPath(url);
 						Git.CloneAndCheckout(path, url, learningSet.Item2);
-						yield return new TestCaseData(exp, path);
+						yield return new TestCaseData(exp, path, learningSet.Item3);
 					}
 				}
 			}
