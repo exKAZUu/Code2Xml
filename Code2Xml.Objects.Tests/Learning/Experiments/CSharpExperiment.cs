@@ -355,7 +355,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 							@"76404a94e0a0bbb0aff23e5500eb5af0a70bda05", 234),
 				};
 				foreach (var exp in exps) {
-					foreach (var learningSet in learningSets.Take(10)) {
+					foreach (var learningSet in learningSets) {
 						var url = learningSet.Item1;
 						var path = Fixture.GetGitRepositoryPath(url);
 						Git.CloneAndCheckout(path, url, learningSet.Item2);

@@ -27,7 +27,7 @@ namespace Code2Xml.Objects.Tests.Learning {
 	public static class SurroundingNodeTraversal {
 		public static double[] BigIntegerToDoubles(this BigInteger i, int bitLength) {
 			var doubles = new List<double>();
-			while (i != BigInteger.Zero) {
+			for (int j = 0; j < bitLength; j++) {
 				if ((i & BigInteger.One) != BigInteger.Zero) {
 					doubles.Add(1);
 				} else {
