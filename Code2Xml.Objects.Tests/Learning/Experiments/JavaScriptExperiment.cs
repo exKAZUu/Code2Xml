@@ -652,7 +652,10 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 		public JavaScriptExpressionStatementExperiment() : base("expressionStatement") {}
 
 		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
-			return true;
+			if (e.Name == "statement") {
+				e = e.FirstChild;
+			}
+			return e.Name == "expressionStatement";
 		}
 	}
 
