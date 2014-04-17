@@ -66,6 +66,7 @@ if true then --[[VERBOSE]] print(1) end
 ")]
         [TestCase(@"-- comment
 ")]
+        [TestCase(@"i = 0 + 1 - 2 * 3/ 4;")]
         public void Parse(string code) {
             VerifyRestoringCode(code);
         }

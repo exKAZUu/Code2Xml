@@ -16,6 +16,8 @@
 
 #endregion
 
+using System;
+using System.Linq;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Tests.Generators;
 using Code2Xml.Languages.ANTLRv3.Generators.CSharp;
@@ -131,6 +133,7 @@ xxxxx
 			System.Diagnostics.Contracts.Contract.Requires<Exception>(true);
 			System.Diagnostics.Contracts.Contract.Requires<Exception>(true, s);
 } }")]
+        [TestCase(@"class K { void m() { int i = 0 + 1 - 2 * 3/ 4; }}")]
         public void Parse(string code) {
             VerifyRestoringCode(code);
         }

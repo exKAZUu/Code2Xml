@@ -387,4 +387,37 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
         public PhpEmptyStatementExperiment() : base("statement") {}
     }
+
+	public class PhpExpressionStatementExperiment : LearningExperiment {
+		protected override CstGenerator Generator {
+			get { return PhpExperiment.Generator; }
+		}
+
+		protected override bool IsInner {
+			get { return true; }
+		}
+
+		public PhpExpressionStatementExperiment() : base("simpleStatement") {}
+
+		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+			return e.FirstChild.Name == "expression";
+		}
+	}
+
+	public class PhpArithmeticOperatorExperiment : LearningExperiment {
+		protected override CstGenerator Generator {
+			get { return PhpExperiment.Generator; }
+		}
+
+		protected override bool IsInner {
+			get { return true; }
+		}
+
+		public PhpArithmeticOperatorExperiment() : base("Plus", "Minus", "Asterisk", "Forwardslash") {}
+
+		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+			return e.Parent.Name == "addition" ||
+			       e.Parent.Name == "multiplication";
+		}
+	}
 }

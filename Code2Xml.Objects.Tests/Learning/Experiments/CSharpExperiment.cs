@@ -107,7 +107,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             }
         }
 
-        [Test, TestCaseSource("TestCases")]
+        //[Test, TestCaseSource("TestCases")]
         public void Test(
                 LearningExperiment exp, string projectPath, IList<string> seedPaths) {
             var allPaths = Directory.GetFiles(projectPath, "*.cs", SearchOption.AllDirectories)
@@ -417,4 +417,37 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
         public CSharpEmptyStatementExperiment() : base("statement") {}
     }
+
+	public class CSharpExpressionStatementExperiment : LearningExperiment {
+		protected override CstGenerator Generator {
+			get { return CSharpExperiment.Generator; }
+		}
+
+		protected override bool IsInner {
+			get { return true; }
+		}
+
+		public CSharpExpressionStatementExperiment() : base("expression_statement") {}
+
+		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+			return true;
+		}
+	}
+
+	public class CSharpArithmeticOperatorExperiment : LearningExperiment {
+		protected override CstGenerator Generator {
+			get { return CSharpExperiment.Generator; }
+		}
+
+		protected override bool IsInner {
+			get { return true; }
+		}
+
+		public CSharpArithmeticOperatorExperiment() : base("TOKENS", "MINUS") {}
+
+		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+			return ((e.TokenText == "*" || e.TokenText == "/") && e.Parent.Name == "multiplicative_expression") ||
+			       ((e.TokenText == "+" || e.TokenText == "-") && e.Parent.Name == "additive_expression");
+		}
+	}
 }

@@ -38,6 +38,8 @@ namespace Code2Xml.Languages.ExternalGenerators.Tests {
 '''")]
         [TestCase(@"# coding: utf-8
 pass")]
+        [TestCase(@"i = 0 + 1 - 2 * 3 / 4 % 5")]
+        [TestCase(@"str(1 + 2)")]
         public void Parse(string code) {
             VerifyRestoringCodeAndInspect(code);
         }
@@ -49,7 +51,7 @@ pass")]
                 @"09af48c70fb5cc652ea109487015472e9ef984df", 9391)]
         [TestCase(@"https://github.com/mitsuhiko/flask.git",
                 @"d4b3d16c142e2189c6faf8f784a195e7f827c596", 9253)]
-        [TestCase(@"https://github.com/facebook/tornado.git",
+        [TestCase(@"https://github.com/facebook/tornado.git",	
                 @"c5292057a8db3ebec4a80d9c9207bfadff7fa784", 7026)]
         [TestCase(@"https://github.com/jkbr/httpie.git",
                 @"746a1899f319a7c2a60f27bf23cc3762822be1a2", 6922)]
