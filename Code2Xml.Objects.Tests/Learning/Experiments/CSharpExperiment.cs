@@ -365,7 +365,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			}
 		}
 
-		//[Test, TestCaseSource("TestCases")]
+		[Test, TestCaseSource("TestCases")]
 		public void Test(LearningExperiment exp, string projectPath, int starCount) {
 			var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.cs"), };
 			var allPaths = Directory.GetFiles(projectPath, "*.cs", SearchOption.AllDirectories)

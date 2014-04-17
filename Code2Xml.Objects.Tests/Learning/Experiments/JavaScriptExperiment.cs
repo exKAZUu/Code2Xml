@@ -354,7 +354,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 							@"1a6d5811fbf4f0d5508718a1d03e2cdb34cb6ed2", 3488),
 				};
 				foreach (var exp in exps) {
-					foreach (var learningSet in learningSets) {
+					foreach (var learningSet in learningSets.Take(10)) {
 						var url = learningSet.Item1;
 						var path = Fixture.GetGitRepositoryPath(url);
 						Git.CloneAndCheckout(path, url, learningSet.Item2);
@@ -364,7 +364,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			}
 		}
 
-		//[Test, TestCaseSource("TestCases")]
+		[Test, TestCaseSource("TestCases")]
 		public void Test(LearningExperiment exp, string projectPath, int starCount) {
 			var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "seed.js"), };
 			var allPaths = Directory.GetFiles(projectPath, "*.js", SearchOption.AllDirectories)
