@@ -140,7 +140,7 @@ namespace Code2Xml.Languages.Tests {
 			var e3 = new PythonSuperComplexBranchExperiment();
 			Assert.That(cst.Descendants().Where(e1.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(4));
 			Assert.That(cst.Descendants().Where(e2.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(2));
-			Assert.That(cst.Descendants().Where(e3.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(1));
+			Assert.That(cst.Descendants().Where(e3.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(2));
 		}
 	}
 }

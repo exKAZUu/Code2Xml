@@ -688,7 +688,13 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 		public CSharpExpressionStatementExperiment() : base("expression_statement") {}
 
 		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
-			return true;
+			if (e.Name == "statement") {
+				e = e.FirstChild;
+			}
+			if (e.Name == "embedded_statement") {
+				e = e.FirstChild;
+			}
+			return e.Name == "expression_statement";
 		}
 	}
 
