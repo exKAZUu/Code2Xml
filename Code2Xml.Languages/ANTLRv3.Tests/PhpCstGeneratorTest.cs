@@ -511,6 +511,186 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
                 @"0a0238b8040abc1c71401ce27a8edf2619fa5bed", 557)]
         [TestCase(@"https://github.com/J7mbo/twitter-api-php.git",
                 @"ab76f1c1e6bf83f0a257216cbaf9932b7cc19a3f", 557)]
+        [TestCase(@"https://github.com/jmathai/twitter-async.git",
+                @"a361018261b887a5f8fb823a05e0e0e688a5c040", 556)]
+        [TestCase(@"https://github.com/jmathai/epiphany.git",
+                @"0418fa96add6bbc3c1e3b2dd313a041be72f9717", 555)]
+        [TestCase(@"https://github.com/leemason/NHP-Theme-Options-Framework.git",
+                @"ed709af8fc4e96dc2c638fad949b00594cca8427", 553)]
+        [TestCase(@"https://github.com/NeonHorizon/berryio.git",
+                @"d0f4d61a9f6123ac2d6c279afc1fec67accb9a75", 549)]
+        [TestCase(@"https://github.com/atoum/atoum.git",
+                @"ae761218e03e4df060153034924270660d4da768", 549)]
+        [TestCase(@"https://github.com/WP-API/WP-API.git",
+                @"e8bb59da12aa0df512b9138e2b741abbc9b9c1b0", 543)]
+        [TestCase(@"https://github.com/jarednova/timber.git",
+                @"4578c80160bbdbf43683fb610711b045c9f81d5f", 542)]
+        [TestCase(@"https://github.com/peej/tonic.git",
+                @"7589f49abc0f6c2a482978e0d7108bc7ba273543", 536)]
+        [TestCase(@"https://github.com/meenie/munee.git",
+                @"7f25338c978a284a26eb503e91430743eb760c00", 536)]
+        [TestCase(@"https://github.com/wallabag/wallabag.git",
+                @"4a74d9857cdb6116ce24df01b45176b92ad592c0", 534)]
+        [TestCase(@"https://github.com/BenTheDesigner/Dropbox.git",
+                @"94de100581fc103920786d38d4aa5433802d3842", 532)]
+        [TestCase(@"https://github.com/hwi/HWIOAuthBundle.git",
+                @"cb90e60c079bbf3aed8044cd71d5e03e32d60133", 531)]
+        [TestCase(@"https://github.com/danielstjules/Stringy.git",
+                @"8d961e25d09f946b463c0581e927a963f3578647", 529)]
+        [TestCase(@"https://github.com/Xeoncross/micromvc.git",
+                @"04779326fa0d5bbd672996a7bcac80150c9cd82f", 524)]
+        [TestCase(@"https://github.com/google/google-api-php-client.git",
+                @"85e361f074687b2cd374872d10e7b3309ab8d108", 521)]
+        [TestCase(@"https://github.com/Behat/Mink.git",
+                @"055da154b9fcb0bb238332adda3c4b38210c85d3", 520)]
+        [TestCase(@"https://github.com/scribu/wp-posts-to-posts.git",
+                @"4c524f337a8a4a5c407794d548e9171a46145e09", 520)]
+        [TestCase(@"https://github.com/barryvdh/laravel-debugbar.git",
+                @"9c0c6de939141f43efdf9c3beed22db50e2a4248", 510)]
+        [TestCase(@"https://github.com/liu21st/thinkphp.git",
+                @"6c9066f8a0f601e86fb80072ded623728f024ed4", 509)]
+        [TestCase(@"https://github.com/laravel/cashier.git",
+                @"f0de421064bdd633f951824ad0494baa6edb3998", 509)]
+        [TestCase(@"https://github.com/Zizaco/confide.git",
+                @"93138bc190ed29ad6ca0f750984c9f7e12aa0d54", 505)]
+        [TestCase(@"https://github.com/jeromeschneider/Baikal.git",
+                @"6c77c02e21f120379edb5ace593f0cc67c04fe92", 503)]
+        [TestCase(@"https://github.com/nelmio/NelmioApiDocBundle.git",
+                @"fd126c1a0101a7703489b2fd65c91526d2b75774", 499)]
+        [TestCase(@"https://github.com/reeze/tipi.git",
+                @"a515cdfa4896cf1471b63d208cd786af07972663", 489)]
+        [TestCase(@"https://github.com/devinsays/options-framework-theme.git",
+                @"474cf76be30938e50b54b8c3d326ae415e59c193", 486)]
+        [TestCase(@"https://github.com/robmorgan/phinx.git",
+                @"048393f59708be2f8d5faff4c57ed6d9ba3017d5", 484)]
+        [TestCase(@"https://github.com/niklasvh/php.js.git",
+                @"920b7e58ef6a97127d998e49889b1c0497364586", 483)]
+        [TestCase(@"https://github.com/sebastianbergmann/phploc.git",
+                @"eda0bfe29c804a317e8b013899ebc15b991d4e1a", 482)]
+        [TestCase(@"https://github.com/eyecatchup/SEOstats.git",
+                @"d6f8dc189f12801bdc2b5fc9aa58a4f342c76681", 481)]
+        [TestCase(@"https://github.com/stof/StofDoctrineExtensionsBundle.git",
+                @"f1c7993863f83f22f187f11d2a8eb462b836701e", 477)]
+        [TestCase(@"https://github.com/typecho/typecho.git",
+                @"310ee3e2dca3c100d3c102088a30326157a2304e", 477)]
+        [TestCase(@"https://github.com/sebastianbergmann/phpcpd.git",
+                @"a9462153f2dd90466a010179901d31fbff598365", 476)]
+        [TestCase(@"https://github.com/pda/pheanstalk.git",
+                @"56c44c947cf44a85c8d639209361da5f67b6fbff", 471)]
+        [TestCase(@"https://github.com/ErikDubbelboer/phpRedisAdmin.git",
+                @"f9b7820c76ed507267d853f11168425f340f9f4a", 467)]
+        [TestCase(@"https://github.com/lyrixx/Silex-Kitchen-Edition.git",
+                @"e82700b368833d3303303ddca68b2a663b349096", 467)]
+        [TestCase(@"https://github.com/fabpot/Sismo.git",
+                @"9732d3a1a370ab093e9e126f7ea0366ce64c7389", 462)]
+        [TestCase(@"https://github.com/composer/satis.git",
+                @"eed9a2e763d89be19b57f55486b62f12d97e6aab", 459)]
+        [TestCase(@"https://github.com/phpspec/phpspec.git",
+                @"5f3b795d37488439fc08ca6c7b33ec8fb28f643d", 458)]
+        [TestCase(@"https://github.com/brunogaspar/laravel4-starter-kit.git",
+                @"d27e3f66c487252c11b0e6f8962646df970b4060", 457)]
+        [TestCase(@"https://github.com/Zizaco/entrust.git",
+                @"b580e422df43b5abf9f46069421123497487604b", 457)]
+        [TestCase(@"https://github.com/doctrine/mongodb-odm.git",
+                @"dedb73ab4025989575fbfc784a4bc66aee737bcc", 455)]
+        [TestCase(@"https://github.com/ZF-Commons/ZfcUser.git",
+                @"8774d3d60d93b5e1c0d537ce6d5633c6f75960d1", 454)]
+        [TestCase(@"https://github.com/rilwis/meta-box.git",
+                @"f5f7209ec4b8050cf407eab8444ba673e30d625b", 454)]
+        [TestCase(@"https://github.com/doctrine/dbal.git",
+                @"32817aac490eeba4c39bd7670ec2f6182e496fc5", 449)]
+        [TestCase(@"https://github.com/syamilmj/Options-Framework.git",
+                @"c5ac7a0930b3e20f5f55ba4c38f1dd8a9eab1efe", 448)]
+        [TestCase(@"https://github.com/videlalvaro/php-amqplib.git",
+                @"1ca6d49bec6b8d2a011e94726c63d6bfad04856b", 446)]
+        [TestCase(@"https://github.com/webtechnick/CakePHP-Facebook-Plugin.git",
+                @"d1b4ae95bb610ab60b51f0e64e0227d42ae84b69", 446)]
+        [TestCase(@"https://github.com/ircmaxell/PHPPHP.git",
+                @"6d5d62a04fda07d7798587a7db424feae4663950", 445)]
+        [TestCase(@"https://github.com/fabpot/Sami.git",
+                @"a9578e8b51c70929b3687f57028699d403aafa84", 445)]
+        [TestCase(@"https://github.com/xdebug/xdebug.git",
+                @"684d90385ca8c6362eff3d1eb9a3539cc989ac3f", 443)]
+        [TestCase(@"https://github.com/graulund/tweetnest.git",
+                @"82a8d170592cde7fc5085e256c623351e3fe951d", 443)]
+        [TestCase(@"https://github.com/PHPOffice/PHPWord.git",
+                @"c6fc1d4e892b217d781bbc9ad194d9d0d0b05d84", 442)]
+        [TestCase(@"https://github.com/vrana/notorm.git",
+                @"d7f320a3d8da0dbcb17187ad4b9c91a396f5d0c6", 439)]
+        [TestCase(@"https://github.com/jkudish/WordPress-GitHub-Plugin-Updater.git",
+                @"6d0c856659de1f2f5083dc79a53018cdb973f3cd", 439)]
+        [TestCase(@"https://github.com/duccio/ApnsPHP.git",
+                @"a65a0aaf913389fcec7321f31eff4b6492c8291c", 437)]
+        [TestCase(@"https://github.com/philsturgeon/codeigniter-restclient.git",
+                @"296de79b3249101bc0af6502f358da4b55a262d5", 436)]
+        [TestCase(@"https://github.com/nelmio/alice.git",
+                @"6178f891f5dac28d28bbdb2721a0611add8d3177", 435)]
+        [TestCase(@"https://github.com/symphonycms/symphony-2.git",
+                @"15eb9fb550f203daa95c1a4d4e4597fe2da9ca73", 434)]
+        [TestCase(@"https://github.com/codeguy/Upload.git",
+                @"508ba2ba50119b6ab99a551806ef6b7d43c16b5c", 434)]
+        [TestCase(@"https://github.com/technosophos/querypath.git",
+                @"5597edb17eba8b974f2d8a5e65e4cb8fa0fc95f6", 432)]
+        [TestCase(@"https://github.com/stripe/stripe-php.git",
+                @"66d8b3139f7c11761d3ff33807210f7eedb78fbe", 430)]
+        [TestCase(@"https://github.com/WhatCD/Gazelle.git",
+                @"f544294c3a26706621a4551d6f24a32104b0b97b", 424)]
+        [TestCase(@"https://github.com/contao/core.git",
+                @"e61490827d472e75356a3794a36b2da3854d96c7", 422)]
+        [TestCase(@"https://github.com/yandod/candycane.git",
+                @"a115201174400922b5ba925e15800984dd90f95c", 421)]
+        [TestCase(@"https://github.com/nategood/httpful.git",
+                @"9d66cd3c37f2945eda5f3ee57ba8bad0b617eb3d", 421)]
+        [TestCase(@"https://github.com/Sybio/ImageWorkshop.git",
+                @"2b58bcde5205956e4b439cfaa86fb88113442d72", 418)]
+        [TestCase(@"https://github.com/FriendsOfSymfony/FOSJsRoutingBundle.git",
+                @"36629f5976f9f588093bf0bfb5230502fdb0eacf", 417)]
+        [TestCase(@"https://github.com/brianlmoon/GearmanManager.git",
+                @"da2e6ea736c96482ab79631b050d3a2a8a5a96df", 415)]
+        [TestCase(@"https://github.com/phingofficial/phing.git",
+                @"2692a9c2bf3744a1e0cc2b7ccd90f305e048df14", 413)]
+        [TestCase(@"https://github.com/spotweb/spotweb.git",
+                @"8d1e002f5358155854f2d2b535072b46a58f008e", 412)]
+        [TestCase(@"https://github.com/backdrop/backdrop.git",
+                @"2a826129975d67e913094f66049cb12387483d37", 411)]
+        [TestCase(@"https://github.com/lisachenko/go-aop-php.git",
+                @"2ed1ec129fb21eae2e830461fa1da629e9dbf658", 408)]
+        [TestCase(@"https://github.com/peteboere/css-crush.git",
+                @"d2192769bc27529b955a72c8e31698d2d907ad08", 408)]
+        [TestCase(@"https://github.com/codeguy/Slim-Extras.git",
+                @"59300d25d62f2f299b4065ed99eb71ca91f8a434", 408)]
+        [TestCase(@"https://github.com/zynga/zperfmon.git",
+                @"ee78dd143dd0555bef094b40877cc627309cb060", 408)]
+        [TestCase(@"https://github.com/khoaofgod/phpfastcache.git",
+                @"b74ef587cddd432fac57f05a4375ea41eac42e21", 408)]
+        [TestCase(@"https://github.com/plainmade/unmark.git",
+                @"bc5a242f243d6f211344868a937a8ba3af709591", 406)]
+        [TestCase(@"https://github.com/fennb/phirehose.git",
+                @"fe8d322690c3d106b2b2fc73c7df4a9581b16be9", 403)]
+        [TestCase(@"https://github.com/Pawka/phrozn.git",
+                @"a9be165f0c1210d6badba833653706e4ce95aa7f", 402)]
+        [TestCase(@"https://github.com/sjlu/CodeIgniter-Bootstrap.git",
+                @"49ad9c17a21577ed9883c216b9636d2e65f618c7", 401)]
+        [TestCase(@"https://github.com/yupe/yupe.git",
+                @"4082c3a0c7a8ced413b84147476b59c24812fbd9", 399)]
+        [TestCase(@"https://github.com/Anahkiasen/former.git",
+                @"fce6790e10bbd0acf3f5a5224d56477ecd44ba7b", 397)]
+        [TestCase(@"https://github.com/mageplus/mageplus.git",
+                @"2e06c9d5752e9397cb045c80a22f74d61fede7e4", 396)]
+        [TestCase(@"https://github.com/rgrove/jsmin-php.git",
+                @"948d87c203010b0544ecc50cf31ad743d7e02a57", 392)]
+        [TestCase(@"https://github.com/walu/phpbook.git",
+                @"b0b3a2f0e5d8dcc8c4991586e794e3b36ef6e4f1", 392)]
+        [TestCase(@"https://github.com/patrikf/glip.git",
+                @"50edbd9c77eda1aa91fbb971403492b635cf9482", 391)]
+        [TestCase(@"https://github.com/genemu/GenemuFormBundle.git",
+                @"9fecbe7a12fba1761228909e843301c4d1a11e7c", 391)]
+        [TestCase(@"https://github.com/phpseclib/phpseclib.git",
+                @"1a7e3746d540fa32df0f414852e7b0597de47291", 389)]
+        [TestCase(@"https://github.com/twilio/twilio-php.git",
+                @"389e07ee41eabc422ea88b805006bccac7de9eb3", 389)]
+        [TestCase(@"https://github.com/jenssegers/Laravel-MongoDB.git",
+                @"2ae7980f86312f050c2ab626f48fa9015fbe26a3", 389)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
             VerifyRestoringGitRepositorySavingRepo(
                     url, commitPointer, "php_repo.csv", starCount, "*.php");
