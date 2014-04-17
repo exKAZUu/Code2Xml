@@ -21,7 +21,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Code2Xml.Core.Generators;
-using Code2Xml.Languages.ANTLRv3.Core;
 using Code2Xml.Objects.Tests.Learning.Experiments;
 using NUnit.Framework;
 using ParserTests;
@@ -50,14 +49,21 @@ namespace Code2Xml.Languages.Tests {
 
 		[Test]
 		public void GenerateTestCases() {
-			var inPath = "";
+			var inPath = @"C:\Users\exKAZUu\Desktop\repo.csv";
 			var set = new HashSet<string>();
+			var count = 0;
 			foreach (var line in File.ReadAllLines(inPath)) {
-				var items = line.Split(',');
+				var items = line.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+				if (items.Length <= 2) {
+					continue;
+				}
 				if (!set.Contains(items[0])) {
 					set.Add(items[0]);
 					Console.WriteLine("Tuple.Create(@\"" + items[0] + "\",");
 					Console.WriteLine("@\"" + items[1] + "\"," + items[2] + "),");
+					if (++count == 100) {
+						return;
+					}
 				}
 			}
 		}

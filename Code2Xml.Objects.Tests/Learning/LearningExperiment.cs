@@ -217,16 +217,13 @@ namespace Code2Xml.Objects.Tests.Learning {
                     Path.Combine(
                             projectPath ?? "",
                             GetType().Name + Code2XmlConstants.LearningCacheExtension));
-            if (string.IsNullOrEmpty(projectPath) || !cacheFile.Exists) {
+            if (true||string.IsNullOrEmpty(projectPath) || !cacheFile.Exists) {
                 var allAsts = allPaths.Select(
                         path => Generator.GenerateTreeFromCode(new FileInfo(path), null, true));
                 var seedAsts = seedPaths.Select(
                         path => Generator.GenerateTreeFromCode(new FileInfo(path), null, true))
                         .ToList();
                 _elementNames = _initialElementNames.ToHashSet();
-                foreach (var elementName in _elementNames) {
-                    Console.WriteLine(elementName);
-                }
                 var seedAcceptedElements = seedAsts
                         .SelectMany(GetAllElements)
                         .Where(ProtectedIsAcceptedUsingOracle)
@@ -328,6 +325,8 @@ namespace Code2Xml.Objects.Tests.Learning {
                                     .Where(e2 => _elementNames.Contains(e2.Name)))
                     .ToHashSet();
             var seedRejectedElements = new List<CstNode>();
+			Console.WriteLine("Initial: " + string.Join(", ", _initialElementNames));
+			Console.WriteLine("Learned: " + string.Join(", ", _elementNames));
             foreach (var elementName in _elementNames) {
                 Console.WriteLine(elementName);
             }
