@@ -69,10 +69,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 							@"163103b0eaf904575e62909eddc00dcc9e425a2a", 2604),
 					Tuple.Create(
 							@"https://github.com/junit-team/junit.git",
-							@"e65558c174a8f5c4c7758f0d9dd1ffe027b023d8", 2461),
-					Tuple.Create(
-							@"https://github.com/AndroidBootstrap/android-bootstrap.git",
-							@"e43e3ac4a5984edf9a6ccc87bac04be177a3615a", 2446),
+						@"e65558c174a8f5c4c7758f0d9dd1ffe027b023d8", 2461),
 					Tuple.Create(
 							@"https://github.com/square/picasso.git",
 							@"e0c3d44f53919742a0a608277be26b47742bb2a2", 2312),

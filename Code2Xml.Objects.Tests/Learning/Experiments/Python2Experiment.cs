@@ -36,10 +36,10 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 		private static IEnumerable<TestCaseData> TestCases {
 			get {
 				var exps = new LearningExperiment[] {
-					new PythonComplexStatementExperiment(),
-					new PythonSuperComplexBranchExperiment(),
+					//new PythonComplexStatementExperiment(),
+					//new PythonSuperComplexBranchExperiment(),
 					new PythonExpressionStatementExperiment(),
-					new PythonArithmeticOperatorExperiment(), 
+					//new PythonArithmeticOperatorExperiment(), 
 					//new PythonEmptyStatementExperiment(),
 				};
 				var learningSets = new[] {
@@ -460,6 +460,9 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 		public PythonExpressionStatementExperiment() : base("expr_stmt") {}
 
 		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+			if (e.Name == "small_stmt") {
+				return e.FirstChild.Name == "expr_stmt";
+			}
 			return true;
 		}
 	}
