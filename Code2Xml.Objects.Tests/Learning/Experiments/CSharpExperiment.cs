@@ -37,11 +37,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         private static IEnumerable<TestCaseData> TestCases {
             get {
                 var exps = new LearningExperiment[] {
-                    new CSharpComplexStatementExperiment(),
-                    new CSharpSuperComplexBranchExperiment(),
-                    new CSharpExpressionStatementExperiment(),
-                    new CSharpArithmeticOperatorExperiment(),
-                    new CSharpSwitchCaseExperiment(),
+					new CSharpComplexStatementExperiment(),
+					new CSharpSuperComplexBranchExperiment(),
+					new CSharpExpressionStatementExperiment(),
+					new CSharpArithmeticOperatorExperiment(),
+					new CSharpSwitchCaseExperiment(),
                     new CSharpSuperComplexBranchExperimentWithSwitch(), 
                     //new CSharpComplexBranchExperiment(),
                     //new CSharpIfExperiment(),
@@ -738,7 +738,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             if (e.Name == "switch_labels" && e.ChildrenCount == 1) {
                 return true;
             }
-            return e.Name == "switch_labels";
+            return e.Name == "switch_label";
         }
     }
 
