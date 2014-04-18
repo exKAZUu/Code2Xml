@@ -774,7 +774,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             if (e.Name == "switch_labels" && e.ChildrenCount == 1) {
                 return true;
             }
-            if (e.Name == "switch_labels") {
+            if (e.Name == "switch_label") {
                 return true;
             }
             if (e.ElementsBeforeSelf().Any()) {
