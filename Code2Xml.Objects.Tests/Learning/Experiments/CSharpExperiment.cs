@@ -719,7 +719,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
 	public class CSharpSwitchCaseExperiment : LearningExperiment {
 		protected override CstGenerator Generator {
-			get { return JavaExperiment.Generator; }
+			get { return CSharpExperiment.Generator; }
 		}
 
 		protected override bool IsInner {

@@ -686,7 +686,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
 	public class PhpSwitchCaseExperiment : LearningExperiment {
 		protected override CstGenerator Generator {
-			get { return JavaExperiment.Generator; }
+			get { return PhpExperiment.Generator; }
 		}
 
 		protected override bool IsInner {

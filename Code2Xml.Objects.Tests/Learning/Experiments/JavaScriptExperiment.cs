@@ -680,7 +680,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
 	public class JavaScriptSwitchCaseExperiment : LearningExperiment {
 		protected override CstGenerator Generator {
-			get { return JavaExperiment.Generator; }
+			get { return JavaScriptExperiment.Generator; }
 		}
 
 		protected override bool IsInner {
