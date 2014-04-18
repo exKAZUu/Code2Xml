@@ -41,6 +41,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                     new JavaExpressionStatementSvmExperiment(),
                     new JavaArithmeticOperatorSvmExperiment(),
                     new JavaSwitchCaseSvmExperiment(),
+                    new JavaSuperComplexBranchSvmExperimentWithSwitch(),
                     //new JavaComplexBranchSvmExperiment(),
                     //new JavaIfSvmExperiment(),
                     //new JavaWhileSvmExperiment(),
@@ -878,6 +879,57 @@ statement
                 return true;
             }
             return e.Name == "switchLabel";
+        }
+    }
+
+    public class JavaSuperComplexBranchSvmExperimentWithSwitch : LearningSvmExperiment {
+        protected override CstGenerator Generator {
+            get { return JavaExperiment.Generator; }
+        }
+
+        protected override bool IsInner {
+            get { return false; }
+        }
+
+        public JavaSuperComplexBranchSvmExperimentWithSwitch() : base("expression", "switchLabel") {}
+
+        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            var p = e.Parent;
+            var pp = p.Parent;
+            var isPar = p.SafeName() == "parExpression";
+            var isStmt = pp.SafeName() == "statement";
+            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "if") {
+                return true;
+            }
+            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "while") {
+                return true;
+            }
+            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "do") {
+                return true;
+            }
+            if (p.SafeName() == "forstatement"
+                && p.Elements().Count(e2 => e2.TokenText == ";") >= 2) {
+                return true;
+            }
+            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "switch") {
+                return true;
+            }
+            if (e.Name == "switchLabel") {
+                return true;
+            }
+            {
+                var primary = e.SafeParent().SafeParent().SafeParent().SafeParent();
+                if (primary.SafeName() != "primary") {
+                    return false;
+                }
+                if (primary.Elements().All(e2 => e2.TokenText != "checkArgument")) {
+                    return false;
+                }
+                if (e.ElementsBeforeSelf().Any()) {
+                    return false;
+                }
+                return true;
+            }
         }
     }
 }
