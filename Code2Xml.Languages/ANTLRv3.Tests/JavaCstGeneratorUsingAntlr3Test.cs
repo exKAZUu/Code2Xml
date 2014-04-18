@@ -133,8 +133,6 @@ public class AlignedTuplePrinter {
                 @"8615f7a69ecbbabd6d8f7ba8cae90ba63d702fec", 2805)]
         [TestCase(@"https://github.com/excilys/androidannotations.git",
                 @"5e769c2d90c76ebfe685f6423435b3fda5fa4bc6", 2725)]
-        [TestCase(@"https://github.com/Bearded-Hen/Android-Bootstrap.git",
-                @"9187a05fd7d91350569347f8565078441135d8d4", 2650)]
         [TestCase(@"https://github.com/sparklemotion/nokogiri.git",
                 @"163103b0eaf904575e62909eddc00dcc9e425a2a", 2604)]
         [TestCase(@"https://github.com/junit-team/junit.git",

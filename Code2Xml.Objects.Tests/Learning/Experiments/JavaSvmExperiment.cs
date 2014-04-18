@@ -62,14 +62,14 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 							@"https://github.com/excilys/androidannotations.git",
 							@"5e769c2d90c76ebfe685f6423435b3fda5fa4bc6", 2725),
 					Tuple.Create(
-							@"https://github.com/Bearded-Hen/Android-Bootstrap.git",
-							@"9187a05fd7d91350569347f8565078441135d8d4", 2650),
-					Tuple.Create(
 							@"https://github.com/sparklemotion/nokogiri.git",
 							@"163103b0eaf904575e62909eddc00dcc9e425a2a", 2604),
 					Tuple.Create(
 							@"https://github.com/junit-team/junit.git",
-						@"e65558c174a8f5c4c7758f0d9dd1ffe027b023d8", 2461),
+							@"e65558c174a8f5c4c7758f0d9dd1ffe027b023d8", 2461),
+					Tuple.Create(
+							@"https://github.com/AndroidBootstrap/android-bootstrap.git",
+							@"e43e3ac4a5984edf9a6ccc87bac04be177a3615a", 2446),
 					Tuple.Create(
 							@"https://github.com/square/picasso.git",
 							@"e0c3d44f53919742a0a608277be26b47742bb2a2", 2312),
@@ -310,6 +310,48 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 					Tuple.Create(
 							@"https://github.com/mongodb/mongo-java-driver.git",
 							@"244b5a26bfe1b6f9e15264d690fa944e7c6e2c54", 924),
+					Tuple.Create(
+							@"https://github.com/qii/weiciyuan.git",
+							@"14fdfe9f6f7f3d927a66d802b709f53ba0ff629e", 906),
+					Tuple.Create(
+							@"https://github.com/BonzaiThePenguin/WikiSort.git",
+							@"b83bde28fbf26198749eb0169d7f01052841b192", 905),
+					Tuple.Create(
+							@"https://github.com/tjerkw/Android-SlideExpandableListView.git",
+							@"a44e6f0fcfabf3a870469667b219552a5d562e87", 901),
+					Tuple.Create(
+							@"https://github.com/jgilfelt/android-viewbadger.git",
+							@"e08c3a78cb92c0c8587790b15e73434f972912cf", 900),
+					Tuple.Create(
+							@"https://github.com/commonsguy/cw-android.git",
+							@"568c11f2b9b556027dda05ad7b62c044f039b4e4", 899),
+					Tuple.Create(
+							@"https://github.com/orientechnologies/orientdb.git",
+							@"8bfc83acadc833b40ec3d485216b39b786935b4c", 897),
+					Tuple.Create(
+							@"https://github.com/Netflix/curator.git",
+							@"1e66d7ccd7ac601df3c814833f1b9e32b25331c6", 896),
+					Tuple.Create(
+							@"https://github.com/mttkay/droid-fu.git",
+							@"469b1bf7a844cc09866bad95fc06321291c649e8", 882),
+					Tuple.Create(
+							@"https://github.com/thest1/LazyList.git",
+							@"0f37d108f2067f5f44749eb0ad44e51656f96f02", 882),
+					Tuple.Create(
+							@"https://github.com/spring-projects/spring-mvc-showcase.git",
+							@"c7b9162c061e135c081a28bf7fc209bb9a992cea", 869),
+					Tuple.Create(
+							@"https://github.com/yangfuhai/afinal.git",
+							@"e706f0e896f8f819aa9a6a8374c7fe9f71fa4950", 865),
+					Tuple.Create(
+							@"https://github.com/todoroo/astrid.git",
+							@"4fc5c7714fb1b48ae46dcacbda287bcef9c3f6bf", 848),
+					Tuple.Create(
+							@"https://github.com/twitter/ambrose.git",
+							@"9ff6dc68e6eb7e95645878082774f44acca5814f", 847),
+					Tuple.Create(
+							@"https://github.com/perwendel/spark.git",
+							@"f1f06769abacc6732e511774d4db2306cbe5db54", 843),
 				};
 				foreach (var exp in exps) {
 					foreach (var learningSet in learningSets) {
