@@ -40,7 +40,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 					new PhpComplexStatementExperiment(),
 					new PhpSuperComplexBranchExperiment(),
 					new PhpExpressionStatementExperiment(),
-					new PhpArithmeticOperatorExperiment(), 
+					new PhpArithmeticOperatorExperiment(),
+					new PhpSwitchCaseExperiment(), 
 					//new PhpComplexBranchExperiment(),
 					//new PhpIfExperiment(),
 					//new PhpWhileExperiment(),
@@ -184,7 +185,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 		public PhpComplexBranchExperiment() : base("expression") {}
 
 		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
-			var pName = (string)e.SafeParent().FirstChild.Name;
+			var pName = e.SafeParent().FirstChild.Name;
 			if (pName == "If") {
 				return true;
 			}
@@ -476,6 +477,26 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
 			return e.Parent.Name == "addition" ||
 			       e.Parent.Name == "multiplication";
+		}
+	}
+
+	public class PhpSwitchCaseExperiment : LearningExperiment {
+		protected override CstGenerator Generator {
+			get { return JavaExperiment.Generator; }
+		}
+
+		protected override bool IsInner {
+			get { return false; }
+		}
+
+		public PhpSwitchCaseExperiment() : base("expression", "casestatement", "defaultcase") {}
+
+		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+			var pName = e.SafeParent().FirstChild.Name;
+			if (pName == "Switch") {
+				return true;
+			}
+			return e.Name == "casestatement" || e.Name == "defaultcase";
 		}
 	}
 }

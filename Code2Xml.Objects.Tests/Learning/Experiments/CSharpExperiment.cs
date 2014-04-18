@@ -40,7 +40,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 					new CSharpComplexStatementExperiment(),
 					new CSharpSuperComplexBranchExperiment(),
 					new CSharpExpressionStatementExperiment(),
-					new CSharpArithmeticOperatorExperiment(), 
+					new CSharpArithmeticOperatorExperiment(),
+					new CSharpSwitchCaseExperiment(), 
 					//new CSharpComplexBranchExperiment(),
 					//new CSharpIfExperiment(),
 					//new CSharpWhileExperiment(),
@@ -713,6 +714,29 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			return ((e.TokenText == "*" || e.TokenText == "/")
 			        && e.Parent.Name == "multiplicative_expression") ||
 			       ((e.TokenText == "+" || e.TokenText == "-") && e.Parent.Name == "additive_expression");
+		}
+	}
+
+	public class CSharpSwitchCaseExperiment : LearningExperiment {
+		protected override CstGenerator Generator {
+			get { return JavaExperiment.Generator; }
+		}
+
+		protected override bool IsInner {
+			get { return false; }
+		}
+
+		public CSharpSwitchCaseExperiment() : base("expression", "switch_label") {}
+
+		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+			var pName = e.Parent.Name;
+			if (pName == "switch_statement") {
+				return true;
+			}
+			if (e.Name == "switch_labels" && e.ChildrenCount == 1) {
+				return true;
+			}
+			return e.Name == "switch_labels";
 		}
 	}
 }

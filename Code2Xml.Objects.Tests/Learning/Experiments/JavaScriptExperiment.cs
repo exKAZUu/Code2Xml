@@ -39,7 +39,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 					new JavaScriptComplexStatementExperiment(),
 					new JavaScriptSuperComplexBranchExperiment(),
 					new JavaScriptExpressionStatementExperiment(),
-					new JavaScriptArithmeticOperatorExperiment(), 
+					new JavaScriptArithmeticOperatorExperiment(),
+					new JavaScriptSwitchCaseExperiment(), 
 					//new JavaScriptComplexBranchExperiment(),
 					//new JavaScriptIfExperiment(),
 					//new JavaScriptWhileExperiment(),
@@ -674,6 +675,25 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			return ((e.TokenText == "*" || e.TokenText == "/") && e.Parent.Name == "multiplicativeExpression")
 			       ||
 			       ((e.TokenText == "+" || e.TokenText == "-") && e.Parent.Name == "additiveExpression");
+		}
+	}
+
+	public class JavaScriptSwitchCaseExperiment : LearningExperiment {
+		protected override CstGenerator Generator {
+			get { return JavaExperiment.Generator; }
+		}
+
+		protected override bool IsInner {
+			get { return false; }
+		}
+
+		public JavaScriptSwitchCaseExperiment() : base("expression", "caseClause", "defaultClause") {}
+
+		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+			if (e.Parent.Name == "switchStatement") {
+				return true;
+			}
+			return e.Name == "caseClause" || e.Name == "defaultClause";
 		}
 	}
 }
