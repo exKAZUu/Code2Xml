@@ -36,11 +36,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 		private static IEnumerable<TestCaseData> TestCases {
 			get {
 				var exps = new LearningExperiment[] {
-					//new PythonComplexStatementExperiment(),
-					//new PythonSuperComplexBranchExperiment(),
+					new PythonComplexStatementExperiment(),
+					new PythonSuperComplexBranchExperiment(),
 					new PythonExpressionStatementExperiment(),
-					//new PythonArithmeticOperatorExperiment(), 
-					//new PythonEmptyStatementExperiment(),
+					new PythonArithmeticOperatorExperiment(), 
+					new PythonEmptyStatementExperiment(),
 				};
 				var learningSets = new[] {
 					Tuple.Create(
