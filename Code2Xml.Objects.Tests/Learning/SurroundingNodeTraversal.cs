@@ -77,7 +77,8 @@ namespace Code2Xml.Objects.Tests.Learning {
 
 		public static HashSet<string> GetSurroundingKeys(
 				this CstNode node, int length, bool inner = true, bool outer = true) {
-			//inner = outer = true; // TODO: for debug
+			// if (outer) inner = true; // TODO: for debug
+            //inner = outer = true; // TODO: for debug
 
 			var ret = new HashSet<string>();
 			var childElements = new List<Tuple<CstNode, string>>();
@@ -168,6 +169,7 @@ namespace Code2Xml.Objects.Tests.Learning {
 		public static BigInteger GetSurroundingBits(
 				this CstNode node, int length, IDictionary<string, BigInteger> key2Bit, bool inner = true,
 				bool outer = true) {
+			// if (outer) inner = true; // TODO: for debug
 			//inner = outer = true; // for debug
 
 			var ret = BigInteger.Zero;

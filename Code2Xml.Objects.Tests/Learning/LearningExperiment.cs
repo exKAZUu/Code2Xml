@@ -325,15 +325,16 @@ namespace Code2Xml.Objects.Tests.Learning {
                                     .Where(e2 => _elementNames.Contains(e2.Name)))
                     .ToHashSet();
 
-            var uppermostSeedAcceptedElements2 = seedAsts.DescendantsAndSelf()
-                    .Where(e => _elementNames.Contains(e.Name))
+            var uppermostSeedAcceptedElements2 = seedAsts
+                    .SelectMany(GetAllElementsWithoutDuplicates)
                     .Where(ProtectedIsAcceptedUsingOracle)
                     .ToList();
             var b1 = !uppermostSeedAcceptedElements.All(IsAcceptedUsingOracle);
-            var b2 =
-                    GetMostOuterElements(uppermostSeedAcceptedElements2).Any(
-                            e => !uppermostSeedAcceptedElements.Contains(e));
+            var b2 = GetMostOuterElements(uppermostSeedAcceptedElements2)
+                    .Any(e => !uppermostSeedAcceptedElements.Contains(e));
             var b3 = uppermostSeedAcceptedElements.Count != uppermostSeedAcceptedElements2.Count;
+            Console.WriteLine("Initial: " + string.Join(", ", _initialElementNames));
+            Console.WriteLine("Learned: " + string.Join(", ", _elementNames));
             if (b1 || b2 || b3) {
                 Console.WriteLine("--------------------------------------------------");
                 foreach (var e in uppermostSeedAcceptedElements) {
@@ -346,15 +347,7 @@ namespace Code2Xml.Objects.Tests.Learning {
 
                 throw new Exception("Wrong Oracle.");
             }
-            if (uppermostSeedAcceptedElements.Count != seedAcceptedElements.Count) {
-                throw new Exception("Wrong Oracle.");
-            }
             var seedRejectedElements = new List<CstNode>();
-            Console.WriteLine("Initial: " + string.Join(", ", _initialElementNames));
-            Console.WriteLine("Learned: " + string.Join(", ", _elementNames));
-            foreach (var elementName in _elementNames) {
-                Console.WriteLine(elementName);
-            }
             if (!seedAcceptedElements.Any()) {
                 throw new Exception("There are no seed elements!");
             }
