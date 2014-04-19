@@ -75,7 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Generators\CstGeneratorsTest.cs" />
-    <Compile Include="Learning\Experiments\JavaSvmExperiment.cs" />
+    <Compile Include="Learning\SvmExperiments\JavaSvmExperiment.cs" />
     <Compile Include="Learning\LearningSvmExperiment.cs" />
     <Compile Include="Learning\SvmLearnerWithGaussian.cs" />
     <Compile Include="Learning\Experiments\Python2Experiment.cs" />

@@ -345,7 +345,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 							@"d3ac6c072886a1c4cd8d27b94c4a9b6e9d51f218", 1256),
 				};
 				foreach (var exp in exps) {
-					foreach (var learningSet in learningSets) {
+					foreach (var learningSet in learningSets.Take(JavaExperiment.TakeCount)) {
 						var url = learningSet.Item1;
 						var path = Fixture.GetGitRepositoryPath(url);
 						Git.CloneAndCheckout(path, url, learningSet.Item2);
@@ -481,6 +481,34 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
 			return ((e.TokenText == "+" || e.TokenText == "-") && e.Parent.Name == "arith_expr") ||
 			       ((e.TokenText == "*" || e.TokenText == "/") && e.Parent.Name == "term");
+		}
+	}
+
+	public class PythonSuperComplexBranchExperimentWithoutTrue : LearningExperiment {
+		protected override CstGenerator Generator {
+			get { return Python2Experiment.Generator; }
+		}
+
+		protected override bool IsInner {
+			get { return false; }
+		}
+
+		public PythonSuperComplexBranchExperimentWithoutTrue() : base("test", "argument") {}
+
+		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+			if (e.Name == "test" && (e.Parent.Name == "if_stmt" || e.Parent.Name == "while_stmt")) {
+				return e.TokenText != "True";
+			}
+			if (e.Name == "test") {
+				e = e.Parent;
+			}
+			if (e.Name == "argument" && e.Prev == null && e.SafeParent().Name == "arglist"
+			    && e.SafeParent().SafeParent().Name == "trailer"
+			    && e.SafeParent().SafeParent().SafeParent().Name == "power") {
+				var atom = e.SafeParent().SafeParent().Prev;
+				return atom.Name == "atom" && atom.TokenText == "str" && e.TokenText != "True";
+			}
+			return false;
 		}
 	}
 }

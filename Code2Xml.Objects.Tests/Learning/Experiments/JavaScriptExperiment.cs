@@ -42,6 +42,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                     new JavaScriptArithmeticOperatorExperiment(),
                     new JavaScriptSwitchCaseExperiment(),
                     new JavaScriptSuperComplexBranchExperimentWithSwitch(),
+                    new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue(), 
                     //new JavaScriptComplexBranchExperiment(),
                     //new JavaScriptIfExperiment(),
                     //new JavaScriptWhileExperiment(),
@@ -356,7 +357,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                             @"1a6d5811fbf4f0d5508718a1d03e2cdb34cb6ed2", 3488),
                 };
                 foreach (var exp in exps) {
-                    foreach (var learningSet in learningSets) {
+                    foreach (var learningSet in learningSets.Take(JavaExperiment.TakeCount)) {
                         var url = learningSet.Item1;
                         var path = Fixture.GetGitRepositoryPath(url);
                         Git.CloneAndCheckout(path, url, learningSet.Item2);
@@ -737,6 +738,48 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             if (p.SafeName() == "callExpression" && p.FirstChild.TokenText == "console.log" &&
                 p.Element("arguments").Element("assignmentExpression") == e) {
                 return true;
+            }
+            return false;
+        }
+    }
+
+    public class JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue : LearningExperiment {
+        public JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue()
+                : base("expression", "caseClause", "defaultClause") {}
+
+        protected override CstGenerator Generator {
+            get { return JavaScriptExperiment.Generator; }
+        }
+
+        protected override bool IsInner {
+            get { return false; }
+        }
+
+        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            var parentName = e.Parent.SafeName();
+            if (parentName == "ifStatement") {
+                return e.TokenText != "true";
+            }
+            if (parentName == "whileStatement") {
+                return e.TokenText != "true";
+            }
+            if (parentName == "doWhileStatement") {
+                return e.TokenText != "true";
+            }
+            if (parentName == "forStatement"
+                && e.Prev == e.Parent.Elements().First(e2 => e2.TokenText == ";")) {
+                return e.TokenText != "true";
+            }
+            if (parentName == "switchStatement") {
+                return true;
+            }
+            if (e.Name == "caseClause" || e.Name == "defaultClause") {
+                return true;
+            }
+            var p = e.SafeParent().SafeParent();
+            if (p.SafeName() == "callExpression" && p.FirstChild.TokenText == "console.log" &&
+                p.Element("arguments").Element("assignmentExpression") == e) {
+                return e.TokenText != "true";
             }
             return false;
         }

@@ -41,8 +41,9 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                     new PhpSuperComplexBranchExperiment(),
                     new PhpExpressionStatementExperiment(),
                     new PhpArithmeticOperatorExperiment(),
-                    new PhpSwitchCaseExperiment(), 
-                    new PhpSuperComplexBranchExperimentWithSwitch(), 
+                    new PhpSwitchCaseExperiment(),
+                    new PhpSuperComplexBranchExperimentWithSwitch(),
+                    new PhpSuperComplexBranchExperimentWithSwitchWithoutTrue(),
                     //new PhpComplexBranchExperiment(),
                     //new PhpIfExperiment(),
                     //new PhpWhileExperiment(),
@@ -357,7 +358,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                             @"ba5b75cb707950e5d928d7f58b1aaf6386686700", 354),
                 };
                 foreach (var exp in exps) {
-                    foreach (var learningSet in learningSets) {
+                    foreach (var learningSet in learningSets.Take(JavaExperiment.TakeCount)) {
                         var url = learningSet.Item1;
                         var path = Fixture.GetGitRepositoryPath(url);
                         Git.CloneAndCheckout(path, url, learningSet.Item2);
@@ -744,6 +745,50 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                 && e.SafeParent().SafeParent().FirstChild.Name == "Echo"
                 && e.Prev == null) {
                 return true;
+            }
+            return false;
+        }
+    }
+
+    public class PhpSuperComplexBranchExperimentWithSwitchWithoutTrue : LearningExperiment {
+        protected override CstGenerator Generator {
+            get { return PhpExperiment.Generator; }
+        }
+
+        protected override bool IsInner {
+            get { return false; }
+        }
+
+        public PhpSuperComplexBranchExperimentWithSwitchWithoutTrue()
+                : base("expression", "casestatement", "defaultcase") {}
+
+        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            var pName = e.SafeParent().FirstChild.Name;
+            if (pName == "If") {
+                return e.TokenText.ToLower() != "true";
+            }
+            if (pName == "While") {
+                return e.TokenText.ToLower() != "true";
+            }
+            if (pName == "Do") {
+                return e.TokenText.ToLower() != "true";
+            }
+            if (pName == "Switch") {
+                return true;
+            }
+            if (e.Name == "casestatement" || e.Name == "defaultcase") {
+                return true;
+            }
+            if (e.SafeParent().Name == "commaList"
+                && e.SafeParent().SafeParent().Name == "forCondition"
+                && !e.NextsFromSelf().Any()) {
+                return e.TokenText.ToLower() != "true";
+            }
+            if (e.SafeParent().Name == "commaList"
+                && e.SafeParent().SafeParent().Name == "simpleStatement"
+                && e.SafeParent().SafeParent().FirstChild.Name == "Echo"
+                && e.Prev == null) {
+                return e.TokenText.ToLower() != "true";
             }
             return false;
         }

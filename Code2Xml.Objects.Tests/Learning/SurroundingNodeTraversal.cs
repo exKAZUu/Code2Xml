@@ -168,7 +168,7 @@ namespace Code2Xml.Objects.Tests.Learning {
 		public static BigInteger GetSurroundingBits(
 				this CstNode node, int length, IDictionary<string, BigInteger> key2Bit, bool inner = true,
 				bool outer = true) {
-			//inner = outer = true;
+			//inner = outer = true; // for debug
 
 			var ret = BigInteger.Zero;
 			BigInteger bit;

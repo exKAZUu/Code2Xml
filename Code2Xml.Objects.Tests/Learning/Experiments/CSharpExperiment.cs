@@ -37,12 +37,14 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         private static IEnumerable<TestCaseData> TestCases {
             get {
                 var exps = new LearningExperiment[] {
-					new CSharpComplexStatementExperiment(),
-					new CSharpSuperComplexBranchExperiment(),
-					new CSharpExpressionStatementExperiment(),
-					new CSharpArithmeticOperatorExperiment(),
-					new CSharpSwitchCaseExperiment(),
-                    new CSharpSuperComplexBranchExperimentWithSwitch(), 
+                    new CSharpComplexStatementExperiment(),
+                    new CSharpSuperComplexBranchExperiment(),
+                    new CSharpExpressionStatementExperiment(),
+                    new CSharpArithmeticOperatorExperiment(),
+                    new CSharpSwitchCaseExperiment(),
+                    new CSharpSuperComplexBranchExperimentWithSwitch(),
+                    new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue(), 
+
                     //new CSharpComplexBranchExperiment(),
                     //new CSharpIfExperiment(),
                     //new CSharpWhileExperiment(),
@@ -357,7 +359,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                             @"76404a94e0a0bbb0aff23e5500eb5af0a70bda05", 234),
                 };
                 foreach (var exp in exps) {
-                    foreach (var learningSet in learningSets) {
+                    foreach (var learningSet in learningSets.Take(JavaExperiment.TakeCount)) {
                         var url = learningSet.Item1;
                         var path = Fixture.GetGitRepositoryPath(url);
                         Git.CloneAndCheckout(path, url, learningSet.Item2);
@@ -387,9 +389,15 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             get { return false; }
         }
 
-        public CSharpSuperComplexBranchExperiment() : base("boolean_expression") {}
+        public CSharpSuperComplexBranchExperiment() : base("boolean_expression", "argument") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            if (e.Name == "expression") {
+                e = e.Parent;
+            }
+            if (e.Name == "argument_value") {
+                e = e.Parent;
+            }
             var pName = e.Parent.Name;
             if (pName == "if_statement") {
                 return true;
@@ -406,6 +414,10 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             if (e.ElementsBeforeSelf().Any()) {
                 return false;
             }
+            if (e.Name == "boolean_expression") {
+                e = e.FirstChild;
+            }
+
             var p = e.Parent.Parent.Parent.Parent.Parent;
             var parts = p.Elements("primary_expression_start")
                     .Concat(p.Elements("primary_expression_part"))
@@ -413,14 +425,14 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             if (
                     parts.All(
                             e2 =>
-                                    e2.Descendants("identifier").FirstOrDefault().TokenText
+                                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
                                     != "Contract")) {
                 return false;
             }
             if (
                     parts.All(
                             e2 =>
-                                    e2.Descendants("identifier").FirstOrDefault().TokenText
+                                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
                                     != "Requires")) {
                 return false;
             }
@@ -579,6 +591,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             get { return true; }
         }
 
+        public CSharpComplexStatementExperiment() : base("statement") {}
+
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // ラベルはループ文に付くため，ラベルの中身は除外
             if (e.Element("labeled_statement") != null) {
@@ -597,8 +611,6 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             }
             return true;
         }
-
-        public CSharpComplexStatementExperiment() : base("statement") {}
     }
 
     public class CSharpStatementExperiment : LearningExperiment {
@@ -735,8 +747,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             if (pName == "switch_statement") {
                 return true;
             }
-            if (e.Name == "switch_labels" && e.ChildrenCount == 1) {
-                return true;
+            if (e.Name == "switch_labels") {
+                return e.ChildrenCount == 1;
             }
             return e.Name == "switch_label";
         }
@@ -752,9 +764,15 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
 
         public CSharpSuperComplexBranchExperimentWithSwitch()
-                : base("boolean_expression", "expression", "switch_label") {}
+                : base("boolean_expression", "argument", "switch_label") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            if (e.Name == "expression") {
+                e = e.Parent;
+            }
+            if (e.Name == "argument_value") {
+                e = e.Parent;
+            }
             var pName = e.Parent.Name;
             if (pName == "if_statement") {
                 return true;
@@ -771,8 +789,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             if (e.Parent.Name == "switch_statement") {
                 return true;
             }
-            if (e.Name == "switch_labels" && e.ChildrenCount == 1) {
-                return true;
+            if (e.Name == "switch_labels") {
+                return e.ChildrenCount == 1;
             }
             if (e.Name == "switch_label") {
                 return true;
@@ -787,18 +805,84 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             if (
                     parts.All(
                             e2 =>
-                                    e2.Descendants("identifier").FirstOrDefault().TokenText
+                                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
                                     != "Contract")) {
                 return false;
             }
             if (
                     parts.All(
                             e2 =>
-                                    e2.Descendants("identifier").FirstOrDefault().TokenText
+                                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
                                     != "Requires")) {
                 return false;
             }
             return true;
+        }
+    }
+
+    public class CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue : LearningExperiment {
+        protected override CstGenerator Generator {
+            get { return CSharpExperiment.Generator; }
+        }
+
+        protected override bool IsInner {
+            get { return false; }
+        }
+
+        public CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue()
+                : base("boolean_expression", "argument", "switch_label") {}
+
+        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            if (e.Name == "expression") {
+                e = e.Parent;
+            }
+            if (e.Name == "argument_value") {
+                e = e.Parent;
+            }
+            var pName = e.Parent.Name;
+            if (pName == "if_statement") {
+                return e.TokenText != "true";
+            }
+            if (pName == "while_statement") {
+                return e.TokenText != "true";
+            }
+            if (pName == "do_statement") {
+                return e.TokenText != "true";
+            }
+            if (pName == "for_condition") {
+                return e.TokenText != "true";
+            }
+            if (e.Parent.Name == "switch_statement") {
+                return true;
+            }
+            if (e.Name == "switch_labels") {
+                return e.ChildrenCount == 1;
+            }
+            if (e.Name == "switch_label") {
+                return true;
+            }
+            if (e.ElementsBeforeSelf().Any()) {
+                return false;
+            }
+            var p = e.Parent.Parent.Parent.Parent.Parent;
+            var parts = p.Elements("primary_expression_start")
+                    .Concat(p.Elements("primary_expression_part"))
+                    .ToList();
+            if (
+                    parts.All(
+                            e2 =>
+                                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
+                                    != "Contract")) {
+                return false;
+            }
+            if (
+                    parts.All(
+                            e2 =>
+                                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
+                                    != "Requires")) {
+                return false;
+            }
+            return e.TokenText != "true";
         }
     }
 }

@@ -324,9 +324,34 @@ namespace Code2Xml.Objects.Tests.Learning {
                             e => e.DescendantsOfSingleAndSelf()
                                     .Where(e2 => _elementNames.Contains(e2.Name)))
                     .ToHashSet();
+
+            var uppermostSeedAcceptedElements2 = seedAsts.DescendantsAndSelf()
+                    .Where(e => _elementNames.Contains(e.Name))
+                    .Where(ProtectedIsAcceptedUsingOracle)
+                    .ToList();
+            var b1 = !uppermostSeedAcceptedElements.All(IsAcceptedUsingOracle);
+            var b2 =
+                    GetMostOuterElements(uppermostSeedAcceptedElements2).Any(
+                            e => !uppermostSeedAcceptedElements.Contains(e));
+            var b3 = uppermostSeedAcceptedElements.Count != uppermostSeedAcceptedElements2.Count;
+            if (b1 || b2 || b3) {
+                Console.WriteLine("--------------------------------------------------");
+                foreach (var e in uppermostSeedAcceptedElements) {
+                    Console.WriteLine(e);
+                }
+                Console.WriteLine("--------------------------------------------------");
+                foreach (var e in uppermostSeedAcceptedElements2) {
+                    Console.WriteLine(e);
+                }
+
+                throw new Exception("Wrong Oracle.");
+            }
+            if (uppermostSeedAcceptedElements.Count != seedAcceptedElements.Count) {
+                throw new Exception("Wrong Oracle.");
+            }
             var seedRejectedElements = new List<CstNode>();
-			Console.WriteLine("Initial: " + string.Join(", ", _initialElementNames));
-			Console.WriteLine("Learned: " + string.Join(", ", _elementNames));
+            Console.WriteLine("Initial: " + string.Join(", ", _initialElementNames));
+            Console.WriteLine("Learned: " + string.Join(", ", _elementNames));
             foreach (var elementName in _elementNames) {
                 Console.WriteLine(elementName);
             }
@@ -962,7 +987,11 @@ namespace Code2Xml.Objects.Tests.Learning {
                 var feature = BigInteger.Zero;
                 var classifier = classifiers[i];
                 var list = suspiciousElementsList[i]
-                        .OrderBy(t => CountBits(classifier & ((t.Feature & _rejectingMask) ^ _rejectingMask)))
+                        .OrderBy(
+                                t =>
+                                        CountBits(
+                                                classifier
+                                                & ((t.Feature & _rejectingMask) ^ _rejectingMask)))
                         .ToList();
                 foreach (var t in list) {
                     var newFeature = (feature | (t.Feature ^ xor)) & mask;
@@ -975,7 +1004,8 @@ namespace Code2Xml.Objects.Tests.Learning {
             return suspiciousElements;
         }
 
-        private List<SuspiciousTarget> SelectNodesForFastAcceptanceLearning(List<List<SuspiciousTarget>> targetsList, HashSet<BigInteger> added) {
+        private List<SuspiciousTarget> SelectNodesForFastAcceptanceLearning(
+                List<List<SuspiciousTarget>> targetsList, HashSet<BigInteger> added) {
             var classifiers = _acceptingClassifiers;
             var ret = new List<SuspiciousTarget>();
             for (int j = 0; j < 1; j++) {
@@ -998,7 +1028,8 @@ namespace Code2Xml.Objects.Tests.Learning {
             return ret;
         }
 
-        private List<SuspiciousTarget> SelectNodesForFastRejectionLearning(List<List<SuspiciousTarget>> targetsList, HashSet<BigInteger> added) {
+        private List<SuspiciousTarget> SelectNodesForFastRejectionLearning(
+                List<List<SuspiciousTarget>> targetsList, HashSet<BigInteger> added) {
             var classifiers = _acceptingClassifiers;
             var ret = new List<SuspiciousTarget>();
             for (int j = 0; j < 1; j++) {
@@ -1007,8 +1038,11 @@ namespace Code2Xml.Objects.Tests.Learning {
                     var classifier = classifiers[i];
                     var e = targetsList[i]
                             .Where(t => !added.Contains(t.Feature))
-                            .MinElementOrDefault(t =>
-                                CountBits(classifier & ((t.Feature & _rejectingMask) ^ _rejectingMask)));
+                            .MinElementOrDefault(
+                                    t =>
+                                            CountBits(
+                                                    classifier
+                                                    & ((t.Feature & _rejectingMask) ^ _rejectingMask)));
                     if (e != null) {
                         ret.Add(e);
                         added.Add(e.Feature);

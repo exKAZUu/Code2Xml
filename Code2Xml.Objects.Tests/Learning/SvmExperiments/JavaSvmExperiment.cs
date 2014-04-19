@@ -21,10 +21,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Code2Xml.Core.Generators;
+using Code2Xml.Objects.Tests.Learning.Experiments;
 using NUnit.Framework;
 using ParserTests;
 
-namespace Code2Xml.Objects.Tests.Learning.Experiments {
+namespace Code2Xml.Objects.Tests.Learning.SvmExperiments {
     [TestFixture]
     public class JavaSvmExperiment {
         private readonly StreamWriter _writer = File.CreateText(
@@ -356,7 +357,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                             @"f1f06769abacc6732e511774d4db2306cbe5db54", 843),
                 };
                 foreach (var exp in exps) {
-                    foreach (var learningSet in learningSets) {
+                    foreach (var learningSet in learningSets.Take(JavaExperiment.TakeCount)) {
                         var url = learningSet.Item1;
                         var path = Fixture.GetGitRepositoryPath(url);
                         Git.CloneAndCheckout(path, url, learningSet.Item2);

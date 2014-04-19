@@ -32,6 +32,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
         public static CstGenerator Generator = CstGenerators.JavaUsingAntlr3;
         private const string LangName = "Java";
+        public const int TakeCount = 1;
 
         private static IEnumerable<TestCaseData> TestCases {
             get {
@@ -42,6 +43,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                     new JavaArithmeticOperatorExperiment(),
                     new JavaSwitchCaseExperiment(),
                     new JavaSuperComplexBranchExperimentWithSwitch(),
+                    new JavaSuperComplexBranchExperimentWithSwitchWithoutTrue(),
+
                     //new JavaComplexBranchExperiment(),
                     //new JavaIfExperiment(),
                     //new JavaWhileExperiment(),
@@ -356,7 +359,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                             @"f1f06769abacc6732e511774d4db2306cbe5db54", 843),
                 };
                 foreach (var exp in exps) {
-                    foreach (var learningSet in learningSets) {
+                    foreach (var learningSet in learningSets.Take(TakeCount)) {
                         var url = learningSet.Item1;
                         var path = Fixture.GetGitRepositoryPath(url);
                         Git.CloneAndCheckout(path, url, learningSet.Item2);
@@ -929,6 +932,58 @@ statement
                     return false;
                 }
                 return true;
+            }
+        }
+    }
+
+    public class JavaSuperComplexBranchExperimentWithSwitchWithoutTrue : LearningExperiment {
+        protected override CstGenerator Generator {
+            get { return JavaExperiment.Generator; }
+        }
+
+        protected override bool IsInner {
+            get { return false; }
+        }
+
+        public JavaSuperComplexBranchExperimentWithSwitchWithoutTrue()
+                : base("expression", "switchLabel") {}
+
+        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            var p = e.Parent;
+            var pp = p.Parent;
+            var isPar = p.SafeName() == "parExpression";
+            var isStmt = pp.SafeName() == "statement";
+            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "if") {
+                return e.TokenText != "true";
+            }
+            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "while") {
+                return e.TokenText != "true";
+            }
+            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "do") {
+                return e.TokenText != "true";
+            }
+            if (p.SafeName() == "forstatement"
+                && p.Elements().Count(e2 => e2.TokenText == ";") >= 2) {
+                return e.TokenText != "true";
+            }
+            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "switch") {
+                return true;
+            }
+            if (e.Name == "switchLabel") {
+                return true;
+            }
+            {
+                var primary = e.SafeParent().SafeParent().SafeParent().SafeParent();
+                if (primary.SafeName() != "primary") {
+                    return false;
+                }
+                if (primary.Elements().All(e2 => e2.TokenText != "checkArgument")) {
+                    return false;
+                }
+                if (e.ElementsBeforeSelf().Any()) {
+                    return false;
+                }
+                return e.TokenText != "true";
             }
         }
     }
