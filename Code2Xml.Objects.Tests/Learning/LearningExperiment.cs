@@ -24,6 +24,7 @@ using System.Numerics;
 using System.Runtime.Serialization.Formatters.Binary;
 using Code2Xml.Core;
 using Code2Xml.Core.Generators;
+using Code2Xml.Languages.ANTLRv3.Core;
 using Paraiba.Collections.Generic;
 using Paraiba.Linq;
 
@@ -174,7 +175,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                 var descendants = node.DescendantsOfFirstChild()
                         .Take(GroupKeyLength)
                         .ToList();
-                groupKeySequence = descendants.Select(e => e.NameWithId());
+                groupKeySequence = descendants.Select(e => e.NameOrTokenWithId());
                 if (descendants[descendants.Count - 1].HasToken) {
                     groupKeySequence =
                             groupKeySequence.Concat(descendants[descendants.Count - 1].TokenText);
@@ -183,7 +184,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                 //node = node.DescendantsOfOnlyChildAndSelf().Last(); // TODO
                 groupKeySequence = node.AncestorsAndSelf()
                         .Take(GroupKeyLength)
-                        .Select(e => e.NameWithId());
+                        .Select(e => e.NameOrTokenWithId());
             }
 
             var groupKey = ">" + node.Name + ">" + string.Join(">", groupKeySequence) + ">";
@@ -197,16 +198,24 @@ namespace Code2Xml.Objects.Tests.Learning {
 
         private static ISet<string> AdoptNodeNames(ICollection<CstNode> outermosts) {
             var name2Count = new Dictionary<string, int>();
+            var name2Ids = new Dictionary<string, HashSet<string>>();
             var candidates = outermosts.SelectMany(
                     e => e.DescendantsOfSingleAndSelf());
             foreach (var e in candidates) {
-                var count = name2Count.GetValueOrDefault(e.Name);
-                name2Count[e.Name] = count + 1;
+                if (name2Count.ContainsKey(e.Name)) {
+                    name2Count[e.Name] += 1;
+                    name2Ids[e.Name].Add(e.NameOrTokenWithId());
+                } else {
+                    name2Count[e.Name] = 1;
+                    name2Ids[e.Name] = new HashSet<string> {
+                        e.NameOrTokenWithId()
+                    };
+                }
             }
             return outermosts.Select(
                     e => e.DescendantsOfSingleAndSelf()
                             .Select(e2 => e2.Name)
-                            .MaxElementOrDefault(name => name2Count[name]))
+                            .MaxElementOrDefault(name => (name2Count[name] << 8) + name2Ids[name].Count))
                     .ToHashSet();
         }
 

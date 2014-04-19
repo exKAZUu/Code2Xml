@@ -666,6 +666,9 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public LuaArithmeticOperatorExperiment() : base("TOKENS") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            if (e.Name == "binop") {
+                e = e.FirstChild;
+            }
             return e.Parent.Name == "binop"
                    && (e.TokenText == "+" || e.TokenText == "-" || e.TokenText == "*"
                        || e.TokenText == "/");

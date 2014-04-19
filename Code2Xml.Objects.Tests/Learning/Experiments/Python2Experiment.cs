@@ -444,7 +444,13 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 		public PythonEmptyStatementExperiment() : base("pass_stmt") {}
 
 		protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
-			return true;
+			if (e.Name == "stmt") {
+				e = e.FirstChild;
+			}
+			if (e.Name == "small_stmt" && e.FirstChild.Name == "pass_stmt") {
+				return true;
+			}
+			return e.Name == "pass_stmt";
 		}
 	}
 
