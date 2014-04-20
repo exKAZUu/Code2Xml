@@ -177,7 +177,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                 var descendants = node.DescendantsOfFirstChild()
                         .Take(GroupKeyLength)
                         .ToList();
-                groupKeySequence = descendants.Select(e => e.NameOrTokenWithId());
+                groupKeySequence = descendants.Select(e => e.NameAndTokenWithId());
                 if (descendants[descendants.Count - 1].HasToken) {
                     groupKeySequence =
                             groupKeySequence.Concat(descendants[descendants.Count - 1].TokenText);
@@ -186,7 +186,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                 //node = node.DescendantsOfOnlyChildAndSelf().Last(); // TODO
                 groupKeySequence = node.AncestorsAndSelf()
                         .Take(GroupKeyLength)
-                        .Select(e => e.NameOrTokenWithId());
+                        .Select(e => e.NameAndTokenWithId());
             }
 
             var groupKey = ">" + node.Name + ">" + string.Join(">", groupKeySequence) + ">";
@@ -206,11 +206,11 @@ namespace Code2Xml.Objects.Tests.Learning {
             foreach (var e in candidates) {
                 if (name2Count.ContainsKey(e.Name)) {
                     name2Count[e.Name] += 1;
-                    name2Ids[e.Name].Add(e.NameOrTokenWithId());
+                    name2Ids[e.Name].Add(e.NameAndTokenWithId());
                 } else {
                     name2Count[e.Name] = 1;
                     name2Ids[e.Name] = new HashSet<string> {
-                        e.NameOrTokenWithId()
+                        e.NameAndTokenWithId()
                     };
                 }
             }

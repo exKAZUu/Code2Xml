@@ -22,7 +22,7 @@ namespace Code2Xml.Core.Generators {
             return node.Name + node.RuleId;
         }
 
-        public static string NameOrTokenWithId(this CstNode node) {
+        public static string NameAndTokenWithId(this CstNode node) {
             var ret = node.NameWithId();
             if (node.HasToken) {
                 ret += node.Token.Text;

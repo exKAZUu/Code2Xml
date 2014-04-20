@@ -99,12 +99,12 @@ namespace Code2Xml.Objects.Tests.Learning {
                     ret.Add(descendantStr);
                 }
                 // 自分自身の位置による区別も考慮する
-                ret.Add(node.NameOrTokenWithId());
+                ret.Add(node.NameAndTokenWithId());
                 for (; i <= length; i++) {
                     var newChildElements = new List<Tuple<CstNode, string>>();
                     foreach (var t in childElements) {
                         foreach (var e in t.Item1.Elements()) {
-                            var key = t.Item2 + ">" + e.NameOrTokenWithId();
+                            var key = t.Item2 + ">" + e.NameAndTokenWithId();
                             newChildElements.Add(Tuple.Create(e, key));
                             // トークンが存在するかチェックする弱い条件
                             // for Preconditions.checkArguments()
@@ -116,7 +116,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                         }
                     }
                     foreach (var e in parentElement.Item1.Siblings(10)) {
-                        var key = parentElement.Item2 + "-" + e.NameOrTokenWithId();
+                        var key = parentElement.Item2 + "-" + e.NameAndTokenWithId();
                         //newChildElements.Add(Tuple.Create(e, key));
                         // トークンが存在するかチェックする弱い条件
                         // for Preconditions.checkArguments()
@@ -126,7 +126,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                             .ForEach(
                                     (e, index) => {
                                         var key = parentElement.Item2 + "<-" + index + "-"
-                                                  + e.NameOrTokenWithId();
+                                                  + e.NameAndTokenWithId();
                                         newChildElements.Add(Tuple.Create(e, key));
                                         //ret.Add(key);
                                     });
@@ -134,7 +134,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                             .ForEach(
                                     (e, index) => {
                                         var key = parentElement.Item2 + ">-" + index + "-"
-                                                  + e.NameOrTokenWithId();
+                                                  + e.NameAndTokenWithId();
                                         newChildElements.Add(Tuple.Create(e, key));
                                         //ret.Add(key);
                                     });
@@ -147,7 +147,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                     }
                     parentElement = Tuple.Create(
                             newParentElement,
-                            parentElement.Item2 + "<" + newParentElement.NameOrTokenWithId());
+                            parentElement.Item2 + "<" + newParentElement.NameAndTokenWithId());
                     ret.Add(parentElement.Item2);
                 }
             }
@@ -155,7 +155,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                 var newChildElements = new List<Tuple<CstNode, string>>();
                 foreach (var t in childElements) {
                     foreach (var e in t.Item1.Elements()) {
-                        var key = t.Item2 + ">" + e.NameOrTokenWithId();
+                        var key = t.Item2 + ">" + e.NameAndTokenWithId();
                         newChildElements.Add(Tuple.Create(e, key));
                         // トークンが存在するかチェックする弱い条件
                         // for Preconditions.checkArguments()
@@ -199,14 +199,14 @@ namespace Code2Xml.Objects.Tests.Learning {
                     }
                 }
                 // 自分自身の位置による区別も考慮する
-                if (key2Bit.TryGetValue(node.NameOrTokenWithId(), out bit)) {
+                if (key2Bit.TryGetValue(node.NameAndTokenWithId(), out bit)) {
                     ret |= bit;
                 }
                 for (; i <= length; i++) {
                     var newChildElements = new List<Tuple<CstNode, string>>();
                     foreach (var t in childElements) {
                         foreach (var e in t.Item1.Elements()) {
-                            var key = t.Item2 + ">" + e.NameOrTokenWithId();
+                            var key = t.Item2 + ">" + e.NameAndTokenWithId();
                             if (key2Bit.TryGetValue(key, out bit)) {
                                 newChildElements.Add(Tuple.Create(e, key));
                                 ret |= bit;
@@ -223,7 +223,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                         }
                     }
                     foreach (var e in parentElement.Item1.Siblings(10)) {
-                        var key = parentElement.Item2 + "-" + e.NameOrTokenWithId();
+                        var key = parentElement.Item2 + "-" + e.NameAndTokenWithId();
                         //if (key2Bit.TryGetValue(key, out bit)) {
                         //	newChildElements.Add(Tuple.Create(e, key));
                         //	ret |= bit;
@@ -239,7 +239,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                             .ForEach(
                                     (e, index) => {
                                         var key = parentElement.Item2 + "<-" + index + "-"
-                                                  + e.NameOrTokenWithId();
+                                                  + e.NameAndTokenWithId();
                                         if (key2Bit.TryGetValue(key, out bit)) {
                                             newChildElements.Add(Tuple.Create(e, key));
                                             ret |= bit;
@@ -249,7 +249,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                             .ForEach(
                                     (e, index) => {
                                         var key = parentElement.Item2 + ">-" + index + "-"
-                                                  + e.NameOrTokenWithId();
+                                                  + e.NameAndTokenWithId();
                                         if (key2Bit.TryGetValue(key, out bit)) {
                                             newChildElements.Add(Tuple.Create(e, key));
                                             ret |= bit;
@@ -263,7 +263,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                     }
                     parentElement = Tuple.Create(
                             newParentElement,
-                            parentElement.Item2 + "<" + newParentElement.NameOrTokenWithId());
+                            parentElement.Item2 + "<" + newParentElement.NameAndTokenWithId());
                     if (key2Bit.TryGetValue(parentElement.Item2, out bit)) {
                         ret |= bit;
                     } else {
@@ -275,7 +275,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                 var newChildElements = new List<Tuple<CstNode, string>>();
                 foreach (var t in childElements) {
                     foreach (var e in t.Item1.Elements()) {
-                        var key = t.Item2 + ">" + e.NameOrTokenWithId();
+                        var key = t.Item2 + ">" + e.NameAndTokenWithId();
                         if (key2Bit.TryGetValue(key, out bit)) {
                             newChildElements.Add(Tuple.Create(e, key));
                             ret |= bit;
