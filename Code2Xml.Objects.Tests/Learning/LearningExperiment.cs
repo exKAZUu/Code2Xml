@@ -24,7 +24,6 @@ using System.Numerics;
 using System.Runtime.Serialization.Formatters.Binary;
 using Code2Xml.Core;
 using Code2Xml.Core.Generators;
-using Code2Xml.Languages.ANTLRv3.Core;
 using Paraiba.Collections.Generic;
 using Paraiba.Linq;
 
@@ -215,7 +214,8 @@ namespace Code2Xml.Objects.Tests.Learning {
             return outermosts.Select(
                     e => e.DescendantsOfSingleAndSelf()
                             .Select(e2 => e2.Name)
-                            .MaxElementOrDefault(name => (name2Count[name] << 8) + name2Ids[name].Count))
+                            .MaxElementOrDefault(
+                                    name => (name2Count[name] << 8) + name2Ids[name].Count))
                     .ToHashSet();
         }
 
@@ -718,13 +718,6 @@ namespace Code2Xml.Objects.Tests.Learning {
                 //SuspiciousRejectedInRejecting = SelectVariousElementsExisting(
                 //        rejectedInRejecting, existing, _mask);
 
-                //Best
-                SuspiciousAcceptedInAccepting = SelectVariousElements(
-                        acceptedInAccepting, _acceptingMask);
-                SuspiciousRejectedInAccepting = SelectVariousElements(
-                        rejectedInAccepting, _acceptingMask);
-                SuspiciousRejectedInRejecting = FlattenSuspiciousTargetsList(rejectedInRejecting);
-
                 //SuspiciousAcceptedInAccepting = SelectSuspiciousElementsWithMask(
                 //        acceptedInAccepting, BigInteger.Zero, _mask);
                 //SuspiciousRejectedInAccepting = SelectSuspiciousElementsWithMask(
@@ -732,29 +725,28 @@ namespace Code2Xml.Objects.Tests.Learning {
                 //SuspiciousRejectedInRejecting = SelectSuspiciousElementsWithMask(
                 //        rejectedInRejecting, _rejectingMask, _rejectingMask);
 
-                //var added = new HashSet<BigInteger>();
-                //SuspiciousAcceptedInAccepting =
-                //        SelectNodesForFastAcceptanceLearning(acceptedInAccepting, added);
-                //SuspiciousRejectedInAccepting =
-                //        SelectNodesForFastAcceptanceLearning(rejectedInAccepting, added);
-                //SuspiciousRejectedInRejecting =
-                //        SelectNodesForFastAcceptanceLearning(rejectedInRejecting, added);
-                //SuspiciousAcceptedInAccepting =
-                //        SelectNodesForFastRejectionLearning(acceptedInAccepting, added);
-                //SuspiciousRejectedInAccepting =
-                //        SelectNodesForFastRejectionLearning(rejectedInAccepting, added);
-                //SuspiciousRejectedInRejecting =
-                //        SelectNodesForFastRejectionLearning(rejectedInRejecting, added);
-
+                var added = new HashSet<BigInteger>();
+                SuspiciousAcceptedInAccepting =
+                        SelectNodesForFastAcceptanceLearning(acceptedInAccepting, added);
+                SuspiciousRejectedInAccepting =
+                        SelectNodesForFastAcceptanceLearning(rejectedInAccepting, added);
+                SuspiciousRejectedInRejecting =
+                        SelectNodesForFastAcceptanceLearning(rejectedInRejecting, added);
+                SuspiciousAcceptedInAccepting
+                        .AddRange(SelectNodesForFastRejectionLearning(acceptedInAccepting, added));
+                SuspiciousRejectedInAccepting
+                        .AddRange(SelectNodesForFastRejectionLearning(rejectedInAccepting, added));
+                SuspiciousRejectedInRejecting
+                        .AddRange(SelectNodesForFastRejectionLearning(rejectedInRejecting, added));
                 break;
             case 1:
-                //Best
-                SuspiciousAcceptedInAccepting = SelectSuspiciousElementsWithMask(
-                        acceptedInAccepting, BigInteger.Zero, _mask);
-                SuspiciousRejectedInAccepting = SelectSuspiciousElementsWithMask(
-                        rejectedInAccepting, _acceptingMask, _acceptingMask);
-                SuspiciousRejectedInRejecting = SelectSuspiciousElementsWithMask(
-                        rejectedInRejecting, _rejectingMask, _rejectingMask);
+
+                // Best(0)
+                SuspiciousAcceptedInAccepting = SelectVariousElements(
+                        acceptedInAccepting, _acceptingMask);
+                SuspiciousRejectedInAccepting = SelectVariousElements(
+                        rejectedInAccepting, _acceptingMask);
+                SuspiciousRejectedInRejecting = FlattenSuspiciousTargetsList(rejectedInRejecting);
 
                 //SuspiciousAcceptedInAccepting = SelectVariousElements(
                 //        acceptedInAccepting, _acceptingMask);
@@ -763,12 +755,20 @@ namespace Code2Xml.Objects.Tests.Learning {
                 //SuspiciousRejectedInRejecting = FlattenSuspiciousTargetsList(rejectedInRejecting);                return -1;
                 break;
             case 2:
+                // Best(1)
                 SuspiciousAcceptedInAccepting = SelectSuspiciousElementsWithMask(
-                        acceptedInAccepting, BigInteger.Zero, _acceptingMask);
+                        acceptedInAccepting, BigInteger.Zero, _mask);
                 SuspiciousRejectedInAccepting = SelectSuspiciousElementsWithMask(
-                        rejectedInAccepting, BigInteger.Zero, _acceptingMask);
+                        rejectedInAccepting, _acceptingMask, _acceptingMask);
                 SuspiciousRejectedInRejecting = SelectSuspiciousElementsWithMask(
                         rejectedInRejecting, _rejectingMask, _rejectingMask);
+
+                //SuspiciousAcceptedInAccepting = SelectSuspiciousElementsWithMask(
+                //        acceptedInAccepting, BigInteger.Zero, _acceptingMask);
+                //SuspiciousRejectedInAccepting = SelectSuspiciousElementsWithMask(
+                //        rejectedInAccepting, BigInteger.Zero, _acceptingMask);
+                //SuspiciousRejectedInRejecting = SelectSuspiciousElementsWithMask(
+                //        rejectedInRejecting, _rejectingMask, _rejectingMask);
                 break;
             default:
                 return -1;
@@ -1008,9 +1008,9 @@ namespace Code2Xml.Objects.Tests.Learning {
 
         private List<SuspiciousTarget> SelectNodesForFastAcceptanceLearning(
                 List<List<SuspiciousTarget>> targetsList, HashSet<BigInteger> added) {
-            var classifiers = _acceptingClassifiers;
+            var classifiers = _acceptingClassifiers.ToList();
             var ret = new List<SuspiciousTarget>();
-            for (int j = 0; j < 1; j++) {
+            for (int j = 0; j < 3; j++) {
                 var updated = false;
                 for (int i = 0; i < targetsList.Count; i++) {
                     var classifier = classifiers[i];
@@ -1020,6 +1020,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                     if (e != null) {
                         ret.Add(e);
                         added.Add(e.Feature);
+                        classifiers[i] &= e.Feature;
                         updated = true;
                     }
                 }
@@ -1032,9 +1033,9 @@ namespace Code2Xml.Objects.Tests.Learning {
 
         private List<SuspiciousTarget> SelectNodesForFastRejectionLearning(
                 List<List<SuspiciousTarget>> targetsList, HashSet<BigInteger> added) {
-            var classifiers = _acceptingClassifiers;
+            var classifiers = _rejectingClassifiers.ToList();
             var ret = new List<SuspiciousTarget>();
-            for (int j = 0; j < 1; j++) {
+            for (int j = 0; j < 3; j++) {
                 var updated = false;
                 for (int i = 0; i < targetsList.Count; i++) {
                     var classifier = classifiers[i];
@@ -1049,6 +1050,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                         ret.Add(e);
                         added.Add(e.Feature);
                         updated = true;
+                        classifiers[i] &= ((e.Feature & _rejectingMask) ^ _rejectingMask);
                     }
                 }
                 if (!updated) {

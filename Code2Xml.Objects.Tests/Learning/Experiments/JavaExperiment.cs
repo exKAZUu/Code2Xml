@@ -32,7 +32,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
         public static CstGenerator Generator = CstGenerators.JavaUsingAntlr3;
         private const string LangName = "Java";
-        public const int TakeCount = 1;
+        public const int TakeCount = 100;
 
         private static IEnumerable<TestCaseData> TestCases {
             get {
