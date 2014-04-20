@@ -98,6 +98,7 @@ namespace Code2Xml.Objects.Tests.Learning {
         private const int GroupKeyLength = 5;
         private IDictionary<string, BigInteger> _masterFeatures;
         private List<string> _groupKeys;
+        private Dictionary<BigInteger, int> _feature2GroupIndex;
         private int _acceptingFeatureCount;
         private BigInteger _acceptingMask;
         private BigInteger _rejectingMask;
@@ -289,6 +290,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                     _rejectingClassifiers = (IList<BigInteger>)formatter.Deserialize(stream);
                 }
             }
+            UpdateGroup();
 
             var count = 0;
             var sumTime = Environment.TickCount;
@@ -467,7 +469,11 @@ namespace Code2Xml.Objects.Tests.Learning {
                     SurroundingLength, _masterFeatures, IsInner, !IsInner);
         }
 
-        private int GetGroupIndex(string groupKey) {
+        private int GetGroupIndex(BigInteger feature) {
+            return _feature2GroupIndex[feature];
+        }
+
+        private int GetGroupIndexWithoutCache(string groupKey) {
             for (int i = _groupKeys.Count - 1; i >= 0; i--) {
                 if (groupKey.StartsWith(_groupKeys[i])) {
                     return i;
@@ -490,11 +496,15 @@ namespace Code2Xml.Objects.Tests.Learning {
                     return;
                 }
                 var count = _groupKeys.Count;
+                var updated = false;
                 if (groupInfo.Accepted.Key != _groupKeys[groupInfo.Accepted.Index]) {
-                    AddNewGroup(groupInfo.Accepted);
+                    updated |= AddNewGroup(groupInfo.Accepted);
                 }
                 if (groupInfo.Rejected.Key != _groupKeys[groupInfo.Rejected.Index]) {
-                    AddNewGroup(groupInfo.Rejected);
+                    updated |= AddNewGroup(groupInfo.Rejected);
+                }
+                if (updated) {
+                    UpdateGroup();
                 }
                 if (_groupKeys.Count == count) {
                     throw new Exception("Fail to learn rules");
@@ -508,7 +518,7 @@ namespace Code2Xml.Objects.Tests.Learning {
             foreach (var featureAndGroupKey in _acceptedTrainingSet) {
                 var feature = featureAndGroupKey.Key;
                 var groupKey = featureAndGroupKey.Value;
-                var groupIndex = GetGroupIndex(groupKey);
+                var groupIndex = GetGroupIndex(feature);
                 acceptingClassifiers[groupIndex] &= feature;
                 var rejectedGroupInfo = CanReject(
                         acceptingClassifiers, rejectingClassifiers, _rejectedTrainingSet);
@@ -527,7 +537,7 @@ namespace Code2Xml.Objects.Tests.Learning {
             foreach (var featureAndGroupKey in _acceptedTrainingSet) {
                 var feature = featureAndGroupKey.Key;
                 var groupKey = featureAndGroupKey.Value;
-                var iGroupKey = GetGroupIndex(groupKey);
+                var iGroupKey = GetGroupIndex(feature);
                 rejectingClassifiers[iGroupKey] |= feature;
             }
             for (int i = 0; i < rejectingClassifiers.Count; i++) {
@@ -538,11 +548,25 @@ namespace Code2Xml.Objects.Tests.Learning {
             return rejectingClassifiers;
         }
 
-        private void AddNewGroup(GroupInfo info) {
+        private bool AddNewGroup(GroupInfo info) {
             var i = info.Key.IndexOf('>', _groupKeys[info.Index].Length + 1);
             var newGroupKey = info.Key.Substring(0, i + 1);
             if (!_groupKeys.Contains(newGroupKey)) {
                 _groupKeys.Add(newGroupKey);
+                return true;
+            }
+            return false;
+        }
+
+        private void UpdateGroup() {
+            _feature2GroupIndex = new Dictionary<BigInteger, int>();
+            foreach (var kv in _idealAccepted) {
+                var index = GetGroupIndexWithoutCache(kv.Value);
+                _feature2GroupIndex.Add(kv.Key, index);
+            }
+            foreach (var kv in _idealRejected) {
+                var index = GetGroupIndexWithoutCache(kv.Value);
+                _feature2GroupIndex.Add(kv.Key, index);
             }
         }
 
@@ -581,7 +605,7 @@ namespace Code2Xml.Objects.Tests.Learning {
             foreach (var featureAndGroupKey in _idealAccepted) {
                 var feature = featureAndGroupKey.Key;
                 var groupKey = featureAndGroupKey.Value;
-                var groupIndex = GetGroupIndex(groupKey);
+                var groupIndex = GetGroupIndex(feature);
                 var rejected = IsRejected(feature, rejectingClassifiers[groupIndex]);
                 var accepted = IsAccepted(feature, acceptingClassifiers[groupIndex]);
                 index++;
@@ -635,7 +659,7 @@ namespace Code2Xml.Objects.Tests.Learning {
             foreach (var featureAndGroupKey in _idealRejected) {
                 var feature = featureAndGroupKey.Key;
                 var groupKey = featureAndGroupKey.Value;
-                var groupIndex = GetGroupIndex(groupKey);
+                var groupIndex = GetGroupIndex(feature);
                 var rejected = IsRejected(feature, rejectingClassifiers[groupIndex]);
                 var accepted = IsAccepted(feature, acceptingClassifiers[groupIndex]);
                 index++;
@@ -1068,7 +1092,7 @@ namespace Code2Xml.Objects.Tests.Learning {
             foreach (var featureAndGroupKey in rejected) {
                 var feature = featureAndGroupKey.Key;
                 var groupKey = featureAndGroupKey.Value;
-                var groupIndex = GetGroupIndex(groupKey);
+                var groupIndex = GetGroupIndex(feature);
                 if (IsAccepted(feature, acceptingClassifiers[groupIndex])
                     && !IsRejected(feature, rejectingClassifiers[groupIndex])) {
                     return new GroupInfo { Index = groupIndex, Key = groupKey };
@@ -1156,8 +1180,8 @@ namespace Code2Xml.Objects.Tests.Learning {
             Console.Write("A(A): ");
             foreach (var featureAndGroupKey in _idealAccepted) {
                 var feature = featureAndGroupKey.Key;
-                var classifier = featureAndGroupKey.Value;
-                var iClassifier = GetGroupIndex(classifier);
+                var groupKey = featureAndGroupKey.Value;
+                var iClassifier = GetGroupIndex(feature);
                 Console.Write(
                         CountAcceptingBits(feature & _acceptingClassifiers[iClassifier]) + ", ");
             }
@@ -1165,8 +1189,8 @@ namespace Code2Xml.Objects.Tests.Learning {
             Console.Write("R(A): ");
             foreach (var featureAndGroupKey in _idealRejected) {
                 var feature = featureAndGroupKey.Key;
-                var classifier = featureAndGroupKey.Value;
-                var iClassifier = GetGroupIndex(classifier);
+                var groupKey = featureAndGroupKey.Value;
+                var iClassifier = GetGroupIndex(feature);
                 Console.Write(
                         CountAcceptingBits(feature & _acceptingClassifiers[iClassifier]) + ", ");
             }
@@ -1174,8 +1198,8 @@ namespace Code2Xml.Objects.Tests.Learning {
             Console.Write("WA(A): ");
             foreach (var featureAndGroupKey in _wronglyAcceptedFeatures) {
                 var feature = featureAndGroupKey.Key;
-                var classifier = featureAndGroupKey.Value;
-                var iClassifier = GetGroupIndex(classifier);
+                var groupKey = featureAndGroupKey.Value;
+                var iClassifier = GetGroupIndex(feature);
                 Console.Write(
                         CountAcceptingBits(feature & _acceptingClassifiers[iClassifier]) + ", ");
             }
@@ -1183,8 +1207,8 @@ namespace Code2Xml.Objects.Tests.Learning {
             Console.Write("WR(A): ");
             foreach (var featureAndGroupKey in _wronglyRejectedFeatures) {
                 var feature = featureAndGroupKey.Key;
-                var classifier = featureAndGroupKey.Value;
-                var iClassifier = GetGroupIndex(classifier);
+                var groupKey = featureAndGroupKey.Value;
+                var iClassifier = GetGroupIndex(feature);
                 Console.Write(
                         CountAcceptingBits(feature & _acceptingClassifiers[iClassifier]) + ", ");
             }
@@ -1194,8 +1218,8 @@ namespace Code2Xml.Objects.Tests.Learning {
             Console.Write("A(R): ");
             foreach (var featureAndGroupKey in _idealAccepted) {
                 var feature = featureAndGroupKey.Key;
-                var classifier = featureAndGroupKey.Value;
-                var iClassifier = GetGroupIndex(classifier);
+                var groupKey = featureAndGroupKey.Value;
+                var iClassifier = GetGroupIndex(feature);
                 Console.Write(
                         CountRejectingBits(feature & _rejectingClassifiers[iClassifier]) + ", ");
             }
@@ -1204,7 +1228,7 @@ namespace Code2Xml.Objects.Tests.Learning {
             foreach (var featureAndGroupKey in _idealRejected) {
                 var feature = featureAndGroupKey.Key;
                 var groupKey = featureAndGroupKey.Value;
-                var groupIndex = GetGroupIndex(groupKey);
+                var groupIndex = GetGroupIndex(feature);
                 Console.Write(
                         CountRejectingBits(feature & _rejectingClassifiers[groupIndex]) + ", ");
             }
@@ -1212,8 +1236,8 @@ namespace Code2Xml.Objects.Tests.Learning {
             Console.Write("WA(R): ");
             foreach (var featureAndGroupKey in _wronglyAcceptedFeatures) {
                 var feature = featureAndGroupKey.Key;
-                var classifier = featureAndGroupKey.Value;
-                var iClassifier = GetGroupIndex(classifier);
+                var groupKey = featureAndGroupKey.Value;
+                var iClassifier = GetGroupIndex(feature);
                 Console.Write(
                         CountRejectingBits(feature & _rejectingClassifiers[iClassifier]) + ", ");
             }
@@ -1221,8 +1245,8 @@ namespace Code2Xml.Objects.Tests.Learning {
             Console.Write("WR(R): ");
             foreach (var featureAndGroupKey in _wronglyRejectedFeatures) {
                 var feature = featureAndGroupKey.Key;
-                var classifier = featureAndGroupKey.Value;
-                var iClassifier = GetGroupIndex(classifier);
+                var groupKey = featureAndGroupKey.Value;
+                var iClassifier = GetGroupIndex(feature);
                 Console.Write(
                         CountRejectingBits(feature & _rejectingClassifiers[iClassifier]) + ", ");
             }
