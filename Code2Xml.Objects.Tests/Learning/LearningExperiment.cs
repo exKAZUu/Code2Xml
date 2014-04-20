@@ -291,8 +291,8 @@ namespace Code2Xml.Objects.Tests.Learning {
                     _acceptingClassifiers = (IList<BigInteger>)formatter.Deserialize(stream);
                     _rejectingClassifiers = (IList<BigInteger>)formatter.Deserialize(stream);
                 }
+	            UpdateGroup();
             }
-            UpdateGroup();
 
             var count = 0;
             var sumTime = Environment.TickCount;
@@ -455,6 +455,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                 throw new Exception("Master predicates can't classify elements!");
             }
 
+            UpdateGroup();
             CreateClassifiers(); // for the first time
 
             Console.WriteLine("Preparing time: " + (Environment.TickCount - preparingTime));

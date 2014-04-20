@@ -84,20 +84,20 @@ namespace Code2Xml.Objects.Tests.Learning {
             var childElements = new List<Tuple<CstNode, string>>();
             if (inner) {
                 childElements.Add(Tuple.Create(node, node.Name));
-                var ancestorStr = "";
-                foreach (var e in node.AncestorsWithSingleChildAndSelf()) {
-                    ancestorStr = ancestorStr + "<" + e.NameWithId();
-                    ret.Add(ancestorStr);
-                }
+				//var ancestorStr = "";
+				//foreach (var e in node.AncestorsWithSingleChildAndSelf()) {
+				//	ancestorStr = ancestorStr + "<" + e.NameWithId();
+				//	ret.Add(ancestorStr);
+				//}
             }
             var i = 1;
             if (outer) {
                 var parentElement = Tuple.Create(node, node.Name);
-                var descendantStr = "";
-                foreach (var e in node.DescendantsOfSingleAndSelf()) {
-                    descendantStr = descendantStr + "<" + e.NameWithId();
-                    ret.Add(descendantStr);
-                }
+				//var descendantStr = "";
+				//foreach (var e in node.DescendantsOfSingleAndSelf()) {
+				//	descendantStr = descendantStr + "<" + e.NameWithId();
+				//	ret.Add(descendantStr);
+				//}
                 // 自分自身の位置による区別も考慮する
                 ret.Add(node.NameAndTokenWithId());
                 for (; i <= length; i++) {
@@ -180,24 +180,24 @@ namespace Code2Xml.Objects.Tests.Learning {
             var childElements = new List<Tuple<CstNode, string>>();
             if (inner) {
                 childElements.Add(Tuple.Create(node, node.Name));
-                var parentStr = "";
-                foreach (var e in node.AncestorsWithSingleChildAndSelf()) {
-                    parentStr = parentStr + "<" + e.NameWithId();
-                    if (key2Bit.TryGetValue(parentStr, out bit)) {
-                        ret |= bit;
-                    }
-                }
+				//var parentStr = "";
+				//foreach (var e in node.AncestorsWithSingleChildAndSelf()) {
+				//	parentStr = parentStr + "<" + e.NameWithId();
+				//	if (key2Bit.TryGetValue(parentStr, out bit)) {
+				//		ret |= bit;
+				//	}
+				//}
             }
             var i = 1;
             if (outer) {
                 var parentElement = Tuple.Create(node, node.Name);
-                var descendantStr = "";
-                foreach (var e in node.DescendantsOfSingleAndSelf()) {
-                    descendantStr = descendantStr + "<" + e.NameWithId();
-                    if (key2Bit.TryGetValue(descendantStr, out bit)) {
-                        ret |= bit;
-                    }
-                }
+				//var descendantStr = "";
+				//foreach (var e in node.DescendantsOfSingleAndSelf()) {
+				//	descendantStr = descendantStr + "<" + e.NameWithId();
+				//	if (key2Bit.TryGetValue(descendantStr, out bit)) {
+				//		ret |= bit;
+				//	}
+				//}
                 // 自分自身の位置による区別も考慮する
                 if (key2Bit.TryGetValue(node.NameAndTokenWithId(), out bit)) {
                     ret |= bit;
