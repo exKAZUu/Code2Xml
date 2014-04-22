@@ -291,7 +291,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                     _acceptingClassifiers = (IList<BigInteger>)formatter.Deserialize(stream);
                     _rejectingClassifiers = (IList<BigInteger>)formatter.Deserialize(stream);
                 }
-	            UpdateGroup();
+                UpdateGroup();
             }
 
             var count = 0;
@@ -319,7 +319,6 @@ namespace Code2Xml.Objects.Tests.Learning {
                         (_acceptedTrainingSet.Count + _rejectedTrainingSet.Count) + " / "
                         + (_idealAccepted.Count + _idealRejected.Count));
                 writer.Write(",");
-                writer.Flush();
             }
 
             //ShowBitsInfo();
@@ -616,38 +615,36 @@ namespace Code2Xml.Objects.Tests.Learning {
                     if (!_acceptedTrainingSet.ContainsKey(feature)
                         && !_rejectedTrainingSet.ContainsKey(feature)) {
                         // AcceptedÇ∆ã§í çÄÇ™ëΩÇ¢Ç‡ÇÃÇë_Ç§
-                        rejectedInAccepting[groupIndex].Add(
-                                new SuspiciousTarget {
-                                    BitsCount =
-                                        -CountAcceptingBits(
-                                                feature & acceptingClassifiers[groupIndex]),
-                                    BitsCount2 =
-                                        -CountBits(feature & acceptingClassifiers[groupIndex]),
-                                    BitsCount3 =
-                                        CountBits(
-                                                (feature & _rejectingMask)
-                                                | _rejectingClassifiers[groupIndex]),
-                                    Feature = feature,
-                                    GroupKey = groupKey,
-                                });
+                        var suspiciousTarget = new SuspiciousTarget {
+                            BitsCount =
+                                -CountAcceptingBits(feature & acceptingClassifiers[groupIndex]),
+                            BitsCount2 = -CountBits(feature & acceptingClassifiers[groupIndex]),
+                            BitsCount3 =
+                                CountBits(
+                                        (feature & _rejectingMask)
+                                        | _rejectingClassifiers[groupIndex]),
+                            Feature = feature,
+                            GroupKey = groupKey,
+                        };
+                        rejectedInAccepting[groupIndex].Add(suspiciousTarget);
                     }
                 } else if (!rejected) {
                     correctlyAccepted++;
                     if (!_acceptedTrainingSet.ContainsKey(feature)
                         && !_rejectedTrainingSet.ContainsKey(feature)) {
                         // AcceptedÇ∆ã§í çÄÇ™è≠Ç»Ç¢Ç‡ÇÃÇë_Ç§
-                        acceptedInAccepting[groupIndex].Add(
-                                new SuspiciousTarget {
-                                    BitsCount = CountAcceptingBits(feature),
-                                    BitsCount2 =
-                                        -CountBits(feature & acceptingClassifiers[groupIndex]),
-                                    BitsCount3 =
-                                        CountBits(
-                                                (feature & _rejectingMask)
-                                                | _rejectingClassifiers[groupIndex]),
-                                    Feature = feature,
-                                    GroupKey = groupKey,
-                                });
+                        var suspiciousTarget = new SuspiciousTarget {
+                            BitsCount = CountAcceptingBits(feature),
+                            BitsCount2 =
+                                -CountBits(feature & acceptingClassifiers[groupIndex]),
+                            BitsCount3 =
+                                CountBits(
+                                        (feature & _rejectingMask)
+                                        | _rejectingClassifiers[groupIndex]),
+                            Feature = feature,
+                            GroupKey = groupKey,
+                        };
+                        acceptedInAccepting[groupIndex].Add(suspiciousTarget);
                     }
                 } else {
                     wronglyRejectedInRejecting++;
@@ -801,14 +798,30 @@ namespace Code2Xml.Objects.Tests.Learning {
                 break;
             case 1:
 
-                // Best(0)
                 var time2 = Environment.TickCount;
-                SuspiciousAcceptedInAccepting = SelectVariousElements(
-                        acceptedInAccepting, _acceptingMask);
-                SuspiciousRejectedInAccepting = SelectVariousElements(
-                        rejectedInAccepting, _acceptingMask);
-                SuspiciousRejectedInRejecting = FlattenSuspiciousTargetsList(rejectedInRejecting);
-                Console.WriteLine("SelectVariousElements: " + (Environment.TickCount - time2));
+                SuspiciousAcceptedInAccepting =
+                        SelectNodesForSlowAcceptanceLearning(acceptedInAccepting);
+                SuspiciousRejectedInAccepting =
+                        SelectNodesForSlowAcceptanceLearning(rejectedInAccepting);
+                SuspiciousRejectedInRejecting =
+                        SelectNodesForSlowAcceptanceLearning(rejectedInRejecting);
+                SuspiciousAcceptedInAccepting
+                        .AddRange(SelectNodesForSlowRejectionLearning(acceptedInAccepting));
+                SuspiciousRejectedInAccepting
+                        .AddRange(SelectNodesForSlowRejectionLearning(rejectedInAccepting));
+                SuspiciousRejectedInRejecting
+                        .AddRange(SelectNodesForSlowRejectionLearning(rejectedInRejecting));
+                Console.WriteLine(
+                        "SelectNodesForSlowAcceptanceLearning: " + (Environment.TickCount - time2));
+
+                // Best(0)
+                //var time2 = Environment.TickCount;
+                //SuspiciousAcceptedInAccepting = SelectVariousElements(
+                //        acceptedInAccepting, _acceptingMask);
+                //SuspiciousRejectedInAccepting = SelectVariousElements(
+                //        rejectedInAccepting, _acceptingMask);
+                //SuspiciousRejectedInRejecting = FlattenSuspiciousTargetsList(rejectedInRejecting);
+                //Console.WriteLine("SelectVariousElements: " + (Environment.TickCount - time2));
 
                 //SuspiciousAcceptedInAccepting = SelectVariousElements(
                 //        acceptedInAccepting, _acceptingMask);
@@ -1085,28 +1098,6 @@ namespace Code2Xml.Objects.Tests.Learning {
                 targets.RemoveRange(targets.Count - length, length);
             }
             return ret;
-
-            //var classifiers = _acceptingClassifiers.ToList();
-            //var ret = new List<SuspiciousTarget>();
-            //for (int j = 0; j < 3; j++) {
-            //    var updated = false;
-            //    for (int i = 0; i < targetsList.Count; i++) {
-            //        var classifier = classifiers[i];
-            //        var e = targetsList[i]
-            //                .Where(t => !added.Contains(t.Feature))
-            //                .MinElementOrDefault(t => CountBits(classifier & t.Feature));
-            //        if (e != null) {
-            //            ret.Add(e);
-            //            added.Add(e.Feature);
-            //            classifiers[i] &= e.Feature;
-            //            updated = true;
-            //        }
-            //    }
-            //    if (!updated) {
-            //        break;
-            //    }
-            //}
-            //return ret;
         }
 
         private List<SuspiciousTarget> SelectNodesForFastRejectionLearning(
@@ -1123,32 +1114,52 @@ namespace Code2Xml.Objects.Tests.Learning {
                 targets.RemoveRange(targets.Count - length, length);
             }
             return ret;
+        }
 
-            //var classifiers = _rejectingClassifiers.ToList();
-            //var ret = new List<SuspiciousTarget>();
-            //for (int j = 0; j < 3; j++) {
-            //    var updated = false;
-            //    for (int i = 0; i < targetsList.Count; i++) {
-            //        var classifier = classifiers[i];
-            //        var e = targetsList[i]
-            //                .Where(t => !added.Contains(t.Feature))
-            //                .MinElementOrDefault(
-            //                        t =>
-            //                                CountBits(
-            //                                        classifier
-            //                                        & ((t.Feature & _rejectingMask) ^ _rejectingMask)));
-            //        if (e != null) {
-            //            ret.Add(e);
-            //            added.Add(e.Feature);
-            //            updated = true;
-            //            classifiers[i] &= ((e.Feature & _rejectingMask) ^ _rejectingMask);
-            //        }
-            //    }
-            //    if (!updated) {
-            //        break;
-            //    }
-            //}
-            //return ret;
+        private List<SuspiciousTarget> SelectNodesForSlowAcceptanceLearning(
+                List<List<SuspiciousTarget>> targetsList) {
+            const int targetCount = 3;
+            var ret = new List<SuspiciousTarget>();
+            for (int i = 0; i < targetsList.Count; i++) {
+                var targets = targetsList[i];
+                targets.Sort((t1, t2) => -t1.BitsCount2.CompareTo(t2.BitsCount2));
+                var count = targets.Count;
+                while (count > 0 && targets[count - 1].BitsCount2 != 0) {
+                    count--;
+                }
+                if (count <= 0) {
+                    continue;
+                }
+                var length = Math.Min(count, targetCount);
+                for (int j = count - length; j < count; j++) {
+                    ret.Add(targets[j]);
+                }
+                targets.RemoveRange(targets.Count - length, length);
+            }
+            return ret;
+        }
+
+        private List<SuspiciousTarget> SelectNodesForSlowRejectionLearning(
+                List<List<SuspiciousTarget>> targetsList) {
+            const int targetCount = 3;
+            var ret = new List<SuspiciousTarget>();
+            for (int i = 0; i < targetsList.Count; i++) {
+                var targets = targetsList[i];
+                targets.Sort((t1, t2) => -t1.BitsCount3.CompareTo(t2.BitsCount3));
+                var count = targets.Count;
+                while (count > 0 && targets[count - 1].BitsCount2 != 0) {
+                    count--;
+                }
+                if (count <= 0) {
+                    continue;
+                }
+                var length = Math.Min(count, targetCount);
+                for (int j = count - length; j < count; j++) {
+                    ret.Add(targets[j]);
+                }
+                targets.RemoveRange(targets.Count - length, length);
+            }
+            return ret;
         }
 
         #endregion

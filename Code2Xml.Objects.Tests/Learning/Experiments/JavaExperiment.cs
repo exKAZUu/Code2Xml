@@ -21,7 +21,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Code2Xml.Core.Generators;
+using LibGit2Sharp;
 using NUnit.Framework;
+using NUnit.Framework.Constraints;
 using ParserTests;
 
 namespace Code2Xml.Objects.Tests.Learning.Experiments {
@@ -393,6 +395,43 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             }
             exp.Clear();
             Assert.That(exp.WrongFeatureCount, Is.EqualTo(0));
+        }
+
+        public void CalculateMetrics(LearningExperiment exp, string projectPath, int starCount) {
+            if (!(exp is JavaSuperComplexBranchExperiment)) 
+                return;
+            var allPaths = Directory.GetFiles(projectPath, "*.java", SearchOption.AllDirectories)
+                    .ToList();
+            var allNodes = allPaths.Select(p => Generator.GenerateTreeFromCodePath(p))
+                    .SelectMany(r => r.DescendantsAndSelf());
+            var statementCount = 0;
+            var branchCount = 0;
+            foreach (var node in allNodes) {
+                if (node.Name == "statement") {
+                    switch (node.FirstChild.TokenText) {
+                        case "if":
+                        case "while":
+                        case "do":
+                        case "switch":
+                            branchCount++;
+                            break;
+                    }
+                }
+                else if (node.Name == "conditionalExpression" && node.Children().Skip(1).Any()) {
+                    branchCount++;
+                }
+                else if (node.Name == "switchLabel" && node.FirstChild.TokenText == "case") {
+                    branchCount++;
+                }
+                else if (node.Name == "statement" || node.Name == "localVariableDeclarationStatement") {
+                    statementCount++;
+                }
+            }
+            _writer.Write(statementCount + ",");
+            _writer.Write(branchCount + ",");
+            _writer.WriteLine();
+            _writer.Flush();
+
         }
     }
 

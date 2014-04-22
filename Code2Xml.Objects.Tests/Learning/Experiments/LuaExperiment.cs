@@ -37,9 +37,10 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                 var exps = new LearningExperiment[] {
                     new LuaComplexStatementExperiment(),
                     new LuaSuperComplexBranchExperiment(),
-                    new LuaExpressionStatementExperiment(),
-                    new LuaArithmeticOperatorExperiment(),
-                    new LuaSuperComplexBranchExperimentWithoutTrue(), 
+                    //new LuaExpressionStatementExperiment(),
+                    //new LuaArithmeticOperatorExperiment(),
+                    //new LuaSuperComplexBranchExperimentWithoutTrue(), 
+
                     //new LuaComplexBranchExperiment(),
                     //new LuaStatementExperiment(),
                     //new LuaIfExperiment(),
