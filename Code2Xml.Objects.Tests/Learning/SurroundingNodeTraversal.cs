@@ -84,24 +84,23 @@ namespace Code2Xml.Objects.Tests.Learning {
 
             var ret = new HashSet<string>();
             // 自分自身の位置による区別も考慮する
-            ret.Add(node.Name);
+            //ret.Add(node.Name);
             ret.Add(node.RuleId);
+            ret.Add("'" + node.TokenText);
 
             var children = new List<Tuple<CstNode, string>>();
             if (inner) {
-                children.Add(Tuple.Create(node, node.Name));
-                if (!outer) {
-                    var ancestorStr = node.Name;
-                    foreach (var e in node.AncestorsWithSingleChild()) {
-                        ancestorStr = ancestorStr + "<" + e.RuleId;
-                        ret.Add(ancestorStr);
-                    }
-                }
+                children.Add(Tuple.Create(node, ""));
+                //var ancestorStr = "";
+                //foreach (var e in node.AncestorsWithSingleChild()) {
+                //    ancestorStr = ancestorStr + "<" + e.RuleId;
+                //    ret.Add(ancestorStr);
+                //}
             }
             var i = 1;
             if (outer) {
-                var parent = Tuple.Create(node, node.Name);
-                //var descendantStr = node.Name;
+                var parent = Tuple.Create(node, "");
+                //var descendantStr = "";
                 //foreach (var e in node.DescendantsOfSingle()) {
                 //    descendantStr = descendantStr + ">" + e.RuleId;
                 //    ret.Add(descendantStr);
@@ -122,7 +121,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                                         var key = parent.Item2 + "<-" + index + "-" + e.RuleId;
                                         newChildren.Add(Tuple.Create(e, key));
                                         // for Preconditions.checkArguments()
-                                        ret.Add(parent.Item2 + /*">-" + index +*/ "-'" + e.TokenText);
+                                        ret.Add(parent.Item2 + "<-" + index + "-'" + e.TokenText);
                                     });
                     parent.Item1.NextsFromSelf().Take(10)
                             .ForEach(
@@ -130,7 +129,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                                         var key = parent.Item2 + ">-" + index + "-" + e.RuleId;
                                         newChildren.Add(Tuple.Create(e, key));
                                         // for Preconditions.checkArguments()
-                                        ret.Add(parent.Item2 + /*">-" + index +*/ "-'" + e.TokenText);
+                                        ret.Add(parent.Item2 + ">-" + index + "-'" + e.TokenText);
                                     });
                     ret.UnionWith(newChildren.Select(t => t.Item2));
                     children = newChildren;
@@ -170,32 +169,33 @@ namespace Code2Xml.Objects.Tests.Learning {
 
             var ret = BigInteger.Zero;
             BigInteger bit;
-            if (key2Bit.TryGetValue(node.Name, out bit)) {
+            //if (key2Bit.TryGetValue(node.Name, out bit)) {
+            //    ret |= bit;
+            //}
+            if (key2Bit.TryGetValue(node.RuleId, out bit)) {
                 ret |= bit;
             }
-            if (key2Bit.TryGetValue(node.RuleId, out bit)) {
+            if (key2Bit.TryGetValue("'" + node.TokenText, out bit)) {
                 ret |= bit;
             }
 
             var children = new List<Tuple<CstNode, string>>();
             if (inner) {
-                children.Add(Tuple.Create(node, node.Name));
-                if (!outer) {
-                    var ancestorStr = node.Name;
-                    foreach (var e in node.AncestorsWithSingleChildAndSelf()) {
-                        ancestorStr = ancestorStr + "<" + e.RuleId;
-                        if (key2Bit.TryGetValue(ancestorStr, out bit)) {
-                            ret |= bit;
-                        }
-                    }
-                }
+                children.Add(Tuple.Create(node, ""));
+                //var ancestorStr = "";
+                //foreach (var e in node.AncestorsWithSingleChild()) {
+                //    ancestorStr = ancestorStr + "<" + e.RuleId;
+                //    if (key2Bit.TryGetValue(ancestorStr, out bit)) {
+                //        ret |= bit;
+                //    }
+                //}
             }
             var i = 1;
             if (outer) {
-                var parent = Tuple.Create(node, node.Name);
+                var parent = Tuple.Create(node, "");
                 //var descendantStr = "";
                 //foreach (var e in node.DescendantsOfSingle()) {
-                //    descendantStr = descendantStr + "<" + e.RuleId;
+                //    descendantStr = descendantStr + ">" + e.RuleId;
                 //    if (key2Bit.TryGetValue(descendantStr, out bit)) {
                 //        ret |= bit;
                 //    }
@@ -224,7 +224,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                                             ret |= bit;
                                         }
                                         if (key2Bit.TryGetValue(
-                                                parent.Item2 + /*"<-" + index +*/ "-'" + e.TokenText,
+                                                parent.Item2 + "<-" + index + "-'" + e.TokenText,
                                                 out bit)) {
                                             ret |= bit;
                                         }
@@ -238,7 +238,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                                             ret |= bit;
                                         }
                                         if (key2Bit.TryGetValue(
-                                                parent.Item2 + /*"<-" + index +*/ "-'" + e.TokenText,
+                                                parent.Item2 + ">-" + index + "-'" + e.TokenText,
                                                 out bit)) {
                                             ret |= bit;
                                         }
