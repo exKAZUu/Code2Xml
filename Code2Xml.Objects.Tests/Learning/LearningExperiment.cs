@@ -224,7 +224,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                     Path.Combine(
                             projectPath ?? "",
                             GetType().Name + Code2XmlConstants.LearningCacheExtension));
-            if (true || string.IsNullOrEmpty(projectPath) || !cacheFile.Exists) {
+            if (string.IsNullOrEmpty(projectPath) || !cacheFile.Exists) {
                 var allAsts = allPaths.Select(
                         path => Generator.GenerateTreeFromCode(new FileInfo(path), null, true));
                 var seedAsts = seedPaths.Select(
@@ -703,32 +703,32 @@ namespace Code2Xml.Objects.Tests.Learning {
                 SelectSuspicioutRejectedNodes(rejectAccept);
 
                 SelectNodesForFastAcceptanceLearning(rejectAccept);
-                SelectNodesForSlowAcceptanceLearning(rejectAccept);
+                //SelectNodesForSlowAcceptanceLearning(rejectAccept);
                 SelectNodesForFastAcceptanceLearning(rejectReject);
-                SelectNodesForSlowAcceptanceLearning(rejectReject);
+                //SelectNodesForSlowAcceptanceLearning(rejectReject);
 
                 SelectNodesForFastRejectionLearning(acceptReject);
-                SelectNodesForSlowRejectionLearning(acceptReject);
+                //SelectNodesForSlowRejectionLearning(acceptReject);
                 SelectNodesForFastRejectionLearning(rejectReject);
-                SelectNodesForSlowRejectionLearning(rejectReject);
+                //SelectNodesForSlowRejectionLearning(rejectReject);
                 Console.WriteLine(
                         "SelectSuspicioutAcceptedNodes: " + (Environment.TickCount - time1));
                 break;
             case 1:
                 var time2 = Environment.TickCount;
-                SelectSuspicioutAcceptedNodesStrongly(acceptAccept);
-                SelectSuspicioutAcceptedNodesStrongly(acceptReject);
-                SelectSuspicioutRejectedNodesStrongly(acceptAccept);
-                SelectSuspicioutRejectedNodesStrongly(rejectAccept);
+				//SelectSuspicioutAcceptedNodesStrongly(acceptAccept);
+				//SelectSuspicioutAcceptedNodesStrongly(acceptReject);
+				//SelectSuspicioutRejectedNodesStrongly(acceptAccept);
+				//SelectSuspicioutRejectedNodesStrongly(rejectAccept);
 
-                SelectNodesForFastAcceptanceLearningStrongly(rejectAccept);
+                //SelectNodesForFastAcceptanceLearningStrongly(rejectAccept);
                 SelectNodesForSlowAcceptanceLearningStrongly(rejectAccept);
-                SelectNodesForFastAcceptanceLearningStrongly(rejectReject);
+                //SelectNodesForFastAcceptanceLearningStrongly(rejectReject);
                 SelectNodesForSlowAcceptanceLearningStrongly(rejectReject);
 
-                SelectNodesForFastRejectionLearningStrongly(acceptReject);
+                //SelectNodesForFastRejectionLearningStrongly(acceptReject);
                 SelectNodesForSlowRejectionLearningStrongly(acceptReject);
-                SelectNodesForFastRejectionLearningStrongly(rejectReject);
+                //SelectNodesForFastRejectionLearningStrongly(rejectReject);
                 SelectNodesForSlowRejectionLearningStrongly(rejectReject);
                 Console.WriteLine(
                         "SelectSuspicioutAcceptedNodesStrongly: " + (Environment.TickCount - time2));
@@ -1027,6 +1027,11 @@ namespace Code2Xml.Objects.Tests.Learning {
         private void SelectNodesForSlowAcceptanceLearning(List<List<SuspiciousTarget>> targetsList) {
             for (int i = 0; i < targetsList.Count; i++) {
                 var targets = targetsList[i];
+                var classifier = _acceptingClassifiers[i];
+                foreach (var target in targets) {
+                    target.BitsCount = CountBits(target.Feature & classifier);
+                }
+                targets.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
                 var count = TargetCount;
                 for (int j = targets.Count - 1; j >= 0; j--) {
                     var target = targets[j];
@@ -1067,6 +1072,12 @@ namespace Code2Xml.Objects.Tests.Learning {
         private void SelectNodesForSlowRejectionLearning(List<List<SuspiciousTarget>> targetsList) {
             for (int i = 0; i < targetsList.Count; i++) {
                 var targets = targetsList[i];
+                var classifier = _rejectingClassifiers[i];
+                foreach (var target in targets) {
+                    target.BitsCount = CountBits(
+                            (target.Feature & _rejectingMask) | classifier);
+                }
+                targets.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
                 var count = TargetCount;
                 foreach (var target in targets) {
                     if (!target.Used) {
@@ -1150,6 +1161,11 @@ namespace Code2Xml.Objects.Tests.Learning {
                 List<List<SuspiciousTarget>> targetsList) {
             for (int i = 0; i < targetsList.Count; i++) {
                 var targets = targetsList[i];
+                var classifier = _acceptingClassifiers[i];
+                foreach (var target in targets) {
+                    target.BitsCount = CountBits(target.Feature & classifier);
+                }
+                targets.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
                 var feature = BigInteger.Zero;
                 for (int j = targets.Count - 1; j >= 0; j--) {
                     var target = targets[j];
@@ -1194,6 +1210,12 @@ namespace Code2Xml.Objects.Tests.Learning {
                 List<List<SuspiciousTarget>> targetsList) {
             for (int i = 0; i < targetsList.Count; i++) {
                 var targets = targetsList[i];
+                var classifier = _rejectingClassifiers[i];
+                foreach (var target in targets) {
+                    target.BitsCount = CountBits(
+                            (target.Feature & _rejectingMask) | classifier);
+                }
+                targets.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
                 var feature = _rejectingMask;
                 foreach (var target in targets) {
                     if (!target.Used) {
