@@ -98,7 +98,9 @@ namespace Code2Xml.Objects.Tests.Learning {
         private const int SurroundingLength = 7;
         private const int LearningCount = 5;
         private const int GroupKeyLength = 5;
-        private const int TargetCount = 3;
+        private const int TargetCount = 5;
+        private const int StronglyTargetCount = 10000000;
+        private const int ThresholdFeatureCount = 10000000;
         private IDictionary<string, BigInteger> _masterFeatures;
         private List<string> _groupKeys;
         private Dictionary<BigInteger, int> _feature2GroupIndex;
@@ -961,6 +963,16 @@ namespace Code2Xml.Objects.Tests.Learning {
             return suspiciousElements;
         }
 
+        private int DetermineCount(int i) {
+            return CountBits(_acceptingClassifiers[i]) > ThresholdFeatureCount
+                    ? TargetCount : TargetCount / 2;
+        }
+
+        private int DetermineStrongCount(int i) {
+            return CountBits(_acceptingClassifiers[i]) > ThresholdFeatureCount
+                    ? StronglyTargetCount : StronglyTargetCount / 2;
+        }
+
         private void SelectSuspicioutAcceptedNodes(List<List<SuspiciousTarget>> targetsList) {
             for (int i = 0; i < targetsList.Count; i++) {
                 var targets = targetsList[i];
@@ -968,7 +980,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                     target.BitsCount = CountBits(target.Feature & _acceptingMask);
                 }
                 targets.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
-                var count = TargetCount;
+                var count = DetermineCount(i);
                 foreach (var target in targets) {
                     if (!target.Used) {
                         SuspiciousTargets.Add(target);
@@ -988,7 +1000,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                     target.BitsCount = CountBits(target.Feature & _rejectingMask);
                 }
                 targets.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
-                var count = TargetCount;
+                var count = DetermineCount(i);
                 for (int j = targets.Count - 1; j >= 0; j--) {
                     var target = targets[j];
                     if (!target.Used) {
@@ -1011,7 +1023,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                     target.BitsCount = CountBits(target.Feature & classifier);
                 }
                 targets.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
-                var count = TargetCount;
+                var count = DetermineCount(i);
                 foreach (var target in targets) {
                     if (!target.Used) {
                         SuspiciousTargets.Add(target);
@@ -1032,7 +1044,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                     target.BitsCount = CountBits(target.Feature & classifier);
                 }
                 targets.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
-                var count = TargetCount;
+                var count = DetermineCount(i);
                 for (int j = targets.Count - 1; j >= 0; j--) {
                     var target = targets[j];
                     if (!target.Used) {
@@ -1055,7 +1067,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                             (target.Feature & _rejectingMask) | classifier);
                 }
                 targets.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
-                var count = TargetCount;
+                var count = DetermineCount(i);
                 for (int j = targets.Count - 1; j >= 0; j--) {
                     var target = targets[j];
                     if (!target.Used) {
@@ -1078,7 +1090,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                             (target.Feature & _rejectingMask) | classifier);
                 }
                 targets.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
-                var count = TargetCount;
+                var count = DetermineCount(i);
                 foreach (var target in targets) {
                     if (!target.Used) {
                         SuspiciousTargets.Add(target);
@@ -1099,6 +1111,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                 }
                 targets.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
                 var feature = BigInteger.Zero;
+                var count = DetermineStrongCount(i);
                 foreach (var target in targets) {
                     if (!target.Used) {
                         var newFeature = (feature | target.Feature) & _acceptingMask;
@@ -1106,6 +1119,9 @@ namespace Code2Xml.Objects.Tests.Learning {
                             feature = newFeature;
                             SuspiciousTargets.Add(target);
                             target.Used = true;
+                            if (--count == 0) {
+                                break;
+                            }
                         }
                     }
                 }
@@ -1120,6 +1136,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                 }
                 targets.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
                 var feature = _rejectingMask;
+                var count = DetermineStrongCount(i);
                 for (int j = targets.Count - 1; j >= 0; j--) {
                     var target = targets[j];
                     if (!target.Used) {
@@ -1128,6 +1145,9 @@ namespace Code2Xml.Objects.Tests.Learning {
                             feature = newFeature;
                             SuspiciousTargets.Add(target);
                             target.Used = true;
+                            if (--count == 0) {
+                                break;
+                            }
                         }
                     }
                 }
@@ -1144,6 +1164,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                 }
                 targets.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
                 var feature = BigInteger.Zero;
+                var count = DetermineStrongCount(i);
                 foreach (var target in targets) {
                     if (!target.Used) {
                         var newFeature = (feature | target.Feature) & _acceptingMask;
@@ -1151,6 +1172,9 @@ namespace Code2Xml.Objects.Tests.Learning {
                             feature = newFeature;
                             SuspiciousTargets.Add(target);
                             target.Used = true;
+                            if (--count == 0) {
+                                break;
+                            }
                         }
                     }
                 }
@@ -1167,6 +1191,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                 }
                 targets.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
                 var feature = BigInteger.Zero;
+                var count = DetermineStrongCount(i);
                 for (int j = targets.Count - 1; j >= 0; j--) {
                     var target = targets[j];
                     if (!target.Used) {
@@ -1175,6 +1200,9 @@ namespace Code2Xml.Objects.Tests.Learning {
                             feature = newFeature;
                             SuspiciousTargets.Add(target);
                             target.Used = true;
+                            if (--count == 0) {
+                                break;
+                            }
                         }
                     }
                 }
@@ -1192,6 +1220,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                 }
                 targets.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
                 var feature = _rejectingMask;
+                var count = DetermineStrongCount(i);
                 for (int j = targets.Count - 1; j >= 0; j--) {
                     var target = targets[j];
                     if (!target.Used) {
@@ -1200,6 +1229,9 @@ namespace Code2Xml.Objects.Tests.Learning {
                             feature = newFeature;
                             SuspiciousTargets.Add(target);
                             target.Used = true;
+                            if (--count == 0) {
+                                break;
+                            }
                         }
                     }
                 }
@@ -1217,6 +1249,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                 }
                 targets.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
                 var feature = _rejectingMask;
+                var count = DetermineStrongCount(i);
                 foreach (var target in targets) {
                     if (!target.Used) {
                         var newFeature = feature & target.Feature;
@@ -1224,6 +1257,9 @@ namespace Code2Xml.Objects.Tests.Learning {
                             feature = newFeature;
                             SuspiciousTargets.Add(target);
                             target.Used = true;
+                            if (--count == 0) {
+                                break;
+                            }
                         }
                     }
                 }
