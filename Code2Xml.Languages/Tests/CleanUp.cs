@@ -32,9 +32,14 @@ namespace Code2Xml.Languages.Tests {
 		[Test]
 		public void ShowCandidates() {
 			var fixturePath = Fixture.FixturePath;
-			var directories = Directory.GetDirectories(
-					fixturePath, ".git", SearchOption.AllDirectories)
-					.Select(Path.GetDirectoryName)
+		    var gitDirs = Directory.GetDirectories(
+		            fixturePath, ".git", SearchOption.AllDirectories)
+		            .Select(Path.GetDirectoryName)
+		            .ToList();
+		    foreach (var gitDir in gitDirs) {
+		        Git.Reset(gitDir);
+		    }
+			var directories = gitDirs
 					.Where(
 							path =>
 									Directory.GetDirectories(path).Length
