@@ -21,9 +21,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Code2Xml.Core.Generators;
-using LibGit2Sharp;
 using NUnit.Framework;
-using NUnit.Framework.Constraints;
 using ParserTests;
 
 namespace Code2Xml.Objects.Tests.Learning.Experiments {
@@ -398,8 +396,9 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
 
         public void CalculateMetrics(LearningExperiment exp, string projectPath, int starCount) {
-            if (!(exp is JavaSuperComplexBranchExperiment)) 
+            if (!(exp is JavaSuperComplexBranchExperiment)) {
                 return;
+            }
             var allPaths = Directory.GetFiles(projectPath, "*.java", SearchOption.AllDirectories)
                     .ToList();
             var allNodes = allPaths.Select(p => Generator.GenerateTreeFromCodePath(p))
@@ -409,21 +408,18 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             foreach (var node in allNodes) {
                 if (node.Name == "statement") {
                     switch (node.FirstChild.TokenText) {
-                        case "if":
-                        case "while":
-                        case "do":
-                        case "switch":
-                            branchCount++;
-                            break;
+                    case "if":
+                    case "while":
+                    case "do":
+                    case "switch":
+                        branchCount++;
+                        break;
                     }
-                }
-                else if (node.Name == "conditionalExpression" && node.Children().Skip(1).Any()) {
+                } else if (node.Name == "conditionalExpression" && node.Children().Skip(1).Any()) {
                     branchCount++;
-                }
-                else if (node.Name == "switchLabel" && node.FirstChild.TokenText == "case") {
+                } else if (node.Name == "switchLabel" && node.FirstChild.TokenText == "case") {
                     branchCount++;
-                }
-                else if (node.Name == "statement" || node.Name == "localVariableDeclarationStatement") {
+                } else if (node.Name == "statement" || node.Name == "localVariableDeclarationStatement") {
                     statementCount++;
                 }
             }
@@ -431,7 +427,6 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             _writer.Write(branchCount + ",");
             _writer.WriteLine();
             _writer.Flush();
-
         }
     }
 

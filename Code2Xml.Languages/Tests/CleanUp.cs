@@ -60,6 +60,24 @@ namespace Code2Xml.Languages.Tests {
 		}
 
 		[Test]
+		public void MoveToDropbox() {
+		    const string dropBoxPath = @"C:\Users\exKAZUu\Dropbox\Git";
+		    Directory.CreateDirectory(dropBoxPath);
+
+			var fixturePath = Fixture.FixturePath;
+		    var cacheFilePaths = Directory.GetFiles(
+		            fixturePath, "*" + Code2XmlConstants.LearningCacheExtension, SearchOption.AllDirectories)
+		            .ToList();
+		    foreach (var cacheFilePath in cacheFilePaths) {
+		        var dirPath = Path.GetDirectoryName(cacheFilePath);
+		        var dirName = Path.GetFileName(dirPath);
+		        var toPath = Path.Combine(dropBoxPath, dirName);
+		        Directory.CreateDirectory(toPath);
+		        File.Copy(cacheFilePath, Path.Combine(toPath, Path.GetFileName(cacheFilePath)), true);
+		    }
+		}
+
+		[Test]
 		public void GenerateTestCases() {
 			var inPath = @"C:\Users\exKAZUu\Desktop\repo.csv";
 			var set = new HashSet<string>();
