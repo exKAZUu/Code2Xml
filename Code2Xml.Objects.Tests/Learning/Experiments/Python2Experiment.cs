@@ -40,7 +40,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 					new PythonSuperComplexBranchExperiment(),
 					new PythonExpressionStatementExperiment(),
 					new PythonArithmeticOperatorExperiment(), 
-					new PythonEmptyStatementExperiment(),
+                    new PythonSuperComplexBranchExperimentWithoutTrue(), 
+					//new PythonEmptyStatementExperiment(),
 				};
 				var learningSets = new[] {
 					Tuple.Create(
