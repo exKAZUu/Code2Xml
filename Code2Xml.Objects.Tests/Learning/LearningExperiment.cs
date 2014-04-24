@@ -175,14 +175,9 @@ namespace Code2Xml.Objects.Tests.Learning {
 			if (IsInner) {
 				//node = node.AncestorsOfOnlyChildAndSelf().Last(); // TODO
 				// TODO: descendants may be empty list
-				var descendants = node.DescendantsOfFirstChild()
+				groupKeySequence = node.DescendantsOfFirstChild()
 						.Take(GroupKeyLength)
-						.ToList();
-				groupKeySequence = descendants.Select(e => e.RuleId);
-				if (descendants[descendants.Count - 1].HasToken) {
-					groupKeySequence =
-							groupKeySequence.Concat(GetToken(descendants[descendants.Count - 1]));
-				}
+						.Select(e => e.HasToken ? e.RuleId + GetToken(e) : e.RuleId);
 			} else {
 				//node = node.DescendantsOfOnlyChildAndSelf().Last(); // TODO
 				groupKeySequence = node.AncestorsAndSelf()
@@ -292,8 +287,14 @@ namespace Code2Xml.Objects.Tests.Learning {
 					_acceptingClassifiers = (IList<BigInteger>)formatter.Deserialize(stream);
 					_rejectingClassifiers = (IList<BigInteger>)formatter.Deserialize(stream);
 				}
-				UpdateGroup();
 			}
+
+			_groupKeys = _elementNames.Select(n => ">" + n + ">")
+					.ToList();
+			UpdateGroup();
+			_acceptingClassifiers = InitializeAcceptingClassifiers();
+			_rejectingClassifiers = InitializeRejectingClassifiers();
+			CreateClassifiers(_acceptedTrainingSet); // for the first time
 
 			var count = 0;
 			var sumTime = Environment.TickCount;
@@ -452,10 +453,8 @@ namespace Code2Xml.Objects.Tests.Learning {
 				throw new Exception("Master predicates can't classify elements!");
 			}
 
-			UpdateGroup();
-			_acceptingClassifiers = InitializeAcceptingClassifiers();
-			_rejectingClassifiers = InitializeRejectingClassifiers();
-			CreateClassifiers(_acceptedTrainingSet); // for the first time
+			_acceptingClassifiers = new List<BigInteger>();
+			_rejectingClassifiers = new List<BigInteger>();
 
 			Console.WriteLine("Preparing time: " + (Environment.TickCount - preparingTime));
 		}
