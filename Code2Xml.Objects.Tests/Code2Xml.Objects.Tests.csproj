@@ -75,7 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Generators\CstGeneratorsTest.cs" />
-    <Compile Include="Learning\SvmExperiments\JavaSvmExperiment.cs" />
     <Compile Include="Learning\LearningSvmExperiment.cs" />
     <Compile Include="Learning\SvmLearnerWithGaussian.cs" />
     <Compile Include="Learning\Experiments\Python2Experiment.cs" />
@@ -118,6 +117,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Learning\SvmExperiments\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

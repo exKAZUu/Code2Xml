@@ -29,7 +29,7 @@ using Paraiba.Collections.Generic;
 using Paraiba.Linq;
 
 namespace Code2Xml.Objects.Tests.Learning {
-	public abstract class LearningExperiment {
+	public abstract class LearningExperiment : ILearningExperiment {
 		public class SuspiciousTarget {
 			public int BitsCount { get; set; }
 			public boolean Used { get; set; }
@@ -50,7 +50,11 @@ namespace Code2Xml.Objects.Tests.Learning {
 		public int WrongFeatureCount { get; set; }
 		public int WrongElementCount { get; set; }
 		protected abstract CstGenerator Generator { get; }
-		protected abstract bool IsInner { get; }
+		public abstract bool IsInner { get; }
+
+		public virtual string GetToken(CstNode e) {
+			return e.TokenText;
+		}
 
 		public Dictionary<BigInteger, CstNode> Feature2Element {
 			get { return _feature2Element; }
@@ -174,16 +178,16 @@ namespace Code2Xml.Objects.Tests.Learning {
 				var descendants = node.DescendantsOfFirstChild()
 						.Take(GroupKeyLength)
 						.ToList();
-				groupKeySequence = descendants.Select(e => e.NameAndTokenWithId());
+				groupKeySequence = descendants.Select(e => e.RuleId);
 				if (descendants[descendants.Count - 1].HasToken) {
 					groupKeySequence =
-							groupKeySequence.Concat(descendants[descendants.Count - 1].TokenText);
+							groupKeySequence.Concat(GetToken(descendants[descendants.Count - 1]));
 				}
 			} else {
 				//node = node.DescendantsOfOnlyChildAndSelf().Last(); // TODO
 				groupKeySequence = node.AncestorsAndSelf()
 						.Take(GroupKeyLength)
-						.Select(e => e.NameAndTokenWithId());
+						.Select(e => e.RuleId);
 			}
 
 			var groupKey = ">" + node.Name + ">" + string.Join(">", groupKeySequence) + ">";
@@ -379,13 +383,13 @@ namespace Code2Xml.Objects.Tests.Learning {
 				}
 			}
 			var acceptingFeatures = seedAcceptedElements
-					.GetUnionKeys(SurroundingLength, IsInner, !IsInner)
+					.GetUnionKeys(SurroundingLength, this)
 					.ToHashSet()
 					.ToList();
 			acceptingFeatures.Sort((s1, s2) => s1.Length.CompareTo(s2.Length));
 			_acceptingFeatureCount = acceptingFeatures.Count;
 			var rejectingFeatureSet = seedRejectedElements
-					.GetUnionKeys(SurroundingLength, IsInner, !IsInner)
+					.GetUnionKeys(SurroundingLength, this)
 					.ToHashSet();
 			rejectingFeatureSet.ExceptWith(acceptingFeatures);
 			var rejectingFeatures = rejectingFeatureSet.ToList();
@@ -406,25 +410,22 @@ namespace Code2Xml.Objects.Tests.Learning {
 			_rejectingMask = _mask ^ _acceptingMask;
 
 			foreach (var e in seedAcceptedElements) {
-				var feature = e.GetSurroundingBits(
-						SurroundingLength, _masterFeatures, IsInner, !IsInner);
+				var feature = e.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
 				UpdateDict(_idealAccepted, feature, e);
 				_acceptedTrainingSet[feature] = _idealAccepted[feature];
-				_feature2Element[feature] = e;
+				//_feature2Element[feature] = e;
 			}
 			foreach (var e in seedRejectedElements) {
-				var feature = e.GetSurroundingBits(
-						SurroundingLength, _masterFeatures, IsInner, !IsInner);
+				var feature = e.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
 				UpdateDict(_idealRejected, feature, e);
 				_rejectedTrainingSet[feature] = _idealRejected[feature];
-				_feature2Element[feature] = e;
+				//_feature2Element[feature] = e;
 			}
 
 			foreach (var ast in allAsts) {
 				Console.Write(".");
 				foreach (var e in GetAllElementsWithoutDuplicates(ast)) {
-					var feature = e.GetSurroundingBits(
-							SurroundingLength, _masterFeatures, IsInner, !IsInner);
+					var feature = e.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
 					if (IsAcceptedUsingOracle(e)) {
 						// TODO: for debug
 						if (_idealRejected.ContainsKey(feature)) {
@@ -438,7 +439,7 @@ namespace Code2Xml.Objects.Tests.Learning {
 						}
 						UpdateDict(_idealRejected, feature, e);
 					}
-					_feature2Element[feature] = e;
+					//_feature2Element[feature] = e;
 					if (_feature2Count.ContainsKey(feature)) {
 						_feature2Count[feature]++;
 					} else {
@@ -466,8 +467,7 @@ namespace Code2Xml.Objects.Tests.Learning {
 					+ _feature2Element[feautre].Name + ", "
 					+ _feature2Element[feautre].Code);
 			IsAcceptedUsingOracle(e);
-			feautre = e.GetSurroundingBits(
-					SurroundingLength, _masterFeatures, IsInner, !IsInner);
+			feautre = e.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
 		}
 
 		private int GetGroupIndex(BigInteger feature) {
@@ -1466,5 +1466,10 @@ namespace Code2Xml.Objects.Tests.Learning {
 		}
 
 		protected abstract bool ProtectedIsAcceptedUsingOracle(CstNode e);
+	}
+
+	public interface ILearningExperiment {
+		bool IsInner { get; }
+		string GetToken(CstNode e);
 	}
 }

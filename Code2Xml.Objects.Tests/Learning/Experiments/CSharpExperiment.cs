@@ -387,7 +387,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -447,7 +447,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -476,7 +476,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -496,7 +496,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -516,7 +516,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -536,7 +536,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -552,7 +552,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -589,7 +589,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return true; }
 		}
 
@@ -620,7 +620,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return true; }
 		}
 
@@ -636,7 +636,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return true; }
 		}
 
@@ -657,7 +657,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return true; }
 		}
 
@@ -677,7 +677,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return true; }
 		}
 
@@ -697,7 +697,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return true; }
 		}
 
@@ -719,7 +719,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -738,7 +738,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -761,7 +761,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -827,7 +827,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return CSharpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override bool IsInner {
 			get { return false; }
 		}
 

@@ -386,7 +386,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -416,7 +420,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -453,7 +461,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -473,7 +485,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -493,7 +509,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -513,7 +533,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -534,7 +558,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -556,7 +584,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return true; }
 		}
 
@@ -584,7 +616,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return true; }
 		}
 
@@ -600,7 +636,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return true; }
 		}
 
@@ -620,7 +660,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return true; }
 		}
 
@@ -640,7 +684,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return true; }
 		}
 
@@ -660,7 +708,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return true; }
 		}
 
@@ -676,7 +728,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -693,7 +749,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -713,7 +773,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return false; }
 		}
 
@@ -757,7 +821,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 			get { return PhpExperiment.Generator; }
 		}
 
-		protected override bool IsInner {
+		public override string GetToken(CstNode e) {
+			return e.TokenText.ToLower();
+		}
+
+		public override bool IsInner {
 			get { return false; }
 		}
 

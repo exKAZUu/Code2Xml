@@ -27,7 +27,7 @@ using Paraiba.Collections.Generic;
 using Paraiba.Linq;
 
 namespace Code2Xml.Objects.Tests.Learning {
-	public abstract class LearningSvmExperiment {
+	public abstract class LearningSvmExperiment : ILearningExperiment {
 		private readonly LearningAlgorithm _algorithm;
 
 		public class SuspiciousTarget {
@@ -48,7 +48,11 @@ namespace Code2Xml.Objects.Tests.Learning {
 		public int WrongFeatureCount { get; set; }
 		public int WrongElementCount { get; set; }
 		protected abstract CstGenerator Generator { get; }
-		protected abstract bool IsInner { get; }
+		public abstract bool IsInner { get; }
+
+		public virtual string GetToken(CstNode e) {
+			return e.TokenText;
+		}
 
 		public Dictionary<BigInteger, CstNode> Feature2Element {
 			get { return _feature2Element; }
@@ -301,13 +305,13 @@ namespace Code2Xml.Objects.Tests.Learning {
 				}
 			}
 			var acceptingFeatures = seedAcceptedElements
-					.GetUnionKeys(SurroundingLength, IsInner, !IsInner)
+					.GetUnionKeys(SurroundingLength, this)
 					.ToHashSet()
 					.ToList();
 			acceptingFeatures.Sort((s1, s2) => s1.Length.CompareTo(s2.Length));
 			_acceptingFeatureCount = acceptingFeatures.Count;
 			var rejectingFeatureSet = seedRejectedElements
-					.GetUnionKeys(SurroundingLength, IsInner, !IsInner)
+					.GetUnionKeys(SurroundingLength, this)
 					.ToHashSet();
 			rejectingFeatureSet.ExceptWith(acceptingFeatures);
 			var rejectingFeatures = rejectingFeatureSet.ToList();
@@ -328,8 +332,7 @@ namespace Code2Xml.Objects.Tests.Learning {
 			_rejectingMask = _mask ^ _acceptingMask;
 
 			foreach (var e in seedAcceptedElements) {
-				var bits = e.GetSurroundingBits(
-						SurroundingLength, _masterFeatures, IsInner, !IsInner);
+				var bits = e.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
 				UpdateDict(_idealAccepted, bits, e);
 				_acceptedTrainingSet[bits] = _idealAccepted[bits];
 				_feature2Element[bits] = e;
@@ -340,8 +343,7 @@ namespace Code2Xml.Objects.Tests.Learning {
 				}
 			}
 			foreach (var e in seedRejectedElements) {
-				var bits = e.GetSurroundingBits(
-						SurroundingLength, _masterFeatures, IsInner, !IsInner);
+				var bits = e.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
 				UpdateDict(_idealRejected, bits, e);
 				_rejectedTrainingSet[bits] = _idealRejected[bits];
 				_feature2Element[bits] = e;
@@ -355,8 +357,7 @@ namespace Code2Xml.Objects.Tests.Learning {
 			foreach (var ast in allAsts) {
 				Console.Write(".");
 				foreach (var e in GetAllElementsWithoutDuplicates(ast)) {
-					var bits = e.GetSurroundingBits(
-							SurroundingLength, _masterFeatures, IsInner, !IsInner);
+					var bits = e.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
 					if (IsAcceptedUsingOracle(e)) {
 						// TODO: for debug
 						if (_idealRejected.ContainsKey(bits)) {
@@ -399,8 +400,7 @@ namespace Code2Xml.Objects.Tests.Learning {
 					+ _feature2Element[bits].Name + ", "
 					+ _feature2Element[bits].Code);
 			IsAcceptedUsingOracle(e);
-			bits = e.GetSurroundingBits(
-					SurroundingLength, _masterFeatures, IsInner, !IsInner);
+			bits = e.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
 		}
 
 		#region Create Classifier
