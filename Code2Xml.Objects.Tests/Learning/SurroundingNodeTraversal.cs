@@ -86,7 +86,7 @@ namespace Code2Xml.Objects.Tests.Learning {
             // 自分自身の位置による区別も考慮する
             //ret.Add(node.Name);
             ret.Add(node.RuleId);
-            ret.Add("'" + node.TokenText);
+            ret.Add("'" + node.TokenText.ToLower());
 
             var children = new List<Tuple<CstNode, string>>();
             if (inner) {
@@ -112,7 +112,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                             var key = t.Item2 + ">" + e.RuleId;
                             newChildren.Add(Tuple.Create(e, key));
                             // for Preconditions.checkArguments()
-                            ret.Add(t.Item2 + ">'" + e.TokenText);
+                            ret.Add(t.Item2 + ">'" + e.TokenText.ToLower());
                         }
                     }
                     parent.Item1.PrevsFromSelf().Take(10)
@@ -121,7 +121,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                                         var key = parent.Item2 + "<-" + index + "-" + e.RuleId;
                                         newChildren.Add(Tuple.Create(e, key));
                                         // for Preconditions.checkArguments()
-                                        ret.Add(parent.Item2 + "<-" + index + "-'" + e.TokenText);
+                                        ret.Add(parent.Item2 + "<-" + index + "-'" + e.TokenText.ToLower());
                                     });
                     parent.Item1.NextsFromSelf().Take(10)
                             .ForEach(
@@ -129,7 +129,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                                         var key = parent.Item2 + ">-" + index + "-" + e.RuleId;
                                         newChildren.Add(Tuple.Create(e, key));
                                         // for Preconditions.checkArguments()
-                                        ret.Add(parent.Item2 + ">-" + index + "-'" + e.TokenText);
+                                        ret.Add(parent.Item2 + ">-" + index + "-'" + e.TokenText.ToLower());
                                     });
                     ret.UnionWith(newChildren.Select(t => t.Item2));
                     children = newChildren;
@@ -149,7 +149,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                         var key = t.Item2 + ">" + e.RuleId;
                         newChildren.Add(Tuple.Create(e, key));
                         // for Preconditions.checkArguments()
-                        ret.Add(t.Item2 + ">'" + e.TokenText);
+                        ret.Add(t.Item2 + ">'" + e.TokenText.ToLower());
                     }
                 }
                 ret.UnionWith(newChildren.Select(t => t.Item2));
@@ -175,7 +175,7 @@ namespace Code2Xml.Objects.Tests.Learning {
             if (key2Bit.TryGetValue(node.RuleId, out bit)) {
                 ret |= bit;
             }
-            if (key2Bit.TryGetValue("'" + node.TokenText, out bit)) {
+            if (key2Bit.TryGetValue("'" + node.TokenText.ToLower(), out bit)) {
                 ret |= bit;
             }
 
@@ -210,7 +210,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                                 ret |= bit;
                             }
                             // for Preconditions.checkArguments()
-                            if (key2Bit.TryGetValue(t.Item2 + ">'" + e.TokenText, out bit)) {
+                            if (key2Bit.TryGetValue(t.Item2 + ">'" + e.TokenText.ToLower(), out bit)) {
                                 ret |= bit;
                             }
                         }
@@ -224,7 +224,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                                             ret |= bit;
                                         }
                                         if (key2Bit.TryGetValue(
-                                                parent.Item2 + "<-" + index + "-'" + e.TokenText,
+                                                parent.Item2 + "<-" + index + "-'" + e.TokenText.ToLower(),
                                                 out bit)) {
                                             ret |= bit;
                                         }
@@ -238,7 +238,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                                             ret |= bit;
                                         }
                                         if (key2Bit.TryGetValue(
-                                                parent.Item2 + ">-" + index + "-'" + e.TokenText,
+                                                parent.Item2 + ">-" + index + "-'" + e.TokenText.ToLower(),
                                                 out bit)) {
                                             ret |= bit;
                                         }
@@ -267,7 +267,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                             ret |= bit;
                         }
                         // for Preconditions.checkArguments()
-                        if (key2Bit.TryGetValue(t.Item2 + ">'" + e.TokenText, out bit)) {
+                        if (key2Bit.TryGetValue(t.Item2 + ">'" + e.TokenText.ToLower(), out bit)) {
                             ret |= bit;
                         }
                     }
