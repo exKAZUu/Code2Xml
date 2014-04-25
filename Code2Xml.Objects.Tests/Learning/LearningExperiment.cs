@@ -335,6 +335,10 @@ namespace Code2Xml.Objects.Tests.Learning {
                     + (_idealAccepted.Count + _idealRejected.Count));
             if (writer != null) {
                 writer.Write(
+                        _idealAccepted.Concat(_idealRejected)
+                                .Sum(f => _feature2Count[f.Key]));
+                writer.Write(",");
+                writer.Write(
                         _acceptedTrainingSet.Concat(_rejectedTrainingSet)
                                 .Sum(f => _feature2Count[f.Key]));
                 writer.Write(",");
@@ -357,7 +361,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                     projectPath, searchPattern, SearchOption.AllDirectories)
                     .ToList();
 
-            foreach (var ast in allPaths.Select(
+            foreach (var ast in allPaths.Concat(seedPaths).Select(
                     path => Generator.GenerateTreeFromCode(new FileInfo(path), null, true))) {
                 foreach (var node in GetAllElementsWithoutDuplicates(ast)) {
                     var feature = node.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
