@@ -31,6 +31,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                 @"C:\Users\exKAZUu\Desktop\javascript.txt");
 
         public static CstGenerator Generator = CstGenerators.JavaScriptUsingAntlr3;
+        private string _lastProjectName;
         private const string LangName = "JavaScript";
 
         private static IEnumerable<TestCaseData> TestCases {
@@ -376,6 +377,13 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "seed.js"), };
             var allPaths = Directory.GetFiles(projectPath, "*.js", SearchOption.AllDirectories)
                     .ToList();
+            var projectName = Path.GetDirectoryName(projectPath);
+            if (_lastProjectName != projectName) {
+                _writer.WriteLine();
+                _writer.Write(projectName + ",");
+                _lastProjectName = projectName;
+            }
+            _writer.Flush();
             exp.Learn(allPaths, seedPaths, _writer, projectPath);
             exp.Clear();
             Assert.That(exp.WrongFeatureCount, Is.EqualTo(0));

@@ -30,6 +30,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         private readonly StreamWriter _writer = File.CreateText(@"C:\Users\exKAZUu\Desktop\php.txt");
 
         public static CstGenerator Generator = CstGenerators.PhpUsingAntlr3;
+        private string _lastProjectName;
         private const string LangName = "Php";
 
         //new MemoryCacheCstGenerator(new FileCacheCstGenerator(ProcessorLoader.PhpUsingAntlr3));
@@ -377,6 +378,13 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.php"), };
             var allPaths = Directory.GetFiles(projectPath, "*.php", SearchOption.AllDirectories)
                     .ToList();
+            var projectName = Path.GetDirectoryName(projectPath);
+            if (_lastProjectName != projectName) {
+                _writer.WriteLine();
+                _writer.Write(projectName + ",");
+                _lastProjectName = projectName;
+            }
+            _writer.Flush();
             exp.Learn(allPaths, seedPaths, _writer, projectPath);
             exp.Clear();
             Assert.That(exp.WrongFeatureCount, Is.EqualTo(0));

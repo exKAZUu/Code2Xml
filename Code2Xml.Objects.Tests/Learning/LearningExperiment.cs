@@ -318,8 +318,12 @@ namespace Code2Xml.Objects.Tests.Learning {
                     + (_idealAccepted.Count + _idealRejected.Count));
             if (writer != null) {
                 writer.Write(
-                        (_acceptedTrainingSet.Count + _rejectedTrainingSet.Count) + " / "
-                        + (_idealAccepted.Count + _idealRejected.Count));
+                        _acceptedTrainingSet.Concat(_rejectedTrainingSet)
+                                .Sum(f => _feature2Count[f.Key]));
+                writer.Write(",");
+                writer.Write(_idealAccepted.Count + _idealRejected.Count);
+                writer.Write(",");
+                writer.Write(_acceptedTrainingSet.Count + _rejectedTrainingSet.Count);
                 writer.Write(",");
             }
 
@@ -419,12 +423,22 @@ namespace Code2Xml.Objects.Tests.Learning {
                 UpdateDict(_idealAccepted, feature, e);
                 _acceptedTrainingSet[feature] = _idealAccepted[feature];
                 //_feature2Element[feature] = e;
+                if (_feature2Count.ContainsKey(feature)) {
+                    _feature2Count[feature]++;
+                } else {
+                    _feature2Count[feature] = 1;
+                }
             }
             foreach (var e in seedRejectedElements) {
                 var feature = e.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
                 UpdateDict(_idealRejected, feature, e);
                 _rejectedTrainingSet[feature] = _idealRejected[feature];
                 //_feature2Element[feature] = e;
+                if (_feature2Count.ContainsKey(feature)) {
+                    _feature2Count[feature]++;
+                } else {
+                    _feature2Count[feature] = 1;
+                }
             }
 
             foreach (var ast in allAsts) {
