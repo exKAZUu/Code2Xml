@@ -28,7 +28,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
     [TestFixture]
     public class Python2Experiment {
         private readonly StreamWriter _writer = File.CreateText(
-                @"C:\Users\exKAZUu\Desktop\Python.csv");
+                @"C:\Users\exKAZUu\Dropbox\Data\py" + JavaExperiment.SkipCount + "_"
+                + JavaExperiment.TakeCount + ".csv");
 
         public static CstGenerator Generator = CstGenerators.Python2;
         private string _lastProjectName;
@@ -364,16 +365,14 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         [Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath, int starCount) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.py"), };
-            var allPaths = Directory.GetFiles(projectPath, "*.py", SearchOption.AllDirectories)
-                    .ToList();
-            var projectName = Path.GetDirectoryName(projectPath);
+            var projectName = Path.GetFileName(projectPath);
             if (_lastProjectName != projectName) {
                 _writer.WriteLine();
                 _writer.Write(projectName + ",");
                 _lastProjectName = projectName;
             }
             _writer.Flush();
-            exp.Learn(allPaths, seedPaths, _writer, projectPath);
+            exp.Learn(seedPaths, _writer, projectPath, "*.py");
             if (exp.WrongFeatureCount > 0) {
                 Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
                 foreach (var we in exp.WronglyAcceptedElements) {

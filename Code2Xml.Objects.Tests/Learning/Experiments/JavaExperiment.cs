@@ -28,13 +28,13 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
     [TestFixture]
     public class JavaExperiment {
         private readonly StreamWriter _writer = File.CreateText(
-                @"C:\Users\exKAZUu\Desktop\java.csv");
+                @"C:\Users\exKAZUu\Dropbox\Data\java" + SkipCount + "_" + TakeCount + ".csv");
 
         public static CstGenerator Generator = CstGenerators.JavaUsingAntlr3;
         private string _lastProjectName;
         private const string LangName = "Java";
         public const int SkipCount = 0;
-        public const int TakeCount = 20;
+        public const int TakeCount = 10;
 
         private static IEnumerable<TestCaseData> TestCases {
             get {
@@ -374,16 +374,14 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         [Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath, int starCount) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.java"), };
-            var allPaths = Directory.GetFiles(projectPath, "*.java", SearchOption.AllDirectories)
-                    .ToList();
-            var projectName = Path.GetDirectoryName(projectPath);
+            var projectName = Path.GetFileName(projectPath);
             if (_lastProjectName != projectName) {
                 _writer.WriteLine();
                 _writer.Write(projectName + ",");
                 _lastProjectName = projectName;
             }
             _writer.Flush();
-            exp.Learn(allPaths, seedPaths, _writer, projectPath);
+            exp.Learn(seedPaths, _writer, projectPath, "*.java");
             if (exp.WrongFeatureCount > 0) {
                 Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
                 foreach (var we in exp.WronglyAcceptedElements) {
@@ -408,6 +406,10 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             if (!(exp is JavaSuperComplexBranchExperiment)) {
                 return;
             }
+            var commitPointers = Git.GetCommitPointers(projectPath, Generator, "*.java");
+            Action goNow = () => Git.Checkout(projectPath, commitPointers.Item1);
+            Action goBack = () => Git.Checkout(projectPath, commitPointers.Item2);
+            goBack();
             var allPaths = Directory.GetFiles(projectPath, "*.java", SearchOption.AllDirectories)
                     .ToList();
             var allNodes = allPaths.Select(p => Generator.GenerateTreeFromCodePath(p))
@@ -436,6 +438,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             _writer.Write(branchCount + ",");
             _writer.WriteLine();
             _writer.Flush();
+            goNow();
         }
     }
 

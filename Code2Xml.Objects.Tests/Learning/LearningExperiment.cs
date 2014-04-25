@@ -27,6 +27,7 @@ using Code2Xml.Core.Generators;
 using Code2Xml.Languages.ANTLRv3.Core;
 using Paraiba.Collections.Generic;
 using Paraiba.Linq;
+using ParserTests;
 
 namespace Code2Xml.Objects.Tests.Learning {
     public abstract class LearningExperiment : ILearningExperiment {
@@ -117,6 +118,8 @@ namespace Code2Xml.Objects.Tests.Learning {
         private IList<BigInteger> _rejectingClassifiers;
         private readonly HashSet<string> _initialElementNames;
         private Dictionary<BigInteger, int> _feature2Count;
+        private Action goNow;
+        private Action goBack;
 
         protected LearningExperiment(params string[] elementNames) {
             _initialElementNames = elementNames.ToHashSet();
@@ -171,6 +174,16 @@ namespace Code2Xml.Objects.Tests.Learning {
 
         private void UpdateDict(
                 Dictionary<BigInteger, string> dict, BigInteger feature, CstNode node) {
+            var groupKey = GetGroupKeyFromNode(node);
+            var existingGroupKey = dict.GetValueOrDefault(feature);
+            if (existingGroupKey == null) {
+                dict.Add(feature, groupKey);
+            } else {
+                dict[feature] = CommonSuffix(existingGroupKey, groupKey);
+            }
+        }
+
+        private string GetGroupKeyFromNode(CstNode node) {
             IEnumerable<string> groupKeySequence;
             if (IsInner) {
                 //node = node.AncestorsOfOnlyChildAndSelf().Last(); // TODO
@@ -185,13 +198,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                         .Select(e => e.HasToken ? e.RuleId + "-" + GetToken(e) : e.RuleId);
             }
 
-            var groupKey = ">" + node.Name + ">" + string.Join(">", groupKeySequence) + ">";
-            var existingGroupKey = dict.GetValueOrDefault(feature);
-            if (existingGroupKey == null) {
-                dict.Add(feature, groupKey);
-            } else {
-                dict[feature] = CommonSuffix(existingGroupKey, groupKey);
-            }
+            return ">" + node.Name + ">" + string.Join(">", groupKeySequence) + ">";
         }
 
         private static ISet<string> AdoptNodeNames(ICollection<CstNode> outermosts) {
@@ -219,8 +226,18 @@ namespace Code2Xml.Objects.Tests.Learning {
         }
 
         public void Learn(
-                ICollection<string> allPaths, ICollection<string> seedPaths, StreamWriter writer,
-                string projectPath) {
+                ICollection<string> seedPaths, StreamWriter writer,
+                string projectPath, string searchPattern) {
+            var commitPointers = Git.GetCommitPointers(projectPath, Generator, searchPattern);
+            goNow = () => Git.Checkout(projectPath, commitPointers.Item1);
+            goBack = () => Git.Checkout(projectPath, commitPointers.Item2);
+
+            goBack();
+
+            var allPaths = Directory.GetFiles(
+                    projectPath, searchPattern, SearchOption.AllDirectories)
+                    .ToList();
+
             var cacheFile = new FileInfo(
                     Path.Combine(
                             projectPath ?? "",
@@ -329,6 +346,38 @@ namespace Code2Xml.Objects.Tests.Learning {
 
             foreach (var groupKey in _groupKeys) {
                 Console.WriteLine(groupKey);
+            }
+
+            goNow();
+
+            var success = 0;
+            var fail = 0;
+
+            allPaths = Directory.GetFiles(
+                    projectPath, searchPattern, SearchOption.AllDirectories)
+                    .ToList();
+
+            foreach (var ast in allPaths.Select(
+                    path => Generator.GenerateTreeFromCode(new FileInfo(path), null, true))) {
+                foreach (var node in GetAllElementsWithoutDuplicates(ast)) {
+                    var feature = node.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
+                    var key = GetGroupKeyFromNode(node);
+                    var index = GetGroupIndexWithoutCache(key);
+                    var rejected = IsRejected(feature, _rejectingClassifiers[index]);
+                    var accepted = IsAccepted(feature, _acceptingClassifiers[index]);
+                    if ((accepted && !rejected) == IsAcceptedUsingOracle(node)) {
+                        success++;
+                    } else {
+                        fail++;
+                    }
+                }
+            }
+
+            if (writer != null) {
+                writer.Write(success);
+                writer.Write(",");
+                writer.Write(fail);
+                writer.Write(",");
             }
 
             //ShowBitsInfo();
