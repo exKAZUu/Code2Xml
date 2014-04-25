@@ -31,6 +31,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                 @"C:\Users\exKAZUu\Desktop\Python.csv");
 
         public static CstGenerator Generator = CstGenerators.Python2;
+        private string _lastProjectName;
         private const string LangName = "Python2";
 
         private static IEnumerable<TestCaseData> TestCases {
@@ -365,6 +366,13 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.py"), };
             var allPaths = Directory.GetFiles(projectPath, "*.py", SearchOption.AllDirectories)
                     .ToList();
+            var projectName = Path.GetDirectoryName(projectPath);
+            if (_lastProjectName != projectName) {
+                _writer.WriteLine();
+                _writer.Write(projectName + ",");
+                _lastProjectName = projectName;
+            }
+            _writer.Flush();
             exp.Learn(allPaths, seedPaths, _writer, projectPath);
             if (exp.WrongFeatureCount > 0) {
                 Console.WriteLine("--------------- WronglyAcceptedElements ---------------");

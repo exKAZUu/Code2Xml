@@ -317,9 +317,12 @@ namespace Code2Xml.Objects.Tests.Learning {
                     + (_acceptedTrainingSet.Count + _rejectedTrainingSet.Count) + " / "
                     + (_idealAccepted.Count + _idealRejected.Count));
             if (writer != null) {
-                writer.Write(
-                        (_acceptedTrainingSet.Count + _rejectedTrainingSet.Count) + " / "
-                        + (_idealAccepted.Count + _idealRejected.Count));
+                writer.Write(_acceptedTrainingSet.Concat(_rejectedTrainingSet)
+                    .Sum(f => _feature2Count[f.Key]));
+                writer.Write(",");
+                writer.Write(_idealAccepted.Count + _idealRejected.Count);
+                writer.Write(",");
+                writer.Write(_acceptedTrainingSet.Count + _rejectedTrainingSet.Count);
                 writer.Write(",");
             }
 
