@@ -508,7 +508,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                 if (updated) {
                     UpdateGroup();
                 }
-                if (_groupKeys.Count == count) {
+                if (_groupKeys.Count == count && acceptedTrainingSet == _acceptedTrainingSet) {
                     throw new Exception("Fail to learn rules");
                 }
                 Console.WriteLine("Groups: " + _groupKeys.Count + " (" + count + ")");
