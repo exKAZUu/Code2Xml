@@ -92,7 +92,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                             @"a60d8dd3ffaf5892d86d5fcf8a9a81bec71800e7", 1118),
                     Tuple.Create(
                             @"https://github.com/SamSaffron/MiniProfiler.git",
-                            @"3744054e0686b2f88083b869a7f2fe7e1fa14e9c", 1113),
+                            @"207d0abe2e5df7ba2837390187c9333ec0f7e889", 1113),
                     Tuple.Create(
                             @"https://github.com/jaredpar/VsVim.git",
                             @"86d9e298c9d117e54266501ae9c4dd35b4d345cb", 1097),
