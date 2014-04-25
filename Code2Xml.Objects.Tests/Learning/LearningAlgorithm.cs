@@ -19,9 +19,9 @@
 using System;
 
 namespace Code2Xml.Objects.Tests.Learning {
-	public abstract class LearningAlgorithm {
-		public abstract string Description { get; }
+    public abstract class LearningAlgorithm {
+        public abstract string Description { get; }
 
-		public abstract Func<double[], double> Learn(LearningData learningData);
-	}
+        public abstract Func<double[], double> Learn(LearningData learningData);
+    }
 }

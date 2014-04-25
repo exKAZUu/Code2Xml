@@ -20,9 +20,9 @@ using System.Collections.Generic;
 using Accord.MachineLearning.DecisionTrees;
 
 namespace Code2Xml.Objects.Tests.Learning {
-	public class LearningData {
-		public IList<DecisionVariable> Variables { get; set; }
-		public double[][] Inputs { get; set; }
-		public int[] Outputs { get; set; }
-	}
+    public class LearningData {
+        public IList<DecisionVariable> Variables { get; set; }
+        public double[][] Inputs { get; set; }
+        public int[] Outputs { get; set; }
+    }
 }

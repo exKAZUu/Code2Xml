@@ -19,7 +19,7 @@
 namespace Code2Xml.Core {
     public class Code2XmlConstants {
         public const string SyntaxTreeCacheExtension = ".cached_xml";
-        public const string LearningCacheExtension = ".learning_cache_4_fix_group";
+        public const string LearningCacheExtension = ".learning_cache_6_fix_lua_op";
         public const string DependenciesDirectoryName = "Dependencies";
 
         public const string EofTokenName = "EOF";

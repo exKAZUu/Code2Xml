@@ -22,26 +22,27 @@ using Accord.MachineLearning.VectorMachines.Learning;
 using Accord.Statistics.Kernels;
 
 namespace Code2Xml.Objects.Tests.Learning {
-	public class SvmLearnerWithLinear : LearningAlgorithm {
-		private readonly IKernel _kernel;
+    public class SvmLearnerWithLinear : LearningAlgorithm {
+        private readonly IKernel _kernel;
 
-		public override string Description {
-			get { return "SVM with " + _kernel; }
-		}
+        public override string Description {
+            get { return "SVM with " + _kernel; }
+        }
 
-		public SvmLearnerWithLinear() {
-			_kernel = new Linear();
-		}
+        public SvmLearnerWithLinear() {
+            _kernel = new Linear();
+        }
 
-		public SvmLearnerWithLinear(IKernel kernel) {
-			_kernel = kernel;
-		}
+        public SvmLearnerWithLinear(IKernel kernel) {
+            _kernel = kernel;
+        }
 
-		public override Func<double[], double> Learn(LearningData learningData) {
-			var svm = new KernelSupportVectorMachine(_kernel, learningData.Variables.Count);
-			var smo = new SequentialMinimalOptimization(svm, learningData.Inputs, learningData.Outputs);
-			smo.Run();
-			return svm.Compute;
-		}
-	}
+        public override Func<double[], double> Learn(LearningData learningData) {
+            var svm = new KernelSupportVectorMachine(_kernel, learningData.Variables.Count);
+            var smo = new SequentialMinimalOptimization(
+                    svm, learningData.Inputs, learningData.Outputs);
+            smo.Run();
+            return svm.Compute;
+        }
+    }
 }

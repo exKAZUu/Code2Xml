@@ -75,7 +75,8 @@ namespace Code2Xml.Objects.Tests.Learning {
             return commonKeys;
         }
 
-        public static HashSet<string> GetSurroundingKeys(this CstNode node, int length, ILearningExperiment exp) {
+        public static HashSet<string> GetSurroundingKeys(
+                this CstNode node, int length, ILearningExperiment exp) {
             var ret = new HashSet<string>();
             // 自分自身の位置による区別も考慮する
             //ret.Add(node.Name);
@@ -113,7 +114,8 @@ namespace Code2Xml.Objects.Tests.Learning {
                                         var key = parent.Item2 + "<-" + index + "-" + e.RuleId;
                                         newChildren.Add(Tuple.Create(e, key));
                                         // for Preconditions.checkArguments()
-                                        ret.Add(parent.Item2 + "<-" + index + "-'" + exp.GetToken(e));
+                                        ret.Add(
+                                                parent.Item2 + "<-" + index + "-'" + exp.GetToken(e));
                                     });
                     parent.Item1.NextsFromSelf().Take(10)
                             .ForEach(
@@ -121,7 +123,8 @@ namespace Code2Xml.Objects.Tests.Learning {
                                         var key = parent.Item2 + ">-" + index + "-" + e.RuleId;
                                         newChildren.Add(Tuple.Create(e, key));
                                         // for Preconditions.checkArguments()
-                                        ret.Add(parent.Item2 + ">-" + index + "-'" + exp.GetToken(e));
+                                        ret.Add(
+                                                parent.Item2 + ">-" + index + "-'" + exp.GetToken(e));
                                     });
                     ret.UnionWith(newChildren.Select(t => t.Item2));
                     children = newChildren;
