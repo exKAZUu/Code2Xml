@@ -269,9 +269,6 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                             @"https://github.com/henkboom/pax-britannica.git",
                             @"a7a3c0c21e5b27e6f4be3b0b817ebd29cd23fa7d", 60),
                     Tuple.Create(
-                            @"https://github.com/roaminggamer/SSKCorona.git",
-                            @"a9d6dfec85c01c2d9f8d455a10dcfefcafe35694", 60),
-                    Tuple.Create(
                             @"https://github.com/vincentbernat/awesome-configuration.git",
                             @"b649c57c91ba4cb624f37d3f2a4249d9806da68c", 59),
                     Tuple.Create(
@@ -355,6 +352,9 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                     Tuple.Create(
                             @"https://github.com/GymbylCoding/Dusk-Engine.git",
                             @"f0fcdfc2cd628966bbf208bcb6bf3c3374dd1e42", 46),
+                    Tuple.Create(
+                            @"https://github.com/mtourne/nginx_log_by_lua.git",
+                            @"adc7ecbb3107e0b2a487d851acd33464215a076a", 46),
                 };
                 foreach (var exp in exps) {
                     foreach (
