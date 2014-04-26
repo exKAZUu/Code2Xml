@@ -56,17 +56,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                 };
                 var learningSets = new[] {
                     Tuple.Create(
-                            @"https://github.com/kennyledet/Algorithm-Implementations.git",
-                            @"ec423a1984fa923e117053c114c92ae86d32bfd4", 890),
-                    Tuple.Create(
                             @"https://github.com/mason-larobina/luakit.git",
                             @"993d814c6a51bf50ec0424e65ce2dc35f4aa435f", 513),
                     Tuple.Create(
                             @"https://github.com/koreader/koreader.git",
                             @"f1a8970adb94a6a43cff4d3d16769931039e1f73", 466),
-                    Tuple.Create(
-                            @"https://github.com/pkulchenko/ZeroBraneStudio.git",
-                            @"95452706a059c60fb34e88a0afff44ba4a9032ac", 376),
                     Tuple.Create(
                             @"https://github.com/leafo/lapis.git",
                             @"f2cdcd8179bc0d57560df5bbd95ee03f26214ef7", 374),
@@ -121,9 +115,6 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                     Tuple.Create(
                             @"https://github.com/loveshell/ngx_lua_waf.git",
                             @"2b32a34dfc67e8bbb677987319a30357d5ae6e14", 127),
-                    Tuple.Create(
-                            @"https://github.com/ansca/Ghosts-vs.-Monsters.git",
-                            @"7c036c0d11f279c5dace9dcda4f5ad2242a8ca77", 124),
                     Tuple.Create(
                             @"https://github.com/mikar/awesome34-themes.git",
                             @"312cbc31b271afa164a81d51822de7d54b1153f3", 117),
@@ -355,6 +346,15 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                     Tuple.Create(
                             @"https://github.com/mtourne/nginx_log_by_lua.git",
                             @"adc7ecbb3107e0b2a487d851acd33464215a076a", 46),
+                    Tuple.Create(
+                            @"https://github.com/Yonaba/Moses.git",
+                            @"57c7b5d1d1f074cafbd570088ad8681b03c65601", 46),
+                    Tuple.Create(
+                            @"https://github.com/stevedonovan/Microlight.git",
+                            @"95ae73f9830aec3bb1d4773156a6f921dfbed9b4", 46),
+                    Tuple.Create(
+                            @"https://github.com/appwilldev/moochine-demo.git",
+                            @"3b3f565386d43aa533793700c020c4f096ac9636", 45),
                 };
                 foreach (var exp in exps) {
                     foreach (

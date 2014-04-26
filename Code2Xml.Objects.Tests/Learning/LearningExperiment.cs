@@ -242,7 +242,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                     Path.Combine(
                             projectPath ?? "",
                             GetType().Name + Code2XmlConstants.LearningCacheExtension));
-            if (string.IsNullOrEmpty(projectPath) || !cacheFile.Exists) {
+            if (true || string.IsNullOrEmpty(projectPath) || !cacheFile.Exists) {
                 var allAsts = allPaths.Select(
                         path => Generator.GenerateTreeFromCode(new FileInfo(path), null, true));
                 var seedAsts = seedPaths.Select(
