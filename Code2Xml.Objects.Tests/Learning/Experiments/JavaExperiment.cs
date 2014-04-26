@@ -33,7 +33,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public static CstGenerator Generator = CstGenerators.JavaUsingAntlr3;
         private string _lastProjectName;
         private const string LangName = "Java";
-        public const int SkipCount = 0;
+        public const int SkipCount = 25;
         public const int TakeCount = 25;
 
         private static IEnumerable<TestCaseData> TestCases {

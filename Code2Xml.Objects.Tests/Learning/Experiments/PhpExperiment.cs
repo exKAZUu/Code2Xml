@@ -261,11 +261,11 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                             @"https://github.com/danielstjules/Stringy.git",
                             @"8d961e25d09f946b463c0581e927a963f3578647", 529),
                     Tuple.Create(
-                            @"https://github.com/mattpass/ICEcoder.git",
-                            @"9a2881cd7bd0fb1e10241c2a8776e8ccd12f5e2f", 355),
+                            @"https://github.com/crowdfavorite/wp-post-formats.git",
+                            @"2ff0fb194f711c4efa6d232c35cc3a19c8e597c0", 354),
                     Tuple.Create(
-                            @"https://github.com/Behat/Mink.git",
-                            @"055da154b9fcb0bb238332adda3c4b38210c85d3", 520),
+                            @"https://github.com/silexphp/Silex-Skeleton.git",
+                            @"1f8608aba6b1d85b11a4a733161a01731e0aacea", 352),
                     Tuple.Create(
                             @"https://github.com/barryvdh/laravel-debugbar.git",
                             @"9c0c6de939141f43efdf9c3beed22db50e2a4248", 510),
