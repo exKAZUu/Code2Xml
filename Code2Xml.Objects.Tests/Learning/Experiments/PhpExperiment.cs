@@ -81,8 +81,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                             @"https://github.com/venomous0x/WhatsAPI.git",
                             @"5ad50b311d728752cee50b7c7ed00062df6cb740", 1613),
                     Tuple.Create(
-                            @"https://github.com/PHPMailer/PHPMailer.git",
-                            @"7b384d0bedf7feb1d3cdfaae689d8c5b68eb0515", 1600),
+                            @"https://github.com/ornicar/php-github-api.git",
+                            @"60bdbe492afaf4f4dc1ecd3739351c3daed37ce6", 354),
                     Tuple.Create(
                             @"https://github.com/fabpot/Goutte.git",
                             @"06a5451288ffddd204b10fa6c6f9ab2b86dd515d", 1584),
@@ -261,8 +261,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                             @"https://github.com/danielstjules/Stringy.git",
                             @"8d961e25d09f946b463c0581e927a963f3578647", 529),
                     Tuple.Create(
-                            @"https://github.com/Xeoncross/micromvc.git",
-                            @"04779326fa0d5bbd672996a7bcac80150c9cd82f", 524),
+                            @"https://github.com/mattpass/ICEcoder.git",
+                            @"9a2881cd7bd0fb1e10241c2a8776e8ccd12f5e2f", 355),
                     Tuple.Create(
                             @"https://github.com/Behat/Mink.git",
                             @"055da154b9fcb0bb238332adda3c4b38210c85d3", 520),
@@ -384,8 +384,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                 _writer.Write(projectName + ",");
                 _lastProjectName = projectName;
             }
-            _writer.Flush();
             exp.Learn(seedPaths, _writer, projectPath, "*.php");
+            _writer.Flush();
             exp.Clear();
             Assert.That(exp.WrongFeatureCount, Is.EqualTo(0));
         }
