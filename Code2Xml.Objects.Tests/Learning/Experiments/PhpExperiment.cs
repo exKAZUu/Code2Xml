@@ -604,7 +604,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // ラベルはループ文に付くため，ラベルの中身は除外
-            if (e.FirstChild.Name != "UnquotedString") {
+            if (e.FirstChild.Name == "UnquotedString") {
                 return false;
             }
             // ブロック自身は意味を持たないステートメントで、中身だけが必要なので除外
@@ -680,7 +680,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // ラベルはループ文に付くため，ラベルの中身は除外
-            if (e.FirstChild.Name != "UnquotedString") {
+            if (e.FirstChild.Name == "UnquotedString") {
                 return true;
             }
             return false;
