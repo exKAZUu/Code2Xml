@@ -303,7 +303,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                         var url = learningSet.Item1;
                         var path = Fixture.GetGitRepositoryPath(url);
                         Git.Clone(path, url);
-                        yield return new TestCaseData(exp, path, learningSet.Item2, learningSet.Item3);
+                        yield return
+                                new TestCaseData(exp, path, learningSet.Item2, learningSet.Item3);
                     }
                 }
             }
