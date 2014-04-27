@@ -20,6 +20,6 @@ namespace Code2Xml.Core.Generators {
     public class SyntaxTreeToken<TToken>
             where TToken : SyntaxTreeToken<TToken> {
         public string Name { get; protected set; }
-        public string Text { get; protected set; }
+        public string Text { get; set; }
     }
 }

@@ -83,7 +83,55 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
         [TestCase(@"<?php function ($results) use (&$output) {};")]
         [TestCase(@"<?php function ($results) {};")]
         [TestCase(@"<?php $i = 0 + 1 - 2 * 3 / 4;")]
-        public void Parse(string code) {
+        [TestCase(@"")]
+        [TestCase(@"
+<?php
+	function filemtime($path)
+	{
+		if($this->embedExpiry)
+			return (int)@file_get_contents($path,false,null,0,10);
+		else
+			return @filemtime($path);
+	}
+")]
+        [TestCase(@"
+<?php
+
+class AdapterOptions extends AbstractOptions
+{
+    protected function normalizeTtl(&$ttl)
+    {
+        if (!is_int($ttl)) {
+            $ttl = (float) $ttl;
+
+            // convert to int if possible
+            if ($ttl === (float) (int) $ttl) {
+                $ttl = (int) $ttl;
+            }
+        }
+
+        if ($ttl < 0) {
+             throw new Exception\InvalidArgumentException('');
+        }
+    }
+}
+")]
+        [TestCase(@"
+<?php
+
+namespace Balanced;
+
+class Resource extends \RESTful\Resource
+{
+
+    public static function convertError($response)
+    {
+        $error = $codes[0]();
+        return $error;
+    }
+
+}
+")]        public void Parse(string code) {
             VerifyRestoringCode(code);
         }
 
@@ -110,8 +158,6 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
                 @"77e2da21cf2925e1b809888969677184c3d34fec", 3790)]
         [TestCase(@"https://github.com/domnikl/DesignPatternsPHP.git",
                 @"ed291cd959053366e9d9edba62d8633034f93b0b", 3757)]
-        [TestCase(@"https://github.com/composer/composer.git",
-                @"14f35e812cd41746c4a4a7a2dec2b2365c8cdc61", 3690)]
         [TestCase(@"https://github.com/yiisoft/yii.git",
                 @"ffb9a06b2fdeef83098221334bfd34bc8c2e2aa6", 3682)]
         [TestCase(@"https://github.com/sebastianbergmann/phpunit.git",
@@ -136,8 +182,6 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
                 @"4349e03dfc4b53e75a78441ebd8ace93f8e4cd47", 2927)]
         [TestCase(@"https://github.com/serbanghita/Mobile-Detect.git",
                 @"d70de7bfd0641d4d32a6f9c71e1f5d2839a5331e", 2862)]
-        [TestCase(@"https://github.com/kriswallsmith/assetic.git",
-                @"f2a5214034928d4c6849bc94cfd462ea832a50a8", 2435)]
         [TestCase(@"https://github.com/abraham/twitteroauth.git",
                 @"4b775766fe3526ebc67ee20c97ff29a3b47bc5d8", 2304)]
         [TestCase(@"https://github.com/subtlepatterns/SubtlePatterns.git",

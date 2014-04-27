@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2013 Kazunori Sakamoto
+// Copyright (C) 2011-2014 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,8 +17,11 @@
 #endregion
 
 using System.ComponentModel.Composition;
+using System.IO;
+using System.Linq;
 using Antlr.Runtime;
 using Code2Xml.Core.Generators;
+using Code2Xml.Core.Location;
 using Code2Xml.Languages.ANTLRv3.Core;
 using Code2Xml.Languages.ANTLRv3.Processors.Php;
 
@@ -54,6 +57,69 @@ namespace Code2Xml.Languages.ANTLRv3.Generators.Php {
 
         protected override Antlr3CstNode Parse(PhpParser parser) {
             return parser.prog();
+        }
+
+        /// <summary>
+        /// Generates a syntax tree from the specified text of the source code.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="throwingParseError"></param>
+        /// <returns></returns>
+        public override CstNode GenerateTreeFromCodeText(
+                string code, bool throwingParseError = DefaultThrowingParseError) {
+            if (code.Contains("<?php")) {
+                return GenerateSyntaxTree(new ANTLRStringStream(code), throwingParseError);
+            }
+            var ret = GenerateSyntaxTree(new ANTLRStringStream("<?php " + code), throwingParseError);
+            var node =
+                    ret.DescendantsAndSelf()
+                            .FirstOrDefault(n => n.HasToken && n.Token.Text == "<?php");
+            if (node != null) {
+                node.Token.Text = "";
+            }
+            var hidden = ret.AllHiddens()
+                    .FirstOrDefault(t => t.Text.StartsWith(" "));
+            if (hidden != null) {
+                hidden.Text = hidden.Text.Substring(1);
+            }
+            var foundHidden = false;
+            foreach (var token in ret.AllTokensWithHiddens()) {
+                if (token.Range.StartLine != 1) {
+                    break;
+                }
+                token.Range = new CodeRange(
+                        new CodeLocation(
+                                token.StartLine,
+                                token.StartPosition < 5
+                                        ? token.StartPosition
+                                        : token.StartPosition - (foundHidden ? 6 : 5)),
+                        new CodeLocation(
+                                token.EndLine,
+                                token.EndLine != 1
+                                        ? token.EndPosition
+                                        : token.EndPosition - (foundHidden ? 6 : 5)));
+                if (token == hidden) {
+                    foundHidden = true;
+                    token.Range = new CodeRange(
+                            token.Range.StartLocation,
+                            new CodeLocation(
+                                    token.EndLine,
+                                    token.EndLine != 1 ? token.EndPosition : token.EndPosition - 1));
+                }
+            }
+            // TODO: Should we modify positions?
+            return ret;
+        }
+
+        /// <summary>
+        /// Generates a syntax tree from the specified <c>TextReader</c> which reads the source code.
+        /// </summary>
+        /// <param name="codeReader"></param>
+        /// <param name="throwingParseError"></param>
+        /// <returns></returns>
+        public override CstNode GenerateTreeFromCode(
+                TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
+            return GenerateTreeFromCodeText(codeReader.ReadToEnd(), throwingParseError);
         }
     }
 }

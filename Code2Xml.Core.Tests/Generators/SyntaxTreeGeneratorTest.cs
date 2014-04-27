@@ -230,7 +230,7 @@ namespace Code2Xml.Core.Tests.Generators {
 						var lastSpan = DateTime.Now - DateTime.Now;
 
 						if (sumStmt < 1000) {
-							Console.WriteLine("Failed");
+							Console.WriteLine("Too small");
 							return;
 						}
 
@@ -261,11 +261,15 @@ namespace Code2Xml.Core.Tests.Generators {
 																			(p)));
 									Console.Write("#");
 									lastSpan = head.Committer.When - now.Committer.When;
-									return sumStmt / 3 < lastStmt && lastStmt < sumStmt / 2;
+									return lastStmt < sumStmt / 2;
 								}
 								);
+					    if (sumStmt / 4 < lastStmt) {
+							Console.WriteLine("Found but too small");
+							return;
+					    }
 						if (sha == null) {
-							Console.WriteLine("Failed");
+							Console.WriteLine("Not found such commit");
 							return;
 						}
 						Console.WriteLine("Passed");
