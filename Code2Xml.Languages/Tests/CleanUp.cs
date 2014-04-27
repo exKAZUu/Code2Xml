@@ -79,7 +79,7 @@ namespace Code2Xml.Languages.Tests {
 
 		[Test]
 		public void GenerateTestCases() {
-			var inPath = @"C:\Users\exKAZUu\Desktop\js_repo.csv";
+			var inPath = @"C:\Users\exKAZUu\Desktop\lua_repo.csv";
 			var set = new HashSet<string>();
 			var count = 0;
 			foreach (var line in File.ReadAllLines(inPath)) {
@@ -91,8 +91,8 @@ namespace Code2Xml.Languages.Tests {
 					set.Add(items[0]);
 					Console.WriteLine("Tuple.Create(@\"" + items[0] + "\",");
 					Console.WriteLine(
-							"@\"" + items[1] + "\",\"" + items[2] + "\"," + string.Join(",", items.Skip(3)) + "),");
-					if (++count == 100) {
+							"@\"" + items[1] + "\",\"" + items[2] + "\"),");
+					if (++count == 60) {
 						return;
 					}
 				}

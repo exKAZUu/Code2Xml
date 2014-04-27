@@ -56,305 +56,244 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                 };
                 var learningSets = new[] {
                     Tuple.Create(
-                            @"https://github.com/mason-larobina/luakit.git",
-                            @"993d814c6a51bf50ec0424e65ce2dc35f4aa435f", 513),
-                    Tuple.Create(
-                            @"https://github.com/koreader/koreader.git",
-                            @"f1a8970adb94a6a43cff4d3d16769931039e1f73", 466),
-                    Tuple.Create(
-                            @"https://github.com/leafo/lapis.git",
-                            @"f2cdcd8179bc0d57560df5bbd95ee03f26214ef7", 374),
-                    Tuple.Create(
-                            @"https://github.com/rtsisyk/luafun.git",
-                            @"3d44c0841dbc93b645546bb13868550089bfa076", 352),
-                    Tuple.Create(
-                            @"https://github.com/copycat-killer/awesome-copycats.git",
-                            @"2b565ee240c883bbb4115106eef66f9f1508a864", 289),
-                    Tuple.Create(
-                            @"https://github.com/tylerneylon/pacpac.git",
-                            @"cad99bdd64346dbc3180ee611ea502197da8b414", 273),
-                    Tuple.Create(
-                            @"https://github.com/metadeus/luv.git",
-                            @"655c0efc14572d18744aff336210b30574dd7eaf", 44),
-                    Tuple.Create(
-                            @"https://github.com/stevedonovan/Penlight.git",
-                            @"6118a923f5ef4a21a9ae432d42707c5f4f0446a1", 248),
-                    Tuple.Create(
-                            @"https://github.com/zedshaw/Tir.git",
-                            @"4c1bdfa5b421e8eb9d3724928055da2728130d40", 241),
-                    Tuple.Create(
-                            @"https://github.com/mirven/underscore.lua.git",
-                            @"1bb487f5a0e523a4438a9d126a7ed44accea5a5a", 212),
-                    Tuple.Create(
-                            @"https://github.com/ymobe/rapanui.git",
-                            @"595076d5706695a8b9b8de393b749d7d90a414a2", 201),
-                    Tuple.Create(
-                            @"https://github.com/silentbicycle/tangram.git",
-                            @"85f56670ac839def04715457e1ddaaba7f340bc1", 45),
+                            @"https://github.com/kennyledet/Algorithm-Implementations.git",
+                            @"ec423a1984fa923e117053c114c92ae86d32bfd4",
+                            "56ed090beaecb00a38317ee0d318b4a833f5e24c"),
                     Tuple.Create(
                             @"https://github.com/nrk/redis-lua.git",
-                            @"4408c3d686ffd1f2689c0561a166821785cc09ec", 186),
+                            @"4408c3d686ffd1f2689c0561a166821785cc09ec",
+                            "26dab1fd3387440519dd7a66a959c530e6a22a81"),
                     Tuple.Create(
-                            @"https://github.com/basecamp/intermission.git",
-                            @"bb75e1ec83dea67e4db4a6a7c00bc4fcd477eae0", 150),
+                            @"https://github.com/gamesys/moonshine.git",
+                            @"ca6d7a57bfb676caf409e7398a448f90eb139b47",
+                            "9dd8584c233f6527e3b0899cf89434ff598592be"),
+                    Tuple.Create(
+                            @"https://github.com/tekkub/wow-ui-source.git",
+                            @"e9e777a6d1baca29d6253260a69463767d8d9b00",
+                            "ef5e66f9bdb6d893576008993fad098fa6455743"),
                     Tuple.Create(
                             @"https://github.com/minetest/minetest_game.git",
-                            @"15740ffd3d1ea1af182a8607c600f3af414c2c73", 145),
-                    Tuple.Create(
-                            @"https://github.com/vrld/hump.git",
-                            @"e10fa66e60c5984a8d92801163d23811b7ac509f", 142),
-                    Tuple.Create(
-                            @"https://github.com/fab13n/metalua.git",
-                            @"355ff0bc201e00856ba20d82c65b14ffa6fcfe4b", 136),
+                            @"15740ffd3d1ea1af182a8607c600f3af414c2c73",
+                            "894f98d878b198256881e348e294365e8a677cbf"),
                     Tuple.Create(
                             @"https://github.com/kikito/lua_missions.git",
-                            @"330d7702417c4b18358ab822ba676058892ad889", 133),
-                    Tuple.Create(
-                            @"https://github.com/keplerproject/copas.git",
-                            @"d2474ab444af5c2bff0ae23f60affb7c64f49242", 44),
-                    Tuple.Create(
-                            @"https://github.com/loveshell/ngx_lua_waf.git",
-                            @"2b32a34dfc67e8bbb677987319a30357d5ae6e14", 127),
-                    Tuple.Create(
-                            @"https://github.com/mikar/awesome34-themes.git",
-                            @"312cbc31b271afa164a81d51822de7d54b1153f3", 117),
+                            @"330d7702417c4b18358ab822ba676058892ad889",
+                            "e2363031da6948391e1d5fd55fb505df60c3d536"),
                     Tuple.Create(
                             @"https://github.com/kernelsauce/turbo.git",
-                            @"d1411bbbcbe18cb20a7d91bb95505d952993c31f", 115),
-                    Tuple.Create(
-                            @"https://github.com/oneoo/alilua.git",
-                            @"7ce84488504cd364aa5d86acceff8fb8203b9b4f", 112),
-                    Tuple.Create(
-                            @"https://github.com/kikito/inspect.lua.git",
-                            @"e67a7471d4dd9e22e26b3620ce8701c0e479cb82", 112),
-                    Tuple.Create(
-                            @"https://github.com/Kadoba/Advanced-Tiled-Loader.git",
-                            @"0cc155d14406feb0335d455afd1c1fdd8b028671", 110),
+                            @"d1411bbbcbe18cb20a7d91bb95505d952993c31f",
+                            "bedd3c1b200056d5bc43c2c2a18b69c25e404c56"),
                     Tuple.Create(
                             @"https://github.com/appwilldev/moochine.git",
-                            @"9f643a5b51fb132c11ec1c870e4979cf03012992", 109),
+                            @"9f643a5b51fb132c11ec1c870e4979cf03012992",
+                            "386ab4095e02b222efc874cca97c7ebbabcfc515"),
                     Tuple.Create(
                             @"https://github.com/Fluorohydride/ygopro.git",
-                            @"16a98132749215b8ca27f6e479976ef42c4cd0fc", 107),
-                    Tuple.Create(
-                            @"https://github.com/NikolaiResokav/LoveFrames.git",
-                            @"4dfffef2bc8fd5053e714533b7e6e701722c7a89", 101),
-                    Tuple.Create(
-                            @"https://github.com/haste/oUF.git",
-                            @"955f9424bf53b149fb03822bb2082f8888241c78", 99),
+                            @"16a98132749215b8ca27f6e479976ef42c4cd0fc",
+                            "689440546bed214a2071a563cceedb7fcf9b3d5f"),
                     Tuple.Create(
                             @"https://github.com/Shestak/ShestakUI.git",
-                            @"42527a9c4b81c3c1f762b73d4e777cd0fbd3a852", 98),
+                            @"42527a9c4b81c3c1f762b73d4e777cd0fbd3a852",
+                            "4ae15e9a7d695790b7cafd0637e278cf14f97462"),
                     Tuple.Create(
                             @"https://github.com/pavouk/lgi.git",
-                            @"3feb90f4c0c20312e646fb8b1106a5c44a04293e", 93),
-                    Tuple.Create(
-                            @"https://github.com/majek/lua-channels.git",
-                            @"599b27ee7496cef488a057aad86e1ce472190a78", 93),
-                    Tuple.Create(
-                            @"https://github.com/makotok/Hanappe.git",
-                            @"b1a759fe9606bfc49a8df458629099be87ab86f5", 92),
+                            @"3feb90f4c0c20312e646fb8b1106a5c44a04293e",
+                            "91068f66558a50ee2f8fe5eb425c60f369a1127b"),
                     Tuple.Create(
                             @"https://github.com/virgo-agent-toolkit/rackspace-monitoring-agent.git",
-                            @"5197adcd93c61db3c30b1a45a6fc6dbd1d95d66f", 90),
-                    Tuple.Create(
-                            @"https://github.com/lefcha/concurrentlua.git",
-                            @"74405929dca29b2c61fcb9e94c6b6d8799bb148a", 90),
+                            @"5197adcd93c61db3c30b1a45a6fc6dbd1d95d66f",
+                            "2ecf5c528edc4e44df57578b47c33ca74686782e"),
                     Tuple.Create(
                             @"https://github.com/pkulchenko/MobDebug.git",
-                            @"c2b9988ccda7998be466da67690316b45fd3469a", 88),
+                            @"c2b9988ccda7998be466da67690316b45fd3469a",
+                            "df119c83610b382da1deb4923a0993c524daf937"),
                     Tuple.Create(
                             @"https://github.com/davidm/lua-inspect.git",
-                            @"ca3988019a2f5f1b3f4e94b285eb6e77e5923dd3", 88),
-                    Tuple.Create(
-                            @"https://github.com/terceiro/awesome-freedesktop.git",
-                            @"e514e742864495f23fd725f8c596f41a01d67795", 86),
-                    Tuple.Create(
-                            @"https://github.com/norman/telescope.git",
-                            @"c80b928e306cad7195e1ce5b92ddcdcb0a2c50b2", 85),
-                    Tuple.Create(
-                            @"https://github.com/kikito/tween.lua.git",
-                            @"b14444fe3c6bb0a530b97109f3ce2f5e32f55839", 85),
-                    Tuple.Create(
-                            @"https://github.com/crosslife/LoveClear.git",
-                            @"dd9a81488bbf598e3e279c545a99c562f201d41b", 80),
-                    Tuple.Create(
-                            @"https://github.com/nrk/mercury.git",
-                            @"13c85348e059dd24f2c26cf9b4e259fa2d1001c8", 77),
-                    Tuple.Create(
-                            @"https://github.com/richardhundt/shine.git",
-                            @"a3cdf3bfc9645f90572fdd80951302edf6681ede", 76),
-                    Tuple.Create(
-                            @"https://github.com/jtarchie/underscore-lua.git",
-                            @"a98846874399916a8689dd5bfe7cafd373128a66", 75),
-                    Tuple.Create(
-                            @"https://github.com/copycat-killer/lain.git",
-                            @"4c3cf3c0b78624242be877a8454a3cd7c2679d45", 73),
-                    Tuple.Create(
-                            @"https://github.com/keplerproject/xavante.git",
-                            @"58188b9da0d6ad621e5da6089684c5273936b398", 73),
+                            @"ca3988019a2f5f1b3f4e94b285eb6e77e5923dd3",
+                            "b214441af0172d0ebe075119aba16e65c4290ea7"),
                     Tuple.Create(
                             @"https://github.com/lipp/lua-websockets.git",
-                            @"9ade24fc972cfc80b5d1d31e1d92ec1d28b7c4be", 72),
-                    Tuple.Create(
-                            @"https://github.com/vrld/HardonCollider.git",
-                            @"fb8c0511cf85b86327e34f9356e1e8cf9aee8b47", 72),
-                    Tuple.Create(
-                            @"https://github.com/Cue/hop.git",
-                            @"3e1b8e6bf535fb12f1ad3348473c64acd3647993", 72),
+                            @"9ade24fc972cfc80b5d1d31e1d92ec1d28b7c4be",
+                            "7c1f97f2f414f1f0208244bb6de94dc2abdd09ec"),
                     Tuple.Create(
                             @"https://github.com/harningt/luajson.git",
-                            @"827425b10152f8cdc515e4ffb900338506e28910", 71),
+                            @"827425b10152f8cdc515e4ffb900338506e28910",
+                            "32ca4123e4d2e73e7862a8e09b88fc86d7102f57"),
                     Tuple.Create(
                             @"https://github.com/AdamBuchweitz/CrawlSpaceLib.git",
-                            @"471868fe6cad288cac57281b5218cdd711b826eb", 71),
-                    Tuple.Create(
-                            @"https://github.com/tony/awesome-config.git",
-                            @"2957a1bd888a6a99666f3a67c87d0333474736a9", 71),
-                    Tuple.Create(
-                            @"https://github.com/weshoke/Lust.git",
-                            @"174ee908a3b0ee4ca71c92f314fd0efa82498035", 71),
+                            @"471868fe6cad288cac57281b5218cdd711b826eb",
+                            "14985eda97b6a40bdb6c678bb60ac103e95f924f"),
                     Tuple.Create(
                             @"https://github.com/miko/Love2d-samples.git",
-                            @"50a8b4b43d517081a83d036e4510904402dcd7d2", 71),
-                    Tuple.Create(
-                            @"https://github.com/Kiwi/clyde.git",
-                            @"dcdba8de3a3be3685a72a1fcab24080124242a7e", 70),
+                            @"50a8b4b43d517081a83d036e4510904402dcd7d2",
+                            "2ac588ef7aa4655576d2370c13ac6b7eb285e404"),
                     Tuple.Create(
                             @"https://github.com/Neopallium/lua-handlers.git",
-                            @"ae93f442175f4f03dd612cafa073df74a8fe626f", 70),
-                    Tuple.Create(
-                            @"https://github.com/Stabyourself/mari0.git",
-                            @"b1412a08a1411b2f237cdd276aee27df008cb06e", 69),
-                    Tuple.Create(
-                            @"https://github.com/mcurry/html_cache.git",
-                            @"83af9d9ee24b94b99387d8171b78e388388be756", 68),
-                    Tuple.Create(
-                            @"https://github.com/liseen/lua-resty-http.git",
-                            @"32d951bb47ebddb82b0e3bf1a6eb0af4a6df9f1e", 68),
+                            @"ae93f442175f4f03dd612cafa073df74a8fe626f",
+                            "c22f7425b1c20fe7c5049d4249495fe1ed043bbe"),
                     Tuple.Create(
                             @"https://github.com/cedlemo/blingbling.git",
-                            @"7ac39503e2811042cf0d83a0874d230779a710ef", 66),
-                    Tuple.Create(
-                            @"https://github.com/keplerproject/orbit.git",
-                            @"123ec06e3a9fd844f28a43258227bce19ba8ab30", 65),
+                            @"7ac39503e2811042cf0d83a0874d230779a710ef",
+                            "d0ff3be7f1242e596355ea46c0e88e421c2a8ce7"),
                     Tuple.Create(
                             @"https://github.com/radamanthus/corona-game-template.git",
-                            @"2d1dc125648b70b855fe5a318ad8a6ee30a4e1d2", 65),
+                            @"2d1dc125648b70b855fe5a318ad8a6ee30a4e1d2",
+                            "76a71e8c9242cb49c08f5d2d1228ea3499981372"),
                     Tuple.Create(
                             @"https://github.com/ostinelli/gin.git",
-                            @"8361d2f5f16e64c65ba33d1dbbc74b97d5256f76", 64),
+                            @"8361d2f5f16e64c65ba33d1dbbc74b97d5256f76",
+                            "d0d16d865e3dbd7dc2b3f888f56bbe45ef693bae"),
                     Tuple.Create(
-                            @"https://github.com/ignacio/LuaOAuth.git",
-                            @"3e1e6962658cbb78a5cd3e10c8f6abd35d59232a", 64),
+                            @"https://github.com/ymobe/rapanui.git",
+                            @"595076d5706695a8b9b8de393b749d7d90a414a2",
+                            "642d6cfb7c7f27660d7e35b744bae954e65a2a80"),
                     Tuple.Create(
-                            @"https://github.com/davidm/lua2c.git",
-                            @"c5b239dd5a9fad5718ffaa16e6a30cca8053ba92", 62),
+                            @"https://github.com/bjc/prosody.git",
+                            @"701fa72ca55909888b3fd428724128c654d8b543",
+                            "4693fe1ab54233629f2c4b33636f54f8610a1421"),
                     Tuple.Create(
-                            @"https://github.com/haberman/jitdemo.git",
-                            @"387503c5b8db268a6236a46e491d6f756ed17d31", 62),
+                            @"https://github.com/Yonaba/Jumper.git",
+                            @"2479afadf3d50e30ea9f9ab104e6229176d57339",
+                            "1da043fba66070aac09c36ce4cc2fe175cb4f980"),
                     Tuple.Create(
-                            @"https://github.com/torhve/LuaWeb.git",
-                            @"da1b73e7b70c938e35051a242c6fa70236e60aac", 61),
+                            @"ad7687e3a9e0c6",
+                            @"134585", "7192"),
                     Tuple.Create(
-                            @"https://github.com/henkboom/pax-britannica.git",
-                            @"a7a3c0c21e5b27e6f4be3b0b817ebd29cd23fa7d", 60),
-                    Tuple.Create(
-                            @"https://github.com/vincentbernat/awesome-configuration.git",
-                            @"b649c57c91ba4cb624f37d3f2a4249d9806da68c", 59),
-                    Tuple.Create(
-                            @"https://github.com/kikito/love-tile-tutorial.git",
-                            @"92c5ce5e7e5aa9de461f948c17ed5c8d3af1d0d4", 59),
-                    Tuple.Create(
-                            @"https://github.com/dualface/quick-x-server.git",
-                            @"2c037690610d92692744bf78fc136dec8068fddf", 59),
-                    Tuple.Create(
-                            @"https://github.com/geoffleyland/luatrace.git",
-                            @"6150cfd6290986adab8ea948e756ee17c80d098a", 58),
-                    Tuple.Create(
-                            @"https://github.com/Yonaba/30log.git",
-                            @"25022b30e58f1590ca3d2bc2c17107b869c38d62", 57),
-                    Tuple.Create(
-                            @"https://github.com/SimonLarsen/mrrescue.git",
-                            @"8f226413b95544d0e0744d9c3e92c68b87659483", 57),
-                    Tuple.Create(
-                            @"https://github.com/Nuku/Flexible-Survival.git",
-                            @"4b75f275ece08e07d1325efc3205578edc0a021b", 56),
-                    Tuple.Create(
-                            @"https://github.com/meric/l2l.git",
-                            @"e9394879e9bde63b1b21e39928ac19f304fc1b39", 56),
-                    Tuple.Create(
-                            @"https://github.com/pkulchenko/serpent.git",
-                            @"026f4e1a5c34f0670948a13d2182729448a260f2", 56),
-                    Tuple.Create(
-                            @"https://github.com/AlexChittock/SimpleShortener.git",
-                            @"76462aeea14adcc0aef49c2cfa8a49951b5d460e", 55),
-                    Tuple.Create(
-                            @"https://github.com/willsteel/lcpp.git",
-                            @"7fdda9a5e3eacccee7571130602dc1381c01bcd9", 55),
-                    Tuple.Create(
-                            @"https://github.com/dmccuskey/DMC-Corona-Library.git",
-                            @"8c85803e39a673cc84b6aa089b51be56f05dd062", 55),
-                    Tuple.Create(
-                            @"https://github.com/Neopallium/lua-pb.git",
-                            @"862fe3121e71f695d9a44ee1d1038069292b69f3", 54),
-                    Tuple.Create(
-                            @"https://github.com/darklajid/ansible-communication.git",
-                            @"003bc68dcbb9606a8099132a399cf21bf342e81c", 53),
-                    Tuple.Create(
-                            @"https://github.com/ansca/Corona-Comics-SDK-2.0.git",
-                            @"ac2abb7ef77753bb01e76ce008d88cece46661b4", 53),
-                    Tuple.Create(
-                            @"https://github.com/xolox/vim-lua-inspect.git",
-                            @"d7fb876f0291cbd13c4c38177ada015fafc58770", 53),
-                    Tuple.Create(
-                            @"https://github.com/annulen/premake.git",
-                            @"c559fa4913bd86be6e415c3b193db90ae4607f5b", 52),
-                    Tuple.Create(
-                            @"https://github.com/ignacio/StackTracePlus.git",
-                            @"3c0d8a09670a40267104348feac19de73191d398", 51),
-                    Tuple.Create(
-                            @"https://github.com/leafo/magick.git",
-                            @"6ba5063b2fe3cf043b4247e9508a6c74b211e704", 51),
-                    Tuple.Create(
-                            @"https://github.com/mirven/luaspec.git",
-                            @"c0c774b54dcc214250cc8eb8aea0dcea60dc6f7c", 49),
-                    Tuple.Create(
-                            @"https://github.com/shawndumas/adventure.lua.git",
-                            @"e98626163129f7c3c4fa6f23abaad1d16b524b16", 48),
-                    Tuple.Create(
-                            @"https://github.com/Olivine-Labs/lustache.git",
-                            @"3358eda141041f8998b938c242b1eda7817898e9", 48),
-                    Tuple.Create(
-                            @"https://github.com/bioe007/awesome-configs.git",
-                            @"cb91a271d55a40cae6b25b0a34ded6947211353f", 47),
+                            @"https://github.com/iamgreaser/iceball.git",
+                            @"4ae5d09ce4fd2269f4e097b63bd0fd9b83f2198f",
+                            "6239c60b779e021a0583c064861480e80c31cb7d"),
                     Tuple.Create(
                             @"https://github.com/xopxe/Lumen.git",
-                            @"264d9d042ee9848bccfd064d69259c1d6bde0a2e", 47),
-                    Tuple.Create(
-                            @"https://github.com/Neopallium/lualogging.git",
-                            @"c85130120406b9641e96ab05f782dde819fbd102", 47),
+                            @"264d9d042ee9848bccfd064d69259c1d6bde0a2e",
+                            "f79fa364d82499f7e0979545565af4b9cc4bc73c"),
                     Tuple.Create(
                             @"https://github.com/Bertram25/ValyriaTear.git",
-                            @"a0e86da761fbc84ace9a778faf64e0f3687dbb3e", 46),
-                    Tuple.Create(
-                            @"https://github.com/keplerproject/wsapi.git",
-                            @"eed8338401196cc155e59280adbe58d78933ead0", 46),
-                    Tuple.Create(
-                            @"https://github.com/GymbylCoding/Dusk-Engine.git",
-                            @"f0fcdfc2cd628966bbf208bcb6bf3c3374dd1e42", 46),
-                    Tuple.Create(
-                            @"https://github.com/mtourne/nginx_log_by_lua.git",
-                            @"adc7ecbb3107e0b2a487d851acd33464215a076a", 46),
+                            @"a0e86da761fbc84ace9a778faf64e0f3687dbb3e",
+                            "6e2019d9959f2e446b7971d80925262f1ee1397f"),
                     Tuple.Create(
                             @"https://github.com/Yonaba/Moses.git",
-                            @"57c7b5d1d1f074cafbd570088ad8681b03c65601", 46),
+                            @"57c7b5d1d1f074cafbd570088ad8681b03c65601",
+                            "4323caefe61737f195b96acbd51e701639eff8f2"),
                     Tuple.Create(
-                            @"https://github.com/stevedonovan/Microlight.git",
-                            @"95ae73f9830aec3bb1d4773156a6f921dfbed9b4", 46),
+                            @"https://github.com/metadeus/luv.git",
+                            @"655c0efc14572d18744aff336210b30574dd7eaf",
+                            "21653326254a84a552089eba3c7e620be2b9367a"),
                     Tuple.Create(
-                            @"https://github.com/appwilldev/moochine-demo.git",
-                            @"3b3f565386d43aa533793700c020c4f096ac9636", 45),
+                            @"https://github.com/lubyk/dub.git",
+                            @"b0c7087e878937399f329468bff41de9484f8b0c",
+                            "6247877f0a67a0ebcafe5ec1b918412cbb712cfc"),
+                    Tuple.Create(
+                            @"https://github.com/pygy/LuLPeg.git",
+                            @"c457b27e0d7fc935b133921bf3aee92efffe40c8",
+                            "c015f2d1fe4027f0b867322349167066c89fb403"),
+                    Tuple.Create(
+                            @"https://github.com/lua-nucleo/lua-nucleo.git",
+                            @"570e115dab1260ad433bd778eebb5d91fd122d5a",
+                            "01a43cb2fa05bae2c752fcde0d5540ca9235c17a"),
+                    Tuple.Create(
+                            @"https://github.com/annulen/premake.git",
+                            @"c559fa4913bd86be6e415c3b193db90ae4607f5b",
+                            "d947c1fed5d9aa04dc586cb1ff6906db9c2540ab"),
+                    Tuple.Create(
+                            @"https://github.com/Neopallium/LuaNativeObjects.git",
+                            @"a5c444769b7dfad1436a1bc4fe21dce75629db25",
+                            "b08030b08a3d0bac41fd5debd323c66079ebdb3c"),
+                    Tuple.Create(
+                            @"https://github.com/SiENcE/lovecodify.git",
+                            @"9b84ce1a5f3474707e6021355afd6c2554f18251",
+                            "ef8e374d88c47ac8ffd53e37533e65371f61df71"),
+                    Tuple.Create(
+                            @"https://github.com/jp-ganis/JPS.git",
+                            @"c65f107fa59a5f572e0ffd70be7990a873d87487",
+                            "82c21a32fc71e347e63c104eb0a87ee05566a468"),
+                    Tuple.Create(
+                            @"https://github.com/stravant/LuaMinify.git",
+                            @"c284a942089b0154af7498b110e02d1bba8aee16",
+                            "fb1aa5b26e401f7eb74343c0e662ef4ff409dda2"),
+                    Tuple.Create(
+                            @"https://github.com/UPenn-RoboCup/UPennalizers.git",
+                            @"abd9b34294a6485965be274333b72f1272f8f3c8",
+                            "f56d1740ba1e781c65b5903c7c38c164caf6795b"),
+                    Tuple.Create(
+                            @"https://github.com/SimonLarsen/mrrescue.git",
+                            @"8f226413b95544d0e0744d9c3e92c68b87659483",
+                            "0c2eeda9cd99481d1ac8989be33e781ae4ece10a"),
+                    Tuple.Create(
+                            @"https://github.com/meric/l2l.git",
+                            @"e9394879e9bde63b1b21e39928ac19f304fc1b39",
+                            "983ab97a012106f7c7ff1079a1a34145888a10d4"),
+                    Tuple.Create(
+                            @"https://github.com/dmccuskey/DMC-Corona-Library.git",
+                            @"8c85803e39a673cc84b6aa089b51be56f05dd062",
+                            "47a84264425cba43def72e663408a62573065879"),
+                    Tuple.Create(
+                            @"https://github.com/Neopallium/lua-pb.git",
+                            @"862fe3121e71f695d9a44ee1d1038069292b69f3",
+                            "60a4033a7eb268f2b18d83bf1f17a9ba184cb9d8"),
+                    Tuple.Create(
+                            @"https://github.com/SnakeSVx/spacebuild.git",
+                            @"68186b8bc7cabbb5275afd734fae9613fbd8761d",
+                            "a1102e3a9cc105a992cca8303a1c861d1fff19a7"),
+                    Tuple.Create(
+                            @"https://github.com/Wiladams/LAPHLibs.git",
+                            @"aed3531fb6face76c5634bde995e9cf503d6136b",
+                            "689537d3f96c78e3525285015b3d37fcc9225b50"),
+                    Tuple.Create(
+                            @"https://github.com/tales/sourceoftales.git",
+                            @"f259c99ebb42a4956f6e4c5464051651a3226d5a",
+                            "fe1396ce2c8e3d8aa3a76f466a03b2243ac4ab74"),
+                    Tuple.Create(
+                            @"https://github.com/paulofmandown/rotLove.git",
+                            @"bb089f3294ba9cd1f7cc031dffc0b695fa2ed4bf",
+                            "2717740d7a41712a0369bc3804c347ec2e5f6fca"),
+                    Tuple.Create(
+                            @"https://github.com/Eonblast/fleece-lite.git",
+                            @"06103ea87601c74801ca5780bc9014011243bbec",
+                            "501ee823d9896c674c484ec65fa06a8bbca70a1f"),
+                    Tuple.Create(
+                            @"https://github.com/ildyria/iFilger.git",
+                            @"d092e040143146a551b6821b6a9b199a4b98e9db",
+                            "172180c51187092483fc50ddfd9a082b04cba16a"),
+                    Tuple.Create(
+                            @"https://github.com/sergeyzavadski/breeze.git",
+                            @"b17da085ca4691feb189690038b8d054b861d6e0",
+                            "f58e55e30b09f4dada0bda0f980c7ba0cf887563"),
+                    Tuple.Create(
+                            @"https://github.com/Jeija/minetest-mod-mesecons.git",
+                            @"1f666875807c3c8e6c1771e4fb46c374d2e40ccb",
+                            "d54d1485959655d67b11cade64f95a1e31d5e963"),
+                    Tuple.Create(
+                            @"https://github.com/christopho/zsdx.git",
+                            @"878df4510abea1dcd6b05d861941a2926c0c265e",
+                            "05b0e3b1499ee7ddd3ae31ef48ffcdccc94cd183"),
+                    Tuple.Create(
+                            @"https://github.com/renstrom/NeavUI.git",
+                            @"e16a5b8fd402fd67b3d61b66531b2adbd1e24c8c",
+                            "e9384588d2f3b90457308019d1d59e42cf4cdf32"),
+                    Tuple.Create(
+                            @"https://github.com/Elv13/radical.git",
+                            @"8da00cbd657f77fdfcd4b6a9cc81420daa2cb5e7",
+                            "63bb804a45bb206c6b67240e9a50ded104b52955"),
+                    Tuple.Create(
+                            @"https://github.com/Metapyziks/finalfrontier.git",
+                            @"3b22cc19b155834c0e9af7c107ee58f1cd4deea8",
+                            "a8749900869ec1b0bd18c62cf4ca827b1701ff78"),
+                    Tuple.Create(
+                            @"https://github.com/leafo/heroku-openresty.git",
+                            @"5945df6f7641e456e51c518947a5f9e50f0cc4d5",
+                            "2f7d508238499e198a169ed15e34f1a40e6dec6e"),
+                    Tuple.Create(
+                            @"https://github.com/quaker66/vortex.git",
+                            @"2993be665f412b8243470597e34bd9f61f5513d1",
+                            "266c6bc70e74acd86cc255aa6ef77faf02a91a7a"),
+                    Tuple.Create(
+                            @"https://github.com/Wiladams/LJIT2RPi.git",
+                            @"43cf70d697de45344b660c05ef36b53c3df81617",
+                            "65e45c6a3877afe240b02197332e5442bf0372ac"),
+                    Tuple.Create(
+                            @"https://github.com/TekNoLogic/Cork.git",
+                            @"1b40e35a31c1048033b6f6b94600581b389a46d9",
+                            "c638eee29a8610a52ee1726b3990aaa068234a47"),
                 };
                 foreach (var exp in exps) {
                     foreach (
@@ -363,21 +302,20 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                                             .Take(JavaExperiment.TakeCount)) {
                         var url = learningSet.Item1;
                         var path = Fixture.GetGitRepositoryPath(url);
-                        Git.CloneAndCheckout(path, url, learningSet.Item2);
-                        yield return new TestCaseData(exp, path, learningSet.Item3);
+                        Git.Clone(path, url);
+                        yield return new TestCaseData(exp, path, learningSet.Item2, learningSet.Item3);
                     }
                 }
             }
         }
 
         [Test, TestCaseSource("TestCases")]
-        public void Test(LearningExperiment exp, string projectPath, int startCount) {
+        public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), };
-            var projectName = Path.GetFileName(projectPath);
-            if (_lastProjectName != projectName) {
+            if (_lastProjectName != exp.GetType().Name) {
                 _writer.WriteLine();
-                _writer.Write(projectName + ",");
-                _lastProjectName = projectName;
+                _writer.Write(Path.GetFileName(projectPath) + ",");
+                _lastProjectName = exp.GetType().Name;
             }
             exp.Learn(seedPaths, _writer, projectPath, "*.lua");
             _writer.Flush();

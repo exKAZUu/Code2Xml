@@ -234,10 +234,9 @@ namespace Code2Xml.Objects.Tests.Learning {
 
         public void Learn(
                 ICollection<string> seedPaths, StreamWriter writer,
-                string projectPath, string searchPattern) {
-            var commitPointers = Git.GetCommitPointers(projectPath, Generator, searchPattern);
-            goNow = () => Git.Checkout(projectPath, commitPointers.Item1);
-            goBack = () => Git.Checkout(projectPath, commitPointers.Item2);
+                string projectPath, string searchPattern, string sha1 = null, string sha2 = null) {
+            goNow = () => Git.Checkout(projectPath, sha1);
+            goBack = () => Git.Checkout(projectPath, sha2);
 
             goBack();
 
