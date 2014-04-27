@@ -188,66 +188,12 @@ class Resource extends \RESTful\Resource
                 @"6e056565a1254c967228aab60c9d9c7d0e63a7e3", 2271)]
         [TestCase(@"https://github.com/PHPOffice/PHPExcel.git",
                 @"c2a277c447ca965bbe030cd83d6b92df95661541", 2240)]
-        [TestCase(@"https://github.com/yiisoft/yii2.git",
-                @"c501ae4f4d35343115733f9a6a09259050a78d8f", 2237)]
-        [TestCase(@"https://github.com/reactphp/react.git",
-                @"7b996f82dc8b4b974fb719ab26f54fce028960a8", 2192)]
-        [TestCase(@"https://github.com/fabpot/Twig.git",
-                @"c8366374d9d531029a6b031528b552c37e1b2e66", 2188)]
-        [TestCase(@"https://github.com/doctrine/doctrine2.git",
-                @"3a1e24e6801961128c27104919050d40d745030b", 2104)]
-        [TestCase(@"https://github.com/silexphp/Silex.git",
-                @"3cbf93cfb0eb41b216be453ff40a4fa17f1bdbcd", 2093)]
-        [TestCase(@"https://github.com/owncloud/core.git",
-                @"340089f270a778aeb296b1744821dcdb5878131e", 2077)]
-        [TestCase(@"https://github.com/piwik/piwik.git",
-                @"e3efda0492c51cfb786f67419ea3a94c76f15e25", 2066)]
-        [TestCase(@"https://github.com/Seldaek/monolog.git",
-                @"03000a7fcd4072bd7e1f99c8ce4328621c5773b9", 2054)]
-        [TestCase(@"https://github.com/leafo/lessphp.git",
-                @"b7cd5c79e82666bcd2dfadb304342311209fb527", 1929)]
-        [TestCase(@"https://github.com/avalanche123/Imagine.git",
-                @"f93b6895f4567136528448263cc1fe71ee8504ce", 1916)]
-        [TestCase(@"https://github.com/anchorcms/anchor-cms.git",
-                @"d0e113ade61f60cf2672037a687100eac5746330", 1859)]
-        [TestCase(@"https://github.com/laravel/framework.git",
-                @"627fc22cb2fdd343cb17b552955eb317860f023d", 1851)]
-        [TestCase(@"https://github.com/puphpet/puphpet.git",
-                @"e4012cbbe0fc3b200b4750bb79673a9f468c1b9e", 1803)]
-        [TestCase(@"https://github.com/pyrocms/pyrocms.git",
-                @"26b64c5dcab1bcb0590647f2576daa81f77ae86e", 1771)]
-        [TestCase(@"https://github.com/JeffreyWay/Laravel-4-Generators.git",
-                @"cf766fae573d35621c2f2a14f0710c5484edf3f0", 1703)]
-        [TestCase(@"https://github.com/philsturgeon/codeigniter-restserver.git",
-                @"2aa6fec9a05a04d530c58ce77716bba2ba4f46ca", 1684)]
-        [TestCase(@"https://github.com/bobthecow/mustache.php.git",
-                @"43dc9457a2089cf86c0f7fdb79fcdc516293a4b6", 1671)]
-        [TestCase(@"https://github.com/venomous0x/WhatsAPI.git",
-                @"5ad50b311d728752cee50b7c7ed00062df6cb740", 1613)]
-        [TestCase(@"https://github.com/PHPMailer/PHPMailer.git",
-                @"7b384d0bedf7feb1d3cdfaae689d8c5b68eb0515", 1600)]
-        [TestCase(@"https://github.com/fabpot/Goutte.git",
-                @"06a5451288ffddd204b10fa6c6f9ab2b86dd515d", 1584)]
-        [TestCase(@"https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate.git",
-                @"db289e22840277c26911d46972fe516ce309e430", 1543)]
-        [TestCase(@"https://github.com/cboden/Ratchet.git",
-                @"67cedf0ce6b6c7fbb5e305e0667ac219e655d561", 1473)]
-        [TestCase(@"https://github.com/ccoenraets/backbone-directory.git",
-                @"c5654ab50002a7865da849fbc743e7cea750a54e", 1468)]
-        [TestCase(@"https://github.com/gothfox/Tiny-Tiny-RSS.git",
-                @"cda0418af19f55669f16c14c838ee44bf6fd8c99", 1462)]
-        [TestCase(@"https://github.com/MattWilcox/Adaptive-Images.git",
-                @"faa87fd94fc59373df7c2e5bb605c7e3c28e38a4", 1454)]
-        [TestCase(@"https://github.com/drupal/drupal.git",
-                @"95614ce35deb112da18f1f8841632b718be816c7", 1439)]
         [TestCase(@"https://github.com/simplebits/Pears.git",
                 @"bd6211cdd2bf08682716e0a0b080ebee5b90da0b", 1436)]
         [TestCase(@"https://github.com/magento/magento2.git",
                 @"8611ea725e25c67683f3f7e533406291ae8a723b", 1431)]
         [TestCase(@"https://github.com/geocoder-php/Geocoder.git",
                 @"972eed79fb50b6752b5154d391201f2ec7a8e11a", 1381)]
-        [TestCase(@"https://github.com/filp/whoops.git",
-                @"230da4810fc7fff67bf92061dc64eff4d451b68d", 1375)]
         [TestCase(@"https://github.com/kohana/kohana.git",
                 @"338bea96dfa197e7864674dab6cef78958e1f1df", 1365)]
         [TestCase(@"https://github.com/woothemes/woocommerce.git",
