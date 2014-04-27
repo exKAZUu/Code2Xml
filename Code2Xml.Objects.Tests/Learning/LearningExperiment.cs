@@ -484,6 +484,10 @@ namespace Code2Xml.Objects.Tests.Learning {
             _acceptingMask = (BigInteger.One << _acceptingFeatureCount) - BigInteger.One;
             _rejectingMask = _mask ^ _acceptingMask;
 
+	        _acceptedSeedElementCount = 0;
+	        _seedAbstractCount = 0;
+	        _seedElementCount = 0;
+
             foreach (var e in seedAcceptedElements) {
                 var feature = e.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
                 UpdateDict(_idealAccepted, feature, e);
@@ -493,7 +497,10 @@ namespace Code2Xml.Objects.Tests.Learning {
                     _feature2Count[feature]++;
                 } else {
                     _feature2Count[feature] = 1;
+	                _seedAbstractCount++;
                 }
+	            _acceptedSeedElementCount++;
+	            _seedElementCount++;
             }
             foreach (var e in seedRejectedElements) {
                 var feature = e.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
@@ -504,7 +511,9 @@ namespace Code2Xml.Objects.Tests.Learning {
                     _feature2Count[feature]++;
                 } else {
                     _feature2Count[feature] = 1;
+	                _seedAbstractCount++;
                 }
+	            _seedElementCount++;
             }
 
             foreach (var ast in allAsts) {
