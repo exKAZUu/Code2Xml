@@ -227,14 +227,20 @@ namespace Code2Xml.Core.Tests.Generators {
                         var sumStmt = sizeStmt.Sum(t => t.Stmt);
                         var lastSize = sumSize;
                         var lastStmt = sumStmt;
+	                    var lastSpan = DateTime.Now - DateTime.Now;
+
+	                    if (sumStmt < 1000) {
+		                    return;
+	                    }
+						
                         var sha = Git.FindCommitPointers(
                                 path,
-                                () => patterns.SelectMany(
+                                (head, now) => patterns.SelectMany(
                                         pattern =>
                                                 Directory.GetFiles(
                                                         path, pattern, SearchOption.AllDirectories))
-                                        .Sum(p => new FileInfo(p).Length) < sumSize / 3 * 2,
-                                () => {
+                                        .Sum(p => new FileInfo(p).Length) < sumSize / 2,
+                                (head, now) => {
                                     lastSize = patterns.SelectMany(
                                             pattern =>
                                                     Directory.GetFiles(
@@ -253,14 +259,15 @@ namespace Code2Xml.Core.Tests.Generators {
                                                                             .GenerateTreeFromCodePath
                                                                             (p)));
                                     Console.Write("#");
-                                    return sumStmt / 2 < lastStmt && lastStmt < sumStmt / 3 * 2;
+	                                lastSpan = head.Committer.When - now.Committer.When;
+	                                return sumStmt / 3 < lastStmt && lastStmt < sumStmt / 2;
                                 }
                                 );
                         if (sha != null) {
                             File.AppendAllText(
-                                    filePath,
+                                    Path.Combine(@"C:\Users\exKAZUu\Desktop", filePath),
                                     url + "," + commitPointer + "," + sha + "," + sumSize + ","
-                                    + lastSize + "," + sumStmt + "," + lastStmt + "," + starCount
+                                    + lastSize + "," + sumStmt + "," + lastStmt + "," + starCount + "," + lastSpan.Days
                                     + "\r\n");
                         }
                     });
