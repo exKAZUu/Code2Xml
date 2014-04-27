@@ -33,7 +33,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         public static CstGenerator Generator = CstGenerators.JavaUsingAntlr3;
         private string _lastProjectName;
         private const string LangName = "Java";
-        public const int SkipCount = 50;
+        public const int SkipCount = 0;
         public const int TakeCount = 25;
 
         private static IEnumerable<TestCaseData> TestCases {
@@ -380,8 +380,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                 _writer.Write(projectName + ",");
                 _lastProjectName = projectName;
             }
-            _writer.Flush();
             exp.Learn(seedPaths, _writer, projectPath, "*.java");
+            _writer.Flush();
             if (exp.WrongFeatureCount > 0) {
                 Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
                 foreach (var we in exp.WronglyAcceptedElements) {

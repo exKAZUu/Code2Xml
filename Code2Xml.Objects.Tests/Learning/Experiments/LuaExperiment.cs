@@ -74,8 +74,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                             @"https://github.com/tylerneylon/pacpac.git",
                             @"cad99bdd64346dbc3180ee611ea502197da8b414", 273),
                     Tuple.Create(
-                            @"https://github.com/exebetche/vlsub.git",
-                            @"71ef0ef295cafb5477769d9ba3975c6c2ba8d609", 259),
+                            @"https://github.com/metadeus/luv.git",
+                            @"655c0efc14572d18744aff336210b30574dd7eaf", 44),
                     Tuple.Create(
                             @"https://github.com/stevedonovan/Penlight.git",
                             @"6118a923f5ef4a21a9ae432d42707c5f4f0446a1", 248),
@@ -89,8 +89,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                             @"https://github.com/ymobe/rapanui.git",
                             @"595076d5706695a8b9b8de393b749d7d90a414a2", 201),
                     Tuple.Create(
-                            @"https://github.com/keplerproject/luarocks.git",
-                            @"999e27d74abd0bc53165d2ce2642fb5a7af81f40", 200),
+                            @"https://github.com/silentbicycle/tangram.git",
+                            @"85f56670ac839def04715457e1ddaaba7f340bc1", 45),
                     Tuple.Create(
                             @"https://github.com/nrk/redis-lua.git",
                             @"4408c3d686ffd1f2689c0561a166821785cc09ec", 186),
@@ -110,8 +110,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                             @"https://github.com/kikito/lua_missions.git",
                             @"330d7702417c4b18358ab822ba676058892ad889", 133),
                     Tuple.Create(
-                            @"https://github.com/diegonehab/luasocket.git",
-                            @"6d5e40c324c84d9c1453ae88e0ad5bdd0a631448", 131),
+                            @"https://github.com/keplerproject/copas.git",
+                            @"d2474ab444af5c2bff0ae23f60affb7c64f49242", 44),
                     Tuple.Create(
                             @"https://github.com/loveshell/ngx_lua_waf.git",
                             @"2b32a34dfc67e8bbb677987319a30357d5ae6e14", 127),
@@ -379,8 +379,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                 _writer.Write(projectName + ",");
                 _lastProjectName = projectName;
             }
-            _writer.Flush();
             exp.Learn(seedPaths, _writer, projectPath, "*.lua");
+            _writer.Flush();
             //if (exp.WrongFeatureCount > 0) {
             //	Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
             //	foreach (var we in exp.WronglyAcceptedElements) {
