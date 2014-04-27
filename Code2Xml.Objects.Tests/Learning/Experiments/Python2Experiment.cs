@@ -371,8 +371,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                 _writer.Write(projectName + ",");
                 _lastProjectName = projectName;
             }
-            _writer.Flush();
             exp.Learn(seedPaths, _writer, projectPath, "*.py");
+            _writer.Flush();
             if (exp.WrongFeatureCount > 0) {
                 Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
                 foreach (var we in exp.WronglyAcceptedElements) {

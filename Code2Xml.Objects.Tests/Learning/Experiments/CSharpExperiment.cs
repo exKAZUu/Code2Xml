@@ -385,8 +385,8 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                 _writer.Write(projectName + ",");
                 _lastProjectName = projectName;
             }
-            _writer.Flush();
             exp.Learn(seedPaths, _writer, projectPath, "*.cs");
+            _writer.Flush();
             exp.Clear();
             Assert.That(exp.WrongFeatureCount, Is.EqualTo(0));
         }
