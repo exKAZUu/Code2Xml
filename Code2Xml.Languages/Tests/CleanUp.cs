@@ -32,13 +32,13 @@ namespace Code2Xml.Languages.Tests {
 		[Test]
 		public void ShowCandidates() {
 			var fixturePath = Fixture.FixturePath;
-		    var gitDirs = Directory.GetDirectories(
-		            fixturePath, ".git", SearchOption.AllDirectories)
-		            .Select(Path.GetDirectoryName)
-		            .ToList();
-		    foreach (var gitDir in gitDirs) {
-		        Git.Reset(gitDir);
-		    }
+			var gitDirs = Directory.GetDirectories(
+					fixturePath, ".git", SearchOption.AllDirectories)
+					.Select(Path.GetDirectoryName)
+					.ToList();
+			foreach (var gitDir in gitDirs) {
+				Git.Reset(gitDir);
+			}
 			var directories = gitDirs
 					.Where(
 							path =>
@@ -61,20 +61,20 @@ namespace Code2Xml.Languages.Tests {
 
 		[Test]
 		public void MoveToDropbox() {
-		    const string dropBoxPath = @"C:\Users\exKAZUu\Dropbox\Git";
-		    Directory.CreateDirectory(dropBoxPath);
+			const string dropBoxPath = @"C:\Users\exKAZUu\Dropbox\Git";
+			Directory.CreateDirectory(dropBoxPath);
 
 			var fixturePath = Fixture.FixturePath;
-		    var cacheFilePaths = Directory.GetFiles(
-		            fixturePath, "*" + Code2XmlConstants.LearningCacheExtension, SearchOption.AllDirectories)
-		            .ToList();
-		    foreach (var cacheFilePath in cacheFilePaths) {
-		        var dirPath = Path.GetDirectoryName(cacheFilePath);
-		        var dirName = Path.GetFileName(dirPath);
-		        var toPath = Path.Combine(dropBoxPath, dirName);
-		        Directory.CreateDirectory(toPath);
-		        File.Copy(cacheFilePath, Path.Combine(toPath, Path.GetFileName(cacheFilePath)), true);
-		    }
+			var cacheFilePaths = Directory.GetFiles(
+					fixturePath, "*" + Code2XmlConstants.LearningCacheExtension, SearchOption.AllDirectories)
+					.ToList();
+			foreach (var cacheFilePath in cacheFilePaths) {
+				var dirPath = Path.GetDirectoryName(cacheFilePath);
+				var dirName = Path.GetFileName(dirPath);
+				var toPath = Path.Combine(dropBoxPath, dirName);
+				Directory.CreateDirectory(toPath);
+				File.Copy(cacheFilePath, Path.Combine(toPath, Path.GetFileName(cacheFilePath)), true);
+			}
 		}
 
 		[Test]
@@ -90,7 +90,8 @@ namespace Code2Xml.Languages.Tests {
 				if (!set.Contains(items[0])) {
 					set.Add(items[0]);
 					Console.WriteLine("Tuple.Create(@\"" + items[0] + "\",");
-					Console.WriteLine("@\"" + items[1] + "\"," + items[2] + "),");
+					Console.WriteLine(
+							"@\"" + items[1] + "\",\"" + items[2] + "\"," + string.Join(",", items.Skip(3)) + "),");
 					if (++count == 100) {
 						return;
 					}
