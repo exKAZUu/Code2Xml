@@ -16,7 +16,6 @@
 
 #endregion
 
-using System;
 using System.Linq;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Tests.Generators;
@@ -347,106 +346,6 @@ xxxxx
                 @"c3ca0e543970928302b5b21e83a9b913ec710173", 329)]
         [TestCase(@"https://github.com/jkowalski/NLog.git",
                 @"72f649596504d832eae0b9535c2d2e7583382182", 328)]
-        [TestCase(@"https://github.com/todbot/blink1.git",
-                @"afbb60c8a3c586770a2f244ea8a3907fd020ba53", 327)]
-        [TestCase(@"https://github.com/loresoft/msbuildtasks.git",
-                @"fa3b1cb19afb83c6a005547d00465b7233cf5ab7", 324)]
-        [TestCase(@"https://github.com/mono/xwt.git",
-                @"11b0131af050526dad2c105ce74cfb085c2450ff", 323)]
-        [TestCase(@"https://github.com/mspnp/cqrs-journey-code.git",
-                @"dbb9b8a28eedbb0e03463d03091f44ff0c935567", 323)]
-        [TestCase(@"https://github.com/ncqrs/ncqrs.git",
-                @"09ef321d1ad6dcea30584e586ade9526104c6e51", 320)]
-        [TestCase(@"https://github.com/DropNet/DropNet.git",
-                @"ee955df5a86ccba3a50e6e3f1db8ab2e1dc10fb9", 317)]
-        [TestCase(@"https://github.com/sixthsense/sixthsense.git",
-                @"d0185b77c5ffdd8d0e07a87a98424db3cc21f76a", 315)]
-        [TestCase(@"https://github.com/Jessecar96/SteamBot.git",
-                @"5af6a0b85a82620862236077336964b4b76b19b5", 311)]
-        [TestCase(@"https://github.com/VerbalExpressions/CSharpVerbalExpressions.git",
-                @"245a871122b6233c1911911553539fd6735d5556", 310)]
-        [TestCase(@"https://github.com/OpenCover/opencover.git",
-                @"4bd5079ef2cde7410a42a5af1494857eee6231ba", 309)]
-        [TestCase(@"https://github.com/richhickey/clojure-clr.git",
-                @"2c7e20cd3c6ffc64b783ddb3cb7984fb93472ad4", 308)]
-        [TestCase(@"https://github.com/mausch/SolrNet.git",
-                @"f29b03107c1922226f888a64f0ed0b848c56fb54", 305)]
-        [TestCase(@"https://github.com/nsubstitute/NSubstitute.git",
-                @"d787176463bde8a9793709756575a37b1acf8c17", 303)]
-        [TestCase(@"https://github.com/icsharpcode/NRefactory.git",
-                @"3f78bdbedb78cc3e3023bdfbeda016de194acffd", 300)]
-        [TestCase(@"https://github.com/WebApiContrib/WebAPIContrib.git",
-                @"fe88ff3c0b3871c77b062dbbe9a8ff87107b1d9e", 298)]
-        [TestCase(@"https://github.com/loresoft/EntityFramework.Extended.git",
-                @"2a999b949530458edc4fd39861e52e043295177d", 298)]
-        [TestCase(@"https://github.com/NyxStudios/TShock.git",
-                @"61d05ffdc6b3fb9544be72d333585a8aace835da", 297)]
-        [TestCase(@"https://github.com/Haacked/SeeGit.git",
-                @"3c47da93e5d4260612daa8aff3c6ce97da672936", 295)]
-        [TestCase(@"https://github.com/timheuer/callisto.git",
-                @"fb9cbac2ccc7900cecf69f722045ca881dbddba3", 290)]
-        [TestCase(@"https://github.com/thinktecture/Thinktecture.IdentityModel.45.git",
-                @"a2fed40e655beac76f54f11dde1c3b907079a4d1", 289)]
-        [TestCase(@"https://github.com/Lokad/lokad-cqrs.git",
-                @"75e16de6103c3a6fd9d59846ccea6eeb88185dca", 289)]
-        [TestCase(@"https://github.com/Fody/Fody.git",
-                @"77a985ae84e22c032de7f6fb29ed259ec804e5dd", 286)]
-        [TestCase(@"https://github.com/AutoFixture/AutoFixture.git",
-                @"f945ef7e65477f23f89e96d3a6302b7a96d0cf37", 285)]
-        [TestCase(@"https://github.com/playgameservices/play-games-plugin-for-unity.git",
-                @"3ad9798396cc5e443815d5c1438bcebc54d98ed9", 282)]
-        [TestCase(@"https://github.com/erichexter/twitter.bootstrap.mvc.git",
-                @"d3275c3e0c1d9f061a15442cb2d400133b63c137", 281)]
-        [TestCase(@"https://github.com/MassTransit/MassTransit.git",
-                @"b7cd961d72deec199542e9ee256154671873f54a", 278)]
-        [TestCase(@"https://github.com/maartenba/MvcSiteMapProvider.git",
-                @"92ad5eb87a16597c2b18cbb6daf56a4491a652c9", 277)]
-        [TestCase(@"https://github.com/Moq/moq4.git",
-                @"ac31aeca01056e3608540d5b5d043ba013f19abe", 276)]
-        [TestCase(@"https://github.com/Azure/azure-sdk-tools.git",
-                @"94432b2152a43d544df8a06c6b60d60d79ed6aee", 274)]
-        [TestCase(@"https://github.com/mono/monotorrent.git",
-                @"3c201b9e3c68b33243a7af61678fb948a0189461", 274)]
-        [TestCase(@"https://github.com/robconery/biggy.git",
-                @"0c7a0cb8f08b0ac7e5d87f91c5617d4cc6e21b84", 272)]
-        [TestCase(@"https://github.com/sestoft/C5.git",
-                @"0350623579519d17494da788744ecfad4857cfee", 272)]
-        [TestCase(@"https://github.com/jdiamond/Nustache.git",
-                @"957a95f26265876a42dcd8934708bab95d01ef87", 269)]
-        [TestCase(@"https://github.com/statianzo/Fleck.git",
-                @"06837f548345fa06e91c01312a0f5c18fd6f012f", 269)]
-        [TestCase(@"https://github.com/MarlabsInc/SocialGoal.git",
-                @"d6cc337d3f97be6f3fec5b66aa2c8982e800c98c", 263)]
-        [TestCase(@"https://github.com/danielcrenna/metrics-net.git",
-                @"4b4b5dd49eedd387ac0b2423be402ce6e20a4d87", 260)]
-        [TestCase(@"https://github.com/Compilify/Compilify.git",
-                @"dc523cffd6205a142e70f45c735f87a1eb40a712", 252)]
-        [TestCase(@"https://github.com/gsscoder/commandline.git",
-                @"a3fa34f261fe5511f2c8bd7d259f3906b1688e2c", 251)]
-        [TestCase(@"https://github.com/Code52/pretzel.git",
-                @"90b1739e9d1fbe397e9ff20ca5f2d1526d5d5c61", 249)]
-        [TestCase(@"https://github.com/FakeItEasy/FakeItEasy.git",
-                @"d8c919b852e7668217d5463cbe20d97402bde61a", 247)]
-        [TestCase(@"https://github.com/bamboo/boo.git",
-                @"6a1040dfa2ee35a39b0a05b7b252695662c8a7fb", 238)]
-        [TestCase(@"https://github.com/ShareX/ShareX.git",
-                @"110277b4196986e4e8e0dcfab7ef457942d92c7d", 235)]
-        [TestCase(@"https://github.com/chucknorris/roundhouse.git",
-                @"812f4debbb0f31896af08e9ef1dd0b47f1686882", 234)]
-        [TestCase(@"https://github.com/zeromq/clrzmq.git",
-                @"76404a94e0a0bbb0aff23e5500eb5af0a70bda05", 234)]
-        [TestCase(@"https://github.com/enyim/EnyimMemcached.git",
-                @"62d1cbfc397fca400feeed68ff91844d2874624c", 234)]
-        [TestCase(@"https://github.com/0xd4d/de4dot.git",
-                @"7222bdbe426f4296c93517551022efc82cd5b9cd", 232)]
-        [TestCase(@"https://github.com/David20321/FTJ.git",
-                @"802f54b31eebd3831ee9a7732146f9859d1074e5", 230)]
-        [TestCase(@"https://github.com/grumpydev/TinyIoC.git",
-                @"fda59bd5cb53864835ff8b025e31ef10a7a77f68", 228)]
-        [TestCase(@"https://github.com/ServiceStack/ServiceStack.Examples.git",
-                @"8eafa0b5bc45976e1cdbe54240df0a5b90f124e5", 227)]
-        [TestCase(@"https://github.com/Olivine-Labs/Alchemy-Websockets.git",
-                @"42c00b6d29116834432de37ea77fa954b093bc74", 226)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
             var exp = new CSharpComplexStatementExperiment();
             VerifyRestoringGitRepoSavingThem(
