@@ -255,7 +255,7 @@ namespace Code2Xml.Core.Tests.Generators {
 										pattern =>
 												Directory.GetFiles(
 														path, pattern, SearchOption.AllDirectories))
-										.Sum(p => new FileInfo(p).Length) < sumSize / 2,
+										.Sum(p => new FileInfo(p).Length) < sumSize / 5 * 2,
 								(head, now) => {
 									lastSize = 0;
 									lastStmt = patterns.SelectMany(
