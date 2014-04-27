@@ -148,8 +148,6 @@ var completion = require('../lib/completion');
                 @"c537d43f3eeb259578f4a0501cb5c0014edd3b72", 9746)]
         [TestCase(@"https://github.com/bower/bower.git",
                 @"03f035cdf03ce027892a46d8e0f731dc9b950561", 9334)]
-        [TestCase(@"https://github.com/defunkt/jquery-pjax.git",
-                @"67fbdced9825864a7949c3103c4d90cf6a8b1e29", 9059)]
         [TestCase(@"https://github.com/tastejs/todomvc.git",
                 @"35fe24713c3ed08ab8bcafcf16a58c4334713ca7", 9037)]
         [TestCase(@"https://github.com/Prinzhorn/skrollr.git",
@@ -174,8 +172,6 @@ var completion = require('../lib/completion');
                 @"4c3af762a7576632a0ca2718a53a17bdeb45efe8", 6789)]
         [TestCase(@"https://github.com/scottjehl/Respond.git",
                 @"3fde2627484f8cb38e2bd4dbf2374cf41184b0f4", 6766)]
-        [TestCase(@"https://github.com/Shopify/dashing.git",
-                @"ff3acd8074e57edba29bf731d3d0a8b6761f97ca", 6383)]
         [TestCase(@"https://github.com/visionmedia/jade.git",
                 @"aa1f1f059b4ca858811c66b6d8b817ff9f41009f", 6340)]
         [TestCase(@"https://github.com/janl/mustache.js.git",
@@ -192,8 +188,6 @@ var completion = require('../lib/completion');
                 @"6adfdf85eebdc6e001bacdc5098a58a1cd93aa38", 5852)]
         [TestCase(@"https://github.com/facebook/react.git",
                 @"ea361e884e1b6c8458fb64312069e89df0053883", 5638)]
-        [TestCase(@"https://github.com/kamens/jQuery-menu-aim.git",
-                @"86ac9a0782ebc417b50114c2475f2a4b106cf121", 5615)]
         [TestCase(@"https://github.com/shichuan/javascript-patterns.git",
                 @"1a1805763e54c99359d96792e0396b47af649d6c", 5545)]
         [TestCase(@"https://github.com/jrburke/requirejs.git",
