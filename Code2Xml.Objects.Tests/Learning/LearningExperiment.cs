@@ -120,8 +120,11 @@ namespace Code2Xml.Objects.Tests.Learning {
         private Dictionary<BigInteger, int> _feature2Count;
         private Action goNow;
         private Action goBack;
+	    private int _seedElementCount;
+	    private int _seedAbstractCount;
+	    private int _acceptedSeedElementCount;
 
-        public HashSet<string> InitialElementNames {
+	    public HashSet<string> InitialElementNames {
             get { return _initialElementNames; }
         }
 
@@ -340,15 +343,21 @@ namespace Code2Xml.Objects.Tests.Learning {
             if (writer != null) {
                 writer.Write(
                         _idealAccepted.Concat(_idealRejected)
-                                .Sum(f => _feature2Count[f.Key]));
+                                .Sum(f => _feature2Count[f.Key]) - _seedElementCount);
                 writer.Write(",");
                 writer.Write(
                         _acceptedTrainingSet.Concat(_rejectedTrainingSet)
-                                .Sum(f => _feature2Count[f.Key]));
+                                .Sum(f => _feature2Count[f.Key]) - _seedElementCount);
                 writer.Write(",");
-                writer.Write(_idealAccepted.Count + _idealRejected.Count);
+                writer.Write(_idealAccepted.Count + _idealRejected.Count - _seedAbstractCount);
                 writer.Write(",");
-                writer.Write(_acceptedTrainingSet.Count + _rejectedTrainingSet.Count);
+                writer.Write(_acceptedTrainingSet.Count + _rejectedTrainingSet.Count - _seedAbstractCount);
+                writer.Write(",");
+                writer.Write(_seedElementCount);
+                writer.Write(",");
+                writer.Write(_seedAbstractCount);
+                writer.Write(",");
+                writer.Write(_acceptedSeedElementCount);
                 writer.Write(",");
             }
 

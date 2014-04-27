@@ -204,9 +204,9 @@ namespace Code2Xml.Core.Tests.Generators {
 						var path = Fixture.GetGitRepositoryPath(url);
 						Git.CloneAndCheckoutAndReset(path, url, commitPointer);
 
-						var failedCount = 20;
+						var failedCount = 10;
 
-						var sizeStmt = patterns.SelectMany(
+						var sizeAndStmt = patterns.SelectMany(
 								pattern =>
 										Directory.GetFiles(
 												path, pattern, SearchOption.AllDirectories))
@@ -222,14 +222,15 @@ namespace Code2Xml.Core.Tests.Generators {
 												};
 											} catch {
 												if (--failedCount <= 0) {
-													throw new Exception("Found 20 more than broken files.");
+													throw new Exception("Found 10 more than broken files.");
 												}
 												Console.Write("F");
 												return new { Size = 0L, Stmt = 0 };
 											}
-										});
-						var sumSize = sizeStmt.Sum(t => t.Size);
-						var sumStmt = sizeStmt.Sum(t => t.Stmt);
+										})
+									.ToList();
+						var sumSize = sizeAndStmt.Sum(t => t.Size);
+						var sumStmt = sizeAndStmt.Sum(t => t.Stmt);
 						var lastSize = sumSize;
 						var lastStmt = sumStmt;
 						var lastSpan = DateTime.Now - DateTime.Now;
