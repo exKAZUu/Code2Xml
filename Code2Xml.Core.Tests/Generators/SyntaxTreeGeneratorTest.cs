@@ -235,7 +235,7 @@ namespace Code2Xml.Core.Tests.Generators {
 						var lastStmt = sumStmt;
 						var lastSpan = DateTime.Now - DateTime.Now;
 
-						if (1000 * 1000 < lastSize) {
+						if (5 * 1000 * 1000 < lastSize) {
 							Console.WriteLine("Too big");
 							return;
 						}
