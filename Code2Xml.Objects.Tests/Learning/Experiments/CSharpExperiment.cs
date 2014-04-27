@@ -279,14 +279,14 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         }
 
         [Test, TestCaseSource("TestCases")]
-        public void Test(LearningExperiment exp, string projectPath, int starCount) {
+        public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.cs"), };
             if (_lastProjectName != exp.GetType().Name) {
                 _writer.WriteLine();
                 _writer.Write(Path.GetFileName(projectPath) + ",");
                 _lastProjectName = exp.GetType().Name;
             }
-            exp.Learn(seedPaths, _writer, projectPath, "*.cs");
+            exp.Learn(seedPaths, _writer, projectPath, "*.cs", sha1, sha2);
             _writer.Flush();
             exp.Clear();
             Assert.That(exp.WrongFeatureCount, Is.EqualTo(0));
