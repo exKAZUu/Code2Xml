@@ -295,8 +295,8 @@ namespace Code2Xml.Core.Tests.Generators {
 								+ "\r\n");
 					});
 			thread.Start();
-			if (thread.Join(1000 * 60 * 40)) {
-				thread.Abort();
+			if (thread.Join(1000 * 60 * 10)) {
+				//thread.Abort();
 			}
 		}
 
