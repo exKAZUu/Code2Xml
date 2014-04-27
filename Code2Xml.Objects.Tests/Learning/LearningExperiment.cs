@@ -390,7 +390,7 @@ namespace Code2Xml.Objects.Tests.Learning {
                         } catch {
                             return null;
                         }
-                    })) {
+                    }).Where(t => t != null)) {
                 foreach (var node in GetAllElementsWithoutDuplicates(ast)) {
                     var feature = node.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
                     var key = GetGroupKeyFromNode(node);
