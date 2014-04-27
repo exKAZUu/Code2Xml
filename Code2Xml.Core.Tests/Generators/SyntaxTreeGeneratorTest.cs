@@ -244,7 +244,7 @@ namespace Code2Xml.Core.Tests.Generators {
 							return;
 						}
 
-						if (sumStmt < 1000) {
+						if (sumStmt < 500) {
 							Console.WriteLine("Too small: " + sumStmt);
 							return;
 						}
