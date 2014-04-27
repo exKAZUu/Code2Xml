@@ -120,11 +120,11 @@ namespace Code2Xml.Objects.Tests.Learning {
         private Dictionary<BigInteger, int> _feature2Count;
         private Action goNow;
         private Action goBack;
-	    private int _seedElementCount;
-	    private int _seedAbstractCount;
-	    private int _acceptedSeedElementCount;
+        private int _seedElementCount;
+        private int _seedAbstractCount;
+        private int _acceptedSeedElementCount;
 
-	    public HashSet<string> InitialElementNames {
+        public HashSet<string> InitialElementNames {
             get { return _initialElementNames; }
         }
 
@@ -250,7 +250,15 @@ namespace Code2Xml.Objects.Tests.Learning {
                             GetType().Name + Code2XmlConstants.LearningCacheExtension));
             if (true || string.IsNullOrEmpty(projectPath) || !cacheFile.Exists) {
                 var allAsts = allPaths.Select(
-                        path => Generator.GenerateTreeFromCode(new FileInfo(path), null, true));
+                        path => {
+                            try {
+                                return Generator.GenerateTreeFromCode(
+                                        new FileInfo(path), null, true);
+                            } catch {
+                                return null;
+                            }
+                        })
+                        .Where(t => t != null);
                 var seedAsts = seedPaths.Select(
                         path => Generator.GenerateTreeFromCode(new FileInfo(path), null, true))
                         .ToList();
@@ -350,7 +358,8 @@ namespace Code2Xml.Objects.Tests.Learning {
                 writer.Write(",");
                 writer.Write(_idealAccepted.Count + _idealRejected.Count - _seedAbstractCount);
                 writer.Write(",");
-                writer.Write(_acceptedTrainingSet.Count + _rejectedTrainingSet.Count - _seedAbstractCount);
+                writer.Write(
+                        _acceptedTrainingSet.Count + _rejectedTrainingSet.Count - _seedAbstractCount);
                 writer.Write(",");
                 writer.Write(_seedElementCount);
                 writer.Write(",");
@@ -374,7 +383,14 @@ namespace Code2Xml.Objects.Tests.Learning {
                     .ToList();
 
             foreach (var ast in allPaths.Concat(seedPaths).Select(
-                    path => Generator.GenerateTreeFromCode(new FileInfo(path), null, true))) {
+                    path => {
+                        try {
+                            return Generator.GenerateTreeFromCode(
+                                    new FileInfo(path), null, true);
+                        } catch {
+                            return null;
+                        }
+                    })) {
                 foreach (var node in GetAllElementsWithoutDuplicates(ast)) {
                     var feature = node.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
                     var key = GetGroupKeyFromNode(node);
@@ -483,9 +499,9 @@ namespace Code2Xml.Objects.Tests.Learning {
             _acceptingMask = (BigInteger.One << _acceptingFeatureCount) - BigInteger.One;
             _rejectingMask = _mask ^ _acceptingMask;
 
-	        _acceptedSeedElementCount = 0;
-	        _seedAbstractCount = 0;
-	        _seedElementCount = 0;
+            _acceptedSeedElementCount = 0;
+            _seedAbstractCount = 0;
+            _seedElementCount = 0;
 
             foreach (var e in seedAcceptedElements) {
                 var feature = e.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
@@ -496,10 +512,10 @@ namespace Code2Xml.Objects.Tests.Learning {
                     _feature2Count[feature]++;
                 } else {
                     _feature2Count[feature] = 1;
-	                _seedAbstractCount++;
+                    _seedAbstractCount++;
                 }
-	            _acceptedSeedElementCount++;
-	            _seedElementCount++;
+                _acceptedSeedElementCount++;
+                _seedElementCount++;
             }
             foreach (var e in seedRejectedElements) {
                 var feature = e.GetSurroundingBits(SurroundingLength, _masterFeatures, this);
@@ -510,9 +526,9 @@ namespace Code2Xml.Objects.Tests.Learning {
                     _feature2Count[feature]++;
                 } else {
                     _feature2Count[feature] = 1;
-	                _seedAbstractCount++;
+                    _seedAbstractCount++;
                 }
-	            _seedElementCount++;
+                _seedElementCount++;
             }
 
             foreach (var ast in allAsts) {
