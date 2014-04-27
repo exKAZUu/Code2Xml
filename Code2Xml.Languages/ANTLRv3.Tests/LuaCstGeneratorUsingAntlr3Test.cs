@@ -140,12 +140,6 @@ if true then --[[VERBOSE]] print(1) end
                 @"049e4f6a34937c5ac969d611e6e5f668e27f481a", 21)]
         [TestCase(@"https://github.com/davidm/lua-matrix.git",
                 @"7a33f9652ddc6808ec9eb866d9e214546bbfc765", 21)]
-        [TestCase(@"https://github.com/quaker66/vortex.git",
-                @"2993be665f412b8243470597e34bd9f61f5513d1", 21)]
-        [TestCase(@"https://github.com/Wiladams/LJIT2RPi.git",
-                @"43cf70d697de45344b660c05ef36b53c3df81617", 21)]
-        [TestCase(@"https://github.com/TekNoLogic/Cork.git",
-                @"1b40e35a31c1048033b6f6b94600581b389a46d9", 21)]
         [TestCase(@"https://github.com/hoelzro/lua-term.git",
                 @"76d7c992a22d4481969a977ad36d6d35d3b2ca6f", 21)]
         [TestCase(@"https://github.com/ansca/Pinball-Madness.git",
@@ -160,8 +154,6 @@ if true then --[[VERBOSE]] print(1) end
                 @"844457015aa1c23f60b4d75fc4a79e745f322e2e", 21)]
         [TestCase(@"https://github.com/roaminggamer/RG_FreeStuff.git",
                 @"8c27742b04911fe1f1ed348390681a46d04be6c7", 20)]
-        [TestCase(@"https://github.com/sharpobject/panel-attack.git",
-                @"129b7094c1fc7bf26494acf9f819b164e95e1cc6", 20)]
         [TestCase(@"https://github.com/minetest-technic/technic.git",
                 @"44dbc75b6115d5235ba0538925e44484037459a1", 20)]
         [TestCase(@"https://github.com/joshtynjala/gtween.lua.git",

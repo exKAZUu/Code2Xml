@@ -244,7 +244,7 @@ namespace Code2Xml.Core.Tests.Generators {
 							return;
 						}
 
-						if (sumStmt < 1000) {
+						if (sumStmt < 100) {
 							Console.WriteLine("Too small");
 							return;
 						}
@@ -295,7 +295,7 @@ namespace Code2Xml.Core.Tests.Generators {
 								+ "\r\n");
 					});
 			thread.Start();
-			if (thread.Join(1000 * 60 * 10)) {
+			if (thread.Join(1000 * 60 * 20)) {
 				//thread.Abort();
 			}
 		}
