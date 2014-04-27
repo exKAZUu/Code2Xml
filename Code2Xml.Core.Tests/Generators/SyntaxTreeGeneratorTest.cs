@@ -235,7 +235,7 @@ namespace Code2Xml.Core.Tests.Generators {
 						var lastStmt = sumStmt;
 						var lastSpan = DateTime.Now - DateTime.Now;
 
-						if (sumStmt < 1000) {
+						if (sumStmt < 2000) {
 							Console.WriteLine("Too small");
 							return;
 						}
@@ -274,7 +274,7 @@ namespace Code2Xml.Core.Tests.Generators {
 									return lastStmt < sumStmt / 2;
 								}
 								);
-						if (sumStmt / 4 < lastStmt) {
+						if (lastStmt < sumStmt / 4) {
 							Console.WriteLine("Found but too small");
 							return;
 						}
