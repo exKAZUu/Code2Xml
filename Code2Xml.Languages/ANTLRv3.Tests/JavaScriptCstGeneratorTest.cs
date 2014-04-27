@@ -144,8 +144,6 @@ var completion = require('../lib/completion');
                 @"d6d983f727f6f8342c4d439c784ab90c3c7fea0d", 10283)]
         [TestCase(@"https://github.com/TryGhost/Ghost.git",
                 @"0806c3188e202bd15011684332d69848161840f3", 9982)]
-        [TestCase(@"https://github.com/emberjs/ember.js.git",
-                @"efd72af4ca25f246f241bcf5efd736a17c5ba87c", 9867)]
         [TestCase(@"https://github.com/resume/resume.github.com.git",
                 @"c537d43f3eeb259578f4a0501cb5c0014edd3b72", 9746)]
         [TestCase(@"https://github.com/bower/bower.git",
@@ -154,28 +152,16 @@ var completion = require('../lib/completion');
                 @"67fbdced9825864a7949c3103c4d90cf6a8b1e29", 9059)]
         [TestCase(@"https://github.com/tastejs/todomvc.git",
                 @"35fe24713c3ed08ab8bcafcf16a58c4334713ca7", 9037)]
-        [TestCase(@"https://github.com/jquery/jquery-mobile.git",
-                @"1f95855f47bf0b4302b1749dda88a4d64b1345bf", 9031)]
-        [TestCase(@"https://github.com/caolan/async.git",
-                @"931d15412c5081e35f96dee3cc7a98d8322e7b17", 8311)]
-        [TestCase(@"https://github.com/jquery/jquery-ui.git",
-                @"919d9185f2cf586f794b367a2570368fd81f3879", 8249)]
         [TestCase(@"https://github.com/Prinzhorn/skrollr.git",
                 @"a08d11500a50d22cfca549864e9a486c17b29c90", 8238)]
         [TestCase(@"https://github.com/mozilla/pdf.js.git",
                 @"1b636532d680d269069ca976b02a053392ab5ab2", 8126)]
         [TestCase(@"https://github.com/addyosmani/backbone-fundamentals.git",
                 @"7372900a65b6942d234f69f1ed982f094ff5b0bf", 7748)]
-        [TestCase(@"https://github.com/gruntjs/grunt.git",
-                @"4ae8a07d3854f5affd3002d3395725dc25648ee3", 7721)]
         [TestCase(@"https://github.com/nnnick/Chart.js.git",
                 @"8f025f33c08c66991a12f02f908bab156a963aef", 7660)]
-        [TestCase(@"https://github.com/Semantic-Org/Semantic-UI.git",
-                @"14d97f7336efde50efddf0ddee7ebd42734afb40", 7656)]
         [TestCase(@"https://github.com/ajaxorg/ace.git",
                 @"993df16bdb4cf80dac13f0fe8f449bb7adb05a65", 7636)]
-        [TestCase(@"https://github.com/EightMedia/hammer.js.git",
-                @"b9e3ecec174c7ae217489dc3a24540a64243692e", 7444)]
         [TestCase(@"https://github.com/Leaflet/Leaflet.git",
                 @"c5091eefdaa88c5d924c364312f50bf5ab7ba5a5", 7297)]
         [TestCase(@"https://github.com/twitter/typeahead.js.git",
@@ -188,36 +174,22 @@ var completion = require('../lib/completion');
                 @"4c3af762a7576632a0ca2718a53a17bdeb45efe8", 6789)]
         [TestCase(@"https://github.com/scottjehl/Respond.git",
                 @"3fde2627484f8cb38e2bd4dbf2374cf41184b0f4", 6766)]
-        [TestCase(@"https://github.com/pivotal/jasmine.git",
-                @"00c8e372576438243a8f977b8bc7b81f04389dd6", 6653)]
-        [TestCase(@"https://github.com/madrobby/zepto.git",
-                @"579c0971f4b21ebb25831278a7012fa76494d5cc", 6550)]
         [TestCase(@"https://github.com/Shopify/dashing.git",
                 @"ff3acd8074e57edba29bf731d3d0a8b6761f97ca", 6383)]
         [TestCase(@"https://github.com/visionmedia/jade.git",
                 @"aa1f1f059b4ca858811c66b6d8b817ff9f41009f", 6340)]
-        [TestCase(@"https://github.com/browserstate/history.js.git",
-                @"14968aa3cf2a27335f71d26386de0a5c4073835d", 6285)]
         [TestCase(@"https://github.com/janl/mustache.js.git",
                 @"0295646b677b8c9e15527e8b63583ed6728b77d0", 6260)]
         [TestCase(@"https://github.com/ftlabs/fastclick.git",
                 @"3497d2e92ccc8a959c7efb326c0fc437302d5bcf", 6250)]
         [TestCase(@"https://github.com/wycats/handlebars.js.git",
                 @"085e5e1937b442a4d4add5525db2627e825538aa", 6222)]
-        [TestCase(@"https://github.com/NUKnightLab/TimelineJS.git",
-                @"cede826f6212af83361ecd571481b5bb95f7a610", 6175)]
-        [TestCase(@"https://github.com/DmitryBaranovskiy/raphael.git",
-                @"5234aa33d04be07b0fea7627504ab4b53d872e19", 6165)]
-        [TestCase(@"https://github.com/fgnass/spin.js.git",
-                @"cdf391a8e41b6ad8f902dc9a10cae80486d472ef", 6062)]
         [TestCase(@"https://github.com/wagerfield/parallax.git",
                 @"a42beb93b7cdcb9dbfdb0e96e5eafd5232b86ba2", 6060)]
         [TestCase(@"https://github.com/desandro/masonry.git",
                 @"b9df286dc6a3004b8a7f90599c7ba79d09e8ce2e", 5871)]
         [TestCase(@"https://github.com/balderdashy/sails.git",
                 @"6adfdf85eebdc6e001bacdc5098a58a1cd93aa38", 5852)]
-        [TestCase(@"https://github.com/xing/wysihtml5.git",
-                @"56960b31adc37e07797382d8e8b10109f206b19c", 5823)]
         [TestCase(@"https://github.com/facebook/react.git",
                 @"ea361e884e1b6c8458fb64312069e89df0053883", 5638)]
         [TestCase(@"https://github.com/kamens/jQuery-menu-aim.git",
@@ -228,12 +200,6 @@ var completion = require('../lib/completion');
                 @"f1c533d181da5b759adc7f6297e87d556ef02ce2", 5521)]
         [TestCase(@"https://github.com/gulpjs/gulp.git",
                 @"160933474a7d8e566de699dbc6e2f8c4e49c1b5f", 5455)]
-        [TestCase(@"https://github.com/etsy/statsd.git",
-                @"f95dd0360fdf0e14ef2fe9080611d1b3594b6297", 5423)]
-        [TestCase(@"https://github.com/enyo/dropzone.git",
-                @"ac87ee44d7219afb091e22db0748e58ca989b466", 5409)]
-        [TestCase(@"https://github.com/videojs/video.js.git",
-                @"3bafdeef51d9f135de13fe4c51158942031ce6c2", 5242)]
         [TestCase(@"https://github.com/flightjs/flight.git",
                 @"4b71426ac4776f09ef6c318f4b01c3fbee31b127", 5185)]
         [TestCase(@"https://github.com/carhartl/jquery-cookie.git",
@@ -246,20 +212,12 @@ var completion = require('../lib/completion');
                 @"027e8fe6320d2031303acfdbb3b8531d61743093", 4958)]
         [TestCase(@"https://github.com/FredrikNoren/ungit.git",
                 @"91c2681cfd9816db2973a06fd5b1c1f81f4f5746", 4947)]
-        [TestCase(@"https://github.com/Widen/fine-uploader.git",
-                @"55166f33438e4915045f17d8c4e1adea008af19b", 4901)]
         [TestCase(@"https://github.com/jquery-ui-bootstrap/jquery-ui-bootstrap.git",
                 @"439e6662414f4dc7feb2032186d1f2a784f6455d", 4886)]
-        [TestCase(@"https://github.com/guillaumepotier/Parsley.js.git",
-                @"2f5ebd0422a2c1207738c212563b5da16b2bb032", 4848)]
         [TestCase(@"https://github.com/knockout/knockout.git",
                 @"80120969d8cb5341325f76ec1e74dde6e2af00fc", 4846)]
         [TestCase(@"https://github.com/rstacruz/jquery.transit.git",
                 @"857c438ed80120f20052edd78872175bff4343dc", 4834)]
-        [TestCase(@"https://github.com/mishoo/UglifyJS.git",
-                @"2bc1d02363db3798d5df41fb5059a19edca9b7eb", 4810)]
-        [TestCase(@"https://github.com/ccampbell/mousetrap.git",
-                @"afaaf95f984f2e2a80670b980d421683ac42eed6", 4777)]
         [TestCase(@"https://github.com/marionettejs/backbone.marionette.git",
                 @"84e735d7d7cf85957fe08caebcd086cf7ee11e42", 4743)]
         [TestCase(@"https://github.com/lodash/lodash.git",

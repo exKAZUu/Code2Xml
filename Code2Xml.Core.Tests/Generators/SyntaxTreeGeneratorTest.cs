@@ -204,6 +204,8 @@ namespace Code2Xml.Core.Tests.Generators {
 						var path = Fixture.GetGitRepositoryPath(url);
 						Git.CloneAndCheckoutAndReset(path, url, commitPointer);
 
+						var failedCount = 10;
+
 						var sizeStmt = patterns.SelectMany(
 								pattern =>
 										Directory.GetFiles(
@@ -220,7 +222,10 @@ namespace Code2Xml.Core.Tests.Generators {
 											} catch {
 												return new { Size = 0L, Stmt = 0 };
 											} finally {
-												Console.Write(".");
+												if (--failedCount <= 0) {
+													throw new Exception("Found 10 more than broken files.");
+												}
+												Console.Write("F");
 											}
 										});
 						var sumSize = sizeStmt.Sum(t => t.Size);
@@ -254,20 +259,24 @@ namespace Code2Xml.Core.Tests.Generators {
 															path, pattern,
 															SearchOption.AllDirectories))
 											.Sum(
-													p =>
-															measureFunc(
-																	Generator
-																			.GenerateTreeFromCodePath
-																			(p)));
+													p => {
+														try {
+															return measureFunc(
+																	Generator.GenerateTreeFromCodePath(p, null, true));
+														} catch {
+															return 0;
+														}
+													}
+											);
 									Console.Write("#");
 									lastSpan = head.Committer.When - now.Committer.When;
 									return lastStmt < sumStmt / 2;
 								}
 								);
-					    if (sumStmt / 4 < lastStmt) {
+						if (sumStmt / 4 < lastStmt) {
 							Console.WriteLine("Found but too small");
 							return;
-					    }
+						}
 						if (sha == null) {
 							Console.WriteLine("Not found such commit");
 							return;
