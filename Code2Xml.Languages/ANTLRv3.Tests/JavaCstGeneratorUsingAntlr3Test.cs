@@ -139,62 +139,28 @@ public class AlignedTuplePrinter {
                 @"9187a05fd7d91350569347f8565078441135d8d4", 2650)]
         [TestCase(@"https://github.com/sparklemotion/nokogiri.git",
                 @"163103b0eaf904575e62909eddc00dcc9e425a2a", 2604)]
-        [TestCase(@"https://github.com/junit-team/junit.git",
-                @"e65558c174a8f5c4c7758f0d9dd1ffe027b023d8", 2461)]
         [TestCase(@"https://github.com/AndroidBootstrap/android-bootstrap.git",
                 @"e43e3ac4a5984edf9a6ccc87bac04be177a3615a", 2446)]
-        [TestCase(@"https://github.com/square/picasso.git",
-                @"e0c3d44f53919742a0a608277be26b47742bb2a2", 2312)]
         [TestCase(@"https://github.com/facebook/presto.git",
                 @"b4b5d67e09576ec38be1564123e5a0e2d4bc1996", 2281)]
-        [TestCase(@"https://github.com/chrisbanes/ActionBar-PullToRefresh.git",
-                @"65d4183994eaf8c450e81afadb389fca61499063", 2272)]
         [TestCase(@"https://github.com/WhisperSystems/TextSecure.git",
                 @"4d52d2ee364c2edad50420a9afa500dde66a48d9", 2261)]
-        [TestCase(@"https://github.com/cyrilmottier/GreenDroid.git",
-                @"abd9769f677bb4a753f0bf1119f961187bdf7020", 2123)]
-        [TestCase(@"https://github.com/dropwizard/metrics.git",
-                @"e61395657d9f471a88dc0d9f3c7f78f0e773fe28", 2090)]
-        [TestCase(@"https://github.com/nicolasgramlich/AndEngine.git",
-                @"720897f99d2c56ba357e8fe361454bd8d88c37ed", 2068)]
-        [TestCase(@"https://github.com/Prototik/HoloEverywhere.git",
-                @"3b6021aa4af717cd31b1b6c877f6c30b674af6d9", 2065)]
         [TestCase(@"https://github.com/Netflix/RxJava.git",
                 @"8bb52a0184a194f2faa4a4732f72f62be2caafe9", 2049)]
-        [TestCase(@"https://github.com/Bukkit/CraftBukkit.git",
-                @"1ab090e71ea261fe38cef980bc2ebe696a494ea3", 2032)]
         [TestCase(@"https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition.git",
                 @"5f399a52c8bf5626b098629906f82be1763089f4", 2005)]
-        [TestCase(@"https://github.com/fernandezpablo85/scribe-java.git",
-                @"135ad50a4e4e27e97f09e42ae50d6011c7af7a4b", 1997)]
-        [TestCase(@"https://github.com/LMAX-Exchange/disruptor.git",
-                @"1072645ad75f8b07b9145197fd4137fcfa79011a", 1836)]
         [TestCase(@"https://github.com/OpenRefine/OpenRefine.git",
                 @"c2cadab47593d5d3f49e45b5fe434e117e67f8dd", 1827)]
-        [TestCase(@"https://github.com/dropwizard/dropwizard.git",
-                @"4758ac698ff9993879798db338b3314c6a1c6a27", 1776)]
-        [TestCase(@"https://github.com/square/retrofit.git",
-                @"1f7cc4942f71d6c6cf4770fcd93670bc93a8c710", 1776)]
         [TestCase(@"https://github.com/Netflix/SimianArmy.git",
                 @"6a8b799af24cd638cd7110965ca8504e18cd6b24", 1743)]
         [TestCase(@"https://github.com/johannilsson/android-pulltorefresh.git",
                 @"4277c1ecf6256518248a1143b3ee882c703b33d6", 1739)]
-        [TestCase(@"https://github.com/SimonVT/android-menudrawer.git",
-                @"1260f2f6d50d3b572ebfa98e93a0b4f8258371de", 1727)]
-        [TestCase(@"https://github.com/square/dagger.git",
-                @"21a9e0d875da31306b0f41273348f4f75741fef7", 1706)]
-        [TestCase(@"https://github.com/Atmosphere/atmosphere.git",
-                @"dd2397e03088f2bced1f8e47f8f81e935664a923", 1671)]
         [TestCase(@"https://github.com/roboguice/roboguice.git",
                 @"c0c61a89ad8ce844858373748f09222de187d61e", 1644)]
-        [TestCase(@"https://github.com/thinkaurelius/titan.git",
-                @"c26cd982b1dc5ba792ee7a63af59887bd8b08223", 1625)]
         [TestCase(@"https://github.com/Netflix/Hystrix.git",
                 @"04949497901e6fcd71f68d804e5b89f9e368271d", 1624)]
         [TestCase(@"https://github.com/etsy/AndroidStaggeredGrid.git",
                 @"84a06f8da0ba70de32e7373c57f6e38b9d9b6780", 1612)]
-        [TestCase(@"https://github.com/chrisbanes/PhotoView.git",
-                @"99fc9956a2de2279e45af9e95286efec79c0d739", 1609)]
         [TestCase(@"https://github.com/android/platform_frameworks_base.git",
                 @"aa19a2f69c33fdb6499d0bc1cfafced9f572da5b", 1606)]
         [TestCase(@"https://github.com/jeresig/processing-js.git",

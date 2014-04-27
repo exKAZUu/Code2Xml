@@ -235,6 +235,11 @@ namespace Code2Xml.Core.Tests.Generators {
 						var lastStmt = sumStmt;
 						var lastSpan = DateTime.Now - DateTime.Now;
 
+						if (1000 * 1000 < lastSize) {
+							Console.WriteLine("Too big");
+							return;
+						}
+
 						if (sumStmt < 2000) {
 							Console.WriteLine("Too small");
 							return;
@@ -248,12 +253,7 @@ namespace Code2Xml.Core.Tests.Generators {
 														path, pattern, SearchOption.AllDirectories))
 										.Sum(p => new FileInfo(p).Length) < sumSize / 2,
 								(head, now) => {
-									lastSize = patterns.SelectMany(
-											pattern =>
-													Directory.GetFiles(
-															path, pattern,
-															SearchOption.AllDirectories))
-											.Sum(p => new FileInfo(p).Length);
+									lastSize = 0;
 									lastStmt = patterns.SelectMany(
 											pattern =>
 													Directory.GetFiles(
@@ -261,6 +261,7 @@ namespace Code2Xml.Core.Tests.Generators {
 															SearchOption.AllDirectories))
 											.Sum(
 													p => {
+														lastSize += new FileInfo(p).Length;
 														try {
 															return measureFunc(
 																	Generator.GenerateTreeFromCodePath(p, null, true));
