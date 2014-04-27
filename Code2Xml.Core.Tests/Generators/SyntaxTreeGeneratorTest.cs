@@ -190,7 +190,7 @@ namespace Code2Xml.Core.Tests.Generators {
 
         protected void VerifyRestoringGitRepoSavingThem(
                 string url, string commitPointer, string filePath, int starCount,
-                Func<TNode, int> measureFunc,params string[] patterns) {
+                Func<TNode, int> measureFunc, params string[] patterns) {
             VerifyRestoringGitRepoSavingThem(
                     url, commitPointer, filePath, starCount, File.ReadAllText, measureFunc, patterns);
         }
@@ -219,6 +219,8 @@ namespace Code2Xml.Core.Tests.Generators {
                                                 };
                                             } catch {
                                                 return new { Size = 0L, Stmt = 0 };
+                                            } finally {
+                                                Console.Write(".");
                                             }
                                         });
                         var sumSize = sizeStmt.Sum(t => t.Size);
@@ -250,6 +252,7 @@ namespace Code2Xml.Core.Tests.Generators {
                                                                     Generator
                                                                             .GenerateTreeFromCodePath
                                                                             (p)));
+                                    Console.Write("#");
                                     return sumStmt / 2 < lastStmt && lastStmt < sumStmt / 3 * 2;
                                 }
                                 );
