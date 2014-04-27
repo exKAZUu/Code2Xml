@@ -246,46 +246,6 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                             @"https://github.com/alex/django-taggit.git",
                             @"f478e34f8e82c20b04f5992ae5299d7cf41c2b9f",
                             "8313c77f3d82740c905fb2061f9737fe7157c593"),
-                    Tuple.Create(
-                            @"https://github.com/iBaa/PlexConnect.git",
-                            @"e076e37cb30ac9f72d7a52a8c1cc7da6fa4f6315",
-                            "48e2bb6aa08e25a0881a9d7ee10def991b7a4c3b"),
-                    Tuple.Create(
-                            @"https://github.com/kachayev/fn.py.git",
-                            @"dc5c57345dc05398c0b0a1a12c479a986b970995",
-                            "c183c43e0e79ba79de092e914c79dc19adb8b6a8"),
-                    Tuple.Create(
-                            @"https://github.com/gaubert/gmvault.git",
-                            @"02f33060eb3744658681a7f667bcb513132706e9",
-                            "b3199837b3354aceea764a6e1fed48d4c1110d6a"),
-                    Tuple.Create(
-                            @"https://github.com/sixohsix/twitter.git",
-                            @"83c7a242415861d7f0f18037c2866f308782164d",
-                            "b0dedfc018d4a0ecb9defa60969fb472e188a990"),
-                    Tuple.Create(
-                            @"https://github.com/gmate/gmate.git",
-                            @"f77cb109ab50959ad0b0ac6138ba16d1ecff6d4d",
-                            "e29d896e8d4157a483bdc2d121806eb7f7c424fe"),
-                    Tuple.Create(
-                            @"https://github.com/martinrusev/amonone.git",
-                            @"c882215aa3b970db8f4da1eb7789b6199cf4610a",
-                            "82a47f5d83cfe81c23f5f192c240287596f1b4c2"),
-                    Tuple.Create(
-                            @"https://github.com/tschellenbach/Django-facebook.git",
-                            @"4a57628766afe5a09525faf246f0bc2563b9c3a0",
-                            "92c28cac0242eee7670c63c105b2901e9a5262bf"),
-                    Tuple.Create(
-                            @"https://github.com/revolunet/sublimetext-markdown-preview.git",
-                            @"3b94b8489b2c9b6f54eabf50bd19984e9b588f2c",
-                            "da6220d7550e89592cfadbaba01081f8d44d286a"),
-                    Tuple.Create(
-                            @"https://github.com/overviewer/Minecraft-Overviewer.git",
-                            @"8e5944d5c3fc1c1aae8331daa1b72af0c29d8702",
-                            "da142dfb7a720f73b652701f616d6680ba884c79"),
-                    Tuple.Create(
-                            @"https://github.com/pypa/virtualenv.git",
-                            @"5858d32f913f626c536c78fdd17c9c67d1d1fb70",
-                            "5b1de68d91b6740b4679a9645ada263a166dc964"),
                 };
                 foreach (var exp in exps) {
                     foreach (

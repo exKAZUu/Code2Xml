@@ -208,7 +208,7 @@ namespace Code2Xml.Core.Tests.Generators {
 							return;
 						}
 
-						var failedCount = 10;
+						var failedCount = 1;
 
 						var sizeAndStmt = patterns.SelectMany(
 								pattern =>

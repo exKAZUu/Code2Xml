@@ -254,46 +254,6 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                             @"https://github.com/ildyria/iFilger.git",
                             @"d092e040143146a551b6821b6a9b199a4b98e9db",
                             "172180c51187092483fc50ddfd9a082b04cba16a"),
-                    Tuple.Create(
-                            @"https://github.com/sergeyzavadski/breeze.git",
-                            @"b17da085ca4691feb189690038b8d054b861d6e0",
-                            "f58e55e30b09f4dada0bda0f980c7ba0cf887563"),
-                    Tuple.Create(
-                            @"https://github.com/Jeija/minetest-mod-mesecons.git",
-                            @"1f666875807c3c8e6c1771e4fb46c374d2e40ccb",
-                            "d54d1485959655d67b11cade64f95a1e31d5e963"),
-                    Tuple.Create(
-                            @"https://github.com/christopho/zsdx.git",
-                            @"878df4510abea1dcd6b05d861941a2926c0c265e",
-                            "05b0e3b1499ee7ddd3ae31ef48ffcdccc94cd183"),
-                    Tuple.Create(
-                            @"https://github.com/renstrom/NeavUI.git",
-                            @"e16a5b8fd402fd67b3d61b66531b2adbd1e24c8c",
-                            "e9384588d2f3b90457308019d1d59e42cf4cdf32"),
-                    Tuple.Create(
-                            @"https://github.com/Elv13/radical.git",
-                            @"8da00cbd657f77fdfcd4b6a9cc81420daa2cb5e7",
-                            "63bb804a45bb206c6b67240e9a50ded104b52955"),
-                    Tuple.Create(
-                            @"https://github.com/Metapyziks/finalfrontier.git",
-                            @"3b22cc19b155834c0e9af7c107ee58f1cd4deea8",
-                            "a8749900869ec1b0bd18c62cf4ca827b1701ff78"),
-                    Tuple.Create(
-                            @"https://github.com/leafo/heroku-openresty.git",
-                            @"5945df6f7641e456e51c518947a5f9e50f0cc4d5",
-                            "2f7d508238499e198a169ed15e34f1a40e6dec6e"),
-                    Tuple.Create(
-                            @"https://github.com/quaker66/vortex.git",
-                            @"2993be665f412b8243470597e34bd9f61f5513d1",
-                            "266c6bc70e74acd86cc255aa6ef77faf02a91a7a"),
-                    Tuple.Create(
-                            @"https://github.com/Wiladams/LJIT2RPi.git",
-                            @"43cf70d697de45344b660c05ef36b53c3df81617",
-                            "65e45c6a3877afe240b02197332e5442bf0372ac"),
-                    Tuple.Create(
-                            @"https://github.com/TekNoLogic/Cork.git",
-                            @"1b40e35a31c1048033b6f6b94600581b389a46d9",
-                            "c638eee29a8610a52ee1726b3990aaa068234a47"),
                 };
                 foreach (var exp in exps) {
                     foreach (

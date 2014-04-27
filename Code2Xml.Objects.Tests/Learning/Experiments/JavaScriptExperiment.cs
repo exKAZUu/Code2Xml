@@ -257,46 +257,6 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                             @"https://github.com/flot/flot.git",
                             @"3aec7ce0bd975e452ff49107905a06146fe9e560",
                             "f01bcee85446beb63a04d0b95c427f68c92ae4a9"),
-                    Tuple.Create(
-                            @"https://github.com/mgcrea/angular-strap.git",
-                            @"a3ff0667f4897b210c70f350f9a994c6cd391747",
-                            "d885dea052cc2bb523682217867e3384d5b8e18c"),
-                    Tuple.Create(
-                            @"https://github.com/square/cube.git",
-                            @"084bebe6839ffbd442010427f017e38e0fe0bef7",
-                            "8009bef9ebef690b88443b0d88f6e4794a5cbb93"),
-                    Tuple.Create(
-                            @"https://github.com/madebymany/sir-trevor-js.git",
-                            @"9be4a0694d854d7c5354d06a83ce6e3b86eae4f8",
-                            "31aee4ef1bb79b07ff584c52842915f53001c2ca"),
-                    Tuple.Create(
-                            @"https://github.com/Unitech/pm2.git",
-                            @"3a7932325d1f41f5fb08c949be64b885f47b7a51",
-                            "946eab4c21bc8e6e43e19307d7470982374099f0"),
-                    Tuple.Create(
-                            @"https://github.com/remy/nodemon.git",
-                            @"787bebf1ac635c79f0a0d8fc1921ef338f0e1779",
-                            "ad98202d4911194a6d1686d24c1ca76baa7bd685"),
-                    Tuple.Create(
-                            @"https://github.com/niklasvh/html2canvas.git",
-                            @"454524cc4041cf6eef3df76f87cfef4a0e9e7c09",
-                            "ead984a1f18961cbe20840f07d6ebf09ed576d8f"),
-                    Tuple.Create(
-                            @"https://github.com/jimhigson/oboe.js.git",
-                            @"6b1ec90658ece4d19a9567a5e7786396391e4570",
-                            "2a7bee1d4993f915f11f9489d34a396c798c2d8f"),
-                    Tuple.Create(
-                            @"https://github.com/square/cubism.git",
-                            @"7181f11f54eda094abac15d14c7c6a3a11633d3e",
-                            "53670b96a834e764341dab80947d87a8074bcf0e"),
-                    Tuple.Create(
-                            @"https://github.com/mgonto/restangular.git",
-                            @"8e65e1c8e6307e23cae1540415003023bc07bece",
-                            "ca9627ead1dfe22e94dc5becb410f8f6828c45f9"),
-                    Tuple.Create(
-                            @"https://github.com/daviferreira/medium-editor.git",
-                            @"73938c780eca8ee8eaf662159b7f80ded9faa68a",
-                            "d4a2db09e5148f52718445b8aa9ad232015f17b8"),
                 };
                 foreach (var exp in exps) {
                     foreach (

@@ -34,7 +34,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         private string _lastProjectName;
         private const string LangName = "Java";
         public const int SkipCount = 0;
-        public const int TakeCount = 60;
+        public const int TakeCount = 50;
 
         private static IEnumerable<TestCaseData> TestCases {
             get {
@@ -60,312 +60,216 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                 };
                 var learningSets = new[] {
                     Tuple.Create(
-                            @"https://github.com/facebook/facebook-android-sdk.git",
-                            @"118e756568f7e9a8045e87575c190a2c304071a6", 2818),
+                            @"https://github.com/nostra13/Android-Universal-Image-Loader.git",
+                            @"29811229c3ba3da390b29353875be2c92f88a789",
+                            "e7d94e30299c9c606c3612bee1bf478bea09bc47"),
                     Tuple.Create(
-                            @"https://github.com/netty/netty.git",
-                            @"8615f7a69ecbbabd6d8f7ba8cae90ba63d702fec", 2805),
+                            @"https://github.com/github/android.git",
+                            @"9d490829b944d3a2c77dbd0010ec7a0bfe2efaee",
+                            "f60a269d2eecad6cb705da0d6d94c6efe37cf73c"),
                     Tuple.Create(
-                            @"https://github.com/excilys/androidannotations.git",
-                            @"5e769c2d90c76ebfe685f6423435b3fda5fa4bc6", 2725),
+                            @"https://github.com/JakeWharton/Android-ViewPagerIndicator.git",
+                            @"8cd549f23f3d20ff920e19a2345c54983f65e26b",
+                            "7a0798644424edd4845fefa862c0ef7bb3980015"),
                     Tuple.Create(
-                            @"https://github.com/sparklemotion/nokogiri.git",
-                            @"163103b0eaf904575e62909eddc00dcc9e425a2a", 2604),
+                            @"https://github.com/loopj/android-async-http.git",
+                            @"6077c6aa7bf06b2b8c13fbb4355e094dea436b7c",
+                            "cb99009b08b1488d0293a96d258d2eea5abfbe98"),
                     Tuple.Create(
                             @"https://github.com/junit-team/junit.git",
-                            @"e65558c174a8f5c4c7758f0d9dd1ffe027b023d8", 2461),
-                    Tuple.Create(
-                            @"https://github.com/AndroidBootstrap/android-bootstrap.git",
-                            @"e43e3ac4a5984edf9a6ccc87bac04be177a3615a", 2446),
+                            @"e65558c174a8f5c4c7758f0d9dd1ffe027b023d8",
+                            "f49fb25b6fbffcc7a68b28824ed3856ffa9d6fdd"),
                     Tuple.Create(
                             @"https://github.com/square/picasso.git",
-                            @"e0c3d44f53919742a0a608277be26b47742bb2a2", 2312),
-                    Tuple.Create(
-                            @"https://github.com/facebook/presto.git",
-                            @"b4b5d67e09576ec38be1564123e5a0e2d4bc1996", 2281),
+                            @"e0c3d44f53919742a0a608277be26b47742bb2a2",
+                            "5c7e2c6942a7c80d4bc1ab9cd1af8aa6e6f9a0bd"),
                     Tuple.Create(
                             @"https://github.com/chrisbanes/ActionBar-PullToRefresh.git",
-                            @"65d4183994eaf8c450e81afadb389fca61499063", 2272),
-                    Tuple.Create(
-                            @"https://github.com/WhisperSystems/TextSecure.git",
-                            @"4d52d2ee364c2edad50420a9afa500dde66a48d9", 2261),
+                            @"65d4183994eaf8c450e81afadb389fca61499063",
+                            "bed1e752e43452aa92e2cf1b481b57c7a10e2198"),
                     Tuple.Create(
                             @"https://github.com/cyrilmottier/GreenDroid.git",
-                            @"abd9769f677bb4a753f0bf1119f961187bdf7020", 2123),
+                            @"abd9769f677bb4a753f0bf1119f961187bdf7020",
+                            "62609b89a3405f7dc8b2f09cc6b3dda21db625cf"),
                     Tuple.Create(
                             @"https://github.com/dropwizard/metrics.git",
-                            @"e61395657d9f471a88dc0d9f3c7f78f0e773fe28", 2090),
+                            @"e61395657d9f471a88dc0d9f3c7f78f0e773fe28",
+                            "93d611f3a7b6bdd2bd26b8cc95514e690c1ca401"),
                     Tuple.Create(
                             @"https://github.com/nicolasgramlich/AndEngine.git",
-                            @"720897f99d2c56ba357e8fe361454bd8d88c37ed", 2068),
+                            @"720897f99d2c56ba357e8fe361454bd8d88c37ed",
+                            "ad61b68192a7a0b37a4346eddc2dd57c4d11a98b"),
                     Tuple.Create(
                             @"https://github.com/Prototik/HoloEverywhere.git",
-                            @"3b6021aa4af717cd31b1b6c877f6c30b674af6d9", 2065),
+                            @"3b6021aa4af717cd31b1b6c877f6c30b674af6d9",
+                            "9e7e429cbcd4823b08150c3179177d2b0293d0b1"),
                     Tuple.Create(
                             @"https://github.com/Bukkit/CraftBukkit.git",
-                            @"1ab090e71ea261fe38cef980bc2ebe696a494ea3", 2032),
-                    Tuple.Create(
-                            @"https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition.git",
-                            @"5f399a52c8bf5626b098629906f82be1763089f4", 2005),
+                            @"1ab090e71ea261fe38cef980bc2ebe696a494ea3",
+                            "b8d2671dd7362e4b738d40070ea4db99d0dbbb32"),
                     Tuple.Create(
                             @"https://github.com/fernandezpablo85/scribe-java.git",
-                            @"135ad50a4e4e27e97f09e42ae50d6011c7af7a4b", 1997),
+                            @"135ad50a4e4e27e97f09e42ae50d6011c7af7a4b",
+                            "bfcf0655dab0b436d6be580e3e81c784d0984938"),
                     Tuple.Create(
                             @"https://github.com/LMAX-Exchange/disruptor.git",
-                            @"1072645ad75f8b07b9145197fd4137fcfa79011a", 1836),
-                    Tuple.Create(
-                            @"https://github.com/OpenRefine/OpenRefine.git",
-                            @"c2cadab47593d5d3f49e45b5fe434e117e67f8dd", 1827),
+                            @"1072645ad75f8b07b9145197fd4137fcfa79011a",
+                            "ba9684886b9963b35567f058b96fdcd85d42ff2c"),
                     Tuple.Create(
                             @"https://github.com/dropwizard/dropwizard.git",
-                            @"4758ac698ff9993879798db338b3314c6a1c6a27", 1776),
+                            @"4758ac698ff9993879798db338b3314c6a1c6a27",
+                            "12ca959c5e75685426b2e71bf51da383d0c67cff"),
                     Tuple.Create(
                             @"https://github.com/square/retrofit.git",
-                            @"1f7cc4942f71d6c6cf4770fcd93670bc93a8c710", 1776),
-                    Tuple.Create(
-                            @"https://github.com/Netflix/SimianArmy.git",
-                            @"6a8b799af24cd638cd7110965ca8504e18cd6b24", 1743),
-                    Tuple.Create(
-                            @"https://github.com/johannilsson/android-pulltorefresh.git",
-                            @"4277c1ecf6256518248a1143b3ee882c703b33d6", 1739),
+                            @"1f7cc4942f71d6c6cf4770fcd93670bc93a8c710",
+                            "4d802a40b5e588cffe353a10cf88ad83353b5418"),
                     Tuple.Create(
                             @"https://github.com/SimonVT/android-menudrawer.git",
-                            @"1260f2f6d50d3b572ebfa98e93a0b4f8258371de", 1727),
+                            @"1260f2f6d50d3b572ebfa98e93a0b4f8258371de",
+                            "3b467e0f698963988ae8f532f630da6db205db5f"),
                     Tuple.Create(
                             @"https://github.com/square/dagger.git",
-                            @"21a9e0d875da31306b0f41273348f4f75741fef7", 1706),
+                            @"21a9e0d875da31306b0f41273348f4f75741fef7",
+                            "87ccc75bd6cb209ae8ce3832c9fc06e5b80a85c2"),
                     Tuple.Create(
                             @"https://github.com/Atmosphere/atmosphere.git",
-                            @"dd2397e03088f2bced1f8e47f8f81e935664a923", 1671),
-                    Tuple.Create(
-                            @"https://github.com/roboguice/roboguice.git",
-                            @"c0c61a89ad8ce844858373748f09222de187d61e", 1644),
+                            @"dd2397e03088f2bced1f8e47f8f81e935664a923",
+                            "ae3d4f811fd5c5cf8e88857b572fd4778654421c"),
                     Tuple.Create(
                             @"https://github.com/thinkaurelius/titan.git",
-                            @"c26cd982b1dc5ba792ee7a63af59887bd8b08223", 1625),
-                    Tuple.Create(
-                            @"https://github.com/Netflix/Hystrix.git",
-                            @"04949497901e6fcd71f68d804e5b89f9e368271d", 1624),
-                    Tuple.Create(
-                            @"https://github.com/etsy/AndroidStaggeredGrid.git",
-                            @"84a06f8da0ba70de32e7373c57f6e38b9d9b6780", 1612),
-                    Tuple.Create(
-                            @"https://github.com/chrisbanes/PhotoView.git",
-                            @"99fc9956a2de2279e45af9e95286efec79c0d739", 1609),
-                    Tuple.Create(
-                            @"https://github.com/jeresig/processing-js.git",
-                            @"02363398a823eae731cafa180a5581fe353397bf", 1553),
-                    Tuple.Create(
-                            @"https://github.com/apache/cassandra.git",
-                            @"6e97178a50d1cc9a6817653e463ef5f0cf132873", 1540),
-                    Tuple.Create(
-                            @"https://github.com/zxing/zxing.git",
-                            @"41caac38e8414be512fee712dae98966b7f4f05e", 1494),
-                    Tuple.Create(
-                            @"https://github.com/47deg/android-swipelistview.git",
-                            @"f0d4859100d7cb80e3e7ca4551daa69d5c61fd25", 1486),
-                    Tuple.Create(
-                            @"https://github.com/Bukkit/Bukkit.git",
-                            @"ec19988db3ba9415f9453c68b4861ffbe90e4153", 1477),
-                    Tuple.Create(
-                            @"https://github.com/bauerca/drag-sort-listview.git",
-                            @"c3cfccee21676149dfdf8e803c0ec2eaebc6b841", 1449),
-                    Tuple.Create(
-                            @"https://github.com/keyboardsurfer/Crouton.git",
-                            @"0957a7ea09e40d521defa28c6d1ffa1127f7e7da", 1441),
-                    Tuple.Create(
-                            @"https://github.com/gabrielemariotti/cardslib.git",
-                            @"3a1998cbf4d1ab24a5dcf22441fadafab3da655f", 1436),
-                    Tuple.Create(
-                            @"https://github.com/yui/yuicompressor.git",
-                            @"e814062c2f1f8c75decde08e884d84387938faba", 1430),
-                    Tuple.Create(
-                            @"https://github.com/aporter/coursera-android.git",
-                            @"a4c1fceac0d2c0a86f74ebad8ccc7539330e8290", 1405),
-                    Tuple.Create(
-                            @"https://github.com/emilsjolander/StickyListHeaders.git",
-                            @"60eecee1b8a53a0c6de9a5d6ddb3cefbfef6d90a", 1379),
-                    Tuple.Create(
-                            @"https://github.com/xetorthio/jedis.git",
-                            @"ac53759f9706b52184963e98af11d2e44bfb1297", 1373),
-                    Tuple.Create(
-                            @"https://github.com/square/okhttp.git",
-                            @"c51e223ff96da5f6581515d7080a080808c35384", 1353),
-                    Tuple.Create(
-                            @"https://github.com/nhaarman/ListViewAnimations.git",
-                            @"98a4793f62bbb4c9c9aaec199ccdeb3b4403a162", 1352),
-                    Tuple.Create(
-                            @"https://github.com/astuetz/PagerSlidingTabStrip.git",
-                            @"3f4738eca833faeca563d93cd77c8df763a45fb6", 1340),
-                    Tuple.Create(
-                            @"https://github.com/koush/ion.git",
-                            @"d14f69b87387bb57a213c871ff57dd42c3481e5b", 1324),
-                    Tuple.Create(
-                            @"https://github.com/k9mail/k-9.git",
-                            @"8e078bc0146cf0ab02a54c1d852842f6ee734f23", 1323),
-                    Tuple.Create(
-                            @"https://github.com/square/otto.git",
-                            @"b821b22e283dabc08ae09786861c4a958000a5ae", 1297),
-                    Tuple.Create(
-                            @"https://github.com/videlalvaro/gifsockets.git",
-                            @"0ccb1fd01edeb835a90c0c1140ad91dbd1a354b1", 1285),
-                    Tuple.Create(
-                            @"https://github.com/greenrobot/EventBus.git",
-                            @"0fe7ea575c508ac3b072b4a31ecea9c8680435be", 1270),
-                    Tuple.Create(
-                            @"https://github.com/JakeWharton/NineOldAndroids.git",
-                            @"9f20fd77e04942fd50b95aeb1c492a38e36c06dd", 1252),
-                    Tuple.Create(
-                            @"https://github.com/pakerfeldt/android-viewflow.git",
-                            @"3da74fa32a935bcbb37e5ebeb270477cde1985d4", 1247),
-                    Tuple.Create(
-                            @"https://github.com/johannilsson/android-actionbar.git",
-                            @"093a5f8039dfade914f52b55b5536b95850ddaf1", 1242),
-                    Tuple.Create(
-                            @"https://github.com/androidquery/androidquery.git",
-                            @"45ed6c85dcf0b3b58a08810b423886fb275b33b0", 1225),
-                    Tuple.Create(
-                            @"https://github.com/ACRA/acra.git",
-                            @"ee7085683018b556e73f74b059040d93794cf388", 1196),
-                    Tuple.Create(
-                            @"https://github.com/AsyncHttpClient/async-http-client.git",
-                            @"f96bcbbe906c1e472fbbd7cca5cfaf3778db02d6", 1175),
-                    Tuple.Create(
-                            @"https://github.com/umano/AndroidSlidingUpPanel.git",
-                            @"38327d828690da0771e7b35a15a118eeecc20e26", 1161),
-                    Tuple.Create(
-                            @"https://github.com/amlcurran/ShowcaseView.git",
-                            @"cc55def081814213c94ad80be4195b17ac4ef18c", 1145),
-                    Tuple.Create(
-                            @"https://github.com/openaphid/android-flip.git",
-                            @"ab2dea1b045ffc626221c2826ce9dd00823e696d", 1142),
-                    Tuple.Create(
-                            @"https://github.com/jhy/jsoup.git",
-                            @"80158d6fa7445506eaaafdeadb1f4dc291ca10a5", 1129),
-                    Tuple.Create(
-                            @"https://github.com/yinwang0/pysonar2.git",
-                            @"240192fb7827dedd9381dbfdd0df3062c47078d0", 1128),
-                    Tuple.Create(
-                            @"https://github.com/commonsguy/cw-omnibus.git",
-                            @"674f1edab621b409922028d0326e02e9ad81015f", 1124),
-                    Tuple.Create(
-                            @"https://github.com/JakeWharton/butterknife.git",
-                            @"3a6f2eb9713cfcea3037282e4fc4d34d50f19d6c", 1121),
-                    Tuple.Create(
-                            @"https://github.com/tinkerpop/gremlin.git",
-                            @"e622d5bf289ef8f74a088dc0237c69b98baf6792", 1111),
-                    Tuple.Create(
-                            @"https://github.com/wildfly/wildfly.git",
-                            @"23dc89381b609dcdac4d2f9da4e4d78b235c51e3", 1102),
-                    Tuple.Create(
-                            @"https://github.com/yusuke/twitter4j.git",
-                            @"747982dfdccd6d1b2ef4857720fe289455a435a1", 1101),
-                    Tuple.Create(
-                            @"https://github.com/twall/jna.git",
-                            @"323a913bf610c982f43b58883b0fc54c78a29621", 1098),
-                    Tuple.Create(
-                            @"https://github.com/phonegap/phonegap-facebook-plugin.git",
-                            @"ccb2a6f648bb2ed44e4b7b71add4fb7b7e95eaed", 1084),
-                    Tuple.Create(
-                            @"https://github.com/purplecabbage/phonegap-plugins.git",
-                            @"319dfb7297002040ec7ab98896e68d05c7fd8180", 1083),
+                            @"c26cd982b1dc5ba792ee7a63af59887bd8b08223",
+                            "c8f7d2d5b27ae8a77304868480b41e43685af9eb"),
                     Tuple.Create(
                             @"https://github.com/Comcast/FreeFlow.git",
-                            @"47bfb57e8037eecae320266cb00dd23e673362e5", 1079),
-                    Tuple.Create(
-                            @"https://github.com/ManuelPeinado/FadingActionBar.git",
-                            @"f679e313d105075cfb389695052348ee09a8e80a", 1068),
-                    Tuple.Create(
-                            @"https://github.com/bigbluebutton/bigbluebutton.git",
-                            @"55773f594eed3e0eff5af47ec8cbd6fcf713a56a", 1062),
-                    Tuple.Create(
-                            @"https://github.com/mttkay/ignition.git",
-                            @"bbeb55cb4f080bdc31e549142ea745c65e4727c7", 1058),
-                    Tuple.Create(
-                            @"https://github.com/processing/processing.git",
-                            @"9c63a2c4a227ed2329fd01006cb593ba8954962d", 1054),
-                    Tuple.Create(
-                            @"https://github.com/douglascrockford/JSON-java.git",
-                            @"4d86b05d3c6a72e88c476430d60676f9ae2fafab", 1052),
-                    Tuple.Create(
-                            @"https://github.com/Athou/commafeed.git",
-                            @"3a8d72cab4038e975af87d8083e2b7e68f2e328c", 1048),
-                    Tuple.Create(
-                            @"https://github.com/Graylog2/graylog2-server.git",
-                            @"c1c5491c4a3194a19c21a7c744d5d45421ecd227", 1041),
+                            @"47bfb57e8037eecae320266cb00dd23e673362e5",
+                            "057f895f2d2fd45ec52b7cb338f2739fc229da29"),
                     Tuple.Create(
                             @"https://github.com/greenrobot/greenDAO.git",
-                            @"d13a1f1d0e8d244e8033a944599adda7bb157bef", 1039),
+                            @"d13a1f1d0e8d244e8033a944599adda7bb157bef",
+                            "c978dc004d153d2987ad1889693db1006fc2c07c"),
                     Tuple.Create(
                             @"https://github.com/commonsguy/cw-advandroid.git",
-                            @"ab8e52a00413592b99a7bb9f93050bee760f289f", 1028),
+                            @"ab8e52a00413592b99a7bb9f93050bee760f289f",
+                            "c4705e6f4baa0ae6b9d0bda322a6fb140defbdfc"),
                     Tuple.Create(
-                            @"https://github.com/ether/pad.git",
-                            @"cb4977238f55f9b2518e7c43a5c769823b0afd45", 987),
+                            @"https://github.com/koush/AndroidAsync.git",
+                            @"09c60732944a20eac52301026e9c24344ccb3062",
+                            "813b0bc740021866c8e40dbc1249a862efb68252"),
                     Tuple.Create(
                             @"https://github.com/square/android-times-square.git",
-                            @"2bb367039b3cb93e6764e55835dc023df9f4fd77", 967),
-                    Tuple.Create(
-                            @"https://github.com/grails/grails-core.git",
-                            @"048025b9b98332645df30d82593d44b1f7a84bbd", 960),
+                            @"2bb367039b3cb93e6764e55835dc023df9f4fd77",
+                            "1b18bb6a5882b1398a1b669ce5d51abb63c50362"),
                     Tuple.Create(
                             @"https://github.com/pardom/ActiveAndroid.git",
-                            @"bd98740d466249fc085311b1c166570cfc08f532", 959),
+                            @"bd98740d466249fc085311b1c166570cfc08f532",
+                            "c0fb1c44c8d9420428a13ce10b436635e276b59f"),
                     Tuple.Create(
                             @"https://github.com/kevinsawicki/http-request.git",
-                            @"c11e2a8b335d43adb9e273412ec7a39c7e404e72", 939),
-                    Tuple.Create(
-                            @"https://github.com/mongodb/mongo-java-driver.git",
-                            @"244b5a26bfe1b6f9e15264d690fa944e7c6e2c54", 924),
+                            @"c11e2a8b335d43adb9e273412ec7a39c7e404e72",
+                            "4a25dddd28f077ab7e7cf16cef41269530e95eee"),
                     Tuple.Create(
                             @"https://github.com/qii/weiciyuan.git",
-                            @"14fdfe9f6f7f3d927a66d802b709f53ba0ff629e", 906),
-                    Tuple.Create(
-                            @"https://github.com/BonzaiThePenguin/WikiSort.git",
-                            @"b83bde28fbf26198749eb0169d7f01052841b192", 905),
-                    Tuple.Create(
-                            @"https://github.com/tjerkw/Android-SlideExpandableListView.git",
-                            @"a44e6f0fcfabf3a870469667b219552a5d562e87", 901),
-                    Tuple.Create(
-                            @"https://github.com/jgilfelt/android-viewbadger.git",
-                            @"e08c3a78cb92c0c8587790b15e73434f972912cf", 900),
-                    Tuple.Create(
-                            @"https://github.com/commonsguy/cw-android.git",
-                            @"568c11f2b9b556027dda05ad7b62c044f039b4e4", 899),
-                    Tuple.Create(
-                            @"https://github.com/orientechnologies/orientdb.git",
-                            @"8bfc83acadc833b40ec3d485216b39b786935b4c", 897),
-                    Tuple.Create(
-                            @"https://github.com/Netflix/curator.git",
-                            @"1e66d7ccd7ac601df3c814833f1b9e32b25331c6", 896),
-                    Tuple.Create(
-                            @"https://github.com/mttkay/droid-fu.git",
-                            @"469b1bf7a844cc09866bad95fc06321291c649e8", 882),
-                    Tuple.Create(
-                            @"https://github.com/thest1/LazyList.git",
-                            @"0f37d108f2067f5f44749eb0ad44e51656f96f02", 882),
-                    Tuple.Create(
-                            @"https://github.com/spring-projects/spring-mvc-showcase.git",
-                            @"c7b9162c061e135c081a28bf7fc209bb9a992cea", 869),
-                    Tuple.Create(
-                            @"https://github.com/yangfuhai/afinal.git",
-                            @"e706f0e896f8f819aa9a6a8374c7fe9f71fa4950", 865),
-                    Tuple.Create(
-                            @"https://github.com/todoroo/astrid.git",
-                            @"4fc5c7714fb1b48ae46dcacbda287bcef9c3f6bf", 848),
+                            @"14fdfe9f6f7f3d927a66d802b709f53ba0ff629e",
+                            "056dd1d1e3fb99c4dae9e864eced5a1ef5cffc6e"),
                     Tuple.Create(
                             @"https://github.com/twitter/ambrose.git",
-                            @"9ff6dc68e6eb7e95645878082774f44acca5814f", 847),
+                            @"9ff6dc68e6eb7e95645878082774f44acca5814f",
+                            "09d804e4a0512907f27fe368dcc8078b4540b727"),
                     Tuple.Create(
                             @"https://github.com/perwendel/spark.git",
-                            @"f1f06769abacc6732e511774d4db2306cbe5db54", 843),
+                            @"f1f06769abacc6732e511774d4db2306cbe5db54",
+                            "25feca79b3bec6aa82f79de660db74698a2414d6"),
+                    Tuple.Create(
+                            @"https://github.com/addthis/stream-lib.git",
+                            @"56c48e001341f874c37e0113c09554436e93ea10",
+                            "6bff10d9c6ce0420388ba3379af0c6380d441c5b"),
+                    Tuple.Create(
+                            @"https://github.com/http-kit/http-kit.git",
+                            @"7184fa8cf2526a24446e7e6602bc16d9d1c0948a",
+                            "d8e1b2d28b6cab0583c8b61d0cf645cd0cb9666c"),
+                    Tuple.Create(
+                            @"https://github.com/quartzjer/TeleHash.git",
+                            @"133f4212666911d066f59255e2e7fbd69bea8265",
+                            "c92e5e97af2be5299719bd59ca0e9fc75d5608f0"),
+                    Tuple.Create(
+                            @"https://github.com/cucumber/cucumber-jvm.git",
+                            @"08e6b87a0a21010bf35d643157b7032a40832efd",
+                            "7c4d730c77a85d20ca53be67f80f85941f498528"),
+                    Tuple.Create(
+                            @"https://github.com/jankotek/MapDB.git",
+                            @"c890d8b4edc5fb9d064bb04aa132aea8608f87dd",
+                            "14b45eba0465a21f9c4a93145055b51ea3478cfc"),
+                    Tuple.Create(
+                            @"https://github.com/peter-lawrey/Java-Chronicle.git",
+                            @"6716f0cff0750d125a07eb769bba0698a617b7fb",
+                            "9fab9764cf84075af51e58ba31cf2972b2b1344e"),
+                    Tuple.Create(
+                            @"https://github.com/TooTallNate/Java-WebSocket.git",
+                            @"7c3b223536dc8bd4e8794ac265ad06679583e30f",
+                            "53395cc5fd2719bad277d0c6a67f04d3687b51f1"),
+                    Tuple.Create(
+                            @"https://github.com/derekbrameyer/android-betterpickers.git",
+                            @"0a72367b478970b1731822e78790a158a4f7ebb4",
+                            "6d42db9d5898c5b1cb44e2e5e516a65cbe974f24"),
+                    Tuple.Create(
+                            @"https://github.com/typesafehub/config.git",
+                            @"36c1392028c82db2c146ade29a2f6940bc6f5407",
+                            "f1bedacdfcd8a06c61e829d31e45119d07e7b299"),
+                    Tuple.Create(
+                            @"https://github.com/OpenTSDB/opentsdb.git",
+                            @"a2bd5737d9d11a8fd3fa6e9c36a31dd8cb5c4af4",
+                            "c95cb72b82f6dcdbdd33293e3058a470bd556671"),
+                    Tuple.Create(
+                            @"https://github.com/kevinweil/elephant-bird.git",
+                            @"ccddfc68e634fea2d05a1804057a1c4826817471",
+                            "7dc6a24575570d514ad0b3456a0e87fb502647be"),
+                    Tuple.Create(
+                            @"https://github.com/nathanmarz/storm-starter.git",
+                            @"917a4c5c171009af3b130d09339355f6310a2042",
+                            "4e2dd49ee0c7bdfc78863d648e51d7c99b68f48c"),
+                    Tuple.Create(
+                            @"https://github.com/mongodb/mongo-hadoop.git",
+                            @"29788439cbc8cc9a45910ceba316a70049a8b4e8",
+                            "f1289137e6a1517d84dd9dd43daaadfae6b650a3"),
+                    Tuple.Create(
+                            @"https://github.com/harism/android_page_curl.git",
+                            @"7a2c8f152bb4f1b0de3b1aa72b3cb79e1fe8e3bd",
+                            "4b3a954c9cbc291a9ec296deb1c160aec8ca06bd"),
+                    Tuple.Create(
+                            @"https://github.com/RobotiumTech/robotium.git",
+                            @"ee7d989c95f2cf380935f7a117d7f9345820cbf7",
+                            "4a4078d2edae808094ddac4b128c3dd5b5801f08"),
+                    Tuple.Create(
+                            @"https://github.com/hector-client/hector.git",
+                            @"0c760d9347ebf9bdaeec5fe195f175f674590909",
+                            "0bd040edef174eedb74700f5df308d176853ca33"),
+                    Tuple.Create(
+                            @"https://github.com/eishay/jvm-serializers.git",
+                            @"3ec217ec19aff74654b40a47c010d57a44996efb",
+                            "2e6dbd948635724ae3c4819853d95de3e509868b"),
+                    Tuple.Create(
+                            @"https://github.com/jberkel/sms-backup-plus.git",
+                            @"3565f645126d3f9e8c0371ec57c8aac4bbf5cde1",
+                            "7f651fbbb00d001fe40a34a4a858d01ca1ce422d"),
+                    Tuple.Create(
+                            @"https://github.com/jayway/maven-android-plugin.git",
+                            @"2ce1428c8e83365c5ac096b7855e71bd8a035013",
+                            "d25945fa9d270ecd65eff72f3b0bb5d5f54d2dbc"),
+                    Tuple.Create(
+                            @"https://github.com/square/spoon.git",
+                            @"975dacb45607ed45492fa3dd9e697f0a5263e71a",
+                            "97d7f54e714d171d3a524af751a8407d70c65d7f"),
                 };
                 foreach (var exp in exps) {
-                    foreach (var learningSet in learningSets.Skip(SkipCount).Take(TakeCount)) {
+                    foreach (
+                            var learningSet in
+                                    learningSets.Skip(SkipCount)
+                                            .Take(TakeCount)) {
                         var url = learningSet.Item1;
                         var path = Fixture.GetGitRepositoryPath(url);
-                        Git.CloneAndCheckout(path, url, learningSet.Item2);
-                        yield return new TestCaseData(exp, path, learningSet.Item3);
+                        Git.Clone(path, url);
+                        yield return
+                                new TestCaseData(exp, path, learningSet.Item2, learningSet.Item3);
                     }
                 }
             }
@@ -374,11 +278,10 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
         [Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath, int starCount) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.java"), };
-            var projectName = Path.GetFileName(projectPath);
-            if (_lastProjectName != projectName) {
+            if (_lastProjectName != exp.GetType().Name) {
                 _writer.WriteLine();
-                _writer.Write(projectName + ",");
-                _lastProjectName = projectName;
+                _writer.Write(Path.GetFileName(projectPath) + ",");
+                _lastProjectName = exp.GetType().Name;
             }
             exp.Learn(seedPaths, _writer, projectPath, "*.java");
             _writer.Flush();
