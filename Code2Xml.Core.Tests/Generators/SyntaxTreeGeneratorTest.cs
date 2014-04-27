@@ -202,7 +202,11 @@ namespace Code2Xml.Core.Tests.Generators {
 			var thread = new Thread(
 					() => {
 						var path = Fixture.GetGitRepositoryPath(url);
-						Git.CloneAndCheckoutAndReset(path, url, commitPointer);
+						var ret = Git.CloneAndCheckoutAndReset(path, url, commitPointer);
+						if (!ret.StartsWith(commitPointer)) {
+							Console.WriteLine("Wrong SHA");
+							return;
+						}
 
 						var failedCount = 10;
 
