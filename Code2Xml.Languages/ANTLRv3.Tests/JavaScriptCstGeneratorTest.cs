@@ -20,6 +20,7 @@ using System.Linq;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Tests.Generators;
 using Code2Xml.Languages.ANTLRv3.Generators.JavaScript;
+using Code2Xml.Objects.Tests.Learning.Experiments;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.ANTLRv3.Tests {
@@ -506,8 +507,12 @@ var completion = require('../lib/completion');
         [TestCase(@"https://github.com/jquery/qunit.git",
                 @"04e0337cc7fba5c08fc8a7fc8542cadd062f1b03", 2863)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
-            VerifyRestoringGitRepositorySavingRepo(
-                    url, commitPointer, "js_repo.csv", starCount, "*.js");
+            var exp = new JavaScriptComplexStatementExperiment();
+            VerifyRestoringGitRepoSavingThem(
+                    url, commitPointer, "js_repo.csv", starCount,
+                    cst => cst.DescendantsAndSelf()
+                            .Where(exp.OriginalIsAcceptedUsingOracle)
+                            .Count(), "*.js");
         }
 
         [Test]

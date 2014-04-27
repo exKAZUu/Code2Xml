@@ -18,9 +18,11 @@
 
 using System;
 using System.IO;
+using System.Linq;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Tests.Generators;
 using Code2Xml.Languages.ExternalGenerators.Generators.Python;
+using Code2Xml.Objects.Tests.Learning.Experiments;
 using NUnit.Framework;
 using ParserTests;
 
@@ -287,8 +289,12 @@ pass")]
 		[TestCase(@"https://github.com/openstack/nova.git",
 				@"66e4e32f8b8f1fa004ca0289b843e0a4fa5600d1", 1198)]
 		public void ParseGitRepository(string url, string commitPointer, int starCount) {
-			VerifyRestoringGitRepositorySavingRepo(
-					url, commitPointer, "python2_repo.csv", starCount, "*.py");
+            var exp = new PythonComplexStatementExperiment();
+            VerifyRestoringGitRepoSavingThem(
+                    url, commitPointer, "python2_repo.csv", starCount,
+                    cst => cst.DescendantsAndSelf()
+                            .Where(exp.OriginalIsAcceptedUsingOracle)
+                            .Count(), "*.py");
 		}
 
 		[Test]

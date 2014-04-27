@@ -18,6 +18,7 @@
 
 using System;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using Code2Xml.Core.Generators;
 using NUnit.Framework;
@@ -173,36 +174,92 @@ namespace Code2Xml.Core.Tests.Generators {
             ShowTimes(path, url);
         }
 
-        protected void VerifyRestoringGitRepository(
+        protected void VerifyRestoringGitRepo(
                 string url, string commitPointer,
                 params string[] patterns) {
-            VerifyRestoringGitRepository(url, commitPointer, File.ReadAllText, patterns);
+            VerifyRestoringGitRepo(url, commitPointer, File.ReadAllText, patterns);
         }
 
-        protected void VerifyRestoringGitRepository(
+        protected void VerifyRestoringGitRepo(
                 string url, string commitPointer,
                 Func<string, string> readFileFunc, params string[] patterns) {
             var path = Fixture.GetGitRepositoryPath(url);
-            Git.CloneAndCheckout(path, url, commitPointer);
+            Git.CloneAndCheckoutAndReset(path, url, commitPointer);
             PrivateVerifyRestoringProjectDirectory(path, url, readFileFunc, patterns);
         }
 
-        protected void VerifyRestoringGitRepositorySavingRepo(
+        protected void VerifyRestoringGitRepoSavingThem(
                 string url, string commitPointer, string filePath, int starCount,
-                params string[] patterns) {
-            VerifyRestoringGitRepositorySavingRepo(
-                    url, commitPointer, filePath, starCount, File.ReadAllText, patterns);
+                Func<TNode, int> measureFunc,params string[] patterns) {
+            VerifyRestoringGitRepoSavingThem(
+                    url, commitPointer, filePath, starCount, File.ReadAllText, measureFunc, patterns);
         }
 
-        protected void VerifyRestoringGitRepositorySavingRepo(
+        protected void VerifyRestoringGitRepoSavingThem(
                 string url, string commitPointer, string filePath, int starCount,
-                Func<string, string> readFileFunc, params string[] patterns) {
+                Func<string, string> readFileFunc, Func<TNode, int> measureFunc,
+                params string[] patterns) {
             var thread = new Thread(
                     () => {
                         var path = Fixture.GetGitRepositoryPath(url);
-                        Git.CloneAndCheckout(path, url, commitPointer);
-                        PrivateVerifyRestoringProjectDirectory(path, url, readFileFunc, patterns);
-                        File.AppendAllText(filePath, url + "," + commitPointer + "," + starCount + "\r\n");
+                        Git.CloneAndCheckoutAndReset(path, url, commitPointer);
+
+                        var sizeStmt = patterns.SelectMany(
+                                pattern =>
+                                        Directory.GetFiles(
+                                                path, pattern, SearchOption.AllDirectories))
+                                .Select(
+                                        p => {
+                                            try {
+                                                var cst = Generator.GenerateTreeFromCodePath(
+                                                        p, null, true);
+                                                return new {
+                                                    Size = new FileInfo(p).Length,
+                                                    Stmt = measureFunc(cst)
+                                                };
+                                            } catch {
+                                                return new { Size = 0L, Stmt = 0 };
+                                            }
+                                        });
+                        var sumSize = sizeStmt.Sum(t => t.Size);
+                        var sumStmt = sizeStmt.Sum(t => t.Stmt);
+                        var lastSize = sumSize;
+                        var lastStmt = sumStmt;
+                        var sha = Git.FindCommitPointers(
+                                path,
+                                () => patterns.SelectMany(
+                                        pattern =>
+                                                Directory.GetFiles(
+                                                        path, pattern, SearchOption.AllDirectories))
+                                        .Sum(p => new FileInfo(p).Length) < sumSize / 3 * 2,
+                                () => {
+                                    lastSize = patterns.SelectMany(
+                                            pattern =>
+                                                    Directory.GetFiles(
+                                                            path, pattern,
+                                                            SearchOption.AllDirectories))
+                                            .Sum(p => new FileInfo(p).Length);
+                                    lastStmt = patterns.SelectMany(
+                                            pattern =>
+                                                    Directory.GetFiles(
+                                                            path, pattern,
+                                                            SearchOption.AllDirectories))
+                                            .Sum(
+                                                    p =>
+                                                            measureFunc(
+                                                                    Generator
+                                                                            .GenerateTreeFromCodePath
+                                                                            (p)));
+                                    return sumStmt / 2 < lastStmt && lastStmt < sumStmt / 3 * 2;
+                                }
+                                );
+                        if (sha != null) {
+                            File.AppendAllText(
+                                    filePath,
+                                    url + "," + commitPointer + "," + sha + "," + sumSize + ","
+                                    + lastSize + "," + sumStmt + "," + lastStmt + "," + starCount
+                                    + "\r\n");
+                        }
                     });
             thread.Start();
             if (thread.Join(1000 * 60 * 30)) {

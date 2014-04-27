@@ -21,6 +21,7 @@ using System.Linq;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Tests.Generators;
 using Code2Xml.Languages.ANTLRv3.Generators.CSharp;
+using Code2Xml.Objects.Tests.Learning.Experiments;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.ANTLRv3.Tests {
@@ -447,8 +448,12 @@ xxxxx
         [TestCase(@"https://github.com/Olivine-Labs/Alchemy-Websockets.git",
                 @"42c00b6d29116834432de37ea77fa954b093bc74", 226)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
-            VerifyRestoringGitRepositorySavingRepo(
-                    url, commitPointer, "csharp_repo.csv", starCount, "*.cs");
+            var exp = new CSharpComplexStatementExperiment();
+            VerifyRestoringGitRepoSavingThem(
+                    url, commitPointer, "csharp_repo.csv", starCount,
+                    cst => cst.DescendantsAndSelf()
+                            .Where(exp.OriginalIsAcceptedUsingOracle)
+                            .Count(), "*.cs");
         }
     }
 }

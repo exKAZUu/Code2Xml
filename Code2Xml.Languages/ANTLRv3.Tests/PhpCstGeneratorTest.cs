@@ -16,9 +16,11 @@
 
 #endregion
 
+using System.Linq;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Tests.Generators;
 using Code2Xml.Languages.ANTLRv3.Generators.Php;
+using Code2Xml.Objects.Tests.Learning.Experiments;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.ANTLRv3.Tests {
@@ -481,8 +483,12 @@ namespace Code2Xml.Languages.ANTLRv3.Tests {
         [TestCase(@"https://github.com/jenssegers/Laravel-MongoDB.git",
                 @"2ae7980f86312f050c2ab626f48fa9015fbe26a3", 389)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
-            VerifyRestoringGitRepositorySavingRepo(
-                    url, commitPointer, "php_repo.csv", starCount, "*.php");
+            var exp = new PhpComplexStatementExperiment();
+            VerifyRestoringGitRepoSavingThem(
+                    url, commitPointer, "php_repo.csv", starCount,
+                    cst => cst.DescendantsAndSelf()
+                            .Where(exp.OriginalIsAcceptedUsingOracle)
+                            .Count(), "*.php");
         }
     }
 }

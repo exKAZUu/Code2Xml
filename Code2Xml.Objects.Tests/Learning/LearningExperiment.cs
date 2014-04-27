@@ -121,6 +121,10 @@ namespace Code2Xml.Objects.Tests.Learning {
         private Action goNow;
         private Action goBack;
 
+        public HashSet<string> InitialElementNames {
+            get { return _initialElementNames; }
+        }
+
         protected LearningExperiment(params string[] elementNames) {
             _initialElementNames = elementNames.ToHashSet();
         }

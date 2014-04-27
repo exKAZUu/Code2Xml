@@ -21,6 +21,7 @@ using System.Linq;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Tests.Generators;
 using Code2Xml.Languages.ANTLRv3.Generators.Java;
+using Code2Xml.Objects.Tests.Learning.Experiments;
 using NUnit.Framework;
 using ParserTests;
 
@@ -134,6 +135,8 @@ public class AlignedTuplePrinter {
                 @"8615f7a69ecbbabd6d8f7ba8cae90ba63d702fec", 2805)]
         [TestCase(@"https://github.com/excilys/androidannotations.git",
                 @"5e769c2d90c76ebfe685f6423435b3fda5fa4bc6", 2725)]
+        [TestCase(@"https://github.com/Bearded-Hen/Android-Bootstrap.git",
+                @"9187a05fd7d91350569347f8565078441135d8d4", 2650)]
         [TestCase(@"https://github.com/sparklemotion/nokogiri.git",
                 @"163103b0eaf904575e62909eddc00dcc9e425a2a", 2604)]
         [TestCase(@"https://github.com/junit-team/junit.git",
@@ -300,59 +303,13 @@ public class AlignedTuplePrinter {
                 @"3a8d72cab4038e975af87d8083e2b7e68f2e328c", 1048)]
         [TestCase(@"https://github.com/Graylog2/graylog2-server.git",
                 @"c1c5491c4a3194a19c21a7c744d5d45421ecd227", 1041)]
-        [TestCase(@"https://github.com/greenrobot/greenDAO.git",
-                @"d13a1f1d0e8d244e8033a944599adda7bb157bef", 1039)]
-        [TestCase(@"https://github.com/commonsguy/cw-advandroid.git",
-                @"ab8e52a00413592b99a7bb9f93050bee760f289f", 1028)]
-        [TestCase(@"https://github.com/koush/AndroidAsync.git",
-                @"09c60732944a20eac52301026e9c24344ccb3062", 993)]
-        [TestCase(@"https://github.com/ether/pad.git",
-                @"cb4977238f55f9b2518e7c43a5c769823b0afd45", 987)]
-        [TestCase(@"https://github.com/square/android-times-square.git",
-                @"2bb367039b3cb93e6764e55835dc023df9f4fd77", 967)]
-        [TestCase(@"https://github.com/grails/grails-core.git",
-                @"048025b9b98332645df30d82593d44b1f7a84bbd", 960)]
-        [TestCase(@"https://github.com/pardom/ActiveAndroid.git",
-                @"bd98740d466249fc085311b1c166570cfc08f532", 959)]
-        [TestCase(@"https://github.com/kevinsawicki/http-request.git",
-                @"c11e2a8b335d43adb9e273412ec7a39c7e404e72", 939)]
-        [TestCase(@"https://github.com/mongodb/mongo-java-driver.git",
-                @"244b5a26bfe1b6f9e15264d690fa944e7c6e2c54", 924)]
-        [TestCase(@"https://github.com/hibernate/hibernate-orm.git",
-                @"9bd6917d0d92c3d350b74f23c03af5a4bb80890d", 910)]
-        [TestCase(@"https://github.com/qii/weiciyuan.git",
-                @"14fdfe9f6f7f3d927a66d802b709f53ba0ff629e", 906)]
-        [TestCase(@"https://github.com/BonzaiThePenguin/WikiSort.git",
-                @"b83bde28fbf26198749eb0169d7f01052841b192", 905)]
-        [TestCase(@"https://github.com/tjerkw/Android-SlideExpandableListView.git",
-                @"a44e6f0fcfabf3a870469667b219552a5d562e87", 901)]
-        [TestCase(@"https://github.com/jgilfelt/android-viewbadger.git",
-                @"e08c3a78cb92c0c8587790b15e73434f972912cf", 900)]
-        [TestCase(@"https://github.com/commonsguy/cw-android.git",
-                @"568c11f2b9b556027dda05ad7b62c044f039b4e4", 899)]
-        [TestCase(@"https://github.com/orientechnologies/orientdb.git",
-                @"8bfc83acadc833b40ec3d485216b39b786935b4c", 897)]
-        [TestCase(@"https://github.com/Netflix/curator.git",
-                @"1e66d7ccd7ac601df3c814833f1b9e32b25331c6", 896)]
-        [TestCase(@"https://github.com/mttkay/droid-fu.git",
-                @"469b1bf7a844cc09866bad95fc06321291c649e8", 882)]
-        [TestCase(@"https://github.com/thest1/LazyList.git",
-                @"0f37d108f2067f5f44749eb0ad44e51656f96f02", 882)]
-        [TestCase(@"https://github.com/reactor/reactor.git",
-                @"83f0b805ca0a8e5fd9cd881e6370c173685ad228", 875)]
-        [TestCase(@"https://github.com/novoda/android.git",
-                @"3052e6d253bd6a29c3e9b043ba87021242857ba5", 875)]
-        [TestCase(@"https://github.com/pcpratts/rootbeer1.git",
-                @"c046801c73b9b2e48d4fe40739b0ce68c496d103", 872)]
-        [TestCase(@"https://github.com/spring-projects/spring-mvc-showcase.git",
-                @"c7b9162c061e135c081a28bf7fc209bb9a992cea", 869)]
-        [TestCase(@"https://github.com/yangfuhai/afinal.git",
-                @"e706f0e896f8f819aa9a6a8374c7fe9f71fa4950", 865)]
-        [TestCase(@"https://github.com/todoroo/astrid.git",
-                @"4fc5c7714fb1b48ae46dcacbda287bcef9c3f6bf", 848)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
-            VerifyRestoringGitRepositorySavingRepo(
-                    url, commitPointer, "java_repo.csv", starCount, "*.java");
+            var exp = new JavaComplexStatementExperiment();
+            VerifyRestoringGitRepoSavingThem(
+                    url, commitPointer, "java_repo.csv", starCount,
+                    cst => cst.DescendantsAndSelf()
+                            .Where(exp.OriginalIsAcceptedUsingOracle)
+                            .Count(), "*.java");
         }
 
         [Test]

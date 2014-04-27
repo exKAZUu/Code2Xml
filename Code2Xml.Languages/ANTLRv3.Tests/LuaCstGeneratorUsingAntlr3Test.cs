@@ -16,9 +16,11 @@
 
 #endregion
 
+using System.Linq;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Tests.Generators;
 using Code2Xml.Languages.ANTLRv3.Generators.Lua;
+using Code2Xml.Objects.Tests.Learning.Experiments;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.ANTLRv3.Tests {
@@ -381,8 +383,12 @@ if true then --[[VERBOSE]] print(1) end
         [TestCase(@"https://github.com/lua-nucleo/lua-nucleo.git",
                 @"570e115dab1260ad433bd778eebb5d91fd122d5a", 43)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
-            VerifyRestoringGitRepositorySavingRepo(
-                    url, commitPointer, "lua_repo.csv", starCount, "*.lua");
+            var exp = new LuaComplexStatementExperiment();
+            VerifyRestoringGitRepoSavingThem(
+                    url, commitPointer, "lua_repo.csv", starCount,
+                    cst => cst.DescendantsAndSelf()
+                            .Where(exp.OriginalIsAcceptedUsingOracle)
+                            .Count(), "*.lua");
         }
     }
 }
