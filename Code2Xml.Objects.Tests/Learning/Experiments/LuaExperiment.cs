@@ -262,7 +262,9 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                                             .Take(JavaExperiment.TakeCount)) {
                         var url = learningSet.Item1;
                         var path = Fixture.GetGitRepositoryPath(url);
+                        File.AppendAllText(@"C:\Users\exKAZUu\Desktop\Debug.txt", url + "Clone\r\n");
                         Git.Clone(path, url);
+                        File.AppendAllText(@"C:\Users\exKAZUu\Desktop\Debug.txt", "Done\r\n");
                         yield return
                                 new TestCaseData(exp, path, learningSet.Item2, learningSet.Item3);
                     }
