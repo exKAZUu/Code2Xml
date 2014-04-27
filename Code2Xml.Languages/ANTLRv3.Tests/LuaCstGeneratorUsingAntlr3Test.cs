@@ -82,156 +82,256 @@ if true then --[[VERBOSE]] print(1) end
         }
 
         [Test]
-        [TestCase(@"https://github.com/torhve/LuaWeb.git",
-                @"da1b73e7b70c938e35051a242c6fa70236e60aac", 61)]
-        [TestCase(@"https://github.com/henkboom/pax-britannica.git",
-                @"a7a3c0c21e5b27e6f4be3b0b817ebd29cd23fa7d", 60)]
-        [TestCase(@"https://github.com/roaminggamer/SSKCorona.git",
-                @"a9d6dfec85c01c2d9f8d455a10dcfefcafe35694", 60)]
-        [TestCase(@"https://github.com/vincentbernat/awesome-configuration.git",
-                @"b649c57c91ba4cb624f37d3f2a4249d9806da68c", 59)]
-        [TestCase(@"https://github.com/kikito/love-tile-tutorial.git",
-                @"92c5ce5e7e5aa9de461f948c17ed5c8d3af1d0d4", 59)]
-        [TestCase(@"https://github.com/dualface/quick-x-server.git",
-                @"2c037690610d92692744bf78fc136dec8068fddf", 59)]
-        [TestCase(@"https://github.com/josefnpat/vapor.git",
-                @"168e91c009ad7bb270498721ff753b4eb1a33038", 58)]
-        [TestCase(@"https://github.com/geoffleyland/luatrace.git",
-                @"6150cfd6290986adab8ea948e756ee17c80d098a", 58)]
-        [TestCase(@"https://github.com/Yonaba/30log.git",
-                @"25022b30e58f1590ca3d2bc2c17107b869c38d62", 57)]
-        [TestCase(@"https://github.com/SimonLarsen/mrrescue.git",
-                @"8f226413b95544d0e0744d9c3e92c68b87659483", 57)]
-        [TestCase(@"https://github.com/Nuku/Flexible-Survival.git",
-                @"4b75f275ece08e07d1325efc3205578edc0a021b", 56)]
-        [TestCase(@"https://github.com/meric/l2l.git",
-                @"e9394879e9bde63b1b21e39928ac19f304fc1b39", 56)]
-        [TestCase(@"https://github.com/pkulchenko/serpent.git",
-                @"026f4e1a5c34f0670948a13d2182729448a260f2", 56)]
-        [TestCase(@"https://github.com/AlexChittock/SimpleShortener.git",
-                @"76462aeea14adcc0aef49c2cfa8a49951b5d460e", 55)]
-        [TestCase(@"https://github.com/willsteel/lcpp.git",
-                @"7fdda9a5e3eacccee7571130602dc1381c01bcd9", 55)]
-        [TestCase(@"https://github.com/dmccuskey/DMC-Corona-Library.git",
-                @"8c85803e39a673cc84b6aa089b51be56f05dd062", 55)]
-        [TestCase(@"https://github.com/Neopallium/lua-pb.git",
-                @"862fe3121e71f695d9a44ee1d1038069292b69f3", 54)]
-        [TestCase(@"https://github.com/keplerproject/luadoc.git",
-                @"5250a12bf3bd45873a0f14305b363e53dc8b4a86", 53)]
-        [TestCase(@"https://github.com/SnakeSVx/spacebuild.git",
-                @"68186b8bc7cabbb5275afd734fae9613fbd8761d", 53)]
-        [TestCase(@"https://github.com/darklajid/ansible-communication.git",
-                @"003bc68dcbb9606a8099132a399cf21bf342e81c", 53)]
-        [TestCase(@"https://github.com/ansca/Corona-Comics-SDK-2.0.git",
-                @"ac2abb7ef77753bb01e76ce008d88cece46661b4", 53)]
-        [TestCase(@"https://github.com/xolox/vim-lua-inspect.git",
-                @"d7fb876f0291cbd13c4c38177ada015fafc58770", 53)]
-        [TestCase(@"https://github.com/Overtorment/NoobHub.git",
-                @"b0e44e70f44544033e3d50d7ea345fc02db76fe5", 53)]
-        [TestCase(@"https://github.com/annulen/premake.git",
-                @"c559fa4913bd86be6e415c3b193db90ae4607f5b", 52)]
-        [TestCase(@"https://github.com/yuri/sputnik.git",
-                @"d4c41a5a6130cca259dc2f21c1d5d99ca6a225ac", 51)]
-        [TestCase(@"https://github.com/ignacio/StackTracePlus.git",
-                @"3c0d8a09670a40267104348feac19de73191d398", 51)]
-        [TestCase(@"https://github.com/leafo/magick.git",
-                @"6ba5063b2fe3cf043b4247e9508a6c74b211e704", 51)]
-        [TestCase(@"https://github.com/mirven/luaspec.git",
-                @"c0c774b54dcc214250cc8eb8aea0dcea60dc6f7c", 49)]
-        [TestCase(@"https://github.com/iamgreaser/iceball.git",
-                @"4ae5d09ce4fd2269f4e097b63bd0fd9b83f2198f", 49)]
-        [TestCase(@"https://github.com/shawndumas/adventure.lua.git",
-                @"e98626163129f7c3c4fa6f23abaad1d16b524b16", 48)]
-        [TestCase(@"https://github.com/Olivine-Labs/lustache.git",
-                @"3358eda141041f8998b938c242b1eda7817898e9", 48)]
-        [TestCase(@"https://github.com/bioe007/awesome-configs.git",
-                @"cb91a271d55a40cae6b25b0a34ded6947211353f", 47)]
-        [TestCase(@"https://github.com/xopxe/Lumen.git",
-                @"264d9d042ee9848bccfd064d69259c1d6bde0a2e", 47)]
-        [TestCase(@"https://github.com/Neopallium/lualogging.git",
-                @"c85130120406b9641e96ab05f782dde819fbd102", 47)]
-        [TestCase(@"https://github.com/Bertram25/ValyriaTear.git",
-                @"a0e86da761fbc84ace9a778faf64e0f3687dbb3e", 46)]
-        [TestCase(@"https://github.com/keplerproject/wsapi.git",
-                @"eed8338401196cc155e59280adbe58d78933ead0", 46)]
-        [TestCase(@"https://github.com/wiremod/advduplicator.git",
-                @"b00138d1b01545fbd6bdec9f7a57597b8c6da164", 46)]
-        [TestCase(@"https://github.com/GymbylCoding/Dusk-Engine.git",
-                @"f0fcdfc2cd628966bbf208bcb6bf3c3374dd1e42", 46)]
-        [TestCase(@"https://github.com/mtourne/nginx_log_by_lua.git",
-                @"adc7ecbb3107e0b2a487d851acd33464215a076a", 46)]
-        [TestCase(@"https://github.com/Yonaba/Moses.git",
-                @"57c7b5d1d1f074cafbd570088ad8681b03c65601", 46)]
-        [TestCase(@"https://github.com/stevedonovan/Microlight.git",
-                @"95ae73f9830aec3bb1d4773156a6f921dfbed9b4", 46)]
-        [TestCase(@"https://github.com/appwilldev/moochine-demo.git",
-                @"3b3f565386d43aa533793700c020c4f096ac9636", 45)]
-        [TestCase(@"https://github.com/silentbicycle/tangram.git",
-                @"85f56670ac839def04715457e1ddaaba7f340bc1", 45)]
-        [TestCase(@"https://github.com/metadeus/luv.git",
-                @"655c0efc14572d18744aff336210b30574dd7eaf", 44)]
-        [TestCase(@"https://github.com/lubyk/dub.git",
-                @"b0c7087e878937399f329468bff41de9484f8b0c", 44)]
-        [TestCase(@"https://github.com/keplerproject/copas.git",
-                @"d2474ab444af5c2bff0ae23f60affb7c64f49242", 44)]
-        [TestCase(@"https://github.com/pygy/LuLPeg.git",
-                @"c457b27e0d7fc935b133921bf3aee92efffe40c8", 44)]
-        [TestCase(@"https://github.com/franko/luajit-lang-toolkit.git",
-                @"838b951f65899330a6b707cde96582b5f795abe3", 43)]
-        [TestCase(@"https://github.com/Elv13/tyrannical.git",
-                @"117bf645ddf015a9da63da8c33cc7da004661261", 43)]
-        [TestCase(@"https://github.com/lua-nucleo/lua-nucleo.git",
-                @"570e115dab1260ad433bd778eebb5d91fd122d5a", 43)]
-        [TestCase(@"https://github.com/lilydjwg/myawesomerc.git",
-                @"d7183f3cb533064ecc39a51e621fc556671ff449", 42)]
-        [TestCase(@"https://github.com/bioe007/awesome-shifty.git",
-                @"b12b66e6a26a2c5fbec6c1119dd29b4f8faf0fe0", 41)]
-        [TestCase(@"https://github.com/kikito/anim8.git",
-                @"8f110db45f63451df2589255c009ad0e2312eed6", 41)]
-        [TestCase(@"https://github.com/vrld/Quickie.git",
-                @"52d06037d13afdc68384f1031766ac087cb5e70e", 41)]
-        [TestCase(@"https://github.com/silentbicycle/lunatest.git",
-                @"e33f2ff55dc843a29d01013aef22b4b89903599b", 41)]
-        [TestCase(@"https://github.com/headchant/LICK.git",
-                @"e2f900bb5dea40f4d8009fad03cdcf4aa96991f7", 41)]
-        [TestCase(@"https://github.com/ravageralpha/my_openwrt_mod.git",
-                @"70fcba54825c9da6e09e7cdeb8ba57809c36c8e1", 40)]
-        [TestCase(@"https://github.com/iamaleksey/lua-zmq.git",
-                @"5578612efe296faa36203c7b80507e38fa7714e0", 40)]
-        [TestCase(@"https://github.com/henix/slt2.git",
-                @"67141149a05937589548a1368d0b52027014e2f1", 40)]
-        [TestCase(@"https://github.com/cloudwu/lua-trace.git",
-                @"79a31124f64d863cf670ff82583a144f19570339", 40)]
-        [TestCase(@"https://github.com/norman/lua-haml.git",
-                @"7eb4179f9003cc4f3d1db2adbaf81cea2fc8994c", 39)]
-        [TestCase(@"https://github.com/FourOne/Tukui_Filger.git",
-                @"2fb93152102c651ed8b2e8271727cf6d002738a2", 39)]
-        [TestCase(@"https://github.com/Neopallium/LuaNativeObjects.git",
-                @"a5c444769b7dfad1436a1bc4fe21dce75629db25", 39)]
-        [TestCase(@"https://github.com/alexander-yakushev/awesompd.git",
-                @"00f26f44c5bf890988322b5107ee536531d6e0bc", 39)]
-        [TestCase(@"https://github.com/stevedonovan/LuaMacro.git",
-                @"4ec5a8ebdbb9576ca9aa16cc6645f4c7cf2a7705", 38)]
-        [TestCase(@"https://github.com/SiENcE/lovecodify.git",
-                @"9b84ce1a5f3474707e6021355afd6c2554f18251", 38)]
-        [TestCase(@"https://github.com/jp-ganis/JPS.git",
-                @"c65f107fa59a5f572e0ffd70be7990a873d87487", 38)]
-        [TestCase(@"https://github.com/SnakeSVx/sbep.git",
-                @"346e1431ed536d4b8b54676d330f28a06c3e54be", 38)]
-        [TestCase(@"https://github.com/stravant/LuaMinify.git",
-                @"c284a942089b0154af7498b110e02d1bba8aee16", 38)]
-        [TestCase(@"https://github.com/Toresh/Tukui_ClassTimer.git",
-                @"f9f5752d33a1a882cb5f46ef9e42badaa1fb5fc2", 37)]
-        [TestCase(@"https://github.com/dualface/cocos2d-x-lua-framework.git",
-                @"8ebfc699fb135bd1749de02b6c1d5522ac105dd1", 37)]
-        [TestCase(@"https://github.com/JesterXL/Robotlegs-for-Corona.git",
-                @"79e1407f962dce303325a827adff1fe0a3e16ad6", 36)]
-        [TestCase(@"https://github.com/jsimmons/mongrel2-lua.git",
-                @"f6d2f50df67c69a56be50d23690530e19e9648db", 36)]
-        [TestCase(@"https://github.com/UPenn-RoboCup/UPennalizers.git",
-                @"abd9b34294a6485965be274333b72f1272f8f3c8", 36)]
-        [TestCase(@"https://github.com/fperrad/lua-MessagePack.git",
-                @"c908ead3c2001663ac3d0b5a9c1001bfdcc87397", 36)]
+        [TestCase(@"https://github.com/solso/api-aggregator.git",
+                @"2ea1f6b38f9bd4465255cd3a60a6dd6a6442dd9b", 36)]
+        [TestCase(@"https://github.com/tdy/dots.git",
+                @"c74fbd925b41c6189ed394854ea289131399f3f1", 36)]
+        [TestCase(@"https://github.com/fediaFedia/Omnimo.git",
+                @"a98cdf9cc5fa51b1aa82f2834218a3a11085f0b3", 36)]
+        [TestCase(@"https://github.com/Windower/Lua.git",
+                @"28926d6c45907ca91d3883599745903173eb15ad", 35)]
+        [TestCase(@"https://github.com/chatid/fend.git",
+                @"72dc6b024e2cabb4b707250b89097d4ff0da22f2", 35)]
+        [TestCase(@"https://github.com/dluksza/screenful.git",
+                @"758057633588cb35d54417783af1ce14864b8a3c", 35)]
+        [TestCase(@"https://github.com/cloudwu/ldebug.git",
+                @"b80bcd31944d7ea4c504dc915601d3e2080e73d9", 35)]
+        [TestCase(@"https://github.com/Elv13/awesome-configs.git",
+                @"18bbb46a2c8d2fc69e65e0d0a6fe66db9b5e0055", 34)]
+        [TestCase(@"https://github.com/ggcrunchy/corona-sdk-snippets.git",
+                @"e89f4547a36c4b8b817855e2a3e7c50b9ae19a4d", 34)]
+        [TestCase(@"https://github.com/leafo/heroku-openresty.git",
+                @"5945df6f7641e456e51c518947a5f9e50f0cc4d5", 34)]
+        [TestCase(@"https://github.com/deniza/Ad-Mediator-for-Corona.git",
+                @"084d12b45bd576f6abbb34cb3e849aaaa294e91c", 34)]
+        [TestCase(@"https://github.com/silentbicycle/tamale.git",
+                @"6d8ef8315348b01c88bb9d2245f84d6b1cd68c07", 34)]
+        [TestCase(@"https://github.com/kikito/stateful.lua.git",
+                @"eede90c5a5ec97639154b5e4413c337175ed21e2", 34)]
+        [TestCase(@"https://github.com/hoelzro/lua-repl.git",
+                @"b5fde2ac342def303eda8eb8d51b2bc807fdc4ba", 34)]
+        [TestCase(@"https://github.com/brimworks/lua-http-parser.git",
+                @"7adc3e7310091db5ffd1c09a87edcbc55255f730", 34)]
+        [TestCase(@"https://github.com/nrk/hige.git",
+                @"f8ccf97063c62b93224fe6991551522fdaba9083", 34)]
+        [TestCase(@"https://github.com/SpiderLabs/Nmap-Tools.git",
+                @"0282df407ae5ba426bd96415fcbe36a166a74838", 34)]
+        [TestCase(@"https://github.com/bartbes/love-misc-libs.git",
+                @"79faade695182e728cd7a5eda1304f3ed5df1073", 34)]
+        [TestCase(@"https://github.com/philipbl/Day-One-Lightroom-Plugin.git",
+                @"f48bee6370a144fb83c23f669b731be88196c3cd", 34)]
+        [TestCase(@"https://github.com/mpeterv/luacheck.git",
+                @"43721c92786dc0b0fded70abe5b51880ec42e5e2", 33)]
+        [TestCase(@"https://github.com/Floobits/diffshipper.git",
+                @"8542aeac030cc4f8fa93088a145574e8c379fdd9", 33)]
+        [TestCase(@"https://github.com/cycojesus/awesome-solarized.git",
+                @"7f9f3615bc0bf283888a60d72f5f8453d8ce8bc0", 33)]
+        [TestCase(@"https://github.com/Jeija/minetest-mod-mesecons.git",
+                @"1f666875807c3c8e6c1771e4fb46c374d2e40ccb", 33)]
+        [TestCase(@"https://github.com/Jasoco/LOVE-Adventure-Game-Engine.git",
+                @"5ed8cb4f6b561090ef9b5fccda187b5b32217dbf", 33)]
+        [TestCase(@"https://github.com/OutlawGameTools/Lime2DTileEngine.git",
+                @"b61f2b5ba47bbeef7674436aa8925d2f04c3d926", 33)]
+        [TestCase(@"https://github.com/pintsized/lua-resty-rack.git",
+                @"4d8f8e166c01a7aa8ce9a9f06969699fd0aebf47", 33)]
+        [TestCase(@"https://github.com/vain/awesome-vain.git",
+                @"a83343157e11efc1e1cbbe7b80ab01d38fca373a", 32)]
+        [TestCase(@"https://github.com/tekkub/libdatabroker-1-1.git",
+                @"1a63ede0248c11aa1ee415187c1f9c9489ce3e02", 32)]
+        [TestCase(@"https://github.com/JakobOvrum/LuaIRC.git",
+                @"16057be815ec4408e32988c561e7ea4038bc53ba", 32)]
+        [TestCase(@"https://github.com/catwell/luajit-msgpack-pure.git",
+                @"a7f16a0826831dc78ff29b94a834b66847988506", 32)]
+        [TestCase(@"https://github.com/ToxicFrog/vstruct.git",
+                @"f230429b6aa0791d0a0f3755ff670372186fb63c", 32)]
+        [TestCase(@"https://github.com/z1lt0id/awesome.git",
+                @"a93c6274fcd411dcd2224b963238928ab821a064", 32)]
+        [TestCase(@"https://github.com/Nayruden/Ulysses.git",
+                @"3860886d9dabf36b1ad7e7f81d7e26776c6960c3", 32)]
+        [TestCase(@"https://github.com/kikito/cron.lua.git",
+                @"170f7d9463de36ecd73c16fd008b3789de2e54cb", 31)]
+        [TestCase(@"https://github.com/mailru/tntlua.git",
+                @"15d742d541725e6eeea96a24d1e60fff38294af5", 31)]
+        [TestCase(@"https://github.com/creationix/moonslice-luv.git",
+                @"717f5ce1ce96f0c1abb58b97c44e90bbaef814f2", 31)]
+        [TestCase(@"https://github.com/Mic92/vicious.git",
+                @"1c626ec7a6988e91f8ffe6c94d516b18bf95f9d9", 31)]
+        [TestCase(@"https://github.com/waf/nice-and-clean-theme.git",
+                @"8a0ae5950921c2cadb609ba1c735fd9392bee70c", 31)]
+        [TestCase(@"https://github.com/wiremod/wire-extras.git",
+                @"a2db0eb86660e4f0bbfff935368a6dcd29acfb80", 31)]
+        [TestCase(@"https://github.com/sroccaserra/object-lua.git",
+                @"64f6a91318a310cf2a7ef8eb0884f82d46beead6", 31)]
+        [TestCase(@"https://github.com/wingify/lua-resty-rabbitmqstomp.git",
+                @"a8c9a0d9ad5e150b6f284a594e239e7baa766622", 31)]
+        [TestCase(@"https://github.com/ansca/Air-Hockey.git",
+                @"ff05ac99ec276259249ec423520064dafaac0eb7", 31)]
+        [TestCase(@"https://github.com/jtarchie/sinatra-openresty.git",
+                @"7f7ed65eb389f432bd0a80bd226e8c1bbdc15352", 31)]
+        [TestCase(@"https://github.com/clementfarabet/ipam-tutorials.git",
+                @"e0cfcf4749d88f7a41fa5989ee94605942b205eb", 31)]
+        [TestCase(@"https://github.com/GlitchGames/GGData.git",
+                @"283673459586a92c75473da7fe97855ec85517a5", 30)]
+        [TestCase(@"https://github.com/craigmj/json4lua.git",
+                @"0459abdca8145b4965b9a818c526c634725986b1", 30)]
+        [TestCase(@"https://github.com/khaledhosny/euler-otf.git",
+                @"6c76de44dcff216f2d91d0638386cb575a52ded5", 30)]
+        [TestCase(@"https://github.com/Wiladams/LAPHLibs.git",
+                @"aed3531fb6face76c5634bde995e9cf503d6136b", 29)]
+        [TestCase(@"https://github.com/cloudwu/luacc.git",
+                @"cbf858da578aa75c6e3651e78ea78c19e5e12159", 29)]
+        [TestCase(@"https://github.com/Chessnut/NutScript.git",
+                @"10ae4f18968a265c158a78a14327a56a6a9088ee", 29)]
+        [TestCase(@"https://github.com/kikito/bump.lua.git",
+                @"f3e2033bf248c4278ca2dc2c7c4e66d5cf413a2f", 29)]
+        [TestCase(@"https://github.com/tales/sourceoftales.git",
+                @"f259c99ebb42a4956f6e4c5464051651a3226d5a", 29)]
+        [TestCase(@"https://github.com/paulofmandown/rotLove.git",
+                @"bb089f3294ba9cd1f7cc031dffc0b695fa2ed4bf", 29)]
+        [TestCase(@"https://github.com/ansca/TinyPenguin.git",
+                @"865b63634e55d6769e3a00b1da902c79ede68787", 29)]
+        [TestCase(@"https://github.com/slembcke/debugger.lua.git",
+                @"49baebfe73e3cc2ae5f17ee2997ad82b5ecd06d3", 29)]
+        [TestCase(@"https://github.com/Olivine-Labs/lusty.git",
+                @"97ff69c9ccc09a339969c4b2e08d94da9581c06d", 29)]
+        [TestCase(@"https://github.com/RobSis/treesome.git",
+                @"6486454d586f86ee4eebd9edcc6df76664ff9227", 29)]
+        [TestCase(@"https://github.com/kindy/lj-web.git",
+                @"81081dc8f29e09c977f864a035695d46a55395c1", 29)]
+        [TestCase(@"https://github.com/fsantanna/luagravity.git",
+                @"58c761ded3b8f27e1f2f7a0810898a9e91d7437a", 28)]
+        [TestCase(@"https://github.com/DarkstarProject/darkstar.git",
+                @"367bd9591cc586b06171c4679d7722cedad00557", 28)]
+        [TestCase(@"https://github.com/derickd/moaigui.git",
+                @"9e0300469df5c65bf2445705c2cda6df9bc81b1f", 28)]
+        [TestCase(@"https://github.com/Eonblast/fleece-lite.git",
+                @"06103ea87601c74801ca5780bc9014011243bbec", 28)]
+        [TestCase(@"https://github.com/mason-larobina/luakit-plugins.git",
+                @"d5c774952d1ebdb36b20f5dfedb0f831abb8743a", 28)]
+        [TestCase(@"https://github.com/500px/500pxPublisher.lrplugin.git",
+                @"09aa4a317c56f856ffef770ef1d37d1cc3d13f96", 28)]
+        [TestCase(@"https://github.com/andycai/kodelua.git",
+                @"b8556d073ef658959a1afc32fa6d2313e4285923", 28)]
+        [TestCase(@"https://github.com/stevedonovan/luaish.git",
+                @"6c5ea145e8faedd6bf65d7e80cb4fc741629cf16", 27)]
+        [TestCase(@"https://github.com/Asphyxia/Tukui.git",
+                @"3c8e581abc23fc8bcd7aa8668affe30e6204be5d", 27)]
+        [TestCase(@"https://github.com/tullamods/Dominos.git",
+                @"6d5b7bf1883d62c26b64ff635244a0e435c2074d", 27)]
+        [TestCase(@"https://github.com/tadeuszwojcik/luvit-redis.git",
+                @"a91d4584f5b1eab95923c3e48f838a4096b8499d", 27)]
+        [TestCase(@"https://github.com/dmccuskey/Ghost-vs-Monsters---OOP.git",
+                @"c9bbaadc02941f71f518d3258a7b0d0624ac9daf", 27)]
+        [TestCase(@"https://github.com/rgieseke/locco.git",
+                @"139fc5b8b3cd3fa6e1a4de777ec98ce59715ec18", 27)]
+        [TestCase(@"https://github.com/Phrogz/SLAXML.git",
+                @"8aa52bc271eb9a28b1f8f3c5260202ad1b6fcaf8", 27)]
+        [TestCase(@"https://github.com/johnpolacek/Match-The-Letter-Game.git",
+                @"4f164f80e997755f0999b678896058aa4e767818", 27)]
+        [TestCase(@"https://github.com/GrahamRanson/Ice.git",
+                @"0efbc709ce9b65526ed0939921ce0933e486ccb9", 27)]
+        [TestCase(@"https://github.com/LazyZhu/lua-resty-ssdb.git",
+                @"c7bdbcc8dc3ee23790fa9ca6ee3631e84fa0bf5d", 27)]
+        [TestCase(@"https://github.com/Yonaba/Lua-Class-System.git",
+                @"7c4b0f345e7d89835024c1aee763e8fde055ca3a", 27)]
+        [TestCase(@"https://github.com/fgprodigal/RayUI.git",
+                @"2ffd999fec0a372a70247058c6c00f8cb766acab", 26)]
+        [TestCase(@"https://github.com/ildyria/iFilger.git",
+                @"d092e040143146a551b6821b6a9b199a4b98e9db", 26)]
+        [TestCase(@"https://github.com/sergeyzavadski/breeze.git",
+                @"b17da085ca4691feb189690038b8d054b861d6e0", 26)]
+        [TestCase(@"https://github.com/bioe007/awesome-revelation.git",
+                @"2f28b196352199acd51d6967b19dcaf3d95a55e8", 26)]
+        [TestCase(@"https://github.com/tullamods/OmniCC.git",
+                @"434fb78fba9e891efdd9a43978efe00ab3232ad2", 26)]
+        [TestCase(@"https://github.com/TACC/Lmod.git",
+                @"4f4a3eae00a8c2d26daf42bb6038be9674971faa", 26)]
+        [TestCase(@"https://github.com/Nayruden/ns2lua.git",
+                @"9dc97d8b7aa7eee606e2fc0d55107b1cf52bc70a", 26)]
+        [TestCase(@"https://github.com/fperrad/lua-Spore.git",
+                @"af3be83d6569c17bd9b87d170b2530564ec7b3aa", 26)]
+        [TestCase(@"https://github.com/silentbicycle/sidereal.git",
+                @"145f788b5246e73f7cd9f82097161b63ee05b6f8", 26)]
+        [TestCase(@"https://github.com/perky/FEZ.git",
+                @"39186578f86f42bc554526ebb6184f943b16a2dc", 26)]
+        [TestCase(@"https://github.com/desbouis/nginx-redis-proxy.git",
+                @"1e9048f67c518f5093b6f516af240c39c4d1b678", 26)]
+        [TestCase(@"https://github.com/decltype/forgottenmapeditor.git",
+                @"bae6c103c688ab58c1e422179871779fbd6a8687", 26)]
+        [TestCase(@"https://github.com/neomantra/lds.git",
+                @"d3b054dc48ab7428ea0020ea81e79688ad160fa1", 26)]
+        [TestCase(@"https://github.com/josemota/dotfiles.git",
+                @"23abfcce78efc084854868dca9d57cb95b4feeff", 26)]
+        [TestCase(@"https://github.com/robmiracle/Corona-SDK-RSS-Reader.git",
+                @"0ff21a80b3c9548e265d9816428aa256007ff8a5", 26)]
+        [TestCase(@"https://github.com/jaydipdave/quickdefencewaf.git",
+                @"d6a0412e56beb856a06641c9d401a1a35e1ad7ca", 26)]
+        [TestCase(@"https://github.com/diegofn/TuneIn-Radio-VLC.git",
+                @"4e02c6b807ac31dd5256d7b370931db2a1ed4ccc", 26)]
+        [TestCase(@"https://github.com/setkeh/Awesome-Laptop-3.5.git",
+                @"3c96c14cfeed1beb7781097ef8a139e3296db362", 26)]
+        [TestCase(@"https://github.com/ierton/awesomerc-ierton.git",
+                @"7d0cbecc84266e2e11223f8fac5a25833589a21c", 25)]
+        [TestCase(@"https://github.com/haveatry823/QSanguoshaAI.git",
+                @"97b9a4cc39f3b320c741f20f53368ef490b9e753", 25)]
+        [TestCase(@"https://github.com/leegao/see.lua.git",
+                @"4f326f0ce435d6056787ded652e78729c60c439d", 25)]
+        [TestCase(@"https://github.com/affli/Tukui_DBM.git",
+                @"4d637aa6ea9c48fb55d5755ae98a8750cb6a762f", 25)]
+        [TestCase(@"https://github.com/bartbes/lovelybigplanet.git",
+                @"a8ff90107788e1b2375e0f347a89a0f47b16f2bb", 25)]
+        [TestCase(@"https://github.com/kengonakajima/lua-msgpack.git",
+                @"91fcc8910a5f5cb83de6119357402940ce309fcc", 25)]
+        [TestCase(@"https://github.com/TheLinx/ltwitter.git",
+                @"1859f60816a2c8d1b999db4d2fdfe0d671f047d6", 25)]
+        [TestCase(@"https://github.com/johnpolacek/Video-Gallery.git",
+                @"bad64b606c222165606237b204a4f5a57024cd4c", 25)]
+        [TestCase(@"https://github.com/geekscape/mqtt_lua.git",
+                @"aba95ca2f790d0aa0ca910a8c26f2455f8d3b166", 25)]
+        [TestCase(@"https://github.com/ilua/ilua.git",
+                @"c9ef6799113e71d89d629b29b266d1eba4105038", 25)]
+        [TestCase(@"https://github.com/christopho/zsdx.git",
+                @"878df4510abea1dcd6b05d861941a2926c0c265e", 25)]
+        [TestCase(@"https://github.com/Etiene/sailor.git",
+                @"5472932a2483fc3e7b69a4e69f7fa85caa245230", 25)]
+        [TestCase(@"https://github.com/Senscape/Asylum-Teaser.git",
+                @"52f4f5a0dcb868fd1ebb9b86f3e4c2dbdb4579d0", 24)]
+        [TestCase(@"https://github.com/npryce/codea-controllers.git",
+                @"38bbfb87a15627a594c625ccc6c4b90e7c63aae3", 24)]
+        [TestCase(@"https://github.com/renstrom/NeavUI.git",
+                @"e16a5b8fd402fd67b3d61b66531b2adbd1e24c8c", 24)]
+        [TestCase(@"https://github.com/sacek/LPegLJ.git",
+                @"a97c49b36abc172221fedbfc984dba108ede7f01", 24)]
+        [TestCase(@"https://github.com/karai17/Simple-Tiled-Implementation.git",
+                @"936a563e383366c7a68bd87148b8d535ebedd2f3", 24)]
+        [TestCase(@"https://github.com/kikito/passion.git",
+                @"1fb7233b4035cddb4e58ea18a9f590d011eb2f72", 24)]
+        [TestCase(@"https://github.com/khaledhosny/luaotfload.git",
+                @"9291e1983240e72d93815a096963dc28a7acd770", 24)]
+        [TestCase(@"https://github.com/TekNoLogic/Panda.git",
+                @"32b4d6e53446ae3579e9d72838c81113edd3549d", 24)]
+        [TestCase(@"https://github.com/Elv13/radical.git",
+                @"8da00cbd657f77fdfcd4b6a9cc81420daa2cb5e7", 24)]
+        [TestCase(@"https://github.com/mydevelopergames/AutoLAN.git",
+                @"b5353864003cb0ba20d5b1e37284dd97114cf1df", 24)]
+        [TestCase(@"https://github.com/kikito/beholder.lua.git",
+                @"9f1a31eb51f5e3775f1c111fab37a9f72db6deae", 24)]
+        [TestCase(@"https://github.com/jgrahamc/lulip.git",
+                @"4049423de9c02c25d1deebd54553211bf583e9d8", 24)]
+        [TestCase(@"https://github.com/mlnlover11/LuaAssemblyTools.git",
+                @"e496bc6df2e49ea0beebb26f216aca3821a2b28e", 24)]
+        [TestCase(@"https://github.com/kikito/love-loader.git",
+                @"d29176b54e5bf0ee2496d89f6eb5bbc4b35ae06d", 24)]
+        [TestCase(@"https://github.com/TekNoLogic/GnomishVendorShrinker.git",
+                @"dbf481f2cd0da671169c9673f976bf9a2d61e957", 23)]
+        [TestCase(@"https://github.com/kikito/middleclass-extras.git",
+                @"840a6b250f7fd8d46d796a3ec99c363651c626c0", 23)]
+        [TestCase(@"https://github.com/Metapyziks/finalfrontier.git",
+                @"3b22cc19b155834c0e9af7c107ee58f1cd4deea8", 23)]
+        [TestCase(@"https://github.com/Wiladams/TINN.git",
+                @"e588fff7f9e147ef4bc56e872cb385b56f712913", 23)]
+        [TestCase(@"https://github.com/RustOxide/Oxide.git",
+                @"b69be445c99762f70ebe4c3e42e53170d09a21cf", 23)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
             var exp = new LuaComplexStatementExperiment();
             VerifyRestoringGitRepoSavingThem(
