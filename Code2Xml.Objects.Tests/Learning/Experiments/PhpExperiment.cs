@@ -60,331 +60,229 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
                 };
                 var learningSets = new[] {
                     Tuple.Create(
-                            @"https://github.com/al3x/sovereign.git",
-                            @"4349e03dfc4b53e75a78441ebd8ace93f8e4cd47", 2927),
+                            @"https://github.com/domnikl/DesignPatternsPHP.git",
+                            @"ed291cd959053366e9d9edba62d8633034f93b0b",
+                            "c0162c1f46eaa3d67731599effc7227a022934f1"),
                     Tuple.Create(
-                            @"https://github.com/serbanghita/Mobile-Detect.git",
-                            @"d70de7bfd0641d4d32a6f9c71e1f5d2839a5331e", 2862),
+                            @"https://github.com/facebook/facebook-php-sdk.git",
+                            @"8a992afce97122556c4e42b0f1c1d60b9d49276d",
+                            "674dfe04322e07b1c99891391c0ce35bb4862cc1"),
                     Tuple.Create(
-                            @"https://github.com/abraham/twitteroauth.git",
-                            @"4b775766fe3526ebc67ee20c97ff29a3b47bc5d8", 2304),
-                    Tuple.Create(
-                            @"https://github.com/subtlepatterns/SubtlePatterns.git",
-                            @"6e056565a1254c967228aab60c9d9c7d0e63a7e3", 2271),
+                            @"https://github.com/Seldaek/monolog.git",
+                            @"03000a7fcd4072bd7e1f99c8ce4328621c5773b9",
+                            "908d7734e7182d7236145c39ee3d825a20037e7a"),
                     Tuple.Create(
                             @"https://github.com/leafo/lessphp.git",
-                            @"b7cd5c79e82666bcd2dfadb304342311209fb527", 1929),
+                            @"b7cd5c79e82666bcd2dfadb304342311209fb527",
+                            "c3a141863835402d610c3b4b9c860f600b4ae02d"),
                     Tuple.Create(
                             @"https://github.com/puphpet/puphpet.git",
-                            @"e4012cbbe0fc3b200b4750bb79673a9f468c1b9e", 1803),
+                            @"e4012cbbe0fc3b200b4750bb79673a9f468c1b9e",
+                            "a8a0e0451da6609b6e1799df038283a30c6a3146"),
                     Tuple.Create(
-                            @"https://github.com/venomous0x/WhatsAPI.git",
-                            @"5ad50b311d728752cee50b7c7ed00062df6cb740", 1613),
+                            @"https://github.com/cboden/Ratchet.git",
+                            @"67cedf0ce6b6c7fbb5e305e0667ac219e655d561",
+                            "1f608f1d3a2e2af716e8f0d4928dd48e7f800897"),
                     Tuple.Create(
-                            @"https://github.com/ornicar/php-github-api.git",
-                            @"60bdbe492afaf4f4dc1ecd3739351c3daed37ce6", 354),
+                            @"https://github.com/geocoder-php/Geocoder.git",
+                            @"972eed79fb50b6752b5154d391201f2ec7a8e11a",
+                            "976f9fe3b4029e4c3286d98b35346f347533afec"),
                     Tuple.Create(
-                            @"https://github.com/fabpot/Goutte.git",
-                            @"06a5451288ffddd204b10fa6c6f9ab2b86dd515d", 1584),
-                    Tuple.Create(
-                            @"https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate.git",
-                            @"db289e22840277c26911d46972fe516ce309e430", 1543),
-                    Tuple.Create(
-                            @"https://github.com/MattWilcox/Adaptive-Images.git",
-                            @"faa87fd94fc59373df7c2e5bb605c7e3c28e38a4", 1454),
-                    Tuple.Create(
-                            @"https://github.com/kohana/kohana.git",
-                            @"338bea96dfa197e7864674dab6cef78958e1f1df", 1365),
+                            @"https://github.com/filp/whoops.git",
+                            @"230da4810fc7fff67bf92061dc64eff4d451b68d",
+                            "588a9cce80cfeeaf0edb886a77dd9881831fcea1"),
                     Tuple.Create(
                             @"https://github.com/WebDevStudios/Custom-Metaboxes-and-Fields-for-WordPress.git",
-                            @"c9402b287b6ffcfbc0eeab4109ece8f1a5d25848", 1361),
+                            @"c9402b287b6ffcfbc0eeab4109ece8f1a5d25848",
+                            "873fa4bde231037fea1a7f01addf925e86747c17"),
                     Tuple.Create(
-                            @"https://github.com/michelf/php-markdown.git",
-                            @"6f952ee180e9bd345f3dd6005aa11e0f5dcbd1b8", 1347),
+                            @"https://github.com/themeskult/wp-svbtle.git",
+                            @"45736be0e55e688a1111afe7d0f53d2ede79cfdb",
+                            "9ae03bc0501b93ec55d758b94f6b26a4331ede41"),
                     Tuple.Create(
-                            @"https://github.com/fuel/fuel.git",
-                            @"82f79d7d9be671fafcfd9ca405425501bf8d8634", 1313),
+                            @"https://github.com/wp-cli/wp-cli.git",
+                            @"fd5a95f208bb0fa9422a03cf40091e1a7704e481",
+                            "c8ea8cad0ed32cf9c298958de98ecd024be92b11"),
                     Tuple.Create(
                             @"https://github.com/umpirsky/country-list.git",
-                            @"19c2fb49a7eda5347170f8f8d723f92701468f60", 1306),
+                            @"19c2fb49a7eda5347170f8f8d723f92701468f60",
+                            "8d0636410b9943604e1844b4153f0baef58ec2b4"),
                     Tuple.Create(
-                            @"https://github.com/usmanhalalit/charisma.git",
-                            @"5a8e4fdbefe694bf6a3a9c86e41acf9abf5c06cb", 1288),
-                    Tuple.Create(
-                            @"https://github.com/omnipay/omnipay.git",
-                            @"aa1de2346b365527486b16f0f07ff190effe6d3e", 1204),
+                            @"https://github.com/nrk/predis.git",
+                            @"83df2ef11c18ea490daf6a7a8789315f57f555a8",
+                            "dd20e8557fdb9c7da01ff5dfa5cc9f44704da115"),
                     Tuple.Create(
                             @"https://github.com/j4mie/idiorm.git",
-                            @"11e964157a6a2c6128a0546673ad5e99ac1a62cd", 1200),
+                            @"11e964157a6a2c6128a0546673ad5e99ac1a62cd",
+                            "ac450407608d6dcd111c873d964228cd159c53a0"),
+                    Tuple.Create(
+                            @"https://github.com/rmccue/Requests.git",
+                            @"81a917f6425a2194c89d74b12102614c3ed16b2e",
+                            "936d80cb3f45127639d8f969ef34ef5f64094d08"),
                     Tuple.Create(
                             @"https://github.com/benedmunds/CodeIgniter-Ion-Auth.git",
-                            @"e083881869045eeee9f96f957a65872b9977450f", 1184),
+                            @"e083881869045eeee9f96f957a65872b9977450f",
+                            "493b8cea62ca5c0be0123d3f1ee1075fd5933201"),
                     Tuple.Create(
-                            @"https://github.com/JosephLenton/PHP-Error.git",
-                            @"9918dd5eeec527846d43c92a4c9880bfcdd0de14", 1150),
+                            @"https://github.com/chriso/klein.php.git",
+                            @"376fd62813eb2008f3644e206d03002a3250122a",
+                            "afc871c242402b0b36a2c097be07efbfc17a0838"),
                     Tuple.Create(
-                            @"https://github.com/zendframework/ZendSkeletonApplication.git",
-                            @"67cbbbf61897831ef1feda323be9845aa7d79682", 1110),
+                            @"https://github.com/padraic/mockery.git",
+                            @"4eff32b268a0db52b9abe36725cb775658ad3f1f",
+                            "69037c5f28a22a35077a9ac18de3af24724973e5"),
                     Tuple.Create(
-                            @"https://github.com/pattern-lab/patternlab-php.git",
-                            @"ff31431333113c553d2f299a49b783351229d026", 1077),
-                    Tuple.Create(
-                            @"https://github.com/facebook/xhprof.git",
-                            @"e83d1792569ecbc5ef14c50a00eb37094d4e6ad9", 1036),
+                            @"https://github.com/thephpleague/flysystem.git",
+                            @"387e012fa93878e3865ed8db1aa9daba8bf2f9c5",
+                            "1b60885eb6b1affaddec69ef37cc353261e0f42f"),
                     Tuple.Create(
                             @"https://github.com/KnpLabs/Gaufrette.git",
-                            @"c2b6af8eb6fc093409ee0753137817dce1673763", 1027),
+                            @"c2b6af8eb6fc093409ee0753137817dce1673763",
+                            "416666fc95b863dc89c92127e78504cd361fca32"),
                     Tuple.Create(
-                            @"https://github.com/symfony/symfony-standard.git",
-                            @"50aeda221a0328dccae905b8dafed67f97983bcf", 1006),
+                            @"https://github.com/jquery/testswarm.git",
+                            @"bd1877cd4e67fd9c40315b88c2c1d117c9cfbc5c",
+                            "6e4019fd49ba012e1fcb453210e4902b0b9501c5"),
                     Tuple.Create(
-                            @"https://github.com/Circa75/dropplets.git",
-                            @"feb2e82b21ef7a7da484e17628160f866c2da6c0", 997),
+                            @"https://github.com/murtaugh/HTML5-Reset-WordPress-Theme.git",
+                            @"374166a449a39da3eb70e1079fec9be76d9144d7",
+                            "5b13362f5fa346b84ff127668c44104c1df15be1"),
                     Tuple.Create(
-                            @"https://github.com/panique/php-login.git",
-                            @"350ffc9455617b24979535283258ea8a05b7cf33", 994),
-                    Tuple.Create(
-                            @"https://github.com/opauth/opauth.git",
-                            @"3ff68e72c21a3691e5a87fc8c30e458edbb22990", 987),
-                    Tuple.Create(
-                            @"https://github.com/simplethemes/skeleton_wp.git",
-                            @"55495c735bcb35f2e7752c6e62e29054bfc69892", 968),
+                            @"https://github.com/Anahkiasen/rocketeer.git",
+                            @"02e2eace2765d88754731d1c672bb14b0d2cf6ca",
+                            "797312171c8cca535854b13032c7bc0f7b74ea2b"),
                     Tuple.Create(
                             @"https://github.com/kriswallsmith/Buzz.git",
-                            @"a0f207ac4939978b604be9bec5d5b19baecd8165", 862),
+                            @"a0f207ac4939978b604be9bec5d5b19baecd8165",
+                            "407c035c35c655cf791f6557405b074154ccd35e"),
                     Tuple.Create(
-                            @"https://github.com/interconnectit/Search-Replace-DB.git",
-                            @"12c6732502958a0c57125f6b30741e6e0f05655c", 852),
+                            @"https://github.com/FriendsOfSymfony/FOSRestBundle.git",
+                            @"292891740390ec5bdddc95340dec3a2b3c687e0d",
+                            "b1be201ac89112d8deccbf00faebe9de3d4c5824"),
                     Tuple.Create(
-                            @"https://github.com/markjaquith/WP-Stack.git",
-                            @"1a5714be857ffcd494ea56d9ff3619500815839e", 829),
+                            @"https://github.com/simplepie/simplepie.git",
+                            @"5f00e77b5feb96605cbcea4dcfb555e87c2fed24",
+                            "099cbab5e3dd9c04c19e520983625858d703348a"),
                     Tuple.Create(
-                            @"https://github.com/KnpLabs/snappy.git",
-                            @"9d7bd2e806e68acf6216c8b7eca7ddd774d0aebf", 812),
-                    Tuple.Create(
-                            @"https://github.com/themattharris/tmhOAuth.git",
-                            @"47dcee2ac74f8c032d2a1afb836e65108bf582b7", 785),
-                    Tuple.Create(
-                            @"https://github.com/anandkunal/ToroPHP.git",
-                            @"09a1e01c6baf27d9fd70759f7739699fdf85218b", 784),
-                    Tuple.Create(
-                            @"https://github.com/fabpot/Pimple.git",
-                            @"a9e94d9fd6cb9e8f097551a25ffec73ff2480a24", 770),
-                    Tuple.Create(
-                            @"https://github.com/masterexploder/PHPThumb.git",
-                            @"69fe4dbef9c70915ee16652339395deadb1509cb", 762),
-                    Tuple.Create(
-                            @"https://github.com/Codiad/Codiad.git",
-                            @"0faabeb14aabb1737a4671e9b71c0447ed20fc5b", 744),
-                    Tuple.Create(
-                            @"https://github.com/Herzult/SimplePHPEasyPlus.git",
-                            @"e9b2d592a16a0bb72ac1f2d6483f2993427a4475", 743),
+                            @"https://github.com/amazonwebservices/aws-sdk-for-php.git",
+                            @"aab09f6dac35e5e9a263fb7311bb4e71de95b0ba",
+                            "85072db75c562b8d42fe205ab81ea61d75ce2a8c"),
                     Tuple.Create(
                             @"https://github.com/Block8/PHPCI.git",
-                            @"102354190773f1b36bd7c0c762efd8ec7938f888", 740),
+                            @"102354190773f1b36bd7c0c762efd8ec7938f888",
+                            "b3bc8110e8bf4549381471b0779ecbdfc23c7c6c"),
                     Tuple.Create(
-                            @"https://github.com/cakephp/debug_kit.git",
-                            @"bbfb1d1993b195b14b2bf7b4c3f37e732ad76195", 738),
+                            @"https://github.com/fuel/core.git",
+                            @"2fdd79e0d902d78c081e472b086f551336b4663e",
+                            "ed7a99dcc72abc30a6585255b8af46c419435b71"),
                     Tuple.Create(
-                            @"https://github.com/VerbalExpressions/PHPVerbalExpressions.git",
-                            @"f9d4e0b38605704b0e8e343375adca656b28c222", 737),
-                    Tuple.Create(
-                            @"https://github.com/ccampbell/chromephp.git",
-                            @"c3c297615d48ae5b2a86a82311152d1ed095fcef", 730),
-                    Tuple.Create(
-                            @"https://github.com/barryvdh/laravel-ide-helper.git",
-                            @"16f77638f159c75a93da97dd48904707618483a3", 730),
-                    Tuple.Create(
-                            @"https://github.com/lucb1e/cookielesscookies.git",
-                            @"a23a2c8163d91063f08ca38e530b284839933d06", 729),
-                    Tuple.Create(
-                            @"https://github.com/erusev/parsedown.git",
-                            @"c10bde01746867e2afbc715a6149f4e682f0263b", 714),
+                            @"https://github.com/thephpleague/oauth2-server.git",
+                            @"ba5f2840fb46e8b23ae437890bfaffe74392be8e",
+                            "1b29c0f1a005e761195541ce1448e5f6b319e5de"),
                     Tuple.Create(
                             @"https://github.com/maximebf/php-debugbar.git",
-                            @"f6da2ec2239a764032c197ebfe85c23faf694748", 710),
+                            @"f6da2ec2239a764032c197ebfe85c23faf694748",
+                            "9c6d9bc245ca83327b1b640adf441e4cfe39e685"),
                     Tuple.Create(
-                            @"https://github.com/ruflin/Elastica.git",
-                            @"be1729b04954da58bc1f5c97eb3bcfac12e61249", 653),
+                            @"https://github.com/brianhaveri/Underscore.php.git",
+                            @"4c5c191bcf0bcb88a0a9bee9d47332ba44900a92",
+                            "0e98826b9a885dc8fc3a656284e10ce9a178ac79"),
                     Tuple.Create(
-                            @"https://github.com/Intervention/image.git",
-                            @"517d9ba46735237b279ed97bafb79fc68f6ce350", 647),
-                    Tuple.Create(
-                            @"https://github.com/symfony-cmf/symfony-cmf.git",
-                            @"0c9f93cbb2d6e1d94395db57f5cabe17f5631550", 622),
-                    Tuple.Create(
-                            @"https://github.com/twittem/wp-bootstrap-navwalker.git",
-                            @"1e869edb03b04aff7792cf3327e94bb3dafac95b", 622),
-                    Tuple.Create(
-                            @"https://github.com/elliotcondon/acf.git",
-                            @"772259933c0751e4325d16acbcbce415450bc054", 604),
-                    Tuple.Create(
-                            @"https://github.com/catfan/Medoo.git",
-                            @"f9f6073cf52c68d5d5d4d1b9434f24ce3e42531c", 592),
-                    Tuple.Create(
-                            @"https://github.com/mikecao/flight.git",
-                            @"b9b2d0fa2d75e6b2f606fbd0d9a8059a0f741578", 585),
-                    Tuple.Create(
-                            @"https://github.com/dodgepudding/wechat-php-sdk.git",
-                            @"28105dcdf2a3cd8a4a482e61896ea614b9b0b657", 583),
-                    Tuple.Create(
-                            @"https://github.com/jamierumbelow/codeigniter-base-model.git",
-                            @"2d03af0bd87f6a191f09a63612da9b035733f077", 576),
-                    Tuple.Create(
-                            @"https://github.com/laravelbook/ardent.git",
-                            @"0a0238b8040abc1c71401ce27a8edf2619fa5bed", 557),
-                    Tuple.Create(
-                            @"https://github.com/J7mbo/twitter-api-php.git",
-                            @"ab76f1c1e6bf83f0a257216cbaf9932b7cc19a3f", 557),
-                    Tuple.Create(
-                            @"https://github.com/jmathai/twitter-async.git",
-                            @"a361018261b887a5f8fb823a05e0e0e688a5c040", 556),
-                    Tuple.Create(
-                            @"https://github.com/jmathai/epiphany.git",
-                            @"0418fa96add6bbc3c1e3b2dd313a041be72f9717", 555),
-                    Tuple.Create(
-                            @"https://github.com/leemason/NHP-Theme-Options-Framework.git",
-                            @"ed709af8fc4e96dc2c638fad949b00594cca8427", 553),
-                    Tuple.Create(
-                            @"https://github.com/NeonHorizon/berryio.git",
-                            @"d0f4d61a9f6123ac2d6c279afc1fec67accb9a75", 549),
-                    Tuple.Create(
-                            @"https://github.com/WP-API/WP-API.git",
-                            @"e8bb59da12aa0df512b9138e2b741abbc9b9c1b0", 543),
-                    Tuple.Create(
-                            @"https://github.com/BenTheDesigner/Dropbox.git",
-                            @"94de100581fc103920786d38d4aa5433802d3842", 532),
-                    Tuple.Create(
-                            @"https://github.com/hwi/HWIOAuthBundle.git",
-                            @"cb90e60c079bbf3aed8044cd71d5e03e32d60133", 531),
-                    Tuple.Create(
-                            @"https://github.com/danielstjules/Stringy.git",
-                            @"8d961e25d09f946b463c0581e927a963f3578647", 529),
-                    Tuple.Create(
-                            @"https://github.com/crowdfavorite/wp-post-formats.git",
-                            @"2ff0fb194f711c4efa6d232c35cc3a19c8e597c0", 354),
-                    Tuple.Create(
-                            @"https://github.com/silexphp/Silex-Skeleton.git",
-                            @"1f8608aba6b1d85b11a4a733161a01731e0aacea", 352),
-                    Tuple.Create(
-                            @"https://github.com/barryvdh/laravel-debugbar.git",
-                            @"9c0c6de939141f43efdf9c3beed22db50e2a4248", 510),
+                            @"https://github.com/scribu/wp-posts-to-posts.git",
+                            @"4c524f337a8a4a5c407794d548e9171a46145e09",
+                            "2f6c4cbadddf761a710df63e5146afcb39752bd0"),
                     Tuple.Create(
                             @"https://github.com/nelmio/NelmioApiDocBundle.git",
-                            @"fd126c1a0101a7703489b2fd65c91526d2b75774", 499),
+                            @"fd126c1a0101a7703489b2fd65c91526d2b75774",
+                            "cbdddfebb539dca86db999dd8b6f64961321dfb8"),
                     Tuple.Create(
-                            @"https://github.com/eyecatchup/SEOstats.git",
-                            @"d6f8dc189f12801bdc2b5fc9aa58a4f342c76681", 481),
+                            @"https://github.com/robmorgan/phinx.git",
+                            @"048393f59708be2f8d5faff4c57ed6d9ba3017d5",
+                            "1c9276ab1410ec7ba8c4643b291df71caa9f31e8"),
                     Tuple.Create(
-                            @"https://github.com/stof/StofDoctrineExtensionsBundle.git",
-                            @"f1c7993863f83f22f187f11d2a8eb462b836701e", 477),
-                    Tuple.Create(
-                            @"https://github.com/sebastianbergmann/phpcpd.git",
-                            @"a9462153f2dd90466a010179901d31fbff598365", 476),
+                            @"https://github.com/sebastianbergmann/phploc.git",
+                            @"eda0bfe29c804a317e8b013899ebc15b991d4e1a",
+                            "c7155d0026a99d131a49d645ad78cfd206a7c2dd"),
                     Tuple.Create(
                             @"https://github.com/pda/pheanstalk.git",
-                            @"56c44c947cf44a85c8d639209361da5f67b6fbff", 471),
-                    Tuple.Create(
-                            @"https://github.com/ErikDubbelboer/phpRedisAdmin.git",
-                            @"f9b7820c76ed507267d853f11168425f340f9f4a", 467),
-                    Tuple.Create(
-                            @"https://github.com/fabpot/Sismo.git",
-                            @"9732d3a1a370ab093e9e126f7ea0366ce64c7389", 462),
+                            @"56c44c947cf44a85c8d639209361da5f67b6fbff",
+                            "1908a3ddbd14130730fd589af870b2e62b92dace"),
                     Tuple.Create(
                             @"https://github.com/ZF-Commons/ZfcUser.git",
-                            @"8774d3d60d93b5e1c0d537ce6d5633c6f75960d1", 454),
+                            @"8774d3d60d93b5e1c0d537ce6d5633c6f75960d1",
+                            "6807a32478fadf4cde94557c46e7df9d7a069c82"),
                     Tuple.Create(
                             @"https://github.com/rilwis/meta-box.git",
-                            @"f5f7209ec4b8050cf407eab8444ba673e30d625b", 454),
+                            @"f5f7209ec4b8050cf407eab8444ba673e30d625b",
+                            "036e74be13cf131d29894736d10f9fe6e48c73b5"),
                     Tuple.Create(
                             @"https://github.com/videlalvaro/php-amqplib.git",
-                            @"1ca6d49bec6b8d2a011e94726c63d6bfad04856b", 446),
+                            @"1ca6d49bec6b8d2a011e94726c63d6bfad04856b",
+                            "ff0de691ee9b3238d0169885a7ab616901dad7b6"),
                     Tuple.Create(
-                            @"https://github.com/webtechnick/CakePHP-Facebook-Plugin.git",
-                            @"d1b4ae95bb610ab60b51f0e64e0227d42ae84b69", 446),
-                    Tuple.Create(
-                            @"https://github.com/jkudish/WordPress-GitHub-Plugin-Updater.git",
-                            @"6d0c856659de1f2f5083dc79a53018cdb973f3cd", 439),
-                    Tuple.Create(
-                            @"https://github.com/philsturgeon/codeigniter-restclient.git",
-                            @"296de79b3249101bc0af6502f358da4b55a262d5", 436),
+                            @"https://github.com/vrana/notorm.git",
+                            @"d7f320a3d8da0dbcb17187ad4b9c91a396f5d0c6",
+                            "782f6f1a3894541c57289a192ed23a5ed2a97f4b"),
                     Tuple.Create(
                             @"https://github.com/nelmio/alice.git",
-                            @"6178f891f5dac28d28bbdb2721a0611add8d3177", 435),
+                            @"6178f891f5dac28d28bbdb2721a0611add8d3177",
+                            "d160fe6a9c14e09426171b66a1609cf1b9647e3c"),
                     Tuple.Create(
-                            @"https://github.com/codeguy/Upload.git",
-                            @"508ba2ba50119b6ab99a551806ef6b7d43c16b5c", 434),
+                            @"https://github.com/technosophos/querypath.git",
+                            @"5597edb17eba8b974f2d8a5e65e4cb8fa0fc95f6",
+                            "625e26cebd9c552a4ab4cbfef6a364aa5ac5d8b7"),
                     Tuple.Create(
-                            @"https://github.com/Sybio/ImageWorkshop.git",
-                            @"2b58bcde5205956e4b439cfaa86fb88113442d72", 418),
+                            @"https://github.com/farinspace/wpalchemy.git",
+                            @"060f0b8d1c28a8808e4b323cec5450253663200d",
+                            "08114b9b84618b8d6a7973c87d42103208d0a3f7"),
                     Tuple.Create(
-                            @"https://github.com/FriendsOfSymfony/FOSJsRoutingBundle.git",
-                            @"36629f5976f9f588093bf0bfb5230502fdb0eacf", 417),
+                            @"https://github.com/sebastianbergmann/php-code-coverage.git",
+                            @"0f87633dd5e3d3336606903e5d8b65a61771e989",
+                            "6f029b322f46f97580a757d1e95ac48bdd07f016"),
                     Tuple.Create(
-                            @"https://github.com/codeguy/Slim-Extras.git",
-                            @"59300d25d62f2f299b4065ed99eb71ca91f8a434", 408),
-                    Tuple.Create(
-                            @"https://github.com/fennb/phirehose.git",
-                            @"fe8d322690c3d106b2b2fc73c7df4a9581b16be9", 403),
-                    Tuple.Create(
-                            @"https://github.com/Anahkiasen/former.git",
-                            @"fce6790e10bbd0acf3f5a5224d56477ecd44ba7b", 397),
-                    Tuple.Create(
-                            @"https://github.com/rgrove/jsmin-php.git",
-                            @"948d87c203010b0544ecc50cf31ad743d7e02a57", 392),
-                    Tuple.Create(
-                            @"https://github.com/walu/phpbook.git",
-                            @"b0b3a2f0e5d8dcc8c4991586e794e3b36ef6e4f1", 392),
-                    Tuple.Create(
-                            @"https://github.com/twilio/twilio-php.git",
-                            @"389e07ee41eabc422ea88b805006bccac7de9eb3", 389),
-                    Tuple.Create(
-                            @"https://github.com/jenssegers/Laravel-MongoDB.git",
-                            @"2ae7980f86312f050c2ab626f48fa9015fbe26a3", 389),
-                    Tuple.Create(
-                            @"https://github.com/allynbauer/statuspanic.git",
-                            @"2fb6d082ca971598c5e8632e58804cafac03b891", 363),
-                    Tuple.Create(
-                            @"https://github.com/alexbilbie/codeigniter-mongodb-library.git",
-                            @"1bb4939aa10ee1fdef0ea53e82b6905b548983ad", 357),
-                    Tuple.Create(
-                            @"https://github.com/ornicar/php-github-api.git",
-                            @"60bdbe492afaf4f4dc1ecd3739351c3daed37ce6", 355),
+                            @"https://github.com/KnpLabs/KnpMenuBundle.git",
+                            @"e5700ed8cbd5c402d24d6dda118aa23400937288",
+                            "f672622a97584b331d217719d52f3ff66b2f04d8"),
                     Tuple.Create(
                             @"https://github.com/fabpot/Twig-extensions.git",
-                            @"502303198afc1ec0bcc061c6f3a0926f7eb685e3", 355),
+                            @"502303198afc1ec0bcc061c6f3a0926f7eb685e3",
+                            "ad80ac8ced9f127eb973cbfcb5509b6201248a51"),
                     Tuple.Create(
-                            @"https://github.com/crowdfavorite/wp-post-formats.git",
-                            @"2ff0fb194f711c4efa6d232c35cc3a19c8e597c0", 354),
+                            @"https://github.com/kherge/php-box.git",
+                            @"c75ebd1ced2ea411c262557a76d66a842d78b648",
+                            "47e45f94de7b81a0a66c163144aac9a8f4f207d2"),
                     Tuple.Create(
-                            @"https://github.com/jaysalvat/image2css.git",
-                            @"ba5b75cb707950e5d928d7f58b1aaf6386686700", 354),
+                            @"https://github.com/Lusitanian/PHPoAuthLib.git",
+                            @"faeb011212d12d45f161a16a77ebe5f69db1a8c2",
+                            "711a09d4b46ca10c9ab49c05f98ab74a8fca966c"),
+                    Tuple.Create(
+                            @"https://github.com/jadell/neo4jphp.git",
+                            @"6ca33b202b403c4f564f6a2f3bacc9482597b203",
+                            "11423e854b32fe1af14fb6852def4ae8358ea4f1"),
                 };
                 foreach (var exp in exps) {
                     foreach (
                             var learningSet in
                                     learningSets.Skip(JavaExperiment.SkipCount)
-                                            .Take(JavaExperiment.TakeCount)
-                            ) {
+                                            .Take(JavaExperiment.TakeCount)) {
                         var url = learningSet.Item1;
                         var path = Fixture.GetGitRepositoryPath(url);
-                        Git.CloneAndCheckout(path, url, learningSet.Item2);
-                        yield return new TestCaseData(exp, path, learningSet.Item3);
+                        File.AppendAllText(@"C:\Users\exKAZUu\Desktop\Debug.txt", url + "Clone\r\n");
+                        Git.Clone(path, url);
+                        File.AppendAllText(@"C:\Users\exKAZUu\Desktop\Debug.txt", "Done\r\n");
+                        yield return
+                                new TestCaseData(exp, path, learningSet.Item2, learningSet.Item3);
                     }
                 }
             }
         }
 
-        //[Test, TestCaseSource("TestCases")]
-        public void Test(LearningExperiment exp, string projectPath, int starCount) {
+        [Test, TestCaseSource("TestCases")]
+        public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.php"), };
-            var projectName = Path.GetFileName(projectPath);
-            if (_lastProjectName != projectName) {
-                _writer.WriteLine();
-                _writer.Write(projectName + ",");
-                _lastProjectName = projectName;
-            }
-            exp.Learn(seedPaths, _writer, projectPath, "*.php");
+            _writer.WriteLine();
+            _writer.Write(Path.GetFileName(projectPath) + ",");
+            exp.Learn(seedPaths, _writer, projectPath, "*.php", sha1, sha2);
             _writer.Flush();
             exp.Clear();
             Assert.That(exp.WrongFeatureCount, Is.EqualTo(0));

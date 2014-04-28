@@ -79,7 +79,7 @@ namespace Code2Xml.Languages.Tests {
 
 		[Test]
 		public void GenerateTestCases() {
-			var inPath = @"C:\Users\exKAZUu\Desktop\java_repo.csv";
+			var inPath = @"C:\Users\exKAZUu\Desktop\php_repo.csv";
 			var set = new HashSet<string>();
 			var count = 0;
 			foreach (var line in File.ReadAllLines(inPath)) {

@@ -278,7 +278,7 @@ namespace Code2Xml.Objects.Tests.Learning.Experiments {
             }
         }
 
-        [Test, TestCaseSource("TestCases")]
+        //[Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.cs"), };
             if (_lastProjectName != exp.GetType().Name) {
