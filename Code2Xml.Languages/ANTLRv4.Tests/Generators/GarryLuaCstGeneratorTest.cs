@@ -55,7 +55,7 @@ a = 1")]
         [TestCase("https://github.com/FPtje/DarkRP.git",
                 "95f7e8190f48a88e24c216878f3b623a1b2736f4")]
         public void ParseGitRepository(string url, string commitPointer) {
-            VerifyRestoringGitRepository(url, commitPointer, "*.lua");
+            VerifyRestoringGitRepo(url, commitPointer, "*.lua");
         }
     }
 }

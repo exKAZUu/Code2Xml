@@ -43,20 +43,8 @@ pass")]
         }
 
         [Test]
-        [TestCase(@"https://github.com/musalbas/heartbleed-masstest.git",
-                @"71210f4f794e7dd3e1af77f9afb7c81ae0c91f37")]
-        [TestCase(@"https://github.com/jasperproject/jasper-client.git",
-                @"9c240bafb55b0c8de45b024a606d903c125b9ae1")]
-        [TestCase(@"https://github.com/rg3/youtube-dl.git",
-                @"d0f2ab6969db70895624303b586ed76e1a8a3291")]
-        [TestCase(@"https://github.com/ansible/ansible.git",
-                @"b0556ab1fbc0652147b86a809cf8b69d4c3cd188")]
-        [TestCase(@"https://github.com/scrapinghub/portia.git",
-                @"55f97e61fc558d243a0806ae8bf4a26b080026de")]
-        [TestCase(@"https://github.com/Lekensteyn/pacemaker.git",
-                @"68d51e461a26a6f63c19ff7ee2da7bdaaddbe787")]
         public void ParseGitRepository(string url, string commitPointer) {
-            VerifyRestoringGitRepository(url, commitPointer, "*.py");
+            VerifyRestoringGitRepo(url, commitPointer, "*.py");
         }
 
         [Test]

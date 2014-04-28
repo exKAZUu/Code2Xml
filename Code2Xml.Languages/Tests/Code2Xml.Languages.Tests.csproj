@@ -43,12 +43,13 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="TreeDotNet, Version=1.2.2.12, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="TreeDotNet, Version=1.2.3.13, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\TreeDotNet.1.2.2.12\lib\net40\TreeDotNet.dll</HintPath>
+      <HintPath>..\..\packages\TreeDotNet.1.2.3.13\lib\net40\TreeDotNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CleanUp.cs" />
     <Compile Include="Samples\CstSerializationSample.cs" />
     <Compile Include="Samples\CstManipulationSample.cs" />
     <Compile Include="Samples\CstGeneratorSample.cs" />
@@ -58,6 +59,10 @@
     <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">
       <Project>{BCCD95A9-7685-4B15-9DA3-E48CC0BF499B}</Project>
       <Name>Code2Xml.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Code2Xml.Objects.Tests\Code2Xml.Objects.Tests.csproj">
+      <Project>{4E5FC8A6-CB8C-49CE-B149-D889D603CED5}</Project>
+      <Name>Code2Xml.Objects.Tests</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Code2Xml.Objects\Code2Xml.Objects.csproj">
       <Project>{447b693b-b4d5-4b97-adf7-4f8546d9dd8e}</Project>
@@ -70,6 +75,10 @@
     <ProjectReference Include="..\ANTLRv3\Code2Xml.Languages.ANTLRv3.csproj">
       <Project>{942a56fd-13af-4ee6-a8d7-7ddf50374715}</Project>
       <Name>Code2Xml.Languages.ANTLRv3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExternalPrograms\Code2Xml.Languages.ExternalGenerators.csproj">
+      <Project>{311EA4B7-DD3C-4945-9AE3-A86A3EDE6A68}</Project>
+      <Name>Code2Xml.Languages.ExternalGenerators</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

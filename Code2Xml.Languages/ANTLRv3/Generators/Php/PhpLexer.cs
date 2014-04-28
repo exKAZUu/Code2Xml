@@ -9,7 +9,7 @@ using Code2Xml.Languages.ANTLRv3.Core;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g 2014-04-13 14:01:14
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g 2014-04-27 17:51:21
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -86,83 +86,84 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	public const int Exponent_DNum=51;
 	public const int Extends=52;
 	public const int False=53;
-	public const int Finally=54;
-	public const int FloatType=55;
-	public const int For=56;
-	public const int Foreach=57;
-	public const int Forwardslash=58;
-	public const int Function=59;
-	public const int Global=60;
-	public const int Goto=61;
-	public const int HaltCompiler=62;
-	public const int Hat=63;
-	public const int HereDoc=64;
-	public const int HereDocContents=65;
-	public const int Hexadecimal=66;
-	public const int If=67;
-	public const int Implements=68;
-	public const int Include=69;
-	public const int IncludeOnce=70;
-	public const int IncrementOperator=71;
-	public const int InstanceMember=72;
-	public const int Instanceof=73;
-	public const int IntType=74;
-	public const int Integer=75;
-	public const int IntegerType=76;
-	public const int Interface=77;
-	public const int Isset=78;
-	public const int List=79;
-	public const int LogicalAnd=80;
-	public const int LogicalOr=81;
-	public const int Minus=82;
-	public const int MultilineComment=83;
-	public const int Namespace=84;
-	public const int New=85;
-	public const int Null=86;
-	public const int OP=87;
-	public const int ObjectType=88;
-	public const int Octal=89;
-	public const int OpenCurlyBracket=90;
-	public const int OpenRoundBracket=91;
-	public const int OpenSquareBracket=92;
-	public const int Or=93;
-	public const int Percent=94;
-	public const int Pipe=95;
-	public const int Plus=96;
-	public const int Print=97;
-	public const int Private=98;
-	public const int Protected=99;
-	public const int Public=100;
-	public const int QuestionMark=101;
-	public const int Real=102;
-	public const int RealType=103;
-	public const int Require=104;
-	public const int RequireOnce=105;
-	public const int Return=106;
-	public const int SemiColon=107;
-	public const int ShiftOperator=108;
-	public const int SingleQuotedString=109;
-	public const int SinglelineComment=110;
-	public const int Static=111;
-	public const int StringType=112;
-	public const int SuppressWarnings=113;
-	public const int Switch=114;
-	public const int Throw=115;
-	public const int Tilde=116;
-	public const int True=117;
-	public const int Try=118;
-	public const int UnixComment=119;
-	public const int UnquotedString=120;
-	public const int UnquotedStringBody=121;
-	public const int UnsetType=122;
-	public const int Use=123;
-	public const int Var=124;
-	public const int VariableName=125;
-	public const int While=126;
-	public const int WhiteSpace=127;
-	public const int Xor=128;
-	public const int T__129=129;
+	public const int Final=54;
+	public const int Finally=55;
+	public const int FloatType=56;
+	public const int For=57;
+	public const int Foreach=58;
+	public const int Forwardslash=59;
+	public const int Function=60;
+	public const int Global=61;
+	public const int Goto=62;
+	public const int HaltCompiler=63;
+	public const int Hat=64;
+	public const int HereDoc=65;
+	public const int HereDocContents=66;
+	public const int Hexadecimal=67;
+	public const int If=68;
+	public const int Implements=69;
+	public const int Include=70;
+	public const int IncludeOnce=71;
+	public const int IncrementOperator=72;
+	public const int InstanceMember=73;
+	public const int Instanceof=74;
+	public const int IntType=75;
+	public const int Integer=76;
+	public const int IntegerType=77;
+	public const int Interface=78;
+	public const int Isset=79;
+	public const int List=80;
+	public const int LogicalAnd=81;
+	public const int LogicalOr=82;
+	public const int Minus=83;
+	public const int MultilineComment=84;
+	public const int Namespace=85;
+	public const int New=86;
+	public const int Null=87;
+	public const int OP=88;
+	public const int ObjectType=89;
+	public const int Octal=90;
+	public const int OpenCurlyBracket=91;
+	public const int OpenRoundBracket=92;
+	public const int OpenSquareBracket=93;
+	public const int Or=94;
+	public const int Percent=95;
+	public const int Pipe=96;
+	public const int Plus=97;
+	public const int Print=98;
+	public const int Private=99;
+	public const int Protected=100;
+	public const int Public=101;
+	public const int QuestionMark=102;
+	public const int Real=103;
+	public const int RealType=104;
+	public const int Require=105;
+	public const int RequireOnce=106;
+	public const int Return=107;
+	public const int SemiColon=108;
+	public const int ShiftOperator=109;
+	public const int SingleQuotedString=110;
+	public const int SinglelineComment=111;
+	public const int Static=112;
+	public const int StringType=113;
+	public const int SuppressWarnings=114;
+	public const int Switch=115;
+	public const int Throw=116;
+	public const int Tilde=117;
+	public const int True=118;
+	public const int Try=119;
+	public const int UnixComment=120;
+	public const int UnquotedString=121;
+	public const int UnquotedStringBody=122;
+	public const int UnsetType=123;
+	public const int Use=124;
+	public const int Var=125;
+	public const int VariableName=126;
+	public const int While=127;
+	public const int WhiteSpace=128;
+	public const int Xor=129;
 	public const int T__130=130;
+	public const int T__131=131;
 
 		public bool AllowShortOpenTag { get; set; }
 
@@ -1205,19 +1206,19 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	}
 	// $ANTLR end "Tilde"
 
-	partial void EnterRule_T__129();
-	partial void LeaveRule_T__129();
+	partial void EnterRule_T__130();
+	partial void LeaveRule_T__130();
 
-	// $ANTLR start "T__129"
-	[GrammarRule("T__129")]
-	private void mT__129()
+	// $ANTLR start "T__130"
+	[GrammarRule("T__130")]
+	private void mT__130()
 	{
-		EnterRule_T__129();
-		EnterRule("T__129", 29);
-		TraceIn("T__129", 29);
+		EnterRule_T__130();
+		EnterRule("T__130", 29);
+		TraceIn("T__130", 29);
 		try
 		{
-			int _type = T__129;
+			int _type = T__130;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:71:8: ( '$' )
 			DebugEnterAlt(1);
@@ -1233,26 +1234,26 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__129", 29);
-			LeaveRule("T__129", 29);
-			LeaveRule_T__129();
+			TraceOut("T__130", 29);
+			LeaveRule("T__130", 29);
+			LeaveRule_T__130();
 		}
 	}
-	// $ANTLR end "T__129"
+	// $ANTLR end "T__130"
 
-	partial void EnterRule_T__130();
-	partial void LeaveRule_T__130();
+	partial void EnterRule_T__131();
+	partial void LeaveRule_T__131();
 
-	// $ANTLR start "T__130"
-	[GrammarRule("T__130")]
-	private void mT__130()
+	// $ANTLR start "T__131"
+	[GrammarRule("T__131")]
+	private void mT__131()
 	{
-		EnterRule_T__130();
-		EnterRule("T__130", 30);
-		TraceIn("T__130", 30);
+		EnterRule_T__131();
+		EnterRule("T__131", 30);
+		TraceIn("T__131", 30);
 		try
 		{
-			int _type = T__130;
+			int _type = T__131;
 			int _channel = DefaultTokenChannel;
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:72:8: ( '\\\\' )
 			DebugEnterAlt(1);
@@ -1268,12 +1269,12 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("T__130", 30);
-			LeaveRule("T__130", 30);
-			LeaveRule_T__130();
+			TraceOut("T__131", 30);
+			LeaveRule("T__131", 30);
+			LeaveRule_T__131();
 		}
 	}
-	// $ANTLR end "T__130"
+	// $ANTLR end "T__131"
 
 	partial void EnterRule_OP();
 	partial void LeaveRule_OP();
@@ -1289,11 +1290,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = OP;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:379:4: ( ':=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:383:4: ( ':=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:379:6: ':='
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:383:6: ':='
 			{
-			DebugLocation(379, 6);
+			DebugLocation(383, 6);
 			Match(":="); if (state.failed) return;
 
 
@@ -1325,14 +1326,14 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = BodyString;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:524:2: ( '?>' BodyStringRest )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:527:2: ( '?>' BodyStringRest )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:524:4: '?>' BodyStringRest
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:527:4: '?>' BodyStringRest
 			{
-			DebugLocation(524, 4);
+			DebugLocation(527, 4);
 			Match("?>"); if (state.failed) return;
 
-			DebugLocation(524, 9);
+			DebugLocation(527, 9);
 			mBodyStringRest(); if (state.failed) return;
 
 			}
@@ -1361,7 +1362,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		TraceIn("BodyStringRest", 33);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:530:2: ({...}? => BodyStringRestShortTag | ( ( '<' ~ '?' )=> '<' |~ '<' )* ( '<?' ( 'php' | '=' ) )? )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:533:2: ({...}? => BodyStringRestShortTag | ( ( '<' ~ '?' )=> '<' |~ '<' )* ( '<?' ( 'php' | '=' ) )? )
 			int alt4=2;
 			try { DebugEnterDecision(4, false);
 			int LA4_1 = input.LA(1);
@@ -1426,25 +1427,25 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:530:4: {...}? => BodyStringRestShortTag
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:533:4: {...}? => BodyStringRestShortTag
 				{
-				DebugLocation(530, 4);
+				DebugLocation(533, 4);
 				if (!((AllowShortOpenTag)))
 				{
 					if (state.backtracking>0) {state.failed=true; return;}
 					throw new FailedPredicateException(input, "BodyStringRest", "AllowShortOpenTag");
 				}
-				DebugLocation(530, 27);
+				DebugLocation(533, 27);
 				mBodyStringRestShortTag(); if (state.failed) return;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:531:4: ( ( '<' ~ '?' )=> '<' |~ '<' )* ( '<?' ( 'php' | '=' ) )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:534:4: ( ( '<' ~ '?' )=> '<' |~ '<' )* ( '<?' ( 'php' | '=' ) )?
 				{
-				DebugLocation(531, 4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:531:4: ( ( '<' ~ '?' )=> '<' |~ '<' )*
+				DebugLocation(534, 4);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:534:4: ( ( '<' ~ '?' )=> '<' |~ '<' )*
 				try { DebugEnterSubRule(1);
 				while (true)
 				{
@@ -1565,18 +1566,18 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:531:5: ( '<' ~ '?' )=> '<'
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:534:5: ( '<' ~ '?' )=> '<'
 						{
-						DebugLocation(531, 19);
+						DebugLocation(534, 19);
 						Match('<'); if (state.failed) return;
 
 						}
 						break;
 					case 2:
 						DebugEnterAlt(2);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:531:25: ~ '<'
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:534:25: ~ '<'
 						{
-						DebugLocation(531, 25);
+						DebugLocation(534, 25);
 						input.Consume();
 						state.failed=false;
 
@@ -1593,8 +1594,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(1); }
 
-				DebugLocation(531, 33);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:531:33: ( '<?' ( 'php' | '=' ) )?
+				DebugLocation(534, 33);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:534:33: ( '<?' ( 'php' | '=' ) )?
 				int alt3=2;
 				try { DebugEnterSubRule(3);
 				try { DebugEnterDecision(3, false);
@@ -1609,13 +1610,13 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:531:34: '<?' ( 'php' | '=' )
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:534:34: '<?' ( 'php' | '=' )
 					{
-					DebugLocation(531, 34);
+					DebugLocation(534, 34);
 					Match("<?"); if (state.failed) return;
 
-					DebugLocation(531, 39);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:531:39: ( 'php' | '=' )
+					DebugLocation(534, 39);
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:534:39: ( 'php' | '=' )
 					int alt2=2;
 					try { DebugEnterSubRule(2);
 					try { DebugEnterDecision(2, false);
@@ -1641,9 +1642,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:531:40: 'php'
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:534:40: 'php'
 						{
-						DebugLocation(531, 40);
+						DebugLocation(534, 40);
 						Match("php"); if (state.failed) return;
 
 
@@ -1651,9 +1652,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 						break;
 					case 2:
 						DebugEnterAlt(2);
-						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:531:46: '='
+						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:534:46: '='
 						{
-						DebugLocation(531, 46);
+						DebugLocation(534, 46);
 						Match('='); if (state.failed) return;
 
 						}
@@ -1696,12 +1697,12 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		TraceIn("BodyStringRestShortTag", 34);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:536:2: ( ( ( '<' ~ '?' )=> '<' |~ '<' )* ( '<?' ( 'php' | '=' )? )? )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:539:2: ( ( ( '<' ~ '?' )=> '<' |~ '<' )* ( '<?' ( 'php' | '=' )? )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:536:4: ( ( '<' ~ '?' )=> '<' |~ '<' )* ( '<?' ( 'php' | '=' )? )?
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:539:4: ( ( '<' ~ '?' )=> '<' |~ '<' )* ( '<?' ( 'php' | '=' )? )?
 			{
-			DebugLocation(536, 4);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:536:4: ( ( '<' ~ '?' )=> '<' |~ '<' )*
+			DebugLocation(539, 4);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:539:4: ( ( '<' ~ '?' )=> '<' |~ '<' )*
 			try { DebugEnterSubRule(5);
 			while (true)
 			{
@@ -1751,18 +1752,18 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:536:5: ( '<' ~ '?' )=> '<'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:539:5: ( '<' ~ '?' )=> '<'
 					{
-					DebugLocation(536, 19);
+					DebugLocation(539, 19);
 					Match('<'); if (state.failed) return;
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:536:25: ~ '<'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:539:25: ~ '<'
 					{
-					DebugLocation(536, 25);
+					DebugLocation(539, 25);
 					input.Consume();
 					state.failed=false;
 
@@ -1779,8 +1780,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(5); }
 
-			DebugLocation(536, 33);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:536:33: ( '<?' ( 'php' | '=' )? )?
+			DebugLocation(539, 33);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:539:33: ( '<?' ( 'php' | '=' )? )?
 			int alt7=2;
 			try { DebugEnterSubRule(7);
 			try { DebugEnterDecision(7, false);
@@ -1795,13 +1796,13 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:536:34: '<?' ( 'php' | '=' )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:539:34: '<?' ( 'php' | '=' )?
 				{
-				DebugLocation(536, 34);
+				DebugLocation(539, 34);
 				Match("<?"); if (state.failed) return;
 
-				DebugLocation(536, 39);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:536:39: ( 'php' | '=' )?
+				DebugLocation(539, 39);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:539:39: ( 'php' | '=' )?
 				int alt6=3;
 				try { DebugEnterSubRule(6);
 				try { DebugEnterDecision(6, false);
@@ -1820,9 +1821,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:536:40: 'php'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:539:40: 'php'
 					{
-					DebugLocation(536, 40);
+					DebugLocation(539, 40);
 					Match("php"); if (state.failed) return;
 
 
@@ -1830,9 +1831,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:536:46: '='
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:539:46: '='
 					{
-					DebugLocation(536, 46);
+					DebugLocation(539, 46);
 					Match('='); if (state.failed) return;
 
 					}
@@ -1875,15 +1876,15 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = MultilineComment;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:541:2: ( '/*' ( ( '*' ~ '/' )=> '*' |~ '*' )* '*/' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:544:2: ( '/*' ( ( '*' ~ '/' )=> '*' |~ '*' )* '*/' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:541:4: '/*' ( ( '*' ~ '/' )=> '*' |~ '*' )* '*/'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:544:4: '/*' ( ( '*' ~ '/' )=> '*' |~ '*' )* '*/'
 			{
-			DebugLocation(541, 4);
+			DebugLocation(544, 4);
 			Match("/*"); if (state.failed) return;
 
-			DebugLocation(541, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:541:9: ( ( '*' ~ '/' )=> '*' |~ '*' )*
+			DebugLocation(544, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:544:9: ( ( '*' ~ '/' )=> '*' |~ '*' )*
 			try { DebugEnterSubRule(8);
 			while (true)
 			{
@@ -1932,18 +1933,18 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:541:10: ( '*' ~ '/' )=> '*'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:544:10: ( '*' ~ '/' )=> '*'
 					{
-					DebugLocation(541, 23);
+					DebugLocation(544, 23);
 					Match('*'); if (state.failed) return;
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:541:29: ~ '*'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:544:29: ~ '*'
 					{
-					DebugLocation(541, 29);
+					DebugLocation(544, 29);
 					input.Consume();
 					state.failed=false;
 
@@ -1960,10 +1961,10 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(8); }
 
-			DebugLocation(541, 37);
+			DebugLocation(544, 37);
 			Match("*/"); if (state.failed) return;
 
-			DebugLocation(541, 42);
+			DebugLocation(544, 42);
 			if (state.backtracking == 0)
 			{
 				_channel=Hidden;
@@ -1997,15 +1998,15 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = SinglelineComment;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:545:2: ( '//' ( ( '?' ~ '>' )=> '?' |~ ( '\\n' | '?' ) )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:548:2: ( '//' ( ( '?' ~ '>' )=> '?' |~ ( '\\n' | '?' ) )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:545:4: '//' ( ( '?' ~ '>' )=> '?' |~ ( '\\n' | '?' ) )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:548:4: '//' ( ( '?' ~ '>' )=> '?' |~ ( '\\n' | '?' ) )*
 			{
-			DebugLocation(545, 4);
+			DebugLocation(548, 4);
 			Match("//"); if (state.failed) return;
 
-			DebugLocation(545, 10);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:545:10: ( ( '?' ~ '>' )=> '?' |~ ( '\\n' | '?' ) )*
+			DebugLocation(548, 10);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:548:10: ( ( '?' ~ '>' )=> '?' |~ ( '\\n' | '?' ) )*
 			try { DebugEnterSubRule(9);
 			while (true)
 			{
@@ -2028,18 +2029,18 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:545:11: ( '?' ~ '>' )=> '?'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:548:11: ( '?' ~ '>' )=> '?'
 					{
-					DebugLocation(545, 23);
+					DebugLocation(548, 23);
 					Match('?'); if (state.failed) return;
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:545:29: ~ ( '\\n' | '?' )
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:548:29: ~ ( '\\n' | '?' )
 					{
-					DebugLocation(545, 29);
+					DebugLocation(548, 29);
 					input.Consume();
 					state.failed=false;
 
@@ -2056,7 +2057,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(9); }
 
-			DebugLocation(545, 43);
+			DebugLocation(548, 43);
 			if (state.backtracking == 0)
 			{
 				_channel=Hidden;
@@ -2090,14 +2091,14 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = UnixComment;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:549:2: ( '#' ( ( '?' ~ '>' )=> '?' |~ ( '\\n' | '?' ) )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:552:2: ( '#' ( ( '?' ~ '>' )=> '?' |~ ( '\\n' | '?' ) )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:549:4: '#' ( ( '?' ~ '>' )=> '?' |~ ( '\\n' | '?' ) )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:552:4: '#' ( ( '?' ~ '>' )=> '?' |~ ( '\\n' | '?' ) )*
 			{
-			DebugLocation(549, 4);
+			DebugLocation(552, 4);
 			Match('#'); if (state.failed) return;
-			DebugLocation(549, 8);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:549:8: ( ( '?' ~ '>' )=> '?' |~ ( '\\n' | '?' ) )*
+			DebugLocation(552, 8);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:552:8: ( ( '?' ~ '>' )=> '?' |~ ( '\\n' | '?' ) )*
 			try { DebugEnterSubRule(10);
 			while (true)
 			{
@@ -2120,18 +2121,18 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:549:9: ( '?' ~ '>' )=> '?'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:552:9: ( '?' ~ '>' )=> '?'
 					{
-					DebugLocation(549, 21);
+					DebugLocation(552, 21);
 					Match('?'); if (state.failed) return;
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:549:27: ~ ( '\\n' | '?' )
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:552:27: ~ ( '\\n' | '?' )
 					{
-					DebugLocation(549, 27);
+					DebugLocation(552, 27);
 					input.Consume();
 					state.failed=false;
 
@@ -2148,7 +2149,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(10); }
 
-			DebugLocation(549, 41);
+			DebugLocation(552, 41);
 			if (state.backtracking == 0)
 			{
 				_channel=Hidden;
@@ -2182,11 +2183,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = IntType;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:553:2: ( ( 'i' | 'I' ) ( 'n' | 'N' ) ( 't' | 'T' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:556:2: ( ( 'i' | 'I' ) ( 'n' | 'N' ) ( 't' | 'T' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:553:4: ( 'i' | 'I' ) ( 'n' | 'N' ) ( 't' | 'T' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:556:4: ( 'i' | 'I' ) ( 'n' | 'N' ) ( 't' | 'T' )
 			{
-			DebugLocation(553, 4);
+			DebugLocation(556, 4);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -2201,7 +2202,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(553, 13);
+			DebugLocation(556, 13);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -2216,7 +2217,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(553, 22);
+			DebugLocation(556, 22);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -2260,11 +2261,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = IntegerType;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:557:2: ( ( 'i' | 'I' ) ( 'n' | 'N' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'g' | 'G' ) ( 'e' | 'E' ) ( 'r' | 'R' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:560:2: ( ( 'i' | 'I' ) ( 'n' | 'N' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'g' | 'G' ) ( 'e' | 'E' ) ( 'r' | 'R' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:557:4: ( 'i' | 'I' ) ( 'n' | 'N' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'g' | 'G' ) ( 'e' | 'E' ) ( 'r' | 'R' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:560:4: ( 'i' | 'I' ) ( 'n' | 'N' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'g' | 'G' ) ( 'e' | 'E' ) ( 'r' | 'R' )
 			{
-			DebugLocation(557, 4);
+			DebugLocation(560, 4);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -2279,7 +2280,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(557, 13);
+			DebugLocation(560, 13);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -2294,7 +2295,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(557, 22);
+			DebugLocation(560, 22);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -2309,7 +2310,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(557, 31);
+			DebugLocation(560, 31);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -2324,7 +2325,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(557, 40);
+			DebugLocation(560, 40);
 			if (input.LA(1)=='G'||input.LA(1)=='g')
 			{
 				input.Consume();
@@ -2339,7 +2340,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(557, 49);
+			DebugLocation(560, 49);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -2354,7 +2355,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(557, 58);
+			DebugLocation(560, 58);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -2398,11 +2399,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = BoolType;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:561:2: ( ( 'b' | 'B' ) ( 'o' | 'O' ) ( 'o' | 'O' ) ( 'l' | 'L' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:564:2: ( ( 'b' | 'B' ) ( 'o' | 'O' ) ( 'o' | 'O' ) ( 'l' | 'L' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:561:4: ( 'b' | 'B' ) ( 'o' | 'O' ) ( 'o' | 'O' ) ( 'l' | 'L' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:564:4: ( 'b' | 'B' ) ( 'o' | 'O' ) ( 'o' | 'O' ) ( 'l' | 'L' )
 			{
-			DebugLocation(561, 4);
+			DebugLocation(564, 4);
 			if (input.LA(1)=='B'||input.LA(1)=='b')
 			{
 				input.Consume();
@@ -2417,7 +2418,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(561, 13);
+			DebugLocation(564, 13);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -2432,7 +2433,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(561, 22);
+			DebugLocation(564, 22);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -2447,7 +2448,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(561, 31);
+			DebugLocation(564, 31);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -2491,11 +2492,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = BooleanType;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:565:2: ( ( 'b' | 'B' ) ( 'o' | 'O' ) ( 'o' | 'O' ) ( 'l' | 'L' ) ( 'e' | 'E' ) ( 'a' | 'A' ) ( 'n' | 'N' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:568:2: ( ( 'b' | 'B' ) ( 'o' | 'O' ) ( 'o' | 'O' ) ( 'l' | 'L' ) ( 'e' | 'E' ) ( 'a' | 'A' ) ( 'n' | 'N' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:565:4: ( 'b' | 'B' ) ( 'o' | 'O' ) ( 'o' | 'O' ) ( 'l' | 'L' ) ( 'e' | 'E' ) ( 'a' | 'A' ) ( 'n' | 'N' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:568:4: ( 'b' | 'B' ) ( 'o' | 'O' ) ( 'o' | 'O' ) ( 'l' | 'L' ) ( 'e' | 'E' ) ( 'a' | 'A' ) ( 'n' | 'N' )
 			{
-			DebugLocation(565, 4);
+			DebugLocation(568, 4);
 			if (input.LA(1)=='B'||input.LA(1)=='b')
 			{
 				input.Consume();
@@ -2510,7 +2511,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(565, 13);
+			DebugLocation(568, 13);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -2525,7 +2526,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(565, 22);
+			DebugLocation(568, 22);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -2540,7 +2541,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(565, 31);
+			DebugLocation(568, 31);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -2555,7 +2556,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(565, 40);
+			DebugLocation(568, 40);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -2570,7 +2571,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(565, 49);
+			DebugLocation(568, 49);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -2585,7 +2586,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(565, 58);
+			DebugLocation(568, 58);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -2629,11 +2630,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = FloatType;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:569:2: ( ( 'f' | 'F' ) ( 'l' | 'L' ) ( 'o' | 'O' ) ( 'a' | 'A' ) ( 't' | 'T' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:572:2: ( ( 'f' | 'F' ) ( 'l' | 'L' ) ( 'o' | 'O' ) ( 'a' | 'A' ) ( 't' | 'T' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:569:4: ( 'f' | 'F' ) ( 'l' | 'L' ) ( 'o' | 'O' ) ( 'a' | 'A' ) ( 't' | 'T' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:572:4: ( 'f' | 'F' ) ( 'l' | 'L' ) ( 'o' | 'O' ) ( 'a' | 'A' ) ( 't' | 'T' )
 			{
-			DebugLocation(569, 4);
+			DebugLocation(572, 4);
 			if (input.LA(1)=='F'||input.LA(1)=='f')
 			{
 				input.Consume();
@@ -2648,7 +2649,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(569, 13);
+			DebugLocation(572, 13);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -2663,7 +2664,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(569, 22);
+			DebugLocation(572, 22);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -2678,7 +2679,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(569, 31);
+			DebugLocation(572, 31);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -2693,7 +2694,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(569, 40);
+			DebugLocation(572, 40);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -2737,11 +2738,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = DoubleType;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:573:2: ( ( 'd' | 'D' ) ( 'o' | 'O' ) ( 'u' | 'U' ) ( 'b' | 'B' ) ( 'l' | 'L' ) ( 'e' | 'E' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:576:2: ( ( 'd' | 'D' ) ( 'o' | 'O' ) ( 'u' | 'U' ) ( 'b' | 'B' ) ( 'l' | 'L' ) ( 'e' | 'E' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:573:4: ( 'd' | 'D' ) ( 'o' | 'O' ) ( 'u' | 'U' ) ( 'b' | 'B' ) ( 'l' | 'L' ) ( 'e' | 'E' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:576:4: ( 'd' | 'D' ) ( 'o' | 'O' ) ( 'u' | 'U' ) ( 'b' | 'B' ) ( 'l' | 'L' ) ( 'e' | 'E' )
 			{
-			DebugLocation(573, 4);
+			DebugLocation(576, 4);
 			if (input.LA(1)=='D'||input.LA(1)=='d')
 			{
 				input.Consume();
@@ -2756,7 +2757,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(573, 13);
+			DebugLocation(576, 13);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -2771,7 +2772,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(573, 22);
+			DebugLocation(576, 22);
 			if (input.LA(1)=='U'||input.LA(1)=='u')
 			{
 				input.Consume();
@@ -2786,7 +2787,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(573, 31);
+			DebugLocation(576, 31);
 			if (input.LA(1)=='B'||input.LA(1)=='b')
 			{
 				input.Consume();
@@ -2801,7 +2802,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(573, 40);
+			DebugLocation(576, 40);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -2816,7 +2817,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(573, 49);
+			DebugLocation(576, 49);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -2860,11 +2861,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = RealType;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:577:2: ( ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'a' | 'A' ) ( 'l' | 'L' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:580:2: ( ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'a' | 'A' ) ( 'l' | 'L' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:577:4: ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'a' | 'A' ) ( 'l' | 'L' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:580:4: ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'a' | 'A' ) ( 'l' | 'L' )
 			{
-			DebugLocation(577, 4);
+			DebugLocation(580, 4);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -2879,7 +2880,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(577, 13);
+			DebugLocation(580, 13);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -2894,7 +2895,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(577, 22);
+			DebugLocation(580, 22);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -2909,7 +2910,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(577, 31);
+			DebugLocation(580, 31);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -2953,11 +2954,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = StringType;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:581:2: ( ( 's' | 'S' ) ( 't' | 'T' ) ( 'r' | 'R' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'g' | 'G' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:584:2: ( ( 's' | 'S' ) ( 't' | 'T' ) ( 'r' | 'R' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'g' | 'G' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:581:4: ( 's' | 'S' ) ( 't' | 'T' ) ( 'r' | 'R' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'g' | 'G' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:584:4: ( 's' | 'S' ) ( 't' | 'T' ) ( 'r' | 'R' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'g' | 'G' )
 			{
-			DebugLocation(581, 4);
+			DebugLocation(584, 4);
 			if (input.LA(1)=='S'||input.LA(1)=='s')
 			{
 				input.Consume();
@@ -2972,7 +2973,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(581, 13);
+			DebugLocation(584, 13);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -2987,7 +2988,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(581, 22);
+			DebugLocation(584, 22);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -3002,7 +3003,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(581, 31);
+			DebugLocation(584, 31);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -3017,7 +3018,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(581, 40);
+			DebugLocation(584, 40);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -3032,7 +3033,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(581, 49);
+			DebugLocation(584, 49);
 			if (input.LA(1)=='G'||input.LA(1)=='g')
 			{
 				input.Consume();
@@ -3076,11 +3077,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = ObjectType;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:585:2: ( ( 'o' | 'O' ) ( 'b' | 'B' ) ( 'j' | 'J' ) ( 'e' | 'E' ) ( 'c' | 'C' ) ( 't' | 'T' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:588:2: ( ( 'o' | 'O' ) ( 'b' | 'B' ) ( 'j' | 'J' ) ( 'e' | 'E' ) ( 'c' | 'C' ) ( 't' | 'T' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:585:4: ( 'o' | 'O' ) ( 'b' | 'B' ) ( 'j' | 'J' ) ( 'e' | 'E' ) ( 'c' | 'C' ) ( 't' | 'T' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:588:4: ( 'o' | 'O' ) ( 'b' | 'B' ) ( 'j' | 'J' ) ( 'e' | 'E' ) ( 'c' | 'C' ) ( 't' | 'T' )
 			{
-			DebugLocation(585, 4);
+			DebugLocation(588, 4);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -3095,7 +3096,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(585, 13);
+			DebugLocation(588, 13);
 			if (input.LA(1)=='B'||input.LA(1)=='b')
 			{
 				input.Consume();
@@ -3110,7 +3111,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(585, 22);
+			DebugLocation(588, 22);
 			if (input.LA(1)=='J'||input.LA(1)=='j')
 			{
 				input.Consume();
@@ -3125,7 +3126,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(585, 31);
+			DebugLocation(588, 31);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -3140,7 +3141,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(585, 40);
+			DebugLocation(588, 40);
 			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
@@ -3155,7 +3156,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(585, 49);
+			DebugLocation(588, 49);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -3199,11 +3200,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = UnsetType;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:589:2: ( ( 'u' | 'U' ) ( 'n' | 'N' ) ( 's' | 'S' ) ( 'e' | 'E' ) ( 't' | 'T' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:592:2: ( ( 'u' | 'U' ) ( 'n' | 'N' ) ( 's' | 'S' ) ( 'e' | 'E' ) ( 't' | 'T' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:589:4: ( 'u' | 'U' ) ( 'n' | 'N' ) ( 's' | 'S' ) ( 'e' | 'E' ) ( 't' | 'T' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:592:4: ( 'u' | 'U' ) ( 'n' | 'N' ) ( 's' | 'S' ) ( 'e' | 'E' ) ( 't' | 'T' )
 			{
-			DebugLocation(589, 4);
+			DebugLocation(592, 4);
 			if (input.LA(1)=='U'||input.LA(1)=='u')
 			{
 				input.Consume();
@@ -3218,7 +3219,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(589, 13);
+			DebugLocation(592, 13);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -3233,7 +3234,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(589, 22);
+			DebugLocation(592, 22);
 			if (input.LA(1)=='S'||input.LA(1)=='s')
 			{
 				input.Consume();
@@ -3248,7 +3249,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(589, 31);
+			DebugLocation(592, 31);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -3263,7 +3264,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(589, 40);
+			DebugLocation(592, 40);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -3307,11 +3308,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = ArrayType;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:593:2: ( ( 'a' | 'A' ) ( 'r' | 'R' ) ( 'r' | 'R' ) ( 'a' | 'A' ) ( 'y' | 'Y' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:596:2: ( ( 'a' | 'A' ) ( 'r' | 'R' ) ( 'r' | 'R' ) ( 'a' | 'A' ) ( 'y' | 'Y' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:593:4: ( 'a' | 'A' ) ( 'r' | 'R' ) ( 'r' | 'R' ) ( 'a' | 'A' ) ( 'y' | 'Y' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:596:4: ( 'a' | 'A' ) ( 'r' | 'R' ) ( 'r' | 'R' ) ( 'a' | 'A' ) ( 'y' | 'Y' )
 			{
-			DebugLocation(593, 4);
+			DebugLocation(596, 4);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -3326,7 +3327,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(593, 13);
+			DebugLocation(596, 13);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -3341,7 +3342,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(593, 22);
+			DebugLocation(596, 22);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -3356,7 +3357,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(593, 31);
+			DebugLocation(596, 31);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -3371,7 +3372,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(593, 40);
+			DebugLocation(596, 40);
 			if (input.LA(1)=='Y'||input.LA(1)=='y')
 			{
 				input.Consume();
@@ -3415,11 +3416,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = New;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:596:5: ( ( 'n' | 'N' ) ( 'e' | 'E' ) ( 'w' | 'W' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:599:5: ( ( 'n' | 'N' ) ( 'e' | 'E' ) ( 'w' | 'W' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:596:7: ( 'n' | 'N' ) ( 'e' | 'E' ) ( 'w' | 'W' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:599:7: ( 'n' | 'N' ) ( 'e' | 'E' ) ( 'w' | 'W' )
 			{
-			DebugLocation(596, 7);
+			DebugLocation(599, 7);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -3434,7 +3435,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(596, 16);
+			DebugLocation(599, 16);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -3449,7 +3450,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(596, 25);
+			DebugLocation(599, 25);
 			if (input.LA(1)=='W'||input.LA(1)=='w')
 			{
 				input.Consume();
@@ -3493,11 +3494,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Clone;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:597:7: ( ( 'c' | 'C' ) ( 'l' | 'L' ) ( 'o' | 'O' ) ( 'n' | 'N' ) ( 'e' | 'E' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:600:7: ( ( 'c' | 'C' ) ( 'l' | 'L' ) ( 'o' | 'O' ) ( 'n' | 'N' ) ( 'e' | 'E' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:597:9: ( 'c' | 'C' ) ( 'l' | 'L' ) ( 'o' | 'O' ) ( 'n' | 'N' ) ( 'e' | 'E' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:600:9: ( 'c' | 'C' ) ( 'l' | 'L' ) ( 'o' | 'O' ) ( 'n' | 'N' ) ( 'e' | 'E' )
 			{
-			DebugLocation(597, 9);
+			DebugLocation(600, 9);
 			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
@@ -3512,7 +3513,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(597, 18);
+			DebugLocation(600, 18);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -3527,7 +3528,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(597, 27);
+			DebugLocation(600, 27);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -3542,7 +3543,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(597, 36);
+			DebugLocation(600, 36);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -3557,7 +3558,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(597, 45);
+			DebugLocation(600, 45);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -3601,11 +3602,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Echo;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:598:6: ( ( 'e' | 'E' ) ( 'c' | 'C' ) ( 'h' | 'H' ) ( 'o' | 'O' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:601:6: ( ( 'e' | 'E' ) ( 'c' | 'C' ) ( 'h' | 'H' ) ( 'o' | 'O' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:598:8: ( 'e' | 'E' ) ( 'c' | 'C' ) ( 'h' | 'H' ) ( 'o' | 'O' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:601:8: ( 'e' | 'E' ) ( 'c' | 'C' ) ( 'h' | 'H' ) ( 'o' | 'O' )
 			{
-			DebugLocation(598, 8);
+			DebugLocation(601, 8);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -3620,7 +3621,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(598, 17);
+			DebugLocation(601, 17);
 			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
@@ -3635,7 +3636,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(598, 26);
+			DebugLocation(601, 26);
 			if (input.LA(1)=='H'||input.LA(1)=='h')
 			{
 				input.Consume();
@@ -3650,7 +3651,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(598, 35);
+			DebugLocation(601, 35);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -3694,11 +3695,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Print;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:599:7: ( ( 'p' | 'P' ) ( 'r' | 'R' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 't' | 'T' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:602:7: ( ( 'p' | 'P' ) ( 'r' | 'R' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 't' | 'T' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:599:9: ( 'p' | 'P' ) ( 'r' | 'R' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 't' | 'T' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:602:9: ( 'p' | 'P' ) ( 'r' | 'R' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 't' | 'T' )
 			{
-			DebugLocation(599, 9);
+			DebugLocation(602, 9);
 			if (input.LA(1)=='P'||input.LA(1)=='p')
 			{
 				input.Consume();
@@ -3713,7 +3714,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(599, 18);
+			DebugLocation(602, 18);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -3728,7 +3729,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(599, 27);
+			DebugLocation(602, 27);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -3743,7 +3744,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(599, 36);
+			DebugLocation(602, 36);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -3758,7 +3759,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(599, 45);
+			DebugLocation(602, 45);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -3802,11 +3803,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = If;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:600:4: ( ( 'i' | 'I' ) ( 'f' | 'F' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:603:4: ( ( 'i' | 'I' ) ( 'f' | 'F' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:600:6: ( 'i' | 'I' ) ( 'f' | 'F' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:603:6: ( 'i' | 'I' ) ( 'f' | 'F' )
 			{
-			DebugLocation(600, 6);
+			DebugLocation(603, 6);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -3821,7 +3822,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(600, 15);
+			DebugLocation(603, 15);
 			if (input.LA(1)=='F'||input.LA(1)=='f')
 			{
 				input.Consume();
@@ -3865,11 +3866,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Else;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:601:6: ( ( 'e' | 'E' ) ( 'l' | 'L' ) ( 's' | 'S' ) ( 'e' | 'E' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:604:6: ( ( 'e' | 'E' ) ( 'l' | 'L' ) ( 's' | 'S' ) ( 'e' | 'E' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:601:8: ( 'e' | 'E' ) ( 'l' | 'L' ) ( 's' | 'S' ) ( 'e' | 'E' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:604:8: ( 'e' | 'E' ) ( 'l' | 'L' ) ( 's' | 'S' ) ( 'e' | 'E' )
 			{
-			DebugLocation(601, 8);
+			DebugLocation(604, 8);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -3884,7 +3885,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(601, 17);
+			DebugLocation(604, 17);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -3899,7 +3900,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(601, 26);
+			DebugLocation(604, 26);
 			if (input.LA(1)=='S'||input.LA(1)=='s')
 			{
 				input.Consume();
@@ -3914,7 +3915,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(601, 35);
+			DebugLocation(604, 35);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -3958,11 +3959,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = ElseIf;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:602:8: ( ( 'e' | 'E' ) ( 'l' | 'L' ) ( 's' | 'S' ) ( 'e' | 'E' ) ( 'i' | 'I' ) ( 'f' | 'F' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:605:8: ( ( 'e' | 'E' ) ( 'l' | 'L' ) ( 's' | 'S' ) ( 'e' | 'E' ) ( 'i' | 'I' ) ( 'f' | 'F' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:602:10: ( 'e' | 'E' ) ( 'l' | 'L' ) ( 's' | 'S' ) ( 'e' | 'E' ) ( 'i' | 'I' ) ( 'f' | 'F' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:605:10: ( 'e' | 'E' ) ( 'l' | 'L' ) ( 's' | 'S' ) ( 'e' | 'E' ) ( 'i' | 'I' ) ( 'f' | 'F' )
 			{
-			DebugLocation(602, 10);
+			DebugLocation(605, 10);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -3977,7 +3978,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(602, 19);
+			DebugLocation(605, 19);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -3992,7 +3993,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(602, 28);
+			DebugLocation(605, 28);
 			if (input.LA(1)=='S'||input.LA(1)=='s')
 			{
 				input.Consume();
@@ -4007,7 +4008,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(602, 37);
+			DebugLocation(605, 37);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -4022,7 +4023,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(602, 46);
+			DebugLocation(605, 46);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -4037,7 +4038,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(602, 55);
+			DebugLocation(605, 55);
 			if (input.LA(1)=='F'||input.LA(1)=='f')
 			{
 				input.Consume();
@@ -4081,11 +4082,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = For;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:603:5: ( ( 'f' | 'F' ) ( 'o' | 'O' ) ( 'r' | 'R' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:606:5: ( ( 'f' | 'F' ) ( 'o' | 'O' ) ( 'r' | 'R' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:603:7: ( 'f' | 'F' ) ( 'o' | 'O' ) ( 'r' | 'R' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:606:7: ( 'f' | 'F' ) ( 'o' | 'O' ) ( 'r' | 'R' )
 			{
-			DebugLocation(603, 7);
+			DebugLocation(606, 7);
 			if (input.LA(1)=='F'||input.LA(1)=='f')
 			{
 				input.Consume();
@@ -4100,7 +4101,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(603, 16);
+			DebugLocation(606, 16);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -4115,7 +4116,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(603, 25);
+			DebugLocation(606, 25);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -4159,11 +4160,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Foreach;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:604:9: ( ( 'f' | 'F' ) ( 'o' | 'O' ) ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'a' | 'A' ) ( 'c' | 'C' ) ( 'h' | 'H' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:607:9: ( ( 'f' | 'F' ) ( 'o' | 'O' ) ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'a' | 'A' ) ( 'c' | 'C' ) ( 'h' | 'H' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:604:11: ( 'f' | 'F' ) ( 'o' | 'O' ) ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'a' | 'A' ) ( 'c' | 'C' ) ( 'h' | 'H' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:607:11: ( 'f' | 'F' ) ( 'o' | 'O' ) ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'a' | 'A' ) ( 'c' | 'C' ) ( 'h' | 'H' )
 			{
-			DebugLocation(604, 11);
+			DebugLocation(607, 11);
 			if (input.LA(1)=='F'||input.LA(1)=='f')
 			{
 				input.Consume();
@@ -4178,7 +4179,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(604, 20);
+			DebugLocation(607, 20);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -4193,7 +4194,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(604, 29);
+			DebugLocation(607, 29);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -4208,7 +4209,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(604, 38);
+			DebugLocation(607, 38);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -4223,7 +4224,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(604, 47);
+			DebugLocation(607, 47);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -4238,7 +4239,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(604, 56);
+			DebugLocation(607, 56);
 			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
@@ -4253,7 +4254,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(604, 65);
+			DebugLocation(607, 65);
 			if (input.LA(1)=='H'||input.LA(1)=='h')
 			{
 				input.Consume();
@@ -4297,11 +4298,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = While;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:605:7: ( ( 'w' | 'W' ) ( 'h' | 'H' ) ( 'i' | 'I' ) ( 'l' | 'L' ) ( 'e' | 'E' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:608:7: ( ( 'w' | 'W' ) ( 'h' | 'H' ) ( 'i' | 'I' ) ( 'l' | 'L' ) ( 'e' | 'E' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:605:9: ( 'w' | 'W' ) ( 'h' | 'H' ) ( 'i' | 'I' ) ( 'l' | 'L' ) ( 'e' | 'E' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:608:9: ( 'w' | 'W' ) ( 'h' | 'H' ) ( 'i' | 'I' ) ( 'l' | 'L' ) ( 'e' | 'E' )
 			{
-			DebugLocation(605, 9);
+			DebugLocation(608, 9);
 			if (input.LA(1)=='W'||input.LA(1)=='w')
 			{
 				input.Consume();
@@ -4316,7 +4317,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(605, 18);
+			DebugLocation(608, 18);
 			if (input.LA(1)=='H'||input.LA(1)=='h')
 			{
 				input.Consume();
@@ -4331,7 +4332,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(605, 27);
+			DebugLocation(608, 27);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -4346,7 +4347,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(605, 36);
+			DebugLocation(608, 36);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -4361,7 +4362,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(605, 45);
+			DebugLocation(608, 45);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -4405,11 +4406,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Do;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:606:4: ( ( 'd' | 'D' ) ( 'o' | 'O' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:609:4: ( ( 'd' | 'D' ) ( 'o' | 'O' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:606:6: ( 'd' | 'D' ) ( 'o' | 'O' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:609:6: ( 'd' | 'D' ) ( 'o' | 'O' )
 			{
-			DebugLocation(606, 6);
+			DebugLocation(609, 6);
 			if (input.LA(1)=='D'||input.LA(1)=='d')
 			{
 				input.Consume();
@@ -4424,7 +4425,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(606, 15);
+			DebugLocation(609, 15);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -4468,11 +4469,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Try;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:607:5: ( ( 't' | 'T' ) ( 'r' | 'R' ) ( 'y' | 'Y' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:610:5: ( ( 't' | 'T' ) ( 'r' | 'R' ) ( 'y' | 'Y' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:607:7: ( 't' | 'T' ) ( 'r' | 'R' ) ( 'y' | 'Y' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:610:7: ( 't' | 'T' ) ( 'r' | 'R' ) ( 'y' | 'Y' )
 			{
-			DebugLocation(607, 7);
+			DebugLocation(610, 7);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -4487,7 +4488,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(607, 16);
+			DebugLocation(610, 16);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -4502,7 +4503,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(607, 25);
+			DebugLocation(610, 25);
 			if (input.LA(1)=='Y'||input.LA(1)=='y')
 			{
 				input.Consume();
@@ -4546,11 +4547,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Catch;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:608:7: ( ( 'c' | 'C' ) ( 'a' | 'A' ) ( 't' | 'T' ) ( 'c' | 'C' ) ( 'h' | 'H' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:611:7: ( ( 'c' | 'C' ) ( 'a' | 'A' ) ( 't' | 'T' ) ( 'c' | 'C' ) ( 'h' | 'H' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:608:9: ( 'c' | 'C' ) ( 'a' | 'A' ) ( 't' | 'T' ) ( 'c' | 'C' ) ( 'h' | 'H' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:611:9: ( 'c' | 'C' ) ( 'a' | 'A' ) ( 't' | 'T' ) ( 'c' | 'C' ) ( 'h' | 'H' )
 			{
-			DebugLocation(608, 9);
+			DebugLocation(611, 9);
 			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
@@ -4565,7 +4566,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(608, 18);
+			DebugLocation(611, 18);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -4580,7 +4581,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(608, 27);
+			DebugLocation(611, 27);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -4595,7 +4596,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(608, 36);
+			DebugLocation(611, 36);
 			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
@@ -4610,7 +4611,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(608, 45);
+			DebugLocation(611, 45);
 			if (input.LA(1)=='H'||input.LA(1)=='h')
 			{
 				input.Consume();
@@ -4654,11 +4655,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Finally;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:609:9: ( ( 'f' | 'F' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'a' | 'A' ) ( 'l' | 'L' ) ( 'l' | 'L' ) ( 'y' | 'Y' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:612:9: ( ( 'f' | 'F' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'a' | 'A' ) ( 'l' | 'L' ) ( 'l' | 'L' ) ( 'y' | 'Y' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:609:11: ( 'f' | 'F' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'a' | 'A' ) ( 'l' | 'L' ) ( 'l' | 'L' ) ( 'y' | 'Y' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:612:11: ( 'f' | 'F' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'a' | 'A' ) ( 'l' | 'L' ) ( 'l' | 'L' ) ( 'y' | 'Y' )
 			{
-			DebugLocation(609, 11);
+			DebugLocation(612, 11);
 			if (input.LA(1)=='F'||input.LA(1)=='f')
 			{
 				input.Consume();
@@ -4673,7 +4674,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(609, 20);
+			DebugLocation(612, 20);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -4688,7 +4689,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(609, 29);
+			DebugLocation(612, 29);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -4703,7 +4704,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(609, 38);
+			DebugLocation(612, 38);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -4718,7 +4719,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(609, 47);
+			DebugLocation(612, 47);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -4733,7 +4734,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(609, 56);
+			DebugLocation(612, 56);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -4748,7 +4749,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(609, 65);
+			DebugLocation(612, 65);
 			if (input.LA(1)=='Y'||input.LA(1)=='y')
 			{
 				input.Consume();
@@ -4792,11 +4793,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Switch;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:610:8: ( ( 's' | 'S' ) ( 'w' | 'W' ) ( 'i' | 'I' ) ( 't' | 'T' ) ( 'c' | 'C' ) ( 'h' | 'H' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:613:8: ( ( 's' | 'S' ) ( 'w' | 'W' ) ( 'i' | 'I' ) ( 't' | 'T' ) ( 'c' | 'C' ) ( 'h' | 'H' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:610:10: ( 's' | 'S' ) ( 'w' | 'W' ) ( 'i' | 'I' ) ( 't' | 'T' ) ( 'c' | 'C' ) ( 'h' | 'H' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:613:10: ( 's' | 'S' ) ( 'w' | 'W' ) ( 'i' | 'I' ) ( 't' | 'T' ) ( 'c' | 'C' ) ( 'h' | 'H' )
 			{
-			DebugLocation(610, 10);
+			DebugLocation(613, 10);
 			if (input.LA(1)=='S'||input.LA(1)=='s')
 			{
 				input.Consume();
@@ -4811,7 +4812,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(610, 19);
+			DebugLocation(613, 19);
 			if (input.LA(1)=='W'||input.LA(1)=='w')
 			{
 				input.Consume();
@@ -4826,7 +4827,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(610, 28);
+			DebugLocation(613, 28);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -4841,7 +4842,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(610, 37);
+			DebugLocation(613, 37);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -4856,7 +4857,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(610, 46);
+			DebugLocation(613, 46);
 			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
@@ -4871,7 +4872,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(610, 55);
+			DebugLocation(613, 55);
 			if (input.LA(1)=='H'||input.LA(1)=='h')
 			{
 				input.Consume();
@@ -4915,11 +4916,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Case;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:611:6: ( ( 'c' | 'C' ) ( 'a' | 'A' ) ( 's' | 'S' ) ( 'e' | 'E' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:614:6: ( ( 'c' | 'C' ) ( 'a' | 'A' ) ( 's' | 'S' ) ( 'e' | 'E' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:611:8: ( 'c' | 'C' ) ( 'a' | 'A' ) ( 's' | 'S' ) ( 'e' | 'E' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:614:8: ( 'c' | 'C' ) ( 'a' | 'A' ) ( 's' | 'S' ) ( 'e' | 'E' )
 			{
-			DebugLocation(611, 8);
+			DebugLocation(614, 8);
 			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
@@ -4934,7 +4935,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(611, 17);
+			DebugLocation(614, 17);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -4949,7 +4950,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(611, 26);
+			DebugLocation(614, 26);
 			if (input.LA(1)=='S'||input.LA(1)=='s')
 			{
 				input.Consume();
@@ -4964,7 +4965,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(611, 35);
+			DebugLocation(614, 35);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -5008,11 +5009,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Default;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:612:9: ( ( 'd' | 'D' ) ( 'e' | 'E' ) ( 'f' | 'F' ) ( 'a' | 'A' ) ( 'u' | 'U' ) ( 'l' | 'L' ) ( 't' | 'T' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:615:9: ( ( 'd' | 'D' ) ( 'e' | 'E' ) ( 'f' | 'F' ) ( 'a' | 'A' ) ( 'u' | 'U' ) ( 'l' | 'L' ) ( 't' | 'T' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:612:11: ( 'd' | 'D' ) ( 'e' | 'E' ) ( 'f' | 'F' ) ( 'a' | 'A' ) ( 'u' | 'U' ) ( 'l' | 'L' ) ( 't' | 'T' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:615:11: ( 'd' | 'D' ) ( 'e' | 'E' ) ( 'f' | 'F' ) ( 'a' | 'A' ) ( 'u' | 'U' ) ( 'l' | 'L' ) ( 't' | 'T' )
 			{
-			DebugLocation(612, 11);
+			DebugLocation(615, 11);
 			if (input.LA(1)=='D'||input.LA(1)=='d')
 			{
 				input.Consume();
@@ -5027,7 +5028,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(612, 20);
+			DebugLocation(615, 20);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -5042,7 +5043,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(612, 29);
+			DebugLocation(615, 29);
 			if (input.LA(1)=='F'||input.LA(1)=='f')
 			{
 				input.Consume();
@@ -5057,7 +5058,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(612, 38);
+			DebugLocation(615, 38);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -5072,7 +5073,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(612, 47);
+			DebugLocation(615, 47);
 			if (input.LA(1)=='U'||input.LA(1)=='u')
 			{
 				input.Consume();
@@ -5087,7 +5088,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(612, 56);
+			DebugLocation(615, 56);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -5102,7 +5103,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(612, 65);
+			DebugLocation(615, 65);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -5146,11 +5147,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Namespace;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:613:11: ( ( 'n' | 'N' ) ( 'a' | 'A' ) ( 'm' | 'M' ) ( 'e' | 'E' ) ( 's' | 'S' ) ( 'p' | 'P' ) ( 'a' | 'A' ) ( 'c' | 'C' ) ( 'e' | 'E' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:616:11: ( ( 'n' | 'N' ) ( 'a' | 'A' ) ( 'm' | 'M' ) ( 'e' | 'E' ) ( 's' | 'S' ) ( 'p' | 'P' ) ( 'a' | 'A' ) ( 'c' | 'C' ) ( 'e' | 'E' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:613:13: ( 'n' | 'N' ) ( 'a' | 'A' ) ( 'm' | 'M' ) ( 'e' | 'E' ) ( 's' | 'S' ) ( 'p' | 'P' ) ( 'a' | 'A' ) ( 'c' | 'C' ) ( 'e' | 'E' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:616:13: ( 'n' | 'N' ) ( 'a' | 'A' ) ( 'm' | 'M' ) ( 'e' | 'E' ) ( 's' | 'S' ) ( 'p' | 'P' ) ( 'a' | 'A' ) ( 'c' | 'C' ) ( 'e' | 'E' )
 			{
-			DebugLocation(613, 13);
+			DebugLocation(616, 13);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -5165,7 +5166,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(613, 22);
+			DebugLocation(616, 22);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -5180,7 +5181,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(613, 31);
+			DebugLocation(616, 31);
 			if (input.LA(1)=='M'||input.LA(1)=='m')
 			{
 				input.Consume();
@@ -5195,7 +5196,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(613, 40);
+			DebugLocation(616, 40);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -5210,7 +5211,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(613, 49);
+			DebugLocation(616, 49);
 			if (input.LA(1)=='S'||input.LA(1)=='s')
 			{
 				input.Consume();
@@ -5225,7 +5226,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(613, 58);
+			DebugLocation(616, 58);
 			if (input.LA(1)=='P'||input.LA(1)=='p')
 			{
 				input.Consume();
@@ -5240,7 +5241,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(613, 67);
+			DebugLocation(616, 67);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -5255,7 +5256,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(613, 76);
+			DebugLocation(616, 76);
 			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
@@ -5270,7 +5271,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(613, 85);
+			DebugLocation(616, 85);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -5314,11 +5315,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Function;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:614:10: ( ( 'f' | 'F' ) ( 'u' | 'U' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 't' | 'T' ) ( 'i' | 'I' ) ( 'o' | 'O' ) ( 'n' | 'N' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:617:10: ( ( 'f' | 'F' ) ( 'u' | 'U' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 't' | 'T' ) ( 'i' | 'I' ) ( 'o' | 'O' ) ( 'n' | 'N' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:614:12: ( 'f' | 'F' ) ( 'u' | 'U' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 't' | 'T' ) ( 'i' | 'I' ) ( 'o' | 'O' ) ( 'n' | 'N' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:617:12: ( 'f' | 'F' ) ( 'u' | 'U' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 't' | 'T' ) ( 'i' | 'I' ) ( 'o' | 'O' ) ( 'n' | 'N' )
 			{
-			DebugLocation(614, 12);
+			DebugLocation(617, 12);
 			if (input.LA(1)=='F'||input.LA(1)=='f')
 			{
 				input.Consume();
@@ -5333,7 +5334,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(614, 21);
+			DebugLocation(617, 21);
 			if (input.LA(1)=='U'||input.LA(1)=='u')
 			{
 				input.Consume();
@@ -5348,7 +5349,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(614, 30);
+			DebugLocation(617, 30);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -5363,7 +5364,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(614, 39);
+			DebugLocation(617, 39);
 			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
@@ -5378,7 +5379,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(614, 48);
+			DebugLocation(617, 48);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -5393,7 +5394,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(614, 57);
+			DebugLocation(617, 57);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -5408,7 +5409,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(614, 66);
+			DebugLocation(617, 66);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -5423,7 +5424,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(614, 75);
+			DebugLocation(617, 75);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -5467,11 +5468,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Break;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:615:7: ( ( 'b' | 'B' ) ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'a' | 'A' ) ( 'k' | 'K' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:618:7: ( ( 'b' | 'B' ) ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'a' | 'A' ) ( 'k' | 'K' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:615:9: ( 'b' | 'B' ) ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'a' | 'A' ) ( 'k' | 'K' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:618:9: ( 'b' | 'B' ) ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'a' | 'A' ) ( 'k' | 'K' )
 			{
-			DebugLocation(615, 9);
+			DebugLocation(618, 9);
 			if (input.LA(1)=='B'||input.LA(1)=='b')
 			{
 				input.Consume();
@@ -5486,7 +5487,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(615, 18);
+			DebugLocation(618, 18);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -5501,7 +5502,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(615, 27);
+			DebugLocation(618, 27);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -5516,7 +5517,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(615, 36);
+			DebugLocation(618, 36);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -5531,7 +5532,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(615, 45);
+			DebugLocation(618, 45);
 			if (input.LA(1)=='K'||input.LA(1)=='k')
 			{
 				input.Consume();
@@ -5575,11 +5576,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Continue;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:616:10: ( ( 'c' | 'C' ) ( 'o' | 'O' ) ( 'n' | 'N' ) ( 't' | 'T' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'u' | 'U' ) ( 'e' | 'E' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:619:10: ( ( 'c' | 'C' ) ( 'o' | 'O' ) ( 'n' | 'N' ) ( 't' | 'T' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'u' | 'U' ) ( 'e' | 'E' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:616:12: ( 'c' | 'C' ) ( 'o' | 'O' ) ( 'n' | 'N' ) ( 't' | 'T' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'u' | 'U' ) ( 'e' | 'E' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:619:12: ( 'c' | 'C' ) ( 'o' | 'O' ) ( 'n' | 'N' ) ( 't' | 'T' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'u' | 'U' ) ( 'e' | 'E' )
 			{
-			DebugLocation(616, 12);
+			DebugLocation(619, 12);
 			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
@@ -5594,7 +5595,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(616, 21);
+			DebugLocation(619, 21);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -5609,7 +5610,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(616, 30);
+			DebugLocation(619, 30);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -5624,7 +5625,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(616, 39);
+			DebugLocation(619, 39);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -5639,7 +5640,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(616, 48);
+			DebugLocation(619, 48);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -5654,7 +5655,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(616, 57);
+			DebugLocation(619, 57);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -5669,7 +5670,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(616, 66);
+			DebugLocation(619, 66);
 			if (input.LA(1)=='U'||input.LA(1)=='u')
 			{
 				input.Consume();
@@ -5684,7 +5685,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(616, 75);
+			DebugLocation(619, 75);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -5728,11 +5729,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Goto;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:617:6: ( ( 'g' | 'G' ) ( 'o' | 'O' ) ( 't' | 'T' ) ( 'o' | 'O' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:620:6: ( ( 'g' | 'G' ) ( 'o' | 'O' ) ( 't' | 'T' ) ( 'o' | 'O' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:617:8: ( 'g' | 'G' ) ( 'o' | 'O' ) ( 't' | 'T' ) ( 'o' | 'O' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:620:8: ( 'g' | 'G' ) ( 'o' | 'O' ) ( 't' | 'T' ) ( 'o' | 'O' )
 			{
-			DebugLocation(617, 8);
+			DebugLocation(620, 8);
 			if (input.LA(1)=='G'||input.LA(1)=='g')
 			{
 				input.Consume();
@@ -5747,7 +5748,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(617, 17);
+			DebugLocation(620, 17);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -5762,7 +5763,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(617, 26);
+			DebugLocation(620, 26);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -5777,7 +5778,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(617, 35);
+			DebugLocation(620, 35);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -5821,11 +5822,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Return;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:618:8: ( ( 'r' | 'R' ) ( 'e' | 'E' ) ( 't' | 'T' ) ( 'u' | 'U' ) ( 'r' | 'R' ) ( 'n' | 'N' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:621:8: ( ( 'r' | 'R' ) ( 'e' | 'E' ) ( 't' | 'T' ) ( 'u' | 'U' ) ( 'r' | 'R' ) ( 'n' | 'N' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:618:10: ( 'r' | 'R' ) ( 'e' | 'E' ) ( 't' | 'T' ) ( 'u' | 'U' ) ( 'r' | 'R' ) ( 'n' | 'N' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:621:10: ( 'r' | 'R' ) ( 'e' | 'E' ) ( 't' | 'T' ) ( 'u' | 'U' ) ( 'r' | 'R' ) ( 'n' | 'N' )
 			{
-			DebugLocation(618, 10);
+			DebugLocation(621, 10);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -5840,7 +5841,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(618, 19);
+			DebugLocation(621, 19);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -5855,7 +5856,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(618, 28);
+			DebugLocation(621, 28);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -5870,7 +5871,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(618, 37);
+			DebugLocation(621, 37);
 			if (input.LA(1)=='U'||input.LA(1)=='u')
 			{
 				input.Consume();
@@ -5885,7 +5886,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(618, 46);
+			DebugLocation(621, 46);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -5900,7 +5901,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(618, 55);
+			DebugLocation(621, 55);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -5944,11 +5945,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Throw;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:619:7: ( ( 't' | 'T' ) ( 'h' | 'H' ) ( 'r' | 'R' ) ( 'o' | 'O' ) ( 'w' | 'W' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:622:7: ( ( 't' | 'T' ) ( 'h' | 'H' ) ( 'r' | 'R' ) ( 'o' | 'O' ) ( 'w' | 'W' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:619:9: ( 't' | 'T' ) ( 'h' | 'H' ) ( 'r' | 'R' ) ( 'o' | 'O' ) ( 'w' | 'W' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:622:9: ( 't' | 'T' ) ( 'h' | 'H' ) ( 'r' | 'R' ) ( 'o' | 'O' ) ( 'w' | 'W' )
 			{
-			DebugLocation(619, 9);
+			DebugLocation(622, 9);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -5963,7 +5964,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(619, 18);
+			DebugLocation(622, 18);
 			if (input.LA(1)=='H'||input.LA(1)=='h')
 			{
 				input.Consume();
@@ -5978,7 +5979,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(619, 27);
+			DebugLocation(622, 27);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -5993,7 +5994,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(619, 36);
+			DebugLocation(622, 36);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -6008,7 +6009,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(619, 45);
+			DebugLocation(622, 45);
 			if (input.LA(1)=='W'||input.LA(1)=='w')
 			{
 				input.Consume();
@@ -6052,11 +6053,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Global;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:620:8: ( ( 'g' | 'G' ) ( 'l' | 'L' ) ( 'o' | 'O' ) ( 'b' | 'B' ) ( 'a' | 'A' ) ( 'l' | 'L' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:623:8: ( ( 'g' | 'G' ) ( 'l' | 'L' ) ( 'o' | 'O' ) ( 'b' | 'B' ) ( 'a' | 'A' ) ( 'l' | 'L' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:620:10: ( 'g' | 'G' ) ( 'l' | 'L' ) ( 'o' | 'O' ) ( 'b' | 'B' ) ( 'a' | 'A' ) ( 'l' | 'L' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:623:10: ( 'g' | 'G' ) ( 'l' | 'L' ) ( 'o' | 'O' ) ( 'b' | 'B' ) ( 'a' | 'A' ) ( 'l' | 'L' )
 			{
-			DebugLocation(620, 10);
+			DebugLocation(623, 10);
 			if (input.LA(1)=='G'||input.LA(1)=='g')
 			{
 				input.Consume();
@@ -6071,7 +6072,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(620, 19);
+			DebugLocation(623, 19);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -6086,7 +6087,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(620, 28);
+			DebugLocation(623, 28);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -6101,7 +6102,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(620, 37);
+			DebugLocation(623, 37);
 			if (input.LA(1)=='B'||input.LA(1)=='b')
 			{
 				input.Consume();
@@ -6116,7 +6117,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(620, 46);
+			DebugLocation(623, 46);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -6131,7 +6132,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(620, 55);
+			DebugLocation(623, 55);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -6175,11 +6176,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Static;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:621:8: ( ( 's' | 'S' ) ( 't' | 'T' ) ( 'a' | 'A' ) ( 't' | 'T' ) ( 'i' | 'I' ) ( 'c' | 'C' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:624:8: ( ( 's' | 'S' ) ( 't' | 'T' ) ( 'a' | 'A' ) ( 't' | 'T' ) ( 'i' | 'I' ) ( 'c' | 'C' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:621:10: ( 's' | 'S' ) ( 't' | 'T' ) ( 'a' | 'A' ) ( 't' | 'T' ) ( 'i' | 'I' ) ( 'c' | 'C' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:624:10: ( 's' | 'S' ) ( 't' | 'T' ) ( 'a' | 'A' ) ( 't' | 'T' ) ( 'i' | 'I' ) ( 'c' | 'C' )
 			{
-			DebugLocation(621, 10);
+			DebugLocation(624, 10);
 			if (input.LA(1)=='S'||input.LA(1)=='s')
 			{
 				input.Consume();
@@ -6194,7 +6195,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(621, 19);
+			DebugLocation(624, 19);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -6209,7 +6210,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(621, 28);
+			DebugLocation(624, 28);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -6224,7 +6225,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(621, 37);
+			DebugLocation(624, 37);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -6239,7 +6240,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(621, 46);
+			DebugLocation(624, 46);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -6254,7 +6255,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(621, 55);
+			DebugLocation(624, 55);
 			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
@@ -6298,11 +6299,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = And;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:622:5: ( ( 'a' | 'A' ) ( 'n' | 'N' ) ( 'd' | 'D' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:625:5: ( ( 'a' | 'A' ) ( 'n' | 'N' ) ( 'd' | 'D' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:622:7: ( 'a' | 'A' ) ( 'n' | 'N' ) ( 'd' | 'D' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:625:7: ( 'a' | 'A' ) ( 'n' | 'N' ) ( 'd' | 'D' )
 			{
-			DebugLocation(622, 7);
+			DebugLocation(625, 7);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -6317,7 +6318,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(622, 16);
+			DebugLocation(625, 16);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -6332,7 +6333,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(622, 25);
+			DebugLocation(625, 25);
 			if (input.LA(1)=='D'||input.LA(1)=='d')
 			{
 				input.Consume();
@@ -6376,11 +6377,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Or;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:623:4: ( ( 'o' | 'O' ) ( 'r' | 'R' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:626:4: ( ( 'o' | 'O' ) ( 'r' | 'R' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:623:6: ( 'o' | 'O' ) ( 'r' | 'R' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:626:6: ( 'o' | 'O' ) ( 'r' | 'R' )
 			{
-			DebugLocation(623, 6);
+			DebugLocation(626, 6);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -6395,7 +6396,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(623, 15);
+			DebugLocation(626, 15);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -6439,11 +6440,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Xor;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:624:5: ( ( 'x' | 'X' ) ( 'o' | 'O' ) ( 'r' | 'R' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:627:5: ( ( 'x' | 'X' ) ( 'o' | 'O' ) ( 'r' | 'R' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:624:7: ( 'x' | 'X' ) ( 'o' | 'O' ) ( 'r' | 'R' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:627:7: ( 'x' | 'X' ) ( 'o' | 'O' ) ( 'r' | 'R' )
 			{
-			DebugLocation(624, 7);
+			DebugLocation(627, 7);
 			if (input.LA(1)=='X'||input.LA(1)=='x')
 			{
 				input.Consume();
@@ -6458,7 +6459,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(624, 16);
+			DebugLocation(627, 16);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -6473,7 +6474,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(624, 25);
+			DebugLocation(627, 25);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -6517,11 +6518,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Instanceof;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:625:12: ( ( 'i' | 'I' ) ( 'n' | 'N' ) ( 's' | 'S' ) ( 't' | 'T' ) ( 'a' | 'A' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'e' | 'E' ) ( 'o' | 'O' ) ( 'f' | 'F' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:628:12: ( ( 'i' | 'I' ) ( 'n' | 'N' ) ( 's' | 'S' ) ( 't' | 'T' ) ( 'a' | 'A' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'e' | 'E' ) ( 'o' | 'O' ) ( 'f' | 'F' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:625:14: ( 'i' | 'I' ) ( 'n' | 'N' ) ( 's' | 'S' ) ( 't' | 'T' ) ( 'a' | 'A' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'e' | 'E' ) ( 'o' | 'O' ) ( 'f' | 'F' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:628:14: ( 'i' | 'I' ) ( 'n' | 'N' ) ( 's' | 'S' ) ( 't' | 'T' ) ( 'a' | 'A' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'e' | 'E' ) ( 'o' | 'O' ) ( 'f' | 'F' )
 			{
-			DebugLocation(625, 14);
+			DebugLocation(628, 14);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -6536,7 +6537,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(625, 23);
+			DebugLocation(628, 23);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -6551,7 +6552,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(625, 32);
+			DebugLocation(628, 32);
 			if (input.LA(1)=='S'||input.LA(1)=='s')
 			{
 				input.Consume();
@@ -6566,7 +6567,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(625, 41);
+			DebugLocation(628, 41);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -6581,7 +6582,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(625, 50);
+			DebugLocation(628, 50);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -6596,7 +6597,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(625, 59);
+			DebugLocation(628, 59);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -6611,7 +6612,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(625, 68);
+			DebugLocation(628, 68);
 			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
@@ -6626,7 +6627,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(625, 77);
+			DebugLocation(628, 77);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -6641,7 +6642,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(625, 86);
+			DebugLocation(628, 86);
 			if (input.LA(1)=='O'||input.LA(1)=='o')
 			{
 				input.Consume();
@@ -6656,7 +6657,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(625, 95);
+			DebugLocation(628, 95);
 			if (input.LA(1)=='F'||input.LA(1)=='f')
 			{
 				input.Consume();
@@ -6700,11 +6701,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Null;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:626:6: ( ( 'n' | 'N' ) ( 'u' | 'U' ) ( 'l' | 'L' ) ( 'l' | 'L' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:629:6: ( ( 'n' | 'N' ) ( 'u' | 'U' ) ( 'l' | 'L' ) ( 'l' | 'L' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:626:8: ( 'n' | 'N' ) ( 'u' | 'U' ) ( 'l' | 'L' ) ( 'l' | 'L' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:629:8: ( 'n' | 'N' ) ( 'u' | 'U' ) ( 'l' | 'L' ) ( 'l' | 'L' )
 			{
-			DebugLocation(626, 8);
+			DebugLocation(629, 8);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -6719,7 +6720,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(626, 17);
+			DebugLocation(629, 17);
 			if (input.LA(1)=='U'||input.LA(1)=='u')
 			{
 				input.Consume();
@@ -6734,7 +6735,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(626, 26);
+			DebugLocation(629, 26);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -6749,7 +6750,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(626, 35);
+			DebugLocation(629, 35);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -6793,11 +6794,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = List;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:627:6: ( ( 'l' | 'L' ) ( 'i' | 'I' ) ( 's' | 'S' ) ( 't' | 'T' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:630:6: ( ( 'l' | 'L' ) ( 'i' | 'I' ) ( 's' | 'S' ) ( 't' | 'T' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:627:8: ( 'l' | 'L' ) ( 'i' | 'I' ) ( 's' | 'S' ) ( 't' | 'T' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:630:8: ( 'l' | 'L' ) ( 'i' | 'I' ) ( 's' | 'S' ) ( 't' | 'T' )
 			{
-			DebugLocation(627, 8);
+			DebugLocation(630, 8);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -6812,7 +6813,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(627, 17);
+			DebugLocation(630, 17);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -6827,7 +6828,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(627, 26);
+			DebugLocation(630, 26);
 			if (input.LA(1)=='S'||input.LA(1)=='s')
 			{
 				input.Consume();
@@ -6842,7 +6843,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(627, 35);
+			DebugLocation(630, 35);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -6886,11 +6887,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Class;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:628:7: ( ( 'c' | 'C' ) ( 'l' | 'L' ) ( 'a' | 'A' ) ( 's' | 'S' ) ( 's' | 'S' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:631:7: ( ( 'c' | 'C' ) ( 'l' | 'L' ) ( 'a' | 'A' ) ( 's' | 'S' ) ( 's' | 'S' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:628:9: ( 'c' | 'C' ) ( 'l' | 'L' ) ( 'a' | 'A' ) ( 's' | 'S' ) ( 's' | 'S' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:631:9: ( 'c' | 'C' ) ( 'l' | 'L' ) ( 'a' | 'A' ) ( 's' | 'S' ) ( 's' | 'S' )
 			{
-			DebugLocation(628, 9);
+			DebugLocation(631, 9);
 			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
@@ -6905,7 +6906,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(628, 18);
+			DebugLocation(631, 18);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -6920,7 +6921,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(628, 27);
+			DebugLocation(631, 27);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -6935,7 +6936,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(628, 36);
+			DebugLocation(631, 36);
 			if (input.LA(1)=='S'||input.LA(1)=='s')
 			{
 				input.Consume();
@@ -6950,7 +6951,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(628, 45);
+			DebugLocation(631, 45);
 			if (input.LA(1)=='S'||input.LA(1)=='s')
 			{
 				input.Consume();
@@ -6994,11 +6995,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Interface;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:629:11: ( ( 'i' | 'I' ) ( 'n' | 'N' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'r' | 'R' ) ( 'f' | 'F' ) ( 'a' | 'A' ) ( 'c' | 'C' ) ( 'e' | 'E' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:632:11: ( ( 'i' | 'I' ) ( 'n' | 'N' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'r' | 'R' ) ( 'f' | 'F' ) ( 'a' | 'A' ) ( 'c' | 'C' ) ( 'e' | 'E' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:629:13: ( 'i' | 'I' ) ( 'n' | 'N' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'r' | 'R' ) ( 'f' | 'F' ) ( 'a' | 'A' ) ( 'c' | 'C' ) ( 'e' | 'E' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:632:13: ( 'i' | 'I' ) ( 'n' | 'N' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'r' | 'R' ) ( 'f' | 'F' ) ( 'a' | 'A' ) ( 'c' | 'C' ) ( 'e' | 'E' )
 			{
-			DebugLocation(629, 13);
+			DebugLocation(632, 13);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -7013,7 +7014,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(629, 22);
+			DebugLocation(632, 22);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -7028,7 +7029,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(629, 31);
+			DebugLocation(632, 31);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -7043,7 +7044,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(629, 40);
+			DebugLocation(632, 40);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -7058,7 +7059,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(629, 49);
+			DebugLocation(632, 49);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -7073,7 +7074,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(629, 58);
+			DebugLocation(632, 58);
 			if (input.LA(1)=='F'||input.LA(1)=='f')
 			{
 				input.Consume();
@@ -7088,7 +7089,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(629, 67);
+			DebugLocation(632, 67);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -7103,7 +7104,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(629, 76);
+			DebugLocation(632, 76);
 			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
@@ -7118,7 +7119,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(629, 85);
+			DebugLocation(632, 85);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -7162,11 +7163,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Extends;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:630:9: ( ( 'e' | 'E' ) ( 'x' | 'X' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'n' | 'N' ) ( 'd' | 'D' ) ( 's' | 'S' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:633:9: ( ( 'e' | 'E' ) ( 'x' | 'X' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'n' | 'N' ) ( 'd' | 'D' ) ( 's' | 'S' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:630:11: ( 'e' | 'E' ) ( 'x' | 'X' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'n' | 'N' ) ( 'd' | 'D' ) ( 's' | 'S' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:633:11: ( 'e' | 'E' ) ( 'x' | 'X' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'n' | 'N' ) ( 'd' | 'D' ) ( 's' | 'S' )
 			{
-			DebugLocation(630, 11);
+			DebugLocation(633, 11);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -7181,7 +7182,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(630, 20);
+			DebugLocation(633, 20);
 			if (input.LA(1)=='X'||input.LA(1)=='x')
 			{
 				input.Consume();
@@ -7196,7 +7197,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(630, 29);
+			DebugLocation(633, 29);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -7211,7 +7212,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(630, 38);
+			DebugLocation(633, 38);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -7226,7 +7227,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(630, 47);
+			DebugLocation(633, 47);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -7241,7 +7242,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(630, 56);
+			DebugLocation(633, 56);
 			if (input.LA(1)=='D'||input.LA(1)=='d')
 			{
 				input.Consume();
@@ -7256,7 +7257,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(630, 65);
+			DebugLocation(633, 65);
 			if (input.LA(1)=='S'||input.LA(1)=='s')
 			{
 				input.Consume();
@@ -7300,11 +7301,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		{
 			int _type = Implements;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:631:12: ( ( 'i' | 'I' ) ( 'm' | 'M' ) ( 'p' | 'P' ) ( 'l' | 'L' ) ( 'e' | 'E' ) ( 'm' | 'M' ) ( 'e' | 'E' ) ( 'n' | 'N' ) ( 't' | 'T' ) ( 's' | 'S' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:634:12: ( ( 'i' | 'I' ) ( 'm' | 'M' ) ( 'p' | 'P' ) ( 'l' | 'L' ) ( 'e' | 'E' ) ( 'm' | 'M' ) ( 'e' | 'E' ) ( 'n' | 'N' ) ( 't' | 'T' ) ( 's' | 'S' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:631:14: ( 'i' | 'I' ) ( 'm' | 'M' ) ( 'p' | 'P' ) ( 'l' | 'L' ) ( 'e' | 'E' ) ( 'm' | 'M' ) ( 'e' | 'E' ) ( 'n' | 'N' ) ( 't' | 'T' ) ( 's' | 'S' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:634:14: ( 'i' | 'I' ) ( 'm' | 'M' ) ( 'p' | 'P' ) ( 'l' | 'L' ) ( 'e' | 'E' ) ( 'm' | 'M' ) ( 'e' | 'E' ) ( 'n' | 'N' ) ( 't' | 'T' ) ( 's' | 'S' )
 			{
-			DebugLocation(631, 14);
+			DebugLocation(634, 14);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -7319,7 +7320,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(631, 23);
+			DebugLocation(634, 23);
 			if (input.LA(1)=='M'||input.LA(1)=='m')
 			{
 				input.Consume();
@@ -7334,7 +7335,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(631, 32);
+			DebugLocation(634, 32);
 			if (input.LA(1)=='P'||input.LA(1)=='p')
 			{
 				input.Consume();
@@ -7349,7 +7350,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(631, 41);
+			DebugLocation(634, 41);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -7364,7 +7365,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(631, 50);
+			DebugLocation(634, 50);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -7379,7 +7380,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(631, 59);
+			DebugLocation(634, 59);
 			if (input.LA(1)=='M'||input.LA(1)=='m')
 			{
 				input.Consume();
@@ -7394,7 +7395,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(631, 68);
+			DebugLocation(634, 68);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -7409,7 +7410,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(631, 77);
+			DebugLocation(634, 77);
 			if (input.LA(1)=='N'||input.LA(1)=='n')
 			{
 				input.Consume();
@@ -7424,7 +7425,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(631, 86);
+			DebugLocation(634, 86);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -7439,7 +7440,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(631, 95);
+			DebugLocation(634, 95);
 			if (input.LA(1)=='S'||input.LA(1)=='s')
 			{
 				input.Consume();
@@ -7469,1703 +7470,25 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	}
 	// $ANTLR end "Implements"
 
-	partial void EnterRule_Abstract();
-	partial void LeaveRule_Abstract();
+	partial void EnterRule_Final();
+	partial void LeaveRule_Final();
 
-	// $ANTLR start "Abstract"
-	[GrammarRule("Abstract")]
-	private void mAbstract()
+	// $ANTLR start "Final"
+	[GrammarRule("Final")]
+	private void mFinal()
 	{
-		EnterRule_Abstract();
-		EnterRule("Abstract", 85);
-		TraceIn("Abstract", 85);
+		EnterRule_Final();
+		EnterRule("Final", 85);
+		TraceIn("Final", 85);
 		try
 		{
-			int _type = Abstract;
+			int _type = Final;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:632:10: ( ( 'a' | 'A' ) ( 'b' | 'B' ) ( 's' | 'S' ) ( 't' | 'T' ) ( 'r' | 'R' ) ( 'a' | 'A' ) ( 'c' | 'C' ) ( 't' | 'T' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:635:7: ( ( 'f' | 'F' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'a' | 'A' ) ( 'l' | 'L' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:632:12: ( 'a' | 'A' ) ( 'b' | 'B' ) ( 's' | 'S' ) ( 't' | 'T' ) ( 'r' | 'R' ) ( 'a' | 'A' ) ( 'c' | 'C' ) ( 't' | 'T' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:635:9: ( 'f' | 'F' ) ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'a' | 'A' ) ( 'l' | 'L' )
 			{
-			DebugLocation(632, 12);
-			if (input.LA(1)=='A'||input.LA(1)=='a')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(632, 21);
-			if (input.LA(1)=='B'||input.LA(1)=='b')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(632, 30);
-			if (input.LA(1)=='S'||input.LA(1)=='s')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(632, 39);
-			if (input.LA(1)=='T'||input.LA(1)=='t')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(632, 48);
-			if (input.LA(1)=='R'||input.LA(1)=='r')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(632, 57);
-			if (input.LA(1)=='A'||input.LA(1)=='a')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(632, 66);
-			if (input.LA(1)=='C'||input.LA(1)=='c')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(632, 75);
-			if (input.LA(1)=='T'||input.LA(1)=='t')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("Abstract", 85);
-			LeaveRule("Abstract", 85);
-			LeaveRule_Abstract();
-		}
-	}
-	// $ANTLR end "Abstract"
-
-	partial void EnterRule_Var();
-	partial void LeaveRule_Var();
-
-	// $ANTLR start "Var"
-	[GrammarRule("Var")]
-	private void mVar()
-	{
-		EnterRule_Var();
-		EnterRule("Var", 86);
-		TraceIn("Var", 86);
-		try
-		{
-			int _type = Var;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:633:5: ( ( 'v' | 'V' ) ( 'a' | 'A' ) ( 'r' | 'R' ) )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:633:7: ( 'v' | 'V' ) ( 'a' | 'A' ) ( 'r' | 'R' )
-			{
-			DebugLocation(633, 7);
-			if (input.LA(1)=='V'||input.LA(1)=='v')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(633, 16);
-			if (input.LA(1)=='A'||input.LA(1)=='a')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(633, 25);
-			if (input.LA(1)=='R'||input.LA(1)=='r')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("Var", 86);
-			LeaveRule("Var", 86);
-			LeaveRule_Var();
-		}
-	}
-	// $ANTLR end "Var"
-
-	partial void EnterRule_Const();
-	partial void LeaveRule_Const();
-
-	// $ANTLR start "Const"
-	[GrammarRule("Const")]
-	private void mConst()
-	{
-		EnterRule_Const();
-		EnterRule("Const", 87);
-		TraceIn("Const", 87);
-		try
-		{
-			int _type = Const;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:634:7: ( ( 'c' | 'C' ) ( 'o' | 'O' ) ( 'n' | 'N' ) ( 's' | 'S' ) ( 't' | 'T' ) )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:634:9: ( 'c' | 'C' ) ( 'o' | 'O' ) ( 'n' | 'N' ) ( 's' | 'S' ) ( 't' | 'T' )
-			{
-			DebugLocation(634, 9);
-			if (input.LA(1)=='C'||input.LA(1)=='c')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(634, 18);
-			if (input.LA(1)=='O'||input.LA(1)=='o')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(634, 27);
-			if (input.LA(1)=='N'||input.LA(1)=='n')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(634, 36);
-			if (input.LA(1)=='S'||input.LA(1)=='s')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(634, 45);
-			if (input.LA(1)=='T'||input.LA(1)=='t')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("Const", 87);
-			LeaveRule("Const", 87);
-			LeaveRule_Const();
-		}
-	}
-	// $ANTLR end "Const"
-
-	partial void EnterRule_As();
-	partial void LeaveRule_As();
-
-	// $ANTLR start "As"
-	[GrammarRule("As")]
-	private void mAs()
-	{
-		EnterRule_As();
-		EnterRule("As", 88);
-		TraceIn("As", 88);
-		try
-		{
-			int _type = As;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:635:4: ( ( 'a' | 'A' ) ( 's' | 'S' ) )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:635:6: ( 'a' | 'A' ) ( 's' | 'S' )
-			{
-			DebugLocation(635, 6);
-			if (input.LA(1)=='A'||input.LA(1)=='a')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(635, 15);
-			if (input.LA(1)=='S'||input.LA(1)=='s')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("As", 88);
-			LeaveRule("As", 88);
-			LeaveRule_As();
-		}
-	}
-	// $ANTLR end "As"
-
-	partial void EnterRule_Use();
-	partial void LeaveRule_Use();
-
-	// $ANTLR start "Use"
-	[GrammarRule("Use")]
-	private void mUse()
-	{
-		EnterRule_Use();
-		EnterRule("Use", 89);
-		TraceIn("Use", 89);
-		try
-		{
-			int _type = Use;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:636:5: ( ( 'u' | 'U' ) ( 's' | 'S' ) ( 'e' | 'E' ) )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:636:7: ( 'u' | 'U' ) ( 's' | 'S' ) ( 'e' | 'E' )
-			{
-			DebugLocation(636, 7);
-			if (input.LA(1)=='U'||input.LA(1)=='u')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(636, 16);
-			if (input.LA(1)=='S'||input.LA(1)=='s')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(636, 25);
-			if (input.LA(1)=='E'||input.LA(1)=='e')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("Use", 89);
-			LeaveRule("Use", 89);
-			LeaveRule_Use();
-		}
-	}
-	// $ANTLR end "Use"
-
-	partial void EnterRule_Require();
-	partial void LeaveRule_Require();
-
-	// $ANTLR start "Require"
-	[GrammarRule("Require")]
-	private void mRequire()
-	{
-		EnterRule_Require();
-		EnterRule("Require", 90);
-		TraceIn("Require", 90);
-		try
-		{
-			int _type = Require;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:638:9: ( ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'q' | 'Q' ) ( 'u' | 'U' ) ( 'i' | 'I' ) ( 'r' | 'R' ) ( 'e' | 'E' ) )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:638:11: ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'q' | 'Q' ) ( 'u' | 'U' ) ( 'i' | 'I' ) ( 'r' | 'R' ) ( 'e' | 'E' )
-			{
-			DebugLocation(638, 11);
-			if (input.LA(1)=='R'||input.LA(1)=='r')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(638, 20);
-			if (input.LA(1)=='E'||input.LA(1)=='e')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(638, 29);
-			if (input.LA(1)=='Q'||input.LA(1)=='q')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(638, 38);
-			if (input.LA(1)=='U'||input.LA(1)=='u')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(638, 47);
-			if (input.LA(1)=='I'||input.LA(1)=='i')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(638, 56);
-			if (input.LA(1)=='R'||input.LA(1)=='r')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(638, 65);
-			if (input.LA(1)=='E'||input.LA(1)=='e')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("Require", 90);
-			LeaveRule("Require", 90);
-			LeaveRule_Require();
-		}
-	}
-	// $ANTLR end "Require"
-
-	partial void EnterRule_RequireOnce();
-	partial void LeaveRule_RequireOnce();
-
-	// $ANTLR start "RequireOnce"
-	[GrammarRule("RequireOnce")]
-	private void mRequireOnce()
-	{
-		EnterRule_RequireOnce();
-		EnterRule("RequireOnce", 91);
-		TraceIn("RequireOnce", 91);
-		try
-		{
-			int _type = RequireOnce;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:639:13: ( ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'q' | 'Q' ) ( 'u' | 'U' ) ( 'i' | 'I' ) ( 'r' | 'R' ) ( 'e' | 'E' ) '_' ( 'o' | 'O' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'e' | 'E' ) )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:639:15: ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'q' | 'Q' ) ( 'u' | 'U' ) ( 'i' | 'I' ) ( 'r' | 'R' ) ( 'e' | 'E' ) '_' ( 'o' | 'O' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'e' | 'E' )
-			{
-			DebugLocation(639, 15);
-			if (input.LA(1)=='R'||input.LA(1)=='r')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(639, 24);
-			if (input.LA(1)=='E'||input.LA(1)=='e')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(639, 33);
-			if (input.LA(1)=='Q'||input.LA(1)=='q')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(639, 42);
-			if (input.LA(1)=='U'||input.LA(1)=='u')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(639, 51);
-			if (input.LA(1)=='I'||input.LA(1)=='i')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(639, 60);
-			if (input.LA(1)=='R'||input.LA(1)=='r')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(639, 69);
-			if (input.LA(1)=='E'||input.LA(1)=='e')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(639, 78);
-			Match('_'); if (state.failed) return;
-			DebugLocation(639, 81);
-			if (input.LA(1)=='O'||input.LA(1)=='o')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(639, 90);
-			if (input.LA(1)=='N'||input.LA(1)=='n')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(639, 99);
-			if (input.LA(1)=='C'||input.LA(1)=='c')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(639, 108);
-			if (input.LA(1)=='E'||input.LA(1)=='e')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("RequireOnce", 91);
-			LeaveRule("RequireOnce", 91);
-			LeaveRule_RequireOnce();
-		}
-	}
-	// $ANTLR end "RequireOnce"
-
-	partial void EnterRule_Include();
-	partial void LeaveRule_Include();
-
-	// $ANTLR start "Include"
-	[GrammarRule("Include")]
-	private void mInclude()
-	{
-		EnterRule_Include();
-		EnterRule("Include", 92);
-		TraceIn("Include", 92);
-		try
-		{
-			int _type = Include;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:640:9: ( ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'l' | 'L' ) ( 'u' | 'U' ) ( 'd' | 'D' ) ( 'e' | 'E' ) )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:640:11: ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'l' | 'L' ) ( 'u' | 'U' ) ( 'd' | 'D' ) ( 'e' | 'E' )
-			{
-			DebugLocation(640, 11);
-			if (input.LA(1)=='I'||input.LA(1)=='i')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(640, 20);
-			if (input.LA(1)=='N'||input.LA(1)=='n')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(640, 29);
-			if (input.LA(1)=='C'||input.LA(1)=='c')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(640, 38);
-			if (input.LA(1)=='L'||input.LA(1)=='l')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(640, 47);
-			if (input.LA(1)=='U'||input.LA(1)=='u')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(640, 56);
-			if (input.LA(1)=='D'||input.LA(1)=='d')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(640, 65);
-			if (input.LA(1)=='E'||input.LA(1)=='e')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("Include", 92);
-			LeaveRule("Include", 92);
-			LeaveRule_Include();
-		}
-	}
-	// $ANTLR end "Include"
-
-	partial void EnterRule_IncludeOnce();
-	partial void LeaveRule_IncludeOnce();
-
-	// $ANTLR start "IncludeOnce"
-	[GrammarRule("IncludeOnce")]
-	private void mIncludeOnce()
-	{
-		EnterRule_IncludeOnce();
-		EnterRule("IncludeOnce", 93);
-		TraceIn("IncludeOnce", 93);
-		try
-		{
-			int _type = IncludeOnce;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:641:13: ( ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'l' | 'L' ) ( 'u' | 'U' ) ( 'd' | 'D' ) ( 'e' | 'E' ) '_' ( 'o' | 'O' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'e' | 'E' ) )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:641:15: ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'l' | 'L' ) ( 'u' | 'U' ) ( 'd' | 'D' ) ( 'e' | 'E' ) '_' ( 'o' | 'O' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'e' | 'E' )
-			{
-			DebugLocation(641, 15);
-			if (input.LA(1)=='I'||input.LA(1)=='i')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(641, 24);
-			if (input.LA(1)=='N'||input.LA(1)=='n')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(641, 33);
-			if (input.LA(1)=='C'||input.LA(1)=='c')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(641, 42);
-			if (input.LA(1)=='L'||input.LA(1)=='l')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(641, 51);
-			if (input.LA(1)=='U'||input.LA(1)=='u')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(641, 60);
-			if (input.LA(1)=='D'||input.LA(1)=='d')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(641, 69);
-			if (input.LA(1)=='E'||input.LA(1)=='e')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(641, 78);
-			Match('_'); if (state.failed) return;
-			DebugLocation(641, 81);
-			if (input.LA(1)=='O'||input.LA(1)=='o')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(641, 90);
-			if (input.LA(1)=='N'||input.LA(1)=='n')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(641, 99);
-			if (input.LA(1)=='C'||input.LA(1)=='c')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(641, 108);
-			if (input.LA(1)=='E'||input.LA(1)=='e')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("IncludeOnce", 93);
-			LeaveRule("IncludeOnce", 93);
-			LeaveRule_IncludeOnce();
-		}
-	}
-	// $ANTLR end "IncludeOnce"
-
-	partial void EnterRule_Public();
-	partial void LeaveRule_Public();
-
-	// $ANTLR start "Public"
-	[GrammarRule("Public")]
-	private void mPublic()
-	{
-		EnterRule_Public();
-		EnterRule("Public", 94);
-		TraceIn("Public", 94);
-		try
-		{
-			int _type = Public;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:642:8: ( ( 'p' | 'P' ) ( 'u' | 'U' ) ( 'b' | 'B' ) ( 'l' | 'L' ) ( 'i' | 'I' ) ( 'c' | 'C' ) )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:642:10: ( 'p' | 'P' ) ( 'u' | 'U' ) ( 'b' | 'B' ) ( 'l' | 'L' ) ( 'i' | 'I' ) ( 'c' | 'C' )
-			{
-			DebugLocation(642, 10);
-			if (input.LA(1)=='P'||input.LA(1)=='p')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(642, 19);
-			if (input.LA(1)=='U'||input.LA(1)=='u')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(642, 28);
-			if (input.LA(1)=='B'||input.LA(1)=='b')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(642, 37);
-			if (input.LA(1)=='L'||input.LA(1)=='l')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(642, 46);
-			if (input.LA(1)=='I'||input.LA(1)=='i')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(642, 55);
-			if (input.LA(1)=='C'||input.LA(1)=='c')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("Public", 94);
-			LeaveRule("Public", 94);
-			LeaveRule_Public();
-		}
-	}
-	// $ANTLR end "Public"
-
-	partial void EnterRule_Private();
-	partial void LeaveRule_Private();
-
-	// $ANTLR start "Private"
-	[GrammarRule("Private")]
-	private void mPrivate()
-	{
-		EnterRule_Private();
-		EnterRule("Private", 95);
-		TraceIn("Private", 95);
-		try
-		{
-			int _type = Private;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:643:9: ( ( 'p' | 'P' ) ( 'r' | 'R' ) ( 'i' | 'I' ) ( 'v' | 'V' ) ( 'a' | 'A' ) ( 't' | 'T' ) ( 'e' | 'E' ) )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:643:11: ( 'p' | 'P' ) ( 'r' | 'R' ) ( 'i' | 'I' ) ( 'v' | 'V' ) ( 'a' | 'A' ) ( 't' | 'T' ) ( 'e' | 'E' )
-			{
-			DebugLocation(643, 11);
-			if (input.LA(1)=='P'||input.LA(1)=='p')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(643, 20);
-			if (input.LA(1)=='R'||input.LA(1)=='r')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(643, 29);
-			if (input.LA(1)=='I'||input.LA(1)=='i')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(643, 38);
-			if (input.LA(1)=='V'||input.LA(1)=='v')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(643, 47);
-			if (input.LA(1)=='A'||input.LA(1)=='a')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(643, 56);
-			if (input.LA(1)=='T'||input.LA(1)=='t')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(643, 65);
-			if (input.LA(1)=='E'||input.LA(1)=='e')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("Private", 95);
-			LeaveRule("Private", 95);
-			LeaveRule_Private();
-		}
-	}
-	// $ANTLR end "Private"
-
-	partial void EnterRule_Protected();
-	partial void LeaveRule_Protected();
-
-	// $ANTLR start "Protected"
-	[GrammarRule("Protected")]
-	private void mProtected()
-	{
-		EnterRule_Protected();
-		EnterRule("Protected", 96);
-		TraceIn("Protected", 96);
-		try
-		{
-			int _type = Protected;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:644:11: ( ( 'p' | 'P' ) ( 'r' | 'R' ) ( 'o' | 'O' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'c' | 'C' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'd' | 'D' ) )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:644:13: ( 'p' | 'P' ) ( 'r' | 'R' ) ( 'o' | 'O' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'c' | 'C' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'd' | 'D' )
-			{
-			DebugLocation(644, 13);
-			if (input.LA(1)=='P'||input.LA(1)=='p')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(644, 22);
-			if (input.LA(1)=='R'||input.LA(1)=='r')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(644, 31);
-			if (input.LA(1)=='O'||input.LA(1)=='o')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(644, 40);
-			if (input.LA(1)=='T'||input.LA(1)=='t')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(644, 49);
-			if (input.LA(1)=='E'||input.LA(1)=='e')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(644, 58);
-			if (input.LA(1)=='C'||input.LA(1)=='c')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(644, 67);
-			if (input.LA(1)=='T'||input.LA(1)=='t')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(644, 76);
-			if (input.LA(1)=='E'||input.LA(1)=='e')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(644, 85);
-			if (input.LA(1)=='D'||input.LA(1)=='d')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("Protected", 96);
-			LeaveRule("Protected", 96);
-			LeaveRule_Protected();
-		}
-	}
-	// $ANTLR end "Protected"
-
-	partial void EnterRule_True();
-	partial void LeaveRule_True();
-
-	// $ANTLR start "True"
-	[GrammarRule("True")]
-	private void mTrue()
-	{
-		EnterRule_True();
-		EnterRule("True", 97);
-		TraceIn("True", 97);
-		try
-		{
-			int _type = True;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:645:6: ( ( 't' | 'T' ) ( 'r' | 'R' ) ( 'u' | 'U' ) ( 'e' | 'E' ) )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:645:8: ( 't' | 'T' ) ( 'r' | 'R' ) ( 'u' | 'U' ) ( 'e' | 'E' )
-			{
-			DebugLocation(645, 8);
-			if (input.LA(1)=='T'||input.LA(1)=='t')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(645, 17);
-			if (input.LA(1)=='R'||input.LA(1)=='r')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(645, 26);
-			if (input.LA(1)=='U'||input.LA(1)=='u')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(645, 35);
-			if (input.LA(1)=='E'||input.LA(1)=='e')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("True", 97);
-			LeaveRule("True", 97);
-			LeaveRule_True();
-		}
-	}
-	// $ANTLR end "True"
-
-	partial void EnterRule_False();
-	partial void LeaveRule_False();
-
-	// $ANTLR start "False"
-	[GrammarRule("False")]
-	private void mFalse()
-	{
-		EnterRule_False();
-		EnterRule("False", 98);
-		TraceIn("False", 98);
-		try
-		{
-			int _type = False;
-			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:646:7: ( ( 'f' | 'F' ) ( 'a' | 'A' ) ( 'l' | 'L' ) ( 's' | 'S' ) ( 'e' | 'E' ) )
-			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:646:9: ( 'f' | 'F' ) ( 'a' | 'A' ) ( 'l' | 'L' ) ( 's' | 'S' ) ( 'e' | 'E' )
-			{
-			DebugLocation(646, 9);
+			DebugLocation(635, 9);
 			if (input.LA(1)=='F'||input.LA(1)=='f')
 			{
 				input.Consume();
@@ -9180,7 +7503,37 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(646, 18);
+			DebugLocation(635, 18);
+			if (input.LA(1)=='I'||input.LA(1)=='i')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(635, 27);
+			if (input.LA(1)=='N'||input.LA(1)=='n')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(635, 36);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -9195,38 +7548,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(646, 27);
+			DebugLocation(635, 45);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(646, 36);
-			if (input.LA(1)=='S'||input.LA(1)=='s')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(646, 45);
-			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
 			state.failed=false;
@@ -9248,51 +7571,32 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("False", 98);
-			LeaveRule("False", 98);
-			LeaveRule_False();
+			TraceOut("Final", 85);
+			LeaveRule("Final", 85);
+			LeaveRule_Final();
 		}
 	}
-	// $ANTLR end "False"
+	// $ANTLR end "Final"
 
-	partial void EnterRule_HaltCompiler();
-	partial void LeaveRule_HaltCompiler();
+	partial void EnterRule_Abstract();
+	partial void LeaveRule_Abstract();
 
-	// $ANTLR start "HaltCompiler"
-	[GrammarRule("HaltCompiler")]
-	private void mHaltCompiler()
+	// $ANTLR start "Abstract"
+	[GrammarRule("Abstract")]
+	private void mAbstract()
 	{
-		EnterRule_HaltCompiler();
-		EnterRule("HaltCompiler", 99);
-		TraceIn("HaltCompiler", 99);
+		EnterRule_Abstract();
+		EnterRule("Abstract", 86);
+		TraceIn("Abstract", 86);
 		try
 		{
-			int _type = HaltCompiler;
+			int _type = Abstract;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:647:14: ( '_' '_' ( 'h' | 'H' ) ( 'a' | 'A' ) ( 'l' | 'L' ) ( 't' | 'T' ) '_' ( 'c' | 'C' ) ( 'o' | 'O' ) ( 'm' | 'M' ) ( 'p' | 'P' ) ( 'i' | 'I' ) ( 'l' | 'L' ) ( 'e' | 'E' ) ( 'r' | 'R' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:636:10: ( ( 'a' | 'A' ) ( 'b' | 'B' ) ( 's' | 'S' ) ( 't' | 'T' ) ( 'r' | 'R' ) ( 'a' | 'A' ) ( 'c' | 'C' ) ( 't' | 'T' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:647:16: '_' '_' ( 'h' | 'H' ) ( 'a' | 'A' ) ( 'l' | 'L' ) ( 't' | 'T' ) '_' ( 'c' | 'C' ) ( 'o' | 'O' ) ( 'm' | 'M' ) ( 'p' | 'P' ) ( 'i' | 'I' ) ( 'l' | 'L' ) ( 'e' | 'E' ) ( 'r' | 'R' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:636:12: ( 'a' | 'A' ) ( 'b' | 'B' ) ( 's' | 'S' ) ( 't' | 'T' ) ( 'r' | 'R' ) ( 'a' | 'A' ) ( 'c' | 'C' ) ( 't' | 'T' )
 			{
-			DebugLocation(647, 16);
-			Match('_'); if (state.failed) return;
-			DebugLocation(647, 19);
-			Match('_'); if (state.failed) return;
-			DebugLocation(647, 22);
-			if (input.LA(1)=='H'||input.LA(1)=='h')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(647, 31);
+			DebugLocation(636, 12);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -9307,8 +7611,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(647, 40);
-			if (input.LA(1)=='L'||input.LA(1)=='l')
+			DebugLocation(636, 21);
+			if (input.LA(1)=='B'||input.LA(1)=='b')
 			{
 				input.Consume();
 			state.failed=false;
@@ -9322,7 +7626,22 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(647, 49);
+			DebugLocation(636, 30);
+			if (input.LA(1)=='S'||input.LA(1)=='s')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(636, 39);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -9337,9 +7656,37 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(647, 58);
-			Match('_'); if (state.failed) return;
-			DebugLocation(647, 61);
+			DebugLocation(636, 48);
+			if (input.LA(1)=='R'||input.LA(1)=='r')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(636, 57);
+			if (input.LA(1)=='A'||input.LA(1)=='a')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(636, 66);
 			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
@@ -9354,8 +7701,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(647, 70);
-			if (input.LA(1)=='O'||input.LA(1)=='o')
+			DebugLocation(636, 75);
+			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
 			state.failed=false;
@@ -9369,8 +7716,41 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(647, 79);
-			if (input.LA(1)=='M'||input.LA(1)=='m')
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("Abstract", 86);
+			LeaveRule("Abstract", 86);
+			LeaveRule_Abstract();
+		}
+	}
+	// $ANTLR end "Abstract"
+
+	partial void EnterRule_Var();
+	partial void LeaveRule_Var();
+
+	// $ANTLR start "Var"
+	[GrammarRule("Var")]
+	private void mVar()
+	{
+		EnterRule_Var();
+		EnterRule("Var", 87);
+		TraceIn("Var", 87);
+		try
+		{
+			int _type = Var;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:637:5: ( ( 'v' | 'V' ) ( 'a' | 'A' ) ( 'r' | 'R' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:637:7: ( 'v' | 'V' ) ( 'a' | 'A' ) ( 'r' | 'R' )
+			{
+			DebugLocation(637, 7);
+			if (input.LA(1)=='V'||input.LA(1)=='v')
 			{
 				input.Consume();
 			state.failed=false;
@@ -9384,8 +7764,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(647, 88);
-			if (input.LA(1)=='P'||input.LA(1)=='p')
+			DebugLocation(637, 16);
+			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
 			state.failed=false;
@@ -9399,52 +7779,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(647, 97);
-			if (input.LA(1)=='I'||input.LA(1)=='i')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(647, 106);
-			if (input.LA(1)=='L'||input.LA(1)=='l')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(647, 115);
-			if (input.LA(1)=='E'||input.LA(1)=='e')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(647, 124);
+			DebugLocation(637, 25);
 			if (input.LA(1)=='R'||input.LA(1)=='r')
 			{
 				input.Consume();
@@ -9467,48 +7802,33 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("HaltCompiler", 99);
-			LeaveRule("HaltCompiler", 99);
-			LeaveRule_HaltCompiler();
+			TraceOut("Var", 87);
+			LeaveRule("Var", 87);
+			LeaveRule_Var();
 		}
 	}
-	// $ANTLR end "HaltCompiler"
+	// $ANTLR end "Var"
 
-	partial void EnterRule_Die();
-	partial void LeaveRule_Die();
+	partial void EnterRule_Const();
+	partial void LeaveRule_Const();
 
-	// $ANTLR start "Die"
-	[GrammarRule("Die")]
-	private void mDie()
+	// $ANTLR start "Const"
+	[GrammarRule("Const")]
+	private void mConst()
 	{
-		EnterRule_Die();
-		EnterRule("Die", 100);
-		TraceIn("Die", 100);
+		EnterRule_Const();
+		EnterRule("Const", 88);
+		TraceIn("Const", 88);
 		try
 		{
-			int _type = Die;
+			int _type = Const;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:648:5: ( ( 'd' | 'D' ) ( 'i' | 'I' ) ( 'e' | 'E' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:638:7: ( ( 'c' | 'C' ) ( 'o' | 'O' ) ( 'n' | 'N' ) ( 's' | 'S' ) ( 't' | 'T' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:648:7: ( 'd' | 'D' ) ( 'i' | 'I' ) ( 'e' | 'E' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:638:9: ( 'c' | 'C' ) ( 'o' | 'O' ) ( 'n' | 'N' ) ( 's' | 'S' ) ( 't' | 'T' )
 			{
-			DebugLocation(648, 7);
-			if (input.LA(1)=='D'||input.LA(1)=='d')
-			{
-				input.Consume();
-			state.failed=false;
-			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return;}
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				DebugRecognitionException(mse);
-				Recover(mse);
-				throw mse;
-			}
-
-			DebugLocation(648, 16);
-			if (input.LA(1)=='I'||input.LA(1)=='i')
+			DebugLocation(638, 9);
+			if (input.LA(1)=='C'||input.LA(1)=='c')
 			{
 				input.Consume();
 			state.failed=false;
@@ -9522,7 +7842,193 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(648, 25);
+			DebugLocation(638, 18);
+			if (input.LA(1)=='O'||input.LA(1)=='o')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(638, 27);
+			if (input.LA(1)=='N'||input.LA(1)=='n')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(638, 36);
+			if (input.LA(1)=='S'||input.LA(1)=='s')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(638, 45);
+			if (input.LA(1)=='T'||input.LA(1)=='t')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("Const", 88);
+			LeaveRule("Const", 88);
+			LeaveRule_Const();
+		}
+	}
+	// $ANTLR end "Const"
+
+	partial void EnterRule_As();
+	partial void LeaveRule_As();
+
+	// $ANTLR start "As"
+	[GrammarRule("As")]
+	private void mAs()
+	{
+		EnterRule_As();
+		EnterRule("As", 89);
+		TraceIn("As", 89);
+		try
+		{
+			int _type = As;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:639:4: ( ( 'a' | 'A' ) ( 's' | 'S' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:639:6: ( 'a' | 'A' ) ( 's' | 'S' )
+			{
+			DebugLocation(639, 6);
+			if (input.LA(1)=='A'||input.LA(1)=='a')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(639, 15);
+			if (input.LA(1)=='S'||input.LA(1)=='s')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("As", 89);
+			LeaveRule("As", 89);
+			LeaveRule_As();
+		}
+	}
+	// $ANTLR end "As"
+
+	partial void EnterRule_Use();
+	partial void LeaveRule_Use();
+
+	// $ANTLR start "Use"
+	[GrammarRule("Use")]
+	private void mUse()
+	{
+		EnterRule_Use();
+		EnterRule("Use", 90);
+		TraceIn("Use", 90);
+		try
+		{
+			int _type = Use;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:640:5: ( ( 'u' | 'U' ) ( 's' | 'S' ) ( 'e' | 'E' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:640:7: ( 'u' | 'U' ) ( 's' | 'S' ) ( 'e' | 'E' )
+			{
+			DebugLocation(640, 7);
+			if (input.LA(1)=='U'||input.LA(1)=='u')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(640, 16);
+			if (input.LA(1)=='S'||input.LA(1)=='s')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(640, 25);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -9545,32 +8051,47 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("Die", 100);
-			LeaveRule("Die", 100);
-			LeaveRule_Die();
+			TraceOut("Use", 90);
+			LeaveRule("Use", 90);
+			LeaveRule_Use();
 		}
 	}
-	// $ANTLR end "Die"
+	// $ANTLR end "Use"
 
-	partial void EnterRule_Empty();
-	partial void LeaveRule_Empty();
+	partial void EnterRule_Require();
+	partial void LeaveRule_Require();
 
-	// $ANTLR start "Empty"
-	[GrammarRule("Empty")]
-	private void mEmpty()
+	// $ANTLR start "Require"
+	[GrammarRule("Require")]
+	private void mRequire()
 	{
-		EnterRule_Empty();
-		EnterRule("Empty", 101);
-		TraceIn("Empty", 101);
+		EnterRule_Require();
+		EnterRule("Require", 91);
+		TraceIn("Require", 91);
 		try
 		{
-			int _type = Empty;
+			int _type = Require;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:649:7: ( ( 'e' | 'E' ) ( 'm' | 'M' ) ( 'p' | 'P' ) ( 't' | 'T' ) ( 'y' | 'Y' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:642:9: ( ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'q' | 'Q' ) ( 'u' | 'U' ) ( 'i' | 'I' ) ( 'r' | 'R' ) ( 'e' | 'E' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:649:9: ( 'e' | 'E' ) ( 'm' | 'M' ) ( 'p' | 'P' ) ( 't' | 'T' ) ( 'y' | 'Y' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:642:11: ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'q' | 'Q' ) ( 'u' | 'U' ) ( 'i' | 'I' ) ( 'r' | 'R' ) ( 'e' | 'E' )
 			{
-			DebugLocation(649, 9);
+			DebugLocation(642, 11);
+			if (input.LA(1)=='R'||input.LA(1)=='r')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(642, 20);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -9585,8 +8106,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(649, 18);
-			if (input.LA(1)=='M'||input.LA(1)=='m')
+			DebugLocation(642, 29);
+			if (input.LA(1)=='Q'||input.LA(1)=='q')
 			{
 				input.Consume();
 			state.failed=false;
@@ -9600,7 +8121,638 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(649, 27);
+			DebugLocation(642, 38);
+			if (input.LA(1)=='U'||input.LA(1)=='u')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(642, 47);
+			if (input.LA(1)=='I'||input.LA(1)=='i')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(642, 56);
+			if (input.LA(1)=='R'||input.LA(1)=='r')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(642, 65);
+			if (input.LA(1)=='E'||input.LA(1)=='e')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("Require", 91);
+			LeaveRule("Require", 91);
+			LeaveRule_Require();
+		}
+	}
+	// $ANTLR end "Require"
+
+	partial void EnterRule_RequireOnce();
+	partial void LeaveRule_RequireOnce();
+
+	// $ANTLR start "RequireOnce"
+	[GrammarRule("RequireOnce")]
+	private void mRequireOnce()
+	{
+		EnterRule_RequireOnce();
+		EnterRule("RequireOnce", 92);
+		TraceIn("RequireOnce", 92);
+		try
+		{
+			int _type = RequireOnce;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:643:13: ( ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'q' | 'Q' ) ( 'u' | 'U' ) ( 'i' | 'I' ) ( 'r' | 'R' ) ( 'e' | 'E' ) '_' ( 'o' | 'O' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'e' | 'E' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:643:15: ( 'r' | 'R' ) ( 'e' | 'E' ) ( 'q' | 'Q' ) ( 'u' | 'U' ) ( 'i' | 'I' ) ( 'r' | 'R' ) ( 'e' | 'E' ) '_' ( 'o' | 'O' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'e' | 'E' )
+			{
+			DebugLocation(643, 15);
+			if (input.LA(1)=='R'||input.LA(1)=='r')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(643, 24);
+			if (input.LA(1)=='E'||input.LA(1)=='e')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(643, 33);
+			if (input.LA(1)=='Q'||input.LA(1)=='q')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(643, 42);
+			if (input.LA(1)=='U'||input.LA(1)=='u')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(643, 51);
+			if (input.LA(1)=='I'||input.LA(1)=='i')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(643, 60);
+			if (input.LA(1)=='R'||input.LA(1)=='r')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(643, 69);
+			if (input.LA(1)=='E'||input.LA(1)=='e')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(643, 78);
+			Match('_'); if (state.failed) return;
+			DebugLocation(643, 81);
+			if (input.LA(1)=='O'||input.LA(1)=='o')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(643, 90);
+			if (input.LA(1)=='N'||input.LA(1)=='n')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(643, 99);
+			if (input.LA(1)=='C'||input.LA(1)=='c')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(643, 108);
+			if (input.LA(1)=='E'||input.LA(1)=='e')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("RequireOnce", 92);
+			LeaveRule("RequireOnce", 92);
+			LeaveRule_RequireOnce();
+		}
+	}
+	// $ANTLR end "RequireOnce"
+
+	partial void EnterRule_Include();
+	partial void LeaveRule_Include();
+
+	// $ANTLR start "Include"
+	[GrammarRule("Include")]
+	private void mInclude()
+	{
+		EnterRule_Include();
+		EnterRule("Include", 93);
+		TraceIn("Include", 93);
+		try
+		{
+			int _type = Include;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:644:9: ( ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'l' | 'L' ) ( 'u' | 'U' ) ( 'd' | 'D' ) ( 'e' | 'E' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:644:11: ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'l' | 'L' ) ( 'u' | 'U' ) ( 'd' | 'D' ) ( 'e' | 'E' )
+			{
+			DebugLocation(644, 11);
+			if (input.LA(1)=='I'||input.LA(1)=='i')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(644, 20);
+			if (input.LA(1)=='N'||input.LA(1)=='n')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(644, 29);
+			if (input.LA(1)=='C'||input.LA(1)=='c')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(644, 38);
+			if (input.LA(1)=='L'||input.LA(1)=='l')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(644, 47);
+			if (input.LA(1)=='U'||input.LA(1)=='u')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(644, 56);
+			if (input.LA(1)=='D'||input.LA(1)=='d')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(644, 65);
+			if (input.LA(1)=='E'||input.LA(1)=='e')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("Include", 93);
+			LeaveRule("Include", 93);
+			LeaveRule_Include();
+		}
+	}
+	// $ANTLR end "Include"
+
+	partial void EnterRule_IncludeOnce();
+	partial void LeaveRule_IncludeOnce();
+
+	// $ANTLR start "IncludeOnce"
+	[GrammarRule("IncludeOnce")]
+	private void mIncludeOnce()
+	{
+		EnterRule_IncludeOnce();
+		EnterRule("IncludeOnce", 94);
+		TraceIn("IncludeOnce", 94);
+		try
+		{
+			int _type = IncludeOnce;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:645:13: ( ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'l' | 'L' ) ( 'u' | 'U' ) ( 'd' | 'D' ) ( 'e' | 'E' ) '_' ( 'o' | 'O' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'e' | 'E' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:645:15: ( 'i' | 'I' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'l' | 'L' ) ( 'u' | 'U' ) ( 'd' | 'D' ) ( 'e' | 'E' ) '_' ( 'o' | 'O' ) ( 'n' | 'N' ) ( 'c' | 'C' ) ( 'e' | 'E' )
+			{
+			DebugLocation(645, 15);
+			if (input.LA(1)=='I'||input.LA(1)=='i')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(645, 24);
+			if (input.LA(1)=='N'||input.LA(1)=='n')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(645, 33);
+			if (input.LA(1)=='C'||input.LA(1)=='c')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(645, 42);
+			if (input.LA(1)=='L'||input.LA(1)=='l')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(645, 51);
+			if (input.LA(1)=='U'||input.LA(1)=='u')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(645, 60);
+			if (input.LA(1)=='D'||input.LA(1)=='d')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(645, 69);
+			if (input.LA(1)=='E'||input.LA(1)=='e')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(645, 78);
+			Match('_'); if (state.failed) return;
+			DebugLocation(645, 81);
+			if (input.LA(1)=='O'||input.LA(1)=='o')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(645, 90);
+			if (input.LA(1)=='N'||input.LA(1)=='n')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(645, 99);
+			if (input.LA(1)=='C'||input.LA(1)=='c')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(645, 108);
+			if (input.LA(1)=='E'||input.LA(1)=='e')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("IncludeOnce", 94);
+			LeaveRule("IncludeOnce", 94);
+			LeaveRule_IncludeOnce();
+		}
+	}
+	// $ANTLR end "IncludeOnce"
+
+	partial void EnterRule_Public();
+	partial void LeaveRule_Public();
+
+	// $ANTLR start "Public"
+	[GrammarRule("Public")]
+	private void mPublic()
+	{
+		EnterRule_Public();
+		EnterRule("Public", 95);
+		TraceIn("Public", 95);
+		try
+		{
+			int _type = Public;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:646:8: ( ( 'p' | 'P' ) ( 'u' | 'U' ) ( 'b' | 'B' ) ( 'l' | 'L' ) ( 'i' | 'I' ) ( 'c' | 'C' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:646:10: ( 'p' | 'P' ) ( 'u' | 'U' ) ( 'b' | 'B' ) ( 'l' | 'L' ) ( 'i' | 'I' ) ( 'c' | 'C' )
+			{
+			DebugLocation(646, 10);
 			if (input.LA(1)=='P'||input.LA(1)=='p')
 			{
 				input.Consume();
@@ -9615,7 +8767,190 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(649, 36);
+			DebugLocation(646, 19);
+			if (input.LA(1)=='U'||input.LA(1)=='u')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(646, 28);
+			if (input.LA(1)=='B'||input.LA(1)=='b')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(646, 37);
+			if (input.LA(1)=='L'||input.LA(1)=='l')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(646, 46);
+			if (input.LA(1)=='I'||input.LA(1)=='i')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(646, 55);
+			if (input.LA(1)=='C'||input.LA(1)=='c')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("Public", 95);
+			LeaveRule("Public", 95);
+			LeaveRule_Public();
+		}
+	}
+	// $ANTLR end "Public"
+
+	partial void EnterRule_Private();
+	partial void LeaveRule_Private();
+
+	// $ANTLR start "Private"
+	[GrammarRule("Private")]
+	private void mPrivate()
+	{
+		EnterRule_Private();
+		EnterRule("Private", 96);
+		TraceIn("Private", 96);
+		try
+		{
+			int _type = Private;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:647:9: ( ( 'p' | 'P' ) ( 'r' | 'R' ) ( 'i' | 'I' ) ( 'v' | 'V' ) ( 'a' | 'A' ) ( 't' | 'T' ) ( 'e' | 'E' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:647:11: ( 'p' | 'P' ) ( 'r' | 'R' ) ( 'i' | 'I' ) ( 'v' | 'V' ) ( 'a' | 'A' ) ( 't' | 'T' ) ( 'e' | 'E' )
+			{
+			DebugLocation(647, 11);
+			if (input.LA(1)=='P'||input.LA(1)=='p')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(647, 20);
+			if (input.LA(1)=='R'||input.LA(1)=='r')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(647, 29);
+			if (input.LA(1)=='I'||input.LA(1)=='i')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(647, 38);
+			if (input.LA(1)=='V'||input.LA(1)=='v')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(647, 47);
+			if (input.LA(1)=='A'||input.LA(1)=='a')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(647, 56);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -9630,7 +8965,781 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(649, 45);
+			DebugLocation(647, 65);
+			if (input.LA(1)=='E'||input.LA(1)=='e')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("Private", 96);
+			LeaveRule("Private", 96);
+			LeaveRule_Private();
+		}
+	}
+	// $ANTLR end "Private"
+
+	partial void EnterRule_Protected();
+	partial void LeaveRule_Protected();
+
+	// $ANTLR start "Protected"
+	[GrammarRule("Protected")]
+	private void mProtected()
+	{
+		EnterRule_Protected();
+		EnterRule("Protected", 97);
+		TraceIn("Protected", 97);
+		try
+		{
+			int _type = Protected;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:648:11: ( ( 'p' | 'P' ) ( 'r' | 'R' ) ( 'o' | 'O' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'c' | 'C' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'd' | 'D' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:648:13: ( 'p' | 'P' ) ( 'r' | 'R' ) ( 'o' | 'O' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'c' | 'C' ) ( 't' | 'T' ) ( 'e' | 'E' ) ( 'd' | 'D' )
+			{
+			DebugLocation(648, 13);
+			if (input.LA(1)=='P'||input.LA(1)=='p')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(648, 22);
+			if (input.LA(1)=='R'||input.LA(1)=='r')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(648, 31);
+			if (input.LA(1)=='O'||input.LA(1)=='o')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(648, 40);
+			if (input.LA(1)=='T'||input.LA(1)=='t')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(648, 49);
+			if (input.LA(1)=='E'||input.LA(1)=='e')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(648, 58);
+			if (input.LA(1)=='C'||input.LA(1)=='c')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(648, 67);
+			if (input.LA(1)=='T'||input.LA(1)=='t')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(648, 76);
+			if (input.LA(1)=='E'||input.LA(1)=='e')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(648, 85);
+			if (input.LA(1)=='D'||input.LA(1)=='d')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("Protected", 97);
+			LeaveRule("Protected", 97);
+			LeaveRule_Protected();
+		}
+	}
+	// $ANTLR end "Protected"
+
+	partial void EnterRule_True();
+	partial void LeaveRule_True();
+
+	// $ANTLR start "True"
+	[GrammarRule("True")]
+	private void mTrue()
+	{
+		EnterRule_True();
+		EnterRule("True", 98);
+		TraceIn("True", 98);
+		try
+		{
+			int _type = True;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:649:6: ( ( 't' | 'T' ) ( 'r' | 'R' ) ( 'u' | 'U' ) ( 'e' | 'E' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:649:8: ( 't' | 'T' ) ( 'r' | 'R' ) ( 'u' | 'U' ) ( 'e' | 'E' )
+			{
+			DebugLocation(649, 8);
+			if (input.LA(1)=='T'||input.LA(1)=='t')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(649, 17);
+			if (input.LA(1)=='R'||input.LA(1)=='r')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(649, 26);
+			if (input.LA(1)=='U'||input.LA(1)=='u')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(649, 35);
+			if (input.LA(1)=='E'||input.LA(1)=='e')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("True", 98);
+			LeaveRule("True", 98);
+			LeaveRule_True();
+		}
+	}
+	// $ANTLR end "True"
+
+	partial void EnterRule_False();
+	partial void LeaveRule_False();
+
+	// $ANTLR start "False"
+	[GrammarRule("False")]
+	private void mFalse()
+	{
+		EnterRule_False();
+		EnterRule("False", 99);
+		TraceIn("False", 99);
+		try
+		{
+			int _type = False;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:650:7: ( ( 'f' | 'F' ) ( 'a' | 'A' ) ( 'l' | 'L' ) ( 's' | 'S' ) ( 'e' | 'E' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:650:9: ( 'f' | 'F' ) ( 'a' | 'A' ) ( 'l' | 'L' ) ( 's' | 'S' ) ( 'e' | 'E' )
+			{
+			DebugLocation(650, 9);
+			if (input.LA(1)=='F'||input.LA(1)=='f')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(650, 18);
+			if (input.LA(1)=='A'||input.LA(1)=='a')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(650, 27);
+			if (input.LA(1)=='L'||input.LA(1)=='l')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(650, 36);
+			if (input.LA(1)=='S'||input.LA(1)=='s')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(650, 45);
+			if (input.LA(1)=='E'||input.LA(1)=='e')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("False", 99);
+			LeaveRule("False", 99);
+			LeaveRule_False();
+		}
+	}
+	// $ANTLR end "False"
+
+	partial void EnterRule_HaltCompiler();
+	partial void LeaveRule_HaltCompiler();
+
+	// $ANTLR start "HaltCompiler"
+	[GrammarRule("HaltCompiler")]
+	private void mHaltCompiler()
+	{
+		EnterRule_HaltCompiler();
+		EnterRule("HaltCompiler", 100);
+		TraceIn("HaltCompiler", 100);
+		try
+		{
+			int _type = HaltCompiler;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:651:14: ( '_' '_' ( 'h' | 'H' ) ( 'a' | 'A' ) ( 'l' | 'L' ) ( 't' | 'T' ) '_' ( 'c' | 'C' ) ( 'o' | 'O' ) ( 'm' | 'M' ) ( 'p' | 'P' ) ( 'i' | 'I' ) ( 'l' | 'L' ) ( 'e' | 'E' ) ( 'r' | 'R' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:651:16: '_' '_' ( 'h' | 'H' ) ( 'a' | 'A' ) ( 'l' | 'L' ) ( 't' | 'T' ) '_' ( 'c' | 'C' ) ( 'o' | 'O' ) ( 'm' | 'M' ) ( 'p' | 'P' ) ( 'i' | 'I' ) ( 'l' | 'L' ) ( 'e' | 'E' ) ( 'r' | 'R' )
+			{
+			DebugLocation(651, 16);
+			Match('_'); if (state.failed) return;
+			DebugLocation(651, 19);
+			Match('_'); if (state.failed) return;
+			DebugLocation(651, 22);
+			if (input.LA(1)=='H'||input.LA(1)=='h')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(651, 31);
+			if (input.LA(1)=='A'||input.LA(1)=='a')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(651, 40);
+			if (input.LA(1)=='L'||input.LA(1)=='l')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(651, 49);
+			if (input.LA(1)=='T'||input.LA(1)=='t')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(651, 58);
+			Match('_'); if (state.failed) return;
+			DebugLocation(651, 61);
+			if (input.LA(1)=='C'||input.LA(1)=='c')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(651, 70);
+			if (input.LA(1)=='O'||input.LA(1)=='o')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(651, 79);
+			if (input.LA(1)=='M'||input.LA(1)=='m')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(651, 88);
+			if (input.LA(1)=='P'||input.LA(1)=='p')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(651, 97);
+			if (input.LA(1)=='I'||input.LA(1)=='i')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(651, 106);
+			if (input.LA(1)=='L'||input.LA(1)=='l')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(651, 115);
+			if (input.LA(1)=='E'||input.LA(1)=='e')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(651, 124);
+			if (input.LA(1)=='R'||input.LA(1)=='r')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("HaltCompiler", 100);
+			LeaveRule("HaltCompiler", 100);
+			LeaveRule_HaltCompiler();
+		}
+	}
+	// $ANTLR end "HaltCompiler"
+
+	partial void EnterRule_Die();
+	partial void LeaveRule_Die();
+
+	// $ANTLR start "Die"
+	[GrammarRule("Die")]
+	private void mDie()
+	{
+		EnterRule_Die();
+		EnterRule("Die", 101);
+		TraceIn("Die", 101);
+		try
+		{
+			int _type = Die;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:652:5: ( ( 'd' | 'D' ) ( 'i' | 'I' ) ( 'e' | 'E' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:652:7: ( 'd' | 'D' ) ( 'i' | 'I' ) ( 'e' | 'E' )
+			{
+			DebugLocation(652, 7);
+			if (input.LA(1)=='D'||input.LA(1)=='d')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(652, 16);
+			if (input.LA(1)=='I'||input.LA(1)=='i')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(652, 25);
+			if (input.LA(1)=='E'||input.LA(1)=='e')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("Die", 101);
+			LeaveRule("Die", 101);
+			LeaveRule_Die();
+		}
+	}
+	// $ANTLR end "Die"
+
+	partial void EnterRule_Empty();
+	partial void LeaveRule_Empty();
+
+	// $ANTLR start "Empty"
+	[GrammarRule("Empty")]
+	private void mEmpty()
+	{
+		EnterRule_Empty();
+		EnterRule("Empty", 102);
+		TraceIn("Empty", 102);
+		try
+		{
+			int _type = Empty;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:653:7: ( ( 'e' | 'E' ) ( 'm' | 'M' ) ( 'p' | 'P' ) ( 't' | 'T' ) ( 'y' | 'Y' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:653:9: ( 'e' | 'E' ) ( 'm' | 'M' ) ( 'p' | 'P' ) ( 't' | 'T' ) ( 'y' | 'Y' )
+			{
+			DebugLocation(653, 9);
+			if (input.LA(1)=='E'||input.LA(1)=='e')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(653, 18);
+			if (input.LA(1)=='M'||input.LA(1)=='m')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(653, 27);
+			if (input.LA(1)=='P'||input.LA(1)=='p')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(653, 36);
+			if (input.LA(1)=='T'||input.LA(1)=='t')
+			{
+				input.Consume();
+			state.failed=false;
+			}
+			else
+			{
+				if (state.backtracking>0) {state.failed=true; return;}
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+			DebugLocation(653, 45);
 			if (input.LA(1)=='Y'||input.LA(1)=='y')
 			{
 				input.Consume();
@@ -9653,8 +9762,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("Empty", 101);
-			LeaveRule("Empty", 101);
+			TraceOut("Empty", 102);
+			LeaveRule("Empty", 102);
 			LeaveRule_Empty();
 		}
 	}
@@ -9668,17 +9777,17 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mExit()
 	{
 		EnterRule_Exit();
-		EnterRule("Exit", 102);
-		TraceIn("Exit", 102);
+		EnterRule("Exit", 103);
+		TraceIn("Exit", 103);
 		try
 		{
 			int _type = Exit;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:650:6: ( ( 'e' | 'E' ) ( 'x' | 'X' ) ( 'i' | 'I' ) ( 't' | 'T' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:654:6: ( ( 'e' | 'E' ) ( 'x' | 'X' ) ( 'i' | 'I' ) ( 't' | 'T' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:650:8: ( 'e' | 'E' ) ( 'x' | 'X' ) ( 'i' | 'I' ) ( 't' | 'T' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:654:8: ( 'e' | 'E' ) ( 'x' | 'X' ) ( 'i' | 'I' ) ( 't' | 'T' )
 			{
-			DebugLocation(650, 8);
+			DebugLocation(654, 8);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -9693,7 +9802,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(650, 17);
+			DebugLocation(654, 17);
 			if (input.LA(1)=='X'||input.LA(1)=='x')
 			{
 				input.Consume();
@@ -9708,7 +9817,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(650, 26);
+			DebugLocation(654, 26);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -9723,7 +9832,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(650, 35);
+			DebugLocation(654, 35);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -9746,8 +9855,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("Exit", 102);
-			LeaveRule("Exit", 102);
+			TraceOut("Exit", 103);
+			LeaveRule("Exit", 103);
 			LeaveRule_Exit();
 		}
 	}
@@ -9761,17 +9870,17 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mEval()
 	{
 		EnterRule_Eval();
-		EnterRule("Eval", 103);
-		TraceIn("Eval", 103);
+		EnterRule("Eval", 104);
+		TraceIn("Eval", 104);
 		try
 		{
 			int _type = Eval;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:651:6: ( ( 'e' | 'E' ) ( 'v' | 'V' ) ( 'a' | 'A' ) ( 'l' | 'L' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:655:6: ( ( 'e' | 'E' ) ( 'v' | 'V' ) ( 'a' | 'A' ) ( 'l' | 'L' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:651:8: ( 'e' | 'E' ) ( 'v' | 'V' ) ( 'a' | 'A' ) ( 'l' | 'L' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:655:8: ( 'e' | 'E' ) ( 'v' | 'V' ) ( 'a' | 'A' ) ( 'l' | 'L' )
 			{
-			DebugLocation(651, 8);
+			DebugLocation(655, 8);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -9786,7 +9895,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(651, 17);
+			DebugLocation(655, 17);
 			if (input.LA(1)=='V'||input.LA(1)=='v')
 			{
 				input.Consume();
@@ -9801,7 +9910,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(651, 26);
+			DebugLocation(655, 26);
 			if (input.LA(1)=='A'||input.LA(1)=='a')
 			{
 				input.Consume();
@@ -9816,7 +9925,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(651, 35);
+			DebugLocation(655, 35);
 			if (input.LA(1)=='L'||input.LA(1)=='l')
 			{
 				input.Consume();
@@ -9839,8 +9948,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("Eval", 103);
-			LeaveRule("Eval", 103);
+			TraceOut("Eval", 104);
+			LeaveRule("Eval", 104);
 			LeaveRule_Eval();
 		}
 	}
@@ -9854,17 +9963,17 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mIsset()
 	{
 		EnterRule_Isset();
-		EnterRule("Isset", 104);
-		TraceIn("Isset", 104);
+		EnterRule("Isset", 105);
+		TraceIn("Isset", 105);
 		try
 		{
 			int _type = Isset;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:652:7: ( ( 'i' | 'I' ) ( 's' | 'S' ) ( 's' | 'S' ) ( 'e' | 'E' ) ( 't' | 'T' ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:656:7: ( ( 'i' | 'I' ) ( 's' | 'S' ) ( 's' | 'S' ) ( 'e' | 'E' ) ( 't' | 'T' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:652:9: ( 'i' | 'I' ) ( 's' | 'S' ) ( 's' | 'S' ) ( 'e' | 'E' ) ( 't' | 'T' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:656:9: ( 'i' | 'I' ) ( 's' | 'S' ) ( 's' | 'S' ) ( 'e' | 'E' ) ( 't' | 'T' )
 			{
-			DebugLocation(652, 9);
+			DebugLocation(656, 9);
 			if (input.LA(1)=='I'||input.LA(1)=='i')
 			{
 				input.Consume();
@@ -9879,7 +9988,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(652, 18);
+			DebugLocation(656, 18);
 			if (input.LA(1)=='S'||input.LA(1)=='s')
 			{
 				input.Consume();
@@ -9894,7 +10003,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(652, 27);
+			DebugLocation(656, 27);
 			if (input.LA(1)=='S'||input.LA(1)=='s')
 			{
 				input.Consume();
@@ -9909,7 +10018,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(652, 36);
+			DebugLocation(656, 36);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -9924,7 +10033,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(652, 45);
+			DebugLocation(656, 45);
 			if (input.LA(1)=='T'||input.LA(1)=='t')
 			{
 				input.Consume();
@@ -9947,8 +10056,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("Isset", 104);
-			LeaveRule("Isset", 104);
+			TraceOut("Isset", 105);
+			LeaveRule("Isset", 105);
 			LeaveRule_Isset();
 		}
 	}
@@ -9962,11 +10071,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mDecimal()
 	{
 		EnterRule_Decimal();
-		EnterRule("Decimal", 105);
-		TraceIn("Decimal", 105);
+		EnterRule("Decimal", 106);
+		TraceIn("Decimal", 106);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:657:2: ( ( '1' .. '9' ( '0' .. '9' )* ) | '0' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:661:2: ( ( '1' .. '9' ( '0' .. '9' )* ) | '0' )
 			int alt12=2;
 			try { DebugEnterDecision(12, false);
 			int LA12_1 = input.LA(1);
@@ -9991,17 +10100,17 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:657:3: ( '1' .. '9' ( '0' .. '9' )* )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:661:3: ( '1' .. '9' ( '0' .. '9' )* )
 				{
-				DebugLocation(657, 3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:657:3: ( '1' .. '9' ( '0' .. '9' )* )
+				DebugLocation(661, 3);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:661:3: ( '1' .. '9' ( '0' .. '9' )* )
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:657:4: '1' .. '9' ( '0' .. '9' )*
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:661:4: '1' .. '9' ( '0' .. '9' )*
 				{
-				DebugLocation(657, 7);
+				DebugLocation(661, 7);
 				MatchRange('1','9'); if (state.failed) return;
-				DebugLocation(657, 13);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:657:13: ( '0' .. '9' )*
+				DebugLocation(661, 13);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:661:13: ( '0' .. '9' )*
 				try { DebugEnterSubRule(11);
 				while (true)
 				{
@@ -10022,7 +10131,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:
 						{
-						DebugLocation(657, 13);
+						DebugLocation(661, 13);
 						input.Consume();
 						state.failed=false;
 
@@ -10047,9 +10156,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:657:26: '0'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:661:26: '0'
 				{
-				DebugLocation(657, 26);
+				DebugLocation(661, 26);
 				Match('0'); if (state.failed) return;
 
 				}
@@ -10059,8 +10168,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("Decimal", 105);
-			LeaveRule("Decimal", 105);
+			TraceOut("Decimal", 106);
+			LeaveRule("Decimal", 106);
 			LeaveRule_Decimal();
 		}
 	}
@@ -10074,17 +10183,17 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mHexadecimal()
 	{
 		EnterRule_Hexadecimal();
-		EnterRule("Hexadecimal", 106);
-		TraceIn("Hexadecimal", 106);
+		EnterRule("Hexadecimal", 107);
+		TraceIn("Hexadecimal", 107);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:661:2: ( '0' ( 'x' | 'X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+ )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:665:2: ( '0' ( 'x' | 'X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:661:4: '0' ( 'x' | 'X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:665:4: '0' ( 'x' | 'X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
 			{
-			DebugLocation(661, 4);
+			DebugLocation(665, 4);
 			Match('0'); if (state.failed) return;
-			DebugLocation(661, 7);
+			DebugLocation(665, 7);
 			if (input.LA(1)=='X'||input.LA(1)=='x')
 			{
 				input.Consume();
@@ -10099,8 +10208,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(661, 16);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:661:16: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
+			DebugLocation(665, 16);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:665:16: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
 			int cnt13=0;
 			try { DebugEnterSubRule(13);
 			while (true)
@@ -10122,7 +10231,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:
 					{
-					DebugLocation(661, 16);
+					DebugLocation(665, 16);
 					input.Consume();
 					state.failed=false;
 
@@ -10151,8 +10260,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("Hexadecimal", 106);
-			LeaveRule("Hexadecimal", 106);
+			TraceOut("Hexadecimal", 107);
+			LeaveRule("Hexadecimal", 107);
 			LeaveRule_Hexadecimal();
 		}
 	}
@@ -10166,18 +10275,18 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mOctal()
 	{
 		EnterRule_Octal();
-		EnterRule("Octal", 107);
-		TraceIn("Octal", 107);
+		EnterRule("Octal", 108);
+		TraceIn("Octal", 108);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:666:2: ( '0' ( '0' .. '7' )+ )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:670:2: ( '0' ( '0' .. '7' )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:666:4: '0' ( '0' .. '7' )+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:670:4: '0' ( '0' .. '7' )+
 			{
-			DebugLocation(666, 4);
+			DebugLocation(670, 4);
 			Match('0'); if (state.failed) return;
-			DebugLocation(666, 7);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:666:7: ( '0' .. '7' )+
+			DebugLocation(670, 7);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:670:7: ( '0' .. '7' )+
 			int cnt14=0;
 			try { DebugEnterSubRule(14);
 			while (true)
@@ -10199,7 +10308,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:
 					{
-					DebugLocation(666, 7);
+					DebugLocation(670, 7);
 					input.Consume();
 					state.failed=false;
 
@@ -10228,8 +10337,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("Octal", 107);
-			LeaveRule("Octal", 107);
+			TraceOut("Octal", 108);
+			LeaveRule("Octal", 108);
 			LeaveRule_Octal();
 		}
 	}
@@ -10243,13 +10352,13 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mInteger()
 	{
 		EnterRule_Integer();
-		EnterRule("Integer", 108);
-		TraceIn("Integer", 108);
+		EnterRule("Integer", 109);
+		TraceIn("Integer", 109);
 		try
 		{
 			int _type = Integer;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:668:2: ( Octal | Decimal | Hexadecimal )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:672:2: ( Octal | Decimal | Hexadecimal )
 			int alt15=3;
 			try { DebugEnterDecision(15, false);
 			int LA15_1 = input.LA(1);
@@ -10299,27 +10408,27 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:668:3: Octal
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:672:3: Octal
 				{
-				DebugLocation(668, 3);
+				DebugLocation(672, 3);
 				mOctal(); if (state.failed) return;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:668:9: Decimal
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:672:9: Decimal
 				{
-				DebugLocation(668, 9);
+				DebugLocation(672, 9);
 				mDecimal(); if (state.failed) return;
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:668:17: Hexadecimal
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:672:17: Hexadecimal
 				{
-				DebugLocation(668, 17);
+				DebugLocation(672, 17);
 				mHexadecimal(); if (state.failed) return;
 
 				}
@@ -10331,8 +10440,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("Integer", 108);
-			LeaveRule("Integer", 108);
+			TraceOut("Integer", 109);
+			LeaveRule("Integer", 109);
 			LeaveRule_Integer();
 		}
 	}
@@ -10346,16 +10455,16 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mDigits()
 	{
 		EnterRule_Digits();
-		EnterRule("Digits", 109);
-		TraceIn("Digits", 109);
+		EnterRule("Digits", 110);
+		TraceIn("Digits", 110);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:674:2: ( ( '0' .. '9' )+ )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:678:2: ( ( '0' .. '9' )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:674:4: ( '0' .. '9' )+
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:678:4: ( '0' .. '9' )+
 			{
-			DebugLocation(674, 7);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:674:7: ( '0' .. '9' )+
+			DebugLocation(678, 7);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:678:7: ( '0' .. '9' )+
 			int cnt16=0;
 			try { DebugEnterSubRule(16);
 			while (true)
@@ -10377,7 +10486,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:
 					{
-					DebugLocation(674, 7);
+					DebugLocation(678, 7);
 					input.Consume();
 					state.failed=false;
 
@@ -10406,8 +10515,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("Digits", 109);
-			LeaveRule("Digits", 109);
+			TraceOut("Digits", 110);
+			LeaveRule("Digits", 110);
 			LeaveRule_Digits();
 		}
 	}
@@ -10421,16 +10530,16 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mDNum()
 	{
 		EnterRule_DNum();
-		EnterRule("DNum", 110);
-		TraceIn("DNum", 110);
+		EnterRule("DNum", 111);
+		TraceIn("DNum", 111);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:679:2: ( ( ( '.' Digits )=> ( '.' Digits ) | ( Digits '.' ( Digits )? ) ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:683:2: ( ( ( '.' Digits )=> ( '.' Digits ) | ( Digits '.' ( Digits )? ) ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:679:3: ( ( '.' Digits )=> ( '.' Digits ) | ( Digits '.' ( Digits )? ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:683:3: ( ( '.' Digits )=> ( '.' Digits ) | ( Digits '.' ( Digits )? ) )
 			{
-			DebugLocation(679, 3);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:679:3: ( ( '.' Digits )=> ( '.' Digits ) | ( Digits '.' ( Digits )? ) )
+			DebugLocation(683, 3);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:683:3: ( ( '.' Digits )=> ( '.' Digits ) | ( Digits '.' ( Digits )? ) )
 			int alt18=2;
 			try { DebugEnterSubRule(18);
 			try { DebugEnterDecision(18, false);
@@ -10456,16 +10565,16 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:679:4: ( '.' Digits )=> ( '.' Digits )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:683:4: ( '.' Digits )=> ( '.' Digits )
 				{
-				DebugLocation(679, 18);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:679:18: ( '.' Digits )
+				DebugLocation(683, 18);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:683:18: ( '.' Digits )
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:679:19: '.' Digits
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:683:19: '.' Digits
 				{
-				DebugLocation(679, 19);
+				DebugLocation(683, 19);
 				Match('.'); if (state.failed) return;
-				DebugLocation(679, 23);
+				DebugLocation(683, 23);
 				mDigits(); if (state.failed) return;
 
 				}
@@ -10475,19 +10584,19 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:679:31: ( Digits '.' ( Digits )? )
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:683:31: ( Digits '.' ( Digits )? )
 				{
-				DebugLocation(679, 31);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:679:31: ( Digits '.' ( Digits )? )
+				DebugLocation(683, 31);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:683:31: ( Digits '.' ( Digits )? )
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:679:32: Digits '.' ( Digits )?
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:683:32: Digits '.' ( Digits )?
 				{
-				DebugLocation(679, 32);
+				DebugLocation(683, 32);
 				mDigits(); if (state.failed) return;
-				DebugLocation(679, 39);
+				DebugLocation(683, 39);
 				Match('.'); if (state.failed) return;
-				DebugLocation(679, 43);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:679:43: ( Digits )?
+				DebugLocation(683, 43);
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:683:43: ( Digits )?
 				int alt17=2;
 				try { DebugEnterSubRule(17);
 				try { DebugEnterDecision(17, false);
@@ -10502,9 +10611,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:679:43: Digits
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:683:43: Digits
 					{
-					DebugLocation(679, 43);
+					DebugLocation(683, 43);
 					mDigits(); if (state.failed) return;
 
 					}
@@ -10529,8 +10638,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("DNum", 110);
-			LeaveRule("DNum", 110);
+			TraceOut("DNum", 111);
+			LeaveRule("DNum", 111);
 			LeaveRule_DNum();
 		}
 	}
@@ -10544,21 +10653,21 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mExponent_DNum()
 	{
 		EnterRule_Exponent_DNum();
-		EnterRule("Exponent_DNum", 111);
-		TraceIn("Exponent_DNum", 111);
+		EnterRule("Exponent_DNum", 112);
+		TraceIn("Exponent_DNum", 112);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:684:2: ( ( ( Digits | DNum ) ( 'e' | 'E' ) ( '+' '-' )? Digits ) )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:688:2: ( ( ( Digits | DNum ) ( 'e' | 'E' ) ( '+' '-' )? Digits ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:684:3: ( ( Digits | DNum ) ( 'e' | 'E' ) ( '+' '-' )? Digits )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:688:3: ( ( Digits | DNum ) ( 'e' | 'E' ) ( '+' '-' )? Digits )
 			{
-			DebugLocation(684, 3);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:684:3: ( ( Digits | DNum ) ( 'e' | 'E' ) ( '+' '-' )? Digits )
+			DebugLocation(688, 3);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:688:3: ( ( Digits | DNum ) ( 'e' | 'E' ) ( '+' '-' )? Digits )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:684:4: ( Digits | DNum ) ( 'e' | 'E' ) ( '+' '-' )? Digits
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:688:4: ( Digits | DNum ) ( 'e' | 'E' ) ( '+' '-' )? Digits
 			{
-			DebugLocation(684, 4);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:684:4: ( Digits | DNum )
+			DebugLocation(688, 4);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:688:4: ( Digits | DNum )
 			int alt19=2;
 			try { DebugEnterSubRule(19);
 			try { DebugEnterDecision(19, false);
@@ -10576,18 +10685,18 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:684:5: Digits
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:688:5: Digits
 				{
-				DebugLocation(684, 5);
+				DebugLocation(688, 5);
 				mDigits(); if (state.failed) return;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:684:12: DNum
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:688:12: DNum
 				{
-				DebugLocation(684, 12);
+				DebugLocation(688, 12);
 				mDNum(); if (state.failed) return;
 
 				}
@@ -10596,11 +10705,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(19); }
 
-			DebugLocation(684, 17);
+			DebugLocation(688, 17);
 			input.Consume();
 			state.failed=false;
-			DebugLocation(684, 26);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:684:26: ( '+' '-' )?
+			DebugLocation(688, 26);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:688:26: ( '+' '-' )?
 			int alt20=2;
 			try { DebugEnterSubRule(20);
 			try { DebugEnterDecision(20, false);
@@ -10615,11 +10724,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:684:27: '+' '-'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:688:27: '+' '-'
 				{
-				DebugLocation(684, 27);
+				DebugLocation(688, 27);
 				Match('+'); if (state.failed) return;
-				DebugLocation(684, 30);
+				DebugLocation(688, 30);
 				Match('-'); if (state.failed) return;
 
 				}
@@ -10628,7 +10737,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(20); }
 
-			DebugLocation(684, 35);
+			DebugLocation(688, 35);
 			mDigits(); if (state.failed) return;
 
 			}
@@ -10639,8 +10748,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("Exponent_DNum", 111);
-			LeaveRule("Exponent_DNum", 111);
+			TraceOut("Exponent_DNum", 112);
+			LeaveRule("Exponent_DNum", 112);
 			LeaveRule_Exponent_DNum();
 		}
 	}
@@ -10654,13 +10763,13 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mReal()
 	{
 		EnterRule_Real();
-		EnterRule("Real", 112);
-		TraceIn("Real", 112);
+		EnterRule("Real", 113);
+		TraceIn("Real", 113);
 		try
 		{
 			int _type = Real;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:687:2: ( DNum | Exponent_DNum )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:691:2: ( DNum | Exponent_DNum )
 			int alt21=2;
 			try { DebugEnterDecision(21, false);
 			try
@@ -10677,18 +10786,18 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:687:4: DNum
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:691:4: DNum
 				{
-				DebugLocation(687, 4);
+				DebugLocation(691, 4);
 				mDNum(); if (state.failed) return;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:687:9: Exponent_DNum
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:691:9: Exponent_DNum
 				{
-				DebugLocation(687, 9);
+				DebugLocation(691, 9);
 				mExponent_DNum(); if (state.failed) return;
 
 				}
@@ -10700,8 +10809,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("Real", 112);
-			LeaveRule("Real", 112);
+			TraceOut("Real", 113);
+			LeaveRule("Real", 113);
 			LeaveRule_Real();
 		}
 	}
@@ -10715,20 +10824,20 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mSingleQuotedString()
 	{
 		EnterRule_SingleQuotedString();
-		EnterRule("SingleQuotedString", 113);
-		TraceIn("SingleQuotedString", 113);
+		EnterRule("SingleQuotedString", 114);
+		TraceIn("SingleQuotedString", 114);
 		try
 		{
 			int _type = SingleQuotedString;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:691:2: ( '\\'' ( ( '\\\\' '\\'' )=> '\\\\' '\\'' | ( '\\\\' '\\\\' )=> '\\\\' '\\\\' | '\\\\' |~ ( '\\'' | '\\\\' ) )* '\\'' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:695:2: ( '\\'' ( ( '\\\\' '\\'' )=> '\\\\' '\\'' | ( '\\\\' '\\\\' )=> '\\\\' '\\\\' | '\\\\' |~ ( '\\'' | '\\\\' ) )* '\\'' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:691:4: '\\'' ( ( '\\\\' '\\'' )=> '\\\\' '\\'' | ( '\\\\' '\\\\' )=> '\\\\' '\\\\' | '\\\\' |~ ( '\\'' | '\\\\' ) )* '\\''
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:695:4: '\\'' ( ( '\\\\' '\\'' )=> '\\\\' '\\'' | ( '\\\\' '\\\\' )=> '\\\\' '\\\\' | '\\\\' |~ ( '\\'' | '\\\\' ) )* '\\''
 			{
-			DebugLocation(691, 4);
+			DebugLocation(695, 4);
 			Match('\''); if (state.failed) return;
-			DebugLocation(691, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:691:9: ( ( '\\\\' '\\'' )=> '\\\\' '\\'' | ( '\\\\' '\\\\' )=> '\\\\' '\\\\' | '\\\\' |~ ( '\\'' | '\\\\' ) )*
+			DebugLocation(695, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:695:9: ( ( '\\\\' '\\'' )=> '\\\\' '\\'' | ( '\\\\' '\\\\' )=> '\\\\' '\\\\' | '\\\\' |~ ( '\\'' | '\\\\' ) )*
 			try { DebugEnterSubRule(22);
 			while (true)
 			{
@@ -10797,40 +10906,40 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:691:10: ( '\\\\' '\\'' )=> '\\\\' '\\''
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:695:10: ( '\\\\' '\\'' )=> '\\\\' '\\''
 					{
-					DebugLocation(691, 23);
+					DebugLocation(695, 23);
 					Match('\\'); if (state.failed) return;
-					DebugLocation(691, 28);
+					DebugLocation(695, 28);
 					Match('\''); if (state.failed) return;
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:692:6: ( '\\\\' '\\\\' )=> '\\\\' '\\\\'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:696:6: ( '\\\\' '\\\\' )=> '\\\\' '\\\\'
 					{
-					DebugLocation(692, 19);
+					DebugLocation(696, 19);
 					Match('\\'); if (state.failed) return;
-					DebugLocation(692, 24);
+					DebugLocation(696, 24);
 					Match('\\'); if (state.failed) return;
 
 					}
 					break;
 				case 3:
 					DebugEnterAlt(3);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:693:6: '\\\\'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:697:6: '\\\\'
 					{
-					DebugLocation(693, 6);
+					DebugLocation(697, 6);
 					Match('\\'); if (state.failed) return;
 
 					}
 					break;
 				case 4:
 					DebugEnterAlt(4);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:693:13: ~ ( '\\'' | '\\\\' )
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:697:13: ~ ( '\\'' | '\\\\' )
 					{
-					DebugLocation(693, 13);
+					DebugLocation(697, 13);
 					input.Consume();
 					state.failed=false;
 
@@ -10847,7 +10956,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(22); }
 
-			DebugLocation(694, 4);
+			DebugLocation(698, 4);
 			Match('\''); if (state.failed) return;
 
 			}
@@ -10857,8 +10966,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("SingleQuotedString", 113);
-			LeaveRule("SingleQuotedString", 113);
+			TraceOut("SingleQuotedString", 114);
+			LeaveRule("SingleQuotedString", 114);
 			LeaveRule_SingleQuotedString();
 		}
 	}
@@ -10872,11 +10981,11 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mEscapeCharector()
 	{
 		EnterRule_EscapeCharector();
-		EnterRule("EscapeCharector", 114);
-		TraceIn("EscapeCharector", 114);
+		EnterRule("EscapeCharector", 115);
+		TraceIn("EscapeCharector", 115);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:700:2: ( 'n' | 'r' | 't' | '\\\\' | '$' | '\"' | Digits | 'x' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:704:2: ( 'n' | 'r' | 't' | '\\\\' | '$' | '\"' | Digits | 'x' )
 			int alt23=8;
 			try { DebugEnterDecision(23, false);
 			switch (input.LA(1))
@@ -10944,72 +11053,72 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:700:4: 'n'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:704:4: 'n'
 				{
-				DebugLocation(700, 4);
+				DebugLocation(704, 4);
 				Match('n'); if (state.failed) return;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:700:10: 'r'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:704:10: 'r'
 				{
-				DebugLocation(700, 10);
+				DebugLocation(704, 10);
 				Match('r'); if (state.failed) return;
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:700:16: 't'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:704:16: 't'
 				{
-				DebugLocation(700, 16);
+				DebugLocation(704, 16);
 				Match('t'); if (state.failed) return;
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:700:22: '\\\\'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:704:22: '\\\\'
 				{
-				DebugLocation(700, 22);
+				DebugLocation(704, 22);
 				Match('\\'); if (state.failed) return;
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:700:29: '$'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:704:29: '$'
 				{
-				DebugLocation(700, 29);
+				DebugLocation(704, 29);
 				Match('$'); if (state.failed) return;
 
 				}
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:700:35: '\"'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:704:35: '\"'
 				{
-				DebugLocation(700, 35);
+				DebugLocation(704, 35);
 				Match('\"'); if (state.failed) return;
 
 				}
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:700:41: Digits
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:704:41: Digits
 				{
-				DebugLocation(700, 41);
+				DebugLocation(704, 41);
 				mDigits(); if (state.failed) return;
 
 				}
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:700:50: 'x'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:704:50: 'x'
 				{
-				DebugLocation(700, 50);
+				DebugLocation(704, 50);
 				Match('x'); if (state.failed) return;
 
 				}
@@ -11019,8 +11128,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("EscapeCharector", 114);
-			LeaveRule("EscapeCharector", 114);
+			TraceOut("EscapeCharector", 115);
+			LeaveRule("EscapeCharector", 115);
 			LeaveRule_EscapeCharector();
 		}
 	}
@@ -11034,20 +11143,20 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mDoubleQuotedString()
 	{
 		EnterRule_DoubleQuotedString();
-		EnterRule("DoubleQuotedString", 115);
-		TraceIn("DoubleQuotedString", 115);
+		EnterRule("DoubleQuotedString", 116);
+		TraceIn("DoubleQuotedString", 116);
 		try
 		{
 			int _type = DoubleQuotedString;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:703:2: ( '\"' ( ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector | '\\\\' |~ ( '\\\\' | '\"' ) )* '\"' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:707:2: ( '\"' ( ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector | '\\\\' |~ ( '\\\\' | '\"' ) )* '\"' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:703:4: '\"' ( ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector | '\\\\' |~ ( '\\\\' | '\"' ) )* '\"'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:707:4: '\"' ( ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector | '\\\\' |~ ( '\\\\' | '\"' ) )* '\"'
 			{
-			DebugLocation(703, 4);
+			DebugLocation(707, 4);
 			Match('\"'); if (state.failed) return;
-			DebugLocation(703, 9);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:703:9: ( ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector | '\\\\' |~ ( '\\\\' | '\"' ) )*
+			DebugLocation(707, 9);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:707:9: ( ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector | '\\\\' |~ ( '\\\\' | '\"' ) )*
 			try { DebugEnterSubRule(24);
 			while (true)
 			{
@@ -11206,29 +11315,29 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:703:11: ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:707:11: ( '\\\\' EscapeCharector )=> '\\\\' EscapeCharector
 					{
-					DebugLocation(703, 36);
+					DebugLocation(707, 36);
 					Match('\\'); if (state.failed) return;
-					DebugLocation(703, 41);
+					DebugLocation(707, 41);
 					mEscapeCharector(); if (state.failed) return;
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:704:4: '\\\\'
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:708:4: '\\\\'
 					{
-					DebugLocation(704, 4);
+					DebugLocation(708, 4);
 					Match('\\'); if (state.failed) return;
 
 					}
 					break;
 				case 3:
 					DebugEnterAlt(3);
-					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:705:4: ~ ( '\\\\' | '\"' )
+					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:709:4: ~ ( '\\\\' | '\"' )
 					{
-					DebugLocation(705, 4);
+					DebugLocation(709, 4);
 					input.Consume();
 					state.failed=false;
 
@@ -11245,7 +11354,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(24); }
 
-			DebugLocation(706, 4);
+			DebugLocation(710, 4);
 			Match('\"'); if (state.failed) return;
 
 			}
@@ -11255,8 +11364,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("DoubleQuotedString", 115);
-			LeaveRule("DoubleQuotedString", 115);
+			TraceOut("DoubleQuotedString", 116);
+			LeaveRule("DoubleQuotedString", 116);
 			LeaveRule_DoubleQuotedString();
 		}
 	}
@@ -11270,20 +11379,20 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mHereDoc()
 	{
 		EnterRule_HereDoc();
-		EnterRule("HereDoc", 116);
-		TraceIn("HereDoc", 116);
+		EnterRule("HereDoc", 117);
+		TraceIn("HereDoc", 117);
 		try
 		{
 			int _type = HereDoc;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:710:2: ( '<<<' HereDocContents )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:714:2: ( '<<<' HereDocContents )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:710:4: '<<<' HereDocContents
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:714:4: '<<<' HereDocContents
 			{
-			DebugLocation(710, 4);
+			DebugLocation(714, 4);
 			Match("<<<"); if (state.failed) return;
 
-			DebugLocation(710, 10);
+			DebugLocation(714, 10);
 			mHereDocContents(); if (state.failed) return;
 
 			}
@@ -11293,8 +11402,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("HereDoc", 116);
-			LeaveRule("HereDoc", 116);
+			TraceOut("HereDoc", 117);
+			LeaveRule("HereDoc", 117);
 			LeaveRule_HereDoc();
 		}
 	}
@@ -11308,19 +11417,19 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mVariableName()
 	{
 		EnterRule_VariableName();
-		EnterRule("VariableName", 117);
-		TraceIn("VariableName", 117);
+		EnterRule("VariableName", 118);
+		TraceIn("VariableName", 118);
 		try
 		{
 			int _type = VariableName;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:715:2: ( '$' UnquotedStringBody )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:719:2: ( '$' UnquotedStringBody )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:715:4: '$' UnquotedStringBody
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:719:4: '$' UnquotedStringBody
 			{
-			DebugLocation(715, 4);
+			DebugLocation(719, 4);
 			Match('$'); if (state.failed) return;
-			DebugLocation(715, 8);
+			DebugLocation(719, 8);
 			mUnquotedStringBody(); if (state.failed) return;
 
 			}
@@ -11330,8 +11439,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("VariableName", 117);
-			LeaveRule("VariableName", 117);
+			TraceOut("VariableName", 118);
+			LeaveRule("VariableName", 118);
 			LeaveRule_VariableName();
 		}
 	}
@@ -11345,17 +11454,17 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mUnquotedString()
 	{
 		EnterRule_UnquotedString();
-		EnterRule("UnquotedString", 118);
-		TraceIn("UnquotedString", 118);
+		EnterRule("UnquotedString", 119);
+		TraceIn("UnquotedString", 119);
 		try
 		{
 			int _type = UnquotedString;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:720:4: ( UnquotedStringBody )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:724:4: ( UnquotedStringBody )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:720:6: UnquotedStringBody
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:724:6: UnquotedStringBody
 			{
-			DebugLocation(720, 6);
+			DebugLocation(724, 6);
 			mUnquotedStringBody(); if (state.failed) return;
 
 			}
@@ -11365,8 +11474,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("UnquotedString", 118);
-			LeaveRule("UnquotedString", 118);
+			TraceOut("UnquotedString", 119);
+			LeaveRule("UnquotedString", 119);
 			LeaveRule_UnquotedString();
 		}
 	}
@@ -11380,15 +11489,15 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mUnquotedStringBody()
 	{
 		EnterRule_UnquotedStringBody();
-		EnterRule("UnquotedStringBody", 119);
-		TraceIn("UnquotedStringBody", 119);
+		EnterRule("UnquotedStringBody", 120);
+		TraceIn("UnquotedStringBody", 120);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:726:4: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:730:4: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:726:6: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:730:6: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			{
-			DebugLocation(726, 6);
+			DebugLocation(730, 6);
 			if ((input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
@@ -11403,8 +11512,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(726, 35);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:726:35: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			DebugLocation(730, 35);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:730:35: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			try { DebugEnterSubRule(25);
 			while (true)
 			{
@@ -11425,7 +11534,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:
 					{
-					DebugLocation(726, 35);
+					DebugLocation(730, 35);
 					input.Consume();
 					state.failed=false;
 
@@ -11448,8 +11557,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("UnquotedStringBody", 119);
-			LeaveRule("UnquotedStringBody", 119);
+			TraceOut("UnquotedStringBody", 120);
+			LeaveRule("UnquotedStringBody", 120);
 			LeaveRule_UnquotedStringBody();
 		}
 	}
@@ -11463,15 +11572,15 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mHereDocContents()
 	{
 		EnterRule_HereDocContents();
-		EnterRule("HereDocContents", 120);
-		TraceIn("HereDocContents", 120);
+		EnterRule("HereDocContents", 121);
+		TraceIn("HereDocContents", 121);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:732:2: ()
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:736:2: ()
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:732:4: 
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:736:4: 
 			{
-			DebugLocation(732, 4);
+			DebugLocation(736, 4);
 			if (state.backtracking == 0)
 			{
 
@@ -11510,8 +11619,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("HereDocContents", 120);
-			LeaveRule("HereDocContents", 120);
+			TraceOut("HereDocContents", 121);
+			LeaveRule("HereDocContents", 121);
 			LeaveRule_HereDocContents();
 		}
 	}
@@ -11525,13 +11634,13 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mAsignmentOperator()
 	{
 		EnterRule_AsignmentOperator();
-		EnterRule("AsignmentOperator", 121);
-		TraceIn("AsignmentOperator", 121);
+		EnterRule("AsignmentOperator", 122);
+		TraceIn("AsignmentOperator", 122);
 		try
 		{
 			int _type = AsignmentOperator;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:763:2: ( '+=' | '-=' | '*=' | '/=' | '.=' | '%=' | '&=' | '|=' | '^=' | '<<=' | '>>=' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:2: ( '+=' | '-=' | '*=' | '/=' | '.=' | '%=' | '&=' | '|=' | '^=' | '<<=' | '>>=' )
 			int alt26=11;
 			try { DebugEnterDecision(26, false);
 			switch (input.LA(1))
@@ -11605,9 +11714,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:763:4: '+='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:4: '+='
 				{
-				DebugLocation(763, 4);
+				DebugLocation(767, 4);
 				Match("+="); if (state.failed) return;
 
 
@@ -11615,9 +11724,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:763:9: '-='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:9: '-='
 				{
-				DebugLocation(763, 9);
+				DebugLocation(767, 9);
 				Match("-="); if (state.failed) return;
 
 
@@ -11625,9 +11734,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:763:14: '*='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:14: '*='
 				{
-				DebugLocation(763, 14);
+				DebugLocation(767, 14);
 				Match("*="); if (state.failed) return;
 
 
@@ -11635,9 +11744,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:763:19: '/='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:19: '/='
 				{
-				DebugLocation(763, 19);
+				DebugLocation(767, 19);
 				Match("/="); if (state.failed) return;
 
 
@@ -11645,9 +11754,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:763:24: '.='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:24: '.='
 				{
-				DebugLocation(763, 24);
+				DebugLocation(767, 24);
 				Match(".="); if (state.failed) return;
 
 
@@ -11655,9 +11764,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:763:29: '%='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:29: '%='
 				{
-				DebugLocation(763, 29);
+				DebugLocation(767, 29);
 				Match("%="); if (state.failed) return;
 
 
@@ -11665,9 +11774,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:763:34: '&='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:34: '&='
 				{
-				DebugLocation(763, 34);
+				DebugLocation(767, 34);
 				Match("&="); if (state.failed) return;
 
 
@@ -11675,9 +11784,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:763:39: '|='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:39: '|='
 				{
-				DebugLocation(763, 39);
+				DebugLocation(767, 39);
 				Match("|="); if (state.failed) return;
 
 
@@ -11685,9 +11794,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 9:
 				DebugEnterAlt(9);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:763:44: '^='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:44: '^='
 				{
-				DebugLocation(763, 44);
+				DebugLocation(767, 44);
 				Match("^="); if (state.failed) return;
 
 
@@ -11695,9 +11804,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 10:
 				DebugEnterAlt(10);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:763:49: '<<='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:49: '<<='
 				{
-				DebugLocation(763, 49);
+				DebugLocation(767, 49);
 				Match("<<="); if (state.failed) return;
 
 
@@ -11705,9 +11814,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 11:
 				DebugEnterAlt(11);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:763:55: '>>='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:55: '>>='
 				{
-				DebugLocation(763, 55);
+				DebugLocation(767, 55);
 				Match(">>="); if (state.failed) return;
 
 
@@ -11720,8 +11829,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("AsignmentOperator", 121);
-			LeaveRule("AsignmentOperator", 121);
+			TraceOut("AsignmentOperator", 122);
+			LeaveRule("AsignmentOperator", 122);
 			LeaveRule_AsignmentOperator();
 		}
 	}
@@ -11735,13 +11844,13 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mEqualityOperator()
 	{
 		EnterRule_EqualityOperator();
-		EnterRule("EqualityOperator", 122);
-		TraceIn("EqualityOperator", 122);
+		EnterRule("EqualityOperator", 123);
+		TraceIn("EqualityOperator", 123);
 		try
 		{
 			int _type = EqualityOperator;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:2: ( '==' | '!=' | '===' | '!==' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:771:2: ( '==' | '!=' | '===' | '!==' )
 			int alt27=4;
 			try { DebugEnterDecision(27, false);
 			int LA27_1 = input.LA(1);
@@ -11808,9 +11917,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:4: '=='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:771:4: '=='
 				{
-				DebugLocation(767, 4);
+				DebugLocation(771, 4);
 				Match("=="); if (state.failed) return;
 
 
@@ -11818,9 +11927,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:11: '!='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:771:11: '!='
 				{
-				DebugLocation(767, 11);
+				DebugLocation(771, 11);
 				Match("!="); if (state.failed) return;
 
 
@@ -11828,9 +11937,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:18: '==='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:771:18: '==='
 				{
-				DebugLocation(767, 18);
+				DebugLocation(771, 18);
 				Match("==="); if (state.failed) return;
 
 
@@ -11838,9 +11947,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:767:26: '!=='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:771:26: '!=='
 				{
-				DebugLocation(767, 26);
+				DebugLocation(771, 26);
 				Match("!=="); if (state.failed) return;
 
 
@@ -11853,8 +11962,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("EqualityOperator", 122);
-			LeaveRule("EqualityOperator", 122);
+			TraceOut("EqualityOperator", 123);
+			LeaveRule("EqualityOperator", 123);
 			LeaveRule_EqualityOperator();
 		}
 	}
@@ -11868,13 +11977,13 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mComparisionOperator()
 	{
 		EnterRule_ComparisionOperator();
-		EnterRule("ComparisionOperator", 123);
-		TraceIn("ComparisionOperator", 123);
+		EnterRule("ComparisionOperator", 124);
+		TraceIn("ComparisionOperator", 124);
 		try
 		{
 			int _type = ComparisionOperator;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:771:2: ( '<' | '<=' | '>' | '>=' | '<>' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:775:2: ( '<' | '<=' | '>' | '>=' | '<>' )
 			int alt28=5;
 			try { DebugEnterDecision(28, false);
 			int LA28_1 = input.LA(1);
@@ -11925,18 +12034,18 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:771:4: '<'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:775:4: '<'
 				{
-				DebugLocation(771, 4);
+				DebugLocation(775, 4);
 				Match('<'); if (state.failed) return;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:771:10: '<='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:775:10: '<='
 				{
-				DebugLocation(771, 10);
+				DebugLocation(775, 10);
 				Match("<="); if (state.failed) return;
 
 
@@ -11944,18 +12053,18 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:771:17: '>'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:775:17: '>'
 				{
-				DebugLocation(771, 17);
+				DebugLocation(775, 17);
 				Match('>'); if (state.failed) return;
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:771:23: '>='
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:775:23: '>='
 				{
-				DebugLocation(771, 23);
+				DebugLocation(775, 23);
 				Match(">="); if (state.failed) return;
 
 
@@ -11963,9 +12072,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:771:30: '<>'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:775:30: '<>'
 				{
-				DebugLocation(771, 30);
+				DebugLocation(775, 30);
 				Match("<>"); if (state.failed) return;
 
 
@@ -11978,8 +12087,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("ComparisionOperator", 123);
-			LeaveRule("ComparisionOperator", 123);
+			TraceOut("ComparisionOperator", 124);
+			LeaveRule("ComparisionOperator", 124);
 			LeaveRule_ComparisionOperator();
 		}
 	}
@@ -11993,13 +12102,13 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mShiftOperator()
 	{
 		EnterRule_ShiftOperator();
-		EnterRule("ShiftOperator", 124);
-		TraceIn("ShiftOperator", 124);
+		EnterRule("ShiftOperator", 125);
+		TraceIn("ShiftOperator", 125);
 		try
 		{
 			int _type = ShiftOperator;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:775:2: ( '<<' | '>>' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:779:2: ( '<<' | '>>' )
 			int alt29=2;
 			try { DebugEnterDecision(29, false);
 			int LA29_1 = input.LA(1);
@@ -12024,9 +12133,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:775:4: '<<'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:779:4: '<<'
 				{
-				DebugLocation(775, 4);
+				DebugLocation(779, 4);
 				Match("<<"); if (state.failed) return;
 
 
@@ -12034,9 +12143,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:775:11: '>>'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:779:11: '>>'
 				{
-				DebugLocation(775, 11);
+				DebugLocation(779, 11);
 				Match(">>"); if (state.failed) return;
 
 
@@ -12049,8 +12158,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("ShiftOperator", 124);
-			LeaveRule("ShiftOperator", 124);
+			TraceOut("ShiftOperator", 125);
+			LeaveRule("ShiftOperator", 125);
 			LeaveRule_ShiftOperator();
 		}
 	}
@@ -12064,13 +12173,13 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mIncrementOperator()
 	{
 		EnterRule_IncrementOperator();
-		EnterRule("IncrementOperator", 125);
-		TraceIn("IncrementOperator", 125);
+		EnterRule("IncrementOperator", 126);
+		TraceIn("IncrementOperator", 126);
 		try
 		{
 			int _type = IncrementOperator;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:779:2: ( '--' | '++' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:783:2: ( '--' | '++' )
 			int alt30=2;
 			try { DebugEnterDecision(30, false);
 			int LA30_1 = input.LA(1);
@@ -12095,9 +12204,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:779:4: '--'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:783:4: '--'
 				{
-				DebugLocation(779, 4);
+				DebugLocation(783, 4);
 				Match("--"); if (state.failed) return;
 
 
@@ -12105,9 +12214,9 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:779:9: '++'
+				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:783:9: '++'
 				{
-				DebugLocation(779, 9);
+				DebugLocation(783, 9);
 				Match("++"); if (state.failed) return;
 
 
@@ -12120,8 +12229,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("IncrementOperator", 125);
-			LeaveRule("IncrementOperator", 125);
+			TraceOut("IncrementOperator", 126);
+			LeaveRule("IncrementOperator", 126);
 			LeaveRule_IncrementOperator();
 		}
 	}
@@ -12135,15 +12244,15 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mEol()
 	{
 		EnterRule_Eol();
-		EnterRule("Eol", 126);
-		TraceIn("Eol", 126);
+		EnterRule("Eol", 127);
+		TraceIn("Eol", 127);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:784:5: ( '\\n' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:788:5: ( '\\n' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:784:7: '\\n'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:788:7: '\\n'
 			{
-			DebugLocation(784, 7);
+			DebugLocation(788, 7);
 			Match('\n'); if (state.failed) return;
 
 			}
@@ -12151,8 +12260,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("Eol", 126);
-			LeaveRule("Eol", 126);
+			TraceOut("Eol", 127);
+			LeaveRule("Eol", 127);
 			LeaveRule_Eol();
 		}
 	}
@@ -12166,8 +12275,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void mWhiteSpace()
 	{
 		EnterRule_WhiteSpace();
-		EnterRule("WhiteSpace", 127);
-		TraceIn("WhiteSpace", 127);
+		EnterRule("WhiteSpace", 128);
+		TraceIn("WhiteSpace", 128);
 		try
 		{
 			int _type = WhiteSpace;
@@ -12175,12 +12284,12 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 
 				_channel=Hidden;
 
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:790:2: ( ( ' ' | '\\t' | '\\n' | '\\r' )* )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:794:2: ( ( ' ' | '\\t' | '\\n' | '\\r' )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:790:4: ( ' ' | '\\t' | '\\n' | '\\r' )*
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:794:4: ( ' ' | '\\t' | '\\n' | '\\r' )*
 			{
-			DebugLocation(790, 4);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:790:4: ( ' ' | '\\t' | '\\n' | '\\r' )*
+			DebugLocation(794, 4);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:794:4: ( ' ' | '\\t' | '\\n' | '\\r' )*
 			try { DebugEnterSubRule(31);
 			while (true)
 			{
@@ -12201,7 +12310,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:
 					{
-					DebugLocation(790, 4);
+					DebugLocation(794, 4);
 					input.Consume();
 					state.failed=false;
 
@@ -12226,8 +12335,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("WhiteSpace", 127);
-			LeaveRule("WhiteSpace", 127);
+			TraceOut("WhiteSpace", 128);
+			LeaveRule("WhiteSpace", 128);
 			LeaveRule_WhiteSpace();
 		}
 	}
@@ -12235,8 +12344,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 
 	public override void mTokens()
 	{
-		// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:8: ( Ampersand | ArrayAssign | Asterisk | Bang | ClassMember | CloseCurlyBracket | CloseRoundBracket | CloseSquareBracket | Colon | Comma | Dot | Equals | Forwardslash | Hat | InstanceMember | LogicalAnd | LogicalOr | Minus | OpenCurlyBracket | OpenRoundBracket | OpenSquareBracket | Percent | Pipe | Plus | QuestionMark | SemiColon | SuppressWarnings | Tilde | T__129 | T__130 | OP | BodyString | MultilineComment | SinglelineComment | UnixComment | IntType | IntegerType | BoolType | BooleanType | FloatType | DoubleType | RealType | StringType | ObjectType | UnsetType | ArrayType | New | Clone | Echo | Print | If | Else | ElseIf | For | Foreach | While | Do | Try | Catch | Finally | Switch | Case | Default | Namespace | Function | Break | Continue | Goto | Return | Throw | Global | Static | And | Or | Xor | Instanceof | Null | List | Class | Interface | Extends | Implements | Abstract | Var | Const | As | Use | Require | RequireOnce | Include | IncludeOnce | Public | Private | Protected | True | False | HaltCompiler | Die | Empty | Exit | Eval | Isset | Integer | Real | SingleQuotedString | DoubleQuotedString | HereDoc | VariableName | UnquotedString | AsignmentOperator | EqualityOperator | ComparisionOperator | ShiftOperator | IncrementOperator | WhiteSpace )
-		int alt32=115;
+		// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:8: ( Ampersand | ArrayAssign | Asterisk | Bang | ClassMember | CloseCurlyBracket | CloseRoundBracket | CloseSquareBracket | Colon | Comma | Dot | Equals | Forwardslash | Hat | InstanceMember | LogicalAnd | LogicalOr | Minus | OpenCurlyBracket | OpenRoundBracket | OpenSquareBracket | Percent | Pipe | Plus | QuestionMark | SemiColon | SuppressWarnings | Tilde | T__130 | T__131 | OP | BodyString | MultilineComment | SinglelineComment | UnixComment | IntType | IntegerType | BoolType | BooleanType | FloatType | DoubleType | RealType | StringType | ObjectType | UnsetType | ArrayType | New | Clone | Echo | Print | If | Else | ElseIf | For | Foreach | While | Do | Try | Catch | Finally | Switch | Case | Default | Namespace | Function | Break | Continue | Goto | Return | Throw | Global | Static | And | Or | Xor | Instanceof | Null | List | Class | Interface | Extends | Implements | Final | Abstract | Var | Const | As | Use | Require | RequireOnce | Include | IncludeOnce | Public | Private | Protected | True | False | HaltCompiler | Die | Empty | Exit | Eval | Isset | Integer | Real | SingleQuotedString | DoubleQuotedString | HereDoc | VariableName | UnquotedString | AsignmentOperator | EqualityOperator | ComparisionOperator | ShiftOperator | IncrementOperator | WhiteSpace )
+		int alt32=116;
 		try { DebugEnterDecision(32, false);
 		try
 		{
@@ -12504,19 +12613,19 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			break;
 		case 29:
 			DebugEnterAlt(29);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:311: T__129
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:311: T__130
 			{
 			DebugLocation(1, 311);
-			mT__129(); if (state.failed) return;
+			mT__130(); if (state.failed) return;
 
 			}
 			break;
 		case 30:
 			DebugEnterAlt(30);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:318: T__130
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:318: T__131
 			{
 			DebugLocation(1, 318);
-			mT__130(); if (state.failed) return;
+			mT__131(); if (state.failed) return;
 
 			}
 			break;
@@ -12990,297 +13099,306 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			break;
 		case 83:
 			DebugEnterAlt(83);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:727: Abstract
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:727: Final
 			{
 			DebugLocation(1, 727);
-			mAbstract(); if (state.failed) return;
+			mFinal(); if (state.failed) return;
 
 			}
 			break;
 		case 84:
 			DebugEnterAlt(84);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:736: Var
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:733: Abstract
 			{
-			DebugLocation(1, 736);
-			mVar(); if (state.failed) return;
+			DebugLocation(1, 733);
+			mAbstract(); if (state.failed) return;
 
 			}
 			break;
 		case 85:
 			DebugEnterAlt(85);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:740: Const
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:742: Var
 			{
-			DebugLocation(1, 740);
-			mConst(); if (state.failed) return;
+			DebugLocation(1, 742);
+			mVar(); if (state.failed) return;
 
 			}
 			break;
 		case 86:
 			DebugEnterAlt(86);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:746: As
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:746: Const
 			{
 			DebugLocation(1, 746);
-			mAs(); if (state.failed) return;
+			mConst(); if (state.failed) return;
 
 			}
 			break;
 		case 87:
 			DebugEnterAlt(87);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:749: Use
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:752: As
 			{
-			DebugLocation(1, 749);
-			mUse(); if (state.failed) return;
+			DebugLocation(1, 752);
+			mAs(); if (state.failed) return;
 
 			}
 			break;
 		case 88:
 			DebugEnterAlt(88);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:753: Require
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:755: Use
 			{
-			DebugLocation(1, 753);
-			mRequire(); if (state.failed) return;
+			DebugLocation(1, 755);
+			mUse(); if (state.failed) return;
 
 			}
 			break;
 		case 89:
 			DebugEnterAlt(89);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:761: RequireOnce
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:759: Require
 			{
-			DebugLocation(1, 761);
-			mRequireOnce(); if (state.failed) return;
+			DebugLocation(1, 759);
+			mRequire(); if (state.failed) return;
 
 			}
 			break;
 		case 90:
 			DebugEnterAlt(90);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:773: Include
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:767: RequireOnce
 			{
-			DebugLocation(1, 773);
-			mInclude(); if (state.failed) return;
+			DebugLocation(1, 767);
+			mRequireOnce(); if (state.failed) return;
 
 			}
 			break;
 		case 91:
 			DebugEnterAlt(91);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:781: IncludeOnce
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:779: Include
 			{
-			DebugLocation(1, 781);
-			mIncludeOnce(); if (state.failed) return;
+			DebugLocation(1, 779);
+			mInclude(); if (state.failed) return;
 
 			}
 			break;
 		case 92:
 			DebugEnterAlt(92);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:793: Public
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:787: IncludeOnce
 			{
-			DebugLocation(1, 793);
-			mPublic(); if (state.failed) return;
+			DebugLocation(1, 787);
+			mIncludeOnce(); if (state.failed) return;
 
 			}
 			break;
 		case 93:
 			DebugEnterAlt(93);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:800: Private
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:799: Public
 			{
-			DebugLocation(1, 800);
-			mPrivate(); if (state.failed) return;
+			DebugLocation(1, 799);
+			mPublic(); if (state.failed) return;
 
 			}
 			break;
 		case 94:
 			DebugEnterAlt(94);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:808: Protected
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:806: Private
 			{
-			DebugLocation(1, 808);
-			mProtected(); if (state.failed) return;
+			DebugLocation(1, 806);
+			mPrivate(); if (state.failed) return;
 
 			}
 			break;
 		case 95:
 			DebugEnterAlt(95);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:818: True
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:814: Protected
 			{
-			DebugLocation(1, 818);
-			mTrue(); if (state.failed) return;
+			DebugLocation(1, 814);
+			mProtected(); if (state.failed) return;
 
 			}
 			break;
 		case 96:
 			DebugEnterAlt(96);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:823: False
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:824: True
 			{
-			DebugLocation(1, 823);
-			mFalse(); if (state.failed) return;
+			DebugLocation(1, 824);
+			mTrue(); if (state.failed) return;
 
 			}
 			break;
 		case 97:
 			DebugEnterAlt(97);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:829: HaltCompiler
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:829: False
 			{
 			DebugLocation(1, 829);
-			mHaltCompiler(); if (state.failed) return;
+			mFalse(); if (state.failed) return;
 
 			}
 			break;
 		case 98:
 			DebugEnterAlt(98);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:842: Die
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:835: HaltCompiler
 			{
-			DebugLocation(1, 842);
-			mDie(); if (state.failed) return;
+			DebugLocation(1, 835);
+			mHaltCompiler(); if (state.failed) return;
 
 			}
 			break;
 		case 99:
 			DebugEnterAlt(99);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:846: Empty
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:848: Die
 			{
-			DebugLocation(1, 846);
-			mEmpty(); if (state.failed) return;
+			DebugLocation(1, 848);
+			mDie(); if (state.failed) return;
 
 			}
 			break;
 		case 100:
 			DebugEnterAlt(100);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:852: Exit
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:852: Empty
 			{
 			DebugLocation(1, 852);
-			mExit(); if (state.failed) return;
+			mEmpty(); if (state.failed) return;
 
 			}
 			break;
 		case 101:
 			DebugEnterAlt(101);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:857: Eval
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:858: Exit
 			{
-			DebugLocation(1, 857);
-			mEval(); if (state.failed) return;
+			DebugLocation(1, 858);
+			mExit(); if (state.failed) return;
 
 			}
 			break;
 		case 102:
 			DebugEnterAlt(102);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:862: Isset
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:863: Eval
 			{
-			DebugLocation(1, 862);
-			mIsset(); if (state.failed) return;
+			DebugLocation(1, 863);
+			mEval(); if (state.failed) return;
 
 			}
 			break;
 		case 103:
 			DebugEnterAlt(103);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:868: Integer
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:868: Isset
 			{
 			DebugLocation(1, 868);
-			mInteger(); if (state.failed) return;
+			mIsset(); if (state.failed) return;
 
 			}
 			break;
 		case 104:
 			DebugEnterAlt(104);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:876: Real
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:874: Integer
 			{
-			DebugLocation(1, 876);
-			mReal(); if (state.failed) return;
+			DebugLocation(1, 874);
+			mInteger(); if (state.failed) return;
 
 			}
 			break;
 		case 105:
 			DebugEnterAlt(105);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:881: SingleQuotedString
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:882: Real
 			{
-			DebugLocation(1, 881);
-			mSingleQuotedString(); if (state.failed) return;
+			DebugLocation(1, 882);
+			mReal(); if (state.failed) return;
 
 			}
 			break;
 		case 106:
 			DebugEnterAlt(106);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:900: DoubleQuotedString
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:887: SingleQuotedString
 			{
-			DebugLocation(1, 900);
-			mDoubleQuotedString(); if (state.failed) return;
+			DebugLocation(1, 887);
+			mSingleQuotedString(); if (state.failed) return;
 
 			}
 			break;
 		case 107:
 			DebugEnterAlt(107);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:919: HereDoc
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:906: DoubleQuotedString
 			{
-			DebugLocation(1, 919);
-			mHereDoc(); if (state.failed) return;
+			DebugLocation(1, 906);
+			mDoubleQuotedString(); if (state.failed) return;
 
 			}
 			break;
 		case 108:
 			DebugEnterAlt(108);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:927: VariableName
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:925: HereDoc
 			{
-			DebugLocation(1, 927);
-			mVariableName(); if (state.failed) return;
+			DebugLocation(1, 925);
+			mHereDoc(); if (state.failed) return;
 
 			}
 			break;
 		case 109:
 			DebugEnterAlt(109);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:940: UnquotedString
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:933: VariableName
 			{
-			DebugLocation(1, 940);
-			mUnquotedString(); if (state.failed) return;
+			DebugLocation(1, 933);
+			mVariableName(); if (state.failed) return;
 
 			}
 			break;
 		case 110:
 			DebugEnterAlt(110);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:955: AsignmentOperator
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:946: UnquotedString
 			{
-			DebugLocation(1, 955);
-			mAsignmentOperator(); if (state.failed) return;
+			DebugLocation(1, 946);
+			mUnquotedString(); if (state.failed) return;
 
 			}
 			break;
 		case 111:
 			DebugEnterAlt(111);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:973: EqualityOperator
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:961: AsignmentOperator
 			{
-			DebugLocation(1, 973);
-			mEqualityOperator(); if (state.failed) return;
+			DebugLocation(1, 961);
+			mAsignmentOperator(); if (state.failed) return;
 
 			}
 			break;
 		case 112:
 			DebugEnterAlt(112);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:990: ComparisionOperator
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:979: EqualityOperator
 			{
-			DebugLocation(1, 990);
-			mComparisionOperator(); if (state.failed) return;
+			DebugLocation(1, 979);
+			mEqualityOperator(); if (state.failed) return;
 
 			}
 			break;
 		case 113:
 			DebugEnterAlt(113);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:1010: ShiftOperator
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:996: ComparisionOperator
 			{
-			DebugLocation(1, 1010);
-			mShiftOperator(); if (state.failed) return;
+			DebugLocation(1, 996);
+			mComparisionOperator(); if (state.failed) return;
 
 			}
 			break;
 		case 114:
 			DebugEnterAlt(114);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:1024: IncrementOperator
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:1016: ShiftOperator
 			{
-			DebugLocation(1, 1024);
-			mIncrementOperator(); if (state.failed) return;
+			DebugLocation(1, 1016);
+			mShiftOperator(); if (state.failed) return;
 
 			}
 			break;
 		case 115:
 			DebugEnterAlt(115);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:1042: WhiteSpace
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:1030: IncrementOperator
 			{
-			DebugLocation(1, 1042);
+			DebugLocation(1, 1030);
+			mIncrementOperator(); if (state.failed) return;
+
+			}
+			break;
+		case 116:
+			DebugEnterAlt(116);
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:1:1048: WhiteSpace
+			{
+			DebugLocation(1, 1048);
 			mWhiteSpace(); if (state.failed) return;
 
 			}
@@ -13297,17 +13415,17 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void synpred1_Php_fragment()
 	{
 		EnterRule_synpred1_Php_fragment();
-		EnterRule("synpred1_Php_fragment", 129);
-		TraceIn("synpred1_Php_fragment", 129);
+		EnterRule("synpred1_Php_fragment", 130);
+		TraceIn("synpred1_Php_fragment", 130);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:531:5: ( '<' ~ '?' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:534:5: ( '<' ~ '?' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:531:6: '<' ~ '?'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:534:6: '<' ~ '?'
 			{
-			DebugLocation(531, 6);
+			DebugLocation(534, 6);
 			Match('<'); if (state.failed) return;
-			DebugLocation(531, 10);
+			DebugLocation(534, 10);
 			if ((input.LA(1)>='\u0000' && input.LA(1)<='>')||(input.LA(1)>='@' && input.LA(1)<='\uFFFF'))
 			{
 				input.Consume();
@@ -13328,8 +13446,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("synpred1_Php_fragment", 129);
-			LeaveRule("synpred1_Php_fragment", 129);
+			TraceOut("synpred1_Php_fragment", 130);
+			LeaveRule("synpred1_Php_fragment", 130);
 			LeaveRule_synpred1_Php_fragment();
 		}
 	}
@@ -13342,17 +13460,17 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void synpred2_Php_fragment()
 	{
 		EnterRule_synpred2_Php_fragment();
-		EnterRule("synpred2_Php_fragment", 130);
-		TraceIn("synpred2_Php_fragment", 130);
+		EnterRule("synpred2_Php_fragment", 131);
+		TraceIn("synpred2_Php_fragment", 131);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:536:5: ( '<' ~ '?' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:539:5: ( '<' ~ '?' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:536:6: '<' ~ '?'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:539:6: '<' ~ '?'
 			{
-			DebugLocation(536, 6);
+			DebugLocation(539, 6);
 			Match('<'); if (state.failed) return;
-			DebugLocation(536, 10);
+			DebugLocation(539, 10);
 			if ((input.LA(1)>='\u0000' && input.LA(1)<='>')||(input.LA(1)>='@' && input.LA(1)<='\uFFFF'))
 			{
 				input.Consume();
@@ -13373,8 +13491,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("synpred2_Php_fragment", 130);
-			LeaveRule("synpred2_Php_fragment", 130);
+			TraceOut("synpred2_Php_fragment", 131);
+			LeaveRule("synpred2_Php_fragment", 131);
 			LeaveRule_synpred2_Php_fragment();
 		}
 	}
@@ -13387,17 +13505,17 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void synpred3_Php_fragment()
 	{
 		EnterRule_synpred3_Php_fragment();
-		EnterRule("synpred3_Php_fragment", 131);
-		TraceIn("synpred3_Php_fragment", 131);
+		EnterRule("synpred3_Php_fragment", 132);
+		TraceIn("synpred3_Php_fragment", 132);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:541:10: ( '*' ~ '/' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:544:10: ( '*' ~ '/' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:541:11: '*' ~ '/'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:544:11: '*' ~ '/'
 			{
-			DebugLocation(541, 11);
+			DebugLocation(544, 11);
 			Match('*'); if (state.failed) return;
-			DebugLocation(541, 15);
+			DebugLocation(544, 15);
 			if ((input.LA(1)>='\u0000' && input.LA(1)<='.')||(input.LA(1)>='0' && input.LA(1)<='\uFFFF'))
 			{
 				input.Consume();
@@ -13418,8 +13536,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("synpred3_Php_fragment", 131);
-			LeaveRule("synpred3_Php_fragment", 131);
+			TraceOut("synpred3_Php_fragment", 132);
+			LeaveRule("synpred3_Php_fragment", 132);
 			LeaveRule_synpred3_Php_fragment();
 		}
 	}
@@ -13432,17 +13550,17 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void synpred4_Php_fragment()
 	{
 		EnterRule_synpred4_Php_fragment();
-		EnterRule("synpred4_Php_fragment", 132);
-		TraceIn("synpred4_Php_fragment", 132);
+		EnterRule("synpred4_Php_fragment", 133);
+		TraceIn("synpred4_Php_fragment", 133);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:545:11: ( '?' ~ '>' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:548:11: ( '?' ~ '>' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:545:12: '?' ~ '>'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:548:12: '?' ~ '>'
 			{
-			DebugLocation(545, 12);
+			DebugLocation(548, 12);
 			Match('?'); if (state.failed) return;
-			DebugLocation(545, 16);
+			DebugLocation(548, 16);
 			if ((input.LA(1)>='\u0000' && input.LA(1)<='=')||(input.LA(1)>='?' && input.LA(1)<='\uFFFF'))
 			{
 				input.Consume();
@@ -13463,8 +13581,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("synpred4_Php_fragment", 132);
-			LeaveRule("synpred4_Php_fragment", 132);
+			TraceOut("synpred4_Php_fragment", 133);
+			LeaveRule("synpred4_Php_fragment", 133);
 			LeaveRule_synpred4_Php_fragment();
 		}
 	}
@@ -13477,17 +13595,17 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void synpred5_Php_fragment()
 	{
 		EnterRule_synpred5_Php_fragment();
-		EnterRule("synpred5_Php_fragment", 133);
-		TraceIn("synpred5_Php_fragment", 133);
+		EnterRule("synpred5_Php_fragment", 134);
+		TraceIn("synpred5_Php_fragment", 134);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:549:9: ( '?' ~ '>' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:552:9: ( '?' ~ '>' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:549:10: '?' ~ '>'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:552:10: '?' ~ '>'
 			{
-			DebugLocation(549, 10);
+			DebugLocation(552, 10);
 			Match('?'); if (state.failed) return;
-			DebugLocation(549, 14);
+			DebugLocation(552, 14);
 			if ((input.LA(1)>='\u0000' && input.LA(1)<='=')||(input.LA(1)>='?' && input.LA(1)<='\uFFFF'))
 			{
 				input.Consume();
@@ -13508,8 +13626,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("synpred5_Php_fragment", 133);
-			LeaveRule("synpred5_Php_fragment", 133);
+			TraceOut("synpred5_Php_fragment", 134);
+			LeaveRule("synpred5_Php_fragment", 134);
 			LeaveRule_synpred5_Php_fragment();
 		}
 	}
@@ -13522,17 +13640,17 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void synpred6_Php_fragment()
 	{
 		EnterRule_synpred6_Php_fragment();
-		EnterRule("synpred6_Php_fragment", 134);
-		TraceIn("synpred6_Php_fragment", 134);
+		EnterRule("synpred6_Php_fragment", 135);
+		TraceIn("synpred6_Php_fragment", 135);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:679:4: ( '.' Digits )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:683:4: ( '.' Digits )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:679:5: '.' Digits
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:683:5: '.' Digits
 			{
-			DebugLocation(679, 5);
+			DebugLocation(683, 5);
 			Match('.'); if (state.failed) return;
-			DebugLocation(679, 9);
+			DebugLocation(683, 9);
 			mDigits(); if (state.failed) return;
 
 			}
@@ -13540,8 +13658,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("synpred6_Php_fragment", 134);
-			LeaveRule("synpred6_Php_fragment", 134);
+			TraceOut("synpred6_Php_fragment", 135);
+			LeaveRule("synpred6_Php_fragment", 135);
 			LeaveRule_synpred6_Php_fragment();
 		}
 	}
@@ -13554,17 +13672,17 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void synpred7_Php_fragment()
 	{
 		EnterRule_synpred7_Php_fragment();
-		EnterRule("synpred7_Php_fragment", 135);
-		TraceIn("synpred7_Php_fragment", 135);
+		EnterRule("synpred7_Php_fragment", 136);
+		TraceIn("synpred7_Php_fragment", 136);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:691:10: ( '\\\\' '\\'' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:695:10: ( '\\\\' '\\'' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:691:11: '\\\\' '\\''
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:695:11: '\\\\' '\\''
 			{
-			DebugLocation(691, 11);
+			DebugLocation(695, 11);
 			Match('\\'); if (state.failed) return;
-			DebugLocation(691, 16);
+			DebugLocation(695, 16);
 			Match('\''); if (state.failed) return;
 
 			}
@@ -13572,8 +13690,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("synpred7_Php_fragment", 135);
-			LeaveRule("synpred7_Php_fragment", 135);
+			TraceOut("synpred7_Php_fragment", 136);
+			LeaveRule("synpred7_Php_fragment", 136);
 			LeaveRule_synpred7_Php_fragment();
 		}
 	}
@@ -13586,17 +13704,17 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void synpred8_Php_fragment()
 	{
 		EnterRule_synpred8_Php_fragment();
-		EnterRule("synpred8_Php_fragment", 136);
-		TraceIn("synpred8_Php_fragment", 136);
+		EnterRule("synpred8_Php_fragment", 137);
+		TraceIn("synpred8_Php_fragment", 137);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:692:6: ( '\\\\' '\\\\' )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:696:6: ( '\\\\' '\\\\' )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:692:7: '\\\\' '\\\\'
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:696:7: '\\\\' '\\\\'
 			{
-			DebugLocation(692, 7);
+			DebugLocation(696, 7);
 			Match('\\'); if (state.failed) return;
-			DebugLocation(692, 12);
+			DebugLocation(696, 12);
 			Match('\\'); if (state.failed) return;
 
 			}
@@ -13604,8 +13722,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("synpred8_Php_fragment", 136);
-			LeaveRule("synpred8_Php_fragment", 136);
+			TraceOut("synpred8_Php_fragment", 137);
+			LeaveRule("synpred8_Php_fragment", 137);
 			LeaveRule_synpred8_Php_fragment();
 		}
 	}
@@ -13618,17 +13736,17 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 	private void synpred9_Php_fragment()
 	{
 		EnterRule_synpred9_Php_fragment();
-		EnterRule("synpred9_Php_fragment", 137);
-		TraceIn("synpred9_Php_fragment", 137);
+		EnterRule("synpred9_Php_fragment", 138);
+		TraceIn("synpred9_Php_fragment", 138);
 		try
 		{
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:703:11: ( '\\\\' EscapeCharector )
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:707:11: ( '\\\\' EscapeCharector )
 			DebugEnterAlt(1);
-			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:703:12: '\\\\' EscapeCharector
+			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Languages\\ANTLRv3\\Generators\\Php\\Php.g:707:12: '\\\\' EscapeCharector
 			{
-			DebugLocation(703, 12);
+			DebugLocation(707, 12);
 			Match('\\'); if (state.failed) return;
-			DebugLocation(703, 17);
+			DebugLocation(707, 17);
 			mEscapeCharector(); if (state.failed) return;
 
 			}
@@ -13636,8 +13754,8 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("synpred9_Php_fragment", 137);
-			LeaveRule("synpred9_Php_fragment", 137);
+			TraceOut("synpred9_Php_fragment", 138);
+			LeaveRule("synpred9_Php_fragment", 138);
 			LeaveRule_synpred9_Php_fragment();
 		}
 	}
@@ -13734,7 +13852,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			this.transition = DFA19_transition;
 		}
 
-		public override string Description { get { return "684:4: ( Digits | DNum )"; } }
+		public override string Description { get { return "688:4: ( Digits | DNum )"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -13799,7 +13917,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			this.transition = DFA21_transition;
 		}
 
-		public override string Description { get { return "686:1: Real : ( DNum | Exponent_DNum );"; } }
+		public override string Description { get { return "690:1: Real : ( DNum | Exponent_DNum );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -13821,23 +13939,23 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			"\x7\x34\x1\xFFFF\x1\x34\x1\xFFFF\x1\x34\x1\xFFFF\x1\x34\x1\x119\x3\x34"+
 			"\x1\x11D\x2\x34\x1\x120\x1\x122\x1\x34\x1\x124\x1\x34\x1\x126\x5\x34"+
 			"\x1\xFFFF\x1\x12C\x1\x34\x1\x12E\x1\x34\x1\xFFFF\x1\x130\x1\xFFFF\x6"+
-			"\x34\x1\x137\x1\x34\x1\xFFFF\x1\x139\x1\x13A\x3\x34\x1\x13E\x2\x34\x1"+
-			"\xFFFF\x6\x34\x1\x147\x1\x148\x2\x34\x1\xFFFF\x1\x14B\x1\x14C\x1\x14D"+
-			"\x1\xFFFF\x1\x34\x1\x14F\x1\xFFFF\x1\x34\x1\xFFFF\x1\x34\x1\xFFFF\x1"+
-			"\x152\x1\xFFFF\x1\x153\x3\x34\x1\x157\x1\xFFFF\x1\x158\x1\xFFFF\x1\x34"+
-			"\x1\xFFFF\x6\x34\x1\xFFFF\x1\x34\x2\xFFFF\x3\x34\x1\xFFFF\x1\x164\x1"+
-			"\x34\x1\x166\x1\x34\x1\x168\x1\x169\x1\x16A\x1\x16B\x2\xFFFF\x2\x34\x3"+
-			"\xFFFF\x1\x34\x1\xFFFF\x1\x16F\x1\x34\x2\xFFFF\x2\x34\x1\x173\x2\xFFFF"+
-			"\x1\x174\x1\x34\x1\x176\x2\x34\x1\x17A\x1\x34\x1\x17C\x1\x17D\x1\x17E"+
-			"\x1\x34\x1\xFFFF\x1\x180\x1\xFFFF\x1\x182\x4\xFFFF\x3\x34\x1\xFFFF\x1"+
-			"\x186\x1\x187\x1\x34\x2\xFFFF\x1\x34\x1\xFFFF\x3\x34\x1\xFFFF\x1\x34"+
-			"\x3\xFFFF\x1\x18E\x1\xFFFF\x1\x34\x1\xFFFF\x1\x190\x1\x34\x1\x192\x2"+
-			"\xFFFF\x2\x34\x1\x195\x3\x34\x1\xFFFF\x1\x34\x1\xFFFF\x1\x19A\x1\xFFFF"+
-			"\x1\x19B\x1\x34\x1\xFFFF\x1\x19D\x1\x34\x1\x19F\x1\x34\x2\xFFFF\x1\x34"+
-			"\x1\xFFFF\x1\x34\x1\xFFFF\x2\x34\x1\x1A5\x1\x1A6\x1\x34\x2\xFFFF\x2\x34"+
-			"\x1\x1AA\x1\xFFFF";
+			"\x34\x1\x137\x1\x34\x1\xFFFF\x1\x139\x1\x13A\x1\x34\x1\x13D\x1\x34\x1"+
+			"\x13F\x2\x34\x1\xFFFF\x6\x34\x1\x148\x1\x149\x2\x34\x1\xFFFF\x1\x14C"+
+			"\x1\x14D\x1\x14E\x1\xFFFF\x1\x34\x1\x150\x1\xFFFF\x1\x34\x1\xFFFF\x1"+
+			"\x34\x1\xFFFF\x1\x153\x1\xFFFF\x1\x154\x3\x34\x1\x158\x1\xFFFF\x1\x159"+
+			"\x1\xFFFF\x1\x34\x1\xFFFF\x6\x34\x1\xFFFF\x1\x34\x2\xFFFF\x2\x34\x1\xFFFF"+
+			"\x1\x34\x1\xFFFF\x1\x165\x1\x34\x1\x167\x1\x34\x1\x169\x1\x16A\x1\x16B"+
+			"\x1\x16C\x2\xFFFF\x2\x34\x3\xFFFF\x1\x34\x1\xFFFF\x1\x170\x1\x34\x2\xFFFF"+
+			"\x2\x34\x1\x174\x2\xFFFF\x1\x175\x1\x34\x1\x177\x2\x34\x1\x17B\x1\x34"+
+			"\x1\x17D\x1\x17E\x1\x17F\x1\x34\x1\xFFFF\x1\x181\x1\xFFFF\x1\x183\x4"+
+			"\xFFFF\x3\x34\x1\xFFFF\x1\x187\x1\x188\x1\x34\x2\xFFFF\x1\x34\x1\xFFFF"+
+			"\x3\x34\x1\xFFFF\x1\x34\x3\xFFFF\x1\x18F\x1\xFFFF\x1\x34\x1\xFFFF\x1"+
+			"\x191\x1\x34\x1\x193\x2\xFFFF\x2\x34\x1\x196\x3\x34\x1\xFFFF\x1\x34\x1"+
+			"\xFFFF\x1\x19B\x1\xFFFF\x1\x19C\x1\x34\x1\xFFFF\x1\x19E\x1\x34\x1\x1A0"+
+			"\x1\x34\x2\xFFFF\x1\x34\x1\xFFFF\x1\x34\x1\xFFFF\x2\x34\x1\x1A6\x1\x1A7"+
+			"\x1\x34\x2\xFFFF\x2\x34\x1\x1AB\x1\xFFFF";
 		private const string DFA32_eofS =
-			"\x1AB\xFFFF";
+			"\x1AC\xFFFF";
 		private const string DFA32_minS =
 			"\x1\x21\x1\x26\x3\x3D\x1\x3A\x4\xFFFF\x1\x30\x1\x2A\x1\x3D\x1\x2D\x1"+
 			"\x3D\x3\xFFFF\x1\x3D\x1\x2B\x1\x3E\x3\xFFFF\x1\x41\x2\xFFFF\x1\x46\x1"+
@@ -13860,17 +13978,17 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			"\x30\x1\x45\x1\x53\x1\x48\x1\x30\x1\x49\x1\x54\x2\x30\x1\x4E\x1\x30\x1"+
 			"\x59\x1\x30\x1\x54\x1\x41\x1\x45\x1\x49\x1\x45\x1\xFFFF\x1\x30\x1\x57"+
 			"\x1\x30\x1\x41\x1\xFFFF\x1\x30\x1\xFFFF\x1\x4C\x1\x45\x1\x46\x1\x4E\x1"+
-			"\x44\x1\x4D\x1\x30\x1\x41\x1\xFFFF\x2\x30\x1\x43\x1\x4C\x1\x49\x1\x30"+
+			"\x44\x1\x4D\x1\x30\x1\x41\x1\xFFFF\x2\x30\x1\x43\x1\x30\x1\x49\x1\x30"+
 			"\x1\x45\x1\x4C\x1\xFFFF\x1\x4E\x1\x52\x1\x47\x1\x43\x1\x48\x1\x54\x2"+
 			"\x30\x1\x41\x1\x50\x1\xFFFF\x3\x30\x1\xFFFF\x1\x4E\x1\x30\x1\xFFFF\x1"+
 			"\x46\x1\xFFFF\x1\x44\x1\xFFFF\x1\x30\x1\xFFFF\x1\x30\x1\x54\x2\x43\x1"+
 			"\x30\x1\xFFFF\x1\x30\x1\xFFFF\x1\x4C\x1\xFFFF\x1\x54\x1\x52\x1\x41\x1"+
-			"\x43\x2\x45\x1\xFFFF\x1\x4E\x2\xFFFF\x1\x48\x1\x59\x1\x4F\x1\xFFFF\x1"+
-			"\x30\x1\x54\x1\x30\x1\x45\x4\x30\x2\xFFFF\x1\x43\x1\x41\x3\xFFFF\x1\x55"+
-			"\x1\xFFFF\x1\x30\x1\x53\x2\xFFFF\x1\x45\x1\x54\x1\x30\x2\xFFFF\x1\x30"+
-			"\x1\x5F\x1\x30\x1\x43\x1\x45\x1\x30\x1\x4E\x3\x30\x1\x4E\x1\xFFFF\x1"+
-			"\x30\x1\xFFFF\x1\x30\x4\xFFFF\x1\x54\x1\x43\x1\x45\x1\xFFFF\x2\x30\x1"+
-			"\x45\x2\xFFFF\x1\x43\x1\xFFFF\x1\x45\x2\x4F\x1\xFFFF\x1\x54\x3\xFFFF"+
+			"\x43\x2\x45\x1\xFFFF\x1\x4E\x2\xFFFF\x1\x48\x1\x59\x1\xFFFF\x1\x4F\x1"+
+			"\xFFFF\x1\x30\x1\x54\x1\x30\x1\x45\x4\x30\x2\xFFFF\x1\x43\x1\x41\x3\xFFFF"+
+			"\x1\x55\x1\xFFFF\x1\x30\x1\x53\x2\xFFFF\x1\x45\x1\x54\x1\x30\x2\xFFFF"+
+			"\x1\x30\x1\x5F\x1\x30\x1\x43\x1\x45\x1\x30\x1\x4E\x3\x30\x1\x4E\x1\xFFFF"+
+			"\x1\x30\x1\xFFFF\x1\x30\x4\xFFFF\x1\x54\x1\x43\x1\x45\x1\xFFFF\x2\x30"+
+			"\x1\x45\x2\xFFFF\x1\x43\x1\xFFFF\x1\x45\x2\x4F\x1\xFFFF\x1\x54\x3\xFFFF"+
 			"\x1\x30\x1\xFFFF\x1\x4F\x1\xFFFF\x1\x30\x1\x45\x1\x30\x2\xFFFF\x1\x44"+
 			"\x1\x4F\x1\x30\x1\x46\x1\x4E\x1\x53\x1\xFFFF\x1\x4E\x1\xFFFF\x1\x30\x1"+
 			"\xFFFF\x1\x30\x1\x4D\x1\xFFFF\x1\x30\x1\x43\x1\x30\x1\x43\x2\xFFFF\x1"+
@@ -13898,45 +14016,45 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			"\x1\x73\x1\x68\x1\x7A\x1\x69\x1\x74\x2\x7A\x1\x6E\x1\x7A\x1\x79\x1\x7A"+
 			"\x1\x74\x1\x61\x1\x65\x1\x69\x1\x65\x1\xFFFF\x1\x7A\x1\x77\x1\x7A\x1"+
 			"\x61\x1\xFFFF\x1\x7A\x1\xFFFF\x1\x6C\x1\x65\x1\x66\x1\x6E\x1\x64\x1\x6D"+
-			"\x1\x7A\x1\x61\x1\xFFFF\x2\x7A\x1\x63\x1\x6C\x1\x69\x1\x7A\x1\x65\x1"+
+			"\x1\x7A\x1\x61\x1\xFFFF\x2\x7A\x1\x63\x1\x7A\x1\x69\x1\x7A\x1\x65\x1"+
 			"\x6C\x1\xFFFF\x1\x6E\x1\x72\x1\x67\x1\x63\x1\x68\x1\x74\x2\x7A\x1\x61"+
 			"\x1\x70\x1\xFFFF\x3\x7A\x1\xFFFF\x1\x6E\x1\x7A\x1\xFFFF\x1\x66\x1\xFFFF"+
 			"\x1\x64\x1\xFFFF\x1\x7A\x1\xFFFF\x1\x7A\x1\x74\x2\x63\x1\x7A\x1\xFFFF"+
 			"\x1\x7A\x1\xFFFF\x1\x6C\x1\xFFFF\x1\x74\x1\x72\x1\x61\x1\x63\x2\x65\x1"+
-			"\xFFFF\x1\x6E\x2\xFFFF\x1\x68\x1\x79\x1\x6F\x1\xFFFF\x1\x7A\x1\x74\x1"+
-			"\x7A\x1\x65\x4\x7A\x2\xFFFF\x1\x63\x1\x61\x3\xFFFF\x1\x75\x1\xFFFF\x1"+
-			"\x7A\x1\x73\x2\xFFFF\x1\x65\x1\x74\x1\x7A\x2\xFFFF\x1\x7A\x1\x5F\x1\x7A"+
-			"\x1\x63\x1\x65\x1\x7A\x1\x6E\x3\x7A\x1\x6E\x1\xFFFF\x1\x7A\x1\xFFFF\x1"+
-			"\x7A\x4\xFFFF\x1\x74\x1\x63\x1\x65\x1\xFFFF\x2\x7A\x1\x65\x2\xFFFF\x1"+
-			"\x63\x1\xFFFF\x1\x65\x2\x6F\x1\xFFFF\x1\x74\x3\xFFFF\x1\x7A\x1\xFFFF"+
-			"\x1\x6F\x1\xFFFF\x1\x7A\x1\x65\x1\x7A\x2\xFFFF\x1\x64\x1\x6F\x1\x7A\x1"+
-			"\x66\x1\x6E\x1\x73\x1\xFFFF\x1\x6E\x1\xFFFF\x1\x7A\x1\xFFFF\x1\x7A\x1"+
-			"\x6D\x1\xFFFF\x1\x7A\x1\x63\x1\x7A\x1\x63\x2\xFFFF\x1\x70\x1\xFFFF\x1"+
-			"\x65\x1\xFFFF\x1\x65\x1\x69\x2\x7A\x1\x6C\x2\xFFFF\x1\x65\x1\x72\x1\x7A"+
-			"\x1\xFFFF";
+			"\xFFFF\x1\x6E\x2\xFFFF\x1\x68\x1\x79\x1\xFFFF\x1\x6F\x1\xFFFF\x1\x7A"+
+			"\x1\x74\x1\x7A\x1\x65\x4\x7A\x2\xFFFF\x1\x63\x1\x61\x3\xFFFF\x1\x75\x1"+
+			"\xFFFF\x1\x7A\x1\x73\x2\xFFFF\x1\x65\x1\x74\x1\x7A\x2\xFFFF\x1\x7A\x1"+
+			"\x5F\x1\x7A\x1\x63\x1\x65\x1\x7A\x1\x6E\x3\x7A\x1\x6E\x1\xFFFF\x1\x7A"+
+			"\x1\xFFFF\x1\x7A\x4\xFFFF\x1\x74\x1\x63\x1\x65\x1\xFFFF\x2\x7A\x1\x65"+
+			"\x2\xFFFF\x1\x63\x1\xFFFF\x1\x65\x2\x6F\x1\xFFFF\x1\x74\x3\xFFFF\x1\x7A"+
+			"\x1\xFFFF\x1\x6F\x1\xFFFF\x1\x7A\x1\x65\x1\x7A\x2\xFFFF\x1\x64\x1\x6F"+
+			"\x1\x7A\x1\x66\x1\x6E\x1\x73\x1\xFFFF\x1\x6E\x1\xFFFF\x1\x7A\x1\xFFFF"+
+			"\x1\x7A\x1\x6D\x1\xFFFF\x1\x7A\x1\x63\x1\x7A\x1\x63\x2\xFFFF\x1\x70\x1"+
+			"\xFFFF\x1\x65\x1\xFFFF\x1\x65\x1\x69\x2\x7A\x1\x6C\x2\xFFFF\x1\x65\x1"+
+			"\x72\x1\x7A\x1\xFFFF";
 		private const string DFA32_acceptS =
 			"\x6\xFFFF\x1\x6\x1\x7\x1\x8\x1\xA\x5\xFFFF\x1\x13\x1\x14\x1\x15\x3\xFFFF"+
-			"\x1\x1A\x1\x1B\x1\x1C\x1\xFFFF\x1\x1E\x1\x23\x16\xFFFF\x1\x69\x1\x6A"+
-			"\x1\xFFFF\x1\x6D\x1\xFFFF\x1\x73\x1\x10\x1\x6E\x1\x1\x1\x2\x1\x6F\x1"+
-			"\xC\x1\x3\x1\x4\x1\x5\x1\x1F\x1\x9\x1\xB\x1\x68\x1\x21\x1\x22\x1\xD\x1"+
-			"\xE\x1\xF\x1\x72\x1\x12\x1\x11\x1\x17\x1\x16\x1\x18\x1\x20\x1\x19\x1"+
-			"\x1D\x1\x6C\x2F\xFFFF\x1\x67\x3\xFFFF\x1\x70\x4\xFFFF\x1\x33\xA\xFFFF"+
-			"\x1\x39\x9\xFFFF\x1\x4A\x5\xFFFF\x1\x56\x1B\xFFFF\x1\x6B\x1\x71\x1\xFFFF"+
-			"\x1\x24\x8\xFFFF\x1\x36\x5\xFFFF\x1\x62\x8\xFFFF\x1\x57\x1\xFFFF\x1\x49"+
-			"\x1\xFFFF\x1\x2F\x13\xFFFF\x1\x3A\x4\xFFFF\x1\x4B\x1\xFFFF\x1\x54\x8"+
+			"\x1\x1A\x1\x1B\x1\x1C\x1\xFFFF\x1\x1E\x1\x23\x16\xFFFF\x1\x6A\x1\x6B"+
+			"\x1\xFFFF\x1\x6E\x1\xFFFF\x1\x74\x1\x10\x1\x6F\x1\x1\x1\x2\x1\x70\x1"+
+			"\xC\x1\x3\x1\x4\x1\x5\x1\x1F\x1\x9\x1\xB\x1\x69\x1\x21\x1\x22\x1\xD\x1"+
+			"\xE\x1\xF\x1\x73\x1\x12\x1\x11\x1\x17\x1\x16\x1\x18\x1\x20\x1\x19\x1"+
+			"\x1D\x1\x6D\x2F\xFFFF\x1\x68\x3\xFFFF\x1\x71\x4\xFFFF\x1\x33\xA\xFFFF"+
+			"\x1\x39\x9\xFFFF\x1\x4A\x5\xFFFF\x1\x57\x1B\xFFFF\x1\x6C\x1\x72\x1\xFFFF"+
+			"\x1\x24\x8\xFFFF\x1\x36\x5\xFFFF\x1\x63\x8\xFFFF\x1\x58\x1\xFFFF\x1\x49"+
+			"\x1\xFFFF\x1\x2F\x13\xFFFF\x1\x3A\x4\xFFFF\x1\x4B\x1\xFFFF\x1\x55\x8"+
 			"\xFFFF\x1\x26\x8\xFFFF\x1\x2A\xA\xFFFF\x1\x4D\x3\xFFFF\x1\x3E\x2\xFFFF"+
-			"\x1\x31\x1\xFFFF\x1\x34\x1\xFFFF\x1\x64\x1\xFFFF\x1\x65\x5\xFFFF\x1\x5F"+
-			"\x1\xFFFF\x1\x44\x1\xFFFF\x1\x4E\x6\xFFFF\x1\x66\x1\xFFFF\x1\x42\x1\x28"+
-			"\x3\xFFFF\x1\x60\x8\xFFFF\x1\x2D\x1\x2E\x2\xFFFF\x1\x30\x1\x4F\x1\x3B"+
-			"\x1\xFFFF\x1\x55\x2\xFFFF\x1\x63\x1\x32\x3\xFFFF\x1\x38\x1\x46\xB\xFFFF"+
-			"\x1\x29\x1\xFFFF\x1\x45\x1\xFFFF\x1\x2B\x1\x48\x1\x3D\x1\x2C\x3\xFFFF"+
-			"\x1\x35\x3\xFFFF\x1\x5C\x1\x47\x1\xFFFF\x1\x25\x3\xFFFF\x1\x5A\x1\xFFFF"+
-			"\x1\x27\x1\x37\x1\x3C\x1\xFFFF\x1\x3F\x1\xFFFF\x1\x58\x3\xFFFF\x1\x51"+
-			"\x1\x5D\x6\xFFFF\x1\x41\x1\xFFFF\x1\x53\x1\xFFFF\x1\x43\x2\xFFFF\x1\x50"+
-			"\x4\xFFFF\x1\x40\x1\x5E\x1\xFFFF\x1\x4C\x1\xFFFF\x1\x52\x5\xFFFF\x1\x5B"+
-			"\x1\x59\x3\xFFFF\x1\x61";
+			"\x1\x31\x1\xFFFF\x1\x34\x1\xFFFF\x1\x65\x1\xFFFF\x1\x66\x5\xFFFF\x1\x60"+
+			"\x1\xFFFF\x1\x44\x1\xFFFF\x1\x4E\x6\xFFFF\x1\x67\x1\xFFFF\x1\x42\x1\x28"+
+			"\x2\xFFFF\x1\x53\x1\xFFFF\x1\x61\x8\xFFFF\x1\x2D\x1\x2E\x2\xFFFF\x1\x30"+
+			"\x1\x4F\x1\x3B\x1\xFFFF\x1\x56\x2\xFFFF\x1\x64\x1\x32\x3\xFFFF\x1\x38"+
+			"\x1\x46\xB\xFFFF\x1\x29\x1\xFFFF\x1\x45\x1\xFFFF\x1\x2B\x1\x48\x1\x3D"+
+			"\x1\x2C\x3\xFFFF\x1\x35\x3\xFFFF\x1\x5D\x1\x47\x1\xFFFF\x1\x25\x3\xFFFF"+
+			"\x1\x5B\x1\xFFFF\x1\x27\x1\x37\x1\x3C\x1\xFFFF\x1\x3F\x1\xFFFF\x1\x59"+
+			"\x3\xFFFF\x1\x51\x1\x5E\x6\xFFFF\x1\x41\x1\xFFFF\x1\x54\x1\xFFFF\x1\x43"+
+			"\x2\xFFFF\x1\x50\x4\xFFFF\x1\x40\x1\x5F\x1\xFFFF\x1\x4C\x1\xFFFF\x1\x52"+
+			"\x5\xFFFF\x1\x5C\x1\x5A\x3\xFFFF\x1\x62";
 		private const string DFA32_specialS =
-			"\x1AB\xFFFF}>";
+			"\x1AC\xFFFF}>";
 		private static readonly string[] DFA32_transitionS =
 			{
 				"\x1\x4\x1\x32\x1\x1A\x1\x18\x1\x12\x1\x1\x1\x31\x1\x10\x1\x7\x1\x3\x1"+
@@ -14226,166 +14344,168 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"\x1\x13B\x1F\xFFFF\x1\x13B",
-				"\x1\x13C\x1F\xFFFF\x1\x13C",
-				"\x1\x13D\x1F\xFFFF\x1\x13D",
+				"\xA\x34\x7\xFFFF\xB\x34\x1\x13C\xE\x34\x4\xFFFF\x1\x34\x1\xFFFF\xB\x34"+
+				"\x1\x13C\xE\x34",
+				"\x1\x13E\x1F\xFFFF\x1\x13E",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"\x1\x13F\x1F\xFFFF\x1\x13F",
 				"\x1\x140\x1F\xFFFF\x1\x140",
-				"",
 				"\x1\x141\x1F\xFFFF\x1\x141",
+				"",
 				"\x1\x142\x1F\xFFFF\x1\x142",
 				"\x1\x143\x1F\xFFFF\x1\x143",
 				"\x1\x144\x1F\xFFFF\x1\x144",
 				"\x1\x145\x1F\xFFFF\x1\x145",
 				"\x1\x146\x1F\xFFFF\x1\x146",
+				"\x1\x147\x1F\xFFFF\x1\x147",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"\x1\x149\x1F\xFFFF\x1\x149",
 				"\x1\x14A\x1F\xFFFF\x1\x14A",
+				"\x1\x14B\x1F\xFFFF\x1\x14B",
 				"",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"",
-				"\x1\x14E\x1F\xFFFF\x1\x14E",
+				"\x1\x14F\x1F\xFFFF\x1\x14F",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"",
-				"\x1\x150\x1F\xFFFF\x1\x150",
 				"",
 				"\x1\x151\x1F\xFFFF\x1\x151",
 				"",
+				"\x1\x152\x1F\xFFFF\x1\x152",
+				"",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"\x1\x154\x1F\xFFFF\x1\x154",
 				"\x1\x155\x1F\xFFFF\x1\x155",
 				"\x1\x156\x1F\xFFFF\x1\x156",
+				"\x1\x157\x1F\xFFFF\x1\x157",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"",
-				"\x1\x159\x1F\xFFFF\x1\x159",
 				"",
 				"\x1\x15A\x1F\xFFFF\x1\x15A",
+				"",
 				"\x1\x15B\x1F\xFFFF\x1\x15B",
 				"\x1\x15C\x1F\xFFFF\x1\x15C",
 				"\x1\x15D\x1F\xFFFF\x1\x15D",
 				"\x1\x15E\x1F\xFFFF\x1\x15E",
 				"\x1\x15F\x1F\xFFFF\x1\x15F",
-				"",
 				"\x1\x160\x1F\xFFFF\x1\x160",
 				"",
-				"",
 				"\x1\x161\x1F\xFFFF\x1\x161",
+				"",
+				"",
 				"\x1\x162\x1F\xFFFF\x1\x162",
 				"\x1\x163\x1F\xFFFF\x1\x163",
 				"",
+				"\x1\x164\x1F\xFFFF\x1\x164",
+				"",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"\x1\x165\x1F\xFFFF\x1\x165",
+				"\x1\x166\x1F\xFFFF\x1\x166",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"\x1\x167\x1F\xFFFF\x1\x167",
+				"\x1\x168\x1F\xFFFF\x1\x168",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"",
 				"",
-				"\x1\x16C\x1F\xFFFF\x1\x16C",
 				"\x1\x16D\x1F\xFFFF\x1\x16D",
-				"",
-				"",
-				"",
 				"\x1\x16E\x1F\xFFFF\x1\x16E",
 				"",
+				"",
+				"",
+				"\x1\x16F\x1F\xFFFF\x1\x16F",
+				"",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"\x1\x170\x1F\xFFFF\x1\x170",
-				"",
-				"",
 				"\x1\x171\x1F\xFFFF\x1\x171",
+				"",
+				"",
 				"\x1\x172\x1F\xFFFF\x1\x172",
+				"\x1\x173\x1F\xFFFF\x1\x173",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"",
 				"",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"\x1\x175",
+				"\x1\x176",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"\x1\x177\x1F\xFFFF\x1\x177",
 				"\x1\x178\x1F\xFFFF\x1\x178",
-				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x179\x1\xFFFF\x1A\x34",
-				"\x1\x17B\x1F\xFFFF\x1\x17B",
+				"\x1\x179\x1F\xFFFF\x1\x179",
+				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x17A\x1\xFFFF\x1A\x34",
+				"\x1\x17C\x1F\xFFFF\x1\x17C",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"\x1\x17F\x1F\xFFFF\x1\x17F",
+				"\x1\x180\x1F\xFFFF\x1\x180",
 				"",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"",
-				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x181\x1\xFFFF\x1A\x34",
+				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x182\x1\xFFFF\x1A\x34",
 				"",
 				"",
 				"",
 				"",
-				"\x1\x183\x1F\xFFFF\x1\x183",
 				"\x1\x184\x1F\xFFFF\x1\x184",
 				"\x1\x185\x1F\xFFFF\x1\x185",
+				"\x1\x186\x1F\xFFFF\x1\x186",
 				"",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"\x1\x188\x1F\xFFFF\x1\x188",
-				"",
-				"",
 				"\x1\x189\x1F\xFFFF\x1\x189",
 				"",
+				"",
 				"\x1\x18A\x1F\xFFFF\x1\x18A",
+				"",
 				"\x1\x18B\x1F\xFFFF\x1\x18B",
 				"\x1\x18C\x1F\xFFFF\x1\x18C",
-				"",
 				"\x1\x18D\x1F\xFFFF\x1\x18D",
 				"",
+				"\x1\x18E\x1F\xFFFF\x1\x18E",
 				"",
 				"",
-				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"",
-				"\x1\x18F\x1F\xFFFF\x1\x18F",
 				"",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"\x1\x191\x1F\xFFFF\x1\x191",
+				"",
+				"\x1\x190\x1F\xFFFF\x1\x190",
+				"",
+				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
+				"\x1\x192\x1F\xFFFF\x1\x192",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"",
 				"",
-				"\x1\x193\x1F\xFFFF\x1\x193",
 				"\x1\x194\x1F\xFFFF\x1\x194",
+				"\x1\x195\x1F\xFFFF\x1\x195",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"\x1\x196\x1F\xFFFF\x1\x196",
 				"\x1\x197\x1F\xFFFF\x1\x197",
 				"\x1\x198\x1F\xFFFF\x1\x198",
-				"",
 				"\x1\x199\x1F\xFFFF\x1\x199",
 				"",
+				"\x1\x19A\x1F\xFFFF\x1\x19A",
+				"",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"\x1\x19C\x1F\xFFFF\x1\x19C",
+				"\x1\x19D\x1F\xFFFF\x1\x19D",
 				"",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"\x1\x19E\x1F\xFFFF\x1\x19E",
+				"\x1\x19F\x1F\xFFFF\x1\x19F",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"\x1\x1A0\x1F\xFFFF\x1\x1A0",
-				"",
-				"",
 				"\x1\x1A1\x1F\xFFFF\x1\x1A1",
+				"",
 				"",
 				"\x1\x1A2\x1F\xFFFF\x1\x1A2",
 				"",
 				"\x1\x1A3\x1F\xFFFF\x1\x1A3",
+				"",
 				"\x1\x1A4\x1F\xFFFF\x1\x1A4",
+				"\x1\x1A5\x1F\xFFFF\x1\x1A5",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
-				"\x1\x1A7\x1F\xFFFF\x1\x1A7",
-				"",
-				"",
 				"\x1\x1A8\x1F\xFFFF\x1\x1A8",
+				"",
+				"",
 				"\x1\x1A9\x1F\xFFFF\x1\x1A9",
+				"\x1\x1AA\x1F\xFFFF\x1\x1AA",
 				"\xA\x34\x7\xFFFF\x1A\x34\x4\xFFFF\x1\x34\x1\xFFFF\x1A\x34",
 				""
 			};
@@ -14421,7 +14541,7 @@ public partial class PhpLexer : Antlr.Runtime.Lexer
 			this.transition = DFA32_transition;
 		}
 
-		public override string Description { get { return "1:1: Tokens : ( Ampersand | ArrayAssign | Asterisk | Bang | ClassMember | CloseCurlyBracket | CloseRoundBracket | CloseSquareBracket | Colon | Comma | Dot | Equals | Forwardslash | Hat | InstanceMember | LogicalAnd | LogicalOr | Minus | OpenCurlyBracket | OpenRoundBracket | OpenSquareBracket | Percent | Pipe | Plus | QuestionMark | SemiColon | SuppressWarnings | Tilde | T__129 | T__130 | OP | BodyString | MultilineComment | SinglelineComment | UnixComment | IntType | IntegerType | BoolType | BooleanType | FloatType | DoubleType | RealType | StringType | ObjectType | UnsetType | ArrayType | New | Clone | Echo | Print | If | Else | ElseIf | For | Foreach | While | Do | Try | Catch | Finally | Switch | Case | Default | Namespace | Function | Break | Continue | Goto | Return | Throw | Global | Static | And | Or | Xor | Instanceof | Null | List | Class | Interface | Extends | Implements | Abstract | Var | Const | As | Use | Require | RequireOnce | Include | IncludeOnce | Public | Private | Protected | True | False | HaltCompiler | Die | Empty | Exit | Eval | Isset | Integer | Real | SingleQuotedString | DoubleQuotedString | HereDoc | VariableName | UnquotedString | AsignmentOperator | EqualityOperator | ComparisionOperator | ShiftOperator | IncrementOperator | WhiteSpace );"; } }
+		public override string Description { get { return "1:1: Tokens : ( Ampersand | ArrayAssign | Asterisk | Bang | ClassMember | CloseCurlyBracket | CloseRoundBracket | CloseSquareBracket | Colon | Comma | Dot | Equals | Forwardslash | Hat | InstanceMember | LogicalAnd | LogicalOr | Minus | OpenCurlyBracket | OpenRoundBracket | OpenSquareBracket | Percent | Pipe | Plus | QuestionMark | SemiColon | SuppressWarnings | Tilde | T__130 | T__131 | OP | BodyString | MultilineComment | SinglelineComment | UnixComment | IntType | IntegerType | BoolType | BooleanType | FloatType | DoubleType | RealType | StringType | ObjectType | UnsetType | ArrayType | New | Clone | Echo | Print | If | Else | ElseIf | For | Foreach | While | Do | Try | Catch | Finally | Switch | Case | Default | Namespace | Function | Break | Continue | Goto | Return | Throw | Global | Static | And | Or | Xor | Instanceof | Null | List | Class | Interface | Extends | Implements | Final | Abstract | Var | Const | As | Use | Require | RequireOnce | Include | IncludeOnce | Public | Private | Protected | True | False | HaltCompiler | Die | Empty | Exit | Eval | Isset | Integer | Real | SingleQuotedString | DoubleQuotedString | HereDoc | VariableName | UnquotedString | AsignmentOperator | EqualityOperator | ComparisionOperator | ShiftOperator | IncrementOperator | WhiteSpace );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{

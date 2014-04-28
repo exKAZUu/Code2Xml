@@ -138,7 +138,7 @@ interfaceExtends
 
 interfaceMember
 	: constDefinition ';'
-	| fieldModifier* Function qualifiedName parametersDefinition ';'
+	| functionModifier* Function '&'? qualifiedName parametersDefinition ';'
 	;
 
 classDefinition
@@ -156,7 +156,7 @@ classImplements
 	;
 
 classMember
-	: fieldModifier* Function qualifiedName parametersDefinition (bracketedBlock | ';')
+	: functionModifier* Function '&'? qualifiedName parametersDefinition (bracketedBlock | ';')
 	| constDefinition ';'
 	| varDefinition ';'
 	| fieldDefinition ';'
@@ -175,7 +175,11 @@ fieldDefinition
 	;
 	
 classModifier
-	: Abstract;
+	: Final | Abstract;
+	
+functionModifier
+	: accessModifier | Final | Abstract | Static
+	;
 	
 fieldModifier
 	: accessModifier | Abstract | Static
@@ -265,7 +269,7 @@ parametersDefinition
 	;
 
 paramDef
-	: (primitiveType | qualifiedName)? paramName (Equals atom)?
+	: (qualifiedName | primitiveType)? paramName (Equals atom)?
 	;
 
 paramName
@@ -359,7 +363,7 @@ instanceOf
 
 negateOrCast
 	: (Tilde | Minus | SuppressWarnings) increment
-	| OpenRoundBracket primitiveType CloseRoundBracket increment
+	| OpenRoundBracket primitiveType CloseRoundBracket negateOrCast
 	| increment
 	;
 
@@ -445,12 +449,12 @@ nameOrFunctionCall
 	;
 
 variableOrFunctionCall
-	: variableOrStaticAccessor functionArguments? (indexer | memberAccess functionArguments?)*
+	: variableOrStaticAccessor functionArguments? ((indexer | memberAccess) functionArguments?)*
 	;
 
 constantOrFunctionCall
-	: constantOrStaticAccessor functionArguments (indexer | memberAccess functionArguments?)*
-	| constantOrStaticAccessor (indexer | memberAccess functionArguments?)+
+	: constantOrStaticAccessor functionArguments ((indexer | memberAccess) functionArguments?)*
+	| constantOrStaticAccessor ((indexer | memberAccess) functionArguments?)+
 	| predefinedFunctionName functionArguments?
 	;
 
@@ -492,13 +496,12 @@ variableVariable
 // names don't accept any pre-defined keywords
 qualifiedName
 	: '\\'? (UnquotedString
-		  | New|Clone|Echo|Print|If|Else|ElseIf|For|Foreach|While|Do|Try|Catch|Finally|Switch|Case|Default|Namespace|Function|Break|Continue|Goto|Return|Throw|Global|Static|And|Or|Xor|Instanceof|Null|List|Class|Interface|Extends|Implements|Abstract|Var|Const|As|Require|RequireOnce|Include|IncludeOnce|Public|Private|Protected|True|False|HaltCompiler|Die|Empty|Exit|Eval|Isset|Use
+		  | New|Clone|Echo|Print|If|Else|ElseIf|For|Foreach|While|Do|Try|Catch|Finally|Switch|Case|Default|Namespace|Function|Break|Continue|Goto|Return|Throw|Global|Static|And|Or|Xor|Instanceof|Null|List|Class|Interface|Extends|Implements|Final|Abstract|Var|Const|As|Require|RequireOnce|Include|IncludeOnce|Public|Private|Protected|True|False|HaltCompiler|Die|Empty|Exit|Eval|Isset|Use
 		  | IntType | IntegerType | BoolType | BooleanType | FloatType | DoubleType
 		  | RealType | StringType | ObjectType
-		  
 		  )
 	( '\\' (UnquotedString
-		  | New|Clone|Echo|Print|If|Else|ElseIf|For|Foreach|While|Do|Try|Catch|Finally|Switch|Case|Default|Namespace|Function|Break|Continue|Goto|Return|Throw|Global|Static|And|Or|Xor|Instanceof|Null|List|Class|Interface|Extends|Implements|Abstract|Var|Const|As|Require|RequireOnce|Include|IncludeOnce|Public|Private|Protected|True|False|HaltCompiler|Die|Empty|Exit|Eval|Isset|Use
+		  | New|Clone|Echo|Print|If|Else|ElseIf|For|Foreach|While|Do|Try|Catch|Finally|Switch|Case|Default|Namespace|Function|Break|Continue|Goto|Return|Throw|Global|Static|And|Or|Xor|Instanceof|Null|List|Class|Interface|Extends|Implements|Final|Abstract|Var|Const|As|Require|RequireOnce|Include|IncludeOnce|Public|Private|Protected|True|False|HaltCompiler|Die|Empty|Exit|Eval|Isset|Use
 		  | IntType | IntegerType | BoolType | BooleanType | FloatType | DoubleType
 		  | RealType | StringType | ObjectType
 		  ))*
@@ -629,6 +632,7 @@ Class : ('c'|'C')('l'|'L')('a'|'A')('s'|'S')('s'|'S');
 Interface : ('i'|'I')('n'|'N')('t'|'T')('e'|'E')('r'|'R')('f'|'F')('a'|'A')('c'|'C')('e'|'E');
 Extends : ('e'|'E')('x'|'X')('t'|'T')('e'|'E')('n'|'N')('d'|'D')('s'|'S');
 Implements : ('i'|'I')('m'|'M')('p'|'P')('l'|'L')('e'|'E')('m'|'M')('e'|'E')('n'|'N')('t'|'T')('s'|'S');
+Final : ('f'|'F')('i'|'I')('n'|'N')('a'|'A')('l'|'L');
 Abstract : ('a'|'A')('b'|'B')('s'|'S')('t'|'T')('r'|'R')('a'|'A')('c'|'C')('t'|'T');
 Var : ('v'|'V')('a'|'A')('r'|'R');
 Const : ('c'|'C')('o'|'O')('n'|'N')('s'|'S')('t'|'T');

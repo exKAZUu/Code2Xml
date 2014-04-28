@@ -120,7 +120,7 @@ int main() {
         //[TestCase(@"libuv")]
         //[TestCase(@"algo")]
         public void ParseGitRepository(string url, string commitPointer) {
-            VerifyRestoringGitRepository(
+            VerifyRestoringGitRepo(
                     url, commitPointer,
                     filePath => CCstGeneratorUsingAntlr3AndGcc.PreprocessCode(
                             File.ReadAllText(filePath), Path.GetDirectoryName(filePath))

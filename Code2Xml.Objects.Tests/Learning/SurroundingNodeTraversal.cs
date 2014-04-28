@@ -21,355 +21,247 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 using Code2Xml.Core.Generators;
+using Paraiba.Linq;
 
 namespace Code2Xml.Objects.Tests.Learning {
-	public static class SurroundingNodeTraversal {
-		public static string BigIntegerToString(this BigInteger i) {
-			var ret = "";
-			while (i != BigInteger.Zero) {
-				if ((i & BigInteger.One) != BigInteger.Zero) {
-					ret = "1" + ret;
-				} else {
-					ret = "0" + ret;
-				}
-				i >>= 1;
-			}
-			return ret;
-		}
+    public static class SurroundingNodeTraversal {
+        public static double[] BigIntegerToDoubles(this BigInteger i, int bitLength) {
+            var doubles = new List<double>();
+            for (int j = 0; j < bitLength; j++) {
+                if ((i & BigInteger.One) != BigInteger.Zero) {
+                    doubles.Add(1);
+                } else {
+                    doubles.Add(0);
+                }
+                i >>= 1;
+            }
+            return doubles.ToArray();
+        }
 
-		public static HashSet<string> GetUnionKeys(
-				this IEnumerable<CstNode> targets, int length, bool inner = true, bool outer = true) {
-			var commonKeys = new HashSet<string>();
-			foreach (var target in targets) {
-				var keys = target.GetSurroundingKeys(length, inner, outer);
-				commonKeys.UnionWith(keys);
-			}
-			return commonKeys;
-		}
+        public static string BigIntegerToString(this BigInteger i) {
+            var ret = "";
+            while (i != BigInteger.Zero) {
+                if ((i & BigInteger.One) != BigInteger.Zero) {
+                    ret = "1" + ret;
+                } else {
+                    ret = "0" + ret;
+                }
+                i >>= 1;
+            }
+            return ret;
+        }
 
-		public static HashSet<string> GetCommonKeys(
-				this IEnumerable<CstNode> targets, int length, bool inner = true, bool outer = true) {
-			HashSet<string> commonKeys = null;
-			foreach (var target in targets) {
-				var keys = target.GetSurroundingKeys(length, inner, outer);
-				if (commonKeys == null) {
-					commonKeys = keys;
-				} else {
-					commonKeys.IntersectWith(keys);
-				}
-			}
-			return commonKeys;
-		}
+        public static HashSet<string> GetUnionKeys(
+                this IEnumerable<CstNode> targets, int length, ILearningExperiment exp) {
+            var commonKeys = new HashSet<string>();
+            foreach (var target in targets) {
+                var keys = target.GetSurroundingKeys(length, exp);
+                commonKeys.UnionWith(keys);
+            }
+            return commonKeys;
+        }
 
-		public static HashSet<string> GetSurroundingKeys(
-				this CstNode node, int length, bool inner = true, bool outer = true) {
-			//inner = outer = true; // TODO: for debug
+        public static HashSet<string> GetCommonKeys(
+                this IEnumerable<CstNode> targets, int length, ILearningExperiment exp) {
+            HashSet<string> commonKeys = null;
+            foreach (var target in targets) {
+                var keys = target.GetSurroundingKeys(length, exp);
+                if (commonKeys == null) {
+                    commonKeys = keys;
+                } else {
+                    commonKeys.IntersectWith(keys);
+                }
+            }
+            return commonKeys;
+        }
 
-			var ret = new HashSet<string>();
-			var childElements = new List<Tuple<CstNode, string>>();
-			if (inner) {
-				childElements.Add(Tuple.Create(node, node.Name));
-				var ancestorStr = "";
-				foreach (var e in node.AncestorsWithSingleChildAndSelf()) {
-					ancestorStr = ancestorStr + "<" + e.NameWithId();
-					ret.Add(ancestorStr);
-				}
-			}
-			var i = 1;
-			if (outer) {
-				var parentElement = Tuple.Create(node, node.Name);
-				var descendantStr = "";
-				foreach (var e in node.DescendantsOfSingleAndSelf()) {
-					descendantStr = descendantStr + "<" + e.NameWithId();
-					ret.Add(descendantStr);
-				}
-				// 自分自身の位置による区別も考慮する
-				ret.Add(node.NameOrTokenWithId());
-				for (; i <= length; i++) {
-					var newChildElements = new List<Tuple<CstNode, string>>();
-					foreach (var t in childElements) {
-						foreach (var e in t.Item1.Elements()) {
-							var key = t.Item2 + ">" + e.NameOrTokenWithId();
-							newChildElements.Add(Tuple.Create(e, key));
-							// トークンが存在するかチェックする弱い条件
-							// for Preconditions.checkArguments()
-							ret.Add(t.Item2 + ">'" + e.TokenText + "'");
-						}
-						foreach (var e in t.Item1.Descendants()) {
-							// トークンが存在するかチェックする弱い条件
-							//ret.Add(t.Item2 + ">>'" + e.TokenText() + "'");
-						}
-					}
-					foreach (var e in parentElement.Item1.Siblings(10)) {
-						var key = parentElement.Item2 + "-" + e.NameOrTokenWithId();
-						newChildElements.Add(Tuple.Create(e, key));
-						// トークンが存在するかチェックする弱い条件
-						// for Preconditions.checkArguments()
-						ret.Add(parentElement.Item2 + "-'" + e.TokenText + "'");
-						//// 先祖に存在するかチェックする弱い条件
-						//var iLastName = parentElement.Item2.LastIndexOf("<");
-						//var weakKey = "<<" + parentElement.Item2.Substring(iLastName + 1) + "-" + e.NameOrTokenWithId();
-						//newChildElements.Add(Tuple.Create(e, weakKey));
-					}
-					ret.UnionWith(newChildElements.Select(t => t.Item2));
-					childElements = newChildElements;
+        public static HashSet<string> GetSurroundingKeys(
+                this CstNode node, int length, ILearningExperiment exp) {
+            var ret = new HashSet<string>();
+            // 自分自身の位置による区別も考慮する
+            //ret.Add(node.Name);
+            ret.Add(node.RuleId);
+            ret.Add("'" + exp.GetToken(node));
 
-					var newParentElement = parentElement.Item1.Parent;
-					if (newParentElement == null) {
-						break;
-					}
-					parentElement = Tuple.Create(
-							newParentElement,
-							parentElement.Item2 + "<" + newParentElement.NameOrTokenWithId());
-					ret.Add(parentElement.Item2);
-				}
-			}
-			for (; i <= length; i++) {
-				var newChildElements = new List<Tuple<CstNode, string>>();
-				foreach (var t in childElements) {
-					foreach (var e in t.Item1.Elements()) {
-						var key = t.Item2 + ">" + e.NameOrTokenWithId();
-						newChildElements.Add(Tuple.Create(e, key));
-						// トークンが存在するかチェックする弱い条件
-						// for Preconditions.checkArguments()
-						ret.Add(t.Item2 + ">'" + e.TokenText + "'");
-					}
-				}
-				ret.UnionWith(newChildElements.Select(t => t.Item2));
-				childElements = newChildElements;
-			}
-			return ret;
-		}
+            var children = new List<Tuple<CstNode, string>>();
+            children.Add(Tuple.Create(node, ""));
+            //var ancestorStr = "";
+            //foreach (var e in node.AncestorsWithSingleChild()) {
+            //    ancestorStr = ancestorStr + "<" + e.RuleId;
+            //    ret.Add(ancestorStr);
+            //}
+            var i = 1;
+            if (!exp.IsInner) {
+                var parent = Tuple.Create(node, "");
+                //var descendantStr = "";
+                //foreach (var e in node.DescendantsOfSingle()) {
+                //    descendantStr = descendantStr + ">" + e.RuleId;
+                //    ret.Add(descendantStr);
+                //}
+                for (; i <= length; i++) {
+                    var newChildren = new List<Tuple<CstNode, string>>();
+                    foreach (var t in children) {
+                        foreach (var e in t.Item1.Elements()) {
+                            var key = t.Item2 + ">" + e.RuleId;
+                            newChildren.Add(Tuple.Create(e, key));
+                            // for Preconditions.checkArguments()
+                            ret.Add(t.Item2 + ">'" + exp.GetToken(e));
+                        }
+                    }
+                    parent.Item1.PrevsFromSelf().Take(10)
+                            .ForEach(
+                                    (e, index) => {
+                                        var key = parent.Item2 + "<-" + index + "-" + e.RuleId;
+                                        newChildren.Add(Tuple.Create(e, key));
+                                        // for Preconditions.checkArguments()
+                                        ret.Add(
+                                                parent.Item2 + "<-" + index + "-'" + exp.GetToken(e));
+                                    });
+                    parent.Item1.NextsFromSelf().Take(10)
+                            .ForEach(
+                                    (e, index) => {
+                                        var key = parent.Item2 + ">-" + index + "-" + e.RuleId;
+                                        newChildren.Add(Tuple.Create(e, key));
+                                        // for Preconditions.checkArguments()
+                                        ret.Add(
+                                                parent.Item2 + ">-" + index + "-'" + exp.GetToken(e));
+                                    });
+                    ret.UnionWith(newChildren.Select(t => t.Item2));
+                    children = newChildren;
 
-		public static BigInteger GetSurroundingBits(
-				this CstNode node, int length, IDictionary<string, BigInteger> key2Bit, bool inner = true,
-				bool outer = true) {
-			//inner = outer = true;
+                    var newParent = parent.Item1.Parent;
+                    if (newParent == null) {
+                        break;
+                    }
+                    parent = Tuple.Create(newParent, parent.Item2 + "<" + newParent.RuleId);
+                    ret.Add(parent.Item2);
+                }
+            }
+            for (; i <= length; i++) {
+                var newChildren = new List<Tuple<CstNode, string>>();
+                foreach (var t in children) {
+                    foreach (var e in t.Item1.Elements()) {
+                        var key = t.Item2 + ">" + e.RuleId;
+                        newChildren.Add(Tuple.Create(e, key));
+                        // for Preconditions.checkArguments()
+                        ret.Add(t.Item2 + ">'" + exp.GetToken(e));
+                    }
+                }
+                ret.UnionWith(newChildren.Select(t => t.Item2));
+                children = newChildren;
+            }
+            return ret;
+        }
 
-			var ret = BigInteger.Zero;
-			BigInteger bit;
-			var childElements = new List<Tuple<CstNode, string>>();
-			if (inner) {
-				childElements.Add(Tuple.Create(node, node.Name));
-				var parentStr = "";
-				foreach (var e in node.AncestorsWithSingleChildAndSelf()) {
-					parentStr = parentStr + "<" + e.NameWithId();
-					if (key2Bit.TryGetValue(parentStr, out bit)) {
-						ret |= bit;
-					}
-				}
-			}
-			var i = 1;
-			if (outer) {
-				var parentElement = Tuple.Create(node, node.Name);
-				var descendantStr = "";
-				foreach (var e in node.DescendantsOfSingleAndSelf()) {
-					descendantStr = descendantStr + "<" + e.NameWithId();
-					if (key2Bit.TryGetValue(descendantStr, out bit)) {
-						ret |= bit;
-					}
-				}
-				// 自分自身の位置による区別も考慮する
-				if (key2Bit.TryGetValue(node.NameOrTokenWithId(), out bit)) {
-					ret |= bit;
-				}
-				for (; i <= length; i++) {
-					var newChildElements = new List<Tuple<CstNode, string>>();
-					foreach (var t in childElements) {
-						foreach (var e in t.Item1.Elements()) {
-							var key = t.Item2 + ">" + e.NameOrTokenWithId();
-							if (key2Bit.TryGetValue(key, out bit)) {
-								newChildElements.Add(Tuple.Create(e, key));
-								ret |= bit;
-							}
-							// トークンが存在するかチェックする弱い条件
-							// for Preconditions.checkArguments()
-							if (key2Bit.TryGetValue(t.Item2 + ">'" + e.TokenText + "'", out bit)) {
-								ret |= bit;
-							}
-						}
-						foreach (var e in t.Item1.Descendants()) {
-							// トークンが存在するかチェックする弱い条件
-							//ret.Add(t.Item2 + ">>'" + e.TokenText() + "'");
-						}
-					}
-					foreach (var e in parentElement.Item1.Siblings(10)) {
-						var key = parentElement.Item2 + "-" + e.NameOrTokenWithId();
-						if (key2Bit.TryGetValue(key, out bit)) {
-							newChildElements.Add(Tuple.Create(e, key));
-							ret |= bit;
-						}
-						// トークンが存在するかチェックする弱い条件
-						// for Preconditions.checkArguments()
-						if (key2Bit.TryGetValue(parentElement.Item2 + "-'" + e.TokenText + "'", out bit)) {
-							ret |= bit;
-						}
-						//// 先祖に存在するかチェックする弱い条件
-						//var iLastName = parentElement.Item2.LastIndexOf("<");
-						//var weakKey = "<<" + parentElement.Item2.Substring(iLastName + 1) + "-" + e.NameOrTokenWithId();
-						//newChildElements.Add(Tuple.Create(e, weakKey));
-					}
-					childElements = newChildElements;
+        public static BigInteger GetSurroundingBits(
+                this CstNode node, int length, IDictionary<string, BigInteger> key2Bit,
+                ILearningExperiment exp) {
+            var ret = BigInteger.Zero;
+            BigInteger bit;
+            //if (key2Bit.TryGetValue(node.Name, out bit)) {
+            //    ret |= bit;
+            //}
+            if (key2Bit.TryGetValue(node.RuleId, out bit)) {
+                ret |= bit;
+            }
+            if (key2Bit.TryGetValue("'" + exp.GetToken(node), out bit)) {
+                ret |= bit;
+            }
 
-					var newParentElement = parentElement.Item1.Parent;
-					if (newParentElement == null) {
-						break;
-					}
-					parentElement = Tuple.Create(
-							newParentElement,
-							parentElement.Item2 + "<" + newParentElement.NameOrTokenWithId());
-					if (key2Bit.TryGetValue(parentElement.Item2, out bit)) {
-						ret |= bit;
-					} else {
-						break;
-					}
-				}
-			}
-			for (; i <= length; i++) {
-				var newChildElements = new List<Tuple<CstNode, string>>();
-				foreach (var t in childElements) {
-					foreach (var e in t.Item1.Elements()) {
-						var key = t.Item2 + ">" + e.NameOrTokenWithId();
-						if (key2Bit.TryGetValue(key, out bit)) {
-							newChildElements.Add(Tuple.Create(e, key));
-							ret |= bit;
-						}
-						// トークンが存在するかチェックする弱い条件
-						// for Preconditions.checkArguments()
-						if (key2Bit.TryGetValue(t.Item2 + ">'" + e.TokenText + "'", out bit)) {
-							ret |= bit;
-						}
-					}
-				}
-				childElements = newChildElements;
-			}
-			return ret;
-		}
+            var children = new List<Tuple<CstNode, string>>();
+            children.Add(Tuple.Create(node, ""));
+            //var ancestorStr = "";
+            //foreach (var e in node.AncestorsWithSingleChild()) {
+            //    ancestorStr = ancestorStr + "<" + e.RuleId;
+            //    if (key2Bit.TryGetValue(ancestorStr, out bit)) {
+            //        ret |= bit;
+            //    }
+            //}
+            var i = 1;
+            if (!exp.IsInner) {
+                var parent = Tuple.Create(node, "");
+                //var descendantStr = "";
+                //foreach (var e in node.DescendantsOfSingle()) {
+                //    descendantStr = descendantStr + ">" + e.RuleId;
+                //    if (key2Bit.TryGetValue(descendantStr, out bit)) {
+                //        ret |= bit;
+                //    }
+                //}
+                for (; i <= length; i++) {
+                    var newChildren = new List<Tuple<CstNode, string>>();
+                    foreach (var t in children) {
+                        foreach (var e in t.Item1.Elements()) {
+                            var key = t.Item2 + ">" + e.RuleId;
+                            if (key2Bit.TryGetValue(key, out bit)) {
+                                newChildren.Add(Tuple.Create(e, key));
+                                ret |= bit;
+                            }
+                            // for Preconditions.checkArguments()
+                            if (key2Bit.TryGetValue(t.Item2 + ">'" + exp.GetToken(e), out bit)) {
+                                ret |= bit;
+                            }
+                        }
+                    }
+                    parent.Item1.PrevsFromSelf().Take(10)
+                            .ForEach(
+                                    (e, index) => {
+                                        var key = parent.Item2 + "<-" + index + "-" + e.RuleId;
+                                        if (key2Bit.TryGetValue(key, out bit)) {
+                                            newChildren.Add(Tuple.Create(e, key));
+                                            ret |= bit;
+                                        }
+                                        if (key2Bit.TryGetValue(
+                                                parent.Item2 + "<-" + index + "-'" + exp.GetToken(e),
+                                                out bit)) {
+                                            ret |= bit;
+                                        }
+                                    });
+                    parent.Item1.NextsFromSelf().Take(10)
+                            .ForEach(
+                                    (e, index) => {
+                                        var key = parent.Item2 + ">-" + index + "-" + e.RuleId;
+                                        if (key2Bit.TryGetValue(key, out bit)) {
+                                            newChildren.Add(Tuple.Create(e, key));
+                                            ret |= bit;
+                                        }
+                                        if (key2Bit.TryGetValue(
+                                                parent.Item2 + ">-" + index + "-'" + exp.GetToken(e),
+                                                out bit)) {
+                                            ret |= bit;
+                                        }
+                                    });
+                    children = newChildren;
 
-		public static Dictionary<string, List<CstNode>> SurroundingElementsWithSelf(
-				this CstNode node, int length) {
-			var ret = new Dictionary<string, List<CstNode>>();
-			var childKeys = new List<string> { "" };
-			ret[""] = new List<CstNode> { node };
-			var parentKey = "";
-			var parent = node;
-			var i = 1;
-			for (; i <= length; i++) {
-				var newChildKeys = new List<string>();
-				foreach (var childKey in childKeys) {
-					foreach (var e in ret[childKey]) {
-						var key = childKey + e.NameWithId() + ">";
-						ret[key] = e.Elements().ToList();
-						newChildKeys.Add(key);
-					}
-				}
-				{
-					var key = parentKey + parent.NameWithId() + "-";
-					ret[key] = parent.Siblings(10).ToList();
-					newChildKeys.Add(key);
-				}
-				childKeys = newChildKeys;
-				parentKey += parent.NameWithId() + "<";
-				parent = parent.Parent;
-				if (parent == null) {
-					break;
-				}
-				ret[parentKey] = new List<CstNode> { parent };
-			}
-			for (; i <= length; i++) {
-				var newChildKeys = new List<string>();
-				foreach (var childKey in childKeys) {
-					foreach (var e in ret[childKey]) {
-						var key = childKey + e.NameWithId() + ">";
-						ret[key] = e.Elements().ToList();
-						newChildKeys.Add(key);
-					}
-				}
-				childKeys = newChildKeys;
-			}
-			ret.Remove("");
-			return ret;
-		}
-
-		public static HashSet<string> GetSurroundingKeys2(
-				this CstNode node, int length, bool inner = true, bool outer = true) {
-			//inner = outer = true;
-
-			var ret = new HashSet<string>();
-			var childElements = new List<Tuple<CstNode, string>>();
-			if (inner) {
-				childElements.Add(Tuple.Create(node, node.Name));
-				var ancestorStr = "";
-				foreach (var e in node.AncestorsWithSingleChildAndSelf()) {
-					ancestorStr = ancestorStr + "<" + e.NameWithId();
-					ret.Add(ancestorStr);
-				}
-			}
-			var i = 1;
-			if (outer) {
-				var parentElement = Tuple.Create(node, node.Name);
-				var descendantStr = "";
-				foreach (var e in node.DescendantsOfSingleAndSelf()) {
-					descendantStr = descendantStr + "<" + e.NameWithId();
-					ret.Add(descendantStr);
-				}
-				// 自分自身の位置による区別も考慮する
-				ret.Add(node.NameOrTokenWithId());
-				for (; i <= length; i++) {
-					var newChildElements = new List<Tuple<CstNode, string>>();
-					foreach (var t in childElements) {
-						foreach (var e in t.Item1.Elements()) {
-							var key = t.Item2 + ">" + e.NameOrTokenWithId();
-							newChildElements.Add(Tuple.Create(e, key));
-							// トークンが存在するかチェックする弱い条件
-							// for Preconditions.checkArguments()
-							ret.Add(t.Item2 + ">'" + e.TokenText + "'");
-						}
-						foreach (var e in t.Item1.Descendants()) {
-							// トークンが存在するかチェックする弱い条件
-							//ret.Add(t.Item2 + ">>'" + e.TokenText() + "'");
-						}
-					}
-					foreach (var e in parentElement.Item1.Siblings(10)) {
-						var key = parentElement.Item2 + "-" + e.NameOrTokenWithId();
-						newChildElements.Add(Tuple.Create(e, key));
-						// トークンが存在するかチェックする弱い条件
-						// for Preconditions.checkArguments()
-						ret.Add(parentElement.Item2 + "-'" + e.TokenText + "'");
-						//// 先祖に存在するかチェックする弱い条件
-						//var iLastName = parentElement.Item2.LastIndexOf("<");
-						//var weakKey = "<<" + parentElement.Item2.Substring(iLastName + 1) + "-" + e.NameOrTokenWithId();
-						//newChildElements.Add(Tuple.Create(e, weakKey));
-					}
-					ret.UnionWith(newChildElements.Select(t => t.Item2));
-					childElements = newChildElements;
-
-					var newParentElement = parentElement.Item1.Parent;
-					if (newParentElement == null) {
-						break;
-					}
-					parentElement = Tuple.Create(
-							newParentElement,
-							parentElement.Item2 + "<" + newParentElement.NameOrTokenWithId());
-					ret.Add(parentElement.Item2);
-				}
-			}
-			for (; i <= length; i++) {
-				var newChildElements = new List<Tuple<CstNode, string>>();
-				foreach (var t in childElements) {
-					foreach (var e in t.Item1.Elements()) {
-						var key = t.Item2 + ">" + e.NameOrTokenWithId();
-						newChildElements.Add(Tuple.Create(e, key));
-						// トークンが存在するかチェックする弱い条件
-						// for Preconditions.checkArguments()
-						ret.Add(t.Item2 + ">'" + e.TokenText + "'");
-					}
-				}
-				ret.UnionWith(newChildElements.Select(t => t.Item2));
-				childElements = newChildElements;
-			}
-			return ret;
-		}
-
-	}
+                    var newParent = parent.Item1.Parent;
+                    if (newParent == null) {
+                        break;
+                    }
+                    parent = Tuple.Create(newParent, parent.Item2 + "<" + newParent.RuleId);
+                    if (key2Bit.TryGetValue(parent.Item2, out bit)) {
+                        ret |= bit;
+                    } else {
+                        break;
+                    }
+                }
+            }
+            for (; i <= length; i++) {
+                var newChildren = new List<Tuple<CstNode, string>>();
+                foreach (var t in children) {
+                    foreach (var e in t.Item1.Elements()) {
+                        var key = t.Item2 + ">" + e.RuleId;
+                        if (key2Bit.TryGetValue(key, out bit)) {
+                            newChildren.Add(Tuple.Create(e, key));
+                            ret |= bit;
+                        }
+                        // for Preconditions.checkArguments()
+                        if (key2Bit.TryGetValue(t.Item2 + ">'" + exp.GetToken(e), out bit)) {
+                            ret |= bit;
+                        }
+                    }
+                }
+                children = newChildren;
+            }
+            return ret;
+        }
+    }
 }
