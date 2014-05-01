@@ -24,6 +24,8 @@ using ParserTests;
 namespace Code2Xml.Languages.Tests.Samples {
     /// <summary>
     /// Sample code for generating CST, XML and code.
+    /// CST structure depends on ANTLR grammar file
+    /// (https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/ANTLRv3/Generators/Java/Java.g).
     /// </summary>
     [TestFixture]
     public class CstGeneratorSample {
