@@ -1,49 +1,47 @@
 Code2Xml [![Build Status](https://secure.travis-ci.org/exKAZUu/Code2Xml.png?branch=master)](http://travis-ci.org/exKAZUu/Code2Xml)
 =================
 
-# Roadmap
-
-- 3.0.0 (April, 2014)
-  - Add ```CstGeneraotr``` and ```AstGenerator``` classes
-  - Add ```CstNode```, ```CstToken```, ```AstNode``` and ```AstToken``` classes instead of ```XElement``` class
-  - Support inter-conversion between ```CstNode/AstNode``` and ```XElement``` classes
-  - Remove ```Code2Xml```, ```Xml2Code``` and ```Processor``` classes
-
 # How to Use
 
 ## Sample Code using Processor
 
-- https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/ProcessorSample.cs
-  - Parse C#, Java and Lua code.
-- https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/ManipulationSample.cs
+- https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/CstGeneratorSample.cs
+  - Inter-Convert between CST, XML and code for C#, Java and Lua.
+- https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/CstManipulationSample.cs
   - ProcessIdentifiers: Extract identifiers including a method name
   - ProcessComments: Extract comments
   - InsertStatements: Insert a statement into each method
+- https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/CstSerializationSample.cs
+  - Serialize CST as a text or a binary
 
 ```C#
 [Test] public void ParseJavaText() {
-	var originalCode = @"class Klass {}";
-	var xml = Processors.JavaUsingAntlr3.GenerateXml(originalCode);
-	var code = Processors.JavaUsingAntlr3.GenerateCode(xml);
-	Assert.That(code, Is.EqualTo(originalCode));
-}
+    const string originalCode = @"class Klass {}";
+    var gen = CstGenerators.JavaUsingAntlr3;
 
-[Test] public void ParseCSharpFile() {
-	var path = Fixture.GetInputCodePath("CSharp", "Student.cs"); // Get a path of a test file
-	// To read file, please pass a FileInfo instance
-	var xml = Processors.CSharpUsingAntlr3.GenerateXml(new FileInfo(path));
-	var code = Processors.CSharpUsingAntlr3.GenerateCode(xml);
-	Assert.That(code, Is.EqualTo(File.ReadAllText(path)));
-}
+    /*** Code <=> CST ***/
+    var cst = gen.GenerateTreeFromCodeText(originalCode);
+    Assert.That(cst.Code, Is.EqualTo(originalCode));
+    // GenerateCodeFromTree() invokes Code
+    Assert.That(gen.GenerateCodeFromTree(cst), Is.EqualTo(originalCode));
 
-[Test] public void ParseLuaFileUsingFilePath() {
-	var path = Fixture.GetInputCodePath("Lua", "Block1.lua"); // Get a path of a test file
-  // Load a suitable processor by retrieving an extension (e.g. .lua)
-	var processor = Processors.GetProcessorByPath(path);
-  // To read file, please pass a FileInfo instance
-	var xml = processor.GenerateXml(new FileInfo(path));
-	var code = processor.GenerateCode(xml);
-	Assert.That(code, Is.EqualTo(File.ReadAllText(path)));
+    /*** CST <=> XML ***/
+    var xml = cst.ToXml();
+    Assert.That(CstNode.FromXml(xml).Code, Is.EqualTo(originalCode));
+    // GenerateXmlFromTree() invokes ToXml()
+    Assert.That(gen.GenerateXmlFromTree(cst).ToString(),
+        Is.EqualTo(xml.ToString()));
+    // GenerateTreeFromXml() invokes CstNode.FromXml()
+    Assert.That(gen.GenerateTreeFromXml(xml).Code,
+        Is.EqualTo(originalCode));
+
+    /*** Code <=> XML (via CST) ***/
+    // GenerateXmlFromCodeText() invokes GenerateTreeFromCodeText() and ToXml()
+    Assert.That(gen.GenerateXmlFromCodeText(originalCode).ToString(),
+        Is.EqualTo(xml.ToString()));
+    // GenerateCodeFromXml() invokes CstNode.FromXml() and Code
+    Assert.That(gen.GenerateCodeFromXml(xml),
+        Is.EqualTo(originalCode));
 }
 ```
 
