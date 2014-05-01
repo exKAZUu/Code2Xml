@@ -23,8 +23,8 @@ using ParserTests;
 
 namespace Code2Xml.Languages.Tests.Samples {
     /// <summary>
-    /// Sample code for generating CST, XML and code.
-    /// CST structure depends on ANTLR grammar file
+    /// Generate CST, XML and code for Java.
+    /// CST structure depends on ANTLR grammar file for Java
     /// (https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/ANTLRv3/Generators/Java/Java.g).
     /// </summary>
     [TestFixture]
@@ -59,6 +59,11 @@ namespace Code2Xml.Languages.Tests.Samples {
                 Is.EqualTo(originalCode));
         }
 
+        /// <summary>
+        /// Generate CST and code for C#.
+        /// CST structure depends on ANTLR grammar file for C#
+        /// (https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/ANTLRv3/Generators/CSharp/cs.g).
+        /// </summary>
         [Test]
         public void ParseCSharpFile() {
             var path = Fixture.GetInputCodePath("CSharp", "Student.cs");
@@ -67,6 +72,11 @@ namespace Code2Xml.Languages.Tests.Samples {
             Assert.That(cst.Code, Is.EqualTo(File.ReadAllText(path)));
         }
 
+        /// <summary>
+        /// Generate CST and code for Lua.
+        /// CST structure depends on ANTLR grammar file for Lua
+        /// (https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/ANTLRv3/Generators/Lua/lua.g).
+        /// </summary>
         [Test]
         public void ParseLuaFileUsingFilePath() {
             var path = Fixture.GetInputCodePath("Lua", "Block1.lua");

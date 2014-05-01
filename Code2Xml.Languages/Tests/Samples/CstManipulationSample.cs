@@ -23,8 +23,9 @@ using NUnit.Framework;
 
 namespace Code2Xml.Languages.Tests.Samples {
     /// <summary>
-    /// Sample code for manipulating CST.
-    /// This sample code uses JavaUsingAntlr3 which is based on Java.g.
+        /// Collect identifiers by manipulating Java CST.
+    /// CST structure depends on ANTLR grammar file for Java
+    /// (https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/ANTLRv3/Generators/Java/Java.g).
     /// </summary>
     [TestFixture]
     public class CstManipulationSample {
@@ -40,6 +41,11 @@ namespace Code2Xml.Languages.Tests.Samples {
             Assert.That(methodName, Is.EqualTo("m"));
         }
 
+        /// <summary>
+        /// Collect comments by manipulating Java CST.
+        /// CST structure depends on ANTLR grammar file for Java
+        /// (https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/ANTLRv3/Generators/Java/Java.g).
+        /// </summary>
         [Test]
         public void ProcessComments() {
             const string code = @"class K {
@@ -60,6 +66,11 @@ namespace Code2Xml.Languages.Tests.Samples {
             Assert.That(nextHiddens[0].Text.Trim(), Is.EqualTo("// c4"));
         }
 
+        /// <summary>
+        /// Insert statements by manipulating Java CST.
+        /// CST structure depends on ANTLR grammar file for Java
+        /// (https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/ANTLRv3/Generators/Java/Java.g).
+        /// </summary>
         [Test]
         public void InsertStatements() {
             const string code = @"class K { void m1() {} void m2() { int i; } }";
