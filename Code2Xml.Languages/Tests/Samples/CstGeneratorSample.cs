@@ -75,7 +75,7 @@ namespace Code2Xml.Languages.Tests.Samples {
         /// <summary>
         /// Generate CST and code for Lua.
         /// CST structure depends on ANTLR grammar file for Lua
-        /// (https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/ANTLRv3/Generators/Lua/lua.g).
+        /// (https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/ANTLRv3/Generators/Lua/Lua.g).
         /// </summary>
         [Test]
         public void ParseLuaFileUsingFilePath() {
