@@ -112,6 +112,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="TreeDotNet">
+      <HintPath>..\..\packages\TreeDotNet.1.2.6.16\lib\net40\TreeDotNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OutputType.cs" />

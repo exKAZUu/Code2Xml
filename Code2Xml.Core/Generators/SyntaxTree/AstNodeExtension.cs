@@ -64,11 +64,6 @@ namespace Code2Xml.Core.Generators {
             return self.SelectMany(node => node.Children());
         }
 
-        public static IEnumerable<AstNode> ChildrenAndSelf(
-                this IEnumerable<AstNode> self) {
-            return self.SelectMany(node => node.ChildrenAndSelf());
-        }
-
         public static IEnumerable<AstNode> NextsFromSelf(
                 this IEnumerable<AstNode> self) {
             return self.SelectMany(node => node.NextsFromSelf());
@@ -226,11 +221,6 @@ namespace Code2Xml.Core.Generators {
         public static IEnumerable<AstNode> Children(
                 this IEnumerable<AstNode> self, string name) {
             return self.SelectMany(node => node.Children(name));
-        }
-
-        public static IEnumerable<AstNode> ChildrenAndSelf(
-                this IEnumerable<AstNode> self, string name) {
-            return self.SelectMany(node => node.ChildrenAndSelf(name));
         }
 
         public static IEnumerable<AstNode> NextsFromSelf(
