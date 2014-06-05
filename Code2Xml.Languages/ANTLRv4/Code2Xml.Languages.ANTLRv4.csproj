@@ -172,10 +172,6 @@
       <Visitor>True</Visitor>
     </Antlr4>
     <None Include="packages.config" />
-    <Antlr4 Include="Generators\CSharp\CSharp.g4">
-      <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Generators.CSharp</CustomToolNamespace>
-    </Antlr4>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">

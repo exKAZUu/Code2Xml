@@ -1170,7 +1170,6 @@ PP_CONDITIONAL:
     | UNDEF_TOKEN)   TS*   (LINE_COMMENT | ('\r'|'\n')+ | EOF) ;
 fragment
 IF_TOKEN
-    @init { bool process = true; }:
     ('#'   TS*  'if'   ( TS+ PP_EXPRESSION
 	                   | ('(') => PP_PRIMARY_EXPRESSION
 					   | ('!') => PP_UNARY_EXPRESSION
