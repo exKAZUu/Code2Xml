@@ -21,38 +21,38 @@ using Antlr4.Runtime;
 using Code2Xml.Core.Generators;
 using Code2Xml.Languages.ANTLRv4.Core;
 
-namespace Code2Xml.Languages.ANTLRv4.Generators.Java {
+namespace Code2Xml.Languages.ANTLRv4.Generators.ECMAScript {
     /// <summary>
-    /// Represents a Java parser and a Java code generator.
+    /// Represents a ECMAScript parser and a ECMAScript code generator.
     /// </summary>
     [Export(typeof(CstGenerator))]
-    public class JavaCstGenerator : CstGeneratorUsingAntlr4<JavaParser> {
+    public class EcmaScriptCstGenerator : CstGeneratorUsingAntlr4<ECMAScriptParser> {
         /// <summary>
         /// Gets the language name except for the version.
         /// </summary>
         public override string LanguageName {
-            get { return "Java"; }
+            get { return "ECMAScript"; }
         }
 
         /// <summary>
         /// Gets the language version.
         /// </summary>
         public override string LanguageVersion {
-            get { return "8"; }
+            get { return "5.1"; }
         }
 
-        public JavaCstGenerator() : base(".java") {}
+        public EcmaScriptCstGenerator() : base(".js") {}
 
         protected override ITokenSource CreateLexer(ICharStream stream) {
-            return new JavaLexer(stream);
+            return new ECMAScriptLexer(stream);
         }
 
-        protected override JavaParser CreateParser(CommonTokenStream stream) {
-            return new JavaParser(stream);
+        protected override ECMAScriptParser CreateParser(CommonTokenStream stream) {
+            return new ECMAScriptParser(stream);
         }
 
-        protected override ParserRuleContext Parse(JavaParser parser) {
-            return parser.compilationUnit();
+        protected override ParserRuleContext Parse(ECMAScriptParser parser) {
+            return parser.program();
         }
     }
 }

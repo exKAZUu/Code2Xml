@@ -21,38 +21,38 @@ using Antlr4.Runtime;
 using Code2Xml.Core.Generators;
 using Code2Xml.Languages.ANTLRv4.Core;
 
-namespace Code2Xml.Languages.ANTLRv4.Generators.Java {
+namespace Code2Xml.Languages.ANTLRv4.Generators.Swift {
     /// <summary>
-    /// Represents a Java parser and a Java code generator.
+    /// Represents a Swift parser and a Swift code generator.
     /// </summary>
     [Export(typeof(CstGenerator))]
-    public class JavaCstGenerator : CstGeneratorUsingAntlr4<JavaParser> {
+    public class SwiftCstGenerator : CstGeneratorUsingAntlr4<SwiftParser> {
         /// <summary>
         /// Gets the language name except for the version.
         /// </summary>
         public override string LanguageName {
-            get { return "Java"; }
+            get { return "Swift"; }
         }
 
         /// <summary>
         /// Gets the language version.
         /// </summary>
         public override string LanguageVersion {
-            get { return "8"; }
+            get { return "1"; }
         }
 
-        public JavaCstGenerator() : base(".java") {}
+        public SwiftCstGenerator() : base(".swift") {}
 
         protected override ITokenSource CreateLexer(ICharStream stream) {
-            return new JavaLexer(stream);
+            return new SwiftLexer(stream);
         }
 
-        protected override JavaParser CreateParser(CommonTokenStream stream) {
-            return new JavaParser(stream);
+        protected override SwiftParser CreateParser(CommonTokenStream stream) {
+            return new SwiftParser(stream);
         }
 
-        protected override ParserRuleContext Parse(JavaParser parser) {
-            return parser.compilationUnit();
+        protected override ParserRuleContext Parse(SwiftParser parser) {
+            return parser.top_level();
         }
     }
 }

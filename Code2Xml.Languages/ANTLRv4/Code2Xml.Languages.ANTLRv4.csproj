@@ -62,6 +62,7 @@
     <Compile Include="Generators\C\C.g4.parser.cs" />
     <Compile Include="Generators\C\CCstGenerator.cs" />
     <Compile Include="Generators\C\CCstGeneratorUsingAntlr4AndGcc.cs" />
+    <Compile Include="Generators\ECMAScript\EcmaScriptCstGenerator.cs" />
     <Compile Include="Generators\Erlang\ErlangCstGenerator.cs" />
     <Compile Include="Generators\Erlang\Erlang.g4.lexer.cs">
       <DependentUpon>Erlang.g4</DependentUpon>
@@ -87,6 +88,7 @@
     <Compile Include="Generators\ObjectiveC\ObjectiveC.g4.parser.cs">
       <DependentUpon>ObjectiveC.g4</DependentUpon>
     </Compile>
+    <Compile Include="Generators\Python3\ObjectiveCCstGenerator.cs" />
     <Compile Include="Generators\R\RCstGenerator.cs" />
     <Compile Include="Generators\R\R.g4.lexer.cs">
       <DependentUpon>R.g4</DependentUpon>
@@ -95,6 +97,7 @@
       <DependentUpon>R.g4</DependentUpon>
     </Compile>
     <Compile Include="Generators\Smalltalk\SmalltalkCstGenerator.cs" />
+    <Compile Include="Generators\Swift\SwiftCstGenerator.cs" />
     <Compile Include="Generators\Verilog2001\Verilog2001CstGenerator.cs" />
     <Compile Include="Generators\Verilog2001\Verilog2001.g4.lexer.cs">
       <DependentUpon>Verilog2001.g4</DependentUpon>
@@ -170,6 +173,21 @@
       <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Generators.GarryLua</CustomToolNamespace>
       <Listener>False</Listener>
       <Visitor>True</Visitor>
+    </Antlr4>
+    <Antlr4 Include="Generators\ECMAScript\ECMAScript.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Generators.ECMAScript</CustomToolNamespace>
+      <Listener>False</Listener>
+    </Antlr4>
+    <Antlr4 Include="Generators\Swift\Swift.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Generators.Swift</CustomToolNamespace>
+      <Listener>False</Listener>
+    </Antlr4>
+    <Antlr4 Include="Generators\Python3\Python3.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Languages.ANTLRv4.Generators.Python3</CustomToolNamespace>
+      <Listener>False</Listener>
     </Antlr4>
     <None Include="packages.config" />
   </ItemGroup>

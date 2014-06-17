@@ -495,7 +495,6 @@ qualifiedName
 		  | New|Clone|Echo|Print|If|Else|ElseIf|For|Foreach|While|Do|Try|Catch|Finally|Switch|Case|Default|Namespace|Function|Break|Continue|Goto|Return|Throw|Global|Static|And|Or|Xor|Instanceof|Null|List|Class|Interface|Extends|Implements|Abstract|Var|Const|As|Require|RequireOnce|Include|IncludeOnce|Public|Private|Protected|True|False|HaltCompiler|Die|Empty|Exit|Eval|Isset|Use
 		  | IntType | IntegerType | BoolType | BooleanType | FloatType | DoubleType
 		  | RealType | StringType | ObjectType
-		  
 		  )
 	( '\\' (UnquotedString
 		  | New|Clone|Echo|Print|If|Else|ElseIf|For|Foreach|While|Do|Try|Catch|Finally|Switch|Case|Default|Namespace|Function|Break|Continue|Goto|Return|Throw|Global|Static|And|Or|Xor|Instanceof|Null|List|Class|Interface|Extends|Implements|Abstract|Var|Const|As|Require|RequireOnce|Include|IncludeOnce|Public|Private|Protected|True|False|HaltCompiler|Die|Empty|Exit|Eval|Isset|Use

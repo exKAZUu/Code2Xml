@@ -16,14 +16,92 @@
 
 #endregion
 
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
 namespace Antlr4.Runtime {
+    public struct boolean {
+        private readonly bool _value;
+
+        public boolean(bool value) {
+            _value = value;
+        }
+
+        public static implicit operator bool(boolean value) {
+            return value._value;
+        }
+
+        public static implicit operator boolean(bool value) {
+            return new boolean(value);
+        }
+    }
+
     public static class Token {
         public const int HIDDEN_CHANNEL = TokenConstants.HiddenChannel;
     }
 
+    public static class StandardLibraryExtension {
+        public static bool isEmpty<T>(this IEnumerable<T> stack) {
+            return !stack.Any();
+        }
+
+        public static void push<T>(this Stack<T> stack, T item) {
+            stack.Push(item);
+        }
+
+        public static T pop<T>(this Stack<T> stack) {
+            return stack.Pop();
+        }
+
+        public static T peek<T>(this Stack<T> stack) {
+            return stack.Peek();
+        }
+
+        public static void offer<T>(this Queue<T> queue, T item) {
+            queue.Enqueue(item);
+        }
+
+        public static T poll<T>(this Queue<T> queue) {
+            return queue.Dequeue();
+        }
+
+        public static string replaceAll(this string str, string pattern, string replacement) {
+            return Regex.Replace(str, pattern, replacement);
+        }
+    }
+
     public static class Antlr4Extension {
+        public static string getText(this Lexer lexer) {
+            return lexer.Text;
+        }
+
+        public static void emit(this Lexer lexer, IToken token) {
+            lexer.Emit(token);
+        }
+
+        public static void skip(this Lexer lexer) {
+            lexer.Skip();
+        }
+
+        public static IToken getCurrentToken(this Parser parser) {
+            return parser.CurrentToken;
+        }
+
+        public static int getTokenIndex(this IToken token) {
+            return token.TokenIndex;
+        }
+
+        public static string getText(this IToken token) {
+            return token.Text;
+        }
+
         public static int getType(this IToken token) {
             return token.Type;
+        }
+
+        public static int getChannel(this IToken token) {
+            return token.Channel;
         }
 
         public static void setChannel(this IWritableToken token, int channel) {
@@ -36,6 +114,18 @@ namespace Antlr4.Runtime {
 
         public static IToken LT(this ITokenStream stream, int k) {
             return stream.Lt(k);
+        }
+
+        public static IToken get(this ITokenStream stream, int i) {
+            return stream.Get(i);
+        }
+
+        public static bool contains(this string str, string s) {
+            return str.Contains(s);
+        }
+
+        public static bool startsWith(this string str, string s) {
+            return str.StartsWith(s);
         }
     }
 }

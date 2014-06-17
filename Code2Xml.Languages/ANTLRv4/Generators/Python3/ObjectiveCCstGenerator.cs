@@ -21,38 +21,38 @@ using Antlr4.Runtime;
 using Code2Xml.Core.Generators;
 using Code2Xml.Languages.ANTLRv4.Core;
 
-namespace Code2Xml.Languages.ANTLRv4.Generators.Java {
+namespace Code2Xml.Languages.ANTLRv4.Generators.Python3 {
     /// <summary>
-    /// Represents a Java parser and a Java code generator.
+    /// Represents a Python3 parser and a Python3 code generator.
     /// </summary>
     [Export(typeof(CstGenerator))]
-    public class JavaCstGenerator : CstGeneratorUsingAntlr4<JavaParser> {
+    public class Python3CstGenerator : CstGeneratorUsingAntlr4<Python3Parser> {
         /// <summary>
         /// Gets the language name except for the version.
         /// </summary>
         public override string LanguageName {
-            get { return "Java"; }
+            get { return "Python"; }
         }
 
         /// <summary>
         /// Gets the language version.
         /// </summary>
         public override string LanguageVersion {
-            get { return "8"; }
+            get { return "3"; }
         }
 
-        public JavaCstGenerator() : base(".java") {}
+        public Python3CstGenerator() : base(".py") {}
 
         protected override ITokenSource CreateLexer(ICharStream stream) {
-            return new JavaLexer(stream);
+            return new Python3Lexer(stream);
         }
 
-        protected override JavaParser CreateParser(CommonTokenStream stream) {
-            return new JavaParser(stream);
+        protected override Python3Parser CreateParser(CommonTokenStream stream) {
+            return new Python3Parser(stream);
         }
 
-        protected override ParserRuleContext Parse(JavaParser parser) {
-            return parser.compilationUnit();
+        protected override ParserRuleContext Parse(Python3Parser parser) {
+            return parser.file_input();
         }
     }
 }

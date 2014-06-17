@@ -23,7 +23,7 @@ using Code2Xml.Core.Location;
 namespace Code2Xml.Core.Generators {
     public class CstToken : SyntaxTreeToken<CstToken> {
         public CodeRange Range { get; set; }
-        public string RuleId { get; private set; }
+        public string RuleId { get; set; }
         public string BeforeInsertedText { get; set; }
         public string AfterInsertedText { get; set; }
 

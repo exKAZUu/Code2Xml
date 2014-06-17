@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Generators\CCstGeneratorTest.cs" />
     <Compile Include="Generators\GarryLuaCstGeneratorTest.cs" />
+    <Compile Include="Generators\JavaScriptCstGeneratorTest.cs" />
     <Compile Include="Generators\LuaCstGeneratorTest.cs" />
     <Compile Include="Generators\JavaCstGeneratorTest.cs" />
     <Compile Include="Core\CstBuilderForAntlr4Test.cs" />
