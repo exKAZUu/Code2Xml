@@ -16,9 +16,11 @@
 
 #endregion
 
+using System.Linq;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Tests.Generators;
 using Code2Xml.Languages.ANTLRv3.Generators.CSharp;
+using Code2Xml.Objects.Tests.Learning.Experiments;
 using NUnit.Framework;
 
 namespace Code2Xml.Languages.ANTLRv3.Tests {
@@ -131,6 +133,7 @@ xxxxx
 			System.Diagnostics.Contracts.Contract.Requires<Exception>(true);
 			System.Diagnostics.Contracts.Contract.Requires<Exception>(true, s);
 } }")]
+        [TestCase(@"class K { void m() { int i = 0 + 1 - 2 * 3/ 4; }}")]
         public void Parse(string code) {
             VerifyRestoringCode(code);
         }
@@ -143,98 +146,213 @@ xxxxx
         }
 
         [Test]
-        [TestCase(@"https://github.com/MuMech/MechJeb2.git",
-                @"2837dbac38f59520ff840c479a242228c88ab485")]
-        [TestCase(@"https://github.com/MediaPortal/MediaPortal-1.git",
-                @"bb1af6b26eb596ba953c9a2d307313840f43f93f")]
-        [TestCase(@"https://github.com/migueldeicaza/MonoTouch.Dialog.git",
-                @"921612a37a282d2d32512e2d94465d0ed845f457")]
-        [TestCase(@"https://github.com/NuGet/NuGetGallery.git",
-                @"50ec4075f82d0dde0dcb9b94f991185c39e13326")]
-        [TestCase(@"https://github.com/AvilanceLtd/StarryboundServer.git",
-                @"2a89b59f28959257aceba1b542b7b1d6b41e2b0b")]
-        [TestCase(@"https://github.com/MehdiK/Humanizer.git",
-                @"b51cc6715acde38f674dfd84ae02188be0547702")] // Star: 503
-        [TestCase(@"https://github.com/NancyFx/Nancy.git",
-                @"e069dfbc326af4552f79b55b12c6966305baad79")] // Star: 2104
-        [TestCase(@"https://github.com/mono/MonoGame.git",
-                @"73fc2954b0cd83a4a7f3ddecdc56f155ff135e99")] // Star: 1996
-        [TestCase(@"https://github.com/SignalR/SignalR.git",
-                @"b940230aedc851c50775c2ed32ab96c476f10ec6")] // Star: 4108
-        [TestCase(@"https://github.com/JamesNK/Newtonsoft.Json.git",
-                @"9e2581be74585605b4f49e0110d65c85c17cb323")] // Star: 825
-        [TestCase(@"https://github.com/Glimpse/Glimpse.git",
-                @"b78f1c8b336e86278efea95c115f8a9a404ab901")] // Star: 691
-        [TestCase(@"https://github.com/WebMBro/WebMConverter.git",
-                @"07ff15b0e4fdf1b5cf66cf25a71a2d3b88a6f75e")] // Star: 40
-        [TestCase(@"https://github.com/shimat/opencvsharp.git",
-                @"d337e665265a8ce88773869d2402cad7fc1d21d3")] // Star: 40
-        [TestCase(@"https://github.com/mrward/monodevelop-nuget-addin.git",
-                @"f593536fcd779f4e819def961c676e392eee0ff3")] // Star: 225
-        [TestCase(@"https://github.com/MahApps/MahApps.Metro.git",
-                @"36fe5e517e0c65116d288fdabf2e68a2a9494bd9")] // Star: 799
-        [TestCase(@"https://github.com/apache/cordova-wp8.git",
-                @"30fba42357f8b6cf2e9a433128369c8f4cc914bb")] // Star: 49
-        [TestCase(@"https://github.com/magicdict/MagicMongoDBTool.git",
-                @"694ab21e1d4e4d3f47c1d9e31527c96b2a0e29bc")] // Star: 92
-        [TestCase(@"https://github.com/sharpdx/SharpDX.git",
-                @"65799e012fa2200748b16095aebb7b9427a6fb16")] // Star: 201
-        [TestCase(@"https://github.com/hbons/SparkleShare.git",
-                @"4085f1937041d89f76829336119f8b68ce97b43c")] // Star: 3033
-        [TestCase(@"https://github.com/ServiceStack/ServiceStack.git",
-                @"6cb92e0429e2cce31ef68e4fa02801718b00dd4f")] // Star: 2285
-        [TestCase(@"https://github.com/mono/mono.git",
-                @"81bdc35dd4b800831efc540be9705e021f8b848a")] // Star: 2056
-        [TestCase(@"https://github.com/AutoMapper/AutoMapper.git",
-                @"bc2ece165e028b4dbe963d978ef54e1ed2b50f5f")] // Star: 1853
-        [TestCase(@"https://github.com/restsharp/RestSharp.git",
-                @"70be25dae0edb44a1c962aee078e9dbf74cb4177")] // Star: 1828
-        [TestCase(@"https://github.com/Redth/PushSharp.git",
-                @"19216ead2bfbbf36c4fcaa95dfa8469facc5a7ef")] // Star: 1688
-        [TestCase(@"https://github.com/opserver/Opserver.git",
-                @"a170ea8bcda9f9e52d4aaff7339f3d198309369b")] // Star: 1324
-        [TestCase(@"https://github.com/robconery/massive.git",
-                @"87075153609fe096bcbd9f81a6901c1b60e2e579")] // Star: 1203
-        [TestCase(@"https://github.com/SamSaffron/dapper-dot-net.git",
-                @"885a8d46cbd67f09bd6a5e686a824759d79d5f78")] // Star: 1182
-        [TestCase(@"https://github.com/ravendb/ravendb.git",
-                @"a60d8dd3ffaf5892d86d5fcf8a9a81bec71800e7")] // Star: 1118
-        [TestCase(@"https://github.com/SamSaffron/MiniProfiler.git",
-                @"3744054e0686b2f88083b869a7f2fe7e1fa14e9c")] // Star: 1113
-        [TestCase(@"https://github.com/jaredpar/VsVim.git",
-                @"86d9e298c9d117e54266501ae9c4dd35b4d345cb")] // Star: 1097
-        [TestCase(@"https://github.com/mono/roslyn.git",
-                @"35ebc72b4fde323dde2c372d70ecd6437de97c4c")] // Star: 46
-        [TestCase(@"https://github.com/PlasmaByte/PokemonNXT.git",
-                @"8cf7d43119ea1a7cba4f8711472efefb54bb53fb")] // Star: 34
-        [TestCase(@"https://github.com/robconery/biggy.git",
-                @"0c7a0cb8f08b0ac7e5d87f91c5617d4cc6e21b84")] // Star: 266
-        [TestCase(@"https://github.com/jstedfast/MailKit.git",
-                @"3ef47b326f89a4a6ad960c9fcca00bdbac18a227")] // Star: 122
-        [TestCase(@"https://github.com/madskristensen/WebEssentials2013.git",
-                @"e422af47986bfd6c70ee6564cb1bf892cbf197f8")] // Star: 489
-        [TestCase(@"https://github.com/jamesmontemagno/Xam.PCL.Plugins.git",
-                @"0e6151295a2dba17f77c90034e4820ca42a941d9")] // Star: 28
-        [TestCase(@"https://github.com/xamarin/xamarin-store-app.git",
-                @"a68dcd6f07a45a127c6ed9af21fc8084f1b3bcb5")] // Star: 38
-        [TestCase(@"https://github.com/StephanieRct/NieMath.git",
-                @"9a4a49ab374d1652c3568ea5960b0de9a0218ea1")] // Star: 32
-        [TestCase(@"https://github.com/MvvmCross/MvvmCross.git",
-                @"fd16e13d05678e578ddc96938a680b3d94d8a496")] // Star: 706
-        [TestCase(@"https://github.com/reactiveui/ReactiveUI.git",
-                @"45aaa51f5d5202a5c8d34ea3151955f0bce8a956")] // Star: 888
-        [TestCase(@"https://github.com/Moq/moq4.git",
-                @"ac31aeca01056e3608540d5b5d043ba013f19abe")] // Star: 273
-        [TestCase(@"https://github.com/xunit/xunit.git",
-                @"075bedaa4a25ca407b6a73f4e5c2f68298618967")] // Star: 137
-        [TestCase(@"https://github.com/playgameservices/play-games-plugin-for-unity.git",
-                @"3ad9798396cc5e443815d5c1438bcebc54d98ed9")] // Star: 281
-        [TestCase(@"https://github.com/qianlifeng/Wox.git",
-                @"b07d1b027c42c045bce8304b40b4c27e4d03248f")] // Star: 334
+        [TestCase(@"https://github.com/openrasta/openwrap.git",
+                @"9161caebbe699e3912995a089a35c2d68a013772", 172)]
+        [TestCase(@"https://github.com/SteamRE/SteamKit.git",
+                @"90cdecb2db34c03ef85f4e1d763930f17f0f38b6", 172)]
+        [TestCase(@"https://github.com/sones/sones.git",
+                @"773b7a7dbbad6032e18a28e011111a1fc2d37447", 172)]
+        [TestCase(@"https://github.com/tmsmith/Dapper-Extensions.git",
+                @"82a6c3f6a3ef37c6d6df129daf5face3aae196b5", 170)]
+        [TestCase(@"https://github.com/markrendle/Simple.Web.git",
+                @"b702f9c4b825c8c73a626ba4595d9ee31bc6ee39", 169)]
+        [TestCase(@"https://github.com/InteractiveLab/TouchScript.git",
+                @"f9d16e3a1bfcdc5e0221a52ab672bec8178b871c", 169)]
+        [TestCase(@"https://github.com/igor-tkachev/bltoolkit.git",
+                @"fea27c2c0b5b4dfb4af4a078a02a50ee7a1a5947", 168)]
+        [TestCase(@"https://github.com/zenogantner/MyMediaLite.git",
+                @"6690d45514e1fb40d23b93d0f8ea2c12c82adc17", 168)]
+        [TestCase(@"https://github.com/aws/aws-sdk-net.git",
+                @"9e518440a29097b56cee96943905b636b9beea74", 167)]
+        [TestCase(@"https://github.com/paf31/initialround.git",
+                @"6811c12818126106c101ba1c237e0c2d622bdaa7", 166)]
+        [TestCase(@"https://github.com/TestStack/White.git",
+                @"5fa36b4c59177f2da91e6c8aeb13276014bb9222", 164)]
+        [TestCase(@"https://github.com/dnewcome/Node.net.git",
+                @"b5cbbb45e6716fb8b05b1ad6d175f8b3c7d8e43d", 163)]
         [TestCase(@"https://github.com/serilog/serilog.git",
-                @"60e8120a12abee4db942d2ff03b123341fab1fff")] // Star: 161
-        public void ParseGitRepository(string url, string commitPointer) {
-            VerifyRestoringGitRepositorySavingRepo(url, commitPointer, "csharp_repo.txt", "*.cs");
+                @"f2d638baa8ed47bf824ed784dfb7bd17353b6734", 162)]
+        [TestCase(@"https://github.com/paulcbetts/refit.git",
+                @"dc0b50d0a634fe4202b6fdfba804a15e58b2b5d7", 162)]
+        [TestCase(@"https://github.com/mchidk/BinaryRage.git",
+                @"c4651ac248bb6117d68c4662ea8cedf90f8b7a2d", 162)]
+        [TestCase(@"https://github.com/Grabacr07/KanColleViewer.git",
+                @"dc6717a54be14a5dbe6592879277acc2c2f92c56", 161)]
+        [TestCase(@"https://github.com/migueldeicaza/TweetStation.git",
+                @"1691b7e173b4dea488af9ed9dc77d9daff855194", 160)]
+        [TestCase(@"https://github.com/picoe/Eto.git",
+                @"f1f02696eb79d6f35118c515cff5477378009416", 160)]
+        [TestCase(@"https://github.com/TehGimp/KerbalMultiPlayer.git",
+                @"852346c1fcfcbe939ecbde4587917bda96160a16", 158)]
+        [TestCase(@"https://github.com/BlueSpire/Caliburn.Micro.git",
+                @"d464ff559d2b2309c2fa085cf107875c8fa4692a", 158)]
+        [TestCase(@"https://github.com/twilio/twilio-csharp.git",
+                @"8bdf3a14b36c385f2c621990b6c547e00440b659", 157)]
+        [TestCase(@"https://github.com/benrhughes/todotxt.net.git",
+                @"3cf4522cc1d86a15a76547296f5509186150b4ee", 157)]
+        [TestCase(@"https://github.com/JuhaKiili/RagePixel.git",
+                @"991aca50d4fdc319a2d82f9d0df92b3b767655df", 156)]
+        [TestCase(@"https://github.com/craiggwilson/fluent-mongo.git",
+                @"481791637931621c8bbce98e777a6f68caeb1e77", 155)]
+        [TestCase(@"https://github.com/sta/websocket-sharp.git",
+                @"99f7c9616ef807332e95d70ee286d8a4e48cc65c", 155)]
+        [TestCase(@"https://github.com/vc3/Afterthought.git",
+                @"35e6ac7be836bb798d89eb5c8150ce0a3ba30f44", 155)]
+        [TestCase(@"https://github.com/thinkpixellab/bot.git",
+                @"0fe417e5f708a8887e07d1ab02f6711b307e6ac5", 155)]
+        [TestCase(@"https://github.com/zeromq/netmq.git",
+                @"8cda02a9de96b2254e2288a1d5a7f960ed00c4d0", 154)]
+        [TestCase(@"https://github.com/owin/owin.git",
+                @"826a356981d5698c6d0619e0574c682a3b696ae5", 153)]
+        [TestCase(@"https://github.com/icsharpcode/SharpZipLib.git",
+                @"c49a22d70a77819b1dc88309c91e99565aa9099b", 152)]
+        [TestCase(@"https://github.com/Haacked/CodeHaacks.git",
+                @"74d725b76ba7b43e7cd44b63019b3f711b5eb5eb", 152)]
+        [TestCase(@"https://github.com/BinaryConstruct/Terraria-Map-Editor.git",
+                @"c92474e23a4b95c4c61bf041789858cb50c80cc4", 151)]
+        [TestCase(@"https://github.com/kohsuke/winsw.git",
+                @"6250a2755b798726d07a2d7018975b29b65f38ff", 151)]
+        [TestCase(@"https://github.com/kellyelton/OCTGN.git",
+                @"fcd41ecd45d5f1de75b75b60b6f02f5421ef2498", 150)]
+        [TestCase(@"https://github.com/Moq/moq.git",
+                @"84221b633dc28da2c09da80a002be2a3aadcadb4", 149)]
+        [TestCase(@"https://github.com/DmitryEfimenko/TwitterBootstrapMvc.git",
+                @"0a561811a1b7189e49ee84fb3e2bf6864339e830", 148)]
+        [TestCase(@"https://github.com/NuGet/WebBackgrounder.git",
+                @"2c1df6aa80ddd4ee235a263e3474ef93984822da", 148)]
+        [TestCase(@"https://github.com/hibernating-rhinos/rhino-esb.git",
+                @"b4c4b697afed0a2d7f69cda688cbe8012b085782", 147)]
+        [TestCase(@"https://github.com/paulyoder/LinqToExcel.git",
+                @"235327996a79a510ce56328e949f8a947467f411", 146)]
+        [TestCase(@"https://github.com/exceptionless/Exceptionless.git",
+                @"021f217817d5bd2d0710034b64944982781c4881", 145)]
+        [TestCase(@"https://github.com/jstedfast/MimeKit.git",
+                @"a70df702d6828141d1f94136c5f23eb2c8b2cbae", 144)]
+        [TestCase(@"https://github.com/phatboyg/Magnum.git",
+                @"c9626b133a67185c5befff907cf45be9ff2c72ea", 144)]
+        [TestCase(@"https://github.com/DarthFubuMVC/htmltags.git",
+                @"5da6715c23d1a04bc384bd1a2ff2c2e9bb4b1eec", 143)]
+        [TestCase(@"https://github.com/MicrosoftResearchSVC/Naiad.git",
+                @"7ceaced529bb747713ba19307f6d2e5151eec899", 143)]
+        [TestCase(@"https://github.com/phendryx/superputty.git",
+                @"ce95576eb6cb6ad6d6393784edae1f0a62438d23", 143)]
+        [TestCase(@"https://github.com/jgeurts/FluentScheduler.git",
+                @"e6bac58d8e6809440da53b759105de8a7872479a", 143)]
+        [TestCase(@"https://github.com/Code52/carnac.git",
+                @"2afbceab4d25961445314293c93eae2551f05c44", 142)]
+        [TestCase(@"https://github.com/MuMech/MechJeb2.git",
+                @"6262cd1176544ba514727b8704399acb27e2cbcc", 141)]
+        [TestCase(@"https://github.com/formosatek/dotliquid.git",
+                @"d458a2f33fb49bb1c62c7c65f83186f59b39ec79", 141)]
+        [TestCase(@"https://github.com/Twitterizer/Twitterizer.git",
+                @"ab3fab9ebe0180acf68bfc82e47a736fd2f62eba", 140)]
+        [TestCase(@"https://github.com/polyethene/IronAHK.git",
+                @"a4ff409341651f5a1b4c637fa9e09de1c84084a3", 140)]
+        [TestCase(@"https://github.com/garora/TDD-Katas.git",
+                @"9e4bf23e64e51ef173d38fd7ad7d91d91e2a9dbb", 140)]
+        [TestCase(@"https://github.com/JeremySkinner/git-dot-aspx.git",
+                @"7172adceefc1c9a1fe5ade250a65b9f8290d6cde", 139)]
+        [TestCase(@"https://github.com/anurse/git-credential-winstore.git",
+                @"f617d1289d5e26f878e7c6e469b4cd60d7f1c056", 139)]
+        [TestCase(@"https://github.com/hmemcpy/AgentMulder.git",
+                @"56d215466a07004cf68f1233913f065e4ea509c5", 138)]
+        [TestCase(@"https://github.com/soomla/unity3d-store.git",
+                @"ca2858ae17aedeb1cb650deaf25467133c5e6889", 138)]
+        [TestCase(@"https://github.com/WCell/WCell.git",
+                @"5ae2d190d2a8c7ef484c841d57ba441645bfc10d", 138)]
+        [TestCase(@"https://github.com/xunit/xunit.git",
+                @"075bedaa4a25ca407b6a73f4e5c2f68298618967", 138)]
+        [TestCase(@"https://github.com/msgpack/msgpack-cli.git",
+                @"f5a6ec52c936a083fc2458cd747aec929f689367", 137)]
+        [TestCase(@"https://github.com/SirCmpwn/Craft.Net.git",
+                @"29f69992e97ccde525971e7fd28f33fed693b450", 136)]
+        [TestCase(@"https://github.com/riteshrao/ncommon.git",
+                @"c07b5b37d52a5b61d3a04b0b0eb87d9c04e3c9cb", 135)]
+        [TestCase(@"https://github.com/manojlds/cmd.git",
+                @"fbf81d6d5fda5e80bb4ec6ab3ed91b0bd531eacf", 134)]
+        [TestCase(@"https://github.com/cocos2d/cocos2d-x-for-xna.git",
+                @"4537342146219d6b7b1a65e6e37a593d03154b08", 133)]
+        [TestCase(@"https://github.com/paulcbetts/splat.git",
+                @"7f17708b13f6c3db1d3b5505a5211325bd8e1417", 133)]
+        [TestCase(@"https://github.com/adamdriscoll/poshtools.git",
+                @"23e28bf8a731f19a35d5c823658d8834750cd11b", 133)]
+        [TestCase(@"https://github.com/fluentcassandra/fluentcassandra.git",
+                @"c25726d83f2fc22d18de6c6f80ef3bd7466c2530", 132)]
+        [TestCase(@"https://github.com/NetEase/UnitySocketIO.git",
+                @"455010508c297806d8e18de253b9077a5f48b5d9", 132)]
+        [TestCase(@"https://github.com/dennisdoomen/fluentassertions.git",
+                @"fdfcedb25221ad6443058b631584cab4e5aa2ffe", 131)]
+        [TestCase(@"https://github.com/NickCraver/StackExchange.Exceptional.git",
+                @"84b8032f6be7d3459541f3432926b735db26c781", 130)]
+        [TestCase(@"https://github.com/AdamsLair/duality.git",
+                @"e8024f039fcea978a62d1e98855168d0b65a5582", 129)]
+        [TestCase(@"https://github.com/Codeusa/Borderless-Gaming.git",
+                @"0bfa051f59d94617ddc188a9cb60adfe318d206a", 129)]
+        [TestCase(@"https://github.com/ayende/rhino-etl.git",
+                @"88104d78c534af5b238283d71b5ab3039711e994", 129)]
+        [TestCase(@"https://github.com/NzbDrone/NzbDrone.git",
+                @"5bc820efedc769386fe722a0d863b7dae1359c19", 127)]
+        [TestCase(@"https://github.com/sorear/niecza.git",
+                @"48a8de321378f4c9447831bdc691615096473f0d", 127)]
+        [TestCase(@"https://github.com/philiplaureano/LinFu.git",
+                @"96c17c8c11d99c755bb02da3b4e35019754a9f33", 127)]
+        [TestCase(@"https://github.com/nant/nant.git",
+                @"7906a4d7e903b0ee26c466fefa58d7ba730f534c", 126)]
+        [TestCase(@"https://github.com/moserware/AES-Illustrated.git",
+                @"4de319f46ff331148c63f8cb074332dea8a6b889", 126)]
+        [TestCase(@"https://github.com/JetBrains/FSharper.git",
+                @"792af6933898342ba450752beacdeaa6d970ba3b", 125)]
+        [TestCase(@"https://github.com/SirCmpwn/bf-irc-bot.git",
+                @"db5660e0b1cac97bc8d8503fbe2883262b5c3dab", 124)]
+        [TestCase(@"https://github.com/stack72/TeamCitySharp.git",
+                @"3d2e6b33de5aac7ab4ba64777f9dbdee650c1572", 124)]
+        [TestCase(@"https://github.com/fehaar/FFWD.git",
+                @"fc98c0fdf119f5c62ec108d3462e3c5b74375ba1", 123)]
+        [TestCase(@"https://github.com/Pash-Project/Pash.git",
+                @"187b95597cbbb791758902d2bc190c94da6e232b", 123)]
+        [TestCase(@"https://github.com/koush/androidmono.git",
+                @"6b465fd8e9b576fcff0bd5c975f5dda416502242", 123)]
+        [TestCase(@"https://github.com/mono/cxxi.git",
+                @"b0796517cb8981c54549f9e480f3511f7b1e043f", 123)]
+        [TestCase(@"https://github.com/stirno/FluentAutomation.git",
+                @"d65630102cb9ccccbd687665797f9bf57b396810", 123)]
+        [TestCase(@"https://github.com/jstedfast/MailKit.git",
+                @"e2b6c3187cd458acd1af788eb5b5ce5e5c16f949", 122)]
+        [TestCase(@"https://github.com/stevehodgkiss/restful-routing.git",
+                @"f517649e9ee77838f01a90b7c7cda63669965a15", 122)]
+        [TestCase(@"https://github.com/frabert/NetLua.git",
+                @"67bf607bcbe8eac1f3a6b0118699ece5fa43484d", 122)]
+        [TestCase(@"https://github.com/wojilu/wojilu.git",
+                @"83a2f1c850ec49cee0f40cf8fa71bcd2d8e92313", 122)]
+        [TestCase(@"https://github.com/kristofferahl/FluentSecurity.git",
+                @"407426d061892422671305386ca48bd4be314154", 121)]
+        [TestCase(@"https://github.com/Cocos2DXNA/cocos2d-xna.git",
+                @"93a246dbb4b5717a3dfa34daf0ef54c73c2c3293", 121)]
+        [TestCase(@"https://github.com/spring-projects/spring-net.git",
+                @"a32fee13be53e1f792c0c0cacebe2ab06f276dbb", 121)]
+        [TestCase(@"https://github.com/opentween/OpenTween.git",
+                @"c5c129e708dc018011134908b928fbee53cecfb6", 120)]
+        [TestCase(@"https://github.com/Arctium/Arctium-WoW.git",
+                @"5f76e9ecd934e557e3dc250c2bde3566538e7d41", 120)]
+        [TestCase(@"https://github.com/ishani/ClangVSx.git",
+                @"b3c184e2d2102cd919138ae3cc825eb2ffce613e", 119)]
+        [TestCase(@"https://github.com/moserware/Skills.git",
+                @"ee312fd39db913de2fc297951dc663e12dc7e504", 118)]
+        [TestCase(@"https://github.com/chucknorris/dropkick.git",
+                @"d4fc1f090d45364a142a97f81d037e906c58e7fc", 117)]
+        [TestCase(@"https://github.com/iloire/ASP.NET-MVC-ACME-Invoicing--App.git",
+                @"90829135440c98dfdfd9a8805ee4675968feac30", 117)]
+        [TestCase(@"https://github.com/TaoK/PoorMansTSqlFormatter.git",
+                @"4fd83bb2c0bfc87410e05385cfe4da6a12f689d1", 117)]
+        [TestCase(@"https://github.com/castleproject/Castle.Windsor-READONLY.git",
+                @"8e2b032b5e88e6948eda1a4f0f2fb96bd53bcb78", 116)]
+        public void ParseGitRepository(string url, string commitPointer, int starCount) {
+            var exp = new CSharpComplexStatementExperiment();
+            VerifyRestoringGitRepoSavingThem(
+                    url, commitPointer, "csharp_repo.csv", starCount,
+                    cst => cst.DescendantsAndSelf()
+                            .Where(exp.OriginalIsAcceptedUsingOracle)
+                            .Count(), "*.cs");
         }
     }
 }

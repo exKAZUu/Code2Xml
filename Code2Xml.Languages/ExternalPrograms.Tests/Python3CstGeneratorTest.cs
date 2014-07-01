@@ -44,7 +44,7 @@ pass")]
 
         [Test]
         public void ParseGitRepository(string url, string commitPointer) {
-            VerifyRestoringGitRepository(url, commitPointer, "*.py");
+            VerifyRestoringGitRepo(url, commitPointer, "*.py");
         }
 
         [Test]

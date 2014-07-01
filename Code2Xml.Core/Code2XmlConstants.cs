@@ -19,13 +19,13 @@
 namespace Code2Xml.Core {
     public class Code2XmlConstants {
         public const string SyntaxTreeCacheExtension = ".cached_xml";
-        public const string LearningCacheExtension = ".learning_cache";
+        public const string LearningCacheExtension = ".learning_cache_11_git";
         public const string DependenciesDirectoryName = "Dependencies";
 
         public const string EofTokenName = "EOF";
         public const string EofRuleId = "EOF";
-        public const string DefaultRuleId = "";
-        public const string DefaultHiddenRuleId = "-1";
+        public const string DefaultRuleId = "-1";
+        public const string DefaultHiddenRuleId = "-2";
 
         public const string StartLineName = "startline";
         public const string StartPositionName = "startpos";

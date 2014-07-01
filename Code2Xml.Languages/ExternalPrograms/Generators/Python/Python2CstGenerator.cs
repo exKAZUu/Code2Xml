@@ -67,9 +67,12 @@ namespace Code2Xml.Languages.ExternalGenerators.Generators.Python {
         }
 
         protected override Process StartProcess(string code) {
-            code = code.Replace("\r\n", "\n");
             return ExternalProgramUtils.StartProcess(
                     code, _processorPath, XmlGeneratorArguments);
         }
+
+	    protected override string NormalizeCode(string code) {
+		    return code.Replace("\r\n", "\n");
+	    }
     }
 }

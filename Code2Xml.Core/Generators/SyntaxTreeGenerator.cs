@@ -229,7 +229,7 @@ namespace Code2Xml.Core.Generators {
             if (encoding == null) {
                 try {
                     return GenerateTreeFromCodeText(
-                            GuessEncoding.ReadAllText(codeFile.FullName), true);
+                            GuessEncoding.ReadAllText(codeFile.FullName), throwingParseError);
                 } catch {
                     return GenerateTreeFromCodeText(
                             File.ReadAllText(codeFile.FullName), throwingParseError);

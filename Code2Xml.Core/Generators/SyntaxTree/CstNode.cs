@@ -293,7 +293,7 @@ namespace Code2Xml.Core.Generators {
         #endregion
 
         public override string ToString() {
-            return Code;
+            return Name + ": " + Code;
         }
 
         private class CstSerializer {

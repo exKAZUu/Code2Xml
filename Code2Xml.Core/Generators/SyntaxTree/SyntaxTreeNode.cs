@@ -31,7 +31,7 @@ namespace Code2Xml.Core.Generators {
             where TToken : SyntaxTreeToken<TToken> {
         public TToken Token {
             get { return Value; }
-            protected set { Value = value; }
+            set { Value = value; }
         }
 
         public bool HasToken {

@@ -21,6 +21,7 @@ using System.Linq;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Tests.Generators;
 using Code2Xml.Languages.ANTLRv3.Generators.Java;
+using Code2Xml.Objects.Tests.Learning.Experiments;
 using NUnit.Framework;
 using ParserTests;
 
@@ -83,6 +84,8 @@ public class AlignedTuplePrinter {
     List<String> columnLines = new ArrayList<>();
 }")]
         [TestCase(@"class K { void m() { converter.reverse().convert(0666); }}")]
+        [TestCase(@"class K { void m() { int i = 0 + 1 - 2 * 3/ 4; }}")]
+        [TestCase(@"class K { void m() { if (1 < 2) { } }}")]
         public void Parse(string code) {
             VerifyRestoringCode(code);
         }
@@ -100,118 +103,213 @@ public class AlignedTuplePrinter {
         }
 
         [Test]
-        [TestCase(@"https://github.com/Findwise/Hydra.git",
-                @"5c781845a466f99645eac9fa27fb27aceb88a442")]
-        [TestCase(@"https://github.com/Netflix/RxJava.git",
-                @"bd87341aecb408b2a0acc3f7a42dc118be006b1d")]
+        [TestCase(@"https://github.com/greenrobot/greenDAO.git",
+                @"d13a1f1d0e8d244e8033a944599adda7bb157bef", 1039)]
+        [TestCase(@"https://github.com/commonsguy/cw-advandroid.git",
+                @"ab8e52a00413592b99a7bb9f93050bee760f289f", 1028)]
+        [TestCase(@"https://github.com/koush/AndroidAsync.git",
+                @"09c60732944a20eac52301026e9c24344ccb3062", 993)]
+        [TestCase(@"https://github.com/ether/pad.git",
+                @"cb4977238f55f9b2518e7c43a5c769823b0afd45", 987)]
+        [TestCase(@"https://github.com/square/android-times-square.git",
+                @"2bb367039b3cb93e6764e55835dc023df9f4fd77", 967)]
+        [TestCase(@"https://github.com/grails/grails-core.git",
+                @"048025b9b98332645df30d82593d44b1f7a84bbd", 960)]
+        [TestCase(@"https://github.com/pardom/ActiveAndroid.git",
+                @"bd98740d466249fc085311b1c166570cfc08f532", 959)]
+        [TestCase(@"https://github.com/kevinsawicki/http-request.git",
+                @"c11e2a8b335d43adb9e273412ec7a39c7e404e72", 939)]
+        [TestCase(@"https://github.com/mongodb/mongo-java-driver.git",
+                @"244b5a26bfe1b6f9e15264d690fa944e7c6e2c54", 924)]
+        [TestCase(@"https://github.com/hibernate/hibernate-orm.git",
+                @"9bd6917d0d92c3d350b74f23c03af5a4bb80890d", 910)]
+        [TestCase(@"https://github.com/qii/weiciyuan.git",
+                @"14fdfe9f6f7f3d927a66d802b709f53ba0ff629e", 906)]
+        [TestCase(@"https://github.com/BonzaiThePenguin/WikiSort.git",
+                @"b83bde28fbf26198749eb0169d7f01052841b192", 905)]
+        [TestCase(@"https://github.com/tjerkw/Android-SlideExpandableListView.git",
+                @"a44e6f0fcfabf3a870469667b219552a5d562e87", 901)]
+        [TestCase(@"https://github.com/jgilfelt/android-viewbadger.git",
+                @"e08c3a78cb92c0c8587790b15e73434f972912cf", 900)]
+        [TestCase(@"https://github.com/commonsguy/cw-android.git",
+                @"568c11f2b9b556027dda05ad7b62c044f039b4e4", 899)]
+        [TestCase(@"https://github.com/orientechnologies/orientdb.git",
+                @"8bfc83acadc833b40ec3d485216b39b786935b4c", 897)]
+        [TestCase(@"https://github.com/Netflix/curator.git",
+                @"1e66d7ccd7ac601df3c814833f1b9e32b25331c6", 896)]
+        [TestCase(@"https://github.com/mttkay/droid-fu.git",
+                @"469b1bf7a844cc09866bad95fc06321291c649e8", 882)]
+        [TestCase(@"https://github.com/thest1/LazyList.git",
+                @"0f37d108f2067f5f44749eb0ad44e51656f96f02", 882)]
+        [TestCase(@"https://github.com/reactor/reactor.git",
+                @"83f0b805ca0a8e5fd9cd881e6370c173685ad228", 875)]
+        [TestCase(@"https://github.com/novoda/android.git",
+                @"3052e6d253bd6a29c3e9b043ba87021242857ba5", 875)]
+        [TestCase(@"https://github.com/pcpratts/rootbeer1.git",
+                @"c046801c73b9b2e48d4fe40739b0ce68c496d103", 872)]
+        [TestCase(@"https://github.com/spring-projects/spring-mvc-showcase.git",
+                @"c7b9162c061e135c081a28bf7fc209bb9a992cea", 869)]
+        [TestCase(@"https://github.com/yangfuhai/afinal.git",
+                @"e706f0e896f8f819aa9a6a8374c7fe9f71fa4950", 865)]
+        [TestCase(@"https://github.com/todoroo/astrid.git",
+                @"4fc5c7714fb1b48ae46dcacbda287bcef9c3f6bf", 848)]
+        [TestCase(@"https://github.com/twitter/ambrose.git",
+                @"9ff6dc68e6eb7e95645878082774f44acca5814f", 847)]
+        [TestCase(@"https://github.com/perwendel/spark.git",
+                @"f1f06769abacc6732e511774d4db2306cbe5db54", 843)]
+        [TestCase(@"https://github.com/metamx/druid.git",
+                @"db5f04c84dc7b23f87aac31397f1a6457f4903f7", 837)]
+        [TestCase(@"https://github.com/robovm/robovm.git",
+                @"a72f06e62dbe4afd3271fb3bfa4ca2c4d47d3329", 832)]
+        [TestCase(@"https://github.com/rzwitserloot/lombok.git",
+                @"6afa3d2ec9ec18ed8ae5f6c5217b9fb1710c69c7", 827)]
+        [TestCase(@"https://github.com/tinkerpop/blueprints.git",
+                @"34b5b83fcfd92cca3a69c425c67a9a782dd18c42", 824)]
+        [TestCase(@"https://github.com/addthis/stream-lib.git",
+                @"56c48e001341f874c37e0113c09554436e93ea10", 808)]
+        [TestCase(@"https://github.com/jgilfelt/android-mapviewballoons.git",
+                @"a47528473b562170fbed33b7cf01da2353300acd", 806)]
+        [TestCase(@"https://github.com/http-kit/http-kit.git",
+                @"7184fa8cf2526a24446e7e6602bc16d9d1c0948a", 804)]
+        [TestCase(@"https://github.com/alibaba/druid.git",
+                @"4bebaa9d86038ec563febd2f50e7b232544a3ab7", 798)]
+        [TestCase(@"https://github.com/apache/hadoop-common.git",
+                @"572bd72991fe976da586db41ac4dd03466a480dd", 795)]
+        [TestCase(@"https://github.com/quartzjer/TeleHash.git",
+                @"133f4212666911d066f59255e2e7fbd69bea8265", 791)]
+        [TestCase(@"https://github.com/Netflix/ice.git",
+                @"f5cd61177fca0ea0d45eecacc7c3209e8b1bbc57", 790)]
+        [TestCase(@"https://github.com/cucumber/cucumber-jvm.git",
+                @"08e6b87a0a21010bf35d643157b7032a40832efd", 784)]
+        [TestCase(@"https://github.com/BoltsFramework/Bolts-Android.git",
+                @"b046dfdbe9b36989ab7bf4492dc403a20118c590", 781)]
+        [TestCase(@"https://github.com/cloudera/flume.git",
+                @"1d7535638556998e895d55599a2f4a024390edd1", 774)]
+        [TestCase(@"https://github.com/romannurik/muzei.git",
+                @"a9d2ccfaeccabad26f9c6eba26355882654cc4c1", 774)]
+        [TestCase(@"https://github.com/linkedin/indextank-engine.git",
+                @"f2354fe9db43786126e304d12aae4322ae7b98b1", 770)]
+        [TestCase(@"https://github.com/tjake/Solandra.git",
+                @"64e1d192604144c06962e284523cce3c4df51c4e", 768)]
+        [TestCase(@"https://github.com/jankotek/MapDB.git",
+                @"c890d8b4edc5fb9d064bb04aa132aea8608f87dd", 763)]
+        [TestCase(@"https://github.com/alibaba/fastjson.git",
+                @"5e3ede7923bd4b7930b8f785b900e80753b97c01", 763)]
+        [TestCase(@"https://github.com/ginatrapani/todo.txt-android.git",
+                @"ce117c601510cb7343f4633e3033ec0cbfe35ff7", 761)]
+        [TestCase(@"https://github.com/maurycyw/StaggeredGridView.git",
+                @"06dbc841a6330143f114eba82566d25b5a808c61", 758)]
+        [TestCase(@"https://github.com/amplab/tachyon.git",
+                @"6ce29b2da55130e7cb32a32f029fef43cdc35ef5", 756)]
+        [TestCase(@"https://github.com/peter-lawrey/Java-Chronicle.git",
+                @"6716f0cff0750d125a07eb769bba0698a617b7fb", 756)]
+        [TestCase(@"https://github.com/TooTallNate/Java-WebSocket.git",
+                @"7c3b223536dc8bd4e8794ac265ad06679583e30f", 754)]
+        [TestCase(@"https://github.com/facebook/hadoop-20.git",
+                @"9f1ea1b28047a4b16f4962c7561613f139dd3e86", 752)]
         [TestCase(@"https://github.com/derekbrameyer/android-betterpickers.git",
-                @"5646215424ad779f1f780254101b75221675b76b")]
-        [TestCase(@"https://github.com/path/android-priority-jobqueue.git",
-                @"d3b33d9ae94df76ffde1f4b9735c0f7cc6463384")]
-        [TestCase(@"https://github.com/elasticsearch/elasticsearch.git",
-                @"2f32908193f3f61139da054f0ee5a949f8c589dc")]
-        [TestCase(@"https://code.google.com/p/pageobjectgenerator/",
-                @"169bdaf6a5a08fab62e167764e7f8401309d7b64")]
-        [TestCase(@"https://github.com/facebook/presto.git",
-                @"78045f8ede1f1e3deb4e40b880745141480d362f")]
+                @"0a72367b478970b1731822e78790a158a4f7ebb4", 740)]
+        [TestCase(@"https://github.com/typesafehub/config.git",
+                @"36c1392028c82db2c146ade29a2f6940bc6f5407", 736)]
+        [TestCase(@"https://github.com/leachim6/hello-world.git",
+                @"02e3bb8c5b356739644d24c60adbe6dda020b6fc", 734)]
+        [TestCase(@"https://github.com/OpenTSDB/opentsdb.git",
+                @"a2bd5737d9d11a8fd3fa6e9c36a31dd8cb5c4af4", 733)]
+        [TestCase(@"https://github.com/kevinweil/elephant-bird.git",
+                @"ccddfc68e634fea2d05a1804057a1c4826817471", 723)]
+        [TestCase(@"https://github.com/inmite/android-styled-dialogs.git",
+                @"38975c5220aeab1d79ee3db2a8c4d269c0600c38", 723)]
+        [TestCase(@"https://github.com/rstudio/rstudio.git",
+                @"cb0b00ee99905c6e2cf1e88b4bee316214d54769", 722)]
+        [TestCase(@"https://github.com/JodaOrg/joda-time.git",
+                @"fcf264d737af5a37d45c6c5c9802487ce53c8de8", 722)]
+        [TestCase(@"https://github.com/neo4j/neo4j.git",
+                @"521ec09bd83bdee1ef39af4dc162fe0c88fedf4b", 719)]
+        [TestCase(@"https://github.com/jfeinstein10/JazzyViewPager.git",
+                @"05fab564593adffec28c76857520ab35f908dea0", 719)]
+        [TestCase(@"https://github.com/hazelcast/hazelcast.git",
+                @"67389104cdb892d040bc15e7df39ab4bd5df3895", 718)]
+        [TestCase(@"https://github.com/castorflex/SmoothProgressBar.git",
+                @"9198cb9201268cec63e69d87cdbfb879a962f827", 708)]
+        [TestCase(@"https://github.com/JakeWharton/hugo.git",
+                @"de887a549a14fba7e3735ce4c202e15502c78a43", 702)]
+        [TestCase(@"https://github.com/MovingBlocks/Terasology.git",
+                @"387497a2ea91b25339b3cbe8b18338edd7d3d1f5", 701)]
+        [TestCase(@"https://github.com/nathanmarz/storm-starter.git",
+                @"917a4c5c171009af3b130d09339355f6310a2042", 695)]
+        [TestCase(@"https://github.com/0xdata/h2o.git",
+                @"c5e4bfd7e1b1ecc59b5d9c40eb0f56bfabf646be", 694)]
+        [TestCase(@"https://github.com/apache/lucene-solr.git",
+                @"9e87821edeb3e24ca8dedaecf856f6510d61d0d3", 692)]
+        [TestCase(@"https://github.com/koush/UrlImageViewHelper.git",
+                @"a9897afbf0277727810158c9739c3ddd9cf15899", 690)]
+        [TestCase(@"https://github.com/mongodb/mongo-hadoop.git",
+                @"29788439cbc8cc9a45910ceba316a70049a8b4e8", 689)]
         [TestCase(@"https://github.com/JakeWharton/scalpel.git",
-                @"27338feaa632bc160ae4f27f001474f0850310ea")]
-        [TestCase(@"https://github.com/nathanmarz/storm.git",
-                @"66a397368a98834095b47db2b706420901c52ba3")]
+                @"97299acd1cc7b4138af714f1ed0bce47e9ce516d", 684)]
         [TestCase(@"https://github.com/JakeWharton/u2020.git",
-                @"a08a7ec51e01cc40aa27779dca52277e69d156f7")]
-        [TestCase(@"https://code.google.com/p/guava-libraries/",
-                @"f510d9bc51715c4d583e0b152e5d0265c44c982f")]
-        [TestCase(@"https://github.com/MehdiK/Humanizer.git",
-                @"b51cc6715acde38f674dfd84ae02188be0547702")] // Star: 503
-        [TestCase(@"https://github.com/NancyFx/Nancy.git",
-                @"e069dfbc326af4552f79b55b12c6966305baad79")] // Star: 2104
-        [TestCase(@"https://github.com/mono/MonoGame.git",
-                @"73fc2954b0cd83a4a7f3ddecdc56f155ff135e99")] // Star: 1996
-        [TestCase(@"https://github.com/SignalR/SignalR.git",
-                @"b940230aedc851c50775c2ed32ab96c476f10ec6")] // Star: 4108
-        [TestCase(@"https://github.com/JamesNK/Newtonsoft.Json.git",
-                @"9e2581be74585605b4f49e0110d65c85c17cb323")] // Star: 825
-        [TestCase(@"https://github.com/Glimpse/Glimpse.git",
-                @"b78f1c8b336e86278efea95c115f8a9a404ab901")] // Star: 691
-        [TestCase(@"https://github.com/WebMBro/WebMConverter.git",
-                @"07ff15b0e4fdf1b5cf66cf25a71a2d3b88a6f75e")] // Star: 40
-        [TestCase(@"https://github.com/shimat/opencvsharp.git",
-                @"d337e665265a8ce88773869d2402cad7fc1d21d3")] // Star: 40
-        [TestCase(@"https://github.com/mrward/monodevelop-nuget-addin.git",
-                @"f593536fcd779f4e819def961c676e392eee0ff3")] // Star: 225
-        [TestCase(@"https://github.com/MahApps/MahApps.Metro.git",
-                @"36fe5e517e0c65116d288fdabf2e68a2a9494bd9")] // Star: 799
-        [TestCase(@"https://github.com/apache/cordova-wp8.git",
-                @"30fba42357f8b6cf2e9a433128369c8f4cc914bb")] // Star: 49
-        [TestCase(@"https://github.com/magicdict/MagicMongoDBTool.git",
-                @"694ab21e1d4e4d3f47c1d9e31527c96b2a0e29bc")] // Star: 92
-        [TestCase(@"https://github.com/sharpdx/SharpDX.git",
-                @"65799e012fa2200748b16095aebb7b9427a6fb16")] // Star: 201
-        [TestCase(@"https://github.com/hbons/SparkleShare.git",
-                @"4085f1937041d89f76829336119f8b68ce97b43c")] // Star: 3033
-        [TestCase(@"https://github.com/ServiceStack/ServiceStack.git",
-                @"6cb92e0429e2cce31ef68e4fa02801718b00dd4f")] // Star: 2285
-        [TestCase(@"https://github.com/mono/mono.git",
-                @"81bdc35dd4b800831efc540be9705e021f8b848a")] // Star: 2056
-        [TestCase(@"https://github.com/AutoMapper/AutoMapper.git",
-                @"bc2ece165e028b4dbe963d978ef54e1ed2b50f5f")] // Star: 1853
-        [TestCase(@"https://github.com/restsharp/RestSharp.git",
-                @"70be25dae0edb44a1c962aee078e9dbf74cb4177")] // Star: 1828
-        [TestCase(@"https://github.com/Redth/PushSharp.git",
-                @"19216ead2bfbbf36c4fcaa95dfa8469facc5a7ef")] // Star: 1688
-        [TestCase(@"https://github.com/opserver/Opserver.git",
-                @"a170ea8bcda9f9e52d4aaff7339f3d198309369b")] // Star: 1324
-        [TestCase(@"https://github.com/robconery/massive.git",
-                @"87075153609fe096bcbd9f81a6901c1b60e2e579")] // Star: 1203
-        [TestCase(@"https://github.com/SamSaffron/dapper-dot-net.git",
-                @"885a8d46cbd67f09bd6a5e686a824759d79d5f78")] // Star: 1182
-        [TestCase(@"https://github.com/ravendb/ravendb.git",
-                @"a60d8dd3ffaf5892d86d5fcf8a9a81bec71800e7")] // Star: 1118
-        [TestCase(@"https://github.com/SamSaffron/MiniProfiler.git",
-                @"3744054e0686b2f88083b869a7f2fe7e1fa14e9c")] // Star: 1113
-        [TestCase(@"https://github.com/jaredpar/VsVim.git",
-                @"86d9e298c9d117e54266501ae9c4dd35b4d345cb")] // Star: 1097
-        [TestCase(@"https://github.com/mono/roslyn.git",
-                @"35ebc72b4fde323dde2c372d70ecd6437de97c4c")] // Star: 46
-        [TestCase(@"https://github.com/PlasmaByte/PokemonNXT.git",
-                @"8cf7d43119ea1a7cba4f8711472efefb54bb53fb")] // Star: 34
-        [TestCase(@"https://github.com/robconery/biggy.git",
-                @"0c7a0cb8f08b0ac7e5d87f91c5617d4cc6e21b84")] // Star: 266
-        [TestCase(@"https://github.com/jstedfast/MailKit.git",
-                @"3ef47b326f89a4a6ad960c9fcca00bdbac18a227")] // Star: 122
-        [TestCase(@"https://github.com/madskristensen/WebEssentials2013.git",
-                @"e422af47986bfd6c70ee6564cb1bf892cbf197f8")] // Star: 489
-        [TestCase(@"https://github.com/jamesmontemagno/Xam.PCL.Plugins.git",
-                @"0e6151295a2dba17f77c90034e4820ca42a941d9")] // Star: 28
-        [TestCase(@"https://github.com/xamarin/xamarin-store-app.git",
-                @"a68dcd6f07a45a127c6ed9af21fc8084f1b3bcb5")] // Star: 38
-        [TestCase(@"https://github.com/StephanieRct/NieMath.git",
-                @"9a4a49ab374d1652c3568ea5960b0de9a0218ea1")] // Star: 32
-        [TestCase(@"https://github.com/MvvmCross/MvvmCross.git",
-                @"fd16e13d05678e578ddc96938a680b3d94d8a496")] // Star: 706
-        [TestCase(@"https://github.com/reactiveui/ReactiveUI.git",
-                @"45aaa51f5d5202a5c8d34ea3151955f0bce8a956")] // Star: 888
-        [TestCase(@"https://github.com/Moq/moq4.git",
-                @"ac31aeca01056e3608540d5b5d043ba013f19abe")] // Star: 273
-        [TestCase(@"https://github.com/xunit/xunit.git",
-                @"075bedaa4a25ca407b6a73f4e5c2f68298618967")] // Star: 137
-        [TestCase(@"https://github.com/playgameservices/play-games-plugin-for-unity.git",
-                @"3ad9798396cc5e443815d5c1438bcebc54d98ed9")] // Star: 281
-        [TestCase(@"https://github.com/qianlifeng/Wox.git",
-                @"b07d1b027c42c045bce8304b40b4c27e4d03248f")] // Star: 334
-        [TestCase(@"https://github.com/serilog/serilog.git",
-                @"60e8120a12abee4db942d2ff03b123341fab1fff")] // Star: 161
-        [TestCase(@"https://github.com/akkadotnet/akka.net.git",
-                @"25b66cc2d62fc2bfc50cd4050ac6fdd6909063fa")] // Star: 177
-        [TestCase(@"https://github.com/autofac/Autofac.git",
-                @"8c0732e120b55d277dc9313827fe02bbde289f3e")] // Star: 182
-        [TestCase(@"https://github.com/umbraco/Umbraco-CMS.git",
-                @"5697809ce930e1b8f9f111586c2b4bb59e8f3869")] // Star: 458
-        [TestCase(@"https://github.com/xamarin/monodroid-samples.git",
-                @"4851316a320c9c6ce0b57348d05c6dc6e8819e1c")] // Star: 597
-        public void ParseGitRepository(string url, string commitPointer) {
-            VerifyRestoringGitRepositorySavingRepo(url, commitPointer, "java_repo.txt", "*.java");
+                @"543eaea54f04fd4397aa74f4578670e279cc857a", 680)]
+        [TestCase(@"https://github.com/novoda/ImageLoader.git",
+                @"a82512b76c43e271a15717e0697055cd9e3d9031", 678)]
+        [TestCase(@"https://github.com/ansjsun/ansj_seg.git",
+                @"ab56d87c9799e543e4141840809b52aa27932d87", 671)]
+        [TestCase(@"https://github.com/apache/mahout.git",
+                @"add3038b35029cf886ac907822016c91ec4b4278", 668)]
+        [TestCase(@"https://github.com/RobotiumTech/robotium.git",
+                @"ee7d989c95f2cf380935f7a117d7f9345820cbf7", 664)]
+        [TestCase(@"https://github.com/harism/android_page_curl.git",
+                @"7a2c8f152bb4f1b0de3b1aa72b3cb79e1fe8e3bd", 664)]
+        [TestCase(@"https://github.com/commonsguy/cwac-endless.git",
+                @"7a6fe3c123fc85e08c36b6db6a88740385625340", 658)]
+        [TestCase(@"https://github.com/hector-client/hector.git",
+                @"0c760d9347ebf9bdaeec5fe195f175f674590909", 655)]
+        [TestCase(@"https://github.com/mortardata/mortar-recsys.git",
+                @"617fbf66a8e8fb7738354c224760dc2419ed0c13", 654)]
+        [TestCase(@"https://github.com/eishay/jvm-serializers.git",
+                @"3ec217ec19aff74654b40a47c010d57a44996efb", 653)]
+        [TestCase(@"https://github.com/notnoop/java-apns.git",
+                @"20c10ebd22e15a55c0c1c12695c535d37435dcfd", 652)]
+        [TestCase(@"https://github.com/siyamed/android-satellite-menu.git",
+                @"ff0964c849095eb17c5fe9f84f158e39d5a5ef03", 652)]
+        [TestCase(@"https://github.com/jberkel/sms-backup-plus.git",
+                @"3565f645126d3f9e8c0371ec57c8aac4bbf5cde1", 647)]
+        [TestCase(@"https://github.com/jayway/maven-android-plugin.git",
+                @"2ce1428c8e83365c5ac096b7855e71bd8a035013", 645)]
+        [TestCase(@"https://github.com/BuildCraft/BuildCraft.git",
+                @"080b4ba74990c6488f7c645cc64d3985f47e42fd", 643)]
+        [TestCase(@"https://github.com/brianfrankcooper/YCSB.git",
+                @"4791826f0b90c472dd04cc5eb6ed73c4d5906330", 632)]
+        [TestCase(@"https://github.com/facebook/buck.git",
+                @"def0eb1077d6c2a9f129b200e8356acaec9a17ed", 631)]
+        [TestCase(@"https://github.com/square/spoon.git",
+                @"975dacb45607ed45492fa3dd9e697f0a5263e71a", 630)]
+        [TestCase(@"https://github.com/aws/aws-sdk-java.git",
+                @"f04beb908018dcb0ca58ac6e00f2bd66953efe45", 628)]
+        [TestCase(@"https://github.com/fastestforward/gauges-android.git",
+                @"372528e3a689fa38f582330e69f7a31c62b2aa9c", 621)]
+        [TestCase(@"https://github.com/gephi/gephi.git",
+                @"5777cab4a8f649ef85f4c571f37b0df43e4db46f", 620)]
+        [TestCase(@"https://github.com/MinecraftForge/MinecraftForge.git",
+                @"2cef9c5cb29fdaa1d118591604ff7c5f2e956c09", 619)]
+        [TestCase(@"https://github.com/goldmansachs/gs-collections.git",
+                @"4e597130fbe4e6f9d745a8d5348c77c45e9341d8", 619)]
+        [TestCase(@"https://github.com/cloudera/oryx.git",
+                @"8986b58e49b55d7c57f72f232596689a16a013a9", 617)]
+        [TestCase(@"https://github.com/sk89q/worldedit.git",
+                @"33d4285f1a7af21b42585fccca5a93036c953262", 613)]
+        [TestCase(@"https://github.com/spring-projects/spring-boot.git",
+                @"620d8eb87e63ab23bf667c2b1c6518d9fd2ab187", 613)]
+        [TestCase(@"https://github.com/redsolution/xabber-android.git",
+                @"2b8e6b216fa2a928b2f62b7cd62b2c079d706d38", 612)]
+        [TestCase(@"https://github.com/geometer/FBReaderJ.git",
+                @"ec96ce8dd837f495fbeafef8592001e06b601bb0", 611)]
+        public void ParseGitRepository(string url, string commitPointer, int starCount) {
+            var exp = new JavaComplexStatementExperiment();
+            VerifyRestoringGitRepoSavingThem(
+                    url, commitPointer, "java_repo.csv", starCount,
+                    cst => cst.DescendantsAndSelf()
+                            .Where(exp.OriginalIsAcceptedUsingOracle)
+                            .Count(), "*.java");
         }
 
         [Test]

@@ -50,12 +50,12 @@ namespace Code2Xml.Inference {
                     ret.Add(descendantStr);
                 }
                 // 自分自身の位置による区別も考慮する
-                ret.Add(node.NameOrTokenWithId());
+                ret.Add(node.NameAndTokenWithId());
                 for (; i <= length; i++) {
                     var newChildElements = new List<Tuple<CstNode, string>>();
                     foreach (var t in childElements) {
                         foreach (var e in t.Item1.Elements()) {
-                            var key = t.Item2 + ">" + e.NameOrTokenWithId();
+                            var key = t.Item2 + ">" + e.NameAndTokenWithId();
                             newChildElements.Add(Tuple.Create(e, key));
                             // トークンが存在するかチェックする弱い条件
                             // for Preconditions.checkArguments()
@@ -67,14 +67,14 @@ namespace Code2Xml.Inference {
                         }
                     }
                     foreach (var e in parentElement.Item1.Siblings(10)) {
-                        var key = parentElement.Item2 + "-" + e.NameOrTokenWithId();
+                        var key = parentElement.Item2 + "-" + e.NameAndTokenWithId();
                         newChildElements.Add(Tuple.Create(e, key));
                         // トークンが存在するかチェックする弱い条件
                         // for Preconditions.checkArguments()
                         ret.Add(parentElement.Item2 + "-'" + e.TokenText + "'");
                         //// 先祖に存在するかチェックする弱い条件
                         //var iLastName = parentElement.Item2.LastIndexOf("<");
-                        //var weakKey = "<<" + parentElement.Item2.Substring(iLastName + 1) + "-" + e.NameOrTokenWithId();
+                        //var weakKey = "<<" + parentElement.Item2.Substring(iLastName + 1) + "-" + e.NameAndTokenWithId();
                         //newChildElements.Add(Tuple.Create(e, weakKey));
                     }
                     ret.UnionWith(newChildElements.Select(t => t.Item2));
@@ -86,7 +86,7 @@ namespace Code2Xml.Inference {
                     }
                     parentElement = Tuple.Create(
                             newParentElement,
-                            parentElement.Item2 + "<" + newParentElement.NameOrTokenWithId());
+                            parentElement.Item2 + "<" + newParentElement.NameAndTokenWithId());
                     ret.Add(parentElement.Item2);
                 }
             }
@@ -94,7 +94,7 @@ namespace Code2Xml.Inference {
                 var newChildElements = new List<Tuple<CstNode, string>>();
                 foreach (var t in childElements) {
                     foreach (var e in t.Item1.Elements()) {
-                        var key = t.Item2 + ">" + e.NameOrTokenWithId();
+                        var key = t.Item2 + ">" + e.NameAndTokenWithId();
                         newChildElements.Add(Tuple.Create(e, key));
                         // トークンが存在するかチェックする弱い条件
                         // for Preconditions.checkArguments()

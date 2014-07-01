@@ -156,7 +156,8 @@ var completion = require('../lib/completion');
         //[TestCase(@"https://github.com/facebook/react.git",
         //        @"ce92efefc03116169f4a52aa96f8413471b260b9")]
         public void ParseGitRepository(string url, string commitPointer) {
-            VerifyRestoringGitRepositorySavingRepo(url, commitPointer, "js_repo.txt", "*.js");
+            VerifyRestoringGitRepo(url, commitPointer, "js_repo.txt", "*.js");
+
         }
 
         [Test]
