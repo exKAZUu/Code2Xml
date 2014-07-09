@@ -45,6 +45,10 @@ Code2Xml [![Build Status](https://secure.travis-ci.org/exKAZUu/Code2Xml.png?bran
 }
 ```
 
+## Sample Tools
+* https://github.com/exKAZUu/SimpleOpenCodeCoverageFramework
+* https://github.com/exKAZUu/XMutator
+
 ## Requirements
 * NuGet
 You can install NuGet Package Manager with Extension Manager.  
