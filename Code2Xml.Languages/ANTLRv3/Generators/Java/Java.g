@@ -864,7 +864,7 @@ statement
     |   'do' statement 'while' parExpression ';'
     |   forstatement
     |   'break' (IDENTIFIER)? ';'
-    |	'continue' (IDENTIFIER)? ';'
+    |	  'continue' (IDENTIFIER)? ';'
     |   'return' (expression )? ';'
     |   'throw' expression ';'
     |   'synchronized' parExpression block
