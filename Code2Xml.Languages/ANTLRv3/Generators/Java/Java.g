@@ -856,7 +856,7 @@ statement
     :   block
     |   ';'
     |   IDENTIFIER ':' statement
-	|   expression  ';'     
+    |   expression  ';'     
     |   'if' parExpression statement ('else' statement)?          
     |   'assert'  expression (':' expression)? ';'            
     |   'switch' parExpression '{' switchBlockStatementGroups '}'
@@ -864,12 +864,12 @@ statement
     |   'do' statement 'while' parExpression ';'
     |   forstatement
     |   'break' (IDENTIFIER)? ';'
-	|	'continue' (IDENTIFIER)? ';'
+    |	'continue' (IDENTIFIER)? ';'
     |   'return' (expression )? ';'
     |   'throw' expression ';'
     |   'synchronized' parExpression block
     |   trystatement
-	|   tryWithResourcesStatement
+    |   tryWithResourcesStatement
     ;
 
 switchBlockStatementGroups 
@@ -1313,7 +1313,7 @@ localVariableHeader
                   Lexer section
 *********************************************************************************************/
 
-// Åò3.10.1 Integer Literals
+// ÔøΩÔøΩ3.10.1 Integer Literals
 
 IntegerLiteral
     :   DecimalIntegerLiteral
@@ -1443,7 +1443,7 @@ BinaryDigitOrUnderscore
     |   '_'
     ;
 
-// Åò3.10.2 Floating-Point Literals
+// ÔøΩÔøΩ3.10.2 Floating-Point Literals
 
 FloatingPointLiteral
     :   DecimalFloatingPointLiteral
@@ -1504,14 +1504,14 @@ BinaryExponentIndicator
     :   ('p'|'P')
     ;
 
-// Åò3.10.3 Boolean Literals
+// ÔøΩÔøΩ3.10.3 Boolean Literals
 
 BooleanLiteral
     :   'true'
     |   'false'
     ;
 
-// Åò3.10.6 Escape Sequences for Character and String Literals
+// ÔøΩÔøΩ3.10.6 Escape Sequences for Character and String Literals
 
 fragment
 OctalEscape
@@ -1530,7 +1530,7 @@ ZeroToThree
     :   ('0'..'3')
     ;
 
-// Åò3.10.7 The Null Literal
+// ÔøΩÔøΩ3.10.7 The Null Literal
 
 NullLiteral
     :   'null'
