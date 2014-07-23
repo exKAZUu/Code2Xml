@@ -59,8 +59,7 @@ namespace Code2Xml.Core.Generators {
 
         public CstToken(
                 string name, string text, string beforeInsertedText, string afterInsertedText,
-                string ruleId,
-                CodeRange range) {
+                string ruleId, CodeRange range) {
             Contract.Requires(name != null);
             Contract.Requires(text != null);
             Contract.Requires(beforeInsertedText != null);

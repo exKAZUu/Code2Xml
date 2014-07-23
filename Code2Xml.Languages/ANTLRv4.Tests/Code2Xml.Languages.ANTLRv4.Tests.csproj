@@ -35,8 +35,12 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr4.Runtime.v4.0">
-      <HintPath>..\..\packages\Antlr4.Runtime.4.2.2-alpha001\lib\net40\Antlr4.Runtime.v4.0.dll</HintPath>
+    <Reference Include="Antlr4.Runtime.net40">
+      <HintPath>..\..\packages\Antlr4.Runtime.4.3.0\lib\net40-client\Antlr4.Runtime.net40.dll</HintPath>
+    </Reference>
+    <Reference Include="LibGit2Sharp, Version=0.18.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\LibGit2Sharp.0.18.1.0\lib\net40\LibGit2Sharp.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
@@ -45,9 +49,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="TreeDotNet, Version=1.2.6.16, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="TreeDotNet, Version=1.2.7.17, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\TreeDotNet.1.2.6.16\lib\net40\TreeDotNet.dll</HintPath>
+      <HintPath>..\..\packages\TreeDotNet.1.2.7.17\lib\net40\TreeDotNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

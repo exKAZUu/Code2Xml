@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Code2Xml</id>
-    <version>3.0.3.88</version>
+    <version>3.1.0.89</version>
     <title>Code2Xml</title>
     <authors>Kazunori Sakamoto</authors>
     <owners>Kazunori Sakamoto</owners>
@@ -17,6 +17,7 @@
       <dependency id="Paraiba.Experiment" />
       <dependency id="TreeDotNet" />
       <dependency id="Antlr" version="[3.5.0,3.6)" />
+      <dependency id="Antlr4.Runtime" version="[4.3.0,4.4)" />
     </dependencies>
   </metadata>
 </package>

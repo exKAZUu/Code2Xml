@@ -88,7 +88,7 @@ namespace Code2Xml.Languages.ANTLRv4.Core {
         }
 
         public override object VisitChildren(IRuleNode ruleNode) {
-            var name = _parserRuleNames[ruleNode.RuleContext.GetRuleIndex()];
+            var name = _parserRuleNames[ruleNode.RuleContext.RuleIndex];
             var maxDepth = _lastDepth + 1;
             _lastDepth = ruleNode.RuleContext.Depth();
             for (int i = _lastDepth; i < maxDepth; i++) {

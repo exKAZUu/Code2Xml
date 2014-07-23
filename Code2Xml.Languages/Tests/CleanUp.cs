@@ -80,7 +80,10 @@ namespace Code2Xml.Languages.Tests {
 		[Test]
 		public void GenerateTestCases() {
 			var inPath = @"C:\Users\exKAZUu\Desktop\php_repo.csv";
-			var set = new HashSet<string>();
+		    if (!File.Exists(inPath)) {
+		        return;
+		    }
+		    var set = new HashSet<string>();
 			var count = 0;
 			foreach (var line in File.ReadAllLines(inPath)) {
 				var items = line.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);

@@ -43,9 +43,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="TreeDotNet, Version=1.2.6.16, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="TreeDotNet, Version=1.2.7.17, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\TreeDotNet.1.2.6.16\lib\net40\TreeDotNet.dll</HintPath>
+      <HintPath>..\..\packages\TreeDotNet.1.2.7.17\lib\net40\TreeDotNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +54,7 @@
     <Compile Include="Samples\CstManipulationSample.cs" />
     <Compile Include="Samples\CstGeneratorSample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\AnalysisAndTransformationSample.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Code2Xml.Core\Code2Xml.Core.csproj">

@@ -65,6 +65,8 @@ namespace Code2Xml.Core.Generators {
             }
         }
 
+        public string Replacement { get; set; }
+
         public IEnumerable<CstToken> TokenWithHiddens() {
             return Hiddens.Concat(Value);
         }
@@ -122,22 +124,34 @@ namespace Code2Xml.Core.Generators {
         }
 
         private static void GenerateCode(CstNode node, StringBuilder builder) {
-            if (node.Value != null) {
-                foreach (var token in node.Hiddens) {
-                    builder.Append(token.BeforeInsertedText);
-                    builder.Append(token.Text);
-                    builder.Append(token.AfterInsertedText);
-                }
-                {
-                    var token = node.Value;
-                    builder.Append(token.BeforeInsertedText);
-                    builder.Append(token.Text);
-                    builder.Append(token.AfterInsertedText);
+            if (node.Replacement == null) {
+                if (node.Value != null) {
+                    foreach (var token in node.Hiddens) {
+                        builder.Append(token.BeforeInsertedText);
+                        builder.Append(token.Text);
+                        builder.Append(token.AfterInsertedText);
+                    }
+                    {
+                        var token = node.Value;
+                        builder.Append(token.BeforeInsertedText);
+                        builder.Append(token.Text);
+                        builder.Append(token.AfterInsertedText);
+                    }
+                } else {
+                    foreach (var child in node.Children()) {
+                        GenerateCode(child, builder);
+                    }
                 }
             } else {
-                foreach (var child in node.Children()) {
-                    GenerateCode(child, builder);
+                var tokenNode = node.AllTokenNodes().First();
+                if (tokenNode != null) {
+                    foreach (var token in tokenNode.Hiddens) {
+                        builder.Append(token.BeforeInsertedText);
+                        builder.Append(token.Text);
+                        builder.Append(token.AfterInsertedText);
+                    }
                 }
+                builder.Append(node.Replacement);
             }
         }
 
@@ -154,7 +168,8 @@ namespace Code2Xml.Core.Generators {
             }
         }
 
-        private static void GenerateCodeWithoutInsertedAndHiddens(CstNode node, StringBuilder builder) {
+        private static void GenerateCodeWithoutInsertedAndHiddens(
+                CstNode node, StringBuilder builder) {
             if (node.Value != null) {
                 builder.Append(node.Value.Text);
             } else {
