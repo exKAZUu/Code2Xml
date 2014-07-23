@@ -57,8 +57,6 @@ pass")]
                 @"77005d96fa57a83ac91c2547892fbb3e3c34e553", 1352)]
         [TestCase(@"https://github.com/treeio/treeio.git",
                 @"a4fbffabec2644a98f8b06d678a94d2949304235", 1335)]
-        [TestCase(@"https://github.com/surfly/gevent.git",
-                @"f6831bfa5cac1fcbdbc76b8d9595ec4f6c53889e", 1331)]
         [TestCase(@"https://github.com/rembo10/headphones.git",
                 @"d6cd9cd7e4cd95e2e4d2fd845fa0c64b91e5e4a5", 1319)]
         [TestCase(@"https://github.com/koenbok/Cactus.git",
