@@ -51,25 +51,37 @@ namespace Code2Xml.Languages.ExternalGenerators.Generators.Python {
             get { return "3"; }
         }
 
-        private readonly string _processorPath;
+        private string _processorPath;
+
+        private string ProcessorPath {
+            get {
+                if (_processorPath == null) {
+                    ProcessorPath = ExternalProgramUtils.GetPythonPath("3") ?? "python3";
+                }
+                return _processorPath;
+            }
+            set {
+                _processorPath = value;
+                ParaibaFile.WriteIfDifferentSize(XmlGeneratorArguments[0], Resources.st2xml);
+            }
+        }
 
         public Python3CstGenerator()
                 : this("\n") {}
 
         public Python3CstGenerator(string newLine)
-                : this(newLine, ExternalProgramUtils.GetPythonPath("3") ?? "python3") {}
+                : this(newLine, null) {}
 
         public Python3CstGenerator(string newLine, string processorPath)
                 : base(newLine, ".py") {
-            _processorPath = processorPath;
-
-            ParaibaFile.WriteIfDifferentSize(XmlGeneratorArguments[0], Resources.st2xml);
+            if (processorPath != null) {
+                ProcessorPath = processorPath;
+            }
         }
 
         protected override Process StartProcess(string code) {
-            code = code.Replace("\r\n", "\n");
             return ExternalProgramUtils.StartProcess(
-                    code, _processorPath, XmlGeneratorArguments);
+                    code.Replace("\r\n", "\n"), ProcessorPath, XmlGeneratorArguments);
         }
     }
 }

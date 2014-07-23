@@ -28,6 +28,18 @@ using Code2Xml.Languages.ANTLRv3.Generators.Java;
 using Code2Xml.Languages.ANTLRv3.Generators.JavaScript;
 using Code2Xml.Languages.ANTLRv3.Generators.Lua;
 using Code2Xml.Languages.ANTLRv3.Generators.Php;
+using Code2Xml.Languages.ANTLRv4.Generators.C;
+using Code2Xml.Languages.ANTLRv4.Generators.Clojure;
+using Code2Xml.Languages.ANTLRv4.Generators.ECMAScript;
+using Code2Xml.Languages.ANTLRv4.Generators.Erlang;
+using Code2Xml.Languages.ANTLRv4.Generators.GarryLua;
+using Code2Xml.Languages.ANTLRv4.Generators.Java;
+using Code2Xml.Languages.ANTLRv4.Generators.Lua;
+using Code2Xml.Languages.ANTLRv4.Generators.ObjectiveC;
+using Code2Xml.Languages.ANTLRv4.Generators.R;
+using Code2Xml.Languages.ANTLRv4.Generators.Smalltalk;
+using Code2Xml.Languages.ANTLRv4.Generators.Swift;
+using Code2Xml.Languages.ANTLRv4.Generators.Verilog2001;
 using Code2Xml.Languages.ExternalGenerators.Generators.Python;
 using Paraiba.Core;
 using Paraiba.Linq;
@@ -61,7 +73,7 @@ namespace Code2Xml.Core.Generators {
             get { return Instance.Processors.OrderBy(c => c.LanguageNameWithVersion); }
         }
 
-        #region Preset CstGenerators
+        #region Preset CstGenerators using ANTLR 3
 
         private static CCstGeneratorUsingAntlr3 _cUsingAntlr3;
 
@@ -136,6 +148,159 @@ namespace Code2Xml.Core.Generators {
                        ?? (_phpUsingAntlr3 = All.CastWhere<PhpCstGeneratorUsingAntlr3>().First());
             }
         }
+
+        #endregion
+
+        #region Preset CstGenerators using ANTLR 4
+
+        private static CCstGenerator _cUsingAntlr4;
+
+        /// <summary>
+        /// Gets a <c>CstGenerator</c> instance of the preset C processor using ANTLR 4.
+        /// </summary>
+        public static CCstGenerator C {
+            get {
+                return _cUsingAntlr4
+                       ?? (_cUsingAntlr4 = All.CastWhere<CCstGenerator>().First());
+            }
+        }
+
+        private static ClojureCstGenerator _clojureUsingAntlr4;
+
+        /// <summary>
+        /// Gets a <c>CstGenerator</c> instance of the preset Clojure processor using ANTLR 4.
+        /// </summary>
+        public static ClojureCstGenerator Clojure {
+            get {
+                return _clojureUsingAntlr4
+                       ?? (_clojureUsingAntlr4 = All.CastWhere<ClojureCstGenerator>().First());
+            }
+        }
+
+        private static EcmaScriptCstGenerator _ecmaScriptUsingAntlr4;
+
+        /// <summary>
+        /// Gets a <c>CstGenerator</c> instance of the preset EcmaScript processor using ANTLR 4.
+        /// </summary>
+        public static EcmaScriptCstGenerator EcmaScript {
+            get {
+                return _ecmaScriptUsingAntlr4
+                       ?? (_ecmaScriptUsingAntlr4 = All.CastWhere<EcmaScriptCstGenerator>().First());
+            }
+        }
+
+        private static ErlangCstGenerator _erlangUsingAntlr4;
+
+        /// <summary>
+        /// Gets a <c>CstGenerator</c> instance of the preset Erlang processor using ANTLR 4.
+        /// </summary>
+        public static ErlangCstGenerator Erlang {
+            get {
+                return _erlangUsingAntlr4
+                       ?? (_erlangUsingAntlr4 = All.CastWhere<ErlangCstGenerator>().First());
+            }
+        }
+
+        private static GarryLuaCstGenerator _garryLuaUsingAntlr4;
+
+        /// <summary>
+        /// Gets a <c>CstGenerator</c> instance of the preset GarryLua processor using ANTLR 4.
+        /// </summary>
+        public static GarryLuaCstGenerator GarryLua {
+            get {
+                return _garryLuaUsingAntlr4
+                       ?? (_garryLuaUsingAntlr4 = All.CastWhere<GarryLuaCstGenerator>().First());
+            }
+        }
+
+        private static JavaCstGenerator _javaUsingAntlr4;
+
+        /// <summary>
+        /// Gets a <c>CstGenerator</c> instance of the preset Java processor using ANTLR 4.
+        /// </summary>
+        public static JavaCstGenerator Java {
+            get {
+                return _javaUsingAntlr4
+                       ?? (_javaUsingAntlr4 = All.CastWhere<JavaCstGenerator>().First());
+            }
+        }
+
+        private static LuaCstGenerator _luaUsingAntlr4;
+
+        /// <summary>
+        /// Gets a <c>CstGenerator</c> instance of the preset Lua processor using ANTLR 4.
+        /// </summary>
+        public static LuaCstGenerator Lua {
+            get {
+                return _luaUsingAntlr4
+                       ?? (_luaUsingAntlr4 = All.CastWhere<LuaCstGenerator>().First());
+            }
+        }
+
+        private static ObjectiveCCstGenerator _objectiveCUsingAntlr4;
+
+        /// <summary>
+        /// Gets a <c>CstGenerator</c> instance of the preset ObjectiveC processor using ANTLR 4.
+        /// </summary>
+        public static ObjectiveCCstGenerator ObjectiveC {
+            get {
+                return _objectiveCUsingAntlr4
+                       ?? (_objectiveCUsingAntlr4 = All.CastWhere<ObjectiveCCstGenerator>().First());
+            }
+        }
+
+        private static RCstGenerator _rUsingAntlr4;
+
+        /// <summary>
+        /// Gets a <c>CstGenerator</c> instance of the preset R processor using ANTLR 4.
+        /// </summary>
+        public static RCstGenerator R {
+            get {
+                return _rUsingAntlr4
+                       ?? (_rUsingAntlr4 = All.CastWhere<RCstGenerator>().First());
+            }
+        }
+
+        private static SmalltalkCstGenerator _smalltalkUsingAntlr4;
+
+        /// <summary>
+        /// Gets a <c>CstGenerator</c> instance of the preset Smalltalk processor using ANTLR 4.
+        /// </summary>
+        public static SmalltalkCstGenerator Smalltalk {
+            get {
+                return _smalltalkUsingAntlr4
+                       ?? (_smalltalkUsingAntlr4 = All.CastWhere<SmalltalkCstGenerator>().First());
+            }
+        }
+
+        private static SwiftCstGenerator _swiftUsingAntlr4;
+
+        /// <summary>
+        /// Gets a <c>CstGenerator</c> instance of the preset Swift processor using ANTLR 4.
+        /// </summary>
+        public static SwiftCstGenerator Swift {
+            get {
+                return _swiftUsingAntlr4
+                       ?? (_swiftUsingAntlr4 = All.CastWhere<SwiftCstGenerator>().First());
+            }
+        }
+
+        private static Verilog2001CstGenerator _verilog2001UsingAntlr4;
+
+        /// <summary>
+        /// Gets a <c>CstGenerator</c> instance of the preset Verilog2001 processor using ANTLR 4.
+        /// </summary>
+        public static Verilog2001CstGenerator Verilog2001 {
+            get {
+                return _verilog2001UsingAntlr4
+                       ?? (_verilog2001UsingAntlr4 =
+                               All.CastWhere<Verilog2001CstGenerator>().First());
+            }
+        }
+
+        #endregion
+
+        #region Preset CstGenerators using external generators
 
         private static Python2CstGenerator _python2;
 

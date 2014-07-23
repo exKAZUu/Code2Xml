@@ -36,9 +36,9 @@ namespace Code2Xml.Core.Generators {
 
         protected abstract Process StartProcess(string code);
 
-	    protected virtual string NormalizeCode(string code) {
-		    return code;
-	    }
+        protected string NormalizeCode(string code) {
+            return code;
+        }
 
         public override CstNode GenerateTreeFromCode(
                 TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
@@ -48,11 +48,11 @@ namespace Code2Xml.Core.Generators {
         public override CstNode GenerateTreeFromCodeText(
                 string code, bool throwingParseError = DefaultThrowingParseError) {
             // TODO: Support throwingParseError and enablePosition
-	        code = NormalizeCode(code);
             using (var p = StartProcess(code)) {
-                    var tree = CstNode.Deserialize(p.StandardOutput);
-                    SetLocationInformation(tree, code);
-                    return tree;
+                var tree = CstNode.Deserialize(p.StandardOutput);
+                SetLocationInformation(tree, code);
+                return tree;
+                // for debug
                 //try {
                 //    var tree = CstNode.Deserialize(p.StandardOutput);
                 //    SetLocationInformation(tree, code);

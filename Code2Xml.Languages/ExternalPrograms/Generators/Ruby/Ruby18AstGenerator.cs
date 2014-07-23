@@ -45,38 +45,51 @@ namespace Code2Xml.Languages.ExternalGenerators.Generators.Ruby {
         /// Gets the language name except for the version.
         /// </summary>
         public override string LanguageName {
-            get { return "Python"; }
+            get { return "Ruby"; }
         }
 
         /// <summary>
         /// Gets the language version.
         /// </summary>
         public override string LanguageVersion {
-            get { return "2"; }
+            get { return "1.8"; }
         }
 
-        private readonly string _processorPath;
+        private string _processorPath;
+
+        private string ProcessorPath {
+            get {
+                if (_processorPath == null) {
+                    ProcessorPath = ExternalProgramUtils.GetRubyPath() ?? "ruby";
+                }
+                return _processorPath;
+            }
+            set {
+                _processorPath = value;
+                ParaibaFile.WriteIfDifferentSize(XmlGeneratorArguments[0], Resources.ruby182xml);
+                ParaibaFile.WriteIfDifferentSize(CodeGeneratorArguments[0], Resources.xml2ruby18);
+                RubyFiles.DeployCommonFiles(DirectoryPath);
+            }
+        }
 
         public Ruby18AstGenerator()
-                : this(ExternalProgramUtils.GetRubyPath() ?? "ruby") {}
+                : this(null) {}
 
         public Ruby18AstGenerator(string processorPath)
                 : base(".rb") {
-            _processorPath = processorPath;
-
-            ParaibaFile.WriteIfDifferentSize(XmlGeneratorArguments[0], Resources.ruby182xml);
-            ParaibaFile.WriteIfDifferentSize(CodeGeneratorArguments[0], Resources.xml2ruby18);
-            RubyFiles.DeployCommonFiles(DirectoryPath);
+            if (processorPath != null) {
+                ProcessorPath = processorPath;
+            }
         }
 
         protected override ProcessStartInfo CreateProcessStartInfoForGeneratingXml() {
             return ExternalProgramUtils.CreateProcessStartInfo(
-                    _processorPath, XmlGeneratorArguments);
+                    ProcessorPath, XmlGeneratorArguments);
         }
 
         protected override ProcessStartInfo CreateProcessStartInfoForGeneratingCode() {
             return ExternalProgramUtils.CreateProcessStartInfo(
-                    _processorPath, CodeGeneratorArguments);
+                    ProcessorPath, CodeGeneratorArguments);
         }
     }
 }

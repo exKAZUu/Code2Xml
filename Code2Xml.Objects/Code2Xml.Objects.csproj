@@ -38,6 +38,9 @@
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Antlr4.Runtime.net40">
+      <HintPath>..\packages\Antlr4.Runtime.4.3.0\lib\net40-client\Antlr4.Runtime.net40.dll</HintPath>
+    </Reference>
     <Reference Include="Paraiba, Version=1.1.3.93, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Paraiba.1.1.3.93\lib\net40\Paraiba.dll</HintPath>
@@ -68,6 +71,10 @@
     <ProjectReference Include="..\Code2Xml.Languages\ANTLRv3\Code2Xml.Languages.ANTLRv3.csproj">
       <Project>{942a56fd-13af-4ee6-a8d7-7ddf50374715}</Project>
       <Name>Code2Xml.Languages.ANTLRv3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Code2Xml.Languages\ANTLRv4\Code2Xml.Languages.ANTLRv4.csproj">
+      <Project>{1DE85DA9-6EBF-49D1-8DDA-75D9D25497F6}</Project>
+      <Name>Code2Xml.Languages.ANTLRv4</Name>
     </ProjectReference>
     <ProjectReference Include="..\Code2Xml.Languages\ExternalPrograms\Code2Xml.Languages.ExternalGenerators.csproj">
       <Project>{311ea4b7-dd3c-4945-9ae3-a86a3ede6a68}</Project>

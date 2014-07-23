@@ -42,7 +42,7 @@ pass")]
             VerifyRestoringCodeAndInspect(code);
         }
 
-        [Test]
+        //[Test]
         public void ParseGitRepository(string url, string commitPointer) {
             VerifyRestoringGitRepo(url, commitPointer, "*.py");
         }

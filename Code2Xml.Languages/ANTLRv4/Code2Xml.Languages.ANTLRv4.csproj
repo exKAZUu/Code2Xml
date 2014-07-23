@@ -87,7 +87,7 @@
     <Compile Include="Generators\ObjectiveC\ObjectiveC.g4.parser.cs">
       <DependentUpon>ObjectiveC.g4</DependentUpon>
     </Compile>
-    <Compile Include="Generators\Python3\ObjectiveCCstGenerator.cs" />
+    <Compile Include="Generators\Python3\Python3CstGenerator.cs" />
     <Compile Include="Generators\R\RCstGenerator.cs" />
     <Compile Include="Generators\R\R.g4.lexer.cs">
       <DependentUpon>R.g4</DependentUpon>
