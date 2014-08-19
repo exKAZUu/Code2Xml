@@ -17,6 +17,7 @@
 #endregion
 
 using Code2Xml.Core.Generators;
+using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Core.Tests.Generators {
     public abstract class AstGeneratorTest :

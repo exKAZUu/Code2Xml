@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2013 Kazunori Sakamoto
+// Copyright (C) 2011-2014 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,26 +21,26 @@ using System.IO;
 using Paraiba.Text;
 
 namespace Code2Xml.Tools.AntlrHelper {
-	public static class LexerModifier {
-		public static void Modify(string path) {
-			Contract.Requires(path != null);
+    public static class LexerModifier {
+        public static void Modify(string path) {
+            Contract.Requires(path != null);
 
-			string code;
-			using (var reader = new StreamReader(path, XEncoding.SJIS)) {
-				code = reader.ReadToEnd();
-				code = ModifyFromJavaToCSharp(code);
-			}
-			using (var writer = new StreamWriter(path, false, XEncoding.SJIS)) {
-				writer.WriteLine("using Code2Xml.Languages.ANTLRv3.Core;");
-				writer.Write(code);
-			}
-		}
+            string code;
+            using (var reader = new StreamReader(path, XEncoding.SJIS)) {
+                code = reader.ReadToEnd();
+                code = ModifyFromJavaToCSharp(code);
+            }
+            using (var writer = new StreamWriter(path, false, XEncoding.SJIS)) {
+                writer.WriteLine("using Code2Xml.Languages.ANTLRv3.Core;");
+                writer.Write(code);
+            }
+        }
 
-		public static string ModifyFromJavaToCSharp(string code) {
-			Contract.Requires(code != null);
+        public static string ModifyFromJavaToCSharp(string code) {
+            Contract.Requires(code != null);
 
-			return code.Replace("skip();", "Skip();")
-					.Replace("HIDDEN", "Hidden");
-		}
-	}
+            return code.Replace("skip();", "Skip();")
+                    .Replace("HIDDEN", "Hidden");
+        }
+    }
 }

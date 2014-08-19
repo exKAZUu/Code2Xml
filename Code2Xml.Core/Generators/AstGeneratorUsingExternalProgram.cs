@@ -20,6 +20,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Xml.Linq;
+using Code2Xml.Core.SyntaxTree;
 using Paraiba.IO;
 
 namespace Code2Xml.Core.Generators {

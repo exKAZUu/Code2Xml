@@ -19,6 +19,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Core.Generators {
     public class MemoryCacheCstGenerator : CstGenerator {

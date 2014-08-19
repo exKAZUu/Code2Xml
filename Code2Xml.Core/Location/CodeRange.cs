@@ -22,8 +22,8 @@ using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
-using Code2Xml.Core.Generators;
 using Code2Xml.Core.Serialization;
+using Code2Xml.Core.SyntaxTree;
 using Paraiba.Linq;
 
 namespace Code2Xml.Core.Location {

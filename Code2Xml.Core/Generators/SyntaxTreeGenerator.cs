@@ -23,6 +23,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
+using Code2Xml.Core.SyntaxTree;
 using Paraiba.Text;
 
 namespace Code2Xml.Core.Generators {
@@ -304,7 +305,8 @@ namespace Code2Xml.Core.Generators {
         /// <returns></returns>
         public TNode GenerateTreeFromXmlText(
                 string xml, bool throwingParseError = DefaultThrowingParseError) {
-            return GenerateTreeFromXml(XDocument.Parse(xml, LoadOptions.PreserveWhitespace),
+            return GenerateTreeFromXml(
+                    XDocument.Parse(xml, LoadOptions.PreserveWhitespace),
                     throwingParseError);
         }
 
@@ -316,7 +318,8 @@ namespace Code2Xml.Core.Generators {
         /// <returns></returns>
         public TNode GenerateTreeFromXmlPath(
                 string xmlFilePath, bool throwingParseError = DefaultThrowingParseError) {
-            return GenerateTreeFromXml(XDocument.Load(xmlFilePath, LoadOptions.PreserveWhitespace),
+            return GenerateTreeFromXml(
+                    XDocument.Load(xmlFilePath, LoadOptions.PreserveWhitespace),
                     throwingParseError);
         }
 

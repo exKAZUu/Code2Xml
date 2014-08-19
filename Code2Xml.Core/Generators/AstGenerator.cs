@@ -18,6 +18,7 @@
 
 using System.Collections.Generic;
 using System.Xml.Linq;
+using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Core.Generators {
     /// <summary>

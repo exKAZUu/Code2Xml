@@ -93,8 +93,9 @@ namespace Code2Xml.Core.Generators {
                 paths = paths.Concat(FindOnUnixLike("python", versions));
             }
             return paths.Select(path => Tuple.Create(path, GetVersion(path, "-V")))
-                    .Where(t => versions.Any(
-                            version => t.Item2.Replace(".", "").StartsWith(version)))
+                    .Where(
+                            t => versions.Any(
+                                    version => t.Item2.Replace(".", "").StartsWith(version)))
                     .OrderByDescending(t => t.Item2)
                     .Select(t => t.Item1)
                     .FirstOrDefault();
@@ -159,12 +160,17 @@ namespace Code2Xml.Core.Generators {
                     EnvironmentVariableTarget.Process) ?? "";
             return Directory.GetLogicalDrives()
                     .Where(Directory.Exists)
-                    .SelectMany(dirPath => versions.SelectMany(version =>
-                            Directory.EnumerateDirectories(dirPath, dirName + version + "*")
-                                    .Select(p => cmdDirName != null
-                                            ? Path.Combine(p, cmdDirName)
-                                            : p)))
-                    .Concat(pathVariable.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries))
+                    .SelectMany(
+                            dirPath => versions.SelectMany(
+                                    version =>
+                                            Directory.EnumerateDirectories(
+                                                    dirPath, dirName + version + "*")
+                                                    .Select(
+                                                            p => cmdDirName != null
+                                                                    ? Path.Combine(p, cmdDirName)
+                                                                    : p)))
+                    .Concat(
+                            pathVariable.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries))
                     .Select(dirPath => Path.Combine(dirPath, cmdName + ".exe"))
                     .Where(File.Exists);
         }
@@ -177,7 +183,8 @@ namespace Code2Xml.Core.Generators {
                     "PATH",
                     EnvironmentVariableTarget.Process) ?? "";
             return new[] { @"/usr/bin", @"/usr/local/bin" }
-                    .Concat(pathVariable.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries))
+                    .Concat(
+                            pathVariable.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries))
                     .SelectMany(dirPath => names.Select(name => Path.Combine(dirPath, name)))
                     .Where(File.Exists);
         }

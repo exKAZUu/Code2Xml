@@ -17,7 +17,7 @@
 #endregion
 
 using System.Xml.Linq;
-using Code2Xml.Core.Generators;
+using Code2Xml.Core.SyntaxTree;
 using NUnit.Framework;
 
 namespace Code2Xml.Core.Tests.SyntaxTree {

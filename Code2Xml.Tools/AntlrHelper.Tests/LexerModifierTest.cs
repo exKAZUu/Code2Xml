@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2013 Kazunori Sakamoto
+// Copyright (C) 2011-2014 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,19 +19,19 @@
 using NUnit.Framework;
 
 namespace Code2Xml.Tools.AntlrHelper.Tests {
-	/// <summary>
-	///   A test suite for <see cref="LexerModifier" /> .
-	/// </summary>
-	public class LexerModifierTest {
-		[Test]
-		public void ConvertJavaIntoCSharp() {
-			const string code =
-					"       skip();";
-			const string expected =
-					"       Skip();";
-			Assert.That(
-					LexerModifier.ModifyFromJavaToCSharp(code),
-					Is.EqualTo(expected));
-		}
-	}
+    /// <summary>
+    ///   A test suite for <see cref="LexerModifier" /> .
+    /// </summary>
+    public class LexerModifierTest {
+        [Test]
+        public void ConvertJavaIntoCSharp() {
+            const string code =
+                    "       skip();";
+            const string expected =
+                    "       Skip();";
+            Assert.That(
+                    LexerModifier.ModifyFromJavaToCSharp(code),
+                    Is.EqualTo(expected));
+        }
+    }
 }

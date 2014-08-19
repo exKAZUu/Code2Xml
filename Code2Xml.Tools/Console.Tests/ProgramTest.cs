@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Code2Xml.Core.Generators;
+using Code2Xml.Core.SyntaxTree;
 using NUnit.Framework;
 using Paraiba.Core;
 using Paraiba.Text;
@@ -45,11 +46,13 @@ namespace Code2Xml.Tools.Console.Tests {
                     //new { Name = "Ruby19", Opt = "-Ruby19" },
                 };
                 return langs
-                        .SelectMany(lang => Directory.EnumerateFiles(
-                                Fixture.GetInputCodePath(lang.Name)).Select(path => new {
-                                    lang.Name, lang.Opt,
-                                    Path = path
-                                }))
+                        .SelectMany(
+                                lang => Directory.EnumerateFiles(
+                                        Fixture.GetInputCodePath(lang.Name)).Select(
+                                                path => new {
+                                                    lang.Name, lang.Opt,
+                                                    Path = path
+                                                }))
                         .Select(p => new TestCaseData(p.Path, p.Opt))
                         .Where(t => t.Arguments[2] != null);
             }
@@ -64,12 +67,14 @@ namespace Code2Xml.Tools.Console.Tests {
             var outputPath = Fixture.GetOutputDirPath(CLanguageName);
 
             Program.Main(filePaths.Concat(new[] { "-C", "-d", outputPath }).ToArray());
-            Program.Main(filePaths
-                    .Select(path => Path.Combine(
-                            outputPath,
-                            Path.ChangeExtension(Path.GetFileName(path), ".xml")))
-                    .Concat(new[] { "-code", "-C", "-d", outputPath })
-                    .ToArray());
+            Program.Main(
+                    filePaths
+                            .Select(
+                                    path => Path.Combine(
+                                            outputPath,
+                                            Path.ChangeExtension(Path.GetFileName(path), ".xml")))
+                            .Concat(new[] { "-code", "-C", "-d", outputPath })
+                            .ToArray());
 
             foreach (var filePath in filePaths) {
                 var newPath = Path.Combine(outputPath, Path.GetFileName(filePath));
@@ -140,9 +145,10 @@ namespace Code2Xml.Tools.Console.Tests {
 
             using (var reader = new StreamReader(outputFilePath, XEncoding.SJIS)) {
                 var expected = filePaths
-                        .Select(filePath => CstGenerators.CUsingAntlr3
-                                .GenerateTreeFromCode(new FileInfo(filePath))
-                                .ToXml() + Environment.NewLine)
+                        .Select(
+                                filePath => CstGenerators.CUsingAntlr3
+                                        .GenerateTreeFromCode(new FileInfo(filePath))
+                                        .ToXml() + Environment.NewLine)
                         .JoinString()
                         .ReplaceNewlinesForWindows();
                 var actual = reader.ReadToEnd()

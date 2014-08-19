@@ -17,8 +17,8 @@
 #endregion
 
 using System.IO;
-using Code2Xml.Core.Generators;
-using Code2Xml.Languages.ANTLRv3.Generators.Java;
+using Code2Xml.Core.Generators.ANTLRv3.Java;
+using Code2Xml.Core.SyntaxTree;
 using NUnit.Framework;
 
 namespace Code2Xml.Core.Tests.Serialization {

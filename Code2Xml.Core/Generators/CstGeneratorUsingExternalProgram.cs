@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using Code2Xml.Core.Location;
+using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Core.Generators {
     /// <summary>
