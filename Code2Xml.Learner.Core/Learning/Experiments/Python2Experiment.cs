@@ -273,18 +273,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 _writer.Write(Path.GetFileName(projectPath) + ",");
                 _lastProjectName = exp.GetType().Name;
             }
-            exp.Learn(seedPaths, _writer, projectPath, "*.py");
+            var ret = exp.Learn(seedPaths, _writer, projectPath, "*.py");
             _writer.Flush();
-            if (exp.WrongFeatureCount > 0) {
+            if (ret.WrongFeatureCount > 0) {
                 Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
-                foreach (var we in exp.WronglyAcceptedElements) {
+                foreach (var we in ret.WronglyAcceptedElements) {
                     var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
                     Console.WriteLine(we.Code);
                     Console.WriteLine(e.Code);
                     Console.WriteLine("---------------------------------------------");
                 }
                 Console.WriteLine("---- WronglyRejectedElements ----");
-                foreach (var we in exp.WronglyRejectedElements) {
+                foreach (var we in ret.WronglyRejectedElements) {
                     var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
                     Console.WriteLine(we.Code);
                     Console.WriteLine(e.Code);
@@ -292,7 +292,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 }
             }
             exp.Clear();
-            Assert.That(exp.WrongFeatureCount, Is.EqualTo(0));
+            Assert.That(ret.WrongFeatureCount, Is.EqualTo(0));
         }
     }
 

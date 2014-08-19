@@ -281,7 +281,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 _writer.Write(Path.GetFileName(projectPath) + ",");
                 _lastProjectName = exp.GetType().Name;
             }
-            exp.Learn(seedPaths, _writer, projectPath, "*.lua");
+            var ret = exp.Learn(seedPaths, _writer, projectPath, "*.lua");
             _writer.Flush();
             //if (exp.WrongFeatureCount > 0) {
             //	Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
@@ -300,7 +300,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             //	}
             //}
             exp.Clear();
-            Assert.That(exp.WrongFeatureCount, Is.EqualTo(0));
+            Assert.That(ret.WrongFeatureCount, Is.EqualTo(0));
         }
     }
 

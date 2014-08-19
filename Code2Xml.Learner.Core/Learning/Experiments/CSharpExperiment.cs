@@ -287,10 +287,10 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 _writer.Write(Path.GetFileName(projectPath) + ",");
                 _lastProjectName = exp.GetType().Name;
             }
-            exp.Learn(seedPaths, _writer, projectPath, "*.cs", sha1, sha2);
+            var ret = exp.Learn(seedPaths, _writer, projectPath, "*.cs", sha1, sha2);
             _writer.Flush();
             exp.Clear();
-            Assert.That(exp.WrongFeatureCount, Is.EqualTo(0));
+            Assert.That(ret.WrongFeatureCount, Is.EqualTo(0));
         }
     }
 
