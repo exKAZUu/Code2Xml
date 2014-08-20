@@ -303,12 +303,7 @@ public class AlignedTuplePrinter {
         [TestCase(@"https://github.com/geometer/FBReaderJ.git",
                 @"ec96ce8dd837f495fbeafef8592001e06b601bb0", 611)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
-            var exp = new JavaComplexStatementExperiment();
-            VerifyRestoringGitRepoSavingThem(
-                    url, commitPointer, "java_repo.csv", starCount,
-                    cst => cst.DescendantsAndSelf()
-                            .Where(exp.OriginalIsAcceptedUsingOracle)
-                            .Count(), "*.java");
+            VerifyRestoringGitRepo(url, commitPointer, "*.java");
         }
 
         [Test]

@@ -346,12 +346,7 @@ xxxxx
         [TestCase(@"https://github.com/castleproject/Castle.Windsor-READONLY.git",
                 @"8e2b032b5e88e6948eda1a4f0f2fb96bd53bcb78", 116)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
-            var exp = new CSharpComplexStatementExperiment();
-            VerifyRestoringGitRepoSavingThem(
-                    url, commitPointer, "csharp_repo.csv", starCount,
-                    cst => cst.DescendantsAndSelf()
-                            .Where(exp.OriginalIsAcceptedUsingOracle)
-                            .Count(), "*.cs");
+            VerifyRestoringGitRepo(url, commitPointer, "*.cs");
         }
     }
 }

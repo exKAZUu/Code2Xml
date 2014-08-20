@@ -283,7 +283,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.php"), };
             _writer.WriteLine();
             _writer.Write(Path.GetFileName(projectPath) + ",");
-            var ret = exp.Learn(seedPaths, _writer, projectPath, "*.php", sha1, sha2);
+            var ret = exp.Learn(seedPaths, _writer, projectPath, "*.php");
             _writer.Flush();
             exp.Clear();
             Assert.That(ret.WrongFeatureCount, Is.EqualTo(0));

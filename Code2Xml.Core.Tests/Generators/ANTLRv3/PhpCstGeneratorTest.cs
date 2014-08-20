@@ -181,12 +181,7 @@ class Resource extends \RESTful\Resource
         [TestCase(@"https://github.com/PHPOffice/PHPExcel.git",
                 @"c2a277c447ca965bbe030cd83d6b92df95661541", 2240)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
-            var exp = new PhpComplexStatementExperiment();
-            VerifyRestoringGitRepoSavingThem(
-                    url, commitPointer, "php_repo.csv", starCount,
-                    cst => cst.DescendantsAndSelf()
-                            .Where(exp.OriginalIsAcceptedUsingOracle)
-                            .Count(), "*.php");
+            VerifyRestoringGitRepo(url, commitPointer, "*.php");
         }
     }
 }

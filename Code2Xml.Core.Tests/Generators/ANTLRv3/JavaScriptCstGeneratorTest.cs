@@ -306,12 +306,7 @@ var completion = require('../lib/completion');
         [TestCase(@"https://github.com/jquery/qunit.git",
                 @"04e0337cc7fba5c08fc8a7fc8542cadd062f1b03", 2863)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
-            var exp = new JavaScriptComplexStatementExperiment();
-            VerifyRestoringGitRepoSavingThem(
-                    url, commitPointer, "js_repo.csv", starCount,
-                    cst => cst.DescendantsAndSelf()
-                            .Where(exp.OriginalIsAcceptedUsingOracle)
-                            .Count(), "*.js");
+            VerifyRestoringGitRepo(url, commitPointer, "*.js");
         }
 
         [Test]

@@ -35,7 +35,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         private string _lastProjectName;
         private const string LangName = "Java";
         public const int SkipCount = 0;
-        public const int TakeCount = 50;
+        public const int TakeCount = 1;
 
         private static IEnumerable<TestCaseData> TestCases {
             get {
@@ -278,8 +278,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
         }
 
-        //[Test, TestCaseSource("TestCases")]
-        public void Test(LearningExperiment exp, string projectPath, int starCount) {
+        [Test, TestCaseSource("TestCases")]
+        public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.java"), };
             if (_lastProjectName != exp.GetType().Name) {
                 _writer.WriteLine();
@@ -626,6 +626,11 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public JavaComplexStatementExperiment() : base("statement", "blockStatement") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            // blockStatement 
+            //    :   localVariableDeclarationStatement
+            //    |   classOrInterfaceDeclaration
+            //    |   statement
+            //    ;
             if (e.Name == "blockStatement") {
                 if (e.FirstChild.Name != "statement") {
                     return true;

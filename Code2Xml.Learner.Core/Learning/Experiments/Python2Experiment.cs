@@ -48,13 +48,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 };
                 var learningSets = new[] {
                     Tuple.Create(
-                            @"https://github.com/django/django.git",
-                            @"09af48c70fb5cc652ea109487015472e9ef984df",
-                            "fd3ee7d7867dd13a336b90873ccb8df6302f2c05"),
-                    Tuple.Create(
                             @"https://github.com/mitsuhiko/flask.git",
                             @"d4b3d16c142e2189c6faf8f784a195e7f827c596",
                             "8a73097fe528430eb77ac26c81ba85229a8af553"),
+                    Tuple.Create(
+                            @"https://github.com/django/django.git",
+                            @"09af48c70fb5cc652ea109487015472e9ef984df",
+                            "fd3ee7d7867dd13a336b90873ccb8df6302f2c05"),
                     Tuple.Create(
                             @"https://github.com/facebook/tornado.git",
                             @"c5292057a8db3ebec4a80d9c9207bfadff7fa784",
@@ -265,8 +265,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
         }
 
-        //[Test, TestCaseSource("TestCases")]
-        public void Test(LearningExperiment exp, string projectPath, int starCount) {
+        [Test, TestCaseSource("TestCases")]
+        public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.py"), };
             if (_lastProjectName != exp.GetType().Name) {
                 _writer.WriteLine();
@@ -336,6 +336,10 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public PythonComplexStatementExperiment() : base("small_stmt", "compound_stmt") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+            // stmt: simple_stmt | compound_stmt
+            // simple_stmt: small_stmt (';' small_stmt)* [';'] NEWLINE
+            // small_stmt: (expr_stmt | print_stmt  | del_stmt | pass_stmt | flow_stmt |
+            //              import_stmt | global_stmt | exec_stmt | assert_stmt)
             if (e.Name == "stmt") {
                 e = e.FirstChild;
             }

@@ -30,7 +30,7 @@ namespace Code2Xml.Learner.Core {
     [TestFixture]
     public class CleanUp {
         [Test]
-        public void ShowCandidates() {
+        public void ShowCandidatesOfWrongRepos() {
             var fixturePath = Fixture.FixturePath;
             var gitDirs = Directory.GetDirectories(
                     fixturePath, ".git", SearchOption.AllDirectories)
@@ -112,10 +112,8 @@ namespace Code2Xml.Learner.Core {
                             "class K { void m() { int i; i = 0 + 1 - 2 * 3/ 4; }}");
             var e1 = new JavaArithmeticOperatorExperiment();
             var e2 = new JavaExpressionStatementExperiment();
-            Assert.That(
-                    cst.Descendants().Where(e1.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(4));
-            Assert.That(
-                    cst.Descendants().Where(e2.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(1));
+            Assert.That(e1.CountUsingOracle(cst), Is.EqualTo(4));
+            Assert.That(e2.CountUsingOracle(cst), Is.EqualTo(1));
         }
 
         [Test]
@@ -125,10 +123,8 @@ namespace Code2Xml.Learner.Core {
                             "class K { void m() { int i; i = 0 + 1 - 2 * 3/ 4 % 5; }}");
             var e1 = new CSharpArithmeticOperatorExperiment();
             var e2 = new CSharpExpressionStatementExperiment();
-            Assert.That(
-                    cst.Descendants().Where(e1.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(4));
-            Assert.That(
-                    cst.Descendants().Where(e2.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(1));
+            Assert.That(e1.CountUsingOracle(cst), Is.EqualTo(4));
+            Assert.That(e2.CountUsingOracle(cst), Is.EqualTo(1));
         }
 
         [Test]
@@ -138,10 +134,8 @@ namespace Code2Xml.Learner.Core {
                             "i = 0 + 1 - 2 * 3/ 4 % 5;");
             var e1 = new JavaScriptArithmeticOperatorExperiment();
             var e2 = new JavaScriptExpressionStatementExperiment();
-            Assert.That(
-                    cst.Descendants().Where(e1.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(4));
-            Assert.That(
-                    cst.Descendants().Where(e2.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(1));
+            Assert.That(e1.CountUsingOracle(cst), Is.EqualTo(4));
+            Assert.That(e2.CountUsingOracle(cst), Is.EqualTo(1));
         }
 
         [Test]
@@ -151,10 +145,8 @@ namespace Code2Xml.Learner.Core {
                             "<?php $i = 0 + 1 - 2 * 3 / 4 % 5;");
             var e1 = new PhpArithmeticOperatorExperiment();
             var e2 = new PhpExpressionStatementExperiment();
-            Assert.That(
-                    cst.Descendants().Where(e1.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(4));
-            Assert.That(
-                    cst.Descendants().Where(e2.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(1));
+            Assert.That(e1.CountUsingOracle(cst), Is.EqualTo(4));
+            Assert.That(e2.CountUsingOracle(cst), Is.EqualTo(1));
         }
 
         [Test]
@@ -164,10 +156,8 @@ namespace Code2Xml.Learner.Core {
                             "i = 0 + 1 - 2 * 3 / 4 % 5;");
             var e1 = new LuaArithmeticOperatorExperiment();
             var e2 = new LuaExpressionStatementExperiment();
-            Assert.That(
-                    cst.Descendants().Where(e1.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(4));
-            Assert.That(
-                    cst.Descendants().Where(e2.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(1));
+            Assert.That(e1.CountUsingOracle(cst), Is.EqualTo(4));
+            Assert.That(e2.CountUsingOracle(cst), Is.EqualTo(1));
         }
 
         [Test]
@@ -178,12 +168,9 @@ namespace Code2Xml.Learner.Core {
             var e1 = new PythonArithmeticOperatorExperiment();
             var e2 = new PythonExpressionStatementExperiment();
             var e3 = new PythonSuperComplexBranchExperiment();
-            Assert.That(
-                    cst.Descendants().Where(e1.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(4));
-            Assert.That(
-                    cst.Descendants().Where(e2.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(2));
-            Assert.That(
-                    cst.Descendants().Where(e3.OriginalIsAcceptedUsingOracle).Count(), Is.EqualTo(2));
+            Assert.That(e1.CountUsingOracle(cst), Is.EqualTo(4));
+            Assert.That(e2.CountUsingOracle(cst), Is.EqualTo(2));
+            Assert.That(e3.CountUsingOracle(cst), Is.EqualTo(1));
         }
     }
 }

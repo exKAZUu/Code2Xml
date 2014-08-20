@@ -180,12 +180,7 @@ if true then --[[VERBOSE]] print(1) end
         //[TestCase(@"https://github.com/06wj/cocos2d_lua_snippets.git",
         //        @"e8486c6d51a63ef79552afd5bb556ae07b8558af", 20)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
-            var exp = new LuaComplexStatementExperiment();
-            VerifyRestoringGitRepoSavingThem(
-                    url, commitPointer, "lua_repo.csv", starCount,
-                    cst => cst.DescendantsAndSelf()
-                            .Where(exp.OriginalIsAcceptedUsingOracle)
-                            .Count(), "*.lua");
+            VerifyRestoringGitRepo(url, commitPointer, "*.lua");
         }
     }
 }

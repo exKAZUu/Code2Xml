@@ -276,8 +276,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
         }
 
-        //[Test, TestCaseSource("TestCases")]
-        public void Test(LearningExperiment exp, string projectPath, int starCount) {
+        [Test, TestCaseSource("TestCases")]
+        public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "seed.js"), };
             if (_lastProjectName != exp.GetType().Name) {
                 _writer.WriteLine();
