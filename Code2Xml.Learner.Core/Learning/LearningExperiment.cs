@@ -29,6 +29,43 @@ using Paraiba.Collections.Generic;
 using Paraiba.Linq;
 
 namespace Code2Xml.Learner.Core.Learning {
+    public class ClassifierUnit {
+        public BigInteger Accepting;
+        public BigInteger Rejecting;
+
+        public ClassifierUnit(BigInteger accepting, BigInteger rejecting) {
+            Accepting = accepting;
+            Rejecting = rejecting;
+        }
+
+        public ClassifierUnit Clone() {
+            return new ClassifierUnit(Accepting, Rejecting);
+        }
+
+        protected bool Equals(ClassifierUnit other) {
+            return Accepting.Equals(other.Accepting) && Rejecting.Equals(other.Rejecting);
+        }
+
+        public override bool Equals(object obj) {
+            if (ReferenceEquals(null, obj)) {
+                return false;
+            }
+            if (ReferenceEquals(this, obj)) {
+                return true;
+            }
+            if (obj.GetType() != this.GetType()) {
+                return false;
+            }
+            return Equals((ClassifierUnit)obj);
+        }
+
+        public override int GetHashCode() {
+            unchecked {
+                return (Accepting.GetHashCode() * 397) ^ Rejecting.GetHashCode();
+            }
+        }
+    }
+
     public abstract class LearningExperiment : ILearningExperiment {
         public class SuspiciousTarget {
             public int BitsCount { get; set; }
@@ -87,8 +124,7 @@ namespace Code2Xml.Learner.Core.Learning {
         private BigInteger _rejectingMask;
         private BigInteger _mask;
         public List<SuspiciousTarget> SuspiciousTargets { get; private set; }
-        private IList<BigInteger> _acceptingClassifiers;
-        private IList<BigInteger> _rejectingClassifiers;
+        private IList<ClassifierUnit> _classifiers;
         private readonly HashSet<string> _oracleNames;
         private Dictionary<BigInteger, int> _feature2Count;
         private int _seedElementCount;
@@ -109,8 +145,7 @@ namespace Code2Xml.Learner.Core.Learning {
             }
             _feature2Vector.Clear();
             _groupKeys.Clear();
-            _acceptingClassifiers.Clear();
-            _rejectingClassifiers.Clear();
+            _classifiers.Clear();
             SuspiciousTargets.Clear();
             _idealAcceptedVector2GroupKey = null;
             _idealRejectedVector2GroupKey = null;
@@ -119,8 +154,7 @@ namespace Code2Xml.Learner.Core.Learning {
             _feature2Element = null;
             _feature2Vector = null;
             _groupKeys = null;
-            _acceptingClassifiers = null;
-            _rejectingClassifiers = null;
+            _classifiers = null;
             SuspiciousTargets = null;
         }
 
@@ -252,8 +286,7 @@ namespace Code2Xml.Learner.Core.Learning {
                         formatter.Serialize(stream, _rejectingMask);
                         formatter.Serialize(stream, _mask);
                         //formatter.Serialize(stream, SuspiciousTargets);
-                        formatter.Serialize(stream, _acceptingClassifiers);
-                        formatter.Serialize(stream, _rejectingClassifiers);
+                        formatter.Serialize(stream, _classifiers);
                         //formatter.Serialize(stream, _oracleNames);
                         formatter.Serialize(stream, _feature2Count);
                         //formatter.Serialize(stream, goNow);
@@ -283,14 +316,12 @@ namespace Code2Xml.Learner.Core.Learning {
                     _acceptingMask = (BigInteger)formatter.Deserialize(stream);
                     _rejectingMask = (BigInteger)formatter.Deserialize(stream);
                     _mask = (BigInteger)formatter.Deserialize(stream);
-                    _acceptingClassifiers = (IList<BigInteger>)formatter.Deserialize(stream);
-                    _rejectingClassifiers = (IList<BigInteger>)formatter.Deserialize(stream);
+                    _classifiers = (IList<ClassifierUnit>)formatter.Deserialize(stream);
                 }
             }
 
             UpdateGroup();
-            _acceptingClassifiers = InitializeAcceptingClassifiers();
-            _rejectingClassifiers = InitializeRejectingClassifiers();
+            _classifiers = InitializeClassifiers();
             CreateClassifiers(_trainingAcceptedVector2GroupKey); // for the first time
 
             var count = 0;
@@ -359,7 +390,8 @@ namespace Code2Xml.Learner.Core.Learning {
                     .ToList();
 
             var seedAcceptedNodes = uppermostSeedAcceptedNodes
-                    .Select(e => e.DescendantsOfSingleAndSelf()
+                    .Select(
+                            e => e.DescendantsOfSingleAndSelf()
                                     .First(e2 => selectedNames.Contains(e2.Name)))
                     .ToHashSet();
 
@@ -477,8 +509,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 throw new Exception("Master predicates can't classify elements!");
             }
 
-            _acceptingClassifiers = new List<BigInteger>();
-            _rejectingClassifiers = new List<BigInteger>();
+            _classifiers = new List<ClassifierUnit>();
 
             Console.WriteLine("Preparing time: " + (Environment.TickCount - preparingTime));
         }
@@ -560,8 +591,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 }
                 Console.WriteLine("Groups: " + _groupKeys.Count + " (" + count + ")");
                 acceptedTrainingSet = _trainingAcceptedVector2GroupKey;
-                _acceptingClassifiers = InitializeAcceptingClassifiers();
-                _rejectingClassifiers = InitializeRejectingClassifiers();
+                _classifiers = InitializeClassifiers();
             }
         }
 
@@ -577,12 +607,12 @@ namespace Code2Xml.Learner.Core.Learning {
                 }
                 return null;
             }
-            var acceptingClassifiers = _acceptingClassifiers;
+            var classifiers = _classifiers;
             foreach (var featureAndGroupKey in acceptedTrainingSet) {
                 var feature = featureAndGroupKey.Key;
                 var groupKey = featureAndGroupKey.Value;
                 var groupIndex = GetGroupIndex(feature);
-                acceptingClassifiers[groupIndex] &= feature;
+                classifiers[groupIndex].Accepting &= feature;
                 var rejectedGroupInfo = CanReject();
                 if (rejectedGroupInfo != null) {
                     return new LearningResult {
@@ -596,20 +626,20 @@ namespace Code2Xml.Learner.Core.Learning {
 
         private void CreateRejectingClassifiers(
                 IEnumerable<KeyValuePair<BigInteger, string>> acceptedTrainingSet) {
-            var rejectingClassifiers = _rejectingClassifiers;
-            var count = rejectingClassifiers.Count;
+            var classifiers = _classifiers;
+            var count = classifiers.Count;
             for (int i = 0; i < count; i++) {
-                rejectingClassifiers[i] ^= _rejectingMask;
+                classifiers[i].Rejecting ^= _rejectingMask;
             }
             foreach (var featureAndGroupKey in acceptedTrainingSet) {
                 var feature = featureAndGroupKey.Key;
                 var iGroupKey = GetGroupIndex(feature);
-                rejectingClassifiers[iGroupKey] |= feature;
+                classifiers[iGroupKey].Rejecting |= feature;
             }
             for (int i = 0; i < count; i++) {
                 // �S�Ă�Accepted�������Ă��Ȃ�������1��
-                rejectingClassifiers[i] ^= _rejectingMask;
-                rejectingClassifiers[i] &= _rejectingMask;
+                classifiers[i].Rejecting ^= _rejectingMask;
+                classifiers[i].Rejecting &= _rejectingMask;
             }
         }
 
@@ -635,12 +665,12 @@ namespace Code2Xml.Learner.Core.Learning {
             }
         }
 
-        private List<BigInteger> InitializeRejectingClassifiers() {
-            return Enumerable.Repeat(_rejectingMask, _groupKeys.Count).ToList();
-        }
-
-        private List<BigInteger> InitializeAcceptingClassifiers() {
-            return Enumerable.Repeat(_acceptingMask, _groupKeys.Count).ToList();
+        private List<ClassifierUnit> InitializeClassifiers() {
+            return
+                    Enumerable.Repeat(
+                            new ClassifierUnit(_acceptingMask, _rejectingMask), _groupKeys.Count)
+                            .Select(_ => new ClassifierUnit(_acceptingMask, _rejectingMask))
+                            .ToList();
         }
 
         #endregion
@@ -648,8 +678,7 @@ namespace Code2Xml.Learner.Core.Learning {
         public ExperimentalResult LearnAndApply(ref int count) {
             var result = new ExperimentalResult(_feature2Element);
 
-            var acceptingClassifiers = _acceptingClassifiers;
-            var rejectingClassifiers = _rejectingClassifiers;
+            var classifiers = _classifiers;
             var correctlyAccepted = 0;
             var correctlyRejected = 0;
             var wronglyAccepted = 0;
@@ -671,8 +700,8 @@ namespace Code2Xml.Learner.Core.Learning {
                 var feature = featureAndGroupKey.Key;
                 var groupKey = featureAndGroupKey.Value;
                 var groupIndex = GetGroupIndex(feature);
-                var rejected = IsRejected(feature, rejectingClassifiers[groupIndex]);
-                var accepted = IsAccepted(feature, acceptingClassifiers[groupIndex]);
+                var rejected = IsRejected(feature, classifiers[groupIndex].Rejecting);
+                var accepted = IsAccepted(feature, classifiers[groupIndex].Accepting);
                 if (!_trainingAcceptedVector2GroupKey.ContainsKey(feature)
                     && !_trainingRejectedVector2GroupKey.ContainsKey(feature)) {
                     var target = new SuspiciousTarget {
@@ -711,8 +740,8 @@ namespace Code2Xml.Learner.Core.Learning {
                 var feature = featureAndGroupKey.Key;
                 var groupKey = featureAndGroupKey.Value;
                 var groupIndex = GetGroupIndex(feature);
-                var rejected = IsRejected(feature, rejectingClassifiers[groupIndex]);
-                var accepted = IsAccepted(feature, acceptingClassifiers[groupIndex]);
+                var rejected = IsRejected(feature, classifiers[groupIndex].Rejecting);
+                var accepted = IsAccepted(feature, classifiers[groupIndex].Accepting);
                 if (!_trainingAcceptedVector2GroupKey.ContainsKey(feature)
                     && !_trainingRejectedVector2GroupKey.ContainsKey(feature)) {
                     var target = new SuspiciousTarget {
@@ -754,8 +783,8 @@ namespace Code2Xml.Learner.Core.Learning {
                     "L: "
                     + (_trainingAcceptedVector2GroupKey.Count
                        + _trainingRejectedVector2GroupKey.Count) + ", AP: "
-                    + string.Join(", ", _acceptingClassifiers.Select(CountBits)) + ", RP: "
-                    + string.Join(", ", _rejectingClassifiers.Select(CountRejectingBits)));
+                    + string.Join(", ", classifiers.Select(c => CountBits(c.Accepting))) + ", RP: "
+                    + string.Join(", ", classifiers.Select(c => CountRejectingBits(c.Rejecting))));
             result.WrongFeatureCount = wronglyAccepted + wronglyRejected
                                        + wronglyRejectedInRejecting;
 
@@ -841,11 +870,9 @@ namespace Code2Xml.Learner.Core.Learning {
                         featureAndGroupKey.Key, featureAndGroupKey.Value);
             }
 
-            var lastAcceptingClassifiers = _acceptingClassifiers.ToList();
-            var lastRejectingClassifiers = _rejectingClassifiers.ToList();
+            var lastClassifiers = _classifiers.Select(c => c.Clone()).ToList();
             CreateClassifiers(additionalAccepted);
-            var ret = lastAcceptingClassifiers.SequenceEqual(_acceptingClassifiers)
-                      && lastRejectingClassifiers.SequenceEqual(_rejectingClassifiers);
+            var ret = lastClassifiers.SequenceEqual(_classifiers);
             return ret;
         }
 
@@ -988,13 +1015,13 @@ namespace Code2Xml.Learner.Core.Learning {
 
         private List<SuspiciousTarget> SelectSuspiciousElementsWithMaskForFastAcceptanceLearning(
                 List<List<SuspiciousTarget>> suspiciousElementsList, BigInteger xor, BigInteger mask) {
-            var classifiers = _acceptingClassifiers;
+            var classifiers = _classifiers;
             var suspiciousElements = new List<SuspiciousTarget>();
             for (int i = 0; i < suspiciousElementsList.Count; i++) {
                 var feature = BigInteger.Zero;
                 var classifier = classifiers[i];
                 var list = suspiciousElementsList[i]
-                        .OrderBy(t => CountBits(classifier & t.Feature))
+                        .OrderBy(t => CountBits(classifier.Accepting & t.Feature))
                         .ToList();
                 foreach (var t in list) {
                     var newFeature = (feature | (t.Feature ^ xor)) & mask;
@@ -1009,7 +1036,7 @@ namespace Code2Xml.Learner.Core.Learning {
 
         private List<SuspiciousTarget> SelectSuspiciousElementsWithMaskForFastRejectionLearning(
                 List<List<SuspiciousTarget>> suspiciousElementsList, BigInteger xor, BigInteger mask) {
-            var classifiers = _acceptingClassifiers;
+            var classifiers = _classifiers;
             var suspiciousElements = new List<SuspiciousTarget>();
             for (int i = 0; i < suspiciousElementsList.Count; i++) {
                 var feature = BigInteger.Zero;
@@ -1018,7 +1045,7 @@ namespace Code2Xml.Learner.Core.Learning {
                         .OrderBy(
                                 t =>
                                         CountBits(
-                                                classifier
+                                                classifier.Accepting
                                                 & ((t.Feature & _rejectingMask) ^ _rejectingMask)))
                         .ToList();
                 foreach (var t in list) {
@@ -1033,12 +1060,12 @@ namespace Code2Xml.Learner.Core.Learning {
         }
 
         private int DetermineCount(int i) {
-            return CountBits(_acceptingClassifiers[i]) > ThresholdFeatureCount
+            return CountBits(_classifiers[i].Accepting) > ThresholdFeatureCount
                     ? TargetCount : TargetCount / 2;
         }
 
         private int DetermineStrongCount(int i) {
-            return CountBits(_acceptingClassifiers[i]) > ThresholdFeatureCount
+            return CountBits(_classifiers[i].Accepting) > ThresholdFeatureCount
                     ? StronglyTargetCount : StronglyTargetCount / 2;
         }
 
@@ -1087,7 +1114,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 List<List<SuspiciousTarget>> targetsList) {
             for (int i = 0; i < targetsList.Count; i++) {
                 var targets = targetsList[i];
-                var classifier = _acceptingClassifiers[i];
+                var classifier = _classifiers[i].Accepting;
                 foreach (var target in targets) {
                     target.BitsCount = CountBits(target.Feature & classifier);
                 }
@@ -1108,7 +1135,7 @@ namespace Code2Xml.Learner.Core.Learning {
         private void SelectNodesForSlowAcceptanceLearning(List<List<SuspiciousTarget>> targetsList) {
             for (int i = 0; i < targetsList.Count; i++) {
                 var targets = targetsList[i];
-                var classifier = _acceptingClassifiers[i];
+                var classifier = _classifiers[i].Accepting;
                 foreach (var target in targets) {
                     target.BitsCount = CountBits(target.Feature & classifier);
                 }
@@ -1130,7 +1157,7 @@ namespace Code2Xml.Learner.Core.Learning {
         private void SelectNodesForFastRejectionLearning(List<List<SuspiciousTarget>> targetsList) {
             for (int i = 0; i < targetsList.Count; i++) {
                 var targets = targetsList[i];
-                var classifier = _rejectingClassifiers[i];
+                var classifier = _classifiers[i].Rejecting;
                 foreach (var target in targets) {
                     target.BitsCount = CountBits(
                             (target.Feature & _rejectingMask) | classifier);
@@ -1153,7 +1180,7 @@ namespace Code2Xml.Learner.Core.Learning {
         private void SelectNodesForSlowRejectionLearning(List<List<SuspiciousTarget>> targetsList) {
             for (int i = 0; i < targetsList.Count; i++) {
                 var targets = targetsList[i];
-                var classifier = _rejectingClassifiers[i];
+                var classifier = _classifiers[i].Rejecting;
                 foreach (var target in targets) {
                     target.BitsCount = CountBits(
                             (target.Feature & _rejectingMask) | classifier);
@@ -1227,7 +1254,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 List<List<SuspiciousTarget>> targetsList) {
             for (int i = 0; i < targetsList.Count; i++) {
                 var targets = targetsList[i];
-                var classifier = _acceptingClassifiers[i];
+                var classifier = _classifiers[i].Accepting;
                 foreach (var target in targets) {
                     target.BitsCount = CountBits(target.Feature & classifier);
                 }
@@ -1254,7 +1281,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 List<List<SuspiciousTarget>> targetsList) {
             for (int i = 0; i < targetsList.Count; i++) {
                 var targets = targetsList[i];
-                var classifier = _acceptingClassifiers[i];
+                var classifier = _classifiers[i].Accepting;
                 foreach (var target in targets) {
                     target.BitsCount = CountBits(target.Feature & classifier);
                 }
@@ -1282,7 +1309,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 List<List<SuspiciousTarget>> targetsList) {
             for (int i = 0; i < targetsList.Count; i++) {
                 var targets = targetsList[i];
-                var classifier = _rejectingClassifiers[i];
+                var classifier = _classifiers[i].Rejecting;
                 foreach (var target in targets) {
                     target.BitsCount = CountBits(
                             (target.Feature & _rejectingMask) | classifier);
@@ -1311,7 +1338,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 List<List<SuspiciousTarget>> targetsList) {
             for (int i = 0; i < targetsList.Count; i++) {
                 var targets = targetsList[i];
-                var classifier = _rejectingClassifiers[i];
+                var classifier = _classifiers[i].Rejecting;
                 foreach (var target in targets) {
                     target.BitsCount = CountBits(
                             (target.Feature & _rejectingMask) | classifier);
@@ -1338,14 +1365,13 @@ namespace Code2Xml.Learner.Core.Learning {
         #endregion
 
         private GroupInfo CanReject() {
-            var acceptingClassifiers = _acceptingClassifiers;
-            var rejectingClassifiers = _rejectingClassifiers;
+            var classifiers = _classifiers;
             foreach (var featureAndGroupKey in _trainingRejectedVector2GroupKey) {
                 var feature = featureAndGroupKey.Key;
                 var groupKey = featureAndGroupKey.Value;
                 var groupIndex = GetGroupIndex(feature);
-                if (IsAccepted(feature, acceptingClassifiers[groupIndex])
-                    && !IsRejected(feature, rejectingClassifiers[groupIndex])) {
+                if (IsAccepted(feature, classifiers[groupIndex].Accepting)
+                    && !IsRejected(feature, classifiers[groupIndex].Rejecting)) {
                     return new GroupInfo { Index = groupIndex, Key = groupKey };
                 }
             }
@@ -1434,7 +1460,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 var groupKey = featureAndGroupKey.Value;
                 var iClassifier = GetGroupIndex(feature);
                 Console.Write(
-                        CountAcceptingBits(feature & _acceptingClassifiers[iClassifier]) + ", ");
+                        CountAcceptingBits(feature & _classifiers[iClassifier].Accepting) + ", ");
             }
             Console.WriteLine();
             Console.Write("R(A): ");
@@ -1442,7 +1468,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 var feature = featureAndGroupKey.Key;
                 var iClassifier = GetGroupIndex(feature);
                 Console.Write(
-                        CountAcceptingBits(feature & _acceptingClassifiers[iClassifier]) + ", ");
+                        CountAcceptingBits(feature & _classifiers[iClassifier].Accepting) + ", ");
             }
             Console.WriteLine();
             Console.Write("WA(A): ");
@@ -1450,7 +1476,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 var feature = featureAndGroupKey.Key;
                 var iClassifier = GetGroupIndex(feature);
                 Console.Write(
-                        CountAcceptingBits(feature & _acceptingClassifiers[iClassifier]) + ", ");
+                        CountAcceptingBits(feature & _classifiers[iClassifier].Accepting) + ", ");
             }
             Console.WriteLine();
             Console.Write("WR(A): ");
@@ -1458,7 +1484,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 var feature = featureAndGroupKey.Key;
                 var iClassifier = GetGroupIndex(feature);
                 Console.Write(
-                        CountAcceptingBits(feature & _acceptingClassifiers[iClassifier]) + ", ");
+                        CountAcceptingBits(feature & _classifiers[iClassifier].Accepting) + ", ");
             }
             Console.WriteLine();
 
@@ -1468,15 +1494,15 @@ namespace Code2Xml.Learner.Core.Learning {
                 var feature = featureAndGroupKey.Key;
                 var iClassifier = GetGroupIndex(feature);
                 Console.Write(
-                        CountRejectingBits(feature & _rejectingClassifiers[iClassifier]) + ", ");
+                        CountRejectingBits(feature & _classifiers[iClassifier].Rejecting) + ", ");
             }
             Console.WriteLine();
             Console.Write("R(R): ");
             foreach (var featureAndGroupKey in _idealRejectedVector2GroupKey) {
                 var feature = featureAndGroupKey.Key;
-                var groupIndex = GetGroupIndex(feature);
+                var iClassifier = GetGroupIndex(feature);
                 Console.Write(
-                        CountRejectingBits(feature & _rejectingClassifiers[groupIndex]) + ", ");
+                        CountRejectingBits(feature & _classifiers[iClassifier].Rejecting) + ", ");
             }
             Console.WriteLine();
             Console.Write("WA(R): ");
@@ -1484,7 +1510,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 var feature = featureAndGroupKey.Key;
                 var iClassifier = GetGroupIndex(feature);
                 Console.Write(
-                        CountRejectingBits(feature & _rejectingClassifiers[iClassifier]) + ", ");
+                        CountRejectingBits(feature & _classifiers[iClassifier].Rejecting) + ", ");
             }
             Console.WriteLine();
             Console.Write("WR(R): ");
@@ -1492,7 +1518,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 var feature = featureAndGroupKey.Key;
                 var iClassifier = GetGroupIndex(feature);
                 Console.Write(
-                        CountRejectingBits(feature & _rejectingClassifiers[iClassifier]) + ", ");
+                        CountRejectingBits(feature & _classifiers[iClassifier].Rejecting) + ", ");
             }
             Console.WriteLine();
         }
