@@ -244,9 +244,9 @@ namespace Code2Xml.Learner.Core.Learning {
                     var newChildren = new List<Tuple<CstNode, string>>();
                     foreach (var t in children) {
                         foreach (var child in t.Item1.Elements()) {
-                            if (CanSkip(child)) {
-                                continue;
-                            }
+                            //if (CanSkip(child)) {
+                            //    continue;
+                            //}
                             var key = t.Item2 + ">" + child.RuleId;
                             newChildren.Add(Tuple.Create(child, key));
                             // for Preconditions.checkArguments()
@@ -287,9 +287,9 @@ namespace Code2Xml.Learner.Core.Learning {
                 var newChildren = new List<Tuple<CstNode, string>>();
                 foreach (var t in children) {
                     foreach (var child in t.Item1.Elements()) {
-                        if (CanSkip(child)) {
-                            continue;
-                        }
+                        //if (CanSkip(child)) {
+                        //    continue;
+                        //}
                         var key = t.Item2 + ">" + child.RuleId;
                         newChildren.Add(Tuple.Create(child, key));
                         // for Preconditions.checkArguments()
@@ -340,9 +340,9 @@ namespace Code2Xml.Learner.Core.Learning {
                     var newChildren = new List<Tuple<CstNode, string>>();
                     foreach (var t in children) {
                         foreach (var child in t.Item1.Elements()) {
-                            if (CanSkip(child)) {
-                                continue;
-                            }
+                            //if (CanSkip(child)) {
+                            //    continue;
+                            //}
                             var key = t.Item2 + ">" + child.RuleId;
                             if (path2Bit.TryGetValue(key, out bit)) {
                                 newChildren.Add(Tuple.Create(child, key));
@@ -400,9 +400,9 @@ namespace Code2Xml.Learner.Core.Learning {
                 var newChildren = new List<Tuple<CstNode, string>>();
                 foreach (var t in children) {
                     foreach (var child in t.Item1.Elements()) {
-                        if (CanSkip(child)) {
-                            continue;
-                        }
+                        //if (CanSkip(child)) {
+                        //    continue;
+                        //}
                         var key = t.Item2 + ">" + child.RuleId;
                         if (path2Bit.TryGetValue(key, out bit)) {
                             newChildren.Add(Tuple.Create(child, key));
