@@ -55,7 +55,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 this IEnumerable<CstNode> targets, int length, ILearningExperiment exp) {
             var commonKeys = new HashSet<string>();
             foreach (var target in targets) {
-                var keys = target.GetSurroundingKeys(length, exp);
+                var keys = target.GetSurroundingPaths(length, exp);
                 commonKeys.UnionWith(keys);
             }
             return commonKeys;
@@ -65,7 +65,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 this IEnumerable<CstNode> targets, int length, ILearningExperiment exp) {
             HashSet<string> commonKeys = null;
             foreach (var target in targets) {
-                var keys = target.GetSurroundingKeys(length, exp);
+                var keys = target.GetSurroundingPaths(length, exp);
                 if (commonKeys == null) {
                     commonKeys = keys;
                 } else {
@@ -75,13 +75,155 @@ namespace Code2Xml.Learner.Core.Learning {
             return commonKeys;
         }
 
-        public static HashSet<string> GetSurroundingKeys(
+        private static bool CanSkip(CstNode node) {
+            var tokenText = node.TokenText;
+            return tokenText.Length == 1 && char.IsLetter(tokenText[0]);
+        }
+
+        //private static void GetDescendantPaths(
+        //        CstNode node, CstNode reached, string path, int length, ILearningExperiment exp,
+        //        HashSet<string> paths) {
+        //    if (--length < 0) {
+        //        return;
+        //    }
+        //    var children = new List<Tuple<CstNode, string>>();
+        //    foreach (var child in node.Children()) {
+        //        if (child == reached || CanSkip(child)) {
+        //            continue;
+        //        }
+        //        children.Add(Tuple.Create(child, path + ">" + child.Name + child.RuleId));
+        //        // for Preconditions.checkArguments()
+        //        paths.Add(path + ">'" + exp.GetToken(child));
+        //    }
+        //    paths.UnionWith(children.Select(t => t.Item2));
+
+        //    while (!children.isEmpty() && --length >= 0) {
+        //        var newChildren = new List<Tuple<CstNode, string>>();
+        //        foreach (var t in children) {
+        //            foreach (var child in t.Item1.Children()) {
+        //                if (CanSkip(child)) {
+        //                    continue;
+        //                }
+        //                newChildren.Add(
+        //                        Tuple.Create(child, t.Item2 + ">" + child.Name + child.RuleId));
+        //                // for Preconditions.checkArguments()
+        //                paths.Add(t.Item2 + ">'" + exp.GetToken(child));
+        //            }
+        //        }
+        //        paths.UnionWith(newChildren.Select(t => t.Item2));
+        //        children = newChildren;
+        //    }
+        //}
+
+        //public static HashSet<string> GetSurroundingPaths(
+        //        this CstNode node, int length, ILearningExperiment exp) {
+        //    var paths = new HashSet<string>();
+        //    // 自分自身の位置による区別も考慮する
+        //    //ret.Add(node.Name);
+        //    paths.Add(node.RuleId);
+        //    paths.Add("'" + exp.GetToken(node));
+
+        //    var reached = node;
+        //    var path = "";
+        //    for (int i = 0;; i++) {
+        //        GetDescendantPaths(node, reached, path, length, exp, paths);
+        //        reached = node;
+        //        node = node.Parent;
+        //        if (node == null || i >= length) {
+        //            break;
+        //        }
+        //        path += "<" + node.RuleId;
+        //        paths.Add(path);
+        //    }
+        //    return paths;
+        //}
+
+        //private static BigInteger GetDescendantPathBits(
+        //        CstNode node, CstNode reached, string path, IDictionary<string, BigInteger> path2Bit,
+        //        int length, ILearningExperiment exp, BigInteger bits) {
+        //    if (--length < 0) {
+        //        return bits;
+        //    }
+        //    BigInteger bit;
+        //    var children = new List<Tuple<CstNode, string>>();
+        //    foreach (var child in node.Children()) {
+        //        if (child == reached || CanSkip(child)) {
+        //            continue;
+        //        }
+        //        var newPath = path + ">" + child.Name + child.RuleId;
+        //        if (path2Bit.TryGetValue(newPath, out bit)) {
+        //            children.Add(Tuple.Create(child, newPath));
+        //            bits |= bit;
+        //        }
+        //        // for Preconditions.checkArguments()
+        //        if (path2Bit.TryGetValue(children + ">'" + exp.GetToken(child), out bit)) {
+        //            bits |= bit;
+        //        }
+        //    }
+        //    while (!children.isEmpty() && --length >= 0) {
+        //        var newChildren = new List<Tuple<CstNode, string>>();
+        //        foreach (var t in children) {
+        //            foreach (var child in t.Item1.Children()) {
+        //                if (CanSkip(child)) {
+        //                    continue;
+        //                }
+        //                var newPath = t.Item2 + ">" + child.Name + child.RuleId;
+        //                if (path2Bit.TryGetValue(newPath, out bit)) {
+        //                    newChildren.Add(Tuple.Create(child, newPath));
+        //                    bits |= bit;
+        //                }
+        //                // for Preconditions.checkArguments()
+        //                if (path2Bit.TryGetValue(t.Item2 + ">'" + exp.GetToken(child), out bit)) {
+        //                    bits |= bit;
+        //                }
+        //            }
+        //        }
+        //        children = newChildren;
+        //    }
+        //    return bits;
+        //}
+
+        //public static BigInteger GetSurroundingPathBits(
+        //        this CstNode node, int length, IDictionary<string, BigInteger> path2Bit,
+        //        ILearningExperiment exp) {
+        //    var bits = BigInteger.Zero;
+        //    BigInteger bit;
+        //    //if (key2Bit.TryGetValue(node.Name, out bit)) {
+        //    //    bits |= bit;
+        //    //}
+        //    if (path2Bit.TryGetValue(node.RuleId, out bit)) {
+        //        bits |= bit;
+        //    }
+        //    if (path2Bit.TryGetValue("'" + exp.GetToken(node), out bit)) {
+        //        bits |= bit;
+        //    }
+
+        //    var reached = node;
+        //    var path = "";
+        //    for (int i = 0;; i++) {
+        //        bits = GetDescendantPathBits(node, reached, path, path2Bit, length, exp, bits);
+        //        reached = node;
+        //        node = node.Parent;
+        //        if (node == null || i >= length) {
+        //            break;
+        //        }
+        //        path += "<" + node.RuleId;
+        //        if (path2Bit.TryGetValue(path, out bit)) {
+        //            bits |= bit;
+        //        } else {
+        //            break;
+        //        }
+        //    }
+        //    return bits;
+        //}
+
+        public static HashSet<string> GetSurroundingPaths(
                 this CstNode node, int length, ILearningExperiment exp) {
-            var ret = new HashSet<string>();
+            var paths = new HashSet<string>();
             // 自分自身の位置による区別も考慮する
             //ret.Add(node.Name);
-            ret.Add(node.RuleId);
-            ret.Add("'" + exp.GetToken(node));
+            paths.Add(node.RuleId);
+            paths.Add("'" + exp.GetToken(node));
 
             var children = new List<Tuple<CstNode, string>>();
             children.Add(Tuple.Create(node, ""));
@@ -101,21 +243,25 @@ namespace Code2Xml.Learner.Core.Learning {
                 for (; i <= length; i++) {
                     var newChildren = new List<Tuple<CstNode, string>>();
                     foreach (var t in children) {
-                        foreach (var e in t.Item1.Elements()) {
-                            var key = t.Item2 + ">" + e.RuleId;
-                            newChildren.Add(Tuple.Create(e, key));
+                        foreach (var child in t.Item1.Elements()) {
+                            //if (CanSkip(child)) {
+                            //    continue;
+                            //}
+                            var key = t.Item2 + ">" + child.RuleId;
+                            newChildren.Add(Tuple.Create(child, key));
                             // for Preconditions.checkArguments()
-                            ret.Add(t.Item2 + ">'" + exp.GetToken(e));
+                            paths.Add(t.Item2 + ">'" + exp.GetToken(child));
                         }
                     }
                     parent.Item1.PrevsFromSelf().Take(10)
                             .ForEach(
-                                    (e, index) => {
-                                        var key = parent.Item2 + "<-" + index + "-" + e.RuleId;
-                                        newChildren.Add(Tuple.Create(e, key));
+                                    (child, index) => {
+                                        var key = parent.Item2 + "<-" + index + "-" + child.RuleId;
+                                        newChildren.Add(Tuple.Create(child, key));
                                         // for Preconditions.checkArguments()
-                                        ret.Add(
-                                                parent.Item2 + "<-" + index + "-'" + exp.GetToken(e));
+                                        paths.Add(
+                                                parent.Item2 + "<-" + index + "-'"
+                                                + exp.GetToken(child));
                                     });
                     parent.Item1.NextsFromSelf().Take(10)
                             .ForEach(
@@ -123,10 +269,10 @@ namespace Code2Xml.Learner.Core.Learning {
                                         var key = parent.Item2 + ">-" + index + "-" + e.RuleId;
                                         newChildren.Add(Tuple.Create(e, key));
                                         // for Preconditions.checkArguments()
-                                        ret.Add(
+                                        paths.Add(
                                                 parent.Item2 + ">-" + index + "-'" + exp.GetToken(e));
                                     });
-                    ret.UnionWith(newChildren.Select(t => t.Item2));
+                    paths.UnionWith(newChildren.Select(t => t.Item2));
                     children = newChildren;
 
                     var newParent = parent.Item1.Parent;
@@ -134,37 +280,40 @@ namespace Code2Xml.Learner.Core.Learning {
                         break;
                     }
                     parent = Tuple.Create(newParent, parent.Item2 + "<" + newParent.RuleId);
-                    ret.Add(parent.Item2);
+                    paths.Add(parent.Item2);
                 }
             }
             for (; i <= length; i++) {
                 var newChildren = new List<Tuple<CstNode, string>>();
                 foreach (var t in children) {
-                    foreach (var e in t.Item1.Elements()) {
-                        var key = t.Item2 + ">" + e.RuleId;
-                        newChildren.Add(Tuple.Create(e, key));
+                    foreach (var child in t.Item1.Elements()) {
+                        //if (CanSkip(child)) {
+                        //    continue;
+                        //}
+                        var key = t.Item2 + ">" + child.RuleId;
+                        newChildren.Add(Tuple.Create(child, key));
                         // for Preconditions.checkArguments()
-                        ret.Add(t.Item2 + ">'" + exp.GetToken(e));
+                        paths.Add(t.Item2 + ">'" + exp.GetToken(child));
                     }
                 }
-                ret.UnionWith(newChildren.Select(t => t.Item2));
+                paths.UnionWith(newChildren.Select(t => t.Item2));
                 children = newChildren;
             }
-            return ret;
+            return paths;
         }
 
-        public static BigInteger GetSurroundingBits(
-                this CstNode node, int length, IDictionary<string, BigInteger> key2Bit,
+        public static BigInteger GetSurroundingPathBits(
+                this CstNode node, int length, IDictionary<string, BigInteger> path2Bit,
                 ILearningExperiment exp) {
             var ret = BigInteger.Zero;
             BigInteger bit;
             //if (key2Bit.TryGetValue(node.Name, out bit)) {
             //    ret |= bit;
             //}
-            if (key2Bit.TryGetValue(node.RuleId, out bit)) {
+            if (path2Bit.TryGetValue(node.RuleId, out bit)) {
                 ret |= bit;
             }
-            if (key2Bit.TryGetValue("'" + exp.GetToken(node), out bit)) {
+            if (path2Bit.TryGetValue("'" + exp.GetToken(node), out bit)) {
                 ret |= bit;
             }
 
@@ -190,14 +339,17 @@ namespace Code2Xml.Learner.Core.Learning {
                 for (; i <= length; i++) {
                     var newChildren = new List<Tuple<CstNode, string>>();
                     foreach (var t in children) {
-                        foreach (var e in t.Item1.Elements()) {
-                            var key = t.Item2 + ">" + e.RuleId;
-                            if (key2Bit.TryGetValue(key, out bit)) {
-                                newChildren.Add(Tuple.Create(e, key));
+                        foreach (var child in t.Item1.Elements()) {
+                            //if (CanSkip(child)) {
+                            //    continue;
+                            //}
+                            var key = t.Item2 + ">" + child.RuleId;
+                            if (path2Bit.TryGetValue(key, out bit)) {
+                                newChildren.Add(Tuple.Create(child, key));
                                 ret |= bit;
                             }
                             // for Preconditions.checkArguments()
-                            if (key2Bit.TryGetValue(t.Item2 + ">'" + exp.GetToken(e), out bit)) {
+                            if (path2Bit.TryGetValue(t.Item2 + ">'" + exp.GetToken(child), out bit)) {
                                 ret |= bit;
                             }
                         }
@@ -206,11 +358,11 @@ namespace Code2Xml.Learner.Core.Learning {
                             .ForEach(
                                     (e, index) => {
                                         var key = parent.Item2 + "<-" + index + "-" + e.RuleId;
-                                        if (key2Bit.TryGetValue(key, out bit)) {
+                                        if (path2Bit.TryGetValue(key, out bit)) {
                                             newChildren.Add(Tuple.Create(e, key));
                                             ret |= bit;
                                         }
-                                        if (key2Bit.TryGetValue(
+                                        if (path2Bit.TryGetValue(
                                                 parent.Item2 + "<-" + index + "-'" + exp.GetToken(e),
                                                 out bit)) {
                                             ret |= bit;
@@ -220,11 +372,11 @@ namespace Code2Xml.Learner.Core.Learning {
                             .ForEach(
                                     (e, index) => {
                                         var key = parent.Item2 + ">-" + index + "-" + e.RuleId;
-                                        if (key2Bit.TryGetValue(key, out bit)) {
+                                        if (path2Bit.TryGetValue(key, out bit)) {
                                             newChildren.Add(Tuple.Create(e, key));
                                             ret |= bit;
                                         }
-                                        if (key2Bit.TryGetValue(
+                                        if (path2Bit.TryGetValue(
                                                 parent.Item2 + ">-" + index + "-'" + exp.GetToken(e),
                                                 out bit)) {
                                             ret |= bit;
@@ -237,7 +389,7 @@ namespace Code2Xml.Learner.Core.Learning {
                         break;
                     }
                     parent = Tuple.Create(newParent, parent.Item2 + "<" + newParent.RuleId);
-                    if (key2Bit.TryGetValue(parent.Item2, out bit)) {
+                    if (path2Bit.TryGetValue(parent.Item2, out bit)) {
                         ret |= bit;
                     } else {
                         break;
@@ -247,14 +399,17 @@ namespace Code2Xml.Learner.Core.Learning {
             for (; i <= length; i++) {
                 var newChildren = new List<Tuple<CstNode, string>>();
                 foreach (var t in children) {
-                    foreach (var e in t.Item1.Elements()) {
-                        var key = t.Item2 + ">" + e.RuleId;
-                        if (key2Bit.TryGetValue(key, out bit)) {
-                            newChildren.Add(Tuple.Create(e, key));
+                    foreach (var child in t.Item1.Elements()) {
+                        //if (CanSkip(child)) {
+                        //    continue;
+                        //}
+                        var key = t.Item2 + ">" + child.RuleId;
+                        if (path2Bit.TryGetValue(key, out bit)) {
+                            newChildren.Add(Tuple.Create(child, key));
                             ret |= bit;
                         }
                         // for Preconditions.checkArguments()
-                        if (key2Bit.TryGetValue(t.Item2 + ">'" + exp.GetToken(e), out bit)) {
+                        if (path2Bit.TryGetValue(t.Item2 + ">'" + exp.GetToken(child), out bit)) {
                             ret |= bit;
                         }
                     }
