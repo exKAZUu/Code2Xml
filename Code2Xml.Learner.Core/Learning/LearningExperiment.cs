@@ -453,6 +453,8 @@ namespace Code2Xml.Learner.Core.Learning {
             var rejectingFeatures = rejectingFeatureSet.ToList();
             rejectingFeatures.Sort((s1, s2) => s1.Length.CompareTo(s2.Length));
 
+            Console.WriteLine("Feature Count: " + _acceptingFeatureCount + ", " + rejectingFeatures.Count);
+
             var masterFeature = BigInteger.One;
             foreach (var feature in acceptingFeatures) {
                 _feature2Vector.Add(feature, masterFeature);
