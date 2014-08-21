@@ -47,18 +47,17 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new CSharpArithmeticOperatorExperiment(),
                     new CSharpSwitchCaseExperiment(),
                     new CSharpSuperComplexBranchExperimentWithSwitch(),
-                    new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue(), 
-
-                    //new CSharpComplexBranchExperiment(),
-                    //new CSharpIfExperiment(),
-                    //new CSharpWhileExperiment(),
-                    //new CSharpDoWhileExperiment(),
-                    //new CSharpForExperiment(),
-                    //new CSharpPreconditionsExperiment(),
-                    //new CSharpStatementExperiment(),
-                    //new CSharpBlockExperiment(),
-                    //new CSharpLabeledStatementExperiment(),
-                    //new CSharpEmptyStatementExperiment(),
+                    new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue(),
+                    new CSharpComplexBranchExperiment(),
+                    new CSharpIfExperiment(),
+                    new CSharpWhileExperiment(),
+                    new CSharpDoWhileExperiment(),
+                    new CSharpForExperiment(),
+                    new CSharpPreconditionsExperiment(),
+                    new CSharpStatementExperiment(),
+                    new CSharpBlockExperiment(),
+                    new CSharpLabeledStatementExperiment(),
+                    new CSharpEmptyStatementExperiment(),
                 };
                 var learningSets = new[] {
                     Tuple.Create(
@@ -336,18 +335,14 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             var parts = p.Elements("primary_expression_start")
                     .Concat(p.Elements("primary_expression_part"))
                     .ToList();
-            if (
-                    parts.All(
-                            e2 =>
-                                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
-                                    != "Contract")) {
+            if (parts.All(
+                    e2 => e2.Descendants("identifier")
+                            .FirstOrDefault().SafeTokenText() != "Contract")) {
                 return false;
             }
-            if (
-                    parts.All(
-                            e2 =>
-                                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
-                                    != "Requires")) {
+            if (parts.All(
+                    e2 => e2.Descendants("identifier")
+                            .FirstOrDefault().SafeTokenText() != "Requires")) {
                 return false;
             }
             return true;

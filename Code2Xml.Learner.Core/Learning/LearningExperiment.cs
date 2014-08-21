@@ -418,7 +418,7 @@ namespace Code2Xml.Learner.Core.Learning {
 
                 throw new Exception("Wrong Oracle.");
             }
-            var seedRejectedElements = new List<CstNode>();
+            var seedRejectedNodes = new List<CstNode>();
             if (!seedAcceptedNodes.Any()) {
                 throw new Exception("There are no seed elements!");
             }
@@ -432,11 +432,11 @@ namespace Code2Xml.Learner.Core.Learning {
             _groupKeys = new List<string> { ">" };
             _feature2Vector = new Dictionary<string, BigInteger>();
 
-            foreach (var ast in seedCsts) {
+            foreach (var cst in seedCsts) {
                 Console.Write(".");
-                foreach (var e in GetAllElements(ast, selectedNames)) {
+                foreach (var e in GetAllElements(cst, selectedNames)) {
                     if (!seedAcceptedNodes.Contains(e)) {
-                        seedRejectedElements.Add(e);
+                        seedRejectedNodes.Add(e);
                     }
                 }
             }
@@ -446,7 +446,7 @@ namespace Code2Xml.Learner.Core.Learning {
                     .ToList();
             acceptingFeatures.Sort((s1, s2) => s1.Length.CompareTo(s2.Length));
             _acceptingFeatureCount = acceptingFeatures.Count;
-            var rejectingFeatureSet = seedRejectedElements
+            var rejectingFeatureSet = seedRejectedNodes
                     .GetUnionKeys(SurroundingLength, this)
                     .ToHashSet();
             rejectingFeatureSet.ExceptWith(acceptingFeatures);
@@ -472,10 +472,10 @@ namespace Code2Xml.Learner.Core.Learning {
             _seedElementCount = 0;
 
             foreach (var e in seedAcceptedNodes) {
-                var feature = e.GetSurroundingBits(SurroundingLength, _feature2Vector, this);
+                var feature = e.GetSurroundingPathBits(SurroundingLength, _feature2Vector, this);
                 UpdateDict(_idealAcceptedVector2GroupKey, feature, e);
                 _trainingAcceptedVector2GroupKey[feature] = _idealAcceptedVector2GroupKey[feature];
-                //_feature2Element[feature] = e;
+                _feature2Element[feature] = e;
                 if (_feature2Count.ContainsKey(feature)) {
                     _feature2Count[feature]++;
                 } else {
@@ -485,11 +485,11 @@ namespace Code2Xml.Learner.Core.Learning {
                 _acceptedSeedElementCount++;
                 _seedElementCount++;
             }
-            foreach (var e in seedRejectedElements) {
-                var feature = e.GetSurroundingBits(SurroundingLength, _feature2Vector, this);
+            foreach (var e in seedRejectedNodes) {
+                var feature = e.GetSurroundingPathBits(SurroundingLength, _feature2Vector, this);
                 UpdateDict(_idealRejectedVector2GroupKey, feature, e);
                 _trainingRejectedVector2GroupKey[feature] = _idealRejectedVector2GroupKey[feature];
-                //_feature2Element[feature] = e;
+                _feature2Element[feature] = e;
                 if (_feature2Count.ContainsKey(feature)) {
                     _feature2Count[feature]++;
                 } else {
@@ -499,9 +499,9 @@ namespace Code2Xml.Learner.Core.Learning {
                 _seedElementCount++;
             }
 
-            foreach (var ast in allCsts) {
+            foreach (var cst in allCsts) {
                 Console.Write(".");
-                ConvertUppermostNodesToVectors(ast, selectedNames);
+                ConvertUppermostNodesToVectors(cst, selectedNames);
             }
 
             if (_idealAcceptedVector2GroupKey.Keys.ToHashSet()
@@ -514,9 +514,9 @@ namespace Code2Xml.Learner.Core.Learning {
             Console.WriteLine("Preparing time: " + (Environment.TickCount - preparingTime));
         }
 
-        private void ConvertUppermostNodesToVectors(CstNode ast, ISet<string> selectedNames) {
-            foreach (var uppermostNode in GetUppermostNodesByNames(ast, selectedNames)) {
-                var vector = uppermostNode.GetSurroundingBits(
+        private void ConvertUppermostNodesToVectors(CstNode cst, ISet<string> selectedNames) {
+            foreach (var uppermostNode in GetUppermostNodesByNames(cst, selectedNames)) {
+                var vector = uppermostNode.GetSurroundingPathBits(
                         SurroundingLength, _feature2Vector, this);
                 if (IsAcceptedUsingOracle(uppermostNode)) {
                     // TODO: for debug
@@ -531,7 +531,7 @@ namespace Code2Xml.Learner.Core.Learning {
                     }
                     UpdateDict(_idealRejectedVector2GroupKey, vector, uppermostNode);
                 }
-                //_feature2Element[feature] = e;
+                _feature2Element[vector] = uppermostNode;
                 if (_feature2Count.ContainsKey(vector)) {
                     _feature2Count[vector]++;
                 } else {
@@ -547,7 +547,7 @@ namespace Code2Xml.Learner.Core.Learning {
                     + _feature2Element[feautre].Name + ", "
                     + _feature2Element[feautre].Code);
             IsAcceptedUsingOracle(e);
-            feautre = e.GetSurroundingBits(SurroundingLength, _feature2Vector, this);
+            feautre = e.GetSurroundingPathBits(SurroundingLength, _feature2Vector, this);
         }
 
         private int GetGroupIndex(BigInteger feature) {
@@ -1527,14 +1527,14 @@ namespace Code2Xml.Learner.Core.Learning {
             return elements.Select(e => e.AncestorsWithSingleChildAndSelf().Last());
         }
 
-        protected IEnumerable<CstNode> GetAllElements(CstNode ast, ISet<string> elementNames) {
-            return ast.DescendantsAndSelf()
+        protected IEnumerable<CstNode> GetAllElements(CstNode cst, ISet<string> elementNames) {
+            return cst.DescendantsAndSelf()
                     .Where(e => elementNames.Contains(e.Name));
         }
 
         protected IEnumerable<CstNode> GetUppermostNodesByNames(
-                CstNode ast, ISet<string> elementNames) {
-            return ast.DescendantsAndSelf()
+                CstNode cst, ISet<string> elementNames) {
+            return cst.DescendantsAndSelf()
                     .Where(e => elementNames.Contains(e.Name))
                     .Where(
                             e => e.AncestorsWithSingleChild()
