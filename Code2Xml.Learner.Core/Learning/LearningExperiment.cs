@@ -29,7 +29,7 @@ using Paraiba.Collections.Generic;
 using Paraiba.Linq;
 
 namespace Code2Xml.Learner.Core.Learning {
-    public class ClassifierUnit {
+    [Serializable] public class ClassifierUnit {
         public BigInteger Accepting;
         public BigInteger Rejecting;
 
