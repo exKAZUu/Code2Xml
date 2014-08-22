@@ -35,7 +35,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         private string _lastProjectName;
         private const string LangName = "Java";
         public const int SkipCount = 0;
-        public const int TakeCount = 1;
+        public const int TakeCount = 5;
 
         private static IEnumerable<TestCaseData> TestCases {
             get {

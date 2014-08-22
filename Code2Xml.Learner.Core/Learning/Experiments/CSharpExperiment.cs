@@ -32,6 +32,25 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 @"C:\Users\exKAZUu\Dropbox\Data\csharp" + JavaExperiment.SkipCount + "_"
                 + JavaExperiment.TakeCount + ".csv");
 
+        public CSharpExperiment() {
+                _writer.Write("Name");
+                _writer.Write(",");
+                _writer.Write("AllNodes");
+                _writer.Write(",");
+                _writer.Write("TrainingNodes");
+                _writer.Write(",");
+                _writer.Write("AllVectors");
+                _writer.Write(",");
+                _writer.Write("TrainingVectors");
+                _writer.Write(",");
+                _writer.Write("SeedNodeCount");
+                _writer.Write(",");
+                _writer.Write("AbstractSeedNodeCount");
+                _writer.Write(",");
+                _writer.Write("AcceptedSeedNodeCount");
+                _writer.Write(",");
+        }
+
         public static CstGenerator Generator = CstGenerators.CSharpUsingAntlr3;
         private string _lastProjectName;
 
@@ -48,16 +67,17 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new CSharpSwitchCaseExperiment(),
                     new CSharpSuperComplexBranchExperimentWithSwitch(),
                     new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue(),
-                    new CSharpComplexBranchExperiment(),
-                    new CSharpIfExperiment(),
-                    new CSharpWhileExperiment(),
-                    new CSharpDoWhileExperiment(),
-                    new CSharpForExperiment(),
-                    new CSharpPreconditionsExperiment(),
-                    new CSharpStatementExperiment(),
-                    new CSharpBlockExperiment(),
-                    new CSharpLabeledStatementExperiment(),
-                    new CSharpEmptyStatementExperiment(),
+                    
+                    //new CSharpComplexBranchExperiment(),
+                    //new CSharpIfExperiment(),
+                    //new CSharpWhileExperiment(),
+                    //new CSharpDoWhileExperiment(),
+                    //new CSharpForExperiment(),
+                    //new CSharpPreconditionsExperiment(),
+                    //new CSharpStatementExperiment(),
+                    //new CSharpBlockExperiment(),
+                    //new CSharpLabeledStatementExperiment(),
+                    //new CSharpEmptyStatementExperiment(),
                 };
                 var learningSets = new[] {
                     Tuple.Create(

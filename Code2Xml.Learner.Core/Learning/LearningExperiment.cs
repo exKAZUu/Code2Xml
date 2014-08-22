@@ -29,7 +29,8 @@ using Paraiba.Collections.Generic;
 using Paraiba.Linq;
 
 namespace Code2Xml.Learner.Core.Learning {
-    [Serializable] public class ClassifierUnit {
+    [Serializable]
+    public class ClassifierUnit {
         public BigInteger Accepting;
         public BigInteger Rejecting;
 
@@ -53,7 +54,7 @@ namespace Code2Xml.Learner.Core.Learning {
             if (ReferenceEquals(this, obj)) {
                 return true;
             }
-            if (obj.GetType() != this.GetType()) {
+            if (obj.GetType() != GetType()) {
                 return false;
             }
             return Equals((ClassifierUnit)obj);
@@ -453,7 +454,8 @@ namespace Code2Xml.Learner.Core.Learning {
             var rejectingFeatures = rejectingFeatureSet.ToList();
             rejectingFeatures.Sort((s1, s2) => s1.Length.CompareTo(s2.Length));
 
-            Console.WriteLine("Feature Count: " + _acceptingFeatureCount + ", " + rejectingFeatures.Count);
+            Console.WriteLine(
+                    "Feature Count: " + _acceptingFeatureCount + ", " + rejectingFeatures.Count);
 
             var masterFeature = BigInteger.One;
             foreach (var feature in acceptingFeatures) {
@@ -505,6 +507,10 @@ namespace Code2Xml.Learner.Core.Learning {
                 Console.Write(".");
                 ConvertUppermostNodesToVectors(cst, selectedNames);
             }
+
+            Console.WriteLine(
+                    "Unique Element Count: "
+                    + (_idealAcceptedVector2GroupKey.Count + _idealRejectedVector2GroupKey.Count));
 
             if (_idealAcceptedVector2GroupKey.Keys.ToHashSet()
                     .Overlaps(_idealRejectedVector2GroupKey.Keys.ToHashSet())) {
