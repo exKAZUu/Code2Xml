@@ -27,15 +27,9 @@ using ParserTests;
 
 namespace Code2Xml.Learner.Core.Learning.Experiments {
     [TestFixture]
-    public class JavaExperiment {
-        private readonly StreamWriter _writer = File.CreateText(
-                @"C:\Users\exKAZUu\Dropbox\Data\java" + SkipCount + "_" + TakeCount + ".csv");
-
+    public class JavaExperiment : Experiment {
         public static CstGenerator Generator = CstGenerators.JavaUsingAntlr3;
-        private string _lastProjectName;
         private const string LangName = "Java";
-        public const int SkipCount = 0;
-        public const int TakeCount = 1;
 
         private static IEnumerable<TestCaseData> TestCases {
             get {
@@ -281,41 +275,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         [Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.java"), };
-            if (_lastProjectName != exp.GetType().Name) {
-                _writer.WriteLine();
-                _writer.Write(Path.GetFileName(projectPath) + ",");
-                _lastProjectName = exp.GetType().Name;
-            }
-            var ret = exp.Learn(seedPaths, _writer, projectPath, "*.java");
-            _writer.Flush();
-            if (ret.WrongFeatureCount > 0) {
-                Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
-                foreach (var we in ret.WronglyAcceptedElements) {
-                    var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
-                    Console.WriteLine(we.Code);
-                    Console.WriteLine(e.Code);
-                    Console.WriteLine("---------------------------------------------");
-                }
-                Console.WriteLine("---- WronglyRejectedElements ----");
-                foreach (var we in ret.WronglyRejectedElements) {
-                    var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
-                    Console.WriteLine(we.Code);
-                    Console.WriteLine(e.Code);
-                    Console.WriteLine("---------------------------------------------");
-                }
-            }
-            exp.Clear();
-            Assert.That(ret.WrongFeatureCount, Is.EqualTo(0));
+            Test(seedPaths, "*.java", exp, projectPath);
         }
 
         public void CalculateMetrics(LearningExperiment exp, string projectPath, int starCount) {
             if (!(exp is JavaSuperComplexBranchExperiment)) {
                 return;
             }
-            var commitPointers = Git.GetCommitPointers(projectPath, Generator, "*.java");
-            Action goNow = () => Git.Checkout(projectPath, commitPointers.Item1);
-            Action goBack = () => Git.Checkout(projectPath, commitPointers.Item2);
-            goBack();
             var allPaths = Directory.GetFiles(projectPath, "*.java", SearchOption.AllDirectories)
                     .ToList();
             var allNodes = allPaths.Select(p => Generator.GenerateTreeFromCodePath(p))
@@ -340,11 +306,11 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     statementCount++;
                 }
             }
-            _writer.Write(statementCount + ",");
-            _writer.Write(branchCount + ",");
-            _writer.WriteLine();
-            _writer.Flush();
-            goNow();
+            var writer = Writers[exp.GetType().Name];
+            writer.Write(statementCount + ",");
+            writer.Write(branchCount + ",");
+            writer.WriteLine();
+            writer.Flush();
         }
     }
 

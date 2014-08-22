@@ -27,13 +27,8 @@ using ParserTests;
 
 namespace Code2Xml.Learner.Core.Learning.Experiments {
     [TestFixture]
-    public class Python2Experiment {
-        private readonly StreamWriter _writer = File.CreateText(
-                @"C:\Users\exKAZUu\Dropbox\Data\py" + JavaExperiment.SkipCount + "_"
-                + JavaExperiment.TakeCount + ".csv");
-
+    public class Python2Experiment : Experiment {
         public static CstGenerator Generator = CstGenerators.Python2;
-        private string _lastProjectName;
         private const string LangName = "Python2";
 
         private static IEnumerable<TestCaseData> TestCases {
@@ -249,10 +244,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                             "8313c77f3d82740c905fb2061f9737fe7157c593"),
                 };
                 foreach (var exp in exps) {
-                    foreach (
-                            var learningSet in
-                                    learningSets.Skip(JavaExperiment.SkipCount)
-                                            .Take(JavaExperiment.TakeCount)) {
+                    foreach (var learningSet in learningSets.Skip(SkipCount).Take(TakeCount)) {
                         var url = learningSet.Item1;
                         var path = Fixture.GetGitRepositoryPath(url);
                         File.AppendAllText(@"C:\Users\exKAZUu\Desktop\Debug.txt", url + "Clone\r\n");
@@ -268,31 +260,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         [Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.py"), };
-            if (_lastProjectName != exp.GetType().Name) {
-                _writer.WriteLine();
-                _writer.Write(Path.GetFileName(projectPath) + ",");
-                _lastProjectName = exp.GetType().Name;
-            }
-            var ret = exp.Learn(seedPaths, _writer, projectPath, "*.py");
-            _writer.Flush();
-            if (ret.WrongFeatureCount > 0) {
-                Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
-                foreach (var we in ret.WronglyAcceptedElements) {
-                    var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
-                    Console.WriteLine(we.Code);
-                    Console.WriteLine(e.Code);
-                    Console.WriteLine("---------------------------------------------");
-                }
-                Console.WriteLine("---- WronglyRejectedElements ----");
-                foreach (var we in ret.WronglyRejectedElements) {
-                    var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
-                    Console.WriteLine(we.Code);
-                    Console.WriteLine(e.Code);
-                    Console.WriteLine("---------------------------------------------");
-                }
-            }
-            exp.Clear();
-            Assert.That(ret.WrongFeatureCount, Is.EqualTo(0));
+            Test(seedPaths, "*.py", exp, projectPath);
         }
     }
 

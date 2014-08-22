@@ -27,13 +27,8 @@ using ParserTests;
 
 namespace Code2Xml.Learner.Core.Learning.Experiments {
     [TestFixture]
-    public class JavaScriptExperiment {
-        private readonly StreamWriter _writer = File.CreateText(
-                @"C:\Users\exKAZUu\Dropbox\Data\js" + JavaExperiment.SkipCount + "_"
-                + JavaExperiment.TakeCount + ".csv");
-
+    public class JavaScriptExperiment : Experiment {
         public static CstGenerator Generator = CstGenerators.JavaScriptUsingAntlr3;
-        private string _lastProjectName;
         private const string LangName = "JavaScript";
 
         private static IEnumerable<TestCaseData> TestCases {
@@ -260,10 +255,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                             "f01bcee85446beb63a04d0b95c427f68c92ae4a9"),
                 };
                 foreach (var exp in exps) {
-                    foreach (
-                            var learningSet in
-                                    learningSets.Skip(JavaExperiment.SkipCount)
-                                            .Take(JavaExperiment.TakeCount)) {
+                    foreach (var learningSet in learningSets.Skip(SkipCount).Take(TakeCount)) {
                         var url = learningSet.Item1;
                         var path = Fixture.GetGitRepositoryPath(url);
                         File.AppendAllText(@"C:\Users\exKAZUu\Desktop\Debug.txt", url + "Clone\r\n");
@@ -279,15 +271,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         [Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "seed.js"), };
-            if (_lastProjectName != exp.GetType().Name) {
-                _writer.WriteLine();
-                _writer.Write(Path.GetFileName(projectPath) + ",");
-                _lastProjectName = exp.GetType().Name;
-            }
-            var ret = exp.Learn(seedPaths, _writer, projectPath, "*.js");
-            _writer.Flush();
-            exp.Clear();
-            Assert.That(ret.WrongFeatureCount, Is.EqualTo(0));
+            Test(seedPaths, "*.js", exp, projectPath);
         }
     }
 

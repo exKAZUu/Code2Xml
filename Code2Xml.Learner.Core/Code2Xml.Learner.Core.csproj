@@ -85,6 +85,7 @@
     <Compile Include="Inference.cs" />
     <Compile Include="Learning\ExperimentalResult.cs" />
     <Compile Include="Learning\Experiments\CSharpExperiment.cs" />
+    <Compile Include="Learning\Experiments\Experiment.cs" />
     <Compile Include="Learning\Experiments\JavaExperiment.cs" />
     <Compile Include="Learning\Experiments\JavaScriptExperiment.cs" />
     <Compile Include="Learning\Experiments\LuaExperiment.cs" />

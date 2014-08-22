@@ -27,16 +27,9 @@ using ParserTests;
 
 namespace Code2Xml.Learner.Core.Learning.Experiments {
     [TestFixture]
-    public class CSharpExperiment {
-        private readonly StreamWriter _writer = File.CreateText(
-                @"C:\Users\exKAZUu\Dropbox\Data\csharp" + JavaExperiment.SkipCount + "_"
-                + JavaExperiment.TakeCount + ".csv");
-
+    public class CSharpExperiment : Experiment {
         public static CstGenerator Generator = CstGenerators.CSharpUsingAntlr3;
-        private string _lastProjectName;
-
         private const string LangName = "CSharp";
-        //new MemoryCacheCstGenerator(new FileCacheCstGenerator(ProcessorLoader.CSharpUsingAntlr3));
 
         private static IEnumerable<TestCaseData> TestCases {
             get {
@@ -262,10 +255,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                             "ac5b1e242b351a4cc5632a9fcd3ecbad12917e47"),
                 };
                 foreach (var exp in exps) {
-                    foreach (
-                            var learningSet in
-                                    learningSets.Skip(JavaExperiment.SkipCount)
-                                            .Take(JavaExperiment.TakeCount)) {
+                    foreach (var learningSet in learningSets.Skip(SkipCount).Take(TakeCount)) {
                         var url = learningSet.Item1;
                         var path = Fixture.GetGitRepositoryPath(url);
                         File.AppendAllText(@"C:\Users\exKAZUu\Desktop\Debug.txt", url + "Clone\r\n");
@@ -281,15 +271,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         [Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.cs"), };
-            if (_lastProjectName != exp.GetType().Name) {
-                _writer.WriteLine();
-                _writer.Write(Path.GetFileName(projectPath) + ",");
-                _lastProjectName = exp.GetType().Name;
-            }
-            var ret = exp.Learn(seedPaths, _writer, projectPath, "*.cs");
-            _writer.Flush();
-            exp.Clear();
-            Assert.That(ret.WrongFeatureCount, Is.EqualTo(0));
+            Test(seedPaths, "*.cs", exp, projectPath);
         }
     }
 

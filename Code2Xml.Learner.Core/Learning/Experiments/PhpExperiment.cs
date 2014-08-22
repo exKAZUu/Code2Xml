@@ -27,16 +27,9 @@ using ParserTests;
 
 namespace Code2Xml.Learner.Core.Learning.Experiments {
     [TestFixture]
-    public class PhpExperiment {
-        private readonly StreamWriter _writer = File.CreateText(
-                @"C:\Users\exKAZUu\Dropbox\Data\php" + JavaExperiment.SkipCount + "_"
-                + JavaExperiment.TakeCount + ".csv");
-
+    public class PhpExperiment : Experiment {
         public static CstGenerator Generator = CstGenerators.PhpUsingAntlr3;
-        private string _lastProjectName;
         private const string LangName = "Php";
-
-        //new MemoryCacheCstGenerator(new FileCacheCstGenerator(ProcessorLoader.PhpUsingAntlr3));
 
         private static IEnumerable<TestCaseData> TestCases {
             get {
@@ -264,8 +257,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 foreach (var exp in exps) {
                     foreach (
                             var learningSet in
-                                    learningSets.Skip(JavaExperiment.SkipCount)
-                                            .Take(JavaExperiment.TakeCount)) {
+                                    learningSets.Skip(SkipCount)
+                                            .Take(TakeCount)) {
                         var url = learningSet.Item1;
                         var path = Fixture.GetGitRepositoryPath(url);
                         File.AppendAllText(@"C:\Users\exKAZUu\Desktop\Debug.txt", url + "Clone\r\n");
@@ -281,12 +274,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         [Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.php"), };
-            _writer.WriteLine();
-            _writer.Write(Path.GetFileName(projectPath) + ",");
-            var ret = exp.Learn(seedPaths, _writer, projectPath, "*.php");
-            _writer.Flush();
-            exp.Clear();
-            Assert.That(ret.WrongFeatureCount, Is.EqualTo(0));
+            Test(seedPaths, "*.php", exp, projectPath);
         }
     }
 

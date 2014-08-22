@@ -27,13 +27,8 @@ using ParserTests;
 
 namespace Code2Xml.Learner.Core.Learning.Experiments {
     [TestFixture]
-    public class LuaExperiment {
-        private readonly StreamWriter _writer = File.CreateText(
-                @"C:\Users\exKAZUu\Dropbox\Data\lua" + JavaExperiment.SkipCount + "_"
-                + JavaExperiment.TakeCount + ".csv");
-
+    public class LuaExperiment : Experiment {
         public static CstGenerator Generator = CstGenerators.LuaUsingAntlr3;
-        private string _lastProjectName;
         private const string langName = "Lua";
 
         private static IEnumerable<TestCaseData> TestCases {
@@ -257,10 +252,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                             "172180c51187092483fc50ddfd9a082b04cba16a"),
                 };
                 foreach (var exp in exps) {
-                    foreach (
-                            var learningSet in
-                                    learningSets.Skip(JavaExperiment.SkipCount)
-                                            .Take(JavaExperiment.TakeCount)) {
+                    foreach (var learningSet in learningSets.Skip(SkipCount).Take(TakeCount)) {
                         var url = learningSet.Item1;
                         var path = Fixture.GetGitRepositoryPath(url);
                         File.AppendAllText(@"C:\Users\exKAZUu\Desktop\Debug.txt", url + "Clone\r\n");
@@ -275,32 +267,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         [Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
-            var seedPaths = new List<string> { Fixture.GetInputCodePath(langName, "Seed.Lua"), };
-            if (_lastProjectName != exp.GetType().Name) {
-                _writer.WriteLine();
-                _writer.Write(Path.GetFileName(projectPath) + ",");
-                _lastProjectName = exp.GetType().Name;
-            }
-            var ret = exp.Learn(seedPaths, _writer, projectPath, "*.lua");
-            _writer.Flush();
-            //if (exp.WrongFeatureCount > 0) {
-            //	Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
-            //	foreach (var we in exp.WronglyAcceptedElements) {
-            //		var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
-            //		Console.WriteLine(we.Text());
-            //		Console.WriteLine(e.Text());
-            //		Console.WriteLine("---------------------------------------------");
-            //	}
-            //	Console.WriteLine("---- WronglyRejectedElements ----");
-            //	foreach (var we in exp.WronglyRejectedElements) {
-            //		var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
-            //		Console.WriteLine(we.Text());
-            //		Console.WriteLine(e.Text());
-            //		Console.WriteLine("---------------------------------------------");
-            //	}
-            //}
-            exp.Clear();
-            Assert.That(ret.WrongFeatureCount, Is.EqualTo(0));
+            var seedPaths = new List<string> { Fixture.GetInputCodePath(langName, "Seed.lua"), };
+            Test(seedPaths, "*.lua", exp, projectPath);
         }
     }
 
