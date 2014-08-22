@@ -41,16 +41,17 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new CSharpSwitchCaseExperiment(),
                     new CSharpSuperComplexBranchExperimentWithSwitch(),
                     new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue(),
-                    new CSharpComplexBranchExperiment(),
-                    new CSharpIfExperiment(),
-                    new CSharpWhileExperiment(),
-                    new CSharpDoWhileExperiment(),
-                    new CSharpForExperiment(),
-                    new CSharpPreconditionsExperiment(),
-                    new CSharpStatementExperiment(),
-                    new CSharpBlockExperiment(),
-                    new CSharpLabeledStatementExperiment(),
-                    new CSharpEmptyStatementExperiment(),
+                    
+                    //new CSharpComplexBranchExperiment(),
+                    //new CSharpIfExperiment(),
+                    //new CSharpWhileExperiment(),
+                    //new CSharpDoWhileExperiment(),
+                    //new CSharpForExperiment(),
+                    //new CSharpPreconditionsExperiment(),
+                    //new CSharpStatementExperiment(),
+                    //new CSharpBlockExperiment(),
+                    //new CSharpLabeledStatementExperiment(),
+                    //new CSharpEmptyStatementExperiment(),
                 };
                 var learningSets = new[] {
                     Tuple.Create(

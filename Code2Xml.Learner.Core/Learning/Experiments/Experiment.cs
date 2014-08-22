@@ -9,7 +9,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         protected readonly Dictionary<string, StreamWriter> Writers;
 
         public const int SkipCount = 0;
-        public const int TakeCount = 1;
+        public const int TakeCount = 2;
 
         public Experiment() {
             Writers = new Dictionary<string, StreamWriter>();
@@ -20,6 +20,22 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             var expName = exp.GetType().Name;
             if (!Writers.TryGetValue(expName, out writer)) {
                 writer = File.CreateText(@"C:\Users\exKAZUu\Dropbox\Data\" + expName + SkipCount + "_" + TakeCount + ".csv");
+                writer.Write("Name");
+                writer.Write(",");
+                writer.Write("AllNodes");
+                writer.Write(",");
+                writer.Write("TrainingNodes");
+                writer.Write(",");
+                writer.Write("AllVectors");
+                writer.Write(",");
+                writer.Write("TrainingVectors");
+                writer.Write(",");
+                writer.Write("SeedNodeCount");
+                writer.Write(",");
+                writer.Write("AbstractSeedNodeCount");
+                writer.Write(",");
+                writer.Write("AcceptedSeedNodeCount");
+                writer.WriteLine(",");
                 Writers.Add(expName, writer);
             }
             var ret = exp.Learn(seedPaths, writer, projectPath, searchPattern);
