@@ -230,7 +230,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "seed.js"), };
             LearnAndApply(seedPaths, LearningSets, Experiments);
         }
-        [Test, TestCaseSource("TestCases")]
+
+        //[Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "seed.js"), };
             Learn(seedPaths, exp, projectPath);
