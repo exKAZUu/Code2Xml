@@ -16,10 +16,8 @@
 
 #endregion
 
-using System.Linq;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Generators.ANTLRv3.CSharp;
-using Code2Xml.Learner.Core.Learning.Experiments;
 using NUnit.Framework;
 
 namespace Code2Xml.Core.Tests.Generators.ANTLRv3 {
