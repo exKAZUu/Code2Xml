@@ -249,13 +249,16 @@ namespace Code2Xml.Learner.Core.Learning {
                     .Where(t => t != null);
             _idealAcceptedVector2GroupKey.Clear();
             _idealRejectedVector2GroupKey.Clear();
+            _feature2Element.Clear();
+            _feature2Count.Clear();
+            _trainingAcceptedVector2GroupKey.Clear();
+            _trainingRejectedVector2GroupKey.Clear();
             foreach (var cst in allCsts) {
                 Console.Write(".");
                 ConvertUppermostNodesToVectors(cst, _selectedNames);
             }
-            _trainingAcceptedVector2GroupKey.Clear();
+            UpdateGroup();
             _trainingAcceptedVector2GroupKey.AddRange(_idealAcceptedVector2GroupKey);
-            _trainingRejectedVector2GroupKey.Clear();
             _trainingRejectedVector2GroupKey.AddRange(_idealRejectedVector2GroupKey);
             var count = 10;
             var time = Environment.TickCount;
