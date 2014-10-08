@@ -117,6 +117,8 @@ namespace Code2Xml.Core.Tests.Generators {
         }
 
         protected void VerifyRestoringCode(string code, bool write = true) {
+            _codeLength += code.Length;
+
             code = code.Replace("\r\n", "\n");
 
             var time = Environment.TickCount;

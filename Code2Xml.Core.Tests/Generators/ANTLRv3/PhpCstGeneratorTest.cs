@@ -148,38 +148,38 @@ class Resource extends \RESTful\Resource
                 @"0ce25cc36d430095dbc89f4de19dc319b4f90ee4", 4660)]
         [TestCase(@"https://github.com/WordPress/WordPress.git",
                 @"77e2da21cf2925e1b809888969677184c3d34fec", 3790)]
-        [TestCase(@"https://github.com/domnikl/DesignPatternsPHP.git",
-                @"ed291cd959053366e9d9edba62d8633034f93b0b", 3757)]
-        [TestCase(@"https://github.com/yiisoft/yii.git",
-                @"ffb9a06b2fdeef83098221334bfd34bc8c2e2aa6", 3682)]
-        [TestCase(@"https://github.com/sebastianbergmann/phpunit.git",
-                @"d8bd89e337ad2f810131b5e291d695b5671bbf23", 3619)]
-        [TestCase(@"https://github.com/zurb/ink.git",
-                @"af382061180d2f5efa9a088ed3ee005e575377d4", 3580)]
-        [TestCase(@"https://github.com/facebook/phabricator.git",
-                @"47245b1b59c7523af8f442ba05ffb4a4a8b41991", 3497)]
-        [TestCase(@"https://github.com/codeguy/Slim.git",
-                @"4906b77a07c7bd6ff1a99aea903e940a2d4fa106", 3487)]
-        [TestCase(@"https://github.com/facebook/facebook-php-sdk.git",
-                @"8a992afce97122556c4e42b0f1c1d60b9d49276d", 3392)]
-        [TestCase(@"https://github.com/fzaninotto/Faker.git",
-                @"89345a3ccc366bc14e0a984a086cc66028bd6411", 3366)]
-        [TestCase(@"https://github.com/Automattic/_s.git",
-                @"2d2f66f9a1e3ecd40fb6e5ba90e4e5a44ed3b5ae", 3258)]
-        [TestCase(@"https://github.com/guzzle/guzzle.git",
-                @"364fa40fb8dccbd1fb6da564a7996f75a36e8d36", 3170)]
-        [TestCase(@"https://github.com/ginatrapani/ThinkUp.git",
-                @"06bc738952cd534938ebd03fe05a8f1a0cb9d8b8", 3033)]
-        [TestCase(@"https://github.com/al3x/sovereign.git",
-                @"4349e03dfc4b53e75a78441ebd8ace93f8e4cd47", 2927)]
-        [TestCase(@"https://github.com/serbanghita/Mobile-Detect.git",
-                @"d70de7bfd0641d4d32a6f9c71e1f5d2839a5331e", 2862)]
-        [TestCase(@"https://github.com/abraham/twitteroauth.git",
-                @"4b775766fe3526ebc67ee20c97ff29a3b47bc5d8", 2304)]
-        [TestCase(@"https://github.com/subtlepatterns/SubtlePatterns.git",
-                @"6e056565a1254c967228aab60c9d9c7d0e63a7e3", 2271)]
-        [TestCase(@"https://github.com/PHPOffice/PHPExcel.git",
-                @"c2a277c447ca965bbe030cd83d6b92df95661541", 2240)]
+        //[TestCase(@"https://github.com/domnikl/DesignPatternsPHP.git",
+        //        @"ed291cd959053366e9d9edba62d8633034f93b0b", 3757)]
+        //[TestCase(@"https://github.com/yiisoft/yii.git",
+        //        @"ffb9a06b2fdeef83098221334bfd34bc8c2e2aa6", 3682)]
+        //[TestCase(@"https://github.com/sebastianbergmann/phpunit.git",
+        //        @"d8bd89e337ad2f810131b5e291d695b5671bbf23", 3619)]
+        //[TestCase(@"https://github.com/zurb/ink.git",
+        //        @"af382061180d2f5efa9a088ed3ee005e575377d4", 3580)]
+        //[TestCase(@"https://github.com/facebook/phabricator.git",
+        //        @"47245b1b59c7523af8f442ba05ffb4a4a8b41991", 3497)]
+        //[TestCase(@"https://github.com/codeguy/Slim.git",
+        //        @"4906b77a07c7bd6ff1a99aea903e940a2d4fa106", 3487)]
+        //[TestCase(@"https://github.com/facebook/facebook-php-sdk.git",
+        //        @"8a992afce97122556c4e42b0f1c1d60b9d49276d", 3392)]
+        //[TestCase(@"https://github.com/fzaninotto/Faker.git",
+        //        @"89345a3ccc366bc14e0a984a086cc66028bd6411", 3366)]
+        //[TestCase(@"https://github.com/Automattic/_s.git",
+        //        @"2d2f66f9a1e3ecd40fb6e5ba90e4e5a44ed3b5ae", 3258)]
+        //[TestCase(@"https://github.com/guzzle/guzzle.git",
+        //        @"364fa40fb8dccbd1fb6da564a7996f75a36e8d36", 3170)]
+        //[TestCase(@"https://github.com/ginatrapani/ThinkUp.git",
+        //        @"06bc738952cd534938ebd03fe05a8f1a0cb9d8b8", 3033)]
+        //[TestCase(@"https://github.com/al3x/sovereign.git",
+        //        @"4349e03dfc4b53e75a78441ebd8ace93f8e4cd47", 2927)]
+        //[TestCase(@"https://github.com/serbanghita/Mobile-Detect.git",
+        //        @"d70de7bfd0641d4d32a6f9c71e1f5d2839a5331e", 2862)]
+        //[TestCase(@"https://github.com/abraham/twitteroauth.git",
+        //        @"4b775766fe3526ebc67ee20c97ff29a3b47bc5d8", 2304)]
+        //[TestCase(@"https://github.com/subtlepatterns/SubtlePatterns.git",
+        //        @"6e056565a1254c967228aab60c9d9c7d0e63a7e3", 2271)]
+        //[TestCase(@"https://github.com/PHPOffice/PHPExcel.git",
+        //        @"c2a277c447ca965bbe030cd83d6b92df95661541", 2240)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
             VerifyRestoringGitRepo(url, commitPointer, "*.php");
         }

@@ -87,42 +87,42 @@ if true then --[[VERBOSE]] print(1) end
                 @"14aa1812dd4a596b23df70d58b78b8052258b9b5", 23)]
         [TestCase(@"https://github.com/lonelyplanet/openresty-statsd.git",
                 @"9b1a788cabe1fcb20843f4dc0d78468ed04f9a62", 23)]
-        [TestCase(@"https://github.com/Cluain/Lua-Simple-XML-Parser.git",
-                @"2c318f3b01121dad61dee34b8c80c970ff938192", 23)]
-        [TestCase(@"https://github.com/golgote/neturl.git",
-                @"258c3f6e637030a39265b74ae1e9d681cf977296", 23)]
-        [TestCase(@"https://github.com/JackH79/.dotfiles.git",
-                @"b957416b6a83a0d05fa943067e821ed77732c201", 22)]
-        [TestCase(@"https://github.com/kamaitama/Tiramisu--outdated--don-t-use-.git",
-                @"15a847ad05042ae4d7b1117b887902e33470f076", 22)]
-        [TestCase(@"https://github.com/Wiladams/LJIT2Win32.git",
-                @"59e4419fc4fae4af2553e65fbbaa3d8a0125b4c4", 22)]
-        [TestCase(@"https://github.com/haimanman/jx3.git",
-                @"4fbdd1db34096d1c904ca426aa0f19c4f29595c5", 22)]
-        [TestCase(@"https://github.com/PrinterLUA/FORGOTTENSERVER-ORTS.git",
-                @"916b8b9341dac800a7adbbe76efb1b56d1bdb78d", 22)]
-        [TestCase(@"https://github.com/Thalassicus/cep-bnw.git",
-                @"a0f24cc82fd05ed2b1bfff411f276e8ef7ace176", 22)]
-        [TestCase(@"https://github.com/affli/xCT.git",
-                @"c20ea295aa816b53b6294eae47d6c4af2eb623d7", 22)]
-        [TestCase(@"https://github.com/mascarenhas/luaclr.git",
-                @"b0586fcba4320beab46a2d243ca80894fee02afd", 22)]
-        [TestCase(@"https://github.com/Haleth/FreeUI.git",
-                @"60353ebfe2a143c7beb32ba600701b6dd89e7398", 22)]
-        [TestCase(@"https://github.com/speedata/publisher.git",
-                @"8f4415a068bd7561f514b7cc6cc603e415a1bde6", 22)]
-        [TestCase(@"https://github.com/FPtje/Sublime-GLua-Highlight.git",
-                @"7a5a310f440519a25d4f344fcd25906fdd5baf98", 22)]
-        [TestCase(@"https://github.com/xolox/lua-lxsh.git",
-                @"ee16ce4903616030a26c15c4f8ce2222434f0ade", 22)]
-        [TestCase(@"https://github.com/davidm/lua-bit-numberlua.git",
-                @"30b6828b298b46411b548202d40524caba06a99c", 22)]
-        [TestCase(@"https://github.com/mikar/awesome-themes.git",
-                @"877511213c3db9397166bcd1436087b39387aa5d", 22)]
-        [TestCase(@"https://github.com/ansca/Storyboard-Sample.git",
-                @"500f3bfeda09abf6cf82f679b3e14cad65b40900", 22)]
-        [TestCase(@"https://github.com/zrong/lua.git",
-                @"5e3e50524a36552e95a4cdda2025dbb8b1694a65", 22)]
+        //[TestCase(@"https://github.com/Cluain/Lua-Simple-XML-Parser.git",
+        //        @"2c318f3b01121dad61dee34b8c80c970ff938192", 23)]
+        //[TestCase(@"https://github.com/golgote/neturl.git",
+        //        @"258c3f6e637030a39265b74ae1e9d681cf977296", 23)]
+        //[TestCase(@"https://github.com/JackH79/.dotfiles.git",
+        //        @"b957416b6a83a0d05fa943067e821ed77732c201", 22)]
+        //[TestCase(@"https://github.com/kamaitama/Tiramisu--outdated--don-t-use-.git",
+        //        @"15a847ad05042ae4d7b1117b887902e33470f076", 22)]
+        //[TestCase(@"https://github.com/Wiladams/LJIT2Win32.git",
+        //        @"59e4419fc4fae4af2553e65fbbaa3d8a0125b4c4", 22)]
+        //[TestCase(@"https://github.com/haimanman/jx3.git",
+        //        @"4fbdd1db34096d1c904ca426aa0f19c4f29595c5", 22)]
+        //[TestCase(@"https://github.com/PrinterLUA/FORGOTTENSERVER-ORTS.git",
+        //        @"916b8b9341dac800a7adbbe76efb1b56d1bdb78d", 22)]
+        //[TestCase(@"https://github.com/Thalassicus/cep-bnw.git",
+        //        @"a0f24cc82fd05ed2b1bfff411f276e8ef7ace176", 22)]
+        //[TestCase(@"https://github.com/affli/xCT.git",
+        //        @"c20ea295aa816b53b6294eae47d6c4af2eb623d7", 22)]
+        //[TestCase(@"https://github.com/mascarenhas/luaclr.git",
+        //        @"b0586fcba4320beab46a2d243ca80894fee02afd", 22)]
+        //[TestCase(@"https://github.com/Haleth/FreeUI.git",
+        //        @"60353ebfe2a143c7beb32ba600701b6dd89e7398", 22)]
+        //[TestCase(@"https://github.com/speedata/publisher.git",
+        //        @"8f4415a068bd7561f514b7cc6cc603e415a1bde6", 22)]
+        //[TestCase(@"https://github.com/FPtje/Sublime-GLua-Highlight.git",
+        //        @"7a5a310f440519a25d4f344fcd25906fdd5baf98", 22)]
+        //[TestCase(@"https://github.com/xolox/lua-lxsh.git",
+        //        @"ee16ce4903616030a26c15c4f8ce2222434f0ade", 22)]
+        //[TestCase(@"https://github.com/davidm/lua-bit-numberlua.git",
+        //        @"30b6828b298b46411b548202d40524caba06a99c", 22)]
+        //[TestCase(@"https://github.com/mikar/awesome-themes.git",
+        //        @"877511213c3db9397166bcd1436087b39387aa5d", 22)]
+        //[TestCase(@"https://github.com/ansca/Storyboard-Sample.git",
+        //        @"500f3bfeda09abf6cf82f679b3e14cad65b40900", 22)]
+        //[TestCase(@"https://github.com/zrong/lua.git",
+        //        @"5e3e50524a36552e95a4cdda2025dbb8b1694a65", 22)]
         //[TestCase(@"https://github.com/lovelyrpgcommunity/A-Whiff-of-Steam.git",
         //        @"e44aea49b6de9955603cb4db5cd88beea003f3f0", 21)]
         //[TestCase(@"https://github.com/fperrad/lua-TestMore.git",
