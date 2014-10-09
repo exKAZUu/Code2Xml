@@ -39,6 +39,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public void LearnAndApply(
                 ICollection<string> seedPaths, Tuple<string, string>[] learningSets,
                 LearningExperiment[] experiments) {
+            const int projectCount = 3;
             var projectPaths =
                     learningSets.Select(
                             t => {
@@ -49,46 +50,42 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                                 return path;
                             }).ToList();
             foreach (var exp in experiments) {
-                LearnWithoutClearing(seedPaths, exp, projectPaths.Take(10));
-                foreach (var projectPath in projectPaths.Skip(10)) {
-                    exp.Apply(null, new[] { projectPath }, SearchPattern);
+                LearnWithoutClearing(seedPaths, exp, projectPaths.Take(projectCount));
+                var writer = CreateWriter(
+                        exp.GetType().Name + "_" + projectCount + ".csv");
+                foreach (var projectPath in projectPaths.Skip(projectCount)) {
+                    var codePaths = Directory.GetFiles(
+                            projectPath, SearchPattern, SearchOption.AllDirectories);
+                    writer.Write(projectPath);
+                    writer.Write(",");
+                    var ret = exp.Apply(writer, codePaths, SearchPattern);
+                    writer.Write(ret.WrongElementCount);
+                    writer.Write(",");
+                    writer.Write(ret.WrongFeatureCount);
+                    writer.Write(",");
+                    writer.WriteLine();
+                    writer.Flush();
                 }
+                exp.Clear();
             }
         }
 
         private void LearnWithoutClearing(
                 ICollection<string> seedPaths, LearningExperiment exp,
                 IEnumerable<string> projectPaths) {
-            StreamWriter writer;
-            var expName = exp.GetType().Name;
-            if (!Writers.TryGetValue(expName, out writer)) {
-                writer =
-                        File.CreateText(
-                                @"C:\Users\exKAZUu\Dropbox\Data\" + expName + SkipCount + "_"
-                                + TakeCount + ".csv");
-                writer.Write("Name");
-                writer.Write(",");
-                writer.Write("AllNodes");
-                writer.Write(",");
-                writer.Write("TrainingNodes");
-                writer.Write(",");
-                writer.Write("AllVectors");
-                writer.Write(",");
-                writer.Write("TrainingVectors");
-                writer.Write(",");
-                writer.Write("SeedNodeCount");
-                writer.Write(",");
-                writer.Write("AbstractSeedNodeCount");
-                writer.Write(",");
-                writer.Write("AcceptedSeedNodeCount");
-                writer.WriteLine(",");
-                Writers.Add(expName, writer);
-            }
+            var writer = CreateWriter(
+                    exp.GetType().Name + SkipCount + "_" + TakeCount + ".csv");
             var codePaths = projectPaths.SelectMany(
                     projectPath => Directory.GetFiles(
                             projectPath, SearchPattern, SearchOption.AllDirectories)
                     ).ToList();
+            writer.Write(projectPaths.First());
+            writer.Write(",");
             var ret = exp.Learn(seedPaths, writer, codePaths, SearchPattern);
+            writer.Write(ret.WrongElementCount);
+            writer.Write(",");
+            writer.Write(ret.WrongFeatureCount);
+            writer.Write(",");
             writer.WriteLine();
             writer.Flush();
             if (ret.WrongFeatureCount > 0) {
@@ -108,6 +105,36 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 }
             }
             Assert.That(ret.WrongFeatureCount, Is.EqualTo(0));
+        }
+
+        private StreamWriter CreateWriter(string fileName) {
+            StreamWriter writer;
+            if (!Writers.TryGetValue(fileName, out writer)) {
+                writer = File.CreateText(@"C:\Users\exKAZUu\Dropbox\Data\" + fileName);
+                writer.Write("Name");
+                writer.Write(",");
+                writer.Write("AllNodes");
+                writer.Write(",");
+                writer.Write("TrainingNodes");
+                writer.Write(",");
+                writer.Write("AllVectors");
+                writer.Write(",");
+                writer.Write("TrainingVectors");
+                writer.Write(",");
+                writer.Write("SeedNodeCount");
+                writer.Write(",");
+                writer.Write("AbstractSeedNodeCount");
+                writer.Write(",");
+                writer.Write("AcceptedSeedNodeCount");
+                writer.Write(",");
+                writer.Write("WrongNodeCount");
+                writer.Write(",");
+                writer.Write("WrongAbstractNodeCount");
+                writer.Write(",");
+                writer.WriteLine();
+                Writers.Add(fileName, writer);
+            }
+            return writer;
         }
 
         public void Learn(

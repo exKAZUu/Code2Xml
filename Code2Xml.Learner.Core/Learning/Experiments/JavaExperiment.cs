@@ -67,9 +67,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     @"https://github.com/Prototik/HoloEverywhere.git",
                     @"3b6021aa4af717cd31b1b6c877f6c30b674af6d9"),
             Tuple.Create(
-                    @"https://github.com/Bukkit/CraftBukkit.git",
-                    @"1ab090e71ea261fe38cef980bc2ebe696a494ea3"),
-            Tuple.Create(
                     @"https://github.com/fernandezpablo85/scribe-java.git",
                     @"135ad50a4e4e27e97f09e42ae50d6011c7af7a4b"),
             Tuple.Create(

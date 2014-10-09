@@ -226,6 +226,31 @@ namespace Code2Xml.Learner.Core.Learning {
             var time = Environment.TickCount;
             var result = LearnAndApply(ref count);
             Console.WriteLine("Time: " + (Environment.TickCount - time));
+
+            if (writer != null) {
+                writer.Write(
+                        _idealAcceptedVector2GroupKey.Concat(_idealRejectedVector2GroupKey)
+                                .Sum(f => _feature2Count[f.Key]));
+                writer.Write(",");
+                writer.Write(
+                        _trainingAcceptedVector2GroupKey.Concat(_trainingRejectedVector2GroupKey)
+                                .Sum(f => _feature2Count[f.Key]));
+                writer.Write(",");
+                writer.Write(
+                        _idealAcceptedVector2GroupKey.Count + _idealRejectedVector2GroupKey.Count);
+                writer.Write(",");
+                writer.Write(
+                        _trainingAcceptedVector2GroupKey.Count
+                        + _trainingRejectedVector2GroupKey.Count);
+                writer.Write(",");
+                writer.Write(_seedElementCount);
+                writer.Write(",");
+                writer.Write(_seedAbstractCount);
+                writer.Write(",");
+                writer.Write(_acceptedSeedElementCount);
+                writer.Write(",");
+            }
+
             return result;
         }
 
