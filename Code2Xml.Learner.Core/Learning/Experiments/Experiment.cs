@@ -29,6 +29,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public const int SkipCount = 0;
         public const int TakeCount = 2;
+        private const int ProjectCount = 10;
 
         protected Experiment() {
             Writers = new Dictionary<string, StreamWriter>();
@@ -39,7 +40,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public void LearnAndApply(
                 ICollection<string> seedPaths, Tuple<string, string>[] learningSets,
                 LearningExperiment[] experiments) {
-            const int projectCount = 3;
             var projectPaths =
                     learningSets.Select(
                             t => {
@@ -50,10 +50,9 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                                 return path;
                             }).ToList();
             foreach (var exp in experiments) {
-                LearnWithoutClearing(seedPaths, exp, projectPaths.Take(projectCount));
-                var writer = CreateWriter(
-                        exp.GetType().Name + "_" + projectCount + ".csv");
-                foreach (var projectPath in projectPaths.Skip(projectCount)) {
+                LearnWithoutClearing(seedPaths, exp, projectPaths.Take(ProjectCount));
+                var writer = CreateWriter(exp.GetType().Name + "_" + ProjectCount + ".csv");
+                foreach (var projectPath in projectPaths.Skip(ProjectCount)) {
                     var codePaths = Directory.GetFiles(
                             projectPath, SearchPattern, SearchOption.AllDirectories);
                     writer.Write(projectPath);
@@ -73,8 +72,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         private void LearnWithoutClearing(
                 ICollection<string> seedPaths, LearningExperiment exp,
                 IEnumerable<string> projectPaths) {
-            var writer = CreateWriter(
-                    exp.GetType().Name + SkipCount + "_" + TakeCount + ".csv");
+            var writer = CreateWriter(exp.GetType().Name + "_" + ProjectCount + ".csv");
             var codePaths = projectPaths.SelectMany(
                     projectPath => Directory.GetFiles(
                             projectPath, SearchPattern, SearchOption.AllDirectories)
