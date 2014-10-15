@@ -34,10 +34,10 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         private static readonly LearningExperiment[] Experiments = {
             new PythonComplexStatementExperiment(),
-            new PythonSuperComplexBranchExperiment(),
-            new PythonExpressionStatementExperiment(),
-            new PythonArithmeticOperatorExperiment(),
-            new PythonSuperComplexBranchExperimentWithoutTrue(), 
+            //new PythonSuperComplexBranchExperiment(),
+            //new PythonExpressionStatementExperiment(),
+            //new PythonArithmeticOperatorExperiment(),
+            //new PythonSuperComplexBranchExperimentWithoutTrue(), 
             //new PythonEmptyStatementExperiment(),
         };
 

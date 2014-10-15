@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<package >
+<package>
   <metadata>
     <id>Code2Xml</id>
-    <version>3.1.2.91</version>
+    <version>3.2.0.92</version>
     <title>Code2Xml</title>
     <authors>Kazunori Sakamoto</authors>
     <owners>Kazunori Sakamoto</owners>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>https://github.com/exKAZUu/Code2Xml/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Code2Xml is a parser collection that inter-converts source code and XML-based abstract syntax trees (ASTs) supporting multiple programming languages.</description>
+    <description>Code2Xml is a parser collection that inter-converts source code and XML-based concrete syntax trees (CSTs) supporting multiple programming languages.</description>
     <releaseNotes>Rewrite Code2Xml.</releaseNotes>
     <copyright>Copyright (C) Kazunori Sakamoto 2011-2014</copyright>
     <tags>Library Parser XML Programming Language</tags>
