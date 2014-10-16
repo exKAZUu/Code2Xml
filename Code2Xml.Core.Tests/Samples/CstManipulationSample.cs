@@ -89,7 +89,7 @@ namespace Code2Xml.Core.Tests.Samples {
         }
  
         /// <summary>
-        /// Insert statements by manipulating Java CST.
+        /// Remove hidden tokens such as white spaces by manipulating Java CST.
         /// CST structure depends on ANTLR grammar file for Java
         /// (https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/ANTLRv3/Generators/Java/Java.g).
         /// </summary>
@@ -108,6 +108,32 @@ namespace Code2Xml.Core.Tests.Samples {
             }
             var actualCode = cst.Code;
             Assert.That(actualCode, Is.EqualTo(expected));
+        }
+  
+        /// <summary>
+        /// Remove single nodes which have only a child node by manipulating Java CST.
+        /// CST structure depends on ANTLR grammar file for Java
+        /// (https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/ANTLRv3/Generators/Java/Java.g).
+        /// </summary>
+        [Test]
+        public void RemoveSingleNodes() {
+            const string code = @"class K { void m1() {} void m2() { int i; } }";
+            var cst = CstGenerators.JavaUsingAntlr3.GenerateTreeFromCodeText(code);
+            var nodes = cst.Descendants().ToList();
+            var originalNodeCount = nodes.Count;
+            foreach (var node in nodes) {
+                if (node.Parent == null)
+                    continue;
+                var single = node.DescendantsOfSingle().LastOrDefault();
+                if (single != null && node.FirstChild != single) {
+                    single.Remove();
+                    node.FirstChild.Remove();
+                    node.AddFirst(single);
+                }
+            }
+            Console.WriteLine(originalNodeCount + ", " + cst.Descendants().Count());
+            var actualCode = cst.Code;
+            Assert.That(actualCode, Is.EqualTo(code));
         }
     }
 }
