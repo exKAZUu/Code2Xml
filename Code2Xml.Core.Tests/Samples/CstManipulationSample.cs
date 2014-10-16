@@ -87,5 +87,27 @@ namespace Code2Xml.Core.Tests.Samples {
             var actualCode = cst.Code;
             Assert.That(actualCode, Is.EqualTo(expected));
         }
+ 
+        /// <summary>
+        /// Insert statements by manipulating Java CST.
+        /// CST structure depends on ANTLR grammar file for Java
+        /// (https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/ANTLRv3/Generators/Java/Java.g).
+        /// </summary>
+        [Test]
+        public void RemoveHiddenTokens() {
+            const string code = @"class K {
+    void m1() {}
+    void m2() { int i; }
+}";
+            const string expected =
+                    @"classK{voidm1(){}voidm2(){inti;}}";
+            var cst = CstGenerators.JavaUsingAntlr3.GenerateTreeFromCodeText(code);
+            Console.WriteLine(cst.ToXml());
+            foreach (var node in cst.AllTokenNodes()) {
+                node.Hiddens.Clear();
+            }
+            var actualCode = cst.Code;
+            Assert.That(actualCode, Is.EqualTo(expected));
+        }
     }
 }
