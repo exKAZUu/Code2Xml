@@ -122,5 +122,13 @@ namespace Code2Xml.Core.Generators.ANTLRv3 {
                 TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
             return GenerateSyntaxTree(new ANTLRReaderStream(codeReader), throwingParseError);
         }
+ 
+        public void TryParse(TextReader codeReader) {
+            var tokenStream = CreateTokenStream(codeReader);
+            var parser = CreateParser(tokenStream);
+            parser.TraceDestination = Console.Error;
+            parser.TreeAdaptor = new ExperimentalCstBuilderForAntlr3();
+            Parse(parser);
+       }
     }
 }

@@ -71,6 +71,14 @@ namespace Code2Xml.Core.Generators.ANTLRv4 {
                 string code, bool throwingParseError = DefaultThrowingParseError) {
             return GenerateSyntaxTree(new AntlrInputStream(code), throwingParseError);
         }
+
+        public void TryParse(TextReader codeReader) {
+            var lexer = CreateLexer(new AntlrInputStream(codeReader));
+            var commonTokenStream = new CommonTokenStream(lexer);
+            var parser = CreateParser(commonTokenStream);
+            parser.ErrorHandler = new MyBailErrorStrategy();
+            Parse(parser);
+        }
     }
 
     public class MyBailErrorStrategy : DefaultErrorStrategy {

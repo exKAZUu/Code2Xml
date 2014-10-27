@@ -50,14 +50,14 @@ namespace Code2Xml.Core.Generators.ANTLRv3 {
             return root;
         }
 
-        public void AddChild(
+        public virtual void AddChild(
                 object t, object child, Antlr3CstNode target, string id, Antlr3CstNode parent) {
             parent.Node.AddLast(target.Node);
             target.Node.RuleId = id.Substring(target.Node.Name.Length);
             base.AddChild(t, child);
         }
 
-        public object Create(IToken token, string id, Antlr3CstNode parent) {
+        public virtual object Create(IToken token, string id, Antlr3CstNode parent) {
             if (token != null) {
                 var count = token.TokenIndex;
                 var tokenName = DetermineElementName(token, Code2XmlConstants.TokenSetElementName);
@@ -108,6 +108,22 @@ namespace Code2Xml.Core.Generators.ANTLRv3 {
     public class CstBuilderForAntlr3WithReportingError : CstBuilderForAntlr3 {
         public CstBuilderForAntlr3WithReportingError(CommonTokenStream stream, string[] tokenNames)
                 : base(stream, tokenNames) {}
+
+        public override object ErrorNode(
+                ITokenStream input, IToken start, IToken stop, RecognitionException e) {
+            throw new ParseException(e);
+        }
+    }
+
+    public class ExperimentalCstBuilderForAntlr3 : CstBuilderForAntlr3 {
+        public override void AddChild(
+                object t, object child, Antlr3CstNode target, string id, Antlr3CstNode parent) {
+            base.AddChild(t, child);
+        }
+
+        public override object Create(IToken token, string id, Antlr3CstNode parent) {
+            return base.Create(token);
+        }
 
         public override object ErrorNode(
                 ITokenStream input, IToken start, IToken stop, RecognitionException e) {
