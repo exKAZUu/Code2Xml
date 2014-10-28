@@ -128,11 +128,16 @@ namespace Code2Xml.Core.Tests.Generators {
             code = code.Replace("\r\n", "\n");
 
             var time = Environment.TickCount;
-            var tree = Generator.GenerateTreeFromCodeText(code, true);
+            try {
+                Generator.TryParseFromCodeText(code);
+            } catch {}
             var time2 = Environment.TickCount;
+            var tree = Generator.GenerateTreeFromCodeText(code, true);
+            var time3 = Environment.TickCount;
             var code2 = Generator.GenerateCodeFromTree(tree);
-            _timeToGenerateCode += (Environment.TickCount - time2);
-            _timeToGenerateTree += (time2 - time);
+            _timeToGenerateCode += (Environment.TickCount - time3);
+            _timeToGenerateTree += (time3 - time2);
+            _timeToParseTree += (time2 - time);
 
             Assert.That(code2, Is.EqualTo(code));
             if (write) {
