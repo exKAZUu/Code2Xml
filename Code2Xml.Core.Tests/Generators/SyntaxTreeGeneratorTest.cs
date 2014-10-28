@@ -127,6 +127,9 @@ namespace Code2Xml.Core.Tests.Generators {
 
             code = code.Replace("\r\n", "\n");
 
+            try {
+                Generator.TryParseFromCodeText(code);
+            } catch {}
             var time = Environment.TickCount;
             try {
                 Generator.TryParseFromCodeText(code);
