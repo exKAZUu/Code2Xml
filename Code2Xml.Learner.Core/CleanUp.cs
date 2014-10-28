@@ -82,22 +82,22 @@ namespace Code2Xml.Learner.Core {
 
         [Test]
         public void GenerateTestCases() {
-            var inPath = @"C:\Users\exKAZUu\Desktop\php_repo.csv";
+            var inPath = @"G:\RepositoryProbe\php.csv";
             if (!File.Exists(inPath)) {
                 return;
             }
             var set = new HashSet<string>();
             var count = 0;
-            foreach (var line in File.ReadAllLines(inPath)) {
+            foreach (var line in File.ReadAllLines(inPath).Skip(1).Take(10)) {
                 var items = line.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
                 if (items.Length <= 2) {
                     continue;
                 }
                 if (!set.Contains(items[0])) {
                     set.Add(items[0]);
-                    Console.WriteLine("Tuple.Create(@\"" + items[0] + "\",");
+                    Console.WriteLine("[TestCase(@\"" + items[0] + "\",");
                     Console.WriteLine(
-                            "@\"" + items[1] + "\",\"" + items[2] + "\"),");
+                            "@\"" + items[3] + "\"," + items[6] + ")]");
                     if (++count == 50) {
                         return;
                     }

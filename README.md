@@ -1,16 +1,27 @@
 Code2Xml [![Build Status](https://secure.travis-ci.org/exKAZUu/Code2Xml.png?branch=master)](http://travis-ci.org/exKAZUu/Code2Xml)
 =================
 
+# Overview
+
+Code2Xml is a parser collection that inter-converts source code and XML-based concrete syntax trees (CSTs) supporting multiple programming languages.
+
 # How to Use
 
 ## Sample Code using CstGenerator
 
-- https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/CstGeneratorSample.cs
+- https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Core.Tests/Samples/CstGeneratorSample.cs
   - Inter-Convert between CST, XML and code for C#, Java and Lua.
-- https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/CstManipulationSample.cs
+- https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Core.Tests/Samples/AnalysisAndTransformationSample.cs
+  - CountIfInJava: Count if statements to measure cyclomatic complexity
+  - ModifyIfConditionInC: Modify all condition expressions to measure branch coverage
+  - ReplaceStatementWithPassInPython: Replace each statement with `pass` statement to conduct mutation testing
+  - RemoveStatementInCSharp: Remove each statement to conduct mutation testing
+- https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Core.Tests/Samples/CstManipulationSample.cs
   - ProcessIdentifiers: Extract identifiers including a method name
   - ProcessComments: Extract comments
   - InsertStatements: Insert a statement into each method
+  - RemoveHiddenTokens: Remove all the hidden tokens (e.g. whitespace)
+  - RemoveSingleNodes: Remove child nodes which has no sibling node
 - https://github.com/exKAZUu/Code2Xml/blob/master/Code2Xml.Languages/Tests/Samples/CstSerializationSample.cs
   - Serialize CST as a text or a binary
 
@@ -59,14 +70,14 @@ http://research.microsoft.com/en-us/projects/contracts/
 * Ruby 2.x for parsing Ruby 1.8.x, 1.9.x and 2.0.x
 
 ## Project Structure
-- Code2Xml.Languages.ANTLRv3.dll  
+- Code2Xml.Core.Generators.ANTLRv3
 Provides ```CstGenerator``` classes for C, C#, Java, JavaScript, Lua and PHP.
 
-- Code2Xml.Languages.ExternalProcessors.dll  
-Provides ```CstGenerator``` classes for Python and Ruby.
+- Code2Xml.Core.Generators.ANTLRv4
+Provides ```CstGenerator``` classes for C, Clojure, ECMAScript, Erlang, GarryLua, Java, Lua, ObjectiveC, Python3, R, Smalltalk, Switft and Verilog2001.
 
-- Code2Xml.Languages.ANTLRv4.dll (under experiment)  
-Provides ```CstGenerator``` classes for C, Clojure, Erlang, Java, Lua, ObjectiveC, R and Verilog2001.
+- Code2Xml.Core.Generators.ExternalGenerators
+Provides ```CstGenerator``` classes for Python and Ruby.
 
 ## Other Information
 

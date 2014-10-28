@@ -72,12 +72,30 @@ namespace Code2Xml.Core.Generators.ANTLRv4 {
             return GenerateSyntaxTree(new AntlrInputStream(code), throwingParseError);
         }
 
-        public void TryParse(TextReader codeReader) {
-            var lexer = CreateLexer(new AntlrInputStream(codeReader));
+        private void TryParse(ICharStream charStream) {
+            var lexer = CreateLexer(charStream);
             var commonTokenStream = new CommonTokenStream(lexer);
             var parser = CreateParser(commonTokenStream);
             parser.ErrorHandler = new MyBailErrorStrategy();
             Parse(parser);
+        }
+
+        /// <summary>
+        /// Try to parse the source code which is retrieved from the specified <c>TextReader</c>.
+        /// </summary>
+        /// <param name="codeReader"></param>
+        /// <returns></returns>
+        public override void TryParseFromCode(TextReader codeReader) {
+            TryParse(new AntlrInputStream(codeReader));
+        }
+
+        /// <summary>
+        /// Try to parse the source code of the specified <c>string</c>.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        public override void TryParseFromCodeText(string code) {
+            TryParse(new AntlrInputStream(code));
         }
     }
 

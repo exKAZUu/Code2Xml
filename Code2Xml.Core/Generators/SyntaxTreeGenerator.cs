@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics.Contracts;
@@ -67,6 +68,58 @@ namespace Code2Xml.Core.Generators {
         protected SyntaxTreeGenerator(params string[] extensions)
                 : this((IEnumerable<string>)extensions) {}
 
+        #region ParseTree
+
+        /// <summary>
+        /// Try to parse the source code which is retrieved from the specified <c>TextReader</c>.
+        /// </summary>
+        /// <param name="codeReader"></param>
+        /// <returns></returns>
+        public virtual void TryParseFromCode(TextReader codeReader) {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Try to parse the source code which is retrieved from the specified <c>FileInfo</c>.
+        /// </summary>
+        /// <param name="codeFile"></param>
+        /// <param name="encoding"></param>
+        /// <returns></returns>
+        public void TryParseFromCode(FileInfo codeFile, Encoding encoding = null) {
+            if (encoding == null) {
+                try {
+                    TryParseFromCodeText(GuessEncoding.ReadAllText(codeFile.FullName));
+                } catch {
+                    TryParseFromCodeText(File.ReadAllText(codeFile.FullName));
+                }
+            } else {
+                using (var reader = new StreamReader(codeFile.FullName, encoding)) {
+                    TryParseFromCode(reader);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Try to parse the source code of the specified <c>string</c>.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        public virtual void TryParseFromCodeText(string code) {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Try to parse the source code which is retrieved from the specified file path.
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="encoding"></param>
+        /// <returns></returns>
+        public void TryParseFromCodePath(string path, Encoding encoding = null) {
+            TryParseFromCode(new FileInfo(path), encoding);
+        }
+
+        #endregion
+
         #region GenerateXml
 
         /// <summary>
@@ -117,14 +170,14 @@ namespace Code2Xml.Core.Generators {
         /// <summary>
         /// Generates a xml from the specified text of the source code.
         /// </summary>
-        /// <param name="code"></param>
+        /// <param name="path"></param>
         /// <param name="encoding"></param>
         /// <param name="throwingParseError"></param>
         /// <returns></returns>
         public XElement GenerateXmlFromCodePath(
-                string code, Encoding encoding = null,
+                string path, Encoding encoding = null,
                 bool throwingParseError = DefaultThrowingParseError) {
-            return GenerateXmlFromCode(new FileInfo(code), encoding, throwingParseError);
+            return GenerateXmlFromCode(new FileInfo(path), encoding, throwingParseError);
         }
 
         #endregion

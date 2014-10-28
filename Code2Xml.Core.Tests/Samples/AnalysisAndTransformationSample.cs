@@ -65,7 +65,7 @@ namespace Code2Xml.Core.Tests.Samples {
         }
 
         [Test]
-        public void RemoveStatementWithPassInCSharp() {
+        public void RemoveStatementInCSharp() {
             const string originalCode = @"class K {
     void M() {
         Console.WriteLine(0);

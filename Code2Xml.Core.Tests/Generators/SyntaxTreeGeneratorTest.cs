@@ -18,8 +18,6 @@
 
 using System;
 using System.IO;
-using System.Linq;
-using System.Threading;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.SyntaxTree;
 using NUnit.Framework;
@@ -31,6 +29,7 @@ namespace Code2Xml.Core.Tests.Generators {
             where TNode : SyntaxTreeNode<TNode, TToken>
             where TToken : SyntaxTreeToken<TToken> {
         private long _codeLength;
+        private long _timeToParseTree;
         private long _timeToGenerateTree;
         private long _timeToGenerateCode;
         private TGenerator _generator;
@@ -59,8 +58,8 @@ namespace Code2Xml.Core.Tests.Generators {
             using (var fs = info.Open(FileMode.Append, FileAccess.Write)) {
                 using (var stream = new StreamWriter(fs)) {
                     if (!exists) {
-                        stream.WriteLine("| Project | Size | Tree | Code | Total |");
-                        stream.WriteLine("| --- | ---: | ---: | ---: | ---: |");
+                        stream.WriteLine("| Project | Size | Parse | Tree | Code | Total |");
+                        stream.WriteLine("| --- | ---: | ---: | ---: | ---: | ---: |");
                     }
                     stream.Write("| ");
                     if (string.IsNullOrEmpty(url)) {
@@ -70,6 +69,8 @@ namespace Code2Xml.Core.Tests.Generators {
                     }
                     stream.Write(" | ");
                     stream.Write(_codeLength.ToString("N0"));
+                    stream.Write(" | ");
+                    stream.Write(_timeToParseTree.ToString("N0"));
                     stream.Write(" | ");
                     stream.Write(_timeToGenerateTree.ToString("N0"));
                     stream.Write(" | ");
@@ -91,11 +92,16 @@ namespace Code2Xml.Core.Tests.Generators {
 
         protected void VerifyInterConverting(string code) {
             var time = Environment.TickCount;
-            var r1 = Generator.GenerateTreeFromCodeText(code, true);
+            try {
+                Generator.TryParseFromCodeText(code);
+            } catch {}
             var time2 = Environment.TickCount;
+            var r1 = Generator.GenerateTreeFromCodeText(code, true);
+            var time3 = Environment.TickCount;
             var c1 = Generator.GenerateCodeFromTree(r1);
-            _timeToGenerateCode += (Environment.TickCount - time2);
-            _timeToGenerateTree += (time2 - time);
+            _timeToGenerateCode += (Environment.TickCount - time3);
+            _timeToGenerateTree += (time3 - time2);
+            _timeToParseTree += (time2 - time);
             _codeLength += code.Length;
 
             var r2 = Generator.GenerateTreeFromCodeText(c1, true);
