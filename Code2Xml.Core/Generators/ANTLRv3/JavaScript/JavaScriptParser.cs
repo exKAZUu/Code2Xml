@@ -159,7 +159,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 
 		CstBuilderForAntlr3 treeAdaptor = default(CstBuilderForAntlr3);
 		CreateTreeAdaptor(ref treeAdaptor);
-		TreeAdaptor = treeAdaptor ?? new CstBuilderForAntlr3();
+		TreeAdaptor = treeAdaptor;
 		OnCreated();
 	}
 	// Implement this function in your helper file to use a custom tree adaptor

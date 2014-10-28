@@ -94,7 +94,7 @@ namespace Code2Xml.Core.Generators.ANTLRv3 {
             var parser = CreateParser(tokenStream);
             var builder = throwingParseError ?
                     new CstBuilderForAntlr3WithReportingError(tokenStream, parser.TokenNames) :
-                    new CstBuilderForAntlr3(tokenStream, parser.TokenNames);
+                    new CstBuilderForAntlr3WithoutReportingError(tokenStream, parser.TokenNames);
             parser.TraceDestination = Console.Error;
             parser.TreeAdaptor = builder;
             var root = Parse(parser);
@@ -126,7 +126,7 @@ namespace Code2Xml.Core.Generators.ANTLRv3 {
         private void TryParse(CommonTokenStream tokenStream) {
             var parser = CreateParser(tokenStream);
             parser.TraceDestination = Console.Error;
-            parser.TreeAdaptor = new ExperimentalCstBuilderForAntlr3();
+            parser.TreeAdaptor = new DummyCstBuilderForAntlr3();
             Parse(parser);
         }
 

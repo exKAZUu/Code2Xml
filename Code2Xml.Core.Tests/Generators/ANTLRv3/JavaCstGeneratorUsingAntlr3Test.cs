@@ -90,6 +90,8 @@ public class AlignedTuplePrinter {
 
         [Test]
         public void CheckIds() {
+            var t = Generator.GenerateTreeFromCodeText(
+                    "class K { void m() { if (true) stmt(); else stmt(); } }");
             var nodes =
                     Generator.GenerateTreeFromCodeText(
                             "class K { void m() { if (true) stmt(); else stmt(); } }")

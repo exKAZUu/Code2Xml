@@ -72,7 +72,8 @@ namespace Code2Xml.Tools.AntlrHelper {
 
             return code
                     .Replace("ITreeAdaptor", "CstBuilderForAntlr3")
-                    .Replace("CommonTreeAdaptor", "CstBuilderForAntlr3");
+                    .Replace("CommonTreeAdaptor", "CstBuilderForAntlr3")
+                    .Replace(" ?? new CstBuilderForAntlr3()", "");
         }
 
         public static string ModifyParserRuleReturnScope(string code) {
