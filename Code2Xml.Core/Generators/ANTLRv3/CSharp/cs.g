@@ -1169,7 +1169,7 @@ PP_CONDITIONAL:
     | DEFINE_TOKEN
     | UNDEF_TOKEN)   TS*   (LINE_COMMENT | ('\r'|'\n')+ | EOF) ;
 fragment
-IF_TOKEN
+IF_TOKEN:
     ('#'   TS*  'if'   ( TS+ PP_EXPRESSION
 	                   | ('(') => PP_PRIMARY_EXPRESSION
 					   | ('!') => PP_UNARY_EXPRESSION

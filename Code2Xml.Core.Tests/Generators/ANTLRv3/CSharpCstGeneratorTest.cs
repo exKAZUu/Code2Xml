@@ -16,9 +16,13 @@
 
 #endregion
 
+using System;
+using Antlr.Runtime;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Generators.ANTLRv3.CSharp;
 using NUnit.Framework;
+using csLexer = Code2Xml.Languages.ANTLRv3.Processors.CSharp.csLexer;
+using csParser = Code2Xml.Languages.ANTLRv3.Processors.CSharp.csParser;
 
 namespace Code2Xml.Core.Tests.Generators.ANTLRv3 {
     [TestFixture]
@@ -147,24 +151,51 @@ xxxxx
                 @"af938bc188ddeb9bab6c32a66907e120fb252c6d", 4558)]
         [TestCase(@"https://github.com/hbons/SparkleShare",
                 @"264506a9b98f461a4a4e42bac109d88e164971a7", 3217)]
-        [TestCase(@"https://github.com/mono/mono",
-                @"45d831259bbeed78b13205b3ce70324970c6442b", 2586)]
+        //[TestCase(@"https://github.com/mono/mono",
+        //        @"45d831259bbeed78b13205b3ce70324970c6442b", 2586)]
         [TestCase(@"https://github.com/ServiceStack/ServiceStack",
                 @"c2b30eaacbbfdf8cdfebcdeebe9b9fe03e920784", 2558)]
         [TestCase(@"https://github.com/NancyFx/Nancy",
                 @"45c2cc1f07c21081c00e6a40e79c468a3c9dba7c", 2454)]
-        [TestCase(@"https://github.com/mono/MonoGame",
-                @"1b06b97fa47beb9bd3dd0d62626f40b073fdd053", 2347)]
-        [TestCase(@"https://github.com/AutoMapper/AutoMapper",
-                @"de2aa09f18738ad37b339ba9bfbba644ab4611a8", 2186)]
+        //[TestCase(@"https://github.com/mono/MonoGame",
+        //        @"1b06b97fa47beb9bd3dd0d62626f40b073fdd053", 2347)]
+        //[TestCase(@"https://github.com/AutoMapper/AutoMapper",
+        //        @"de2aa09f18738ad37b339ba9bfbba644ab4611a8", 2186)]
         [TestCase(@"https://github.com/adamcaudill/Psychson",
                 @"4522989aac27aada5f522675b33a2bde63a13b30", 2119)]
         [TestCase(@"https://github.com/restsharp/RestSharp",
                 @"3ac91252c02e4038b74d92a81b26719fb13001e6", 2097)]
         [TestCase(@"https://github.com/Redth/PushSharp",
                 @"1832ebbd3f42f37d10305c246a2810ee4cf7c259", 2076)]
+        //[TestCase(@"https://github.com/StackExchange/dapper-dot-net",
+        //        @"8e33a56df1e7535434405ad32a6c3bae59f3dcd5", 1654)]
+        [TestCase(@"https://github.com/opserver/Opserver",
+                @"1336763435659401a896e590deda737caad225e4", 1620)]
+        [TestCase(@"https://github.com/OpenRA/OpenRA",
+                @"0f50d0bf49c851d4f0d7201d72c1e0a9d3ba2516", 1440)]
+        [TestCase(@"https://github.com/robconery/massive",
+                @"37699cc39e72b1080d80358ffe9183e3f4cfd4b2", 1299)]
+        [TestCase(@"https://github.com/jaredpar/VsVim",
+                @"34a2bbc6370f7e2ec087173619b843a333278007", 1279)]
+        [TestCase(@"https://github.com/JamesNK/Newtonsoft.Json",
+                @"70d3e9327d5dcd9a1770b3aed5437d6aa0b15802", 1232)]
+        //[TestCase(@"https://github.com/ravendb/ravendb",
+        //        @"d0198ae2adef266dee2eb68e121eff39fde7225a", 1225)]
+        //[TestCase(@"https://github.com/SonyWWS/ATF",
+        //        @"0ff57f7de853c2cd08f6a59e3e0320c1c5ce1d97", 1202)]
+        [TestCase(@"https://github.com/reactiveui/ReactiveUI",
+                @"7c3cd0cbfb198cc8de5cd60c62196708b33fac1e", 1191)]
+        //[TestCase(@"https://github.com/mono/monodevelop",
+        //        @"a56951526cd7c6f89361b93e546d8bfacbd1a513", 1152)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
-            VerifyRestoringGitRepo(url, commitPointer, "*.cs");
+            Action<string> parse = code => {
+                var parser =
+                        new csParser(
+                                new CommonTokenStream(new csLexer(new ANTLRStringStream(code))));
+                parser.TraceDestination = Console.Error;
+                var ret = parser.compilation_unit();
+            };
+            MeasurePerformance(url, commitPointer, parse, "*.cs");
         }
     }
 }

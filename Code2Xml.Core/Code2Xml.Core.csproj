@@ -300,6 +300,8 @@
   <ItemGroup>
     <Content Include="Dependencies\Cobol\koopafor85.jar" />
     <Content Include="Dependencies\Python\ast2xml.py" />
+    <Content Include="Dependencies\Python\ast_parser.py" />
+    <Content Include="Dependencies\Python\st_parser.py" />
     <Content Include="Dependencies\Python\st2xml.py" />
     <Content Include="Dependencies\Ruby\README_ruby2ruby.txt" />
     <Content Include="Dependencies\Ruby\README_ruby_parser.txt" />

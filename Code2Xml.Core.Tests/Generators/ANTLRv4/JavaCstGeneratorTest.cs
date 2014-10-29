@@ -26,6 +26,7 @@ using Code2Xml.Core.Generators.ANTLRv4;
 using Code2Xml.Core.Generators.ANTLRv4.Java;
 using Code2Xml.Core.SyntaxTree;
 using NUnit.Framework;
+using CommonTokenStream = Antlr4.Runtime.CommonTokenStream;
 
 namespace Code2Xml.Core.Tests.Generators.ANTLRv4 {
     [TestFixture]
@@ -223,7 +224,7 @@ class Main {
         [TestCase(@"https://github.com/JakeWharton/Android-ViewPagerIndicator",
                 @"8cd549f23f3d20ff920e19a2345c54983f65e26b", 4417)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
-            VerifyRestoringGitRepo(url, commitPointer, "*.java");
+            MeasurePerformance(url, commitPointer, null, "*.java");
         }
     }
 }

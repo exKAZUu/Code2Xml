@@ -16,9 +16,13 @@
 
 #endregion
 
+using System;
+using Antlr.Runtime;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Generators.ANTLRv3.Lua;
 using NUnit.Framework;
+using LuaLexer = Code2Xml.Languages.ANTLRv3.Processors.Lua.LuaLexer;
+using LuaParser = Code2Xml.Languages.ANTLRv3.Processors.Lua.LuaParser;
 
 namespace Code2Xml.Core.Tests.Generators.ANTLRv3 {
     [TestFixture]
@@ -81,10 +85,10 @@ if true then --[[VERBOSE]] print(1) end
         [Test]
         [TestCase(@"https://github.com/kennyledet/Algorithm-Implementations",
                 @"140093792bd5d0c7a13b5d7b886f3d3c7a20b314", 1119)]
-        [TestCase(@"https://github.com/SnabbCo/snabbswitch",
-                @"a3e8b906d3f52de4ce7ac16e6088d90b0ba175d6", 864)]
-        [TestCase(@"https://github.com/leafo/moonscript",
-                @"163748b8c91f2df226aa8cb81f91c20e1fa1fc62", 837)]
+        //[TestCase(@"https://github.com/SnabbCo/snabbswitch",
+        //        @"a3e8b906d3f52de4ce7ac16e6088d90b0ba175d6", 864)]
+        //[TestCase(@"https://github.com/leafo/moonscript",
+        //        @"163748b8c91f2df226aa8cb81f91c20e1fa1fc62", 837)]
         [TestCase(@"https://github.com/axkibe/lsyncd",
                 @"4da2257758df7814a7eb7b6ce6494cde6d2789f6", 756)]
         [TestCase(@"https://github.com/koreader/koreader",
@@ -100,7 +104,14 @@ if true then --[[VERBOSE]] print(1) end
         [TestCase(@"https://github.com/copycat-killer/awesome-copycats",
                 @"1394a36c42b8984318e2e8c87bb3bd2d398f65a2", 452)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
-            VerifyRestoringGitRepo(url, commitPointer, "*.lua");
+            Action<string> parse = code => {
+                var parser =
+                        new LuaParser(
+                                new CommonTokenStream(new LuaLexer(new ANTLRStringStream(code))));
+                parser.TraceDestination = Console.Error;
+                var ret = parser.chunk();
+            };
+            MeasurePerformance(url, commitPointer, parse, "*.lua");
         }
     }
 }

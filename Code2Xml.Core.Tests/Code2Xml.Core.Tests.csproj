@@ -65,11 +65,25 @@
   <ItemGroup>
     <Compile Include="Generators\ANTLRv3\CCstGeneratorUsingAntlr3Test.cs" />
     <Compile Include="Generators\ANTLRv3\CSharpCstGeneratorTest.cs" />
+    <Compile Include="Generators\ANTLRv3\csLexer.cs" />
+    <Compile Include="Generators\ANTLRv3\csLexer.Helper.cs" />
+    <Compile Include="Generators\ANTLRv3\csLexerWithPreProcessor.cs" />
+    <Compile Include="Generators\ANTLRv3\csParser.cs" />
+    <Compile Include="Generators\ANTLRv3\csParser.Helper.cs" />
     <Compile Include="Generators\ANTLRv3\FileCacheCstGeneratorTest.cs" />
     <Compile Include="Generators\ANTLRv3\JavaCstGeneratorUsingAntlr3Test.cs" />
+    <Compile Include="Generators\ANTLRv3\JavaLexer.cs" />
+    <Compile Include="Generators\ANTLRv3\JavaParser.cs" />
     <Compile Include="Generators\ANTLRv3\JavaScriptCstGeneratorTest.cs" />
+    <Compile Include="Generators\ANTLRv3\JavaScriptLexer.Action.cs" />
+    <Compile Include="Generators\ANTLRv3\JavaScriptLexer.cs" />
+    <Compile Include="Generators\ANTLRv3\JavaScriptParser.cs" />
     <Compile Include="Generators\ANTLRv3\LuaCstGeneratorUsingAntlr3Test.cs" />
+    <Compile Include="Generators\ANTLRv3\LuaLexer.cs" />
+    <Compile Include="Generators\ANTLRv3\LuaParser.cs" />
     <Compile Include="Generators\ANTLRv3\PhpCstGeneratorTest.cs" />
+    <Compile Include="Generators\ANTLRv3\PhpLexer.cs" />
+    <Compile Include="Generators\ANTLRv3\PhpParser.cs" />
     <Compile Include="Generators\ANTLRv3\TestCstGeneratorTest.cs" />
     <Compile Include="Generators\ANTLRv4\CstBuilderForAntlr4Test.cs" />
     <Compile Include="Generators\ANTLRv4\CCstGeneratorTest.cs" />

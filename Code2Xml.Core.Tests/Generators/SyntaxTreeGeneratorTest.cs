@@ -18,6 +18,7 @@
 
 using System;
 using System.IO;
+using System.Linq;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.SyntaxTree;
 using NUnit.Framework;
@@ -57,6 +58,19 @@ namespace Code2Xml.Core.Tests.Generators {
             var exists = info.Exists;
             using (var fs = info.Open(FileMode.Append, FileAccess.Write)) {
                 using (var stream = new StreamWriter(fs)) {
+                    if (_timeToParseTree == 0) {
+                        _timeToParseTree = 1;
+                    }
+                    if (_timeToGenerateTree == 0) {
+                        _timeToGenerateTree = 1;
+                    }
+                    if (_timeToGenerateCode == 0) {
+                        _timeToGenerateCode = 1;
+                    }
+                    if (total == 0) {
+                        total = 1;
+                    }
+
                     if (!exists) {
                         stream.WriteLine("| Project | Size | Parse | Tree | Code | Total |");
                         stream.WriteLine("| --- | ---: | ---: | ---: | ---: | ---: |");
@@ -71,12 +85,24 @@ namespace Code2Xml.Core.Tests.Generators {
                     stream.Write(_codeLength.ToString("N0"));
                     stream.Write(" | ");
                     stream.Write(_timeToParseTree.ToString("N0"));
+                    stream.Write(" (");
+                    stream.Write((_codeLength / _timeToParseTree).ToString("N0"));
+                    stream.Write(")");
                     stream.Write(" | ");
                     stream.Write(_timeToGenerateTree.ToString("N0"));
+                    stream.Write(" (");
+                    stream.Write((_codeLength / _timeToGenerateTree).ToString("N0"));
+                    stream.Write(")");
                     stream.Write(" | ");
                     stream.Write(_timeToGenerateCode.ToString("N0"));
+                    stream.Write(" (");
+                    stream.Write((_codeLength / _timeToGenerateCode).ToString("N0"));
+                    stream.Write(")");
                     stream.Write(" | ");
                     stream.Write(total.ToString("N0"));
+                    stream.Write(" (");
+                    stream.Write((_codeLength / total).ToString("N0"));
+                    stream.Write(")");
                     stream.WriteLine(" |");
                 }
             }
@@ -122,14 +148,65 @@ namespace Code2Xml.Core.Tests.Generators {
             }
         }
 
+        protected void MeasurePerformance(
+                string url, string commitPointer, Action<string> parse, params string[] patterns) {
+            var path = Fixture.GetGitRepositoryPath(url);
+            Git.CloneAndCheckoutAndReset(path, url, commitPointer);
+            StartMeasuringTimes();
+            var codes = patterns.SelectMany(
+                    pattern => Directory.GetFiles(path, pattern, SearchOption.AllDirectories))
+                    .Select(File.ReadAllText)
+                    .ToList();
+            foreach (var code in codes) {
+                _codeLength += code.Length;
+            }
+            codes = codes.Select(code => code.Replace("\r\n", "\n")).ToList();
+            if (parse == null) {
+                foreach (var code in codes) {
+                    Generator.TryParseFromCodeText(code);
+                }
+            } else {
+                foreach (var code in codes) {
+                    parse(code);
+                }
+            }
+            var time = Environment.TickCount;
+            if (parse == null) {
+                foreach (var code in codes) {
+                    Generator.TryParseFromCodeText(code);
+                }
+            } else {
+                foreach (var code in codes) {
+                    parse(code);
+                }
+            }
+            var time2 = Environment.TickCount;
+            var dummy = 0;
+            foreach (var code in codes) {
+                var tree = Generator.GenerateTreeFromCodeText(code, true);
+                dummy += tree.Name.Length;
+            }
+            var time3 = Environment.TickCount;
+            foreach (
+                    var tree in
+                            codes.Select(code => Generator.GenerateTreeFromCodeText(code, true))
+                                    .ToList()) {
+                var code = Generator.GenerateCodeFromTree(tree);
+                dummy += code.Length;
+            }
+            var time4 = Environment.TickCount;
+            _timeToParseTree += (time2 - time);
+            _timeToGenerateTree += (time3 - time2);
+            _timeToGenerateCode += (time4 - time3);
+            ShowTimes(path, url);
+            Console.WriteLine(dummy);
+        }
+
         protected void VerifyRestoringCode(string code, bool write = true) {
             _codeLength += code.Length;
 
             code = code.Replace("\r\n", "\n");
 
-            try {
-                Generator.TryParseFromCodeText(code);
-            } catch {}
             var time = Environment.TickCount;
             try {
                 Generator.TryParseFromCodeText(code);
@@ -171,20 +248,19 @@ namespace Code2Xml.Core.Tests.Generators {
         }
 
         private void PrivateVerifyRestoringProjectDirectory(
-                string path, string url, Func<string, string> readFileFunc,
-                params string[] patterns) {
+                string path, string url, Func<string, string> readFileFunc, params string[] patterns) {
             StartMeasuringTimes();
-            foreach (var pattern in patterns) {
-                var filePaths = Directory.GetFiles(path, pattern, SearchOption.AllDirectories);
-                foreach (var filePath in filePaths) {
-                    Console.Write(".");
-                    try {
-                        VerifyRestoringCode(readFileFunc(filePath), false);
-                    } catch (Exception e) {
-                        Console.WriteLine();
-                        Console.WriteLine(filePath);
-                        throw new ParseException(e);
-                    }
+            var filePaths = patterns.SelectMany(
+                    pattern => Directory.GetFiles(path, pattern, SearchOption.AllDirectories))
+                    .ToList();
+            foreach (var filePath in filePaths) {
+                Console.Write(".");
+                try {
+                    VerifyRestoringCode(readFileFunc(filePath), false);
+                } catch (Exception e) {
+                    Console.WriteLine();
+                    Console.WriteLine(filePath);
+                    throw new ParseException(e);
                 }
             }
             Console.WriteLine();
@@ -192,8 +268,7 @@ namespace Code2Xml.Core.Tests.Generators {
         }
 
         protected void VerifyRestoringGitRepo(
-                string url, string commitPointer,
-                params string[] patterns) {
+                string url, string commitPointer, params string[] patterns) {
             VerifyRestoringGitRepo(url, commitPointer, File.ReadAllText, patterns);
         }
 

@@ -35,6 +35,10 @@ namespace Code2Xml.Core.Generators.ExternalGenerators.Python {
             Path.Combine(DirectoryPath, "ast2xml.py"),
         };
 
+        private static readonly string[] ParserArguments = {
+            Path.Combine(DirectoryPath, "ast_parser.py"),
+        };
+
         /// <summary>
         /// Gets the language name except for the version.
         /// </summary>
@@ -61,6 +65,7 @@ namespace Code2Xml.Core.Generators.ExternalGenerators.Python {
             set {
                 _processorPath = value;
                 ParaibaFile.WriteIfDifferentSize(XmlGeneratorArguments[0], Resources.ast2xml);
+                ParaibaFile.WriteIfDifferentSize(ParserArguments[0], Resources.ast_parser);
             }
         }
 
@@ -80,6 +85,11 @@ namespace Code2Xml.Core.Generators.ExternalGenerators.Python {
         protected override Process StartProcess(string code) {
             return ExternalProgramUtils.StartProcess(
                     code.Replace("\r\n", "\n"), ProcessorPath, XmlGeneratorArguments);
+        }
+
+        public override void TryParseFromCodeText(string code) {
+            using (var p = ExternalProgramUtils.StartProcess(
+                    code.Replace("\r\n", "\n"), ProcessorPath, ParserArguments)) {}
         }
     }
 }

@@ -123,11 +123,11 @@ namespace Code2Xml.Core.Generators.ANTLRv3 {
     public class DummyCstBuilderForAntlr3 : CstBuilderForAntlr3 {
         public override void AddChild(
                 object t, object child, Antlr3CstNode target, string id, Antlr3CstNode parent) {
-            base.AddChild(t, child);
+            //base.AddChild(t, child);
         }
 
         public override object Create(IToken token, string id, Antlr3CstNode parent) {
-            return base.Create(token);
+            return null;//base.Create(token);
         }
 
         public override object ErrorNode(

@@ -65,6 +65,10 @@ namespace Code2Xml.Core.Generators {
             }
         }
 
+        public override void TryParseFromCode(TextReader codeReader) {
+            TryParseFromCodeText(codeReader.ReadToEnd());
+        }
+
         public void SetLocationInformation(CstNode tree, string code) {
             var line = 1;
             var pos = 0;

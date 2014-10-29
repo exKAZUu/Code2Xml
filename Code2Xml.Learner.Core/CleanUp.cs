@@ -82,13 +82,13 @@ namespace Code2Xml.Learner.Core {
 
         [Test]
         public void GenerateTestCases() {
-            var inPath = @"G:\RepositoryProbe\php.csv";
+            var inPath = @"C:\Users\exKAZUu\Projects\RepositoryProbe\php.csv";
             if (!File.Exists(inPath)) {
                 return;
             }
             var set = new HashSet<string>();
             var count = 0;
-            foreach (var line in File.ReadAllLines(inPath).Skip(1).Take(10)) {
+            foreach (var line in File.ReadAllLines(inPath).Skip(11).Take(10)) {
                 var items = line.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
                 if (items.Length <= 2) {
                     continue;

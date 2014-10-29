@@ -16,12 +16,16 @@
 
 #endregion
 
+using System;
 using System.IO;
 using System.Linq;
+using Antlr.Runtime;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Generators.ANTLRv3.Java;
 using NUnit.Framework;
 using ParserTests;
+using JavaLexer = Code2Xml.Languages.ANTLRv3.Processors.Java.JavaLexer;
+using JavaParser = Code2Xml.Languages.ANTLRv3.Processors.Java.JavaParser;
 
 namespace Code2Xml.Core.Tests.Generators.ANTLRv3 {
     [TestFixture]
@@ -124,7 +128,14 @@ public class AlignedTuplePrinter {
         [TestCase(@"https://github.com/JakeWharton/Android-ViewPagerIndicator",
                 @"8cd549f23f3d20ff920e19a2345c54983f65e26b", 4417)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
-            VerifyRestoringGitRepo(url, commitPointer, "*.java");
+            Action<string> parse = code => {
+                var parser =
+                        new JavaParser(
+                                new CommonTokenStream(new JavaLexer(new ANTLRStringStream(code))));
+                parser.TraceDestination = Console.Error;
+                var ret = parser.compilationUnit();
+            };
+            MeasurePerformance(url, commitPointer, parse, "*.java");
         }
 
         [Test]
