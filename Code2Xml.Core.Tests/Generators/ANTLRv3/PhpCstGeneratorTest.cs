@@ -164,8 +164,8 @@ class Resource extends \RESTful\Resource
                 @"246594f2308393df619e28038a9db0fa5f272502", 4787)]
         //[TestCase(@"https://github.com/WordPress/WordPress",
         //        @"3949a8b6cc50a021ed93798287b4ef9ea8a560d9", 4637)]
-        [TestCase(@"https://github.com/composer/composer",
-                @"a309e1d89ded6919935a842faeaed8e888fbfe37", 4520)]
+        //[TestCase(@"https://github.com/composer/composer",
+        //        @"a309e1d89ded6919935a842faeaed8e888fbfe37", 4520)]
         [TestCase(@"https://github.com/fzaninotto/Faker",
                 @"b6d383161d84092a7a9f5b14db6e2637edbd3a6e", 4493)]
         [TestCase(@"https://github.com/phacility/phabricator",

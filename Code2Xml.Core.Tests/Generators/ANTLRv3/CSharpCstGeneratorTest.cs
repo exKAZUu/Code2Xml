@@ -147,14 +147,14 @@ xxxxx
         }
 
         [Test]
-        [TestCase(@"https://github.com/SignalR/SignalR",
-                @"af938bc188ddeb9bab6c32a66907e120fb252c6d", 4558)]
+        //[TestCase(@"https://github.com/SignalR/SignalR",
+        //        @"af938bc188ddeb9bab6c32a66907e120fb252c6d", 4558)]
         [TestCase(@"https://github.com/hbons/SparkleShare",
                 @"264506a9b98f461a4a4e42bac109d88e164971a7", 3217)]
         //[TestCase(@"https://github.com/mono/mono",
         //        @"45d831259bbeed78b13205b3ce70324970c6442b", 2586)]
-        [TestCase(@"https://github.com/ServiceStack/ServiceStack",
-                @"c2b30eaacbbfdf8cdfebcdeebe9b9fe03e920784", 2558)]
+        //[TestCase(@"https://github.com/ServiceStack/ServiceStack",
+        //        @"c2b30eaacbbfdf8cdfebcdeebe9b9fe03e920784", 2558)]
         [TestCase(@"https://github.com/NancyFx/Nancy",
                 @"45c2cc1f07c21081c00e6a40e79c468a3c9dba7c", 2454)]
         //[TestCase(@"https://github.com/mono/MonoGame",
@@ -163,8 +163,8 @@ xxxxx
         //        @"de2aa09f18738ad37b339ba9bfbba644ab4611a8", 2186)]
         [TestCase(@"https://github.com/adamcaudill/Psychson",
                 @"4522989aac27aada5f522675b33a2bde63a13b30", 2119)]
-        [TestCase(@"https://github.com/restsharp/RestSharp",
-                @"3ac91252c02e4038b74d92a81b26719fb13001e6", 2097)]
+        //[TestCase(@"https://github.com/restsharp/RestSharp",
+        //        @"3ac91252c02e4038b74d92a81b26719fb13001e6", 2097)]
         [TestCase(@"https://github.com/Redth/PushSharp",
                 @"1832ebbd3f42f37d10305c246a2810ee4cf7c259", 2076)]
         //[TestCase(@"https://github.com/StackExchange/dapper-dot-net",
@@ -177,14 +177,14 @@ xxxxx
                 @"37699cc39e72b1080d80358ffe9183e3f4cfd4b2", 1299)]
         [TestCase(@"https://github.com/jaredpar/VsVim",
                 @"34a2bbc6370f7e2ec087173619b843a333278007", 1279)]
-        [TestCase(@"https://github.com/JamesNK/Newtonsoft.Json",
-                @"70d3e9327d5dcd9a1770b3aed5437d6aa0b15802", 1232)]
+        //[TestCase(@"https://github.com/JamesNK/Newtonsoft.Json",
+        //        @"70d3e9327d5dcd9a1770b3aed5437d6aa0b15802", 1232)]
         //[TestCase(@"https://github.com/ravendb/ravendb",
         //        @"d0198ae2adef266dee2eb68e121eff39fde7225a", 1225)]
         //[TestCase(@"https://github.com/SonyWWS/ATF",
         //        @"0ff57f7de853c2cd08f6a59e3e0320c1c5ce1d97", 1202)]
-        [TestCase(@"https://github.com/reactiveui/ReactiveUI",
-                @"7c3cd0cbfb198cc8de5cd60c62196708b33fac1e", 1191)]
+        //[TestCase(@"https://github.com/reactiveui/ReactiveUI",
+        //        @"7c3cd0cbfb198cc8de5cd60c62196708b33fac1e", 1191)]
         //[TestCase(@"https://github.com/mono/monodevelop",
         //        @"a56951526cd7c6f89361b93e546d8bfacbd1a513", 1152)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {

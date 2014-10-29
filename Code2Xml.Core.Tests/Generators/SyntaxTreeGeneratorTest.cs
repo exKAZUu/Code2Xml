@@ -171,33 +171,39 @@ namespace Code2Xml.Core.Tests.Generators {
                 }
             }
             var time = Environment.TickCount;
-            if (parse == null) {
-                foreach (var code in codes) {
-                    Generator.TryParseFromCodeText(code);
-                }
-            } else {
-                foreach (var code in codes) {
-                    parse(code);
+            for (int i = 0; i < 10; i++) {
+                if (parse == null) {
+                    foreach (var code in codes) {
+                        Generator.TryParseFromCodeText(code);
+                    }
+                } else {
+                    foreach (var code in codes) {
+                        parse(code);
+                    }
                 }
             }
             var time2 = Environment.TickCount;
             var dummy = 0;
-            foreach (var code in codes) {
-                var tree = Generator.GenerateTreeFromCodeText(code, true);
-                dummy += tree.Name.Length;
+            for (int i = 0; i < 10; i++) {
+                foreach (var code in codes) {
+                    var tree = Generator.GenerateTreeFromCodeText(code, true);
+                    dummy += tree.Name.Length;
+                }
             }
             var time3 = Environment.TickCount;
-            foreach (
-                    var tree in
-                            codes.Select(code => Generator.GenerateTreeFromCodeText(code, true))
-                                    .ToList()) {
-                var code = Generator.GenerateCodeFromTree(tree);
-                dummy += code.Length;
-            }
+            var trees = codes.Select(code => Generator.GenerateTreeFromCodeText(code, true))
+                    .ToList();
             var time4 = Environment.TickCount;
-            _timeToParseTree += (time2 - time);
-            _timeToGenerateTree += (time3 - time2);
-            _timeToGenerateCode += (time4 - time3);
+            for (int i = 0; i < 10; i++) {
+                foreach (var tree in trees) {
+                    var code = Generator.GenerateCodeFromTree(tree);
+                    dummy += code.Length;
+                }
+            }
+            var time5 = Environment.TickCount;
+            _timeToParseTree += (time2 - time) / 10;
+            _timeToGenerateTree += (time3 - time2) / 10;
+            _timeToGenerateCode += (time5 - time4) / 10;
             ShowTimes(path, url);
             Console.WriteLine(dummy);
         }
