@@ -164,26 +164,66 @@ class Resource extends \RESTful\Resource
                 @"246594f2308393df619e28038a9db0fa5f272502", 4787)]
         //[TestCase(@"https://github.com/WordPress/WordPress",
         //        @"3949a8b6cc50a021ed93798287b4ef9ea8a560d9", 4637)]
-        [TestCase(@"https://github.com/composer/composer",
-                @"a309e1d89ded6919935a842faeaed8e888fbfe37", 4520)]
-        [TestCase(@"https://github.com/fzaninotto/Faker",
-                @"b6d383161d84092a7a9f5b14db6e2637edbd3a6e", 4493)]
-        [TestCase(@"https://github.com/phacility/phabricator",
-                @"a4b281aa291621c7d75739f3e9be8cf7e33d4240", 4423)]
+        //[TestCase(@"https://github.com/composer/composer",
+        //        @"a309e1d89ded6919935a842faeaed8e888fbfe37", 4520)]
+        //[TestCase(@"https://github.com/fzaninotto/Faker",
+        //        @"b6d383161d84092a7a9f5b14db6e2637edbd3a6e", 4493)]
+        //[TestCase(@"https://github.com/phacility/phabricator",
+        //        @"a4b281aa291621c7d75739f3e9be8cf7e33d4240", 4423)]
         [TestCase(@"https://github.com/guzzle/guzzle",
                 @"3e5a4bba47291f6a12872f44128715950fc35e86", 4157)]
-        [TestCase(@"https://github.com/codeguy/Slim",
-                @"52de96e42801661c41973a7b4c6979f883f02b43", 4112)]
+        //[TestCase(@"https://github.com/codeguy/Slim",
+        //        @"52de96e42801661c41973a7b4c6979f883f02b43", 4112)]
         [TestCase(@"https://github.com/yiisoft/yii",
                 @"7d65d74855620fcdca26decb998f45bc00be74dd", 4107)]
         [TestCase(@"https://github.com/zurb/ink",
                 @"91171dc7a2a4ba9e2c1726c36d70d799cec17ce6", 4029)]
         [TestCase(@"https://github.com/al3x/sovereign",
                 @"5f6160f914c647ddb6a3d8e47d1b5a46fbf6b22c", 3991)]
-        [TestCase(@"https://github.com/sebastianbergmann/phpunit",
-                @"0b78eddd0519dd9bf7c35359287fa6b0adb17391", 3984)]
-        [TestCase(@"https://github.com/yiisoft/yii2",
-                @"6fb62f836bd7e35efab3267adfd08e34a6ba973d", 3855)]
+        //[TestCase(@"https://github.com/sebastianbergmann/phpunit",
+        //        @"0b78eddd0519dd9bf7c35359287fa6b0adb17391", 3984)]
+        //[TestCase(@"https://github.com/yiisoft/yii2",
+        //        @"6fb62f836bd7e35efab3267adfd08e34a6ba973d", 3855)]
+        [TestCase(@"https://github.com/serbanghita/Mobile-Detect",
+                @"5f215c5fc8a2bbc81142c5b26fb9abffb2adcb97", 3594)]
+        [TestCase(@"https://github.com/facebookarchive/facebook-php-sdk",
+                @"3388ec541761b93651614b48766608c22daad981", 3566)]
+        [TestCase(@"https://github.com/ginatrapani/ThinkUp",
+                @"52ace51f9f0541982b61b3b8180e2cdc95f0566f", 3154)]
+        [TestCase(@"https://github.com/PHPOffice/PHPExcel",
+                @"37b4d18d456e3b533d838099f208e5d3f089a954", 2992)]
+        [TestCase(@"https://github.com/piwik/piwik",
+                @"f4dbc61263d401a003c300847af19cf4b1f5db13", 2932)]
+        [TestCase(@"https://github.com/subtlepatterns/SubtlePatterns",
+                @"6e056565a1254c967228aab60c9d9c7d0e63a7e3", 2886)]
+        [TestCase(@"https://github.com/kriswallsmith/assetic",
+                @"f8a41b17522dadccbaeb422d4c6617b46c4c52f5", 2721)]
+        [TestCase(@"https://github.com/owncloud/core",
+                @"a00712aa65169b248cac8e541dfe69fd82082609", 2679)]
+        [TestCase(@"https://github.com/reactphp/react",
+                @"9db35d22a50e1bc473a5967876fe1daf8ef4a539", 2676)]
+        [TestCase(@"https://github.com/Seldaek/monolog",
+                @"d0a9acbad0643726453e901d9d49c14e13de9f86", 2675)]
+        [TestCase(@"https://github.com/laravel/framework",
+                @"687ad93f18e47fbb530d17f109c9043126dd164c", 2646)]
+        [TestCase(@"https://github.com/PHPMailer/PHPMailer",
+                @"2000bbb41f7cbb4db766436ab7c996907a8c1c31", 2640)]
+        [TestCase(@"https://github.com/JeffreyWay/Laravel-4-Generators",
+                @"457228dc2c0bef7ef75014f8e711def7732fb0ef", 2580)]
+        [TestCase(@"https://github.com/abraham/twitteroauth",
+                @"0d9c7fb3057c9f7cdc8847566ae9bd398165c761", 2546)]
+        [TestCase(@"https://github.com/twigphp/Twig",
+                @"f8b6e918a7d8e073efe14cbed7ae02df40ef19ed", 2431)]
+        [TestCase(@"https://github.com/puphpet/puphpet",
+                @"5cff10cb105e6928b4cfb308c769a8d6378125ee", 2394)]
+        [TestCase(@"https://github.com/silexphp/Silex",
+                @"bce2a5dc5931411ce319ebb470b1f4132cfddf08", 2374)]
+        [TestCase(@"https://github.com/doctrine/doctrine2",
+                @"20c6bfd360b3db9e9bc53e5ae37afe1a22dccca3", 2303)]
+        [TestCase(@"https://github.com/avalanche123/Imagine",
+                @"5b23b4a7d82e611ef0634ab98a446e1657360c23", 2211)]
+        [TestCase(@"https://github.com/fabpot/Goutte",
+                @"33b16e073667a3408b6a1e8c464614fbb731041a", 2186)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
             Action<string> parse = code => {
                 var parser =
