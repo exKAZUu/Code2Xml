@@ -198,8 +198,8 @@ class Resource extends \RESTful\Resource
                 @"6e056565a1254c967228aab60c9d9c7d0e63a7e3", 2886)]
         [TestCase(@"https://github.com/kriswallsmith/assetic",
                 @"f8a41b17522dadccbaeb422d4c6617b46c4c52f5", 2721)]
-        [TestCase(@"https://github.com/owncloud/core",
-                @"a00712aa65169b248cac8e541dfe69fd82082609", 2679)]
+        //[TestCase(@"https://github.com/owncloud/core",
+        //        @"a00712aa65169b248cac8e541dfe69fd82082609", 2679)]
         [TestCase(@"https://github.com/reactphp/react",
                 @"9db35d22a50e1bc473a5967876fe1daf8ef4a539", 2676)]
         [TestCase(@"https://github.com/Seldaek/monolog",
