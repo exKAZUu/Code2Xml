@@ -18,19 +18,30 @@
 
 using System.Diagnostics.Contracts;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using Paraiba.Text;
 
 namespace Code2Xml.Tools.AntlrHelper {
     public static class ParserModifier {
+        private static readonly Regex[] UnusedCodeRegexes = {
+            new Regex(@"adaptor\.AddChild\([^,]*, .*_tree\);"),
+        };
+
+        private static readonly string[] UnusedCodeStrings = {
+            "root_0 = (object)adaptor.Nil();",
+            "retval.Tree = (object)adaptor.RulePostProcessing(root_0);",
+            "adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);",
+        };
+
         private static readonly Regex SystemOutRegex =
                 new Regex(@"System\.out\.println[^;]+;");
 
-        private static readonly Regex NonTerminalRegex =
-                new Regex(@"adaptor\.AddChild\(([^,]*), (.*)\.Tree\)");
+        private static readonly Regex AddChildForNonTerminalNodeRegex =
+                new Regex(@"adaptor\.AddChild\([^,]*, (.*)\.Tree\);");
 
-        private static readonly Regex TerminalRegex =
-                new Regex(@"adaptor\.Create\(([^),]*)\)");
+        private static readonly Regex CreateForTerminalNodeRegex =
+                new Regex(@".*\(object\)adaptor\.Create\(([^),]*)\).*;");
 
         private static readonly Regex PrivateRegex =
                 new Regex(@"private ([^.]*Parser)");
@@ -44,27 +55,45 @@ namespace Code2Xml.Tools.AntlrHelper {
             string code;
             using (var reader = new StreamReader(path, XEncoding.SJIS)) {
                 code = reader.ReadToEnd();
+                code = ModifyFromJavaToCSharp(code);
+                code = RemoveUnusedStatements(code);
+                code = ModifyRetval(code);
                 code = ModifyCommonTreeAdaptor(code);
-                code = ModifyParserRuleReturnScope(code);
-                code = ModifyAstParserRuleReturnScope(code);
+                //code = ModifyParserRuleReturnScope(code);
                 code = ModifyAddChild(code);
                 code = ModifyCreate(code);
+                code = ModifyAstParserRuleReturnScope(code);
                 code = ModifyTraceIn(code);
                 code = ModifyInheritClass(code);
-                //code = ModifyFromJavaToCSharp(code);
                 //code = ModifyAccessModifier(code);
             }
             using (var writer = new StreamWriter(path, false, XEncoding.SJIS)) {
-                writer.WriteLine("using Code2Xml.Languages.ANTLRv3.Core;");
+                writer.WriteLine("using Code2Xml.Core.Generators.ANTLRv3;");
+                writer.WriteLine("using Code2Xml.Core.SyntaxTree;");
                 writer.WriteLine("using System;");
                 writer.Write(code);
             }
         }
 
-        public static string ModifyFromJavaToCSharp(string code) {
-            Contract.Requires(code != null);
+        public static string ModifyRetval(string code) {
+            code = code.Replace(
+                    "retval.Start = (IToken)input.LT(1);",
+                    "var retval_Start = (IToken)input.LT(1);");
+            code = code.Replace(
+                    "retval.Stop = (IToken)input.LT(-1);",
+                    "input.LT(-1);");
+            code = code.Replace(
+                    "retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);",
+                    "adaptor.ErrorNode(input, retval_Start, input.LT(-1), re);");
+            return code;
+        }
 
-            return SystemOutRegex.Replace(code, "");
+        public static string RemoveUnusedStatements(string code) {
+            Contract.Requires(code != null);
+            code = UnusedCodeRegexes
+                    .Aggregate(code, (c, regex) => regex.Replace(c, ""));
+            return UnusedCodeStrings
+                    .Aggregate(code, (c, str) => c.Replace(str, ""));
         }
 
         public static string ModifyCommonTreeAdaptor(string code) {
@@ -84,51 +113,58 @@ namespace Code2Xml.Tools.AntlrHelper {
                     ": Antlr3CstNode");
         }
 
-        private static string ModifyAstParserRuleReturnScope(string code) {
-            Contract.Requires(code != null);
-
-            return code.Replace(
-                    "AstParserRuleReturnScope<object, IToken>",
-                    "Antlr3CstNode");
-        }
-
         public static string ModifyAddChild(string code) {
             Contract.Requires(code != null);
-
-            return NonTerminalRegex.Replace(
-                    code,
-                    "adaptor.AddChild($1, $2.Tree, $2, \"$2\", retval)");
+            // adaptor.AddChild(root_0, block1.Tree);
+            // =>
+            // adaptor.AddChild(retval, block1);
+            return AddChildForNonTerminalNodeRegex
+                    .Replace(code, "adaptor.AddChild(retval, $1, \"$1\");");
         }
 
         public static string ModifyCreate(string code) {
-            Contract.Requires(
-                    !new Regex(@"adaptor\.Create\(([^)]*),").IsMatch(code));
+            Contract.Requires(code != null);
+            // char_literal4_tree = (object)adaptor.Create(char_literal4);
+            // =>
+            // adaptor.Create(retval, char_literal10, "char_literal10");
+            //
+            // if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set157));
+            // =>
+            // adaptor.Create(retval, set157, "set157");
+            return CreateForTerminalNodeRegex
+                    .Replace(code, "adaptor.Create(retval, $1, \"$1\");");
+        }
 
-            return TerminalRegex.Replace(code, "adaptor.Create($1, \"$1\", retval)");
+        private static string ModifyAstParserRuleReturnScope(string code) {
+            Contract.Requires(code != null);
+            return code.Replace(
+                    "AstParserRuleReturnScope<object, IToken>",
+                    "CstNode");
         }
 
         public static string ModifyTraceIn(string code) {
-            Contract.Requires(code != null);
+            Contract.Requires(!code.Contains("AstParserRuleReturnScope<object, IToken>"));
             // TraceIn("typeParameters", 11);
             // AstParserRuleReturnScope<object, IToken> retval = new AstParserRuleReturnScope<object, IToken>();
             // =>
-            // var retval = new Antlr3CstNode("typeParameters", 11);
-            return TraceInRegex.Replace(code, "var retval = new Antlr3CstNode($1)")
-                    .Replace(
-                            "AstParserRuleReturnScope<object, IToken> retval = new AstParserRuleReturnScope<object, IToken>();",
-                            "")
-                    .Replace("Antlr3CstNode retval = new Antlr3CstNode();", "");
+            // var retval = new CstNode("typeParameters", 11);
+            return TraceInRegex
+                    .Replace(code, "var retval = new CstNode($1)")
+                    .Replace("CstNode retval = new CstNode();", "");
+        }
+
+        public static string ModifyFromJavaToCSharp(string code) {
+            Contract.Requires(code != null);
+            return SystemOutRegex.Replace(code, "");
         }
 
         public static string ModifyAccessModifier(string code) {
             Contract.Requires(code != null);
-
             return PrivateRegex.Replace(code, "public $1");
         }
 
         public static string ModifyInheritClass(string code) {
             Contract.Requires(code != null);
-
             return code.Replace(
                     " : Antlr.Runtime.Parser",
                     " : Antlr.Runtime.Parser, ICustomizedAntlr3Parser");

@@ -290,8 +290,8 @@ options {
     language=CSharp3;
 }
 
-@lexer::namespace { Code2Xml.Languages.ANTLRv3.Processors.Java }
-@parser::namespace { Code2Xml.Languages.ANTLRv3.Processors.Java }
+@lexer::namespace { Code2Xml.Core.Generators.ANTLRv3.Java }
+@parser::namespace { Code2Xml.Core.Generators.ANTLRv3.Java }
 
 /********************************************************************************************
                           Parser section

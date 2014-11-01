@@ -19,24 +19,23 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 
 namespace Code2Xml.Tools.AntlrHelper {
     internal class Program {
         private static void Main(string[] args) {
             if (args.Length == 0) {
-                Console.WriteLine("Find 'Code2Xml.Languages' directory due to no arguments.");
+                Console.WriteLine("Find 'Code2Xml.Core' directory due to no arguments.");
                 var dir = new FileInfo(Assembly.GetEntryAssembly().Location).Directory;
                 while (true) {
-                    var dirs = dir.GetDirectories("Code2Xml.Languages", SearchOption.AllDirectories);
+                    var dirs = dir.GetDirectories("Code2Xml.Core", SearchOption.AllDirectories);
                     if (dirs.Length > 0) {
                         args = new[] { dirs[0].FullName };
                         break;
                     }
                     dir = dir.Parent;
                     if (dir == null) {
-                        Console.WriteLine("Can't find 'Code2Xml.Languages' directory.");
+                        Console.WriteLine("Can't find 'Code2Xml.Core' directory.");
                         args = new[] { Console.In.ReadLine() };
                         break;
                     }
@@ -45,7 +44,7 @@ namespace Code2Xml.Tools.AntlrHelper {
             foreach (var arg in args) {
                 var path = Path.GetFullPath(arg);
                 var dir = Directory.Exists(path) ? path : Path.GetDirectoryName(path);
-                var grammarFiles = Directory.GetFiles(dir, "php.g", SearchOption.AllDirectories);
+                var grammarFiles = Directory.GetFiles(dir, "Java.g", SearchOption.AllDirectories);
                 foreach (var grammarFile in grammarFiles) {
                     Console.WriteLine(grammarFile);
                     var info = new ProcessStartInfo {
@@ -58,17 +57,16 @@ namespace Code2Xml.Tools.AntlrHelper {
                     using (var p = Process.Start(info)) {
                         p.WaitForExit();
                     }
-                }
-                var csFiles = grammarFiles
-                        .Select(Path.GetDirectoryName)
-                        .SelectMany(d => Directory.GetFiles(d, "*.cs", SearchOption.AllDirectories));
-                foreach (var file in csFiles) {
-                    if (file.EndsWith("Parser.cs")) {
-                        Console.WriteLine(file);
-                        ParserModifier.Modify(file);
-                    } else if (file.EndsWith("Lexer.cs")) {
-                        Console.WriteLine(file);
-                        LexerModifier.Modify(file);
+                    var csFiles = Directory.GetFiles(
+                            info.WorkingDirectory, "*.cs", SearchOption.TopDirectoryOnly);
+                    foreach (var file in csFiles) {
+                        if (file.EndsWith("Parser.cs")) {
+                            Console.WriteLine(file);
+                            ParserModifier.Modify(file);
+                        } else if (file.EndsWith("Lexer.cs")) {
+                            Console.WriteLine(file);
+                            LexerModifier.Modify(file);
+                        }
                     }
                 }
             }

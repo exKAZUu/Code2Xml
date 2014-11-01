@@ -18,6 +18,7 @@
 
 using System.ComponentModel.Composition;
 using Antlr.Runtime;
+using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Core.Generators.ANTLRv3.Java {
     /// <summary>
@@ -49,7 +50,7 @@ namespace Code2Xml.Core.Generators.ANTLRv3.Java {
             return new JavaParser(stream);
         }
 
-        protected override Antlr3CstNode Parse(JavaParser parser) {
+        protected override CstNode Parse(JavaParser parser) {
             return parser.compilationUnit();
         }
     }

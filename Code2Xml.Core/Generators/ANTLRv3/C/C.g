@@ -44,8 +44,8 @@ scope Symbols {
 	HashSet<string> types; 
 }
 
-@lexer::namespace { Code2Xml.Languages.ANTLRv3.Processors.C }
-@parser::namespace { Code2Xml.Languages.ANTLRv3.Processors.C }
+@lexer::namespace { Code2Xml.Core.Generators.ANTLRv3.C }
+@parser::namespace { Code2Xml.Core.Generators.ANTLRv3.C }
 
 @members {
 	boolean isTypeName(String name) {

@@ -52,7 +52,7 @@ namespace Code2Xml.Core.Generators.ANTLRv3 {
         /// Parse source code already given.
         /// </summary>
         /// <param name="parser"></param>
-        protected abstract Antlr3CstNode Parse(TParser parser);
+        protected abstract CstNode Parse(TParser parser);
 
         /// <summary>
         /// Creates a token stream which provides tokenized code.
@@ -94,11 +94,10 @@ namespace Code2Xml.Core.Generators.ANTLRv3 {
             var parser = CreateParser(tokenStream);
             var builder = throwingParseError ?
                     new CstBuilderForAntlr3WithReportingError(tokenStream, parser.TokenNames) :
-                    new CstBuilderForAntlr3WithoutReportingError(tokenStream, parser.TokenNames);
+                    new CstBuilderForAntlr3(tokenStream, parser.TokenNames);
             parser.TraceDestination = Console.Error;
             parser.TreeAdaptor = builder;
-            var root = Parse(parser);
-            return builder.FinishParsing(root.Node);
+            return builder.FinishParsing(Parse(parser));
         }
 
         /// <summary>
@@ -121,31 +120,6 @@ namespace Code2Xml.Core.Generators.ANTLRv3 {
         public override CstNode GenerateTreeFromCode(
                 TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
             return GenerateSyntaxTree(new ANTLRReaderStream(codeReader), throwingParseError);
-        }
-
-        private void TryParse(CommonTokenStream tokenStream) {
-            var parser = CreateParser(tokenStream);
-            parser.TraceDestination = Console.Error;
-            parser.TreeAdaptor = new DummyCstBuilderForAntlr3();
-            Parse(parser);
-        }
-
-        /// <summary>
-        /// Try to parse the source code which is retrieved from the specified <c>TextReader</c>.
-        /// </summary>
-        /// <param name="codeReader"></param>
-        /// <returns></returns>
-        public override void TryParseFromCode(TextReader codeReader) {
-            TryParse(CreateTokenStream(codeReader));
-        }
-
-        /// <summary>
-        /// Try to parse the source code of the specified <c>string</c>.
-        /// </summary>
-        /// <param name="code"></param>
-        /// <returns></returns>
-        public override void TryParseFromCodeText(string code) {
-            TryParse(CreateTokenStream(code));
         }
     }
 }

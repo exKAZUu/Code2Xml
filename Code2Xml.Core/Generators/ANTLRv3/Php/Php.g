@@ -41,8 +41,8 @@ tokens{
 	Equals = '=';
 }
 
-@lexer::namespace { Code2Xml.Languages.ANTLRv3.Processors.Php }
-@parser::namespace { Code2Xml.Languages.ANTLRv3.Processors.Php }
+@lexer::namespace { Code2Xml.Core.Generators.ANTLRv3.Php }
+@parser::namespace { Code2Xml.Core.Generators.ANTLRv3.Php }
 
 @lexer::header {
 	using System;

@@ -18,6 +18,7 @@
 
 using System.ComponentModel.Composition;
 using Antlr.Runtime;
+using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Core.Generators.ANTLRv3.Test {
     /// <summary>
@@ -49,7 +50,7 @@ namespace Code2Xml.Core.Generators.ANTLRv3.Test {
             return new TestParser(stream);
         }
 
-        protected override Antlr3CstNode Parse(TestParser parser) {
+        protected override CstNode Parse(TestParser parser) {
             return parser.compilation_unit();
         }
     }

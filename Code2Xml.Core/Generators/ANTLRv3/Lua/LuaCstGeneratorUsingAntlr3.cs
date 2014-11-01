@@ -18,6 +18,7 @@
 
 using System.ComponentModel.Composition;
 using Antlr.Runtime;
+using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Core.Generators.ANTLRv3.Lua {
     /// <summary>
@@ -49,7 +50,7 @@ namespace Code2Xml.Core.Generators.ANTLRv3.Lua {
             return new LuaParser(stream);
         }
 
-        protected override Antlr3CstNode Parse(LuaParser parser) {
+        protected override CstNode Parse(LuaParser parser) {
             return parser.chunk();
         }
     }

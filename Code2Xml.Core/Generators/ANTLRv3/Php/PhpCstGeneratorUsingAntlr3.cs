@@ -53,7 +53,7 @@ namespace Code2Xml.Core.Generators.ANTLRv3.Php {
             return new PhpParser(stream);
         }
 
-        protected override Antlr3CstNode Parse(PhpParser parser) {
+        protected override CstNode Parse(PhpParser parser) {
             return parser.prog();
         }
 

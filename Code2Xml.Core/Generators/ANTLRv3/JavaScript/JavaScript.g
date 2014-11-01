@@ -59,8 +59,8 @@ tokens
 	RBRACE		= '}' ;
 }
 
-@lexer::namespace { Code2Xml.Languages.ANTLRv3.Processors.JavaScript }
-@parser::namespace { Code2Xml.Languages.ANTLRv3.Processors.JavaScript }
+@lexer::namespace { Code2Xml.Core.Generators.ANTLRv3.JavaScript }
+@parser::namespace { Code2Xml.Core.Generators.ANTLRv3.JavaScript }
 
 statementEnd
     : ';'

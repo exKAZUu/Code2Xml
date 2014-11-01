@@ -190,14 +190,14 @@ class Resource extends \RESTful\Resource
                 @"3388ec541761b93651614b48766608c22daad981", 3566)]
         [TestCase(@"https://github.com/ginatrapani/ThinkUp",
                 @"52ace51f9f0541982b61b3b8180e2cdc95f0566f", 3154)]
-        [TestCase(@"https://github.com/PHPOffice/PHPExcel",
-                @"37b4d18d456e3b533d838099f208e5d3f089a954", 2992)]
+        //[TestCase(@"https://github.com/PHPOffice/PHPExcel",
+        //        @"37b4d18d456e3b533d838099f208e5d3f089a954", 2992)]
         [TestCase(@"https://github.com/piwik/piwik",
                 @"f4dbc61263d401a003c300847af19cf4b1f5db13", 2932)]
         [TestCase(@"https://github.com/subtlepatterns/SubtlePatterns",
                 @"6e056565a1254c967228aab60c9d9c7d0e63a7e3", 2886)]
-        [TestCase(@"https://github.com/kriswallsmith/assetic",
-                @"f8a41b17522dadccbaeb422d4c6617b46c4c52f5", 2721)]
+        //[TestCase(@"https://github.com/kriswallsmith/assetic",
+        //        @"f8a41b17522dadccbaeb422d4c6617b46c4c52f5", 2721)]
         //[TestCase(@"https://github.com/owncloud/core",
         //        @"a00712aa65169b248cac8e541dfe69fd82082609", 2679)]
         [TestCase(@"https://github.com/reactphp/react",

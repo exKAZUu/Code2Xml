@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2013 Kazunori Sakamoto
+// Copyright (C) 2011-2014 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,6 +18,7 @@
 
 using System.ComponentModel.Composition;
 using Antlr.Runtime;
+using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Core.Generators.ANTLRv3.C {
     /// <summary>
@@ -49,7 +50,7 @@ namespace Code2Xml.Core.Generators.ANTLRv3.C {
             return new CParser(stream);
         }
 
-        protected override Antlr3CstNode Parse(CParser parser) {
+        protected override CstNode Parse(CParser parser) {
             return parser.translation_unit();
         }
     }

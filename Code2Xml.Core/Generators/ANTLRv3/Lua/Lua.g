@@ -49,8 +49,8 @@ options {
     language=CSharp3;
 }
 
-@lexer::namespace { Code2Xml.Languages.ANTLRv3.Processors.Lua }
-@parser::namespace { Code2Xml.Languages.ANTLRv3.Processors.Lua }
+@lexer::namespace { Code2Xml.Core.Generators.ANTLRv3.Lua }
+@parser::namespace { Code2Xml.Core.Generators.ANTLRv3.Lua }
 
 public
 chunk

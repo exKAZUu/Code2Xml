@@ -18,6 +18,7 @@
 
 using System.ComponentModel.Composition;
 using Antlr.Runtime;
+using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Core.Generators.ANTLRv3.JavaScript {
     /// <summary>
@@ -49,7 +50,7 @@ namespace Code2Xml.Core.Generators.ANTLRv3.JavaScript {
             return new JavaScriptParser(stream);
         }
 
-        protected override Antlr3CstNode Parse(JavaScriptParser parser) {
+        protected override CstNode Parse(JavaScriptParser parser) {
             return parser.program();
         }
     }

@@ -7,8 +7,8 @@ options {
     language=CSharp3;
 }
 
-@lexer::namespace { Code2Xml.Languages.ANTLRv3.Processors.CSharp }
-@parser::namespace { Code2Xml.Languages.ANTLRv3.Processors.CSharp }
+@lexer::namespace { Code2Xml.Core.Generators.ANTLRv3.CSharp }
+@parser::namespace { Code2Xml.Core.Generators.ANTLRv3.CSharp }
 
 @lexer::header {
 using System;
