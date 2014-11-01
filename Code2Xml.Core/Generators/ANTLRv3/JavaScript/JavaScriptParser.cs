@@ -11,7 +11,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g 2014-11-01 20:10:54
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g 2014-11-01 21:18:11
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -412,7 +412,7 @@ public partial class JavaScriptParser : Antlr.Runtime.Parser, ICustomizedAntlr3P
 				char_literal1=(IToken)Match(input,97,Follow._97_in_statementEnd460); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1, "char_literal1");
-
+				
 				}
 
 				}
@@ -427,7 +427,7 @@ adaptor.Create(retval, char_literal1, "char_literal1");
 				LT2=(IToken)Match(input,LT,Follow._LT_in_statementEnd468); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, LT2, "LT2");
-
+				
 				}
 
 				}
@@ -442,7 +442,7 @@ adaptor.Create(retval, LT2, "LT2");
 				Comment3=(IToken)Match(input,Comment,Follow._Comment_in_statementEnd476); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Comment3, "Comment3");
-
+				
 				}
 
 				}
@@ -457,7 +457,7 @@ adaptor.Create(retval, Comment3, "Comment3");
 				LineComment4=(IToken)Match(input,LineComment,Follow._LineComment_in_statementEnd484); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, LineComment4, "LineComment4");
-
+				
 				}
 
 				}
@@ -1171,7 +1171,7 @@ adaptor.Create(retval, LineComment4, "LineComment4");
 			MODULE18=(IToken)Match(input,MODULE,Follow._MODULE_in_moduleDeclaration627); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, MODULE18, "MODULE18");
-
+			
 			}
 			DebugLocation(93, 16);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:93:16: ( LT !)*
@@ -1356,7 +1356,7 @@ adaptor.Create(retval, MODULE18, "MODULE18");
 				IMPORT23=(IToken)Match(input,IMPORT,Follow._IMPORT_in_importDeclaration656); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, IMPORT23, "IMPORT23");
-
+				
 				}
 				DebugLocation(97, 16);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:97:16: ( LT !)*
@@ -1465,7 +1465,7 @@ adaptor.Create(retval, IMPORT23, "IMPORT23");
 				IMPORT29=(IToken)Match(input,IMPORT,Follow._IMPORT_in_importDeclaration678); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, IMPORT29, "IMPORT29");
-
+				
 				}
 				DebugLocation(98, 16);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:98:16: ( LT !)*
@@ -1589,7 +1589,7 @@ adaptor.Create(retval, IMPORT29, "IMPORT29");
 			FROM33=(IToken)Match(input,FROM,Follow._FROM_in_fromClause703); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, FROM33, "FROM33");
-
+			
 			}
 			DebugLocation(102, 14);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:102:14: ( LT !)*
@@ -1759,7 +1759,7 @@ adaptor.Create(retval, FROM33, "FROM33");
 				char_literal37=(IToken)Match(input,115,Follow._115_in_importClause734); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal37, "char_literal37");
-
+				
 				}
 				DebugLocation(107, 13);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:107:13: ( LT !)*
@@ -1803,7 +1803,7 @@ adaptor.Create(retval, char_literal37, "char_literal37");
 				char_literal39=(IToken)Match(input,RBRACE,Follow._RBRACE_in_importClause740); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal39, "char_literal39");
-
+				
 				}
 
 				}
@@ -1818,7 +1818,7 @@ adaptor.Create(retval, char_literal39, "char_literal39");
 				char_literal40=(IToken)Match(input,115,Follow._115_in_importClause748); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal40, "char_literal40");
-
+				
 				}
 				DebugLocation(108, 13);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:108:13: ( LT !)*
@@ -1906,7 +1906,7 @@ adaptor.Create(retval, char_literal40, "char_literal40");
 				char_literal44=(IToken)Match(input,RBRACE,Follow._RBRACE_in_importClause760); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal44, "char_literal44");
-
+				
 				}
 
 				}
@@ -1921,7 +1921,7 @@ adaptor.Create(retval, char_literal44, "char_literal44");
 				char_literal45=(IToken)Match(input,115,Follow._115_in_importClause768); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal45, "char_literal45");
-
+				
 				}
 				DebugLocation(109, 13);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:109:13: ( LT !)*
@@ -2009,7 +2009,7 @@ adaptor.Create(retval, char_literal45, "char_literal45");
 				char_literal49=(IToken)Match(input,88,Follow._88_in_importClause780); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal49, "char_literal49");
-
+				
 				}
 				DebugLocation(109, 39);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:109:39: ( LT !)*
@@ -2053,7 +2053,7 @@ adaptor.Create(retval, char_literal49, "char_literal49");
 				char_literal51=(IToken)Match(input,RBRACE,Follow._RBRACE_in_importClause786); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal51, "char_literal51");
-
+				
 				}
 
 				}
@@ -2197,7 +2197,7 @@ adaptor.Create(retval, char_literal51, "char_literal51");
 					char_literal54=(IToken)Match(input,88,Follow._88_in_importsList810); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal54, "char_literal54");
-
+					
 					}
 					DebugLocation(113, 35);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:113:35: ( LT !)*
@@ -2405,7 +2405,7 @@ adaptor.Create(retval, char_literal54, "char_literal54");
 				AS60=(IToken)Match(input,AS,Follow._AS_in_importSpecifier849); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, AS60, "AS60");
-
+				
 				}
 				DebugLocation(118, 32);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:118:32: ( LT !)*
@@ -2762,7 +2762,7 @@ adaptor.Create(retval, AS60, "AS60");
 				EXPORT65=(IToken)Match(input,EXPORT,Follow._EXPORT_in_exportDeclaration907); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, EXPORT65, "EXPORT65");
-
+				
 				}
 				DebugLocation(131, 16);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:131:16: ( LT !)*
@@ -2824,7 +2824,7 @@ adaptor.Create(retval, EXPORT65, "EXPORT65");
 					DEFAULT67=(IToken)Match(input,DEFAULT,Follow._DEFAULT_in_exportDeclaration914); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, DEFAULT67, "DEFAULT67");
-
+					
 					}
 					DebugLocation(131, 30);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:131:30: ( LT !)*
@@ -2875,7 +2875,7 @@ adaptor.Create(retval, DEFAULT67, "DEFAULT67");
 				char_literal69=(IToken)Match(input,83,Follow._83_in_exportDeclaration922); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal69, "char_literal69");
-
+				
 				}
 				DebugLocation(131, 41);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:131:41: ( LT !)*
@@ -3020,7 +3020,7 @@ adaptor.Create(retval, char_literal69, "char_literal69");
 				EXPORT74=(IToken)Match(input,EXPORT,Follow._EXPORT_in_exportDeclaration945); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, EXPORT74, "EXPORT74");
-
+				
 				}
 				DebugLocation(132, 16);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:132:16: ( LT !)*
@@ -3082,7 +3082,7 @@ adaptor.Create(retval, EXPORT74, "EXPORT74");
 					DEFAULT76=(IToken)Match(input,DEFAULT,Follow._DEFAULT_in_exportDeclaration952); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, DEFAULT76, "DEFAULT76");
-
+					
 					}
 					DebugLocation(132, 30);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:132:30: ( LT !)*
@@ -3278,7 +3278,7 @@ adaptor.Create(retval, DEFAULT76, "DEFAULT76");
 				EXPORT83=(IToken)Match(input,EXPORT,Follow._EXPORT_in_exportDeclaration983); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, EXPORT83, "EXPORT83");
-
+				
 				}
 				DebugLocation(133, 16);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:133:16: ( LT !)*
@@ -3340,7 +3340,7 @@ adaptor.Create(retval, EXPORT83, "EXPORT83");
 					DEFAULT85=(IToken)Match(input,DEFAULT,Follow._DEFAULT_in_exportDeclaration990); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, DEFAULT85, "DEFAULT85");
-
+					
 					}
 					DebugLocation(133, 30);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:133:30: ( LT !)*
@@ -3412,7 +3412,7 @@ adaptor.Create(retval, DEFAULT85, "DEFAULT85");
 				EXPORT89=(IToken)Match(input,EXPORT,Follow._EXPORT_in_exportDeclaration1008); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, EXPORT89, "EXPORT89");
-
+				
 				}
 				DebugLocation(134, 16);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:134:16: ( LT !)*
@@ -3474,7 +3474,7 @@ adaptor.Create(retval, EXPORT89, "EXPORT89");
 					DEFAULT91=(IToken)Match(input,DEFAULT,Follow._DEFAULT_in_exportDeclaration1015); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, DEFAULT91, "DEFAULT91");
-
+					
 					}
 					DebugLocation(134, 30);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:134:30: ( LT !)*
@@ -3546,7 +3546,7 @@ adaptor.Create(retval, DEFAULT91, "DEFAULT91");
 				EXPORT95=(IToken)Match(input,EXPORT,Follow._EXPORT_in_exportDeclaration1033); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, EXPORT95, "EXPORT95");
-
+				
 				}
 				DebugLocation(135, 16);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:135:16: ( LT !)*
@@ -3613,7 +3613,7 @@ adaptor.Create(retval, EXPORT95, "EXPORT95");
 					DEFAULT97=(IToken)Match(input,DEFAULT,Follow._DEFAULT_in_exportDeclaration1040); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, DEFAULT97, "DEFAULT97");
-
+					
 					}
 					DebugLocation(135, 30);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:135:30: ( LT !)*
@@ -3782,7 +3782,7 @@ adaptor.Create(retval, DEFAULT97, "DEFAULT97");
 				char_literal101=(IToken)Match(input,115,Follow._115_in_exportsClause1067); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal101, "char_literal101");
-
+				
 				}
 				DebugLocation(139, 13);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:139:13: ( LT !)*
@@ -3826,7 +3826,7 @@ adaptor.Create(retval, char_literal101, "char_literal101");
 				char_literal103=(IToken)Match(input,RBRACE,Follow._RBRACE_in_exportsClause1073); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal103, "char_literal103");
-
+				
 				}
 
 				}
@@ -3841,7 +3841,7 @@ adaptor.Create(retval, char_literal103, "char_literal103");
 				char_literal104=(IToken)Match(input,115,Follow._115_in_exportsClause1081); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal104, "char_literal104");
-
+				
 				}
 				DebugLocation(140, 13);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:140:13: ( LT !)*
@@ -3929,7 +3929,7 @@ adaptor.Create(retval, char_literal104, "char_literal104");
 				char_literal108=(IToken)Match(input,RBRACE,Follow._RBRACE_in_exportsClause1093); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal108, "char_literal108");
-
+				
 				}
 
 				}
@@ -3944,7 +3944,7 @@ adaptor.Create(retval, char_literal108, "char_literal108");
 				char_literal109=(IToken)Match(input,115,Follow._115_in_exportsClause1101); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal109, "char_literal109");
-
+				
 				}
 				DebugLocation(141, 13);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:141:13: ( LT !)*
@@ -4032,7 +4032,7 @@ adaptor.Create(retval, char_literal109, "char_literal109");
 				char_literal113=(IToken)Match(input,88,Follow._88_in_exportsClause1113); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal113, "char_literal113");
-
+				
 				}
 				DebugLocation(141, 39);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:141:39: ( LT !)*
@@ -4076,7 +4076,7 @@ adaptor.Create(retval, char_literal113, "char_literal113");
 				char_literal115=(IToken)Match(input,RBRACE,Follow._RBRACE_in_exportsClause1119); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal115, "char_literal115");
-
+				
 				}
 
 				}
@@ -4220,7 +4220,7 @@ adaptor.Create(retval, char_literal115, "char_literal115");
 					char_literal118=(IToken)Match(input,88,Follow._88_in_exportsList1143); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal118, "char_literal118");
-
+					
 					}
 					DebugLocation(145, 35);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:145:35: ( LT !)*
@@ -4428,7 +4428,7 @@ adaptor.Create(retval, char_literal118, "char_literal118");
 				AS124=(IToken)Match(input,AS,Follow._AS_in_exportSpecifier1182); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, AS124, "AS124");
-
+				
 				}
 				DebugLocation(150, 37);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:150:37: ( LT !)*
@@ -4552,7 +4552,7 @@ adaptor.Create(retval, AS124, "AS124");
 			FUNCTION127=(IToken)Match(input,FUNCTION,Follow._FUNCTION_in_functionDeclaration1207); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, FUNCTION127, "FUNCTION127");
-
+			
 			}
 			DebugLocation(156, 18);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:156:18: ( LT !)*
@@ -4762,7 +4762,7 @@ adaptor.Create(retval, FUNCTION127, "FUNCTION127");
 			FUNCTION134=(IToken)Match(input,FUNCTION,Follow._FUNCTION_in_functionExpression1246); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, FUNCTION134, "FUNCTION134");
-
+			
 			}
 			DebugLocation(160, 18);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:160:18: ( LT !)*
@@ -5009,7 +5009,7 @@ adaptor.Create(retval, FUNCTION134, "FUNCTION134");
 			char_literal141=(IToken)Match(input,82,Follow._82_in_formalParameterList1286); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal141, "char_literal141");
-
+			
 			}
 			DebugLocation(164, 11);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:164:11: ( ( LT !)* identifier ( ( LT !)* ',' ( LT !)* identifier )* )?
@@ -5141,7 +5141,7 @@ adaptor.Create(retval, char_literal141, "char_literal141");
 						char_literal145=(IToken)Match(input,88,Follow._88_in_formalParameterList1300); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal145, "char_literal145");
-
+						
 						}
 						DebugLocation(164, 40);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:164:40: ( LT !)*
@@ -5250,7 +5250,7 @@ adaptor.Create(retval, char_literal145, "char_literal145");
 			RPAREN149=(IToken)Match(input,RPAREN,Follow._RPAREN_in_formalParameterList1316); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RPAREN149, "RPAREN149");
-
+			
 			}
 
 			}
@@ -5326,7 +5326,7 @@ adaptor.Create(retval, RPAREN149, "RPAREN149");
 			char_literal150=(IToken)Match(input,115,Follow._115_in_functionBody1333); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal150, "char_literal150");
-
+			
 			}
 			DebugLocation(168, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:168:13: ( LT !)*
@@ -5446,7 +5446,7 @@ adaptor.Create(retval, char_literal150, "char_literal150");
 			RBRACE154=(IToken)Match(input,RBRACE,Follow._RBRACE_in_functionBody1346); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RBRACE154, "RBRACE154");
-
+			
 			}
 
 			}
@@ -5945,7 +5945,7 @@ adaptor.Create(retval, RBRACE154, "RBRACE154");
 			char_literal169=(IToken)Match(input,115,Follow._115_in_statementBlock1489); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal169, "char_literal169");
-
+			
 			}
 			DebugLocation(190, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:190:13: ( LT !)*
@@ -6065,7 +6065,7 @@ adaptor.Create(retval, char_literal169, "char_literal169");
 			RBRACE173=(IToken)Match(input,RBRACE,Follow._RBRACE_in_statementBlock1502); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RBRACE173, "RBRACE173");
-
+			
 			}
 
 			}
@@ -6290,7 +6290,7 @@ adaptor.Create(retval, RBRACE173, "RBRACE173");
 			VAR177=(IToken)Match(input,VAR,Follow._VAR_in_variableStatement1553); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, VAR177, "VAR177");
-
+			
 			}
 			DebugLocation(198, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:198:13: ( LT !)*
@@ -6482,7 +6482,7 @@ adaptor.Create(retval, VAR177, "VAR177");
 					char_literal183=(IToken)Match(input,88,Follow._88_in_variableDeclarationList1589); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal183, "char_literal183");
-
+					
 					}
 					DebugLocation(202, 39);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:202:39: ( LT !)*
@@ -6682,7 +6682,7 @@ adaptor.Create(retval, char_literal183, "char_literal183");
 					char_literal188=(IToken)Match(input,88,Follow._88_in_variableDeclarationListNoIn1625); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal188, "char_literal188");
-
+					
 					}
 					DebugLocation(206, 43);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:206:43: ( LT !)*
@@ -7098,7 +7098,7 @@ adaptor.Create(retval, char_literal188, "char_literal188");
 			char_literal197=(IToken)Match(input,102,Follow._102_in_initialiser1714); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal197, "char_literal197");
-
+			
 			}
 			DebugLocation(218, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:218:13: ( LT !)*
@@ -7214,7 +7214,7 @@ adaptor.Create(retval, char_literal197, "char_literal197");
 			char_literal200=(IToken)Match(input,102,Follow._102_in_initialiserNoIn1741); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal200, "char_literal200");
-
+			
 			}
 			DebugLocation(222, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:222:13: ( LT !)*
@@ -7327,7 +7327,7 @@ adaptor.Create(retval, char_literal200, "char_literal200");
 			char_literal203=(IToken)Match(input,97,Follow._97_in_emptyStatement1768); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal203, "char_literal203");
-
+			
 			}
 
 			}
@@ -7492,7 +7492,7 @@ adaptor.Create(retval, char_literal203, "char_literal203");
 			IF206=(IToken)Match(input,IF,Follow._IF_in_ifStatement1812); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, IF206, "IF206");
-
+			
 			}
 			DebugLocation(234, 12);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:234:12: ( LT !)*
@@ -7536,7 +7536,7 @@ adaptor.Create(retval, IF206, "IF206");
 			char_literal208=(IToken)Match(input,82,Follow._82_in_ifStatement1818); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal208, "char_literal208");
-
+			
 			}
 			DebugLocation(234, 21);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:234:21: ( LT !)*
@@ -7624,7 +7624,7 @@ adaptor.Create(retval, char_literal208, "char_literal208");
 			RPAREN212=(IToken)Match(input,RPAREN,Follow._RPAREN_in_ifStatement1830); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RPAREN212, "RPAREN212");
-
+			
 			}
 			DebugLocation(234, 49);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:234:49: ( LT !)*
@@ -7744,7 +7744,7 @@ adaptor.Create(retval, RPAREN212, "RPAREN212");
 				ELSE216=(IToken)Match(input,ELSE,Follow._ELSE_in_ifStatement1843); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, ELSE216, "ELSE216");
-
+				
 				}
 				DebugLocation(234, 75);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:234:75: ( LT !)*
@@ -8045,7 +8045,7 @@ adaptor.Create(retval, ELSE216, "ELSE216");
 			DO223=(IToken)Match(input,DO,Follow._DO_in_doWhileStatement1917); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, DO223, "DO223");
-
+			
 			}
 			DebugLocation(245, 12);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:245:12: ( LT !)*
@@ -8133,7 +8133,7 @@ adaptor.Create(retval, DO223, "DO223");
 			WHILE227=(IToken)Match(input,WHILE,Follow._WHILE_in_doWhileStatement1929); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, WHILE227, "WHILE227");
-
+			
 			}
 			DebugLocation(245, 38);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:245:38: ( LT !)*
@@ -8177,7 +8177,7 @@ adaptor.Create(retval, WHILE227, "WHILE227");
 			char_literal229=(IToken)Match(input,82,Follow._82_in_doWhileStatement1935); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal229, "char_literal229");
-
+			
 			}
 			DebugLocation(245, 45);
 			PushFollow(Follow._expression_in_doWhileStatement1937);
@@ -8189,7 +8189,7 @@ adaptor.Create(retval, char_literal229, "char_literal229");
 			RPAREN231=(IToken)Match(input,RPAREN,Follow._RPAREN_in_doWhileStatement1939); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RPAREN231, "RPAREN231");
-
+			
 			}
 			DebugLocation(245, 63);
 			PushFollow(Follow._statementEnd_in_doWhileStatement1941);
@@ -8278,7 +8278,7 @@ adaptor.Create(retval, RPAREN231, "RPAREN231");
 			WHILE233=(IToken)Match(input,WHILE,Follow._WHILE_in_whileStatement1962); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, WHILE233, "WHILE233");
-
+			
 			}
 			DebugLocation(249, 15);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:249:15: ( LT !)*
@@ -8322,7 +8322,7 @@ adaptor.Create(retval, WHILE233, "WHILE233");
 			char_literal235=(IToken)Match(input,82,Follow._82_in_whileStatement1968); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal235, "char_literal235");
-
+			
 			}
 			DebugLocation(249, 24);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:249:24: ( LT !)*
@@ -8410,7 +8410,7 @@ adaptor.Create(retval, char_literal235, "char_literal235");
 			RPAREN239=(IToken)Match(input,RPAREN,Follow._RPAREN_in_whileStatement1980); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RPAREN239, "RPAREN239");
-
+			
 			}
 			DebugLocation(249, 52);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:249:52: ( LT !)*
@@ -8551,7 +8551,7 @@ adaptor.Create(retval, RPAREN239, "RPAREN239");
 			FOR242=(IToken)Match(input,FOR,Follow._FOR_in_forStatement2007); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, FOR242, "FOR242");
-
+			
 			}
 			DebugLocation(253, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:253:13: ( LT !)*
@@ -8595,7 +8595,7 @@ adaptor.Create(retval, FOR242, "FOR242");
 			char_literal244=(IToken)Match(input,82,Follow._82_in_forStatement2013); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal244, "char_literal244");
-
+			
 			}
 			DebugLocation(253, 20);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:253:20: ( ( LT !)* forStatementInitialiserPart )?
@@ -8711,7 +8711,7 @@ adaptor.Create(retval, char_literal244, "char_literal244");
 			char_literal248=(IToken)Match(input,97,Follow._97_in_forStatement2028); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal248, "char_literal248");
-
+			
 			}
 			DebugLocation(253, 65);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:253:65: ( ( LT !)* expression )?
@@ -8827,7 +8827,7 @@ adaptor.Create(retval, char_literal248, "char_literal248");
 			char_literal252=(IToken)Match(input,97,Follow._97_in_forStatement2043); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal252, "char_literal252");
-
+			
 			}
 			DebugLocation(253, 93);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:253:93: ( ( LT !)* expression )?
@@ -8943,7 +8943,7 @@ adaptor.Create(retval, char_literal252, "char_literal252");
 			RPAREN256=(IToken)Match(input,RPAREN,Follow._RPAREN_in_forStatement2058); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RPAREN256, "RPAREN256");
-
+			
 			}
 			DebugLocation(253, 126);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:253:126: ( LT !)*
@@ -9098,7 +9098,7 @@ adaptor.Create(retval, RPAREN256, "RPAREN256");
 				VAR260=(IToken)Match(input,VAR,Follow._VAR_in_forStatementInitialiserPart2093); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, VAR260, "VAR260");
-
+				
 				}
 				DebugLocation(258, 13);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:258:13: ( LT !)*
@@ -9234,7 +9234,7 @@ adaptor.Create(retval, VAR260, "VAR260");
 			FOR263=(IToken)Match(input,FOR,Follow._FOR_in_forInStatement2120); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, FOR263, "FOR263");
-
+			
 			}
 			DebugLocation(262, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:262:13: ( LT !)*
@@ -9278,7 +9278,7 @@ adaptor.Create(retval, FOR263, "FOR263");
 			char_literal265=(IToken)Match(input,82,Follow._82_in_forInStatement2126); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal265, "char_literal265");
-
+			
 			}
 			DebugLocation(262, 22);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:262:22: ( LT !)*
@@ -9366,7 +9366,7 @@ adaptor.Create(retval, char_literal265, "char_literal265");
 			string_literal269=(IToken)Match(input,IN,Follow._IN_in_forInStatement2138); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal269, "string_literal269");
-
+			
 			}
 			DebugLocation(262, 67);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:262:67: ( LT !)*
@@ -9454,7 +9454,7 @@ adaptor.Create(retval, string_literal269, "string_literal269");
 			RPAREN273=(IToken)Match(input,RPAREN,Follow._RPAREN_in_forInStatement2150); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RPAREN273, "RPAREN273");
-
+			
 			}
 			DebugLocation(262, 95);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:262:95: ( LT !)*
@@ -9609,7 +9609,7 @@ adaptor.Create(retval, RPAREN273, "RPAREN273");
 				VAR277=(IToken)Match(input,VAR,Follow._VAR_in_forInStatementInitialiserPart2185); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, VAR277, "VAR277");
-
+				
 				}
 				DebugLocation(267, 13);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:267:13: ( LT !)*
@@ -9726,7 +9726,7 @@ adaptor.Create(retval, VAR277, "VAR277");
 			CONTINUE280=(IToken)Match(input,CONTINUE,Follow._CONTINUE_in_continueStatement2208); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, CONTINUE280, "CONTINUE280");
-
+			
 			}
 			DebugLocation(271, 16);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:271:16: ( identifier )?
@@ -9874,7 +9874,7 @@ adaptor.Create(retval, CONTINUE280, "CONTINUE280");
 			BREAK283=(IToken)Match(input,BREAK,Follow._BREAK_in_breakStatement2230); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, BREAK283, "BREAK283");
-
+			
 			}
 			DebugLocation(275, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:275:13: ( identifier )?
@@ -10022,7 +10022,7 @@ adaptor.Create(retval, BREAK283, "BREAK283");
 			RETURN286=(IToken)Match(input,RETURN,Follow._RETURN_in_returnStatement2252); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RETURN286, "RETURN286");
-
+			
 			}
 			DebugLocation(279, 14);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:279:14: ( expression )?
@@ -10320,7 +10320,7 @@ adaptor.Create(retval, RETURN286, "RETURN286");
 			WITH289=(IToken)Match(input,WITH,Follow._WITH_in_withStatement2278); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, WITH289, "WITH289");
-
+			
 			}
 			DebugLocation(283, 14);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:283:14: ( LT !)*
@@ -10364,7 +10364,7 @@ adaptor.Create(retval, WITH289, "WITH289");
 			char_literal291=(IToken)Match(input,82,Follow._82_in_withStatement2284); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal291, "char_literal291");
-
+			
 			}
 			DebugLocation(283, 23);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:283:23: ( LT !)*
@@ -10452,7 +10452,7 @@ adaptor.Create(retval, char_literal291, "char_literal291");
 			RPAREN295=(IToken)Match(input,RPAREN,Follow._RPAREN_in_withStatement2296); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RPAREN295, "RPAREN295");
-
+			
 			}
 			DebugLocation(283, 51);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:283:51: ( LT !)*
@@ -10615,7 +10615,7 @@ adaptor.Create(retval, RPAREN295, "RPAREN295");
 			char_literal300=(IToken)Match(input,96,Follow._96_in_labelledStatement2325); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal300, "char_literal300");
-
+			
 			}
 			DebugLocation(287, 29);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:287:29: ( LT !)*
@@ -10742,7 +10742,7 @@ adaptor.Create(retval, char_literal300, "char_literal300");
 			SWITCH303=(IToken)Match(input,SWITCH,Follow._SWITCH_in_switchStatement2352); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, SWITCH303, "SWITCH303");
-
+			
 			}
 			DebugLocation(291, 16);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:291:16: ( LT !)*
@@ -10786,7 +10786,7 @@ adaptor.Create(retval, SWITCH303, "SWITCH303");
 			char_literal305=(IToken)Match(input,82,Follow._82_in_switchStatement2358); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal305, "char_literal305");
-
+			
 			}
 			DebugLocation(291, 25);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:291:25: ( LT !)*
@@ -10874,7 +10874,7 @@ adaptor.Create(retval, char_literal305, "char_literal305");
 			RPAREN309=(IToken)Match(input,RPAREN,Follow._RPAREN_in_switchStatement2370); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RPAREN309, "RPAREN309");
-
+			
 			}
 			DebugLocation(291, 53);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:291:53: ( LT !)*
@@ -11000,7 +11000,7 @@ adaptor.Create(retval, RPAREN309, "RPAREN309");
 			char_literal312=(IToken)Match(input,115,Follow._115_in_caseBlock2397); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal312, "char_literal312");
-
+			
 			}
 			DebugLocation(295, 11);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:295:11: ( ( LT !)* caseClause )*
@@ -11278,7 +11278,7 @@ adaptor.Create(retval, char_literal312, "char_literal312");
 			RBRACE320=(IToken)Match(input,RBRACE,Follow._RBRACE_in_caseBlock2430); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RBRACE320, "RBRACE320");
-
+			
 			}
 
 			}
@@ -11357,7 +11357,7 @@ adaptor.Create(retval, RBRACE320, "RBRACE320");
 			CASE321=(IToken)Match(input,CASE,Follow._CASE_in_caseClause2447); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, CASE321, "CASE321");
-
+			
 			}
 			DebugLocation(299, 14);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:299:14: ( LT !)*
@@ -11445,7 +11445,7 @@ adaptor.Create(retval, CASE321, "CASE321");
 			char_literal325=(IToken)Match(input,96,Follow._96_in_caseClause2459); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal325, "char_literal325");
-
+			
 			}
 			DebugLocation(299, 39);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:299:39: ( LT !)*
@@ -11597,7 +11597,7 @@ adaptor.Create(retval, char_literal325, "char_literal325");
 			DEFAULT328=(IToken)Match(input,DEFAULT,Follow._DEFAULT_in_defaultClause2487); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, DEFAULT328, "DEFAULT328");
-
+			
 			}
 			DebugLocation(303, 17);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:303:17: ( LT !)*
@@ -11641,7 +11641,7 @@ adaptor.Create(retval, DEFAULT328, "DEFAULT328");
 			char_literal330=(IToken)Match(input,96,Follow._96_in_defaultClause2493); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal330, "char_literal330");
-
+			
 			}
 			DebugLocation(303, 26);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:303:26: ( LT !)*
@@ -11788,7 +11788,7 @@ adaptor.Create(retval, char_literal330, "char_literal330");
 			THROW333=(IToken)Match(input,THROW,Follow._THROW_in_throwStatement2521); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, THROW333, "THROW333");
-
+			
 			}
 			DebugLocation(307, 13);
 			PushFollow(Follow._expression_in_throwStatement2523);
@@ -11879,7 +11879,7 @@ adaptor.Create(retval, THROW333, "THROW333");
 			TRY336=(IToken)Match(input,TRY,Follow._TRY_in_tryStatement2542); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, TRY336, "TRY336");
-
+			
 			}
 			DebugLocation(311, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:311:13: ( LT !)*
@@ -12171,7 +12171,7 @@ adaptor.Create(retval, TRY336, "TRY336");
 			CATCH344=(IToken)Match(input,CATCH,Follow._CATCH_in_catchClause2593); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, CATCH344, "CATCH344");
-
+			
 			}
 			DebugLocation(315, 15);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:315:15: ( LT !)*
@@ -12215,7 +12215,7 @@ adaptor.Create(retval, CATCH344, "CATCH344");
 			char_literal346=(IToken)Match(input,82,Follow._82_in_catchClause2599); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal346, "char_literal346");
-
+			
 			}
 			DebugLocation(315, 24);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:315:24: ( LT !)*
@@ -12303,7 +12303,7 @@ adaptor.Create(retval, char_literal346, "char_literal346");
 			RPAREN350=(IToken)Match(input,RPAREN,Follow._RPAREN_in_catchClause2611); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RPAREN350, "RPAREN350");
-
+			
 			}
 			DebugLocation(315, 52);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:315:52: ( LT !)*
@@ -12419,7 +12419,7 @@ adaptor.Create(retval, RPAREN350, "RPAREN350");
 			FINALLY353=(IToken)Match(input,FINALLY,Follow._FINALLY_in_finallyClause2638); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, FINALLY353, "FINALLY353");
-
+			
 			}
 			DebugLocation(319, 17);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:319:17: ( LT !)*
@@ -12605,7 +12605,7 @@ adaptor.Create(retval, FINALLY353, "FINALLY353");
 					char_literal358=(IToken)Match(input,88,Follow._88_in_expression2669); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal358, "char_literal358");
-
+					
 					}
 					DebugLocation(324, 40);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:324:40: ( LT !)*
@@ -12805,7 +12805,7 @@ adaptor.Create(retval, char_literal358, "char_literal358");
 					char_literal363=(IToken)Match(input,88,Follow._88_in_expressionNoIn2705); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal363, "char_literal363");
-
+					
 					}
 					DebugLocation(328, 44);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:328:44: ( LT !)*
@@ -14347,7 +14347,7 @@ adaptor.Create(retval, char_literal363, "char_literal363");
 				NEW381=(IToken)Match(input,NEW,Follow._NEW_in_newExpression2853); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, NEW381, "NEW381");
-
+				
 				}
 				DebugLocation(348, 13);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:348:13: ( LT !)*
@@ -14552,7 +14552,7 @@ adaptor.Create(retval, NEW381, "NEW381");
 				NEW386=(IToken)Match(input,NEW,Follow._NEW_in_memberExpression2889); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, NEW386, "NEW386");
-
+				
 				}
 				DebugLocation(352, 55);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:352:55: ( LT !)*
@@ -15313,7 +15313,7 @@ adaptor.Create(retval, NEW386, "NEW386");
 			char_literal403=(IToken)Match(input,82,Follow._82_in_arguments3026); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal403, "char_literal403");
-
+			
 			}
 			DebugLocation(371, 11);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:371:11: ( ( LT !)* assignmentExpression ( ( LT !)* ',' ( LT !)* assignmentExpression )* )?
@@ -15445,7 +15445,7 @@ adaptor.Create(retval, char_literal403, "char_literal403");
 						char_literal407=(IToken)Match(input,88,Follow._88_in_arguments3040); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal407, "char_literal407");
-
+						
 						}
 						DebugLocation(371, 50);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:371:50: ( LT !)*
@@ -15554,7 +15554,7 @@ adaptor.Create(retval, char_literal407, "char_literal407");
 			RPAREN411=(IToken)Match(input,RPAREN,Follow._RPAREN_in_arguments3056); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RPAREN411, "RPAREN411");
-
+			
 			}
 
 			}
@@ -15630,7 +15630,7 @@ adaptor.Create(retval, RPAREN411, "RPAREN411");
 			char_literal412=(IToken)Match(input,112,Follow._112_in_indexSuffix3077); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal412, "char_literal412");
-
+			
 			}
 			DebugLocation(375, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:375:13: ( LT !)*
@@ -15718,7 +15718,7 @@ adaptor.Create(retval, char_literal412, "char_literal412");
 			RBRACK416=(IToken)Match(input,RBRACK,Follow._RBRACK_in_indexSuffix3089); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RBRACK416, "RBRACK416");
-
+			
 			}
 
 			}
@@ -15790,7 +15790,7 @@ adaptor.Create(retval, RBRACK416, "RBRACK416");
 			char_literal417=(IToken)Match(input,92,Follow._92_in_propertyReferenceSuffix3111); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal417, "char_literal417");
-
+			
 			}
 			DebugLocation(379, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:379:13: ( LT !)*
@@ -15905,7 +15905,7 @@ adaptor.Create(retval, char_literal417, "char_literal417");
 			if (input.LA(1)==78||input.LA(1)==81||input.LA(1)==84||input.LA(1)==87||input.LA(1)==91||input.LA(1)==95||input.LA(1)==100||input.LA(1)==102||input.LA(1)==108||input.LA(1)==110||input.LA(1)==114||input.LA(1)==117)
 			{
 				input.Consume();
-adaptor.Create(retval, set420, "set420");
+				if (state.backtracking == 0) adaptor.Create(retval, set420, "set420");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -16061,7 +16061,7 @@ adaptor.Create(retval, set420, "set420");
 				char_literal423=(IToken)Match(input,111,Follow._111_in_conditionalExpression3206); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal423, "char_literal423");
-
+				
 				}
 				DebugLocation(387, 39);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:387:39: ( LT !)*
@@ -16149,7 +16149,7 @@ adaptor.Create(retval, char_literal423, "char_literal423");
 				char_literal427=(IToken)Match(input,96,Follow._96_in_conditionalExpression3218); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal427, "char_literal427");
-
+				
 				}
 				DebugLocation(387, 74);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:387:74: ( LT !)*
@@ -16347,7 +16347,7 @@ adaptor.Create(retval, char_literal427, "char_literal427");
 				char_literal432=(IToken)Match(input,111,Follow._111_in_conditionalExpressionNoIn3250); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal432, "char_literal432");
-
+				
 				}
 				DebugLocation(391, 43);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:391:43: ( LT !)*
@@ -16435,7 +16435,7 @@ adaptor.Create(retval, char_literal432, "char_literal432");
 				char_literal436=(IToken)Match(input,96,Follow._96_in_conditionalExpressionNoIn3262); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal436, "char_literal436");
-
+				
 				}
 				DebugLocation(391, 82);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:391:82: ( LT !)*
@@ -16628,7 +16628,7 @@ adaptor.Create(retval, char_literal436, "char_literal436");
 					string_literal441=(IToken)Match(input,118,Follow._118_in_logicalORExpression3294); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal441, "string_literal441");
-
+					
 					}
 					DebugLocation(395, 41);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:395:41: ( LT !)*
@@ -16828,7 +16828,7 @@ adaptor.Create(retval, string_literal441, "string_literal441");
 					string_literal446=(IToken)Match(input,118,Follow._118_in_logicalORExpressionNoIn3330); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal446, "string_literal446");
-
+					
 					}
 					DebugLocation(399, 45);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:399:45: ( LT !)*
@@ -17028,7 +17028,7 @@ adaptor.Create(retval, string_literal446, "string_literal446");
 					string_literal451=(IToken)Match(input,79,Follow._79_in_logicalANDExpression3366); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal451, "string_literal451");
-
+					
 					}
 					DebugLocation(403, 40);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:403:40: ( LT !)*
@@ -17228,7 +17228,7 @@ adaptor.Create(retval, string_literal451, "string_literal451");
 					string_literal456=(IToken)Match(input,79,Follow._79_in_logicalANDExpressionNoIn3402); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal456, "string_literal456");
-
+					
 					}
 					DebugLocation(407, 44);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:407:44: ( LT !)*
@@ -17428,7 +17428,7 @@ adaptor.Create(retval, string_literal456, "string_literal456");
 					char_literal461=(IToken)Match(input,116,Follow._116_in_bitwiseORExpression3438); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal461, "char_literal461");
-
+					
 					}
 					DebugLocation(411, 40);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:411:40: ( LT !)*
@@ -17628,7 +17628,7 @@ adaptor.Create(retval, char_literal461, "char_literal461");
 					char_literal466=(IToken)Match(input,116,Follow._116_in_bitwiseORExpressionNoIn3474); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal466, "char_literal466");
-
+					
 					}
 					DebugLocation(415, 44);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:415:44: ( LT !)*
@@ -17828,7 +17828,7 @@ adaptor.Create(retval, char_literal466, "char_literal466");
 					char_literal471=(IToken)Match(input,113,Follow._113_in_bitwiseXORExpression3510); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal471, "char_literal471");
-
+					
 					}
 					DebugLocation(419, 40);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:419:40: ( LT !)*
@@ -18028,7 +18028,7 @@ adaptor.Create(retval, char_literal471, "char_literal471");
 					char_literal476=(IToken)Match(input,113,Follow._113_in_bitwiseXORExpressionNoIn3546); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal476, "char_literal476");
-
+					
 					}
 					DebugLocation(423, 44);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:423:44: ( LT !)*
@@ -18228,7 +18228,7 @@ adaptor.Create(retval, char_literal476, "char_literal476");
 					char_literal481=(IToken)Match(input,80,Follow._80_in_bitwiseANDExpression3582); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal481, "char_literal481");
-
+					
 					}
 					DebugLocation(427, 38);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:427:38: ( LT !)*
@@ -18428,7 +18428,7 @@ adaptor.Create(retval, char_literal481, "char_literal481");
 					char_literal486=(IToken)Match(input,80,Follow._80_in_bitwiseANDExpressionNoIn3618); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal486, "char_literal486");
-
+					
 					}
 					DebugLocation(431, 42);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:431:42: ( LT !)*
@@ -18630,7 +18630,7 @@ adaptor.Create(retval, char_literal486, "char_literal486");
 					if ((input.LA(1)>=75 && input.LA(1)<=76)||(input.LA(1)>=103 && input.LA(1)<=104))
 					{
 						input.Consume();
-adaptor.Create(retval, set491, "set491");
+						if (state.backtracking == 0) adaptor.Create(retval, set491, "set491");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -18841,7 +18841,7 @@ adaptor.Create(retval, set491, "set491");
 					if ((input.LA(1)>=75 && input.LA(1)<=76)||(input.LA(1)>=103 && input.LA(1)<=104))
 					{
 						input.Consume();
-adaptor.Create(retval, set496, "set496");
+						if (state.backtracking == 0) adaptor.Create(retval, set496, "set496");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -19052,7 +19052,7 @@ adaptor.Create(retval, set496, "set496");
 					if ((input.LA(1)>=IN && input.LA(1)<=INSTANCEOF)||input.LA(1)==98||input.LA(1)==101||(input.LA(1)>=105 && input.LA(1)<=106))
 					{
 						input.Consume();
-adaptor.Create(retval, set501, "set501");
+						if (state.backtracking == 0) adaptor.Create(retval, set501, "set501");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -19263,7 +19263,7 @@ adaptor.Create(retval, set501, "set501");
 					if (input.LA(1)==INSTANCEOF||input.LA(1)==98||input.LA(1)==101||(input.LA(1)>=105 && input.LA(1)<=106))
 					{
 						input.Consume();
-adaptor.Create(retval, set506, "set506");
+						if (state.backtracking == 0) adaptor.Create(retval, set506, "set506");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -19474,7 +19474,7 @@ adaptor.Create(retval, set506, "set506");
 					if (input.LA(1)==99||input.LA(1)==107||input.LA(1)==109)
 					{
 						input.Consume();
-adaptor.Create(retval, set511, "set511");
+						if (state.backtracking == 0) adaptor.Create(retval, set511, "set511");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -19702,7 +19702,7 @@ adaptor.Create(retval, set511, "set511");
 					if (input.LA(1)==85||input.LA(1)==89)
 					{
 						input.Consume();
-adaptor.Create(retval, set516, "set516");
+						if (state.backtracking == 0) adaptor.Create(retval, set516, "set516");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -19913,7 +19913,7 @@ adaptor.Create(retval, set516, "set516");
 					if (input.LA(1)==77||input.LA(1)==83||input.LA(1)==94)
 					{
 						input.Consume();
-adaptor.Create(retval, set521, "set521");
+						if (state.backtracking == 0) adaptor.Create(retval, set521, "set521");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -20091,7 +20091,7 @@ adaptor.Create(retval, set521, "set521");
 				if (input.LA(1)==DELETE||input.LA(1)==TYPEOF||input.LA(1)==VOID||input.LA(1)==74||(input.LA(1)>=85 && input.LA(1)<=86)||(input.LA(1)>=89 && input.LA(1)<=90)||input.LA(1)==119)
 				{
 					input.Consume();
-adaptor.Create(retval, set525, "set525");
+					if (state.backtracking == 0) adaptor.Create(retval, set525, "set525");
 					state.errorRecovery=false;state.failed=false;
 				}
 				else
@@ -20209,7 +20209,7 @@ adaptor.Create(retval, set525, "set525");
 				if (input.LA(1)==86||input.LA(1)==90)
 				{
 					input.Consume();
-adaptor.Create(retval, set528, "set528");
+					if (state.backtracking == 0) adaptor.Create(retval, set528, "set528");
 					state.errorRecovery=false;state.failed=false;
 				}
 				else
@@ -20364,7 +20364,7 @@ adaptor.Create(retval, set528, "set528");
 				THIS529=(IToken)Match(input,THIS,Follow._THIS_in_primaryExpression4060); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, THIS529, "THIS529");
-
+				
 				}
 
 				}
@@ -20439,7 +20439,7 @@ adaptor.Create(retval, THIS529, "THIS529");
 				char_literal534=(IToken)Match(input,82,Follow._82_in_primaryExpression4100); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal534, "char_literal534");
-
+				
 				}
 				DebugLocation(477, 13);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:477:13: ( LT !)*
@@ -20527,7 +20527,7 @@ adaptor.Create(retval, char_literal534, "char_literal534");
 				RPAREN538=(IToken)Match(input,RPAREN,Follow._RPAREN_in_primaryExpression4112); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, RPAREN538, "RPAREN538");
-
+				
 				}
 
 				}
@@ -20612,7 +20612,7 @@ adaptor.Create(retval, RPAREN538, "RPAREN538");
 			char_literal539=(IToken)Match(input,112,Follow._112_in_arrayLiteral4134); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal539, "char_literal539");
-
+			
 			}
 			DebugLocation(482, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:482:13: ( LT !)*
@@ -20755,7 +20755,7 @@ adaptor.Create(retval, char_literal539, "char_literal539");
 					char_literal543=(IToken)Match(input,88,Follow._88_in_arrayLiteral4148); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal543, "char_literal543");
-
+					
 					}
 					DebugLocation(482, 48);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:482:48: ( ( LT !)* assignmentExpression )?
@@ -20885,7 +20885,7 @@ adaptor.Create(retval, char_literal543, "char_literal543");
 			RBRACK547=(IToken)Match(input,RBRACK,Follow._RBRACK_in_arrayLiteral4165); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RBRACK547, "RBRACK547");
-
+			
 			}
 
 			}
@@ -20968,7 +20968,7 @@ adaptor.Create(retval, RBRACK547, "RBRACK547");
 			char_literal548=(IToken)Match(input,115,Follow._115_in_objectLiteral4190); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal548, "char_literal548");
-
+			
 			}
 			DebugLocation(487, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:487:13: ( LT !)*
@@ -21111,7 +21111,7 @@ adaptor.Create(retval, char_literal548, "char_literal548");
 					char_literal552=(IToken)Match(input,88,Follow._88_in_objectLiteral4204); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal552, "char_literal552");
-
+					
 					}
 					DebugLocation(487, 48);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:487:48: ( ( LT !)* propertyNameAndValue )?
@@ -21241,7 +21241,7 @@ adaptor.Create(retval, char_literal552, "char_literal552");
 			RBRACE556=(IToken)Match(input,RBRACE,Follow._RBRACE_in_objectLiteral4221); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RBRACE556, "RBRACE556");
-
+			
 			}
 
 			}
@@ -21360,7 +21360,7 @@ adaptor.Create(retval, RBRACE556, "RBRACE556");
 			char_literal559=(IToken)Match(input,96,Follow._96_in_propertyNameAndValue4248); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal559, "char_literal559");
-
+			
 			}
 			DebugLocation(491, 31);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:491:31: ( LT !)*
@@ -21644,7 +21644,7 @@ adaptor.Create(retval, char_literal559, "char_literal559");
 			char_literal565=(IToken)Match(input,88,Follow._88_in_elision4301); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal565, "char_literal565");
-
+			
 			}
 			DebugLocation(501, 8);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:501:8: ( ( LT !)* ',' )*
@@ -21711,7 +21711,7 @@ adaptor.Create(retval, char_literal565, "char_literal565");
 					char_literal567=(IToken)Match(input,88,Follow._88_in_elision4308); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal567, "char_literal567");
-
+					
 					}
 
 					}
@@ -21848,7 +21848,7 @@ adaptor.Create(retval, char_literal567, "char_literal567");
 				NULL568=(IToken)Match(input,NULL,Follow._NULL_in_literal4325); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, NULL568, "NULL568");
-
+				
 				}
 
 				}
@@ -21863,7 +21863,7 @@ adaptor.Create(retval, NULL568, "NULL568");
 				TRUE569=(IToken)Match(input,TRUE,Follow._TRUE_in_literal4333); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, TRUE569, "TRUE569");
-
+				
 				}
 
 				}
@@ -21878,7 +21878,7 @@ adaptor.Create(retval, TRUE569, "TRUE569");
 				FALSE570=(IToken)Match(input,FALSE,Follow._FALSE_in_literal4341); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, FALSE570, "FALSE570");
-
+				
 				}
 
 				}
@@ -21994,7 +21994,7 @@ adaptor.Create(retval, FALSE570, "FALSE570");
 			NumericLiteral574=(IToken)Match(input,NumericLiteral,Follow._NumericLiteral_in_numericliteral4382); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, NumericLiteral574, "NumericLiteral574");
-
+			
 			}
 
 			}
@@ -22063,7 +22063,7 @@ adaptor.Create(retval, NumericLiteral574, "NumericLiteral574");
 			StringLiteral575=(IToken)Match(input,StringLiteral,Follow._StringLiteral_in_stringliteral4403); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, StringLiteral575, "StringLiteral575");
-
+			
 			}
 
 			}
@@ -22132,7 +22132,7 @@ adaptor.Create(retval, StringLiteral575, "StringLiteral575");
 			RegularExpressionLiteral576=(IToken)Match(input,RegularExpressionLiteral,Follow._RegularExpressionLiteral_in_regularExpressionLiteral4420); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, RegularExpressionLiteral576, "RegularExpressionLiteral576");
-
+			
 			}
 
 			}
@@ -22203,7 +22203,7 @@ adaptor.Create(retval, RegularExpressionLiteral576, "RegularExpressionLiteral576
 			if (input.LA(1)==AS||input.LA(1)==EXPORT||input.LA(1)==FROM||input.LA(1)==IMPORT||input.LA(1)==Identifier||input.LA(1)==MODULE)
 			{
 				input.Consume();
-adaptor.Create(retval, set577, "set577");
+				if (state.backtracking == 0) adaptor.Create(retval, set577, "set577");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -22628,7 +22628,7 @@ adaptor.Create(retval, set577, "set577");
 				NULL579=(IToken)Match(input,NULL,Follow._NULL_in_identifierName4471); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, NULL579, "NULL579");
-
+				
 				}
 
 				}
@@ -22643,7 +22643,7 @@ adaptor.Create(retval, NULL579, "NULL579");
 				TRUE580=(IToken)Match(input,TRUE,Follow._TRUE_in_identifierName4475); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, TRUE580, "TRUE580");
-
+				
 				}
 
 				}
@@ -22658,7 +22658,7 @@ adaptor.Create(retval, TRUE580, "TRUE580");
 				FALSE581=(IToken)Match(input,FALSE,Follow._FALSE_in_identifierName4479); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, FALSE581, "FALSE581");
-
+				
 				}
 
 				}
@@ -22673,7 +22673,7 @@ adaptor.Create(retval, FALSE581, "FALSE581");
 				FUNCTION582=(IToken)Match(input,FUNCTION,Follow._FUNCTION_in_identifierName4483); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, FUNCTION582, "FUNCTION582");
-
+				
 				}
 
 				}
@@ -22688,7 +22688,7 @@ adaptor.Create(retval, FUNCTION582, "FUNCTION582");
 				IF583=(IToken)Match(input,IF,Follow._IF_in_identifierName4487); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, IF583, "IF583");
-
+				
 				}
 
 				}
@@ -22703,7 +22703,7 @@ adaptor.Create(retval, IF583, "IF583");
 				ELSE584=(IToken)Match(input,ELSE,Follow._ELSE_in_identifierName4491); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, ELSE584, "ELSE584");
-
+				
 				}
 
 				}
@@ -22718,7 +22718,7 @@ adaptor.Create(retval, ELSE584, "ELSE584");
 				WHILE585=(IToken)Match(input,WHILE,Follow._WHILE_in_identifierName4495); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, WHILE585, "WHILE585");
-
+				
 				}
 
 				}
@@ -22733,7 +22733,7 @@ adaptor.Create(retval, WHILE585, "WHILE585");
 				DO586=(IToken)Match(input,DO,Follow._DO_in_identifierName4499); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, DO586, "DO586");
-
+				
 				}
 
 				}
@@ -22748,7 +22748,7 @@ adaptor.Create(retval, DO586, "DO586");
 				FOR587=(IToken)Match(input,FOR,Follow._FOR_in_identifierName4503); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, FOR587, "FOR587");
-
+				
 				}
 
 				}
@@ -22763,7 +22763,7 @@ adaptor.Create(retval, FOR587, "FOR587");
 				BREAK588=(IToken)Match(input,BREAK,Follow._BREAK_in_identifierName4507); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, BREAK588, "BREAK588");
-
+				
 				}
 
 				}
@@ -22778,7 +22778,7 @@ adaptor.Create(retval, BREAK588, "BREAK588");
 				CONTINUE589=(IToken)Match(input,CONTINUE,Follow._CONTINUE_in_identifierName4511); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, CONTINUE589, "CONTINUE589");
-
+				
 				}
 
 				}
@@ -22793,7 +22793,7 @@ adaptor.Create(retval, CONTINUE589, "CONTINUE589");
 				VAR590=(IToken)Match(input,VAR,Follow._VAR_in_identifierName4516); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, VAR590, "VAR590");
-
+				
 				}
 
 				}
@@ -22808,7 +22808,7 @@ adaptor.Create(retval, VAR590, "VAR590");
 				RETURN591=(IToken)Match(input,RETURN,Follow._RETURN_in_identifierName4520); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, RETURN591, "RETURN591");
-
+				
 				}
 
 				}
@@ -22823,7 +22823,7 @@ adaptor.Create(retval, RETURN591, "RETURN591");
 				WITH592=(IToken)Match(input,WITH,Follow._WITH_in_identifierName4524); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, WITH592, "WITH592");
-
+				
 				}
 
 				}
@@ -22838,7 +22838,7 @@ adaptor.Create(retval, WITH592, "WITH592");
 				SWITCH593=(IToken)Match(input,SWITCH,Follow._SWITCH_in_identifierName4528); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, SWITCH593, "SWITCH593");
-
+				
 				}
 
 				}
@@ -22853,7 +22853,7 @@ adaptor.Create(retval, SWITCH593, "SWITCH593");
 				CASE594=(IToken)Match(input,CASE,Follow._CASE_in_identifierName4532); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, CASE594, "CASE594");
-
+				
 				}
 
 				}
@@ -22868,7 +22868,7 @@ adaptor.Create(retval, CASE594, "CASE594");
 				DEFAULT595=(IToken)Match(input,DEFAULT,Follow._DEFAULT_in_identifierName4536); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, DEFAULT595, "DEFAULT595");
-
+				
 				}
 
 				}
@@ -22883,7 +22883,7 @@ adaptor.Create(retval, DEFAULT595, "DEFAULT595");
 				THROW596=(IToken)Match(input,THROW,Follow._THROW_in_identifierName4540); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, THROW596, "THROW596");
-
+				
 				}
 
 				}
@@ -22898,7 +22898,7 @@ adaptor.Create(retval, THROW596, "THROW596");
 				TRY597=(IToken)Match(input,TRY,Follow._TRY_in_identifierName4544); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, TRY597, "TRY597");
-
+				
 				}
 
 				}
@@ -22913,7 +22913,7 @@ adaptor.Create(retval, TRY597, "TRY597");
 				CATCH598=(IToken)Match(input,CATCH,Follow._CATCH_in_identifierName4548); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, CATCH598, "CATCH598");
-
+				
 				}
 
 				}
@@ -22928,7 +22928,7 @@ adaptor.Create(retval, CATCH598, "CATCH598");
 				FINALLY599=(IToken)Match(input,FINALLY,Follow._FINALLY_in_identifierName4552); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, FINALLY599, "FINALLY599");
-
+				
 				}
 
 				}
@@ -22943,7 +22943,7 @@ adaptor.Create(retval, FINALLY599, "FINALLY599");
 				NEW600=(IToken)Match(input,NEW,Follow._NEW_in_identifierName4557); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, NEW600, "NEW600");
-
+				
 				}
 
 				}
@@ -22958,7 +22958,7 @@ adaptor.Create(retval, NEW600, "NEW600");
 				DELETE601=(IToken)Match(input,DELETE,Follow._DELETE_in_identifierName4561); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, DELETE601, "DELETE601");
-
+				
 				}
 
 				}
@@ -22973,7 +22973,7 @@ adaptor.Create(retval, DELETE601, "DELETE601");
 				VOID602=(IToken)Match(input,VOID,Follow._VOID_in_identifierName4565); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, VOID602, "VOID602");
-
+				
 				}
 
 				}
@@ -22988,7 +22988,7 @@ adaptor.Create(retval, VOID602, "VOID602");
 				TYPEOF603=(IToken)Match(input,TYPEOF,Follow._TYPEOF_in_identifierName4569); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, TYPEOF603, "TYPEOF603");
-
+				
 				}
 
 				}
@@ -23003,7 +23003,7 @@ adaptor.Create(retval, TYPEOF603, "TYPEOF603");
 				INSTANCEOF604=(IToken)Match(input,INSTANCEOF,Follow._INSTANCEOF_in_identifierName4573); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, INSTANCEOF604, "INSTANCEOF604");
-
+				
 				}
 
 				}
@@ -23018,7 +23018,7 @@ adaptor.Create(retval, INSTANCEOF604, "INSTANCEOF604");
 				IN605=(IToken)Match(input,IN,Follow._IN_in_identifierName4577); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, IN605, "IN605");
-
+				
 				}
 
 				}
@@ -23033,7 +23033,7 @@ adaptor.Create(retval, IN605, "IN605");
 				THIS606=(IToken)Match(input,THIS,Follow._THIS_in_identifierName4581); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, THIS606, "THIS606");
-
+				
 				}
 
 				}
@@ -23048,7 +23048,7 @@ adaptor.Create(retval, THIS606, "THIS606");
 				MODULE607=(IToken)Match(input,MODULE,Follow._MODULE_in_identifierName4586); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, MODULE607, "MODULE607");
-
+				
 				}
 
 				}
@@ -23063,7 +23063,7 @@ adaptor.Create(retval, MODULE607, "MODULE607");
 				IMPORT608=(IToken)Match(input,IMPORT,Follow._IMPORT_in_identifierName4590); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, IMPORT608, "IMPORT608");
-
+				
 				}
 
 				}
@@ -23078,7 +23078,7 @@ adaptor.Create(retval, IMPORT608, "IMPORT608");
 				FROM609=(IToken)Match(input,FROM,Follow._FROM_in_identifierName4594); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, FROM609, "FROM609");
-
+				
 				}
 
 				}
@@ -23093,7 +23093,7 @@ adaptor.Create(retval, FROM609, "FROM609");
 				EXPORT610=(IToken)Match(input,EXPORT,Follow._EXPORT_in_identifierName4598); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, EXPORT610, "EXPORT610");
-
+				
 				}
 
 				}
@@ -23108,7 +23108,7 @@ adaptor.Create(retval, EXPORT610, "EXPORT610");
 				AS611=(IToken)Match(input,AS,Follow._AS_in_identifierName4602); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, AS611, "AS611");
-
+				
 				}
 
 				}
@@ -23218,7 +23218,7 @@ adaptor.Create(retval, AS611, "AS611");
 				YIELD613=(IToken)Match(input,YIELD,Follow._YIELD_in_identifierReference4618); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, YIELD613, "YIELD613");
-
+				
 				}
 
 				}
@@ -23362,7 +23362,7 @@ adaptor.Create(retval, YIELD613, "YIELD613");
 					char_literal616=(IToken)Match(input,88,Follow._88_in_bindingList4638); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal616, "char_literal616");
-
+					
 					}
 					DebugLocation(546, 32);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:546:32: ( LT !)*
@@ -23779,7 +23779,7 @@ adaptor.Create(retval, char_literal616, "char_literal616");
 				DEFAULT626=(IToken)Match(input,DEFAULT,Follow._DEFAULT_in_bindingIdentifier4695); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, DEFAULT626, "DEFAULT626");
-
+				
 				}
 
 				}
@@ -23794,7 +23794,7 @@ adaptor.Create(retval, DEFAULT626, "DEFAULT626");
 				YIELD627=(IToken)Match(input,YIELD,Follow._YIELD_in_bindingIdentifier4700); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, YIELD627, "YIELD627");
-
+				
 				}
 
 				}
@@ -24039,7 +24039,7 @@ adaptor.Create(retval, YIELD627, "YIELD627");
 				char_literal630=(IToken)Match(input,115,Follow._115_in_objectBindingPattern4732); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal630, "char_literal630");
-
+				
 				}
 				DebugLocation(567, 11);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:567:11: ( LT !)*
@@ -24083,7 +24083,7 @@ adaptor.Create(retval, char_literal630, "char_literal630");
 				char_literal632=(IToken)Match(input,RBRACE,Follow._RBRACE_in_objectBindingPattern4738); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal632, "char_literal632");
-
+				
 				}
 
 				}
@@ -24098,7 +24098,7 @@ adaptor.Create(retval, char_literal632, "char_literal632");
 				char_literal633=(IToken)Match(input,115,Follow._115_in_objectBindingPattern4744); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal633, "char_literal633");
-
+				
 				}
 				DebugLocation(568, 11);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:568:11: ( LT !)*
@@ -24186,7 +24186,7 @@ adaptor.Create(retval, char_literal633, "char_literal633");
 				char_literal637=(IToken)Match(input,RBRACE,Follow._RBRACE_in_objectBindingPattern4756); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal637, "char_literal637");
-
+				
 				}
 
 				}
@@ -24201,7 +24201,7 @@ adaptor.Create(retval, char_literal637, "char_literal637");
 				char_literal638=(IToken)Match(input,115,Follow._115_in_objectBindingPattern4762); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal638, "char_literal638");
-
+				
 				}
 				DebugLocation(569, 11);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:569:11: ( LT !)*
@@ -24289,7 +24289,7 @@ adaptor.Create(retval, char_literal638, "char_literal638");
 				char_literal642=(IToken)Match(input,88,Follow._88_in_objectBindingPattern4774); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal642, "char_literal642");
-
+				
 				}
 				DebugLocation(569, 45);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:569:45: ( LT !)*
@@ -24333,7 +24333,7 @@ adaptor.Create(retval, char_literal642, "char_literal642");
 				char_literal644=(IToken)Match(input,RBRACE,Follow._RBRACE_in_objectBindingPattern4780); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal644, "char_literal644");
-
+				
 				}
 
 				}
@@ -24481,7 +24481,7 @@ adaptor.Create(retval, char_literal644, "char_literal644");
 				char_literal645=(IToken)Match(input,112,Follow._112_in_arrayBindingPattern4793); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal645, "char_literal645");
-
+				
 				}
 				DebugLocation(573, 11);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:573:11: ( LT !)*
@@ -24677,7 +24677,7 @@ adaptor.Create(retval, char_literal645, "char_literal645");
 				char_literal651=(IToken)Match(input,RBRACK,Follow._RBRACK_in_arrayBindingPattern4813); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal651, "char_literal651");
-
+				
 				}
 
 				}
@@ -24692,7 +24692,7 @@ adaptor.Create(retval, char_literal651, "char_literal651");
 				char_literal652=(IToken)Match(input,112,Follow._112_in_arrayBindingPattern4819); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal652, "char_literal652");
-
+				
 				}
 				DebugLocation(574, 11);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:574:11: ( LT !)*
@@ -24780,7 +24780,7 @@ adaptor.Create(retval, char_literal652, "char_literal652");
 				char_literal656=(IToken)Match(input,RBRACK,Follow._RBRACK_in_arrayBindingPattern4831); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal656, "char_literal656");
-
+				
 				}
 
 				}
@@ -24795,7 +24795,7 @@ adaptor.Create(retval, char_literal656, "char_literal656");
 				char_literal657=(IToken)Match(input,112,Follow._112_in_arrayBindingPattern4837); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal657, "char_literal657");
-
+				
 				}
 				DebugLocation(575, 11);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:575:11: ( LT !)*
@@ -24883,7 +24883,7 @@ adaptor.Create(retval, char_literal657, "char_literal657");
 				char_literal661=(IToken)Match(input,88,Follow._88_in_arrayBindingPattern4849); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal661, "char_literal661");
-
+				
 				}
 				DebugLocation(575, 44);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:575:44: ( LT !)*
@@ -25079,7 +25079,7 @@ adaptor.Create(retval, char_literal661, "char_literal661");
 				char_literal667=(IToken)Match(input,RBRACK,Follow._RBRACK_in_arrayBindingPattern4869); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal667, "char_literal667");
-
+				
 				}
 
 				}
@@ -25223,7 +25223,7 @@ adaptor.Create(retval, char_literal667, "char_literal667");
 					char_literal670=(IToken)Match(input,88,Follow._88_in_bindingPropertyList4889); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal670, "char_literal670");
-
+					
 					}
 					DebugLocation(579, 33);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:579:33: ( LT !)*
@@ -25498,7 +25498,7 @@ adaptor.Create(retval, char_literal670, "char_literal670");
 					char_literal677=(IToken)Match(input,88,Follow._88_in_bindingElementList4926); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal677, "char_literal677");
-
+					
 					}
 					DebugLocation(583, 48);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:583:48: ( LT !)*
@@ -25775,7 +25775,7 @@ adaptor.Create(retval, char_literal677, "char_literal677");
 				char_literal685=(IToken)Match(input,96,Follow._96_in_bindingProperty4968); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal685, "char_literal685");
-
+				
 				}
 				DebugLocation(588, 29);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:588:29: ( LT !)*
@@ -26228,7 +26228,7 @@ adaptor.Create(retval, char_literal685, "char_literal685");
 			string_literal695=(IToken)Match(input,93,Follow._93_in_bindingRestElement5033); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal695, "string_literal695");
-
+			
 			}
 			DebugLocation(601, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g:601:13: ( LT !)*

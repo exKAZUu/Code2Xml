@@ -11,7 +11,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g 2014-11-01 20:38:34
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g 2014-11-01 21:31:26
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -274,7 +274,7 @@ public partial class PhpParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				BodyString1=(IToken)Match(input,BodyString,Follow._BodyString_in_prog327); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, BodyString1, "BodyString1");
-
+				
 				}
 				DebugLocation(89, 14);
 				if (state.backtracking == 0)
@@ -444,13 +444,13 @@ adaptor.Create(retval, BodyString1, "BodyString1");
 				As6=(IToken)Match(input,As,Follow._As_in_qualifiedNameWithAs355); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, As6, "As6");
-
+				
 				}
 				DebugLocation(93, 22);
 				UnquotedString7=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_qualifiedNameWithAs357); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, UnquotedString7, "UnquotedString7");
-
+				
 				}
 
 				}
@@ -532,7 +532,7 @@ adaptor.Create(retval, UnquotedString7, "UnquotedString7");
 			Use8=(IToken)Match(input,Use,Follow._Use_in_useStatement370); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, Use8, "Use8");
-
+			
 			}
 			DebugLocation(97, 8);
 			PushFollow(Follow._qualifiedNameWithAs_in_useStatement372);
@@ -566,7 +566,7 @@ adaptor.Create(retval, Use8, "Use8");
 					char_literal10=(IToken)Match(input,Comma,Follow._Comma_in_useStatement375); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal10, "char_literal10");
-
+					
 					}
 					DebugLocation(97, 33);
 					PushFollow(Follow._qualifiedNameWithAs_in_useStatement377);
@@ -592,7 +592,7 @@ adaptor.Create(retval, char_literal10, "char_literal10");
 			char_literal12=(IToken)Match(input,SemiColon,Follow._SemiColon_in_useStatement381); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal12, "char_literal12");
-
+			
 			}
 
 			}
@@ -664,7 +664,7 @@ adaptor.Create(retval, char_literal12, "char_literal12");
 			Namespace13=(IToken)Match(input,Namespace,Follow._Namespace_in_namespaceDefinition392); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, Namespace13, "Namespace13");
-
+			
 			}
 			DebugLocation(101, 14);
 			PushFollow(Follow._qualifiedName_in_namespaceDefinition394);
@@ -676,7 +676,7 @@ adaptor.Create(retval, Namespace13, "Namespace13");
 			char_literal15=(IToken)Match(input,SemiColon,Follow._SemiColon_in_namespaceDefinition396); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal15, "char_literal15");
-
+			
 			}
 
 			}
@@ -747,7 +747,7 @@ adaptor.Create(retval, char_literal15, "char_literal15");
 			Namespace16=(IToken)Match(input,Namespace,Follow._Namespace_in_namespaceBlock407); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, Namespace16, "Namespace16");
-
+			
 			}
 			DebugLocation(105, 14);
 			PushFollow(Follow._qualifiedName_in_namespaceBlock409);
@@ -880,7 +880,7 @@ adaptor.Create(retval, Namespace16, "Namespace16");
 				char_literal20=(IToken)Match(input,SemiColon,Follow._SemiColon_in_statement429); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal20, "char_literal20");
-
+				
 				}
 
 				}
@@ -1852,7 +1852,7 @@ adaptor.Create(retval, char_literal20, "char_literal20");
 				BodyString23=(IToken)Match(input,BodyString,Follow._BodyString_in_statement453); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, BodyString23, "BodyString23");
-
+				
 				}
 				DebugLocation(111, 14);
 				if (state.backtracking == 0)
@@ -1902,13 +1902,13 @@ adaptor.Create(retval, BodyString23, "BodyString23");
 				UnquotedString26=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_statement470); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, UnquotedString26, "UnquotedString26");
-
+				
 				}
 				DebugLocation(114, 19);
 				Colon27=(IToken)Match(input,Colon,Follow._Colon_in_statement472); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Colon27, "Colon27");
-
+				
 				}
 				DebugLocation(114, 25);
 				PushFollow(Follow._statement_in_statement474);
@@ -1980,7 +1980,7 @@ adaptor.Create(retval, Colon27, "Colon27");
 				char_literal33=(IToken)Match(input,SemiColon,Follow._SemiColon_in_statement496); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal33, "char_literal33");
-
+				
 				}
 
 				}
@@ -1995,7 +1995,7 @@ adaptor.Create(retval, char_literal33, "char_literal33");
 				char_literal34=(IToken)Match(input,SemiColon,Follow._SemiColon_in_statement501); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal34, "char_literal34");
-
+				
 				}
 
 				}
@@ -2137,7 +2137,7 @@ adaptor.Create(retval, char_literal34, "char_literal34");
 			char_literal36=(IToken)Match(input,OpenCurlyBracket,Follow._OpenCurlyBracket_in_bracketedBlock523); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal36, "char_literal36");
-
+			
 			}
 			DebugLocation(127, 8);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:127:8: ( statement )*
@@ -2185,7 +2185,7 @@ adaptor.Create(retval, char_literal36, "char_literal36");
 			char_literal38=(IToken)Match(input,CloseCurlyBracket,Follow._CloseCurlyBracket_in_bracketedBlock528); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal38, "char_literal38");
-
+			
 			}
 
 			}
@@ -2261,7 +2261,7 @@ adaptor.Create(retval, char_literal38, "char_literal38");
 			Interface39=(IToken)Match(input,Interface,Follow._Interface_in_interfaceDefinition539); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, Interface39, "Interface39");
-
+			
 			}
 			DebugLocation(131, 14);
 			PushFollow(Follow._qualifiedName_in_interfaceDefinition541);
@@ -2304,7 +2304,7 @@ adaptor.Create(retval, Interface39, "Interface39");
 			OpenCurlyBracket42=(IToken)Match(input,OpenCurlyBracket,Follow._OpenCurlyBracket_in_interfaceDefinition549); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, OpenCurlyBracket42, "OpenCurlyBracket42");
-
+			
 			}
 			DebugLocation(132, 21);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:132:21: ( interfaceMember )*
@@ -2352,7 +2352,7 @@ adaptor.Create(retval, OpenCurlyBracket42, "OpenCurlyBracket42");
 			CloseCurlyBracket44=(IToken)Match(input,CloseCurlyBracket,Follow._CloseCurlyBracket_in_interfaceDefinition554); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, CloseCurlyBracket44, "CloseCurlyBracket44");
-
+			
 			}
 
 			}
@@ -2425,7 +2425,7 @@ adaptor.Create(retval, CloseCurlyBracket44, "CloseCurlyBracket44");
 			Extends45=(IToken)Match(input,Extends,Follow._Extends_in_interfaceExtends565); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, Extends45, "Extends45");
-
+			
 			}
 			DebugLocation(136, 12);
 			PushFollow(Follow._qualifiedName_in_interfaceExtends567);
@@ -2459,7 +2459,7 @@ adaptor.Create(retval, Extends45, "Extends45");
 					Comma47=(IToken)Match(input,Comma,Follow._Comma_in_interfaceExtends570); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, Comma47, "Comma47");
-
+					
 					}
 					DebugLocation(136, 33);
 					PushFollow(Follow._qualifiedName_in_interfaceExtends572);
@@ -2587,7 +2587,7 @@ adaptor.Create(retval, Comma47, "Comma47");
 				char_literal50=(IToken)Match(input,SemiColon,Follow._SemiColon_in_interfaceMember587); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal50, "char_literal50");
-
+				
 				}
 
 				}
@@ -2644,7 +2644,7 @@ adaptor.Create(retval, char_literal50, "char_literal50");
 				Function52=(IToken)Match(input,Function,Follow._Function_in_interfaceMember595); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Function52, "Function52");
-
+				
 				}
 				DebugLocation(141, 31);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:141:31: ( '&' )?
@@ -2668,7 +2668,7 @@ adaptor.Create(retval, Function52, "Function52");
 					char_literal53=(IToken)Match(input,Ampersand,Follow._Ampersand_in_interfaceMember597); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal53, "char_literal53");
-
+					
 					}
 
 					}
@@ -2693,7 +2693,7 @@ adaptor.Create(retval, char_literal53, "char_literal53");
 				char_literal56=(IToken)Match(input,SemiColon,Follow._SemiColon_in_interfaceMember604); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal56, "char_literal56");
-
+				
 				}
 
 				}
@@ -2806,7 +2806,7 @@ adaptor.Create(retval, char_literal56, "char_literal56");
 			Class58=(IToken)Match(input,Class,Follow._Class_in_classDefinition623); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, Class58, "Class58");
-
+			
 			}
 			DebugLocation(146, 9);
 			PushFollow(Follow._qualifiedName_in_classDefinition625);
@@ -2836,7 +2836,7 @@ adaptor.Create(retval, Class58, "Class58");
 				Extends60=(IToken)Match(input,Extends,Follow._Extends_in_classDefinition631); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Extends60, "Extends60");
-
+				
 				}
 				DebugLocation(147, 12);
 				PushFollow(Follow._qualifiedName_in_classDefinition633);
@@ -2886,7 +2886,7 @@ adaptor.Create(retval, Extends60, "Extends60");
 			OpenCurlyBracket63=(IToken)Match(input,OpenCurlyBracket,Follow._OpenCurlyBracket_in_classDefinition645); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, OpenCurlyBracket63, "OpenCurlyBracket63");
-
+			
 			}
 			DebugLocation(150, 3);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:150:3: ( classMember )*
@@ -2934,7 +2934,7 @@ adaptor.Create(retval, OpenCurlyBracket63, "OpenCurlyBracket63");
 			CloseCurlyBracket65=(IToken)Match(input,CloseCurlyBracket,Follow._CloseCurlyBracket_in_classDefinition654); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, CloseCurlyBracket65, "CloseCurlyBracket65");
-
+			
 			}
 
 			}
@@ -3007,7 +3007,7 @@ adaptor.Create(retval, CloseCurlyBracket65, "CloseCurlyBracket65");
 			Implements66=(IToken)Match(input,Implements,Follow._Implements_in_classImplements668); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, Implements66, "Implements66");
-
+			
 			}
 			DebugLocation(155, 16);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:155:16: ( qualifiedName ( Comma qualifiedName )* )
@@ -3046,7 +3046,7 @@ adaptor.Create(retval, Implements66, "Implements66");
 					Comma68=(IToken)Match(input,Comma,Follow._Comma_in_classImplements674); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, Comma68, "Comma68");
-
+					
 					}
 					DebugLocation(155, 38);
 					PushFollow(Follow._qualifiedName_in_classImplements676);
@@ -3212,7 +3212,7 @@ adaptor.Create(retval, Comma68, "Comma68");
 				Function71=(IToken)Match(input,Function,Follow._Function_in_classMember693); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Function71, "Function71");
-
+				
 				}
 				DebugLocation(159, 31);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:159:31: ( '&' )?
@@ -3236,7 +3236,7 @@ adaptor.Create(retval, Function71, "Function71");
 					char_literal72=(IToken)Match(input,Ampersand,Follow._Ampersand_in_classMember695); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal72, "char_literal72");
-
+					
 					}
 
 					}
@@ -3303,7 +3303,7 @@ adaptor.Create(retval, char_literal72, "char_literal72");
 					char_literal76=(IToken)Match(input,SemiColon,Follow._SemiColon_in_classMember707); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal76, "char_literal76");
-
+					
 					}
 
 					}
@@ -3331,7 +3331,7 @@ adaptor.Create(retval, char_literal76, "char_literal76");
 				char_literal78=(IToken)Match(input,SemiColon,Follow._SemiColon_in_classMember715); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal78, "char_literal78");
-
+				
 				}
 
 				}
@@ -3352,7 +3352,7 @@ adaptor.Create(retval, char_literal78, "char_literal78");
 				char_literal80=(IToken)Match(input,SemiColon,Follow._SemiColon_in_classMember722); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal80, "char_literal80");
-
+				
 				}
 
 				}
@@ -3373,7 +3373,7 @@ adaptor.Create(retval, char_literal80, "char_literal80");
 				char_literal82=(IToken)Match(input,SemiColon,Follow._SemiColon_in_classMember729); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal82, "char_literal82");
-
+				
 				}
 
 				}
@@ -3454,7 +3454,7 @@ adaptor.Create(retval, char_literal82, "char_literal82");
 			Const83=(IToken)Match(input,Const,Follow._Const_in_constDefinition740); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, Const83, "Const83");
-
+			
 			}
 			DebugLocation(166, 10);
 			PushFollow(Follow._qualifiedName_in_constDefinition742);
@@ -3484,7 +3484,7 @@ adaptor.Create(retval, Const83, "Const83");
 				Equals85=(IToken)Match(input,Equals,Follow._Equals_in_constDefinition745); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Equals85, "Equals85");
-
+				
 				}
 				DebugLocation(166, 32);
 				PushFollow(Follow._atom_in_constDefinition747);
@@ -3525,7 +3525,7 @@ adaptor.Create(retval, Equals85, "Equals85");
 					char_literal87=(IToken)Match(input,Comma,Follow._Comma_in_constDefinition752); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal87, "char_literal87");
-
+					
 					}
 					DebugLocation(166, 44);
 					PushFollow(Follow._qualifiedName_in_constDefinition754);
@@ -3555,7 +3555,7 @@ adaptor.Create(retval, char_literal87, "char_literal87");
 						Equals89=(IToken)Match(input,Equals,Follow._Equals_in_constDefinition757); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, Equals89, "Equals89");
-
+						
 						}
 						DebugLocation(166, 66);
 						PushFollow(Follow._atom_in_constDefinition759);
@@ -3663,13 +3663,13 @@ adaptor.Create(retval, Equals89, "Equals89");
 			Var91=(IToken)Match(input,Var,Follow._Var_in_varDefinition774); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, Var91, "Var91");
-
+			
 			}
 			DebugLocation(170, 8);
 			VariableName92=(IToken)Match(input,VariableName,Follow._VariableName_in_varDefinition776); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, VariableName92, "VariableName92");
-
+			
 			}
 			DebugLocation(170, 21);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:170:21: ( Equals atom )?
@@ -3693,7 +3693,7 @@ adaptor.Create(retval, VariableName92, "VariableName92");
 				Equals93=(IToken)Match(input,Equals,Follow._Equals_in_varDefinition779); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Equals93, "Equals93");
-
+				
 				}
 				DebugLocation(170, 29);
 				PushFollow(Follow._atom_in_varDefinition781);
@@ -3734,13 +3734,13 @@ adaptor.Create(retval, Equals93, "Equals93");
 					char_literal95=(IToken)Match(input,Comma,Follow._Comma_in_varDefinition786); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal95, "char_literal95");
-
+					
 					}
 					DebugLocation(170, 41);
 					VariableName96=(IToken)Match(input,VariableName,Follow._VariableName_in_varDefinition788); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, VariableName96, "VariableName96");
-
+					
 					}
 					DebugLocation(170, 54);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:170:54: ( Equals atom )?
@@ -3764,7 +3764,7 @@ adaptor.Create(retval, VariableName96, "VariableName96");
 						Equals97=(IToken)Match(input,Equals,Follow._Equals_in_varDefinition791); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, Equals97, "Equals97");
-
+						
 						}
 						DebugLocation(170, 62);
 						PushFollow(Follow._atom_in_varDefinition793);
@@ -3913,7 +3913,7 @@ adaptor.Create(retval, Equals97, "Equals97");
 			VariableName100=(IToken)Match(input,VariableName,Follow._VariableName_in_fieldDefinition811); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, VariableName100, "VariableName100");
-
+			
 			}
 			DebugLocation(174, 32);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:174:32: ( Equals atom )?
@@ -3937,7 +3937,7 @@ adaptor.Create(retval, VariableName100, "VariableName100");
 				Equals101=(IToken)Match(input,Equals,Follow._Equals_in_fieldDefinition814); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Equals101, "Equals101");
-
+				
 				}
 				DebugLocation(174, 40);
 				PushFollow(Follow._atom_in_fieldDefinition816);
@@ -3978,13 +3978,13 @@ adaptor.Create(retval, Equals101, "Equals101");
 					char_literal103=(IToken)Match(input,Comma,Follow._Comma_in_fieldDefinition821); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal103, "char_literal103");
-
+					
 					}
 					DebugLocation(174, 52);
 					VariableName104=(IToken)Match(input,VariableName,Follow._VariableName_in_fieldDefinition823); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, VariableName104, "VariableName104");
-
+					
 					}
 					DebugLocation(174, 65);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:174:65: ( Equals atom )?
@@ -4008,7 +4008,7 @@ adaptor.Create(retval, VariableName104, "VariableName104");
 						Equals105=(IToken)Match(input,Equals,Follow._Equals_in_fieldDefinition826); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, Equals105, "Equals105");
-
+						
 						}
 						DebugLocation(174, 73);
 						PushFollow(Follow._atom_in_fieldDefinition828);
@@ -4106,7 +4106,7 @@ adaptor.Create(retval, Equals105, "Equals105");
 			if (input.LA(1)==Abstract||input.LA(1)==Final)
 			{
 				input.Consume();
-adaptor.Create(retval, set107, "set107");
+				if (state.backtracking == 0) adaptor.Create(retval, set107, "set107");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -4243,7 +4243,7 @@ adaptor.Create(retval, set107, "set107");
 				Final109=(IToken)Match(input,Final,Follow._Final_in_functionModifier862); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Final109, "Final109");
-
+				
 				}
 
 				}
@@ -4258,7 +4258,7 @@ adaptor.Create(retval, Final109, "Final109");
 				Abstract110=(IToken)Match(input,Abstract,Follow._Abstract_in_functionModifier866); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Abstract110, "Abstract110");
-
+				
 				}
 
 				}
@@ -4273,7 +4273,7 @@ adaptor.Create(retval, Abstract110, "Abstract110");
 				Static111=(IToken)Match(input,Static,Follow._Static_in_functionModifier870); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Static111, "Static111");
-
+				
 				}
 
 				}
@@ -4396,7 +4396,7 @@ adaptor.Create(retval, Static111, "Static111");
 				Abstract113=(IToken)Match(input,Abstract,Follow._Abstract_in_fieldModifier886); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Abstract113, "Abstract113");
-
+				
 				}
 
 				}
@@ -4411,7 +4411,7 @@ adaptor.Create(retval, Abstract113, "Abstract113");
 				Static114=(IToken)Match(input,Static,Follow._Static_in_fieldModifier890); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Static114, "Static114");
-
+				
 				}
 
 				}
@@ -4711,13 +4711,13 @@ adaptor.Create(retval, Static114, "Static114");
 				If115=(IToken)Match(input,If,Follow._If_in_complexStatement901); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, If115, "If115");
-
+				
 				}
 				DebugLocation(189, 7);
 				char_literal116=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_complexStatement903); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal116, "char_literal116");
-
+				
 				}
 				DebugLocation(189, 11);
 				PushFollow(Follow._expression_in_complexStatement905);
@@ -4729,7 +4729,7 @@ adaptor.Create(retval, char_literal116, "char_literal116");
 				char_literal118=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_complexStatement907); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal118, "char_literal118");
-
+				
 				}
 				DebugLocation(189, 26);
 				PushFollow(Follow._statement_in_complexStatement909);
@@ -4795,13 +4795,13 @@ adaptor.Create(retval, char_literal118, "char_literal118");
 				For121=(IToken)Match(input,For,Follow._For_in_complexStatement917); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, For121, "For121");
-
+				
 				}
 				DebugLocation(190, 8);
 				char_literal122=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_complexStatement919); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal122, "char_literal122");
-
+				
 				}
 				DebugLocation(190, 12);
 				PushFollow(Follow._forInit_in_complexStatement921);
@@ -4825,7 +4825,7 @@ adaptor.Create(retval, char_literal122, "char_literal122");
 				char_literal126=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_complexStatement927); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal126, "char_literal126");
-
+				
 				}
 				DebugLocation(190, 47);
 				PushFollow(Follow._statement_in_complexStatement929);
@@ -4846,13 +4846,13 @@ adaptor.Create(retval, char_literal126, "char_literal126");
 				Foreach128=(IToken)Match(input,Foreach,Follow._Foreach_in_complexStatement934); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Foreach128, "Foreach128");
-
+				
 				}
 				DebugLocation(191, 12);
 				char_literal129=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_complexStatement936); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal129, "char_literal129");
-
+				
 				}
 				DebugLocation(191, 16);
 				PushFollow(Follow._expression_in_complexStatement938);
@@ -4864,7 +4864,7 @@ adaptor.Create(retval, char_literal129, "char_literal129");
 				As131=(IToken)Match(input,As,Follow._As_in_complexStatement940); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, As131, "As131");
-
+				
 				}
 				DebugLocation(191, 30);
 				PushFollow(Follow._arrayEntry_in_complexStatement942);
@@ -4876,7 +4876,7 @@ adaptor.Create(retval, As131, "As131");
 				char_literal133=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_complexStatement944); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal133, "char_literal133");
-
+				
 				}
 				DebugLocation(191, 45);
 				PushFollow(Follow._statement_in_complexStatement946);
@@ -4897,13 +4897,13 @@ adaptor.Create(retval, char_literal133, "char_literal133");
 				While135=(IToken)Match(input,While,Follow._While_in_complexStatement951); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, While135, "While135");
-
+				
 				}
 				DebugLocation(192, 10);
 				char_literal136=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_complexStatement953); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal136, "char_literal136");
-
+				
 				}
 				DebugLocation(192, 14);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:192:14: ( expression )?
@@ -4940,7 +4940,7 @@ adaptor.Create(retval, char_literal136, "char_literal136");
 				char_literal138=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_complexStatement958); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal138, "char_literal138");
-
+				
 				}
 				DebugLocation(192, 30);
 				PushFollow(Follow._statement_in_complexStatement960);
@@ -4961,13 +4961,13 @@ adaptor.Create(retval, char_literal138, "char_literal138");
 				If140=(IToken)Match(input,If,Follow._If_in_complexStatement965); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, If140, "If140");
-
+				
 				}
 				DebugLocation(193, 7);
 				char_literal141=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_complexStatement967); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal141, "char_literal141");
-
+				
 				}
 				DebugLocation(193, 11);
 				PushFollow(Follow._expression_in_complexStatement969);
@@ -4979,13 +4979,13 @@ adaptor.Create(retval, char_literal141, "char_literal141");
 				char_literal143=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_complexStatement971); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal143, "char_literal143");
-
+				
 				}
 				DebugLocation(193, 26);
 				char_literal144=(IToken)Match(input,Colon,Follow._Colon_in_complexStatement973); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal144, "char_literal144");
-
+				
 				}
 				DebugLocation(193, 30);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:193:30: ( statement )*
@@ -5088,13 +5088,13 @@ adaptor.Create(retval, char_literal144, "char_literal144");
 				For147=(IToken)Match(input,For,Follow._For_in_complexStatement984); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, For147, "For147");
-
+				
 				}
 				DebugLocation(194, 8);
 				char_literal148=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_complexStatement986); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal148, "char_literal148");
-
+				
 				}
 				DebugLocation(194, 12);
 				PushFollow(Follow._forInit_in_complexStatement988);
@@ -5118,13 +5118,13 @@ adaptor.Create(retval, char_literal148, "char_literal148");
 				char_literal152=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_complexStatement994); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal152, "char_literal152");
-
+				
 				}
 				DebugLocation(194, 47);
 				char_literal153=(IToken)Match(input,Colon,Follow._Colon_in_complexStatement996); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal153, "char_literal153");
-
+				
 				}
 				DebugLocation(194, 51);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:194:51: ( statement )*
@@ -5182,13 +5182,13 @@ adaptor.Create(retval, char_literal153, "char_literal153");
 				Foreach155=(IToken)Match(input,Foreach,Follow._Foreach_in_complexStatement1004); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Foreach155, "Foreach155");
-
+				
 				}
 				DebugLocation(195, 12);
 				char_literal156=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_complexStatement1006); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal156, "char_literal156");
-
+				
 				}
 				DebugLocation(195, 16);
 				PushFollow(Follow._expression_in_complexStatement1008);
@@ -5200,7 +5200,7 @@ adaptor.Create(retval, char_literal156, "char_literal156");
 				As158=(IToken)Match(input,As,Follow._As_in_complexStatement1010); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, As158, "As158");
-
+				
 				}
 				DebugLocation(195, 30);
 				PushFollow(Follow._arrayEntry_in_complexStatement1012);
@@ -5212,13 +5212,13 @@ adaptor.Create(retval, As158, "As158");
 				char_literal160=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_complexStatement1014); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal160, "char_literal160");
-
+				
 				}
 				DebugLocation(195, 45);
 				char_literal161=(IToken)Match(input,Colon,Follow._Colon_in_complexStatement1016); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal161, "char_literal161");
-
+				
 				}
 				DebugLocation(195, 49);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:195:49: ( statement )*
@@ -5276,13 +5276,13 @@ adaptor.Create(retval, char_literal161, "char_literal161");
 				While163=(IToken)Match(input,While,Follow._While_in_complexStatement1024); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, While163, "While163");
-
+				
 				}
 				DebugLocation(196, 10);
 				char_literal164=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_complexStatement1026); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal164, "char_literal164");
-
+				
 				}
 				DebugLocation(196, 14);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:196:14: ( expression )?
@@ -5319,13 +5319,13 @@ adaptor.Create(retval, char_literal164, "char_literal164");
 				char_literal166=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_complexStatement1031); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal166, "char_literal166");
-
+				
 				}
 				DebugLocation(196, 30);
 				char_literal167=(IToken)Match(input,Colon,Follow._Colon_in_complexStatement1033); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal167, "char_literal167");
-
+				
 				}
 				DebugLocation(196, 34);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:196:34: ( statement )*
@@ -5383,7 +5383,7 @@ adaptor.Create(retval, char_literal167, "char_literal167");
 				Do169=(IToken)Match(input,Do,Follow._Do_in_complexStatement1041); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Do169, "Do169");
-
+				
 				}
 				DebugLocation(197, 7);
 				PushFollow(Follow._statement_in_complexStatement1043);
@@ -5395,13 +5395,13 @@ adaptor.Create(retval, Do169, "Do169");
 				While171=(IToken)Match(input,While,Follow._While_in_complexStatement1045); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, While171, "While171");
-
+				
 				}
 				DebugLocation(197, 23);
 				char_literal172=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_complexStatement1047); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal172, "char_literal172");
-
+				
 				}
 				DebugLocation(197, 27);
 				PushFollow(Follow._expression_in_complexStatement1049);
@@ -5413,13 +5413,13 @@ adaptor.Create(retval, char_literal172, "char_literal172");
 				char_literal174=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_complexStatement1051); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal174, "char_literal174");
-
+				
 				}
 				DebugLocation(197, 42);
 				char_literal175=(IToken)Match(input,SemiColon,Follow._SemiColon_in_complexStatement1053); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal175, "char_literal175");
-
+				
 				}
 
 				}
@@ -5434,13 +5434,13 @@ adaptor.Create(retval, char_literal175, "char_literal175");
 				Switch176=(IToken)Match(input,Switch,Follow._Switch_in_complexStatement1058); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Switch176, "Switch176");
-
+				
 				}
 				DebugLocation(198, 11);
 				char_literal177=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_complexStatement1060); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal177, "char_literal177");
-
+				
 				}
 				DebugLocation(198, 15);
 				PushFollow(Follow._expression_in_complexStatement1062);
@@ -5452,13 +5452,13 @@ adaptor.Create(retval, char_literal177, "char_literal177");
 				char_literal179=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_complexStatement1064); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal179, "char_literal179");
-
+				
 				}
 				DebugLocation(198, 30);
 				char_literal180=(IToken)Match(input,OpenCurlyBracket,Follow._OpenCurlyBracket_in_complexStatement1066); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal180, "char_literal180");
-
+				
 				}
 				DebugLocation(198, 34);
 				PushFollow(Follow._cases_in_complexStatement1068);
@@ -5470,7 +5470,7 @@ adaptor.Create(retval, char_literal180, "char_literal180");
 				char_literal182=(IToken)Match(input,CloseCurlyBracket,Follow._CloseCurlyBracket_in_complexStatement1070); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal182, "char_literal182");
-
+				
 				}
 
 				}
@@ -5584,7 +5584,7 @@ adaptor.Create(retval, char_literal182, "char_literal182");
 			Try185=(IToken)Match(input,Try,Follow._Try_in_tryStatement1092); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, Try185, "Try185");
-
+			
 			}
 			DebugLocation(204, 8);
 			PushFollow(Follow._bracketedBlock_in_tryStatement1094);
@@ -5620,13 +5620,13 @@ adaptor.Create(retval, Try185, "Try185");
 					Catch187=(IToken)Match(input,Catch,Follow._Catch_in_tryStatement1100); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, Catch187, "Catch187");
-
+					
 					}
 					DebugLocation(205, 11);
 					char_literal188=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_tryStatement1102); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal188, "char_literal188");
-
+					
 					}
 					DebugLocation(205, 15);
 					PushFollow(Follow._qualifiedName_in_tryStatement1104);
@@ -5644,7 +5644,7 @@ adaptor.Create(retval, char_literal188, "char_literal188");
 					char_literal191=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_tryStatement1108); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal191, "char_literal191");
-
+					
 					}
 					DebugLocation(205, 42);
 					PushFollow(Follow._bracketedBlock_in_tryStatement1110);
@@ -5697,7 +5697,7 @@ adaptor.Create(retval, char_literal191, "char_literal191");
 				Finally193=(IToken)Match(input,Finally,Follow._Finally_in_tryStatement1118); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Finally193, "Finally193");
-
+				
 				}
 				DebugLocation(206, 13);
 				PushFollow(Follow._bracketedBlock_in_tryStatement1120);
@@ -6138,7 +6138,7 @@ adaptor.Create(retval, Finally193, "Finally193");
 				Echo195=(IToken)Match(input,Echo,Follow._Echo_in_simpleStatement1133); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Echo195, "Echo195");
-
+				
 				}
 				DebugLocation(210, 9);
 				PushFollow(Follow._commaList_in_simpleStatement1135);
@@ -6159,7 +6159,7 @@ adaptor.Create(retval, Echo195, "Echo195");
 				Print197=(IToken)Match(input,Print,Follow._Print_in_simpleStatement1140); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Print197, "Print197");
-
+				
 				}
 				DebugLocation(211, 10);
 				PushFollow(Follow._expression_in_simpleStatement1142);
@@ -6180,7 +6180,7 @@ adaptor.Create(retval, Print197, "Print197");
 				Global199=(IToken)Match(input,Global,Follow._Global_in_simpleStatement1147); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Global199, "Global199");
-
+				
 				}
 				DebugLocation(212, 11);
 				PushFollow(Follow._variable_in_simpleStatement1149);
@@ -6214,7 +6214,7 @@ adaptor.Create(retval, Global199, "Global199");
 						char_literal201=(IToken)Match(input,Comma,Follow._Comma_in_simpleStatement1152); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal201, "char_literal201");
-
+						
 						}
 						DebugLocation(212, 25);
 						PushFollow(Follow._variable_in_simpleStatement1154);
@@ -6249,13 +6249,13 @@ adaptor.Create(retval, char_literal201, "char_literal201");
 				Static203=(IToken)Match(input,Static,Follow._Static_in_simpleStatement1162); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Static203, "Static203");
-
+				
 				}
 				DebugLocation(213, 11);
 				VariableName204=(IToken)Match(input,VariableName,Follow._VariableName_in_simpleStatement1164); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, VariableName204, "VariableName204");
-
+				
 				}
 				DebugLocation(213, 24);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:213:24: ( Equals atom )?
@@ -6279,7 +6279,7 @@ adaptor.Create(retval, VariableName204, "VariableName204");
 					Equals205=(IToken)Match(input,Equals,Follow._Equals_in_simpleStatement1167); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, Equals205, "Equals205");
-
+					
 					}
 					DebugLocation(213, 32);
 					PushFollow(Follow._atom_in_simpleStatement1169);
@@ -6320,13 +6320,13 @@ adaptor.Create(retval, Equals205, "Equals205");
 						char_literal207=(IToken)Match(input,Comma,Follow._Comma_in_simpleStatement1174); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal207, "char_literal207");
-
+						
 						}
 						DebugLocation(213, 44);
 						VariableName208=(IToken)Match(input,VariableName,Follow._VariableName_in_simpleStatement1176); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, VariableName208, "VariableName208");
-
+						
 						}
 						DebugLocation(213, 57);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:213:57: ( Equals atom )?
@@ -6350,7 +6350,7 @@ adaptor.Create(retval, VariableName208, "VariableName208");
 							Equals209=(IToken)Match(input,Equals,Follow._Equals_in_simpleStatement1179); if (state.failed) return retval;
 							if (state.backtracking == 0) {
 adaptor.Create(retval, Equals209, "Equals209");
-
+							
 							}
 							DebugLocation(213, 65);
 							PushFollow(Follow._atom_in_simpleStatement1181);
@@ -6407,7 +6407,7 @@ adaptor.Create(retval, Equals209, "Equals209");
 				Break212=(IToken)Match(input,Break,Follow._Break_in_simpleStatement1195); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Break212, "Break212");
-
+				
 				}
 				DebugLocation(215, 10);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:215:10: ( Integer )?
@@ -6431,7 +6431,7 @@ adaptor.Create(retval, Break212, "Break212");
 					Integer213=(IToken)Match(input,Integer,Follow._Integer_in_simpleStatement1197); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, Integer213, "Integer213");
-
+					
 					}
 
 					}
@@ -6453,7 +6453,7 @@ adaptor.Create(retval, Integer213, "Integer213");
 				Continue214=(IToken)Match(input,Continue,Follow._Continue_in_simpleStatement1203); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Continue214, "Continue214");
-
+				
 				}
 				DebugLocation(216, 13);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:216:13: ( Integer )?
@@ -6477,7 +6477,7 @@ adaptor.Create(retval, Continue214, "Continue214");
 					Integer215=(IToken)Match(input,Integer,Follow._Integer_in_simpleStatement1205); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, Integer215, "Integer215");
-
+					
 					}
 
 					}
@@ -6499,13 +6499,13 @@ adaptor.Create(retval, Integer215, "Integer215");
 				Goto216=(IToken)Match(input,Goto,Follow._Goto_in_simpleStatement1211); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Goto216, "Goto216");
-
+				
 				}
 				DebugLocation(217, 9);
 				UnquotedString217=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_simpleStatement1213); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, UnquotedString217, "UnquotedString217");
-
+				
 				}
 
 				}
@@ -6520,7 +6520,7 @@ adaptor.Create(retval, UnquotedString217, "UnquotedString217");
 				Return218=(IToken)Match(input,Return,Follow._Return_in_simpleStatement1218); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Return218, "Return218");
-
+				
 				}
 				DebugLocation(218, 11);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:218:11: ( expression )?
@@ -6566,13 +6566,13 @@ adaptor.Create(retval, Return218, "Return218");
 				Goto220=(IToken)Match(input,Goto,Follow._Goto_in_simpleStatement1226); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Goto220, "Goto220");
-
+				
 				}
 				DebugLocation(219, 9);
 				UnquotedString221=(IToken)Match(input,UnquotedString,Follow._UnquotedString_in_simpleStatement1228); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, UnquotedString221, "UnquotedString221");
-
+				
 				}
 
 				}
@@ -6587,7 +6587,7 @@ adaptor.Create(retval, UnquotedString221, "UnquotedString221");
 				Throw222=(IToken)Match(input,Throw,Follow._Throw_in_simpleStatement1233); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Throw222, "Throw222");
-
+				
 				}
 				DebugLocation(220, 10);
 				PushFollow(Follow._expression_in_simpleStatement1235);
@@ -6712,13 +6712,13 @@ adaptor.Create(retval, Throw222, "Throw222");
 				ElseIf225=(IToken)Match(input,ElseIf,Follow._ElseIf_in_conditional1251); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, ElseIf225, "ElseIf225");
-
+				
 				}
 				DebugLocation(225, 11);
 				char_literal226=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_conditional1253); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal226, "char_literal226");
-
+				
 				}
 				DebugLocation(225, 15);
 				PushFollow(Follow._expression_in_conditional1255);
@@ -6730,7 +6730,7 @@ adaptor.Create(retval, char_literal226, "char_literal226");
 				char_literal228=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_conditional1257); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal228, "char_literal228");
-
+				
 				}
 				DebugLocation(225, 30);
 				PushFollow(Follow._statement_in_conditional1259);
@@ -6796,7 +6796,7 @@ adaptor.Create(retval, char_literal228, "char_literal228");
 				Else231=(IToken)Match(input,Else,Follow._Else_in_conditional1267); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Else231, "Else231");
-
+				
 				}
 				DebugLocation(226, 9);
 				PushFollow(Follow._statement_in_conditional1269);
@@ -6910,13 +6910,13 @@ adaptor.Create(retval, Else231, "Else231");
 				ElseIf233=(IToken)Match(input,ElseIf,Follow._ElseIf_in_conditionalWithColon1280); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, ElseIf233, "ElseIf233");
-
+				
 				}
 				DebugLocation(230, 11);
 				char_literal234=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_conditionalWithColon1282); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal234, "char_literal234");
-
+				
 				}
 				DebugLocation(230, 15);
 				PushFollow(Follow._expression_in_conditionalWithColon1284);
@@ -6928,13 +6928,13 @@ adaptor.Create(retval, char_literal234, "char_literal234");
 				char_literal236=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_conditionalWithColon1286); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal236, "char_literal236");
-
+				
 				}
 				DebugLocation(230, 30);
 				char_literal237=(IToken)Match(input,Colon,Follow._Colon_in_conditionalWithColon1288); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal237, "char_literal237");
-
+				
 				}
 				DebugLocation(230, 34);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:230:34: ( statement )*
@@ -7037,13 +7037,13 @@ adaptor.Create(retval, char_literal237, "char_literal237");
 				Else240=(IToken)Match(input,Else,Follow._Else_in_conditionalWithColon1299); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Else240, "Else240");
-
+				
 				}
 				DebugLocation(231, 9);
 				char_literal241=(IToken)Match(input,Colon,Follow._Colon_in_conditionalWithColon1301); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal241, "char_literal241");
-
+				
 				}
 				DebugLocation(231, 13);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:231:13: ( statement )*
@@ -7189,7 +7189,7 @@ adaptor.Create(retval, char_literal241, "char_literal241");
 			char_literal244=(IToken)Match(input,SemiColon,Follow._SemiColon_in_forInit1318); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal244, "char_literal244");
-
+			
 			}
 
 			}
@@ -7290,7 +7290,7 @@ adaptor.Create(retval, char_literal244, "char_literal244");
 			char_literal246=(IToken)Match(input,SemiColon,Follow._SemiColon_in_forCondition1332); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal246, "char_literal246");
-
+			
 			}
 
 			}
@@ -7710,7 +7710,7 @@ adaptor.Create(retval, char_literal246, "char_literal246");
 			Case252=(IToken)Match(input,Case,Follow._Case_in_casestatement1379); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, Case252, "Case252");
-
+			
 			}
 			DebugLocation(252, 9);
 			PushFollow(Follow._expression_in_casestatement1381);
@@ -7724,7 +7724,7 @@ adaptor.Create(retval, Case252, "Case252");
 			if (input.LA(1)==Colon||input.LA(1)==SemiColon)
 			{
 				input.Consume();
-adaptor.Create(retval, set254, "set254");
+				if (state.backtracking == 0) adaptor.Create(retval, set254, "set254");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -7963,7 +7963,7 @@ adaptor.Create(retval, set254, "set254");
 			Default256=(IToken)Match(input,Default,Follow._Default_in_defaultcase1403); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, Default256, "Default256");
-
+			
 			}
 			DebugLocation(256, 13);
 
@@ -7971,7 +7971,7 @@ adaptor.Create(retval, Default256, "Default256");
 			if (input.LA(1)==Colon||input.LA(1)==SemiColon)
 			{
 				input.Consume();
-adaptor.Create(retval, set257, "set257");
+				if (state.backtracking == 0) adaptor.Create(retval, set257, "set257");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -8110,7 +8110,7 @@ adaptor.Create(retval, set257, "set257");
 			Function259=(IToken)Match(input,Function,Follow._Function_in_anonymousFunctionDefinition1424); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, Function259, "Function259");
-
+			
 			}
 			DebugLocation(260, 13);
 			PushFollow(Follow._parametersDefinition_in_anonymousFunctionDefinition1426);
@@ -8140,7 +8140,7 @@ adaptor.Create(retval, Function259, "Function259");
 				Use261=(IToken)Match(input,Use,Follow._Use_in_anonymousFunctionDefinition1429); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Use261, "Use261");
-
+				
 				}
 				DebugLocation(260, 39);
 				PushFollow(Follow._parametersDefinition_in_anonymousFunctionDefinition1431);
@@ -8233,7 +8233,7 @@ adaptor.Create(retval, Use261, "Use261");
 			Function264=(IToken)Match(input,Function,Follow._Function_in_functionDefinition1446); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, Function264, "Function264");
-
+			
 			}
 			DebugLocation(264, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:264:13: ( '&' )?
@@ -8257,7 +8257,7 @@ adaptor.Create(retval, Function264, "Function264");
 				char_literal265=(IToken)Match(input,Ampersand,Follow._Ampersand_in_functionDefinition1448); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal265, "char_literal265");
-
+				
 				}
 
 				}
@@ -8357,7 +8357,7 @@ adaptor.Create(retval, char_literal265, "char_literal265");
 			OpenRoundBracket269=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_parametersDefinition1466); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, OpenRoundBracket269, "OpenRoundBracket269");
-
+			
 			}
 			DebugLocation(268, 21);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:268:21: ( paramDef ( Comma paramDef )* )?
@@ -8409,7 +8409,7 @@ adaptor.Create(retval, OpenRoundBracket269, "OpenRoundBracket269");
 						Comma271=(IToken)Match(input,Comma,Follow._Comma_in_parametersDefinition1472); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, Comma271, "Comma271");
-
+						
 						}
 						DebugLocation(268, 38);
 						PushFollow(Follow._paramDef_in_parametersDefinition1474);
@@ -8442,7 +8442,7 @@ adaptor.Create(retval, Comma271, "Comma271");
 			CloseRoundBracket273=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_parametersDefinition1480); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, CloseRoundBracket273, "CloseRoundBracket273");
-
+			
 			}
 
 			}
@@ -8672,7 +8672,7 @@ adaptor.Create(retval, CloseRoundBracket273, "CloseRoundBracket273");
 				Equals277=(IToken)Match(input,Equals,Follow._Equals_in_paramDef1503); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Equals277, "Equals277");
-
+				
 				}
 				DebugLocation(272, 55);
 				PushFollow(Follow._atom_in_paramDef1505);
@@ -8781,7 +8781,7 @@ adaptor.Create(retval, Equals277, "Equals277");
 				VariableName279=(IToken)Match(input,VariableName,Follow._VariableName_in_paramName1518); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, VariableName279, "VariableName279");
-
+				
 				}
 
 				}
@@ -8796,13 +8796,13 @@ adaptor.Create(retval, VariableName279, "VariableName279");
 				Ampersand280=(IToken)Match(input,Ampersand,Follow._Ampersand_in_paramName1523); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Ampersand280, "Ampersand280");
-
+				
 				}
 				DebugLocation(277, 14);
 				VariableName281=(IToken)Match(input,VariableName,Follow._VariableName_in_paramName1525); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, VariableName281, "VariableName281");
-
+				
 				}
 
 				}
@@ -8903,7 +8903,7 @@ adaptor.Create(retval, VariableName281, "VariableName281");
 					char_literal283=(IToken)Match(input,Comma,Follow._Comma_in_commaList1539); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal283, "char_literal283");
-
+					
 					}
 					DebugLocation(281, 20);
 					PushFollow(Follow._expression_in_commaList1541);
@@ -9097,7 +9097,7 @@ adaptor.Create(retval, char_literal283, "char_literal283");
 					Or287=(IToken)Match(input,Or,Follow._Or_in_weakLogicalOr1570); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, Or287, "Or287");
-
+					
 					}
 					DebugLocation(289, 23);
 					PushFollow(Follow._weakLogicalXor_in_weakLogicalOr1572);
@@ -9223,7 +9223,7 @@ adaptor.Create(retval, Or287, "Or287");
 					Xor290=(IToken)Match(input,Xor,Follow._Xor_in_weakLogicalXor1588); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, Xor290, "Xor290");
-
+					
 					}
 					DebugLocation(293, 24);
 					PushFollow(Follow._weakLogicalAnd_in_weakLogicalXor1590);
@@ -9349,7 +9349,7 @@ adaptor.Create(retval, Xor290, "Xor290");
 					And293=(IToken)Match(input,And,Follow._And_in_weakLogicalAnd1607); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, And293, "And293");
-
+					
 					}
 					DebugLocation(297, 20);
 					PushFollow(Follow._assignment_in_weakLogicalAnd1609);
@@ -9796,7 +9796,7 @@ adaptor.Create(retval, And293, "And293");
 				if (input.LA(1)==AsignmentOperator||input.LA(1)==Equals)
 				{
 					input.Consume();
-adaptor.Create(retval, set296, "set296");
+					if (state.backtracking == 0) adaptor.Create(retval, set296, "set296");
 					state.errorRecovery=false;state.failed=false;
 				}
 				else
@@ -9945,13 +9945,13 @@ adaptor.Create(retval, set296, "set296");
 				List299=(IToken)Match(input,List,Follow._List_in_listVariables1648); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, List299, "List299");
-
+				
 				}
 				DebugLocation(306, 9);
 				OpenRoundBracket300=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_listVariables1650); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, OpenRoundBracket300, "OpenRoundBracket300");
-
+				
 				}
 				DebugLocation(306, 26);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:306:26: ( name )?
@@ -10010,7 +10010,7 @@ adaptor.Create(retval, OpenRoundBracket300, "OpenRoundBracket300");
 						char_literal302=(IToken)Match(input,Comma,Follow._Comma_in_listVariables1656); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal302, "char_literal302");
-
+						
 						}
 						DebugLocation(306, 37);
 						// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:306:37: ( name )?
@@ -10061,7 +10061,7 @@ adaptor.Create(retval, char_literal302, "char_literal302");
 				CloseRoundBracket304=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_listVariables1663); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, CloseRoundBracket304, "CloseRoundBracket304");
-
+				
 				}
 
 				}
@@ -10802,7 +10802,7 @@ adaptor.Create(retval, CloseRoundBracket304, "CloseRoundBracket304");
 				QuestionMark307=(IToken)Match(input,QuestionMark,Follow._QuestionMark_in_ternary1682); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, QuestionMark307, "QuestionMark307");
-
+				
 				}
 				DebugLocation(311, 27);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:311:27: ( expression )?
@@ -10839,7 +10839,7 @@ adaptor.Create(retval, QuestionMark307, "QuestionMark307");
 				Colon309=(IToken)Match(input,Colon,Follow._Colon_in_ternary1687); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Colon309, "Colon309");
-
+				
 				}
 				DebugLocation(311, 45);
 				PushFollow(Follow._expression_in_ternary1689);
@@ -10968,7 +10968,7 @@ adaptor.Create(retval, Colon309, "Colon309");
 					LogicalOr313=(IToken)Match(input,LogicalOr,Follow._LogicalOr_in_logicalOr1709); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, LogicalOr313, "LogicalOr313");
-
+					
 					}
 					DebugLocation(316, 26);
 					PushFollow(Follow._logicalAnd_in_logicalOr1711);
@@ -11094,7 +11094,7 @@ adaptor.Create(retval, LogicalOr313, "LogicalOr313");
 					LogicalAnd316=(IToken)Match(input,LogicalAnd,Follow._LogicalAnd_in_logicalAnd1727); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, LogicalAnd316, "LogicalAnd316");
-
+					
 					}
 					DebugLocation(320, 26);
 					PushFollow(Follow._bitwiseOr_in_logicalAnd1729);
@@ -11220,7 +11220,7 @@ adaptor.Create(retval, LogicalAnd316, "LogicalAnd316");
 					Pipe319=(IToken)Match(input,Pipe,Follow._Pipe_in_bitwiseOr1746); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, Pipe319, "Pipe319");
-
+					
 					}
 					DebugLocation(324, 21);
 					PushFollow(Follow._bitwiseXor_in_bitwiseOr1748);
@@ -11346,7 +11346,7 @@ adaptor.Create(retval, Pipe319, "Pipe319");
 					Hat322=(IToken)Match(input,Hat,Follow._Hat_in_bitwiseXor1765); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, Hat322, "Hat322");
-
+					
 					}
 					DebugLocation(328, 20);
 					PushFollow(Follow._bitWiseAnd_in_bitwiseXor1767);
@@ -11472,7 +11472,7 @@ adaptor.Create(retval, Hat322, "Hat322");
 					Ampersand325=(IToken)Match(input,Ampersand,Follow._Ampersand_in_bitWiseAnd1783); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, Ampersand325, "Ampersand325");
-
+					
 					}
 					DebugLocation(332, 29);
 					PushFollow(Follow._equalityCheck_in_bitWiseAnd1785);
@@ -11592,7 +11592,7 @@ adaptor.Create(retval, Ampersand325, "Ampersand325");
 				EqualityOperator328=(IToken)Match(input,EqualityOperator,Follow._EqualityOperator_in_equalityCheck1801); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, EqualityOperator328, "EqualityOperator328");
-
+				
 				}
 				DebugLocation(336, 39);
 				PushFollow(Follow._comparisionCheck_in_equalityCheck1803);
@@ -11705,7 +11705,7 @@ adaptor.Create(retval, EqualityOperator328, "EqualityOperator328");
 				ComparisionOperator331=(IToken)Match(input,ComparisionOperator,Follow._ComparisionOperator_in_comparisionCheck1820); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, ComparisionOperator331, "ComparisionOperator331");
-
+				
 				}
 				DebugLocation(340, 38);
 				PushFollow(Follow._bitWiseShift_in_comparisionCheck1822);
@@ -11824,7 +11824,7 @@ adaptor.Create(retval, ComparisionOperator331, "ComparisionOperator331");
 					ShiftOperator334=(IToken)Match(input,ShiftOperator,Follow._ShiftOperator_in_bitWiseShift1838); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, ShiftOperator334, "ShiftOperator334");
-
+					
 					}
 					DebugLocation(344, 28);
 					PushFollow(Follow._addition_in_bitWiseShift1840);
@@ -11952,7 +11952,7 @@ adaptor.Create(retval, ShiftOperator334, "ShiftOperator334");
 					if (input.LA(1)==Dot||input.LA(1)==Minus||input.LA(1)==Plus)
 					{
 						input.Consume();
-adaptor.Create(retval, set337, "set337");
+						if (state.backtracking == 0) adaptor.Create(retval, set337, "set337");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -12089,7 +12089,7 @@ adaptor.Create(retval, set337, "set337");
 					if (input.LA(1)==Asterisk||input.LA(1)==Forwardslash||input.LA(1)==Percent)
 					{
 						input.Consume();
-adaptor.Create(retval, set340, "set340");
+						if (state.backtracking == 0) adaptor.Create(retval, set340, "set340");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -12212,7 +12212,7 @@ adaptor.Create(retval, set340, "set340");
 				Bang342=(IToken)Match(input,Bang,Follow._Bang_in_logicalNot1910); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Bang342, "Bang342");
-
+				
 				}
 				DebugLocation(356, 9);
 				PushFollow(Follow._logicalNot_in_logicalNot1912);
@@ -12335,7 +12335,7 @@ adaptor.Create(retval, Bang342, "Bang342");
 				Instanceof346=(IToken)Match(input,Instanceof,Follow._Instanceof_in_instanceOf1931); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Instanceof346, "Instanceof346");
-
+				
 				}
 				DebugLocation(361, 29);
 				PushFollow(Follow._negateOrCast_in_instanceOf1933);
@@ -12577,7 +12577,7 @@ adaptor.Create(retval, Instanceof346, "Instanceof346");
 				if (input.LA(1)==Minus||input.LA(1)==SuppressWarnings||input.LA(1)==Tilde)
 				{
 					input.Consume();
-adaptor.Create(retval, set348, "set348");
+					if (state.backtracking == 0) adaptor.Create(retval, set348, "set348");
 					state.errorRecovery=false;state.failed=false;
 				}
 				else
@@ -12607,7 +12607,7 @@ adaptor.Create(retval, set348, "set348");
 				OpenRoundBracket350=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_negateOrCast1963); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, OpenRoundBracket350, "OpenRoundBracket350");
-
+				
 				}
 				DebugLocation(366, 21);
 				PushFollow(Follow._primitiveType_in_negateOrCast1965);
@@ -12619,7 +12619,7 @@ adaptor.Create(retval, OpenRoundBracket350, "OpenRoundBracket350");
 				CloseRoundBracket352=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_negateOrCast1967); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, CloseRoundBracket352, "CloseRoundBracket352");
-
+				
 				}
 				DebugLocation(366, 53);
 				PushFollow(Follow._negateOrCast_in_negateOrCast1969);
@@ -12713,7 +12713,7 @@ adaptor.Create(retval, CloseRoundBracket352, "CloseRoundBracket352");
 			if (input.LA(1)==ArrayType||(input.LA(1)>=BoolType && input.LA(1)<=BooleanType)||input.LA(1)==DoubleType||input.LA(1)==FloatType||input.LA(1)==IntType||input.LA(1)==IntegerType||input.LA(1)==ObjectType||input.LA(1)==RealType||input.LA(1)==StringType||input.LA(1)==UnsetType)
 			{
 				input.Consume();
-adaptor.Create(retval, set355, "set355");
+				if (state.backtracking == 0) adaptor.Create(retval, set355, "set355");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -13205,7 +13205,7 @@ adaptor.Create(retval, set355, "set355");
 				IncrementOperator356=(IToken)Match(input,IncrementOperator,Follow._IncrementOperator_in_increment2037); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, IncrementOperator356, "IncrementOperator356");
-
+				
 				}
 				DebugLocation(376, 22);
 				PushFollow(Follow._name_in_increment2039);
@@ -13232,7 +13232,7 @@ adaptor.Create(retval, IncrementOperator356, "IncrementOperator356");
 				IncrementOperator359=(IToken)Match(input,IncrementOperator,Follow._IncrementOperator_in_increment2046); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, IncrementOperator359, "IncrementOperator359");
-
+				
 				}
 
 				}
@@ -13255,7 +13255,7 @@ adaptor.Create(retval, IncrementOperator359, "IncrementOperator359");
 				if (input.LA(1)==AsignmentOperator||input.LA(1)==Equals)
 				{
 					input.Consume();
-adaptor.Create(retval, set361, "set361");
+					if (state.backtracking == 0) adaptor.Create(retval, set361, "set361");
 					state.errorRecovery=false;state.failed=false;
 				}
 				else
@@ -13300,7 +13300,7 @@ adaptor.Create(retval, set361, "set361");
 				OpenRoundBracket364=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_increment2071); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, OpenRoundBracket364, "OpenRoundBracket364");
-
+				
 				}
 				DebugLocation(380, 21);
 				PushFollow(Follow._expression_in_increment2073);
@@ -13312,7 +13312,7 @@ adaptor.Create(retval, OpenRoundBracket364, "OpenRoundBracket364");
 				CloseRoundBracket366=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_increment2075); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, CloseRoundBracket366, "CloseRoundBracket366");
-
+				
 				}
 
 				}
@@ -13540,7 +13540,7 @@ adaptor.Create(retval, CloseRoundBracket366, "CloseRoundBracket366");
 				New367=(IToken)Match(input,New,Follow._New_in_newOrClone2097); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, New367, "New367");
-
+				
 				}
 				DebugLocation(387, 8);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:387:8: ( nameOrFunctionCall | constantOrStaticAccessor )
@@ -13779,13 +13779,13 @@ adaptor.Create(retval, New367, "New367");
 				New370=(IToken)Match(input,New,Follow._New_in_newOrClone2110); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, New370, "New370");
-
+				
 				}
 				DebugLocation(388, 8);
 				Static371=(IToken)Match(input,Static,Follow._Static_in_newOrClone2112); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Static371, "Static371");
-
+				
 				}
 				DebugLocation(388, 15);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:388:15: ( functionArguments )?
@@ -13836,7 +13836,7 @@ adaptor.Create(retval, Static371, "Static371");
 				Clone373=(IToken)Match(input,Clone,Follow._Clone_in_newOrClone2120); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Clone373, "Clone373");
-
+				
 				}
 				DebugLocation(389, 10);
 				PushFollow(Follow._name_in_newOrClone2122);
@@ -14263,7 +14263,7 @@ adaptor.Create(retval, Clone373, "Clone373");
 				Ampersand376=(IToken)Match(input,Ampersand,Follow._Ampersand_in_atomOrReference2139); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Ampersand376, "Ampersand376");
-
+				
 				}
 				DebugLocation(395, 14);
 				PushFollow(Follow._nameOrFunctionCall_in_atomOrReference2141);
@@ -14443,13 +14443,13 @@ adaptor.Create(retval, Ampersand376, "Ampersand376");
 				ArrayType382=(IToken)Match(input,ArrayType,Follow._ArrayType_in_arrayDeclaration2172); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, ArrayType382, "ArrayType382");
-
+				
 				}
 				DebugLocation(403, 14);
 				OpenRoundBracket383=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_arrayDeclaration2174); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, OpenRoundBracket383, "OpenRoundBracket383");
-
+				
 				}
 				DebugLocation(403, 31);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:403:31: ( arrayEntry ( Comma arrayEntry )* ( Comma )? )?
@@ -14508,7 +14508,7 @@ adaptor.Create(retval, OpenRoundBracket383, "OpenRoundBracket383");
 							Comma385=(IToken)Match(input,Comma,Follow._Comma_in_arrayDeclaration2180); if (state.failed) return retval;
 							if (state.backtracking == 0) {
 adaptor.Create(retval, Comma385, "Comma385");
-
+							
 							}
 							DebugLocation(403, 50);
 							PushFollow(Follow._arrayEntry_in_arrayDeclaration2182);
@@ -14552,7 +14552,7 @@ adaptor.Create(retval, Comma385, "Comma385");
 						Comma387=(IToken)Match(input,Comma,Follow._Comma_in_arrayDeclaration2186); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, Comma387, "Comma387");
-
+						
 						}
 
 						}
@@ -14572,7 +14572,7 @@ adaptor.Create(retval, Comma387, "Comma387");
 				CloseRoundBracket388=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_arrayDeclaration2191); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, CloseRoundBracket388, "CloseRoundBracket388");
-
+				
 				}
 
 				}
@@ -14587,7 +14587,7 @@ adaptor.Create(retval, CloseRoundBracket388, "CloseRoundBracket388");
 				OpenSquareBracket389=(IToken)Match(input,OpenSquareBracket,Follow._OpenSquareBracket_in_arrayDeclaration2196); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, OpenSquareBracket389, "OpenSquareBracket389");
-
+				
 				}
 				DebugLocation(404, 22);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:404:22: ( arrayEntry ( Comma arrayEntry )* ( Comma )? )?
@@ -14646,7 +14646,7 @@ adaptor.Create(retval, OpenSquareBracket389, "OpenSquareBracket389");
 							Comma391=(IToken)Match(input,Comma,Follow._Comma_in_arrayDeclaration2202); if (state.failed) return retval;
 							if (state.backtracking == 0) {
 adaptor.Create(retval, Comma391, "Comma391");
-
+							
 							}
 							DebugLocation(404, 41);
 							PushFollow(Follow._arrayEntry_in_arrayDeclaration2204);
@@ -14690,7 +14690,7 @@ adaptor.Create(retval, Comma391, "Comma391");
 						Comma393=(IToken)Match(input,Comma,Follow._Comma_in_arrayDeclaration2208); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, Comma393, "Comma393");
-
+						
 						}
 
 						}
@@ -14710,7 +14710,7 @@ adaptor.Create(retval, Comma393, "Comma393");
 				CloseSquareBracket394=(IToken)Match(input,CloseSquareBracket,Follow._CloseSquareBracket_in_arrayDeclaration2213); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, CloseSquareBracket394, "CloseSquareBracket394");
-
+				
 				}
 
 				}
@@ -15532,7 +15532,7 @@ adaptor.Create(retval, CloseSquareBracket394, "CloseSquareBracket394");
 			ArrayAssign398=(IToken)Match(input,ArrayAssign,Follow._ArrayAssign_in_keyValuePair2244); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, ArrayAssign398, "ArrayAssign398");
-
+			
 			}
 			DebugLocation(412, 28);
 			PushFollow(Follow._expression_in_keyValuePair2246);
@@ -15833,7 +15833,7 @@ adaptor.Create(retval, ArrayAssign398, "ArrayAssign398");
 				SingleQuotedString400=(IToken)Match(input,SingleQuotedString,Follow._SingleQuotedString_in_atom2256); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, SingleQuotedString400, "SingleQuotedString400");
-
+				
 				}
 
 				}
@@ -15848,7 +15848,7 @@ adaptor.Create(retval, SingleQuotedString400, "SingleQuotedString400");
 				DoubleQuotedString401=(IToken)Match(input,DoubleQuotedString,Follow._DoubleQuotedString_in_atom2261); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, DoubleQuotedString401, "DoubleQuotedString401");
-
+				
 				}
 
 				}
@@ -15863,7 +15863,7 @@ adaptor.Create(retval, DoubleQuotedString401, "DoubleQuotedString401");
 				HereDoc402=(IToken)Match(input,HereDoc,Follow._HereDoc_in_atom2266); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, HereDoc402, "HereDoc402");
-
+				
 				}
 
 				}
@@ -15898,7 +15898,7 @@ adaptor.Create(retval, HereDoc402, "HereDoc402");
 					if (input.LA(1)==Minus||input.LA(1)==Plus)
 					{
 						input.Consume();
-adaptor.Create(retval, set403, "set403");
+						if (state.backtracking == 0) adaptor.Create(retval, set403, "set403");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -15920,7 +15920,7 @@ adaptor.Create(retval, set403, "set403");
 				Integer404=(IToken)Match(input,Integer,Follow._Integer_in_atom2278); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Integer404, "Integer404");
-
+				
 				}
 
 				}
@@ -15955,7 +15955,7 @@ adaptor.Create(retval, Integer404, "Integer404");
 					if (input.LA(1)==Minus||input.LA(1)==Plus)
 					{
 						input.Consume();
-adaptor.Create(retval, set405, "set405");
+						if (state.backtracking == 0) adaptor.Create(retval, set405, "set405");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -15977,7 +15977,7 @@ adaptor.Create(retval, set405, "set405");
 				Real406=(IToken)Match(input,Real,Follow._Real_in_atom2290); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Real406, "Real406");
-
+				
 				}
 
 				}
@@ -16007,7 +16007,7 @@ adaptor.Create(retval, Real406, "Real406");
 				Null408=(IToken)Match(input,Null,Follow._Null_in_atom2300); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Null408, "Null408");
-
+				
 				}
 
 				}
@@ -16135,7 +16135,7 @@ adaptor.Create(retval, Null408, "Null408");
 			OpenRoundBracket413=(IToken)Match(input,OpenRoundBracket,Follow._OpenRoundBracket_in_functionArguments2328); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, OpenRoundBracket413, "OpenRoundBracket413");
-
+			
 			}
 			DebugLocation(428, 21);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:428:21: ( expression ( Comma expression )* )?
@@ -16187,7 +16187,7 @@ adaptor.Create(retval, OpenRoundBracket413, "OpenRoundBracket413");
 						Comma415=(IToken)Match(input,Comma,Follow._Comma_in_functionArguments2334); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, Comma415, "Comma415");
-
+						
 						}
 						DebugLocation(428, 40);
 						PushFollow(Follow._expression_in_functionArguments2336);
@@ -16220,7 +16220,7 @@ adaptor.Create(retval, Comma415, "Comma415");
 			CloseRoundBracket417=(IToken)Match(input,CloseRoundBracket,Follow._CloseRoundBracket_in_functionArguments2342); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, CloseRoundBracket417, "CloseRoundBracket417");
-
+			
 			}
 
 			}
@@ -16320,7 +16320,7 @@ adaptor.Create(retval, CloseRoundBracket417, "CloseRoundBracket417");
 				OpenSquareBracket418=(IToken)Match(input,OpenSquareBracket,Follow._OpenSquareBracket_in_indexer2353); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, OpenSquareBracket418, "OpenSquareBracket418");
-
+				
 				}
 				DebugLocation(432, 22);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:432:22: ( expression )?
@@ -16357,7 +16357,7 @@ adaptor.Create(retval, OpenSquareBracket418, "OpenSquareBracket418");
 				CloseSquareBracket420=(IToken)Match(input,CloseSquareBracket,Follow._CloseSquareBracket_in_indexer2358); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, CloseSquareBracket420, "CloseSquareBracket420");
-
+				
 				}
 
 				}
@@ -16372,7 +16372,7 @@ adaptor.Create(retval, CloseSquareBracket420, "CloseSquareBracket420");
 				OpenCurlyBracket421=(IToken)Match(input,OpenCurlyBracket,Follow._OpenCurlyBracket_in_indexer2363); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, OpenCurlyBracket421, "OpenCurlyBracket421");
-
+				
 				}
 				DebugLocation(433, 21);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:433:21: ( expression )?
@@ -16409,7 +16409,7 @@ adaptor.Create(retval, OpenCurlyBracket421, "OpenCurlyBracket421");
 				CloseCurlyBracket423=(IToken)Match(input,CloseCurlyBracket,Follow._CloseCurlyBracket_in_indexer2368); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, CloseCurlyBracket423, "CloseCurlyBracket423");
-
+				
 				}
 
 				}
@@ -16616,7 +16616,7 @@ adaptor.Create(retval, CloseCurlyBracket423, "CloseCurlyBracket423");
 			string_literal424=(IToken)Match(input,InstanceMember,Follow._InstanceMember_in_memberAccess2380); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal424, "string_literal424");
-
+			
 			}
 			DebugLocation(438, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:438:9: ( expression | '{' expression '}' | New | Clone | Echo | Print | If | Else | ElseIf | For | Foreach | While | Do | Try | Catch | Finally | Switch | Case | Default | Namespace | Function | Break | Continue | Goto | Return | Throw | Global | Static | And | Or | Xor | Instanceof | Null | List | Class | Interface | Extends | Implements | Abstract | Var | Const | As | Require | RequireOnce | Include | IncludeOnce | Public | Private | Protected | True | False | HaltCompiler | Die | Empty | Exit | Eval | Isset | IntType | IntegerType | BoolType | BooleanType | FloatType | DoubleType | RealType | StringType | ObjectType | Use )
@@ -16656,7 +16656,7 @@ adaptor.Create(retval, string_literal424, "string_literal424");
 				char_literal426=(IToken)Match(input,OpenCurlyBracket,Follow._OpenCurlyBracket_in_memberAccess2387); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal426, "char_literal426");
-
+				
 				}
 				DebugLocation(438, 27);
 				PushFollow(Follow._expression_in_memberAccess2389);
@@ -16668,7 +16668,7 @@ adaptor.Create(retval, char_literal426, "char_literal426");
 				char_literal428=(IToken)Match(input,CloseCurlyBracket,Follow._CloseCurlyBracket_in_memberAccess2391); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal428, "char_literal428");
-
+				
 				}
 
 				}
@@ -16681,7 +16681,7 @@ adaptor.Create(retval, char_literal428, "char_literal428");
 				New429=(IToken)Match(input,New,Follow._New_in_memberAccess2398); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, New429, "New429");
-
+				
 				}
 
 				}
@@ -16694,7 +16694,7 @@ adaptor.Create(retval, New429, "New429");
 				Clone430=(IToken)Match(input,Clone,Follow._Clone_in_memberAccess2400); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Clone430, "Clone430");
-
+				
 				}
 
 				}
@@ -16707,7 +16707,7 @@ adaptor.Create(retval, Clone430, "Clone430");
 				Echo431=(IToken)Match(input,Echo,Follow._Echo_in_memberAccess2402); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Echo431, "Echo431");
-
+				
 				}
 
 				}
@@ -16720,7 +16720,7 @@ adaptor.Create(retval, Echo431, "Echo431");
 				Print432=(IToken)Match(input,Print,Follow._Print_in_memberAccess2404); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Print432, "Print432");
-
+				
 				}
 
 				}
@@ -16733,7 +16733,7 @@ adaptor.Create(retval, Print432, "Print432");
 				If433=(IToken)Match(input,If,Follow._If_in_memberAccess2406); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, If433, "If433");
-
+				
 				}
 
 				}
@@ -16746,7 +16746,7 @@ adaptor.Create(retval, If433, "If433");
 				Else434=(IToken)Match(input,Else,Follow._Else_in_memberAccess2408); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Else434, "Else434");
-
+				
 				}
 
 				}
@@ -16759,7 +16759,7 @@ adaptor.Create(retval, Else434, "Else434");
 				ElseIf435=(IToken)Match(input,ElseIf,Follow._ElseIf_in_memberAccess2410); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, ElseIf435, "ElseIf435");
-
+				
 				}
 
 				}
@@ -16772,7 +16772,7 @@ adaptor.Create(retval, ElseIf435, "ElseIf435");
 				For436=(IToken)Match(input,For,Follow._For_in_memberAccess2412); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, For436, "For436");
-
+				
 				}
 
 				}
@@ -16785,7 +16785,7 @@ adaptor.Create(retval, For436, "For436");
 				Foreach437=(IToken)Match(input,Foreach,Follow._Foreach_in_memberAccess2414); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Foreach437, "Foreach437");
-
+				
 				}
 
 				}
@@ -16798,7 +16798,7 @@ adaptor.Create(retval, Foreach437, "Foreach437");
 				While438=(IToken)Match(input,While,Follow._While_in_memberAccess2416); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, While438, "While438");
-
+				
 				}
 
 				}
@@ -16811,7 +16811,7 @@ adaptor.Create(retval, While438, "While438");
 				Do439=(IToken)Match(input,Do,Follow._Do_in_memberAccess2418); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Do439, "Do439");
-
+				
 				}
 
 				}
@@ -16824,7 +16824,7 @@ adaptor.Create(retval, Do439, "Do439");
 				Try440=(IToken)Match(input,Try,Follow._Try_in_memberAccess2420); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Try440, "Try440");
-
+				
 				}
 
 				}
@@ -16837,7 +16837,7 @@ adaptor.Create(retval, Try440, "Try440");
 				Catch441=(IToken)Match(input,Catch,Follow._Catch_in_memberAccess2422); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Catch441, "Catch441");
-
+				
 				}
 
 				}
@@ -16850,7 +16850,7 @@ adaptor.Create(retval, Catch441, "Catch441");
 				Finally442=(IToken)Match(input,Finally,Follow._Finally_in_memberAccess2424); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Finally442, "Finally442");
-
+				
 				}
 
 				}
@@ -16863,7 +16863,7 @@ adaptor.Create(retval, Finally442, "Finally442");
 				Switch443=(IToken)Match(input,Switch,Follow._Switch_in_memberAccess2426); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Switch443, "Switch443");
-
+				
 				}
 
 				}
@@ -16876,7 +16876,7 @@ adaptor.Create(retval, Switch443, "Switch443");
 				Case444=(IToken)Match(input,Case,Follow._Case_in_memberAccess2428); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Case444, "Case444");
-
+				
 				}
 
 				}
@@ -16889,7 +16889,7 @@ adaptor.Create(retval, Case444, "Case444");
 				Default445=(IToken)Match(input,Default,Follow._Default_in_memberAccess2430); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Default445, "Default445");
-
+				
 				}
 
 				}
@@ -16902,7 +16902,7 @@ adaptor.Create(retval, Default445, "Default445");
 				Namespace446=(IToken)Match(input,Namespace,Follow._Namespace_in_memberAccess2432); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Namespace446, "Namespace446");
-
+				
 				}
 
 				}
@@ -16915,7 +16915,7 @@ adaptor.Create(retval, Namespace446, "Namespace446");
 				Function447=(IToken)Match(input,Function,Follow._Function_in_memberAccess2434); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Function447, "Function447");
-
+				
 				}
 
 				}
@@ -16928,7 +16928,7 @@ adaptor.Create(retval, Function447, "Function447");
 				Break448=(IToken)Match(input,Break,Follow._Break_in_memberAccess2436); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Break448, "Break448");
-
+				
 				}
 
 				}
@@ -16941,7 +16941,7 @@ adaptor.Create(retval, Break448, "Break448");
 				Continue449=(IToken)Match(input,Continue,Follow._Continue_in_memberAccess2438); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Continue449, "Continue449");
-
+				
 				}
 
 				}
@@ -16954,7 +16954,7 @@ adaptor.Create(retval, Continue449, "Continue449");
 				Goto450=(IToken)Match(input,Goto,Follow._Goto_in_memberAccess2440); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Goto450, "Goto450");
-
+				
 				}
 
 				}
@@ -16967,7 +16967,7 @@ adaptor.Create(retval, Goto450, "Goto450");
 				Return451=(IToken)Match(input,Return,Follow._Return_in_memberAccess2442); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Return451, "Return451");
-
+				
 				}
 
 				}
@@ -16980,7 +16980,7 @@ adaptor.Create(retval, Return451, "Return451");
 				Throw452=(IToken)Match(input,Throw,Follow._Throw_in_memberAccess2444); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Throw452, "Throw452");
-
+				
 				}
 
 				}
@@ -16993,7 +16993,7 @@ adaptor.Create(retval, Throw452, "Throw452");
 				Global453=(IToken)Match(input,Global,Follow._Global_in_memberAccess2446); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Global453, "Global453");
-
+				
 				}
 
 				}
@@ -17006,7 +17006,7 @@ adaptor.Create(retval, Global453, "Global453");
 				Static454=(IToken)Match(input,Static,Follow._Static_in_memberAccess2448); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Static454, "Static454");
-
+				
 				}
 
 				}
@@ -17019,7 +17019,7 @@ adaptor.Create(retval, Static454, "Static454");
 				And455=(IToken)Match(input,And,Follow._And_in_memberAccess2450); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, And455, "And455");
-
+				
 				}
 
 				}
@@ -17032,7 +17032,7 @@ adaptor.Create(retval, And455, "And455");
 				Or456=(IToken)Match(input,Or,Follow._Or_in_memberAccess2452); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Or456, "Or456");
-
+				
 				}
 
 				}
@@ -17045,7 +17045,7 @@ adaptor.Create(retval, Or456, "Or456");
 				Xor457=(IToken)Match(input,Xor,Follow._Xor_in_memberAccess2454); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Xor457, "Xor457");
-
+				
 				}
 
 				}
@@ -17058,7 +17058,7 @@ adaptor.Create(retval, Xor457, "Xor457");
 				Instanceof458=(IToken)Match(input,Instanceof,Follow._Instanceof_in_memberAccess2456); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Instanceof458, "Instanceof458");
-
+				
 				}
 
 				}
@@ -17071,7 +17071,7 @@ adaptor.Create(retval, Instanceof458, "Instanceof458");
 				Null459=(IToken)Match(input,Null,Follow._Null_in_memberAccess2458); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Null459, "Null459");
-
+				
 				}
 
 				}
@@ -17084,7 +17084,7 @@ adaptor.Create(retval, Null459, "Null459");
 				List460=(IToken)Match(input,List,Follow._List_in_memberAccess2460); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, List460, "List460");
-
+				
 				}
 
 				}
@@ -17097,7 +17097,7 @@ adaptor.Create(retval, List460, "List460");
 				Class461=(IToken)Match(input,Class,Follow._Class_in_memberAccess2462); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Class461, "Class461");
-
+				
 				}
 
 				}
@@ -17110,7 +17110,7 @@ adaptor.Create(retval, Class461, "Class461");
 				Interface462=(IToken)Match(input,Interface,Follow._Interface_in_memberAccess2464); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Interface462, "Interface462");
-
+				
 				}
 
 				}
@@ -17123,7 +17123,7 @@ adaptor.Create(retval, Interface462, "Interface462");
 				Extends463=(IToken)Match(input,Extends,Follow._Extends_in_memberAccess2466); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Extends463, "Extends463");
-
+				
 				}
 
 				}
@@ -17136,7 +17136,7 @@ adaptor.Create(retval, Extends463, "Extends463");
 				Implements464=(IToken)Match(input,Implements,Follow._Implements_in_memberAccess2468); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Implements464, "Implements464");
-
+				
 				}
 
 				}
@@ -17149,7 +17149,7 @@ adaptor.Create(retval, Implements464, "Implements464");
 				Abstract465=(IToken)Match(input,Abstract,Follow._Abstract_in_memberAccess2470); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Abstract465, "Abstract465");
-
+				
 				}
 
 				}
@@ -17162,7 +17162,7 @@ adaptor.Create(retval, Abstract465, "Abstract465");
 				Var466=(IToken)Match(input,Var,Follow._Var_in_memberAccess2472); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Var466, "Var466");
-
+				
 				}
 
 				}
@@ -17175,7 +17175,7 @@ adaptor.Create(retval, Var466, "Var466");
 				Const467=(IToken)Match(input,Const,Follow._Const_in_memberAccess2474); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Const467, "Const467");
-
+				
 				}
 
 				}
@@ -17188,7 +17188,7 @@ adaptor.Create(retval, Const467, "Const467");
 				As468=(IToken)Match(input,As,Follow._As_in_memberAccess2476); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, As468, "As468");
-
+				
 				}
 
 				}
@@ -17201,7 +17201,7 @@ adaptor.Create(retval, As468, "As468");
 				Require469=(IToken)Match(input,Require,Follow._Require_in_memberAccess2478); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Require469, "Require469");
-
+				
 				}
 
 				}
@@ -17214,7 +17214,7 @@ adaptor.Create(retval, Require469, "Require469");
 				RequireOnce470=(IToken)Match(input,RequireOnce,Follow._RequireOnce_in_memberAccess2480); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, RequireOnce470, "RequireOnce470");
-
+				
 				}
 
 				}
@@ -17227,7 +17227,7 @@ adaptor.Create(retval, RequireOnce470, "RequireOnce470");
 				Include471=(IToken)Match(input,Include,Follow._Include_in_memberAccess2482); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Include471, "Include471");
-
+				
 				}
 
 				}
@@ -17240,7 +17240,7 @@ adaptor.Create(retval, Include471, "Include471");
 				IncludeOnce472=(IToken)Match(input,IncludeOnce,Follow._IncludeOnce_in_memberAccess2484); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, IncludeOnce472, "IncludeOnce472");
-
+				
 				}
 
 				}
@@ -17253,7 +17253,7 @@ adaptor.Create(retval, IncludeOnce472, "IncludeOnce472");
 				Public473=(IToken)Match(input,Public,Follow._Public_in_memberAccess2486); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Public473, "Public473");
-
+				
 				}
 
 				}
@@ -17266,7 +17266,7 @@ adaptor.Create(retval, Public473, "Public473");
 				Private474=(IToken)Match(input,Private,Follow._Private_in_memberAccess2488); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Private474, "Private474");
-
+				
 				}
 
 				}
@@ -17279,7 +17279,7 @@ adaptor.Create(retval, Private474, "Private474");
 				Protected475=(IToken)Match(input,Protected,Follow._Protected_in_memberAccess2490); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Protected475, "Protected475");
-
+				
 				}
 
 				}
@@ -17292,7 +17292,7 @@ adaptor.Create(retval, Protected475, "Protected475");
 				True476=(IToken)Match(input,True,Follow._True_in_memberAccess2492); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, True476, "True476");
-
+				
 				}
 
 				}
@@ -17305,7 +17305,7 @@ adaptor.Create(retval, True476, "True476");
 				False477=(IToken)Match(input,False,Follow._False_in_memberAccess2494); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, False477, "False477");
-
+				
 				}
 
 				}
@@ -17318,7 +17318,7 @@ adaptor.Create(retval, False477, "False477");
 				HaltCompiler478=(IToken)Match(input,HaltCompiler,Follow._HaltCompiler_in_memberAccess2496); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, HaltCompiler478, "HaltCompiler478");
-
+				
 				}
 
 				}
@@ -17331,7 +17331,7 @@ adaptor.Create(retval, HaltCompiler478, "HaltCompiler478");
 				Die479=(IToken)Match(input,Die,Follow._Die_in_memberAccess2498); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Die479, "Die479");
-
+				
 				}
 
 				}
@@ -17344,7 +17344,7 @@ adaptor.Create(retval, Die479, "Die479");
 				Empty480=(IToken)Match(input,Empty,Follow._Empty_in_memberAccess2500); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Empty480, "Empty480");
-
+				
 				}
 
 				}
@@ -17357,7 +17357,7 @@ adaptor.Create(retval, Empty480, "Empty480");
 				Exit481=(IToken)Match(input,Exit,Follow._Exit_in_memberAccess2502); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Exit481, "Exit481");
-
+				
 				}
 
 				}
@@ -17370,7 +17370,7 @@ adaptor.Create(retval, Exit481, "Exit481");
 				Eval482=(IToken)Match(input,Eval,Follow._Eval_in_memberAccess2504); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Eval482, "Eval482");
-
+				
 				}
 
 				}
@@ -17383,7 +17383,7 @@ adaptor.Create(retval, Eval482, "Eval482");
 				Isset483=(IToken)Match(input,Isset,Follow._Isset_in_memberAccess2506); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Isset483, "Isset483");
-
+				
 				}
 
 				}
@@ -17396,7 +17396,7 @@ adaptor.Create(retval, Isset483, "Isset483");
 				IntType484=(IToken)Match(input,IntType,Follow._IntType_in_memberAccess2513); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, IntType484, "IntType484");
-
+				
 				}
 
 				}
@@ -17409,7 +17409,7 @@ adaptor.Create(retval, IntType484, "IntType484");
 				IntegerType485=(IToken)Match(input,IntegerType,Follow._IntegerType_in_memberAccess2517); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, IntegerType485, "IntegerType485");
-
+				
 				}
 
 				}
@@ -17422,7 +17422,7 @@ adaptor.Create(retval, IntegerType485, "IntegerType485");
 				BoolType486=(IToken)Match(input,BoolType,Follow._BoolType_in_memberAccess2521); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, BoolType486, "BoolType486");
-
+				
 				}
 
 				}
@@ -17435,7 +17435,7 @@ adaptor.Create(retval, BoolType486, "BoolType486");
 				BooleanType487=(IToken)Match(input,BooleanType,Follow._BooleanType_in_memberAccess2525); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, BooleanType487, "BooleanType487");
-
+				
 				}
 
 				}
@@ -17448,7 +17448,7 @@ adaptor.Create(retval, BooleanType487, "BooleanType487");
 				FloatType488=(IToken)Match(input,FloatType,Follow._FloatType_in_memberAccess2529); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, FloatType488, "FloatType488");
-
+				
 				}
 
 				}
@@ -17461,7 +17461,7 @@ adaptor.Create(retval, FloatType488, "FloatType488");
 				DoubleType489=(IToken)Match(input,DoubleType,Follow._DoubleType_in_memberAccess2533); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, DoubleType489, "DoubleType489");
-
+				
 				}
 
 				}
@@ -17474,7 +17474,7 @@ adaptor.Create(retval, DoubleType489, "DoubleType489");
 				RealType490=(IToken)Match(input,RealType,Follow._RealType_in_memberAccess2540); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, RealType490, "RealType490");
-
+				
 				}
 
 				}
@@ -17487,7 +17487,7 @@ adaptor.Create(retval, RealType490, "RealType490");
 				StringType491=(IToken)Match(input,StringType,Follow._StringType_in_memberAccess2544); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, StringType491, "StringType491");
-
+				
 				}
 
 				}
@@ -17500,7 +17500,7 @@ adaptor.Create(retval, StringType491, "StringType491");
 				ObjectType492=(IToken)Match(input,ObjectType,Follow._ObjectType_in_memberAccess2548); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, ObjectType492, "ObjectType492");
-
+				
 				}
 
 				}
@@ -17513,7 +17513,7 @@ adaptor.Create(retval, ObjectType492, "ObjectType492");
 				Use493=(IToken)Match(input,Use,Follow._Use_in_memberAccess2554); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Use493, "Use493");
-
+				
 				}
 
 				}
@@ -19722,7 +19722,7 @@ adaptor.Create(retval, Use493, "Use493");
 				string_literal524=(IToken)Match(input,ClassMember,Follow._ClassMember_in_variableOrStaticAccessor2743); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal524, "string_literal524");
-
+				
 				}
 				DebugLocation(474, 36);
 				PushFollow(Follow._variable_in_variableOrStaticAccessor2745);
@@ -19889,7 +19889,7 @@ adaptor.Create(retval, string_literal524, "string_literal524");
 				string_literal529=(IToken)Match(input,ClassMember,Follow._ClassMember_in_constantOrStaticAccessor2769); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal529, "string_literal529");
-
+				
 				}
 				DebugLocation(479, 36);
 
@@ -19897,7 +19897,7 @@ adaptor.Create(retval, string_literal529, "string_literal529");
 				if (input.LA(1)==Abstract||input.LA(1)==And||input.LA(1)==As||(input.LA(1)>=BoolType && input.LA(1)<=Class)||input.LA(1)==Clone||(input.LA(1)>=Const && input.LA(1)<=Continue)||(input.LA(1)>=Default && input.LA(1)<=Die)||input.LA(1)==Do||(input.LA(1)>=DoubleType && input.LA(1)<=Empty)||(input.LA(1)>=Eval && input.LA(1)<=Exit)||(input.LA(1)>=Extends && input.LA(1)<=False)||(input.LA(1)>=Finally && input.LA(1)<=Foreach)||(input.LA(1)>=Function && input.LA(1)<=HaltCompiler)||(input.LA(1)>=If && input.LA(1)<=IncludeOnce)||(input.LA(1)>=Instanceof && input.LA(1)<=IntType)||(input.LA(1)>=IntegerType && input.LA(1)<=List)||(input.LA(1)>=Namespace && input.LA(1)<=Null)||input.LA(1)==ObjectType||input.LA(1)==Or||(input.LA(1)>=Print && input.LA(1)<=Public)||(input.LA(1)>=RealType && input.LA(1)<=Return)||(input.LA(1)>=Static && input.LA(1)<=StringType)||(input.LA(1)>=Switch && input.LA(1)<=Throw)||(input.LA(1)>=True && input.LA(1)<=Try)||input.LA(1)==UnquotedString||(input.LA(1)>=Use && input.LA(1)<=Var)||input.LA(1)==While||input.LA(1)==Xor)
 				{
 					input.Consume();
-adaptor.Create(retval, set530, "set530");
+					if (state.backtracking == 0) adaptor.Create(retval, set530, "set530");
 					state.errorRecovery=false;state.failed=false;
 				}
 				else
@@ -20091,7 +20091,7 @@ adaptor.Create(retval, set530, "set530");
 				VariableName533=(IToken)Match(input,VariableName,Follow._VariableName_in_variableVariable2968); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, VariableName533, "VariableName533");
-
+				
 				}
 
 				}
@@ -20106,7 +20106,7 @@ adaptor.Create(retval, VariableName533, "VariableName533");
 				char_literal534=(IToken)Match(input,130,Follow._130_in_variableVariable2973); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal534, "char_literal534");
-
+				
 				}
 				DebugLocation(493, 8);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Php\\Php.g:493:8: ( variableVariable | '{' expression '}' )
@@ -20154,7 +20154,7 @@ adaptor.Create(retval, char_literal534, "char_literal534");
 					char_literal536=(IToken)Match(input,OpenCurlyBracket,Follow._OpenCurlyBracket_in_variableVariable2980); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal536, "char_literal536");
-
+					
 					}
 					DebugLocation(493, 32);
 					PushFollow(Follow._expression_in_variableVariable2982);
@@ -20166,7 +20166,7 @@ adaptor.Create(retval, char_literal536, "char_literal536");
 					char_literal538=(IToken)Match(input,CloseCurlyBracket,Follow._CloseCurlyBracket_in_variableVariable2984); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal538, "char_literal538");
-
+					
 					}
 
 					}
@@ -20268,7 +20268,7 @@ adaptor.Create(retval, char_literal538, "char_literal538");
 				char_literal539=(IToken)Match(input,131,Follow._131_in_qualifiedName2997); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal539, "char_literal539");
-
+				
 				}
 
 				}
@@ -20283,7 +20283,7 @@ adaptor.Create(retval, char_literal539, "char_literal539");
 			if (input.LA(1)==Abstract||input.LA(1)==And||input.LA(1)==As||(input.LA(1)>=BoolType && input.LA(1)<=Class)||input.LA(1)==Clone||(input.LA(1)>=Const && input.LA(1)<=Continue)||(input.LA(1)>=Default && input.LA(1)<=Die)||input.LA(1)==Do||(input.LA(1)>=DoubleType && input.LA(1)<=Empty)||(input.LA(1)>=Eval && input.LA(1)<=Exit)||(input.LA(1)>=Extends && input.LA(1)<=Foreach)||(input.LA(1)>=Function && input.LA(1)<=HaltCompiler)||(input.LA(1)>=If && input.LA(1)<=IncludeOnce)||(input.LA(1)>=Instanceof && input.LA(1)<=IntType)||(input.LA(1)>=IntegerType && input.LA(1)<=List)||(input.LA(1)>=Namespace && input.LA(1)<=Null)||input.LA(1)==ObjectType||input.LA(1)==Or||(input.LA(1)>=Print && input.LA(1)<=Public)||(input.LA(1)>=RealType && input.LA(1)<=Return)||(input.LA(1)>=Static && input.LA(1)<=StringType)||(input.LA(1)>=Switch && input.LA(1)<=Throw)||(input.LA(1)>=True && input.LA(1)<=Try)||input.LA(1)==UnquotedString||(input.LA(1)>=Use && input.LA(1)<=Var)||input.LA(1)==While||input.LA(1)==Xor)
 			{
 				input.Consume();
-adaptor.Create(retval, set540, "set540");
+				if (state.backtracking == 0) adaptor.Create(retval, set540, "set540");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -20320,7 +20320,7 @@ adaptor.Create(retval, set540, "set540");
 					char_literal541=(IToken)Match(input,131,Follow._131_in_qualifiedName3176); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal541, "char_literal541");
-
+					
 					}
 					DebugLocation(503, 9);
 
@@ -20328,7 +20328,7 @@ adaptor.Create(retval, char_literal541, "char_literal541");
 					if (input.LA(1)==Abstract||input.LA(1)==And||input.LA(1)==As||(input.LA(1)>=BoolType && input.LA(1)<=Class)||input.LA(1)==Clone||(input.LA(1)>=Const && input.LA(1)<=Continue)||(input.LA(1)>=Default && input.LA(1)<=Die)||input.LA(1)==Do||(input.LA(1)>=DoubleType && input.LA(1)<=Empty)||(input.LA(1)>=Eval && input.LA(1)<=Exit)||(input.LA(1)>=Extends && input.LA(1)<=Foreach)||(input.LA(1)>=Function && input.LA(1)<=HaltCompiler)||(input.LA(1)>=If && input.LA(1)<=IncludeOnce)||(input.LA(1)>=Instanceof && input.LA(1)<=IntType)||(input.LA(1)>=IntegerType && input.LA(1)<=List)||(input.LA(1)>=Namespace && input.LA(1)<=Null)||input.LA(1)==ObjectType||input.LA(1)==Or||(input.LA(1)>=Print && input.LA(1)<=Public)||(input.LA(1)>=RealType && input.LA(1)<=Return)||(input.LA(1)>=Static && input.LA(1)<=StringType)||(input.LA(1)>=Switch && input.LA(1)<=Throw)||(input.LA(1)>=True && input.LA(1)<=Try)||input.LA(1)==UnquotedString||(input.LA(1)>=Use && input.LA(1)<=Var)||input.LA(1)==While||input.LA(1)==Xor)
 					{
 						input.Consume();
-adaptor.Create(retval, set542, "set542");
+						if (state.backtracking == 0) adaptor.Create(retval, set542, "set542");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -20422,7 +20422,7 @@ adaptor.Create(retval, set542, "set542");
 			if ((input.LA(1)>=Include && input.LA(1)<=IncludeOnce)||(input.LA(1)>=Require && input.LA(1)<=RequireOnce))
 			{
 				input.Consume();
-adaptor.Create(retval, set543, "set543");
+				if (state.backtracking == 0) adaptor.Create(retval, set543, "set543");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -20502,7 +20502,7 @@ adaptor.Create(retval, set543, "set543");
 			if ((input.LA(1)>=Private && input.LA(1)<=Public))
 			{
 				input.Consume();
-adaptor.Create(retval, set544, "set544");
+				if (state.backtracking == 0) adaptor.Create(retval, set544, "set544");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -20582,7 +20582,7 @@ adaptor.Create(retval, set544, "set544");
 			if (input.LA(1)==False||input.LA(1)==True)
 			{
 				input.Consume();
-adaptor.Create(retval, set545, "set545");
+				if (state.backtracking == 0) adaptor.Create(retval, set545, "set545");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -20662,7 +20662,7 @@ adaptor.Create(retval, set545, "set545");
 			if (input.LA(1)==Die||input.LA(1)==Empty||(input.LA(1)>=Eval && input.LA(1)<=Exit)||input.LA(1)==HaltCompiler||input.LA(1)==Isset||input.LA(1)==UnsetType)
 			{
 				input.Consume();
-adaptor.Create(retval, set546, "set546");
+				if (state.backtracking == 0) adaptor.Create(retval, set546, "set546");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else

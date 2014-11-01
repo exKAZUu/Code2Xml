@@ -11,7 +11,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Test\\Test.g 2014-11-01 20:38:44
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Test\\Test.g 2014-11-01 21:31:34
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -283,13 +283,13 @@ public partial class TestParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 				Identifier2=(IToken)Match(input,Identifier,Follow._Identifier_in_assignment81); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Identifier2, "Identifier2");
-
+				
 				}
 				DebugLocation(16, 15);
 				char_literal3=(IToken)Match(input,15,Follow._15_in_assignment83); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal3, "char_literal3");
-
+				
 				}
 				DebugLocation(16, 19);
 				PushFollow(Follow._assignment_in_assignment85);
@@ -418,7 +418,7 @@ adaptor.Create(retval, char_literal3, "char_literal3");
 					char_literal7=(IToken)Match(input,14,Follow._14_in_addition107); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal7, "char_literal7");
-
+					
 					}
 					DebugLocation(21, 27);
 					PushFollow(Follow._multiplication_in_addition109);
@@ -544,7 +544,7 @@ adaptor.Create(retval, char_literal7, "char_literal7");
 					char_literal10=(IToken)Match(input,13,Follow._13_in_multiplication131); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal10, "char_literal10");
-
+					
 					}
 					DebugLocation(25, 20);
 					PushFollow(Follow._primary_in_multiplication133);
@@ -693,7 +693,7 @@ adaptor.Create(retval, char_literal10, "char_literal10");
 				Identifier12=(IToken)Match(input,Identifier,Follow._Identifier_in_primary149); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Identifier12, "Identifier12");
-
+				
 				}
 
 				}
@@ -708,7 +708,7 @@ adaptor.Create(retval, Identifier12, "Identifier12");
 				IntegerLiteral13=(IToken)Match(input,IntegerLiteral,Follow._IntegerLiteral_in_primary154); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, IntegerLiteral13, "IntegerLiteral13");
-
+				
 				}
 
 				}
@@ -723,7 +723,7 @@ adaptor.Create(retval, IntegerLiteral13, "IntegerLiteral13");
 				char_literal14=(IToken)Match(input,11,Follow._11_in_primary160); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal14, "char_literal14");
-
+				
 				}
 				DebugLocation(31, 8);
 				PushFollow(Follow._assignment_in_primary162);
@@ -735,7 +735,7 @@ adaptor.Create(retval, char_literal14, "char_literal14");
 				char_literal16=(IToken)Match(input,12,Follow._12_in_primary164); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal16, "char_literal16");
-
+				
 				}
 
 				}
@@ -750,13 +750,13 @@ adaptor.Create(retval, char_literal16, "char_literal16");
 				Identifier17=(IToken)Match(input,Identifier,Follow._Identifier_in_primary169); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, Identifier17, "Identifier17");
-
+				
 				}
 				DebugLocation(32, 15);
 				char_literal18=(IToken)Match(input,15,Follow._15_in_primary171); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal18, "char_literal18");
-
+				
 				}
 				DebugLocation(32, 19);
 				PushFollow(Follow._assignment_in_primary173);

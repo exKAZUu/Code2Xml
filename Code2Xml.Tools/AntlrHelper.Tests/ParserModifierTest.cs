@@ -21,135 +21,124 @@ using NUnit.Framework;
 namespace Code2Xml.Tools.AntlrHelper.Tests {
     public class ParserModifierTest {
         [Test]
-        public void JavaコードをCSharpコードに変換できる() {
+        public void RemoveUnusedCode() {
             const string code =
                     @"
-if (declaration_stack.size()>0&&((declaration_scope)declaration_stack.Peek()).isTypedef) {
-	((Symbols_scope)Symbols_stack.Peek()).types.add(((IDENTIFIER82 != null) ? IDENTIFIER82.Text : null));
-	System.out.println(((IDENTIFIER82 != null) ? IDENTIFIER82.Text : null));
-}
+root_0 = (object)adaptor.Nil();
+System.out.println(((IDENTIFIER82 != null) ? IDENTIFIER82.Text : null));
+retval.Tree = (object)adaptor.RulePostProcessing(root_0);
+adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+adaptor.AddChild(root_0, string_literal68_tree);
 ";
             const string expected =
                     @"
-if (declaration_stack.size()>0&&((declaration_scope)declaration_stack.Peek()).isTypedef) {
-	((Symbols_scope)Symbols_stack.Peek()).types.add(((IDENTIFIER82 != null) ? IDENTIFIER82.Text : null));
-	
-}
+
+
+
+
+
 ";
             Assert.That(
-                    ParserModifier.ModifyFromJavaToCSharp(code),
+                    ParserModifier.RemoveUnusedCode(code),
                     Is.EqualTo(expected));
         }
 
         [Test]
-        public void 非終端ノード用のメソッドを置き換える() {
+        public void ModifyInheritClass() {
             const string code =
-                    @"if ( state.backtracking == 0 ) adaptor.AddChild(root_0, leftHandSideExpression159.Tree);";
+                    @"public partial class LuaParser : Antlr.Runtime.Parser";
             const string expected =
-                    @"if ( state.backtracking == 0 ) adaptor.AddChild(root_0, leftHandSideExpression159.Tree, leftHandSideExpression159, retval);";
+                    @"public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser";
             Assert.That(
-                    ParserModifier.ModifyAddChild(code),
+                    ParserModifier.ModifyInheritClass(code),
                     Is.EqualTo(expected));
         }
 
         [Test]
-        public void 終端ノード用のメソッドを置き換える() {
+        public void ModifyCommonTreeAdaptor() {
             const string code =
                     @"
-						string_literal29=(IToken)Match(input,34,FOLLOW_34_in_type_specifier357); if (state.failed) return retval;
-				IDENTIFIER38=(IToken)Match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type_id415); if (state.failed) return retval;
-{string_literal17_tree = (object)adaptor.Create(string_literal17);";
+ITreeAdaptor treeAdaptor = default(ITreeAdaptor);
+TreeAdaptor = treeAdaptor ?? new CommonTreeAdaptor();
+";
             const string expected =
                     @"
-						string_literal29=(IToken)Match(input,34,FOLLOW_34_in_type_specifier357); if (state.failed) return retval;
-				IDENTIFIER38=(IToken)Match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type_id415); if (state.failed) return retval;
-{string_literal17_tree = (object)adaptor.Create(string_literal17, retval);";
-            Assert.That(
-                    ParserModifier.ModifyCreate(code),
-                    Is.EqualTo(expected));
-        }
-
-        [Test]
-        public void ParserRuleReturnScopeを置き換える() {
-            const string code =
-                    @"    public class compilationUnit_return : ParserRuleReturnScope<IToken>";
-            const string expected =
-                    @"    public class compilationUnit_return : Antlr3AstNode";
-            Assert.That(
-                    ParserModifier.ModifyParserRuleReturnScope(code), Is.EqualTo(expected));
-        }
-
-        [Test]
-        public void CommonTreeAdapterを置き換える() {
-            const string code =
-                    @"
-	protected ITreeAdaptor adaptor = new CommonTreeAdaptor();
-
-	public ITreeAdaptor TreeAdaptor
-	{
-		get { return this.adaptor; }
-		set {
-		this.adaptor = value;
-		}
-	}";
-            const string expected =
-                    @"
-	protected Antlr3AstBuilder adaptor = new Antlr3AstBuilder();
-
-	public Antlr3AstBuilder TreeAdaptor
-	{
-		get { return this.adaptor; }
-		set {
-		this.adaptor = value;
-		}
-	}";
+CstBuilderForAntlr3 treeAdaptor = default(CstBuilderForAntlr3);
+TreeAdaptor = treeAdaptor;
+";
             Assert.That(
                     ParserModifier.ModifyCommonTreeAdaptor(code),
                     Is.EqualTo(expected));
         }
 
         [Test]
-        public void Parseメソッドのアクセス修飾子を変更する() {
+        public void ModifyAstParserRuleReturnScope() {
             const string code =
                     @"
-	private JavaScriptParser.program_return program()
-	{
-	}";
+public AstParserRuleReturnScope<object, IToken> chunk() {
+AstParserRuleReturnScope<object, IToken> retval = new AstParserRuleReturnScope<object, IToken>();";
             const string expected =
                     @"
-	public JavaScriptParser.program_return program()
-	{
-	}";
+public CstNode chunk() {
+";
             Assert.That(
-                    ParserModifier.ModifyAccessModifier(code),
+                    ParserModifier.ModifyAstParserRuleReturnScope(code), Is.EqualTo(expected));
+        }
+
+        [Test]
+        public void ModifyTraceIn() {
+            const string code =
+                    @"TraceIn(""typeParameters"", 11);";
+            const string expected =
+                    @"var retval = new CstNode(""typeParameters"");";
+            Assert.That(
+                    ParserModifier.ModifyTraceIn(code), Is.EqualTo(expected));
+        }
+
+        [Test]
+        public void ModifyAddChild() {
+            const string code =
+                    @"if ( state.backtracking == 0 ) adaptor.AddChild(root_0, leftHandSideExpression159.Tree);";
+            const string expected =
+                    @"if ( state.backtracking == 0 ) adaptor.AddChild(retval, leftHandSideExpression159, ""leftHandSideExpression159"");";
+            Assert.That(
+                    ParserModifier.ModifyAddChild(code),
                     Is.EqualTo(expected));
         }
 
         [Test]
-        public void Parseメソッドのアクセス修飾子を変更する2() {
+        public void ModifyCreate() {
             const string code =
-                    @"private AstParserRuleReturnScope";
+                    @"
+char_literal4_tree = (object)adaptor.Create(char_literal4);
+if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set157));
+";
             const string expected =
-                    @"public AstParserRuleReturnScope";
+                    @"
+adaptor.Create(retval, char_literal4, ""char_literal4"");
+if (state.backtracking == 0) adaptor.Create(retval, set157, ""set157"");
+";
             Assert.That(
-                    ParserModifier.ModifyAccessModifier(code),
+                    ParserModifier.ModifyCreate(code),
                     Is.EqualTo(expected));
         }
 
         [Test]
-        public void XAstParserRuleReturnScopeの生成() {
+        public void ModifyRetval() {
             const string code =
-                    @"TraceIn(" + "\"prog\""
-                    +
-                    @", 2);
-					Symbols_stack.Push(new Symbols_scope(this));Symbols_scopeInit(Symbols_stack.Peek());
-					AstParserRuleReturnScope<object, IToken> retval = new AstParserRuleReturnScope<object, IToken>();";
+                    @"
+retval.Start = (IToken)input.LT(1);
+retval.Stop = (IToken)input.LT(-1);
+retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+";
             const string expected =
-                    "var retval = new Antlr3AstNode(\"prog\");" + @"
-					Symbols_stack.Push(new Symbols_scope(this));Symbols_scopeInit(Symbols_stack.Peek());
-					";
+                    @"
+var retval_Start = (IToken)input.LT(1);
+input.LT(-1);
+adaptor.ErrorNode(input, retval_Start, input.LT(-1), re);
+";
             Assert.That(
-                    ParserModifier.ModifyTraceIn(code),
+                    ParserModifier.ModifyRetval(code),
                     Is.EqualTo(expected));
         }
     }

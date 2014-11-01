@@ -58,7 +58,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Generators\ANTLRv3\Antlr3CstNode.cs" />
     <Compile Include="Generators\ANTLRv3\CstBuilderForAntlr3.cs" />
     <Compile Include="Generators\ANTLRv3\CstGeneratorUsingAntlr3.cs" />
     <Compile Include="Generators\ANTLRv3\ExtensionForParser.cs" />

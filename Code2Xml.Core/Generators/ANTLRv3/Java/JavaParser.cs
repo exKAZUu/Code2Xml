@@ -11,7 +11,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Java\\Java.g 2014-11-01 21:01:22
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Java\\Java.g 2014-11-01 21:18:00
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -8275,7 +8275,7 @@ adaptor.Create(retval, IDENTIFIER180, "IDENTIFIER180");
 			if (input.LA(1)==BOOLEAN||input.LA(1)==BYTE||input.LA(1)==CHAR||input.LA(1)==DOUBLE||input.LA(1)==FLOAT||input.LA(1)==INT||input.LA(1)==LONG||input.LA(1)==SHORT)
 			{
 				input.Consume();
-adaptor.Create(retval, set182, "set182");
+				if (state.backtracking == 0) adaptor.Create(retval, set182, "set182");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -8556,7 +8556,7 @@ adaptor.Create(retval, char_literal189, "char_literal189");
 					if (input.LA(1)==EXTENDS||input.LA(1)==SUPER)
 					{
 						input.Consume();
-adaptor.Create(retval, set190, "set190");
+						if (state.backtracking == 0) adaptor.Create(retval, set190, "set190");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -9621,7 +9621,7 @@ adaptor.Create(retval, IDENTIFIER213, "IDENTIFIER213");
 				if (input.LA(1)==SUPER||input.LA(1)==THIS)
 				{
 					input.Consume();
-adaptor.Create(retval, set215, "set215");
+					if (state.backtracking == 0) adaptor.Create(retval, set215, "set215");
 					state.errorRecovery=false;state.failed=false;
 				}
 				else
@@ -17003,7 +17003,7 @@ adaptor.Create(retval, char_literal454, "char_literal454");
 					if (input.LA(1)==BANGEQ||input.LA(1)==EQEQ)
 					{
 						input.Consume();
-adaptor.Create(retval, set457, "set457");
+						if (state.backtracking == 0) adaptor.Create(retval, set457, "set457");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -17919,7 +17919,7 @@ adaptor.Create(retval, char_literal480, "char_literal480");
 					if (input.LA(1)==PLUS||input.LA(1)==SUB)
 					{
 						input.Consume();
-adaptor.Create(retval, set482, "set482");
+						if (state.backtracking == 0) adaptor.Create(retval, set482, "set482");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -18049,7 +18049,7 @@ adaptor.Create(retval, set482, "set482");
 					if (input.LA(1)==PERCENT||input.LA(1)==SLASH||input.LA(1)==STAR)
 					{
 						input.Consume();
-adaptor.Create(retval, set485, "set485");
+						if (state.backtracking == 0) adaptor.Create(retval, set485, "set485");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -18581,7 +18581,7 @@ adaptor.Create(retval, char_literal498, "char_literal498");
 					if (input.LA(1)==PLUSPLUS||input.LA(1)==SUBSUB)
 					{
 						input.Consume();
-adaptor.Create(retval, set503, "set503");
+						if (state.backtracking == 0) adaptor.Create(retval, set503, "set503");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -22041,7 +22041,7 @@ adaptor.Create(retval, char_literal628, "char_literal628");
 			if (input.LA(1)==BooleanLiteral||input.LA(1)==CharacterLiteral||input.LA(1)==FloatingPointLiteral||input.LA(1)==IntegerLiteral||input.LA(1)==NullLiteral||input.LA(1)==StringLiteral)
 			{
 				input.Consume();
-adaptor.Create(retval, set629, "set629");
+				if (state.backtracking == 0) adaptor.Create(retval, set629, "set629");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -22214,7 +22214,7 @@ adaptor.Create(retval, IDENTIFIER632, "IDENTIFIER632");
 			if (input.LA(1)==ENUM||input.LA(1)==IDENTIFIER)
 			{
 				input.Consume();
-adaptor.Create(retval, set634, "set634");
+				if (state.backtracking == 0) adaptor.Create(retval, set634, "set634");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -22939,7 +22939,7 @@ adaptor.Create(retval, char_literal659, "char_literal659");
 			if (input.LA(1)==COMMA||input.LA(1)==EQ||input.LA(1)==SEMI)
 			{
 				input.Consume();
-adaptor.Create(retval, set660, "set660");
+				if (state.backtracking == 0) adaptor.Create(retval, set660, "set660");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -23093,7 +23093,7 @@ adaptor.Create(retval, char_literal665, "char_literal665");
 			if (input.LA(1)==COMMA||input.LA(1)==EQ||input.LA(1)==SEMI)
 			{
 				input.Consume();
-adaptor.Create(retval, set666, "set666");
+				if (state.backtracking == 0) adaptor.Create(retval, set666, "set666");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else

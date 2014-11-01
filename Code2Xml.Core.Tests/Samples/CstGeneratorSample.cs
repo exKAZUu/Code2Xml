@@ -32,7 +32,7 @@ namespace Code2Xml.Core.Tests.Samples {
     public class CstGeneratorSample {
         [Test]
         public void ParseJavaText() {
-            const string originalCode = @"class Klass { int i; }";
+            const string originalCode = @"class Klass {}";
             var gen = CstGenerators.JavaUsingAntlr3;
 
             /*** Code <=> CST ***/

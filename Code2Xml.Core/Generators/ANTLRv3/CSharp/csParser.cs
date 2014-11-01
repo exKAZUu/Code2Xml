@@ -11,7 +11,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g 2014-11-01 20:10:42
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g 2014-11-01 21:17:51
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -518,7 +518,7 @@ public partial class csParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 			string_literal5=(IToken)Match(input,154,Follow._154_in_namespace_declaration115); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal5, "string_literal5");
-
+			
 			}
 			DebugLocation(42, 16);
 			PushFollow(Follow._qualified_identifier_in_namespace_declaration119);
@@ -554,7 +554,7 @@ adaptor.Create(retval, string_literal5, "string_literal5");
 				char_literal8=(IToken)Match(input,SEMI,Follow._SEMI_in_namespace_declaration127); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal8, "char_literal8");
-
+				
 				}
 
 				}
@@ -660,7 +660,7 @@ adaptor.Create(retval, char_literal8, "char_literal8");
 					char_literal10=(IToken)Match(input,DOT,Follow._DOT_in_qualified_identifier141); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal10, "char_literal10");
-
+					
 					}
 					DebugLocation(45, 18);
 					PushFollow(Follow._identifier_in_qualified_identifier143);
@@ -990,7 +990,7 @@ adaptor.Create(retval, char_literal10, "char_literal10");
 					string_literal15=(IToken)Match(input,85,Follow._85_in_qid_start170); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal15, "string_literal15");
-
+					
 					}
 					DebugLocation(50, 19);
 					PushFollow(Follow._identifier_in_qid_start172);
@@ -1052,7 +1052,7 @@ adaptor.Create(retval, string_literal15, "string_literal15");
 				string_literal18=(IToken)Match(input,184,Follow._184_in_qid_start182); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal18, "string_literal18");
-
+				
 				}
 
 				}
@@ -1067,7 +1067,7 @@ adaptor.Create(retval, string_literal18, "string_literal18");
 				string_literal19=(IToken)Match(input,109,Follow._109_in_qid_start187); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal19, "string_literal19");
-
+				
 				}
 
 				}
@@ -1283,7 +1283,7 @@ adaptor.Create(retval, string_literal19, "string_literal19");
 			char_literal25=(IToken)Match(input,201,Follow._201_in_namespace_block226); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal25, "char_literal25");
-
+			
 			}
 			DebugLocation(60, 8);
 			PushFollow(Follow._namespace_body_in_namespace_block230);
@@ -1295,7 +1295,7 @@ adaptor.Create(retval, char_literal25, "char_literal25");
 			char_literal27=(IToken)Match(input,205,Follow._205_in_namespace_block234); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal27, "char_literal27");
-
+			
 			}
 
 			}
@@ -1637,13 +1637,13 @@ adaptor.Create(retval, char_literal27, "char_literal27");
 			string_literal32=(IToken)Match(input,131,Follow._131_in_extern_alias_directive270); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal32, "string_literal32");
-
+			
 			}
 			DebugLocation(66, 13);
 			string_literal33=(IToken)Match(input,103,Follow._103_in_extern_alias_directive274); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal33, "string_literal33");
-
+			
 			}
 			DebugLocation(66, 23);
 			PushFollow(Follow._identifier_in_extern_alias_directive278);
@@ -1655,7 +1655,7 @@ adaptor.Create(retval, string_literal33, "string_literal33");
 			char_literal35=(IToken)Match(input,SEMI,Follow._SEMI_in_extern_alias_directive281); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal35, "char_literal35");
-
+			
 			}
 
 			}
@@ -2010,7 +2010,7 @@ adaptor.Create(retval, char_literal35, "char_literal35");
 			string_literal39=(IToken)Match(input,USING,Follow._USING_in_using_alias_directive314); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal39, "string_literal39");
-
+			
 			}
 			DebugLocation(74, 12);
 			PushFollow(Follow._identifier_in_using_alias_directive318);
@@ -2022,7 +2022,7 @@ adaptor.Create(retval, string_literal39, "string_literal39");
 			char_literal41=(IToken)Match(input,90,Follow._90_in_using_alias_directive322); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal41, "char_literal41");
-
+			
 			}
 			DebugLocation(74, 31);
 			PushFollow(Follow._namespace_or_type_name_in_using_alias_directive326);
@@ -2034,7 +2034,7 @@ adaptor.Create(retval, char_literal41, "char_literal41");
 			char_literal43=(IToken)Match(input,SEMI,Follow._SEMI_in_using_alias_directive330); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal43, "char_literal43");
-
+			
 			}
 
 			}
@@ -2106,7 +2106,7 @@ adaptor.Create(retval, char_literal43, "char_literal43");
 			string_literal44=(IToken)Match(input,USING,Follow._USING_in_using_namespace_directive338); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal44, "string_literal44");
-
+			
 			}
 			DebugLocation(76, 12);
 			PushFollow(Follow._namespace_name_in_using_namespace_directive342);
@@ -2118,7 +2118,7 @@ adaptor.Create(retval, string_literal44, "string_literal44");
 			char_literal46=(IToken)Match(input,SEMI,Follow._SEMI_in_using_namespace_directive346); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal46, "char_literal46");
-
+			
 			}
 
 			}
@@ -2719,7 +2719,7 @@ adaptor.Create(retval, char_literal46, "char_literal46");
 			string_literal56=(IToken)Match(input,85,Follow._85_in_qualified_alias_member408); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal56, "string_literal56");
-
+			
 			}
 			DebugLocation(89, 22);
 			PushFollow(Follow._identifier_in_qualified_alias_member412);
@@ -3024,7 +3024,7 @@ adaptor.Create(retval, string_literal56, "string_literal56");
 				string_literal63=(IToken)Match(input,85,Follow._85_in_namespace_or_type_name454); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal63, "string_literal63");
-
+				
 				}
 				DebugLocation(97, 45);
 				PushFollow(Follow._identifier_in_namespace_or_type_name456);
@@ -3103,7 +3103,7 @@ adaptor.Create(retval, string_literal63, "string_literal63");
 					char_literal66=(IToken)Match(input,DOT,Follow._DOT_in_namespace_or_type_name466); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal66, "char_literal66");
-
+					
 					}
 					DebugLocation(97, 90);
 					PushFollow(Follow._identifier_in_namespace_or_type_name470);
@@ -3354,7 +3354,7 @@ adaptor.Create(retval, char_literal66, "char_literal66");
 			char_literal70=(IToken)Match(input,96,Follow._96_in_global_attribute517); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal70, "char_literal70");
-
+			
 			}
 			DebugLocation(105, 8);
 			PushFollow(Follow._global_attribute_target_specifier_in_global_attribute521);
@@ -3390,7 +3390,7 @@ adaptor.Create(retval, char_literal70, "char_literal70");
 				char_literal73=(IToken)Match(input,79,Follow._79_in_global_attribute529); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal73, "char_literal73");
-
+				
 				}
 
 				}
@@ -3403,7 +3403,7 @@ adaptor.Create(retval, char_literal73, "char_literal73");
 			char_literal74=(IToken)Match(input,97,Follow._97_in_global_attribute534); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal74, "char_literal74");
-
+			
 			}
 
 			}
@@ -3479,7 +3479,7 @@ adaptor.Create(retval, char_literal74, "char_literal74");
 			char_literal76=(IToken)Match(input,84,Follow._84_in_global_attribute_target_specifier547); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal76, "char_literal76");
-
+			
 			}
 
 			}
@@ -3550,7 +3550,7 @@ adaptor.Create(retval, char_literal76, "char_literal76");
 			if (input.LA(1)==106||input.LA(1)==153)
 			{
 				input.Consume();
-adaptor.Create(retval, set77, "set77");
+				if (state.backtracking == 0) adaptor.Create(retval, set77, "set77");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -3813,7 +3813,7 @@ adaptor.Create(retval, set77, "set77");
 			char_literal80=(IToken)Match(input,96,Follow._96_in_attribute_section588); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal80, "char_literal80");
-
+			
 			}
 			DebugLocation(115, 8);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:115:8: ( attribute_target_specifier )?
@@ -3883,7 +3883,7 @@ adaptor.Create(retval, char_literal80, "char_literal80");
 				char_literal83=(IToken)Match(input,79,Follow._79_in_attribute_section601); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal83, "char_literal83");
-
+				
 				}
 
 				}
@@ -3896,7 +3896,7 @@ adaptor.Create(retval, char_literal83, "char_literal83");
 			char_literal84=(IToken)Match(input,97,Follow._97_in_attribute_section606); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal84, "char_literal84");
-
+			
 			}
 
 			}
@@ -3972,7 +3972,7 @@ adaptor.Create(retval, char_literal84, "char_literal84");
 			char_literal86=(IToken)Match(input,84,Follow._84_in_attribute_target_specifier619); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal86, "char_literal86");
-
+			
 			}
 
 			}
@@ -4043,7 +4043,7 @@ adaptor.Create(retval, char_literal86, "char_literal86");
 			if (input.LA(1)==129||input.LA(1)==132||input.LA(1)==152||input.LA(1)==162||input.LA(1)==167||input.LA(1)==173||input.LA(1)==187)
 			{
 				input.Consume();
-adaptor.Create(retval, set87, "set87");
+				if (state.backtracking == 0) adaptor.Create(retval, set87, "set87");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -4158,7 +4158,7 @@ adaptor.Create(retval, set87, "set87");
 					char_literal89=(IToken)Match(input,79,Follow._79_in_attribute_list664); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal89, "char_literal89");
-
+					
 					}
 					DebugLocation(121, 17);
 					PushFollow(Follow._attribute_in_attribute_list666);
@@ -4351,7 +4351,7 @@ adaptor.Create(retval, char_literal89, "char_literal89");
 			char_literal93=(IToken)Match(input,73,Follow._73_in_attribute_arguments697); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal93, "char_literal93");
-
+			
 			}
 			DebugLocation(127, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:127:9: ( ( identifier '=' )=> named_argument_list | positional_argument_list )?
@@ -4544,7 +4544,7 @@ adaptor.Create(retval, char_literal93, "char_literal93");
 			char_literal96=(IToken)Match(input,RPAREN,Follow._RPAREN_in_attribute_arguments764); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal96, "char_literal96");
-
+			
 			}
 
 			}
@@ -4640,7 +4640,7 @@ adaptor.Create(retval, char_literal96, "char_literal96");
 				char_literal98=(IToken)Match(input,79,Follow._79_in_positional_argument_list778); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal98, "char_literal98");
-
+				
 				}
 				DebugLocation(133, 30);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:133:30: ( ( identifier '=' )=> named_argument_list | positional_argument_list )
@@ -4893,7 +4893,7 @@ adaptor.Create(retval, char_literal98, "char_literal98");
 				char_literal102=(IToken)Match(input,79,Follow._79_in_named_argument_list810); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal102, "char_literal102");
-
+				
 				}
 				DebugLocation(135, 25);
 				PushFollow(Follow._named_argument_list_in_named_argument_list812);
@@ -5042,7 +5042,7 @@ adaptor.Create(retval, char_literal102, "char_literal102");
 				char_literal105=(IToken)Match(input,84,Follow._84_in_positional_argument836); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal105, "char_literal105");
-
+				
 				}
 
 				}
@@ -5132,7 +5132,7 @@ adaptor.Create(retval, char_literal105, "char_literal105");
 			char_literal108=(IToken)Match(input,90,Follow._90_in_named_argument854); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal108, "char_literal108");
-
+			
 			}
 			DebugLocation(139, 20);
 			PushFollow(Follow._attribute_argument_expression_in_named_argument856);
@@ -5607,7 +5607,7 @@ adaptor.Create(retval, char_literal108, "char_literal108");
 							char_literal116=(IToken)Match(input,74,Follow._74_in_non_nullable_type909); if (state.failed) return retval;
 							if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal116, "char_literal116");
-
+							
 							}
 
 							}
@@ -5675,7 +5675,7 @@ adaptor.Create(retval, char_literal116, "char_literal116");
 								char_literal117=(IToken)Match(input,74,Follow._74_in_non_nullable_type918); if (state.failed) return retval;
 								if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal117, "char_literal117");
-
+								
 								}
 
 								}
@@ -5724,7 +5724,7 @@ adaptor.Create(retval, char_literal117, "char_literal117");
 				string_literal118=(IToken)Match(input,196,Follow._196_in_non_nullable_type930); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal118, "string_literal118");
-
+				
 				}
 				DebugLocation(154, 13);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:154:13: ( '*' )+
@@ -5753,7 +5753,7 @@ adaptor.Create(retval, string_literal118, "string_literal118");
 						char_literal119=(IToken)Match(input,74,Follow._74_in_non_nullable_type934); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal119, "char_literal119");
-
+						
 						}
 
 						}
@@ -5984,7 +5984,7 @@ adaptor.Create(retval, char_literal119, "char_literal119");
 							char_literal122=(IToken)Match(input,74,Follow._74_in_non_array_type954); if (state.failed) return retval;
 							if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal122, "char_literal122");
-
+							
 							}
 
 							}
@@ -6017,7 +6017,7 @@ adaptor.Create(retval, char_literal122, "char_literal122");
 					char_literal123=(IToken)Match(input,94,Follow._94_in_non_array_type959); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal123, "char_literal123");
-
+					
 					}
 
 					}
@@ -6039,7 +6039,7 @@ adaptor.Create(retval, char_literal123, "char_literal123");
 				string_literal124=(IToken)Match(input,196,Follow._196_in_non_array_type966); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal124, "string_literal124");
-
+				
 				}
 				DebugLocation(157, 11);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:157:11: ( '*' )+
@@ -6068,7 +6068,7 @@ adaptor.Create(retval, string_literal124, "string_literal124");
 						char_literal125=(IToken)Match(input,74,Follow._74_in_non_array_type968); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal125, "char_literal125");
-
+						
 						}
 
 						}
@@ -6189,7 +6189,7 @@ adaptor.Create(retval, char_literal125, "char_literal125");
 					char_literal127=(IToken)Match(input,79,Follow._79_in_type_list981); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal127, "char_literal127");
-
+					
 					}
 					DebugLocation(160, 12);
 					PushFollow(Follow._type_in_type_list983);
@@ -6416,7 +6416,7 @@ adaptor.Create(retval, char_literal127, "char_literal127");
 			if (input.LA(1)==113||input.LA(1)==116||input.LA(1)==143||input.LA(1)==151||input.LA(1)==174||input.LA(1)==177||(input.LA(1)>=189 && input.LA(1)<=190)||input.LA(1)==193)
 			{
 				input.Consume();
-adaptor.Create(retval, set131, "set131");
+				if (state.backtracking == 0) adaptor.Create(retval, set131, "set131");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -6762,7 +6762,7 @@ adaptor.Create(retval, set131, "set131");
 			char_literal135=(IToken)Match(input,96,Follow._96_in_rank_specifier1081); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal135, "char_literal135");
-
+			
 			}
 			DebugLocation(174, 8);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:174:8: ( dim_separators )?
@@ -6799,7 +6799,7 @@ adaptor.Create(retval, char_literal135, "char_literal135");
 			char_literal137=(IToken)Match(input,97,Follow._97_in_rank_specifier1090); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal137, "char_literal137");
-
+			
 			}
 
 			}
@@ -6891,7 +6891,7 @@ adaptor.Create(retval, char_literal137, "char_literal137");
 					char_literal138=(IToken)Match(input,79,Follow._79_in_dim_separators1100); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal138, "char_literal138");
-
+					
 					}
 
 					}
@@ -6983,7 +6983,7 @@ adaptor.Create(retval, char_literal138, "char_literal138");
 			char_literal139=(IToken)Match(input,86,Follow._86_in_generic_argument_list1110); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal139, "char_literal139");
-
+			
 			}
 			DebugLocation(178, 8);
 			PushFollow(Follow._type_arguments_in_generic_argument_list1114);
@@ -6995,7 +6995,7 @@ adaptor.Create(retval, char_literal139, "char_literal139");
 			char_literal141=(IToken)Match(input,GT,Follow._GT_in_generic_argument_list1118); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal141, "char_literal141");
-
+			
 			}
 
 			}
@@ -7094,7 +7094,7 @@ adaptor.Create(retval, char_literal141, "char_literal141");
 					char_literal143=(IToken)Match(input,79,Follow._79_in_type_arguments1130); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal143, "char_literal143");
-
+					
 					}
 					DebugLocation(180, 21);
 					PushFollow(Follow._type_argument_in_type_arguments1132);
@@ -8144,7 +8144,7 @@ adaptor.Create(retval, char_literal143, "char_literal143");
 				char_literal150=(IToken)Match(input,76,Follow._76_in_unary_expression1189); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal150, "char_literal150");
-
+				
 				}
 				DebugLocation(194, 10);
 				PushFollow(Follow._unary_expression_in_unary_expression1193);
@@ -8165,7 +8165,7 @@ adaptor.Create(retval, char_literal150, "char_literal150");
 				char_literal152=(IToken)Match(input,MINUS,Follow._MINUS_in_unary_expression1199); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal152, "char_literal152");
-
+				
 				}
 				DebugLocation(195, 10);
 				PushFollow(Follow._unary_expression_in_unary_expression1203);
@@ -8186,7 +8186,7 @@ adaptor.Create(retval, char_literal152, "char_literal152");
 				char_literal154=(IToken)Match(input,66,Follow._66_in_unary_expression1209); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal154, "char_literal154");
-
+				
 				}
 				DebugLocation(196, 10);
 				PushFollow(Follow._unary_expression_in_unary_expression1213);
@@ -8207,7 +8207,7 @@ adaptor.Create(retval, char_literal154, "char_literal154");
 				char_literal156=(IToken)Match(input,206,Follow._206_in_unary_expression1219); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal156, "char_literal156");
-
+				
 				}
 				DebugLocation(197, 10);
 				PushFollow(Follow._unary_expression_in_unary_expression1223);
@@ -8228,7 +8228,7 @@ adaptor.Create(retval, char_literal156, "char_literal156");
 				char_literal158=(IToken)Match(input,74,Follow._74_in_unary_expression1229); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal158, "char_literal158");
-
+				
 				}
 				DebugLocation(198, 10);
 				PushFollow(Follow._unary_expression_in_unary_expression1233);
@@ -8318,7 +8318,7 @@ adaptor.Create(retval, char_literal158, "char_literal158");
 					string_literal164=(IToken)Match(input,77,Follow._77_in_unary_expression1260); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal164, "string_literal164");
-
+					
 					}
 
 					}
@@ -8349,7 +8349,7 @@ adaptor.Create(retval, string_literal164, "string_literal164");
 					string_literal165=(IToken)Match(input,80,Follow._80_in_unary_expression1265); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal165, "string_literal165");
-
+					
 					}
 
 					}
@@ -8458,7 +8458,7 @@ adaptor.Create(retval, string_literal165, "string_literal165");
 			string_literal168=(IToken)Match(input,108,Follow._108_in_await_expression1285); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal168, "string_literal168");
-
+			
 			}
 			DebugLocation(207, 10);
 			PushFollow(Follow._unary_expression_in_await_expression1287);
@@ -8534,7 +8534,7 @@ adaptor.Create(retval, string_literal168, "string_literal168");
 			string_literal170=(IToken)Match(input,77,Follow._77_in_pre_increment_expression1296); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal170, "string_literal170");
-
+			
 			}
 			DebugLocation(209, 9);
 			PushFollow(Follow._unary_expression_in_pre_increment_expression1300);
@@ -8610,7 +8610,7 @@ adaptor.Create(retval, string_literal170, "string_literal170");
 			string_literal172=(IToken)Match(input,80,Follow._80_in_pre_decrement_expression1309); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal172, "string_literal172");
-
+			
 			}
 			DebugLocation(211, 9);
 			PushFollow(Follow._unary_expression_in_pre_decrement_expression1313);
@@ -8686,7 +8686,7 @@ adaptor.Create(retval, string_literal172, "string_literal172");
 			char_literal174=(IToken)Match(input,74,Follow._74_in_pointer_indirection_expression1321); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal174, "char_literal174");
-
+			
 			}
 			DebugLocation(213, 8);
 			PushFollow(Follow._unary_expression_in_pointer_indirection_expression1325);
@@ -8762,7 +8762,7 @@ adaptor.Create(retval, char_literal174, "char_literal174");
 			char_literal176=(IToken)Match(input,71,Follow._71_in_addressof_expression1333); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal176, "char_literal176");
-
+			
 			}
 			DebugLocation(215, 8);
 			PushFollow(Follow._unary_expression_in_addressof_expression1337);
@@ -9262,7 +9262,7 @@ adaptor.Create(retval, char_literal176, "char_literal176");
 					char_literal186=(IToken)Match(input,79,Follow._79_in_argument_list1395); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal186, "char_literal186");
-
+					
 					}
 					DebugLocation(227, 16);
 					PushFollow(Follow._argument_in_argument_list1397);
@@ -9635,7 +9635,7 @@ adaptor.Create(retval, char_literal186, "char_literal186");
 			char_literal192=(IToken)Match(input,84,Follow._84_in_argument_name1427); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal192, "char_literal192");
-
+			
 			}
 
 			}
@@ -9844,7 +9844,7 @@ adaptor.Create(retval, char_literal192, "char_literal192");
 				string_literal195=(IToken)Match(input,160,Follow._160_in_argument_value1447); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal195, "string_literal195");
-
+				
 				}
 				DebugLocation(237, 12);
 				PushFollow(Follow._variable_reference_in_argument_value1451);
@@ -9974,13 +9974,13 @@ adaptor.Create(retval, string_literal195, "string_literal195");
 				string_literal197=(IToken)Match(input,171,Follow._171_in_ref_variable_reference1459); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal197, "string_literal197");
-
+				
 				}
 				DebugLocation(239, 8);
 				char_literal198=(IToken)Match(input,73,Follow._73_in_ref_variable_reference1461); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal198, "char_literal198");
-
+				
 				}
 				DebugLocation(240, 3);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:240:3: ( ( namespace_or_type_name | predefined_type ) ( '*' )* ( rank_specifiers )? | 'void' ( '*' )+ ( rank_specifiers )? )
@@ -10092,7 +10092,7 @@ adaptor.Create(retval, char_literal198, "char_literal198");
 							char_literal201=(IToken)Match(input,74,Follow._74_in_ref_variable_reference1485); if (state.failed) return retval;
 							if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal201, "char_literal201");
-
+							
 							}
 
 							}
@@ -10150,7 +10150,7 @@ adaptor.Create(retval, char_literal201, "char_literal201");
 					string_literal203=(IToken)Match(input,196,Follow._196_in_ref_variable_reference1497); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal203, "string_literal203");
-
+					
 					}
 					DebugLocation(241, 14);
 					// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:241:14: ( '*' )+
@@ -10179,7 +10179,7 @@ adaptor.Create(retval, string_literal203, "string_literal203");
 							char_literal204=(IToken)Match(input,74,Follow._74_in_ref_variable_reference1501); if (state.failed) return retval;
 							if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal204, "char_literal204");
-
+							
 							}
 
 							}
@@ -10243,7 +10243,7 @@ adaptor.Create(retval, char_literal204, "char_literal204");
 				char_literal206=(IToken)Match(input,RPAREN,Follow._RPAREN_in_ref_variable_reference1515); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal206, "char_literal206");
-
+				
 				}
 				DebugLocation(242, 13);
 				PushFollow(Follow._ref_variable_reference_in_ref_variable_reference1519);
@@ -10264,7 +10264,7 @@ adaptor.Create(retval, char_literal206, "char_literal206");
 				string_literal208=(IToken)Match(input,171,Follow._171_in_ref_variable_reference1524); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal208, "string_literal208");
-
+				
 				}
 				DebugLocation(243, 10);
 				PushFollow(Follow._variable_reference_in_ref_variable_reference1526);
@@ -12172,7 +12172,7 @@ adaptor.Create(retval, string_literal208, "string_literal208");
 				string_literal244=(IToken)Match(input,184,Follow._184_in_primary_expression_start1814); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal244, "string_literal244");
-
+				
 				}
 				DebugLocation(283, 14);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:283:14: ( bracket_expression )?
@@ -12223,7 +12223,7 @@ adaptor.Create(retval, string_literal244, "string_literal244");
 				string_literal246=(IToken)Match(input,109,Follow._109_in_primary_expression_start1825); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal246, "string_literal246");
-
+				
 				}
 				DebugLocation(284, 14);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:284:14: ( bracket_expression )?
@@ -12280,7 +12280,7 @@ adaptor.Create(retval, string_literal246, "string_literal246");
 				string_literal249=(IToken)Match(input,85,Follow._85_in_primary_expression_start1840); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal249, "string_literal249");
-
+				
 				}
 				DebugLocation(285, 24);
 				PushFollow(Follow._identifier_in_primary_expression_start1844);
@@ -13146,7 +13146,7 @@ adaptor.Create(retval, string_literal249, "string_literal249");
 			char_literal271=(IToken)Match(input,73,Follow._73_in_paren_expression1983); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal271, "char_literal271");
-
+			
 			}
 			DebugLocation(307, 8);
 			PushFollow(Follow._expression_in_paren_expression1987);
@@ -13158,7 +13158,7 @@ adaptor.Create(retval, char_literal271, "char_literal271");
 			char_literal273=(IToken)Match(input,RPAREN,Follow._RPAREN_in_paren_expression1991); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal273, "char_literal273");
-
+			
 			}
 
 			}
@@ -13475,7 +13475,7 @@ adaptor.Create(retval, char_literal273, "char_literal273");
 			if (input.LA(1)==DOT||input.LA(1)==PTR)
 			{
 				input.Consume();
-adaptor.Create(retval, set278, "set278");
+				if (state.backtracking == 0) adaptor.Create(retval, set278, "set278");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -13556,7 +13556,7 @@ adaptor.Create(retval, set278, "set278");
 			char_literal279=(IToken)Match(input,73,Follow._73_in_arguments2038); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal279, "char_literal279");
-
+			
 			}
 			DebugLocation(314, 8);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:314:8: ( argument_list )?
@@ -13593,7 +13593,7 @@ adaptor.Create(retval, char_literal279, "char_literal279");
 			char_literal281=(IToken)Match(input,RPAREN,Follow._RPAREN_in_arguments2047); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal281, "char_literal281");
-
+			
 			}
 
 			}
@@ -13665,7 +13665,7 @@ adaptor.Create(retval, char_literal281, "char_literal281");
 			char_literal282=(IToken)Match(input,96,Follow._96_in_bracket_expression2055); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal282, "char_literal282");
-
+			
 			}
 			DebugLocation(316, 8);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:316:8: ( expression_list )?
@@ -13702,7 +13702,7 @@ adaptor.Create(retval, char_literal282, "char_literal282");
 			char_literal284=(IToken)Match(input,97,Follow._97_in_bracket_expression2064); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal284, "char_literal284");
-
+			
 			}
 
 			}
@@ -13797,7 +13797,7 @@ adaptor.Create(retval, char_literal284, "char_literal284");
 				char_literal286=(IToken)Match(input,DOT,Follow._DOT_in_member_access2078); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal286, "char_literal286");
-
+				
 				}
 				DebugLocation(319, 22);
 				PushFollow(Follow._primary_or_array_creation_expression_in_member_access2082);
@@ -13992,7 +13992,7 @@ adaptor.Create(retval, char_literal286, "char_literal286");
 				char_literal290=(IToken)Match(input,73,Follow._73_in_access2104); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal290, "char_literal290");
-
+				
 				}
 				DebugLocation(325, 6);
 				PushFollow(Follow._expression_in_access2106);
@@ -14004,7 +14004,7 @@ adaptor.Create(retval, char_literal290, "char_literal290");
 				char_literal292=(IToken)Match(input,RPAREN,Follow._RPAREN_in_access2108); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal292, "char_literal292");
-
+				
 				}
 				DebugLocation(325, 21);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:325:21: ( access | access_part )
@@ -14604,7 +14604,7 @@ adaptor.Create(retval, char_literal292, "char_literal292");
 					char_literal304=(IToken)Match(input,79,Follow._79_in_expression_list2198); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal304, "char_literal304");
-
+					
 					}
 					DebugLocation(334, 19);
 					PushFollow(Follow._expression_in_expression_list2200);
@@ -14701,7 +14701,7 @@ adaptor.Create(retval, char_literal304, "char_literal304");
 			string_literal306=(IToken)Match(input,155,Follow._155_in_object_creation_expression2213); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal306, "string_literal306");
-
+			
 			}
 			DebugLocation(337, 10);
 			PushFollow(Follow._type_in_object_creation_expression2217);
@@ -14742,7 +14742,7 @@ adaptor.Create(retval, string_literal306, "string_literal306");
 				char_literal308=(IToken)Match(input,73,Follow._73_in_object_creation_expression2226); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal308, "char_literal308");
-
+				
 				}
 				DebugLocation(338, 11);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:338:11: ( argument_list )?
@@ -14779,7 +14779,7 @@ adaptor.Create(retval, char_literal308, "char_literal308");
 				char_literal310=(IToken)Match(input,RPAREN,Follow._RPAREN_in_object_creation_expression2235); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal310, "char_literal310");
-
+				
 				}
 				DebugLocation(338, 34);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:338:34: ( object_or_collection_initializer )?
@@ -15245,7 +15245,7 @@ adaptor.Create(retval, char_literal310, "char_literal310");
 				char_literal315=(IToken)Match(input,201,Follow._201_in_object_initializer2283); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal315, "char_literal315");
-
+				
 				}
 				DebugLocation(351, 8);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:351:8: ( member_initializer_list )?
@@ -15282,7 +15282,7 @@ adaptor.Create(retval, char_literal315, "char_literal315");
 				char_literal317=(IToken)Match(input,205,Follow._205_in_object_initializer2292); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal317, "char_literal317");
-
+				
 				}
 
 				}
@@ -15297,7 +15297,7 @@ adaptor.Create(retval, char_literal317, "char_literal317");
 				char_literal318=(IToken)Match(input,201,Follow._201_in_object_initializer2298); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal318, "char_literal318");
-
+				
 				}
 				DebugLocation(352, 10);
 				PushFollow(Follow._member_initializer_list_in_object_initializer2302);
@@ -15309,13 +15309,13 @@ adaptor.Create(retval, char_literal318, "char_literal318");
 				char_literal320=(IToken)Match(input,79,Follow._79_in_object_initializer2306); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal320, "char_literal320");
-
+				
 				}
 				DebugLocation(352, 42);
 				char_literal321=(IToken)Match(input,205,Follow._205_in_object_initializer2310); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal321, "char_literal321");
-
+				
 				}
 
 				}
@@ -15423,7 +15423,7 @@ adaptor.Create(retval, char_literal321, "char_literal321");
 					char_literal323=(IToken)Match(input,79,Follow._79_in_member_initializer_list2323); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal323, "char_literal323");
-
+					
 					}
 					DebugLocation(354, 27);
 					PushFollow(Follow._member_initializer_in_member_initializer_list2325);
@@ -15520,7 +15520,7 @@ adaptor.Create(retval, char_literal323, "char_literal323");
 			char_literal326=(IToken)Match(input,90,Follow._90_in_member_initializer2342); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal326, "char_literal326");
-
+			
 			}
 			DebugLocation(357, 21);
 			PushFollow(Follow._initializer_value_in_member_initializer2346);
@@ -15709,7 +15709,7 @@ adaptor.Create(retval, char_literal326, "char_literal326");
 			char_literal330=(IToken)Match(input,201,Follow._201_in_collection_initializer2370); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal330, "char_literal330");
-
+			
 			}
 			DebugLocation(362, 8);
 			PushFollow(Follow._element_initializer_list_in_collection_initializer2374);
@@ -15739,7 +15739,7 @@ adaptor.Create(retval, char_literal330, "char_literal330");
 				char_literal332=(IToken)Match(input,79,Follow._79_in_collection_initializer2378); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal332, "char_literal332");
-
+				
 				}
 
 				}
@@ -15752,7 +15752,7 @@ adaptor.Create(retval, char_literal332, "char_literal332");
 			char_literal333=(IToken)Match(input,205,Follow._205_in_collection_initializer2383); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal333, "char_literal333");
-
+			
 			}
 
 			}
@@ -15858,7 +15858,7 @@ adaptor.Create(retval, char_literal333, "char_literal333");
 					char_literal335=(IToken)Match(input,79,Follow._79_in_element_initializer_list2396); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal335, "char_literal335");
-
+					
 					}
 					DebugLocation(364, 28);
 					PushFollow(Follow._element_initializer_in_element_initializer_list2398);
@@ -15989,7 +15989,7 @@ adaptor.Create(retval, char_literal335, "char_literal335");
 				char_literal338=(IToken)Match(input,201,Follow._201_in_element_initializer2417); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal338, "char_literal338");
-
+				
 				}
 				DebugLocation(368, 10);
 				PushFollow(Follow._expression_list_in_element_initializer2421);
@@ -16001,7 +16001,7 @@ adaptor.Create(retval, char_literal338, "char_literal338");
 				char_literal340=(IToken)Match(input,205,Follow._205_in_element_initializer2425); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal340, "char_literal340");
-
+				
 				}
 
 				}
@@ -16085,7 +16085,7 @@ adaptor.Create(retval, char_literal340, "char_literal340");
 			string_literal341=(IToken)Match(input,155,Follow._155_in_array_creation_expression2434); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal341, "string_literal341");
-
+			
 			}
 			DebugLocation(371, 3);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:371:3: ( non_array_type '[' expression_list ']' ( rank_specifiers )? ( array_initializer )? | array_type array_initializer | rank_specifier array_initializer )
@@ -16255,7 +16255,7 @@ adaptor.Create(retval, string_literal341, "string_literal341");
 				char_literal343=(IToken)Match(input,96,Follow._96_in_array_creation_expression2442); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal343, "char_literal343");
-
+				
 				}
 				DebugLocation(371, 24);
 				PushFollow(Follow._expression_list_in_array_creation_expression2444);
@@ -16267,7 +16267,7 @@ adaptor.Create(retval, char_literal343, "char_literal343");
 				char_literal345=(IToken)Match(input,97,Follow._97_in_array_creation_expression2446); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal345, "char_literal345");
-
+				
 				}
 				DebugLocation(371, 44);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:371:44: ( rank_specifiers )?
@@ -16503,7 +16503,7 @@ adaptor.Create(retval, char_literal345, "char_literal345");
 			string_literal353=(IToken)Match(input,155,Follow._155_in_delegate_creation_expression2487); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal353, "string_literal353");
-
+			
 			}
 			DebugLocation(377, 10);
 			PushFollow(Follow._type_name_in_delegate_creation_expression2491);
@@ -16515,7 +16515,7 @@ adaptor.Create(retval, string_literal353, "string_literal353");
 			char_literal355=(IToken)Match(input,73,Follow._73_in_delegate_creation_expression2495); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal355, "char_literal355");
-
+			
 			}
 			DebugLocation(377, 28);
 			PushFollow(Follow._expression_in_delegate_creation_expression2499);
@@ -16527,7 +16527,7 @@ adaptor.Create(retval, char_literal355, "char_literal355");
 			char_literal357=(IToken)Match(input,RPAREN,Follow._RPAREN_in_delegate_creation_expression2503); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal357, "char_literal357");
-
+			
 			}
 
 			}
@@ -16597,7 +16597,7 @@ adaptor.Create(retval, char_literal357, "char_literal357");
 			string_literal358=(IToken)Match(input,155,Follow._155_in_anonymous_object_creation_expression2512); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal358, "string_literal358");
-
+			
 			}
 			DebugLocation(379, 10);
 			PushFollow(Follow._anonymous_object_initializer_in_anonymous_object_creation_expression2516);
@@ -16717,7 +16717,7 @@ adaptor.Create(retval, string_literal358, "string_literal358");
 				char_literal360=(IToken)Match(input,201,Follow._201_in_anonymous_object_initializer2525); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal360, "char_literal360");
-
+				
 				}
 				DebugLocation(381, 8);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:381:8: ( member_declarator_list )?
@@ -16754,7 +16754,7 @@ adaptor.Create(retval, char_literal360, "char_literal360");
 				char_literal362=(IToken)Match(input,205,Follow._205_in_anonymous_object_initializer2534); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal362, "char_literal362");
-
+				
 				}
 
 				}
@@ -16769,7 +16769,7 @@ adaptor.Create(retval, char_literal362, "char_literal362");
 				char_literal363=(IToken)Match(input,201,Follow._201_in_anonymous_object_initializer2540); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal363, "char_literal363");
-
+				
 				}
 				DebugLocation(382, 10);
 				PushFollow(Follow._member_declarator_list_in_anonymous_object_initializer2544);
@@ -16781,13 +16781,13 @@ adaptor.Create(retval, char_literal363, "char_literal363");
 				char_literal365=(IToken)Match(input,79,Follow._79_in_anonymous_object_initializer2548); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal365, "char_literal365");
-
+				
 				}
 				DebugLocation(382, 41);
 				char_literal366=(IToken)Match(input,205,Follow._205_in_anonymous_object_initializer2552); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal366, "char_literal366");
-
+				
 				}
 
 				}
@@ -16895,7 +16895,7 @@ adaptor.Create(retval, char_literal366, "char_literal366");
 					char_literal368=(IToken)Match(input,79,Follow._79_in_member_declarator_list2564); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal368, "char_literal368");
-
+					
 					}
 					DebugLocation(384, 26);
 					PushFollow(Follow._member_declarator_in_member_declarator_list2566);
@@ -17040,7 +17040,7 @@ adaptor.Create(retval, char_literal368, "char_literal368");
 				char_literal372=(IToken)Match(input,DOT,Follow._DOT_in_member_declarator2594); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal372, "char_literal372");
-
+				
 				}
 				DebugLocation(388, 12);
 				PushFollow(Follow._primary_or_array_creation_expression_in_member_declarator2596);
@@ -17059,7 +17059,7 @@ adaptor.Create(retval, char_literal372, "char_literal372");
 				char_literal374=(IToken)Match(input,90,Follow._90_in_member_declarator2605); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal374, "char_literal374");
-
+				
 				}
 				DebugLocation(389, 12);
 				PushFollow(Follow._expression_in_member_declarator2607);
@@ -17146,13 +17146,13 @@ adaptor.Create(retval, char_literal374, "char_literal374");
 			string_literal376=(IToken)Match(input,178,Follow._178_in_sizeof_expression2617); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal376, "string_literal376");
-
+			
 			}
 			DebugLocation(391, 13);
 			char_literal377=(IToken)Match(input,73,Follow._73_in_sizeof_expression2621); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal377, "char_literal377");
-
+			
 			}
 			DebugLocation(391, 19);
 			PushFollow(Follow._unmanaged_type_in_sizeof_expression2625);
@@ -17164,7 +17164,7 @@ adaptor.Create(retval, char_literal377, "char_literal377");
 			char_literal379=(IToken)Match(input,RPAREN,Follow._RPAREN_in_sizeof_expression2629); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal379, "char_literal379");
-
+			
 			}
 
 			}
@@ -17268,13 +17268,13 @@ adaptor.Create(retval, char_literal379, "char_literal379");
 				string_literal380=(IToken)Match(input,188,Follow._188_in_typeof_expression2637); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal380, "string_literal380");
-
+				
 				}
 				DebugLocation(393, 13);
 				char_literal381=(IToken)Match(input,73,Follow._73_in_typeof_expression2641); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal381, "char_literal381");
-
+				
 				}
 				DebugLocation(393, 19);
 				PushFollow(Follow._type_in_typeof_expression2645);
@@ -17286,7 +17286,7 @@ adaptor.Create(retval, char_literal381, "char_literal381");
 				char_literal383=(IToken)Match(input,RPAREN,Follow._RPAREN_in_typeof_expression2649); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal383, "char_literal383");
-
+				
 				}
 
 				}
@@ -17301,13 +17301,13 @@ adaptor.Create(retval, char_literal383, "char_literal383");
 				string_literal384=(IToken)Match(input,188,Follow._188_in_typeof_expression2655); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal384, "string_literal384");
-
+				
 				}
 				DebugLocation(394, 13);
 				char_literal385=(IToken)Match(input,73,Follow._73_in_typeof_expression2657); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal385, "char_literal385");
-
+				
 				}
 				DebugLocation(394, 19);
 				PushFollow(Follow._unbound_type_name_in_typeof_expression2661);
@@ -17319,7 +17319,7 @@ adaptor.Create(retval, char_literal385, "char_literal385");
 				char_literal387=(IToken)Match(input,RPAREN,Follow._RPAREN_in_typeof_expression2665); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal387, "char_literal387");
-
+				
 				}
 
 				}
@@ -17334,25 +17334,25 @@ adaptor.Create(retval, char_literal387, "char_literal387");
 				string_literal388=(IToken)Match(input,188,Follow._188_in_typeof_expression2671); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal388, "string_literal388");
-
+				
 				}
 				DebugLocation(395, 13);
 				char_literal389=(IToken)Match(input,73,Follow._73_in_typeof_expression2673); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal389, "char_literal389");
-
+				
 				}
 				DebugLocation(395, 17);
 				string_literal390=(IToken)Match(input,196,Follow._196_in_typeof_expression2675); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal390, "string_literal390");
-
+				
 				}
 				DebugLocation(395, 24);
 				char_literal391=(IToken)Match(input,RPAREN,Follow._RPAREN_in_typeof_expression2677); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal391, "char_literal391");
-
+				
 				}
 
 				}
@@ -17561,7 +17561,7 @@ adaptor.Create(retval, char_literal391, "char_literal391");
 				string_literal395=(IToken)Match(input,85,Follow._85_in_unbound_type_name_start2705); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal395, "string_literal395");
-
+				
 				}
 				DebugLocation(403, 19);
 				PushFollow(Follow._identifier_in_unbound_type_name_start2707);
@@ -17676,7 +17676,7 @@ adaptor.Create(retval, string_literal395, "string_literal395");
 			char_literal398=(IToken)Match(input,DOT,Follow._DOT_in_unbound_type_name_part2719); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal398, "char_literal398");
-
+			
 			}
 			DebugLocation(405, 8);
 			PushFollow(Follow._identifier_in_unbound_type_name_part2723);
@@ -17785,7 +17785,7 @@ adaptor.Create(retval, char_literal398, "char_literal398");
 			char_literal401=(IToken)Match(input,86,Follow._86_in_generic_dimension_specifier2737); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal401, "char_literal401");
-
+			
 			}
 			DebugLocation(407, 8);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:407:8: ( commas )?
@@ -17822,7 +17822,7 @@ adaptor.Create(retval, char_literal401, "char_literal401");
 			char_literal403=(IToken)Match(input,GT,Follow._GT_in_generic_dimension_specifier2746); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal403, "char_literal403");
-
+			
 			}
 
 			}
@@ -17914,7 +17914,7 @@ adaptor.Create(retval, char_literal403, "char_literal403");
 					char_literal404=(IToken)Match(input,79,Follow._79_in_commas2755); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal404, "char_literal404");
-
+					
 					}
 
 					}
@@ -18008,13 +18008,13 @@ adaptor.Create(retval, char_literal404, "char_literal404");
 			string_literal405=(IToken)Match(input,117,Follow._117_in_checked_expression2766); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal405, "string_literal405");
-
+			
 			}
 			DebugLocation(411, 14);
 			char_literal406=(IToken)Match(input,73,Follow._73_in_checked_expression2770); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal406, "char_literal406");
-
+			
 			}
 			DebugLocation(411, 20);
 			PushFollow(Follow._expression_in_checked_expression2774);
@@ -18026,7 +18026,7 @@ adaptor.Create(retval, char_literal406, "char_literal406");
 			char_literal408=(IToken)Match(input,RPAREN,Follow._RPAREN_in_checked_expression2778); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal408, "char_literal408");
-
+			
 			}
 
 			}
@@ -18100,13 +18100,13 @@ adaptor.Create(retval, char_literal408, "char_literal408");
 			string_literal409=(IToken)Match(input,191,Follow._191_in_unchecked_expression2787); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal409, "string_literal409");
-
+			
 			}
 			DebugLocation(413, 16);
 			char_literal410=(IToken)Match(input,73,Follow._73_in_unchecked_expression2791); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal410, "char_literal410");
-
+			
 			}
 			DebugLocation(413, 22);
 			PushFollow(Follow._expression_in_unchecked_expression2795);
@@ -18118,7 +18118,7 @@ adaptor.Create(retval, char_literal410, "char_literal410");
 			char_literal412=(IToken)Match(input,RPAREN,Follow._RPAREN_in_unchecked_expression2799); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal412, "char_literal412");
-
+			
 			}
 
 			}
@@ -18192,13 +18192,13 @@ adaptor.Create(retval, char_literal412, "char_literal412");
 			string_literal413=(IToken)Match(input,122,Follow._122_in_default_value_expression2808); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal413, "string_literal413");
-
+			
 			}
 			DebugLocation(415, 14);
 			char_literal414=(IToken)Match(input,73,Follow._73_in_default_value_expression2812); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal414, "char_literal414");
-
+			
 			}
 			DebugLocation(415, 20);
 			PushFollow(Follow._type_in_default_value_expression2816);
@@ -18210,7 +18210,7 @@ adaptor.Create(retval, char_literal414, "char_literal414");
 			char_literal416=(IToken)Match(input,RPAREN,Follow._RPAREN_in_default_value_expression2820); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal416, "char_literal416");
-
+			
 			}
 
 			}
@@ -18437,7 +18437,7 @@ adaptor.Create(retval, char_literal416, "char_literal416");
 				string_literal419=(IToken)Match(input,107,Follow._107_in_anonymous_method_expression2842); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal419, "string_literal419");
-
+				
 				}
 
 				}
@@ -18450,7 +18450,7 @@ adaptor.Create(retval, string_literal419, "string_literal419");
 			string_literal420=(IToken)Match(input,123,Follow._123_in_anonymous_method_expression2845); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal420, "string_literal420");
-
+			
 			}
 			DebugLocation(421, 22);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:421:22: ( explicit_anonymous_function_signature )?
@@ -18559,7 +18559,7 @@ adaptor.Create(retval, string_literal420, "string_literal420");
 			char_literal423=(IToken)Match(input,73,Follow._73_in_explicit_anonymous_function_signature2857); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal423, "char_literal423");
-
+			
 			}
 			DebugLocation(423, 8);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:423:8: ( explicit_anonymous_function_parameter_list )?
@@ -18596,7 +18596,7 @@ adaptor.Create(retval, char_literal423, "char_literal423");
 			char_literal425=(IToken)Match(input,RPAREN,Follow._RPAREN_in_explicit_anonymous_function_signature2866); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal425, "char_literal425");
-
+			
 			}
 
 			}
@@ -18695,7 +18695,7 @@ adaptor.Create(retval, char_literal425, "char_literal425");
 					char_literal427=(IToken)Match(input,79,Follow._79_in_explicit_anonymous_function_parameter_list2879); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal427, "char_literal427");
-
+					
 					}
 					DebugLocation(425, 49);
 					PushFollow(Follow._explicit_anonymous_function_parameter_in_explicit_anonymous_function_parameter_list2883);
@@ -18893,7 +18893,7 @@ adaptor.Create(retval, char_literal427, "char_literal427");
 			if (input.LA(1)==160||input.LA(1)==171)
 			{
 				input.Consume();
-adaptor.Create(retval, set432, "set432");
+				if (state.backtracking == 0) adaptor.Create(retval, set432, "set432");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -18974,7 +18974,7 @@ adaptor.Create(retval, set432, "set432");
 			char_literal433=(IToken)Match(input,86,Follow._86_in_variant_generic_parameter_list2922); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal433, "char_literal433");
-
+			
 			}
 			DebugLocation(433, 8);
 			PushFollow(Follow._variant_type_parameters_in_variant_generic_parameter_list2926);
@@ -18986,7 +18986,7 @@ adaptor.Create(retval, char_literal433, "char_literal433");
 			char_literal435=(IToken)Match(input,GT,Follow._GT_in_variant_generic_parameter_list2930); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal435, "char_literal435");
-
+			
 			}
 
 			}
@@ -19085,7 +19085,7 @@ adaptor.Create(retval, char_literal435, "char_literal435");
 					char_literal437=(IToken)Match(input,79,Follow._79_in_variant_type_parameters2941); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal437, "char_literal437");
-
+					
 					}
 					DebugLocation(435, 34);
 					PushFollow(Follow._variant_type_variable_name_in_variant_type_parameters2943);
@@ -19308,7 +19308,7 @@ adaptor.Create(retval, char_literal437, "char_literal437");
 			if (input.LA(1)==142||input.LA(1)==160)
 			{
 				input.Consume();
-adaptor.Create(retval, set442, "set442");
+				if (state.backtracking == 0) adaptor.Create(retval, set442, "set442");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -19389,7 +19389,7 @@ adaptor.Create(retval, set442, "set442");
 			char_literal443=(IToken)Match(input,86,Follow._86_in_generic_parameter_list2987); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal443, "char_literal443");
-
+			
 			}
 			DebugLocation(443, 8);
 			PushFollow(Follow._type_parameters_in_generic_parameter_list2991);
@@ -19401,7 +19401,7 @@ adaptor.Create(retval, char_literal443, "char_literal443");
 			char_literal445=(IToken)Match(input,GT,Follow._GT_in_generic_parameter_list2995); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal445, "char_literal445");
-
+			
 			}
 
 			}
@@ -19500,7 +19500,7 @@ adaptor.Create(retval, char_literal445, "char_literal445");
 					char_literal447=(IToken)Match(input,79,Follow._79_in_type_parameters3006); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal447, "char_literal447");
-
+					
 					}
 					DebugLocation(445, 37);
 					PushFollow(Follow._attributed_type_variable_name_in_type_parameters3008);
@@ -19711,7 +19711,7 @@ adaptor.Create(retval, char_literal447, "char_literal447");
 			char_literal451=(IToken)Match(input,73,Follow._73_in_cast_expression3033); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal451, "char_literal451");
-
+			
 			}
 			DebugLocation(451, 3);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:451:3: ( ( namespace_or_type_name | predefined_type ) ( '*' )+ ( rank_specifiers )? | ( namespace_or_type_name | predefined_type ) '?' ( rank_specifiers )? | ( namespace_or_type_name | predefined_type ) ( rank_specifiers )? | 'void' ( '*' )* ( rank_specifiers )? )
@@ -19944,7 +19944,7 @@ adaptor.Create(retval, char_literal451, "char_literal451");
 						char_literal454=(IToken)Match(input,74,Follow._74_in_cast_expression3057); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal454, "char_literal454");
-
+						
 						}
 
 						}
@@ -20063,7 +20063,7 @@ adaptor.Create(retval, char_literal454, "char_literal454");
 				char_literal458=(IToken)Match(input,94,Follow._94_in_cast_expression3083); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal458, "char_literal458");
-
+				
 				}
 				DebugLocation(453, 60);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:453:60: ( rank_specifiers )?
@@ -20200,7 +20200,7 @@ adaptor.Create(retval, char_literal458, "char_literal458");
 				string_literal463=(IToken)Match(input,196,Follow._196_in_cast_expression3115); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal463, "string_literal463");
-
+				
 				}
 				DebugLocation(455, 14);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:455:14: ( '*' )*
@@ -20228,7 +20228,7 @@ adaptor.Create(retval, string_literal463, "string_literal463");
 						char_literal464=(IToken)Match(input,74,Follow._74_in_cast_expression3119); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal464, "char_literal464");
-
+						
 						}
 
 						}
@@ -20286,7 +20286,7 @@ adaptor.Create(retval, char_literal464, "char_literal464");
 			char_literal466=(IToken)Match(input,RPAREN,Follow._RPAREN_in_cast_expression3137); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal466, "char_literal466");
-
+			
 			}
 			DebugLocation(457, 11);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:457:11: ( bracket_expression )*
@@ -20435,7 +20435,7 @@ adaptor.Create(retval, char_literal466, "char_literal466");
 					if (input.LA(1)==68||input.LA(1)==74||input.LA(1)==82)
 					{
 						input.Consume();
-adaptor.Create(retval, set470, "set470");
+						if (state.backtracking == 0) adaptor.Create(retval, set470, "set470");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -20565,7 +20565,7 @@ adaptor.Create(retval, set470, "set470");
 					if (input.LA(1)==MINUS||input.LA(1)==76)
 					{
 						input.Consume();
-adaptor.Create(retval, set473, "set473");
+						if (state.backtracking == 0) adaptor.Create(retval, set473, "set473");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -20737,7 +20737,7 @@ adaptor.Create(retval, set473, "set473");
 						string_literal476=(IToken)Match(input,87,Follow._87_in_shift_expression3205); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal476, "string_literal476");
-
+						
 						}
 
 						}
@@ -20750,13 +20750,13 @@ adaptor.Create(retval, string_literal476, "string_literal476");
 						char_literal477=(IToken)Match(input,GT,Follow._GT_in_shift_expression3207); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal477, "char_literal477");
-
+						
 						}
 						DebugLocation(465, 33);
 						char_literal478=(IToken)Match(input,GT,Follow._GT_in_shift_expression3209); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal478, "char_literal478");
-
+						
 						}
 
 						}
@@ -21635,7 +21635,7 @@ adaptor.Create(retval, char_literal478, "char_literal478");
 						if (input.LA(1)==GT||input.LA(1)==86||input.LA(1)==89||input.LA(1)==93)
 						{
 							input.Consume();
-adaptor.Create(retval, set481, "set481");
+							if (state.backtracking == 0) adaptor.Create(retval, set481, "set481");
 							state.errorRecovery=false;state.failed=false;
 						}
 						else
@@ -21701,7 +21701,7 @@ adaptor.Create(retval, set481, "set481");
 						if (input.LA(1)==104||input.LA(1)==147)
 						{
 							input.Consume();
-adaptor.Create(retval, set483, "set483");
+							if (state.backtracking == 0) adaptor.Create(retval, set483, "set483");
 							state.errorRecovery=false;state.failed=false;
 						}
 						else
@@ -21971,7 +21971,7 @@ adaptor.Create(retval, set483, "set483");
 					if (input.LA(1)==67||input.LA(1)==91)
 					{
 						input.Consume();
-adaptor.Create(retval, set487, "set487");
+						if (state.backtracking == 0) adaptor.Create(retval, set487, "set487");
 						state.errorRecovery=false;state.failed=false;
 					}
 					else
@@ -22099,7 +22099,7 @@ adaptor.Create(retval, set487, "set487");
 					char_literal490=(IToken)Match(input,71,Follow._71_in_and_expression3339); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal490, "char_literal490");
-
+					
 					}
 					DebugLocation(477, 29);
 					PushFollow(Follow._equality_expression_in_and_expression3343);
@@ -22218,7 +22218,7 @@ adaptor.Create(retval, char_literal490, "char_literal490");
 					char_literal493=(IToken)Match(input,98,Follow._98_in_exclusive_or_expression3356); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal493, "char_literal493");
-
+					
 					}
 					DebugLocation(479, 24);
 					PushFollow(Follow._and_expression_in_exclusive_or_expression3360);
@@ -22337,7 +22337,7 @@ adaptor.Create(retval, char_literal493, "char_literal493");
 					char_literal496=(IToken)Match(input,202,Follow._202_in_inclusive_or_expression3375); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal496, "char_literal496");
-
+					
 					}
 					DebugLocation(481, 35);
 					PushFollow(Follow._exclusive_or_expression_in_inclusive_or_expression3379);
@@ -22456,7 +22456,7 @@ adaptor.Create(retval, char_literal496, "char_literal496");
 					string_literal499=(IToken)Match(input,70,Follow._70_in_conditional_and_expression3394); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal499, "string_literal499");
-
+					
 					}
 					DebugLocation(483, 36);
 					PushFollow(Follow._inclusive_or_expression_in_conditional_and_expression3398);
@@ -22575,7 +22575,7 @@ adaptor.Create(retval, string_literal499, "string_literal499");
 					string_literal502=(IToken)Match(input,204,Follow._204_in_conditional_or_expression3412); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal502, "string_literal502");
-
+					
 					}
 					DebugLocation(485, 38);
 					PushFollow(Follow._conditional_and_expression_in_conditional_or_expression3416);
@@ -22701,7 +22701,7 @@ adaptor.Create(retval, string_literal502, "string_literal502");
 					string_literal505=(IToken)Match(input,95,Follow._95_in_null_coalescing_expression3431); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal505, "string_literal505");
-
+					
 					}
 					DebugLocation(487, 38);
 					PushFollow(Follow._null_coalescing_expression_in_null_coalescing_expression3435);
@@ -22819,7 +22819,7 @@ adaptor.Create(retval, string_literal505, "string_literal505");
 				char_literal508=(IToken)Match(input,94,Follow._94_in_conditional_expression3449); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal508, "char_literal508");
-
+				
 				}
 				DebugLocation(489, 38);
 				PushFollow(Follow._expression_in_conditional_expression3453);
@@ -22831,7 +22831,7 @@ adaptor.Create(retval, char_literal508, "char_literal508");
 				char_literal510=(IToken)Match(input,84,Follow._84_in_conditional_expression3457); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal510, "char_literal510");
-
+				
 				}
 				DebugLocation(489, 57);
 				PushFollow(Follow._expression_in_conditional_expression3461);
@@ -22918,7 +22918,7 @@ adaptor.Create(retval, char_literal510, "char_literal510");
 			char_literal512=(IToken)Match(input,201,Follow._201_in_array_initializer3473); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal512, "char_literal512");
-
+			
 			}
 			DebugLocation(493, 8);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:493:8: ( variable_initializer_list )?
@@ -22973,7 +22973,7 @@ adaptor.Create(retval, char_literal512, "char_literal512");
 				char_literal514=(IToken)Match(input,79,Follow._79_in_array_initializer3482); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal514, "char_literal514");
-
+				
 				}
 
 				}
@@ -22986,7 +22986,7 @@ adaptor.Create(retval, char_literal514, "char_literal514");
 			char_literal515=(IToken)Match(input,205,Follow._205_in_array_initializer3487); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal515, "char_literal515");
-
+			
 			}
 
 			}
@@ -23092,7 +23092,7 @@ adaptor.Create(retval, char_literal515, "char_literal515");
 					char_literal517=(IToken)Match(input,79,Follow._79_in_variable_initializer_list3498); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal517, "char_literal517");
-
+					
 					}
 					DebugLocation(495, 28);
 					PushFollow(Follow._variable_initializer_in_variable_initializer_list3500);
@@ -23275,7 +23275,7 @@ adaptor.Create(retval, char_literal517, "char_literal517");
 				char_literal519=(IToken)Match(input,90,Follow._90_in_assignment_operator3511); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal519, "char_literal519");
-
+				
 				}
 
 				}
@@ -23290,7 +23290,7 @@ adaptor.Create(retval, char_literal519, "char_literal519");
 				string_literal520=(IToken)Match(input,78,Follow._78_in_assignment_operator3515); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal520, "string_literal520");
-
+				
 				}
 
 				}
@@ -23305,7 +23305,7 @@ adaptor.Create(retval, string_literal520, "string_literal520");
 				string_literal521=(IToken)Match(input,81,Follow._81_in_assignment_operator3519); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal521, "string_literal521");
-
+				
 				}
 
 				}
@@ -23320,7 +23320,7 @@ adaptor.Create(retval, string_literal521, "string_literal521");
 				string_literal522=(IToken)Match(input,75,Follow._75_in_assignment_operator3523); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal522, "string_literal522");
-
+				
 				}
 
 				}
@@ -23335,7 +23335,7 @@ adaptor.Create(retval, string_literal522, "string_literal522");
 				string_literal523=(IToken)Match(input,83,Follow._83_in_assignment_operator3527); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal523, "string_literal523");
-
+				
 				}
 
 				}
@@ -23350,7 +23350,7 @@ adaptor.Create(retval, string_literal523, "string_literal523");
 				string_literal524=(IToken)Match(input,69,Follow._69_in_assignment_operator3531); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal524, "string_literal524");
-
+				
 				}
 
 				}
@@ -23365,7 +23365,7 @@ adaptor.Create(retval, string_literal524, "string_literal524");
 				string_literal525=(IToken)Match(input,72,Follow._72_in_assignment_operator3535); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal525, "string_literal525");
-
+				
 				}
 
 				}
@@ -23380,7 +23380,7 @@ adaptor.Create(retval, string_literal525, "string_literal525");
 				string_literal526=(IToken)Match(input,203,Follow._203_in_assignment_operator3539); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal526, "string_literal526");
-
+				
 				}
 
 				}
@@ -23395,7 +23395,7 @@ adaptor.Create(retval, string_literal526, "string_literal526");
 				string_literal527=(IToken)Match(input,99,Follow._99_in_assignment_operator3543); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal527, "string_literal527");
-
+				
 				}
 
 				}
@@ -23410,7 +23410,7 @@ adaptor.Create(retval, string_literal527, "string_literal527");
 				string_literal528=(IToken)Match(input,88,Follow._88_in_assignment_operator3547); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal528, "string_literal528");
-
+				
 				}
 
 				}
@@ -23425,13 +23425,13 @@ adaptor.Create(retval, string_literal528, "string_literal528");
 				char_literal529=(IToken)Match(input,GT,Follow._GT_in_assignment_operator3551); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal529, "char_literal529");
-
+				
 				}
 				DebugLocation(498, 76);
 				string_literal530=(IToken)Match(input,93,Follow._93_in_assignment_operator3553); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal530, "string_literal530");
-
+				
 				}
 
 				}
@@ -23529,7 +23529,7 @@ adaptor.Create(retval, string_literal530, "string_literal530");
 				string_literal531=(IToken)Match(input,107,Follow._107_in_lambda_expression3561); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal531, "string_literal531");
-
+				
 				}
 
 				}
@@ -23548,7 +23548,7 @@ adaptor.Create(retval, string_literal531, "string_literal531");
 			string_literal533=(IToken)Match(input,92,Follow._92_in_lambda_expression3568); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal533, "string_literal533");
-
+			
 			}
 			DebugLocation(500, 49);
 			PushFollow(Follow._anonymous_function_body_in_lambda_expression3572);
@@ -23894,7 +23894,7 @@ adaptor.Create(retval, string_literal533, "string_literal533");
 				char_literal537=(IToken)Match(input,73,Follow._73_in_implicit_anonymous_function_signature3592); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal537, "char_literal537");
-
+				
 				}
 				DebugLocation(505, 8);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:505:8: ( implicit_anonymous_function_parameter_list )?
@@ -23931,7 +23931,7 @@ adaptor.Create(retval, char_literal537, "char_literal537");
 				char_literal539=(IToken)Match(input,RPAREN,Follow._RPAREN_in_implicit_anonymous_function_signature3601); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal539, "char_literal539");
-
+				
 				}
 
 				}
@@ -24047,7 +24047,7 @@ adaptor.Create(retval, char_literal539, "char_literal539");
 					char_literal542=(IToken)Match(input,79,Follow._79_in_implicit_anonymous_function_parameter_list3618); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal542, "char_literal542");
-
+					
 					}
 					DebugLocation(508, 49);
 					PushFollow(Follow._implicit_anonymous_function_parameter_in_implicit_anonymous_function_parameter_list3622);
@@ -24388,7 +24388,7 @@ adaptor.Create(retval, char_literal542, "char_literal542");
 			string_literal549=(IToken)Match(input,123,Follow._123_in_delegate_declaration3664); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal549, "string_literal549");
-
+			
 			}
 			DebugLocation(517, 51);
 			PushFollow(Follow._return_type_in_delegate_declaration3668);
@@ -24437,7 +24437,7 @@ adaptor.Create(retval, string_literal549, "string_literal549");
 			char_literal553=(IToken)Match(input,73,Follow._73_in_delegate_declaration3683); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal553, "char_literal553");
-
+			
 			}
 			DebugLocation(518, 9);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:518:9: ( formal_parameter_list )?
@@ -24474,7 +24474,7 @@ adaptor.Create(retval, char_literal553, "char_literal553");
 			char_literal555=(IToken)Match(input,RPAREN,Follow._RPAREN_in_delegate_declaration3692); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal555, "char_literal555");
-
+			
 			}
 			DebugLocation(518, 40);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:518:40: ( type_parameter_constraints_clauses )?
@@ -24511,7 +24511,7 @@ adaptor.Create(retval, char_literal555, "char_literal555");
 			char_literal557=(IToken)Match(input,SEMI,Follow._SEMI_in_delegate_declaration3701); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal557, "char_literal557");
-
+			
 			}
 
 			}
@@ -24693,7 +24693,7 @@ adaptor.Create(retval, char_literal557, "char_literal557");
 			if (input.LA(1)==145||input.LA(1)==155||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==192)
 			{
 				input.Consume();
-adaptor.Create(retval, set560, "set560");
+				if (state.backtracking == 0) adaptor.Create(retval, set560, "set560");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -24851,7 +24851,7 @@ adaptor.Create(retval, set560, "set560");
 			string_literal563=(IToken)Match(input,138,Follow._138_in_from_clause3762); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal563, "string_literal563");
-
+			
 			}
 			DebugLocation(527, 11);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:527:11: ( type )?
@@ -24912,7 +24912,7 @@ adaptor.Create(retval, string_literal563, "string_literal563");
 			string_literal566=(IToken)Match(input,142,Follow._142_in_from_clause3775); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal566, "string_literal566");
-
+			
 			}
 			DebugLocation(527, 39);
 			PushFollow(Follow._expression_in_from_clause3779);
@@ -25126,7 +25126,7 @@ adaptor.Create(retval, string_literal566, "string_literal566");
 			string_literal571=(IToken)Match(input,146,Follow._146_in_query_continuation3812); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal571, "string_literal571");
-
+			
 			}
 			DebugLocation(531, 11);
 			PushFollow(Follow._identifier_in_query_continuation3816);
@@ -25508,7 +25508,7 @@ adaptor.Create(retval, string_literal571, "string_literal571");
 			string_literal580=(IToken)Match(input,148,Follow._148_in_join_clause3863); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal580, "string_literal580");
-
+			
 			}
 			DebugLocation(541, 11);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:541:11: ( type )?
@@ -25569,7 +25569,7 @@ adaptor.Create(retval, string_literal580, "string_literal580");
 			string_literal583=(IToken)Match(input,142,Follow._142_in_join_clause3876); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal583, "string_literal583");
-
+			
 			}
 			DebugLocation(541, 39);
 			PushFollow(Follow._expression_in_join_clause3880);
@@ -25581,7 +25581,7 @@ adaptor.Create(retval, string_literal583, "string_literal583");
 			string_literal585=(IToken)Match(input,157,Follow._157_in_join_clause3884); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal585, "string_literal585");
-
+			
 			}
 			DebugLocation(541, 59);
 			PushFollow(Follow._expression_in_join_clause3888);
@@ -25593,7 +25593,7 @@ adaptor.Create(retval, string_literal585, "string_literal585");
 			string_literal587=(IToken)Match(input,128,Follow._128_in_join_clause3892); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal587, "string_literal587");
-
+			
 			}
 			DebugLocation(541, 83);
 			PushFollow(Follow._expression_in_join_clause3896);
@@ -25623,7 +25623,7 @@ adaptor.Create(retval, string_literal587, "string_literal587");
 				string_literal589=(IToken)Match(input,146,Follow._146_in_join_clause3899); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal589, "string_literal589");
-
+				
 				}
 				DebugLocation(541, 102);
 				PushFollow(Follow._identifier_in_join_clause3901);
@@ -25709,7 +25709,7 @@ adaptor.Create(retval, string_literal589, "string_literal589");
 			string_literal591=(IToken)Match(input,149,Follow._149_in_let_clause3911); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal591, "string_literal591");
-
+			
 			}
 			DebugLocation(543, 10);
 			PushFollow(Follow._identifier_in_let_clause3915);
@@ -25721,7 +25721,7 @@ adaptor.Create(retval, string_literal591, "string_literal591");
 			char_literal593=(IToken)Match(input,90,Follow._90_in_let_clause3919); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal593, "char_literal593");
-
+			
 			}
 			DebugLocation(543, 29);
 			PushFollow(Follow._expression_in_let_clause3923);
@@ -25797,7 +25797,7 @@ adaptor.Create(retval, char_literal593, "char_literal593");
 			string_literal595=(IToken)Match(input,159,Follow._159_in_orderby_clause3930); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal595, "string_literal595");
-
+			
 			}
 			DebugLocation(545, 14);
 			PushFollow(Follow._ordering_list_in_orderby_clause3934);
@@ -25902,7 +25902,7 @@ adaptor.Create(retval, string_literal595, "string_literal595");
 					char_literal598=(IToken)Match(input,79,Follow._79_in_ordering_list3945); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal598, "char_literal598");
-
+					
 					}
 					DebugLocation(547, 16);
 					PushFollow(Follow._ordering_in_ordering_list3947);
@@ -26093,7 +26093,7 @@ adaptor.Create(retval, char_literal598, "char_literal598");
 			if (input.LA(1)==105||input.LA(1)==124)
 			{
 				input.Consume();
-adaptor.Create(retval, set602, "set602");
+				if (state.backtracking == 0) adaptor.Create(retval, set602, "set602");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -26281,7 +26281,7 @@ adaptor.Create(retval, set602, "set602");
 			string_literal605=(IToken)Match(input,176,Follow._176_in_select_clause3997); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal605, "string_literal605");
-
+			
 			}
 			DebugLocation(557, 13);
 			PushFollow(Follow._expression_in_select_clause4001);
@@ -26360,7 +26360,7 @@ adaptor.Create(retval, string_literal605, "string_literal605");
 			string_literal607=(IToken)Match(input,140,Follow._140_in_group_clause4009); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal607, "string_literal607");
-
+			
 			}
 			DebugLocation(559, 10);
 			PushFollow(Follow._expression_in_group_clause4011);
@@ -26372,7 +26372,7 @@ adaptor.Create(retval, string_literal607, "string_literal607");
 			string_literal609=(IToken)Match(input,112,Follow._112_in_group_clause4013); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal609, "string_literal609");
-
+			
 			}
 			DebugLocation(559, 26);
 			PushFollow(Follow._expression_in_group_clause4015);
@@ -26448,7 +26448,7 @@ adaptor.Create(retval, string_literal609, "string_literal609");
 			string_literal611=(IToken)Match(input,198,Follow._198_in_where_clause4022); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal611, "string_literal611");
-
+			
 			}
 			DebugLocation(561, 12);
 			PushFollow(Follow._boolean_expression_in_where_clause4026);
@@ -26614,7 +26614,7 @@ adaptor.Create(retval, string_literal611, "string_literal611");
 				string_literal615=(IToken)Match(input,164,Follow._164_in_class_declaration4046); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal615, "string_literal615");
-
+				
 				}
 
 				}
@@ -26627,7 +26627,7 @@ adaptor.Create(retval, string_literal615, "string_literal615");
 			string_literal616=(IToken)Match(input,118,Follow._118_in_class_declaration4050); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal616, "string_literal616");
-
+			
 			}
 			DebugLocation(567, 54);
 			PushFollow(Follow._identifier_in_class_declaration4053);
@@ -26756,7 +26756,7 @@ adaptor.Create(retval, string_literal616, "string_literal616");
 				char_literal622=(IToken)Match(input,SEMI,Follow._SEMI_in_class_declaration4075); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal622, "char_literal622");
-
+				
 				}
 
 				}
@@ -26945,7 +26945,7 @@ adaptor.Create(retval, char_literal622, "char_literal622");
 			if (input.LA(1)==101||input.LA(1)==145||input.LA(1)==155||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==175||input.LA(1)==180||input.LA(1)==192)
 			{
 				input.Consume();
-adaptor.Create(retval, set624, "set624");
+				if (state.backtracking == 0) adaptor.Create(retval, set624, "set624");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -27153,7 +27153,7 @@ adaptor.Create(retval, set624, "set624");
 				char_literal625=(IToken)Match(input,84,Follow._84_in_class_base4131); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal625, "char_literal625");
-
+				
 				}
 				DebugLocation(574, 8);
 				PushFollow(Follow._class_type_in_class_base4135);
@@ -27183,7 +27183,7 @@ adaptor.Create(retval, char_literal625, "char_literal625");
 					char_literal627=(IToken)Match(input,79,Follow._79_in_class_base4138); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal627, "char_literal627");
-
+					
 					}
 					DebugLocation(574, 24);
 					PushFollow(Follow._interface_type_list_in_class_base4140);
@@ -27211,7 +27211,7 @@ adaptor.Create(retval, char_literal627, "char_literal627");
 				char_literal629=(IToken)Match(input,84,Follow._84_in_class_base4147); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal629, "char_literal629");
-
+				
 				}
 				DebugLocation(575, 10);
 				PushFollow(Follow._interface_type_list_in_class_base4151);
@@ -27318,7 +27318,7 @@ adaptor.Create(retval, char_literal629, "char_literal629");
 					char_literal632=(IToken)Match(input,79,Follow._79_in_interface_type_list4162); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal632, "char_literal632");
-
+					
 					}
 					DebugLocation(577, 17);
 					PushFollow(Follow._type_name_in_interface_type_list4164);
@@ -27522,7 +27522,7 @@ adaptor.Create(retval, char_literal632, "char_literal632");
 			string_literal635=(IToken)Match(input,198,Follow._198_in_type_parameter_constraints_clause4185); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal635, "string_literal635");
-
+			
 			}
 			DebugLocation(582, 12);
 			PushFollow(Follow._type_variable_name_in_type_parameter_constraints_clause4189);
@@ -27534,7 +27534,7 @@ adaptor.Create(retval, string_literal635, "string_literal635");
 			char_literal637=(IToken)Match(input,84,Follow._84_in_type_parameter_constraints_clause4193); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal637, "char_literal637");
-
+			
 			}
 			DebugLocation(582, 39);
 			PushFollow(Follow._type_parameter_constraint_list_in_type_parameter_constraints_clause4197);
@@ -27898,7 +27898,7 @@ adaptor.Create(retval, char_literal637, "char_literal637");
 				char_literal640=(IToken)Match(input,79,Follow._79_in_type_parameter_constraint_list4212); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal640, "char_literal640");
-
+				
 				}
 				DebugLocation(584, 32);
 				PushFollow(Follow._secondary_constraint_list_in_type_parameter_constraint_list4216);
@@ -27910,7 +27910,7 @@ adaptor.Create(retval, char_literal640, "char_literal640");
 				char_literal642=(IToken)Match(input,79,Follow._79_in_type_parameter_constraint_list4220); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal642, "char_literal642");
-
+				
 				}
 				DebugLocation(584, 66);
 				PushFollow(Follow._constructor_constraint_in_type_parameter_constraint_list4224);
@@ -27945,7 +27945,7 @@ adaptor.Create(retval, char_literal642, "char_literal642");
 				char_literal645=(IToken)Match(input,79,Follow._79_in_type_parameter_constraint_list4237); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal645, "char_literal645");
-
+				
 				}
 				DebugLocation(585, 34);
 				PushFollow(Follow._secondary_constraint_list_in_type_parameter_constraint_list4241);
@@ -27980,7 +27980,7 @@ adaptor.Create(retval, char_literal645, "char_literal645");
 				char_literal648=(IToken)Match(input,79,Follow._79_in_type_parameter_constraint_list4254); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal648, "char_literal648");
-
+				
 				}
 				DebugLocation(586, 34);
 				PushFollow(Follow._constructor_constraint_in_type_parameter_constraint_list4258);
@@ -28015,7 +28015,7 @@ adaptor.Create(retval, char_literal648, "char_literal648");
 				char_literal651=(IToken)Match(input,79,Follow._79_in_type_parameter_constraint_list4270); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal651, "char_literal651");
-
+				
 				}
 				DebugLocation(587, 40);
 				PushFollow(Follow._constructor_constraint_in_type_parameter_constraint_list4274);
@@ -28239,7 +28239,7 @@ adaptor.Create(retval, char_literal651, "char_literal651");
 				string_literal657=(IToken)Match(input,118,Follow._118_in_primary_constraint4304); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal657, "string_literal657");
-
+				
 				}
 
 				}
@@ -28254,7 +28254,7 @@ adaptor.Create(retval, string_literal657, "string_literal657");
 				string_literal658=(IToken)Match(input,182,Follow._182_in_primary_constraint4309); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal658, "string_literal658");
-
+				
 				}
 
 				}
@@ -28362,7 +28362,7 @@ adaptor.Create(retval, string_literal658, "string_literal658");
 					char_literal660=(IToken)Match(input,79,Follow._79_in_secondary_constraint_list4320); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal660, "char_literal660");
-
+					
 					}
 					DebugLocation(597, 28);
 					PushFollow(Follow._secondary_constraint_in_secondary_constraint_list4322);
@@ -28605,19 +28605,19 @@ adaptor.Create(retval, char_literal660, "char_literal660");
 			string_literal664=(IToken)Match(input,155,Follow._155_in_constructor_constraint4348); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal664, "string_literal664");
-
+			
 			}
 			DebugLocation(602, 10);
 			char_literal665=(IToken)Match(input,73,Follow._73_in_constructor_constraint4352); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal665, "char_literal665");
-
+			
 			}
 			DebugLocation(602, 16);
 			char_literal666=(IToken)Match(input,RPAREN,Follow._RPAREN_in_constructor_constraint4356); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal666, "char_literal666");
-
+			
 			}
 
 			}
@@ -28689,7 +28689,7 @@ adaptor.Create(retval, char_literal666, "char_literal666");
 			char_literal667=(IToken)Match(input,201,Follow._201_in_class_body4364); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal667, "char_literal667");
-
+			
 			}
 			DebugLocation(604, 8);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:604:8: ( class_member_declarations )?
@@ -28726,7 +28726,7 @@ adaptor.Create(retval, char_literal667, "char_literal667");
 			char_literal669=(IToken)Match(input,205,Follow._205_in_class_body4373); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal669, "char_literal669");
-
+			
 			}
 
 			}
@@ -29954,7 +29954,7 @@ adaptor.Create(retval, char_literal669, "char_literal669");
 			string_literal685=(IToken)Match(input,119,Follow._119_in_constant_declaration4464); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal685, "string_literal685");
-
+			
 			}
 			DebugLocation(621, 48);
 			PushFollow(Follow._type_in_constant_declaration4468);
@@ -29972,7 +29972,7 @@ adaptor.Create(retval, string_literal685, "string_literal685");
 			char_literal688=(IToken)Match(input,SEMI,Follow._SEMI_in_constant_declaration4476); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal688, "char_literal688");
-
+			
 			}
 
 			}
@@ -30154,7 +30154,7 @@ adaptor.Create(retval, char_literal688, "char_literal688");
 			if (input.LA(1)==145||input.LA(1)==155||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169))
 			{
 				input.Consume();
-adaptor.Create(retval, set690, "set690");
+				if (state.backtracking == 0) adaptor.Create(retval, set690, "set690");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -30310,7 +30310,7 @@ adaptor.Create(retval, set690, "set690");
 			char_literal695=(IToken)Match(input,SEMI,Follow._SEMI_in_field_declaration4535); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal695, "char_literal695");
-
+			
 			}
 
 			}
@@ -30492,7 +30492,7 @@ adaptor.Create(retval, char_literal695, "char_literal695");
 			if (input.LA(1)==145||input.LA(1)==155||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=170)||input.LA(1)==180||input.LA(1)==192||input.LA(1)==197)
 			{
 				input.Consume();
-adaptor.Create(retval, set697, "set697");
+				if (state.backtracking == 0) adaptor.Create(retval, set697, "set697");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -30600,7 +30600,7 @@ adaptor.Create(retval, set697, "set697");
 					char_literal699=(IToken)Match(input,79,Follow._79_in_variable_declarators4596); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal699, "char_literal699");
-
+					
 					}
 					DebugLocation(634, 27);
 					PushFollow(Follow._variable_declarator_in_variable_declarators4598);
@@ -30715,7 +30715,7 @@ adaptor.Create(retval, char_literal699, "char_literal699");
 				char_literal702=(IToken)Match(input,90,Follow._90_in_variable_declarator4612); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal702, "char_literal702");
-
+				
 				}
 				DebugLocation(637, 19);
 				PushFollow(Follow._variable_initializer_in_variable_declarator4616);
@@ -31197,7 +31197,7 @@ adaptor.Create(retval, char_literal702, "char_literal702");
 				string_literal711=(IToken)Match(input,164,Follow._164_in_method_header4675); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal711, "string_literal711");
-
+				
 				}
 
 				}
@@ -31253,7 +31253,7 @@ adaptor.Create(retval, string_literal711, "string_literal711");
 			char_literal715=(IToken)Match(input,73,Follow._73_in_method_header4694); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal715, "char_literal715");
-
+			
 			}
 			DebugLocation(648, 10);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:648:10: ( formal_parameter_list )?
@@ -31290,7 +31290,7 @@ adaptor.Create(retval, char_literal715, "char_literal715");
 			char_literal717=(IToken)Match(input,RPAREN,Follow._RPAREN_in_method_header4703); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal717, "char_literal717");
-
+			
 			}
 			DebugLocation(648, 41);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:648:41: ( type_parameter_constraints_clauses )?
@@ -31514,7 +31514,7 @@ adaptor.Create(retval, char_literal717, "char_literal717");
 			if (input.LA(1)==101||input.LA(1)==107||input.LA(1)==131||input.LA(1)==145||input.LA(1)==155||input.LA(1)==161||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==175||input.LA(1)==180||input.LA(1)==192||input.LA(1)==195)
 			{
 				input.Consume();
-adaptor.Create(retval, set720, "set720");
+				if (state.backtracking == 0) adaptor.Create(retval, set720, "set720");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -31665,7 +31665,7 @@ adaptor.Create(retval, set720, "set720");
 				string_literal722=(IToken)Match(input,196,Follow._196_in_return_type4788); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal722, "string_literal722");
-
+				
 				}
 				DebugLocation(656, 11);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:656:11: ( '*' )*
@@ -31693,7 +31693,7 @@ adaptor.Create(retval, string_literal722, "string_literal722");
 						char_literal723=(IToken)Match(input,74,Follow._74_in_return_type4790); if (state.failed) return retval;
 						if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal723, "char_literal723");
-
+						
 						}
 
 						}
@@ -31876,7 +31876,7 @@ adaptor.Create(retval, char_literal723, "char_literal723");
 					char_literal726=(IToken)Match(input,79,Follow._79_in_formal_parameter_list4809); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal726, "char_literal726");
-
+					
 					}
 					DebugLocation(660, 24);
 					PushFollow(Follow._formal_parameter_in_formal_parameter_list4811);
@@ -32201,7 +32201,7 @@ adaptor.Create(retval, char_literal726, "char_literal726");
 				string_literal730=(IToken)Match(input,100,Follow._100_in_formal_parameter4831); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal730, "string_literal730");
-
+				
 				}
 
 				}
@@ -32555,7 +32555,7 @@ adaptor.Create(retval, string_literal730, "string_literal730");
 			char_literal737=(IToken)Match(input,90,Follow._90_in_default_argument4874); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal737, "char_literal737");
-
+			
 			}
 			DebugLocation(671, 6);
 			PushFollow(Follow._expression_in_default_argument4876);
@@ -32632,7 +32632,7 @@ adaptor.Create(retval, char_literal737, "char_literal737");
 			if (input.LA(1)==160||input.LA(1)==171||input.LA(1)==184)
 			{
 				input.Consume();
-adaptor.Create(retval, set739, "set739");
+				if (state.backtracking == 0) adaptor.Create(retval, set739, "set739");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -32762,7 +32762,7 @@ adaptor.Create(retval, set739, "set739");
 				string_literal741=(IToken)Match(input,163,Follow._163_in_parameter_array4904); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal741, "string_literal741");
-
+				
 				}
 
 				}
@@ -32931,7 +32931,7 @@ adaptor.Create(retval, string_literal741, "string_literal741");
 			char_literal748=(IToken)Match(input,201,Follow._201_in_property_declaration4939); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal748, "char_literal748");
-
+			
 			}
 			DebugLocation(677, 65);
 			PushFollow(Follow._accessor_declarations_in_property_declaration4943);
@@ -32943,7 +32943,7 @@ adaptor.Create(retval, char_literal748, "char_literal748");
 			char_literal750=(IToken)Match(input,205,Follow._205_in_property_declaration4947); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal750, "char_literal750");
-
+			
 			}
 
 			}
@@ -33125,7 +33125,7 @@ adaptor.Create(retval, char_literal750, "char_literal750");
 			if (input.LA(1)==101||input.LA(1)==131||input.LA(1)==145||input.LA(1)==155||input.LA(1)==161||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==175||input.LA(1)==180||input.LA(1)==192||input.LA(1)==195)
 			{
 				input.Consume();
-adaptor.Create(retval, set752, "set752");
+				if (state.backtracking == 0) adaptor.Create(retval, set752, "set752");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -33678,7 +33678,7 @@ adaptor.Create(retval, set752, "set752");
 			string_literal762=(IToken)Match(input,GET,Follow._GET_in_get_accessor_declaration5073); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal762, "string_literal762");
-
+			
 			}
 			DebugLocation(690, 45);
 			PushFollow(Follow._accessor_body_in_get_accessor_declaration5077);
@@ -33818,7 +33818,7 @@ adaptor.Create(retval, string_literal762, "string_literal762");
 			string_literal766=(IToken)Match(input,SET,Follow._SET_in_set_accessor_declaration5095); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal766, "string_literal766");
-
+			
 			}
 			DebugLocation(692, 45);
 			PushFollow(Follow._accessor_body_in_set_accessor_declaration5099);
@@ -33982,7 +33982,7 @@ adaptor.Create(retval, string_literal766, "string_literal766");
 				string_literal768=(IToken)Match(input,169,Follow._169_in_accessor_modifier5108); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal768, "string_literal768");
-
+				
 				}
 
 				}
@@ -33995,7 +33995,7 @@ adaptor.Create(retval, string_literal768, "string_literal768");
 				string_literal769=(IToken)Match(input,168,Follow._168_in_accessor_modifier5112); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal769, "string_literal769");
-
+				
 				}
 
 				}
@@ -34008,7 +34008,7 @@ adaptor.Create(retval, string_literal769, "string_literal769");
 				string_literal770=(IToken)Match(input,145,Follow._145_in_accessor_modifier5116); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal770, "string_literal770");
-
+				
 				}
 
 				}
@@ -34021,7 +34021,7 @@ adaptor.Create(retval, string_literal770, "string_literal770");
 				string_literal771=(IToken)Match(input,166,Follow._166_in_accessor_modifier5120); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal771, "string_literal771");
-
+				
 				}
 
 				}
@@ -34039,13 +34039,13 @@ adaptor.Create(retval, string_literal771, "string_literal771");
 				string_literal772=(IToken)Match(input,168,Follow._168_in_accessor_modifier5125); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal772, "string_literal772");
-
+				
 				}
 				DebugLocation(694, 68);
 				string_literal773=(IToken)Match(input,145,Follow._145_in_accessor_modifier5129); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal773, "string_literal773");
-
+				
 				}
 
 				}
@@ -34066,13 +34066,13 @@ adaptor.Create(retval, string_literal773, "string_literal773");
 				string_literal774=(IToken)Match(input,145,Follow._145_in_accessor_modifier5135); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal774, "string_literal774");
-
+				
 				}
 				DebugLocation(694, 96);
 				string_literal775=(IToken)Match(input,168,Follow._168_in_accessor_modifier5139); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal775, "string_literal775");
-
+				
 				}
 
 				}
@@ -34394,7 +34394,7 @@ adaptor.Create(retval, string_literal775, "string_literal775");
 				string_literal779=(IToken)Match(input,129,Follow._129_in_event_declaration5171); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal779, "string_literal779");
-
+				
 				}
 				DebugLocation(699, 47);
 				PushFollow(Follow._type_in_event_declaration5175);
@@ -34412,7 +34412,7 @@ adaptor.Create(retval, string_literal779, "string_literal779");
 				char_literal782=(IToken)Match(input,SEMI,Follow._SEMI_in_event_declaration5183); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal782, "char_literal782");
-
+				
 				}
 
 				}
@@ -34497,7 +34497,7 @@ adaptor.Create(retval, char_literal782, "char_literal782");
 				string_literal785=(IToken)Match(input,129,Follow._129_in_event_declaration5201); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal785, "string_literal785");
-
+				
 				}
 				DebugLocation(700, 49);
 				PushFollow(Follow._type_in_event_declaration5205);
@@ -34515,7 +34515,7 @@ adaptor.Create(retval, string_literal785, "string_literal785");
 				char_literal788=(IToken)Match(input,201,Follow._201_in_event_declaration5213); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal788, "char_literal788");
-
+				
 				}
 				DebugLocation(700, 76);
 				PushFollow(Follow._event_accessor_declarations_in_event_declaration5217);
@@ -34527,7 +34527,7 @@ adaptor.Create(retval, char_literal788, "char_literal788");
 				char_literal790=(IToken)Match(input,205,Follow._205_in_event_declaration5221); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal790, "char_literal790");
-
+				
 				}
 
 				}
@@ -34714,7 +34714,7 @@ adaptor.Create(retval, char_literal790, "char_literal790");
 			if (input.LA(1)==101||input.LA(1)==131||input.LA(1)==145||input.LA(1)==155||input.LA(1)==161||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==175||input.LA(1)==180||input.LA(1)==192||input.LA(1)==195)
 			{
 				input.Consume();
-adaptor.Create(retval, set792, "set792");
+				if (state.backtracking == 0) adaptor.Create(retval, set792, "set792");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -34989,7 +34989,7 @@ adaptor.Create(retval, set792, "set792");
 			string_literal798=(IToken)Match(input,102,Follow._102_in_add_accessor_declaration5323); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal798, "string_literal798");
-
+			
 			}
 			DebugLocation(710, 24);
 			PushFollow(Follow._block_in_add_accessor_declaration5327);
@@ -35097,7 +35097,7 @@ adaptor.Create(retval, string_literal798, "string_literal798");
 			string_literal801=(IToken)Match(input,172,Follow._172_in_remove_accessor_declaration5340); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal801, "string_literal801");
-
+			
 			}
 			DebugLocation(712, 27);
 			PushFollow(Follow._block_in_remove_accessor_declaration5344);
@@ -35246,7 +35246,7 @@ adaptor.Create(retval, string_literal801, "string_literal801");
 			char_literal806=(IToken)Match(input,201,Follow._201_in_indexer_declaration5366); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal806, "char_literal806");
-
+			
 			}
 			DebugLocation(714, 64);
 			PushFollow(Follow._accessor_declarations_in_indexer_declaration5370);
@@ -35258,7 +35258,7 @@ adaptor.Create(retval, char_literal806, "char_literal806");
 			char_literal808=(IToken)Match(input,205,Follow._205_in_indexer_declaration5374); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal808, "char_literal808");
-
+			
 			}
 
 			}
@@ -35440,7 +35440,7 @@ adaptor.Create(retval, char_literal808, "char_literal808");
 			if (input.LA(1)==101||input.LA(1)==131||input.LA(1)==145||input.LA(1)==155||input.LA(1)==161||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==175||input.LA(1)==192||input.LA(1)==195)
 			{
 				input.Consume();
-adaptor.Create(retval, set810, "set810");
+				if (state.backtracking == 0) adaptor.Create(retval, set810, "set810");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -35557,7 +35557,7 @@ adaptor.Create(retval, set810, "set810");
 				char_literal813=(IToken)Match(input,DOT,Follow._DOT_in_indexer_declarator5446); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal813, "char_literal813");
-
+				
 				}
 
 				}
@@ -35570,13 +35570,13 @@ adaptor.Create(retval, char_literal813, "char_literal813");
 			string_literal814=(IToken)Match(input,184,Follow._184_in_indexer_declarator5450); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal814, "string_literal814");
-
+			
 			}
 			DebugLocation(720, 35);
 			char_literal815=(IToken)Match(input,96,Follow._96_in_indexer_declarator5454); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal815, "char_literal815");
-
+			
 			}
 			DebugLocation(720, 41);
 			PushFollow(Follow._formal_parameter_list_in_indexer_declarator5458);
@@ -35588,7 +35588,7 @@ adaptor.Create(retval, char_literal815, "char_literal815");
 			char_literal817=(IToken)Match(input,97,Follow._97_in_indexer_declarator5462); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal817, "char_literal817");
-
+			
 			}
 
 			}
@@ -35884,7 +35884,7 @@ adaptor.Create(retval, char_literal817, "char_literal817");
 			if (input.LA(1)==131||input.LA(1)==169||input.LA(1)==180||input.LA(1)==192)
 			{
 				input.Consume();
-adaptor.Create(retval, set823, "set823");
+				if (state.backtracking == 0) adaptor.Create(retval, set823, "set823");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -36231,7 +36231,7 @@ adaptor.Create(retval, set823, "set823");
 			string_literal828=(IToken)Match(input,158,Follow._158_in_unary_operator_declarator5541); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal828, "string_literal828");
-
+			
 			}
 			DebugLocation(732, 22);
 			PushFollow(Follow._overloadable_unary_operator_in_unary_operator_declarator5545);
@@ -36243,7 +36243,7 @@ adaptor.Create(retval, string_literal828, "string_literal828");
 			char_literal830=(IToken)Match(input,73,Follow._73_in_unary_operator_declarator5549); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal830, "char_literal830");
-
+			
 			}
 			DebugLocation(732, 58);
 			PushFollow(Follow._type_in_unary_operator_declarator5553);
@@ -36261,7 +36261,7 @@ adaptor.Create(retval, char_literal830, "char_literal830");
 			char_literal833=(IToken)Match(input,RPAREN,Follow._RPAREN_in_unary_operator_declarator5561); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal833, "char_literal833");
-
+			
 			}
 
 			}
@@ -36332,7 +36332,7 @@ adaptor.Create(retval, char_literal833, "char_literal833");
 			if (input.LA(1)==FALSE||input.LA(1)==MINUS||input.LA(1)==TRUE||input.LA(1)==66||(input.LA(1)>=76 && input.LA(1)<=77)||input.LA(1)==80||input.LA(1)==206)
 			{
 				input.Consume();
-adaptor.Create(retval, set834, "set834");
+				if (state.backtracking == 0) adaptor.Create(retval, set834, "set834");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -36428,7 +36428,7 @@ adaptor.Create(retval, set834, "set834");
 			string_literal836=(IToken)Match(input,158,Follow._158_in_binary_operator_declarator5616); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal836, "string_literal836");
-
+			
 			}
 			DebugLocation(736, 22);
 			PushFollow(Follow._overloadable_binary_operator_in_binary_operator_declarator5620);
@@ -36440,7 +36440,7 @@ adaptor.Create(retval, string_literal836, "string_literal836");
 			char_literal838=(IToken)Match(input,73,Follow._73_in_binary_operator_declarator5624); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal838, "char_literal838");
-
+			
 			}
 			DebugLocation(736, 59);
 			PushFollow(Follow._type_in_binary_operator_declarator5628);
@@ -36458,7 +36458,7 @@ adaptor.Create(retval, char_literal838, "char_literal838");
 			char_literal841=(IToken)Match(input,79,Follow._79_in_binary_operator_declarator5636); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal841, "char_literal841");
-
+			
 			}
 			DebugLocation(736, 85);
 			PushFollow(Follow._type_in_binary_operator_declarator5640);
@@ -36476,7 +36476,7 @@ adaptor.Create(retval, char_literal841, "char_literal841");
 			char_literal844=(IToken)Match(input,RPAREN,Follow._RPAREN_in_binary_operator_declarator5648); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal844, "char_literal844");
-
+			
 			}
 
 			}
@@ -36685,7 +36685,7 @@ adaptor.Create(retval, char_literal844, "char_literal844");
 				char_literal845=(IToken)Match(input,76,Follow._76_in_overloadable_binary_operator5657); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal845, "char_literal845");
-
+				
 				}
 
 				}
@@ -36700,7 +36700,7 @@ adaptor.Create(retval, char_literal845, "char_literal845");
 				char_literal846=(IToken)Match(input,MINUS,Follow._MINUS_in_overloadable_binary_operator5661); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal846, "char_literal846");
-
+				
 				}
 
 				}
@@ -36715,7 +36715,7 @@ adaptor.Create(retval, char_literal846, "char_literal846");
 				char_literal847=(IToken)Match(input,74,Follow._74_in_overloadable_binary_operator5665); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal847, "char_literal847");
-
+				
 				}
 
 				}
@@ -36730,7 +36730,7 @@ adaptor.Create(retval, char_literal847, "char_literal847");
 				char_literal848=(IToken)Match(input,82,Follow._82_in_overloadable_binary_operator5669); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal848, "char_literal848");
-
+				
 				}
 
 				}
@@ -36745,7 +36745,7 @@ adaptor.Create(retval, char_literal848, "char_literal848");
 				char_literal849=(IToken)Match(input,68,Follow._68_in_overloadable_binary_operator5673); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal849, "char_literal849");
-
+				
 				}
 
 				}
@@ -36760,7 +36760,7 @@ adaptor.Create(retval, char_literal849, "char_literal849");
 				char_literal850=(IToken)Match(input,71,Follow._71_in_overloadable_binary_operator5677); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal850, "char_literal850");
-
+				
 				}
 
 				}
@@ -36775,7 +36775,7 @@ adaptor.Create(retval, char_literal850, "char_literal850");
 				char_literal851=(IToken)Match(input,202,Follow._202_in_overloadable_binary_operator5681); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal851, "char_literal851");
-
+				
 				}
 
 				}
@@ -36790,7 +36790,7 @@ adaptor.Create(retval, char_literal851, "char_literal851");
 				char_literal852=(IToken)Match(input,98,Follow._98_in_overloadable_binary_operator5685); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal852, "char_literal852");
-
+				
 				}
 
 				}
@@ -36805,7 +36805,7 @@ adaptor.Create(retval, char_literal852, "char_literal852");
 				string_literal853=(IToken)Match(input,87,Follow._87_in_overloadable_binary_operator5689); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal853, "string_literal853");
-
+				
 				}
 
 				}
@@ -36820,13 +36820,13 @@ adaptor.Create(retval, string_literal853, "string_literal853");
 				char_literal854=(IToken)Match(input,GT,Follow._GT_in_overloadable_binary_operator5693); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal854, "char_literal854");
-
+				
 				}
 				DebugLocation(739, 61);
 				char_literal855=(IToken)Match(input,GT,Follow._GT_in_overloadable_binary_operator5695); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal855, "char_literal855");
-
+				
 				}
 
 				}
@@ -36841,7 +36841,7 @@ adaptor.Create(retval, char_literal855, "char_literal855");
 				string_literal856=(IToken)Match(input,91,Follow._91_in_overloadable_binary_operator5699); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal856, "string_literal856");
-
+				
 				}
 
 				}
@@ -36856,7 +36856,7 @@ adaptor.Create(retval, string_literal856, "string_literal856");
 				string_literal857=(IToken)Match(input,67,Follow._67_in_overloadable_binary_operator5703); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal857, "string_literal857");
-
+				
 				}
 
 				}
@@ -36871,7 +36871,7 @@ adaptor.Create(retval, string_literal857, "string_literal857");
 				char_literal858=(IToken)Match(input,GT,Follow._GT_in_overloadable_binary_operator5707); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal858, "char_literal858");
-
+				
 				}
 
 				}
@@ -36886,7 +36886,7 @@ adaptor.Create(retval, char_literal858, "char_literal858");
 				char_literal859=(IToken)Match(input,86,Follow._86_in_overloadable_binary_operator5711); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal859, "char_literal859");
-
+				
 				}
 
 				}
@@ -36901,7 +36901,7 @@ adaptor.Create(retval, char_literal859, "char_literal859");
 				string_literal860=(IToken)Match(input,93,Follow._93_in_overloadable_binary_operator5715); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal860, "string_literal860");
-
+				
 				}
 
 				}
@@ -36916,7 +36916,7 @@ adaptor.Create(retval, string_literal860, "string_literal860");
 				string_literal861=(IToken)Match(input,89,Follow._89_in_overloadable_binary_operator5719); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal861, "string_literal861");
-
+				
 				}
 
 				}
@@ -36998,7 +36998,7 @@ adaptor.Create(retval, string_literal861, "string_literal861");
 			if (input.LA(1)==130||input.LA(1)==141)
 			{
 				input.Consume();
-adaptor.Create(retval, set862, "set862");
+				if (state.backtracking == 0) adaptor.Create(retval, set862, "set862");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -37013,7 +37013,7 @@ adaptor.Create(retval, set862, "set862");
 			string_literal863=(IToken)Match(input,158,Follow._158_in_conversion_operator_declarator5737); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal863, "string_literal863");
-
+			
 			}
 			DebugLocation(741, 42);
 			PushFollow(Follow._type_in_conversion_operator_declarator5741);
@@ -37025,7 +37025,7 @@ adaptor.Create(retval, string_literal863, "string_literal863");
 			char_literal865=(IToken)Match(input,73,Follow._73_in_conversion_operator_declarator5745); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal865, "char_literal865");
-
+			
 			}
 			DebugLocation(741, 55);
 			PushFollow(Follow._type_in_conversion_operator_declarator5749);
@@ -37043,7 +37043,7 @@ adaptor.Create(retval, char_literal865, "char_literal865");
 			char_literal868=(IToken)Match(input,RPAREN,Follow._RPAREN_in_conversion_operator_declarator5757); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal868, "char_literal868");
-
+			
 			}
 
 			}
@@ -37432,7 +37432,7 @@ adaptor.Create(retval, char_literal868, "char_literal868");
 			if (input.LA(1)==131||input.LA(1)==145||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==192)
 			{
 				input.Consume();
-adaptor.Create(retval, set875, "set875");
+				if (state.backtracking == 0) adaptor.Create(retval, set875, "set875");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -37521,7 +37521,7 @@ adaptor.Create(retval, set875, "set875");
 			char_literal877=(IToken)Match(input,73,Follow._73_in_constructor_declarator5837); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal877, "char_literal877");
-
+			
 			}
 			DebugLocation(751, 21);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:751:21: ( formal_parameter_list )?
@@ -37558,7 +37558,7 @@ adaptor.Create(retval, char_literal877, "char_literal877");
 			char_literal879=(IToken)Match(input,RPAREN,Follow._RPAREN_in_constructor_declarator5846); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal879, "char_literal879");
-
+			
 			}
 			DebugLocation(751, 52);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:751:52: ( constructor_initializer )?
@@ -37665,7 +37665,7 @@ adaptor.Create(retval, char_literal879, "char_literal879");
 			char_literal881=(IToken)Match(input,84,Follow._84_in_constructor_initializer5859); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal881, "char_literal881");
-
+			
 			}
 			DebugLocation(753, 8);
 
@@ -37673,7 +37673,7 @@ adaptor.Create(retval, char_literal881, "char_literal881");
 			if (input.LA(1)==109||input.LA(1)==184)
 			{
 				input.Consume();
-adaptor.Create(retval, set882, "set882");
+				if (state.backtracking == 0) adaptor.Create(retval, set882, "set882");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -37688,7 +37688,7 @@ adaptor.Create(retval, set882, "set882");
 			char_literal883=(IToken)Match(input,73,Follow._73_in_constructor_initializer5873); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal883, "char_literal883");
-
+			
 			}
 			DebugLocation(753, 34);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:753:34: ( argument_list )?
@@ -37725,7 +37725,7 @@ adaptor.Create(retval, char_literal883, "char_literal883");
 			char_literal885=(IToken)Match(input,RPAREN,Follow._RPAREN_in_constructor_initializer5882); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal885, "char_literal885");
-
+			
 			}
 
 			}
@@ -37911,13 +37911,13 @@ adaptor.Create(retval, char_literal885, "char_literal885");
 			char_literal890=(IToken)Match(input,73,Follow._73_in_static_constructor_declaration5910); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal890, "char_literal890");
-
+			
 			}
 			DebugLocation(757, 65);
 			char_literal891=(IToken)Match(input,RPAREN,Follow._RPAREN_in_static_constructor_declaration5914); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal891, "char_literal891");
-
+			
 			}
 			DebugLocation(757, 70);
 			PushFollow(Follow._static_constructor_body_in_static_constructor_declaration5917);
@@ -38238,19 +38238,19 @@ adaptor.Create(retval, char_literal891, "char_literal891");
 				string_literal893=(IToken)Match(input,131,Follow._131_in_static_constructor_modifiers5927); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal893, "string_literal893");
-
+				
 				}
 				DebugLocation(759, 13);
 				string_literal894=(IToken)Match(input,192,Follow._192_in_static_constructor_modifiers5929); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal894, "string_literal894");
-
+				
 				}
 				DebugLocation(759, 22);
 				string_literal895=(IToken)Match(input,180,Follow._180_in_static_constructor_modifiers5931); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal895, "string_literal895");
-
+				
 				}
 
 				}
@@ -38265,13 +38265,13 @@ adaptor.Create(retval, string_literal895, "string_literal895");
 				string_literal896=(IToken)Match(input,131,Follow._131_in_static_constructor_modifiers5936); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal896, "string_literal896");
-
+				
 				}
 				DebugLocation(760, 13);
 				string_literal897=(IToken)Match(input,180,Follow._180_in_static_constructor_modifiers5938); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal897, "string_literal897");
-
+				
 				}
 				DebugLocation(760, 22);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:760:22: ( 'unsafe' )?
@@ -38295,7 +38295,7 @@ adaptor.Create(retval, string_literal897, "string_literal897");
 					string_literal898=(IToken)Match(input,192,Follow._192_in_static_constructor_modifiers5940); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal898, "string_literal898");
-
+					
 					}
 
 					}
@@ -38317,19 +38317,19 @@ adaptor.Create(retval, string_literal898, "string_literal898");
 				string_literal899=(IToken)Match(input,192,Follow._192_in_static_constructor_modifiers5946); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal899, "string_literal899");
-
+				
 				}
 				DebugLocation(761, 13);
 				string_literal900=(IToken)Match(input,131,Follow._131_in_static_constructor_modifiers5948); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal900, "string_literal900");
-
+				
 				}
 				DebugLocation(761, 22);
 				string_literal901=(IToken)Match(input,180,Follow._180_in_static_constructor_modifiers5950); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal901, "string_literal901");
-
+				
 				}
 
 				}
@@ -38344,13 +38344,13 @@ adaptor.Create(retval, string_literal901, "string_literal901");
 				string_literal902=(IToken)Match(input,192,Follow._192_in_static_constructor_modifiers5955); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal902, "string_literal902");
-
+				
 				}
 				DebugLocation(762, 13);
 				string_literal903=(IToken)Match(input,180,Follow._180_in_static_constructor_modifiers5957); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal903, "string_literal903");
-
+				
 				}
 				DebugLocation(762, 22);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:762:22: ( 'extern' )?
@@ -38374,7 +38374,7 @@ adaptor.Create(retval, string_literal903, "string_literal903");
 					string_literal904=(IToken)Match(input,131,Follow._131_in_static_constructor_modifiers5959); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal904, "string_literal904");
-
+					
 					}
 
 					}
@@ -38396,13 +38396,13 @@ adaptor.Create(retval, string_literal904, "string_literal904");
 				string_literal905=(IToken)Match(input,180,Follow._180_in_static_constructor_modifiers5965); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal905, "string_literal905");
-
+				
 				}
 				DebugLocation(763, 13);
 				string_literal906=(IToken)Match(input,131,Follow._131_in_static_constructor_modifiers5967); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal906, "string_literal906");
-
+				
 				}
 				DebugLocation(763, 22);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:763:22: ( 'unsafe' )?
@@ -38426,7 +38426,7 @@ adaptor.Create(retval, string_literal906, "string_literal906");
 					string_literal907=(IToken)Match(input,192,Follow._192_in_static_constructor_modifiers5969); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal907, "string_literal907");
-
+					
 					}
 
 					}
@@ -38448,13 +38448,13 @@ adaptor.Create(retval, string_literal907, "string_literal907");
 				string_literal908=(IToken)Match(input,180,Follow._180_in_static_constructor_modifiers5975); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal908, "string_literal908");
-
+				
 				}
 				DebugLocation(764, 13);
 				string_literal909=(IToken)Match(input,192,Follow._192_in_static_constructor_modifiers5977); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal909, "string_literal909");
-
+				
 				}
 				DebugLocation(764, 22);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:764:22: ( 'extern' )?
@@ -38478,7 +38478,7 @@ adaptor.Create(retval, string_literal909, "string_literal909");
 					string_literal910=(IToken)Match(input,131,Follow._131_in_static_constructor_modifiers5979); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal910, "string_literal910");
-
+					
 					}
 
 					}
@@ -38500,7 +38500,7 @@ adaptor.Create(retval, string_literal910, "string_literal910");
 				string_literal911=(IToken)Match(input,131,Follow._131_in_static_constructor_modifiers5986); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal911, "string_literal911");
-
+				
 				}
 
 				}
@@ -38515,7 +38515,7 @@ adaptor.Create(retval, string_literal911, "string_literal911");
 				string_literal912=(IToken)Match(input,192,Follow._192_in_static_constructor_modifiers5991); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal912, "string_literal912");
-
+				
 				}
 
 				}
@@ -38530,7 +38530,7 @@ adaptor.Create(retval, string_literal912, "string_literal912");
 				string_literal913=(IToken)Match(input,180,Follow._180_in_static_constructor_modifiers5996); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal913, "string_literal913");
-
+				
 				}
 
 				}
@@ -38739,7 +38739,7 @@ adaptor.Create(retval, string_literal913, "string_literal913");
 			char_literal917=(IToken)Match(input,206,Follow._206_in_destructor_declaration6021); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal917, "char_literal917");
-
+			
 			}
 			DebugLocation(771, 45);
 			PushFollow(Follow._identifier_in_destructor_declaration6024);
@@ -38751,13 +38751,13 @@ adaptor.Create(retval, char_literal917, "char_literal917");
 			char_literal919=(IToken)Match(input,73,Follow._73_in_destructor_declaration6028); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal919, "char_literal919");
-
+			
 			}
 			DebugLocation(771, 64);
 			char_literal920=(IToken)Match(input,RPAREN,Follow._RPAREN_in_destructor_declaration6032); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal920, "char_literal920");
-
+			
 			}
 			DebugLocation(771, 71);
 			PushFollow(Follow._destructor_body_in_destructor_declaration6037);
@@ -38916,7 +38916,7 @@ adaptor.Create(retval, char_literal920, "char_literal920");
 					string_literal922=(IToken)Match(input,131,Follow._131_in_destructor_modifiers6046); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal922, "string_literal922");
-
+					
 					}
 
 					}
@@ -38929,7 +38929,7 @@ adaptor.Create(retval, string_literal922, "string_literal922");
 				string_literal923=(IToken)Match(input,192,Follow._192_in_destructor_modifiers6049); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal923, "string_literal923");
-
+				
 				}
 
 				}
@@ -38952,7 +38952,7 @@ adaptor.Create(retval, string_literal923, "string_literal923");
 				string_literal924=(IToken)Match(input,131,Follow._131_in_destructor_modifiers6056); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal924, "string_literal924");
-
+				
 				}
 				DebugLocation(774, 14);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:774:14: ( 'unsafe' )?
@@ -38976,7 +38976,7 @@ adaptor.Create(retval, string_literal924, "string_literal924");
 					string_literal925=(IToken)Match(input,192,Follow._192_in_destructor_modifiers6058); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal925, "string_literal925");
-
+					
 					}
 
 					}
@@ -39216,7 +39216,7 @@ adaptor.Create(retval, string_literal925, "string_literal925");
 				string_literal929=(IToken)Match(input,164,Follow._164_in_struct_declaration6088); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal929, "string_literal929");
-
+				
 				}
 
 				}
@@ -39229,7 +39229,7 @@ adaptor.Create(retval, string_literal929, "string_literal929");
 			string_literal930=(IToken)Match(input,182,Follow._182_in_struct_declaration6093); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal930, "string_literal930");
-
+			
 			}
 			DebugLocation(780, 60);
 			PushFollow(Follow._identifier_in_struct_declaration6097);
@@ -39358,7 +39358,7 @@ adaptor.Create(retval, string_literal930, "string_literal930");
 				char_literal936=(IToken)Match(input,SEMI,Follow._SEMI_in_struct_declaration6121); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal936, "char_literal936");
-
+				
 				}
 
 				}
@@ -39547,7 +39547,7 @@ adaptor.Create(retval, char_literal936, "char_literal936");
 			if (input.LA(1)==145||input.LA(1)==155||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==192)
 			{
 				input.Consume();
-adaptor.Create(retval, set938, "set938");
+				if (state.backtracking == 0) adaptor.Create(retval, set938, "set938");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -39626,7 +39626,7 @@ adaptor.Create(retval, set938, "set938");
 			char_literal939=(IToken)Match(input,84,Follow._84_in_struct_interfaces6167); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal939, "char_literal939");
-
+			
 			}
 			DebugLocation(787, 8);
 			PushFollow(Follow._interface_type_list_in_struct_interfaces6171);
@@ -39704,7 +39704,7 @@ adaptor.Create(retval, char_literal939, "char_literal939");
 			char_literal941=(IToken)Match(input,201,Follow._201_in_struct_body6178); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal941, "char_literal941");
-
+			
 			}
 			DebugLocation(789, 8);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:789:8: ( struct_member_declarations )?
@@ -39741,7 +39741,7 @@ adaptor.Create(retval, char_literal941, "char_literal941");
 			char_literal943=(IToken)Match(input,205,Follow._205_in_struct_body6187); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal943, "char_literal943");
-
+			
 			}
 
 			}
@@ -40909,7 +40909,7 @@ adaptor.Create(retval, char_literal943, "char_literal943");
 			string_literal958=(IToken)Match(input,134,Follow._134_in_fixed_size_buffer_declaration6267); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal958, "string_literal958");
-
+			
 			}
 			DebugLocation(805, 51);
 			PushFollow(Follow._type_in_fixed_size_buffer_declaration6269);
@@ -40927,7 +40927,7 @@ adaptor.Create(retval, string_literal958, "string_literal958");
 			char_literal961=(IToken)Match(input,SEMI,Follow._SEMI_in_fixed_size_buffer_declaration6273); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal961, "char_literal961");
-
+			
 			}
 
 			}
@@ -41109,7 +41109,7 @@ adaptor.Create(retval, char_literal961, "char_literal961");
 			if (input.LA(1)==145||input.LA(1)==155||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==192)
 			{
 				input.Consume();
-adaptor.Create(retval, set963, "set963");
+				if (state.backtracking == 0) adaptor.Create(retval, set963, "set963");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -41217,7 +41217,7 @@ adaptor.Create(retval, set963, "set963");
 					char_literal965=(IToken)Match(input,79,Follow._79_in_fixed_size_buffer_declarators6320); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal965, "char_literal965");
-
+					
 					}
 					DebugLocation(811, 36);
 					PushFollow(Follow._fixed_size_buffer_declarator_in_fixed_size_buffer_declarators6322);
@@ -41316,7 +41316,7 @@ adaptor.Create(retval, char_literal965, "char_literal965");
 			char_literal968=(IToken)Match(input,96,Follow._96_in_fixed_size_buffer_declarator6333); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal968, "char_literal968");
-
+			
 			}
 			DebugLocation(813, 17);
 			PushFollow(Follow._constant_expression_in_fixed_size_buffer_declarator6335);
@@ -41328,7 +41328,7 @@ adaptor.Create(retval, char_literal968, "char_literal968");
 			char_literal970=(IToken)Match(input,97,Follow._97_in_fixed_size_buffer_declarator6337); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal970, "char_literal970");
-
+			
 			}
 
 			}
@@ -41488,7 +41488,7 @@ adaptor.Create(retval, char_literal970, "char_literal970");
 				string_literal973=(IToken)Match(input,164,Follow._164_in_interface_declaration6356); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal973, "string_literal973");
-
+				
 				}
 
 				}
@@ -41501,7 +41501,7 @@ adaptor.Create(retval, string_literal973, "string_literal973");
 			string_literal974=(IToken)Match(input,144,Follow._144_in_interface_declaration6361); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal974, "string_literal974");
-
+			
 			}
 			DebugLocation(817, 66);
 			PushFollow(Follow._identifier_in_interface_declaration6365);
@@ -41630,7 +41630,7 @@ adaptor.Create(retval, string_literal974, "string_literal974");
 				char_literal980=(IToken)Match(input,SEMI,Follow._SEMI_in_interface_declaration6392); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal980, "char_literal980");
-
+				
 				}
 
 				}
@@ -41819,7 +41819,7 @@ adaptor.Create(retval, char_literal980, "char_literal980");
 			if (input.LA(1)==145||input.LA(1)==155||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169)||input.LA(1)==192)
 			{
 				input.Consume();
-adaptor.Create(retval, set982, "set982");
+				if (state.backtracking == 0) adaptor.Create(retval, set982, "set982");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -41898,7 +41898,7 @@ adaptor.Create(retval, set982, "set982");
 			char_literal983=(IToken)Match(input,84,Follow._84_in_interface_base6444); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal983, "char_literal983");
-
+			
 			}
 			DebugLocation(825, 9);
 			PushFollow(Follow._interface_type_list_in_interface_base6446);
@@ -41976,7 +41976,7 @@ adaptor.Create(retval, char_literal983, "char_literal983");
 			char_literal985=(IToken)Match(input,201,Follow._201_in_interface_body6454); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal985, "char_literal985");
-
+			
 			}
 			DebugLocation(827, 8);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:827:8: ( interface_member_declarations )?
@@ -42013,7 +42013,7 @@ adaptor.Create(retval, char_literal985, "char_literal985");
 			char_literal987=(IToken)Match(input,205,Follow._205_in_interface_body6463); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal987, "char_literal987");
-
+			
 			}
 
 			}
@@ -42577,7 +42577,7 @@ adaptor.Create(retval, char_literal987, "char_literal987");
 				string_literal994=(IToken)Match(input,155,Follow._155_in_interface_method_declaration6511); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal994, "string_literal994");
-
+				
 				}
 
 				}
@@ -42733,7 +42733,7 @@ adaptor.Create(retval, string_literal994, "string_literal994");
 			char_literal1003=(IToken)Match(input,SEMI,Follow._SEMI_in_interface_method_declaration6556); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1003, "char_literal1003");
-
+			
 			}
 
 			}
@@ -42859,7 +42859,7 @@ adaptor.Create(retval, char_literal1003, "char_literal1003");
 				string_literal1005=(IToken)Match(input,155,Follow._155_in_interface_property_declaration6570); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1005, "string_literal1005");
-
+				
 				}
 
 				}
@@ -42884,7 +42884,7 @@ adaptor.Create(retval, string_literal1005, "string_literal1005");
 			char_literal1008=(IToken)Match(input,201,Follow._201_in_interface_property_declaration6583); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1008, "char_literal1008");
-
+			
 			}
 			DebugLocation(839, 51);
 			PushFollow(Follow._interface_accessor_declarations_in_interface_property_declaration6587);
@@ -42896,7 +42896,7 @@ adaptor.Create(retval, char_literal1008, "char_literal1008");
 			char_literal1010=(IToken)Match(input,205,Follow._205_in_interface_property_declaration6591); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1010, "char_literal1010");
-
+			
 			}
 
 			}
@@ -43197,13 +43197,13 @@ adaptor.Create(retval, char_literal1010, "char_literal1010");
 			string_literal1016=(IToken)Match(input,GET,Follow._GET_in_interface_get_accessor_declaration6627); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1016, "string_literal1016");
-
+			
 			}
 			DebugLocation(844, 24);
 			char_literal1017=(IToken)Match(input,SEMI,Follow._SEMI_in_interface_get_accessor_declaration6631); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1017, "char_literal1017");
-
+			
 			}
 
 			}
@@ -43306,13 +43306,13 @@ adaptor.Create(retval, char_literal1017, "char_literal1017");
 			string_literal1019=(IToken)Match(input,SET,Follow._SET_in_interface_set_accessor_declaration6646); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1019, "string_literal1019");
-
+			
 			}
 			DebugLocation(846, 24);
 			char_literal1020=(IToken)Match(input,SEMI,Follow._SEMI_in_interface_set_accessor_declaration6650); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1020, "char_literal1020");
-
+			
 			}
 
 			}
@@ -43437,7 +43437,7 @@ adaptor.Create(retval, char_literal1020, "char_literal1020");
 				string_literal1022=(IToken)Match(input,155,Follow._155_in_interface_event_declaration6666); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1022, "string_literal1022");
-
+				
 				}
 
 				}
@@ -43450,7 +43450,7 @@ adaptor.Create(retval, string_literal1022, "string_literal1022");
 			string_literal1023=(IToken)Match(input,129,Follow._129_in_interface_event_declaration6671); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1023, "string_literal1023");
-
+			
 			}
 			DebugLocation(848, 35);
 			PushFollow(Follow._type_in_interface_event_declaration6675);
@@ -43468,7 +43468,7 @@ adaptor.Create(retval, string_literal1023, "string_literal1023");
 			char_literal1026=(IToken)Match(input,SEMI,Follow._SEMI_in_interface_event_declaration6683); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1026, "char_literal1026");
-
+			
 			}
 
 			}
@@ -43600,7 +43600,7 @@ adaptor.Create(retval, char_literal1026, "char_literal1026");
 				string_literal1028=(IToken)Match(input,155,Follow._155_in_interface_indexer_declaration6699); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1028, "string_literal1028");
-
+				
 				}
 
 				}
@@ -43619,13 +43619,13 @@ adaptor.Create(retval, string_literal1028, "string_literal1028");
 			string_literal1030=(IToken)Match(input,184,Follow._184_in_interface_indexer_declaration6709); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1030, "string_literal1030");
-
+			
 			}
 			DebugLocation(850, 43);
 			char_literal1031=(IToken)Match(input,96,Follow._96_in_interface_indexer_declaration6713); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1031, "char_literal1031");
-
+			
 			}
 			DebugLocation(850, 49);
 			PushFollow(Follow._formal_parameter_list_in_interface_indexer_declaration6717);
@@ -43637,13 +43637,13 @@ adaptor.Create(retval, char_literal1031, "char_literal1031");
 			char_literal1033=(IToken)Match(input,97,Follow._97_in_interface_indexer_declaration6721); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1033, "char_literal1033");
-
+			
 			}
 			DebugLocation(850, 79);
 			char_literal1034=(IToken)Match(input,201,Follow._201_in_interface_indexer_declaration6725); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1034, "char_literal1034");
-
+			
 			}
 			DebugLocation(850, 85);
 			PushFollow(Follow._interface_accessor_declarations_in_interface_indexer_declaration6729);
@@ -43655,7 +43655,7 @@ adaptor.Create(retval, char_literal1034, "char_literal1034");
 			char_literal1036=(IToken)Match(input,205,Follow._205_in_interface_indexer_declaration6733); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1036, "char_literal1036");
-
+			
 			}
 
 			}
@@ -43793,7 +43793,7 @@ adaptor.Create(retval, char_literal1036, "char_literal1036");
 			string_literal1039=(IToken)Match(input,ENUM,Follow._ENUM_in_enum_declaration6754); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1039, "string_literal1039");
-
+			
 			}
 			DebugLocation(855, 43);
 			PushFollow(Follow._identifier_in_enum_declaration6758);
@@ -43860,7 +43860,7 @@ adaptor.Create(retval, string_literal1039, "string_literal1039");
 				char_literal1043=(IToken)Match(input,SEMI,Follow._SEMI_in_enum_declaration6771); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1043, "char_literal1043");
-
+				
 				}
 
 				}
@@ -43937,7 +43937,7 @@ adaptor.Create(retval, char_literal1043, "char_literal1043");
 			char_literal1044=(IToken)Match(input,84,Follow._84_in_enum_base6782); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1044, "char_literal1044");
-
+			
 			}
 			DebugLocation(858, 8);
 			PushFollow(Follow._integral_type_in_enum_base6786);
@@ -44017,7 +44017,7 @@ adaptor.Create(retval, char_literal1044, "char_literal1044");
 			char_literal1046=(IToken)Match(input,201,Follow._201_in_enum_body6794); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1046, "char_literal1046");
-
+			
 			}
 			DebugLocation(860, 6);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:860:6: ( enum_member_declarations ( ',' )? )?
@@ -44065,7 +44065,7 @@ adaptor.Create(retval, char_literal1046, "char_literal1046");
 					char_literal1048=(IToken)Match(input,79,Follow._79_in_enum_body6799); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1048, "char_literal1048");
-
+					
 					}
 
 					}
@@ -44085,7 +44085,7 @@ adaptor.Create(retval, char_literal1048, "char_literal1048");
 			char_literal1049=(IToken)Match(input,205,Follow._205_in_enum_body6806); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1049, "char_literal1049");
-
+			
 			}
 
 			}
@@ -44191,7 +44191,7 @@ adaptor.Create(retval, char_literal1049, "char_literal1049");
 					char_literal1051=(IToken)Match(input,79,Follow._79_in_enum_member_declarations6817); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1051, "char_literal1051");
-
+					
 					}
 					DebugLocation(862, 31);
 					PushFollow(Follow._enum_member_declaration_in_enum_member_declarations6819);
@@ -44338,7 +44338,7 @@ adaptor.Create(retval, char_literal1051, "char_literal1051");
 				char_literal1055=(IToken)Match(input,90,Follow._90_in_enum_member_declaration6839); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1055, "char_literal1055");
-
+				
 				}
 				DebugLocation(864, 36);
 				PushFollow(Follow._expression_in_enum_member_declaration6843);
@@ -44533,7 +44533,7 @@ adaptor.Create(retval, char_literal1055, "char_literal1055");
 			if (input.LA(1)==145||input.LA(1)==155||input.LA(1)==166||(input.LA(1)>=168 && input.LA(1)<=169))
 			{
 				input.Consume();
-adaptor.Create(retval, set1058, "set1058");
+				if (state.backtracking == 0) adaptor.Create(retval, set1058, "set1058");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -45428,13 +45428,13 @@ adaptor.Create(retval, set1058, "set1058");
 			string_literal1075=(IToken)Match(input,134,Follow._134_in_fixed_statement6977); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1075, "string_literal1075");
-
+			
 			}
 			DebugLocation(891, 12);
 			char_literal1076=(IToken)Match(input,73,Follow._73_in_fixed_statement6981); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1076, "char_literal1076");
-
+			
 			}
 			DebugLocation(891, 18);
 			PushFollow(Follow._pointer_type_in_fixed_statement6985);
@@ -45452,7 +45452,7 @@ adaptor.Create(retval, char_literal1076, "char_literal1076");
 			char_literal1079=(IToken)Match(input,RPAREN,Follow._RPAREN_in_fixed_statement6991); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1079, "char_literal1079");
-
+			
 			}
 			DebugLocation(891, 65);
 			PushFollow(Follow._embedded_statement_in_fixed_statement6995);
@@ -45557,7 +45557,7 @@ adaptor.Create(retval, char_literal1079, "char_literal1079");
 					char_literal1082=(IToken)Match(input,79,Follow._79_in_fixed_pointer_declarators7008); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1082, "char_literal1082");
-
+					
 					}
 					DebugLocation(893, 36);
 					PushFollow(Follow._fixed_pointer_declarator_in_fixed_pointer_declarators7012);
@@ -45654,7 +45654,7 @@ adaptor.Create(retval, char_literal1082, "char_literal1082");
 			char_literal1085=(IToken)Match(input,90,Follow._90_in_fixed_pointer_declarator7026); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1085, "char_literal1085");
-
+			
 			}
 			DebugLocation(895, 21);
 			PushFollow(Follow._fixed_pointer_initializer_in_fixed_pointer_declarator7030);
@@ -45778,7 +45778,7 @@ adaptor.Create(retval, char_literal1085, "char_literal1085");
 				char_literal1087=(IToken)Match(input,71,Follow._71_in_fixed_pointer_initializer7038); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1087, "char_literal1087");
-
+				
 				}
 				DebugLocation(897, 8);
 				PushFollow(Follow._variable_reference_in_fixed_pointer_initializer7042);
@@ -45871,7 +45871,7 @@ adaptor.Create(retval, char_literal1087, "char_literal1087");
 			string_literal1090=(IToken)Match(input,192,Follow._192_in_unsafe_statement7057); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1090, "string_literal1090");
-
+			
 			}
 			DebugLocation(900, 13);
 			PushFollow(Follow._block_in_unsafe_statement7061);
@@ -45974,7 +45974,7 @@ adaptor.Create(retval, string_literal1090, "string_literal1090");
 				char_literal1092=(IToken)Match(input,SEMI,Follow._SEMI_in_block7068); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1092, "char_literal1092");
-
+				
 				}
 
 				}
@@ -45989,7 +45989,7 @@ adaptor.Create(retval, char_literal1092, "char_literal1092");
 				char_literal1093=(IToken)Match(input,201,Follow._201_in_block7074); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1093, "char_literal1093");
-
+				
 				}
 				DebugLocation(903, 10);
 				// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:903:10: ( statement_list )?
@@ -46026,7 +46026,7 @@ adaptor.Create(retval, char_literal1093, "char_literal1093");
 				char_literal1095=(IToken)Match(input,205,Follow._205_in_block7083); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1095, "char_literal1095");
-
+				
 				}
 
 				}
@@ -46219,7 +46219,7 @@ adaptor.Create(retval, char_literal1095, "char_literal1095");
 			char_literal1097=(IToken)Match(input,SEMI,Follow._SEMI_in_empty_statement7100); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1097, "char_literal1097");
-
+			
 			}
 
 			}
@@ -46296,7 +46296,7 @@ adaptor.Create(retval, char_literal1097, "char_literal1097");
 			char_literal1099=(IToken)Match(input,84,Follow._84_in_labeled_statement7112); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1099, "char_literal1099");
-
+			
 			}
 			DebugLocation(909, 21);
 			PushFollow(Follow._statement_in_labeled_statement7116);
@@ -46428,7 +46428,7 @@ adaptor.Create(retval, char_literal1099, "char_literal1099");
 			char_literal1103=(IToken)Match(input,SEMI,Follow._SEMI_in_declaration_statement7134); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1103, "char_literal1103");
-
+			
 			}
 
 			}
@@ -46701,7 +46701,7 @@ adaptor.Create(retval, char_literal1103, "char_literal1103");
 				string_literal1107=(IToken)Match(input,194,Follow._194_in_local_variable_type7159); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1107, "string_literal1107");
-
+				
 				}
 
 				}
@@ -46716,7 +46716,7 @@ adaptor.Create(retval, string_literal1107, "string_literal1107");
 				string_literal1108=(IToken)Match(input,127,Follow._127_in_local_variable_type7165); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1108, "string_literal1108");
-
+				
 				}
 
 				}
@@ -46817,7 +46817,7 @@ adaptor.Create(retval, string_literal1108, "string_literal1108");
 					char_literal1110=(IToken)Match(input,79,Follow._79_in_local_variable_declarators7175); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1110, "char_literal1110");
-
+					
 					}
 					DebugLocation(920, 33);
 					PushFollow(Follow._local_variable_declarator_in_local_variable_declarators7177);
@@ -46932,7 +46932,7 @@ adaptor.Create(retval, char_literal1110, "char_literal1110");
 				char_literal1113=(IToken)Match(input,90,Follow._90_in_local_variable_declarator7190); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1113, "char_literal1113");
-
+				
 				}
 				DebugLocation(922, 20);
 				PushFollow(Follow._local_variable_initializer_in_local_variable_declarator7194);
@@ -47229,7 +47229,7 @@ adaptor.Create(retval, char_literal1113, "char_literal1113");
 			string_literal1118=(IToken)Match(input,179,Follow._179_in_stackalloc_initializer7225); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1118, "string_literal1118");
-
+			
 			}
 			DebugLocation(929, 17);
 			PushFollow(Follow._unmanaged_type_in_stackalloc_initializer7229);
@@ -47241,7 +47241,7 @@ adaptor.Create(retval, string_literal1118, "string_literal1118");
 			char_literal1120=(IToken)Match(input,96,Follow._96_in_stackalloc_initializer7233); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1120, "char_literal1120");
-
+			
 			}
 			DebugLocation(929, 40);
 			PushFollow(Follow._expression_in_stackalloc_initializer7237);
@@ -47253,7 +47253,7 @@ adaptor.Create(retval, char_literal1120, "char_literal1120");
 			char_literal1122=(IToken)Match(input,97,Follow._97_in_stackalloc_initializer7241); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1122, "char_literal1122");
-
+			
 			}
 
 			}
@@ -47324,7 +47324,7 @@ adaptor.Create(retval, char_literal1122, "char_literal1122");
 			string_literal1123=(IToken)Match(input,119,Follow._119_in_local_constant_declaration7249); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1123, "string_literal1123");
-
+			
 			}
 			DebugLocation(931, 12);
 			PushFollow(Follow._type_in_local_constant_declaration7253);
@@ -47435,7 +47435,7 @@ adaptor.Create(retval, string_literal1123, "string_literal1123");
 					char_literal1127=(IToken)Match(input,79,Follow._79_in_constant_declarators7268); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1127, "char_literal1127");
-
+					
 					}
 					DebugLocation(933, 27);
 					PushFollow(Follow._constant_declarator_in_constant_declarators7270);
@@ -47550,7 +47550,7 @@ adaptor.Create(retval, char_literal1127, "char_literal1127");
 				char_literal1130=(IToken)Match(input,90,Follow._90_in_constant_declarator7285); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1130, "char_literal1130");
-
+				
 				}
 				DebugLocation(935, 22);
 				PushFollow(Follow._constant_expression_in_constant_declarator7289);
@@ -47639,7 +47639,7 @@ adaptor.Create(retval, char_literal1130, "char_literal1130");
 			char_literal1133=(IToken)Match(input,SEMI,Follow._SEMI_in_expression_statement7304); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1133, "char_literal1133");
-
+			
 			}
 
 			}
@@ -48477,13 +48477,13 @@ adaptor.Create(retval, char_literal1133, "char_literal1133");
 			string_literal1140=(IToken)Match(input,IF,Follow._IF_in_if_statement7347); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1140, "string_literal1140");
-
+			
 			}
 			DebugLocation(948, 9);
 			char_literal1141=(IToken)Match(input,73,Follow._73_in_if_statement7351); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1141, "char_literal1141");
-
+			
 			}
 			DebugLocation(948, 15);
 			PushFollow(Follow._boolean_expression_in_if_statement7355);
@@ -48495,7 +48495,7 @@ adaptor.Create(retval, char_literal1141, "char_literal1141");
 			char_literal1143=(IToken)Match(input,RPAREN,Follow._RPAREN_in_if_statement7359); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1143, "char_literal1143");
-
+			
 			}
 			DebugLocation(948, 42);
 			PushFollow(Follow._embedded_statement_in_if_statement7363);
@@ -48607,7 +48607,7 @@ adaptor.Create(retval, char_literal1143, "char_literal1143");
 			string_literal1146=(IToken)Match(input,ELSE,Follow._ELSE_in_else_statement7377); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1146, "string_literal1146");
-
+			
 			}
 			DebugLocation(951, 11);
 			PushFollow(Follow._embedded_statement_in_else_statement7381);
@@ -48688,13 +48688,13 @@ adaptor.Create(retval, string_literal1146, "string_literal1146");
 			string_literal1148=(IToken)Match(input,183,Follow._183_in_switch_statement7391); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1148, "string_literal1148");
-
+			
 			}
 			DebugLocation(954, 13);
 			char_literal1149=(IToken)Match(input,73,Follow._73_in_switch_statement7395); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1149, "char_literal1149");
-
+			
 			}
 			DebugLocation(954, 19);
 			PushFollow(Follow._expression_in_switch_statement7399);
@@ -48706,7 +48706,7 @@ adaptor.Create(retval, char_literal1149, "char_literal1149");
 			char_literal1151=(IToken)Match(input,RPAREN,Follow._RPAREN_in_switch_statement7403); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1151, "char_literal1151");
-
+			
 			}
 			DebugLocation(954, 38);
 			PushFollow(Follow._switch_block_in_switch_statement7407);
@@ -48784,7 +48784,7 @@ adaptor.Create(retval, char_literal1151, "char_literal1151");
 			char_literal1153=(IToken)Match(input,201,Follow._201_in_switch_block7415); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1153, "char_literal1153");
-
+			
 			}
 			DebugLocation(956, 8);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:956:8: ( switch_sections )?
@@ -48821,7 +48821,7 @@ adaptor.Create(retval, char_literal1153, "char_literal1153");
 			char_literal1155=(IToken)Match(input,205,Follow._205_in_switch_block7424); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1155, "char_literal1155");
-
+			
 			}
 
 			}
@@ -49233,7 +49233,7 @@ adaptor.Create(retval, char_literal1155, "char_literal1155");
 				string_literal1160=(IToken)Match(input,114,Follow._114_in_switch_label7463); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1160, "string_literal1160");
-
+				
 				}
 				DebugLocation(964, 12);
 				PushFollow(Follow._constant_expression_in_switch_label7467);
@@ -49245,7 +49245,7 @@ adaptor.Create(retval, string_literal1160, "string_literal1160");
 				char_literal1162=(IToken)Match(input,84,Follow._84_in_switch_label7471); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1162, "char_literal1162");
-
+				
 				}
 
 				}
@@ -49268,13 +49268,13 @@ adaptor.Create(retval, char_literal1162, "char_literal1162");
 				string_literal1163=(IToken)Match(input,122,Follow._122_in_switch_label7478); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1163, "string_literal1163");
-
+				
 				}
 				DebugLocation(965, 17);
 				char_literal1164=(IToken)Match(input,84,Follow._84_in_switch_label7482); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1164, "char_literal1164");
-
+				
 				}
 
 				}
@@ -49509,13 +49509,13 @@ adaptor.Create(retval, char_literal1164, "char_literal1164");
 			string_literal1169=(IToken)Match(input,199,Follow._199_in_while_statement7514); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1169, "string_literal1169");
-
+			
 			}
 			DebugLocation(972, 12);
 			char_literal1170=(IToken)Match(input,73,Follow._73_in_while_statement7518); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1170, "char_literal1170");
-
+			
 			}
 			DebugLocation(972, 18);
 			PushFollow(Follow._boolean_expression_in_while_statement7522);
@@ -49527,7 +49527,7 @@ adaptor.Create(retval, char_literal1170, "char_literal1170");
 			char_literal1172=(IToken)Match(input,RPAREN,Follow._RPAREN_in_while_statement7526); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1172, "char_literal1172");
-
+			
 			}
 			DebugLocation(972, 45);
 			PushFollow(Follow._embedded_statement_in_while_statement7530);
@@ -49612,7 +49612,7 @@ adaptor.Create(retval, char_literal1172, "char_literal1172");
 			string_literal1174=(IToken)Match(input,125,Follow._125_in_do_statement7538); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1174, "string_literal1174");
-
+			
 			}
 			DebugLocation(974, 9);
 			PushFollow(Follow._embedded_statement_in_do_statement7542);
@@ -49624,13 +49624,13 @@ adaptor.Create(retval, string_literal1174, "string_literal1174");
 			string_literal1176=(IToken)Match(input,199,Follow._199_in_do_statement7546); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1176, "string_literal1176");
-
+			
 			}
 			DebugLocation(974, 40);
 			char_literal1177=(IToken)Match(input,73,Follow._73_in_do_statement7550); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1177, "char_literal1177");
-
+			
 			}
 			DebugLocation(974, 46);
 			PushFollow(Follow._boolean_expression_in_do_statement7554);
@@ -49642,13 +49642,13 @@ adaptor.Create(retval, char_literal1177, "char_literal1177");
 			char_literal1179=(IToken)Match(input,RPAREN,Follow._RPAREN_in_do_statement7558); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1179, "char_literal1179");
-
+			
 			}
 			DebugLocation(974, 73);
 			char_literal1180=(IToken)Match(input,SEMI,Follow._SEMI_in_do_statement7562); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1180, "char_literal1180");
-
+			
 			}
 
 			}
@@ -49729,13 +49729,13 @@ adaptor.Create(retval, char_literal1180, "char_literal1180");
 			string_literal1181=(IToken)Match(input,136,Follow._136_in_for_statement7570); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1181, "string_literal1181");
-
+			
 			}
 			DebugLocation(976, 10);
 			char_literal1182=(IToken)Match(input,73,Follow._73_in_for_statement7574); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1182, "char_literal1182");
-
+			
 			}
 			DebugLocation(976, 16);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:976:16: ( for_initializer )?
@@ -49772,7 +49772,7 @@ adaptor.Create(retval, char_literal1182, "char_literal1182");
 			char_literal1184=(IToken)Match(input,SEMI,Follow._SEMI_in_for_statement7583); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1184, "char_literal1184");
-
+			
 			}
 			DebugLocation(976, 41);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:976:41: ( for_condition )?
@@ -49809,7 +49809,7 @@ adaptor.Create(retval, char_literal1184, "char_literal1184");
 			char_literal1186=(IToken)Match(input,SEMI,Follow._SEMI_in_for_statement7592); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1186, "char_literal1186");
-
+			
 			}
 			DebugLocation(976, 64);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:976:64: ( for_iterator )?
@@ -49846,7 +49846,7 @@ adaptor.Create(retval, char_literal1186, "char_literal1186");
 			char_literal1188=(IToken)Match(input,RPAREN,Follow._RPAREN_in_for_statement7601); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1188, "char_literal1188");
-
+			
 			}
 			DebugLocation(976, 86);
 			PushFollow(Follow._embedded_statement_in_for_statement7605);
@@ -50336,7 +50336,7 @@ adaptor.Create(retval, char_literal1188, "char_literal1188");
 					char_literal1195=(IToken)Match(input,79,Follow._79_in_statement_expression_list7645); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1195, "char_literal1195");
-
+					
 					}
 					DebugLocation(985, 28);
 					PushFollow(Follow._statement_expression_in_statement_expression_list7647);
@@ -50435,13 +50435,13 @@ adaptor.Create(retval, char_literal1195, "char_literal1195");
 			string_literal1197=(IToken)Match(input,137,Follow._137_in_foreach_statement7657); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1197, "string_literal1197");
-
+			
 			}
 			DebugLocation(987, 14);
 			char_literal1198=(IToken)Match(input,73,Follow._73_in_foreach_statement7661); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1198, "char_literal1198");
-
+			
 			}
 			DebugLocation(987, 20);
 			PushFollow(Follow._local_variable_type_in_foreach_statement7665);
@@ -50459,7 +50459,7 @@ adaptor.Create(retval, char_literal1198, "char_literal1198");
 			string_literal1201=(IToken)Match(input,142,Follow._142_in_foreach_statement7673); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1201, "string_literal1201");
-
+			
 			}
 			DebugLocation(987, 62);
 			PushFollow(Follow._expression_in_foreach_statement7677);
@@ -50471,7 +50471,7 @@ adaptor.Create(retval, string_literal1201, "string_literal1201");
 			char_literal1203=(IToken)Match(input,RPAREN,Follow._RPAREN_in_foreach_statement7681); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1203, "char_literal1203");
-
+			
 			}
 			DebugLocation(987, 81);
 			PushFollow(Follow._embedded_statement_in_foreach_statement7685);
@@ -50724,13 +50724,13 @@ adaptor.Create(retval, char_literal1203, "char_literal1203");
 			string_literal1210=(IToken)Match(input,111,Follow._111_in_break_statement7721); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1210, "string_literal1210");
-
+			
 			}
 			DebugLocation(995, 12);
 			char_literal1211=(IToken)Match(input,SEMI,Follow._SEMI_in_break_statement7725); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1211, "char_literal1211");
-
+			
 			}
 
 			}
@@ -50801,13 +50801,13 @@ adaptor.Create(retval, char_literal1211, "char_literal1211");
 			string_literal1212=(IToken)Match(input,120,Follow._120_in_continue_statement7733); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1212, "string_literal1212");
-
+			
 			}
 			DebugLocation(997, 15);
 			char_literal1213=(IToken)Match(input,SEMI,Follow._SEMI_in_continue_statement7737); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1213, "char_literal1213");
-
+			
 			}
 
 			}
@@ -50974,7 +50974,7 @@ adaptor.Create(retval, char_literal1213, "char_literal1213");
 				string_literal1214=(IToken)Match(input,139,Follow._139_in_goto_statement7746); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1214, "string_literal1214");
-
+				
 				}
 				DebugLocation(999, 12);
 				PushFollow(Follow._identifier_in_goto_statement7750);
@@ -50986,7 +50986,7 @@ adaptor.Create(retval, string_literal1214, "string_literal1214");
 				char_literal1216=(IToken)Match(input,SEMI,Follow._SEMI_in_goto_statement7754); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1216, "char_literal1216");
-
+				
 				}
 
 				}
@@ -51009,13 +51009,13 @@ adaptor.Create(retval, char_literal1216, "char_literal1216");
 				string_literal1217=(IToken)Match(input,139,Follow._139_in_goto_statement7761); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1217, "string_literal1217");
-
+				
 				}
 				DebugLocation(1000, 14);
 				string_literal1218=(IToken)Match(input,114,Follow._114_in_goto_statement7765); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1218, "string_literal1218");
-
+				
 				}
 				DebugLocation(1000, 23);
 				PushFollow(Follow._constant_expression_in_goto_statement7769);
@@ -51027,7 +51027,7 @@ adaptor.Create(retval, string_literal1218, "string_literal1218");
 				char_literal1220=(IToken)Match(input,SEMI,Follow._SEMI_in_goto_statement7773); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1220, "char_literal1220");
-
+				
 				}
 
 				}
@@ -51050,19 +51050,19 @@ adaptor.Create(retval, char_literal1220, "char_literal1220");
 				string_literal1221=(IToken)Match(input,139,Follow._139_in_goto_statement7780); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1221, "string_literal1221");
-
+				
 				}
 				DebugLocation(1001, 14);
 				string_literal1222=(IToken)Match(input,122,Follow._122_in_goto_statement7784); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1222, "string_literal1222");
-
+				
 				}
 				DebugLocation(1001, 26);
 				char_literal1223=(IToken)Match(input,SEMI,Follow._SEMI_in_goto_statement7788); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1223, "char_literal1223");
-
+				
 				}
 
 				}
@@ -51139,7 +51139,7 @@ adaptor.Create(retval, char_literal1223, "char_literal1223");
 			string_literal1224=(IToken)Match(input,173,Follow._173_in_return_statement7797); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1224, "string_literal1224");
-
+			
 			}
 			DebugLocation(1003, 13);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:1003:13: ( expression )?
@@ -51176,7 +51176,7 @@ adaptor.Create(retval, string_literal1224, "string_literal1224");
 			char_literal1226=(IToken)Match(input,SEMI,Follow._SEMI_in_return_statement7806); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1226, "char_literal1226");
-
+			
 			}
 
 			}
@@ -51248,7 +51248,7 @@ adaptor.Create(retval, char_literal1226, "char_literal1226");
 			string_literal1227=(IToken)Match(input,185,Follow._185_in_throw_statement7814); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1227, "string_literal1227");
-
+			
 			}
 			DebugLocation(1005, 12);
 			// C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\CSharp\\cs.g:1005:12: ( expression )?
@@ -51285,7 +51285,7 @@ adaptor.Create(retval, string_literal1227, "string_literal1227");
 			char_literal1229=(IToken)Match(input,SEMI,Follow._SEMI_in_throw_statement7823); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1229, "char_literal1229");
-
+			
 			}
 
 			}
@@ -51401,7 +51401,7 @@ adaptor.Create(retval, char_literal1229, "char_literal1229");
 				string_literal1230=(IToken)Match(input,186,Follow._186_in_try_statement7837); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1230, "string_literal1230");
-
+				
 				}
 				DebugLocation(1007, 16);
 				PushFollow(Follow._block_in_try_statement7841);
@@ -51467,7 +51467,7 @@ adaptor.Create(retval, string_literal1230, "string_literal1230");
 				string_literal1234=(IToken)Match(input,186,Follow._186_in_try_statement7857); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1234, "string_literal1234");
-
+				
 				}
 				DebugLocation(1008, 13);
 				PushFollow(Follow._block_in_try_statement7861);
@@ -51884,13 +51884,13 @@ adaptor.Create(retval, string_literal1234, "string_literal1234");
 			string_literal1242=(IToken)Match(input,115,Follow._115_in_specific_catch_clause7909); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1242, "string_literal1242");
-
+			
 			}
 			DebugLocation(1015, 12);
 			char_literal1243=(IToken)Match(input,73,Follow._73_in_specific_catch_clause7913); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1243, "char_literal1243");
-
+			
 			}
 			DebugLocation(1015, 18);
 			PushFollow(Follow._class_type_in_specific_catch_clause7917);
@@ -51933,7 +51933,7 @@ adaptor.Create(retval, char_literal1243, "char_literal1243");
 			char_literal1246=(IToken)Match(input,RPAREN,Follow._RPAREN_in_specific_catch_clause7926); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1246, "char_literal1246");
-
+			
 			}
 			DebugLocation(1015, 51);
 			PushFollow(Follow._block_in_specific_catch_clause7930);
@@ -52009,7 +52009,7 @@ adaptor.Create(retval, char_literal1246, "char_literal1246");
 			string_literal1248=(IToken)Match(input,115,Follow._115_in_general_catch_clause7938); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1248, "string_literal1248");
-
+			
 			}
 			DebugLocation(1017, 12);
 			PushFollow(Follow._block_in_general_catch_clause7942);
@@ -52085,7 +52085,7 @@ adaptor.Create(retval, string_literal1248, "string_literal1248");
 			string_literal1250=(IToken)Match(input,133,Follow._133_in_finally_clause7950); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1250, "string_literal1250");
-
+			
 			}
 			DebugLocation(1019, 14);
 			PushFollow(Follow._block_in_finally_clause7954);
@@ -52161,7 +52161,7 @@ adaptor.Create(retval, string_literal1250, "string_literal1250");
 			string_literal1252=(IToken)Match(input,117,Follow._117_in_checked_statement7962); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1252, "string_literal1252");
-
+			
 			}
 			DebugLocation(1021, 14);
 			PushFollow(Follow._block_in_checked_statement7966);
@@ -52237,7 +52237,7 @@ adaptor.Create(retval, string_literal1252, "string_literal1252");
 			string_literal1254=(IToken)Match(input,191,Follow._191_in_unchecked_statement7974); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1254, "string_literal1254");
-
+			
 			}
 			DebugLocation(1023, 16);
 			PushFollow(Follow._block_in_unchecked_statement7978);
@@ -52318,13 +52318,13 @@ adaptor.Create(retval, string_literal1254, "string_literal1254");
 			string_literal1256=(IToken)Match(input,150,Follow._150_in_lock_statement7986); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1256, "string_literal1256");
-
+			
 			}
 			DebugLocation(1025, 11);
 			char_literal1257=(IToken)Match(input,73,Follow._73_in_lock_statement7990); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1257, "char_literal1257");
-
+			
 			}
 			DebugLocation(1025, 16);
 			PushFollow(Follow._expression_in_lock_statement7993);
@@ -52336,7 +52336,7 @@ adaptor.Create(retval, char_literal1257, "char_literal1257");
 			char_literal1259=(IToken)Match(input,RPAREN,Follow._RPAREN_in_lock_statement7997); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1259, "char_literal1259");
-
+			
 			}
 			DebugLocation(1025, 35);
 			PushFollow(Follow._embedded_statement_in_lock_statement8001);
@@ -52417,13 +52417,13 @@ adaptor.Create(retval, char_literal1259, "char_literal1259");
 			string_literal1261=(IToken)Match(input,USING,Follow._USING_in_using_statement8009); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1261, "string_literal1261");
-
+			
 			}
 			DebugLocation(1027, 12);
 			char_literal1262=(IToken)Match(input,73,Follow._73_in_using_statement8013); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1262, "char_literal1262");
-
+			
 			}
 			DebugLocation(1027, 19);
 			PushFollow(Follow._resource_acquisition_in_using_statement8018);
@@ -52435,7 +52435,7 @@ adaptor.Create(retval, char_literal1262, "char_literal1262");
 			char_literal1264=(IToken)Match(input,RPAREN,Follow._RPAREN_in_using_statement8022); if (state.failed) return retval;
 			if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1264, "char_literal1264");
-
+			
 			}
 			DebugLocation(1027, 49);
 			PushFollow(Follow._embedded_statement_in_using_statement8027);
@@ -52830,13 +52830,13 @@ adaptor.Create(retval, char_literal1264, "char_literal1264");
 				string_literal1268=(IToken)Match(input,200,Follow._200_in_yield_statement8049); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1268, "string_literal1268");
-
+				
 				}
 				DebugLocation(1032, 13);
 				string_literal1269=(IToken)Match(input,173,Follow._173_in_yield_statement8053); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1269, "string_literal1269");
-
+				
 				}
 				DebugLocation(1032, 24);
 				PushFollow(Follow._expression_in_yield_statement8057);
@@ -52848,7 +52848,7 @@ adaptor.Create(retval, string_literal1269, "string_literal1269");
 				char_literal1271=(IToken)Match(input,SEMI,Follow._SEMI_in_yield_statement8061); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1271, "char_literal1271");
-
+				
 				}
 
 				}
@@ -52871,19 +52871,19 @@ adaptor.Create(retval, char_literal1271, "char_literal1271");
 				string_literal1272=(IToken)Match(input,200,Follow._200_in_yield_statement8068); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1272, "string_literal1272");
-
+				
 				}
 				DebugLocation(1033, 15);
 				string_literal1273=(IToken)Match(input,111,Follow._111_in_yield_statement8072); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, string_literal1273, "string_literal1273");
-
+				
 				}
 				DebugLocation(1033, 25);
 				char_literal1274=(IToken)Match(input,SEMI,Follow._SEMI_in_yield_statement8076); if (state.failed) return retval;
 				if (state.backtracking == 0) {
 adaptor.Create(retval, char_literal1274, "char_literal1274");
-
+				
 				}
 
 				}
@@ -52959,7 +52959,7 @@ adaptor.Create(retval, char_literal1274, "char_literal1274");
 			if (input.LA(1)==Character_literal||input.LA(1)==FALSE||input.LA(1)==Hex_number||(input.LA(1)>=NULL && input.LA(1)<=NUMBER)||input.LA(1)==Real_literal||input.LA(1)==STRINGLITERAL||input.LA(1)==TRUE||input.LA(1)==Verbatim_string_literal)
 			{
 				input.Consume();
-adaptor.Create(retval, set1275, "set1275");
+				if (state.backtracking == 0) adaptor.Create(retval, set1275, "set1275");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -53039,7 +53039,7 @@ adaptor.Create(retval, set1275, "set1275");
 			if (input.LA(1)==110||input.LA(1)==113||input.LA(1)==116||input.LA(1)==121||input.LA(1)==126||input.LA(1)==135||input.LA(1)==143||input.LA(1)==151||input.LA(1)==156||input.LA(1)==174||input.LA(1)==177||input.LA(1)==181||(input.LA(1)>=189 && input.LA(1)<=190)||input.LA(1)==193)
 			{
 				input.Consume();
-adaptor.Create(retval, set1276, "set1276");
+				if (state.backtracking == 0) adaptor.Create(retval, set1276, "set1276");
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -53166,7 +53166,7 @@ adaptor.Create(retval, set1276, "set1276");
 				if (input.LA(1)==GET||input.LA(1)==IDENTIFIER||input.LA(1)==SET||input.LA(1)==100||(input.LA(1)>=102 && input.LA(1)<=103)||(input.LA(1)>=105 && input.LA(1)<=108)||input.LA(1)==112||input.LA(1)==124||(input.LA(1)>=127 && input.LA(1)<=128)||input.LA(1)==132||input.LA(1)==138||input.LA(1)==140||input.LA(1)==146||(input.LA(1)>=148 && input.LA(1)<=149)||(input.LA(1)>=152 && input.LA(1)<=153)||input.LA(1)==157||input.LA(1)==159||input.LA(1)==162||(input.LA(1)>=164 && input.LA(1)<=165)||input.LA(1)==167||input.LA(1)==172||input.LA(1)==176||input.LA(1)==187||input.LA(1)==194||input.LA(1)==198||input.LA(1)==200)
 				{
 					input.Consume();
-adaptor.Create(retval, set1277, "set1277");
+					if (state.backtracking == 0) adaptor.Create(retval, set1277, "set1277");
 					state.errorRecovery=false;state.failed=false;
 				}
 				else
@@ -53192,7 +53192,7 @@ adaptor.Create(retval, set1277, "set1277");
 				if (input.LA(1)==GET||input.LA(1)==IDENTIFIER||input.LA(1)==SET||input.LA(1)==100||(input.LA(1)>=102 && input.LA(1)<=103)||(input.LA(1)>=106 && input.LA(1)<=108)||input.LA(1)==127||input.LA(1)==132||(input.LA(1)>=152 && input.LA(1)<=153)||input.LA(1)==162||(input.LA(1)>=164 && input.LA(1)<=165)||input.LA(1)==167||input.LA(1)==172||input.LA(1)==187||input.LA(1)==194||input.LA(1)==200)
 				{
 					input.Consume();
-adaptor.Create(retval, set1278, "set1278");
+					if (state.backtracking == 0) adaptor.Create(retval, set1278, "set1278");
 					state.errorRecovery=false;state.failed=false;
 				}
 				else
