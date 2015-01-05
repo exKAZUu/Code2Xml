@@ -187,7 +187,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             //new JavaScriptComplexStatementExperiment(),
             //new JavaScriptSuperComplexBranchExperiment(),
             new JavaScriptExpressionStatementExperiment(),
-            //new JavaScriptArithmeticOperatorExperiment(),
+            new JavaScriptArithmeticOperatorExperiment(),
             //new JavaScriptSwitchCaseExperiment(),
             //new JavaScriptSuperComplexBranchExperimentWithSwitch(),
             //new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue(), 
