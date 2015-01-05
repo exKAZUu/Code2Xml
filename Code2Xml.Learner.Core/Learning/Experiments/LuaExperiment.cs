@@ -32,24 +32,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         private const string LangName = "Lua";
 
-        private static readonly LearningExperiment[] Experiments = {
-            new LuaComplexStatementExperiment(),
-            new LuaSuperComplexBranchExperiment(),
-            new LuaExpressionStatementExperiment(),
-            new LuaArithmeticOperatorExperiment(),
-            new LuaSuperComplexBranchExperimentWithoutTrue(), 
-
-            //new LuaComplexBranchExperiment(),
-            //new LuaStatementExperiment(),
-            //new LuaIfExperiment(),
-            //new LuaWhileExperiment(),
-            //new LuaDoWhileExperiment(),
-            //new LuaPrintExperiment(),
-            //new LuaStatementExperiment(),
-            //new LuaLabeledStatementExperiment(),
-            //new LuaEmptyStatementExperiment(),
-        };
-
         private static readonly Tuple<string, string>[] LearningSets = {
             Tuple.Create(
                     @"https://github.com/kennyledet/Algorithm-Implementations.git",
@@ -200,6 +182,24 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     @"d092e040143146a551b6821b6a9b199a4b98e9db"),
         };
 
+        private static readonly LearningExperiment[] Experiments = {
+            new LuaComplexStatementExperiment(),
+            new LuaSuperComplexBranchExperiment(),
+            new LuaExpressionStatementExperiment(),
+            new LuaArithmeticOperatorExperiment(),
+            //new LuaSuperComplexBranchExperimentWithoutTrue(), 
+
+            //new LuaComplexBranchExperiment(),
+            //new LuaStatementExperiment(),
+            //new LuaIfExperiment(),
+            //new LuaWhileExperiment(),
+            //new LuaDoWhileExperiment(),
+            //new LuaPrintExperiment(),
+            //new LuaStatementExperiment(),
+            //new LuaLabeledStatementExperiment(),
+            //new LuaEmptyStatementExperiment(),
+        };
+
         private static IEnumerable<TestCaseData> TestCases {
             get {
                 foreach (var exp in Experiments) {
@@ -227,7 +227,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         //[Test, TestCaseSource("TestCases")]
-        public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
+        public void Test(LearningExperiment exp, string projectPath) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.lua"), };
             Learn(seedPaths, exp, projectPath);
         }
@@ -269,6 +269,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
+        public override int MaxUp {
+            get { return 4; }
+        }
+
+        public override int MaxLeft {
+            get { return 1; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
+        }
+
         public LuaSuperComplexBranchExperiment() : base("exp") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
@@ -283,11 +295,34 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             if (parent.SafeName() == "stat" && siblings[0].TokenText == "repeat") {
                 return true;
             }
-            var pppp = e.SafeParent().SafeParent().SafeParent().SafeParent();
-            if (pppp.SafeName() == "functioncall" && pppp.FirstChild.TokenText == "print") {
+            var ppp = e.SafeParent().SafeParent().SafeParent();
+            var pppp = ppp.SafeParent();
+            if (pppp.SafeName() == "functioncall" && ppp.Prev != null
+                && ppp.Prev.TokenText == "print") {
                 return true;
             }
             return false;
+        }
+
+        public override IList<CstNode> GetRootsUsingOracle(CstNode e) {
+            var siblings = e.Siblings().ToList();
+            var parent = e.Parent;
+            if (parent.SafeName() == "stat" && siblings[0].TokenText == "if") {
+                return new[] { e.Prev, e, e.Next };
+            }
+            if (parent.SafeName() == "stat" && siblings[0].TokenText == "while") {
+                return new[] { e.Prev, e, e.Next };
+            }
+            if (parent.SafeName() == "stat" && siblings[0].TokenText == "repeat") {
+                return new[] { e.Prev, e };
+            }
+            var ppp = e.SafeParent().SafeParent().SafeParent();
+            var pppp = ppp.SafeParent();
+            if (pppp.SafeName() == "functioncall" && ppp.Prev != null
+                && ppp.Prev.TokenText == "print") {
+                return new[] { pppp };
+            }
+            return new CstNode[0];
         }
     }
 
@@ -298,6 +333,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public override bool IsInner {
             get { return false; }
+        }
+
+        public override int MaxUp {
+            get { return 4; }
+        }
+
+        public override int MaxLeft {
+            get { return 1; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
         }
 
         public LuaSuperComplexBranchExperimentWithoutTrue() : base("exp") {}
@@ -314,11 +361,34 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             if (parent.SafeName() == "stat" && siblings[0].TokenText == "repeat") {
                 return e.TokenText != "true";
             }
-            var pppp = e.SafeParent().SafeParent().SafeParent().SafeParent();
-            if (pppp.SafeName() == "functioncall" && pppp.FirstChild.TokenText == "print") {
+            var ppp = e.SafeParent().SafeParent().SafeParent();
+            var pppp = ppp.SafeParent();
+            if (pppp.SafeName() == "functioncall" && ppp.Prev != null
+                && ppp.Prev.TokenText == "print") {
                 return e.TokenText != "true";
             }
             return false;
+        }
+
+        public override IList<CstNode> GetRootsUsingOracle(CstNode e) {
+            var siblings = e.Siblings().ToList();
+            var parent = e.Parent;
+            if (parent.SafeName() == "stat" && siblings[0].TokenText == "if") {
+                return new[] { e.Prev, e, e.Next };
+            }
+            if (parent.SafeName() == "stat" && siblings[0].TokenText == "while") {
+                return new[] { e.Prev, e, e.Next };
+            }
+            if (parent.SafeName() == "stat" && siblings[0].TokenText == "repeat") {
+                return new[] { e.Prev, e };
+            }
+            var ppp = e.SafeParent().SafeParent().SafeParent();
+            var pppp = ppp.SafeParent();
+            if (pppp.SafeName() == "functioncall" && ppp.Prev != null
+                && ppp.Prev.TokenText == "print") {
+                return new[] { pppp };
+            }
+            return new CstNode[0];
         }
     }
 
@@ -397,8 +467,10 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public LuaPrintExperiment() : base("exp") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
-            var pppp = e.SafeParent().SafeParent().SafeParent().SafeParent();
-            if (pppp.SafeName() == "functioncall" && pppp.FirstChild.TokenText == "print") {
+            var ppp = e.SafeParent().SafeParent().SafeParent();
+            var pppp = ppp.SafeParent();
+            if (pppp.SafeName() == "functioncall" && ppp.Prev != null
+                && ppp.Prev.TokenText == "print") {
                 return true;
             }
             return false;
@@ -506,6 +578,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
+        public override int MaxUp {
+            get { return 1; }
+        }
+
+        public override int MaxLeft {
+            get { return 0; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
+        }
+
         public LuaArithmeticOperatorExperiment() : base("TOKENS") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
@@ -515,6 +599,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             return e.Parent.Name == "binop"
                    && (e.TokenText == "+" || e.TokenText == "-" || e.TokenText == "*"
                        || e.TokenText == "/");
+        }
+
+        public override IList<CstNode> GetRootsUsingOracle(CstNode e) {
+            if (e.Name == "binop") {
+                e = e.FirstChild;
+            }
+            if (e.Parent.Name == "binop"
+                && (e.TokenText == "+" || e.TokenText == "-" || e.TokenText == "*"
+                    || e.TokenText == "/")) {
+                return new[] { e.Parent };
+            }
+            return new CstNode[0];
         }
     }
 }

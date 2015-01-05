@@ -18,6 +18,7 @@
 
 using System.Diagnostics;
 using System.IO;
+using System.Text.RegularExpressions;
 using Code2Xml.Core.Properties;
 using Paraiba.IO;
 
@@ -71,14 +72,14 @@ namespace Code2Xml.Core.Generators.ExternalGenerators.SrcML {
                     PrivateCodeGeneratorPath, PrivateCodeGeneratorArguments);
         }
 
-        //protected override string NormalizeXmlText(string xml) {
-        //	xml = base.NormalizeXmlText(xml);
-        //	xml = Regex.Replace(
-        //			xml, @"(xmlns:?[^=]*=[""][^""]*[""])", "",
-        //			RegexOptions.IgnoreCase | RegexOptions.Multiline)
-        //			.Replace("</cpp:", "</")
-        //			.Replace("<cpp:", "<");
-        //	return xml;
-        //}
+        protected override string NormalizeXmlText(string xml) {
+            xml = base.NormalizeXmlText(xml);
+            xml = Regex.Replace(
+                    xml, @"(xmlns:?[^=]*=[""][^""]*[""])", "",
+                    RegexOptions.IgnoreCase | RegexOptions.Multiline)
+                    .Replace("</cpp:", "</")
+                    .Replace("<cpp:", "<");
+            return xml;
+        }
     }
 }

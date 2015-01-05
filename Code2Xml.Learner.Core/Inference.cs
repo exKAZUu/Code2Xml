@@ -55,7 +55,7 @@ namespace Code2Xml.Learner.Core {
                 for (; i <= length; i++) {
                     var newChildElements = new List<Tuple<CstNode, string>>();
                     foreach (var t in childElements) {
-                        foreach (var e in t.Item1.Elements()) {
+                        foreach (var e in t.Item1.Children()) {
                             var key = t.Item2 + ">" + e.NameAndTokenWithId();
                             newChildElements.Add(Tuple.Create(e, key));
                             // トークンが存在するかチェックする弱い条件
@@ -94,7 +94,7 @@ namespace Code2Xml.Learner.Core {
             for (; i <= length; i++) {
                 var newChildElements = new List<Tuple<CstNode, string>>();
                 foreach (var t in childElements) {
-                    foreach (var e in t.Item1.Elements()) {
+                    foreach (var e in t.Item1.Children()) {
                         var key = t.Item2 + ">" + e.NameAndTokenWithId();
                         newChildElements.Add(Tuple.Create(e, key));
                         // トークンが存在するかチェックする弱い条件

@@ -189,9 +189,9 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             new CSharpSuperComplexBranchExperiment(),
             new CSharpExpressionStatementExperiment(),
             new CSharpArithmeticOperatorExperiment(),
-            new CSharpSwitchCaseExperiment(),
-            new CSharpSuperComplexBranchExperimentWithSwitch(),
-            new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue(),
+            //new CSharpSwitchCaseExperiment(),
+            //new CSharpSuperComplexBranchExperimentWithSwitch(),
+            //new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue(),
                     
             //new CSharpComplexBranchExperiment(),
             //new CSharpIfExperiment(),
@@ -231,8 +231,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             LearnAndApply(seedPaths, LearningSets, Experiments);
         }
 
-        //[Test, TestCaseSource("TestCases")]
-        public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
+        [Test, TestCaseSource("TestCases")]
+        public void Test(LearningExperiment exp, string projectPath) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.cs"), };
             Learn(seedPaths, exp, projectPath);
         }
@@ -245,6 +245,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public override bool IsInner {
             get { return false; }
+        }
+
+        public override int MaxUp {
+            get { return 6; }
+        }
+
+        public override int MaxLeft {
+            get { return 5; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
         }
 
         public CSharpSuperComplexBranchExperiment() : base("boolean_expression", "argument") {}
@@ -269,7 +281,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             if (pName == "for_condition") {
                 return true;
             }
-            if (e.ElementsBeforeSelf().Any()) {
+            if (e.PrevsFromFirst().Any()) {
                 return false;
             }
             if (e.Name == "boolean_expression") {
@@ -277,8 +289,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
 
             var p = e.Parent.Parent.Parent.Parent.Parent;
-            var parts = p.Elements("primary_expression_start")
-                    .Concat(p.Elements("primary_expression_part"))
+            var parts = p.Children("primary_expression_start")
+                    .Concat(p.Children("primary_expression_part"))
                     .ToList();
             if (parts.All(
                     e2 => e2.Descendants("identifier")
@@ -291,6 +303,51 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 return false;
             }
             return true;
+        }
+
+        public override IList<CstNode> GetRootsUsingOracle(CstNode e) {
+            if (e.Name == "expression") {
+                e = e.Parent;
+            }
+            if (e.Name == "argument_value") {
+                e = e.Parent;
+            }
+            var p = e.Parent;
+            var pName = p.Name;
+            if (pName == "if_statement") {
+                return new[] { e.Prev.Prev, e.Prev, e, e.Next };
+            }
+            if (pName == "while_statement") {
+                return new[] { e.Prev.Prev, e.Prev, e, e.Next };
+            }
+            if (pName == "do_statement") {
+                return new[] { e.Prev.Prev, e.Prev, e, e.Next, e.Next };
+            }
+            if (pName == "for_condition") {
+                return p.PrevsFromSelfAndSelf().Concat(Enumerable.Repeat(p.Next, 1)).ToList();
+            }
+            if (e.PrevsFromFirst().Any()) {
+                return new CstNode[0];
+            }
+            if (e.Name == "boolean_expression") {
+                e = e.FirstChild;
+            }
+
+            var ppppp = e.Parent.Parent.Parent.Parent.Parent;
+            var parts = ppppp.Children("primary_expression_start")
+                    .Concat(ppppp.Children("primary_expression_part"))
+                    .ToList();
+            if (parts.All(
+                    e2 => e2.Descendants("identifier")
+                            .FirstOrDefault().SafeTokenText() != "Contract")) {
+                return new CstNode[0];
+            }
+            if (parts.All(
+                    e2 => e2.Descendants("identifier")
+                            .FirstOrDefault().SafeTokenText() != "Requires")) {
+                return new CstNode[0];
+            }
+            return parts;
         }
     }
 
@@ -409,25 +466,21 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
-            if (e.ElementsBeforeSelf().Any()) {
+            if (e.PrevsFromFirst().Any()) {
                 return false;
             }
             var p = e.Parent.Parent.Parent.Parent.Parent;
-            var parts = p.Elements("primary_expression_start")
-                    .Concat(p.Elements("primary_expression_part"))
+            var parts = p.Children("primary_expression_start")
+                    .Concat(p.Children("primary_expression_part"))
                     .ToList();
-            if (
-                    parts.All(
-                            e2 =>
-                                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
-                                    != "Contract")) {
+            if (parts.All(
+                    e2 => e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
+                          != "Contract")) {
                 return false;
             }
-            if (
-                    parts.All(
-                            e2 =>
-                                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
-                                    != "Requires")) {
+            if (parts.All(
+                    e2 => e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
+                          != "Requires")) {
                 return false;
             }
             return true;
@@ -449,13 +502,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // ラベルはループ文に付くため，ラベルの中身は除外
-            if (e.Element("labeled_statement") != null) {
+            if (e.Child("labeled_statement") != null) {
                 return false;
             }
 
             // ブロック自身は意味を持たないステートメントで、中身だけが必要なので除外
-            var e2 = e.Element("embedded_statement");
-            if (e2 != null && e2.Element("block") != null) {
+            var e2 = e.Child("embedded_statement");
+            if (e2 != null && e2.Child("block") != null) {
                 return false;
             }
 
@@ -494,8 +547,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // ブロック自身は意味を持たないステートメントで、中身だけが必要なので除外
-            var e2 = e.Element("embedded_statement");
-            if (e2 != null && e2.Element("block") != null) {
+            var e2 = e.Child("embedded_statement");
+            if (e2 != null && e2.Child("block") != null) {
                 return true;
             }
             return false;
@@ -515,7 +568,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // ラベルはループ文に付くため，ラベルの中身は除外
-            if (e.Element("labeled_statement") != null) {
+            if (e.Child("labeled_statement") != null) {
                 return true;
             }
             return false;
@@ -575,6 +628,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
+        public override int MaxUp {
+            get { return 1; }
+        }
+
+        public override int MaxLeft {
+            get { return 0; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
+        }
+
         public CSharpArithmeticOperatorExperiment() : base("TOKENS", "MINUS") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
@@ -582,6 +647,16 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     && e.Parent.Name == "multiplicative_expression") ||
                    ((e.TokenText == "+" || e.TokenText == "-")
                     && e.Parent.Name == "additive_expression");
+        }
+
+        public override IList<CstNode> GetRootsUsingOracle(CstNode e) {
+            if (((e.TokenText == "*" || e.TokenText == "/")
+                 && e.Parent.Name == "multiplicative_expression") ||
+                ((e.TokenText == "+" || e.TokenText == "-")
+                 && e.Parent.Name == "additive_expression")) {
+                return new[] { e.Parent };
+            }
+            return new CstNode[0];
         }
     }
 
@@ -592,6 +667,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public override bool IsInner {
             get { return false; }
+        }
+
+        public override int MaxUp {
+            get { return 1; }
+        }
+
+        public override int MaxLeft {
+            get { return 0; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
         }
 
         public CSharpSwitchCaseExperiment() : base("expression", "switch_label") {}
@@ -606,6 +693,20 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
             return e.Name == "switch_label";
         }
+
+        public override IList<CstNode> GetRootsUsingOracle(CstNode e) {
+            var pName = e.Parent.Name;
+            if (pName == "switch_statement") {
+                return new[] { e.Prev.Prev, e.Prev, e, e.Next };
+            }
+            if (e.Name == "switch_labels") {
+                return new[] { e };
+            }
+            if (e.Name == "switch_label") {
+                return new[] { e };
+            }
+            return new CstNode[0];
+        }
     }
 
     public class CSharpSuperComplexBranchExperimentWithSwitch : LearningExperiment {
@@ -615,6 +716,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public override bool IsInner {
             get { return false; }
+        }
+
+        public override int MaxUp {
+            get { return 6; }
+        }
+
+        public override int MaxLeft {
+            get { return 5; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
         }
 
         public CSharpSuperComplexBranchExperimentWithSwitch()
@@ -649,12 +762,12 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             if (e.Name == "switch_label") {
                 return true;
             }
-            if (e.ElementsBeforeSelf().Any()) {
+            if (e.PrevsFromFirst().Any()) {
                 return false;
             }
             var p = e.Parent.Parent.Parent.Parent.Parent;
-            var parts = p.Elements("primary_expression_start")
-                    .Concat(p.Elements("primary_expression_part"))
+            var parts = p.Children("primary_expression_start")
+                    .Concat(p.Children("primary_expression_part"))
                     .ToList();
             if (
                     parts.All(
@@ -681,6 +794,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public override bool IsInner {
             get { return false; }
+        }
+
+        public override int MaxUp {
+            get { return 6; }
+        }
+
+        public override int MaxLeft {
+            get { return 5; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
         }
 
         public CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue()
@@ -715,12 +840,12 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             if (e.Name == "switch_label") {
                 return true;
             }
-            if (e.ElementsBeforeSelf().Any()) {
+            if (e.PrevsFromFirst().Any()) {
                 return false;
             }
             var p = e.Parent.Parent.Parent.Parent.Parent;
-            var parts = p.Elements("primary_expression_start")
-                    .Concat(p.Elements("primary_expression_part"))
+            var parts = p.Children("primary_expression_start")
+                    .Concat(p.Children("primary_expression_part"))
                     .ToList();
             if (
                     parts.All(

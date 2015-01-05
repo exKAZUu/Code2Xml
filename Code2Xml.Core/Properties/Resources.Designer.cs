@@ -83,16 +83,6 @@ namespace Code2Xml.Core.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] bz2_1 {
-            get {
-                object obj = ResourceManager.GetObject("bz2_1", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
         internal static byte[] composite_sexp_processor {
             get {
                 object obj = ResourceManager.GetObject("composite_sexp_processor", resourceCulture);
@@ -133,9 +123,9 @@ namespace Code2Xml.Core.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] libarchive_2 {
+        internal static byte[] libarchive_13 {
             get {
-                object obj = ResourceManager.GetObject("libarchive_2", resourceCulture);
+                object obj = ResourceManager.GetObject("libarchive_13", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -143,9 +133,39 @@ namespace Code2Xml.Core.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] libexslt {
+        internal static byte[] libbz2_1 {
             get {
-                object obj = ResourceManager.GetObject("libexslt", resourceCulture);
+                object obj = ResourceManager.GetObject("libbz2_1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] libcrypto_10 {
+            get {
+                object obj = ResourceManager.GetObject("libcrypto_10", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] libcurl_4 {
+            get {
+                object obj = ResourceManager.GetObject("libcurl_4", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] libexslt_0 {
+            get {
+                object obj = ResourceManager.GetObject("libexslt_0", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -163,16 +183,6 @@ namespace Code2Xml.Core.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] libgcrypt_11 {
-            get {
-                object obj = ResourceManager.GetObject("libgcrypt_11", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
         internal static byte[] libgnurx_0 {
             get {
                 object obj = ResourceManager.GetObject("libgnurx_0", resourceCulture);
@@ -183,9 +193,29 @@ namespace Code2Xml.Core.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] libgpg_error_0 {
+        internal static byte[] libidn_11 {
             get {
-                object obj = ResourceManager.GetObject("libgpg_error_0", resourceCulture);
+                object obj = ResourceManager.GetObject("libidn_11", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] libintl_8 {
+            get {
+                object obj = ResourceManager.GetObject("libintl_8", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] liblzma_5 {
+            get {
+                object obj = ResourceManager.GetObject("liblzma_5", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -203,6 +233,26 @@ namespace Code2Xml.Core.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] libssh2_1 {
+            get {
+                object obj = ResourceManager.GetObject("libssh2_1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] libssl_10 {
+            get {
+                object obj = ResourceManager.GetObject("libssl_10", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] libstdc___6 {
             get {
                 object obj = ResourceManager.GetObject("libstdc___6", resourceCulture);
@@ -213,9 +263,9 @@ namespace Code2Xml.Core.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] libxml2 {
+        internal static byte[] libxml2_2 {
             get {
-                object obj = ResourceManager.GetObject("libxml2", resourceCulture);
+                object obj = ResourceManager.GetObject("libxml2_2", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -223,9 +273,9 @@ namespace Code2Xml.Core.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] libxslt {
+        internal static byte[] libxslt_1 {
             get {
-                object obj = ResourceManager.GetObject("libxslt", resourceCulture);
+                object obj = ResourceManager.GetObject("libxslt_1", resourceCulture);
                 return ((byte[])(obj));
             }
         }

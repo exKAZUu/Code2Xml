@@ -32,15 +32,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         private const string LangName = "Python2";
 
-        private static readonly LearningExperiment[] Experiments = {
-            new PythonComplexStatementExperiment(),
-            //new PythonSuperComplexBranchExperiment(),
-            //new PythonExpressionStatementExperiment(),
-            //new PythonArithmeticOperatorExperiment(),
-            //new PythonSuperComplexBranchExperimentWithoutTrue(), 
-            //new PythonEmptyStatementExperiment(),
-        };
-
         private static readonly Tuple<string, string>[] LearningSets = {
             Tuple.Create(
                     @"https://github.com/mitsuhiko/flask.git",
@@ -194,6 +185,15 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     @"f478e34f8e82c20b04f5992ae5299d7cf41c2b9f"),
         };
 
+        private static readonly LearningExperiment[] Experiments = {
+            new PythonComplexStatementExperiment(),
+            new PythonSuperComplexBranchExperiment(),
+            new PythonExpressionStatementExperiment(),
+            new PythonArithmeticOperatorExperiment(),
+            //new PythonSuperComplexBranchExperimentWithoutTrue(), 
+            //new PythonEmptyStatementExperiment(),
+        };
+
         private static IEnumerable<TestCaseData> TestCases {
             get {
                 foreach (var exp in Experiments) {
@@ -220,8 +220,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             LearnAndApply(seedPaths, LearningSets, Experiments);
         }
 
-        //[Test, TestCaseSource("TestCases")]
-        public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
+        [Test, TestCaseSource("TestCases")]
+        public void Test(LearningExperiment exp, string projectPath) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.py"), };
             Learn(seedPaths, exp, projectPath);
         }
@@ -236,6 +236,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
+        public override int MaxUp {
+            get { return 4; }
+        }
+
+        public override int MaxLeft {
+            get { return 1; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
+        }
+
         public PythonSuperComplexBranchExperiment() : base("test", "argument") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
@@ -245,10 +257,10 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             if (e.Name == "test") {
                 e = e.Parent;
             }
-            if (e.Name == "argument" && e.Prev == null && e.SafeParent().Name == "arglist"
-                && e.SafeParent().SafeParent().Name == "trailer"
-                && e.SafeParent().SafeParent().SafeParent().Name == "power") {
-                var atom = e.SafeParent().SafeParent().Prev;
+            if (e.Name == "argument" && e.Prev == null && e.Parent.Name == "arglist"
+                && e.Parent.Parent.Name == "trailer"
+                && e.Parent.Parent.Parent.Name == "power") {
+                var atom = e.Parent.Parent.Prev;
                 return atom.Name == "atom" && atom.TokenText == "str";
             }
             return false;
@@ -331,6 +343,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
+        public override int MaxUp {
+            get { return 1; }
+        }
+
+        public override int MaxLeft {
+            get { return 0; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
+        }
+
         public PythonArithmeticOperatorExperiment() : base("PLUS", "MINUS", "STAR", "SLASH") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
@@ -348,6 +372,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
+        public override int MaxUp {
+            get { return 4; }
+        }
+
+        public override int MaxLeft {
+            get { return 1; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
+        }
+
         public PythonSuperComplexBranchExperimentWithoutTrue() : base("test", "argument") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
@@ -357,11 +393,11 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             if (e.Name == "test") {
                 e = e.Parent;
             }
-            if (e.Name == "argument" && e.Prev == null && e.SafeParent().Name == "arglist"
-                && e.SafeParent().SafeParent().Name == "trailer"
-                && e.SafeParent().SafeParent().SafeParent().Name == "power") {
-                var atom = e.SafeParent().SafeParent().Prev;
-                return atom.Name == "atom" && atom.TokenText == "str" && e.TokenText != "True";
+            if (e.Name == "argument" && e.Prev == null && e.Parent.Name == "arglist"
+                && e.Parent.Parent.Name == "trailer"
+                && e.Parent.Parent.Parent.Name == "power") {
+                var atom = e.Parent.Parent.Prev;
+                return atom.Name == "atom" && atom.TokenText == "str";
             }
             return false;
         }

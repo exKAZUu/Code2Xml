@@ -30,26 +30,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     public class JavaScriptExperiment : Experiment {
         public static CstGenerator Generator = CstGenerators.JavaScriptUsingAntlr3;
 
-        private static readonly LearningExperiment[] Experiments = {
-            new JavaScriptComplexStatementExperiment(),
-            new JavaScriptSuperComplexBranchExperiment(),
-            new JavaScriptExpressionStatementExperiment(),
-            new JavaScriptArithmeticOperatorExperiment(),
-            new JavaScriptSwitchCaseExperiment(),
-            new JavaScriptSuperComplexBranchExperimentWithSwitch(),
-            new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue(), 
-            //new JavaScriptComplexBranchExperiment(),
-            //new JavaScriptIfExperiment(),
-            //new JavaScriptWhileExperiment(),
-            //new JavaScriptDoWhileExperiment(),
-            //new JavaScriptForExperiment(),
-            //new JavaScriptConsoleLogExperiment(),
-            //new JavaScriptStatementExperiment(),
-            //new JavaScriptBlockExperiment(),
-            //new JavaScriptLabeledStatementExperiment(),
-            //new JavaScriptEmptyStatementExperiment(),
-        };
-
         private static readonly Tuple<string, string>[] LearningSets = {
             Tuple.Create(
                     @"https://github.com/jashkenas/backbone.git",
@@ -203,6 +183,27 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     @"3aec7ce0bd975e452ff49107905a06146fe9e560"),
         };
 
+        private static readonly LearningExperiment[] Experiments = {
+            //new JavaScriptComplexStatementExperiment(),
+            //new JavaScriptSuperComplexBranchExperiment(),
+            new JavaScriptExpressionStatementExperiment(),
+            //new JavaScriptArithmeticOperatorExperiment(),
+            //new JavaScriptSwitchCaseExperiment(),
+            //new JavaScriptSuperComplexBranchExperimentWithSwitch(),
+            //new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue(), 
+
+            //new JavaScriptComplexBranchExperiment(),
+            //new JavaScriptIfExperiment(),
+            //new JavaScriptWhileExperiment(),
+            //new JavaScriptDoWhileExperiment(),
+            //new JavaScriptForExperiment(),
+            //new JavaScriptConsoleLogExperiment(),
+            //new JavaScriptStatementExperiment(),
+            //new JavaScriptBlockExperiment(),
+            //new JavaScriptLabeledStatementExperiment(),
+            //new JavaScriptEmptyStatementExperiment(),
+        };
+
         private const string LangName = "JavaScript";
 
         private static IEnumerable<TestCaseData> TestCases {
@@ -231,8 +232,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             LearnAndApply(seedPaths, LearningSets, Experiments);
         }
 
-        //[Test, TestCaseSource("TestCases")]
-        public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
+        [Test, TestCaseSource("TestCases")]
+        public void Test(LearningExperiment exp, string projectPath) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "seed.js"), };
             Learn(seedPaths, exp, projectPath);
         }
@@ -249,6 +250,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
+        public override int MaxUp {
+            get { return 2; }
+        }
+
+        public override int MaxLeft {
+            get { return 1; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
+        }
+
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var parentName = e.Parent.SafeName();
             if (parentName == "ifStatement") {
@@ -261,15 +274,39 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 return true;
             }
             if (parentName == "forStatement"
-                && e.Prev == e.Parent.Elements().First(e2 => e2.TokenText == ";")) {
+                && e.Prev == e.Parent.Children().First(e2 => e2.TokenText == ";")) {
                 return true;
             }
             var p = e.SafeParent().SafeParent();
             if (p.SafeName() == "callExpression" && p.FirstChild.TokenText == "console.log" &&
-                p.Element("arguments").Element("assignmentExpression") == e) {
+                p.Child("arguments").Child("assignmentExpression") == e) {
                 return true;
             }
             return false;
+        }
+
+        public override IList<CstNode> GetRootsUsingOracle(CstNode e) {
+            var parentName = e.Parent.SafeName();
+            if (parentName == "ifStatement") {
+                return new[] { e.Prev.Prev, e.Prev, e };
+            }
+            if (parentName == "whileStatement") {
+                return new[] { e.Prev.Prev, e.Prev, e };
+            }
+            if (parentName == "doWhileStatement") {
+                return new[] { e.Prev.Prev, e.Prev, e, e.Next };
+            }
+            if (parentName == "forStatement"
+                && e.Prev == e.Parent.Children().First(e2 => e2.TokenText == ";")) {
+                return e.PrevsFromSelfAndSelf().Concat(Enumerable.Repeat(e.Next, 1))
+                        .ToList();
+            }
+            var pp = e.SafeParent().SafeParent();
+            if (pp.SafeName() == "callExpression" && pp.FirstChild.TokenText == "console.log" &&
+                pp.Child("arguments").Child("assignmentExpression") == e) {
+                return new[] { pp };
+            }
+            return new CstNode[0];
         }
     }
 
@@ -296,7 +333,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 return true;
             }
             if (parentName == "forStatement"
-                && e.Prev == e.Parent.Elements().First(e2 => e2.TokenText == ";")) {
+                && e.Prev == e.Parent.Children().First(e2 => e2.TokenText == ";")) {
                 return true;
             }
             return false;
@@ -377,7 +414,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var parentName = e.Parent.SafeName();
             if (parentName == "forStatement"
-                && e.Prev == e.Parent.Elements().First(e2 => e2.TokenText == ";")) {
+                && e.Prev == e.Parent.Children().First(e2 => e2.TokenText == ";")) {
                 return true;
             }
             return false;
@@ -398,7 +435,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var p = e.SafeParent().SafeParent();
             if (p.SafeName() == "callExpression" && p.FirstChild.TokenText == "console.log" &&
-                p.Element("arguments").Element("assignmentExpression") == e) {
+                p.Child("arguments").Child("assignmentExpression") == e) {
                 return true;
             }
             return false;
@@ -520,6 +557,16 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
             return e.Name == "expressionStatement";
         }
+
+        public override IList<CstNode> GetRootsUsingOracle(CstNode e) {
+            if (e.Name == "statement") {
+                e = e.FirstChild;
+            }
+            if (e.Name == "expressionStatement") {
+                return new[] { e.Parent };
+            }
+            return new CstNode[0];
+        }
     }
 
     public class JavaScriptArithmeticOperatorExperiment : LearningExperiment {
@@ -531,6 +578,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
+        public override int MaxUp {
+            get { return 2; }
+        }
+
+        public override int MaxLeft {
+            get { return 0; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
+        }
+
         public JavaScriptArithmeticOperatorExperiment() : base("TOKENS") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
@@ -539,6 +598,17 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                    ||
                    ((e.TokenText == "+" || e.TokenText == "-")
                     && e.Parent.Name == "additiveExpression");
+        }
+
+        public override IList<CstNode> GetRootsUsingOracle(CstNode e) {
+            if (((e.TokenText == "*" || e.TokenText == "/")
+                 && e.Parent.Name == "multiplicativeExpression")
+                ||
+                ((e.TokenText == "+" || e.TokenText == "-")
+                 && e.Parent.Name == "additiveExpression")) {
+                return new[] { e.Parent };
+            }
+            return new CstNode[0];
         }
     }
 
@@ -549,6 +619,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public override bool IsInner {
             get { return false; }
+        }
+
+        public override int MaxUp {
+            get { return 1; }
+        }
+
+        public override int MaxLeft {
+            get { return 0; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
         }
 
         public JavaScriptSwitchCaseExperiment() : base("expression", "caseClause", "defaultClause") {}
@@ -573,6 +655,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
+        public override int MaxUp {
+            get { return 2; }
+        }
+
+        public override int MaxLeft {
+            get { return 1; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
+        }
+
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var parentName = e.Parent.SafeName();
             if (parentName == "ifStatement") {
@@ -585,7 +679,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 return true;
             }
             if (parentName == "forStatement"
-                && e.Prev == e.Parent.Elements().First(e2 => e2.TokenText == ";")) {
+                && e.Prev == e.Parent.Children().First(e2 => e2.TokenText == ";")) {
                 return true;
             }
             if (parentName == "switchStatement") {
@@ -596,7 +690,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
             var p = e.SafeParent().SafeParent();
             if (p.SafeName() == "callExpression" && p.FirstChild.TokenText == "console.log" &&
-                p.Element("arguments").Element("assignmentExpression") == e) {
+                p.Child("arguments").Child("assignmentExpression") == e) {
                 return true;
             }
             return false;
@@ -615,6 +709,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
+        public override int MaxUp {
+            get { return 2; }
+        }
+
+        public override int MaxLeft {
+            get { return 1; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
+        }
+
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var parentName = e.Parent.SafeName();
             if (parentName == "ifStatement") {
@@ -627,7 +733,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 return e.TokenText != "true";
             }
             if (parentName == "forStatement"
-                && e.Prev == e.Parent.Elements().First(e2 => e2.TokenText == ";")) {
+                && e.Prev == e.Parent.Children().First(e2 => e2.TokenText == ";")) {
                 return e.TokenText != "true";
             }
             if (parentName == "switchStatement") {
@@ -638,7 +744,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
             var p = e.SafeParent().SafeParent();
             if (p.SafeName() == "callExpression" && p.FirstChild.TokenText == "console.log" &&
-                p.Element("arguments").Element("assignmentExpression") == e) {
+                p.Child("arguments").Child("assignmentExpression") == e) {
                 return e.TokenText != "true";
             }
             return false;

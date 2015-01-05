@@ -28,8 +28,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         protected readonly Dictionary<string, StreamWriter> Writers;
 
         public const int SkipCount = 0;
-        public const int TakeCount = 2;
-        private const int ProjectCount = 10;
+        public const int TakeCount = 1;
+        private const int ProjectCount = 20;
 
         protected Experiment() {
             Writers = new Dictionary<string, StreamWriter>();
@@ -41,7 +41,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 ICollection<string> seedPaths, Tuple<string, string>[] learningSets,
                 LearningExperiment[] experiments) {
             var projectPaths =
-                    learningSets.Select(
+                    learningSets.Take(50).Select(
                             t => {
                                 var url = t.Item1;
                                 var path = Fixture.GetGitRepositoryPath(url);
@@ -49,34 +49,64 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                                 Git.Checkout(path, t.Item2);
                                 return path;
                             }).ToList();
+            var failedCount = 0;
             foreach (var exp in experiments) {
                 LearnWithoutClearing(seedPaths, exp, projectPaths.Take(ProjectCount));
+
+                var w = CreateWriter(exp.GetType().Name + "_classifier_" + ProjectCount + ".txt");
+                w.WriteLine(exp.GetClassifierSummary());
+                w.Flush();
+
                 var writer = CreateWriter(exp.GetType().Name + "_" + ProjectCount + ".csv");
-                foreach (var projectPath in projectPaths.Skip(ProjectCount)) {
+                foreach (var projectPath in projectPaths) {
                     var codePaths = Directory.GetFiles(
                             projectPath, SearchPattern, SearchOption.AllDirectories);
+                    writer.Write(DateTime.Now);
+                    writer.Write(",");
                     writer.Write(projectPath);
                     writer.Write(",");
                     var ret = exp.Apply(writer, codePaths, SearchPattern);
+                    var features = exp.GetFeatures();
+
                     writer.Write(ret.WrongElementCount);
                     writer.Write(",");
                     writer.Write(ret.WrongFeatureCount);
                     writer.Write(",");
                     writer.WriteLine();
                     writer.Flush();
+                    if (ret.WrongElementCount > 0) {
+                        failedCount++;
+                        Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
+                        foreach (var we in ret.WronglyAcceptedElements) {
+                            var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
+                            Console.WriteLine(we.Code);
+                            Console.WriteLine(e.Code);
+                            Console.WriteLine("---------------------------------------------");
+                        }
+                        Console.WriteLine("---- WronglyRejectedElements ----");
+                        foreach (var we in ret.WronglyRejectedElements) {
+                            var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
+                            Console.WriteLine(we.Code);
+                            Console.WriteLine(e.Code);
+                            Console.WriteLine("---------------------------------------------");
+                        }
+                    }
                 }
                 exp.Clear();
             }
+            Assert.That(failedCount, Is.EqualTo(0));
         }
 
         private void LearnWithoutClearing(
                 ICollection<string> seedPaths, LearningExperiment exp,
                 IEnumerable<string> projectPaths) {
-            var writer = CreateWriter(exp.GetType().Name + "_" + ProjectCount + ".csv");
+            var writer = CreateWriter(exp.GetType().Name + "_learn_" + ProjectCount + ".csv");
             var codePaths = projectPaths.SelectMany(
                     projectPath => Directory.GetFiles(
                             projectPath, SearchPattern, SearchOption.AllDirectories)
                     ).ToList();
+            writer.Write(DateTime.Now);
+            writer.Write(",");
             writer.Write(projectPaths.First());
             writer.Write(",");
             var ret = exp.Learn(seedPaths, writer, codePaths, SearchPattern);
@@ -109,6 +139,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             StreamWriter writer;
             if (!Writers.TryGetValue(fileName, out writer)) {
                 writer = File.CreateText(@"C:\Users\exKAZUu\Dropbox\Data\" + fileName);
+                writer.Write("Time");
+                writer.Write(",");
                 writer.Write("Name");
                 writer.Write(",");
                 writer.Write("AllNodes");

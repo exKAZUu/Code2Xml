@@ -21,8 +21,8 @@ using Antlr.Runtime;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Generators.ANTLRv3.Php;
 using NUnit.Framework;
-using PhpLexer = Code2Xml.Languages.ANTLRv3.Processors.Php.PhpLexer;
-using PhpParser = Code2Xml.Languages.ANTLRv3.Processors.Php.PhpParser;
+using PhpLexer = Code2Xml.Core.Tests.Generators.ANTLRv3.Parsers.PhpLexer;
+using PhpParser = Code2Xml.Core.Tests.Generators.ANTLRv3.Parsers.PhpParser;
 
 namespace Code2Xml.Core.Tests.Generators.ANTLRv3 {
     [TestFixture]

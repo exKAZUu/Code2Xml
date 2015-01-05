@@ -305,23 +305,28 @@
     <Content Include="Dependencies\Ruby\README_ruby2ruby.txt" />
     <Content Include="Dependencies\Ruby\README_ruby_parser.txt" />
     <Content Include="Dependencies\Ruby\README_sexp_processor.txt" />
-    <None Include="Dependencies\Ruby\test.txt" />
-    <Content Include="Dependencies\srcML\bz2-1.dll" />
     <Content Include="Dependencies\srcML\iconv.dll" />
     <Content Include="Dependencies\srcML\libantlr2-0.dll" />
-    <Content Include="Dependencies\srcML\libarchive-2.dll" />
-    <Content Include="Dependencies\srcML\libexslt.dll" />
+    <Content Include="Dependencies\srcML\libarchive-13.dll" />
+    <Content Include="Dependencies\srcML\libbz2-1.dll" />
+    <Content Include="Dependencies\srcML\libcrypto-10.dll" />
+    <Content Include="Dependencies\srcML\libcurl-4.dll" />
+    <Content Include="Dependencies\srcML\libexslt-0.dll" />
     <Content Include="Dependencies\srcML\libgcc_s_sjlj-1.dll" />
-    <Content Include="Dependencies\srcML\libgcrypt-11.dll" />
     <Content Include="Dependencies\srcML\libgnurx-0.dll" />
-    <Content Include="Dependencies\srcML\libgpg-error-0.dll" />
+    <Content Include="Dependencies\srcML\libidn-11.dll" />
+    <Content Include="Dependencies\srcML\libintl-8.dll" />
+    <Content Include="Dependencies\srcML\liblzma-5.dll" />
     <Content Include="Dependencies\srcML\libsrcml.dll" />
+    <Content Include="Dependencies\srcML\libssh2-1.dll" />
+    <Content Include="Dependencies\srcML\libssl-10.dll" />
     <Content Include="Dependencies\srcML\libstdc++-6.dll" />
-    <Content Include="Dependencies\srcML\libxml2.dll" />
-    <Content Include="Dependencies\srcML\libxslt.dll" />
+    <Content Include="Dependencies\srcML\libxml2-2.dll" />
+    <Content Include="Dependencies\srcML\libxslt-1.dll" />
     <Content Include="Dependencies\srcML\src2srcml.exe" />
     <Content Include="Dependencies\srcML\srcml2src.exe" />
     <Content Include="Dependencies\srcML\zlib1.dll" />
+    <None Include="Dependencies\Ruby\test.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

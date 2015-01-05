@@ -21,8 +21,8 @@ using Antlr.Runtime;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Generators.ANTLRv3.CSharp;
 using NUnit.Framework;
-using csLexer = Code2Xml.Languages.ANTLRv3.Processors.CSharp.csLexer;
-using csParser = Code2Xml.Languages.ANTLRv3.Processors.CSharp.csParser;
+using csLexer = Code2Xml.Core.Tests.Generators.ANTLRv3.Parsers.csLexer;
+using csParser = Code2Xml.Core.Tests.Generators.ANTLRv3.Parsers.csParser;
 
 namespace Code2Xml.Core.Tests.Generators.ANTLRv3 {
     [TestFixture]

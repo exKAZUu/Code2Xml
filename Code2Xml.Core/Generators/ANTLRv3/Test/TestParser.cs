@@ -11,7 +11,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Test\\Test.g 2014-11-01 21:31:34
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Test\\Test.g 2014-11-03 05:30:21
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -176,7 +176,7 @@ public partial class TestParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -317,7 +317,7 @@ adaptor.Create(retval, char_literal3, "char_literal3");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -443,7 +443,7 @@ adaptor.Create(retval, char_literal7, "char_literal7");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -569,7 +569,7 @@ adaptor.Create(retval, char_literal10, "char_literal10");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -769,7 +769,7 @@ adaptor.Create(retval, char_literal18, "char_literal18");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			

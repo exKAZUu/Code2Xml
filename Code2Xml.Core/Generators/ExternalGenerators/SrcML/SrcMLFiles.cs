@@ -24,31 +24,41 @@ namespace Code2Xml.Core.Generators.ExternalGenerators.SrcML {
     public static class SrcMLFiles {
         public static void DeployCommonFiles(string dirPath) {
             ParaibaFile.WriteIfDifferentSize(
-                    Path.Combine(dirPath, "bz2-1.dll"), Resources.bz2_1);
-            ParaibaFile.WriteIfDifferentSize(
                     Path.Combine(dirPath, "iconv.dll"), Resources.iconv);
             ParaibaFile.WriteIfDifferentSize(
                     Path.Combine(dirPath, "libantlr2-0.dll"), Resources.libantlr2_0);
             ParaibaFile.WriteIfDifferentSize(
-                    Path.Combine(dirPath, "libarchive-2.dll"), Resources.libarchive_2);
+                    Path.Combine(dirPath, "libarchive-13.dll"), Resources.libarchive_13);
             ParaibaFile.WriteIfDifferentSize(
-                    Path.Combine(dirPath, "libexslt.dll"), Resources.libexslt);
+                    Path.Combine(dirPath, "libbz2-1.dll"), Resources.libbz2_1);
+            ParaibaFile.WriteIfDifferentSize(
+                    Path.Combine(dirPath, "libcrypto-10.dll"), Resources.libcrypto_10);
+            ParaibaFile.WriteIfDifferentSize(
+                    Path.Combine(dirPath, "libcurl-4.dll"), Resources.libcurl_4);
+            ParaibaFile.WriteIfDifferentSize(
+                    Path.Combine(dirPath, "libexslt-0.dll"), Resources.libexslt_0);
             ParaibaFile.WriteIfDifferentSize(
                     Path.Combine(dirPath, "libgcc_s_sjlj-1.dll"), Resources.libgcc_s_sjlj_1);
             ParaibaFile.WriteIfDifferentSize(
-                    Path.Combine(dirPath, "libgcrypt-11.dll"), Resources.libgcrypt_11);
-            ParaibaFile.WriteIfDifferentSize(
                     Path.Combine(dirPath, "libgnurx-0.dll"), Resources.libgnurx_0);
             ParaibaFile.WriteIfDifferentSize(
-                    Path.Combine(dirPath, "libgpg-error-0.dll"), Resources.libgpg_error_0);
+                    Path.Combine(dirPath, "libidn-11.dll"), Resources.libidn_11);
+            ParaibaFile.WriteIfDifferentSize(
+                    Path.Combine(dirPath, "libintl-8.dll"), Resources.libintl_8);
+            ParaibaFile.WriteIfDifferentSize(
+                    Path.Combine(dirPath, "liblzma-5.dll"), Resources.liblzma_5);
             ParaibaFile.WriteIfDifferentSize(
                     Path.Combine(dirPath, "libsrcml.dll"), Resources.libsrcml);
             ParaibaFile.WriteIfDifferentSize(
+                    Path.Combine(dirPath, "libssh2-1.dll"), Resources.libssh2_1);
+            ParaibaFile.WriteIfDifferentSize(
+                    Path.Combine(dirPath, "libssl-10.dll"), Resources.libssl_10);
+            ParaibaFile.WriteIfDifferentSize(
                     Path.Combine(dirPath, "libstdc++-6.dll"), Resources.libstdc___6);
             ParaibaFile.WriteIfDifferentSize(
-                    Path.Combine(dirPath, "libxml2.dll"), Resources.libxml2);
+                    Path.Combine(dirPath, "libxml2-2.dll"), Resources.libxml2_2);
             ParaibaFile.WriteIfDifferentSize(
-                    Path.Combine(dirPath, "libxslt.dll"), Resources.libxslt);
+                    Path.Combine(dirPath, "libxslt-1.dll"), Resources.libxslt_1);
             ParaibaFile.WriteIfDifferentSize(
                     Path.Combine(dirPath, "zlib1.dll"), Resources.zlib1);
         }

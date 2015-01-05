@@ -100,6 +100,7 @@
     <Compile Include="Learning\LearningAlgorithm.cs" />
     <Compile Include="Learning\LearningData.cs" />
     <Compile Include="Learning\LearningExperiment.cs" />
+    <Compile Include="Learning\LearningExperimentUtil.cs" />
     <Compile Include="Learning\LearningSvmExperiment.cs" />
     <Compile Include="Learning\SurroundingNodeTraversal.cs" />
     <Compile Include="Learning\SvmLearnerWithGaussian.cs" />

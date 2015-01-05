@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Numerics;
+using System.Runtime.Serialization.Formatters.Binary;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.SyntaxTree;
 using Paraiba.Collections.Generic;
@@ -48,7 +49,28 @@ namespace Code2Xml.Learner.Core.Learning {
         protected abstract CstGenerator Generator { get; }
         public abstract bool IsInner { get; }
 
+        public virtual int MaxUp {
+            get { return -1; }
+        }
+
+        public virtual int MaxLeft {
+            get { return -1; }
+        }
+
+        public virtual int MaxRight {
+            get { return -1; }
+        }
+
         public virtual string GetToken(CstNode e) {
+            if (e.TokenText.Length == 1) {
+                var ch = e.TokenText[0];
+                if (char.IsDigit(ch)) {
+                    return "0";
+                }
+                if (char.IsLetter(ch)) {
+                    return "i";
+                }
+            }
             return e.TokenText;
         }
 
@@ -97,6 +119,25 @@ namespace Code2Xml.Learner.Core.Learning {
             _oracleNames = elementNames.ToHashSet();
         }
 
+        public IList<Tuple<List<string>, List<string>>> GetFeatures() {
+            return _classifiers.Select(
+                    cl => Tuple.Create(
+                            LearningExperimentUtil
+                                    .GetFeatureByVector(_feature2Vector, cl.Accepting)
+                                    .ToList(),
+                            LearningExperimentUtil
+                                    .GetFeatureByVector(_feature2Vector, cl.Rejecting)
+                                    .ToList()))
+                    .ToList();
+        }
+
+        public string GetClassifierSummary() {
+            return "AP: "
+                   + string.Join(", ", _classifiers.Select(c => CountBits(c.Accepting)))
+                   + ", RP: "
+                   + string.Join(", ", _classifiers.Select(c => CountRejectingBits(c.Rejecting)));
+        }
+
         public void Clear() {
             _idealAcceptedVector2GroupKey.Clear();
             _idealRejectedVector2GroupKey.Clear();
@@ -121,32 +162,14 @@ namespace Code2Xml.Learner.Core.Learning {
             SuspiciousTargets = null;
         }
 
-        private static string CommonSuffix(string s1, string s2) {
-            var count = Math.Min(s1.Length, s2.Length);
-            var ret = "";
-            var lastIndex = -1;
-            for (int i = 0; i < count; i++) {
-                var ch = s1[i];
-                if (ch == s2[i]) {
-                    ret += ch;
-                } else {
-                    break;
-                }
-                if (ch == '>') {
-                    lastIndex = i;
-                }
-            }
-            return ret.Substring(0, lastIndex + 1);
-        }
-
-        private void UpdateDict(
+        private void UpdateGroupKey(
                 Dictionary<BigInteger, string> dict, BigInteger feature, CstNode node) {
             var groupKey = GetGroupKeyFromNode(node);
             var existingGroupKey = dict.GetValueOrDefault(feature);
             if (existingGroupKey == null) {
                 dict.Add(feature, groupKey);
             } else {
-                dict[feature] = CommonSuffix(existingGroupKey, groupKey);
+                dict[feature] = LearningExperimentUtil.CommonSuffix(existingGroupKey, groupKey);
             }
         }
 
@@ -173,52 +196,18 @@ namespace Code2Xml.Learner.Core.Learning {
             return ">" + node.Name + ">" + string.Join(">", groupKeySequence) + ">";
         }
 
-        private static ISet<string> AdoptNodeNames(ICollection<CstNode> uppermosts) {
-            var name2Count = new Dictionary<string, int>();
-            var name2Ids = new Dictionary<string, HashSet<string>>();
-            var candidates = uppermosts.SelectMany(
-                    e => e.DescendantsOfSingleAndSelf());
-            foreach (var e in candidates) {
-                if (name2Count.ContainsKey(e.Name)) {
-                    name2Count[e.Name] += 1;
-                    name2Ids[e.Name].Add(e.NameAndTokenWithId());
-                } else {
-                    name2Count[e.Name] = 1;
-                    name2Ids[e.Name] = new HashSet<string> {
-                        e.NameAndTokenWithId()
-                    };
-                }
-            }
-            return uppermosts.Select(
-                    e => e.DescendantsOfSingleAndSelf()
-                            .Select(e2 => e2.Name)
-                            .MaxElementOrDefault(
-                                    name => (name2Count[name] << 8) + name2Ids[name].Count))
-                    .ToHashSet();
-        }
-
         public ExperimentalResult Apply(
                 StreamWriter writer, ICollection<string> codePaths, string searchPattern) {
-            var allCsts = codePaths.Select(
-                    path => {
-                        try {
-                            return Generator.GenerateTreeFromCode(
-                                    new FileInfo(path), null, true);
-                        } catch {
-                            return null;
-                        }
-                    })
-                    .Where(t => t != null);
+            var allCsts = GenerateValidCsts(codePaths);
             _idealAcceptedVector2GroupKey.Clear();
             _idealRejectedVector2GroupKey.Clear();
             _feature2Element.Clear();
             _feature2Count.Clear();
             _trainingAcceptedVector2GroupKey.Clear();
             _trainingRejectedVector2GroupKey.Clear();
-            foreach (var cst in allCsts) {
-                Console.Write(".");
-                ConvertUppermostNodesToVectors(cst, _selectedNames);
-            }
+
+            EncodeTargetCsts(codePaths, allCsts);
+
             UpdateGroup();
             _trainingAcceptedVector2GroupKey.AddRange(_idealAcceptedVector2GroupKey);
             _trainingRejectedVector2GroupKey.AddRange(_idealRejectedVector2GroupKey);
@@ -254,28 +243,46 @@ namespace Code2Xml.Learner.Core.Learning {
             return result;
         }
 
+        private void EncodeTargetCsts(ICollection<string> codePaths, IEnumerable<CstNode> allCsts) {
+            var fileName = codePaths.Count > 0
+                    ? string.Join(",", codePaths).GetHashCode() + "_" +
+                      (codePaths.First() + "," + codePaths.Last()).GetHashCode() + ".features"
+                    : null;
+            var formatter = new BinaryFormatter();
+            if (false && fileName != null && File.Exists(fileName)) {
+                using (var fs = new FileStream(fileName, FileMode.Open, FileAccess.Read)) {
+                    _idealRejectedVector2GroupKey =
+                            (Dictionary<BigInteger, string>)formatter.Deserialize(fs);
+                    _idealAcceptedVector2GroupKey =
+                            (Dictionary<BigInteger, string>)formatter.Deserialize(fs);
+                    _feature2Count = (Dictionary<BigInteger, int>)formatter.Deserialize(fs);
+                }
+            } else {
+                foreach (var cst in allCsts) {
+                    Console.Write(".");
+                    ConvertUppermostNodesToVectors(cst, _selectedNames);
+                }
+                if (fileName != null) {
+                    using (var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write)) {
+                        formatter.Serialize(fs, _idealRejectedVector2GroupKey);
+                        formatter.Serialize(fs, _idealAcceptedVector2GroupKey);
+                        formatter.Serialize(fs, _feature2Count);
+                    }
+                }
+            }
+        }
+
         public ExperimentalResult Learn(
                 ICollection<string> seedPaths, StreamWriter writer,
                 ICollection<string> codePaths, string searchPattern) {
-            var allCsts = codePaths.Select(
-                    path => {
-                        try {
-                            return Generator.GenerateTreeFromCode(
-                                    new FileInfo(path), null, true);
-                        } catch {
-                            return null;
-                        }
-                    })
-                    .Where(t => t != null);
-            var seedCsts = seedPaths.Select(
-                    path => Generator.GenerateTreeFromCode(new FileInfo(path), null, true))
-                    .ToList();
+            var allCsts = GenerateValidCsts(codePaths);
+            var seedCsts = GenerateValidCsts(seedPaths).ToList();
             var seedNodes = seedCsts
                     .SelectMany(cst => GetUppermostNodesByNames(cst, _oracleNames))
                     .Where(ProtectedIsAcceptedUsingOracle)
                     .ToList();
             Console.WriteLine("Accepted elements: " + seedNodes.Count);
-            ExtractFeatures(allCsts, seedCsts, seedNodes);
+            ExtractFeatures(codePaths, allCsts, seedCsts, seedNodes);
 
             UpdateGroup();
             _classifiers = InitializeClassifiers();
@@ -337,12 +344,28 @@ namespace Code2Xml.Learner.Core.Learning {
             return result;
         }
 
+        private IEnumerable<CstNode> GenerateValidCsts(IEnumerable<string> codePaths) {
+            return codePaths.Select(
+                    path => {
+                        try {
+                            return Generator.GenerateTreeFromCode(
+                                    new FileInfo(path), null, true);
+                        } catch {
+                            return null;
+                        }
+                    })
+                    .Where(t => t != null);
+        }
+
         public void ExtractFeatures(
-                IEnumerable<CstNode> allCsts, IList<CstNode> seedCsts, IList<CstNode> seedNodes) {
+                ICollection<string> codePaths, IEnumerable<CstNode> allCsts, IList<CstNode> seedCsts,
+                IList<CstNode> seedNodes) {
             var preparingTime = Environment.TickCount;
 
-            var uppermostSeedAcceptedNodes = SelectUppermostNodes(seedNodes).ToHashSet();
-            _selectedNames = AdoptNodeNames(uppermostSeedAcceptedNodes).ToHashSet();
+            var uppermostSeedAcceptedNodes = SelectUppermostNodes(seedNodes)
+                    .ToHashSet();
+            _selectedNames = LearningExperimentUtil.AdoptNodeNames(uppermostSeedAcceptedNodes)
+                    .ToHashSet();
             _groupKeys = _selectedNames.Select(n => ">" + n + ">")
                     .ToList();
 
@@ -356,8 +379,7 @@ namespace Code2Xml.Learner.Core.Learning {
                     .SelectMany(cst => GetUppermostNodesByNames(cst, _selectedNames))
                     .Where(ProtectedIsAcceptedUsingOracle)
                     .ToList();
-            var b1 =
-                    !uppermostSeedAcceptedNodes.All(IsAcceptedUsingOracle);
+            var b1 = !uppermostSeedAcceptedNodes.All(IsAcceptedUsingOracle);
             var b2 = SelectUppermostNodes(uppermostSeedAcceptedNodes2)
                     .Any(e => !uppermostSeedAcceptedNodes.Contains(e));
             var b3 = uppermostSeedAcceptedNodes.Count != uppermostSeedAcceptedNodes2.Count;
@@ -372,7 +394,6 @@ namespace Code2Xml.Learner.Core.Learning {
                 foreach (var e in uppermostSeedAcceptedNodes2) {
                     Console.WriteLine(e);
                 }
-
                 throw new Exception("Wrong Oracle.");
             }
             var seedRejectedNodes = new List<CstNode>();
@@ -386,12 +407,13 @@ namespace Code2Xml.Learner.Core.Learning {
             _trainingRejectedVector2GroupKey = new Dictionary<BigInteger, string>();
             _feature2Element = new Dictionary<BigInteger, CstNode>();
             _feature2Count = new Dictionary<BigInteger, int>();
-            _groupKeys = new List<string> { ">" };
+            // TODO: Maybe this initialization is wrong
+            // _groupKeys = new List<string> { ">" };
             _feature2Vector = new Dictionary<string, BigInteger>();
 
             foreach (var cst in seedCsts) {
                 Console.Write(".");
-                foreach (var e in GetAllElements(cst, _selectedNames)) {
+                foreach (var e in GetUppermostNodesByNames(cst, _selectedNames)) {
                     if (!seedAcceptedNodes.Contains(e)) {
                         seedRejectedNodes.Add(e);
                     }
@@ -427,42 +449,18 @@ namespace Code2Xml.Learner.Core.Learning {
             _acceptingMask = (BigInteger.One << _acceptingFeatureCount) - BigInteger.One;
             _rejectingMask = _mask ^ _acceptingMask;
 
-            _acceptedSeedElementCount = 0;
+            _acceptedSeedElementCount = seedAcceptedNodes.Count;
+            _seedElementCount = _acceptedSeedElementCount + seedRejectedNodes.Count;
             _seedAbstractCount = 0;
-            _seedElementCount = 0;
 
-            foreach (var e in seedAcceptedNodes) {
-                var feature = e.GetSurroundingPathBits(SurroundingLength, _feature2Vector, this);
-                UpdateDict(_idealAcceptedVector2GroupKey, feature, e);
-                _trainingAcceptedVector2GroupKey[feature] = _idealAcceptedVector2GroupKey[feature];
-                _feature2Element[feature] = e;
-                if (_feature2Count.ContainsKey(feature)) {
-                    _feature2Count[feature]++;
-                } else {
-                    _feature2Count[feature] = 1;
-                    _seedAbstractCount++;
-                }
-                _acceptedSeedElementCount++;
-                _seedElementCount++;
-            }
-            foreach (var e in seedRejectedNodes) {
-                var feature = e.GetSurroundingPathBits(SurroundingLength, _feature2Vector, this);
-                UpdateDict(_idealRejectedVector2GroupKey, feature, e);
-                _trainingRejectedVector2GroupKey[feature] = _idealRejectedVector2GroupKey[feature];
-                _feature2Element[feature] = e;
-                if (_feature2Count.ContainsKey(feature)) {
-                    _feature2Count[feature]++;
-                } else {
-                    _feature2Count[feature] = 1;
-                    _seedAbstractCount++;
-                }
-                _seedElementCount++;
-            }
+            EncodeSeedNodes(
+                    seedAcceptedNodes, _idealAcceptedVector2GroupKey,
+                    _trainingAcceptedVector2GroupKey);
+            EncodeSeedNodes(
+                    seedRejectedNodes, _idealRejectedVector2GroupKey,
+                    _trainingRejectedVector2GroupKey);
 
-            foreach (var cst in allCsts) {
-                Console.Write(".");
-                ConvertUppermostNodesToVectors(cst, _selectedNames);
-            }
+            EncodeTargetCsts(codePaths, allCsts);
 
             Console.WriteLine(
                     "Unique Element Count: "
@@ -478,6 +476,24 @@ namespace Code2Xml.Learner.Core.Learning {
             Console.WriteLine("Preparing time: " + (Environment.TickCount - preparingTime));
         }
 
+        private void EncodeSeedNodes(
+                IEnumerable<CstNode> seedNodes,
+                Dictionary<BigInteger, string> idealVector2GroupKey,
+                Dictionary<BigInteger, string> trainingVector2GroupKey) {
+            foreach (var e in seedNodes) {
+                var feature = e.GetSurroundingPathBits(SurroundingLength, _feature2Vector, this);
+                UpdateGroupKey(idealVector2GroupKey, feature, e);
+                trainingVector2GroupKey[feature] = idealVector2GroupKey[feature];
+                _feature2Element[feature] = e;
+                if (_feature2Count.ContainsKey(feature)) {
+                    _feature2Count[feature]++;
+                } else {
+                    _feature2Count[feature] = 1;
+                    _seedAbstractCount++;
+                }
+            }
+        }
+
         private void ConvertUppermostNodesToVectors(CstNode cst, ISet<string> selectedNames) {
             foreach (var uppermostNode in GetUppermostNodesByNames(cst, selectedNames)) {
                 var vector = uppermostNode.GetSurroundingPathBits(
@@ -487,13 +503,13 @@ namespace Code2Xml.Learner.Core.Learning {
                     if (_idealRejectedVector2GroupKey.ContainsKey(vector)) {
                         PrintNotDistinguishedElement(uppermostNode, vector);
                     }
-                    UpdateDict(_idealAcceptedVector2GroupKey, vector, uppermostNode);
+                    UpdateGroupKey(_idealAcceptedVector2GroupKey, vector, uppermostNode);
                 } else {
                     // TODO: for debug
                     if (_idealAcceptedVector2GroupKey.ContainsKey(vector)) {
                         PrintNotDistinguishedElement(uppermostNode, vector);
                     }
-                    UpdateDict(_idealRejectedVector2GroupKey, vector, uppermostNode);
+                    UpdateGroupKey(_idealRejectedVector2GroupKey, vector, uppermostNode);
                 }
                 _feature2Element[vector] = uppermostNode;
                 if (_feature2Count.ContainsKey(vector)) {
@@ -511,7 +527,7 @@ namespace Code2Xml.Learner.Core.Learning {
                     + _feature2Element[feautre].Name + ", "
                     + _feature2Element[feautre].Code);
             IsAcceptedUsingOracle(e);
-            feautre = e.GetSurroundingPathBits(SurroundingLength, _feature2Vector, this);
+            e.GetSurroundingPathBits(SurroundingLength, _feature2Vector, this);
         }
 
         private int GetGroupIndex(BigInteger feature) {
@@ -549,6 +565,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 if (updated) {
                     UpdateGroup();
                 }
+                // ReSharper disable once PossibleUnintendedReferenceComparison
                 if (_groupKeys.Count == count
                     && acceptedTrainingSet == _trainingAcceptedVector2GroupKey) {
                     throw new Exception("Fail to learn rules");
@@ -601,7 +618,6 @@ namespace Code2Xml.Learner.Core.Learning {
                 classifiers[iGroupKey].Rejecting |= feature;
             }
             for (int i = 0; i < count; i++) {
-                // �S�Ă�Accepted�������Ă��Ȃ�������1��
                 classifiers[i].Rejecting ^= _rejectingMask;
                 classifiers[i].Rejecting &= _rejectingMask;
             }
@@ -630,11 +646,10 @@ namespace Code2Xml.Learner.Core.Learning {
         }
 
         private List<ClassifierUnit> InitializeClassifiers() {
-            return
-                    Enumerable.Repeat(
-                            new ClassifierUnit(_acceptingMask, _rejectingMask), _groupKeys.Count)
-                            .Select(_ => new ClassifierUnit(_acceptingMask, _rejectingMask))
-                            .ToList();
+            return Enumerable.Repeat(
+                    new ClassifierUnit(_acceptingMask, _rejectingMask), _groupKeys.Count)
+                    .Select(_ => new ClassifierUnit(_acceptingMask, _rejectingMask))
+                    .ToList();
         }
 
         #endregion
@@ -744,10 +759,10 @@ namespace Code2Xml.Learner.Core.Learning {
                     + correctlyAccepted + ", CR: " + correctlyRejected + "/"
                     + correctlyRejectedInRejecting);
             Console.WriteLine(
-                    "L: "
+                    "TR: "
                     + (_trainingAcceptedVector2GroupKey.Count
-                       + _trainingRejectedVector2GroupKey.Count) + ", AP: "
-                    + string.Join(", ", classifiers.Select(c => CountBits(c.Accepting))) + ", RP: "
+                       + _trainingRejectedVector2GroupKey.Count) + ", AF: "
+                    + string.Join(", ", classifiers.Select(c => CountBits(c.Accepting))) + ", RF: "
                     + string.Join(", ", classifiers.Select(c => CountRejectingBits(c.Rejecting))));
             result.WrongFeatureCount = wronglyAccepted + wronglyRejected
                                        + wronglyRejectedInRejecting;
@@ -1343,13 +1358,10 @@ namespace Code2Xml.Learner.Core.Learning {
         }
 
         private bool IsAccepted(BigInteger feature, BigInteger acceptingClassifier) {
-            // �S�Ă̐���������Ă����Accepted
             return (feature & acceptingClassifier) == acceptingClassifier;
         }
 
         private bool IsRejected(BigInteger feature, BigInteger rejectingClassifier) {
-            // �����ꂩ�̐���������Ă����Rejected
-            // Reject���Ȃ��ꍇ�����ɓ���
             return (feature & rejectingClassifier) != BigInteger.Zero;
         }
 
@@ -1518,10 +1530,19 @@ namespace Code2Xml.Learner.Core.Learning {
         }
 
         protected abstract bool ProtectedIsAcceptedUsingOracle(CstNode e);
+
+        public virtual IList<CstNode> GetRootsUsingOracle(CstNode e) {
+            return null;
+        }
     }
 
     public interface ILearningExperiment {
         bool IsInner { get; }
         string GetToken(CstNode e);
+        int MaxUp { get; }
+        int MaxLeft { get; }
+        int MaxRight { get; }
+
+        IList<CstNode> GetRootsUsingOracle(CstNode e);
     }
 }

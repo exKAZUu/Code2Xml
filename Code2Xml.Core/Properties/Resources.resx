@@ -121,50 +121,11 @@
   <data name="ast2xml" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Dependencies\Python\ast2xml.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="bz2_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Dependencies\srcML\bz2-1.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="composite_sexp_processor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Dependencies\Ruby\composite_sexp_processor.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="iconv" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Dependencies\srcML\iconv.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="koopafor85" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Dependencies\Cobol\koopafor85.jar;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="libantlr2_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Dependencies\srcML\libantlr2-0.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="libarchive_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Dependencies\srcML\libarchive-2.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="libexslt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Dependencies\srcML\libexslt.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="libgcc_s_sjlj_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Dependencies\srcML\libgcc_s_sjlj-1.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="libgcrypt_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Dependencies\srcML\libgcrypt-11.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="libgnurx_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Dependencies\srcML\libgnurx-0.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="libgpg_error_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Dependencies\srcML\libgpg-error-0.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="libsrcml" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Dependencies\srcML\libsrcml.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="libstdc___6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Dependencies\srcML\libstdc++-6.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="libxml2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Dependencies\srcML\libxml2.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="libxslt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Dependencies\srcML\libxslt.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="print_ast" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Dependencies\Ruby\print_ast.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -217,12 +178,6 @@
   <data name="sexp_processor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Dependencies\Ruby\sexp_processor.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="src2srcml" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Dependencies\srcML\src2srcml.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="srcml2src" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Dependencies\srcML\srcml2src.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="st2xml" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Dependencies\Python\st2xml.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -241,13 +196,73 @@
   <data name="xml2ruby20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Dependencies\Ruby\xml2ruby20.rb;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="zlib1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Dependencies\srcML\zlib1.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="ast_parser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Dependencies\Python\ast_parser.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="st_parser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Dependencies\Python\st_parser.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\iconv.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libantlr2_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\libantlr2-0.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libarchive_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\libarchive-13.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libbz2_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\libbz2-1.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libcrypto_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\libcrypto-10.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libcurl_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\libcurl-4.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libexslt_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\libexslt-0.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libgcc_s_sjlj_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\libgcc_s_sjlj-1.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libgnurx_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\libgnurx-0.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libidn_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\libidn-11.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libintl_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\libintl-8.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="liblzma_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\liblzma-5.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libsrcml" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\libsrcml.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libssh2_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\libssh2-1.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libssl_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\libssl-10.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libstdc___6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\libstdc++-6.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libxml2_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\libxml2-2.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libxslt_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\libxslt-1.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="src2srcml" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\src2srcml.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="srcml2src" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\srcml2src.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="zlib1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dependencies\srcML\zlib1.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

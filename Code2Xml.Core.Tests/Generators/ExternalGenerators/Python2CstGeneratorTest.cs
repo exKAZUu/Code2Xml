@@ -39,6 +39,7 @@ namespace Code2Xml.Core.Tests.Generators.ExternalGenerators {
 pass")]
         [TestCase(@"i = 0 + 1 - 2 * 3 / 4 % 5")]
         [TestCase(@"str(1 + 2)")]
+        [TestCase(@"str(s).count(s)")]
         public void Parse(string code) {
             VerifyRestoringCodeAndInspect(code);
         }

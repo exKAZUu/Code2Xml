@@ -34,152 +34,305 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         private static readonly Tuple<string, string>[] LearningSets = {
             Tuple.Create(
-                    @"https://github.com/nostra13/Android-Universal-Image-Loader.git",
-                    @"29811229c3ba3da390b29353875be2c92f88a789"),
+                    @"https://github.com/elasticsearch/elasticsearch",
+                    @"96e62b3c1b1ea22fa788fc14b7c9d1f4388dbc1c"),
             Tuple.Create(
-                    @"https://github.com/github/android.git",
-                    @"9d490829b944d3a2c77dbd0010ec7a0bfe2efaee"),
+                    @"https://github.com/nathanmarz/storm",
+                    @"cdb116e942666973bc4eaa0df098d5bab82739e7"),
             Tuple.Create(
-                    @"https://github.com/JakeWharton/Android-ViewPagerIndicator.git",
+                    @"https://github.com/jfeinstein10/SlidingMenu",
+                    @"4254feca3ece9397cd501921ee733f19ea0fdad8"),
+            Tuple.Create(
+                    @"https://github.com/JakeWharton/ActionBarSherlock",
+                    @"4a79d536af872339899a90d6dc743aa57745474b"),
+            Tuple.Create(
+                    @"https://github.com/nostra13/Android-Universal-Image-Loader",
+                    @"b3888a4f35d31a3e7b96c9f7a5665216c1946bb5"),
+            Tuple.Create(
+                    @"https://github.com/github/android",
+                    @"fbfb63c6607d8077018c245d7508f0fedab65dbb"),
+            Tuple.Create(
+                    @"https://github.com/libgdx/libgdx",
+                    @"806ba436b1805c3d56c22a3b25b7fd383bc44c40"),
+            Tuple.Create(
+                    @"https://github.com/google/iosched",
+                    @"f2e87424ea7cc0c3f8022f984966091ea746a23e"),
+            Tuple.Create(
+                    @"https://github.com/loopj/android-async-http",
+                    @"b954a3178751b5fcf051f4c0134774cc51ba5fcc"),
+            Tuple.Create(
+                    @"https://github.com/JakeWharton/Android-ViewPagerIndicator",
                     @"8cd549f23f3d20ff920e19a2345c54983f65e26b"),
             Tuple.Create(
-                    @"https://github.com/loopj/android-async-http.git",
-                    @"6077c6aa7bf06b2b8c13fbb4355e094dea436b7c"),
+                    @"https://github.com/spring-projects/spring-framework",
+                    @"a3213f26a5ae0bc741b1d166545f39597acbbd12"),
             Tuple.Create(
-                    @"https://github.com/junit-team/junit.git",
-                    @"e65558c174a8f5c4c7758f0d9dd1ffe027b023d8"),
+                    @"https://github.com/chrisbanes/Android-PullToRefresh",
+                    @"3bd8ef6869c3297bfe874d2f15c2ee53c3456e99"),
             Tuple.Create(
-                    @"https://github.com/square/picasso.git",
-                    @"e0c3d44f53919742a0a608277be26b47742bb2a2"),
+                    @"https://github.com/square/picasso",
+                    @"2ce8847cfe05553d7f44baafa9a90db73caf4cc7"),
             Tuple.Create(
-                    @"https://github.com/chrisbanes/ActionBar-PullToRefresh.git",
-                    @"65d4183994eaf8c450e81afadb389fca61499063"),
+                    @"https://github.com/excilys/androidannotations",
+                    @"45c041346847a02ccf56806111b25b93a05f26d4"),
             Tuple.Create(
-                    @"https://github.com/cyrilmottier/GreenDroid.git",
+                    @"https://github.com/netty/netty",
+                    @"99376c43911bd36df7cd31a5966b2757128e7319"),
+            Tuple.Create(
+                    @"https://github.com/clojure/clojure",
+                    @"be39843727bd0d4b022f3a3996d3c64ddefdd84d"),
+            Tuple.Create(
+                    @"https://github.com/ReactiveX/RxJava",
+                    @"054959ee58c464470afc3911549e442995a48846"),
+            Tuple.Create(
+                    @"https://github.com/Bearded-Hen/Android-Bootstrap",
+                    @"ffa647269c420810faa05a62cc0d14842401925d"),
+            Tuple.Create(
+                    @"https://github.com/square/retrofit",
+                    @"96b93b57a45768b56641680e72964b55fd05e01c"),
+            Tuple.Create(
+                    @"https://github.com/eclipse/vert.x",
+                    @"49775052e59e82d64bf06340ff2cfe2e66c19e1c"),
+            Tuple.Create(
+                    @"https://github.com/AndroidBootstrap/android-bootstrap",
+                    @"332bd8896a9c7337b72f79237993072eca7a59d2"),
+            Tuple.Create(
+                    @"https://github.com/zxing/zxing",
+                    @"b8bafbe5c95310ed81e42e51f4b86d9f6b427c92"),
+            Tuple.Create(
+                    @"https://github.com/facebook/facebook-android-sdk",
+                    @"f94970f6d99623ed3f74bf6c2dcf1f37b39ecc3f"),
+            Tuple.Create(
+                    @"https://github.com/junit-team/junit",
+                    @"26f9ebac45e0ff95c72d356b98b64eaf3de4f618"),
+            Tuple.Create(
+                    @"https://github.com/sparklemotion/nokogiri",
+                    @"0af5a8e4bf244977643660894441a6c8431f5a46"),
+            Tuple.Create(
+                    @"https://github.com/WhisperSystems/TextSecure",
+                    @"503d1ef452b794bd21d3f2fecd1dcde81e411453"),
+            Tuple.Create(
+                    @"https://github.com/google/physical-web",
+                    @"7afe865ee012b51519cc3ebfd1fd62ea7ed41195"),
+            Tuple.Create(
+                    @"https://github.com/chrisbanes/ActionBar-PullToRefresh",
+                    @"f347ef96c2643fecee7cbf671db05c0487666dff"),
+            Tuple.Create(
+                    @"https://github.com/facebook/presto",
+                    @"94be5c57224855b50e662fa175a5bcf14e98a50f"),
+            Tuple.Create(
+                    @"https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition",
+                    @"a26369b6d817cdeba0bf858247f02d1586166dfd"),
+            Tuple.Create(
+                    @"https://github.com/gabrielemariotti/cardslib",
+                    @"1af847481e6dbcd2e1d0b0c9496c33d2c11f3b8d"),
+            Tuple.Create(
+                    @"https://github.com/etsy/AndroidStaggeredGrid",
+                    @"d8ca7e6aafd600842c002afc76d17b5d3a2b9cfb"),
+            Tuple.Create(
+                    @"https://github.com/nhaarman/ListViewAnimations",
+                    @"4aa6dd2253c6132b121497cd3e729962f411d0d3"),
+            Tuple.Create(
+                    @"https://github.com/dropwizard/metrics",
+                    @"b077a56fddcd7c119597ff26bf255fe55505df80"),
+            Tuple.Create(
+                    @"https://github.com/square/okhttp",
+                    @"59b11fbabf1ae35ab27e70ea890338c81a7dd3fa"),
+            Tuple.Create(
+                    @"https://github.com/square/dagger",
+                    @"65573a5680e6e170b62aed573ec1672139e48fcf"),
+            Tuple.Create(
+                    @"https://github.com/dropwizard/dropwizard",
+                    @"e03b81ecf3cd50240b534ef64606b52c3fa79c76"),
+            Tuple.Create(
+                    @"https://github.com/greenrobot/EventBus",
+                    @"4cdd420d4ec26de6cedb444e7f6ec129d70b2b20"),
+            Tuple.Create(
+                    @"https://github.com/LMAX-Exchange/disruptor",
+                    @"c4e244bdb14d9a5999b5059cecd007ce87f5e671"),
+            Tuple.Create(
+                    @"https://github.com/chrisbanes/PhotoView",
+                    @"48427bff9bb1a408cfebf6697aa019c0788ded76"),
+            Tuple.Create(
+                    @"https://github.com/cyrilmottier/GreenDroid",
                     @"abd9769f677bb4a753f0bf1119f961187bdf7020"),
             Tuple.Create(
-                    @"https://github.com/dropwizard/metrics.git",
-                    @"e61395657d9f471a88dc0d9f3c7f78f0e773fe28"),
+                    @"https://github.com/Netflix/Hystrix",
+                    @"62ac93f94c7248c2a5bac596344bac0f332fdf7f"),
             Tuple.Create(
-                    @"https://github.com/nicolasgramlich/AndEngine.git",
+                    @"https://github.com/aporter/coursera-android",
+                    @"f4a837c6cb7c6422c813b1bda00af7948df658f8"),
+            Tuple.Create(
+                    @"https://github.com/fernandezpablo85/scribe-java",
+                    @"e47e494ce39f9b180352fc9b5fd73c8b3ccce7f8"),
+            Tuple.Create(
+                    @"https://github.com/nicolasgramlich/AndEngine",
                     @"720897f99d2c56ba357e8fe361454bd8d88c37ed"),
             Tuple.Create(
-                    @"https://github.com/Prototik/HoloEverywhere.git",
-                    @"3b6021aa4af717cd31b1b6c877f6c30b674af6d9"),
+                    @"https://github.com/roboguice/roboguice",
+                    @"d84517c2003fa0d5d56d0f469ce30804ac6316a9"),
             Tuple.Create(
-                    @"https://github.com/fernandezpablo85/scribe-java.git",
-                    @"135ad50a4e4e27e97f09e42ae50d6011c7af7a4b"),
+                    @"https://github.com/astuetz/PagerSlidingTabStrip",
+                    @"3f4738eca833faeca563d93cd77c8df763a45fb6"),
             Tuple.Create(
-                    @"https://github.com/LMAX-Exchange/disruptor.git",
-                    @"1072645ad75f8b07b9145197fd4137fcfa79011a"),
+                    @"https://github.com/koush/ion",
+                    @"f699946ecc7b45cf56889c2997adfb4553bd8c99"),
             Tuple.Create(
-                    @"https://github.com/dropwizard/dropwizard.git",
-                    @"4758ac698ff9993879798db338b3314c6a1c6a27"),
+                    @"https://github.com/OpenRefine/OpenRefine",
+                    @"a58426332bf04c4c10d1ba2d4d65d932de665dfb"),
             Tuple.Create(
-                    @"https://github.com/square/retrofit.git",
-                    @"1f7cc4942f71d6c6cf4770fcd93670bc93a8c710"),
+                    @"https://github.com/Prototik/HoloEverywhere",
+                    @"b870abb5ab009a5a6dbab3fb855ec2854e35e125"),
             Tuple.Create(
-                    @"https://github.com/SimonVT/android-menudrawer.git",
-                    @"1260f2f6d50d3b572ebfa98e93a0b4f8258371de"),
+                    @"https://github.com/thinkaurelius/titan",
+                    @"1fc9959967a2a34255afa2408e8e6335f0544821"),
+            //Tuple.Create(
+            //        @"https://github.com/android/platform_frameworks_base",
+            //        @"ced7ebdb1d522b4206e2048b278554ca841aeaba"),
             Tuple.Create(
-                    @"https://github.com/square/dagger.git",
-                    @"21a9e0d875da31306b0f41273348f4f75741fef7"),
+                    @"https://github.com/47deg/android-swipelistview",
+                    @"eb5a84c41d2131c5e858d5185001ea1e861afe7f"),
             Tuple.Create(
-                    @"https://github.com/Atmosphere/atmosphere.git",
-                    @"dd2397e03088f2bced1f8e47f8f81e935664a923"),
+                    @"https://github.com/Netflix/SimianArmy",
+                    @"011d467e280bbd2e312ac81ac69dfb0d02df918d"),
             Tuple.Create(
-                    @"https://github.com/thinkaurelius/titan.git",
-                    @"c26cd982b1dc5ba792ee7a63af59887bd8b08223"),
+                    @"https://github.com/SimonVT/android-menudrawer",
+                    @"59e8d18e109c77d911b8b63232d66d5f0551cf6a"),
             Tuple.Create(
-                    @"https://github.com/Comcast/FreeFlow.git",
-                    @"47bfb57e8037eecae320266cb00dd23e673362e5"),
+                    @"https://github.com/JakeWharton/butterknife",
+                    @"3dcd577810a623d15327a07a589a232a9e8dc355"),
             Tuple.Create(
-                    @"https://github.com/greenrobot/greenDAO.git",
-                    @"d13a1f1d0e8d244e8033a944599adda7bb157bef"),
+                    @"https://github.com/johannilsson/android-pulltorefresh",
+                    @"ccd0c71a4b291a5ad4673081dfbb72877fb3b346"),
             Tuple.Create(
-                    @"https://github.com/commonsguy/cw-advandroid.git",
-                    @"ab8e52a00413592b99a7bb9f93050bee760f289f"),
+                    @"https://github.com/emilsjolander/StickyListHeaders",
+                    @"80e71051d1f54e1db0d20a4a756618caa91b385f"),
             Tuple.Create(
-                    @"https://github.com/koush/AndroidAsync.git",
-                    @"09c60732944a20eac52301026e9c24344ccb3062"),
+                    @"https://github.com/keyboardsurfer/Crouton",
+                    @"fbc3df3902a2ef4615bf36042c9199d7e6ef3458"),
             Tuple.Create(
-                    @"https://github.com/square/android-times-square.git",
-                    @"2bb367039b3cb93e6764e55835dc023df9f4fd77"),
+                    @"https://github.com/umano/AndroidSlidingUpPanel",
+                    @"935c4fae0fb9cb03f3f86bc1539076eea6e32195"),
             Tuple.Create(
-                    @"https://github.com/pardom/ActiveAndroid.git",
-                    @"bd98740d466249fc085311b1c166570cfc08f532"),
+                    @"https://github.com/Atmosphere/atmosphere",
+                    @"b25abd6090bcfca71d7123f1ec2c9379c654fdd1"),
             Tuple.Create(
-                    @"https://github.com/kevinsawicki/http-request.git",
-                    @"c11e2a8b335d43adb9e273412ec7a39c7e404e72"),
+                    @"https://github.com/stephanenicolas/robospice",
+                    @"211949a3806215cd9828744dd6da71c49b6fa32f"),
             Tuple.Create(
-                    @"https://github.com/qii/weiciyuan.git",
-                    @"14fdfe9f6f7f3d927a66d802b709f53ba0ff629e"),
+                    @"https://github.com/square/otto",
+                    @"7f32e50b9dd9846e4acc0c39611360509809740c"),
             Tuple.Create(
-                    @"https://github.com/twitter/ambrose.git",
-                    @"9ff6dc68e6eb7e95645878082774f44acca5814f"),
+                    @"https://github.com/springside/springside4",
+                    @"429cdcee61367131d99d711305c7c22597bc5652"),
             Tuple.Create(
-                    @"https://github.com/perwendel/spark.git",
-                    @"f1f06769abacc6732e511774d4db2306cbe5db54"),
+                    @"https://github.com/bauerca/drag-sort-listview",
+                    @"c3cfccee21676149dfdf8e803c0ec2eaebc6b841"),
             Tuple.Create(
-                    @"https://github.com/addthis/stream-lib.git",
-                    @"56c48e001341f874c37e0113c09554436e93ea10"),
+                    @"https://github.com/gradle/gradle",
+                    @"c7374fad4d499ec828ef3dc9750b42d3b95f429e"),
             Tuple.Create(
-                    @"https://github.com/http-kit/http-kit.git",
-                    @"7184fa8cf2526a24446e7e6602bc16d9d1c0948a"),
+                    @"https://github.com/JakeWharton/NineOldAndroids",
+                    @"9f20fd77e04942fd50b95aeb1c492a38e36c06dd"),
             Tuple.Create(
-                    @"https://github.com/quartzjer/TeleHash.git",
-                    @"133f4212666911d066f59255e2e7fbd69bea8265"),
+                    @"https://github.com/amlcurran/ShowcaseView",
+                    @"0fe55b8eeedba01cf0864171de71fad0541bc70d"),
             Tuple.Create(
-                    @"https://github.com/cucumber/cucumber-jvm.git",
-                    @"08e6b87a0a21010bf35d643157b7032a40832efd"),
+                    @"https://github.com/xetorthio/jedis",
+                    @"f7995a7771ff20c2abce5591bad7781a97630b2c"),
             Tuple.Create(
-                    @"https://github.com/jankotek/MapDB.git",
-                    @"c890d8b4edc5fb9d064bb04aa132aea8608f87dd"),
+                    @"https://github.com/daimajia/AndroidSwipeLayout",
+                    @"1c4dfcc9854ca34f9f8ca513a9d47c58be25ad59"),
             Tuple.Create(
-                    @"https://github.com/peter-lawrey/Java-Chronicle.git",
-                    @"6716f0cff0750d125a07eb769bba0698a617b7fb"),
+                    @"https://github.com/koush/AndroidAsync",
+                    @"198751982785b9fb75e352d9585ea4eb2a1d251f"),
             Tuple.Create(
-                    @"https://github.com/TooTallNate/Java-WebSocket.git",
-                    @"7c3b223536dc8bd4e8794ac265ad06679583e30f"),
+                    @"https://github.com/apache/cassandra",
+                    @"7e7cb6e375534bdfdf18f07f85acd06de7191185"),
             Tuple.Create(
-                    @"https://github.com/derekbrameyer/android-betterpickers.git",
-                    @"0a72367b478970b1731822e78790a158a4f7ebb4"),
+                    @"https://github.com/pardom/ActiveAndroid",
+                    @"08c6335cd7324c6e72da536b0c6fffa5a798f6a2"),
             Tuple.Create(
-                    @"https://github.com/typesafehub/config.git",
-                    @"36c1392028c82db2c146ade29a2f6940bc6f5407"),
+                    @"https://github.com/ManuelPeinado/FadingActionBar",
+                    @"1c148b91867259ea43e6343d8afb69d106168b46"),
             Tuple.Create(
-                    @"https://github.com/OpenTSDB/opentsdb.git",
-                    @"a2bd5737d9d11a8fd3fa6e9c36a31dd8cb5c4af4"),
+                    @"https://github.com/jeresig/processing-js",
+                    @"02363398a823eae731cafa180a5581fe353397bf"),
             Tuple.Create(
-                    @"https://github.com/kevinweil/elephant-bird.git",
-                    @"ccddfc68e634fea2d05a1804057a1c4826817471"),
+                    @"https://github.com/yui/yuicompressor",
+                    @"f613d652cfac7487e335f3f8c60e0a51e9e17e1d"),
             Tuple.Create(
-                    @"https://github.com/nathanmarz/storm-starter.git",
-                    @"917a4c5c171009af3b130d09339355f6310a2042"),
+                    @"https://github.com/k9mail/k-9",
+                    @"4aad31e05a81c92ea4b96cccc211ef83e0cb660a"),
             Tuple.Create(
-                    @"https://github.com/mongodb/mongo-hadoop.git",
-                    @"29788439cbc8cc9a45910ceba316a70049a8b4e8"),
+                    @"https://github.com/greenrobot/greenDAO",
+                    @"d49f1800a64504e693962c47d0f49cda46301685"),
             Tuple.Create(
-                    @"https://github.com/harism/android_page_curl.git",
-                    @"7a2c8f152bb4f1b0de3b1aa72b3cb79e1fe8e3bd"),
+                    @"https://github.com/daimajia/AndroidViewAnimations",
+                    @"8b41ec8cc1e2218b071790da0c2dd87707076f77"),
             Tuple.Create(
-                    @"https://github.com/RobotiumTech/robotium.git",
-                    @"ee7d989c95f2cf380935f7a117d7f9345820cbf7"),
+                    @"https://github.com/AsyncHttpClient/async-http-client",
+                    @"77589fdaf6ec3be75afb46b70476d5d561a79a6c"),
             Tuple.Create(
-                    @"https://github.com/hector-client/hector.git",
-                    @"0c760d9347ebf9bdaeec5fe195f175f674590909"),
+                    @"https://github.com/Bukkit/Bukkit",
+                    @"f210234e59275330f83b994e199c76f6abd41ee7"),
             Tuple.Create(
-                    @"https://github.com/eishay/jvm-serializers.git",
-                    @"3ec217ec19aff74654b40a47c010d57a44996efb"),
+                    @"https://github.com/Comcast/FreeFlow",
+                    @"b6c240fcfbcd5bd97e2ec9a3f06271890446b6c1"),
             Tuple.Create(
-                    @"https://github.com/jberkel/sms-backup-plus.git",
-                    @"3565f645126d3f9e8c0371ec57c8aac4bbf5cde1"),
+                    @"https://github.com/perwendel/spark",
+                    @"ffe3b1169d49af12b10b2dbff9ee913501ffc8a8"),
             Tuple.Create(
-                    @"https://github.com/jayway/maven-android-plugin.git",
-                    @"2ce1428c8e83365c5ac096b7855e71bd8a035013"),
+                    @"https://github.com/castorflex/SmoothProgressBar",
+                    @"aeca86b0eb5ecb1e1e360e6a47222bafccb85726"),
             Tuple.Create(
-                    @"https://github.com/square/spoon.git",
-                    @"975dacb45607ed45492fa3dd9e697f0a5263e71a"),
+                    @"https://github.com/commonsguy/cw-omnibus",
+                    @"e0e0e4a0835540065e39e48a63ae3abe2b29b38b"),
+            Tuple.Create(
+                    @"https://github.com/ACRA/acra",
+                    @"2f170732c38f078c941283188a23b52291814410"),
+            Tuple.Create(
+                    @"https://github.com/androidquery/androidquery",
+                    @"45ed6c85dcf0b3b58a08810b423886fb275b33b0"),
+            Tuple.Create(
+                    @"https://github.com/openaphid/android-flip",
+                    @"ab2dea1b045ffc626221c2826ce9dd00823e696d"),
+            Tuple.Create(
+                    @"https://github.com/jhy/jsoup",
+                    @"83ad1bc40f08cbdd2994695058580972e7499381"),
+            Tuple.Create(
+                    @"https://github.com/pakerfeldt/android-viewflow",
+                    @"3da74fa32a935bcbb37e5ebeb270477cde1985d4"),
+            //Tuple.Create(
+            //        @"https://github.com/JetBrains/intellij-community",
+            //        @"a2595d6960aaf06e853acf2b1dcf4939d7d7186d"),
+            Tuple.Create(
+                    @"https://github.com/square/android-times-square",
+                    @"bd78e97a4ba1a9a4b6806b737e203bdb7981d648"),
+            //Tuple.Create(
+            //        @"https://github.com/processing/processing",
+            //        @"3d4bf5cbd24dadb501d0e6ab742435e31402cba5"),
+            Tuple.Create(
+                    @"https://github.com/yinwang0/pysonar2",
+                    @"efbd4d3de10d6141bab2d4d78d6ae8abd1884734"),
+            Tuple.Create(
+                    @"https://github.com/dmytrodanylyk/circular-progress-button",
+                    @"97f31ec128d1ba1435c0ccd4b5f2881e7892a4c9"),
+            Tuple.Create(
+                    @"https://github.com/facebook/rebound",
+                    @"5bdf98d98ad51be23a8bce1a986715a891025b4c"),
+            //Tuple.Create(
+            //        @"https://github.com/voldemort/voldemort",
+            //        @"f52dceddf7c56e0f8455260cdc01b4033818f7e5"),
+            Tuple.Create(
+                    @"https://github.com/videlalvaro/gifsockets",
+                    @"0ccb1fd01edeb835a90c0c1140ad91dbd1a354b1"),
+            Tuple.Create(
+                    @"https://github.com/yangfuhai/afinal",
+                    @"eef7702b19d46ae9fc14af6ad209287f220eb6ab"),
+            Tuple.Create(
+                    @"https://github.com/johannilsson/android-actionbar",
+                    @"47157b28766b540d166073f26c43ed5a2c14bfb3"),
         };
 
         private static readonly LearningExperiment[] Experiments = {
@@ -187,9 +340,9 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             new JavaSuperComplexBranchExperiment(),
             new JavaExpressionStatementExperiment(),
             new JavaArithmeticOperatorExperiment(),
-            new JavaSwitchCaseExperiment(),
-            new JavaSuperComplexBranchExperimentWithSwitch(),
-            new JavaSuperComplexBranchExperimentWithSwitchWithoutTrue(),
+            //new JavaSwitchCaseExperiment(),
+            //new JavaSuperComplexBranchExperimentWithSwitch(),
+            //new JavaSuperComplexBranchExperimentWithSwitchWithoutTrue(),
 
             //new JavaComplexBranchExperiment(),
             //new JavaIfExperiment(),
@@ -229,7 +382,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             LearnAndApply(seedPaths, LearningSets, Experiments);
         }
 
-        //[Test, TestCaseSource("TestCases")]
+        [Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.java"), };
             Learn(seedPaths, exp, projectPath);
@@ -281,6 +434,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
+        public override int MaxUp {
+            get { return 5; }
+        }
+
+        public override int MaxLeft {
+            get { return 1; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
+        }
+
         public JavaSuperComplexBranchExperiment() : base("expression") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
@@ -298,7 +463,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 return true;
             }
             if (p.SafeName() == "forstatement"
-                && p.Elements().Count(e2 => e2.TokenText == ";") >= 2) {
+                && p.Children().Count(e2 => e2.TokenText == ";") >= 2) {
                 return true;
             }
             {
@@ -309,7 +474,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 //if (primary.Elements().All(e2 => e2.TokenText() != "Preconditions")) {
                 //	return false;
                 //}
-                if (primary.Elements().All(e2 => e2.TokenText != "checkArgument")) {
+                if (primary.Children().All(e2 => e2.TokenText != "checkArgument")) {
                     return false;
                 }
                 //if (primary.NthElementOrDefault(0).SafeTokenText() != "Preconditions") {
@@ -318,10 +483,45 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 //if (primary.NthElementOrDefault(2).SafeTokenText() != "checkArgument") {
                 //	return false;
                 //}
-                if (e.ElementsBeforeSelf().Any()) {
+                if (e.PrevsFromFirst().Any()) {
                     return false;
                 }
                 return true;
+            }
+        }
+
+        public override IList<CstNode> GetRootsUsingOracle(CstNode e) {
+            var p = e.Parent;
+            var pp = p.Parent;
+            var isPar = p.SafeName() == "parExpression";
+            var isStmt = pp.SafeName() == "statement";
+            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "if") {
+                return new[] { p.Prev, p };
+            }
+            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "while") {
+                return new[] { p.Prev, p };
+            }
+            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "do") {
+                return new[] { p.Prev, p, p.Next };
+            }
+            if (p.SafeName() == "forstatement"
+                && p.Children().Count(e2 => e2.TokenText == ";") >= 2) {
+                return p.PrevsFromSelfAndSelf().Concat(Enumerable.Repeat(p.Next, 1))
+                        .ToList();
+            }
+            {
+                var primary = e.SafeParent().SafeParent().SafeParent().SafeParent();
+                if (primary.SafeName() != "primary") {
+                    return new CstNode[0];
+                }
+                if (primary.Children().All(e2 => e2.TokenText != "checkArgument")) {
+                    return new CstNode[0];
+                }
+                if (e.PrevsFromFirst().Any()) {
+                    return new CstNode[0];
+                }
+                var ppp = e.Parent.Parent.Parent;
+                return new[] { ppp.Prev, ppp };
             }
         }
 
@@ -368,15 +568,15 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             // do { .. snip .. } while (cond);
             var p = e.Parent;
             return p.Name == "forstatement"
-                   && p.Elements().Count(e_ => e_.TokenText == ";") >= 2;
+                   && p.Children().Count(e_ => e_.TokenText == ";") >= 2;
         }
 
         public bool IsCheckArgument(CstNode e) {
             // Preconditions.checkArgument(cond, msg);
             var primary = e.Parent.Parent.Parent.Parent;
             return primary.Name == "primary"
-                   && primary.Elements().Any(e2 => e2.TokenText == "checkArgument")
-                   && e.ElementsBeforeSelf().Count() == 0;
+                   && primary.Children().Any(e2 => e2.TokenText == "checkArgument")
+                   && e.PrevsFromFirst().Count() == 0;
         }
     }
 
@@ -406,7 +606,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 return true;
             }
             if (p.SafeName() == "forstatement"
-                && p.Elements().Count(e2 => e2.TokenText == ";") >= 2) {
+                && p.Children().Count(e2 => e2.TokenText == ";") >= 2) {
                 return true;
             }
             return false;
@@ -496,7 +696,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var p = e.Parent;
             if (p.SafeName() == "forstatement"
-                && p.Elements().Count(e2 => e2.TokenText == ";") >= 2) {
+                && p.Children().Count(e2 => e2.TokenText == ";") >= 2) {
                 return true;
             }
             return false;
@@ -522,7 +722,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             //if (primary.Elements().All(e2 => e2.TokenText() != "Preconditions")) {
             //	return false;
             //}
-            if (primary.Elements().All(e2 => e2.TokenText != "checkArgument")) {
+            if (primary.Children().All(e2 => e2.TokenText != "checkArgument")) {
                 return false;
             }
             //if (primary.NthElementOrDefault(0).SafeTokenText() != "Preconditions") {
@@ -531,7 +731,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             //if (primary.NthElementOrDefault(2).SafeTokenText() != "checkArgument") {
             //	return false;
             //}
-            if (e.ElementsBeforeSelf().Any()) {
+            if (e.PrevsFromFirst().Any()) {
                 return false;
             }
             return true;
@@ -733,6 +933,18 @@ statement
             get { return false; }
         }
 
+        public override int MaxUp {
+            get { return 1; }
+        }
+
+        public override int MaxLeft {
+            get { return 0; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
+        }
+
         public JavaArithmeticOperatorExperiment() : base("PLUS", "SUB", "STAR", "SLASH") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
@@ -740,6 +952,16 @@ statement
                     && e.Parent.Name == "additiveExpression") ||
                    ((e.TokenText == "*" || e.TokenText == "/")
                     && e.Parent.Name == "multiplicativeExpression");
+        }
+
+        public override IList<CstNode> GetRootsUsingOracle(CstNode e) {
+            if (((e.TokenText == "+" || e.TokenText == "-")
+                 && e.Parent.Name == "additiveExpression") ||
+                ((e.TokenText == "*" || e.TokenText == "/")
+                 && e.Parent.Name == "multiplicativeExpression")) {
+                return new[] { e.Parent };
+            }
+            return new CstNode[0];
         }
     }
 
@@ -750,6 +972,18 @@ statement
 
         public override bool IsInner {
             get { return false; }
+        }
+
+        public override int MaxUp {
+            get { return 2; }
+        }
+
+        public override int MaxLeft {
+            get { return 3; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
         }
 
         public JavaSwitchCaseExperiment() : base("expression", "switchLabel") {}
@@ -764,6 +998,20 @@ statement
             }
             return e.Name == "switchLabel";
         }
+
+        public override IList<CstNode> GetRootsUsingOracle(CstNode e) {
+            var p = e.Parent;
+            var pp = p.Parent;
+            var isPar = p.SafeName() == "parExpression";
+            var isStmt = pp.SafeName() == "statement";
+            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "switch") {
+                return new[] { p.Prev, p };
+            }
+            if (e.Name == "switchLabel") {
+                return new[] { e };
+            }
+            return new CstNode[0];
+        }
     }
 
     public class JavaSuperComplexBranchExperimentWithSwitch : LearningExperiment {
@@ -773,6 +1021,18 @@ statement
 
         public override bool IsInner {
             get { return false; }
+        }
+
+        public override int MaxUp {
+            get { return 5; }
+        }
+
+        public override int MaxLeft {
+            get { return 1; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
         }
 
         public JavaSuperComplexBranchExperimentWithSwitch() : base("expression", "switchLabel") {}
@@ -792,7 +1052,7 @@ statement
                 return true;
             }
             if (p.SafeName() == "forstatement"
-                && p.Elements().Count(e2 => e2.TokenText == ";") >= 2) {
+                && p.Children().Count(e2 => e2.TokenText == ";") >= 2) {
                 return true;
             }
             if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "switch") {
@@ -806,10 +1066,10 @@ statement
                 if (primary.SafeName() != "primary") {
                     return false;
                 }
-                if (primary.Elements().All(e2 => e2.TokenText != "checkArgument")) {
+                if (primary.Children().All(e2 => e2.TokenText != "checkArgument")) {
                     return false;
                 }
-                if (e.ElementsBeforeSelf().Any()) {
+                if (e.PrevsFromFirst().Any()) {
                     return false;
                 }
                 return true;
@@ -824,6 +1084,18 @@ statement
 
         public override bool IsInner {
             get { return false; }
+        }
+
+        public override int MaxUp {
+            get { return 5; }
+        }
+
+        public override int MaxLeft {
+            get { return 1; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
         }
 
         public JavaSuperComplexBranchExperimentWithSwitchWithoutTrue()
@@ -844,7 +1116,7 @@ statement
                 return e.TokenText != "true";
             }
             if (p.SafeName() == "forstatement"
-                && p.Elements().Count(e2 => e2.TokenText == ";") >= 2) {
+                && p.Children().Count(e2 => e2.TokenText == ";") >= 2) {
                 return e.TokenText != "true";
             }
             if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "switch") {
@@ -858,10 +1130,10 @@ statement
                 if (primary.SafeName() != "primary") {
                     return false;
                 }
-                if (primary.Elements().All(e2 => e2.TokenText != "checkArgument")) {
+                if (primary.Children().All(e2 => e2.TokenText != "checkArgument")) {
                     return false;
                 }
-                if (e.ElementsBeforeSelf().Any()) {
+                if (e.PrevsFromFirst().Any()) {
                     return false;
                 }
                 return e.TokenText != "true";

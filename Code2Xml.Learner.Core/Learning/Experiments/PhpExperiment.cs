@@ -32,26 +32,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         private const string LangName = "Php";
 
-        private static readonly LearningExperiment[] Experiments = {
-            new PhpComplexStatementExperiment(),
-            new PhpSuperComplexBranchExperiment(),
-            new PhpExpressionStatementExperiment(),
-            new PhpArithmeticOperatorExperiment(),
-            new PhpSwitchCaseExperiment(),
-            new PhpSuperComplexBranchExperimentWithSwitch(),
-            new PhpSuperComplexBranchExperimentWithSwitchWithoutTrue(),
-            //new PhpComplexBranchExperiment(),
-            //new PhpIfExperiment(),
-            //new PhpWhileExperiment(),
-            //new PhpDoWhileExperiment(),
-            //new PhpForExperiment(),
-            //new PhpEchoExperiment(),
-            //new PhpStatementExperiment(),
-            //new PhpBlockExperiment(),
-            //new PhpLabeledStatementExperiment(),
-            //new PhpEmptyStatementExperiment(),
-        };
-
         private static readonly Tuple<string, string>[] LearningSets = {
             Tuple.Create(
                     @"https://github.com/domnikl/DesignPatternsPHP.git",
@@ -205,6 +185,27 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     @"6ca33b202b403c4f564f6a2f3bacc9482597b203"),
         };
 
+        private static readonly LearningExperiment[] Experiments = {
+            new PhpComplexStatementExperiment(),
+            new PhpSuperComplexBranchExperiment(),
+            new PhpExpressionStatementExperiment(),
+            new PhpArithmeticOperatorExperiment(),
+            //new PhpSwitchCaseExperiment(),
+            //new PhpSuperComplexBranchExperimentWithSwitch(),
+            //new PhpSuperComplexBranchExperimentWithSwitchWithoutTrue(),
+
+            //new PhpComplexBranchExperiment(),
+            //new PhpIfExperiment(),
+            //new PhpWhileExperiment(),
+            //new PhpDoWhileExperiment(),
+            //new PhpForExperiment(),
+            //new PhpEchoExperiment(),
+            //new PhpStatementExperiment(),
+            //new PhpBlockExperiment(),
+            //new PhpLabeledStatementExperiment(),
+            //new PhpEmptyStatementExperiment(),
+        };
+
         private static IEnumerable<TestCaseData> TestCases {
             get {
                 foreach (var exp in Experiments) {
@@ -231,8 +232,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             LearnAndApply(seedPaths, LearningSets, Experiments);
         }
 
-        //[Test, TestCaseSource("TestCases")]
-        public void Test(LearningExperiment exp, string projectPath, string sha1, string sha2) {
+        [Test, TestCaseSource("TestCases")]
+        public void Test(LearningExperiment exp, string projectPath) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.php"), };
             Learn(seedPaths, exp, projectPath);
         }
@@ -285,6 +286,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
+        public override int MaxUp {
+            get { return 2; }
+        }
+
+        public override int MaxLeft {
+            get { return 1; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
+        }
+
         public PhpSuperComplexBranchExperiment() : base("expression") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
@@ -310,6 +323,32 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 return true;
             }
             return false;
+        }
+
+        public override IList<CstNode> GetRootsUsingOracle(CstNode e) {
+            var p = e.Parent;
+            var pName = p.FirstChild.Name;
+            if (pName == "If") {
+                return new[] { e.Prev.Prev, e.Prev, e };
+            }
+            if (pName == "While") {
+                return new[] { e.Prev.Prev, e.Prev, e };
+            }
+            if (pName == "Do") {
+                return new[] { e.Prev.Prev, e.Prev, e, e.Next };
+            }
+            if (e.SafeParent().Name == "commaList"
+                && e.SafeParent().SafeParent().Name == "forCondition"
+                && !e.NextsFromSelf().Any()) {
+                return new[] { e.Parent.Parent };
+            }
+            if (e.SafeParent().Name == "commaList"
+                && e.SafeParent().SafeParent().Name == "simpleStatement"
+                && e.SafeParent().SafeParent().FirstChild.Name == "Echo"
+                && e.Prev == null) {
+                return new[] { e.Parent.Parent };
+            }
+            return new CstNode[0];
         }
     }
 
@@ -455,7 +494,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 return false;
             }
             // ブロック自身は意味を持たないステートメントで、中身だけが必要なので除外
-            if (e.Element("bracketedBlock") != null) {
+            if (e.Child("bracketedBlock") != null) {
                 return false;
             }
             // 空文
@@ -503,7 +542,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // ブロック自身は意味を持たないステートメントで、中身だけが必要なので除外
-            if (e.Element("bracketedBlock") != null) {
+            if (e.Child("bracketedBlock") != null) {
                 return true;
             }
             return false;
@@ -593,11 +632,31 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
+        public override int MaxUp {
+            get { return 1; }
+        }
+
+        public override int MaxLeft {
+            get { return 0; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
+        }
+
         public PhpArithmeticOperatorExperiment() : base("Plus", "Minus", "Asterisk", "Forwardslash") {}
 
         protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             return e.Parent.Name == "addition" ||
                    e.Parent.Name == "multiplication";
+        }
+
+        public override IList<CstNode> GetRootsUsingOracle(CstNode e) {
+            if (e.Parent.Name == "addition" ||
+                e.Parent.Name == "multiplication") {
+                return new[] { e.Parent };
+            }
+            return new CstNode[0];
         }
     }
 
@@ -612,6 +671,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public override bool IsInner {
             get { return false; }
+        }
+
+        public override int MaxUp {
+            get { return 1; }
+        }
+
+        public override int MaxLeft {
+            get { return 2; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
         }
 
         public PhpSwitchCaseExperiment() : base("expression", "casestatement", "defaultcase") {}
@@ -636,6 +707,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public override bool IsInner {
             get { return false; }
+        }
+
+        public override int MaxUp {
+            get { return 2; }
+        }
+
+        public override int MaxLeft {
+            get { return 1; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
         }
 
         public PhpSuperComplexBranchExperimentWithSwitch()
@@ -684,6 +767,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public override bool IsInner {
             get { return false; }
+        }
+
+        public override int MaxUp {
+            get { return 2; }
+        }
+
+        public override int MaxLeft {
+            get { return 1; }
+        }
+
+        public override int MaxRight {
+            get { return 0; }
         }
 
         public PhpSuperComplexBranchExperimentWithSwitchWithoutTrue()

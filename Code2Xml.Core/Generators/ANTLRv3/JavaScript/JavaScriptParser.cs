@@ -11,7 +11,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g 2014-11-01 21:18:11
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\JavaScript\\JavaScript.g 2014-11-03 05:10:48
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -490,7 +490,7 @@ adaptor.Create(retval, LineComment4, "LineComment4");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -674,7 +674,7 @@ adaptor.Create(retval, LineComment4, "LineComment4");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -826,7 +826,7 @@ adaptor.Create(retval, LineComment4, "LineComment4");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -1101,7 +1101,7 @@ adaptor.Create(retval, LineComment4, "LineComment4");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -1264,7 +1264,7 @@ adaptor.Create(retval, MODULE18, "MODULE18");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -1522,7 +1522,7 @@ adaptor.Create(retval, IMPORT29, "IMPORT29");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -1638,7 +1638,7 @@ adaptor.Create(retval, FROM33, "FROM33");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -2060,7 +2060,7 @@ adaptor.Create(retval, char_literal51, "char_literal51");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -2260,7 +2260,7 @@ adaptor.Create(retval, char_literal54, "char_literal54");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -2456,7 +2456,7 @@ adaptor.Create(retval, AS60, "AS60");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -2524,7 +2524,7 @@ adaptor.Create(retval, AS60, "AS60");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -2592,7 +2592,7 @@ adaptor.Create(retval, AS60, "AS60");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -3677,7 +3677,7 @@ adaptor.Create(retval, DEFAULT97, "DEFAULT97");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -4083,7 +4083,7 @@ adaptor.Create(retval, char_literal115, "char_literal115");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -4283,7 +4283,7 @@ adaptor.Create(retval, char_literal118, "char_literal118");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -4479,7 +4479,7 @@ adaptor.Create(retval, AS124, "AS124");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -4689,7 +4689,7 @@ adaptor.Create(retval, FUNCTION127, "FUNCTION127");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -4931,7 +4931,7 @@ adaptor.Create(retval, FUNCTION134, "FUNCTION134");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -5255,7 +5255,7 @@ adaptor.Create(retval, RPAREN149, "RPAREN149");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -5451,7 +5451,7 @@ adaptor.Create(retval, RBRACE154, "RBRACE154");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -5874,7 +5874,7 @@ adaptor.Create(retval, RBRACE154, "RBRACE154");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -6070,7 +6070,7 @@ adaptor.Create(retval, RBRACE173, "RBRACE173");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -6222,7 +6222,7 @@ adaptor.Create(retval, RBRACE173, "RBRACE173");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -6345,7 +6345,7 @@ adaptor.Create(retval, VAR177, "VAR177");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -6545,7 +6545,7 @@ adaptor.Create(retval, char_literal183, "char_literal183");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -6745,7 +6745,7 @@ adaptor.Create(retval, char_literal188, "char_literal188");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -6888,7 +6888,7 @@ adaptor.Create(retval, char_literal188, "char_literal188");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -7031,7 +7031,7 @@ adaptor.Create(retval, char_literal188, "char_literal188");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -7147,7 +7147,7 @@ adaptor.Create(retval, char_literal197, "char_literal197");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -7263,7 +7263,7 @@ adaptor.Create(retval, char_literal200, "char_literal200");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -7332,7 +7332,7 @@ adaptor.Create(retval, char_literal203, "char_literal203");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -7407,7 +7407,7 @@ adaptor.Create(retval, char_literal203, "char_literal203");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -7800,7 +7800,7 @@ adaptor.Create(retval, ELSE216, "ELSE216");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -7966,7 +7966,7 @@ adaptor.Create(retval, ELSE216, "ELSE216");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -8200,7 +8200,7 @@ adaptor.Create(retval, RPAREN231, "RPAREN231");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -8459,7 +8459,7 @@ adaptor.Create(retval, RPAREN239, "RPAREN239");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -8992,7 +8992,7 @@ adaptor.Create(retval, RPAREN256, "RPAREN256");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -9149,7 +9149,7 @@ adaptor.Create(retval, VAR260, "VAR260");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -9503,7 +9503,7 @@ adaptor.Create(retval, RPAREN273, "RPAREN273");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -9660,7 +9660,7 @@ adaptor.Create(retval, VAR277, "VAR277");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -9808,7 +9808,7 @@ adaptor.Create(retval, CONTINUE280, "CONTINUE280");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -9956,7 +9956,7 @@ adaptor.Create(retval, BREAK283, "BREAK283");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -10242,7 +10242,7 @@ adaptor.Create(retval, RETURN286, "RETURN286");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -10501,7 +10501,7 @@ adaptor.Create(retval, RPAREN295, "RPAREN295");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -10664,7 +10664,7 @@ adaptor.Create(retval, char_literal300, "char_literal300");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -10923,7 +10923,7 @@ adaptor.Create(retval, RPAREN309, "RPAREN309");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -11283,7 +11283,7 @@ adaptor.Create(retval, RBRACE320, "RBRACE320");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -11526,7 +11526,7 @@ adaptor.Create(retval, char_literal325, "char_literal325");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -11722,7 +11722,7 @@ adaptor.Create(retval, char_literal330, "char_literal330");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -11805,7 +11805,7 @@ adaptor.Create(retval, THROW333, "THROW333");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -12093,7 +12093,7 @@ adaptor.Create(retval, TRY336, "TRY336");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -12352,7 +12352,7 @@ adaptor.Create(retval, RPAREN350, "RPAREN350");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -12468,7 +12468,7 @@ adaptor.Create(retval, FINALLY353, "FINALLY353");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -12668,7 +12668,7 @@ adaptor.Create(retval, char_literal358, "char_literal358");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -12868,7 +12868,7 @@ adaptor.Create(retval, char_literal363, "char_literal363");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -13356,7 +13356,7 @@ adaptor.Create(retval, char_literal363, "char_literal363");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -13844,7 +13844,7 @@ adaptor.Create(retval, char_literal363, "char_literal363");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -14225,7 +14225,7 @@ adaptor.Create(retval, char_literal363, "char_literal363");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -14398,7 +14398,7 @@ adaptor.Create(retval, NEW381, "NEW381");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -14757,7 +14757,7 @@ adaptor.Create(retval, NEW386, "NEW386");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -14866,7 +14866,7 @@ adaptor.Create(retval, NEW386, "NEW386");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -15101,7 +15101,7 @@ adaptor.Create(retval, NEW386, "NEW386");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -15235,7 +15235,7 @@ adaptor.Create(retval, NEW386, "NEW386");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -15559,7 +15559,7 @@ adaptor.Create(retval, RPAREN411, "RPAREN411");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -15723,7 +15723,7 @@ adaptor.Create(retval, RBRACK416, "RBRACK416");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -15839,7 +15839,7 @@ adaptor.Create(retval, char_literal417, "char_literal417");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -15919,7 +15919,7 @@ adaptor.Create(retval, char_literal417, "char_literal417");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -16205,7 +16205,7 @@ adaptor.Create(retval, char_literal427, "char_literal427");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -16491,7 +16491,7 @@ adaptor.Create(retval, char_literal436, "char_literal436");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -16691,7 +16691,7 @@ adaptor.Create(retval, string_literal441, "string_literal441");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -16891,7 +16891,7 @@ adaptor.Create(retval, string_literal446, "string_literal446");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -17091,7 +17091,7 @@ adaptor.Create(retval, string_literal451, "string_literal451");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -17291,7 +17291,7 @@ adaptor.Create(retval, string_literal456, "string_literal456");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -17491,7 +17491,7 @@ adaptor.Create(retval, char_literal461, "char_literal461");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -17691,7 +17691,7 @@ adaptor.Create(retval, char_literal466, "char_literal466");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -17891,7 +17891,7 @@ adaptor.Create(retval, char_literal471, "char_literal471");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -18091,7 +18091,7 @@ adaptor.Create(retval, char_literal476, "char_literal476");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -18291,7 +18291,7 @@ adaptor.Create(retval, char_literal481, "char_literal481");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -18491,7 +18491,7 @@ adaptor.Create(retval, char_literal486, "char_literal486");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -18702,7 +18702,7 @@ adaptor.Create(retval, char_literal486, "char_literal486");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -18913,7 +18913,7 @@ adaptor.Create(retval, char_literal486, "char_literal486");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -19124,7 +19124,7 @@ adaptor.Create(retval, char_literal486, "char_literal486");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -19335,7 +19335,7 @@ adaptor.Create(retval, char_literal486, "char_literal486");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -19546,7 +19546,7 @@ adaptor.Create(retval, char_literal486, "char_literal486");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -19774,7 +19774,7 @@ adaptor.Create(retval, char_literal486, "char_literal486");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -19985,7 +19985,7 @@ adaptor.Create(retval, char_literal486, "char_literal486");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -20113,7 +20113,7 @@ adaptor.Create(retval, char_literal486, "char_literal486");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -20230,7 +20230,7 @@ adaptor.Create(retval, char_literal486, "char_literal486");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -20534,7 +20534,7 @@ adaptor.Create(retval, RPAREN538, "RPAREN538");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -20890,7 +20890,7 @@ adaptor.Create(retval, RBRACK547, "RBRACK547");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -21246,7 +21246,7 @@ adaptor.Create(retval, RBRACE556, "RBRACE556");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -21409,7 +21409,7 @@ adaptor.Create(retval, char_literal559, "char_literal559");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -21576,7 +21576,7 @@ adaptor.Create(retval, char_literal559, "char_literal559");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -21730,7 +21730,7 @@ adaptor.Create(retval, char_literal567, "char_literal567");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -21930,7 +21930,7 @@ adaptor.Create(retval, FALSE570, "FALSE570");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -21999,7 +21999,7 @@ adaptor.Create(retval, NumericLiteral574, "NumericLiteral574");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -22068,7 +22068,7 @@ adaptor.Create(retval, StringLiteral575, "StringLiteral575");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -22137,7 +22137,7 @@ adaptor.Create(retval, RegularExpressionLiteral576, "RegularExpressionLiteral576
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -22217,7 +22217,7 @@ adaptor.Create(retval, RegularExpressionLiteral576, "RegularExpressionLiteral576
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -23115,7 +23115,7 @@ adaptor.Create(retval, AS611, "AS611");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -23225,7 +23225,7 @@ adaptor.Create(retval, YIELD613, "YIELD613");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -23425,7 +23425,7 @@ adaptor.Create(retval, char_literal616, "char_literal616");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -23660,7 +23660,7 @@ adaptor.Create(retval, char_literal616, "char_literal616");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -23801,7 +23801,7 @@ adaptor.Create(retval, YIELD627, "YIELD627");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -23910,7 +23910,7 @@ adaptor.Create(retval, YIELD627, "YIELD627");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -24340,7 +24340,7 @@ adaptor.Create(retval, char_literal644, "char_literal644");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -25086,7 +25086,7 @@ adaptor.Create(retval, char_literal667, "char_literal667");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -25286,7 +25286,7 @@ adaptor.Create(retval, char_literal670, "char_literal670");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -25630,7 +25630,7 @@ adaptor.Create(retval, char_literal677, "char_literal677");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -25826,7 +25826,7 @@ adaptor.Create(retval, char_literal685, "char_literal685");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -26014,7 +26014,7 @@ adaptor.Create(retval, char_literal685, "char_literal685");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -26161,7 +26161,7 @@ adaptor.Create(retval, char_literal685, "char_literal685");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -26277,7 +26277,7 @@ adaptor.Create(retval, string_literal695, "string_literal695");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			

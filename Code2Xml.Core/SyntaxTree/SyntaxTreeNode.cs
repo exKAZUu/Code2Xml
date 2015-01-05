@@ -54,34 +54,6 @@ namespace Code2Xml.Core.SyntaxTree {
             return AllTokenNodes(name).Select(n => n.Value);
         }
 
-        public TNode Element(string name) {
-            return Child(name);
-        }
-
-        public IEnumerable<TNode> Elements() {
-            return Children();
-        }
-
-        public IEnumerable<TNode> Elements(string name) {
-            return Children(name);
-        }
-
-        public IEnumerable<TNode> ElementsBeforeSelf() {
-            return PrevsFromFirst();
-        }
-
-        public IEnumerable<TNode> ElementsBeforeSelf(string name) {
-            return PrevsFromFirst(name);
-        }
-
-        public IEnumerable<TNode> ElementsAfterSelf() {
-            return NextsFromSelf();
-        }
-
-        public IEnumerable<TNode> ElementsAfterSelf(string name) {
-            return NextsFromSelf(name);
-        }
-
         public abstract XElement ToXml();
     }
 }

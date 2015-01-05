@@ -24,8 +24,8 @@ using Code2Xml.Core.Generators;
 using Code2Xml.Core.Generators.ANTLRv3.Java;
 using NUnit.Framework;
 using ParserTests;
-using JavaLexer = Code2Xml.Languages.ANTLRv3.Processors.Java.JavaLexer;
-using JavaParser = Code2Xml.Languages.ANTLRv3.Processors.Java.JavaParser;
+using JavaLexer = Code2Xml.Core.Tests.Generators.ANTLRv3.Parsers.JavaLexer;
+using JavaParser = Code2Xml.Core.Tests.Generators.ANTLRv3.Parsers.JavaParser;
 
 namespace Code2Xml.Core.Tests.Generators.ANTLRv3 {
     [TestFixture]

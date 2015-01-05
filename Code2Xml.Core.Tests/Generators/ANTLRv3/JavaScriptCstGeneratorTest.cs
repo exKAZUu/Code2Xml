@@ -22,8 +22,8 @@ using Antlr.Runtime;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Generators.ANTLRv3.JavaScript;
 using NUnit.Framework;
-using JavaScriptLexer = Code2Xml.Languages.ANTLRv3.Processors.JavaScript.JavaScriptLexer;
-using JavaScriptParser = Code2Xml.Languages.ANTLRv3.Processors.JavaScript.JavaScriptParser;
+using JavaScriptLexer = Code2Xml.Core.Tests.Generators.ANTLRv3.Parsers.JavaScriptLexer;
+using JavaScriptParser = Code2Xml.Core.Tests.Generators.ANTLRv3.Parsers.JavaScriptParser;
 
 namespace Code2Xml.Core.Tests.Generators.ANTLRv3 {
     [TestFixture]

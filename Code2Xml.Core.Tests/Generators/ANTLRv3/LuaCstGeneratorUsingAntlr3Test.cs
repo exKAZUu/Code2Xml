@@ -21,8 +21,8 @@ using Antlr.Runtime;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Generators.ANTLRv3.Lua;
 using NUnit.Framework;
-using LuaLexer = Code2Xml.Languages.ANTLRv3.Processors.Lua.LuaLexer;
-using LuaParser = Code2Xml.Languages.ANTLRv3.Processors.Lua.LuaParser;
+using LuaLexer = Code2Xml.Core.Tests.Generators.ANTLRv3.Parsers.LuaLexer;
+using LuaParser = Code2Xml.Core.Tests.Generators.ANTLRv3.Parsers.LuaParser;
 
 namespace Code2Xml.Core.Tests.Generators.ANTLRv3 {
     [TestFixture]

@@ -226,6 +226,22 @@ namespace Code2Xml.Core.Location {
                    (other.StartLocation < EndLocation && EndLocation <= other.EndLocation);
         }
 
+        // TODO
+        ///// <summary>
+        ///// Find the most inner elements which locate at the this range from the specified root.
+        ///// </summary>
+        ///// <param name="root"></param>
+        ///// <returns></returns>
+        //public CstNode FindInnermostElements(CstNode root) {
+        //    var node = FindInnermostElement(root);
+        //    var thisRange = this;
+        //    var first = node.Children()
+        //        .First(n => Locate(n).Contains(thisRange.StartLocation));
+        //    var last = node.LastChild.PrevsFromSelfAndSelf()
+        //        .First(n => Locate(n).Contains(thisRange.EndLocation));
+        //    return first.NextsFromSelf()
+        //}
+
         /// <summary>
         /// Find the most inner element which locates at the this range from the specified root.
         /// </summary>
@@ -251,7 +267,7 @@ namespace Code2Xml.Core.Location {
         /// <returns></returns>
         public CstNode FindOutermostElement(CstNode root) {
             var ret = FindInnermostElement(root);
-            while (ret.Parent != null && ret.Parent.Elements().Count() == 1) {
+            while (ret.Parent != null && ret.Parent.Children().Count() == 1) {
                 ret = ret.Parent;
             }
             return ret;

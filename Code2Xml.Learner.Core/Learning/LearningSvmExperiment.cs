@@ -51,6 +51,22 @@ namespace Code2Xml.Learner.Core.Learning {
         protected abstract CstGenerator Generator { get; }
         public abstract bool IsInner { get; }
 
+        public virtual int MaxUp {
+            get { return -1; }
+        }
+
+        public virtual int MaxLeft {
+            get { return -1; }
+        }
+
+        public virtual int MaxRight {
+            get { return -1; }
+        }
+
+        public IList<CstNode> GetRootsUsingOracle(CstNode e) {
+            return null;
+        }
+
         public virtual string GetToken(CstNode e) {
             return e.TokenText;
         }

@@ -11,7 +11,7 @@ using System;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Lua\\Lua.g 2014-11-01 21:18:16
+// $ANTLR 3.5.0.2 C:\\Users\\exKAZUu\\Projects\\Code2Xml\\Code2Xml.Core\\Generators\\ANTLRv3\\Lua\\Lua.g 2014-11-03 05:10:52
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -191,7 +191,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -327,7 +327,7 @@ public partial class LuaParser : Antlr.Runtime.Parser, ICustomizedAntlr3Parser
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -1235,7 +1235,7 @@ adaptor.Create(retval, char_literal63, "char_literal63");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -1369,7 +1369,7 @@ adaptor.Create(retval, char_literal67, "char_literal67");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -1454,7 +1454,7 @@ adaptor.Create(retval, string_literal70, "string_literal70");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -1616,7 +1616,7 @@ adaptor.Create(retval, NAME75, "NAME75");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -1735,7 +1735,7 @@ adaptor.Create(retval, char_literal77, "char_literal77");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -1863,7 +1863,7 @@ adaptor.Create(retval, NAME81, "NAME81");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -1982,7 +1982,7 @@ adaptor.Create(retval, char_literal83, "char_literal83");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -2332,7 +2332,7 @@ adaptor.Create(retval, string_literal90, "string_literal90");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -2569,7 +2569,7 @@ adaptor.Create(retval, char_literal101, "char_literal101");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -2691,7 +2691,7 @@ adaptor.Create(retval, char_literal101, "char_literal101");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -2820,7 +2820,7 @@ adaptor.Create(retval, char_literal101, "char_literal101");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -2961,7 +2961,7 @@ adaptor.Create(retval, char_literal111, "char_literal111");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -3070,7 +3070,7 @@ adaptor.Create(retval, NAME113, "NAME113");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -3256,7 +3256,7 @@ adaptor.Create(retval, NAME120, "NAME120");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -3433,7 +3433,7 @@ adaptor.Create(retval, char_literal123, "char_literal123");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -3509,7 +3509,7 @@ adaptor.Create(retval, string_literal126, "string_literal126");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -3633,7 +3633,7 @@ adaptor.Create(retval, string_literal132, "string_literal132");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -3784,7 +3784,7 @@ adaptor.Create(retval, string_literal136, "string_literal136");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -3893,7 +3893,7 @@ adaptor.Create(retval, char_literal139, "char_literal139");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -4050,7 +4050,7 @@ adaptor.Create(retval, char_literal139, "char_literal139");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -4263,7 +4263,7 @@ adaptor.Create(retval, char_literal150, "char_literal150");
 				break;
 
 			}
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -4343,7 +4343,7 @@ adaptor.Create(retval, char_literal150, "char_literal150");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -4423,7 +4423,7 @@ adaptor.Create(retval, char_literal150, "char_literal150");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -4503,7 +4503,7 @@ adaptor.Create(retval, char_literal150, "char_literal150");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -4583,7 +4583,7 @@ adaptor.Create(retval, char_literal150, "char_literal150");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			
@@ -4663,7 +4663,7 @@ adaptor.Create(retval, char_literal150, "char_literal150");
 
 			}
 
-			input.LT(-1);
+			
 
 			if (state.backtracking == 0) {
 			

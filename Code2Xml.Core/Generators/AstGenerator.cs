@@ -1,4 +1,5 @@
-﻿#region License
+﻿
+#region License
 
 // Copyright (C) 2011-2014 Kazunori Sakamoto
 // 

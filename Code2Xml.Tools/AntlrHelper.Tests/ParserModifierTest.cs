@@ -134,7 +134,7 @@ retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
             const string expected =
                     @"
 var retval_Start = (IToken)input.LT(1);
-input.LT(-1);
+
 adaptor.ErrorNode(input, retval_Start, input.LT(-1), re);
 ";
             Assert.That(

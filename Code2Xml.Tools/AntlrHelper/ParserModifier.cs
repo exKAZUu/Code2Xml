@@ -148,7 +148,7 @@ namespace Code2Xml.Tools.AntlrHelper {
                     "var retval_Start = (IToken)input.LT(1);");
             code = code.Replace(
                     "retval.Stop = (IToken)input.LT(-1);",
-                    "input.LT(-1);");
+                    "");
             code = code.Replace(
                     "retval.Tree = (object)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);",
                     "adaptor.ErrorNode(input, retval_Start, input.LT(-1), re);");
