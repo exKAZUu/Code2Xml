@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (C) 2011-2014 Kazunori Sakamoto
+// Copyright (C) 2011-2015 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,44 +26,42 @@ namespace Code2Xml.Learner.Core.Learning {
         public int WrongFeatureCount { get; set; }
         public int WrongElementCount { get; set; }
 
-        public Dictionary<BigInteger, CstNode> Feature2Element {
-            get { return _feature2Element; }
-        }
+        public Dictionary<BigInteger, CstNode> FeatureVector2Element { get; private set; }
+        public Dictionary<BigInteger, string> FeatureBit2Path { get; private set; }
 
-        public List<KeyValuePair<BigInteger, string>> WronglyAcceptedFeatures {
+        public List<BigInteger> WronglyAcceptedFeatures {
             get { return _wronglyAcceptedFeatures; }
         }
 
-        public List<KeyValuePair<BigInteger, string>> WronglyRejectedFeatures {
+        public List<BigInteger> WronglyRejectedFeatures {
             get { return _wronglyRejectedFeatures; }
         }
 
         public IList<CstNode> WronglyAcceptedElements {
             get {
-                return _wronglyAcceptedFeatures.Select(kv => kv.Key)
-                        .Select(f => _feature2Element[f])
+                return _wronglyAcceptedFeatures
+                        .Select(f => FeatureVector2Element[f])
                         .ToList();
             }
         }
 
         public IList<CstNode> WronglyRejectedElements {
             get {
-                return _wronglyRejectedFeatures.Select(kv => kv.Key)
-                        .Select(f => _feature2Element[f])
+                return _wronglyRejectedFeatures
+                        .Select(f => FeatureVector2Element[f])
                         .ToList();
             }
         }
 
-        private readonly List<KeyValuePair<BigInteger, string>> _wronglyAcceptedFeatures =
-                new List<KeyValuePair<BigInteger, string>>();
+        private readonly List<BigInteger> _wronglyAcceptedFeatures = new List<BigInteger>();
 
-        private readonly List<KeyValuePair<BigInteger, string>> _wronglyRejectedFeatures =
-                new List<KeyValuePair<BigInteger, string>>();
+        private readonly List<BigInteger> _wronglyRejectedFeatures = new List<BigInteger>();
 
-        private readonly Dictionary<BigInteger, CstNode> _feature2Element;
-
-        public ExperimentalResult(Dictionary<BigInteger, CstNode> feature2Element) {
-            _feature2Element = feature2Element;
+        public ExperimentalResult(
+                Dictionary<BigInteger, CstNode> featureVector2Element,
+                Dictionary<BigInteger, string> featureBit2Path) {
+            FeatureVector2Element = featureVector2Element;
+            FeatureBit2Path = featureBit2Path;
         }
     }
 }

@@ -1,6 +1,6 @@
 #region License
 
-// Copyright (C) 2011-2014 Kazunori Sakamoto
+// Copyright (C) 2011-2015 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -29,8 +29,10 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public const int SkipCount = 0;
         public const int TakeCount = 100;
-        private const int ProjectCountToLearn = 20;
-        private const int ProjectCountToTest = 50;
+        private const int ProjectTakeCountToLearn = 10;
+        private const int ProjectSkipCountToLearn = 0;
+        private const int ProjectSkipCountToTest = 35;
+        private const int ProjectTakeCountToTest = 5;
 
         protected Experiment() {
             Writers = new Dictionary<string, StreamWriter>();
@@ -42,7 +44,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 ICollection<string> seedPaths, Tuple<string, string>[] learningSets,
                 LearningExperiment[] experiments) {
             var projectPaths =
-                    learningSets.Take(ProjectCountToTest).Select(
+                    learningSets.Take(50).Select(
                             t => {
                                 var url = t.Item1;
                                 var path = Fixture.GetGitRepositoryPath(url);
@@ -52,14 +54,19 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                             }).ToList();
             var failedCount = 0;
             foreach (var exp in experiments) {
-                LearnWithoutClearing(seedPaths, exp, projectPaths.Take(ProjectCountToLearn));
+                LearnWithoutClearing(
+                        seedPaths, exp,
+                        projectPaths.Skip(ProjectSkipCountToLearn).Take(ProjectTakeCountToLearn));
 
-                var w = CreateWriter(exp.GetType().Name + "_classifier_" + ProjectCountToLearn + ".txt");
-                w.WriteLine(exp.GetClassifierSummary());
+                var w = CreateWriter(
+                        exp.GetType().Name + "_classifier_" + ProjectTakeCountToLearn + ".txt");
+                w.WriteLine(exp.GetClassifierSummary(exp._classifiers));
                 w.Flush();
 
-                var writer = CreateWriter(exp.GetType().Name + "_" + ProjectCountToLearn + ".csv");
-                foreach (var projectPath in projectPaths) {
+                var writer =
+                        CreateWriter(exp.GetType().Name + "_" + ProjectTakeCountToLearn + ".csv");
+                foreach (var projectPath in
+                        projectPaths.Skip(ProjectSkipCountToTest).Take(ProjectTakeCountToTest)) {
                     var codePaths = Directory.GetFiles(
                             projectPath, SearchPattern, SearchOption.AllDirectories);
                     writer.Write(DateTime.Now);
@@ -67,7 +74,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     writer.Write(projectPath);
                     writer.Write(",");
                     var ret = exp.Apply(writer, codePaths, SearchPattern);
-                    var features = exp.GetFeatures();
+                    var features = exp.GetFeatures(exp._classifiers);
 
                     writer.Write(ret.WrongElementCount);
                     writer.Write(",");
@@ -101,7 +108,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         private void LearnWithoutClearing(
                 ICollection<string> seedPaths, LearningExperiment exp,
                 IEnumerable<string> projectPaths) {
-            var writer = CreateWriter(exp.GetType().Name + "_learn_" + ProjectCountToLearn + ".csv");
+            var writer =
+                    CreateWriter(exp.GetType().Name + "_learn_" + ProjectTakeCountToLearn + ".csv");
             var codePaths = projectPaths.SelectMany(
                     projectPath => Directory.GetFiles(
                             projectPath, SearchPattern, SearchOption.AllDirectories)
