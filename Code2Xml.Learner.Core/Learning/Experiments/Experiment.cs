@@ -28,7 +28,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         protected readonly Dictionary<string, StreamWriter> Writers;
 
         public const int SkipCount = 0;
-        public const int TakeCount = 1;
+        public const int TakeCount = 100;
         private const int ProjectCountToLearn = 20;
         private const int ProjectCountToTest = 50;
 
