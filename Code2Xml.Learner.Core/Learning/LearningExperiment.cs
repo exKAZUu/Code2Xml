@@ -98,17 +98,7 @@ namespace Code2Xml.Learner.Core.Learning {
 		private Dictionary<BigInteger, int> _vector2Count;
 		private Dictionary<BigInteger, string> _vector2Path;
 
-		private List<string> _currentGroupPaths;
-		private Dictionary<BigInteger, int> _vector2GroupIndex;
-
-		private ISet<string> _selectedNames;
 		private readonly HashSet<string> _oracleNames;
-
-		private IDictionary<string, BigInteger> _featureString2Bit;
-		private int _acceptingFeatureCount;
-		private BigInteger _acceptingFeatureBitMask;
-		private BigInteger _rejectingFeatureBitMask;
-		private BigInteger _allFeatureBitMask;
 
 		private int _seedElementCount;
 		private int _seedAbstractCount;
@@ -118,36 +108,6 @@ namespace Code2Xml.Learner.Core.Learning {
 			_oracleNames = elementNames.ToHashSet();
 		}
 
-		#region for Debug
-
-		public List<List<string>> GetAllAcceptingFeatureStrings(IReadOnlyList<ClassifierUnit> classifiers) {
-			return classifiers.Select(
-					cl => LearningExperimentUtil
-							.GetFeatureStringsByVector(_featureString2Bit, cl.Accepting)
-							.ToList())
-					.ToList();
-		}
-
-		public List<List<string>> GetAllRejectingFeatureStrings(IReadOnlyList<ClassifierUnit> classifiers) {
-			return classifiers.Select(
-					cl => LearningExperimentUtil
-							.GetFeatureStringsByVector(_featureString2Bit, cl.Rejecting)
-							.ToList())
-					.ToList();
-		}
-
-		public string GetClassifierSummary(IReadOnlyList<ClassifierUnit> classifiers) {
-			return "AP: "
-			       + string.Join(
-					       ", ", classifiers.Select(c => LearningExperimentUtil.CountBits(c.Accepting)))
-			       + ", RP: "
-			       + string.Join(
-					       ", ",
-					       classifiers.Select(
-							       c => LearningExperimentUtil.CountRejectingBits(c.Rejecting, _acceptingFeatureCount)));
-		}
-
-		#endregion
 
 		public void Clear() {
 			_idealAcceptedVector2GroupPath.Clear();
