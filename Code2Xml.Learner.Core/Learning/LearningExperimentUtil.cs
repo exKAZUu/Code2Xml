@@ -101,5 +101,12 @@ namespace Code2Xml.Learner.Core.Learning {
 	    public static int CountRejectingBits(BigInteger bits, int acceptingFeatureCount) {
 		    return CountBits(bits >> acceptingFeatureCount);
 	    }
+
+	    public static IEnumerable<CstNode> GetUppermostNodesByNames(CstNode cst, ISet<string> nodeNames) {
+		    return cst.DescendantsAndSelf()
+				    .Where(node => nodeNames.Contains(node.Name))
+				    .Where(node => node.AncestorsWithSingleChild()
+						    .All(ancestor => !nodeNames.Contains(ancestor.Name)));
+	    }
     }
 }

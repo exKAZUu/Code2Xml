@@ -254,7 +254,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public PhpComplexBranchExperiment() : base("expression") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var pName = e.SafeParent().FirstChild.Name;
             if (pName == "If") {
                 return true;
@@ -300,7 +300,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public PhpSuperComplexBranchExperiment() : base("expression") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var pName = e.SafeParent().FirstChild.Name;
             if (pName == "If") {
                 return true;
@@ -365,7 +365,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var pName = e.SafeParent().FirstChild.Name;
             if (pName == "If") {
                 return true;
@@ -389,7 +389,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var pName = e.SafeParent().FirstChild.Name;
             if (pName == "While") {
                 return true;
@@ -413,7 +413,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var pName = e.SafeParent().FirstChild.Name;
             if (pName == "Do") {
                 return true;
@@ -437,7 +437,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.SafeParent().Name == "commaList"
                 && e.SafeParent().SafeParent().Name == "forCondition"
                 && !e.NextsFromSelf().Any()) {
@@ -462,7 +462,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.SafeParent().Name == "commaList"
                 && e.SafeParent().SafeParent().Name == "simpleStatement"
                 && e.SafeParent().SafeParent().FirstChild.Name == "Echo"
@@ -488,7 +488,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return true; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // ラベルはループ文に付くため，ラベルの中身は除外
             if (e.FirstChild.Name == "UnquotedString") {
                 return false;
@@ -520,7 +520,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return true; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             return true;
         }
 
@@ -540,7 +540,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return true; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // ブロック自身は意味を持たないステートメントで、中身だけが必要なので除外
             if (e.Child("bracketedBlock") != null) {
                 return true;
@@ -564,7 +564,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return true; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // ラベルはループ文に付くため，ラベルの中身は除外
             if (e.FirstChild.Name == "UnquotedString") {
                 return true;
@@ -588,7 +588,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return true; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // 空文
             if (e.FirstChild.TokenText == ";") {
                 return true;
@@ -614,7 +614,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public PhpExpressionStatementExperiment() : base("simpleStatement") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             return e.FirstChild.Name == "expression";
         }
     }
@@ -646,7 +646,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public PhpArithmeticOperatorExperiment() : base("Plus", "Minus", "Asterisk", "Forwardslash") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             return e.Parent.Name == "addition" ||
                    e.Parent.Name == "multiplication";
         }
@@ -687,7 +687,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public PhpSwitchCaseExperiment() : base("expression", "casestatement", "defaultcase") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var pName = e.SafeParent().FirstChild.Name;
             if (pName == "Switch") {
                 return true;
@@ -724,7 +724,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public PhpSuperComplexBranchExperimentWithSwitch()
                 : base("expression", "casestatement", "defaultcase") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var pName = e.SafeParent().FirstChild.Name;
             if (pName == "If") {
                 return true;
@@ -784,7 +784,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public PhpSuperComplexBranchExperimentWithSwitchWithoutTrue()
                 : base("expression", "casestatement", "defaultcase") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var pName = e.SafeParent().FirstChild.Name;
             if (pName == "If") {
                 return e.TokenText.ToLower() != "true";

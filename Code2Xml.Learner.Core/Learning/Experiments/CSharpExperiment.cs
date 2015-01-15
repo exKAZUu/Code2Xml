@@ -261,7 +261,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public CSharpSuperComplexBranchExperiment() : base("boolean_expression", "argument") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.Name == "expression") {
                 e = e.Parent;
             }
@@ -362,7 +362,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public CSharpComplexBranchExperiment() : base("boolean_expression") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var pName = e.Parent.Name;
             if (pName == "if_statement") {
                 return true;
@@ -389,7 +389,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var pName = e.Parent.Name;
             if (pName == "if_statement") {
                 return true;
@@ -409,7 +409,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var pName = e.Parent.Name;
             if (pName == "while_statement") {
                 return true;
@@ -429,7 +429,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var pName = e.Parent.Name;
             if (pName == "do_statement") {
                 return true;
@@ -449,7 +449,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             return true;
         }
 
@@ -465,7 +465,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.PrevsFromFirst().Any()) {
                 return false;
             }
@@ -500,7 +500,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public CSharpComplexStatementExperiment() : base("statement") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // ラベルはループ文に付くため，ラベルの中身は除外
             if (e.Child("labeled_statement") != null) {
                 return false;
@@ -529,7 +529,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return true; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             return true;
         }
 
@@ -545,7 +545,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return true; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // ブロック自身は意味を持たないステートメントで、中身だけが必要なので除外
             var e2 = e.Child("embedded_statement");
             if (e2 != null && e2.Child("block") != null) {
@@ -566,7 +566,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return true; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // ラベルはループ文に付くため，ラベルの中身は除外
             if (e.Child("labeled_statement") != null) {
                 return true;
@@ -586,7 +586,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return true; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // 空文を除外
             if (e.TokenText == ";") {
                 return true;
@@ -608,7 +608,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public CSharpExpressionStatementExperiment() : base("expression_statement") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.Name == "statement") {
                 e = e.FirstChild;
             }
@@ -642,7 +642,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public CSharpArithmeticOperatorExperiment() : base("TOKENS", "MINUS") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             return ((e.TokenText == "*" || e.TokenText == "/")
                     && e.Parent.Name == "multiplicative_expression") ||
                    ((e.TokenText == "+" || e.TokenText == "-")
@@ -683,7 +683,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public CSharpSwitchCaseExperiment() : base("expression", "switch_label") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var pName = e.Parent.Name;
             if (pName == "switch_statement") {
                 return true;
@@ -733,7 +733,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public CSharpSuperComplexBranchExperimentWithSwitch()
                 : base("boolean_expression", "argument", "switch_label") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.Name == "expression") {
                 e = e.Parent;
             }
@@ -811,7 +811,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue()
                 : base("boolean_expression", "argument", "switch_label") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.Name == "expression") {
                 e = e.Parent;
             }

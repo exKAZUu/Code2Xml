@@ -244,7 +244,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public LuaComplexBranchExperiment() : base("exp") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var siblings = e.Siblings().ToList();
             var parent = e.Parent;
             if (parent.SafeName() == "stat" && siblings[0].TokenText == "if") {
@@ -283,7 +283,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public LuaSuperComplexBranchExperiment() : base("exp") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var siblings = e.Siblings().ToList();
             var parent = e.Parent;
             if (parent.SafeName() == "stat" && siblings[0].TokenText == "if") {
@@ -349,7 +349,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public LuaSuperComplexBranchExperimentWithoutTrue() : base("exp") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var siblings = e.Siblings().ToList();
             var parent = e.Parent;
             if (parent.SafeName() == "stat" && siblings[0].TokenText == "if") {
@@ -403,7 +403,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public LuaIfExperiment() : base("exp") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var siblings = e.Siblings().ToList();
             var parent = e.Parent;
             if (parent.SafeName() == "stat" && siblings[0].TokenText == "if") {
@@ -424,7 +424,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public LuaWhileExperiment() : base("exp") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var siblings = e.Siblings().ToList();
             var parent = e.Parent;
             if (parent.SafeName() == "stat" && siblings[0].TokenText == "while") {
@@ -445,7 +445,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public LuaDoWhileExperiment() : base("exp") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var siblings = e.Siblings().ToList();
             var parent = e.Parent;
             if (parent.SafeName() == "stat" && siblings[0].TokenText == "repeat") {
@@ -466,7 +466,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public LuaPrintExperiment() : base("exp") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var ppp = e.SafeParent().SafeParent().SafeParent();
             var pppp = ppp.SafeParent();
             if (pppp.SafeName() == "functioncall" && ppp.Prev != null
@@ -488,7 +488,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public LuaComplexStatementExperiment() : base("stat") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.FirstChild.Name == "label") {
                 return false;
             }
@@ -510,7 +510,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public LuaStatementExperiment() : base("stat") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             return true;
         }
     }
@@ -526,7 +526,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public LuaLabeledStatementExperiment() : base("stat") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.FirstChild.Name == "label") {
                 return true;
             }
@@ -545,7 +545,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public LuaEmptyStatementExperiment() : base("stat") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.FirstChild.TokenText == ";") {
                 return true;
             }
@@ -564,7 +564,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public LuaExpressionStatementExperiment() : base("stat") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             return e.FirstChild.Name == "varlist";
         }
     }
@@ -592,7 +592,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public LuaArithmeticOperatorExperiment() : base("TOKENS") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.Name == "binop") {
                 e = e.FirstChild;
             }

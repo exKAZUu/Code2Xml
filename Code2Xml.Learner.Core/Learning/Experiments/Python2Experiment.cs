@@ -250,7 +250,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public PythonSuperComplexBranchExperiment() : base("test", "argument") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.Name == "test" && (e.Parent.Name == "if_stmt" || e.Parent.Name == "while_stmt")) {
                 return true;
             }
@@ -278,7 +278,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public PythonComplexStatementExperiment() : base("small_stmt", "compound_stmt") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // stmt: simple_stmt | compound_stmt
             // simple_stmt: small_stmt (';' small_stmt)* [';'] NEWLINE
             // small_stmt: (expr_stmt | print_stmt  | del_stmt | pass_stmt | flow_stmt |
@@ -304,7 +304,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public PythonEmptyStatementExperiment() : base("pass_stmt") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.Name == "stmt") {
                 e = e.FirstChild;
             }
@@ -326,7 +326,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public PythonExpressionStatementExperiment() : base("expr_stmt") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.Name == "small_stmt") {
                 return e.FirstChild.Name == "expr_stmt";
             }
@@ -357,7 +357,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public PythonArithmeticOperatorExperiment() : base("PLUS", "MINUS", "STAR", "SLASH") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             return ((e.TokenText == "+" || e.TokenText == "-") && e.Parent.Name == "arith_expr") ||
                    ((e.TokenText == "*" || e.TokenText == "/") && e.Parent.Name == "term");
         }
@@ -386,7 +386,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public PythonSuperComplexBranchExperimentWithoutTrue() : base("test", "argument") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.Name == "test" && (e.Parent.Name == "if_stmt" || e.Parent.Name == "while_stmt")) {
                 return e.TokenText != "True";
             }

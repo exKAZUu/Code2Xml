@@ -53,8 +53,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="TreeDotNet">
-      <HintPath>..\packages\TreeDotNet.1.2.7.17\lib\net40\TreeDotNet.dll</HintPath>
+    <Reference Include="TreeDotNet, Version=1.2.8.18, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\TreeDotNet.1.2.8.18\lib\net40\TreeDotNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -123,7 +123,7 @@ namespace Code2Xml.Core.SyntaxTree {
             return new CstToken[0];
         }
 
-        private static void GenerateCode(CstNode node, StringBuilder builder) {
+        internal static void GenerateCode(CstNode node, StringBuilder builder) {
             if (node.Replacement == null) {
                 if (node.Value != null) {
                     foreach (var token in node.Hiddens) {
@@ -155,7 +155,7 @@ namespace Code2Xml.Core.SyntaxTree {
             }
         }
 
-        private static void GenerateCodeWithoutInserted(CstNode node, StringBuilder builder) {
+        internal static void GenerateCodeWithoutInserted(CstNode node, StringBuilder builder) {
             if (node.Value != null) {
                 foreach (var token in node.Hiddens) {
                     builder.Append(token.Text);
@@ -168,7 +168,7 @@ namespace Code2Xml.Core.SyntaxTree {
             }
         }
 
-        private static void GenerateCodeWithoutInsertedAndHiddens(
+        internal static void GenerateCodeWithoutInsertedAndHiddens(
                 CstNode node, StringBuilder builder) {
             if (node.Value != null) {
                 builder.Append(node.Value.Text);

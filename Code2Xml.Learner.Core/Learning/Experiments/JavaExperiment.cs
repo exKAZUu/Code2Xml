@@ -448,7 +448,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public JavaSuperComplexBranchExperiment() : base("expression") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var p = e.Parent;
             var pp = p.Parent;
             var isPar = p.SafeName() == "parExpression";
@@ -591,7 +591,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public JavaComplexBranchExperiment() : base("expression") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var p = e.Parent;
             var pp = p.Parent;
             var isPar = p.SafeName() == "parExpression";
@@ -624,7 +624,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public JavaIfExperiment() : base("expression") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var p = e.Parent;
             var pp = p.Parent;
             var isPar = p.SafeName() == "parExpression";
@@ -647,7 +647,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public JavaWhileExperiment() : base("expression") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var p = e.Parent;
             var pp = p.Parent;
             var isPar = p.SafeName() == "parExpression";
@@ -670,7 +670,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public JavaDoWhileExperiment() : base("expression") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var p = e.Parent;
             var pp = p.Parent;
             var isPar = p.SafeName() == "parExpression";
@@ -693,7 +693,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public JavaForExperiment() : base("expression") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var p = e.Parent;
             if (p.SafeName() == "forstatement"
                 && p.Children().Count(e2 => e2.TokenText == ";") >= 2) {
@@ -714,7 +714,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public JavaPreconditionsExperiment() : base("expression") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var primary = e.SafeParent().SafeParent().SafeParent().SafeParent();
             if (primary.SafeName() != "primary") {
                 return false;
@@ -749,7 +749,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public JavaComplexStatementExperiment() : base("statement", "blockStatement") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // blockStatement 
             //    :   localVariableDeclarationStatement
             //    |   classOrInterfaceDeclaration
@@ -842,7 +842,7 @@ statement
 
         public JavaBlockExperiment() : base("statement") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // ブロック自身は意味を持たないステートメントで、中身だけが必要なので除外
             if (e.FirstChild.Name == "block") {
                 return true;
@@ -862,7 +862,7 @@ statement
 
         public JavaStatementExperiment() : base("statement") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             return e.Name == "statement";
         }
     }
@@ -878,7 +878,7 @@ statement
 
         public JavaLabeledStatementExperiment() : base("statement") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             // ラベルはループ文に付くため，ラベルの中身は除外
             var second = e.Siblings().ElementAtOrDefault(1);
             if (second != null && second.TokenText == ":"
@@ -900,7 +900,7 @@ statement
 
         public JavaEmptyStatementExperiment() : base("statement") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.FirstChild.TokenText == ";") {
                 return true;
             }
@@ -919,7 +919,7 @@ statement
 
         public JavaExpressionStatementExperiment() : base("statement") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             return e.FirstChild.Name == "expression";
         }
     }
@@ -947,7 +947,7 @@ statement
 
         public JavaArithmeticOperatorExperiment() : base("PLUS", "SUB", "STAR", "SLASH") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             return ((e.TokenText == "+" || e.TokenText == "-")
                     && e.Parent.Name == "additiveExpression") ||
                    ((e.TokenText == "*" || e.TokenText == "/")
@@ -988,7 +988,7 @@ statement
 
         public JavaSwitchCaseExperiment() : base("expression", "switchLabel") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var p = e.Parent;
             var pp = p.Parent;
             var isPar = p.SafeName() == "parExpression";
@@ -1037,7 +1037,7 @@ statement
 
         public JavaSuperComplexBranchExperimentWithSwitch() : base("expression", "switchLabel") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var p = e.Parent;
             var pp = p.Parent;
             var isPar = p.SafeName() == "parExpression";
@@ -1101,7 +1101,7 @@ statement
         public JavaSuperComplexBranchExperimentWithSwitchWithoutTrue()
                 : base("expression", "switchLabel") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var p = e.Parent;
             var pp = p.Parent;
             var isPar = p.SafeName() == "parExpression";

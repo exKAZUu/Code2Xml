@@ -16,49 +16,59 @@
 
 #endregion
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using Code2Xml.Core.SyntaxTree;
+using Paraiba.Linq;
+using Code2Xml.Core.Generators;
+using Code2Xml.Core.SyntaxTree;
+using Paraiba.Collections.Generic;
 
 namespace Code2Xml.Learner.Core.Learning {
 	public class Classifier {
-		private ISet<string> _selectedNames;
+		public ISet<string> SelectedNodeNames { get; private set; }
 
-		private IDictionary<string, BigInteger> _featureString2Bit;
 		private int _acceptingFeatureCount;
 		private BigInteger _acceptingFeatureBitMask;
 		private BigInteger _rejectingFeatureBitMask;
 		private BigInteger _allFeatureBitMask;
 
 		private List<string> _currentGroupPaths;
-		private Dictionary<BigInteger, int> _vector2GroupIndex;
 
 		public List<ClassifierUnit> Classifiers { get; set; }
+
+		public Classifier(List<string> acceptingFeatures, List<string> rejectingFeatures) {
+			_acceptingFeatureCount = acceptingFeatures.Count;
+
+			_allFeatureBitMask = (BigInteger.One << _featureString2Bit.Count) - BigInteger.One;
+			_acceptingFeatureBitMask = (BigInteger.One << acceptingFeatures.Count) - BigInteger.One;
+			_rejectingFeatureBitMask = _allFeatureBitMask ^ _acceptingFeatureBitMask;
+		}
 
 		#region for Debug
 
 		public List<List<string>> GetAllAcceptingFeatureStrings() {
 			return Classifiers.Select(
-					cl => LearningExperimentUtil
-							.GetFeatureStringsByVector(_featureString2Bit, cl.Accepting)
+					cl => LearningExperimentUtil.GetFeatureStringsByVector(_featureString2Bit, cl.Accepting)
 							.ToList())
 					.ToList();
 		}
 
 		public List<List<string>> GetAllRejectingFeatureStrings() {
 			return Classifiers.Select(
-					cl => LearningExperimentUtil
-							.GetFeatureStringsByVector(_featureString2Bit, cl.Rejecting)
+					cl => LearningExperimentUtil.GetFeatureStringsByVector(_featureString2Bit, cl.Rejecting)
 							.ToList())
 					.ToList();
 		}
 
 		public string GetClassifierSummary(IReadOnlyList<ClassifierUnit> classifiers) {
 			return "AP: "
-			       + string.Join(
+			       + String.Join(
 					       ", ", classifiers.Select(c => LearningExperimentUtil.CountBits(c.Accepting)))
 			       + ", RP: "
-			       + string.Join(
+			       + String.Join(
 					       ", ",
 					       classifiers.Select(
 							       c => LearningExperimentUtil.CountRejectingBits(c.Rejecting, _acceptingFeatureCount)));

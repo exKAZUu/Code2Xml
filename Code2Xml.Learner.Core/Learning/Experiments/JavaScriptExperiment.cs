@@ -264,7 +264,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return 0; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var parentName = e.Parent.SafeName();
             if (parentName == "ifStatement") {
                 return true;
@@ -323,7 +323,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var parentName = e.Parent.SafeName();
             if (parentName == "ifStatement") {
                 return true;
@@ -353,7 +353,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var parentName = e.Parent.SafeName();
             if (parentName == "ifStatement") {
                 return true;
@@ -373,7 +373,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var parentName = e.Parent.SafeName();
             if (parentName == "whileStatement") {
                 return true;
@@ -393,7 +393,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var parentName = e.Parent.SafeName();
             if (parentName == "doWhileStatement") {
                 return true;
@@ -413,7 +413,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var parentName = e.Parent.SafeName();
             if (parentName == "forStatement"
                 && e.Prev == e.Parent.Children().First(e2 => e2.TokenText == ";")) {
@@ -434,7 +434,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return false; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var p = e.SafeParent().SafeParent();
             if (p.SafeName() == "callExpression" && p.FirstChild.TokenText == "console.log" &&
                 p.Child("arguments").Child("assignmentExpression") == e) {
@@ -455,7 +455,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public JavaScriptStatementExperiment() : base("statement") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             return true;
         }
     }
@@ -471,7 +471,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public JavaScriptComplexStatementExperiment() : base("statement") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.FirstChild.Name == "statementBlock") {
                 return false;
             }
@@ -496,7 +496,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public JavaScriptBlockExperiment() : base("statement") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.FirstChild.Name == "statementBlock") {
                 return true;
             }
@@ -515,7 +515,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public JavaScriptLabeledStatementExperiment() : base("statement") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.FirstChild.Name == "labelledStatement") {
                 return true;
             }
@@ -534,7 +534,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public JavaScriptEmptyStatementExperiment() : base("statement") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.FirstChild.Name == "emptyStatement") {
                 return true;
             }
@@ -553,7 +553,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public JavaScriptExpressionStatementExperiment() : base("expressionStatement") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.Name == "statement") {
                 e = e.FirstChild;
             }
@@ -594,7 +594,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public JavaScriptArithmeticOperatorExperiment() : base("TOKENS") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             return ((e.TokenText == "*" || e.TokenText == "/")
                     && e.Parent.Name == "multiplicativeExpression")
                    ||
@@ -637,7 +637,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public JavaScriptSwitchCaseExperiment() : base("expression", "caseClause", "defaultClause") {}
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             if (e.Parent.Name == "switchStatement") {
                 return true;
             }
@@ -669,7 +669,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return 0; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var parentName = e.Parent.SafeName();
             if (parentName == "ifStatement") {
                 return true;
@@ -723,7 +723,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return 0; }
         }
 
-        protected override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode e) {
             var parentName = e.Parent.SafeName();
             if (parentName == "ifStatement") {
                 return e.TokenText != "true";
