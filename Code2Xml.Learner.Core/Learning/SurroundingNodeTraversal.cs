@@ -189,7 +189,7 @@ namespace Code2Xml.Learner.Core.Learning {
         //    return bits;
         //}
 
-        //public static BigInteger GetSurroundingPathBits(
+        //public static BigInteger GetFeatureVector(
         //        this CstNode node, int length, IDictionary<string, BigInteger> path2Bit,
         //        ILearningExperiment exp) {
         //    var bits = BigInteger.Zero;
@@ -308,7 +308,7 @@ namespace Code2Xml.Learner.Core.Learning {
         //    return paths;
         //}
 
-        //public static BigInteger GetSurroundingPathBits(
+        //public static BigInteger GetFeatureVector(
         //        this CstNode node, int length, IDictionary<string, BigInteger> path2Bit,
         //        ILearningExperiment exp) {
         //    var ret = BigInteger.Zero;
@@ -615,7 +615,7 @@ namespace Code2Xml.Learner.Core.Learning {
             return paths;
         }
 
-        public static BigInteger GetSurroundingPathBits(
+        public static BigInteger GetFeatureVector(
                 this CstNode node, int length, IDictionary<string, BigInteger> path2Bit,
                 ILearningExperiment exp) {
             var ret = BigInteger.Zero;

@@ -30,7 +30,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     public class JavaScriptExperiment : Experiment {
         public static CstGenerator Generator = CstGenerators.JavaScriptUsingAntlr3;
 
-        private static readonly Tuple<string, string>[] LearningSets = {
+		#region LearningSets
+		private static readonly Tuple<string, string>[] LearningSets = {
             Tuple.Create(
                     @"https://github.com/jashkenas/backbone.git",
                     @"285e07b6b3d6241966866d0662595ac9611c0f61"),
@@ -182,8 +183,9 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     @"https://github.com/flot/flot.git",
                     @"3aec7ce0bd975e452ff49107905a06146fe9e560"),
         };
+		#endregion
 
-        private static readonly LearningExperiment[] Experiments = {
+		private static readonly LearningExperiment[] Experiments = {
             //new JavaScriptComplexStatementExperiment(),
             //new JavaScriptSuperComplexBranchExperiment(),
             //new JavaScriptExpressionStatementExperiment(),  // NG

@@ -349,7 +349,7 @@ namespace Code2Xml.Learner.Core.Learning {
             _rejectingMask = _mask ^ _acceptingMask;
 
             foreach (var e in seedAcceptedElements) {
-                var bits = e.GetSurroundingPathBits(SurroundingLength, _masterFeatures, this);
+                var bits = e.GetFeatureVector(SurroundingLength, _masterFeatures, this);
                 UpdateDict(_idealAccepted, bits, e);
                 _acceptedTrainingSet[bits] = _idealAccepted[bits];
                 _feature2Element[bits] = e;
@@ -360,7 +360,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 }
             }
             foreach (var e in seedRejectedElements) {
-                var bits = e.GetSurroundingPathBits(SurroundingLength, _masterFeatures, this);
+                var bits = e.GetFeatureVector(SurroundingLength, _masterFeatures, this);
                 UpdateDict(_idealRejected, bits, e);
                 _rejectedTrainingSet[bits] = _idealRejected[bits];
                 _feature2Element[bits] = e;
@@ -374,7 +374,7 @@ namespace Code2Xml.Learner.Core.Learning {
             foreach (var ast in allAsts) {
                 Console.Write(".");
                 foreach (var e in GetAllElementsWithoutDuplicates(ast)) {
-                    var bits = e.GetSurroundingPathBits(SurroundingLength, _masterFeatures, this);
+                    var bits = e.GetFeatureVector(SurroundingLength, _masterFeatures, this);
                     if (IsAcceptedUsingOracle(e)) {
                         // TODO: for debug
                         if (_idealRejected.ContainsKey(bits)) {
@@ -417,7 +417,7 @@ namespace Code2Xml.Learner.Core.Learning {
                     + _feature2Element[bits].Name + ", "
                     + _feature2Element[bits].Code);
             IsAcceptedUsingOracle(e);
-            bits = e.GetSurroundingPathBits(SurroundingLength, _masterFeatures, this);
+            bits = e.GetFeatureVector(SurroundingLength, _masterFeatures, this);
         }
 
         #region Create Classifier

@@ -28,11 +28,12 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         protected readonly Dictionary<string, StreamWriter> Writers;
 
         public const int SkipCount = 0;
-        public const int TakeCount = 100;
-        private const int ProjectTakeCountToLearn = 10;
+        public const int TakeCount = 0;
+
+        private const int ProjectTakeCountToLearn = 20;
         private const int ProjectSkipCountToLearn = 0;
-        private const int ProjectSkipCountToTest = 35;
-        private const int ProjectTakeCountToTest = 5;
+        private const int ProjectSkipCountToTest = 0;
+        private const int ProjectTakeCountToTest = 50;
 
         protected Experiment() {
             Writers = new Dictionary<string, StreamWriter>();
@@ -54,13 +55,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                             }).ToList();
             var failedCount = 0;
             foreach (var exp in experiments) {
-                LearnWithoutClearing(
+                var learningResult = LearnWithoutClearing(
                         seedPaths, exp,
                         projectPaths.Skip(ProjectSkipCountToLearn).Take(ProjectTakeCountToLearn));
 
                 var w = CreateWriter(
                         exp.GetType().Name + "_classifier_" + ProjectTakeCountToLearn + ".txt");
-                w.WriteLine(exp.GetClassifierSummary(exp._classifiers));
+                w.WriteLine(exp.GetClassifierSummary(learningResult.Classifiers));
                 w.Flush();
 
                 var writer =
@@ -73,8 +74,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     writer.Write(",");
                     writer.Write(projectPath);
                     writer.Write(",");
-                    var ret = exp.Apply(writer, codePaths, SearchPattern);
-                    var features = exp.GetFeatures(exp._classifiers);
+                    var ret = exp.Apply(writer, codePaths, SearchPattern, learningResult.Classifiers);
+                    var features = exp.GetAllAcceptingFeatureStrings(learningResult.Classifiers);
 
                     writer.Write(ret.WrongElementCount);
                     writer.Write(",");
@@ -105,7 +106,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             Assert.That(failedCount, Is.EqualTo(0));
         }
 
-        private void LearnWithoutClearing(
+        private LearningResult LearnWithoutClearing(
                 ICollection<string> seedPaths, LearningExperiment exp,
                 IEnumerable<string> projectPaths) {
             var writer =
@@ -118,30 +119,32 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             writer.Write(",");
             writer.Write(projectPaths.First());
             writer.Write(",");
-            var ret = exp.Learn(seedPaths, writer, codePaths, SearchPattern);
-            writer.Write(ret.WrongElementCount);
+            var learningResult = exp.Learn(seedPaths, writer, codePaths, SearchPattern);
+	        var classificationResult = learningResult.ClassificationResult;
+            writer.Write(classificationResult.WrongElementCount);
             writer.Write(",");
-            writer.Write(ret.WrongFeatureCount);
+            writer.Write(classificationResult.WrongFeatureCount);
             writer.Write(",");
             writer.WriteLine();
             writer.Flush();
-            if (ret.WrongFeatureCount > 0) {
+            if (classificationResult.WrongFeatureCount > 0) {
                 Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
-                foreach (var we in ret.WronglyAcceptedElements) {
+                foreach (var we in classificationResult.WronglyAcceptedElements) {
                     var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
                     Console.WriteLine(we.Code);
                     Console.WriteLine(e.Code);
                     Console.WriteLine("---------------------------------------------");
                 }
                 Console.WriteLine("---- WronglyRejectedElements ----");
-                foreach (var we in ret.WronglyRejectedElements) {
+                foreach (var we in classificationResult.WronglyRejectedElements) {
                     var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
                     Console.WriteLine(we.Code);
                     Console.WriteLine(e.Code);
                     Console.WriteLine("---------------------------------------------");
                 }
             }
-            Assert.That(ret.WrongFeatureCount, Is.EqualTo(0));
+            Assert.That(classificationResult.WrongFeatureCount, Is.EqualTo(0));
+	        return learningResult;
         }
 
         private StreamWriter CreateWriter(string fileName) {

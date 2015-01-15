@@ -22,12 +22,13 @@ using System.Numerics;
 using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Learner.Core.Learning {
-    public class ExperimentalResult {
+    public class ClassificationResult {
         public int WrongFeatureCount { get; set; }
         public int WrongElementCount { get; set; }
 
         public Dictionary<BigInteger, CstNode> FeatureVector2Element { get; private set; }
         public Dictionary<BigInteger, string> FeatureBit2Path { get; private set; }
+		public List<SuspiciousNode> SuspiciousNodes { get; set; }
 
         public List<BigInteger> WronglyAcceptedFeatures {
             get { return _wronglyAcceptedFeatures; }
@@ -57,7 +58,7 @@ namespace Code2Xml.Learner.Core.Learning {
 
         private readonly List<BigInteger> _wronglyRejectedFeatures = new List<BigInteger>();
 
-        public ExperimentalResult(
+        public ClassificationResult(
                 Dictionary<BigInteger, CstNode> featureVector2Element,
                 Dictionary<BigInteger, string> featureBit2Path) {
             FeatureVector2Element = featureVector2Element;

@@ -25,7 +25,7 @@ using Paraiba.Linq;
 
 namespace Code2Xml.Learner.Core.Learning {
     internal class LearningExperimentUtil {
-        public static string CommonSuffix(string s1, string s2) {
+        public static string GetCommonSuffix(string s1, string s2) {
             var count = Math.Min(s1.Length, s2.Length);
             var ret = "";
             var lastIndex = -1;
@@ -43,7 +43,7 @@ namespace Code2Xml.Learner.Core.Learning {
             return ret.Substring(0, lastIndex + 1);
         }
 
-        public static IEnumerable<string> AdoptNodeNames(ICollection<CstNode> uppermosts) {
+        public static IEnumerable<string> FindGoodNodeNames(ICollection<CstNode> uppermosts) {
             var name2Count = new Dictionary<string, int>();
             var name2Ids = new Dictionary<string, HashSet<string>>();
             var candidates = uppermosts.SelectMany(
@@ -66,15 +66,40 @@ namespace Code2Xml.Learner.Core.Learning {
                                     name => (name2Count[name] << 8) + name2Ids[name].Count));
         }
 
-        public static IEnumerable<string> GetFeatureByVector(IDictionary<string, BigInteger> feature2Vector, BigInteger vector) {
-            var vectorBit = BigInteger.One;
+        public static IEnumerable<string> GetFeatureStringsByVector(IDictionary<string, BigInteger> featureString2Bit, BigInteger vector) {
+            var featureBit = BigInteger.One;
             while (vector != BigInteger.Zero) {
-                if ((vector & vectorBit) != BigInteger.Zero) {
-                    vector ^= vectorBit;
+                if ((vector & featureBit) != BigInteger.Zero) {
+                    vector ^= featureBit;
                 }
-                yield return feature2Vector.First(kv => kv.Value == vectorBit).Key;
-                vectorBit <<= 1;
+                yield return featureString2Bit.First(kv => kv.Value == featureBit).Key;
+                featureBit <<= 1;
             }
         }
+
+	    public static int CountBits(BigInteger bits) {
+		    var count = 0;
+		    while (bits != BigInteger.Zero) {
+			    count += (int)(bits & BigInteger.One);
+			    bits >>= 1;
+		    }
+		    return count;
+	    }
+
+	    public static bool IsAccepted(BigInteger feature, BigInteger acceptingClassifier) {
+		    return (feature & acceptingClassifier) == acceptingClassifier;
+	    }
+
+	    public static bool IsRejected(BigInteger feature, BigInteger rejectingClassifier) {
+		    return (feature & rejectingClassifier) != BigInteger.Zero;
+	    }
+
+	    public static int CountAcceptingBits(BigInteger bits, BigInteger acceptingFeatureMask) {
+		    return CountBits(bits & acceptingFeatureMask);
+	    }
+
+	    public static int CountRejectingBits(BigInteger bits, int acceptingFeatureCount) {
+		    return CountBits(bits >> acceptingFeatureCount);
+	    }
     }
 }
