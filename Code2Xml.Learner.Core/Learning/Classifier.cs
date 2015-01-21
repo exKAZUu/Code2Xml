@@ -30,6 +30,10 @@ namespace Code2Xml.Learner.Core.Learning {
 	public class Classifier {
 		public ISet<string> SelectedNodeNames { get; private set; }
 
+		private Dictionary<BigInteger, string> _trainingAcceptedVector2GroupPath;
+		private Dictionary<BigInteger, string> _trainingRejectedVector2GroupPath;
+
+
 		private int _acceptingFeatureCount;
 		private BigInteger _acceptingFeatureBitMask;
 		private BigInteger _rejectingFeatureBitMask;
@@ -39,8 +43,8 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		public List<ClassifierUnit> Classifiers { get; set; }
 
-		public Classifier(List<string> acceptingFeatures, List<string> rejectingFeatures) {
-			_acceptingFeatureCount = acceptingFeatures.Count;
+		public Classifier(FeatuerSet featureSet) {
+			_acceptingFeatureCount = featureSet.AcceptingFeatures.Count;
 
 			_allFeatureBitMask = (BigInteger.One << _featureString2Bit.Count) - BigInteger.One;
 			_acceptingFeatureBitMask = (BigInteger.One << acceptingFeatures.Count) - BigInteger.One;

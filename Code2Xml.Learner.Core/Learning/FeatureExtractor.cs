@@ -23,6 +23,7 @@ using System.Linq;
 using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Learner.Core.Learning {
+	[Serializable]
 	public class FeatureExtractor {
 		public FeatureExtractor(int maxUp, int maxDown, int maxLeft, int maxRight, bool isInner) {
 			MaxUp = maxUp;
