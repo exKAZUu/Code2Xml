@@ -1,42 +1,55 @@
-﻿using System;
+﻿#region License
+
+// Copyright (C) 2011-2015 Kazunori Sakamoto
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//     http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+#endregion
+
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using System.Numerics;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
 using Code2Xml.Core.SyntaxTree;
 using Paraiba.Collections.Generic;
 
-namespace Code2Xml.Learner.Core.Learning
-{
-	class FatureEncoder
-	{
-		public bool IsInner { get; private set; }
-		public int MaxUp { get; private set; }
-		public int MaxLeft { get; private set; }
-		public int MaxRight { get; private set; }
-
+namespace Code2Xml.Learner.Core.Learning {
+	[Serializable]
+	public class FatureEncoder {
 		private const int SurroundingLength = 7;
 		private const int GroupKeyLength = 5;
 
-		private ISet<string> _selectedNodeNames;
-		private readonly IDictionary<string, BigInteger> _featureString2Bit;
-		private readonly IDictionary<BigInteger, string> _bit2FeatureString;
 		private readonly FeatureExtractor _extractor;
 
-		public FatureEncoder(FeatuerSet featureSet, FeatureExtractor extractor) {
+		private readonly IDictionary<string, BigInteger> _featureString2Bit;
+		private readonly IDictionary<BigInteger, string> _bit2FeatureString;
+
+		public FatureEncoder(FeatureExtractor extractor, FeatuerSet featureSet) {
 			_extractor = extractor;
-			_selectedNodeNames = featureSet.SelectedNodeNames;
 			_featureString2Bit = CreateFeatureString2Bit(featureSet);
 			_bit2FeatureString = CreateBit2FeatureString(_featureString2Bit);
 		}
 
-		#region Encode
+		public string GetFeatureStringByBit(BigInteger bit) {
+			return _bit2FeatureString[bit];
+		}
 
-		private EncodingResult Encode(ICollection<string> codePaths, IEnumerable<CstNode> allUppermostNodeNodes, LearningExperiment oracle) {
+		public EncodingResult Encode(
+				ICollection<string> codePaths, IEnumerable<CstNode> allUppermostNodeNodes,
+				SeedNodeSet seedNodeSet, LearningExperiment oracle) {
 			var fileName = codePaths.Count > 0
 					? String.Join(",", codePaths).GetHashCode() + "_" +
 					  (codePaths.First() + "," + codePaths.Last()).GetHashCode() + ".encoded"
@@ -47,78 +60,85 @@ namespace Code2Xml.Learner.Core.Learning
 					return (EncodingResult)formatter.Deserialize(fs);
 				}
 			}
-			var ret = EncodeUppermostNodes(allUppermostNodeNodes, oracle);
+
+			var result = new EncodingResult();
+			EncodeSeedNodes(
+					seedNodeSet.SeedAcceptedNodes, result, result.IdealAcceptedVector2GroupPath,
+					result.SeedAcceptedVector2GroupPath);
+			EncodeSeedNodes(
+					seedNodeSet.SeedRejectedNodes, result, result.IdealRejectedVector2GroupPath,
+					result.SeedRejectedVector2GroupPath);
+			EncodeTargetNodes(allUppermostNodeNodes, oracle, result);
+
 			if (fileName != null) {
 				using (var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write)) {
-					formatter.Serialize(fs, ret);
+					formatter.Serialize(fs, result);
 				}
 			}
+			return result;
 		}
 
 		private void EncodeSeedNodes(
-				IEnumerable<CstNode> seedNodes,
-				Dictionary<BigInteger, string> idealVector2Path,
-				Dictionary<BigInteger, string> trainingVector2Path) {
+				IEnumerable<CstNode> seedNodes, EncodingResult result,
+				IDictionary<BigInteger, string> idealVector2Path,
+				IDictionary<BigInteger, string> trainingVector2Path) {
 			foreach (var e in seedNodes) {
 				var vector = e.GetFeatureVector(SurroundingLength, _featureString2Bit, _extractor);
 				UpdateVector2GroupPath(idealVector2Path, vector, e);
 				trainingVector2Path[vector] = idealVector2Path[vector];
-				_vector2Node[vector] = e;
-				if (_vector2Count.ContainsKey(vector)) {
-					_vector2Count[vector]++;
+				result.Vector2Node[vector] = e;
+				if (result.Vector2Count.ContainsKey(vector)) {
+					result.Vector2Count[vector]++;
 				} else {
-					_vector2Count[vector] = 1;
-					_seedAbstractCount++;
+					result.Vector2Count[vector] = 1;
+					result.SeedAbstractCount++;
 				}
 			}
 		}
 
-		private void EncodeUppermostNodes(IEnumerable<CstNode> allUppermostNodeNodes, LearningExperiment oracle) {
-					var _idealAcceptedVector2GroupPath = new Dictionary<BigInteger, string>();
-		var _idealRejectedVector2GroupPath = new Dictionary<BigInteger, string>();
-		var _vector2Count = new Dictionary<BigInteger, int>();
-
-
+		private void EncodeTargetNodes(
+				IEnumerable<CstNode> allUppermostNodeNodes, LearningExperiment oracle, EncodingResult result) {
 			foreach (var uppermostNode in allUppermostNodeNodes) {
 				var vector = uppermostNode.GetFeatureVector(
 						SurroundingLength, _featureString2Bit, _extractor);
 				if (oracle.IsAcceptedUsingOracle(uppermostNode)) {
 					// TODO: for debug
-					if (_idealRejectedVector2GroupPath.ContainsKey(vector)) {
-						PrintNotDistinguishedElement(uppermostNode, vector);
+					if (result.IdealRejectedVector2GroupPath.ContainsKey(vector)) {
+						PrintNotDistinguishedElement(uppermostNode, vector, result);
 					}
-					UpdateVector2GroupPath(_idealAcceptedVector2GroupPath, vector, uppermostNode);
+					UpdateVector2GroupPath(result.IdealAcceptedVector2GroupPath, vector, uppermostNode);
 				} else {
 					// TODO: for debug
-					if (_idealAcceptedVector2GroupPath.ContainsKey(vector)) {
-						PrintNotDistinguishedElement(uppermostNode, vector);
+					if (result.IdealAcceptedVector2GroupPath.ContainsKey(vector)) {
+						PrintNotDistinguishedElement(uppermostNode, vector, result);
 					}
-					UpdateVector2GroupPath(_idealRejectedVector2GroupPath, vector, uppermostNode);
+					UpdateVector2GroupPath(result.IdealRejectedVector2GroupPath, vector, uppermostNode);
 				}
-				_vector2Node[vector] = uppermostNode;
-				if (_vector2Count.ContainsKey(vector)) {
-					_vector2Count[vector]++;
+				result.Vector2Node[vector] = uppermostNode;
+				if (result.Vector2Count.ContainsKey(vector)) {
+					result.Vector2Count[vector]++;
 				} else {
-					_vector2Count[vector] = 1;
+					result.Vector2Count[vector] = 1;
 				}
 			}
 		}
 
-		#endregion
-
-		private void PrintNotDistinguishedElement(CstNode e, BigInteger feautre) {
+		private static void PrintNotDistinguishedElement(
+				CstNode e, BigInteger feautre, EncodingResult result) {
 			Console.WriteLine(e.Parent.Name + ", " + e.Name + ", " + e.Code);
 			Console.WriteLine(
-					_vector2Node[feautre].Parent.Name + ", "
-					+ _vector2Node[feautre].Name + ", "
-					+ _vector2Node[feautre].Code);
+					result.Vector2Node[feautre].Parent.Name + ", "
+					+ result.Vector2Node[feautre].Name + ", "
+					+ result.Vector2Node[feautre].Code);
 		}
 
-		private static IDictionary<BigInteger, string> CreateBit2FeatureString(IEnumerable<KeyValuePair<string, BigInteger>> _featureString2Bit) {
-			return _featureString2Bit
-				.ToDictionary(featureStringAndBit => featureStringAndBit.Value,
-				featureStringAndBit => featureStringAndBit.Key)
-				.ToImmutableDictionary();
+		private static IDictionary<BigInteger, string> CreateBit2FeatureString(
+				IEnumerable<KeyValuePair<string, BigInteger>> featureString2Bit) {
+			return featureString2Bit
+					.ToDictionary(
+							featureStringAndBit => featureStringAndBit.Value,
+							featureStringAndBit => featureStringAndBit.Key)
+					.ToImmutableDictionary();
 		}
 
 		private static IDictionary<string, BigInteger> CreateFeatureString2Bit(FeatuerSet featuerSet) {
@@ -153,21 +173,20 @@ namespace Code2Xml.Learner.Core.Learning
 		/// <returns></returns>
 		private string GetGroupPathFromNode(CstNode node) {
 			IEnumerable<string> distinctivePath;
-			if (IsInner) {
+			if (_extractor.IsInner) {
 				//node = node.AncestorsOfOnlyChildAndSelf().Last(); // TODO
 				// TODO: descendants may be empty list
 				distinctivePath = node.DescendantsOfFirstChild()
 						.Take(GroupKeyLength)
-						.Select(e => e.HasToken ? e.RuleId + "-" + GetToken(e) : e.RuleId);
+						.Select(e => e.HasToken ? e.RuleId + "-" + _extractor.GetToken(e) : e.RuleId);
 			} else {
 				//node = node.DescendantsOfOnlyChildAndSelf().Last(); // TODO
 				distinctivePath = node.AncestorsAndSelf()
 						.Take(GroupKeyLength)
-						.Select(e => e.HasToken ? e.RuleId + "-" + GetToken(e) : e.RuleId);
+						.Select(e => e.HasToken ? e.RuleId + "-" + _extractor.GetToken(e) : e.RuleId);
 			}
 
 			return ">" + node.Name + ">" + String.Join(">", distinctivePath) + ">";
 		}
-
 	}
 }

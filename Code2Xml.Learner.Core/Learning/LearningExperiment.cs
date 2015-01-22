@@ -259,25 +259,15 @@ namespace Code2Xml.Learner.Core.Learning {
 			var preparingTime = Environment.TickCount;
 
 			var extractor = new FeatureExtractor(MaxUp, 0, MaxLeft, MaxRight, IsInner);
-			var featureSet = new FeatuerSet(seedNodes, seedCsts, extractor, this);
+			var seedNodeSet = new SeedNodeSet(seedNodes, seedCsts, this);
+			var featureSet = new FeatuerSet(seedNodeSet, extractor, this);
 			Console.WriteLine(
 					"Feature Count: " + featureSet.AcceptingFeatures.Count + ", "
 					+ featureSet.RejectingFeatures.Count);
 
 			var currentGroups = InitializeGroups(selectNodeNames);
 
-			_idealAcceptedVector2GroupPath = new Dictionary<BigInteger, string>();
-			_idealRejectedVector2GroupPath = new Dictionary<BigInteger, string>();
-			_trainingAcceptedVector2GroupPath = new Dictionary<BigInteger, string>();
-			_trainingRejectedVector2GroupPath = new Dictionary<BigInteger, string>();
-			_vector2Node = new Dictionary<BigInteger, CstNode>();
-			_vector2Count = new Dictionary<BigInteger, int>();
-			// TODO: Maybe this initialization is wrong
-			// _currentGroupPaths = new List<string> { ">" };
-
-
-
-			var classifier = new Classifier(acceptingFeatures, rejectingFeatures);
+			var classifier = new Classifier(featureSet);
 
 			_acceptedSeedElementCount = seedAcceptedNodes.Count;
 			_seedElementCount = _acceptedSeedElementCount + seedRejectedNodes.Count;
@@ -286,17 +276,9 @@ namespace Code2Xml.Learner.Core.Learning {
 			allCsts.SelectMany(
 					cst => {
 						Console.WriteLine(".");
-						return LearningExperimentUtil.GetUppermostNodesByNames(cst, featureSet.SelectedNodeNames);
+						return featureSet.GetTargetNodes(cst);
 					});
 
-			EncodeSeedNodes(
-					seedAcceptedNodes, _idealAcceptedVector2GroupPath,
-					_trainingAcceptedVector2GroupPath);
-			EncodeSeedNodes(
-					seedRejectedNodes, _idealRejectedVector2GroupPath,
-					_trainingRejectedVector2GroupPath);
-
-			EncodeCsts(codePaths, allCsts);
 
 			Console.WriteLine(
 					"Unique Element Count: "

@@ -121,6 +121,7 @@
     <Compile Include="Learning\SvmLearnerWithGaussian.cs" />
     <Compile Include="Learning\SvmLearnerWithLinear.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeedNodeSet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Learning\SvmExperiments\" />
