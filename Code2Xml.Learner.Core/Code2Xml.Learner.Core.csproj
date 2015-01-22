@@ -107,7 +107,7 @@
     <Compile Include="Learning\Experiments\LuaExperiment.cs" />
     <Compile Include="Learning\Experiments\PhpExperiment.cs" />
     <Compile Include="Learning\Experiments\Python2Experiment.cs" />
-    <Compile Include="Learning\FatureEncoder.cs" />
+    <Compile Include="Learning\FeatureEncoder.cs" />
     <Compile Include="Learning\FeatuerSet.cs" />
     <Compile Include="Learning\FeatureExtractor.cs" />
     <Compile Include="Learning\LearningAlgorithm.cs" />

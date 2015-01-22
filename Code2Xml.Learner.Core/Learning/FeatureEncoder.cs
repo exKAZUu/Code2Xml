@@ -28,7 +28,7 @@ using Paraiba.Collections.Generic;
 
 namespace Code2Xml.Learner.Core.Learning {
 	[Serializable]
-	public class FatureEncoder {
+	public class FeatureEncoder {
 		private const int SurroundingLength = 7;
 		private const int GroupKeyLength = 5;
 
@@ -37,15 +37,30 @@ namespace Code2Xml.Learner.Core.Learning {
 		private readonly IDictionary<string, BigInteger> _featureString2Bit;
 		private readonly IDictionary<BigInteger, string> _bit2FeatureString;
 
-		public FatureEncoder(FeatureExtractor extractor, FeatuerSet featureSet) {
+		public FeatureEncoder(FeatureExtractor extractor, FeatuerSet featureSet) {
 			_extractor = extractor;
 			_featureString2Bit = CreateFeatureString2Bit(featureSet);
 			_bit2FeatureString = CreateBit2FeatureString(_featureString2Bit);
 		}
 
+		public BigInteger GetBitByFeatureString(string featureString) {
+			return _featureString2Bit[featureString];
+		}
+
 		public string GetFeatureStringByBit(BigInteger bit) {
 			return _bit2FeatureString[bit];
 		}
+
+        public IEnumerable<string> GetFeatureStringsByVector(BigInteger vector) {
+            var featureBit = BigInteger.One;
+            while (vector != BigInteger.Zero) {
+                if ((vector & featureBit) != BigInteger.Zero) {
+                    vector ^= featureBit;
+                }
+                yield return GetFeatureStringByBit(featureBit);
+                featureBit <<= 1;
+            }
+        }
 
 		public EncodingResult Encode(
 				ICollection<string> codePaths, IEnumerable<CstNode> allUppermostNodeNodes,
@@ -62,6 +77,8 @@ namespace Code2Xml.Learner.Core.Learning {
 			}
 
 			var result = new EncodingResult();
+			result.SeedAcceptedNodeCount = seedNodeSet.SeedAcceptedNodes.Count;
+			result.SeedNodeCount = result.SeedAcceptedNodeCount + seedNodeSet.SeedRejectedNodes.Count;
 			EncodeSeedNodes(
 					seedNodeSet.SeedAcceptedNodes, result, result.IdealAcceptedVector2GroupPath,
 					result.SeedAcceptedVector2GroupPath);
@@ -69,6 +86,7 @@ namespace Code2Xml.Learner.Core.Learning {
 					seedNodeSet.SeedRejectedNodes, result, result.IdealRejectedVector2GroupPath,
 					result.SeedRejectedVector2GroupPath);
 			EncodeTargetNodes(allUppermostNodeNodes, oracle, result);
+			result.MakeImmutable();
 
 			if (fileName != null) {
 				using (var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write)) {
@@ -99,8 +117,7 @@ namespace Code2Xml.Learner.Core.Learning {
 		private void EncodeTargetNodes(
 				IEnumerable<CstNode> allUppermostNodeNodes, LearningExperiment oracle, EncodingResult result) {
 			foreach (var uppermostNode in allUppermostNodeNodes) {
-				var vector = uppermostNode.GetFeatureVector(
-						SurroundingLength, _featureString2Bit, _extractor);
+				var vector = uppermostNode.GetFeatureVector(SurroundingLength, _featureString2Bit, _extractor);
 				if (oracle.IsAcceptedUsingOracle(uppermostNode)) {
 					// TODO: for debug
 					if (result.IdealRejectedVector2GroupPath.ContainsKey(vector)) {

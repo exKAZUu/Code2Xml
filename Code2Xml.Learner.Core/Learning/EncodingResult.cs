@@ -25,7 +25,13 @@ using Code2Xml.Core.SyntaxTree;
 namespace Code2Xml.Learner.Core.Learning {
 	[Serializable]
 	public class EncodingResult {
+		public int SeedNodeCount { get; set; }
+		public int SeedAcceptedNodeCount { get; set; }
 		public int SeedAbstractCount { get; set; }
+
+		public int AbstractCount {
+			get { return IdealAcceptedVector2GroupPath.Count + IdealRejectedVector2GroupPath.Count; }
+		}
 
 		public IDictionary<BigInteger, string> Vector2GroupPath { get; private set; }
 		public IDictionary<BigInteger, string> IdealAcceptedVector2GroupPath { get; private set; }
@@ -38,8 +44,6 @@ namespace Code2Xml.Learner.Core.Learning {
 		public IDictionary<BigInteger, string> Vector2Path { get; private set; }
 
 		public EncodingResult() {
-			SeedAbstractCount = 0;
-
 			Vector2GroupPath = new Dictionary<BigInteger, string>();
 			IdealAcceptedVector2GroupPath = new Dictionary<BigInteger, string>();
 			IdealRejectedVector2GroupPath = new Dictionary<BigInteger, string>();

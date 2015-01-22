@@ -147,7 +147,7 @@ namespace Code2Xml.Learner.Core.Learning {
 		//}
 
 		//private static BigInteger GetDescendantPathBits(
-		//        CstNode node, CstNode reached, string path, IDictionary<string, BigInteger> path2Bit,
+		//        CstNode node, CstNode reached, string path, IDictionary<string, BigInteger> featureString2Bit,
 		//        int length, ILearningExperiment extractor, BigInteger bits) {
 		//    if (--length < 0) {
 		//        return bits;
@@ -159,12 +159,12 @@ namespace Code2Xml.Learner.Core.Learning {
 		//            continue;
 		//        }
 		//        var newPath = path + ">" + child.Name + child.RuleId;
-		//        if (path2Bit.TryGetValue(newPath, out bit)) {
+		//        if (featureString2Bit.TryGetValue(newPath, out bit)) {
 		//            children.Add(Tuple.Create(child, newPath));
 		//            bits |= bit;
 		//        }
 		//        // for Preconditions.checkArguments()
-		//        if (path2Bit.TryGetValue(children + ">'" + extractor.GetToken(child), out bit)) {
+		//        if (featureString2Bit.TryGetValue(children + ">'" + extractor.GetToken(child), out bit)) {
 		//            bits |= bit;
 		//        }
 		//    }
@@ -176,12 +176,12 @@ namespace Code2Xml.Learner.Core.Learning {
 		//                    continue;
 		//                }
 		//                var newPath = t.Item2 + ">" + child.Name + child.RuleId;
-		//                if (path2Bit.TryGetValue(newPath, out bit)) {
+		//                if (featureString2Bit.TryGetValue(newPath, out bit)) {
 		//                    newChildren.Add(Tuple.Create(child, newPath));
 		//                    bits |= bit;
 		//                }
 		//                // for Preconditions.checkArguments()
-		//                if (path2Bit.TryGetValue(t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
+		//                if (featureString2Bit.TryGetValue(t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
 		//                    bits |= bit;
 		//                }
 		//            }
@@ -192,31 +192,31 @@ namespace Code2Xml.Learner.Core.Learning {
 		//}
 
 		//public static BigInteger GetFeatureVector(
-		//        this CstNode node, int length, IDictionary<string, BigInteger> path2Bit,
+		//        this CstNode node, int length, IDictionary<string, BigInteger> featureString2Bit,
 		//        ILearningExperiment extractor) {
 		//    var bits = BigInteger.Zero;
 		//    BigInteger bit;
 		//    //if (key2Bit.TryGetValue(node.Name, out bit)) {
 		//    //    bits |= bit;
 		//    //}
-		//    if (path2Bit.TryGetValue(node.RuleId, out bit)) {
+		//    if (featureString2Bit.TryGetValue(node.RuleId, out bit)) {
 		//        bits |= bit;
 		//    }
-		//    if (path2Bit.TryGetValue("'" + extractor.GetToken(node), out bit)) {
+		//    if (featureString2Bit.TryGetValue("'" + extractor.GetToken(node), out bit)) {
 		//        bits |= bit;
 		//    }
 
 		//    var reached = node;
 		//    var path = "";
 		//    for (int i = 0;; i++) {
-		//        bits = GetDescendantPathBits(node, reached, path, path2Bit, length, extractor, bits);
+		//        bits = GetDescendantPathBits(node, reached, path, featureString2Bit, length, extractor, bits);
 		//        reached = node;
 		//        node = node.Parent;
 		//        if (node == null || i >= length) {
 		//            break;
 		//        }
 		//        path += "<" + node.RuleId;
-		//        if (path2Bit.TryGetValue(path, out bit)) {
+		//        if (featureString2Bit.TryGetValue(path, out bit)) {
 		//            bits |= bit;
 		//        } else {
 		//            break;
@@ -311,17 +311,17 @@ namespace Code2Xml.Learner.Core.Learning {
 		//}
 
 		//public static BigInteger GetFeatureVector(
-		//        this CstNode node, int length, IDictionary<string, BigInteger> path2Bit,
+		//        this CstNode node, int length, IDictionary<string, BigInteger> featureString2Bit,
 		//        ILearningExperiment extractor) {
 		//    var ret = BigInteger.Zero;
 		//    BigInteger bit;
 		//    //if (key2Bit.TryGetValue(node.Name, out bit)) {
 		//    //    ret |= bit;
 		//    //}
-		//    if (path2Bit.TryGetValue(node.RuleId, out bit)) {
+		//    if (featureString2Bit.TryGetValue(node.RuleId, out bit)) {
 		//        ret |= bit;
 		//    }
-		//    if (path2Bit.TryGetValue("'" + extractor.GetToken(node), out bit)) {
+		//    if (featureString2Bit.TryGetValue("'" + extractor.GetToken(node), out bit)) {
 		//        ret |= bit;
 		//    }
 
@@ -349,12 +349,12 @@ namespace Code2Xml.Learner.Core.Learning {
 		//            foreach (var t in children) {
 		//                foreach (var child in t.Item1.Elements()) {
 		//                    var key = t.Item2 + ">" + child.RuleId;
-		//                    if (path2Bit.TryGetValue(key, out bit)) {
+		//                    if (featureString2Bit.TryGetValue(key, out bit)) {
 		//                        newChildren.Add(Tuple.Create(child, key));
 		//                        ret |= bit;
 		//                    }
 		//                    // for Preconditions.checkArguments()
-		//                    if (path2Bit.TryGetValue(t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
+		//                    if (featureString2Bit.TryGetValue(t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
 		//                        ret |= bit;
 		//                    }
 		//                }
@@ -363,11 +363,11 @@ namespace Code2Xml.Learner.Core.Learning {
 		//                    .ForEach(
 		//                            (e, index) => {
 		//                                var key = parent.Item2 + "<-" + index + "-" + e.RuleId;
-		//                                if (path2Bit.TryGetValue(key, out bit)) {
+		//                                if (featureString2Bit.TryGetValue(key, out bit)) {
 		//                                    newChildren.Add(Tuple.Create(e, key));
 		//                                    ret |= bit;
 		//                                }
-		//                                if (path2Bit.TryGetValue(
+		//                                if (featureString2Bit.TryGetValue(
 		//                                        parent.Item2 + "<-" + index + "-'" + extractor.GetToken(e),
 		//                                        out bit)) {
 		//                                    ret |= bit;
@@ -377,11 +377,11 @@ namespace Code2Xml.Learner.Core.Learning {
 		//                    .ForEach(
 		//                            (e, index) => {
 		//                                var key = parent.Item2 + ">-" + index + "-" + e.RuleId;
-		//                                if (path2Bit.TryGetValue(key, out bit)) {
+		//                                if (featureString2Bit.TryGetValue(key, out bit)) {
 		//                                    newChildren.Add(Tuple.Create(e, key));
 		//                                    ret |= bit;
 		//                                }
-		//                                if (path2Bit.TryGetValue(
+		//                                if (featureString2Bit.TryGetValue(
 		//                                        parent.Item2 + ">-" + index + "-'" + extractor.GetToken(e),
 		//                                        out bit)) {
 		//                                    ret |= bit;
@@ -394,7 +394,7 @@ namespace Code2Xml.Learner.Core.Learning {
 		//                break;
 		//            }
 		//            parent = Tuple.Create(newParent, parent.Item2 + "<" + newParent.RuleId);
-		//            if (path2Bit.TryGetValue(parent.Item2, out bit)) {
+		//            if (featureString2Bit.TryGetValue(parent.Item2, out bit)) {
 		//                ret |= bit;
 		//            } else {
 		//                break;
@@ -406,12 +406,12 @@ namespace Code2Xml.Learner.Core.Learning {
 		//        foreach (var t in children) {
 		//            foreach (var child in t.Item1.Elements()) {
 		//                var key = t.Item2 + ">" + child.RuleId;
-		//                if (path2Bit.TryGetValue(key, out bit)) {
+		//                if (featureString2Bit.TryGetValue(key, out bit)) {
 		//                    newChildren.Add(Tuple.Create(child, key));
 		//                    ret |= bit;
 		//                }
 		//                // for Preconditions.checkArguments()
-		//                if (path2Bit.TryGetValue(t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
+		//                if (featureString2Bit.TryGetValue(t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
 		//                    ret |= bit;
 		//                }
 		//            }
@@ -618,17 +618,17 @@ namespace Code2Xml.Learner.Core.Learning {
 		}
 
 		public static BigInteger GetFeatureVector(
-				this CstNode node, int length, IDictionary<string, BigInteger> path2Bit,
+				this CstNode node, int length, IDictionary<string, BigInteger> featureString2Bit,
 				FeatureExtractor extractor) {
 			var ret = BigInteger.Zero;
 			BigInteger bit;
 			//if (key2Bit.TryGetValue(node.Name, out bit)) {
 			//    ret |= bit;
 			//}
-			if (path2Bit.TryGetValue(node.RuleId, out bit)) {
+			if (featureString2Bit.TryGetValue(node.RuleId, out bit)) {
 				ret |= bit;
 			}
-			if (path2Bit.TryGetValue("'" + extractor.GetToken(node), out bit)) {
+			if (featureString2Bit.TryGetValue("'" + extractor.GetToken(node), out bit)) {
 				ret |= bit;
 			}
 
@@ -659,12 +659,12 @@ namespace Code2Xml.Learner.Core.Learning {
 					foreach (var t in children) {
 						foreach (var child in t.Item1.Children()) {
 							var key = t.Item2 + ">" + child.RuleId;
-							if (path2Bit.TryGetValue(key, out bit)) {
+							if (featureString2Bit.TryGetValue(key, out bit)) {
 								newChildren.Add(Tuple.Create(child, key));
 								ret |= bit;
 							}
 							// for Preconditions.checkArguments()
-							if (path2Bit.TryGetValue(t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
+							if (featureString2Bit.TryGetValue(t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
 								ret |= bit;
 							}
 						}
@@ -675,11 +675,11 @@ namespace Code2Xml.Learner.Core.Learning {
 									(e, index) => {
 										var key = parent.Item2 + "<" + parentPathUnit + '-' + index
 										          + ">" + e.RuleId;
-										if (path2Bit.TryGetValue(key, out bit)) {
+										if (featureString2Bit.TryGetValue(key, out bit)) {
 											newChildren.Add(Tuple.Create(e, key));
 											ret |= bit;
 										}
-										if (path2Bit.TryGetValue(
+										if (featureString2Bit.TryGetValue(
 												parent.Item2 + "<" + parentPathUnit + '-' + index
 												+ ">'" + extractor.GetToken(e), out bit)) {
 											ret |= bit;
@@ -690,11 +690,11 @@ namespace Code2Xml.Learner.Core.Learning {
 									(e, index) => {
 										var key = parent.Item2 + "<" + parentPathUnit + '-' + index
 										          + ">" + e.RuleId;
-										if (path2Bit.TryGetValue(key, out bit)) {
+										if (featureString2Bit.TryGetValue(key, out bit)) {
 											newChildren.Add(Tuple.Create(e, key));
 											ret |= bit;
 										}
-										if (path2Bit.TryGetValue(
+										if (featureString2Bit.TryGetValue(
 												parent.Item2 + "<" + parentPathUnit + '-' + index
 												+ ">'" + extractor.GetToken(e), out bit)) {
 											ret |= bit;
@@ -707,7 +707,7 @@ namespace Code2Xml.Learner.Core.Learning {
 						break;
 					}
 					parent = Tuple.Create(newParent, parent.Item2 + "<" + newParent.RuleId);
-					if (path2Bit.TryGetValue(parent.Item2, out bit)) {
+					if (featureString2Bit.TryGetValue(parent.Item2, out bit)) {
 						ret |= bit;
 					} else {
 						break;
@@ -719,12 +719,12 @@ namespace Code2Xml.Learner.Core.Learning {
 				foreach (var t in children) {
 					foreach (var child in t.Item1.Children()) {
 						var key = t.Item2 + ">" + child.RuleId;
-						if (path2Bit.TryGetValue(key, out bit)) {
+						if (featureString2Bit.TryGetValue(key, out bit)) {
 							newChildren.Add(Tuple.Create(child, key));
 							ret |= bit;
 						}
 						// for Preconditions.checkArguments()
-						if (path2Bit.TryGetValue(t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
+						if (featureString2Bit.TryGetValue(t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
 							ret |= bit;
 						}
 					}

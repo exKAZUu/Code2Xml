@@ -167,7 +167,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 writer.Write(",");
                 writer.Write("AbstractSeedNodeCount");
                 writer.Write(",");
-                writer.Write("AcceptedSeedNodeCount");
+                writer.Write("SeedAcceptedNodeCount");
                 writer.Write(",");
                 writer.Write("WrongNodeCount");
                 writer.Write(",");

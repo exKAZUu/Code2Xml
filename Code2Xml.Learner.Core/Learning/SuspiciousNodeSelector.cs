@@ -37,7 +37,7 @@ namespace Code2Xml.Learner.Core.Learning {
 		}
 
 		public List<SuspiciousNode> SelectSuspiciousNodes(
-				int count, IReadOnlyList<ClassifierUnit> classifiers, List<List<SuspiciousNode>> acceptAccept,
+				int count, Classifier classifiers, List<List<SuspiciousNode>> acceptAccept,
 				List<List<SuspiciousNode>> acceptReject, List<List<SuspiciousNode>> rejectAccept,
 				List<List<SuspiciousNode>> rejectReject) {
 			var suspiciousNodes = new List<SuspiciousNode>();

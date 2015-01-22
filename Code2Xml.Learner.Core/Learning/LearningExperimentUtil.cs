@@ -66,41 +66,6 @@ namespace Code2Xml.Learner.Core.Learning {
                                     name => (name2Count[name] << 8) + name2Ids[name].Count));
         }
 
-        public static IEnumerable<string> GetFeatureStringsByVector(IDictionary<string, BigInteger> featureString2Bit, BigInteger vector) {
-            var featureBit = BigInteger.One;
-            while (vector != BigInteger.Zero) {
-                if ((vector & featureBit) != BigInteger.Zero) {
-                    vector ^= featureBit;
-                }
-                yield return featureString2Bit.First(kv => kv.Value == featureBit).Key;
-                featureBit <<= 1;
-            }
-        }
-
-	    public static int CountBits(BigInteger bits) {
-		    var count = 0;
-		    while (bits != BigInteger.Zero) {
-			    count += (int)(bits & BigInteger.One);
-			    bits >>= 1;
-		    }
-		    return count;
-	    }
-
-	    public static bool IsAccepted(BigInteger feature, BigInteger acceptingClassifier) {
-		    return (feature & acceptingClassifier) == acceptingClassifier;
-	    }
-
-	    public static bool IsRejected(BigInteger feature, BigInteger rejectingClassifier) {
-		    return (feature & rejectingClassifier) != BigInteger.Zero;
-	    }
-
-	    public static int CountAcceptingBits(BigInteger bits, BigInteger acceptingFeatureMask) {
-		    return CountBits(bits & acceptingFeatureMask);
-	    }
-
-	    public static int CountRejectingBits(BigInteger bits, int acceptingFeatureCount) {
-		    return CountBits(bits >> acceptingFeatureCount);
-	    }
 
 	    public static IEnumerable<CstNode> GetUppermostNodesByNames(CstNode cst, ISet<string> nodeNames) {
 		    return cst.DescendantsAndSelf()
