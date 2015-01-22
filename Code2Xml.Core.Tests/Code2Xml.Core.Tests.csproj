@@ -120,10 +120,6 @@
       <Project>{8c34513b-292c-488a-9bb5-0f327dc9c78b}</Project>
       <Name>Code2Xml.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Code2Xml.Learner.Core\Code2Xml.Learner.Core.csproj">
-      <Project>{02be2dd5-00e5-4835-bcf4-e8d0ac5adabe}</Project>
-      <Name>Code2Xml.Learner.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ParserTests\ParserTests\ParserTests.csproj">
       <Project>{20510236-d8b1-4617-9352-4e6134f9ab67}</Project>
       <Name>ParserTests</Name>
