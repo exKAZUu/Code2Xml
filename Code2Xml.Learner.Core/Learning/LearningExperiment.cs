@@ -18,6 +18,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using System.Numerics;
@@ -29,56 +30,56 @@ namespace Code2Xml.Learner.Core.Learning {
 	public class LearningResult {
 		public ClassificationResult ClassificationResult { get; set; }
 		public Classifier Classifier { get; set; }
+		public FeatureEncoder FeatureEncoder { get; set; }
 	}
 
 	public abstract class LearningExperiment : ILearningExperiment {
 		protected abstract CstGenerator Generator { get; }
 
-		private readonly HashSet<string> _oracleNames;
+		public readonly ISet<string> OracleNames;
 
 		protected LearningExperiment(params string[] elementNames) {
-			_oracleNames = elementNames.ToHashSet();
+			OracleNames = elementNames.ToImmutableHashSet();
 		}
 
 		public ClassificationResult Apply(
-				StreamWriter writer, ICollection<string> codePaths, string searchPattern, FeatureEncoder featureEncoder, Classifier classifier) {
+				ICollection<string> codePaths, string searchPattern, FeatureEncoder featureEncoder,
+				Classifier classifier, StreamWriter writer = null) {
 			var allCsts = GenerateValidCsts(codePaths);
-
 			var encodingResult = featureEncoder.Encode(codePaths, allCsts, this);
 
 			var time = Environment.TickCount;
-			var emptyTrainingSet = new RevealedVectorSet();
-			var result = Classify(Int32.MaxValue, classifier, new GroupCache(encodingResult, classifier), encodingResult, emptyTrainingSet);
+			var groupCache = new GroupCache(encodingResult, classifier);
+			var result = Classify(Int32.MaxValue, classifier, groupCache, encodingResult);
 			Console.WriteLine("Time: " + (Environment.TickCount - time));
 
 			if (writer != null) {
-				encodingResult.WriteResult(writer, emptyTrainingSet);
+				encodingResult.WriteResult(writer);
 			}
 
 			return result;
 		}
 
 		public LearningResult Learn(
-				ICollection<string> seedPaths, StreamWriter writer,
-				ICollection<string> codePaths, string searchPattern) {
+				ICollection<string> seedPaths, ICollection<string> codePaths, string searchPattern,
+				StreamWriter writer = null) {
 			var allCsts = GenerateValidCsts(codePaths);
 			var seedCsts = GenerateValidCsts(seedPaths).ToList();
 			var seedNodes = seedCsts
-					.SelectMany(cst => LearningExperimentUtil.GetUppermostNodesByNames(cst, _oracleNames))
+					.SelectMany(cst => LearningExperimentUtil.GetUppermostNodesByNames(cst, OracleNames))
 					.Where(ProtectedIsAcceptedUsingOracle)
 					.ToList();
-			Console.WriteLine("#Accepted elements: " + seedNodes.Count);
+			Console.WriteLine("#Accepted nodes: " + seedNodes.Count);
 
 			var preparingTime = Environment.TickCount;
-
-			var extractor = new FeatureExtractor(MaxUp, 0, MaxLeft, MaxRight, IsInner);
+			var extractor = CreateExtractor();
 			var seedNodeSet = new SeedNodeSet(seedNodes, seedCsts, this);
 			var featureSet = new FeatuerSet(seedNodeSet, extractor, this);
 			Console.WriteLine(
 					"#Features: " + featureSet.AcceptingFeatureCount + ", "
 					+ featureSet.RejectingFeatureCount);
 
-			var featureEncoder = new FeatureEncoder(extractor, featureSet);
+			var featureEncoder = new FeatureEncoder(seedNodeSet.SelectedNodeNames, extractor, featureSet);
 			var encodingResult = featureEncoder.Encode(codePaths, allCsts, this, seedNodeSet);
 
 			Console.WriteLine("#Unique Elements: " + encodingResult.VectorCount);
@@ -87,7 +88,7 @@ namespace Code2Xml.Learner.Core.Learning {
 				throw new Exception("Master predicates can't classify elements!");
 			}
 
-			var classifier = new Classifier(featureSet);
+			var classifier = new Classifier(seedNodeSet.SelectedNodeNames, featureSet);
 			var groupCache = new GroupCache(encodingResult, classifier);
 			var trainingSet = encodingResult.CreateTrainingVectorSet();
 			Console.WriteLine("Preparing time: " + (Environment.TickCount - preparingTime));
@@ -129,7 +130,9 @@ namespace Code2Xml.Learner.Core.Learning {
 			}
 
 			return new LearningResult {
-				ClassificationResult = classificationResult, Classifier = classifier
+				ClassificationResult = classificationResult,
+				Classifier = classifier,
+				FeatureEncoder = featureEncoder,
 			};
 		}
 
@@ -147,7 +150,8 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		public ClassificationResult Classify(
 				int count, Classifier classifier, GroupCache groupCache, EncodingResult encodingResult,
-				RevealedVectorSet trainingSet) {
+				RevealedVectorSet trainingSet = null) {
+			trainingSet = trainingSet ?? new RevealedVectorSet();
 			var correctlyAccepted = 0;
 			var correctlyRejected = 0;
 			var wronglyAccepted = 0;
@@ -265,7 +269,7 @@ namespace Code2Xml.Learner.Core.Learning {
 			var suspiciousNodes = selector.SelectSuspiciousNodes(count, classifier, acceptAccept,
 					acceptReject, rejectAccept, rejectReject);
 			return new ClassificationResult(suspiciousNodes, wronglyAcceptedFeatures, wronglyRejectedFeatures,
-					wrongFeatureCount, wrongNodeCount);
+					wrongFeatureCount, wrongNodeCount, encodingResult);
 		}
 
 		public IDictionary<BigInteger, string> RevealSuspiciousElements(
@@ -301,25 +305,26 @@ namespace Code2Xml.Learner.Core.Learning {
 		public bool IsAcceptedUsingOracle(CstNode uppermostNode) {
 			return uppermostNode.DescendantsOfSingleAndSelf()
 					.Concat(uppermostNode.AncestorsWithSingleChild())
-					.Where(e => _oracleNames.Contains(e.Name))
+					.Where(e => OracleNames.Contains(e.Name))
 					.Any(ProtectedIsAcceptedUsingOracle);
 		}
 
 		public int CountUsingOracle(CstNode cst) {
-			return LearningExperimentUtil.GetUppermostNodesByNames(cst, _oracleNames)
+			return LearningExperimentUtil.GetUppermostNodesByNames(cst, OracleNames)
 					.Count(IsAcceptedUsingOracle);
 		}
 
-		public abstract bool ProtectedIsAcceptedUsingOracle(CstNode e);
+		public abstract bool ProtectedIsAcceptedUsingOracle(CstNode node);
 
-		public virtual IList<CstNode> GetRootsUsingOracle(CstNode e) {
+		public abstract FeatureExtractor CreateExtractor();
+
+		public virtual IList<CstNode> GetRootsUsingOracle(CstNode node) {
 			return null;
 		}
 	}
 
 	public interface ILearningExperiment {
-		FeatureExtractor CreateExtractor(CstNode e);
-
-		IList<CstNode> GetRootsUsingOracle(CstNode e);
+		FeatureExtractor CreateExtractor();
+		IList<CstNode> GetRootsUsingOracle(CstNode node);
 	}
 }

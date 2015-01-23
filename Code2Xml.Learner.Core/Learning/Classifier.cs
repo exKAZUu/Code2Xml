@@ -29,7 +29,7 @@ namespace Code2Xml.Learner.Core.Learning {
 			get { return GroupPaths.Count; }
 		}
 
-		public Classifier(FeatuerSet featureSet, IEnumerable<string> selectedNodeNames) {
+		public Classifier(IEnumerable<string> selectedNodeNames, FeatuerSet featureSet) {
 			AcceptingFeatureCount = featureSet.AcceptingFeatures.Count;
 			AllFeatureBitMask = (BigInteger.One << featureSet.FeatureCount) - BigInteger.One;
 			AcceptingFeatureBitMask = (BigInteger.One << featureSet.AcceptingFeatureCount) - BigInteger.One;
@@ -64,12 +64,6 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		#region Builder
 
-		public void Initialize() {
-			Units = Enumerable.Repeat(0, GroupPaths.Count)
-					.Select(_ => new ClassifierUnit(AcceptingFeatureBitMask, RejectingFeatureBitMask))
-					.ToList();
-		}
-
 		public bool Update(
 				IDictionary<BigInteger, string> additionalAcceptedSet, RevealedVectorSet trainingSet,
 				GroupCache groupCache) {
@@ -84,6 +78,12 @@ namespace Code2Xml.Learner.Core.Learning {
 			do {
 				Initialize();
 			} while (!UpdateClassifierUnits(trainingSet.Accepted, trainingSet, groupCache));
+		}
+
+		private void Initialize() {
+			Units = Enumerable.Repeat(0, GroupPaths.Count)
+					.Select(_ => new ClassifierUnit(AcceptingFeatureBitMask, RejectingFeatureBitMask))
+					.ToList();
 		}
 
 		private bool UpdateClassifierUnits(
@@ -117,12 +117,12 @@ namespace Code2Xml.Learner.Core.Learning {
 		}
 
 		private void UpdateRejectingClassifierUnits(
-				IEnumerable<BigInteger> acceptedTrainingSet, GroupCache groupCache) {
+				IEnumerable<BigInteger> acceptedVectors, GroupCache groupCache) {
 			var count = Units.Count;
 			for (int i = 0; i < count; i++) {
 				Units[i].Rejecting ^= RejectingFeatureBitMask;
 			}
-			foreach (var vector in acceptedTrainingSet) {
+			foreach (var vector in acceptedVectors) {
 				var iGroupKey = groupCache.GetGroupIndex(vector);
 				Units[iGroupKey].Rejecting |= vector;
 			}

@@ -33,14 +33,13 @@ namespace Code2Xml.Learner.Core.Learning {
 		private const int GroupKeyLength = 5;
 
 		private readonly FeatureExtractor _extractor;
-
+		private readonly ISet<string> _selectedNodeNames;
 		private readonly IDictionary<string, BigInteger> _featureString2Bit;
 		private readonly IDictionary<BigInteger, string> _bit2FeatureString;
-		private readonly ISet<string> _selectedNodeNames;
 
-		public FeatureEncoder(FeatureExtractor extractor, FeatuerSet featureSet, ISet<string> selectedNodeNames) {
-			_extractor = extractor;
+		public FeatureEncoder(ISet<string> selectedNodeNames, FeatureExtractor extractor, FeatuerSet featureSet) {
 			_selectedNodeNames = selectedNodeNames;
+			_extractor = extractor;
 			_featureString2Bit = CreateFeatureString2Bit(featureSet);
 			_bit2FeatureString = CreateBit2FeatureString(_featureString2Bit);
 		}
@@ -64,7 +63,9 @@ namespace Code2Xml.Learner.Core.Learning {
 			}
 		}
 
-		public EncodingResult Encode(ICollection<string> codePaths, IEnumerable<CstNode> allCsts, LearningExperiment oracle, SeedNodeSet seedNodeSet = null) {
+		public EncodingResult Encode(
+				ICollection<string> codePaths, IEnumerable<CstNode> allCsts, LearningExperiment oracle,
+				SeedNodeSet seedNodeSet = null) {
 			var fileName = codePaths.Count > 0
 					? String.Join(",", codePaths).GetHashCode() + "_" +
 					  (codePaths.First() + "," + codePaths.Last()).GetHashCode() + ".encoded"
@@ -87,13 +88,13 @@ namespace Code2Xml.Learner.Core.Learning {
 				result.SeedAcceptedNodeCount = seedNodeSet.SeedAcceptedNodes.Count;
 				result.SeedNodeCount = result.SeedAcceptedNodeCount + seedNodeSet.SeedRejectedNodes.Count;
 				EncodeSeedNodes(
-						seedNodeSet.SeedAcceptedNodes, result.IdealAcceptedVector2GroupPath,
-						result.SeedAcceptedVector2GroupPath, result);
+						seedNodeSet.SeedAcceptedNodes, result, result.IdealAcceptedVector2GroupPath,
+						result.SeedAcceptedVector2GroupPath);
 				EncodeSeedNodes(
-						seedNodeSet.SeedRejectedNodes, result.IdealRejectedVector2GroupPath,
-						result.SeedRejectedVector2GroupPath, result);
+						seedNodeSet.SeedRejectedNodes, result, result.IdealRejectedVector2GroupPath,
+						result.SeedRejectedVector2GroupPath);
 			}
-			EncodeTargetNodes(allUppermostNodes, oracle, result);
+			EncodeTargetNodes(allUppermostNodes, result, oracle);
 			result.MakeImmutable();
 
 			if (fileName != null) {
@@ -105,8 +106,9 @@ namespace Code2Xml.Learner.Core.Learning {
 		}
 
 		private void EncodeSeedNodes(
-				IEnumerable<CstNode> seedNodes, IDictionary<BigInteger, string> idealVector2Path,
-				IDictionary<BigInteger, string> seedVector2Path, EncodingResult result) {
+				IEnumerable<CstNode> seedNodes, EncodingResult result,
+				IDictionary<BigInteger, string> idealVector2Path,
+				IDictionary<BigInteger, string> seedVector2Path) {
 			foreach (var node in seedNodes) {
 				var vector = node.GetFeatureVector(SurroundingLength, _featureString2Bit, _extractor);
 				UpdateVector2GroupPath(idealVector2Path, vector, node);
@@ -116,7 +118,7 @@ namespace Code2Xml.Learner.Core.Learning {
 		}
 
 		private void EncodeTargetNodes(
-				IEnumerable<CstNode> allUppermostNodes, LearningExperiment oracle, EncodingResult result) {
+				IEnumerable<CstNode> allUppermostNodes, EncodingResult result, LearningExperiment oracle) {
 			foreach (var uppermostNode in allUppermostNodes) {
 				var vector = uppermostNode.GetFeatureVector(SurroundingLength, _featureString2Bit, _extractor);
 				if (oracle.IsAcceptedUsingOracle(uppermostNode)) {

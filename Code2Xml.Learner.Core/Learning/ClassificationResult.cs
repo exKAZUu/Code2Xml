@@ -29,27 +29,34 @@ namespace Code2Xml.Learner.Core.Learning {
 		public readonly IList<SuspiciousNode> SuspiciousNodes;
 		public readonly IList<BigInteger> WronglyAcceptedFeatures;
 		public readonly IList<BigInteger> WronglyRejectedFeatures;
+		private readonly IDictionary<BigInteger, CstNode> _vector2Node;
+
+		public IList<CstNode> WronglyAcceptedNodes {
+			get {
+				return WronglyAcceptedFeatures
+						.Select(f => _vector2Node[f])
+						.ToList();
+			}
+		}
+
+		public IList<CstNode> WronglyRejectedNodes {
+			get {
+				return WronglyRejectedFeatures
+						.Select(f => _vector2Node[f])
+						.ToList();
+			}
+		}
 
 		public ClassificationResult(
 				IEnumerable<SuspiciousNode> suspiciousNodes, IEnumerable<BigInteger> wronglyAcceptedFeatures,
-				IEnumerable<BigInteger> wronglyRejectedFeatures, int wrongFeatureCount, int wrongElementCount) {
+				IEnumerable<BigInteger> wronglyRejectedFeatures, int wrongFeatureCount, int wrongElementCount,
+				EncodingResult encodingResult) {
 			SuspiciousNodes = suspiciousNodes.ToImmutableList();
 			WronglyAcceptedFeatures = wronglyAcceptedFeatures.ToImmutableList();
 			WronglyRejectedFeatures = wronglyRejectedFeatures.ToImmutableList();
 			WrongFeatureCount = wrongFeatureCount;
 			WrongElementCount = wrongElementCount;
-		}
-
-		public IList<CstNode> GetWronglyAcceptedElements(EncodingResult result) {
-			return WronglyAcceptedFeatures
-					.Select(f => result.Vector2Node[f])
-					.ToList();
-		}
-
-		public IList<CstNode> WronglyRejectedElements(EncodingResult result) {
-			return WronglyRejectedFeatures
-					.Select(f => result.Vector2Node[f])
-					.ToList();
+			_vector2Node = encodingResult.Vector2Node;
 		}
 	}
 }

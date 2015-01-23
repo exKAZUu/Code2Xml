@@ -88,25 +88,27 @@ namespace Code2Xml.Learner.Core.Learning {
 			SeedVectorSet.MakeImmutable();
 		}
 
-		public void WriteResult(StreamWriter writer, RevealedVectorSet trainingSet) {
-			if (writer != null) {
-				writer.Write(IdealAcceptedVector2GroupPath.Concat(IdealRejectedVector2GroupPath)
-						.Sum(f => Vector2Count[f.Key]));
-				writer.Write(",");
-				writer.Write(trainingSet.Accepted.Concat(trainingSet.Rejected)
-						.Sum(f => Vector2Count[f.Key]));
-				writer.Write(",");
-				writer.Write(IdealVectorSet.Count);
-				writer.Write(",");
-				writer.Write(trainingSet.Count);
-				writer.Write(",");
-				writer.Write(SeedNodeCount);
-				writer.Write(",");
-				writer.Write(SeedVectorCount);
-				writer.Write(",");
-				writer.Write(SeedAcceptedNodeCount);
-				writer.Write(",");
+		public void WriteResult(StreamWriter writer, RevealedVectorSet trainingSet = null) {
+			if (writer == null) {
+				return;
 			}
+			trainingSet = trainingSet ?? new RevealedVectorSet();
+			writer.Write(IdealAcceptedVector2GroupPath.Concat(IdealRejectedVector2GroupPath)
+					.Sum(f => Vector2Count[f.Key]));
+			writer.Write(",");
+			writer.Write(trainingSet.Accepted.Concat(trainingSet.Rejected)
+					.Sum(f => Vector2Count[f.Key]));
+			writer.Write(",");
+			writer.Write(IdealVectorSet.Count);
+			writer.Write(",");
+			writer.Write(trainingSet.Count);
+			writer.Write(",");
+			writer.Write(SeedNodeCount);
+			writer.Write(",");
+			writer.Write(SeedVectorCount);
+			writer.Write(",");
+			writer.Write(SeedAcceptedNodeCount);
+			writer.Write(",");
 		}
 	}
 }

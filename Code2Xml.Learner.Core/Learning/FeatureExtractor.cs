@@ -25,12 +25,16 @@ using Code2Xml.Core.SyntaxTree;
 namespace Code2Xml.Learner.Core.Learning {
 	[Serializable]
 	public class FeatureExtractor {
-		public FeatureExtractor(int maxUp, int maxDown, int maxLeft, int maxRight, bool isInner) {
+		public FeatureExtractor(int maxUp, int maxDown, int maxLeft, int maxRight) {
 			MaxUp = maxUp;
 			MaxDown = maxDown;
 			MaxLeft = maxLeft;
 			MaxRight = maxRight;
-			IsInner = isInner;
+			IsInner = false;
+		}
+
+		public FeatureExtractor() {
+			IsInner = true;
 		}
 
 		public int MaxUp { get; private set; }
@@ -92,13 +96,15 @@ namespace Code2Xml.Learner.Core.Learning {
 					maxRight = Math.Max(maxRight, right - leftCount);
 				}
 			}
-			return new FeatureExtractor(maxUp, maxDown, maxLeft, maxRight, isInner);
+			return isInner ? new FeatureExtractor(maxUp, maxDown, maxLeft, maxRight) : new FeatureExtractor();
 		}
 	}
 
 	public class PhpFeatureExtractor : FeatureExtractor {
-		public PhpFeatureExtractor(int maxUp, int maxDown, int maxLeft, int maxRight, bool isInner)
-				: base(maxUp, maxDown, maxLeft, maxRight, isInner) {}
+		public PhpFeatureExtractor(int maxUp, int maxDown, int maxLeft, int maxRight)
+				: base(maxUp, maxDown, maxLeft, maxRight) {}
+
+		public PhpFeatureExtractor() {}
 
 		public override string GetToken(CstNode e) {
 			return base.GetToken(e).ToLower();

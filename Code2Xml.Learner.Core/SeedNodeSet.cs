@@ -81,7 +81,7 @@ namespace Code2Xml.Learner.Core {
 			var b2 = SelectUppermostNodes(anotherUppermostSeedAcceptedNodes)
 					.Any(e => !uppermostSeedAcceptedNodes.Contains(e));
 			var b3 = uppermostSeedAcceptedNodes.Count != anotherUppermostSeedAcceptedNodes.Count;
-			Console.WriteLine("Initial: " + String.Join(", ", oracle._oracleNames));
+			Console.WriteLine("Initial: " + String.Join(", ", oracle.OracleNames));
 			Console.WriteLine("Learned: " + String.Join(", ", SelectedNodeNames));
 			if (b1 || b2 || b3) {
 				Console.WriteLine("--------------------------------------------------");
