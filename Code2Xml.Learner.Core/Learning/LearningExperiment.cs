@@ -23,13 +23,12 @@ using System.Linq;
 using System.Numerics;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.SyntaxTree;
-using Paraiba.Collections.Generic;
 using Paraiba.Linq;
 
 namespace Code2Xml.Learner.Core.Learning {
 	public class LearningResult {
 		public ClassificationResult ClassificationResult { get; set; }
-		public IReadOnlyList<ClassifierUnit> Classifiers { get; set; }
+		public Classifier Classifier { get; set; }
 	}
 
 	public abstract class LearningExperiment : ILearningExperiment {
@@ -48,101 +47,28 @@ namespace Code2Xml.Learner.Core.Learning {
 			get { return -1; }
 		}
 
-		public IList<CstNode> IdealAcceptedNodes {
-			get {
-				return _idealAcceptedVector2GroupPath.Keys.Select(f => _vector2Node[f])
-						.ToList();
-			}
-		}
-
-		public IList<CstNode> IdealRejectedNodes {
-			get {
-				return _idealRejectedVector2GroupPath.Keys.Select(f => _vector2Node[f])
-						.ToList();
-			}
-		}
-
-		private Dictionary<BigInteger, string> _idealAcceptedVector2GroupPath;
-		private Dictionary<BigInteger, string> _idealRejectedVector2GroupPath;
-		private Dictionary<BigInteger, string> _trainingAcceptedVector2GroupPath;
-		private Dictionary<BigInteger, string> _trainingRejectedVector2GroupPath;
-
-		private Dictionary<BigInteger, CstNode> _vector2Node;
-		private Dictionary<BigInteger, int> _vector2Count;
-		private Dictionary<BigInteger, string> _vector2Path;
-
 		public readonly HashSet<string> _oracleNames;
-
-		private int _seedElementCount;
-		private int _seedAbstractCount;
-		private int _acceptedSeedElementCount;
 
 		protected LearningExperiment(params string[] elementNames) {
 			_oracleNames = elementNames.ToHashSet();
 		}
 
-		public void Clear() {
-			_idealAcceptedVector2GroupPath.Clear();
-			_idealRejectedVector2GroupPath.Clear();
-			_trainingAcceptedVector2GroupPath.Clear();
-			_trainingRejectedVector2GroupPath.Clear();
-			if (_vector2Node != null) {
-				_vector2Node.Clear();
-			}
-			_idealAcceptedVector2GroupPath = null;
-			_idealRejectedVector2GroupPath = null;
-			_trainingAcceptedVector2GroupPath = null;
-			_trainingRejectedVector2GroupPath = null;
-			_vector2Node = null;
-		}
-
 		public ClassificationResult Apply(
-				StreamWriter writer, ICollection<string> codePaths, string searchPattern,
-				IReadOnlyList<ClassifierUnit> classifiers) {
+				StreamWriter writer, ICollection<string> codePaths, string searchPattern, FeatureEncoder featureEncoder, Classifier classifier) {
 			var allCsts = GenerateValidCsts(codePaths);
-			_idealAcceptedVector2GroupPath.Clear();
-			_idealRejectedVector2GroupPath.Clear();
-			_vector2Node.Clear();
-			_vector2Count.Clear();
-			_vector2Path.Clear();
-			_trainingAcceptedVector2GroupPath.Clear();
-			_trainingRejectedVector2GroupPath.Clear();
 
-			EncodeCsts(codePaths, allCsts);
+			featureEncoder.Encode(codePaths, allCsts, se)
+
+			featureEncoder.EncodeCsts(codePaths, allCsts);
 			UpdateVector2GroupIndex();
 
-			_trainingAcceptedVector2GroupPath.AddRange(_idealAcceptedVector2GroupPath);
-			_trainingRejectedVector2GroupPath.AddRange(_idealRejectedVector2GroupPath);
 
 			var time = Environment.TickCount;
 			var result = Classify(Int32.MaxValue, classifiers);
 			Console.WriteLine("Time: " + (Environment.TickCount - time));
 
 			if (writer != null) {
-				writer.Write(
-						_idealAcceptedVector2GroupPath
-								.Concat(_idealRejectedVector2GroupPath)
-								.Sum(f => _vector2Count[f.Key]));
-				writer.Write(",");
-				writer.Write(
-						_trainingAcceptedVector2GroupPath
-								.Concat(_trainingRejectedVector2GroupPath)
-								.Sum(f => _vector2Count[f.Key]));
-				writer.Write(",");
-				writer.Write(
-						_idealAcceptedVector2GroupPath.Count
-						+ _idealRejectedVector2GroupPath.Count);
-				writer.Write(",");
-				writer.Write(
-						_trainingAcceptedVector2GroupPath.Count
-						+ _trainingRejectedVector2GroupPath.Count);
-				writer.Write(",");
-				writer.Write(_seedElementCount);
-				writer.Write(",");
-				writer.Write(_seedAbstractCount);
-				writer.Write(",");
-				writer.Write(_acceptedSeedElementCount);
-				writer.Write(",");
+				encodingResult.WriteResult(writer, trainingSet);
 			}
 
 			return result;
@@ -157,26 +83,45 @@ namespace Code2Xml.Learner.Core.Learning {
 					.SelectMany(cst => LearningExperimentUtil.GetUppermostNodesByNames(cst, _oracleNames))
 					.Where(ProtectedIsAcceptedUsingOracle)
 					.ToList();
-			Console.WriteLine("Accepted elements: " + seedNodes.Count);
+			Console.WriteLine("#Accepted elements: " + seedNodes.Count);
 
-			var classifiers = CreateInitialClassifier(codePaths, allCsts, seedCsts, seedNodes);
+			var preparingTime = Environment.TickCount;
+
+			var extractor = new FeatureExtractor(MaxUp, 0, MaxLeft, MaxRight, IsInner);
+			var seedNodeSet = new SeedNodeSet(seedNodes, seedCsts, this);
+			var featureSet = new FeatuerSet(seedNodeSet, extractor, this);
+			Console.WriteLine(
+					"#Features: " + featureSet.AcceptingFeatureCount + ", "
+					+ featureSet.RejectingFeatureCount);
+
+			var featureEncoder = new FeatureEncoder(extractor, featureSet);
+			var encodingResult = featureEncoder.Encode(codePaths, allCsts, seedNodeSet, this);
+
+			Console.WriteLine("#Unique Elements: " + encodingResult.VectorCount);
+			if (encodingResult.IdealAcceptedVector2GroupPath.Keys.ToHashSet()
+					.Overlaps(encodingResult.IdealRejectedVector2GroupPath.Keys.ToHashSet())) {
+				throw new Exception("Master predicates can't classify elements!");
+			}
+
+			var classifier = new Classifier(featureSet);
+			var groupCache = new GroupCache(encodingResult, classifier);
+			var trainingSet = encodingResult.CreateTrainingVectorSet();
+			Console.WriteLine("Preparing time: " + (Environment.TickCount - preparingTime));
 
 			var count = 0;
 			var sumTime = Environment.TickCount;
 			ClassificationResult classificationResult;
 			while (true) {
 				var time = Environment.TickCount;
-				classificationResult = Classify(count, classifiers);
+				classificationResult = Classify(count, classifier, groupCache, encodingResult, trainingSet);
 				if (classificationResult.SuspiciousNodes == null) {
 					break;
 				}
 
-				var newlyAcceptedVector2GroupPath =
-						RevealSuspiciousElements(
-								_idealAcceptedVector2GroupPath.Keys, classificationResult.SuspiciousNodes);
-				var lastClassifiers = classifiers.Select(c => c.Clone()).ToList();
-				classifiers = UpdateOrCreateClassifiers(newlyAcceptedVector2GroupPath, classifiers);
-				if (classifiers.SequenceEqual(lastClassifiers)) {
+				var additionalAcceptedSet = RevealSuspiciousElements(
+						encodingResult.IdealAcceptedVector2GroupPath.Keys,
+						classificationResult.SuspiciousNodes, encodingResult, trainingSet);
+				if (!classifier.Update(additionalAcceptedSet, trainingSet, groupCache)) {
 					count++;
 				} else {
 					count = 0;
@@ -184,46 +129,23 @@ namespace Code2Xml.Learner.Core.Learning {
 
 				Console.WriteLine("Time: " + (Environment.TickCount - time));
 			}
+			classifier.MakeImmutable();
 			Console.WriteLine();
 			Console.WriteLine("Sum time: " + (Environment.TickCount - sumTime));
-			Console.WriteLine(
-					"Required elements: "
-					+ (_trainingAcceptedVector2GroupPath.Count
-					   + _trainingRejectedVector2GroupPath.Count) + " / "
-					+ (_idealAcceptedVector2GroupPath.Count + _idealRejectedVector2GroupPath.Count));
+			var trainingVectorCount = trainingSet.Count;
+			var idealVectorCount = encodingResult.IdealVectorSet.Count;
+			Console.WriteLine("#Required vectors: " + trainingVectorCount + " / " + idealVectorCount);
+
 			if (writer != null) {
-				writer.Write(
-						_idealAcceptedVector2GroupPath.Concat(_idealRejectedVector2GroupPath)
-								.Sum(f => _vector2Count[f.Key]) - _seedElementCount);
-				writer.Write(",");
-				writer.Write(
-						_trainingAcceptedVector2GroupPath.Concat(_trainingRejectedVector2GroupPath)
-								.Sum(f => _vector2Count[f.Key]) - _seedElementCount);
-				writer.Write(",");
-				writer.Write(
-						_idealAcceptedVector2GroupPath.Count + _idealRejectedVector2GroupPath.Count
-						- _seedAbstractCount);
-				writer.Write(",");
-				writer.Write(
-						_trainingAcceptedVector2GroupPath.Count
-						+ _trainingRejectedVector2GroupPath.Count - _seedAbstractCount);
-				writer.Write(",");
-				writer.Write(_seedElementCount);
-				writer.Write(",");
-				writer.Write(_seedAbstractCount);
-				writer.Write(",");
-				writer.Write(_acceptedSeedElementCount);
-				writer.Write(",");
+				encodingResult.WriteResult(writer, trainingSet);
 			}
 
-			foreach (var groupKey in _currentGroupPaths) {
-				Console.WriteLine(groupKey);
+			foreach (var groupPath in classifier.GroupPaths) {
+				Console.WriteLine(groupPath);
 			}
-
-			//ShowBitsInfo();
 
 			return new LearningResult {
-				ClassificationResult = classificationResult, Classifiers = classifiers
+				ClassificationResult = classificationResult, Classifier = classifier
 			};
 		}
 
@@ -239,42 +161,9 @@ namespace Code2Xml.Learner.Core.Learning {
 					.Where(t => t != null);
 		}
 
-		private Classifier CreateInitialClassifier(
-				ICollection<string> codePaths, IEnumerable<CstNode> allCsts, IList<CstNode> seedCsts,
-				IList<CstNode> seedNodes) {
-			var preparingTime = Environment.TickCount;
-
-			var extractor = new FeatureExtractor(MaxUp, 0, MaxLeft, MaxRight, IsInner);
-			var seedNodeSet = new SeedNodeSet(seedNodes, seedCsts, this);
-			var featureSet = new FeatuerSet(seedNodeSet, extractor, this);
-			Console.WriteLine(
-					"Feature Count: " + featureSet.AcceptingFeatureCount + ", "
-					+ featureSet.RejectingFeatureCount);
-
-			var featureEncoder = new FeatureEncoder(extractor, featureSet);
-
-			var allUppermostNodes = allCsts.SelectMany(
-					cst => {
-						Console.WriteLine(".");
-						return featureSet.GetTargetNodes(cst);
-					});
-			var encodingResult = featureEncoder.Encode(codePaths, allUppermostNodes, seedNodeSet, this);
-
-			Console.WriteLine("Unique Element Count: " + encodingResult.AbstractCount);
-			if (encodingResult.IdealAcceptedVector2GroupPath.Keys.ToHashSet()
-					.Overlaps(encodingResult.IdealRejectedVector2GroupPath.Keys.ToHashSet())) {
-				throw new Exception("Master predicates can't classify elements!");
-			}
-
-			var classifier = new Classifier(featureSet, featureEncoder, encodingResult);
-			Console.WriteLine("Preparing time: " + (Environment.TickCount - preparingTime));
-
-			return classifier;
-		}
-
-		public ClassificationResult Classify(int count, Classifier classifier) {
-			var result = new ClassificationResult(_vector2Node, _vector2Path);
-
+		public ClassificationResult Classify(
+				int count, Classifier classifier, GroupCache groupCache, EncodingResult encodingResult,
+				RevealedVectorSet trainingSet) {
 			var correctlyAccepted = 0;
 			var correctlyRejected = 0;
 			var wronglyAccepted = 0;
@@ -292,14 +181,17 @@ namespace Code2Xml.Learner.Core.Learning {
 				acceptReject.Add(new List<SuspiciousNode>());
 			}
 
-			foreach (var vectorAndGroupPath in _idealAcceptedVector2GroupPath) {
+			var wrongNodeCount = 0;
+			var wronglyRejectedFeatures = new List<BigInteger>();
+			var wronglyAcceptedFeatures = new List<BigInteger>();
+			foreach (var vectorAndGroupPath in encodingResult.IdealVectorSet.Accepted) {
 				var vector = vectorAndGroupPath.Key;
 				var groupPath = vectorAndGroupPath.Value;
-				var groupIndex = classifier.GetGroupIndexWithCache(vector);
+				var groupIndex = groupCache.GetGroupIndex(vector);
 				var rejected = classifier.IsRejected(vector, groupIndex);
 				var accepted = classifier.IsAccepted(vector, groupIndex);
-				if (!_trainingAcceptedVector2GroupPath.ContainsKey(vector)
-				    && !_trainingRejectedVector2GroupPath.ContainsKey(vector)) {
+				if (!trainingSet.Accepted.ContainsKey(vector)
+				    && !trainingSet.Rejected.ContainsKey(vector)) {
 					var target = new SuspiciousNode {
 						Vector = vector,
 						GroupKey = groupPath,
@@ -321,25 +213,25 @@ namespace Code2Xml.Learner.Core.Learning {
 				}
 				if (!accepted) {
 					wronglyRejected++;
-					result.WrongElementCount += _vector2Count[vector];
-					result.WronglyRejectedFeatures.Add(vector);
+					wrongNodeCount += encodingResult.Vector2Count[vector];
+					wronglyRejectedFeatures.Add(vector);
 				} else if (!rejected) {
 					correctlyAccepted++;
 				} else {
 					wronglyRejectedInRejecting++;
-					result.WrongElementCount += _vector2Count[vector];
-					result.WronglyRejectedFeatures.Add(vector);
+					wrongNodeCount += encodingResult.Vector2Count[vector];
+					wronglyRejectedFeatures.Add(vector);
 				}
 			}
 
-			foreach (var vectorAndGroupPath in _idealRejectedVector2GroupPath) {
+			foreach (var vectorAndGroupPath in encodingResult.IdealVectorSet.Rejected) {
 				var vector = vectorAndGroupPath.Key;
 				var groupPath = vectorAndGroupPath.Value;
-				var groupIndex = classifier.GetGroupIndexWithCache(vector);
+				var groupIndex = groupCache.GetGroupIndex(vector);
 				var rejected = classifier.IsRejected(vector, groupIndex);
 				var accepted = classifier.IsAccepted(vector, groupIndex);
-				if (!_trainingAcceptedVector2GroupPath.ContainsKey(vector)
-				    && !_trainingRejectedVector2GroupPath.ContainsKey(vector)) {
+				if (!trainingSet.Accepted.ContainsKey(vector)
+				    && !trainingSet.Rejected.ContainsKey(vector)) {
 					var target = new SuspiciousNode {
 						Vector = vector,
 						GroupKey = groupPath,
@@ -363,8 +255,8 @@ namespace Code2Xml.Learner.Core.Learning {
 					correctlyRejected++;
 				} else if (!rejected) {
 					wronglyAccepted++;
-					result.WrongElementCount += _vector2Count[vector];
-					result.WronglyAcceptedFeatures.Add(vector);
+					wrongNodeCount += encodingResult.Vector2Count[vector];
+					wronglyAcceptedFeatures.Add(vector);
 				} else {
 					correctlyRejectedInRejecting++;
 				}
@@ -377,43 +269,44 @@ namespace Code2Xml.Learner.Core.Learning {
 					+ correctlyRejectedInRejecting);
 			Console.WriteLine(
 					"TR: "
-					+ (_trainingAcceptedVector2GroupPath.Count
-					   + _trainingRejectedVector2GroupPath.Count) + ", AF: "
+					+ trainingSet.Count + ", AF: "
 					+ String.Join(", ", classifier.CountAcceptingFeatures())
 					+ ", RF: "
 					+ String.Join(", ", classifier.CountRejectingFeatures()));
-			result.WrongFeatureCount = wronglyAccepted + wronglyRejected
-			                           + wronglyRejectedInRejecting;
+			var wrongFeatureCount = wronglyAccepted + wronglyRejected
+			                        + wronglyRejectedInRejecting;
 
 			var selector = new SuspiciousNodeSelector(classifier.AcceptingFeatureBitMask,
 					classifier.RejectingFeatureBitMask);
-			result.SuspiciousNodes = selector.SelectSuspiciousNodes(count, classifier, acceptAccept,
+			var suspiciousNodes = selector.SelectSuspiciousNodes(count, classifier, acceptAccept,
 					acceptReject, rejectAccept, rejectReject);
-			return result;
+			return new ClassificationResult(suspiciousNodes, wronglyAcceptedFeatures, wronglyRejectedFeatures,
+					wrongFeatureCount, wrongNodeCount);
 		}
 
 		public IDictionary<BigInteger, string> RevealSuspiciousElements(
-				ICollection<BigInteger> actuallyAcceptedVectors, IReadOnlyList<SuspiciousNode> suspiciousNodes) {
-			var newlyAcceptedVectorAndGroupKeys = new Dictionary<BigInteger, string>();
+				ICollection<BigInteger> actuallyAcceptedVectors, IList<SuspiciousNode> suspiciousNodes,
+				EncodingResult encodingResult, RevealedVectorSet trainingSet) {
+			var additionalAcceptedVector2GroupPath = new Dictionary<BigInteger, string>();
 			foreach (var t in suspiciousNodes) {
 				if (actuallyAcceptedVectors.Contains(t.Vector)) {
-					newlyAcceptedVectorAndGroupKeys.Add(t.Vector, t.GroupKey);
-					_trainingAcceptedVector2GroupPath.Add(t.Vector, t.GroupKey);
+					additionalAcceptedVector2GroupPath.Add(t.Vector, t.GroupKey);
+					trainingSet.Accepted.Add(t.Vector, t.GroupKey);
 				} else {
-					_trainingRejectedVector2GroupPath.Add(t.Vector, t.GroupKey);
+					trainingSet.Rejected.Add(t.Vector, t.GroupKey);
 				}
 			}
 
 			Console.WriteLine(
-					"Accepted: " + _trainingAcceptedVector2GroupPath.Count + " + "
-					+ newlyAcceptedVectorAndGroupKeys.Count
-					+ " / " + _idealAcceptedVector2GroupPath.Count);
+					"Accepted: " + trainingSet.AcceptedCount + " + "
+					+ additionalAcceptedVector2GroupPath.Count
+					+ " / " + encodingResult.IdealVectorSet.AcceptedCount);
 			Console.WriteLine(
-					"Rejected: " + _trainingRejectedVector2GroupPath.Count + " + "
-					+ (suspiciousNodes.Count - newlyAcceptedVectorAndGroupKeys.Count)
-					+ " / " + _idealRejectedVector2GroupPath.Count);
+					"Rejected: " + trainingSet.RejectedCount + " + "
+					+ (suspiciousNodes.Count - additionalAcceptedVector2GroupPath.Count)
+					+ " / " + encodingResult.IdealVectorSet.RejectedCount);
 
-			return newlyAcceptedVectorAndGroupKeys;
+			return additionalAcceptedVector2GroupPath;
 		}
 
 		protected IEnumerable<CstNode> GetAllElements(CstNode cst, ISet<string> elementNames) {

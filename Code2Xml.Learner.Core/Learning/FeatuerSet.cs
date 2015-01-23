@@ -28,7 +28,6 @@ namespace Code2Xml.Learner.Core.Learning {
 	public class FeatuerSet {
 		private const int SurroundingLength = 7;
 
-		public ISet<string> SelectedNodeNames { get; private set; }
 		public IList<string> AcceptingFeatures { get; private set; }
 		public IList<string> RejectingFeatures { get; private set; }
 
@@ -45,15 +44,10 @@ namespace Code2Xml.Learner.Core.Learning {
 		}
 
 		public FeatuerSet(SeedNodeSet seedNodeSet, FeatureExtractor extractor, ILearningExperiment oracle) {
-			SelectedNodeNames = seedNodeSet.SelectedNodeNames;
 			AcceptingFeatures = CreateAcceptingFeatures(seedNodeSet.SeedAcceptedNodes, extractor, oracle)
 					.ToImmutableList();
 			RejectingFeatures = CreateRejectingFeatures(seedNodeSet.SeedRejectedNodes, extractor, oracle)
 					.ToImmutableList();
-		}
-
-		public IEnumerable<CstNode> GetTargetNodes(CstNode cst) {
-			return LearningExperimentUtil.GetUppermostNodesByNames(cst, SelectedNodeNames);
 		}
 
 		private IEnumerable<string> CreateRejectingFeatures(

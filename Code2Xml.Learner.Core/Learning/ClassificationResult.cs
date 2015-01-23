@@ -17,52 +17,39 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Numerics;
 using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Learner.Core.Learning {
-    public class ClassificationResult {
-        public int WrongFeatureCount { get; set; }
-        public int WrongElementCount { get; set; }
+	public class ClassificationResult {
+		public readonly int WrongFeatureCount;
+		public readonly int WrongElementCount;
+		public readonly IList<SuspiciousNode> SuspiciousNodes;
+		public readonly IList<BigInteger> WronglyAcceptedFeatures;
+		public readonly IList<BigInteger> WronglyRejectedFeatures;
 
-        public Dictionary<BigInteger, CstNode> FeatureVector2Element { get; private set; }
-        public Dictionary<BigInteger, string> FeatureBit2Path { get; private set; }
-		public List<SuspiciousNode> SuspiciousNodes { get; set; }
+		public ClassificationResult(
+				IEnumerable<SuspiciousNode> suspiciousNodes, IEnumerable<BigInteger> wronglyAcceptedFeatures,
+				IEnumerable<BigInteger> wronglyRejectedFeatures, int wrongFeatureCount, int wrongElementCount) {
+			SuspiciousNodes = suspiciousNodes.ToImmutableList();
+			WronglyAcceptedFeatures = wronglyAcceptedFeatures.ToImmutableList();
+			WronglyRejectedFeatures = wronglyRejectedFeatures.ToImmutableList();
+			WrongFeatureCount = wrongFeatureCount;
+			WrongElementCount = wrongElementCount;
+		}
 
-        public List<BigInteger> WronglyAcceptedFeatures {
-            get { return _wronglyAcceptedFeatures; }
-        }
+		public IList<CstNode> GetWronglyAcceptedElements(EncodingResult result) {
+			return WronglyAcceptedFeatures
+					.Select(f => result.Vector2Node[f])
+					.ToList();
+		}
 
-        public List<BigInteger> WronglyRejectedFeatures {
-            get { return _wronglyRejectedFeatures; }
-        }
-
-        public IList<CstNode> WronglyAcceptedElements {
-            get {
-                return _wronglyAcceptedFeatures
-                        .Select(f => FeatureVector2Element[f])
-                        .ToList();
-            }
-        }
-
-        public IList<CstNode> WronglyRejectedElements {
-            get {
-                return _wronglyRejectedFeatures
-                        .Select(f => FeatureVector2Element[f])
-                        .ToList();
-            }
-        }
-
-        private readonly List<BigInteger> _wronglyAcceptedFeatures = new List<BigInteger>();
-
-        private readonly List<BigInteger> _wronglyRejectedFeatures = new List<BigInteger>();
-
-        public ClassificationResult(
-                Dictionary<BigInteger, CstNode> featureVector2Element,
-                Dictionary<BigInteger, string> featureBit2Path) {
-            FeatureVector2Element = featureVector2Element;
-            FeatureBit2Path = featureBit2Path;
-        }
-    }
+		public IList<CstNode> WronglyRejectedElements(EncodingResult result) {
+			return WronglyRejectedFeatures
+					.Select(f => result.Vector2Node[f])
+					.ToList();
+		}
+	}
 }

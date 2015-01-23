@@ -73,5 +73,14 @@ namespace Code2Xml.Learner.Core.Learning {
 				    .Where(node => node.AncestorsWithSingleChild()
 						    .All(ancestor => !nodeNames.Contains(ancestor.Name)));
 	    }
+
+	    public static int CountBits(BigInteger bits) {
+		    var count = 0;
+		    while (bits != BigInteger.Zero) {
+			    count += (int)(bits & BigInteger.One);
+			    bits >>= 1;
+		    }
+		    return count;
+	    }
     }
 }

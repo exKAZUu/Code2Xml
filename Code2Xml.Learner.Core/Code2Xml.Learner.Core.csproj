@@ -110,11 +110,13 @@
     <Compile Include="Learning\FeatureEncoder.cs" />
     <Compile Include="Learning\FeatuerSet.cs" />
     <Compile Include="Learning\FeatureExtractor.cs" />
+    <Compile Include="Learning\GroupCache.cs" />
     <Compile Include="Learning\LearningAlgorithm.cs" />
     <Compile Include="Learning\LearningData.cs" />
     <Compile Include="Learning\LearningExperiment.cs" />
     <Compile Include="Learning\LearningExperimentUtil.cs" />
     <Compile Include="Learning\OracleClassifier.cs" />
+    <Compile Include="Learning\RevealedVectorSet.cs" />
     <Compile Include="Learning\SurroundingNodeTraversal.cs" />
     <Compile Include="Learning\SuspiciousNode.cs" />
     <Compile Include="Learning\SuspiciousNodeSelector.cs" />

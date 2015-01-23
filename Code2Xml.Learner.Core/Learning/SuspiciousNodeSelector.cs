@@ -31,13 +31,14 @@ namespace Code2Xml.Learner.Core.Learning {
 		private readonly BigInteger _acceptingFeatureBitMask;
 		private readonly BigInteger _rejectingFeatureBitMask;
 
-		public SuspiciousNodeSelector(BigInteger acceptingFeatureBitMask, BigInteger rejectingFeatureBitMask) {
+		public SuspiciousNodeSelector(
+				BigInteger acceptingFeatureBitMask, BigInteger rejectingFeatureBitMask) {
 			_acceptingFeatureBitMask = acceptingFeatureBitMask;
 			_rejectingFeatureBitMask = rejectingFeatureBitMask;
 		}
 
 		public List<SuspiciousNode> SelectSuspiciousNodes(
-				int count, Classifier classifiers, List<List<SuspiciousNode>> acceptAccept,
+				int count, Classifier classifier, List<List<SuspiciousNode>> acceptAccept,
 				List<List<SuspiciousNode>> acceptReject, List<List<SuspiciousNode>> rejectAccept,
 				List<List<SuspiciousNode>> rejectReject) {
 			var suspiciousNodes = new List<SuspiciousNode>();
@@ -45,19 +46,19 @@ namespace Code2Xml.Learner.Core.Learning {
 			switch (count) {
 			case 0:
 				var time1 = Environment.TickCount;
-				suspiciousNodes.AddRange(SelectSuspiciousAcceptedNodes(acceptAccept, classifiers));
-				suspiciousNodes.AddRange(SelectSuspiciousAcceptedNodes(acceptReject, classifiers));
-				suspiciousNodes.AddRange(SelectSuspiciousRejectedNodes(acceptAccept, classifiers));
-				suspiciousNodes.AddRange(SelectSuspiciousRejectedNodes(rejectAccept, classifiers));
+				suspiciousNodes.AddRange(SelectSuspiciousAcceptedNodes(acceptAccept, classifier));
+				suspiciousNodes.AddRange(SelectSuspiciousAcceptedNodes(acceptReject, classifier));
+				suspiciousNodes.AddRange(SelectSuspiciousRejectedNodes(acceptAccept, classifier));
+				suspiciousNodes.AddRange(SelectSuspiciousRejectedNodes(rejectAccept, classifier));
 
-				suspiciousNodes.AddRange(SelectNodesForFastAcceptanceLearning(rejectAccept, classifiers));
+				suspiciousNodes.AddRange(SelectNodesForFastAcceptanceLearning(rejectAccept, classifier));
 				//suspiciousNodes.AddRange(SelectNodesForSlowAcceptanceLearning(rejectAccept));
-				suspiciousNodes.AddRange(SelectNodesForFastAcceptanceLearning(rejectReject, classifiers));
+				suspiciousNodes.AddRange(SelectNodesForFastAcceptanceLearning(rejectReject, classifier));
 				//suspiciousNodes.AddRange(SelectNodesForSlowAcceptanceLearning(rejectReject));
 
-				suspiciousNodes.AddRange(SelectNodesForFastRejectionLearning(acceptReject, classifiers));
+				suspiciousNodes.AddRange(SelectNodesForFastRejectionLearning(acceptReject, classifier));
 				//suspiciousNodes.AddRange(SelectNodesForSlowRejectionLearning(acceptReject));
-				suspiciousNodes.AddRange(SelectNodesForFastRejectionLearning(rejectReject, classifiers));
+				suspiciousNodes.AddRange(SelectNodesForFastRejectionLearning(rejectReject, classifier));
 				//suspiciousNodes.AddRange(SelectNodesForSlowRejectionLearning(rejectReject));
 				Console.WriteLine("SelectSuspiciousAcceptedNodes: " + (Environment.TickCount - time1));
 				break;
@@ -70,15 +71,15 @@ namespace Code2Xml.Learner.Core.Learning {
 
 				//suspiciousNodes.AddRange(SelectNodesForFastAcceptanceLearningStrongly(rejectAccept));
 				suspiciousNodes.AddRange(
-						SelectNodesForSlowAcceptanceLearningStrongly(rejectAccept, classifiers));
+						SelectNodesForSlowAcceptanceLearningStrongly(rejectAccept, classifier));
 				//suspiciousNodes.AddRange(SelectNodesForFastAcceptanceLearningStrongly(rejectReject));
 				suspiciousNodes.AddRange(
-						SelectNodesForSlowAcceptanceLearningStrongly(rejectReject, classifiers));
+						SelectNodesForSlowAcceptanceLearningStrongly(rejectReject, classifier));
 
 				//suspiciousNodes.AddRange(SelectNodesForFastRejectionLearningStrongly(acceptReject));
-				suspiciousNodes.AddRange(SelectNodesForSlowRejectionLearningStrongly(acceptReject, classifiers));
+				suspiciousNodes.AddRange(SelectNodesForSlowRejectionLearningStrongly(acceptReject, classifier));
 				//suspiciousNodes.AddRange(SelectNodesForFastRejectionLearningStrongly(rejectReject));
-				suspiciousNodes.AddRange(SelectNodesForSlowRejectionLearningStrongly(rejectReject, classifiers));
+				suspiciousNodes.AddRange(SelectNodesForSlowRejectionLearningStrongly(rejectReject, classifier));
 				Console.WriteLine("SelectSuspiciousAcceptedNodesStrongly: " + (Environment.TickCount - time2));
 				break;
 			default:
@@ -92,14 +93,15 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		public IEnumerable<SuspiciousNode> SelectSuspiciousAcceptedNodes(
 				IReadOnlyList<List<SuspiciousNode>> candidateNodesLists,
-				IReadOnlyList<ClassifierUnit> classifiers) {
+				Classifier classifier) {
 			for (int i = 0; i < candidateNodesLists.Count; i++) {
 				var candidates = candidateNodesLists[i];
 				foreach (var candidate in candidates) {
-					candidate.BitsCount = LearningExperimentUtil.CountBits(candidate.Vector & _acceptingFeatureBitMask);
+					candidate.BitsCount =
+							LearningExperimentUtil.CountBits(candidate.Vector & _acceptingFeatureBitMask);
 				}
 				candidates.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
-				var count = DetermineCount(i, classifiers);
+				var count = DetermineCount(classifier, i);
 				foreach (var candidate in candidates) {
 					if (candidate.Used) {
 						continue;
@@ -115,14 +117,15 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		public IEnumerable<SuspiciousNode> SelectSuspiciousRejectedNodes(
 				IReadOnlyList<List<SuspiciousNode>> candidateNodesLists,
-				IReadOnlyList<ClassifierUnit> classifiers) {
+				Classifier classifier) {
 			for (int i = 0; i < candidateNodesLists.Count; i++) {
 				var candidates = candidateNodesLists[i];
 				foreach (var candidate in candidates) {
-					candidate.BitsCount = LearningExperimentUtil.CountBits(candidate.Vector & _rejectingFeatureBitMask);
+					candidate.BitsCount =
+							LearningExperimentUtil.CountBits(candidate.Vector & _rejectingFeatureBitMask);
 				}
 				candidates.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
-				var count = DetermineCount(i, classifiers);
+				var count = DetermineCount(classifier, i);
 				for (int j = candidates.Count - 1; j >= 0; j--) {
 					var candidate = candidates[j];
 					if (candidate.Used) {
@@ -139,15 +142,15 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		public IEnumerable<SuspiciousNode> SelectNodesForFastAcceptanceLearning(
 				IReadOnlyList<List<SuspiciousNode>> candidateNodesLists,
-				IReadOnlyList<ClassifierUnit> classifiers) {
+				Classifier classifier) {
 			for (int i = 0; i < candidateNodesLists.Count; i++) {
 				var candidates = candidateNodesLists[i];
-				var classifier = classifiers[i].Accepting;
+				var acceptingVector = classifier.Units[i].Accepting;
 				foreach (var candidate in candidates) {
-					candidate.BitsCount = LearningExperimentUtil.CountBits(candidate.Vector & classifier);
+					candidate.BitsCount = LearningExperimentUtil.CountBits(candidate.Vector & acceptingVector);
 				}
 				candidates.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
-				var count = DetermineCount(i, classifiers);
+				var count = DetermineCount(classifier, i);
 				foreach (var candidate in candidates) {
 					if (candidate.Used) {
 						continue;
@@ -163,15 +166,15 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		public IEnumerable<SuspiciousNode> SelectNodesForSlowAcceptanceLearning(
 				IReadOnlyList<List<SuspiciousNode>> candidateNodesLists,
-				IReadOnlyList<ClassifierUnit> classifiers) {
+				Classifier classifier) {
 			for (int i = 0; i < candidateNodesLists.Count; i++) {
 				var candidates = candidateNodesLists[i];
-				var classifier = classifiers[i].Accepting;
+				var acceptingVector = classifier.Units[i].Accepting;
 				foreach (var target in candidates) {
-					target.BitsCount = LearningExperimentUtil.CountBits(target.Vector & classifier);
+					target.BitsCount = LearningExperimentUtil.CountBits(target.Vector & acceptingVector);
 				}
 				candidates.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
-				var count = DetermineCount(i, classifiers);
+				var count = DetermineCount(classifier, i);
 				for (int j = candidates.Count - 1; j >= 0; j--) {
 					var candidate = candidates[j];
 					if (candidate.Used) {
@@ -188,16 +191,16 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		public IEnumerable<SuspiciousNode> SelectNodesForFastRejectionLearning(
 				IReadOnlyList<List<SuspiciousNode>> candidateNodesLists,
-				IReadOnlyList<ClassifierUnit> classifiers) {
+				Classifier classifier) {
 			for (int i = 0; i < candidateNodesLists.Count; i++) {
 				var candidates = candidateNodesLists[i];
-				var classifier = classifiers[i].Rejecting;
+				var rejectingVector = classifier.Units[i].Rejecting;
 				foreach (var cnadidate in candidates) {
 					cnadidate.BitsCount = LearningExperimentUtil.CountBits(
-							(cnadidate.Vector & _rejectingFeatureBitMask) | classifier);
+							(cnadidate.Vector & _rejectingFeatureBitMask) | rejectingVector);
 				}
 				candidates.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
-				var count = DetermineCount(i, classifiers);
+				var count = DetermineCount(classifier, i);
 				for (int j = candidates.Count - 1; j >= 0; j--) {
 					var candidate = candidates[j];
 					if (candidate.Used) {
@@ -214,16 +217,16 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		public IEnumerable<SuspiciousNode> SelectNodesForSlowRejectionLearning(
 				IReadOnlyList<List<SuspiciousNode>> candidateNodesLists,
-				IReadOnlyList<ClassifierUnit> classifiers) {
+				Classifier classifier) {
 			for (int i = 0; i < candidateNodesLists.Count; i++) {
 				var candidates = candidateNodesLists[i];
-				var classifier = classifiers[i].Rejecting;
+				var rejectingVector = classifier.Units[i].Rejecting;
 				foreach (var candidate in candidates) {
 					candidate.BitsCount = LearningExperimentUtil.CountBits(
-							(candidate.Vector & _rejectingFeatureBitMask) | classifier);
+							(candidate.Vector & _rejectingFeatureBitMask) | rejectingVector);
 				}
 				candidates.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
-				var count = DetermineCount(i, classifiers);
+				var count = DetermineCount(classifier, i);
 				foreach (var candidate in candidates) {
 					if (candidate.Used) {
 						continue;
@@ -239,15 +242,16 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		public IEnumerable<SuspiciousNode> SelectSuspiciousAcceptedNodesStrongly(
 				IReadOnlyList<List<SuspiciousNode>> candidateNodesLists,
-				IReadOnlyList<ClassifierUnit> classifiers) {
+				Classifier classifier) {
 			for (int i = 0; i < candidateNodesLists.Count; i++) {
 				var candidates = candidateNodesLists[i];
 				foreach (var candidate in candidates) {
-					candidate.BitsCount = LearningExperimentUtil.CountBits(candidate.Vector & _acceptingFeatureBitMask);
+					candidate.BitsCount =
+							LearningExperimentUtil.CountBits(candidate.Vector & _acceptingFeatureBitMask);
 				}
 				candidates.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
 				var vector = BigInteger.Zero;
-				var count = DetermineStrongCount(i, classifiers);
+				var count = DetermineStrongCount(i, classifier);
 				foreach (var candidate in candidates) {
 					if (candidate.Used) {
 						continue;
@@ -268,7 +272,7 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		public IEnumerable<SuspiciousNode> SelectSuspiciousRejectedNodesStrongly(
 				IReadOnlyList<List<SuspiciousNode>> candidateNodesLists,
-				IReadOnlyList<ClassifierUnit> classifiers) {
+				Classifier classifier) {
 			for (int i = 0; i < candidateNodesLists.Count; i++) {
 				var candidates = candidateNodesLists[i];
 				foreach (var target in candidates) {
@@ -276,7 +280,7 @@ namespace Code2Xml.Learner.Core.Learning {
 				}
 				candidates.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
 				var vector = _rejectingFeatureBitMask;
-				var count = DetermineStrongCount(i, classifiers);
+				var count = DetermineStrongCount(i, classifier);
 				for (int j = candidates.Count - 1; j >= 0; j--) {
 					var candidate = candidates[j];
 					if (candidate.Used) {
@@ -298,16 +302,16 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		public IEnumerable<SuspiciousNode> SelectNodesForFastAcceptanceLearningStrongly(
 				IReadOnlyList<List<SuspiciousNode>> candidateNodesLists,
-				IReadOnlyList<ClassifierUnit> classifiers) {
+				Classifier classifier) {
 			for (int i = 0; i < candidateNodesLists.Count; i++) {
 				var candidates = candidateNodesLists[i];
-				var classifier = classifiers[i].Accepting;
+				var acceptingVector = classifier.Units[i].Accepting;
 				foreach (var target in candidates) {
-					target.BitsCount = LearningExperimentUtil.CountBits(target.Vector & classifier);
+					target.BitsCount = LearningExperimentUtil.CountBits(target.Vector & acceptingVector);
 				}
 				candidates.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
 				var vector = BigInteger.Zero;
-				var count = DetermineStrongCount(i, classifiers);
+				var count = DetermineStrongCount(i, classifier);
 				foreach (var candidate in candidates) {
 					if (candidate.Used) {
 						continue;
@@ -328,16 +332,16 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		public IEnumerable<SuspiciousNode> SelectNodesForSlowAcceptanceLearningStrongly(
 				IReadOnlyList<List<SuspiciousNode>> candidateNodesLists,
-				IReadOnlyList<ClassifierUnit> classifiers) {
+				Classifier classifier) {
 			for (int i = 0; i < candidateNodesLists.Count; i++) {
 				var candidates = candidateNodesLists[i];
-				var classifier = classifiers[i].Accepting;
+				var acceptingVector = classifier.Units[i].Accepting;
 				foreach (var target in candidates) {
-					target.BitsCount = LearningExperimentUtil.CountBits(target.Vector & classifier);
+					target.BitsCount = LearningExperimentUtil.CountBits(target.Vector & acceptingVector);
 				}
 				candidates.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
 				var vector = BigInteger.Zero;
-				var count = DetermineStrongCount(i, classifiers);
+				var count = DetermineStrongCount(i, classifier);
 				for (int j = candidates.Count - 1; j >= 0; j--) {
 					var candidate = candidates[j];
 					if (candidate.Used) {
@@ -359,17 +363,17 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		public IEnumerable<SuspiciousNode> SelectNodesForFastRejectionLearningStrongly(
 				IReadOnlyList<List<SuspiciousNode>> candidateNodesLists,
-				IReadOnlyList<ClassifierUnit> classifiers) {
+				Classifier classifier) {
 			for (int i = 0; i < candidateNodesLists.Count; i++) {
 				var candidates = candidateNodesLists[i];
-				var classifier = classifiers[i].Rejecting;
+				var rejectingVector = classifier.Units[i].Rejecting;
 				foreach (var candidate in candidates) {
 					candidate.BitsCount = LearningExperimentUtil.CountBits(
-							(candidate.Vector & _rejectingFeatureBitMask) | classifier);
+							(candidate.Vector & _rejectingFeatureBitMask) | rejectingVector);
 				}
 				candidates.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
 				var vector = _rejectingFeatureBitMask;
-				var count = DetermineStrongCount(i, classifiers);
+				var count = DetermineStrongCount(i, classifier);
 				for (int j = candidates.Count - 1; j >= 0; j--) {
 					var candidate = candidates[j];
 					if (candidate.Used) {
@@ -391,17 +395,17 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		public IEnumerable<SuspiciousNode> SelectNodesForSlowRejectionLearningStrongly(
 				IReadOnlyList<List<SuspiciousNode>> candidateNodesLists,
-				IReadOnlyList<ClassifierUnit> classifiers) {
+				Classifier classifier) {
 			for (int i = 0; i < candidateNodesLists.Count; i++) {
 				var candidates = candidateNodesLists[i];
-				var classifier = classifiers[i].Rejecting;
+				var rejectingUnit = classifier.Units[i].Rejecting;
 				foreach (var target in candidates) {
 					target.BitsCount = LearningExperimentUtil.CountBits(
-							(target.Vector & _rejectingFeatureBitMask) | classifier);
+							(target.Vector & _rejectingFeatureBitMask) | rejectingUnit);
 				}
 				candidates.Sort((t1, t2) => t1.BitsCount.CompareTo(t2.BitsCount));
 				var vector = _rejectingFeatureBitMask;
-				var count = DetermineStrongCount(i, classifiers);
+				var count = DetermineStrongCount(i, classifier);
 				foreach (var candidate in candidates) {
 					if (!candidate.Used) {
 						continue;
@@ -420,13 +424,13 @@ namespace Code2Xml.Learner.Core.Learning {
 			}
 		}
 
-		private static int DetermineCount(int i, IReadOnlyList<ClassifierUnit> classifiers) {
-			return LearningExperimentUtil.CountBits(classifiers[i].Accepting) > ThresholdvectorCount
+		private static int DetermineCount(Classifier classifier, int groupIndex) {
+			return classifier.CountAcceptingFeatures().ElementAt(groupIndex) > ThresholdvectorCount
 					? TargetCount : TargetCount / 2;
 		}
 
-		private static int DetermineStrongCount(int i, IReadOnlyList<ClassifierUnit> classifiers) {
-			return LearningExperimentUtil.CountBits(classifiers[i].Accepting) > ThresholdvectorCount
+		private static int DetermineStrongCount(int groupIndex, Classifier classifier) {
+			return classifier.CountAcceptingFeatures().ElementAt(groupIndex) > ThresholdvectorCount
 					? StronglyTargetCount : StronglyTargetCount / 2;
 		}
 
@@ -567,12 +571,12 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		private IEnumerable<SuspiciousNode> SelectSuspiciousElementsWithMaskForFastAcceptanceLearning(
 				IReadOnlyList<List<SuspiciousNode>> candidateNodesLists, BigInteger xor, BigInteger mask,
-				IReadOnlyList<ClassifierUnit> classifiers) {
+				Classifier classifier) {
 			for (int i = 0; i < candidateNodesLists.Count; i++) {
 				var vector = BigInteger.Zero;
-				var classifier = classifiers[i];
+				var classifierUnit = classifier.Units[i];
 				var candidates = candidateNodesLists[i]
-						.OrderBy(t => LearningExperimentUtil.CountBits(classifier.Accepting & t.Vector))
+						.OrderBy(t => LearningExperimentUtil.CountBits(classifierUnit.Accepting & t.Vector))
 						.ToList();
 				foreach (var candidate in candidates) {
 					var newVector = (vector | (candidate.Vector ^ xor)) & mask;
@@ -586,14 +590,14 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		private IEnumerable<SuspiciousNode> SelectSuspiciousElementsWithMaskForFastRejectionLearning(
 				List<List<SuspiciousNode>> candidateNodesLists, BigInteger xor, BigInteger mask,
-				IReadOnlyList<ClassifierUnit> classifiers) {
+				Classifier classifier) {
 			for (int i = 0; i < candidateNodesLists.Count; i++) {
 				var vector = BigInteger.Zero;
-				var classifier = classifiers[i];
+				var classifierUnit = classifier.Units[i];
 				var candidates = candidateNodesLists[i]
 						.OrderBy(
 								t => LearningExperimentUtil.CountBits(
-										classifier.Accepting
+										classifierUnit.Accepting
 										& ((t.Vector & _rejectingFeatureBitMask) ^ _rejectingFeatureBitMask)))
 						.ToList();
 				foreach (var candidate in candidates) {

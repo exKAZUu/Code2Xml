@@ -61,7 +61,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
                 var w = CreateWriter(
                         exp.GetType().Name + "_classifier_" + ProjectTakeCountToLearn + ".txt");
-                w.WriteLine(exp.GetClassifierSummary(learningResult.Classifiers));
+                w.WriteLine(exp.GetClassifierSummary(learningResult.Classifier));
                 w.Flush();
 
                 var writer =
@@ -74,8 +74,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     writer.Write(",");
                     writer.Write(projectPath);
                     writer.Write(",");
-                    var ret = exp.Apply(writer, codePaths, SearchPattern, learningResult.Classifiers);
-                    var features = exp.GetAllAcceptingFeatureStrings(learningResult.Classifiers);
+                    var ret = exp.Apply(writer, codePaths, SearchPattern, learningResult.Classifier);
+                    var features = exp.GetAllAcceptingFeatureStrings(learningResult.Classifier);
 
                     writer.Write(ret.WrongElementCount);
                     writer.Write(",");

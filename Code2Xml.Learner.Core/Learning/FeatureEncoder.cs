@@ -51,20 +51,20 @@ namespace Code2Xml.Learner.Core.Learning {
 			return _bit2FeatureString[bit];
 		}
 
-        public IEnumerable<string> GetFeatureStringsByVector(BigInteger vector) {
-            var featureBit = BigInteger.One;
-            while (vector != BigInteger.Zero) {
-                if ((vector & featureBit) != BigInteger.Zero) {
-                    vector ^= featureBit;
-                }
-                yield return GetFeatureStringByBit(featureBit);
-                featureBit <<= 1;
-            }
-        }
+		public IEnumerable<string> GetFeatureStringsByVector(BigInteger vector) {
+			var featureBit = BigInteger.One;
+			while (vector != BigInteger.Zero) {
+				if ((vector & featureBit) != BigInteger.Zero) {
+					vector ^= featureBit;
+				}
+				yield return GetFeatureStringByBit(featureBit);
+				featureBit <<= 1;
+			}
+		}
 
 		public EncodingResult Encode(
-				ICollection<string> codePaths, IEnumerable<CstNode> allUppermostNodeNodes,
-				SeedNodeSet seedNodeSet, LearningExperiment oracle) {
+				ICollection<string> codePaths, IEnumerable<CstNode> allCsts, SeedNodeSet seedNodeSet,
+				LearningExperiment oracle) {
 			var fileName = codePaths.Count > 0
 					? String.Join(",", codePaths).GetHashCode() + "_" +
 					  (codePaths.First() + "," + codePaths.Last()).GetHashCode() + ".encoded"
@@ -76,16 +76,22 @@ namespace Code2Xml.Learner.Core.Learning {
 				}
 			}
 
+			var allUppermostNodes = allCsts.SelectMany(
+					cst => {
+						Console.WriteLine(".");
+						return LearningExperimentUtil.GetUppermostNodesByNames(cst, seedNodeSet.SelectedNodeNames);
+					});
+
 			var result = new EncodingResult();
 			result.SeedAcceptedNodeCount = seedNodeSet.SeedAcceptedNodes.Count;
 			result.SeedNodeCount = result.SeedAcceptedNodeCount + seedNodeSet.SeedRejectedNodes.Count;
 			EncodeSeedNodes(
-					seedNodeSet.SeedAcceptedNodes, result, result.IdealAcceptedVector2GroupPath,
-					result.SeedAcceptedVector2GroupPath);
+					seedNodeSet.SeedAcceptedNodes, result.IdealAcceptedVector2GroupPath,
+					result.SeedAcceptedVector2GroupPath, result);
 			EncodeSeedNodes(
-					seedNodeSet.SeedRejectedNodes, result, result.IdealRejectedVector2GroupPath,
-					result.SeedRejectedVector2GroupPath);
-			EncodeTargetNodes(allUppermostNodeNodes, oracle, result);
+					seedNodeSet.SeedRejectedNodes, result.IdealRejectedVector2GroupPath,
+					result.SeedRejectedVector2GroupPath, result);
+			EncodeTargetNodes(allUppermostNodes, oracle, result);
 			result.MakeImmutable();
 
 			if (fileName != null) {
@@ -97,26 +103,19 @@ namespace Code2Xml.Learner.Core.Learning {
 		}
 
 		private void EncodeSeedNodes(
-				IEnumerable<CstNode> seedNodes, EncodingResult result,
-				IDictionary<BigInteger, string> idealVector2Path,
-				IDictionary<BigInteger, string> trainingVector2Path) {
-			foreach (var e in seedNodes) {
-				var vector = e.GetFeatureVector(SurroundingLength, _featureString2Bit, _extractor);
-				UpdateVector2GroupPath(idealVector2Path, vector, e);
-				trainingVector2Path[vector] = idealVector2Path[vector];
-				result.Vector2Node[vector] = e;
-				if (result.Vector2Count.ContainsKey(vector)) {
-					result.Vector2Count[vector]++;
-				} else {
-					result.Vector2Count[vector] = 1;
-					result.SeedAbstractCount++;
-				}
+				IEnumerable<CstNode> seedNodes, IDictionary<BigInteger, string> idealVector2Path,
+				IDictionary<BigInteger, string> seedVector2Path, EncodingResult result) {
+			foreach (var node in seedNodes) {
+				var vector = node.GetFeatureVector(SurroundingLength, _featureString2Bit, _extractor);
+				UpdateVector2GroupPath(idealVector2Path, vector, node);
+				seedVector2Path[vector] = idealVector2Path[vector];
+				UpdateVectorDict(result, vector, node);
 			}
 		}
 
 		private void EncodeTargetNodes(
-				IEnumerable<CstNode> allUppermostNodeNodes, LearningExperiment oracle, EncodingResult result) {
-			foreach (var uppermostNode in allUppermostNodeNodes) {
+				IEnumerable<CstNode> allUppermostNodes, LearningExperiment oracle, EncodingResult result) {
+			foreach (var uppermostNode in allUppermostNodes) {
 				var vector = uppermostNode.GetFeatureVector(SurroundingLength, _featureString2Bit, _extractor);
 				if (oracle.IsAcceptedUsingOracle(uppermostNode)) {
 					// TODO: for debug
@@ -131,12 +130,16 @@ namespace Code2Xml.Learner.Core.Learning {
 					}
 					UpdateVector2GroupPath(result.IdealRejectedVector2GroupPath, vector, uppermostNode);
 				}
-				result.Vector2Node[vector] = uppermostNode;
-				if (result.Vector2Count.ContainsKey(vector)) {
-					result.Vector2Count[vector]++;
-				} else {
-					result.Vector2Count[vector] = 1;
-				}
+				UpdateVectorDict(result, vector, uppermostNode);
+			}
+		}
+
+		private static void UpdateVectorDict(EncodingResult result, BigInteger vector, CstNode node) {
+			result.Vector2Node[vector] = node;
+			if (result.Vector2Count.ContainsKey(vector)) {
+				result.Vector2Count[vector]++;
+			} else {
+				result.Vector2Count[vector] = 1;
 			}
 		}
 
