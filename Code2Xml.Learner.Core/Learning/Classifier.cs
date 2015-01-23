@@ -29,12 +29,12 @@ namespace Code2Xml.Learner.Core.Learning {
 			get { return GroupPaths.Count; }
 		}
 
-		public Classifier(FeatuerSet featureSet) {
+		public Classifier(FeatuerSet featureSet, IEnumerable<string> selectedNodeNames) {
 			AcceptingFeatureCount = featureSet.AcceptingFeatures.Count;
 			AllFeatureBitMask = (BigInteger.One << featureSet.FeatureCount) - BigInteger.One;
 			AcceptingFeatureBitMask = (BigInteger.One << featureSet.AcceptingFeatureCount) - BigInteger.One;
 			RejectingFeatureBitMask = AllFeatureBitMask ^ AcceptingFeatureBitMask;
-			GroupPaths = featureSet.SelectedNodeNames.Select(n => ">" + n + ">").ToList();
+			GroupPaths = selectedNodeNames.Select(n => ">" + n + ">").ToList();
 			Initialize();
 		}
 

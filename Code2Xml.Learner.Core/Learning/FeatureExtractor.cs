@@ -95,4 +95,13 @@ namespace Code2Xml.Learner.Core.Learning {
 			return new FeatureExtractor(maxUp, maxDown, maxLeft, maxRight, isInner);
 		}
 	}
+
+	public class PhpFeatureExtractor : FeatureExtractor {
+		public PhpFeatureExtractor(int maxUp, int maxDown, int maxLeft, int maxRight, bool isInner)
+				: base(maxUp, maxDown, maxLeft, maxRight, isInner) {}
+
+		public override string GetToken(CstNode e) {
+			return base.GetToken(e).ToLower();
+		}
+	}
 }

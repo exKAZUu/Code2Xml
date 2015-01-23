@@ -33,21 +33,8 @@ namespace Code2Xml.Learner.Core.Learning {
 
 	public abstract class LearningExperiment : ILearningExperiment {
 		protected abstract CstGenerator Generator { get; }
-		public abstract bool IsInner { get; }
 
-		public virtual int MaxUp {
-			get { return -1; }
-		}
-
-		public virtual int MaxLeft {
-			get { return -1; }
-		}
-
-		public virtual int MaxRight {
-			get { return -1; }
-		}
-
-		public readonly HashSet<string> _oracleNames;
+		private readonly HashSet<string> _oracleNames;
 
 		protected LearningExperiment(params string[] elementNames) {
 			_oracleNames = elementNames.ToHashSet();
@@ -57,18 +44,15 @@ namespace Code2Xml.Learner.Core.Learning {
 				StreamWriter writer, ICollection<string> codePaths, string searchPattern, FeatureEncoder featureEncoder, Classifier classifier) {
 			var allCsts = GenerateValidCsts(codePaths);
 
-			featureEncoder.Encode(codePaths, allCsts, se)
-
-			featureEncoder.EncodeCsts(codePaths, allCsts);
-			UpdateVector2GroupIndex();
-
+			var encodingResult = featureEncoder.Encode(codePaths, allCsts, this);
 
 			var time = Environment.TickCount;
-			var result = Classify(Int32.MaxValue, classifiers);
+			var emptyTrainingSet = new RevealedVectorSet();
+			var result = Classify(Int32.MaxValue, classifier, new GroupCache(encodingResult, classifier), encodingResult, emptyTrainingSet);
 			Console.WriteLine("Time: " + (Environment.TickCount - time));
 
 			if (writer != null) {
-				encodingResult.WriteResult(writer, trainingSet);
+				encodingResult.WriteResult(writer, emptyTrainingSet);
 			}
 
 			return result;
@@ -95,7 +79,7 @@ namespace Code2Xml.Learner.Core.Learning {
 					+ featureSet.RejectingFeatureCount);
 
 			var featureEncoder = new FeatureEncoder(extractor, featureSet);
-			var encodingResult = featureEncoder.Encode(codePaths, allCsts, seedNodeSet, this);
+			var encodingResult = featureEncoder.Encode(codePaths, allCsts, this, seedNodeSet);
 
 			Console.WriteLine("#Unique Elements: " + encodingResult.VectorCount);
 			if (encodingResult.IdealAcceptedVector2GroupPath.Keys.ToHashSet()
@@ -334,11 +318,7 @@ namespace Code2Xml.Learner.Core.Learning {
 	}
 
 	public interface ILearningExperiment {
-		bool IsInner { get; }
-		string GetToken(CstNode e);
-		int MaxUp { get; }
-		int MaxLeft { get; }
-		int MaxRight { get; }
+		FeatureExtractor CreateExtractor(CstNode e);
 
 		IList<CstNode> GetRootsUsingOracle(CstNode e);
 	}

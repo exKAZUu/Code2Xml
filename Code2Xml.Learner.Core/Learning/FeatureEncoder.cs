@@ -36,9 +36,11 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		private readonly IDictionary<string, BigInteger> _featureString2Bit;
 		private readonly IDictionary<BigInteger, string> _bit2FeatureString;
+		private readonly ISet<string> _selectedNodeNames;
 
-		public FeatureEncoder(FeatureExtractor extractor, FeatuerSet featureSet) {
+		public FeatureEncoder(FeatureExtractor extractor, FeatuerSet featureSet, ISet<string> selectedNodeNames) {
 			_extractor = extractor;
+			_selectedNodeNames = selectedNodeNames;
 			_featureString2Bit = CreateFeatureString2Bit(featureSet);
 			_bit2FeatureString = CreateBit2FeatureString(_featureString2Bit);
 		}
@@ -62,9 +64,7 @@ namespace Code2Xml.Learner.Core.Learning {
 			}
 		}
 
-		public EncodingResult Encode(
-				ICollection<string> codePaths, IEnumerable<CstNode> allCsts, SeedNodeSet seedNodeSet,
-				LearningExperiment oracle) {
+		public EncodingResult Encode(ICollection<string> codePaths, IEnumerable<CstNode> allCsts, LearningExperiment oracle, SeedNodeSet seedNodeSet = null) {
 			var fileName = codePaths.Count > 0
 					? String.Join(",", codePaths).GetHashCode() + "_" +
 					  (codePaths.First() + "," + codePaths.Last()).GetHashCode() + ".encoded"
@@ -79,18 +79,20 @@ namespace Code2Xml.Learner.Core.Learning {
 			var allUppermostNodes = allCsts.SelectMany(
 					cst => {
 						Console.WriteLine(".");
-						return LearningExperimentUtil.GetUppermostNodesByNames(cst, seedNodeSet.SelectedNodeNames);
+						return LearningExperimentUtil.GetUppermostNodesByNames(cst, _selectedNodeNames);
 					});
 
 			var result = new EncodingResult();
-			result.SeedAcceptedNodeCount = seedNodeSet.SeedAcceptedNodes.Count;
-			result.SeedNodeCount = result.SeedAcceptedNodeCount + seedNodeSet.SeedRejectedNodes.Count;
-			EncodeSeedNodes(
-					seedNodeSet.SeedAcceptedNodes, result.IdealAcceptedVector2GroupPath,
-					result.SeedAcceptedVector2GroupPath, result);
-			EncodeSeedNodes(
-					seedNodeSet.SeedRejectedNodes, result.IdealRejectedVector2GroupPath,
-					result.SeedRejectedVector2GroupPath, result);
+			if (seedNodeSet != null) {
+				result.SeedAcceptedNodeCount = seedNodeSet.SeedAcceptedNodes.Count;
+				result.SeedNodeCount = result.SeedAcceptedNodeCount + seedNodeSet.SeedRejectedNodes.Count;
+				EncodeSeedNodes(
+						seedNodeSet.SeedAcceptedNodes, result.IdealAcceptedVector2GroupPath,
+						result.SeedAcceptedVector2GroupPath, result);
+				EncodeSeedNodes(
+						seedNodeSet.SeedRejectedNodes, result.IdealRejectedVector2GroupPath,
+						result.SeedRejectedVector2GroupPath, result);
+			}
 			EncodeTargetNodes(allUppermostNodes, oracle, result);
 			result.MakeImmutable();
 
