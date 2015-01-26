@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Numerics;
 
 namespace Code2Xml.Learner.Core.Learning {
+	[Serializable]
 	public class RevealedVectorSet {
 		public IDictionary<BigInteger, string> Accepted { get; private set; }
 		public IDictionary<BigInteger, string> Rejected { get; private set; }

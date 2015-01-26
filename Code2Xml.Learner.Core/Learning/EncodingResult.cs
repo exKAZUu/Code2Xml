@@ -58,13 +58,19 @@ namespace Code2Xml.Learner.Core.Learning {
 		}
 
 		public IDictionary<BigInteger, string> Vector2GroupPath { get; private set; }
-		public IDictionary<BigInteger, CstNode> Vector2Node { get; private set; }
+
+		[NonSerialized] private IDictionary<BigInteger, CstNode> _vector2Node;
+
+		public IDictionary<BigInteger, CstNode> Vector2Node {
+			get { return _vector2Node; }
+		}
+
 		public IDictionary<BigInteger, int> Vector2Count { get; private set; }
 		public IDictionary<BigInteger, string> Vector2Path { get; private set; }
 
 		public EncodingResult() {
 			Vector2GroupPath = new Dictionary<BigInteger, string>();
-			Vector2Node = new Dictionary<BigInteger, CstNode>();
+			_vector2Node = new Dictionary<BigInteger, CstNode>();
 			Vector2Count = new Dictionary<BigInteger, int>();
 			Vector2Path = new Dictionary<BigInteger, string>();
 
@@ -78,14 +84,15 @@ namespace Code2Xml.Learner.Core.Learning {
 					new Dictionary<BigInteger, string>(SeedVectorSet.Rejected));
 		}
 
-		public void MakeImmutable() {
+		public EncodingResult MakeImmutable() {
 			Vector2GroupPath = Vector2GroupPath.ToImmutableDictionary();
-			Vector2Node = Vector2Node.ToImmutableDictionary();
+			_vector2Node = _vector2Node.ToImmutableDictionary();
 			Vector2Count = Vector2Count.ToImmutableDictionary();
 			Vector2Path = Vector2Path.ToImmutableDictionary();
 
 			IdealVectorSet.MakeImmutable();
 			SeedVectorSet.MakeImmutable();
+			return this;
 		}
 
 		public void WriteResult(StreamWriter writer, RevealedVectorSet trainingSet = null) {

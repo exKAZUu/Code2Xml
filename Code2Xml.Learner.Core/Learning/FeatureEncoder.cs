@@ -37,7 +37,8 @@ namespace Code2Xml.Learner.Core.Learning {
 		private readonly IDictionary<string, BigInteger> _featureString2Bit;
 		private readonly IDictionary<BigInteger, string> _bit2FeatureString;
 
-		public FeatureEncoder(ISet<string> selectedNodeNames, FeatureExtractor extractor, FeatuerSet featureSet) {
+		public FeatureEncoder(
+				ISet<string> selectedNodeNames, FeatureExtractor extractor, FeatuerSet featureSet) {
 			_selectedNodeNames = selectedNodeNames;
 			_extractor = extractor;
 			_featureString2Bit = CreateFeatureString2Bit(featureSet);
@@ -73,13 +74,15 @@ namespace Code2Xml.Learner.Core.Learning {
 			var formatter = new BinaryFormatter();
 			if (fileName != null && File.Exists(fileName)) {
 				using (var fs = new FileStream(fileName, FileMode.Open, FileAccess.Read)) {
-					return (EncodingResult)formatter.Deserialize(fs);
+					try {
+						return ((EncodingResult)formatter.Deserialize(fs)).MakeImmutable();
+					} catch {}
 				}
 			}
 
 			var allUppermostNodes = allCsts.SelectMany(
 					cst => {
-						Console.WriteLine(".");
+						Console.Write(".");
 						return LearningExperimentUtil.GetUppermostNodesByNames(cst, _selectedNodeNames);
 					});
 
@@ -95,14 +98,13 @@ namespace Code2Xml.Learner.Core.Learning {
 						result.SeedRejectedVector2GroupPath);
 			}
 			EncodeTargetNodes(allUppermostNodes, result, oracle);
-			result.MakeImmutable();
 
 			if (fileName != null) {
 				using (var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write)) {
 					formatter.Serialize(fs, result);
 				}
 			}
-			return result;
+			return result.MakeImmutable();
 		}
 
 		private void EncodeSeedNodes(

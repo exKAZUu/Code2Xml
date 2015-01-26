@@ -51,7 +51,7 @@ namespace Code2Xml.Learner.Core.Learning {
 				IEnumerable<SuspiciousNode> suspiciousNodes, IEnumerable<BigInteger> wronglyAcceptedFeatures,
 				IEnumerable<BigInteger> wronglyRejectedFeatures, int wrongFeatureCount, int wrongElementCount,
 				EncodingResult encodingResult) {
-			SuspiciousNodes = suspiciousNodes.ToImmutableList();
+			SuspiciousNodes = suspiciousNodes != null ? suspiciousNodes.ToImmutableList() : null;
 			WronglyAcceptedFeatures = wronglyAcceptedFeatures.ToImmutableList();
 			WronglyRejectedFeatures = wronglyRejectedFeatures.ToImmutableList();
 			WrongFeatureCount = wrongFeatureCount;
