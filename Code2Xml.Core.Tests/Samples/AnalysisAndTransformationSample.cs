@@ -80,7 +80,7 @@ namespace Code2Xml.Core.Tests.Samples {
             var cst = gen.GenerateTreeFromCodeText(originalCode);
             var stmts = cst.Descendants("embedded_statement");
             foreach (var stmt in stmts) {
-                var restore = stmt.RecoverablyRemove();
+                var restore = stmt.RemoveRecoverably();
                 // .. Conduct tests to judge whether tests detect mutants ..
                 Console.WriteLine(cst.Code);
                 restore();

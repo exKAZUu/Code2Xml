@@ -127,9 +127,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="TreeDotNet, Version=1.2.8.18, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="TreeDotNet, Version=1.3.0.19, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\TreeDotNet.1.2.8.18\lib\net40\TreeDotNet.dll</HintPath>
+      <HintPath>..\..\packages\TreeDotNet.1.3.0.19\lib\net40\TreeDotNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
