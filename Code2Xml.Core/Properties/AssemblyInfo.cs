@@ -28,7 +28,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Kazunori Sakamoto")]
 [assembly: AssemblyProduct("Code2Xml")]
-[assembly: AssemblyCopyright("Copyright © Kazunori Sakamoto 2014")]
+[assembly: AssemblyCopyright("Copyright © Kazunori Sakamoto 2011-2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -53,5 +53,5 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("3.2.1.93")]
-[assembly: AssemblyFileVersion("3.2.1.93")]
+[assembly: AssemblyVersion("3.2.2.94")]
+[assembly: AssemblyFileVersion("3.2.2.94")]

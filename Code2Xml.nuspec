@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Code2Xml</id>
-    <version>3.2.1.93</version>
+    <version>3.2.2.94</version>
     <title>Code2Xml</title>
     <authors>Kazunori Sakamoto</authors>
     <owners>Kazunori Sakamoto</owners>
@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Code2Xml is a parser collection that inter-converts source code and XML-based concrete syntax trees (CSTs) supporting multiple programming languages.</description>
     <releaseNotes>Rewrite Code2Xml.</releaseNotes>
-    <copyright>Copyright (C) Kazunori Sakamoto 2011-2014</copyright>
+    <copyright>Copyright (C) Kazunori Sakamoto 2011-2015</copyright>
     <tags>Library Parser XML Programming Language</tags>
     <dependencies>
       <dependency id="Paraiba.Experiment" />
