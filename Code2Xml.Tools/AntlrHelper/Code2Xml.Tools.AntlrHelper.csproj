@@ -104,9 +104,13 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Paraiba.Experiment, Version=1.1.3.93, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Paraiba, Version=1.1.4.94, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Paraiba.Experiment.1.1.3.93\lib\net40\Paraiba.Experiment.dll</HintPath>
+      <HintPath>..\..\packages\Paraiba.1.1.4.94\lib\net40\Paraiba.dll</HintPath>
+    </Reference>
+    <Reference Include="Paraiba.Experiment, Version=1.1.4.94, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Paraiba.Experiment.1.1.4.94\lib\net40\Paraiba.Experiment.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
