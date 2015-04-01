@@ -184,8 +184,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         };
 
         private static readonly LearningExperiment[] Experiments = {
-            //new JavaScriptComplexStatementExperiment(),
-            //new JavaScriptSuperComplexBranchExperiment(),
+            new JavaScriptComplexStatementExperiment(),
+            new JavaScriptSuperComplexBranchExperiment(),
             new JavaScriptExpressionStatementExperiment(),
             new JavaScriptArithmeticOperatorExperiment(),
             //new JavaScriptSwitchCaseExperiment(),

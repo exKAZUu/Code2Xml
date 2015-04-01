@@ -101,7 +101,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             Assert.That(failedCount, Is.EqualTo(0));
         }
 
-        private void LearnWithoutClearing(
+        private ExperimentalResult LearnWithoutClearing(
                 ICollection<string> seedPaths, LearningExperiment exp,
                 ICollection<string> projectPaths) {
             var writer = CreateWriter(exp.GetType().Name + "_learn_" + projectPaths.Count + ".csv");
@@ -136,7 +136,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     Console.WriteLine("---------------------------------------------");
                 }
             }
-            Assert.That(ret.WrongFeatureCount, Is.EqualTo(0));
+            return ret;
         }
 
         private StreamWriter CreateWriter(string fileName) {
@@ -173,8 +173,9 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public void Learn(
                 List<string> seedPaths, LearningExperiment exp, ICollection<string> projectPaths) {
-            LearnWithoutClearing(seedPaths, exp, projectPaths);
+            var ret = LearnWithoutClearing(seedPaths, exp, projectPaths);
             exp.Clear();
+            Assert.That(ret.WrongFeatureCount, Is.EqualTo(0));
         }
 
         public void Learn(
