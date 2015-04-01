@@ -30,6 +30,27 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 	public class JavaScriptExperiment : Experiment {
 		public static CstGenerator Generator = CstGenerators.JavaScriptUsingAntlr3;
 
+		private static readonly LearningExperiment[] Experiments = {
+			new JavaScriptComplexStatementExperiment(),
+			new JavaScriptSuperComplexBranchExperiment(),
+			new JavaScriptExpressionStatementExperiment(),  // NG
+			new JavaScriptArithmeticOperatorExperiment(), // NG
+			//new JavaScriptSwitchCaseExperiment(),
+			//new JavaScriptSuperComplexBranchExperimentWithSwitch(),
+			//new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue(), 
+
+			//new JavaScriptComplexBranchExperiment(),
+			//new JavaScriptIfExperiment(),
+			//new JavaScriptWhileExperiment(),
+			//new JavaScriptDoWhileExperiment(),
+			//new JavaScriptForExperiment(),
+			//new JavaScriptConsoleLogExperiment(),
+			//new JavaScriptStatementExperiment(),
+			//new JavaScriptBlockExperiment(),
+			//new JavaScriptLabeledStatementExperiment(),
+			//new JavaScriptEmptyStatementExperiment(),
+		};
+
 		#region LearningSets
 
 		private static readonly Tuple<string, string>[] LearningSets = {
@@ -186,27 +207,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		};
 
 		#endregion
-
-		private static readonly LearningExperiment[] Experiments = {
-			//new JavaScriptComplexStatementExperiment(),
-			//new JavaScriptSuperComplexBranchExperiment(),
-			//new JavaScriptExpressionStatementExperiment(),  // NG
-			new JavaScriptArithmeticOperatorExperiment(), // NG
-			//new JavaScriptSwitchCaseExperiment(),
-			//new JavaScriptSuperComplexBranchExperimentWithSwitch(),
-			//new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue(), 
-
-			//new JavaScriptComplexBranchExperiment(),
-			//new JavaScriptIfExperiment(),
-			//new JavaScriptWhileExperiment(),
-			//new JavaScriptDoWhileExperiment(),
-			//new JavaScriptForExperiment(),
-			//new JavaScriptConsoleLogExperiment(),
-			//new JavaScriptStatementExperiment(),
-			//new JavaScriptBlockExperiment(),
-			//new JavaScriptLabeledStatementExperiment(),
-			//new JavaScriptEmptyStatementExperiment(),
-		};
 
 		private const string LangName = "JavaScript";
 
