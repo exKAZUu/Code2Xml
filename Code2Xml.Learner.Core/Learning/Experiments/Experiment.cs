@@ -141,7 +141,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     Console.WriteLine("---------------------------------------------");
                 }
             }
-            Assert.That(classificationResult.WrongFeatureCount, Is.EqualTo(0));
             return learningResult;
         }
 
@@ -179,7 +178,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public void Learn(
                 List<string> seedPaths, LearningExperiment exp, ICollection<string> projectPaths) {
-            LearnWithoutClearing(seedPaths, exp, projectPaths);
+            var ret = LearnWithoutClearing(seedPaths, exp, projectPaths);
+            Assert.That(ret.ClassificationResult.WrongFeatureCount, Is.EqualTo(0));
         }
 
         public void Learn(
