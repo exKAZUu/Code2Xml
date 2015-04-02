@@ -268,6 +268,7 @@ namespace Code2Xml.Learner.Core.Learning {
 					classifier.RejectingFeatureBitMask);
 			var suspiciousNodes = selector.SelectSuspiciousNodes(count, classifier, acceptAccept,
 					acceptReject, rejectAccept, rejectReject);
+
 			return new ClassificationResult(suspiciousNodes, wronglyAcceptedFeatures, wronglyRejectedFeatures,
 					wrongFeatureCount, wrongNodeCount, encodingResult);
 		}

@@ -58,8 +58,8 @@ namespace Code2Xml.Learner.Core.Learning {
 			while (vector != BigInteger.Zero) {
 				if ((vector & featureBit) != BigInteger.Zero) {
 					vector ^= featureBit;
+					yield return GetFeatureStringByBit(featureBit);
 				}
-				yield return GetFeatureStringByBit(featureBit);
 				featureBit <<= 1;
 			}
 		}

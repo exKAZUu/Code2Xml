@@ -203,7 +203,7 @@ namespace Code2Xml.Learner.Core.Learning {
 		public string GetClassifierSummary() {
 			var acceptingFeatureCounts = String.Join(", ", CountAcceptingFeatures());
 			var rejectingFeatureCounts = String.Join(", ", CountRejectingFeatures());
-			return "AP: " + acceptingFeatureCounts + ", RP: " + rejectingFeatureCounts;
+			return "#AF: " + acceptingFeatureCounts + ", #RF: " + rejectingFeatureCounts;
 		}
 
 		public IEnumerable<int> CountAcceptingFeatures() {
