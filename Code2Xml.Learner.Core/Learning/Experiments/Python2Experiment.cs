@@ -223,7 +223,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             LearnAndApply(seedPaths, LearningSets, Experiments);
         }
 
-        [Test, TestCaseSource("TestCases")]
+        //[Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath) {
             var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.py"), };
             Learn(seedPaths, exp, projectPath);
