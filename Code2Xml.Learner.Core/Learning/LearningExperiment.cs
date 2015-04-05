@@ -24,6 +24,7 @@ using System.Linq;
 using System.Numerics;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.SyntaxTree;
+using Code2Xml.Learner.Core.Learning.Experiments;
 using Paraiba.Linq;
 
 namespace Code2Xml.Learner.Core.Learning {
@@ -86,6 +87,11 @@ namespace Code2Xml.Learner.Core.Learning {
 			Console.WriteLine("#Unique Elements: " + encodingResult.VectorCount);
 			if (encodingResult.IdealAcceptedVector2GroupPath.Keys.ToHashSet()
 					.Overlaps(encodingResult.IdealRejectedVector2GroupPath.Keys.ToHashSet())) {
+			    var others = encodingResult.IdealRejectedVector2GroupPath;
+			    var vector = encodingResult.IdealAcceptedVector2GroupPath.Keys.First(others.ContainsKey);
+			    foreach (var featureString in featureEncoder.GetFeatureStringsByVector(vector)) {
+			        Console.WriteLine(Experiment.Beautify(featureString));
+			    }
 				throw new Exception("Master predicates can't classify elements!");
 			}
 

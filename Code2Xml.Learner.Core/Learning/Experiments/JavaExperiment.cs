@@ -757,10 +757,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             if (node.FirstChild.Name == "block") {
                 return false;
             }
-            // ラベルはループ文に付くため，ラベルの中身は除外
-            var second = node.Siblings().ElementAtOrDefault(1);
-            if (second != null && second.TokenText == ":"
-                && node.Parent.Name == "statement") {
+            // ラベルを持つステートメントを除外
+            if (node.FirstChild.Name == "IDENTIFIER") {
                 return false;
             }
             if (node.FirstChild.TokenText == ";") {
@@ -817,8 +815,7 @@ statement
 
         public bool IsLabeledStatement(CstNode e) {
             // LABEL: should_be_ignored();
-            var second = e.Siblings().ElementAtOrDefault(1);
-            return second != null && second.TokenText == ":";
+            return e.FirstChild.Name == "IDENTIFIER";
         }
     }
 
@@ -870,11 +867,9 @@ statement
         public JavaLabeledStatementExperiment() : base("statement") {}
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            // ラベルはループ文に付くため，ラベルの中身は除外
-            var second = node.Siblings().ElementAtOrDefault(1);
-            if (second != null && second.TokenText == ":"
-                && node.Parent.Name == "statement") {
-                return true;
+            // ラベルを持つステートメントを除外
+            if (node.FirstChild.Name == "IDENTIFIER") {
+                return false;
             }
             return false;
         }

@@ -143,7 +143,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             return learningResult;
         }
 
-        private string Beautify(string path) {
+        public static string Beautify(string path) {
             return path.Replace(">", " > ").Replace("<", " < ");
         }
 
