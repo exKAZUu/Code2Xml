@@ -32,9 +32,9 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
 		private static readonly LearningExperiment[] Experiments = {
 			new JavaScriptComplexStatementExperiment(),
-			new JavaScriptSuperComplexBranchExperiment(),
-			new JavaScriptExpressionStatementExperiment(),  // NG
-			new JavaScriptArithmeticOperatorExperiment(), // NG
+            new JavaScriptSuperComplexBranchExperiment(),
+            new JavaScriptExpressionStatementExperiment(),  // NG
+            new JavaScriptArithmeticOperatorExperiment(), // NG
 			//new JavaScriptSwitchCaseExperiment(),
 			//new JavaScriptSuperComplexBranchExperimentWithSwitch(),
 			//new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue(), 

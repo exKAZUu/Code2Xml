@@ -66,13 +66,11 @@ namespace Code2Xml.Learner.Core.Learning {
 		}
 
 		public IDictionary<BigInteger, int> Vector2Count { get; private set; }
-		public IDictionary<BigInteger, string> Vector2Path { get; private set; }
 
 		public EncodingResult() {
 			Vector2GroupPath = new Dictionary<BigInteger, string>();
 			_vector2Node = new Dictionary<BigInteger, CstNode>();
 			Vector2Count = new Dictionary<BigInteger, int>();
-			Vector2Path = new Dictionary<BigInteger, string>();
 
 			IdealVectorSet = new RevealedVectorSet();
 			SeedVectorSet = new RevealedVectorSet();
@@ -88,7 +86,6 @@ namespace Code2Xml.Learner.Core.Learning {
 			Vector2GroupPath = Vector2GroupPath.ToImmutableDictionary();
 			_vector2Node = _vector2Node.ToImmutableDictionary();
 			Vector2Count = Vector2Count.ToImmutableDictionary();
-			Vector2Path = Vector2Path.ToImmutableDictionary();
 
 			IdealVectorSet.MakeImmutable();
 			SeedVectorSet.MakeImmutable();

@@ -30,6 +30,7 @@ namespace Code2Xml.Learner.Core.Learning {
 	public class LearningResult {
 		public ClassificationResult ClassificationResult { get; set; }
 		public Classifier Classifier { get; set; }
+		public EncodingResult EncodingResult { get; set; }
 		public FeatureEncoder FeatureEncoder { get; set; }
 	}
 
@@ -132,6 +133,7 @@ namespace Code2Xml.Learner.Core.Learning {
 			return new LearningResult {
 				ClassificationResult = classificationResult,
 				Classifier = classifier,
+                EncodingResult = encodingResult,
 				FeatureEncoder = featureEncoder,
 			};
 		}

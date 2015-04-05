@@ -95,8 +95,8 @@ namespace Code2Xml.Learner.Core.Learning {
 				return paths;
 			}
 			// 自分自身の位置による区別も考慮する
-			//ret.Add(node.Name);
-			paths.Add(node.Name + node.RuleId);
+			paths.Add(node.Name);
+			//paths.Add(node.Name + node.RuleId);   // JavaScriptComplexStatementExperiment cannot work
 			paths.Add("'" + extractor.GetToken(node));
 
 			var children = new List<Tuple<CstNode, string>>();
@@ -196,8 +196,8 @@ namespace Code2Xml.Learner.Core.Learning {
 				this CstNode node, int length, FeatureExtractor extractor) {
 			var paths = new HashSet<string>();
 			// 自分自身の位置による区別も考慮する
-			//ret.Add(node.Name);
-			paths.Add(node.Name + node.RuleId);
+			paths.Add(node.Name);
+			//paths.Add(node.Name + node.RuleId);   // JavaScriptComplexStatementExperiment cannot work
 			paths.Add("'" + extractor.GetToken(node));
 
 			var children = new List<Tuple<CstNode, string>>();
@@ -289,12 +289,13 @@ namespace Code2Xml.Learner.Core.Learning {
 				FeatureExtractor extractor) {
 			var ret = BigInteger.Zero;
 			BigInteger bit;
-			//if (key2Bit.TryGetValue(node.Name, out bit)) {
-			//    ret |= bit;
-			//}
-			if (featureString2Bit.TryGetValue(node.Name + node.RuleId, out bit)) {
+			if (featureString2Bit.TryGetValue(node.Name, out bit)) {
 				ret |= bit;
 			}
+            // JavaScriptComplexStatementExperiment cannot work
+            //if (featureString2Bit.TryGetValue(node.Name + node.RuleId, out bit)) {
+            //    ret |= bit;
+            //}
 			if (featureString2Bit.TryGetValue("'" + extractor.GetToken(node), out bit)) {
 				ret |= bit;
 			}
