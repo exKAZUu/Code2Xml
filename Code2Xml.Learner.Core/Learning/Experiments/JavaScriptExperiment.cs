@@ -31,20 +31,20 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		public static CstGenerator Generator = CstGenerators.JavaScriptUsingAntlr3;
 
 		private static readonly LearningExperiment[] Experiments = {
-			new JavaScriptComplexStatementExperiment(),
+			//new JavaScriptComplexStatementExperiment(),
             new JavaScriptSuperComplexBranchExperiment(),
-            new JavaScriptExpressionStatementExperiment(),  // NG
-            new JavaScriptArithmeticOperatorExperiment(), // NG
+            //new JavaScriptExpressionStatementExperiment(),  // NG
+            //new JavaScriptArithmeticOperatorExperiment(), // NG
 			//new JavaScriptSwitchCaseExperiment(),
 			//new JavaScriptSuperComplexBranchExperimentWithSwitch(),
 			//new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue(), 
 
-			//new JavaScriptComplexBranchExperiment(),
-			//new JavaScriptIfExperiment(),
-			//new JavaScriptWhileExperiment(),
-			//new JavaScriptDoWhileExperiment(),
-			//new JavaScriptForExperiment(),
-			//new JavaScriptConsoleLogExperiment(),
+			new JavaScriptComplexBranchExperiment(),
+			new JavaScriptIfExperiment(),
+			new JavaScriptWhileExperiment(),
+			new JavaScriptDoWhileExperiment(),
+			new JavaScriptForExperiment(),
+			new JavaScriptConsoleLogExperiment(),
 			//new JavaScriptStatementExperiment(),
 			//new JavaScriptBlockExperiment(),
 			//new JavaScriptLabeledStatementExperiment(),
@@ -244,7 +244,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 	}
 
 	public class JavaScriptSuperComplexBranchExperiment : LearningExperiment {
-		public JavaScriptSuperComplexBranchExperiment() : base("expression") {}
+		public JavaScriptSuperComplexBranchExperiment() : base("expression", "assignmentExpression") {}
 
 		protected override CstGenerator Generator {
 			get { return JavaScriptExperiment.Generator; }
@@ -254,7 +254,34 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 			return new FeatureExtractor(2, 0, 1, 0);
 		}
 
-		public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                "console.log(b)",
+	                "for (; b;)",
+	                "while (b) {",
+	                "} while (b);",
+	                "if (b) {",
+	                "if (b) {",
+	                "for (; a, b;)",
+	                "while (a, b) {",
+	                "} while (a, b)",
+	                "if (a, b) {",
+	                "if (a, b) {",
+	                "for (; true;)",
+	                "while (true) {",
+	                "} while (true)",
+	                "if (true) {",
+	                "if (true) {",
+	            };
+	        }
+	    }
+
+	    public override IEnumerable<string> RejectingFragments {
+	        get { return Enumerable.Empty<string>(); }
+	    }
+
+	    public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
 			var parentName = node.Parent.SafeName();
 			if (parentName == "ifStatement") {
 				return true;
@@ -276,30 +303,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 			}
 			return false;
 		}
-
-		public override IList<CstNode> GetRootsUsingOracle(CstNode node) {
-			var parentName = node.Parent.SafeName();
-			if (parentName == "ifStatement") {
-				return new[] { node.Prev.Prev, node.Prev, node };
-			}
-			if (parentName == "whileStatement") {
-				return new[] { node.Prev.Prev, node.Prev, node };
-			}
-			if (parentName == "doWhileStatement") {
-				return new[] { node.Prev.Prev, node.Prev, node, node.Next };
-			}
-			if (parentName == "forStatement"
-			    && node.Prev == node.Parent.Children().First(e2 => e2.TokenText == ";")) {
-				return node.PrevsFromSelfAndSelf().Concat(Enumerable.Repeat(node.Next, 1))
-						.ToList();
-			}
-			var pp = node.SafeParent().SafeParent();
-			if (pp.SafeName() == "callExpression" && pp.FirstChild.TokenText == "console.log" &&
-			    pp.Child("arguments").Child("assignmentExpression") == node) {
-				return new[] { pp };
-			}
-			return new CstNode[0];
-		}
 	}
 
 	public class JavaScriptComplexBranchExperiment : LearningExperiment {
@@ -312,6 +315,32 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		public override FeatureExtractor CreateExtractor() {
 			return new FeatureExtractor(0, 0, 0, 0);
 		}
+
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                "for (; b;)",
+	                "while (b) {",
+	                "} while (b);",
+	                "if (b) {",
+	                "if (b) {",
+	                "for (; a, b;)",
+	                "while (a, b) {",
+	                "} while (a, b)",
+	                "if (a, b) {",
+	                "if (a, b) {",
+	                "for (; true;)",
+	                "while (true) {",
+	                "} while (true)",
+	                "if (true) {",
+	                "if (true) {",
+	            };
+	        }
+	    }
+
+	    public override IEnumerable<string> RejectingFragments {
+	        get { return Enumerable.Empty<string>(); }
+	    }
 
 		public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
 			var parentName = node.Parent.SafeName();
@@ -343,6 +372,23 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 			return new FeatureExtractor(0, 0, 0, 0);
 		}
 
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                "if (b) {",
+	                "if (b) {",
+	                "if (a, b) {",
+	                "if (a, b) {",
+	                "if (true) {",
+	                "if (true) {",
+	            };
+	        }
+	    }
+
+	    public override IEnumerable<string> RejectingFragments {
+	        get { return Enumerable.Empty<string>(); }
+	    }
+
 		public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
 			var parentName = node.Parent.SafeName();
 			if (parentName == "ifStatement") {
@@ -362,6 +408,20 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		public override FeatureExtractor CreateExtractor() {
 			return new FeatureExtractor(0, 0, 0, 0);
 		}
+
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                "while (b) {",
+	                "while (a, b) {",
+	                "while (true) {",
+	            };
+	        }
+	    }
+
+	    public override IEnumerable<string> RejectingFragments {
+	        get { return Enumerable.Empty<string>(); }
+	    }
 
 		public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
 			var parentName = node.Parent.SafeName();
@@ -383,6 +443,20 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 			return new FeatureExtractor(0, 0, 0, 0);
 		}
 
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                "} while (b);",
+	                "} while (a, b)",
+	                "} while (true)",
+	            };
+	        }
+	    }
+
+	    public override IEnumerable<string> RejectingFragments {
+	        get { return Enumerable.Empty<string>(); }
+	    }
+
 		public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
 			var parentName = node.Parent.SafeName();
 			if (parentName == "doWhileStatement") {
@@ -402,6 +476,20 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		public override FeatureExtractor CreateExtractor() {
 			return new FeatureExtractor(0, 0, 0, 0);
 		}
+
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                "for (; b;)",
+	                "for (; a, b;)",
+	                "for (; true;)",
+	            };
+	        }
+	    }
+
+	    public override IEnumerable<string> RejectingFragments {
+	        get { return Enumerable.Empty<string>(); }
+	    }
 
 		public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
 			var parentName = node.Parent.SafeName();
@@ -424,6 +512,18 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 			return new FeatureExtractor(0, 0, 0, 0);
 		}
 
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                "console.log(b);",
+	            };
+	        }
+	    }
+
+	    public override IEnumerable<string> RejectingFragments {
+	        get { return Enumerable.Empty<string>(); }
+	    }
+
 		public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
 			var p = node.SafeParent().SafeParent();
 			if (p.SafeName() == "callExpression" && p.FirstChild.TokenText == "console.log" &&
@@ -442,6 +542,56 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		public override FeatureExtractor CreateExtractor() {
 			return new FeatureExtractor();
 		}
+
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                @"console.log(b);",
+	                @"for (; b;) { }",
+	                @"{ }",
+	                @"while (b) { }",
+	                @"{ }",
+	                @"do { } while (b);",
+	                @"{ }",
+	                @"if (b) { } else if (b) { } else { }",
+	                @"{ }",
+	                @"if (b) { } else { }",
+	                @"{ }",
+	                @"{ }",
+	                @"for (; a, b;) { }",
+	                @"{ }",
+	                @"while (a, b) { }",
+	                @"{ }",
+	                @"do { } while (a, b);",
+	                @"{ }",
+	                @"if (a, b) { } else if (a, b) { } else { }",
+	                @"{ }",
+	                @"if (a, b) { } else { }",
+	                @"{ }",
+	                @"{ }",
+	                @"{}",
+	                @"{ i = 1; }",
+	                @"i = 1;",
+	                @";",
+	                @"i = 1;",
+	                @"T:
+f(0 + 1 - 2 * 3 / 4 % 5);",
+	                @"f(0 + 1 - 2 * 3 / 4 % 5);",
+	                @"switch (1) {
+	case 0:
+		break;
+	default:
+		break;
+}",
+	                @"break;",
+	                @"break;",
+	            };
+	        }
+	    }
+
+	    public override IEnumerable<string> RejectingFragments {
+	        get { return Enumerable.Empty<string>(); }
+	    }
 
 		public JavaScriptStatementExperiment() : base("statement") {}
 

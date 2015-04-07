@@ -20,54 +20,62 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
+using Code2Xml.Core.Location;
 using Code2Xml.Core.SyntaxTree;
 using Paraiba.Linq;
 
 namespace Code2Xml.Learner.Core.Learning {
-	[Serializable]
-	public class FeatuerSet {
-		private const int SurroundingLength = 7;
+    [Serializable]
+    public class FeatuerSet {
+        public IList<string> AcceptingFeatures { get; private set; }
+        public IList<string> RejectingFeatures { get; private set; }
 
-		public IList<string> AcceptingFeatures { get; private set; }
-		public IList<string> RejectingFeatures { get; private set; }
+        public int AcceptingFeatureCount {
+            get { return AcceptingFeatures.Count; }
+        }
 
-		public int AcceptingFeatureCount {
-			get { return AcceptingFeatures.Count; }
-		}
+        public int RejectingFeatureCount {
+            get { return RejectingFeatures.Count; }
+        }
 
-		public int RejectingFeatureCount {
-			get { return RejectingFeatures.Count; }
-		}
+        public int FeatureCount {
+            get { return AcceptingFeatureCount + RejectingFeatureCount; }
+        }
 
-		public int FeatureCount {
-			get { return AcceptingFeatureCount + RejectingFeatureCount; }
-		}
+        public FeatuerSet(
+                SeedNodeSet seedNodeSet, FeatureExtractor extractor,
+                IEnumerable<CodeRange> acceptingRanges, IEnumerable<CodeRange> rejectingRanges) {
+            AcceptingFeatures =
+                    CreateAcceptingFeatures(seedNodeSet.AcceptedNodes, extractor,
+                            acceptingRanges)
+                            .ToImmutableList();
+            RejectingFeatures =
+                    CreateRejectingFeatures(seedNodeSet.RejectedNodes, extractor,
+                            rejectingRanges)
+                            .ToImmutableList();
+        }
 
-		public FeatuerSet(SeedNodeSet seedNodeSet, FeatureExtractor extractor, ILearningExperiment oracle) {
-			AcceptingFeatures = CreateAcceptingFeatures(seedNodeSet.SeedAcceptedNodes, extractor, oracle)
-					.ToImmutableList();
-			RejectingFeatures = CreateRejectingFeatures(seedNodeSet.SeedRejectedNodes, extractor, oracle)
-					.ToImmutableList();
-		}
+        private IEnumerable<string> CreateRejectingFeatures(
+                IEnumerable<CstNode> rejectedNodes, FeatureExtractor extractor,
+                IEnumerable<CodeRange> ranges) {
+            var rejectingFeatureSet = rejectedNodes
+                    .GetUnionKeys(ranges, extractor)
+                    .ToHashSet();
+            rejectingFeatureSet.ExceptWith(AcceptingFeatures);
+            var rejectingFeatures = rejectingFeatureSet.ToList();
+            rejectingFeatures.Sort((s1, s2) => s1.Length.CompareTo(s2.Length));
+            return rejectingFeatures;
+        }
 
-		private IEnumerable<string> CreateRejectingFeatures(
-				IEnumerable<CstNode> rejectedNodes, FeatureExtractor extractor, ILearningExperiment oracle) {
-			var rejectingFeatureSet = rejectedNodes.GetUnionKeys(SurroundingLength, extractor, oracle)
-					.ToHashSet();
-			rejectingFeatureSet.ExceptWith(AcceptingFeatures);
-			var rejectingFeatures = rejectingFeatureSet.ToList();
-			rejectingFeatures.Sort((s1, s2) => s1.Length.CompareTo(s2.Length));
-			return rejectingFeatures;
-		}
-
-		private static IEnumerable<string> CreateAcceptingFeatures(
-				IEnumerable<CstNode> acceptedNodes, FeatureExtractor extractor, ILearningExperiment oracle) {
-			var acceptingFeatures = acceptedNodes
-					.GetUnionKeys(SurroundingLength, extractor, oracle)
-					.Distinct()
-					.ToList();
-			acceptingFeatures.Sort((s1, s2) => s1.Length.CompareTo(s2.Length));
-			return acceptingFeatures;
-		}
-	}
+        private static IEnumerable<string> CreateAcceptingFeatures(
+                IEnumerable<CstNode> acceptedNodes, FeatureExtractor extractor,
+                IEnumerable<CodeRange> ranges) {
+            var acceptingFeatures = acceptedNodes
+                    .GetUnionKeys(ranges, extractor)
+                    .Distinct()
+                    .ToList();
+            acceptingFeatures.Sort((s1, s2) => s1.Length.CompareTo(s2.Length));
+            return acceptingFeatures;
+        }
+    }
 }

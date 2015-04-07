@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Numerics;
 
@@ -22,6 +23,9 @@ namespace Code2Xml.Learner.Core.Learning {
 				_vector2GroupIndex.Add(kv.Key, index);
 			}
 			foreach (var kv in _encodingResult.IdealRejectedVector2GroupPath) {
+			    if (kv.Value == ">") {
+			        Console.WriteLine("a");
+			    }
 				var index = classifier.GetGroupIndex(kv.Value);
 				_vector2GroupIndex.Add(kv.Key, index);
 			}

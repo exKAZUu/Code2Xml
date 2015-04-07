@@ -26,8 +26,8 @@ using Code2Xml.Learner.Core.Learning;
 namespace Code2Xml.Learner.Core {
 	public class SeedNodeSet {
 		public ISet<string> SelectedNodeNames { get; private set; }
-		public ISet<CstNode> SeedAcceptedNodes { get; private set; }
-		public IList<CstNode> SeedRejectedNodes { get; private set; }
+		public ISet<CstNode> AcceptedNodes { get; private set; }
+		public IList<CstNode> RejectedNodes { get; private set; }
 
 		public SeedNodeSet(
 				IEnumerable<CstNode> seedNodes, IList<CstNode> seedCsts, LearningExperiment oracle) {
@@ -36,14 +36,14 @@ namespace Code2Xml.Learner.Core {
 			SelectedNodeNames = SelectNodeNames(uppermostSeedAcceptedNodes)
 					.ToImmutableHashSet();
 
-			SeedAcceptedNodes = CreateAcceptedNodes(uppermostSeedAcceptedNodes)
+			AcceptedNodes = CreateAcceptedNodes(uppermostSeedAcceptedNodes)
 					.ToImmutableHashSet();
-			if (!SeedAcceptedNodes.Any()) {
+			if (!AcceptedNodes.Any()) {
 				throw new Exception("There are no accepted seed nodes!");
 			}
 			VerifySeedAcceptedNodes(seedCsts, uppermostSeedAcceptedNodes, oracle);
 
-			SeedRejectedNodes = CreateRejectedNodes(seedCsts, SeedAcceptedNodes)
+			RejectedNodes = CreateRejectedNodes(seedCsts, AcceptedNodes)
 					.ToImmutableList();
 		}
 

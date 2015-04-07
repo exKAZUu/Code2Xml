@@ -20,386 +20,251 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using Code2Xml.Core.Location;
 using Code2Xml.Core.SyntaxTree;
 using Paraiba.Linq;
 
 namespace Code2Xml.Learner.Core.Learning {
-	public static class SurroundingNodeTraversal {
-		public static double[] BigIntegerToDoubles(this BigInteger i, int bitLength) {
-			var doubles = new List<double>();
-			for (int j = 0; j < bitLength; j++) {
-				if ((i & BigInteger.One) != BigInteger.Zero) {
-					doubles.Add(1);
-				} else {
-					doubles.Add(0);
-				}
-				i >>= 1;
-			}
-			return doubles.ToArray();
-		}
+    public static class SurroundingNodeTraversal {
+        public static double[] BigIntegerToDoubles(this BigInteger i, int bitLength) {
+            var doubles = new List<double>();
+            for (int j = 0; j < bitLength; j++) {
+                if ((i & BigInteger.One) != BigInteger.Zero) {
+                    doubles.Add(1);
+                } else {
+                    doubles.Add(0);
+                }
+                i >>= 1;
+            }
+            return doubles.ToArray();
+        }
 
-		public static string BigIntegerToString(this BigInteger i) {
-			var ret = "";
-			while (i != BigInteger.Zero) {
-				if ((i & BigInteger.One) != BigInteger.Zero) {
-					ret = "1" + ret;
-				} else {
-					ret = "0" + ret;
-				}
-				i >>= 1;
-			}
-			return ret;
-		}
+        public static string BigIntegerToString(this BigInteger i) {
+            var ret = "";
+            while (i != BigInteger.Zero) {
+                if ((i & BigInteger.One) != BigInteger.Zero) {
+                    ret = "1" + ret;
+                } else {
+                    ret = "0" + ret;
+                }
+                i >>= 1;
+            }
+            return ret;
+        }
 
-		public static HashSet<string> GetUnionKeys(
-				this IEnumerable<CstNode> targets, int length, FeatureExtractor extractor,
-				ILearningExperiment oracle) {
-			var commonKeys = new HashSet<string>();
-			foreach (var target in targets) {
-				var roots = oracle.GetRootsUsingOracle(target);
-				var keys = roots == null
-						? target.GetSurroundingPaths(length, extractor)
-						: target.GetSurroundingPathsFilteringByRoots(roots, length, extractor);
-				commonKeys.UnionWith(keys);
-			}
-			return commonKeys;
-		}
+        public static HashSet<string> GetUnionKeys(
+                this IEnumerable<CstNode> targets, IEnumerable<CodeRange> ranges, FeatureExtractor extractor) {
+            var commonKeys = new HashSet<string>();
+            var rangeList = ranges.ToList();
+            foreach (var target in targets) {
+                var index = rangeList.FindIndex(range => range.Contains(target));
+                if (index < 0) {
+                    continue;
+                }
+                var surroundingNodes = rangeList[index]
+                        .FindOverlappedNodes(target.AncestorsAndSelf().Last())
+                        .ToHashSet();
+                var keys = target
+                    .GetSurroundingPathsFilteringBySurroundingNodes(surroundingNodes, extractor);
+                commonKeys.UnionWith(keys);
+                rangeList[index] = CodeRange.Nil;
+            }
+            return commonKeys;
+        }
 
-		public static HashSet<string> GetCommonKeys(
-				this IEnumerable<CstNode> targets, int length, FeatureExtractor extractor,
-				ILearningExperiment oracle) {
-			HashSet<string> commonKeys = null;
-			foreach (var target in targets) {
-				var roots = oracle.GetRootsUsingOracle(target);
-				var keys = roots == null
-						? target.GetSurroundingPaths(length, extractor)
-						: target.GetSurroundingPathsFilteringByRoots(roots, length, extractor);
-				if (commonKeys == null) {
-					commonKeys = keys;
-				} else {
-					commonKeys.IntersectWith(keys);
-				}
-			}
-			return commonKeys;
-		}
+        private static bool CanSkip(CstNode node) {
+            var tokenText = node.TokenText;
+            return tokenText.Length == 1 && char.IsLetter(tokenText[0]);
+        }
 
-		private static bool CanSkip(CstNode node) {
-			var tokenText = node.TokenText;
-			return tokenText.Length == 1 && char.IsLetter(tokenText[0]);
-		}
+        public static HashSet<string> GetSurroundingPathsFilteringBySurroundingNodes(
+                this CstNode node, HashSet<CstNode> surroundingNodes, FeatureExtractor extractor) {
+            var paths = new HashSet<string>();
+            var children = new List<Tuple<CstNode, string>> { Tuple.Create(node, "") };
 
-		public static HashSet<string> GetSurroundingPathsFilteringByRoots(
-				this CstNode node, IList<CstNode> roots, int length, FeatureExtractor extractor) {
-			var paths = new HashSet<string>();
-			if (!roots.IsIntersect(node.AncestorsAndSelf())) {
-				return paths;
-			}
-			// 自分自身の位置による区別も考慮する
-			paths.Add(node.Name);
-			//paths.Add(node.Name + node.RuleId);   // JavaScriptComplexStatementExperiment cannot work
-			paths.Add("'" + extractor.GetToken(node));
+            var i = 1;
+            // 自分自身の位置による区別も考慮する
+            paths.Add("'" + extractor.GetToken(node));
+            if (!surroundingNodes.Contains(node.Parent)) {
+                paths.Add(node.Name);
+            } else {
+                paths.Add(node.Name + node.RuleId);
+                extractor.IsInner = false;
 
-			var children = new List<Tuple<CstNode, string>>();
-			children.Add(Tuple.Create(node, ""));
+                var parent = Tuple.Create(node, "");
+                while (children.Any() || parent != null) {
+                    var newChildren = new List<Tuple<CstNode, string>>();
+                    foreach (var t in children) {
+                        foreach (var child in t.Item1.Children()) {
+                            if (!CanSkip(child) && surroundingNodes.Contains(child)) {
+                                var key = t.Item2 + ">" + child.Name + child.RuleId;
+                                newChildren.Add(Tuple.Create(child, key));
+                                // for Preconditions.checkArguments()
+                                paths.Add(t.Item2 + ">'" + extractor.GetToken(child));
+                            }
+                        }
+                    }
+                    if (parent != null) {
+                        var newParent = parent.Item1.Parent;
+                        if (surroundingNodes.Contains(newParent)) {
+                            var parentPathUnit = parent.Item2 + "<" + newParent.Name
+                                                 + newParent.RuleId;
+                            paths.Add(parentPathUnit);
+                            parent.Item1.PrevsFromSelf().Take(10)
+                                    .ForEach((child, index) => {
+                                        if (surroundingNodes.Contains(child)) {
+                                            var key = parentPathUnit + '-' + index +
+                                                      ">" + child.Name + child.RuleId;
+                                            newChildren.Add(Tuple.Create(child, key));
+                                            // for Preconditions.checkArguments()
+                                            paths.Add(parentPathUnit + '-' + index + ">'"
+                                                      + extractor.GetToken(child));
+                                        }
+                                    });
+                            parent.Item1.NextsFromSelf().Take(10)
+                                    .ForEach((child, index) => {
+                                        if (surroundingNodes.Contains(child)) {
+                                            var key = parentPathUnit + '+' + index +
+                                                      ">" + child.Name + child.RuleId;
+                                            newChildren.Add(Tuple.Create(child, key));
+                                            // for Preconditions.checkArguments()
+                                            paths.Add(parentPathUnit + '+' + index +
+                                                      ">'" + extractor.GetToken(child));
+                                        }
+                                    });
+                            parent = Tuple.Create(newParent, parentPathUnit);
+                        } else {
+                            parent = null;
+                        }
+                    }
+                    paths.UnionWith(newChildren.Select(t => t.Item2));
+                    children = newChildren;
+                }
+            }
+            while (children.Any()) {
+                var newChildren = new List<Tuple<CstNode, string>>();
+                foreach (var t in children) {
+                    foreach (var child in t.Item1.Children()) {
+                        if (!CanSkip(child) && surroundingNodes.Contains(child)) {
+                            var key = t.Item2 + ">" + child.Name + child.RuleId;
+                            newChildren.Add(Tuple.Create(child, key));
+                            // for Preconditions.checkArguments()
+                            paths.Add(t.Item2 + ">'" + extractor.GetToken(child));
+                        }
+                    }
+                }
+                paths.UnionWith(newChildren.Select(t => t.Item2));
+                children = newChildren;
+            }
+            return paths;
+        }
 
-			//var ancestorStr = "";
-			//foreach (var e in node.AncestorsWithSingleChild()) {
-			//    ancestorStr = ancestorStr + "<" + e.RuleId;
-			//    ret.Add(ancestorStr);
-			//}
-			var i = 1;
-			if (!extractor.IsInner) {
-				var parent = Tuple.Create(node, "");
-				//var descendantStr = "";
-				//foreach (var e in node.DescendantsOfSingle()) {
-				//    descendantStr = descendantStr + ">" + e.RuleId;
-				//    ret.Add(descendantStr);
-				//}
-				var maxUp = extractor.MaxUp < 0 ? length : extractor.MaxUp;
-				var maxLeft = extractor.MaxLeft < 0 ? 10 : extractor.MaxLeft;
-				var maxRight = extractor.MaxRight < 0 ? 10 : extractor.MaxRight;
-				for (; i <= maxUp; i++) {
-					var newChildren = new List<Tuple<CstNode, string>>();
-					foreach (var t in children) {
-						foreach (var child in t.Item1.Children()) {
-							if (CanSkip(child)) {
-								continue;
-							}
-							var key = t.Item2 + ">" + child.Name + child.RuleId;
-							newChildren.Add(Tuple.Create(child, key));
-							// for Preconditions.checkArguments()
-							paths.Add(t.Item2 + ">'" + extractor.GetToken(child));
-						}
-					}
-					var parentPathUnit = parent.Item1.Parent != null ? parent.Item1.Parent.Name : "";
-					parent.Item1.PrevsFromSelf().Take(i != maxUp ? 10 : maxLeft)
-							.ForEach(
-									(child, index) => {
-										if (roots.IsIntersect(child.AncestorsAndSelf())) {
-											var key = parent.Item2 + "<" + parentPathUnit + '-'
-											          + index
-											          + ">" + child.Name + child.RuleId;
-											newChildren.Add(Tuple.Create(child, key));
-											// for Preconditions.checkArguments()
-											paths.Add(
-													parent.Item2 + "<" + parentPathUnit + '-'
-													+ index
-													+ ">'" + extractor.GetToken(child));
-										}
-									});
-					parent.Item1.NextsFromSelf().Take(i != maxUp ? 10 : maxRight)
-							.ForEach(
-									(child, index) => {
-										if (roots.IsIntersect(child.AncestorsAndSelf())) {
-											var key = parent.Item2 + "<" + parentPathUnit + '-'
-											          + index
-											          + ">" + child.Name + child.RuleId;
-											newChildren.Add(Tuple.Create(child, key));
-											// for Preconditions.checkArguments()
-											paths.Add(
-													parent.Item2 + "<" + parentPathUnit + '-'
-													+ index
-													+ ">'" + extractor.GetToken(child));
-										}
-									});
-					paths.UnionWith(newChildren.Select(t => t.Item2));
-					children = newChildren;
+        public static BigInteger GetFeatureVector(
+                this CstNode node, IDictionary<string, BigInteger> featureString2Bit,
+                FeatureExtractor extractor) {
+            var ret = BigInteger.Zero;
+            BigInteger bit;
 
-					var newParent = parent.Item1.Parent;
-					if (newParent == null || !roots.IsIntersect(newParent.AncestorsAndSelf())) {
-						break;
-					}
-					parent = Tuple.Create(newParent, parent.Item2 + "<" + newParent.Name + newParent.RuleId);
-					paths.Add(parent.Item2);
-				}
-			}
-			for (; i <= length; i++) {
-				var newChildren = new List<Tuple<CstNode, string>>();
-				foreach (var t in children) {
-					foreach (var child in t.Item1.Children()) {
-						if (CanSkip(child)) {
-							continue;
-						}
-						var key = t.Item2 + ">" + child.Name + child.RuleId;
-						newChildren.Add(Tuple.Create(child, key));
-						// for Preconditions.checkArguments()
-						paths.Add(t.Item2 + ">'" + extractor.GetToken(child));
-					}
-				}
-				paths.UnionWith(newChildren.Select(t => t.Item2));
-				children = newChildren;
-			}
-			return paths;
-		}
+            var children = new List<Tuple<CstNode, string>>();
+            children.Add(Tuple.Create(node, ""));
 
-		public static HashSet<string> GetSurroundingPaths(
-				this CstNode node, int length, FeatureExtractor extractor) {
-			var paths = new HashSet<string>();
-			// 自分自身の位置による区別も考慮する
-			paths.Add(node.Name);
-			//paths.Add(node.Name + node.RuleId);   // JavaScriptComplexStatementExperiment cannot work
-			paths.Add("'" + extractor.GetToken(node));
-
-			var children = new List<Tuple<CstNode, string>>();
-			children.Add(Tuple.Create(node, ""));
-			//var ancestorStr = "";
-			//foreach (var e in node.AncestorsWithSingleChild()) {
-			//    ancestorStr = ancestorStr + "<" + e.RuleId;
-			//    ret.Add(ancestorStr);
-			//}
-			var i = 1;
-			if (!extractor.IsInner) {
-				var parent = Tuple.Create(node, "");
-				//var descendantStr = "";
-				//foreach (var e in node.DescendantsOfSingle()) {
-				//    descendantStr = descendantStr + ">" + e.RuleId;
-				//    ret.Add(descendantStr);
-				//}
-				var maxUp = extractor.MaxUp < 0 ? length : extractor.MaxUp;
-				var maxLeft = extractor.MaxLeft < 0 ? 10 : extractor.MaxLeft;
-				var maxRight = extractor.MaxRight < 0 ? 10 : extractor.MaxRight;
-				for (; i <= maxUp; i++) {
-					var newChildren = new List<Tuple<CstNode, string>>();
-					foreach (var t in children) {
-						foreach (var child in t.Item1.Children()) {
-							if (CanSkip(child)) {
-								continue;
-							}
-							var key = t.Item2 + ">" + child.Name + child.RuleId;
-							newChildren.Add(Tuple.Create(child, key));
-							// for Preconditions.checkArguments()
-							paths.Add(t.Item2 + ">'" + extractor.GetToken(child));
-						}
-					}
-					var parentPathUnit = parent.Item1.Parent != null ? parent.Item1.Parent.Name : "";
-					parent.Item1.PrevsFromSelf().Take(i != maxUp ? 10 : maxLeft)
-							.ForEach(
-									(child, index) => {
-										var key = parent.Item2 + "<" + parentPathUnit + '-' + index
-										          + ">" + child.Name + child.RuleId;
-										newChildren.Add(Tuple.Create(child, key));
-										// for Preconditions.checkArguments()
-										paths.Add(
-												parent.Item2 + "<" + parentPathUnit + '-' + index
-												+ ">'" + extractor.GetToken(child));
-									});
-					parent.Item1.NextsFromSelf().Take(i != maxUp ? 10 : maxRight)
-							.ForEach(
-									(child, index) => {
-										var key = parent.Item2 + "<" + parentPathUnit + '-' + index
-										          + ">" + child.Name + child.RuleId;
-										newChildren.Add(Tuple.Create(child, key));
-										// for Preconditions.checkArguments()
-										paths.Add(
-												parent.Item2 + "<" + parentPathUnit + '-' + index
-												+ ">'" + extractor.GetToken(child));
-									});
-					paths.UnionWith(newChildren.Select(t => t.Item2));
-					children = newChildren;
-
-					var newParent = parent.Item1.Parent;
-					if (newParent == null) {
-						break;
-					}
-					parent = Tuple.Create(newParent, parent.Item2 + "<" + newParent.Name + newParent.RuleId);
-					paths.Add(parent.Item2);
-				}
-			}
-			for (; i <= length; i++) {
-				var newChildren = new List<Tuple<CstNode, string>>();
-				foreach (var t in children) {
-					foreach (var child in t.Item1.Children()) {
-						if (CanSkip(child)) {
-							continue;
-						}
-						var key = t.Item2 + ">" + child.Name + child.RuleId;
-						newChildren.Add(Tuple.Create(child, key));
-						// for Preconditions.checkArguments()
-						paths.Add(t.Item2 + ">'" + extractor.GetToken(child));
-					}
-				}
-				paths.UnionWith(newChildren.Select(t => t.Item2));
-				children = newChildren;
-			}
-			return paths;
-		}
-
-		public static BigInteger GetFeatureVector(
-				this CstNode node, int length, IDictionary<string, BigInteger> featureString2Bit,
-				FeatureExtractor extractor) {
-			var ret = BigInteger.Zero;
-			BigInteger bit;
-			if (featureString2Bit.TryGetValue(node.Name, out bit)) {
-				ret |= bit;
-			}
-            // JavaScriptComplexStatementExperiment cannot work
-            //if (featureString2Bit.TryGetValue(node.Name + node.RuleId, out bit)) {
-            //    ret |= bit;
-            //}
-			if (featureString2Bit.TryGetValue("'" + extractor.GetToken(node), out bit)) {
-				ret |= bit;
-			}
-
-			var children = new List<Tuple<CstNode, string>>();
-			children.Add(Tuple.Create(node, ""));
-			//var ancestorStr = "";
-			//foreach (var e in node.AncestorsWithSingleChild()) {
-			//    ancestorStr = ancestorStr + "<" + e.RuleId;
-			//    if (key2Bit.TryGetValue(ancestorStr, out bit)) {
-			//        ret |= bit;
-			//    }
-			//}
-			var i = 1;
-			if (!extractor.IsInner) {
-				var parent = Tuple.Create(node, "");
-				//var descendantStr = "";
-				//foreach (var e in node.DescendantsOfSingle()) {
-				//    descendantStr = descendantStr + ">" + e.RuleId;
-				//    if (key2Bit.TryGetValue(descendantStr, out bit)) {
-				//        ret |= bit;
-				//    }
-				//}
-				var maxUp = extractor.MaxUp < 0 ? length : extractor.MaxUp;
-				var maxLeft = extractor.MaxLeft < 0 ? 10 : extractor.MaxLeft;
-				var maxRight = extractor.MaxRight < 0 ? 10 : extractor.MaxRight;
-				for (; i <= maxUp; i++) {
-					var newChildren = new List<Tuple<CstNode, string>>();
-					foreach (var t in children) {
-						foreach (var child in t.Item1.Children()) {
-							var key = t.Item2 + ">" + child.Name + child.RuleId;
-							if (featureString2Bit.TryGetValue(key, out bit)) {
-								newChildren.Add(Tuple.Create(child, key));
-								ret |= bit;
-							}
-							// for Preconditions.checkArguments()
-							if (featureString2Bit.TryGetValue(t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
-								ret |= bit;
-							}
-						}
-					}
-					var parentPathUnit = parent.Item1.Parent != null ? parent.Item1.Parent.Name : "";
-					parent.Item1.PrevsFromSelf().Take(i != maxUp ? 10 : maxLeft)
-							.ForEach(
-									(child, index) => {
-										var key = parent.Item2 + "<" + parentPathUnit + '-' + index
-										          + ">" + child.Name + child.RuleId;
-										if (featureString2Bit.TryGetValue(key, out bit)) {
-											newChildren.Add(Tuple.Create(child, key));
-											ret |= bit;
-										}
-										if (featureString2Bit.TryGetValue(
-												parent.Item2 + "<" + parentPathUnit + '-' + index
-												+ ">'" + extractor.GetToken(child), out bit)) {
-											ret |= bit;
-										}
-									});
-					parent.Item1.NextsFromSelf().Take(i != maxUp ? 10 : maxRight)
-							.ForEach(
-									(child, index) => {
-										var key = parent.Item2 + "<" + parentPathUnit + '-' + index
-										          + ">" + child.Name + child.RuleId;
-										if (featureString2Bit.TryGetValue(key, out bit)) {
-											newChildren.Add(Tuple.Create(child, key));
-											ret |= bit;
-										}
-										if (featureString2Bit.TryGetValue(
-												parent.Item2 + "<" + parentPathUnit + '-' + index
-												+ ">'" + extractor.GetToken(child), out bit)) {
-											ret |= bit;
-										}
-									});
-					children = newChildren;
-
-					var newParent = parent.Item1.Parent;
-					if (newParent == null) {
-						break;
-					}
-					parent = Tuple.Create(newParent, parent.Item2 + "<" + newParent.Name + newParent.RuleId);
-					if (featureString2Bit.TryGetValue(parent.Item2, out bit)) {
-						ret |= bit;
-					} else {
-						break;
-					}
-				}
-			}
-			for (; i <= length; i++) {
-				var newChildren = new List<Tuple<CstNode, string>>();
-				foreach (var t in children) {
-					foreach (var child in t.Item1.Children()) {
-						var key = t.Item2 + ">" + child.Name + child.RuleId;
-						if (featureString2Bit.TryGetValue(key, out bit)) {
-							newChildren.Add(Tuple.Create(child, key));
-							ret |= bit;
-						}
-						// for Preconditions.checkArguments()
-						if (featureString2Bit.TryGetValue(t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
-							ret |= bit;
-						}
-					}
-				}
-				children = newChildren;
-			}
-			return ret;
-		}
-	}
+            var i = 1;
+            if (featureString2Bit.TryGetValue("'" + extractor.GetToken(node), out bit)) {
+                ret |= bit;
+            }
+            if (extractor.IsInner) {
+                if (featureString2Bit.TryGetValue(node.Name, out bit)) {
+                    ret |= bit;
+                }
+            } else {
+                if (featureString2Bit.TryGetValue(node.Name + node.RuleId, out bit)) {
+                    ret |= bit;
+                }
+                var parent = Tuple.Create(node, "");
+                while (children.Any() || parent != null) {
+                    var newChildren = new List<Tuple<CstNode, string>>();
+                    foreach (var t in children) {
+                        foreach (var child in t.Item1.Children()) {
+                            var key = t.Item2 + ">" + child.Name + child.RuleId;
+                            if (featureString2Bit.TryGetValue(key, out bit)) {
+                                // 枝刈り
+                                newChildren.Add(Tuple.Create(child, key));
+                                ret |= bit;
+                            }
+                            // for Preconditions.checkArguments()
+                            if (featureString2Bit.TryGetValue(
+                                    t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
+                                ret |= bit;
+                            }
+                        }
+                    }
+                    if (parent != null && parent.Item1.Parent != null) {
+                        var newParent = parent.Item1.Parent;
+                        var parentPathUnit = parent.Item2 + "<" + newParent.Name
+                                             + newParent.RuleId;
+                        if (featureString2Bit.TryGetValue(parentPathUnit, out bit)) {
+                            ret |= bit;
+                            parent.Item1.PrevsFromSelf().Take(10)
+                                    .ForEach((child, index) => {
+                                        var key = parentPathUnit + '-' + index +
+                                                  ">" + child.Name + child.RuleId;
+                                        if (featureString2Bit.TryGetValue(key, out bit)) {
+                                            // 枝刈り
+                                            newChildren.Add(Tuple.Create(child, key));
+                                            ret |= bit;
+                                        }
+                                        if (featureString2Bit.TryGetValue(
+                                                parentPathUnit + '-' + index +
+                                                ">'" + extractor.GetToken(child), out bit)) {
+                                            ret |= bit;
+                                        }
+                                    });
+                            parent.Item1.NextsFromSelf().Take(10)
+                                    .ForEach((child, index) => {
+                                        var key = parentPathUnit + '+' + index +
+                                                  ">" + child.Name + child.RuleId;
+                                        if (featureString2Bit.TryGetValue(key, out bit)) {
+                                            // 枝刈り
+                                            newChildren.Add(Tuple.Create(child, key));
+                                            ret |= bit;
+                                        }
+                                        if (featureString2Bit.TryGetValue(
+                                                parentPathUnit + '+' + index +
+                                                ">'" + extractor.GetToken(child), out bit)) {
+                                            ret |= bit;
+                                        }
+                                    });
+                            parent = Tuple.Create(newParent, parentPathUnit);
+                        } else {
+                            // 枝刈り
+                            parent = null;
+                        }
+                    } else {
+                        // 枝刈り
+                        parent = null;
+                    }
+                    children = newChildren;
+                }
+            }
+            while (children.Any()) {
+                var newChildren = new List<Tuple<CstNode, string>>();
+                foreach (var t in children) {
+                    foreach (var child in t.Item1.Children()) {
+                        var key = t.Item2 + ">" + child.Name + child.RuleId;
+                        if (featureString2Bit.TryGetValue(key, out bit)) {
+                            newChildren.Add(Tuple.Create(child, key));
+                            ret |= bit;
+                        }
+                        // for Preconditions.checkArguments()
+                        if (featureString2Bit.TryGetValue(
+                                t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
+                            ret |= bit;
+                        }
+                    }
+                }
+                children = newChildren;
+            }
+            return ret;
+        }
+    }
 }

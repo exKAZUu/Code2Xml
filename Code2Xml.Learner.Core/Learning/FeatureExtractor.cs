@@ -41,7 +41,7 @@ namespace Code2Xml.Learner.Core.Learning {
 		public int MaxDown { get; private set; }
 		public int MaxLeft { get; private set; }
 		public int MaxRight { get; private set; }
-		public bool IsInner { get; private set; }
+		public bool IsInner { get; set; }
 
 		public virtual string GetToken(CstNode e) {
 			if (e.TokenText.Length == 1) {

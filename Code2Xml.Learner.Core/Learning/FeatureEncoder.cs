@@ -30,7 +30,6 @@ using Paraiba.Collections.Generic;
 namespace Code2Xml.Learner.Core.Learning {
     [Serializable]
     public class FeatureEncoder {
-        private const int SurroundingLength = 7;
         private const int GroupKeyLength = 5;
 
         private readonly FeatureExtractor _extractor;
@@ -93,14 +92,14 @@ namespace Code2Xml.Learner.Core.Learning {
 
             var result = new EncodingResult();
             if (seedNodeSet != null) {
-                result.SeedAcceptedNodeCount = seedNodeSet.SeedAcceptedNodes.Count;
+                result.SeedAcceptedNodeCount = seedNodeSet.AcceptedNodes.Count;
                 result.SeedNodeCount = result.SeedAcceptedNodeCount
-                                       + seedNodeSet.SeedRejectedNodes.Count;
+                                       + seedNodeSet.RejectedNodes.Count;
                 EncodeSeedNodes(
-                        seedNodeSet.SeedAcceptedNodes, result, result.IdealAcceptedVector2GroupPath,
+                        seedNodeSet.AcceptedNodes, result, result.IdealAcceptedVector2GroupPath,
                         result.SeedAcceptedVector2GroupPath);
                 EncodeSeedNodes(
-                        seedNodeSet.SeedRejectedNodes, result, result.IdealRejectedVector2GroupPath,
+                        seedNodeSet.RejectedNodes, result, result.IdealRejectedVector2GroupPath,
                         result.SeedRejectedVector2GroupPath);
             }
             EncodeTargetNodes(allUppermostNodes, result, oracle);
@@ -118,7 +117,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 IDictionary<BigInteger, string> idealVector2Path,
                 IDictionary<BigInteger, string> seedVector2Path) {
             foreach (var node in seedNodes) {
-                var vector = node.GetFeatureVector(SurroundingLength, _featureString2Bit, _extractor);
+                var vector = node.GetFeatureVector(_featureString2Bit, _extractor);
                 UpdateVector2GroupPath(idealVector2Path, vector, node);
                 seedVector2Path[vector] = idealVector2Path[vector];
                 UpdateVectorDict(result, vector, node);
@@ -129,8 +128,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 IEnumerable<CstNode> allUppermostNodes, EncodingResult result,
                 LearningExperiment oracle) {
             foreach (var uppermostNode in allUppermostNodes) {
-                var vector = uppermostNode.GetFeatureVector(SurroundingLength, _featureString2Bit,
-                        _extractor);
+                var vector = uppermostNode.GetFeatureVector(_featureString2Bit,_extractor);
                 if (oracle.IsAcceptedUsingOracle(uppermostNode)) {
                     // TODO: for debug
                     if (result.IdealRejectedVector2GroupPath.ContainsKey(vector)) {

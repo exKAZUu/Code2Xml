@@ -167,7 +167,7 @@ namespace Code2Xml.Learner.Core {
             var elements = new List<CstNode>();
             foreach (var location in locations) {
                 var root = path2Ast[location.FileInfo.FullName];
-                elements.Add(location.CodeRange.FindOutermostElement(root));
+                elements.Add(location.CodeRange.FindOutermostNode(root));
             }
             var names = AdoptNodeNames(elements);
 

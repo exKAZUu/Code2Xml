@@ -97,8 +97,8 @@ public class Hello {
 }");
             var stmt = cst.Descendants("statement").First();
             var pos = CodeRange.Locate(stmt);
-            Assert.That(pos.FindInnermostElement(cst), Is.EqualTo(stmt));
-            Assert.That(pos.FindOutermostElement(cst), Is.EqualTo(stmt.Parent));
+            Assert.That(pos.FindInnermostNode(cst), Is.EqualTo(stmt));
+            Assert.That(pos.FindOutermostNode(cst), Is.EqualTo(stmt.Parent));
         }
 
         [Test]
@@ -154,7 +154,7 @@ public class Hello {
                     ? exclusiveEnd + 1 : exclusiveEnd;
             var elem = CodeRange.ConvertFromIndiciesSkippingWhitespaces(
                     code, ref newInclusiveStart, ref newExclusiveEnd)
-                    .FindInnermostElement(node);
+                    .FindInnermostNode(node);
             Assert.That(CodeRange.Locate(elem), Is.EqualTo(newRange));
 
             newRange.ConvertToIndicies(code, out newInclusiveStart, out newExclusiveEnd);

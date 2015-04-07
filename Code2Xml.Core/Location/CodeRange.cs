@@ -215,6 +215,15 @@ namespace Code2Xml.Core.Location {
         }
 
         /// <summary>
+        /// Returns whether the specified CstNode instance is included by this CodeRange instance.
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public bool Contains(CstNode node) {
+            return Contains(Locate(node));
+        }
+
+        /// <summary>
         /// Returns whether the specified CodeRange instance is overlapped with this CodeRange instance.
         /// </summary>
         /// <param name="other"></param>
@@ -226,28 +235,41 @@ namespace Code2Xml.Core.Location {
                    (other.StartLocation < EndLocation && EndLocation <= other.EndLocation);
         }
 
-        // TODO
-        ///// <summary>
-        ///// Find the most inner elements which locate at the this range from the specified root.
-        ///// </summary>
-        ///// <param name="root"></param>
-        ///// <returns></returns>
-        //public CstNode FindInnermostElements(CstNode root) {
-        //    var node = FindInnermostElement(root);
-        //    var thisRange = this;
-        //    var first = node.Children()
-        //        .First(n => Locate(n).Contains(thisRange.StartLocation));
-        //    var last = node.LastChild.PrevsFromSelfAndSelf()
-        //        .First(n => Locate(n).Contains(thisRange.EndLocation));
-        //    return first.NextsFromSelf()
-        //}
+        #region Find nodes
+
+        /// <summary>
+        /// Find all the inner elements which locate at this range from the specified root.
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public IEnumerable<CstNode> FindIncludedNodes(CstNode root) {
+            var thisRange = this;
+            // TODO: Should be more efficient
+            return thisRange.FindOutermostNode(root).DescendantsAndSelf()
+                    .Where(node => {
+                        var range = Locate(node);
+                        return thisRange.Contains(Locate(node));
+                    });
+        }
+
+        /// <summary>
+        /// Find all the inner elements whose range overlapped with this range from the specified root.
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public IEnumerable<CstNode> FindOverlappedNodes(CstNode root) {
+            var thisRange = this;
+            // TODO: Should be more efficient
+            return thisRange.FindOutermostNode(root).DescendantsAndSelf()
+                    .Where(node => thisRange.Overlaps(Locate(node)));
+        }
 
         /// <summary>
         /// Find the most inner element which locates at the this range from the specified root.
         /// </summary>
         /// <param name="root"></param>
         /// <returns></returns>
-        public CstNode FindInnermostElement(CstNode root) {
+        public CstNode FindInnermostNode(CstNode root) {
             CstNode lastElement = null;
             foreach (var elem in root.DescendantsAndSelf()) {
                 var pos = Locate(elem);
@@ -265,44 +287,15 @@ namespace Code2Xml.Core.Location {
         /// </summary>
         /// <param name="root"></param>
         /// <returns></returns>
-        public CstNode FindOutermostElement(CstNode root) {
-            var ret = FindInnermostElement(root);
+        public CstNode FindOutermostNode(CstNode root) {
+            var ret = FindInnermostNode(root);
             while (ret.Parent != null && ret.Parent.Children().Count() == 1) {
                 ret = ret.Parent;
             }
             return ret;
         }
 
-        /// <summary>
-        /// Find the most inner element which locates at the this range from the specified root.
-        /// </summary>
-        /// <param name="root"></param>
-        /// <returns></returns>
-        public XElement FindInnermostElement(XElement root) {
-            XElement lastElement = null;
-            foreach (var elem in root.DescendantsAndSelf()) {
-                var pos = Locate(elem);
-                if (pos.Contains(this)) {
-                    lastElement = elem;
-                } else if (EndLocation <= pos.StartLocation) {
-                    break;
-                }
-            }
-            return lastElement;
-        }
-
-        /// <summary>
-        /// Find the most outer element which locates at the this range from the specified root.
-        /// </summary>
-        /// <param name="root"></param>
-        /// <returns></returns>
-        public XElement FindOutermostElement(XElement root) {
-            var ret = FindInnermostElement(root);
-            while (ret.Parent != null && ret.Parent.Elements().Count() == 1) {
-                ret = ret.Parent;
-            }
-            return ret;
-        }
+        #endregion
 
         #region Inter-Conversion between a CodeRange object and indicies
 
@@ -482,8 +475,6 @@ namespace Code2Xml.Core.Location {
                     new CodeLocation(startLine, startPos), new CodeLocation(endLine, endPos));
         }
 
-        #endregion
-
         public static CodeRange Locate(CstNode node) {
             var tuple = node.AllTokens().FirstAndLastOrNull();
             if (tuple != null) {
@@ -507,5 +498,7 @@ namespace Code2Xml.Core.Location {
             }
             return Nil;
         }
+
+        #endregion
     }
 }
