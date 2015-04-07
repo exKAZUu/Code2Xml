@@ -53,10 +53,10 @@ namespace Code2Xml.Learner.Core.Learning {
         }
 
         public static HashSet<string> GetUnionKeys(
-                this IEnumerable<CstNode> targets, IEnumerable<CodeRange> ranges, FeatureExtractor extractor) {
+                this IEnumerable<CstNode> targets, List<CodeRange> rangeList,
+                FeatureExtractor extractor) {
             var commonKeys = new HashSet<string>();
-            var rangeList = ranges.ToList();
-            foreach (var target in targets) {
+            foreach (var target in targets.OrderBy(t => CodeRange.Locate(t).StartLocation)) {
                 var index = rangeList.FindIndex(range => range.Contains(target));
                 if (index < 0) {
                     continue;
@@ -65,7 +65,7 @@ namespace Code2Xml.Learner.Core.Learning {
                         .FindOverlappedNodes(target.AncestorsAndSelf().Last())
                         .ToHashSet();
                 var keys = target
-                    .GetSurroundingPathsFilteringBySurroundingNodes(surroundingNodes, extractor);
+                        .GetSurroundingPathsFilteringBySurroundingNodes(surroundingNodes, extractor);
                 commonKeys.UnionWith(keys);
                 rangeList[index] = CodeRange.Nil;
             }
@@ -85,7 +85,9 @@ namespace Code2Xml.Learner.Core.Learning {
             var i = 1;
             // 自分自身の位置による区別も考慮する
             paths.Add("'" + extractor.GetToken(node));
-            if (!surroundingNodes.Contains(node.Parent)) {
+
+            var ancestor = node.Ancestors().FirstOrDefault(a => a.Children().Count() > 1);
+            if (!surroundingNodes.Contains(ancestor)) {
                 paths.Add(node.Name);
             } else {
                 paths.Add(node.Name + node.RuleId);

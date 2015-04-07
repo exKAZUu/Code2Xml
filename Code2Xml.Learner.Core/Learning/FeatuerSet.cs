@@ -44,7 +44,7 @@ namespace Code2Xml.Learner.Core.Learning {
 
         public FeatuerSet(
                 SeedNodeSet seedNodeSet, FeatureExtractor extractor,
-                IEnumerable<CodeRange> acceptingRanges, IEnumerable<CodeRange> rejectingRanges) {
+                List<CodeRange> acceptingRanges, List<CodeRange> rejectingRanges) {
             AcceptingFeatures =
                     CreateAcceptingFeatures(seedNodeSet.AcceptedNodes, extractor,
                             acceptingRanges)
@@ -57,7 +57,7 @@ namespace Code2Xml.Learner.Core.Learning {
 
         private IEnumerable<string> CreateRejectingFeatures(
                 IEnumerable<CstNode> rejectedNodes, FeatureExtractor extractor,
-                IEnumerable<CodeRange> ranges) {
+                List<CodeRange> ranges) {
             var rejectingFeatureSet = rejectedNodes
                     .GetUnionKeys(ranges, extractor)
                     .ToHashSet();
@@ -69,7 +69,7 @@ namespace Code2Xml.Learner.Core.Learning {
 
         private static IEnumerable<string> CreateAcceptingFeatures(
                 IEnumerable<CstNode> acceptedNodes, FeatureExtractor extractor,
-                IEnumerable<CodeRange> ranges) {
+                List<CodeRange> ranges) {
             var acceptingFeatures = acceptedNodes
                     .GetUnionKeys(ranges, extractor)
                     .Distinct()

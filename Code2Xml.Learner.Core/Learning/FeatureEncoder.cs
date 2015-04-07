@@ -128,7 +128,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 IEnumerable<CstNode> allUppermostNodes, EncodingResult result,
                 LearningExperiment oracle) {
             foreach (var uppermostNode in allUppermostNodes) {
-                var vector = uppermostNode.GetFeatureVector(_featureString2Bit,_extractor);
+                var vector = uppermostNode.GetFeatureVector(_featureString2Bit, _extractor);
                 if (oracle.IsAcceptedUsingOracle(uppermostNode)) {
                     // TODO: for debug
                     if (result.IdealRejectedVector2GroupPath.ContainsKey(vector)) {
@@ -221,16 +221,16 @@ namespace Code2Xml.Learner.Core.Learning {
         #region For Debug
 
         private void PrintNotDistinguishedElement(
-                CstNode e, BigInteger feautre, EncodingResult result) {
+                CstNode e, BigInteger vector, EncodingResult result) {
             if (--_printCount >= 0) {
                 Console.WriteLine("==========================================");
                 Console.WriteLine(e.Parent.Name + ", " + e.Name + ", " + e.Code);
                 Console.WriteLine(
-                        result.Vector2Node[feautre].Parent.Name + ", "
-                        + result.Vector2Node[feautre].Name + ", "
-                        + result.Vector2Node[feautre].Code);
+                        result.Vector2Node[vector].Parent.Name + ", "
+                        + result.Vector2Node[vector].Name + ", "
+                        + result.Vector2Node[vector].Code);
                 Console.WriteLine("------------------------------------------");
-                foreach (var featureString in GetFeatureStringsByVector(feautre)) {
+                foreach (var featureString in GetFeatureStringsByVector(vector)) {
                     Console.WriteLine(Experiment.Beautify(featureString));
                 }
             }
