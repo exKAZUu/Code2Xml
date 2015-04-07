@@ -31,8 +31,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		public static CstGenerator Generator = CstGenerators.JavaScriptUsingAntlr3;
 
 		private static readonly LearningExperiment[] Experiments = {
-            //new JavaScriptComplexStatementExperiment(),
-            //new JavaScriptSuperComplexBranchExperiment(),
+            new JavaScriptComplexStatementExperiment(),
+            new JavaScriptSuperComplexBranchExperiment(),
             new JavaScriptExpressionStatementExperiment(),  // NG
             new JavaScriptArithmeticOperatorExperiment(), // NG
             new JavaScriptSwitchCaseExperiment(),
@@ -814,11 +814,10 @@ f(0 + 1 - 2 * 3 / 4 % 5);",
 	    public override IEnumerable<string> AcceptingFragments {
 	        get {
 	            return new[] {
-	                @"+",
-	                @"-",
-	                @"*",
-	                @"/",
-	                @"%",
+	                @"0 + 1",
+	                @"1 - 2",
+	                @"2 * 3",
+	                @"3 / 4",
 	            };
 	        }
 	    }
