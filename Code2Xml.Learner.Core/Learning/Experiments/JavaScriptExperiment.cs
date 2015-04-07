@@ -31,13 +31,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		public static CstGenerator Generator = CstGenerators.JavaScriptUsingAntlr3;
 
 		private static readonly LearningExperiment[] Experiments = {
-			new JavaScriptComplexStatementExperiment(),
+            //new JavaScriptComplexStatementExperiment(),
             //new JavaScriptSuperComplexBranchExperiment(),
-            //new JavaScriptExpressionStatementExperiment(),  // NG
-            //new JavaScriptArithmeticOperatorExperiment(), // NG
-			//new JavaScriptSwitchCaseExperiment(),
-			//new JavaScriptSuperComplexBranchExperimentWithSwitch(),
-			//new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue(), 
+            new JavaScriptExpressionStatementExperiment(),  // NG
+            new JavaScriptArithmeticOperatorExperiment(), // NG
+            new JavaScriptSwitchCaseExperiment(),
+            new JavaScriptSuperComplexBranchExperimentWithSwitch(),
+            new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue(), 
 
             //new JavaScriptComplexBranchExperiment(),
             //new JavaScriptIfExperiment(),
@@ -251,7 +251,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		}
 
 		public override FeatureExtractor CreateExtractor() {
-			return new FeatureExtractor(2, 0, 1, 0);
+			return new FeatureExtractor();
 		}
 
 	    public override IEnumerable<string> AcceptingFragments {
@@ -313,7 +313,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		}
 
 		public override FeatureExtractor CreateExtractor() {
-			return new FeatureExtractor(0, 0, 0, 0);
+			return new FeatureExtractor();
 		}
 
 	    public override IEnumerable<string> AcceptingFragments {
@@ -369,7 +369,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		}
 
 		public override FeatureExtractor CreateExtractor() {
-			return new FeatureExtractor(0, 0, 0, 0);
+			return new FeatureExtractor();
 		}
 
 	    public override IEnumerable<string> AcceptingFragments {
@@ -406,7 +406,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		}
 
 		public override FeatureExtractor CreateExtractor() {
-			return new FeatureExtractor(0, 0, 0, 0);
+			return new FeatureExtractor();
 		}
 
 	    public override IEnumerable<string> AcceptingFragments {
@@ -440,7 +440,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		}
 
 		public override FeatureExtractor CreateExtractor() {
-			return new FeatureExtractor(0, 0, 0, 0);
+			return new FeatureExtractor();
 		}
 
 	    public override IEnumerable<string> AcceptingFragments {
@@ -474,7 +474,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		}
 
 		public override FeatureExtractor CreateExtractor() {
-			return new FeatureExtractor(0, 0, 0, 0);
+			return new FeatureExtractor();
 		}
 
 	    public override IEnumerable<string> AcceptingFragments {
@@ -509,7 +509,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		}
 
 		public override FeatureExtractor CreateExtractor() {
-			return new FeatureExtractor(0, 0, 0, 0);
+			return new FeatureExtractor();
 		}
 
 	    public override IEnumerable<string> AcceptingFragments {
@@ -766,7 +766,22 @@ f(0 + 1 - 2 * 3 / 4 % 5);",
 			return new FeatureExtractor();
 		}
 
-		public JavaScriptExpressionStatementExperiment() : base("expressionStatement") {}
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                @"console.log(b);",
+	                @"i = 1;",
+	                @"i = 1;",
+	                @"f(0 + 1 - 2 * 3 / 4 % 5);",
+	            };
+	        }
+	    }
+
+	    public override IEnumerable<string> RejectingFragments {
+	        get { return Enumerable.Empty<string>(); }
+	    }
+
+        public JavaScriptExpressionStatementExperiment() : base("expressionStatement") {}
 
 		public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
 			if (node.Name == "statement") {
@@ -792,8 +807,24 @@ f(0 + 1 - 2 * 3 / 4 % 5);",
 		}
 
 		public override FeatureExtractor CreateExtractor() {
-			return new FeatureExtractor(2, 0, 0, 0);
+			return new FeatureExtractor();
 		}
+
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                @"+",
+	                @"-",
+	                @"*",
+	                @"/",
+	                @"%",
+	            };
+	        }
+	    }
+
+	    public override IEnumerable<string> RejectingFragments {
+	        get { return Enumerable.Empty<string>(); }
+	    }
 
 		public JavaScriptArithmeticOperatorExperiment() : base("TOKENS") {}
 
@@ -823,8 +854,22 @@ f(0 + 1 - 2 * 3 / 4 % 5);",
 		}
 
 		public override FeatureExtractor CreateExtractor() {
-			return new FeatureExtractor(1, 0, 0, 0);
+			return new FeatureExtractor();
 		}
+
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                @"switch (1)",
+	                @"case 0:",
+	                @"default:",
+	            };
+	        }
+	    }
+
+	    public override IEnumerable<string> RejectingFragments {
+	        get { return Enumerable.Empty<string>(); }
+	    }
 
 		public JavaScriptSwitchCaseExperiment() : base("expression", "caseClause", "defaultClause") {}
 
@@ -845,8 +890,38 @@ f(0 + 1 - 2 * 3 / 4 % 5);",
 		}
 
 		public override FeatureExtractor CreateExtractor() {
-			return new FeatureExtractor(2, 0, 1, 0);
+			return new FeatureExtractor();
 		}
+
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                "console.log(b)",
+	                "for (; b;)",
+	                "while (b) {",
+	                "} while (b);",
+	                "if (b) {",
+	                "if (b) {",
+	                "for (; a, b;)",
+	                "while (a, b) {",
+	                "} while (a, b)",
+	                "if (a, b) {",
+	                "if (a, b) {",
+	                "for (; true;)",
+	                "while (true) {",
+	                "} while (true)",
+	                "if (true) {",
+	                "if (true) {",
+	                @"switch (1)",
+	                @"case 0:",
+	                @"default:",
+	            };
+	        }
+	    }
+
+	    public override IEnumerable<string> RejectingFragments {
+	        get { return Enumerable.Empty<string>(); }
+	    }
 
 		public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
 			var parentName = node.Parent.SafeName();
@@ -887,8 +962,41 @@ f(0 + 1 - 2 * 3 / 4 % 5);",
 		}
 
 		public override FeatureExtractor CreateExtractor() {
-			return new FeatureExtractor(2, 0, 1, 0);
+			return new FeatureExtractor();
 		}
+
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                "console.log(b)",
+	                "for (; b;)",
+	                "while (b) {",
+	                "} while (b);",
+	                "if (b) {",
+	                "if (b) {",
+	                "for (; a, b;)",
+	                "while (a, b) {",
+	                "} while (a, b)",
+	                "if (a, b) {",
+	                "if (a, b) {",
+	                @"switch (1)",
+	                @"case 0:",
+	                @"default:",
+	            };
+	        }
+	    }
+
+	    public override IEnumerable<string> RejectingFragments {
+	        get {
+	            return new[] {
+	                "for (; true;)",
+	                "while (true) {",
+	                "} while (true)",
+	                "if (true) {",
+	                "if (true) {",
+	            };
+	        }
+	    }
 
 		public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
 			var parentName = node.Parent.SafeName();
