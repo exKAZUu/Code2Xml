@@ -655,7 +655,33 @@ f(0 + 1 - 2 * 3 / 4 % 5);",
 	    }
 
 	    public override IEnumerable<string> RejectingFragments {
-	        get { return Enumerable.Empty<string>(); }
+	        get {
+	            return new[] {
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{}",
+	                @"{ i = 1; }",
+	                @";",
+	                @"T:
+f(0 + 1 - 2 * 3 / 4 % 5);",
+	            };
+	        }
 	    }
         
         public JavaScriptComplexStatementExperiment() : base("statement") {}
