@@ -57,7 +57,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 FeatureExtractor extractor) {
             var commonKeys = new HashSet<string>();
             foreach (var target in targets.OrderBy(t => CodeRange.Locate(t).StartLocation)) {
-                var index = rangeList.FindIndex(range => range.Contains(target));
+                var index = rangeList.FindIndex(range => range.Overlaps(target));
                 if (index < 0) {
                     continue;
                 }
