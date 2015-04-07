@@ -31,10 +31,10 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		public static CstGenerator Generator = CstGenerators.JavaScriptUsingAntlr3;
 
 		private static readonly LearningExperiment[] Experiments = {
-            new JavaScriptComplexStatementExperiment(),
-            //new JavaScriptSuperComplexBranchExperiment(),
-            //new JavaScriptExpressionStatementExperiment(),  // NG
-            //new JavaScriptArithmeticOperatorExperiment(), // NG
+            //new JavaScriptComplexStatementExperiment(), // OK(40/50)
+            //new JavaScriptSuperComplexBranchExperiment(), // OK(40/50)
+            //new JavaScriptExpressionStatementExperiment(), // OK(40/50)
+            new JavaScriptArithmeticOperatorExperiment(), // NG
             //new JavaScriptSwitchCaseExperiment(),
             //new JavaScriptSuperComplexBranchExperimentWithSwitch(),
             //new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue(), 

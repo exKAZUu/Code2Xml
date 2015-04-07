@@ -236,7 +236,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(4, 0, 1, 0);
+            return new FeatureExtractor();
         }
 
         public PythonSuperComplexBranchExperiment() : base("test", "argument") {}
@@ -332,7 +332,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(1, 0, 0, 0);
+            return new FeatureExtractor();
         }
 
         public PythonArithmeticOperatorExperiment() : base("PLUS", "MINUS", "STAR", "SLASH") {}
@@ -350,7 +350,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(4, 0, 1, 0);
+            return new FeatureExtractor();
         }
 
         public PythonSuperComplexBranchExperimentWithoutTrue() : base("test", "argument") {}

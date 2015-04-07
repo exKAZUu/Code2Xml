@@ -248,7 +248,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(6, 0, 5, 0);
+            return new FeatureExtractor();
         }
 
         public CSharpSuperComplexBranchExperiment() : base("boolean_expression", "argument") {}
@@ -304,7 +304,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
+            return new FeatureExtractor();
         }
 
         public CSharpComplexBranchExperiment() : base("boolean_expression") {}
@@ -333,7 +333,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
+            return new FeatureExtractor();
         }
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
@@ -353,7 +353,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
+            return new FeatureExtractor();
         }
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
@@ -373,7 +373,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
+            return new FeatureExtractor();
         }
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
@@ -393,7 +393,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
+            return new FeatureExtractor();
         }
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
@@ -409,7 +409,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
+            return new FeatureExtractor();
         }
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
@@ -572,7 +572,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(1, 0, 0, 0);
+            return new FeatureExtractor();
         }
 
         public CSharpArithmeticOperatorExperiment() : base("TOKENS", "MINUS") {}
@@ -591,7 +591,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(1, 0, 0, 0);
+            return new FeatureExtractor();
         }
 
         public CSharpSwitchCaseExperiment() : base("expression", "switch_label") {}
@@ -614,7 +614,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(6, 0, 5, 0);
+            return new FeatureExtractor();
         }
 
         public CSharpSuperComplexBranchExperimentWithSwitch()
@@ -680,7 +680,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(6, 0, 5, 0);
+            return new FeatureExtractor();
         }
 
         public CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue()

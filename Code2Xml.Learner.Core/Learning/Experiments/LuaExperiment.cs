@@ -242,7 +242,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
+            return new FeatureExtractor();
         }
 
         public LuaComplexBranchExperiment() : base("exp") {}
@@ -269,7 +269,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(4, 0, 1, 0);
+            return new FeatureExtractor();
         }
 
         public LuaSuperComplexBranchExperiment() : base("exp") {}
@@ -302,7 +302,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(4, 0, 1, 0);
+            return new FeatureExtractor();
         }
 
         public LuaSuperComplexBranchExperimentWithoutTrue() : base("exp") {}
@@ -335,7 +335,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
+            return new FeatureExtractor();
         }
 
         public LuaIfExperiment() : base("exp") {}
@@ -356,7 +356,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
+            return new FeatureExtractor();
         }
 
         public LuaWhileExperiment() : base("exp") {}
@@ -377,7 +377,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
+            return new FeatureExtractor();
         }
 
         public LuaDoWhileExperiment() : base("exp") {}
@@ -398,7 +398,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
+            return new FeatureExtractor();
         }
 
         public LuaPrintExperiment() : base("exp") {}
@@ -512,7 +512,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(1, 0, 0, 0);
+            return new FeatureExtractor();
         }
 
         public LuaArithmeticOperatorExperiment() : base("TOKENS") {}

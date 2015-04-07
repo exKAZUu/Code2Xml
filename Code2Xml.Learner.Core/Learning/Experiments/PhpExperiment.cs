@@ -247,10 +247,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return PhpExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new PhpFeatureExtractor(0, 0, 0, 0);
-        }
-
         public PhpComplexBranchExperiment() : base("expression") {}
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
@@ -275,10 +271,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     public class PhpSuperComplexBranchExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new PhpFeatureExtractor(2, 0, 1, 0);
         }
 
         public PhpSuperComplexBranchExperiment() : base("expression") {}
@@ -314,10 +306,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return PhpExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new PhpFeatureExtractor(0, 0, 0, 0);
-        }
-
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
             var pName = node.SafeParent().FirstChild.Name;
             if (pName == "If") {
@@ -332,10 +320,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     public class PhpWhileExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new PhpFeatureExtractor(0, 0, 0, 0);
         }
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
@@ -354,10 +338,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return PhpExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new PhpFeatureExtractor(0, 0, 0, 0);
-        }
-
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
             var pName = node.SafeParent().FirstChild.Name;
             if (pName == "Do") {
@@ -372,10 +352,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     public class PhpForExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new PhpFeatureExtractor(0, 0, 0, 0);
         }
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
@@ -393,10 +369,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     public class PhpEchoExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new PhpFeatureExtractor(0, 0, 0, 0);
         }
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
@@ -537,10 +509,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return PhpExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new PhpFeatureExtractor(1, 0, 0, 0);
-        }
-
         public PhpArithmeticOperatorExperiment() : base("Plus", "Minus", "Asterisk", "Forwardslash") {}
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
@@ -552,10 +520,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     public class PhpSwitchCaseExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new PhpFeatureExtractor(1, 0, 2, 0);
         }
 
         public PhpSwitchCaseExperiment() : base("expression", "casestatement", "defaultcase") {}
@@ -572,10 +536,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     public class PhpSuperComplexBranchExperimentWithSwitch : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new PhpFeatureExtractor(2, 0, 1, 0);
         }
 
         public PhpSuperComplexBranchExperimentWithSwitch()
@@ -616,10 +576,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     public class PhpSuperComplexBranchExperimentWithSwitchWithoutTrue : LearningExperiment {
         protected override CstGenerator Generator {
             get { return PhpExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new PhpFeatureExtractor(2, 0, 1, 0);
         }
 
         public PhpSuperComplexBranchExperimentWithSwitchWithoutTrue()

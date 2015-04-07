@@ -433,10 +433,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return JavaExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(5, 0, 1, 0);
-        }
-
 	    public override IEnumerable<string> AcceptingFragments {
 	        get {
 	            return new[] {
@@ -464,10 +460,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 	                "if (true)",
 	            };
 	        }
-	    }
-
-	    public override IEnumerable<string> RejectingFragments {
-	        get { return Enumerable.Empty<string>(); }
 	    }
 
         public JavaSuperComplexBranchExperiment() : base("expression") {}
@@ -574,9 +566,22 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return JavaExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
-        }
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                "for (; b;)",
+	                "while (b)",
+	                "while (b)",
+	                "if (b)",
+	                "if (b)",
+	                "for (; true;)",
+	                "while (true)",
+	                "while (true)",
+	                "if (true)",
+	                "if (true)",
+	            };
+	        }
+	    }
 
         public JavaComplexBranchExperiment() : base("expression") {}
 
@@ -602,138 +607,53 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
     }
 
-    public class JavaIfExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return JavaExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
-        }
-
-        public JavaIfExperiment() : base("expression") {}
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            var p = node.Parent;
-            var pp = p.Parent;
-            var isPar = p.SafeName() == "parExpression";
-            var isStmt = pp.SafeName() == "statement";
-            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "if") {
-                return true;
-            }
-            return false;
-        }
-    }
-
-    public class JavaWhileExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return JavaExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
-        }
-
-        public JavaWhileExperiment() : base("expression") {}
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            var p = node.Parent;
-            var pp = p.Parent;
-            var isPar = p.SafeName() == "parExpression";
-            var isStmt = pp.SafeName() == "statement";
-            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "while") {
-                return true;
-            }
-            return false;
-        }
-    }
-
-    public class JavaDoWhileExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return JavaExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
-        }
-
-        public JavaDoWhileExperiment() : base("expression") {}
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            var p = node.Parent;
-            var pp = p.Parent;
-            var isPar = p.SafeName() == "parExpression";
-            var isStmt = pp.SafeName() == "statement";
-            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "do") {
-                return true;
-            }
-            return false;
-        }
-    }
-
-    public class JavaForExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return JavaExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
-        }
-
-        public JavaForExperiment() : base("expression") {}
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            var p = node.Parent;
-            if (p.SafeName() == "forstatement"
-                && p.Children().Count(e2 => e2.TokenText == ";") >= 2) {
-                return true;
-            }
-            return false;
-        }
-    }
-
-    public class JavaPreconditionsExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return JavaExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(0, 0, 0, 0);
-        }
-
-        public JavaPreconditionsExperiment() : base("expression") {}
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            var primary = node.SafeParent().SafeParent().SafeParent().SafeParent();
-            if (primary.SafeName() != "primary") {
-                return false;
-            }
-            //if (primary.Elements().All(e2 => e2.TokenText() != "Preconditions")) {
-            //	return false;
-            //}
-            if (primary.Children().All(e2 => e2.TokenText != "checkArgument")) {
-                return false;
-            }
-            //if (primary.NthElementOrDefault(0).SafeTokenText() != "Preconditions") {
-            //	return false;
-            //}
-            //if (primary.NthElementOrDefault(2).SafeTokenText() != "checkArgument") {
-            //	return false;
-            //}
-            if (node.PrevsFromFirst().Any()) {
-                return false;
-            }
-            return true;
-        }
-    }
-
     public class JavaComplexStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                @"checkArgument(b);",
+	                @"checkArgument(b, """");",
+	                @"Preconditions.checkArgument(b);",
+	                @"Preconditions.checkArgument(b, """");",
+	                @"com.google.common.base.Preconditions.checkArgument(b);",
+	                @"com.google.common.base.Preconditions.checkArgument(b, """");",
+	                @"i = 0;",
+	                @"i = 0;",
+	                @"f(0 + 1 - 2 * 3 / 4 % 5);",
+	                @"for (; b;) { }",
+	                @"while (b) { }",
+	                @"do { } while (b);",
+	                @"if (b) { } else if (b) { } else { }",
+	                @"if (b) { } else { }",
+	                @"",
+	                @"",
+	                @"",
+	                @"",
+	            };
+	        }
+	    }
+
+        public override IEnumerable<string> RejectingFragments {
+	        get {
+	            return new[] {
+	                @"L: i = 0;",
+	                @";",   // dummy for L: i = 0;
+	                @";",
+	                @"{ i = 0; }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"",
+	                @"",
+	            };
+	        }
         }
 
         public JavaComplexStatementExperiment() : base("statement", "blockStatement") {}
@@ -914,7 +834,7 @@ statement
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(1, 0, 0, 0);
+            return new FeatureExtractor();
         }
 
         public JavaArithmeticOperatorExperiment() : base("PLUS", "SUB", "STAR", "SLASH") {}
@@ -933,7 +853,7 @@ statement
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(2, 0, 3, 0);
+            return new FeatureExtractor();
         }
 
         public JavaSwitchCaseExperiment() : base("expression", "switchLabel") {}
@@ -956,7 +876,7 @@ statement
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(5, 0, 1, 0);
+            return new FeatureExtractor();
         }
 
         public JavaSuperComplexBranchExperimentWithSwitch() : base("expression", "switchLabel") {}
@@ -1007,7 +927,7 @@ statement
         }
 
         public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor(5, 0, 1, 0);
+            return new FeatureExtractor();
         }
 
         public JavaSuperComplexBranchExperimentWithSwitchWithoutTrue()
