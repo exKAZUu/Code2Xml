@@ -35,8 +35,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             //new JavaScriptSuperComplexBranchExperiment(), // OK(40/50)
             //new JavaScriptExpressionStatementExperiment(), // OK(40/50)
             //new JavaScriptArithmeticOperatorExperiment(), // NG
-            new JavaScriptSwitchCaseExperiment(),
-            //new JavaScriptSuperComplexBranchExperimentWithSwitch(),
+            //new JavaScriptSwitchCaseExperiment(),
+            new JavaScriptSuperComplexBranchExperimentWithSwitch(),
             //new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue(), 
 
             //new JavaScriptComplexBranchExperiment(),
@@ -580,7 +580,7 @@ f(0 + 1 - 2 * 3 / 4 % 5);",
 
 	public class JavaScriptSuperComplexBranchExperimentWithSwitch : LearningExperiment {
 		public JavaScriptSuperComplexBranchExperimentWithSwitch()
-				: base("expression", "caseClause", "defaultClause") {}
+				: base("expression", "assignmentExpression", "caseClause", "defaultClause") {}
 
 		protected override CstGenerator Generator {
 			get { return JavaScriptExperiment.Generator; }
@@ -644,7 +644,7 @@ f(0 + 1 - 2 * 3 / 4 % 5);",
 
 	public class JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue : LearningExperiment {
 		public JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue()
-				: base("expression", "caseClause", "defaultClause") {}
+				: base("expression", "assignmentExpression", "caseClause", "defaultClause") {}
 
 		protected override CstGenerator Generator {
 			get { return JavaScriptExperiment.Generator; }
