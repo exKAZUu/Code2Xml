@@ -86,9 +86,9 @@ namespace Code2Xml.Learner.Core.Learning {
             var extractor = CreateExtractor();
             var seedNodeSet = new SeedNodeSet(seedNodes, seedCsts, this);
             Console.WriteLine("#Accepted seed nodes: " + seedNodeSet.AcceptedNodes.Count
-                + " (" + AcceptingFragments.Count() + ")");
+                              + " (" + AcceptingFragments.Count() + ")");
             Console.WriteLine("#Rejected seed nodes: " + seedNodeSet.RejectedNodes.Count
-                + " (" + RejectingFragments.Count() + ")");
+                              + " (" + RejectingFragments.Count() + ")");
 
             var seedCst = seedCsts.First();
             var seedCode = seedCst.Code;
@@ -98,12 +98,12 @@ namespace Code2Xml.Learner.Core.Learning {
             var acceptingRanges = AcceptingFragments.Select(f => {
                 index = seedCode.IndexOf(f, index + 1);
                 return structuredCode.GetRange(index, index + f.Length);
-            });
+            }).ToList();
             index = -1;
             var rejectingRanges = RejectingFragments.Select(f => {
                 index = seedCode.IndexOf(f, index + 1);
                 return structuredCode.GetRange(index, index + f.Length);
-            });
+            }).ToList();
 
             var featureSet = new FeatuerSet(seedNodeSet, extractor, acceptingRanges, rejectingRanges);
             Console.WriteLine(
