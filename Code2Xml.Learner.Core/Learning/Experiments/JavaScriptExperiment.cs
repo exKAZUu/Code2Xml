@@ -31,20 +31,20 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 		public static CstGenerator Generator = CstGenerators.JavaScriptUsingAntlr3;
 
 		private static readonly LearningExperiment[] Experiments = {
-			//new JavaScriptComplexStatementExperiment(),
-            new JavaScriptSuperComplexBranchExperiment(),
+			new JavaScriptComplexStatementExperiment(),
+            //new JavaScriptSuperComplexBranchExperiment(),
             //new JavaScriptExpressionStatementExperiment(),  // NG
             //new JavaScriptArithmeticOperatorExperiment(), // NG
 			//new JavaScriptSwitchCaseExperiment(),
 			//new JavaScriptSuperComplexBranchExperimentWithSwitch(),
 			//new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue(), 
 
-			new JavaScriptComplexBranchExperiment(),
-			new JavaScriptIfExperiment(),
-			new JavaScriptWhileExperiment(),
-			new JavaScriptDoWhileExperiment(),
-			new JavaScriptForExperiment(),
-			new JavaScriptConsoleLogExperiment(),
+            //new JavaScriptComplexBranchExperiment(),
+            //new JavaScriptIfExperiment(),
+            //new JavaScriptWhileExperiment(),
+            //new JavaScriptDoWhileExperiment(),
+            //new JavaScriptForExperiment(),
+            //new JavaScriptConsoleLogExperiment(),
 			//new JavaScriptStatementExperiment(),
 			//new JavaScriptBlockExperiment(),
 			//new JavaScriptLabeledStatementExperiment(),
@@ -320,20 +320,20 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 	        get {
 	            return new[] {
 	                "for (; b;)",
-	                "while (b) {",
-	                "} while (b);",
-	                "if (b) {",
-	                "if (b) {",
+	                "while (b)",
+	                "while (b)",
+	                "if (b)",
+	                "if (b)",
 	                "for (; a, b;)",
-	                "while (a, b) {",
-	                "} while (a, b)",
-	                "if (a, b) {",
-	                "if (a, b) {",
+	                "while (a, b)",
+	                "while (a, b)",
+	                "if (a, b)",
+	                "if (a, b)",
 	                "for (; true;)",
-	                "while (true) {",
-	                "} while (true)",
-	                "if (true) {",
-	                "if (true) {",
+	                "while (true)",
+	                "while (true)",
+	                "if (true)",
+	                "if (true)",
 	            };
 	        }
 	    }
@@ -569,6 +569,17 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 	                @"if (a, b) { } else { }",
 	                @"{ }",
 	                @"{ }",
+	                @"for (; true;) { }",
+	                @"{ }",
+	                @"while (true) { }",
+	                @"{ }",
+	                @"do { } while (true);",
+	                @"{ }",
+	                @"if (true) { } else if (true) { } else { }",
+	                @"{ }",
+	                @"if (true) { } else { }",
+	                @"{ }",
+	                @"{ }",
 	                @"{}",
 	                @"{ i = 1; }",
 	                @"i = 1;",
@@ -609,7 +620,45 @@ f(0 + 1 - 2 * 3 / 4 % 5);",
 			return new FeatureExtractor();
 		}
 
-		public JavaScriptComplexStatementExperiment() : base("statement") {}
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                @"console.log(b);",
+	                @"for (; b;) { }",
+	                @"while (b) { }",
+	                @"do { } while (b);",
+	                @"if (b) { } else if (b) { } else { }",
+	                @"if (b) { } else { }",
+	                @"for (; a, b;) { }",
+	                @"while (a, b) { }",
+	                @"do { } while (a, b);",
+	                @"if (a, b) { } else if (a, b) { } else { }",
+	                @"if (a, b) { } else { }",
+	                @"for (; true;) { }",
+	                @"while (true) { }",
+	                @"do { } while (true);",
+	                @"if (true) { } else if (true) { } else { }",
+	                @"if (true) { } else { }",
+	                @"i = 1;",
+	                @"i = 1;",
+	                @"f(0 + 1 - 2 * 3 / 4 % 5);",
+	                @"switch (1) {
+	case 0:
+		break;
+	default:
+		break;
+}",
+	                @"break;",
+	                @"break;",
+	            };
+	        }
+	    }
+
+	    public override IEnumerable<string> RejectingFragments {
+	        get { return Enumerable.Empty<string>(); }
+	    }
+        
+        public JavaScriptComplexStatementExperiment() : base("statement") {}
 
 		public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
 			if (node.FirstChild.Name == "statementBlock") {

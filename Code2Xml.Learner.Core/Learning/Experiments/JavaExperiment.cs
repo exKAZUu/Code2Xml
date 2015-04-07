@@ -437,6 +437,39 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             return new FeatureExtractor(5, 0, 1, 0);
         }
 
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                @"checkArgument(b)",
+	                @"checkArgument(b, """")",
+	                @"Preconditions.checkArgument(b)",
+	                @"Preconditions.checkArgument(b, """")",
+	                @"com.google.common.base.Preconditions.checkArgument(b)",
+	                @"com.google.common.base.Preconditions.checkArgument(b, """")",
+	                "for (; b;)",
+	                "while (b)",
+	                "while (b)",
+	                "if (b)",
+	                "if (b)",
+	                @"checkArgument(true)",
+	                @"checkArgument(true, """")",
+	                @"Preconditions.checkArgument(true)",
+	                @"Preconditions.checkArgument(true, """")",
+	                @"com.google.common.truease.Preconditions.checkArgument(true)",
+	                @"com.google.common.truease.Preconditions.checkArgument(true, """")",
+	                "for (; true;)",
+	                "while (true)",
+	                "while (true)",
+	                "if (true)",
+	                "if (true)",
+	            };
+	        }
+	    }
+
+	    public override IEnumerable<string> RejectingFragments {
+	        get { return Enumerable.Empty<string>(); }
+	    }
+
         public JavaSuperComplexBranchExperiment() : base("expression") {}
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
