@@ -296,51 +296,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
             return true;
         }
-
-        public override IList<CstNode> GetRootsUsingOracle(CstNode node) {
-            if (node.Name == "expression") {
-                node = node.Parent;
-            }
-            if (node.Name == "argument_value") {
-                node = node.Parent;
-            }
-            var p = node.Parent;
-            var pName = p.Name;
-            if (pName == "if_statement") {
-                return new[] { node.Prev.Prev, node.Prev, node, node.Next };
-            }
-            if (pName == "while_statement") {
-                return new[] { node.Prev.Prev, node.Prev, node, node.Next };
-            }
-            if (pName == "do_statement") {
-                return new[] { node.Prev.Prev, node.Prev, node, node.Next, node.Next };
-            }
-            if (pName == "for_condition") {
-                return p.PrevsFromSelfAndSelf().Concat(Enumerable.Repeat(p.Next, 1)).ToList();
-            }
-            if (node.PrevsFromFirst().Any()) {
-                return new CstNode[0];
-            }
-            if (node.Name == "boolean_expression") {
-                node = node.FirstChild;
-            }
-
-            var ppppp = node.Parent.Parent.Parent.Parent.Parent;
-            var parts = ppppp.Children("primary_expression_start")
-                    .Concat(ppppp.Children("primary_expression_part"))
-                    .ToList();
-            if (parts.All(
-                    e2 => e2.Descendants("identifier")
-                            .FirstOrDefault().SafeTokenText() != "Contract")) {
-                return new CstNode[0];
-            }
-            if (parts.All(
-                    e2 => e2.Descendants("identifier")
-                            .FirstOrDefault().SafeTokenText() != "Requires")) {
-                return new CstNode[0];
-            }
-            return parts;
-        }
     }
 
     public class CSharpComplexBranchExperiment : LearningExperiment {
@@ -628,16 +583,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                    ((node.TokenText == "+" || node.TokenText == "-")
                     && node.Parent.Name == "additive_expression");
         }
-
-        public override IList<CstNode> GetRootsUsingOracle(CstNode node) {
-            if (((node.TokenText == "*" || node.TokenText == "/")
-                 && node.Parent.Name == "multiplicative_expression") ||
-                ((node.TokenText == "+" || node.TokenText == "-")
-                 && node.Parent.Name == "additive_expression")) {
-                return new[] { node.Parent };
-            }
-            return new CstNode[0];
-        }
     }
 
     public class CSharpSwitchCaseExperiment : LearningExperiment {
@@ -660,20 +605,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 return node.ChildrenCount == 1;
             }
             return node.Name == "switch_label";
-        }
-
-        public override IList<CstNode> GetRootsUsingOracle(CstNode node) {
-            var pName = node.Parent.Name;
-            if (pName == "switch_statement") {
-                return new[] { node.Prev.Prev, node.Prev, node, node.Next };
-            }
-            if (node.Name == "switch_labels") {
-                return new[] { node };
-            }
-            if (node.Name == "switch_label") {
-                return new[] { node };
-            }
-            return new CstNode[0];
         }
     }
 

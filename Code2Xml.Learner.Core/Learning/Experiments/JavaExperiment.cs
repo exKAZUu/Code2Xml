@@ -514,41 +514,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
         }
 
-        public override IList<CstNode> GetRootsUsingOracle(CstNode node) {
-            var p = node.Parent;
-            var pp = p.Parent;
-            var isPar = p.SafeName() == "parExpression";
-            var isStmt = pp.SafeName() == "statement";
-            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "if") {
-                return new[] { p.Prev, p };
-            }
-            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "while") {
-                return new[] { p.Prev, p };
-            }
-            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "do") {
-                return new[] { p.Prev, p, p.Next };
-            }
-            if (p.SafeName() == "forstatement"
-                && p.Children().Count(e2 => e2.TokenText == ";") >= 2) {
-                return p.PrevsFromSelfAndSelf().Concat(Enumerable.Repeat(p.Next, 1))
-                        .ToList();
-            }
-            {
-                var primary = node.SafeParent().SafeParent().SafeParent().SafeParent();
-                if (primary.SafeName() != "primary") {
-                    return new CstNode[0];
-                }
-                if (primary.Children().All(e2 => e2.TokenText != "checkArgument")) {
-                    return new CstNode[0];
-                }
-                if (node.PrevsFromFirst().Any()) {
-                    return new CstNode[0];
-                }
-                var ppp = node.Parent.Parent.Parent;
-                return new[] { ppp.Prev, ppp };
-            }
-        }
-
         public IEnumerable<CstNode> SelectBooleanExpressions(CstNode e) {
             var expressions = e.Descendants("expression")
                     .Where(
@@ -960,16 +925,6 @@ statement
                    ((node.TokenText == "*" || node.TokenText == "/")
                     && node.Parent.Name == "multiplicativeExpression");
         }
-
-        public override IList<CstNode> GetRootsUsingOracle(CstNode node) {
-            if (((node.TokenText == "+" || node.TokenText == "-")
-                 && node.Parent.Name == "additiveExpression") ||
-                ((node.TokenText == "*" || node.TokenText == "/")
-                 && node.Parent.Name == "multiplicativeExpression")) {
-                return new[] { node.Parent };
-            }
-            return new CstNode[0];
-        }
     }
 
     public class JavaSwitchCaseExperiment : LearningExperiment {
@@ -992,20 +947,6 @@ statement
                 return true;
             }
             return node.Name == "switchLabel";
-        }
-
-        public override IList<CstNode> GetRootsUsingOracle(CstNode node) {
-            var p = node.Parent;
-            var pp = p.Parent;
-            var isPar = p.SafeName() == "parExpression";
-            var isStmt = pp.SafeName() == "statement";
-            if (isStmt && isPar && pp.FirstChild.SafeTokenText() == "switch") {
-                return new[] { p.Prev, p };
-            }
-            if (node.Name == "switchLabel") {
-                return new[] { node };
-            }
-            return new CstNode[0];
         }
     }
 

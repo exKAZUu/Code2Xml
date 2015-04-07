@@ -294,27 +294,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
             return false;
         }
-
-        public override IList<CstNode> GetRootsUsingOracle(CstNode node) {
-            var siblings = node.Siblings().ToList();
-            var parent = node.Parent;
-            if (parent.SafeName() == "stat" && siblings[0].TokenText == "if") {
-                return new[] { node.Prev, node, node.Next };
-            }
-            if (parent.SafeName() == "stat" && siblings[0].TokenText == "while") {
-                return new[] { node.Prev, node, node.Next };
-            }
-            if (parent.SafeName() == "stat" && siblings[0].TokenText == "repeat") {
-                return new[] { node.Prev, node };
-            }
-            var ppp = node.SafeParent().SafeParent().SafeParent();
-            var pppp = ppp.SafeParent();
-            if (pppp.SafeName() == "functioncall" && ppp.Prev != null
-                && ppp.Prev.TokenText == "print") {
-                return new[] { pppp };
-            }
-            return new CstNode[0];
-        }
     }
 
     public class LuaSuperComplexBranchExperimentWithoutTrue : LearningExperiment {
@@ -347,27 +326,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 return node.TokenText != "true";
             }
             return false;
-        }
-
-        public override IList<CstNode> GetRootsUsingOracle(CstNode node) {
-            var siblings = node.Siblings().ToList();
-            var parent = node.Parent;
-            if (parent.SafeName() == "stat" && siblings[0].TokenText == "if") {
-                return new[] { node.Prev, node, node.Next };
-            }
-            if (parent.SafeName() == "stat" && siblings[0].TokenText == "while") {
-                return new[] { node.Prev, node, node.Next };
-            }
-            if (parent.SafeName() == "stat" && siblings[0].TokenText == "repeat") {
-                return new[] { node.Prev, node };
-            }
-            var ppp = node.SafeParent().SafeParent().SafeParent();
-            var pppp = ppp.SafeParent();
-            if (pppp.SafeName() == "functioncall" && ppp.Prev != null
-                && ppp.Prev.TokenText == "print") {
-                return new[] { pppp };
-            }
-            return new CstNode[0];
         }
     }
 
@@ -566,18 +524,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             return node.Parent.Name == "binop"
                    && (node.TokenText == "+" || node.TokenText == "-" || node.TokenText == "*"
                        || node.TokenText == "/");
-        }
-
-        public override IList<CstNode> GetRootsUsingOracle(CstNode node) {
-            if (node.Name == "binop") {
-                node = node.FirstChild;
-            }
-            if (node.Parent.Name == "binop"
-                && (node.TokenText == "+" || node.TokenText == "-" || node.TokenText == "*"
-                    || node.TokenText == "/")) {
-                return new[] { node.Parent };
-            }
-            return new CstNode[0];
         }
     }
 }

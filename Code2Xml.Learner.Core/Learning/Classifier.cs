@@ -35,8 +35,7 @@ namespace Code2Xml.Learner.Core.Learning {
             AcceptingFeatureBitMask = (BigInteger.One << featureSet.AcceptingFeatureCount)
                                       - BigInteger.One;
             RejectingFeatureBitMask = AllFeatureBitMask ^ AcceptingFeatureBitMask;
-            GroupPaths = Enumerable.Repeat(">", 1)
-                    .Concat(selectedNodeNames.Select(n => ">" + n + ">")).ToList();
+            GroupPaths = selectedNodeNames.Select(n => ">" + n + ">").ToList();
             Initialize();
         }
 

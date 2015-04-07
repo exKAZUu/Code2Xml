@@ -307,32 +307,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
             return false;
         }
-
-        public override IList<CstNode> GetRootsUsingOracle(CstNode node) {
-            var p = node.Parent;
-            var pName = p.FirstChild.Name;
-            if (pName == "If") {
-                return new[] { node.Prev.Prev, node.Prev, node };
-            }
-            if (pName == "While") {
-                return new[] { node.Prev.Prev, node.Prev, node };
-            }
-            if (pName == "Do") {
-                return new[] { node.Prev.Prev, node.Prev, node, node.Next };
-            }
-            if (node.SafeParent().Name == "commaList"
-                && node.SafeParent().SafeParent().Name == "forCondition"
-                && !node.NextsFromSelf().Any()) {
-                return new[] { node.Parent.Parent };
-            }
-            if (node.SafeParent().Name == "commaList"
-                && node.SafeParent().SafeParent().Name == "simpleStatement"
-                && node.SafeParent().SafeParent().FirstChild.Name == "Echo"
-                && node.Prev == null) {
-                return new[] { node.Parent.Parent };
-            }
-            return new CstNode[0];
-        }
     }
 
     public class PhpIfExperiment : LearningExperiment {
@@ -572,14 +546,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
             return node.Parent.Name == "addition" ||
                    node.Parent.Name == "multiplication";
-        }
-
-        public override IList<CstNode> GetRootsUsingOracle(CstNode node) {
-            if (node.Parent.Name == "addition" ||
-                node.Parent.Name == "multiplication") {
-                return new[] { node.Parent };
-            }
-            return new CstNode[0];
         }
     }
 

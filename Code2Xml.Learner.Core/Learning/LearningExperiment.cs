@@ -39,14 +39,6 @@ namespace Code2Xml.Learner.Core.Learning {
     public abstract class LearningExperiment : ILearningExperiment {
         protected abstract CstGenerator Generator { get; }
 
-        public virtual IEnumerable<string> AcceptingFragments {
-            get { return null; }
-        }
-
-        public virtual IEnumerable<string> RejectingFragments {
-            get { return null; }
-        }
-
         public readonly ISet<string> OracleNames;
 
         protected LearningExperiment(params string[] elementNames) {
@@ -360,16 +352,21 @@ namespace Code2Xml.Learner.Core.Learning {
 
         public abstract bool ProtectedIsAcceptedUsingOracle(CstNode node);
 
-        public abstract FeatureExtractor CreateExtractor();
+		public virtual FeatureExtractor CreateExtractor() {
+			return new FeatureExtractor();
+		}
 
-        public virtual IList<CstNode> GetRootsUsingOracle(CstNode node) {
-            return null;
+        public virtual IEnumerable<string> AcceptingFragments {
+            get { return null; }
         }
+
+	    public virtual IEnumerable<string> RejectingFragments {
+	        get { return Enumerable.Empty<string>(); }
+	    }
     }
 
     public interface ILearningExperiment {
         FeatureExtractor CreateExtractor();
-        IList<CstNode> GetRootsUsingOracle(CstNode node);
         IEnumerable<string> AcceptingFragments { get; }
         IEnumerable<string> RejectingFragments { get; }
     }
