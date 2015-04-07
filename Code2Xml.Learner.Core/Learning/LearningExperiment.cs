@@ -85,8 +85,10 @@ namespace Code2Xml.Learner.Core.Learning {
             var preparingTime = Environment.TickCount;
             var extractor = CreateExtractor();
             var seedNodeSet = new SeedNodeSet(seedNodes, seedCsts, this);
-            Console.WriteLine("#Accepted seed nodes: " + seedNodeSet.AcceptedNodes.Count);
-            Console.WriteLine("#Rejected seed nodes: " + seedNodeSet.RejectedNodes.Count);
+            Console.WriteLine("#Accepted seed nodes: " + seedNodeSet.AcceptedNodes.Count
+                + " (" + AcceptingFragments.Count() + ")");
+            Console.WriteLine("#Rejected seed nodes: " + seedNodeSet.RejectedNodes.Count
+                + " (" + RejectingFragments.Count() + ")");
 
             var seedCst = seedCsts.First();
             var seedCode = seedCst.Code;
