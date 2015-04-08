@@ -34,10 +34,10 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             //new JavaScriptComplexStatementExperiment(), // OK(40/50)
             //new JavaScriptSuperComplexBranchExperiment(), // OK(40/50)
             //new JavaScriptExpressionStatementExperiment(), // OK(40/50)
-            //new JavaScriptArithmeticOperatorExperiment(), // NG
-            //new JavaScriptSwitchCaseExperiment(),
-            new JavaScriptSuperComplexBranchExperimentWithSwitch(),
-            //new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue(), 
+            //new JavaScriptArithmeticOperatorExperiment(), // OK(40/50)
+            //new JavaScriptSwitchCaseExperiment(), // OK(40/50)
+            //new JavaScriptSuperComplexBranchExperimentWithSwitch(), // OK(40/50)
+            new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue(), 
 
             //new JavaScriptComplexBranchExperiment(),
             //new JavaScriptIfExperiment(),
