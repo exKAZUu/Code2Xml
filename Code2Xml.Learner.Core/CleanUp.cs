@@ -87,7 +87,6 @@ namespace Code2Xml.Learner.Core {
                 return;
             }
             var set = new HashSet<string>();
-            var count = 0;
             foreach (var line in File.ReadAllLines(inPath).Skip(1).Take(100)) {
                 var items = line.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
                 if (items.Length <= 2) {

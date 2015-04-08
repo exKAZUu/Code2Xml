@@ -92,16 +92,10 @@ namespace Code2Xml.Learner.Core.Learning {
 		    if (IdealVectorSet.Accepted.Keys.Intersect(IdealVectorSet.Rejected.Keys).Any()) {
 		        throw new Exception();
 		    }
-		    if (IdealVectorSet.Accepted.Keys.Intersect(SeedVectorSet.Accepted.Keys).Any()) {
-		        throw new Exception();
-		    }
 		    if (IdealVectorSet.Accepted.Keys.Intersect(SeedVectorSet.Rejected.Keys).Any()) {
 		        throw new Exception();
 		    }
 		    if (IdealVectorSet.Rejected.Keys.Intersect(SeedVectorSet.Accepted.Keys).Any()) {
-		        throw new Exception();
-		    }
-		    if (IdealVectorSet.Rejected.Keys.Intersect(SeedVectorSet.Rejected.Keys).Any()) {
 		        throw new Exception();
 		    }
 			return this;
