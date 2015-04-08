@@ -206,7 +206,7 @@ namespace Code2Xml.Core.Location {
         }
 
         /// <summary>
-        /// Returns whether the specified CodeRange instance is included by this CodeRange instance.
+        /// Returns whether the specified CodeRange value is included by this CodeRange instance.
         /// </summary>
         /// <param name="other"></param>
         /// <returns></returns>
@@ -224,7 +224,7 @@ namespace Code2Xml.Core.Location {
         }
 
         /// <summary>
-        /// Returns whether the specified CodeRange instance is overlapped with this CodeRange instance.
+        /// Returns whether the specified CodeRange value is overlapped with this CodeRange instance.
         /// </summary>
         /// <param name="other"></param>
         /// <returns></returns>
@@ -233,6 +233,15 @@ namespace Code2Xml.Core.Location {
                    (StartLocation < other.EndLocation && other.EndLocation <= EndLocation) ||
                    (other.StartLocation <= StartLocation && StartLocation < other.EndLocation) ||
                    (other.StartLocation < EndLocation && EndLocation <= other.EndLocation);
+        }
+
+        /// <summary>
+        /// Returns whether the specified CstNode instance is overlapped with this CodeRange instance.
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public bool Overlaps(CstNode node) {
+            return Overlaps(Locate(node));
         }
 
         #region Find nodes

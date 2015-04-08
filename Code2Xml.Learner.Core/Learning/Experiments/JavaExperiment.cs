@@ -36,20 +36,11 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             new JavaSuperComplexBranchExperiment(),
             new JavaExpressionStatementExperiment(),
             new JavaArithmeticOperatorExperiment(),
-            //new JavaSwitchCaseExperiment(),
-            //new JavaSuperComplexBranchExperimentWithSwitch(),
-            //new JavaSuperComplexBranchExperimentWithSwitchWithoutTrue(),
+            new JavaSwitchCaseExperiment(),
+            new JavaSuperComplexBranchExperimentWithSwitch(),
+            new JavaSuperComplexBranchExperimentWithSwitchWithoutTrue(),
 
             //new JavaComplexBranchExperiment(),
-            //new JavaIfExperiment(),
-            //new JavaWhileExperiment(),
-            //new JavaDoWhileExperiment(),
-            //new JavaForExperiment(),
-            //new JavaPreconditionsExperiment(),
-            //new JavaStatementExperiment(),
-            //new JavaBlockExperiment(),
-            //new JavaLabeledStatementExperiment(),
-            //new JavaEmptyStatementExperiment(),
         };
 
         #region LearningSets
@@ -629,10 +620,26 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 	                @"do { } while (b);",
 	                @"if (b) { } else if (b) { } else { }",
 	                @"if (b) { } else { }",
-	                @"",
-	                @"",
-	                @"",
-	                @"",
+	                @"switch (b) {
+			case 0:
+			case 1:
+				break;
+			default:
+				break;
+		}",
+	                @"break;",
+	                @"break;",
+	                @"checkArgument(true);",
+	                @"checkArgument(true, """");",
+	                @"Preconditions.checkArgument(true);",
+	                @"Preconditions.checkArgument(true, """");",
+	                @"com.google.common.truease.Preconditions.checkArgument(true);",
+	                @"com.google.common.truease.Preconditions.checkArgument(true, """");",
+	                @"for (; true;) { }",
+	                @"while (true) { }",
+	                @"do { } while (true);",
+	                @"if (true) { } else if (true) { } else { }",
+	                @"if (true) { } else { }",
 	            };
 	        }
 	    }
@@ -650,8 +657,12 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 	                @"{ }",
 	                @"{ }",
 	                @"{ }",
-	                @"",
-	                @"",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
+	                @"{ }",
 	            };
 	        }
         }
@@ -737,89 +748,32 @@ statement
         }
     }
 
-    public class JavaBlockExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return JavaExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
-
-        public JavaBlockExperiment() : base("statement") {}
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            // ブロック自身は意味を持たないステートメントで、中身だけが必要なので除外
-            if (node.FirstChild.Name == "block") {
-                return true;
-            }
-            return false;
-        }
-    }
-
-    public class JavaStatementExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return JavaExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
-
-        public JavaStatementExperiment() : base("statement") {}
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            return node.Name == "statement";
-        }
-    }
-
-    public class JavaLabeledStatementExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return JavaExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
-
-        public JavaLabeledStatementExperiment() : base("statement") {}
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            // ラベルを持つステートメントを除外
-            if (node.FirstChild.Name == "IDENTIFIER") {
-                return false;
-            }
-            return false;
-        }
-    }
-
-    public class JavaEmptyStatementExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return JavaExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
-
-        public JavaEmptyStatementExperiment() : base("statement") {}
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            if (node.FirstChild.TokenText == ";") {
-                return true;
-            }
-            return false;
-        }
-    }
-
     public class JavaExpressionStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                @"checkArgument(b);",
+	                @"checkArgument(b, """");",
+	                @"Preconditions.checkArgument(b);",
+	                @"Preconditions.checkArgument(b, """");",
+	                @"com.google.common.base.Preconditions.checkArgument(b);",
+	                @"com.google.common.base.Preconditions.checkArgument(b, """");",
+	                @"i = 0;",
+	                @"i = 0;",
+	                @"f(0 + 1 - 2 * 3 / 4 % 5);",
+	                @"checkArgument(true);",
+	                @"checkArgument(true, """");",
+	                @"Preconditions.checkArgument(true);",
+	                @"Preconditions.checkArgument(true, """");",
+	                @"com.google.common.truease.Preconditions.checkArgument(true);",
+	                @"com.google.common.truease.Preconditions.checkArgument(true, """");",
+	            };
+	        }
+	    }
 
         public JavaExpressionStatementExperiment() : base("statement") {}
 
@@ -833,9 +787,16 @@ statement
             get { return JavaExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                @"0 + 1",
+	                @"1 - 2",
+	                @"2 * 3",
+	                @"3 / 4",
+	            };
+	        }
+	    }
 
         public JavaArithmeticOperatorExperiment() : base("PLUS", "SUB", "STAR", "SLASH") {}
 
@@ -852,9 +813,16 @@ statement
             get { return JavaExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                @"switch (1)",
+	                @"case 0:",
+	                @"case 1:",
+	                @"default:",
+	            };
+	        }
+	    }
 
         public JavaSwitchCaseExperiment() : base("expression", "switchLabel") {}
 
@@ -875,9 +843,38 @@ statement
             get { return JavaExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                @"checkArgument(b)",
+	                @"checkArgument(b, """")",
+	                @"Preconditions.checkArgument(b)",
+	                @"Preconditions.checkArgument(b, """")",
+	                @"com.google.common.base.Preconditions.checkArgument(b)",
+	                @"com.google.common.base.Preconditions.checkArgument(b, """")",
+	                "for (; b;)",
+	                "while (b)",
+	                "while (b)",
+	                "if (b)",
+	                "if (b)",
+	                @"switch (1)",
+	                @"case 0:",
+	                @"case 1:",
+	                @"default:",
+	                @"checkArgument(true)",
+	                @"checkArgument(true, """")",
+	                @"Preconditions.checkArgument(true)",
+	                @"Preconditions.checkArgument(true, """")",
+	                @"com.google.common.truease.Preconditions.checkArgument(true)",
+	                @"com.google.common.truease.Preconditions.checkArgument(true, """")",
+	                "for (; true;)",
+	                "while (true)",
+	                "while (true)",
+	                "if (true)",
+	                "if (true)",
+	            };
+	        }
+	    }
 
         public JavaSuperComplexBranchExperimentWithSwitch() : base("expression", "switchLabel") {}
 
@@ -926,8 +923,44 @@ statement
             get { return JavaExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
+	    public override IEnumerable<string> AcceptingFragments {
+	        get {
+	            return new[] {
+	                @"checkArgument(b)",
+	                @"checkArgument(b, """")",
+	                @"Preconditions.checkArgument(b)",
+	                @"Preconditions.checkArgument(b, """")",
+	                @"com.google.common.base.Preconditions.checkArgument(b)",
+	                @"com.google.common.base.Preconditions.checkArgument(b, """")",
+	                "for (; b;)",
+	                "while (b)",
+	                "while (b)",
+	                "if (b)",
+	                "if (b)",
+	                @"switch (1)",
+	                @"case 0:",
+	                @"case 1:",
+	                @"default:",
+	            };
+	        }
+	    }
+
+        public override IEnumerable<string> RejectingFragments {
+	        get {
+	            return new[] {
+	                @"checkArgument(true)",
+	                @"checkArgument(true, """")",
+	                @"Preconditions.checkArgument(true)",
+	                @"Preconditions.checkArgument(true, """")",
+	                @"com.google.common.truease.Preconditions.checkArgument(true)",
+	                @"com.google.common.truease.Preconditions.checkArgument(true, """")",
+	                "for (; true;)",
+	                "while (true)",
+	                "while (true)",
+	                "if (true)",
+	                "if (true)",
+	            };
+	        }
         }
 
         public JavaSuperComplexBranchExperimentWithSwitchWithoutTrue()

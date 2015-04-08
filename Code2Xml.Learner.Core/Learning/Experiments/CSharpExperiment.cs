@@ -36,20 +36,11 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             new CSharpSuperComplexBranchExperiment(),
             new CSharpExpressionStatementExperiment(),
             new CSharpArithmeticOperatorExperiment(),
-            //new CSharpSwitchCaseExperiment(),
-            //new CSharpSuperComplexBranchExperimentWithSwitch(),
-            //new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue(),
-                    
+            new CSharpSwitchCaseExperiment(),
+            new CSharpSuperComplexBranchExperimentWithSwitch(),
+            new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue(),
+
             //new CSharpComplexBranchExperiment(),
-            //new CSharpIfExperiment(),
-            //new CSharpWhileExperiment(),
-            //new CSharpDoWhileExperiment(),
-            //new CSharpForExperiment(),
-            //new CSharpPreconditionsExperiment(),
-            //new CSharpStatementExperiment(),
-            //new CSharpBlockExperiment(),
-            //new CSharpLabeledStatementExperiment(),
-            //new CSharpEmptyStatementExperiment(),
         };
 
         #region LearningSets
@@ -247,8 +238,37 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return CSharpExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
+        public override IEnumerable<string> AcceptingFragments {
+            get {
+                return new[] {
+                    @"Contract.Requires(b)",
+                    @"Contract.Requires(b, """")",
+                    @"Contract.Requires<Exception>(b)",
+                    @"Contract.Requires<Exception>(b, """")",
+                    @"System.Diagnostics.Contracts.Contract.Requires(b)",
+                    @"System.Diagnostics.Contracts.Contract.Requires(b, """")",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b)",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b, """")",
+                    "for (; b;)",
+                    "while (b)",
+                    "while (b)",
+                    "if (b)",
+                    "if (b)",
+                    @"Contract.Requires(true)",
+                    @"Contract.Requires(true, """")",
+                    @"Contract.Requires<Exception>(true)",
+                    @"Contract.Requires<Exception>(true, """")",
+                    @"System.Diagnostics.Contracts.Contract.Requires(true)",
+                    @"System.Diagnostics.Contracts.Contract.Requires(true, """")",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true)",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """")",
+                    "for (; true;)",
+                    "while (true)",
+                    "while (true)",
+                    "if (true)",
+                    "if (true)",
+                };
+            }
         }
 
         public CSharpSuperComplexBranchExperiment() : base("boolean_expression", "argument") {}
@@ -303,8 +323,21 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return CSharpExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
+        public override IEnumerable<string> AcceptingFragments {
+            get {
+                return new[] {
+                    "for (; b;)",
+                    "while (b)",
+                    "while (b)",
+                    "if (b)",
+                    "if (b)",
+                    "for (; true;)",
+                    "while (true)",
+                    "while (true)",
+                    "if (true)",
+                    "if (true)",
+                };
+            }
         }
 
         public CSharpComplexBranchExperiment() : base("boolean_expression") {}
@@ -327,122 +360,77 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
     }
 
-    public class CSharpIfExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return CSharpExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            var pName = node.Parent.Name;
-            if (pName == "if_statement") {
-                return true;
-            }
-            return false;
-        }
-
-        public CSharpIfExperiment() : base("boolean_expression") {}
-    }
-
-    public class CSharpWhileExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return CSharpExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            var pName = node.Parent.Name;
-            if (pName == "while_statement") {
-                return true;
-            }
-            return false;
-        }
-
-        public CSharpWhileExperiment() : base("boolean_expression") {}
-    }
-
-    public class CSharpDoWhileExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return CSharpExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            var pName = node.Parent.Name;
-            if (pName == "do_statement") {
-                return true;
-            }
-            return false;
-        }
-
-        public CSharpDoWhileExperiment() : base("boolean_expression") {}
-    }
-
-    public class CSharpForExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return CSharpExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            return true;
-        }
-
-        public CSharpForExperiment() : base("for_condition") {}
-    }
-
-    public class CSharpPreconditionsExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return CSharpExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            if (node.PrevsFromFirst().Any()) {
-                return false;
-            }
-            var p = node.Parent.Parent.Parent.Parent.Parent;
-            var parts = p.Children("primary_expression_start")
-                    .Concat(p.Children("primary_expression_part"))
-                    .ToList();
-            if (parts.All(
-                    e2 => e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
-                          != "Contract")) {
-                return false;
-            }
-            if (parts.All(
-                    e2 => e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
-                          != "Requires")) {
-                return false;
-            }
-            return true;
-        }
-
-        public CSharpPreconditionsExperiment() : base("argument") {}
-    }
-
     public class CSharpComplexStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return CSharpExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
+        public override IEnumerable<string> AcceptingFragments {
+            get {
+                return new[] {
+                    @"Contract.Requires(b);",
+                    @"Contract.Requires(b, """");",
+                    @"Contract.Requires<Exception>(b);",
+                    @"Contract.Requires<Exception>(b, """");",
+                    @"System.Diagnostics.Contracts.Contract.Requires(b);",
+                    @"System.Diagnostics.Contracts.Contract.Requires(b, """");",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b);",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b, """");",
+                    @"f(0 + 1 - 2 * 3 / 4 % 5);",
+                    @"f();",
+                    @"for (; b;) { }",
+                    @"while (b) { }",
+                    @"do { } while (b);",
+                    @"if (b) { } else if (b) { } else { }",
+                    @"if (b) { } else { }",
+                    @"switch (1) {
+				case 0:
+				case 1:
+					break;
+				default:
+					break;
+			}",
+                    @"break;",
+                    @"break;",
+                    @"Contract.Requires(true);",
+                    @"Contract.Requires(true, """");",
+                    @"Contract.Requires<Exception>(true);",
+                    @"Contract.Requires<Exception>(true, """");",
+                    @"System.Diagnostics.Contracts.Contract.Requires(true);",
+                    @"System.Diagnostics.Contracts.Contract.Requires(true, """");",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true);",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """");",
+                    @"for (; true;) { }",
+                    @"while (true) { }",
+                    @"do { } while (true);",
+                    @"if (true) { } else if (true) { } else { }",
+                    @"if (true) { } else { }",
+                };
+            }
+        }
+
+        public override IEnumerable<string> RejectingFragments {
+            get {
+                return new[] {
+                    @"T:
+			f(0 + 1 - 2 * 3 / 4 % 5);",
+                    @";", // dummy for f(0 + 1 - 2 * 3 / 4 % 5);
+                    @";",
+                    @"{ f(); }",
+                    @"{ }",
+                    @"{ }",
+                    @"{ }",
+                    @"{ }",
+                    @"{ }",
+                    @"{ }",
+                    @"{ }",
+                    @"{ }",
+                    @"{ }",
+                    @"{ }",
+                    @"{ }",
+                    @"{ }",
+                };
+            }
         }
 
         public CSharpComplexStatementExperiment() : base("statement") {}
@@ -467,90 +455,34 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
     }
 
-    public class CSharpStatementExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return CSharpExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            return true;
-        }
-
-        public CSharpStatementExperiment() : base("statement") {}
-    }
-
-    public class CSharpBlockExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return CSharpExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            // ブロック自身は意味を持たないステートメントで、中身だけが必要なので除外
-            var e2 = node.Child("embedded_statement");
-            if (e2 != null && e2.Child("block") != null) {
-                return true;
-            }
-            return false;
-        }
-
-        public CSharpBlockExperiment() : base("statement") {}
-    }
-
-    public class CSharpLabeledStatementExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return CSharpExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            // ラベルはループ文に付くため，ラベルの中身は除外
-            if (node.Child("labeled_statement") != null) {
-                return true;
-            }
-            return false;
-        }
-
-        public CSharpLabeledStatementExperiment() : base("statement") {}
-    }
-
-    public class CSharpEmptyStatementExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return CSharpExperiment.Generator; }
-        }
-
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
-        }
-
-        public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            // 空文を除外
-            if (node.TokenText == ";") {
-                return true;
-            }
-            return false;
-        }
-
-        public CSharpEmptyStatementExperiment() : base("statement") {}
-    }
-
     public class CSharpExpressionStatementExperiment : LearningExperiment {
         protected override CstGenerator Generator {
             get { return CSharpExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
+        public override IEnumerable<string> AcceptingFragments {
+            get {
+                return new[] {
+                    @"Contract.Requires(b);",
+                    @"Contract.Requires(b, """");",
+                    @"Contract.Requires<Exception>(b);",
+                    @"Contract.Requires<Exception>(b, """");",
+                    @"System.Diagnostics.Contracts.Contract.Requires(b);",
+                    @"System.Diagnostics.Contracts.Contract.Requires(b, """");",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b);",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b, """");",
+                    @"f(0 + 1 - 2 * 3 / 4 % 5);",
+                    @"f();",
+                    @"Contract.Requires(true);",
+                    @"Contract.Requires(true, """");",
+                    @"Contract.Requires<Exception>(true);",
+                    @"Contract.Requires<Exception>(true, """");",
+                    @"System.Diagnostics.Contracts.Contract.Requires(true);",
+                    @"System.Diagnostics.Contracts.Contract.Requires(true, """");",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true);",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """");",
+                };
+            }
         }
 
         public CSharpExpressionStatementExperiment() : base("expression_statement") {}
@@ -571,8 +503,15 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return CSharpExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
+        public override IEnumerable<string> AcceptingFragments {
+            get {
+                return new[] {
+                    @"0 + 1",
+                    @"1 - 2",
+                    @"2 * 3",
+                    @"3 / 4",
+                };
+            }
         }
 
         public CSharpArithmeticOperatorExperiment() : base("TOKENS", "MINUS") {}
@@ -590,8 +529,15 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return CSharpExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
+        public override IEnumerable<string> AcceptingFragments {
+            get {
+                return new[] {
+                    @"switch (1)",
+                    @"case 0:",
+                    @"case 1:",
+                    @"default:",
+                };
+            }
         }
 
         public CSharpSwitchCaseExperiment() : base("expression", "switch_label") {}
@@ -613,8 +559,41 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return CSharpExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
+        public override IEnumerable<string> AcceptingFragments {
+            get {
+                return new[] {
+                    @"Contract.Requires(b)",
+                    @"Contract.Requires(b, """")",
+                    @"Contract.Requires<Exception>(b)",
+                    @"Contract.Requires<Exception>(b, """")",
+                    @"System.Diagnostics.Contracts.Contract.Requires(b)",
+                    @"System.Diagnostics.Contracts.Contract.Requires(b, """")",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b)",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b, """")",
+                    "for (; b;)",
+                    "while (b)",
+                    "while (b)",
+                    "if (b)",
+                    "if (b)",
+                    @"switch (1)",
+                    @"case 0:",
+                    @"case 1:",
+                    @"default:",
+                    @"Contract.Requires(true)",
+                    @"Contract.Requires(true, """")",
+                    @"Contract.Requires<Exception>(true)",
+                    @"Contract.Requires<Exception>(true, """")",
+                    @"System.Diagnostics.Contracts.Contract.Requires(true)",
+                    @"System.Diagnostics.Contracts.Contract.Requires(true, """")",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true)",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """")",
+                    "for (; true;)",
+                    "while (true)",
+                    "while (true)",
+                    "if (true)",
+                    "if (true)",
+                };
+            }
         }
 
         public CSharpSuperComplexBranchExperimentWithSwitch()
@@ -656,18 +635,12 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             var parts = p.Children("primary_expression_start")
                     .Concat(p.Children("primary_expression_part"))
                     .ToList();
-            if (
-                    parts.All(
-                            e2 =>
-                                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
-                                    != "Contract")) {
+            if (parts.All(e2 =>
+                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText() != "Contract")) {
                 return false;
             }
-            if (
-                    parts.All(
-                            e2 =>
-                                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
-                                    != "Requires")) {
+            if (parts.All(e2 =>
+                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText() != "Requires")) {
                 return false;
             }
             return true;
@@ -679,8 +652,48 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return CSharpExperiment.Generator; }
         }
 
-        public override FeatureExtractor CreateExtractor() {
-            return new FeatureExtractor();
+        public override IEnumerable<string> AcceptingFragments {
+            get {
+                return new[] {
+                    @"Contract.Requires(b)",
+                    @"Contract.Requires(b, """")",
+                    @"Contract.Requires<Exception>(b)",
+                    @"Contract.Requires<Exception>(b, """")",
+                    @"System.Diagnostics.Contracts.Contract.Requires(b)",
+                    @"System.Diagnostics.Contracts.Contract.Requires(b, """")",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b)",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b, """")",
+                    "for (; b;)",
+                    "while (b)",
+                    "while (b)",
+                    "if (b)",
+                    "if (b)",
+                    @"switch (1)",
+                    @"case 0:",
+                    @"case 1:",
+                    @"default:",
+                };
+            }
+        }
+
+        public override IEnumerable<string> RejectingFragments {
+	        get {
+	            return new[] {
+                    @"Contract.Requires(true)",
+                    @"Contract.Requires(true, """")",
+                    @"Contract.Requires<Exception>(true)",
+                    @"Contract.Requires<Exception>(true, """")",
+                    @"System.Diagnostics.Contracts.Contract.Requires(true)",
+                    @"System.Diagnostics.Contracts.Contract.Requires(true, """")",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true)",
+                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """")",
+                    "for (; true;)",
+                    "while (true)",
+                    "while (true)",
+                    "if (true)",
+                    "if (true)",
+	            };
+	        }
         }
 
         public CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue()
@@ -722,18 +735,12 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             var parts = p.Children("primary_expression_start")
                     .Concat(p.Children("primary_expression_part"))
                     .ToList();
-            if (
-                    parts.All(
-                            e2 =>
-                                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
-                                    != "Contract")) {
+            if (parts.All(e2 =>
+                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText() != "Contract")) {
                 return false;
             }
-            if (
-                    parts.All(
-                            e2 =>
-                                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText()
-                                    != "Requires")) {
+            if (parts.All(e2 =>
+                    e2.Descendants("identifier").FirstOrDefault().SafeTokenText() != "Requires")) {
                 return false;
             }
             return node.TokenText != "true";

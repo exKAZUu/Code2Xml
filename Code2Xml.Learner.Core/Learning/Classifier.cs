@@ -83,10 +83,8 @@ namespace Code2Xml.Learner.Core.Learning {
 
         private void Initialize() {
             Units = Enumerable.Repeat(0, GroupPaths.Count)
-                    .Select(
-                            _ =>
-                                    new ClassifierUnit(AcceptingFeatureBitMask,
-                                            RejectingFeatureBitMask))
+                    .Select(_ =>
+                            new ClassifierUnit(AcceptingFeatureBitMask, RejectingFeatureBitMask))
                     .ToList();
         }
 

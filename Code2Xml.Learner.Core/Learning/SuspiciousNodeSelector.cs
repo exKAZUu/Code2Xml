@@ -20,6 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using Paraiba.Collections.Generic;
 
 namespace Code2Xml.Learner.Core.Learning {
 	public class SuspiciousNodeSelector {
@@ -37,11 +38,11 @@ namespace Code2Xml.Learner.Core.Learning {
 			_rejectingFeatureBitMask = rejectingFeatureBitMask;
 		}
 
-		public List<SuspiciousNode> SelectSuspiciousNodes(
+		public HashSet<SuspiciousNode> SelectSuspiciousNodes(
 				int count, Classifier classifier, List<List<SuspiciousNode>> acceptAccept,
 				List<List<SuspiciousNode>> acceptReject, List<List<SuspiciousNode>> rejectAccept,
 				List<List<SuspiciousNode>> rejectReject) {
-			var suspiciousNodes = new List<SuspiciousNode>();
+			var suspiciousNodes = new HashSet<SuspiciousNode>();
 
 			switch (count) {
 			case 0:
