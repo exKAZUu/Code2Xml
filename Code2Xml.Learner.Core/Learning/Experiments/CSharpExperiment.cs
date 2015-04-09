@@ -32,13 +32,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         private const string LangName = "CSharp";
 
         private static readonly LearningExperiment[] Experiments = {
-            new CSharpComplexStatementExperiment(),
-            new CSharpSuperComplexBranchExperiment(),
-            new CSharpExpressionStatementExperiment(),
-            new CSharpArithmeticOperatorExperiment(),
-            new CSharpSwitchCaseExperiment(),
-            new CSharpSuperComplexBranchExperimentWithSwitch(),
-            new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue(),
+            //new CSharpComplexStatementExperiment(), // OK(40/50)
+            new CSharpSuperComplexBranchExperiment(), // NG
+            //new CSharpExpressionStatementExperiment(), // OK(40/50)
+            //new CSharpArithmeticOperatorExperiment(), // OK(40/50)
+            //new CSharpSwitchCaseExperiment(), // OK(40/50)
+            //new CSharpSuperComplexBranchExperimentWithSwitch(), // NG
+            //new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue(), // NG
 
             //new CSharpComplexBranchExperiment(),
         };
