@@ -33,8 +33,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         private static readonly LearningExperiment[] Experiments = {
             //new JavaComplexStatementExperiment(), // OK(40/50)
-            new JavaSuperComplexBranchExperiment(), // OK(40/50)
-            //new JavaExpressionStatementExperiment(), // OK(40/50)
+            //new JavaSuperComplexBranchExperiment(), // OK(40/50)
+            new JavaExpressionStatementExperiment(), // OK(40/50) => NG
             //new JavaArithmeticOperatorExperiment(), // OK(40/50)
             //new JavaSwitchCaseExperiment(),
             //new JavaSuperComplexBranchExperimentWithSwitch(),
@@ -769,8 +769,8 @@ statement
 	                @"checkArgument(true, """");",
 	                @"Preconditions.checkArgument(true);",
 	                @"Preconditions.checkArgument(true, """");",
-	                @"com.google.common.truease.Preconditions.checkArgument(true);",
-	                @"com.google.common.truease.Preconditions.checkArgument(true, """");",
+	                @"com.google.common.base.Preconditions.checkArgument(true);",
+	                @"com.google.common.base.Preconditions.checkArgument(true, """");",
 	            };
 	        }
 	    }
