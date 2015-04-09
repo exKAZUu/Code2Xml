@@ -32,13 +32,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         private const string LangName = "Java";
 
         private static readonly LearningExperiment[] Experiments = {
-            //new JavaComplexStatementExperiment(), // OK(40/50)
-            //new JavaSuperComplexBranchExperiment(), // OK(40/50)
-            new JavaExpressionStatementExperiment(), // OK(40/50) => NG
-            //new JavaArithmeticOperatorExperiment(), // OK(40/50)
-            //new JavaSwitchCaseExperiment(),
-            //new JavaSuperComplexBranchExperimentWithSwitch(),
-            //new JavaSuperComplexBranchExperimentWithSwitchWithoutTrue(),
+            new JavaComplexStatementExperiment(), // OK(40/50)
+            new JavaSuperComplexBranchExperiment(), // OK(40/50)
+            new JavaExpressionStatementExperiment(), // OK(40/50)
+            new JavaArithmeticOperatorExperiment(), // OK(40/50)
+            new JavaSwitchCaseExperiment(),
+            new JavaSuperComplexBranchExperimentWithSwitch(),
+            new JavaSuperComplexBranchExperimentWithSwitchWithoutTrue(),
 
             //new JavaComplexBranchExperiment(),
         };
@@ -442,8 +442,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 	                @"checkArgument(true, """")",
 	                @"Preconditions.checkArgument(true)",
 	                @"Preconditions.checkArgument(true, """")",
-	                @"com.google.common.truease.Preconditions.checkArgument(true)",
-	                @"com.google.common.truease.Preconditions.checkArgument(true, """")",
+	                @"com.google.common.base.Preconditions.checkArgument(true);",
+	                @"com.google.common.base.Preconditions.checkArgument(true, """");",
 	                "for (; true;)",
 	                "while (true)",
 	                "while (true)",
@@ -633,8 +633,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 	                @"checkArgument(true, """");",
 	                @"Preconditions.checkArgument(true);",
 	                @"Preconditions.checkArgument(true, """");",
-	                @"com.google.common.truease.Preconditions.checkArgument(true);",
-	                @"com.google.common.truease.Preconditions.checkArgument(true, """");",
+	                @"com.google.common.base.Preconditions.checkArgument(true);",
+	                @"com.google.common.base.Preconditions.checkArgument(true, """");",
 	                @"for (; true;) { }",
 	                @"while (true) { }",
 	                @"do { } while (true);",
@@ -865,8 +865,8 @@ statement
 	                @"checkArgument(true, """")",
 	                @"Preconditions.checkArgument(true)",
 	                @"Preconditions.checkArgument(true, """")",
-	                @"com.google.common.truease.Preconditions.checkArgument(true)",
-	                @"com.google.common.truease.Preconditions.checkArgument(true, """")",
+	                @"com.google.common.base.Preconditions.checkArgument(true);",
+	                @"com.google.common.base.Preconditions.checkArgument(true, """");",
 	                "for (; true;)",
 	                "while (true)",
 	                "while (true)",
@@ -952,8 +952,8 @@ statement
 	                @"checkArgument(true, """")",
 	                @"Preconditions.checkArgument(true)",
 	                @"Preconditions.checkArgument(true, """")",
-	                @"com.google.common.truease.Preconditions.checkArgument(true)",
-	                @"com.google.common.truease.Preconditions.checkArgument(true, """")",
+	                @"com.google.common.base.Preconditions.checkArgument(true);",
+	                @"com.google.common.base.Preconditions.checkArgument(true, """");",
 	                "for (; true;)",
 	                "while (true)",
 	                "while (true)",
