@@ -32,13 +32,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         private const string LangName = "Java";
 
         private static readonly LearningExperiment[] Experiments = {
-            new JavaComplexStatementExperiment(), // OK(40/50)
-            new JavaSuperComplexBranchExperiment(), // OK(40/50)
-            new JavaExpressionStatementExperiment(), // OK(40/50)
-            new JavaArithmeticOperatorExperiment(), // OK(40/50)
+            //new JavaComplexStatementExperiment(), // OK(40/50)
+            //new JavaSuperComplexBranchExperiment(), // OK(40/50)
+            //new JavaExpressionStatementExperiment(), // OK(40/50)
+            //new JavaArithmeticOperatorExperiment(), // OK(40/50)
             new JavaSwitchCaseExperiment(),
-            new JavaSuperComplexBranchExperimentWithSwitch(),
-            new JavaSuperComplexBranchExperimentWithSwitchWithoutTrue(),
+            //new JavaSuperComplexBranchExperimentWithSwitch(),
+            //new JavaSuperComplexBranchExperimentWithSwitchWithoutTrue(),
 
             //new JavaComplexBranchExperiment(),
         };
@@ -816,7 +816,7 @@ statement
 	    public override IEnumerable<string> AcceptingFragments {
 	        get {
 	            return new[] {
-	                @"switch (1)",
+	                @"switch (b)",
 	                @"case 0:",
 	                @"case 1:",
 	                @"default:",
@@ -857,7 +857,7 @@ statement
 	                "while (b)",
 	                "if (b)",
 	                "if (b)",
-	                @"switch (1)",
+	                @"switch (b)",
 	                @"case 0:",
 	                @"case 1:",
 	                @"default:",
@@ -937,7 +937,7 @@ statement
 	                "while (b)",
 	                "if (b)",
 	                "if (b)",
-	                @"switch (1)",
+	                @"switch (b)",
 	                @"case 0:",
 	                @"case 1:",
 	                @"default:",

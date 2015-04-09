@@ -122,6 +122,7 @@ namespace Code2Xml.Learner.Core.Learning {
             var classifier = new Classifier(seedNodeSet.SelectedNodeNames, featureSet);
             var groupCache = new GroupCache(encodingResult, classifier);
             var trainingSet = encodingResult.CreateTrainingVectorSet();
+            classifier.Create(trainingSet, groupCache);
             Console.WriteLine("Preparing time: " + (Environment.TickCount - preparingTime));
 
             var count = 0;
@@ -161,7 +162,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 Console.WriteLine(groupPath);
             }
 
-            classifier.Optimize(encodingResult.IdealRejectedVector2GroupPath.Keys, groupCache);
+            //classifier.Optimize(encodingResult.IdealRejectedVector2GroupPath.Keys, groupCache);
 
             return new LearningResult {
                 ClassificationResult = classificationResult,
