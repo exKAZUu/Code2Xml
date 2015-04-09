@@ -57,8 +57,10 @@ namespace Code2Xml.Learner.Core.Learning {
             foreach (var rejectedVector in rejectedVectors) {
                 var groupIndex = groupCache.GetGroupIndex(rejectedVector);
                 var acceptingClassifier = Units[groupIndex].Accepting;
+                var rejectingClassifier = Units[groupIndex].Rejecting;
                 var accepted = (rejectedVector & acceptingClassifier) == acceptingClassifier;
-                if (!accepted) {
+                var rejected = (rejectedVector & rejectingClassifier) != BigInteger.Zero;
+                if (!accepted /*&& !rejected*/) {
                     groupIndex2RejectedVectors[groupIndex].Add(rejectedVector);
                 }
             }
