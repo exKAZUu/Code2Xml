@@ -83,6 +83,23 @@ namespace Code2Xml.Learner.Core.Learning {
             }
         }
 
+        /// <summary>
+        /// Ç«ÇÒÇ»Ç«ÇÒÇ»RejectedVectorÇ‡éùÇΩÇ»Ç¢AcceptingFeatuerÇçÌèúÇ∑ÇÈÅB
+        /// </summary>
+        /// <param name="rejectedVectors"></param>
+        /// <param name="groupCache"></param>
+        public void OptimizeWeakly(ICollection<BigInteger> rejectedVectors, GroupCache groupCache) {
+            var usedRejectedFeatures =
+                    Enumerable.Repeat(RejectingFeatureBitMask, Units.Count).ToList();
+            foreach (var rejectedVector in rejectedVectors) {
+                var groupIndex = groupCache.GetGroupIndex(rejectedVector);
+                usedRejectedFeatures[groupIndex] |= rejectedVector;
+            }
+            foreach (var unitAndFeature in Units.Zip(usedRejectedFeatures)) {
+                unitAndFeature.Item1.Accepting &= AllFeatureBitMask ^ unitAndFeature.Item2;
+            }
+        }
+
         public bool IsAccepted(BigInteger vector, int groupIndex) {
             var acceptingClassifier = Units[groupIndex].Accepting;
             return (vector & acceptingClassifier) == acceptingClassifier;
