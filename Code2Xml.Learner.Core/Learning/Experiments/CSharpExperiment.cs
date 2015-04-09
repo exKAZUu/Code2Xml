@@ -412,9 +412,15 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public override IEnumerable<string> RejectingFragments {
             get {
                 return new[] {
-                    @"T:
-			f(0 + 1 - 2 * 3 / 4 % 5);",
-                    @";", // dummy for f(0 + 1 - 2 * 3 / 4 % 5);
+                    @";", // dummy
+                    @";", // dummy
+                    @";", // dummy
+                    @";", // dummy
+                    @";", // dummy
+                    @";", // dummy
+                    @";", // dummy
+                    @";", // dummy
+                    @";", // dummy
                     @";",
                     @"{ f(); }",
                     @"{ }",
@@ -433,17 +439,11 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
         }
 
-        public CSharpComplexStatementExperiment() : base("statement") {}
+        public CSharpComplexStatementExperiment() : base("embedded_statement") {}
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            // ラベルはループ文に付くため，ラベルの中身は除外
-            if (node.Child("labeled_statement") != null) {
-                return false;
-            }
-
             // ブロック自身は意味を持たないステートメントで、中身だけが必要なので除外
-            var e2 = node.Child("embedded_statement");
-            if (e2 != null && e2.Child("block") != null) {
+            if (node.Child("block") != null) {
                 return false;
             }
 

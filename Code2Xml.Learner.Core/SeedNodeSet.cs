@@ -20,6 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
+using Code2Xml.Core.Location;
 using Code2Xml.Core.SyntaxTree;
 using Code2Xml.Learner.Core.Learning;
 
