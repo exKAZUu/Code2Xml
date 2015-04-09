@@ -56,7 +56,11 @@ namespace Code2Xml.Learner.Core.Learning {
             }
             foreach (var rejectedVector in rejectedVectors) {
                 var groupIndex = groupCache.GetGroupIndex(rejectedVector);
-                groupIndex2RejectedVectors[groupIndex].Add(rejectedVector);
+                var acceptingClassifier = Units[groupIndex].Accepting;
+                var accepted = (rejectedVector & acceptingClassifier) == acceptingClassifier;
+                if (!accepted) {
+                    groupIndex2RejectedVectors[groupIndex].Add(rejectedVector);
+                }
             }
             foreach (var unitAndVectors in Units.Zip(groupIndex2RejectedVectors)) {
                 var unit = unitAndVectors.Item1;
@@ -66,11 +70,9 @@ namespace Code2Xml.Learner.Core.Learning {
                     if ((unit.Accepting & bit) != 0) {
                         unit.Accepting ^= bit;
                         var acceptingClassifier = unit.Accepting;
-                        var rejectingClassifier = unit.Rejecting;
-                        foreach (var vector in vectors) {
-                            var accepted = (vector & acceptingClassifier) == acceptingClassifier;
-                            var rejected = (vector & rejectingClassifier) != BigInteger.Zero;
-                            if (accepted && !rejected) {
+                        foreach (var rejectedVector in vectors) {
+                            var accepted = (rejectedVector & acceptingClassifier) == acceptingClassifier;
+                            if (accepted) {
                                 unit.Accepting ^= bit;
                                 break;
                             }
