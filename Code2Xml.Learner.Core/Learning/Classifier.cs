@@ -70,12 +70,19 @@ namespace Code2Xml.Learner.Core.Learning {
                     if ((unit.Accepting & bit) != 0) {
                         unit.Accepting ^= bit;
                         var acceptingClassifier = unit.Accepting;
+                        var removable = false;
                         foreach (var rejectedVector in vectors) {
                             var accepted = (rejectedVector & acceptingClassifier) == acceptingClassifier;
-                            if (accepted || (rejectedVector & bit) != 0) {
+                            // ‘S‚Ä‚ª (rejectedVector & bit) == 0 ‚È‚çíœ‚µ‚È‚¢
+                            // ˆê‚Â‚Å‚à (rejectedVector & bit) != 0 ‚È‚çíœ‚Å‚«‚é
+                            removable |= (rejectedVector & bit) != 0;
+                            if (accepted) {
                                 unit.Accepting ^= bit;
                                 break;
                             }
+                        }
+                        if (!removable) {
+                                unit.Accepting ^= bit;
                         }
                     }
                     bit <<= 1;
