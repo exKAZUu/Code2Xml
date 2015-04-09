@@ -72,7 +72,7 @@ namespace Code2Xml.Learner.Core.Learning {
                         var acceptingClassifier = unit.Accepting;
                         foreach (var rejectedVector in vectors) {
                             var accepted = (rejectedVector & acceptingClassifier) == acceptingClassifier;
-                            if (accepted) {
+                            if (accepted || (rejectedVector & bit) != 0) {
                                 unit.Accepting ^= bit;
                                 break;
                             }
@@ -84,7 +84,7 @@ namespace Code2Xml.Learner.Core.Learning {
         }
 
         /// <summary>
-        /// ‚Ç‚ñ‚È‚Ç‚ñ‚ÈRejectedVector‚à‚½‚È‚¢AcceptingFeatuer‚ğíœ‚·‚éB
+        /// RejectedVector‚ª‚ÂAcceptingFeatuer‚ğíœ‚·‚éB
         /// </summary>
         /// <param name="rejectedVectors"></param>
         /// <param name="groupCache"></param>
