@@ -56,6 +56,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 this IEnumerable<CstNode> targets, List<CodeRange> rangeList,
                 FeatureExtractor extractor) {
             var commonKeys = new HashSet<string>();
+            var usedRangeCount = 0;
             foreach (var target in targets.OrderBy(t => CodeRange.Locate(t).StartLocation)) {
                 var index = rangeList.FindIndex(range => range.Overlaps(target));
                 if (index < 0) {
@@ -68,7 +69,9 @@ namespace Code2Xml.Learner.Core.Learning {
                         .GetSurroundingPathsFilteringBySurroundingNodes(surroundingNodes, extractor);
                 commonKeys.UnionWith(keys);
                 rangeList[index] = CodeRange.Nil;
+                usedRangeCount++;
             }
+            Console.WriteLine("#Used Ranges: " + usedRangeCount);
             return commonKeys;
         }
 
