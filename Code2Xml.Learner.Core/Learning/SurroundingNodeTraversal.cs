@@ -122,6 +122,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 }
             }
             paths.UnionWith(children.Skip(1).Select(t => t.Item2));
+            var count = 0;
             do {
                 var newChildren = new List<Tuple<CstNode, string>>();
                 foreach (var t in children) {
@@ -136,7 +137,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 }
                 paths.UnionWith(newChildren.Select(t => t.Item2));
                 children = newChildren;
-            } while (children.Any());
+            } while (children.Any() && ++count <= 7);
             return paths;
         }
 

@@ -101,6 +101,7 @@ namespace Code2Xml.Learner.Core.Learning {
             Console.WriteLine(
                     "#Features: " + featureSet.AcceptingFeatureCount + ", "
                     + featureSet.RejectingFeatureCount);
+            Console.WriteLine("Inner: " + extractor.IsInner);
 
             var featureEncoder = new FeatureEncoder(seedNodeSet.SelectedNodeNames, extractor,
                     featureSet);
