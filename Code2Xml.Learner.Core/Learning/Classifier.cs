@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using System.Numerics;
+using Paraiba.Linq;
 
 namespace Code2Xml.Learner.Core.Learning {
     [Serializable]
@@ -18,6 +19,8 @@ namespace Code2Xml.Learner.Core.Learning {
         }
 
         public readonly int AcceptingFeatureCount;
+        public readonly int RejectingFeatureCount;
+        public readonly int AllFeatureCount;
         public readonly BigInteger AcceptingFeatureBitMask;
         public readonly BigInteger RejectingFeatureBitMask;
         public readonly BigInteger AllFeatureBitMask;
@@ -30,13 +33,52 @@ namespace Code2Xml.Learner.Core.Learning {
         }
 
         public Classifier(IEnumerable<string> selectedNodeNames, FeatuerSet featureSet) {
-            AcceptingFeatureCount = featureSet.AcceptingFeatures.Count;
+            AcceptingFeatureCount = featureSet.AcceptingFeatureCount;
+            RejectingFeatureCount = featureSet.RejectingFeatureCount;
+            AllFeatureCount = AcceptingFeatureCount + RejectingFeatureCount;
             AllFeatureBitMask = (BigInteger.One << featureSet.FeatureCount) - BigInteger.One;
             AcceptingFeatureBitMask = (BigInteger.One << featureSet.AcceptingFeatureCount)
                                       - BigInteger.One;
             RejectingFeatureBitMask = AllFeatureBitMask ^ AcceptingFeatureBitMask;
             GroupPaths = selectedNodeNames.Select(n => ">" + n + ">").ToList();
             Initialize();
+        }
+
+        /// <summary>
+        /// ï™óﬁåãâ Ç…âeãøÇó^Ç¶Ç»Ç¢acceptingFeatureÇéÊÇËèúÇ≠ÅB
+        /// </summary>
+        /// <param name="rejectedVectors"></param>
+        /// <param name="groupCache"></param>
+        public void Optimize(IEnumerable<BigInteger> rejectedVectors, GroupCache groupCache) {
+            var groupIndex2RejectedVectors = new List<List<BigInteger>>();
+            for (int i = 0; i < Units.Count; i++) {
+                groupIndex2RejectedVectors.Add(new List<BigInteger>());
+            }
+            foreach (var rejectedVector in rejectedVectors) {
+                var groupIndex = groupCache.GetGroupIndex(rejectedVector);
+                groupIndex2RejectedVectors[groupIndex].Add(rejectedVector);
+            }
+            foreach (var unitAndVectors in Units.Zip(groupIndex2RejectedVectors)) {
+                var unit = unitAndVectors.Item1;
+                var vectors = unitAndVectors.Item2;
+                var bit = BigInteger.One;
+                for (int i = 0; i < AcceptingFeatureCount; i++) {
+                    if ((unit.Accepting & bit) != 0) {
+                        unit.Accepting ^= bit;
+                        var acceptingClassifier = unit.Accepting;
+                        var rejectingClassifier = unit.Rejecting;
+                        foreach (var vector in vectors) {
+                            var accepted = (vector & acceptingClassifier) == acceptingClassifier;
+                            var rejected = (vector & rejectingClassifier) != BigInteger.Zero;
+                            if (accepted && !rejected) {
+                                unit.Accepting ^= bit;
+                                break;
+                            }
+                        }
+                    }
+                    bit <<= 1;
+                }
+            }
         }
 
         public bool IsAccepted(BigInteger vector, int groupIndex) {

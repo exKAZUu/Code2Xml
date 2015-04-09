@@ -82,20 +82,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     writer.Flush();
                     if (classificationResult.WrongElementCount > 0) {
                         failedCount++;
-                        Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
-                        foreach (var we in classificationResult.WronglyAcceptedNodes) {
-                            var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
-                            Console.WriteLine(we.Code);
-                            Console.WriteLine(e.Code);
-                            Console.WriteLine("---------------------------------------------");
-                        }
-                        Console.WriteLine("---- WronglyRejectedElements ----");
-                        foreach (var we in classificationResult.WronglyAcceptedNodes) {
-                            var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
-                            Console.WriteLine(we.Code);
-                            Console.WriteLine(e.Code);
-                            Console.WriteLine("---------------------------------------------");
-                        }
+                        PrintWrongResults(classificationResult, learningResult.FeatureEncoder);
                     }
                 }
             }
@@ -124,23 +111,43 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             writer.WriteLine();
             writer.Flush();
             if (classificationResult.WrongFeatureCount > 0) {
-                Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
-                foreach (var we in classificationResult.WronglyAcceptedNodes) {
-                    var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
-                    Console.WriteLine(we.Code);
-                    Console.WriteLine(e.Code);
-                    Console.WriteLine("---------------------------------------------");
-                }
-                Console.WriteLine("---- WronglyRejectedElements ----");
-                foreach (var we in classificationResult.WronglyRejectedNodes) {
-                    var e = we.AncestorsAndSelf().ElementAtOrDefault(5) ?? we;
-                    Console.WriteLine(we.Code);
-                    Console.WriteLine(e.Code);
-                    Console.WriteLine("---------------------------------------------");
-                }
+                PrintWrongResults(classificationResult, learningResult.FeatureEncoder);
             }
             WriteFeatureStrings(exp, projectPaths, learningResult);
             return learningResult;
+        }
+
+        private static void PrintWrongResults(
+                ClassificationResult classificationResult, FeatureEncoder featureEncoder) {
+            Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
+            foreach (var wn in classificationResult.WronglyAcceptedNodes) {
+                var e = wn.AncestorsAndSelf().ElementAtOrDefault(5) ?? wn;
+                Console.WriteLine(wn.Code);
+                Console.WriteLine(e.Code);
+                Console.WriteLine("---------------------------------------------");
+            }
+            Console.WriteLine("---- WronglyRejectedElements ----");
+            foreach (var wn in classificationResult.WronglyRejectedNodes) {
+                var e = wn.AncestorsAndSelf().ElementAtOrDefault(5) ?? wn;
+                Console.WriteLine(wn.Code);
+                Console.WriteLine(e.Code);
+                Console.WriteLine("---------------------------------------------");
+            }
+
+            Console.WriteLine("--------------- WronglyAcceptedFeatures ---------------");
+            foreach (var wf in classificationResult.WronglyAcceptedFeatures) {
+                var features = featureEncoder.GetFeatureStringsByVector(wf);
+                foreach (var feature in features) {
+                    Console.WriteLine(Beautify(feature));
+                }
+            }
+            Console.WriteLine("---- WronglyRejectedFeatures ----");
+            foreach (var wf in classificationResult.WronglyRejectedFeatures) {
+                var features = featureEncoder.GetFeatureStringsByVector(wf);
+                foreach (var feature in features) {
+                    Console.WriteLine(Beautify(feature));
+                }
+            }
         }
 
         public static string Beautify(string path) {

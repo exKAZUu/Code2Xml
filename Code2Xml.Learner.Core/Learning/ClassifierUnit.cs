@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Numerics;
 
 namespace Code2Xml.Learner.Core.Learning {
@@ -10,6 +12,13 @@ namespace Code2Xml.Learner.Core.Learning {
         public ClassifierUnit(BigInteger accepting, BigInteger rejecting) {
             Accepting = accepting;
             Rejecting = rejecting;
+        }
+
+        public void Optimize(
+                BigInteger allFeatureBitMask, BigInteger rejectingFeatureBitMask,
+                ICollection<BigInteger> rejectedFeatures) {
+            Accepting &= allFeatureBitMask
+                         ^ rejectedFeatures.Aggregate(rejectingFeatureBitMask, (a, b) => a | b);
         }
 
         public ClassifierUnit Clone() {
