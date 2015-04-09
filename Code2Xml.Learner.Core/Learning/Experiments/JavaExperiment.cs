@@ -32,13 +32,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         private const string LangName = "Java";
 
         private static readonly LearningExperiment[] Experiments = {
-            //new JavaComplexStatementExperiment(), // OK(40/50)
-            //new JavaSuperComplexBranchExperiment(), // OK(40/50)
-            //new JavaExpressionStatementExperiment(), // OK(40/50)
-            //new JavaArithmeticOperatorExperiment(), // OK(40/50)
-            new JavaSwitchCaseExperiment(),
-            //new JavaSuperComplexBranchExperimentWithSwitch(),
-            //new JavaSuperComplexBranchExperimentWithSwitchWithoutTrue(),
+            new JavaComplexStatementExperiment(), // OK(40/50)
+            new JavaSuperComplexBranchExperiment(), // OK(40/50)
+            new JavaExpressionStatementExperiment(), // OK(40/50)
+            new JavaArithmeticOperatorExperiment(), // OK(40/50)
+            new JavaSwitchCaseExperiment(), // OK(40/50)
+            new JavaSuperComplexBranchExperimentWithSwitch(),
+            new JavaSuperComplexBranchExperimentWithSwitchWithoutTrue(),
 
             //new JavaComplexBranchExperiment(),
         };
