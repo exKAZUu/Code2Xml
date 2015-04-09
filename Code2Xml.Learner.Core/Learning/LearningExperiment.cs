@@ -162,7 +162,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 Console.WriteLine(groupPath);
             }
 
-            //classifier.Optimize(encodingResult.IdealRejectedVector2GroupPath.Keys, groupCache);
+            classifier.Optimize(encodingResult.IdealRejectedVector2GroupPath.Keys, groupCache);
 
             return new LearningResult {
                 ClassificationResult = classificationResult,
