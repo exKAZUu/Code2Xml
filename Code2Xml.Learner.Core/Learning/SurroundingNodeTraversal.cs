@@ -26,6 +26,8 @@ using Paraiba.Linq;
 
 namespace Code2Xml.Learner.Core.Learning {
     public static class SurroundingNodeTraversal {
+        private const int TokenCount = 5;
+
         public static double[] BigIntegerToDoubles(this BigInteger i, int bitLength) {
             var doubles = new List<double>();
             for (int j = 0; j < bitLength; j++) {
@@ -88,6 +90,16 @@ namespace Code2Xml.Learner.Core.Learning {
             // 自分自身の位置による区別も考慮する
             paths.Add(node.Name);
             paths.Add("'" + extractor.GetToken(node));
+            node.PreviousTokenNodes().Take(5)
+                    .ForEach(
+                            (tokenNode, i) => {
+                                paths.Add("'-" + i + extractor.GetToken(tokenNode));
+                            });
+            node.NextTokenNodes().Take(5)
+                    .ForEach(
+                            (tokenNode, i) => {
+                                paths.Add("'+" + i + extractor.GetToken(tokenNode));
+                            });
 
             var ancestor = node.Ancestors().FirstOrDefault(a => a.Children().Count() > 1);
             if (surroundingNodes.Contains(ancestor)) {
@@ -152,12 +164,28 @@ namespace Code2Xml.Learner.Core.Learning {
 
             var children = new List<Tuple<CstNode, string>> { Tuple.Create(node, "") };
 
-            if (featureString2Bit.TryGetValue("'" + extractor.GetToken(node), out bit)) {
-                ret |= bit;
-            }
             if (featureString2Bit.TryGetValue(node.Name, out bit)) {
                 ret |= bit;
             }
+            if (featureString2Bit.TryGetValue("'" + extractor.GetToken(node), out bit)) {
+                ret |= bit;
+            }
+            node.PreviousTokenNodes().Take(5)
+                    .ForEach(
+                            (tokenNode, i) => {
+                                if (featureString2Bit.TryGetValue(
+                                        "'-" + i + extractor.GetToken(tokenNode), out bit)) {
+                                    ret |= bit;
+                                }
+                            });
+            node.NextTokenNodes().Take(5)
+                    .ForEach(
+                            (tokenNode, i) => {
+                                if (featureString2Bit.TryGetValue(
+                                        "'+" + i + extractor.GetToken(tokenNode), out bit)) {
+                                    ret |= bit;
+                                }
+                            });
             if (!extractor.IsInner) {
                 if (featureString2Bit.TryGetValue(node.Name + node.RuleId, out bit)) {
                     ret |= bit;

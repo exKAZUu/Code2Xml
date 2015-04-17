@@ -54,6 +54,48 @@ namespace Code2Xml.Core.SyntaxTree {
             return AllTokenNodes(name).Select(n => n.Value);
         }
 
+        public IEnumerable<TToken> PreviousTokens() {
+            var node = Parent;
+            while (node != null) {
+                foreach (var token in node.PrevsFromSelf().SelectMany(n => n.AllTokens().Reverse())) {
+                    yield return token;
+                }
+                node = node.Parent;
+            }
+        }
+
+        public IEnumerable<TToken> NextTokens() {
+            var node = Parent;
+            while (node != null) {
+                foreach (var token in node.NextsFromSelf().SelectMany(n => n.AllTokens())) {
+                    yield return token;
+                }
+                node = node.Parent;
+            }
+        }
+
+        public IEnumerable<TNode> PreviousTokenNodes() {
+            var node = Parent;
+            while (node != null) {
+                var tokenNodes = node.PrevsFromSelf().SelectMany(n => n.AllTokenNodes().Reverse());
+                foreach (var tokenNode in tokenNodes) {
+                    yield return tokenNode;
+                }
+                node = node.Parent;
+            }
+        }
+
+        public IEnumerable<TNode> NextTokenNodes() {
+            var node = Parent;
+            while (node != null) {
+                var tokenNodes = node.NextsFromSelf().SelectMany(n => n.AllTokenNodes());
+                foreach (var tokenNode in tokenNodes) {
+                    yield return tokenNode;
+                }
+                node = node.Parent;
+            }
+        }
+
         public abstract XElement ToXml();
     }
 }
