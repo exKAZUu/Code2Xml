@@ -137,9 +137,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     @"https://github.com/mono/monotorrent.git",
                     @"3c201b9e3c68b33243a7af61678fb948a0189461"),
             Tuple.Create(
-                    @"https://github.com/robconery/biggy.git",
-                    @"0c7a0cb8f08b0ac7e5d87f91c5617d4cc6e21b84"),
-            Tuple.Create(
                     @"https://github.com/jdiamond/Nustache.git",
                     @"957a95f26265876a42dcd8934708bab95d01ef87"),
             Tuple.Create(
