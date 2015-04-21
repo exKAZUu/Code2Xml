@@ -84,11 +84,7 @@ namespace Code2Xml.Learner.Core.Learning {
             }
 
             var allUppermostNodes = allCsts.SelectMany(
-                    cst => {
-                        Console.Write(".");
-                        return LearningExperimentUtil.GetUppermostNodesByNames(cst,
-                                _selectedNodeNames);
-                    });
+                    cst => LearningExperimentUtil.GetUppermostNodesByNames(cst,_selectedNodeNames));
 
             var result = new EncodingResult();
             if (seedNodeSet != null) {

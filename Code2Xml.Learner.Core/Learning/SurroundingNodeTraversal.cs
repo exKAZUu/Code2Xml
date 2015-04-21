@@ -26,7 +26,8 @@ using Paraiba.Linq;
 
 namespace Code2Xml.Learner.Core.Learning {
     public static class SurroundingNodeTraversal {
-        private const int TokenCount = 5;
+        private const int BrotherCount = 7;
+        private const int IdentifierCount = 4;
 
         public static double[] BigIntegerToDoubles(this BigInteger i, int bitLength) {
             var doubles = new List<double>();
@@ -77,9 +78,14 @@ namespace Code2Xml.Learner.Core.Learning {
             return commonKeys;
         }
 
-        private static bool CanSkip(CstNode node) {
+        private static bool IsTemporalVariable(CstNode node) {
             var tokenText = node.TokenText;
             return tokenText.Length == 1 && char.IsLetter(tokenText[0]);
+        }
+
+        private static bool IsMeaningfulIdentifier(CstNode node) {
+            var tokenText = node.TokenText;
+            return tokenText.Length > 1 && char.IsLetter(tokenText[0]);
         }
 
         public static HashSet<string> GetSurroundingPathsFilteringBySurroundingNodes(
@@ -90,16 +96,10 @@ namespace Code2Xml.Learner.Core.Learning {
             // 自分自身の位置による区別も考慮する
             paths.Add(node.Name);
             paths.Add("'" + extractor.GetToken(node));
-            node.PreviousTokenNodes().Take(5)
-                    .ForEach(
-                            (tokenNode, i) => {
-                                paths.Add("'-" + i + extractor.GetToken(tokenNode));
-                            });
-            node.NextTokenNodes().Take(5)
-                    .ForEach(
-                            (tokenNode, i) => {
-                                paths.Add("'+" + i + extractor.GetToken(tokenNode));
-                            });
+            node.PreviousTokenNodes().Where(IsMeaningfulIdentifier).Take(IdentifierCount)
+                    .ForEach((tokenNode, i) => paths.Add("'-" + extractor.GetToken(tokenNode)));
+            node.NextTokenNodes().Where(IsMeaningfulIdentifier).Take(IdentifierCount)
+                    .ForEach((tokenNode, i) => paths.Add("'+" + extractor.GetToken(tokenNode)));
 
             var ancestor = node.Ancestors().FirstOrDefault(a => a.Children().Count() > 1);
             if (surroundingNodes.Contains(ancestor)) {
@@ -111,7 +111,7 @@ namespace Code2Xml.Learner.Core.Learning {
                     var newParent = parent.Item1.Parent;
                     var parentPathUnit = parent.Item2 + "<" + newParent.Name + newParent.RuleId;
                     paths.Add(parentPathUnit);
-                    parent.Item1.PrevsFromSelf().Take(10)
+                    parent.Item1.PrevsFromSelf().Take(BrotherCount)
                             .ForEach((child, index) => {
                                 if (surroundingNodes.Contains(child)) {
                                     var key = parentPathUnit + '-' + index +
@@ -122,7 +122,7 @@ namespace Code2Xml.Learner.Core.Learning {
                                               + extractor.GetToken(child));
                                 }
                             });
-                    parent.Item1.NextsFromSelf().Take(10)
+                    parent.Item1.NextsFromSelf().Take(BrotherCount)
                             .ForEach((child, index) => {
                                 if (surroundingNodes.Contains(child)) {
                                     var key = parentPathUnit + '+' + index +
@@ -142,7 +142,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 var newChildren = new List<Tuple<CstNode, string>>();
                 foreach (var t in children) {
                     foreach (var child in t.Item1.Children()) {
-                        if (!CanSkip(child) && surroundingNodes.Contains(child)) {
+                        if (!IsTemporalVariable(child) && surroundingNodes.Contains(child)) {
                             var key = t.Item2 + ">" + child.Name + child.RuleId;
                             newChildren.Add(Tuple.Create(child, key));
                             // for Preconditions.checkArguments()
@@ -170,19 +170,19 @@ namespace Code2Xml.Learner.Core.Learning {
             if (featureString2Bit.TryGetValue("'" + extractor.GetToken(node), out bit)) {
                 ret |= bit;
             }
-            node.PreviousTokenNodes().Take(5)
+            node.PreviousTokenNodes().Where(IsMeaningfulIdentifier).Take(IdentifierCount)
                     .ForEach(
                             (tokenNode, i) => {
                                 if (featureString2Bit.TryGetValue(
-                                        "'-" + i + extractor.GetToken(tokenNode), out bit)) {
+                                        "'-" + extractor.GetToken(tokenNode), out bit)) {
                                     ret |= bit;
                                 }
                             });
-            node.NextTokenNodes().Take(5)
+            node.NextTokenNodes().Where(IsMeaningfulIdentifier).Take(IdentifierCount)
                     .ForEach(
                             (tokenNode, i) => {
                                 if (featureString2Bit.TryGetValue(
-                                        "'+" + i + extractor.GetToken(tokenNode), out bit)) {
+                                        "'+" + extractor.GetToken(tokenNode), out bit)) {
                                     ret |= bit;
                                 }
                             });
@@ -198,7 +198,7 @@ namespace Code2Xml.Learner.Core.Learning {
                         break;
                     }
                     ret |= bit;
-                    parent.Item1.PrevsFromSelf().Take(10)
+                    parent.Item1.PrevsFromSelf().Take(BrotherCount)
                             .ForEach((child, index) => {
                                 var key = parentPathUnit + '-' + index +
                                           ">" + child.Name + child.RuleId;
@@ -213,7 +213,7 @@ namespace Code2Xml.Learner.Core.Learning {
                                     ret |= bit;
                                 }
                             });
-                    parent.Item1.NextsFromSelf().Take(10)
+                    parent.Item1.NextsFromSelf().Take(BrotherCount)
                             .ForEach((child, index) => {
                                 var key = parentPathUnit + '+' + index +
                                           ">" + child.Name + child.RuleId;

@@ -84,6 +84,15 @@ namespace Code2Xml.Core.Location {
             return new CodeRange(startLocation, endLocation);
         }
 
+        public string GetLine(int line) {
+            var startIndex = Indices[line];
+            if (Indices.Count > line + 1) {
+                // Exclude a new line
+                return Code.Substring(startIndex, Indices[line + 1] - 1);
+            }
+            return Code.Substring(startIndex);
+        }
+
         public string GetFragment(CodeRange range) {
             var startIndex = GetIndex(range.StartLocation);
             var exclusiveEndIndex = GetIndex(range.EndLocation);
