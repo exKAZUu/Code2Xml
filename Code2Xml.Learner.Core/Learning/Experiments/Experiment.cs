@@ -113,8 +113,54 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             if (classificationResult.WrongFeatureCount > 0) {
                 PrintWrongResults(classificationResult, learningResult.FeatureEncoder);
             }
-            WriteFeatureStrings(exp, projectPaths, learningResult);
+            var seedWriter =
+                    CreateWriter(exp.GetType().Name + "_seed_" + projectPaths.Count() + ".txt");
+            WriteSeedVectors(seedWriter, learningResult);
+            var featureWriter =
+                    CreateWriter(exp.GetType().Name + "_feature_" + projectPaths.Count() + ".txt");
+            WriteFeatureStrings(featureWriter, learningResult.Classifier,
+                    learningResult.FeatureEncoder, learningResult.EncodingResult);
             return learningResult;
+        }
+
+        private static void WriteSeedVectors(TextWriter writer, LearningResult learningResult) {
+            writer.WriteLine("################ Seed Accepted Vectors ################");
+            var seedAcceptedVectors =
+                    learningResult.EncodingResult.SeedAcceptedVector2GroupPath.Keys;
+            foreach (var vector in seedAcceptedVectors) {
+                writer.WriteLine("--------------------------------------");
+                writer.WriteLine(learningResult.EncodingResult.Vector2Node[vector].Code);
+                writer.WriteLine(
+                        learningResult.EncodingResult.Vector2Node[vector].Ancestors()
+                                .ElementAt(5)
+                                .Code);
+                var features = learningResult.FeatureEncoder.GetFeatureStringsByVector(vector);
+                foreach (var feature in features) {
+                    if (feature.Contains("Requires") || feature.Contains("Contract")) {
+                        writer.WriteLine(Beautify(feature));
+                    }
+                }
+                writer.WriteLine();
+            }
+            writer.WriteLine("################ Seed Rejected Vectors ################");
+            var seedRejectedVectors =
+                    learningResult.EncodingResult.SeedAcceptedVector2GroupPath.Keys;
+            foreach (var vector in seedRejectedVectors) {
+                writer.WriteLine("--------------------------------------");
+                writer.WriteLine(learningResult.EncodingResult.Vector2Node[vector].Code);
+                writer.WriteLine(
+                        learningResult.EncodingResult.Vector2Node[vector].Ancestors()
+                                .ElementAt(5)
+                                .Code);
+                var features = learningResult.FeatureEncoder.GetFeatureStringsByVector(vector);
+                foreach (var feature in features) {
+                    writer.WriteLine(learningResult.EncodingResult.Vector2Node[vector].Code);
+                    if (feature.Contains("Requires") || feature.Contains("Contract")) {
+                        writer.WriteLine(Beautify(feature));
+                    }
+                }
+                writer.WriteLine();
+            }
         }
 
         private static void PrintWrongResults(
@@ -154,44 +200,42 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             return path.Replace(">", " > ").Replace("<", " < ");
         }
 
-        private void WriteFeatureStrings(
-                LearningExperiment exp, ICollection<string> projectPaths,
-                LearningResult learningResult) {
-            var featureWriter =
-                    CreateWriter(exp.GetType().Name + "_feature_" + projectPaths.Count() + ".txt");
-            var acceptingFeature =
-                    learningResult.Classifier.GetAllAcceptingFeatureStrings(
-                            learningResult.FeatureEncoder);
-            var rejectingFeatures =
-                    learningResult.Classifier.GetAllRejectingFeatureStrings(
-                            learningResult.FeatureEncoder);
-            var acceptingVectorCounts =
-                    learningResult.Classifier.CountAcceptedVectorsOfEachGroup(
-                            learningResult.EncodingResult);
-            var rejectingVectorCounts =
-                    learningResult.Classifier.CountRejectedVectorsOfEachGroup(
-                            learningResult.EncodingResult);
-            featureWriter.WriteLine("################ Accepting Features ################");
+        public static void WriteFeatureStrings(
+                TextWriter writer, Classifier classifier, FeatureEncoder featureEncoder,
+                EncodingResult encodingResult = null) {
+            var acceptingFeature = classifier.GetAllAcceptingFeatureStrings(featureEncoder);
+            var rejectingFeatures = classifier.GetAllRejectingFeatureStrings(featureEncoder);
+            var acceptingVectorCounts = encodingResult != null
+                    ? classifier.CountAcceptedVectorsOfEachGroup(encodingResult)
+                    : Enumerable.Repeat(-1, acceptingFeature.Count).ToList();
+            var rejectingVectorCounts = encodingResult != null
+                    ? classifier.CountRejectedVectorsOfEachGroup(encodingResult)
+                    : Enumerable.Repeat(-1, rejectingFeatures.Count).ToList();
+            writer.WriteLine("################ Accepting Features ################");
             for (var i = 0; i < acceptingFeature.Count; i++) {
-                featureWriter.WriteLine("######## Group: " + (i + 1) + " ("
-                                        + acceptingVectorCounts[i] + ") ########");
-                featureWriter.WriteLine(Beautify(learningResult.Classifier.GroupPaths[i]));
-                featureWriter.WriteLine();
-                foreach (var feature in acceptingFeature[i]) {
-                    featureWriter.WriteLine(Beautify(feature));
+                writer.WriteLine("######## Group: " + (i + 1) + " ("
+                                 + acceptingVectorCounts[i] + ") ########");
+                writer.WriteLine(Beautify(classifier.GroupPaths[i]));
+                if (acceptingVectorCounts[i] != 0) {
+                    writer.WriteLine();
+                    foreach (var feature in acceptingFeature[i]) {
+                        writer.WriteLine(Beautify(feature));
+                    }
                 }
             }
-            featureWriter.WriteLine("################ Rejecting Features ################");
+            writer.WriteLine("################ Rejecting Features ################");
             for (var i = 0; i < rejectingFeatures.Count; i++) {
-                featureWriter.WriteLine("######## Group: " + (i + 1) + " ("
-                                        + rejectingVectorCounts[i] + ") ########");
-                featureWriter.WriteLine(Beautify(learningResult.Classifier.GroupPaths[i]));
-                featureWriter.WriteLine();
-                foreach (var feature in rejectingFeatures[i]) {
-                    featureWriter.WriteLine(Beautify(feature));
+                writer.WriteLine("######## Group: " + (i + 1) + " ("
+                                 + rejectingVectorCounts[i] + ") ########");
+                writer.WriteLine(Beautify(classifier.GroupPaths[i]));
+                if (rejectingVectorCounts[i] != 0) {
+                    writer.WriteLine();
+                    foreach (var feature in rejectingFeatures[i]) {
+                        writer.WriteLine(Beautify(feature));
+                    }
                 }
             }
-            featureWriter.Flush();
+            writer.Flush();
         }
 
         private StreamWriter CreateWriter(string fileName) {

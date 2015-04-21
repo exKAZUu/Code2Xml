@@ -98,6 +98,7 @@ namespace Code2Xml.Learner.Core.Learning {
             }).ToList();
 
             var featureSet = new FeatuerSet(seedNodeSet, extractor, acceptingRanges, rejectingRanges);
+            var classifier = new Classifier(seedNodeSet.SelectedNodeNames, featureSet);
             Console.WriteLine(
                     "#Features: " + featureSet.AcceptingFeatureCount + ", "
                     + featureSet.RejectingFeatureCount);
@@ -106,7 +107,6 @@ namespace Code2Xml.Learner.Core.Learning {
             var featureEncoder = new FeatureEncoder(seedNodeSet.SelectedNodeNames, extractor,
                     featureSet);
             var encodingResult = featureEncoder.Encode(codePaths, allCsts, this, seedNodeSet);
-
             Console.WriteLine("#Unique Elements: " + encodingResult.VectorCount);
             if (encodingResult.IdealAcceptedVector2GroupPath.Keys.ToHashSet()
                     .Overlaps(encodingResult.IdealRejectedVector2GroupPath.Keys.ToHashSet())) {
@@ -119,10 +119,10 @@ namespace Code2Xml.Learner.Core.Learning {
                 throw new Exception("Master predicates can't classify elements!");
             }
 
-            var classifier = new Classifier(seedNodeSet.SelectedNodeNames, featureSet);
             var groupCache = new GroupCache(encodingResult, classifier);
             var trainingSet = encodingResult.CreateTrainingVectorSet();
             classifier.Create(trainingSet, groupCache);
+            Experiment.WriteFeatureStrings(Console.Out, classifier, featureEncoder);
             Console.WriteLine("Preparing time: " + (Environment.TickCount - preparingTime));
 
             var count = 0;
@@ -176,7 +176,9 @@ namespace Code2Xml.Learner.Core.Learning {
             return codePaths.Select(
                     path => {
                         try {
-                            return Generator.GenerateTreeFromCode(new FileInfo(path), null, true);
+                            var ret = Generator.GenerateTreeFromCode(new FileInfo(path), null, true);
+                            Console.Write(".");
+                            return ret;
                         } catch {
                             return null;
                         }
