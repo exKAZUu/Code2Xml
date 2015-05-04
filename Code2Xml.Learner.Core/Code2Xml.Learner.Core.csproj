@@ -120,6 +120,7 @@
     <Compile Include="Learning\LearningExperimentUtil.cs" />
     <Compile Include="Learning\OracleClassifier.cs" />
     <Compile Include="Learning\RevealedVectorSet.cs" />
+    <Compile Include="Learning\SelectedFragment.cs" />
     <Compile Include="Learning\SurroundingNodeTraversal.cs" />
     <Compile Include="Learning\SuspiciousNode.cs" />
     <Compile Include="Learning\SuspiciousNodeSelector.cs" />

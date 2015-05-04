@@ -32,6 +32,17 @@ namespace Code2Xml.Core.Tests.Samples {
         }
 
         [Test]
+        public void ListUpMethodsInJava() {
+            const string originalCode = @"class K { void m() { } int n() {} }";
+            var gen = CstGenerators.JavaUsingAntlr3;
+            var cst = gen.GenerateTreeFromCodeText(originalCode);
+            var names = cst.Descendants("methodDeclaration")
+                    .Select(node => node.Child("IDENTIFIER").TokenText)
+                    .ToList();
+            Assert.That(names, Is.EqualTo(new[] { "m", "n" }));
+        }
+
+        [Test]
         public void ModifyIfConditionInC() {
             const string originalCode = @"void m() { if (true) {} if (false) {} }";
             var gen = CstGenerators.CUsingAntlr3;

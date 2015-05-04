@@ -350,12 +350,15 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         #endregion
 
-        protected override string SearchPattern {
+        protected override string SearchPattern
+        {
             get { return "*.java"; }
         }
 
-        private static IEnumerable<TestCaseData> TestCases {
-            get {
+        private static IEnumerable<TestCaseData> TestCases
+        {
+            get
+            {
                 foreach (var exp in Experiments) {
                     foreach (var learningSet in LearningSets.Skip(SkipCount).Take(TakeCount)) {
                         var url = learningSet.Item1;
@@ -420,28 +423,31 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     }
 
     public class JavaSuperComplexBranchExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
+        protected override CstGenerator Generator
+        {
             get { return JavaExperiment.Generator; }
         }
 
-	    public override IEnumerable<string> AcceptingFragments {
-	        get {
-	            return new[] {
-	                @"checkArgument(b)",
-	                "for (; b;)",
-	                "while (b)",
-	                "while (b)",
-	                "if (b)",
-	                "if (b)",
-	                @"checkArgument(true)",
-	                "for (; true;)",
-	                "while (true)",
-	                "while (true)",
-	                "if (true)",
-	                "if (true)",
-	            };
-	        }
-	    }
+        public override IEnumerable<SelectedFragment> AcceptingFragments
+        {
+            get
+            {
+                return new[] {
+                    new SelectedFragment(7, "checkArgument(b)", "b"),
+                    new SelectedFragment(14, "for (; b;)", "b"),
+                    new SelectedFragment(15, "while (b)", "b"),
+                    new SelectedFragment(16, "while (b)", "b"),
+                    new SelectedFragment(17, "if (b)", "b"),
+                    new SelectedFragment(17, "if (b)", "b"),
+                    new SelectedFragment(27, "checkArgument(true)", "true"),
+                    new SelectedFragment(29, "for (; true;)", "true"),
+                    new SelectedFragment(30, "while (true)", "true"),
+                    new SelectedFragment(31, "while (true)", "true"),
+                    new SelectedFragment(32, "if (true)", "true"),
+                    new SelectedFragment(32, "if (true)", "true"),
+                };
+            }
+        }
 
         public JavaSuperComplexBranchExperiment() : base("expression") {}
 
@@ -543,26 +549,29 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     }
 
     public class JavaComplexBranchExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
+        protected override CstGenerator Generator
+        {
             get { return JavaExperiment.Generator; }
         }
 
-	    public override IEnumerable<string> AcceptingFragments {
-	        get {
-	            return new[] {
-	                "for (; b;)",
-	                "while (b)",
-	                "while (b)",
-	                "if (b)",
-	                "if (b)",
-	                "for (; true;)",
-	                "while (true)",
-	                "while (true)",
-	                "if (true)",
-	                "if (true)",
-	            };
-	        }
-	    }
+        public override IEnumerable<SelectedFragment> AcceptingFragments
+        {
+            get
+            {
+                return new[] {
+                    new SelectedFragment(14, "for (; b;)", "b"),
+                    new SelectedFragment(15, "while (b)", "b"),
+                    new SelectedFragment(16, "while (b)", "b"),
+                    new SelectedFragment(17, "if (b)", "b"),
+                    new SelectedFragment(17, "if (b)", "b"),
+                    new SelectedFragment(29, "for (; true;)", "true"),
+                    new SelectedFragment(30, "while (true)", "true"),
+                    new SelectedFragment(31, "while (true)", "true"),
+                    new SelectedFragment(32, "if (true)", "true"),
+                    new SelectedFragment(32, "if (true)", "true"),
+                };
+            }
+        }
 
         public JavaComplexBranchExperiment() : base("expression") {}
 
@@ -589,62 +598,54 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     }
 
     public class JavaComplexStatementExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
+        protected override CstGenerator Generator
+        {
             get { return JavaExperiment.Generator; }
         }
 
-	    public override IEnumerable<string> AcceptingFragments {
-	        get {
-	            return new[] {
-	                @"checkArgument(b);",
-	                @"i = 0;",
-	                @"i = 0;",
-	                @"f(0 + 1 - 2 * 3 / 4 % 5);",
-	                @"for (; b;) { }",
-	                @"while (b) { }",
-	                @"do { } while (b);",
-	                @"if (b) { } else if (b) { } else { }",
-	                @"if (b) { } else { }",
-	                @"switch (b) {
+        public override IEnumerable<SelectedFragment> AcceptingFragments
+        {
+            get
+            {
+                return new[] {
+                    new SelectedFragment(7, @"checkArgument(b);"),
+                    new SelectedFragment(9, @"i = 0;"),
+                    new SelectedFragment(11, @"i = 0;"),
+                    new SelectedFragment(12, @"f(0 + 1 - 2 * 3 / 4 % 5);"),
+                    new SelectedFragment(14, @"for (; b;) { }"),
+                    new SelectedFragment(15, @"while (b) { }"),
+                    new SelectedFragment(16, @"do { } while (b);"),
+                    new SelectedFragment(17, @"if (b) { } else if (b) { } else { }"),
+                    new SelectedFragment(17, @"if (b) { } else { }"),
+                    new SelectedFragment(19, @"switch (b) {
 			case 0:
 			case 1:
 				break;
 			default:
 				break;
-		}",
-	                @"break;",
-	                @"break;",
-	                @"checkArgument(true);",
-	                @"for (; true;) { }",
-	                @"while (true) { }",
-	                @"do { } while (true);",
-	                @"if (true) { } else if (true) { } else { }",
-	                @"if (true) { } else { }",
-	            };
-	        }
-	    }
+		}"),
+                    new SelectedFragment(22, @"break;"),
+                    new SelectedFragment(24, @"break;"),
+                    new SelectedFragment(27, @"checkArgument(true);"),
+                    new SelectedFragment(29, @"for (; true;) { }"),
+                    new SelectedFragment(30, @"while (true) { }"),
+                    new SelectedFragment(31, @"do { } while (true);"),
+                    new SelectedFragment(32, @"if (true) { } else if (true) { } else { }"),
+                    new SelectedFragment(32, @"if (true) { } else { }"),
+                };
+            }
+        }
 
-        public override IEnumerable<string> RejectingFragments {
-	        get {
-	            return new[] {
-	                @"L: i = 0;",
-	                @";",   // dummy for L: i = 0;
-	                @";",
-	                @"{ i = 0; }",
-	                @"{ }",
-	                @"{ }",
-	                @"{ }",
-	                @"{ }",
-	                @"{ }",
-	                @"{ }",
-	                @"{ }",
-	                @"{ }",
-	                @"{ }",
-	                @"{ }",
-	                @"{ }",
-	                @"{ }",
-	            };
-	        }
+        public override IEnumerable<SelectedFragment> RejectingFragments
+        {
+            get
+            {
+                return new[] {
+                    new SelectedFragment(9, @"L: i = 0;"),
+                    new SelectedFragment(10, @";"),
+                    new SelectedFragment(11, @"{ i = 0; }"),
+                };
+            }
         }
 
         public JavaComplexStatementExperiment() : base("statement", "blockStatement") {}
@@ -729,21 +730,24 @@ statement
     }
 
     public class JavaExpressionStatementExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
+        protected override CstGenerator Generator
+        {
             get { return JavaExperiment.Generator; }
         }
 
-	    public override IEnumerable<string> AcceptingFragments {
-	        get {
-	            return new[] {
-	                @"checkArgument(b);",
-	                @"i = 0;",
-	                @"i = 0;",
-	                @"f(0 + 1 - 2 * 3 / 4 % 5);",
-	                @"checkArgument(true);",
-	            };
-	        }
-	    }
+        public override IEnumerable<SelectedFragment> AcceptingFragments
+        {
+            get
+            {
+                return new[] {
+                    new SelectedFragment(7, @"checkArgument(b);"),
+                    new SelectedFragment(9, @"i = 0;"),
+                    new SelectedFragment(11, @"i = 0;"),
+                    new SelectedFragment(12, @"f(0 + 1 - 2 * 3 / 4 % 5);"),
+                    new SelectedFragment(27, @"checkArgument(true);"),
+                };
+            }
+        }
 
         public JavaExpressionStatementExperiment() : base("statement") {}
 
@@ -753,20 +757,23 @@ statement
     }
 
     public class JavaArithmeticOperatorExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
+        protected override CstGenerator Generator
+        {
             get { return JavaExperiment.Generator; }
         }
 
-	    public override IEnumerable<string> AcceptingFragments {
-	        get {
-	            return new[] {
-	                @"0 + 1",
-	                @"1 - 2",
-	                @"2 * 3",
-	                @"3 / 4",
-	            };
-	        }
-	    }
+        public override IEnumerable<SelectedFragment> AcceptingFragments
+        {
+            get
+            {
+                return new[] {
+                    new SelectedFragment(12, @"0 + 1", @"+"),
+                    new SelectedFragment(12, @"1 - 2", @"-"),
+                    new SelectedFragment(12, @"2 * 3", @"*"),
+                    new SelectedFragment(12, @"3 / 4", @"/"),
+                };
+            }
+        }
 
         public JavaArithmeticOperatorExperiment() : base("PLUS", "SUB", "STAR", "SLASH") {}
 
@@ -779,20 +786,23 @@ statement
     }
 
     public class JavaSwitchCaseExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
+        protected override CstGenerator Generator
+        {
             get { return JavaExperiment.Generator; }
         }
 
-	    public override IEnumerable<string> AcceptingFragments {
-	        get {
-	            return new[] {
-	                @"switch (b)",
-	                @"case 0:",
-	                @"case 1:",
-	                @"default:",
-	            };
-	        }
-	    }
+        public override IEnumerable<SelectedFragment> AcceptingFragments
+        {
+            get
+            {
+                return new[] {
+                    new SelectedFragment(19, @"switch (b)", @"b"),
+                    new SelectedFragment(20, @"case 0:"),
+                    new SelectedFragment(21, @"case 1:"),
+                    new SelectedFragment(23, @"default:"),
+                };
+            }
+        }
 
         public JavaSwitchCaseExperiment() : base("expression", "switchLabel") {}
 
@@ -809,32 +819,35 @@ statement
     }
 
     public class JavaSuperComplexBranchExperimentWithSwitch : LearningExperiment {
-        protected override CstGenerator Generator {
+        protected override CstGenerator Generator
+        {
             get { return JavaExperiment.Generator; }
         }
 
-	    public override IEnumerable<string> AcceptingFragments {
-	        get {
-	            return new[] {
-	                @"checkArgument(b)",
-	                "for (; b;)",
-	                "while (b)",
-	                "while (b)",
-	                "if (b)",
-	                "if (b)",
-	                @"switch (b)",
-	                @"case 0:",
-	                @"case 1:",
-	                @"default:",
-	                @"checkArgument(true)",
-	                "for (; true;)",
-	                "while (true)",
-	                "while (true)",
-	                "if (true)",
-	                "if (true)",
-	            };
-	        }
-	    }
+        public override IEnumerable<SelectedFragment> AcceptingFragments
+        {
+            get
+            {
+                return new[] {
+                    new SelectedFragment(7, "checkArgument(b)", "b"),
+                    new SelectedFragment(14, "for (; b;)", "b"),
+                    new SelectedFragment(15, "while (b)", "b"),
+                    new SelectedFragment(16, "while (b)", "b"),
+                    new SelectedFragment(17, "if (b)", "b"),
+                    new SelectedFragment(17, "if (b)", "b"),
+                    new SelectedFragment(19, @"switch (b)", @"b"),
+                    new SelectedFragment(20, @"case 0:"),
+                    new SelectedFragment(21, @"case 1:"),
+                    new SelectedFragment(23, @"default:"),
+                    new SelectedFragment(27, "checkArgument(true)", "true"),
+                    new SelectedFragment(29, "for (; true;)", "true"),
+                    new SelectedFragment(30, "while (true)", "true"),
+                    new SelectedFragment(31, "while (true)", "true"),
+                    new SelectedFragment(32, "if (true)", "true"),
+                    new SelectedFragment(32, "if (true)", "true"),
+                };
+            }
+        }
 
         public JavaSuperComplexBranchExperimentWithSwitch() : base("expression", "switchLabel") {}
 
@@ -879,38 +892,43 @@ statement
     }
 
     public class JavaSuperComplexBranchExperimentWithSwitchWithoutTrue : LearningExperiment {
-        protected override CstGenerator Generator {
+        protected override CstGenerator Generator
+        {
             get { return JavaExperiment.Generator; }
         }
 
-	    public override IEnumerable<string> AcceptingFragments {
-	        get {
-	            return new[] {
-	                @"checkArgument(b)",
-	                "for (; b;)",
-	                "while (b)",
-	                "while (b)",
-	                "if (b)",
-	                "if (b)",
-	                @"switch (b)",
-	                @"case 0:",
-	                @"case 1:",
-	                @"default:",
-	            };
-	        }
-	    }
+        public override IEnumerable<SelectedFragment> AcceptingFragments
+        {
+            get
+            {
+                return new[] {
+                    new SelectedFragment(7, "checkArgument(b)", "b"),
+                    new SelectedFragment(14, "for (; b;)", "b"),
+                    new SelectedFragment(15, "while (b)", "b"),
+                    new SelectedFragment(16, "while (b)", "b"),
+                    new SelectedFragment(17, "if (b)", "b"),
+                    new SelectedFragment(17, "if (b)", "b"),
+                    new SelectedFragment(19, @"switch (b)", @"b"),
+                    new SelectedFragment(20, @"case 0:"),
+                    new SelectedFragment(21, @"case 1:"),
+                    new SelectedFragment(23, @"default:"),
+                };
+            }
+        }
 
-        public override IEnumerable<string> RejectingFragments {
-	        get {
-	            return new[] {
-	                @"checkArgument(true)",
-	                "for (; true;)",
-	                "while (true)",
-	                "while (true)",
-	                "if (true)",
-	                "if (true)",
-	            };
-	        }
+        public override IEnumerable<SelectedFragment> RejectingFragments
+        {
+            get
+            {
+                return new[] {
+                    new SelectedFragment(27, "checkArgument(true)", "true"),
+                    new SelectedFragment(29, "for (; true;)", "true"),
+                    new SelectedFragment(30, "while (true)", "true"),
+                    new SelectedFragment(31, "while (true)", "true"),
+                    new SelectedFragment(32, "if (true)", "true"),
+                    new SelectedFragment(32, "if (true)", "true"),
+                };
+            }
         }
 
         public JavaSuperComplexBranchExperimentWithSwitchWithoutTrue()

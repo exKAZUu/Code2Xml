@@ -74,6 +74,8 @@ namespace Code2Xml.Learner.Core.Learning {
                     .Where(ProtectedIsAcceptedUsingOracle)
                     .ToList();
 
+
+
             var preparingTime = Environment.TickCount;
             var extractor = CreateExtractor();
             var seedNodeSet = new SeedNodeSet(seedNodes, seedCsts, this);
@@ -362,18 +364,18 @@ namespace Code2Xml.Learner.Core.Learning {
 			return new FeatureExtractor();
 		}
 
-        public virtual IEnumerable<string> AcceptingFragments {
+        public virtual IEnumerable<SelectedFragment> AcceptingFragments {
             get { return null; }
         }
 
-	    public virtual IEnumerable<string> RejectingFragments {
-	        get { return Enumerable.Empty<string>(); }
+	    public virtual IEnumerable<SelectedFragment> RejectingFragments {
+	        get { return Enumerable.Empty<SelectedFragment>(); }
 	    }
     }
 
     public interface ILearningExperiment {
         FeatureExtractor CreateExtractor();
-        IEnumerable<string> AcceptingFragments { get; }
-        IEnumerable<string> RejectingFragments { get; }
+        IEnumerable<SelectedFragment> AcceptingFragments { get; }
+        IEnumerable<SelectedFragment> RejectingFragments { get; }
     }
 }

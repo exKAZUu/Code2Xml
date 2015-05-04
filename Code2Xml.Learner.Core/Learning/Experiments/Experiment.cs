@@ -85,9 +85,10 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                         failedCount++;
                         PrintWrongResults(classificationResult, learningResult.FeatureEncoder);
                     }
+                    Console.WriteLine(exp.GetType().Name);
+                    Assert.That(failedCount, Is.EqualTo(0));
                 }
             }
-            Assert.That(failedCount, Is.EqualTo(0));
         }
 
         private LearningResult LearnWithoutClearing(
