@@ -97,9 +97,9 @@ namespace Code2Xml.Learner.Core.Learning {
             paths.Add(node.Name);
             paths.Add("'" + extractor.GetToken(node));
             node.PreviousTokenNodes().Where(IsMeaningfulIdentifier).Take(IdentifierCount)
-                    .ForEach((tokenNode, i) => paths.Add("'-" + extractor.GetToken(tokenNode)));
+                    .ForEach(tokenNode => paths.Add("'-" + extractor.GetToken(tokenNode)));
             node.NextTokenNodes().Where(IsMeaningfulIdentifier).Take(IdentifierCount)
-                    .ForEach((tokenNode, i) => paths.Add("'+" + extractor.GetToken(tokenNode)));
+                    .ForEach(tokenNode => paths.Add("'+" + extractor.GetToken(tokenNode)));
 
             var ancestor = node.Ancestors().FirstOrDefault(a => a.Children().Count() > 1);
             if (surroundingNodes.Contains(ancestor)) {
@@ -172,7 +172,7 @@ namespace Code2Xml.Learner.Core.Learning {
             }
             node.PreviousTokenNodes().Where(IsMeaningfulIdentifier).Take(IdentifierCount)
                     .ForEach(
-                            (tokenNode, i) => {
+                            tokenNode => {
                                 if (featureString2Bit.TryGetValue(
                                         "'-" + extractor.GetToken(tokenNode), out bit)) {
                                     ret |= bit;
@@ -180,7 +180,7 @@ namespace Code2Xml.Learner.Core.Learning {
                             });
             node.NextTokenNodes().Where(IsMeaningfulIdentifier).Take(IdentifierCount)
                     .ForEach(
-                            (tokenNode, i) => {
+                            tokenNode => {
                                 if (featureString2Bit.TryGetValue(
                                         "'+" + extractor.GetToken(tokenNode), out bit)) {
                                     ret |= bit;

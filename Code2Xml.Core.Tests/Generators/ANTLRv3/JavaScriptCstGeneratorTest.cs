@@ -116,38 +116,38 @@ var completion = require('../lib/completion');
         //        @"d6598447cc972385fc34ca10f542fc53ad174183", 30951)]
         //[TestCase(@"https://github.com/angular/angular.js",
         //        @"d1ccf176351cda2b49599374c7d4ba594796012f", 30669)]
-        [TestCase(@"https://github.com/h5bp/html5-boilerplate",
-                @"61015dbbea270c71490a6ea92484bcde8e5c6ec0", 27162)]
-        [TestCase(@"https://github.com/bartaz/impress.js",
-                @"e2d1eb90bf12a1be02079d74545453164d7e7ec4", 22110)]
+        //[TestCase(@"https://github.com/h5bp/html5-boilerplate",
+        //        @"61015dbbea270c71490a6ea92484bcde8e5c6ec0", 27162)]
+        //[TestCase(@"https://github.com/bartaz/impress.js",
+        //        @"e2d1eb90bf12a1be02079d74545453164d7e7ec4", 22110)]
         [TestCase(@"https://github.com/jashkenas/backbone",
-                @"eda14bdfb90ae6c7a8b6c18c6a1beacb5ef1e8a5", 19457)]
+                @"eda14bdfb90ae6c7a8b6c18c6a1beacb5ef1e8a5", 19457)]    // 1
         //[TestCase(@"https://github.com/meteor/meteor",
         //        @"b0d47e10bc6a2c36a339da65a9b888e3df9d8133", 19344)]
         //[TestCase(@"https://github.com/adobe/brackets",
         //        @"ed56656f4953c8e4a54d0c5d453048dd4a754944", 18453)]
         //[TestCase(@"https://github.com/moment/moment",
         //        @"c9dd13e4ac00476e4fc5e83ae72d7eab16942c1c", 18347)]
-        [TestCase(@"https://github.com/blueimp/jQuery-File-Upload",
-                @"62cd2f84d68dfbcb247ff374ae727ed4a42de49d", 17945)]
+        //[TestCase(@"https://github.com/blueimp/jQuery-File-Upload",
+        //        @"62cd2f84d68dfbcb247ff374ae727ed4a42de49d", 17945)]
         [TestCase(@"https://github.com/hakimel/reveal.js",
-                @"6565ba016807ba5c6c44efde5ce40613ed39c845", 17696)]
+                @"6565ba016807ba5c6c44efde5ce40613ed39c845", 17696)]    // 2
         //[TestCase(@"https://github.com/mrdoob/three.js",
         //        @"2d59713328c421c3edfc3feda1b116af13140b94", 16905)]
-        [TestCase(@"https://github.com/strongloop/express",
-                @"d40dc651f3561a4978fdc9c40e7fc802261d99ce", 16056)]
-        [TestCase(@"https://github.com/resume/resume.github.com",
-                @"c537d43f3eeb259578f4a0501cb5c0014edd3b72", 13913)]
+        //[TestCase(@"https://github.com/strongloop/express",
+        //        @"d40dc651f3561a4978fdc9c40e7fc802261d99ce", 16056)]
+        //[TestCase(@"https://github.com/resume/resume.github.com",
+        //        @"c537d43f3eeb259578f4a0501cb5c0014edd3b72", 13913)]
         [TestCase(@"https://github.com/Automattic/socket.io",
-                @"3352d1d72690cdec9794c5f3541c9c778f2dbcee", 13533)]
-        [TestCase(@"https://github.com/Modernizr/Modernizr",
-                @"ad2be12934b66102005e3c7e4b850f65f36e25d2", 13496)]
-        [TestCase(@"https://github.com/jashkenas/underscore",
-                @"bc50d7a0e8d610b461f2d520c2f9f13e5c52f179", 12645)]
+                @"3352d1d72690cdec9794c5f3541c9c778f2dbcee", 13533)]    // 3
+        //[TestCase(@"https://github.com/Modernizr/Modernizr",
+        //        @"ad2be12934b66102005e3c7e4b850f65f36e25d2", 13496)]
+        //[TestCase(@"https://github.com/jashkenas/underscore",
+        //        @"bc50d7a0e8d610b461f2d520c2f9f13e5c52f179", 12645)]
         //[TestCase(@"https://github.com/TryGhost/Ghost",
         //        @"38019f356fd31355f6bdcc5ab22db8902b074008", 12627)]
-        [TestCase(@"https://github.com/ivaynberg/select2",
-                @"dd323687f3324f9b89d73375777793d7f4c0ad13", 12216)]
+        //[TestCase(@"https://github.com/ivaynberg/select2",
+        //        @"dd323687f3324f9b89d73375777793d7f4c0ad13", 12216)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
             Action<string> parse = code => {
                 var parser =

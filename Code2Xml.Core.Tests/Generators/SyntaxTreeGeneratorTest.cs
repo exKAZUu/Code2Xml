@@ -171,7 +171,8 @@ namespace Code2Xml.Core.Tests.Generators {
                 }
             }
             var time = Environment.TickCount;
-            for (int i = 0; i < 1; i++) {
+            var count = 20;
+            for (int i = 0; i < count; i++) {
                 if (parse == null) {
                     foreach (var code in codes) {
                         Generator.TryParseFromCodeText(code);
@@ -184,7 +185,7 @@ namespace Code2Xml.Core.Tests.Generators {
             }
             var time2 = Environment.TickCount;
             var dummy = 0;
-            for (int i = 0; i < 1; i++) {
+            for (int i = 0; i < count; i++) {
                 foreach (var code in codes) {
                     var tree = Generator.GenerateTreeFromCodeText(code, true);
                     dummy += tree.Name.Length;
@@ -194,18 +195,18 @@ namespace Code2Xml.Core.Tests.Generators {
             var trees = codes.Select(code => Generator.GenerateTreeFromCodeText(code, true))
                     .ToList();
             var time4 = Environment.TickCount;
-            for (int i = 0; i < 1; i++) {
+            for (int i = 0; i < count; i++) {
                 foreach (var tree in trees) {
                     var code = Generator.GenerateCodeFromTree(tree);
                     dummy += code.Length;
                 }
             }
             var time5 = Environment.TickCount;
-            _timeToParseTree += (time2 - time) / 1;
-            _timeToGenerateTree += (time3 - time2) / 1;
-            _timeToGenerateCode += (time5 - time4) / 1;
+            _timeToParseTree += (time2 - time) / count;
+            _timeToGenerateTree += (time3 - time2) / count;
+            _timeToGenerateCode += (time5 - time4) / count;
             ShowTimes(path, url);
-            Console.WriteLine(dummy);
+            Console.WriteLine("Dymmy: " + dummy);
         }
 
         protected void VerifyRestoringCode(string code, bool write = true) {
