@@ -20,6 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Code2Xml.Core.SyntaxTree;
 using NUnit.Framework;
 using ParserTests;
 
@@ -131,9 +132,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 writer.WriteLine("--------------------------------------");
                 writer.WriteLine(learningResult.EncodingResult.Vector2Node[vector].Code);
                 writer.WriteLine(
-                        learningResult.EncodingResult.Vector2Node[vector].Ancestors()
-                                .ElementAt(5)
-                                .Code);
+                        GetGoodAncestorNode(learningResult.EncodingResult.Vector2Node[vector]).Code);
                 var features = learningResult.FeatureEncoder.GetFeatureStringsByVector(vector);
                 foreach (var feature in features) {
                     if (feature.Contains("Requires") || feature.Contains("Contract")) {
@@ -149,9 +148,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 writer.WriteLine("--------------------------------------");
                 writer.WriteLine(learningResult.EncodingResult.Vector2Node[vector].Code);
                 writer.WriteLine(
-                        learningResult.EncodingResult.Vector2Node[vector].Ancestors()
-                                .ElementAt(5)
-                                .Code);
+                        GetGoodAncestorNode(learningResult.EncodingResult.Vector2Node[vector]).Code);
                 var features = learningResult.FeatureEncoder.GetFeatureStringsByVector(vector);
                 foreach (var feature in features) {
                     writer.WriteLine(learningResult.EncodingResult.Vector2Node[vector].Code);
@@ -166,32 +163,30 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         private static void PrintWrongResults(
                 ClassificationResult classificationResult, FeatureEncoder featureEncoder) {
             Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
-            foreach (var wn in classificationResult.WronglyAcceptedNodes) {
-                var e = wn.AncestorsAndSelf().ElementAtOrDefault(5) ?? wn;
-                Console.WriteLine(wn.Code);
-                Console.WriteLine(e.Code);
+            foreach (var node in classificationResult.WronglyAcceptedNodes) {
+                Console.WriteLine(node.Code);
+                Console.WriteLine(GetGoodAncestorNode(node).Code);
                 Console.WriteLine("---------------------------------------------");
             }
             Console.WriteLine("---- WronglyRejectedElements ----");
-            foreach (var wn in classificationResult.WronglyRejectedNodes) {
-                var e = wn.AncestorsAndSelf().ElementAtOrDefault(5) ?? wn;
-                Console.WriteLine(wn.Code);
-                Console.WriteLine(e.Code);
+            foreach (var node in classificationResult.WronglyRejectedNodes) {
+                Console.WriteLine(node.Code);
+                Console.WriteLine(GetGoodAncestorNode(node).Code);
                 Console.WriteLine("---------------------------------------------");
             }
 
             Console.WriteLine("--------------- WronglyAcceptedFeatures ---------------");
-            foreach (var wf in classificationResult.WronglyAcceptedFeatures) {
-                var features = featureEncoder.GetFeatureStringsByVector(wf);
-                foreach (var feature in features) {
-                    Console.WriteLine(Beautify(feature));
+            foreach (var feature in classificationResult.WronglyAcceptedFeatures) {
+                var featureStrings = featureEncoder.GetFeatureStringsByVector(feature);
+                foreach (var featureString in featureStrings) {
+                    Console.WriteLine(Beautify(featureString));
                 }
             }
             Console.WriteLine("---- WronglyRejectedFeatures ----");
-            foreach (var wf in classificationResult.WronglyRejectedFeatures) {
-                var features = featureEncoder.GetFeatureStringsByVector(wf);
-                foreach (var feature in features) {
-                    Console.WriteLine(Beautify(feature));
+            foreach (var feature in classificationResult.WronglyRejectedFeatures) {
+                var featureStrings = featureEncoder.GetFeatureStringsByVector(feature);
+                foreach (var featureString in featureStrings) {
+                    Console.WriteLine(Beautify(featureString));
                 }
             }
         }
@@ -218,8 +213,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 writer.WriteLine(Beautify(classifier.GroupPaths[i]));
                 if (acceptingVectorCounts[i] != 0) {
                     writer.WriteLine();
-                    foreach (var feature in acceptingFeature[i]) {
-                        writer.WriteLine(Beautify(feature));
+                    foreach (var featureString in acceptingFeature[i]) {
+                        writer.WriteLine(Beautify(featureString));
                     }
                 }
             }
@@ -230,8 +225,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 writer.WriteLine(Beautify(classifier.GroupPaths[i]));
                 if (rejectingVectorCounts[i] != 0) {
                     writer.WriteLine();
-                    foreach (var feature in rejectingFeatures[i]) {
-                        writer.WriteLine(Beautify(feature));
+                    foreach (var featureString in rejectingFeatures[i]) {
+                        writer.WriteLine(Beautify(featureString));
                     }
                 }
             }
@@ -279,6 +274,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public void Learn(
                 List<string> seedPaths, LearningExperiment exp, params string[] projectPaths) {
             Learn(seedPaths, exp, (ICollection<string>)projectPaths);
+        }
+
+        private static CstNode GetGoodAncestorNode(CstNode node) {
+            while (node.Parent != null && node.Parent.Code.Length < 100) {
+                node = node.Parent;
+            }
+            return node;
         }
     }
 }
