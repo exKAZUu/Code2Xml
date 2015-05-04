@@ -84,9 +84,10 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                         failedCount++;
                         PrintWrongResults(classificationResult, learningResult.FeatureEncoder);
                     }
+                    Console.WriteLine(exp.GetType().Name);
+                    Assert.That(failedCount, Is.EqualTo(0));
                 }
             }
-            Assert.That(failedCount, Is.EqualTo(0));
         }
 
         private LearningResult LearnWithoutClearing(
@@ -130,10 +131,11 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             foreach (var vector in seedAcceptedVectors) {
                 writer.WriteLine("--------------------------------------");
                 writer.WriteLine(learningResult.EncodingResult.Vector2Node[vector].Code);
-                writer.WriteLine(
-                        learningResult.EncodingResult.Vector2Node[vector].Ancestors()
-                                .ElementAt(5)
-                                .Code);
+                var ancestor = learningResult.EncodingResult.Vector2Node[vector].Ancestors()
+                        .ElementAtOrDefault(5);
+                if (ancestor != null) {
+                    writer.WriteLine(ancestor.Code);
+                }
                 var features = learningResult.FeatureEncoder.GetFeatureStringsByVector(vector);
                 foreach (var feature in features) {
                     if (feature.Contains("Requires") || feature.Contains("Contract")) {
@@ -148,10 +150,11 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             foreach (var vector in seedRejectedVectors) {
                 writer.WriteLine("--------------------------------------");
                 writer.WriteLine(learningResult.EncodingResult.Vector2Node[vector].Code);
-                writer.WriteLine(
-                        learningResult.EncodingResult.Vector2Node[vector].Ancestors()
-                                .ElementAt(5)
-                                .Code);
+                var ancestor = learningResult.EncodingResult.Vector2Node[vector].Ancestors()
+                        .ElementAtOrDefault(5);
+                if (ancestor != null) {
+                    writer.WriteLine(ancestor.Code);
+                }
                 var features = learningResult.FeatureEncoder.GetFeatureStringsByVector(vector);
                 foreach (var feature in features) {
                     writer.WriteLine(learningResult.EncodingResult.Vector2Node[vector].Code);
