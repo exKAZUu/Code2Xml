@@ -137,8 +137,8 @@ namespace Code2Xml.Learner.Core.Learning {
                                   ">" + child.Name + child.RuleId;
                         children.Add(Tuple.Create(child, key));
                         // for Preconditions.checkArguments()
-                        paths.Add(parentPathUnit + '-' + index + ">'"
-                                  + extractor.GetToken(child));
+                        //paths.Add(parentPathUnit + '-' + index + ">'"
+                        //          + extractor.GetToken(child));
                         index++;
                     }
                     extractor.BrotherLeft = Math.Max(extractor.BrotherLeft, index);
@@ -151,8 +151,8 @@ namespace Code2Xml.Learner.Core.Learning {
                                   ">" + child.Name + child.RuleId;
                         children.Add(Tuple.Create(child, key));
                         // for Preconditions.checkArguments()
-                        paths.Add(parentPathUnit + '-' + index + ">'"
-                                  + extractor.GetToken(child));
+                        //paths.Add(parentPathUnit + '-' + index + ">'"
+                        //          + extractor.GetToken(child));
                         index++;
                     }
                     extractor.BrotherRight = Math.Max(extractor.BrotherRight, index);
@@ -169,7 +169,7 @@ namespace Code2Xml.Learner.Core.Learning {
                             var key = t.Item2 + ">" + child.Name + child.RuleId;
                             newChildren.Add(Tuple.Create(child, key));
                             // for Preconditions.checkArguments()
-                            paths.Add(t.Item2 + ">'" + extractor.GetToken(child));
+                            //paths.Add(t.Item2 + ">'" + extractor.GetToken(child));
                         }
                     }
                 }
@@ -232,11 +232,12 @@ namespace Code2Xml.Learner.Core.Learning {
                                     children.Add(Tuple.Create(child, key));
                                     ret |= bit;
                                 }
-                                if (featureString2Bit.TryGetValue(
-                                        parentPathUnit + '-' + index +
-                                        ">'" + extractor.GetToken(child), out bit)) {
-                                    ret |= bit;
-                                }
+                                // for Preconditions.checkArguments()
+                                //if (featureString2Bit.TryGetValue(
+                                //        parentPathUnit + '-' + index +
+                                //        ">'" + extractor.GetToken(child), out bit)) {
+                                //    ret |= bit;
+                                //}
                             });
                     parent.Item1.NextsFromSelf().Take(extractor.BrotherRight)
                             .ForEach((child, index) => {
@@ -247,11 +248,12 @@ namespace Code2Xml.Learner.Core.Learning {
                                     children.Add(Tuple.Create(child, key));
                                     ret |= bit;
                                 }
-                                if (featureString2Bit.TryGetValue(
-                                        parentPathUnit + '+' + index +
-                                        ">'" + extractor.GetToken(child), out bit)) {
-                                    ret |= bit;
-                                }
+                                // for Preconditions.checkArguments()
+                                //if (featureString2Bit.TryGetValue(
+                                //        parentPathUnit + '+' + index +
+                                //        ">'" + extractor.GetToken(child), out bit)) {
+                                //    ret |= bit;
+                                //}
                             });
                     parent = Tuple.Create(newParent, parentPathUnit);
                 }
@@ -266,10 +268,10 @@ namespace Code2Xml.Learner.Core.Learning {
                             ret |= bit;
                         }
                         // for Preconditions.checkArguments()
-                        if (featureString2Bit.TryGetValue(
-                                t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
-                            ret |= bit;
-                        }
+                        //if (featureString2Bit.TryGetValue(
+                        //        t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
+                        //    ret |= bit;
+                        //}
                     }
                 }
                 children = newChildren;
