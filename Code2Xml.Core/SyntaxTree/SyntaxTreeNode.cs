@@ -96,6 +96,34 @@ namespace Code2Xml.Core.SyntaxTree {
             }
         }
 
+        public IEnumerable<TNode> PreviousTokenNodes(TNode outermostNode) {
+            var node = Parent;
+            while (node != null) {
+                var tokenNodes = node.PrevsFromSelf().SelectMany(n => n.AllTokenNodes().Reverse());
+                foreach (var tokenNode in tokenNodes) {
+                    yield return tokenNode;
+                }
+                if (node == outermostNode) {
+                    break;
+                }
+                node = node.Parent;
+            }
+        }
+
+        public IEnumerable<TNode> NextTokenNodes(TNode outermostNode) {
+            var node = Parent;
+            while (node != null) {
+                var tokenNodes = node.NextsFromSelf().SelectMany(n => n.AllTokenNodes());
+                foreach (var tokenNode in tokenNodes) {
+                    yield return tokenNode;
+                }
+                if (node == outermostNode) {
+                    break;
+                }
+                node = node.Parent;
+            }
+        }
+
         public abstract XElement ToXml();
     }
 }

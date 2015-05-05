@@ -67,7 +67,7 @@ namespace Code2Xml.Learner.Core.Learning {
                             .FirstOrDefault(f => node.AncestorWithSingleChild() == f.Node);
                     if (fragment != null) {
                         surroundingNodes = fragment.SurroundingRange.FindOverlappedNodes(root);
-                        outermostNode = fragment.SurroundingRange.FindOutermostNode(root);
+                        outermostNode = fragment.SurroundingRange.FindInnermostNode(root);
                         usedRangeCount++;
                     } else {
                         surroundingNodes = node.DescendantsAndSelf();
@@ -110,22 +110,26 @@ namespace Code2Xml.Learner.Core.Learning {
 
                 if (outermostNode != null) {
                     extractor.NodeNames.Add(outermostNode.Name);
-                    var myTokenNodes = node.AllTokenNodes().ToHashSet();
-                    var prefix = "'-";
-                    foreach (var tokenNode in outermostNode.AllTokenNodes()) {
+                    var index = 0;
+                    foreach (var tokenNode in
+                            node.PreviousTokenNodes(outermostNode).Where(IsMeaningfulIdentifier)) {
                         if (!surroundingNodes.Contains(tokenNode)) {
-                            continue;
+                            break;
                         }
-                        if (myTokenNodes.Contains(tokenNode)) {
-                            prefix = "'+";
-                            continue;
-                        }
-                        if (!IsMeaningfulIdentifier(tokenNode)) {
-                            continue;
-                        }
-                        paths.Add(prefix + extractor.GetToken(tokenNode));
-                        //paths.Add(prefix + tokenNode.Name + tokenNode.RuleId + extractor.GetToken(tokenNode));
+                        paths.Add("'-" + extractor.GetToken(tokenNode));
+                        index++;
                     }
+                    extractor.TokenLeft = Math.Max(extractor.TokenLeft, index);
+                    index = 0;
+                    foreach (var tokenNode in 
+                            node.NextTokenNodes(outermostNode).Where(IsMeaningfulIdentifier)) {
+                        if (!surroundingNodes.Contains(tokenNode)) {
+                            break;
+                        }
+                        paths.Add("'+" + extractor.GetToken(tokenNode));
+                        index++;
+                    }
+                    extractor.TokenRight = Math.Max(extractor.TokenRight, index);
                 }
 
                 var parent = Tuple.Create(node, "");
@@ -202,25 +206,26 @@ namespace Code2Xml.Learner.Core.Learning {
                 var outermostNode =
                         node.Ancestors().FirstOrDefault(n => extractor.NodeNames.Contains(n.Name));
                 if (outermostNode != null) {
-                    var myTokenNodes = node.AllTokenNodes().ToHashSet();
-                    var prefix = "'-";
-                    foreach (var tokenNode in outermostNode.AllTokenNodes()) {
-                        if (myTokenNodes.Contains(tokenNode)) {
-                            prefix = "'+";
-                            continue;
-                        }
-                        if (!IsMeaningfulIdentifier(tokenNode)) {
-                            continue;
-                        }
-                        if (featureString2Bit.TryGetValue(
-                                prefix + extractor.GetToken(tokenNode), out bit)) {
-                            ret |= bit;
-                        }
-                        //if (featureString2Bit.TryGetValue(
-                        //        prefix + tokenNode.Name + tokenNode.RuleId + extractor.GetToken(tokenNode), out bit)) {
-                        //    ret |= bit;
-                        //}
-                    }
+                    node.PreviousTokenNodes(outermostNode)
+                            .Where(IsMeaningfulIdentifier)
+                            .Take(extractor.TokenLeft)
+                            .ForEach(
+                                    tokenNode => {
+                                        if (featureString2Bit.TryGetValue(
+                                                "'-" + extractor.GetToken(tokenNode), out bit)) {
+                                            ret |= bit;
+                                        }
+                                    });
+                    node.NextTokenNodes(outermostNode)
+                            .Where(IsMeaningfulIdentifier)
+                            .Take(extractor.TokenRight)
+                            .ForEach(
+                                    tokenNode => {
+                                        if (featureString2Bit.TryGetValue(
+                                                "'+" + extractor.GetToken(tokenNode), out bit)) {
+                                            ret |= bit;
+                                        }
+                                    });
                 }
 
                 var parent = Tuple.Create(node, "");
