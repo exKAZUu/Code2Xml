@@ -54,24 +54,25 @@ namespace Code2Xml.Learner.Core.Learning {
         }
 
         public static HashSet<string> GetUnionKeys(
-                this IEnumerable<CstNode> nodes, ICollection<SelectedFragment> fragments,
+                this ICollection<CstNode> nodes, ICollection<SelectedFragment> fragments,
                 FeatureExtractor extractor) {
             var commonKeys = new HashSet<string>();
+            var root = nodes.First().AncestorsAndSelf().Last();
             var usedRangeCount = 0;
             foreach (var node in nodes) {
+                IEnumerable<CstNode> surroundingNodes;
+                CstNode outermostNode = null;
                 var fragment = fragments
                         .FirstOrDefault(f => node.AncestorWithSingleChild() == f.Node);
-                IEnumerable<CstNode> surroundingNodes;
                 if (fragment != null) {
-                    surroundingNodes = fragment.SurroundingRange
-                            .FindOverlappedNodes(node.AncestorsAndSelf().Last());
+                    surroundingNodes = fragment.SurroundingRange.FindOverlappedNodes(root);
+                    outermostNode = fragment.SurroundingRange.FindOutermostNode(root);
                     usedRangeCount++;
                 } else {
                     surroundingNodes = node.DescendantsAndSelf();
                 }
-                var keys = node
-                        .GetSurroundingPathsFilteringBySurroundingNodes(
-                                surroundingNodes.ToHashSet(), extractor);
+                var keys = node.GetSurroundingPathsFilteringBySurroundingNodes(
+                        surroundingNodes.ToHashSet(), extractor, outermostNode);
                 commonKeys.UnionWith(keys);
             }
             Console.WriteLine("#Used Ranges: " + usedRangeCount);
@@ -91,7 +92,8 @@ namespace Code2Xml.Learner.Core.Learning {
         }
 
         public static HashSet<string> GetSurroundingPathsFilteringBySurroundingNodes(
-                this CstNode node, HashSet<CstNode> surroundingNodes, FeatureExtractor extractor) {
+                this CstNode node, HashSet<CstNode> surroundingNodes, FeatureExtractor extractor,
+                CstNode outermostNode) {
             var paths = new HashSet<string>();
             var children = new List<Tuple<CstNode, string>> { Tuple.Create(node, "") };
 
@@ -104,41 +106,37 @@ namespace Code2Xml.Learner.Core.Learning {
                 paths.Add(node.Name + node.RuleId);
                 extractor.IsInner = false;
 
-                var index = 0;
-                foreach (var tokenNode in node.PreviousTokenNodes().Where(IsMeaningfulIdentifier)) {
-                    if (!surroundingNodes.Contains(tokenNode)) {
-                        break;
+                if (outermostNode != null) {
+                    extractor.NodeNames.Add(outermostNode.Name);
+                    var myTokenNodes = node.AllTokenNodes().ToHashSet();
+                    var prefix = "'-";
+                    foreach (var tokenNode in outermostNode.AllTokenNodes()) {
+                        if (!surroundingNodes.Contains(tokenNode)) {
+                            continue;
+                        }
+                        if (myTokenNodes.Contains(tokenNode)) {
+                            prefix = "'+";
+                            continue;
+                        }
+                        paths.Add(prefix + extractor.GetToken(tokenNode));
+                        //paths.Add(prefix + tokenNode.Name + tokenNode.RuleId + extractor.GetToken(tokenNode));
                     }
-                    paths.Add("'-" + extractor.GetToken(tokenNode));
-                    index++;
                 }
-                extractor.TokenLeft = Math.Max(extractor.TokenLeft, index);
-                index = 0;
-                foreach (var tokenNode in node.NextTokenNodes().Where(IsMeaningfulIdentifier)) {
-                    if (!surroundingNodes.Contains(tokenNode)) {
-                        break;
-                    }
-                    paths.Add("'+" + extractor.GetToken(tokenNode));
-                    index++;
-                }
-                extractor.TokenRight = Math.Max(extractor.TokenRight, index);
 
                 var parent = Tuple.Create(node, "");
                 while (surroundingNodes.Contains(parent.Item1.Parent)) {
                     var newParent = parent.Item1.Parent;
                     var parentPathUnit = parent.Item2 + "<" + newParent.Name + newParent.RuleId;
                     paths.Add(parentPathUnit);
-                    index = 0;
+                    var index = 0;
                     foreach (var child in parent.Item1.PrevsFromSelf()) {
                         if (!surroundingNodes.Contains(child)) {
                             break;
                         }
-                        var key = parentPathUnit + '-' + index +
-                                  ">" + child.Name + child.RuleId;
+                        var key = parentPathUnit + '-' + index + ">" + child.Name + child.RuleId;
                         children.Add(Tuple.Create(child, key));
                         // for Preconditions.checkArguments()
-                        //paths.Add(parentPathUnit + '-' + index + ">'"
-                        //          + extractor.GetToken(child));
+                        //paths.Add(parentPathUnit + '-' + index + ">'" + extractor.GetToken(child));
                         index++;
                     }
                     extractor.BrotherLeft = Math.Max(extractor.BrotherLeft, index);
@@ -147,12 +145,10 @@ namespace Code2Xml.Learner.Core.Learning {
                         if (!surroundingNodes.Contains(child)) {
                             break;
                         }
-                        var key = parentPathUnit + '-' + index +
-                                  ">" + child.Name + child.RuleId;
+                        var key = parentPathUnit + '-' + index + ">" + child.Name + child.RuleId;
                         children.Add(Tuple.Create(child, key));
                         // for Preconditions.checkArguments()
-                        //paths.Add(parentPathUnit + '-' + index + ">'"
-                        //          + extractor.GetToken(child));
+                        //paths.Add(parentPathUnit + '-' + index + ">'" + extractor.GetToken(child));
                         index++;
                     }
                     extractor.BrotherRight = Math.Max(extractor.BrotherRight, index);
@@ -198,22 +194,26 @@ namespace Code2Xml.Learner.Core.Learning {
                     ret |= bit;
                 }
 
-                node.PreviousTokenNodes().Where(IsMeaningfulIdentifier).Take(extractor.TokenLeft)
-                        .ForEach(
-                                tokenNode => {
-                                    if (featureString2Bit.TryGetValue(
-                                            "'-" + extractor.GetToken(tokenNode), out bit)) {
-                                        ret |= bit;
-                                    }
-                                });
-                node.NextTokenNodes().Where(IsMeaningfulIdentifier).Take(extractor.TokenRight)
-                        .ForEach(
-                                tokenNode => {
-                                    if (featureString2Bit.TryGetValue(
-                                            "'+" + extractor.GetToken(tokenNode), out bit)) {
-                                        ret |= bit;
-                                    }
-                                });
+                var outermostNode =
+                        node.Ancestors().FirstOrDefault(n => extractor.NodeNames.Contains(n.Name));
+                if (outermostNode != null) {
+                    var myTokenNodes = node.AllTokenNodes().ToHashSet();
+                    var prefix = "'-";
+                    foreach (var tokenNode in outermostNode.AllTokenNodes()) {
+                        if (myTokenNodes.Contains(tokenNode)) {
+                            prefix = "'+";
+                            continue;
+                        }
+                        if (featureString2Bit.TryGetValue(
+                                prefix + extractor.GetToken(tokenNode), out bit)) {
+                            ret |= bit;
+                        }
+                        //if (featureString2Bit.TryGetValue(
+                        //        prefix + tokenNode.Name + tokenNode.RuleId + extractor.GetToken(tokenNode), out bit)) {
+                        //    ret |= bit;
+                        //}
+                    }
+                }
 
                 var parent = Tuple.Create(node, "");
                 while (parent.Item1.Parent != null) {
@@ -225,8 +225,8 @@ namespace Code2Xml.Learner.Core.Learning {
                     ret |= bit;
                     parent.Item1.PrevsFromSelf().Take(extractor.BrotherLeft)
                             .ForEach((child, index) => {
-                                var key = parentPathUnit + '-' + index +
-                                          ">" + child.Name + child.RuleId;
+                                var key = parentPathUnit + '-' + index + ">" + child.Name
+                                          + child.RuleId;
                                 if (featureString2Bit.TryGetValue(key, out bit)) {
                                     // 枝刈り
                                     children.Add(Tuple.Create(child, key));
@@ -234,15 +234,15 @@ namespace Code2Xml.Learner.Core.Learning {
                                 }
                                 // for Preconditions.checkArguments()
                                 //if (featureString2Bit.TryGetValue(
-                                //        parentPathUnit + '-' + index +
-                                //        ">'" + extractor.GetToken(child), out bit)) {
+                                //        parentPathUnit + '-' + index + ">'"
+                                //        + extractor.GetToken(child), out bit)) {
                                 //    ret |= bit;
                                 //}
                             });
                     parent.Item1.NextsFromSelf().Take(extractor.BrotherRight)
                             .ForEach((child, index) => {
-                                var key = parentPathUnit + '+' + index +
-                                          ">" + child.Name + child.RuleId;
+                                var key = parentPathUnit + '+' + index + ">" + child.Name
+                                          + child.RuleId;
                                 if (featureString2Bit.TryGetValue(key, out bit)) {
                                     // 枝刈り
                                     children.Add(Tuple.Create(child, key));
@@ -250,8 +250,8 @@ namespace Code2Xml.Learner.Core.Learning {
                                 }
                                 // for Preconditions.checkArguments()
                                 //if (featureString2Bit.TryGetValue(
-                                //        parentPathUnit + '+' + index +
-                                //        ">'" + extractor.GetToken(child), out bit)) {
+                                //        parentPathUnit + '+' + index + ">'"
+                                //        + extractor.GetToken(child), out bit)) {
                                 //    ret |= bit;
                                 //}
                             });
