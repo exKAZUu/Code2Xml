@@ -57,23 +57,25 @@ namespace Code2Xml.Learner.Core.Learning {
                 this ICollection<CstNode> nodes, ICollection<SelectedFragment> fragments,
                 FeatureExtractor extractor) {
             var commonKeys = new HashSet<string>();
-            var root = nodes.First().AncestorsAndSelf().Last();
             var usedRangeCount = 0;
-            foreach (var node in nodes) {
-                IEnumerable<CstNode> surroundingNodes;
-                CstNode outermostNode = null;
-                var fragment = fragments
-                        .FirstOrDefault(f => node.AncestorWithSingleChild() == f.Node);
-                if (fragment != null) {
-                    surroundingNodes = fragment.SurroundingRange.FindOverlappedNodes(root);
-                    outermostNode = fragment.SurroundingRange.FindOutermostNode(root);
-                    usedRangeCount++;
-                } else {
-                    surroundingNodes = node.DescendantsAndSelf();
+            if (nodes.Count > 0) {
+                var root = nodes.First().AncestorsAndSelf().Last();
+                foreach (var node in nodes) {
+                    IEnumerable<CstNode> surroundingNodes;
+                    CstNode outermostNode = null;
+                    var fragment = fragments
+                            .FirstOrDefault(f => node.AncestorWithSingleChild() == f.Node);
+                    if (fragment != null) {
+                        surroundingNodes = fragment.SurroundingRange.FindOverlappedNodes(root);
+                        outermostNode = fragment.SurroundingRange.FindOutermostNode(root);
+                        usedRangeCount++;
+                    } else {
+                        surroundingNodes = node.DescendantsAndSelf();
+                    }
+                    var keys = node.GetSurroundingPathsFilteringBySurroundingNodes(
+                            surroundingNodes.ToHashSet(), extractor, outermostNode);
+                    commonKeys.UnionWith(keys);
                 }
-                var keys = node.GetSurroundingPathsFilteringBySurroundingNodes(
-                        surroundingNodes.ToHashSet(), extractor, outermostNode);
-                commonKeys.UnionWith(keys);
             }
             Console.WriteLine("#Used Ranges: " + usedRangeCount);
             return commonKeys;
