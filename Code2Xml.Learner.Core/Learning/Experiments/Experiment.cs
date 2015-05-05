@@ -277,7 +277,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             Learn(seedPaths, exp, (ICollection<string>)projectPaths);
         }
 
-        private static CstNode GetGoodAncestorNode(CstNode node) {
+        public static CstNode GetGoodAncestorNode(CstNode node) {
             while (node.Parent != null && node.Parent.Code.Length < 100) {
                 node = node.Parent;
             }
