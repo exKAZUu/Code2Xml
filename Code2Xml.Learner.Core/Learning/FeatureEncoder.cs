@@ -84,7 +84,7 @@ namespace Code2Xml.Learner.Core.Learning {
             }
 
             var allUppermostNodes = allCsts.SelectMany(
-                    cst => LearningExperimentUtil.GetUppermostNodesByNames(cst,_selectedNodeNames));
+                    cst => LearningExperimentUtil.GetUppermostNodesByNames(cst, _selectedNodeNames));
 
             var result = new EncodingResult();
             if (seedNodeSet != null) {
@@ -128,16 +128,14 @@ namespace Code2Xml.Learner.Core.Learning {
                 if (oracle.IsAcceptedUsingOracle(uppermostNode)) {
                     // TODO: for debug
                     if (result.IdealRejectedVector2GroupPath.ContainsKey(vector)) {
-                        PrintNotDistinguishedElement(uppermostNode, vector, result);
-                        oracle.IsAcceptedUsingOracle(uppermostNode);
+                        PrintNotDistinguishedElement(uppermostNode, vector, result, oracle);
                     }
                     UpdateVector2GroupPath(result.IdealAcceptedVector2GroupPath, vector,
                             uppermostNode);
                 } else {
                     // TODO: for debug
                     if (result.IdealAcceptedVector2GroupPath.ContainsKey(vector)) {
-                        PrintNotDistinguishedElement(uppermostNode, vector, result);
-                        oracle.IsAcceptedUsingOracle(uppermostNode);
+                        PrintNotDistinguishedElement(uppermostNode, vector, result, oracle);
                     }
                     UpdateVector2GroupPath(result.IdealRejectedVector2GroupPath, vector,
                             uppermostNode);
@@ -217,15 +215,23 @@ namespace Code2Xml.Learner.Core.Learning {
         #region For Debug
 
         private void PrintNotDistinguishedElement(
-                CstNode e, BigInteger vector, EncodingResult result) {
+                CstNode e, BigInteger vector, EncodingResult result, LearningExperiment oracle) {
             if (--_printCount >= 0) {
                 Console.WriteLine("==========================================");
                 Console.WriteLine(e.Parent.Name + ", " + e.Name + ", " + e.Code);
+                Console.WriteLine(Experiment.GetGoodAncestorNode(e).Code);
                 Console.WriteLine(
                         result.Vector2Node[vector].Parent.Name + ", "
                         + result.Vector2Node[vector].Name + ", "
                         + result.Vector2Node[vector].Code);
+                Console.WriteLine(Experiment.GetGoodAncestorNode(result.Vector2Node[vector]).Code);
                 Console.WriteLine("------------------------------------------");
+                if (Experiment.GetGoodAncestorNode(e).Code.Contains("Contract.Requires") &&
+                    Experiment.GetGoodAncestorNode(result.Vector2Node[vector])
+                            .Code.Contains("Contract.Requires")) {
+                    oracle.IsAcceptedUsingOracle(e);
+                    oracle.IsAcceptedUsingOracle(result.Vector2Node[vector]);
+                }
                 foreach (var featureString in GetFeatureStringsByVector(vector)) {
                     Console.WriteLine(Experiment.Beautify(featureString));
                 }
