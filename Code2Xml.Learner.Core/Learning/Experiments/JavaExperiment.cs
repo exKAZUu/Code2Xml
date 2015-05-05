@@ -350,15 +350,12 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         #endregion
 
-        protected override string SearchPattern
-        {
+        protected override string SearchPattern {
             get { return "*.java"; }
         }
 
-        private static IEnumerable<TestCaseData> TestCases
-        {
-            get
-            {
+        private static IEnumerable<TestCaseData> TestCases {
+            get {
                 foreach (var exp in Experiments) {
                     foreach (var learningSet in LearningSets.Skip(SkipCount).Take(TakeCount)) {
                         var url = learningSet.Item1;
@@ -423,15 +420,12 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     }
 
     public class JavaSuperComplexBranchExperiment : LearningExperiment {
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(7, "checkArgument(b)", "b"),
                     new SelectedFragment(14, "for (; b;)", "b"),
@@ -549,15 +543,12 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     }
 
     public class JavaComplexBranchExperiment : LearningExperiment {
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(14, "for (; b;)", "b"),
                     new SelectedFragment(15, "while (b)", "b"),
@@ -598,15 +589,12 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     }
 
     public class JavaComplexStatementExperiment : LearningExperiment {
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(7, @"checkArgument(b);"),
                     new SelectedFragment(9, @"i = 0;"),
@@ -636,10 +624,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
         }
 
-        public override IEnumerable<SelectedFragment> RejectingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> RejectingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(9, @"L: i = 0;"),
                     new SelectedFragment(10, @";"),
@@ -730,15 +716,12 @@ statement
     }
 
     public class JavaExpressionStatementExperiment : LearningExperiment {
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(7, @"checkArgument(b);"),
                     new SelectedFragment(9, @"i = 0;"),
@@ -757,15 +740,12 @@ statement
     }
 
     public class JavaArithmeticOperatorExperiment : LearningExperiment {
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(12, @"0 + 1", @"+"),
                     new SelectedFragment(12, @"1 - 2", @"-"),
@@ -786,15 +766,12 @@ statement
     }
 
     public class JavaSwitchCaseExperiment : LearningExperiment {
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(19, @"switch (b)", @"b"),
                     new SelectedFragment(20, @"case 0:"),
@@ -819,15 +796,12 @@ statement
     }
 
     public class JavaSuperComplexBranchExperimentWithSwitch : LearningExperiment {
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(7, "checkArgument(b)", "b"),
                     new SelectedFragment(14, "for (; b;)", "b"),
@@ -892,15 +866,12 @@ statement
     }
 
     public class JavaSuperComplexBranchExperimentWithSwitchWithoutTrue : LearningExperiment {
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(7, "checkArgument(b)", "b"),
                     new SelectedFragment(14, "for (; b;)", "b"),
@@ -916,10 +887,8 @@ statement
             }
         }
 
-        public override IEnumerable<SelectedFragment> RejectingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> RejectingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(27, "checkArgument(true)", "true"),
                     new SelectedFragment(29, "for (; true;)", "true"),

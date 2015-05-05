@@ -12,6 +12,8 @@ namespace Code2Xml.Learner.Core.Learning {
         public string TargetText { get; set; }
         public int StartLine { get; set; }
 
+        private static int _lastStartLine;
+
         public int Update(StructuredCode structuredCode, CstNode cst, int lastIndex) {
             var startLineIndex = structuredCode.GetIndex(StartLine, 0);
             var surroundingIndex = structuredCode.Code.IndexOf(SurroundingText,
@@ -31,12 +33,15 @@ namespace Code2Xml.Learner.Core.Learning {
             StartLine = startLine;
             SurroundingText = surroundingText;
             TargetText = targetText;
+            _lastStartLine = startLine;
         }
 
-        public SelectedFragment(int startLine, string surroundingText) {
-            StartLine = startLine;
-            SurroundingText = surroundingText;
-            TargetText = surroundingText;
-        }
+        public SelectedFragment(int startLine, string surroundingText)
+                : this(startLine, surroundingText, surroundingText) {}
+
+        public SelectedFragment(string surroundingText, string targetText)
+                : this(++_lastStartLine, surroundingText, targetText) {}
+
+        public SelectedFragment(string surroundingText) : this(++_lastStartLine, surroundingText) {}
     }
 }

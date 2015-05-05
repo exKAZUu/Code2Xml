@@ -235,35 +235,46 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return CSharpExperiment.Generator; }
         }
 
-        public override IEnumerable<string> AcceptingFragments {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    @"Contract.Requires(b)",
-                    @"Contract.Requires(b, """")",
-                    @"Contract.Requires<Exception>(b)",
-                    @"Contract.Requires<Exception>(b, """")",
-                    @"System.Diagnostics.Contracts.Contract.Requires(b)",
-                    @"System.Diagnostics.Contracts.Contract.Requires(b, """")",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b)",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b, """")",
-                    "for (; b;)",
-                    "while (b)",
-                    "while (b)",
-                    "if (b)",
-                    "if (b)",
-                    @"Contract.Requires(true)",
-                    @"Contract.Requires(true, """")",
-                    @"Contract.Requires<Exception>(true)",
-                    @"Contract.Requires<Exception>(true, """")",
-                    @"System.Diagnostics.Contracts.Contract.Requires(true)",
-                    @"System.Diagnostics.Contracts.Contract.Requires(true, """")",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true)",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """")",
-                    "for (; true;)",
-                    "while (true)",
-                    "while (true)",
-                    "if (true)",
-                    "if (true)",
+                    new SelectedFragment(6, @"Contract.Requires(b)", "b"),
+                    new SelectedFragment(7, @"Contract.Requires(b, """")", "b"),
+                    new SelectedFragment(8, @"Contract.Requires<Exception>(b)", "b"),
+                    new SelectedFragment(9, @"Contract.Requires<Exception>(b, """")", "b"),
+                    new SelectedFragment(12, @"System.Diagnostics.Contracts.Contract.Requires(b)",
+                            "b"),
+                    new SelectedFragment(13,
+                            @"System.Diagnostics.Contracts.Contract.Requires(b, """")", "b"),
+                    new SelectedFragment(14,
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b)", "b"),
+                    new SelectedFragment(15,
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b, """")",
+                            "b"),
+                    new SelectedFragment(22, @"for (; b;)", "b"),
+                    new SelectedFragment(23, @"while (b)", "b"),
+                    new SelectedFragment(24, @"while (b)", "b"),
+                    new SelectedFragment(25, @"if (b)", "b"),
+                    new SelectedFragment(25, @"if (b)", "b"),
+                    new SelectedFragment(35, @"Contract.Requires(true)", "true"),
+                    new SelectedFragment(36, @"Contract.Requires(true, """")", "true"),
+                    new SelectedFragment(37, @"Contract.Requires<Exception>(true)", "true"),
+                    new SelectedFragment(38, @"Contract.Requires<Exception>(true, """")", "true"),
+                    new SelectedFragment(40, @"System.Diagnostics.Contracts.Contract.Requires(true)",
+                            "true"),
+                    new SelectedFragment(41,
+                            @"System.Diagnostics.Contracts.Contract.Requires(true, """")", "true"),
+                    new SelectedFragment(42,
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true)",
+                            "true"),
+                    new SelectedFragment(43,
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """")",
+                            "true"),
+                    new SelectedFragment(45, @"for (; true;)", "true"),
+                    new SelectedFragment(46, @"while (true)", "true"),
+                    new SelectedFragment(47, @"while (true)", "true"),
+                    new SelectedFragment(48, @"if (true)", "true"),
+                    new SelectedFragment(48, @"if (true)", "true"),
                 };
             }
         }
@@ -320,19 +331,19 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return CSharpExperiment.Generator; }
         }
 
-        public override IEnumerable<string> AcceptingFragments {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    "for (; b;)",
-                    "while (b)",
-                    "while (b)",
-                    "if (b)",
-                    "if (b)",
-                    "for (; true;)",
-                    "while (true)",
-                    "while (true)",
-                    "if (true)",
-                    "if (true)",
+                    new SelectedFragment(22, @"for (; b;)", "b"),
+                    new SelectedFragment(23, @"while (b)", "b"),
+                    new SelectedFragment(24, @"while (b)", "b"),
+                    new SelectedFragment(25, @"if (b)", "b"),
+                    new SelectedFragment(25, @"if (b)", "b"),
+                    new SelectedFragment(45, @"for (; true;)", "b"),
+                    new SelectedFragment(46, @"while (true)", "b"),
+                    new SelectedFragment(47, @"while (true)", "b"),
+                    new SelectedFragment(48, @"if (true)", "b"),
+                    new SelectedFragment(48, @"if (true)", "b"),
                 };
             }
         }
@@ -362,77 +373,62 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return CSharpExperiment.Generator; }
         }
 
-        public override IEnumerable<string> AcceptingFragments {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    @"Contract.Requires(b);",
-                    @"Contract.Requires(b, """");",
-                    @"Contract.Requires<Exception>(b);",
-                    @"Contract.Requires<Exception>(b, """");",
-                    @"XXXXXXXX.Requires(b);",
-                    @"System.Diagnostics.Contracts.Contract.Requires(b);",
-                    @"System.Diagnostics.Contracts.Contract.Requires(b, """");",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b);",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b, """");",
-                    @"f(0 + 1 - 2 * 3 / 4 % 5);",
-                    @"f();",
-                    @"for (; b;) { }",
-                    @"while (b) { }",
-                    @"do { } while (b);",
-                    @"if (b) { } else if (b) { } else { }",
-                    @"if (b) { } else { }",
-                    @"switch (1) {
+                    new SelectedFragment(6, @"Contract.Requires(b);"),
+                    new SelectedFragment(@"Contract.Requires(b, """");"),
+                    new SelectedFragment(@"Contract.Requires<Exception>(b);"),
+                    new SelectedFragment(@"Contract.Requires<Exception>(b, """");"),
+                    new SelectedFragment(@"XXXXXXXX.Requires(b);"),
+                    new SelectedFragment(12, @"System.Diagnostics.Contracts.Contract.Requires(b);"),
+                    new SelectedFragment(@"System.Diagnostics.Contracts.Contract.Requires(b, """");"),
+                    new SelectedFragment(
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b);"),
+                    new SelectedFragment(
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b, """");"),
+                    new SelectedFragment(18, @"f(0 + 1 - 2 * 3 / 4 % 5);"),
+                    new SelectedFragment(20, @"f();"),
+                    new SelectedFragment(22, @"for (; b;) { }"),
+                    new SelectedFragment(@"while (b) { }"),
+                    new SelectedFragment(@"do { } while (b);"),
+                    new SelectedFragment(@"if (b) { } else if (b) { } else { }"),
+                    new SelectedFragment(25, @"if (b) { } else { }"),
+                    new SelectedFragment(27, @"switch (b) {
 				case 0:
 				case 1:
 					break;
 				default:
 					break;
-			}",
-                    @"break;",
-                    @"break;",
-                    @"Contract.Requires(true);",
-                    @"Contract.Requires(true, """");",
-                    @"Contract.Requires<Exception>(true);",
-                    @"Contract.Requires<Exception>(true, """");",
-                    @"System.Diagnostics.Contracts.Contract.Requires(true);",
-                    @"System.Diagnostics.Contracts.Contract.Requires(true, """");",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true);",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """");",
-                    @"for (; true;) { }",
-                    @"while (true) { }",
-                    @"do { } while (true);",
-                    @"if (true) { } else if (true) { } else { }",
-                    @"if (true) { } else { }",
+			}"),
+                    new SelectedFragment(30, @"break;"),
+                    new SelectedFragment(32, @"break;"),
+                    new SelectedFragment(35, @"Contract.Requires(true);"),
+                    new SelectedFragment(@"Contract.Requires(true, """");"),
+                    new SelectedFragment(@"Contract.Requires<Exception>(true);"),
+                    new SelectedFragment(@"Contract.Requires<Exception>(true, """");"),
+                    new SelectedFragment(40,
+                            @"System.Diagnostics.Contracts.Contract.Requires(true);"),
+                    new SelectedFragment(
+                            @"System.Diagnostics.Contracts.Contract.Requires(true, """");"),
+                    new SelectedFragment(
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true);"),
+                    new SelectedFragment(
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """");"),
+                    new SelectedFragment(45, @"for (; true;) { }"),
+                    new SelectedFragment(@"while (true) { }"),
+                    new SelectedFragment(@"do { } while (true);"),
+                    new SelectedFragment(@"if (true) { } else if (true) { } else { }"),
+                    new SelectedFragment(48, @"if (true) { } else { }"),
                 };
             }
         }
 
-        public override IEnumerable<string> RejectingFragments {
+        public override IEnumerable<SelectedFragment> RejectingFragments {
             get {
                 return new[] {
-                    @";", // dummy
-                    @";", // dummy
-                    @";", // dummy
-                    @";", // dummy
-                    @";", // dummy
-                    @";", // dummy
-                    @";", // dummy
-                    @";", // dummy
-                    @";", // dummy
-                    @";",
-                    @"{ f(); }",
-                    @"{ }",
-                    @"{ }",
-                    @"{ }",
-                    @"{ }",
-                    @"{ }",
-                    @"{ }",
-                    @"{ }",
-                    @"{ }",
-                    @"{ }",
-                    @"{ }",
-                    @"{ }",
-                    @"{ }",
+                    new SelectedFragment(19, @";"),
+                    new SelectedFragment(20, @"{ f(); }"),
                 };
             }
         }
@@ -458,28 +454,34 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return CSharpExperiment.Generator; }
         }
 
-        public override IEnumerable<string> AcceptingFragments {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    @"Contract.Requires(b);",
-                    @"Contract.Requires(b, """");",
-                    @"Contract.Requires<Exception>(b);",
-                    @"Contract.Requires<Exception>(b, """");",
-                    @"XXXXXXXX.Requires(b);",
-                    @"System.Diagnostics.Contracts.Contract.Requires(b);",
-                    @"System.Diagnostics.Contracts.Contract.Requires(b, """");",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b);",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b, """");",
-                    @"f(0 + 1 - 2 * 3 / 4 % 5);",
-                    @"f();",
-                    @"Contract.Requires(true);",
-                    @"Contract.Requires(true, """");",
-                    @"Contract.Requires<Exception>(true);",
-                    @"Contract.Requires<Exception>(true, """");",
-                    @"System.Diagnostics.Contracts.Contract.Requires(true);",
-                    @"System.Diagnostics.Contracts.Contract.Requires(true, """");",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true);",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """");",
+                    new SelectedFragment(6, @"Contract.Requires(b);"),
+                    new SelectedFragment(@"Contract.Requires(b, """");"),
+                    new SelectedFragment(@"Contract.Requires<Exception>(b);"),
+                    new SelectedFragment(@"Contract.Requires<Exception>(b, """");"),
+                    new SelectedFragment(@"XXXXXXXX.Requires(b);"),
+                    new SelectedFragment(12, @"System.Diagnostics.Contracts.Contract.Requires(b);"),
+                    new SelectedFragment(@"System.Diagnostics.Contracts.Contract.Requires(b, """");"),
+                    new SelectedFragment(
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b);"),
+                    new SelectedFragment(
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b, """");"),
+                    new SelectedFragment(18, @"f(0 + 1 - 2 * 3 / 4 % 5);"),
+                    new SelectedFragment(20, @"f();"),
+                    new SelectedFragment(35, @"Contract.Requires(true);"),
+                    new SelectedFragment(@"Contract.Requires(true, """");"),
+                    new SelectedFragment(@"Contract.Requires<Exception>(true);"),
+                    new SelectedFragment(@"Contract.Requires<Exception>(true, """");"),
+                    new SelectedFragment(40,
+                            @"System.Diagnostics.Contracts.Contract.Requires(true);"),
+                    new SelectedFragment(
+                            @"System.Diagnostics.Contracts.Contract.Requires(true, """");"),
+                    new SelectedFragment(
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true);"),
+                    new SelectedFragment(
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """");"),
                 };
             }
         }
@@ -502,13 +504,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return CSharpExperiment.Generator; }
         }
 
-        public override IEnumerable<string> AcceptingFragments {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    @"0 + 1",
-                    @"1 - 2",
-                    @"2 * 3",
-                    @"3 / 4",
+                    new SelectedFragment(18, @"0 + 1", @"+"),
+                    new SelectedFragment(18, @"1 - 2", @"-"),
+                    new SelectedFragment(18, @"2 * 3", @"*"),
+                    new SelectedFragment(18, @"3 / 4", @"/"),
                 };
             }
         }
@@ -528,13 +530,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return CSharpExperiment.Generator; }
         }
 
-        public override IEnumerable<string> AcceptingFragments {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    @"switch (1)",
-                    @"case 0:",
-                    @"case 1:",
-                    @"default:",
+                    new SelectedFragment(27, @"switch (b)", @"b"),
+                    new SelectedFragment(28, @"case 0:"),
+                    new SelectedFragment(29, @"case 1:"),
+                    new SelectedFragment(31, @"default:"),
                 };
             }
         }
@@ -558,39 +560,50 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return CSharpExperiment.Generator; }
         }
 
-        public override IEnumerable<string> AcceptingFragments {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    @"Contract.Requires(b)",
-                    @"Contract.Requires(b, """")",
-                    @"Contract.Requires<Exception>(b)",
-                    @"Contract.Requires<Exception>(b, """")",
-                    @"System.Diagnostics.Contracts.Contract.Requires(b)",
-                    @"System.Diagnostics.Contracts.Contract.Requires(b, """")",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b)",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b, """")",
-                    "for (; b;)",
-                    "while (b)",
-                    "while (b)",
-                    "if (b)",
-                    "if (b)",
-                    @"switch (1)",
-                    @"case 0:",
-                    @"case 1:",
-                    @"default:",
-                    @"Contract.Requires(true)",
-                    @"Contract.Requires(true, """")",
-                    @"Contract.Requires<Exception>(true)",
-                    @"Contract.Requires<Exception>(true, """")",
-                    @"System.Diagnostics.Contracts.Contract.Requires(true)",
-                    @"System.Diagnostics.Contracts.Contract.Requires(true, """")",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true)",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """")",
-                    "for (; true;)",
-                    "while (true)",
-                    "while (true)",
-                    "if (true)",
-                    "if (true)",
+                    new SelectedFragment(6, @"Contract.Requires(b)", "b"),
+                    new SelectedFragment(7, @"Contract.Requires(b, """")", "b"),
+                    new SelectedFragment(8, @"Contract.Requires<Exception>(b)", "b"),
+                    new SelectedFragment(9, @"Contract.Requires<Exception>(b, """")", "b"),
+                    new SelectedFragment(12, @"System.Diagnostics.Contracts.Contract.Requires(b)",
+                            "b"),
+                    new SelectedFragment(13,
+                            @"System.Diagnostics.Contracts.Contract.Requires(b, """")", "b"),
+                    new SelectedFragment(14,
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b)", "b"),
+                    new SelectedFragment(15,
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b, """")",
+                            "b"),
+                    new SelectedFragment(22, @"for (; b;)", "b"),
+                    new SelectedFragment(23, @"while (b)", "b"),
+                    new SelectedFragment(24, @"while (b)", "b"),
+                    new SelectedFragment(25, @"if (b)", "b"),
+                    new SelectedFragment(25, @"if (b)", "b"),
+                    new SelectedFragment(27, @"switch (b)", @"b"),
+                    new SelectedFragment(28, @"case 0:"),
+                    new SelectedFragment(29, @"case 1:"),
+                    new SelectedFragment(31, @"default:"),
+                    new SelectedFragment(35, @"Contract.Requires(true)", "true"),
+                    new SelectedFragment(36, @"Contract.Requires(true, """")", "true"),
+                    new SelectedFragment(37, @"Contract.Requires<Exception>(true)", "true"),
+                    new SelectedFragment(38, @"Contract.Requires<Exception>(true, """")", "true"),
+                    new SelectedFragment(40, @"System.Diagnostics.Contracts.Contract.Requires(true)",
+                            "true"),
+                    new SelectedFragment(41,
+                            @"System.Diagnostics.Contracts.Contract.Requires(true, """")", "true"),
+                    new SelectedFragment(42,
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true)",
+                            "true"),
+                    new SelectedFragment(43,
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """")",
+                            "true"),
+                    new SelectedFragment(45, @"for (; true;)", "true"),
+                    new SelectedFragment(46, @"while (true)", "true"),
+                    new SelectedFragment(47, @"while (true)", "true"),
+                    new SelectedFragment(48, @"if (true)", "true"),
+                    new SelectedFragment(48, @"if (true)", "true"),
                 };
             }
         }
@@ -651,48 +664,59 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get { return CSharpExperiment.Generator; }
         }
 
-        public override IEnumerable<string> AcceptingFragments {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    @"Contract.Requires(b)",
-                    @"Contract.Requires(b, """")",
-                    @"Contract.Requires<Exception>(b)",
-                    @"Contract.Requires<Exception>(b, """")",
-                    @"System.Diagnostics.Contracts.Contract.Requires(b)",
-                    @"System.Diagnostics.Contracts.Contract.Requires(b, """")",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b)",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b, """")",
-                    "for (; b;)",
-                    "while (b)",
-                    "while (b)",
-                    "if (b)",
-                    "if (b)",
-                    @"switch (1)",
-                    @"case 0:",
-                    @"case 1:",
-                    @"default:",
+                    new SelectedFragment(6, @"Contract.Requires(b)", "b"),
+                    new SelectedFragment(7, @"Contract.Requires(b, """")", "b"),
+                    new SelectedFragment(8, @"Contract.Requires<Exception>(b)", "b"),
+                    new SelectedFragment(9, @"Contract.Requires<Exception>(b, """")", "b"),
+                    new SelectedFragment(12, @"System.Diagnostics.Contracts.Contract.Requires(b)",
+                            "b"),
+                    new SelectedFragment(13,
+                            @"System.Diagnostics.Contracts.Contract.Requires(b, """")", "b"),
+                    new SelectedFragment(14,
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b)", "b"),
+                    new SelectedFragment(15,
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(b, """")",
+                            "b"),
+                    new SelectedFragment(22, @"for (; b;)", "b"),
+                    new SelectedFragment(23, @"while (b)", "b"),
+                    new SelectedFragment(24, @"while (b)", "b"),
+                    new SelectedFragment(25, @"if (b)", "b"),
+                    new SelectedFragment(25, @"if (b)", "b"),
+                    new SelectedFragment(27, @"switch (b)", @"b"),
+                    new SelectedFragment(28, @"case 0:"),
+                    new SelectedFragment(29, @"case 1:"),
+                    new SelectedFragment(31, @"default:"),
                 };
             }
         }
 
-        public override IEnumerable<string> RejectingFragments {
-	        get {
-	            return new[] {
-                    @"Contract.Requires(true)",
-                    @"Contract.Requires(true, """")",
-                    @"Contract.Requires<Exception>(true)",
-                    @"Contract.Requires<Exception>(true, """")",
-                    @"System.Diagnostics.Contracts.Contract.Requires(true)",
-                    @"System.Diagnostics.Contracts.Contract.Requires(true, """")",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true)",
-                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """")",
-                    "for (; true;)",
-                    "while (true)",
-                    "while (true)",
-                    "if (true)",
-                    "if (true)",
-	            };
-	        }
+        public override IEnumerable<SelectedFragment> RejectingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(35, @"Contract.Requires(true)", "true"),
+                    new SelectedFragment(36, @"Contract.Requires(true, """")", "true"),
+                    new SelectedFragment(37, @"Contract.Requires<Exception>(true)", "true"),
+                    new SelectedFragment(38, @"Contract.Requires<Exception>(true, """")", "true"),
+                    new SelectedFragment(40, @"System.Diagnostics.Contracts.Contract.Requires(true)",
+                            "true"),
+                    new SelectedFragment(41,
+                            @"System.Diagnostics.Contracts.Contract.Requires(true, """")", "true"),
+                    new SelectedFragment(42,
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true)",
+                            "true"),
+                    new SelectedFragment(43,
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """")",
+                            "true"),
+                    new SelectedFragment(45, @"for (; true;)", "true"),
+                    new SelectedFragment(46, @"while (true)", "true"),
+                    new SelectedFragment(47, @"while (true)", "true"),
+                    new SelectedFragment(48, @"if (true)", "true"),
+                    new SelectedFragment(48, @"if (true)", "true"),
+                };
+            }
         }
 
         public CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue()
