@@ -81,12 +81,14 @@ namespace Code2Xml.Learner.Core.Learning {
             var acceptingFragments = AcceptingFragments.ToList();
             var rejectingFragments = RejectingFragments.ToList();
 
+            SelectedFragment.Initialize();
             for (int i = 0; i < acceptingFragments.Count; i++) {
                 acceptingFragments[i].Update(structuredCode, seedCst);
                 if (acceptingFragments[i].Node != seedNodes[i].AncestorWithSingleChild()) {
                     throw new Exception("The selected node should be the node selected by the oracle.");
                 }
             }
+            SelectedFragment.Initialize();
             foreach (var fragment in rejectingFragments) {
                 fragment.Update(structuredCode, seedCst);
             }
