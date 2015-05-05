@@ -54,7 +54,7 @@ namespace Code2Xml.Learner.Core.Learning {
         }
 
         private IEnumerable<string> CreateRejectingFeatures(
-                IEnumerable<CstNode> rejectedNodes, FeatureExtractor extractor, ICollection<SelectedFragment> fragments) {
+                ICollection<CstNode> rejectedNodes, FeatureExtractor extractor, ICollection<SelectedFragment> fragments) {
             var rejectingFeatureSet = rejectedNodes
                     .GetUnionKeys(fragments, extractor)
                     .ToHashSet();
@@ -65,7 +65,7 @@ namespace Code2Xml.Learner.Core.Learning {
         }
 
         private static IEnumerable<string> CreateAcceptingFeatures(
-                IEnumerable<CstNode> acceptedNodes, FeatureExtractor extractor, ICollection<SelectedFragment> fragments) {
+                ICollection<CstNode> acceptedNodes, FeatureExtractor extractor, ICollection<SelectedFragment> fragments) {
             var acceptingFeatures = acceptedNodes
                     .GetUnionKeys(fragments, extractor)
                     .Distinct()
