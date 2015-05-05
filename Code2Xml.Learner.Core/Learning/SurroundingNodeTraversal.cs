@@ -118,6 +118,9 @@ namespace Code2Xml.Learner.Core.Learning {
                             prefix = "'+";
                             continue;
                         }
+                        if (!IsMeaningfulIdentifier(tokenNode)) {
+                            continue;
+                        }
                         paths.Add(prefix + extractor.GetToken(tokenNode));
                         //paths.Add(prefix + tokenNode.Name + tokenNode.RuleId + extractor.GetToken(tokenNode));
                     }
@@ -202,6 +205,9 @@ namespace Code2Xml.Learner.Core.Learning {
                     foreach (var tokenNode in outermostNode.AllTokenNodes()) {
                         if (myTokenNodes.Contains(tokenNode)) {
                             prefix = "'+";
+                            continue;
+                        }
+                        if (!IsMeaningfulIdentifier(tokenNode)) {
                             continue;
                         }
                         if (featureString2Bit.TryGetValue(
