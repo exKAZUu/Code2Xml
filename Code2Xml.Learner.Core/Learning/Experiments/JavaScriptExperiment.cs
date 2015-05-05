@@ -270,11 +270,11 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(@"} while (a, b)", "a, b"),
                     new SelectedFragment(@"if (a, b) {", "a, b"),
                     new SelectedFragment(11, @"if (a, b) {", "a, b"),
-                    new SelectedFragment(13, @"for (; true;)", "b"),
-                    new SelectedFragment(@"while (true) {", "b"),
-                    new SelectedFragment(@"} while (true)", "b"),
-                    new SelectedFragment(@"if (true) {", "b"),
-                    new SelectedFragment(16, @"if (true) {", "b"),
+                    new SelectedFragment(13, @"for (; true;)", "true"),
+                    new SelectedFragment(@"while (true) {", "true"),
+                    new SelectedFragment(@"} while (true)", "true"),
+                    new SelectedFragment(@"if (true) {", "true"),
+                    new SelectedFragment(16, @"if (true) {", "true"),
                 };
             }
         }
@@ -326,11 +326,11 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(@"} while (a, b)", "a, b"),
                     new SelectedFragment(@"if (a, b) {", "a, b"),
                     new SelectedFragment(11, @"if (a, b) {", "a, b"),
-                    new SelectedFragment(13, @"for (; true;)", "b"),
-                    new SelectedFragment(@"while (true) {", "b"),
-                    new SelectedFragment(@"} while (true)", "b"),
-                    new SelectedFragment(@"if (true) {", "b"),
-                    new SelectedFragment(16, @"if (true) {", "b"),
+                    new SelectedFragment(13, @"for (; true;)", "true"),
+                    new SelectedFragment(@"while (true) {", "true"),
+                    new SelectedFragment(@"} while (true)", "true"),
+                    new SelectedFragment(@"if (true) {", "true"),
+                    new SelectedFragment(16, @"if (true) {", "true"),
                 };
             }
         }
@@ -610,11 +610,11 @@ f(0 + 1 - 2 * 3 / 4 % 5);"),
                     new SelectedFragment(@"} while (a, b)", "a, b"),
                     new SelectedFragment(@"if (a, b) {", "a, b"),
                     new SelectedFragment(11, @"if (a, b) {", "a, b"),
-                    new SelectedFragment(13, @"for (; true;)", "b"),
-                    new SelectedFragment(@"while (true) {", "b"),
-                    new SelectedFragment(@"} while (true)", "b"),
-                    new SelectedFragment(@"if (true) {", "b"),
-                    new SelectedFragment(16, @"if (true) {", "b"),
+                    new SelectedFragment(13, @"for (; true;)", "true"),
+                    new SelectedFragment(@"while (true) {", "true"),
+                    new SelectedFragment(@"} while (true)", "true"),
+                    new SelectedFragment(@"if (true) {", "true"),
+                    new SelectedFragment(16, @"if (true) {", "true"),
                     new SelectedFragment(25, @"switch (b)", @"b"),
                     new SelectedFragment(26, @"case 0:"),
                     new SelectedFragment(28, @"default:"),
@@ -689,11 +689,11 @@ f(0 + 1 - 2 * 3 / 4 % 5);"),
             get
             {
                 return new[] {
-                    new SelectedFragment(13, @"for (; true;)", "b"),
-                    new SelectedFragment(@"while (true) {", "b"),
-                    new SelectedFragment(@"} while (true)", "b"),
-                    new SelectedFragment(@"if (true) {", "b"),
-                    new SelectedFragment(16, @"if (true) {", "b"),
+                    new SelectedFragment(13, @"for (; true;)", "true"),
+                    new SelectedFragment(@"while (true) {", "true"),
+                    new SelectedFragment(@"} while (true)", "true"),
+                    new SelectedFragment(@"if (true) {", "true"),
+                    new SelectedFragment(16, @"if (true) {", "true"),
                 };
             }
         }
