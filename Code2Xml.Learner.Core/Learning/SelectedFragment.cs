@@ -13,7 +13,7 @@ namespace Code2Xml.Learner.Core.Learning {
         public int StartLine { get; set; }
 
         private static int _lastStartLine;
-        private static int _lastIndex;
+        private static int _lastIndex = -1;
 
         public void Update(StructuredCode structuredCode, CstNode cst) {
             var startLineIndex = structuredCode.GetIndex(StartLine, 0);
