@@ -20,81 +20,85 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-using Code2Xml.Core.Location;
 using Code2Xml.Core.SyntaxTree;
 using Code2Xml.Learner.Core.Learning;
 
 namespace Code2Xml.Learner.Core {
-	public class SeedNodeSet {
-		public ISet<string> SelectedNodeNames { get; private set; }
-		public ISet<CstNode> AcceptedNodes { get; private set; }
-		public IList<CstNode> RejectedNodes { get; private set; }
+    public class SeedNodeSet {
+        public ISet<string> SelectedNodeNames { get; private set; }
+        public ISet<CstNode> AcceptedNodes { get; private set; }
+        public IList<CstNode> RejectedNodes { get; private set; }
 
-		public SeedNodeSet(
-				IEnumerable<CstNode> seedNodes, IList<CstNode> seedCsts, LearningExperiment oracle) {
-			var uppermostSeedAcceptedNodes = SelectUppermostNodes(seedNodes)
-					.ToImmutableHashSet();
-			SelectedNodeNames = SelectNodeNames(uppermostSeedAcceptedNodes)
-					.ToImmutableHashSet();
+        public SeedNodeSet(
+                IEnumerable<CstNode> seedNodes, IList<CstNode> seedCsts, LearningExperiment oracle) {
+            var uppermostSeedAcceptedNodes = seedNodes
+                    .Select(node => node.AncestorWithSingleChild())
+                    .ToImmutableHashSet();
+            SelectedNodeNames = SelectNodeNames(uppermostSeedAcceptedNodes)
+                    .ToImmutableHashSet();
 
-			AcceptedNodes = CreateAcceptedNodes(uppermostSeedAcceptedNodes)
-					.ToImmutableHashSet();
-			if (!AcceptedNodes.Any()) {
-				throw new Exception("There are no accepted seed nodes!");
-			}
-			VerifySeedAcceptedNodes(seedCsts, uppermostSeedAcceptedNodes, oracle);
+            AcceptedNodes = CreateAcceptedNodes(uppermostSeedAcceptedNodes)
+                    .ToImmutableHashSet();
+            if (!AcceptedNodes.Any()) {
+                throw new Exception("There are no accepted seed nodes!");
+            }
+            VerifySeedAcceptedNodes(seedCsts, uppermostSeedAcceptedNodes, oracle);
 
-			RejectedNodes = CreateRejectedNodes(seedCsts, AcceptedNodes)
-					.ToImmutableList();
-		}
+            RejectedNodes = CreateRejectedNodes(seedCsts, AcceptedNodes)
+                    .ToImmutableList();
+        }
 
-		private static IEnumerable<string> SelectNodeNames(
-				ICollection<CstNode> uppermostSeedAcceptedNodes) {
-			return LearningExperimentUtil.FindGoodNodeNames(uppermostSeedAcceptedNodes);
-		}
+        private static IEnumerable<string> SelectNodeNames(
+                ICollection<CstNode> uppermostSeedAcceptedNodes) {
+            return LearningExperimentUtil.FindGoodNodeNames(uppermostSeedAcceptedNodes);
+        }
 
-		private static IEnumerable<CstNode> SelectUppermostNodes(IEnumerable<CstNode> elements) {
-			return elements.Select(e => e.AncestorsWithSingleChildAndSelf().Last());
-		}
+        private IEnumerable<CstNode> CreateRejectedNodes(
+                IEnumerable<CstNode> csts, ICollection<CstNode> acceptedNodes) {
+            var uppermostNodes = csts
+                    .SelectMany(
+                            cst =>
+                                    LearningExperimentUtil.GetUppermostNodesByNames(cst,
+                                            SelectedNodeNames));
+            return uppermostNodes.Where(node => !acceptedNodes.Contains(node));
+        }
 
-		private IEnumerable<CstNode> CreateRejectedNodes(
-				IEnumerable<CstNode> csts, ICollection<CstNode> acceptedNodes) {
-			var uppermostNodes = csts
-					.SelectMany(cst => LearningExperimentUtil.GetUppermostNodesByNames(cst, SelectedNodeNames));
-			return uppermostNodes.Where(node => !acceptedNodes.Contains(node));
-		}
+        private IEnumerable<CstNode> CreateAcceptedNodes(
+                IEnumerable<CstNode> uppermostAcceptedNodes) {
+            return uppermostAcceptedNodes
+                    .Select(
+                            e => e.DescendantsOfSingleAndSelf()
+                                    .First(e2 => SelectedNodeNames.Contains(e2.Name)));
+        }
 
-		private IEnumerable<CstNode> CreateAcceptedNodes(IEnumerable<CstNode> uppermostAcceptedNodes) {
-			return uppermostAcceptedNodes
-					.Select(
-							e => e.DescendantsOfSingleAndSelf()
-									.First(e2 => SelectedNodeNames.Contains(e2.Name)));
-		}
-
-		private void VerifySeedAcceptedNodes(
-				IEnumerable<CstNode> seedCsts, ICollection<CstNode> uppermostSeedAcceptedNodes,
-				LearningExperiment oracle) {
-			var anotherUppermostSeedAcceptedNodes = seedCsts
-					.SelectMany(cst => LearningExperimentUtil.GetUppermostNodesByNames(cst, SelectedNodeNames))
-					.Where(oracle.ProtectedIsAcceptedUsingOracle)
-					.ToList();
-			var b1 = !uppermostSeedAcceptedNodes.All(oracle.IsAcceptedUsingOracle);
-			var b2 = SelectUppermostNodes(anotherUppermostSeedAcceptedNodes)
-					.Any(e => !uppermostSeedAcceptedNodes.Contains(e));
-			var b3 = uppermostSeedAcceptedNodes.Count != anotherUppermostSeedAcceptedNodes.Count;
-			Console.WriteLine("Initial: " + String.Join(", ", oracle.OracleNames));
-			Console.WriteLine("Learned: " + String.Join(", ", SelectedNodeNames));
-			if (b1 || b2 || b3) {
-				Console.WriteLine("--------------------------------------------------");
-				foreach (var e in uppermostSeedAcceptedNodes) {
-					Console.WriteLine(e);
-				}
-				Console.WriteLine("--------------------------------------------------");
-				foreach (var e in anotherUppermostSeedAcceptedNodes) {
-					Console.WriteLine(e);
-				}
-				throw new Exception("Wrong Oracle.");
-			}
-		}
-	}
+        private void VerifySeedAcceptedNodes(
+                IEnumerable<CstNode> seedCsts, ICollection<CstNode> uppermostSeedAcceptedNodes,
+                LearningExperiment oracle) {
+            var anotherUppermostSeedAcceptedNodes = seedCsts
+                    .SelectMany(
+                            cst =>
+                                    LearningExperimentUtil.GetUppermostNodesByNames(cst,
+                                            SelectedNodeNames))
+                    .Where(oracle.ProtectedIsAcceptedUsingOracle)
+                    .ToList();
+            var b1 = !uppermostSeedAcceptedNodes.All(oracle.IsAcceptedUsingOracle);
+            var b2 = anotherUppermostSeedAcceptedNodes
+                    .Select(node => node.AncestorWithSingleChild())
+                    .Any(e => !uppermostSeedAcceptedNodes.Contains(e));
+            var b3 = uppermostSeedAcceptedNodes.Count != anotherUppermostSeedAcceptedNodes.Count;
+            Console.WriteLine("Initial: " + String.Join(", ", oracle.OracleNames));
+            Console.WriteLine("Learned: " + String.Join(", ", SelectedNodeNames));
+            if (b1 || b2 || b3) {
+                Console.WriteLine("--------------------------------------------------");
+                foreach (var e in uppermostSeedAcceptedNodes) {
+                    Console.WriteLine(e);
+                }
+                Console.WriteLine("--------------------------------------------------");
+                foreach (var e in anotherUppermostSeedAcceptedNodes) {
+                    Console.WriteLine(e);
+                }
+                throw new Exception("Wrong Oracle.");
+            }
+        }
+    }
 }

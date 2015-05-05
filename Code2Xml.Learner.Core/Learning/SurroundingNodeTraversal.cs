@@ -20,14 +20,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
-using Code2Xml.Core.Location;
 using Code2Xml.Core.SyntaxTree;
 using Paraiba.Linq;
 
 namespace Code2Xml.Learner.Core.Learning {
     public static class SurroundingNodeTraversal {
-        private const int BrotherCount = 7;
-        private const int IdentifierCount = 4;
+        private const int ChildrenCount = 7;
 
         public static double[] BigIntegerToDoubles(this BigInteger i, int bitLength) {
             var doubles = new List<double>();
@@ -56,23 +54,25 @@ namespace Code2Xml.Learner.Core.Learning {
         }
 
         public static HashSet<string> GetUnionKeys(
-                this IEnumerable<CstNode> targets, List<CodeRange> rangeList,
+                this IEnumerable<CstNode> nodes, ICollection<SelectedFragment> fragments,
                 FeatureExtractor extractor) {
             var commonKeys = new HashSet<string>();
             var usedRangeCount = 0;
-            foreach (var target in targets.OrderBy(t => CodeRange.Locate(t).StartLocation)) {
-                var index = rangeList.FindIndex(range => range.Overlaps(target));
-                if (index < 0) {
-                    continue;
+            foreach (var node in nodes) {
+                var fragment = fragments
+                        .FirstOrDefault(f => node.AncestorWithSingleChild() == f.Node);
+                IEnumerable<CstNode> surroundingNodes;
+                if (fragment != null) {
+                    surroundingNodes = fragment.SurroundingRange
+                            .FindOverlappedNodes(node.AncestorsAndSelf().Last());
+                    usedRangeCount++;
+                } else {
+                    surroundingNodes = node.DescendantsAndSelf();
                 }
-                var surroundingNodes = rangeList[index]
-                        .FindOverlappedNodes(target.AncestorsAndSelf().Last())
-                        .ToHashSet();
-                var keys = target
-                        .GetSurroundingPathsFilteringBySurroundingNodes(surroundingNodes, extractor);
+                var keys = node
+                        .GetSurroundingPathsFilteringBySurroundingNodes(
+                                surroundingNodes.ToHashSet(), extractor);
                 commonKeys.UnionWith(keys);
-                rangeList[index] = CodeRange.Nil;
-                usedRangeCount++;
             }
             Console.WriteLine("#Used Ranges: " + usedRangeCount);
             return commonKeys;
@@ -80,12 +80,14 @@ namespace Code2Xml.Learner.Core.Learning {
 
         private static bool IsTemporalVariable(CstNode node) {
             var tokenText = node.TokenText;
-            return tokenText.Length == 1 && char.IsLetter(tokenText[0]);
+            return (tokenText.Length == 1 || (tokenText.StartsWith("$") && tokenText.Length == 2))
+                   && char.IsLetter(tokenText[0]);
         }
 
         private static bool IsMeaningfulIdentifier(CstNode node) {
             var tokenText = node.TokenText;
-            return tokenText.Length > 1 && char.IsLetter(tokenText[0]);
+            return !(tokenText.Length <= 1 || (tokenText.StartsWith("$") && tokenText.Length == 2))
+                   && char.IsLetter(tokenText[0]);
         }
 
         public static HashSet<string> GetSurroundingPathsFilteringBySurroundingNodes(
@@ -96,43 +98,64 @@ namespace Code2Xml.Learner.Core.Learning {
             // 自分自身の位置による区別も考慮する
             paths.Add(node.Name);
             paths.Add("'" + extractor.GetToken(node));
-            node.PreviousTokenNodes().Where(IsMeaningfulIdentifier).Take(IdentifierCount)
-                    .ForEach(tokenNode => paths.Add("'-" + extractor.GetToken(tokenNode)));
-            node.NextTokenNodes().Where(IsMeaningfulIdentifier).Take(IdentifierCount)
-                    .ForEach(tokenNode => paths.Add("'+" + extractor.GetToken(tokenNode)));
 
             var ancestor = node.Ancestors().FirstOrDefault(a => a.Children().Count() > 1);
             if (surroundingNodes.Contains(ancestor)) {
                 paths.Add(node.Name + node.RuleId);
                 extractor.IsInner = false;
 
+                var index = 0;
+                foreach (var tokenNode in node.PreviousTokenNodes().Where(IsMeaningfulIdentifier)) {
+                    if (!surroundingNodes.Contains(tokenNode)) {
+                        break;
+                    }
+                    paths.Add("'-" + extractor.GetToken(tokenNode));
+                    index++;
+                }
+                extractor.TokenLeft = Math.Max(extractor.TokenLeft, index);
+                index = 0;
+                foreach (var tokenNode in node.NextTokenNodes().Where(IsMeaningfulIdentifier)) {
+                    if (!surroundingNodes.Contains(tokenNode)) {
+                        break;
+                    }
+                    paths.Add("'+" + extractor.GetToken(tokenNode));
+                    index++;
+                }
+                extractor.TokenRight = Math.Max(extractor.TokenRight, index);
+
                 var parent = Tuple.Create(node, "");
                 while (surroundingNodes.Contains(parent.Item1.Parent)) {
                     var newParent = parent.Item1.Parent;
                     var parentPathUnit = parent.Item2 + "<" + newParent.Name + newParent.RuleId;
                     paths.Add(parentPathUnit);
-                    parent.Item1.PrevsFromSelf().Take(BrotherCount)
-                            .ForEach((child, index) => {
-                                if (surroundingNodes.Contains(child)) {
-                                    var key = parentPathUnit + '-' + index +
-                                              ">" + child.Name + child.RuleId;
-                                    children.Add(Tuple.Create(child, key));
-                                    // for Preconditions.checkArguments()
-                                    paths.Add(parentPathUnit + '-' + index + ">'"
-                                              + extractor.GetToken(child));
-                                }
-                            });
-                    parent.Item1.NextsFromSelf().Take(BrotherCount)
-                            .ForEach((child, index) => {
-                                if (surroundingNodes.Contains(child)) {
-                                    var key = parentPathUnit + '+' + index +
-                                              ">" + child.Name + child.RuleId;
-                                    children.Add(Tuple.Create(child, key));
-                                    // for Preconditions.checkArguments()
-                                    paths.Add(parentPathUnit + '+' + index +
-                                              ">'" + extractor.GetToken(child));
-                                }
-                            });
+                    index = 0;
+                    foreach (var child in parent.Item1.PrevsFromSelf()) {
+                        if (!surroundingNodes.Contains(child)) {
+                            break;
+                        }
+                        var key = parentPathUnit + '-' + index +
+                                  ">" + child.Name + child.RuleId;
+                        children.Add(Tuple.Create(child, key));
+                        // for Preconditions.checkArguments()
+                        paths.Add(parentPathUnit + '-' + index + ">'"
+                                  + extractor.GetToken(child));
+                        index++;
+                    }
+                    extractor.BrotherLeft = Math.Max(extractor.BrotherLeft, index);
+                    index = 0;
+                    foreach (var child in parent.Item1.PrevsFromSelf()) {
+                        if (!surroundingNodes.Contains(child)) {
+                            break;
+                        }
+                        var key = parentPathUnit + '-' + index +
+                                  ">" + child.Name + child.RuleId;
+                        children.Add(Tuple.Create(child, key));
+                        // for Preconditions.checkArguments()
+                        paths.Add(parentPathUnit + '-' + index + ">'"
+                                  + extractor.GetToken(child));
+                        index++;
+                    }
+                    extractor.BrotherRight = Math.Max(extractor.BrotherRight, index);
                     parent = Tuple.Create(newParent, parentPathUnit);
                 }
             }
@@ -152,7 +175,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 }
                 paths.UnionWith(newChildren.Select(t => t.Item2));
                 children = newChildren;
-            } while (children.Any() && ++count <= 7);
+            } while (children.Any() && ++count <= ChildrenCount);
             return paths;
         }
 
@@ -170,26 +193,28 @@ namespace Code2Xml.Learner.Core.Learning {
             if (featureString2Bit.TryGetValue("'" + extractor.GetToken(node), out bit)) {
                 ret |= bit;
             }
-            node.PreviousTokenNodes().Where(IsMeaningfulIdentifier).Take(IdentifierCount)
-                    .ForEach(
-                            tokenNode => {
-                                if (featureString2Bit.TryGetValue(
-                                        "'-" + extractor.GetToken(tokenNode), out bit)) {
-                                    ret |= bit;
-                                }
-                            });
-            node.NextTokenNodes().Where(IsMeaningfulIdentifier).Take(IdentifierCount)
-                    .ForEach(
-                            tokenNode => {
-                                if (featureString2Bit.TryGetValue(
-                                        "'+" + extractor.GetToken(tokenNode), out bit)) {
-                                    ret |= bit;
-                                }
-                            });
             if (!extractor.IsInner) {
                 if (featureString2Bit.TryGetValue(node.Name + node.RuleId, out bit)) {
                     ret |= bit;
                 }
+
+                node.PreviousTokenNodes().Where(IsMeaningfulIdentifier).Take(extractor.TokenLeft)
+                        .ForEach(
+                                tokenNode => {
+                                    if (featureString2Bit.TryGetValue(
+                                            "'-" + extractor.GetToken(tokenNode), out bit)) {
+                                        ret |= bit;
+                                    }
+                                });
+                node.NextTokenNodes().Where(IsMeaningfulIdentifier).Take(extractor.TokenRight)
+                        .ForEach(
+                                tokenNode => {
+                                    if (featureString2Bit.TryGetValue(
+                                            "'+" + extractor.GetToken(tokenNode), out bit)) {
+                                        ret |= bit;
+                                    }
+                                });
+
                 var parent = Tuple.Create(node, "");
                 while (parent.Item1.Parent != null) {
                     var newParent = parent.Item1.Parent;
@@ -198,7 +223,7 @@ namespace Code2Xml.Learner.Core.Learning {
                         break;
                     }
                     ret |= bit;
-                    parent.Item1.PrevsFromSelf().Take(BrotherCount)
+                    parent.Item1.PrevsFromSelf().Take(extractor.BrotherLeft)
                             .ForEach((child, index) => {
                                 var key = parentPathUnit + '-' + index +
                                           ">" + child.Name + child.RuleId;
@@ -213,7 +238,7 @@ namespace Code2Xml.Learner.Core.Learning {
                                     ret |= bit;
                                 }
                             });
-                    parent.Item1.NextsFromSelf().Take(BrotherCount)
+                    parent.Item1.NextsFromSelf().Take(extractor.BrotherRight)
                             .ForEach((child, index) => {
                                 var key = parentPathUnit + '+' + index +
                                           ">" + child.Name + child.RuleId;

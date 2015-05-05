@@ -74,30 +74,32 @@ namespace Code2Xml.Learner.Core.Learning {
                     .Where(ProtectedIsAcceptedUsingOracle)
                     .ToList();
 
-            var preparingTime = Environment.TickCount;
-            var extractor = CreateExtractor();
-            var seedNodeSet = new SeedNodeSet(seedNodes, seedCsts, this);
-            Console.WriteLine("#Accepted seed nodes: " + seedNodeSet.AcceptedNodes.Count
-                              + " (" + AcceptingFragments.Count() + ")");
-            Console.WriteLine("#Rejected seed nodes: " + seedNodeSet.RejectedNodes.Count
-                              + " (" + RejectingFragments.Count() + ")");
-
             var seedCst = seedCsts.First();
             var seedCode = seedCst.Code;
             var structuredCode = new StructuredCode(seedCode);
 
-            var index = -1;
-            var acceptingRanges = AcceptingFragments.Select(f => {
-                index = seedCode.IndexOf(f, index + 1);
-                return structuredCode.GetRange(index, index + f.Length);
-            }).ToList();
-            index = -1;
-            var rejectingRanges = RejectingFragments.Select(f => {
-                index = seedCode.IndexOf(f, index + 1);
-                return structuredCode.GetRange(index, index + f.Length);
-            }).ToList();
+            var acceptingFragments = AcceptingFragments.ToList();
+            var rejectingFragments = RejectingFragments.ToList();
 
-            var featureSet = new FeatuerSet(seedNodeSet, extractor, acceptingRanges, rejectingRanges);
+            for (int i = 0; i < acceptingFragments.Count; i++) {
+                acceptingFragments[i].Update(structuredCode, seedCst);
+                if (acceptingFragments[i].Node != seedNodes[i].AncestorWithSingleChild()) {
+                    throw new Exception("The selected node should be the node selected by the oracle.");
+                }
+            }
+            foreach (var fragment in rejectingFragments) {
+                fragment.Update(structuredCode, seedCst);
+            }
+
+            var preparingTime = Environment.TickCount;
+            var extractor = CreateExtractor();
+            var seedNodeSet = new SeedNodeSet(acceptingFragments.Select(f => f.Node), seedCsts, this);
+            Console.WriteLine("#Accepted seed nodes: " + seedNodeSet.AcceptedNodes.Count
+                              + " (" + acceptingFragments.Count() + ")");
+            Console.WriteLine("#Rejected seed nodes: " + seedNodeSet.RejectedNodes.Count
+                              + " (" + rejectingFragments.Count() + ")");
+
+            var featureSet = new FeatuerSet(seedNodeSet, extractor, acceptingFragments, rejectingFragments);
             var classifier = new Classifier(seedNodeSet.SelectedNodeNames, featureSet);
             Console.WriteLine(
                     "#Features: " + featureSet.AcceptingFeatureCount + ", "

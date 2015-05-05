@@ -44,22 +44,19 @@ namespace Code2Xml.Learner.Core.Learning {
 
         public FeatuerSet(
                 SeedNodeSet seedNodeSet, FeatureExtractor extractor,
-                List<CodeRange> acceptingRanges, List<CodeRange> rejectingRanges) {
+                ICollection<SelectedFragment> acceptingFragments, ICollection<SelectedFragment> rejectingFragments) {
             AcceptingFeatures =
-                    CreateAcceptingFeatures(seedNodeSet.AcceptedNodes, extractor,
-                            acceptingRanges)
+                    CreateAcceptingFeatures(seedNodeSet.AcceptedNodes, extractor,acceptingFragments)
                             .ToImmutableList();
             RejectingFeatures =
-                    CreateRejectingFeatures(seedNodeSet.RejectedNodes, extractor,
-                            rejectingRanges)
+                    CreateRejectingFeatures(seedNodeSet.RejectedNodes, extractor,rejectingFragments)
                             .ToImmutableList();
         }
 
         private IEnumerable<string> CreateRejectingFeatures(
-                IEnumerable<CstNode> rejectedNodes, FeatureExtractor extractor,
-                List<CodeRange> ranges) {
+                IEnumerable<CstNode> rejectedNodes, FeatureExtractor extractor, ICollection<SelectedFragment> fragments) {
             var rejectingFeatureSet = rejectedNodes
-                    .GetUnionKeys(ranges, extractor)
+                    .GetUnionKeys(fragments, extractor)
                     .ToHashSet();
             rejectingFeatureSet.ExceptWith(AcceptingFeatures);
             var rejectingFeatures = rejectingFeatureSet.ToList();
@@ -68,10 +65,9 @@ namespace Code2Xml.Learner.Core.Learning {
         }
 
         private static IEnumerable<string> CreateAcceptingFeatures(
-                IEnumerable<CstNode> acceptedNodes, FeatureExtractor extractor,
-                List<CodeRange> ranges) {
+                IEnumerable<CstNode> acceptedNodes, FeatureExtractor extractor, ICollection<SelectedFragment> fragments) {
             var acceptingFeatures = acceptedNodes
-                    .GetUnionKeys(ranges, extractor)
+                    .GetUnionKeys(fragments, extractor)
                     .Distinct()
                     .ToList();
             acceptingFeatures.Sort((s1, s2) => s1.Length.CompareTo(s2.Length));

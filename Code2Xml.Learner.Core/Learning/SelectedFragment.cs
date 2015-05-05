@@ -6,18 +6,19 @@ namespace Code2Xml.Learner.Core.Learning {
     public class SelectedFragment {
         public CodeRange SurroundingRange { get; set; }
         public CodeRange TargetRange { get; set; }
-        public CstNode CstNode { get; set; }
+        public CstNode Node { get; set; }
 
         public string SurroundingText { get; set; }
         public string TargetText { get; set; }
         public int StartLine { get; set; }
 
         private static int _lastStartLine;
+        private static int _lastIndex;
 
-        public int Update(StructuredCode structuredCode, CstNode cst, int lastIndex) {
+        public void Update(StructuredCode structuredCode, CstNode cst) {
             var startLineIndex = structuredCode.GetIndex(StartLine, 0);
             var surroundingIndex = structuredCode.Code.IndexOf(SurroundingText,
-                    Math.Max(lastIndex + 1, startLineIndex));
+                    Math.Max(_lastIndex + 1, startLineIndex));
             var targetIndex = structuredCode.Code.IndexOf(TargetText, surroundingIndex);
             if (surroundingIndex < 0 || targetIndex < 0) {
                 throw new Exception("The selected code fragment is invalid.");
@@ -25,8 +26,8 @@ namespace Code2Xml.Learner.Core.Learning {
             SurroundingRange = structuredCode.GetRange(surroundingIndex,
                     surroundingIndex + SurroundingText.Length);
             TargetRange = structuredCode.GetRange(targetIndex, targetIndex + TargetText.Length);
-            CstNode = TargetRange.FindOutermostNode(cst);
-            return surroundingIndex;
+            Node = TargetRange.FindOutermostNode(cst);
+            _lastIndex = surroundingIndex;
         }
 
         public SelectedFragment(int startLine, string surroundingText, string targetText) {

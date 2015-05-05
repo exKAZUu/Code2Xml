@@ -30,6 +30,11 @@ namespace Code2Xml.Learner.Core.Learning {
 		}
 
 		public bool IsInner { get; set; }
+		public int BrotherLeft { get; set; }
+		public int BrotherRight { get; set; }
+		public int TokenLeft { get; set; }
+		public int TokenRight { get; set; }
+		public int ChildDepth { get; set; }
 
 		public virtual string GetToken(CstNode e) {
 			if (e.TokenText.Length == 1) {
