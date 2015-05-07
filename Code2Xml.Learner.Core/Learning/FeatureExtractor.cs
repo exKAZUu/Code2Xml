@@ -37,9 +37,13 @@ namespace Code2Xml.Learner.Core.Learning {
         public int TokenRight { get; set; }
         public ISet<string> NodeNames { get; private set; }
 
-        public virtual string GetToken(CstNode e) {
-            if (e.TokenText.Length == 1) {
-                var ch = e.TokenText[0];
+        public string GetToken(CstNode e) {
+            return GetToken(e.TokenText);
+        }
+
+        public virtual string GetToken(string tokenText) {
+            if (tokenText.Length == 1) {
+                var ch = tokenText[0];
                 if (char.IsDigit(ch)) {
                     return "0";
                 }
@@ -47,7 +51,7 @@ namespace Code2Xml.Learner.Core.Learning {
                     return "i";
                 }
             }
-            return e.TokenText;
+            return tokenText;
         }
 
         public static FeatureExtractor BuildBySeedNodes(
@@ -95,8 +99,8 @@ namespace Code2Xml.Learner.Core.Learning {
     }
 
     public class PhpFeatureExtractor : FeatureExtractor {
-        public override string GetToken(CstNode e) {
-            return base.GetToken(e).ToLower();
+        public override string GetToken(string tokenText) {
+            return base.GetToken(tokenText).ToLower();
         }
     }
 }

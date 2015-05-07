@@ -32,13 +32,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         private const string LangName = "CSharp";
 
         private static readonly LearningExperiment[] Experiments = {
-            //new CSharpComplexStatementExperiment(), // OK(40/50)
+            new CSharpComplexStatementExperiment(), // OK(40/50)
             new CSharpSuperComplexBranchExperiment(), // NG
-            //new CSharpExpressionStatementExperiment(), // OK(40/50)
-            //new CSharpArithmeticOperatorExperiment(), // OK(40/50)
-            //new CSharpSwitchCaseExperiment(), // OK(40/50)
-            //new CSharpSuperComplexBranchExperimentWithSwitch(), // NG
-            //new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue(), // NG
+            new CSharpExpressionStatementExperiment(), // OK(40/50)
+            new CSharpArithmeticOperatorExperiment(), // OK(40/50)
+            new CSharpSwitchCaseExperiment(), // OK(40/50)
+            new CSharpSuperComplexBranchExperimentWithSwitch(), // NG
+            new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue(), // NG
 
             //new CSharpComplexBranchExperiment(),
         };
@@ -609,7 +609,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public CSharpSuperComplexBranchExperimentWithSwitch()
-                : base("boolean_expression", "argument", "switch_label") {}
+                : base("boolean_expression", "argument", "expression", "switch_label") {}
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
             if (node.Name == "expression") {
@@ -631,7 +631,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             if (pName == "for_condition") {
                 return true;
             }
-            if (node.Parent.Name == "switch_statement") {
+            if (node.Name == "switch_statement") {
                 return true;
             }
             if (node.Name == "switch_labels") {
@@ -720,7 +720,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue()
-                : base("boolean_expression", "argument", "switch_label") {}
+                : base("boolean_expression", "argument", "expression", "switch_label") {}
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
             if (node.Name == "expression") {
@@ -742,7 +742,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             if (pName == "for_condition") {
                 return node.TokenText != "true";
             }
-            if (node.Parent.Name == "switch_statement") {
+            if (node.Name == "switch_statement") {
                 return true;
             }
             if (node.Name == "switch_labels") {

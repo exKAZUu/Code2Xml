@@ -72,7 +72,7 @@ namespace Code2Xml.Learner.Core.Learning {
                     } else {
                         surroundingNodes = node.DescendantsAndSelf();
                     }
-                    var keys = node.GetSurroundingPathsFilteringBySurroundingNodes(
+                    var keys = node.GetSurroundingPaths(
                             surroundingNodes.ToHashSet(), extractor, outermostNode);
                     commonKeys.UnionWith(keys);
                 }
@@ -83,213 +83,190 @@ namespace Code2Xml.Learner.Core.Learning {
 
         private static bool IsTemporalVariable(CstNode node) {
             var tokenText = node.TokenText;
+            return IsTemporalVariable(tokenText);
+        }
+
+        private static bool IsTemporalVariable(string tokenText) {
             return (tokenText.Length == 1 || (tokenText.StartsWith("$") && tokenText.Length == 2))
                    && char.IsLetter(tokenText[0]);
         }
 
         private static bool IsMeaningfulIdentifier(CstNode node) {
             var tokenText = node.TokenText;
+            return IsMeaningfulIdentifier(tokenText);
+        }
+
+        private static bool IsMeaningfulIdentifier(string tokenText) {
             return !(tokenText.Length <= 1 || (tokenText.StartsWith("$") && tokenText.Length == 2))
                    && char.IsLetter(tokenText[0]);
         }
 
-        public static HashSet<string> GetSurroundingPathsFilteringBySurroundingNodes(
+        private static Tuple<string, bool> GetSurroundingPaths(
+                CstNode node, string path, ICollection<CstNode> surroundingNodes,
+                FeatureExtractor extractor, ISet<string> paths) {
+            var token = "";
+            var temporal = false;
+            var count = 0;
+            if (node.HasToken) {
+                token = extractor.GetToken(node);
+                temporal = IsTemporalVariable(token);
+            } else {
+                foreach (var child in node.Children()) {
+                    count++;
+                    if (surroundingNodes.Contains(child)) {
+                        var ret = GetSurroundingPaths(child, path + ">" + child.Name + child.RuleId,
+                                surroundingNodes, extractor, paths);
+                        temporal = ret.Item2;
+                        if (token != null && ret.Item1 != null) {
+                            token += ret.Item1;
+                            continue;
+                        }
+                    }
+                    token = null;
+                }
+            }
+            if (temporal && count <= 1) {
+                return Tuple.Create<string, bool>(null, true);
+            }
+            paths.Add(path);
+            if (token != null) {
+                paths.Add(path + "'" + token); // need node.Name + node.RuleId ?
+            }
+            return Tuple.Create(token, false);
+        }
+
+        private static string GetFeatureVector(
+                CstNode node, string path, IDictionary<string, BigInteger> featureString2Bit,
+                FeatureExtractor extractor, ref BigInteger vector) {
+            BigInteger bit;
+            var token = "";
+            if (node.HasToken) {
+                token = extractor.GetToken(node);
+            } else {
+                foreach (var child in node.Children()) {
+                    var newPath = path + ">" + child.Name + child.RuleId;
+                    if (featureString2Bit.TryGetValue(newPath, out bit)) {
+                        vector |= bit;
+                        var ret = GetFeatureVector(child, newPath, featureString2Bit, extractor,
+                                ref vector);
+                        if (token != null && ret != null) {
+                            token += ret;
+                            continue;
+                        }
+                    }
+                    token = null;
+                }
+            }
+            if (token != null) {
+                if (featureString2Bit.TryGetValue(path + "'" + token, out bit)) {
+                    vector |= bit;
+                }
+            }
+            return token;
+        }
+
+        public static HashSet<string> GetSurroundingPaths(
                 this CstNode node, HashSet<CstNode> surroundingNodes, FeatureExtractor extractor,
                 CstNode outermostNode) {
+            var path = "";
             var paths = new HashSet<string>();
-            var children = new List<Tuple<CstNode, string>> { Tuple.Create(node, "") };
 
-            // 自分自身の位置による区別も考慮する
             paths.Add(node.Name);
             paths.Add("'" + extractor.GetToken(node));
 
             var ancestor = node.Ancestors().FirstOrDefault(a => a.Children().Count() > 1);
             if (surroundingNodes.Contains(ancestor)) {
-                paths.Add(node.Name + node.RuleId);
                 extractor.IsInner = false;
 
-                if (outermostNode != null) {
-                    extractor.NodeNames.Add(outermostNode.Name);
-                    var index = 0;
-                    foreach (var tokenNode in
-                            node.PreviousTokenNodes(outermostNode).Where(IsMeaningfulIdentifier)) {
-                        if (!surroundingNodes.Contains(tokenNode)) {
-                            break;
-                        }
-                        paths.Add("'-" + extractor.GetToken(tokenNode));
-                        index++;
-                    }
-                    extractor.TokenLeft = Math.Max(extractor.TokenLeft, index);
-                    index = 0;
-                    foreach (var tokenNode in 
-                            node.NextTokenNodes(outermostNode).Where(IsMeaningfulIdentifier)) {
-                        if (!surroundingNodes.Contains(tokenNode)) {
-                            break;
-                        }
-                        paths.Add("'+" + extractor.GetToken(tokenNode));
-                        index++;
-                    }
-                    extractor.TokenRight = Math.Max(extractor.TokenRight, index);
+                var originalNode = node;
+                path = node.Name + node.RuleId;
+                while ((node = node.Parent) != outermostNode) {
+                    path = path + "<" + node.Name + node.RuleId;
+                    paths.Add(path);
                 }
+                path = path + "<" + node.Name; // must not have RuleId
+                paths.Add(path);
 
-                var parent = Tuple.Create(node, "");
-                while (surroundingNodes.Contains(parent.Item1.Parent)) {
-                    var newParent = parent.Item1.Parent;
-                    var parentPathUnit = parent.Item2 + "<" + newParent.Name + newParent.RuleId;
-                    paths.Add(parentPathUnit);
-                    var index = 0;
-                    foreach (var child in parent.Item1.PrevsFromSelf()) {
-                        if (!surroundingNodes.Contains(child)) {
-                            break;
-                        }
-                        var key = parentPathUnit + '-' + index + ">" + child.Name + child.RuleId;
-                        children.Add(Tuple.Create(child, key));
-                        // for Preconditions.checkArguments()
-                        //paths.Add(parentPathUnit + '-' + index + ">'" + extractor.GetToken(child));
-                        index++;
+                var index = 0;
+                foreach (var tokenNode in
+                        originalNode.PreviousTokenNodes(node).Where(IsMeaningfulIdentifier)) {
+                    if (!surroundingNodes.Contains(tokenNode)) {
+                        break;
                     }
-                    extractor.BrotherLeft = Math.Max(extractor.BrotherLeft, index);
-                    index = 0;
-                    foreach (var child in parent.Item1.PrevsFromSelf()) {
-                        if (!surroundingNodes.Contains(child)) {
-                            break;
-                        }
-                        var key = parentPathUnit + '-' + index + ">" + child.Name + child.RuleId;
-                        children.Add(Tuple.Create(child, key));
-                        // for Preconditions.checkArguments()
-                        //paths.Add(parentPathUnit + '-' + index + ">'" + extractor.GetToken(child));
-                        index++;
-                    }
-                    extractor.BrotherRight = Math.Max(extractor.BrotherRight, index);
-                    parent = Tuple.Create(newParent, parentPathUnit);
+                    paths.Add("'-" + extractor.GetToken(tokenNode));
+                    index++;
                 }
+                extractor.TokenLeft = Math.Max(extractor.TokenLeft, index);
+                index = 0;
+                foreach (var tokenNode in 
+                        originalNode.NextTokenNodes(node).Where(IsMeaningfulIdentifier)) {
+                    if (!surroundingNodes.Contains(tokenNode)) {
+                        break;
+                    }
+                    paths.Add("'+" + extractor.GetToken(tokenNode));
+                    index++;
+                }
+                extractor.TokenRight = Math.Max(extractor.TokenRight, index);
             }
-            paths.UnionWith(children.Skip(1).Select(t => t.Item2));
-            var count = 0;
-            do {
-                var newChildren = new List<Tuple<CstNode, string>>();
-                foreach (var t in children) {
-                    foreach (var child in t.Item1.Children()) {
-                        if (!IsTemporalVariable(child) && surroundingNodes.Contains(child)) {
-                            var key = t.Item2 + ">" + child.Name + child.RuleId;
-                            newChildren.Add(Tuple.Create(child, key));
-                            // for Preconditions.checkArguments()
-                            //paths.Add(t.Item2 + ">'" + extractor.GetToken(child));
-                        }
-                    }
-                }
-                paths.UnionWith(newChildren.Select(t => t.Item2));
-                children = newChildren;
-            } while (children.Any() && ++count <= ChildrenCount);
+            GetSurroundingPaths(node, path, surroundingNodes, extractor, paths);
             return paths;
         }
 
         public static BigInteger GetFeatureVector(
                 this CstNode node, IDictionary<string, BigInteger> featureString2Bit,
                 FeatureExtractor extractor) {
-            var ret = BigInteger.Zero;
             BigInteger bit;
-
-            var children = new List<Tuple<CstNode, string>> { Tuple.Create(node, "") };
+            var path = "";
+            var vector = BigInteger.Zero;
 
             if (featureString2Bit.TryGetValue(node.Name, out bit)) {
-                ret |= bit;
+                vector |= bit;
             }
             if (featureString2Bit.TryGetValue("'" + extractor.GetToken(node), out bit)) {
-                ret |= bit;
+                vector |= bit;
             }
+
             if (!extractor.IsInner) {
-                if (featureString2Bit.TryGetValue(node.Name + node.RuleId, out bit)) {
-                    ret |= bit;
-                }
-
-                var outermostNode =
-                        node.Ancestors().FirstOrDefault(n => extractor.NodeNames.Contains(n.Name));
-                if (outermostNode != null) {
-                    node.PreviousTokenNodes(outermostNode)
-                            .Where(IsMeaningfulIdentifier)
-                            .Take(extractor.TokenLeft)
-                            .ForEach(
-                                    tokenNode => {
-                                        if (featureString2Bit.TryGetValue(
-                                                "'-" + extractor.GetToken(tokenNode), out bit)) {
-                                            ret |= bit;
-                                        }
-                                    });
-                    node.NextTokenNodes(outermostNode)
-                            .Where(IsMeaningfulIdentifier)
-                            .Take(extractor.TokenRight)
-                            .ForEach(
-                                    tokenNode => {
-                                        if (featureString2Bit.TryGetValue(
-                                                "'+" + extractor.GetToken(tokenNode), out bit)) {
-                                            ret |= bit;
-                                        }
-                                    });
-                }
-
-                var parent = Tuple.Create(node, "");
-                while (parent.Item1.Parent != null) {
-                    var newParent = parent.Item1.Parent;
-                    var parentPathUnit = parent.Item2 + "<" + newParent.Name + newParent.RuleId;
-                    if (!featureString2Bit.TryGetValue(parentPathUnit, out bit)) {
+                var originalNode = node;
+                path = node.Name + node.RuleId;
+                while (true) {
+                    node = node.Parent;
+                    var newPath = path + "<" + node.Name + node.RuleId;
+                    if (!featureString2Bit.TryGetValue(newPath, out bit)) {
                         break;
                     }
-                    ret |= bit;
-                    parent.Item1.PrevsFromSelf().Take(extractor.BrotherLeft)
-                            .ForEach((child, index) => {
-                                var key = parentPathUnit + '-' + index + ">" + child.Name
-                                          + child.RuleId;
-                                if (featureString2Bit.TryGetValue(key, out bit)) {
-                                    // 枝刈り
-                                    children.Add(Tuple.Create(child, key));
-                                    ret |= bit;
-                                }
-                                // for Preconditions.checkArguments()
-                                //if (featureString2Bit.TryGetValue(
-                                //        parentPathUnit + '-' + index + ">'"
-                                //        + extractor.GetToken(child), out bit)) {
-                                //    ret |= bit;
-                                //}
-                            });
-                    parent.Item1.NextsFromSelf().Take(extractor.BrotherRight)
-                            .ForEach((child, index) => {
-                                var key = parentPathUnit + '+' + index + ">" + child.Name
-                                          + child.RuleId;
-                                if (featureString2Bit.TryGetValue(key, out bit)) {
-                                    // 枝刈り
-                                    children.Add(Tuple.Create(child, key));
-                                    ret |= bit;
-                                }
-                                // for Preconditions.checkArguments()
-                                //if (featureString2Bit.TryGetValue(
-                                //        parentPathUnit + '+' + index + ">'"
-                                //        + extractor.GetToken(child), out bit)) {
-                                //    ret |= bit;
-                                //}
-                            });
-                    parent = Tuple.Create(newParent, parentPathUnit);
+                    path = newPath;
+                    // vector |= bit; is unnecesarry
                 }
+                path = path + "<" + node.Name; // must not have RuleId
+                if (!featureString2Bit.TryGetValue(path, out bit)) {
+                    return vector;
+                }
+                // vector |= bit; is unnecesarry
+
+                originalNode.PreviousTokenNodes(node)
+                        .Where(IsMeaningfulIdentifier)
+                        .Take(extractor.TokenLeft)
+                        .ForEach(
+                                tokenNode => {
+                                    if (featureString2Bit.TryGetValue(
+                                            "'-" + extractor.GetToken(tokenNode), out bit)) {
+                                        vector |= bit;
+                                    }
+                                });
+                originalNode.NextTokenNodes(node)
+                        .Where(IsMeaningfulIdentifier)
+                        .Take(extractor.TokenRight)
+                        .ForEach(
+                                tokenNode => {
+                                    if (featureString2Bit.TryGetValue(
+                                            "'+" + extractor.GetToken(tokenNode), out bit)) {
+                                        vector |= bit;
+                                    }
+                                });
             }
-            do {
-                var newChildren = new List<Tuple<CstNode, string>>();
-                foreach (var t in children) {
-                    foreach (var child in t.Item1.Children()) {
-                        var key = t.Item2 + ">" + child.Name + child.RuleId;
-                        if (featureString2Bit.TryGetValue(key, out bit)) {
-                            newChildren.Add(Tuple.Create(child, key));
-                            ret |= bit;
-                        }
-                        // for Preconditions.checkArguments()
-                        //if (featureString2Bit.TryGetValue(
-                        //        t.Item2 + ">'" + extractor.GetToken(child), out bit)) {
-                        //    ret |= bit;
-                        //}
-                    }
-                }
-                children = newChildren;
-            } while (children.Any());
-            return ret;
+            GetFeatureVector(node, path, featureString2Bit, extractor, ref vector);
+            return vector;
         }
     }
 }
