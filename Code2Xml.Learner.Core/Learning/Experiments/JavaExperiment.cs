@@ -38,7 +38,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             new JavaArithmeticOperatorExperiment(), // OK(40/50)
             new JavaSwitchCaseExperiment(), // OK(40/50)
             new JavaSuperComplexBranchExperimentWithSwitch(), // OK(40/50)
-            new JavaSuperComplexBranchExperimentWithSwitchWithoutTrue(), // OK(40/50)
+            new JavaSuperComplexBranchExperimentWithSwitchWithoutTrue() // OK(40/50)
 
             //new JavaComplexBranchExperiment(),
         };
@@ -345,7 +345,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     @"eef7702b19d46ae9fc14af6ad209287f220eb6ab"),
             Tuple.Create(
                     @"https://github.com/johannilsson/android-actionbar",
-                    @"47157b28766b540d166073f26c43ed5a2c14bfb3"),
+                    @"47157b28766b540d166073f26c43ed5a2c14bfb3")
         };
 
         #endregion
@@ -372,13 +372,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         [Test]
         public void TestApply() {
-            var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.java"), };
+            var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.java") };
             LearnAndApply(seedPaths, LearningSets, Experiments);
         }
 
         //[Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath) {
-            var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.java"), };
+            var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.java") };
             Learn(seedPaths, exp, projectPath);
         }
 
@@ -438,7 +438,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(30, "while (true)", "true"),
                     new SelectedFragment(31, "while (true)", "true"),
                     new SelectedFragment(32, "if (true)", "true"),
-                    new SelectedFragment(32, "if (true)", "true"),
+                    new SelectedFragment(32, "if (true)", "true")
                 };
             }
         }
@@ -559,7 +559,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(30, "while (true)", "true"),
                     new SelectedFragment(31, "while (true)", "true"),
                     new SelectedFragment(32, "if (true)", "true"),
-                    new SelectedFragment(32, "if (true)", "true"),
+                    new SelectedFragment(32, "if (true)", "true")
                 };
             }
         }
@@ -619,7 +619,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(30, @"while (true) { }"),
                     new SelectedFragment(31, @"do { } while (true);"),
                     new SelectedFragment(32, @"if (true) { } else if (true) { } else { }"),
-                    new SelectedFragment(32, @"if (true) { } else { }"),
+                    new SelectedFragment(32, @"if (true) { } else { }")
                 };
             }
         }
@@ -629,7 +629,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 return new[] {
                     new SelectedFragment(9, @"L: i = 0;"),
                     new SelectedFragment(10, @";"),
-                    new SelectedFragment(11, @"{ i = 0; }"),
+                    new SelectedFragment(11, @"{ i = 0; }")
                 };
             }
         }
@@ -727,7 +727,7 @@ statement
                     new SelectedFragment(9, @"i = 0;"),
                     new SelectedFragment(11, @"i = 0;"),
                     new SelectedFragment(12, @"f(0 + 1 - 2 * 3 / 4 % 5);"),
-                    new SelectedFragment(27, @"checkArgument(true);"),
+                    new SelectedFragment(27, @"checkArgument(true);")
                 };
             }
         }
@@ -750,7 +750,7 @@ statement
                     new SelectedFragment(12, @"0 + 1", @"+"),
                     new SelectedFragment(12, @"1 - 2", @"-"),
                     new SelectedFragment(12, @"2 * 3", @"*"),
-                    new SelectedFragment(12, @"3 / 4", @"/"),
+                    new SelectedFragment(12, @"3 / 4", @"/")
                 };
             }
         }
@@ -776,7 +776,7 @@ statement
                     new SelectedFragment(19, @"switch (b)", @"b"),
                     new SelectedFragment(20, @"case 0:"),
                     new SelectedFragment(21, @"case 1:"),
-                    new SelectedFragment(23, @"default:"),
+                    new SelectedFragment(23, @"default:")
                 };
             }
         }
@@ -818,7 +818,7 @@ statement
                     new SelectedFragment(30, "while (true)", "true"),
                     new SelectedFragment(31, "while (true)", "true"),
                     new SelectedFragment(32, "if (true)", "true"),
-                    new SelectedFragment(32, "if (true)", "true"),
+                    new SelectedFragment(32, "if (true)", "true")
                 };
             }
         }
@@ -882,7 +882,7 @@ statement
                     new SelectedFragment(19, @"switch (b)", @"b"),
                     new SelectedFragment(20, @"case 0:"),
                     new SelectedFragment(21, @"case 1:"),
-                    new SelectedFragment(23, @"default:"),
+                    new SelectedFragment(23, @"default:")
                 };
             }
         }
@@ -895,7 +895,7 @@ statement
                     new SelectedFragment(30, "while (true)", "true"),
                     new SelectedFragment(31, "while (true)", "true"),
                     new SelectedFragment(32, "if (true)", "true"),
-                    new SelectedFragment(32, "if (true)", "true"),
+                    new SelectedFragment(32, "if (true)", "true")
                 };
             }
         }

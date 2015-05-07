@@ -37,7 +37,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             new JavaScriptArithmeticOperatorExperiment(), // OK(40/50)
             new JavaScriptSwitchCaseExperiment(), // OK(40/50)
             new JavaScriptSuperComplexBranchExperimentWithSwitch(), // OK(40/50)
-            new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue(), // OK(40/50)
+            new JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue() // OK(40/50)
 
             //new JavaScriptComplexBranchExperiment(),
             //new JavaScriptIfExperiment(),
@@ -203,17 +203,15 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     @"9c149a3b43fd5450f2cc6d0dc7cd7bc5b6edd01e"),
             Tuple.Create(
                     @"https://github.com/flot/flot.git",
-                    @"3aec7ce0bd975e452ff49107905a06146fe9e560"),
+                    @"3aec7ce0bd975e452ff49107905a06146fe9e560")
         };
 
         #endregion
 
         private const string LangName = "JavaScript";
 
-        private static IEnumerable<TestCaseData> TestCases
-        {
-            get
-            {
+        private static IEnumerable<TestCaseData> TestCases {
+            get {
                 foreach (var exp in Experiments) {
                     foreach (var learningSet in LearningSets.Skip(SkipCount).Take(TakeCount)) {
                         var url = learningSet.Item1;
@@ -228,20 +226,19 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
         }
 
-        protected override string SearchPattern
-        {
+        protected override string SearchPattern {
             get { return "*.js"; }
         }
 
         [Test]
         public void TestApply() {
-            var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "seed.js"), };
+            var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "seed.js") };
             LearnAndApply(seedPaths, LearningSets, Experiments);
         }
 
         //[Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath) {
-            var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "seed.js"), };
+            var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "seed.js") };
             Learn(seedPaths, exp, projectPath);
         }
     }
@@ -249,15 +246,12 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     public class JavaScriptSuperComplexBranchExperiment : LearningExperiment {
         public JavaScriptSuperComplexBranchExperiment() : base("expression", "assignmentExpression") {}
 
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaScriptExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(1, @"console.log(b)", "b"),
                     new SelectedFragment(3, @"for (; b;)", "b"),
@@ -274,7 +268,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(@"while (true) {", "true"),
                     new SelectedFragment(@"} while (true)", "true"),
                     new SelectedFragment(@"if (true) {", "true"),
-                    new SelectedFragment(16, @"if (true) {", "true"),
+                    new SelectedFragment(16, @"if (true) {", "true")
                 };
             }
         }
@@ -306,15 +300,12 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     public class JavaScriptComplexBranchExperiment : LearningExperiment {
         public JavaScriptComplexBranchExperiment() : base("expression") {}
 
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaScriptExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(3, @"for (; b;)", "b"),
                     new SelectedFragment(@"while (b) {", "b"),
@@ -330,7 +321,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(@"while (true) {", "true"),
                     new SelectedFragment(@"} while (true)", "true"),
                     new SelectedFragment(@"if (true) {", "true"),
-                    new SelectedFragment(16, @"if (true) {", "true"),
+                    new SelectedFragment(16, @"if (true) {", "true")
                 };
             }
         }
@@ -355,15 +346,12 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     }
 
     public class JavaScriptStatementExperiment : LearningExperiment {
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaScriptExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(1, @"console.log(b);"),
                     new SelectedFragment(3, @"for (; b;) { }"),
@@ -414,7 +402,7 @@ f(0 + 1 - 2 * 3 / 4 % 5);"),
 		break;
 }"),
                     new SelectedFragment(27, @"break;"),
-                    new SelectedFragment(29, @"break;"),
+                    new SelectedFragment(29, @"break;")
                 };
             }
         }
@@ -427,15 +415,12 @@ f(0 + 1 - 2 * 3 / 4 % 5);"),
     }
 
     public class JavaScriptComplexStatementExperiment : LearningExperiment {
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaScriptExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(1, @"console.log(b);"),
                     new SelectedFragment(3, @"for (; b;) { }"),
@@ -463,21 +448,19 @@ f(0 + 1 - 2 * 3 / 4 % 5);"),
 		break;
 }"),
                     new SelectedFragment(27, @"break;"),
-                    new SelectedFragment(29, @"break;"),
+                    new SelectedFragment(29, @"break;")
                 };
             }
         }
 
-        public override IEnumerable<SelectedFragment> RejectingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> RejectingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(3, @"{ }"),
                     new SelectedFragment(19, @"{ i = 1; }"),
                     new SelectedFragment(20, @";"),
                     new SelectedFragment(22, @"T:
-f(0 + 1 - 2 * 3 / 4 % 5);"),
+f(0 + 1 - 2 * 3 / 4 % 5);")
                 };
             }
         }
@@ -499,20 +482,17 @@ f(0 + 1 - 2 * 3 / 4 % 5);"),
     }
 
     public class JavaScriptExpressionStatementExperiment : LearningExperiment {
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaScriptExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(1, @"console.log(b);"),
                     new SelectedFragment(19, @"i = 1;"),
                     new SelectedFragment(21, @"i = 1;"),
-                    new SelectedFragment(23, @"f(0 + 1 - 2 * 3 / 4 % 5);"),                    
+                    new SelectedFragment(23, @"f(0 + 1 - 2 * 3 / 4 % 5);")
                 };
             }
         }
@@ -528,20 +508,17 @@ f(0 + 1 - 2 * 3 / 4 % 5);"),
     }
 
     public class JavaScriptArithmeticOperatorExperiment : LearningExperiment {
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaScriptExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(23, @"0 + 1", @"+"),
                     new SelectedFragment(23, @"1 - 2", @"-"),
                     new SelectedFragment(23, @"2 * 3", @"*"),
-                    new SelectedFragment(23, @"3 / 4", @"/"),
+                    new SelectedFragment(23, @"3 / 4", @"/")
                 };
             }
         }
@@ -558,19 +535,16 @@ f(0 + 1 - 2 * 3 / 4 % 5);"),
     }
 
     public class JavaScriptSwitchCaseExperiment : LearningExperiment {
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaScriptExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(25, @"switch (b)", @"b"),
                     new SelectedFragment(26, @"case 0:"),
-                    new SelectedFragment(28, @"default:"),
+                    new SelectedFragment(28, @"default:")
                 };
             }
         }
@@ -589,15 +563,12 @@ f(0 + 1 - 2 * 3 / 4 % 5);"),
         public JavaScriptSuperComplexBranchExperimentWithSwitch()
                 : base("expression", "assignmentExpression", "caseClause", "defaultClause") {}
 
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaScriptExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(1, @"console.log(b)", "b"),
                     new SelectedFragment(3, @"for (; b;)", "b"),
@@ -617,7 +588,7 @@ f(0 + 1 - 2 * 3 / 4 % 5);"),
                     new SelectedFragment(16, @"if (true) {", "true"),
                     new SelectedFragment(25, @"switch (b)", @"b"),
                     new SelectedFragment(26, @"case 0:"),
-                    new SelectedFragment(28, @"default:"),
+                    new SelectedFragment(28, @"default:")
                 };
             }
         }
@@ -656,15 +627,12 @@ f(0 + 1 - 2 * 3 / 4 % 5);"),
         public JavaScriptSuperComplexBranchExperimentWithSwitchWithoutTrue()
                 : base("expression", "assignmentExpression", "caseClause", "defaultClause") {}
 
-        protected override CstGenerator Generator
-        {
+        protected override CstGenerator Generator {
             get { return JavaScriptExperiment.Generator; }
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(1, @"console.log(b)", "b"),
                     new SelectedFragment(3, @"for (; b;)", "b"),
@@ -679,21 +647,19 @@ f(0 + 1 - 2 * 3 / 4 % 5);"),
                     new SelectedFragment(11, @"if (a, b) {", "a, b"),
                     new SelectedFragment(25, @"switch (b)", @"b"),
                     new SelectedFragment(26, @"case 0:"),
-                    new SelectedFragment(28, @"default:"),
+                    new SelectedFragment(28, @"default:")
                 };
             }
         }
 
-        public override IEnumerable<SelectedFragment> RejectingFragments
-        {
-            get
-            {
+        public override IEnumerable<SelectedFragment> RejectingFragments {
+            get {
                 return new[] {
                     new SelectedFragment(13, @"for (; true;)", "true"),
                     new SelectedFragment(@"while (true) {", "true"),
                     new SelectedFragment(@"} while (true)", "true"),
                     new SelectedFragment(@"if (true) {", "true"),
-                    new SelectedFragment(16, @"if (true) {", "true"),
+                    new SelectedFragment(16, @"if (true) {", "true")
                 };
             }
         }

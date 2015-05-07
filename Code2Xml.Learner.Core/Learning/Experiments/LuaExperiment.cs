@@ -36,7 +36,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             new LuaSuperComplexBranchExperiment(),
             new LuaExpressionStatementExperiment(),
             new LuaArithmeticOperatorExperiment(),
-            //new LuaSuperComplexBranchExperimentWithoutTrue(), 
+            new LuaSuperComplexBranchExperimentWithoutTrue(), 
 
             //new LuaComplexBranchExperiment(),
             //new LuaStatementExperiment(),
@@ -421,6 +421,40 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public override FeatureExtractor CreateExtractor() {
             return new FeatureExtractor();
+        }
+
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(1, @"print(1)"),
+                    new SelectedFragment(3, @"for (; b;) { }"),
+                    new SelectedFragment(4, @"while (b) { }"),
+                    new SelectedFragment(5, @"do { } while (b);"),
+                    new SelectedFragment(6, @"if (b) { } else if (b) { } else { }"),
+                    new SelectedFragment(6, @"if (b) { } else { }"),
+                    new SelectedFragment(8, @"for (; a, b;) { }"),
+                    new SelectedFragment(9, @"while (a, b) { }"),
+                    new SelectedFragment(10, @"do { } while (a, b);"),
+                    new SelectedFragment(11, @"if (a, b) { } else if (a, b) { } else { }"),
+                    new SelectedFragment(11, @"if (a, b) { } else { }"),
+                    new SelectedFragment(13, @"for (; true;) { }"),
+                    new SelectedFragment(14, @"while (true) { }"),
+                    new SelectedFragment(15, @"do { } while (true);"),
+                    new SelectedFragment(16, @"if (true) { } else if (true) { } else { }"),
+                    new SelectedFragment(16, @"if (true) { } else { }"),
+                    new SelectedFragment(19, @"i = 1;"),
+                    new SelectedFragment(@"i = 1;"),
+                    new SelectedFragment(@"f(0 + 1 - 2 * 3 / 4 % 5);"),
+                    new SelectedFragment(25, @"switch (b) {
+	case 0:
+		break;
+	default:
+		break;
+}"),
+                    new SelectedFragment(27, @"break;"),
+                    new SelectedFragment(29, @"break;")
+                };
+            }
         }
 
         public LuaComplexStatementExperiment() : base("stat") {}

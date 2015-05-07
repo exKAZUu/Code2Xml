@@ -38,7 +38,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             new CSharpArithmeticOperatorExperiment(), // OK(40/50)
             new CSharpSwitchCaseExperiment(), // OK(40/50)
             new CSharpSuperComplexBranchExperimentWithSwitch(), // NG
-            new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue(), // NG
+            new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue() // NG
 
             //new CSharpComplexBranchExperiment(),
         };
@@ -192,7 +192,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     @"0dc52852ffbbbeac937045269314af089e7e7af7"),
             Tuple.Create(
                     @"https://github.com/filipw/AspNetWebApi-OutputCache.git",
-                    @"e03d6b257582dab3575fd8e86e93c421125376f4"),
+                    @"e03d6b257582dab3575fd8e86e93c421125376f4")
         };
 
         #endregion
@@ -219,13 +219,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         [Test]
         public void TestApply() {
-            var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.cs"), };
+            var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.cs") };
             LearnAndApply(seedPaths, LearningSets, Experiments);
         }
 
         //[Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath) {
-            var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.cs"), };
+            var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.cs") };
             Learn(seedPaths, exp, projectPath);
         }
     }
@@ -274,7 +274,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(46, @"while (true)", "true"),
                     new SelectedFragment(47, @"while (true)", "true"),
                     new SelectedFragment(48, @"if (true)", "true"),
-                    new SelectedFragment(48, @"if (true)", "true"),
+                    new SelectedFragment(48, @"if (true)", "true")
                 };
             }
         }
@@ -343,7 +343,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(46, @"while (true)", "b"),
                     new SelectedFragment(47, @"while (true)", "b"),
                     new SelectedFragment(48, @"if (true)", "b"),
-                    new SelectedFragment(48, @"if (true)", "b"),
+                    new SelectedFragment(48, @"if (true)", "b")
                 };
             }
         }
@@ -419,7 +419,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(@"while (true) { }"),
                     new SelectedFragment(@"do { } while (true);"),
                     new SelectedFragment(@"if (true) { } else if (true) { } else { }"),
-                    new SelectedFragment(48, @"if (true) { } else { }"),
+                    new SelectedFragment(48, @"if (true) { } else { }")
                 };
             }
         }
@@ -428,7 +428,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             get {
                 return new[] {
                     new SelectedFragment(19, @";"),
-                    new SelectedFragment(20, @"{ f(); }"),
+                    new SelectedFragment(20, @"{ f(); }")
                 };
             }
         }
@@ -481,7 +481,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(
                             @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true);"),
                     new SelectedFragment(
-                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """");"),
+                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """");")
                 };
             }
         }
@@ -510,7 +510,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(18, @"0 + 1", @"+"),
                     new SelectedFragment(18, @"1 - 2", @"-"),
                     new SelectedFragment(18, @"2 * 3", @"*"),
-                    new SelectedFragment(18, @"3 / 4", @"/"),
+                    new SelectedFragment(18, @"3 / 4", @"/")
                 };
             }
         }
@@ -536,7 +536,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(27, @"switch (b)", @"b"),
                     new SelectedFragment(28, @"case 0:"),
                     new SelectedFragment(29, @"case 1:"),
-                    new SelectedFragment(31, @"default:"),
+                    new SelectedFragment(31, @"default:")
                 };
             }
         }
@@ -603,7 +603,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(46, @"while (true)", "true"),
                     new SelectedFragment(47, @"while (true)", "true"),
                     new SelectedFragment(48, @"if (true)", "true"),
-                    new SelectedFragment(48, @"if (true)", "true"),
+                    new SelectedFragment(48, @"if (true)", "true")
                 };
             }
         }
@@ -688,7 +688,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(27, @"switch (b)", @"b"),
                     new SelectedFragment(28, @"case 0:"),
                     new SelectedFragment(29, @"case 1:"),
-                    new SelectedFragment(31, @"default:"),
+                    new SelectedFragment(31, @"default:")
                 };
             }
         }
@@ -714,7 +714,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(46, @"while (true)", "true"),
                     new SelectedFragment(47, @"while (true)", "true"),
                     new SelectedFragment(48, @"if (true)", "true"),
-                    new SelectedFragment(48, @"if (true)", "true"),
+                    new SelectedFragment(48, @"if (true)", "true")
                 };
             }
         }
