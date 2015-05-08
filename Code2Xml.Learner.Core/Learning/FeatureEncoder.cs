@@ -68,10 +68,9 @@ namespace Code2Xml.Learner.Core.Learning {
 
         public EncodingResult Encode(
                 ICollection<string> codePaths, IEnumerable<CstNode> allCsts,
-                LearningExperiment oracle,
-                SeedNodeSet seedNodeSet = null) {
+                LearningExperiment oracle, SeedNodeSet seedNodeSet = null) {
             var fileName = codePaths.Count > 0
-                    ? String.Join(",", codePaths).GetHashCode() + "_" +
+                    ? string.Join(",", codePaths).GetHashCode() + "_" +
                       (codePaths.First() + "," + codePaths.Last()).GetHashCode() + ".encoded"
                     : null;
             var formatter = new BinaryFormatter();
@@ -93,10 +92,10 @@ namespace Code2Xml.Learner.Core.Learning {
                                        + seedNodeSet.RejectedNodes.Count;
                 EncodeSeedNodes(
                         seedNodeSet.AcceptedNodes, result, result.IdealAcceptedVector2GroupPath,
-                        result.SeedAcceptedVector2GroupPath);
+                        result.SeedAcceptedVector2GroupPath, oracle);
                 EncodeSeedNodes(
                         seedNodeSet.RejectedNodes, result, result.IdealRejectedVector2GroupPath,
-                        result.SeedRejectedVector2GroupPath);
+                        result.SeedRejectedVector2GroupPath, oracle);
             }
             EncodeTargetNodes(allUppermostNodes, result, oracle);
 
@@ -111,9 +110,20 @@ namespace Code2Xml.Learner.Core.Learning {
         private void EncodeSeedNodes(
                 IEnumerable<CstNode> seedNodes, EncodingResult result,
                 IDictionary<BigInteger, string> idealVector2Path,
-                IDictionary<BigInteger, string> seedVector2Path) {
+                IDictionary<BigInteger, string> seedVector2Path, LearningExperiment oracle) {
             foreach (var node in seedNodes) {
                 var vector = node.GetFeatureVector(_featureString2Bit, _extractor);
+                if (oracle.IsAcceptedUsingOracle(node)) {
+                    // TODO: for debug
+                    if (result.IdealRejectedVector2GroupPath.ContainsKey(vector)) {
+                        PrintNotDistinguishedElement(node, vector, result, oracle);
+                    }
+                } else {
+                    // TODO: for debug
+                    if (result.IdealAcceptedVector2GroupPath.ContainsKey(vector)) {
+                        PrintNotDistinguishedElement(node, vector, result, oracle);
+                    }
+                }
                 UpdateVector2GroupPath(idealVector2Path, vector, node);
                 seedVector2Path[vector] = idealVector2Path[vector];
                 UpdateVectorDict(result, vector, node);
@@ -121,8 +131,7 @@ namespace Code2Xml.Learner.Core.Learning {
         }
 
         private void EncodeTargetNodes(
-                IEnumerable<CstNode> allUppermostNodes, EncodingResult result,
-                LearningExperiment oracle) {
+                IEnumerable<CstNode> allUppermostNodes, EncodingResult result, LearningExperiment oracle) {
             foreach (var uppermostNode in allUppermostNodes) {
                 var vector = uppermostNode.GetFeatureVector(_featureString2Bit, _extractor);
                 if (oracle.IsAcceptedUsingOracle(uppermostNode)) {
@@ -194,7 +203,7 @@ namespace Code2Xml.Learner.Core.Learning {
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
-        private string GetGroupPathFromNode(CstNode node) {
+        public string GetGroupPathFromNode(CstNode node) {
             IEnumerable<string> distinctivePath;
             if (_extractor.IsInner) {
                 //node = node.AncestorsOfOnlyChildAndSelf().Last(); // TODO
@@ -209,7 +218,7 @@ namespace Code2Xml.Learner.Core.Learning {
                         .Select(e => e.HasToken ? e.RuleId + "-" + _extractor.GetToken(e) : e.RuleId);
             }
 
-            return ">" + node.Name + ">" + String.Join(">", distinctivePath) + ">";
+            return ">" + node.Name + ">" + string.Join(">", distinctivePath) + ">";
         }
 
         #region For Debug

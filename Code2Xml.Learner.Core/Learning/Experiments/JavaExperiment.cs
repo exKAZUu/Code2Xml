@@ -624,16 +624,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
         }
 
-        public override IEnumerable<SelectedFragment> RejectingFragments {
-            get {
-                return new[] {
-                    new SelectedFragment(9, @"L: i = 0;"),
-                    new SelectedFragment(10, @";"),
-                    new SelectedFragment(11, @"{ i = 0; }")
-                };
-            }
-        }
-
         public JavaComplexStatementExperiment() : base("statement", "blockStatement") {}
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {

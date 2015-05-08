@@ -272,6 +272,24 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             return new FeatureExtractor();
         }
 
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(1, @"print(b)", "b"),
+                    new SelectedFragment(2, @"print(b, c)", "b"),
+                    new SelectedFragment(2, @"rint(b, c)", "c"),
+                    new SelectedFragment(7, @"if b then", "b"),
+                    new SelectedFragment(8, @"elseif b then", "b"),
+                    new SelectedFragment(11, @"while b do", "b"),
+                    new SelectedFragment(15, @"until b", "b"),
+                    new SelectedFragment(24, @"if true then", "true"),
+                    new SelectedFragment(25, @"elseif true then", "true"),
+                    new SelectedFragment(28, @"while true do", "true"),
+                    new SelectedFragment(32, @"until true", "true"),
+                };
+            }
+        }
+
         public LuaSuperComplexBranchExperiment() : base("exp") {}
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
@@ -303,6 +321,31 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public override FeatureExtractor CreateExtractor() {
             return new FeatureExtractor();
+        }
+
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(1, @"print(b)", "b"),
+                    new SelectedFragment(2, @"print(b, c)", "b"),
+                    new SelectedFragment(2, @"rint(b, c)", "c"),
+                    new SelectedFragment(7, @"if b then", "b"),
+                    new SelectedFragment(8, @"elseif b then", "b"),
+                    new SelectedFragment(11, @"while b do", "b"),
+                    new SelectedFragment(15, @"until b", "b"),
+                };
+            }
+        }
+
+        public override IEnumerable<SelectedFragment> RejectingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(24, @"if true then", "true"),
+                    new SelectedFragment(25, @"elseif true then", "true"),
+                    new SelectedFragment(28, @"while true do", "true"),
+                    new SelectedFragment(32, @"until true", "true"),
+                };
+            }
         }
 
         public LuaSuperComplexBranchExperimentWithoutTrue() : base("exp") {}
@@ -426,33 +469,27 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    new SelectedFragment(1, @"print(1)"),
-                    new SelectedFragment(3, @"for (; b;) { }"),
-                    new SelectedFragment(4, @"while (b) { }"),
-                    new SelectedFragment(5, @"do { } while (b);"),
-                    new SelectedFragment(6, @"if (b) { } else if (b) { } else { }"),
-                    new SelectedFragment(6, @"if (b) { } else { }"),
-                    new SelectedFragment(8, @"for (; a, b;) { }"),
-                    new SelectedFragment(9, @"while (a, b) { }"),
-                    new SelectedFragment(10, @"do { } while (a, b);"),
-                    new SelectedFragment(11, @"if (a, b) { } else if (a, b) { } else { }"),
-                    new SelectedFragment(11, @"if (a, b) { } else { }"),
-                    new SelectedFragment(13, @"for (; true;) { }"),
-                    new SelectedFragment(14, @"while (true) { }"),
-                    new SelectedFragment(15, @"do { } while (true);"),
-                    new SelectedFragment(16, @"if (true) { } else if (true) { } else { }"),
-                    new SelectedFragment(16, @"if (true) { } else { }"),
-                    new SelectedFragment(19, @"i = 1;"),
-                    new SelectedFragment(@"i = 1;"),
-                    new SelectedFragment(@"f(0 + 1 - 2 * 3 / 4 % 5);"),
-                    new SelectedFragment(25, @"switch (b) {
-	case 0:
-		break;
-	default:
-		break;
-}"),
-                    new SelectedFragment(27, @"break;"),
-                    new SelectedFragment(29, @"break;")
+                    new SelectedFragment(1, @"print(b)"),
+                    new SelectedFragment(2, @"print(b, c)"),
+                    new SelectedFragment(4, @"i = 0"),
+                    new SelectedFragment(5, @"f(0 + 1 - 2 * 3 / 4 % 5)"),
+                    new SelectedFragment(7, @"if b then
+elseif b then
+end"),
+                    new SelectedFragment(11, @"while b do
+end"),
+                    new SelectedFragment(14, @"repeat
+until b"),
+                    new SelectedFragment(17, @"for i = 0, 1, 1 do
+end"),
+                    new SelectedFragment(22, @"i = 0"),
+                    new SelectedFragment(24, @"if true then
+elseif true then
+end"),
+                    new SelectedFragment(28, @"while true do
+end"),
+                    new SelectedFragment(31, @"repeat
+until true"),
                 };
             }
         }
@@ -533,10 +570,22 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             return new FeatureExtractor();
         }
 
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(1, @"print(b)"),
+                    new SelectedFragment(2, @"print(b, c)"),
+                    new SelectedFragment(4, @"i = 0"),
+                    new SelectedFragment(5, @"f(0 + 1 - 2 * 3 / 4 % 5)"),
+                    new SelectedFragment(22, @"i = 0"),
+                };
+            }
+        }
+
         public LuaExpressionStatementExperiment() : base("stat") {}
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            return node.FirstChild.Name == "varlist";
+            return node.FirstChild.Name == "varlist" || node.FirstChild.Name == "functioncall";
         }
     }
 
@@ -547,6 +596,17 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public override FeatureExtractor CreateExtractor() {
             return new FeatureExtractor();
+        }
+
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(5, @"0 + 1", @"+"),
+                    new SelectedFragment(5, @"1 - 2", @"-"),
+                    new SelectedFragment(5, @"2 * 3", @"*"),
+                    new SelectedFragment(5, @"3 / 4", @"/")
+                };
+            }
         }
 
         public LuaArithmeticOperatorExperiment() : base("TOKENS") {}

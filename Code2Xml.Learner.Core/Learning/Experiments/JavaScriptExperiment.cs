@@ -453,18 +453,6 @@ f(0 + 1 - 2 * 3 / 4 % 5);"),
             }
         }
 
-        public override IEnumerable<SelectedFragment> RejectingFragments {
-            get {
-                return new[] {
-                    new SelectedFragment(3, @"{ }"),
-                    new SelectedFragment(19, @"{ i = 1; }"),
-                    new SelectedFragment(20, @";"),
-                    new SelectedFragment(22, @"T:
-f(0 + 1 - 2 * 3 / 4 % 5);")
-                };
-            }
-        }
-
         public JavaScriptComplexStatementExperiment() : base("statement") {}
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {

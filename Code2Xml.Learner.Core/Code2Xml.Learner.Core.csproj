@@ -53,8 +53,16 @@
     <Reference Include="AForge">
       <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
     </Reference>
+    <Reference Include="AForge.Genetic, Version=2.2.4.0, Culture=neutral, PublicKeyToken=4336634eeb41b69b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Genetic.2.2.5\lib\AForge.Genetic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="AForge.Math">
       <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Neuro, Version=2.2.5.0, Culture=neutral, PublicKeyToken=2094f4ea39731d4f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Neuro.2.2.5\lib\AForge.Neuro.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
@@ -119,6 +127,7 @@
     <Compile Include="Learning\LearningExperiment.cs" />
     <Compile Include="Learning\LearningExperimentUtil.cs" />
     <Compile Include="Learning\OracleClassifier.cs" />
+    <Compile Include="Learning\Perceptron\PerceptronTest.cs" />
     <Compile Include="Learning\RevealedVectorSet.cs" />
     <Compile Include="Learning\SelectedFragment.cs" />
     <Compile Include="Learning\SurroundingNodeTraversal.cs" />

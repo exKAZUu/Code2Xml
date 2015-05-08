@@ -24,16 +24,16 @@ using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Learner.Core.Learning {
 	public class ClassificationResult {
-		public readonly int WrongFeatureCount;
+		public readonly int WrongVectorCount;
 		public readonly int WrongElementCount;
 		public readonly IList<SuspiciousNode> SuspiciousNodes;
-		public readonly IList<BigInteger> WronglyAcceptedFeatures;
-		public readonly IList<BigInteger> WronglyRejectedFeatures;
+		public readonly IList<BigInteger> WronglyAcceptedVectors;
+		public readonly IList<BigInteger> WronglyRejectedVectors;
 		private readonly IDictionary<BigInteger, CstNode> _vector2Node;
 
 		public IList<CstNode> WronglyAcceptedNodes {
 			get {
-				return WronglyAcceptedFeatures
+				return WronglyAcceptedVectors
 						.Select(f => _vector2Node[f])
 						.ToList();
 			}
@@ -41,7 +41,7 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		public IList<CstNode> WronglyRejectedNodes {
 			get {
-				return WronglyRejectedFeatures
+				return WronglyRejectedVectors
 						.Select(f => _vector2Node[f])
 						.ToList();
 			}
@@ -49,12 +49,12 @@ namespace Code2Xml.Learner.Core.Learning {
 
 		public ClassificationResult(
 				IEnumerable<SuspiciousNode> suspiciousNodes, IEnumerable<BigInteger> wronglyAcceptedFeatures,
-				IEnumerable<BigInteger> wronglyRejectedFeatures, int wrongFeatureCount, int wrongElementCount,
+				IEnumerable<BigInteger> wronglyRejectedFeatures, int wrongVectorCount, int wrongElementCount,
 				EncodingResult encodingResult) {
 			SuspiciousNodes = suspiciousNodes != null ? suspiciousNodes.ToImmutableList() : null;
-			WronglyAcceptedFeatures = wronglyAcceptedFeatures.ToImmutableList();
-			WronglyRejectedFeatures = wronglyRejectedFeatures.ToImmutableList();
-			WrongFeatureCount = wrongFeatureCount;
+			WronglyAcceptedVectors = wronglyAcceptedFeatures.ToImmutableList();
+			WronglyRejectedVectors = wronglyRejectedFeatures.ToImmutableList();
+			WrongVectorCount = wrongVectorCount;
 			WrongElementCount = wrongElementCount;
 			_vector2Node = encodingResult.Vector2Node;
 		}

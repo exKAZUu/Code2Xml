@@ -25,8 +25,6 @@ using Paraiba.Linq;
 
 namespace Code2Xml.Learner.Core.Learning {
     public static class SurroundingNodeTraversal {
-        private const int ChildrenCount = 7;
-
         public static double[] BigIntegerToDoubles(this BigInteger i, int bitLength) {
             var doubles = new List<double>();
             for (int j = 0; j < bitLength; j++) {
@@ -103,7 +101,8 @@ namespace Code2Xml.Learner.Core.Learning {
 
         private static Tuple<string, bool> GetSurroundingPaths(
                 CstNode node, string path, ICollection<CstNode> surroundingNodes,
-                FeatureExtractor extractor, ISet<string> paths) {
+                FeatureExtractor extractor, ISet<string> paths,
+                HashSet<CstNode> ancestors) {
             var token = "";
             var temporal = false;
             var count = 0;
@@ -114,8 +113,10 @@ namespace Code2Xml.Learner.Core.Learning {
                 foreach (var child in node.Children()) {
                     count++;
                     if (surroundingNodes.Contains(child)) {
-                        var ret = GetSurroundingPaths(child, path + ">" + child.Name + child.RuleId,
-                                surroundingNodes, extractor, paths);
+                        var newPath = path + (ancestors.Contains(child) ? "/" : ">")
+                                      + child.Name + child.RuleId;
+                        var ret = GetSurroundingPaths(
+                                child, newPath, surroundingNodes, extractor, paths, ancestors);
                         temporal = ret.Item2;
                         if (token != null && ret.Item1 != null) {
                             token += ret.Item1;
@@ -137,18 +138,20 @@ namespace Code2Xml.Learner.Core.Learning {
 
         private static string GetFeatureVector(
                 CstNode node, string path, IDictionary<string, BigInteger> featureString2Bit,
-                FeatureExtractor extractor, ref BigInteger vector) {
+                FeatureExtractor extractor, ICollection<CstNode> ancestors,
+                ref BigInteger vector) {
             BigInteger bit;
             var token = "";
             if (node.HasToken) {
                 token = extractor.GetToken(node);
             } else {
                 foreach (var child in node.Children()) {
-                    var newPath = path + ">" + child.Name + child.RuleId;
+                    var newPath = path + (ancestors.Contains(child) ? "/" : ">")
+                                  + child.Name + child.RuleId;
                     if (featureString2Bit.TryGetValue(newPath, out bit)) {
                         vector |= bit;
-                        var ret = GetFeatureVector(child, newPath, featureString2Bit, extractor,
-                                ref vector);
+                        var ret = GetFeatureVector(
+                                child, newPath, featureString2Bit, extractor, ancestors, ref vector);
                         if (token != null && ret != null) {
                             token += ret;
                             continue;
@@ -168,11 +171,12 @@ namespace Code2Xml.Learner.Core.Learning {
         public static HashSet<string> GetSurroundingPaths(
                 this CstNode node, HashSet<CstNode> surroundingNodes, FeatureExtractor extractor,
                 CstNode outermostNode) {
-            var path = "";
+            var path = node.Name;
             var paths = new HashSet<string>();
+            var ancestors = new HashSet<CstNode> { node };
 
             paths.Add(node.Name);
-            paths.Add("'" + extractor.GetToken(node));
+            //paths.Add("'" + extractor.GetToken(node));
 
             var ancestor = node.Ancestors().FirstOrDefault(a => a.Children().Count() > 1);
             if (surroundingNodes.Contains(ancestor)) {
@@ -182,6 +186,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 path = node.Name + node.RuleId;
                 while ((node = node.Parent) != outermostNode) {
                     path = path + "<" + node.Name + node.RuleId;
+                    ancestors.Add(node);
                     paths.Add(path);
                 }
                 path = path + "<" + node.Name; // must not have RuleId
@@ -208,7 +213,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 }
                 extractor.TokenRight = Math.Max(extractor.TokenRight, index);
             }
-            GetSurroundingPaths(node, path, surroundingNodes, extractor, paths);
+            GetSurroundingPaths(node, path, surroundingNodes, extractor, paths, ancestors);
             return paths;
         }
 
@@ -216,15 +221,16 @@ namespace Code2Xml.Learner.Core.Learning {
                 this CstNode node, IDictionary<string, BigInteger> featureString2Bit,
                 FeatureExtractor extractor) {
             BigInteger bit;
-            var path = "";
+            var path = node.Name;
             var vector = BigInteger.Zero;
+            var ancestors = new HashSet<CstNode> { node };
 
             if (featureString2Bit.TryGetValue(node.Name, out bit)) {
                 vector |= bit;
             }
-            if (featureString2Bit.TryGetValue("'" + extractor.GetToken(node), out bit)) {
-                vector |= bit;
-            }
+            //if (featureString2Bit.TryGetValue("'" + extractor.GetToken(node), out bit)) {
+            //    vector |= bit;
+            //}
 
             if (!extractor.IsInner) {
                 var originalNode = node;
@@ -235,6 +241,7 @@ namespace Code2Xml.Learner.Core.Learning {
                     if (!featureString2Bit.TryGetValue(newPath, out bit)) {
                         break;
                     }
+                    ancestors.Add(node);
                     path = newPath;
                     // vector |= bit; is unnecesarry
                 }
@@ -265,7 +272,7 @@ namespace Code2Xml.Learner.Core.Learning {
                                     }
                                 });
             }
-            GetFeatureVector(node, path, featureString2Bit, extractor, ref vector);
+            GetFeatureVector(node, path, featureString2Bit, extractor, ancestors, ref vector);
             return vector;
         }
     }

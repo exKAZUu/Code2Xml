@@ -57,8 +57,6 @@ namespace Code2Xml.Learner.Core.Learning {
 			get { return SeedVectorSet.Rejected; }
 		}
 
-		public IDictionary<BigInteger, string> Vector2GroupPath { get; private set; }
-
 		[NonSerialized] private IDictionary<BigInteger, CstNode> _vector2Node;
 
 		public IDictionary<BigInteger, CstNode> Vector2Node {
@@ -68,7 +66,6 @@ namespace Code2Xml.Learner.Core.Learning {
 		public IDictionary<BigInteger, int> Vector2Count { get; private set; }
 
 		public EncodingResult() {
-			Vector2GroupPath = new Dictionary<BigInteger, string>();
 			_vector2Node = new Dictionary<BigInteger, CstNode>();
 			Vector2Count = new Dictionary<BigInteger, int>();
 
@@ -83,7 +80,6 @@ namespace Code2Xml.Learner.Core.Learning {
 		}
 
 		public EncodingResult MakeImmutable() {
-			Vector2GroupPath = Vector2GroupPath.ToImmutableDictionary();
 			_vector2Node = _vector2Node.ToImmutableDictionary();
 			Vector2Count = Vector2Count.ToImmutableDictionary();
 
@@ -93,10 +89,10 @@ namespace Code2Xml.Learner.Core.Learning {
 		        throw new Exception();
 		    }
 		    if (IdealVectorSet.Accepted.Keys.Intersect(SeedVectorSet.Rejected.Keys).Any()) {
-		        throw new Exception();
+		        throw new Exception("Strange!");
 		    }
 		    if (IdealVectorSet.Rejected.Keys.Intersect(SeedVectorSet.Accepted.Keys).Any()) {
-		        throw new Exception();
+		        throw new Exception("Strange!");
 		    }
 			return this;
 		}

@@ -20,6 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using Code2Xml.Core.SyntaxTree;
 using NUnit.Framework;
 using ParserTests;
@@ -77,13 +78,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                                     learningResult.FeatureEncoder);
                     writer.Write(classificationResult.WrongElementCount);
                     writer.Write(",");
-                    writer.Write(classificationResult.WrongFeatureCount);
+                    writer.Write(classificationResult.WrongVectorCount);
                     writer.Write(",");
                     writer.WriteLine();
                     writer.Flush();
                     if (classificationResult.WrongElementCount > 0) {
                         failedCount++;
-                        PrintWrongResults(classificationResult, learningResult.FeatureEncoder);
+                        PrintWrongResults(classificationResult, learningResult);
                     }
                     Console.WriteLine(exp.GetType().Name);
                     Assert.That(failedCount, Is.EqualTo(0));
@@ -108,12 +109,12 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             var classificationResult = learningResult.ClassificationResult;
             writer.Write(classificationResult.WrongElementCount);
             writer.Write(",");
-            writer.Write(classificationResult.WrongFeatureCount);
+            writer.Write(classificationResult.WrongVectorCount);
             writer.Write(",");
             writer.WriteLine();
             writer.Flush();
-            if (classificationResult.WrongFeatureCount > 0) {
-                PrintWrongResults(classificationResult, learningResult.FeatureEncoder);
+            if (classificationResult.WrongVectorCount > 0) {
+                PrintWrongResults(classificationResult, learningResult);
             }
             var seedWriter =
                     CreateWriter(exp.GetType().Name + "_seed_" + projectPaths.Count() + ".txt");
@@ -162,32 +163,50 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         private static void PrintWrongResults(
-                ClassificationResult classificationResult, FeatureEncoder featureEncoder) {
-            Console.WriteLine("--------------- WronglyAcceptedElements ---------------");
-            foreach (var node in classificationResult.WronglyAcceptedNodes) {
-                Console.WriteLine(node.Code);
-                Console.WriteLine(GetGoodAncestorNode(node).Code);
-                Console.WriteLine("---------------------------------------------");
-            }
-            Console.WriteLine("---- WronglyRejectedElements ----");
-            foreach (var node in classificationResult.WronglyRejectedNodes) {
-                Console.WriteLine(node.Code);
-                Console.WriteLine(GetGoodAncestorNode(node).Code);
-                Console.WriteLine("---------------------------------------------");
-            }
+                ClassificationResult classificationResult, LearningResult learningResult) {
+            var nodeAndVectors = new[] {
+                classificationResult.WronglyAcceptedNodes
+                        .Zip<CstNode, BigInteger, Tuple<CstNode, BigInteger>>(
+                                classificationResult.WronglyAcceptedVectors, Tuple.Create),
+                classificationResult.WronglyRejectedNodes
+                        .Zip<CstNode, BigInteger, Tuple<CstNode, BigInteger>>(
+                                classificationResult.WronglyRejectedVectors, Tuple.Create)
+            };
+            var titles = new[] {
+                "WronglyAcceptedNodes", "WronglyRejectedNodes"
+            };
 
-            Console.WriteLine("--------------- WronglyAcceptedFeatures ---------------");
-            foreach (var feature in classificationResult.WronglyAcceptedFeatures) {
-                var featureStrings = featureEncoder.GetFeatureStringsByVector(feature);
-                foreach (var featureString in featureStrings) {
-                    Console.WriteLine(Beautify(featureString));
-                }
-            }
-            Console.WriteLine("---- WronglyRejectedFeatures ----");
-            foreach (var feature in classificationResult.WronglyRejectedFeatures) {
-                var featureStrings = featureEncoder.GetFeatureStringsByVector(feature);
-                foreach (var featureString in featureStrings) {
-                    Console.WriteLine(Beautify(featureString));
+            for (int i = 0; i < nodeAndVectors.Length; i++) {
+                Console.WriteLine("--------------- " + titles[i] + " ---------------");
+                foreach (var nodeAndVector in nodeAndVectors[i]) {
+                    var node = nodeAndVector.Item1;
+                    var vector = nodeAndVector.Item2;
+                    Console.WriteLine(node.Code);
+                    Console.WriteLine(GetGoodAncestorNode(node).Code);
+                    var groupPath = learningResult.FeatureEncoder.GetGroupPathFromNode(node);
+                    var groupIndex = learningResult.Classifier.GetGroupIndex(groupPath);
+                    Console.WriteLine("Group: " + (groupIndex + 1) + " (" + groupPath + ")");
+                    Console.WriteLine("IsAccepted: "
+                                      + learningResult.Classifier.IsAccepted(vector, groupIndex));
+                    Console.WriteLine("IsRejected: "
+                                      + learningResult.Classifier.IsRejected(vector, groupIndex));
+                    var featureStrings =
+                            learningResult.FeatureEncoder.GetFeatureStringsByVector(vector);
+                    foreach (var featureString in featureStrings) {
+                        Console.WriteLine(Beautify(featureString));
+                    }
+                    if (i == 1) {
+                        Console.WriteLine("------------- Rejcting Features -------------");
+                        var negativeVector = vector
+                                             & learningResult.Classifier.Units[groupIndex].Rejecting;
+                        featureStrings =
+                                learningResult.FeatureEncoder.GetFeatureStringsByVector(
+                                        negativeVector);
+                        foreach (var featureString in featureStrings) {
+                            Console.WriteLine(Beautify(featureString));
+                        }
+                    }
+                    Console.WriteLine("---------------------------------------------");
                 }
             }
         }
@@ -269,7 +288,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public void Learn(
                 List<string> seedPaths, LearningExperiment exp, ICollection<string> projectPaths) {
             var ret = LearnWithoutClearing(seedPaths, exp, projectPaths);
-            Assert.That(ret.ClassificationResult.WrongFeatureCount, Is.EqualTo(0));
+            Assert.That(ret.ClassificationResult.WrongVectorCount, Is.EqualTo(0));
         }
 
         public void Learn(

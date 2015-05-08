@@ -33,12 +33,12 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         private static readonly LearningExperiment[] Experiments = {
             new CSharpComplexStatementExperiment(), // OK(40/50)
-            new CSharpSuperComplexBranchExperiment(), // NG
+            new CSharpSuperComplexBranchExperiment(), // OK(40/50)
             new CSharpExpressionStatementExperiment(), // OK(40/50)
             new CSharpArithmeticOperatorExperiment(), // OK(40/50)
             new CSharpSwitchCaseExperiment(), // OK(40/50)
-            new CSharpSuperComplexBranchExperimentWithSwitch(), // NG
-            new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue() // NG
+            new CSharpSuperComplexBranchExperimentWithSwitch(), // OK(40/50)
+            new CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue() // OK(40/50)
 
             //new CSharpComplexBranchExperiment(),
         };
@@ -420,15 +420,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     new SelectedFragment(@"do { } while (true);"),
                     new SelectedFragment(@"if (true) { } else if (true) { } else { }"),
                     new SelectedFragment(48, @"if (true) { } else { }")
-                };
-            }
-        }
-
-        public override IEnumerable<SelectedFragment> RejectingFragments {
-            get {
-                return new[] {
-                    new SelectedFragment(19, @";"),
-                    new SelectedFragment(20, @"{ f(); }")
                 };
             }
         }
