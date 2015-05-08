@@ -68,5 +68,16 @@ namespace Code2Xml.Core.Generators {
             Console.WriteLine("Saved");
             return tree;
         }
+
+        public override CstNode GenerateTreeFromCodeFragment(
+                TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
+            return DelegatingCstGenerator.GenerateTreeFromCodeFragment(codeReader,
+                    throwingParseError);
+        }
+
+        public override CstNode GenerateTreeFromCodeFragmentText(
+                string code, bool throwingParseError = DefaultThrowingParseError) {
+            return DelegatingCstGenerator.GenerateTreeFromCodeFragmentText(code, throwingParseError);
+        }
     }
 }

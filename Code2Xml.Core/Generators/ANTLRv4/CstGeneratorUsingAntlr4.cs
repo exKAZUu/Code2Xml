@@ -17,6 +17,8 @@
 #endregion
 
 using System.IO;
+using System.Reflection;
+using Antlr.Runtime.Misc;
 using Antlr4.Runtime;
 using Code2Xml.Core.SyntaxTree;
 
@@ -44,13 +46,36 @@ namespace Code2Xml.Core.Generators.ANTLRv4 {
         protected abstract TParser CreateParser(CommonTokenStream stream);
 
         /// <summary>
-        /// Parse source code already given.
+        /// Parse the source code already given.
         /// </summary>
         /// <param name="parser"></param>
         protected abstract ParserRuleContext Parse(TParser parser);
 
+        /// <summary>
+        /// Parse the fragment of the source code already given.
+        /// </summary>
+        /// <param name="parser"></param>
+        protected ParserRuleContext ParseFragment(TParser parser) {
+            var errorMonitor = (MonitoringErrorStrategy)parser.ErrorHandler;
+            parser.InputStream.Mark();
+            var methodInfos =
+                    parser.GetType().GetMethods(BindingFlags.Public | BindingFlags.Instance);
+            foreach (var methodInfo in methodInfos) {
+                if (methodInfo.ReturnType.IsSubclassOf(typeof(ParserRuleContext))
+                    && methodInfo.GetParameters().Length == 0) {
+                    errorMonitor.Initialize();
+                    parser.InputStream.Seek(0);
+                    var ret = methodInfo.Invoke(parser, new object[0]);
+                    if (!errorMonitor.HasErrors) {
+                        return (ParserRuleContext)ret;
+                    }
+                }
+            }
+        }
+
         private CstNode GenerateSyntaxTree(
-                ICharStream charStream, bool throwingParseError = DefaultThrowingParseError) {
+                ICharStream charStream, Func<TParser, ParserRuleContext> parseFunc,
+                bool throwingParseError = DefaultThrowingParseError) {
             var lexer = CreateLexer(charStream);
             var commonTokenStream = new CommonTokenStream(lexer);
             var parser = CreateParser(commonTokenStream);
@@ -58,18 +83,18 @@ namespace Code2Xml.Core.Generators.ANTLRv4 {
             if (throwingParseError) {
                 parser.ErrorHandler = new MyBailErrorStrategy();
             }
-            builder.Visit(Parse(parser));
+            builder.Visit(parseFunc(parser));
             return builder.FinishParsing();
         }
 
         public override CstNode GenerateTreeFromCode(
                 TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
-            return GenerateSyntaxTree(new AntlrInputStream(codeReader), throwingParseError);
+            return GenerateSyntaxTree(new AntlrInputStream(codeReader), Parse, throwingParseError);
         }
 
         public override CstNode GenerateTreeFromCodeText(
                 string code, bool throwingParseError = DefaultThrowingParseError) {
-            return GenerateSyntaxTree(new AntlrInputStream(code), throwingParseError);
+            return GenerateSyntaxTree(new AntlrInputStream(code), Parse, throwingParseError);
         }
 
         private void TryParse(ICharStream charStream) {
@@ -107,6 +132,25 @@ namespace Code2Xml.Core.Generators.ANTLRv4 {
         public override IToken RecoverInline(Parser recognizer) {
             var e = new InputMismatchException(recognizer);
             throw new ParseException(recognizer.CurrentToken.ToString(), e);
+        }
+
+        public override void Sync(Parser recognizer) {}
+    }
+
+    public class MonitoringErrorStrategy : DefaultErrorStrategy {
+        public bool HasErrors { get; set; }
+
+        public void Initialize() {
+            HasErrors = false;
+        }
+
+        public override void Recover(Parser recognizer, RecognitionException e) {
+            HasErrors = true;
+        }
+
+        public override IToken RecoverInline(Parser recognizer) {
+            HasErrors = true;
+            return base.RecoverInline(recognizer);
         }
 
         public override void Sync(Parser recognizer) {}

@@ -16,6 +16,7 @@
 
 #endregion
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -28,11 +29,13 @@ namespace Code2Xml.Core.Generators {
         private static readonly Dictionary<string, CstNode> Path2Element =
                 new Dictionary<string, CstNode>();
 
-        public override string LanguageName {
+        public override string LanguageName
+        {
             get { return DelegatingCstGenerator.LanguageName; }
         }
 
-        public override string LanguageVersion {
+        public override string LanguageVersion
+        {
             get { return DelegatingCstGenerator.LanguageVersion; }
         }
 
@@ -62,6 +65,16 @@ namespace Code2Xml.Core.Generators {
                     codeFile, encoding, throwingParseError);
             Path2Element[id] = tree;
             return tree;
+        }
+        
+        public override CstNode GenerateTreeFromCodeFragmentText(
+                string code, bool throwingParseError = DefaultThrowingParseError) {
+            return DelegatingCstGenerator.GenerateTreeFromCodeFragmentText(code, throwingParseError);
+        }
+
+        public override CstNode GenerateTreeFromCodeFragment(
+                TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
+            return DelegatingCstGenerator.GenerateTreeFromCodeFragment(codeReader, throwingParseError);
         }
     }
 }

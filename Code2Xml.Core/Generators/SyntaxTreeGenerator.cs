@@ -71,7 +71,7 @@ namespace Code2Xml.Core.Generators {
         #region ParseTree
 
         /// <summary>
-        /// Try to parse the source code which is retrieved from the specified <c>TextReader</c>.
+        /// Try to parse the fragment of the source code which is retrieved from the specified <c>TextReader</c>.
         /// </summary>
         /// <param name="codeReader"></param>
         /// <returns></returns>
@@ -80,7 +80,7 @@ namespace Code2Xml.Core.Generators {
         }
 
         /// <summary>
-        /// Try to parse the source code which is retrieved from the specified <c>FileInfo</c>.
+        /// Try to parse the fragment of the source code which is retrieved from the specified <c>FileInfo</c>.
         /// </summary>
         /// <param name="codeFile"></param>
         /// <param name="encoding"></param>
@@ -100,7 +100,7 @@ namespace Code2Xml.Core.Generators {
         }
 
         /// <summary>
-        /// Try to parse the source code of the specified <c>string</c>.
+        /// Try to parse the fragment of the source code of the specified <c>string</c>.
         /// </summary>
         /// <param name="code"></param>
         /// <returns></returns>
@@ -109,13 +109,31 @@ namespace Code2Xml.Core.Generators {
         }
 
         /// <summary>
-        /// Try to parse the source code which is retrieved from the specified file path.
+        /// Try to parse the fragment of the source code which is retrieved from the specified file path.
         /// </summary>
         /// <param name="path"></param>
         /// <param name="encoding"></param>
         /// <returns></returns>
         public void TryParseFromCodePath(string path, Encoding encoding = null) {
             TryParseFromCode(new FileInfo(path), encoding);
+        }
+
+        /// <summary>
+        /// Try to parse the fragment of the source code which is retrieved from the specified <c>TextReader</c>.
+        /// </summary>
+        /// <param name="codeReader"></param>
+        /// <returns></returns>
+        public virtual void TryParseFromCodeFragment(TextReader codeReader) {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Try to parse the fragment of the source code of the specified <c>string</c>.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        public virtual void TryParseFromCodeFragmentText(string code) {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -179,6 +197,20 @@ namespace Code2Xml.Core.Generators {
                 bool throwingParseError = DefaultThrowingParseError) {
             return GenerateXmlFromCode(new FileInfo(path), encoding, throwingParseError);
         }
+
+        /// <summary>
+        /// Generates a xml from the specified <c>TextReader</c> which reads the fragment of the source code.
+        /// </summary>
+        /// <param name="codeReader"></param>
+        /// <returns></returns>
+        public abstract XElement GenerateXmlFromCodeFragment(TextReader codeReader);
+
+        /// <summary>
+        /// Generates a xml from the specified text of the fragment of the source code.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        public abstract XElement GenerateXmlFromCodeFragmentText(string code);
 
         #endregion
 
@@ -317,6 +349,20 @@ namespace Code2Xml.Core.Generators {
             Contract.Requires(path != null);
             return GenerateTreeFromCode(new FileInfo(path), encoding, throwingParseError);
         }
+
+        /// <summary>
+        /// Generates a tree from the specified <c>TextReader</c> which reads the fragment of the source code.
+        /// </summary>
+        /// <param name="codeReader"></param>
+        /// <returns></returns>
+        public abstract TNode GenerateTreeFromCodeFragment(TextReader codeReader);
+
+        /// <summary>
+        /// Generates a tree from the specified text of the fragment of the source code.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        public abstract TNode GenerateTreeFromCodeFragmentText(string code);
 
         /// <summary>
         /// Generates a tree from the specified xml representing the source code.
