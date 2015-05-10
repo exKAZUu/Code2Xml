@@ -877,18 +877,18 @@ statement
             }
         }
 
-        public override IEnumerable<SelectedFragment> RejectingFragments {
-            get {
-                return new[] {
-                    new SelectedFragment(27, "checkArgument(true)", "true"),
-                    new SelectedFragment(29, "for (; true;)", "true"),
-                    new SelectedFragment(30, "while (true)", "true"),
-                    new SelectedFragment(31, "while (true)", "true"),
-                    new SelectedFragment(32, "if (true)", "true"),
-                    new SelectedFragment(32, "if (true)", "true")
-                };
-            }
-        }
+        //public override IEnumerable<SelectedFragment> RejectingFragments {
+        //    get {
+        //        return new[] {
+        //            new SelectedFragment(27, "checkArgument(true)", "true"),
+        //            new SelectedFragment(29, "for (; true;)", "true"),
+        //            new SelectedFragment(30, "while (true)", "true"),
+        //            new SelectedFragment(31, "while (true)", "true"),
+        //            new SelectedFragment(32, "if (true)", "true"),
+        //            new SelectedFragment(32, "if (true)", "true")
+        //        };
+        //    }
+        //}
 
         public JavaSuperComplexBranchExperimentWithSwitchWithoutTrue()
                 : base("expression", "switchLabel") {}

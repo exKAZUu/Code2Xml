@@ -684,31 +684,31 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
         }
 
-        public override IEnumerable<SelectedFragment> RejectingFragments {
-            get {
-                return new[] {
-                    new SelectedFragment(35, @"Contract.Requires(true)", "true"),
-                    new SelectedFragment(36, @"Contract.Requires(true, """")", "true"),
-                    new SelectedFragment(37, @"Contract.Requires<Exception>(true)", "true"),
-                    new SelectedFragment(38, @"Contract.Requires<Exception>(true, """")", "true"),
-                    new SelectedFragment(40, @"System.Diagnostics.Contracts.Contract.Requires(true)",
-                            "true"),
-                    new SelectedFragment(41,
-                            @"System.Diagnostics.Contracts.Contract.Requires(true, """")", "true"),
-                    new SelectedFragment(42,
-                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true)",
-                            "true"),
-                    new SelectedFragment(43,
-                            @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """")",
-                            "true"),
-                    new SelectedFragment(45, @"for (; true;)", "true"),
-                    new SelectedFragment(46, @"while (true)", "true"),
-                    new SelectedFragment(47, @"while (true)", "true"),
-                    new SelectedFragment(48, @"if (true)", "true"),
-                    new SelectedFragment(48, @"if (true)", "true")
-                };
-            }
-        }
+        //public override IEnumerable<SelectedFragment> RejectingFragments {
+        //    get {
+        //        return new[] {
+        //            new SelectedFragment(35, @"Contract.Requires(true)", "true"),
+        //            new SelectedFragment(36, @"Contract.Requires(true, """")", "true"),
+        //            new SelectedFragment(37, @"Contract.Requires<Exception>(true)", "true"),
+        //            new SelectedFragment(38, @"Contract.Requires<Exception>(true, """")", "true"),
+        //            new SelectedFragment(40, @"System.Diagnostics.Contracts.Contract.Requires(true)",
+        //                    "true"),
+        //            new SelectedFragment(41,
+        //                    @"System.Diagnostics.Contracts.Contract.Requires(true, """")", "true"),
+        //            new SelectedFragment(42,
+        //                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true)",
+        //                    "true"),
+        //            new SelectedFragment(43,
+        //                    @"System.Diagnostics.Contracts.Contract.Requires<Exception>(true, """")",
+        //                    "true"),
+        //            new SelectedFragment(45, @"for (; true;)", "true"),
+        //            new SelectedFragment(46, @"while (true)", "true"),
+        //            new SelectedFragment(47, @"while (true)", "true"),
+        //            new SelectedFragment(48, @"if (true)", "true"),
+        //            new SelectedFragment(48, @"if (true)", "true")
+        //        };
+        //    }
+        //}
 
         public CSharpSuperComplexBranchExperimentWithSwitchWithoutTrue()
                 : base("boolean_expression", "argument", "expression", "switch_label") {}

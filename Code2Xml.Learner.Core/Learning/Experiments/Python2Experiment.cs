@@ -36,7 +36,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             new PythonSuperComplexBranchExperiment(),
             new PythonExpressionStatementExperiment(),
             new PythonArithmeticOperatorExperiment(),
-            //new PythonSuperComplexBranchExperimentWithoutTrue(), 
+            new PythonSuperComplexBranchExperimentWithoutTrue(), 
+
             //new PythonEmptyStatementExperiment(),
         };
 
@@ -239,6 +240,21 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             return new FeatureExtractor();
         }
 
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(1, "str(True)", "True"),
+                    new SelectedFragment(2, "str(o.f(), b)", "o.f()"),
+                    new SelectedFragment(4, "while b", "b"),
+                    new SelectedFragment(7, "if b", "b"),
+                    new SelectedFragment(9, "elif b", "b"),
+                    new SelectedFragment(14, "while True", "True"),
+                    new SelectedFragment(17, "if True", "True"),
+                    new SelectedFragment(19, "elif True", "True"),
+                };
+            }
+        }
+
         public PythonSuperComplexBranchExperiment() : base("test", "argument") {}
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
@@ -266,6 +282,35 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public override FeatureExtractor CreateExtractor() {
             return new FeatureExtractor();
+        }
+        
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(1, "str(True)"),
+                    new SelectedFragment(2, @"b = True"),
+                    new SelectedFragment(2, @"str(o.f(), a)"),
+                    new SelectedFragment(4, @"while b:
+	print (1)"),
+                    new SelectedFragment(5, @"print (1)"),
+                    new SelectedFragment(7, @"if b:
+	pass
+elif b:
+	int(""1"")
+else:
+	print (0 + 1 - 2 * 3 / 4 % 5)"),
+                    new SelectedFragment(10, @"int(""1"")"),
+                    new SelectedFragment(12, @"print (0 + 1 - 2 * 3 / 4 % 5)"),
+                    new SelectedFragment(14, @"while True:
+	pass"),
+                    new SelectedFragment(17, @"if True:
+	pass
+elif True:
+	pass
+else:
+	pass"),
+                };
+            }
         }
 
         public PythonComplexStatementExperiment() : base("small_stmt", "compound_stmt") {}
@@ -315,6 +360,17 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public override FeatureExtractor CreateExtractor() {
             return new FeatureExtractor();
         }
+        
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(1, "str(True)"),
+                    new SelectedFragment(2, @"b = True"),
+                    new SelectedFragment(2, @"str(o.f(), a)"),
+                    new SelectedFragment(10, @"int(""1"")"),
+                };
+            }
+        }
 
         public PythonExpressionStatementExperiment() : base("expr_stmt") {}
 
@@ -335,6 +391,17 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             return new FeatureExtractor();
         }
 
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(12, @"0 + 1", @"+"),
+                    new SelectedFragment(12, @"1 - 2", @"-"),
+                    new SelectedFragment(12, @"2 * 3", @"*"),
+                    new SelectedFragment(12, @"3 / 4", @"/")
+                };
+            }
+        }
+
         public PythonArithmeticOperatorExperiment() : base("PLUS", "MINUS", "STAR", "SLASH") {}
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
@@ -353,6 +420,17 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             return new FeatureExtractor();
         }
 
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(2, "str(o.f(), b)", "o.f()"),
+                    new SelectedFragment(4, "while b", "b"),
+                    new SelectedFragment(7, "if b", "b"),
+                    new SelectedFragment(9, "elif b", "b"),
+                };
+            }
+        }
+
         public PythonSuperComplexBranchExperimentWithoutTrue() : base("test", "argument") {}
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
@@ -367,7 +445,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 && node.Parent.Parent.Name == "trailer"
                 && node.Parent.Parent.Parent.Name == "power") {
                 var atom = node.Parent.Parent.Prev;
-                return atom.Name == "atom" && atom.TokenText == "str";
+                return atom.Name == "atom" && atom.TokenText == "str" && node.TokenText != "True";
             }
             return false;
         }

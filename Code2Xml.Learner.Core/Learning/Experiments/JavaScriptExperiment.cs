@@ -640,17 +640,17 @@ f(0 + 1 - 2 * 3 / 4 % 5);"),
             }
         }
 
-        public override IEnumerable<SelectedFragment> RejectingFragments {
-            get {
-                return new[] {
-                    new SelectedFragment(13, @"for (; true;)", "true"),
-                    new SelectedFragment(@"while (true) {", "true"),
-                    new SelectedFragment(@"} while (true)", "true"),
-                    new SelectedFragment(@"if (true) {", "true"),
-                    new SelectedFragment(16, @"if (true) {", "true")
-                };
-            }
-        }
+        //public override IEnumerable<SelectedFragment> RejectingFragments {
+        //    get {
+        //        return new[] {
+        //            new SelectedFragment(13, @"for (; true;)", "true"),
+        //            new SelectedFragment(@"while (true) {", "true"),
+        //            new SelectedFragment(@"} while (true)", "true"),
+        //            new SelectedFragment(@"if (true) {", "true"),
+        //            new SelectedFragment(16, @"if (true) {", "true")
+        //        };
+        //    }
+        //}
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
             var parentName = node.Parent.SafeName();

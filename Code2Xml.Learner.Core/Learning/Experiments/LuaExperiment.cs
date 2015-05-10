@@ -275,7 +275,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    new SelectedFragment(1, @"print(b)", "b"),
+                    new SelectedFragment(1, @"print(true)", "true"),
                     new SelectedFragment(2, @"print(b, c)", "b"),
                     new SelectedFragment(2, @"rint(b, c)", "c"),
                     new SelectedFragment(7, @"if b then", "b"),
@@ -326,7 +326,6 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    new SelectedFragment(1, @"print(b)", "b"),
                     new SelectedFragment(2, @"print(b, c)", "b"),
                     new SelectedFragment(2, @"rint(b, c)", "c"),
                     new SelectedFragment(7, @"if b then", "b"),
@@ -337,16 +336,16 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             }
         }
 
-        public override IEnumerable<SelectedFragment> RejectingFragments {
-            get {
-                return new[] {
-                    new SelectedFragment(24, @"if true then", "true"),
-                    new SelectedFragment(25, @"elseif true then", "true"),
-                    new SelectedFragment(28, @"while true do", "true"),
-                    new SelectedFragment(32, @"until true", "true"),
-                };
-            }
-        }
+        //public override IEnumerable<SelectedFragment> RejectingFragments {
+        //    get {
+        //        return new[] {
+        //            new SelectedFragment(24, @"if true then", "true"),
+        //            new SelectedFragment(25, @"elseif true then", "true"),
+        //            new SelectedFragment(28, @"while true do", "true"),
+        //            new SelectedFragment(32, @"until true", "true"),
+        //        };
+        //    }
+        //}
 
         public LuaSuperComplexBranchExperimentWithoutTrue() : base("exp") {}
 
@@ -469,7 +468,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    new SelectedFragment(1, @"print(b)"),
+                    new SelectedFragment(1, @"print(true)"),
                     new SelectedFragment(2, @"print(b, c)"),
                     new SelectedFragment(4, @"i = 0"),
                     new SelectedFragment(5, @"f(0 + 1 - 2 * 3 / 4 % 5)"),
@@ -573,7 +572,7 @@ until true"),
         public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    new SelectedFragment(1, @"print(b)"),
+                    new SelectedFragment(1, @"print(true)"),
                     new SelectedFragment(2, @"print(b, c)"),
                     new SelectedFragment(4, @"i = 0"),
                     new SelectedFragment(5, @"f(0 + 1 - 2 * 3 / 4 % 5)"),
