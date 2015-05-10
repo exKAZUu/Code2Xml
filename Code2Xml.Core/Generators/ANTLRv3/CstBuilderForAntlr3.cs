@@ -16,7 +16,6 @@
 
 #endregion
 
-using System;
 using System.Collections.Generic;
 using Antlr.Runtime;
 using Code2Xml.Core.Location;
@@ -42,7 +41,7 @@ namespace Code2Xml.Core.Generators.ANTLRv3 {
             }
             var antlrToken = _stream.Get(count);
             var token = CreateTerminalNode(
-                    Code2XmlConstants.EofTokenName, antlrToken, String.Empty, count,
+                    Code2XmlConstants.EofTokenName, antlrToken, string.Empty, count,
                     Code2XmlConstants.EofRuleId);
             root.AddLast(token);
             return root;
@@ -64,8 +63,7 @@ namespace Code2Xml.Core.Generators.ANTLRv3 {
         }
 
         public virtual void ErrorNode(
-                ITokenStream input, IToken start, IToken stop, RecognitionException e) {
-        }
+                ITokenStream input, IToken start, IToken stop, RecognitionException e) {}
 
         private CstNode CreateTerminalNode(
                 string tokenSetName, IToken antlrToken, string text, int exclusiveEndIndex,
@@ -111,6 +109,24 @@ namespace Code2Xml.Core.Generators.ANTLRv3 {
         public override void ErrorNode(
                 ITokenStream input, IToken start, IToken stop, RecognitionException e) {
             throw new ParseException(e);
+        }
+    }
+
+    public class CstBuilderForAntlr3WithMemorizingError : CstBuilderForAntlr3 {
+        public bool HasErrors { get; private set; }
+        public ParseException LastException { get; private set; }
+
+        public CstBuilderForAntlr3WithMemorizingError(CommonTokenStream stream, string[] tokenNames)
+                : base(stream, tokenNames) {}
+
+        public void Initialize() {
+            HasErrors = false;
+        }
+
+        public override void ErrorNode(
+                ITokenStream input, IToken start, IToken stop, RecognitionException e) {
+            HasErrors = true;
+            LastException = new ParseException(e);
         }
     }
 }

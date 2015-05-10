@@ -69,15 +69,12 @@ namespace Code2Xml.Core.Generators {
             return tree;
         }
 
-        public override CstNode GenerateTreeFromCodeFragment(
-                TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
-            return DelegatingCstGenerator.GenerateTreeFromCodeFragment(codeReader,
-                    throwingParseError);
+        public override CstNode GenerateTreeFromCodeFragment(TextReader codeReader) {
+            return DelegatingCstGenerator.GenerateTreeFromCodeFragment(codeReader);
         }
 
-        public override CstNode GenerateTreeFromCodeFragmentText(
-                string code, bool throwingParseError = DefaultThrowingParseError) {
-            return DelegatingCstGenerator.GenerateTreeFromCodeFragmentText(code, throwingParseError);
+        public override CstNode GenerateTreeFromCodeFragmentText(string code) {
+            return DelegatingCstGenerator.GenerateTreeFromCodeFragmentText(code);
         }
     }
 }

@@ -18,7 +18,6 @@
 
 using System.IO;
 using System.Reflection;
-using Antlr.Runtime.Misc;
 using Antlr4.Runtime;
 using Code2Xml.Core.SyntaxTree;
 
@@ -55,54 +54,67 @@ namespace Code2Xml.Core.Generators.ANTLRv4 {
         /// Parse the fragment of the source code already given.
         /// </summary>
         /// <param name="parser"></param>
-        protected ParserRuleContext ParseFragment(TParser parser) {
-            var errorMonitor = (MonitoringErrorStrategy)parser.ErrorHandler;
+        private static ParserRuleContext ParseFragment(TParser parser) {
+            var errorHandler = new MemorizingErrorStrategy();
+            parser.ErrorHandler = errorHandler;
             parser.InputStream.Mark();
             var methodInfos =
                     parser.GetType().GetMethods(BindingFlags.Public | BindingFlags.Instance);
             foreach (var methodInfo in methodInfos) {
                 if (methodInfo.ReturnType.IsSubclassOf(typeof(ParserRuleContext))
                     && methodInfo.GetParameters().Length == 0) {
-                    errorMonitor.Initialize();
-                    parser.InputStream.Seek(0);
+                    errorHandler.Initialize();
+                    parser.Reset();
                     var ret = methodInfo.Invoke(parser, new object[0]);
-                    if (!errorMonitor.HasErrors) {
+                    if (!errorHandler.HasErrors) {
                         return (ParserRuleContext)ret;
                     }
                 }
             }
+            throw errorHandler.LastException;
         }
 
         private CstNode GenerateSyntaxTree(
-                ICharStream charStream, Func<TParser, ParserRuleContext> parseFunc,
-                bool throwingParseError = DefaultThrowingParseError) {
+                ICharStream charStream, bool parsingCompleteCode, bool throwingParseError) {
             var lexer = CreateLexer(charStream);
             var commonTokenStream = new CommonTokenStream(lexer);
             var parser = CreateParser(commonTokenStream);
             var builder = new CstBuilderForAntlr4(parser);
             if (throwingParseError) {
-                parser.ErrorHandler = new MyBailErrorStrategy();
+                parser.ErrorHandler = new BailErrorStrategy();
             }
-            builder.Visit(parseFunc(parser));
+            builder.Visit(parsingCompleteCode ? Parse(parser) : ParseFragment(parser));
             return builder.FinishParsing();
         }
 
         public override CstNode GenerateTreeFromCode(
                 TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
-            return GenerateSyntaxTree(new AntlrInputStream(codeReader), Parse, throwingParseError);
+            return GenerateSyntaxTree(new AntlrInputStream(codeReader), true, throwingParseError);
         }
 
         public override CstNode GenerateTreeFromCodeText(
                 string code, bool throwingParseError = DefaultThrowingParseError) {
-            return GenerateSyntaxTree(new AntlrInputStream(code), Parse, throwingParseError);
+            return GenerateSyntaxTree(new AntlrInputStream(code), true, throwingParseError);
         }
 
-        private void TryParse(ICharStream charStream) {
+        public override CstNode GenerateTreeFromCodeFragment(TextReader codeReader) {
+            return GenerateSyntaxTree(new AntlrInputStream(codeReader), false, false);
+        }
+
+        public override CstNode GenerateTreeFromCodeFragmentText(string code) {
+            return GenerateSyntaxTree(new AntlrInputStream(code), false, false);
+        }
+
+        private void TryParse(ICharStream charStream, bool parsingCompleteCode) {
             var lexer = CreateLexer(charStream);
             var commonTokenStream = new CommonTokenStream(lexer);
             var parser = CreateParser(commonTokenStream);
-            parser.ErrorHandler = new MyBailErrorStrategy();
-            Parse(parser);
+            parser.ErrorHandler = new BailErrorStrategy();
+            if (parsingCompleteCode) {
+                Parse(parser);
+            } else {
+                ParseFragment(parser);
+            }
         }
 
         /// <summary>
@@ -111,7 +123,7 @@ namespace Code2Xml.Core.Generators.ANTLRv4 {
         /// <param name="codeReader"></param>
         /// <returns></returns>
         public override void TryParseFromCode(TextReader codeReader) {
-            TryParse(new AntlrInputStream(codeReader));
+            TryParse(new AntlrInputStream(codeReader), true);
         }
 
         /// <summary>
@@ -120,7 +132,15 @@ namespace Code2Xml.Core.Generators.ANTLRv4 {
         /// <param name="code"></param>
         /// <returns></returns>
         public override void TryParseFromCodeText(string code) {
-            TryParse(new AntlrInputStream(code));
+            TryParse(new AntlrInputStream(code), true);
+        }
+
+        public override void TryParseFromCodeFragment(TextReader codeReader) {
+            TryParse(new AntlrInputStream(codeReader), false);
+        }
+
+        public override void TryParseFromCodeFragmentText(string code) {
+            TryParse(new AntlrInputStream(code), false);
         }
     }
 
@@ -137,8 +157,9 @@ namespace Code2Xml.Core.Generators.ANTLRv4 {
         public override void Sync(Parser recognizer) {}
     }
 
-    public class MonitoringErrorStrategy : DefaultErrorStrategy {
-        public bool HasErrors { get; set; }
+    public class MemorizingErrorStrategy : DefaultErrorStrategy {
+        public bool HasErrors { get; private set; }
+        public ParseException LastException { get; private set; }
 
         public void Initialize() {
             HasErrors = false;
@@ -146,10 +167,13 @@ namespace Code2Xml.Core.Generators.ANTLRv4 {
 
         public override void Recover(Parser recognizer, RecognitionException e) {
             HasErrors = true;
+            LastException = new ParseException(e);
         }
 
         public override IToken RecoverInline(Parser recognizer) {
             HasErrors = true;
+            var e = new InputMismatchException(recognizer);
+            LastException = new ParseException(recognizer.CurrentToken.ToString(), e);
             return base.RecoverInline(recognizer);
         }
 

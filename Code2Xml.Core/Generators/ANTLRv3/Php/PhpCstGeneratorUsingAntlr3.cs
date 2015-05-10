@@ -66,9 +66,9 @@ namespace Code2Xml.Core.Generators.ANTLRv3.Php {
         public override CstNode GenerateTreeFromCodeText(
                 string code, bool throwingParseError = DefaultThrowingParseError) {
             if (code.Contains("<?php")) {
-                return GenerateSyntaxTree(new ANTLRStringStream(code), throwingParseError);
+                return GenerateSyntaxTree(new ANTLRStringStream(code), true, throwingParseError);
             }
-            var ret = GenerateSyntaxTree(new ANTLRStringStream("<?php " + code), throwingParseError);
+            var ret = GenerateSyntaxTree(new ANTLRStringStream("<?php " + code), true, throwingParseError);
             var node =
                     ret.DescendantsAndSelf()
                             .FirstOrDefault(n => n.HasToken && n.Token.Text == "<?php");

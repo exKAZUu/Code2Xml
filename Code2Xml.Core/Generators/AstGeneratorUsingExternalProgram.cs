@@ -64,6 +64,14 @@ namespace Code2Xml.Core.Generators {
             }
         }
 
+        public override XElement GenerateXmlFromCodeFragment(TextReader codeReader) {
+            return GenerateXmlFromCode(codeReader);
+        }
+
+        public override XElement GenerateXmlFromCodeFragmentText(string code) {
+            return GenerateXmlFromCodeText(code);
+        }
+
         private XElement ReadXml(Process process) {
             var xmlStr = process.StandardOutput.ReadToEnd();
             var normalizedXmlStr = NormalizeXmlText(xmlStr);
@@ -96,6 +104,14 @@ namespace Code2Xml.Core.Generators {
         public override AstNode GenerateTreeFromCodeText(
                 string code, bool throwingParseError = DefaultThrowingParseError) {
             return GenerateXmlFromCodeText(code, throwingParseError).ToAst();
+        }
+
+        public override AstNode GenerateTreeFromCodeFragment(TextReader codeReader) {
+            return GenerateTreeFromCode(codeReader, true);
+        }
+
+        public override AstNode GenerateTreeFromCodeFragmentText(string code) {
+            return GenerateTreeFromCodeText(code, true);
         }
 
         #endregion

@@ -51,14 +51,12 @@ namespace Code2Xml.Core.Generators {
             return GenerateTreeFromCodeText(code, throwingParseError).ToXml();
         }
 
-        public override sealed XElement GenerateXmlFromCodeFragment(
-                TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
-            return GenerateTreeFromCodeFragment(codeReader, throwingParseError).ToXml();
+        public override sealed XElement GenerateXmlFromCodeFragment(TextReader codeReader) {
+            return GenerateTreeFromCodeFragment(codeReader).ToXml();
         }
 
-        public override sealed XElement GenerateXmlFromCodeFragmentText(
-                string code, bool throwingParseError = DefaultThrowingParseError) {
-            return GenerateTreeFromCodeFragmentText(code, throwingParseError).ToXml();
+        public override sealed XElement GenerateXmlFromCodeFragmentText(string code) {
+            return GenerateTreeFromCodeFragmentText(code).ToXml();
         }
 
         #endregion

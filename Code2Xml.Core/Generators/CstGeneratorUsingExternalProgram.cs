@@ -65,6 +65,14 @@ namespace Code2Xml.Core.Generators {
             }
         }
 
+        public override CstNode GenerateTreeFromCodeFragment(TextReader codeReader) {
+            return GenerateTreeFromCode(codeReader, true);
+        }
+
+        public override CstNode GenerateTreeFromCodeFragmentText(string code) {
+            return GenerateTreeFromCodeText(code, true);
+        }
+
         public override void TryParseFromCode(TextReader codeReader) {
             TryParseFromCodeText(codeReader.ReadToEnd());
         }
