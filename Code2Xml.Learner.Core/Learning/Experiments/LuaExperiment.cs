@@ -33,10 +33,10 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         private static readonly LearningExperiment[] Experiments = {
             new LuaComplexStatementExperiment(),
-            new LuaSuperComplexBranchExperiment(),
-            new LuaExpressionStatementExperiment(),
-            new LuaArithmeticOperatorExperiment(),
-            new LuaSuperComplexBranchExperimentWithoutTrue(), 
+            //new LuaSuperComplexBranchExperiment(),
+            //new LuaExpressionStatementExperiment(),
+            //new LuaArithmeticOperatorExperiment(),
+            //new LuaSuperComplexBranchExperimentWithoutTrue(), 
 
             //new LuaComplexBranchExperiment(),
             //new LuaStatementExperiment(),
@@ -275,7 +275,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    new SelectedFragment(1, @"print(true)", "true"),
+                    new SelectedFragment(1, @"print(b)", "b"),
                     new SelectedFragment(2, @"print(b, c)", "b"),
                     new SelectedFragment(2, @"rint(b, c)", "c"),
                     new SelectedFragment(7, @"if b then", "b"),
@@ -326,6 +326,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
+                    new SelectedFragment(1, @"print(b)", "b"),
                     new SelectedFragment(2, @"print(b, c)", "b"),
                     new SelectedFragment(2, @"rint(b, c)", "c"),
                     new SelectedFragment(7, @"if b then", "b"),
@@ -468,7 +469,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    new SelectedFragment(1, @"print(true)"),
+                    new SelectedFragment(1, @"print(b)"),
                     new SelectedFragment(2, @"print(b, c)"),
                     new SelectedFragment(4, @"i = 0"),
                     new SelectedFragment(5, @"f(0 + 1 - 2 * 3 / 4 % 5)"),
@@ -572,7 +573,7 @@ until true"),
         public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    new SelectedFragment(1, @"print(true)"),
+                    new SelectedFragment(1, @"print(b)"),
                     new SelectedFragment(2, @"print(b, c)"),
                     new SelectedFragment(4, @"i = 0"),
                     new SelectedFragment(5, @"f(0 + 1 - 2 * 3 / 4 % 5)"),

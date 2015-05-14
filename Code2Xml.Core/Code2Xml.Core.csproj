@@ -97,6 +97,7 @@
     <Compile Include="Generators\ANTLRv4\Antlr4Extensions.cs" />
     <Compile Include="Generators\ANTLRv4\CstBuilderForAntlr4.cs" />
     <Compile Include="Generators\ANTLRv4\CstGeneratorUsingAntlr4.cs" />
+    <Compile Include="Generators\ANTLRv4\SQLite\SQLiteCstGenerator.cs" />
     <Compile Include="Generators\AstGenerator.cs" />
     <Compile Include="Generators\AstGenerators.cs" />
     <Compile Include="Generators\AstGeneratorUsingExternalProgram.cs" />
@@ -218,11 +219,6 @@
       <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.Clojure</CustomToolNamespace>
       <Listener>False</Listener>
     </Antlr4>
-    <Antlr4 Include="Generators\ANTLRv4\ECMAScript\ECMAScript.g4">
-      <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.ECMAScript</CustomToolNamespace>
-      <Listener>False</Listener>
-    </Antlr4>
     <Antlr4 Include="Generators\ANTLRv4\Erlang\Erlang.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.Erlang</CustomToolNamespace>
@@ -297,6 +293,26 @@
     <None Include="Dependencies\Ruby\xml2ruby18.rb" />
     <None Include="Dependencies\Ruby\xml2ruby19.rb" />
     <None Include="Dependencies\Ruby\xml2ruby20.rb" />
+    <Antlr4 Include="Generators\ANTLRv4\SQLite\SQLite.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.SQLite</CustomToolNamespace>
+      <Listener>False</Listener>
+    </Antlr4>
+    <Antlr4 Include="Generators\ANTLRv4\Scala\Scala.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.Scala</CustomToolNamespace>
+      <Listener>False</Listener>
+    </Antlr4>
+    <Antlr4 Include="Generators\ANTLRv4\ECMAScript\ECMAScript.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.ECMAScript</CustomToolNamespace>
+      <Listener>False</Listener>
+    </Antlr4>
+    <Antlr4 Include="Generators\ANTLRv4\CSharp\CSharp4.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.CSharp</CustomToolNamespace>
+      <Listener>False</Listener>
+    </Antlr4>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -336,6 +352,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Generators\ANTLRv4\AspectJ\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

@@ -24,8 +24,8 @@ namespace Code2Xml.Core {
 
         public const string EofTokenName = "EOF";
         public const string EofRuleId = "EOF";
-        public const string DefaultRuleId = "-1";
-        public const string DefaultHiddenRuleId = "-2";
+        public const string DefaultRuleId = "none";
+        public const string DefaultHiddenRuleId = "hidden";
 
         public const string StartLineName = "startline";
         public const string StartPositionName = "startpos";

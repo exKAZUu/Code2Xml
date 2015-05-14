@@ -22,6 +22,7 @@ using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using System.Numerics;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Runtime.Serialization.Formatters.Binary;
 using Code2Xml.Core.SyntaxTree;
 using Code2Xml.Learner.Core.Learning.Experiments;
@@ -71,14 +72,21 @@ namespace Code2Xml.Learner.Core.Learning {
                 LearningExperiment oracle, SeedNodeSet seedNodeSet = null) {
             var fileName = codePaths.Count > 0
                     ? string.Join(",", codePaths).GetHashCode() + "_" +
-                      (codePaths.First() + "," + codePaths.Last()).GetHashCode() + ".encoded"
+                      (codePaths.First() + "," + codePaths.Last() + ",").GetHashCode() + "_"
+                      + codePaths.Count + ".encoded"
                     : null;
             var formatter = new BinaryFormatter();
             if (fileName != null && File.Exists(fileName)) {
                 using (var fs = new FileStream(fileName, FileMode.Open, FileAccess.Read)) {
                     try {
-                        return ((EncodingResult)formatter.Deserialize(fs)).MakeImmutable();
-                    } catch {}
+                        var ret = ((EncodingResult)formatter.Deserialize(fs)).MakeImmutable();
+                        Console.WriteLine("############### Warning ###############");
+                        Console.WriteLine("Cache file of encoded result is used.");
+                        Console.WriteLine("#######################################");
+                        return ret;
+                    } catch (Exception e) {
+                        Console.Error.WriteLine(e);
+                    }
                 }
             }
 
@@ -131,7 +139,8 @@ namespace Code2Xml.Learner.Core.Learning {
         }
 
         private void EncodeTargetNodes(
-                IEnumerable<CstNode> allUppermostNodes, EncodingResult result, LearningExperiment oracle) {
+                IEnumerable<CstNode> allUppermostNodes, EncodingResult result,
+                LearningExperiment oracle) {
             foreach (var uppermostNode in allUppermostNodes) {
                 var vector = uppermostNode.GetFeatureVector(_featureString2Bit, _extractor);
                 if (oracle.IsAcceptedUsingOracle(uppermostNode)) {

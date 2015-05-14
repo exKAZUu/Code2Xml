@@ -36,71 +36,107 @@ grammar Python3;
 tokens { INDENT, DEDENT }
 
 @lexer::header {
-  using System;
-  using System.Collections.Generic;
+	using System;
+	using System.Collections.Generic;
 }
 
 @lexer::members {
-  // A queue where extra tokens are pushed on (see the NEWLINE lexer rule).         
-  private Queue<IToken> tokens = new Queue<IToken>();
-  
-  // The stack that keeps track of the indentation level.
-  private Stack<int> indents = new Stack<int>();
-  
-  // The amount of opened braces, brackets and parenthesis.
-  private int opened = 0;
+    // A queue where extra tokens are pushed on (see the NEWLINE lexer rule).
+    private readonly List<IToken> _tokens = new List<IToken>();
 
-  public override void Emit(IToken t) {
-    base.Token = t;
-    tokens.offer(t);
-  }
+    // The stack that keeps track of the indentation level.
+    private readonly Stack<int> _indents = new Stack<int>();
 
-  public override IToken NextToken() {
+    // The amount of opened braces, brackets and parenthesis.
+    private int _opened = 0;
 
-    // Check if the end-of-file is ahead and there are still some DEDENTS expected.
-    if (_input.LA(1) == TokenConstants.Eof && !this.indents.isEmpty()) {
+    // The most recently produced token.
+    private IToken _lastToken;
 
-      // First emit an extra line break that serves as the end of the statement.
-      this.emit(new CommonToken(Python3Parser.NEWLINE, "\n"));
-
-      // Now emit as much DEDENT tokens as needed.
-      while (!indents.isEmpty()) {
-        this.emit(new CommonToken(Python3Parser.DEDENT, "DEDENT"));
-        indents.pop();
-      }
+    public override void Emit(IToken t) {
+        Token = t;
+        _tokens.Add(t);
     }
 
-    var next = base.NextToken();
+    public override IToken NextToken() {
+        // Check if the end-of-file is ahead and there are still some DEDENTS expected.
+        if (_input.LA(1) == TokenConstants.Eof && _indents.Count != 0) {
+            // Remove any trailing EOF tokens from our buffer.
+            for (int i = _tokens.Count - 1; i >= 0; i--) {
+                if (_tokens[i].Type == TokenConstants.Eof) {
+                    _tokens.RemoveAt(i);
+                }
+            }
 
-    return tokens.isEmpty() ? next : tokens.poll();
-  }  
-  
-  // Calculates the indentation of the provided spaces, taking the 
-  // following rules into account:
-  //
-  // "Tabs are replaced (from left to right) by one to eight spaces 
-  //  such that the total number of characters up to and including 
-  //  the replacement is a multiple of eight [...]"
-  //
-  //  -- https://docs.python.org/3.1/reference/lexical_analysis.html#indentation
-  static int getIndentationCount(String spaces) {
-    
-    int count = 0;
-          
-    foreach (var ch in spaces) {
-      switch (ch) {
-        case '\t':
-          count += 8 - (count % 8);
-          break;
-        default:
-          // A normal space char.
-          count++;
-          break;
-      }
+            // First emit an extra line break that serves as the end of the statement.
+            Emit(CommonToken(Python3Parser.NEWLINE, "\n"));
+
+            // Now emit as much DEDENT tokens as needed.
+            while (_indents.Count != 0) {
+                Emit(CreateDedent());
+                _indents.Pop();
+            }
+
+            // Put the EOF back on the token stream.
+            Emit(CommonToken(Python3Parser.Eof, "<EOF>"));
+        }
+
+        var next = base.NextToken();
+
+        if (next.Channel == TokenConstants.DefaultChannel) {
+            // Keep track of the last token on the default channel.
+            _lastToken = next;
+        }
+        if (_tokens.Count == 0) {
+            return next;
+        }
+        var ret = _tokens[0];
+        _tokens.RemoveAt(0);
+        return ret;
     }
-          
-    return count;                                
-  }
+
+    private IToken CreateDedent() {
+        var dedent = CommonToken(Python3Parser.DEDENT, "");
+        dedent.Line = _lastToken.Line;
+        return dedent;
+    }
+
+    private CommonToken CommonToken(int type, string text) {
+        var stop = CharIndex - 1;
+        var start = text.Length == 0 ? stop : stop - text.Length + 1;
+        return new CommonToken(_tokenFactorySourcePair, type,
+				TokenConstants.DefaultChannel, start, stop);
+    }
+
+    // Calculates the indentation of the provided spaces, taking the
+    // following rules into account:
+    //
+    // "Tabs are replaced (from left to right) by one to eight spaces
+    //  such that the total number of characters up to and including
+    //  the replacement is a multiple of eight [...]"
+    //
+    //  -- https://docs.python.org/3.1/reference/lexical_analysis.html#indentation
+    private static int GetIndentationCount(string spaces) {
+        int count = 0;
+
+        foreach (var ch in spaces) {
+            switch (ch) {
+            case '\t':
+                count += 8 - (count % 8);
+                break;
+            default:
+                // A normal space char.
+                count++;
+                break;
+            }
+        }
+
+        return count;
+    }
+
+    private boolean AtStartOfInput() {
+        return Column == 0 && Line == 1;
+    }
 }
 
 /*
@@ -375,9 +411,9 @@ for_stmt
 
 /// try_stmt: ('try' ':' suite
 ///            ((except_clause ':' suite)+
-/// 	    ['else' ':' suite]
-/// 	    ['finally' ':' suite] |
-/// 	   'finally' ':' suite))
+///       ['else' ':' suite]
+///       ['finally' ':' suite] |
+///      'finally' ':' suite))
 try_stmt
  : TRY ':' suite ( ( except_clause ':' suite )+ 
                    ( ELSE ':' suite )? 
@@ -701,38 +737,38 @@ CONTINUE : 'continue';
 BREAK : 'break';
 
 NEWLINE
- : ( '\r'? '\n' | '\r' ) SPACES?
+ : ( {AtStartOfInput()}?   SPACES
+   | ( '\r'? '\n' | '\r' ) SPACES?
+   )
    {
-     var spaces = this.getText().replaceAll("[\r\n]+", "");
-     var next = _input.LA(1);
+		var newLine = Text.Replace("[^\r\n]+", "");
+		var spaces = Text.Replace("[\r\n]+", "");
+		var next = _input.LA(1);
 
-     if (opened > 0 || next == '\r' || next == '\n' || next == '#') {
-       // If we're inside a list or on a blank line, ignore all indents, 
-       // dedents and line breaks.
-       this.skip();
-     }
-     else {
-       this.emit(new CommonToken(NEWLINE, "\n"));
+		if (_opened > 0 || next == '\r' || next == '\n' || next == '#') {
+			// If we're inside a list or on a blank line, ignore all indents, 
+			// dedents and line breaks.
+			Channel = Hidden;
+		} else {
+			Emit(CommonToken(NEWLINE, newLine));
 
-       int indent = getIndentationCount(spaces);
-       int previous = indents.isEmpty() ? 0 : indents.peek();
+			int indent = GetIndentationCount(spaces);
+			int previous = _indents.Count == 0 ? 0 : _indents.Peek();
 
-       if (indent == previous) {
-         // skip indents of the same size as the present indent-size
-         this.skip();
-       }
-       else if (indent > previous) {
-         indents.push(indent);
-         this.emit(new CommonToken(Python3Parser.INDENT, "INDENT"));
-       }
-       else {
-         // Possibly emit more than 1 DEDENT token.
-         while(!indents.isEmpty() && indents.peek() > indent) {
-           this.emit(new CommonToken(Python3Parser.DEDENT, "DEDENT"));
-           indents.pop();
-         }
-       }
-     }
+			if (indent == previous) {
+				// channel(HIDDEN) indents of the same size as the present indent-size
+				Channel = Hidden;
+			} else if (indent > previous) {
+				_indents.Push(indent);
+				Emit(CommonToken(Python3Parser.INDENT, spaces));
+			} else {
+				// Possibly emit more than 1 DEDENT token.
+				while (_indents.Count != 0 && _indents.Peek() > indent) {
+					this.emit(CreateDedent());
+					_indents.Pop();
+				}
+			}
+		}
    }
  ;
 
@@ -788,15 +824,15 @@ IMAG_NUMBER
 DOT : '.';
 ELLIPSIS : '...';
 STAR : '*';
-OPEN_PAREN : '(' {opened++;};
-CLOSE_PAREN : ')' {opened--;};
+OPEN_PAREN : '(' {_opened++;};
+CLOSE_PAREN : ')' {_opened--;};
 COMMA : ',';
 COLON : ':';
 SEMI_COLON : ';';
 POWER : '**';
 ASSIGN : '=';
-OPEN_BRACK : '[' {opened++;};
-CLOSE_BRACK : ']' {opened--;};
+OPEN_BRACK : '[' {_opened++;};
+CLOSE_BRACK : ']' {_opened--;};
 OR_OP : '|';
 XOR : '^';
 AND_OP : '&';
@@ -808,8 +844,8 @@ DIV : '/';
 MOD : '%';
 IDIV : '//';
 NOT_OP : '~';
-OPEN_BRACE : '{' {opened++;};
-CLOSE_BRACE : '}' {opened--;};
+OPEN_BRACE : '{' {_opened++;};
+CLOSE_BRACE : '}' {_opened--;};
 LESS_THAN : '<';
 GREATER_THAN : '>';
 EQUALS : '==';
@@ -834,7 +870,7 @@ POWER_ASSIGN : '**=';
 IDIV_ASSIGN : '//=';
 
 SKIP
- : ( SPACES | COMMENT | LINE_JOINING ) -> skip
+ : ( SPACES | COMMENT | LINE_JOINING ) -> channel(HIDDEN)
  ;
 
 UNKNOWN_CHAR

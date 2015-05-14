@@ -26,7 +26,7 @@ using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Core.Generators.ANTLRv4 {
     /// <summary>
-    /// Note that you should replace "skip" with "channel(HIDDEN)".
+    /// Note that you should replace "skip" with "channel(HIDDEN)" in grammar files.
     /// </summary>
     public class CstBuilderForAntlr4 : AbstractParseTreeVisitor<object> {
         public Parser Parser { get; set; }
@@ -127,7 +127,7 @@ namespace Code2Xml.Core.Generators.ANTLRv4 {
 
         private static CstToken CreateHiddenToken(string name, IToken token) {
             var text = token.Text;
-            return new CstToken(name, text, CreateCodeRange(token, text));
+            return new CstToken(name, text, Code2XmlConstants.DefaultHiddenRuleId, CreateCodeRange(token, text));
         }
 
         private static CodeRange CreateCodeRange(IToken token, string text) {

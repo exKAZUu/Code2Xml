@@ -46,13 +46,13 @@ namespace Code2Xml.Core.SyntaxTree {
         public CstToken(string name) : this(name, "", CodeRange.Nil) {}
 
         public CstToken(string name, string text)
-                : this(name, text, Code2XmlConstants.DefaultRuleId, CodeRange.Nil) {}
+                : this(name, text, "", CodeRange.Nil) {}
 
         public CstToken(string name, string text, string ruleId)
                 : this(name, text, ruleId, CodeRange.Nil) {}
 
         public CstToken(string name, string text, CodeRange range)
-                : this(name, text, Code2XmlConstants.DefaultRuleId, range) {}
+                : this(name, text, "", range) {}
 
         public CstToken(string name, string text, string ruleId, CodeRange range)
                 : this(name, text, "", "", ruleId, range) {}

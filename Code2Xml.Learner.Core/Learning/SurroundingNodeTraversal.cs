@@ -102,7 +102,7 @@ namespace Code2Xml.Learner.Core.Learning {
         private static Tuple<string, bool> GetSurroundingPaths(
                 CstNode node, string path, ICollection<CstNode> surroundingNodes,
                 FeatureExtractor extractor, ISet<string> paths,
-                HashSet<CstNode> ancestors) {
+                IDictionary<CstNode, string> ancestors) {
             var token = "";
             var temporal = false;
             var count = 0;
@@ -113,8 +113,11 @@ namespace Code2Xml.Learner.Core.Learning {
                 foreach (var child in node.Children()) {
                     count++;
                     if (surroundingNodes.Contains(child)) {
-                        var newPath = path + (ancestors.Contains(child) ? "/" : ">")
-                                      + child.Name + child.RuleId;
+                        //var newPath = path + (ancestors.Contains(child) ? "/" : ">")
+                        //              + child.Name + child.RuleId;
+                        var newPath = (ancestors.ContainsKey(child)
+                                ? ancestors[child]
+                                : path + ">" + child.Name + child.RuleId);
                         var ret = GetSurroundingPaths(
                                 child, newPath, surroundingNodes, extractor, paths, ancestors);
                         temporal = ret.Item2;
@@ -138,7 +141,7 @@ namespace Code2Xml.Learner.Core.Learning {
 
         private static string GetFeatureVector(
                 CstNode node, string path, IDictionary<string, BigInteger> featureString2Bit,
-                FeatureExtractor extractor, ICollection<CstNode> ancestors,
+                FeatureExtractor extractor, IDictionary<CstNode, string> ancestors,
                 ref BigInteger vector) {
             BigInteger bit;
             var token = "";
@@ -146,8 +149,11 @@ namespace Code2Xml.Learner.Core.Learning {
                 token = extractor.GetToken(node);
             } else {
                 foreach (var child in node.Children()) {
-                    var newPath = path + (ancestors.Contains(child) ? "/" : ">")
-                                  + child.Name + child.RuleId;
+                    //var newPath = path + (ancestors.Contains(child) ? "/" : ">")
+                    //              + child.Name + child.RuleId;
+                    var newPath = (ancestors.ContainsKey(child)
+                            ? ancestors[child]
+                            : path + ">" + child.Name + child.RuleId);
                     if (featureString2Bit.TryGetValue(newPath, out bit)) {
                         vector |= bit;
                         var ret = GetFeatureVector(
@@ -173,7 +179,7 @@ namespace Code2Xml.Learner.Core.Learning {
                 CstNode outermostNode) {
             var path = node.Name;
             var paths = new HashSet<string>();
-            var ancestors = new HashSet<CstNode> { node };
+            var ancestors = new Dictionary<CstNode, string> { { node, node.Name } };
 
             paths.Add(node.Name);
             //paths.Add("'" + extractor.GetToken(node));
@@ -185,8 +191,8 @@ namespace Code2Xml.Learner.Core.Learning {
                 var originalNode = node;
                 path = node.Name + node.RuleId;
                 while ((node = node.Parent) != outermostNode) {
+                    ancestors.Add(node, path + "<" + node.Name);
                     path = path + "<" + node.Name + node.RuleId;
-                    ancestors.Add(node);
                     paths.Add(path);
                 }
                 path = path + "<" + node.Name; // must not have RuleId
@@ -223,7 +229,7 @@ namespace Code2Xml.Learner.Core.Learning {
             BigInteger bit;
             var path = node.Name;
             var vector = BigInteger.Zero;
-            var ancestors = new HashSet<CstNode> { node };
+            var ancestors = new Dictionary<CstNode, string> { { node, node.Name } };
 
             if (featureString2Bit.TryGetValue(node.Name, out bit)) {
                 vector |= bit;
@@ -241,7 +247,7 @@ namespace Code2Xml.Learner.Core.Learning {
                     if (!featureString2Bit.TryGetValue(newPath, out bit)) {
                         break;
                     }
-                    ancestors.Add(node);
+                    ancestors.Add(node, path + "<" + node.Name);
                     path = newPath;
                     // vector |= bit; is unnecesarry
                 }

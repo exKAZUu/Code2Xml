@@ -20,7 +20,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Numerics;
 using Code2Xml.Core.SyntaxTree;
 using NUnit.Framework;
 using ParserTests;
@@ -29,8 +28,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     public abstract class Experiment {
         public const int SkipCount = 0;
         public const int TakeCount = 0;
-        private const int ProjectCount = 50;
-        private const int ProjectCountToLearn = 40;
+        private const int ProjectCount = 5;
+        private const int ProjectCountToLearn = 3;
         protected readonly Dictionary<string, StreamWriter> Writers;
 
         protected Experiment() {
@@ -132,9 +131,11 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     learningResult.EncodingResult.SeedAcceptedVector2GroupPath.Keys;
             foreach (var vector in seedAcceptedVectors) {
                 writer.WriteLine("--------------------------------------");
-                writer.WriteLine(learningResult.EncodingResult.Vector2Node[vector].Code);
-                writer.WriteLine(
-                        GetGoodAncestorNode(learningResult.EncodingResult.Vector2Node[vector]).Code);
+                if (learningResult.EncodingResult.Vector2Node != null) {
+                    writer.WriteLine(learningResult.EncodingResult.Vector2Node[vector].Code);
+                    writer.WriteLine(GetGoodAncestorNode(
+                            learningResult.EncodingResult.Vector2Node[vector]).Code);
+                }
                 var features = learningResult.FeatureEncoder.GetFeatureStringsByVector(vector);
                 foreach (var feature in features) {
                     if (feature.Contains("Requires") || feature.Contains("Contract")) {
@@ -148,12 +149,16 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     learningResult.EncodingResult.SeedAcceptedVector2GroupPath.Keys;
             foreach (var vector in seedRejectedVectors) {
                 writer.WriteLine("--------------------------------------");
-                writer.WriteLine(learningResult.EncodingResult.Vector2Node[vector].Code);
-                writer.WriteLine(
-                        GetGoodAncestorNode(learningResult.EncodingResult.Vector2Node[vector]).Code);
+                if (learningResult.EncodingResult.Vector2Node != null) {
+                    writer.WriteLine(learningResult.EncodingResult.Vector2Node[vector].Code);
+                    writer.WriteLine(GetGoodAncestorNode
+                            (learningResult.EncodingResult.Vector2Node[vector]).Code);
+                }
                 var features = learningResult.FeatureEncoder.GetFeatureStringsByVector(vector);
                 foreach (var feature in features) {
-                    writer.WriteLine(learningResult.EncodingResult.Vector2Node[vector].Code);
+                    if (learningResult.EncodingResult.Vector2Node != null) {
+                        writer.WriteLine(learningResult.EncodingResult.Vector2Node[vector].Code);
+                    }
                     if (feature.Contains("Requires") || feature.Contains("Contract")) {
                         writer.WriteLine(Beautify(feature));
                     }
@@ -166,11 +171,9 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                 ClassificationResult classificationResult, LearningResult learningResult) {
             var nodeAndVectors = new[] {
                 classificationResult.WronglyAcceptedNodes
-                        .Zip<CstNode, BigInteger, Tuple<CstNode, BigInteger>>(
-                                classificationResult.WronglyAcceptedVectors, Tuple.Create),
+                        .Zip(classificationResult.WronglyAcceptedVectors, Tuple.Create),
                 classificationResult.WronglyRejectedNodes
-                        .Zip<CstNode, BigInteger, Tuple<CstNode, BigInteger>>(
-                                classificationResult.WronglyRejectedVectors, Tuple.Create)
+                        .Zip(classificationResult.WronglyRejectedVectors, Tuple.Create)
             };
             var titles = new[] {
                 "WronglyAcceptedNodes", "WronglyRejectedNodes"

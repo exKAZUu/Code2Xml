@@ -52,7 +52,7 @@ namespace Code2Xml.Tools.AntlrHelper {
                         Arguments = '"' + grammarFile + '"',
                         CreateNoWindow = true,
                         UseShellExecute = true,
-                        WorkingDirectory = Path.GetDirectoryName(grammarFile),
+                        WorkingDirectory = Path.GetDirectoryName(grammarFile)
                     };
                     using (var p = Process.Start(info)) {
                         p.WaitForExit();
@@ -68,6 +68,11 @@ namespace Code2Xml.Tools.AntlrHelper {
                             LexerModifier.Modify(file);
                         }
                     }
+                }
+                var grammar4Files = Directory.GetFiles(dir, "*.g4", SearchOption.AllDirectories);
+                foreach (var grammarFile in grammar4Files) {
+                    Console.WriteLine(grammarFile);
+                    Antlr4ParserModifier.Modify(grammarFile);
                 }
             }
         }

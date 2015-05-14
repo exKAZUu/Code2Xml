@@ -32,11 +32,11 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         private const string LangName = "Python2";
 
         private static readonly LearningExperiment[] Experiments = {
-            new PythonComplexStatementExperiment(),
+            //new PythonComplexStatementExperiment(),
             new PythonSuperComplexBranchExperiment(),
-            new PythonExpressionStatementExperiment(),
-            new PythonArithmeticOperatorExperiment(),
-            new PythonSuperComplexBranchExperimentWithoutTrue(), 
+            //new PythonExpressionStatementExperiment(),
+            //new PythonArithmeticOperatorExperiment(),
+            //new PythonSuperComplexBranchExperimentWithoutTrue(), 
 
             //new PythonEmptyStatementExperiment(),
         };
@@ -243,8 +243,8 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    new SelectedFragment(1, "str(True)", "True"),
-                    new SelectedFragment(2, "str(o.f(), b)", "o.f()"),
+                    new SelectedFragment(1, "str(b)", "b"),
+                    new SelectedFragment(2, "str(o.f(), a)", "o.f()"),
                     new SelectedFragment(4, "while b", "b"),
                     new SelectedFragment(7, "if b", "b"),
                     new SelectedFragment(9, "elif b", "b"),
@@ -287,7 +287,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    new SelectedFragment(1, "str(True)"),
+                    new SelectedFragment(1, @"str(b)"),
                     new SelectedFragment(2, @"b = True"),
                     new SelectedFragment(2, @"str(o.f(), a)"),
                     new SelectedFragment(4, @"while b:
@@ -364,7 +364,7 @@ else:
         public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    new SelectedFragment(1, "str(True)"),
+                    new SelectedFragment(1, @"str(b)"),
                     new SelectedFragment(2, @"b = True"),
                     new SelectedFragment(2, @"str(o.f(), a)"),
                     new SelectedFragment(10, @"int(""1"")"),
@@ -423,7 +423,8 @@ else:
         public override IEnumerable<SelectedFragment> AcceptingFragments {
             get {
                 return new[] {
-                    new SelectedFragment(2, "str(o.f(), b)", "o.f()"),
+                    new SelectedFragment(1, "str(b)", "b"),
+                    new SelectedFragment(2, "str(o.f(), a)", "o.f()"),
                     new SelectedFragment(4, "while b", "b"),
                     new SelectedFragment(7, "if b", "b"),
                     new SelectedFragment(9, "elif b", "b"),

@@ -25,99 +25,101 @@ using System.Numerics;
 using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Learner.Core.Learning {
-	[Serializable]
-	public class EncodingResult {
-		public int SeedNodeCount { get; set; }
-		public int SeedAcceptedNodeCount { get; set; }
+    [Serializable]
+    public class EncodingResult {
+        public int SeedNodeCount { get; set; }
+        public int SeedAcceptedNodeCount { get; set; }
 
-		public int SeedVectorCount {
-			get { return SeedVectorSet.Count; }
-		}
+        public int SeedVectorCount {
+            get { return SeedVectorSet.Count; }
+        }
 
-		public int VectorCount {
-			get { return IdealVectorSet.Count; }
-		}
+        public int VectorCount {
+            get { return IdealVectorSet.Count; }
+        }
 
-		public readonly RevealedVectorSet IdealVectorSet;
-		public readonly RevealedVectorSet SeedVectorSet;
+        public readonly RevealedVectorSet IdealVectorSet;
+        public readonly RevealedVectorSet SeedVectorSet;
 
-		public IDictionary<BigInteger, string> IdealAcceptedVector2GroupPath {
-			get { return IdealVectorSet.Accepted; }
-		}
+        public IDictionary<BigInteger, string> IdealAcceptedVector2GroupPath {
+            get { return IdealVectorSet.Accepted; }
+        }
 
-		public IDictionary<BigInteger, string> IdealRejectedVector2GroupPath {
-			get { return IdealVectorSet.Rejected; }
-		}
+        public IDictionary<BigInteger, string> IdealRejectedVector2GroupPath {
+            get { return IdealVectorSet.Rejected; }
+        }
 
-		public IDictionary<BigInteger, string> SeedAcceptedVector2GroupPath {
-			get { return SeedVectorSet.Accepted; }
-		}
+        public IDictionary<BigInteger, string> SeedAcceptedVector2GroupPath {
+            get { return SeedVectorSet.Accepted; }
+        }
 
-		public IDictionary<BigInteger, string> SeedRejectedVector2GroupPath {
-			get { return SeedVectorSet.Rejected; }
-		}
+        public IDictionary<BigInteger, string> SeedRejectedVector2GroupPath {
+            get { return SeedVectorSet.Rejected; }
+        }
 
-		[NonSerialized] private IDictionary<BigInteger, CstNode> _vector2Node;
+        [NonSerialized] private IDictionary<BigInteger, CstNode> _vector2Node;
 
-		public IDictionary<BigInteger, CstNode> Vector2Node {
-			get { return _vector2Node; }
-		}
+        public IDictionary<BigInteger, CstNode> Vector2Node {
+            get { return _vector2Node; }
+        }
 
-		public IDictionary<BigInteger, int> Vector2Count { get; private set; }
+        public IDictionary<BigInteger, int> Vector2Count { get; private set; }
 
-		public EncodingResult() {
-			_vector2Node = new Dictionary<BigInteger, CstNode>();
-			Vector2Count = new Dictionary<BigInteger, int>();
+        public EncodingResult() {
+            _vector2Node = new Dictionary<BigInteger, CstNode>();
+            Vector2Count = new Dictionary<BigInteger, int>();
 
-			IdealVectorSet = new RevealedVectorSet();
-			SeedVectorSet = new RevealedVectorSet();
-		}
+            IdealVectorSet = new RevealedVectorSet();
+            SeedVectorSet = new RevealedVectorSet();
+        }
 
-		public RevealedVectorSet CreateTrainingVectorSet() {
-			return new RevealedVectorSet(
-					new Dictionary<BigInteger, string>(SeedVectorSet.Accepted),
-					new Dictionary<BigInteger, string>(SeedVectorSet.Rejected));
-		}
+        public RevealedVectorSet CreateTrainingVectorSet() {
+            return new RevealedVectorSet(
+                    new Dictionary<BigInteger, string>(SeedVectorSet.Accepted),
+                    new Dictionary<BigInteger, string>(SeedVectorSet.Rejected));
+        }
 
-		public EncodingResult MakeImmutable() {
-			_vector2Node = _vector2Node.ToImmutableDictionary();
-			Vector2Count = Vector2Count.ToImmutableDictionary();
+        public EncodingResult MakeImmutable() {
+            if (_vector2Node != null) {
+                _vector2Node = _vector2Node.ToImmutableDictionary();
+            }
+            Vector2Count = Vector2Count.ToImmutableDictionary();
 
-			IdealVectorSet.MakeImmutable();
+            IdealVectorSet.MakeImmutable();
             SeedVectorSet.MakeImmutable();
-		    if (IdealVectorSet.Accepted.Keys.Intersect(IdealVectorSet.Rejected.Keys).Any()) {
-		        throw new Exception();
-		    }
-		    if (IdealVectorSet.Accepted.Keys.Intersect(SeedVectorSet.Rejected.Keys).Any()) {
-		        throw new Exception("Strange!");
-		    }
-		    if (IdealVectorSet.Rejected.Keys.Intersect(SeedVectorSet.Accepted.Keys).Any()) {
-		        throw new Exception("Strange!");
-		    }
-			return this;
-		}
+            if (IdealVectorSet.Accepted.Keys.Intersect(IdealVectorSet.Rejected.Keys).Any()) {
+                throw new Exception();
+            }
+            if (IdealVectorSet.Accepted.Keys.Intersect(SeedVectorSet.Rejected.Keys).Any()) {
+                throw new Exception("Strange!");
+            }
+            if (IdealVectorSet.Rejected.Keys.Intersect(SeedVectorSet.Accepted.Keys).Any()) {
+                throw new Exception("Strange!");
+            }
+            return this;
+        }
 
-		public void WriteResult(StreamWriter writer, RevealedVectorSet trainingSet = null) {
-			if (writer == null) {
-				return;
-			}
-			trainingSet = trainingSet ?? new RevealedVectorSet();
-			writer.Write(IdealAcceptedVector2GroupPath.Concat(IdealRejectedVector2GroupPath)
-					.Sum(f => Vector2Count[f.Key]));
-			writer.Write(",");
-			writer.Write(trainingSet.Accepted.Concat(trainingSet.Rejected)
-					.Sum(f => Vector2Count[f.Key]));
-			writer.Write(",");
-			writer.Write(IdealVectorSet.Count);
-			writer.Write(",");
-			writer.Write(trainingSet.Count);
-			writer.Write(",");
-			writer.Write(SeedNodeCount);
-			writer.Write(",");
-			writer.Write(SeedVectorCount);
-			writer.Write(",");
-			writer.Write(SeedAcceptedNodeCount);
-			writer.Write(",");
-		}
-	}
+        public void WriteResult(StreamWriter writer, RevealedVectorSet trainingSet = null) {
+            if (writer == null) {
+                return;
+            }
+            trainingSet = trainingSet ?? new RevealedVectorSet();
+            writer.Write(IdealAcceptedVector2GroupPath.Concat(IdealRejectedVector2GroupPath)
+                    .Sum(f => Vector2Count[f.Key]));
+            writer.Write(",");
+            writer.Write(trainingSet.Accepted.Concat(trainingSet.Rejected)
+                    .Sum(f => Vector2Count[f.Key]));
+            writer.Write(",");
+            writer.Write(IdealVectorSet.Count);
+            writer.Write(",");
+            writer.Write(trainingSet.Count);
+            writer.Write(",");
+            writer.Write(SeedNodeCount);
+            writer.Write(",");
+            writer.Write(SeedVectorCount);
+            writer.Write(",");
+            writer.Write(SeedAcceptedNodeCount);
+            writer.Write(",");
+        }
+    }
 }

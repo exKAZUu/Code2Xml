@@ -117,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LexerModifier.cs" />
+    <Compile Include="Antlr4ParserModifier.cs" />
     <Compile Include="ParserModifier.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

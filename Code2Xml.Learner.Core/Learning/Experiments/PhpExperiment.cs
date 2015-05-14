@@ -36,9 +36,9 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             new PhpSuperComplexBranchExperiment(),
             new PhpExpressionStatementExperiment(),
             new PhpArithmeticOperatorExperiment(),
-            //new PhpSwitchCaseExperiment(),
-            //new PhpSuperComplexBranchExperimentWithSwitch(),
-            //new PhpSuperComplexBranchExperimentWithSwitchWithoutTrue(),
+            new PhpSwitchCaseExperiment(),
+            new PhpSuperComplexBranchExperimentWithSwitch(),
+            new PhpSuperComplexBranchExperimentWithSwitchWithoutTrue()
 
             //new PhpComplexBranchExperiment(),
             //new PhpIfExperiment(),
@@ -204,7 +204,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
                     @"faeb011212d12d45f161a16a77ebe5f69db1a8c2"),
             Tuple.Create(
                     @"https://github.com/jadell/neo4jphp.git",
-                    @"6ca33b202b403c4f564f6a2f3bacc9482597b203"),
+                    @"6ca33b202b403c4f564f6a2f3bacc9482597b203")
         };
 
         #endregion
@@ -231,13 +231,13 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         [Test]
         public void TestApply() {
-            var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.php"), };
+            var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.php") };
             LearnAndApply(seedPaths, LearningSets, Experiments);
         }
 
         //[Test, TestCaseSource("TestCases")]
         public void Test(LearningExperiment exp, string projectPath) {
-            var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.php"), };
+            var seedPaths = new List<string> { Fixture.GetInputCodePath(LangName, "Seed.php") };
             Learn(seedPaths, exp, projectPath);
         }
     }
@@ -274,6 +274,26 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public PhpSuperComplexBranchExperiment() : base("expression") {}
+
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(2, @"echo """"", "\"\""),
+                    new SelectedFragment(3, @"echo 1", "1"),
+                    new SelectedFragment(4, @"echo 1, 2", "1, 2"),
+                    new SelectedFragment(6, @"if ($b)", "$b"),
+                    new SelectedFragment(6, @"elseif ($b)", "$b"),
+                    new SelectedFragment(7, @"while ($b)", "$b"),
+                    new SelectedFragment(8, @"while ($b)", "$b"),
+                    new SelectedFragment(9, @"for (; $b;)", "$b"),
+                    new SelectedFragment(22, @"if (true)", "true"),
+                    new SelectedFragment(22, @"elseif (true)", "true"),
+                    new SelectedFragment(23, @"while (true)", "true"),
+                    new SelectedFragment(24, @"while (true)", "true"),
+                    new SelectedFragment(25, @"for (; true;)", "true")
+                };
+            }
+        }
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
             var pName = node.SafeParent().FirstChild.Name;
@@ -393,8 +413,36 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             return new PhpFeatureExtractor();
         }
 
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(2, @"echo """";"),
+                    new SelectedFragment(3, @"echo 1;"),
+                    new SelectedFragment(4, @"echo 1, 2;"),
+                    new SelectedFragment(6, @"if ($b) {} elseif ($b) {} else {}"),
+                    new SelectedFragment(7, @"while ($b) { }"),
+                    new SelectedFragment(8, @"do { } while ($b);"),
+                    new SelectedFragment(9, @"for (; $b;) { }"),
+                    new SelectedFragment(10, @"switch ($b) {
+	case 0:
+		break;
+	default:
+		break;
+}"),
+                    new SelectedFragment(12, @"break;"),
+                    new SelectedFragment(14, @"break;"),
+                    new SelectedFragment(19, @"$i = 0;"),
+                    new SelectedFragment(20, @"f(0 + 1 - 2 * 3 / 4 % 5);"),
+                    new SelectedFragment(22, @"if (true) {} elseif (true) {} else {}"),
+                    new SelectedFragment(23, @"while (true) { }"),
+                    new SelectedFragment(24, @"do { } while (true);"),
+                    new SelectedFragment(25, @"for (; true;) { }")
+                };
+            }
+        }
+
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
-            // ラベルはループ文に付くため，ラベルの中身は除外
+            // ラベルはループ文に付くため，ラベル文を除外
             if (node.FirstChild.Name == "UnquotedString") {
                 return false;
             }
@@ -497,6 +545,15 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
             return new PhpFeatureExtractor();
         }
 
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(19, @"$i = 0;"),
+                    new SelectedFragment(20, @"f(0 + 1 - 2 * 3 / 4 % 5);")
+                };
+            }
+        }
+
         public PhpExpressionStatementExperiment() : base("simpleStatement") {}
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
@@ -511,6 +568,17 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public PhpArithmeticOperatorExperiment() : base("Plus", "Minus", "Asterisk", "Forwardslash") {}
 
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(20, @"0 + 1", @"+"),
+                    new SelectedFragment(20, @"1 - 2", @"-"),
+                    new SelectedFragment(20, @"2 * 3", @"*"),
+                    new SelectedFragment(20, @"3 / 4", @"/")
+                };
+            }
+        }
+
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
             return node.Parent.Name == "addition" ||
                    node.Parent.Name == "multiplication";
@@ -523,6 +591,16 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
         }
 
         public PhpSwitchCaseExperiment() : base("expression", "casestatement", "defaultcase") {}
+
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(10, @"switch ($b)", @"$b"),
+                    new SelectedFragment(11, @"case 0:"),
+                    new SelectedFragment(13, @"default:")
+                };
+            }
+        }
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
             var pName = node.SafeParent().FirstChild.Name;
@@ -540,6 +618,29 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public PhpSuperComplexBranchExperimentWithSwitch()
                 : base("expression", "casestatement", "defaultcase") {}
+
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(2, @"echo """"", "\"\""),
+                    new SelectedFragment(3, @"echo 1", "1"),
+                    new SelectedFragment(4, @"echo 1, 2", "1, 2"),
+                    new SelectedFragment(6, @"if ($b)", "$b"),
+                    new SelectedFragment(6, @"elseif ($b)", "$b"),
+                    new SelectedFragment(7, @"while ($b)", "$b"),
+                    new SelectedFragment(8, @"while ($b)", "$b"),
+                    new SelectedFragment(9, @"for (; $b;)", "$b"),
+                    new SelectedFragment(10, @"switch ($b)", @"$b"),
+                    new SelectedFragment(11, @"case 0:"),
+                    new SelectedFragment(13, @"default:"),
+                    new SelectedFragment(22, @"if (true)", "true"),
+                    new SelectedFragment(22, @"elseif (true)", "true"),
+                    new SelectedFragment(23, @"while (true)", "true"),
+                    new SelectedFragment(24, @"while (true)", "true"),
+                    new SelectedFragment(25, @"for (; true;)", "true")
+                };
+            }
+        }
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
             var pName = node.SafeParent().FirstChild.Name;
@@ -580,6 +681,24 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
 
         public PhpSuperComplexBranchExperimentWithSwitchWithoutTrue()
                 : base("expression", "casestatement", "defaultcase") {}
+
+        public override IEnumerable<SelectedFragment> AcceptingFragments {
+            get {
+                return new[] {
+                    new SelectedFragment(2, @"echo """"", "\"\""),
+                    new SelectedFragment(3, @"echo 1", "1"),
+                    new SelectedFragment(4, @"echo 1, 2", "1, 2"),
+                    new SelectedFragment(6, @"if ($b)", "$b"),
+                    new SelectedFragment(6, @"elseif ($b)", "$b"),
+                    new SelectedFragment(7, @"while ($b)", "$b"),
+                    new SelectedFragment(8, @"while ($b)", "$b"),
+                    new SelectedFragment(9, @"for (; $b;)", "$b"),
+                    new SelectedFragment(10, @"switch ($b)", @"$b"),
+                    new SelectedFragment(11, @"case 0:"),
+                    new SelectedFragment(13, @"default:")
+                };
+            }
+        }
 
         public override bool ProtectedIsAcceptedUsingOracle(CstNode node) {
             var pName = node.SafeParent().FirstChild.Name;
