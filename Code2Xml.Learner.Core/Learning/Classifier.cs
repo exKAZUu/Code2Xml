@@ -32,7 +32,7 @@ namespace Code2Xml.Learner.Core.Learning {
             get { return GroupPaths.Count; }
         }
 
-        public Classifier(IEnumerable<string> selectedNodeNames, FeatuerSet featureSet) {
+        public Classifier(IEnumerable<string> groupPaths, FeatuerSet featureSet) {
             AcceptingFeatureCount = featureSet.AcceptingFeatureCount;
             RejectingFeatureCount = featureSet.RejectingFeatureCount;
             AllFeatureCount = AcceptingFeatureCount + RejectingFeatureCount;
@@ -40,7 +40,7 @@ namespace Code2Xml.Learner.Core.Learning {
             AcceptingFeatureBitMask = (BigInteger.One << featureSet.AcceptingFeatureCount)
                                       - BigInteger.One;
             RejectingFeatureBitMask = AllFeatureBitMask ^ AcceptingFeatureBitMask;
-            GroupPaths = selectedNodeNames.Select(n => ">" + n + ">").ToList();
+            GroupPaths = groupPaths.ToList();
             Initialize();
         }
 

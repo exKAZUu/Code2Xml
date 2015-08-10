@@ -22,6 +22,7 @@ using System.ComponentModel.Composition.Hosting;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using Code2Xml.Core.Generators.ExternalGenerators.Java;
 using Code2Xml.Core.Generators.ExternalGenerators.Ruby;
 using Paraiba.Core;
 using Paraiba.Linq;
@@ -82,6 +83,15 @@ namespace Code2Xml.Core.Generators {
         /// </summary>
         public static Ruby20AstGenerator Ruby20 {
             get { return _ruby20 ?? (_ruby20 = All.CastWhere<Ruby20AstGenerator>().First()); }
+        }
+
+        private static JavaAstGenerator _java;
+
+        /// <summary>
+        /// Gets a <c>AstGenerator</c> instance of the preset Ruby 2.0.x processor.
+        /// </summary>
+        public static JavaAstGenerator Java {
+            get { return _java ?? (_java = All.CastWhere<JavaAstGenerator>().First()); }
         }
 
         #endregion

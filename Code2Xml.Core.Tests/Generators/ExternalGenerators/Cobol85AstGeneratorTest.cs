@@ -33,7 +33,7 @@ namespace Code2Xml.Core.Tests.Generators.ExternalGenerators {
         [TestCase("000010 IDENTIFICATION DIVISION.")]
         [TestCase("000120      DISPLAY \"Hello World!!\".")]
         public void Parse(string code) {
-            VerifyRestoringCode(code);
+            VerifyParsing(code);
         }
 
         [Test]

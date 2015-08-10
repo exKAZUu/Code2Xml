@@ -97,6 +97,7 @@
     <Compile Include="Generators\ANTLRv4\JavaCstGeneratorTest.cs" />
     <Compile Include="Generators\ANTLRv4\EcmaScriptCstGeneratorTest.cs" />
     <Compile Include="Generators\ANTLRv4\LuaCstGeneratorTest.cs" />
+    <Compile Include="Generators\ExternalGenerators\JavaAstGeneratorTest.cs" />
     <Compile Include="Generators\ExternalGenerators\Cobol85AstGeneratorTest.cs" />
     <Compile Include="Generators\ExternalGenerators\SrcMLForCppAstGeneratorTest.cs" />
     <Compile Include="Generators\ExternalGenerators\Python2CstGeneratorTest.cs" />

@@ -274,7 +274,7 @@ namespace Code2Xml.Core.Location {
         }
 
         /// <summary>
-        /// Find the most inner element which locates at the this range from the specified root.
+        /// Find the most inner element which includes this range from the specified root.
         /// </summary>
         /// <param name="root"></param>
         /// <returns></returns>
@@ -292,7 +292,7 @@ namespace Code2Xml.Core.Location {
         }
 
         /// <summary>
-        /// Find the most outer element which locates at the this range from the specified root.
+        /// Find the most outer element which includes this range from the specified root.
         /// </summary>
         /// <param name="root"></param>
         /// <returns></returns>

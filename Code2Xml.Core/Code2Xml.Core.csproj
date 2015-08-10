@@ -104,6 +104,7 @@
     <Compile Include="Generators\CstGenerator.cs" />
     <Compile Include="Generators\CstGenerators.cs" />
     <Compile Include="Generators\CstGeneratorUsingExternalProgram.cs" />
+    <Compile Include="Generators\ExternalGenerators\Java\JavaAstGenerator.cs" />
     <Compile Include="Generators\ExternalProgramUtils.cs" />
     <Compile Include="Generators\FileCacheCstGenerator.cs" />
     <Compile Include="Generators\ANTLRv4\Clojure\Clojure.g4.lexer.cs" />
@@ -345,6 +346,7 @@
     <Content Include="Dependencies\srcML\src2srcml.exe" />
     <Content Include="Dependencies\srcML\srcml2src.exe" />
     <Content Include="Dependencies\srcML\zlib1.dll" />
+    <None Include="Dependencies\Java\ast-serializer-1.0.0-jar-with-dependencies.jar" />
     <None Include="Dependencies\Ruby\test.txt" />
   </ItemGroup>
   <ItemGroup>

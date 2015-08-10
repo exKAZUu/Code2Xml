@@ -24,7 +24,7 @@ using Paraiba.IO;
 
 namespace Code2Xml.Core.Generators.ExternalGenerators.Cobol {
     /// <summary>
-    /// Represents a Cobol-85 CstGenerator for inter-converting between source code and XML-based ASTs.
+    /// Represents a Cobol85 AstGenerator for converting source code into XML-based ASTs.
     /// </summary>
     //TODO: [Export(typeof(AstGenerator))]
     public class Cobol85AstGenerator : AstGeneratorUsingExternalProgram {

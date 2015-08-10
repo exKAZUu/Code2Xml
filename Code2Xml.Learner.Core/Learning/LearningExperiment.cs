@@ -102,7 +102,8 @@ namespace Code2Xml.Learner.Core.Learning {
                               + " (" + rejectingFragments.Count() + ")");
 
             var featureSet = new FeatuerSet(seedNodeSet, extractor, acceptingFragments, rejectingFragments);
-            var classifier = new Classifier(seedNodeSet.SelectedNodeNames, featureSet);
+            var groupPaths = seedNodeSet.SelectedNodeNames.Select(n => ">" + n + ">")
+            var classifier = new Classifier(groupPaths, featureSet);
             Console.WriteLine(
                     "#Features: " + featureSet.AcceptingFeatureCount + ", "
                     + featureSet.RejectingFeatureCount);
