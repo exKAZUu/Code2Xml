@@ -4,25 +4,30 @@ using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Learner.Core.Learning {
     public class SelectedFragment {
-        public CodeRange SurroundingRange { get; set; }
-        public CodeRange TargetRange { get; set; }
-        public CstNode Node { get; set; }
+        public CodeRange SurroundingRange { get; private set; }
+        public CodeRange TargetRange { get; private set; }
+        public CstNode Node { get; private set; }
 
-        public string SurroundingText { get; set; }
-        public string TargetText { get; set; }
-        public int StartLine { get; set; }
+        public readonly string SurroundingText;
+        public readonly string TargetText;
+        public readonly int StartLine;
 
+        /// <summary>
+        /// To reduce code in XXXXExperiment classes.
+        /// </summary>
         private static int _lastStartLine;
-        private static int _lastIndex;
 
-        public static void Initialize() {
-            _lastIndex = -1;
-        }
-
-        public void Update(StructuredCode structuredCode, CstNode cst) {
+        /// <summary>
+        /// Update SurroundingRange, TargetRange, and Node properties then return the last index of the code processed.
+        /// </summary>
+        /// <param name="structuredCode">The structured code processed</param>
+        /// <param name="cst">The concrete syntax tree</param>
+        /// <param name="lastIndex">The last index of the code processed (initial value should be -1)</param>
+        /// <returns>The updated last index of the code processed</returns>
+        public int Update(StructuredCode structuredCode, CstNode cst, int lastIndex = -1) {
             var startLineIndex = structuredCode.GetIndex(StartLine, 0);
             var surroundingIndex = structuredCode.Code.IndexOf(SurroundingText,
-                    Math.Max(_lastIndex + 1, startLineIndex));
+                    Math.Max(lastIndex + 1, startLineIndex));
             var targetIndex = structuredCode.Code.IndexOf(TargetText, surroundingIndex);
             if (surroundingIndex < 0 || targetIndex < 0) {
                 throw new Exception("The selected code fragment is invalid.");
@@ -31,7 +36,7 @@ namespace Code2Xml.Learner.Core.Learning {
                     surroundingIndex + SurroundingText.Length);
             TargetRange = structuredCode.GetRange(targetIndex, targetIndex + TargetText.Length);
             Node = TargetRange.FindOutermostNode(cst);
-            _lastIndex = surroundingIndex;
+            return surroundingIndex;
         }
 
         public SelectedFragment(int startLine, string surroundingText, string targetText) {

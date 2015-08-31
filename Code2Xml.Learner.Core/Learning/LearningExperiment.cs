@@ -81,16 +81,17 @@ namespace Code2Xml.Learner.Core.Learning {
             var acceptingFragments = AcceptingFragments.ToList();
             var rejectingFragments = RejectingFragments.ToList();
 
-            SelectedFragment.Initialize();
+            var lastIndex = -1;
             for (int i = 0; i < acceptingFragments.Count; i++) {
-                acceptingFragments[i].Update(structuredCode, seedCst);
+                lastIndex = acceptingFragments[i].Update(structuredCode, seedCst, lastIndex);
                 if (acceptingFragments[i].Node != seedNodes[i].AncestorWithSingleChild()) {
                     throw new Exception("The selected node should be the node selected by the oracle.");
                 }
             }
-            SelectedFragment.Initialize();
+
+            lastIndex = -1;
             foreach (var fragment in rejectingFragments) {
-                fragment.Update(structuredCode, seedCst);
+                lastIndex = fragment.Update(structuredCode, seedCst, lastIndex);
             }
 
             var preparingTime = Environment.TickCount;
@@ -102,7 +103,7 @@ namespace Code2Xml.Learner.Core.Learning {
                               + " (" + rejectingFragments.Count() + ")");
 
             var featureSet = new FeatuerSet(seedNodeSet, extractor, acceptingFragments, rejectingFragments);
-            var groupPaths = seedNodeSet.SelectedNodeNames.Select(n => ">" + n + ">")
+            var groupPaths = seedNodeSet.SelectedNodeNames.Select(n => ">" + n + ">");
             var classifier = new Classifier(groupPaths, featureSet);
             Console.WriteLine(
                     "#Features: " + featureSet.AcceptingFeatureCount + ", "
