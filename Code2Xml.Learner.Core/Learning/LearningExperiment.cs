@@ -53,7 +53,7 @@ namespace Code2Xml.Learner.Core.Learning {
 
             var time = Environment.TickCount;
             var groupCache = new GroupCache(encodingResult, classifier);
-            var result = Classify(Int32.MaxValue, classifier, groupCache, encodingResult);
+            var result = Classify(int.MaxValue, classifier, groupCache, encodingResult);
             Console.WriteLine("Time: " + (Environment.TickCount - time));
 
             if (writer != null) {
@@ -78,29 +78,18 @@ namespace Code2Xml.Learner.Core.Learning {
             var seedCode = seedCst.Code;
             var structuredCode = new StructuredCode(seedCode);
 
-            var acceptingFragments = AcceptingFragments.ToList();
-            var rejectingFragments = RejectingFragments.ToList();
+            var acceptingFragments = ConstructAcceptingFragments(structuredCode, seedCst, seedNodes);
+            var rejectingFragments = ConstructRejectingFragments(structuredCode, seedCst);
 
-            var lastIndex = -1;
-            for (int i = 0; i < acceptingFragments.Count; i++) {
-                lastIndex = acceptingFragments[i].Update(structuredCode, seedCst, lastIndex);
-                if (acceptingFragments[i].Node != seedNodes[i].AncestorWithSingleChild()) {
-                    throw new Exception("The selected node should be the node selected by the oracle.");
-                }
-            }
-
-            lastIndex = -1;
-            foreach (var fragment in rejectingFragments) {
-                lastIndex = fragment.Update(structuredCode, seedCst, lastIndex);
-            }
+            SeedNodeSet.Create(acceptingFragments, this);
 
             var preparingTime = Environment.TickCount;
             var extractor = CreateExtractor();
             var seedNodeSet = new SeedNodeSet(acceptingFragments.Select(f => f.Node), seedCsts, this);
             Console.WriteLine("#Accepted seed nodes: " + seedNodeSet.AcceptedNodes.Count
-                              + " (" + acceptingFragments.Count() + ")");
+                              + " (" + acceptingFragments.Count + ")");
             Console.WriteLine("#Rejected seed nodes: " + seedNodeSet.RejectedNodes.Count
-                              + " (" + rejectingFragments.Count() + ")");
+                              + " (" + rejectingFragments.Count + ")");
 
             var featureSet = new FeatuerSet(seedNodeSet, extractor, acceptingFragments, rejectingFragments);
             var groupPaths = seedNodeSet.SelectedNodeNames.Select(n => ">" + n + ">");
@@ -176,6 +165,28 @@ namespace Code2Xml.Learner.Core.Learning {
                 EncodingResult = encodingResult,
                 FeatureEncoder = featureEncoder,
             };
+        }
+
+        private List<SelectedFragment> ConstructRejectingFragments(StructuredCode structuredCode, CstNode seedCst) {
+            var rejectingFragments = RejectingFragments.ToList();
+            var lastIndex = -1;
+            foreach (var fragment in rejectingFragments) {
+                lastIndex = fragment.Update(structuredCode, seedCst, lastIndex);
+            }
+            return rejectingFragments;
+        }
+
+        private List<SelectedFragment> ConstructAcceptingFragments(
+                StructuredCode structuredCode, CstNode seedCst, List<CstNode> seedNodes) {
+            var acceptingFragments = AcceptingFragments.ToList();
+            var lastIndex = -1;
+            for (int i = 0; i < acceptingFragments.Count; i++) {
+                lastIndex = acceptingFragments[i].Update(structuredCode, seedCst, lastIndex);
+                if (acceptingFragments[i].Node != seedNodes[i].AncestorWithSingleChild()) {
+                    throw new Exception("The selected node should be the node selected by the oracle.");
+                }
+            }
+            return acceptingFragments;
         }
 
         private IEnumerable<CstNode> GenerateValidCsts(IEnumerable<string> codePaths) {

@@ -27,20 +27,12 @@ using Paraiba.Linq;
 namespace Code2Xml.Learner.Core.Learning {
     [Serializable]
     public class FeatuerSet {
-        public IList<string> AcceptingFeatures { get; private set; }
-        public IList<string> RejectingFeatures { get; private set; }
+        public IList<string> AcceptingFeatures { get; }
+        public IList<string> RejectingFeatures { get; }
 
-        public int AcceptingFeatureCount {
-            get { return AcceptingFeatures.Count; }
-        }
-
-        public int RejectingFeatureCount {
-            get { return RejectingFeatures.Count; }
-        }
-
-        public int FeatureCount {
-            get { return AcceptingFeatureCount + RejectingFeatureCount; }
-        }
+        public int AcceptingFeatureCount => AcceptingFeatures.Count;
+        public int RejectingFeatureCount => RejectingFeatures.Count;
+        public int FeatureCount => AcceptingFeatureCount + RejectingFeatureCount;
 
         public FeatuerSet(
                 SeedNodeSet seedNodeSet, FeatureExtractor extractor,

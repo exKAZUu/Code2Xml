@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2014 Kazunori Sakamoto
+// Copyright (C) 2011-2015 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -76,6 +76,25 @@ namespace Code2Xml.Core.Location {
         }
 
         public CodeRange(XElement element) : this(element, element) {}
+
+        public static bool TryParse(XElement startElement, XElement endElement, out CodeRange range) {
+            var startLineStr = startElement.Attribute(Code2XmlConstants.StartLineName)?.Value;
+            var startPosStr = startElement.Attribute(Code2XmlConstants.StartPositionName)?.Value;
+            var endLineStr = endElement.Attribute(Code2XmlConstants.EndLineName)?.Value;
+            var endPosStr = endElement.Attribute(Code2XmlConstants.EndPositionName)?.Value;
+            int startLine, startPosition, endLine, endPosition;
+            if (int.TryParse(startLineStr, out startLine) &&
+                int.TryParse(startPosStr, out startPosition) &&
+                int.TryParse(endLineStr, out endLine) &&
+                int.TryParse(endPosStr, out endPosition)) {
+                range = new CodeRange(
+                        new CodeLocation(startLine, startPosition),
+                        new CodeLocation(endLine, endPosition));
+                return true;
+            }
+            range = new CodeRange();
+            return false;
+        }
 
         #region Members about the string representation
 
@@ -255,10 +274,11 @@ namespace Code2Xml.Core.Location {
             var thisRange = this;
             // TODO: Should be more efficient
             return thisRange.FindOutermostNode(root).DescendantsAndSelf()
-                    .Where(node => {
-                        var range = Locate(node);
-                        return thisRange.Contains(Locate(node));
-                    });
+                    .Where(
+                            node => {
+                                var range = Locate(node);
+                                return thisRange.Contains(Locate(node));
+                            });
         }
 
         /// <summary>

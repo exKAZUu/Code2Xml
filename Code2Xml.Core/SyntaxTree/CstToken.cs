@@ -27,21 +27,10 @@ namespace Code2Xml.Core.SyntaxTree {
         public string BeforeInsertedText { get; set; }
         public string AfterInsertedText { get; set; }
 
-        public int StartPosition {
-            get { return Range.StartPosition; }
-        }
-
-        public int EndPosition {
-            get { return Range.EndPosition; }
-        }
-
-        public int StartLine {
-            get { return Range.StartLine; }
-        }
-
-        public int EndLine {
-            get { return Range.EndLine; }
-        }
+        public int StartPosition => Range.StartPosition;
+        public int EndPosition => Range.EndPosition;
+        public int StartLine => Range.StartLine;
+        public int EndLine => Range.EndLine;
 
         public CstToken(string name) : this(name, "", CodeRange.Nil) {}
 

@@ -25,8 +25,8 @@ using Code2Xml.Learner.Core.Learning;
 
 namespace Code2Xml.Learner.Core {
     public class SeedNodeSet {
-        public ISet<string> SelectedNodeNames { get; private set; }
-        public ISet<CstNode> AcceptedNodes { get; private set; }
+        public ISet<string> SelectedNodeNames { get; }
+        public ISet<CstNode> AcceptedNodes { get; }
         public IList<CstNode> RejectedNodes { get; private set; }
 
         public SeedNodeSet(
@@ -86,8 +86,8 @@ namespace Code2Xml.Learner.Core {
                     .Select(node => node.AncestorWithSingleChild())
                     .Any(e => !uppermostSeedAcceptedNodes.Contains(e));
             var b3 = uppermostSeedAcceptedNodes.Count != anotherUppermostSeedAcceptedNodes.Count;
-            Console.WriteLine("Initial: " + String.Join(", ", oracle.OracleNames));
-            Console.WriteLine("Learned: " + String.Join(", ", SelectedNodeNames));
+            Console.WriteLine("Initial: " + string.Join(", ", oracle.OracleNames));
+            Console.WriteLine("Learned: " + string.Join(", ", SelectedNodeNames));
             if (b1 || b2 || b3) {
                 Console.WriteLine("--------------------------------------------------");
                 foreach (var e in uppermostSeedAcceptedNodes) {
@@ -98,6 +98,22 @@ namespace Code2Xml.Learner.Core {
                     Console.WriteLine(e);
                 }
                 throw new Exception("Wrong Oracle.");
+            }
+        }
+
+        public static void Create(
+                CstNode root, List<SelectedFragment> acceptingFragments,
+                LearningExperiment learningExperiment) {
+            foreach (var fragment in acceptingFragments) {
+                var rootNode = fragment.SurroundingRange.FindInnermostNode(root);
+                var node = fragment.Node;
+                var paths = new HashSet<string>();
+                var path = node.Name;
+                paths.Add(path);
+                while ((node = node.Parent) != rootNode) {
+                    path = path + "<" + node.Name + node.RuleId;
+                    paths.Add(path);
+                }
             }
         }
     }

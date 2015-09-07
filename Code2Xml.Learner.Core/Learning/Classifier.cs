@@ -28,9 +28,7 @@ namespace Code2Xml.Learner.Core.Learning {
         public IList<ClassifierUnit> Units { get; private set; }
         public IList<string> GroupPaths { get; private set; }
 
-        public int GroupCount {
-            get { return GroupPaths.Count; }
-        }
+        public int GroupCount => GroupPaths.Count;
 
         public Classifier(IEnumerable<string> groupPaths, FeatuerSet featureSet) {
             AcceptingFeatureCount = featureSet.AcceptingFeatureCount;

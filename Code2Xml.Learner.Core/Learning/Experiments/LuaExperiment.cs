@@ -237,9 +237,7 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     }
 
     public class LuaComplexBranchExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return LuaExperiment.Generator; }
-        }
+        protected override CstGenerator Generator => LuaExperiment.Generator;
 
         public override FeatureExtractor CreateExtractor() {
             return new FeatureExtractor();
@@ -264,31 +262,25 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     }
 
     public class LuaSuperComplexBranchExperiment : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return LuaExperiment.Generator; }
-        }
+        protected override CstGenerator Generator => LuaExperiment.Generator;
 
         public override FeatureExtractor CreateExtractor() {
             return new FeatureExtractor();
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments {
-            get {
-                return new[] {
-                    new SelectedFragment(1, @"print(b)", "b"),
-                    new SelectedFragment(2, @"print(b, c)", "b"),
-                    new SelectedFragment(2, @"rint(b, c)", "c"),
-                    new SelectedFragment(7, @"if b then", "b"),
-                    new SelectedFragment(8, @"elseif b then", "b"),
-                    new SelectedFragment(11, @"while b do", "b"),
-                    new SelectedFragment(15, @"until b", "b"),
-                    new SelectedFragment(24, @"if true then", "true"),
-                    new SelectedFragment(25, @"elseif true then", "true"),
-                    new SelectedFragment(28, @"while true do", "true"),
-                    new SelectedFragment(32, @"until true", "true"),
-                };
-            }
-        }
+        public override IEnumerable<SelectedFragment> AcceptingFragments => new[] {
+            new SelectedFragment(1, @"print(b)", "b"),
+            new SelectedFragment(2, @"print(b, c)", "b"),
+            new SelectedFragment(2, @"rint(b, c)", "c"),
+            new SelectedFragment(7, @"if b then", "b"),
+            new SelectedFragment(8, @"elseif b then", "b"),
+            new SelectedFragment(11, @"while b do", "b"),
+            new SelectedFragment(15, @"until b", "b"),
+            new SelectedFragment(24, @"if true then", "true"),
+            new SelectedFragment(25, @"elseif true then", "true"),
+            new SelectedFragment(28, @"while true do", "true"),
+            new SelectedFragment(32, @"until true", "true"),
+        };
 
         public LuaSuperComplexBranchExperiment() : base("exp") {}
 
@@ -315,27 +307,21 @@ namespace Code2Xml.Learner.Core.Learning.Experiments {
     }
 
     public class LuaSuperComplexBranchExperimentWithoutTrue : LearningExperiment {
-        protected override CstGenerator Generator {
-            get { return LuaExperiment.Generator; }
-        }
+        protected override CstGenerator Generator => LuaExperiment.Generator;
 
         public override FeatureExtractor CreateExtractor() {
             return new FeatureExtractor();
         }
 
-        public override IEnumerable<SelectedFragment> AcceptingFragments {
-            get {
-                return new[] {
-                    new SelectedFragment(1, @"print(b)", "b"),
-                    new SelectedFragment(2, @"print(b, c)", "b"),
-                    new SelectedFragment(2, @"rint(b, c)", "c"),
-                    new SelectedFragment(7, @"if b then", "b"),
-                    new SelectedFragment(8, @"elseif b then", "b"),
-                    new SelectedFragment(11, @"while b do", "b"),
-                    new SelectedFragment(15, @"until b", "b"),
-                };
-            }
-        }
+        public override IEnumerable<SelectedFragment> AcceptingFragments => new[] {
+            new SelectedFragment(1, @"print(b)", "b"),
+            new SelectedFragment(2, @"print(b, c)", "b"),
+            new SelectedFragment(2, @"rint(b, c)", "c"),
+            new SelectedFragment(7, @"if b then", "b"),
+            new SelectedFragment(8, @"elseif b then", "b"),
+            new SelectedFragment(11, @"while b do", "b"),
+            new SelectedFragment(15, @"until b", "b"),
+        };
 
         //public override IEnumerable<SelectedFragment> RejectingFragments {
         //    get {

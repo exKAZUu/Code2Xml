@@ -318,6 +318,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Dependencies\Cobol\koopafor85.jar" />
+    <Content Include="Dependencies\Java\ast-serializer-1.0.1-jar-with-dependencies.jar" />
     <Content Include="Dependencies\Python\ast2xml.py" />
     <Content Include="Dependencies\Python\ast_parser.py" />
     <Content Include="Dependencies\Python\st_parser.py" />
@@ -346,7 +347,6 @@
     <Content Include="Dependencies\srcML\src2srcml.exe" />
     <Content Include="Dependencies\srcML\srcml2src.exe" />
     <Content Include="Dependencies\srcML\zlib1.dll" />
-    <None Include="Dependencies\Java\ast-serializer-1.0.0-jar-with-dependencies.jar" />
     <None Include="Dependencies\Ruby\test.txt" />
   </ItemGroup>
   <ItemGroup>

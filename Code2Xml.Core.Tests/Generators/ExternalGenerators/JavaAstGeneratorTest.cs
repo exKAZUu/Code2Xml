@@ -31,7 +31,7 @@ namespace Code2Xml.Core.Tests.Generators.ExternalGenerators {
 
         [Test]
         [TestCase("class A {}")]
-        [TestCase("class A { void m() { itn a = 0; } }")]
+        [TestCase("class A { void m() { int a = 0; } }")]
         public void Parse(string code) {
             VerifyParsing(code);
         }

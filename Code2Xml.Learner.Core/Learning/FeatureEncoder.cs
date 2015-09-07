@@ -22,7 +22,6 @@ using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using System.Numerics;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Runtime.Serialization.Formatters.Binary;
 using Code2Xml.Core.SyntaxTree;
 using Code2Xml.Learner.Core.Learning.Experiments;
