@@ -8,10 +8,6 @@ using Code2Xml.Core.SyntaxTree;
 
 namespace Code2Xml.Learner.Core.Learning {
     public class SelectedFragment {
-        public CodeRange SurroundingRange { get; private set; }
-        public CodeRange TargetRange { get; private set; }
-        public CstNode Node { get; private set; }
-
         public readonly string SurroundingText;
         public readonly string TargetText;
         public readonly int StartLine;
@@ -20,28 +16,6 @@ namespace Code2Xml.Learner.Core.Learning {
         /// To reduce code in XXXXExperiment classes.
         /// </summary>
         private static int _lastStartLine;
-
-        /// <summary>
-        /// Update SurroundingRange, TargetRange, and Node properties then return the last index of the code processed.
-        /// </summary>
-        /// <param name="structuredCode">The structured code processed</param>
-        /// <param name="cst">The concrete syntax tree</param>
-        /// <param name="lastIndex">The last index of the code processed (initial value should be -1)</param>
-        /// <returns>The updated last index of the code processed</returns>
-        public int Update(StructuredCode structuredCode, CstNode cst, int lastIndex = -1) {
-            var startLineIndex = structuredCode.GetIndex(StartLine, 0);
-            var surroundingIndex = structuredCode.Code.IndexOf(SurroundingText,
-                    Math.Max(lastIndex + 1, startLineIndex));
-            var targetIndex = structuredCode.Code.IndexOf(TargetText, surroundingIndex);
-            if (surroundingIndex < 0 || targetIndex < 0) {
-                throw new Exception("The selected code fragment is invalid.");
-            }
-            SurroundingRange = structuredCode.GetRange(surroundingIndex,
-                    surroundingIndex + SurroundingText.Length);
-            TargetRange = structuredCode.GetRange(targetIndex, targetIndex + TargetText.Length);
-            Node = TargetRange.FindOutermostNode(cst);
-            return surroundingIndex;
-        }
 
         public SelectedFragment(int startLine, string surroundingText, string targetText) {
             StartLine = startLine;
@@ -60,7 +34,7 @@ namespace Code2Xml.Learner.Core.Learning {
     }
 
     public class SeedNode {
-        public CodeRange SurroundingRange { get; private set; }
+        public CodeRange SurroundingRange { get; }
         public CodeRange TargetRange { get; private set; }
         public CstNode Node { get; private set; }
 
@@ -75,18 +49,21 @@ namespace Code2Xml.Learner.Core.Learning {
         /// </summary>
         /// <param name="structuredCode">The structured code processed</param>
         /// <param name="cst">The concrete syntax tree</param>
-        /// <param name="fragment"></param>
-        /// <param name="lastIndex">The last index of the code processed (initial value should be -1)</param>
+        /// <param name="fragments"></param>
         /// <returns>The updated last index of the code processed</returns>
-        public static void ConstructAcceptingFragments(StructuredCode structuredCode, CstNode cst, IList<SelectedFragment> fragments) {
+        public static List<SeedNode> ConstructAcceptingFragments(StructuredCode structuredCode, CstNode cst, IList<SelectedFragment> fragments) {
             var seedNodes = CreateSeedNodes(structuredCode, cst, fragments);
 
             var uppermostSeedAcceptedNodes = seedNodes
                     .Select(node => node.Node.AncestorWithSingleChild())
                     .ToImmutableHashSet();
+            // We can select multiple nodes in corresponding to a fragment selected by a user
+            // and it means that we have multiple choices for selecting node names to filter nodes
+            // This code tries to select good node names to not filter nodes wanted by a user
             var selectedNodeNames = LearningExperimentUtil.FindGoodNodeNames(uppermostSeedAcceptedNodes)
                     .ToImmutableHashSet();
             foreach (var seedNode in seedNodes) {
+                // Update the node in corresponding to the selected node names keeping the code range of the node
                 seedNode.Node = seedNode.Node.DescendantsOfSingleAndSelf()
                         .First(e => selectedNodeNames.Contains(e.Name));
                 var rootNode = seedNode.SurroundingRange.FindInnermostNode(cst);
@@ -109,13 +86,13 @@ namespace Code2Xml.Learner.Core.Learning {
                 if (surroundingIndex < 0 || targetIndex < 0) {
                     throw new Exception("The selected code fragment is invalid.");
                 }
-                var SurroundingRange = structuredCode.GetRange(surroundingIndex,
+                var surroundingRange = structuredCode.GetRange(surroundingIndex,
                         surroundingIndex + fragment.SurroundingText.Length);
-                var TargetRange = structuredCode.GetRange(targetIndex,
+                var targetRange = structuredCode.GetRange(targetIndex,
                         targetIndex + fragment.TargetText.Length);
-                var Node = TargetRange.FindOutermostNode(cst);
+                var node = targetRange.FindOutermostNode(cst);
                 lastIndex = surroundingIndex;
-                return new SeedNode(Node, TargetRange, SurroundingRange);
+                return new SeedNode(node, targetRange, surroundingRange);
             }).ToList();
         }
 

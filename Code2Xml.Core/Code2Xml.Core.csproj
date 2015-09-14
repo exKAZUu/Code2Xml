@@ -318,7 +318,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Dependencies\Cobol\koopafor85.jar" />
-    <Content Include="Dependencies\Java\ast-serializer-1.0.1-jar-with-dependencies.jar" />
+    <Content Include="Dependencies\Java\ast-serializer-1.0.2-jar-with-dependencies.jar" />
     <Content Include="Dependencies\Python\ast2xml.py" />
     <Content Include="Dependencies\Python\ast_parser.py" />
     <Content Include="Dependencies\Python\st_parser.py" />

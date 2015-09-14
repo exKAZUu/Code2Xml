@@ -56,29 +56,24 @@ namespace Code2Xml.Learner.Core {
         private IEnumerable<CstNode> CreateRejectedNodes(
                 IEnumerable<CstNode> csts, ICollection<CstNode> acceptedNodes) {
             var uppermostNodes = csts
-                    .SelectMany(
-                            cst =>
-                                    LearningExperimentUtil.GetUppermostNodesByNames(cst,
-                                            SelectedNodeNames));
+                    .SelectMany(cst => LearningExperimentUtil
+                            .GetUppermostNodesByNames(cst, SelectedNodeNames));
             return uppermostNodes.Where(node => !acceptedNodes.Contains(node));
         }
 
         private IEnumerable<CstNode> CreateAcceptedNodes(
                 IEnumerable<CstNode> uppermostAcceptedNodes) {
             return uppermostAcceptedNodes
-                    .Select(
-                            e => e.DescendantsOfSingleAndSelf()
-                                    .First(e2 => SelectedNodeNames.Contains(e2.Name)));
+                    .Select(e => e.DescendantsOfSingleAndSelf()
+                            .First(e2 => SelectedNodeNames.Contains(e2.Name)));
         }
 
         private void VerifySeedAcceptedNodes(
                 IEnumerable<CstNode> seedCsts, ICollection<CstNode> uppermostSeedAcceptedNodes,
                 LearningExperiment oracle) {
             var anotherUppermostSeedAcceptedNodes = seedCsts
-                    .SelectMany(
-                            cst =>
-                                    LearningExperimentUtil.GetUppermostNodesByNames(cst,
-                                            SelectedNodeNames))
+                    .SelectMany(cst => LearningExperimentUtil
+                            .GetUppermostNodesByNames(cst, SelectedNodeNames))
                     .Where(oracle.ProtectedIsAcceptedUsingOracle)
                     .ToList();
             var b1 = !uppermostSeedAcceptedNodes.All(oracle.IsAcceptedUsingOracle);
