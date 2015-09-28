@@ -243,6 +243,15 @@ namespace Code2Xml.Core.Location {
         }
 
         /// <summary>
+        /// Returns whether the specified AstNode instance is included by this CodeRange instance.
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public bool Contains(AstNode node) {
+            return Contains(Locate(node));
+        }
+
+        /// <summary>
         /// Returns whether the specified CodeRange value is overlapped with this CodeRange instance.
         /// </summary>
         /// <param name="other"></param>
@@ -263,10 +272,19 @@ namespace Code2Xml.Core.Location {
             return Overlaps(Locate(node));
         }
 
+        /// <summary>
+        /// Returns whether the specified AstNode instance is overlapped with this CodeRange instance.
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public bool Overlaps(AstNode node) {
+            return Overlaps(Locate(node));
+        }
+
         #region Find nodes
 
         /// <summary>
-        /// Find all the inner elements which locate at this range from the specified root.
+        /// Find all the inner elements which locate at this range from the specified CstNode instance.
         /// </summary>
         /// <param name="root"></param>
         /// <returns></returns>
@@ -282,7 +300,23 @@ namespace Code2Xml.Core.Location {
         }
 
         /// <summary>
-        /// Find all the inner elements whose range overlapped with this range from the specified root.
+        /// Find all the inner elements which locate at this range from the specified AstNode instance.
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public IEnumerable<AstNode> FindIncludedNodes(AstNode root) {
+            var thisRange = this;
+            // TODO: Should be more efficient
+            return thisRange.FindOutermostNode(root).DescendantsAndSelf()
+                    .Where(
+                            node => {
+                                var range = Locate(node);
+                                return thisRange.Contains(Locate(node));
+                            });
+        }
+
+        /// <summary>
+        /// Find all the inner elements whose range overlapped with this range from the specified CstNode instance.
         /// </summary>
         /// <param name="root"></param>
         /// <returns></returns>
@@ -294,7 +328,19 @@ namespace Code2Xml.Core.Location {
         }
 
         /// <summary>
-        /// Find the most inner element which includes this range from the specified root.
+        /// Find all the inner elements whose range overlapped with this range from the specified AstNode instance.
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public IEnumerable<AstNode> FindOverlappedNodes(AstNode root) {
+            var thisRange = this;
+            // TODO: Should be more efficient
+            return thisRange.FindOutermostNode(root).DescendantsAndSelf()
+                    .Where(node => thisRange.Overlaps(Locate(node)));
+        }
+
+        /// <summary>
+        /// Find the most inner element which includes this range from the specified CstNode instance.
         /// </summary>
         /// <param name="root"></param>
         /// <returns></returns>
@@ -312,11 +358,42 @@ namespace Code2Xml.Core.Location {
         }
 
         /// <summary>
+        /// Find the most inner element which includes this range from the specified AstNode instance.
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public AstNode FindInnermostNode(AstNode root) {
+            AstNode lastElement = null;
+            foreach (var elem in root.DescendantsAndSelf()) {
+                var pos = Locate(elem);
+                if (pos.Contains(this)) {
+                    lastElement = elem;
+                } else if (EndLocation <= pos.StartLocation) {
+                    break;
+                }
+            }
+            return lastElement;
+        }
+
+        /// <summary>
         /// Find the most outer element which includes this range from the specified root.
         /// </summary>
         /// <param name="root"></param>
         /// <returns></returns>
         public CstNode FindOutermostNode(CstNode root) {
+            var ret = FindInnermostNode(root);
+            while (ret.Parent != null && ret.Parent.Children().Count() == 1) {
+                ret = ret.Parent;
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Find the most outer element which includes this range from the specified AstNode instance.
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public AstNode FindOutermostNode(AstNode root) {
             var ret = FindInnermostNode(root);
             while (ret.Parent != null && ret.Parent.Children().Count() == 1) {
                 ret = ret.Parent;
@@ -410,7 +487,7 @@ namespace Code2Xml.Core.Location {
 
         #endregion
 
-        #region Locate a node of an AST
+        #region Locate a node of an CST/AST
 
         public static CodeRange LocateIncludingHidden(XElement element) {
             return LocatePrivate(
@@ -512,6 +589,20 @@ namespace Code2Xml.Core.Location {
                 return new CodeRange(
                         new CodeLocation(firstToken.StartLine, firstToken.StartPosition),
                         new CodeLocation(lastToken.EndLine, lastToken.EndPosition));
+            }
+            return Nil;
+        }
+
+        public static CodeRange Locate(AstNode node) {
+            var tuple = node.AllTokens()
+                .Where(n => n.StartPosition.HasValue)
+                .FirstAndLastOrNull();
+            if (tuple != null) {
+                var firstToken = tuple.Item1;
+                var lastToken = tuple.Item2;
+                return new CodeRange(
+                        new CodeLocation(firstToken.StartLine.Value, firstToken.StartPosition.Value),
+                        new CodeLocation(lastToken.EndLine.Value, lastToken.EndPosition.Value));
             }
             return Nil;
         }
