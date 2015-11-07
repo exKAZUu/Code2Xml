@@ -16,9 +16,11 @@
 
 #endregion
 
+using System;
 using System.IO;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Generators.ExternalGenerators.Java;
+using Code2Xml.Core.Location;
 using NUnit.Framework;
 using ParserTests;
 
@@ -40,6 +42,15 @@ namespace Code2Xml.Core.Tests.Generators.ExternalGenerators {
         public void CanParse() {
             var path = Fixture.GetInputCodePath("Java", "Block1.java");
             Generator.GenerateTreeFromCode(new FileInfo(path), null, true);
+        }
+
+        [Test]
+        public void ParseCodeRange() {
+            var e = Generator.GenerateTreeFromCodePath(
+                    @"C:\Users\exKAZUu\Desktop\CodeGenerator.java");
+
+            var range = new CodeRange(new CodeLocation(302, 0), new CodeLocation(306, 0));
+            Console.WriteLine(range.FindOutermostNode(e));            
         }
     }
 }

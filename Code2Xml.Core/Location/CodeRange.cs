@@ -32,8 +32,9 @@ namespace Code2Xml.Core.Location {
     /// </summary>
     [Serializable]
     public struct CodeRange : IEquatable<CodeRange> {
-        public static CodeRange Nil = new CodeRange
-        { StartLine = -1, EndLine = -1, StartPosition = -1, EndPosition = -1 };
+        public static CodeRange Nil = new CodeRange {
+            StartLine = -1, EndLine = -1, StartPosition = -1, EndPosition = -1
+        };
 
         public CodeLocation StartLocation;
         public CodeLocation EndLocation;
@@ -101,40 +102,28 @@ namespace Code2Xml.Core.Location {
         /// <summary>
         /// Returns the string representation of the line numbers with "StartLine - EndLine"
         /// </summary>
-        public string LineString {
-            get { return StartLine + " - " + EndLine; }
-        }
+        public string LineString => StartLine + " - " + EndLine;
 
         /// <summary>
         /// Returns the string representation of the position (column) numbers with "StartPosition - EndPosition"
         /// </summary>
-        public string PositionString {
-            get { return StartPosition + " - " + EndPosition; }
-        }
+        public string PositionString => StartPosition + " - " + EndPosition;
 
         /// <summary>
         /// Returns the smart string representation of the line numbers
         /// with "StartLine - EndLine" when StartLine != EndLine
         /// with just "StartLine" when StartLine == EndLine
         /// </summary>
-        public string SmartLineString {
-            get {
-                return StartLine == EndLine
-                        ? StartLine.ToString() : (StartLine + " - " + EndLine);
-            }
-        }
+        public string SmartLineString => StartLine == EndLine
+            ? StartLine.ToString() : (StartLine + " - " + EndLine);
 
         /// <summary>
         /// Returns the smart string representation of the position (column) numbers
         /// with "StartPosition - EndPosition" when StartPosition != EndPosition
         /// with just "StartPosition" when StartPosition == EndPosition
         /// </summary>
-        public string SmartPositionString {
-            get {
-                return StartPosition == EndPosition
-                        ? StartPosition.ToString() : (StartPosition + " - " + EndPosition);
-            }
-        }
+        public string SmartPositionString => StartPosition == EndPosition
+                ? StartPosition.ToString() : (StartPosition + " - " + EndPosition);
 
         public override string ToString() {
             return "Line: " + SmartLineString + ", Pos: " + SmartPositionString;
@@ -382,10 +371,12 @@ namespace Code2Xml.Core.Location {
         /// <returns></returns>
         public CstNode FindOutermostNode(CstNode root) {
             var ret = FindInnermostNode(root);
-            while (ret.Parent != null && ret.Parent.Children().Count() == 1) {
-                ret = ret.Parent;
+            if (ret != null) {
+                while (ret.Parent != null && ret.Parent.Children().Count() == 1) {
+                    ret = ret.Parent;
+                }
             }
-            return ret;
+            return ret;     // Returns null if the CodeRange is out of root node.
         }
 
         /// <summary>
@@ -395,10 +386,12 @@ namespace Code2Xml.Core.Location {
         /// <returns></returns>
         public AstNode FindOutermostNode(AstNode root) {
             var ret = FindInnermostNode(root);
-            while (ret.Parent != null && ret.Parent.Children().Count() == 1) {
-                ret = ret.Parent;
+            if (ret != null) {
+                while (ret.Parent != null && ret.Parent.Children().Count() == 1) {
+                    ret = ret.Parent;
+                }
             }
-            return ret;
+            return ret;     // Returns null if the CodeRange is out of root node.
         }
 
         #endregion

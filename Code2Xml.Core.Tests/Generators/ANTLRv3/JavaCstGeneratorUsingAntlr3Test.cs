@@ -22,6 +22,7 @@ using System.Linq;
 using Antlr.Runtime;
 using Code2Xml.Core.Generators;
 using Code2Xml.Core.Generators.ANTLRv3.Java;
+using Code2Xml.Core.Location;
 using NUnit.Framework;
 using ParserTests;
 using JavaLexer = Code2Xml.Core.Tests.Generators.ANTLRv3.Parsers.JavaLexer;
