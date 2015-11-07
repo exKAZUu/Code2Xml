@@ -19,7 +19,6 @@
 using System;
 using System.IO;
 using Code2Xml.Core.Generators;
-using Code2Xml.Core.Generators.ExternalGenerators.Java;
 using Code2Xml.Core.Location;
 using NUnit.Framework;
 using ParserTests;

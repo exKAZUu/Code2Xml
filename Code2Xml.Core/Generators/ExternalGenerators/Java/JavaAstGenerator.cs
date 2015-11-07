@@ -39,16 +39,12 @@ namespace Code2Xml.Core.Generators.ExternalGenerators.Java {
         /// <summary>
         /// Gets the language name except for the version.
         /// </summary>
-        public override string LanguageName {
-            get { return "Java"; }
-        }
+        public override string LanguageName => "Java";
 
         /// <summary>
         /// Gets the language version.
         /// </summary>
-        public override string LanguageVersion {
-            get { return "8"; }
-        }
+        public override string LanguageVersion => "8";
 
         private readonly string _processorPath;
 
