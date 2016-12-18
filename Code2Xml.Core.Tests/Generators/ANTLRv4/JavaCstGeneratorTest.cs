@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2014 Kazunori Sakamoto
+// Copyright (C) 2011-2016 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,7 +26,6 @@ using Code2Xml.Core.Generators.ANTLRv4;
 using Code2Xml.Core.Generators.ANTLRv4.Java;
 using Code2Xml.Core.SyntaxTree;
 using NUnit.Framework;
-using CommonTokenStream = Antlr4.Runtime.CommonTokenStream;
 
 namespace Code2Xml.Core.Tests.Generators.ANTLRv4 {
     [TestFixture]
@@ -92,7 +91,7 @@ public class AlignedTuplePrinter {
         [Test]
         public void CheckIds() {
             var tree = Generator.GenerateTreeFromCodeText(
-                    "class K { void m() { if (true) stmt(); else stmt(); } }");
+                "class K { void m() { if (true) stmt(); else stmt(); } }");
             var nodes = tree.Descendants()
                     .Where(e => e.Name == "statement" || e.Name == "statementNoShortIf")
                     .ToList();
@@ -152,11 +151,11 @@ class Main {
             processor.GenerateTreeFromCodeText(code, false);
         }
 
-        [Test, ExpectedException(typeof(ParseException))]
+        [Test]
         public void ParseBrokenCode() {
             var code = @"class A {{ }";
             var processor = new JavaCstGenerator();
-            processor.GenerateTreeFromCodeText(code, true);
+            Assert.Throws<ParseException>(() => processor.GenerateTreeFromCodeText(code, true));
         }
 
         [Test]
@@ -204,25 +203,25 @@ class Main {
 
         [Test]
         [TestCase(@"https://github.com/elasticsearch/elasticsearch",
-                @"96e62b3c1b1ea22fa788fc14b7c9d1f4388dbc1c", 8678)]
+             @"96e62b3c1b1ea22fa788fc14b7c9d1f4388dbc1c", 8678)]
         [TestCase(@"https://github.com/nathanmarz/storm",
-                @"cdb116e942666973bc4eaa0df098d5bab82739e7", 8404)]
+             @"cdb116e942666973bc4eaa0df098d5bab82739e7", 8404)]
         [TestCase(@"https://github.com/jfeinstein10/SlidingMenu",
-                @"4254feca3ece9397cd501921ee733f19ea0fdad8", 6457)]
+             @"4254feca3ece9397cd501921ee733f19ea0fdad8", 6457)]
         [TestCase(@"https://github.com/JakeWharton/ActionBarSherlock",
-                @"4a79d536af872339899a90d6dc743aa57745474b", 6360)]
+             @"4a79d536af872339899a90d6dc743aa57745474b", 6360)]
         [TestCase(@"https://github.com/nostra13/Android-Universal-Image-Loader",
-                @"b3888a4f35d31a3e7b96c9f7a5665216c1946bb5", 6210)]
+             @"b3888a4f35d31a3e7b96c9f7a5665216c1946bb5", 6210)]
         [TestCase(@"https://github.com/github/android",
-                @"fbfb63c6607d8077018c245d7508f0fedab65dbb", 4910)]
+             @"fbfb63c6607d8077018c245d7508f0fedab65dbb", 4910)]
         [TestCase(@"https://github.com/libgdx/libgdx",
-                @"806ba436b1805c3d56c22a3b25b7fd383bc44c40", 4829)]
+             @"806ba436b1805c3d56c22a3b25b7fd383bc44c40", 4829)]
         [TestCase(@"https://github.com/google/iosched",
-                @"f2e87424ea7cc0c3f8022f984966091ea746a23e", 4669)]
+             @"f2e87424ea7cc0c3f8022f984966091ea746a23e", 4669)]
         [TestCase(@"https://github.com/loopj/android-async-http",
-                @"b954a3178751b5fcf051f4c0134774cc51ba5fcc", 4581)]
+             @"b954a3178751b5fcf051f4c0134774cc51ba5fcc", 4581)]
         [TestCase(@"https://github.com/JakeWharton/Android-ViewPagerIndicator",
-                @"8cd549f23f3d20ff920e19a2345c54983f65e26b", 4417)]
+             @"8cd549f23f3d20ff920e19a2345c54983f65e26b", 4417)]
         public void ParseGitRepository(string url, string commitPointer, int starCount) {
             MeasurePerformance(url, commitPointer, null, "*.java");
         }

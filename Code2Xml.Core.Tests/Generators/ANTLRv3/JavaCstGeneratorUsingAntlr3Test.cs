@@ -153,10 +153,10 @@ public class AlignedTuplePrinter {
             Generator.GenerateTreeFromCodeText(code, false);
         }
 
-        [Test, ExpectedException(typeof(ParseException))]
+        [Test]
         public void ParseBrokenCode() {
             var code = @"class A {{ }";
-            Generator.GenerateTreeFromCodeText(code, true);
+            Assert.Throws<ParseException>(() => Generator.GenerateTreeFromCodeText(code, true));
         }
 
         [Test]
@@ -165,10 +165,10 @@ public class AlignedTuplePrinter {
             Generator.GenerateTreeFromCode(new FileInfo(path), null, true);
         }
 
-        [Test, ExpectedException(typeof(ParseException))]
+        [Test]
         public void ParseSourceCodeContainingIlligalUnicodeCharacters() {
-            var path = Path.Combine(Fixture.GetFailedInputPath("Java"), "Unicode.java");
-            Generator.GenerateTreeFromCode(new FileInfo(path), null, true);
+            var path = Path.Combine(Fixture.GetFailedInputPath("Java"), "Unicode.java");            
+            Assert.Throws<ParseException>(() => Generator.GenerateTreeFromCode(new FileInfo(path), null, true));
         }
 
         [Test]

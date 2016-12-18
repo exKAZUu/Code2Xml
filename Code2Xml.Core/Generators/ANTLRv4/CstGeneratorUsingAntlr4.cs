@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2014 Kazunori Sakamoto
+// Copyright (C) 2011-2016 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -75,25 +75,25 @@ namespace Code2Xml.Core.Generators.ANTLRv4 {
         }
 
         private CstNode GenerateSyntaxTree(
-                ICharStream charStream, bool parsingCompleteCode, bool throwingParseError) {
+            ICharStream charStream, bool parsingCompleteCode, bool throwingParseError) {
             var lexer = CreateLexer(charStream);
             var commonTokenStream = new CommonTokenStream(lexer);
             var parser = CreateParser(commonTokenStream);
             var builder = new CstBuilderForAntlr4(parser);
             if (throwingParseError) {
-                parser.ErrorHandler = new BailErrorStrategy();
+                parser.ErrorHandler = new MyBailErrorStrategy();
             }
             builder.Visit(parsingCompleteCode ? Parse(parser) : ParseFragment(parser));
             return builder.FinishParsing();
         }
 
         public override CstNode GenerateTreeFromCode(
-                TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
+            TextReader codeReader, bool throwingParseError = DefaultThrowingParseError) {
             return GenerateSyntaxTree(new AntlrInputStream(codeReader), true, throwingParseError);
         }
 
         public override CstNode GenerateTreeFromCodeText(
-                string code, bool throwingParseError = DefaultThrowingParseError) {
+            string code, bool throwingParseError = DefaultThrowingParseError) {
             return GenerateSyntaxTree(new AntlrInputStream(code), true, throwingParseError);
         }
 
@@ -109,7 +109,7 @@ namespace Code2Xml.Core.Generators.ANTLRv4 {
             var lexer = CreateLexer(charStream);
             var commonTokenStream = new CommonTokenStream(lexer);
             var parser = CreateParser(commonTokenStream);
-            parser.ErrorHandler = new BailErrorStrategy();
+            parser.ErrorHandler = new MyBailErrorStrategy();
             if (parsingCompleteCode) {
                 Parse(parser);
             } else {
@@ -146,12 +146,20 @@ namespace Code2Xml.Core.Generators.ANTLRv4 {
 
     public class MyBailErrorStrategy : DefaultErrorStrategy {
         public override void Recover(Parser recognizer, RecognitionException e) {
+            for (ParserRuleContext parserRuleContext = recognizer.Context; parserRuleContext != null;
+                parserRuleContext = (ParserRuleContext)parserRuleContext.Parent) {
+                parserRuleContext.exception = e;
+            }
             throw new ParseException(e);
         }
 
         public override IToken RecoverInline(Parser recognizer) {
-            var e = new InputMismatchException(recognizer);
-            throw new ParseException(recognizer.CurrentToken.ToString(), e);
+            InputMismatchException mismatchException = new InputMismatchException(recognizer);
+            for (ParserRuleContext parserRuleContext = recognizer.Context; parserRuleContext != null;
+                parserRuleContext = (ParserRuleContext)parserRuleContext.Parent) {
+                parserRuleContext.exception = mismatchException;
+            }
+            throw new ParseException(mismatchException);
         }
 
         public override void Sync(Parser recognizer) {}

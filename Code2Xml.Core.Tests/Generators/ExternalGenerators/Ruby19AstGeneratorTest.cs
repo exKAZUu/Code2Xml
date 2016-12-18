@@ -57,7 +57,7 @@ namespace Code2Xml.Core.Tests.Generators.ExternalGenerators {
             Assert.That(ast.ToString(), Is.StringContaining("あ"));
         }
 
-        [Test, Ignore]
+        [Test, Ignore("This test fails due to the bugs of ruby_parser")]
         public void CanParseJapanese3() {
             // TODO: Currently, this test fails due to the bugs of ruby_parser
             // https://github.com/seattlerb/ruby_parser/issues/133
@@ -66,7 +66,7 @@ namespace Code2Xml.Core.Tests.Generators.ExternalGenerators {
             Assert.That(xml.ToString(), Is.StringContaining("\\u{3042}"));
         }
 
-        [Test, Ignore]
+        [Test, Ignore("This test fails due to the bugs of ruby_parser")]
         public void InterConvertJapanese() {
             // TODO: Currently, this test fails due to the bugs of ruby_parser
             // https://github.com/seattlerb/ruby_parser/issues/133

@@ -869,7 +869,7 @@ RIGHT_SHIFT_ASSIGN : '>>=';
 POWER_ASSIGN : '**=';
 IDIV_ASSIGN : '//=';
 
-SKIP
+SKIP_
  : ( SPACES | COMMENT | LINE_JOINING ) -> channel(HIDDEN)
  ;
 
