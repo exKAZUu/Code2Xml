@@ -88,7 +88,7 @@ namespace Code2Xml.Core.Location {
             var startIndex = Indices[line];
             if (Indices.Count > line + 1) {
                 // Exclude a new line
-                return Code.Substring(startIndex, Indices[line + 1] - 1);
+                return Code.Substring(startIndex, Indices[line + 1] - 1 - startIndex);
             }
             return Code.Substring(startIndex);
         }

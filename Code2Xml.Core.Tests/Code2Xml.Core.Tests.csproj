@@ -110,6 +110,7 @@
     <Compile Include="Generators\SyntaxTreeGeneratorTest.cs" />
     <Compile Include="Location\CodeLocationTest.cs" />
     <Compile Include="Location\CodeRangeTest.cs" />
+    <Compile Include="Location\StructuredCodeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Samples\AnalysisAndTransformationSample.cs" />
     <Compile Include="Samples\CstGeneratorSample.cs" />

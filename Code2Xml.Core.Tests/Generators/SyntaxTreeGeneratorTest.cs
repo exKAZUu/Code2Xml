@@ -206,7 +206,7 @@ namespace Code2Xml.Core.Tests.Generators {
             _timeToGenerateTree += (time3 - time2) / count;
             _timeToGenerateCode += (time5 - time4) / count;
             ShowTimes(path, url);
-            Console.WriteLine("Dymmy: " + dummy);
+            Console.WriteLine("Dummy: " + dummy);
         }
 
         protected void VerifyRestoringCode(string code, bool write = true) {
