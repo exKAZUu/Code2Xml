@@ -69,7 +69,7 @@ namespace Code2Xml.Core.Tests.Samples {
                 stmt.Replacement = "pass";
                 // .. Conduct tests to judge whether tests detect mutants ..
                 Console.WriteLine(cst.Code);
-                Assert.That(cst.Code, Is.StringContaining("pass"));
+                Assert.That(cst.Code, Does.Contain("pass"));
                 stmt.Replacement = null;
                 Assert.That(cst.Code, Is.EqualTo(originalCode));
             }

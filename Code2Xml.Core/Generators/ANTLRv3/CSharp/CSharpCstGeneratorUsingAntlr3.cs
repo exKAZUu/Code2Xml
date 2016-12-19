@@ -30,7 +30,7 @@ namespace Code2Xml.Core.Generators.ANTLRv3.CSharp {
         /// Gets the language name except for the version.
         /// </summary>
         public override string LanguageName {
-            get { return "CSharp"; }
+            get { return "C#"; }
         }
 
         /// <summary>

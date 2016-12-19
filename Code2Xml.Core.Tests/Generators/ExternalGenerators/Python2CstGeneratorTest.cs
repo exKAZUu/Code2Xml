@@ -112,7 +112,7 @@ d = 4";
         [Test]
         public void CanParseJapanese() {
             var xml = Generator.GenerateTreeFromCodeText(@"print('あ')", true);
-            Assert.That(xml.ToString(), Is.StringContaining("あ"));
+            Assert.That(xml.ToString(), Does.Contain("あ"));
         }
     }
 }

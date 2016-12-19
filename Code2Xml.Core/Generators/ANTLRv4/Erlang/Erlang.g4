@@ -387,4 +387,3 @@ ruleClauses : ruleClause (';' ruleClause)* ;
 ruleClause : tokAtom clauseArgs clauseGuard ruleBody ;
 
 ruleBody : ':-' lcExprs ;
-

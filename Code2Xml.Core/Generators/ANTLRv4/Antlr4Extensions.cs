@@ -1,6 +1,6 @@
 ﻿#region License
 
-// Copyright (C) 2011-2014 Kazunori Sakamoto
+// Copyright (C) 2011-2016 Kazunori Sakamoto
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,6 +20,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Antlr4.Runtime;
+using Antlr4.Runtime.Sharpen;
 
 namespace Code2Xml.Core.Generators.ANTLRv4 {
     public struct boolean {
@@ -40,6 +41,7 @@ namespace Code2Xml.Core.Generators.ANTLRv4 {
 
     public static class Token {
         public const int HIDDEN_CHANNEL = TokenConstants.HiddenChannel;
+        public const int EOF = TokenConstants.Eof;
     }
 
     public static class StandardLibraryExtension {
@@ -121,12 +123,32 @@ namespace Code2Xml.Core.Generators.ANTLRv4 {
             return stream.Get(i);
         }
 
+        public static int index(this ITokenStream stream) {
+            return stream.Index;
+        }
+
         public static bool contains(this string str, string s) {
             return str.Contains(s);
         }
 
         public static bool startsWith(this string str, string s) {
             return str.StartsWith(s);
+        }
+
+        public static void set(this BitSet set, int index) {
+            set.Set(index);
+        }
+
+        public static void set(this BitSet set, int startIndex, int exclusiveEndIndex) {
+            for (; startIndex < exclusiveEndIndex; startIndex++) {
+                set.Set(startIndex);
+            }
+        }
+
+        public static void Set(this BitSet set, int startIndex, int exclusiveEndIndex) {
+            for (; startIndex < exclusiveEndIndex; startIndex++) {
+                set.Set(startIndex);
+            }
         }
     }
 }

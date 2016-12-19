@@ -50,7 +50,7 @@ namespace Code2Xml.Core.Generators.ANTLRv4.ObjectiveC {
         }
 
         protected override ParserRuleContext Parse(ObjectiveCParser parser) {
-            return parser.translation_unit();
+            return parser.translationUnit();
         }
     }
 }

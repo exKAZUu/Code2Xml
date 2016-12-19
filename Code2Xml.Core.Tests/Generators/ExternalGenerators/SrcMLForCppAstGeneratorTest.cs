@@ -47,7 +47,7 @@ namespace Code2Xml.Core.Tests.Generators.ExternalGenerators {
         [Test, Ignore("This test fails because SrcML cannot parse Japanese characters.")]
         public void CanParseJapanese() {
             var xml = Generator.GenerateTreeFromCodeText(@"int あ;", true);
-            Assert.That(xml.ToString(), Is.StringContaining("あ"));
+            Assert.That(xml.ToString(), Does.Contain("あ"));
         }
     }
 }

@@ -243,11 +243,6 @@
       <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.Lua</CustomToolNamespace>
       <Listener>False</Listener>
     </Antlr4>
-    <Antlr4 Include="Generators\ANTLRv4\ObjectiveC\ObjectiveC.g4">
-      <Generator>MSBuild:Compile</Generator>
-      <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.ObjectiveC</CustomToolNamespace>
-      <Listener>False</Listener>
-    </Antlr4>
     <Antlr4 Include="Generators\ANTLRv4\Python3\Python3.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.Python3</CustomToolNamespace>
@@ -312,15 +307,44 @@
       <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.ECMAScript</CustomToolNamespace>
       <Listener>False</Listener>
     </Antlr4>
-    <Antlr4 Include="Generators\ANTLRv4\CSharp\CSharp4.g4">
+    <Antlr4 Include="Generators\ANTLRv4\CSharp\CSharpLexer.g4">
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.CSharp</CustomToolNamespace>
+      <Listener>False</Listener>
+    </Antlr4>
+    <Antlr4 Include="Generators\ANTLRv4\CSharp\CSharpParser.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.CSharp</CustomToolNamespace>
+      <Listener>False</Listener>
+    </Antlr4>
+    <Antlr4 Include="Generators\ANTLRv4\CSharp\CSharpPreprocessorParser.g4">
+      <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.CSharp</CustomToolNamespace>
+      <Generator>MSBuild:Compile</Generator>
+    </Antlr4>
+    <Antlr4 Include="Generators\ANTLRv4\ObjectiveC\ObjectiveCLexer.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.ObjectiveC</CustomToolNamespace>
+      <Listener>False</Listener>
+    </Antlr4>
+    <Antlr4 Include="Generators\ANTLRv4\ObjectiveC\ObjectiveCParser.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.ObjectiveC</CustomToolNamespace>
+      <Listener>False</Listener>
+    </Antlr4>
+    <Antlr4 Include="Generators\ANTLRv4\VHDL\vhdl.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.VHDL</CustomToolNamespace>
+    </Antlr4>
+    <Antlr4 Include="Generators\ANTLRv4\VisualBasic6\VisualBasic6.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Code2Xml.Core.Generators.ANTLRv4.VisualBasic6</CustomToolNamespace>
       <Listener>False</Listener>
     </Antlr4>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Dependencies\Cobol\koopafor85.jar" />
+    <Compile Include="Generators\ANTLRv4\Swift\SwiftSupport.cs" />
     <None Include="Dependencies\Java\ast-serializer-1.0.4-jar-with-dependencies.jar" />
     <Content Include="Dependencies\Python\ast2xml.py" />
     <Content Include="Dependencies\Python\ast_parser.py" />
@@ -359,9 +383,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Generators\ANTLRv4\AspectJ\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

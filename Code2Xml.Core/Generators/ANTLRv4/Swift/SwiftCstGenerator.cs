@@ -36,7 +36,7 @@ namespace Code2Xml.Core.Generators.ANTLRv4.Swift {
         /// Gets the language version.
         /// </summary>
         public override string LanguageVersion {
-            get { return "1"; }
+            get { return "2.2"; }
         }
 
         public SwiftCstGenerator() : base(".swift") {}

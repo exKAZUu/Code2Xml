@@ -118,7 +118,7 @@ public class Hello extends JFrame {
             var commonTokenStream = new CommonTokenStream(lexer);
             var parser = new ObjectiveCParser(commonTokenStream);
             var visitor = new CstBuilderForAntlr4(parser);
-            visitor.Visit(parser.translation_unit());
+            visitor.Visit(parser.translationUnit());
             Console.WriteLine(visitor.FinishParsing());
         }
 

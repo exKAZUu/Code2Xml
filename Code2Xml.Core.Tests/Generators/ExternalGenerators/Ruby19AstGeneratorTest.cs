@@ -47,14 +47,14 @@ namespace Code2Xml.Core.Tests.Generators.ExternalGenerators {
         public void CanParseJapanese() {
             var ast = Generator.GenerateTreeFromCodeText(@"p 'あ'", true);
             Console.WriteLine(ast);
-            Assert.That(ast.ToString(), Is.StringContaining("あ"));
+            Assert.That(ast.ToString(), Does.Contain("あ"));
         }
 
         [Test]
         public void CanParseJapanese2() {
             var ast = Generator.GenerateTreeFromCodeText(@"p = 'あ'", true);
             Console.WriteLine(ast);
-            Assert.That(ast.ToString(), Is.StringContaining("あ"));
+            Assert.That(ast.ToString(), Does.Contain("あ"));
         }
 
         [Test, Ignore("This test fails due to the bugs of ruby_parser")]
@@ -63,7 +63,7 @@ namespace Code2Xml.Core.Tests.Generators.ExternalGenerators {
             // https://github.com/seattlerb/ruby_parser/issues/133
             var xml = Generator.GenerateTreeFromCodeText("p = \"\\u{3042}\"", true);
             Console.WriteLine(xml);
-            Assert.That(xml.ToString(), Is.StringContaining("\\u{3042}"));
+            Assert.That(xml.ToString(), Does.Contain("\\u{3042}"));
         }
 
         [Test, Ignore("This test fails due to the bugs of ruby_parser")]
