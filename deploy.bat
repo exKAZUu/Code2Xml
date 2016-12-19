@@ -17,6 +17,6 @@ FOR %%f IN (*.nuspec) DO (
 	%nuget% pack %%f
 )
 FOR %%f IN (*.nupkg) DO (
-	%nuget% push %%f
+	%nuget% push %%f -Source https://www.nuget.org/api/v2/package
 )
 cd ..\
